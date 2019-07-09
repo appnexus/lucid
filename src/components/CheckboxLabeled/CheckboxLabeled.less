@@ -7,8 +7,7 @@
 	cursor: pointer;
 	display: flex;
 	font-size: @fontSize;
-	font-family: @fontFamily;
-	justify-content: flex-start;
+		justify-content: flex-start;
 	width: fit-content;
 
 	> .@{prefix}-Checkbox {
@@ -21,19 +20,19 @@
 	}
 
 	&&-is-disabled {
-		color: @color-mediumGray;
 		cursor: not-allowed;
 	}
 
 	&:hover .@{prefix}-Checkbox-visualization-container {
-		border-color: @color-primary;
+		border: @color-primary solid @size-borderWidthFocused;
 		transition: @Checkbox-animation-timing;
 	}
 
-	&:hover .@{prefix}-Checkbox-visualization-glow {
-		.opacity(0.3);
-
-		transform: @Checkbox-glow-scale;
+	&-is-selected:hover .@{prefix}-Checkbox-visualization-container,
+	&-is-selected:hover .@{prefix}-CheckboxLabeled-Checkbox,
+	&:hover .@{prefix}-Checkbox-visualization-glow,
+	&-is-selected:hover .@{prefix}-CheckboxLabeled-Checkbox {
+		.opacity(0.8);
 	}
 
 	&&-is-disabled .@{prefix}-Checkbox-visualization-container,
@@ -44,14 +43,17 @@
 
 	&&-is-disabled:hover .@{prefix}-Checkbox-visualization-glow {
 		.opacity(0);
-
 		transform: none;
 	}
 
-	&&-is-disabled&&-is-selected:hover .@{prefix}-Checkbox-visualization-container,
-	&&-is-selected .@{prefix}-Checkbox-visualization-container {
+	&&-is-disabled&&-is-selected:hover .@{prefix}-Checkbox-visualization-container {
+		.opacity(0.5);
 		background-color: @color-primary;
+	}
+
+	&&-is-selected .@{prefix}-Checkbox-visualization-container {
 		border-color: @color-primary;
+		background-color: @color-primary;
 	}
 }
 

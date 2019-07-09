@@ -2,20 +2,21 @@
 @import (reference) '../../../styles/mixins.less';
 
 .@{prefix}-MinusCircleLightIcon {
-	&-minus-circle {
-		fill: @featured-color-danger;
+	stroke: @color-secondary-1;
 
-		&-is-disabled {
-			fill: @color-disabledText;
-		}
+	&-is-clickable:not(&-is-disabled):hover &-dash,
+	&-is-active &-dash {
+		stroke: @color-white;
 	}
 
 	&-background {
-		fill: @color-white;
+		stroke: @color-secondary-1;
 	}
 
-	&-is-clickable:hover > &-background {
-		fill: @featured-color-danger-backgroundColorLight;
+	&-is-clickable:not(&-is-disabled):hover &-background,
+	&-is-active &-background {
+		stroke: shade(@color-secondary-1, 20%);
+		fill: shade(@color-secondary-1, 20%);
 	}
 }
 

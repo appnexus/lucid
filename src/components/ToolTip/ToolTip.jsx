@@ -2,7 +2,7 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import ContextMenu from '../ContextMenu/ContextMenu';
-import CrossIcon from '../Icon/CrossIcon/CrossIcon';
+import CloseIcon from '../Icon/CloseIcon/CloseIcon';
 import * as reducers from './ToolTip.reducers';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, findTypes, omitProps } from '../../util/component-types';
@@ -54,8 +54,8 @@ const ToolTip = createClass({
 			Set this to \`true\` if you want to have a \`x\` close icon.
 		`,
 
-		kind: oneOf(['primary', 'success', 'warning', 'danger', 'info', 'default'])`
-			Style variations of the \`ToolTip\`.
+		isLight: bool`
+			Offers a lighter style for the tooltip window. Defaults to false.
 		`,
 
 		onClose: func`
@@ -144,7 +144,8 @@ const ToolTip = createClass({
 			flyOutStyle: {},
 			isCloseable: false,
 			isExpanded: false,
-			kind: 'default',
+			// kind: 'default',
+			isLight: false,
 			onClose: _.noop,
 			onMouseOut: _.noop,
 			onMouseOver: _.noop,
@@ -204,7 +205,8 @@ const ToolTip = createClass({
 			flyOutStyle,
 			isCloseable,
 			isExpanded,
-			kind,
+			isLight,
+			// kind,
 			portalId,
 			style,
 			...passThroughs
@@ -224,7 +226,9 @@ const ToolTip = createClass({
 		const getAlignmentOffset = n =>
 			alignment === ContextMenu.CENTER
 				? 0
-				: alignment === ContextMenu.START ? n / 2 - 22.5 : -(n / 2 - 22.5);
+				: alignment === ContextMenu.START
+				? n / 2 - 22.5
+				: -(n / 2 - 22.5);
 
 		return (
 			<ContextMenu
@@ -256,13 +260,15 @@ const ToolTip = createClass({
 						'&',
 						`&-${direction}`,
 						`&-${alignment}`,
-						`&-${kind}`
+						isLight ? '&-light' : '&-default'
 					)}
 					onMouseOver={this.handleMouseOverFlyout}
 					onMouseOut={this.handleMouseOutFlyout}
 				>
 					{isCloseable ? (
-						<CrossIcon
+						<CloseIcon
+							isClickable
+							size={8}
 							onClick={this.handleClose}
 							className={flyOutCx('&-close')}
 						/>

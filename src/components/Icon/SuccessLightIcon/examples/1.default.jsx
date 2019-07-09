@@ -1,9 +1,13 @@
 import React from 'react';
-import createClass from 'create-react-class';
 import { SuccessLightIcon } from '../../../../index';
 
-export default createClass({
-	render() {
-		return <SuccessLightIcon />;
-	},
-});
+export default () => (
+	<>
+		<SuccessLightIcon />
+		<SuccessLightIcon isClickable />
+		<SuccessLightIcon isClickable isDisabled />
+		<SuccessLightIcon isActive />
+		<SuccessLightIcon isClickable isActive />
+		<SuccessLightIcon isClickable isActive isDisabled />
+	</>
+);

@@ -13,7 +13,7 @@ export default createClass({
 
 		return (
 			<div style={{ textAlign: 'right' }}>
-				<DropMenu onSelect={this.handleSelect} alignment="center">
+				<DropMenu onSelect={this.handleSelect} alignment='center'>
 					<DropMenu.Control>
 						<Button>Click me</Button>
 					</DropMenu.Control>

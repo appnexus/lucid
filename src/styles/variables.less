@@ -4,23 +4,50 @@
 // Typography
 // -----------------------------------------------------------------------------
 
+// At Xandr here are the font variation we support internally:
+// ------ | --------------- | ------
+// weight | font            | style
+// ------ | --------------- | ------
+// 400    | GalanoGrotesque | normal
+// 400    | GalanoGrotesque | italic
+// 400    | Inter           | normal
+// 400    | Inter           | italic
+// 500    | GalanoGrotesque | normal
+// 500    | GalanoGrotesque | italic
+// 600    | GalanoGrotesque | normal
+// 600    | GalanoGrotesque | italic
+// 600    | Inter           | normal
+// 600    | Inter           | italic
+
 @fontSize: 12px;
-@fontFamily: "Helvetica Neue", Helvetica, Arial, Sans-Serif;
+@fontFamily: GalanoGrotesque, "Helvetica Neue", Helvetica, Arial, sans-serif;
+@font-family-tabular: Inter, "Helvetica Neue", Helvetica, Arial, sans-serif;
+@font-feature-settings-tabular: 'tnum' 1;
 @font: @fontSize @fontFamily;
 @font-chart: 11px sans-serif;
+
+// Our designers have agreed to keep the number of font weight variants to
+// what's outlined in these variables.
+@font-weight-regular: 400;  // Available with GalanoGrotesque and Inter
+@font-weight-medium: 500;   // Available with GalanoGrotesque
+@font-weight-semiBold: 600; // Available with GalanoGrotesque and Inter
 
 // -----------------------------------------------------------------------------
 // Sizes
 // -----------------------------------------------------------------------------
 
+// Table might use 11px
+
 @size-font-S: 9px;
 @size-font: 12px;
-@size-font-L: 15px;
+@size-font-L: 16px;
 @size-font-XL: 18px;
+@size-font-XXL: 24px;
 
 // standard border radius
-@size-borderRadius: 4px;
+@size-borderRadius: 0;
 @size-borderWidth: 1px;
+@size-borderWidthFocused: 1px;
 
 @size-standard-height: 28px; // should have been `@size-height-standard`
 @size-height-L: 46px;
@@ -33,7 +60,7 @@
 @size-XL: 24px;
 @size-XXL: 30px;
 
-@size-expander-button: 20px;
+@size-expander-button: 28px;
 @size-tag: 20px;
 
 // -----------------------------------------------------------------------------
@@ -53,43 +80,16 @@
 @timing-function-easeInOutQuint: cubic-bezier(0.86, 0, 0.07, 1);
 
 // -----------------------------------------------------------------------------
-// Gradients
-// -----------------------------------------------------------------------------
-
-// Used when defining a gradient (mostly buttons)
-@standardGradient: to bottom;
-@hoverGradient: to top;
-
-// -----------------------------------------------------------------------------
 // Shadows
 // -----------------------------------------------------------------------------
 
 // Standard inset shadow
-@shadow-inset: 0 10px 10px -10px @color-gray-30 inset;
+@shadow-inset: 0 10px 10px -10px @color-transparent-gray-30 inset;
+@shadow: 2px 2px 5px 0 fade(@color-darkGray, 8%);
 
 // -----------------------------------------------------------------------------
 // Colors
 // -----------------------------------------------------------------------------
-
-// Grays
-@color-lightGray: #f4f4f4;
-@color-gray: #e3e3e3;
-@color-mediumGray: #c5c5c5;
-@color-darkGray: #333;
-
-// Standard text color
-@color-textColor: @color-darkGray;
-@color-disabledText: tint(@color-textColor, 50%);
-
-// Standard link colors
-@color-linkColor: @color-primary;
-@color-linkColorHover: darken(@color-linkColor, 7%);
-
-// Standard background color
-@color-backgroundColor: @color-lightGray;
-
-// Standard background color
-@color-pageBackgroundColor: @color-gray;
 
 // General colors
 @color-white: #fff;
@@ -97,36 +97,98 @@
 @color-transparent: rgba(255, 255, 255, 0); // normalize transparent due to Safari bug
 
 // Primary colors
-@color-primary: #2abbb0;
-@color-primaryLight: tint(@color-primary, 85%);
-@color-primaryMedium: tint(@color-primary, 65%);
+@color-primary: #587eba;
+@color-primaryLight: #e6ecf5;
+@color-primary-50: fade(@color-primary, 50%);
 
-// Transparent primary colors
-@color-primary-10: fade(@color-primary, 10%);
-@color-primary-30: fade(@color-primary, 30%);
+// Primary accent colors
+@color-primary-dark: #4368a1;
+
+// Secondary colors
+@color-secondary-1: #fc5047;
+@color-secondary-2: #ab52b0;
+@color-secondary-3: #009fdb;
+@color-secondary-4: #49b27b;
+
+@color-secondary-1-hover: shade(@color-secondary-1, 35%);
+
+//neutral colors
+@color-neutral-1: #fff;
+@color-neutral-2: #f9f8f7;
+@color-neutral-3: #f4f2f2;
+@color-neutral-4: #e8e6e6;
+@color-neutral-5: #d3d1d1;
+@color-neutral-6: #a6a3a3;
+@color-neutral-7: #7a7878;
+@color-neutral-8: #4d4b4b;
+@color-neutral-9: #211f1f;
 
 // Transparent grays
-@color-gray-5: fade(@color-black, 5%);
-@color-gray-10: fade(@color-black, 10%);
-@color-gray-25: fade(@color-black, 25%);
-@color-gray-30: fade(@color-black, 30%);
-@color-gray-40: fade(@color-black, 40%);
-@color-gray-50: fade(@color-black, 50%);
-@color-gray-60: fade(@color-black, 60%);
+@color-transparent-gray-5: fade(@color-black, 5%);
+@color-transparent-gray-10: fade(@color-black, 10%);
+@color-transparent-gray-25: fade(@color-black, 25%);
+@color-transparent-gray-30: fade(@color-black, 30%);
+@color-transparent-gray-50: fade(@color-black, 50%);
+@color-transparent-gray-60: fade(@color-black, 60%);
+
+@color-transparent-gray-30-new: fade(@color-neutral-9, 30%);
+@color-transparent-gray-35: fade(@color-neutral-9, 35%);
+
+// Grays
+@color-lightGray: @color-neutral-3;
+@color-gray: @color-neutral-4;
+@color-mediumGray: @color-neutral-5;
+@color-darkGray: @color-neutral-9;
+
+// -------------------------------------
+// Semantic Colors
+// -------------------------------------
+
+// Standard text color
+@color-textColor: @color-neutral-9;
+@color-disabledText: tint(@color-textColor, 50%);
+
+// Standard link colors
+@color-linkColor: @color-primary;
+@color-linkColorHover: darken(@color-linkColor, 7%);
+
+// Standard background color
+@color-backgroundColor: @color-lightGray; // TODO: settle on a single background color if possible
+
+// Standard background color
+@color-pageBackgroundColor: @color-neutral-2;
+
+@color-borderGray: fade(@color-darkGray, 30%); //@todo remove
 
 // Transparent whites
-@color-white-50: fade(@color-white, 50%);
 @color-white-85: fade(@color-white, 85%);
 
+// Transparent background white
+@color-background-white-60: fade(@color-pageBackgroundColor, 60%);
+@color-background-white-80: fade(@color-pageBackgroundColor, 80%);
+
 // Standard border color
-@color-borderColor: @color-mediumGray;
+@color-borderColor: @color-neutral-5;
 @color-borderColorLight: @color-gray;
 
 // Table colors
-@color-table-header: #767b7f;
-@color-table-header-sorted: #525659;
-@color-table-header-light: @color-lightGray;
-@color-table-header-sorted-light: @color-gray;
+@color-table-header-border: @color-neutral-5;
+@color-table-row-border: @color-neutral-4;
+@border-table-header: 1px solid @color-table-header-border;
+@border-table-row: 1px solid @color-table-row-border;
+
+@color-table-header-dark-background: @color-neutral-2;
+@color-table-header-dark-background-hover: @color-neutral-3;
+
+@color-table-header-light-background: @color-white;
+@color-table-header-light-color: @color-neutral-9;
+@color-table-header-light-sort-hover: @color-neutral-3;
+
+@color-table-row-selected-background: @color-primaryLight;
+@color-table-row-hover-background: @color-neutral-2;
+@color-table-row-active-hover-background: #f0eeed;
+@color-table-row-selected-hover-background: #dce5f1;
+@color-table-row-active-background: @color-neutral-3;
 
 // -------------------------------------
 // Featured Colors
@@ -134,74 +196,44 @@
 // Featured color variables are intended to only be used for components that
 // have "states" to them like `info`, `waring`, `danger` etc.
 
-// `@featured-color-default-borderColor` should only be used for banner or
-// button or button like components.
-
-// Generally you should not use `@featured-color-primary` instead use
-// `@color-primary`
-
-// Featured colors
-@featured-color-default: #f3f3f3;
-@featured-color-primary: @color-primary;
-@featured-color-success: #3fa516;
-@featured-color-success-30: fade(@featured-color-success, 30%);
-@featured-color-info: #0089c4;
-@featured-color-info-30: fade(@featured-color-info, 30%);
-@featured-color-warning: #feb209;
-@featured-color-warning-30: fade(@featured-color-warning, 30%);
-@featured-color-danger: #f7403a;
-@featured-color-danger-30: fade(@featured-color-danger, 30%);
-
 // Featured default color
-@featured-color-default-borderColor: #c5c5c5;
-@featured-color-default-backgroundColor: #ededed;
-@featured-color-default-gradientStartColor: #f3f3f3;
-@featured-color-default-gradientEndColor: #e2e2e2;
+@featured-color-default: #333;
+@featured-color-default-borderColor: @color-neutral-5;
+@featured-color-default-iconColorDisabled: @featured-color-default-borderColor;
+@featured-color-default-backgroundColor: #fff;
+@featured-color-default-backgroundColorHover: @color-neutral-3;
+@featured-color-default-backgroundColorFocus: @color-neutral-4;
 
 // Featured primary color
-@featured-color-primary-colorHover: shade(@featured-color-primary, 35%);
-@featured-color-primary-backgroundColorLight: tint(@featured-color-primary, 90%);
-@featured-color-primary-backgroundColor: tint(@featured-color-primary, 70%);
-@featured-color-primary-borderColorLite: tint(@featured-color-primary, 60%);
-@featured-color-primary-borderColorMedium: tint(@featured-color-primary, 30%);
-@featured-color-primary-gradientStartColor: tint(@featured-color-primary, 30%);
-@featured-color-primary-gradientEndColor: @featured-color-primary;
+@featured-color-primary: @color-primary;
+@featured-color-primary-backgroundColor: @featured-color-primary;
+@featured-color-primary-colorActive: #4368a1;
 @featured-color-primary-borderColor: @featured-color-primary;
 
 // Featured success color
-@featured-color-success-colorHover: shade(@featured-color-success, 35%);
-@featured-color-success-backgroundColorLight: tint(@featured-color-success, 90%);
-@featured-color-success-backgroundColor: tint(@featured-color-success, 70%);
-@featured-color-success-borderColorLite: tint(@featured-color-success, 60%);
-@featured-color-success-gradientStartColor: tint(@featured-color-success, 30%);
-@featured-color-success-gradientEndColor: @featured-color-success;
+@featured-color-success: #49b27b;
+@featured-color-success-colorHover: shade(@featured-color-success, 20%);
+@featured-color-success-backgroundColor: @featured-color-success;
 @featured-color-success-borderColor: @featured-color-success;
 
 // Featured info color
-@featured-color-info-colorHover: shade(@featured-color-info, 35%);
-@featured-color-info-backgroundColorLight: tint(@featured-color-info, 90%);
-@featured-color-info-borderColorLite: tint(@featured-color-info, 60%);
-@featured-color-info-backgroundColor: tint(@featured-color-info, 70%);
-@featured-color-info-gradientStartColor: tint(@featured-color-info, 30%);
-@featured-color-info-gradientEndColor: @featured-color-info;
+@featured-color-info: @color-primary;
+@featured-color-info-colorHover: shade(@featured-color-info, 20%);
+@featured-color-info-backgroundColor: @featured-color-info;
 @featured-color-info-borderColor: @featured-color-info;
 
 // Featured warning color
-@featured-color-warning-colorHover: shade(@featured-color-warning, 35%);
-@featured-color-warning-backgroundColorLight: tint(@featured-color-warning, 90%);
-@featured-color-warning-borderColorLite: tint(@featured-color-warning, 60%);
-@featured-color-warning-backgroundColor: tint(@featured-color-warning, 70%);
-@featured-color-warning-gradientStartColor: tint(@featured-color-warning, 30%);
-@featured-color-warning-gradientEndColor: @featured-color-warning;
+@featured-color-warning: #f5b701;
+@featured-color-warning-colorHover: shade(@featured-color-warning, 20%);
+@featured-color-warning-backgroundColor: @featured-color-warning;
 @featured-color-warning-borderColor: @featured-color-warning;
 
 // Featured danger color
-@featured-color-danger-colorHover: shade(@featured-color-danger, 35%);
-@featured-color-danger-backgroundColorLight: tint(@featured-color-danger, 90%);
-@featured-color-danger-borderColorLite: tint(@featured-color-danger, 60%);
-@featured-color-danger-backgroundColor: tint(@featured-color-danger, 70%);
-@featured-color-danger-gradientStartColor: tint(@featured-color-danger, 30%);
-@featured-color-danger-gradientEndColor: @featured-color-danger;
+@featured-color-danger: #f77402;
+@featured-color-danger-30: fade(@featured-color-danger, 30%);
+@featured-color-danger-colorHover: shade(@featured-color-danger, 20%);
+@featured-color-danger-colorActive: #de6700;
+@featured-color-danger-backgroundColor: @featured-color-danger;
 @featured-color-danger-borderColor: @featured-color-danger;
 
 // -------------------------------------
@@ -310,13 +342,8 @@
 // Borders
 // -----------------------------------------------------------------------------
 
-@border-standardBorder: 1px solid @color-borderColor;
-@border-lightBorder: 1px solid @color-borderColorLight;
-
-@border-table: 1px solid @color-table-header;
-@border-table-header: 1px solid #babdbe;
-@border-table-header-light: 1px solid @color-gray;
-@border-table-body: 1px solid @color-gray;
+@border-standardBorder: @size-borderWidth solid @featured-color-default-borderColor;
+@border-lightBorder: @size-borderWidth solid @color-borderColorLight;
 
 // -----------------------------------------------------------------------------
 // Patterns
@@ -324,3 +351,5 @@
 
 @pattern-diagonal-striped: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0IiBoZWlnaHQ9IjQiPgo8cGF0aCBkPSJNLTEgNUw1IC0xWk01IDNMMyA1Wk0tMSAxTDEgLTEiIHN0cm9rZT0iI2UzZTNlMyIgc3Ryb2tlLXdpZHRoPSIxIj48L3BhdGg+Cjwvc3ZnPg==");
 
+@opacity-hover: 0.8;
+@opacity-disabled: 0.35;

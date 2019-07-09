@@ -9,7 +9,7 @@ export default createClass({
 		return (
 			<DropMenu>
 				<Control>
-					<TextField placeholder="Text DropMenu" />
+					<TextField placeholder='Text DropMenu' />
 				</Control>
 				<Option>Red</Option>
 				<Option>Green</Option>

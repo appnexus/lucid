@@ -30,7 +30,7 @@ describe('ContextMenu', () => {
 		describe('isExpanded', () => {
 			it('should not render the flyout when false', () => {
 				wrapper = mount(
-					<ContextMenu portalId="ContextMenu-test123" isExpanded={false}>
+					<ContextMenu portalId='ContextMenu-test123' isExpanded={false}>
 						<ContextMenu.Target>File</ContextMenu.Target>
 						<ContextMenu.FlyOut>Open</ContextMenu.FlyOut>
 					</ContextMenu>
@@ -41,7 +41,7 @@ describe('ContextMenu', () => {
 
 			it('should render the flyout when true', () => {
 				wrapper = mount(
-					<ContextMenu portalId="ContextMenu-test123" isExpanded>
+					<ContextMenu portalId='ContextMenu-test123' isExpanded>
 						<ContextMenu.Target>File</ContextMenu.Target>
 						<ContextMenu.FlyOut>Open</ContextMenu.FlyOut>
 					</ContextMenu>
@@ -55,7 +55,7 @@ describe('ContextMenu', () => {
 
 			it('should render the flyout with opacity 0 on initial render', () => {
 				wrapper = mount(
-					<ContextMenu portalId="ContextMenu-test456" isExpanded>
+					<ContextMenu portalId='ContextMenu-test456' isExpanded>
 						<ContextMenu.Target>File</ContextMenu.Target>
 						<ContextMenu.FlyOut>Open</ContextMenu.FlyOut>
 					</ContextMenu>
@@ -68,7 +68,7 @@ describe('ContextMenu', () => {
 
 			it('should render the flyout with opacity 1 on subsequent render', done => {
 				wrapper = mount(
-					<ContextMenu portalId="ContextMenu-test456" isExpanded>
+					<ContextMenu portalId='ContextMenu-test456' isExpanded>
 						<ContextMenu.Target>File</ContextMenu.Target>
 						<ContextMenu.FlyOut>Open</ContextMenu.FlyOut>
 					</ContextMenu>
@@ -88,7 +88,7 @@ describe('ContextMenu', () => {
 				it(`should apply the 'lucid-ContextMenu-FlyOut-${direction}' className when '${direction}'`, () => {
 					wrapper = mount(
 						<ContextMenu
-							portalId="ContextMenu-test123"
+							portalId='ContextMenu-test123'
 							isExpanded
 							direction={direction}
 						>
@@ -113,7 +113,7 @@ describe('ContextMenu', () => {
 		describe('portalId', () => {
 			it('should render the portal with the given id when expanded', () => {
 				wrapper = mount(
-					<ContextMenu portalId="ContextMenu-test123" isExpanded>
+					<ContextMenu portalId='ContextMenu-test123' isExpanded>
 						<ContextMenu.Target>File</ContextMenu.Target>
 						<ContextMenu.FlyOut>Open</ContextMenu.FlyOut>
 					</ContextMenu>

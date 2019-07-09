@@ -4,46 +4,13 @@ exports[`FilterIcon [common] example testing should match snapshot(s) for 1.defa
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-FilterIcon"
-  isBadge={false}
   isClickable={false}
   isDisabled={false}
   size={16}
   viewBox="0 0 16 16"
 >
   <path
-    d="M6.792 7.698c.126.138.208.318.208.504v5.483c0 .33.386.498.622.266l1.09-1.752c.204-.245.288-.367.288-.61V8.204c0-.186.1-.367.225-.504l4.627-4.763C14.18 2.58 13.927 2 13.44 2H2.61c-.487 0-.74.578-.41.937l4.592 4.76z"
-  />
-</Icon>
-`;
-
-exports[`FilterIcon [common] example testing should match snapshot(s) for 2.clickable 1`] = `
-<Icon
-  aspectRatio="xMidYMid meet"
-  className="lucid-FilterIcon"
-  isBadge={false}
-  isClickable={true}
-  isDisabled={false}
-  size={16}
-  viewBox="0 0 16 16"
->
-  <path
-    d="M6.792 7.698c.126.138.208.318.208.504v5.483c0 .33.386.498.622.266l1.09-1.752c.204-.245.288-.367.288-.61V8.204c0-.186.1-.367.225-.504l4.627-4.763C14.18 2.58 13.927 2 13.44 2H2.61c-.487 0-.74.578-.41.937l4.592 4.76z"
-  />
-</Icon>
-`;
-
-exports[`FilterIcon [common] example testing should match snapshot(s) for 3.disabled 1`] = `
-<Icon
-  aspectRatio="xMidYMid meet"
-  className="lucid-FilterIcon"
-  isBadge={false}
-  isClickable={false}
-  isDisabled={true}
-  size={16}
-  viewBox="0 0 16 16"
->
-  <path
-    d="M6.792 7.698c.126.138.208.318.208.504v5.483c0 .33.386.498.622.266l1.09-1.752c.204-.245.288-.367.288-.61V8.204c0-.186.1-.367.225-.504l4.627-4.763C14.18 2.58 13.927 2 13.44 2H2.61c-.487 0-.74.578-.41.937l4.592 4.76z"
+    d="M.5.5v2l6 6v7l3-2v-5l6-6v-2z"
   />
 </Icon>
 `;

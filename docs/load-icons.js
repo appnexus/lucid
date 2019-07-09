@@ -109,23 +109,6 @@ module.exports = [
 	},
 
 	{
-		name: 'BeakerIcon',
-		component: getDefaultExport(
-			require('../src/components/Icon/BeakerIcon/BeakerIcon')
-		),
-		examplesContext: require.context(
-			'../src/components/Icon/BeakerIcon/examples',
-			true,
-			/\.jsx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../src/components/Icon/BeakerIcon/examples',
-			true,
-			/\.jsx?$/
-		),
-	},
-
-	{
 		name: 'BellIcon',
 		component: getDefaultExport(
 			require('../src/components/Icon/BellIcon/BellIcon')
@@ -171,23 +154,6 @@ module.exports = [
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Icon/CalendarIcon/examples',
-			true,
-			/\.jsx?$/
-		),
-	},
-
-	{
-		name: 'CaretIcon',
-		component: getDefaultExport(
-			require('../src/components/Icon/CaretIcon/CaretIcon')
-		),
-		examplesContext: require.context(
-			'../src/components/Icon/CaretIcon/examples',
-			true,
-			/\.jsx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../src/components/Icon/CaretIcon/examples',
 			true,
 			/\.jsx?$/
 		),
@@ -245,23 +211,6 @@ module.exports = [
 	},
 
 	{
-		name: 'ChevronThinIcon',
-		component: getDefaultExport(
-			require('../src/components/Icon/ChevronThinIcon/ChevronThinIcon')
-		),
-		examplesContext: require.context(
-			'../src/components/Icon/ChevronThinIcon/examples',
-			true,
-			/\.jsx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../src/components/Icon/ChevronThinIcon/examples',
-			true,
-			/\.jsx?$/
-		),
-	},
-
-	{
 		name: 'ClockIcon',
 		component: getDefaultExport(
 			require('../src/components/Icon/ClockIcon/ClockIcon')
@@ -279,17 +228,34 @@ module.exports = [
 	},
 
 	{
-		name: 'CrossIcon',
+		name: 'CloseIcon',
 		component: getDefaultExport(
-			require('../src/components/Icon/CrossIcon/CrossIcon')
+			require('../src/components/Icon/CloseIcon/CloseIcon')
 		),
 		examplesContext: require.context(
-			'../src/components/Icon/CrossIcon/examples',
+			'../src/components/Icon/CloseIcon/examples',
 			true,
 			/\.jsx?$/
 		),
 		examplesContextRaw: require.context(
-			'!!raw-loader!../src/components/Icon/CrossIcon/examples',
+			'!!raw-loader!../src/components/Icon/CloseIcon/examples',
+			true,
+			/\.jsx?$/
+		),
+	},
+
+	{
+		name: 'CodeIcon',
+		component: getDefaultExport(
+			require('../src/components/Icon/CodeIcon/CodeIcon')
+		),
+		examplesContext: require.context(
+			'../src/components/Icon/CodeIcon/examples',
+			true,
+			/\.jsx?$/
+		),
+		examplesContextRaw: require.context(
+			'!!raw-loader!../src/components/Icon/CodeIcon/examples',
 			true,
 			/\.jsx?$/
 		),
@@ -347,23 +313,6 @@ module.exports = [
 	},
 
 	{
-		name: 'DataViewIcon',
-		component: getDefaultExport(
-			require('../src/components/Icon/DataViewIcon/DataViewIcon')
-		),
-		examplesContext: require.context(
-			'../src/components/Icon/DataViewIcon/examples',
-			true,
-			/\.jsx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../src/components/Icon/DataViewIcon/examples',
-			true,
-			/\.jsx?$/
-		),
-	},
-
-	{
 		name: 'DeleteIcon',
 		component: getDefaultExport(
 			require('../src/components/Icon/DeleteIcon/DeleteIcon')
@@ -392,23 +341,6 @@ module.exports = [
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Icon/DownloadIcon/examples',
-			true,
-			/\.jsx?$/
-		),
-	},
-
-	{
-		name: 'DownloadTableDataIcon',
-		component: getDefaultExport(
-			require('../src/components/Icon/DownloadTableDataIcon/DownloadTableDataIcon')
-		),
-		examplesContext: require.context(
-			'../src/components/Icon/DownloadTableDataIcon/examples',
-			true,
-			/\.jsx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../src/components/Icon/DownloadTableDataIcon/examples',
 			true,
 			/\.jsx?$/
 		),
@@ -449,23 +381,6 @@ module.exports = [
 	},
 
 	{
-		name: 'EditPageIcon',
-		component: getDefaultExport(
-			require('../src/components/Icon/EditPageIcon/EditPageIcon')
-		),
-		examplesContext: require.context(
-			'../src/components/Icon/EditPageIcon/examples',
-			true,
-			/\.jsx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../src/components/Icon/EditPageIcon/examples',
-			true,
-			/\.jsx?$/
-		),
-	},
-
-	{
 		name: 'EligibilityIcon',
 		component: getDefaultExport(
 			require('../src/components/Icon/EligibilityIcon/EligibilityIcon')
@@ -477,6 +392,23 @@ module.exports = [
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Icon/EligibilityIcon/examples',
+			true,
+			/\.jsx?$/
+		),
+	},
+
+	{
+		name: 'EligibilityLightIcon',
+		component: getDefaultExport(
+			require('../src/components/Icon/EligibilityLightIcon/EligibilityLightIcon')
+		),
+		examplesContext: require.context(
+			'../src/components/Icon/EligibilityLightIcon/examples',
+			true,
+			/\.jsx?$/
+		),
+		examplesContextRaw: require.context(
+			'!!raw-loader!../src/components/Icon/EligibilityLightIcon/examples',
 			true,
 			/\.jsx?$/
 		),
@@ -566,62 +498,6 @@ module.exports = [
 			/\.jsx?$/
 		),
 	},
-
-	{
-		name: 'FourSquaresIcon',
-		component: getDefaultExport(
-			require('../src/components/Icon/FourSquaresIcon/FourSquaresIcon')
-		),
-		examplesContext: require.context(
-			'../src/components/Icon/FourSquaresIcon/examples',
-			true,
-			/\.jsx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../src/components/Icon/FourSquaresIcon/examples',
-			true,
-			/\.jsx?$/
-		),
-	},
-
-	/*
-	{
-		name: 'GripperHorizontalIcon',
-		component: getDefaultExport(
-			require('../src/components/Icon/GripperHorizontalIcon/GripperHorizontalIcon')
-		),
-		examplesContext: require.context(
-			'../src/components/Icon/GripperHorizontalIcon/examples',
-			true,
-			/\.jsx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../src/components/Icon/GripperHorizontalIcon/examples',
-			true,
-			/\.jsx?$/
-		),
-	},
-
-	*/
-	/*
-
-	{
-		name: 'GripperVerticalIcon',
-		component: getDefaultExport(
-			require('../src/components/Icon/GripperVerticalIcon/GripperVerticalIcon')
-		),
-		examplesContext: require.context(
-			'../src/components/Icon/GripperVerticalIcon/examples',
-			true,
-			/\.jsx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../src/components/Icon/GripperVerticalIcon/examples',
-			true,
-			/\.jsx?$/
-		),
-	},
-	*/
 
 	{
 		name: 'HelpIcon',
@@ -896,17 +772,17 @@ module.exports = [
 	},
 
 	{
-		name: 'QuestionMarkCircleIcon',
+		name: 'QuestionMarkIcon',
 		component: getDefaultExport(
-			require('../src/components/Icon/QuestionMarkCircleIcon/QuestionMarkCircleIcon')
+			require('../src/components/Icon/QuestionMarkIcon/QuestionMarkIcon')
 		),
 		examplesContext: require.context(
-			'../src/components/Icon/QuestionMarkCircleIcon/examples',
+			'../src/components/Icon/QuestionMarkIcon/examples',
 			true,
 			/\.jsx?$/
 		),
 		examplesContextRaw: require.context(
-			'!!raw-loader!../src/components/Icon/QuestionMarkCircleIcon/examples',
+			'!!raw-loader!../src/components/Icon/QuestionMarkIcon/examples',
 			true,
 			/\.jsx?$/
 		),
@@ -1117,23 +993,6 @@ module.exports = [
 	},
 
 	{
-		name: 'TableGearIcon',
-		component: getDefaultExport(
-			require('../src/components/Icon/TableGearIcon/TableGearIcon')
-		),
-		examplesContext: require.context(
-			'../src/components/Icon/TableGearIcon/examples',
-			true,
-			/\.jsx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../src/components/Icon/TableGearIcon/examples',
-			true,
-			/\.jsx?$/
-		),
-	},
-
-	{
 		name: 'TextIcon',
 		component: getDefaultExport(
 			require('../src/components/Icon/TextIcon/TextIcon')
@@ -1247,6 +1106,23 @@ module.exports = [
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Icon/ViewIcon/examples',
+			true,
+			/\.jsx?$/
+		),
+	},
+
+	{
+		name: 'ViewTableIcon',
+		component: getDefaultExport(
+			require('../src/components/Icon/ViewTableIcon/ViewTableIcon')
+		),
+		examplesContext: require.context(
+			'../src/components/Icon/ViewTableIcon/examples',
+			true,
+			/\.jsx?$/
+		),
+		examplesContextRaw: require.context(
+			'!!raw-loader!../src/components/Icon/ViewTableIcon/examples',
 			true,
 			/\.jsx?$/
 		),

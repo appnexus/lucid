@@ -7,7 +7,6 @@
 	cursor: pointer;
 	display: flex;
 	font-size: @fontSize;
-	font-family: @fontFamily;
 	justify-content: flex-start;
 	width: fit-content;
 
@@ -21,36 +20,57 @@
 		cursor: not-allowed;
 	}
 
-	&:hover .@{prefix}-Switch-visualization-glow {
-		.opacity();
+	&:hover {
+		.@{prefix}-Switch-visualization-glow {
+			// .opacity();
+			// transform: @Switch-glow-scale;
+		}
 
-		transform: @Switch-glow-scale;
+		.@{prefix}-Switch-visualization-container {
+			border: 1px solid @color-primary;
+		}
+
+		.@{prefix}-Switch-visualization-handle {
+			background-color: @color-white;
+			border: 1px solid @color-primary;
+		}
 	}
 
-	&:hover .@{prefix}-Switch-visualization-handle {
-		transform: @Switch-handle-scale;
+	&-is-disabled:hover {
+		.@{prefix}-Switch-visualization-container,
+		.@{prefix}-Switch-visualization-handle {
+			background-color: @Switch-disabled-color;
+			border-color: @Switch-disabled-border-color;
+		}
 	}
 
-	&&-is-disabled:hover .@{prefix}-Switch-visualization-glow {
-		.opacity(0);
+	&-is-disabled:hover {
+		& .@{prefix}-Switch-visualization-container {
+			background-color: @Switch-disabled-color;
+			border-color: @Switch-disabled-border-color;
+		}
 
-		transform: none;
+		& .@{prefix}-Switch-visualization-handle {
+			background-color: transparent;
+			border-color: @Switch-disabled-border-color;
+		}
+
+		.@{prefix}-Switch-is-selected:hover {
+			.@{prefix}-Switch-visualization-container {
+				background-color: @color-white;
+				border-color: @color-primary;
+				// opacity: .50;
+			}
+			.@{prefix}-Switch-visualization-handle {
+				background-color: @color-primary;
+				// opacity: .50;
+				border-color: transparent;
+			}
+		}
 	}
 
 	&&-is-disabled:hover .@{prefix}-Switch-visualization-handle {
-		transform: none;
-	}
-
-	&-is-disabled&-is-selected:hover .@{prefix}-Switch-visualization-handle {
-		transform: @Switch-selected-transform scale(1);
-	}
-
-	&-is-selected:hover .@{prefix}-Switch-visualization-glow {
-		transform: @Switch-selected-transform @Switch-glow-scale;
-	}
-
-	&-is-selected:hover .@{prefix}-Switch-visualization-handle {
-		transform: @Switch-selected-transform @Switch-handle-scale;
+		// transform: none;
 	}
 
 	&-text {

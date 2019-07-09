@@ -2,20 +2,21 @@
 @import (reference) '../../../styles/mixins.less';
 
 .@{prefix}-WarningLightIcon {
-	&-mark {
-		fill: @featured-color-warning;
+	stroke: @featured-color-warning;
 
-		&-is-disabled {
-			fill: @color-disabledText;
-		}
+	&-mark {
+		stroke: @featured-color-warning;
+		fill: @featured-color-warning;
 	}
 
-	&-background {
+	&-is-clickable:not(&-is-disabled):hover &-mark {
+		stroke: @color-white;
 		fill: @color-white;
 	}
 
-	&-is-clickable:hover > &-background {
-		fill: @featured-color-warning-backgroundColorLight;
+	&-is-clickable:not(&-is-disabled):hover &-background {
+		stroke: @featured-color-warning-colorHover;
+		fill: @featured-color-warning-colorHover;
 	}
 }
 

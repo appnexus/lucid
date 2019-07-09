@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import _ from 'lodash';
 import { lucidClassNames } from '../../util/style-helpers';
-import CrossIcon from '../Icon/CrossIcon/CrossIcon';
+import CloseIcon from '../Icon/CloseIcon/CloseIcon';
 import {
 	createClass,
 	filterTypes,
@@ -29,8 +29,15 @@ const Tag = createClass({
 
 	propTypes: {
 		isTop: bool`
-			If using nested or double nested tags, add this prop to the top level tags
-			for more vertical spacing.
+			Set this prop if you're using three levels of tags so it can be styled
+			appropriately. This is required because we aren't able to know if your
+			Tags have grand children efficiently.
+		`,
+
+		hasLightBackground: bool`
+			Use the light background when your tags are on a white page background.
+			Use a dark background when your tags need to be placed on a darker
+			background (e.g. in a page header).
 		`,
 
 		isRemovable: bool`
@@ -54,6 +61,8 @@ const Tag = createClass({
 	getDefaultProps() {
 		return {
 			onRemove: _.noop,
+			isTop: false,
+			hasLightBackground: true,
 		};
 	},
 
@@ -63,23 +72,17 @@ const Tag = createClass({
 
 	render() {
 		const {
-			isRemovable,
 			isTop,
+			isRemovable,
 			children,
 			className,
+			hasLightBackground,
 			...passThroughs
 		} = this.props;
 
 		const subTags = filterTypes(children, Tag);
-
 		const otherChildren = rejectTypes(children, Tag);
-
 		const hasOtherChildren = !_.isEmpty(otherChildren);
-
-		const hasGrandChildren = !!subTags.find(tag =>
-			Array.isArray(tag.props.children)
-		);
-
 		const isLeaf = _.isEmpty(subTags);
 
 		return (
@@ -88,33 +91,28 @@ const Tag = createClass({
 				className={cx(
 					'&',
 					{
-						'&-top': isTop,
-						'&-leaf': isLeaf,
+						'&-is-top': isTop,
+						'&-is-leaf': isLeaf,
 						'&-is-removable': isRemovable,
+						'&-has-light-background': hasLightBackground,
 					},
 					className
 				)}
 			>
-				<div className={cx('&-inner')}>
-					{hasOtherChildren && (
-						<span
-							className={cx(hasGrandChildren ? '&-title' : '&-inner-children')}
-						>
-							{otherChildren}
-						</span>
-					)}
-					{isRemovable && (
-						<span className={cx('&-remove')} onClick={this.handleRemove}>
-							<CrossIcon
+				{hasOtherChildren && (
+					<span className={cx('&-other-children')}>
+						{otherChildren}
+						{isRemovable && (
+							<CloseIcon
+								onClick={this.handleRemove}
 								className={cx('&-remove-button')}
-								size={10}
-								viewBox="4 4 8 8"
+								size={7}
 								isClickable
 							/>
-						</span>
-					)}
-					{subTags}
-				</div>
+						)}
+					</span>
+				)}
+				{subTags}
 			</div>
 		);
 	},

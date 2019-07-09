@@ -12,7 +12,7 @@ exports[`PieChart [common] example testing should match snapshot(s) for 1.basic 
     flyOutStyle={Object {}}
     isCloseable={false}
     isExpanded={false}
-    kind="default"
+    isLight={true}
     onClose={[Function]}
     onMouseOut={[Function]}
     onMouseOver={[Function]}
@@ -152,7 +152,7 @@ exports[`PieChart [common] example testing should match snapshot(s) for 1.basic 
     flyOutStyle={Object {}}
     isCloseable={false}
     isExpanded={false}
-    kind="default"
+    isLight={true}
     onClose={[Function]}
     onMouseOut={[Function]}
     onMouseOver={[Function]}
@@ -292,7 +292,7 @@ exports[`PieChart [common] example testing should match snapshot(s) for 1.basic 
     flyOutStyle={Object {}}
     isCloseable={false}
     isExpanded={false}
-    kind="default"
+    isLight={true}
     onClose={[Function]}
     onMouseOut={[Function]}
     onMouseOver={[Function]}
@@ -432,7 +432,7 @@ exports[`PieChart [common] example testing should match snapshot(s) for 1.basic 
     flyOutStyle={Object {}}
     isCloseable={false}
     isExpanded={false}
-    kind="default"
+    isLight={true}
     onClose={[Function]}
     onMouseOut={[Function]}
     onMouseOver={[Function]}
@@ -572,7 +572,7 @@ exports[`PieChart [common] example testing should match snapshot(s) for 1.basic 
     flyOutStyle={Object {}}
     isCloseable={false}
     isExpanded={false}
-    kind="default"
+    isLight={true}
     onClose={[Function]}
     onMouseOut={[Function]}
     onMouseOver={[Function]}
@@ -712,7 +712,7 @@ exports[`PieChart [common] example testing should match snapshot(s) for 1.basic 
     flyOutStyle={Object {}}
     isCloseable={false}
     isExpanded={false}
-    kind="default"
+    isLight={true}
     onClose={[Function]}
     onMouseOut={[Function]}
     onMouseOver={[Function]}
@@ -852,7 +852,7 @@ exports[`PieChart [common] example testing should match snapshot(s) for 1.basic 
     flyOutStyle={Object {}}
     isCloseable={false}
     isExpanded={false}
-    kind="default"
+    isLight={true}
     onClose={[Function]}
     onMouseOut={[Function]}
     onMouseOver={[Function]}
@@ -992,7 +992,7 @@ exports[`PieChart [common] example testing should match snapshot(s) for 2.basic-
     flyOutStyle={Object {}}
     isCloseable={false}
     isExpanded={false}
-    kind="default"
+    isLight={true}
     onClose={[Function]}
     onMouseOut={[Function]}
     onMouseOver={[Function]}
@@ -1132,7 +1132,7 @@ exports[`PieChart [common] example testing should match snapshot(s) for 2.basic-
     flyOutStyle={Object {}}
     isCloseable={false}
     isExpanded={false}
-    kind="default"
+    isLight={true}
     onClose={[Function]}
     onMouseOut={[Function]}
     onMouseOver={[Function]}
@@ -1272,7 +1272,7 @@ exports[`PieChart [common] example testing should match snapshot(s) for 2.basic-
     flyOutStyle={Object {}}
     isCloseable={false}
     isExpanded={false}
-    kind="default"
+    isLight={true}
     onClose={[Function]}
     onMouseOut={[Function]}
     onMouseOver={[Function]}
@@ -1412,7 +1412,7 @@ exports[`PieChart [common] example testing should match snapshot(s) for 2.basic-
     flyOutStyle={Object {}}
     isCloseable={false}
     isExpanded={false}
-    kind="default"
+    isLight={true}
     onClose={[Function]}
     onMouseOut={[Function]}
     onMouseOver={[Function]}
@@ -1552,7 +1552,7 @@ exports[`PieChart [common] example testing should match snapshot(s) for 2.basic-
     flyOutStyle={Object {}}
     isCloseable={false}
     isExpanded={false}
-    kind="default"
+    isLight={true}
     onClose={[Function]}
     onMouseOut={[Function]}
     onMouseOver={[Function]}
@@ -1692,7 +1692,7 @@ exports[`PieChart [common] example testing should match snapshot(s) for 2.basic-
     flyOutStyle={Object {}}
     isCloseable={false}
     isExpanded={false}
-    kind="default"
+    isLight={true}
     onClose={[Function]}
     onMouseOut={[Function]}
     onMouseOver={[Function]}
@@ -1832,7 +1832,7 @@ exports[`PieChart [common] example testing should match snapshot(s) for 2.basic-
     flyOutStyle={Object {}}
     isCloseable={false}
     isExpanded={false}
-    kind="default"
+    isLight={true}
     onClose={[Function]}
     onMouseOut={[Function]}
     onMouseOver={[Function]}
@@ -1972,7 +1972,7 @@ exports[`PieChart [common] example testing should match snapshot(s) for 3.legend
     flyOutStyle={Object {}}
     isCloseable={false}
     isExpanded={false}
-    kind="default"
+    isLight={true}
     onClose={[Function]}
     onMouseOut={[Function]}
     onMouseOver={[Function]}
@@ -2092,7 +2092,7 @@ exports[`PieChart [common] example testing should match snapshot(s) for 4.color-
     flyOutStyle={Object {}}
     isCloseable={false}
     isExpanded={false}
-    kind="default"
+    isLight={true}
     onClose={[Function]}
     onMouseOut={[Function]}
     onMouseOver={[Function]}
@@ -2232,7 +2232,7 @@ exports[`PieChart [common] example testing should match snapshot(s) for 5.percen
     flyOutStyle={Object {}}
     isCloseable={false}
     isExpanded={false}
-    kind="default"
+    isLight={true}
     onClose={[Function]}
     onMouseOut={[Function]}
     onMouseOver={[Function]}
@@ -2372,7 +2372,7 @@ exports[`PieChart [common] example testing should match snapshot(s) for 6.small-
     flyOutStyle={Object {}}
     isCloseable={false}
     isExpanded={false}
-    kind="default"
+    isLight={true}
     onClose={[Function]}
     onMouseOut={[Function]}
     onMouseOver={[Function]}

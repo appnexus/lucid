@@ -3,13 +3,13 @@
 First of all, thank you for contributing. It’s appreciated.
 
 1. Install node >= `>=8.0.0`
-2. Clone the repo and install dependencies with `yarn`.
+2. Clone the repo and install dependencies with `npm install`.
 3. Make a GitHub issue before doing any significant amount of work. Make sure the core team approves your idea. This step is really important. If you skip this, your PR might be rejected.
   - Be sure to check out our [Waffle board][waffle] for a kanban view of all our issues.
 4. Below are some important commands for developing. Don't commit before fixing all errors and warnings.
-  - `yarn start` runs the docs page and watches for changes
-  - `yarn run dev` starts a blank storybook sandbox for quick, iterative development
-  - `yarn run watch` runs tests and watches for changes, optimized for speed
+  - `npm start` runs the docs page and watches for changes
+  - `npm run dev` starts a blank storybook sandbox for quick, iterative development
+  - `npm run watch` runs tests and watches for changes, optimized for speed
 5. Ensure your changes work properly on the latest versions of Chrome, Firefox, Safari, and IE Edge. Currently this step is manual.
 6. Reference the issue's number in your commit. E.g.: "Did this #12".
 7. Make a pull request.
@@ -56,7 +56,7 @@ export {
 @import '../components/MyNewComponent/MyNewComponent';
 ```
 
-6. Run `yarn run docs` to run the docs app locally.
+6. Run `npm run docs` to run the docs app locally.
 
 7. In your browser open, `http://localhost:6006/`
 

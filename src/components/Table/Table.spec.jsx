@@ -3,7 +3,7 @@ import { shallow } from 'enzyme';
 import assert from 'assert';
 import { common } from '../../util/generic-tests';
 import Table from './Table';
-import CaretIcon from '../Icon/CaretIcon/CaretIcon';
+import ArrowIcon from '../Icon/ArrowIcon/ArrowIcon';
 import DragCaptureZone from '../DragCaptureZone/DragCaptureZone';
 
 const { Thead, Tbody, Tr, Th, Td } = Table;
@@ -23,7 +23,7 @@ describe('Table', () => {
 		describe('density', () => {
 			describe('value `compressed`', () => {
 				it('should apply the `lucid-Table-density-compressed` class name to the rendered table', () => {
-					const wrapper = shallow(<Table density="compressed" />);
+					const wrapper = shallow(<Table density='compressed' />);
 
 					assert.equal(
 						wrapper.find('table.lucid-Table-density-compressed').length,
@@ -34,7 +34,7 @@ describe('Table', () => {
 
 			describe('value `extended`', () => {
 				it('should apply the `lucid-Table-density-extended` class name to the rendered table', () => {
-					const wrapper = shallow(<Table density="extended" />);
+					const wrapper = shallow(<Table density='extended' />);
 
 					assert.equal(
 						wrapper.find('table.lucid-Table-density-extended').length,
@@ -111,17 +111,6 @@ describe('Table', () => {
 						assert.equal(wrapper.find('tr.lucid-Table-is-active').length, 1);
 					});
 				});
-
-				describe('isActionable', () => {
-					it('should apply the class name `lucid-Table-is-actionable`', () => {
-						const wrapper = shallow(<Tr isActionable />);
-
-						assert.equal(
-							wrapper.find('tr.lucid-Table-is-actionable').length,
-							1
-						);
-					});
-				});
 			});
 		});
 
@@ -137,19 +126,19 @@ describe('Table', () => {
 			describe('props', () => {
 				describe('align', () => {
 					it('should apply the class name `lucid-Table-align-left` when align=`left`', () => {
-						const wrapper = shallow(<Th align="left" />);
+						const wrapper = shallow(<Th align='left' />);
 
 						assert.equal(wrapper.find('th.lucid-Table-align-left').length, 1);
 					});
 
 					it('should apply the class name `lucid-Table-align-center` when align=`center`', () => {
-						const wrapper = shallow(<Th align="center" />);
+						const wrapper = shallow(<Th align='center' />);
 
 						assert.equal(wrapper.find('th.lucid-Table-align-center').length, 1);
 					});
 
 					it('should apply the class name `lucid-Table-align-right` when align=`right`', () => {
-						const wrapper = shallow(<Th align="right" />);
+						const wrapper = shallow(<Th align='right' />);
 
 						assert.equal(wrapper.find('th.lucid-Table-align-right').length, 1);
 					});
@@ -219,13 +208,13 @@ describe('Table', () => {
 
 						assert.equal(containerWrapper.length, 1, 'must have a container');
 						assert.equal(
-							containerWrapper.find(CaretIcon).length,
+							containerWrapper.find(ArrowIcon).length,
 							1,
-							'must render a CaretIcon'
+							'must render a ArrowIcon'
 						);
 						assert(
 							containerWrapper
-								.find(CaretIcon)
+								.find(ArrowIcon)
 								.hasClass('lucid-Table-sort-icon'),
 							'must have className `lucid-Table-sort-icon`'
 						);
@@ -233,16 +222,16 @@ describe('Table', () => {
 				});
 
 				describe('sortDirection', () => {
-					it('should pass thru to the CaretIcon when `isSorted` is also true', () => {
-						const wrapper = shallow(<Th isSorted sortDirection="down" />);
+					it('should pass thru to the ArrowIcon when `isSorted` is also true', () => {
+						const wrapper = shallow(<Th isSorted sortDirection='down' />);
 						const containerWrapper = wrapper.find(
 							'.lucid-Table-Th-inner-caret'
 						);
 
 						assert.equal(
-							containerWrapper.find(CaretIcon).prop('direction'),
+							containerWrapper.find(ArrowIcon).prop('direction'),
 							'down',
-							'CaretIcon direction must match prop value'
+							'ArrowIcon direction must match prop value'
 						);
 					});
 				});
@@ -261,19 +250,19 @@ describe('Table', () => {
 			describe('props', () => {
 				describe('align', () => {
 					it('should apply the class name `lucid-Table-align-left` when align=`left`', () => {
-						const wrapper = shallow(<Td align="left" />);
+						const wrapper = shallow(<Td align='left' />);
 
 						assert.equal(wrapper.find('td.lucid-Table-align-left').length, 1);
 					});
 
 					it('should apply the class name `lucid-Table-align-center` when align=`center`', () => {
-						const wrapper = shallow(<Td align="center" />);
+						const wrapper = shallow(<Td align='center' />);
 
 						assert.equal(wrapper.find('td.lucid-Table-align-center').length, 1);
 					});
 
 					it('should apply the class name `lucid-Table-align-right` when align=`right`', () => {
-						const wrapper = shallow(<Td align="right" />);
+						const wrapper = shallow(<Td align='right' />);
 
 						assert.equal(wrapper.find('td.lucid-Table-align-right').length, 1);
 					});

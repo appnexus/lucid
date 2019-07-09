@@ -235,7 +235,7 @@ describe('Lines', () => {
 				const wrapper = shallow(
 					<Lines
 						data={[{ axe: 1, y: 3 }, { axe: 2, y: 2 }, { axe: 3, y: 1 }]}
-						xField="axe"
+						xField='axe'
 						xScale={defaultXScale}
 						yScale={defaultYScale}
 					/>

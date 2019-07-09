@@ -17,7 +17,7 @@ export default createClass({
 					yAxisFields={['apples', 'pears', 'peaches']}
 					yAxisMin={0}
 					yAxisIsStacked={true}
-					yAxisTitle="Fruit Count"
+					yAxisTitle='Fruit Count'
 				/>
 			</div>
 		);

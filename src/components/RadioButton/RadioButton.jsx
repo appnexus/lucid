@@ -102,8 +102,8 @@ const RadioButton = createClass({
 					checked={isSelected}
 					className={cx('&-native')}
 					disabled={isDisabled}
-					ref="nativeElement"
-					type="radio"
+					ref='nativeElement'
+					type='radio'
 				/>
 				<span
 					onClick={this.handleSpanClick}

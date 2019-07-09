@@ -16,8 +16,8 @@ describe('Accordion', () => {
 			it('renders ExpanderPanel components on it', () => {
 				const wrapper = mount(
 					<Accordion>
-						<Accordion.Item Header="Header One">One</Accordion.Item>
-						<Accordion.Item Header="Header Two">Two</Accordion.Item>
+						<Accordion.Item Header='Header One'>One</Accordion.Item>
+						<Accordion.Item Header='Header Two'>Two</Accordion.Item>
 					</Accordion>
 				);
 
@@ -27,8 +27,8 @@ describe('Accordion', () => {
 			it('Item as children', () => {
 				const wrapper = shallow(
 					<Accordion>
-						<Accordion.Item Header="Header One">One</Accordion.Item>
-						<Accordion.Item Header="Header Two">Two</Accordion.Item>
+						<Accordion.Item Header='Header One'>One</Accordion.Item>
+						<Accordion.Item Header='Header Two'>Two</Accordion.Item>
 					</Accordion>
 				);
 
@@ -40,7 +40,7 @@ describe('Accordion', () => {
 			it('Header as props', () => {
 				const wrapper = mount(
 					<Accordion>
-						<Accordion.Item Header="Froyo">Yolo fo sho</Accordion.Item>
+						<Accordion.Item Header='Froyo'>Yolo fo sho</Accordion.Item>
 						<Accordion.Item>Broyoyo</Accordion.Item>
 					</Accordion>
 				);
@@ -83,9 +83,9 @@ describe('Accordion', () => {
 			it('should have an expanded item when set via props', () => {
 				const wrapper = mount(
 					<Accordion selectedIndex={1}>
-						<Accordion.Item Header="Header Test">test</Accordion.Item>
-						<Accordion.Item Header="Header Test">test</Accordion.Item>
-						<Accordion.Item Header="Header Test">test</Accordion.Item>
+						<Accordion.Item Header='Header Test'>test</Accordion.Item>
+						<Accordion.Item Header='Header Test'>test</Accordion.Item>
+						<Accordion.Item Header='Header Test'>test</Accordion.Item>
 					</Accordion>
 				);
 
@@ -97,7 +97,7 @@ describe('Accordion', () => {
 			it('passes through all props not defined in `propTypes` to the root element', () => {
 				const wrapper = shallow(
 					<Accordion
-						className="wut"
+						className='wut'
 						style={{ marginRight: 10 }}
 						foo={1}
 						bar={2}
@@ -112,8 +112,8 @@ describe('Accordion', () => {
 			it('passes through Item className to the rendered item element', () => {
 				const wrapper = shallow(
 					<Accordion>
-						<Accordion.Item className="TestOne">One</Accordion.Item>
-						<Accordion.Item className="TestTwo">Two</Accordion.Item>
+						<Accordion.Item className='TestOne'>One</Accordion.Item>
+						<Accordion.Item className='TestTwo'>Two</Accordion.Item>
 					</Accordion>
 				);
 				const itemsWrapper = wrapper.find('.lucid-Accordion-Item');
@@ -144,8 +144,8 @@ describe('Accordion', () => {
 			document.body.appendChild(mountTestDiv);
 			wrapper = mount(
 				<Accordion onSelect={onSelect}>
-					<Accordion.Item Header="Header One">One</Accordion.Item>
-					<Accordion.Item Header="Header Two" isDisabled>
+					<Accordion.Item Header='Header One'>One</Accordion.Item>
+					<Accordion.Item Header='Header Two' isDisabled>
 						Two
 					</Accordion.Item>
 				</Accordion>,
@@ -168,7 +168,10 @@ describe('Accordion', () => {
 				.find('.lucid-ExpanderPanel-header')
 				.first()
 				.simulate('click');
-			firstPanel.find('.lucid-ExpanderPanel-icon').simulate('click');
+			firstPanel
+				.find('.lucid-ExpanderPanel-icon')
+				.first()
+				.simulate('click');
 
 			assert.equal(
 				onSelect.callCount,
@@ -186,7 +189,10 @@ describe('Accordion', () => {
 				.find('.lucid-ExpanderPanel-header')
 				.first()
 				.simulate('click');
-			secondPanel.find('.lucid-ExpanderPanel-icon').simulate('click');
+			secondPanel
+				.find('.lucid-ExpanderPanel-icon')
+				.first()
+				.simulate('click');
 
 			expect(onSelect.callCount).toEqual(0);
 		});

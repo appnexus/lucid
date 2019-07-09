@@ -7,25 +7,29 @@
 	&-Control {
 		.no-safari-flicker();
 		.box-sizing();
-		.gradient-animation( @featured-color-default-gradientStartColor, @featured-color-default-gradientEndColor);
 
+		background-color: @featured-color-default-backgroundColor;
 		cursor: pointer;
 		height: @SingleSelect-size-controlHeight;
 		display: flex;
 		outline: none;
 		border: 1px solid @featured-color-default-borderColor;
-		border-radius: @size-borderRadius;
 		font-size: @fontSize;
-		font-family: @fontFamily;
-		color: @color-black;
-		letter-spacing: 0.05em;
+		font-weight: @font-weight-medium;
+		color: @color-darkGray;
 		line-height: @size-standard-height;
 		padding: 0 @size-standard;
 		align-items: center;
 		white-space: nowrap;
 
-		&::before {
-			border-radius: @size-borderRadius;
+		&&-is-invisible {
+			border: 1px solid transparent;
+			background-color: transparent;
+		}
+
+		&&-is-invisible.@{prefix}-SingleSelect-Control-is-selected {
+			border: 1px solid @featured-color-primary-borderColor;
+			background-color: white;
 		}
 
 		&-content {
@@ -34,47 +38,50 @@
 			margin-right: @size-standard;
 		}
 
-		.@{prefix}-CaretIcon {
-			fill: @color-black;
+		.@{prefix}-ChevronIcon {
 			margin-left: auto;
+		}
+
+		&:not(.@{prefix}-SingleSelect-Control-is-disabled):hover {
+			background-color: @color-neutral-3;
+		}
+
+		&:not(.@{prefix}-SingleSelect-Control-is-disabled):focus {
+			background-color: @color-neutral-4;
 		}
 
 		// States
 		&-is-highlighted,
 		&-is-selected {
-			color: @color-white;
-			border-color: @featured-color-primary-borderColor;
-			.gradient-animation(@featured-color-primary-gradientStartColor, @featured-color-primary-gradientEndColor);
-
-			.@{prefix}-CaretIcon {
-				fill: @color-white;
-			}
+			border: 1px solid @featured-color-primary-borderColor;
 		}
 
 		&-is-expanded {
 			z-index: @zindex-tooltip;
 		}
+		&-is-expanded&-is-null-option {
+			border-bottom-width: 0px;
+		}
+
+		&-is-selected&-is-expanded {
+			background-color: @featured-color-default-backgroundColor;
+		}
+
+		&-is-null-option {
+			background-color: @featured-color-default-backgroundColor;
+			border: 1px solid @featured-color-default-borderColor;
+		}
 
 		&-is-disabled {
-			.gradient-reset(linear-gradient(@standardGradient, @featured-color-default-gradientStartColor, @featured-color-default-gradientEndColor));
-			.opacity();
+			.opacity(@opacity-disabled);
 
 			cursor: not-allowed;
 		}
 	}
-
-	&.@{prefix}-DropMenu-is-expanded {
-		&.@{prefix}-DropMenu-direction-up {
-			.@{prefix}-SingleSelect-Control {
-				border-radius: 0 0 @size-borderRadius @size-borderRadius;
-			}
-		}
-
-		&.@{prefix}-DropMenu-direction-down {
-			.@{prefix}-SingleSelect-Control {
-				border-radius: @size-borderRadius @size-borderRadius 0 0;
-			}
-		}
-	}
 }
 
+.@{prefix}-DropMenu-label {
+	text-transform: uppercase;
+	color: @color-neutral-6;
+	font-weight: @font-weight-medium;
+}

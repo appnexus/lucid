@@ -59,43 +59,39 @@ import Banner from './components/Banner/Banner';
 import Bar from './components/Bar/Bar';
 import BarChart from './components/BarChart/BarChart';
 import Bars from './components/Bars/Bars';
-import BeakerIcon from './components/Icon/BeakerIcon/BeakerIcon';
 import BellIcon from './components/Icon/BellIcon/BellIcon';
 import BookIcon from './components/Icon/BookIcon/BookIcon';
 import Breadcrumb from './components/Breadcrumb/Breadcrumb';
 import Button from './components/Button/Button';
 import CalendarIcon from './components/Icon/CalendarIcon/CalendarIcon';
-import CaretIcon from './components/Icon/CaretIcon/CaretIcon';
 import ChatIcon from './components/Icon/ChatIcon/ChatIcon';
 import CheckIcon from './components/Icon/CheckIcon/CheckIcon';
 import Checkbox from './components/Checkbox/Checkbox';
 import CheckboxLabeled from './components/CheckboxLabeled/CheckboxLabeled';
 import ChevronIcon from './components/Icon/ChevronIcon/ChevronIcon';
 import ClockIcon from './components/Icon/ClockIcon/ClockIcon';
+import CodeIcon from './components/Icon/CodeIcon/CodeIcon';
 import Collapsible from './components/Collapsible/Collapsible';
 import ContextMenu from './components/ContextMenu/ContextMenu';
-import CrossIcon from './components/Icon/CrossIcon/CrossIcon';
+import CloseIcon from './components/Icon/CloseIcon/CloseIcon';
 import CrownIcon from './components/Icon/CrownIcon/CrownIcon';
 import DangerIcon from './components/Icon/DangerIcon/DangerIcon';
 import DangerLightIcon from './components/Icon/DangerLightIcon/DangerLightIcon';
 import DataTable from './components/DataTable/DataTable';
-import DataViewIcon from './components/Icon/DataViewIcon/DataViewIcon';
 import DeleteIcon from './components/Icon/DeleteIcon/DeleteIcon';
 import Dialog from './components/Dialog/Dialog';
 import DownloadIcon from './components/Icon/DownloadIcon/DownloadIcon';
-import DownloadTableDataIcon from './components/Icon/DownloadTableDataIcon/DownloadTableDataIcon';
 import DragCaptureZone from './components/DragCaptureZone/DragCaptureZone';
 import DuplicateIcon from './components/Icon/DuplicateIcon/DuplicateIcon';
 import EditIcon from './components/Icon/EditIcon/EditIcon';
-import EditPageIcon from './components/Icon/EditPageIcon/EditPageIcon';
 import EligibilityIcon from './components/Icon/EligibilityIcon/EligibilityIcon';
+import EligibilityLightIcon from './components/Icon/EligibilityLightIcon/EligibilityLightIcon';
 import EmptyStateWrapper from './components/EmptyStateWrapper/EmptyStateWrapper';
 import EnvelopeIcon from './components/Icon/EnvelopeIcon/EnvelopeIcon';
 import EqualsIcon from './components/Icon/EqualsIcon/EqualsIcon';
 import FileIcon from './components/Icon/FileIcon/FileIcon';
 import FilterIcon from './components/Icon/FilterIcon/FilterIcon';
 import FolderIcon from './components/Icon/FolderIcon/FolderIcon';
-import FourSquaresIcon from './components/Icon/FourSquaresIcon/FourSquaresIcon';
 import Grid from './components/Grid/Grid';
 import HelpIcon from './components/Icon/HelpIcon/HelpIcon';
 import HomeIcon from './components/Icon/HomeIcon/HomeIcon';
@@ -119,6 +115,7 @@ import MinusCircleIcon from './components/Icon/MinusCircleIcon/MinusCircleIcon';
 import MinusCircleLightIcon from './components/Icon/MinusCircleLightIcon/MinusCircleLightIcon';
 import MinusIcon from './components/Icon/MinusIcon/MinusIcon';
 import NewWindowIcon from './components/Icon/NewWindowIcon/NewWindowIcon';
+import NotchedTag from './components/NotchedTag/NotchedTag';
 import OutwardArrowsIcon from './components/Icon/OutwardArrowsIcon/OutwardArrowsIcon';
 import Overlay from './components/Overlay/Overlay';
 import OverlayWrapper from './components/OverlayWrapper/OverlayWrapper';
@@ -128,7 +125,7 @@ import Point from './components/Point/Point';
 import Points from './components/Points/Points';
 import Portal from './components/Portal/Portal';
 import ProgressBar from './components/ProgressBar/ProgressBar';
-import QuestionMarkCircleIcon from './components/Icon/QuestionMarkCircleIcon/QuestionMarkCircleIcon';
+import QuestionMarkIcon from './components/Icon/QuestionMarkIcon/QuestionMarkIcon';
 import RadioButton from './components/RadioButton/RadioButton';
 import RadioButtonLabeled from './components/RadioButtonLabeled/RadioButtonLabeled';
 import RefreshIcon from './components/Icon/RefreshIcon/RefreshIcon';
@@ -153,7 +150,6 @@ import Switch from './components/Switch/Switch';
 import SwitchIcon from './components/Icon/SwitchIcon/SwitchIcon';
 import SwitchLabeled from './components/SwitchLabeled/SwitchLabeled';
 import Table from './components/Table/Table';
-import TableGearIcon from './components/Icon/TableGearIcon/TableGearIcon';
 import Tag from './components/Tag/Tag';
 import TextField from './components/TextField/TextField';
 import TextFieldValidated from './components/TextFieldValidated/TextFieldValidated';
@@ -166,6 +162,7 @@ import UserIcon from './components/Icon/UserIcon/UserIcon';
 import Validation from './components/Validation/Validation';
 import VideoIcon from './components/Icon/VideoIcon/VideoIcon';
 import ViewIcon from './components/Icon/ViewIcon/ViewIcon';
+import ViewTableIcon from './components/Icon/ViewTableIcon/ViewTableIcon';
 import WarningIcon from './components/Icon/WarningIcon/WarningIcon';
 import WarningLightIcon from './components/Icon/WarningLightIcon/WarningLightIcon';
 
@@ -213,7 +210,6 @@ export {
 	Bar,
 	BarChart,
 	Bars,
-	BeakerIcon,
 	BellIcon,
 	BookIcon,
 	Breadcrumb,
@@ -221,34 +217,32 @@ export {
 	ButtonGroup,
 	ButtonGroupDumb,
 	CalendarIcon,
-	CaretIcon,
 	ChatIcon,
 	Checkbox,
 	CheckboxLabeled,
 	CheckIcon,
 	ChevronIcon,
 	ClockIcon,
+	CodeIcon,
 	Collapsible,
 	ContextMenu,
-	CrossIcon,
+	CloseIcon,
 	CrownIcon,
 	DangerIcon,
 	DangerLightIcon,
 	DataTable,
-	DataViewIcon,
 	DateSelect,
 	DateSelectDumb,
 	DeleteIcon,
 	Dialog,
 	DownloadIcon,
-	DownloadTableDataIcon,
 	DragCaptureZone,
 	DropMenu,
 	DropMenuDumb,
 	DuplicateIcon,
 	EditIcon,
-	EditPageIcon,
 	EligibilityIcon,
+	EligibilityLightIcon,
 	EmptyStateWrapper,
 	EnvelopeIcon,
 	EqualsIcon,
@@ -259,7 +253,6 @@ export {
 	FileIcon,
 	FilterIcon,
 	FolderIcon,
-	FourSquaresIcon,
 	Grid,
 	HelpIcon,
 	HomeIcon,
@@ -283,6 +276,7 @@ export {
 	MinusCircleLightIcon,
 	MinusIcon,
 	NewWindowIcon,
+	NotchedTag,
 	OutwardArrowsIcon,
 	Overlay,
 	OverlayWrapper,
@@ -296,7 +290,7 @@ export {
 	Points,
 	Portal,
 	ProgressBar,
-	QuestionMarkCircleIcon,
+	QuestionMarkIcon,
 	RadioButton,
 	RadioButtonLabeled,
 	RadioGroup,
@@ -339,7 +333,6 @@ export {
 	SwitchIcon,
 	SwitchLabeled,
 	Table,
-	TableGearIcon,
 	Tabs,
 	TabsDumb,
 	Tag,
@@ -360,6 +353,7 @@ export {
 	VerticalTabsDumb,
 	VideoIcon,
 	ViewIcon,
+	ViewTableIcon,
 	WarningIcon,
 	WarningLightIcon,
 };

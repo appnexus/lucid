@@ -17,7 +17,7 @@ export default createClass({
 						alignItems: 'flex-start',
 					}}
 				>
-					<SwitchLabeled Label="Just text" style={style} />
+					<SwitchLabeled Label='Just text' style={style} />
 					<SwitchLabeled Label={<span>HTML element</span>} style={style} />
 					<SwitchLabeled
 						Label={[

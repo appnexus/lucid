@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import _ from 'lodash';
@@ -6,7 +7,7 @@ import { lucidClassNames } from '../../util/style-helpers';
 import { partitionText, propsSearch } from '../../util/text-manipulation';
 import { buildHybridComponent } from '../../util/state-management';
 import * as reducers from './SearchableSelect.reducers';
-import CaretIcon from '../Icon/CaretIcon/CaretIcon';
+import ChevronIcon from '../Icon/ChevronIcon/ChevronIcon';
 import { DropMenuDumb as DropMenu } from '../DropMenu/DropMenu';
 import LoadingIcon from '../Icon/LoadingIcon/LoadingIcon';
 import { SearchFieldDumb as SearchField } from '../SearchField/SearchField';
@@ -132,6 +133,10 @@ const SearchableSelect = createClass({
 			Disables the SearchableSelect from being clicked or focused.
 		`,
 
+		isInvisible: bool`
+			The SearchableSelect will be invisible.
+		`,
+
 		isLoading: bool`
 			Displays a centered LoadingIcon to allow for asynchronous loading of
 			options.
@@ -207,6 +212,7 @@ const SearchableSelect = createClass({
 			hasReset: true,
 			isSelectionHighlighted: true,
 			isDisabled: false,
+			isInvisible: false,
 			isLoading: false,
 			optionFilter: propsSearch,
 			searchText: '',
@@ -235,7 +241,9 @@ const SearchableSelect = createClass({
 	},
 
 	handleSearch(searchText) {
-		const { props: { onSearch, optionFilter } } = this;
+		const {
+			props: { onSearch, optionFilter },
+		} = this;
 
 		const { flattenedOptionsData } = this.state;
 
@@ -258,17 +266,17 @@ const SearchableSelect = createClass({
 
 		return [
 			pre && (
-				<span key="pre" className={cx('&-Option-underline-pre')}>
+				<span key='pre' className={cx('&-Option-underline-pre')}>
 					{pre}
 				</span>
 			),
 			match && (
-				<span key="match" className={cx('&-Option-underline-match')}>
+				<span key='match' className={cx('&-Option-underline-match')}>
 					{match}
 				</span>
 			),
 			post && (
-				<span key="post" className={cx('&-Option-underline-post')}>
+				<span key='post' className={cx('&-Option-underline-post')}>
 					{post}
 				</span>
 			),
@@ -289,8 +297,8 @@ const SearchableSelect = createClass({
 					{_.isString(optionProps.children)
 						? this.renderUnderlinedChildren(optionProps.children, searchText)
 						: _.isFunction(optionProps.children)
-							? React.createElement(optionProps.children, { searchText })
-							: optionProps.children}
+						? React.createElement(optionProps.children, { searchText })
+						: optionProps.children}
 				</DropMenu.Option>
 			);
 		}
@@ -375,6 +383,7 @@ const SearchableSelect = createClass({
 				className,
 				hasReset,
 				isDisabled,
+				isInvisible,
 				isLoading,
 				isSelectionHighlighted,
 				maxMenuHeight,
@@ -390,7 +399,7 @@ const SearchableSelect = createClass({
 		const { flattenedOptionsData } = this.state;
 
 		const searchFieldProps = _.get(
-			getFirst(props, SearchField) || <SearchField />,
+			getFirst(props, SearchField) || <SearchField placeholder='Search...' />,
 			'props'
 		);
 		const placeholderProps = _.first(
@@ -421,9 +430,9 @@ const SearchableSelect = createClass({
 								(!isDisabled && isItemSelected && isSelectionHighlighted) ||
 								(isExpanded && isSelectionHighlighted),
 							'&-Control-is-selected':
-								(!isDisabled && isItemSelected && isSelectionHighlighted) ||
-								(isExpanded && isSelectionHighlighted),
+								!isDisabled && isItemSelected && isSelectionHighlighted,
 							'&-Control-is-expanded': isExpanded,
+							'&-Control-is-invisible': isInvisible,
 							'&-Control-is-disabled': isDisabled,
 						})}
 					>
@@ -441,14 +450,17 @@ const SearchableSelect = createClass({
 											SearchableSelect.Option.Selected
 										),
 										'props.children'
-									) ||
-									(Children =>
+								  ) ||
+								  (Children =>
 										_.isFunction(Children) ? <Children /> : Children)(
 										flattenedOptionsData[selectedIndex].optionProps.children
-									)
+								  )
 								: placeholder}
 						</span>
-						<CaretIcon direction={isExpanded ? direction : 'down'} size={8} />
+						<ChevronIcon
+							size={12}
+							direction={isExpanded ? direction : 'down'}
+						/>
 					</div>
 				</DropMenu.Control>
 				<DropMenu.Header className={cx('&-Search-container')}>
@@ -460,19 +472,18 @@ const SearchableSelect = createClass({
 				</DropMenu.Header>
 				{isLoading && (
 					<DropMenu.Option
-						key="SearchableSelectLoading"
+						key='SearchableSelectLoading'
 						className={cx('&-Loading')}
 						isDisabled
 					>
 						<LoadingIcon />
 					</DropMenu.Option>
 				)}
-				{hasReset &&
-					isItemSelected && (
-						<DropMenu.NullOption {...placeholderProps}>
-							{placeholder}
-						</DropMenu.NullOption>
-					)}
+				{hasReset && isItemSelected && (
+					<DropMenu.NullOption {...placeholderProps}>
+						{placeholder}
+					</DropMenu.NullOption>
+				)}
 				{this.renderOptions()}
 			</DropMenu>
 		);

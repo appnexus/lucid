@@ -11,7 +11,7 @@ export default createClass({
 		return (
 			<section>
 				<section>
-					<RadioButtonLabeled Label="Just text" style={style} />
+					<RadioButtonLabeled Label='Just text' style={style} />
 					<RadioButtonLabeled Label={<span>HTML element</span>} style={style} />
 					<RadioButtonLabeled
 						Label={[

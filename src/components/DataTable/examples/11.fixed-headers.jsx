@@ -25,6 +25,7 @@ const data = [
 		occupation: 'Physicist',
 		salary: '$100.02',
 		status: <SuccessIcon />,
+		isSelected: true,
 	},
 	{
 		id: 3,
@@ -34,6 +35,7 @@ const data = [
 		occupation: 'Engineer',
 		salary: '$100.03',
 		status: <SuccessIcon />,
+		isActive: true,
 	},
 	{
 		id: 4,
@@ -106,7 +108,7 @@ export default createClass({
 			isSelectable: true,
 			hasLightHeader: false,
 			fixedColumnCount: 2,
-			fixedRowHeight: 45,
+			fixedRowHeight: 50,
 			isActionable: false,
 		};
 	},
@@ -119,31 +121,31 @@ export default createClass({
 	renderDataTable(props) {
 		return (
 			<DataTable data={data} {...props}>
-				<DataTable.Column field="id" align="left" width={35}>
+				<DataTable.Column field='id' align='left' width={35}>
 					ID
 				</DataTable.Column>
 
-				<DataTable.Column field="first_name" align="left" width={100}>
+				<DataTable.Column field='first_name' align='left' width={100}>
 					First
 				</DataTable.Column>
 
-				<DataTable.Column field="last_name" align="left" width={100}>
+				<DataTable.Column field='last_name' align='left' width={100}>
 					Last
 				</DataTable.Column>
 
-				<DataTable.Column field="email" align="left" width={900}>
+				<DataTable.Column field='email' align='left' width={900}>
 					E-Mail
 				</DataTable.Column>
 
-				<DataTable.Column field="occupation" align="left" width={100}>
+				<DataTable.Column field='occupation' align='left' width={100}>
 					Occupation
 				</DataTable.Column>
 
-				<DataTable.Column field="salary" align="right" width={100}>
+				<DataTable.Column field='salary' align='right' width={100}>
 					Salary
 				</DataTable.Column>
 
-				<DataTable.Column field="status" align="center" width={100}>
+				<DataTable.Column field='status' align='center' width={100}>
 					Status
 				</DataTable.Column>
 			</DataTable>
@@ -158,7 +160,7 @@ export default createClass({
 						onChangeDebounced={v =>
 							this.handleNumeric('fixedColumnCount', parseInt(v, 10))
 						}
-						placeholder="fixedColumnCount"
+						placeholder='fixedColumnCount'
 						value={this.state.fixedColumnCount}
 					/>
 					fixedColumnCount
@@ -169,28 +171,28 @@ export default createClass({
 						onChangeDebounced={v =>
 							this.handleNumeric('fixedRowHeight', parseInt(v, 10))
 						}
-						placeholder="fixedRowHeight"
+						placeholder='fixedRowHeight'
 						value={this.state.fixedRowHeight}
 					/>
 					fixedRowHeight
 				</label>
 				<CheckboxLabeled
-					Label="hasFixedHeader"
+					Label='hasFixedHeader'
 					isSelected={this.state.hasFixedHeader}
 					onSelect={() => this.handleToggle('hasFixedHeader')}
 				/>
 				<CheckboxLabeled
-					Label="isSelectable"
+					Label='isSelectable'
 					isSelected={this.state.isSelectable}
 					onSelect={() => this.handleToggle('isSelectable')}
 				/>
 				<CheckboxLabeled
-					Label="hasLightHeader"
+					Label='hasLightHeader'
 					isSelected={this.state.hasLightHeader}
 					onSelect={() => this.handleToggle('hasLightHeader')}
 				/>
 				<CheckboxLabeled
-					Label="isActionable"
+					Label='isActionable'
 					isSelected={this.state.isActionable}
 					onSelect={() => this.handleToggle('isActionable')}
 				/>

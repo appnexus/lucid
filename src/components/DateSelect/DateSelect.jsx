@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import _ from 'lodash';
 import PropTypes from 'react-peek/prop-types';
 import React from 'react';
@@ -8,7 +9,7 @@ import { createClass, getFirst, omitProps } from '../../util/component-types';
 import * as reducers from './DateSelect.reducers';
 import InfiniteSlidePanel from '../InfiniteSlidePanel/InfiniteSlidePanel';
 import CalendarMonth from '../CalendarMonth/CalendarMonth';
-import ChevronThinIcon from '../Icon/ChevronThinIcon/ChevronThinIcon';
+import ChevronIcon from '../Icon/ChevronIcon/ChevronIcon';
 import { DateUtils } from 'react-day-picker';
 
 const cx = lucidClassNames.bind('&-DateSelect');
@@ -219,10 +220,8 @@ const DateSelect = createClass({
 			const size = Math.sqrt(oneMonthShownWidth * height);
 			const relativeFontSize = Math.round(size / 24);
 			const relativeMinWidth =
-				(width - navButtonsWidth) /
-					monthsShown *
-					10.1075 /
-					relativeFontSize *
+				((((width - navButtonsWidth) / monthsShown) * 10.1075) /
+					relativeFontSize) *
 					monthsShown +
 				navButtonsWidth;
 
@@ -311,11 +310,11 @@ const DateSelect = createClass({
 				{...omitProps(passThroughs, DateSelect)}
 			>
 				<div>
-					<ChevronThinIcon
+					<ChevronIcon
 						className={cx('&-chevron')}
 						size={NAV_BUTTON_SIZE}
 						isClickable
-						direction="left"
+						direction='left'
 						onClick={this.handlePrev}
 					/>
 				</div>
@@ -383,11 +382,11 @@ const DateSelect = createClass({
 					</div>
 				)}
 				<div>
-					<ChevronThinIcon
+					<ChevronIcon
 						className={cx('&-chevron')}
 						size={NAV_BUTTON_SIZE}
 						isClickable
-						direction="right"
+						direction='right'
 						onClick={this.handleNext}
 					/>
 				</div>

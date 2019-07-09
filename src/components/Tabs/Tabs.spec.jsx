@@ -53,7 +53,7 @@ describe('Tabs', () => {
 		it('Title as props', () => {
 			const wrapper = shallow(
 				<Tabs>
-					<Tabs.Tab Title="Froyo">Yolo fo sho</Tabs.Tab>
+					<Tabs.Tab Title='Froyo'>Yolo fo sho</Tabs.Tab>
 					<Tabs.Tab>Broyoyo</Tabs.Tab>
 				</Tabs>
 			);
@@ -82,8 +82,8 @@ describe('Tabs', () => {
 		it('selectedIndex', () => {
 			const wrapper = shallow(
 				<Tabs selectedIndex={1}>
-					<Tabs.Tab Title="Lollipop">Yuck</Tabs.Tab>
-					<Tabs.Tab Title="Slurpee">Yum</Tabs.Tab>
+					<Tabs.Tab Title='Lollipop'>Yuck</Tabs.Tab>
+					<Tabs.Tab Title='Slurpee'>Yum</Tabs.Tab>
 				</Tabs>
 			);
 
@@ -96,8 +96,8 @@ describe('Tabs', () => {
 		it('Tab.isSelected', () => {
 			const wrapper = shallow(
 				<Tabs>
-					<Tabs.Tab Title="Lollipop">Yuck</Tabs.Tab>
-					<Tabs.Tab isSelected={true} Title="Slurpee">
+					<Tabs.Tab Title='Lollipop'>Yuck</Tabs.Tab>
+					<Tabs.Tab isSelected={true} Title='Slurpee'>
 						Yum
 					</Tabs.Tab>
 				</Tabs>
@@ -112,11 +112,11 @@ describe('Tabs', () => {
 		it('last Tab.isSelected beats selectedIndex', () => {
 			const wrapper = shallow(
 				<Tabs selectedIndex={0}>
-					<Tabs.Tab Title="One">One content</Tabs.Tab>
-					<Tabs.Tab isSelected={true} Title="Two">
+					<Tabs.Tab Title='One'>One content</Tabs.Tab>
+					<Tabs.Tab isSelected={true} Title='Two'>
 						Two content
 					</Tabs.Tab>
-					<Tabs.Tab isSelected={true} Title="Three">
+					<Tabs.Tab isSelected={true} Title='Three'>
 						Three content
 					</Tabs.Tab>
 				</Tabs>
@@ -164,7 +164,6 @@ describe('Tabs', () => {
 					isSelected: false,
 					Title: '',
 					children: 'Two',
-					isNavigation: false,
 				});
 			});
 
@@ -180,8 +179,8 @@ describe('Tabs', () => {
 		it('isOpen', () => {
 			const wrapper = shallow(
 				<Tabs isOpen={false} selectedIndex={0}>
-					<Tabs.Tab Title="Lollipop">Yuck</Tabs.Tab>
-					<Tabs.Tab Title="Slurpee">Yum</Tabs.Tab>
+					<Tabs.Tab Title='Lollipop'>Yuck</Tabs.Tab>
+					<Tabs.Tab Title='Slurpee'>Yum</Tabs.Tab>
 				</Tabs>
 			);
 
@@ -194,23 +193,12 @@ describe('Tabs', () => {
 		it('hasFullWidthTabs', () => {
 			const wrapper = shallow(
 				<Tabs hasFullWidthTabs={false}>
-					<Tabs.Tab Title="Lollipop">Yuck</Tabs.Tab>
-					<Tabs.Tab Title="Slurpee">Yum</Tabs.Tab>
+					<Tabs.Tab Title='Lollipop'>Yuck</Tabs.Tab>
+					<Tabs.Tab Title='Slurpee'>Yum</Tabs.Tab>
 				</Tabs>
 			);
 
 			assert.equal(wrapper.find('.lucid-Tabs-variable-width').length, 1);
-		});
-
-		it('isNavigation', () => {
-			const wrapper = shallow(
-				<Tabs isNavigation={true}>
-					<Tabs.Tab Title="Lollipop">Yuck</Tabs.Tab>
-					<Tabs.Tab Title="Slurpee">Yum</Tabs.Tab>
-				</Tabs>
-			);
-
-			assert.equal(wrapper.find('.lucid-Tabs-navigation-tabs').length, 1);
 		});
 	});
 });

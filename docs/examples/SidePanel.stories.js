@@ -12,6 +12,8 @@ import WithResizeExample from './SidePanel/WithResize';
 import withResizeCode from '!!raw-loader!./SidePanel/WithResize';
 import WithoutResizeExample from './SidePanel/WithoutResize';
 import withoutResizeCode from '!!raw-loader!./SidePanel/WithoutResize';
+import WithTopMarginExample from './SidePanel/WithTopMargin';
+import withTopMarginCode from '!!raw-loader!./SidePanel/WithTopMargin';
 import WithoutAnimationExample from './SidePanel/WithoutAnimation';
 import witouthAnimationCode from '!!raw-loader!./SidePanel/WithoutAnimation';
 import NoModalExample from './SidePanel/NoModal';
@@ -60,6 +62,15 @@ storiesOf('SidePanel', module)
 			component: SidePanel,
 			example: WithoutResizeExample,
 			code: withoutResizeCode,
+			path: ['SidePanel'],
+		})
+	)
+	.add(
+		'with top margin',
+		exampleStory({
+			component: SidePanel,
+			example: WithTopMarginExample,
+			code: withTopMarginCode,
 			path: ['SidePanel'],
 		})
 	)

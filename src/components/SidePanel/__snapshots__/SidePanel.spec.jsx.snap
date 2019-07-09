@@ -8,55 +8,63 @@ exports[`SidePanel Header should match snapshot 1`] = `
   isShown={true}
   onBackgroundClick={[Function]}
   onEscape={[Function]}
+  style={
+    Object {
+      "marginTop": 0,
+    }
+  }
 >
   <div
     className="lucid-SidePanel-pane"
-  >
-    <DragCaptureZone
-      className="lucid-SidePanel-grabber"
-      onDrag={[Function]}
-      onDragCancel={[Function]}
-      onDragEnd={[Function]}
-      onDragStart={[Function]}
-    >
-      <GripperVerticalIcon />
-    </DragCaptureZone>
-    <div
-      className="lucid-SidePanel-panel"
-      style={
-        Object {
-          "width": 240,
-        }
+    style={
+      Object {
+        "marginTop": 0,
+        "width": 240,
       }
+    }
+  >
+    <div
+      className="lucid-SidePanel-header"
     >
       <div
-        className="lucid-SidePanel-header"
+        className="lucid-SidePanel-header-inner-wrapper"
       >
         <div
-          className="lucid-SidePanel-header-inner-wrapper"
+          className="lucid-SidePanel-header-content"
         >
-          <div
-            className="lucid-SidePanel-header-content"
-          >
-            This is a header
-          </div>
-          <Button
-            className="lucid-SidePanel-header-closer"
-            hasOnlyIcon={false}
-            isActive={false}
-            isDisabled={false}
-            kind="invisible"
-            onClick={[Function]}
-            type="button"
-          >
-            <CrossIcon
-              isClickable={true}
-              onClick={[Function]}
-              presetSize="large"
-            />
-          </Button>
+          This is a header
         </div>
+        <Button
+          className="lucid-SidePanel-header-closer-button"
+          hasOnlyIcon={true}
+          isActive={false}
+          isDisabled={false}
+          kind="invisible"
+          onClick={[Function]}
+          type="button"
+        >
+          <CloseIcon
+            className="lucid-SidePanel-header-closer"
+            isClickable={true}
+            size={14}
+          />
+        </Button>
       </div>
+    </div>
+    <div
+      className="lucid-SidePanel-body"
+    >
+      <DragCaptureZone
+        className="lucid-SidePanel-grabber"
+        onDrag={[Function]}
+        onDragCancel={[Function]}
+        onDragEnd={[Function]}
+        onDragStart={[Function]}
+      >
+        <GripperVerticalIcon
+          width="20"
+        />
+      </DragCaptureZone>
       <div
         className="lucid-SidePanel-content"
       />
@@ -73,27 +81,35 @@ exports[`SidePanel isAnimated should match snapshot 1`] = `
   isShown={true}
   onBackgroundClick={[Function]}
   onEscape={[Function]}
+  style={
+    Object {
+      "marginTop": 0,
+    }
+  }
 >
   <div
     className="lucid-SidePanel-pane"
-  >
-    <DragCaptureZone
-      className="lucid-SidePanel-grabber"
-      onDrag={[Function]}
-      onDragCancel={[Function]}
-      onDragEnd={[Function]}
-      onDragStart={[Function]}
-    >
-      <GripperVerticalIcon />
-    </DragCaptureZone>
-    <div
-      className="lucid-SidePanel-panel"
-      style={
-        Object {
-          "width": 240,
-        }
+    style={
+      Object {
+        "marginTop": 0,
+        "width": 240,
       }
+    }
+  >
+    <div
+      className="lucid-SidePanel-body"
     >
+      <DragCaptureZone
+        className="lucid-SidePanel-grabber"
+        onDrag={[Function]}
+        onDragCancel={[Function]}
+        onDragEnd={[Function]}
+        onDragStart={[Function]}
+      >
+        <GripperVerticalIcon
+          width="20"
+        />
+      </DragCaptureZone>
       <div
         className="lucid-SidePanel-content"
       />
@@ -110,27 +126,35 @@ exports[`SidePanel isExpanded should match snapshot 1`] = `
   isShown={false}
   onBackgroundClick={[Function]}
   onEscape={[Function]}
+  style={
+    Object {
+      "marginTop": 0,
+    }
+  }
 >
   <div
     className="lucid-SidePanel-pane"
-  >
-    <DragCaptureZone
-      className="lucid-SidePanel-grabber"
-      onDrag={[Function]}
-      onDragCancel={[Function]}
-      onDragEnd={[Function]}
-      onDragStart={[Function]}
-    >
-      <GripperVerticalIcon />
-    </DragCaptureZone>
-    <div
-      className="lucid-SidePanel-panel"
-      style={
-        Object {
-          "width": 240,
-        }
+    style={
+      Object {
+        "marginTop": 0,
+        "width": 240,
       }
+    }
+  >
+    <div
+      className="lucid-SidePanel-body"
     >
+      <DragCaptureZone
+        className="lucid-SidePanel-grabber"
+        onDrag={[Function]}
+        onDragCancel={[Function]}
+        onDragEnd={[Function]}
+        onDragStart={[Function]}
+      >
+        <GripperVerticalIcon
+          width="20"
+        />
+      </DragCaptureZone>
       <div
         className="lucid-SidePanel-content"
       />
@@ -147,17 +171,23 @@ exports[`SidePanel isResizeDisabled should match snapshot 1`] = `
   isShown={true}
   onBackgroundClick={[Function]}
   onEscape={[Function]}
+  style={
+    Object {
+      "marginTop": 0,
+    }
+  }
 >
   <div
     className="lucid-SidePanel-pane"
+    style={
+      Object {
+        "marginTop": 0,
+        "width": 240,
+      }
+    }
   >
     <div
-      className="lucid-SidePanel-panel"
-      style={
-        Object {
-          "width": 240,
-        }
-      }
+      className="lucid-SidePanel-body"
     >
       <div
         className="lucid-SidePanel-content"
@@ -175,27 +205,35 @@ exports[`SidePanel position should match snapshot 1`] = `
   isShown={true}
   onBackgroundClick={[Function]}
   onEscape={[Function]}
+  style={
+    Object {
+      "marginTop": 0,
+    }
+  }
 >
   <div
     className="lucid-SidePanel-pane"
-  >
-    <DragCaptureZone
-      className="lucid-SidePanel-grabber"
-      onDrag={[Function]}
-      onDragCancel={[Function]}
-      onDragEnd={[Function]}
-      onDragStart={[Function]}
-    >
-      <GripperVerticalIcon />
-    </DragCaptureZone>
-    <div
-      className="lucid-SidePanel-panel"
-      style={
-        Object {
-          "width": 240,
-        }
+    style={
+      Object {
+        "marginTop": 0,
+        "width": 240,
       }
+    }
+  >
+    <div
+      className="lucid-SidePanel-body"
     >
+      <DragCaptureZone
+        className="lucid-SidePanel-grabber"
+        onDrag={[Function]}
+        onDragCancel={[Function]}
+        onDragEnd={[Function]}
+        onDragStart={[Function]}
+      >
+        <GripperVerticalIcon
+          width="20"
+        />
+      </DragCaptureZone>
       <div
         className="lucid-SidePanel-content"
       />
@@ -212,27 +250,35 @@ exports[`SidePanel width should match snapshot 1`] = `
   isShown={true}
   onBackgroundClick={[Function]}
   onEscape={[Function]}
+  style={
+    Object {
+      "marginTop": 0,
+    }
+  }
 >
   <div
     className="lucid-SidePanel-pane"
-  >
-    <DragCaptureZone
-      className="lucid-SidePanel-grabber"
-      onDrag={[Function]}
-      onDragCancel={[Function]}
-      onDragEnd={[Function]}
-      onDragStart={[Function]}
-    >
-      <GripperVerticalIcon />
-    </DragCaptureZone>
-    <div
-      className="lucid-SidePanel-panel"
-      style={
-        Object {
-          "width": 200,
-        }
+    style={
+      Object {
+        "marginTop": 0,
+        "width": 200,
       }
+    }
+  >
+    <div
+      className="lucid-SidePanel-body"
     >
+      <DragCaptureZone
+        className="lucid-SidePanel-grabber"
+        onDrag={[Function]}
+        onDragCancel={[Function]}
+        onDragEnd={[Function]}
+        onDragStart={[Function]}
+      >
+        <GripperVerticalIcon
+          width="20"
+        />
+      </DragCaptureZone>
       <div
         className="lucid-SidePanel-content"
       />

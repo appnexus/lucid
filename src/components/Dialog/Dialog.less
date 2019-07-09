@@ -1,7 +1,7 @@
 @import (reference) '../../styles/variables.less';
 @import (reference) '../../styles/mixins.less';
 
-@Dialog-size-spacing: @size-standard;
+@Dialog-size-spacing: 25px;
 @Dialog-size-borderRadius: @size-borderRadius + 2;
 @Dialog-size-maxHeight: 80vh;
 @Dialog-size-smallWidth: 30%;
@@ -15,8 +15,7 @@
 		display: flex;
 		flex-direction: column;
 		background: @color-white;
-		border-radius: @Dialog-size-borderRadius;
-		box-shadow: 0 0 4px 0 @color-gray-50;
+		box-shadow: 0 1px 5px 0 rgba(33, 31, 31, 0.3);
 		max-height: @Dialog-size-maxHeight;
 		overflow: hidden;
 		z-index: @zindex-modal;
@@ -34,23 +33,53 @@
 		width: @Dialog-size-largeWidth;
 	}
 
+
+
 	&-header {
-		flex: 1 0 auto;
-		font-family: @fontFamily;
-		font-size: @size-font-XL;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		font-size: @size-font-L;
 		color: @color-darkGray;
-		font-weight: bold;
-		background-color: @color-lightGray;
-		border-bottom: 1px solid @color-gray;
-		padding: @Dialog-size-spacing;
-		padding-bottom: @Dialog-size-spacing - 2;
+		font-weight: @font-weight-medium;
+		padding: 26px @Dialog-size-spacing 21px;
+
+		.@{prefix}-Dialog-close-button {
+			position: relative;
+			left: 0;
+			top: 0;
+			padding: 0 8px;
+
+			.@{prefix}-Icon {
+				stroke: @color-neutral-6;
+			}
+		}
+	}
+
+	& &-is-complex &-header {
+		display: flex;
+		box-sizing: content-box;
+		padding: 22px @Dialog-size-spacing 18px;
+		border-bottom: 1px solid @color-neutral-4;
+		font-size: @size-font-L;
+		min-height: 28px;
 	}
 
 	&-body {
 		flex: 1 1 auto;
 		overflow: auto;
-		padding: @Dialog-size-spacing;
+		padding: 0 @Dialog-size-spacing;
 		max-height: 60vh; // fix for IE 11 bug, otherwise the body doesn't shrink properly
+		font-size: @fontSize;
+		line-height: 14px;
+	}
+
+	& &-is-complex &-body {
+		padding: 10px @Dialog-size-spacing;
+	}
+
+	& &-no-footer &-body {
+		padding-bottom: 20px;
 	}
 
 	&-body-no-gutters {
@@ -61,8 +90,14 @@
 		flex: 1 0 auto;
 		text-align: right;
 		background-color: @color-white;
-		padding: @Dialog-size-spacing;
-		border-top: 1px solid @color-gray;
+		padding: 20px @Dialog-size-spacing;
+	}
+
+	& &-is-complex &-footer {
+		border-top: 1px solid @color-neutral-4;
+		padding: 19px @Dialog-size-spacing;
+		height: 30px;
+		box-sizing: content-box;
 	}
 }
 

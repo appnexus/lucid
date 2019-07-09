@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
@@ -209,7 +210,11 @@ const SearchableSingleSelect = createClass({
 	handleSearch(searchText, { event }) {
 		const {
 			props,
-			props: { onSearch, optionFilter, DropMenu: { onExpand } },
+			props: {
+				onSearch,
+				optionFilter,
+				DropMenu: { onExpand },
+			},
 		} = this;
 
 		const options = _.map(
@@ -262,17 +267,17 @@ const SearchableSingleSelect = createClass({
 
 		return [
 			pre && (
-				<span key="pre" className={cx('&-Option-underline-pre')}>
+				<span key='pre' className={cx('&-Option-underline-pre')}>
 					{pre}
 				</span>
 			),
 			match && (
-				<span key="match" className={cx('&-Option-underline-match')}>
+				<span key='match' className={cx('&-Option-underline-match')}>
 					{match}
 				</span>
 			),
 			post && (
-				<span key="post" className={cx('&-Option-underline-post')}>
+				<span key='post' className={cx('&-Option-underline-post')}>
 					{post}
 				</span>
 			),
@@ -285,8 +290,8 @@ const SearchableSingleSelect = createClass({
 			searchText.length > 0
 			? this.renderUnderlinedChildren(optionProps.children, searchText)
 			: _.isFunction(optionProps.children)
-				? React.createElement(optionProps.children, { searchText })
-				: optionProps.children;
+			? React.createElement(optionProps.children, { searchText })
+			: optionProps.children;
 	},
 
 	renderOption({ optionProps, optionIndex }) {
@@ -382,19 +387,23 @@ const SearchableSingleSelect = createClass({
 
 		//user made a selection
 		if (!_.isNil(props.selectedIndex)) {
+			const selectedOptionProps = this.state.flattenedOptionsData[
+				props.selectedIndex
+			].optionProps;
+
 			return (
 				<div
 					{...omitProps(passThroughs, SearchableSingleSelect)}
 					className={cx('&', className)}
 				>
 					<Selection
-						Label={this.renderOptionContent(
-							this.state.flattenedOptionsData[props.selectedIndex].optionProps,
-							''
-						)}
+						Label={
+							_.isNil(selectedOptionProps.Selected)
+								? this.renderOptionContent(selectedOptionProps, '')
+								: selectedOptionProps.Selected
+						}
 						onRemove={this.removeSelection}
-						kind="default"
-						responsiveMode="large"
+						kind='default'
 					/>
 				</div>
 			);
@@ -439,7 +448,7 @@ const SearchableSingleSelect = createClass({
 					</DropMenu.Control>
 					{isLoading ? (
 						<DropMenu.Option
-							key="SearchableSingleSelectLoading"
+							key='SearchableSingleSelectLoading'
 							className={cx('&-loading')}
 							isDisabled
 						>

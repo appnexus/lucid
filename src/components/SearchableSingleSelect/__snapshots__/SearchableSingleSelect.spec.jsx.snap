@@ -3,6 +3,11 @@
 exports[`SearchableSingleSelect [common] example testing should match snapshot(s) for 01.basic 1`] = `
 <div
   className="lucid-SearchableSingleSelect"
+  style={
+    Object {
+      "maxWidth": "100px",
+    }
+  }
 >
   <DropMenu
     ContextMenu={
@@ -484,7 +489,6 @@ exports[`SearchableSingleSelect [common] example testing should match snapshot(s
     >
       <LoadingIcon
         aspectRatio="xMidYMid meet"
-        isBadge={false}
         isClickable={false}
         isDisabled={false}
         size={16}
@@ -1225,6 +1229,78 @@ exports[`SearchableSingleSelect [common] example testing should match snapshot(s
       key="SearchableSingleSelectOption49"
     >
       Hawaii
+    </DropMenu.Option>
+  </DropMenu>
+</div>
+`;
+
+exports[`SearchableSingleSelect [common] example testing should match snapshot(s) for 05.selected-option 1`] = `
+<div
+  className="lucid-SearchableSingleSelect"
+>
+  <DropMenu
+    ContextMenu={
+      Object {
+        "alignmentOffset": -13,
+        "directonOffset": -1,
+        "minWidthOffset": -28,
+      }
+    }
+    alignment="start"
+    className="lucid-SearchableSingleSelect-DropMenu lucid-SearchableSingleSelect-DropMenu-is-small"
+    direction="down"
+    flyOutStyle={
+      Object {
+        "maxHeight": "18em",
+      }
+    }
+    focusedIndex={null}
+    isDisabled={false}
+    isExpanded={false}
+    onCollapse={[Function]}
+    onExpand={[Function]}
+    onFocusNext={[Function]}
+    onFocusOption={[Function]}
+    onFocusPrev={[Function]}
+    onSelect={[Function]}
+    optionContainerStyle={Object {}}
+    selectedIndices={null}
+  >
+    <DropMenu.Control>
+      <SearchField
+        className="lucid-SearchableSingleSelect-search"
+        debounceLevel={500}
+        isDisabled={false}
+        onChange={[Function]}
+        onChangeDebounced={[Function]}
+        onSubmit={[Function]}
+        placeholder="Color"
+        value=""
+      />
+    </DropMenu.Control>
+    <DropMenu.Option
+      isDisabled={false}
+      isHidden={false}
+      isWrapped={true}
+      key="SearchableSingleSelectOption0"
+    >
+      Red
+    </DropMenu.Option>
+    <DropMenu.Option
+      isDisabled={false}
+      isHidden={false}
+      isWrapped={true}
+      key="SearchableSingleSelectOption1"
+    >
+      Blue
+    </DropMenu.Option>
+    <DropMenu.Option
+      isDisabled={false}
+      isHidden={false}
+      isWrapped={true}
+      key="SearchableSingleSelectOption2"
+    >
+      Green
     </DropMenu.Option>
   </DropMenu>
 </div>

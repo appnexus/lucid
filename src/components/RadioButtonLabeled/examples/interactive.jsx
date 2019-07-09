@@ -68,7 +68,7 @@ export default createClass({
 				>
 					<RadioButtonLabeled
 						isSelected={this.state.flavor === 'vanilla'}
-						name="interactive-radio-buttons"
+						name='interactive-radio-buttons'
 						onSelect={this.handleSelectedVanilla}
 						style={style}
 					>
@@ -76,7 +76,7 @@ export default createClass({
 					</RadioButtonLabeled>
 					<RadioButtonLabeled
 						isSelected={this.state.flavor === 'chocolate'}
-						name="interactive-radio-buttons"
+						name='interactive-radio-buttons'
 						onSelect={this.handleSelectedChocolate}
 						style={style}
 					>
@@ -84,7 +84,7 @@ export default createClass({
 					</RadioButtonLabeled>
 					<RadioButtonLabeled
 						isSelected={this.state.flavor === 'strawberry'}
-						name="interactive-radio-buttons"
+						name='interactive-radio-buttons'
 						onSelect={this.handleSelectedStrawberry}
 						style={style}
 					>
@@ -92,7 +92,7 @@ export default createClass({
 					</RadioButtonLabeled>
 					<RadioButtonLabeled
 						isSelected={this.state.flavor === 'hipsum'}
-						name="interactive-radio-buttons"
+						name='interactive-radio-buttons'
 						onSelect={this.handleSelectedHipsum}
 						style={style}
 					>
@@ -111,7 +111,7 @@ export default createClass({
 					</RadioButtonLabeled>
 					<RadioButtonLabeled
 						isSelected={this.state.flavor === 'hipsum2'}
-						name="interactive-radio-buttons"
+						name='interactive-radio-buttons'
 						onSelect={this.handleSelectedHipsum2}
 						style={style}
 					>
@@ -129,7 +129,7 @@ export default createClass({
 					</RadioButtonLabeled>
 					<RadioButtonLabeled
 						isSelected={this.state.flavor === 'hipsum3'}
-						name="interactive-radio-buttons"
+						name='interactive-radio-buttons'
 						onSelect={this.handleSelectedHipsum3}
 						style={style}
 					>

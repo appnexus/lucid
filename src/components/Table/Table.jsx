@@ -7,7 +7,7 @@ import {
 	filterTypes,
 	omitProps,
 } from '../../util/component-types';
-import CaretIcon from '../Icon/CaretIcon/CaretIcon';
+import ArrowIcon from '../Icon/ArrowIcon/ArrowIcon';
 import DragCaptureZone from '../DragCaptureZone/DragCaptureZone';
 
 const cx = lucidClassNames.bind('&-Table');
@@ -129,11 +129,6 @@ const Tr = createClass({
 		isActive: bool`
 			Applies active styles to the row, usually when the row has been clicked.
 		`,
-
-		isActionable: bool`
-			Applies styles to the row, used to show if a row is clickable / can be
-			made active.
-		`,
 	},
 
 	getDefaultProps() {
@@ -141,7 +136,6 @@ const Tr = createClass({
 			isDisabled: false,
 			isSelected: false,
 			isActive: false,
-			isActionable: false,
 		};
 	},
 
@@ -151,20 +145,18 @@ const Tr = createClass({
 			children,
 			isDisabled,
 			isSelected,
-			isActionable,
 			isActive,
 			...passThroughs
 		} = this.props;
 
 		return (
 			<tr
-				{...omitProps(passThroughs, Tr)}
+				{...omitProps(passThroughs, Tr, ['isActionable'])}
 				className={cx(
 					'&-Tr',
 					{
 						'&-is-disabled': isDisabled,
 						'&-is-selected': isSelected,
-						'&-is-actionable': isActionable,
 						'&-is-active': isActive,
 					},
 					className
@@ -340,7 +332,7 @@ const Th = createClass({
 					},
 					className
 				)}
-				ref="root"
+				ref='root'
 				onClickCapture={this.handleClickCapture}
 				onMouseEnter={this.handleMouseEnter}
 				onMouseUp={this.handleMouseUp}
@@ -348,18 +340,18 @@ const Th = createClass({
 					hasSetWidth
 						? _.assign({}, style, {
 								width: isResizing ? activeWidth : passiveWidth,
-							})
+						  })
 						: style
 				}
 			>
 				<div className={cx('&-Th-inner')}>
 					<div className={cx('&-Th-inner-content')}>{children}</div>
-					{isSorted ? (
+					{isSorted || isSortable ? (
 						<div className={cx('&-Th-inner-caret')}>
-							<CaretIcon
+							<ArrowIcon
 								className={cx('&-sort-icon')}
 								direction={sortDirection}
-								size={6}
+								size={10}
 							/>
 						</div>
 					) : null}
@@ -565,7 +557,7 @@ const Table = createClass({
 				using it directly in an app.
 			`,
 			categories: ['table'],
-			madeFrom: ['CaretIcon', 'DragCaptureZone'],
+			madeFrom: ['ArrowIcon', 'DragCaptureZone'],
 		},
 	},
 
@@ -601,6 +593,10 @@ const Table = createClass({
 		hasWordWrap: bool`
 			Enables word wrapping in tables cells.
 		`,
+
+		hasHover: bool`
+			Applies a row hover to rows. Defaults to true.
+		`,
 	},
 
 	getDefaultProps() {
@@ -608,7 +604,8 @@ const Table = createClass({
 			density: 'extended',
 			hasBorder: false,
 			hasWordWrap: true,
-			hasLightHeader: false,
+			hasLightHeader: true,
+			hasHover: true,
 		};
 	},
 
@@ -619,6 +616,7 @@ const Table = createClass({
 			density,
 			hasWordWrap,
 			hasLightHeader,
+			hasHover,
 			style,
 			...passThroughs
 		} = this.props;
@@ -635,6 +633,7 @@ const Table = createClass({
 						'&-has-border': hasBorder,
 						'&-has-word-wrap': hasWordWrap,
 						'&-has-light-header': hasLightHeader,
+						'&-no-hover': !hasHover,
 					},
 					className
 				)}
@@ -829,7 +828,7 @@ function renderRowsWithIdentifiedEdges(trList, cellType) {
 										cellType,
 										_.assign({}, cellProps, { key: colIndex })
 									),
-								]
+							  ]
 							: []
 					),
 				[]

@@ -68,7 +68,12 @@ export default createClass({
 		});
 	},
 
-	handleSelect(index, { props: { callbackId } }) {
+	handleSelect(
+		index,
+		{
+			props: { callbackId },
+		}
+	) {
 		this.setState({
 			selectedIds: _.xor(this.state.selectedIds, [callbackId]),
 		});
@@ -110,8 +115,8 @@ export default createClass({
 					<Selection
 						isBold
 						hasBackground
-						Label="Selected"
-						kind="container"
+						Label='Selected'
+						kind='container'
 						isRemovable={false}
 					>
 						{_.map(selectedIds, id => (

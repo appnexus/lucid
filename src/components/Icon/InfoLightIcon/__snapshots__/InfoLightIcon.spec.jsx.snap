@@ -4,61 +4,26 @@ exports[`InfoLightIcon [common] example testing should match snapshot(s) for 1.d
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-InfoLightIcon"
-  isBadge={false}
   isClickable={false}
   isDisabled={false}
   size={16}
   viewBox="0 0 16 16"
 >
-  <path
+  <circle
     className="lucid-InfoLightIcon-background"
-    d="M8 15c-3.86 0-7-3.14-7-7s3.14-7 7-7 7 3.14 7 7-3.14 7-7 7z"
+    cx="8"
+    cy="8"
+    r="7.5"
   />
   <path
-    className="lucid-InfoLightIcon-mark"
-    d="M8 0C3.582 0 0 3.582 0 8s3.582 8 8 8 8-3.582 8-8-3.582-8-8-8zm0 15c-3.86 0-7-3.14-7-7s3.14-7 7-7 7 3.14 7 7-3.14 7-7 7zM7 3h2v2H7V3zm0 3h2v7H7V6z"
+    className="lucid-InfoLightIcon-stem"
+    d="M7.99 12.5v-6"
   />
-</Icon>
-`;
-
-exports[`InfoLightIcon [common] example testing should match snapshot(s) for 2.clickable 1`] = `
-<Icon
-  aspectRatio="xMidYMid meet"
-  className="lucid-InfoLightIcon lucid-InfoLightIcon-is-clickable"
-  isBadge={false}
-  isClickable={true}
-  isDisabled={false}
-  size={16}
-  viewBox="0 0 16 16"
->
-  <path
-    className="lucid-InfoLightIcon-background"
-    d="M8 15c-3.86 0-7-3.14-7-7s3.14-7 7-7 7 3.14 7 7-3.14 7-7 7z"
-  />
-  <path
-    className="lucid-InfoLightIcon-mark"
-    d="M8 0C3.582 0 0 3.582 0 8s3.582 8 8 8 8-3.582 8-8-3.582-8-8-8zm0 15c-3.86 0-7-3.14-7-7s3.14-7 7-7 7 3.14 7 7-3.14 7-7 7zM7 3h2v2H7V3zm0 3h2v7H7V6z"
-  />
-</Icon>
-`;
-
-exports[`InfoLightIcon [common] example testing should match snapshot(s) for 3.disabled 1`] = `
-<Icon
-  aspectRatio="xMidYMid meet"
-  className="lucid-InfoLightIcon"
-  isBadge={false}
-  isClickable={false}
-  isDisabled={true}
-  size={16}
-  viewBox="0 0 16 16"
->
-  <path
-    className="lucid-InfoLightIcon-background"
-    d="M8 15c-3.86 0-7-3.14-7-7s3.14-7 7-7 7 3.14 7 7-3.14 7-7 7z"
-  />
-  <path
-    className="lucid-InfoLightIcon-mark lucid-InfoLightIcon-mark-is-disabled"
-    d="M8 0C3.582 0 0 3.582 0 8s3.582 8 8 8 8-3.582 8-8-3.582-8-8-8zm0 15c-3.86 0-7-3.14-7-7s3.14-7 7-7 7 3.14 7 7-3.14 7-7 7zM7 3h2v2H7V3zm0 3h2v7H7V6z"
+  <circle
+    className="lucid-InfoLightIcon-dot"
+    cx="7.99"
+    cy="4"
+    r=".293"
   />
 </Icon>
 `;

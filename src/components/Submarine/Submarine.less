@@ -15,7 +15,6 @@
 	flex-direction: column;
 
 	& > .@{prefix}-SplitHorizontal-inner {
-
 		& > .@{prefix}-Submarine-Bar {
 			position: relative;
 			z-index: @zindex-base;
@@ -58,8 +57,8 @@
 
 				background-color: @color-backgroundColor;
 				color: @color-textColor;
-				font: @size-L @fontFamily;
-				font-weight: bold;
+				font-size: @size-L;
+				font-weight: @font-weight-semiBold;
 				display: flex;
 				flex-shrink: 0;
 				min-height: @Submarine-Bar-header-height;
@@ -81,29 +80,18 @@
 				}
 
 				& > .@{prefix}-Submarine-expander {
-					.no-safari-flicker();
-					.box-sizing();
-
-					align-self: flex-start;
-					display: flex;
-					justify-content: center;
-					align-items: center;
-					flex-shrink: 0;
-					height: @size-expander-button;
-					width: @size-expander-button;
-					margin: @size-XS;
-					border: solid 1px @featured-color-default-borderColor;
-					border-radius: @size-borderRadius;
-					cursor: pointer;
+					align-self: center;
+					flex: 0 0;
+					margin: 0 @size-XS;
 					z-index: @zindex-base + 1;
-					background-image: linear-gradient(@featured-color-default-gradientStartColor, @featured-color-default-gradientEndColor);
 
-					&:hover {
-						background-image: linear-gradient(@featured-color-default-gradientEndColor, @featured-color-default-gradientStartColor);
+					&:focus,
+					&:active {
+						background: none;
 					}
 
 					.@{prefix}-ChevronIcon {
-						fill: @color-darkGray;
+						stroke: @color-neutral-6;
 					}
 				}
 			}
@@ -143,16 +131,8 @@
 				display: none;
 			}
 
-			.@{prefix}-Submarine-Divider-gripper {
-				transform: translateY(0.5px);
-			}
-
 			&:hover {
 				background-color: @color-mediumGray;
-
-				.@{prefix}-Submarine-Divider-gripper {
-					fill: @color-darkGray;
-				}
 			}
 		}
 

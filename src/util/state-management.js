@@ -143,17 +143,19 @@ export const reduceSelectors = _.memoize(selectors => {
 	 * that individual branches maintain reference equality if they haven't been
 	 * modified, even if a sibling (and therefore the parent) has been modified.
 	 */
-	return createSelector(_.identity, state =>
-		_.reduce(
-			selectors,
-			(acc, selector, key) => ({
-				...acc,
-				[key]: _.isFunction(selector)
-					? selector(state)
-					: reduceSelectors(selector)(state[key]),
-			}),
-			state
-		)
+	return createSelector(
+		_.identity,
+		state =>
+			_.reduce(
+				selectors,
+				(acc, selector, key) => ({
+					...acc,
+					[key]: _.isFunction(selector)
+						? selector(state)
+						: reduceSelectors(selector)(state[key]),
+				}),
+				state
+			)
 	);
 });
 

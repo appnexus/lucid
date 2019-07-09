@@ -1,5 +1,87 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`ButtonGroup [common] example testing should match snapshot(s) for fixed-width 1`] = `
+<span
+  className="lucid-ButtonGroup"
+>
+  <Button
+    callbackId={0}
+    hasOnlyIcon={false}
+    isActive={false}
+    isDisabled={false}
+    key="0"
+    onClick={[Function]}
+    style={
+      Object {
+        "width": "100px",
+      }
+    }
+    type="button"
+  >
+    Smol
+  </Button>
+  <Button
+    callbackId={1}
+    hasOnlyIcon={false}
+    isActive={false}
+    isDisabled={false}
+    key="1"
+    onClick={[Function]}
+    style={
+      Object {
+        "width": "100px",
+      }
+    }
+    type="button"
+  >
+    Lonnnnnnnng
+  </Button>
+  <Button
+    callbackId={2}
+    hasOnlyIcon={false}
+    isActive={false}
+    isDisabled={false}
+    key="2"
+    onClick={[Function]}
+    style={
+      Object {
+        "width": "100px",
+      }
+    }
+    type="button"
+  >
+    Medium
+  </Button>
+  <ButtonGroup.Button
+    style={
+      Object {
+        "width": "100px",
+      }
+    }
+  >
+    Smol
+  </ButtonGroup.Button>
+  <ButtonGroup.Button
+    style={
+      Object {
+        "width": "100px",
+      }
+    }
+  >
+    Lonnnnnnnng
+  </ButtonGroup.Button>
+  <ButtonGroup.Button
+    style={
+      Object {
+        "width": "100px",
+      }
+    }
+  >
+    Medium
+  </ButtonGroup.Button>
+</span>
+`;
+
 exports[`ButtonGroup [common] example testing should match snapshot(s) for stateful 1`] = `
 <span
   className="lucid-ButtonGroup"

@@ -11,7 +11,7 @@ import {
 import { buildHybridComponent } from '../../util/state-management';
 import Button from '../Button/Button';
 import { ButtonGroupDumb as ButtonGroup } from '../ButtonGroup/ButtonGroup';
-import CaretIcon from '../Icon/CaretIcon/CaretIcon';
+import ChevronIcon from '../Icon/ChevronIcon/ChevronIcon';
 import { DropMenuDumb as DropMenu } from '../DropMenu/DropMenu';
 import * as reducers from './SplitButton.reducers';
 
@@ -85,7 +85,7 @@ const SplitButton = createClass({
 			SplitButton.
 		`,
 
-		kind: oneOf(['primary', 'success', 'warning', 'danger', 'info'])`
+		kind: oneOf(['primary', 'danger'])`
 			Style variations of the SplitButton.
 		`,
 
@@ -129,7 +129,9 @@ const SplitButton = createClass({
 	},
 
 	handleButtonClick(buttonProps, event) {
-		const { DropMenu: { onCollapse } } = this.props;
+		const {
+			DropMenu: { onCollapse },
+		} = this.props;
 
 		onCollapse();
 
@@ -180,7 +182,7 @@ const SplitButton = createClass({
 						<Button
 							className={cx('&-Button-drop')}
 							size={size}
-							hasOnlyIcon
+							hasOnlyIcon={true}
 							isActive={isExpanded}
 							kind={kind}
 							isDisabled={_.every(
@@ -188,10 +190,10 @@ const SplitButton = createClass({
 								'isDisabled'
 							)}
 						>
-							<CaretIcon
-								className={cx('&-CaretIcon')}
+							<ChevronIcon
+								className={cx('&-ChevronIcon')}
 								direction={direction}
-								size={8}
+								size={10}
 							/>
 						</Button>
 					</ButtonGroup>

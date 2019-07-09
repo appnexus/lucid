@@ -1,4 +1,3 @@
-import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import ReactDOM from 'react-dom';
@@ -7,7 +6,7 @@ import { createClass, omitProps } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-Icon');
 
-const { any, string, number, object, bool, func } = PropTypes;
+const { any, string, number, bool, func } = PropTypes;
 
 const Icon = createClass({
 	displayName: 'Icon',
@@ -23,10 +22,6 @@ const Icon = createClass({
 	},
 
 	propTypes: {
-		style: object`
-			Styles that are passed through to the \`svg\`.
-		`,
-
 		className: any`
 			Classes that are appended to the component defaults. This prop is run
 			through the \`classnames\` library.
@@ -46,10 +41,6 @@ const Icon = createClass({
 
 		aspectRatio: string`
 			Any valid SVG aspect ratio.
-		`,
-
-		isBadge: bool`
-			Add badge styling.
 		`,
 
 		isClickable: bool`
@@ -81,7 +72,6 @@ const Icon = createClass({
 			size: 16,
 			aspectRatio: 'xMidYMid meet',
 			viewBox: '0 0 16 16',
-			isBadge: false,
 			isDisabled: false,
 			isClickable: false,
 		};
@@ -106,26 +96,12 @@ const Icon = createClass({
 			className,
 			children,
 			size,
-			style,
 			viewBox,
 			aspectRatio,
-			isBadge,
 			isClickable,
 			isDisabled,
 			...passThroughs
 		} = this.props;
-
-		// Because we control the icon size inline, we must also control the border
-		// radius in the case where they user wants `isBadge`. Later one, we filter
-		// out any `undefined` properties using lodash methods.
-		const actualStyle = {
-			...style,
-			borderRadius: _.get(
-				style,
-				'borderRadius',
-				isBadge ? `${size}px` : undefined
-			),
-		};
 
 		return (
 			<svg
@@ -134,11 +110,9 @@ const Icon = createClass({
 				viewBox={viewBox}
 				preserveAspectRatio={aspectRatio}
 				{...omitProps(passThroughs, Icon)}
-				style={_.pickBy(actualStyle, _.negate(_.isUndefined))}
 				className={cx(
 					'&',
 					{
-						'&-is-badge': isBadge,
 						'&-is-clickable': !isDisabled && isClickable,
 						'&-is-disabled': isDisabled,
 					},

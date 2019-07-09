@@ -5,7 +5,27 @@ import { createClass, omitProps } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-Badge');
 
-const { node, string } = PropTypes;
+const { node, string, oneOf } = PropTypes;
+
+const KIND_DEFAULT = 'default';
+const KIND_PRIMARY = 'primary';
+const KIND_SUCCESS = 'success';
+const KIND_DANGER = 'danger';
+const KIND_WARNING = 'warning';
+const KIND_INFO = 'info';
+const KIND_DARK = 'dark';
+const KINDS = [
+	KIND_DEFAULT,
+	KIND_PRIMARY,
+	KIND_SUCCESS,
+	KIND_DANGER,
+	KIND_WARNING,
+	KIND_INFO,
+	KIND_DARK,
+];
+const TYPE_FILLED = 'filled';
+const TYPE_STROKE = 'stroke';
+const TYPES = [TYPE_FILLED, TYPE_STROKE];
 
 const Badge = createClass({
 	displayName: 'Badge',
@@ -14,8 +34,7 @@ const Badge = createClass({
 		peek: {
 			description: `
 				\`Badge\` is a quick utility component to create a badge around any
-				element(s). Do not wrap existing \`Icon\`s in a badge, rather add the
-				\`isBadge\` prop to any Icon component to turn it into a badge.
+				element(s).
 			`,
 			categories: ['visual design', 'icons'],
 		},
@@ -29,13 +48,31 @@ const Badge = createClass({
 		children: node`
 			any valid React children
 		`,
+
+		kind: oneOf(KINDS)`
+			Style variations for the \`Badge\`
+		`,
+
+		type: oneOf(TYPES)`
+			Fill style variations for the \`Badge\`
+		`,
+	},
+
+	getDefaultProps() {
+		return {
+			kind: KIND_DEFAULT,
+			type: TYPE_FILLED,
+		};
 	},
 
 	render() {
-		const { className, children, ...passThroughs } = this.props;
+		const { className, kind, type, children, ...passThroughs } = this.props;
 
 		return (
-			<span className={cx('&', className)} {...omitProps(passThroughs, Badge)}>
+			<span
+				className={cx('&', `&-${kind}`, `&-${type}`, className)}
+				{...omitProps(passThroughs, Badge)}
+			>
 				{children}
 			</span>
 		);

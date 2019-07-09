@@ -17,7 +17,7 @@ export default createClass({
 						alignItems: 'flex-start',
 					}}
 				>
-					<CheckboxLabeled Label="Just text" style={style} />
+					<CheckboxLabeled Label='Just text' style={style} />
 					<CheckboxLabeled Label={<span>HTML element</span>} style={style} />
 					<CheckboxLabeled
 						Label={[

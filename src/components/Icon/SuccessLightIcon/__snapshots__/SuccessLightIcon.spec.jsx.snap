@@ -4,61 +4,130 @@ exports[`SuccessLightIcon [common] example testing should match snapshot(s) for 
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-SuccessLightIcon"
-  isBadge={false}
   isClickable={false}
   isDisabled={false}
   size={16}
   viewBox="0 0 16 16"
 >
-  <path
+  <circle
     className="lucid-SuccessLightIcon-background"
-    d="M8 15c-3.86 0-7-3.14-7-7s3.14-7 7-7 7 3.14 7 7-3.14 7-7 7z"
+    cx="8"
+    cy="8"
+    r="7.5"
   />
   <path
     className="lucid-SuccessLightIcon-check"
-    d="M11.92 5.19c.285.284.285.748 0 1.032l-4.932 4.98c-.285.286-.748.286-1.033 0L3.47 8.85c-.286-.287-.286-.748 0-1.034l.287-.343c.285-.286.747-.286 1.033 0l1.747 1.614 4.13-4.127c.284-.285.748-.285 1.033 0l.22.23zM16 8c0 4.418-3.582 8-8 8s-8-3.582-8-8 3.582-8 8-8 8 3.582 8 8zm-1 0c0-3.86-3.14-7-7-7S1 4.14 1 8s3.14 7 7 7 7-3.14 7-7z"
+    d="M4.5 8L7 10.5 11.5 6"
   />
 </Icon>
 `;
 
-exports[`SuccessLightIcon [common] example testing should match snapshot(s) for 2.clickable 1`] = `
+exports[`SuccessLightIcon [common] example testing should match snapshot(s) for 1.default 2`] = `
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-SuccessLightIcon lucid-SuccessLightIcon-is-clickable"
-  isBadge={false}
   isClickable={true}
   isDisabled={false}
   size={16}
   viewBox="0 0 16 16"
 >
-  <path
+  <circle
     className="lucid-SuccessLightIcon-background"
-    d="M8 15c-3.86 0-7-3.14-7-7s3.14-7 7-7 7 3.14 7 7-3.14 7-7 7z"
+    cx="8"
+    cy="8"
+    r="7.5"
   />
   <path
     className="lucid-SuccessLightIcon-check"
-    d="M11.92 5.19c.285.284.285.748 0 1.032l-4.932 4.98c-.285.286-.748.286-1.033 0L3.47 8.85c-.286-.287-.286-.748 0-1.034l.287-.343c.285-.286.747-.286 1.033 0l1.747 1.614 4.13-4.127c.284-.285.748-.285 1.033 0l.22.23zM16 8c0 4.418-3.582 8-8 8s-8-3.582-8-8 3.582-8 8-8 8 3.582 8 8zm-1 0c0-3.86-3.14-7-7-7S1 4.14 1 8s3.14 7 7 7 7-3.14 7-7z"
+    d="M4.5 8L7 10.5 11.5 6"
   />
 </Icon>
 `;
 
-exports[`SuccessLightIcon [common] example testing should match snapshot(s) for 3.disabled 1`] = `
+exports[`SuccessLightIcon [common] example testing should match snapshot(s) for 1.default 3`] = `
 <Icon
   aspectRatio="xMidYMid meet"
-  className="lucid-SuccessLightIcon"
-  isBadge={false}
-  isClickable={false}
+  className="lucid-SuccessLightIcon lucid-SuccessLightIcon-is-disabled lucid-SuccessLightIcon-is-clickable"
+  isClickable={true}
   isDisabled={true}
   size={16}
   viewBox="0 0 16 16"
 >
-  <path
+  <circle
     className="lucid-SuccessLightIcon-background"
-    d="M8 15c-3.86 0-7-3.14-7-7s3.14-7 7-7 7 3.14 7 7-3.14 7-7 7z"
+    cx="8"
+    cy="8"
+    r="7.5"
   />
   <path
-    className="lucid-SuccessLightIcon-check lucid-SuccessLightIcon-check-is-disabled"
-    d="M11.92 5.19c.285.284.285.748 0 1.032l-4.932 4.98c-.285.286-.748.286-1.033 0L3.47 8.85c-.286-.287-.286-.748 0-1.034l.287-.343c.285-.286.747-.286 1.033 0l1.747 1.614 4.13-4.127c.284-.285.748-.285 1.033 0l.22.23zM16 8c0 4.418-3.582 8-8 8s-8-3.582-8-8 3.582-8 8-8 8 3.582 8 8zm-1 0c0-3.86-3.14-7-7-7S1 4.14 1 8s3.14 7 7 7 7-3.14 7-7z"
+    className="lucid-SuccessLightIcon-check"
+    d="M4.5 8L7 10.5 11.5 6"
+  />
+</Icon>
+`;
+
+exports[`SuccessLightIcon [common] example testing should match snapshot(s) for 1.default 4`] = `
+<Icon
+  aspectRatio="xMidYMid meet"
+  className="lucid-SuccessLightIcon lucid-SuccessLightIcon-is-active"
+  isClickable={false}
+  isDisabled={false}
+  size={16}
+  viewBox="0 0 16 16"
+>
+  <circle
+    className="lucid-SuccessLightIcon-background"
+    cx="8"
+    cy="8"
+    r="7.5"
+  />
+  <path
+    className="lucid-SuccessLightIcon-check"
+    d="M4.5 8L7 10.5 11.5 6"
+  />
+</Icon>
+`;
+
+exports[`SuccessLightIcon [common] example testing should match snapshot(s) for 1.default 5`] = `
+<Icon
+  aspectRatio="xMidYMid meet"
+  className="lucid-SuccessLightIcon lucid-SuccessLightIcon-is-clickable lucid-SuccessLightIcon-is-active"
+  isClickable={true}
+  isDisabled={false}
+  size={16}
+  viewBox="0 0 16 16"
+>
+  <circle
+    className="lucid-SuccessLightIcon-background"
+    cx="8"
+    cy="8"
+    r="7.5"
+  />
+  <path
+    className="lucid-SuccessLightIcon-check"
+    d="M4.5 8L7 10.5 11.5 6"
+  />
+</Icon>
+`;
+
+exports[`SuccessLightIcon [common] example testing should match snapshot(s) for 1.default 6`] = `
+<Icon
+  aspectRatio="xMidYMid meet"
+  className="lucid-SuccessLightIcon lucid-SuccessLightIcon-is-disabled lucid-SuccessLightIcon-is-clickable lucid-SuccessLightIcon-is-active"
+  isClickable={true}
+  isDisabled={true}
+  size={16}
+  viewBox="0 0 16 16"
+>
+  <circle
+    className="lucid-SuccessLightIcon-background"
+    cx="8"
+    cy="8"
+    r="7.5"
+  />
+  <path
+    className="lucid-SuccessLightIcon-check"
+    d="M4.5 8L7 10.5 11.5 6"
   />
 </Icon>
 `;

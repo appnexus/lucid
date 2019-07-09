@@ -23,7 +23,8 @@ export default createClass({
 		const { left, top } = this.state;
 		return (
 			<Portal
-				portalId="example-portal123"
+				portalId='example-portal123'
+				className='example-portal-container'
 				style={{
 					width: 128,
 					height: 128,

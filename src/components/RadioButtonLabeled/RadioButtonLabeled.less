@@ -7,7 +7,6 @@
 	cursor: pointer;
 	display: flex;
 	font-size: @fontSize;
-	font-family: @fontFamily;
 	justify-content: flex-start;
 	width: fit-content;
 
@@ -17,7 +16,7 @@
 	}
 
 	&-label {
-		padding-top: @size-XXS;
+		padding-top: 2px; // works better with Galano
 	}
 
 	&&-is-disabled {
@@ -26,14 +25,7 @@
 	}
 
 	&:hover .@{prefix}-RadioButton-visualization-container {
-		border-color: @color-primary;
-		transition: @RadioButton-animation-timing;
-	}
-
-	&:hover .@{prefix}-RadioButton-visualization-glow {
-		.opacity();
-
-		transform: @RadioButton-glow-scale;
+		border: @size-borderWidthFocused solid @color-primary;
 	}
 
 	&&-is-disabled .@{prefix}-RadioButton-visualization-container,
@@ -44,13 +36,10 @@
 
 	&&-is-disabled:hover .@{prefix}-RadioButton-visualization-glow {
 		.opacity(0);
-
-		transform: none;
 	}
 
 	&&-is-disabled&&-is-selected:hover > .@{prefix}-RadioButton .@{prefix}-RadioButton-visualization-container,
 	&&-is-selected > .@{prefix}-RadioButton .@{prefix}-RadioButton-visualization-container {
-		background-color: @color-primary;
 		border-color: @color-primary;
 	}
 }

@@ -11,7 +11,9 @@ import EmptyStateWrapper from '../EmptyStateWrapper/EmptyStateWrapper';
 
 const { Column, ColumnGroup } = DataTable;
 
-const { EmptyStateWrapper: { Title, Body } } = DataTable;
+const {
+	EmptyStateWrapper: { Title, Body },
+} = DataTable;
 
 const testData = [
 	{
@@ -201,11 +203,11 @@ describe('DataTable', () => {
 
 				const wrapper = shallow(
 					<DataTable data={testDataWithEmptyCells}>
-						<Column field="id" title="ID" />
-						<Column field="first_name" title="First" />
-						<Column field="last_name" title="Last" />
-						<Column field="email" title="Email" />
-						<Column field="occupation" title="Occupation" />
+						<Column field='id' title='ID' />
+						<Column field='first_name' title='First' />
+						<Column field='last_name' title='Last' />
+						<Column field='email' title='Email' />
+						<Column field='occupation' title='Occupation' />
 					</DataTable>
 				);
 
@@ -340,11 +342,11 @@ describe('DataTable', () => {
 			it('should render a checkbox in the first column of each row', () => {
 				const wrapper = shallow(
 					<DataTable isSelectable data={testData}>
-						<Column field="id" title="ID" />
-						<Column field="first_name" title="First" />
-						<Column field="last_name" title="Last" />
-						<Column field="email" title="Email" />
-						<Column field="occupation" title="Occupation" />
+						<Column field='id' title='ID' />
+						<Column field='first_name' title='First' />
+						<Column field='last_name' title='Last' />
+						<Column field='email' title='Email' />
+						<Column field='occupation' title='Occupation' />
 					</DataTable>
 				);
 
@@ -372,11 +374,11 @@ describe('DataTable', () => {
 			it('should default to false', () => {
 				const wrapper = shallow(
 					<DataTable data={testData}>
-						<Column field="id" title="ID" />
-						<Column field="first_name" title="First" />
-						<Column field="last_name" title="Last" />
-						<Column field="email" title="Email" />
-						<Column field="occupation" title="Occupation" />
+						<Column field='id' title='ID' />
+						<Column field='first_name' title='First' />
+						<Column field='last_name' title='Last' />
+						<Column field='email' title='Email' />
+						<Column field='occupation' title='Occupation' />
 					</DataTable>
 				);
 
@@ -443,11 +445,11 @@ describe('DataTable', () => {
 				const onSelect = sinon.spy();
 				const wrapper = shallow(
 					<DataTable isSelectable onSelect={onSelect} data={testData}>
-						<Column field="id" title="ID" />
-						<Column field="first_name" title="First" />
-						<Column field="last_name" title="Last" />
-						<Column field="email" title="Email" />
-						<Column field="occupation" title="Occupation" />
+						<Column field='id' title='ID' />
+						<Column field='first_name' title='First' />
+						<Column field='last_name' title='Last' />
+						<Column field='email' title='Email' />
+						<Column field='occupation' title='Occupation' />
 					</DataTable>
 				);
 
@@ -496,11 +498,11 @@ describe('DataTable', () => {
 				const onSelectAll = sinon.spy();
 				const wrapper = shallow(
 					<DataTable isSelectable onSelectAll={onSelectAll} data={testData}>
-						<Column field="id" title="ID" />
-						<Column field="first_name" title="First" />
-						<Column field="last_name" title="Last" />
-						<Column field="email" title="Email" />
-						<Column field="occupation" title="Occupation" />
+						<Column field='id' title='ID' />
+						<Column field='first_name' title='First' />
+						<Column field='last_name' title='Last' />
+						<Column field='email' title='Email' />
+						<Column field='occupation' title='Occupation' />
 					</DataTable>
 				);
 
@@ -531,11 +533,11 @@ describe('DataTable', () => {
 				const onRowClick = sinon.spy();
 				const wrapper = shallow(
 					<DataTable isActionable onRowClick={onRowClick} data={testData}>
-						<Column field="id" title="ID" />
-						<Column field="first_name" title="First" />
-						<Column field="last_name" title="Last" />
-						<Column field="email" title="Email" />
-						<Column field="occupation" title="Occupation" />
+						<Column field='id' title='ID' />
+						<Column field='first_name' title='First' />
+						<Column field='last_name' title='Last' />
+						<Column field='email' title='Email' />
+						<Column field='occupation' title='Occupation' />
 					</DataTable>
 				);
 
@@ -579,11 +581,11 @@ describe('DataTable', () => {
 				const onSort = sinon.spy();
 				const wrapper = shallow(
 					<DataTable isActionable onSort={onSort} data={testData}>
-						<Column field="id" isSortable title="ID" />
-						<Column field="first_name" isSortable title="First" />
-						<Column field="last_name" isSortable title="Last" />
-						<Column field="email" isSortable title="Email" />
-						<Column field="occupation" isSortable title="Occupation" />
+						<Column field='id' isSortable title='ID' />
+						<Column field='first_name' isSortable title='First' />
+						<Column field='last_name' isSortable title='Last' />
+						<Column field='email' isSortable title='Email' />
+						<Column field='occupation' isSortable title='Occupation' />
 					</DataTable>
 				);
 
@@ -710,11 +712,11 @@ describe('DataTable', () => {
 			it('should render a column in the header for each Column defined', () => {
 				const wrapper = shallow(
 					<DataTable data={testData}>
-						<Column field="id" title="ID" />
-						<Column field="first_name" title="First" />
-						<Column field="last_name" title="Last" />
-						<Column field="email" title="Email" />
-						<Column field="occupation" title="Occupation" />
+						<Column field='id' title='ID' />
+						<Column field='first_name' title='First' />
+						<Column field='last_name' title='Last' />
+						<Column field='email' title='Email' />
+						<Column field='occupation' title='Occupation' />
 					</DataTable>
 				);
 
@@ -761,13 +763,13 @@ describe('DataTable', () => {
 			it('should render a cell with colspan in the header for each Column defined within', () => {
 				const wrapper = shallow(
 					<DataTable data={testData}>
-						<Column field="id" title="ID" />
-						<ColumnGroup title="Name">
-							<Column field="first_name" title="First" />
-							<Column field="last_name" title="Last" />
+						<Column field='id' title='ID' />
+						<ColumnGroup title='Name'>
+							<Column field='first_name' title='First' />
+							<Column field='last_name' title='Last' />
 						</ColumnGroup>
-						<Column field="email" title="Email" />
-						<Column field="occupation" title="Occupation" />
+						<Column field='email' title='Email' />
+						<Column field='occupation' title='Occupation' />
 					</DataTable>
 				);
 
@@ -857,13 +859,13 @@ describe('DataTable', () => {
 			it('should default to align=center', () => {
 				const wrapper = shallow(
 					<DataTable data={testData}>
-						<Column field="id" title="ID" />
-						<ColumnGroup title="Name">
-							<Column field="first_name" title="First" />
-							<Column field="last_name" title="Last" />
+						<Column field='id' title='ID' />
+						<ColumnGroup title='Name'>
+							<Column field='first_name' title='First' />
+							<Column field='last_name' title='Last' />
 						</ColumnGroup>
-						<Column field="email" title="Email" />
-						<Column field="occupation" title="Occupation" />
+						<Column field='email' title='Email' />
+						<Column field='occupation' title='Occupation' />
 					</DataTable>
 				);
 
@@ -885,13 +887,13 @@ describe('DataTable', () => {
 			it('should respect align prop', () => {
 				const wrapper = shallow(
 					<DataTable data={testData}>
-						<Column field="id" title="ID" />
-						<ColumnGroup title="Name" align="right">
-							<Column field="first_name" title="First" />
-							<Column field="last_name" title="Last" />
+						<Column field='id' title='ID' />
+						<ColumnGroup title='Name' align='right'>
+							<Column field='first_name' title='First' />
+							<Column field='last_name' title='Last' />
 						</ColumnGroup>
-						<Column field="email" title="Email" />
-						<Column field="occupation" title="Occupation" />
+						<Column field='email' title='Email' />
+						<Column field='occupation' title='Occupation' />
 					</DataTable>
 				);
 
@@ -939,8 +941,8 @@ describe('DataTable', () => {
 		describe('EmptyStateWrapper Body', () => {
 			it('should render the message body element', () => {
 				const bodyElement = (
-					<div className="parent-div">
-						<div className="nested-div" />
+					<div className='parent-div'>
+						<div className='nested-div' />
 					</div>
 				);
 				const wrapper = shallow(

@@ -7,7 +7,7 @@
 	margin: 0;
 	position: relative;
 	background-color: @color-white;
-	border: @border-standardBorder;
+	border: 1px solid @color-neutral-4; // slightly lighter than standard borders
 
 	&&-has-margin {
 		margin: 0 @size-standard @size-standard @size-standard;
@@ -19,8 +19,15 @@
 	}
 
 	& > &-Header {
-		padding: @size-standard;
-		border-bottom: @border-lightBorder;
+		display: flex;
+		align-items: center;
+		margin: 16px 20px;
+		font-size: @size-font-L;
+		font-weight: @font-weight-medium;
+
+		.@{prefix}-Panel-is-not-gutterless& {
+			margin-bottom: 0;
+		}
 
 		.@{prefix}-Panel-is-scrollable& {
 			flex-shrink: 0;
@@ -28,9 +35,12 @@
 	}
 
 	& > &-content {
+		font-size: 12px;
+
 		.@{prefix}-Panel-is-not-gutterless& {
+			margin: 16px 0;
+			padding: 0 20px;
 			overflow: auto;
-			padding: @size-standard;
 		}
 
 		.@{prefix}-Panel-is-scrollable& {
@@ -41,8 +51,11 @@
 
 	& > &-Footer {
 		text-align: right;
-		padding: @size-standard;
-		border-top: @border-lightBorder;
+		margin: 16px 20px;
+
+		.@{prefix}-Panel-is-not-gutterless& {
+			margin-top: 0;
+		}
 
 		.@{prefix}-Panel-is-scrollable& {
 			flex-shrink: 0;

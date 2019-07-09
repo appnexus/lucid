@@ -1,0 +1,76 @@
+@import (reference) '../../styles/variables.less';
+
+.@{prefix}-NotchedTag {
+	box-sizing: content-box;
+	font-weight: @font-weight-semiBold;
+	font-size: 13px;
+	display: inline-block;
+	position: relative;
+	background-color: @color-neutral-4;
+	flex: 0 0 auto;
+
+	&-small {
+		font-size: 10px;
+	}
+
+	&-no-border {
+		&.@{prefix}-NotchedTag-style-one {
+			background-color: @color-secondary-1;
+		}
+
+		&.@{prefix}-NotchedTag-style-two {
+			background-color: @color-secondary-2;
+		}
+
+		&.@{prefix}-NotchedTag-style-three {
+			background-color: @color-secondary-3;
+		}
+	}
+
+	&-style-one {
+		.@{prefix}-NotchedTag-container {
+			color: @color-secondary-1;
+
+			&-filled {
+				color: @color-white;
+				background-color: @color-secondary-1;
+			}
+		}
+	}
+
+	&-style-two {
+		.@{prefix}-NotchedTag-container {
+			color: @color-secondary-2;
+
+			&-filled {
+				color: @color-white;
+				background-color: @color-secondary-2;
+			}
+		}
+	}
+
+	&-style-three {
+		.@{prefix}-NotchedTag-container {
+			color: @color-secondary-3;
+
+			&-filled {
+				color: @color-white;
+				background-color: @color-secondary-3;
+			}
+		}
+	}
+
+	&-container {
+		background-color: @color-white;
+		position: absolute;
+
+		&-centered {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+			height: 100%;
+			padding: 1px 0 0 1px;
+		}
+	}
+}

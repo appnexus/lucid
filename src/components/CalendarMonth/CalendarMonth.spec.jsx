@@ -21,7 +21,7 @@ describe('CalendarMonth', () => {
 			const wrapper = shallow(
 				<CalendarMonth
 					initialMonth={new Date('2017-02-01:00:00Z')}
-					selectMode="day"
+					selectMode='day'
 					cursor={new Date('2017-02-14T00:00:00Z')}
 				/>
 			);
@@ -36,7 +36,7 @@ describe('CalendarMonth', () => {
 			const wrapper = shallow(
 				<CalendarMonth
 					initialMonth={new Date('2017-02-01:00:00Z')}
-					selectMode="to"
+					selectMode='to'
 					from={new Date('2017-02-12T00:00:00Z')}
 					cursor={new Date('2017-02-14T00:00:00Z')}
 				/>
@@ -68,7 +68,7 @@ describe('CalendarMonth', () => {
 			const wrapper = shallow(
 				<CalendarMonth
 					initialMonth={new Date('2017-02-01:00:00Z')}
-					selectMode="from"
+					selectMode='from'
 					from={null}
 					to={null}
 					cursor={new Date('2017-02-14T00:00:00Z')}
@@ -93,7 +93,7 @@ describe('CalendarMonth', () => {
 			const wrapper = shallow(
 				<CalendarMonth
 					initialMonth={new Date('2017-02-01:00:00Z')}
-					selectMode="to"
+					selectMode='to'
 					from={new Date('2017-02-12T00:00:00Z')}
 					to={new Date('2017-02-14T00:00:00Z')}
 				/>

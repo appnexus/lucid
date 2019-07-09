@@ -291,5 +291,57 @@ describe('Paginator', () => {
 				);
 			});
 		});
+
+		describe('showTotalObjects', () => {
+			it('should not show a total count when totalCount is null', () => {
+				const wrapper = shallow(<Paginator showTotalObjects />);
+
+				expect(wrapper.find('.lucid-Paginator-total-count')).toHaveLength(0);
+			});
+
+			it('should show a total count', () => {
+				const wrapper = shallow(
+					<Paginator showTotalObjects totalCount={101} />
+				);
+
+				expect(wrapper.exists('.lucid-Paginator-total-count')).toEqual(true);
+				expect(wrapper.find('.lucid-Paginator-total-count').text()).toContain(
+					'101 Objects'
+				);
+			});
+
+			it('should show a total count', () => {
+				const wrapper = shallow(<Paginator showTotalObjects totalCount={1} />);
+
+				expect(wrapper.exists('.lucid-Paginator-total-count')).toEqual(true);
+				expect(wrapper.find('.lucid-Paginator-total-count').text()).toContain(
+					'1 Object'
+				);
+			});
+		});
+
+		describe('objectLabel for total count', () => {
+			it('should show the objectLabel with totalCount = 1', () => {
+				const wrapper = shallow(
+					<Paginator showTotalObjects totalCount={1} objectLabel='test123' />
+				);
+				expect(wrapper.find('.lucid-Paginator-total-count').text()).toContain(
+					'1 test123'
+				);
+			});
+
+			it('should show the objectLabelPlural with totalCount = 2', () => {
+				const wrapper = shallow(
+					<Paginator
+						showTotalObjects
+						totalCount={2}
+						objectLabelPlural='twocounts'
+					/>
+				);
+				expect(wrapper.find('.lucid-Paginator-total-count').text()).toContain(
+					'2 twocounts'
+				);
+			});
+		});
 	});
 });

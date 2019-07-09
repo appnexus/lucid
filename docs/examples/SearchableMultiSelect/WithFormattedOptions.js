@@ -1,14 +1,14 @@
 import React from 'react';
 import _ from 'lodash';
-import { SearchableMultiSelect, Underline } from '../../../src/index.js';
+import { SearchableMultiSelect } from '../../../src/index.js';
 
 const OptionCols = ({ col1, col2, textMatch }) => (
 	<div style={{ display: 'flex' }}>
 		<div style={{ width: 100 }}>
-			<Underline match={textMatch}>{col1}</Underline>
+			<p match={textMatch}>{col1}</p>
 		</div>
 		<div>
-			<Underline match={textMatch}>{col2}</Underline>
+			<p match={textMatch}>{col2}</p>
 		</div>
 	</div>
 );

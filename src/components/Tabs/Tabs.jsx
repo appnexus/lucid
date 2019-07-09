@@ -10,6 +10,7 @@ import {
 } from '../../util/component-types';
 import { buildHybridComponent } from '../../util/state-management';
 import * as reducers from './Tabs.reducers';
+import Badge from '../Badge/Badge';
 
 const cx = lucidClassNames.bind('&-Tabs');
 
@@ -71,14 +72,21 @@ const Tab = createClass({
 			The content to be rendered as the \`Title\` of the \`Tab\`.
 		`,
 
-		isNavigation: bool`
-			If \`true\` component will be styled to be more visually prominent for
-			use with page-level navigation.
+		count: number`
+			Optional prop that will show a count number next to the tab's title.
+		`,
+
+		isVariableCountWidth: bool`
+			Defaults to false.
+			Allows the count bubble to grow large. Useful if working with huge numbers.
 		`,
 	},
 
 	handleClick(event) {
-		const { props, props: { index, onSelect, ...passThroughs } } = this;
+		const {
+			props,
+			props: { index, onSelect, ...passThroughs },
+		} = this;
 
 		if (!props.isDisabled) {
 			onSelect(index, passThroughs, event);
@@ -93,8 +101,9 @@ const Tab = createClass({
 			isProgressive,
 			isSelected,
 			Title,
-			isNavigation,
 			className,
+			count,
+			isVariableCountWidth,
 			...passThroughs
 		} = this.props;
 
@@ -113,37 +122,44 @@ const Tab = createClass({
 				onClick={this.handleClick}
 				{...omitProps(passThroughs, Tab)}
 			>
-				<span className={cx('&-Tab-content')}>{Title}</span>
-				{isProgressive &&
-					!isLastTab && (
-						<span className={cx('&-Tab-arrow')}>
-							<svg
-								className={cx('&-Tab-arrow-svg')}
-								viewBox={isNavigation ? '0 0 8 37' : '0 0 8 28'}
-								preserveAspectRatio="none"
-							>
-								<polygon
-									className={cx('&-Tab-arrow-background')}
-									fill="#fff"
-									points={isNavigation ? '0,0 8,18.5 0,37' : '0,0 8,14 0,28'}
-								/>
-								<polyline
-									className={cx('&-Tab-arrow-tab-line')}
-									fill="#fff"
-									points="0,0 1,1 0,1"
-								/>
-								<polyline
-									className={cx('&-Tab-arrow-line')}
-									fill="none"
-									stroke="#fff"
-									strokeWidth="1"
-									points={
-										isNavigation ? '0,37 7.3,18.5 0,0' : '0,28 7.9,14 0,0'
-									}
-								/>
-							</svg>
-						</span>
+				<span className={cx('&-Tab-content')}>
+					{Title}
+					{!_.isNil(count) && (
+						<Badge
+							style={{
+								marginLeft: '12px',
+								width: isVariableCountWidth ? null : '20px',
+								minWidth: '20px',
+							}}
+							type='stroke'
+							kind={isSelected ? 'primary' : null}
+						>
+							{count}
+						</Badge>
 					)}
+				</span>
+				{isProgressive && !isLastTab && (
+					<span className={cx('&-Tab-arrow')}>
+						<svg
+							className={cx('&-Tab-arrow-svg')}
+							viewBox={'0 0 8 37'}
+							preserveAspectRatio='none'
+						>
+							<polyline
+								className={cx('&-Tab-arrow-tab-line')}
+								fill='#fff'
+								points='0,0 1,1 0,1'
+							/>
+							<polyline
+								className={cx('&-Tab-arrow-line')}
+								fill='none'
+								stroke='#fff'
+								strokeWidth='1'
+								points={'0,37 7.3,18.5 0,0'}
+							/>
+						</svg>
+					</span>
+				)}
 			</li>
 		);
 	},
@@ -206,6 +222,12 @@ const Tabs = createClass({
 			steps.
 		`,
 
+		isFloating: bool`
+			Provides a small bottom border that offers a barrier between the tab
+			group and the rest of the page.
+			Useful if the tabs are not anchored to anything.
+		`,
+
 		hasMultilineTitle: bool`
 			Set the multiline className. This is typically used for styling the
 			Tab.Title bar for improved readability when there are multiple React
@@ -217,14 +239,9 @@ const Tabs = createClass({
 			typically used in conjunction with \`Tab.width\`
 		`,
 
-		isNavigation: bool`
-			If \`true\` component will be styled to be more visually prominent for
-			use with page-level navigation.
-		`,
-
 		Tab: any`
 			*Child Element* Can be used to define one or more individual \`Tab\`s in
-			the sequence of \`Tabs\`.  
+			the sequence of \`Tabs\`.
 		`,
 	},
 
@@ -234,9 +251,9 @@ const Tabs = createClass({
 			onSelect: _.noop,
 			isOpen: true,
 			isProgressive: false,
+			isFloating: false,
 			hasMultilineTitle: false,
-			hasFullWidthTabs: true,
-			isNavigation: false,
+			hasFullWidthTabs: false,
 		};
 	},
 
@@ -254,7 +271,7 @@ const Tabs = createClass({
 			isProgressive,
 			selectedIndex,
 			hasFullWidthTabs,
-			isNavigation,
+			isFloating,
 			...passThroughs
 		} = this.props;
 
@@ -276,7 +293,7 @@ const Tabs = createClass({
 					className={cx('&-bar', {
 						'&-bar-is-multiline': hasMultilineTitle,
 						'&-variable-width': !hasFullWidthTabs,
-						'&-navigation-tabs': isNavigation,
+						'&-floating': isFloating,
 					})}
 				>
 					{_.map(tabChildProps, (tabProps, index) => (
@@ -286,7 +303,6 @@ const Tabs = createClass({
 							isLastTab={index === tabChildProps.length - 1}
 							isOpen={isOpen}
 							isProgressive={isProgressive}
-							isNavigation={isNavigation}
 							isSelected={index === actualSelectedIndex}
 							onSelect={this.handleClicked}
 							Title={_.get(

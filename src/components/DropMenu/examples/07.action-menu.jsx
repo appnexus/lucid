@@ -1,6 +1,6 @@
 import React from 'react';
 import createClass from 'create-react-class';
-import { CaretIcon, DropMenu } from '../../../index';
+import { ChevronIcon, DropMenu } from '../../../index';
 
 const { Control, Option } = DropMenu;
 
@@ -9,7 +9,8 @@ export default createClass({
 		return (
 			<DropMenu>
 				<Control>
-					Colors<CaretIcon direction="down" />
+					Colors
+					<ChevronIcon direction='down' />
 				</Control>
 				<Option>Red</Option>
 				<Option>Green</Option>

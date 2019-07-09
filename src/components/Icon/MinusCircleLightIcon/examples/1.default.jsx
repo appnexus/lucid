@@ -1,9 +1,13 @@
 import React from 'react';
-import createClass from 'create-react-class';
 import { MinusCircleLightIcon } from '../../../../index';
 
-export default createClass({
-	render() {
-		return <MinusCircleLightIcon />;
-	},
-});
+export default () => (
+	<>
+		<MinusCircleLightIcon />
+		<MinusCircleLightIcon isClickable />
+		<MinusCircleLightIcon isClickable isDisabled />
+		<MinusCircleLightIcon isActive />
+		<MinusCircleLightIcon isClickable isActive />
+		<MinusCircleLightIcon isClickable isActive isDisabled />
+	</>
+);

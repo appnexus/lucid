@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import _ from 'lodash';
@@ -57,7 +58,10 @@ const LoadingIndicator = createClass({
 	},
 
 	render() {
-		const { props, props: { children, className, isLoading } } = this;
+		const {
+			props,
+			props: { children, className, isLoading },
+		} = this;
 
 		const { LoadingMessage } = LoadingIndicator;
 

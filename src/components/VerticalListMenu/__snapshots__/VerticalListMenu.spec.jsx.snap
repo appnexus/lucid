@@ -14,13 +14,17 @@ exports[`VerticalListMenu [common] example testing should match snapshot(s) for 
     key="0"
   >
     <div
-      className="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-actionable"
+      className="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-not-selected lucid-VerticalListMenu-Item-content-is-actionable"
       onClick={[Function]}
     >
       <div
-        className="lucid-VerticalListMenu-Item-content-text"
+        className="lucid-VerticalListMenu-Item-content-body"
       >
-        Level one
+        <div
+          className="lucid-VerticalListMenu-Item-content-text"
+        >
+          Level one
+        </div>
       </div>
     </div>
   </li>
@@ -29,13 +33,17 @@ exports[`VerticalListMenu [common] example testing should match snapshot(s) for 
     key="1"
   >
     <div
-      className="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-actionable"
+      className="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-not-selected lucid-VerticalListMenu-Item-content-is-actionable"
       onClick={[Function]}
     >
       <div
-        className="lucid-VerticalListMenu-Item-content-text"
+        className="lucid-VerticalListMenu-Item-content-body"
       >
-        Level one
+        <div
+          className="lucid-VerticalListMenu-Item-content-text"
+        >
+          Level one
+        </div>
       </div>
     </div>
   </li>
@@ -44,13 +52,17 @@ exports[`VerticalListMenu [common] example testing should match snapshot(s) for 
     key="2"
   >
     <div
-      className="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-actionable"
+      className="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-not-selected lucid-VerticalListMenu-Item-content-is-actionable"
       onClick={[Function]}
     >
       <div
-        className="lucid-VerticalListMenu-Item-content-text"
+        className="lucid-VerticalListMenu-Item-content-body"
       >
-        Level one
+        <div
+          className="lucid-VerticalListMenu-Item-content-text"
+        >
+          Level one
+        </div>
       </div>
     </div>
   </li>
@@ -84,9 +96,13 @@ exports[`VerticalListMenu [common] example testing should match snapshot(s) for 
       onClick={[Function]}
     >
       <div
-        className="lucid-VerticalListMenu-Item-content-text"
+        className="lucid-VerticalListMenu-Item-content-body"
       >
-        Level one
+        <div
+          className="lucid-VerticalListMenu-Item-content-text"
+        >
+          Level one
+        </div>
       </div>
     </div>
   </li>
@@ -95,21 +111,26 @@ exports[`VerticalListMenu [common] example testing should match snapshot(s) for 
     key="1"
   >
     <div
-      className="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-actionable"
+      className="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-not-selected lucid-VerticalListMenu-Item-content-is-actionable"
       onClick={[Function]}
     >
       <div
-        className="lucid-VerticalListMenu-Item-content-text"
+        className="lucid-VerticalListMenu-Item-content-body"
       >
-        Level one with VerticalListMenu
-      </div>
-      <div
-        className="lucid-VerticalListMenu-Item-expander"
-        onClick={[Function]}
-      >
-        <ChevronIcon
-          direction="down"
-        />
+        <div
+          className="lucid-VerticalListMenu-Item-content-text"
+        >
+          Level one with VerticalListMenu
+        </div>
+        <div
+          className="lucid-VerticalListMenu-Item-expander"
+          onClick={[Function]}
+        >
+          <ChevronIcon
+            direction="down"
+            size={12}
+          />
+        </div>
       </div>
     </div>
     <Collapsible
@@ -399,13 +420,17 @@ exports[`VerticalListMenu [common] example testing should match snapshot(s) for 
     key="2"
   >
     <div
-      className="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-actionable"
+      className="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-not-selected lucid-VerticalListMenu-Item-content-is-actionable"
       onClick={[Function]}
     >
       <div
-        className="lucid-VerticalListMenu-Item-content-text"
+        className="lucid-VerticalListMenu-Item-content-body"
       >
-        Level one
+        <div
+          className="lucid-VerticalListMenu-Item-content-text"
+        >
+          Level one
+        </div>
       </div>
     </div>
   </li>
@@ -707,9 +732,13 @@ exports[`VerticalListMenu [common] example testing should match snapshot(s) for 
       onClick={[Function]}
     >
       <div
-        className="lucid-VerticalListMenu-Item-content-text"
+        className="lucid-VerticalListMenu-Item-content-body"
       >
-        Level one
+        <div
+          className="lucid-VerticalListMenu-Item-content-text"
+        >
+          Level one
+        </div>
       </div>
     </div>
   </li>
@@ -718,13 +747,17 @@ exports[`VerticalListMenu [common] example testing should match snapshot(s) for 
     key="1"
   >
     <div
-      className="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-actionable"
+      className="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-not-selected lucid-VerticalListMenu-Item-content-is-expanded lucid-VerticalListMenu-Item-content-is-actionable"
       onClick={[Function]}
     >
       <div
-        className="lucid-VerticalListMenu-Item-content-text"
+        className="lucid-VerticalListMenu-Item-content-body"
       >
-        Level one with VerticalListMenu
+        <div
+          className="lucid-VerticalListMenu-Item-content-text"
+        >
+          Level one with VerticalListMenu
+        </div>
       </div>
     </div>
     <Collapsible
@@ -754,13 +787,17 @@ exports[`VerticalListMenu [common] example testing should match snapshot(s) for 
     key="2"
   >
     <div
-      className="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-actionable"
+      className="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-not-selected lucid-VerticalListMenu-Item-content-is-expanded lucid-VerticalListMenu-Item-content-is-actionable"
       onClick={[Function]}
     >
       <div
-        className="lucid-VerticalListMenu-Item-content-text"
+        className="lucid-VerticalListMenu-Item-content-body"
       >
-        Level one with VerticalListMenu
+        <div
+          className="lucid-VerticalListMenu-Item-content-text"
+        >
+          Level one with VerticalListMenu
+        </div>
       </div>
     </div>
     <Collapsible
@@ -809,13 +846,17 @@ exports[`VerticalListMenu [common] example testing should match snapshot(s) for 
     key="3"
   >
     <div
-      className="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-actionable"
+      className="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-not-selected lucid-VerticalListMenu-Item-content-is-actionable"
       onClick={[Function]}
     >
       <div
-        className="lucid-VerticalListMenu-Item-content-text"
+        className="lucid-VerticalListMenu-Item-content-body"
       >
-        Level one
+        <div
+          className="lucid-VerticalListMenu-Item-content-text"
+        >
+          Level one
+        </div>
       </div>
     </div>
   </li>
@@ -893,13 +934,17 @@ exports[`VerticalListMenu [common] example testing should match snapshot(s) for 
     key="0"
   >
     <div
-      className="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-actionable"
+      className="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-not-selected lucid-VerticalListMenu-Item-content-is-actionable"
       onClick={[Function]}
     >
       <div
-        className="lucid-VerticalListMenu-Item-content-text"
+        className="lucid-VerticalListMenu-Item-content-body"
       >
-        Level one
+        <div
+          className="lucid-VerticalListMenu-Item-content-text"
+        >
+          Level one
+        </div>
       </div>
     </div>
   </li>
@@ -908,21 +953,26 @@ exports[`VerticalListMenu [common] example testing should match snapshot(s) for 
     key="1"
   >
     <div
-      className="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-actionable"
+      className="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-not-selected lucid-VerticalListMenu-Item-content-is-actionable"
       onClick={[Function]}
     >
       <div
-        className="lucid-VerticalListMenu-Item-content-text"
+        className="lucid-VerticalListMenu-Item-content-body"
       >
-        Level one with VerticalListMenu
-      </div>
-      <div
-        className="lucid-VerticalListMenu-Item-expander"
-        onClick={[Function]}
-      >
-        <ChevronIcon
-          direction="down"
-        />
+        <div
+          className="lucid-VerticalListMenu-Item-content-text"
+        >
+          Level one with VerticalListMenu
+        </div>
+        <div
+          className="lucid-VerticalListMenu-Item-expander"
+          onClick={[Function]}
+        >
+          <ChevronIcon
+            direction="down"
+            size={12}
+          />
+        </div>
       </div>
     </div>
     <Collapsible
@@ -1194,13 +1244,17 @@ exports[`VerticalListMenu [common] example testing should match snapshot(s) for 
     key="2"
   >
     <div
-      className="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-actionable"
+      className="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-not-selected lucid-VerticalListMenu-Item-content-is-actionable"
       onClick={[Function]}
     >
       <div
-        className="lucid-VerticalListMenu-Item-content-text"
+        className="lucid-VerticalListMenu-Item-content-body"
       >
-        Level one
+        <div
+          className="lucid-VerticalListMenu-Item-content-text"
+        >
+          Level one
+        </div>
       </div>
     </div>
   </li>

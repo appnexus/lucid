@@ -7,141 +7,145 @@ export default createClass({
 		return (
 			<Resizer>
 				{width => {
-					const responsiveMode = width >= 768 ? 'large' : 'small';
+					const responsiveMode = width >= 400 ? 'large' : 'small';
 
 					return (
 						<div>
 							<Selection
+								isTop
 								responsiveMode={responsiveMode}
-								Label="Arts & Entertainment"
+								Label='Arts & Entertainment'
 							>
-								<Selection responsiveMode={responsiveMode} Label="Item 1" />
-								<Selection responsiveMode={responsiveMode} Label="Item 2" />
-								<Selection responsiveMode={responsiveMode} Label="Item 3">
-									<Selection responsiveMode={responsiveMode} Label="Item 1" />
-									<Selection responsiveMode={responsiveMode} Label="Item 2" />
-									<Selection responsiveMode={responsiveMode} Label="Item 3" />
+								<Selection responsiveMode={responsiveMode} Label='Item 1' />
+								<Selection responsiveMode={responsiveMode} Label='Item 2' />
+								<Selection responsiveMode={responsiveMode} Label='Item 3'>
+									<Selection responsiveMode={responsiveMode} Label='Item 1' />
+									<Selection responsiveMode={responsiveMode} Label='Item 2' />
+									<Selection responsiveMode={responsiveMode} Label='Item 3' />
 								</Selection>
-								<Selection responsiveMode={responsiveMode} Label="Item 4">
-									<Selection responsiveMode={responsiveMode} Label="Item 1" />
-									<Selection responsiveMode={responsiveMode} Label="Item 2" />
-									<Selection responsiveMode={responsiveMode} Label="Item 3" />
+								<Selection responsiveMode={responsiveMode} Label='Item 4'>
+									<Selection responsiveMode={responsiveMode} Label='Item 1' />
+									<Selection responsiveMode={responsiveMode} Label='Item 2' />
+									<Selection responsiveMode={responsiveMode} Label='Item 3' />
 									<Selection
 										responsiveMode={responsiveMode}
-										Label="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+										Label='Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
 									/>
 								</Selection>
 							</Selection>
 
 							<Selection
+								isTop
 								responsiveMode={responsiveMode}
-								kind="info"
-								Label="Arts & Entertainment"
+								kind='info'
+								Label='Arts & Entertainment'
 							>
 								<Selection
 									responsiveMode={responsiveMode}
-									kind="info"
-									Label="Item 1"
+									kind='info'
+									Label='Item 1'
 								/>
 								<Selection
 									responsiveMode={responsiveMode}
-									kind="info"
-									Label="Item 2"
+									kind='info'
+									Label='Item 2'
 								/>
 								<Selection
 									responsiveMode={responsiveMode}
-									kind="info"
-									Label="Item 3"
+									kind='info'
+									Label='Item 3'
 								>
 									<Selection
 										responsiveMode={responsiveMode}
-										kind="info"
-										Label="Item 1"
+										kind='info'
+										Label='Item 1'
 									/>
 									<Selection
 										responsiveMode={responsiveMode}
-										kind="info"
-										Label="Item 2"
+										kind='info'
+										Label='Item 2'
 									/>
 									<Selection
 										responsiveMode={responsiveMode}
-										kind="info"
-										Label="Item 3"
+										kind='info'
+										Label='Item 3'
 									/>
 								</Selection>
 								<Selection
 									responsiveMode={responsiveMode}
-									kind="warning"
-									Label="Item 4"
+									kind='warning'
+									Label='Item 4'
 								>
 									<Selection
 										responsiveMode={responsiveMode}
-										kind="warning"
-										Label="Item 1"
+										kind='warning'
+										Label='Item 1'
 									/>
 									<Selection
 										responsiveMode={responsiveMode}
-										kind="warning"
-										Label="Item 2"
+										kind='warning'
+										Label='Item 2'
 									/>
 									<Selection
 										responsiveMode={responsiveMode}
-										kind="warning"
-										Label="Item 3"
+										kind='warning'
+										Label='Item 3'
 									/>
 									<Selection
 										responsiveMode={responsiveMode}
-										kind="warning"
-										Label="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+										kind='warning'
+										Label='Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
 									/>
 								</Selection>
 							</Selection>
 
 							<Selection
+								isTop
 								responsiveMode={responsiveMode}
-								kind="success"
+								kind='success'
 								hasBackground
 								isBold
-								Label="Leisure"
+								Label='Leisure'
 							>
 								<Selection
 									responsiveMode={responsiveMode}
-									kind="danger"
-									Label="Item 1"
+									kind='danger'
+									Label='Item 1'
 								/>
 								<Selection
 									responsiveMode={responsiveMode}
-									kind="danger"
-									Label="Item 2"
+									kind='danger'
+									Label='Item 2'
 								/>
 								<Selection
 									responsiveMode={responsiveMode}
-									kind="danger"
-									Label="Item 3"
+									kind='danger'
+									Label='Item 3'
 								/>
 							</Selection>
 
 							<Selection
+								isTop
 								responsiveMode={responsiveMode}
-								kind="danger"
+								kind='danger'
 								hasBackground
 								isBold
-								Label="Arts & Entertainment"
+								Label='Arts & Entertainment'
 							>
 								<Selection
 									responsiveMode={responsiveMode}
-									kind="success"
-									Label="Item 1"
+									kind='success'
+									Label='Item 1'
 								/>
 								<Selection
 									responsiveMode={responsiveMode}
-									kind="success"
-									Label="Item 2"
+									kind='success'
+									Label='Item 2'
 								/>
 								<Selection
 									responsiveMode={responsiveMode}
-									kind="success"
-									Label="Item 3"
+									kind='success'
+									Label='Item 3'
 								/>
 							</Selection>
 						</div>

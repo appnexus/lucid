@@ -4,10 +4,12 @@ import PropTypes from 'react-peek/prop-types';
 import Overlay from '../Overlay/Overlay';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, getFirst, omitProps } from '../../util/component-types';
+import Button from '../Button/Button';
+import { CloseIcon } from '../..';
 
 const cx = lucidClassNames.bind('&-Dialog');
 
-const { node, oneOf, bool } = PropTypes;
+const { node, oneOf, bool, func } = PropTypes;
 
 const SMALL = 'small';
 const MEDIUM = 'medium';
@@ -35,7 +37,7 @@ const Dialog = createClass({
 			statics: {
 				peek: {
 					description: `
-						Renders a \`<header>\`.
+						Renders a \`<div>\`.
 					`,
 				},
 			},
@@ -63,6 +65,20 @@ const Dialog = createClass({
 			scroll inside.
 		`,
 
+		handleClose: func`
+			If this is truthy (if a function is provided). the close button will show.
+			The function that is called when the close button is triggered.
+		`,
+
+		isComplex: bool`
+			Defaults to false.
+			Provides a more segregated design to organize more content in the Dialog.
+		`,
+
+		hasGutters: bool`
+			A true or false value that dictates whether or not the Body has padding.
+		`,
+
 		Header: node`
 			*Child Element* - Header contents. Only one \`Header\` is used.
 		`,
@@ -70,15 +86,12 @@ const Dialog = createClass({
 		Footer: node`
 			*Child Element* - Footer contents. Only one \`Footer\` is used.
 		`,
-
-		hasGutters: bool`
-			A true or false value that dictates whether or not the Body has padding.
-		`,
 	},
 
 	getDefaultProps() {
 		return {
 			size: MEDIUM,
+			isComplex: false,
 			hasGutters: true,
 		};
 	},
@@ -87,8 +100,10 @@ const Dialog = createClass({
 		const {
 			className,
 			size,
+			handleClose,
 			hasGutters,
 			isShown,
+			isComplex,
 			...passThroughs
 		} = this.props;
 
@@ -115,9 +130,24 @@ const Dialog = createClass({
 						'&-window-is-small': size === SMALL,
 						'&-window-is-medium': size === MEDIUM,
 						'&-window-is-large': size === LARGE,
+						'&-is-complex': isComplex,
+						'&-no-footer': !footerChildProp,
 					})}
 				>
-					<header {...headerChildProp} className={cx('&-header')} />
+					<header className={cx('&-header')}>
+						{headerChildProp.children}
+
+						{handleClose && (
+							<Button
+								kind='invisible'
+								hasOnlyIcon
+								className={cx('&-close-button')}
+								onClick={handleClose}
+							>
+								<CloseIcon />
+							</Button>
+						)}
+					</header>
 
 					<section
 						className={cx('&-body', hasGutters ? '' : '&-body-no-gutters')}

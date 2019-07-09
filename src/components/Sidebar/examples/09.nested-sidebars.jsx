@@ -11,7 +11,7 @@ export default createClass({
 					gochujang typewriter. Gluten-free cred sartorial pop-up commodo.
 				</Sidebar.Bar>
 				<Sidebar.Primary>
-					<Sidebar position="right">
+					<Sidebar position='right'>
 						<Sidebar.Bar>
 							Id mumblecore blue bottle vegan, fingerstache commodo health goth
 							man bun bitters. Ad ennui authentic, offal humblebrag paleo minim

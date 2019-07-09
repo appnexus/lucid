@@ -290,11 +290,12 @@ const PieChart = createClass({
 			>
 				<ToolTip
 					{...toolTipProps}
+					isLight={true}
 					isExpanded={hasToolTips && isHovering}
 					onMouseOver={_.noop}
 					onMouseOut={this.handleMouseOut}
 				>
-					<ToolTip.Target elementType="g">
+					<ToolTip.Target elementType='g'>
 						<g transform={`translate(${margin.left}, ${margin.top})`}>
 							<g transform={`translate(${innerWidth / 2}, ${innerHeight / 2})`}>
 								{_.map(pieData, (pieDatum, index) => (

@@ -32,7 +32,7 @@ describe('DropMenu', () => {
 		describe('children', () => {
 			it('should not render any direct child elements which are not DropMenu-specific', () => {
 				const wrapper = shallow(
-					<DropMenu className="MyDropMenu">
+					<DropMenu className='MyDropMenu'>
 						<button>button</button>
 						<Control>
 							control <i>italic</i>
@@ -52,7 +52,7 @@ describe('DropMenu', () => {
 		describe('className', () => {
 			it('should pass the className prop thru to the root element', () => {
 				const wrapper = shallow(
-					<DropMenu className="MyDropMenu">
+					<DropMenu className='MyDropMenu'>
 						<Control>control</Control>
 						<Option>option a</Option>
 						<Option>option b</Option>
@@ -76,7 +76,7 @@ describe('DropMenu', () => {
 
 				it('should pass the className prop thru to the FlyOut (portal) element', () => {
 					wrapper = mount(
-						<DropMenu isExpanded className="MyDropMenu">
+						<DropMenu isExpanded className='MyDropMenu'>
 							<Control>control</Control>
 							<Option>option a</Option>
 							<Option>option b</Option>
@@ -172,7 +172,7 @@ describe('DropMenu', () => {
 		describe('direction', () => {
 			it('should pass the direction to the underlying ContextMenu component thru props', () => {
 				const wrapper = shallow(
-					<DropMenu direction="up">
+					<DropMenu direction='up'>
 						<Control>control</Control>
 						<Option>option a</Option>
 						<Option>option b</Option>
@@ -281,7 +281,7 @@ describe('DropMenu', () => {
 
 			it('should render an element under document.body with the same id', () => {
 				wrapper = mount(
-					<DropMenu portalId="test-dropmenu-portal" isExpanded={true}>
+					<DropMenu portalId='test-dropmenu-portal' isExpanded={true}>
 						<Control>control</Control>
 						<Option>option a</Option>
 						<Option>option b</Option>

@@ -38,7 +38,7 @@ export default createClass({
 		return (
 			<section>
 				<ContextMenu
-					portalId="FileMenu-example"
+					portalId='FileMenu-example'
 					isExpanded={isFileExpanded}
 					direction={fileDirection}
 					onClickOut={this.handleFileMenuToggle}
@@ -82,7 +82,7 @@ export default createClass({
 				</ContextMenu>
 
 				<ContextMenu
-					portalId="EditMenu-example"
+					portalId='EditMenu-example'
 					isExpanded={isEditExpanded}
 					direction={editDirection}
 					onClickOut={this.handleEditMenuToggle}

@@ -112,7 +112,7 @@ describe('Checkbox', () => {
 		it('passes through all props not defined in `propTypes` to the native input', () => {
 			const wrapper = mount(
 				<Checkbox
-					className="mert"
+					className='mert'
 					isDisabled={false}
 					isSelected={false}
 					checked={true}

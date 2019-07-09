@@ -17,7 +17,7 @@ export default createClass({
 					</em>
 				</p>
 				<RadioGroup
-					name="name"
+					name='name'
 					selectedIndex={3}
 					style={{
 						display: 'inline-flex',

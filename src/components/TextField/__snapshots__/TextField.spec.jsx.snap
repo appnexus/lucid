@@ -7,6 +7,7 @@ exports[`TextField [common] example testing should match snapshot(s) for basic 1
   onBlur={[Function]}
   onChange={[Function]}
   onKeyDown={[Function]}
+  placeholder="default"
   rows={5}
   style={
     Object {
@@ -14,7 +15,25 @@ exports[`TextField [common] example testing should match snapshot(s) for basic 1
     }
   }
   type="text"
-  value="foo"
+  value=""
+/>
+`;
+
+exports[`TextField [common] example testing should match snapshot(s) for basic 2`] = `
+<textarea
+  className="lucid-TextField lucid-TextField-is-multi-line"
+  disabled={false}
+  onBlur={[Function]}
+  onChange={[Function]}
+  onKeyDown={[Function]}
+  placeholder="isMultiLine"
+  rows={5}
+  style={
+    Object {
+      "marginBottom": "10px",
+    }
+  }
+  value=""
 />
 `;
 

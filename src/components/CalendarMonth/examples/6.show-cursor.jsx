@@ -15,7 +15,7 @@ export default createClass({
 				<CalendarMonth cursor={new Date()} />
 				Cursor for range selectMode:
 				<CalendarMonth
-					selectMode="to"
+					selectMode='to'
 					from={this.fromDate}
 					cursor={new Date()}
 				/>

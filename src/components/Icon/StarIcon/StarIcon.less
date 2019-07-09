@@ -1,0 +1,16 @@
+@import (reference) '../../../styles/variables.less';
+@import (reference) '../../../styles/mixins.less';
+
+.@{prefix}-StarIcon {
+	&-background {
+		fill: @color-primary;
+	}
+
+	&-is-disabled &-background {
+		fill: @color-darkGray;
+	}
+
+	&-is-clickable:not(&-is-disabled):hover &-background {
+		fill: darken(@color-primary, 7%);
+	}
+}

@@ -12,8 +12,7 @@ describe('Panel', () => {
 		it('should render any children that are not instances of `Panel.Header` or `Panel.Footer`', () => {
 			const wrapper = shallow(
 				<Panel>
-					<Panel.Header>Header</Panel.Header>
-					A Cool Content
+					<Panel.Header>Header</Panel.Header>A Cool Content
 					<Panel.Footer>Footer</Panel.Footer>
 				</Panel>
 			);
@@ -75,7 +74,7 @@ describe('Panel', () => {
 			it('should pass through className', () => {
 				const wrapper = shallow(
 					<Panel>
-						<Panel.Header className="foo">Header</Panel.Header>
+						<Panel.Header className='foo'>Header</Panel.Header>
 						Content
 					</Panel>
 				);
@@ -99,7 +98,7 @@ describe('Panel', () => {
 			it('should pass through className', () => {
 				const wrapper = shallow(
 					<Panel>
-						<Panel.Footer className="bar">Footer</Panel.Footer>
+						<Panel.Footer className='bar'>Footer</Panel.Footer>
 						Content
 					</Panel>
 				);

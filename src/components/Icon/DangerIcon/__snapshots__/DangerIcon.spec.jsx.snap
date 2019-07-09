@@ -4,7 +4,6 @@ exports[`DangerIcon [common] example testing should match snapshot(s) for 1.defa
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-DangerIcon"
-  isBadge={false}
   isClickable={false}
   isDisabled={false}
   size={16}
@@ -14,20 +13,20 @@ exports[`DangerIcon [common] example testing should match snapshot(s) for 1.defa
     className="lucid-DangerIcon-background"
     cx="8"
     cy="8"
-    r="8"
+    r="7.5"
   />
   <path
     className="lucid-DangerIcon-x"
-    d="M6.836 8l-2.45-2.463 1.17-1.17 2.45 2.464 2.465-2.464 1.17 1.17L9.164 8l2.48 2.465-1.17 1.17-2.466-2.48-2.48 2.48-1.17-1.17L6.837 8z"
+    d="M5.5 5.5l5 5m0-5l-5 5"
+    stroke="#fff"
   />
 </Icon>
 `;
 
-exports[`DangerIcon [common] example testing should match snapshot(s) for 2.clickable 1`] = `
+exports[`DangerIcon [common] example testing should match snapshot(s) for 1.default 2`] = `
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-DangerIcon lucid-DangerIcon-is-clickable"
-  isBadge={false}
   isClickable={true}
   isDisabled={false}
   size={16}
@@ -37,34 +36,35 @@ exports[`DangerIcon [common] example testing should match snapshot(s) for 2.clic
     className="lucid-DangerIcon-background"
     cx="8"
     cy="8"
-    r="8"
+    r="7.5"
   />
   <path
     className="lucid-DangerIcon-x"
-    d="M6.836 8l-2.45-2.463 1.17-1.17 2.45 2.464 2.465-2.464 1.17 1.17L9.164 8l2.48 2.465-1.17 1.17-2.466-2.48-2.48 2.48-1.17-1.17L6.837 8z"
+    d="M5.5 5.5l5 5m0-5l-5 5"
+    stroke="#fff"
   />
 </Icon>
 `;
 
-exports[`DangerIcon [common] example testing should match snapshot(s) for 3.disabled 1`] = `
+exports[`DangerIcon [common] example testing should match snapshot(s) for 1.default 3`] = `
 <Icon
   aspectRatio="xMidYMid meet"
-  className="lucid-DangerIcon"
-  isBadge={false}
+  className="lucid-DangerIcon lucid-DangerIcon-is-disabled"
   isClickable={false}
   isDisabled={true}
   size={16}
   viewBox="0 0 16 16"
 >
   <circle
-    className="lucid-DangerIcon-background lucid-DangerIcon-background-is-disabled"
+    className="lucid-DangerIcon-background"
     cx="8"
     cy="8"
-    r="8"
+    r="7.5"
   />
   <path
     className="lucid-DangerIcon-x"
-    d="M6.836 8l-2.45-2.463 1.17-1.17 2.45 2.464 2.465-2.464 1.17 1.17L9.164 8l2.48 2.465-1.17 1.17-2.466-2.48-2.48 2.48-1.17-1.17L6.837 8z"
+    d="M5.5 5.5l5 5m0-5l-5 5"
+    stroke="#fff"
   />
 </Icon>
 `;

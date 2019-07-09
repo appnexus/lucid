@@ -13,6 +13,7 @@ import * as reducers from './Submarine.reducers';
 import SplitHorizontal from '../SplitHorizontal/SplitHorizontal';
 import ChevronIcon from '../Icon/ChevronIcon/ChevronIcon';
 import GripperHorizontalIcon from '../Icon/GripperHorizontalIcon/GripperHorizontalIcon';
+import Button from '../Button/Button';
 
 const cx = lucidClassNames.bind('&-Submarine');
 
@@ -238,9 +239,11 @@ const Submarine = createClass({
 								titleProps.className
 							)}
 						/>
-						<div
+						<Button
 							className={cx('&-expander')}
-							onMouseDown={this.handleExpanderClick}
+							kind='invisible'
+							onClick={this.handleExpanderClick}
+							hasOnlyIcon={true}
 						>
 							<ChevronIcon
 								direction={
@@ -250,7 +253,7 @@ const Submarine = createClass({
 										: 'up'
 								}
 							/>
-						</div>
+						</Button>
 					</div>
 					<div className={cx('&-Bar-content')}>{barProps.children}</div>
 				</BarPane>

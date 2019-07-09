@@ -1,9 +1,9 @@
+/* eslint-disable react/prop-types */
 import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, findTypes, omitProps } from '../../util/component-types';
-import SeparatorIcon from '../Icon/SeparatorIcon/SeparatorIcon';
 
 const cx = lucidClassNames.bind('&-Breadcrumb');
 
@@ -19,13 +19,10 @@ const Breadcrumb = createClass({
 				and provide links to return to higher points in the hierarchy
 			`,
 			categories: ['navigation'],
-			madeFrom: ['SeparatorIcon'],
 		},
 	},
 
 	components: {
-		SeparatorIcon,
-
 		Item: createClass({
 			displayName: 'Breadcrumb.Item',
 			statics: {
@@ -73,7 +70,10 @@ const Breadcrumb = createClass({
 								className={cx('&-Item', props.className)}
 							>
 								{props.children}
-								<SeparatorIcon className={cx('&-SeparatorIcon')} />
+								<span className={cx('&-BreadcrumbSeparator')}>
+									<span />
+									<span />
+								</span>
 							</li>
 						))}
 						<li

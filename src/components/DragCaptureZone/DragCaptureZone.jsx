@@ -68,7 +68,7 @@ const DragCaptureZone = createClass({
 			<div
 				{...omitProps(this.props, DragCaptureZone)}
 				className={cx('&', this.props.className)}
-				key="DragCaptureZone"
+				key='DragCaptureZone'
 				onMouseDown={this.handleDragStart}
 				ref={ref => {
 					this.elementRef = ref;

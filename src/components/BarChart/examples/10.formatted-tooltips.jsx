@@ -15,7 +15,7 @@ export default createClass({
 			<div>
 				<BarChart
 					data={data}
-					yAxisTitle="Revenue"
+					yAxisTitle='Revenue'
 					renderTooltipBody={dataPoint =>
 						`x value = ${dataPoint.x} and y value = ${dataPoint.y}`
 					}

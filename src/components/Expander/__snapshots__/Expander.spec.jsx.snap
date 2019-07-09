@@ -6,30 +6,25 @@ exports[`Expander [common] example testing should match snapshot(s) for 1.expand
 >
   <header
     className="lucid-Expander-header"
-    onClick={[Function]}
   >
-    <span
-      className="lucid-Expander-icon"
-    >
-      <ChevronIcon
-        direction="up"
-      />
-    </span>
-    <CSSTransitionGroup
-      className="lucid-Expander-text"
-      transitionAppear={false}
-      transitionEnter={true}
-      transitionEnterTimeout={100}
-      transitionLeave={true}
-      transitionLeaveTimeout={100}
-      transitionName="lucid-Expander-text"
+    <div
+      className="lucid-Expander-header-toggle"
+      onClick={[Function]}
     >
       <span
-        key="0"
+        className="lucid-Expander-icon"
+      >
+        <ChevronIcon
+          direction="up"
+          size={12}
+        />
+      </span>
+      <span
+        className="lucid-Expander-text"
       >
         Show Less
       </span>
-    </CSSTransitionGroup>
+    </div>
   </header>
   <Collapsible
     className="lucid-Expander-content"
@@ -55,30 +50,25 @@ exports[`Expander [common] example testing should match snapshot(s) for 2.intera
 >
   <header
     className="lucid-Expander-header"
-    onClick={[Function]}
   >
-    <span
-      className="lucid-Expander-icon"
-    >
-      <ChevronIcon
-        direction="down"
-      />
-    </span>
-    <CSSTransitionGroup
-      className="lucid-Expander-text"
-      transitionAppear={false}
-      transitionEnter={true}
-      transitionEnterTimeout={100}
-      transitionLeave={true}
-      transitionLeaveTimeout={100}
-      transitionName="lucid-Expander-text"
+    <div
+      className="lucid-Expander-header-toggle"
+      onClick={[Function]}
     >
       <span
-        key="0"
+        className="lucid-Expander-icon"
+      >
+        <ChevronIcon
+          direction="down"
+          size={12}
+        />
+      </span>
+      <span
+        className="lucid-Expander-text"
       >
         Show More
       </span>
-    </CSSTransitionGroup>
+    </div>
   </header>
   <Collapsible
     className="lucid-Expander-content"
@@ -119,30 +109,25 @@ exports[`Expander [common] example testing should match snapshot(s) for 3.intera
 >
   <header
     className="lucid-Expander-header"
-    onClick={[Function]}
   >
-    <span
-      className="lucid-Expander-icon"
-    >
-      <ChevronIcon
-        direction="down"
-      />
-    </span>
-    <CSSTransitionGroup
-      className="lucid-Expander-text"
-      transitionAppear={false}
-      transitionEnter={true}
-      transitionEnterTimeout={100}
-      transitionLeave={true}
-      transitionLeaveTimeout={100}
-      transitionName="lucid-Expander-text"
+    <div
+      className="lucid-Expander-header-toggle"
+      onClick={[Function]}
     >
       <span
-        key="0"
+        className="lucid-Expander-icon"
+      >
+        <ChevronIcon
+          direction="down"
+          size={12}
+        />
+      </span>
+      <span
+        className="lucid-Expander-text"
       >
         Show Stuff
       </span>
-    </CSSTransitionGroup>
+    </div>
   </header>
   <Collapsible
     className="lucid-Expander-content"
@@ -177,149 +162,57 @@ exports[`Expander [common] example testing should match snapshot(s) for 3.intera
 </div>
 `;
 
-exports[`Expander [common] example testing should match snapshot(s) for 4.highlighted 1`] = `
+exports[`Expander [common] example testing should match snapshot(s) for 4.interactive-with-changing-labels-and-additional-label-content 1`] = `
 <div
-  className="lucid-Expander lucid-Expander-is-expanded lucid-Expander-kind-highlighted"
+  className="lucid-Expander"
 >
   <header
     className="lucid-Expander-header"
-    onClick={[Function]}
   >
-    <span
-      className="lucid-Expander-icon"
-    >
-      <ChevronIcon
-        direction="up"
-      />
-    </span>
-    <CSSTransitionGroup
-      className="lucid-Expander-text"
-      transitionAppear={false}
-      transitionEnter={true}
-      transitionEnterTimeout={100}
-      transitionLeave={true}
-      transitionLeaveTimeout={100}
-      transitionName="lucid-Expander-text"
+    <div
+      className="lucid-Expander-header-toggle"
+      onClick={[Function]}
     >
       <span
-        key="0"
+        className="lucid-Expander-icon"
       >
-        Show Less
+        <ChevronIcon
+          direction="down"
+          size={12}
+        />
       </span>
-    </CSSTransitionGroup>
-  </header>
-  <Collapsible
-    className="lucid-Expander-content"
-    isAnimated={true}
-    isExpanded={true}
-    isMountControlled={true}
-    mountControlThreshold={4}
-    rootType="section"
-  >
-    <Expander.Label>
-      Show Less
-    </Expander.Label>
-    <p>
-      You can't get rid of me. Keep clicking that icon as much as you want, but I'm here to stay!
-    </p>
-  </Collapsible>
-</div>
-`;
-
-exports[`Expander [common] example testing should match snapshot(s) for 5.highlighted-with-changing-labels 1`] = `
-<div
-  className="lucid-Expander lucid-Expander-kind-highlighted"
->
-  <header
-    className="lucid-Expander-header"
-    onClick={[Function]}
-  >
-    <span
-      className="lucid-Expander-icon"
-    >
-      <ChevronIcon
-        direction="down"
-      />
-    </span>
-    <CSSTransitionGroup
-      className="lucid-Expander-text"
-      transitionAppear={false}
-      transitionEnter={true}
-      transitionEnterTimeout={100}
-      transitionLeave={true}
-      transitionLeaveTimeout={100}
-      transitionName="lucid-Expander-text"
-    >
       <span
-        key="0"
-      >
-        Show More
-      </span>
-    </CSSTransitionGroup>
-  </header>
-  <Collapsible
-    className="lucid-Expander-content"
-    isAnimated={true}
-    isExpanded={false}
-    isMountControlled={true}
-    mountControlThreshold={4}
-    rootType="section"
-  >
-    <Expander.Label>
-      Show More
-    </Expander.Label>
-    <p>
-      Artisan helvetica quinoa kogi fingerstache, biodiesel church-key blue bottle everyday carry schlitz seitan locavore. Retro +1 tilde, normcore post-ironic chillwave PBR&B umami. Mlkshk mumblecore meh, kitsch pickled wolf helvetica man bun cronut keffiyeh meggings ramps. Banh mi stumptown cronut wayfarers. Banh mi venmo street art chicharrones, put a bird on it yuccie cornhole poutine knausgaard echo park tilde retro. Occupy XOXO etsy meh pabst blue bottle. Photo booth four loko biodiesel, cornhole chicharrones echo park actually pork belly gochujang DIY gluten-free plaid microdosing salvia pinterest.
-    </p>
-    <p>
-      Cred lumbersexual organic, echo park hashtag roof party pinterest shabby chic green juice salvia scenester hella ramps. Schlitz knausgaard church-key disrupt, four loko XOXO bicycle rights post-ironic four dollar toast fixie butcher mustache tousled humblebrag. Bushwick 8-bit swag, wolf intelligentsia kickstarter roof party cred meh semiotics flannel. Typewriter umami narwhal irony, slow-carb VHS street art cold-pressed wayfarers sriracha everyday carry church-key wolf humblebrag. Skateboard polaroid man braid organic, chambray mustache mixtape freegan humblebrag brunch ugh. Wayfarers VHS brooklyn, fashion axe green juice next level kombucha cray shabby chic lo-fi. Lumbersexual pug farm-to-table, authentic chartreuse street art church-key.
-    </p>
-    <p>
-      3 wolf moon pickled messenger bag knausgaard venmo, retro aliquip portland asymmetrical cliche non pabst pinterest culpa. Laboris beard intelligentsia, pickled viral brooklyn YOLO tempor do cliche fugiat. Messenger bag fanny pack reprehenderit bicycle rights tilde, tumblr neutra do intelligentsia godard street art. Gentrify consectetur laboris, pug venmo literally you probably haven't heard of them actually locavore distillery commodo occupy franzen umami. Slow-carb bespoke pariatur four dollar toast, selfies tofu salvia artisan tousled meggings kinfolk chambray marfa direct trade single-origin coffee. Exercitation fap umami mollit deep v wolf, sint lomo sunt four dollar toast elit selvage vegan truffaut. Cillum pickled sartorial flexitarian chartreuse brooklyn.
-    </p>
-    <p>
-      Artisan helvetica quinoa kogi fingerstache, biodiesel church-key blue bottle everyday carry schlitz seitan locavore. Retro +1 tilde, normcore post-ironic chillwave PBR&B umami. Mlkshk mumblecore meh, kitsch pickled wolf helvetica man bun cronut keffiyeh meggings ramps. Banh mi stumptown cronut wayfarers. Banh mi venmo street art chicharrones, put a bird on it yuccie cornhole poutine knausgaard echo park tilde retro. Occupy XOXO etsy meh pabst blue bottle. Photo booth four loko biodiesel, cornhole chicharrones echo park actually pork belly gochujang DIY gluten-free plaid microdosing salvia pinterest.
-    </p>
-    <p>
-      Cred lumbersexual organic, echo park hashtag roof party pinterest shabby chic green juice salvia scenester hella ramps. Schlitz knausgaard church-key disrupt, four loko XOXO bicycle rights post-ironic four dollar toast fixie butcher mustache tousled humblebrag. Bushwick 8-bit swag, wolf intelligentsia kickstarter roof party cred meh semiotics flannel. Typewriter umami narwhal irony, slow-carb VHS street art cold-pressed wayfarers sriracha everyday carry church-key wolf humblebrag. Skateboard polaroid man braid organic, chambray mustache mixtape freegan humblebrag brunch ugh. Wayfarers VHS brooklyn, fashion axe green juice next level kombucha cray shabby chic lo-fi. Lumbersexual pug farm-to-table, authentic chartreuse street art church-key.
-    </p>
-    <p>
-      3 wolf moon pickled messenger bag knausgaard venmo, retro aliquip portland asymmetrical cliche non pabst pinterest culpa. Laboris beard intelligentsia, pickled viral brooklyn YOLO tempor do cliche fugiat. Messenger bag fanny pack reprehenderit bicycle rights tilde, tumblr neutra do intelligentsia godard street art. Gentrify consectetur laboris, pug venmo literally you probably haven't heard of them actually locavore distillery commodo occupy franzen umami. Slow-carb bespoke pariatur four dollar toast, selfies tofu salvia artisan tousled meggings kinfolk chambray marfa direct trade single-origin coffee. Exercitation fap umami mollit deep v wolf, sint lomo sunt four dollar toast elit selvage vegan truffaut. Cillum pickled sartorial flexitarian chartreuse brooklyn.
-    </p>
-  </Collapsible>
-</div>
-`;
-
-exports[`Expander [common] example testing should match snapshot(s) for 6.highlighted-without-changing-labels 1`] = `
-<div
-  className="lucid-Expander lucid-Expander-kind-highlighted"
->
-  <header
-    className="lucid-Expander-header"
-    onClick={[Function]}
-  >
-    <span
-      className="lucid-Expander-icon"
-    >
-      <ChevronIcon
-        direction="down"
-      />
-    </span>
-    <CSSTransitionGroup
-      className="lucid-Expander-text"
-      transitionAppear={false}
-      transitionEnter={true}
-      transitionEnterTimeout={100}
-      transitionLeave={true}
-      transitionLeaveTimeout={100}
-      transitionName="lucid-Expander-text"
-    >
-      <span
-        key="0"
+        className="lucid-Expander-text"
       >
         Show Stuff
       </span>
-    </CSSTransitionGroup>
+    </div>
+    <div
+      className="lucid-Expander-additional-content"
+    >
+      <Button
+        hasOnlyIcon={false}
+        isActive={false}
+        isDisabled={false}
+        kind="invisible"
+        onClick={[Function]}
+        type="button"
+      >
+        <EditIcon />
+        Edit
+      </Button>
+      <Button
+        hasOnlyIcon={false}
+        isActive={false}
+        isDisabled={false}
+        kind="invisible"
+        onClick={[Function]}
+        type="button"
+      >
+        <CloseIcon />
+        Clear All
+      </Button>
+    </div>
   </header>
   <Collapsible
     className="lucid-Expander-content"
@@ -332,6 +225,30 @@ exports[`Expander [common] example testing should match snapshot(s) for 6.highli
     <Expander.Label>
       Show Stuff
     </Expander.Label>
+    <Expander.AdditionalLabelContent>
+      <Button
+        hasOnlyIcon={false}
+        isActive={false}
+        isDisabled={false}
+        kind="invisible"
+        onClick={[Function]}
+        type="button"
+      >
+        <EditIcon />
+        Edit
+      </Button>
+      <Button
+        hasOnlyIcon={false}
+        isActive={false}
+        isDisabled={false}
+        kind="invisible"
+        onClick={[Function]}
+        type="button"
+      >
+        <CloseIcon />
+        Clear All
+      </Button>
+    </Expander.AdditionalLabelContent>
     <p>
       Tacos craft beer humblebrag meditation. Cold-pressed next level man bun readymade beard, wayfarers fanny pack keytar helvetica knausgaard biodiesel lumbersexual. Knausgaard echo park whatever four loko messenger bag hella. Cardigan church-key brooklyn letterpress artisan venmo, gastropub hella. Single-origin coffee selfies four loko, biodiesel health goth truffaut migas sustainable kale chips disrupt locavore meggings mustache actually retro. Mlkshk poutine flexitarian scenester 3 wolf moon, vice kinfolk chia blog ennui bitters brooklyn quinoa marfa. Literally before they sold out gochujang pork belly franzen.
     </p>

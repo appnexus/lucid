@@ -4,14 +4,14 @@ import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import Overlay from '../Overlay/Overlay';
 import GripperVerticalIcon from '../Icon/GripperVerticalIcon/GripperVerticalIcon';
-import CrossIcon from '../Icon/CrossIcon/CrossIcon';
+import CloseIcon from '../Icon/CloseIcon/CloseIcon';
 import DragCaptureZone from '../DragCaptureZone/DragCaptureZone';
+import Button from '../Button/Button';
 import { getFirst, omitProps } from '../../util/component-types';
-import { Button } from '../../index';
 
 const cx = lucidClassNames.bind('&-SidePanel');
 
-const { any, bool, func, oneOf, node, number, string } = PropTypes;
+const { any, bool, func, oneOf, node, number, string, oneOfType } = PropTypes;
 
 class SidePanel extends React.Component {
 	constructor(...args) {
@@ -75,6 +75,7 @@ class SidePanel extends React.Component {
 			onCollapse,
 			position,
 			preventBodyScroll,
+			topOffset,
 			...passThroughs
 		} = this.props;
 
@@ -101,34 +102,49 @@ class SidePanel extends React.Component {
 				onBackgroundClick={onCollapse}
 				onEscape={onCollapse}
 				isAnimated={isAnimated}
+				style={{
+					marginTop: topOffset,
+				}}
 				{...omitProps(passThroughs, SidePanel)}
 			>
-				<div className={cx('&-pane')}>
-					{!isResizeDisabled && (
-						<DragCaptureZone
-							className={cx('&-grabber')}
-							onDragStart={this.handleResizeStart}
-							onDrag={this.handleResize}
-							onDragEnd={this.handleResizeEnd}
-						>
-							<GripperVerticalIcon />
-						</DragCaptureZone>
-					)}
-					<div className={cx('&-panel')} style={{ width: this.state.width }}>
-						{headerEl && (
-							<div className={cx('&-header')}>
-								<div className={cx('&-header-inner-wrapper')}>
-									<div className={cx('&-header-content')}>{headerChildren}</div>
+				<div
+					className={cx('&-pane')}
+					style={{
+						width: this.state.width,
+						marginTop: topOffset,
+					}}
+				>
+					{headerEl && (
+						<div className={cx('&-header')}>
+							<div className={cx('&-header-inner-wrapper')}>
+								<div className={cx('&-header-content')}>{headerChildren}</div>
 
-									<Button kind="invisible" className={cx('&-header-closer')}>
-										<CrossIcon
-											isClickable
-											onClick={onCollapse}
-											presetSize="large"
-										/>
-									</Button>
-								</div>
+								<Button
+									className={cx('&-header-closer-button')}
+									kind='invisible'
+									onClick={onCollapse}
+									hasOnlyIcon={true}
+								>
+									<CloseIcon
+										className={cx('&-header-closer')}
+										isClickable
+										size={14}
+									/>
+								</Button>
 							</div>
+						</div>
+					)}
+
+					<div className={cx('&-body')}>
+						{!isResizeDisabled && (
+							<DragCaptureZone
+								className={cx('&-grabber')}
+								onDragStart={this.handleResizeStart}
+								onDrag={this.handleResize}
+								onDragEnd={this.handleResizeEnd}
+							>
+								<GripperVerticalIcon width='20' />
+							</DragCaptureZone>
 						)}
 						<div className={cx('&-content')}>{children}</div>
 					</div>
@@ -186,6 +202,9 @@ SidePanel.propTypes = {
 		Sets the initial width in pixels. The actual width may change if the user
 		resizes it.
 	`,
+	topOffset: oneOfType([number, string])`
+		Sets the top margin for the panel. Defaults to \`0\`.
+	`,
 	Header: any`
 		Alternative to using \`<SidePanel.Header>\`.
 	`,
@@ -199,6 +218,7 @@ SidePanel.defaultProps = {
 	onResize: _.noop,
 	position: 'right',
 	preventBodyScroll: false,
+	topOffset: 0,
 	width: 240,
 };
 

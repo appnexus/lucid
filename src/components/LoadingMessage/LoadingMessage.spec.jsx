@@ -73,7 +73,7 @@ describe('LoadingMessage', () => {
 			});
 
 			it('should render the custom title', () => {
-				const wrapper = shallow(<LoadingMessage Title="A custom title" />);
+				const wrapper = shallow(<LoadingMessage Title='A custom title' />);
 				assert.equal(
 					wrapper.find('.lucid-LoadingMessage-title').text(),
 					'A custom title'
@@ -117,7 +117,7 @@ describe('LoadingMessage', () => {
 			});
 
 			it('should render the custom body', () => {
-				const wrapper = shallow(<LoadingMessage Body="A custom body" />);
+				const wrapper = shallow(<LoadingMessage Body='A custom body' />);
 				assert.equal(
 					wrapper.find('.lucid-LoadingMessage-body').text(),
 					'A custom body'

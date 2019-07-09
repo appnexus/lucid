@@ -6,7 +6,7 @@ import { mount, shallow } from 'enzyme';
 import { common } from '../../util/generic-tests';
 import { ToolTipDumb as ToolTip } from './ToolTip';
 import ContextMenu from '../ContextMenu/ContextMenu';
-import CrossIcon from '../Icon/CrossIcon/CrossIcon';
+import CloseIcon from '../Icon/CloseIcon/CloseIcon';
 import { MOSTLY_STABLE_DELAY } from '../../../tests/constants';
 
 const { Target, Title, Body } = ToolTip;
@@ -61,7 +61,7 @@ describe('ToolTip', () => {
 
 				it('should pass the className prop thru to the FlyOut (portal) element', () => {
 					wrapper = mount(
-						<ToolTip isExpanded className="MyToolTip">
+						<ToolTip isExpanded className='MyToolTip'>
 							<Target>Target</Target>
 							<Body>Body</Body>
 						</ToolTip>
@@ -81,7 +81,7 @@ describe('ToolTip', () => {
 
 		describe('isCloseable', () => {
 			describe('true', () => {
-				it('should render a `CrossIcon`', () => {
+				it('should render a `CloseIcon`', () => {
 					const wrapper = shallow(
 						<ToolTip isExpanded isCloseable>
 							<Target>Target</Target>
@@ -89,14 +89,14 @@ describe('ToolTip', () => {
 						</ToolTip>
 					);
 					assert.equal(
-						wrapper.find(CrossIcon).length,
+						wrapper.find(CloseIcon).length,
 						1,
-						'must include a CrossIcon'
+						'must include a CloseIcon'
 					);
 				});
 			});
 			describe('false', () => {
-				it('should not render a `CrossIcon`', () => {
+				it('should not render a `CloseIcon`', () => {
 					const wrapper = shallow(
 						<ToolTip isExpanded>
 							<Target>Target</Target>
@@ -104,9 +104,9 @@ describe('ToolTip', () => {
 						</ToolTip>
 					);
 					assert.equal(
-						wrapper.find(CrossIcon).length,
+						wrapper.find(CloseIcon).length,
 						0,
-						'must not include a CrossIcon'
+						'must not include a CloseIcon'
 					);
 				});
 			});
@@ -150,26 +150,10 @@ describe('ToolTip', () => {
 			});
 		});
 
-		describe('kind', () => {
-			it('should pass the correct className to the Flyout', () => {
-				const wrapper = shallow(
-					<ToolTip isExpanded kind="primary">
-						<Target>Target</Target>
-						<Body>Body</Body>
-					</ToolTip>
-				);
-				const className = wrapper.find(ContextMenu.FlyOut).prop('className');
-				assert(
-					_.includes(className, 'lucid-ToolTip-FlyOut-primary'),
-					'must include className'
-				);
-			});
-		});
-
 		describe('direction', () => {
 			it('should pass direction to the underlying ContextMenu', () => {
 				const wrapper = shallow(
-					<ToolTip isExpanded direction="right">
+					<ToolTip isExpanded direction='right'>
 						<Target>Target</Target>
 						<Body>Body</Body>
 					</ToolTip>
@@ -185,7 +169,7 @@ describe('ToolTip', () => {
 		describe('alignment', () => {
 			it('should pass alignment center to the underlying ContextMenu', () => {
 				const wrapper = shallow(
-					<ToolTip isExpanded alignment="start">
+					<ToolTip isExpanded alignment='start'>
 						<Target>Target</Target>
 						<Body>Body</Body>
 					</ToolTip>
@@ -200,7 +184,7 @@ describe('ToolTip', () => {
 			describe('center', () => {
 				it('should pass getAlignmentOffset with correct closed over values', () => {
 					const wrapper = shallow(
-						<ToolTip isExpanded alignment="center">
+						<ToolTip isExpanded alignment='center'>
 							<Target>Target</Target>
 							<Body>Body</Body>
 						</ToolTip>
@@ -215,7 +199,7 @@ describe('ToolTip', () => {
 			describe('start', () => {
 				it('should pass getAlignmentOffset with correct closed over values', () => {
 					const wrapper = shallow(
-						<ToolTip isExpanded alignment="start">
+						<ToolTip isExpanded alignment='start'>
 							<Target>Target</Target>
 							<Body>Body</Body>
 						</ToolTip>
@@ -230,7 +214,7 @@ describe('ToolTip', () => {
 			describe('end', () => {
 				it('should pass getAlignmentOffset with correct closed over values', () => {
 					const wrapper = shallow(
-						<ToolTip isExpanded alignment="end">
+						<ToolTip isExpanded alignment='end'>
 							<Target>Target</Target>
 							<Body>Body</Body>
 						</ToolTip>
@@ -338,7 +322,7 @@ describe('ToolTip', () => {
 		describe('portalId', () => {
 			it('should pass portalId to underlying ContextMenu', () => {
 				const wrapper = shallow(
-					<ToolTip portalId="foo-portal-id">
+					<ToolTip portalId='foo-portal-id'>
 						<Target>Target</Target>
 						<Body>Body</Body>
 					</ToolTip>

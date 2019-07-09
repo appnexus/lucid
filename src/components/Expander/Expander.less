@@ -3,45 +3,40 @@
 
 .@{prefix}-Expander {
 	&-icon {
-		.box-sizing();
-
-		width: @size-expander-button;
-		height: @size-expander-button;
+		// .box-sizing();
+		display: inline-block;
+		width: 20px;
+		height: 20px;
 		align-items: center;
-		display: flex;
 		justify-content: center;
 		margin-right: @size-XS;
+
+		.@{prefix}-Icon {
+			margin: 4px;
+		}
 	}
 
 	&-header {
 		align-items: center;
 		color: @color-darkGray;
-		cursor: pointer;
 		display: flex;
 		font-size: @fontSize;
-		font-family: @fontFamily;
 		justify-content: flex-start;
 
-		&:hover {
-			> .@{prefix}-Expander-icon {
-				.gradient-animation(@featured-color-default-gradientStartColor, @featured-color-default-gradientEndColor);
-				.box-sizing();
+		&-toggle {
+			cursor: pointer;
+			display: flex;
+			align-items: center;
 
-				border: solid 1px @featured-color-default-borderColor;
-				border-radius: @size-borderRadius;
-				outline: none;
+			&:hover {
+				> .@{prefix}-Expander-icon {
+					.box-sizing();
 
-				.@{prefix}-ChevronIcon {
-					fill: @color-darkGray;
+					background-color: @featured-color-default-backgroundColorHover;
+					outline: none;
 				}
-			}
 
-			> .@{prefix}-Expander-text {
-				color: @color-linkColorHover;
-
-				// `text-decoration `does not inherit when you're using `position:
-				// absolute` as per the spec
-				> span {
+				> .@{prefix}-Expander-text {
 					text-decoration: underline;
 				}
 			}
@@ -49,25 +44,18 @@
 	}
 
 	&-text {
-		.transition-group-animation-fade(@timing-animation-hover);
-
-		color: @color-linkColor;
-		height: @size-expander-button;
-		position: relative;
-
-		// Since we have two elements in the dom during the transition from one
-		// label to another, we want the element that's leaving to appear "over
-		// the top" of the label that coming in.
-		&-leave {
-			position: absolute;
-			top: 0;
-			left: 0;
-		}
+		color: @color-darkGray;
+		font-weight: @font-weight-medium;
 
 		> * {
 			line-height: @size-expander-button;
 			white-space: nowrap;
 		}
+	}
+
+	&-additional-content {
+		flex: 1;
+		margin-left: @size-standard;
 	}
 
 	&-content {

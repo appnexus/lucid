@@ -190,19 +190,32 @@ const VerticalListMenu = createClass({
 							<div
 								className={cx('&-Item-content', {
 									'&-Item-content-is-selected': actualIsSelected,
+									'&-Item-content-is-not-selected': !actualIsSelected,
+									'&-Item-content-is-expanded': actualIsExpanded,
 									'&-Item-content-is-actionable': isActionable,
 								})}
 								onClick={_.partial(this.handleClickItem, index, itemChildProp)}
 							>
-								<div className={cx('&-Item-content-text')}>{otherChildren}</div>
-								{hasExpander ? (
-									<div
-										className={cx('&-Item-expander')}
-										onClick={_.partial(this.handleToggle, index, itemChildProp)}
-									>
-										<ChevronIcon direction={actualIsExpanded ? 'up' : 'down'} />
+								<div className={cx('&-Item-content-body')}>
+									<div className={cx('&-Item-content-text')}>
+										{otherChildren}
 									</div>
-								) : null}
+									{hasExpander ? (
+										<div
+											className={cx('&-Item-expander')}
+											onClick={_.partial(
+												this.handleToggle,
+												index,
+												itemChildProp
+											)}
+										>
+											<ChevronIcon
+												size={12}
+												direction={actualIsExpanded ? 'up' : 'down'}
+											/>
+										</div>
+									) : null}
+								</div>
 							</div>
 
 							{!_.isEmpty(listChildren) ? (

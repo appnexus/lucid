@@ -5,6 +5,7 @@
 @Sidebar-transition-duration: @timing-animation-fade;
 @Sidebar-transition-half-duration: @Sidebar-transition-duration / 2;
 @Sidebar-transition-third-duration: @Sidebar-transition-duration / 3;
+@Sidebar-zIndex: 10;
 
 .@{prefix}-Sidebar {
 	display: flex;
@@ -17,18 +18,18 @@
 
 		& > .@{prefix}-Sidebar-Bar {
 			position: relative;
-			z-index: @zindex-base;
+			z-index: @Sidebar-zIndex;
 			background-color: @color-white;
 			overflow: auto;
 			display: flex;
 			flex-direction: column;
 
 			.@{prefix}-Sidebar-is-position-left& {
-				border-right: @border-standardBorder;
+				border-right: @size-borderWidth solid @color-neutral-4;
 			}
 
 			.@{prefix}-Sidebar-is-position-right& {
-				border-left: @border-standardBorder;
+				border-left: @size-borderWidth solid @color-neutral-4;
 			}
 
 			& > .@{prefix}-Sidebar-Bar-overlay {
@@ -37,9 +38,9 @@
 				left: 0;
 				width: 100%;
 				height: 100%;
-				background-color: @color-backgroundColor;
+				background-color: @color-neutral-3;
 				opacity: 1;
-				z-index: @zindex-base;
+				z-index: @Sidebar-zIndex;
 
 				.@{prefix}-SplitVertical-is-expanded& {
 					opacity: 0;
@@ -48,11 +49,11 @@
 			}
 
 			& > .@{prefix}-Sidebar-Bar-header {
-				background-color: @color-backgroundColor;
-				border-bottom: @border-lightBorder;
+				background-color: @color-neutral-3;
 				color: @color-textColor;
-				font: @size-L @fontFamily;
-				font-weight: bold;
+				font-size: 16px;
+				line-height: 20px;
+				font-weight: @font-weight-medium;
 				display: flex;
 				flex-shrink: 0;
 
@@ -85,19 +86,16 @@
 					flex-shrink: 0;
 					height: @size-expander-button;
 					width: @size-expander-button;
-					margin: @size-XS;
-					border: solid 1px @featured-color-default-borderColor;
-					border-radius: @size-borderRadius;
+					margin-top: 2px;
 					cursor: pointer;
-					z-index: @zindex-base + 1;
-					background-image: linear-gradient(@featured-color-default-gradientStartColor, @featured-color-default-gradientEndColor);
+					z-index: @Sidebar-zIndex + 1;
 
-					&:hover {
-						background-image: linear-gradient(@featured-color-default-gradientEndColor, @featured-color-default-gradientStartColor);
+					&:focus {
+						background: none;
 					}
 
 					.@{prefix}-ChevronIcon {
-						fill: @color-darkGray;
+						stroke: @color-neutral-6;
 					}
 				}
 			}
@@ -119,18 +117,18 @@
 			flex-direction: column;
 			justify-content: center;
 			align-items: center;
-			background-color: @color-backgroundColor;
+			background-color: @color-neutral-3;
 			width: @Sidebar-Divider-width;
-			z-index: @zindex-base - 1;
+			z-index: @Sidebar-zIndex - 1;
 
 			.@{prefix}-Sidebar-is-position-left& {
 				transform: translateX(-@Sidebar-Divider-width);
-				border-right: @border-standardBorder;
+				border-right: @color-neutral-4;
 			}
 
 			.@{prefix}-Sidebar-is-position-right& {
 				transform: translateX(@Sidebar-Divider-width);
-				border-left: @border-standardBorder;
+				border-left: @color-neutral-4;
 			}
 
 			.@{prefix}-SplitVertical-is-expanded& {
@@ -142,15 +140,23 @@
 			}
 
 			.@{prefix}-Sidebar-Divider-gripper {
+				cursor: grab;
+
 				transform: translateX(-0.5px);
 			}
 
 			&:hover {
-				background-color: @color-mediumGray;
+				background-color: @color-neutral-4;
+
+				cursor: grab;
 
 				.@{prefix}-Sidebar-Divider-gripper {
-					fill: @color-darkGray;
+					stroke: @color-darkGray;
 				}
+			}
+
+			&:active {
+				cursor: grabbing;
 			}
 		}
 
@@ -229,4 +235,3 @@
 		}
 	}
 }
-

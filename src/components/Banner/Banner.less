@@ -2,39 +2,40 @@
 @import (reference) '../../styles/mixins.less';
 
 // banner sizes
-@Banner-size-spacing-rightLeft: @size-S;
+@Banner-size-spacing-rightLeft: @size-standard;
 @Banner-size-spacing-topBottom: @size-standard;
 @Banner-size-spacing-topBottom-small: @size-XS;
-@Banner-size-borderRadius: @size-borderRadius;
 @Banner-size-iconFontSize: 16px;
 
 .@{prefix}-Banner {
 	.transition-group-animation-fade();
-	.box-sizing();
-
-	border: @border-standardBorder;
-	background-color: @color-backgroundColor;
+	box-sizing: content-box;
+	border: none;
+	background-color: @color-neutral-9;
 	font-size: @fontSize;
-	font-family: @fontFamily;
-	border-radius: @Banner-size-borderRadius;
+	font-weight: @font-weight-medium;
 	padding: 0 @Banner-size-spacing-rightLeft;
 	display: flex;
+	color: @color-white;
 
 	&.@{prefix}-Banner-has-close {
 		padding-right: @Banner-size-spacing-rightLeft;
 	}
 
-	&.@{prefix}-Banner-has-no-roundedCorners {
-		border-radius: 0;
-	}
-
 	// must use this specific selector in order to override default color
-	.@{prefix}-Banner-close {
-		fill: @color-mediumGray;
+	&-close&-close&-close {
+		align-self: flex-start;
+		margin-top: 14px;
+		stroke: @color-white;
 
 		&:hover {
-			fill: @color-darkGray;
+			stroke: @color-white;
+			opacity: 0.5;
 		}
+	}
+
+	&-small&-small > &-close {
+		margin-top: 8px;
 	}
 
 	// States
@@ -46,14 +47,19 @@
 	}
 
 	&-icon {
-		padding-top: @Banner-size-spacing-topBottom - 2px;
+		> .@{prefix}-Icon {
+			stroke: @color-white;
+		}
+
+		display: flex;
+		align-self: center;
 		margin-right: @Banner-size-spacing-rightLeft;
 	}
 
 	&-content {
 		flex: 1;
 		padding: @Banner-size-spacing-topBottom 0;
-		line-height: 1em;
+		line-height: 15px;
 
 		& > p {
 			line-height: 1.25em;
@@ -68,39 +74,33 @@
 		}
 	}
 
-	// Types
-
-	&-primary {
-		border-color: @featured-color-primary-borderColorLite;
-		background-color: @featured-color-primary-backgroundColorLight;
+	a {
+		color: inherit;
+		text-decoration: underline;
 	}
 
+	// Types
 	&-success {
-		border-color: @featured-color-success-borderColorLite;
-		background-color: @featured-color-success-backgroundColorLight;
+		background-color: @featured-color-success;
 	}
 
 	&-info {
-		border-color: @featured-color-info-borderColorLite;
-		background-color: @featured-color-info-backgroundColorLight;
+		background-color: @featured-color-info;
 	}
 
 	&-warning {
-		border-color: @featured-color-warning-borderColorLite;
-		background-color: @featured-color-warning-backgroundColorLight;
+		background-color: @featured-color-warning;
+		color: @color-darkGray;
 	}
 
 	&-danger {
-		border-color: @featured-color-danger-borderColorLite;
-		background-color: @featured-color-danger-backgroundColorLight;
+		background-color: @featured-color-danger;
 	}
 
-	&-small &-icon {
-		padding-top: @Banner-size-spacing-topBottom-small - 2px;
-	}
 
 	&-small &-content {
 		padding: @Banner-size-spacing-topBottom - 6px 0;
+		height: 12px;
 	}
 }
 

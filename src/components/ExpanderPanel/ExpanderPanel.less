@@ -23,29 +23,9 @@
 
 		&:hover {
 			> .@{prefix}-ExpanderPanel-icon {
-				.gradient-animation(@featured-color-default-gradientStartColor, @featured-color-default-gradientEndColor);
-
-				border: solid 1px @featured-color-default-borderColor;
-				border-radius: @size-borderRadius;
-				outline: none;
-
-				.@{prefix}-ChevronIcon {
-					fill: @color-darkGray;
-				}
+				background-color: @color-neutral-3;
 			}
 		}
-	}
-
-	&-content-inner {
-		border-top: @border-lightBorder;
-
-		&-has-padding {
-			padding: @size-standard;
-		}
-	}
-
-	> .@{prefix}-Panel-content.@{prefix}-Panel-content { // increased specificity
-		padding: 0;
 	}
 
 	> .@{prefix}-Panel-Header {
@@ -65,6 +45,11 @@
 			color: @color-disabledText;
 			.no-cursor();
 		}
+	}
+
+	// Selector is a little funky to increase specificity
+	&&-is-collapsed > .@{prefix}-Panel-content {
+		margin-bottom: 0;
 	}
 }
 

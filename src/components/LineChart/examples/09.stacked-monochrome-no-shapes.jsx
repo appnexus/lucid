@@ -61,7 +61,7 @@ export default createClass({
 				yAxisFields={['apples', 'oranges', 'pears', 'bananas', 'kiwis']}
 				yAxisIsStacked={true}
 				yAxisHasPoints={false}
-				yAxisTitle="Fruit Count"
+				yAxisTitle='Fruit Count'
 				palette={chartConstants.PALETTE_MONOCHROME_0_5}
 			/>
 		);

@@ -2,11 +2,17 @@
 @import (reference) '../../styles/mixins.less';
 
 .@{prefix}-SidePanel {
+	z-index: 100;
+
 	.@{prefix}-SidePanel-pane {
-		height: 100%;
 		position: fixed;
 		top: 0;
 		display: flex;
+		flex-direction: column;
+		height: 100%;
+		width: 240px;
+		background-color: @color-neutral-2;
+		box-shadow: -1px 0px 5px 0px rgba(33, 31, 31, 0.3);
 
 		.@{prefix}-SidePanel-is-animated& {
 			transition: transform 200ms;
@@ -23,87 +29,73 @@
 
 		.@{prefix}-SidePanel-position-left& {
 			left: 0;
-			flex-direction: row-reverse;
 			transform: translateX(-100%);
-		}
 
-		.@{prefix}-SidePanel-grabber {
-			background-color: @color-backgroundColor;
-			width: @size-XS;
-			height: 100%;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			cursor: ew-resize;
-			box-sizing: border-box;
+			.@{prefix}-SidePanel-body {
+				flex-direction: row-reverse;
 
-			.@{prefix}-SidePanel-position-right& {
-				border-left: @border-lightBorder;
-			}
-
-			.@{prefix}-SidePanel-position-left& {
-				border-right: @border-lightBorder;
-			}
-
-			.@{prefix}-GripperVerticalIcon {
-				transform: translateX(-0.5px);
-			}
-
-			&:hover {
-				background-color: @color-mediumGray;
-
-				.@{prefix}-GripperVerticalIcon {
-					fill: @color-darkGray;
+				.@{prefix}-SidePanel-content {
+					overflow: auto;
+					padding: 20px 0px 20px 20px;
+					flex: 1;
 				}
 			}
 		}
 
-		.@{prefix}-SidePanel-panel {
-			width: 240px;
+		.@{prefix}-SidePanel-header {
+			border-bottom: @border-lightBorder;
+			background: white;
+			padding: 20px;
+
+			.@{prefix}-SidePanel-header-inner-wrapper {
+				display: flex;
+				align-items: start;
+
+				.@{prefix}-SidePanel-header-content {
+					flex: 1;
+					font-size: 24px;
+					font-weight: 500;
+				}
+			}
+		}
+		.@{prefix}-SidePanel-body {
 			height: 100%;
-			background-color: @color-backgroundColor;
 			display: flex;
-			flex-direction: column;
 
-			.@{prefix}-SidePanel-position-right& {
-				border-left: @border-lightBorder;
-			}
+			.@{prefix}-SidePanel-grabber {
+				background-color: @color-neutral-2;
+				width: 20px;
+				height: 100%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				cursor: grab;
+				box-sizing: border-box;
 
-			.@{prefix}-SidePanel-position-left& {
-				border-right: @border-lightBorder;
-			}
+				.@{prefix}-GripperVerticalIcon {
+					transform: translateX(-0.5px);
+					opacity: 0.5;
+				}
 
-			.@{prefix}-SidePanel-header {
-				border-bottom: @border-lightBorder;
-				background: white;
-				
-				.@{prefix}-SidePanel-header-inner-wrapper {
-					display: flex;
-					
-					.@{prefix}-SidePanel-header-content {
-						flex: 1;
-						margin: 6px;
-						height: 100%;
-					}
+				&:active {
+					cursor: grabbing;
+				}
 
-					.@{prefix}-SidePanel-header-closer {
-						height: 100%;
-						display: flex;
-						justify-content: center;
-						align-items: center;
-						padding: @size-XS;
-						margin: @size-standard;
-						
-						.@{prefix}-CrossIcon {
-							fill: @color-disabledText;
-						}
+				&:active, &:hover {
+
+					.@{prefix}-GripperVerticalIcon {
+						opacity: 1;
 					}
 				}
 			}
 
 			.@{prefix}-SidePanel-content {
 				overflow: auto;
+				padding: 20px 20px 20px 0;
+				flex: 1;
 			}
+
 		}
+
 	}
 }

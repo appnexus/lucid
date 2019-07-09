@@ -22,7 +22,7 @@ describe('Legend', () => {
 	describe('props', () => {
 		describe('orient', () => {
 			it('should add the correct class for horizontal', () => {
-				const wrapper = shallow(<Legend orient="horizontal" />);
+				const wrapper = shallow(<Legend orient='horizontal' />);
 
 				assert.equal(
 					wrapper.find('.lucid-Legend-is-horizontal').length,
@@ -32,7 +32,7 @@ describe('Legend', () => {
 			});
 
 			it('should add the correct class for vertical', () => {
-				const wrapper = shallow(<Legend orient="vertical" />);
+				const wrapper = shallow(<Legend orient='vertical' />);
 
 				assert.equal(
 					wrapper.find('.lucid-Legend-is-vertical').length,
@@ -57,7 +57,7 @@ describe('Legend', () => {
 
 			it('should set the correct width when vertical and there are some lines', () => {
 				const wrapper = shallow(
-					<Legend orient="vertical">
+					<Legend orient='vertical'>
 						<Item hasPoint />
 						<Item hasLine />
 					</Legend>

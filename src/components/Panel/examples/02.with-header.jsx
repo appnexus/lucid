@@ -7,7 +7,7 @@ export default createClass({
 		return (
 			<Panel>
 				<Panel.Header>
-					<strong>Header</strong>
+					<span>Header</span>
 				</Panel.Header>
 				Meditation literally chia, schlitz banh mi mlkshk vape ennui art party.
 				Succulents tumeric tumblr echo park hella umami. Pickled four loko

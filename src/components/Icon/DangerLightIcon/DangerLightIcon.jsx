@@ -33,16 +33,15 @@ const DangerLightIcon = createClass({
 				{..._.pick(passThroughs, _.keys(Icon.propTypes))}
 				isClickable={isClickable}
 				isDisabled={isDisabled}
-				className={cx('&', className, isClickable && '&-is-clickable')}
+				className={cx(
+					'&',
+					className,
+					isDisabled && '&-is-disabled',
+					isClickable && '&-is-clickable'
+				)}
 			>
-				<path
-					className={cx('&-background')}
-					d="M8 15c-3.86 0-7-3.14-7-7s3.14-7 7-7 7 3.14 7 7-3.14 7-7 7z"
-				/>
-				<path
-					className={cx('&-x', { '&-x-is-disabled': isDisabled })}
-					d="M9.163 8l2.48 2.465-1.17 1.17-2.466-2.48-2.48 2.48-1.17-1.17L6.837 8l-2.45-2.463 1.17-1.17 2.45 2.464 2.464-2.464 1.17 1.17L9.164 8zM16 8c0 4.418-3.582 8-8 8s-8-3.582-8-8 3.582-8 8-8 8 3.582 8 8zm-1 0c0-3.86-3.14-7-7-7S1 4.14 1 8s3.14 7 7 7 7-3.14 7-7z"
-				/>
+				<circle className={cx('&-background')} cx='8' cy='8' r='7.5' />
+				<path className={cx('&-x')} d='M5.5 5.5l5 5m0-5l-5 5' />
 			</Icon>
 		);
 	},

@@ -5,16 +5,55 @@
 @Table-cell-padding-compressed: 2.5px 9.4px;
 
 .@{prefix}-Table {
-	font: 500 @font;
+	font-family: @font-family-tabular;
+	font-feature-settings: @font-feature-settings-tabular;
+	font-size: @fontSize;
+	font-weight: @font-weight-regular;
 	color: @color-textColor;
 	background-color: @color-white;
 	border-collapse: collapse;
 	border-spacing: 0;
 	box-sizing: border-box;
 
+
+	/*
+		This removes the hover styles based upon hasHover equalling false
+	*/
+	&-no-hover.@{prefix}-Table {
+		.@{prefix}-Table-Tbody {
+			.@{prefix}-Table-Tr:hover {
+				& > .@{prefix}-Table-Td.@{prefix}-Table-is-first-single::after {
+				 display: none;
+			 	}
+				& > .@{prefix}-Table-Td:not([rowspan]),
+				.@{prefix}-Table > .@{prefix}-Table-Tbody > .@{prefix}-Table-Tr:hover > .@{prefix}-Table-Td[rowspan='1'] {
+					background-color: white;
+				}
+			}
+		}
+	}
+
+	/*
+		These two selectors hide the sorting caret icon
+		if the column is not sorted, and they show the icon
+		if the column is being sorted.
+	*/
+	& .@{prefix}-Table-is-sorted.@{prefix}-Table-Th {
+		& > .@{prefix}-Table-Th-inner {
+			& > :not(:first-child) {
+				visibility: visible;
+			}
+		}
+	}
+	& .@{prefix}-Table-Th-inner {
+		& > :not(:first-child) {
+			visibility: hidden;
+		}
+	}
+
 	// `Table`.`hasBorder` prop
 	&-has-border {
-		border: @border-table;
+		border: @border-table-header;
 	}
 
 	// `Table`.`density` prop
@@ -32,8 +71,14 @@
 
 	// padding was causing content in `Th` to not line up with `Td`
 	.@{prefix}-Table-Th {
+		font-weight: @font-weight-regular;
 		padding: 0;
+
+		&.@{prefix}-Table-is-sorted {
+			font-weight: @font-weight-semiBold;
+		}
 	}
+
 
 	// `Table`.`hasWordWrap` prop
 	.@{prefix}-Table-Td,
@@ -50,39 +95,26 @@
 
 	// Table header styles
 	&.@{prefix}-Table-has-light-header > &-Thead {
-		background-color: @color-table-header-light;
-		color: @color-darkGray;
-		border: 1px solid @color-borderColorLight;
-		& > .@{prefix}-Table-Tr > .@{prefix}-Table-Th {
-			border: @border-table-header-light;
-		}
+		background-color: @color-table-header-light-background;
+		border-color: 1px solid @color-table-row-border;
 		& > .@{prefix}-Table-Tr > .@{prefix}-Table-Th {
 			&.@{prefix}-Table-is-sortable {
 					&:hover {
-						background-color: @color-table-header-sorted-light;
-					}
-			}
-
-			& > .@{prefix}-Table-Th-inner {
-					// `Th`.`isSorted` prop
-					.@{prefix}-Table-Th-inner-caret {
-						.@{prefix}-Table-sort-icon {
-							fill: @color-textColor;
-						}
+						background-color: @color-table-header-light-sort-hover;
 					}
 			}
 		}
 	}
 
 	& > &-Thead {
-		background-color: @color-table-header;
-		color: @color-white;
+		background-color: @color-table-header-dark-background;
+		color: @color-table-header-light-color;
 
 		// Table header cell styles
 		& > .@{prefix}-Table-Tr > .@{prefix}-Table-Th {
-			border: @border-table-header;
+			border-bottom: 1px solid @color-table-header-border;
 			&.@{prefix}-Table-has-light-header {
-				border: @border-table-header-light;
+				border-color: @color-table-header-border;
 			}
 
 			height: @size-standard-height; // effectively min height
@@ -108,8 +140,12 @@
 				cursor: pointer;
 
 				&:hover {
-					background-color: @color-table-header-sorted;
+					background-color: @color-table-header-dark-background-hover;
 				}
+			}
+
+			&.@{prefix}-Table-is-sorted > .@{prefix}-Table-Th-inner > .@{prefix}-Table-Th-inner-caret > .@{prefix}-Table-sort-icon {
+				opacity: 1;
 			}
 
 			// header cell content
@@ -125,6 +161,7 @@
 					align-items: center;
 					margin: 2.5px 9.4px;
 				}
+
 				// `Th`.`isSorted` prop
 				.@{prefix}-Table-Th-inner-caret {
 					margin-right: 9px;
@@ -132,15 +169,14 @@
 					align-items: center;
 
 					.@{prefix}-Table-sort-icon {
-						fill: @color-white;
-						width: 8px;
-						height: 8px;
+						stroke: @color-textColor;
+						opacity: @opacity-disabled;
 					}
 				}
 				// `Th`.`isResizable` prop
 				.@{prefix}-Table-Th-inner-resize {
 					cursor: ew-resize;
-					width: 4px;
+					width: 3px;
 					background-color: fade(@color-black, 70%);
 					opacity: 0;
 					transition: opacity @timing-animation-hover;
@@ -174,11 +210,11 @@
 			// Table body cell styles
 			& > .@{prefix}-Table-Td {
 				background-clip: padding-box; // fixes Firefox background paints over collapsed border
-				border-bottom: @border-table-body;
+				border-bottom: @border-table-row;
 
 				// remove all borders from the perimeter of the body
 				&.@{prefix}-Table-is-first-row {
-					border-top: 0 none @color-transparent;
+					border-top: 1px solid @color-table-header-border;
 				}
 
 				&.@{prefix}-Table-is-last-row {
@@ -191,16 +227,6 @@
 
 				&.@{prefix}-Table-is-last-col {
 					border-right: 0 none @color-transparent;
-				}
-
-				// `Td`.`hasBorderRight` prop
-				&.@{prefix}-Table-has-border-right {
-					border-right: @border-table-body;
-				}
-
-				// `Td`.`hasBorderLeft` prop
-				&.@{prefix}-Table-has-border-left {
-					border-left: @border-table-body;
 				}
 
 				&.@{prefix}-Table-align-left {
@@ -218,45 +244,39 @@
 
 			// style row cells on hover
 			&:hover {
-				.selectCellsOnRow({ background-color: @color-lightGray;});
+				.selectCellsOnRow({ background-color: @color-table-row-hover-background;});
 			};
 
 			// `Tr`.`isSelected` prop
 			// style row cells
 			&.@{prefix}-Table-is-selected {
-				.selectCellsOnRow({background-color: @featured-color-primary-backgroundColorLight;});
-
-				// style row cells on hover
+				.selectCellsOnRow({background-color: @color-table-row-selected-background;});
 				&:hover {
-					.selectCellsOnRow({background-color: multiply(@color-primaryLight, @color-lightGray);});
+					.selectCellsOnRow({background-color: @color-table-row-selected-hover-background;});
 				}
 			}
 
 			// `Tr`.`isActive` prop
 			// style row cells
 			&.@{prefix}-Table-is-active {
-				.selectCellsOnRow({background-color: @featured-color-primary-backgroundColor;});
+				.selectCellsOnRow({background-color: @color-table-row-active-background;});
 				// always show marker on first cell
 				.selectFirstCellOnRow({.left-marker(1);});
 
 				// style row cells on hover
 				&:hover {
-					.selectCellsOnRow({background-color: multiply(@color-primaryMedium, @color-lightGray);});
+					.selectCellsOnRow({background-color: @color-table-row-active-hover-background;});
 				}
 			}
 
-			// `Tr`.`isActionable` prop
-			// style cells of rows which are only actionable but not active
-			&.@{prefix}-Table-is-actionable:not(.@{prefix}-Table-is-active) {
+			// place hidden marker on first cell
+			.selectFirstCellOnRow({ .left-marker(0); });
 
-				// place hidden marker on first cell
-				.selectFirstCellOnRow({ .left-marker(0); });
-
-				// show marker on hover
-				&:hover {
-					.selectFirstCellOnRow({ .left-marker(1); });
-				}
+			// show marker on hover
+			&:hover {
+				.selectFirstCellOnRow({ .left-marker(1); });
 			}
+
 		}
 	}
 
@@ -272,7 +292,10 @@
 	font-style: italic;
 
 	a {
-		color: fade(multiply(@color-disabledText, @color-linkColor), 50%);
+		color: @color-linkColor;
+		&:hover {
+			color: @color-linkColorHover;
+		}
 	}
 }
 
@@ -293,6 +316,9 @@
 	& > .@{prefix}-Table-Td {
 		&.@{prefix}-Table-is-first-single {
 			@ruleset();
+			> .@{prefix}-Checkbox {
+				vertical-align: middle;
+			}
 		}
 	}
 }

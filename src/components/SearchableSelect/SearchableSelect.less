@@ -7,22 +7,38 @@
 	&-Control {
 		.no-safari-flicker();
 		.box-sizing();
-		.gradient-animation( @featured-color-default-gradientStartColor, @featured-color-default-gradientEndColor);
 
+		background-color: @featured-color-default-backgroundColor;
 		cursor: pointer;
 		height: @SearchableSelect-size-controlHeight;
 		display: flex;
 		outline: none;
-		border: 1px solid @featured-color-default-borderColor;
+		border: 1px solid @color-neutral-5;
 		border-radius: @size-borderRadius;
 		font-size: @fontSize;
-		font-family: @fontFamily;
+		font-weight: @font-weight-medium;
 		color: @color-black;
-		letter-spacing: 0.05em;
 		line-height: @size-standard-height;
 		padding: 0 @size-standard;
 		align-items: center;
 		white-space: nowrap;
+
+		&-is-invisible {
+			border: none;
+			background-color: transparent;
+
+			&:active {
+				background-color: @color-neutral-5;
+			}
+			&:hover {
+				background-color: @color-neutral-3;
+			}
+
+			&.@{prefix}-SearchableSelect-Control-is-selected {
+				border: 1px solid @color-primary;
+				background-color: white;
+			}
+		}
 
 		&::before {
 			border-radius: @size-borderRadius;
@@ -34,35 +50,19 @@
 			margin-right: @size-standard;
 		}
 
-		.@{prefix}-CaretIcon {
-			fill: @color-black;
-			margin-left: auto;
-		}
-
 		// States
-		&-is-highlighted,
 		&-is-selected {
-			.gradient-animation(@featured-color-primary, @featured-color-primary);
-
-			color: @color-white;
-			border-color: @featured-color-primary-borderColor;
-
-			.@{prefix}-CaretIcon {
-				fill: @color-white;
-			}
+			border-color: @color-primary;
 		}
 
 		&-is-expanded {
 			z-index: @zindex-tooltip;
+			color: @color-neutral-7;
+			border-bottom: none;
 		}
 
 		&-is-disabled {
-			.gradient-reset(linear-gradient(
-				@standardGradient,
-				@featured-color-default-gradientStartColor,
-				@featured-color-default-gradientEndColor
-			));
-			.opacity();
+			.opacity(@opacity-disabled);
 
 			cursor: not-allowed;
 		}
@@ -87,6 +87,11 @@
 
 		.@{prefix}-SearchField {
 			padding: 8px;
+			background-color: white;
+
+			::placeholder {
+				color: @color-neutral-9;
+			}
 
 			.@{prefix}-SearchField-Icon-container {
 				right: 8px;

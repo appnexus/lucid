@@ -2,54 +2,50 @@
 @import (reference) '../../styles/mixins.less';
 
 .@{prefix}-SplitButton {
-	&-CaretIcon {
-		margin-left: @size-XXS;
-		margin-right: @size-XXS;
+
+	button.@{prefix}-Button.@{prefix}-Button-has-only-icon.@{prefix}-SplitButton-Button-drop {
+		padding: 0 @size-S;
+		// border-left: 1px solid white;
+		// outline: none;
 	}
 
-	.@{prefix}-Button-primary,
-	.@{prefix}-Button-success,
-	.@{prefix}-Button-warning,
-	.@{prefix}-Button-danger,
-	.@{prefix}-Button-info {
-		.@{prefix}-SplitButton-CaretIcon {
-			fill: @color-white;
-		}
+	button.@{prefix}-Button.@{prefix}-Button-is-active.@{prefix}-Button-has-only-icon.@{prefix}-SplitButton-Button-drop {
+		// border: 1px solid @color-neutral-5;
+		outline: 1px solid @color-neutral-5;
+		background-color: @color-neutral-4;
+		// border-left: 1px solid white;
+		// outline: none;
+	}
 
-		&.@{prefix}-SplitButton-Button-primary {
-			&:active:focus {
-				border-top-right-radius: 0;
-				border-bottom-right-radius: 0;
-			}
-		}
+	button.@{prefix}-Button.@{prefix}-Button-primary.@{prefix}-Button-has-only-icon.@{prefix}-SplitButton-Button-drop {
+		// border: 1px solid @color-primary;
+		outline: none;
+	}
 
-		&.@{prefix}-SplitButton-Button-drop {
-			&:active:focus {
-				border-top-left-radius: 0;
-				border-bottom-left-radius: 0;
-			}
+	button.@{prefix}-Button.@{prefix}-Button-is-active.@{prefix}-Button-primary.@{prefix}-Button-has-only-icon.@{prefix}-SplitButton-Button-drop {
+		background-color: @color-primary-dark;
+		// outline: 1px solid @color-primary-dark;
+		outline: none;
+	}
+
+
+	button.@{prefix}-Button.@{prefix}-Button-primary.@{prefix}-SplitButton-Button-primary {
+		border-right: 1px solid white;
+		outline: none;
+	}
+
+	.@{prefix}-Button-primary {
+		.@{prefix}-SplitButton-ChevronIcon {
+			stroke: @color-white;
 		}
 	}
 
-	&.@{prefix}-DropMenu-is-expanded {
-		&.@{prefix}-DropMenu-direction-up {
-			.@{prefix}-SplitButton-Button-primary {
-				border-top-left-radius: 0;
-			}
-
-			.@{prefix}-SplitButton-Button-drop {
-				border-top-right-radius: 0;
-			}
-		}
-
-		&.@{prefix}-DropMenu-direction-down {
-			.@{prefix}-SplitButton-Button-primary {
-				border-bottom-left-radius: 0;
-			}
-
-			.@{prefix}-SplitButton-Button-drop {
-				border-bottom-right-radius: 0;
-			}
+	.@{prefix}-DropMenu {
+		&-option-container {
+			border: none;
+			outline: 1px solid @color-neutral-5;
+			position: relative;
+			top: 1px;
 		}
 	}
 }

@@ -4,7 +4,6 @@ import { shallow } from 'enzyme';
 import { common } from '../../util/generic-tests';
 import SidePanel from './SidePanel';
 import Overlay from '../Overlay/Overlay';
-import CrossIcon from '../Icon/CrossIcon/CrossIcon';
 import DragCaptureZone from '../DragCaptureZone/DragCaptureZone';
 
 describe('SidePanel', () => {
@@ -39,9 +38,11 @@ describe('SidePanel', () => {
 			it('should be called when the close icon is clicked', () => {
 				const onCollapse = jest.fn();
 				const wrapper = shallow(
-					<SidePanel isExpanded onCollapse={onCollapse} Header="Foo bar" />
+					<SidePanel isExpanded onCollapse={onCollapse} Header='Foo bar' />
 				);
-				const crossIconWrapper = wrapper.find(CrossIcon);
+				const crossIconWrapper = wrapper.find(
+					'.lucid-SidePanel-header-closer-button'
+				);
 				crossIconWrapper.simulate('click');
 				expect(onCollapse).toHaveBeenCalled();
 			});
@@ -72,7 +73,7 @@ describe('SidePanel', () => {
 
 	describe('position', () => {
 		it('should match snapshot', () => {
-			const wrapper = shallow(<SidePanel position="left" />);
+			const wrapper = shallow(<SidePanel position='left' />);
 			expect(wrapper).toMatchSnapshot();
 		});
 	});
@@ -107,7 +108,7 @@ describe('SidePanel', () => {
 
 	describe('Header', () => {
 		it('should match snapshot', () => {
-			const wrapper = shallow(<SidePanel Header="This is a header" />);
+			const wrapper = shallow(<SidePanel Header='This is a header' />);
 			expect(wrapper).toMatchSnapshot();
 		});
 	});

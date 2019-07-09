@@ -19,7 +19,7 @@ export default createClass({
 				<LineChart
 					data={data}
 					yAxisFields={yAxisFields}
-					yAxisTitle="Fruit Count"
+					yAxisTitle='Fruit Count'
 					palette={palette}
 				/>
 

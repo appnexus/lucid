@@ -11,7 +11,7 @@ describe('Line', () => {
 	describe('props', () => {
 		describe('d', () => {
 			it('should pass through', () => {
-				const wrapper = shallow(<Line d="foo" />);
+				const wrapper = shallow(<Line d='foo' />);
 
 				assert.equal(wrapper.find('path').prop('d'), 'foo');
 			});
@@ -19,7 +19,7 @@ describe('Line', () => {
 
 		describe('color', () => {
 			it('should apply color strings as a class', () => {
-				const wrapper = shallow(<Line color="wat" />);
+				const wrapper = shallow(<Line color='wat' />);
 
 				assert(
 					wrapper.find('path').hasClass('lucid-Line-wat'),
@@ -28,7 +28,7 @@ describe('Line', () => {
 			});
 
 			it('should apply custom colors to `style`', () => {
-				const wrapper = shallow(<Line color="#A00B00" />);
+				const wrapper = shallow(<Line color='#A00B00' />);
 
 				assert.deepEqual(wrapper.find('path').prop('style'), {
 					fill: '#A00B00',

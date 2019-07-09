@@ -2,77 +2,71 @@
 @import (reference) '../../styles/mixins.less';
 
 @Tabs-spacer-height: @size-XXS;
-@Tabs-tab-height: @size-standard-height;
-@Tabs-arrow-width: 8px;
 @Tabs-border-width: 1px;
 
 .@{prefix}-Tabs {
 	&-bar {
-		font-size: @fontSize;
-		font-family: @fontFamily;
+		font-size: @size-font;
+		font-weight: @font-weight-medium;
 		list-style-type: none;
 		display: flex;
 		margin: 0;
 		padding: 0;
-		border-color: @color-borderColor;
-	}
-
-	&-navigation-tabs {
-		.@{prefix}-Tabs-Tab {
-			font-size: @size-font-L;
-			font-weight: 200;
-		}
 	}
 
 	&-variable-width {
-		border-bottom: @Tabs-border-width solid @color-borderColorLight;
+
+		display: inline-flex;
+
 		.@{prefix}-Tabs-Tab {
 			flex: none;
 		}
 	}
 
+	&-floating {
+		border-bottom: 1px solid @color-neutral-4;
+	}
+
 	&-Tab {
-		/* https://connect.microsoft.com/IE/feedback/details/949764/ie-11-incorrectly-rejects-flexbox-shorthand-syntax-flex-1-1-0-as-invalid */
-		/* stylelint-disable-next-line length-zero-no-unit */
-		flex: 1 1 0px;
+		flex: 1 1 0;
 		height: inherit;
 		display: flex;
 		justify-content: center;
 		align-items: stretch;
-		box-sizing: border-box;
+		box-sizing: content-box;
 		cursor: pointer;
-		color: @color-darkGray;
+		color: @color-neutral-9;
 		user-select: none;
-		margin-bottom: -@Tabs-border-width;
-		border: @Tabs-border-width solid @color-borderColorLight;
-		border-right: 0;
-		background-color: @color-white;
-
-		&:last-of-type {
-			border-right: @Tabs-border-width solid @color-borderColorLight;
-		}
 
 		&:hover {
-			background-color: @color-lightGray;
-			.Tabs-mixin-tab-arrow-background(@color-lightGray);
+			border-bottom: 3px solid @color-primary;
 		}
 
-		&:active {
-			.dropshadow-gradient(@color-gray, @color-lightGray, @Tabs-spacer-height);
+		&-is-active {
+			font-weight: @font-weight-semiBold;
+		}
+
+		.@{prefix}-Badge {
+			cursor: pointer;
 		}
 	}
 
 	&-Tab-is-disabled {
-		color: @color-disabledText;
+		color: @color-neutral-6;
 		cursor: not-allowed;
 
 		&:hover {
-			background-color: @color-white;
-			.Tabs-mixin-tab-arrow-background();
+			border-bottom: 0;
 		}
 
 		&:active {
 			background: @color-white;
+		}
+
+		.@{prefix}-Badge {
+			color: @color-neutral-6;
+			border-color: @color-neutral-5;
+			cursor: not-allowed;
 		}
 	}
 
@@ -99,8 +93,6 @@
 				stroke: @color-gray;
 			}
 		}
-		.Tabs-mixin-tab-line(@color-transparent);
-		.Tabs-mixin-tab-arrow-background();
 
 		&:not(:first-child) {
 			.@{prefix}-Tabs-Tab-content {
@@ -110,40 +102,19 @@
 	}
 
 	&-Tab-is-active {
-		.hardstop-gradient();
-
 		border-top: none;
-		padding-top: @Tabs-border-width;
-		color: @color-black;
+		border-bottom: 3px solid @color-primary;
+		color: @color-neutral-9;
 		cursor: initial;
-
-		&:hover {
-			background-color: @color-white;
-			.Tabs-mixin-tab-arrow-background();
-		}
-
-		&:active {
-			.hardstop-gradient();
-		}
-		.Tabs-mixin-tab-line();
-	}
-
-	&-Tab-is-active-and-open {
-		border-bottom: @Tabs-border-width solid @color-white;
-
-		// `z-index: -1` fixes a very minor visual bug here in IE 11, but it
-		// introduces a bigger bug when using Tabs inside Dialogs.
-
-		&:hover {
-			.Tabs-mixin-tab-arrow-background();
-		}
-		.Tabs-mixin-tab-line();
 	}
 
 	&-Tab-content {
 		flex: 1;
-		padding: @size-standard/2;
+		padding: 9px 15px;
 		text-align: center;
+		height: 15px;
+		display: inline-block;
+		line-height: 16px;
 	}
 
 	&-Tab-arrow {
@@ -158,38 +129,24 @@
 	&-bar-is-multiline {
 		.@{prefix}-Tabs-Tab {
 			background-color: @color-lightGray;
-			border-color: @color-gray;
-			color: @color-darkGray;
-			.Tabs-mixin-tab-arrow-background(@color-lightGray);
+			color: @color-neutral-9;
 
 			&:hover {
 				background-color: @color-white;
-				.Tabs-mixin-tab-arrow-background(@color-white);
 			}
-		}
-
-		.@{prefix}-Tabs-Tab-is-active {
-			border-bottom: @Tabs-border-width solid @color-white;
-			.Tabs-mixin-tab-arrow-background(@color-white);
 		}
 
 		.@{prefix}-Tabs-Tab + .@{prefix}-Tabs-Tab-is-disabled {
 			background-color: @color-lightGray;
-			.Tabs-mixin-tab-arrow-background(@color-lightGray);
 
 			&:hover {
 				background-color: @color-lightGray;
-				.Tabs-mixin-tab-arrow-background(@color-lightGray);
 			}
 
 			&:active {
 				background-color: @color-lightGray;
 			}
 		}
-	}
-
-	&-content {
-		margin-top: 1px;
 	}
 }
 
@@ -200,12 +157,3 @@
 		}
 	}
 }
-
-.Tabs-mixin-tab-arrow-background(@color-Tab-background: @color-white) {
-	.@{prefix}-Tabs-Tab-arrow {
-		.@{prefix}-Tabs-Tab-arrow-background {
-			fill: @color-Tab-background;
-		}
-	}
-}
-

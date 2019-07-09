@@ -35,7 +35,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 01.b
 >
   <DropMenu.Control>
     <div
-      className="lucid-SingleSelect-Control"
+      className="lucid-SingleSelect-Control lucid-SingleSelect-Control-is-null-option"
       tabIndex={0}
     >
       <span
@@ -43,10 +43,9 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 01.b
       >
         Select Color
       </span>
-      <CaretIcon
+      <ChevronIcon
         direction="down"
-        size={8}
-        viewBox="0 3 16 8"
+        size={12}
       />
     </div>
   </DropMenu.Control>
@@ -112,7 +111,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 02.n
 >
   <DropMenu.Control>
     <div
-      className="lucid-SingleSelect-Control"
+      className="lucid-SingleSelect-Control lucid-SingleSelect-Control-is-null-option"
       tabIndex={0}
     >
       <span
@@ -120,10 +119,9 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 02.n
       >
         Select Color
       </span>
-      <CaretIcon
+      <ChevronIcon
         direction="down"
-        size={8}
-        viewBox="0 3 16 8"
+        size={12}
       />
     </div>
   </DropMenu.Control>
@@ -192,7 +190,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 03.d
 >
   <DropMenu.Control>
     <div
-      className="lucid-SingleSelect-Control"
+      className="lucid-SingleSelect-Control lucid-SingleSelect-Control-is-null-option"
       tabIndex={0}
     >
       <span
@@ -200,10 +198,9 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 03.d
       >
         Select Color
       </span>
-      <CaretIcon
+      <ChevronIcon
         direction="down"
-        size={8}
-        viewBox="0 3 16 8"
+        size={12}
       />
     </div>
   </DropMenu.Control>
@@ -269,7 +266,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 04.d
 >
   <DropMenu.Control>
     <div
-      className="lucid-SingleSelect-Control lucid-SingleSelect-Control-is-disabled"
+      className="lucid-SingleSelect-Control lucid-SingleSelect-Control-is-disabled lucid-SingleSelect-Control-is-null-option"
       tabIndex={0}
     >
       <span
@@ -277,10 +274,9 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 04.d
       >
         Select Color
       </span>
-      <CaretIcon
+      <ChevronIcon
         direction="down"
-        size={8}
-        viewBox="0 3 16 8"
+        size={12}
       />
     </div>
   </DropMenu.Control>
@@ -346,7 +342,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 05.g
 >
   <DropMenu.Control>
     <div
-      className="lucid-SingleSelect-Control"
+      className="lucid-SingleSelect-Control lucid-SingleSelect-Control-is-null-option"
       tabIndex={0}
     >
       <span
@@ -354,10 +350,9 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 05.g
       >
         Select Color
       </span>
-      <CaretIcon
+      <ChevronIcon
         direction="down"
-        size={8}
-        viewBox="0 3 16 8"
+        size={12}
       />
     </div>
   </DropMenu.Control>
@@ -488,7 +483,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 06.n
 >
   <DropMenu.Control>
     <div
-      className="lucid-SingleSelect-Control"
+      className="lucid-SingleSelect-Control lucid-SingleSelect-Control-is-null-option"
       tabIndex={0}
     >
       <span
@@ -496,10 +491,9 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 06.n
       >
         Select Foo
       </span>
-      <CaretIcon
+      <ChevronIcon
         direction="down"
-        size={8}
-        viewBox="0 3 16 8"
+        size={12}
       />
     </div>
   </DropMenu.Control>
@@ -565,7 +559,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
 >
   <DropMenu.Control>
     <div
-      className="lucid-SingleSelect-Control"
+      className="lucid-SingleSelect-Control lucid-SingleSelect-Control-is-null-option"
       tabIndex={0}
     >
       <span
@@ -573,10 +567,9 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
       >
         Select Color
       </span>
-      <CaretIcon
+      <ChevronIcon
         direction="down"
-        size={8}
-        viewBox="0 3 16 8"
+        size={12}
       />
     </div>
   </DropMenu.Control>
@@ -1746,28 +1739,24 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 08.r
 >
   <DropMenu.Control>
     <div
-      className="lucid-SingleSelect-Control"
+      className="lucid-SingleSelect-Control lucid-SingleSelect-Control-is-null-option"
       tabIndex={0}
     >
       <span
         className="lucid-SingleSelect-Control-content"
       >
-        <PlusIcon
-          isBadge={true}
+        <SuccessIcon
           style={
             Object {
-              "backgroundColor": "gray",
               "marginRight": 4,
             }
           }
         />
-         
-        Add Color
+         Add Color
       </span>
-      <CaretIcon
+      <ChevronIcon
         direction="down"
-        size={8}
-        viewBox="0 3 16 8"
+        size={12}
       />
     </div>
   </DropMenu.Control>
@@ -1777,17 +1766,14 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 08.r
     isWrapped={true}
     key="SingleSelectOption0"
   >
-    <PlusIcon
-      isBadge={true}
+    <SuccessIcon
       style={
         Object {
-          "backgroundColor": "red",
           "marginRight": 4,
         }
       }
     />
-     
-    Red
+     Red
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
@@ -1795,17 +1781,14 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 08.r
     isWrapped={true}
     key="SingleSelectOption1"
   >
-    <PlusIcon
-      isBadge={true}
+    <SuccessIcon
       style={
         Object {
-          "backgroundColor": "green",
           "marginRight": 4,
         }
       }
     />
-     
-    Green
+     Green
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
@@ -1813,17 +1796,14 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 08.r
     isWrapped={true}
     key="SingleSelectOption2"
   >
-    <PlusIcon
-      isBadge={true}
+    <SuccessIcon
       style={
         Object {
-          "backgroundColor": "blue",
           "marginRight": 4,
         }
       }
     />
-     
-    Blue
+     Blue
   </DropMenu.Option>
 </DropMenu>
 `;
@@ -1863,7 +1843,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 09.n
 >
   <DropMenu.Control>
     <div
-      className="lucid-SingleSelect-Control"
+      className="lucid-SingleSelect-Control lucid-SingleSelect-Control-is-null-option"
       tabIndex={0}
     >
       <span
@@ -1871,10 +1851,9 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 09.n
       >
         Select Foo
       </span>
-      <CaretIcon
+      <ChevronIcon
         direction="down"
-        size={8}
-        viewBox="0 3 16 8"
+        size={12}
       />
     </div>
   </DropMenu.Control>
@@ -1940,7 +1919,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 10.a
 >
   <DropMenu.Control>
     <div
-      className="lucid-SingleSelect-Control"
+      className="lucid-SingleSelect-Control lucid-SingleSelect-Control-is-null-option"
       tabIndex={0}
     >
       <span
@@ -1948,10 +1927,9 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 10.a
       >
         Select a number
       </span>
-      <CaretIcon
+      <ChevronIcon
         direction="down"
-        size={8}
-        viewBox="0 3 16 8"
+        size={12}
       />
     </div>
   </DropMenu.Control>
@@ -2025,10 +2003,9 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 11.s
       >
         Green
       </span>
-      <CaretIcon
+      <ChevronIcon
         direction="down"
-        size={8}
-        viewBox="0 3 16 8"
+        size={12}
       />
     </div>
   </DropMenu.Control>
@@ -2101,6 +2078,82 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 11.s
 </DropMenu>
 `;
 
+exports[`SingleSelect [common] example testing should match snapshot(s) for 12.invisible 1`] = `
+<DropMenu
+  ContextMenu={
+    Object {
+      "alignment": "start",
+      "direction": "down",
+      "directonOffset": 0,
+      "getAlignmentOffset": [Function],
+      "isExpanded": true,
+      "minWidthOffset": 0,
+      "onClickOut": null,
+      "portalId": null,
+    }
+  }
+  alignment="start"
+  className="lucid-SingleSelect"
+  direction="down"
+  flyOutStyle={
+    Object {
+      "maxHeight": "18em",
+    }
+  }
+  focusedIndex={null}
+  isDisabled={false}
+  isExpanded={false}
+  onCollapse={[Function]}
+  onExpand={[Function]}
+  onFocusNext={[Function]}
+  onFocusOption={[Function]}
+  onFocusPrev={[Function]}
+  onSelect={[Function]}
+  selectedIndices={Array []}
+>
+  <DropMenu.Control>
+    <div
+      className="lucid-SingleSelect-Control lucid-SingleSelect-Control-is-invisible lucid-SingleSelect-Control-is-null-option"
+      tabIndex={0}
+    >
+      <span
+        className="lucid-SingleSelect-Control-content"
+      >
+        Select Color
+      </span>
+      <ChevronIcon
+        direction="down"
+        size={12}
+      />
+    </div>
+  </DropMenu.Control>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={true}
+    key="SingleSelectOption0"
+  >
+    Red
+  </DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={true}
+    key="SingleSelectOption1"
+  >
+    Green
+  </DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={true}
+    key="SingleSelectOption2"
+  >
+    Blue
+  </DropMenu.Option>
+</DropMenu>
+`;
+
 exports[`SingleSelect child elements Option should render Option.Selected in the Placeholder area 1`] = `
 <DropMenu
   ContextMenu={
@@ -2148,10 +2201,9 @@ exports[`SingleSelect child elements Option should render Option.Selected in the
       >
         option b
       </span>
-      <CaretIcon
+      <ChevronIcon
         direction="down"
-        size={8}
-        viewBox="0 3 16 8"
+        size={12}
       />
     </div>
   </DropMenu.Control>

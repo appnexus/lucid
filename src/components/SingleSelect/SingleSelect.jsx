@@ -6,7 +6,7 @@ import { createClass, findTypes, getFirst } from '../../util/component-types';
 import { buildHybridComponent } from '../../util/state-management';
 import * as reducers from './SingleSelect.reducers';
 import { DropMenuDumb as DropMenu } from '../DropMenu/DropMenu';
-import CaretIcon from '../Icon/CaretIcon/CaretIcon';
+import ChevronIcon from '../Icon/ChevronIcon/ChevronIcon';
 
 const cx = lucidClassNames.bind('&-SingleSelect');
 
@@ -127,6 +127,11 @@ const SingleSelect = createClass({
 			Disables the SingleSelect from being clicked or focused.
 		`,
 
+		isInvisible: bool`
+			Gives the effect of an 'invisible button'. Essentially, there is no grey border,
+			but there is still a blue border on a selection.
+		`,
+
 		selectedIndex: number`
 			The currently selected \`SingleSelect.Option\` index or \`null\` if
 			nothing is selected.
@@ -173,6 +178,7 @@ const SingleSelect = createClass({
 			hasReset: true,
 			isSelectionHighlighted: true,
 			isDisabled: false,
+			isInvisible: false,
 			selectedIndex: null,
 			DropMenu: DropMenu.getDefaultProps(),
 		};
@@ -203,6 +209,7 @@ const SingleSelect = createClass({
 			className,
 			hasReset,
 			isDisabled,
+			isInvisible,
 			isSelectionHighlighted,
 			selectedIndex,
 			maxMenuHeight,
@@ -251,6 +258,8 @@ const SingleSelect = createClass({
 								(isExpanded && isSelectionHighlighted),
 							'&-Control-is-expanded': isExpanded,
 							'&-Control-is-disabled': isDisabled,
+							'&-Control-is-invisible': isInvisible,
+							'&-Control-is-null-option': selectedIndex === null,
 						})}
 					>
 						<span
@@ -267,12 +276,17 @@ const SingleSelect = createClass({
 											SingleSelect.Option.Selected
 										),
 										'props.children'
-									) || flattenedOptionsData[selectedIndex].optionProps.children
+								  ) || flattenedOptionsData[selectedIndex].optionProps.children
 								: placeholder}
 						</span>
-						<CaretIcon direction={isExpanded ? direction : 'down'} size={8} />
+
+						<ChevronIcon
+							size={12}
+							direction={isExpanded ? direction : 'down'}
+						/>
 					</div>
 				</DropMenu.Control>
+
 				{hasReset && isItemSelected ? (
 					<DropMenu.NullOption {...placeholderProps}>
 						{placeholder}

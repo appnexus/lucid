@@ -7,6 +7,7 @@ import { buildHybridComponent } from '../../util/state-management';
 
 import ChevronIcon from '../Icon/ChevronIcon/ChevronIcon';
 import Collapsible from '../Collapsible/Collapsible';
+import Button from '../Button/Button';
 import Panel from '../Panel/Panel';
 
 import * as reducers from '../Expander/Expander.reducers';
@@ -135,11 +136,12 @@ const ExpanderPanel = createClass({
 					className
 				)}
 				style={style}
+				isGutterless={!hasPadding}
 			>
 				<Panel.Header className={cx('&-header')} onClick={this.handleToggle}>
-					<span className={cx('&-icon')}>
+					<Button className={cx('&-icon')} kind='invisible' hasOnlyIcon={true}>
 						<ChevronIcon direction={isExpanded ? 'up' : 'down'} />
-					</span>
+					</Button>
 
 					<span {...headerChildProps} />
 				</Panel.Header>
@@ -150,13 +152,7 @@ const ExpanderPanel = createClass({
 						'&-content-is-expanded': isExpanded,
 					})}
 				>
-					<div
-						className={cx('&-content-inner', {
-							'&-content-inner-has-padding': hasPadding,
-						})}
-					>
-						{children}
-					</div>
+					<div className={cx('&-content-inner')}>{children}</div>
 				</Collapsible>
 			</Panel>
 		);

@@ -102,8 +102,8 @@ const IconSelect = createClass({
 			icon
 		) : (
 			<Icon>
-				<rect x="0" y="0" width="16" height="16" />
-				<rect x="1" y="1" width="14" height="14" fill="white" />
+				<rect x='0' y='0' width='16' height='16' />
+				<rect x='1' y='1' width='14' height='14' fill='white' />
 			</Icon>
 		);
 	},

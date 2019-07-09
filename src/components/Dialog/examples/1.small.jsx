@@ -21,7 +21,12 @@ export default createClass({
 					Toggle
 				</Button>
 
-				<Dialog isShown={this.state.isShown} Header="Header" size="small">
+				<Dialog
+					isShown={this.state.isShown}
+					handleClose={_.partial(this.handleShow, !this.state.isShown)}
+					Header='Header'
+					size='small'
+				>
 					<div key={'info'}>
 						For better UX, we recommend NOT handling onEscape and
 						onBackgroundClick when isModal is true. The term "modal" implies
@@ -33,13 +38,13 @@ export default createClass({
 					})}
 					<Dialog.Footer>
 						<Button
-							kind="invisible"
+							kind='invisible'
 							onClick={_.partial(this.handleShow, false)}
 							style={{ marginRight: '9px' }}
 						>
 							Cancel
 						</Button>
-						<Button kind="primary">Save</Button>
+						<Button kind='primary'>Save</Button>
 					</Dialog.Footer>
 				</Dialog>
 			</div>

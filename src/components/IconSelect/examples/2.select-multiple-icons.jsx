@@ -32,7 +32,7 @@ export default createClass({
 	render() {
 		return (
 			<IconSelect
-				kind="multiple" // default value, renders as checkboxes
+				kind='multiple' // default value, renders as checkboxes
 				onSelect={this.handleSelect}
 				items={[
 					{

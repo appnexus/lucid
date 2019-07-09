@@ -98,31 +98,31 @@ export default createClass({
 	render() {
 		return (
 			<DataTable data={data}>
-				<DataTable.Column field="id" align="left">
+				<DataTable.Column field='id' align='left'>
 					ID
 				</DataTable.Column>
 
-				<DataTable.Column field="first_name" align="left" width={100}>
+				<DataTable.Column field='first_name' align='left' width={100}>
 					First
 				</DataTable.Column>
 
-				<DataTable.Column field="last_name" align="left" width={100}>
+				<DataTable.Column field='last_name' align='left' width={100}>
 					Last
 				</DataTable.Column>
 
-				<DataTable.Column field="email" align="left">
+				<DataTable.Column field='email' align='left'>
 					E-Mail
 				</DataTable.Column>
 
-				<DataTable.Column field="occupation" align="left" width={100}>
+				<DataTable.Column field='occupation' align='left' width={100}>
 					Occupation
 				</DataTable.Column>
 
-				<DataTable.Column field="salary" align="right" width={100}>
+				<DataTable.Column field='salary' align='right' width={100}>
 					Salary
 				</DataTable.Column>
 
-				<DataTable.Column field="status" align="center" width={100}>
+				<DataTable.Column field='status' align='center' width={100}>
 					Status
 				</DataTable.Column>
 			</DataTable>

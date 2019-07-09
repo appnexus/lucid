@@ -4,6 +4,9 @@
 .@{prefix}-Breadcrumb {
 
 	@breadcrumb-margin: 7px;
+	font-size: @fontSize;
+	font-weight: @font-weight-medium;
+	color: @color-textColor;
 
 	> .@{prefix}-Breadcrumb-List {
 		list-style-type: none;
@@ -13,7 +16,6 @@
 		align-items: center;
 		padding: 0;
 		margin: 0;
-		height: 12px;
 
 		> .@{prefix}-Breadcrumb-Item {
 			display: flex;
@@ -21,24 +23,42 @@
 			flex-wrap: wrap;
 			align-items: center;
 			font-size: @size-font;
-			color: @color-textColor;
 
 			> a {
-				.link();
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				text-decoration: none;
+				color: @color-textColor;
+				line-height: 0;
+
+				&:hover {
+					text-decoration: underline;
+				}
+
+				> * {
+					margin-right: 6px;
+					&:last-child {
+						margin-right: 0;
+					}
+				}
 			}
 
-			.@{prefix}-Icon {
-				height: @size-font;
-				width: @size-font;
-				display: block;
-			}
+			.@{prefix}-Breadcrumb-BreadcrumbSeparator {
+				margin: 1px 4px 0 4px;
 
-			> .@{prefix}-Breadcrumb-SeparatorIcon {
-				fill: @color-mediumGray;
-				// this is the width of the icon + a margin on either side of it
-				width: 3.4 + @breadcrumb-margin * 2;
+				> span {
+					display: inline-block;
+					width: 8px;
+					height: 16px;
+					transform: rotate(30deg);
+					opacity: 0.7;
+
+					&:first-child {
+						border-right: 1px solid @color-neutral-6;
+					}
+				}
 			}
 		}
 	}
 }
-

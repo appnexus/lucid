@@ -4,91 +4,24 @@ exports[`WarningIcon [common] example testing should match snapshot(s) for 1.def
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-WarningIcon"
-  isBadge={false}
   isClickable={false}
   isDisabled={false}
   size={16}
   viewBox="0 0 16 16"
 >
   <path
-    className="lucid-WarningIcon-triangle"
-    d="M8.01 0C7.38 0 6.748.457 6.27 1.37 5.242 3.32.864 11.83.418 12.68-.54 14.504.23 16 2.125 16h11.753c1.896 0 2.664-1.494 1.707-3.32-2.375-4.524-3.457-6.788-5.83-11.31C9.275.457 8.642 0 8.012 0z"
+    className="lucid-WarningIcon-background"
+    d="M.5 15h15L8 .5z"
   />
-  <rect
-    className="lucid-WarningIcon-mark"
-    height="7"
-    width="2"
-    x="7"
-    y="4"
-  />
-  <rect
-    className="lucid-WarningIcon-mark"
-    height="2"
-    width="2"
-    x="7"
-    y="12"
-  />
-</Icon>
-`;
-
-exports[`WarningIcon [common] example testing should match snapshot(s) for 2.clickable 1`] = `
-<Icon
-  aspectRatio="xMidYMid meet"
-  className="lucid-WarningIcon lucid-WarningIcon-is-clickable"
-  isBadge={false}
-  isClickable={true}
-  isDisabled={false}
-  size={16}
-  viewBox="0 0 16 16"
->
   <path
-    className="lucid-WarningIcon-triangle"
-    d="M8.01 0C7.38 0 6.748.457 6.27 1.37 5.242 3.32.864 11.83.418 12.68-.54 14.504.23 16 2.125 16h11.753c1.896 0 2.664-1.494 1.707-3.32-2.375-4.524-3.457-6.788-5.83-11.31C9.275.457 8.642 0 8.012 0z"
-  />
-  <rect
     className="lucid-WarningIcon-mark"
-    height="7"
-    width="2"
-    x="7"
-    y="4"
+    d="M7.99 6v4"
   />
-  <rect
+  <circle
     className="lucid-WarningIcon-mark"
-    height="2"
-    width="2"
-    x="7"
-    y="12"
-  />
-</Icon>
-`;
-
-exports[`WarningIcon [common] example testing should match snapshot(s) for 3.disabled 1`] = `
-<Icon
-  aspectRatio="xMidYMid meet"
-  className="lucid-WarningIcon"
-  isBadge={false}
-  isClickable={false}
-  isDisabled={true}
-  size={16}
-  viewBox="0 0 16 16"
->
-  <path
-    className="lucid-WarningIcon-triangle lucid-WarningIcon-triangle-is-disabled"
-    d="M8.01 0C7.38 0 6.748.457 6.27 1.37 5.242 3.32.864 11.83.418 12.68-.54 14.504.23 16 2.125 16h11.753c1.896 0 2.664-1.494 1.707-3.32-2.375-4.524-3.457-6.788-5.83-11.31C9.275.457 8.642 0 8.012 0z"
-  />
-  <rect
-    className="lucid-WarningIcon-mark"
-    height="7"
-    width="2"
-    x="7"
-    y="4"
-  />
-  <rect
-    className="lucid-WarningIcon-mark"
-    height="2"
-    width="2"
-    x="7"
-    y="12"
+    cx="7.99"
+    cy="12"
+    r=".293"
   />
 </Icon>
 `;

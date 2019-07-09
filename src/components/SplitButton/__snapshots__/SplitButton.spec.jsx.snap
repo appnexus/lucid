@@ -52,7 +52,7 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
         onClick={[Function]}
         type="button"
       >
-        Primary
+        Basic
       </Button>
       <Button
         className="lucid-SplitButton-Button-drop"
@@ -62,11 +62,10 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
         onClick={[Function]}
         type="button"
       >
-        <CaretIcon
-          className="lucid-SplitButton-CaretIcon"
+        <ChevronIcon
+          className="lucid-SplitButton-ChevronIcon"
           direction="down"
-          size={8}
-          viewBox="0 3 16 8"
+          size={10}
         />
       </Button>
     </ButtonGroup>
@@ -154,11 +153,10 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
         onClick={[Function]}
         type="button"
       >
-        <CaretIcon
-          className="lucid-SplitButton-CaretIcon"
+        <ChevronIcon
+          className="lucid-SplitButton-ChevronIcon"
           direction="down"
-          size={8}
-          viewBox="0 3 16 8"
+          size={10}
         />
       </Button>
     </ButtonGroup>
@@ -178,474 +176,6 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
     key="1"
   >
     Two
-  </DropMenu.Option>
-</DropMenu>
-`;
-
-exports[`SplitButton [common] example testing should match snapshot(s) for 01.default 3`] = `
-<DropMenu
-  ContextMenu={
-    Object {
-      "alignment": "start",
-      "direction": "down",
-      "directonOffset": 0,
-      "getAlignmentOffset": [Function],
-      "isExpanded": true,
-      "minWidthOffset": 0,
-      "onClickOut": null,
-      "portalId": null,
-    }
-  }
-  alignment="start"
-  className="lucid-SplitButton"
-  direction="down"
-  flyOutStyle={
-    Object {
-      "maxHeight": "18em",
-    }
-  }
-  focusedIndex={null}
-  isDisabled={false}
-  isExpanded={false}
-  onCollapse={[Function]}
-  onExpand={[Function]}
-  onFocusNext={[Function]}
-  onFocusOption={[Function]}
-  onFocusPrev={[Function]}
-  onSelect={[Function]}
-  selectedIndices={Array []}
-  style={
-    Object {
-      "marginRight": "20px",
-    }
-  }
->
-  <DropMenu.Control>
-    <ButtonGroup
-      className={null}
-      onSelect={[Function]}
-      selectedIndices={Array []}
-    >
-      <Button
-        className="lucid-SplitButton-Button-primary"
-        hasOnlyIcon={false}
-        isActive={false}
-        isDisabled={false}
-        kind="success"
-        onClick={[Function]}
-        type="button"
-      >
-        Success
-      </Button>
-      <Button
-        className="lucid-SplitButton-Button-drop"
-        hasOnlyIcon={true}
-        isActive={false}
-        isDisabled={false}
-        kind="success"
-        onClick={[Function]}
-        type="button"
-      >
-        <CaretIcon
-          className="lucid-SplitButton-CaretIcon"
-          direction="down"
-          size={8}
-          viewBox="0 3 16 8"
-        />
-      </Button>
-    </ButtonGroup>
-  </DropMenu.Control>
-  <DropMenu.Option
-    isDisabled={false}
-    isHidden={false}
-    isWrapped={true}
-    key="0"
-  >
-    One
-  </DropMenu.Option>
-  <DropMenu.Option
-    isDisabled={false}
-    isHidden={false}
-    isWrapped={true}
-    key="1"
-  >
-    Two
-  </DropMenu.Option>
-</DropMenu>
-`;
-
-exports[`SplitButton [common] example testing should match snapshot(s) for 01.default 4`] = `
-<DropMenu
-  ContextMenu={
-    Object {
-      "alignment": "start",
-      "direction": "down",
-      "directonOffset": 0,
-      "getAlignmentOffset": [Function],
-      "isExpanded": true,
-      "minWidthOffset": 0,
-      "onClickOut": null,
-      "portalId": null,
-    }
-  }
-  alignment="start"
-  className="lucid-SplitButton"
-  direction="down"
-  flyOutStyle={
-    Object {
-      "maxHeight": "18em",
-    }
-  }
-  focusedIndex={null}
-  isDisabled={false}
-  isExpanded={false}
-  onCollapse={[Function]}
-  onExpand={[Function]}
-  onFocusNext={[Function]}
-  onFocusOption={[Function]}
-  onFocusPrev={[Function]}
-  onSelect={[Function]}
-  selectedIndices={Array []}
-  style={
-    Object {
-      "marginRight": "20px",
-    }
-  }
->
-  <DropMenu.Control>
-    <ButtonGroup
-      className={null}
-      onSelect={[Function]}
-      selectedIndices={Array []}
-    >
-      <Button
-        className="lucid-SplitButton-Button-primary"
-        hasOnlyIcon={false}
-        isActive={false}
-        isDisabled={false}
-        kind="warning"
-        onClick={[Function]}
-        type="button"
-      >
-        Warning
-      </Button>
-      <Button
-        className="lucid-SplitButton-Button-drop"
-        hasOnlyIcon={true}
-        isActive={false}
-        isDisabled={false}
-        kind="warning"
-        onClick={[Function]}
-        type="button"
-      >
-        <CaretIcon
-          className="lucid-SplitButton-CaretIcon"
-          direction="down"
-          size={8}
-          viewBox="0 3 16 8"
-        />
-      </Button>
-    </ButtonGroup>
-  </DropMenu.Control>
-  <DropMenu.Option
-    isDisabled={false}
-    isHidden={false}
-    isWrapped={true}
-    key="0"
-  >
-    One
-  </DropMenu.Option>
-  <DropMenu.Option
-    isDisabled={false}
-    isHidden={false}
-    isWrapped={true}
-    key="1"
-  >
-    Two
-  </DropMenu.Option>
-</DropMenu>
-`;
-
-exports[`SplitButton [common] example testing should match snapshot(s) for 01.default 5`] = `
-<DropMenu
-  ContextMenu={
-    Object {
-      "alignment": "start",
-      "direction": "down",
-      "directonOffset": 0,
-      "getAlignmentOffset": [Function],
-      "isExpanded": true,
-      "minWidthOffset": 0,
-      "onClickOut": null,
-      "portalId": null,
-    }
-  }
-  alignment="start"
-  className="lucid-SplitButton"
-  direction="down"
-  flyOutStyle={
-    Object {
-      "maxHeight": "18em",
-    }
-  }
-  focusedIndex={null}
-  isDisabled={false}
-  isExpanded={false}
-  onCollapse={[Function]}
-  onExpand={[Function]}
-  onFocusNext={[Function]}
-  onFocusOption={[Function]}
-  onFocusPrev={[Function]}
-  onSelect={[Function]}
-  selectedIndices={Array []}
-  style={
-    Object {
-      "marginRight": "20px",
-    }
-  }
->
-  <DropMenu.Control>
-    <ButtonGroup
-      className={null}
-      onSelect={[Function]}
-      selectedIndices={Array []}
-    >
-      <Button
-        className="lucid-SplitButton-Button-primary"
-        hasOnlyIcon={false}
-        isActive={false}
-        isDisabled={false}
-        kind="danger"
-        onClick={[Function]}
-        type="button"
-      >
-        Danger
-      </Button>
-      <Button
-        className="lucid-SplitButton-Button-drop"
-        hasOnlyIcon={true}
-        isActive={false}
-        isDisabled={false}
-        kind="danger"
-        onClick={[Function]}
-        type="button"
-      >
-        <CaretIcon
-          className="lucid-SplitButton-CaretIcon"
-          direction="down"
-          size={8}
-          viewBox="0 3 16 8"
-        />
-      </Button>
-    </ButtonGroup>
-  </DropMenu.Control>
-  <DropMenu.Option
-    isDisabled={false}
-    isHidden={false}
-    isWrapped={true}
-    key="0"
-  >
-    One
-  </DropMenu.Option>
-  <DropMenu.Option
-    isDisabled={false}
-    isHidden={false}
-    isWrapped={true}
-    key="1"
-  >
-    Two
-  </DropMenu.Option>
-</DropMenu>
-`;
-
-exports[`SplitButton [common] example testing should match snapshot(s) for 01.default 6`] = `
-<DropMenu
-  ContextMenu={
-    Object {
-      "alignment": "start",
-      "direction": "down",
-      "directonOffset": 0,
-      "getAlignmentOffset": [Function],
-      "isExpanded": true,
-      "minWidthOffset": 0,
-      "onClickOut": null,
-      "portalId": null,
-    }
-  }
-  alignment="start"
-  className="lucid-SplitButton"
-  direction="down"
-  flyOutStyle={
-    Object {
-      "maxHeight": "18em",
-    }
-  }
-  focusedIndex={null}
-  isDisabled={false}
-  isExpanded={false}
-  onCollapse={[Function]}
-  onExpand={[Function]}
-  onFocusNext={[Function]}
-  onFocusOption={[Function]}
-  onFocusPrev={[Function]}
-  onSelect={[Function]}
-  selectedIndices={Array []}
-  style={
-    Object {
-      "marginRight": "20px",
-    }
-  }
->
-  <DropMenu.Control>
-    <ButtonGroup
-      className={null}
-      onSelect={[Function]}
-      selectedIndices={Array []}
-    >
-      <Button
-        className="lucid-SplitButton-Button-primary"
-        hasOnlyIcon={false}
-        isActive={false}
-        isDisabled={false}
-        kind="info"
-        onClick={[Function]}
-        type="button"
-      >
-        Info
-      </Button>
-      <Button
-        className="lucid-SplitButton-Button-drop"
-        hasOnlyIcon={true}
-        isActive={false}
-        isDisabled={false}
-        kind="info"
-        onClick={[Function]}
-        type="button"
-      >
-        <CaretIcon
-          className="lucid-SplitButton-CaretIcon"
-          direction="down"
-          size={8}
-          viewBox="0 3 16 8"
-        />
-      </Button>
-    </ButtonGroup>
-  </DropMenu.Control>
-  <DropMenu.Option
-    isDisabled={false}
-    isHidden={false}
-    isWrapped={true}
-    key="0"
-  >
-    One
-  </DropMenu.Option>
-  <DropMenu.Option
-    isDisabled={false}
-    isHidden={false}
-    isWrapped={true}
-    key="1"
-  >
-    Two
-  </DropMenu.Option>
-</DropMenu>
-`;
-
-exports[`SplitButton [common] example testing should match snapshot(s) for 02.success 1`] = `
-<DropMenu
-  ContextMenu={
-    Object {
-      "alignment": "start",
-      "direction": "down",
-      "directonOffset": 0,
-      "getAlignmentOffset": [Function],
-      "isExpanded": true,
-      "minWidthOffset": 0,
-      "onClickOut": null,
-      "portalId": null,
-    }
-  }
-  alignment="start"
-  className="lucid-SplitButton"
-  direction="down"
-  flyOutStyle={
-    Object {
-      "maxHeight": "18em",
-    }
-  }
-  focusedIndex={null}
-  isDisabled={false}
-  isExpanded={false}
-  onCollapse={[Function]}
-  onExpand={[Function]}
-  onFocusNext={[Function]}
-  onFocusOption={[Function]}
-  onFocusPrev={[Function]}
-  onSelect={[Function]}
-  selectedIndices={Array []}
-  style={
-    Object {
-      "height": 100,
-    }
-  }
->
-  <DropMenu.Control>
-    <ButtonGroup
-      className={null}
-      onSelect={[Function]}
-      selectedIndices={Array []}
-    >
-      <Button
-        className="lucid-SplitButton-Button-primary"
-        hasOnlyIcon={false}
-        isActive={false}
-        isDisabled={false}
-        kind="success"
-        onClick={[Function]}
-        type="button"
-      >
-        Save
-      </Button>
-      <Button
-        className="lucid-SplitButton-Button-drop"
-        hasOnlyIcon={true}
-        isActive={false}
-        isDisabled={false}
-        kind="success"
-        onClick={[Function]}
-        type="button"
-      >
-        <CaretIcon
-          className="lucid-SplitButton-CaretIcon"
-          direction="down"
-          size={8}
-          viewBox="0 3 16 8"
-        />
-      </Button>
-    </ButtonGroup>
-  </DropMenu.Control>
-  <DropMenu.Option
-    isDisabled={false}
-    isHidden={false}
-    isWrapped={true}
-    key="0"
-  >
-    Action 01
-  </DropMenu.Option>
-  <DropMenu.Option
-    isDisabled={false}
-    isHidden={false}
-    isWrapped={true}
-    key="1"
-  >
-    Here's Another Action
-  </DropMenu.Option>
-  <DropMenu.Option
-    isDisabled={false}
-    isHidden={false}
-    isWrapped={true}
-    key="2"
-  >
-    And Another Action
   </DropMenu.Option>
 </DropMenu>
 `;
@@ -712,11 +242,10 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 03.di
         onClick={[Function]}
         type="button"
       >
-        <CaretIcon
-          className="lucid-SplitButton-CaretIcon"
+        <ChevronIcon
+          className="lucid-SplitButton-ChevronIcon"
           direction="down"
-          size={8}
-          viewBox="0 3 16 8"
+          size={10}
         />
       </Button>
     </ButtonGroup>
@@ -797,7 +326,7 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 04.up
         hasOnlyIcon={false}
         isActive={false}
         isDisabled={false}
-        kind="success"
+        kind="primary"
         onClick={[Function]}
         type="button"
       >
@@ -808,15 +337,14 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 04.up
         hasOnlyIcon={true}
         isActive={false}
         isDisabled={false}
-        kind="success"
+        kind="primary"
         onClick={[Function]}
         type="button"
       >
-        <CaretIcon
-          className="lucid-SplitButton-CaretIcon"
+        <ChevronIcon
+          className="lucid-SplitButton-ChevronIcon"
           direction="up"
-          size={8}
-          viewBox="0 3 16 8"
+          size={10}
         />
       </Button>
     </ButtonGroup>
@@ -913,11 +441,10 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 4.siz
         size="large"
         type="button"
       >
-        <CaretIcon
-          className="lucid-SplitButton-CaretIcon"
+        <ChevronIcon
+          className="lucid-SplitButton-ChevronIcon"
           direction="down"
-          size={8}
-          viewBox="0 3 16 8"
+          size={10}
         />
       </Button>
     </ButtonGroup>
@@ -1006,11 +533,10 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 4.siz
         size="small"
         type="button"
       >
-        <CaretIcon
-          className="lucid-SplitButton-CaretIcon"
+        <ChevronIcon
+          className="lucid-SplitButton-ChevronIcon"
           direction="down"
-          size={8}
-          viewBox="0 3 16 8"
+          size={10}
         />
       </Button>
     </ButtonGroup>
@@ -1099,11 +625,10 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 4.siz
         size="short"
         type="button"
       >
-        <CaretIcon
-          className="lucid-SplitButton-CaretIcon"
+        <ChevronIcon
+          className="lucid-SplitButton-ChevronIcon"
           direction="down"
-          size={8}
-          viewBox="0 3 16 8"
+          size={10}
         />
       </Button>
     </ButtonGroup>

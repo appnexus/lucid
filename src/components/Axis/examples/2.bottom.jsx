@@ -16,7 +16,7 @@ export default createClass({
 		return (
 			<svg width={width} height={height}>
 				<g transform={`translate(${margin.left}, ${height / 2})`}>
-					<Axis scale={x} orient="bottom" tickCount={6} />
+					<Axis scale={x} orient='bottom' tickCount={6} />
 				</g>
 			</svg>
 		);

@@ -5,7 +5,7 @@ import { BarChart, LoadingIndicator } from '../../../index';
 export default createClass({
 	render() {
 		return (
-			<LoadingIndicator isLoading overlayKind="light">
+			<LoadingIndicator isLoading overlayKind='light'>
 				<BarChart
 					data={[
 						{ x: '2015-01-01', y: 1 },

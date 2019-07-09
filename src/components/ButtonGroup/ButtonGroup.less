@@ -1,39 +1,27 @@
 @import (reference) '../../styles/variables.less';
 @import (reference) '../../styles/mixins.less';
 
-@ButtonGroup-active-borderColor: fade(#fff, 30%);
-
 .@{prefix}-ButtonGroup {
 	display: flex;
+	box-sizing: border-box;
+
+	.@{prefix}-Button + .@{prefix}-Button {
+		border-left: 0px;
+	}
 
 	> .@{prefix}-Button {
-		// This crazy selector was written to help with the problem of having two
-		// active buttons right next to each other. See the following more for
-		// context: https://appnexus.slack.com/archives/anx-react-future/p1456439335000016
-		&-is-active + .@{prefix}-Button-is-active {
-			border-left: 1px solid @ButtonGroup-active-borderColor;
-		}
+		outline: 1px solid @color-neutral-5;
+		border: none;
+		height: 26px;
 
-		// First button. The `::before` selector targets the button gradient
-		&:first-of-type,
-		&:first-of-type::before {
-			border-top-right-radius: 0;
-			border-bottom-right-radius: 0;
-			border-right: 0;
-		}
+		&.@{prefix}-Button-is-active {
+			outline: 1px solid @color-primary;
+			background-color: @color-neutral-1;
+			z-index: 1;
 
-		// Buttons in the middle
-		&:not(:first-of-type):not(:last-of-type),
-		&:not(:first-of-type):not(:last-of-type)::before {
-			border-radius: 0;
-			border-right: 0;
-		}
-
-		// Last button. The `::before` selector targets the button gradient
-		&:last-of-type,
-		&:last-of-type::before {
-			border-top-left-radius: 0;
-			border-bottom-left-radius: 0;
+			&:hover {
+				background-color: @color-neutral-3;
+			}
 		}
 	}
 }

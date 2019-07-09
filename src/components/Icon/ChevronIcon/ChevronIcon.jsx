@@ -37,7 +37,7 @@ const ChevronIcon = createClass({
 	},
 
 	render() {
-		const { className, direction, size, ...passThroughs } = this.props;
+		const { className, direction, ...passThroughs } = this.props;
 
 		return (
 			<Icon
@@ -53,9 +53,8 @@ const ChevronIcon = createClass({
 					},
 					className
 				)}
-				size={size}
 			>
-				<path d="M12.293 5.293l1.414 1.414-5 5c-.39.39-1.024.39-1.414 0l-5-5 1.414-1.414L8 9.586l4.293-4.293z" />
+				<path d='M.5 4.5l7.5 7 7.5-7' />
 			</Icon>
 		);
 	},

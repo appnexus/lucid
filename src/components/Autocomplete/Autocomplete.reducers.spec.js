@@ -15,7 +15,10 @@ describe('Autocomplete reducers', () => {
 			};
 
 			const nextState = onChange(initialState, 'foo');
-			const { value, DropMenu: { focusedIndex } } = nextState;
+			const {
+				value,
+				DropMenu: { focusedIndex },
+			} = nextState;
 
 			assert.equal(value, 'foo');
 			assert.equal(focusedIndex, null);
@@ -33,7 +36,10 @@ describe('Autocomplete reducers', () => {
 			};
 
 			const nextState = onSelect(initialState, 2);
-			const { value, DropMenu: { selectedIndices } } = nextState;
+			const {
+				value,
+				DropMenu: { selectedIndices },
+			} = nextState;
 
 			assert.equal(value, 'porridge');
 			assert(_.isEqual(selectedIndices, []));
@@ -51,7 +57,9 @@ describe('Autocomplete reducers', () => {
 			};
 
 			const nextState = onExpand(initialState, 'foo');
-			const { DropMenu: { focusedIndex, isExpanded } } = nextState;
+			const {
+				DropMenu: { focusedIndex, isExpanded },
+			} = nextState;
 
 			assert.equal(isExpanded, true);
 			assert.equal(focusedIndex, null);
@@ -67,7 +75,9 @@ describe('Autocomplete reducers', () => {
 			};
 
 			const nextState = onExpand(initialState);
-			const { DropMenu: { focusedIndex, isExpanded } } = nextState;
+			const {
+				DropMenu: { focusedIndex, isExpanded },
+			} = nextState;
 
 			assert.equal(isExpanded, false);
 			assert.equal(focusedIndex, null);
@@ -83,7 +93,9 @@ describe('Autocomplete reducers', () => {
 			};
 
 			const nextState = onExpand(initialState);
-			const { DropMenu: { focusedIndex, isExpanded } } = nextState;
+			const {
+				DropMenu: { focusedIndex, isExpanded },
+			} = nextState;
 
 			assert.equal(isExpanded, false);
 			assert.equal(focusedIndex, null);

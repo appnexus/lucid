@@ -1,0 +1,69 @@
+@import (reference) 'variables';
+@import (reference) 'mixins';
+@import 'normalize';
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+html {
+	box-sizing: border-box;
+}
+
+body {
+	// 50px is our agreed upon nav height moving forward
+	padding: 50px 0 0 0;
+	font-family: @fontFamily;
+	font-size: @size-font;
+	line-height: 1.25; // adjusted for Galano
+	color: @color-neutral-9;
+
+	// repeating triangle Xandr pattern
+	background: url("https://acdn.adnxs.com/cxp/1y/bg-pattern.226a6795ab64d5cdd0bdd4a853719227.svg"), @color-neutral-2;
+	background-position: top right;
+	background-repeat: repeat-y;
+}
+
+h1,
+h2,
+h3 {
+	margin: 0;
+	font-weight: @font-weight-medium;
+	text-rendering: optimizelegibility;
+}
+
+// These values have been adjusted for the Xandr branding. Anything after h3
+// shouldn't be used in practice.
+h1 {
+	font-size: 24px;
+	line-height: 28px;
+}
+h2 {
+	font-size: 16px;
+	line-height: 20px;
+}
+h3 {
+	font-size: 12px;
+	line-height: 16px;
+	text-transform: uppercase;
+	color: @color-neutral-6;
+}
+
+a {
+	font-weight: @font-weight-medium;
+	color: @color-linkColor;
+	text-decoration: none;
+}
+a:hover {
+	color: @color-linkColorHover;
+	text-decoration: underline;
+}
+
+code,
+kbd,
+pre,
+samp {
+	// TODO: replace this with the variable from lucid when this issue is closed:
+	// https://github.com/appnexus/lucid/issues/618
+	font-family: Menlo, Monaco, 'Ubuntu Mono', Courier, monospace;
+}

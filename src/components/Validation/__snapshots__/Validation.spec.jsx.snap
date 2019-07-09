@@ -4,11 +4,23 @@ exports[`Validation [common] example testing should match snapshot(s) for basic 
 <div
   className="lucid-Validation lucid-Validation-is-error"
 >
-  Content
+  <TextField
+    debounceLevel={500}
+    isDisabled={false}
+    isMultiLine={false}
+    lazyLevel={1000}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onChangeDebounced={[Function]}
+    onSubmit={[Function]}
+    rows={5}
+    style={null}
+    value="Text Field Text"
+  />
   <div
     className="lucid-Validation-error-content"
   >
-    Method one
+    Error One
   </div>
 </div>
 `;
@@ -18,17 +30,88 @@ exports[`Validation [common] example testing should match snapshot(s) for basic 
   className="lucid-Validation lucid-Validation-is-error"
 >
   <Validation.Error>
-    <i>
-      Method two
-    </i>
+    <span>
+      Error Two
+    </span>
   </Validation.Error>
-  Content
+  <TextField
+    debounceLevel={500}
+    isDisabled={false}
+    isMultiLine={false}
+    lazyLevel={1000}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onChangeDebounced={[Function]}
+    onSubmit={[Function]}
+    rows={5}
+    style={null}
+    value="Text Field Text"
+  />
   <div
     className="lucid-Validation-error-content"
   >
-    <i>
-      Method two
-    </i>
+    <span>
+      Error Two
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Validation [common] example testing should match snapshot(s) for basic 3`] = `
+<div
+  className="lucid-Validation lucid-Validation-is-error"
+>
+  <TextField
+    debounceLevel={500}
+    isDisabled={false}
+    isMultiLine={true}
+    lazyLevel={1000}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onChangeDebounced={[Function]}
+    onSubmit={[Function]}
+    row={3}
+    rows={5}
+    style={null}
+    value="Text Area Text"
+  />
+  <div
+    className="lucid-Validation-error-content"
+  >
+    Error Three
+  </div>
+</div>
+`;
+
+exports[`Validation [common] example testing should match snapshot(s) for basic 4`] = `
+<div
+  className="lucid-Validation lucid-Validation-is-error"
+>
+  <Validation.Error>
+    <span>
+      Error Four
+    </span>
+  </Validation.Error>
+  <TextField
+    debounceLevel={500}
+    isDisabled={false}
+    isMultiLine={true}
+    lazyLevel={1000}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onChangeDebounced={[Function]}
+    onSubmit={[Function]}
+    row={3}
+    rows={5}
+    style={null}
+    value="Text Area Text"
+  />
+  <div
+    className="lucid-Validation-error-content"
+  >
+    <span>
+      Error Four
+    </span>
   </div>
 </div>
 `;

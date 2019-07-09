@@ -1,0 +1,11 @@
+@import (reference) '../../../styles/variables.less';
+@import (reference) '../../../styles/mixins.less';
+
+.@{prefix}-CloseIcon {
+	stroke: @color-neutral-6;
+
+	&-is-clickable:not(&-is-disabled):hover {
+		stroke: @color-neutral-7;
+	}
+}
+

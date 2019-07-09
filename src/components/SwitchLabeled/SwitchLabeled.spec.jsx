@@ -92,7 +92,7 @@ describe('SwitchLabeled', () => {
 			it('passes through all props not defined in `propTypes` to its `Switch` instance.', () => {
 				const wrapper = shallow(
 					<SwitchLabeled
-						className="wut"
+						className='wut'
 						isDisabled={true}
 						isSelected={true}
 						style={{ fontWeight: 'bold' }}

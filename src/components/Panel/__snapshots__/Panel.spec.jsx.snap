@@ -19,24 +19,64 @@ exports[`Panel [common] example testing should match snapshot(s) for 02.with-hea
   <header
     className="lucid-Panel-Header"
   >
-    <strong>
+    <span>
       Header
-    </strong>
+    </span>
   </header>
   <section
     className="lucid-Panel-content"
   >
     <Panel.Header>
-      <strong>
+      <span>
         Header
-      </strong>
+      </span>
     </Panel.Header>
     Meditation literally chia, schlitz banh mi mlkshk vape ennui art party. Succulents tumeric tumblr echo park hella umami. Pickled four loko hashtag, tbh bitters tofu pinterest quinoa retro. Raclette cred fanny pack tattooed chartreuse wayfarers brooklyn pabst, mixtape shabby chic kombucha. Meggings hashtag sriracha raclette post-ironic. Umami brunch stumptown salvia, disrupt lomo activated charcoal retro. Pok pok irony yr, semiotics distillery pug sriracha ramps drinking vinegar fanny pack. Forage selfies poutine disrupt, fashion axe craft beer 8-bit stumptown pabst food truck slow-carb wolf photo booth DIY gastropub. Bushwick austin activated charcoal poutine small batch polaroid. Venmo poutine umami biodiesel, seitan four dollar toast cold-pressed jean shorts gentrify meditation leggings street art selfies. Squid raclette you probably haven't heard of them selfies church-key vice. Woke intelligentsia viral, green juice seitan listicle kale chips yr la croix organic vaporware vexillologist tattooed neutra. Chambray sustainable unicorn neutra aesthetic, 8-bit farm-to-table DIY organic authentic woke. YOLO four dollar toast pop-up, tacos listicle chicharrones single-origin coffee raw denim yuccie.
   </section>
 </div>
 `;
 
-exports[`Panel [common] example testing should match snapshot(s) for 03.with-header-and-footer 1`] = `
+exports[`Panel [common] example testing should match snapshot(s) for 03.with-icon-header 1`] = `
+<div
+  className="lucid-Panel lucid-Panel-is-not-gutterless lucid-Panel-has-margin lucid-Panel-is-scrollable"
+>
+  <header
+    className="lucid-Panel-Header"
+  >
+    <SettingsIcon
+      presetSize="large"
+      style={
+        Object {
+          "marginRight": "16px",
+        }
+      }
+    />
+    <span>
+      Header
+    </span>
+  </header>
+  <section
+    className="lucid-Panel-content"
+  >
+    <Panel.Header>
+      <SettingsIcon
+        presetSize="large"
+        style={
+          Object {
+            "marginRight": "16px",
+          }
+        }
+      />
+      <span>
+        Header
+      </span>
+    </Panel.Header>
+    Meditation literally chia, schlitz banh mi mlkshk vape ennui art party. Succulents tumeric tumblr echo park hella umami. Pickled four loko hashtag, tbh bitters tofu pinterest quinoa retro. Raclette cred fanny pack tattooed chartreuse wayfarers brooklyn pabst, mixtape shabby chic kombucha. Meggings hashtag sriracha raclette post-ironic. Umami brunch stumptown salvia, disrupt lomo activated charcoal retro. Pok pok irony yr, semiotics distillery pug sriracha ramps drinking vinegar fanny pack. Forage selfies poutine disrupt, fashion axe craft beer 8-bit stumptown pabst food truck slow-carb wolf photo booth DIY gastropub. Bushwick austin activated charcoal poutine small batch polaroid. Venmo poutine umami biodiesel, seitan four dollar toast cold-pressed jean shorts gentrify meditation leggings street art selfies. Squid raclette you probably haven't heard of them selfies church-key vice. Woke intelligentsia viral, green juice seitan listicle kale chips yr la croix organic vaporware vexillologist tattooed neutra. Chambray sustainable unicorn neutra aesthetic, 8-bit farm-to-table DIY organic authentic woke. YOLO four dollar toast pop-up, tacos listicle chicharrones single-origin coffee raw denim yuccie.
+  </section>
+</div>
+`;
+
+exports[`Panel [common] example testing should match snapshot(s) for 04.with-header-and-footer 1`] = `
 <div
   className="lucid-Panel lucid-Panel-is-not-gutterless lucid-Panel-has-margin lucid-Panel-is-scrollable"
 >
@@ -84,7 +124,7 @@ exports[`Panel [common] example testing should match snapshot(s) for 03.with-hea
 </div>
 `;
 
-exports[`Panel [common] example testing should match snapshot(s) for 04.scrollable-content 1`] = `
+exports[`Panel [common] example testing should match snapshot(s) for 05.scrollable-content 1`] = `
 <div
   className="lucid-Panel lucid-Panel-is-not-gutterless lucid-Panel-has-margin lucid-Panel-is-scrollable"
   style={
@@ -125,7 +165,7 @@ exports[`Panel [common] example testing should match snapshot(s) for 04.scrollab
 </div>
 `;
 
-exports[`Panel [common] example testing should match snapshot(s) for 05.no-margins 1`] = `
+exports[`Panel [common] example testing should match snapshot(s) for 06.no-margins 1`] = `
 <div
   className="lucid-Panel lucid-Panel-is-not-gutterless lucid-Panel-is-scrollable"
 >
@@ -147,7 +187,8 @@ exports[`Panel [common] example testing should match snapshot(s) for 05.no-margi
     <Table
       density="extended"
       hasBorder={false}
-      hasLightHeader={false}
+      hasHover={true}
+      hasLightHeader={true}
       hasWordWrap={true}
       style={
         Object {
@@ -157,7 +198,6 @@ exports[`Panel [common] example testing should match snapshot(s) for 05.no-margi
     >
       <Table.Thead>
         <Table.Tr
-          isActionable={false}
           isActive={false}
           isDisabled={false}
           isSelected={false}
@@ -190,7 +230,6 @@ exports[`Panel [common] example testing should match snapshot(s) for 05.no-margi
       </Table.Thead>
       <Table.Tbody>
         <Table.Tr
-          isActionable={false}
           isActive={false}
           isDisabled={false}
           isSelected={false}
@@ -218,7 +257,6 @@ exports[`Panel [common] example testing should match snapshot(s) for 05.no-margi
           </Table.Td>
         </Table.Tr>
         <Table.Tr
-          isActionable={false}
           isActive={false}
           isDisabled={false}
           isSelected={false}
@@ -246,7 +284,6 @@ exports[`Panel [common] example testing should match snapshot(s) for 05.no-margi
           </Table.Td>
         </Table.Tr>
         <Table.Tr
-          isActionable={false}
           isActive={false}
           isDisabled={false}
           isSelected={false}
@@ -274,7 +311,6 @@ exports[`Panel [common] example testing should match snapshot(s) for 05.no-margi
           </Table.Td>
         </Table.Tr>
         <Table.Tr
-          isActionable={false}
           isActive={false}
           isDisabled={false}
           isSelected={false}
@@ -307,7 +343,7 @@ exports[`Panel [common] example testing should match snapshot(s) for 05.no-margi
 </div>
 `;
 
-exports[`Panel [common] example testing should match snapshot(s) for 06.no-content-padding 1`] = `
+exports[`Panel [common] example testing should match snapshot(s) for 07.no-content-padding 1`] = `
 <div
   className="lucid-Panel lucid-Panel-has-margin lucid-Panel-is-scrollable"
 >
@@ -329,7 +365,8 @@ exports[`Panel [common] example testing should match snapshot(s) for 06.no-conte
     <Table
       density="extended"
       hasBorder={false}
-      hasLightHeader={false}
+      hasHover={true}
+      hasLightHeader={true}
       hasWordWrap={true}
       style={
         Object {
@@ -339,7 +376,6 @@ exports[`Panel [common] example testing should match snapshot(s) for 06.no-conte
     >
       <Table.Thead>
         <Table.Tr
-          isActionable={false}
           isActive={false}
           isDisabled={false}
           isSelected={false}
@@ -372,7 +408,6 @@ exports[`Panel [common] example testing should match snapshot(s) for 06.no-conte
       </Table.Thead>
       <Table.Tbody>
         <Table.Tr
-          isActionable={false}
           isActive={false}
           isDisabled={false}
           isSelected={false}
@@ -400,7 +435,6 @@ exports[`Panel [common] example testing should match snapshot(s) for 06.no-conte
           </Table.Td>
         </Table.Tr>
         <Table.Tr
-          isActionable={false}
           isActive={false}
           isDisabled={false}
           isSelected={false}
@@ -428,7 +462,6 @@ exports[`Panel [common] example testing should match snapshot(s) for 06.no-conte
           </Table.Td>
         </Table.Tr>
         <Table.Tr
-          isActionable={false}
           isActive={false}
           isDisabled={false}
           isSelected={false}
@@ -456,7 +489,184 @@ exports[`Panel [common] example testing should match snapshot(s) for 06.no-conte
           </Table.Td>
         </Table.Tr>
         <Table.Tr
-          isActionable={false}
+          isActive={false}
+          isDisabled={false}
+          isSelected={false}
+        >
+          <Table.Td
+            align="left"
+            hasBorderLeft={false}
+            hasBorderRight={false}
+          >
+            Cell
+          </Table.Td>
+          <Table.Td
+            align="left"
+            hasBorderLeft={false}
+            hasBorderRight={false}
+          >
+            Cell
+          </Table.Td>
+          <Table.Td
+            align="left"
+            hasBorderLeft={false}
+            hasBorderRight={false}
+          >
+            Cell
+          </Table.Td>
+        </Table.Tr>
+      </Table.Tbody>
+    </Table>
+  </section>
+</div>
+`;
+
+exports[`Panel [common] example testing should match snapshot(s) for 08.no-margins-or-content-padding 1`] = `
+<div
+  className="lucid-Panel lucid-Panel-is-scrollable"
+>
+  <header
+    className="lucid-Panel-Header"
+  >
+    <strong>
+      Header
+    </strong>
+  </header>
+  <section
+    className="lucid-Panel-content"
+  >
+    <Panel.Header>
+      <strong>
+        Header
+      </strong>
+    </Panel.Header>
+    <Table
+      density="extended"
+      hasBorder={false}
+      hasHover={true}
+      hasLightHeader={true}
+      hasWordWrap={true}
+      style={
+        Object {
+          "width": "100%",
+        }
+      }
+    >
+      <Table.Thead>
+        <Table.Tr
+          isActive={false}
+          isDisabled={false}
+          isSelected={false}
+        >
+          <Table.Th
+            align="left"
+            isResizable={false}
+            isSorted={false}
+            sortDirection="up"
+          >
+            Cell
+          </Table.Th>
+          <Table.Th
+            align="left"
+            isResizable={false}
+            isSorted={false}
+            sortDirection="up"
+          >
+            Cell
+          </Table.Th>
+          <Table.Th
+            align="left"
+            isResizable={false}
+            isSorted={false}
+            sortDirection="up"
+          >
+            Cell
+          </Table.Th>
+        </Table.Tr>
+      </Table.Thead>
+      <Table.Tbody>
+        <Table.Tr
+          isActive={false}
+          isDisabled={false}
+          isSelected={false}
+        >
+          <Table.Td
+            align="left"
+            hasBorderLeft={false}
+            hasBorderRight={false}
+          >
+            Cell
+          </Table.Td>
+          <Table.Td
+            align="left"
+            hasBorderLeft={false}
+            hasBorderRight={false}
+          >
+            Cell
+          </Table.Td>
+          <Table.Td
+            align="left"
+            hasBorderLeft={false}
+            hasBorderRight={false}
+          >
+            Cell
+          </Table.Td>
+        </Table.Tr>
+        <Table.Tr
+          isActive={false}
+          isDisabled={false}
+          isSelected={false}
+        >
+          <Table.Td
+            align="left"
+            hasBorderLeft={false}
+            hasBorderRight={false}
+          >
+            Cell
+          </Table.Td>
+          <Table.Td
+            align="left"
+            hasBorderLeft={false}
+            hasBorderRight={false}
+          >
+            Cell
+          </Table.Td>
+          <Table.Td
+            align="left"
+            hasBorderLeft={false}
+            hasBorderRight={false}
+          >
+            Cell
+          </Table.Td>
+        </Table.Tr>
+        <Table.Tr
+          isActive={false}
+          isDisabled={false}
+          isSelected={false}
+        >
+          <Table.Td
+            align="left"
+            hasBorderLeft={false}
+            hasBorderRight={false}
+          >
+            Cell
+          </Table.Td>
+          <Table.Td
+            align="left"
+            hasBorderLeft={false}
+            hasBorderRight={false}
+          >
+            Cell
+          </Table.Td>
+          <Table.Td
+            align="left"
+            hasBorderLeft={false}
+            hasBorderRight={false}
+          >
+            Cell
+          </Table.Td>
+        </Table.Tr>
+        <Table.Tr
           isActive={false}
           isDisabled={false}
           isSelected={false}

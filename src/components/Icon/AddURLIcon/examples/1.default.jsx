@@ -1,9 +1,12 @@
 import React from 'react';
-import createClass from 'create-react-class';
 import { AddURLIcon } from '../../../../index';
 
-export default createClass({
-	render() {
-		return <AddURLIcon />;
-	},
-});
+export default () => (
+	<div>
+		<AddURLIcon />
+		<br />
+		<AddURLIcon isClickable />
+		<br />
+		<AddURLIcon isDisabled />
+	</div>
+);

@@ -1,22 +1,25 @@
 @import (reference) '../../styles/variables.less';
 @import (reference) '../../styles/mixins.less';
 
-@Switch-height: @size-standard-height;
+@Switch-height: 22px;
 @Switch-width: 50px;
 @Switch-animation-timing: 0.1s linear;
-@Switch-selected-transform: translate(22px, 0);
+@Switch-selected-transform: translate(16px, 0);
 
-@Switch-container-height: 22px;
+@Switch-container-height: 16px;
 @Switch-container-offset: @size-XXS;
-@Switch-container-width: 44px;
+@Switch-container-width: 32px;
 
 @Switch-glow-offset: 5px;
 @Switch-glow-radius: @size-S;
 @Switch-glow-scale: scale(1.556);
 
 @Switch-handle-offset: @size-XS;
-@Switch-handle-radius: 8px;
+@Switch-handle-radius: 5px;
 @Switch-handle-scale: scale(1.125);
+
+@Switch-disabled-color: fade(@color-neutral-9, 4%);
+@Switch-disabled-border-color: fade(@color-neutral-9, 15%);
 
 .@{prefix}-Switch {
 	cursor: pointer;
@@ -37,104 +40,186 @@
 	&-visualization-container {
 		.box-sizing();
 
-		background-color: @color-borderColor;
 		border-radius: @Switch-container-height / 2;
+		border: 1px solid @color-transparent-gray-30-new;
 		height: @Switch-container-height;
 		left: @Switch-container-offset;
 		position: absolute;
 		top: @Switch-container-offset;
-		transition: @Switch-animation-timing;
+		// transition: @Switch-animation-timing;
 		width: @Switch-container-width;
-	}
-
-	&-visualization-glow {
-		.box-sizing();
-
-		background-color: @color-primary;
-		border-radius: @Switch-glow-radius;
-		height: @Switch-glow-radius * 2;
-		left: @Switch-glow-offset;
-		opacity: 0;
-		position: absolute;
-		top: @Switch-glow-offset;
-		transition: @Switch-animation-timing;
-		width: @Switch-glow-radius * 2;
 	}
 
 	&-visualization-handle {
 		.box-sizing();
 
-		background-color: white;
+		background-color: @color-white;
 		border-radius: @Switch-handle-radius;
+		border: 1px solid @color-transparent-gray-30-new;
 		height: @Switch-handle-radius * 2;
 		left: @Switch-handle-offset;
 		position: absolute;
 		top: @Switch-handle-offset;
-		transition: @Switch-animation-timing;
+		// transition: @Switch-animation-timing;
 		width: @Switch-handle-radius * 2;
 	}
 
-	&:hover &-visualization-glow {
-		opacity: 0.3;
-		transform: @Switch-glow-scale;
-	}
-
 	&:hover &-visualization-handle {
-		transform: @Switch-handle-scale;
+		background-color: @color-white;
+		border: 1px solid @color-primary;
 	}
 
-	&-is-disabled:hover &-visualization-glow {
-		opacity: 0;
-		transform: none;
+	&:hover &-visualization-container {
+		border: 1px solid @color-primary;
 	}
 
-	&-is-disabled:hover &-visualization-handle {
-		transform: none;
+	&-is-selected {
+		.@{prefix}-Switch-visualization-container {
+			background-color: @color-white;
+			border: 1px solid @color-primary;
+		}
+
+		.@{prefix}-Switch-visualization-handle {
+			border: none;
+			background-color: @color-primary;
+			transform: @Switch-selected-transform;
+		}
+
+		&:hover {
+			& > span.@{prefix}-Switch-visualization-container {
+				opacity: .80;
+			}
+
+			& > span.@{prefix}-Switch-visualization-handle {
+				border: none;
+				background-color: @color-primary;
+				opacity: .80;
+			}
+		}
 	}
 
-	&-is-disabled &-visualization-container {
-		opacity: 0.3;
+	&-is-disabled {
+
+		& .@{prefix}-Switch-visualization-container {
+			background-color: @Switch-disabled-color;
+			border-color: @Switch-disabled-border-color;
+		}
+
+		& .@{prefix}-Switch-visualization-handle {
+			background-color: transparent;
+			border-color: @Switch-disabled-border-color;
+		}
+
+		&:hover {
+			& .@{prefix}-Switch-visualization-container {
+				background-color: @Switch-disabled-color;
+				border-color: @Switch-disabled-border-color;
+			}
+
+			& .@{prefix}-Switch-visualization-handle {
+				background-color: transparent;
+				border-color: @Switch-disabled-border-color;
+			}
+		}
 	}
 
-	&-is-disabled&-is-selected:hover &-visualization-handle {
-		transform: @Switch-selected-transform scale(1);
+	&-is-disabled.@{prefix}-Switch-is-selected {
+
+		& .@{prefix}-Switch-visualization-container {
+			background-color: @color-white;
+			border-color: @color-primary;
+			opacity: .50;
+		}
+
+		& .@{prefix}-Switch-visualization-handle {
+			background-color: @color-primary;
+			opacity: .50;
+			border-color: transparent;
+		}
+
+		&:hover {
+			& .@{prefix}-Switch-visualization-container {
+				background-color: @color-white;
+				border-color: @color-primary;
+				opacity: .50;
+			}
+
+			& .@{prefix}-Switch-visualization-handle {
+				background-color: @color-primary;
+				opacity: .50;
+				border-color: transparent;
+			}
+		}
 	}
 
-	&-is-selected &-visualization-container {
-		background-color: @color-primary;
-	}
+	&-is-include-exclude {
 
-	&-is-selected &-visualization-glow {
-		transform: @Switch-selected-transform;
-	}
+		.@{prefix}-Switch-visualization-handle {
+			background-color: @color-secondary-1;
+		}
 
-	&-is-selected &-visualization-handle {
-		transform: @Switch-selected-transform;
-	}
+		.@{prefix}-Switch-visualization-container {
+			border-color: @color-secondary-1;
+		}
 
-	&-is-selected &-native:focus ~ &-visualization-glow {
-		transform: @Switch-selected-transform @Switch-glow-scale;
-	}
+		&.@{prefix}-Switch-is-selected {
 
-	&-is-selected &-native:focus ~ &-visualization-handle {
-		transform: @Switch-selected-transform @Switch-handle-scale;
-	}
+			.@{prefix}-Switch-visualization-handle {
+				background-color: @color-secondary-4;
+				border: 0;
+			}
 
-	&-is-selected:hover &-visualization-glow {
-		transform: @Switch-selected-transform @Switch-glow-scale;
+			.@{prefix}-Switch-visualization-container {
+				border-color: @color-secondary-4;
+			}
+		}
+
+		&:hover {
+
+			.@{prefix}-Switch-visualization-container,
+			.@{prefix}-Switch-visualization-handle {
+				border: 1px solid @color-secondary-1;
+			}
+		}
+
+
+		&:hover.@{prefix}-Switch-is-selected {
+
+			.@{prefix}-Switch-visualization-container,
+			.@{prefix}-Switch-visualization-handle {
+				border: 1px solid @color-secondary-4;
+			}
+		}
+
+		&.@{prefix}-Switch-is-disabled:not(.@{prefix}-Switch-is-selected) {
+
+			& .@{prefix}-Switch-visualization-container,
+			& .@{prefix}-Switch-visualization-handle {
+				background-color: @Switch-disabled-color;
+				border-color: @Switch-disabled-border-color;
+			}
+		}
+
+		&.@{prefix}-Switch-is-selected.@{prefix}-Switch-is-disabled {
+
+			&:hover {
+				.@{prefix}-Switch-visualization-handle {
+					background-color: @color-secondary-4;
+				}
+
+				.@{prefix}-Switch-visualization-container {
+					border-color: @color-secondary-4;
+				}
+			}
+
+		}
 	}
 
 	&-is-selected:hover &-visualization-handle {
-		transform: @Switch-selected-transform @Switch-handle-scale;
+		// transform: @Switch-selected-transform @Switch-handle-scale;
+		background-color: white;
+		border: 1px solid @color-primary;
 	}
 
-	&-native:focus ~ &-visualization-glow {
-		opacity: 0.3;
-		transform: @Switch-glow-scale;
-	}
-
-	&-native:focus ~ &-visualization-handle {
-		transform: @Switch-handle-scale;
-	}
 }
 

@@ -7,12 +7,12 @@ export default createClass({
 	render() {
 		return (
 			<div>
-				<SearchField placeholder="Name/ID">
+				<SearchField placeholder='Name/ID'>
 					<SearchField.TextField
 						value={this.state.value}
 						onSubmit={submission => this.setState({ submission })}
 						onChange={value => this.setState({ value })}
-						onKeyDown={({ key }) => this.setState({ key })}
+						onKeyDown={({ event: { key } }) => this.setState({ key })}
 						onBlur={lastValue => this.setState({ lastValue })}
 					/>
 				</SearchField>

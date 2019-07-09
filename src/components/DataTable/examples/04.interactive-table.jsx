@@ -8,7 +8,7 @@ export default createClass({
 		return {
 			activeIndex: 1,
 			currentlySortedField: 'id',
-			currentlySortedFieldDirection: 'up',
+			currentlySortedFieldDirection: 'down',
 			data: [
 				{
 					id: '01',
@@ -31,7 +31,11 @@ export default createClass({
 				},
 				{
 					id: '03',
-					first_name: 'Leonardo',
+					first_name: (
+						<div>
+							Leon <div className='child'>The Silly</div>
+						</div>
+					),
 					last_name: 'da Vinci',
 					email: 'ldvinci@example.com',
 					occupation: 'Engineer',
@@ -160,7 +164,7 @@ export default createClass({
 			currentlySortedField: field,
 			currentlySortedFieldDirection: nextCurrentlySortedFieldDirection,
 			data:
-				nextCurrentlySortedFieldDirection === 'up'
+				nextCurrentlySortedFieldDirection === 'down'
 					? nextData
 					: _.reverse(nextData),
 			activeIndex: null,
@@ -176,101 +180,107 @@ export default createClass({
 		} = this.state;
 
 		return (
-			<DataTable
-				data={_.map(
-					data,
-					(row, index) =>
+			<div>
+				<style>
+					{
+						'.child { display: none; } .lucid-Table-Tr:hover .child { display: block; }'
+					}
+				</style>
+				<DataTable
+					data={_.map(data, (row, index) =>
 						index === activeIndex ? { ...row, isActive: true } : row
-				)}
-				density="extended"
-				isSelectable
-				isActionable
-				onRowClick={this.handleRowClick}
-				onSelect={this.handleSelect}
-				onSelectAll={this.handleSelectAll}
-				onSort={this.handleSort}
-			>
-				<DataTable.Column
-					field="id"
-					width={41}
-					align="left"
-					hasBorderLeft
-					isSortable
-					isSorted={currentlySortedField === 'id'}
-					sortDirection={currentlySortedFieldDirection}
+					)}
+					density='extended'
+					isSelectable
+					isActionable
+					onRowClick={this.handleRowClick}
+					onSelect={this.handleSelect}
+					onSelectAll={this.handleSelectAll}
+					onSort={this.handleSort}
 				>
-					ID
-				</DataTable.Column>
+					<DataTable.Column
+						field='id'
+						width={41}
+						align='left'
+						hasBorderLeft
+						isSortable
+						isSorted={currentlySortedField === 'id'}
+						sortDirection={currentlySortedFieldDirection}
+					>
+						ID
+					</DataTable.Column>
 
-				<DataTable.Column
-					field="first_name"
-					width={100}
-					hasBorderLeft
-					hasBorderRight
-					isResizable
-					isSortable
-					isSorted={currentlySortedField === 'first_name'}
-					sortDirection={currentlySortedFieldDirection}
-				>
-					First
-				</DataTable.Column>
+					<DataTable.Column
+						className='parent'
+						field='first_name'
+						width={100}
+						hasBorderLeft
+						hasBorderRight
+						isResizable
+						isSortable
+						isSorted={currentlySortedField === 'first_name'}
+						sortDirection={currentlySortedFieldDirection}
+					>
+						First
+					</DataTable.Column>
 
-				<DataTable.Column
-					field="last_name"
-					align="left"
-					width={100}
-					hasBorderRight
-					isResizable
-					isSortable
-					isSorted={currentlySortedField === 'last_name'}
-					sortDirection={currentlySortedFieldDirection}
-				>
-					Last
-				</DataTable.Column>
+					<DataTable.Column
+						field='last_name'
+						align='left'
+						width={100}
+						hasBorderRight
+						isResizable
+						isSortable
+						isSorted={currentlySortedField === 'last_name'}
+						sortDirection={currentlySortedFieldDirection}
+					>
+						Last
+					</DataTable.Column>
 
-				<DataTable.Column
-					field="email"
-					align="left"
-					isSortable
-					isSorted={currentlySortedField === 'email'}
-					sortDirection={currentlySortedFieldDirection}
-				>
-					E-Mail
-				</DataTable.Column>
+					<DataTable.Column
+						field='email'
+						align='left'
+						isSortable
+						isSorted={currentlySortedField === 'email'}
+						sortDirection={currentlySortedFieldDirection}
+					>
+						E-Mail
+					</DataTable.Column>
 
-				<DataTable.Column
-					field="occupation"
-					align="left"
-					width={100}
-					hasBorderLeft
-					isSortable
-					isSorted={currentlySortedField === 'occupation'}
-					sortDirection={currentlySortedFieldDirection}
-				>
-					Occupation
-				</DataTable.Column>
+					<DataTable.Column
+						field='occupation'
+						align='left'
+						width={100}
+						hasBorderLeft
+						isSortable
+						isSorted={currentlySortedField === 'occupation'}
+						sortDirection={currentlySortedFieldDirection}
+					>
+						Occupation
+					</DataTable.Column>
 
-				<DataTable.Column
-					field="salary"
-					align="right"
-					width={100}
-					hasBorderLeft
-					isSortable
-					isSorted={currentlySortedField === 'salary'}
-					sortDirection={currentlySortedFieldDirection}
-				>
-					Salary
-				</DataTable.Column>
+					<DataTable.Column
+						field='salary'
+						align='right'
+						width={100}
+						hasBorderLeft
+						isSortable
+						isSorted={currentlySortedField === 'salary'}
+						sortDirection={currentlySortedFieldDirection}
+					>
+						Salary
+					</DataTable.Column>
 
-				<DataTable.Column
-					field="status"
-					align="center"
-					width={100}
-					hasBorderLeft
-				>
-					Status
-				</DataTable.Column>
-			</DataTable>
+					<DataTable.Column
+						field='status'
+						align='center'
+						width={100}
+						hasBorderLeft
+					>
+						Status
+					</DataTable.Column>
+				</DataTable>
+			</div>
 		);
 	},
 });

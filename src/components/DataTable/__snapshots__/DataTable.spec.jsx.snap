@@ -15,7 +15,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
   >
     <Table.Thead>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={false}
         isSelected={false}
@@ -1136,7 +1135,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
   >
     <Table.Thead>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={false}
         isSelected={false}
@@ -1214,7 +1212,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
         </Table.Th>
       </Table.Tr>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={false}
         isSelected={false}
@@ -2289,7 +2286,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
   >
     <Table.Thead>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={false}
         isSelected={false}
@@ -3574,7 +3570,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
   >
     <Table.Thead>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={false}
         isSelected={false}
@@ -3604,13 +3599,14 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           key="id"
           onClick={[Function]}
           rowSpan={null}
-          sortDirection="up"
+          sortDirection="down"
           width={41}
         >
           ID
         </Table.Th>
         <Table.Th
           align="left"
+          className="parent"
           hasBorderLeft={true}
           hasBorderRight={true}
           isResizable={true}
@@ -3619,7 +3615,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           key="first_name"
           onClick={[Function]}
           rowSpan={null}
-          sortDirection="up"
+          sortDirection="down"
           width={100}
         >
           First
@@ -3633,7 +3629,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           key="last_name"
           onClick={[Function]}
           rowSpan={null}
-          sortDirection="up"
+          sortDirection="down"
           width={100}
         >
           Last
@@ -3646,7 +3642,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           key="email"
           onClick={[Function]}
           rowSpan={null}
-          sortDirection="up"
+          sortDirection="down"
         >
           E-Mail
         </Table.Th>
@@ -3659,7 +3655,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           key="occupation"
           onClick={[Function]}
           rowSpan={null}
-          sortDirection="up"
+          sortDirection="down"
           width={100}
         >
           Occupation
@@ -3673,7 +3669,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           key="salary"
           onClick={[Function]}
           rowSpan={null}
-          sortDirection="up"
+          sortDirection="down"
           width={100}
         >
           Salary
@@ -3722,7 +3718,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={true}
           hasBorderRight={false}
           key="row0id"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": 41,
@@ -3733,10 +3729,11 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
         </Table.Td>
         <Table.Td
           align="left"
+          className="parent"
           hasBorderLeft={true}
           hasBorderRight={true}
           key="row0first_name"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": 100,
@@ -3750,7 +3747,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={false}
           hasBorderRight={true}
           key="row0last_name"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": 100,
@@ -3764,7 +3761,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row0email"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": undefined,
@@ -3778,7 +3775,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={true}
           hasBorderRight={false}
           key="row0occupation"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": 100,
@@ -3792,7 +3789,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={true}
           hasBorderRight={false}
           key="row0salary"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": 100,
@@ -3843,7 +3840,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={true}
           hasBorderRight={false}
           key="row1id"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": 41,
@@ -3854,10 +3851,11 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
         </Table.Td>
         <Table.Td
           align="left"
+          className="parent"
           hasBorderLeft={true}
           hasBorderRight={true}
           key="row1first_name"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": 100,
@@ -3871,7 +3869,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={false}
           hasBorderRight={true}
           key="row1last_name"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": 100,
@@ -3885,7 +3883,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row1email"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": undefined,
@@ -3899,7 +3897,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={true}
           hasBorderRight={false}
           key="row1occupation"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": 100,
@@ -3913,7 +3911,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={true}
           hasBorderRight={false}
           key="row1salary"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": 100,
@@ -3964,7 +3962,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={true}
           hasBorderRight={false}
           key="row2id"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": 41,
@@ -3975,24 +3973,32 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
         </Table.Td>
         <Table.Td
           align="left"
+          className="parent"
           hasBorderLeft={true}
           hasBorderRight={true}
           key="row2first_name"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": 100,
             }
           }
         >
-          Leonardo
+          <div>
+            Leon 
+            <div
+              className="child"
+            >
+              The Silly
+            </div>
+          </div>
         </Table.Td>
         <Table.Td
           align="left"
           hasBorderLeft={false}
           hasBorderRight={true}
           key="row2last_name"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": 100,
@@ -4006,7 +4012,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row2email"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": undefined,
@@ -4020,7 +4026,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={true}
           hasBorderRight={false}
           key="row2occupation"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": 100,
@@ -4034,7 +4040,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={true}
           hasBorderRight={false}
           key="row2salary"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": 100,
@@ -4085,7 +4091,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={true}
           hasBorderRight={false}
           key="row3id"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": 41,
@@ -4096,10 +4102,11 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
         </Table.Td>
         <Table.Td
           align="left"
+          className="parent"
           hasBorderLeft={true}
           hasBorderRight={true}
           key="row3first_name"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": 100,
@@ -4113,7 +4120,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={false}
           hasBorderRight={true}
           key="row3last_name"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": 100,
@@ -4127,7 +4134,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row3email"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": undefined,
@@ -4141,7 +4148,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={true}
           hasBorderRight={false}
           key="row3occupation"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": 100,
@@ -4155,7 +4162,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={true}
           hasBorderRight={false}
           key="row3salary"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": 100,
@@ -4206,7 +4213,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={true}
           hasBorderRight={false}
           key="row4id"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": 41,
@@ -4217,10 +4224,11 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
         </Table.Td>
         <Table.Td
           align="left"
+          className="parent"
           hasBorderLeft={true}
           hasBorderRight={true}
           key="row4first_name"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": 100,
@@ -4234,7 +4242,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={false}
           hasBorderRight={true}
           key="row4last_name"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": 100,
@@ -4248,7 +4256,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row4email"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": undefined,
@@ -4262,7 +4270,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={true}
           hasBorderRight={false}
           key="row4occupation"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": 100,
@@ -4276,7 +4284,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={true}
           hasBorderRight={false}
           key="row4salary"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": 100,
@@ -4327,7 +4335,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={true}
           hasBorderRight={false}
           key="row5id"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": 41,
@@ -4338,10 +4346,11 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
         </Table.Td>
         <Table.Td
           align="left"
+          className="parent"
           hasBorderLeft={true}
           hasBorderRight={true}
           key="row5first_name"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": 100,
@@ -4355,7 +4364,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={false}
           hasBorderRight={true}
           key="row5last_name"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": 100,
@@ -4369,7 +4378,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row5email"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": undefined,
@@ -4383,7 +4392,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={true}
           hasBorderRight={false}
           key="row5occupation"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": 100,
@@ -4397,7 +4406,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={true}
           hasBorderRight={false}
           key="row5salary"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": 100,
@@ -4448,7 +4457,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={true}
           hasBorderRight={false}
           key="row6id"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": 41,
@@ -4459,10 +4468,11 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
         </Table.Td>
         <Table.Td
           align="left"
+          className="parent"
           hasBorderLeft={true}
           hasBorderRight={true}
           key="row6first_name"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": 100,
@@ -4476,7 +4486,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={false}
           hasBorderRight={true}
           key="row6last_name"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": 100,
@@ -4490,7 +4500,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row6email"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": undefined,
@@ -4504,7 +4514,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={true}
           hasBorderRight={false}
           key="row6occupation"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": 100,
@@ -4518,7 +4528,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={true}
           hasBorderRight={false}
           key="row6salary"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": 100,
@@ -4569,7 +4579,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={true}
           hasBorderRight={false}
           key="row7id"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": 41,
@@ -4580,10 +4590,11 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
         </Table.Td>
         <Table.Td
           align="left"
+          className="parent"
           hasBorderLeft={true}
           hasBorderRight={true}
           key="row7first_name"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": 100,
@@ -4597,7 +4608,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={false}
           hasBorderRight={true}
           key="row7last_name"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": 100,
@@ -4611,7 +4622,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row7email"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": undefined,
@@ -4625,7 +4636,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={true}
           hasBorderRight={false}
           key="row7occupation"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": 100,
@@ -4639,7 +4650,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={true}
           hasBorderRight={false}
           key="row7salary"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": 100,
@@ -4690,7 +4701,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={true}
           hasBorderRight={false}
           key="row8id"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": 41,
@@ -4701,10 +4712,11 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
         </Table.Td>
         <Table.Td
           align="left"
+          className="parent"
           hasBorderLeft={true}
           hasBorderRight={true}
           key="row8first_name"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": 100,
@@ -4718,7 +4730,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={false}
           hasBorderRight={true}
           key="row8last_name"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": 100,
@@ -4732,7 +4744,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row8email"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": undefined,
@@ -4746,7 +4758,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={true}
           hasBorderRight={false}
           key="row8occupation"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": 100,
@@ -4760,7 +4772,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={true}
           hasBorderRight={false}
           key="row8salary"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": 100,
@@ -4811,7 +4823,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={true}
           hasBorderRight={false}
           key="row9id"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": 41,
@@ -4822,10 +4834,11 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
         </Table.Td>
         <Table.Td
           align="left"
+          className="parent"
           hasBorderLeft={true}
           hasBorderRight={true}
           key="row9first_name"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": 100,
@@ -4839,7 +4852,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={false}
           hasBorderRight={true}
           key="row9last_name"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": 100,
@@ -4853,7 +4866,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row9email"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": undefined,
@@ -4867,7 +4880,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={true}
           hasBorderRight={false}
           key="row9occupation"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": 100,
@@ -4881,7 +4894,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={true}
           hasBorderRight={false}
           key="row9salary"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": 100,
@@ -4924,7 +4937,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
   >
     <Table.Thead>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={false}
         isSelected={false}
@@ -6045,7 +6057,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 06.empt
   >
     <Table.Thead>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={false}
         isSelected={false}
@@ -6112,7 +6123,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 06.empt
     </Table.Thead>
     <Table.Tbody>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={true}
         isSelected={false}
@@ -6180,7 +6190,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 06.empt
         />
       </Table.Tr>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={true}
         isSelected={false}
@@ -6248,7 +6257,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 06.empt
         />
       </Table.Tr>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={true}
         isSelected={false}
@@ -6316,7 +6324,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 06.empt
         />
       </Table.Tr>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={true}
         isSelected={false}
@@ -6384,7 +6391,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 06.empt
         />
       </Table.Tr>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={true}
         isSelected={false}
@@ -6452,7 +6458,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 06.empt
         />
       </Table.Tr>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={true}
         isSelected={false}
@@ -6520,7 +6525,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 06.empt
         />
       </Table.Tr>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={true}
         isSelected={false}
@@ -6588,7 +6592,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 06.empt
         />
       </Table.Tr>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={true}
         isSelected={false}
@@ -6656,7 +6659,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 06.empt
         />
       </Table.Tr>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={true}
         isSelected={false}
@@ -6724,7 +6726,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 06.empt
         />
       </Table.Tr>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={true}
         isSelected={false}
@@ -6822,7 +6823,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
   >
     <Table.Thead>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={false}
         isSelected={false}
@@ -6889,7 +6889,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
     </Table.Thead>
     <Table.Tbody>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={true}
         isSelected={false}
@@ -6957,7 +6956,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
         />
       </Table.Tr>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={true}
         isSelected={false}
@@ -7025,7 +7023,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
         />
       </Table.Tr>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={true}
         isSelected={false}
@@ -7093,7 +7090,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
         />
       </Table.Tr>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={true}
         isSelected={false}
@@ -7161,7 +7157,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
         />
       </Table.Tr>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={true}
         isSelected={false}
@@ -7229,7 +7224,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
         />
       </Table.Tr>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={true}
         isSelected={false}
@@ -7297,7 +7291,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
         />
       </Table.Tr>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={true}
         isSelected={false}
@@ -7365,7 +7358,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
         />
       </Table.Tr>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={true}
         isSelected={false}
@@ -7433,7 +7425,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
         />
       </Table.Tr>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={true}
         isSelected={false}
@@ -7501,7 +7492,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
         />
       </Table.Tr>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={true}
         isSelected={false}
@@ -7569,7 +7559,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
         />
       </Table.Tr>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={true}
         isSelected={false}
@@ -7637,7 +7626,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
         />
       </Table.Tr>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={true}
         isSelected={false}
@@ -7705,7 +7693,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
         />
       </Table.Tr>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={true}
         isSelected={false}
@@ -7773,7 +7760,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
         />
       </Table.Tr>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={true}
         isSelected={false}
@@ -7841,7 +7827,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
         />
       </Table.Tr>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={true}
         isSelected={false}
@@ -7935,7 +7920,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 08.empt
   >
     <Table.Thead>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={false}
         isSelected={false}
@@ -8008,7 +7992,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 08.empt
     </Table.Thead>
     <Table.Tbody>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={true}
         isSelected={false}
@@ -8076,7 +8059,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 08.empt
         />
       </Table.Tr>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={true}
         isSelected={false}
@@ -8144,7 +8126,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 08.empt
         />
       </Table.Tr>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={true}
         isSelected={false}
@@ -8212,7 +8193,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 08.empt
         />
       </Table.Tr>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={true}
         isSelected={false}
@@ -8280,7 +8260,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 08.empt
         />
       </Table.Tr>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={true}
         isSelected={false}
@@ -8348,7 +8327,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 08.empt
         />
       </Table.Tr>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={true}
         isSelected={false}
@@ -8416,7 +8394,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 08.empt
         />
       </Table.Tr>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={true}
         isSelected={false}
@@ -8484,7 +8461,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 08.empt
         />
       </Table.Tr>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={true}
         isSelected={false}
@@ -8552,7 +8528,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 08.empt
         />
       </Table.Tr>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={true}
         isSelected={false}
@@ -8620,7 +8595,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 08.empt
         />
       </Table.Tr>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={true}
         isSelected={false}
@@ -8708,7 +8682,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.load
   >
     <Table.Thead>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={false}
         isSelected={false}
@@ -8775,7 +8748,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.load
     </Table.Thead>
     <Table.Tbody>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={true}
         isSelected={false}
@@ -8843,7 +8815,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.load
         />
       </Table.Tr>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={true}
         isSelected={false}
@@ -8911,7 +8882,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.load
         />
       </Table.Tr>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={true}
         isSelected={false}
@@ -8979,7 +8949,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.load
         />
       </Table.Tr>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={true}
         isSelected={false}
@@ -9047,7 +9016,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.load
         />
       </Table.Tr>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={true}
         isSelected={false}
@@ -9115,7 +9083,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.load
         />
       </Table.Tr>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={true}
         isSelected={false}
@@ -9183,7 +9150,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.load
         />
       </Table.Tr>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={true}
         isSelected={false}
@@ -9251,7 +9217,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.load
         />
       </Table.Tr>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={true}
         isSelected={false}
@@ -9319,7 +9284,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.load
         />
       </Table.Tr>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={true}
         isSelected={false}
@@ -9387,7 +9351,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.load
         />
       </Table.Tr>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={true}
         isSelected={false}
@@ -9475,7 +9438,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.min-
   >
     <Table.Thead>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={false}
         isSelected={false}
@@ -10042,7 +10004,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.min-
         </Table.Td>
       </Table.Tr>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={true}
         isSelected={false}
@@ -10138,7 +10099,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.min-
         />
       </Table.Tr>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={true}
         isSelected={false}
@@ -10234,7 +10194,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.min-
         />
       </Table.Tr>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={true}
         isSelected={false}
@@ -10354,12 +10313,12 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.fixe
           className="lucid-DataTable-fixed-header-fixed-columns-Table"
           density="extended"
           hasBorder={false}
+          hasHover={true}
           hasLightHeader={false}
           hasWordWrap={true}
         >
           <Table.Thead>
             <Table.Tr
-              isActionable={false}
               isActive={false}
               isDisabled={false}
               isSelected={false}
@@ -10403,12 +10362,12 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.fixe
           className="lucid-DataTable-fixed-header-unfixed-columns-Table"
           density="extended"
           hasBorder={false}
+          hasHover={true}
           hasLightHeader={false}
           hasWordWrap={true}
         >
           <Table.Thead>
             <Table.Tr
-              isActionable={false}
               isActive={false}
               isDisabled={false}
               isSelected={false}
@@ -10500,6 +10459,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.fixe
           className="lucid-DataTable-fixed-body-fixed-columns-Table"
           density="extended"
           hasBorder={false}
+          hasHover={true}
           hasLightHeader={false}
           hasWordWrap={false}
         >
@@ -10513,7 +10473,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.fixe
               onClick={[Function]}
               style={
                 Object {
-                  "height": 45,
+                  "height": 50,
                 }
               }
             >
@@ -10549,12 +10509,12 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.fixe
               isActionable={false}
               isActive={false}
               isDisabled={false}
-              isSelected={false}
+              isSelected={true}
               key="row1"
               onClick={[Function]}
               style={
                 Object {
-                  "height": 45,
+                  "height": 50,
                 }
               }
             >
@@ -10568,7 +10528,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.fixe
                 <Checkbox
                   isDisabled={false}
                   isIndeterminate={false}
-                  isSelected={false}
+                  isSelected={true}
                   onSelect={[Function]}
                 />
               </Table.Td>
@@ -10588,14 +10548,14 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.fixe
             </Table.Tr>
             <Table.Tr
               isActionable={false}
-              isActive={false}
+              isActive={true}
               isDisabled={false}
               isSelected={false}
               key="row2"
               onClick={[Function]}
               style={
                 Object {
-                  "height": 45,
+                  "height": 50,
                 }
               }
             >
@@ -10636,7 +10596,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.fixe
               onClick={[Function]}
               style={
                 Object {
-                  "height": 45,
+                  "height": 50,
                 }
               }
             >
@@ -10677,7 +10637,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.fixe
               onClick={[Function]}
               style={
                 Object {
-                  "height": 45,
+                  "height": 50,
                 }
               }
             >
@@ -10718,7 +10678,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.fixe
               onClick={[Function]}
               style={
                 Object {
-                  "height": 45,
+                  "height": 50,
                 }
               }
             >
@@ -10759,7 +10719,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.fixe
               onClick={[Function]}
               style={
                 Object {
-                  "height": 45,
+                  "height": 50,
                 }
               }
             >
@@ -10800,7 +10760,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.fixe
               onClick={[Function]}
               style={
                 Object {
-                  "height": 45,
+                  "height": 50,
                 }
               }
             >
@@ -10841,7 +10801,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.fixe
               onClick={[Function]}
               style={
                 Object {
-                  "height": 45,
+                  "height": 50,
                 }
               }
             >
@@ -10882,7 +10842,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.fixe
               onClick={[Function]}
               style={
                 Object {
-                  "height": 45,
+                  "height": 50,
                 }
               }
             >
@@ -10928,6 +10888,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.fixe
           className="lucid-DataTable-fixed-body-unfixed-columns-Table"
           density="extended"
           hasBorder={false}
+          hasHover={true}
           hasLightHeader={false}
           hasWordWrap={false}
         >
@@ -10941,7 +10902,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.fixe
               onClick={[Function]}
               style={
                 Object {
-                  "height": 45,
+                  "height": 50,
                 }
               }
             >
@@ -11028,12 +10989,12 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.fixe
               isActionable={false}
               isActive={false}
               isDisabled={false}
-              isSelected={false}
+              isSelected={true}
               key="row1"
               onClick={[Function]}
               style={
                 Object {
-                  "height": 45,
+                  "height": 50,
                 }
               }
             >
@@ -11118,14 +11079,14 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.fixe
             </Table.Tr>
             <Table.Tr
               isActionable={false}
-              isActive={false}
+              isActive={true}
               isDisabled={false}
               isSelected={false}
               key="row2"
               onClick={[Function]}
               style={
                 Object {
-                  "height": 45,
+                  "height": 50,
                 }
               }
             >
@@ -11217,7 +11178,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.fixe
               onClick={[Function]}
               style={
                 Object {
-                  "height": 45,
+                  "height": 50,
                 }
               }
             >
@@ -11309,7 +11270,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.fixe
               onClick={[Function]}
               style={
                 Object {
-                  "height": 45,
+                  "height": 50,
                 }
               }
             >
@@ -11401,7 +11362,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.fixe
               onClick={[Function]}
               style={
                 Object {
-                  "height": 45,
+                  "height": 50,
                 }
               }
             >
@@ -11493,7 +11454,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.fixe
               onClick={[Function]}
               style={
                 Object {
-                  "height": 45,
+                  "height": 50,
                 }
               }
             >
@@ -11585,7 +11546,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.fixe
               onClick={[Function]}
               style={
                 Object {
-                  "height": 45,
+                  "height": 50,
                 }
               }
             >
@@ -11677,7 +11638,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.fixe
               onClick={[Function]}
               style={
                 Object {
-                  "height": 45,
+                  "height": 50,
                 }
               }
             >
@@ -11769,7 +11730,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.fixe
               onClick={[Function]}
               style={
                 Object {
-                  "height": 45,
+                  "height": 50,
                 }
               }
             >

@@ -14,11 +14,14 @@ exports[`Breadcrumb [common] example testing should match snapshot(s) for 1.basi
       <a
         href="#"
       >
-        <HomeIcon />
+        Start
       </a>
-      <SeparatorIcon
-        className="lucid-Breadcrumb-SeparatorIcon"
-      />
+      <span
+        className="lucid-Breadcrumb-BreadcrumbSeparator"
+      >
+        <span />
+        <span />
+      </span>
     </li>
     <li
       className="lucid-Breadcrumb-Item"
@@ -29,21 +32,28 @@ exports[`Breadcrumb [common] example testing should match snapshot(s) for 1.basi
       >
         List
       </a>
-      <SeparatorIcon
-        className="lucid-Breadcrumb-SeparatorIcon"
-      />
+      <span
+        className="lucid-Breadcrumb-BreadcrumbSeparator"
+      >
+        <span />
+        <span />
+      </span>
     </li>
     <li
       className="lucid-Breadcrumb-Item"
       key=".$item"
     >
-      Item
+      <a
+        href="#"
+      >
+        Item
+      </a>
     </li>
   </ul>
 </nav>
 `;
 
-exports[`Breadcrumb [common] example testing should match snapshot(s) for 2.map 1`] = `
+exports[`Breadcrumb [common] example testing should match snapshot(s) for 2.rich 1`] = `
 <nav
   className="lucid-Breadcrumb"
 >
@@ -52,48 +62,69 @@ exports[`Breadcrumb [common] example testing should match snapshot(s) for 2.map 
   >
     <li
       className="lucid-Breadcrumb-Item"
-      key=".0:$Foo"
+      key=".$home"
     >
       <a
         href="#"
       >
-        Foo
+        <NotchedTag
+          size="small"
+          tagStyle="style-two"
+          type="stroke"
+        >
+          IO
+        </NotchedTag>
+        <span>
+          <span>
+            Foo
+          </span>
+          <span
+            style={
+              Object {
+                "fontWeight": 400,
+              }
+            }
+          >
+             (1234)
+          </span>
+        </span>
       </a>
-      <SeparatorIcon
-        className="lucid-Breadcrumb-SeparatorIcon"
-      />
+      <span
+        className="lucid-Breadcrumb-BreadcrumbSeparator"
+      >
+        <span />
+        <span />
+      </span>
     </li>
     <li
       className="lucid-Breadcrumb-Item"
-      key=".0:$Bar"
+      key=".$list"
     >
       <a
         href="#"
       >
-        Bar
+        <NotchedTag
+          size="small"
+          tagStyle="style-three"
+          type="filled"
+        >
+          LI
+        </NotchedTag>
+        <span>
+          <span>
+            Bar
+          </span>
+          <span
+            style={
+              Object {
+                "fontWeight": 400,
+              }
+            }
+          >
+             (1234)
+          </span>
+        </span>
       </a>
-      <SeparatorIcon
-        className="lucid-Breadcrumb-SeparatorIcon"
-      />
-    </li>
-    <li
-      className="lucid-Breadcrumb-Item"
-      key=".0:$Baz"
-    >
-      <a
-        href="#"
-      >
-        Baz
-      </a>
-      <SeparatorIcon
-        className="lucid-Breadcrumb-SeparatorIcon"
-      />
-    </li>
-    <li
-      className="lucid-Breadcrumb-Item"
-      key=".$qux"
-    >
-      Qux
     </li>
   </ul>
 </nav>

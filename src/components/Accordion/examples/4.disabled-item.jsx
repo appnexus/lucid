@@ -6,7 +6,7 @@ export default createClass({
 	render() {
 		return (
 			<Accordion>
-				<Accordion.Item Header="Peter Venkman">
+				<Accordion.Item Header='Peter Venkman'>
 					Peter Venkman, Ph.D. is a fictional character from the Ghostbusters
 					franchise. He appears in the films Ghostbusters and Ghostbusters II
 					and in the animated television series The Real Ghostbusters. In both
@@ -14,7 +14,7 @@ export default createClass({
 					the animated series first by Lorenzo Music and then by Dave Coulier.
 					He is a parapsychologist and the leader of the Ghostbusters.
 				</Accordion.Item>
-				<Accordion.Item Header="Ray Stantz" isDisabled={true}>
+				<Accordion.Item Header='Ray Stantz' isDisabled={true}>
 					Raymond "Ray" Stantz, Ph.D. is a fictional character from the
 					Ghostbusters franchise. He appears in the films Ghostbusters,
 					Ghostbusters II, Casper, and the animated television series The Real
@@ -23,7 +23,7 @@ export default createClass({
 					member of the Ghostbusters and one of the three doctors of
 					parapsychology, along with Dr. Peter Venkman and Dr. Egon Spengler.
 				</Accordion.Item>
-				<Accordion.Item Header="Egon Spengler">
+				<Accordion.Item Header='Egon Spengler'>
 					Egon Spengler, Ph.D. is a fictional character from the Ghostbusters
 					franchise. He appears in the films Ghostbusters and Ghostbusters II,
 					in the animated television series The Real Ghostbusters, and later in

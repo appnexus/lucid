@@ -24,7 +24,7 @@ const colorList = [
 		category: 'Primary',
 		description:
 			"The primary color is the most prominent color used throughout lucid. It's great for drawing the user's eye to particular components.",
-		variables: ['color-primaryLight', 'color-primaryMedium', 'color-primary'],
+		variables: ['color-primaryLight', 'color-primary'],
 	},
 	{
 		category: 'Text Colors',
@@ -62,32 +62,21 @@ const colorList = [
 	{
 		category: 'Featured Default',
 		variables: [
-			'featured-color-default-gradientStartColor',
 			'featured-color-default-backgroundColor',
-			'featured-color-default-gradientEndColor',
 			'featured-color-default-borderColor',
 		],
 	},
 	{
 		category: 'Featured Primary',
 		variables: [
-			'featured-color-primary-backgroundColorLight',
 			'featured-color-primary-backgroundColor',
-			'featured-color-primary-borderColorLite',
-			'featured-color-primary-gradientStartColor',
-			'featured-color-primary-gradientEndColor',
 			'featured-color-primary-borderColor',
-			'featured-color-primary-colorHover',
 		],
 	},
 	{
 		category: 'Featured Success',
 		variables: [
-			'featured-color-success-backgroundColorLight',
 			'featured-color-success-backgroundColor',
-			'featured-color-success-borderColorLite',
-			'featured-color-success-gradientStartColor',
-			'featured-color-success-gradientEndColor',
 			'featured-color-success-borderColor',
 			'featured-color-success-colorHover',
 		],
@@ -95,11 +84,7 @@ const colorList = [
 	{
 		category: 'Featured Info',
 		variables: [
-			'featured-color-info-backgroundColorLight',
 			'featured-color-info-backgroundColor',
-			'featured-color-info-borderColorLite',
-			'featured-color-info-gradientStartColor',
-			'featured-color-info-gradientEndColor',
 			'featured-color-info-borderColor',
 			'featured-color-info-colorHover',
 		],
@@ -107,11 +92,7 @@ const colorList = [
 	{
 		category: 'Featured Warning',
 		variables: [
-			'featured-color-warning-backgroundColorLight',
 			'featured-color-warning-backgroundColor',
-			'featured-color-warning-borderColorLite',
-			'featured-color-warning-gradientStartColor',
-			'featured-color-warning-gradientEndColor',
 			'featured-color-warning-borderColor',
 			'featured-color-warning-colorHover',
 		],
@@ -119,11 +100,7 @@ const colorList = [
 	{
 		category: 'Featured Danger',
 		variables: [
-			'featured-color-danger-backgroundColorLight',
 			'featured-color-danger-backgroundColor',
-			'featured-color-danger-borderColorLite',
-			'featured-color-danger-gradientStartColor',
-			'featured-color-danger-gradientEndColor',
 			'featured-color-danger-borderColor',
 			'featured-color-danger-colorHover',
 		],

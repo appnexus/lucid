@@ -3,7 +3,7 @@ import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import MinusCircleIcon from '../Icon/MinusCircleIcon/MinusCircleIcon';
 import SuccessIcon from '../Icon/SuccessIcon/SuccessIcon';
-import CrossIcon from '../Icon/CrossIcon/CrossIcon';
+import CloseIcon from '../Icon/CloseIcon/CloseIcon';
 import InfoIcon from '../Icon/InfoIcon/InfoIcon';
 import WarningIcon from '../Icon/WarningIcon/WarningIcon';
 import { lucidClassNames } from '../../util/style-helpers';
@@ -29,7 +29,7 @@ const responsiveMap = {
 
 function defaultIcon(kind, responsiveMode) {
 	return kind === 'default' ? null : kind === 'container' ? null : kind ===
-	'success' ? (
+	  'success' ? (
 		<SuccessIcon className={cx('&-Icon', `&-Icon-is-${responsiveMode}`)} />
 	) : kind === 'danger' ? (
 		<MinusCircleIcon className={cx('&-Icon', `&-Icon-is-${responsiveMode}`)} />
@@ -79,6 +79,17 @@ const Selection = createClass({
 			'warning',
 		])`
 			Applies an icon and styles for the kind of selection.
+		`,
+
+		isTop: bool`
+			Apply to the top of a nested sequence of Selection components.
+			Adds some spacing for a list of top level Selections with nested Selctions inside each.
+		`,
+
+		isFilled: bool`
+			Only applies to \`container\` Selection components.
+			Fills with a darker gray background.
+			Defaults to false.
 		`,
 
 		isRemovable: bool`
@@ -143,6 +154,8 @@ const Selection = createClass({
 			children,
 			hasBackground,
 			isBold,
+			isFilled,
+			isTop,
 			responsiveMode: responsiveModeInput,
 			...passThroughs
 		} = this.props;
@@ -163,7 +176,7 @@ const Selection = createClass({
 			? createElement(iconChildren.type, {
 					...iconChildren.props,
 					className: cx('&-Icon', iconChildren.props.className),
-				})
+			  })
 			: defaultIcon(kind, responsiveMode);
 
 		return (
@@ -176,6 +189,9 @@ const Selection = createClass({
 					{
 						'&-has-background': hasBackground,
 						'&-is-bold': isBold,
+						'&-is-filled': isFilled,
+						'&-is-top': isTop,
+						'&-no-title': _.isEmpty(labelProps),
 					},
 					className
 				)}
@@ -190,11 +206,13 @@ const Selection = createClass({
 						/>
 
 						{isRemovable ? (
-							<CrossIcon
+							<CloseIcon
 								isClickable
-								size={isSmall ? 44 : 26}
-								viewBox={isSmall ? '-6 -6 28 28' : '-3 -2 20 20'}
-								className={cx('&-close-button')}
+								size={!isSmall ? 8 : 16}
+								className={cx(
+									'&-close-button',
+									isSmall && '&-close-button-is-small'
+								)}
 								onClick={this.handleRemove}
 							/>
 						) : null}

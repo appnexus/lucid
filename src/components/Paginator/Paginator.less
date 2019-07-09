@@ -3,7 +3,12 @@
 
 .@{prefix}-Paginator {
 	font-size: @fontSize;
-	font-family: @fontFamily;
+	color: @color-neutral-9;
+
+	&-total-count {
+		flex: 1;
+		text-transform: capitalize;
+	}
 
 	&-rows-per-page-label {
 		margin-right: @size-XS;
@@ -23,19 +28,12 @@
 		text-align: center;
 		width: 45px;
 		margin-right: @size-S;
+		color: @color-neutral-9;
 	}
 
 	& > .@{prefix}-Button,
 	& > span {
 		margin-right: @size-S;
-	}
-
-	.@{prefix}-Button {
-		.@{prefix}-Button-content {
-			& > .@{prefix}-Icon {
-				fill: @color-textColor;
-			}
-		}
 	}
 }
 

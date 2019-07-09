@@ -33,7 +33,7 @@ const EqualsIcon = createClass({
 				{..._.pick(passThroughs, _.keys(Icon.propTypes))}
 				className={cx('&', className)}
 			>
-				<path d="M2 5v2h12V5H2zm0 6h12V9H2v2z" />
+				<path d='M.5 5.5h15m-15 5h15' />
 			</Icon>
 		);
 	},

@@ -62,7 +62,7 @@ describe('ExpanderPanel', () => {
 
 		describe('Header', () => {
 			it('renders the value in the header in a `span` element', () => {
-				const wrapper = shallow(<ExpanderPanel Header="yolo" />);
+				const wrapper = shallow(<ExpanderPanel Header='yolo' />);
 				const headerText = wrapper
 					.find('.lucid-ExpanderPanel-header')
 					.children()
@@ -81,7 +81,7 @@ describe('ExpanderPanel', () => {
 			it('passes through all props not defined in `propTypes` to the root element', () => {
 				const wrapper = shallow(
 					<ExpanderPanel
-						className="wut"
+						className='wut'
 						isExpanded={true}
 						onToggle={_.noop}
 						style={{ marginRight: 10 }}
@@ -116,7 +116,10 @@ describe('ExpanderPanel', () => {
 				.find('.lucid-ExpanderPanel-header')
 				.first()
 				.simulate('click');
-			wrapper.find('.lucid-ExpanderPanel-icon').simulate('click');
+			wrapper
+				.find('.lucid-ExpanderPanel-icon')
+				.first()
+				.simulate('click');
 
 			assert.equal(
 				onToggle.callCount,
@@ -135,7 +138,10 @@ describe('ExpanderPanel', () => {
 				.find('.lucid-ExpanderPanel-header')
 				.first()
 				.simulate('click');
-			wrapper.find('.lucid-ExpanderPanel-icon').simulate('click');
+			wrapper
+				.find('.lucid-ExpanderPanel-icon')
+				.first()
+				.simulate('click');
 
 			assert.equal(
 				onToggle.args[0][0],
@@ -157,7 +163,10 @@ describe('ExpanderPanel', () => {
 				.find('.lucid-ExpanderPanel-header')
 				.first()
 				.simulate('click');
-			wrapper.find('.lucid-ExpanderPanel-icon').simulate('click');
+			wrapper
+				.find('.lucid-ExpanderPanel-icon')
+				.first()
+				.simulate('click');
 
 			assert.equal(
 				onToggle.args[0][0],

@@ -185,7 +185,7 @@ export default createClass({
 			<LineChart
 				data={data}
 				yAxisFields={['apples', 'oranges', 'pears']}
-				yAxisTitle="Fruit Count"
+				yAxisTitle='Fruit Count'
 			/>
 		);
 	},

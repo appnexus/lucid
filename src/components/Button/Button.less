@@ -1,7 +1,7 @@
 @import (reference) '../../styles/variables.less';
 @import (reference) '../../styles/mixins.less';
 
-@Button-size-padding: @size-standard;
+@Button-size-padding: 9px;
 @Button-size-height: @size-standard-height;
 @Button-size-height-small: @size-standard-height - 8;
 @Button-size-height-large: @size-standard-height + 12;
@@ -11,18 +11,17 @@
 	// Mixins
 	.no-safari-flicker();
 	.box-sizing();
-	.gradient-animation(@featured-color-default-gradientStartColor, @featured-color-default-gradientEndColor);
 
+	background-color: @featured-color-default-backgroundColor;
 	cursor: pointer;
 	height: @Button-size-height;
-	border: 1px solid @featured-color-default-borderColor;
+	border: @border-standardBorder;
 	border-radius: @Button-size-borderRadius;
 	font-size: @fontSize;
-	font-family: @fontFamily;
-	letter-spacing: 0.05em;
+	font-weight: @font-weight-medium;
 	padding: 0 @Button-size-padding;
 	outline: none;
-	color: @color-black;
+	color: @color-darkGray;
 
 	// from normalize.css@4.1.1
 	margin: 0; /* 2 */
@@ -33,6 +32,15 @@
 
 	white-space: nowrap;
 
+	&:hover:not(&-is-disabled) {
+		background-color: @featured-color-default-backgroundColorHover;
+	}
+
+	&:active:not(&-is-disabled),
+	&:focus:not(&-is-disabled) {
+		background-color: @featured-color-default-backgroundColorFocus;
+	}
+
 	// don't show Firefox's focus ring: https://github.com/appnexus/lucid/issues/292
 	&::-moz-focus-inner {
 		border: 0;
@@ -41,7 +49,16 @@
 	&::before { border-radius: @Button-size-borderRadius; }
 
 	&&-has-only-icon {
-		padding: 0 5px;
+		padding: 0 7px;
+
+		.@{prefix}-Button-content > .@{prefix}-Icon {
+			margin-right: 0;
+		}
+	}
+
+	.@{prefix}-Icon {
+		width: 12px;
+		height: 12px;
 	}
 
 	& &-content {
@@ -49,9 +66,11 @@
 		justify-content: center;
 		align-items: center;
 		height: 100%;
+		line-height: 1; // normalize FireFox and Chrome https://stackoverflow.com/a/7856737/895558
 
 		> .@{prefix}-Icon {
 			transition: color @timing-animation-hover, fill @timing-animation-hover;
+			margin-right: 6px;
 		}
 
 		> span {
@@ -61,119 +80,76 @@
 
 	// Types
 	&&-primary {
-		.gradient-animation(@featured-color-primary-gradientStartColor, @featured-color-primary-gradientEndColor);
-
 		&.@{prefix}-Button-is-disabled {
-			.gradient-reset(linear-gradient(@standardGradient, @featured-color-primary-gradientStartColor, @featured-color-primary-gradientEndColor));
+			opacity: @opacity-disabled;
+
+			.@{prefix}-Icon {
+				stroke: @color-white;
+			}
 
 			&:hover {
 				text-decoration: none;
 			}
 		}
-
 		.bold();
 
+		background-color: @featured-color-primary-backgroundColor;
 		border-color: @featured-color-primary-borderColor;
 		color: @color-white;
 
-		.@{prefix}-Icon { fill: @color-white; }
-	}
+		.@{prefix}-Icon { stroke: @color-white; }
 
-	&&-success {
-		.gradient-animation(@featured-color-success-gradientStartColor, @featured-color-success-gradientEndColor);
-
-		&.@{prefix}-Button-is-disabled {
-			.gradient-reset(linear-gradient(@standardGradient, @featured-color-success-gradientStartColor, @featured-color-success-gradientEndColor));
-
-			&:hover {
-				text-decoration: none;
-			}
+		&:hover:not(.@{prefix}-Button-is-disabled) {
+			background-color: @featured-color-primary-backgroundColor;
+			.opacity(@opacity-hover);
 		}
 
-		.bold();
-
-		color: @color-white;
-		border-color: @featured-color-success-borderColor;
-
-		&:focus {
-			.focus-glow(@featured-color-success-30);
+		&:active:not(.@{prefix}-Button-is-disabled),
+		&:focus:not(.@{prefix}-Button-is-disabled) {
+			background-color: @featured-color-primary-colorActive;
+			.opacity(1);
 		}
-
-		.@{prefix}-Icon { fill: @color-white; }
-	}
-
-	&&-info {
-		.gradient-animation(@featured-color-info-gradientStartColor, @featured-color-info-gradientEndColor);
-
-		&.@{prefix}-Button-is-disabled {
-			.gradient-reset(linear-gradient(@standardGradient, @featured-color-info-gradientStartColor, @featured-color-info-gradientEndColor));
-
-			&:hover {
-				text-decoration: none;
-			}
-		}
-
-		.bold();
-
-		border-color: @featured-color-info-borderColor;
-		color: @color-white;
-
-		&:focus {
-			.focus-glow(@featured-color-info-30);
-		}
-
-		.@{prefix}-Icon { fill: @color-white; }
-	}
-
-	&&-warning {
-		.gradient-animation(@featured-color-warning-gradientStartColor, @featured-color-warning-gradientEndColor);
-		&.@{prefix}-Button-is-disabled {
-			.gradient-reset(linear-gradient(@standardGradient, @featured-color-warning-gradientStartColor, @featured-color-warning-gradientEndColor));
-
-			&:hover {
-				text-decoration: none;
-			}
-		}
-
-		.bold();
-
-		border-color: @featured-color-warning-borderColor;
-		color: @color-white;
-
-		&:focus {
-			.focus-glow(@featured-color-warning-30);
-		}
-
-		.@{prefix}-Icon { fill: @color-white; }
 	}
 
 	&&-danger {
-		.gradient-animation(@featured-color-danger-gradientStartColor, @featured-color-danger-gradientEndColor);
 		&.@{prefix}-Button-is-disabled {
-			.gradient-reset(linear-gradient(@standardGradient, @featured-color-danger-gradientStartColor, @featured-color-danger-gradientEndColor));
+			opacity: @opacity-disabled;
+
+			.@{prefix}-Icon {
+				stroke: @color-white;
+			}
 
 			&:hover {
 				text-decoration: none;
 			}
 		}
-
 		.bold();
 
+		background-color: @featured-color-danger-backgroundColor;
 		border-color: @featured-color-danger-borderColor;
 		color: @color-white;
 
-		&:focus {
-			.focus-glow(@featured-color-danger-30);
+		.@{prefix}-Icon { stroke: @color-white; }
+
+		&:hover:not(.@{prefix}-Button-is-disabled) {
+			background-color: @featured-color-danger-backgroundColor;
+			.opacity(@opacity-hover);
 		}
 
-		.@{prefix}-Icon { fill: @color-white; }
+		&:active:not(.@{prefix}-Button-is-disabled),
+		&:focus:not(.@{prefix}-Button-is-disabled) {
+			background-color: @featured-color-danger-colorActive;
+			.opacity(1);
+		}
 	}
 
 	&&-link {
-		.gradient-reset();
-
 		&.@{prefix}-Button-is-disabled {
-			.gradient-reset(linear-gradient(@standardGradient, @color-transparent, @color-transparent));
+			opacity: @opacity-disabled;
+
+			.@{prefix}-Icon {
+				stroke: @featured-color-default-iconColorDisabled;
+			}
 
 			&:hover {
 				text-decoration: none;
@@ -182,35 +158,21 @@
 
 		border: none;
 		background: none;
-		color: @color-linkColor;
 		padding: 0;
 
 		&:hover,
 		&:active,
 		&:focus {
-			.@{prefix}-Icon { fill: @color-linkColorHover; }
-
-			background: none;
-			color: @color-linkColorHover;
+			background-color: @featured-color-default-backgroundColor;
 			text-decoration: underline;
-			box-shadow: none;
 		}
 
 		&:active::before {
 			opacity: 0;
 		}
 
-		.@{prefix}-Button-content {
-			line-height: 1em;
-		}
-
 		.@{prefix}-Icon {
-			fill: @color-primary;
-			margin-right: 0.25em;
-
-			+ span {
-				line-height: 1.4em;
-			}
+			stroke: @color-primary;
 		}
 	}
 
@@ -225,43 +187,27 @@
 		.gradient-reset();
 
 		&.@{prefix}-Button-is-disabled {
-			.gradient-reset(linear-gradient(@standardGradient, @color-transparent, @color-transparent));
+			opacity: @opacity-disabled;
+
+			.@{prefix}-Icon {
+				stroke: @featured-color-default-iconColorDisabled;
+			}
 
 			&:hover {
 				text-decoration: none;
 			}
 		}
 
-
 		border: none;
 		background: none;
-		color: @color-linkColor;
 
-		&:hover:not(.@{prefix}-Button-is-disabled),
-		&:active:not(.@{prefix}-Button-is-disabled),
-		&:focus:not(.@{prefix}-Button-is-disabled) {
-			.@{prefix}-Icon { fill: @color-linkColorHover; }
-
-			background: @color-lightGray;
-			color: @color-linkColorHover;
-			box-shadow: none;
-		}
-
-		&:active::before {
+		&:active::before,
+		&:focus::before {
 			opacity: 0;
 		}
 
-		.@{prefix}-Button-content {
-			line-height: 1em;
-		}
-
 		.@{prefix}-Icon {
-			fill: @color-primary;
-			margin-right: 0.25em;
-
-			+ span {
-				line-height: 1.4em;
-			}
+			stroke: @color-primary;
 		}
 	}
 
@@ -276,17 +222,17 @@
 	}
 
 	&&-small&-has-only-icon {
-		padding: 0 1px;
+		width: 20px;
 	}
 
 	&&-large {
 		height: @Button-size-height-large;
-		padding: 0 @Button-size-padding*1.5;
+		padding: 0 12px;
 		font-size: 1.2em;
 
 		.@{prefix}-Icon {
-			width: 1.2em;
-			height: 1.2em;
+			width: 24px;
+			height: 24px;
 		}
 	}
 
@@ -296,33 +242,12 @@
 
 	// States
 	&&-is-active {
-		.gradient-reset();
-
-		background: @featured-color-primary;
-		border-color: @featured-color-primary;
-		color: @color-white;
-
-		.@{prefix}-Icon { fill: @color-white; }
+		background-color: @featured-color-default-backgroundColorFocus;
 	}
 
 	&&-is-active&-primary {
 		background: @featured-color-primary;
 		border-color: @featured-color-primary;
-	}
-
-	&&-is-active&-success {
-		border-color: @featured-color-success-borderColor;
-		background: @featured-color-success;
-	}
-
-	&&-is-active&-info {
-		border-color: @featured-color-info-borderColor;
-		background: @featured-color-info;
-	}
-
-	&&-is-active&-warning {
-		border-color: @featured-color-warning-borderColor;
-		background: @featured-color-warning;
 	}
 
 	&&-is-active&-danger {
@@ -331,9 +256,17 @@
 	}
 
 	&-is-disabled {
-		.gradient-reset(linear-gradient(@standardGradient, @featured-color-default-gradientStartColor, @featured-color-default-gradientEndColor));
-		.opacity();
-		.no-cursor();
+		&.@{prefix}-Button-is-disabled {
+			opacity: @opacity-disabled;
+
+			.@{prefix}-Icon {
+				stroke: @featured-color-default-iconColorDisabled;
+			}
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
 	}
 
 	// Also needed in some cases to beat other libraries (e.g. pure.css)
@@ -341,4 +274,3 @@
 		.no-cursor();
 	}
 }
-

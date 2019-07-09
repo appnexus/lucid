@@ -8,7 +8,7 @@
 
 module.exports = {
 	mode: 'production',
-	devtool: 'none',
+	devtool: 'cheap-module-eval-source-map',
 	plugins: [
 		// your custom plugins
 	],

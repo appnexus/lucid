@@ -1,20 +1,58 @@
 @import (reference) '../../styles/variables.less';
 @import (reference) '../../styles/mixins.less';
 
-@Badge-font-color: #333;
-@Badge-background-color: @color-backgroundColor;
-@Badge-border-style: @border-standardBorder;
-@Badge-border-size: 1.08rem;
-@Badge-padding-size: @size-XXS @size-S;
-
 .@{prefix}-Badge {
-	border: @Badge-border-style;
-	border-radius: @Badge-border-size;
-	color: @Badge-font-color;
+	border: 1px solid @color-neutral-6;
+	border-radius: 11px;
+	color: @color-white;
 	cursor: default;
 	display: inline-block;
-	font-weight: 500;
-	font-size: @Badge-border-size;
-	padding: @Badge-padding-size;
-	background-color: @Badge-background-color;
+	font-family: @font-family-tabular;
+	font-weight: @font-weight-semiBold;
+	font-size: @fontSize;
+	padding: 2px 7px;
+	background-color: @color-neutral-6;
+	text-align: center;
+
+	&-stroke {
+		font-weight: @font-weight-regular;
+		color: @color-neutral-9;
+		background-color: @color-white;
+	}
+
+	&-primary{
+		border-color: @color-primary;
+	}
+	&-primary&-filled {
+		background-color: @color-primary;
+	}
+
+	&-success{
+		border-color: @featured-color-success;
+	}
+	&-success&-filled {
+		background-color: @featured-color-success;
+	}
+
+	&-warning{
+		border-color: @featured-color-warning;
+	}
+	&-warning&-filled {
+		background-color: @featured-color-warning;
+	}
+
+	&-danger{
+		border-color: @featured-color-danger;
+	}
+	&-danger&-filled {
+		background-color: @featured-color-danger;
+	}
+
+	&-dark{
+		border-color: @color-neutral-9;
+	}
+	&-dark&-filled {
+		background-color: @color-neutral-9;
+	}
+
 }

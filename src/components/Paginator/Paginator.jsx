@@ -13,7 +13,16 @@ import { buildHybridComponent } from '../../util/state-management';
 
 const cx = lucidClassNames.bind('&-Paginator');
 
-const { arrayOf, bool, func, number, object, shape, string } = PropTypes;
+const {
+	arrayOf,
+	bool,
+	func,
+	number,
+	object,
+	oneOfType,
+	shape,
+	string,
+} = PropTypes;
 
 const { Option } = SingleSelect;
 
@@ -64,6 +73,17 @@ const Paginator = createClass({
 			SingleSelect component for the page size selector.
 		`,
 
+		showTotalObjects: oneOfType([bool, func])`
+			Show total count of objects.
+		`,
+
+		objectLabel: string`
+			Label when showTotalObjects is true with 1 or fewer objects.
+		`,
+		objectLabelPlural: string`
+			Label when showTotalObjects is true with more than 1 objects.
+		`,
+
 		totalPages: number`
 			number to display in \`of \${totalPages}\`, calculated from
 			\`totalPages\` and selected page size by default.
@@ -97,9 +117,11 @@ const Paginator = createClass({
 		return {
 			hasPageSizeSelector: false,
 			isDisabled: false,
+			objectLabel: 'Object',
 			onPageSelect: _.noop,
 			selectedPageIndex: 0,
 			selectedPageSizeIndex: 0,
+			showTotalObjects: false,
 			totalCount: null,
 			pageSizeOptions: [10, 50, 100],
 			SingleSelect: {
@@ -124,12 +146,16 @@ const Paginator = createClass({
 			className,
 			hasPageSizeSelector,
 			isDisabled,
+			objectLabel,
+			objectLabelPlural,
 			onPageSelect,
 			onPageSizeSelect,
 			pageSizeOptions,
 			selectedPageIndex,
 			selectedPageSizeIndex,
+			showTotalObjects,
 			totalPages,
+			totalCount,
 			style,
 			SingleSelect: singleSelectProps,
 			TextField: textFieldProps,
@@ -137,12 +163,23 @@ const Paginator = createClass({
 
 		return (
 			<div style={style} className={cx('&', className)}>
+				{showTotalObjects && _.isNumber(totalCount) && (
+					<div className={cx('&-total-count')}>
+						{_.isFunction(showTotalObjects)
+							? showTotalObjects(totalCount)
+							: totalCount.toLocaleString()}{' '}
+						{totalCount === 1
+							? objectLabel
+							: objectLabelPlural || `${objectLabel}s`}
+					</div>
+				)}
 				{hasPageSizeSelector ? (
 					<div className={cx('&-page-size-container')}>
 						<span className={cx('&-rows-per-page-label')}>Rows per page:</span>
 						<SingleSelect
 							{...singleSelectProps}
 							hasReset={false}
+							isInvisible={true}
 							isSelectionHighlighted={false}
 							isDisabled={isDisabled}
 							selectedIndex={selectedPageSizeIndex}
@@ -158,9 +195,10 @@ const Paginator = createClass({
 				<Button
 					onClick={_.partial(onPageSelect, selectedPageIndex - 1, totalPages)}
 					isDisabled={isDisabled || selectedPageIndex === 0}
+					kind='invisible'
 					hasOnlyIcon
 				>
-					<ArrowIcon direction="left" />
+					<ArrowIcon direction='left' />
 				</Button>
 				<TextField
 					lazyLevel={100}
@@ -170,13 +208,14 @@ const Paginator = createClass({
 					isDisabled={isDisabled}
 					value={selectedPageIndex + 1}
 				/>
-				<span>of {totalPages}</span>
+				{!_.isNil(totalPages) && <span>of {totalPages.toLocaleString()}</span>}
 				<Button
+					kind='invisible'
 					onClick={_.partial(onPageSelect, selectedPageIndex + 1, totalPages)}
 					isDisabled={isDisabled || selectedPageIndex === totalPages - 1}
 					hasOnlyIcon
 				>
-					<ArrowIcon direction="right" />
+					<ArrowIcon direction='right' />
 				</Button>
 			</div>
 		);

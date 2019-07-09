@@ -69,7 +69,7 @@ describe('Switch', () => {
 			it('passes through all props not defined in `propTypes` to the native input.', () => {
 				const wrapper = mount(
 					<Switch
-						className="wut"
+						className='wut'
 						isDisabled={true}
 						isSelected={true}
 						style={{ fontWeight: 'bold' }}
@@ -104,13 +104,7 @@ describe('Switch', () => {
 
 	function verifyArgumentsWhenFalse(event) {
 		_.forEach(
-			[
-				'',
-				'-native',
-				'-visualization-container',
-				'-visualization-glow',
-				'-visualization-handle',
-			],
+			['', '-native', '-visualization-container', '-visualization-handle'],
 			classSubString => {
 				const onSelect = sinon.spy();
 
@@ -127,13 +121,7 @@ describe('Switch', () => {
 
 	function verifyArgumentsWhenTrue(event) {
 		_.forEach(
-			[
-				'',
-				'-native',
-				'-visualization-container',
-				'-visualization-glow',
-				'-visualization-handle',
-			],
+			['', '-native', '-visualization-container', '-visualization-handle'],
 			classSubString => {
 				const onSelect = sinon.spy();
 
@@ -150,13 +138,7 @@ describe('Switch', () => {
 
 	function verifyOnSelect(event) {
 		_.forEach(
-			[
-				'',
-				'-native',
-				'-visualization-container',
-				'-visualization-glow',
-				'-visualization-handle',
-			],
+			['', '-native', '-visualization-container', '-visualization-handle'],
 			classSubString => {
 				const onSelect = sinon.spy();
 

@@ -4,24 +4,11 @@ import PropTypes from 'react-peek/prop-types';
 import ReactTransitionGroup from 'react-transition-group/CSSTransitionGroup';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, omitProps } from '../../util/component-types';
-import CrossIcon from '../Icon/CrossIcon/CrossIcon';
-import DangerIcon from '../Icon/DangerIcon/DangerIcon';
-import InfoIcon from '../Icon/InfoIcon/InfoIcon';
-import SuccessIcon from '../Icon/SuccessIcon/SuccessIcon';
-import WarningIcon from '../Icon/WarningIcon/WarningIcon';
+import CloseIcon from '../Icon/CloseIcon/CloseIcon';
 
 const cx = lucidClassNames.bind('&-Banner');
 
 const { bool, element, func, node, oneOf, string } = PropTypes;
-
-const defaultIcons = {
-	success: <SuccessIcon />,
-	danger: <DangerIcon />,
-	info: <InfoIcon />,
-	warning: <WarningIcon />,
-	primary: null,
-	default: null,
-};
 
 const Banner = createClass({
 	displayName: 'Banner',
@@ -38,15 +25,10 @@ const Banner = createClass({
 				It is valid to use \`strong\` or \`em\` within a \`Banner\` message.
 			`,
 			categories: ['communication'],
-			madeFrom: ['DangerIcon', 'InfoIcon', 'SuccessIcon', 'WarningIcon'],
 		},
 	},
 
 	propTypes: {
-		hasIcon: bool`
-			Pass in a bool to display predefined icon based on \`kind\`.
-		`,
-
 		icon: element`
 			Pass in a icon component for custom icons within \`Banner\`.
 		`,
@@ -55,9 +37,8 @@ const Banner = createClass({
 			Set this to \`true\` if you want to have a \`x\` close icon.
 		`,
 
-		hasRoundedCorners: bool`
-			Set this value to \`false\` if you want to remove the rounded corners on
-			the \`Banner\`.
+		isSmall: bool`
+			If set to \`true\` the banner have smaller padding on the inside.
 		`,
 
 		className: string`
@@ -72,10 +53,6 @@ const Banner = createClass({
 			Style variations of the \`Banner\`.
 		`,
 
-		isSmall: bool`
-			If set to \`true\` the banner have smaller padding on the inside.
-		`,
-
 		onClose: func`
 			Called when the user closes the \`Banner\`.  Signature:
 			\`({ event, props }) => {}\`
@@ -88,12 +65,10 @@ const Banner = createClass({
 
 	getDefaultProps() {
 		return {
-			hasIcon: false,
 			icon: null,
 			isCloseable: true,
-			hasRoundedCorners: true,
-			kind: 'default',
 			isSmall: false,
+			kind: 'default',
 			onClose: _.noop,
 		};
 	},
@@ -106,15 +81,13 @@ const Banner = createClass({
 
 	render() {
 		const {
-			hasIcon,
 			icon,
 			kind,
-			isSmall,
 			className,
 			children,
 			isCloseable,
-			hasRoundedCorners,
 			isClosed,
+			isSmall,
 			...passThroughs
 		} = this.props;
 
@@ -122,8 +95,6 @@ const Banner = createClass({
 
 		if (icon) {
 			displayedIcon = icon;
-		} else if (hasIcon) {
-			displayedIcon = defaultIcons[kind];
 		}
 
 		return (
@@ -140,7 +111,6 @@ const Banner = createClass({
 							{
 								'&-has-icon': displayedIcon,
 								'&-has-close': isCloseable,
-								'&-has-no-roundedCorners': !hasRoundedCorners,
 								'&-primary': kind === 'primary',
 								'&-success': kind === 'success',
 								'&-warning': kind === 'warning',
@@ -158,10 +128,9 @@ const Banner = createClass({
 						<span className={cx('&-content')}>{children}</span>
 
 						{isCloseable ? (
-							<CrossIcon
+							<CloseIcon
 								isClickable
-								size={isSmall ? 44 : 26}
-								viewBox={isSmall ? '-12 -6 28 28' : '-3 -6 20 20'}
+								size={8}
 								className={cx('&-close')}
 								onClick={this.handleClose}
 							/>

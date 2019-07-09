@@ -11,8 +11,7 @@ export default createClass({
 				</Sidebar.Title>
 				<Sidebar.Bar>
 					You can also set the <code>title</code> or <code>Title</code> prop on{' '}
-					<code>{'<Sidebar>'}</code> or <code>{'<Sidebar.Bar>'}</code>
-					.
+					<code>{'<Sidebar>'}</code> or <code>{'<Sidebar.Bar>'}</code>.
 				</Sidebar.Bar>
 				<Sidebar.Primary>
 					Helvetica narwhal irony, hoodie leggings occaecat tattooed authentic

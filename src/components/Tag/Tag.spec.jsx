@@ -8,6 +8,6 @@ describe('Tag', () => {
 		callbackName: 'onRemove',
 		controlSelector: '.lucid-Tag-remove-button',
 		eventType: 'click',
-		additionalProps: { isRemovable: true },
+		additionalProps: { isRemovable: true, children: 'foo' },
 	});
 });

@@ -7,36 +7,93 @@ export default createClass({
 		return (
 			<Resizer>
 				{width => {
-					const responsiveMode = width >= 768 ? 'large' : 'small';
+					const responsiveMode = width >= 400 ? 'large' : 'small';
 
 					return (
 						<div>
-							<Selection responsiveMode={responsiveMode} Label="Default" />
-							<Selection
-								responsiveMode={responsiveMode}
-								kind="container"
-								Label="Container"
-							/>
-							<Selection
-								responsiveMode={responsiveMode}
-								kind="success"
-								Label="Success"
-							/>
-							<Selection
-								responsiveMode={responsiveMode}
-								kind="danger"
-								Label="Danger"
-							/>
-							<Selection
-								responsiveMode={responsiveMode}
-								kind="info"
-								Label="Info"
-							/>
-							<Selection
-								responsiveMode={responsiveMode}
-								kind="warning"
-								Label="Warning"
-							/>
+							<div style={{ margin: '10px' }}>
+								<Selection
+									isSmall
+									isRemovable={false}
+									responsiveMode={responsiveMode}
+									kind='container'
+									Label='Container Light Not Removable'
+								/>
+							</div>
+
+							<div style={{ margin: '10px' }}>
+								<Selection
+									isSmall
+									responsiveMode={responsiveMode}
+									kind='container'
+									Label='Container Light'
+								/>
+							</div>
+
+							<div style={{ margin: '10px' }}>
+								<Selection
+									isSmall
+									isFilled
+									isRemovable={false}
+									responsiveMode={responsiveMode}
+									kind='container'
+									Label='Container Filled Not Removable'
+								/>
+							</div>
+
+							<div style={{ margin: '10px' }}>
+								<Selection
+									isSmall
+									isFilled
+									responsiveMode={responsiveMode}
+									kind='container'
+									Label='Container Filled'
+								/>
+							</div>
+
+							<div style={{ margin: '10px' }}>
+								<Selection
+									isSmall
+									responsiveMode={responsiveMode}
+									Label='Default'
+								/>
+							</div>
+
+							<div style={{ margin: '10px' }}>
+								<Selection
+									isSmall
+									responsiveMode={responsiveMode}
+									kind='success'
+									Label='Success'
+								/>
+							</div>
+
+							<div style={{ margin: '10px' }}>
+								<Selection
+									isSmall
+									responsiveMode={responsiveMode}
+									kind='danger'
+									Label='Danger'
+								/>
+							</div>
+
+							<div style={{ margin: '10px' }}>
+								<Selection
+									isSmall
+									responsiveMode={responsiveMode}
+									kind='info'
+									Label='Info'
+								/>
+							</div>
+
+							<div style={{ margin: '10px' }}>
+								<Selection
+									isSmall
+									responsiveMode={responsiveMode}
+									kind='warning'
+									Label='Warning'
+								/>
+							</div>
 						</div>
 					);
 				}}
