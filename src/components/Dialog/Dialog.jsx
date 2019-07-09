@@ -137,7 +137,7 @@ const Dialog = createClass({
 					<header className={cx('&-header')}>
 						{headerChildProp.children}
 
-						{handleClose &&
+						{handleClose && (
 							<Button
 								kind='invisible'
 								hasOnlyIcon
@@ -146,7 +146,7 @@ const Dialog = createClass({
 							>
 								<CloseIcon />
 							</Button>
-						}
+						)}
 					</header>
 
 					<section
