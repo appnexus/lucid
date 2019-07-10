@@ -25,11 +25,19 @@
 		&&-is-invisible {
 			border: 1px solid transparent;
 			background-color: transparent;
-		}
 
-		&&-is-invisible.@{prefix}-SingleSelect-Control-is-selected {
-			border: 1px solid @featured-color-primary-borderColor;
-			background-color: white;
+			&.@{prefix}-SingleSelect-Control-is-selected {
+				border: 1px solid @featured-color-primary-borderColor;
+				background-color: transparent;
+			}
+			&.@{prefix}-SingleSelect-Control-is-expanded {
+				&:focus {
+					background-color: transparent;
+					.opacity(@opacity-disabled);
+				}
+				border: 1px solid transparent;
+				background-color: transparent;
+			}
 		}
 
 		&-content {
