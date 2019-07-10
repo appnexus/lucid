@@ -3,7 +3,6 @@
 
 .@{prefix}-Expander {
 	&-icon {
-		// .box-sizing();
 		display: inline-block;
 		width: 20px;
 		height: 20px;
@@ -69,22 +68,40 @@
 			border: @border-lightBorder;
 			padding: @size-standard;
 			display: flex;
-			flex-direction: row-reverse;
+			flex-direction: row;
 
 			.@{prefix}-Expander-text {
 				font-size: @size-font-L;
 				color: @color-textColor;
-				font-weight: bold;
+				font-weight: 500;
 				flex: 1;
 			}
 
-			.@{prefix}-Expander-icon {
-				margin: 0;
-				flex-shrink: 0;
-			}
+			.@{prefix}-Expander-header-toggle {
+				.@{prefix}-Expander-icon {
+					.box-sizing();
 
-			&:hover .@{prefix}-Expander-text > span {
-				text-decoration: none;
+					display: flex;
+					width: @size-expander-button;
+					height: @size-expander-button;
+					align-items: center;
+					justify-content: center;
+					margin-right: @size-S;
+
+					.@{prefix}-Icon {
+						margin: 0;
+					}
+				}
+
+				&:hover {
+					.@{prefix}-Expander-text {
+						text-decoration: none;
+					}
+
+					.@{prefix}-Expander-icon {
+						background-color: @color-neutral-4;
+					}
+				}
 			}
 		}
 
