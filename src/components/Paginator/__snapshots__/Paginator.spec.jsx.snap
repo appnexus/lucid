@@ -18,6 +18,7 @@ exports[`Paginator [common] example testing should match snapshot(s) for 1.basic
     />
   </Button>
   <TextField
+    autoComplete="off"
     debounceLevel={500}
     isDisabled={false}
     isMultiLine={false}
@@ -101,6 +102,7 @@ exports[`Paginator [common] example testing should match snapshot(s) for 2.page-
     />
   </Button>
   <TextField
+    autoComplete="off"
     debounceLevel={500}
     isDisabled={false}
     isMultiLine={false}
@@ -147,6 +149,7 @@ exports[`Paginator [common] example testing should match snapshot(s) for 3.disab
     />
   </Button>
   <TextField
+    autoComplete="off"
     debounceLevel={500}
     isDisabled={true}
     isMultiLine={false}
@@ -230,6 +233,7 @@ exports[`Paginator [common] example testing should match snapshot(s) for 3.disab
     />
   </Button>
   <TextField
+    autoComplete="off"
     debounceLevel={500}
     isDisabled={true}
     isMultiLine={false}
@@ -320,6 +324,7 @@ exports[`Paginator [common] example testing should match snapshot(s) for 4.show-
     />
   </Button>
   <TextField
+    autoComplete="off"
     debounceLevel={500}
     isDisabled={false}
     isMultiLine={false}
@@ -403,6 +408,7 @@ exports[`Paginator [common] example testing should match snapshot(s) for 4.show-
     />
   </Button>
   <TextField
+    autoComplete="off"
     debounceLevel={500}
     isDisabled={false}
     isMultiLine={false}
@@ -517,6 +523,7 @@ exports[`Paginator [common] example testing should match snapshot(s) for 4.show-
     />
   </Button>
   <TextField
+    autoComplete="off"
     debounceLevel={500}
     isDisabled={false}
     isMultiLine={false}
@@ -631,6 +638,7 @@ exports[`Paginator [common] example testing should match snapshot(s) for 4.show-
     />
   </Button>
   <TextField
+    autoComplete="off"
     debounceLevel={500}
     isDisabled={false}
     isMultiLine={false}
@@ -745,6 +753,7 @@ exports[`Paginator [common] example testing should match snapshot(s) for 4.show-
     />
   </Button>
   <TextField
+    autoComplete="off"
     debounceLevel={500}
     isDisabled={false}
     isMultiLine={false}
@@ -859,6 +868,7 @@ exports[`Paginator [common] example testing should match snapshot(s) for 4.show-
     />
   </Button>
   <TextField
+    autoComplete="off"
     debounceLevel={500}
     isDisabled={false}
     isMultiLine={false}

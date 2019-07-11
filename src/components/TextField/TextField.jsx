@@ -90,6 +90,10 @@ const TextField = createClass({
 			heavily inspired by the
 			[lazy-input](https:/docs.npmjs.com/package/lazy-input) component.
 		`,
+
+		autoComplete: string`
+			html attribute for controlling browser autocomplete functionality
+		`
 	},
 
 	getDefaultProps() {
@@ -105,6 +109,7 @@ const TextField = createClass({
 			debounceLevel: 500,
 			lazyLevel: 1000,
 			value: '',
+			autoComplete: 'off',
 		};
 	},
 
@@ -219,6 +224,7 @@ const TextField = createClass({
 			isMultiLine,
 			rows,
 			style,
+			autoComplete,
 			...passThroughs
 		} = this.props;
 
@@ -241,6 +247,7 @@ const TextField = createClass({
 			onKeyDown: this.handleKeyDown,
 			style,
 			rows,
+			autoComplete,
 			value,
 			ref: ref => (this.refs = { nativeElement: ref }),
 		};

@@ -13,6 +13,7 @@ exports[`TextFieldValidated [common] example testing should match snapshot(s) fo
   style={null}
 >
   <TextField
+    autoComplete="off"
     debounceLevel={500}
     isDisabled={false}
     isMultiLine={false}
@@ -41,6 +42,7 @@ exports[`TextFieldValidated [common] example testing should match snapshot(s) fo
   style={null}
 >
   <TextField
+    autoComplete="off"
     debounceLevel={500}
     isDisabled={false}
     isMultiLine={false}

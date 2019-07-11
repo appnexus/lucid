@@ -2,6 +2,7 @@
 
 exports[`TextField [common] example testing should match snapshot(s) for basic 1`] = `
 <input
+  autoComplete="off"
   className="lucid-TextField lucid-TextField-is-single-line"
   disabled={false}
   onBlur={[Function]}
@@ -21,6 +22,7 @@ exports[`TextField [common] example testing should match snapshot(s) for basic 1
 
 exports[`TextField [common] example testing should match snapshot(s) for basic 2`] = `
 <textarea
+  autoComplete="off"
   className="lucid-TextField lucid-TextField-is-multi-line"
   disabled={false}
   onBlur={[Function]}
@@ -39,6 +41,7 @@ exports[`TextField [common] example testing should match snapshot(s) for basic 2
 
 exports[`TextField [common] example testing should match snapshot(s) for debounced 1`] = `
 <input
+  autoComplete="off"
   className="lucid-TextField lucid-TextField-is-single-line"
   disabled={false}
   onBlur={[Function]}
@@ -57,6 +60,7 @@ exports[`TextField [common] example testing should match snapshot(s) for debounc
 
 exports[`TextField [common] example testing should match snapshot(s) for on-submit 1`] = `
 <input
+  autoComplete="off"
   className="lucid-TextField lucid-TextField-is-single-line"
   disabled={false}
   onBlur={[Function]}

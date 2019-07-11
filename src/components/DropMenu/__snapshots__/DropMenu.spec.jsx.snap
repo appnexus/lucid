@@ -474,6 +474,7 @@ exports[`DropMenu [common] example testing should match snapshot(s) for 06.text-
         tabIndex={0}
       >
         <TextField
+          autoComplete="off"
           debounceLevel={500}
           isDisabled={false}
           isMultiLine={false}

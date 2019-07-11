@@ -5,6 +5,7 @@ exports[`Validation [common] example testing should match snapshot(s) for basic 
   className="lucid-Validation lucid-Validation-is-error"
 >
   <TextField
+    autoComplete="off"
     debounceLevel={500}
     isDisabled={false}
     isMultiLine={false}
@@ -35,6 +36,7 @@ exports[`Validation [common] example testing should match snapshot(s) for basic 
     </span>
   </Validation.Error>
   <TextField
+    autoComplete="off"
     debounceLevel={500}
     isDisabled={false}
     isMultiLine={false}
@@ -62,6 +64,7 @@ exports[`Validation [common] example testing should match snapshot(s) for basic 
   className="lucid-Validation lucid-Validation-is-error"
 >
   <TextField
+    autoComplete="off"
     debounceLevel={500}
     isDisabled={false}
     isMultiLine={true}
@@ -93,6 +96,7 @@ exports[`Validation [common] example testing should match snapshot(s) for basic 
     </span>
   </Validation.Error>
   <TextField
+    autoComplete="off"
     debounceLevel={500}
     isDisabled={false}
     isMultiLine={true}

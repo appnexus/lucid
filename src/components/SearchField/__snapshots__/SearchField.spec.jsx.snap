@@ -5,6 +5,7 @@ exports[`SearchField [common] example testing should match snapshot(s) for 1.def
   className="lucid-SearchField"
 >
   <TextField
+    autoComplete="off"
     debounceLevel={500}
     isDisabled={false}
     isMultiLine={false}
@@ -33,6 +34,7 @@ exports[`SearchField [common] example testing should match snapshot(s) for 2.int
   className="lucid-SearchField"
 >
   <TextField
+    autoComplete="off"
     debounceLevel={500}
     isDisabled={false}
     isMultiLine={false}
@@ -61,6 +63,7 @@ exports[`SearchField [common] example testing should match snapshot(s) for 3.pla
   className="lucid-SearchField"
 >
   <TextField
+    autoComplete="off"
     debounceLevel={500}
     isDisabled={false}
     isMultiLine={false}
@@ -90,6 +93,7 @@ exports[`SearchField [common] example testing should match snapshot(s) for 4.dis
   className="lucid-SearchField"
 >
   <TextField
+    autoComplete="off"
     debounceLevel={500}
     isDisabled={true}
     isMultiLine={false}
@@ -118,6 +122,7 @@ exports[`SearchField [common] example testing should match snapshot(s) for 5.cus
   className="lucid-SearchField"
 >
   <TextField
+    autoComplete="off"
     debounceLevel={500}
     isDisabled={false}
     isMultiLine={false}
@@ -151,6 +156,7 @@ exports[`SearchField [common] example testing should match snapshot(s) for 6.cus
   className="lucid-SearchField"
 >
   <TextField
+    autoComplete="off"
     debounceLevel={500}
     isDisabled={false}
     isMultiLine={false}
@@ -183,6 +189,7 @@ exports[`SearchField [common] example testing should match snapshot(s) for 7.val
   onKeyDown={[Function]}
 >
   <TextField
+    autoComplete="off"
     debounceLevel={500}
     isDisabled={false}
     isMultiLine={false}
@@ -212,6 +219,7 @@ exports[`SearchField [common] example testing should match snapshot(s) for 8.pro
   className="lucid-SearchField"
 >
   <TextField
+    autoComplete="off"
     debounceLevel={500}
     isDisabled={false}
     isMultiLine={false}
@@ -240,6 +248,7 @@ exports[`SearchField [common] example testing should match snapshot(s) for 8.pro
   className="lucid-SearchField"
 >
   <TextField
+    autoComplete="off"
     debounceLevel={500}
     isDisabled={false}
     isMultiLine={false}
@@ -269,6 +278,7 @@ exports[`SearchField [common] example testing should match snapshot(s) for 8.pro
   className="lucid-SearchField"
 >
   <TextField
+    autoComplete="off"
     debounceLevel={500}
     isDisabled={true}
     isMultiLine={false}
@@ -297,6 +307,7 @@ exports[`SearchField [common] example testing should match snapshot(s) for 8.pro
   className="lucid-SearchField"
 >
   <TextField
+    autoComplete="off"
     debounceLevel={500}
     isDisabled={false}
     isMultiLine={false}
@@ -325,6 +336,7 @@ exports[`SearchField [common] example testing should match snapshot(s) for 8.pro
   className="lucid-SearchField"
 >
   <TextField
+    autoComplete="off"
     debounceLevel={500}
     isDisabled={false}
     isMultiLine={false}
@@ -358,6 +370,7 @@ exports[`SearchField [common] example testing should match snapshot(s) for 8.pro
   className="lucid-SearchField"
 >
   <TextField
+    autoComplete="off"
     debounceLevel={500}
     isDisabled={false}
     isMultiLine={false}
@@ -391,6 +404,7 @@ exports[`SearchField [common] example testing should match snapshot(s) for 8.pro
   className="lucid-SearchField"
 >
   <TextField
+    autoComplete="off"
     debounceLevel={500}
     isDisabled={false}
     isMultiLine={false}
@@ -425,6 +439,7 @@ exports[`SearchField [common] example testing should match snapshot(s) for 9.deb
   }
 >
   <TextField
+    autoComplete="off"
     debounceLevel={500}
     isDisabled={false}
     isMultiLine={false}
