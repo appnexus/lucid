@@ -1,3 +1,9 @@
+## unreleased
+
+- fix `SidePanel` position an sizing to correctly scroll content [#997](https://github.com/appnexus/lucid/pull/997)
+
+## 4.0.0
+
 - removed `primary` kind from `Banner`.
 - removed `hasIcon` from `Banner`
 - removed `hasRoundedCorners` from `Banner`.  All Banners are now square.
