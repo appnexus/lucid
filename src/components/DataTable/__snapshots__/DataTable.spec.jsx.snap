@@ -5938,7 +5938,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
       <Table.Tr
         isActionable={false}
         isActive={false}
-        isDisabled={false}
+        isDisabled={true}
         isSelected={false}
         key="row9"
         onClick={[Function]}

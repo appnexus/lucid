@@ -90,6 +90,7 @@ const data = [
 		email: 'wshakespear@example.com',
 		occupation: 'Playwright',
 		salary: '$100.10',
+		isDisabled: true,
 		status: <SuccessIcon />,
 	},
 ];
