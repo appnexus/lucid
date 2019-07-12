@@ -4,6 +4,7 @@ exports[`MinusCircleLightIcon [common] example testing should match snapshot(s) 
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-MinusCircleLightIcon"
+  color="primary"
   isClickable={false}
   isDisabled={false}
   size={16}
@@ -26,6 +27,7 @@ exports[`MinusCircleLightIcon [common] example testing should match snapshot(s) 
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-MinusCircleLightIcon lucid-MinusCircleLightIcon-is-clickable"
+  color="primary"
   isClickable={true}
   isDisabled={false}
   size={16}
@@ -48,6 +50,7 @@ exports[`MinusCircleLightIcon [common] example testing should match snapshot(s) 
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-MinusCircleLightIcon lucid-MinusCircleLightIcon-is-disabled lucid-MinusCircleLightIcon-is-clickable"
+  color="primary"
   isClickable={true}
   isDisabled={true}
   size={16}
@@ -70,6 +73,7 @@ exports[`MinusCircleLightIcon [common] example testing should match snapshot(s) 
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-MinusCircleLightIcon lucid-MinusCircleLightIcon-is-active"
+  color="primary"
   isClickable={false}
   isDisabled={false}
   size={16}
@@ -92,6 +96,7 @@ exports[`MinusCircleLightIcon [common] example testing should match snapshot(s) 
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-MinusCircleLightIcon lucid-MinusCircleLightIcon-is-clickable lucid-MinusCircleLightIcon-is-active"
+  color="primary"
   isClickable={true}
   isDisabled={false}
   size={16}
@@ -114,6 +119,7 @@ exports[`MinusCircleLightIcon [common] example testing should match snapshot(s) 
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-MinusCircleLightIcon lucid-MinusCircleLightIcon-is-disabled lucid-MinusCircleLightIcon-is-clickable lucid-MinusCircleLightIcon-is-active"
+  color="primary"
   isClickable={true}
   isDisabled={true}
   size={16}

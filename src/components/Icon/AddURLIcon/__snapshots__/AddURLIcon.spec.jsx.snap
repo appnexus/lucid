@@ -4,6 +4,7 @@ exports[`AddURLIcon [common] example testing should match snapshot(s) for 1.defa
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-AddURLIcon"
+  color="primary"
   isClickable={false}
   isDisabled={false}
   size={16}
@@ -22,6 +23,7 @@ exports[`AddURLIcon [common] example testing should match snapshot(s) for 1.defa
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-AddURLIcon"
+  color="primary"
   isClickable={true}
   isDisabled={false}
   size={16}
@@ -40,6 +42,7 @@ exports[`AddURLIcon [common] example testing should match snapshot(s) for 1.defa
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-AddURLIcon"
+  color="primary"
   isClickable={false}
   isDisabled={true}
   size={16}

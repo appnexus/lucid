@@ -880,6 +880,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
   >
     <LoadingIcon
       aspectRatio="xMidYMid meet"
+      color="primary"
       isClickable={false}
       isDisabled={false}
       size={16}

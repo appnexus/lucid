@@ -4,6 +4,7 @@ exports[`DeleteIcon [common] example testing should match snapshot(s) for 1.defa
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-DeleteIcon"
+  color="primary"
   isClickable={false}
   isDisabled={false}
   size={16}

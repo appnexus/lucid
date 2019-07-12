@@ -4,6 +4,7 @@ exports[`ArrowIcon [common] example testing should match snapshot(s) for 1.defau
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-ArrowIcon lucid-ArrowIcon-is-left"
+  color="primary"
   isClickable={false}
   isDisabled={false}
   size={16}
@@ -19,6 +20,7 @@ exports[`ArrowIcon [common] example testing should match snapshot(s) for 1.defau
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-ArrowIcon lucid-ArrowIcon-is-up"
+  color="primary"
   isClickable={false}
   isDisabled={false}
   size={16}
@@ -34,6 +36,7 @@ exports[`ArrowIcon [common] example testing should match snapshot(s) for 1.defau
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-ArrowIcon lucid-ArrowIcon-is-down"
+  color="primary"
   isClickable={false}
   isDisabled={false}
   size={16}
@@ -49,6 +52,7 @@ exports[`ArrowIcon [common] example testing should match snapshot(s) for 1.defau
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-ArrowIcon lucid-ArrowIcon-is-right"
+  color="primary"
   isClickable={false}
   isDisabled={false}
   size={16}
@@ -64,6 +68,7 @@ exports[`ArrowIcon [common] example testing should match snapshot(s) for 1.defau
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-ArrowIcon lucid-ArrowIcon-is-left"
+  color="primary"
   isClickable={false}
   isDisabled={false}
   size={16}

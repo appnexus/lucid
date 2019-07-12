@@ -4,6 +4,7 @@ exports[`EligibilityIcon [common] example testing should match snapshot(s) for 1
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-EligibilityIcon"
+  color="primary"
   isClickable={false}
   isDisabled={false}
   size={16}
@@ -26,6 +27,7 @@ exports[`EligibilityIcon [common] example testing should match snapshot(s) for 1
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-EligibilityIcon"
+  color="primary"
   isClickable={false}
   isDisabled={false}
   size={16}
@@ -48,6 +50,7 @@ exports[`EligibilityIcon [common] example testing should match snapshot(s) for 1
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-EligibilityIcon"
+  color="primary"
   isClickable={false}
   isDisabled={false}
   size={16}
@@ -70,6 +73,7 @@ exports[`EligibilityIcon [common] example testing should match snapshot(s) for 1
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-EligibilityIcon"
+  color="primary"
   isClickable={false}
   isDisabled={false}
   size={16}
@@ -92,6 +96,7 @@ exports[`EligibilityIcon [common] example testing should match snapshot(s) for 1
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-EligibilityIcon"
+  color="primary"
   isClickable={false}
   isDisabled={false}
   size={16}
@@ -114,6 +119,7 @@ exports[`EligibilityIcon [common] example testing should match snapshot(s) for 1
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-EligibilityIcon"
+  color="primary"
   isClickable={false}
   isDisabled={true}
   size={16}
@@ -136,6 +142,7 @@ exports[`EligibilityIcon [common] example testing should match snapshot(s) for 1
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-EligibilityIcon"
+  color="primary"
   isClickable={false}
   isDisabled={true}
   size={16}
@@ -158,6 +165,7 @@ exports[`EligibilityIcon [common] example testing should match snapshot(s) for 1
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-EligibilityIcon"
+  color="primary"
   isClickable={false}
   isDisabled={true}
   size={16}
@@ -180,6 +188,7 @@ exports[`EligibilityIcon [common] example testing should match snapshot(s) for 1
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-EligibilityIcon"
+  color="primary"
   isClickable={false}
   isDisabled={true}
   size={16}

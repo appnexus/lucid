@@ -4,6 +4,7 @@ exports[`WarningLightIcon [common] example testing should match snapshot(s) for 
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-WarningLightIcon"
+  color="primary"
   isClickable={false}
   isDisabled={false}
   size={16}

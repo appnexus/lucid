@@ -4,6 +4,7 @@ exports[`UserIcon [common] example testing should match snapshot(s) for 1.defaul
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-UserIcon"
+  color="primary"
   isClickable={false}
   isDisabled={false}
   size={16}

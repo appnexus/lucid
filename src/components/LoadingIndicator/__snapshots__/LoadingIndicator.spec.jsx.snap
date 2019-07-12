@@ -257,6 +257,7 @@ exports[`LoadingIndicator [common] example testing should match snapshot(s) for 
       <LoadingMessage.Icon>
         <LoadingIcon
           aspectRatio="xMidYMid meet"
+          color="primary"
           isClickable={false}
           isDisabled={false}
           size={16}
@@ -352,6 +353,7 @@ exports[`LoadingIndicator [common] example testing should match snapshot(s) for 
       Icon={
         <LoadingIcon
           aspectRatio="xMidYMid meet"
+          color="primary"
           isClickable={false}
           isDisabled={false}
           size={16}

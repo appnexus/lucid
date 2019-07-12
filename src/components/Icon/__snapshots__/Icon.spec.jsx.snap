@@ -2,7 +2,7 @@
 
 exports[`Icon [common] example testing should match snapshot(s) for 1.default 1`] = `
 <svg
-  className="lucid-Icon"
+  className="lucid-Icon lucid-Icon-color-primary"
   height={16}
   onClick={[Function]}
   preserveAspectRatio="xMidYMid meet"

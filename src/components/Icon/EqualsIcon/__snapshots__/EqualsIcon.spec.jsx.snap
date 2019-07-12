@@ -4,6 +4,7 @@ exports[`EqualsIcon [common] example testing should match snapshot(s) for 1.defa
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-EqualsIcon"
+  color="primary"
   isClickable={false}
   isDisabled={false}
   size={16}

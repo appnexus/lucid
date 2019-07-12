@@ -4,6 +4,7 @@ exports[`ShoppingCartIcon [common] example testing should match snapshot(s) for 
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-ShoppingCartIcon"
+  color="primary"
   isClickable={false}
   isDisabled={false}
   size={16}
