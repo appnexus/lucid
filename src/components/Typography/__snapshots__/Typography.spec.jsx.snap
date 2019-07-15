@@ -1,0 +1,184 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Typography [common] example testing should match snapshot(s) for 01.variants 1`] = `
+<p
+  className="lucid-Typography lucid-Typography-p"
+>
+  Default (no variant specified)
+</p>
+`;
+
+exports[`Typography [common] example testing should match snapshot(s) for 01.variants 2`] = `
+<h1
+  className="lucid-Typography lucid-Typography-h1"
+>
+  h1. Heading
+</h1>
+`;
+
+exports[`Typography [common] example testing should match snapshot(s) for 01.variants 3`] = `
+<h2
+  className="lucid-Typography lucid-Typography-h2"
+>
+  h2. Heading
+</h2>
+`;
+
+exports[`Typography [common] example testing should match snapshot(s) for 01.variants 4`] = `
+<h3
+  className="lucid-Typography lucid-Typography-h3"
+>
+  h3. Heading
+</h3>
+`;
+
+exports[`Typography [common] example testing should match snapshot(s) for 01.variants 5`] = `
+<p
+  className="lucid-Typography lucid-Typography-p"
+>
+  p. paragraph text
+</p>
+`;
+
+exports[`Typography [common] example testing should match snapshot(s) for 01.variants 6`] = `
+<a
+  className="lucid-Typography lucid-Typography-a"
+>
+  a. link text
+</a>
+`;
+
+exports[`Typography [common] example testing should match snapshot(s) for 01.variants 7`] = `
+<pre
+  className="lucid-Typography lucid-Typography-pre"
+>
+  pre. preformatted text
+</pre>
+`;
+
+exports[`Typography [common] example testing should match snapshot(s) for 01.variants 8`] = `
+<code
+  className="lucid-Typography lucid-Typography-code"
+>
+  code. snazzy code
+</code>
+`;
+
+exports[`Typography [common] example testing should match snapshot(s) for 02.nested 1`] = `
+<h1
+  className="lucid-Typography lucid-Typography-h1"
+>
+  Title
+</h1>
+`;
+
+exports[`Typography [common] example testing should match snapshot(s) for 02.nested 2`] = `
+<h2
+  className="lucid-Typography lucid-Typography-h2"
+>
+  subtitle
+</h2>
+`;
+
+exports[`Typography [common] example testing should match snapshot(s) for 02.nested 3`] = `
+<p
+  className="lucid-Typography lucid-Typography-p"
+>
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pencil mustachioed graeme souness, mustachioed waxy gurn rugged el snort graeme souness burt reynolds educated village people boogie nights pencil man of the year 1986, pencil village people graeme souness rugged boogie nights mouthbrow educated burt reynolds waxy gurn man of the year 1986 des lynam charming villain mustachioed cardinal richelieu el snort. Borat d’artagnan hungarian testosterone trophy frontiersman hairy kiss. beefeater chevron, hairy kiss. cardinal richelieu groucho-a-like testosterone trophy d’artagnan dick van dyke rugged chevron Droopy frontiersman borat beefeater hungarian chevron, cardinal richelieu d’artagnan beefeater el snort Droopy dodgy uncle clive groucho-a-like hairy kiss. chevron frontiersman chevron dick van dyke walrus leader of men rugged borat bad guy testosterone trophy groucho-a-like alpha trion hungarian.
+  <br />
+  <br />
+  <Typography
+    style={
+      Object {
+        "display": "block",
+      }
+    }
+    variant="a"
+  >
+    Like!
+  </Typography>
+  <Typography
+    style={
+      Object {
+        "display": "block",
+      }
+    }
+    variant="a"
+  >
+    Subscribe!
+  </Typography>
+  <br />
+  <Typography
+    variant="h3"
+  >
+    Code Example
+  </Typography>
+  <Typography
+    variant="code"
+  >
+    <ul>
+      <li>
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+      </li>
+      <li>
+        Aliquam tincidunt mauris eu risus.
+      </li>
+      <li>
+        Vestibulum auctor dapibus neque.
+      </li>
+    </ul>
+  </Typography>
+</p>
+`;
+
+exports[`Typography [common] example testing should match snapshot(s) for 02.nested 4`] = `
+<a
+  className="lucid-Typography lucid-Typography-a"
+  style={
+    Object {
+      "display": "block",
+    }
+  }
+>
+  Like!
+</a>
+`;
+
+exports[`Typography [common] example testing should match snapshot(s) for 02.nested 5`] = `
+<a
+  className="lucid-Typography lucid-Typography-a"
+  style={
+    Object {
+      "display": "block",
+    }
+  }
+>
+  Subscribe!
+</a>
+`;
+
+exports[`Typography [common] example testing should match snapshot(s) for 02.nested 6`] = `
+<h3
+  className="lucid-Typography lucid-Typography-h3"
+>
+  Code Example
+</h3>
+`;
+
+exports[`Typography [common] example testing should match snapshot(s) for 02.nested 7`] = `
+<code
+  className="lucid-Typography lucid-Typography-code"
+>
+  <ul>
+    <li>
+      Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+    </li>
+    <li>
+      Aliquam tincidunt mauris eu risus.
+    </li>
+    <li>
+      Vestibulum auctor dapibus neque.
+    </li>
+  </ul>
+</code>
+`;
