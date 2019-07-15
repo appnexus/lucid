@@ -491,6 +491,33 @@ describe('DataTable', () => {
 					);
 				});
 			});
+
+			it('should have inDeterminate on the header checkbox when data is partially selected', () => {
+				const wrapper = shallow(
+					<DataTable isSelectable data={testData}>
+						<Column field='id' title='ID' />
+						<Column field='first_name' title='First' />
+						<Column field='last_name' title='Last' />
+						<Column field='email' title='Email' />
+						<Column field='occupation' title='Occupation' />
+					</DataTable>
+				);
+
+				// select the rows of the rendered table head
+				const headTrsWrapper = wrapper
+					.find(ScrollTable)
+					.shallow()
+					.find(ScrollTable.Thead)
+					.shallow()
+					.find(ScrollTable.Tr);
+
+				const firstHeadCellWrapper = headTrsWrapper
+					.shallow()
+					.find(ScrollTable.Th)
+					.first();
+				const selectAllCheckboxWrapper = firstHeadCellWrapper.find(Checkbox);
+				assert.equal(true, selectAllCheckboxWrapper.prop('isIndeterminate'), 'The CheckBox should be in an indeterminate state');
+			});
 		});
 
 		describe('onSelectAll', () => {
