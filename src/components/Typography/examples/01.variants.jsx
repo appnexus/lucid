@@ -14,6 +14,7 @@ export default createClass({
 				<Typography variant='a'>a. link text</Typography>
 				<Typography variant='pre'>pre. preformatted text</Typography>
 				<Typography variant='code'>code. snazzy code</Typography>
+				<Typography variant='tabular'>tabular. text for tables</Typography>
 			</div>
 		);
 	},
