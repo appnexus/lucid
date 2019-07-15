@@ -7,6 +7,7 @@ import { buildHybridComponent } from '../../util/state-management';
 import ChevronIcon from '../Icon/ChevronIcon/ChevronIcon';
 import Collapsible from '../Collapsible/Collapsible';
 import * as reducers from './Expander.reducers';
+import Button from '../Button/Button';
 
 const cx = lucidClassNames.bind('&-Expander');
 
@@ -144,9 +145,13 @@ const Expander = createClass({
 			>
 				<header className={cx('&-header')}>
 					<div className={cx('&-header-toggle')} onClick={this.handleToggle}>
-						<span className={cx('&-icon')}>
-							<ChevronIcon size={12} direction={isExpanded ? 'up' : 'down'} />
-						</span>
+						<Button
+							className={cx('&-icon')}
+							kind='invisible'
+							hasOnlyIcon={true}
+						>
+							<ChevronIcon direction={isExpanded ? 'up' : 'down'} />
+						</Button>
 						{labelChildProp && (
 							<span className={cx('&-text')}>{labelChildProp.children}</span>
 						)}

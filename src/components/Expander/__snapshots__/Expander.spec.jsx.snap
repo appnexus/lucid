@@ -11,14 +11,19 @@ exports[`Expander [common] example testing should match snapshot(s) for 1.expand
       className="lucid-Expander-header-toggle"
       onClick={[Function]}
     >
-      <span
+      <Button
         className="lucid-Expander-icon"
+        hasOnlyIcon={true}
+        isActive={false}
+        isDisabled={false}
+        kind="invisible"
+        onClick={[Function]}
+        type="button"
       >
         <ChevronIcon
           direction="up"
-          size={12}
         />
-      </span>
+      </Button>
       <span
         className="lucid-Expander-text"
       >
@@ -55,14 +60,19 @@ exports[`Expander [common] example testing should match snapshot(s) for 2.intera
       className="lucid-Expander-header-toggle"
       onClick={[Function]}
     >
-      <span
+      <Button
         className="lucid-Expander-icon"
+        hasOnlyIcon={true}
+        isActive={false}
+        isDisabled={false}
+        kind="invisible"
+        onClick={[Function]}
+        type="button"
       >
         <ChevronIcon
           direction="down"
-          size={12}
         />
-      </span>
+      </Button>
       <span
         className="lucid-Expander-text"
       >
@@ -114,14 +124,19 @@ exports[`Expander [common] example testing should match snapshot(s) for 3.intera
       className="lucid-Expander-header-toggle"
       onClick={[Function]}
     >
-      <span
+      <Button
         className="lucid-Expander-icon"
+        hasOnlyIcon={true}
+        isActive={false}
+        isDisabled={false}
+        kind="invisible"
+        onClick={[Function]}
+        type="button"
       >
         <ChevronIcon
           direction="down"
-          size={12}
         />
-      </span>
+      </Button>
       <span
         className="lucid-Expander-text"
       >
@@ -173,14 +188,19 @@ exports[`Expander [common] example testing should match snapshot(s) for 4.intera
       className="lucid-Expander-header-toggle"
       onClick={[Function]}
     >
-      <span
+      <Button
         className="lucid-Expander-icon"
+        hasOnlyIcon={true}
+        isActive={false}
+        isDisabled={false}
+        kind="invisible"
+        onClick={[Function]}
+        type="button"
       >
         <ChevronIcon
           direction="down"
-          size={12}
         />
-      </span>
+      </Button>
       <span
         className="lucid-Expander-text"
       >
@@ -266,6 +286,55 @@ exports[`Expander [common] example testing should match snapshot(s) for 4.intera
     </p>
     <p>
       Kale chips pug jean shorts cardigan, ramps plaid mlkshk photo booth migas whatever. Ramps affogato bespoke, crucifix ennui PBR&B asymmetrical meggings kombucha banh mi meh skateboard artisan man braid. Ugh semiotics intelligentsia sustainable, craft beer next level meggings before they sold out heirloom iPhone try-hard. Listicle blog literally marfa plaid brooklyn humblebrag retro, VHS thundercats man braid waistcoat ennui. Church-key knausgaard austin organic farm-to-table neutra franzen bespoke, mlkshk narwhal DIY raw denim retro. Mlkshk locavore try-hard roof party flexitarian. Letterpress beard fixie, umami waistcoat salvia ennui four loko seitan lomo franzen pickled shoreditch master cleanse.
+    </p>
+  </Collapsible>
+</div>
+`;
+
+exports[`Expander [common] example testing should match snapshot(s) for 5.highlighted 1`] = `
+<div
+  className="lucid-Expander lucid-Expander-kind-highlighted"
+>
+  <header
+    className="lucid-Expander-header"
+  >
+    <div
+      className="lucid-Expander-header-toggle"
+      onClick={[Function]}
+    >
+      <Button
+        className="lucid-Expander-icon"
+        hasOnlyIcon={true}
+        isActive={false}
+        isDisabled={false}
+        kind="invisible"
+        onClick={[Function]}
+        type="button"
+      >
+        <ChevronIcon
+          direction="down"
+        />
+      </Button>
+      <span
+        className="lucid-Expander-text"
+      >
+        Show Less
+      </span>
+    </div>
+  </header>
+  <Collapsible
+    className="lucid-Expander-content"
+    isAnimated={true}
+    isExpanded={false}
+    isMountControlled={true}
+    mountControlThreshold={4}
+    rootType="section"
+  >
+    <Expander.Label>
+      Show Less
+    </Expander.Label>
+    <p>
+      You can't get rid of me. Keep clicking that icon as much as you want, but I'm here to stay!
     </p>
   </Collapsible>
 </div>
