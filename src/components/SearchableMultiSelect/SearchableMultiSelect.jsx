@@ -574,6 +574,7 @@ const SearchableMultiSelect = createClass({
 					<DropMenu.Control>
 						<SearchField
 							{...searchFieldProps}
+							autoComplete={searchFieldProps.autoComplete || 'off'}
 							isDisabled={isDisabled}
 							className={cx(
 								'&-search',

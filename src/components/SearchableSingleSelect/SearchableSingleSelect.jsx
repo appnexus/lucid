@@ -440,6 +440,7 @@ const SearchableSingleSelect = createClass({
 					<DropMenu.Control>
 						<SearchField
 							{...searchFieldProps}
+							autoComplete={searchFieldProps.autoComplete || 'off'}
 							isDisabled={isDisabled}
 							className={cx('&-search', searchFieldProps.className)}
 							value={searchText}
