@@ -154,6 +154,7 @@ import Tag from './components/Tag/Tag';
 import TextField from './components/TextField/TextField';
 import TextFieldValidated from './components/TextFieldValidated/TextFieldValidated';
 import TextIcon from './components/Icon/TextIcon/TextIcon';
+import Typography from './components/Typography/Typography';
 import Underline from './components/Underline/Underline';
 import UnlinkedIcon from './components/Icon/UnlinkedIcon/UnlinkedIcon';
 import UnlockedIcon from './components/Icon/UnlockedIcon/UnlockedIcon';
@@ -341,6 +342,7 @@ export {
 	TextFieldValidated,
 	ToolTip,
 	ToolTipDumb,
+	Typography,
 	Underline,
 	UnlinkedIcon,
 	UnlockedIcon,
