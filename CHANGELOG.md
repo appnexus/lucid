@@ -1,6 +1,12 @@
-## unreleased
+## 4.1.0
 
-- fix `SidePanel` position an sizing to correctly scroll content [#997](https://github.com/appnexus/lucid/pull/997)
+- [minor] add `color` prop to `Icon` [#1000](https://github.com/appnexus/lucid/pull/997)
+- [patch] fix `SidePanel` position an sizing to correctly scroll content [#997](https://github.com/appnexus/lucid/pull/997)
+- [patch] update `ToolTip` link styling to match Banners [#1003](https://github.com/appnexus/lucid/pull/1003)
+- [patch] create indeterminate state for `DataTable` select all when only some rows are selected[#1002](https://github.com/appnexus/lucid/pull/#1002)
+- [patch] updates to `SingleSelect` `isInvisible` styling [#996](https://github.com/appnexus/lucid/pull/996)
+- [patch] `SearchableSelect` `SearchableSingleSelect` `SearchableMultiSelect` now default the `autoComplete` attribute to off  [#1001](https://github.com/appnexus/lucid/pull/1001)
+- [patch] Fixed some cases where font-weights were too bold. `SidePanel` close icon is now gray [#998](https://github.com/appnexus/lucid/pull/998)
 
 ## 4.0.0
 
