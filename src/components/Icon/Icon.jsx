@@ -6,7 +6,29 @@ import { createClass, omitProps } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-Icon');
 
-const { any, string, number, bool, func } = PropTypes;
+const { any, string, number, bool, func, oneOf } = PropTypes;
+
+const COLOR_NEUTRAL_DARK = 'neutral-dark';
+const COLOR_NEUTRAL_LIGHT = 'neutral-light';
+const COLOR_PRIMARY = 'primary';
+const COLOR_WHITE = 'white';
+const COLOR_SUCCESS = 'success';
+const COLOR_WARNING = 'warning';
+const COLOR_SECONDARY_ONE = 'secondary-one';
+const COLOR_SECONDARY_TWO = 'secondary-two';
+const COLOR_SECONDARY_THREE = 'secondary-three';
+
+const COLOR_PROPS = [
+	COLOR_NEUTRAL_DARK,
+	COLOR_NEUTRAL_LIGHT,
+	COLOR_PRIMARY,
+	COLOR_WHITE,
+	COLOR_SUCCESS,
+	COLOR_WARNING,
+	COLOR_SECONDARY_ONE,
+	COLOR_SECONDARY_TWO,
+	COLOR_SECONDARY_THREE,
+];
 
 const Icon = createClass({
 	displayName: 'Icon',
@@ -65,6 +87,11 @@ const Icon = createClass({
 		children: any`
 			Any valid React children.
 		`,
+
+		color: oneOf(COLOR_PROPS)`
+			Sets the color of the Icon.  May not be applicable for icons that are tied
+			to specific colors (e.g. DangerIcon).
+		`,
 	},
 
 	getDefaultProps() {
@@ -74,6 +101,7 @@ const Icon = createClass({
 			viewBox: '0 0 16 16',
 			isDisabled: false,
 			isClickable: false,
+			color: COLOR_PRIMARY,
 		};
 	},
 
@@ -95,6 +123,7 @@ const Icon = createClass({
 		const {
 			className,
 			children,
+			color,
 			size,
 			viewBox,
 			aspectRatio,
@@ -113,6 +142,7 @@ const Icon = createClass({
 				className={cx(
 					'&',
 					{
+						[`&-color-${color}`]: true,
 						'&-is-clickable': !isDisabled && isClickable,
 						'&-is-disabled': isDisabled,
 					},

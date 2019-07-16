@@ -4,6 +4,7 @@ exports[`CrownIcon [common] example testing should match snapshot(s) for 1.defau
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-CrownIcon"
+  color="primary"
   isClickable={false}
   isDisabled={false}
   size={16}

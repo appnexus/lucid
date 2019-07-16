@@ -4,6 +4,7 @@ exports[`WarningIcon [common] example testing should match snapshot(s) for 1.def
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-WarningIcon"
+  color="primary"
   isClickable={false}
   isDisabled={false}
   size={16}

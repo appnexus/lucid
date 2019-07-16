@@ -4,6 +4,7 @@ exports[`NewWindowIcon [common] example testing should match snapshot(s) for 1.d
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-NewWindowIcon"
+  color="primary"
   isClickable={false}
   isDisabled={false}
   size={16}

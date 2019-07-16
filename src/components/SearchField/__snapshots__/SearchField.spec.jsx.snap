@@ -136,6 +136,7 @@ exports[`SearchField [common] example testing should match snapshot(s) for 5.cus
     <LoadingIcon
       aspectRatio="xMidYMid meet"
       className="lucid-SearchField-Icon"
+      color="primary"
       isClickable={false}
       isDisabled={false}
       size={16}
@@ -343,6 +344,7 @@ exports[`SearchField [common] example testing should match snapshot(s) for 8.pro
     <LoadingIcon
       aspectRatio="xMidYMid meet"
       className="lucid-SearchField-Icon"
+      color="primary"
       isClickable={false}
       isDisabled={false}
       size={16}
@@ -376,6 +378,7 @@ exports[`SearchField [common] example testing should match snapshot(s) for 8.pro
     <LoadingIcon
       aspectRatio="xMidYMid meet"
       className="lucid-SearchField-Icon lucid-SearchField-Icon-active"
+      color="primary"
       isClickable={false}
       isDisabled={false}
       size={16}

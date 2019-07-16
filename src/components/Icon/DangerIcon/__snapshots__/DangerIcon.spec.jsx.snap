@@ -4,6 +4,7 @@ exports[`DangerIcon [common] example testing should match snapshot(s) for 1.defa
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-DangerIcon"
+  color="primary"
   isClickable={false}
   isDisabled={false}
   size={16}
@@ -27,6 +28,7 @@ exports[`DangerIcon [common] example testing should match snapshot(s) for 1.defa
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-DangerIcon lucid-DangerIcon-is-clickable"
+  color="primary"
   isClickable={true}
   isDisabled={false}
   size={16}
@@ -50,6 +52,7 @@ exports[`DangerIcon [common] example testing should match snapshot(s) for 1.defa
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-DangerIcon lucid-DangerIcon-is-disabled"
+  color="primary"
   isClickable={false}
   isDisabled={true}
   size={16}

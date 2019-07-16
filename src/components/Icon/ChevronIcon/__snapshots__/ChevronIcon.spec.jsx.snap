@@ -4,6 +4,7 @@ exports[`ChevronIcon [common] example testing should match snapshot(s) for 1.def
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-ChevronIcon lucid-ChevronIcon-is-down"
+  color="primary"
   isClickable={false}
   isDisabled={false}
   size={16}
@@ -19,6 +20,7 @@ exports[`ChevronIcon [common] example testing should match snapshot(s) for 1.def
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-ChevronIcon lucid-ChevronIcon-is-up"
+  color="primary"
   isClickable={false}
   isDisabled={false}
   size={16}
@@ -34,6 +36,7 @@ exports[`ChevronIcon [common] example testing should match snapshot(s) for 1.def
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-ChevronIcon lucid-ChevronIcon-is-down"
+  color="primary"
   isClickable={false}
   isDisabled={false}
   size={16}
@@ -49,6 +52,7 @@ exports[`ChevronIcon [common] example testing should match snapshot(s) for 1.def
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-ChevronIcon lucid-ChevronIcon-is-left"
+  color="primary"
   isClickable={false}
   isDisabled={false}
   size={16}
@@ -64,6 +68,7 @@ exports[`ChevronIcon [common] example testing should match snapshot(s) for 1.def
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-ChevronIcon lucid-ChevronIcon-is-right"
+  color="primary"
   isClickable={false}
   isDisabled={false}
   size={16}

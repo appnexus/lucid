@@ -4,6 +4,7 @@ exports[`BellIcon [common] example testing should match snapshot(s) for 1.defaul
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-BellIcon"
+  color="primary"
   isClickable={false}
   isDisabled={false}
   size={16}

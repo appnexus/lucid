@@ -4,6 +4,7 @@ exports[`LoadingIcon [common] example testing should match snapshot(s) for 1.def
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-LoadingIcon"
+  color="primary"
   isClickable={false}
   isDisabled={false}
   size={16}
@@ -45,6 +46,7 @@ exports[`LoadingIcon [common] example testing should match snapshot(s) for 1.def
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-LoadingIcon"
+  color="primary"
   isClickable={false}
   isDisabled={false}
   size={16}
@@ -86,6 +88,7 @@ exports[`LoadingIcon [common] example testing should match snapshot(s) for 1.def
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-LoadingIcon"
+  color="primary"
   isClickable={false}
   isDisabled={false}
   size={16}

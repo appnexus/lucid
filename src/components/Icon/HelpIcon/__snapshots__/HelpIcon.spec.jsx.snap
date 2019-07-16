@@ -4,6 +4,7 @@ exports[`HelpIcon [common] example testing should match snapshot(s) for 1.defaul
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-HelpIcon"
+  color="primary"
   isClickable={false}
   isDisabled={false}
   size={16}
@@ -30,6 +31,7 @@ exports[`HelpIcon [common] example testing should match snapshot(s) for 1.defaul
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-HelpIcon lucid-HelpIcon-is-clickable"
+  color="primary"
   isClickable={true}
   isDisabled={false}
   size={16}
@@ -56,6 +58,7 @@ exports[`HelpIcon [common] example testing should match snapshot(s) for 1.defaul
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-HelpIcon lucid-HelpIcon-is-disabled"
+  color="primary"
   isClickable={false}
   isDisabled={true}
   size={16}

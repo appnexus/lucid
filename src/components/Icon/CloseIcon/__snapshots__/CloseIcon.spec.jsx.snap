@@ -4,6 +4,7 @@ exports[`CloseIcon [common] example testing should match snapshot(s) for 1.defau
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-CloseIcon"
+  color="primary"
   isClickable={false}
   isDisabled={false}
   size={16}

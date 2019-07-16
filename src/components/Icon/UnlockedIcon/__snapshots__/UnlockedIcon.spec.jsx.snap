@@ -4,6 +4,7 @@ exports[`UnlockedIcon [common] example testing should match snapshot(s) for 1.de
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-UnlockedIcon"
+  color="primary"
   isClickable={false}
   isDisabled={false}
   size={16}

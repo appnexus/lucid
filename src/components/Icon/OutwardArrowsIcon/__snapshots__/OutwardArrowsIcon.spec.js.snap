@@ -4,6 +4,7 @@ exports[`OutwardArrowsIcon [common] example testing should match snapshot(s) for
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-OutwardArrowsIcon"
+  color="primary"
   isClickable={false}
   isDisabled={false}
   size={16}
@@ -19,6 +20,7 @@ exports[`OutwardArrowsIcon [common] example testing should match snapshot(s) for
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-OutwardArrowsIcon"
+  color="primary"
   isClickable={false}
   isDisabled={false}
   size={16}
@@ -34,6 +36,7 @@ exports[`OutwardArrowsIcon [common] example testing should match snapshot(s) for
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-OutwardArrowsIcon"
+  color="primary"
   isClickable={false}
   isDisabled={false}
   size={16}
