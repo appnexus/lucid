@@ -39,6 +39,7 @@ exports[`SearchableSingleSelect [common] example testing should match snapshot(s
   >
     <DropMenu.Control>
       <SearchField
+        autoComplete="off"
         className="lucid-SearchableSingleSelect-search"
         debounceLevel={500}
         isDisabled={false}
@@ -471,6 +472,7 @@ exports[`SearchableSingleSelect [common] example testing should match snapshot(s
   >
     <DropMenu.Control>
       <SearchField
+        autoComplete="off"
         className="lucid-SearchableSingleSelect-search"
         debounceLevel={500}
         isDisabled={false}
@@ -542,6 +544,7 @@ exports[`SearchableSingleSelect [common] example testing should match snapshot(s
   >
     <DropMenu.Control>
       <SearchField
+        autoComplete="off"
         className="lucid-SearchableSingleSelect-search"
         debounceLevel={500}
         isDisabled={true}
@@ -598,6 +601,7 @@ exports[`SearchableSingleSelect [common] example testing should match snapshot(s
   >
     <DropMenu.Control>
       <SearchField
+        autoComplete="off"
         className="lucid-SearchableSingleSelect-search"
         debounceLevel={500}
         isDisabled={false}
@@ -646,6 +650,7 @@ exports[`SearchableSingleSelect [common] example testing should match snapshot(s
   >
     <DropMenu.Control>
       <SearchField
+        autoComplete="off"
         className="lucid-SearchableSingleSelect-search"
         debounceLevel={500}
         isDisabled={false}
@@ -1268,6 +1273,7 @@ exports[`SearchableSingleSelect [common] example testing should match snapshot(s
   >
     <DropMenu.Control>
       <SearchField
+        autoComplete="off"
         className="lucid-SearchableSingleSelect-search"
         debounceLevel={500}
         isDisabled={false}
@@ -1340,6 +1346,7 @@ exports[`SearchableSingleSelect custom formatting should render Option child fun
   >
     <DropMenu.Control>
       <SearchField
+        autoComplete="off"
         className="lucid-SearchableSingleSelect-search"
         debounceLevel={500}
         isDisabled={false}

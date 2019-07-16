@@ -34,6 +34,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
   >
     <DropMenu.Control>
       <SearchField
+        autoComplete="off"
         className="lucid-SearchableMultiSelect-search"
         debounceLevel={500}
         isDisabled={false}
@@ -98,6 +99,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
   >
     <DropMenu.Control>
       <SearchField
+        autoComplete="off"
         className="lucid-SearchableMultiSelect-search"
         debounceLevel={500}
         isDisabled={false}
@@ -1535,6 +1537,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
   >
     <DropMenu.Control>
       <SearchField
+        autoComplete="off"
         className="lucid-SearchableMultiSelect-search"
         debounceLevel={500}
         isDisabled={false}
@@ -2750,6 +2753,7 @@ exports[`SearchableMultiSelect custom formatting should render Option child func
   >
     <DropMenu.Control>
       <SearchField
+        autoComplete="off"
         className="lucid-SearchableMultiSelect-search"
         debounceLevel={500}
         isDisabled={false}
@@ -2879,6 +2883,7 @@ exports[`SearchableMultiSelect custom formatting should render Option.Selected i
   >
     <DropMenu.Control>
       <SearchField
+        autoComplete="off"
         className="lucid-SearchableMultiSelect-search"
         debounceLevel={500}
         isDisabled={false}
@@ -3100,6 +3105,7 @@ exports[`SearchableMultiSelect custom formatting should render OptionGroup.Selec
   >
     <DropMenu.Control>
       <SearchField
+        autoComplete="off"
         className="lucid-SearchableMultiSelect-search"
         debounceLevel={500}
         isDisabled={false}

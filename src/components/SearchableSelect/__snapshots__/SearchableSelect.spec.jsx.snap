@@ -58,6 +58,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
     className="lucid-SearchableSelect-Search-container"
   >
     <SearchField
+      autoComplete="off"
       debounceLevel={500}
       isDisabled={false}
       onChange={[Function]}
@@ -862,6 +863,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
     className="lucid-SearchableSelect-Search-container"
   >
     <SearchField
+      autoComplete="off"
       debounceLevel={500}
       isDisabled={false}
       onChange={[Function]}
@@ -1407,6 +1409,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
     className="lucid-SearchableSelect-Search-container"
   >
     <SearchField
+      autoComplete="off"
       debounceLevel={500}
       isDisabled={false}
       onChange={[Function]}
@@ -1509,6 +1512,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
     className="lucid-SearchableSelect-Search-container"
   >
     <SearchField
+      autoComplete="off"
       debounceLevel={500}
       isDisabled={false}
       onChange={[Function]}
@@ -2309,6 +2313,7 @@ exports[`SearchableSelect child elements Option should render Option child funct
     className="lucid-SearchableSelect-Search-container"
   >
     <SearchField
+      autoComplete="off"
       debounceLevel={500}
       isDisabled={false}
       onChange={[Function]}
@@ -2412,6 +2417,7 @@ exports[`SearchableSelect child elements Option should render Option.Selected in
     className="lucid-SearchableSelect-Search-container"
   >
     <SearchField
+      autoComplete="off"
       debounceLevel={500}
       isDisabled={false}
       onChange={[Function]}

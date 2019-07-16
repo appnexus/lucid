@@ -121,6 +121,7 @@ const SearchField = createClass({
 				onSubmit,
 				placeholder,
 				value,
+				autoComplete,
 				...passThroughs
 			},
 		} = this;
@@ -136,6 +137,7 @@ const SearchField = createClass({
 			placeholder,
 			isMultiLine: false,
 			value,
+			autoComplete,
 		};
 
 		const textFieldElement = getFirst(props, TextField) || (

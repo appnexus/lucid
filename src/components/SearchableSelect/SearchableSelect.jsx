@@ -466,6 +466,7 @@ const SearchableSelect = createClass({
 				<DropMenu.Header className={cx('&-Search-container')}>
 					<SearchField
 						{...searchFieldProps}
+						autoComplete={searchFieldProps.autoComplete || 'off'}
 						onChange={this.handleSearch}
 						value={searchText}
 					/>
