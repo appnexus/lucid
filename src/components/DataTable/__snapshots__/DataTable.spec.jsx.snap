@@ -3585,7 +3585,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
         >
           <Checkbox
             isDisabled={false}
-            isIndeterminate={false}
+            isIndeterminate={true}
             isSelected={false}
             onSelect={[Function]}
           />
@@ -10334,7 +10334,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.fixe
               >
                 <Checkbox
                   isDisabled={false}
-                  isIndeterminate={false}
+                  isIndeterminate={true}
                   isSelected={false}
                   onSelect={[Function]}
                 />
