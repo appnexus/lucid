@@ -25,11 +25,21 @@
 		&&-is-invisible {
 			border: 1px solid transparent;
 			background-color: transparent;
-		}
 
-		&&-is-invisible.@{prefix}-SingleSelect-Control-is-selected {
-			border: 1px solid @featured-color-primary-borderColor;
-			background-color: white;
+			&.@{prefix}-SingleSelect-Control-is-selected {
+				border: 1px solid @featured-color-primary-borderColor;
+			}
+			&.@{prefix}-SingleSelect-Control-is-expanded {
+				background-color: transparent;
+
+				&.@{prefix}-SingleSelect-Control-is-null-option {
+					border: 1px solid transparent;
+
+					.@{prefix}-SingleSelect-Control-content {
+						.opacity(@opacity-disabled);
+					}
+				}
+			}
 		}
 
 		&-content {
@@ -42,12 +52,18 @@
 			margin-left: auto;
 		}
 
-		&:not(.@{prefix}-SingleSelect-Control-is-disabled):hover {
-			background-color: @color-neutral-3;
+		&.@{prefix}-SingleSelect-Control-is-selected&.@{prefix}-SingleSelect-Control-is-null-option .@{prefix}-SingleSelect-Control-content {
+			.opacity(@opacity-disabled);
 		}
 
-		&:not(.@{prefix}-SingleSelect-Control-is-disabled):focus {
-			background-color: @color-neutral-4;
+		&:not(.@{prefix}-SingleSelect-Control-is-disabled)&:not(.@{prefix}-SingleSelect-Control-is-expanded){
+			&:hover{
+				background-color: @color-neutral-3;
+			}
+
+			&:focus {
+				background-color: @color-neutral-4;
+			}
 		}
 
 		// States
