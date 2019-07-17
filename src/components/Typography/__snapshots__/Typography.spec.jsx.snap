@@ -33,6 +33,14 @@ exports[`Typography [common] example testing should match snapshot(s) for 01.var
 `;
 
 exports[`Typography [common] example testing should match snapshot(s) for 01.variants 5`] = `
+<p
+  className="lucid-Typography lucid-Typography-tabular"
+>
+  tabular. text for tables
+</p>
+`;
+
+exports[`Typography [common] example testing should match snapshot(s) for 01.variants 6`] = `
 <a
   className="lucid-Typography lucid-Typography-a"
 >
@@ -40,7 +48,7 @@ exports[`Typography [common] example testing should match snapshot(s) for 01.var
 </a>
 `;
 
-exports[`Typography [common] example testing should match snapshot(s) for 01.variants 6`] = `
+exports[`Typography [common] example testing should match snapshot(s) for 01.variants 7`] = `
 <pre
   className="lucid-Typography lucid-Typography-pre"
 >
@@ -48,7 +56,7 @@ exports[`Typography [common] example testing should match snapshot(s) for 01.var
 </pre>
 `;
 
-exports[`Typography [common] example testing should match snapshot(s) for 01.variants 7`] = `
+exports[`Typography [common] example testing should match snapshot(s) for 01.variants 8`] = `
 <code
   className="lucid-Typography lucid-Typography-code"
 >
@@ -56,12 +64,20 @@ exports[`Typography [common] example testing should match snapshot(s) for 01.var
 </code>
 `;
 
-exports[`Typography [common] example testing should match snapshot(s) for 01.variants 8`] = `
-<p
-  className="lucid-Typography lucid-Typography-tabular"
+exports[`Typography [common] example testing should match snapshot(s) for 01.variants 9`] = `
+<kbd
+  className="lucid-Typography lucid-Typography-kbd"
 >
-  tabular. text for tables
-</p>
+  kbd. keyboard inputs
+</kbd>
+`;
+
+exports[`Typography [common] example testing should match snapshot(s) for 01.variants 10`] = `
+<samp
+  className="lucid-Typography lucid-Typography-samp"
+>
+  samp. sample code outputs
+</samp>
 `;
 
 exports[`Typography [common] example testing should match snapshot(s) for 02.nested 1`] = `
@@ -116,17 +132,7 @@ exports[`Typography [common] example testing should match snapshot(s) for 02.nes
   <Typography
     variant="code"
   >
-    <ul>
-      <li>
-        Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-      </li>
-      <li>
-        Aliquam tincidunt mauris eu risus.
-      </li>
-      <li>
-        Vestibulum auctor dapibus neque.
-      </li>
-    </ul>
+    npm install all-the-things
   </Typography>
 </p>
 `;
@@ -169,16 +175,6 @@ exports[`Typography [common] example testing should match snapshot(s) for 02.nes
 <code
   className="lucid-Typography lucid-Typography-code"
 >
-  <ul>
-    <li>
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-    </li>
-    <li>
-      Aliquam tincidunt mauris eu risus.
-    </li>
-    <li>
-      Vestibulum auctor dapibus neque.
-    </li>
-  </ul>
+  npm install all-the-things
 </code>
 `;
