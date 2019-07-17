@@ -40,10 +40,12 @@ const Typography = createClass({
 		h2: 'h2',
 		h3: 'h3',
 		p: 'p',
+		tabular: 'p',
 		a: 'a',
 		pre: 'pre',
 		code: 'code',
-		tabular: 'p',
+		kbd: 'kbd',
+		samp: 'samp',
 	},
 
 	render() {
