@@ -1,14 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Typography [common] example testing should match snapshot(s) for 01.variants 1`] = `
-<p
-  className="lucid-Typography lucid-Typography-p"
->
-  Default (no variant specified)
-</p>
-`;
-
-exports[`Typography [common] example testing should match snapshot(s) for 01.variants 2`] = `
 <h1
   className="lucid-Typography lucid-Typography-h1"
 >
@@ -16,7 +8,7 @@ exports[`Typography [common] example testing should match snapshot(s) for 01.var
 </h1>
 `;
 
-exports[`Typography [common] example testing should match snapshot(s) for 01.variants 3`] = `
+exports[`Typography [common] example testing should match snapshot(s) for 01.variants 2`] = `
 <h2
   className="lucid-Typography lucid-Typography-h2"
 >
@@ -24,7 +16,7 @@ exports[`Typography [common] example testing should match snapshot(s) for 01.var
 </h2>
 `;
 
-exports[`Typography [common] example testing should match snapshot(s) for 01.variants 4`] = `
+exports[`Typography [common] example testing should match snapshot(s) for 01.variants 3`] = `
 <h3
   className="lucid-Typography lucid-Typography-h3"
 >
@@ -32,7 +24,7 @@ exports[`Typography [common] example testing should match snapshot(s) for 01.var
 </h3>
 `;
 
-exports[`Typography [common] example testing should match snapshot(s) for 01.variants 5`] = `
+exports[`Typography [common] example testing should match snapshot(s) for 01.variants 4`] = `
 <p
   className="lucid-Typography lucid-Typography-p"
 >
@@ -40,7 +32,7 @@ exports[`Typography [common] example testing should match snapshot(s) for 01.var
 </p>
 `;
 
-exports[`Typography [common] example testing should match snapshot(s) for 01.variants 6`] = `
+exports[`Typography [common] example testing should match snapshot(s) for 01.variants 5`] = `
 <a
   className="lucid-Typography lucid-Typography-a"
 >
@@ -48,7 +40,7 @@ exports[`Typography [common] example testing should match snapshot(s) for 01.var
 </a>
 `;
 
-exports[`Typography [common] example testing should match snapshot(s) for 01.variants 7`] = `
+exports[`Typography [common] example testing should match snapshot(s) for 01.variants 6`] = `
 <pre
   className="lucid-Typography lucid-Typography-pre"
 >
@@ -56,7 +48,7 @@ exports[`Typography [common] example testing should match snapshot(s) for 01.var
 </pre>
 `;
 
-exports[`Typography [common] example testing should match snapshot(s) for 01.variants 8`] = `
+exports[`Typography [common] example testing should match snapshot(s) for 01.variants 7`] = `
 <code
   className="lucid-Typography lucid-Typography-code"
 >
@@ -64,7 +56,7 @@ exports[`Typography [common] example testing should match snapshot(s) for 01.var
 </code>
 `;
 
-exports[`Typography [common] example testing should match snapshot(s) for 01.variants 9`] = `
+exports[`Typography [common] example testing should match snapshot(s) for 01.variants 8`] = `
 <p
   className="lucid-Typography lucid-Typography-tabular"
 >
