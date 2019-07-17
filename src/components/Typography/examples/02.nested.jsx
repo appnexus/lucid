@@ -35,11 +35,7 @@ export default createClass({
 					<br />
 					<Typography variant='h3'>Code Example</Typography>
 					<Typography variant='code'>
-						<ul>
-							<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-							<li>Aliquam tincidunt mauris eu risus.</li>
-							<li>Vestibulum auctor dapibus neque.</li>
-						</ul>
+						npm install all-the-things
 					</Typography>
 				</Typography>
 			</section>
