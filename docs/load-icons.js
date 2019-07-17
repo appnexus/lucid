@@ -330,6 +330,23 @@ module.exports = [
 	},
 
 	{
+		name: 'DotsIcon',
+		component: getDefaultExport(
+			require('../src/components/Icon/DotsIcon/DotsIcon')
+		),
+		examplesContext: require.context(
+			'../src/components/Icon/DotsIcon/examples',
+			true,
+			/\.jsx?$/
+		),
+		examplesContextRaw: require.context(
+			'!!raw-loader!../src/components/Icon/DotsIcon/examples',
+			true,
+			/\.jsx?$/
+		),
+	},
+
+	{
 		name: 'DownloadIcon',
 		component: getDefaultExport(
 			require('../src/components/Icon/DownloadIcon/DownloadIcon')
