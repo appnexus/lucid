@@ -28,46 +28,29 @@ const Typography = createClass({
 			Appended to the component-specific class names set on the root element.
 		`,
 
-		variant: oneOf(['h1', 'h2', 'h3', 'p', 'a', 'pre', 'code'])`
+		variant: oneOf(['h1', 'h2', 'h3', 'p', 'a', 'pre', 'code', 'tabular'])
+			.isRequired`
 			This prop defines the type of text that will be displayed.
 			It may be an actual HTML element or something with extra semantic meaning.
 		`,
 	},
 
-	getDefaultProps() {
-		return {
-			variant: 'p',
-		};
-	},
-
-	elFinder: variant => {
-		switch (variant) {
-			case 'h1':
-				return 'h1';
-			case 'h2':
-				return 'h2';
-			case 'h3':
-				return 'h3';
-			case 'p':
-				return 'p';
-			case 'a':
-				return 'a';
-			case 'pre':
-				return 'pre';
-			case 'code':
-				return 'code';
-			case 'tabular':
-				return 'p';
-			default:
-				return 'p';
-		}
+	elementDict: {
+		h1: 'h1',
+		h2: 'h2',
+		h3: 'h3',
+		p: 'p',
+		a: 'a',
+		pre: 'pre',
+		code: 'code',
+		tabular: 'p',
 	},
 
 	render() {
 		const { children, className, variant, ...passThroughs } = this.props;
-		const { elFinder } = this;
+		const { elementDict } = this;
 
-		const Element = elFinder(variant);
+		const Element = elementDict[variant];
 
 		return (
 			<Element

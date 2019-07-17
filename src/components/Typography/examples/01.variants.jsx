@@ -6,7 +6,6 @@ export default createClass({
 	render() {
 		return (
 			<div>
-				<Typography>Default (no variant specified)</Typography>
 				<Typography variant='h1'>h1. Heading</Typography>
 				<Typography variant='h2'>h2. Heading</Typography>
 				<Typography variant='h3'>h3. Heading</Typography>
