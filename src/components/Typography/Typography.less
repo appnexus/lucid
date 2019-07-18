@@ -3,6 +3,12 @@
 
 .@{prefix}-Typography {
 
+	// text for tables
+	&-tabular {
+		font-family: @font-family-tabular;
+	}
+
+	// headings
 	&-h1,
 	&-h2,
 	&-h3 {
@@ -10,9 +16,6 @@
 		font-weight: @font-weight-medium;
 		text-rendering: optimizelegibility;
 	}
-
-	// These values have been adjusted for the Xandr branding. Anything after h3
-	// shouldn't be used in practice.
 	&-h1 {
 		font-size: 24px;
 		line-height: 28px;
@@ -28,6 +31,7 @@
 		color: @color-neutral-6;
 	}
 
+	// links
 	&-a {
 		font-weight: @font-weight-medium;
 		color: @color-linkColor;
@@ -38,7 +42,7 @@
 		text-decoration: underline;
 	}
 
-	// NOTE: kbd and samp are currently not prop options for `variant`
+	// code and code-like
 	&-code,
 	&-pre,
 	&-kbd,
@@ -46,9 +50,5 @@
 		// TODO: replace this with the variable from lucid when this issue is closed:
 		// https://github.com/appnexus/lucid/issues/618
 		font-family: Menlo, Monaco, 'Ubuntu Mono', Courier, monospace;
-	}
-
-	&-tabular {
-		font-family: @font-family-tabular;
 	}
 }
