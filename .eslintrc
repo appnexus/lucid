@@ -1,5 +1,95 @@
 {
-  "extends": [
-		"appnexus/frontend"
-	]
+	"extends": [
+		"eslint:recommended",
+		"plugin:react/recommended",
+		"prettier",
+		"prettier/react",
+		"prettier/@typescript-eslint"
+	],
+	"env": {
+		"node": true,
+		"es6": true,
+		"jest": true,
+		"browser": true
+	},
+	"parser": "@typescript-eslint/parser",
+	"plugins": [
+		"@typescript-eslint",
+		"import",
+		"prettier",
+		"react",
+		"lodash",
+		"promise",
+		"prettier"
+	],
+	"parserOptions": {
+		"sourceType": "module",
+		"ecmaFeatures": {
+			"jsx": true
+		},
+		"project": "./tsconfig.json"
+	},
+	"settings": {
+		"react": {
+			"version": "detect"
+		},
+		"import/resolver": {
+			"node": {
+				"extensions": [".js", ".jsx", ".ts", ".tsx"]
+			}
+		}
+	},
+	"rules": {
+		"constructor-super": 2,
+		"import/default": 2,
+		"import/export": 2,
+		"import/imports-first": 2,
+		"import/named": 2,
+		"import/namespace": 2,
+		"import/newline-after-import": 2,
+		"import/no-extraneous-dependencies": 2,
+		"import/no-mutable-exports": 2,
+		"import/no-named-as-default": 2,
+		"import/no-named-as-default-member": 2,
+		"import/no-unresolved": [2, { "commonjs": true }],
+		"import/prefer-default-export": 0,
+		"jsx-quotes": [2, "prefer-single"],
+		"lodash/chaining": 0,
+		"no-case-declarations": 2,
+		"no-class-assign": 2,
+		"no-cond-assign": 2,
+		"no-console": [1, { "allow": ["warn", "error", "info"] }],
+		"no-constant-condition": 2,
+		"no-empty": 2,
+		"no-empty-pattern": 2,
+		"no-extra-semi": 0,
+		"no-global-assign": 2,
+		"no-inner-declarations": 2,
+		"no-invalid-regexp": 2,
+		"no-mixed-requires": 2,
+		"no-mixed-spaces-and-tabs": 0,
+		"no-negated-in-lhs": 2,
+		"no-new-require": 2,
+		"no-path-concat": 2,
+		"no-proto": 2,
+		"no-regex-spaces": 2,
+		"no-restricted-modules": [2, "sys", "_linklist"],
+		"no-sparse-arrays": 2,
+		"no-undef": 2,
+		"no-unexpected-multiline": 0,
+		"no-unsafe-finally": 2,
+		"no-unsafe-negation": 2,
+		"no-unused-vars": [2, { "args": "none" }],
+		"prefer-const": 2,
+		"prettier/prettier": "error",
+		"promise/always-return": 0,
+		"promise/catch-or-return": 2,
+		"promise/param-names": 2,
+		"quote-props": 0,
+		"react/jsx-uses-react": 2,
+		"react/jsx-uses-vars": 2,
+		"react/prop-types": 2,
+		"react/react-in-jsx-scope": 2,
+		"require-yield": 2
+	}
 }

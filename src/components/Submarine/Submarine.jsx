@@ -191,7 +191,7 @@ const Submarine = createClass({
 				findTypes(this.props, Submarine.Title)
 			), // get titles from Bar and parent Submarine
 			'[0].props', // select props from the first title element
-			<Submarine.Title />.props // default props
+			React.createElement(Submarine.Title).props // default props
 		);
 
 		let PrimaryPane, BarPane; // using Left/Right Pane as primary depends on position

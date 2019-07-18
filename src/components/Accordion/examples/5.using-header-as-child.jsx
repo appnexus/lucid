@@ -17,7 +17,7 @@ export default createClass({
 				</Accordion.Item>
 				<Accordion.Item isDisabled={true}>
 					<Accordion.Header>Ray Stantz</Accordion.Header>
-					Raymond "Ray" Stantz, Ph.D. is a fictional character from the
+					Raymond Ray Stantz, Ph.D. is a fictional character from the
 					Ghostbusters franchise. He appears in the films Ghostbusters,
 					Ghostbusters II, Casper, and the animated television series The Real
 					Ghostbusters. He was portrayed by Dan Aykroyd in both live action

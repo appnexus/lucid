@@ -7,8 +7,12 @@ import {
 	omitFunctionPropsDeep,
 } from './state-management';
 
+interface ICreateClass<P, S> extends React.ComponentSpec<P, S> {
+	_isPrivate?: boolean;
+}
+
 // creates a React component
-export function createClass(definition = {}) {
+export function createClass(definition: ICreateClass): React.Component {
 	const {
 		_isPrivate = false,
 		getDefaultProps,
@@ -54,7 +58,7 @@ export function createClass(definition = {}) {
 }
 
 // return all elements matching the specified types
-export function filterTypes(children, types = []) {
+export function filterTypes(children: React.ElementType, types = []) {
 	types = [].concat(types); // coerce to Array
 
 	return _.filter(
@@ -64,7 +68,7 @@ export function filterTypes(children, types = []) {
 }
 
 // return all elements not matching the specified types
-export function rejectTypes(children, types = []) {
+export function rejectTypes(children: React.ElementType, types = []) {
 	types = [].concat(types); // coerce to Array
 
 	return _.reject(
@@ -74,7 +78,7 @@ export function rejectTypes(children, types = []) {
 }
 
 // return an array of elements (of the given type) for each of the values
-export function createElements(type, values = []) {
+export function createElements(type: React.Component, values = []) {
 	return _.reduce(
 		[].concat(values),
 		(elements, typeValue) => {

@@ -15,7 +15,7 @@ export default createClass({
 					He is a parapsychologist and the leader of the Ghostbusters.
 				</Accordion.Item>
 				<Accordion.Item Header='Ray Stantz'>
-					Raymond "Ray" Stantz, Ph.D. is a fictional character from the
+					Raymond Ray Stantz, Ph.D. is a fictional character from the
 					Ghostbusters franchise. He appears in the films Ghostbusters,
 					Ghostbusters II, Casper, and the animated television series The Real
 					Ghostbusters. He was portrayed by Dan Aykroyd in both live action

@@ -73,7 +73,7 @@ const Button = createClass({
 		};
 	},
 
-	handleClick(event) {
+	handleClick(event: React.MouseEventHandler<HTMLButtonElement>) {
 		const { isDisabled, onClick } = this.props;
 		const domNode = ReactDOM.findDOMNode(this);
 
