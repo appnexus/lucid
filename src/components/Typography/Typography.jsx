@@ -28,19 +28,29 @@ const Typography = createClass({
 			Appended to the component-specific class names set on the root element.
 		`,
 
-		variant: oneOf(['h1', 'h2', 'h3', 'p', 'a', 'pre', 'code', 'tabular'])
-			.isRequired`
+		variant: oneOf([
+			'p',
+			'tabular',
+			'h1',
+			'h2',
+			'h3',
+			'a',
+			'pre',
+			'code',
+			'kbd',
+			'samp',
+		]).isRequired`
 			This prop defines the type of text that will be displayed.
 			It may be an actual HTML element or something with extra semantic meaning.
 		`,
 	},
 
 	elementDict: {
+		p: 'p',
+		tabular: 'p',
 		h1: 'h1',
 		h2: 'h2',
 		h3: 'h3',
-		p: 'p',
-		tabular: 'p',
 		a: 'a',
 		pre: 'pre',
 		code: 'code',
