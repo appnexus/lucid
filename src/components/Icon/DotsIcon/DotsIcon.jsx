@@ -33,9 +33,9 @@ const DotsIcon = createClass({
 				{..._.pick(passThroughs, _.keys(Icon.propTypes))}
 				className={cx('&', className)}
 			>
-				<circle cx='8' cy='8' r='1' />
-				<circle cx='14.5' cy='8' r='1' />
-				<circle cx='1.5' cy='8' r='1' />
+				<circle className={cx('&-circle')} cx='8' cy='8' r='1' />
+				<circle className={cx('&-circle')} cx='14.5' cy='8' r='1' />
+				<circle className={cx('&-circle')} cx='1.5' cy='8' r='1' />
 			</Icon>
 		);
 	},
