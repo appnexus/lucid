@@ -24,18 +24,25 @@ const DotsIcon = createClass({
 		...Icon.propTypes,
 	},
 
+	getDefaultProps() {
+		return {
+			color: 'primary',
+		};
+	},
+
 	render() {
-		const { className, ...passThroughs } = this.props;
+		const { className, color, ...passThroughs } = this.props;
 
 		return (
 			<Icon
 				{...omitProps(passThroughs, DotsIcon, [], false)}
 				{..._.pick(passThroughs, _.keys(Icon.propTypes))}
+				color={color}
 				className={cx('&', className)}
 			>
-				<circle className={cx('&-circle')} cx='8' cy='8' r='1' />
-				<circle className={cx('&-circle')} cx='14.5' cy='8' r='1' />
-				<circle className={cx('&-circle')} cx='1.5' cy='8' r='1' />
+				<circle className={cx(`&-color-${color}`)} cx='8' cy='8' r='1' />
+				<circle className={cx(`&-color-${color}`)} cx='14.5' cy='8' r='1' />
+				<circle className={cx(`&-color-${color}`)} cx='1.5' cy='8' r='1' />
 			</Icon>
 		);
 	},
