@@ -11,16 +11,19 @@ exports[`DotsIcon [common] example testing should match snapshot(s) for 1.defaul
   viewBox="0 0 16 16"
 >
   <circle
+    className="lucid-DotsIcon-circle"
     cx="8"
     cy="8"
     r="1"
   />
   <circle
+    className="lucid-DotsIcon-circle"
     cx="14.5"
     cy="8"
     r="1"
   />
   <circle
+    className="lucid-DotsIcon-circle"
     cx="1.5"
     cy="8"
     r="1"
