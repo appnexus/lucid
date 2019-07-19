@@ -12,7 +12,7 @@ interface ICreateClass<P, S> extends React.ComponentSpec<P, S> {
 }
 
 // creates a React component
-export function createClass(definition: ICreateClass): React.Component {
+export function createClass(definition: ICreateClass<{}, {}>): React.ClassicComponentClass {
 	const {
 		_isPrivate = false,
 		getDefaultProps,
@@ -78,9 +78,9 @@ export function rejectTypes(children: React.ElementType, types = []) {
 }
 
 // return an array of elements (of the given type) for each of the values
-export function createElements(type: React.Component, values = []) {
+export function createElements(type: React.ClassicComponentClass, values: React.ClassicComponentClass[] = []) {
 	return _.reduce(
-		[].concat(values),
+		values,
 		(elements, typeValue) => {
 			if (React.isValidElement(typeValue) && typeValue.type === type) {
 				return elements.concat(typeValue);

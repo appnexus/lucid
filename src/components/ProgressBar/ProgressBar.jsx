@@ -6,7 +6,7 @@ import {
 	createClass,
 	omitProps,
 	getFirst,
-} from '../../util/component-types.js';
+} from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-ProgressBar');
 

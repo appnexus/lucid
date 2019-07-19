@@ -12,9 +12,16 @@ module.exports = {
 	plugins: [
 		// your custom plugins
 	],
+	resolve: {
+		extensions: ['.js', '.jsx', '.ts', '.tsx'],
+	},
 	module: {
 		rules: [
-			// add your custom rules.
+			{
+        test: /\.tsx?$/,
+        use: 'ts-loader',
+        exclude: /node_modules/
+      },
 			{
 				test: /\.less$/,
 				use: [
