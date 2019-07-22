@@ -17,7 +17,9 @@ interface ICreateClassComponentClass<P> extends React.ClassicComponentClass<P> {
 }
 
 // creates a React component
-export function createClass<P, S>(spec: ICreateClassComponentSpec<P, S>): ICreateClassComponentClass<P> {
+export function createClass<P, S>(
+	spec: ICreateClassComponentSpec<P, S>
+): ICreateClassComponentClass<P> {
 	const {
 		_isPrivate = false,
 		getDefaultProps,
@@ -63,12 +65,15 @@ export function createClass<P, S>(spec: ICreateClassComponentSpec<P, S>): ICreat
 }
 
 // return all elements matching the specified types
-export function filterTypes(children: React.ElementType, types = []) {
-	types = [].concat(types); // coerce to Array
-
+// TODO: could this support multiple types? We don't seem to use it in practice
+// but it would be nice to no include a breaking change here.
+export function filterTypes<P>(
+	children: React.ReactNode,
+	type: ICreateClassComponentClass<P>
+) {
 	return _.filter(
 		React.Children.toArray(children),
-		element => React.isValidElement(element) && _.includes(types, element.type)
+		element => React.isValidElement(element) && type === element.type
 	);
 }
 
@@ -83,10 +88,13 @@ export function rejectTypes(children: React.ElementType, types = []) {
 }
 
 // return an array of elements (of the given type) for each of the values
-export function createElements<P>(type: ICreateClassComponentClass<P>, values: ICreateClassComponentClass<P>[] = []) {
+export function createElements<P>(
+	type: ICreateClassComponentClass<P>,
+	values: Array<React.ReactElement<P> | P> = []
+) {
 	return _.reduce(
 		values,
-		(elements, typeValue) => {
+		(elements: Array<React.ReactElement<P>>, typeValue) => {
 			if (React.isValidElement(typeValue) && typeValue.type === type) {
 				return elements.concat(typeValue);
 			} else if (
@@ -107,7 +115,10 @@ export function createElements<P>(type: ICreateClassComponentClass<P>, values: I
 // return all elements found in props and children of the specified types
 // TODO: the type param below is a breaking change, but there is not any expected
 // consumer usage of multiple types
-export function findTypes<P>(props: { children: React.ReactNode }, type: ICreateClassComponentClass<P>) {
+export function findTypes<P>(
+	props: { children: React.ReactNode },
+	type: ICreateClassComponentClass<P>
+) {
 	// get elements from props (using type.propName)
 	if (!_.isUndefined(type.propName)) {
 		const propMatches = _.flatten(_.values(_.pick(props, type.propName)));
@@ -115,12 +126,16 @@ export function findTypes<P>(props: { children: React.ReactNode }, type: ICreate
 	}
 
 	// return elements from props and elements from children
-	return filterTypes(props.children, types);
+	return filterTypes<P>(props.children, type);
 }
 
 // return the first element found in props and children of the specificed type(s)
-export function getFirst(props, types, defaultValue) {
-	return _.first(findTypes(props, types)) || defaultValue;
+export function getFirst<P extends { children: React.ReactNode }>(
+	props: P,
+	type: ICreateClassComponentClass<P>,
+	defaultValue: React.ReactNode
+) {
+	return _.first(findTypes(props, type)) || defaultValue;
 }
 
 // Omit props defined in propTypes of the given type and any extra keys given
@@ -129,7 +144,12 @@ export function getFirst(props, types, defaultValue) {
 // We also have a "magic" prop that's always excluded called `callbackId`. That
 // prop can be used to identify a component in a list without having to create
 // extra closures.
-export function omitProps(props, type, keys = [], targetIsDOMElement = true) {
+export function omitProps<P extends { children: React.ReactNode }>(
+	props: P,
+	type: ICreateClassComponentClass<P>,
+	keys: string[] = [],
+	targetIsDOMElement = true
+) {
 	// We only want to exclude the `callbackId` key when we're omitting props
 	// destined for a dom element
 	const additionalOmittedKeys = targetIsDOMElement

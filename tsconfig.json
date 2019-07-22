@@ -5,7 +5,7 @@
     "allowJs": true,
     "strict": true,
     "isolatedModules": true,
-    "jsx": "preserve"
+    "jsx": "react"
   },
   "include": [
     "src/**/*"

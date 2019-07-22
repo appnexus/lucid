@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
-import ReactDOM from 'react-dom';
 import _ from 'lodash';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, omitProps } from '../../util/component-types';
@@ -9,7 +8,58 @@ const cx = lucidClassNames.bind('&-Button');
 
 const { arrayOf, bool, func, node, oneOf, oneOfType, string } = PropTypes;
 
-const Button = createClass({
+interface IButtonProps {
+	/**
+	 * Disables the Button by greying it out
+	 *
+	 * @default false
+	 **/
+	isDisabled?: boolean;
+
+	/**
+	 * Activates the Button by giving it a "pressed down" look
+	 *
+	 * @default false
+	 **/
+	isActive?: boolean;
+
+	/** Activates the Button by giving it a "pressed down" look */
+	className?: string;
+
+	/**
+	 * Set this to \`true\` if you want the Button to only contain an icon.
+	 *
+	 * @default false
+	 * */
+	hasOnlyIcon?: boolean;
+
+	/** Any valid React children */
+	children?: React.ReactNode;
+
+	/** Style variations of the Button */
+	kind?: 'primary' | 'link' | 'danger' | 'invisible';
+
+	/** Size variations of the Button */
+	size?: 'short' | 'small' | 'large';
+
+	/** Called when the user clicks the \`Button\`. */
+	onClick?: ({
+		event,
+		props,
+	}: {
+		event: React.MouseEventHandler;
+		props: IButtonProps;
+	}) => void;
+
+	/**
+	 * Form element type variations of Button. Passed through to DOM Button.
+	 *
+	 * @default "button"
+	 * */
+	type: 'submit' | 'reset' | 'button';
+}
+
+const Button = createClass<IButtonProps, {}>({
 	displayName: 'Button',
 
 	statics: {
@@ -54,8 +104,7 @@ const Button = createClass({
 		`,
 
 		onClick: func`
-			Called when the user clicks the \`Button\`.  Signature:
-			\`({ event, props }) => {}\`
+			Called when the user clicks the \`Button\`.
 		`,
 
 		type: string`
@@ -75,11 +124,11 @@ const Button = createClass({
 
 	handleClick(event: React.MouseEventHandler<HTMLButtonElement>) {
 		const { isDisabled, onClick } = this.props;
-		const domNode = ReactDOM.findDOMNode(this);
 
 		if (!isDisabled) {
 			// required to correctly apply the focus state in Safari and Firefox
-			domNode.focus();
+			// (still valid 2019-07-22)
+			this.buttonRef.focus();
 			onClick({ event, props: this.props });
 		}
 	},
@@ -100,6 +149,9 @@ const Button = createClass({
 		return (
 			<button
 				{...omitProps(passThroughs, Button, ['callbackId'])}
+				ref={ref => {
+					this.buttonRef = ref;
+				}}
 				className={cx(
 					'&',
 					{
