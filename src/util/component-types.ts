@@ -7,12 +7,17 @@ import {
 	omitFunctionPropsDeep,
 } from './state-management';
 
-interface ICreateClass<P, S> extends React.ComponentSpec<P, S> {
+interface ICreateClassComponentSpec<P, S> extends React.ComponentSpec<P, S> {
 	_isPrivate?: boolean;
+	propName?: string;
+}
+
+interface ICreateClassComponentClass<P> extends React.ClassicComponentClass<P> {
+	propName?: string;
 }
 
 // creates a React component
-export function createClass(definition: ICreateClass<{}, {}>): React.ClassicComponentClass {
+export function createClass<P, S>(spec: ICreateClassComponentSpec<P, S>): ICreateClassComponentClass<P> {
 	const {
 		_isPrivate = false,
 		getDefaultProps,
@@ -21,12 +26,12 @@ export function createClass(definition: ICreateClass<{}, {}>): React.ClassicComp
 		reducers = {},
 		selectors = {},
 		initialState = getDefaultProps &&
-			omitFunctionPropsDeep(getDefaultProps.apply(definition)),
+			omitFunctionPropsDeep(getDefaultProps.apply(spec)),
 		propName = null,
 		propTypes = {},
 		render = () => null,
 		...restDefinition
-	} = definition;
+	} = spec;
 
 	const newDefinition = {
 		getDefaultProps,
@@ -44,7 +49,7 @@ export function createClass(definition: ICreateClass<{}, {}>): React.ClassicComp
 			{},
 			propTypes,
 			_.mapValues(
-				definition.components,
+				spec.components,
 				(componentValue, componentKey) =>
 					PropTypes.any`Props for ${componentValue.displayName || componentKey}`
 			)
@@ -78,7 +83,7 @@ export function rejectTypes(children: React.ElementType, types = []) {
 }
 
 // return an array of elements (of the given type) for each of the values
-export function createElements(type: React.ClassicComponentClass, values: React.ClassicComponentClass[] = []) {
+export function createElements<P>(type: ICreateClassComponentClass<P>, values: ICreateClassComponentClass<P>[] = []) {
 	return _.reduce(
 		values,
 		(elements, typeValue) => {
@@ -100,22 +105,17 @@ export function createElements(type: React.ClassicComponentClass, values: React.
 }
 
 // return all elements found in props and children of the specified types
-export function findTypes(props, types = []) {
+// TODO: the type param below is a breaking change, but there is not any expected
+// consumer usage of multiple types
+export function findTypes<P>(props: { children: React.ReactNode }, type: ICreateClassComponentClass<P>) {
 	// get elements from props (using type.propName)
-	const elementsFromProps = _.reduce(
-		_.castArray(types),
-		(acc, type) => {
-			if (!_.isUndefined(type.propName)) {
-				const propMatches = _.flatten(_.values(_.pick(props, type.propName)));
-				return acc.concat(createElements(type, propMatches));
-			}
-			return acc;
-		},
-		[]
-	);
+	if (!_.isUndefined(type.propName)) {
+		const propMatches = _.flatten(_.values(_.pick(props, type.propName)));
+		return createElements(type, propMatches);
+	}
 
 	// return elements from props and elements from children
-	return elementsFromProps.concat(filterTypes(props.children, types));
+	return filterTypes(props.children, types);
 }
 
 // return the first element found in props and children of the specificed type(s)
