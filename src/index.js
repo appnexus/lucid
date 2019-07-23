@@ -79,6 +79,7 @@ import DangerIcon from './components/Icon/DangerIcon/DangerIcon';
 import DangerLightIcon from './components/Icon/DangerLightIcon/DangerLightIcon';
 import DataTable from './components/DataTable/DataTable';
 import DeleteIcon from './components/Icon/DeleteIcon/DeleteIcon';
+import DotsIcon from './components/Icon/DotsIcon/DotsIcon';
 import Dialog from './components/Dialog/Dialog';
 import DownloadIcon from './components/Icon/DownloadIcon/DownloadIcon';
 import DragCaptureZone from './components/DragCaptureZone/DragCaptureZone';
@@ -235,6 +236,7 @@ export {
 	DateSelectDumb,
 	DeleteIcon,
 	Dialog,
+	DotsIcon,
 	DownloadIcon,
 	DragCaptureZone,
 	DropMenu,
