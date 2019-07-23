@@ -10,7 +10,42 @@ const cx = lucidClassNames.bind('&-Collapsible');
 
 const { any, bool, node, number, string } = PropTypes;
 
-const Collapsible = createClass({
+export interface ICollapsibleProps {
+	/** Expandable content. */
+	children?: React.ReactNode;
+
+	/** Appended to the component-specific class names set on the root element. */
+	className?: string;
+
+	/**
+	 * Indicates that the component is in the "expanded" state when true and in
+	 * the "unexpanded" state when false.
+	 * */
+	isExpanded?: boolean;
+
+	/**
+	 * Show an animated transition for alternating values of \`isExpanded\`.
+	 * */
+	isAnimated?: boolean;
+
+	/**
+	 * If true, do not render children when fully collapsed.
+	 * */
+	isMountControlled?: boolean;
+
+	/**
+	 * If \`isMountControlled\` is true, this value sets is the minimum height
+	 * the container needs to reach to not render any children.
+	 * */
+	mountControlThreshold?: number;
+
+	/**
+	 * Pass in a custom root element type.
+	 * */
+	rootType?: any;
+}
+
+const Collapsible = createClass<ICollapsibleProps, {}>({
 	displayName: 'Collapsible',
 
 	statics: {
@@ -73,8 +108,8 @@ const Collapsible = createClass({
 		};
 	},
 
-	storeRef(name) {
-		return ref => {
+	storeRef(name: string) {
+		return (ref: React.Ref<Collapsible>) => {
 			this.Refs[name] = ref;
 		};
 	},
