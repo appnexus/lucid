@@ -13,7 +13,59 @@ const cx = lucidClassNames.bind('&-Expander');
 
 const { any, bool, func, node, object, oneOf, string } = PropTypes;
 
-const Expander = createClass({
+interface IExpanderLabelProps {
+	description?: string;
+}
+
+interface IExpanderAdditionalLabelProps {
+	description?: string;
+}
+
+export interface IExpanderProps {
+	/** Expandable content. */
+	children?: React.ReactNode;
+
+	/** Appended to the component-specific class names set on the root element. */
+	className?: string;
+
+	/**
+	 * Indicates that the component is in the "expanded" state when true and in
+	 * the "unexpanded" state when false.
+	 * */
+	isExpanded?: boolean;
+
+	/**
+	 * Called when the user clicks on the component's header.
+	 * */
+	onToggle?: (
+		isExpanded: boolean,
+		{ event, props }: { event: React.MouseEventHandler; props: IExpanderProps }
+	) => void;
+
+	/** Passed through to the root element. */
+	style?: React.CSSProperties;
+
+	/** Child element whose children represents content to be shown next to the
+	 * expander icon.
+	 * */
+	Label?: React.ReactNode;
+
+	/** Child element whose children respresent content to be shown inside
+	 * Expander.Label and to the right of it
+	 * */
+	AdditionalLabelContent?: React.ReactNode;
+
+	/** Renders different variants of Expander. 'simple' is default.
+	 * 'highlighted' is more prominant.
+	 * */
+	kind?: 'simple' | 'highlighted';
+}
+
+export interface IExpanderState {
+	isExpanded: boolean;
+}
+
+const Expander = createClass<IExpanderProps, IExpanderState>({
 	displayName: 'Expander',
 
 	statics: {
@@ -28,7 +80,7 @@ const Expander = createClass({
 	},
 
 	components: {
-		Label: createClass({
+		Label: createClass<IExpanderLabelProps, {}>({
 			displayName: 'Expander.Label',
 			statics: {
 				peek: {
@@ -45,7 +97,7 @@ const Expander = createClass({
 				`,
 			},
 		}),
-		AdditionalLabelContent: createClass({
+		AdditionalLabelContent: createClass<IExpanderAdditionalLabelProps, {}>({
 			displayName: 'Expander.AdditionalLabelContent',
 			statics: {
 				peek: {

@@ -7,9 +7,26 @@ import {
 	omitFunctionPropsDeep,
 } from './state-management';
 
-interface ICreateClassComponentSpec<P, S> extends React.ComponentSpec<P, S> {
+interface ICreateClassComponentSpec<P extends { [key: string]: any }, S>
+	extends React.Mixin<P, S> {
 	_isPrivate?: boolean;
+	initialState?: S;
 	propName?: string;
+	components?: {
+		[key: string]: ICreateClassComponentClass<{}>;
+	};
+	statics?: {
+		definition?: ICreateClassComponentSpec<P, S>;
+		[key: string]: any;
+	};
+	reducers?: { [K in keyof P]?: (arg0: S, ...args: any[]) => S };
+	selectors?: { [K in keyof P]?: (arg0: S) => any };
+	render?(): React.ReactNode;
+
+	// TODO: could this be better handled by adding a third type parameter that
+	// allows the components to define what the extra class properties would
+	// be?
+	[key: string]: any;
 }
 
 interface ICreateClassComponentClass<P> extends React.ClassicComponentClass<P> {
@@ -35,6 +52,8 @@ export function createClass<P, S>(
 		...restDefinition
 	} = spec;
 
+	// Intentionally keep this object type inferred so it can be passed to
+	// `createReactClass`
 	const newDefinition = {
 		getDefaultProps,
 		...restDefinition,
@@ -59,7 +78,9 @@ export function createClass<P, S>(
 		render,
 	};
 
-	newDefinition.statics.definition = newDefinition;
+	if (!_.isUndefined(newDefinition.statics)) {
+		newDefinition.statics.definition = newDefinition;
+	}
 
 	return createReactClass(newDefinition);
 }
