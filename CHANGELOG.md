@@ -1,3 +1,10 @@
+## 4.2.0
+
+- [minor] Add `Typography` component [#1004](https://github.com/appnexus/lucid/pull/1004)
+- [minor] Add `DotsIcon` [#1006](https://github.com/appnexus/lucid/pull/1006)
+- [patch] Update `SidePanel` drop-shadow styling [#1005](https://github.com/appnexus/lucid/pull/1005)
+- [patch] Fix `SidePanel.Header` selector making all icons gray.  Only `CloseIcon` is selected now [#1007](https://github.com/appnexus/lucid/pull/1007)
+
 ## 4.1.0
 
 - [minor] add `color` prop to `Icon` [#1000](https://github.com/appnexus/lucid/pull/997)
