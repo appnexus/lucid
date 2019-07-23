@@ -191,21 +191,24 @@ const ContextMenu = createClass({
 		const {
 			props,
 			props: { onClickOut },
-			refs: { flyOutPortal, target },
+			flyOutPortalRef,
+			targetRef,
 		} = this;
 
-		if (onClickOut && flyOutPortal) {
-			const flyOutEl = flyOutPortal.portalElement.firstChild;
+		if (onClickOut && flyOutPortalRef) {
+			const flyOutEl = flyOutPortalRef.portalElement.firstChild;
 			const wasALabelClick =
 				event.target.nodeName === 'INPUT' &&
-				sharesAncestor(event.target, target, 'LABEL');
+				sharesAncestor(event.target, targetRef, 'LABEL');
 
 			// Attempt to detect <label> click and ignore it
 			if (wasALabelClick) {
 				return;
 			}
 
-			if (!(flyOutEl.contains(event.target) || target.contains(event.target))) {
+			if (
+				!(flyOutEl.contains(event.target) || targetRef.contains(event.target))
+			) {
 				onClickOut({ props, event });
 			}
 		}
@@ -223,10 +226,10 @@ const ContextMenu = createClass({
 				flyOutWidth,
 				targetRect: { bottom, left, right, top, width, height },
 			},
-			refs: { flyOutPortal },
+			flyOutPortalRef,
 		} = this;
 
-		if (!flyOutPortal) {
+		if (!flyOutPortalRef) {
 			return {};
 		}
 
@@ -341,15 +344,13 @@ const ContextMenu = createClass({
 	},
 
 	alignFlyOut(doRedunancyCheck = false) {
-		const {
-			refs: { flyOutPortal, target },
-		} = this;
+		const { flyOutPortalRef, targetRef } = this;
 
-		if (!target || !flyOutPortal) {
+		if (!targetRef || !flyOutPortalRef) {
 			return;
 		}
 
-		const targetRect = getAbsoluteBoundingClientRect(target);
+		const targetRect = getAbsoluteBoundingClientRect(targetRef);
 
 		// Don't cause a state-change if target dimensions are the same
 		if (
@@ -362,13 +363,13 @@ const ContextMenu = createClass({
 			return;
 		}
 
-		if (!flyOutPortal) {
+		if (!flyOutPortalRef) {
 			return this.setState({
 				targetRect,
 			});
 		}
 
-		const flyOutEl = flyOutPortal.portalElement.firstChild;
+		const flyOutEl = flyOutPortalRef.portalElement.firstChild;
 		const { height, width } = flyOutEl.getBoundingClientRect();
 		this.setState({
 			targetRect,
@@ -399,7 +400,7 @@ const ContextMenu = createClass({
 
 		return (
 			<TargetElementType
-				ref='target'
+				ref={ref => (this.targetRef = ref)}
 				{...omitProps(passThroughs, ContextMenu)}
 				className={cx('&', className)}
 				style={style}
@@ -407,7 +408,7 @@ const ContextMenu = createClass({
 				{targetChildren}
 				{isExpanded ? (
 					<Portal
-						ref='flyOutPortal'
+						ref={ref => (this.flyOutPortalRef = ref)}
 						{...flyProps}
 						className={cx(
 							'&-FlyOut',
