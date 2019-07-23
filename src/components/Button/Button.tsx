@@ -56,7 +56,7 @@ interface IButtonProps {
 	 *
 	 * @default "button"
 	 * */
-	type: 'submit' | 'reset' | 'button';
+	type?: 'submit' | 'reset' | 'button';
 }
 
 const Button = createClass<IButtonProps, {}>({
