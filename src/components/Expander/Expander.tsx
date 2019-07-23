@@ -227,7 +227,7 @@ const Expander = createClass<IExpanderProps, IExpanderState>({
 		);
 	},
 
-	handleToggle(event: any) {
+	handleToggle(event: React.MouseEventHandler) {
 		this.props.onToggle(!this.props.isExpanded, {
 			event,
 			props: this.props,

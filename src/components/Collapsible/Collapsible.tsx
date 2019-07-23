@@ -109,7 +109,7 @@ const Collapsible = createClass<ICollapsibleProps, {}>({
 	},
 
 	storeRef(name: string) {
-		return (ref: React.Ref<Collapsible>) => {
+		return (ref: any) => {
 			this.Refs[name] = ref;
 		};
 	},
