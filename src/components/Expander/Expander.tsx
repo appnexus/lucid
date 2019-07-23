@@ -15,10 +15,12 @@ const { any, bool, func, node, object, oneOf, string } = PropTypes;
 
 interface IExpanderLabelProps {
 	description?: string;
+	children?: React.ReactNode;
 }
 
 interface IExpanderAdditionalLabelProps {
 	description?: string;
+	children?: React.ReactNode;
 }
 
 export interface IExpanderProps {
@@ -225,7 +227,7 @@ const Expander = createClass<IExpanderProps, IExpanderState>({
 		);
 	},
 
-	handleToggle(event) {
+	handleToggle(event: any) {
 		this.props.onToggle(!this.props.isExpanded, {
 			event,
 			props: this.props,

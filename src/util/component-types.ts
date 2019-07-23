@@ -29,8 +29,11 @@ interface ICreateClassComponentSpec<P extends { [key: string]: any }, S>
 	[key: string]: any;
 }
 
-interface ICreateClassComponentClass<P> extends React.ClassicComponentClass<P> {
+export interface ICreateClassComponentClass<P> extends React.ClassicComponentClass<P> {
 	propName?: string;
+
+	// TODO: fix this too
+	[key: string]: any;
 }
 
 // creates a React component
