@@ -1,5 +1,5 @@
 import React from 'react';
-import { SidePanel } from '../../../src/index.js';
+import { SidePanel } from '../../../index.js';
 
 const margins = {
 	margin: '0 0 16px 0',
@@ -21,17 +21,19 @@ export default class extends React.Component {
 	render() {
 		return (
 			<section>
-				<p>
-					position of the SidePanel can be aligned on either side of the page
-				</p>
+				<p>render a header with a close button</p>
 				<button onClick={this.handleToggle}>Toggle SidePanel</button>
 
 				<SidePanel
 					isExpanded={this.state.isExpanded}
 					onCollapse={this.handleToggle}
-					position="left"
-					Header="Stumptown keytar schlitz"
+					width={500}
 				>
+					<SidePanel.Header>
+						<div>
+							<div><strong>Rich content</strong></div>
+						</div>
+					</SidePanel.Header>
 					<p style={margins}>
 						Stumptown keytar schlitz, vinyl vexillologist humblebrag sartorial
 						crucifix cornhole. Four dollar toast 8-bit taiyaki asymmetrical

@@ -1,5 +1,5 @@
 import React from 'react';
-import { SingleSelect } from '../../../src/index.js';
+import { SingleSelect } from '../../../index.js';
 
 const OptionCols = ({ col1, col2 }) => (
 	<div style={{ display: 'flex' }}>

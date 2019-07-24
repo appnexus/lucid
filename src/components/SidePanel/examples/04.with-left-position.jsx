@@ -1,12 +1,15 @@
 import React from 'react';
-import { SidePanel } from '../../../src/index.js';
+import { SidePanel } from '../../../index.js';
+
+const margins = {
+	margin: '0 0 16px 0',
+};
 
 export default class extends React.Component {
 	constructor(...args) {
 		super(...args);
-		this.state = { isExpanded: true, width: 240 };
+		this.state = { isExpanded: true };
 		this.handleToggle = this.handleToggle.bind(this);
-		this.handleResize = this.handleResize.bind(this);
 	}
 
 	handleToggle() {
@@ -15,27 +18,21 @@ export default class extends React.Component {
 		});
 	}
 
-	handleResize(width) {
-		this.setState({
-			width,
-		});
-	}
-
 	render() {
 		return (
 			<section>
-				<p>resized width is obtatined with a callback</p>
-				<p>SidePanel width: {this.state.width}</p>
+				<p>
+					position of the SidePanel can be aligned on either side of the page
+				</p>
 				<button onClick={this.handleToggle}>Toggle SidePanel</button>
 
 				<SidePanel
 					isExpanded={this.state.isExpanded}
-					width={this.state.width}
 					onCollapse={this.handleToggle}
+					position="left"
 					Header="Stumptown keytar schlitz"
-					onResize={this.handleResize}
 				>
-					<p>
+					<p style={margins}>
 						Stumptown keytar schlitz, vinyl vexillologist humblebrag sartorial
 						crucifix cornhole. Four dollar toast 8-bit taiyaki asymmetrical
 						helvetica kitsch farm-to-table thundercats. Occupy hammock waistcoat
@@ -45,7 +42,7 @@ export default class extends React.Component {
 						Lumbersexual lo-fi stumptown, iceland locavore tacos chillwave
 						portland beard celiac polaroid.
 					</p>
-					<p>
+					<p style={margins}>
 						Keffiyeh kinfolk lumbersexual, austin ennui sustainable mlkshk four
 						loko selfies ramps pop-up coloring book before they sold out yuccie
 						biodiesel. Yuccie taxidermy beard, +1 church-key umami echo park

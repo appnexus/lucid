@@ -1140,4 +1140,20 @@ module.exports = [
 			/\.jsx?$/
 		),
 	},
+	{
+		name: 'Underline',
+		component: getDefaultExport(
+			require('../src/components/Underline/Underline')
+		),
+		examplesContext: require.context(
+			'../src/components/Underline/examples',
+			true,
+			/\.jsx?$/
+		),
+		examplesContextRaw: require.context(
+			'!!raw-loader!../src/components/Underline/examples',
+			true,
+			/\.jsx?$/
+		),
+	},
 ];

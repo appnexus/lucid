@@ -375,21 +375,6 @@ _.forEach(
 	}
 );
 
-const requireExampleDotStoriesJs = require.context(
-	'./examples',
-	true,
-	/.stories.js$/
-);
-
-requireExampleDotStoriesJs.keys().forEach(filename => {
-	const componentName = path.basename(filename, '.stories.js');
-	storiesOfAddSequence.push([
-		componentName,
-		() => {
-			requireExampleDotStoriesJs(filename);
-		},
-	]);
-});
 _.forEach(_.sortBy(storiesOfAddSequence, _.property('0')), ([, addStory]) =>
 	addStory()
 );
