@@ -1,6 +1,6 @@
 import React from 'react';
 import createClass from 'create-react-class';
-import { ProgressBar } from '../../../src/index.js';
+import { ProgressBar } from '../../../index.js';
 
 export default createClass({
 	render() {

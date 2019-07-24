@@ -1,5 +1,5 @@
 import React from 'react';
-import { SidePanel } from '../../../src/index.js';
+import { SidePanel } from '../../../index.js';
 
 export default class extends React.Component {
 	constructor(...args) {
@@ -27,7 +27,7 @@ export default class extends React.Component {
 					isModal={false}
 					isExpanded={this.state.isExpanded}
 					onCollapse={this.handleToggle}
-					Header="Stumptown keytar schlitz"
+					Header='Stumptown keytar schlitz'
 				>
 					<p>
 						Stumptown keytar schlitz, vinyl vexillologist humblebrag sartorial

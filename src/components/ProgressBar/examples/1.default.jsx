@@ -1,6 +1,6 @@
 import React from 'react';
-import { ProgressBar } from '../../../src/index.js';
-import { TextField } from '../../../src/index.js';
+import { ProgressBar } from '../../../index.js';
+import { TextField } from '../../../index.js';
 
 const style = {
 	marginBottom: '10px',

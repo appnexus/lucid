@@ -1,5 +1,5 @@
 import React from 'react';
-import { SidePanel } from '../../../src/index.js';
+import { SidePanel } from '../../../index.js';
 
 const margins = {
 	margin: '0 0 16px 0',

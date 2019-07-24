@@ -1108,4 +1108,36 @@ module.exports = [
 			/\.jsx?$/
 		),
 	},
+	{
+		name: 'ProgressBar',
+		component: getDefaultExport(
+			require('../src/components/ProgressBar/ProgressBar')
+		),
+		examplesContext: require.context(
+			'../src/components/ProgressBar/examples',
+			true,
+			/\.jsx?$/
+		),
+		examplesContextRaw: require.context(
+			'!!raw-loader!../src/components/ProgressBar/examples',
+			true,
+			/\.jsx?$/
+		),
+	},
+	{
+		name: 'SidePanel',
+		component: getDefaultExport(
+			require('../src/components/SidePanel/SidePanel')
+		),
+		examplesContext: require.context(
+			'../src/components/SidePanel/examples',
+			true,
+			/\.jsx?$/
+		),
+		examplesContextRaw: require.context(
+			'!!raw-loader!../src/components/SidePanel/examples',
+			true,
+			/\.jsx?$/
+		),
+	},
 ];

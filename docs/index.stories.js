@@ -3,9 +3,8 @@ import ReactDOMServer from 'react-dom/server';
 import _ from 'lodash';
 import * as path from 'path';
 import marksy from 'marksy/components';
-import { storiesOf } from '@storybook/react';
+import { storiesOf, addParameters } from '@storybook/react';
 import LinkTo from '@storybook/addon-links/react';
-import { withOptions } from '@storybook/addon-options';
 import { exampleStory } from '../.storybook/lucid-docs-addon';
 import readmeText from '!!raw-loader!../README.md';
 import introText from '!!raw-loader!./intro.md';
@@ -21,13 +20,11 @@ import okaidia from 'react-syntax-highlighter/styles/prism/okaidia';
 import '../src/index.less';
 import '../src/styles/master.less';
 import ColorPalette from './color-palette';
-import { withPanelToggles } from '../.storybook/lucid-docs-addon/PanelToggles';
 
 registerLanguage('jsx', jsx);
 
 const articlePageOptions = { showAddonPanel: false };
 const examplePageOptions = { showAddonPanel: true, addonPanelInRight: true };
-const withTogglePanelAddonParameters = { panelToggles: true };
 
 const loadAllKeys = (reqContext, rawContext) => {
 	return _.map(_.get(reqContext, 'keys', _.constant([]))(), key => ({
@@ -137,8 +134,8 @@ class ArticlePage extends React.Component {
 	}
 }
 
-storiesOf('Lucid UI', module)
-	.addDecorator(withOptions(articlePageOptions))
+storiesOf('Lucid UI | Documentation', module)
+	.addParameters({ options: articlePageOptions })
 	.add('Introduction', () => (
 		<ArticlePage>
 			<div
@@ -177,6 +174,7 @@ const filteredComponents = _.reject(loadedComponents, ({ component }) =>
 const groupedComponents = _.groupBy(filteredComponents, ({ component }) =>
 	_.get(component, 'peek.categories[0]', 'misc')
 );
+
 _.reduce(
 	groupedComponents,
 	(storyKind, componentGroup, category) => {
@@ -238,7 +236,7 @@ _.reduce(
 			</ArticlePage>
 		));
 	},
-	storiesOf('Categories', module).addDecorator(withOptions(articlePageOptions))
+	storiesOf('Categories', module).addParameters({ options: articlePageOptions })
 );
 
 const loadedIcons = require('./load-icons');
@@ -248,8 +246,7 @@ const filteredIcons = _.reject(loadedIcons, ({ component }) =>
 );
 
 const storiesOfIcons = storiesOf('Icons', module)
-	.addDecorator(withOptions(examplePageOptions))
-	.addDecorator(withPanelToggles(withTogglePanelAddonParameters))
+	.addParameters({ options: examplePageOptions })
 	.add(
 		'All',
 		() => (
@@ -361,9 +358,8 @@ _.forEach(
 			storiesOfAddSequence.push([
 				componentName,
 				() => {
-					storiesOf(componentName, module)
-						.addDecorator(withOptions(examplePageOptions))
-						.addDecorator(withPanelToggles(withTogglePanelAddonParameters))
+					storiesOf(`Components|${componentName}`, module)
+						.addParameters({ options: examplePageOptions })
 						.add(
 							name,
 							exampleStory({

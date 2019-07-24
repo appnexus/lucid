@@ -1,6 +1,6 @@
 import React from 'react';
 import _ from 'lodash';
-import { SearchableMultiSelect } from '../../../src/index.js';
+import { SearchableMultiSelect } from '../../../index.js';
 
 const OptionCols = ({ col1, col2, textMatch }) => (
 	<div style={{ display: 'flex' }}>
@@ -24,26 +24,26 @@ export default class extends React.Component {
 	render() {
 		return (
 			<SearchableMultiSelect optionFilter={optionFilter}>
-				<SearchableMultiSelect.OptionGroup Selected="">
+				<SearchableMultiSelect.OptionGroup Selected=''>
 					<div style={{ marginLeft: 27 }}>
-						<OptionCols col1="ID" col2="NAME" />
+						<OptionCols col1='ID' col2='NAME' />
 					</div>
 
-					<SearchableMultiSelect.Option filterText="Foo" Selected="Foo (1234)">
+					<SearchableMultiSelect.Option filterText='Foo' Selected='Foo (1234)'>
 						{({ searchText }) => (
-							<OptionCols col1="1234" col2="Foo" textMatch={searchText} />
+							<OptionCols col1='1234' col2='Foo' textMatch={searchText} />
 						)}
 					</SearchableMultiSelect.Option>
 
-					<SearchableMultiSelect.Option filterText="Bar" Selected="Bar (2345)">
+					<SearchableMultiSelect.Option filterText='Bar' Selected='Bar (2345)'>
 						{({ searchText }) => (
-							<OptionCols col1="2345" col2="Bar" textMatch={searchText} />
+							<OptionCols col1='2345' col2='Bar' textMatch={searchText} />
 						)}
 					</SearchableMultiSelect.Option>
 
-					<SearchableMultiSelect.Option filterText="Baz" Selected="Baz (3456)">
+					<SearchableMultiSelect.Option filterText='Baz' Selected='Baz (3456)'>
 						{({ searchText }) => (
-							<OptionCols col1="3456" col2="Baz" textMatch={searchText} />
+							<OptionCols col1='3456' col2='Baz' textMatch={searchText} />
 						)}
 					</SearchableMultiSelect.Option>
 				</SearchableMultiSelect.OptionGroup>
