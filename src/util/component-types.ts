@@ -29,7 +29,8 @@ interface ICreateClassComponentSpec<P extends { [key: string]: any }, S>
 	[key: string]: any;
 }
 
-export interface ICreateClassComponentClass<P> extends React.ClassicComponentClass<P> {
+export interface ICreateClassComponentClass<P>
+	extends React.ClassicComponentClass<P> {
 	propName?: string;
 
 	// TODO: fix this too
@@ -89,15 +90,19 @@ export function createClass<P, S>(
 }
 
 // return all elements matching the specified types
-// TODO: could this support multiple types? We don't seem to use it in practice
-// but it would be nice to no include a breaking change here.
 export function filterTypes<P>(
 	children: React.ReactNode,
-	type: ICreateClassComponentClass<P>
+	types?: ICreateClassComponentClass<P> | ICreateClassComponentClass<P>[]
 ) {
+	if (types === undefined) {
+		return [];
+	}
+
+	types = _.castArray(types);
+
 	return _.filter(
 		React.Children.toArray(children),
-		element => React.isValidElement(element) && type === element.type
+		element => React.isValidElement(element) && _.includes(types, element.type)
 	);
 }
 
@@ -137,29 +142,42 @@ export function createElements<P>(
 }
 
 // return all elements found in props and children of the specified types
-// TODO: the type param below is a breaking change, but there is not any expected
-// consumer usage of multiple types
 export function findTypes<P>(
 	props: { children: React.ReactNode },
-	type: ICreateClassComponentClass<P>
-) {
-	// get elements from props (using type.propName)
-	if (!_.isUndefined(type.propName)) {
-		const propMatches = _.flatten(_.values(_.pick(props, type.propName)));
-		return createElements(type, propMatches);
+	types?: ICreateClassComponentClass<P> | ICreateClassComponentClass<P>[]
+): React.ReactNode[] {
+	if (types === undefined) {
+		return [];
 	}
 
+	// get elements from props (using types.propName)
+	const elementsFromProps: React.ReactNode[] = _.reduce(
+		_.castArray(types),
+		(acc: React.ReactNode[], type) => {
+			return _.isNil(type.propName)
+				? []
+				: createElements(
+						type,
+						_.flatten(_.values(_.pick(props, type.propName)))
+				  );
+		},
+		[]
+	);
+
 	// return elements from props and elements from children
-	return filterTypes<P>(props.children, type);
+	return elementsFromProps.concat(filterTypes<P>(props.children, types));
 }
 
 // return the first element found in props and children of the specificed type(s)
 export function getFirst<P extends { children: React.ReactNode }>(
 	props: P,
-	type: ICreateClassComponentClass<P>,
-	defaultValue: React.ReactNode
+	types:
+		| ICreateClassComponentClass<P>
+		| ICreateClassComponentClass<P>[]
+		| undefined,
+	defaultValue?: React.ReactNode
 ) {
-	return _.first(findTypes(props, type)) || defaultValue;
+	return _.first(findTypes(props, types)) || defaultValue;
 }
 
 // Omit props defined in propTypes of the given type and any extra keys given

@@ -7,11 +7,8 @@
 // to "React Create App". This only has babel loader to load JavaScript.
 
 module.exports = ({ config, mode }) => {
-
 	config = {
 		...config,
-		mode: 'production',
-		devtool: '#cheap-module-source-map',
 		resolve: {
 			...config.resolve,
 			extensions: ['.js', '.jsx', '.ts', '.tsx'],
@@ -41,8 +38,7 @@ module.exports = ({ config, mode }) => {
 				},
 			],
 		},
-
-	}
+	};
 
 	return config;
 };
