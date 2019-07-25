@@ -1,9 +1,8 @@
 import React from 'react';
 import ReactDOMServer from 'react-dom/server';
 import _ from 'lodash';
-import * as path from 'path';
 import marksy from 'marksy/components';
-import { storiesOf, addParameters } from '@storybook/react';
+import { storiesOf } from '@storybook/react';
 import LinkTo from '@storybook/addon-links/react';
 import { exampleStory } from '../.storybook/lucid-docs-addon';
 import { stripIndent } from '../.storybook/lucid-docs-addon/util';
@@ -18,9 +17,11 @@ import SyntaxHighlighter, {
 } from 'react-syntax-highlighter/prism-light';
 import jsx from 'react-syntax-highlighter/languages/prism/jsx';
 import okaidia from 'react-syntax-highlighter/styles/prism/okaidia';
+import ColorPalette from './color-palette';
+
 import '../src/index.less';
 import '../src/styles/master.less';
-import ColorPalette from './color-palette';
+import './index.less'; // very minimal overrides
 
 registerLanguage('jsx', jsx);
 
