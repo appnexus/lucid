@@ -135,7 +135,7 @@ class ArticlePage extends React.Component {
 	}
 }
 
-storiesOf('Lucid UI | Documentation', module)
+storiesOf('Documentation', module)
 	.addParameters({ options: articlePageOptions })
 	.add('Introduction', () => (
 		<ArticlePage>
@@ -172,6 +172,18 @@ const filteredComponents = _.reject(loadedComponents, ({ component }) =>
 	isPrivate(component)
 );
 
+// const storiesOfComponents = storiesOf('Components', module)
+// 	.addParameters({ options: examplePageOptions })
+// 	.add(
+// 		'Overview',
+// 		() => (
+// 			<ArticlePage>
+// 				<h1>Components</h1>
+// 			</ArticlePage>
+// 		),
+// 		{ options: articlePageOptions, panelToggles: undefined }
+// 	);
+
 const storiesOfAddSequence = [];
 
 _.forEach(
@@ -195,7 +207,7 @@ _.forEach(
 			storiesOfAddSequence.push([
 				componentName,
 				() => {
-					storiesOf(`Components|${category}/${componentName}`, module)
+					storiesOf(`Components/${category}/${componentName}`, module)
 						.addParameters({ options: examplePageOptions })
 						.add(
 							name,
@@ -223,7 +235,7 @@ const filteredIcons = _.reject(loadedIcons, ({ component }) =>
 	isPrivate(component)
 );
 
-const storiesOfIcons = storiesOf('Icons | All', module)
+const storiesOfIcons = storiesOf('Icons', module)
 	.addParameters({ options: examplePageOptions })
 	.add(
 		'Overview',
