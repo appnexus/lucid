@@ -74,6 +74,7 @@
     "@babel/preset-typescript": "^7.3.3",
     "@storybook/addon-info": "^5.1.9",
     "@storybook/addon-links": "^5.1.9",
+    "@storybook/addon-notes": "^5.1.9",
     "@storybook/addon-options": "^5.1.9",
     "@storybook/addons": "^5.1.9",
     "@storybook/react": "^5.1.9",

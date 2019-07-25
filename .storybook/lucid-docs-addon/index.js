@@ -110,24 +110,6 @@ const getChildComponentsData = (
 	);
 };
 
-export const withDescription = componentRef => {
-	return StoryComponent => {
-		return ({ kind, story }) => {
-			return (
-				<div>
-					<h1>{kind}</h1>
-					<section>
-						{_.has(componentRef, 'peek.description') &&
-							compile(stripIndent(componentRef.peek.description)).tree}
-					</section>
-					<h2>{story}</h2>
-					<StoryComponent {...{ kind, story }} />
-				</div>
-			);
-		};
-	};
-};
-
 export const withProps = componentRef => {
 	return StoryComponent => {
 		return props => {
@@ -167,7 +149,7 @@ export const withChildComponents = (componentRef, maxHeight, path) => {
 	};
 };
 
-const getDefaultExport = mod => (mod.__esModule ? mod.default : mod);
+export const getDefaultExport = mod => (mod.__esModule ? mod.default : mod);
 
 export const exampleStory = ({ component, code, example, path }) => {
 	const StoryComponent = getDefaultExport(example);
@@ -178,8 +160,6 @@ export const exampleStory = ({ component, code, example, path }) => {
 	const storyWithChildComponents = withChildComponents(componentRef, 1, path)(
 		storyWithProps
 	);
-	const storyWithDescription = withDescription(componentRef)(
-		storyWithChildComponents
-	);
-	return storyWithDescription;
+
+	return storyWithChildComponents;
 };

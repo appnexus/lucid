@@ -6,6 +6,7 @@ import marksy from 'marksy/components';
 import { storiesOf, addParameters } from '@storybook/react';
 import LinkTo from '@storybook/addon-links/react';
 import { exampleStory } from '../.storybook/lucid-docs-addon';
+import { stripIndent } from '../.storybook/lucid-docs-addon/util';
 import readmeText from '!!raw-loader!../README.md';
 import introText from '!!raw-loader!./intro.md';
 import childComponentsText from '!!raw-loader!./child-components.md';
@@ -354,6 +355,12 @@ _.forEach(
 			examplesContext,
 			examplesContextRaw
 		);
+
+		const componentRef = getDefaultExport(component);
+		const notes =
+			_.has(componentRef, 'peek.description') &&
+			stripIndent(componentRef.peek.description);
+
 		_.forEach(examples, ({ name, Example, source }) => {
 			storiesOfAddSequence.push([
 				componentName,
@@ -367,7 +374,8 @@ _.forEach(
 								code: source,
 								example: Example,
 								path: [componentName],
-							})
+							}),
+							{ notes }
 						);
 				},
 			]);
