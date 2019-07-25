@@ -61,7 +61,7 @@ const checkIconSVG = `<?xml version="1.0" encoding="utf-8"?>
 
 const styles = {
 	link: {
-		color: '#2abbb0',
+		color: '#587eba',
 		textDecoration: 'underline',
 		cursor: 'pointer',
 		outline: 'none',
@@ -172,72 +172,49 @@ const filteredComponents = _.reject(loadedComponents, ({ component }) =>
 	isPrivate(component)
 );
 
-const groupedComponents = _.groupBy(filteredComponents, ({ component }) =>
-	_.get(component, 'peek.categories[0]', 'misc')
+const storiesOfAddSequence = [];
+
+_.forEach(
+	filteredComponents,
+	({ name: componentName, component, examplesContext, examplesContextRaw }) => {
+		const examples = getExamplesFromContext(
+			examplesContext,
+			examplesContextRaw
+		);
+
+		const componentRef = getDefaultExport(component);
+		const notes =
+			_.has(componentRef, 'peek.description') &&
+			stripIndent(componentRef.peek.description);
+
+		const category =
+			_.has(componentRef, 'peek.categories') &&
+			stripIndent(componentRef.peek.categories[0]);
+
+		_.forEach(examples, ({ name, Example, source }) => {
+			storiesOfAddSequence.push([
+				componentName,
+				() => {
+					storiesOf(`Components|${category}/${componentName}`, module)
+						.addParameters({ options: examplePageOptions })
+						.add(
+							name,
+							exampleStory({
+								component,
+								code: source,
+								example: Example,
+								path: [componentName],
+							}),
+							{ notes }
+						);
+				},
+			]);
+		});
+	}
 );
 
-_.reduce(
-	groupedComponents,
-	(storyKind, componentGroup, category) => {
-		const subGroupedComponents = _.groupBy(componentGroup, ({ component }) =>
-			_.get(component, 'peek.categories[1]', 'misc')
-		);
-		return storyKind.add(_.capitalize(category), () => (
-			<ArticlePage>
-				<h1>{_.capitalize(category)}</h1>
-				<section
-					style={{
-						display: 'flex',
-						flexWrap: 'wrap',
-					}}
-				>
-					{_.map(subGroupedComponents, (componentSubGroup, subCategory) => (
-						<section
-							key={subCategory}
-							style={{
-								marginRight: 10,
-								marginBottom: 10,
-								backgroundColor: 'rgb(247,247,247)',
-								padding: 6,
-								width: 200,
-							}}
-						>
-							{subCategory !== 'misc' && (
-								<h3
-									style={{
-										marginTop: 0,
-										textAlign: 'center',
-									}}
-								>
-									{_.capitalize(subCategory)}
-								</h3>
-							)}
-							<section
-								style={{
-									display: 'flex',
-									flexDirection: 'column',
-								}}
-							>
-								{_.map(componentSubGroup, ({ name }) => (
-									<div
-										key={name}
-										style={{
-											margin: 10,
-										}}
-									>
-										<LinkTo style={styles.link} kind={name}>
-											{name}
-										</LinkTo>
-									</div>
-								))}
-							</section>
-						</section>
-					))}
-				</section>
-			</ArticlePage>
-		));
-	},
-	storiesOf('Categories', module).addParameters({ options: articlePageOptions })
+_.forEach(_.sortBy(storiesOfAddSequence, _.property('0')), ([, addStory]) =>
+	addStory()
 );
 
 const loadedIcons = require('./load-icons');
@@ -246,10 +223,10 @@ const filteredIcons = _.reject(loadedIcons, ({ component }) =>
 	isPrivate(component)
 );
 
-const storiesOfIcons = storiesOf('Icons', module)
+const storiesOfIcons = storiesOf('Icons | All', module)
 	.addParameters({ options: examplePageOptions })
 	.add(
-		'All',
+		'Overview',
 		() => (
 			<ArticlePage>
 				<h1>Icons</h1>
@@ -344,45 +321,4 @@ _.forEach(
 			})
 		);
 	}
-);
-
-const storiesOfAddSequence = [];
-
-_.forEach(
-	filteredComponents,
-	({ name: componentName, component, examplesContext, examplesContextRaw }) => {
-		const examples = getExamplesFromContext(
-			examplesContext,
-			examplesContextRaw
-		);
-
-		const componentRef = getDefaultExport(component);
-		const notes =
-			_.has(componentRef, 'peek.description') &&
-			stripIndent(componentRef.peek.description);
-
-		_.forEach(examples, ({ name, Example, source }) => {
-			storiesOfAddSequence.push([
-				componentName,
-				() => {
-					storiesOf(`Components|${componentName}`, module)
-						.addParameters({ options: examplePageOptions })
-						.add(
-							name,
-							exampleStory({
-								component,
-								code: source,
-								example: Example,
-								path: [componentName],
-							}),
-							{ notes }
-						);
-				},
-			]);
-		});
-	}
-);
-
-_.forEach(_.sortBy(storiesOfAddSequence, _.property('0')), ([, addStory]) =>
-	addStory()
 );
