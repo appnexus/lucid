@@ -59,7 +59,8 @@ interface IButtonProps {
 	type?: 'submit' | 'reset' | 'button';
 }
 
-const Button = createClass<IButtonProps, {}>({
+/** Test Button description */
+export const Button = createClass<IButtonProps, {}>({
 	displayName: 'Button',
 
 	statics: {
