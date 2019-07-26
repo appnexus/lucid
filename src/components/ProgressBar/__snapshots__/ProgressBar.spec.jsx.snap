@@ -1,5 +1,182 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`ProgressBar [common] example testing should match snapshot(s) for 1.default 1`] = `
+<div
+  className="lucid-ProgressBar lucid-ProgressBar-default"
+>
+  <title
+    className="lucid-ProgressBar-title"
+  />
+  <div
+    className="lucid-ProgressBar-bar-container"
+  >
+    <div
+      className="lucid-ProgressBar-bar lucid-ProgressBar-bar-default lucid-ProgressBar-bar-default-is-pulsed"
+    />
+    <div
+      className="lucid-ProgressBar-bar-overlay"
+      style={
+        Object {
+          "width": "5%",
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
+exports[`ProgressBar [common] example testing should match snapshot(s) for 2.kinds 1`] = `
+<div
+  className="lucid-ProgressBar lucid-ProgressBar-default"
+>
+  <title
+    className="lucid-ProgressBar-title"
+  />
+  <div
+    className="lucid-ProgressBar-bar-container"
+  >
+    <div
+      className="lucid-ProgressBar-bar lucid-ProgressBar-bar-default lucid-ProgressBar-bar-default-is-pulsed"
+    />
+    <div
+      className="lucid-ProgressBar-bar-overlay"
+      style={
+        Object {
+          "width": "25%",
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
+exports[`ProgressBar [common] example testing should match snapshot(s) for 2.kinds 2`] = `
+<div
+  className="lucid-ProgressBar lucid-ProgressBar-success"
+>
+  <title
+    className="lucid-ProgressBar-title"
+  />
+  <div
+    className="lucid-ProgressBar-bar-container"
+  >
+    <div
+      className="lucid-ProgressBar-bar lucid-ProgressBar-bar-success lucid-ProgressBar-bar-success-is-pulsed"
+    />
+    <div
+      className="lucid-ProgressBar-bar-overlay"
+      style={
+        Object {
+          "width": "25%",
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
+exports[`ProgressBar [common] example testing should match snapshot(s) for 2.kinds 3`] = `
+<div
+  className="lucid-ProgressBar lucid-ProgressBar-warning"
+>
+  <title
+    className="lucid-ProgressBar-title"
+  />
+  <div
+    className="lucid-ProgressBar-bar-container"
+  >
+    <div
+      className="lucid-ProgressBar-bar lucid-ProgressBar-bar-warning lucid-ProgressBar-bar-warning-is-pulsed"
+    />
+    <div
+      className="lucid-ProgressBar-bar-overlay"
+      style={
+        Object {
+          "width": "25%",
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
+exports[`ProgressBar [common] example testing should match snapshot(s) for 2.kinds 4`] = `
+<div
+  className="lucid-ProgressBar lucid-ProgressBar-danger"
+>
+  <title
+    className="lucid-ProgressBar-title"
+  />
+  <div
+    className="lucid-ProgressBar-bar-container"
+  >
+    <div
+      className="lucid-ProgressBar-bar lucid-ProgressBar-bar-danger lucid-ProgressBar-bar-danger-is-pulsed"
+    />
+    <div
+      className="lucid-ProgressBar-bar-overlay"
+      style={
+        Object {
+          "width": "25%",
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
+exports[`ProgressBar [common] example testing should match snapshot(s) for 2.kinds 5`] = `
+<div
+  className="lucid-ProgressBar lucid-ProgressBar-info"
+>
+  <title
+    className="lucid-ProgressBar-title"
+  />
+  <div
+    className="lucid-ProgressBar-bar-container"
+  >
+    <div
+      className="lucid-ProgressBar-bar lucid-ProgressBar-bar-info lucid-ProgressBar-bar-info-is-pulsed"
+    />
+    <div
+      className="lucid-ProgressBar-bar-overlay"
+      style={
+        Object {
+          "width": "25%",
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
+exports[`ProgressBar [common] example testing should match snapshot(s) for 3.with-title 1`] = `
+<div
+  className="lucid-ProgressBar lucid-ProgressBar-default"
+>
+  <title
+    className="lucid-ProgressBar-title"
+  >
+    This is a title
+  </title>
+  <div
+    className="lucid-ProgressBar-bar-container"
+  >
+    <div
+      className="lucid-ProgressBar-bar lucid-ProgressBar-bar-default lucid-ProgressBar-bar-default-is-pulsed"
+    />
+    <div
+      className="lucid-ProgressBar-bar-overlay"
+      style={
+        Object {
+          "width": "25%",
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
 exports[`ProgressBar childComponents Title should render a header 1`] = `
 <div
   className="lucid-ProgressBar lucid-ProgressBar-default"

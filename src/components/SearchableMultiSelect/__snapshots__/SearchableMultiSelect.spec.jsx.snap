@@ -2719,6 +2719,168 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
 </div>
 `;
 
+exports[`SearchableMultiSelect [common] example testing should match snapshot(s) for 07.formatted-options 1`] = `
+<div
+  className="lucid-SearchableMultiSelect"
+>
+  <DropMenu
+    ContextMenu={
+      Object {
+        "alignmentOffset": -13,
+        "directonOffset": -1,
+        "minWidthOffset": -28,
+      }
+    }
+    alignment="start"
+    className="lucid-SearchableMultiSelect-DropMenu"
+    direction="down"
+    flyOutStyle={
+      Object {
+        "maxHeight": "18em",
+      }
+    }
+    focusedIndex={null}
+    isDisabled={false}
+    isExpanded={false}
+    onCollapse={[Function]}
+    onExpand={[Function]}
+    onFocusNext={[Function]}
+    onFocusOption={[Function]}
+    onFocusPrev={[Function]}
+    onSelect={[Function]}
+    optionContainerStyle={Object {}}
+    selectedIndices={null}
+  >
+    <DropMenu.Control>
+      <SearchField
+        autoComplete="off"
+        className="lucid-SearchableMultiSelect-search"
+        debounceLevel={500}
+        isDisabled={false}
+        onChange={[Function]}
+        onChangeDebounced={[Function]}
+        onSubmit={[Function]}
+        value=""
+      />
+    </DropMenu.Control>
+    <DropMenu.FixedOption
+      className="lucid-SearchableMultiSelect-Option-select-all"
+      isDisabled={false}
+      isHidden={true}
+      isWrapped={true}
+      key="SearchableMultiSelectOption-select-all"
+    >
+      <CheckboxLabeled
+        Label="Select All"
+        className="lucid-SearchableMultiSelect-CheckboxLabeled"
+        isDisabled={false}
+        isIndeterminate={false}
+        isSelected={false}
+        onSelect={[Function]}
+      />
+    </DropMenu.FixedOption>
+    <DropMenu.OptionGroup
+      isHidden={false}
+      key="SearchableMultiSelectOptionGroup0"
+    >
+      <div
+        style={
+          Object {
+            "marginLeft": 27,
+          }
+        }
+      >
+        <OptionCols
+          col1="ID"
+          col2="NAME"
+        />
+      </div>
+      <SearchableMultiSelect.Option
+        Selected="Foo (1234)"
+        filterText="Foo"
+      >
+        <Component />
+      </SearchableMultiSelect.Option>
+      <SearchableMultiSelect.Option
+        Selected="Bar (2345)"
+        filterText="Bar"
+      >
+        <Component />
+      </SearchableMultiSelect.Option>
+      <SearchableMultiSelect.Option
+        Selected="Baz (3456)"
+        filterText="Baz"
+      >
+        <Component />
+      </SearchableMultiSelect.Option>
+      <DropMenu.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
+        key="SearchableMultiSelectOption0"
+      >
+        <CheckboxLabeled
+          callbackId={0}
+          className="lucid-SearchableMultiSelect-CheckboxLabeled"
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={false}
+          onSelect={[Function]}
+        >
+          <CheckboxLabeled.Label>
+            <Component
+              searchText=""
+            />
+          </CheckboxLabeled.Label>
+        </CheckboxLabeled>
+      </DropMenu.Option>
+      <DropMenu.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
+        key="SearchableMultiSelectOption1"
+      >
+        <CheckboxLabeled
+          callbackId={1}
+          className="lucid-SearchableMultiSelect-CheckboxLabeled"
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={false}
+          onSelect={[Function]}
+        >
+          <CheckboxLabeled.Label>
+            <Component
+              searchText=""
+            />
+          </CheckboxLabeled.Label>
+        </CheckboxLabeled>
+      </DropMenu.Option>
+      <DropMenu.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
+        key="SearchableMultiSelectOption2"
+      >
+        <CheckboxLabeled
+          callbackId={2}
+          className="lucid-SearchableMultiSelect-CheckboxLabeled"
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={false}
+          onSelect={[Function]}
+        >
+          <CheckboxLabeled.Label>
+            <Component
+              searchText=""
+            />
+          </CheckboxLabeled.Label>
+        </CheckboxLabeled>
+      </DropMenu.Option>
+    </DropMenu.OptionGroup>
+  </DropMenu>
+</div>
+`;
+
 exports[`SearchableMultiSelect custom formatting should render Option child function by passing in {searchText}, setting filterText on each option and using a custom optionFilter 1`] = `
 <div
   className="lucid-SearchableMultiSelect"

@@ -7,12 +7,6 @@ module.exports = function(api) {
 			test: {
 				plugins: [
 					['@babel/plugin-proposal-object-rest-spread'],
-					[
-						'babel-plugin-transform-require-ignore',
-						{
-							extensions: ['.less', '.css'],
-						},
-					],
 				],
 				presets: [
 					[
@@ -50,12 +44,6 @@ module.exports = function(api) {
 						? []
 						: [
 								[
-									'babel-plugin-transform-require-ignore',
-									{
-										extensions: ['.less', '.css'],
-									},
-								],
-								[
 									'react-peek/babel',
 									{
 										minifyStatics: true,
@@ -79,12 +67,6 @@ module.exports = function(api) {
 			modules: {
 				plugins: [
 					['@babel/plugin-proposal-object-rest-spread'],
-					[
-						'babel-plugin-transform-require-ignore',
-						{
-							extensions: ['.less', '.css'],
-						},
-					],
 					[
 						'react-peek/babel',
 						{

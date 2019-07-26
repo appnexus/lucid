@@ -78,11 +78,15 @@
     "@storybook/addon-options": "^5.1.9",
     "@storybook/addons": "^5.1.9",
     "@storybook/react": "^5.1.9",
+    "@types/assert": "^1.4.3",
     "@types/create-react-class": "^15.6.2",
+    "@types/enzyme": "^3.10.3",
+    "@types/jest": "^24.0.15",
     "@types/lodash": "^4.14.136",
     "@types/react": "^16.8.23",
     "@types/react-dom": "^16.8.4",
     "@types/react-motion": "0.0.29",
+    "@types/sinon": "^7.0.13",
     "@typescript-eslint/eslint-plugin": "^1.12.0",
     "@typescript-eslint/parser": "^1.12.0",
     "autoprefixer": "^8.2.0",
@@ -90,7 +94,6 @@
     "babel-jest": "^23.6.0",
     "babel-loader": "^8.0.4",
     "babel-plugin-lodash": "^3.3.4",
-    "babel-plugin-transform-require-ignore": "^0.1.1",
     "css-loader": "^0.28.11",
     "enzyme": "^3.8.0",
     "enzyme-adapter-react-16": "^1.7.1",
@@ -104,7 +107,7 @@
     "eslint-plugin-react": "^7.13.0",
     "glob": "^7.1.1",
     "husky": "^3.0.0",
-    "jest": "^21.2.1",
+    "jest": "^24.8.0",
     "jscodeshift": "^0.5.0",
     "less": "^2.3.1",
     "less-loader": "^4.1.0",
@@ -125,6 +128,7 @@
     "style-loader": "^0.20.3",
     "stylelint": "^7.10.1",
     "stylelint-config-standard": "^16.0.0",
+    "ts-jest": "^24.0.2",
     "ts-loader": "^6.0.4",
     "typescript": "^3.5.3",
     "webpack": "^4.27.1",
@@ -134,21 +138,6 @@
   "peerDependencies": {
     "react": "^15.0.0 || ^16.0.0",
     "react-dom": "^15.0.0 || ^16.0.0"
-  },
-  "jest": {
-    "rootDir": "src",
-    "setupFiles": [
-      "../tests/init",
-      "../tests/enzyme-setup"
-    ],
-    "collectCoverageFrom": [
-      "components/**/*.{js,jsx}",
-      "!components/**/examples/*",
-      "util/**/*.{js,jsx}"
-    ],
-    "snapshotSerializers": [
-      "enzyme-to-json/serializer"
-    ]
   },
   "husky": {
     "hooks": {

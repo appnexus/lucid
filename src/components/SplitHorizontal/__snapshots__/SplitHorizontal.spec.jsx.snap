@@ -320,15 +320,15 @@ exports[`SplitHorizontal render should render expanded & collapsed 1`] = `
 exports[`SplitHorizontal render should render expanded & collapsed 2`] = `
 <div
   class="lucid-SplitHorizontal"
-  style="overflow: hidden;"
+  style="flex: 1; overflow: hidden;"
 >
   <div
     class="lucid-SplitHorizontal-inner"
-    style="height: 100%; display: flex;"
+    style="height: 100%; display: flex; flex-direction: column; transform: translateY(0px);"
   >
     <div
       class="lucid-SplitHorizontal-TopPane lucid-SplitHorizontal-is-secondary"
-      style="overflow: auto;"
+      style="flex-grow: 0; flex-shrink: 0; overflow: auto;"
     />
     <div
       class="lucid-DragCaptureZone lucid-SplitHorizontal-Divider"
@@ -338,7 +338,7 @@ exports[`SplitHorizontal render should render expanded & collapsed 2`] = `
     </div>
     <div
       class="lucid-SplitHorizontal-BottomPane"
-      style="margin-bottom: 0px; overflow: auto;"
+      style="flex-grow: 1; flex-shrink: 1; flex-basis: 0%; margin-bottom: 0px; overflow: auto;"
     />
   </div>
 </div>
