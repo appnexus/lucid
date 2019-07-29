@@ -135,11 +135,11 @@ describe('component-types', () => {
 		it('should filter elements by a single component type', () => {
 			const Option = createClass({});
 			const elements = [
-				<span>Many</span>,
-				<Option>Hands</Option>,
-				<span>Make</span>,
-				<Option>Light</Option>,
-				<span>Work</span>,
+				<span key='1'>Many</span>,
+				<Option key='2'>Hands</Option>,
+				<span key='3'>Make</span>,
+				<Option key='4'>Light</Option>,
+				<span key='5'>Work</span>,
 			];
 
 			const spanElements = filterTypes(elements, 'span');
@@ -222,11 +222,11 @@ describe('component-types', () => {
 		it('should reject elements of a single component type', () => {
 			const Option = createClass({});
 			const elements = [
-				<span>Many</span>,
-				<Option>Hands</Option>,
-				<span>Make</span>,
-				<Option>Light</Option>,
-				<span>Work</span>,
+				<span key='1'>Many</span>,
+				<Option key='2'>Hands</Option>,
+				<span key='3'>Make</span>,
+				<Option key='4'>Light</Option>,
+				<span key='5'>Work</span>,
 			];
 
 			const nonSpanElements = rejectTypes(elements, 'span');
@@ -257,11 +257,11 @@ describe('component-types', () => {
 		it('should reject elements of many component types', () => {
 			const Option = createClass({});
 			const elements = [
-				<span>Many</span>,
-				<Option>Hands</Option>,
-				<section>Make</section>,
-				<Option>Light</Option>,
-				<span>Work</span>,
+				<span key='1'>Many</span>,
+				<Option key='2'>Hands</Option>,
+				<section key='3'>Make</section>,
+				<Option key='4'>Light</Option>,
+				<span key='5'>Work</span>,
 			];
 
 			const remainingElements = rejectTypes(elements, [Option, 'span']);
