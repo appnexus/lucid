@@ -92,7 +92,7 @@ describe('BarChart', () => {
 				wrapper = mount(
 					<BarChart>
 						<EmptyStateWrapper>
-							<Body>{bodyElement}}</Body>
+							<Body>{bodyElement}</Body>
 						</EmptyStateWrapper>
 					</BarChart>
 				);

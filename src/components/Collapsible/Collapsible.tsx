@@ -108,7 +108,7 @@ const Collapsible = createClass<ICollapsibleProps, {}>({
 		};
 	},
 
-	storeRef(name: string) {
+	setRef(name: string) {
 		return (ref: any) => {
 			this.Refs[name] = ref;
 		};
@@ -181,7 +181,7 @@ const Collapsible = createClass<ICollapsibleProps, {}>({
 						rootType,
 						{
 							...omitProps(passThroughs, Collapsible),
-							ref: this.storeRef('root'),
+							ref: this.setRef('root'),
 							className: cx('&', className),
 							style: {
 								height:

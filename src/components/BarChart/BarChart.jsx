@@ -471,7 +471,6 @@ const BarChart = createClass({
 				<g transform={`translate(${margin.left}, ${margin.top})`}>
 					<Axis
 						orient='left'
-						textOrientation='horizontal'
 						scale={yScale}
 						tickFormat={yAxisFinalFormatter}
 						tickCount={yAxisTickCount}
