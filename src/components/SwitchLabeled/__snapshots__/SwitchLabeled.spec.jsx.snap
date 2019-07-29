@@ -419,7 +419,9 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for lab
     <span
       key="0"
     >
-      <span>
+      <span
+        key="1"
+      >
         HTML element in an array
       </span>
     </span>

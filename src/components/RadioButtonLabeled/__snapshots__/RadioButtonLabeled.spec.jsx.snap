@@ -303,7 +303,9 @@ exports[`RadioButtonLabeled [common] example testing should match snapshot(s) fo
   <div
     className="lucid-RadioButtonLabeled-label"
   >
-    <span>
+    <span
+      key="1"
+    >
       HTML element in an array
     </span>
   </div>

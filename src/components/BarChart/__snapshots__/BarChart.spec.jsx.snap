@@ -504,7 +504,7 @@ exports[`BarChart [common] example testing should match snapshot(s) for 06.all-t
       outerTickSize={0}
       scale={[Function]}
       textOrientation="horizontal"
-      tickCount={2}
+      tickCount={5}
       tickFormat={[Function]}
       tickPadding={3}
     />
