@@ -78,6 +78,7 @@ import DangerIcon from './components/Icon/DangerIcon/DangerIcon';
 import DangerLightIcon from './components/Icon/DangerLightIcon/DangerLightIcon';
 import DataTable from './components/DataTable/DataTable';
 import DeleteIcon from './components/Icon/DeleteIcon/DeleteIcon';
+import DotsIcon from './components/Icon/DotsIcon/DotsIcon';
 import Dialog from './components/Dialog/Dialog';
 import DownloadIcon from './components/Icon/DownloadIcon/DownloadIcon';
 import DragCaptureZone from './components/DragCaptureZone/DragCaptureZone';
@@ -153,6 +154,7 @@ import Tag from './components/Tag/Tag';
 import TextField from './components/TextField/TextField';
 import TextFieldValidated from './components/TextFieldValidated/TextFieldValidated';
 import TextIcon from './components/Icon/TextIcon/TextIcon';
+import Typography from './components/Typography/Typography';
 import Underline from './components/Underline/Underline';
 import UnlinkedIcon from './components/Icon/UnlinkedIcon/UnlinkedIcon';
 import UnlockedIcon from './components/Icon/UnlockedIcon/UnlockedIcon';
@@ -234,6 +236,7 @@ export {
 	DateSelectDumb,
 	DeleteIcon,
 	Dialog,
+	DotsIcon,
 	DownloadIcon,
 	DragCaptureZone,
 	DropMenu,
@@ -340,6 +343,7 @@ export {
 	TextFieldValidated,
 	ToolTip,
 	ToolTipDumb,
+	Typography,
 	Underline,
 	UnlinkedIcon,
 	UnlockedIcon,

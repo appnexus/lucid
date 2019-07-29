@@ -279,7 +279,8 @@ const DataTable = createClass({
 									width={SELECTOR_COLUMN_WIDTH}
 								>
 									<Checkbox
-										isSelected={allSelected}
+										isDisabled={!data || !data.length}
+										isSelected={data && data.length && allSelected}
 										isIndeterminate={
 											!allSelected && !!data.find(d => d.isSelected)
 										}

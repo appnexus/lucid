@@ -1015,6 +1015,22 @@ module.exports = [
 		),
 	},
 	{
+		name: 'Typography',
+		component: getDefaultExport(
+			require('../src/components/Typography/Typography')
+		),
+		examplesContext: require.context(
+			'../src/components/Typography/examples',
+			true,
+			/\.jsx?$/
+		),
+		examplesContextRaw: require.context(
+			'!!raw-loader!../src/components/Typography/examples',
+			true,
+			/\.jsx?$/
+		),
+	},
+	{
 		name: 'TextField',
 		component: getDefaultExport(
 			require('../src/components/TextField/TextField')
