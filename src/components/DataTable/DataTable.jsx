@@ -263,7 +263,7 @@ const DataTable = createClass({
 
 		const columnSlicer = _.flow(
 			_.compact,
-			(columns) => _.slice(columns, startColumn, endColumn)
+			columns => _.slice(columns, startColumn, endColumn)
 		);
 		const allSelected = _.every(data, 'isSelected');
 
@@ -279,7 +279,8 @@ const DataTable = createClass({
 									width={SELECTOR_COLUMN_WIDTH}
 								>
 									<Checkbox
-										isSelected={allSelected}
+										isDisabled={!data || !data.length}
+										isSelected={data && data.length && allSelected}
 										isIndeterminate={
 											!allSelected && !!data.find(d => d.isSelected)
 										}
