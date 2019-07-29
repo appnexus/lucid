@@ -32,7 +32,7 @@ export default class extends React.Component {
 					isExpanded={this.state.isExpanded}
 					width={this.state.width}
 					onCollapse={this.handleToggle}
-					Header="Stumptown keytar schlitz"
+					Header='Stumptown keytar schlitz'
 					onResize={this.handleResize}
 				>
 					<p>

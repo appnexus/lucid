@@ -24,7 +24,10 @@ function isReactComponentClass(componentClass) {
 describe('component-types', () => {
 	describe('createClass', () => {
 		it('should return a React component type.', () => {
-			assert(isReactComponentClass(createClass({})), 'must be a React component');
+			assert(
+				isReactComponentClass(createClass({})),
+				'must be a React component'
+			);
 		});
 
 		it('should make child `components` static properties.', () => {

@@ -263,7 +263,7 @@ const DataTable = createClass({
 
 		const columnSlicer = _.flow(
 			_.compact,
-			(columns) => _.slice(columns, startColumn, endColumn)
+			columns => _.slice(columns, startColumn, endColumn)
 		);
 		const allSelected = _.every(data, 'isSelected');
 

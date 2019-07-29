@@ -2,11 +2,7 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers.js';
-import {
-	createClass,
-	omitProps,
-	getFirst,
-} from '../../util/component-types';
+import { createClass, omitProps, getFirst } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-ProgressBar');
 

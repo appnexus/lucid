@@ -24,7 +24,7 @@ export default class extends React.Component {
 					isResizeDisabled
 					isExpanded={this.state.isExpanded}
 					onCollapse={this.handleToggle}
-					Header="Stumptown keytar schlitz"
+					Header='Stumptown keytar schlitz'
 				>
 					<p>
 						Stumptown keytar schlitz, vinyl vexillologist humblebrag sartorial

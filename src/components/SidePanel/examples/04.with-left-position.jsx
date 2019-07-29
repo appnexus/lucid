@@ -29,8 +29,8 @@ export default class extends React.Component {
 				<SidePanel
 					isExpanded={this.state.isExpanded}
 					onCollapse={this.handleToggle}
-					position="left"
-					Header="Stumptown keytar schlitz"
+					position='left'
+					Header='Stumptown keytar schlitz'
 				>
 					<p style={margins}>
 						Stumptown keytar schlitz, vinyl vexillologist humblebrag sartorial
