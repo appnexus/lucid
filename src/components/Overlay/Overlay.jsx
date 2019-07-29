@@ -105,7 +105,7 @@ const Overlay = createClass({
 	handleBackgroundClick(event) {
 		// Use the reference we previously stored from the `ref` to check what
 		// element was clicked on.
-		if (this.refs.divRef && event.target === this.refs.divRef) {
+		if (this.divRef && event.target === this.divRef) {
 			this.props.onBackgroundClick({ event, props: this.props });
 		}
 	},
@@ -130,7 +130,7 @@ const Overlay = createClass({
 					'&-is-animated': isAnimated,
 				})}
 				onClick={this.handleBackgroundClick}
-				ref={this.setRef('divRef')}
+				ref={ref => (this.divRef = ref)}
 			>
 				{children}
 			</div>

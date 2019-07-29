@@ -63,16 +63,6 @@ const Switch = createClass({
 		};
 	},
 
-	setRef(key) {
-		return ref => {
-			this.refs[key] = ref;
-		};
-	},
-
-	componentDidMount() {
-		this.nativeElement = this.refs.nativeElement;
-	},
-
 	render() {
 		const {
 			className,
@@ -104,7 +94,7 @@ const Switch = createClass({
 					checked={isSelected}
 					className={cx('&-native')}
 					disabled={isDisabled}
-					ref={this.setRef('nativeElement')}
+					ref={ref => (this.nativeElement = ref)}
 					type='checkbox'
 				/>
 				<span className={cx('&-visualization-container')} />

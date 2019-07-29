@@ -71,16 +71,6 @@ const Checkbox = createClass({
 		};
 	},
 
-	setRef(key) {
-		return ref => {
-			this.refs[key] = ref;
-		};
-	},
-
-	componentDidMount() {
-		this.nativeElement = this.refs.nativeElement;
-	},
-
 	handleSpanClick(e) {
 		e.preventDefault();
 	},
@@ -125,7 +115,7 @@ const Checkbox = createClass({
 					checked={isSelected}
 					className={cx('&-native')}
 					disabled={isDisabled}
-					ref={this.setRef('nativeElement')}
+					ref={ref => (this.nativeElement = ref)}
 					title={title}
 					type='checkbox'
 				/>

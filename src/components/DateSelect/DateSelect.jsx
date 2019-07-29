@@ -167,12 +167,6 @@ const DateSelect = createClass({
 		};
 	},
 
-	setRef(key) {
-		return ref => {
-			this.refs[key] = ref;
-		};
-	},
-
 	handleDayClick(day, { disabled }, event) {
 		const { onSelectDate } = this.props;
 
@@ -217,7 +211,7 @@ const DateSelect = createClass({
 		const monthsShown = clampMonthsShown(monthsShownRaw);
 
 		if (isFontSizeRelative) {
-			const rootElement = this.refs.rootRef;
+			const rootElement = this.rootRef;
 			const { width, height } = rootElement.getBoundingClientRect();
 			const navButtonsWidth = NAV_BUTTON_SIZE * 2;
 			const oneMonthShownWidth =
@@ -302,7 +296,7 @@ const DateSelect = createClass({
 		/* istanbul ignore next */
 		return (
 			<section
-				ref={this.setRef('rootRef')}
+				ref={ref => (this.rootRef = ref)}
 				className={cx('&', className, {
 					'&-show-divider': showDivider,
 				})}

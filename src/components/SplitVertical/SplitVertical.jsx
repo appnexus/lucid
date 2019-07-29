@@ -165,7 +165,7 @@ const SplitVertical = createClass({
 
 	getPanes() {
 		const { children } = this.props;
-		const { leftPane: leftPaneRef, rightPane: rightPaneRef } = this.storedRefs;
+		const { leftPaneRef, rightPaneRef } = this;
 
 		const leftPaneElement = _.get(
 			filterTypes(children, SplitVertical.LeftPane),
@@ -261,7 +261,7 @@ const SplitVertical = createClass({
 		this.panes = this.getPanes();
 		const { secondaryRef, primaryRef } = this.panes;
 		this.secondaryStartRect = secondaryRef.getBoundingClientRect();
-		this.disableAnimation(this.storedRefs.inner, secondaryRef, primaryRef);
+		this.disableAnimation(this.innerRef, secondaryRef, primaryRef);
 	},
 
 	handleDrag({ dX }, { event }) {
@@ -277,7 +277,7 @@ const SplitVertical = createClass({
 				secondaryRef,
 				secondary,
 				right,
-				this.storedRefs.inner,
+				this.innerRef,
 				primaryRef,
 				collapseShift
 			),
@@ -298,14 +298,14 @@ const SplitVertical = createClass({
 				secondaryRef,
 				secondary,
 				right,
-				this.storedRefs.inner,
+				this.innerRef,
 				primaryRef,
 				collapseShift
 			),
 			{ props: this.props, event }
 		);
 
-		this.resetAnimation(this.storedRefs.inner, secondaryRef, primaryRef);
+		this.resetAnimation(this.innerRef, secondaryRef, primaryRef);
 	},
 
 	componentWillReceiveProps(nextProps) {
@@ -353,12 +353,6 @@ const SplitVertical = createClass({
 				});
 			});
 		}
-	},
-
-	storeRef(name) {
-		return ref => {
-			this.storedRefs[name] = ref;
-		};
 	},
 
 	componentWillMount() {
@@ -421,7 +415,7 @@ const SplitVertical = createClass({
 					{tween => (
 						<div
 							className={cx('&-inner')}
-							ref={this.storeRef('inner')}
+							ref={ref => (this.innerRef = ref)}
 							style={{
 								display: 'flex',
 								transform: `translateX(${(isRightSecondary ? 1 : -1) *
@@ -451,7 +445,7 @@ const SplitVertical = createClass({
 									overflow: 'auto',
 									...leftPaneProps.style,
 								}}
-								ref={this.storeRef('leftPane')}
+								ref={ref => (this.leftPaneRef = ref)}
 							>
 								{leftPaneProps.children}
 							</div>
@@ -505,7 +499,7 @@ const SplitVertical = createClass({
 									overflow: 'auto',
 									...rightPaneProps.style,
 								}}
-								ref={this.storeRef('rightPane')}
+								ref={ref => (this.rightPaneRef = ref)}
 							>
 								{rightPaneProps.children}
 							</div>

@@ -84,12 +84,6 @@ const Autocomplete = createClass({
 		};
 	},
 
-	setRef(key) {
-		return ref => {
-			this.refs[key] = ref;
-		};
-	},
-
 	handleSelect(optionIndex, { event }) {
 		const { suggestions, onChange, onSelect } = this.props;
 
@@ -113,12 +107,12 @@ const Autocomplete = createClass({
 	},
 
 	getInputValue() {
-		return _.get(this.refs, 'inputNode.value', this.props.value);
+		return _.get(this, 'inputRef', this.props.value);
 	},
 
 	setInputValue(value) {
-		if (this.refs.inputNode) {
-			this.refs.inputNode.value = value;
+		if (this.inputRef) {
+			this.inputRef.value = value;
 		}
 	},
 
@@ -160,7 +154,7 @@ const Autocomplete = createClass({
 			DropMenu: { isExpanded, onCollapse },
 		} = this.props;
 
-		if (event.target === this.refs.inputNode) {
+		if (event.target === this.inputRef) {
 			onExpand({ event, props: this.props });
 		} else {
 			if (isExpanded) {
@@ -169,13 +163,13 @@ const Autocomplete = createClass({
 				onExpand({ event, props: this.props });
 			}
 
-			this.refs.inputNode.focus();
+			this.inputRef.focus();
 		}
 	},
 
 	componentDidMount() {
 		const { value } = this.props;
-		this.refs.inputNode.addEventListener('input', this.handleInput);
+		this.inputRef.addEventListener('input', this.handleInput);
 		this.setInputValue(value);
 	},
 
@@ -187,8 +181,8 @@ const Autocomplete = createClass({
 	},
 
 	componentWillUnmount() {
-		if (this.refs.inputNode) {
-			this.refs.inputNode.removeEventListener('input', this.handleInput);
+		if (this.inputRef) {
+			this.inputRef.removeEventListener('input', this.handleInput);
 		}
 	},
 
@@ -233,7 +227,7 @@ const Autocomplete = createClass({
 							])}
 							type='text'
 							className={cx('&-Control-input')}
-							ref={this.setRef('inputNode')}
+							ref={ref => (this.inputRef = ref)}
 							onKeyDown={this.handleInputKeydown}
 							disabled={isDisabled}
 						/>

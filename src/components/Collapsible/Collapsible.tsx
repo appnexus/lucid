@@ -108,12 +108,6 @@ const Collapsible = createClass<ICollapsibleProps, {}>({
 		};
 	},
 
-	setRef(key: string) {
-		return (ref: any) => {
-			this.Refs[key] = ref;
-		};
-	},
-
 	componentWillMount() {
 		this.Refs = {};
 		this.isAnimated = false;
@@ -123,7 +117,7 @@ const Collapsible = createClass<ICollapsibleProps, {}>({
 	componentDidMount() {
 		_.delay(() => {
 			this.setState({
-				maxHeight: _.get(this.Refs, 'root.scrollHeight'),
+				maxHeight: _.get(this, 'rootRef.scrollHeight'),
 			});
 			this.isAnimated = this.props.isAnimated;
 		}, 32);
@@ -181,7 +175,7 @@ const Collapsible = createClass<ICollapsibleProps, {}>({
 						rootType,
 						{
 							...omitProps(passThroughs, Collapsible),
-							ref: this.setRef('root'),
+							ref: (ref: any) => (this.rootRef = ref),
 							className: cx('&', className),
 							style: {
 								height:
