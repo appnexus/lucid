@@ -1,6 +1,5 @@
 import { shallow } from 'enzyme';
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { common, mockDate } from '../../util/generic-tests';
 import { DateSelectDumb as DateSelect } from './DateSelect';
 
