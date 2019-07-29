@@ -5,7 +5,7 @@ import Overlay from '../Overlay/Overlay';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, getFirst, omitProps } from '../../util/component-types';
 import Button from '../Button/Button';
-import { CloseIcon } from '../..';
+import CloseIcon from '../Icon/CloseIcon/CloseIcon';
 
 const cx = lucidClassNames.bind('&-Dialog');
 
