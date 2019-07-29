@@ -4,7 +4,6 @@ import _ from 'lodash';
 import marksy from 'marksy/components';
 import { storiesOf } from '@storybook/react';
 import LinkTo from '@storybook/addon-links/react';
-import { withInfo } from '@storybook/addon-info';
 import { exampleStory } from '../.storybook/lucid-docs-addon';
 import { stripIndent } from '../.storybook/lucid-docs-addon/util';
 import readmeText from '!!raw-loader!../README.md';
@@ -210,7 +209,6 @@ _.forEach(
 				componentName,
 				() => {
 					storiesOf(`Components/${category}/${componentName}`, module)
-						.addDecorator(withInfo)
 						.addParameters({ options: examplePageOptions })
 						.add(
 							name,
