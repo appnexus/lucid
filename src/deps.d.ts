@@ -1,1 +1,1 @@
-declare module 'react-peek/prop-types'
+declare module 'react-peek/prop-types';

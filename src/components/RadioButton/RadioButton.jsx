@@ -66,6 +66,12 @@ const RadioButton = createClass({
 		};
 	},
 
+	setRef(key) {
+		return ref => {
+			this.refs[key] = ref;
+		};
+	},
+
 	componentDidMount() {
 		this.nativeElement = this.refs.nativeElement;
 	},
@@ -102,7 +108,7 @@ const RadioButton = createClass({
 					checked={isSelected}
 					className={cx('&-native')}
 					disabled={isDisabled}
-					ref='nativeElement'
+					ref={this.setRef('nativeElement')}
 					type='radio'
 				/>
 				<span

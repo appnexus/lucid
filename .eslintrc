@@ -80,7 +80,8 @@
 		"no-unexpected-multiline": 0,
 		"no-unsafe-finally": 2,
 		"no-unsafe-negation": 2,
-		"no-unused-vars": [2, { "args": "none" }],
+		"no-unused-vars": "off", // we are using the typescript plugin instead
+		"@typescript-eslint/no-unused-vars": [2, { "args": "none" }], // this ignores the unused var error for TS interfaces
 		"prefer-const": 2,
 		"prettier/prettier": "error",
 		"promise/always-return": 0,
@@ -91,6 +92,8 @@
 		"react/jsx-uses-vars": 2,
 		"react/prop-types": 2,
 		"react/react-in-jsx-scope": 2,
-		"require-yield": 2
+		"require-yield": 2,
+		"react/display-name": "off", // we have this all over our storybook examples
+		"react/no-unescaped-entities": "off" // this is purely to avoid changing all string quotemarks in JSX to their ampersand code equivalents
 	}
 }

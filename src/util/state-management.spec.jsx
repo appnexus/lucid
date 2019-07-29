@@ -595,7 +595,7 @@ describe('#safeMerge', () => {
 		assert.equal(value, srcValue, 'must be srcValue');
 	});
 	it('should return arrays that contain react elements', () => {
-		const srcValue = [<div>foo</div>];
+		const srcValue = [<div key='1'>foo</div>];
 		const value = safeMerge({}, srcValue);
 		assert.equal(value, srcValue, 'must be srcValue');
 	});

@@ -12,8 +12,8 @@ describe('ContextMenu', () => {
 		exemptFunctionProps: ['getAlignmentOffset'],
 		getDefaultProps: () => ({
 			children: [
-				<ContextMenu.Target>Test</ContextMenu.Target>,
-				<ContextMenu.FlyOut>Menu</ContextMenu.FlyOut>,
+				<ContextMenu.Target key='1'>Test</ContextMenu.Target>,
+				<ContextMenu.FlyOut key='2'>Menu</ContextMenu.FlyOut>,
 			],
 		}),
 	});

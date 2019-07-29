@@ -30,7 +30,9 @@ export default class extends React.Component {
 				>
 					<SidePanel.Header>
 						<div>
-							<div><strong>Rich content</strong></div>
+							<div>
+								<strong>Rich content</strong>
+							</div>
 						</div>
 					</SidePanel.Header>
 					<p style={margins}>

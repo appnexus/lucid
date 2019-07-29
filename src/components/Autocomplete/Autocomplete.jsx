@@ -84,6 +84,12 @@ const Autocomplete = createClass({
 		};
 	},
 
+	setRef(key) {
+		return ref => {
+			this.refs[key] = ref;
+		};
+	},
+
 	handleSelect(optionIndex, { event }) {
 		const { suggestions, onChange, onSelect } = this.props;
 
@@ -227,7 +233,7 @@ const Autocomplete = createClass({
 							])}
 							type='text'
 							className={cx('&-Control-input')}
-							ref='inputNode'
+							ref={this.setRef('inputNode')}
 							onKeyDown={this.handleInputKeydown}
 							disabled={isDisabled}
 						/>

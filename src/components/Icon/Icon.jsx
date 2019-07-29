@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
-import ReactDOM from 'react-dom';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, omitProps } from '../../util/component-types';
 
@@ -107,7 +106,8 @@ const Icon = createClass({
 
 	handleClick(event) {
 		const { onClick, isDisabled, isClickable, onSelect } = this.props;
-		const domNode = ReactDOM.findDOMNode(this);
+
+		const domNode = this.svgRef;
 
 		if (onClick) {
 			onClick(event);
@@ -148,6 +148,7 @@ const Icon = createClass({
 					},
 					className
 				)}
+				ref={ref => (this.svgRef = ref)}
 				onClick={this.handleClick}
 			>
 				{children}

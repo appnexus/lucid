@@ -191,6 +191,7 @@ export function common(
 		// Only run this test if it's a public component
 		if (!Component._isPrivate && !noExport) {
 			it('should be available as an exported module from index.js', () => {
+				// eslint-disable-next-line import/namespace
 				assert(lucid[Component.displayName]);
 			});
 		}

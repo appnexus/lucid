@@ -66,6 +66,7 @@ describe('SlidePanel', () => {
 			let slidePanelInstance;
 
 			beforeEach(() => {
+				// eslint-disable-next-line import/namespace
 				domHelpers.shiftChildren = jest.fn();
 
 				wrapper = shallow(
@@ -87,6 +88,7 @@ describe('SlidePanel', () => {
 			});
 
 			afterEach(() => {
+				// eslint-disable-next-line import/namespace
 				domHelpers.shiftChildren = shiftChildren;
 				jest.useRealTimers();
 			});
