@@ -30,7 +30,6 @@ export default createClass({
 					width={41}
 					align='center'
 					hasBorderLeft
-					hasBorderLeft
 					isSortable
 				>
 					ID

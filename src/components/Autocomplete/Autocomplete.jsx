@@ -84,9 +84,9 @@ const Autocomplete = createClass({
 		};
 	},
 
-	setRef(name) {
+	setRef(key) {
 		return ref => {
-			this.refs[name] = ref;
+			this.refs[key] = ref;
 		};
 	},
 

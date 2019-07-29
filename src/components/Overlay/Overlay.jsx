@@ -1,6 +1,5 @@
 import _ from 'lodash';
 import React from 'react';
-import ReactDOM from 'react-dom';
 import PropTypes from 'react-peek/prop-types';
 import Portal from '../Portal/Portal';
 import ReactTransitionGroup from 'react-transition-group/CSSTransitionGroup';
@@ -103,15 +102,10 @@ const Overlay = createClass({
 		}
 	},
 
-	handleDivRef(divDOMNode) {
-		// Store the dom node so we can check if it's clicked on later
-		this._divDOMNode = ReactDOM.findDOMNode(divDOMNode);
-	},
-
 	handleBackgroundClick(event) {
 		// Use the reference we previously stored from the `ref` to check what
 		// element was clicked on.
-		if (this._divDOMNode && event.target === this._divDOMNode) {
+		if (this.refs.divRef && event.target === this.refs.divRef) {
 			this.props.onBackgroundClick({ event, props: this.props });
 		}
 	},
@@ -136,7 +130,7 @@ const Overlay = createClass({
 					'&-is-animated': isAnimated,
 				})}
 				onClick={this.handleBackgroundClick}
-				ref={this.handleDivRef}
+				ref={this.setRef('divRef')}
 			>
 				{children}
 			</div>

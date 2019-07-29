@@ -278,6 +278,12 @@ const Th = createClass({
 		};
 	},
 
+	setRef(key) {
+		return ref => {
+			this.refs[key] = ref;
+		};
+	},
+
 	componentWillReceiveProps({ width }) {
 		if (!_.isNil(width) && width !== this.props.width) {
 			this.setState({
@@ -332,7 +338,7 @@ const Th = createClass({
 					},
 					className
 				)}
-				ref='root'
+				ref={this.setRef('root')}
 				onClickCapture={this.handleClickCapture}
 				onMouseEnter={this.handleMouseEnter}
 				onMouseUp={this.handleMouseUp}

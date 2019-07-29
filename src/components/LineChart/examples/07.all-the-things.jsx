@@ -60,7 +60,6 @@ export default createClass({
 				y2AxisFormatter={yFormatter}
 				y2AxisTickCount={5}
 				y2AxisTitle='Number of Oranges'
-				y2AxisTitleColor={1}
 				y2AxisHasPoints={false}
 				y2AxisTitleColor={chartConstants.COLOR_1}
 			/>

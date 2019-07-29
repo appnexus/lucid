@@ -551,12 +551,7 @@ const LineChart = createClass({
 					>
 						{/* y axis */}
 						<g transform={`translate(${margin.left}, ${margin.top})`}>
-							<Axis
-								orient='left'
-								scale={yScale}
-								tickFormat={yAxisFormatter}
-								ref='yAxis'
-							/>
+							<Axis orient='left' scale={yScale} tickFormat={yAxisFormatter} />
 						</g>
 						{/* x axis */}
 						<g
@@ -567,7 +562,6 @@ const LineChart = createClass({
 								orient='bottom'
 								scale={xScale}
 								tickFormat={xFinalFormatter}
-								ref='xAxis'
 							/>
 						</g>
 					</svg>
@@ -679,7 +673,6 @@ const LineChart = createClass({
 						tickFormat={xFinalFormatter}
 						tickCount={xAxisTickCount}
 						ticks={xAxisTicks}
-						ref='xAxis'
 						textOrientation={xAxisTextOrientation}
 					/>
 
@@ -761,7 +754,6 @@ const LineChart = createClass({
 									? xAxisTitleColor
 									: palette[xAxisTitleColor % palette.length]
 							}
-							ref='xAxisTitle'
 						/>
 					</g>
 				) : null}
@@ -773,7 +765,6 @@ const LineChart = createClass({
 						scale={yScale}
 						tickFormat={yAxisFinalFormatter}
 						tickCount={yAxisTickCount}
-						ref='yAxis'
 						textOrientation={yAxisTextOrientation}
 					/>
 				</g>
@@ -791,7 +782,6 @@ const LineChart = createClass({
 									? yAxisTitleColor
 									: palette[yAxisTitleColor % palette.length]
 							}
-							ref='yAxisTitle'
 						/>
 					</g>
 				) : null}
@@ -806,7 +796,6 @@ const LineChart = createClass({
 							scale={y2Scale}
 							tickFormat={y2AxisFinalFormatter}
 							tickCount={y2AxisTickCount}
-							ref='y2Axis'
 						/>
 					</g>
 				) : null}
@@ -826,7 +815,6 @@ const LineChart = createClass({
 									? y2AxisTitleColor
 									: palette[y2AxisTitleColor % palette.length]
 							}
-							ref='y2AxisTitle'
 						/>
 					</g>
 				) : null}
@@ -844,7 +832,6 @@ const LineChart = createClass({
 						colorMap={colorMap}
 						palette={palette}
 						colorOffset={yAxisColorOffset}
-						ref='yLines'
 					/>
 				</g>
 
@@ -862,7 +849,6 @@ const LineChart = createClass({
 							colorMap={colorMap}
 							palette={palette}
 							colorOffset={yAxisColorOffset}
-							ref='yPoints'
 						/>
 					</g>
 				) : null}
@@ -881,7 +867,6 @@ const LineChart = createClass({
 							colorOffset={y2AxisColorOffset + yAxisFields.length}
 							colorMap={colorMap}
 							palette={palette}
-							ref='y2Lines'
 						/>
 					</g>
 				) : null}
@@ -900,7 +885,6 @@ const LineChart = createClass({
 							colorOffset={y2AxisColorOffset + yAxisFields.length}
 							colorMap={colorMap}
 							palette={palette}
-							ref='y2Points'
 						/>
 					</g>
 				) : null}

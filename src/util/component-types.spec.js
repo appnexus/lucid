@@ -180,11 +180,11 @@ describe('component-types', () => {
 		it('should filter elements by many component types', () => {
 			const Option = createClass({});
 			const elements = [
-				<span>Many</span>,
-				<Option>Hands</Option>,
-				<section>Make</section>,
-				<Option>Light</Option>,
-				<section>Work</section>,
+				<span key='1'>Many</span>,
+				<Option key='2'>Hands</Option>,
+				<section key='3'>Make</section>,
+				<Option key='4'>Light</Option>,
+				<section key='5'>Work</section>,
 			];
 
 			const spanElements = filterTypes(elements, ['section', Option]);
@@ -292,8 +292,8 @@ describe('component-types', () => {
 			const Option = createClass({});
 
 			const elements = createElements(Option, [
-				<Option />,
-				<button />,
+				<Option key='1' />,
+				<button key='2' />,
 				'red',
 				null,
 				{ isDisabled: true },

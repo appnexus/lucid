@@ -108,9 +108,9 @@ const Collapsible = createClass<ICollapsibleProps, {}>({
 		};
 	},
 
-	setRef(name: string) {
+	setRef(key: string) {
 		return (ref: any) => {
-			this.Refs[name] = ref;
+			this.Refs[key] = ref;
 		};
 	},
 
