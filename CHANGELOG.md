@@ -1,3 +1,7 @@
+## unreleased
+
+- [minor] Update `DataTable` to have a disabled checkbox when the data is empty [#1011](https://github.com/appnexus/lucid/pull/1011)
+
 ## 4.2.0
 
 - [minor] Add `Typography` component [#1004](https://github.com/appnexus/lucid/pull/1004)
