@@ -107,7 +107,7 @@ const Autocomplete = createClass({
 	},
 
 	getInputValue() {
-		return _.get(this, 'inputRef', this.props.value);
+		return _.get(this, 'inputRef.value', this.props.value);
 	},
 
 	setInputValue(value) {

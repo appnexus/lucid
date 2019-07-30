@@ -369,11 +369,11 @@ const Th = createClass({
 	},
 
 	getWidth() {
-		const styleWidth = _.get(this.refs.root, 'style.width');
+		const styleWidth = _.get(this.rootRef, 'style.width');
 		if (_.endsWith(styleWidth, 'px')) {
 			return parseInt(styleWidth);
 		}
-		return this.refs.root.getBoundingClientRect().width;
+		return this.rootRef.getBoundingClientRect().width;
 	},
 
 	handleClickCapture(event) {
