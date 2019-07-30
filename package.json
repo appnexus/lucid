@@ -64,8 +64,7 @@
     "react-motion": "^0.5.2",
     "react-peek": "^1.0.5",
     "react-transition-group": "^1.2.1",
-    "reselect": "^2.5.1",
-    "timemachine": "^0.3.0"
+    "reselect": "^2.5.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.0",
@@ -130,6 +129,7 @@
     "style-loader": "^0.20.3",
     "stylelint": "^7.10.1",
     "stylelint-config-standard": "^16.0.0",
+    "timemachine": "^0.3.0",
     "ts-jest": "^24.0.2",
     "ts-loader": "^6.0.4",
     "typescript": "^3.5.3",
