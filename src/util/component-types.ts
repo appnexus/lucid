@@ -188,7 +188,7 @@ export function getFirst<P extends { children: React.ReactNode }>(
 // extra closures.
 export function omitProps<P extends { children: React.ReactNode }>(
 	props: P,
-	type: ICreateClassComponentClass<P>,
+	component: ICreateClassComponentClass<P>,
 	keys: string[] = [],
 	targetIsDOMElement = true
 ) {
@@ -200,7 +200,7 @@ export function omitProps<P extends { children: React.ReactNode }>(
 
 	return _.omit(
 		props,
-		_.keys(type.propTypes)
+		_.keys(component.propTypes)
 			.concat(keys)
 			.concat(additionalOmittedKeys)
 	);
