@@ -4,7 +4,7 @@ import { DateSelect } from '../../../index';
 
 function isPastDay(date) {
 	const day = new Date(date.getTime()).setHours(0, 0, 0, 0);
-	const today = new Date().setHours(0, 0, 0, 0);
+	const today = new Date(2019, 7, 4).setHours(0, 0, 0, 0);
 	return day < today;
 }
 
