@@ -165,8 +165,6 @@ SidePanel.peek = {
 };
 
 SidePanel.propTypes = {
-	...Overlay.propTypes,
-
 	children: node`
 		Content of the SidePanel, but also accepts \`<SidePanel.Header>\` to define
 		header content.
