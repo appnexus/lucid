@@ -64,7 +64,8 @@
     "react-motion": "^0.5.2",
     "react-peek": "^1.0.5",
     "react-transition-group": "^1.2.1",
-    "reselect": "^2.5.1"
+    "reselect": "^2.5.1",
+    "timemachine": "^0.3.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.0",
