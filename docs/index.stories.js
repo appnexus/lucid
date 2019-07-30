@@ -204,6 +204,7 @@ _.forEach(
 			_.has(componentRef, 'peek.categories') &&
 			stripIndent(componentRef.peek.categories[0]);
 
+		// TODO: Find a way to add per example notes
 		_.forEach(examples, ({ name, Example, source }) => {
 			storiesOfAddSequence.push([
 				componentName,
@@ -218,7 +219,7 @@ _.forEach(
 								example: Example,
 								path: [componentName],
 							}),
-							{ notes, info: { inline: true, header: false } }
+							{ notes: notes, info: { inline: true, header: false } }
 						);
 				},
 			]);
