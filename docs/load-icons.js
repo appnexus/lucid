@@ -500,6 +500,23 @@ module.exports = [
 	},
 
 	{
+		name: 'FlagIcon',
+		component: getDefaultExport(
+			require('../src/components/Icon/FlagIcon/FlagIcon')
+		),
+		examplesContext: require.context(
+			'../src/components/Icon/FlagIcon/examples',
+			true,
+			/\.jsx?$/
+		),
+		examplesContextRaw: require.context(
+			'!!raw-loader!../src/components/Icon/FlagIcon/examples',
+			true,
+			/\.jsx?$/
+		),
+	},
+
+	{
 		name: 'FolderIcon',
 		component: getDefaultExport(
 			require('../src/components/Icon/FolderIcon/FolderIcon')
