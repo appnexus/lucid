@@ -13,9 +13,9 @@ export default createClass({
 				<Typography variant='tabular'>tabular. text for tables</Typography>
 				<Typography variant='a'>a. link text</Typography>
 				<Typography variant='pre'>pre. preformatted text</Typography>
-				<Typography variant='code'>code. snazzy code</Typography> <br/>
-				<Typography variant='kbd'>kbd. keyboard inputs</Typography> <br/>
-				<Typography variant='samp'>samp. sample code outputs</Typography> <br/>
+				<Typography variant='code'>code. snazzy code</Typography> <br />
+				<Typography variant='kbd'>kbd. keyboard inputs</Typography> <br />
+				<Typography variant='samp'>samp. sample code outputs</Typography> <br />
 			</div>
 		);
 	},

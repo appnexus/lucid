@@ -34,9 +34,7 @@ export default createClass({
 					</Typography>
 					<br />
 					<Typography variant='h3'>Code Example</Typography>
-					<Typography variant='code'>
-						npm install all-the-things
-					</Typography>
+					<Typography variant='code'>npm install all-the-things</Typography>
 				</Typography>
 			</section>
 		);
