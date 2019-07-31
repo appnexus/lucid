@@ -60,8 +60,12 @@ class SidePanel extends React.Component {
 	}
 
 	componentWillUnmount() {
+		const { preventBodyScroll } = this.props;
 		if (this.timerId) {
 			clearTimeout(this.timerId);
+		}
+		if (preventBodyScroll) {
+			window.document.body.style.overflow = '';
 		}
 	}
 
