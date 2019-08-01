@@ -3,13 +3,17 @@ import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../../util/style-helpers';
 import { createClass, omitProps } from '../../../util/component-types';
-import Icon from '../Icon';
+import Icon, { IIconProps } from '../Icon';
 
 const cx = lucidClassNames.bind('&-ChevronIcon');
 
 const { oneOf } = PropTypes;
 
-const ChevronIcon = createClass({
+interface IChevronIconProps extends IIconProps {
+	direction?: 'up' | 'down' | 'left' | 'right';
+}
+
+const ChevronIcon = createClass<IChevronIconProps, {}>({
 	displayName: 'ChevronIcon',
 
 	statics: {

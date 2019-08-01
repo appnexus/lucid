@@ -2,10 +2,9 @@
   "compilerOptions": {
     "target": "esnext",
     "esModuleInterop": true,
-    "allowJs": true,
     "strict": true,
-    "isolatedModules": true,
-    "jsx": "react"
+    "jsx": "react",
+    "moduleResolution": "node"
   },
   "include": [
     "src/**/*"

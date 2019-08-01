@@ -7,29 +7,65 @@ const cx = lucidClassNames.bind('&-Icon');
 
 const { any, string, number, bool, func, oneOf } = PropTypes;
 
-const COLOR_NEUTRAL_DARK = 'neutral-dark';
-const COLOR_NEUTRAL_LIGHT = 'neutral-light';
-const COLOR_PRIMARY = 'primary';
-const COLOR_WHITE = 'white';
-const COLOR_SUCCESS = 'success';
-const COLOR_WARNING = 'warning';
-const COLOR_SECONDARY_ONE = 'secondary-one';
-const COLOR_SECONDARY_TWO = 'secondary-two';
-const COLOR_SECONDARY_THREE = 'secondary-three';
+enum Colors {
+	COLOR_NEUTRAL_DARK = 'neutral-dark',
+	COLOR_NEUTRAL_LIGHT = 'neutral-light',
+	COLOR_PRIMARY = 'primary',
+	COLOR_WHITE = 'white',
+	COLOR_SUCCESS = 'success',
+	COLOR_WARNING = 'warning',
+	COLOR_SECONDARY_ONE = 'secondary-one',
+	COLOR_SECONDARY_TWO = 'secondary-two',
+	COLOR_SECONDARY_THREE = 'secondary-three',
+}
 
-const COLOR_PROPS = [
-	COLOR_NEUTRAL_DARK,
-	COLOR_NEUTRAL_LIGHT,
-	COLOR_PRIMARY,
-	COLOR_WHITE,
-	COLOR_SUCCESS,
-	COLOR_WARNING,
-	COLOR_SECONDARY_ONE,
-	COLOR_SECONDARY_TWO,
-	COLOR_SECONDARY_THREE,
-];
+export interface IIconProps {
+	/**
+	 * Classes that are appended to the component defaults. This prop is run through the \`classnames\` library.
+	 */
+	className?: string;
 
-const Icon = createClass({
+	/** Size variations of the icons. \`size\` directly effects height and width but the developer should also be conscious of the relationship with \`viewBox\`. */
+	size?: number;
+
+	/** \`viewBox\` is very important for SVGs. You can think of \`viewBox\` as the "artboard" for our SVG while \`size\` is the presented height and width. */
+	viewBox?: string;
+
+	/** Any valid SVG aspect ratio. */
+	aspectRatio?: string;
+
+	/** Adds styling that makes the icon appear clickable. */
+	isClickable?: boolean;
+
+	/** Adds styling that makes the icon appear disabled.  Also forces isClickable to be false. */
+	isDisabled?: boolean;
+
+	/** Called when the user clicks the \`Icon\`. */
+	onClick?: ({
+		event,
+		props,
+	}: {
+		event: React.MouseEventHandler;
+		props: IIconProps;
+	}) => void;
+
+	/** Called when the user clicks an active, clickable \`Icon\`. Signature: \`({event, props}) => {}\` */
+	onSelect?: ({
+		event,
+		props,
+	}: {
+		event: React.MouseEventHandler;
+		props: IIconProps;
+	}) => void;
+
+	/** Any valid React children */
+	children?: React.ReactNode;
+
+	/** Sets the color of the Icon.  May not be applicable for icons that are tied to specific colors (e.g. DangerIcon). */
+	color?: Colors;
+}
+
+const Icon = createClass<IIconProps, {}>({
 	displayName: 'Icon',
 
 	statics: {
@@ -87,7 +123,8 @@ const Icon = createClass({
 			Any valid React children.
 		`,
 
-		color: oneOf(COLOR_PROPS)`
+		// TODO: make sure react peek is a-okay with this craziness!
+		color: oneOf(Colors)`
 			Sets the color of the Icon.  May not be applicable for icons that are tied
 			to specific colors (e.g. DangerIcon).
 		`,
@@ -100,11 +137,11 @@ const Icon = createClass({
 			viewBox: '0 0 16 16',
 			isDisabled: false,
 			isClickable: false,
-			color: COLOR_PRIMARY,
+			color: Colors.COLOR_PRIMARY,
 		};
 	},
 
-	handleClick(event) {
+	handleClick(event: React.MouseEventHandler<HTMLButtonElement>) {
 		const { onClick, isDisabled, isClickable, onSelect } = this.props;
 
 		const domNode = this.svgRef;

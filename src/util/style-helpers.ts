@@ -14,15 +14,18 @@ const RANDOM_INTEGER = _.random(0, Number.MAX_SAFE_INTEGER);
  *   bindClassNames('lucid')('&-Button') === 'lucid-Button'
  *   bindClassNames('lucid').bind('&-Button')('&-active') === 'lucid-Button-active'
  */
-export function bindClassNames(value = '', variable = /&/g) {
-	function cx(...args) {
+export function bindClassNames(value: string = '', variable: RegExp = /&/g) {
+	// We left `any` here because the classNames @types package doesn't export
+	// the right types for us to be able to use. It accepts a fairly wide range
+	// of input.
+	function cx(...args: any[]) {
 		return _.map(classNames(...args).split(' '), className =>
 			className.replace(variable, value)
 		).join(' ');
 	}
 
 	return _.assign(cx, {
-		bind(nextValue = value, ...args) {
+		bind(nextValue = value, ...args: any[]) {
 			return bindClassNames(nextValue.replace(variable, value), ...args);
 		},
 	});
@@ -33,6 +36,7 @@ export function bindClassNames(value = '', variable = /&/g) {
 // are able to scope all class names to something custom. This is a really rare
 // use-case. We needed it becuase we sometimes run two copies of the library on
 // a single page and need the styles not to step on each other.
+declare const LUCID_CSS_NAMESPACE: string;
 export const NAMESPACE =
 	typeof LUCID_CSS_NAMESPACE !== 'undefined' ? LUCID_CSS_NAMESPACE : 'lucid'; // eslint-disable-line no-undef
 
@@ -49,6 +53,6 @@ export const NAMESPACE =
  */
 export const lucidClassNames = bindClassNames(NAMESPACE);
 
-export function uniqueName(prefix) {
+export function uniqueName(prefix: string) {
 	return _.uniqueId(`${RANDOM_INTEGER}-${prefix}`);
 }

@@ -2,6 +2,9 @@ import _ from 'lodash';
 import * as d3TimeFormat from 'd3-time-format';
 import * as d3Time from 'd3-time';
 
+type Collection = object[];
+type Fields = string[] | string;
+
 /**
  * stackByFields
  *
@@ -13,20 +16,24 @@ import * as d3Time from 'd3-time';
  * @param {string[]} fields - fields to pluck off for the y data
  * @return {array[]} - array of arrays, one for row in the original `collection`
  */
-export function stackByFields(collection, fields) {
+export function stackByFields(
+	collection: Collection,
+	fields: Fields
+): [number, number][][] {
 	const fieldsArray = _.castArray(fields);
 
 	return _.map(collection, d => {
-		return _.reduce(
+		return _.reduce<Fields, [number, number][]>(
 			fieldsArray,
 			(acc, field) => {
-				const dataPoint = _.get(d, field, 0);
+				const dataPoint: number = _.get(d, field, 0);
 
 				if (_.isEmpty(acc)) {
 					return acc.concat([[0, dataPoint]]);
 				}
 
-				const last = _.last(_.last(acc));
+				const maybeLast = _.last(_.last(acc));
+				const last = maybeLast === undefined ? 0 : maybeLast;
 
 				return acc.concat([[last, last + dataPoint]]);
 			},
@@ -45,7 +52,10 @@ export function stackByFields(collection, fields) {
  * @param {string[]} fields - fields to pluck off for the y data
  * @return {array[]} - array of arrays, one for each field
  */
-export function extractFields(collection, fields) {
+export function extractFields(
+	collection: Collection,
+	fields: Fields
+): [number, number][][] {
 	const fieldsArray = _.castArray(fields);
 
 	return _.map(collection, d => {
@@ -63,7 +73,7 @@ export function extractFields(collection, fields) {
  * @param {string[]} fields - fields to pluck off for the y data
  * @return {array[]} - array of arrays, one for each field
  */
-export function groupByFields(collection, fields) {
+export function groupByFields(collection: Collection, fields: Fields) {
 	const fieldsArray = _.castArray(fields);
 
 	return _.map(fieldsArray, field => {
@@ -81,12 +91,12 @@ export function groupByFields(collection, fields) {
  * @param {string[]} fields
  * @return {array}
  */
-export function byFields(collection, fields) {
+export function byFields(collection: Collection, fields: Fields) {
 	const fieldArray = _.castArray(fields);
 
 	return _.reduce(
 		fieldArray,
-		(acc, field) => {
+		(acc: object[], field) => {
 			return acc.concat(_.map(collection, field));
 		},
 		[]
@@ -103,7 +113,7 @@ export function byFields(collection, fields) {
  * @param {number} value - value you're trying to locate the nearest array element for
  * @return {number} - the nearest array element to the value
  */
-export function nearest(nums, value) {
+export function nearest(nums: number[], value: number): number | undefined {
 	if (nums.length < 2) {
 		return _.first(nums);
 	}
@@ -128,7 +138,7 @@ export function nearest(nums, value) {
  * @param {string[]} fields
  * @return {any}
  */
-export function minByFields(collection, fields) {
+export function minByFields(collection: Collection, fields: Fields) {
 	return _.min(byFields(collection, fields));
 }
 
@@ -141,7 +151,7 @@ export function minByFields(collection, fields) {
  * @param {string[]} fields
  * @return {any}
  */
-export function maxByFields(collection, fields) {
+export function maxByFields(collection: Collection, fields: Fields) {
 	return _.max(byFields(collection, fields));
 }
 
@@ -154,12 +164,12 @@ export function maxByFields(collection, fields) {
  * @param {string[]} fields
  * @return {any}
  */
-export function maxByFieldsStacked(collection, fields) {
+export function maxByFieldsStacked(collection: Collection, fields: Fields) {
 	const fieldArray = _.castArray(fields);
 
 	const sums = _.reduce(
 		collection,
-		(acc, item) => {
+		(acc: number[], item) => {
 			return acc.concat(_.sum(_.toArray(_.pick(item, fieldArray))));
 		},
 		[]
@@ -177,7 +187,7 @@ export function maxByFieldsStacked(collection, fields) {
  * @param {number} size - should be greater than 1
  * @return {array}
  */
-export function discreteTicks(array, count) {
+export function discreteTicks<T>(array: T[], count: number | undefined | null) {
 	if (!array || _.isNil(count) || array.length <= count) {
 		return array;
 	}
@@ -186,7 +196,7 @@ export function discreteTicks(array, count) {
 
 	return _.reduce(
 		_.times(count),
-		(acc, n) => {
+		(acc: T[], n) => {
 			return acc.concat(array[Math.round(n * step)]);
 		},
 		[]
@@ -207,7 +217,13 @@ export function discreteTicks(array, count) {
  * @param {number} scale - number to scale to, 2 would be 2x bigger
  * @return {string} - transform string
  */
-export function transformFromCenter(x, y, xCenter, yCenter, scale) {
+export function transformFromCenter(
+	x: number,
+	y: number,
+	xCenter: number,
+	yCenter: number,
+	scale: number
+) {
 	return `translate(${(1 - scale) * xCenter + (x - xCenter)}, ${(1 - scale) *
 		yCenter +
 		(y - yCenter)}) scale(${scale})`;
@@ -231,7 +247,7 @@ const FORMAT_YEAR = d3TimeFormat.timeFormat('%Y');
  * @param {date} date - input date
  * @return {string} - formatted date
  */
-export function formatDate(date) {
+export function formatDate(date: Date) {
 	return (d3Time.timeSecond(date) < date
 		? FORMAT_MILLISECOND
 		: d3Time.timeMinute(date) < date
