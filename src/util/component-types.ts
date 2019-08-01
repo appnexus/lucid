@@ -19,6 +19,7 @@ interface ICreateClassComponentSpec<P extends { [key: string]: any }, S>
 		definition?: ICreateClassComponentSpec<P, S>;
 		[key: string]: any;
 	};
+	// TODO: improve these with a stricter type https://stackoverflow.com/a/54775885/895558
 	reducers?: { [K in keyof P]?: (arg0: S, ...args: any[]) => S };
 	selectors?: { [K in keyof P]?: (arg0: S) => any };
 	render?(): React.ReactNode;
