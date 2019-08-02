@@ -12,8 +12,27 @@ type Reducer<S extends object> = (arg0: S, ...args: any[]) => S;
 type Reducers<P, S extends object> = { [K in keyof P]?: Reducer<S> };
 type Selectors<P, S extends object> = { [K in keyof P]?: (arg0: S) => any };
 
+interface IStateOptions<S extends object> {
+	getState: () => S;
+	setState: (arg0: S) => void;
+}
+
 export function isPlainObjectOrEsModule(obj: any): boolean {
 	return _.isPlainObject(obj) || _.get(obj, '__esModule', false);
+}
+
+export function getDeepPaths(
+	obj: { [k: string]: any },
+	path: string[] = []
+): string[][] {
+	return _.reduce(
+		obj,
+		(terminalKeys: string[][], value, key) =>
+			isPlainObjectOrEsModule(value)
+				? terminalKeys.concat(getDeepPaths(value, path.concat(key)))
+				: terminalKeys.concat([path.concat(key)]),
+		[]
+	);
 }
 
 export function omitFunctionPropsDeep(obj: object) {
@@ -28,38 +47,6 @@ export function omitFunctionPropsDeep(obj: object) {
 			return memo;
 		},
 		{}
-	);
-}
-
-export function safeMerge(objValue: any, srcValue: any) {
-	// don't merge arrays
-	if (_.isArray(srcValue) && _.isArray(objValue)) {
-		return srcValue;
-	}
-
-	// guards against traversing react elements which can cause cyclical recursion
-	// If we don't have this clause, lodash (as of 4.7.0) will attempt to
-	// deeply clone the react children, which is really freaking slow.
-	if (
-		isValidElement(srcValue) ||
-		(_.isArray(srcValue) && _.some(srcValue, isValidElement)) ||
-		(_.isArray(srcValue) && _.isUndefined(objValue))
-	) {
-		return srcValue;
-	}
-}
-
-export function getDeepPaths(
-	obj: { [k: string]: any },
-	path: string[] = []
-): string[][] {
-	return _.reduce(
-		obj,
-		(terminalKeys: string[][], value, key) =>
-			isPlainObjectOrEsModule(value)
-				? terminalKeys.concat(getDeepPaths(value, path.concat(key)))
-				: terminalKeys.concat([path.concat(key)]),
-		[]
 	);
 }
 
@@ -102,9 +89,22 @@ export function bindReducersToState<P, S extends object>(
 	);
 }
 
-interface IStateOptions<S extends object> {
-	getState: () => S;
-	setState: (arg0: S) => void;
+export function safeMerge(objValue: any, srcValue: any) {
+	// don't merge arrays
+	if (_.isArray(srcValue) && _.isArray(objValue)) {
+		return srcValue;
+	}
+
+	// guards against traversing react elements which can cause cyclical recursion
+	// If we don't have this clause, lodash (as of 4.7.0) will attempt to
+	// deeply clone the react children, which is really freaking slow.
+	if (
+		isValidElement(srcValue) ||
+		(_.isArray(srcValue) && _.some(srcValue, isValidElement)) ||
+		(_.isArray(srcValue) && _.isUndefined(objValue))
+	) {
+		return srcValue;
+	}
 }
 
 export function getStatefulPropsContext<P, S extends object>(
@@ -113,9 +113,9 @@ export function getStatefulPropsContext<P, S extends object>(
 ) {
 	const boundReducers = bindReducersToState(reducers, { getState, setState });
 
-	const combineFunctionsCustomizer = (objValue, srcValue) => {
+	const combineFunctionsCustomizer = (objValue: any, srcValue: any) => {
 		if (_.isFunction(srcValue) && _.isFunction(objValue)) {
-			return function(...args) {
+			return function(...args: any[]) {
 				objValue(...args);
 				return srcValue(...args);
 			};
@@ -124,7 +124,7 @@ export function getStatefulPropsContext<P, S extends object>(
 		return safeMerge(objValue, srcValue);
 	};
 
-	const bindFunctionOverwritesCustomizer = (objValue, srcValue) => {
+	const bindFunctionOverwritesCustomizer = (objValue: any, srcValue: any) => {
 		if (_.isFunction(srcValue) && _.isFunction(objValue)) {
 			return bindReducerToState(
 				srcValue,
@@ -137,7 +137,7 @@ export function getStatefulPropsContext<P, S extends object>(
 	};
 
 	return {
-		getPropReplaceReducers(props) {
+		getPropReplaceReducers(props: P) {
 			return _.mergeWith(
 				{},
 				boundReducers,
@@ -146,7 +146,7 @@ export function getStatefulPropsContext<P, S extends object>(
 				bindFunctionOverwritesCustomizer
 			);
 		},
-		getProps(props) {
+		getProps(props: P) {
 			return _.mergeWith(
 				{},
 				boundReducers,
