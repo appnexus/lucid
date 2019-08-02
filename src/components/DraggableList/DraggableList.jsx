@@ -131,7 +131,7 @@ const DraggableList = createClass({
 
 		if (this.lastItemEl) {
 			const { bottom } = this.lastItemEl.getBoundingClientRect();
-			if (_.isNumber(dragIndex) && event.clientY > bottom) {
+			if (_.isFinite(dragIndex) && event.clientY > bottom) {
 				onDragOver(childCount, { event, props: this.props });
 			}
 		}

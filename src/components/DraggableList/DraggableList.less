@@ -8,11 +8,18 @@
 
 	.@{prefix}-DraggableList-Item {
 		background: @color-white;
-		border: @border-standardBorder;
-		padding: 5px;
+		border: @size-borderWidth solid @color-gray;
+		padding: 5px 5px 5px 9px;
 		cursor: grab;
 		display: flex;
 		align-items: center;
+
+		&:hover {
+			border: @size-borderWidth solid @color-mediumGray;
+			.@{prefix}-DotsIcon {
+				stroke: @color-primary;
+			}
+		}
 
 		&-content {
 			flex: 1;
@@ -20,8 +27,8 @@
 
 		&-handle {
 			transform: rotate(90deg);
-			.lucid-DotsIcon {
-				stroke: @color-primaryLight;
+			.@{prefix}-DotsIcon {
+				stroke: @color-primary-50;
 
 				&:first-child {
 					margin-right: 2px;
@@ -35,7 +42,7 @@
 	}
 
 	.@{prefix}-DraggableList-Divider {
-		height: 2px;
+		height: 1px;
 		background: @color-primary;
 		visibility: hidden;
 		margin: 1px 0;
