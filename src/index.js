@@ -93,6 +93,7 @@ import EqualsIcon from './components/Icon/EqualsIcon/EqualsIcon';
 import FileIcon from './components/Icon/FileIcon/FileIcon';
 import FilterIcon from './components/Icon/FilterIcon/FilterIcon';
 import FolderIcon from './components/Icon/FolderIcon/FolderIcon';
+import FourSquaresIcon from './components/Icon/FourSquaresIcon/FourSquaresIcon';
 import Grid from './components/Grid/Grid';
 import HelpIcon from './components/Icon/HelpIcon/HelpIcon';
 import HomeIcon from './components/Icon/HomeIcon/HomeIcon';
@@ -256,6 +257,7 @@ export {
 	FileIcon,
 	FilterIcon,
 	FolderIcon,
+	FourSquaresIcon,
 	Grid,
 	HelpIcon,
 	HomeIcon,
