@@ -17,12 +17,10 @@ import SearchableSingleSelect, {
 	SearchableSingleSelectDumb,
 } from './components/SearchableSingleSelect/SearchableSingleSelect';
 import DropMenu, { DropMenuDumb } from './components/DropMenu/DropMenu';
-import Expander, {
-	ExpanderDumb,
-} from './components/Expander/Expander';
-import ExpanderClass, {
-	ExpanderClassDumb,
-} from './components/ExpanderClass/ExpanderClass';
+import Expander, { ExpanderDumb } from './components/Expander/Expander';
+// import ModernHybridDemo, {
+// 	ModernHybridDemoDumb,
+// } from './components/ModernHybridDemo/ModernHybridDemo';
 import ExpanderPanel, {
 	ExpanderPanelDumb,
 } from './components/ExpanderPanel/ExpanderPanel';
@@ -255,8 +253,8 @@ export {
 	EqualsIcon,
 	Expander,
 	ExpanderDumb,
-	ExpanderClass,
-	ExpanderClassDumb,
+	// ModernHybridDemo,
+	// ModernHybridDemoDumb,
 	ExpanderPanel,
 	ExpanderPanelDumb,
 	FileIcon,

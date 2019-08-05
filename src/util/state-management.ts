@@ -5,10 +5,10 @@ import { createSelector } from 'reselect';
 import createClass from 'create-react-class';
 
 // TODO: could we somehow type the `...args` with a generic?
-type Reducer<S extends object> = (arg0: S, ...args: any[]) => S;
-type Reducers<P, S extends object> = { [K in keyof P]?: Reducer<S> };
-type Selector<S> = (arg0: S) => any;
-type Selectors<P, S extends object> = { [K in keyof P]?: (arg0: S) => any };
+export type Reducer<S extends object> = (arg0: S, ...args: any[]) => S;
+export type Reducers<P, S extends object> = { [K in keyof P]?: Reducer<S> };
+export type Selector<S> = (arg0: S) => any;
+export type Selectors<P, S extends object> = { [K in keyof P]?: (arg0: S) => any };
 
 interface IStateOptions<S extends object> {
 	getState: () => S;
@@ -33,7 +33,7 @@ interface IBaseComponentType<P> {
 	displayName: string;
 }
 
-interface IHybridCompatibleProps<S = {}> {
+export interface IHybridCompatibleProps<S = {}> {
 	initialState?: S;
 }
 
@@ -309,8 +309,9 @@ export function buildHybridComponent(
 }
 
 /*
- * TODO: Add this back in when we're ready to start switching components over
+ * TODO: Make this work when we're ready to start switching components over
  * to modern react component definitions.
+ * */
 export function buildModernHybridComponent<
 	P extends IHybridCompatibleProps,
 	S extends object = {}
@@ -380,7 +381,6 @@ export function buildModernHybridComponent<
 
 	return WrappedHybridComponent;
 }
-*/
 
 export function buildStatefulComponent(...args: any[]) {
 	logger.warnOnce(

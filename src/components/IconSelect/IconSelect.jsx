@@ -6,7 +6,7 @@ import Icon from '../Icon/Icon';
 import RadioButtonLabeled from '../RadioButtonLabeled/RadioButtonLabeled';
 import CheckboxLabeled from '../CheckboxLabeled/CheckboxLabeled';
 
-import { lucidClassNames } from '../../util/style-helpers.js';
+import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, omitProps } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-IconSelect');

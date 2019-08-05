@@ -1,6 +1,6 @@
 import React from 'react';
 import createClass from 'create-react-class';
-import { ExpanderClass } from '../../../index';
+import { ModernHybridDemo } from '../../../index';
 
 export default createClass({
 	getInitialState() {
@@ -12,7 +12,7 @@ export default createClass({
 	render() {
 		return (
 			<div>
-				<ExpanderClass
+				<ModernHybridDemo
 					isExpanded={this.state.isExpanded}
 					onToggle={this.handleExpanded}
 				/>
