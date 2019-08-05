@@ -3,11 +3,11 @@ import React, { Component, ComponentType, isValidElement } from 'react';
 // import { buildHybridComponent } from '../../util/state-management';
 import PropTypes from 'react-peek/prop-types';
 import { findTypes } from '../../util/component-types';
-
-const reducers = {};
+import { createSelector } from 'reselect';
 
 const { any, bool, func, node, object, oneOf, string } = PropTypes;
 
+// TODO: could we somehow type the `...args` with a generic?
 type Reducer<S extends object> = (arg0: S, ...args: any[]) => S;
 type Reducers<P, S extends object> = { [K in keyof P]?: Reducer<S> };
 type Selectors<P, S extends object> = { [K in keyof P]?: (arg0: S) => any };
@@ -16,6 +16,47 @@ interface IStateOptions<S extends object> {
 	getState: () => S;
 	setState: (arg0: S) => void;
 }
+
+/**
+ * reduceSelectors
+ *
+ * Generates a root selector from a tree of selectors
+ * @param {Object} selectors - a tree of selectors
+ * @returns {function} root selector that when called with state, calls each of
+ * the selectors in the tree with the state local to that selector.
+ *
+ * This function is memoized because it's recursive, and we want it to reuse
+ * the functions created in the recursive reduce because those functions are
+ * also memoized (reselect selectors are memoized with a cache of 1) and we want
+ * to maintain their caches.
+ */
+export const reduceSelectors = _.memoize(selectors => {
+	if (!isPlainObjectOrEsModule(selectors)) {
+		throw new Error(
+			'Selectors must be a plain object with function or plain object values'
+		);
+	}
+
+	/**
+	 * For each iteration of `reduceSelectors`, we return a memoized selector so
+	 * that individual branches maintain reference equality if they haven't been
+	 * modified, even if a sibling (and therefore the parent) has been modified.
+	 */
+	return createSelector(
+		_.identity,
+		(state: { [k: string]: any }) =>
+			_.reduce(
+				selectors,
+				(acc, selector, key) => ({
+					...acc,
+					[key]: _.isFunction(selector)
+						? selector(state)
+						: reduceSelectors(selector)(state[key]),
+				}),
+				state
+			)
+	);
+});
 
 export function isPlainObjectOrEsModule(obj: any): boolean {
 	return _.isPlainObject(obj) || _.get(obj, '__esModule', false);
@@ -124,7 +165,10 @@ export function getStatefulPropsContext<P, S extends object>(
 		return safeMerge(objValue, srcValue);
 	};
 
-	const bindFunctionOverwritesCustomizer = (objValue: { (...args: any[]): any, path: string[] }, srcValue: any) => {
+	const bindFunctionOverwritesCustomizer = (
+		objValue: { (...args: any[]): any; path: string[] },
+		srcValue: any
+	) => {
 		if (_.isFunction(srcValue) && _.isFunction(objValue)) {
 			debugger;
 			return bindReducerToState(
@@ -200,7 +244,6 @@ function buildHybridComponent<
 		constructor(props: P) {
 			super(props);
 
-
 			const { initialState } = props; // initial state overrides
 			const initialProps = BaseComponent.getDefaultProps
 				? BaseComponent.getDefaultProps()
@@ -216,6 +259,7 @@ function buildHybridComponent<
 
 		componentWillMount() {
 			let synchronousState: S = this.state; //store reference to state, use in place of `this.state` in `getState`
+			console.log('jdlm syn state', synchronousState);
 
 			this.boundContext = getStatefulPropsContext<P, S>(reducers, {
 				getState: () =>
@@ -225,7 +269,7 @@ function buildHybridComponent<
 						omitFunctionPropsDeep(this.props),
 						safeMerge
 					) as S,
-				setState: (state) => {
+				setState: state => {
 					synchronousState = state; //synchronously update the state reference
 					this.setState(state);
 				},
@@ -233,6 +277,7 @@ function buildHybridComponent<
 		}
 
 		render() {
+			const selector = reduceSelectors(selectors);
 			return React.createElement(BaseComponent, {} as P, this.props.children);
 		}
 	}
@@ -246,9 +291,23 @@ interface IExpanderClassProps extends IHybridCompatibleProps {
 	isExpanded: boolean;
 	onToggle: (
 		isExpanded: boolean,
-		{ event, props }: { event: React.MouseEvent<HTMLElement>; props: IExpanderClassProps }
+		{
+			event,
+			props,
+		}: { event: React.MouseEvent<HTMLElement>; props: IExpanderClassProps }
 	) => void;
 }
+
+interface IExpanderClassState {
+	isExpanded: boolean;
+}
+
+const reducers: Reducers<IExpanderClassProps, IExpanderClassState> = {
+	onToggle: (state, isExpanded) => {
+		console.log('jdlm onToggle was called');
+		return { ...state, isExpanded: !isExpanded };
+	},
+};
 
 export class ExpanderClassDumb extends Component<IExpanderClassProps, {}> {
 	static displayName = 'Expander';
@@ -259,7 +318,7 @@ export class ExpanderClassDumb extends Component<IExpanderClassProps, {}> {
 	}
 
 	static defaultProps = {
-		onToggle: _.noop
+		onToggle: _.noop,
 	};
 
 	handleToggle(event: React.MouseEvent<HTMLElement>) {
@@ -270,11 +329,16 @@ export class ExpanderClassDumb extends Component<IExpanderClassProps, {}> {
 	}
 
 	render() {
-		return (<div>
-			{this.props.isExpanded ? 'yes' : 'no'}
-			<button onClick={this.handleToggle}>click me</button>
-		</div>);
+		return (
+			<div>
+				{this.props.isExpanded ? 'yes' : 'no'}
+				<button onClick={this.handleToggle}>click me</button>
+			</div>
+		);
 	}
 }
 
-export default buildHybridComponent<IExpanderClassProps>(ExpanderClassDumb, {});
+export default buildHybridComponent<IExpanderClassProps, IExpanderClassState>(
+	ExpanderClassDumb,
+	{ reducers }
+);
