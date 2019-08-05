@@ -32,14 +32,14 @@ export const logger = (function() {
 
 const onceMap = {};
 
-function once(key, fn) {
+function once(key: string | string[], fn: () => void) {
 	if (!_.has(onceMap, key)) {
 		_.set(onceMap, key, true);
 		fn();
 	}
 }
 
-function resetOnce(key) {
+function resetOnce(key: string | string[]) {
 	_.unset(onceMap, key);
 }
 
@@ -49,7 +49,7 @@ export function checkIsDev() {
 	);
 }
 
-function log(...args) {
+function log(...args: any[]) {
 	console.log(...args);
 
 	try {
@@ -62,11 +62,11 @@ function log(...args) {
 	}
 }
 
-function logOnce(key, ...args) {
+function logOnce(key: string | string[], ...args: any[]) {
 	once(key, () => log(...args));
 }
 
-function warn(...args) {
+function warn(...args: any[]) {
 	console.warn(...args);
 
 	try {
@@ -79,11 +79,11 @@ function warn(...args) {
 	}
 }
 
-function warnOnce(key, ...args) {
+function warnOnce(key: string | string[], ...args: any[]) {
 	once(key, () => warn(...args));
 }
 
-function error(...args) {
+function error(...args: any[]) {
 	console.error(...args);
 
 	try {
@@ -96,6 +96,6 @@ function error(...args) {
 	}
 }
 
-function errorOnce(key, ...args) {
+function errorOnce(key: string | string[], ...args: any[]) {
 	once(key, () => error(...args));
 }
