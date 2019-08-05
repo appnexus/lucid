@@ -5,13 +5,12 @@ import PropTypes from 'react-peek/prop-types';
 import { findTypes } from '../../util/component-types';
 import { createSelector } from 'reselect';
 
-
 const { any, bool, func, node, object, oneOf, string } = PropTypes;
 
 // TODO: could we somehow type the `...args` with a generic?
 type Reducer<S extends object> = (arg0: S, ...args: any[]) => S;
 type Reducers<P, S extends object> = { [K in keyof P]?: Reducer<S> };
-type Selector<S extends object> = (arg0: S) => any;
+type Selector<S> = (arg0: S) => any;
 type Selectors<P, S extends object> = { [K in keyof P]?: (arg0: S) => any };
 
 interface IStateOptions<S extends object> {
@@ -31,19 +30,12 @@ interface IStateOptions<S extends object> {
  * the functions created in the recursive reduce because those functions are
  * also memoized (reselect selectors are memoized with a cache of 1) and we want
  * to maintain their caches.
+ *
+ * TODO: the types suck on this function but we spent a couple hours trying to
+ * get them to work and we couldn't figure out how to get generics to pass
+ * through _.memoize correctly. ¯\_(ツ)_/¯
  */
-
-type StringIndexObj = {
-	[key: string]: any
-}
-
-interface ISelectorTree<S extends StringIndexObj> {
-	[key: string]: ISelectorTree<S> | Selector<S>
-}
-
-
-
-function innerReduceSelectors<S extends StringIndexObj>(selectors: ISelectorTree<S>): Selector<S> {
+export const reduceSelectors: any = _.memoize((selectors: object) => {
 	if (!isPlainObjectOrEsModule(selectors)) {
 		throw new Error(
 			'Selectors must be a plain object with function or plain object values'
@@ -57,10 +49,10 @@ function innerReduceSelectors<S extends StringIndexObj>(selectors: ISelectorTree
 	 */
 	return createSelector(
 		_.identity,
-		(state: S) =>
+		(state: { [k: string]: any }) =>
 			_.reduce(
 				selectors,
-				(acc, selector, key) => ({
+				(acc: object, selector: any, key: string) => ({
 					...acc,
 					[key]: _.isFunction(selector)
 						? selector(state)
@@ -69,9 +61,7 @@ function innerReduceSelectors<S extends StringIndexObj>(selectors: ISelectorTree
 				state
 			)
 	);
-}
-
-export const reduceSelectors = _.memoize(innerReduceSelectors);
+});
 
 export function isPlainObjectOrEsModule(obj: any): boolean {
 	return _.isPlainObject(obj) || _.get(obj, '__esModule', false);
@@ -115,6 +105,7 @@ export function bindReducerToState<P, S extends object>(
 	return _.assign(
 		function(...args: any[]) {
 			if (_.isEmpty(localPath)) {
+				// Source of bug, `reducerFunction` returns undefined
 				setState(reducerFunction(getState(), ...args));
 			} else {
 				const localNextState = reducerFunction(
@@ -163,10 +154,15 @@ export function safeMerge(objValue: any, srcValue: any) {
 	}
 }
 
+interface IBoundContext<P, S extends object> {
+	getPropReplaceReducers(props: P): {} & S & P;
+	getProps(props: P): {} & S & P;
+}
+
 export function getStatefulPropsContext<P, S extends object>(
 	reducers: Reducers<P, S>,
 	{ getState, setState }: IStateOptions<S>
-) {
+): IBoundContext<P, S> {
 	const boundReducers = bindReducersToState(reducers, { getState, setState });
 
 	const combineFunctionsCustomizer = (objValue: any, srcValue: any) => {
@@ -185,11 +181,9 @@ export function getStatefulPropsContext<P, S extends object>(
 		srcValue: any
 	) => {
 		if (_.isFunction(srcValue) && _.isFunction(objValue)) {
-			debugger;
 			return bindReducerToState(
 				srcValue,
 				{ getState, setState },
-
 				objValue.path
 			);
 		}
@@ -254,7 +248,7 @@ function buildHybridComponent<
 	// TODO: make sure hybrid components don't get double wrapped. Maybe use a type guard?
 
 	class WrappedHybridComponent extends HybridComponent<P, S> {
-		boundContext: any; // FIXME
+		boundContext?: IBoundContext<P, S>;
 
 		constructor(props: P) {
 			super(props);
@@ -274,7 +268,6 @@ function buildHybridComponent<
 
 		componentWillMount() {
 			let synchronousState: S = this.state; //store reference to state, use in place of `this.state` in `getState`
-			console.log('jdlm syn state', synchronousState);
 
 			this.boundContext = getStatefulPropsContext<P, S>(reducers, {
 				getState: () =>
@@ -293,7 +286,16 @@ function buildHybridComponent<
 
 		render() {
 			const selector = reduceSelectors(selectors);
-			return React.createElement(BaseComponent, {} as P, this.props.children);
+
+			if (this.boundContext === undefined) {
+				return null;
+			}
+
+			return React.createElement(
+				BaseComponent,
+				selector(this.boundContext.getProps(this.props)),
+				this.props.children
+			);
 		}
 	}
 
@@ -318,9 +320,8 @@ interface IExpanderClassState {
 }
 
 const reducers: Reducers<IExpanderClassProps, IExpanderClassState> = {
-	onToggle: (state, isExpanded) => {
-		console.log('jdlm onToggle was called');
-		return { ...state, isExpanded: !isExpanded };
+	onToggle: state => {
+		return { ...state, isExpanded: state.isExpanded };
 	},
 };
 

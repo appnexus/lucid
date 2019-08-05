@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import { createSelector } from 'reselect';
-import { reduceSelectors, safeMerge } from './state-management.js';
+import { reduceSelectors, safeMerge } from './state-management';
 import { logger, isDevMode } from './logger.js';
 
 /**
