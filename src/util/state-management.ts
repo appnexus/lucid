@@ -1,13 +1,53 @@
-import React, { isValidElement } from 'react';
+import React, { Component, ComponentType, isValidElement } from 'react';
 import _ from 'lodash';
 import { logger } from './logger';
 import { createSelector } from 'reselect';
 import createClass from 'create-react-class';
 
-export function getDeepPaths(obj, path = []) {
+// TODO: could we somehow type the `...args` with a generic?
+type Reducer<S extends object> = (arg0: S, ...args: any[]) => S;
+type Reducers<P, S extends object> = { [K in keyof P]?: Reducer<S> };
+type Selector<S> = (arg0: S) => any;
+type Selectors<P, S extends object> = { [K in keyof P]?: (arg0: S) => any };
+
+interface IStateOptions<S extends object> {
+	getState: () => S;
+	setState: (arg0: S) => void;
+}
+
+interface IBoundContext<P, S extends object> {
+	getPropReplaceReducers(props: P): {} & S & P;
+	getProps(props: P): {} & S & P;
+}
+
+interface IBuildHybridComponentOptions<P = {}, S extends object = {}> {
+	replaceEvents?: boolean; // TODO: pretty sure this isn't used in anx-react or lucid, I looked through the git history and even when Joe wrote it in 2016 he didn't seem to need to for any concrete use case
+	// TODO: do these need to be static?
+	reducers?: Reducers<P, S>;
+	// TODO: do these need to be static?
+	selectors?: Selectors<P, S>;
+	initialComponentState?: S;
+}
+
+interface IBaseComponentType<P> {
+	displayName: string;
+}
+
+interface IHybridCompatibleProps<S = {}> {
+	initialState?: S;
+}
+
+abstract class HybridComponent<P, S> extends Component<P, S> {
+	static displayName: string;
+}
+
+export function getDeepPaths(
+	obj: { [k: string]: any },
+	path: string[] = []
+): string[][] {
 	return _.reduce(
 		obj,
-		(terminalKeys, value, key) =>
+		(terminalKeys: string[][], value, key) =>
 			isPlainObjectOrEsModule(value)
 				? terminalKeys.concat(getDeepPaths(value, path.concat(key)))
 				: terminalKeys.concat([path.concat(key)]),
@@ -15,12 +55,12 @@ export function getDeepPaths(obj, path = []) {
 	);
 }
 
-export function isPlainObjectOrEsModule(obj) {
+export function isPlainObjectOrEsModule(obj: any): boolean {
 	return _.isPlainObject(obj) || _.get(obj, '__esModule', false);
 }
 
-export function omitFunctionPropsDeep(obj) {
-	return _.reduce(
+export function omitFunctionPropsDeep<P>(obj: object | P) {
+	return _.reduce<{ [k: string]: any }, { [k: string]: any }>(
 		obj,
 		(memo, value, key) => {
 			if (isPlainObjectOrEsModule(value)) {
@@ -34,29 +74,33 @@ export function omitFunctionPropsDeep(obj) {
 	);
 }
 
-export function bindReducerToState(
-	reducerFunction,
-	{ getState, setState },
-	path = []
+export function bindReducerToState<P, S extends object>(
+	reducerFunction: Reducer<S>,
+	{ getState, setState }: IStateOptions<S>,
+	path: string[] = []
 ) {
 	const localPath = _.take(path, _.size(path) - 1);
 	return _.assign(
-		function(...args) {
+		function(...args: any[]) {
 			if (_.isEmpty(localPath)) {
+				// Source of bug, `reducerFunction` returns undefined
 				setState(reducerFunction(getState(), ...args));
 			} else {
 				const localNextState = reducerFunction(
 					_.get(getState(), localPath),
 					...args
 				);
-				setState(_.set(_.clone(getState()), localPath, localNextState));
+				setState(_.set<S>(_.clone(getState()), localPath, localNextState));
 			}
 		},
 		{ path }
 	);
 }
 
-export function bindReducersToState(reducers, { getState, setState }) {
+export function bindReducersToState<P, S extends object>(
+	reducers: Reducers<P, S>,
+	{ getState, setState }: IStateOptions<S>
+) {
 	return _.reduce(
 		getDeepPaths(reducers),
 		(memo, path) => {
@@ -70,12 +114,15 @@ export function bindReducersToState(reducers, { getState, setState }) {
 	);
 }
 
-export function getStatefulPropsContext(reducers, { getState, setState }) {
+export function getStatefulPropsContext<P, S extends object>(
+	reducers: Reducers<P, S>,
+	{ getState, setState }: IStateOptions<S>
+): IBoundContext<P, S> {
 	const boundReducers = bindReducersToState(reducers, { getState, setState });
 
-	const combineFunctionsCustomizer = (objValue, srcValue) => {
+	const combineFunctionsCustomizer = (objValue: any, srcValue: any) => {
 		if (_.isFunction(srcValue) && _.isFunction(objValue)) {
-			return function(...args) {
+			return function(...args: any[]) {
 				objValue(...args);
 				return srcValue(...args);
 			};
@@ -84,7 +131,10 @@ export function getStatefulPropsContext(reducers, { getState, setState }) {
 		return safeMerge(objValue, srcValue);
 	};
 
-	const bindFunctionOverwritesCustomizer = (objValue, srcValue) => {
+	const bindFunctionOverwritesCustomizer = (
+		objValue: { (...args: any[]): any; path: string[] },
+		srcValue: any
+	) => {
 		if (_.isFunction(srcValue) && _.isFunction(objValue)) {
 			return bindReducerToState(
 				srcValue,
@@ -97,7 +147,7 @@ export function getStatefulPropsContext(reducers, { getState, setState }) {
 	};
 
 	return {
-		getPropReplaceReducers(props) {
+		getPropReplaceReducers(props: P) {
 			return _.mergeWith(
 				{},
 				boundReducers,
@@ -106,7 +156,7 @@ export function getStatefulPropsContext(reducers, { getState, setState }) {
 				bindFunctionOverwritesCustomizer
 			);
 		},
-		getProps(props) {
+		getProps(props: P) {
 			return _.mergeWith(
 				{},
 				boundReducers,
@@ -130,8 +180,12 @@ export function getStatefulPropsContext(reducers, { getState, setState }) {
  * the functions created in the recursive reduce because those functions are
  * also memoized (reselect selectors are memoized with a cache of 1) and we want
  * to maintain their caches.
+ *
+ * TODO: the types suck on this function but we spent a couple hours trying to
+ * get them to work and we couldn't figure out how to get generics to pass
+ * through _.memoize correctly. ¯\_(ツ)_/¯
  */
-export const reduceSelectors = _.memoize(selectors => {
+export const reduceSelectors: any = _.memoize((selectors: object) => {
 	if (!isPlainObjectOrEsModule(selectors)) {
 		throw new Error(
 			'Selectors must be a plain object with function or plain object values'
@@ -145,10 +199,10 @@ export const reduceSelectors = _.memoize(selectors => {
 	 */
 	return createSelector(
 		_.identity,
-		state =>
+		(state: { [k: string]: any }) =>
 			_.reduce(
 				selectors,
-				(acc, selector, key) => ({
+				(acc: object, selector: any, key: string) => ({
 					...acc,
 					[key]: _.isFunction(selector)
 						? selector(state)
@@ -159,7 +213,7 @@ export const reduceSelectors = _.memoize(selectors => {
 	);
 });
 
-export function safeMerge(objValue, srcValue) {
+export function safeMerge(objValue: any, srcValue: any) {
 	// don't merge arrays
 	if (_.isArray(srcValue) && _.isArray(objValue)) {
 		return srcValue;
@@ -178,7 +232,7 @@ export function safeMerge(objValue, srcValue) {
 }
 
 export function buildHybridComponent(
-	baseComponent,
+	baseComponent: any,
 	{
 		replaceEvents = false, // if true, function props replace the existing reducers, else they are invoked *after* state reducer returns
 		reducers = _.get(baseComponent, 'definition.statics.reducers', {}),
@@ -254,10 +308,87 @@ export function buildHybridComponent(
 	});
 }
 
-export function buildStatefulComponent(...args) {
+/*
+ * TODO: Add this back in when we're ready to start switching components over
+ * to modern react component definitions.
+export function buildModernHybridComponent<
+	P extends IHybridCompatibleProps,
+	S extends object = {}
+>(
+	BaseComponent: ComponentType<P> & IBaseComponentType<P>,
+	{
+		replaceEvents = false,
+		reducers = {},
+		selectors = {},
+		initialComponentState, // TODO: why can't we default to `{}` here?
+	}: IBuildHybridComponentOptions<P, S>
+) {
+	// TODO: make sure hybrid components don't get double wrapped. Maybe use a type guard?
+
+	class WrappedHybridComponent extends HybridComponent<P, S> {
+		boundContext?: IBoundContext<P, S>;
+
+		constructor(props: P) {
+			super(props);
+
+			const { initialState } = props; // initial state overrides
+			const initialProps =
+				initialComponentState === undefined ? {} : initialComponentState;
+
+			this.state = _.mergeWith(
+				{},
+				omitFunctionPropsDeep(initialProps),
+				initialState,
+				safeMerge
+			) as S;
+		}
+
+		componentWillMount() {
+			let synchronousState: S = this.state; //store reference to state, use in place of `this.state` in `getState`
+
+			this.boundContext = getStatefulPropsContext<P, S>(reducers, {
+				getState: () =>
+					_.mergeWith(
+						{},
+						omitFunctionPropsDeep(synchronousState),
+						omitFunctionPropsDeep(this.props),
+						safeMerge
+					) as S,
+				setState: state => {
+					synchronousState = state; //synchronously update the state reference
+					this.setState(state);
+				},
+			});
+		}
+
+		render() {
+			const selector = reduceSelectors(selectors);
+
+			if (this.boundContext === undefined) {
+				return null;
+			}
+
+			return React.createElement(
+				BaseComponent,
+				selector(this.boundContext.getProps(this.props)),
+				this.props.children
+			);
+		}
+	}
+
+	WrappedHybridComponent.displayName = `Hybrid${BaseComponent.displayName}`;
+
+	return WrappedHybridComponent;
+}
+*/
+
+export function buildStatefulComponent(...args: any[]) {
 	logger.warnOnce(
 		'buildHybridComponent-once',
 		'Lucid: buildStatefulComponent has been renamed to buildHybridComponent.'
 	);
+
+	// We don't really care about type checking our legacy buildHybridComponent
+	// @ts-ignore
 	return buildHybridComponent(...args);
 }
