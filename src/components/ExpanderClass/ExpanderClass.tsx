@@ -124,11 +124,13 @@ export function getStatefulPropsContext<P, S extends object>(
 		return safeMerge(objValue, srcValue);
 	};
 
-	const bindFunctionOverwritesCustomizer = (objValue: any, srcValue: any) => {
+	const bindFunctionOverwritesCustomizer = (objValue: { (...args: any[]): any, path: string[] }, srcValue: any) => {
 		if (_.isFunction(srcValue) && _.isFunction(objValue)) {
+			debugger;
 			return bindReducerToState(
 				srcValue,
 				{ getState, setState },
+
 				objValue.path
 			);
 		}
@@ -195,32 +197,35 @@ function buildHybridComponent<
 	class WrappedHybridComponent extends HybridComponent<P, S> {
 		boundContext: any; // FIXME
 
-		getInitialState() {
-			const { initialState } = this.props; // initial state overrides
+		constructor(props: P) {
+			super(props);
+
+
+			const { initialState } = props; // initial state overrides
 			const initialProps = BaseComponent.getDefaultProps
 				? BaseComponent.getDefaultProps()
 				: {};
 
-			return _.mergeWith(
+			this.state = _.mergeWith(
 				{},
 				omitFunctionPropsDeep(initialProps),
 				initialState,
 				safeMerge
-			);
+			) as S;
 		}
 
 		componentWillMount() {
 			let synchronousState: S = this.state; //store reference to state, use in place of `this.state` in `getState`
 
-			this.boundContext = getStatefulPropsContext(reducers, {
+			this.boundContext = getStatefulPropsContext<P, S>(reducers, {
 				getState: () =>
 					_.mergeWith(
 						{},
 						omitFunctionPropsDeep(synchronousState),
 						omitFunctionPropsDeep(this.props),
 						safeMerge
-					),
-				setState: state => {
+					) as S,
+				setState: (state) => {
 					synchronousState = state; //synchronously update the state reference
 					this.setState(state);
 				},
@@ -239,18 +244,37 @@ function buildHybridComponent<
 
 interface IExpanderClassProps extends IHybridCompatibleProps {
 	isExpanded: boolean;
+	onToggle: (
+		isExpanded: boolean,
+		{ event, props }: { event: React.MouseEvent<HTMLElement>; props: IExpanderClassProps }
+	) => void;
 }
 
-class ExpanderClass extends Component<IExpanderClassProps, {}> {
-	static displayName = 'foo';
-
+export class ExpanderClassDumb extends Component<IExpanderClassProps, {}> {
+	static displayName = 'Expander';
 	constructor(props: IExpanderClassProps) {
 		super(props);
+
+		this.handleToggle = this.handleToggle.bind(this);
+	}
+
+	static defaultProps = {
+		onToggle: _.noop
+	};
+
+	handleToggle(event: React.MouseEvent<HTMLElement>) {
+		this.props.onToggle(!this.props.isExpanded, {
+			event,
+			props: this.props,
+		});
 	}
 
 	render() {
-		return <div>{this.props.isExpanded ? 'yes' : 'no'}</div>;
+		return (<div>
+			{this.props.isExpanded ? 'yes' : 'no'}
+			<button onClick={this.handleToggle}>click me</button>
+		</div>);
 	}
 }
 
-export const foo = buildHybridComponent<IExpanderClassProps>(ExpanderClass, {});
+export default buildHybridComponent<IExpanderClassProps>(ExpanderClassDumb, {});

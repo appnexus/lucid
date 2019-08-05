@@ -365,6 +365,22 @@ module.exports = [
 		),
 	},
 	{
+		name: 'ExpanderClass',
+		component: getDefaultExport(
+			require('../src/components/ExpanderClass/ExpanderClass')
+		),
+		examplesContext: require.context(
+			'../src/components/ExpanderClass/examples',
+			true,
+			/\.jsx?$/
+		),
+		examplesContextRaw: require.context(
+			'!!raw-loader!../src/components/ExpanderClass/examples',
+			true,
+			/\.jsx?$/
+		),
+	},
+	{
 		name: 'ExpanderPanel',
 		component: getDefaultExport(
 			require('../src/components/ExpanderPanel/ExpanderPanel')
