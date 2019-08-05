@@ -5,11 +5,13 @@ import PropTypes from 'react-peek/prop-types';
 import { findTypes } from '../../util/component-types';
 import { createSelector } from 'reselect';
 
+
 const { any, bool, func, node, object, oneOf, string } = PropTypes;
 
 // TODO: could we somehow type the `...args` with a generic?
 type Reducer<S extends object> = (arg0: S, ...args: any[]) => S;
 type Reducers<P, S extends object> = { [K in keyof P]?: Reducer<S> };
+type Selector<S extends object> = (arg0: S) => any;
 type Selectors<P, S extends object> = { [K in keyof P]?: (arg0: S) => any };
 
 interface IStateOptions<S extends object> {
@@ -30,7 +32,18 @@ interface IStateOptions<S extends object> {
  * also memoized (reselect selectors are memoized with a cache of 1) and we want
  * to maintain their caches.
  */
-export const reduceSelectors = _.memoize(selectors => {
+
+type StringIndexObj = {
+	[key: string]: any
+}
+
+interface ISelectorTree<S extends StringIndexObj> {
+	[key: string]: ISelectorTree<S> | Selector<S>
+}
+
+
+
+function innerReduceSelectors<S extends StringIndexObj>(selectors: ISelectorTree<S>): Selector<S> {
 	if (!isPlainObjectOrEsModule(selectors)) {
 		throw new Error(
 			'Selectors must be a plain object with function or plain object values'
@@ -44,7 +57,7 @@ export const reduceSelectors = _.memoize(selectors => {
 	 */
 	return createSelector(
 		_.identity,
-		(state: { [k: string]: any }) =>
+		(state: S) =>
 			_.reduce(
 				selectors,
 				(acc, selector, key) => ({
@@ -56,7 +69,9 @@ export const reduceSelectors = _.memoize(selectors => {
 				state
 			)
 	);
-});
+}
+
+export const reduceSelectors = _.memoize(innerReduceSelectors);
 
 export function isPlainObjectOrEsModule(obj: any): boolean {
 	return _.isPlainObject(obj) || _.get(obj, '__esModule', false);
