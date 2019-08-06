@@ -8,7 +8,9 @@ import createClass from 'create-react-class';
 export type Reducer<S extends object> = (arg0: S, ...args: any[]) => S;
 export type Reducers<P, S extends object> = { [K in keyof P]?: Reducer<S> };
 export type Selector<S> = (arg0: S) => any;
-export type Selectors<P, S extends object> = { [K in keyof P]?: (arg0: S) => any };
+export type Selectors<P, S extends object> = {
+	[K in keyof P]?: (arg0: S) => any
+};
 
 interface IStateOptions<S extends object> {
 	getState: () => S;
@@ -311,7 +313,6 @@ export function buildHybridComponent(
 /*
  * TODO: Make this work when we're ready to start switching components over
  * to modern react component definitions.
- * */
 export function buildModernHybridComponent<
 	P extends IHybridCompatibleProps,
 	S extends object = {}
@@ -392,3 +393,4 @@ export function buildStatefulComponent(...args: any[]) {
 	// @ts-ignore
 	return buildHybridComponent(...args);
 }
+* */

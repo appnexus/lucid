@@ -1,10 +1,9 @@
 import _ from 'lodash';
 import React, { Component, ComponentType, isValidElement } from 'react';
-import { buildModernHybridComponent, IHybridCompatibleProps, Reducers } from '../../util/state-management';
+import { IHybridCompatibleProps, Reducers } from '../../util/state-management';
 import PropTypes from 'react-peek/prop-types';
 import { findTypes } from '../../util/component-types';
 import { createSelector } from 'reselect';
-
 
 interface IExpanderProps extends IHybridCompatibleProps {
 	isExpanded: boolean;
@@ -56,7 +55,7 @@ export class ModernHybridDemoDumb extends Component<IExpanderProps, {}> {
 	}
 }
 
-export default buildModernHybridComponent<IExpanderProps, IExpanderState>(
-	ModernHybridDemoDumb,
-	{ reducers }
-);
+// export default buildModernHybridComponent<IExpanderProps, IExpanderState>(
+// 	ModernHybridDemoDumb,
+// 	{ reducers }
+// );
