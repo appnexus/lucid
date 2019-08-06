@@ -517,6 +517,23 @@ module.exports = [
 	},
 
 	{
+		name: 'FourSquaresIcon',
+		component: getDefaultExport(
+			require('../src/components/Icon/FourSquaresIcon/FourSquaresIcon')
+		),
+		examplesContext: require.context(
+			'../src/components/Icon/FourSquaresIcon/examples',
+			true,
+			/\.jsx?$/
+		),
+		examplesContextRaw: require.context(
+			'!!raw-loader!../src/components/Icon/FourSquaresIcon/examples',
+			true,
+			/\.jsx?$/
+		),
+	},
+
+	{
 		name: 'HelpIcon',
 		component: getDefaultExport(
 			require('../src/components/Icon/HelpIcon/HelpIcon')
