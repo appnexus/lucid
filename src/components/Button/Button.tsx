@@ -47,7 +47,7 @@ interface IButtonProps {
 		event,
 		props,
 	}: {
-		event: React.MouseEventHandler;
+		event: React.MouseEvent<HTMLButtonElement>;
 		props: IButtonProps;
 	}) => void;
 
@@ -123,7 +123,7 @@ export const Button = createClass<IButtonProps, {}>({
 		};
 	},
 
-	handleClick(event: React.MouseEventHandler<HTMLButtonElement>) {
+	handleClick(event: React.MouseEvent<HTMLButtonElement>) {
 		const { isDisabled, onClick } = this.props;
 
 		if (!isDisabled) {
