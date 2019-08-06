@@ -1,6 +1,7 @@
 ## unreleased
 
 - [minor] Update `DataTable` to have a disabled checkbox when the data is empty [#1011](https://github.com/appnexus/lucid/pull/1011)
+- [patch] remove display hidden on document.body when SidePanel is unmounted [#1014](https://github.com/appnexus/lucid/pull/1014)
 
 ## 4.2.0
 
