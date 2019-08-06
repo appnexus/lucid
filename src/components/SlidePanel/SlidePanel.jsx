@@ -102,7 +102,7 @@ const SlidePanel = createClass({
 	handleTouchEnd(event) {
 		const dX = event.changedTouches[0].screenX - this.startX;
 		const slideWidth =
-			this.rootNode.getBoundingClientRect().width / this.props.slidesToShow;
+			this.rootHTMLDivElement.getBoundingClientRect().width / this.props.slidesToShow;
 		const slidesSwiped = Math.round(dX / slideWidth);
 
 		if (slidesSwiped !== 0) {
@@ -126,7 +126,7 @@ const SlidePanel = createClass({
 
 	componentDidMount() {
 		const slides = findTypes(this.props, SlidePanel.Slide);
-		this.slideStrip = this.rootNode.querySelector(
+		this.slideStrip = this.rootHTMLDivElement.querySelector(
 			'.lucid-SlidePanel-slidestrip'
 		);
 		if (this.props.isLooped) {
@@ -172,8 +172,8 @@ const SlidePanel = createClass({
 		return (
 			<div
 				{...omitProps(passThroughs, SlidePanel)}
-				ref={domNode => {
-					this.rootNode = domNode;
+				ref={htmlElement => {
+					this.rootHTMLDivElement = htmlElement;
 				}}
 				className={cx('&', className)}
 			>

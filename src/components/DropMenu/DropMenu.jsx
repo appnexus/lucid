@@ -613,10 +613,10 @@ const DropMenu = createClass({
 						},
 						optionProps.className
 					)}
-					ref={optionDOMNode => {
+					ref={optionHTMLElement => {
 						if (isFocused && !isMouseTriggered) {
 							scrollParentTo(
-								optionDOMNode,
+								optionHTMLElement,
 								this._header && this._header.offsetHeight
 							);
 						}
