@@ -1,11 +1,13 @@
 import _ from 'lodash';
-import { createSelector, OutputSelector } from 'reselect';
-import { reduceSelectors, safeMerge, Selector } from './state-management';
+import { createSelector } from 'reselect';
+import { reduceSelectors, safeMerge } from './state-management';
 import { logger, isDevMode } from './logger';
 
-type Funk = (...args: any)  => any;;
-type Thunk = { isThunk?: boolean }
-type FunkThunk = Funk & Thunk;
+type Funk = (...args: any) => any;
+interface IThunk {
+	isThunk?: boolean;
+}
+type FunkThunk = Funk & IThunk;
 
 /**
  * Marks a function on the reducer tree as a thunk action creator so it doesn't
@@ -32,11 +34,11 @@ export function thunk(fn: FunkThunk) {
  */
 
 interface IGetReduxPrimitives {
-	initialState: object,
-	reducers: object,
-	rootPath: string[],
-	rootSelector:  (arg0: any) => any,
-	selectors: object,
+	initialState: object;
+	reducers: object;
+	rootPath: string[];
+	rootSelector: (arg0: any) => any;
+	selectors: object;
 }
 export function getReduxPrimitives({
 	initialState,
@@ -44,7 +46,7 @@ export function getReduxPrimitives({
 	rootPath = [],
 	rootSelector = _.identity,
 	selectors,
-}: IGetReduxPrimitives ) {
+}: IGetReduxPrimitives) {
 	/* istanbul ignore if */
 	if (isDevMode && _.isEmpty(rootPath)) {
 		logger.warn(
@@ -115,7 +117,11 @@ Make sure your \`rootPath\` is correct.
 	) {
 		if ((node as FunkThunk).isThunk) {
 			return function thunk(...args: any[]) {
-				return function thunkInner(dispatch: Funk, getState: Funk, ...rest: any[]) {
+				return function thunkInner(
+					dispatch: Funk,
+					getState: Funk,
+					...rest: any[]
+				) {
 					const pathToLocalDispatchTree = _.slice(path, rootPath.length, -1);
 					const pathToLocalState = _.dropRight(path);
 					const localDispatchTree = _.isEmpty(pathToLocalDispatchTree)
@@ -151,7 +157,11 @@ Make sure your \`rootPath\` is correct.
 	 * @param {string[]} rootPath - array of strings representing the path to local state in global state
 	 * @returns {Object} action creator tree
 	 */
-	function createActionCreatorTree(reducers: object, rootPath: string[], path: string[] = rootPath): object {
+	function createActionCreatorTree(
+		reducers: object,
+		rootPath: string[],
+		path: string[] = rootPath
+	): object {
 		return _.reduce(
 			reducers,
 			(memo, node, key) => {
@@ -173,7 +183,11 @@ Make sure your \`rootPath\` is correct.
 	 * @param {string[]} rootPath - array of strings representing the path to local state in global state
 	 * @param {function} dispatch - the redux store's `dispatch` function
 	 */
-	function getDispatchTree(reducers: object, rootPath: string[], dispatch: Funk) {
+	function getDispatchTree(
+		reducers: object,
+		rootPath: string[],
+		dispatch: Funk
+	) {
 		const actionCreatorTree = createActionCreatorTree(reducers, rootPath);
 		dispatchTree = bindActionCreatorTree(actionCreatorTree, dispatch);
 		/* istanbul ignore if */
@@ -198,8 +212,8 @@ Make sure your \`rootPath\` is correct.
  * @return {Object} redux reducer tree
  */
 
- type PayloadReducer = (state: object,	payload: any,	...args: any)  => any;
-type ActionReducer = (state: object,	action: object,	...args: any)  => any;
+type PayloadReducer = (state: object, payload: any, ...args: any) => any;
+type ActionReducer = (state: object, action: object, ...args: any) => any;
 
 function createReduxReducerTree(reducers: object, path: string[] = []): object {
 	return _.reduce(
@@ -213,11 +227,14 @@ function createReduxReducerTree(reducers: object, path: string[] = []): object {
 			return {
 				...memo,
 				[key]: _.isFunction(node)
-					? function reduxReducer(state: object, action: {
-						type: any,
-						payload: any,
-						meta: []
-					}) {
+					? function reduxReducer(
+							state: object,
+							action: {
+								type: any;
+								payload: any;
+								meta: [];
+							}
+					  ) {
 							const { type, payload, meta = [] } = action;
 							if (_.isUndefined(state) || type !== currentPath.join('.')) {
 								return state;
@@ -237,7 +254,10 @@ function createReduxReducerTree(reducers: object, path: string[] = []): object {
  * @param {Object} initialState - the initial state object that the reducer will return
  * @return {function} the redux reducer
  */
-function createReducerFromReducerTree(reduxReducerTree: object, initialState: object) {
+function createReducerFromReducerTree(
+	reduxReducerTree: object,
+	initialState: object
+) {
 	return function reduxReducer(state: any, action: object): object | Funk {
 		if (_.isUndefined(state)) {
 			return initialState;
@@ -250,7 +270,10 @@ function createReducerFromReducerTree(reduxReducerTree: object, initialState: ob
 					...(_.isFunction(node)
 						? (node as ActionReducer)(state, action)
 						: {
-								[key]: createReducerFromReducerTree(node, {})(state[key], action),
+								[key]: createReducerFromReducerTree(node, {})(
+									state[key],
+									action
+								),
 						  }),
 				};
 			},
@@ -266,7 +289,11 @@ function createReducerFromReducerTree(reduxReducerTree: object, initialState: ob
  * @param {string[]} rootPath - array of strings representing the path to part of global state this reducer applies to
  * @return {function} the redux reducer
  */
-function createReduxReducer(reducers: object, initialState: object, rootPath: string[]) {
+function createReduxReducer(
+	reducers: object,
+	initialState: object,
+	rootPath: string[]
+) {
 	const reducerTree = createReduxReducerTree(reducers, rootPath);
 	return createReducerFromReducerTree(reducerTree, initialState);
 }
@@ -277,7 +304,11 @@ function createReduxReducer(reducers: object, initialState: object, rootPath: st
  * @param {function} dispatch - the redux store's `dispatch` function
  * @param {string[]} path - array of strings representing the path to the action creator
  */
-function bindActionCreatorTree(actionCreatorTree: any, dispatch: Funk, path: string[] = []): object {
+function bindActionCreatorTree(
+	actionCreatorTree: any,
+	dispatch: Funk,
+	path: string[] = []
+): object {
 	return _.reduce(
 		actionCreatorTree,
 		(memo, node, key: string) => ({

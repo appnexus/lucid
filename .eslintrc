@@ -2,7 +2,7 @@
 	"extends": [
 		"eslint:recommended",
 		"plugin:react/recommended",
-		// "plugin:typescript-eslint/recommended",
+		"plugin:@typescript-eslint/recommended",
 		"prettier",
 		"prettier/react",
 		"prettier/@typescript-eslint"
@@ -16,44 +16,23 @@
 	"parser": "@typescript-eslint/parser",
 	"plugins": [
 		"@typescript-eslint",
-		"import",
-		"prettier",
 		"react",
 		"lodash",
 		"promise",
-		"prettier"
 	],
 	"parserOptions": {
 		"sourceType": "module",
 		"ecmaFeatures": {
 			"jsx": true
-		},
-		"project": "./tsconfig.json"
+		}
 	},
 	"settings": {
 		"react": {
 			"version": "detect"
-		},
-		"import/resolver": {
-			"node": {
-				"extensions": [".js", ".jsx", ".ts", ".tsx"]
-			}
 		}
 	},
 	"rules": {
 		"constructor-super": 2,
-		"import/default": 2,
-		"import/export": 2,
-		"import/imports-first": 2,
-		"import/named": 2,
-		"import/namespace": 2,
-		"import/newline-after-import": 2,
-		"import/no-extraneous-dependencies": 2,
-		"import/no-mutable-exports": 2,
-		"import/no-named-as-default": 2,
-		"import/no-named-as-default-member": 2,
-		"import/no-unresolved": [2, { "commonjs": true }],
-		"import/prefer-default-export": 0,
 		"jsx-quotes": [2, "prefer-single"],
 		"lodash/chaining": 0,
 		"no-case-declarations": 2,
@@ -82,8 +61,11 @@
 		"no-unsafe-negation": 2,
 		"no-unused-vars": "off", // we are using the typescript plugin instead
 		"@typescript-eslint/no-unused-vars": [2, { "args": "none" }], // this ignores the unused var error for TS interfaces
+		"@typescript-eslint/no-use-before-define": 0,
+		"@typescript-eslint/camelcase": 1,
+		"@typescript-eslint/interface-name-prefix": 0,
+		"@typescript-eslint/array-type": [2, "array-simple"],
 		"prefer-const": 2,
-		"prettier/prettier": "error",
 		"promise/always-return": 0,
 		"promise/catch-or-return": 2,
 		"promise/param-names": 2,
