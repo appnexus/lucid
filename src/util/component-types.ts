@@ -187,6 +187,8 @@ export function getFirst<P extends { children: React.ReactNode }>(
 // We also have a "magic" prop that's always excluded called `callbackId`. That
 // prop can be used to identify a component in a list without having to create
 // extra closures.
+//
+// TODO: should children actually be optional?
 export function omitProps<P extends { children?: React.ReactNode }>(
 	props: P,
 	component: ICreateClassComponentClass<P>,
