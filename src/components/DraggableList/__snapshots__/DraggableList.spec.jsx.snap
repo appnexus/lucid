@@ -1,0 +1,542 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DraggableList [common] example testing should match snapshot(s) for 1.basic 1`] = `
+<div
+  className="lucid-DraggableList"
+  onDragLeave={[Function]}
+>
+  <div
+    key="0"
+  >
+    <hr
+      className="lucid-DraggableList-Divider"
+    />
+    <div
+      className="lucid-DraggableList-Item"
+      draggable={true}
+      onDragEnd={[Function]}
+      onDragOver={[Function]}
+      onDragStart={[Function]}
+    >
+      <div
+        className="lucid-DraggableList-Item-content"
+      >
+        Item One
+      </div>
+      <span
+        className="lucid-DraggableList-Item-handle"
+      >
+        <DotsIcon
+          color="primary"
+          size={8}
+        />
+        <DotsIcon
+          color="primary"
+          size={8}
+        />
+      </span>
+    </div>
+  </div>
+  <div
+    key="1"
+  >
+    <hr
+      className="lucid-DraggableList-Divider"
+    />
+    <div
+      className="lucid-DraggableList-Item"
+      draggable={true}
+      onDragEnd={[Function]}
+      onDragOver={[Function]}
+      onDragStart={[Function]}
+    >
+      <div
+        className="lucid-DraggableList-Item-content"
+      >
+        Item Two
+      </div>
+      <span
+        className="lucid-DraggableList-Item-handle"
+      >
+        <DotsIcon
+          color="primary"
+          size={8}
+        />
+        <DotsIcon
+          color="primary"
+          size={8}
+        />
+      </span>
+    </div>
+  </div>
+  <div
+    key="2"
+  >
+    <hr
+      className="lucid-DraggableList-Divider"
+    />
+    <div
+      className="lucid-DraggableList-Item"
+      draggable={true}
+      onDragEnd={[Function]}
+      onDragOver={[Function]}
+      onDragStart={[Function]}
+    >
+      <div
+        className="lucid-DraggableList-Item-content"
+      >
+        Item Three
+      </div>
+      <span
+        className="lucid-DraggableList-Item-handle"
+      >
+        <DotsIcon
+          color="primary"
+          size={8}
+        />
+        <DotsIcon
+          color="primary"
+          size={8}
+        />
+      </span>
+    </div>
+  </div>
+  <div
+    key="3"
+  >
+    <hr
+      className="lucid-DraggableList-Divider"
+    />
+    <div
+      className="lucid-DraggableList-Item"
+      draggable={true}
+      onDragEnd={[Function]}
+      onDragOver={[Function]}
+      onDragStart={[Function]}
+    >
+      <div
+        className="lucid-DraggableList-Item-content"
+      >
+        Item Four
+      </div>
+      <span
+        className="lucid-DraggableList-Item-handle"
+      >
+        <DotsIcon
+          color="primary"
+          size={8}
+        />
+        <DotsIcon
+          color="primary"
+          size={8}
+        />
+      </span>
+    </div>
+  </div>
+  <div
+    key="4"
+  >
+    <hr
+      className="lucid-DraggableList-Divider"
+    />
+    <div
+      className="lucid-DraggableList-Item"
+      draggable={true}
+      onDragEnd={[Function]}
+      onDragOver={[Function]}
+      onDragStart={[Function]}
+    >
+      <div
+        className="lucid-DraggableList-Item-content"
+      >
+        Item Five
+      </div>
+      <span
+        className="lucid-DraggableList-Item-handle"
+      >
+        <DotsIcon
+          color="primary"
+          size={8}
+        />
+        <DotsIcon
+          color="primary"
+          size={8}
+        />
+      </span>
+    </div>
+  </div>
+  <hr
+    className="lucid-DraggableList-Divider"
+    key="divider"
+  />
+</div>
+`;
+
+exports[`DraggableList [common] example testing should match snapshot(s) for 2.no-drag-handle 1`] = `
+<div
+  className="lucid-DraggableList"
+  onDragLeave={[Function]}
+>
+  <div
+    key="0"
+  >
+    <hr
+      className="lucid-DraggableList-Divider"
+    />
+    <div
+      className="lucid-DraggableList-Item"
+      draggable={true}
+      onDragEnd={[Function]}
+      onDragOver={[Function]}
+      onDragStart={[Function]}
+    >
+      <div
+        className="lucid-DraggableList-Item-content"
+      >
+        Item One
+      </div>
+    </div>
+  </div>
+  <div
+    key="1"
+  >
+    <hr
+      className="lucid-DraggableList-Divider"
+    />
+    <div
+      className="lucid-DraggableList-Item"
+      draggable={true}
+      onDragEnd={[Function]}
+      onDragOver={[Function]}
+      onDragStart={[Function]}
+    >
+      <div
+        className="lucid-DraggableList-Item-content"
+      >
+        Item Two
+      </div>
+    </div>
+  </div>
+  <div
+    key="2"
+  >
+    <hr
+      className="lucid-DraggableList-Divider"
+    />
+    <div
+      className="lucid-DraggableList-Item"
+      draggable={true}
+      onDragEnd={[Function]}
+      onDragOver={[Function]}
+      onDragStart={[Function]}
+    >
+      <div
+        className="lucid-DraggableList-Item-content"
+      >
+        Item Three
+      </div>
+    </div>
+  </div>
+  <div
+    key="3"
+  >
+    <hr
+      className="lucid-DraggableList-Divider"
+    />
+    <div
+      className="lucid-DraggableList-Item"
+      draggable={true}
+      onDragEnd={[Function]}
+      onDragOver={[Function]}
+      onDragStart={[Function]}
+    >
+      <div
+        className="lucid-DraggableList-Item-content"
+      >
+        Item Four
+      </div>
+    </div>
+  </div>
+  <div
+    key="4"
+  >
+    <hr
+      className="lucid-DraggableList-Divider"
+    />
+    <div
+      className="lucid-DraggableList-Item"
+      draggable={true}
+      onDragEnd={[Function]}
+      onDragOver={[Function]}
+      onDragStart={[Function]}
+    >
+      <div
+        className="lucid-DraggableList-Item-content"
+      >
+        Item Five
+      </div>
+    </div>
+  </div>
+  <hr
+    className="lucid-DraggableList-Divider"
+    key="divider"
+  />
+</div>
+`;
+
+exports[`DraggableList [common] example testing should match snapshot(s) for 3.with-children 1`] = `
+<div
+  className="lucid-DraggableList"
+  onDragLeave={[Function]}
+  style={
+    Object {
+      "width": 500,
+    }
+  }
+>
+  <div
+    key="0"
+  >
+    <hr
+      className="lucid-DraggableList-Divider"
+    />
+    <div
+      className="lucid-DraggableList-Item"
+      draggable={true}
+      onDragEnd={[Function]}
+      onDragOver={[Function]}
+      onDragStart={[Function]}
+    >
+      <div
+        className="lucid-DraggableList-Item-content"
+      >
+        <div
+          style={
+            Object {
+              "alignItems": "center",
+              "display": "flex",
+              "height": 50,
+            }
+          }
+        >
+          <CheckboxLabeled
+            Label="Item One"
+            isDisabled={false}
+            isIndeterminate={false}
+            isSelected={false}
+            onSelect={[Function]}
+          />
+        </div>
+      </div>
+      <span
+        className="lucid-DraggableList-Item-handle"
+      >
+        <DotsIcon
+          color="primary"
+          size={8}
+        />
+        <DotsIcon
+          color="primary"
+          size={8}
+        />
+      </span>
+    </div>
+  </div>
+  <div
+    key="1"
+  >
+    <hr
+      className="lucid-DraggableList-Divider"
+    />
+    <div
+      className="lucid-DraggableList-Item"
+      draggable={true}
+      onDragEnd={[Function]}
+      onDragOver={[Function]}
+      onDragStart={[Function]}
+    >
+      <div
+        className="lucid-DraggableList-Item-content"
+      >
+        <div
+          style={
+            Object {
+              "alignItems": "center",
+              "display": "flex",
+              "height": 50,
+            }
+          }
+        >
+          <CheckboxLabeled
+            Label="Item Two"
+            isDisabled={false}
+            isIndeterminate={false}
+            isSelected={false}
+            onSelect={[Function]}
+          />
+        </div>
+      </div>
+      <span
+        className="lucid-DraggableList-Item-handle"
+      >
+        <DotsIcon
+          color="primary"
+          size={8}
+        />
+        <DotsIcon
+          color="primary"
+          size={8}
+        />
+      </span>
+    </div>
+  </div>
+  <div
+    key="2"
+  >
+    <hr
+      className="lucid-DraggableList-Divider"
+    />
+    <div
+      className="lucid-DraggableList-Item"
+      draggable={true}
+      onDragEnd={[Function]}
+      onDragOver={[Function]}
+      onDragStart={[Function]}
+    >
+      <div
+        className="lucid-DraggableList-Item-content"
+      >
+        <div
+          style={
+            Object {
+              "alignItems": "center",
+              "display": "flex",
+              "height": 50,
+            }
+          }
+        >
+          <CheckboxLabeled
+            Label="Item Three"
+            isDisabled={false}
+            isIndeterminate={false}
+            isSelected={false}
+            onSelect={[Function]}
+          />
+        </div>
+      </div>
+      <span
+        className="lucid-DraggableList-Item-handle"
+      >
+        <DotsIcon
+          color="primary"
+          size={8}
+        />
+        <DotsIcon
+          color="primary"
+          size={8}
+        />
+      </span>
+    </div>
+  </div>
+  <div
+    key="3"
+  >
+    <hr
+      className="lucid-DraggableList-Divider"
+    />
+    <div
+      className="lucid-DraggableList-Item"
+      draggable={true}
+      onDragEnd={[Function]}
+      onDragOver={[Function]}
+      onDragStart={[Function]}
+    >
+      <div
+        className="lucid-DraggableList-Item-content"
+      >
+        <div
+          style={
+            Object {
+              "alignItems": "center",
+              "display": "flex",
+              "height": 50,
+            }
+          }
+        >
+          <CheckboxLabeled
+            Label="Item Four"
+            isDisabled={false}
+            isIndeterminate={false}
+            isSelected={false}
+            onSelect={[Function]}
+          />
+        </div>
+      </div>
+      <span
+        className="lucid-DraggableList-Item-handle"
+      >
+        <DotsIcon
+          color="primary"
+          size={8}
+        />
+        <DotsIcon
+          color="primary"
+          size={8}
+        />
+      </span>
+    </div>
+  </div>
+  <div
+    key="4"
+  >
+    <hr
+      className="lucid-DraggableList-Divider"
+    />
+    <div
+      className="lucid-DraggableList-Item"
+      draggable={true}
+      onDragEnd={[Function]}
+      onDragOver={[Function]}
+      onDragStart={[Function]}
+    >
+      <div
+        className="lucid-DraggableList-Item-content"
+      >
+        <div
+          style={
+            Object {
+              "alignItems": "center",
+              "display": "flex",
+              "height": 50,
+            }
+          }
+        >
+          <CheckboxLabeled
+            Label="Item Five"
+            isDisabled={false}
+            isIndeterminate={false}
+            isSelected={false}
+            onSelect={[Function]}
+          />
+        </div>
+      </div>
+      <span
+        className="lucid-DraggableList-Item-handle"
+      >
+        <DotsIcon
+          color="primary"
+          size={8}
+        />
+        <DotsIcon
+          color="primary"
+          size={8}
+        />
+      </span>
+    </div>
+  </div>
+  <hr
+    className="lucid-DraggableList-Divider"
+    key="divider"
+  />
+</div>
+`;

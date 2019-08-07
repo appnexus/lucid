@@ -516,7 +516,11 @@ describe('DataTable', () => {
 					.find(ScrollTable.Th)
 					.first();
 				const selectAllCheckboxWrapper = firstHeadCellWrapper.find(Checkbox);
-				assert.equal(true, selectAllCheckboxWrapper.prop('isIndeterminate'), 'The CheckBox should be in an indeterminate state');
+				assert.equal(
+					true,
+					selectAllCheckboxWrapper.prop('isIndeterminate'),
+					'The CheckBox should be in an indeterminate state'
+				);
 			});
 		});
 

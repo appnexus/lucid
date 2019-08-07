@@ -131,6 +131,7 @@ import QuestionMarkIcon from './components/Icon/QuestionMarkIcon/QuestionMarkIco
 import RadioButton from './components/RadioButton/RadioButton';
 import RadioButtonLabeled from './components/RadioButtonLabeled/RadioButtonLabeled';
 import RefreshIcon from './components/Icon/RefreshIcon/RefreshIcon';
+import DraggableList from './components/DraggableList/DraggableList';
 import ResizeIcon from './components/Icon/ResizeIcon/ResizeIcon';
 import Resizer from './components/Resizer/Resizer';
 import ScrollTable from './components/ScrollTable/ScrollTable';
@@ -301,6 +302,7 @@ export {
 	RadioGroup,
 	RadioGroupDumb,
 	RefreshIcon,
+	DraggableList,
 	ResizeIcon,
 	Resizer,
 	ScrollTable,
