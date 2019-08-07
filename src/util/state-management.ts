@@ -1,4 +1,4 @@
-import React, { Component, ComponentType, isValidElement } from 'react';
+import React, { isValidElement } from 'react';
 import _ from 'lodash';
 import { logger } from './logger';
 import { createSelector } from 'reselect';
@@ -37,10 +37,6 @@ interface IBaseComponentType<P> {
 
 export interface IHybridCompatibleProps<S = {}> {
 	initialState?: S;
-}
-
-abstract class HybridComponent<P, S> extends Component<P, S> {
-	static displayName: string;
 }
 
 export function getDeepPaths(

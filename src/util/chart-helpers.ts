@@ -19,11 +19,11 @@ type Fields = string[] | string;
 export function stackByFields(
 	collection: Collection,
 	fields: Fields
-): [number, number][][] {
+): Array<Array<[number, number]>> {
 	const fieldsArray = _.castArray(fields);
 
 	return _.map(collection, d => {
-		return _.reduce<Fields, [number, number][]>(
+		return _.reduce<Fields, Array<[number, number]>>(
 			fieldsArray,
 			(acc, field) => {
 				const dataPoint: number = _.get(d, field, 0);
@@ -55,7 +55,7 @@ export function stackByFields(
 export function extractFields(
 	collection: Collection,
 	fields: Fields
-): [number, number][][] {
+): Array<Array<[number, number]>> {
 	const fieldsArray = _.castArray(fields);
 
 	return _.map(collection, d => {

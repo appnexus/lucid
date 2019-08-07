@@ -1,5 +1,5 @@
 jest.mock('./logger');
-/* eslint-disable import/imports-first */
+
 import assert from 'assert';
 import sinon from 'sinon';
 import { isFunction, upperCase } from 'lodash';

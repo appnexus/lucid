@@ -93,7 +93,7 @@ export function createClass<P, S>(
 // return all elements matching the specified types
 export function filterTypes<P>(
 	children: React.ReactNode,
-	types?: ICreateClassComponentClass<P> | ICreateClassComponentClass<P>[]
+	types?: ICreateClassComponentClass<P> | Array<ICreateClassComponentClass<P>>
 ) {
 	if (types === undefined) {
 		return [];
@@ -145,7 +145,7 @@ export function createElements<P>(
 // return all elements found in props and children of the specified types
 export function findTypes<P>(
 	props: { children: React.ReactNode },
-	types?: ICreateClassComponentClass<P> | ICreateClassComponentClass<P>[]
+	types?: ICreateClassComponentClass<P> | Array<ICreateClassComponentClass<P>>
 ): React.ReactNode[] {
 	if (types === undefined) {
 		return [];
@@ -174,7 +174,7 @@ export function getFirst<P extends { children: React.ReactNode }>(
 	props: P,
 	types:
 		| ICreateClassComponentClass<P>
-		| ICreateClassComponentClass<P>[]
+		| Array<ICreateClassComponentClass<P>>
 		| undefined,
 	defaultValue?: React.ReactNode
 ) {

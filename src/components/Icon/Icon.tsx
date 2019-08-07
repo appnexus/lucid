@@ -45,7 +45,7 @@ export interface IIconProps {
 		event,
 		props,
 	}: {
-		event: React.MouseEventHandler;
+		event: React.MouseEvent;
 		props: IIconProps;
 	}) => void;
 
@@ -54,7 +54,7 @@ export interface IIconProps {
 		event,
 		props,
 	}: {
-		event: React.MouseEventHandler;
+		event: React.MouseEvent;
 		props: IIconProps;
 	}) => void;
 
@@ -141,7 +141,7 @@ const Icon = createClass<IIconProps, {}>({
 		};
 	},
 
-	handleClick(event: React.MouseEventHandler<HTMLButtonElement>) {
+	handleClick(event: React.MouseEvent) {
 		const { onClick, isDisabled, isClickable, onSelect } = this.props;
 
 		const domNode = this.svgRef;

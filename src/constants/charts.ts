@@ -1,49 +1,56 @@
 // NOTE: these needs to stay in sync with variables.less
 
 // Each of these map to a less variable that applies the actual color
-export const COLOR_0: string = 'color-chart-0';
-export const COLOR_0_LIGHTEST: string = 'color-chart-0-lightest';
-export const COLOR_0_LIGHT: string = 'color-chart-0-light';
-export const COLOR_0_DARK: string = 'color-chart-0-dark';
-export const COLOR_0_DARKEST: string = 'color-chart-0-darkest';
-export const COLOR_1: string = 'color-chart-1';
-export const COLOR_1_LIGHTEST: string = 'color-chart-1-lightest';
-export const COLOR_1_LIGHT: string = 'color-chart-1-light';
-export const COLOR_1_DARK: string = 'color-chart-1-dark';
-export const COLOR_1_DARKEST: string = 'color-chart-1-darkest';
-export const COLOR_2: string = 'color-chart-2';
-export const COLOR_2_LIGHTEST: string = 'color-chart-2-lightest';
-export const COLOR_2_LIGHT: string = 'color-chart-2-light';
-export const COLOR_2_DARK: string = 'color-chart-2-dark';
-export const COLOR_2_DARKEST: string = 'color-chart-2-darkest';
-export const COLOR_3: string = 'color-chart-3';
-export const COLOR_3_LIGHTEST: string = 'color-chart-3-lightest';
-export const COLOR_3_LIGHT: string = 'color-chart-3-light';
-export const COLOR_3_DARK: string = 'color-chart-3-dark';
-export const COLOR_3_DARKEST: string = 'color-chart-3-darkest';
-export const COLOR_4: string = 'color-chart-4';
-export const COLOR_4_LIGHTEST: string = 'color-chart-4-lightest';
-export const COLOR_4_LIGHT: string = 'color-chart-4-light';
-export const COLOR_4_DARK: string = 'color-chart-4-dark';
-export const COLOR_4_DARKEST: string = 'color-chart-4-darkest';
-export const COLOR_5: string = 'color-chart-5';
-export const COLOR_5_LIGHTEST: string = 'color-chart-5-lightest';
-export const COLOR_5_LIGHT: string = 'color-chart-5-light';
-export const COLOR_5_DARK: string = 'color-chart-5-dark';
-export const COLOR_5_DARKEST: string = 'color-chart-5-darkest';
-export const COLOR_GOOD: string = 'color-chart-good';
-export const COLOR_GOOD_LIGHTEST: string = 'color-chart-good-lightest';
-export const COLOR_GOOD_LIGHT: string = 'color-chart-good-light';
-export const COLOR_GOOD_DARK: string = 'color-chart-good-dark';
-export const COLOR_GOOD_DARKEST: string = 'color-chart-good-darkest';
-export const COLOR_BAD: string = 'color-chart-bad';
-export const COLOR_BAD_LIGHTEST: string = 'color-chart-bad-lightest';
-export const COLOR_BAD_LIGHT: string = 'color-chart-bad-light';
-export const COLOR_BAD_DARK: string = 'color-chart-bad-dark';
-export const COLOR_BAD_DARKEST: string = 'color-chart-bad-darkest';
-export const COLOR_NEUTRAL: string = 'color-chart-neutral';
+export const COLOR_0 = 'color-chart-0';
+export const COLOR_0_LIGHTEST = 'color-chart-0-lightest';
+export const COLOR_0_LIGHT = 'color-chart-0-light';
+export const COLOR_0_DARK = 'color-chart-0-dark';
+export const COLOR_0_DARKEST = 'color-chart-0-darkest';
+export const COLOR_1 = 'color-chart-1';
+export const COLOR_1_LIGHTEST = 'color-chart-1-lightest';
+export const COLOR_1_LIGHT = 'color-chart-1-light';
+export const COLOR_1_DARK = 'color-chart-1-dark';
+export const COLOR_1_DARKEST = 'color-chart-1-darkest';
+export const COLOR_2 = 'color-chart-2';
+export const COLOR_2_LIGHTEST = 'color-chart-2-lightest';
+export const COLOR_2_LIGHT = 'color-chart-2-light';
+export const COLOR_2_DARK = 'color-chart-2-dark';
+export const COLOR_2_DARKEST = 'color-chart-2-darkest';
+export const COLOR_3 = 'color-chart-3';
+export const COLOR_3_LIGHTEST = 'color-chart-3-lightest';
+export const COLOR_3_LIGHT = 'color-chart-3-light';
+export const COLOR_3_DARK = 'color-chart-3-dark';
+export const COLOR_3_DARKEST = 'color-chart-3-darkest';
+export const COLOR_4 = 'color-chart-4';
+export const COLOR_4_LIGHTEST = 'color-chart-4-lightest';
+export const COLOR_4_LIGHT = 'color-chart-4-light';
+export const COLOR_4_DARK = 'color-chart-4-dark';
+export const COLOR_4_DARKEST = 'color-chart-4-darkest';
+export const COLOR_5 = 'color-chart-5';
+export const COLOR_5_LIGHTEST = 'color-chart-5-lightest';
+export const COLOR_5_LIGHT = 'color-chart-5-light';
+export const COLOR_5_DARK = 'color-chart-5-dark';
+export const COLOR_5_DARKEST = 'color-chart-5-darkest';
+export const COLOR_GOOD = 'color-chart-good';
+export const COLOR_GOOD_LIGHTEST = 'color-chart-good-lightest';
+export const COLOR_GOOD_LIGHT = 'color-chart-good-light';
+export const COLOR_GOOD_DARK = 'color-chart-good-dark';
+export const COLOR_GOOD_DARKEST = 'color-chart-good-darkest';
+export const COLOR_BAD = 'color-chart-bad';
+export const COLOR_BAD_LIGHTEST = 'color-chart-bad-lightest';
+export const COLOR_BAD_LIGHT = 'color-chart-bad-light';
+export const COLOR_BAD_DARK = 'color-chart-bad-dark';
+export const COLOR_BAD_DARKEST = 'color-chart-bad-darkest';
+export const COLOR_NEUTRAL = 'color-chart-neutral';
 
-export const PALETTE_6: string[] = [COLOR_0, COLOR_1, COLOR_2, COLOR_3, COLOR_4, COLOR_5];
+export const PALETTE_6: string[] = [
+	COLOR_0,
+	COLOR_1,
+	COLOR_2,
+	COLOR_3,
+	COLOR_4,
+	COLOR_5,
+];
 
 export const PALETTE_30: string[] = [
 	COLOR_0_LIGHTEST,

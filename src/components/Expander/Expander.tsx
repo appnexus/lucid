@@ -41,7 +41,7 @@ export interface IExpanderProps {
 	 * */
 	onToggle?: (
 		isExpanded: boolean,
-		{ event, props }: { event: React.MouseEventHandler; props: IExpanderProps }
+		{ event, props }: { event: React.MouseEvent; props: IExpanderProps }
 	) => void;
 
 	/** Passed through to the root element. */
@@ -227,7 +227,7 @@ const Expander = createClass<IExpanderProps, IExpanderState>({
 		);
 	},
 
-	handleToggle(event: React.MouseEventHandler) {
+	handleToggle(event: React.MouseEvent) {
 		this.props.onToggle(!this.props.isExpanded, {
 			event,
 			props: this.props,
