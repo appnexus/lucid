@@ -174,7 +174,7 @@ const Expander = createClass<IExpanderProps, IExpanderState>({
 			style,
 			kind,
 			...passThroughs
-		} = this.props;
+		} = this.props as IExpanderProps;
 
 		const labelChildProp = _.first(
 			_.map(findTypes(this.props, Expander.Label), 'props')
@@ -186,7 +186,7 @@ const Expander = createClass<IExpanderProps, IExpanderState>({
 
 		return (
 			<div
-				{...omitProps(passThroughs, Expander)}
+				{...omitProps<IExpanderProps>(passThroughs, Expander)}
 				className={cx(
 					'&',
 					{
