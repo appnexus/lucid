@@ -40,6 +40,10 @@ const StickySection = createClass({
 			Width of section when it sticks to the top edge of the screen. When
 			omitted, it defaults to the last width of the section.
 		`,
+		topOffset: number`
+			Top offset threshold before sticking to the top. The sticky content will
+			display with this offset.
+		`,
 	},
 
 	getInitialState() {
@@ -49,14 +53,14 @@ const StickySection = createClass({
 		};
 	},
 
-	handleScroll() {
-		const { lowerBound } = this.props;
+	handleScroll(e) {
+		const { lowerBound, topOffset } = this.props;
 
 		const { isAboveFold, containerRect } = this.state;
 
 		const nextContainerRect = this.getContainerRect();
 
-		if (window.pageYOffset >= nextContainerRect.top) {
+		if (window.pageYOffset + topOffset >= nextContainerRect.top) {
 			if (!isAboveFold) {
 				this.setState({
 					isAboveFold: true,
@@ -128,6 +132,7 @@ const StickySection = createClass({
 			children,
 			className,
 			style,
+			topOffset,
 			viewportWidth,
 			...passThroughs
 		} = this.props;
@@ -142,6 +147,7 @@ const StickySection = createClass({
 					...(isAboveFold
 						? {
 								height: containerRect.height,
+								visibility: 'hidden',
 						  }
 						: {}),
 					...style,
@@ -154,8 +160,9 @@ const StickySection = createClass({
 					style={{
 						...(isAboveFold
 							? {
+									visibility: 'visible',
 									position: 'fixed',
-									top: 0,
+									top: topOffset,
 									width: _.isNumber(viewportWidth)
 										? viewportWidth
 										: containerRect.width,
@@ -191,5 +198,8 @@ const StickySection = createClass({
 		);
 	},
 });
+StickySection.defaultProps = {
+	topOffset: 0,
+};
 
 export default StickySection;
