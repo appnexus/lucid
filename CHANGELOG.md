@@ -1,3 +1,7 @@
+## unreleased
+
+- [minor] Add `topOffset` prop to `StickySection` [#1018](https://github.com/appnexus/lucid/pull/1018)
+
 ## 4.3.0
 
 - [minor] Add `DraggableList` component for drag + drop lists [#1016](https://github.com/appnexus/lucid/pull/1016)
