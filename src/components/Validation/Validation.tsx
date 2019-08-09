@@ -12,7 +12,6 @@ interface IErrorProps {
 	description?: string;
 	children?: React.ReactNode;
 }
-
 // const Error: React.SFC<IErrorProps> = props => {
 // 	return (
 // 		<div>{props.children}</div>
@@ -93,12 +92,14 @@ class Validation extends React.Component<IValidationProps, {}, {}> {
 		const { className, children, ...passThroughs } = this.props;
 
 		const errorChildProps = _.get(
+			// @ts-ignore
 			getFirst(this.props, Validation.Error),
 			'props'
-		);
+			);
 
-		return (
+			return (
 			<div
+				// @ts-ignore
 				{...omitProps(passThroughs, Validation)}
 				className={cx(
 					'&',
@@ -113,6 +114,7 @@ class Validation extends React.Component<IValidationProps, {}, {}> {
 				errorChildProps.children &&
 				errorChildProps.children !== true ? (
 					<div
+						// @ts-ignore
 						{...omitProps(errorChildProps, Validation.Error)}
 						className={cx('&-error-content', errorChildProps.className)}
 					>
