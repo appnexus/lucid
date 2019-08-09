@@ -116,7 +116,7 @@ export const withProps = componentRef => {
 			const channel = addons.getChannel();
 			channel.emit(
 				'lucid-docs-display-props',
-				JSON.stringify(getPropsData(componentRef))
+				JSON.stringify(componentRef.__docgenInfo)
 			);
 			return <StoryComponent {...props} />;
 		};
@@ -156,7 +156,7 @@ export const exampleStory = ({ component, code, example, path }) => {
 	const componentRef = getDefaultExport(component);
 
 	const storyWithCode = withCode(code)(StoryComponent);
-	const storyWithProps = withProps(componentRef)(storyWithCode);
+	const storyWithProps = withProps(component)(storyWithCode);
 	const storyWithChildComponents = withChildComponents(componentRef, 1, path)(
 		storyWithProps
 	);

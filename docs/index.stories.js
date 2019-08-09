@@ -4,6 +4,7 @@ import _ from 'lodash';
 import marksy from 'marksy/components';
 import { storiesOf } from '@storybook/react';
 import LinkTo from '@storybook/addon-links/react';
+import { withInfo } from '@storybook/addon-info';
 import { exampleStory } from '../.storybook/lucid-docs-addon';
 import { stripIndent } from '../.storybook/lucid-docs-addon/util';
 import readmeText from '!!raw-loader!../README.md';
@@ -196,6 +197,9 @@ _.forEach(
 		);
 
 		const componentRef = getDefaultExport(component);
+		// const otherComponentRef = require(component)[componentName];
+
+		console.log(component);
 		const notes =
 			_.has(componentRef, 'peek.description') &&
 			stripIndent(componentRef.peek.description);
@@ -210,6 +214,7 @@ _.forEach(
 				componentName,
 				() => {
 					storiesOf(`Components/${category}/${componentName}`, module)
+						.addDecorator(withInfo)
 						.addParameters({ options: examplePageOptions })
 						.add(
 							name,
@@ -219,7 +224,11 @@ _.forEach(
 								example: Example,
 								path: [componentName],
 							}),
-							{ notes: notes, info: { inline: true, header: false } }
+
+							{
+								notes: component.__docgenInfo,
+								info: { inline: true, header: false, text: JSON.stringify(component.__docgenInfo) },
+							}
 						);
 				},
 			]);

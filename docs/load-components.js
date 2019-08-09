@@ -364,22 +364,23 @@ module.exports = [
 			/\.jsx?$/
 		),
 	},
-	// {
-	// 	name: 'ModernHybridDemo',
-	// 	component: getDefaultExport(
-	// 		require('../src/components/ModernHybridDemo/ModernHybridDemo')
-	// 	),
-	// 	examplesContext: require.context(
-	// 		'../src/components/ModernHybridDemo/examples',
-	// 		true,
-	// 		/\.jsx?$/
-	// 	),
-	// 	examplesContextRaw: require.context(
-	// 		'!!raw-loader!../src/components/ModernHybridDemo/examples',
-	// 		true,
-	// 		/\.jsx?$/
-	// 	),
-	// },
+	{
+		name: 'ModernHybridDemo',
+		component: require('../src/components/ModernHybridDemo/ModernHybridDemo')
+			.ModernHybridDemoSmart,
+		text: require('../src/components/ModernHybridDemo/ModernHybridDemo')
+			.ModernHybridDemoSmart.__docgenInfo,
+		examplesContext: require.context(
+			'../src/components/ModernHybridDemo/examples',
+			true,
+			/\.jsx?$/
+		),
+		examplesContextRaw: require.context(
+			'!!raw-loader!../src/components/ModernHybridDemo/examples',
+			true,
+			/\.jsx?$/
+		),
+	},
 	{
 		name: 'ExpanderPanel',
 		component: getDefaultExport(

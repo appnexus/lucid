@@ -1,12 +1,22 @@
 import _ from 'lodash';
-import React, { Component, ComponentType, isValidElement } from 'react';
-import { IHybridCompatibleProps, Reducers } from '../../util/state-management';
-import PropTypes from 'react-peek/prop-types';
-import { findTypes } from '../../util/component-types';
-import { createSelector } from 'reselect';
+import React, { Component, ComponentType, isValidElement, ReactNode } from 'react';
+import { IHybridCompatibleProps, Reducers, buildModernHybridComponent } from '../../util/state-management';
+
+interface IExpanderLabelProps {
+	description?: string;
+	children?: React.ReactNode;
+}
 
 interface IExpanderProps extends IHybridCompatibleProps {
+	/**
+	 * Indicates that the component is in the "expanded" state when true and in
+	 * the "unexpanded" state when false.
+	 * */
 	isExpanded: boolean;
+
+	/**
+	 * Called when the user clicks on the component's header.
+	 * */
 	onToggle: (
 		isExpanded: boolean,
 		{
@@ -14,6 +24,13 @@ interface IExpanderProps extends IHybridCompatibleProps {
 			props,
 		}: { event: React.MouseEvent<HTMLElement>; props: IExpanderProps }
 	) => void;
+
+	/** Child element whose children represents content to be shown next to the
+	 * expander icon.
+	 * */
+	Label?: ReactNode & { props: IExpanderLabelProps };
+	// Label?: React.ReactElement<IExpanderLabelProps, "Label">;
+
 }
 
 interface IExpanderState {
@@ -26,6 +43,12 @@ const reducers: Reducers<IExpanderProps, IExpanderState> = {
 	},
 };
 
+const Label: React.SFC<IExpanderLabelProps> = props => {
+	return (
+		<div>{props.children}</div>
+	);
+};
+
 export class ModernHybridDemoDumb extends Component<IExpanderProps, {}> {
 	static displayName = 'Expander';
 	constructor(props: IExpanderProps) {
@@ -36,6 +59,7 @@ export class ModernHybridDemoDumb extends Component<IExpanderProps, {}> {
 
 	static defaultProps = {
 		onToggle: _.noop,
+		Label: <Label/>,
 	};
 
 	handleToggle(event: React.MouseEvent<HTMLElement>) {
@@ -46,16 +70,19 @@ export class ModernHybridDemoDumb extends Component<IExpanderProps, {}> {
 	}
 
 	render() {
+
 		return (
 			<div>
 				{this.props.isExpanded ? 'yes' : 'no'}
 				<button onClick={this.handleToggle}>click me</button>
+				<Label>{this.props.Label}</Label>
 			</div>
 		);
 	}
 }
 
-// export default buildModernHybridComponent<IExpanderProps, IExpanderState>(
-// 	ModernHybridDemoDumb,
-// 	{ reducers }
-// );
+export const ModernHybridDemoSmart = buildModernHybridComponent<IExpanderProps, IExpanderState>(
+	ModernHybridDemoDumb,
+	{ reducers }
+);
+

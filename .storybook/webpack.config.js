@@ -19,7 +19,10 @@ module.exports = ({ config, mode }) => {
 				...config.module.rules,
 				{
 					test: /\.tsx?$/,
-					loader: 'ts-loader',
+					use: [
+						{ loader: 'ts-loader' },
+						{ loader: 'react-docgen-typescript-loader' },
+					],
 					exclude: /node_modules/,
 				},
 				{

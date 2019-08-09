@@ -313,6 +313,7 @@ export function buildHybridComponent(
 /*
  * TODO: Make this work when we're ready to start switching components over
  * to modern react component definitions.
+ * * */
 export function buildModernHybridComponent<
 	P extends IHybridCompatibleProps,
 	S extends object = {}
@@ -393,4 +394,4 @@ export function buildStatefulComponent(...args: any[]) {
 	// @ts-ignore
 	return buildHybridComponent(...args);
 }
-* */
+

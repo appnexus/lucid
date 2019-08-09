@@ -1,12 +1,12 @@
 import React from 'react';
 import createClass from 'create-react-class';
-import { ModernHybridDemo } from '../../../index';
+import { ModernHybridDemoSmart } from '../ModernHybridDemo';
 
 export default createClass({
 	render() {
 		return (
 			<div>
-				<ModernHybridDemo isExpanded={true} />
+				<ModernHybridDemoSmart isExpanded={true} />
 			</div>
 		);
 	},
