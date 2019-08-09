@@ -8,35 +8,32 @@ const cx = lucidClassNames.bind('&-Validation');
 
 const { any } = PropTypes;
 
-const Validation = createClass({
-	displayName: 'Validation',
+export interface IValidationProps {
+	//* Any valid React children. */
+	children?: React.ReactNode;
 
-	statics: {
-		peek: {
-			description: `
-				Validation is a wrapper component that's meant to be used by other
-				components. Wrap your form components in it and style them accordingly
-				if there's an error.
-			`,
-			categories: ['helpers'],
-		},
-	},
+	/** Classes that are appended to the component defaults. This prop is run through the \`classnames\` library. */
+	className?: string;
 
-	components: {
-		Error: createClass({
-			displayName: 'Validation.Error',
-			statics: {
-				peek: {
-					description: `
-						Content that will be displayed as an error message.
-					`,
-				},
-			},
-			propName: 'Error',
-		}),
-	},
+	/** In most cases this will be a string, but it also accepts any valid React
+			element. If this is a falsey value, then no error message will be
+			displayed.  If this is the literal \`true\`, it will add the
+			\`-is-error\` class to the wrapper div, but not render the
+			\`-error-content\` \`div\`. */
+	Error?: any;
+}
 
-	propTypes: {
+class Validation extends React.Component<IValidationProps, {}, {}> {
+	static displayName: 'Validation';
+	static peek = {
+		description: `
+			Validation is a wrapper component that's meant to be used by other
+			components. Wrap your form components in it and style them accordingly
+			if there's an error.
+		`,
+		categories: ['helpers'],
+	}
+	static propTypes = {
 		Error: any`
 			In most cases this will be a string, but it also accepts any valid React
 			element. If this is a falsey value, then no error message will be
@@ -53,7 +50,27 @@ const Validation = createClass({
 		children: any.isRequired`
 			Any valid React children.
 		`,
-	},
+	}
+	constructor(props: IValidationProps) {
+		super(props);
+	}
+
+
+
+	components: {
+		Error: createClass({
+			displayName: 'Validation.Error',
+			statics: {
+				peek: {
+					description: `
+						Content that will be displayed as an error message.
+					`,
+				},
+			},
+			propName: 'Error',
+		}),
+	}
+
 
 	render() {
 		const { className, children, ...passThroughs } = this.props;
@@ -87,7 +104,7 @@ const Validation = createClass({
 				) : null}
 			</div>
 		);
-	},
-});
+	}
+};
 
 export default Validation;
