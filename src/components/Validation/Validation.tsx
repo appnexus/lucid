@@ -8,6 +8,35 @@ const cx = lucidClassNames.bind('&-Validation');
 
 const { any } = PropTypes;
 
+interface IErrorProps {
+	description?: string;
+	children?: React.ReactNode;
+}
+
+// const Error: React.SFC<IErrorProps> = props => {
+// 	return (
+// 		<div>{props.children}</div>
+// 	);
+// };
+class Error extends React.Component<IErrorProps, {}, {}> {
+	static displayName: 'Validation.Error';
+	static peek: {
+		description: `
+			Content that will be displayed as an error message.
+		`,
+	};
+	static propName: 'Error';
+	constructor(props: IErrorProps) {
+		super(props);
+	}
+
+	render() {
+		return (
+			<div>{this.props.children}</div>
+		);
+	}
+};
+
 export interface IValidationProps {
 	//* Any valid React children. */
 	children?: React.ReactNode;
@@ -20,6 +49,7 @@ export interface IValidationProps {
 			displayed.  If this is the literal \`true\`, it will add the
 			\`-is-error\` class to the wrapper div, but not render the
 			\`-error-content\` \`div\`. */
+	// Error?: string | React.ReactNode & { props: IErrorProps };
 	Error?: any;
 }
 
@@ -54,22 +84,9 @@ class Validation extends React.Component<IValidationProps, {}, {}> {
 	constructor(props: IValidationProps) {
 		super(props);
 	}
-
-
-
-	components: {
-		Error: createClass({
-			displayName: 'Validation.Error',
-			statics: {
-				peek: {
-					description: `
-						Content that will be displayed as an error message.
-					`,
-				},
-			},
-			propName: 'Error',
-		}),
-	}
+	static defaultProps = {
+		Error: <Error/>,
+	};
 
 
 	render() {
