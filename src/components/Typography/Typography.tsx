@@ -10,13 +10,13 @@ const { node, string, oneOf } = PropTypes;
 
 export interface ITypographyProps {
 	//* Can contain elements or nested \`Typography\` components. */
-	children: React.ReactNode;
+	children?: React.ReactNode;
 
 	/** Appended to the component-specific class names set on the root element. */
 	className?: string;
 
 	/** This prop defines the type of text that will be displayed. It may be an actual HTML element or something with extra semantic meaning. */
-	variant: 'p'
+	variant?: 'p'
 		|	'tabular'
 		|	'h1'
 		|	'h2'
@@ -28,47 +28,43 @@ export interface ITypographyProps {
 		|	'samp';
 }
 
-class Typography extends React.Component<ITypographyProps, {}> {
+class Typography extends React.Component<ITypographyProps, {}, {}> {
+	static displayName = 'Typography';
+	static peek = {
+		description: `
+			A general component for several types of textual HTML elements.
+		`,
+		categories: ['text'],
+	};
+	static propTypes = {
+		children: node`
+			Can contain elements or nested \`Typography\` components.
+		`,
+
+		className: string`
+			Appended to the component-specific class names set on the root element.
+		`,
+
+		variant: oneOf([
+			'p',
+			'tabular',
+			'h1',
+			'h2',
+			'h3',
+			'a',
+			'pre',
+			'code',
+			'kbd',
+			'samp',
+		]).isRequired`
+			This prop defines the type of text that will be displayed.
+			It may be an actual HTML element or something with extra semantic meaning.
+		`,
+	};
+
 	constructor(props: ITypographyProps) {
 		super(props);
-
-		this.displayName = 'Typography';
-		this.peek = {
-			description: `
-				A general component for several types of textual HTML elements.
-			`,
-			categories: ['text'],
-		};
-		this.propTypes = {
-			children: node`
-				Can contain elements or nested \`Typography\` components.
-			`,
-
-			className: string`
-				Appended to the component-specific class names set on the root element.
-			`,
-
-			variant: oneOf([
-				'p',
-				'tabular',
-				'h1',
-				'h2',
-				'h3',
-				'a',
-				'pre',
-				'code',
-				'kbd',
-				'samp',
-			]).isRequired`
-				This prop defines the type of text that will be displayed.
-				It may be an actual HTML element or something with extra semantic meaning.
-			`,
-		};
 	}
-
-	displayName: string;
-	peek: object;
-	propTypes: object;
 
 	elementTypes = {
 		p: 'p',
@@ -85,11 +81,12 @@ class Typography extends React.Component<ITypographyProps, {}> {
 
 	render() {
 		const { children, className, variant, ...passThroughs } = this.props;
-		const Element = this.elementTypes[variant];
+		const Element = this.elementTypes[variant ? variant : 'p'];
 
 		return (
 			<Element
-				{...omitProps(passThroughs, Typography)}
+				// @ts-ignore
+				{...omitProps<ITypographyProps>(passThroughs, Typography)}
 				className={cx('&', `&-${variant}`, className)}
 			>
 				{children}
