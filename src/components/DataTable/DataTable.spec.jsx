@@ -1,6 +1,6 @@
 import React from 'react';
 import _ from 'lodash';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 import sinon from 'sinon';
 import assert from 'assert';
 import { common } from '../../util/generic-tests';
@@ -8,6 +8,7 @@ import DataTable from './DataTable';
 import ScrollTable from '../ScrollTable/ScrollTable';
 import Checkbox from '../Checkbox/Checkbox';
 import EmptyStateWrapper from '../EmptyStateWrapper/EmptyStateWrapper';
+import DragCaptureZone from '../DragCaptureZone/DragCaptureZone';
 
 const { Column, ColumnGroup } = DataTable;
 
@@ -730,6 +731,24 @@ describe('DataTable', () => {
 				assert(
 					wrapper.find(ScrollTable).hasClass('lucid-DataTable-full-width')
 				);
+			});
+		});
+
+		describe('isResize', () => {
+			it('should show a `resizer` if `isResizable equals to true`', () => {
+				const onResize = jest.fn();
+				const wrapper = mount(
+					<DataTable hasFixedHeader onResize={onResize} data={testData}>
+						<Column field='id' isResizable title='ID' />
+						<Column field='first_name' isResizable title='First' />
+						<Column field='last_name' isResizable title='Last' />
+						<Column field='email' isResizable title='Email' />
+						<Column field='occupation' isResizable title='Occupation' />
+					</DataTable>
+				);
+
+				const dragCaptureZoneWrapper = wrapper.find(DragCaptureZone).at(1);
+				dragCaptureZoneWrapper.prop('onResize');
 			});
 		});
 	});
