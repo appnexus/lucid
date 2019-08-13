@@ -276,11 +276,12 @@ const DataTable = createClass({
 
 		const passActiveWidth = (childData, obj) => {
 			// setting latest column width to Tbody
-			this.setState({
-				activeWidth: Object.assign({}, this.state.activeWidth, {
+			this.setState(state => ({
+				activeWidth: {
+					...state.activeWidth,
 					[obj.props.children]: childData,
-				}),
-			});
+				}
+			}));
 		};
 		return (
 			<Thead>
