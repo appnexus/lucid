@@ -67,20 +67,18 @@ export interface IIconProps {
 
 class Icon extends React.Component<IIconProps, {}, {}> {
 	constructor(props: IIconProps) {
-		super(props)
+		super(props);
 	}
 	private svgRef = React.createRef<SVGSVGElement>();
 
 	static displayName = 'Icon';
 
-	static statics = {
-		peek: {
-			description: `
-				A basic svg icon. Any props that are not explicitly called out below
-				will be passed through to the native \`svg\` component.
-			`,
-			categories: ['visual design', 'icons'],
-		},
+	static peek = {
+		description: `
+			A basic svg icon. Any props that are not explicitly called out below
+			will be passed through to the native \`svg\` component.
+		`,
+		categories: ['visual design', 'icons'],
 	};
 
 	static propTypes = {
