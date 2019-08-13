@@ -1,6 +1,6 @@
 import _ from 'lodash';
 
-export function getAbsoluteBoundingClientRect(domNode: HTMLElement) {
+export function getAbsoluteBoundingClientRect(domNode: HTMLElement): ClientRect {
 	const elementRect: ClientRect = domNode.getBoundingClientRect();
 
 	return {
@@ -13,7 +13,7 @@ export function getAbsoluteBoundingClientRect(domNode: HTMLElement) {
 	};
 }
 
-export function scrollParentTo(domNode: HTMLElement, additionalOffset: number = 0) {
+export function scrollParentTo(domNode: HTMLElement, additionalOffset: number = 0): void {
 		const parentNode = domNode.parentElement;
 
 		if (parentNode !== null) {
