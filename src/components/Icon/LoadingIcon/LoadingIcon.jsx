@@ -35,7 +35,7 @@ const LoadingIcon = createClass({
 	},
 	getDefaultProps() {
 		return {
-			...Icon.getDefaultProps(),
+			...Icon.defaultProps,
 			speed: 'normal',
 		};
 	},

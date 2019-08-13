@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/explicit-function-return-type */
 import React from 'react';
 import createReactClass from 'create-react-class';
 import PropTypes from 'react-peek/prop-types';
@@ -100,7 +99,7 @@ export function createClass<P, S>(
 export function filterTypes<P>(
 	children: React.ReactNode,
 	types?: TypesType<P>
-) {
+): React.ReactNode[] {
 	if (types === undefined) {
 		return [];
 	}
@@ -114,7 +113,7 @@ export function filterTypes<P>(
 }
 
 // return all elements not matching the specified types
-export function rejectTypes(children: React.ElementType, types = []) {
+export function rejectTypes(children: React.ElementType, types = []): React.ReactNode[] {
 	types = [].concat(types); // coerce to Array
 
 	return _.reject(
@@ -127,10 +126,10 @@ export function rejectTypes(children: React.ElementType, types = []) {
 export function createElements<P>(
 	type: ICreateClassComponentClass<P>,
 	values: Array<React.ReactElement<P> | P> = []
-) {
+): React.ReactElement[] {
 	return _.reduce(
 		values,
-		(elements: Array<React.ReactElement<P>>, typeValue) => {
+		(elements: Array<React.ReactElement<P>>, typeValue): React.ReactElement[] => {
 			if (React.isValidElement(typeValue) && typeValue.type === type) {
 				return elements.concat(typeValue);
 			} else if (
@@ -160,7 +159,7 @@ export function findTypes<P extends { children?: React.ReactNode }>(
 	// get elements from props (using types.propName)
 	const elementsFromProps: React.ReactNode[] = _.reduce(
 		_.castArray(types),
-		(acc: React.ReactNode[], type) => {
+		(acc: React.ReactNode[], type): React.ReactNode[] => {
 			return _.isNil(type.propName)
 				? []
 				: createElements(
@@ -170,9 +169,6 @@ export function findTypes<P extends { children?: React.ReactNode }>(
 		},
 		[]
 	);
-
-	// eslint-disable-next-line no-debugger
-	debugger;
 
 	if(props.children === undefined) {
 		return elementsFromProps;
@@ -189,8 +185,8 @@ export function getFirst<P>(
 		| TypesType<P>
 		| undefined,
 	defaultValue?: React.ReactNode
-) {
-	return _.first(findTypes(props, types)) || defaultValue;
+): {} | null | undefined {
+	return _.first(findTypes<P>(props, types)) || defaultValue;
 }
 
 // Omit props defined in propTypes of the given type and any extra keys given
@@ -200,13 +196,14 @@ export function getFirst<P>(
 // prop can be used to identify a component in a list without having to create
 // extra closures.
 //
-// TODO: should children actually be optional?
+// Note: The Partial<P> type is referring to the props passed into the omitProps,
+// not the props defined on the component.
 export function omitProps<P extends object> (
 	props: P,
 	component: ICreateClassComponentClass<P> | undefined,
 	keys: string[] = [],
 	targetIsDOMElement = true
-) {
+): { [key: string]: any } {
 	// We only want to exclude the `callbackId` key when we're omitting props
 	// destined for a dom element
 	const additionalOmittedKeys = targetIsDOMElement

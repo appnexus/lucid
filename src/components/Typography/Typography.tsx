@@ -29,6 +29,9 @@ export interface ITypographyProps {
 }
 
 class Typography extends React.Component<ITypographyProps, {}, {}> {
+	constructor(props: ITypographyProps) {
+		super(props);
+	}
 	static displayName = 'Typography';
 	static peek = {
 		description: `
@@ -61,10 +64,6 @@ class Typography extends React.Component<ITypographyProps, {}, {}> {
 			It may be an actual HTML element or something with extra semantic meaning.
 		`,
 	};
-
-	constructor(props: ITypographyProps) {
-		super(props);
-	}
 
 	elementTypes = {
 		p: 'p',

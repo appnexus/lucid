@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, omitProps } from '../../util/component-types';
+import { omitProps } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-Icon');
 
@@ -65,10 +65,15 @@ export interface IIconProps {
 	color?: Colors;
 }
 
-const Icon = createClass<IIconProps, {}>({
-	displayName: 'Icon',
+class Icon extends React.Component<IIconProps, {}, {}> {
+	constructor(props: IIconProps) {
+		super(props)
+	}
+	private svgRef = React.createRef<SVGSVGElement>();
 
-	statics: {
+	static displayName = 'Icon';
+
+	static statics = {
 		peek: {
 			description: `
 				A basic svg icon. Any props that are not explicitly called out below
@@ -76,9 +81,9 @@ const Icon = createClass<IIconProps, {}>({
 			`,
 			categories: ['visual design', 'icons'],
 		},
-	},
+	};
 
-	propTypes: {
+	static propTypes = {
 		className: any`
 			Classes that are appended to the component defaults. This prop is run
 			through the \`classnames\` library.
@@ -128,35 +133,35 @@ const Icon = createClass<IIconProps, {}>({
 			Sets the color of the Icon.  May not be applicable for icons that are tied
 			to specific colors (e.g. DangerIcon).
 		`,
-	},
+	};
 
-	getDefaultProps() {
-		return {
-			size: 16,
-			aspectRatio: 'xMidYMid meet',
-			viewBox: '0 0 16 16',
-			isDisabled: false,
-			isClickable: false,
-			color: Colors.COLOR_PRIMARY,
-		};
-	},
+	static defaultProps = {
+		size: 16,
+		aspectRatio: 'xMidYMid meet',
+		viewBox: '0 0 16 16',
+		isDisabled: false,
+		isClickable: false,
+		color: Colors.COLOR_PRIMARY,
+	}
 
-	handleClick(event: React.MouseEvent) {
+	handleClick(event: React.MouseEvent): void {
 		const { onClick, isDisabled, isClickable, onSelect } = this.props;
 
-		const domNode = this.svgRef;
+		const domNode = this.svgRef.current;
 
 		if (onClick) {
-			onClick(event);
+			onClick({event, props: this.props});
 		}
 
 		if (onSelect && isClickable && !isDisabled) {
-			domNode.focus();
+			if(domNode) {
+				domNode.focus()
+			}
 			onSelect({ event, props: this.props });
 		}
-	},
+	}
 
-	render() {
+	render(): JSX.Element {
 		const {
 			className,
 			children,
@@ -175,7 +180,7 @@ const Icon = createClass<IIconProps, {}>({
 				height={size}
 				viewBox={viewBox}
 				preserveAspectRatio={aspectRatio}
-				{...omitProps(passThroughs, Icon)}
+				{...omitProps<IIconProps>(passThroughs, undefined, Object.keys(Icon))}
 				className={cx(
 					'&',
 					{
@@ -185,13 +190,13 @@ const Icon = createClass<IIconProps, {}>({
 					},
 					className
 				)}
-				ref={ref => (this.svgRef = ref)}
+				ref={this.svgRef}
 				onClick={this.handleClick}
 			>
 				{children}
 			</svg>
 		);
-	},
-});
+	}
+};
 
 export default Icon;
