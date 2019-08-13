@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, getFirst, omitProps } from '../../util/component-types';
+import { getFirst, omitProps } from '../../util/component-types';
 import _ from 'lodash';
 
 const cx = lucidClassNames.bind('&-Validation');
@@ -83,24 +83,25 @@ class Validation extends React.Component<IValidationProps, {}, {}> {
 	constructor(props: IValidationProps) {
 		super(props);
 	}
-	static defaultProps = {
-		Error: <Error/>,
-	};
+	// static defaultProps = {
+	// 	Error: <Error/>,
+	// };
+	static Error = Error;
 
 
-	render() {
+	render(): JSX.Element {
 		const { className, children, ...passThroughs } = this.props;
 
+		// eslint-disable-next-line no-debugger
+		// debugger;
 		const errorChildProps = _.get(
-			// @ts-ignore
 			getFirst(this.props, Validation.Error),
 			'props'
-			);
+		);
 
 			return (
 			<div
-				// @ts-ignore
-				{...omitProps(passThroughs, Validation)}
+				{...omitProps(passThroughs, undefined, Object.keys(Validation.propTypes))}
 				className={cx(
 					'&',
 					{
@@ -114,8 +115,7 @@ class Validation extends React.Component<IValidationProps, {}, {}> {
 				errorChildProps.children &&
 				errorChildProps.children !== true ? (
 					<div
-						// @ts-ignore
-						{...omitProps(errorChildProps, Validation.Error)}
+						{...omitProps(errorChildProps, undefined)}
 						className={cx('&-error-content', errorChildProps.className)}
 					>
 						{errorChildProps.children}

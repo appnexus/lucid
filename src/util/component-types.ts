@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
 import React from 'react';
 import createReactClass from 'create-react-class';
 import PropTypes from 'react-peek/prop-types';
@@ -6,6 +7,11 @@ import {
 	isPlainObjectOrEsModule,
 	omitFunctionPropsDeep,
 } from './state-management';
+
+type TypesType<P> =
+	| ICreateClassComponentClass<P>
+	| Array<ICreateClassComponentClass<P>>
+	| { propName: string }
 
 interface ICreateClassComponentSpec<P extends { [key: string]: any }, S>
 	extends React.Mixin<P, S> {
@@ -93,7 +99,7 @@ export function createClass<P, S>(
 // return all elements matching the specified types
 export function filterTypes<P>(
 	children: React.ReactNode,
-	types?: ICreateClassComponentClass<P> | Array<ICreateClassComponentClass<P>>
+	types?: TypesType<P>
 ) {
 	if (types === undefined) {
 		return [];
@@ -143,9 +149,9 @@ export function createElements<P>(
 }
 
 // return all elements found in props and children of the specified types
-export function findTypes<P>(
-	props: { children: React.ReactNode },
-	types?: ICreateClassComponentClass<P> | Array<ICreateClassComponentClass<P>>
+export function findTypes<P extends { children?: React.ReactNode }>(
+	props: P,
+	types?: TypesType<P>
 ): React.ReactNode[] {
 	if (types === undefined) {
 		return [];
@@ -165,16 +171,22 @@ export function findTypes<P>(
 		[]
 	);
 
+	// eslint-disable-next-line no-debugger
+	debugger;
+
+	if(props.children === undefined) {
+		return elementsFromProps;
+	}
+
 	// return elements from props and elements from children
 	return elementsFromProps.concat(filterTypes<P>(props.children, types));
 }
 
 // return the first element found in props and children of the specificed type(s)
-export function getFirst<P extends { children: React.ReactNode }>(
+export function getFirst<P>(
 	props: P,
 	types:
-		| ICreateClassComponentClass<P>
-		| Array<ICreateClassComponentClass<P>>
+		| TypesType<P>
 		| undefined,
 	defaultValue?: React.ReactNode
 ) {
@@ -189,9 +201,9 @@ export function getFirst<P extends { children: React.ReactNode }>(
 // extra closures.
 //
 // TODO: should children actually be optional?
-export function omitProps<P extends { children?: React.ReactNode }>(
+export function omitProps<P extends object> (
 	props: P,
-	component: ICreateClassComponentClass<P>,
+	component: ICreateClassComponentClass<P> | undefined,
 	keys: string[] = [],
 	targetIsDOMElement = true
 ) {
@@ -200,6 +212,14 @@ export function omitProps<P extends { children?: React.ReactNode }>(
 	const additionalOmittedKeys = targetIsDOMElement
 		? ['initialState', 'callbackId']
 		: ['initialState'];
+
+	// this is to support non-createClass components that we've converted to TypeScript
+	if(component === undefined) {
+		return _.omit(
+			props,
+			keys.concat(additionalOmittedKeys)
+		);
+	}
 
 	return _.omit(
 		props,

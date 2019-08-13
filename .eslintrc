@@ -65,6 +65,7 @@
 		"@typescript-eslint/camelcase": 1,
 		"@typescript-eslint/interface-name-prefix": 0,
 		"@typescript-eslint/array-type": [2, "array-simple"],
+		"@typescript-eslint/explicit-member-accessibility": 0,
 		"prefer-const": 2,
 		"promise/always-return": 0,
 		"promise/catch-or-return": 2,

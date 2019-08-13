@@ -79,19 +79,18 @@ class Typography extends React.Component<ITypographyProps, {}, {}> {
 		samp: 'samp',
 	};
 
-	render() {
+	render(): JSX.Element {
 		const { children, className, variant, ...passThroughs } = this.props;
 		const Element = this.elementTypes[variant ? variant : 'p'];
 
-		return (
-			<Element
-				// @ts-ignore
-				{...omitProps<ITypographyProps>(passThroughs, Typography)}
-				className={cx('&', `&-${variant}`, className)}
-			>
-				{children}
-			</Element>
-		);
+		return React.createElement(
+			Element,
+			{
+				...omitProps<ITypographyProps>(passThroughs, undefined, Object.keys(Typography.propTypes)),
+				className: cx('&', `&-${variant}`, className)
+			},
+			children
+		)
 	}
 };
 
