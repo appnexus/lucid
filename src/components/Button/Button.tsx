@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import _ from 'lodash';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, omitProps } from '../../util/component-types';
+import { omitProps } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-Button');
 
@@ -60,22 +60,26 @@ interface IButtonProps {
 }
 
 /** Test Button description */
-export const Button = createClass<IButtonProps, {}>({
-	displayName: 'Button',
+export class Button extends React.Component<IButtonProps, {}, {}> {
+	constructor(props: IButtonProps) {
+		super(props);
+	}
 
-	statics: {
-		peek: {
-			description: `
-				A basic button. Any props that are not explicitly called out below will
-				be passed through to the native \`button\` component.
-			`,
-			categories: ['controls', 'buttons'],
-		},
-	},
+	private buttonRef = React.createRef<HTMLButtonElement>();
 
-	propName: 'Button',
+	static displayName = 'Button';
 
-	propTypes: {
+	static peek = {
+		description: `
+			A basic button. Any props that are not explicitly called out below will
+			be passed through to the native \`button\` component.
+		`,
+		categories: ['controls', 'buttons'],
+	};
+
+	static propName = 'Button';
+
+	static propTypes = {
 		isDisabled: bool`
 			Disables the Button by greying it out
 		`,
@@ -111,30 +115,35 @@ export const Button = createClass<IButtonProps, {}>({
 		type: string`
 			Form element type variations of Button. Passed through to DOM Button.
 		`,
-	},
+	};
 
-	getDefaultProps() {
-		return {
-			isDisabled: false,
-			isActive: false,
-			onClick: _.noop,
-			type: 'button',
-			hasOnlyIcon: false,
-		};
-	},
+	defaultProps = {
+		isDisabled: false,
+		isActive: false,
+		onClick: _.noop,
+		type: 'button',
+		hasOnlyIcon: false,
+	};
 
-	handleClick(event: React.MouseEvent<HTMLButtonElement>) {
+	handleClick(event: React.MouseEvent<HTMLButtonElement>): void {
 		const { isDisabled, onClick } = this.props;
+		const { current: button } = this.buttonRef;
 
 		if (!isDisabled) {
 			// required to correctly apply the focus state in Safari and Firefox
 			// (still valid 2019-07-22)
-			this.buttonRef.focus();
-			onClick({ event, props: this.props });
-		}
-	},
 
-	render() {
+			if (button) {
+				button.focus();
+			}
+
+			if (onClick) {
+				onClick({ event, props: this.props });
+			}
+		}
+	}
+
+	render(): JSX.Element {
 		const {
 			isDisabled,
 			isActive,
@@ -149,10 +158,8 @@ export const Button = createClass<IButtonProps, {}>({
 
 		return (
 			<button
-				{...omitProps(passThroughs, Button, ['callbackId'])}
-				ref={ref => {
-					this.buttonRef = ref;
-				}}
+				{...omitProps(passThroughs, undefined, [...Object.keys(Button.propTypes), 'callbackId'])}
+				ref={this.buttonRef}
 				className={cx(
 					'&',
 					{
@@ -176,7 +183,7 @@ export const Button = createClass<IButtonProps, {}>({
 				<span className={cx('&-content')}>{children}</span>
 			</button>
 		);
-	},
-});
+	}
+};
 
 export default Button;
