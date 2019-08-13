@@ -142,7 +142,7 @@ class Icon extends React.Component<IIconProps, {}, {}> {
 		color: Colors.COLOR_PRIMARY,
 	}
 
-	handleClick(event: React.MouseEvent): void {
+	handleClick = (event: React.MouseEvent): void => {
 		const { onClick, isDisabled, isClickable, onSelect } = this.props;
 
 		const domNode = this.svgRef.current;

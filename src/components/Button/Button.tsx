@@ -125,7 +125,7 @@ export class Button extends React.Component<IButtonProps, {}, {}> {
 		hasOnlyIcon: false,
 	};
 
-	handleClick(event: React.MouseEvent<HTMLButtonElement>): void {
+	handleClick = (event: React.MouseEvent<HTMLButtonElement>): void => {
 		const { isDisabled, onClick } = this.props;
 		const { current: button } = this.buttonRef;
 
