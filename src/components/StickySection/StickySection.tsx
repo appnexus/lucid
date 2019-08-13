@@ -2,27 +2,82 @@ import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import _ from 'lodash';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, omitProps } from '../../util/component-types';
+import { omitProps } from '../../util/component-types';
 import { getAbsoluteBoundingClientRect } from '../../util/dom-helpers';
 
 const cx = lucidClassNames.bind('&-StickySection');
 const { node, number, object, string } = PropTypes;
 
-const StickySection = createClass({
-	displayName: 'StickySection',
+interface IStickySectionProps {
+	/** any valid React children */
+	children?: React.ReactNode;
 
-	statics: {
-		peek: {
-			description: `
-				\`StickySection\` can be wrapped around any content to make it _stick_
-				to the top edge of the screen when a user scrolls beyond its initial
-				location.
-			`,
-			categories: ['helpers'],
-		},
-	},
+	/** Appended to the component-specific class names set on the root element. */
+	className?: string;
 
-	propTypes: {
+	/** Styles that are passed through to the root container. */
+	style?: object;
+
+	/**
+	 * Pixel value from the top of the document. When scrolled passed, the
+	 * sticky header is no longer sticky, and renders normally.
+	 */
+	lowerBound?: number;
+
+	/**
+	 * Width of section when it sticks to the top edge of the screen. When
+	 * omitted, it defaults to the last width of the section.
+	 */
+	viewportWidth?: number;
+}
+
+interface IContainerRect extends ClientRect {
+	scrollWidth: number;
+	frameLeft: number;
+}
+
+interface IStickySectionState {
+	isAboveFold: boolean;
+	containerRect: IContainerRect;
+}
+
+class StickySection extends React.Component<IStickySectionProps, IStickySectionState, {}> {
+	constructor(props: IStickySectionProps) {
+		super(props);
+
+		this.state = {
+			isAboveFold: false,
+			containerRect: {
+				bottom: 0,
+				height: 0,
+				left: 0,
+				right: 0,
+				top: 0,
+				width: 0,
+				frameLeft: 0,
+				scrollWidth: 0,
+			},
+		};
+
+
+	}
+	private scrollContainer = React.createRef<HTMLDivElement>();
+	private stickySection = React.createRef<HTMLDivElement>();
+	private stickyFrame = React.createRef<HTMLDivElement>();
+
+	static displayName = 'StickySection';
+
+	static peek = {
+		description: `
+			\`StickySection\` can be wrapped around any content to make it _stick_
+			to the top edge of the screen when a user scrolls beyond its initial
+			location.
+		`,
+		categories: ['helpers'],
+	};
+
+
+	static propTypes = {
 		children: node`
 			any valid React children
 		`,
@@ -40,16 +95,9 @@ const StickySection = createClass({
 			Width of section when it sticks to the top edge of the screen. When
 			omitted, it defaults to the last width of the section.
 		`,
-	},
+	};
 
-	getInitialState() {
-		return {
-			isAboveFold: false,
-			containerRect: {},
-		};
-	},
-
-	handleScroll() {
+	handleScroll = (): void => {
 		const { lowerBound } = this.props;
 
 		const { isAboveFold, containerRect } = this.state;
@@ -90,12 +138,12 @@ const StickySection = createClass({
 				containerRect: nextContainerRect,
 			});
 		}
-	},
+	};
 
-	getContainerRect() {
-		const containerRect = getAbsoluteBoundingClientRect(this.scrollContainer);
-		const stickyRect = this.stickySection.getBoundingClientRect();
-		const frameRect = this.stickyFrame.getBoundingClientRect();
+	getContainerRect = (): IContainerRect => {
+		const containerRect = getAbsoluteBoundingClientRect((this.scrollContainer.current as HTMLElement));
+		const stickyRect = (this.stickySection.current as HTMLElement).getBoundingClientRect();
+		const frameRect = (this.stickyFrame.current as HTMLElement).getBoundingClientRect();
 
 		return {
 			bottom: containerRect.top + stickyRect.height,
@@ -103,27 +151,27 @@ const StickySection = createClass({
 			left: containerRect.left,
 			right: containerRect.left + stickyRect.width,
 			top: containerRect.top,
-			scrollWidth: this.stickySection.scrollWidth,
+			scrollWidth: (this.stickySection.current as HTMLElement).scrollWidth,
 			width: containerRect.width,
 			frameLeft: frameRect.left,
 		};
-	},
+	};
 
-	componentDidMount() {
-		setTimeout(() => {
+	componentDidMount(): void {
+		setTimeout((): void => {
 			this.setState({
 				containerRect: this.getContainerRect(),
 			});
 			this.handleScroll();
 		}, 1);
 		window.addEventListener('scroll', this.handleScroll, true);
-	},
+	};
 
-	componentWillUnmount() {
+	componentWillUnmount(): void {
 		window.removeEventListener('scroll', this.handleScroll, true);
-	},
+	};
 
-	render() {
+	render(): JSX.Element {
 		const {
 			children,
 			className,
@@ -136,7 +184,7 @@ const StickySection = createClass({
 
 		return (
 			<div
-				{...omitProps(passThroughs, StickySection)}
+				{...omitProps<IStickySectionProps>(passThroughs, undefined, Object.keys(StickySection))}
 				className={cx('&', className)}
 				style={{
 					...(isAboveFold
@@ -146,11 +194,11 @@ const StickySection = createClass({
 						: {}),
 					...style,
 				}}
-				ref={scrollContainer => (this.scrollContainer = scrollContainer)}
+				ref={this.scrollContainer}
 			>
 				<div
 					className={cx('&-sticky-frame')}
-					ref={stickyFrame => (this.stickyFrame = stickyFrame)}
+					ref={this.stickyFrame}
 					style={{
 						...(isAboveFold
 							? {
@@ -168,7 +216,7 @@ const StickySection = createClass({
 				>
 					<div
 						className={cx('&-sticky-section')}
-						ref={stickySection => (this.stickySection = stickySection)}
+						ref={this.stickySection}
 						style={{
 							...(isAboveFold
 								? {
@@ -189,7 +237,7 @@ const StickySection = createClass({
 				</div>
 			</div>
 		);
-	},
-});
+	}
+};
 
 export default StickySection;
