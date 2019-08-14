@@ -7,6 +7,19 @@ const cx = lucidClassNames.bind('&-Typography');
 
 const { node, string, oneOf } = PropTypes;
 
+enum ElementTypes {
+	p = 'p',
+	tabular = 'p',
+	h1 = 'h1',
+	h2 = 'h2',
+	h3 = 'h3',
+	a = 'a',
+	pre = 'pre',
+	code = 'code',
+	kbd = 'kbd',
+	samp = 'samp',
+}
+
 
 export interface ITypographyProps {
 	//* Can contain elements or nested \`Typography\` components. */
@@ -65,22 +78,9 @@ class Typography extends React.Component<ITypographyProps, {}, {}> {
 		`,
 	};
 
-	elementTypes = {
-		p: 'p',
-		tabular: 'p',
-		h1: 'h1',
-		h2: 'h2',
-		h3: 'h3',
-		a: 'a',
-		pre: 'pre',
-		code: 'code',
-		kbd: 'kbd',
-		samp: 'samp',
-	};
-
 	render(): JSX.Element {
 		const { children, className, variant, ...passThroughs } = this.props;
-		const Element = this.elementTypes[variant ? variant : 'p'];
+		const Element = ElementTypes[variant ? variant : 'p'];
 
 		return React.createElement(
 			Element,
