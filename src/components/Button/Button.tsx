@@ -117,7 +117,7 @@ export class Button extends React.Component<IButtonProps, {}, {}> {
 		`,
 	};
 
-	defaultProps = {
+	static defaultProps = {
 		isDisabled: false,
 		isActive: false,
 		onClick: _.noop,
@@ -141,7 +141,7 @@ export class Button extends React.Component<IButtonProps, {}, {}> {
 				onClick({ event, props: this.props });
 			}
 		}
-	}
+	};
 
 	render(): JSX.Element {
 		const {
@@ -184,6 +184,6 @@ export class Button extends React.Component<IButtonProps, {}, {}> {
 			</button>
 		);
 	}
-};
+}
 
 export default Button;

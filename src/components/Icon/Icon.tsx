@@ -140,7 +140,7 @@ class Icon extends React.Component<IIconProps, {}, {}> {
 		isDisabled: false,
 		isClickable: false,
 		color: Colors.COLOR_PRIMARY,
-	}
+	};
 
 	handleClick = (event: React.MouseEvent): void => {
 		const { onClick, isDisabled, isClickable, onSelect } = this.props;
@@ -157,7 +157,7 @@ class Icon extends React.Component<IIconProps, {}, {}> {
 			}
 			onSelect({ event, props: this.props });
 		}
-	}
+	};
 
 	render(): JSX.Element {
 		const {
@@ -178,7 +178,7 @@ class Icon extends React.Component<IIconProps, {}, {}> {
 				height={size}
 				viewBox={viewBox}
 				preserveAspectRatio={aspectRatio}
-				{...omitProps<IIconProps>(passThroughs, undefined, Object.keys(Icon))}
+				{...omitProps<IIconProps>(passThroughs, undefined, Object.keys(Icon.propTypes))}
 				className={cx(
 					'&',
 					{
@@ -195,6 +195,6 @@ class Icon extends React.Component<IIconProps, {}, {}> {
 			</svg>
 		);
 	}
-};
+}
 
 export default Icon;
