@@ -143,7 +143,7 @@ export class Button extends React.Component<IButtonProps, {}, {}> {
 		}
 	};
 
-	render(): JSX.Element {
+	render(): React.ReactNode {
 		const {
 			isDisabled,
 			isActive,
@@ -158,7 +158,10 @@ export class Button extends React.Component<IButtonProps, {}, {}> {
 
 		return (
 			<button
-				{...omitProps(passThroughs, undefined, [...Object.keys(Button.propTypes), 'callbackId'])}
+				{...omitProps(passThroughs, undefined, [
+					...Object.keys(Button.propTypes),
+					'callbackId',
+				])}
 				ref={this.buttonRef}
 				className={cx(
 					'&',

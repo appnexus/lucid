@@ -20,7 +20,6 @@ enum ElementTypes {
 	samp = 'samp',
 }
 
-
 export interface ITypographyProps {
 	//* Can contain elements or nested \`Typography\` components. */
 	children?: React.ReactNode;
@@ -29,16 +28,17 @@ export interface ITypographyProps {
 	className?: string;
 
 	/** This prop defines the type of text that will be displayed. It may be an actual HTML element or something with extra semantic meaning. */
-	variant?: 'p'
-		|	'tabular'
-		|	'h1'
-		|	'h2'
-		|	'h3'
-		|	'a'
-		|	'pre'
-		|	'code'
-		|	'kbd'
-		|	'samp';
+	variant?:
+		| 'p'
+		| 'tabular'
+		| 'h1'
+		| 'h2'
+		| 'h3'
+		| 'a'
+		| 'pre'
+		| 'code'
+		| 'kbd'
+		| 'samp';
 }
 
 class Typography extends React.Component<ITypographyProps, {}, {}> {
@@ -78,19 +78,23 @@ class Typography extends React.Component<ITypographyProps, {}, {}> {
 		`,
 	};
 
-	render(): JSX.Element {
+	render(): React.ReactNode {
 		const { children, className, variant, ...passThroughs } = this.props;
 		const Element = ElementTypes[variant ? variant : 'p'];
 
 		return React.createElement(
 			Element,
 			{
-				...omitProps<ITypographyProps>(passThroughs, undefined, Object.keys(Typography.propTypes)),
-				className: cx('&', `&-${variant}`, className)
+				...omitProps<ITypographyProps>(
+					passThroughs,
+					undefined,
+					Object.keys(Typography.propTypes)
+				),
+				className: cx('&', `&-${variant}`, className),
 			},
 			children
-		)
+		);
 	}
-};
+}
 
 export default Typography;

@@ -148,18 +148,18 @@ class Icon extends React.Component<IIconProps, {}, {}> {
 		const domNode = this.svgRef.current;
 
 		if (onClick) {
-			onClick({event, props: this.props});
+			onClick({ event, props: this.props });
 		}
 
 		if (onSelect && isClickable && !isDisabled) {
-			if(domNode) {
-				domNode.focus()
+			if (domNode) {
+				domNode.focus();
 			}
 			onSelect({ event, props: this.props });
 		}
 	};
 
-	render(): JSX.Element {
+	render(): React.ReactNode {
 		const {
 			className,
 			children,
@@ -178,7 +178,11 @@ class Icon extends React.Component<IIconProps, {}, {}> {
 				height={size}
 				viewBox={viewBox}
 				preserveAspectRatio={aspectRatio}
-				{...omitProps<IIconProps>(passThroughs, undefined, Object.keys(Icon.propTypes))}
+				{...omitProps<IIconProps>(
+					passThroughs,
+					undefined,
+					Object.keys(Icon.propTypes)
+				)}
 				className={cx(
 					'&',
 					{

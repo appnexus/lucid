@@ -24,7 +24,7 @@ class Error extends React.Component<IErrorProps, {}, {}> {
 	};
 	static propName = 'Error';
 
-	render(): JSX.Element {
+	render(): React.ReactNode {
 		return (
 			<div>{this.props.children}</div>
 		);
@@ -80,7 +80,7 @@ class Validation extends React.Component<IValidationProps, {}, {}> {
 
 	static Error = Error;
 
-	render(): JSX.Element {
+	render(): React.ReactNode {
 		const { className, children, ...passThroughs } = this.props;
 
 		const errorChildProps = _.get(

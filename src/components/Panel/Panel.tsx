@@ -25,9 +25,7 @@ class Header extends React.Component<IHeaderProps, {}, {}> {
 	static propName = 'Header';
 
 	render(): JSX.Element {
-		return (
-			<div>{this.props.children}</div>
-		);
+		return <div>{this.props.children}</div>;
 	}
 }
 
@@ -48,55 +46,52 @@ class Footer extends React.Component<IFooterProps, {}, {}> {
 	static propName = 'Footer';
 
 	render(): JSX.Element {
-		return (
-			<div>{this.props.children}</div>
-		);
+		return <div>{this.props.children}</div>;
 	}
 }
 
 export interface IPanelProps {
 	/**
 	 * Appended to the component-specific class names set on the root element.
-	*/
+	 */
 	className?: string;
 
 	/**
 	 * *Child Element* - Header contents. Only one \`Header\` is used.
-	*/
+	 */
 	Header?: React.ReactNode & { props: IHeaderProps };
 
 	/**
 	 * *Child Element* - Footer contents. Only one \`Footer\` is used.
-	*/
+	 */
 	Footer?: React.ReactNode & { props: IFooterProps };
 
 	/**
 	 * Generally you should only have a single child element so the centering works
 	 *  correctly.
-	*/
+	 */
 	children?: React.ReactNode;
 
 	/**
 	 * If set to true, creates a content section with no padding.
-	*/
+	 */
 	isGutterless?: boolean;
 
 	/**
 	 * If set to false, removes margin around the Panel
-	*/
+	 */
 	hasMargin?: boolean;
 
 	/**
 	 * Styles that are passed through to root element.
-	*/
+	 */
 	style?: object;
 
 	/**
 	 * If set to true, makes content overflow scrollable, when Panel has a set
 	 * height.
-	*/
+	 */
 	isScrollable?: boolean;
-
 }
 
 class Panel extends React.Component<IPanelProps, {}, {}> {
@@ -139,7 +134,7 @@ class Panel extends React.Component<IPanelProps, {}, {}> {
 			If set to true, makes content overflow scrollable, when Panel has a set
 			height.
 		`,
-	}
+	};
 
 	static Header = Header;
 	static Footer = Footer;
@@ -150,7 +145,7 @@ class Panel extends React.Component<IPanelProps, {}, {}> {
 		isScrollable: true,
 	};
 
-	render(): JSX.Element {
+	render(): React.ReactNode {
 		const {
 			children,
 			className,
@@ -170,7 +165,11 @@ class Panel extends React.Component<IPanelProps, {}, {}> {
 
 		return (
 			<div
-				{...omitProps<IPanelProps>(passThroughs, undefined, Object.keys(Panel.propTypes))}
+				{...omitProps<IPanelProps>(
+					passThroughs,
+					undefined,
+					Object.keys(Panel.propTypes)
+				)}
 				className={cx('&', className, {
 					'&-is-not-gutterless': !isGutterless,
 					'&-has-margin': hasMargin,
@@ -196,6 +195,6 @@ class Panel extends React.Component<IPanelProps, {}, {}> {
 			</div>
 		);
 	}
-};
+}
 
 export default Panel;

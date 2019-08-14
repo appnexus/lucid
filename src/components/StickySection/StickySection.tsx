@@ -41,7 +41,11 @@ interface IStickySectionState {
 	containerRect: IContainerRect;
 }
 
-class StickySection extends React.Component<IStickySectionProps, IStickySectionState, {}> {
+class StickySection extends React.Component<
+	IStickySectionProps,
+	IStickySectionState,
+	{}
+> {
 	constructor(props: IStickySectionProps) {
 		super(props);
 
@@ -58,8 +62,6 @@ class StickySection extends React.Component<IStickySectionProps, IStickySectionS
 				scrollWidth: 0,
 			},
 		};
-
-
 	}
 	private scrollContainer = React.createRef<HTMLDivElement>();
 	private stickySection = React.createRef<HTMLDivElement>();
@@ -75,7 +77,6 @@ class StickySection extends React.Component<IStickySectionProps, IStickySectionS
 		`,
 		categories: ['helpers'],
 	};
-
 
 	static propTypes = {
 		children: node`
@@ -141,9 +142,12 @@ class StickySection extends React.Component<IStickySectionProps, IStickySectionS
 	};
 
 	getContainerRect = (): IContainerRect => {
-		const containerRect = getAbsoluteBoundingClientRect((this.scrollContainer.current as HTMLElement));
-		const stickyRect = (this.stickySection.current as HTMLElement).getBoundingClientRect();
-		const frameRect = (this.stickyFrame.current as HTMLElement).getBoundingClientRect();
+		const containerRect = getAbsoluteBoundingClientRect(this.scrollContainer
+			.current as HTMLElement);
+		const stickyRect = (this.stickySection
+			.current as HTMLElement).getBoundingClientRect();
+		const frameRect = (this.stickyFrame
+			.current as HTMLElement).getBoundingClientRect();
 
 		return {
 			bottom: containerRect.top + stickyRect.height,
@@ -165,13 +169,13 @@ class StickySection extends React.Component<IStickySectionProps, IStickySectionS
 			this.handleScroll();
 		}, 1);
 		window.addEventListener('scroll', this.handleScroll, true);
-	};
+	}
 
 	componentWillUnmount(): void {
 		window.removeEventListener('scroll', this.handleScroll, true);
-	};
+	}
 
-	render(): JSX.Element {
+	render(): React.ReactNode {
 		const {
 			children,
 			className,
@@ -184,7 +188,11 @@ class StickySection extends React.Component<IStickySectionProps, IStickySectionS
 
 		return (
 			<div
-				{...omitProps<IStickySectionProps>(passThroughs, undefined, Object.keys(StickySection))}
+				{...omitProps<IStickySectionProps>(
+					passThroughs,
+					undefined,
+					Object.keys(StickySection)
+				)}
 				className={cx('&', className)}
 				style={{
 					...(isAboveFold
@@ -238,6 +246,6 @@ class StickySection extends React.Component<IStickySectionProps, IStickySectionS
 			</div>
 		);
 	}
-};
+}
 
 export default StickySection;
