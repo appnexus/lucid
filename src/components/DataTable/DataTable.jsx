@@ -181,7 +181,7 @@ const DataTable = createClass({
 	getInitialState() {
 		return {
 			// Represents the actively changing width as the cell is resized.
-			activeWidth: [],
+			activeWidth: {},
 		};
 	},
 
@@ -274,13 +274,13 @@ const DataTable = createClass({
 		);
 		const allSelected = _.every(data, 'isSelected');
 
-		const passActiveWidth = (childData, obj) => {
+		const handleResize = (columnWidth, { props: childProps })  => {
 			// setting latest column width to Tbody
 			this.setState(state => ({
 				activeWidth: {
 					...state.activeWidth,
-					[obj.props.children]: childData,
-				}
+					[childProps.children]: columnWidth,
+				},
 			}));
 		};
 		return (
@@ -308,7 +308,7 @@ const DataTable = createClass({
 							_.map(childComponentElements, ({ props, type }, index) =>
 								type === DataTable.Column ? (
 									<Th
-										onResize={props.isResizable ? passActiveWidth : null}
+										onResize={props.isResizable ? handleResize : null}
 										{..._.omit(props, ['field', 'children', 'title'])}
 										onClick={
 											DataTable.shouldColumnHandleSort(props)
