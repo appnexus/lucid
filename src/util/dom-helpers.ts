@@ -1,6 +1,8 @@
 import _ from 'lodash';
 
-export function getAbsoluteBoundingClientRect(domNode: HTMLElement): ClientRect {
+export function getAbsoluteBoundingClientRect(
+	domNode: HTMLElement
+): ClientRect {
 	const elementRect: ClientRect = domNode.getBoundingClientRect();
 
 	return {
@@ -13,7 +15,11 @@ export function getAbsoluteBoundingClientRect(domNode: HTMLElement): ClientRect 
 	};
 }
 
-export function scrollParentTo(domNode: HTMLElement, additionalOffset: number = 0): void {
+export function scrollParentTo(
+	domNode: HTMLElement | null,
+	additionalOffset: number = 0
+): void {
+	if (domNode) {
 		const parentNode = domNode.parentElement;
 
 		if (parentNode !== null) {
@@ -31,9 +37,14 @@ export function scrollParentTo(domNode: HTMLElement, additionalOffset: number = 
 					domNode.offsetHeight - (parentNode.clientHeight - domNode.offsetTop);
 			} // else don't need to align anything
 		}
+	}
 }
 
-export function dispatchDOMEvent(node: EventTarget, eventName: string, assignedEventProps: any) {
+export function dispatchDOMEvent(
+	node: EventTarget,
+	eventName: string,
+	assignedEventProps: any
+) {
 	const event = document.createEvent('Event');
 	event.initEvent(eventName, true, true);
 	node.dispatchEvent(_.assign(event, assignedEventProps));
@@ -51,7 +62,11 @@ export function dispatchDOMEvent(node: EventTarget, eventName: string, assignedE
  * @param {string} nodeName - dom node name, should be uppercased, e.g. `LABEL` or `SPAN`
  * @returns {boolean}
  */
-export function sharesAncestor(node: Node, siblingNode: Node, nodeName: string): boolean {
+export function sharesAncestor(
+	node: Node,
+	siblingNode: Node,
+	nodeName: string
+): boolean {
 	const currentNodeName = _.get(node, 'nodeName');
 	const parentNode = _.get(node, 'parentNode');
 
