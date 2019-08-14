@@ -7,10 +7,17 @@ import {
 	omitFunctionPropsDeep,
 } from './state-management';
 
+export interface FC<P> extends React.FC<P> {
+	peek: {
+		description: string;
+		categories: string[];
+	};
+}
+
 type TypesType<P> =
 	| ICreateClassComponentClass<P>
 	| Array<ICreateClassComponentClass<P>>
-	| { propName: string }
+	| { propName: string };
 
 interface ICreateClassComponentSpec<P extends { [key: string]: any }, S>
 	extends React.Mixin<P, S> {
@@ -113,7 +120,10 @@ export function filterTypes<P>(
 }
 
 // return all elements not matching the specified types
-export function rejectTypes(children: React.ElementType, types = []): React.ReactNode[] {
+export function rejectTypes(
+	children: React.ElementType,
+	types = []
+): React.ReactNode[] {
 	types = [].concat(types); // coerce to Array
 
 	return _.reject(
@@ -129,7 +139,10 @@ export function createElements<P>(
 ): React.ReactElement[] {
 	return _.reduce(
 		values,
-		(elements: Array<React.ReactElement<P>>, typeValue): React.ReactElement[] => {
+		(
+			elements: Array<React.ReactElement<P>>,
+			typeValue
+		): React.ReactElement[] => {
 			if (React.isValidElement(typeValue) && typeValue.type === type) {
 				return elements.concat(typeValue);
 			} else if (
@@ -170,7 +183,7 @@ export function findTypes<P extends { children?: React.ReactNode }>(
 		[]
 	);
 
-	if(props.children === undefined) {
+	if (props.children === undefined) {
 		return elementsFromProps;
 	}
 
@@ -181,11 +194,9 @@ export function findTypes<P extends { children?: React.ReactNode }>(
 // return the first element found in props and children of the specificed type(s)
 export function getFirst<P>(
 	props: P,
-	types:
-		| TypesType<P>
-		| undefined,
+	types: TypesType<P> | undefined,
 	defaultValue?: React.ReactNode
-): {} | null | undefined {
+): React.ReactNode | null | undefined {
 	return _.first(findTypes<P>(props, types)) || defaultValue;
 }
 
@@ -198,7 +209,7 @@ export function getFirst<P>(
 //
 // Note: The Partial<P> type is referring to the props passed into the omitProps,
 // not the props defined on the component.
-export function omitProps<P extends object> (
+export function omitProps<P extends object>(
 	props: P,
 	component: ICreateClassComponentClass<P> | undefined,
 	keys: string[] = [],
@@ -211,11 +222,8 @@ export function omitProps<P extends object> (
 		: ['initialState'];
 
 	// this is to support non-createClass components that we've converted to TypeScript
-	if(component === undefined) {
-		return _.omit(
-			props,
-			keys.concat(additionalOmittedKeys)
-		);
+	if (component === undefined) {
+		return _.omit(props, keys.concat(additionalOmittedKeys));
 	}
 
 	return _.omit(

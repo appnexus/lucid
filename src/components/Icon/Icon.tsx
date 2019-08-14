@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
@@ -126,8 +127,7 @@ class Icon extends React.Component<IIconProps, {}, {}> {
 			Any valid React children.
 		`,
 
-		// TODO: make sure react peek is a-okay with this craziness!
-		color: oneOf(Colors)`
+		color: oneOf(_.values(Colors))`
 			Sets the color of the Icon.  May not be applicable for icons that are tied
 			to specific colors (e.g. DangerIcon).
 		`,
