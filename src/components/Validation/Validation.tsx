@@ -32,7 +32,7 @@ class Error extends React.Component<IErrorProps, {}, {}> {
 }
 
 export interface IValidationProps {
-	//* Any valid React children. */
+	/** Any valid React children. */
 	children?: React.ReactNode;
 
 	/** Classes that are appended to the component defaults. This prop is run through the \`classnames\` library. */
