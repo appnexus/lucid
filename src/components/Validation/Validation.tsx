@@ -25,9 +25,7 @@ class ValidationError extends React.Component<IValidationErrorProps, {}, {}> {
 	static propName = 'Error';
 
 	render(): React.ReactNode {
-		return (
-			<div>{this.props.children}</div>
-		);
+		return <div>{this.props.children}</div>;
 	}
 }
 
@@ -50,7 +48,7 @@ class Validation extends React.Component<IValidationProps, {}, {}> {
 	constructor(props: IValidationProps) {
 		super(props);
 	}
-	static displayName: 'Validation'
+	static displayName = 'Validation';
 	static peek = {
 		description: `
 			Validation is a wrapper component that's meant to be used by other
@@ -88,9 +86,13 @@ class Validation extends React.Component<IValidationProps, {}, {}> {
 			'props'
 		);
 
-			return (
+		return (
 			<div
-				{...omitProps<IValidationProps>(passThroughs, undefined, Object.keys(Validation.propTypes))}
+				{...omitProps<IValidationProps>(
+					passThroughs,
+					undefined,
+					Object.keys(Validation.propTypes)
+				)}
 				className={cx(
 					'&',
 					{
@@ -113,6 +115,6 @@ class Validation extends React.Component<IValidationProps, {}, {}> {
 			</div>
 		);
 	}
-};
+}
 
 export default Validation;

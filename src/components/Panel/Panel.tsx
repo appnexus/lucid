@@ -99,8 +99,7 @@ class Panel extends React.Component<IPanelProps, {}, {}> {
 		super(props);
 	}
 
-	static displayName: 'Panel';
-	static propName: 'Panel';
+	static displayName = 'Panel';
 	static peek = {
 		description: `
 			Panel is used to wrap content to better organize elements in window.

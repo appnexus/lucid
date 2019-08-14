@@ -20,21 +20,22 @@ export function scrollParentTo(
 	additionalOffset: number = 0
 ): void {
 	if (domNode) {
-		const parentNode = domNode.parentElement;
+		const parentElement = domNode.parentElement;
 
-		if (parentNode !== null) {
-			if (parentNode.scrollTop > domNode.offsetTop - additionalOffset) {
+		if (parentElement) {
+			if (parentElement.scrollTop > domNode.offsetTop - additionalOffset) {
 				// if the top of the node is above the scroll line,
 				// align to top
-				parentNode.scrollTop = domNode.offsetTop - additionalOffset;
+				parentElement.scrollTop = domNode.offsetTop - additionalOffset;
 			} else if (
-				parentNode.scrollTop + parentNode.clientHeight <
+				parentElement.scrollTop + parentElement.clientHeight <
 				domNode.offsetTop + domNode.offsetHeight
 			) {
 				// else if the bottom of the node is below the fold,
 				// align to bottom
-				parentNode.scrollTop =
-					domNode.offsetHeight - (parentNode.clientHeight - domNode.offsetTop);
+				parentElement.scrollTop =
+					domNode.offsetHeight -
+					(parentElement.clientHeight - domNode.offsetTop);
 			} // else don't need to align anything
 		}
 	}
@@ -68,14 +69,14 @@ export function sharesAncestor(
 	nodeName: string
 ): boolean {
 	const currentNodeName = _.get(node, 'nodeName');
-	const parentNode = _.get(node, 'parentNode');
+	const parentElement = _.get(node, 'parentElement');
 
 	if (currentNodeName === nodeName) {
 		return node.contains(siblingNode);
 	}
 
-	if (parentNode) {
-		return sharesAncestor(parentNode, siblingNode, nodeName);
+	if (parentElement) {
+		return sharesAncestor(parentElement, siblingNode, nodeName);
 	}
 
 	return false;
