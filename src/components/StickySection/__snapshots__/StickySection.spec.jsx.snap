@@ -3,7 +3,6 @@
 exports[`StickySection [common] example testing should match snapshot(s) for 1.with-lower-bound 1`] = `
 <div
   className="lucid-StickySection"
-  lowerBound={600}
   style={
     Object {
       "backgroundColor": "#2abbb0",
@@ -39,7 +38,6 @@ exports[`StickySection [common] example testing should match snapshot(s) for 1.w
 exports[`StickySection [common] example testing should match snapshot(s) for 2.with-lower-bound-and-scroll-viewport-width 1`] = `
 <div
   className="lucid-StickySection"
-  lowerBound={1838}
   style={
     Object {
       "backgroundColor": "#2abbb0",
