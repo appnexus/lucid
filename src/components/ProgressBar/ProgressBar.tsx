@@ -32,8 +32,8 @@ interface IProgressBarFC extends FC<IProgressBarProps> {
 	Title: Title;
 }
 
-const Title: FC<ITitleProps> = (props): null => null;
-Title.propName = 'Title';
+const Title: FC<ITitleProps> = (): null => null;
+Title.propName = 'ProgressBar.Title';
 Title.peek = {
 	description: `
 		Content displayed at the top of the ProgressBar.

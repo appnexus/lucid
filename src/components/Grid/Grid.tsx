@@ -1,0 +1,268 @@
+import _ from 'lodash';
+import React from 'react';
+import PropTypes from 'react-peek/prop-types';
+import { lucidClassNames } from '../../util/style-helpers';
+import { findTypes, omitProps, FC } from '../../util/component-types';
+
+const cx = lucidClassNames.bind('&-Grid');
+
+const { string, bool, node } = PropTypes;
+
+// -----------------------------------------------------------------------------
+// Type definitions
+// -----------------------------------------------------------------------------
+
+interface IGridProps {
+	/** Appended to the component-specific class names set on the root element. */
+	className?: string;
+
+	/** explicitly set the primary axis of the grid to Y */
+	isVertical?: boolean;
+
+	/** explicitly set the primary axis of the grid to X */
+	isHorizontal?: boolean;
+
+	/** a grid without padding separating grid cells */
+	isGutterless?: boolean;
+
+	/** Allow Grids to wrap multiple lines */
+	isMultiline?: boolean;
+
+	/** Any valid React component */
+	children?: React.ReactNode;
+}
+
+interface ICellProps {
+	/** fill all twelve columns of the primary grid axis */
+	isFull?: boolean;
+
+	/** fill six columns of the primary grid axis */
+	isHalf?: boolean;
+
+	/** fill four columns of the primary grid axis */
+	isThird?: boolean;
+
+	/** fill three columns of the primary grid axis */
+	isQuarter?: boolean;
+
+	/** fill 2 columns of 12 */
+	is2?: boolean;
+
+	/** fill 3 columns of 12 */
+	is3?: boolean;
+
+	/** fill 4 columns of 12 */
+	is4?: boolean;
+
+	/** fill 5 columns of 12 */
+	is5?: boolean;
+
+	/** fill 6 columns of 12 */
+	is6?: boolean;
+
+	/** fill 7 columns of 12 */
+	is7?: boolean;
+
+	/** fill 8 columns of 12 */
+	is8?: boolean;
+
+	/** fill 9 columns of 12 */
+	is9?: boolean;
+
+	/** fill 10 columns of 12 */
+	is10?: boolean;
+
+	/** fill 11 columns of 12 */
+	is11?: boolean;
+
+	/** offset a grid cell by three columns */
+	isOffsetQuarter?: boolean;
+
+	/** offset a grid cell by four columns */
+	isOffsetThird?: boolean;
+
+	/** offset a grid cell by six columns */
+	isOffsetHalf?: boolean;
+}
+
+interface IGridFC extends FC<IGridProps> {
+	Cell: Cell;
+}
+
+// -----------------------------------------------------------------------------
+// Cell child component
+// -----------------------------------------------------------------------------
+const Cell: FC<ICellProps> = (): null => null;
+Cell.displayName = 'Grid.Cell';
+Cell.peek = {
+	description: `
+		Renders an \`<article>\` as the grid cell
+	`,
+};
+Cell.propTypes = {
+	isFull: bool`
+		fill all twelve columns of the primary grid axis
+	`,
+	isHalf: bool`
+		fill six columns of the primary grid axis
+	`,
+	isThird: bool`
+		fill four columns of the primary grid axis
+	`,
+	isQuarter: bool`
+		fill three columns of the primary grid axis
+	`,
+	is2: bool`
+		fill 2 columns of 12
+	`,
+	is3: bool`
+		fill 3 columns of 12
+	`,
+	is4: bool`
+		fill 4 columns of 12
+	`,
+	is5: bool`
+		fill 5 columns of 12
+	`,
+	is6: bool`
+		fill 6 columns of 12
+	`,
+	is7: bool`
+		fill 7 columns of 12
+	`,
+	is8: bool`
+		fill 8 columns of 12
+	`,
+	is9: bool`
+		fill 9 columns of 12
+	`,
+	is10: bool`
+		fill 10 columns of 12
+	`,
+	is11: bool`
+		fill 11 columns of 12
+	`,
+	isOffsetQuarter: bool`
+		offset a grid cell by three columns
+	`,
+	isOffsetThird: bool`
+		offset a grid cell by four columns
+	`,
+	isOffsetHalf: bool`
+		offset a grid cell by six columns
+	`,
+};
+Cell.peek = {
+	description: `
+		Renders an \`<article>\` as the grid cell
+	`,
+};
+
+// -----------------------------------------------------------------------------
+// Grid
+// -----------------------------------------------------------------------------
+const Grid: IGridFC = (props): React.ReactElement => {
+	const {
+		className,
+		children,
+		isVertical,
+		isHorizontal,
+		isGutterless,
+		isMultiline,
+		...passThroughs
+	} = props;
+
+	const cellChildProps = _.map(findTypes(props, Grid.Cell), 'props');
+
+	return (
+		<section
+			{...omitProps(passThroughs, undefined, _.keys(Grid.propTypes))}
+			className={cx(
+				'&',
+				{
+					'&-is-vertical': isVertical,
+					'&-is-horizontal': isHorizontal,
+					'&-is-gutterless': isGutterless,
+					'&-is-multiline': isMultiline,
+				},
+				className
+			)}
+		>
+			{_.map(
+				cellChildProps,
+				(cellChildProp, index): React.ReactElement => {
+					return (
+						<article
+							{...omitProps(cellChildProp, Grid.Cell)}
+							key={index}
+							className={cx(
+								'&-Cell',
+								{
+									'&-Cell-is-full': cellChildProp.isFull,
+									'&-Cell-is-half': cellChildProp.isHalf,
+									'&-Cell-is-quarter': cellChildProp.isQuarter,
+									'&-Cell-is-third': cellChildProp.isThird,
+									'&-Cell-is-2': cellChildProp.is2,
+									'&-Cell-is-3': cellChildProp.is3,
+									'&-Cell-is-4': cellChildProp.is4,
+									'&-Cell-is-5': cellChildProp.is5,
+									'&-Cell-is-6': cellChildProp.is6,
+									'&-Cell-is-7': cellChildProp.is7,
+									'&-Cell-is-8': cellChildProp.is8,
+									'&-Cell-is-9': cellChildProp.is9,
+									'&-Cell-is-10': cellChildProp.is10,
+									'&-Cell-is-11': cellChildProp.is11,
+									'&-Cell-is-offset-quarter': cellChildProp.isOffsetQuarter,
+									'&-Cell-is-offset-third': cellChildProp.isOffsetThird,
+									'&-Cell-is-offset-half': cellChildProp.isOffsetHalf,
+								},
+								cellChildProp.className
+							)}
+						>
+							{cellChildProp.children}
+						</article>
+					);
+				}
+			)}
+			{children}
+		</section>
+	);
+};
+Grid.Cell = Cell;
+Grid.displayName = 'Grid';
+Grid.peek = {
+	description: `
+		This component is designed to be used in Composites as a layout tool.
+		You can use the Grid components themselves or create your own
+		components using the Grid styles from Grid.less.  Please see examples
+		for more information.
+	`,
+	categories: ['layout'],
+};
+Grid.propTypes = {
+	className: string`
+		Appended to the component-specific class names set on the root element.
+	`,
+
+	isVertical: bool`
+		explicitly set the primary axis of the grid to Y
+	`,
+
+	isHorizontal: bool`
+		explicitly set the primary axis of the grid to X
+	`,
+
+	isGutterless: bool`
+		a grid without padding separating grid cells
+	`,
+
+	isMultiline: bool`
+		Allow Grids to wrap multiple lines
+	`,
+
+	children: node`
+		Any valid React component
+	`,
+};
+
+export default Grid;
