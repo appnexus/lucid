@@ -11,7 +11,7 @@ const cx = lucidClassNames.bind('&-SlidePanel');
 
 const { bool, func, node, number, string } = PropTypes;
 
-const modulo = (n: number, a: number) => a - n * Math.floor(a / n);
+const modulo = (n: number, a: number): number => a - n * Math.floor(a / n);
 
 interface ISlidePanelSlideProps {
 	description?: string;
@@ -201,17 +201,19 @@ class SlidePanel extends React.Component<ISlidePanelProps, ISlidePanelState, {}>
 						_.size(slides),
 						currOffset - offsetDiff
 					)
+				}, (): void => {
+					_.delay((): void => {
+						shiftChildren((this.slideStrip.current as HTMLElement), -offsetDiff);
+						this.setState({
+							isAnimated: false
+						}, (): void => {
+							this.forceUpdate();
+							this.setState({
+								isAnimated: this.props.isAnimated,
+							})
+						})
+					}, 200)
 				})
-				_.delay(async () => {
-					shiftChildren((this.slideStrip.current as HTMLElement), -offsetDiff);
-					await this.setState({
-						isAnimated: false
-					})
-					this.forceUpdate();
-					this.setState({
-						isAnimated: this.props.isAnimated,
-					})
-				}, 200);
 			}
 		}
 	};
@@ -284,7 +286,7 @@ class SlidePanel extends React.Component<ISlidePanelProps, ISlidePanelState, {}>
 							onTouchEnd={this.handleTouchEnd}
 							onTouchCancel={_.noop}
 						>
-							{_.map(slides, (slide, offset): JSX.Element => {(
+							{_.map(slides, (slide: React.ReactElement, offset): React.ReactNode => (
 									<div
 										key={offset}
 										{...slide.props}
@@ -299,9 +301,7 @@ class SlidePanel extends React.Component<ISlidePanelProps, ISlidePanelState, {}>
 											...slide.props.style,
 										}}
 									/>
-								)
-							}
-							)}
+							))}
 						</div>
 					)}
 				</Motion>
