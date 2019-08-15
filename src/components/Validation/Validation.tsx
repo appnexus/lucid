@@ -8,12 +8,12 @@ const cx = lucidClassNames.bind('&-Validation');
 
 const { any } = PropTypes;
 
-interface IErrorProps {
+interface IValidationErrorProps {
 	description?: string;
 	children?: React.ReactNode;
 }
-class Error extends React.Component<IErrorProps, {}, {}> {
-	constructor(props: IErrorProps) {
+class ValidationError extends React.Component<IValidationErrorProps, {}, {}> {
+	constructor(props: IValidationErrorProps) {
 		super(props);
 	}
 	static displayName = 'Validation.Error';
@@ -43,7 +43,7 @@ export interface IValidationProps {
 			displayed.  If this is the literal \`true\`, it will add the
 			\`-is-error\` class to the wrapper div, but not render the
 			\`-error-content\` \`div\`. */
-	Error?: string | React.ReactNode & { props: IErrorProps };
+	Error?: string | React.ReactNode & { props: IValidationErrorProps };
 }
 
 class Validation extends React.Component<IValidationProps, {}, {}> {
@@ -78,13 +78,13 @@ class Validation extends React.Component<IValidationProps, {}, {}> {
 		`,
 	};
 
-	static Error = Error;
+	static Error = ValidationError;
 
 	render(): React.ReactNode {
 		const { className, children, ...passThroughs } = this.props;
 
 		const errorChildProps = _.get(
-			getFirst<IErrorProps>(this.props, Validation.Error),
+			getFirst<IValidationErrorProps>(this.props, Validation.Error),
 			'props'
 		);
 

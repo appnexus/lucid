@@ -8,12 +8,12 @@ const cx = lucidClassNames.bind('&-Panel');
 
 const { bool, node, object, string } = PropTypes;
 
-interface IHeaderProps {
+interface IPanelHeaderProps {
 	description?: string;
 	children?: React.ReactNode;
 }
-class Header extends React.Component<IHeaderProps, {}, {}> {
-	constructor(props: IHeaderProps) {
+class PanelHeader extends React.Component<IPanelHeaderProps, {}, {}> {
+	constructor(props: IPanelHeaderProps) {
 		super(props);
 	}
 	static displayName = 'Panel.Header';
@@ -24,17 +24,17 @@ class Header extends React.Component<IHeaderProps, {}, {}> {
 	};
 	static propName = 'Header';
 
-	render(): JSX.Element {
+	render(): React.ReactNode {
 		return <div>{this.props.children}</div>;
 	}
 }
 
-interface IFooterProps {
+interface IPanelFooterProps {
 	description?: string;
 	children?: React.ReactNode;
 }
-class Footer extends React.Component<IFooterProps, {}, {}> {
-	constructor(props: IFooterProps) {
+class PanelFooter extends React.Component<IPanelFooterProps, {}, {}> {
+	constructor(props: IPanelFooterProps) {
 		super(props);
 	}
 	static displayName = 'Panel.Footer';
@@ -45,7 +45,7 @@ class Footer extends React.Component<IFooterProps, {}, {}> {
 	};
 	static propName = 'Footer';
 
-	render(): JSX.Element {
+	render(): React.ReactNode {
 		return <div>{this.props.children}</div>;
 	}
 }
@@ -59,12 +59,12 @@ export interface IPanelProps {
 	/**
 	 * *Child Element* - Header contents. Only one \`Header\` is used.
 	 */
-	Header?: React.ReactNode & { props: IHeaderProps };
+	Header?: React.ReactNode & { props: IPanelHeaderProps };
 
 	/**
 	 * *Child Element* - Footer contents. Only one \`Footer\` is used.
 	 */
-	Footer?: React.ReactNode & { props: IFooterProps };
+	Footer?: React.ReactNode & { props: IPanelFooterProps };
 
 	/**
 	 * Generally you should only have a single child element so the centering works
@@ -136,8 +136,8 @@ class Panel extends React.Component<IPanelProps, {}, {}> {
 		`,
 	};
 
-	static Header = Header;
-	static Footer = Footer;
+	static Header = PanelHeader;
+	static Footer = PanelFooter;
 
 	static defaultProps = {
 		isGutterless: false,
