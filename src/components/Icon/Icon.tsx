@@ -8,16 +8,16 @@ const cx = lucidClassNames.bind('&-Icon');
 
 const { any, string, number, bool, func, oneOf } = PropTypes;
 
-enum Colors {
-	COLOR_NEUTRAL_DARK = 'neutral-dark',
-	COLOR_NEUTRAL_LIGHT = 'neutral-light',
-	COLOR_PRIMARY = 'primary',
-	COLOR_WHITE = 'white',
-	COLOR_SUCCESS = 'success',
-	COLOR_WARNING = 'warning',
-	COLOR_SECONDARY_ONE = 'secondary-one',
-	COLOR_SECONDARY_TWO = 'secondary-two',
-	COLOR_SECONDARY_THREE = 'secondary-three',
+enum Color {
+	ColorNeutralDark = 'neutral-dark',
+	ColorNeutralLight = 'neutral-light',
+	ColorPrimary = 'primary',
+	ColorWhite = 'white',
+	ColorSuccess = 'success',
+	ColorWarning = 'warning',
+	ColorSecondaryOne = 'secondary-one',
+	ColorSecondaryTwo = 'secondary-two',
+	ColorSecondaryThree = 'secondary-three',
 }
 
 export interface IIconProps {
@@ -63,7 +63,7 @@ export interface IIconProps {
 	children?: React.ReactNode;
 
 	/** Sets the color of the Icon.  May not be applicable for icons that are tied to specific colors (e.g. DangerIcon). */
-	color?: Colors;
+	color?: Color;
 }
 
 class Icon extends React.Component<IIconProps, {}, {}> {
@@ -127,7 +127,7 @@ class Icon extends React.Component<IIconProps, {}, {}> {
 			Any valid React children.
 		`,
 
-		color: oneOf(_.values(Colors))`
+		color: oneOf(_.values(Color))`
 			Sets the color of the Icon.  May not be applicable for icons that are tied
 			to specific colors (e.g. DangerIcon).
 		`,
@@ -139,7 +139,7 @@ class Icon extends React.Component<IIconProps, {}, {}> {
 		viewBox: '0 0 16 16',
 		isDisabled: false,
 		isClickable: false,
-		color: Colors.COLOR_PRIMARY,
+		color: Color.ColorPrimary,
 	};
 
 	handleClick = (event: React.MouseEvent): void => {
