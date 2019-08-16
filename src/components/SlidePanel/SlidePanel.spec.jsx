@@ -110,7 +110,7 @@ describe('SlidePanel', () => {
 				slidePanelInstance.componentDidUpdate(prevProps);
 				jest.runAllTimers();
 
-				expect(slidePanelInstance.offsetTranslate).toBe(5);
+				expect(slidePanelInstance.state.offsetTranslate).toBe(5);
 			});
 		});
 	});

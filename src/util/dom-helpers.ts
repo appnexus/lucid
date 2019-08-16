@@ -82,7 +82,7 @@ export function sharesAncestor(
 	return false;
 }
 
-export function shiftChildren(parent: HTMLElement, n: number = 1) {
+export function shiftChildren(parent: HTMLElement, n: number = 1): void {
 	if (n < 0) {
 		_.times(Math.abs(n), () => {
 			parent.appendChild(parent.children[0]);

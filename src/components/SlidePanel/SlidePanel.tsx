@@ -191,35 +191,28 @@ class SlidePanel extends React.Component<ISlidePanelProps, ISlidePanelState, {}>
 		}
 	};
 
-	componentDidUpdate(
+	async componentDidUpdate(
 		prevProps: ISlidePanelProps,
 		prevState: ISlidePanelState
-	): void {
+	): Promise<void> {
 		const slides = findTypes(this.props, SlidePanel.Slide);
 		const offsetDiff = this.props.offset - prevProps.offset;
-		if (offsetDiff !== 0) {
-			if (this.props.isLooped) {
-				const currOffset = this.state.offsetTranslate;
-				this.setState({
-					offsetTranslate: modulo(
-						_.size(slides),
-						currOffset - offsetDiff
-					)
-				}, (): void => {
-					_.delay((): void => {
-						shiftChildren((this.slideStrip.current as HTMLElement), -offsetDiff);
-						this.setState({
-							isAnimated: false
-						}, (): void => {
-							this.forceUpdate((): void => {
-								this.setState({
-									isAnimated: this.props.isAnimated,
-								})
-							});
-						})
-					}, 200)
-				})
-			}
+		if (offsetDiff !== 0 && this.props.isLooped) {
+			const currOffset = this.state.offsetTranslate;
+			await this.setState({
+				offsetTranslate: modulo(
+					_.size(slides),
+					currOffset - offsetDiff
+				)
+			});
+
+
+			_.delay(async (): Promise<void> => {
+				shiftChildren((this.slideStrip.current as HTMLElement), -offsetDiff);
+				await this.setState({ isAnimated: false });
+				await this.forceUpdate();
+				await this.setState({ isAnimated: this.props.isAnimated })
+			}, 200)
 		}
 	};
 
