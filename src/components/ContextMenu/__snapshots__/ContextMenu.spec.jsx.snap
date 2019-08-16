@@ -4,13 +4,7 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 1.bas
 <span
   className="lucid-ContextMenu"
 >
-  <Button
-    hasOnlyIcon={false}
-    isActive={false}
-    isDisabled={false}
-    onClick={[Function]}
-    type="button"
-  >
+  <Button>
     Target
   </Button>
   <Portal
@@ -34,13 +28,7 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 2.bas
 <span
   className="lucid-ContextMenu"
 >
-  <Button
-    hasOnlyIcon={false}
-    isActive={false}
-    isDisabled={false}
-    onClick={[Function]}
-    type="button"
-  >
+  <Button>
     Target
   </Button>
   <Portal

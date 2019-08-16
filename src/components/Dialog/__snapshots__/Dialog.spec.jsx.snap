@@ -19,11 +19,8 @@ exports[`Dialog [common] example testing should match snapshot(s) for 1.small 1`
       <Button
         className="lucid-Dialog-close-button"
         hasOnlyIcon={true}
-        isActive={false}
-        isDisabled={false}
         kind="invisible"
         onClick={[Function]}
-        type="button"
       >
         <CloseIcon />
       </Button>
@@ -88,9 +85,6 @@ exports[`Dialog [common] example testing should match snapshot(s) for 1.small 1`
       </div>
       <Dialog.Footer>
         <Button
-          hasOnlyIcon={false}
-          isActive={false}
-          isDisabled={false}
           kind="invisible"
           onClick={[Function]}
           style={
@@ -98,17 +92,11 @@ exports[`Dialog [common] example testing should match snapshot(s) for 1.small 1`
               "marginRight": "9px",
             }
           }
-          type="button"
         >
           Cancel
         </Button>
         <Button
-          hasOnlyIcon={false}
-          isActive={false}
-          isDisabled={false}
           kind="primary"
-          onClick={[Function]}
-          type="button"
         >
           Save
         </Button>
@@ -118,9 +106,6 @@ exports[`Dialog [common] example testing should match snapshot(s) for 1.small 1`
       className="lucid-Dialog-footer"
     >
       <Button
-        hasOnlyIcon={false}
-        isActive={false}
-        isDisabled={false}
         kind="invisible"
         onClick={[Function]}
         style={
@@ -128,17 +113,11 @@ exports[`Dialog [common] example testing should match snapshot(s) for 1.small 1`
             "marginRight": "9px",
           }
         }
-        type="button"
       >
         Cancel
       </Button>
       <Button
-        hasOnlyIcon={false}
-        isActive={false}
-        isDisabled={false}
         kind="primary"
-        onClick={[Function]}
-        type="button"
       >
         Save
       </Button>
@@ -166,11 +145,8 @@ exports[`Dialog [common] example testing should match snapshot(s) for 2.medium 1
       <Button
         className="lucid-Dialog-close-button"
         hasOnlyIcon={true}
-        isActive={false}
-        isDisabled={false}
         kind="invisible"
         onClick={[Function]}
-        type="button"
       >
         <CloseIcon />
       </Button>
@@ -435,9 +411,6 @@ exports[`Dialog [common] example testing should match snapshot(s) for 2.medium 1
       </div>
       <Dialog.Footer>
         <Button
-          hasOnlyIcon={false}
-          isActive={false}
-          isDisabled={false}
           kind="invisible"
           onClick={[Function]}
           style={
@@ -445,17 +418,11 @@ exports[`Dialog [common] example testing should match snapshot(s) for 2.medium 1
               "marginRight": "9px",
             }
           }
-          type="button"
         >
           Cancel
         </Button>
         <Button
-          hasOnlyIcon={false}
-          isActive={false}
-          isDisabled={false}
           kind="primary"
-          onClick={[Function]}
-          type="button"
         >
           Save
         </Button>
@@ -465,9 +432,6 @@ exports[`Dialog [common] example testing should match snapshot(s) for 2.medium 1
       className="lucid-Dialog-footer"
     >
       <Button
-        hasOnlyIcon={false}
-        isActive={false}
-        isDisabled={false}
         kind="invisible"
         onClick={[Function]}
         style={
@@ -475,17 +439,11 @@ exports[`Dialog [common] example testing should match snapshot(s) for 2.medium 1
             "marginRight": "9px",
           }
         }
-        type="button"
       >
         Cancel
       </Button>
       <Button
-        hasOnlyIcon={false}
-        isActive={false}
-        isDisabled={false}
         kind="primary"
-        onClick={[Function]}
-        type="button"
       >
         Save
       </Button>
@@ -515,11 +473,8 @@ exports[`Dialog [common] example testing should match snapshot(s) for 3.large-wi
       <Button
         className="lucid-Dialog-close-button"
         hasOnlyIcon={true}
-        isActive={false}
-        isDisabled={false}
         kind="invisible"
         onClick={[Function]}
-        type="button"
       >
         <CloseIcon />
       </Button>
@@ -789,9 +744,6 @@ exports[`Dialog [common] example testing should match snapshot(s) for 3.large-wi
       </div>
       <Dialog.Footer>
         <Button
-          hasOnlyIcon={false}
-          isActive={false}
-          isDisabled={false}
           kind="invisible"
           onClick={[Function]}
           style={
@@ -799,17 +751,11 @@ exports[`Dialog [common] example testing should match snapshot(s) for 3.large-wi
               "marginRight": "9px",
             }
           }
-          type="button"
         >
           Cancel
         </Button>
         <Button
-          hasOnlyIcon={false}
-          isActive={false}
-          isDisabled={false}
           kind="primary"
-          onClick={[Function]}
-          type="button"
         >
           Save
         </Button>
@@ -819,9 +765,6 @@ exports[`Dialog [common] example testing should match snapshot(s) for 3.large-wi
       className="lucid-Dialog-footer"
     >
       <Button
-        hasOnlyIcon={false}
-        isActive={false}
-        isDisabled={false}
         kind="invisible"
         onClick={[Function]}
         style={
@@ -829,17 +772,11 @@ exports[`Dialog [common] example testing should match snapshot(s) for 3.large-wi
             "marginRight": "9px",
           }
         }
-        type="button"
       >
         Cancel
       </Button>
       <Button
-        hasOnlyIcon={false}
-        isActive={false}
-        isDisabled={false}
         kind="primary"
-        onClick={[Function]}
-        type="button"
       >
         Save
       </Button>
@@ -868,11 +805,8 @@ exports[`Dialog [common] example testing should match snapshot(s) for 4.complex 
       <Button
         className="lucid-Dialog-close-button"
         hasOnlyIcon={true}
-        isActive={false}
-        isDisabled={false}
         kind="invisible"
         onClick={[Function]}
-        type="button"
       >
         <CloseIcon />
       </Button>
@@ -989,9 +923,6 @@ exports[`Dialog [common] example testing should match snapshot(s) for 4.complex 
       </SingleSelect>
       <Dialog.Footer>
         <Button
-          hasOnlyIcon={false}
-          isActive={false}
-          isDisabled={false}
           kind="invisible"
           onClick={[Function]}
           style={
@@ -999,17 +930,11 @@ exports[`Dialog [common] example testing should match snapshot(s) for 4.complex 
               "marginRight": "9px",
             }
           }
-          type="button"
         >
           Cancel
         </Button>
         <Button
-          hasOnlyIcon={false}
-          isActive={false}
-          isDisabled={false}
           kind="primary"
-          onClick={[Function]}
-          type="button"
         >
           Save
         </Button>
@@ -1019,9 +944,6 @@ exports[`Dialog [common] example testing should match snapshot(s) for 4.complex 
       className="lucid-Dialog-footer"
     >
       <Button
-        hasOnlyIcon={false}
-        isActive={false}
-        isDisabled={false}
         kind="invisible"
         onClick={[Function]}
         style={
@@ -1029,17 +951,11 @@ exports[`Dialog [common] example testing should match snapshot(s) for 4.complex 
             "marginRight": "9px",
           }
         }
-        type="button"
       >
         Cancel
       </Button>
       <Button
-        hasOnlyIcon={false}
-        isActive={false}
-        isDisabled={false}
         kind="primary"
-        onClick={[Function]}
-        type="button"
       >
         Save
       </Button>
@@ -1067,11 +983,8 @@ exports[`Dialog [common] example testing should match snapshot(s) for 5.no-modal
       <Button
         className="lucid-Dialog-close-button"
         hasOnlyIcon={true}
-        isActive={false}
-        isDisabled={false}
         kind="invisible"
         onClick={[Function]}
-        type="button"
       >
         <CloseIcon />
       </Button>
@@ -1082,9 +995,6 @@ exports[`Dialog [common] example testing should match snapshot(s) for 5.no-modal
       In most cases, you'll probably just use an isModal Dialog, but this example shows that the Dialog doesn't have to be a modal. Try pressing "escape" to close this Dialog.
       <Dialog.Footer>
         <Button
-          hasOnlyIcon={false}
-          isActive={false}
-          isDisabled={false}
           kind="invisible"
           onClick={[Function]}
           style={
@@ -1092,17 +1002,11 @@ exports[`Dialog [common] example testing should match snapshot(s) for 5.no-modal
               "marginRight": "9px",
             }
           }
-          type="button"
         >
           Cancel
         </Button>
         <Button
-          hasOnlyIcon={false}
-          isActive={false}
-          isDisabled={false}
           kind="primary"
-          onClick={[Function]}
-          type="button"
         >
           Save
         </Button>
@@ -1112,9 +1016,6 @@ exports[`Dialog [common] example testing should match snapshot(s) for 5.no-modal
       className="lucid-Dialog-footer"
     >
       <Button
-        hasOnlyIcon={false}
-        isActive={false}
-        isDisabled={false}
         kind="invisible"
         onClick={[Function]}
         style={
@@ -1122,17 +1023,11 @@ exports[`Dialog [common] example testing should match snapshot(s) for 5.no-modal
             "marginRight": "9px",
           }
         }
-        type="button"
       >
         Cancel
       </Button>
       <Button
-        hasOnlyIcon={false}
-        isActive={false}
-        isDisabled={false}
         kind="primary"
-        onClick={[Function]}
-        type="button"
       >
         Save
       </Button>
@@ -1160,11 +1055,8 @@ exports[`Dialog [common] example testing should match snapshot(s) for 6.no-foote
       <Button
         className="lucid-Dialog-close-button"
         hasOnlyIcon={true}
-        isActive={false}
-        isDisabled={false}
         kind="invisible"
         onClick={[Function]}
-        type="button"
       >
         <CloseIcon />
       </Button>
@@ -1197,11 +1089,8 @@ exports[`Dialog [common] example testing should match snapshot(s) for 7.no-gutte
       <Button
         className="lucid-Dialog-close-button"
         hasOnlyIcon={true}
-        isActive={false}
-        isDisabled={false}
         kind="invisible"
         onClick={[Function]}
-        type="button"
       >
         <CloseIcon />
       </Button>
@@ -1492,9 +1381,6 @@ exports[`Dialog [common] example testing should match snapshot(s) for 8.no-close
       </div>
       <Dialog.Footer>
         <Button
-          hasOnlyIcon={false}
-          isActive={false}
-          isDisabled={false}
           kind="invisible"
           onClick={[Function]}
           style={
@@ -1502,17 +1388,11 @@ exports[`Dialog [common] example testing should match snapshot(s) for 8.no-close
               "marginRight": "9px",
             }
           }
-          type="button"
         >
           Cancel
         </Button>
         <Button
-          hasOnlyIcon={false}
-          isActive={false}
-          isDisabled={false}
           kind="primary"
-          onClick={[Function]}
-          type="button"
         >
           Save
         </Button>
@@ -1522,9 +1402,6 @@ exports[`Dialog [common] example testing should match snapshot(s) for 8.no-close
       className="lucid-Dialog-footer"
     >
       <Button
-        hasOnlyIcon={false}
-        isActive={false}
-        isDisabled={false}
         kind="invisible"
         onClick={[Function]}
         style={
@@ -1532,17 +1409,11 @@ exports[`Dialog [common] example testing should match snapshot(s) for 8.no-close
             "marginRight": "9px",
           }
         }
-        type="button"
       >
         Cancel
       </Button>
       <Button
-        hasOnlyIcon={false}
-        isActive={false}
-        isDisabled={false}
         kind="primary"
-        onClick={[Function]}
-        type="button"
       >
         Save
       </Button>

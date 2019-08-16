@@ -26,11 +26,8 @@ exports[`Submarine [common] example testing should match snapshot(s) for 1.defau
       <Button
         className="lucid-Submarine-expander"
         hasOnlyIcon={true}
-        isActive={false}
-        isDisabled={false}
         kind="invisible"
         onClick={[Function]}
-        type="button"
       >
         <ChevronIcon
           direction="down"
@@ -85,11 +82,8 @@ exports[`Submarine [common] example testing should match snapshot(s) for 2.disab
       <Button
         className="lucid-Submarine-expander"
         hasOnlyIcon={true}
-        isActive={false}
-        isDisabled={false}
         kind="invisible"
         onClick={[Function]}
-        type="button"
       >
         <ChevronIcon
           direction="down"
@@ -144,11 +138,8 @@ exports[`Submarine [common] example testing should match snapshot(s) for 3.initi
       <Button
         className="lucid-Submarine-expander"
         hasOnlyIcon={true}
-        isActive={false}
-        isDisabled={false}
         kind="invisible"
         onClick={[Function]}
-        type="button"
       >
         <ChevronIcon
           direction="down"
@@ -203,11 +194,8 @@ exports[`Submarine [common] example testing should match snapshot(s) for 4.posit
       <Button
         className="lucid-Submarine-expander"
         hasOnlyIcon={true}
-        isActive={false}
-        isDisabled={false}
         kind="invisible"
         onClick={[Function]}
-        type="button"
       >
         <ChevronIcon
           direction="up"
@@ -267,11 +255,8 @@ exports[`Submarine [common] example testing should match snapshot(s) for 5.custo
       <Button
         className="lucid-Submarine-expander"
         hasOnlyIcon={true}
-        isActive={false}
-        isDisabled={false}
         kind="invisible"
         onClick={[Function]}
-        type="button"
       >
         <ChevronIcon
           direction="down"
@@ -342,11 +327,8 @@ exports[`Submarine [common] example testing should match snapshot(s) for 6.custo
       <Button
         className="lucid-Submarine-expander"
         hasOnlyIcon={true}
-        isActive={false}
-        isDisabled={false}
         kind="invisible"
         onClick={[Function]}
-        type="button"
       >
         <ChevronIcon
           direction="down"
@@ -401,11 +383,8 @@ exports[`Submarine [common] example testing should match snapshot(s) for 7.contr
       <Button
         className="lucid-Submarine-expander"
         hasOnlyIcon={true}
-        isActive={false}
-        isDisabled={false}
         kind="invisible"
         onClick={[Function]}
-        type="button"
       >
         <ChevronIcon
           direction="up"
@@ -460,11 +439,8 @@ exports[`Submarine [common] example testing should match snapshot(s) for 8.handl
       <Button
         className="lucid-Submarine-expander"
         hasOnlyIcon={true}
-        isActive={false}
-        isDisabled={false}
         kind="invisible"
         onClick={[Function]}
-        type="button"
       >
         <ChevronIcon
           direction="down"
@@ -519,11 +495,8 @@ exports[`Submarine [common] example testing should match snapshot(s) for 9.neste
       <Button
         className="lucid-Submarine-expander"
         hasOnlyIcon={true}
-        isActive={false}
-        isDisabled={false}
         kind="invisible"
         onClick={[Function]}
-        type="button"
       >
         <ChevronIcon
           direction="up"
@@ -587,11 +560,8 @@ exports[`Submarine [common] example testing should match snapshot(s) for 9.neste
       <Button
         className="lucid-Submarine-expander"
         hasOnlyIcon={true}
-        isActive={false}
-        isDisabled={false}
         kind="invisible"
         onClick={[Function]}
-        type="button"
       >
         <ChevronIcon
           direction="down"
@@ -648,11 +618,8 @@ exports[`Submarine [common] example testing should match snapshot(s) for 10.hidd
       <Button
         className="lucid-Submarine-expander"
         hasOnlyIcon={true}
-        isActive={false}
-        isDisabled={false}
         kind="invisible"
         onClick={[Function]}
-        type="button"
       >
         <ChevronIcon
           direction="down"
@@ -709,11 +676,8 @@ exports[`Submarine [common] example testing should match snapshot(s) for 11-titl
       <Button
         className="lucid-Submarine-expander"
         hasOnlyIcon={true}
-        isActive={false}
-        isDisabled={false}
         kind="invisible"
         onClick={[Function]}
-        type="button"
       >
         <ChevronIcon
           direction="down"

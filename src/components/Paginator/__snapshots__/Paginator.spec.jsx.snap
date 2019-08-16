@@ -6,11 +6,9 @@ exports[`Paginator [common] example testing should match snapshot(s) for 1.basic
 >
   <Button
     hasOnlyIcon={true}
-    isActive={false}
     isDisabled={true}
     kind="invisible"
     onClick={[Function]}
-    type="button"
   >
     <ArrowIcon
       direction="left"
@@ -32,11 +30,9 @@ exports[`Paginator [common] example testing should match snapshot(s) for 1.basic
   />
   <Button
     hasOnlyIcon={true}
-    isActive={false}
     isDisabled={false}
     kind="invisible"
     onClick={[Function]}
-    type="button"
   >
     <ArrowIcon
       direction="right"
@@ -89,11 +85,9 @@ exports[`Paginator [common] example testing should match snapshot(s) for 2.page-
   </div>
   <Button
     hasOnlyIcon={true}
-    isActive={false}
     isDisabled={true}
     kind="invisible"
     onClick={[Function]}
-    type="button"
   >
     <ArrowIcon
       direction="left"
@@ -115,11 +109,9 @@ exports[`Paginator [common] example testing should match snapshot(s) for 2.page-
   />
   <Button
     hasOnlyIcon={true}
-    isActive={false}
     isDisabled={false}
     kind="invisible"
     onClick={[Function]}
-    type="button"
   >
     <ArrowIcon
       direction="right"
@@ -135,11 +127,9 @@ exports[`Paginator [common] example testing should match snapshot(s) for 3.disab
 >
   <Button
     hasOnlyIcon={true}
-    isActive={false}
     isDisabled={true}
     kind="invisible"
     onClick={[Function]}
-    type="button"
   >
     <ArrowIcon
       direction="left"
@@ -161,11 +151,9 @@ exports[`Paginator [common] example testing should match snapshot(s) for 3.disab
   />
   <Button
     hasOnlyIcon={true}
-    isActive={false}
     isDisabled={true}
     kind="invisible"
     onClick={[Function]}
-    type="button"
   >
     <ArrowIcon
       direction="right"
@@ -218,11 +206,9 @@ exports[`Paginator [common] example testing should match snapshot(s) for 3.disab
   </div>
   <Button
     hasOnlyIcon={true}
-    isActive={false}
     isDisabled={true}
     kind="invisible"
     onClick={[Function]}
-    type="button"
   >
     <ArrowIcon
       direction="left"
@@ -244,11 +230,9 @@ exports[`Paginator [common] example testing should match snapshot(s) for 3.disab
   />
   <Button
     hasOnlyIcon={true}
-    isActive={false}
     isDisabled={true}
     kind="invisible"
     onClick={[Function]}
-    type="button"
   >
     <ArrowIcon
       direction="right"
@@ -308,11 +292,9 @@ exports[`Paginator [common] example testing should match snapshot(s) for 4.show-
   </div>
   <Button
     hasOnlyIcon={true}
-    isActive={false}
     isDisabled={true}
     kind="invisible"
     onClick={[Function]}
-    type="button"
   >
     <ArrowIcon
       direction="left"
@@ -334,11 +316,9 @@ exports[`Paginator [common] example testing should match snapshot(s) for 4.show-
   />
   <Button
     hasOnlyIcon={true}
-    isActive={false}
     isDisabled={false}
     kind="invisible"
     onClick={[Function]}
-    type="button"
   >
     <ArrowIcon
       direction="right"
@@ -391,11 +371,9 @@ exports[`Paginator [common] example testing should match snapshot(s) for 4.show-
   </div>
   <Button
     hasOnlyIcon={true}
-    isActive={false}
     isDisabled={true}
     kind="invisible"
     onClick={[Function]}
-    type="button"
   >
     <ArrowIcon
       direction="left"
@@ -417,11 +395,9 @@ exports[`Paginator [common] example testing should match snapshot(s) for 4.show-
   />
   <Button
     hasOnlyIcon={true}
-    isActive={false}
     isDisabled={false}
     kind="invisible"
     onClick={[Function]}
-    type="button"
   >
     <ArrowIcon
       direction="right"
@@ -505,11 +481,9 @@ exports[`Paginator [common] example testing should match snapshot(s) for 4.show-
   </div>
   <Button
     hasOnlyIcon={true}
-    isActive={false}
     isDisabled={true}
     kind="invisible"
     onClick={[Function]}
-    type="button"
   >
     <ArrowIcon
       direction="left"
@@ -531,11 +505,9 @@ exports[`Paginator [common] example testing should match snapshot(s) for 4.show-
   />
   <Button
     hasOnlyIcon={true}
-    isActive={false}
     isDisabled={false}
     kind="invisible"
     onClick={[Function]}
-    type="button"
   >
     <ArrowIcon
       direction="right"
@@ -619,11 +591,9 @@ exports[`Paginator [common] example testing should match snapshot(s) for 4.show-
   </div>
   <Button
     hasOnlyIcon={true}
-    isActive={false}
     isDisabled={true}
     kind="invisible"
     onClick={[Function]}
-    type="button"
   >
     <ArrowIcon
       direction="left"
@@ -645,11 +615,9 @@ exports[`Paginator [common] example testing should match snapshot(s) for 4.show-
   />
   <Button
     hasOnlyIcon={true}
-    isActive={false}
     isDisabled={false}
     kind="invisible"
     onClick={[Function]}
-    type="button"
   >
     <ArrowIcon
       direction="right"
@@ -733,11 +701,9 @@ exports[`Paginator [common] example testing should match snapshot(s) for 4.show-
   </div>
   <Button
     hasOnlyIcon={true}
-    isActive={false}
     isDisabled={true}
     kind="invisible"
     onClick={[Function]}
-    type="button"
   >
     <ArrowIcon
       direction="left"
@@ -759,11 +725,9 @@ exports[`Paginator [common] example testing should match snapshot(s) for 4.show-
   />
   <Button
     hasOnlyIcon={true}
-    isActive={false}
     isDisabled={false}
     kind="invisible"
     onClick={[Function]}
-    type="button"
   >
     <ArrowIcon
       direction="right"
@@ -847,11 +811,9 @@ exports[`Paginator [common] example testing should match snapshot(s) for 4.show-
   </div>
   <Button
     hasOnlyIcon={true}
-    isActive={false}
     isDisabled={true}
     kind="invisible"
     onClick={[Function]}
-    type="button"
   >
     <ArrowIcon
       direction="left"
@@ -873,11 +835,9 @@ exports[`Paginator [common] example testing should match snapshot(s) for 4.show-
   />
   <Button
     hasOnlyIcon={true}
-    isActive={false}
     isDisabled={false}
     kind="invisible"
     onClick={[Function]}
-    type="button"
   >
     <ArrowIcon
       direction="right"

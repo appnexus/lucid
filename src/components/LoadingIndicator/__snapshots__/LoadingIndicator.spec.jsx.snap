@@ -8,9 +8,6 @@ exports[`LoadingIndicator [common] example testing should match snapshot(s) for 
   overlayKind="dark"
 >
   <Button
-    hasOnlyIcon={false}
-    isActive={false}
-    isDisabled={false}
     key=".0"
     onClick={[Function]}
     style={
@@ -18,17 +15,12 @@ exports[`LoadingIndicator [common] example testing should match snapshot(s) for 
         "margin": 10,
       }
     }
-    type="button"
   >
     Get more data
   </Button>
   <Button
-    hasOnlyIcon={false}
-    isActive={false}
-    isDisabled={false}
     key=".1"
     onClick={[Function]}
-    type="button"
   >
     Switch overlay color
   </Button>

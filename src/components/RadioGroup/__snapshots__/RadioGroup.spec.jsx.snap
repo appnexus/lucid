@@ -266,20 +266,12 @@ exports[`RadioGroup [common] example testing should match snapshot(s) for nested
         "children": Array [
           "Simon",
           <RadioGroup>
-            <RadioButton
-              isDisabled={false}
-              isSelected={false}
-              onSelect={[Function]}
-            >
+            <RadioButton>
               <RadioGroup.Label>
                 1
               </RadioGroup.Label>
             </RadioButton>
-            <RadioButton
-              isDisabled={false}
-              isSelected={false}
-              onSelect={[Function]}
-            >
+            <RadioButton>
               <RadioGroup.Label>
                 2
               </RadioGroup.Label>
@@ -303,20 +295,12 @@ exports[`RadioGroup [common] example testing should match snapshot(s) for nested
     <RadioGroup.Label>
       Simon
       <RadioGroup>
-        <RadioButton
-          isDisabled={false}
-          isSelected={false}
-          onSelect={[Function]}
-        >
+        <RadioButton>
           <RadioGroup.Label>
             1
           </RadioGroup.Label>
         </RadioButton>
-        <RadioButton
-          isDisabled={false}
-          isSelected={false}
-          onSelect={[Function]}
-        >
+        <RadioButton>
           <RadioGroup.Label>
             2
           </RadioGroup.Label>

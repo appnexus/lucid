@@ -95,13 +95,7 @@ exports[`DropMenu [common] example testing should match snapshot(s) for 02.butto
         onKeyDown={[Function]}
         tabIndex={0}
       >
-        <Button
-          hasOnlyIcon={false}
-          isActive={false}
-          isDisabled={false}
-          onClick={[Function]}
-          type="button"
-        >
+        <Button>
           Select Color
         </Button>
       </div>
@@ -173,12 +167,7 @@ exports[`DropMenu [common] example testing should match snapshot(s) for 03.disab
         className="lucid-DropMenu-Control"
       >
         <Button
-          hasOnlyIcon={false}
-          isActive={false}
-          isDisabled={false}
-          onClick={[Function]}
           tabIndex={-1}
-          type="button"
         >
           Select Color
         </Button>
@@ -253,13 +242,7 @@ exports[`DropMenu [common] example testing should match snapshot(s) for 04.disab
         onKeyDown={[Function]}
         tabIndex={0}
       >
-        <Button
-          hasOnlyIcon={false}
-          isActive={false}
-          isDisabled={false}
-          onClick={[Function]}
-          type="button"
-        >
+        <Button>
           Select Color
         </Button>
       </div>
@@ -333,13 +316,7 @@ exports[`DropMenu [common] example testing should match snapshot(s) for 05.group
         onKeyDown={[Function]}
         tabIndex={0}
       >
-        <Button
-          hasOnlyIcon={false}
-          isActive={false}
-          isDisabled={false}
-          onClick={[Function]}
-          type="button"
-        >
+        <Button>
           Select Color
         </Button>
       </div>
@@ -633,13 +610,7 @@ exports[`DropMenu [common] example testing should match snapshot(s) for 08.no-wr
         onKeyDown={[Function]}
         tabIndex={0}
       >
-        <Button
-          hasOnlyIcon={false}
-          isActive={false}
-          isDisabled={false}
-          onClick={[Function]}
-          type="button"
-        >
+        <Button>
           Click me
         </Button>
       </div>
@@ -713,13 +684,7 @@ exports[`DropMenu [common] example testing should match snapshot(s) for 09.state
         onKeyDown={[Function]}
         tabIndex={0}
       >
-        <Button
-          hasOnlyIcon={false}
-          isActive={false}
-          isDisabled={false}
-          onClick={[Function]}
-          type="button"
-        >
+        <Button>
           Select Color
         </Button>
       </div>

@@ -2745,13 +2745,7 @@ exports[`LineChart [common] example testing should match snapshot(s) for 14.empt
       }
     }
   >
-    <Button
-      hasOnlyIcon={false}
-      isActive={false}
-      isDisabled={false}
-      onClick={[Function]}
-      type="button"
-    >
+    <Button>
       Action
     </Button>
   </EmptyStateWrapper.Body>

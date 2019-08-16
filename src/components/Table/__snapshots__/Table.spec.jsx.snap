@@ -141,12 +141,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         hasBorderRight={false}
       >
         <Button
-          hasOnlyIcon={false}
-          isActive={false}
-          isDisabled={false}
-          onClick={[Function]}
           size="small"
-          type="button"
         >
           button
         </Button>
@@ -217,12 +212,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         hasBorderRight={false}
       >
         <Button
-          hasOnlyIcon={false}
-          isActive={false}
-          isDisabled={false}
-          onClick={[Function]}
           size="small"
-          type="button"
         >
           button
         </Button>
@@ -293,12 +283,8 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         hasBorderRight={false}
       >
         <Button
-          hasOnlyIcon={false}
-          isActive={false}
           isDisabled={true}
-          onClick={[Function]}
           size="small"
-          type="button"
         >
           button
         </Button>
@@ -370,12 +356,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         hasBorderRight={false}
       >
         <Button
-          hasOnlyIcon={false}
-          isActive={false}
-          isDisabled={false}
-          onClick={[Function]}
           size="small"
-          type="button"
         >
           button
         </Button>
@@ -447,12 +428,8 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         hasBorderRight={false}
       >
         <Button
-          hasOnlyIcon={false}
-          isActive={false}
           isDisabled={true}
-          onClick={[Function]}
           size="small"
-          type="button"
         >
           button
         </Button>
@@ -527,12 +504,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         hasBorderRight={false}
       >
         <Button
-          hasOnlyIcon={false}
-          isActive={false}
-          isDisabled={false}
-          onClick={[Function]}
           size="small"
-          type="button"
         >
           button
         </Button>
@@ -607,12 +579,8 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         hasBorderRight={false}
       >
         <Button
-          hasOnlyIcon={false}
-          isActive={false}
           isDisabled={true}
-          onClick={[Function]}
           size="small"
-          type="button"
         >
           button
         </Button>
@@ -688,12 +656,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         hasBorderRight={false}
       >
         <Button
-          hasOnlyIcon={false}
-          isActive={false}
-          isDisabled={false}
-          onClick={[Function]}
           size="small"
-          type="button"
         >
           button
         </Button>
@@ -769,12 +732,8 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         hasBorderRight={false}
       >
         <Button
-          hasOnlyIcon={false}
-          isActive={false}
           isDisabled={true}
-          onClick={[Function]}
           size="small"
-          type="button"
         >
           button
         </Button>
@@ -845,12 +804,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         hasBorderRight={false}
       >
         <Button
-          hasOnlyIcon={false}
-          isActive={false}
-          isDisabled={false}
-          onClick={[Function]}
           size="small"
-          type="button"
         >
           button
         </Button>
@@ -921,12 +875,8 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         hasBorderRight={false}
       >
         <Button
-          hasOnlyIcon={false}
-          isActive={false}
           isDisabled={true}
-          onClick={[Function]}
           size="small"
-          type="button"
         >
           button
         </Button>
@@ -998,12 +948,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         hasBorderRight={false}
       >
         <Button
-          hasOnlyIcon={false}
-          isActive={false}
-          isDisabled={false}
-          onClick={[Function]}
           size="small"
-          type="button"
         >
           button
         </Button>
@@ -1075,12 +1020,8 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         hasBorderRight={false}
       >
         <Button
-          hasOnlyIcon={false}
-          isActive={false}
           isDisabled={true}
-          onClick={[Function]}
           size="small"
-          type="button"
         >
           button
         </Button>
@@ -1152,12 +1093,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         hasBorderRight={false}
       >
         <Button
-          hasOnlyIcon={false}
-          isActive={false}
-          isDisabled={false}
-          onClick={[Function]}
           size="small"
-          type="button"
         >
           button
         </Button>
@@ -1229,12 +1165,8 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         hasBorderRight={false}
       >
         <Button
-          hasOnlyIcon={false}
-          isActive={false}
           isDisabled={true}
-          onClick={[Function]}
           size="small"
-          type="button"
         >
           button
         </Button>
@@ -1415,12 +1347,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         hasBorderRight={false}
       >
         <Button
-          hasOnlyIcon={false}
-          isActive={false}
-          isDisabled={false}
-          onClick={[Function]}
           size="small"
-          type="button"
         >
           button
         </Button>
@@ -1491,12 +1418,8 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         hasBorderRight={false}
       >
         <Button
-          hasOnlyIcon={false}
-          isActive={false}
           isDisabled={true}
-          onClick={[Function]}
           size="small"
-          type="button"
         >
           button
         </Button>
@@ -1568,12 +1491,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         hasBorderRight={false}
       >
         <Button
-          hasOnlyIcon={false}
-          isActive={false}
-          isDisabled={false}
-          onClick={[Function]}
           size="small"
-          type="button"
         >
           button
         </Button>
@@ -1645,12 +1563,8 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         hasBorderRight={false}
       >
         <Button
-          hasOnlyIcon={false}
-          isActive={false}
           isDisabled={true}
-          onClick={[Function]}
           size="small"
-          type="button"
         >
           button
         </Button>
@@ -1725,12 +1639,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         hasBorderRight={false}
       >
         <Button
-          hasOnlyIcon={false}
-          isActive={false}
-          isDisabled={false}
-          onClick={[Function]}
           size="small"
-          type="button"
         >
           button
         </Button>
@@ -1805,12 +1714,8 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         hasBorderRight={false}
       >
         <Button
-          hasOnlyIcon={false}
-          isActive={false}
           isDisabled={true}
-          onClick={[Function]}
           size="small"
-          type="button"
         >
           button
         </Button>
@@ -1886,12 +1791,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         hasBorderRight={false}
       >
         <Button
-          hasOnlyIcon={false}
-          isActive={false}
-          isDisabled={false}
-          onClick={[Function]}
           size="small"
-          type="button"
         >
           button
         </Button>
@@ -1967,12 +1867,8 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         hasBorderRight={false}
       >
         <Button
-          hasOnlyIcon={false}
-          isActive={false}
           isDisabled={true}
-          onClick={[Function]}
           size="small"
-          type="button"
         >
           button
         </Button>
@@ -2043,12 +1939,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         hasBorderRight={false}
       >
         <Button
-          hasOnlyIcon={false}
-          isActive={false}
-          isDisabled={false}
-          onClick={[Function]}
           size="small"
-          type="button"
         >
           button
         </Button>
@@ -2119,12 +2010,8 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         hasBorderRight={false}
       >
         <Button
-          hasOnlyIcon={false}
-          isActive={false}
           isDisabled={true}
-          onClick={[Function]}
           size="small"
-          type="button"
         >
           button
         </Button>
@@ -2196,12 +2083,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         hasBorderRight={false}
       >
         <Button
-          hasOnlyIcon={false}
-          isActive={false}
-          isDisabled={false}
-          onClick={[Function]}
           size="small"
-          type="button"
         >
           button
         </Button>
@@ -2273,12 +2155,8 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         hasBorderRight={false}
       >
         <Button
-          hasOnlyIcon={false}
-          isActive={false}
           isDisabled={true}
-          onClick={[Function]}
           size="small"
-          type="button"
         >
           button
         </Button>
@@ -2350,12 +2228,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         hasBorderRight={false}
       >
         <Button
-          hasOnlyIcon={false}
-          isActive={false}
-          isDisabled={false}
-          onClick={[Function]}
           size="small"
-          type="button"
         >
           button
         </Button>
@@ -2427,12 +2300,8 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         hasBorderRight={false}
       >
         <Button
-          hasOnlyIcon={false}
-          isActive={false}
           isDisabled={true}
-          onClick={[Function]}
           size="small"
-          type="button"
         >
           button
         </Button>
@@ -2628,12 +2497,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         hasBorderRight={false}
       >
         <Button
-          hasOnlyIcon={false}
-          isActive={false}
-          isDisabled={false}
-          onClick={[Function]}
           size="small"
-          type="button"
         >
           button
         </Button>
@@ -2704,12 +2568,8 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         hasBorderRight={false}
       >
         <Button
-          hasOnlyIcon={false}
-          isActive={false}
           isDisabled={true}
-          onClick={[Function]}
           size="small"
-          type="button"
         >
           button
         </Button>
@@ -2781,12 +2641,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         hasBorderRight={false}
       >
         <Button
-          hasOnlyIcon={false}
-          isActive={false}
-          isDisabled={false}
-          onClick={[Function]}
           size="small"
-          type="button"
         >
           button
         </Button>
@@ -2858,12 +2713,8 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         hasBorderRight={false}
       >
         <Button
-          hasOnlyIcon={false}
-          isActive={false}
           isDisabled={true}
-          onClick={[Function]}
           size="small"
-          type="button"
         >
           button
         </Button>
@@ -2938,12 +2789,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         hasBorderRight={false}
       >
         <Button
-          hasOnlyIcon={false}
-          isActive={false}
-          isDisabled={false}
-          onClick={[Function]}
           size="small"
-          type="button"
         >
           button
         </Button>
@@ -3018,12 +2864,8 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         hasBorderRight={false}
       >
         <Button
-          hasOnlyIcon={false}
-          isActive={false}
           isDisabled={true}
-          onClick={[Function]}
           size="small"
-          type="button"
         >
           button
         </Button>
@@ -3099,12 +2941,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         hasBorderRight={false}
       >
         <Button
-          hasOnlyIcon={false}
-          isActive={false}
-          isDisabled={false}
-          onClick={[Function]}
           size="small"
-          type="button"
         >
           button
         </Button>
@@ -3180,12 +3017,8 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         hasBorderRight={false}
       >
         <Button
-          hasOnlyIcon={false}
-          isActive={false}
           isDisabled={true}
-          onClick={[Function]}
           size="small"
-          type="button"
         >
           button
         </Button>
@@ -3256,12 +3089,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         hasBorderRight={false}
       >
         <Button
-          hasOnlyIcon={false}
-          isActive={false}
-          isDisabled={false}
-          onClick={[Function]}
           size="small"
-          type="button"
         >
           button
         </Button>
@@ -3332,12 +3160,8 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         hasBorderRight={false}
       >
         <Button
-          hasOnlyIcon={false}
-          isActive={false}
           isDisabled={true}
-          onClick={[Function]}
           size="small"
-          type="button"
         >
           button
         </Button>
@@ -3409,12 +3233,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         hasBorderRight={false}
       >
         <Button
-          hasOnlyIcon={false}
-          isActive={false}
-          isDisabled={false}
-          onClick={[Function]}
           size="small"
-          type="button"
         >
           button
         </Button>
@@ -3486,12 +3305,8 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         hasBorderRight={false}
       >
         <Button
-          hasOnlyIcon={false}
-          isActive={false}
           isDisabled={true}
-          onClick={[Function]}
           size="small"
-          type="button"
         >
           button
         </Button>
@@ -3563,12 +3378,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         hasBorderRight={false}
       >
         <Button
-          hasOnlyIcon={false}
-          isActive={false}
-          isDisabled={false}
-          onClick={[Function]}
           size="small"
-          type="button"
         >
           button
         </Button>
@@ -3640,12 +3450,8 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         hasBorderRight={false}
       >
         <Button
-          hasOnlyIcon={false}
-          isActive={false}
           isDisabled={true}
-          onClick={[Function]}
           size="small"
-          type="button"
         >
           button
         </Button>
@@ -3824,12 +3630,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         hasBorderRight={false}
       >
         <Button
-          hasOnlyIcon={false}
-          isActive={false}
-          isDisabled={false}
-          onClick={[Function]}
           size="small"
-          type="button"
         >
           button
         </Button>
@@ -3900,12 +3701,8 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         hasBorderRight={false}
       >
         <Button
-          hasOnlyIcon={false}
-          isActive={false}
           isDisabled={true}
-          onClick={[Function]}
           size="small"
-          type="button"
         >
           button
         </Button>
@@ -3977,12 +3774,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         hasBorderRight={false}
       >
         <Button
-          hasOnlyIcon={false}
-          isActive={false}
-          isDisabled={false}
-          onClick={[Function]}
           size="small"
-          type="button"
         >
           button
         </Button>
@@ -4054,12 +3846,8 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         hasBorderRight={false}
       >
         <Button
-          hasOnlyIcon={false}
-          isActive={false}
           isDisabled={true}
-          onClick={[Function]}
           size="small"
-          type="button"
         >
           button
         </Button>
@@ -4134,12 +3922,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         hasBorderRight={false}
       >
         <Button
-          hasOnlyIcon={false}
-          isActive={false}
-          isDisabled={false}
-          onClick={[Function]}
           size="small"
-          type="button"
         >
           button
         </Button>
@@ -4214,12 +3997,8 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         hasBorderRight={false}
       >
         <Button
-          hasOnlyIcon={false}
-          isActive={false}
           isDisabled={true}
-          onClick={[Function]}
           size="small"
-          type="button"
         >
           button
         </Button>
@@ -4295,12 +4074,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         hasBorderRight={false}
       >
         <Button
-          hasOnlyIcon={false}
-          isActive={false}
-          isDisabled={false}
-          onClick={[Function]}
           size="small"
-          type="button"
         >
           button
         </Button>
@@ -4376,12 +4150,8 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         hasBorderRight={false}
       >
         <Button
-          hasOnlyIcon={false}
-          isActive={false}
           isDisabled={true}
-          onClick={[Function]}
           size="small"
-          type="button"
         >
           button
         </Button>
@@ -4452,12 +4222,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         hasBorderRight={false}
       >
         <Button
-          hasOnlyIcon={false}
-          isActive={false}
-          isDisabled={false}
-          onClick={[Function]}
           size="small"
-          type="button"
         >
           button
         </Button>
@@ -4528,12 +4293,8 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         hasBorderRight={false}
       >
         <Button
-          hasOnlyIcon={false}
-          isActive={false}
           isDisabled={true}
-          onClick={[Function]}
           size="small"
-          type="button"
         >
           button
         </Button>
@@ -4605,12 +4366,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         hasBorderRight={false}
       >
         <Button
-          hasOnlyIcon={false}
-          isActive={false}
-          isDisabled={false}
-          onClick={[Function]}
           size="small"
-          type="button"
         >
           button
         </Button>
@@ -4682,12 +4438,8 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         hasBorderRight={false}
       >
         <Button
-          hasOnlyIcon={false}
-          isActive={false}
           isDisabled={true}
-          onClick={[Function]}
           size="small"
-          type="button"
         >
           button
         </Button>
@@ -4759,12 +4511,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         hasBorderRight={false}
       >
         <Button
-          hasOnlyIcon={false}
-          isActive={false}
-          isDisabled={false}
-          onClick={[Function]}
           size="small"
-          type="button"
         >
           button
         </Button>
@@ -4836,12 +4583,8 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         hasBorderRight={false}
       >
         <Button
-          hasOnlyIcon={false}
-          isActive={false}
           isDisabled={true}
-          onClick={[Function]}
           size="small"
-          type="button"
         >
           button
         </Button>
@@ -5038,12 +4781,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         hasBorderRight={false}
       >
         <Button
-          hasOnlyIcon={false}
-          isActive={false}
-          isDisabled={false}
-          onClick={[Function]}
           size="small"
-          type="button"
         >
           button
         </Button>
@@ -5115,12 +4853,8 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         hasBorderRight={false}
       >
         <Button
-          hasOnlyIcon={false}
-          isActive={false}
           isDisabled={true}
-          onClick={[Function]}
           size="small"
-          type="button"
         >
           button
         </Button>
@@ -5193,12 +4927,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         hasBorderRight={false}
       >
         <Button
-          hasOnlyIcon={false}
-          isActive={false}
-          isDisabled={false}
-          onClick={[Function]}
           size="small"
-          type="button"
         >
           button
         </Button>
@@ -5271,12 +5000,8 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         hasBorderRight={false}
       >
         <Button
-          hasOnlyIcon={false}
-          isActive={false}
           isDisabled={true}
-          onClick={[Function]}
           size="small"
-          type="button"
         >
           button
         </Button>
@@ -5348,12 +5073,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         hasBorderRight={false}
       >
         <Button
-          hasOnlyIcon={false}
-          isActive={false}
-          isDisabled={false}
-          onClick={[Function]}
           size="small"
-          type="button"
         >
           button
         </Button>
@@ -5425,12 +5145,8 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         hasBorderRight={false}
       >
         <Button
-          hasOnlyIcon={false}
-          isActive={false}
           isDisabled={true}
-          onClick={[Function]}
           size="small"
-          type="button"
         >
           button
         </Button>
@@ -5503,12 +5219,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         hasBorderRight={false}
       >
         <Button
-          hasOnlyIcon={false}
-          isActive={false}
-          isDisabled={false}
-          onClick={[Function]}
           size="small"
-          type="button"
         >
           button
         </Button>
@@ -5581,12 +5292,8 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         hasBorderRight={false}
       >
         <Button
-          hasOnlyIcon={false}
-          isActive={false}
           isDisabled={true}
-          onClick={[Function]}
           size="small"
-          type="button"
         >
           button
         </Button>
@@ -5658,12 +5365,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         hasBorderRight={false}
       >
         <Button
-          hasOnlyIcon={false}
-          isActive={false}
-          isDisabled={false}
-          onClick={[Function]}
           size="small"
-          type="button"
         >
           button
         </Button>
@@ -5735,12 +5437,8 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         hasBorderRight={false}
       >
         <Button
-          hasOnlyIcon={false}
-          isActive={false}
           isDisabled={true}
-          onClick={[Function]}
           size="small"
-          type="button"
         >
           button
         </Button>
@@ -5813,12 +5511,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         hasBorderRight={false}
       >
         <Button
-          hasOnlyIcon={false}
-          isActive={false}
-          isDisabled={false}
-          onClick={[Function]}
           size="small"
-          type="button"
         >
           button
         </Button>
@@ -5891,12 +5584,8 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         hasBorderRight={false}
       >
         <Button
-          hasOnlyIcon={false}
-          isActive={false}
           isDisabled={true}
-          onClick={[Function]}
           size="small"
-          type="button"
         >
           button
         </Button>
@@ -5969,12 +5658,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         hasBorderRight={false}
       >
         <Button
-          hasOnlyIcon={false}
-          isActive={false}
-          isDisabled={false}
-          onClick={[Function]}
           size="small"
-          type="button"
         >
           button
         </Button>
@@ -6047,12 +5731,8 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         hasBorderRight={false}
       >
         <Button
-          hasOnlyIcon={false}
-          isActive={false}
           isDisabled={true}
-          onClick={[Function]}
           size="small"
-          type="button"
         >
           button
         </Button>
@@ -6231,12 +5911,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         hasBorderRight={false}
       >
         <Button
-          hasOnlyIcon={false}
-          isActive={false}
-          isDisabled={false}
-          onClick={[Function]}
           size="small"
-          type="button"
         >
           button
         </Button>
@@ -6307,12 +5982,8 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         hasBorderRight={false}
       >
         <Button
-          hasOnlyIcon={false}
-          isActive={false}
           isDisabled={true}
-          onClick={[Function]}
           size="small"
-          type="button"
         >
           button
         </Button>
@@ -6384,12 +6055,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         hasBorderRight={false}
       >
         <Button
-          hasOnlyIcon={false}
-          isActive={false}
-          isDisabled={false}
-          onClick={[Function]}
           size="small"
-          type="button"
         >
           button
         </Button>
@@ -6461,12 +6127,8 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         hasBorderRight={false}
       >
         <Button
-          hasOnlyIcon={false}
-          isActive={false}
           isDisabled={true}
-          onClick={[Function]}
           size="small"
-          type="button"
         >
           button
         </Button>
@@ -6541,12 +6203,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         hasBorderRight={false}
       >
         <Button
-          hasOnlyIcon={false}
-          isActive={false}
-          isDisabled={false}
-          onClick={[Function]}
           size="small"
-          type="button"
         >
           button
         </Button>
@@ -6621,12 +6278,8 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         hasBorderRight={false}
       >
         <Button
-          hasOnlyIcon={false}
-          isActive={false}
           isDisabled={true}
-          onClick={[Function]}
           size="small"
-          type="button"
         >
           button
         </Button>
@@ -6702,12 +6355,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         hasBorderRight={false}
       >
         <Button
-          hasOnlyIcon={false}
-          isActive={false}
-          isDisabled={false}
-          onClick={[Function]}
           size="small"
-          type="button"
         >
           button
         </Button>
@@ -6783,12 +6431,8 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         hasBorderRight={false}
       >
         <Button
-          hasOnlyIcon={false}
-          isActive={false}
           isDisabled={true}
-          onClick={[Function]}
           size="small"
-          type="button"
         >
           button
         </Button>
@@ -6859,12 +6503,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         hasBorderRight={false}
       >
         <Button
-          hasOnlyIcon={false}
-          isActive={false}
-          isDisabled={false}
-          onClick={[Function]}
           size="small"
-          type="button"
         >
           button
         </Button>
@@ -6935,12 +6574,8 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         hasBorderRight={false}
       >
         <Button
-          hasOnlyIcon={false}
-          isActive={false}
           isDisabled={true}
-          onClick={[Function]}
           size="small"
-          type="button"
         >
           button
         </Button>
@@ -7012,12 +6647,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         hasBorderRight={false}
       >
         <Button
-          hasOnlyIcon={false}
-          isActive={false}
-          isDisabled={false}
-          onClick={[Function]}
           size="small"
-          type="button"
         >
           button
         </Button>
@@ -7089,12 +6719,8 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         hasBorderRight={false}
       >
         <Button
-          hasOnlyIcon={false}
-          isActive={false}
           isDisabled={true}
-          onClick={[Function]}
           size="small"
-          type="button"
         >
           button
         </Button>

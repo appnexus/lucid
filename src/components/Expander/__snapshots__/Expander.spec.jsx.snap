@@ -14,11 +14,7 @@ exports[`Expander [common] example testing should match snapshot(s) for 1.expand
       <Button
         className="lucid-Expander-icon"
         hasOnlyIcon={true}
-        isActive={false}
-        isDisabled={false}
         kind="invisible"
-        onClick={[Function]}
-        type="button"
       >
         <ChevronIcon
           direction="up"
@@ -63,11 +59,7 @@ exports[`Expander [common] example testing should match snapshot(s) for 2.intera
       <Button
         className="lucid-Expander-icon"
         hasOnlyIcon={true}
-        isActive={false}
-        isDisabled={false}
         kind="invisible"
-        onClick={[Function]}
-        type="button"
       >
         <ChevronIcon
           direction="down"
@@ -127,11 +119,7 @@ exports[`Expander [common] example testing should match snapshot(s) for 3.intera
       <Button
         className="lucid-Expander-icon"
         hasOnlyIcon={true}
-        isActive={false}
-        isDisabled={false}
         kind="invisible"
-        onClick={[Function]}
-        type="button"
       >
         <ChevronIcon
           direction="down"
@@ -191,11 +179,7 @@ exports[`Expander [common] example testing should match snapshot(s) for 4.intera
       <Button
         className="lucid-Expander-icon"
         hasOnlyIcon={true}
-        isActive={false}
-        isDisabled={false}
         kind="invisible"
-        onClick={[Function]}
-        type="button"
       >
         <ChevronIcon
           direction="down"
@@ -211,23 +195,13 @@ exports[`Expander [common] example testing should match snapshot(s) for 4.intera
       className="lucid-Expander-additional-content"
     >
       <Button
-        hasOnlyIcon={false}
-        isActive={false}
-        isDisabled={false}
         kind="invisible"
-        onClick={[Function]}
-        type="button"
       >
         <EditIcon />
         Edit
       </Button>
       <Button
-        hasOnlyIcon={false}
-        isActive={false}
-        isDisabled={false}
         kind="invisible"
-        onClick={[Function]}
-        type="button"
       >
         <CloseIcon />
         Clear All
@@ -247,23 +221,13 @@ exports[`Expander [common] example testing should match snapshot(s) for 4.intera
     </Expander.Label>
     <Expander.AdditionalLabelContent>
       <Button
-        hasOnlyIcon={false}
-        isActive={false}
-        isDisabled={false}
         kind="invisible"
-        onClick={[Function]}
-        type="button"
       >
         <EditIcon />
         Edit
       </Button>
       <Button
-        hasOnlyIcon={false}
-        isActive={false}
-        isDisabled={false}
         kind="invisible"
-        onClick={[Function]}
-        type="button"
       >
         <CloseIcon />
         Clear All
@@ -305,11 +269,7 @@ exports[`Expander [common] example testing should match snapshot(s) for 5.highli
       <Button
         className="lucid-Expander-icon"
         hasOnlyIcon={true}
-        isActive={false}
-        isDisabled={false}
         kind="invisible"
-        onClick={[Function]}
-        type="button"
       >
         <ChevronIcon
           direction="down"
