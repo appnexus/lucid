@@ -1,7 +1,8 @@
+import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import { omitProps } from '../../util/component-types';
+import { omitProps, FC } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-Typography');
 
@@ -41,60 +42,55 @@ export interface ITypographyProps {
 		| 'samp';
 }
 
-class Typography extends React.Component<ITypographyProps, {}, {}> {
-	constructor(props: ITypographyProps) {
-		super(props);
-	}
-	static displayName = 'Typography';
-	static peek = {
-		description: `
-			A general component for several types of textual HTML elements.
-		`,
-		categories: ['text'],
-	};
-	static propTypes = {
-		children: node`
-			Can contain elements or nested \`Typography\` components.
-		`,
+const Typography: FC<ITypographyProps> = (props): React.ReactElement => {
+	const { children, className, variant, ...passThroughs } = props;
+	const Element = ElementTypes[variant ? variant : 'p'];
 
-		className: string`
-			Appended to the component-specific class names set on the root element.
-		`,
+	return React.createElement(
+		Element,
+		{
+			...omitProps<ITypographyProps>(
+				passThroughs,
+				undefined,
+				_.keys(Typography.propTypes)
+			),
+			className: cx('&', `&-${variant}`, className),
+		},
+		children
+	);
+};
 
-		variant: oneOf([
-			'p',
-			'tabular',
-			'h1',
-			'h2',
-			'h3',
-			'a',
-			'pre',
-			'code',
-			'kbd',
-			'samp',
-		]).isRequired`
-			This prop defines the type of text that will be displayed.
-			It may be an actual HTML element or something with extra semantic meaning.
-		`,
-	};
+Typography.displayName = 'Typography';
+Typography.peek = {
+	description: `
+		A general component for several types of textual HTML elements.
+	`,
+	categories: ['text'],
+};
+Typography.propTypes = {
+	children: node`
+		Can contain elements or nested \`Typography\` components.
+	`,
 
-	render(): React.ReactNode {
-		const { children, className, variant, ...passThroughs } = this.props;
-		const Element = ElementTypes[variant ? variant : 'p'];
+	className: string`
+		Appended to the component-specific class names set on the root element.
+	`,
 
-		return React.createElement(
-			Element,
-			{
-				...omitProps<ITypographyProps>(
-					passThroughs,
-					undefined,
-					Object.keys(Typography.propTypes)
-				),
-				className: cx('&', `&-${variant}`, className),
-			},
-			children
-		);
-	}
-}
+	variant: oneOf([
+		'p',
+		'tabular',
+		'h1',
+		'h2',
+		'h3',
+		'a',
+		'pre',
+		'code',
+		'kbd',
+		'samp',
+	]).isRequired`
+		This prop defines the type of text that will be displayed.
+		It may be an actual HTML element or something with extra semantic meaning.
+	`,
+};
 
 export default Typography;
