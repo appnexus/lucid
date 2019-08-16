@@ -6,13 +6,13 @@ exports[`NotchedTag [common] example testing should match snapshot(s) for basic 
   style={
     Object {
       "clipPath": "
-			polygon(
-				5px 0,
-				100% 0,
-				100% 100%,
-				0 100%,
-				0 8.660254037844386px
-			)",
+		polygon(
+			5px 0,
+			100% 0,
+			100% 100%,
+			0 100%,
+			0 8.660254037844386px
+		)",
       "display": "inline-block",
       "height": "24px",
       "marginRight": "10px",
@@ -26,13 +26,13 @@ exports[`NotchedTag [common] example testing should match snapshot(s) for basic 
       Object {
         "bottom": "2px",
         "clipPath": "
-			polygon(
-				4px 0,
-				100% 0,
-				100% 100%,
-				0 100%,
-				0 7.6602540378443855px
-			)",
+		polygon(
+			4px 0,
+			100% 0,
+			100% 100%,
+			0 100%,
+			0 7.6602540378443855px
+		)",
         "left": "2px",
         "right": "2px",
         "top": "2px",
@@ -54,13 +54,13 @@ exports[`NotchedTag [common] example testing should match snapshot(s) for basic 
   style={
     Object {
       "clipPath": "
-			polygon(
-				4px 0,
-				100% 0,
-				100% 100%,
-				0 100%,
-				0 6.928203230275509px
-			)",
+		polygon(
+			4px 0,
+			100% 0,
+			100% 100%,
+			0 100%,
+			0 6.928203230275509px
+		)",
       "display": "inline-block",
       "height": "18px",
       "marginRight": "10px",
@@ -74,13 +74,13 @@ exports[`NotchedTag [common] example testing should match snapshot(s) for basic 
       Object {
         "bottom": "2px",
         "clipPath": "
-			polygon(
-				3px 0,
-				100% 0,
-				100% 100%,
-				0 100%,
-				0 5.928203230275509px
-			)",
+		polygon(
+			3px 0,
+			100% 0,
+			100% 100%,
+			0 100%,
+			0 5.928203230275509px
+		)",
         "left": "2px",
         "right": "2px",
         "top": "2px",
@@ -102,13 +102,13 @@ exports[`NotchedTag [common] example testing should match snapshot(s) for basic 
   style={
     Object {
       "clipPath": "
-			polygon(
-				5px 0,
-				100% 0,
-				100% 100%,
-				0 100%,
-				0 8.660254037844386px
-			)",
+		polygon(
+			5px 0,
+			100% 0,
+			100% 100%,
+			0 100%,
+			0 8.660254037844386px
+		)",
       "display": "inline-block",
       "height": "24px",
       "marginRight": "10px",
@@ -122,13 +122,13 @@ exports[`NotchedTag [common] example testing should match snapshot(s) for basic 
       Object {
         "bottom": "2px",
         "clipPath": "
-			polygon(
-				4px 0,
-				100% 0,
-				100% 100%,
-				0 100%,
-				0 7.6602540378443855px
-			)",
+		polygon(
+			4px 0,
+			100% 0,
+			100% 100%,
+			0 100%,
+			0 7.6602540378443855px
+		)",
         "left": "2px",
         "right": "2px",
         "top": "2px",
@@ -150,13 +150,13 @@ exports[`NotchedTag [common] example testing should match snapshot(s) for basic 
   style={
     Object {
       "clipPath": "
-			polygon(
-				4px 0,
-				100% 0,
-				100% 100%,
-				0 100%,
-				0 6.928203230275509px
-			)",
+		polygon(
+			4px 0,
+			100% 0,
+			100% 100%,
+			0 100%,
+			0 6.928203230275509px
+		)",
       "display": "inline-block",
       "height": "18px",
       "marginRight": "10px",
@@ -170,13 +170,13 @@ exports[`NotchedTag [common] example testing should match snapshot(s) for basic 
       Object {
         "bottom": "2px",
         "clipPath": "
-			polygon(
-				3px 0,
-				100% 0,
-				100% 100%,
-				0 100%,
-				0 5.928203230275509px
-			)",
+		polygon(
+			3px 0,
+			100% 0,
+			100% 100%,
+			0 100%,
+			0 5.928203230275509px
+		)",
         "left": "2px",
         "right": "2px",
         "top": "2px",
@@ -198,13 +198,13 @@ exports[`NotchedTag [common] example testing should match snapshot(s) for basic 
   style={
     Object {
       "clipPath": "
-			polygon(
-				5px 0,
-				100% 0,
-				100% 100%,
-				0 100%,
-				0 8.660254037844386px
-			)",
+		polygon(
+			5px 0,
+			100% 0,
+			100% 100%,
+			0 100%,
+			0 8.660254037844386px
+		)",
       "display": "inline-block",
       "height": "24px",
       "marginRight": "10px",
@@ -218,13 +218,13 @@ exports[`NotchedTag [common] example testing should match snapshot(s) for basic 
       Object {
         "bottom": "2px",
         "clipPath": "
-			polygon(
-				4px 0,
-				100% 0,
-				100% 100%,
-				0 100%,
-				0 7.6602540378443855px
-			)",
+		polygon(
+			4px 0,
+			100% 0,
+			100% 100%,
+			0 100%,
+			0 7.6602540378443855px
+		)",
         "left": "2px",
         "right": "2px",
         "top": "2px",
@@ -246,13 +246,13 @@ exports[`NotchedTag [common] example testing should match snapshot(s) for basic 
   style={
     Object {
       "clipPath": "
-			polygon(
-				4px 0,
-				100% 0,
-				100% 100%,
-				0 100%,
-				0 6.928203230275509px
-			)",
+		polygon(
+			4px 0,
+			100% 0,
+			100% 100%,
+			0 100%,
+			0 6.928203230275509px
+		)",
       "display": "inline-block",
       "height": "18px",
       "marginRight": "10px",
@@ -266,13 +266,13 @@ exports[`NotchedTag [common] example testing should match snapshot(s) for basic 
       Object {
         "bottom": "2px",
         "clipPath": "
-			polygon(
-				3px 0,
-				100% 0,
-				100% 100%,
-				0 100%,
-				0 5.928203230275509px
-			)",
+		polygon(
+			3px 0,
+			100% 0,
+			100% 100%,
+			0 100%,
+			0 5.928203230275509px
+		)",
         "left": "2px",
         "right": "2px",
         "top": "2px",
@@ -294,13 +294,13 @@ exports[`NotchedTag [common] example testing should match snapshot(s) for basic 
   style={
     Object {
       "clipPath": "
-			polygon(
-				5px 0,
-				100% 0,
-				100% 100%,
-				0 100%,
-				0 8.660254037844386px
-			)",
+		polygon(
+			5px 0,
+			100% 0,
+			100% 100%,
+			0 100%,
+			0 8.660254037844386px
+		)",
       "display": "inline-block",
       "height": "24px",
       "marginRight": "10px",
@@ -314,13 +314,13 @@ exports[`NotchedTag [common] example testing should match snapshot(s) for basic 
       Object {
         "bottom": "2px",
         "clipPath": "
-			polygon(
-				4px 0,
-				100% 0,
-				100% 100%,
-				0 100%,
-				0 7.6602540378443855px
-			)",
+		polygon(
+			4px 0,
+			100% 0,
+			100% 100%,
+			0 100%,
+			0 7.6602540378443855px
+		)",
         "left": "2px",
         "right": "2px",
         "top": "2px",
@@ -342,13 +342,13 @@ exports[`NotchedTag [common] example testing should match snapshot(s) for basic 
   style={
     Object {
       "clipPath": "
-			polygon(
-				4px 0,
-				100% 0,
-				100% 100%,
-				0 100%,
-				0 6.928203230275509px
-			)",
+		polygon(
+			4px 0,
+			100% 0,
+			100% 100%,
+			0 100%,
+			0 6.928203230275509px
+		)",
       "display": "inline-block",
       "height": "18px",
       "marginRight": "10px",
@@ -362,13 +362,13 @@ exports[`NotchedTag [common] example testing should match snapshot(s) for basic 
       Object {
         "bottom": "2px",
         "clipPath": "
-			polygon(
-				3px 0,
-				100% 0,
-				100% 100%,
-				0 100%,
-				0 5.928203230275509px
-			)",
+		polygon(
+			3px 0,
+			100% 0,
+			100% 100%,
+			0 100%,
+			0 5.928203230275509px
+		)",
         "left": "2px",
         "right": "2px",
         "top": "2px",
@@ -390,13 +390,13 @@ exports[`NotchedTag [common] example testing should match snapshot(s) for basic 
   style={
     Object {
       "clipPath": "
-			polygon(
-				5px 0,
-				100% 0,
-				100% 100%,
-				0 100%,
-				0 8.660254037844386px
-			)",
+		polygon(
+			5px 0,
+			100% 0,
+			100% 100%,
+			0 100%,
+			0 8.660254037844386px
+		)",
       "display": "inline-block",
       "height": "24px",
       "marginRight": "10px",
@@ -410,13 +410,13 @@ exports[`NotchedTag [common] example testing should match snapshot(s) for basic 
       Object {
         "bottom": "2px",
         "clipPath": "
-			polygon(
-				4px 0,
-				100% 0,
-				100% 100%,
-				0 100%,
-				0 7.6602540378443855px
-			)",
+		polygon(
+			4px 0,
+			100% 0,
+			100% 100%,
+			0 100%,
+			0 7.6602540378443855px
+		)",
         "left": "2px",
         "right": "2px",
         "top": "2px",
@@ -438,13 +438,13 @@ exports[`NotchedTag [common] example testing should match snapshot(s) for basic 
   style={
     Object {
       "clipPath": "
-			polygon(
-				4px 0,
-				100% 0,
-				100% 100%,
-				0 100%,
-				0 6.928203230275509px
-			)",
+		polygon(
+			4px 0,
+			100% 0,
+			100% 100%,
+			0 100%,
+			0 6.928203230275509px
+		)",
       "display": "inline-block",
       "height": "18px",
       "marginRight": "10px",
@@ -458,13 +458,13 @@ exports[`NotchedTag [common] example testing should match snapshot(s) for basic 
       Object {
         "bottom": "2px",
         "clipPath": "
-			polygon(
-				3px 0,
-				100% 0,
-				100% 100%,
-				0 100%,
-				0 5.928203230275509px
-			)",
+		polygon(
+			3px 0,
+			100% 0,
+			100% 100%,
+			0 100%,
+			0 5.928203230275509px
+		)",
         "left": "2px",
         "right": "2px",
         "top": "2px",
@@ -486,13 +486,13 @@ exports[`NotchedTag [common] example testing should match snapshot(s) for basic 
   style={
     Object {
       "clipPath": "
-			polygon(
-				5px 0,
-				100% 0,
-				100% 100%,
-				0 100%,
-				0 8.660254037844386px
-			)",
+		polygon(
+			5px 0,
+			100% 0,
+			100% 100%,
+			0 100%,
+			0 8.660254037844386px
+		)",
       "display": "inline-block",
       "height": "24px",
       "marginRight": "10px",
@@ -506,13 +506,13 @@ exports[`NotchedTag [common] example testing should match snapshot(s) for basic 
       Object {
         "bottom": "2px",
         "clipPath": "
-			polygon(
-				4px 0,
-				100% 0,
-				100% 100%,
-				0 100%,
-				0 7.6602540378443855px
-			)",
+		polygon(
+			4px 0,
+			100% 0,
+			100% 100%,
+			0 100%,
+			0 7.6602540378443855px
+		)",
         "left": "2px",
         "right": "2px",
         "top": "2px",
@@ -534,13 +534,13 @@ exports[`NotchedTag [common] example testing should match snapshot(s) for basic 
   style={
     Object {
       "clipPath": "
-			polygon(
-				4px 0,
-				100% 0,
-				100% 100%,
-				0 100%,
-				0 6.928203230275509px
-			)",
+		polygon(
+			4px 0,
+			100% 0,
+			100% 100%,
+			0 100%,
+			0 6.928203230275509px
+		)",
       "display": "inline-block",
       "height": "18px",
       "marginRight": "10px",
@@ -554,13 +554,13 @@ exports[`NotchedTag [common] example testing should match snapshot(s) for basic 
       Object {
         "bottom": "2px",
         "clipPath": "
-			polygon(
-				3px 0,
-				100% 0,
-				100% 100%,
-				0 100%,
-				0 5.928203230275509px
-			)",
+		polygon(
+			3px 0,
+			100% 0,
+			100% 100%,
+			0 100%,
+			0 5.928203230275509px
+		)",
         "left": "2px",
         "right": "2px",
         "top": "2px",
