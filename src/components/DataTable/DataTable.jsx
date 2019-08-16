@@ -253,7 +253,15 @@ const DataTable = createClass({
 		this.fixedHeaderUnfixedColumnsRef.scrollLeft = event.target.scrollLeft;
 		this.fixedBodyFixedColumnsRef.scrollTop = event.target.scrollTop;
 	},
-
+	handleResize(columnWidth, { props: childProps }) {
+		// setting latest column width to Tbody
+		this.setState(state => ({
+			activeWidth: {
+				...state.activeWidth,
+				[childProps.children]: columnWidth,
+			},
+		}));
+	},
 	renderHeader(
 		startColumn,
 		endColumn,
@@ -274,15 +282,6 @@ const DataTable = createClass({
 		);
 		const allSelected = _.every(data, 'isSelected');
 
-		const handleResize = (columnWidth, { props: childProps })  => {
-			// setting latest column width to Tbody
-			this.setState(state => ({
-				activeWidth: {
-					...state.activeWidth,
-					[childProps.children]: columnWidth,
-				},
-			}));
-		};
 		return (
 			<Thead>
 				<Tr>
@@ -308,7 +307,7 @@ const DataTable = createClass({
 							_.map(childComponentElements, ({ props, type }, index) =>
 								type === DataTable.Column ? (
 									<Th
-										onResize={props.isResizable ? handleResize : null}
+										onResize={props.isResizable ? this.handleResize : null}
 										{..._.omit(props, ['field', 'children', 'title'])}
 										onClick={
 											DataTable.shouldColumnHandleSort(props)
