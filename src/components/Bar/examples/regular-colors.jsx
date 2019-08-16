@@ -8,7 +8,7 @@ const svgProps = {
 	height: 100,
 };
 
-const pointProps = {
+const barProps = {
 	x: 5,
 	y: 0,
 	width: 10,
@@ -46,6 +46,11 @@ const colors = [
 	chartConstants.COLOR_5,
 	chartConstants.COLOR_5_DARK,
 	chartConstants.COLOR_5_DARKEST,
+	chartConstants.COLOR_6_LIGHTEST,
+	chartConstants.COLOR_6_LIGHT,
+	chartConstants.COLOR_6,
+	chartConstants.COLOR_6_DARK,
+	chartConstants.COLOR_6_DARKEST,
 	chartConstants.COLOR_GOOD_LIGHT,
 	chartConstants.COLOR_GOOD,
 	chartConstants.COLOR_GOOD_DARK,
@@ -61,7 +66,7 @@ export default createClass({
 			<div>
 				{_.map(colors, color => (
 					<svg key={color} {...svgProps}>
-						<Bar {...pointProps} color={color} />
+						<Bar {...barProps} color={color} />
 					</svg>
 				))}
 			</div>

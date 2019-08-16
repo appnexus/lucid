@@ -168,6 +168,16 @@ const colorList = [
 		],
 	},
 	{
+		category: 'Chart 6',
+		variables: [
+			'color-chart-6-lightest',
+			'color-chart-6-light',
+			'color-chart-6',
+			'color-chart-6-dark',
+			'color-chart-6-darkest',
+		],
+	},
+	{
 		category: 'Chart Semantic Good',
 		variables: [
 			'color-chart-good-lightest',

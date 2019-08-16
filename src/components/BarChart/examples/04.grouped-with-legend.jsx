@@ -18,7 +18,7 @@ const data = [
 	},
 ];
 const yAxisFields = ['apples', 'pears', 'peaches', 'bananas', 'oranges'];
-const palette = chartConstants.PALETTE_6;
+const palette = chartConstants.PALETTE_7;
 
 export default createClass({
 	render() {

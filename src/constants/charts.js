@@ -31,6 +31,11 @@ export const COLOR_5_LIGHTEST = 'color-chart-5-lightest';
 export const COLOR_5_LIGHT = 'color-chart-5-light';
 export const COLOR_5_DARK = 'color-chart-5-dark';
 export const COLOR_5_DARKEST = 'color-chart-5-darkest';
+export const COLOR_6 = 'color-chart-6';
+export const COLOR_6_LIGHTEST = 'color-chart-6-lightest';
+export const COLOR_6_LIGHT = 'color-chart-6-light';
+export const COLOR_6_DARK = 'color-chart-6-dark';
+export const COLOR_6_DARKEST = 'color-chart-6-darkest';
 export const COLOR_GOOD = 'color-chart-good';
 export const COLOR_GOOD_LIGHTEST = 'color-chart-good-lightest';
 export const COLOR_GOOD_LIGHT = 'color-chart-good-light';
@@ -44,6 +49,19 @@ export const COLOR_BAD_DARKEST = 'color-chart-bad-darkest';
 export const COLOR_NEUTRAL = 'color-chart-neutral';
 
 export const PALETTE_6 = [COLOR_0, COLOR_1, COLOR_2, COLOR_3, COLOR_4, COLOR_5];
+
+// In order to keep the naming scheme correct I'm introducing a new default
+// palette that has 7 items while not breaking existing code that uses a 6
+// color palette.
+export const PALETTE_7 = [
+	COLOR_0,
+	COLOR_1,
+	COLOR_2,
+	COLOR_3,
+	COLOR_4,
+	COLOR_5,
+	COLOR_6,
+];
 
 export const PALETTE_30 = [
 	COLOR_0_LIGHTEST,
@@ -157,4 +175,12 @@ export const PALETTE_MONOCHROME_5_5 = [
 	COLOR_5,
 	COLOR_5_DARK,
 	COLOR_5_DARKEST,
+];
+
+export const PALETTE_MONOCHROME_6_5 = [
+	COLOR_6_LIGHTEST,
+	COLOR_6_LIGHT,
+	COLOR_6,
+	COLOR_6_DARK,
+	COLOR_6_DARKEST,
 ];
