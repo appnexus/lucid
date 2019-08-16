@@ -97,7 +97,7 @@ class SlidePanel extends React.Component<ISlidePanelProps, ISlidePanelState, {}>
 
 	static Slide = SlidePanelSlide;
 
-	static _isPrivate: true;
+	static _isPrivate = true;
 	static displayName = 'SlidePanel';
 	static peek = {
 		description: `
@@ -205,7 +205,6 @@ class SlidePanel extends React.Component<ISlidePanelProps, ISlidePanelState, {}>
 					currOffset - offsetDiff
 				)
 			});
-
 
 			_.delay(async (): Promise<void> => {
 				shiftChildren((this.slideStrip.current as HTMLElement), -offsetDiff);

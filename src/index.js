@@ -138,7 +138,6 @@ import SeparatorIcon from './components/Icon/SeparatorIcon/SeparatorIcon';
 import SettingsIcon from './components/Icon/SettingsIcon/SettingsIcon';
 import ShoppingCartIcon from './components/Icon/ShoppingCartIcon/ShoppingCartIcon';
 import SidePanel from './components/SidePanel/SidePanel';
-import SlidePanel from './components/SlidePanel/SlidePanel';
 import SplitHorizontal from './components/SplitHorizontal/SplitHorizontal';
 import SplitVertical from './components/SplitVertical/SplitVertical';
 import StarIcon from './components/Icon/StarIcon/StarIcon';
@@ -316,7 +315,6 @@ export {
 	SettingsIcon,
 	ShoppingCartIcon,
 	SidePanel,
-	SlidePanel,
 	Sidebar,
 	SidebarDumb,
 	SingleSelect,
