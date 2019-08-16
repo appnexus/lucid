@@ -17,12 +17,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         rowSpan={2}
         sortDirection="up"
       >
-        <Checkbox
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
+        <Checkbox />
       </Table.Th>
       <Table.Th
         align="left"
@@ -114,12 +109,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         hasBorderLeft={false}
         hasBorderRight={false}
       >
-        <Checkbox
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
+        <Checkbox />
       </Table.Td>
       <Table.Td
         align="left"
@@ -185,12 +175,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         hasBorderLeft={false}
         hasBorderRight={false}
       >
-        <Checkbox
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
+        <Checkbox />
       </Table.Td>
       <Table.Td
         align="left"
@@ -256,12 +241,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         hasBorderLeft={false}
         hasBorderRight={false}
       >
-        <Checkbox
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
+        <Checkbox />
       </Table.Td>
       <Table.Td
         align="left"
@@ -329,12 +309,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         hasBorderLeft={false}
         hasBorderRight={false}
       >
-        <Checkbox
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
+        <Checkbox />
       </Table.Td>
       <Table.Td
         align="left"
@@ -401,12 +376,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         hasBorderLeft={false}
         hasBorderRight={false}
       >
-        <Checkbox
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
+        <Checkbox />
       </Table.Td>
       <Table.Td
         align="left"
@@ -473,12 +443,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         hasBorderLeft={false}
         hasBorderRight={false}
       >
-        <Checkbox
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
+        <Checkbox />
       </Table.Td>
       <Table.Td
         align="left"
@@ -548,12 +513,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         hasBorderLeft={false}
         hasBorderRight={false}
       >
-        <Checkbox
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
+        <Checkbox />
       </Table.Td>
       <Table.Td
         align="left"
@@ -625,12 +585,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         hasBorderLeft={false}
         hasBorderRight={false}
       >
-        <Checkbox
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
+        <Checkbox />
       </Table.Td>
       <Table.Td
         align="left"
@@ -701,12 +656,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         hasBorderLeft={false}
         hasBorderRight={false}
       >
-        <Checkbox
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
+        <Checkbox />
       </Table.Td>
       <Table.Td
         align="left"
@@ -778,10 +728,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         hasBorderRight={false}
       >
         <Checkbox
-          isDisabled={false}
-          isIndeterminate={false}
           isSelected={true}
-          onSelect={[Function]}
         />
       </Table.Td>
       <Table.Td
@@ -849,10 +796,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         hasBorderRight={false}
       >
         <Checkbox
-          isDisabled={false}
-          isIndeterminate={false}
           isSelected={true}
-          onSelect={[Function]}
         />
       </Table.Td>
       <Table.Td
@@ -922,10 +866,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         hasBorderRight={false}
       >
         <Checkbox
-          isDisabled={false}
-          isIndeterminate={false}
           isSelected={true}
-          onSelect={[Function]}
         />
       </Table.Td>
       <Table.Td
@@ -994,10 +935,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         hasBorderRight={false}
       >
         <Checkbox
-          isDisabled={false}
-          isIndeterminate={false}
           isSelected={true}
-          onSelect={[Function]}
         />
       </Table.Td>
       <Table.Td
@@ -1066,12 +1004,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         hasBorderLeft={false}
         hasBorderRight={false}
       >
-        <Checkbox
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
+        <Checkbox />
       </Table.Td>
       <Table.Td
         align="left"
@@ -1138,12 +1071,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         hasBorderLeft={false}
         hasBorderRight={false}
       >
-        <Checkbox
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
+        <Checkbox />
       </Table.Td>
       <Table.Td
         align="left"
@@ -1230,12 +1158,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         rowSpan={2}
         sortDirection="up"
       >
-        <Checkbox
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
+        <Checkbox />
       </Table.Th>
       <Table.Th
         align="left"
@@ -1320,12 +1243,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         hasBorderLeft={false}
         hasBorderRight={false}
       >
-        <Checkbox
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
+        <Checkbox />
       </Table.Td>
       <Table.Td
         align="left"
@@ -1391,12 +1309,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         hasBorderLeft={false}
         hasBorderRight={false}
       >
-        <Checkbox
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
+        <Checkbox />
       </Table.Td>
       <Table.Td
         align="left"
@@ -1464,12 +1377,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         hasBorderLeft={false}
         hasBorderRight={false}
       >
-        <Checkbox
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
+        <Checkbox />
       </Table.Td>
       <Table.Td
         align="left"
@@ -1536,12 +1444,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         hasBorderLeft={false}
         hasBorderRight={false}
       >
-        <Checkbox
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
+        <Checkbox />
       </Table.Td>
       <Table.Td
         align="left"
@@ -1608,12 +1511,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         hasBorderLeft={false}
         hasBorderRight={false}
       >
-        <Checkbox
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
+        <Checkbox />
       </Table.Td>
       <Table.Td
         align="left"
@@ -1683,12 +1581,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         hasBorderLeft={false}
         hasBorderRight={false}
       >
-        <Checkbox
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
+        <Checkbox />
       </Table.Td>
       <Table.Td
         align="left"
@@ -1760,12 +1653,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         hasBorderLeft={false}
         hasBorderRight={false}
       >
-        <Checkbox
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
+        <Checkbox />
       </Table.Td>
       <Table.Td
         align="left"
@@ -1836,12 +1724,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         hasBorderLeft={false}
         hasBorderRight={false}
       >
-        <Checkbox
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
+        <Checkbox />
       </Table.Td>
       <Table.Td
         align="left"
@@ -1913,10 +1796,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         hasBorderRight={false}
       >
         <Checkbox
-          isDisabled={false}
-          isIndeterminate={false}
           isSelected={true}
-          onSelect={[Function]}
         />
       </Table.Td>
       <Table.Td
@@ -1984,10 +1864,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         hasBorderRight={false}
       >
         <Checkbox
-          isDisabled={false}
-          isIndeterminate={false}
           isSelected={true}
-          onSelect={[Function]}
         />
       </Table.Td>
       <Table.Td
@@ -2057,10 +1934,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         hasBorderRight={false}
       >
         <Checkbox
-          isDisabled={false}
-          isIndeterminate={false}
           isSelected={true}
-          onSelect={[Function]}
         />
       </Table.Td>
       <Table.Td
@@ -2129,10 +2003,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         hasBorderRight={false}
       >
         <Checkbox
-          isDisabled={false}
-          isIndeterminate={false}
           isSelected={true}
-          onSelect={[Function]}
         />
       </Table.Td>
       <Table.Td
@@ -2201,12 +2072,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         hasBorderLeft={false}
         hasBorderRight={false}
       >
-        <Checkbox
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
+        <Checkbox />
       </Table.Td>
       <Table.Td
         align="left"
@@ -2273,12 +2139,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         hasBorderLeft={false}
         hasBorderRight={false}
       >
-        <Checkbox
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
+        <Checkbox />
       </Table.Td>
       <Table.Td
         align="left"
@@ -2365,12 +2226,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         rowSpan={2}
         sortDirection="up"
       >
-        <Checkbox
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
+        <Checkbox />
       </Table.Th>
       <Table.Th
         align="left"
@@ -2470,12 +2326,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         hasBorderLeft={false}
         hasBorderRight={false}
       >
-        <Checkbox
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
+        <Checkbox />
       </Table.Td>
       <Table.Td
         align="left"
@@ -2541,12 +2392,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         hasBorderLeft={false}
         hasBorderRight={false}
       >
-        <Checkbox
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
+        <Checkbox />
       </Table.Td>
       <Table.Td
         align="left"
@@ -2614,12 +2460,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         hasBorderLeft={false}
         hasBorderRight={false}
       >
-        <Checkbox
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
+        <Checkbox />
       </Table.Td>
       <Table.Td
         align="left"
@@ -2686,12 +2527,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         hasBorderLeft={false}
         hasBorderRight={false}
       >
-        <Checkbox
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
+        <Checkbox />
       </Table.Td>
       <Table.Td
         align="left"
@@ -2758,12 +2594,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         hasBorderLeft={false}
         hasBorderRight={false}
       >
-        <Checkbox
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
+        <Checkbox />
       </Table.Td>
       <Table.Td
         align="left"
@@ -2833,12 +2664,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         hasBorderLeft={false}
         hasBorderRight={false}
       >
-        <Checkbox
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
+        <Checkbox />
       </Table.Td>
       <Table.Td
         align="left"
@@ -2910,12 +2736,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         hasBorderLeft={false}
         hasBorderRight={false}
       >
-        <Checkbox
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
+        <Checkbox />
       </Table.Td>
       <Table.Td
         align="left"
@@ -2986,12 +2807,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         hasBorderLeft={false}
         hasBorderRight={false}
       >
-        <Checkbox
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
+        <Checkbox />
       </Table.Td>
       <Table.Td
         align="left"
@@ -3063,10 +2879,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         hasBorderRight={false}
       >
         <Checkbox
-          isDisabled={false}
-          isIndeterminate={false}
           isSelected={true}
-          onSelect={[Function]}
         />
       </Table.Td>
       <Table.Td
@@ -3134,10 +2947,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         hasBorderRight={false}
       >
         <Checkbox
-          isDisabled={false}
-          isIndeterminate={false}
           isSelected={true}
-          onSelect={[Function]}
         />
       </Table.Td>
       <Table.Td
@@ -3207,10 +3017,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         hasBorderRight={false}
       >
         <Checkbox
-          isDisabled={false}
-          isIndeterminate={false}
           isSelected={true}
-          onSelect={[Function]}
         />
       </Table.Td>
       <Table.Td
@@ -3279,10 +3086,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         hasBorderRight={false}
       >
         <Checkbox
-          isDisabled={false}
-          isIndeterminate={false}
           isSelected={true}
-          onSelect={[Function]}
         />
       </Table.Td>
       <Table.Td
@@ -3351,12 +3155,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         hasBorderLeft={false}
         hasBorderRight={false}
       >
-        <Checkbox
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
+        <Checkbox />
       </Table.Td>
       <Table.Td
         align="left"
@@ -3423,12 +3222,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         hasBorderLeft={false}
         hasBorderRight={false}
       >
-        <Checkbox
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
+        <Checkbox />
       </Table.Td>
       <Table.Td
         align="left"
@@ -3506,12 +3300,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         rowSpan={2}
         sortDirection="up"
       >
-        <Checkbox
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
+        <Checkbox />
       </Table.Th>
       <Table.Th
         align="left"
@@ -3603,12 +3392,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         hasBorderLeft={false}
         hasBorderRight={false}
       >
-        <Checkbox
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
+        <Checkbox />
       </Table.Td>
       <Table.Td
         align="left"
@@ -3674,12 +3458,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         hasBorderLeft={false}
         hasBorderRight={false}
       >
-        <Checkbox
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
+        <Checkbox />
       </Table.Td>
       <Table.Td
         align="left"
@@ -3747,12 +3526,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         hasBorderLeft={false}
         hasBorderRight={false}
       >
-        <Checkbox
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
+        <Checkbox />
       </Table.Td>
       <Table.Td
         align="left"
@@ -3819,12 +3593,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         hasBorderLeft={false}
         hasBorderRight={false}
       >
-        <Checkbox
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
+        <Checkbox />
       </Table.Td>
       <Table.Td
         align="left"
@@ -3891,12 +3660,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         hasBorderLeft={false}
         hasBorderRight={false}
       >
-        <Checkbox
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
+        <Checkbox />
       </Table.Td>
       <Table.Td
         align="left"
@@ -3966,12 +3730,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         hasBorderLeft={false}
         hasBorderRight={false}
       >
-        <Checkbox
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
+        <Checkbox />
       </Table.Td>
       <Table.Td
         align="left"
@@ -4043,12 +3802,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         hasBorderLeft={false}
         hasBorderRight={false}
       >
-        <Checkbox
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
+        <Checkbox />
       </Table.Td>
       <Table.Td
         align="left"
@@ -4119,12 +3873,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         hasBorderLeft={false}
         hasBorderRight={false}
       >
-        <Checkbox
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
+        <Checkbox />
       </Table.Td>
       <Table.Td
         align="left"
@@ -4196,10 +3945,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         hasBorderRight={false}
       >
         <Checkbox
-          isDisabled={false}
-          isIndeterminate={false}
           isSelected={true}
-          onSelect={[Function]}
         />
       </Table.Td>
       <Table.Td
@@ -4267,10 +4013,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         hasBorderRight={false}
       >
         <Checkbox
-          isDisabled={false}
-          isIndeterminate={false}
           isSelected={true}
-          onSelect={[Function]}
         />
       </Table.Td>
       <Table.Td
@@ -4340,10 +4083,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         hasBorderRight={false}
       >
         <Checkbox
-          isDisabled={false}
-          isIndeterminate={false}
           isSelected={true}
-          onSelect={[Function]}
         />
       </Table.Td>
       <Table.Td
@@ -4412,10 +4152,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         hasBorderRight={false}
       >
         <Checkbox
-          isDisabled={false}
-          isIndeterminate={false}
           isSelected={true}
-          onSelect={[Function]}
         />
       </Table.Td>
       <Table.Td
@@ -4484,12 +4221,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         hasBorderLeft={false}
         hasBorderRight={false}
       >
-        <Checkbox
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
+        <Checkbox />
       </Table.Td>
       <Table.Td
         align="left"
@@ -4556,12 +4288,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         hasBorderLeft={false}
         hasBorderRight={false}
       >
-        <Checkbox
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
+        <Checkbox />
       </Table.Td>
       <Table.Td
         align="left"
@@ -4648,12 +4375,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         rowSpan={2}
         sortDirection="up"
       >
-        <Checkbox
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
+        <Checkbox />
       </Table.Th>
       <Table.Th
         align="left"
@@ -4753,12 +4475,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         hasBorderLeft={false}
         hasBorderRight={false}
       >
-        <Checkbox
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
+        <Checkbox />
       </Table.Td>
       <Table.Td
         align="left"
@@ -4825,12 +4542,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         hasBorderLeft={false}
         hasBorderRight={false}
       >
-        <Checkbox
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
+        <Checkbox />
       </Table.Td>
       <Table.Td
         align="left"
@@ -4899,12 +4611,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         hasBorderLeft={false}
         hasBorderRight={false}
       >
-        <Checkbox
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
+        <Checkbox />
       </Table.Td>
       <Table.Td
         align="left"
@@ -4972,12 +4679,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         hasBorderLeft={false}
         hasBorderRight={false}
       >
-        <Checkbox
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
+        <Checkbox />
       </Table.Td>
       <Table.Td
         align="left"
@@ -5045,12 +4747,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         hasBorderLeft={false}
         hasBorderRight={false}
       >
-        <Checkbox
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
+        <Checkbox />
       </Table.Td>
       <Table.Td
         align="left"
@@ -5117,12 +4814,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         hasBorderLeft={false}
         hasBorderRight={false}
       >
-        <Checkbox
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
+        <Checkbox />
       </Table.Td>
       <Table.Td
         align="left"
@@ -5191,12 +4883,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         hasBorderLeft={false}
         hasBorderRight={false}
       >
-        <Checkbox
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
+        <Checkbox />
       </Table.Td>
       <Table.Td
         align="left"
@@ -5264,12 +4951,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         hasBorderLeft={false}
         hasBorderRight={false}
       >
-        <Checkbox
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
+        <Checkbox />
       </Table.Td>
       <Table.Td
         align="left"
@@ -5338,10 +5020,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         hasBorderRight={false}
       >
         <Checkbox
-          isDisabled={false}
-          isIndeterminate={false}
           isSelected={true}
-          onSelect={[Function]}
         />
       </Table.Td>
       <Table.Td
@@ -5410,10 +5089,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         hasBorderRight={false}
       >
         <Checkbox
-          isDisabled={false}
-          isIndeterminate={false}
           isSelected={true}
-          onSelect={[Function]}
         />
       </Table.Td>
       <Table.Td
@@ -5484,10 +5160,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         hasBorderRight={false}
       >
         <Checkbox
-          isDisabled={false}
-          isIndeterminate={false}
           isSelected={true}
-          onSelect={[Function]}
         />
       </Table.Td>
       <Table.Td
@@ -5557,10 +5230,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         hasBorderRight={false}
       >
         <Checkbox
-          isDisabled={false}
-          isIndeterminate={false}
           isSelected={true}
-          onSelect={[Function]}
         />
       </Table.Td>
       <Table.Td
@@ -5630,12 +5300,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         hasBorderLeft={false}
         hasBorderRight={false}
       >
-        <Checkbox
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
+        <Checkbox />
       </Table.Td>
       <Table.Td
         align="left"
@@ -5703,12 +5368,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         hasBorderLeft={false}
         hasBorderRight={false}
       >
-        <Checkbox
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
+        <Checkbox />
       </Table.Td>
       <Table.Td
         align="left"
@@ -5787,12 +5447,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         rowSpan={2}
         sortDirection="up"
       >
-        <Checkbox
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
+        <Checkbox />
       </Table.Th>
       <Table.Th
         align="left"
@@ -5884,12 +5539,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         hasBorderLeft={false}
         hasBorderRight={false}
       >
-        <Checkbox
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
+        <Checkbox />
       </Table.Td>
       <Table.Td
         align="left"
@@ -5955,12 +5605,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         hasBorderLeft={false}
         hasBorderRight={false}
       >
-        <Checkbox
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
+        <Checkbox />
       </Table.Td>
       <Table.Td
         align="left"
@@ -6028,12 +5673,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         hasBorderLeft={false}
         hasBorderRight={false}
       >
-        <Checkbox
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
+        <Checkbox />
       </Table.Td>
       <Table.Td
         align="left"
@@ -6100,12 +5740,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         hasBorderLeft={false}
         hasBorderRight={false}
       >
-        <Checkbox
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
+        <Checkbox />
       </Table.Td>
       <Table.Td
         align="left"
@@ -6172,12 +5807,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         hasBorderLeft={false}
         hasBorderRight={false}
       >
-        <Checkbox
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
+        <Checkbox />
       </Table.Td>
       <Table.Td
         align="left"
@@ -6247,12 +5877,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         hasBorderLeft={false}
         hasBorderRight={false}
       >
-        <Checkbox
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
+        <Checkbox />
       </Table.Td>
       <Table.Td
         align="left"
@@ -6324,12 +5949,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         hasBorderLeft={false}
         hasBorderRight={false}
       >
-        <Checkbox
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
+        <Checkbox />
       </Table.Td>
       <Table.Td
         align="left"
@@ -6400,12 +6020,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         hasBorderLeft={false}
         hasBorderRight={false}
       >
-        <Checkbox
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
+        <Checkbox />
       </Table.Td>
       <Table.Td
         align="left"
@@ -6477,10 +6092,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         hasBorderRight={false}
       >
         <Checkbox
-          isDisabled={false}
-          isIndeterminate={false}
           isSelected={true}
-          onSelect={[Function]}
         />
       </Table.Td>
       <Table.Td
@@ -6548,10 +6160,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         hasBorderRight={false}
       >
         <Checkbox
-          isDisabled={false}
-          isIndeterminate={false}
           isSelected={true}
-          onSelect={[Function]}
         />
       </Table.Td>
       <Table.Td
@@ -6621,10 +6230,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         hasBorderRight={false}
       >
         <Checkbox
-          isDisabled={false}
-          isIndeterminate={false}
           isSelected={true}
-          onSelect={[Function]}
         />
       </Table.Td>
       <Table.Td
@@ -6693,10 +6299,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         hasBorderRight={false}
       >
         <Checkbox
-          isDisabled={false}
-          isIndeterminate={false}
           isSelected={true}
-          onSelect={[Function]}
         />
       </Table.Td>
       <Table.Td
