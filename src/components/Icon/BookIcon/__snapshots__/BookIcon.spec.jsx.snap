@@ -2,13 +2,7 @@
 
 exports[`BookIcon [common] example testing should match snapshot(s) for 1.default 1`] = `
 <Icon
-  aspectRatio="xMidYMid meet"
   className="lucid-BookIcon"
-  color="primary"
-  isClickable={false}
-  isDisabled={false}
-  size={16}
-  viewBox="0 0 16 16"
 >
   <path
     d="M2.5 2.5h-2v13h15v-13h-2"

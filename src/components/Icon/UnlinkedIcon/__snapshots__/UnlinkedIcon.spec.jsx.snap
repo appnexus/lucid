@@ -2,13 +2,7 @@
 
 exports[`UnlinkedIcon [common] example testing should match snapshot(s) for 1.default 1`] = `
 <Icon
-  aspectRatio="xMidYMid meet"
   className="lucid-UnlinkedIcon"
-  color="primary"
-  isClickable={false}
-  isDisabled={false}
-  size={16}
-  viewBox="0 0 16 16"
 >
   <path
     d="M5.5 3.5l-1-2m8 9l2 1m-4 1l1 2m-8-9l-2-1"

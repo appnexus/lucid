@@ -2,13 +2,7 @@
 
 exports[`CodeIcon [common] example testing should match snapshot(s) for 1.default 1`] = `
 <Icon
-  aspectRatio="xMidYMid meet"
   className="lucid-CodeIcon"
-  color="primary"
-  isClickable={false}
-  isDisabled={false}
-  size={16}
-  viewBox="0 0 16 16"
 >
   <path
     d="M12.5 4l3 4-3 4m-9-8l-3 4 3 4"

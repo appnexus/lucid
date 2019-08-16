@@ -248,13 +248,7 @@ exports[`LoadingIndicator [common] example testing should match snapshot(s) for 
     >
       <LoadingMessage.Icon>
         <LoadingIcon
-          aspectRatio="xMidYMid meet"
-          color="primary"
-          isClickable={false}
-          isDisabled={false}
-          size={16}
           speed="slow"
-          viewBox="0 0 16 16"
         />
       </LoadingMessage.Icon>
       <LoadingMessage.Title>
@@ -344,13 +338,7 @@ exports[`LoadingIndicator [common] example testing should match snapshot(s) for 
       Body="Please wait"
       Icon={
         <LoadingIcon
-          aspectRatio="xMidYMid meet"
-          color="primary"
-          isClickable={false}
-          isDisabled={false}
-          size={16}
           speed="fast"
-          viewBox="0 0 16 16"
         />
       }
       Title="Enhancing..."

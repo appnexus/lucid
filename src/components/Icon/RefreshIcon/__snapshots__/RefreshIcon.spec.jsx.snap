@@ -2,13 +2,7 @@
 
 exports[`RefreshIcon [common] example testing should match snapshot(s) for 1.default 1`] = `
 <Icon
-  aspectRatio="xMidYMid meet"
   className="lucid-RefreshIcon"
-  color="primary"
-  isClickable={false}
-  isDisabled={false}
-  size={16}
-  viewBox="0 0 16 16"
 >
   <path
     d="M15.5 8a7.5 7.5 0 1 1-1.122-3.949"

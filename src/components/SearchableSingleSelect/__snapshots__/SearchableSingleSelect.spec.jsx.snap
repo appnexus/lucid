@@ -490,13 +490,7 @@ exports[`SearchableSingleSelect [common] example testing should match snapshot(s
       key="SearchableSingleSelectLoading"
     >
       <LoadingIcon
-        aspectRatio="xMidYMid meet"
-        color="primary"
-        isClickable={false}
-        isDisabled={false}
-        size={16}
         speed="normal"
-        viewBox="0 0 16 16"
       />
     </DropMenu.Option>
     <DropMenu.Option

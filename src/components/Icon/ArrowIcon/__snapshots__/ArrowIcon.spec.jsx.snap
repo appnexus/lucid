@@ -2,12 +2,7 @@
 
 exports[`ArrowIcon [common] example testing should match snapshot(s) for 1.default 1`] = `
 <Icon
-  aspectRatio="xMidYMid meet"
   className="lucid-ArrowIcon lucid-ArrowIcon-is-left"
-  color="primary"
-  isClickable={false}
-  isDisabled={false}
-  size={16}
   viewBox="0 0 16 16"
 >
   <path
@@ -18,12 +13,7 @@ exports[`ArrowIcon [common] example testing should match snapshot(s) for 1.defau
 
 exports[`ArrowIcon [common] example testing should match snapshot(s) for 1.default 2`] = `
 <Icon
-  aspectRatio="xMidYMid meet"
   className="lucid-ArrowIcon lucid-ArrowIcon-is-up"
-  color="primary"
-  isClickable={false}
-  isDisabled={false}
-  size={16}
   viewBox="0 0 16 16"
 >
   <path
@@ -34,12 +24,7 @@ exports[`ArrowIcon [common] example testing should match snapshot(s) for 1.defau
 
 exports[`ArrowIcon [common] example testing should match snapshot(s) for 1.default 3`] = `
 <Icon
-  aspectRatio="xMidYMid meet"
   className="lucid-ArrowIcon lucid-ArrowIcon-is-down"
-  color="primary"
-  isClickable={false}
-  isDisabled={false}
-  size={16}
   viewBox="0 0 16 16"
 >
   <path
@@ -50,12 +35,7 @@ exports[`ArrowIcon [common] example testing should match snapshot(s) for 1.defau
 
 exports[`ArrowIcon [common] example testing should match snapshot(s) for 1.default 4`] = `
 <Icon
-  aspectRatio="xMidYMid meet"
   className="lucid-ArrowIcon lucid-ArrowIcon-is-right"
-  color="primary"
-  isClickable={false}
-  isDisabled={false}
-  size={16}
   viewBox="0 0 16 16"
 >
   <path
@@ -66,12 +46,7 @@ exports[`ArrowIcon [common] example testing should match snapshot(s) for 1.defau
 
 exports[`ArrowIcon [common] example testing should match snapshot(s) for 1.default 5`] = `
 <Icon
-  aspectRatio="xMidYMid meet"
   className="lucid-ArrowIcon lucid-ArrowIcon-is-left"
-  color="primary"
-  isClickable={false}
-  isDisabled={false}
-  size={16}
   viewBox="0 0 16 16"
 >
   <path

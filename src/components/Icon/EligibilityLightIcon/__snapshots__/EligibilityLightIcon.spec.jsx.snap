@@ -2,13 +2,8 @@
 
 exports[`EligibilityLightIcon [common] example testing should match snapshot(s) for 1.default 1`] = `
 <Icon
-  aspectRatio="xMidYMid meet"
   className="lucid-EligibilityLightIcon"
-  color="primary"
-  isClickable={false}
   isDisabled={false}
-  size={16}
-  viewBox="0 0 16 16"
 >
   <g>
     <path
@@ -25,13 +20,8 @@ exports[`EligibilityLightIcon [common] example testing should match snapshot(s) 
 
 exports[`EligibilityLightIcon [common] example testing should match snapshot(s) for 1.default 2`] = `
 <Icon
-  aspectRatio="xMidYMid meet"
   className="lucid-EligibilityLightIcon"
-  color="primary"
-  isClickable={false}
   isDisabled={false}
-  size={16}
-  viewBox="0 0 16 16"
 >
   <g>
     <path
@@ -48,13 +38,8 @@ exports[`EligibilityLightIcon [common] example testing should match snapshot(s) 
 
 exports[`EligibilityLightIcon [common] example testing should match snapshot(s) for 1.default 3`] = `
 <Icon
-  aspectRatio="xMidYMid meet"
   className="lucid-EligibilityLightIcon"
-  color="primary"
-  isClickable={false}
   isDisabled={false}
-  size={16}
-  viewBox="0 0 16 16"
 >
   <g>
     <path
@@ -71,13 +56,8 @@ exports[`EligibilityLightIcon [common] example testing should match snapshot(s) 
 
 exports[`EligibilityLightIcon [common] example testing should match snapshot(s) for 1.default 4`] = `
 <Icon
-  aspectRatio="xMidYMid meet"
   className="lucid-EligibilityLightIcon"
-  color="primary"
-  isClickable={false}
   isDisabled={false}
-  size={16}
-  viewBox="0 0 16 16"
 >
   <g>
     <path
@@ -94,13 +74,8 @@ exports[`EligibilityLightIcon [common] example testing should match snapshot(s) 
 
 exports[`EligibilityLightIcon [common] example testing should match snapshot(s) for 1.default 5`] = `
 <Icon
-  aspectRatio="xMidYMid meet"
   className="lucid-EligibilityLightIcon"
-  color="primary"
-  isClickable={false}
   isDisabled={false}
-  size={16}
-  viewBox="0 0 16 16"
 >
   <g>
     <path
@@ -117,13 +92,8 @@ exports[`EligibilityLightIcon [common] example testing should match snapshot(s) 
 
 exports[`EligibilityLightIcon [common] example testing should match snapshot(s) for 1.default 6`] = `
 <Icon
-  aspectRatio="xMidYMid meet"
   className="lucid-EligibilityLightIcon"
-  color="primary"
-  isClickable={false}
   isDisabled={true}
-  size={16}
-  viewBox="0 0 16 16"
 >
   <g>
     <path
@@ -140,13 +110,8 @@ exports[`EligibilityLightIcon [common] example testing should match snapshot(s) 
 
 exports[`EligibilityLightIcon [common] example testing should match snapshot(s) for 1.default 7`] = `
 <Icon
-  aspectRatio="xMidYMid meet"
   className="lucid-EligibilityLightIcon"
-  color="primary"
-  isClickable={false}
   isDisabled={true}
-  size={16}
-  viewBox="0 0 16 16"
 >
   <g>
     <path
@@ -163,13 +128,8 @@ exports[`EligibilityLightIcon [common] example testing should match snapshot(s) 
 
 exports[`EligibilityLightIcon [common] example testing should match snapshot(s) for 1.default 8`] = `
 <Icon
-  aspectRatio="xMidYMid meet"
   className="lucid-EligibilityLightIcon"
-  color="primary"
-  isClickable={false}
   isDisabled={true}
-  size={16}
-  viewBox="0 0 16 16"
 >
   <g>
     <path
@@ -186,13 +146,8 @@ exports[`EligibilityLightIcon [common] example testing should match snapshot(s) 
 
 exports[`EligibilityLightIcon [common] example testing should match snapshot(s) for 1.default 9`] = `
 <Icon
-  aspectRatio="xMidYMid meet"
   className="lucid-EligibilityLightIcon"
-  color="primary"
-  isClickable={false}
   isDisabled={true}
-  size={16}
-  viewBox="0 0 16 16"
 >
   <g>
     <path

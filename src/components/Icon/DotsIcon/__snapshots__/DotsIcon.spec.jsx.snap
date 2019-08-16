@@ -2,19 +2,14 @@
 
 exports[`DotsIcon [common] example testing should match snapshot(s) for 1.default 1`] = `
 <Icon
-  aspectRatio="xMidYMid meet"
   className="lucid-DotsIcon"
   color="primary"
-  isClickable={false}
-  isDisabled={false}
-  size={16}
   style={
     Object {
       "display": "block",
       "margin": "10px",
     }
   }
-  viewBox="0 0 16 16"
 >
   <circle
     className="lucid-DotsIcon-color-primary"
@@ -39,19 +34,14 @@ exports[`DotsIcon [common] example testing should match snapshot(s) for 1.defaul
 
 exports[`DotsIcon [common] example testing should match snapshot(s) for 1.default 2`] = `
 <Icon
-  aspectRatio="xMidYMid meet"
   className="lucid-DotsIcon"
   color="secondary-one"
-  isClickable={false}
-  isDisabled={false}
-  size={16}
   style={
     Object {
       "display": "block",
       "margin": "10px",
     }
   }
-  viewBox="0 0 16 16"
 >
   <circle
     className="lucid-DotsIcon-color-secondary-one"
@@ -76,19 +66,14 @@ exports[`DotsIcon [common] example testing should match snapshot(s) for 1.defaul
 
 exports[`DotsIcon [common] example testing should match snapshot(s) for 1.default 3`] = `
 <Icon
-  aspectRatio="xMidYMid meet"
   className="lucid-DotsIcon"
   color="secondary-two"
-  isClickable={false}
-  isDisabled={false}
-  size={16}
   style={
     Object {
       "display": "block",
       "margin": "10px",
     }
   }
-  viewBox="0 0 16 16"
 >
   <circle
     className="lucid-DotsIcon-color-secondary-two"
@@ -113,19 +98,14 @@ exports[`DotsIcon [common] example testing should match snapshot(s) for 1.defaul
 
 exports[`DotsIcon [common] example testing should match snapshot(s) for 1.default 4`] = `
 <Icon
-  aspectRatio="xMidYMid meet"
   className="lucid-DotsIcon"
   color="secondary-three"
-  isClickable={false}
-  isDisabled={false}
-  size={16}
   style={
     Object {
       "display": "block",
       "margin": "10px",
     }
   }
-  viewBox="0 0 16 16"
 >
   <circle
     className="lucid-DotsIcon-color-secondary-three"
@@ -150,19 +130,14 @@ exports[`DotsIcon [common] example testing should match snapshot(s) for 1.defaul
 
 exports[`DotsIcon [common] example testing should match snapshot(s) for 1.default 5`] = `
 <Icon
-  aspectRatio="xMidYMid meet"
   className="lucid-DotsIcon"
   color="success"
-  isClickable={false}
-  isDisabled={false}
-  size={16}
   style={
     Object {
       "display": "block",
       "margin": "10px",
     }
   }
-  viewBox="0 0 16 16"
 >
   <circle
     className="lucid-DotsIcon-color-success"
@@ -187,19 +162,14 @@ exports[`DotsIcon [common] example testing should match snapshot(s) for 1.defaul
 
 exports[`DotsIcon [common] example testing should match snapshot(s) for 1.default 6`] = `
 <Icon
-  aspectRatio="xMidYMid meet"
   className="lucid-DotsIcon"
   color="neutral-dark"
-  isClickable={false}
-  isDisabled={false}
-  size={16}
   style={
     Object {
       "display": "block",
       "margin": "10px",
     }
   }
-  viewBox="0 0 16 16"
 >
   <circle
     className="lucid-DotsIcon-color-neutral-dark"
@@ -224,19 +194,14 @@ exports[`DotsIcon [common] example testing should match snapshot(s) for 1.defaul
 
 exports[`DotsIcon [common] example testing should match snapshot(s) for 1.default 7`] = `
 <Icon
-  aspectRatio="xMidYMid meet"
   className="lucid-DotsIcon"
   color="neutral-light"
-  isClickable={false}
-  isDisabled={false}
-  size={16}
   style={
     Object {
       "display": "block",
       "margin": "10px",
     }
   }
-  viewBox="0 0 16 16"
 >
   <circle
     className="lucid-DotsIcon-color-neutral-light"
