@@ -21,7 +21,7 @@ describe('SlidePanel', () => {
 				{ disableLifecycleMethods: true }
 			);
 			const slidePanelInstance = wrapper.instance();
-			slidePanelInstance.rootNode = {
+			slidePanelInstance.rootHTMLDivElement.current = {
 				getBoundingClientRect: jest.fn(() => ({ width: 100 })),
 			};
 
@@ -47,7 +47,7 @@ describe('SlidePanel', () => {
 				{ disableLifecycleMethods: true }
 			);
 			const slidePanelInstance = wrapper.instance();
-			slidePanelInstance.rootNode = {
+			slidePanelInstance.rootHTMLDivElement.current = {
 				getBoundingClientRect: jest.fn(() => ({ width: 100 })),
 			};
 
@@ -80,9 +80,10 @@ describe('SlidePanel', () => {
 					{ disableLifecycleMethods: true }
 				);
 				slidePanelInstance = wrapper.instance();
-				slidePanelInstance.rootNode = {
-					querySelector: jest.fn(() => slidestripElement),
+				slidePanelInstance.rootHTMLDivElement.current = {
+					getBoundingClientRect: jest.fn(() => ({ width: 100 })),
 				};
+				slidePanelInstance.slideStrip.current = {};
 				jest.useFakeTimers();
 			});
 

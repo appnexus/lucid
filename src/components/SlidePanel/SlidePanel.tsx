@@ -9,7 +9,7 @@ import { findTypes, omitProps } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-SlidePanel');
 
-const { bool, func, node, number, string } = PropTypes;
+const { bool, func, node, number, string, any } = PropTypes;
 
 const modulo = (n: number, a: number): number => a - n * Math.floor(a / n);
 
@@ -116,6 +116,10 @@ class SlidePanel extends React.Component<ISlidePanelProps, ISlidePanelState, {}>
 			SlidePanel.Slide elements are passed in as children.
 		`,
 
+		Slide: any`
+			This is the child component that will be displayed inside the SlidePanel.
+		`,
+
 		slidesToShow: number`
 			Max number of viewable slides to show simultaneously.
 		`,
@@ -141,7 +145,7 @@ class SlidePanel extends React.Component<ISlidePanelProps, ISlidePanelState, {}>
 		`,
 	};
 
-	defaultProps = {
+	static defaultProps = {
 		slidesToShow: 1,
 		offset: 0,
 		isAnimated: true,
@@ -207,10 +211,11 @@ class SlidePanel extends React.Component<ISlidePanelProps, ISlidePanelState, {}>
 						this.setState({
 							isAnimated: false
 						}, (): void => {
-							this.forceUpdate();
-							this.setState({
-								isAnimated: this.props.isAnimated,
-							})
+							this.forceUpdate((): void => {
+								this.setState({
+									isAnimated: this.props.isAnimated,
+								})
+							});
 						})
 					}, 200)
 				})
