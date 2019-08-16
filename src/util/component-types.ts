@@ -10,8 +10,9 @@ import {
 export interface FC<P> extends React.FC<P> {
 	peek: {
 		description: string;
-		categories: string[];
+		categories?: string[];
 	};
+	propName?: string; // TODO confirm this is needed
 }
 
 type TypesType<P> =
