@@ -118,7 +118,7 @@ class CalendarMonth extends React.Component<ICalendarProps, {}, {}> {
 				return DateUtils.isSameDay(day, new Date(cursor));
 			} else if (from || to) {
 				return DateUtils.isDayInRange(day, {
-					from: new Date(selectMode === 'to' ? from : to),
+					from: new Date(selectMode === 'to' ? (from as Date) : (to as Date)),
 					to: new Date(cursor),
 				});
 			}
@@ -138,17 +138,17 @@ class CalendarMonth extends React.Component<ICalendarProps, {}, {}> {
 	modifierFrom = (day: Date): boolean => {
 		const { from } = this.props;
 
-		return DateUtils.isSameDay(day, new Date(from));
+		return DateUtils.isSameDay(day, new Date((from as Date)));
 	};
 
 	modifierTo = (day: Date): boolean => {
 		const { to } = this.props;
 
-		return DateUtils.isSameDay(day, new Date(to));
+		return DateUtils.isSameDay(day, new Date((to as Date)));
 	};
 
 	shouldComponentUpdate(): boolean {
-		return this.props.shouldComponentUpdate;
+		return (this.props.shouldComponentUpdate as boolean);
 	};
 
 	render(): React.ReactNode {
@@ -163,8 +163,8 @@ class CalendarMonth extends React.Component<ICalendarProps, {}, {}> {
 			// handle the edge cases.
 			// http://stackoverflow.com/questions/499838/javascript-date-next-month
 			const monthDate = new Date(
-				initialMonth.getFullYear(),
-				initialMonth.getMonth() + monthOffset,
+				(initialMonth as Date).getFullYear(),
+				(initialMonth as Date).getMonth() + (monthOffset as number),
 				1
 			);
 
