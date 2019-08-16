@@ -12,45 +12,45 @@ const { bool, instanceOf, number, oneOf, string } = PropTypes;
 interface ICalendarProps {
 	/** Appended to the component-specific class names set on the root element.
 	 */
-	className: string;
+	className?: string;
 
 	/** The offset of the rendered month, where 0 is the \`initialMonth\`.
 	 * Negative values will show previous months.
 	 */
-	monthOffset: number;
+	monthOffset?: number;
 
 	/**Sets the month of the calendar. The 0 value for the \`monthOffset\` prop
 	 * refers to this month.
 	 */
-	initialMonth: Date;
+	initialMonth?: Date;
 
 	/** Set the cursor to target date. Primarily used to preview expected ranges
 	 * when the cursor is on a target date.
 	 */
-	cursor: Date;
+	cursor?: Date;
 
 	/** Sets the start date in a date range.
 	 */
-	from: Date;
+	from?: Date;
 
 	/** Sets the end date in a date range.
 	 */
-	to: Date;
+	to?: Date;
 
 	/** The next selection that is expected. Primarily used to preview expected
 	 * ranges when the cursor is on a target date.
 	 */
-	selectMode: 'day' | 'from' | 'to';
+	selectMode?: 'day' | 'from' | 'to';
 
 	/** Used to skip re-rendering of this component when true. Primarily used for
 	 * CalendarMonths which are rendered out of view.
 	 */
-	shouldComponentUpdate: boolean;
+	shouldComponentUpdate?: boolean;
 
 	/** These are values that we've allowed our API to accept, which will go directly
 	 * into the `modifers` object that we pass to DayPicker.
 	 */
-	modifiers: any;
+	modifiers?: any;
 }
 
 class CalendarMonth extends React.Component<ICalendarProps, {}, {}> {

@@ -40,27 +40,27 @@ interface ISlidePanelProps {
 
 	/** Max number of viewable slides to show simultaneously.
 	 */
-	slidesToShow: number;
+	slidesToShow?: number;
 
 	/** The offset of the left-most rendered slide.
 	 */
-	offset: number;
+	offset?: number;
 
 	/** Animate slides transitions from changes in `offset`.
 	 */
-	isAnimated: boolean;
+	isAnimated?: boolean;
 
 	/** Slides are rendered in a continuous loop, where the first slide repeats
 	 * after the last slide and vice-versa. DOM elements are re-ordered and
 	 * re-used.
 	 */
-	isLooped: boolean;
+	isLooped?: boolean;
 
 	/** Called when a user's swipe would change the offset. Callback passes
 	 * number of slides by the user (positive for forward swipes, negative for
 	 * backwards swipes).
 	 */
-	onSwipe: (
+	onSwipe?: (
 		slidesSwiped: number,
 		{ event, props }: { event: React.TouchEvent; props: ISlidePanelProps }
 	) => void;
@@ -84,7 +84,7 @@ class SlidePanel extends React.Component<ISlidePanelProps, ISlidePanelState, {}>
 		this.state = {
 			translateXPixel: 0,
 			startX: 0,
-			isAnimated: this.props.isAnimated,
+			isAnimated: (this.props.isAnimated as boolean),
 			isDragging: false,
 			offsetTranslate: this.props.isLooped
 				? Math.floor(_.size(slides) / 2)
@@ -171,15 +171,18 @@ class SlidePanel extends React.Component<ISlidePanelProps, ISlidePanelState, {}>
 	handleTouchEnd = (event: React.TouchEvent): void => {
 		const dX = event.changedTouches[0].screenX - this.state.startX;
 		const slideWidth =
-			(this.rootHTMLDivElement.current as HTMLElement).getBoundingClientRect().width / this.props.slidesToShow;
+			(this.rootHTMLDivElement.current as HTMLElement).getBoundingClientRect().width / (this.props.slidesToShow as number);
 		const slidesSwiped = Math.round(dX / slideWidth);
 
 		if (slidesSwiped !== 0) {
-			this.props.onSwipe(-1 * slidesSwiped, { event, props: this.props });
+			(this.props.onSwipe as (
+				slidesSwiped: number,
+				{ event, props }: { event: React.TouchEvent; props: ISlidePanelProps }
+			) => void)(-1 * slidesSwiped, { event, props: this.props });
 		}
 		this.setState({
 			translateXPixel: 0,
-			isAnimated: this.props.isAnimated,
+			isAnimated: (this.props.isAnimated as boolean),
 			isDragging: false,
 		});
 	};
@@ -196,7 +199,7 @@ class SlidePanel extends React.Component<ISlidePanelProps, ISlidePanelState, {}>
 		prevState: ISlidePanelState
 	): Promise<void> {
 		const slides = findTypes(this.props, SlidePanel.Slide);
-		const offsetDiff = this.props.offset - prevProps.offset;
+		const offsetDiff = (this.props.offset as number) - (prevProps.offset as number);
 		if (offsetDiff !== 0 && this.props.isLooped) {
 			const currOffset = this.state.offsetTranslate;
 			await this.setState({
@@ -210,7 +213,7 @@ class SlidePanel extends React.Component<ISlidePanelProps, ISlidePanelState, {}>
 				shiftChildren((this.slideStrip.current as HTMLElement), -offsetDiff);
 				await this.setState({ isAnimated: false });
 				await this.forceUpdate();
-				await this.setState({ isAnimated: this.props.isAnimated })
+				await this.setState({ isAnimated: (this.props.isAnimated as boolean) })
 			}, 200)
 		}
 	};
@@ -223,12 +226,12 @@ class SlidePanel extends React.Component<ISlidePanelProps, ISlidePanelState, {}>
 			isLooped,
 			...passThroughs
 		} = this.props;
-		const offset = realOffset + this.state.offsetTranslate;
+		const offset = (realOffset as number) + this.state.offsetTranslate;
 
 		const slides = findTypes(this.props, SlidePanel.Slide);
 		const translateXPercentage =
 			-1 *
-			(100 / slidesToShow) *
+			(100 / (slidesToShow as number)) *
 			(isLooped ? modulo(_.size(slides), offset) : offset);
 
 		return (
@@ -294,7 +297,7 @@ class SlidePanel extends React.Component<ISlidePanelProps, ISlidePanelState, {}>
 										style={{
 											flexGrow: 1,
 											flexShrink: 0,
-											flexBasis: `${100 / slidesToShow}%`,
+											flexBasis: `${100 / (slidesToShow as number)}%`,
 											...slide.props.style,
 										}}
 									/>
