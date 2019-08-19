@@ -130,6 +130,27 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 1`] 
     </svg>
     Partner 5
   </li>
+  <li
+    className="lucid-Legend-Item"
+    key="6"
+    onClick={[Function]}
+  >
+    <svg
+      className="lucid-Legend-Item-indicator"
+      height={12}
+      width={12}
+    >
+      <Point
+        color="color-chart-6"
+        hasStroke={false}
+        kind={1}
+        scale={1}
+        x={6}
+        y={6}
+      />
+    </svg>
+    Partner 6
+  </li>
 </ul>
 `;
 
@@ -263,6 +284,27 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 2`] 
     </svg>
     Partner 5
   </li>
+  <li
+    className="lucid-Legend-Item"
+    key="6"
+    onClick={[Function]}
+  >
+    <svg
+      className="lucid-Legend-Item-indicator"
+      height={12}
+      width={12}
+    >
+      <Point
+        color="color-chart-6"
+        hasStroke={false}
+        kind={6}
+        scale={1}
+        x={6}
+        y={6}
+      />
+    </svg>
+    Partner 6
+  </li>
 </ul>
 `;
 
@@ -377,6 +419,24 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 3`] 
       />
     </svg>
     Partner 5
+  </li>
+  <li
+    className="lucid-Legend-Item"
+    key="6"
+    onClick={[Function]}
+  >
+    <svg
+      className="lucid-Legend-Item-indicator"
+      height={12}
+      width={22}
+    >
+      <Line
+        color="color-chart-6"
+        d="M0,6 L22,6"
+        isDotted={false}
+      />
+    </svg>
+    Partner 6
   </li>
 </ul>
 `;
@@ -541,6 +601,32 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 4`] 
     </svg>
     Partner 5
   </li>
+  <li
+    className="lucid-Legend-Item"
+    key="6"
+    onClick={[Function]}
+  >
+    <svg
+      className="lucid-Legend-Item-indicator"
+      height={12}
+      width={22}
+    >
+      <Point
+        color="color-chart-6"
+        hasStroke={false}
+        kind={6}
+        scale={1}
+        x={11}
+        y={6}
+      />
+      <Line
+        color="color-chart-6"
+        d="M0,6 L22,6"
+        isDotted={false}
+      />
+    </svg>
+    Partner 6
+  </li>
 </ul>
 `;
 
@@ -703,6 +789,32 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 5`] 
       />
     </svg>
     Partner 5
+  </li>
+  <li
+    className="lucid-Legend-Item"
+    key="6"
+    onClick={[Function]}
+  >
+    <svg
+      className="lucid-Legend-Item-indicator"
+      height={12}
+      width={22}
+    >
+      <Point
+        color="color-chart-6"
+        hasStroke={false}
+        kind={6}
+        scale={1}
+        x={11}
+        y={6}
+      />
+      <Line
+        color="color-chart-6"
+        d="M0,6 L22,6"
+        isDotted={false}
+      />
+    </svg>
+    Partner 6
   </li>
 </ul>
 `;
