@@ -121,11 +121,11 @@ export function filterTypes<P>(
 }
 
 // return all elements not matching the specified types
-export function rejectTypes(
-	children: React.ElementType,
-	types = []
+export function rejectTypes<P>(
+	children: React.ReactNode,
+	types: TypesType<P> | Array<TypesType<P>>,
 ): React.ReactNode[] {
-	types = [].concat(types); // coerce to Array
+	types = ([] as Array<TypesType<P>>).concat(types); // coerce to Array
 
 	return _.reject(
 		React.Children.toArray(children),

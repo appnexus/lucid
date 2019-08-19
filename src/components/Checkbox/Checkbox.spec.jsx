@@ -32,19 +32,9 @@ describe('Checkbox', () => {
 					false
 				);
 			});
-
-			it('`isDisabled` defaults to `false`', () => {
-				const wrapper = mount(<Checkbox />);
-				assert.equal(wrapper.prop('isDisabled'), false);
-			});
 		});
 
 		describe('isSelected', () => {
-			it('`isSelected` defaults to `false`', () => {
-				const wrapper = mount(<Checkbox />);
-				assert.equal(wrapper.prop('isSelected'), false);
-			});
-
 			it('should set `checked` attribute to true', () => {
 				const trueWrapper = mount(<Checkbox isSelected={true} />);
 				assert.equal(
@@ -62,19 +52,7 @@ describe('Checkbox', () => {
 			});
 		});
 
-		describe('onSelect', () => {
-			it('`onSelect` defaults to the Lodash `noop` method', () => {
-				const wrapper = mount(<Checkbox />);
-				assert.equal(wrapper.prop('onSelect'), _.noop);
-			});
-		});
-
 		describe('isIndeterminate', () => {
-			it('`isIndeterminate` default to `false`', () => {
-				const wrapper = mount(<Checkbox />);
-				assert.equal(wrapper.prop('isIndeterminate'), false);
-			});
-
 			it('should set the top-level classname `&-is-selected`', () => {
 				const wrapper = shallow(<Checkbox isIndeterminate />);
 				assert(wrapper.hasClass('lucid-Checkbox-is-selected'));
