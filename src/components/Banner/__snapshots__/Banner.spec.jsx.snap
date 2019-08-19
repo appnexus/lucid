@@ -10,7 +10,7 @@ exports[`Banner [common] example testing should match snapshot(s) for small 1`] 
   transitionName="lucid-Banner"
 >
   <section
-    className="lucid-Banner lucid-Banner-has-close lucid-Banner-small"
+    className="lucid-Banner lucid-Banner-has-close lucid-Banner-small lucid-Banner-filled"
     style={
       Object {
         "marginBottom": 8,
@@ -42,7 +42,7 @@ exports[`Banner [common] example testing should match snapshot(s) for small 2`] 
   transitionName="lucid-Banner"
 >
   <section
-    className="lucid-Banner lucid-Banner-small"
+    className="lucid-Banner lucid-Banner-small lucid-Banner-filled"
     style={
       Object {
         "marginBottom": 8,
@@ -69,7 +69,7 @@ exports[`Banner [common] example testing should match snapshot(s) for small 3`] 
   transitionName="lucid-Banner"
 >
   <section
-    className="lucid-Banner lucid-Banner-has-close lucid-Banner-success lucid-Banner-small"
+    className="lucid-Banner lucid-Banner-has-close lucid-Banner-success lucid-Banner-small lucid-Banner-filled"
     style={
       Object {
         "marginBottom": 8,
@@ -101,7 +101,7 @@ exports[`Banner [common] example testing should match snapshot(s) for small 4`] 
   transitionName="lucid-Banner"
 >
   <section
-    className="lucid-Banner lucid-Banner-success lucid-Banner-small"
+    className="lucid-Banner lucid-Banner-success lucid-Banner-small lucid-Banner-filled"
     style={
       Object {
         "marginBottom": 8,
@@ -128,7 +128,7 @@ exports[`Banner [common] example testing should match snapshot(s) for small 5`] 
   transitionName="lucid-Banner"
 >
   <section
-    className="lucid-Banner lucid-Banner-has-close lucid-Banner-warning lucid-Banner-small"
+    className="lucid-Banner lucid-Banner-has-close lucid-Banner-warning lucid-Banner-small lucid-Banner-filled"
     style={
       Object {
         "marginBottom": 8,
@@ -160,7 +160,7 @@ exports[`Banner [common] example testing should match snapshot(s) for small 6`] 
   transitionName="lucid-Banner"
 >
   <section
-    className="lucid-Banner lucid-Banner-warning lucid-Banner-small"
+    className="lucid-Banner lucid-Banner-warning lucid-Banner-small lucid-Banner-filled"
     style={
       Object {
         "marginBottom": 8,
@@ -187,7 +187,7 @@ exports[`Banner [common] example testing should match snapshot(s) for small 7`] 
   transitionName="lucid-Banner"
 >
   <section
-    className="lucid-Banner lucid-Banner-has-close lucid-Banner-danger lucid-Banner-small"
+    className="lucid-Banner lucid-Banner-has-close lucid-Banner-danger lucid-Banner-small lucid-Banner-filled"
     style={
       Object {
         "marginBottom": 8,
@@ -219,7 +219,7 @@ exports[`Banner [common] example testing should match snapshot(s) for small 8`] 
   transitionName="lucid-Banner"
 >
   <section
-    className="lucid-Banner lucid-Banner-danger lucid-Banner-small"
+    className="lucid-Banner lucid-Banner-danger lucid-Banner-small lucid-Banner-filled"
     style={
       Object {
         "marginBottom": 8,
@@ -246,7 +246,7 @@ exports[`Banner [common] example testing should match snapshot(s) for small 9`] 
   transitionName="lucid-Banner"
 >
   <section
-    className="lucid-Banner lucid-Banner-has-close lucid-Banner-info lucid-Banner-small"
+    className="lucid-Banner lucid-Banner-has-close lucid-Banner-info lucid-Banner-small lucid-Banner-filled"
     style={
       Object {
         "marginBottom": 8,
@@ -278,7 +278,7 @@ exports[`Banner [common] example testing should match snapshot(s) for small 10`]
   transitionName="lucid-Banner"
 >
   <section
-    className="lucid-Banner lucid-Banner-info lucid-Banner-small"
+    className="lucid-Banner lucid-Banner-info lucid-Banner-small lucid-Banner-filled"
     style={
       Object {
         "marginBottom": 8,
@@ -305,7 +305,7 @@ exports[`Banner [common] example testing should match snapshot(s) for small 11`]
   transitionName="lucid-Banner"
 >
   <section
-    className="lucid-Banner lucid-Banner-has-icon lucid-Banner-has-close lucid-Banner-danger lucid-Banner-small"
+    className="lucid-Banner lucid-Banner-has-icon lucid-Banner-has-close lucid-Banner-danger lucid-Banner-small lucid-Banner-filled"
     style={
       Object {
         "marginBottom": 8,
@@ -332,6 +332,166 @@ exports[`Banner [common] example testing should match snapshot(s) for small 11`]
 </CSSTransitionGroup>
 `;
 
+exports[`Banner [common] example testing should match snapshot(s) for small 12`] = `
+<CSSTransitionGroup
+  transitionAppear={false}
+  transitionEnter={true}
+  transitionEnterTimeout={300}
+  transitionLeave={true}
+  transitionLeaveTimeout={300}
+  transitionName="lucid-Banner"
+>
+  <section
+    className="lucid-Banner lucid-Banner-has-close lucid-Banner-small"
+    style={
+      Object {
+        "marginBottom": 8,
+      }
+    }
+  >
+    <span
+      className="lucid-Banner-content"
+    >
+      Default -- Outline Only
+    </span>
+    <CloseIcon
+      className="lucid-Banner-close"
+      isClickable={true}
+      onClick={[Function]}
+      size={8}
+    />
+  </section>
+</CSSTransitionGroup>
+`;
+
+exports[`Banner [common] example testing should match snapshot(s) for small 13`] = `
+<CSSTransitionGroup
+  transitionAppear={false}
+  transitionEnter={true}
+  transitionEnterTimeout={300}
+  transitionLeave={true}
+  transitionLeaveTimeout={300}
+  transitionName="lucid-Banner"
+>
+  <section
+    className="lucid-Banner lucid-Banner-has-close lucid-Banner-success lucid-Banner-small"
+    style={
+      Object {
+        "marginBottom": 8,
+      }
+    }
+  >
+    <span
+      className="lucid-Banner-content"
+    >
+      Success -- Outline Only
+    </span>
+    <CloseIcon
+      className="lucid-Banner-close"
+      isClickable={true}
+      onClick={[Function]}
+      size={8}
+    />
+  </section>
+</CSSTransitionGroup>
+`;
+
+exports[`Banner [common] example testing should match snapshot(s) for small 14`] = `
+<CSSTransitionGroup
+  transitionAppear={false}
+  transitionEnter={true}
+  transitionEnterTimeout={300}
+  transitionLeave={true}
+  transitionLeaveTimeout={300}
+  transitionName="lucid-Banner"
+>
+  <section
+    className="lucid-Banner lucid-Banner-has-close lucid-Banner-warning lucid-Banner-small"
+    style={
+      Object {
+        "marginBottom": 8,
+      }
+    }
+  >
+    <span
+      className="lucid-Banner-content"
+    >
+      Warning -- Outline Only
+    </span>
+    <CloseIcon
+      className="lucid-Banner-close"
+      isClickable={true}
+      onClick={[Function]}
+      size={8}
+    />
+  </section>
+</CSSTransitionGroup>
+`;
+
+exports[`Banner [common] example testing should match snapshot(s) for small 15`] = `
+<CSSTransitionGroup
+  transitionAppear={false}
+  transitionEnter={true}
+  transitionEnterTimeout={300}
+  transitionLeave={true}
+  transitionLeaveTimeout={300}
+  transitionName="lucid-Banner"
+>
+  <section
+    className="lucid-Banner lucid-Banner-has-close lucid-Banner-danger lucid-Banner-small"
+    style={
+      Object {
+        "marginBottom": 8,
+      }
+    }
+  >
+    <span
+      className="lucid-Banner-content"
+    >
+      Danger -- Outline Only
+    </span>
+    <CloseIcon
+      className="lucid-Banner-close"
+      isClickable={true}
+      onClick={[Function]}
+      size={8}
+    />
+  </section>
+</CSSTransitionGroup>
+`;
+
+exports[`Banner [common] example testing should match snapshot(s) for small 16`] = `
+<CSSTransitionGroup
+  transitionAppear={false}
+  transitionEnter={true}
+  transitionEnterTimeout={300}
+  transitionLeave={true}
+  transitionLeaveTimeout={300}
+  transitionName="lucid-Banner"
+>
+  <section
+    className="lucid-Banner lucid-Banner-has-close lucid-Banner-info lucid-Banner-small"
+    style={
+      Object {
+        "marginBottom": 8,
+      }
+    }
+  >
+    <span
+      className="lucid-Banner-content"
+    >
+      Info -- Outline Only
+    </span>
+    <CloseIcon
+      className="lucid-Banner-close"
+      isClickable={true}
+      onClick={[Function]}
+      size={8}
+    />
+  </section>
+</CSSTransitionGroup>
+`;
+
 exports[`Banner [common] example testing should match snapshot(s) for stateful 1`] = `
 <CSSTransitionGroup
   transitionAppear={false}
@@ -342,7 +502,7 @@ exports[`Banner [common] example testing should match snapshot(s) for stateful 1
   transitionName="lucid-Banner"
 >
   <section
-    className="lucid-Banner lucid-Banner-has-close"
+    className="lucid-Banner lucid-Banner-has-close lucid-Banner-filled"
   >
     <span
       className="lucid-Banner-content"
@@ -369,7 +529,7 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
   transitionName="lucid-Banner"
 >
   <section
-    className="lucid-Banner lucid-Banner-has-close"
+    className="lucid-Banner lucid-Banner-has-close lucid-Banner-filled"
     style={
       Object {
         "marginBottom": 8,
@@ -422,7 +582,7 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
   transitionName="lucid-Banner"
 >
   <section
-    className="lucid-Banner"
+    className="lucid-Banner lucid-Banner-filled"
     style={
       Object {
         "marginBottom": 8,
@@ -449,7 +609,7 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
   transitionName="lucid-Banner"
 >
   <section
-    className="lucid-Banner lucid-Banner-has-close lucid-Banner-success"
+    className="lucid-Banner lucid-Banner-has-close lucid-Banner-success lucid-Banner-filled"
     style={
       Object {
         "marginBottom": 8,
@@ -481,7 +641,7 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
   transitionName="lucid-Banner"
 >
   <section
-    className="lucid-Banner lucid-Banner-success"
+    className="lucid-Banner lucid-Banner-success lucid-Banner-filled"
     style={
       Object {
         "marginBottom": 8,
@@ -508,7 +668,7 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
   transitionName="lucid-Banner"
 >
   <section
-    className="lucid-Banner lucid-Banner-has-close lucid-Banner-warning"
+    className="lucid-Banner lucid-Banner-has-close lucid-Banner-warning lucid-Banner-filled"
     style={
       Object {
         "marginBottom": 8,
@@ -545,7 +705,7 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
   transitionName="lucid-Banner"
 >
   <section
-    className="lucid-Banner lucid-Banner-warning"
+    className="lucid-Banner lucid-Banner-warning lucid-Banner-filled"
     style={
       Object {
         "marginBottom": 8,
@@ -572,7 +732,7 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
   transitionName="lucid-Banner"
 >
   <section
-    className="lucid-Banner lucid-Banner-has-close lucid-Banner-danger"
+    className="lucid-Banner lucid-Banner-has-close lucid-Banner-danger lucid-Banner-filled"
     style={
       Object {
         "marginBottom": 8,
@@ -604,7 +764,7 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
   transitionName="lucid-Banner"
 >
   <section
-    className="lucid-Banner lucid-Banner-danger"
+    className="lucid-Banner lucid-Banner-danger lucid-Banner-filled"
     style={
       Object {
         "marginBottom": 8,
@@ -631,7 +791,7 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
   transitionName="lucid-Banner"
 >
   <section
-    className="lucid-Banner lucid-Banner-has-close lucid-Banner-info"
+    className="lucid-Banner lucid-Banner-has-close lucid-Banner-info lucid-Banner-filled"
     style={
       Object {
         "marginBottom": 8,
@@ -663,7 +823,7 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
   transitionName="lucid-Banner"
 >
   <section
-    className="lucid-Banner lucid-Banner-info"
+    className="lucid-Banner lucid-Banner-info lucid-Banner-filled"
     style={
       Object {
         "marginBottom": 8,
@@ -690,7 +850,7 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
   transitionName="lucid-Banner"
 >
   <section
-    className="lucid-Banner lucid-Banner-has-icon lucid-Banner-has-close lucid-Banner-danger"
+    className="lucid-Banner lucid-Banner-has-icon lucid-Banner-has-close lucid-Banner-danger lucid-Banner-filled"
     style={
       Object {
         "marginBottom": 8,
@@ -706,6 +866,203 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
       className="lucid-Banner-content"
     >
       Has Icon
+    </span>
+    <CloseIcon
+      className="lucid-Banner-close"
+      isClickable={true}
+      onClick={[Function]}
+      size={8}
+    />
+  </section>
+</CSSTransitionGroup>
+`;
+
+exports[`Banner [common] example testing should match snapshot(s) for stateless 12`] = `
+<CSSTransitionGroup
+  transitionAppear={false}
+  transitionEnter={true}
+  transitionEnterTimeout={300}
+  transitionLeave={true}
+  transitionLeaveTimeout={300}
+  transitionName="lucid-Banner"
+>
+  <section
+    className="lucid-Banner lucid-Banner-has-close"
+    style={
+      Object {
+        "marginBottom": 8,
+      }
+    }
+  >
+    <span
+      className="lucid-Banner-content"
+    >
+      Default -- Outline Only
+    </span>
+    <CloseIcon
+      className="lucid-Banner-close"
+      isClickable={true}
+      onClick={[Function]}
+      size={8}
+    />
+  </section>
+</CSSTransitionGroup>
+`;
+
+exports[`Banner [common] example testing should match snapshot(s) for stateless 13`] = `
+<CSSTransitionGroup
+  transitionAppear={false}
+  transitionEnter={true}
+  transitionEnterTimeout={300}
+  transitionLeave={true}
+  transitionLeaveTimeout={300}
+  transitionName="lucid-Banner"
+>
+  <section
+    className="lucid-Banner lucid-Banner-has-close lucid-Banner-success"
+    style={
+      Object {
+        "marginBottom": 8,
+      }
+    }
+  >
+    <span
+      className="lucid-Banner-content"
+    >
+      Success -- Outline Only
+    </span>
+    <CloseIcon
+      className="lucid-Banner-close"
+      isClickable={true}
+      onClick={[Function]}
+      size={8}
+    />
+  </section>
+</CSSTransitionGroup>
+`;
+
+exports[`Banner [common] example testing should match snapshot(s) for stateless 14`] = `
+<CSSTransitionGroup
+  transitionAppear={false}
+  transitionEnter={true}
+  transitionEnterTimeout={300}
+  transitionLeave={true}
+  transitionLeaveTimeout={300}
+  transitionName="lucid-Banner"
+>
+  <section
+    className="lucid-Banner lucid-Banner-has-close lucid-Banner-warning"
+    style={
+      Object {
+        "marginBottom": 8,
+      }
+    }
+  >
+    <span
+      className="lucid-Banner-content"
+    >
+      Warning -- Outline Only
+    </span>
+    <CloseIcon
+      className="lucid-Banner-close"
+      isClickable={true}
+      onClick={[Function]}
+      size={8}
+    />
+  </section>
+</CSSTransitionGroup>
+`;
+
+exports[`Banner [common] example testing should match snapshot(s) for stateless 15`] = `
+<CSSTransitionGroup
+  transitionAppear={false}
+  transitionEnter={true}
+  transitionEnterTimeout={300}
+  transitionLeave={true}
+  transitionLeaveTimeout={300}
+  transitionName="lucid-Banner"
+>
+  <section
+    className="lucid-Banner lucid-Banner-has-close lucid-Banner-danger"
+    style={
+      Object {
+        "marginBottom": 8,
+      }
+    }
+  >
+    <span
+      className="lucid-Banner-content"
+    >
+      Danger -- Outline Only
+    </span>
+    <CloseIcon
+      className="lucid-Banner-close"
+      isClickable={true}
+      onClick={[Function]}
+      size={8}
+    />
+  </section>
+</CSSTransitionGroup>
+`;
+
+exports[`Banner [common] example testing should match snapshot(s) for stateless 16`] = `
+<CSSTransitionGroup
+  transitionAppear={false}
+  transitionEnter={true}
+  transitionEnterTimeout={300}
+  transitionLeave={true}
+  transitionLeaveTimeout={300}
+  transitionName="lucid-Banner"
+>
+  <section
+    className="lucid-Banner lucid-Banner-has-close lucid-Banner-info"
+    style={
+      Object {
+        "marginBottom": 8,
+      }
+    }
+  >
+    <span
+      className="lucid-Banner-content"
+    >
+      Info -- Outline Only
+    </span>
+    <CloseIcon
+      className="lucid-Banner-close"
+      isClickable={true}
+      onClick={[Function]}
+      size={8}
+    />
+  </section>
+</CSSTransitionGroup>
+`;
+
+exports[`Banner [common] example testing should match snapshot(s) for stateless 17`] = `
+<CSSTransitionGroup
+  transitionAppear={false}
+  transitionEnter={true}
+  transitionEnterTimeout={300}
+  transitionLeave={true}
+  transitionLeaveTimeout={300}
+  transitionName="lucid-Banner"
+>
+  <section
+    className="lucid-Banner lucid-Banner-has-icon lucid-Banner-has-close lucid-Banner-danger"
+    style={
+      Object {
+        "marginBottom": 8,
+      }
+    }
+  >
+    <span
+      className="lucid-Banner-icon"
+    >
+      <ChatIcon />
+    </span>
+    <span
+      className="lucid-Banner-content"
+    >
+      Has Icon -- Outline Only
     </span>
     <CloseIcon
       className="lucid-Banner-close"

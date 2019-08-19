@@ -9,23 +9,26 @@
 
 .@{prefix}-Banner {
 	.transition-group-animation-fade();
+
 	box-sizing: content-box;
-	border: none;
-	background-color: @color-neutral-9;
+	border: @color-darkGray 2px solid;
+	background-color: @color-white;
 	font-size: @fontSize;
 	font-weight: @font-weight-medium;
 	padding: 0 @Banner-size-spacing-rightLeft;
 	display: flex;
-	color: @color-white;
+	color: @color-darkGray;
 
 	&.@{prefix}-Banner-has-close {
 		padding-right: @Banner-size-spacing-rightLeft;
 	}
 
-	// must use this specific selector in order to override default color
 	&-close&-close&-close {
 		align-self: flex-start;
 		margin-top: 14px;
+	}
+	// must use this specific selector in order to override default color
+	&-filled &-close&-close&-close {
 		stroke: @color-white;
 
 		&:hover {
@@ -48,12 +51,16 @@
 
 	&-icon {
 		> .@{prefix}-Icon {
-			stroke: @color-white;
+			stroke: @color-darkGray;
 		}
 
 		display: flex;
 		align-self: center;
 		margin-right: @Banner-size-spacing-rightLeft;
+	}
+
+	&-filled &-icon > .@{prefix}-Icon {
+		stroke: @color-white;
 	}
 
 	&-content {
@@ -81,26 +88,46 @@
 
 	// Types
 	&-success {
-		background-color: @featured-color-success;
+		border-color: @featured-color-success;
 	}
 
 	&-info {
-		background-color: @featured-color-info;
+		border-color: @featured-color-info;
 	}
 
 	&-warning {
-		background-color: @featured-color-warning;
-		color: @color-darkGray;
+		border-color: @featured-color-warning;
 	}
 
 	&-danger {
-		background-color: @featured-color-danger;
+		border-color: @featured-color-danger;
 	}
 
+	&-filled {
+		border: none;
+		background-color: @color-neutral-9;
+		color: @color-white;
+
+		&.@{prefix}-Banner-success {
+			background-color: @featured-color-success;
+		}
+
+		&.@{prefix}-Banner-info {
+			background-color: @featured-color-info;
+		}
+
+		&.@{prefix}-Banner-warning {
+			background-color: @featured-color-warning;
+			color: @color-darkGray;
+		}
+
+		&.@{prefix}-Banner-danger {
+			background-color: @featured-color-danger;
+		}
+	}
 
 	&-small &-content {
 		padding: @Banner-size-spacing-topBottom - 6px 0;
 		height: 12px;
 	}
 }
-
