@@ -45,6 +45,29 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
 
 exports[`Button [common] example testing should match snapshot(s) for all-types 3`] = `
 <button
+  className="lucid-Button lucid-Button-is-disabled"
+  disabled={true}
+  onClick={[Function]}
+  style={
+    Object {
+      "gridColumn": 1,
+    }
+  }
+  type="button"
+>
+  <span
+    className="lucid-Button-content"
+  >
+    <CheckIcon />
+    disabled 
+    standard
+     
+  </span>
+</button>
+`;
+
+exports[`Button [common] example testing should match snapshot(s) for all-types 4`] = `
+<button
   className="lucid-Button lucid-Button-has-only-icon"
   disabled={false}
   onClick={[Function]}
@@ -59,28 +82,6 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
     className="lucid-Button-content"
   >
     <CheckIcon />
-  </span>
-</button>
-`;
-
-exports[`Button [common] example testing should match snapshot(s) for all-types 4`] = `
-<button
-  className="lucid-Button lucid-Button-primary"
-  disabled={false}
-  onClick={[Function]}
-  style={
-    Object {
-      "gridColumn": 1,
-    }
-  }
-  type="button"
->
-  <span
-    className="lucid-Button-content"
-  >
-    standard
-     
-    primary
   </span>
 </button>
 `;
@@ -100,7 +101,6 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
   <span
     className="lucid-Button-content"
   >
-    <CheckIcon />
     standard
      
     primary
@@ -109,6 +109,53 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
 `;
 
 exports[`Button [common] example testing should match snapshot(s) for all-types 6`] = `
+<button
+  className="lucid-Button lucid-Button-primary"
+  disabled={false}
+  onClick={[Function]}
+  style={
+    Object {
+      "gridColumn": 1,
+    }
+  }
+  type="button"
+>
+  <span
+    className="lucid-Button-content"
+  >
+    <CheckIcon />
+    standard
+     
+    primary
+  </span>
+</button>
+`;
+
+exports[`Button [common] example testing should match snapshot(s) for all-types 7`] = `
+<button
+  className="lucid-Button lucid-Button-is-disabled lucid-Button-primary"
+  disabled={true}
+  onClick={[Function]}
+  style={
+    Object {
+      "gridColumn": 1,
+    }
+  }
+  type="button"
+>
+  <span
+    className="lucid-Button-content"
+  >
+    <CheckIcon />
+    disabled 
+    standard
+     
+    primary
+  </span>
+</button>
+`;
+
+exports[`Button [common] example testing should match snapshot(s) for all-types 8`] = `
 <button
   className="lucid-Button lucid-Button-primary lucid-Button-has-only-icon"
   disabled={false}
@@ -128,7 +175,7 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
 </button>
 `;
 
-exports[`Button [common] example testing should match snapshot(s) for all-types 7`] = `
+exports[`Button [common] example testing should match snapshot(s) for all-types 9`] = `
 <button
   className="lucid-Button lucid-Button-link"
   disabled={false}
@@ -150,7 +197,7 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
 </button>
 `;
 
-exports[`Button [common] example testing should match snapshot(s) for all-types 8`] = `
+exports[`Button [common] example testing should match snapshot(s) for all-types 10`] = `
 <button
   className="lucid-Button lucid-Button-link"
   disabled={false}
@@ -173,7 +220,31 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
 </button>
 `;
 
-exports[`Button [common] example testing should match snapshot(s) for all-types 9`] = `
+exports[`Button [common] example testing should match snapshot(s) for all-types 11`] = `
+<button
+  className="lucid-Button lucid-Button-is-disabled lucid-Button-link"
+  disabled={true}
+  onClick={[Function]}
+  style={
+    Object {
+      "gridColumn": 1,
+    }
+  }
+  type="button"
+>
+  <span
+    className="lucid-Button-content"
+  >
+    <CheckIcon />
+    disabled 
+    standard
+     
+    link
+  </span>
+</button>
+`;
+
+exports[`Button [common] example testing should match snapshot(s) for all-types 12`] = `
 <button
   className="lucid-Button lucid-Button-link lucid-Button-has-only-icon"
   disabled={false}
@@ -193,7 +264,7 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
 </button>
 `;
 
-exports[`Button [common] example testing should match snapshot(s) for all-types 10`] = `
+exports[`Button [common] example testing should match snapshot(s) for all-types 13`] = `
 <button
   className="lucid-Button lucid-Button-danger"
   disabled={false}
@@ -215,7 +286,7 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
 </button>
 `;
 
-exports[`Button [common] example testing should match snapshot(s) for all-types 11`] = `
+exports[`Button [common] example testing should match snapshot(s) for all-types 14`] = `
 <button
   className="lucid-Button lucid-Button-danger"
   disabled={false}
@@ -238,7 +309,31 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
 </button>
 `;
 
-exports[`Button [common] example testing should match snapshot(s) for all-types 12`] = `
+exports[`Button [common] example testing should match snapshot(s) for all-types 15`] = `
+<button
+  className="lucid-Button lucid-Button-is-disabled lucid-Button-danger"
+  disabled={true}
+  onClick={[Function]}
+  style={
+    Object {
+      "gridColumn": 1,
+    }
+  }
+  type="button"
+>
+  <span
+    className="lucid-Button-content"
+  >
+    <CheckIcon />
+    disabled 
+    standard
+     
+    danger
+  </span>
+</button>
+`;
+
+exports[`Button [common] example testing should match snapshot(s) for all-types 16`] = `
 <button
   className="lucid-Button lucid-Button-danger lucid-Button-has-only-icon"
   disabled={false}
@@ -258,7 +353,7 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
 </button>
 `;
 
-exports[`Button [common] example testing should match snapshot(s) for all-types 13`] = `
+exports[`Button [common] example testing should match snapshot(s) for all-types 17`] = `
 <button
   className="lucid-Button lucid-Button-invisible"
   disabled={false}
@@ -280,7 +375,7 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
 </button>
 `;
 
-exports[`Button [common] example testing should match snapshot(s) for all-types 14`] = `
+exports[`Button [common] example testing should match snapshot(s) for all-types 18`] = `
 <button
   className="lucid-Button lucid-Button-invisible"
   disabled={false}
@@ -303,7 +398,31 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
 </button>
 `;
 
-exports[`Button [common] example testing should match snapshot(s) for all-types 15`] = `
+exports[`Button [common] example testing should match snapshot(s) for all-types 19`] = `
+<button
+  className="lucid-Button lucid-Button-is-disabled lucid-Button-invisible"
+  disabled={true}
+  onClick={[Function]}
+  style={
+    Object {
+      "gridColumn": 1,
+    }
+  }
+  type="button"
+>
+  <span
+    className="lucid-Button-content"
+  >
+    <CheckIcon />
+    disabled 
+    standard
+     
+    invisible
+  </span>
+</button>
+`;
+
+exports[`Button [common] example testing should match snapshot(s) for all-types 20`] = `
 <button
   className="lucid-Button lucid-Button-invisible lucid-Button-has-only-icon"
   disabled={false}
@@ -323,7 +442,7 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
 </button>
 `;
 
-exports[`Button [common] example testing should match snapshot(s) for all-types 16`] = `
+exports[`Button [common] example testing should match snapshot(s) for all-types 21`] = `
 <button
   className="lucid-Button lucid-Button-small"
   disabled={false}
@@ -344,7 +463,7 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
 </button>
 `;
 
-exports[`Button [common] example testing should match snapshot(s) for all-types 17`] = `
+exports[`Button [common] example testing should match snapshot(s) for all-types 22`] = `
 <button
   className="lucid-Button lucid-Button-small"
   disabled={false}
@@ -366,7 +485,30 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
 </button>
 `;
 
-exports[`Button [common] example testing should match snapshot(s) for all-types 18`] = `
+exports[`Button [common] example testing should match snapshot(s) for all-types 23`] = `
+<button
+  className="lucid-Button lucid-Button-is-disabled lucid-Button-small"
+  disabled={true}
+  onClick={[Function]}
+  style={
+    Object {
+      "gridColumn": 2,
+    }
+  }
+  type="button"
+>
+  <span
+    className="lucid-Button-content"
+  >
+    <CheckIcon />
+    disabled 
+    small
+     
+  </span>
+</button>
+`;
+
+exports[`Button [common] example testing should match snapshot(s) for all-types 24`] = `
 <button
   className="lucid-Button lucid-Button-small lucid-Button-has-only-icon"
   disabled={false}
@@ -386,7 +528,7 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
 </button>
 `;
 
-exports[`Button [common] example testing should match snapshot(s) for all-types 19`] = `
+exports[`Button [common] example testing should match snapshot(s) for all-types 25`] = `
 <button
   className="lucid-Button lucid-Button-primary lucid-Button-small"
   disabled={false}
@@ -408,7 +550,7 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
 </button>
 `;
 
-exports[`Button [common] example testing should match snapshot(s) for all-types 20`] = `
+exports[`Button [common] example testing should match snapshot(s) for all-types 26`] = `
 <button
   className="lucid-Button lucid-Button-primary lucid-Button-small"
   disabled={false}
@@ -431,7 +573,31 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
 </button>
 `;
 
-exports[`Button [common] example testing should match snapshot(s) for all-types 21`] = `
+exports[`Button [common] example testing should match snapshot(s) for all-types 27`] = `
+<button
+  className="lucid-Button lucid-Button-is-disabled lucid-Button-primary lucid-Button-small"
+  disabled={true}
+  onClick={[Function]}
+  style={
+    Object {
+      "gridColumn": 2,
+    }
+  }
+  type="button"
+>
+  <span
+    className="lucid-Button-content"
+  >
+    <CheckIcon />
+    disabled 
+    small
+     
+    primary
+  </span>
+</button>
+`;
+
+exports[`Button [common] example testing should match snapshot(s) for all-types 28`] = `
 <button
   className="lucid-Button lucid-Button-primary lucid-Button-small lucid-Button-has-only-icon"
   disabled={false}
@@ -451,7 +617,7 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
 </button>
 `;
 
-exports[`Button [common] example testing should match snapshot(s) for all-types 22`] = `
+exports[`Button [common] example testing should match snapshot(s) for all-types 29`] = `
 <button
   className="lucid-Button lucid-Button-link lucid-Button-small"
   disabled={false}
@@ -473,7 +639,7 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
 </button>
 `;
 
-exports[`Button [common] example testing should match snapshot(s) for all-types 23`] = `
+exports[`Button [common] example testing should match snapshot(s) for all-types 30`] = `
 <button
   className="lucid-Button lucid-Button-link lucid-Button-small"
   disabled={false}
@@ -496,7 +662,31 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
 </button>
 `;
 
-exports[`Button [common] example testing should match snapshot(s) for all-types 24`] = `
+exports[`Button [common] example testing should match snapshot(s) for all-types 31`] = `
+<button
+  className="lucid-Button lucid-Button-is-disabled lucid-Button-link lucid-Button-small"
+  disabled={true}
+  onClick={[Function]}
+  style={
+    Object {
+      "gridColumn": 2,
+    }
+  }
+  type="button"
+>
+  <span
+    className="lucid-Button-content"
+  >
+    <CheckIcon />
+    disabled 
+    small
+     
+    link
+  </span>
+</button>
+`;
+
+exports[`Button [common] example testing should match snapshot(s) for all-types 32`] = `
 <button
   className="lucid-Button lucid-Button-link lucid-Button-small lucid-Button-has-only-icon"
   disabled={false}
@@ -516,7 +706,7 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
 </button>
 `;
 
-exports[`Button [common] example testing should match snapshot(s) for all-types 25`] = `
+exports[`Button [common] example testing should match snapshot(s) for all-types 33`] = `
 <button
   className="lucid-Button lucid-Button-danger lucid-Button-small"
   disabled={false}
@@ -538,7 +728,7 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
 </button>
 `;
 
-exports[`Button [common] example testing should match snapshot(s) for all-types 26`] = `
+exports[`Button [common] example testing should match snapshot(s) for all-types 34`] = `
 <button
   className="lucid-Button lucid-Button-danger lucid-Button-small"
   disabled={false}
@@ -561,7 +751,31 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
 </button>
 `;
 
-exports[`Button [common] example testing should match snapshot(s) for all-types 27`] = `
+exports[`Button [common] example testing should match snapshot(s) for all-types 35`] = `
+<button
+  className="lucid-Button lucid-Button-is-disabled lucid-Button-danger lucid-Button-small"
+  disabled={true}
+  onClick={[Function]}
+  style={
+    Object {
+      "gridColumn": 2,
+    }
+  }
+  type="button"
+>
+  <span
+    className="lucid-Button-content"
+  >
+    <CheckIcon />
+    disabled 
+    small
+     
+    danger
+  </span>
+</button>
+`;
+
+exports[`Button [common] example testing should match snapshot(s) for all-types 36`] = `
 <button
   className="lucid-Button lucid-Button-danger lucid-Button-small lucid-Button-has-only-icon"
   disabled={false}
@@ -581,7 +795,7 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
 </button>
 `;
 
-exports[`Button [common] example testing should match snapshot(s) for all-types 28`] = `
+exports[`Button [common] example testing should match snapshot(s) for all-types 37`] = `
 <button
   className="lucid-Button lucid-Button-invisible lucid-Button-small"
   disabled={false}
@@ -603,7 +817,7 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
 </button>
 `;
 
-exports[`Button [common] example testing should match snapshot(s) for all-types 29`] = `
+exports[`Button [common] example testing should match snapshot(s) for all-types 38`] = `
 <button
   className="lucid-Button lucid-Button-invisible lucid-Button-small"
   disabled={false}
@@ -626,7 +840,31 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
 </button>
 `;
 
-exports[`Button [common] example testing should match snapshot(s) for all-types 30`] = `
+exports[`Button [common] example testing should match snapshot(s) for all-types 39`] = `
+<button
+  className="lucid-Button lucid-Button-is-disabled lucid-Button-invisible lucid-Button-small"
+  disabled={true}
+  onClick={[Function]}
+  style={
+    Object {
+      "gridColumn": 2,
+    }
+  }
+  type="button"
+>
+  <span
+    className="lucid-Button-content"
+  >
+    <CheckIcon />
+    disabled 
+    small
+     
+    invisible
+  </span>
+</button>
+`;
+
+exports[`Button [common] example testing should match snapshot(s) for all-types 40`] = `
 <button
   className="lucid-Button lucid-Button-invisible lucid-Button-small lucid-Button-has-only-icon"
   disabled={false}
@@ -646,7 +884,7 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
 </button>
 `;
 
-exports[`Button [common] example testing should match snapshot(s) for all-types 31`] = `
+exports[`Button [common] example testing should match snapshot(s) for all-types 41`] = `
 <button
   className="lucid-Button lucid-Button-short"
   disabled={false}
@@ -667,7 +905,7 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
 </button>
 `;
 
-exports[`Button [common] example testing should match snapshot(s) for all-types 32`] = `
+exports[`Button [common] example testing should match snapshot(s) for all-types 42`] = `
 <button
   className="lucid-Button lucid-Button-short"
   disabled={false}
@@ -689,7 +927,30 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
 </button>
 `;
 
-exports[`Button [common] example testing should match snapshot(s) for all-types 33`] = `
+exports[`Button [common] example testing should match snapshot(s) for all-types 43`] = `
+<button
+  className="lucid-Button lucid-Button-is-disabled lucid-Button-short"
+  disabled={true}
+  onClick={[Function]}
+  style={
+    Object {
+      "gridColumn": 3,
+    }
+  }
+  type="button"
+>
+  <span
+    className="lucid-Button-content"
+  >
+    <CheckIcon />
+    disabled 
+    short
+     
+  </span>
+</button>
+`;
+
+exports[`Button [common] example testing should match snapshot(s) for all-types 44`] = `
 <button
   className="lucid-Button lucid-Button-short lucid-Button-has-only-icon"
   disabled={false}
@@ -709,7 +970,7 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
 </button>
 `;
 
-exports[`Button [common] example testing should match snapshot(s) for all-types 34`] = `
+exports[`Button [common] example testing should match snapshot(s) for all-types 45`] = `
 <button
   className="lucid-Button lucid-Button-primary lucid-Button-short"
   disabled={false}
@@ -731,7 +992,7 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
 </button>
 `;
 
-exports[`Button [common] example testing should match snapshot(s) for all-types 35`] = `
+exports[`Button [common] example testing should match snapshot(s) for all-types 46`] = `
 <button
   className="lucid-Button lucid-Button-primary lucid-Button-short"
   disabled={false}
@@ -754,7 +1015,31 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
 </button>
 `;
 
-exports[`Button [common] example testing should match snapshot(s) for all-types 36`] = `
+exports[`Button [common] example testing should match snapshot(s) for all-types 47`] = `
+<button
+  className="lucid-Button lucid-Button-is-disabled lucid-Button-primary lucid-Button-short"
+  disabled={true}
+  onClick={[Function]}
+  style={
+    Object {
+      "gridColumn": 3,
+    }
+  }
+  type="button"
+>
+  <span
+    className="lucid-Button-content"
+  >
+    <CheckIcon />
+    disabled 
+    short
+     
+    primary
+  </span>
+</button>
+`;
+
+exports[`Button [common] example testing should match snapshot(s) for all-types 48`] = `
 <button
   className="lucid-Button lucid-Button-primary lucid-Button-short lucid-Button-has-only-icon"
   disabled={false}
@@ -774,7 +1059,7 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
 </button>
 `;
 
-exports[`Button [common] example testing should match snapshot(s) for all-types 37`] = `
+exports[`Button [common] example testing should match snapshot(s) for all-types 49`] = `
 <button
   className="lucid-Button lucid-Button-link lucid-Button-short"
   disabled={false}
@@ -796,7 +1081,7 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
 </button>
 `;
 
-exports[`Button [common] example testing should match snapshot(s) for all-types 38`] = `
+exports[`Button [common] example testing should match snapshot(s) for all-types 50`] = `
 <button
   className="lucid-Button lucid-Button-link lucid-Button-short"
   disabled={false}
@@ -819,7 +1104,31 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
 </button>
 `;
 
-exports[`Button [common] example testing should match snapshot(s) for all-types 39`] = `
+exports[`Button [common] example testing should match snapshot(s) for all-types 51`] = `
+<button
+  className="lucid-Button lucid-Button-is-disabled lucid-Button-link lucid-Button-short"
+  disabled={true}
+  onClick={[Function]}
+  style={
+    Object {
+      "gridColumn": 3,
+    }
+  }
+  type="button"
+>
+  <span
+    className="lucid-Button-content"
+  >
+    <CheckIcon />
+    disabled 
+    short
+     
+    link
+  </span>
+</button>
+`;
+
+exports[`Button [common] example testing should match snapshot(s) for all-types 52`] = `
 <button
   className="lucid-Button lucid-Button-link lucid-Button-short lucid-Button-has-only-icon"
   disabled={false}
@@ -839,7 +1148,7 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
 </button>
 `;
 
-exports[`Button [common] example testing should match snapshot(s) for all-types 40`] = `
+exports[`Button [common] example testing should match snapshot(s) for all-types 53`] = `
 <button
   className="lucid-Button lucid-Button-danger lucid-Button-short"
   disabled={false}
@@ -861,7 +1170,7 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
 </button>
 `;
 
-exports[`Button [common] example testing should match snapshot(s) for all-types 41`] = `
+exports[`Button [common] example testing should match snapshot(s) for all-types 54`] = `
 <button
   className="lucid-Button lucid-Button-danger lucid-Button-short"
   disabled={false}
@@ -884,7 +1193,31 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
 </button>
 `;
 
-exports[`Button [common] example testing should match snapshot(s) for all-types 42`] = `
+exports[`Button [common] example testing should match snapshot(s) for all-types 55`] = `
+<button
+  className="lucid-Button lucid-Button-is-disabled lucid-Button-danger lucid-Button-short"
+  disabled={true}
+  onClick={[Function]}
+  style={
+    Object {
+      "gridColumn": 3,
+    }
+  }
+  type="button"
+>
+  <span
+    className="lucid-Button-content"
+  >
+    <CheckIcon />
+    disabled 
+    short
+     
+    danger
+  </span>
+</button>
+`;
+
+exports[`Button [common] example testing should match snapshot(s) for all-types 56`] = `
 <button
   className="lucid-Button lucid-Button-danger lucid-Button-short lucid-Button-has-only-icon"
   disabled={false}
@@ -904,7 +1237,7 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
 </button>
 `;
 
-exports[`Button [common] example testing should match snapshot(s) for all-types 43`] = `
+exports[`Button [common] example testing should match snapshot(s) for all-types 57`] = `
 <button
   className="lucid-Button lucid-Button-invisible lucid-Button-short"
   disabled={false}
@@ -926,7 +1259,7 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
 </button>
 `;
 
-exports[`Button [common] example testing should match snapshot(s) for all-types 44`] = `
+exports[`Button [common] example testing should match snapshot(s) for all-types 58`] = `
 <button
   className="lucid-Button lucid-Button-invisible lucid-Button-short"
   disabled={false}
@@ -949,7 +1282,31 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
 </button>
 `;
 
-exports[`Button [common] example testing should match snapshot(s) for all-types 45`] = `
+exports[`Button [common] example testing should match snapshot(s) for all-types 59`] = `
+<button
+  className="lucid-Button lucid-Button-is-disabled lucid-Button-invisible lucid-Button-short"
+  disabled={true}
+  onClick={[Function]}
+  style={
+    Object {
+      "gridColumn": 3,
+    }
+  }
+  type="button"
+>
+  <span
+    className="lucid-Button-content"
+  >
+    <CheckIcon />
+    disabled 
+    short
+     
+    invisible
+  </span>
+</button>
+`;
+
+exports[`Button [common] example testing should match snapshot(s) for all-types 60`] = `
 <button
   className="lucid-Button lucid-Button-invisible lucid-Button-short lucid-Button-has-only-icon"
   disabled={false}
@@ -969,7 +1326,7 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
 </button>
 `;
 
-exports[`Button [common] example testing should match snapshot(s) for all-types 46`] = `
+exports[`Button [common] example testing should match snapshot(s) for all-types 61`] = `
 <button
   className="lucid-Button lucid-Button-large"
   disabled={false}
@@ -990,7 +1347,7 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
 </button>
 `;
 
-exports[`Button [common] example testing should match snapshot(s) for all-types 47`] = `
+exports[`Button [common] example testing should match snapshot(s) for all-types 62`] = `
 <button
   className="lucid-Button lucid-Button-large"
   disabled={false}
@@ -1012,7 +1369,30 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
 </button>
 `;
 
-exports[`Button [common] example testing should match snapshot(s) for all-types 48`] = `
+exports[`Button [common] example testing should match snapshot(s) for all-types 63`] = `
+<button
+  className="lucid-Button lucid-Button-is-disabled lucid-Button-large"
+  disabled={true}
+  onClick={[Function]}
+  style={
+    Object {
+      "gridColumn": 4,
+    }
+  }
+  type="button"
+>
+  <span
+    className="lucid-Button-content"
+  >
+    <CheckIcon />
+    disabled 
+    large
+     
+  </span>
+</button>
+`;
+
+exports[`Button [common] example testing should match snapshot(s) for all-types 64`] = `
 <button
   className="lucid-Button lucid-Button-large lucid-Button-has-only-icon"
   disabled={false}
@@ -1032,7 +1412,7 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
 </button>
 `;
 
-exports[`Button [common] example testing should match snapshot(s) for all-types 49`] = `
+exports[`Button [common] example testing should match snapshot(s) for all-types 65`] = `
 <button
   className="lucid-Button lucid-Button-primary lucid-Button-large"
   disabled={false}
@@ -1054,7 +1434,7 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
 </button>
 `;
 
-exports[`Button [common] example testing should match snapshot(s) for all-types 50`] = `
+exports[`Button [common] example testing should match snapshot(s) for all-types 66`] = `
 <button
   className="lucid-Button lucid-Button-primary lucid-Button-large"
   disabled={false}
@@ -1077,7 +1457,31 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
 </button>
 `;
 
-exports[`Button [common] example testing should match snapshot(s) for all-types 51`] = `
+exports[`Button [common] example testing should match snapshot(s) for all-types 67`] = `
+<button
+  className="lucid-Button lucid-Button-is-disabled lucid-Button-primary lucid-Button-large"
+  disabled={true}
+  onClick={[Function]}
+  style={
+    Object {
+      "gridColumn": 4,
+    }
+  }
+  type="button"
+>
+  <span
+    className="lucid-Button-content"
+  >
+    <CheckIcon />
+    disabled 
+    large
+     
+    primary
+  </span>
+</button>
+`;
+
+exports[`Button [common] example testing should match snapshot(s) for all-types 68`] = `
 <button
   className="lucid-Button lucid-Button-primary lucid-Button-large lucid-Button-has-only-icon"
   disabled={false}
@@ -1097,7 +1501,7 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
 </button>
 `;
 
-exports[`Button [common] example testing should match snapshot(s) for all-types 52`] = `
+exports[`Button [common] example testing should match snapshot(s) for all-types 69`] = `
 <button
   className="lucid-Button lucid-Button-link lucid-Button-large"
   disabled={false}
@@ -1119,7 +1523,7 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
 </button>
 `;
 
-exports[`Button [common] example testing should match snapshot(s) for all-types 53`] = `
+exports[`Button [common] example testing should match snapshot(s) for all-types 70`] = `
 <button
   className="lucid-Button lucid-Button-link lucid-Button-large"
   disabled={false}
@@ -1142,7 +1546,31 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
 </button>
 `;
 
-exports[`Button [common] example testing should match snapshot(s) for all-types 54`] = `
+exports[`Button [common] example testing should match snapshot(s) for all-types 71`] = `
+<button
+  className="lucid-Button lucid-Button-is-disabled lucid-Button-link lucid-Button-large"
+  disabled={true}
+  onClick={[Function]}
+  style={
+    Object {
+      "gridColumn": 4,
+    }
+  }
+  type="button"
+>
+  <span
+    className="lucid-Button-content"
+  >
+    <CheckIcon />
+    disabled 
+    large
+     
+    link
+  </span>
+</button>
+`;
+
+exports[`Button [common] example testing should match snapshot(s) for all-types 72`] = `
 <button
   className="lucid-Button lucid-Button-link lucid-Button-large lucid-Button-has-only-icon"
   disabled={false}
@@ -1162,7 +1590,7 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
 </button>
 `;
 
-exports[`Button [common] example testing should match snapshot(s) for all-types 55`] = `
+exports[`Button [common] example testing should match snapshot(s) for all-types 73`] = `
 <button
   className="lucid-Button lucid-Button-danger lucid-Button-large"
   disabled={false}
@@ -1184,7 +1612,7 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
 </button>
 `;
 
-exports[`Button [common] example testing should match snapshot(s) for all-types 56`] = `
+exports[`Button [common] example testing should match snapshot(s) for all-types 74`] = `
 <button
   className="lucid-Button lucid-Button-danger lucid-Button-large"
   disabled={false}
@@ -1207,7 +1635,31 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
 </button>
 `;
 
-exports[`Button [common] example testing should match snapshot(s) for all-types 57`] = `
+exports[`Button [common] example testing should match snapshot(s) for all-types 75`] = `
+<button
+  className="lucid-Button lucid-Button-is-disabled lucid-Button-danger lucid-Button-large"
+  disabled={true}
+  onClick={[Function]}
+  style={
+    Object {
+      "gridColumn": 4,
+    }
+  }
+  type="button"
+>
+  <span
+    className="lucid-Button-content"
+  >
+    <CheckIcon />
+    disabled 
+    large
+     
+    danger
+  </span>
+</button>
+`;
+
+exports[`Button [common] example testing should match snapshot(s) for all-types 76`] = `
 <button
   className="lucid-Button lucid-Button-danger lucid-Button-large lucid-Button-has-only-icon"
   disabled={false}
@@ -1227,7 +1679,7 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
 </button>
 `;
 
-exports[`Button [common] example testing should match snapshot(s) for all-types 58`] = `
+exports[`Button [common] example testing should match snapshot(s) for all-types 77`] = `
 <button
   className="lucid-Button lucid-Button-invisible lucid-Button-large"
   disabled={false}
@@ -1249,7 +1701,7 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
 </button>
 `;
 
-exports[`Button [common] example testing should match snapshot(s) for all-types 59`] = `
+exports[`Button [common] example testing should match snapshot(s) for all-types 78`] = `
 <button
   className="lucid-Button lucid-Button-invisible lucid-Button-large"
   disabled={false}
@@ -1272,7 +1724,31 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
 </button>
 `;
 
-exports[`Button [common] example testing should match snapshot(s) for all-types 60`] = `
+exports[`Button [common] example testing should match snapshot(s) for all-types 79`] = `
+<button
+  className="lucid-Button lucid-Button-is-disabled lucid-Button-invisible lucid-Button-large"
+  disabled={true}
+  onClick={[Function]}
+  style={
+    Object {
+      "gridColumn": 4,
+    }
+  }
+  type="button"
+>
+  <span
+    className="lucid-Button-content"
+  >
+    <CheckIcon />
+    disabled 
+    large
+     
+    invisible
+  </span>
+</button>
+`;
+
+exports[`Button [common] example testing should match snapshot(s) for all-types 80`] = `
 <button
   className="lucid-Button lucid-Button-invisible lucid-Button-large lucid-Button-has-only-icon"
   disabled={false}
