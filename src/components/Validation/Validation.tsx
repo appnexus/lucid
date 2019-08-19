@@ -45,7 +45,7 @@ export interface IValidationProps {
 }
 
 interface IValidationFC extends FC<IValidationProps> {
-	Error: ValidationError;
+	Error: FC<IValidationErrorProps>;
 }
 
 const Validation: IValidationFC = (props): React.ReactElement => {

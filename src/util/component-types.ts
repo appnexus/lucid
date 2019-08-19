@@ -18,7 +18,7 @@ export interface FC<P> extends React.FC<P> {
 type TypesType<P> =
 	| ICreateClassComponentClass<P>
 	| Array<ICreateClassComponentClass<P>>
-	| { propName: string };
+	| { propName?: string };
 
 interface ICreateClassComponentSpec<P extends { [key: string]: any }, S>
 	extends React.Mixin<P, S> {
@@ -123,7 +123,7 @@ export function filterTypes<P>(
 // return all elements not matching the specified types
 export function rejectTypes<P>(
 	children: React.ReactNode,
-	types: TypesType<P> | Array<TypesType<P>>,
+	types: TypesType<P> | Array<TypesType<P>>
 ): React.ReactNode[] {
 	types = ([] as Array<TypesType<P>>).concat(types); // coerce to Array
 

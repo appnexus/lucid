@@ -33,12 +33,11 @@ interface IBreadcrumbProps {
 	/** Appended to the component-specific class names set on the root element. */
 	className?: string;
 
-
 	Item?: string | React.ReactNode & { props: IBreadcrumbItemProps };
 }
 
 interface IBreadcrumbFC extends FC<IBreadcrumbProps> {
-	Item: BreadcrumbItem;
+	Item: FC<IBreadcrumbItemProps>;
 }
 
 const Breadcrumb: IBreadcrumbFC = (props): React.ReactElement => {
@@ -49,32 +48,34 @@ const Breadcrumb: IBreadcrumbFC = (props): React.ReactElement => {
 
 	return (
 		<nav
-			{...omitProps(
-				passThroughs,
-				undefined,
-				_.keys(Breadcrumb.propTypes)
-			)}
+			{...omitProps(passThroughs, undefined, _.keys(Breadcrumb.propTypes))}
 			className={cx('&', className)}
 		>
 			{!_.isEmpty(items) ? (
 				<ul className={cx('&-List')}>
-					{_.map((initialItems as React.ReactElement[]), ({ props, key }): React.ReactNode => (
-						<li
-							{...props}
-							key={key}
-							className={cx('&-Item', props.className)}
-						>
-							{props.children}
-							<span className={cx('&-BreadcrumbSeparator')}>
-								<span />
-								<span />
-							</span>
-						</li>
-					))}
+					{_.map(
+						initialItems as React.ReactElement[],
+						({ props, key }): React.ReactNode => (
+							<li
+								{...props}
+								key={key}
+								className={cx('&-Item', props.className)}
+							>
+								{props.children}
+								<span className={cx('&-BreadcrumbSeparator')}>
+									<span />
+									<span />
+								</span>
+							</li>
+						)
+					)}
 					<li
 						{...(lastItem as React.ReactElement).props}
 						key={(lastItem as React.ReactElement).key}
-						className={cx('&-Item', (lastItem as React.ReactElement).props.className)}
+						className={cx(
+							'&-Item',
+							(lastItem as React.ReactElement).props.className
+						)}
 					/>
 				</ul>
 			) : null}
@@ -99,7 +100,7 @@ Breadcrumb.propTypes = {
 	`,
 	Item: node`
 		A child element that renders a \`li\`.
-	`
+	`,
 };
 
 Breadcrumb.Item = BreadcrumbItem;

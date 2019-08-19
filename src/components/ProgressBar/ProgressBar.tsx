@@ -29,7 +29,7 @@ interface IProgressBarProps {
 }
 
 interface IProgressBarFC extends FC<IProgressBarProps> {
-	Title: Title;
+	Title: FC<ITitleProps>;
 }
 
 const Title: FC<ITitleProps> = (): null => null;

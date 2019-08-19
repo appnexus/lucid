@@ -86,7 +86,7 @@ interface ICellProps {
 }
 
 interface IGridFC extends FC<IGridProps> {
-	Cell: Cell;
+	Cell: FC<ICellProps>;
 }
 
 // -----------------------------------------------------------------------------
@@ -193,7 +193,11 @@ const Grid: IGridFC = (props): React.ReactElement => {
 				(cellChildProp, index): React.ReactElement => {
 					return (
 						<article
-							{...omitProps(cellChildProp, Grid.Cell)}
+							{...omitProps(
+								cellChildProp,
+								undefined,
+								_.keys(Grid.Cell.propTypes)
+							)}
 							key={index}
 							className={cx(
 								'&-Cell',
