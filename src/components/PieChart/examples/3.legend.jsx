@@ -10,7 +10,7 @@ const data = [
 	{ x: 'Ann', y: 30 },
 ];
 
-const palette = chartConstants.PALETTE_6;
+const palette = chartConstants.PALETTE_7;
 
 export default createClass({
 	render() {

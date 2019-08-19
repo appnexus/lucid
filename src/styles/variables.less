@@ -275,6 +275,11 @@
 	color-chart-5-light,
 	color-chart-5-dark,
 	color-chart-5-darkest,
+	color-chart-6,
+	color-chart-6-lightest,
+	color-chart-6-light,
+	color-chart-6-dark,
+	color-chart-6-darkest,
 	color-chart-good,
 	color-chart-good-lightest,
 	color-chart-good-light,
@@ -287,41 +292,47 @@
 	color-chart-bad-darkest,
 	color-chart-neutral;
 
-@color-chart-0: @featured-color-info;
+@color-chart-0: @color-secondary-2;
 @color-chart-0-lightest: tint(@color-chart-0, 90%);
 @color-chart-0-light: tint(@color-chart-0, 65%);
 @color-chart-0-dark: shade(@color-chart-0, 35%);
 @color-chart-0-darkest: shade(@color-chart-0, 70%);
 
-@color-chart-1: #ff8700;
+@color-chart-1: #00bebe; // TODO: reference secondary-5 when merged
 @color-chart-1-lightest: tint(@color-chart-1, 90%);
 @color-chart-1-light: tint(@color-chart-1, 65%);
 @color-chart-1-dark: shade(@color-chart-1, 35%);
 @color-chart-1-darkest: shade(@color-chart-1, 70%);
 
-@color-chart-2: #c73774;
+@color-chart-2: @color-secondary-1;
 @color-chart-2-lightest: tint(@color-chart-2, 90%);
 @color-chart-2-light: tint(@color-chart-2, 65%);
 @color-chart-2-dark: shade(@color-chart-2, 35%);
 @color-chart-2-darkest: shade(@color-chart-2, 70%);
 
-@color-chart-3: #00b8c8;
+@color-chart-3: @color-secondary-3;
 @color-chart-3-lightest: tint(@color-chart-3, 90%);
 @color-chart-3-light: tint(@color-chart-3, 65%);
 @color-chart-3-dark: shade(@color-chart-3, 35%);
 @color-chart-3-darkest: shade(@color-chart-3, 70%);
 
-@color-chart-4: #fed100;
+@color-chart-4: #6046a3;
 @color-chart-4-lightest: tint(@color-chart-4, 90%);
 @color-chart-4-light: tint(@color-chart-4, 65%);
 @color-chart-4-dark: shade(@color-chart-4, 35%);
 @color-chart-4-darkest: shade(@color-chart-4, 70%);
 
-@color-chart-5: #824bb0;
+@color-chart-5: @featured-color-warning;
 @color-chart-5-lightest: tint(@color-chart-5, 90%);
 @color-chart-5-light: tint(@color-chart-5, 65%);
 @color-chart-5-dark: shade(@color-chart-5, 35%);
 @color-chart-5-darkest: shade(@color-chart-5, 70%);
+
+@color-chart-6: @color-primary;
+@color-chart-6-lightest: tint(@color-chart-6, 90%);
+@color-chart-6-light: tint(@color-chart-6, 65%);
+@color-chart-6-dark: shade(@color-chart-6, 35%);
+@color-chart-6-darkest: shade(@color-chart-6, 70%);
 
 // Semantic colors
 

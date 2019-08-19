@@ -97,7 +97,7 @@ const PieChart = createClass({
 			Takes one of the palettes exported from \`lucid.chartConstants\`.
 			Available palettes:
 
-			- \`PALETTE_6\` (default)
+			- \`PALETTE_7\` (default)
 			- \`PALETTE_30\`
 			- \`PALETTE_MONOCHROME_0_5\`
 			- \`PALETTE_MONOCHROME_1_5\`
@@ -105,6 +105,7 @@ const PieChart = createClass({
 			- \`PALETTE_MONOCHROME_3_5\`
 			- \`PALETTE_MONOCHROME_4_5\`
 			- \`PALETTE_MONOCHROME_5_5\`
+			- \`PALETTE_MONOCHROME_6_5\`
 		`,
 
 		colorMap: object`
@@ -179,7 +180,7 @@ const PieChart = createClass({
 				bottom: 10,
 				left: 10,
 			},
-			palette: chartConstants.PALETTE_6,
+			palette: chartConstants.PALETTE_7,
 			hasToolTips: true,
 			hasStroke: true,
 			isDonut: false,

@@ -73,6 +73,7 @@ exports[`LoadingIndicator [common] example testing should match snapshot(s) for 
         "color-chart-3",
         "color-chart-4",
         "color-chart-5",
+        "color-chart-6",
       ]
     }
     renderTooltipBody={null}
@@ -150,6 +151,7 @@ exports[`LoadingIndicator [common] example testing should match snapshot(s) for 
         "color-chart-3",
         "color-chart-4",
         "color-chart-5",
+        "color-chart-6",
       ]
     }
     renderTooltipBody={null}
@@ -227,6 +229,7 @@ exports[`LoadingIndicator [common] example testing should match snapshot(s) for 
         "color-chart-3",
         "color-chart-4",
         "color-chart-5",
+        "color-chart-6",
       ]
     }
     renderTooltipBody={null}
@@ -324,6 +327,7 @@ exports[`LoadingIndicator [common] example testing should match snapshot(s) for 
         "color-chart-3",
         "color-chart-4",
         "color-chart-5",
+        "color-chart-6",
       ]
     }
     renderTooltipBody={null}
@@ -416,6 +420,7 @@ exports[`LoadingIndicator [common] example testing should match snapshot(s) for 
         "color-chart-3",
         "color-chart-4",
         "color-chart-5",
+        "color-chart-6",
       ]
     }
     renderTooltipBody={null}
@@ -496,6 +501,7 @@ exports[`LoadingIndicator [common] example testing should match snapshot(s) for 
         "color-chart-3",
         "color-chart-4",
         "color-chart-5",
+        "color-chart-6",
       ]
     }
     renderTooltipBody={null}
@@ -573,6 +579,7 @@ exports[`LoadingIndicator [common] example testing should match snapshot(s) for 
         "color-chart-3",
         "color-chart-4",
         "color-chart-5",
+        "color-chart-6",
       ]
     }
     renderTooltipBody={null}
