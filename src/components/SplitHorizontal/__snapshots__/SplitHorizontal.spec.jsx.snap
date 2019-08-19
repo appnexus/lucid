@@ -289,6 +289,12 @@ exports[`SplitHorizontal render should render expanded & collapsed 1`] = `
             className="lucid-DragCaptureZone lucid-SplitHorizontal-Divider"
             key="DragCaptureZone"
             onMouseDown={[Function]}
+            onMouseMove={[Function]}
+            onMouseUp={[Function]}
+            onTouchCancel={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
             style={
               Object {
                 "boxSizing": "border-box",

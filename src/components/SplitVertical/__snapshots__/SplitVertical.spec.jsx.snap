@@ -301,6 +301,12 @@ exports[`SplitVertical render should render expanded & collapsed 1`] = `
             className="lucid-DragCaptureZone lucid-SplitVertical-Divider lucid-SplitVertical-Divider-is-resizeable"
             key="DragCaptureZone"
             onMouseDown={[Function]}
+            onMouseMove={[Function]}
+            onMouseUp={[Function]}
+            onTouchCancel={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
             style={
               Object {
                 "boxSizing": "border-box",
