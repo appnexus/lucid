@@ -28,9 +28,6 @@ class Portal extends React.Component<IPortalProps, IPortalState, {}> {
 	constructor(props: IPortalProps) {
 		super(props);
 
-		this.manuallyCreatedPortal = false;
-		this.portalElement = document.createElement('div');
-
 		this.state = {
 			isReady: false,
 		};
@@ -57,9 +54,8 @@ class Portal extends React.Component<IPortalProps, IPortalState, {}> {
 			The \`id\` of the portal element that is appended to \`document.body\`.
 		`,
 	};
-	manuallyCreatedPortal: boolean;
-	portalElement: HTMLElement;
-
+	manuallyCreatedPortal: boolean = false;
+	portalElement: HTMLElement = document.createElement('div');
 
 	componentDidMount(): void {
 		const { portalId } = this.props;
