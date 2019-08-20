@@ -92,6 +92,7 @@ import EnvelopeIcon from './components/Icon/EnvelopeIcon/EnvelopeIcon';
 import EqualsIcon from './components/Icon/EqualsIcon/EqualsIcon';
 import FileIcon from './components/Icon/FileIcon/FileIcon';
 import FilterIcon from './components/Icon/FilterIcon/FilterIcon';
+import FlagIcon from './components/Icon/FlagIcon/FlagIcon';
 import FolderIcon from './components/Icon/FolderIcon/FolderIcon';
 import FourSquaresIcon from './components/Icon/FourSquaresIcon/FourSquaresIcon';
 import Grid from './components/Grid/Grid';
@@ -257,6 +258,7 @@ export {
 	ExpanderPanelDumb,
 	FileIcon,
 	FilterIcon,
+	FlagIcon,
 	FolderIcon,
 	FourSquaresIcon,
 	Grid,
