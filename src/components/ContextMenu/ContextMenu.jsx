@@ -53,6 +53,7 @@ const ContextMenu = createClass({
 			direction of the FlyOut relative to Target.
 		`,
 
+		// TODO: fix this mispelling, but it's a breaking change :(
 		directonOffset: number`
 			the px offset along the axis of the direction
 		`,

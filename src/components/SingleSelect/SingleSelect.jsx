@@ -231,6 +231,10 @@ const SingleSelect = createClass({
 		);
 		const placeholder = _.get(placeholderProps, 'children', 'Select');
 		const isItemSelected = _.isNumber(selectedIndex);
+		const isHighlighted =
+			(!isDisabled && isItemSelected && isSelectionHighlighted) ||
+			(isExpanded && isSelectionHighlighted);
+		const isNullOptionSelected = selectedIndex === null;
 
 		return (
 			<DropMenu
@@ -245,21 +249,18 @@ const SingleSelect = createClass({
 					flyOutStyle,
 					!_.isNil(maxMenuHeight) ? { maxHeight: maxMenuHeight } : null
 				)}
+				ContextMenu={{ directonOffset: isNullOptionSelected ? -1 : 0 }}
 			>
 				<DropMenu.Control>
 					<div
 						tabIndex={0}
 						className={cx('&-Control', {
-							'&-Control-is-highlighted':
-								(!isDisabled && isItemSelected && isSelectionHighlighted) ||
-								(isExpanded && isSelectionHighlighted),
-							'&-Control-is-selected':
-								(!isDisabled && isItemSelected && isSelectionHighlighted) ||
-								(isExpanded && isSelectionHighlighted),
+							'&-Control-is-highlighted': isHighlighted,
+							'&-Control-is-selected': isHighlighted,
 							'&-Control-is-expanded': isExpanded,
 							'&-Control-is-disabled': isDisabled,
 							'&-Control-is-invisible': isInvisible,
-							'&-Control-is-null-option': selectedIndex === null,
+							'&-Control-is-null-option': isNullOptionSelected,
 						})}
 					>
 						<span
