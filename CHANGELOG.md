@@ -1,30 +1,49 @@
 ## unreleased
 
-- [minor] Add `topOffset` prop to `StickySection` [#1018](https://github.com/appnexus/lucid/pull/1018)
+- Nothing at the moment.
+
+## 4.4.0
+
+- #1015 [minor] Add new `Flag` icon.
+- #1025 [minor] Add `isFilled` with a default of `true` to `Banner`. This allows for an "outlined" variant of banners.
+- #1024 [minor] Add a new `PALETTE_7` for chart colors and modified all our charts to use it as the default palette.
+- #1018 [minor] Add `topOffset` prop to `StickySection`
+- #1022 [patch] Add a new `@color-secondary-5` variable and modified `NotchedTag` to use it be default. Just replacing coral with teal for the default style.
+- #1019 [patch] Fix `DataTable`s resizable headers when used with fixed headers.
+- #1010 [patch] Fix the color of `Icon`s in disabled `Button`s.
+- #1021 [patch] Fix light `ToolTip` link color and dark `ToolTip` border color.
+
+https://github.com/appnexus/lucid/compare/v4.3.0...v4.4.0
 
 ## 4.3.0
 
-- [minor] Add `DraggableList` component for drag + drop lists [#1016](https://github.com/appnexus/lucid/pull/1016)
-- [minor] Add `FourSquaresIcon` [#1017](https://github.com/appnexus/lucid/pull/1017)
-- [minor] Update `DataTable` to have a disabled checkbox when the data is empty [#1011](https://github.com/appnexus/lucid/pull/1011)
-- [patch] remove display hidden on document.body when SidePanel is unmounted [#1014](https://github.com/appnexus/lucid/pull/1014)
+- #1016 [minor] Add `DraggableList` component for drag + drop lists
+- #1017 [minor] Add `FourSquaresIcon`
+- #1011 [minor] Update `DataTable` to have a disabled checkbox when the data is empty
+- #1014 [patch] remove display hidden on document.body when SidePanel is unmounted
+
+https://github.com/appnexus/lucid/compare/v4.2.0...v4.3.0
 
 ## 4.2.0
 
-- [minor] Add `Typography` component [#1004](https://github.com/appnexus/lucid/pull/1004)
-- [minor] Add `DotsIcon` [#1006](https://github.com/appnexus/lucid/pull/1006)
-- [patch] Update `SidePanel` drop-shadow styling [#1005](https://github.com/appnexus/lucid/pull/1005)
-- [patch] Fix `SidePanel.Header` selector making all icons gray.  Only `CloseIcon` is selected now [#1007](https://github.com/appnexus/lucid/pull/1007)
+- #1004 [minor] Add `Typography` component
+- #1006 [minor] Add `DotsIcon`
+- #1005 [patch] Update `SidePanel` drop-shadow styling
+- #1007 [patch] Fix `SidePanel.Header` selector making all icons gray.  Only `CloseIcon` is selected now
+
+https://github.com/appnexus/lucid/compare/v4.1.0...v4.2.0
 
 ## 4.1.0
 
-- [minor] add `color` prop to `Icon` [#1000](https://github.com/appnexus/lucid/pull/997)
-- [patch] fix `SidePanel` position an sizing to correctly scroll content [#997](https://github.com/appnexus/lucid/pull/997)
-- [patch] update `ToolTip` link styling to match Banners [#1003](https://github.com/appnexus/lucid/pull/1003)
-- [patch] create indeterminate state for `DataTable` select all when only some rows are selected[#1002](https://github.com/appnexus/lucid/pull/#1002)
-- [patch] updates to `SingleSelect` `isInvisible` styling [#996](https://github.com/appnexus/lucid/pull/996)
-- [patch] `SearchableSelect` `SearchableSingleSelect` `SearchableMultiSelect` now default the `autoComplete` attribute to off  [#1001](https://github.com/appnexus/lucid/pull/1001)
-- [patch] Fixed some cases where font-weights were too bold. `SidePanel` close icon is now gray [#998](https://github.com/appnexus/lucid/pull/998)
+- #997 [minor] add `color` prop to `Icon`
+- #997 [patch] fix `SidePanel` position an sizing to correctly scroll content
+- #1003 [patch] update `ToolTip` link styling to match Banners
+- #1002 [patch] create indeterminate state for `DataTable` select all when only some rows are selected
+- #996 [patch] updates to `SingleSelect` `isInvisible` styling
+- #1001 [patch] `SearchableSelect` `SearchableSingleSelect` `SearchableMultiSelect` now default the `autoComplete` attribute to off
+- #998 [patch] Fixed some cases where font-weights were too bold. `SidePanel` close icon is now gray
+
+https://github.com/appnexus/lucid/compare/v4.0.0...v4.1.0
 
 ## 4.0.0
 
@@ -70,3 +89,5 @@
 - added `handleClose` to `Dialog`
 - added `isComplex` to `Dialog`. Styling adjustments for a more complex `Dialog`.
 - added `CodeIcon`
+
+https://github.com/appnexus/lucid/compare/v3.2.2...v4.0.0
