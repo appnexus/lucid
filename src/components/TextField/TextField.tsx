@@ -171,7 +171,7 @@ class TextField extends React.Component<ITextFieldProps, ITextFieldState, {}> {
 
 		this.state = {
 			value: props.value,
-			isHolding: true,
+			isHolding: false,
 			isMounted: false,
 		};
 	}
