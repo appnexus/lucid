@@ -11,6 +11,8 @@ export interface FC<P> extends React.FC<P> {
 	peek: {
 		description: string;
 		categories?: string[];
+		extend?: string;
+		madeFrom?: string[];
 	};
 	propName?: string; // TODO confirm this is needed
 }
