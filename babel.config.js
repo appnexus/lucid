@@ -6,7 +6,8 @@ module.exports = function(api) {
 		env: {
 			test: {
 				plugins: [
-					['@babel/plugin-proposal-object-rest-spread'],
+					'@babel/plugin-proposal-object-rest-spread',
+					'@babel/plugin-proposal-class-properties',
 				],
 				presets: [
 					[
@@ -22,7 +23,11 @@ module.exports = function(api) {
 				],
 			},
 			development: {
-				plugins: [['@babel/plugin-proposal-object-rest-spread'], 'lodash'],
+				plugins: [
+					'@babel/plugin-proposal-object-rest-spread',
+					'@babel/plugin-proposal-class-properties',
+					'lodash',
+				],
 				presets: [
 					[
 						'@babel/env',
@@ -38,7 +43,8 @@ module.exports = function(api) {
 			},
 			production: {
 				plugins: [
-					['@babel/plugin-proposal-object-rest-spread'],
+					'@babel/plugin-proposal-object-rest-spread',
+					'@babel/plugin-proposal-class-properties',
 					'lodash',
 					...(isDocsBuild
 						? []
@@ -66,7 +72,8 @@ module.exports = function(api) {
 			},
 			modules: {
 				plugins: [
-					['@babel/plugin-proposal-object-rest-spread'],
+					'@babel/plugin-proposal-object-rest-spread',
+					'@babel/plugin-proposal-class-properties',
 					[
 						'react-peek/babel',
 						{

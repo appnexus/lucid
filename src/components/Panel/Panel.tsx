@@ -32,9 +32,7 @@ interface IPanelFooterProps {
 	description?: string;
 	children?: React.ReactNode;
 }
-const PanelFooter: FC<IPanelFooterProps> = (props) => (
-	<div>{props.children}</div>
-);
+const PanelFooter: FC<IPanelFooterProps> = props => <div>{props.children}</div>;
 
 PanelFooter.displayName = 'Panel.Footer';
 PanelFooter.peek = {
@@ -47,7 +45,6 @@ PanelFooter.propTypes = {
 	children: node,
 };
 PanelFooter.propName = 'Footer';
-
 
 export interface IPanelProps {
 	/**
@@ -94,8 +91,8 @@ export interface IPanelProps {
 }
 
 export interface IPanelFC extends FC<IPanelProps> {
-	Header: PanelHeader;
-	Footer: PanelFooter;
+	Header: FC<IPanelHeaderProps>;
+	Footer: FC<IPanelFooterProps>;
 }
 
 const Panel: IPanelFC = (props): React.ReactElement => {

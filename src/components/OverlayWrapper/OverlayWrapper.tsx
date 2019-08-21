@@ -58,11 +58,11 @@ export interface IOverlayWrapperProps {
 	overlayKind?: 'light' | 'dark';
 
 	/** *Child Element* The Message to display in the overlay. */
-	Message: Message;
+	Message: FC<IMessageProps>;
 }
 
 interface IOverlayWrapperFC extends FC<IOverlayWrapperProps> {
-	Message: Message;
+	Message: FC<IMessageProps>;
 }
 
 const OverlayWrapper: IOverlayWrapperFC = (props): React.ReactElement => {
@@ -77,7 +77,11 @@ const OverlayWrapper: IOverlayWrapperFC = (props): React.ReactElement => {
 
 	const { Message } = OverlayWrapper;
 
-	const messageElementProp = _.get(getFirst<IMessageProps>(props, Message), 'props', {});
+	const messageElementProp = _.get(
+		getFirst<IMessageProps>(props, Message),
+		'props',
+		{}
+	);
 	const otherChildren = rejectTypes(children, [Message]);
 
 	return (
