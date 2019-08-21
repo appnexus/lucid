@@ -5,18 +5,12 @@ import { lucidClassNames } from '../../util/style-helpers';
 import { omitProps } from '../../util/component-types';
 import reducers from './TextField.reducers';
 import * as KEYCODE from '../../constants/key-code';
+import { ITextFieldState } from './TextField.reducers';
+
 
 const cx = lucidClassNames.bind('&-TextField');
 
 const { bool, string, func, number, object, oneOfType } = PropTypes;
-
-type OnChangeDebounced = (
-	value: number | string,
-	{ event, props }: {
-		event: React.FormEvent;
-		props: ITextFieldProps
-	}
-) => void;
 
 interface ITextFieldProps {
 	/** Appended to the component-specific class names set on the root element. */
@@ -53,10 +47,15 @@ interface ITextFieldProps {
 		}
 	) => void;
 
-
 	/** Fires an event, debounced by `debounceLevel` when the user types text
 		into the TextField. */
-	onChangeDebounced: OnChangeDebounced;
+	onChangeDebounced: (
+		value: number | string,
+		{ event, props }: {
+			event: React.FormEvent;
+			props: ITextFieldProps
+		}
+	) => void;
 
 	/** Fires an event on every keydown */
 	onKeyDown: (
@@ -78,7 +77,6 @@ interface ITextFieldProps {
 	/** Set the value of the input. */
 	value: number | string;
 
-
 	/** Number of milliseconds to debounce the `onChangeDebounced` callback. Only useful if you provide an `onChangeDebounced` handler. */
 	debounceLevel: number;
 
@@ -90,10 +88,7 @@ interface ITextFieldProps {
 	lazyLevel: number;
 }
 
-export interface ITextFieldState {
-	value: number | string;
-	isHolding: boolean;
-}
+
 
 class TextField extends React.Component<ITextFieldProps, ITextFieldState, {}> {
 	static displayName = 'TextField';
@@ -174,17 +169,10 @@ class TextField extends React.Component<ITextFieldProps, ITextFieldState, {}> {
 	constructor(props: ITextFieldProps) {
 		super(props);
 
-		this._isMounted = false;
-		this._handleChangeDebounced = (...args: any[]) => ({
-				cancel: _.noop,
-				flush: _.noop,
-			});
-		this._releaseHold = (): void => {};
-		this._updateWhenReady = (): void => {};
-
 		this.state = {
 			value: props.value,
 			isHolding: true,
+			isMounted: false,
 		};
 	}
 	static defaultProps = {
@@ -202,12 +190,36 @@ class TextField extends React.Component<ITextFieldProps, ITextFieldState, {}> {
 		...reducers,
 	};
 
-	private nativeElement = React.createRef<HTMLElement>();
+	private textareaElement = React.createRef<HTMLTextAreaElement>();
+	private inputElement = React.createRef<HTMLInputElement>();
+	private nativeElement = this.props.isMultiLine ? this.textareaElement : this.inputElement;
 
-	_isMounted: boolean;
-	_handleChangeDebounced: OnChangeDebounced & _.Cancelable;
-	_releaseHold: (...args: any[]) => void;
-	_updateWhenReady: (...args: any[]) => void;
+	private handleChangeDebounced = _.debounce((
+		value: number | string,
+		{ event, props }: {
+			event: React.FormEvent;
+			props: ITextFieldProps
+		}): void => {
+		this.props.onChangeDebounced(value, { event, props });
+	}, this.props.debounceLevel);
+
+	private releaseHold = _.debounce((): void => {
+		if (!this.state.isMounted) {
+			return;
+		}
+		this.setState({ isHolding: false });
+	}, this.props.lazyLevel);
+
+	private updateWhenReady = _.debounce((newValue): void => {
+		if (!this.state.isMounted) {
+			return;
+		}
+		if (this.state.isHolding) {
+			this.updateWhenReady(newValue);
+		} else if (newValue !== this.state.value) {
+			this.setState({ value: newValue });
+		}
+	}, this.props.lazyLevel);
 
 	handleChange = (event: React.FormEvent): void => {
 		const { onChange, onChangeDebounced } = this.props;
@@ -215,7 +227,7 @@ class TextField extends React.Component<ITextFieldProps, ITextFieldState, {}> {
 		const value = _.get(event, 'target.value', '');
 
 		this.setState({ value, isHolding: true });
-		this._releaseHold();
+		this.releaseHold();
 
 		onChange(value, { event, props: this.props });
 
@@ -223,7 +235,7 @@ class TextField extends React.Component<ITextFieldProps, ITextFieldState, {}> {
 		// events.
 		if (onChangeDebounced !== _.noop) {
 			event.persist(); // https://facebook.github.io/react/docs/events.html#event-pooling
-			this._handleChangeDebounced(value, { event, props: this.props });
+			this.handleChangeDebounced(value, { event, props: this.props });
 		}
 	};
 
@@ -233,7 +245,7 @@ class TextField extends React.Component<ITextFieldProps, ITextFieldState, {}> {
 		const value = _.get(event, 'target.value', '');
 
 		if (onChangeDebounced !== _.noop) {
-			this._handleChangeDebounced.flush();
+			this.handleChangeDebounced.flush();
 		}
 		onBlur(value, { event, props: this.props });
 	};
@@ -252,7 +264,7 @@ class TextField extends React.Component<ITextFieldProps, ITextFieldState, {}> {
 
 		if (event.keyCode === KEYCODE.Enter) {
 			if (onChangeDebounced !== _.noop) {
-				this._handleChangeDebounced.flush();
+				this.handleChangeDebounced.flush();
 			}
 
 			onSubmit(value, { event, props: this.props });
@@ -264,44 +276,19 @@ class TextField extends React.Component<ITextFieldProps, ITextFieldState, {}> {
 		(this.nativeElement.current as HTMLElement).focus();
 	};
 
-
 	componentWillMount(): void {
-		// Because we want the debounceLevel to be configurable, we can't put the
-		// debounced handler directly on the react class, so we set it up right
-		// before mount
-		this._isMounted = true;
-		this._handleChangeDebounced = _.debounce((...args) => {
-			this.props.onChangeDebounced(...args);
-		}, this.props.debounceLevel);
-
-		this._releaseHold = _.debounce((): any => {
-			if (!this._isMounted) {
-				return;
-			}
-			this.setState({ isHolding: false });
-		}, this.props.lazyLevel);
-
-		this._updateWhenReady = _.debounce((newValue): any => {
-			if (!this._isMounted) {
-				return;
-			}
-			if (this.state.isHolding) {
-				this._updateWhenReady(newValue);
-			} else if (newValue !== this.state.value) {
-				this.setState({ value: newValue });
-			}
-		}, this.props.lazyLevel);
+		this.setState({ isMounted: true });
 	};
 
 	componentWillUnmount(): void {
-		this._isMounted = false;
+		this.setState({ isMounted: false });
 	};
 
 	componentWillReceiveProps(nextProps: ITextFieldProps): void {
 		// Allow consumer to optionally control state
 		if (_.has(nextProps, 'value')) {
 			if (this.state.isHolding) {
-				this._updateWhenReady(nextProps.value);
+				this.updateWhenReady(nextProps.value);
 			} else {
 				this.setState({ value: nextProps.value });
 			}
@@ -342,13 +329,19 @@ class TextField extends React.Component<ITextFieldProps, ITextFieldState, {}> {
 			style,
 			rows,
 			value,
-			ref: this.nativeElement,
 		};
 
 		return isMultiLine ? (
-			<textarea {...finalProps} />
+			<textarea
+				ref={this.textareaElement}
+				{...finalProps}
+			/>
 		) : (
-			<input type='text' {...finalProps} />
+			<input
+				type='text'
+				ref={this.inputElement}
+				{...finalProps}
+			/>
 		);
 	};
 };

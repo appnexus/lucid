@@ -1,4 +1,8 @@
-import { ITextFieldState } from './TextField';
+export interface ITextFieldState {
+	value: number | string;
+	isHolding: boolean;
+	isMounted: boolean;
+}
 
 export default {
 	onChange(
