@@ -1,17 +1,17 @@
 import _ from 'lodash';
 import React from 'react';
-import Icon from '../Icon';
+import Icon, { IIconProps } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
 import { FC } from '../../../util/component-types';
-import { IIconProps } from '../Icon';
 
 const cx = lucidClassNames.bind('&-AddURLIcon');
 
 interface IAddURLIconProps extends IIconProps {}
 
-const AddURLIcon: FC<IAddURLIconProps> = (props): React.ReactElement => {
-
-	const { className, ...passThroughs } = props;
+const AddURLIcon: FC<IAddURLIconProps> = ({
+	className,
+	...passThroughs
+}): React.ReactElement => {
 
 	return (
 		<Icon
@@ -26,18 +26,17 @@ const AddURLIcon: FC<IAddURLIconProps> = (props): React.ReactElement => {
 };
 
 AddURLIcon.displayName = 'AddURLIcon';
+AddURLIcon.peek = {
+	description: `
+		Add URL
+	`,
+	categories: ['visual design', 'icons'],
+	extend: 'Icon',
+	madeFrom: ['Icon'],
+};
+AddURLIcon.propTypes = {
+	...Icon.propTypes,
+};
 
-	AddURLIcon.peek = {
-		description: `
-			Add URL
-		`,
-		categories: ['visual design', 'icons'],
-		extend: 'Icon',
-		madeFrom: ['Icon'],
-	};
-
-	AddURLIcon.propTypes = {
-		...Icon.propTypes,
-	};
 
 export default AddURLIcon;
