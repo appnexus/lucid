@@ -166,15 +166,11 @@ class TextField extends React.Component<ITextFieldProps, ITextFieldState, {}> {
 		`,
 	};
 
-	constructor(props: ITextFieldProps) {
-		super(props);
-
-		this.state = {
-			value: props.value,
-			isHolding: false,
-			isMounted: false,
-		};
-	}
+	state = {
+		value: this.props.value,
+		isHolding: false,
+		isMounted: false,
+	};
 	static defaultProps = {
 		style: null,
 		isDisabled: false,

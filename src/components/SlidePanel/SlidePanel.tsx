@@ -18,9 +18,6 @@ interface ISlidePanelSlideProps {
 	children?: React.ReactNode;
 }
 class SlidePanelSlide extends React.Component<ISlidePanelSlideProps, {}, {}> {
-	constructor(props: ISlidePanelSlideProps) {
-		super(props);
-	}
 	static displayName = 'SlidePanel.Slide';
 	static propName = 'Slide';
 
@@ -76,27 +73,6 @@ interface ISlidePanelState {
 
 
 class SlidePanel extends React.Component<ISlidePanelProps, ISlidePanelState, {}> {
-	constructor(props: ISlidePanelProps) {
-		super(props);
-
-		const slides = findTypes(this.props, SlidePanel.Slide);
-
-		this.state = {
-			translateXPixel: 0,
-			startX: 0,
-			isAnimated: (this.props.isAnimated as boolean),
-			isDragging: false,
-			offsetTranslate: this.props.isLooped
-				? Math.floor(_.size(slides) / 2)
-				: 0,
-		};
-	}
-
-	private rootHTMLDivElement = React.createRef<HTMLDivElement>();
-	private slideStrip = React.createRef<HTMLDivElement>();
-
-	static Slide = SlidePanelSlide;
-
 	static _isPrivate = true;
 	static displayName = 'SlidePanel';
 	static peek = {
@@ -143,6 +119,21 @@ class SlidePanel extends React.Component<ISlidePanelProps, ISlidePanelState, {}>
 			number of slides by the user (positive for forward swipes, negative for
 			backwards swipes).  Signature: \`(slidesSwiped, { event, props }) => {}\`
 		`,
+	};
+
+	private rootHTMLDivElement = React.createRef<HTMLDivElement>();
+	private slideStrip = React.createRef<HTMLDivElement>();
+
+	static Slide = SlidePanelSlide;
+
+	state = {
+		translateXPixel: 0,
+		startX: 0,
+		isAnimated: (this.props.isAnimated as boolean),
+		isDragging: false,
+		offsetTranslate: this.props.isLooped
+			? Math.floor(_.size(findTypes(this.props, SlidePanel.Slide)) / 2)
+			: 0,
 	};
 
 	static defaultProps = {

@@ -25,13 +25,6 @@ interface IPortalState {
 }
 
 class Portal extends React.Component<IPortalProps, IPortalState, {}> {
-	constructor(props: IPortalProps) {
-		super(props);
-
-		this.state = {
-			isReady: false,
-		};
-	}
 	static displayName = 'Portal';
 	static peek = {
 		description: `
@@ -54,6 +47,11 @@ class Portal extends React.Component<IPortalProps, IPortalState, {}> {
 			The \`id\` of the portal element that is appended to \`document.body\`.
 		`,
 	};
+
+	state = {
+		isReady: false,
+	};
+
 	manuallyCreatedPortal: boolean = false;
 	portalElement: HTMLElement = document.createElement('div');
 

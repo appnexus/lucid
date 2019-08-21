@@ -46,27 +46,6 @@ class StickySection extends React.Component<
 	IStickySectionState,
 	{}
 > {
-	constructor(props: IStickySectionProps) {
-		super(props);
-
-		this.state = {
-			isAboveFold: false,
-			containerRect: {
-				bottom: 0,
-				height: 0,
-				left: 0,
-				right: 0,
-				top: 0,
-				width: 0,
-				frameLeft: 0,
-				scrollWidth: 0,
-			},
-		};
-	}
-	private scrollContainer = React.createRef<HTMLDivElement>();
-	private stickySection = React.createRef<HTMLDivElement>();
-	private stickyFrame = React.createRef<HTMLDivElement>();
-
 	static displayName = 'StickySection';
 
 	static peek = {
@@ -96,6 +75,24 @@ class StickySection extends React.Component<
 			Width of section when it sticks to the top edge of the screen. When
 			omitted, it defaults to the last width of the section.
 		`,
+	};
+
+	private scrollContainer = React.createRef<HTMLDivElement>();
+	private stickySection = React.createRef<HTMLDivElement>();
+	private stickyFrame = React.createRef<HTMLDivElement>();
+
+	state = {
+		isAboveFold: false,
+		containerRect: {
+			bottom: 0,
+			height: 0,
+			left: 0,
+			right: 0,
+			top: 0,
+			width: 0,
+			frameLeft: 0,
+			scrollWidth: 0,
+		},
 	};
 
 	handleScroll = (): void => {

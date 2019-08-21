@@ -25,18 +25,6 @@ interface IResizerState {
 }
 
 class Resizer extends React.Component<IResizerProps, IResizerState, {}> {
-	constructor(props: IResizerProps) {
-		super(props);
-
-		this.state = {
-			width: 0,
-			height: 0,
-		};
-	}
-
-	private _element = React.createRef<HTMLDivElement>();
-	private resizeDetector = elementResizeDetectorMaker({ strategy: 'scroll' });
-
 	static displayName = 'Resizer';
 	static peek = {
 		description: `
@@ -58,6 +46,15 @@ class Resizer extends React.Component<IResizerProps, IResizerState, {}> {
 			\`(width, height) => {}\`
 		`,
 	};
+
+	private _element = React.createRef<HTMLDivElement>();
+	private resizeDetector = elementResizeDetectorMaker({ strategy: 'scroll' });
+
+	state = {
+		width: 0,
+		height: 0,
+	};
+
 
 	handleResize = ({
 		offsetWidth,

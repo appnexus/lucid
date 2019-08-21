@@ -76,17 +76,6 @@ interface IDragCaptureZoneState {
 }
 
 class DragCaptureZone extends React.Component<IDragCaptureZoneProps, IDragCaptureZoneState, {}> {
-	constructor(props: IDragCaptureZoneProps) {
-		super(props);
-
-		this.state = {
-			pageX: 0,
-			pageY: 0,
-		};
-	}
-	private elementRef = React.createRef<HTMLDivElement>();
-
-
 	static displayName = 'DragCaptureZone';
 	static peek = {
 		description: `
@@ -95,7 +84,6 @@ class DragCaptureZone extends React.Component<IDragCaptureZoneProps, IDragCaptur
 		`,
 		categories: ['utility'],
 	};
-
 	static propTypes = {
 		className: string`
 			Appended to the component-specific class names set on the root element.
@@ -121,6 +109,13 @@ class DragCaptureZone extends React.Component<IDragCaptureZoneProps, IDragCaptur
 			example: if a system alert pops up during a touch event.  Signature:
 			\`({ event, props }) => {}\`
 		`,
+	};
+
+	private elementRef = React.createRef<HTMLDivElement>();
+
+	state = {
+		pageX: 0,
+		pageY: 0,
 	};
 
 	static defaultProps = {
