@@ -2122,7 +2122,6 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 12.s
         Green
       </span>
       <ChevronIcon
-        direction="down"
         size={12}
       />
     </div>

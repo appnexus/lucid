@@ -8,7 +8,7 @@ const cx = lucidClassNames.bind('&-Icon');
 
 const { any, string, number, bool, func, oneOf } = PropTypes;
 
-enum Color {
+export enum Color {
 	ColorNeutralDark = 'neutral-dark',
 	ColorNeutralLight = 'neutral-light',
 	ColorPrimary = 'primary',

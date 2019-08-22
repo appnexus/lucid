@@ -3,6 +3,7 @@ import React from 'react';
 import Icon, { IIconProps } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
 import { FC, omitProps } from '../../../util/component-types';
+import { Color } from '../Icon';
 
 const cx = lucidClassNames.bind('&-DotsIcon');
 
@@ -10,7 +11,7 @@ interface IDotsIconProps extends IIconProps {}
 
 const DotsIcon: FC<IDotsIconProps> = ({
 	className,
-	color,
+	color = Color.ColorPrimary,
 	...passThroughs
 }): React.ReactElement => {
 
