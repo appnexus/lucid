@@ -12,7 +12,6 @@ exports[`Paginator [common] example testing should match snapshot(s) for 1.basic
   >
     <ArrowIcon
       direction="left"
-      viewBox="0 0 16 16"
     />
   </Button>
   <TextField
@@ -36,7 +35,6 @@ exports[`Paginator [common] example testing should match snapshot(s) for 1.basic
   >
     <ArrowIcon
       direction="right"
-      viewBox="0 0 16 16"
     />
   </Button>
 </div>
@@ -91,7 +89,6 @@ exports[`Paginator [common] example testing should match snapshot(s) for 2.page-
   >
     <ArrowIcon
       direction="left"
-      viewBox="0 0 16 16"
     />
   </Button>
   <TextField
@@ -115,7 +112,6 @@ exports[`Paginator [common] example testing should match snapshot(s) for 2.page-
   >
     <ArrowIcon
       direction="right"
-      viewBox="0 0 16 16"
     />
   </Button>
 </div>
@@ -133,7 +129,6 @@ exports[`Paginator [common] example testing should match snapshot(s) for 3.disab
   >
     <ArrowIcon
       direction="left"
-      viewBox="0 0 16 16"
     />
   </Button>
   <TextField
@@ -157,7 +152,6 @@ exports[`Paginator [common] example testing should match snapshot(s) for 3.disab
   >
     <ArrowIcon
       direction="right"
-      viewBox="0 0 16 16"
     />
   </Button>
 </div>
@@ -212,7 +206,6 @@ exports[`Paginator [common] example testing should match snapshot(s) for 3.disab
   >
     <ArrowIcon
       direction="left"
-      viewBox="0 0 16 16"
     />
   </Button>
   <TextField
@@ -236,7 +229,6 @@ exports[`Paginator [common] example testing should match snapshot(s) for 3.disab
   >
     <ArrowIcon
       direction="right"
-      viewBox="0 0 16 16"
     />
   </Button>
 </div>
@@ -298,7 +290,6 @@ exports[`Paginator [common] example testing should match snapshot(s) for 4.show-
   >
     <ArrowIcon
       direction="left"
-      viewBox="0 0 16 16"
     />
   </Button>
   <TextField
@@ -322,7 +313,6 @@ exports[`Paginator [common] example testing should match snapshot(s) for 4.show-
   >
     <ArrowIcon
       direction="right"
-      viewBox="0 0 16 16"
     />
   </Button>
 </div>
@@ -377,7 +367,6 @@ exports[`Paginator [common] example testing should match snapshot(s) for 4.show-
   >
     <ArrowIcon
       direction="left"
-      viewBox="0 0 16 16"
     />
   </Button>
   <TextField
@@ -401,7 +390,6 @@ exports[`Paginator [common] example testing should match snapshot(s) for 4.show-
   >
     <ArrowIcon
       direction="right"
-      viewBox="0 0 16 16"
     />
   </Button>
 </div>
@@ -487,7 +475,6 @@ exports[`Paginator [common] example testing should match snapshot(s) for 4.show-
   >
     <ArrowIcon
       direction="left"
-      viewBox="0 0 16 16"
     />
   </Button>
   <TextField
@@ -511,7 +498,6 @@ exports[`Paginator [common] example testing should match snapshot(s) for 4.show-
   >
     <ArrowIcon
       direction="right"
-      viewBox="0 0 16 16"
     />
   </Button>
 </div>
@@ -597,7 +583,6 @@ exports[`Paginator [common] example testing should match snapshot(s) for 4.show-
   >
     <ArrowIcon
       direction="left"
-      viewBox="0 0 16 16"
     />
   </Button>
   <TextField
@@ -621,7 +606,6 @@ exports[`Paginator [common] example testing should match snapshot(s) for 4.show-
   >
     <ArrowIcon
       direction="right"
-      viewBox="0 0 16 16"
     />
   </Button>
 </div>
@@ -707,7 +691,6 @@ exports[`Paginator [common] example testing should match snapshot(s) for 4.show-
   >
     <ArrowIcon
       direction="left"
-      viewBox="0 0 16 16"
     />
   </Button>
   <TextField
@@ -731,7 +714,6 @@ exports[`Paginator [common] example testing should match snapshot(s) for 4.show-
   >
     <ArrowIcon
       direction="right"
-      viewBox="0 0 16 16"
     />
   </Button>
 </div>
@@ -817,7 +799,6 @@ exports[`Paginator [common] example testing should match snapshot(s) for 4.show-
   >
     <ArrowIcon
       direction="left"
-      viewBox="0 0 16 16"
     />
   </Button>
   <TextField
@@ -841,7 +822,6 @@ exports[`Paginator [common] example testing should match snapshot(s) for 4.show-
   >
     <ArrowIcon
       direction="right"
-      viewBox="0 0 16 16"
     />
   </Button>
 </div>

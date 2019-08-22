@@ -1,67 +1,57 @@
 import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
-import { lucidClassNames } from '../../../util/style-helpers';
-import { createClass, omitProps } from '../../../util/component-types';
 import Icon, { IIconProps } from '../Icon';
-
-const cx = lucidClassNames.bind('&-ChevronIcon');
+import { lucidClassNames } from '../../../util/style-helpers';
+import { FC, omitProps } from '../../../util/component-types';
 
 const { oneOf } = PropTypes;
+
+const cx = lucidClassNames.bind('&-ChevronIcon');
 
 interface IChevronIconProps extends IIconProps {
 	direction?: 'up' | 'down' | 'left' | 'right';
 }
+const ChevronIcon: FC<IChevronIconProps> = ({
+	className,
+	direction = 'down',
+	...passThroughs
+}): React.ReactElement => {
 
-const ChevronIcon = createClass<IChevronIconProps, {}>({
-	displayName: 'ChevronIcon',
+	return (
+		<Icon
+			{...omitProps(passThroughs, undefined, _.keys(ChevronIcon.propTypes), false)}
+			{..._.pick(passThroughs, _.keys(Icon.propTypes))}
+			className={cx(
+				'&',
+				{
+					'&-is-down': direction === 'down',
+					'&-is-up': direction === 'up',
+					'&-is-left': direction === 'left',
+					'&-is-right': direction === 'right',
+				},
+				className
+			)}
+		>
+			<path d='M.5 4.5l7.5 7 7.5-7' />
+		</Icon>
+	);
+};
 
-	statics: {
-		peek: {
-			description: `
-				A chevron icon.
-			`,
-			categories: ['visual design', 'icons'],
-			extend: 'Icon',
-			madeFrom: ['Icon'],
-		},
-	},
-
-	propTypes: {
-		...Icon.propTypes,
-		direction: oneOf(['up', 'down', 'left', 'right'])`
-			direction variations of the icon
-		`,
-	},
-
-	getDefaultProps() {
-		return {
-			direction: 'down',
-		};
-	},
-
-	render() {
-		const { className, direction, ...passThroughs } = this.props;
-
-		return (
-			<Icon
-				{...omitProps(passThroughs, ChevronIcon, [], false)}
-				{..._.pick(passThroughs, _.keys(Icon.propTypes))}
-				className={cx(
-					'&',
-					{
-						'&-is-down': direction === 'down',
-						'&-is-up': direction === 'up',
-						'&-is-left': direction === 'left',
-						'&-is-right': direction === 'right',
-					},
-					className
-				)}
-			>
-				<path d='M.5 4.5l7.5 7 7.5-7' />
-			</Icon>
-		);
-	},
-});
+ChevronIcon.displayName = 'ChevronIcon',
+ChevronIcon.peek = {
+	description: `
+		A chevron icon.
+	`,
+	categories: ['visual design', 'icons'],
+	extend: 'Icon',
+	madeFrom: ['Icon'],
+};
+ChevronIcon.propTypes = {
+	...Icon.propTypes,
+	direction: oneOf(['up', 'down', 'left', 'right'])`
+		direction variations of the icon
+	`,
+};
 
 export default ChevronIcon;

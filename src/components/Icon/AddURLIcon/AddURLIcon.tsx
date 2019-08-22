@@ -16,7 +16,7 @@ const AddURLIcon: FC<IAddURLIconProps> = ({
 	return (
 		<Icon
 			{...passThroughs}
-			{..._.pick(passThroughs, _.keys(Icon.propTypes))}
+			{..._.pick(passThroughs, _.keys(AddURLIcon.propTypes))}
 			className={cx('&', className)}
 		>
 			<path d='M10.7 12.781l1.267 2.719 2.357-1.098-1.267-2.719 2.693-.614L8.5 4.98l-.002 9.468z' />

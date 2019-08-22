@@ -21,7 +21,7 @@ const ArrowIcon: FC<IArrowIconProps> = ({
 
 	return (
 		<Icon
-			{...omitProps(passThroughs, undefined, _.keys(Icon.propTypes), false)}
+			{...omitProps(passThroughs, undefined, _.keys(ArrowIcon.propTypes), false)}
 			{..._.pick(passThroughs, _.keys(Icon.propTypes))}
 			className={cx(
 				'&',

@@ -16,7 +16,7 @@ const AnalyzeDataIcon: FC<IAnalyzeDataIconProps> = ({
 	return (
 		<Icon
 			{...passThroughs}
-			{..._.pick(passThroughs, _.keys(Icon.propTypes))}
+			{..._.pick(passThroughs, _.keys(AnalyzeDataIcon.propTypes))}
 			className={cx('&', className)}
 		>
 			<path d='M0 15.5h16' />
