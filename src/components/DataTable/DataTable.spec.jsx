@@ -289,7 +289,7 @@ describe('DataTable', () => {
 				});
 			});
 
-			it('should render without prop warning for isSelectable when data is empty array', () => {
+			it('should render without prop warning for isSelected when data is empty array', () => {
 				const emptyData = [];
 				
 				const wrapper = shallow(<DataTable isSelectable data={emptyData}/>);
