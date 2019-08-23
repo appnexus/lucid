@@ -10,21 +10,58 @@ const cx = lucidClassNames.bind('&-Overlay');
 
 const { string, bool, func, node } = PropTypes;
 
-const Overlay = createClass({
-	displayName: 'Overlay',
+interface IOverlayProps {
+	/** Appended to the component-specific class names set on the root element. */
+	className?: string;
 
-	statics: {
-		peek: {
-			description: `
-				Overlay is used to block user interaction with the rest of the app
-				until they have completed something.
-			`,
-			categories: ['utility'],
-			madeFrom: ['Portal'],
-		},
-	},
+	/** SlidePanel.Slide elements are passed in as children. */
+	children?: React.ReactNode;
 
-	propTypes: {
+	/** Controls visibility. */
+	isShown?: boolean;
+
+	isAnimated?: boolean;
+
+	/** Determines if it shows with a gray background. If `false`, the
+		background will be rendered but will be invisible, except for the
+		contents, and it won't capture any of the user click events. */
+	isModal: boolean;
+
+
+	/** Set your own id for the \`Portal\` is that is opened up to contain the
+		contents. In practice you should never need to set this manually. */
+	portalId: string;
+
+	/** Fired when the user hits escape.  Signature: \`({ event, props }) => {}\; */
+	onEscape: (
+		{ event, props }: { event: React.KeyboardEvent; props: IOverlayProps }
+	) => void;
+
+	/** Fired when the user clicks on the background, this may or may not be
+		visible depending on \`isModal\`.  Signature: \`({ event, props }) => {}\` */
+	onBackgroundClick: (
+		{ event, props }: { event: React.MouseEvent; props: IOverlayProps }
+	) => void;
+}
+
+interface IOverlayState {
+	portalId: string;
+}
+
+class Overlay extends React.Component<IOverlayProps, IOverlayState, {}> {
+	static displayName = 'Overlay';
+
+
+	static peek = {
+		description: `
+			Overlay is used to block user interaction with the rest of the app
+			until they have completed something.
+		`,
+		categories: ['utility'],
+		madeFrom: ['Portal'],
+	};
+
+	static propTypes = {
 		className: string`
 			Appended to the component-specific class names set on the root element.
 		`,
@@ -59,58 +96,56 @@ const Overlay = createClass({
 			Fired when the user clicks on the background, this may or may not be
 			visible depending on \`isModal\`.  Signature: \`({ event, props }) => {}\`
 		`,
-	},
+	};
 
-	getDefaultProps() {
-		return {
-			isShown: false,
-			isModal: true,
-			onEscape: _.noop,
-			onBackgroundClick: _.noop,
-			isAnimated: true,
-		};
-	},
+	private rootHTMLDivElement = React.createRef<HTMLDivElement>();
 
-	getInitialState() {
-		return {
-			// This must be in state because getDefaultProps only runs once per
-			// component import which causes collisions
-			portalId: this.props.portalId || uniqueName('Overlay-Portal-'),
-		};
-	},
+	static defaultProps = {
+		isShown: false,
+		isModal: true,
+		onEscape: _.noop,
+		onBackgroundClick: _.noop,
+		isAnimated: true,
+	};
 
-	componentDidMount() {
+	state = {
+		// This must be in state because getDefaultProps only runs once per
+		// component import which causes collisions
+		portalId: this.props.portalId || uniqueName('Overlay-Portal-'),
+	};
+
+	componentDidMount(): void {
 		if (window && window.document) {
 			window.document.addEventListener('keydown', this.handleDocumentKeyDown);
 		}
-	},
+	};
 
-	componentWillUnmount() {
+	componentWillUnmount(): void {
 		if (window && window.document) {
 			window.document.removeEventListener(
 				'keydown',
 				this.handleDocumentKeyDown
 			);
 		}
-	},
+	};
 
-	handleDocumentKeyDown(event) {
+	handleDocumentKeyDown(event: React.KeyboardEvent): void {
 		// If the user hits the "escape" key, then fire an `onEscape`
 		// TODO: use key helpers
 		if (event.keyCode === 27) {
 			this.props.onEscape({ event, props: this.props });
 		}
-	},
+	};
 
-	handleBackgroundClick(event) {
+	handleBackgroundClick(event: React.MouseEvent): void {
 		// Use the reference we previously stored from the `ref` to check what
 		// element was clicked on.
-		if (this.divRef && event.target === this.divRef) {
+		if (this.rootHTMLDivElement.current && event.target === this.rootHTMLDivElement.current) {
 			this.props.onBackgroundClick({ event, props: this.props });
 		}
-	},
+	};
 
-	render() {
+	render(): React.ReactNode {
 		const {
 			className,
 			isShown,
@@ -124,13 +159,17 @@ const Overlay = createClass({
 
 		const overlayElement = isShown ? (
 			<div
-				{...omitProps(passThroughs, Overlay)}
+				{...omitProps(
+					passThroughs,
+					undefined,
+					Object.keys(Overlay.propTypes)
+				)}
 				className={cx(className, '&', {
 					'&-is-not-modal': !isModal,
 					'&-is-animated': isAnimated,
 				})}
 				onClick={this.handleBackgroundClick}
-				ref={ref => (this.divRef = ref)}
+				ref={this.rootHTMLDivElement}
 			>
 				{children}
 			</div>
@@ -151,7 +190,7 @@ const Overlay = createClass({
 				)}
 			</Portal>
 		);
-	},
-});
+	};
+};
 
 export default Overlay;
