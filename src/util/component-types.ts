@@ -15,6 +15,7 @@ export interface FC<P> extends React.FC<P> {
 		madeFrom?: string[];
 	};
 	propName?: string; // TODO confirm this is needed
+	_isPrivate?: boolean;
 }
 
 type TypesType<P> =

@@ -880,9 +880,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
     isWrapped={true}
     key="SearchableSelectLoading"
   >
-    <LoadingIcon
-      speed="normal"
-    />
+    <LoadingIcon />
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={true}

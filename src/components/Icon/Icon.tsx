@@ -29,6 +29,12 @@ export interface IIconProps {
 	/** Size variations of the icons. \`size\` directly effects height and width but the developer should also be conscious of the relationship with \`viewBox\`. */
 	size?: number;
 
+	/** Size handles width and height, whereas `width` can manually override the width that would be set by size. */
+	width?: number;
+
+	/** Size handles width and height, whereas `height` can manually override the height that would be set by size. */
+	height?: number;
+
 	/** \`viewBox\` is very important for SVGs. You can think of \`viewBox\` as the "artboard" for our SVG while \`size\` is the presented height and width. */
 	viewBox?: string;
 
@@ -64,6 +70,9 @@ export interface IIconProps {
 
 	/** Sets the color of the Icon.  May not be applicable for icons that are tied to specific colors (e.g. DangerIcon). */
 	color?: Color;
+
+	// TODO: move this to a generic interface that all components extend their props from
+	style?: React.CSSProperties;
 }
 
 const Icon: FC<IIconProps> = (props): React.ReactElement => {
@@ -72,6 +81,8 @@ const Icon: FC<IIconProps> = (props): React.ReactElement => {
 		children,
 		color = Color.ColorPrimary,
 		size = 16,
+		width = null,
+		height = null,
 		viewBox = '0 0 16 16',
 		aspectRatio = 'xMidYMid meet',
 		isClickable = false,
@@ -96,8 +107,8 @@ const Icon: FC<IIconProps> = (props): React.ReactElement => {
 
 	return (
 		<svg
-			width={size}
-			height={size}
+			width={width ? width : size}
+			height={height ? height : size}
 			viewBox={viewBox}
 			preserveAspectRatio={aspectRatio}
 			{...omitProps<IIconProps>(
@@ -142,6 +153,14 @@ Icon.propTypes = {
 		Size variations of the icons. \`size\` directly effects height and width
 		but the developer should also be conscious of the relationship with
 		\`viewBox\`.
+	`,
+
+	width: number`
+		Size handles width and height, whereas \`width\` can manually override the width that would be set by size.
+	`,
+
+	height: number`
+		Size handles width and height, whereas \`height\` can manually override the height that would be set by size.
 	`,
 
 	viewBox: string`

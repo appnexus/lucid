@@ -135,7 +135,6 @@ exports[`SearchField [common] example testing should match snapshot(s) for 5.cus
   >
     <LoadingIcon
       className="lucid-SearchField-Icon"
-      speed="normal"
     />
   </div>
 </div>
@@ -337,7 +336,6 @@ exports[`SearchField [common] example testing should match snapshot(s) for 8.pro
   >
     <LoadingIcon
       className="lucid-SearchField-Icon"
-      speed="normal"
     />
   </div>
 </div>
@@ -365,7 +363,6 @@ exports[`SearchField [common] example testing should match snapshot(s) for 8.pro
   >
     <LoadingIcon
       className="lucid-SearchField-Icon lucid-SearchField-Icon-active"
-      speed="normal"
     />
   </div>
 </div>
