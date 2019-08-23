@@ -27,36 +27,29 @@ class SlidePanelSlide extends React.Component<ISlidePanelSlideProps, {}, {}> {
 }
 
 interface ISlidePanelProps {
-	/** Appended to the component-specific class names set on the root element.
-	 */
+	/** Appended to the component-specific class names set on the root element. */
 	className?: string;
 
-	/** SlidePanel.Slide elements are passed in as children.
-	 */
+	/** SlidePanel.Slide elements are passed in as children. */
 	children?: React.ReactNode;
 
-	/** Max number of viewable slides to show simultaneously.
-	 */
+	/** Max number of viewable slides to show simultaneously. */
 	slidesToShow?: number;
 
-	/** The offset of the left-most rendered slide.
-	 */
+	/** The offset of the left-most rendered slide. */
 	offset?: number;
 
-	/** Animate slides transitions from changes in `offset`.
-	 */
+	/** Animate slides transitions from changes in `offset`. */
 	isAnimated?: boolean;
 
 	/** Slides are rendered in a continuous loop, where the first slide repeats
 	 * after the last slide and vice-versa. DOM elements are re-ordered and
-	 * re-used.
-	 */
+	 * re-used. */
 	isLooped?: boolean;
 
 	/** Called when a user's swipe would change the offset. Callback passes
 	 * number of slides by the user (positive for forward swipes, negative for
-	 * backwards swipes).
-	 */
+	 * backwards swipes). */
 	onSwipe?: (
 		slidesSwiped: number,
 		{ event, props }: { event: React.TouchEvent; props: ISlidePanelProps }
