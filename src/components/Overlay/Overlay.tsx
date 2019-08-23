@@ -4,7 +4,7 @@ import PropTypes from 'react-peek/prop-types';
 import Portal from '../Portal/Portal';
 import ReactTransitionGroup from 'react-transition-group/CSSTransitionGroup';
 import { lucidClassNames, uniqueName } from '../../util/style-helpers';
-import { createClass, omitProps } from '../../util/component-types';
+import { omitProps } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-Overlay');
 
@@ -34,7 +34,7 @@ interface IOverlayProps {
 
 	/** Fired when the user hits escape.  Signature: \`({ event, props }) => {}\; */
 	onEscape: (
-		{ event, props }: { event: React.KeyboardEvent; props: IOverlayProps }
+		{ event, props }: { event: KeyboardEvent; props: IOverlayProps }
 	) => void;
 
 	/** Fired when the user clicks on the background, this may or may not be
@@ -129,7 +129,7 @@ class Overlay extends React.Component<IOverlayProps, IOverlayState, {}> {
 		}
 	};
 
-	handleDocumentKeyDown(event: React.KeyboardEvent): void {
+	handleDocumentKeyDown = (event: KeyboardEvent): void => {
 		// If the user hits the "escape" key, then fire an `onEscape`
 		// TODO: use key helpers
 		if (event.keyCode === 27) {
@@ -137,10 +137,11 @@ class Overlay extends React.Component<IOverlayProps, IOverlayState, {}> {
 		}
 	};
 
-	handleBackgroundClick(event: React.MouseEvent): void {
+	handleBackgroundClick = (event: React.MouseEvent): void => {
 		// Use the reference we previously stored from the `ref` to check what
 		// element was clicked on.
-		if (this.rootHTMLDivElement.current && event.target === this.rootHTMLDivElement.current) {
+		if (this.rootHTMLDivElement.current &&
+			event.target === this.rootHTMLDivElement.current) {
 			this.props.onBackgroundClick({ event, props: this.props });
 		}
 	};
