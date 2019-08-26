@@ -6,7 +6,7 @@ import Overlay from '../Overlay/Overlay';
 import GripperVerticalIcon from '../Icon/GripperVerticalIcon/GripperVerticalIcon';
 import CloseIcon from '../Icon/CloseIcon/CloseIcon';
 import DragCaptureZone from '../DragCaptureZone/DragCaptureZone';
-import Button, { IButtonProps } from '../Button/Button';
+import Button from '../Button/Button';
 import { getFirst, omitProps, FC } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-SidePanel');
