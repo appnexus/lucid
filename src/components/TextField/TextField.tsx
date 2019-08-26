@@ -34,7 +34,7 @@ interface ITextFieldProps {
 		value: number | string,
 		{ event, props }: {
 			event: React.FormEvent;
-			props: ITextFieldProps
+			props: ITextFieldProps;
 		}
 	) => void;
 
@@ -43,7 +43,7 @@ interface ITextFieldProps {
 		currentValue: number | string,
 		{ event, props }: {
 			event: React.FocusEvent;
-			props: ITextFieldProps
+			props: ITextFieldProps;
 		}
 	) => void;
 
@@ -53,7 +53,7 @@ interface ITextFieldProps {
 		value: number | string,
 		{ event, props }: {
 			event: React.FormEvent;
-			props: ITextFieldProps
+			props: ITextFieldProps;
 		}
 	) => void;
 
@@ -61,7 +61,7 @@ interface ITextFieldProps {
 	onKeyDown: (
 		{ event, props }: {
 			event: React.KeyboardEvent;
-			props: ITextFieldProps
+			props: ITextFieldProps;
 		}
 	) => void;
 
@@ -70,7 +70,7 @@ interface ITextFieldProps {
 		value: number | string,
 		{ event, props }: {
 			event: React.FormEvent;
-			props: ITextFieldProps
+			props: ITextFieldProps;
 		}
 	) => void;
 

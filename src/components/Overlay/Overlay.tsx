@@ -10,17 +10,20 @@ const cx = lucidClassNames.bind('&-Overlay');
 
 const { string, bool, func, node } = PropTypes;
 
-interface IOverlayProps {
+export interface IOverlayProps {
 	/** Appended to the component-specific class names set on the root element. */
 	className?: string;
 
 	/** SlidePanel.Slide elements are passed in as children. */
 	children?: React.ReactNode;
 
-	/** Controls visibility. */
-	isShown?: boolean;
+	/** Styles that are passed through to native control. */
+	style?: object;
 
-	isAnimated?: boolean;
+	/** Controls visibility. */
+	isShown: boolean;
+
+	isAnimated: boolean;
 
 	/** Determines if it shows with a gray background. If `false`, the
 		background will be rendered but will be invisible, except for the
@@ -30,7 +33,7 @@ interface IOverlayProps {
 
 	/** Set your own id for the \`Portal\` is that is opened up to contain the
 		contents. In practice you should never need to set this manually. */
-	portalId: string;
+	portalId?: string;
 
 	/** Fired when the user hits escape.  Signature: \`({ event, props }) => {}\; */
 	onEscape: (

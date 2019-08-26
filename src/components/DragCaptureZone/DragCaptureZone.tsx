@@ -23,7 +23,7 @@ interface IDragCaptureZoneProps {
 		},
 		{ event, props }: {
 			event: React.MouseEvent | React.TouchEvent;
-			props: IDragCaptureZoneProps
+			props: IDragCaptureZoneProps;
 		}
 	) => void;
 
@@ -39,7 +39,7 @@ interface IDragCaptureZoneProps {
 		},
 		{ event, props }: {
 			event: React.MouseEvent | React.TouchEvent;
-			props: IDragCaptureZoneProps
+			props: IDragCaptureZoneProps;
 		}
 	) => void;
 
@@ -55,7 +55,7 @@ interface IDragCaptureZoneProps {
 		},
 		{ event, props }: {
 			event: React.MouseEvent | React.TouchEvent;
-			props: IDragCaptureZoneProps
+			props: IDragCaptureZoneProps;
 		}
 	) => void;
 
@@ -65,7 +65,7 @@ interface IDragCaptureZoneProps {
 	onDragCancel?: (
 		{ event, props }: {
 			event: React.MouseEvent | React.TouchEvent;
-			props: IDragCaptureZoneProps
+			props: IDragCaptureZoneProps;
 		}
 	) => void;
 }

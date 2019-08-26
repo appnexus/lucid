@@ -30,10 +30,10 @@ export interface IIconProps {
 	size?: number;
 
 	/** Size handles width and height, whereas `width` can manually override the width that would be set by size. */
-	width?: number;
+	width?: number | string;
 
 	/** Size handles width and height, whereas `height` can manually override the height that would be set by size. */
-	height?: number;
+	height?: number | string;
 
 	/** \`viewBox\` is very important for SVGs. You can think of \`viewBox\` as the "artboard" for our SVG while \`size\` is the presented height and width. */
 	viewBox?: string;
@@ -44,7 +44,7 @@ export interface IIconProps {
 	/** Adds styling that makes the icon appear clickable. */
 	isClickable?: boolean;
 
-	/** Adds styling that makes the icon appear disabled.  Also forces isClickable to be false. */
+	/** Adds styling that makes the icon appear disabled. Also forces isClickable to be false. */
 	isDisabled?: boolean;
 
 	/** Called when the user clicks the \`Icon\`. */
@@ -155,11 +155,11 @@ Icon.propTypes = {
 		\`viewBox\`.
 	`,
 
-	width: number`
+	width: oneOf(number, string)`
 		Size handles width and height, whereas \`width\` can manually override the width that would be set by size.
 	`,
 
-	height: number`
+	height: oneOf(number, string)`
 		Size handles width and height, whereas \`height\` can manually override the height that would be set by size.
 	`,
 

@@ -7,73 +7,67 @@ import GripperVerticalIcon from '../Icon/GripperVerticalIcon/GripperVerticalIcon
 import CloseIcon from '../Icon/CloseIcon/CloseIcon';
 import DragCaptureZone from '../DragCaptureZone/DragCaptureZone';
 import Button from '../Button/Button';
-import { getFirst, omitProps } from '../../util/component-types';
-
-// Unable to finish this WIP because of above dependencies, which are not TSX yet
-
+import { getFirst, omitProps, FC } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-SidePanel');
 
 const { any, bool, func, oneOf, node, number, string, oneOfType } = PropTypes;
 
 interface ISidePanelHeaderProps {
-	description?: string;
 	children?: React.ReactNode;
 }
-class SidePanelHeader extends React.Component<ISidePanelHeaderProps, {}, {}> {
-	constructor(props: ISidePanelHeaderProps) {
-		super(props);
-	}
-	static displayName = 'SidePanel.Header';
-	static peek = {
-		description: `
-			Content displayed at the top of the side panel.
-		`,
-	};
-	static propName = 'Header';
-
-	render(): React.ReactNode {
-		return <div>{this.props.children}</div>;
-	}
-}
+const SidePanelHeader: FC<ISidePanelHeaderProps> = ({
+	children
+}): React.ReactElement => {
+	return <div>{children}</div>;
+};
+SidePanelHeader.displayName = 'SidePanel.Header';
+SidePanelHeader.propName = 'Header';
+SidePanelHeader.peek = {
+	description: `
+		Defines the Header content of SidePanel. If no content is defined, it will
+		still show the close button.
+	`,
+};
+SidePanelHeader.propTypes = {
+	children: node`
+		Children that will be rendered.
+	`,
+};
 
 interface ISidePanelFooterProps {
-	description?: string;
 	children?: React.ReactNode;
 }
-class SidePanelFooter extends React.Component<ISidePanelFooterProps, {}, {}> {
-	constructor(props: ISidePanelFooterProps) {
-		super(props);
-	}
-	static displayName = 'SidePanel.Footer';
-	static peek = {
-		description: `
-			Content displayed at the bottom of the side panel.
-		`,
-	};
-	static propName = 'Footer';
-
-	render(): React.ReactNode {
-		return <div>{this.props.children}</div>;
-	}
-}
+const SidePanelFooter: FC<ISidePanelFooterProps> = ({
+	children
+}): React.ReactElement => {
+	return <div>{children}</div>;
+};
+SidePanelFooter.displayName = 'SidePanel.Footer';
+SidePanelFooter.propName = 'Footer';
+SidePanelFooter.peek = {
+	description: `
+		Content displayed at the bottom of the side panel.
+	`,
+};
+SidePanelFooter.propTypes = {
+	children: node`
+		Children that will be rendered.
+	`,
+};
 
 export interface ISidePanelProps {
-	/** Appended to the component-specific class names set on the root element.
-	 */
+	/** Appended to the component-specific class names set on the root element. */
 	className?: string;
 
 	/** Generally you should only have a single child element so the centering works
-	 * correctly.
-	 */
+	 * correctly. */
 	children?: React.ReactNode;
 
-	/** Alternative to using `<SidePanel.Header>`.
-	 */
+	/** Alternative to using `<SidePanel.Header>`. */
 	Header?: React.ReactNode & { props: ISidePanelHeaderProps };
 
-	/** Enables animated transitions during expansion and collapse.
-	 */
+	/** Enables animated transitions during expansion and collapse. */
 	isAnimated: boolean;
 
 	/** Controls the expanded/collapsed state as a boolean prop. */
@@ -83,47 +77,49 @@ export interface ISidePanelProps {
 	isResizeDisabled: boolean;
 
 	/** Callback triggered when user clicks the background, hits the Esc key, or
-	 * clicks the close button in the Header.
-	 */
-	onCollapse: ({ event, props }) => {};
+	 * clicks the close button in the Header. */
+	onCollapse: (
+		{ event, props }: {
+			event: React.MouseEvent | KeyboardEvent;
+			props: ISidePanelProps;
+		}
+	) => void;
 
-	/** Callback triggered after a user resizes to a new width.
-	 */
-	onResize: (width, { event, props }) => {};
+	/** Callback triggered after a user resizes to a new width. */
+	onResize: (
+		width: number,
+		{ event, props }: {
+			event: React.FormEvent;
+			props: ISidePanelProps;
+		}
+	) => void;
 
-	/** Controls the position on the screen.
-	 */
+	/** Controls the position on the screen. */
 	position: 'left' | 'right';
 
 	/** When true, it will prevent scrolling in the background when \`isExpanded\;
 	 * is true. This is accomplished by setting \`document.body.style.overflow =
-	 * 'hidden'\`.
-	 */
+	 * 'hidden'\`. */
 	preventBodyScroll: boolean;
 
 
 	/** Sets the initial width in pixels. The actual width may change if the user
-	 * resizes it.
-	 */
+	 * resizes it. */
 	width: number;
 
-	/** Sets the top margin for the panel. Defaults to \`0\`.
-	 */
+	/** Sets the top margin for the panel. Defaults to \`0\`. */
 	topOffset: number | string;
 }
 
+interface ISidePanelState {
+	isResizing: boolean;
+	width: number;
+	startWidth: number;
+	isExpanded: boolean;
+}
 
-class SidePanel extends React.Component<ISidePanelProps, {}, {}> {
-	constructor(props: ISidePanelProps) {
-		super(props);
-		const { isExpanded, width } = props;
-		this.state = {
-			isResizing: false,
-			width,
-			isExpanded,
-		};
-	}
 
+class SidePanel extends React.Component<ISidePanelProps, ISidePanelState, {}> {
 	static displayName = 'SidePanel';
 	static peek = {
 		description: `
@@ -133,7 +129,6 @@ class SidePanel extends React.Component<ISidePanelProps, {}, {}> {
 		`,
 		categories: ['layout'],
 	};
-
 	static propTypes = {
 		children: node`
 			Content of the SidePanel, but also accepts \`<SidePanel.Header>\` to define
@@ -180,6 +175,13 @@ class SidePanel extends React.Component<ISidePanelProps, {}, {}> {
 		`,
 	};
 
+	state = {
+		isResizing: false,
+		width: (this.props.width as number),
+		startWidth: (this.props.width as number),
+		isExpanded: (this.props.isExpanded as boolean),
+	};
+
 	static defaultProps = {
 		isAnimated: true,
 		isExpanded: true,
@@ -195,38 +197,60 @@ class SidePanel extends React.Component<ISidePanelProps, {}, {}> {
 	static Header = SidePanelHeader;
 	static Footer = SidePanelFooter;
 
-	handleResizeStart = () => {
+	// timerId: ReturnType<setTimeout((): void => {})>
+	timerId = setTimeout((): void => {
+		return;
+	}, 1);
+
+	// width = this.props.width;
+	startWidth = this.props.width;
+
+	handleResizeStart = (): void => {
+		const { width } = this.state;
 		this.startWidth = this.state.width;
+
 		this.setState({
+			// startWidth: width,
 			isResizing: true,
 		});
 	}
 
-	handleResize = ({ dX }) => {
+	handleResize = ({ dX }: { dX: number }): void => {
+		const { startWidth } = this.state;
 		this.setState({
 			width: this.startWidth + dX * (this.props.position === 'right' ? -1 : 1),
 		});
 	}
 
-	handleResizeEnd = ({ dX }, { event }) => {
-		this.setState({
-			width: this.startWidth + dX * (this.props.position === 'right' ? -1 : 1),
-			isResizing: false,
-		});
-		this.props.onResize(this.startWidth - dX, { props: this.props, event });
+	handleResizeEnd = (
+		{ dX }: { dX: number },
+		{ event }: { event: React.MouseEvent | React.TouchEvent }
+		): void => {
+			const { startWidth } = this.state;
+			this.setState({
+				width: this.startWidth + dX * (this.props.position === 'right' ? -1 : 1),
+				isResizing: false,
+			});
+			this.props.onResize(this.startWidth - dX, { props: this.props, event });
+		}
+
+	handleCollapse = (
+		{ event }: { event: React.MouseEvent | KeyboardEvent }
+	): void => {
+		this.props.onCollapse({ props: this.props, event })
 	}
 
-	componentDidUpdate(prevProps) {
+	componentDidUpdate(prevProps: ISidePanelProps): void {
 		if (prevProps.isExpanded !== this.props.isExpanded) {
-			this.timerId = setTimeout(() => {
+			this.timerId = setTimeout((): void => {
 				this.setState({
-					isExpanded: this.props.isExpanded,
+					isExpanded: (this.props.isExpanded as boolean),
 				});
 			}, 1);
 		}
 	}
 
-	componentWillUnmount() {
+	componentWillUnmount(): void {
 		if (this.timerId) {
 			clearTimeout(this.timerId);
 		}
@@ -239,7 +263,6 @@ class SidePanel extends React.Component<ISidePanelProps, {}, {}> {
 			isAnimated,
 			isExpanded,
 			isResizeDisabled,
-			onCollapse,
 			position,
 			preventBodyScroll,
 			topOffset,
@@ -266,13 +289,17 @@ class SidePanel extends React.Component<ISidePanelProps, {}, {}> {
 					className
 				)}
 				isShown={isExpanded || this.state.isExpanded}
-				onBackgroundClick={onCollapse}
-				onEscape={onCollapse}
+				onBackgroundClick={this.handleCollapse}
+				onEscape={this.handleCollapse}
 				isAnimated={isAnimated}
 				style={{
 					marginTop: topOffset,
 				}}
-				{...omitProps(passThroughs, SidePanel)}
+				{...omitProps(
+					passThroughs,
+					undefined,
+					_.keys(SidePanel.propTypes)
+				)}
 			>
 				<div
 					className={cx('&-pane')}
@@ -289,7 +316,7 @@ class SidePanel extends React.Component<ISidePanelProps, {}, {}> {
 								<Button
 									className={cx('&-header-closer-button')}
 									kind='invisible'
-									onClick={onCollapse}
+									onClick={this.handleCollapse}
 									hasOnlyIcon={true}
 								>
 									<CloseIcon
@@ -320,16 +347,5 @@ class SidePanel extends React.Component<ISidePanelProps, {}, {}> {
 		);
 	}
 }
-
-
-SidePanel.Header = () => null;
-SidePanel.Header.displayName = 'SidePanel.Header';
-SidePanel.Header.propName = 'Header';
-SidePanel.Header.peek = {
-	description: `
-		Defines the Header content of SidePanel. If no content is defined, it will
-		still show the close button.
-	`,
-};
 
 export default SidePanel;
