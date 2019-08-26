@@ -761,7 +761,7 @@ describe('DataTable', () => {
 					},
 					{
 						event: mockEvent,
-						props: {}
+						props: {},
 					}
 				);
 			});

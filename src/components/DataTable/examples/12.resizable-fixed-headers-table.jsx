@@ -113,10 +113,16 @@ export default createClass({
 		};
 	},
 	handleToggle(stateItem) {
-		this.setState({ [stateItem]: !this.state[stateItem] });
+		this.setState(prevState => ({ [stateItem]: !prevState[stateItem] }));
 	},
 	handleNumeric(stateItem, value) {
 		this.setState({ [stateItem]: value });
+	},
+	onChangeFixedColumnCount(prarm) {
+		this.handleNumeric('fixedColumnCount', parseInt(prarm, 10));
+	},
+	onChangeFixedRowHeight(prarm) {
+		this.handleNumeric('fixedRowHeight', parseInt(prarm, 10));
 	},
 	renderDataTable(props) {
 		return (
@@ -172,9 +178,7 @@ export default createClass({
 				<label style={{ marginBottom: 6, display: 'block', fontSize: 12 }}>
 					<TextField
 						style={{ marginRight: 9, width: 45 }}
-						onChangeDebounced={v =>
-							this.handleNumeric('fixedColumnCount', parseInt(v, 10))
-						}
+						onChange={v => this.onChangeFixedColumnCount(v)}
 						placeholder='fixedColumnCount'
 						value={this.state.fixedColumnCount}
 					/>
@@ -183,9 +187,7 @@ export default createClass({
 				<label style={{ marginBottom: 6, display: 'block', fontSize: 12 }}>
 					<TextField
 						style={{ marginRight: 9, width: 45 }}
-						onChangeDebounced={v =>
-							this.handleNumeric('fixedRowHeight', parseInt(v, 10))
-						}
+						onChange={v => this.onChangeFixedRowHeight(v)}
 						placeholder='fixedRowHeight'
 						value={this.state.fixedRowHeight}
 					/>
