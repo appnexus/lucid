@@ -14,7 +14,7 @@ interface IDragCaptureZoneProps {
 
 	/** Called as the user drags the mouse.
 	 */
-	onDrag?: (
+	onDrag: (
 		{ dX, dY, pageX, pageY }: {
 			dX: number;
 			dY: number;
@@ -22,7 +22,7 @@ interface IDragCaptureZoneProps {
 			pageY: number;
 		},
 		{ event, props }: {
-			event: React.MouseEvent | React.TouchEvent;
+			event: MouseEvent | TouchEvent;
 			props: IDragCaptureZoneProps;
 		}
 	) => void;
@@ -30,7 +30,7 @@ interface IDragCaptureZoneProps {
 
 	/** Called when the user releases the mouse button after having dragged.
 	 */
-	onDragEnd?: (
+	onDragEnd: (
 		{ dX, dY, pageX, pageY }: {
 			dX: number;
 			dY: number;
@@ -38,7 +38,7 @@ interface IDragCaptureZoneProps {
 			pageY: number;
 		},
 		{ event, props }: {
-			event: React.MouseEvent | React.TouchEvent;
+			event: MouseEvent | TouchEvent;
 			props: IDragCaptureZoneProps;
 		}
 	) => void;
@@ -46,7 +46,7 @@ interface IDragCaptureZoneProps {
 
 	/** Called when the user presses the mouse button down while over the component.
 	 */
-	onDragStart?: (
+	onDragStart: (
 		{ dX, dY, pageX, pageY }: {
 			dX: number;
 			dY: number;
@@ -62,9 +62,9 @@ interface IDragCaptureZoneProps {
 	/** Called when the drag event is canceled due to user interaction.
 	 * For example: if a system alert pops up during a touch event.
 	 */
-	onDragCancel?: (
+	onDragCancel: (
 		{ event, props }: {
-			event: React.MouseEvent | React.TouchEvent;
+			event: MouseEvent | TouchEvent;
 			props: IDragCaptureZoneProps;
 		}
 	) => void;
@@ -125,7 +125,7 @@ class DragCaptureZone extends React.Component<IDragCaptureZoneProps, IDragCaptur
 		onDragCancel: _.noop,
 	};
 
-	handleDrag = (event: React.MouseEvent | React.TouchEvent): void => {
+	handleDrag = (event: MouseEvent | TouchEvent): void => {
 		let pageX;
 		let pageY;
 
@@ -134,13 +134,13 @@ class DragCaptureZone extends React.Component<IDragCaptureZoneProps, IDragCaptur
 			pageX = event.touches[0].pageX;
 			pageY = event.touches[0].pageY;
 		} else {
-			pageX = (event as React.MouseEvent).pageX;
-			pageY = (event as React.MouseEvent).pageY;
+			pageX = (event as MouseEvent).pageX;
+			pageY = (event as MouseEvent).pageY;
 		}
 
 		event.preventDefault();
 
-		this.props.onDrag && this.props.onDrag(
+		this.props.onDrag(
 			{
 				dX: pageX - this.state.pageX,
 				dY: pageY - this.state.pageY,
@@ -165,11 +165,14 @@ class DragCaptureZone extends React.Component<IDragCaptureZoneProps, IDragCaptur
 		} else {
 			pageX = (event as React.MouseEvent).pageX;
 			pageY = (event as React.MouseEvent).pageY;
+
+			window.document.addEventListener('mousemove', this.handleDrag);
+			window.document.addEventListener('mouseup', this.handleDragEnd);
 		}
 
 		event.preventDefault();
 
-		this.props.onDragStart && this.props.onDragStart(
+		this.props.onDragStart(
 			{
 				dX: 0,
 				dY: 0,
@@ -188,7 +191,7 @@ class DragCaptureZone extends React.Component<IDragCaptureZoneProps, IDragCaptur
 		});
 	};
 
-	handleDragEnd = (event: React.MouseEvent | React.TouchEvent): void => {
+	handleDragEnd = (event: MouseEvent | TouchEvent): void => {
 		let pageX;
 		let pageY;
 
@@ -197,13 +200,16 @@ class DragCaptureZone extends React.Component<IDragCaptureZoneProps, IDragCaptur
 			pageX = event.changedTouches[0].pageX;
 			pageY = event.changedTouches[0].pageY;
 		} else {
-			pageX = (event as React.MouseEvent).pageX;
-			pageY = (event as React.MouseEvent).pageY;
+			pageX = (event as MouseEvent).pageX;
+			pageY = (event as MouseEvent).pageY;
 		}
+
+		window.document.removeEventListener('mousemove', this.handleDrag);
+		window.document.removeEventListener('mouseup', this.handleDragEnd);
 
 		event.preventDefault();
 
-		this.props.onDragEnd &&this.props.onDragEnd(
+		this.props.onDragEnd(
 			{
 				dX: pageX - this.state.pageX,
 				dY: pageY - this.state.pageY,
@@ -222,8 +228,8 @@ class DragCaptureZone extends React.Component<IDragCaptureZoneProps, IDragCaptur
 		});
 	};
 
-	handleDragCancel = (event: React.MouseEvent | React.TouchEvent): void => {
-		this.props.onDragCancel && this.props.onDragCancel({
+	handleDragCancel = (event: MouseEvent | TouchEvent): void => {
+		this.props.onDragCancel({
 			event,
 			props: this.props,
 		});
@@ -233,6 +239,28 @@ class DragCaptureZone extends React.Component<IDragCaptureZoneProps, IDragCaptur
 			pageY: 0,
 		});
 	};
+
+	componentDidMount(): void {
+		//add event listeners directly on the DOM element to allow preventDefault
+		//calls which are not honored due to react's event delegation
+		//reference: https://github.com/facebook/react/issues/8968
+
+		if (this.elementRef.current) {
+			this.elementRef.current.addEventListener('touchmove', this.handleDrag);
+			this.elementRef.current.addEventListener('touchend', this.handleDragEnd);
+			this.elementRef.current.addEventListener('touchcancel', this.handleDragCancel);
+		}
+	}
+
+	componentWillUnmount(): void {
+		if (this.elementRef.current) {
+			this.elementRef.current.removeEventListener('touchmove', this.handleDrag);
+			this.elementRef.current.removeEventListener('touchend', this.handleDragEnd);
+			this.elementRef.current.removeEventListener('touchcancel', this.handleDragCancel);
+		}
+		window.document.removeEventListener('mousemove', this.handleDrag);
+		window.document.removeEventListener('mouseup', this.handleDragEnd);
+	}
 
 
 	render(): React.ReactNode {
@@ -246,12 +274,14 @@ class DragCaptureZone extends React.Component<IDragCaptureZoneProps, IDragCaptur
 				className={cx('&', this.props.className)}
 				key='DragCaptureZone'
 				onMouseDown={this.handleDragStart}
-				onMouseMove={this.handleDrag}
-				onMouseUp={this.handleDragEnd}
 				onTouchStart={this.handleDragStart}
-				onTouchMove={this.handleDrag}
-				onTouchEnd={this.handleDragEnd}
-				onTouchCancel={this.handleDragCancel}
+
+				// onMouseDown={this.handleDragStart}
+				// onMouseMove={this.handleDrag}
+				// onMouseUp={this.handleDragEnd}
+				// onTouchMove={this.handleDrag}
+				// onTouchEnd={this.handleDragEnd}
+				// onTouchCancel={this.handleDragCancel}
 				ref={this.elementRef}
 			/>
 		);

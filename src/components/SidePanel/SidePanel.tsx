@@ -89,7 +89,7 @@ export interface ISidePanelProps {
 	onResize: (
 		width: number,
 		{ event, props }: {
-			event: React.FormEvent;
+			event: MouseEvent | TouchEvent;
 			props: ISidePanelProps;
 		}
 	) => void;
@@ -202,12 +202,8 @@ class SidePanel extends React.Component<ISidePanelProps, ISidePanelState, {}> {
 		return;
 	}, 1);
 
-	// width = this.props.width;
-	startWidth = this.props.width;
-
 	handleResizeStart = (): void => {
-		const { width } = this.state;
-		this.startWidth = this.state.width;
+		// const { width } = this.state;
 
 		this.setState({
 			// startWidth: width,
@@ -218,20 +214,20 @@ class SidePanel extends React.Component<ISidePanelProps, ISidePanelState, {}> {
 	handleResize = ({ dX }: { dX: number }): void => {
 		const { startWidth } = this.state;
 		this.setState({
-			width: this.startWidth + dX * (this.props.position === 'right' ? -1 : 1),
+			width: startWidth + dX * (this.props.position === 'right' ? -1 : 1),
 		});
 	}
 
 	handleResizeEnd = (
 		{ dX }: { dX: number },
-		{ event }: { event: React.MouseEvent | React.TouchEvent }
+		{ event }: { event: MouseEvent | TouchEvent }
 		): void => {
 			const { startWidth } = this.state;
 			this.setState({
-				width: this.startWidth + dX * (this.props.position === 'right' ? -1 : 1),
+				width: startWidth + dX * (this.props.position === 'right' ? -1 : 1),
 				isResizing: false,
 			});
-			this.props.onResize(this.startWidth - dX, { props: this.props, event });
+			this.props.onResize(startWidth - dX, { props: this.props, event });
 		}
 
 	handleCollapse = (
