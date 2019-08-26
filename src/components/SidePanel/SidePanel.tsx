@@ -6,7 +6,7 @@ import Overlay from '../Overlay/Overlay';
 import GripperVerticalIcon from '../Icon/GripperVerticalIcon/GripperVerticalIcon';
 import CloseIcon from '../Icon/CloseIcon/CloseIcon';
 import DragCaptureZone from '../DragCaptureZone/DragCaptureZone';
-import Button from '../Button/Button';
+import Button, { IButtonProps } from '../Button/Button';
 import { getFirst, omitProps, FC } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-SidePanel');
@@ -30,27 +30,6 @@ SidePanelHeader.peek = {
 	`,
 };
 SidePanelHeader.propTypes = {
-	children: node`
-		Children that will be rendered.
-	`,
-};
-
-interface ISidePanelFooterProps {
-	children?: React.ReactNode;
-}
-const SidePanelFooter: FC<ISidePanelFooterProps> = ({
-	children
-}): React.ReactElement => {
-	return <div>{children}</div>;
-};
-SidePanelFooter.displayName = 'SidePanel.Footer';
-SidePanelFooter.propName = 'Footer';
-SidePanelFooter.peek = {
-	description: `
-		Content displayed at the bottom of the side panel.
-	`,
-};
-SidePanelFooter.propTypes = {
 	children: node`
 		Children that will be rendered.
 	`,
@@ -195,18 +174,14 @@ class SidePanel extends React.Component<ISidePanelProps, ISidePanelState, {}> {
 	};
 
 	static Header = SidePanelHeader;
-	static Footer = SidePanelFooter;
 
-	// timerId: ReturnType<setTimeout((): void => {})>
 	timerId = setTimeout((): void => {
 		return;
 	}, 1);
 
 	handleResizeStart = (): void => {
-		// const { width } = this.state;
 
 		this.setState({
-			// startWidth: width,
 			isResizing: true,
 		});
 	}
@@ -230,10 +205,8 @@ class SidePanel extends React.Component<ISidePanelProps, ISidePanelState, {}> {
 			this.props.onResize(startWidth - dX, { props: this.props, event });
 		}
 
-	handleCollapse = (
-		{ event }: { event: React.MouseEvent | KeyboardEvent }
-	): void => {
-		this.props.onCollapse({ props: this.props, event })
+	handleCollapse = ({ event }: { event: React.MouseEvent | KeyboardEvent }): void => {
+		this.props.onCollapse({ event, props: this.props })
 	}
 
 	componentDidUpdate(prevProps: ISidePanelProps): void {

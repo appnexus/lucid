@@ -8,7 +8,7 @@ const cx = lucidClassNames.bind('&-Button');
 
 const { arrayOf, bool, func, node, oneOf, oneOfType, string } = PropTypes;
 
-interface IButtonProps {
+export interface IButtonProps {
 	/**
 	 * Disables the Button by greying it out
 	 *

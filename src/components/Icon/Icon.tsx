@@ -6,7 +6,7 @@ import { omitProps, FC } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-Icon');
 
-const { any, string, number, bool, func, oneOf } = PropTypes;
+const { any, string, number, bool, func, oneOf, oneOfType } = PropTypes;
 
 export enum Color {
 	ColorNeutralDark = 'neutral-dark',
@@ -155,11 +155,11 @@ Icon.propTypes = {
 		\`viewBox\`.
 	`,
 
-	width: oneOf(number, string)`
+	width: oneOfType([number, string])`
 		Size handles width and height, whereas \`width\` can manually override the width that would be set by size.
 	`,
 
-	height: oneOf(number, string)`
+	height: oneOfType([number, string])`
 		Size handles width and height, whereas \`height\` can manually override the height that would be set by size.
 	`,
 

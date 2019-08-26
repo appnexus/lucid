@@ -43,7 +43,7 @@ describe('SidePanel', () => {
 				const crossIconWrapper = wrapper.find(
 					'.lucid-SidePanel-header-closer-button'
 				);
-				crossIconWrapper.simulate('click');
+				crossIconWrapper.simulate('click', { event: 'abc' });
 				expect(onCollapse).toHaveBeenCalled();
 			});
 		});

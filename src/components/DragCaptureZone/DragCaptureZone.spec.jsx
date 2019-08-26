@@ -104,15 +104,20 @@ describe('DragCaptureZone', () => {
 	});
 
 	describe('user moves the mouse button after having started a drag interaction', () => {
+		let event;
 		let onDrag;
 
 		beforeEach(() => {
+			event = document.createEvent('Event');
+			_.assign(event, dragCoordinates);
+			event.initEvent('mousemove', true, true);
+
 			onDrag = sinon.spy();
 
 			mount(<DragCaptureZone onDrag={onDrag} />)
 				.find('div')
-				.simulate('mousedown', dragStartCoordinates)
-				.simulate('mousemove', dragCoordinates);
+				.simulate('mousedown', dragStartCoordinates);
+			window.document.dispatchEvent(event);
 		});
 
 		it('calls the function passed in as the `onDrag` prop...', () => {
@@ -131,21 +136,26 @@ describe('DragCaptureZone', () => {
 			assert.deepEqual(_.first(onDrag.args[0]), expectedData);
 		});
 
-		it('...and passes along a synthetic event as part of the second argument.', () => {
-			assert(_.last(onDrag.args[0]).event);
+		it('...and passes along a native event as part of the second argument.', () => {
+			assert(_.last(onDrag.args[0]).event instanceof window.Event);
 		});
 	});
 
 	describe('user releases the mouse button after having started a drag interaction', () => {
+		let event;
 		let onDragEnd;
 
 		beforeEach(() => {
+			event = document.createEvent('Event');
+			_.assign(event, dragEndCoordinates);
+			event.initEvent('mouseup', true, true);
+
 			onDragEnd = sinon.spy();
 
 			mount(<DragCaptureZone onDragEnd={onDragEnd} />)
 				.find('div')
-				.simulate('mousedown', dragStartCoordinates)
-				.simulate('mouseup', dragEndCoordinates);
+				.simulate('mousedown', dragStartCoordinates);
+			window.document.dispatchEvent(event);
 		});
 
 		it('calls the function passed in as the `onDragEnd` prop...', () => {
@@ -165,7 +175,7 @@ describe('DragCaptureZone', () => {
 		});
 
 		it('...and passes along a native event as part of the second argument.', () => {
-			assert(_.last(onDragEnd.args[0]).event);
+			assert(_.last(onDragEnd.args[0]).event instanceof window.Event);
 		});
 	});
 
