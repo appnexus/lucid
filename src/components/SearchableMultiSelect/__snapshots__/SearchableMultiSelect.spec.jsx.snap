@@ -55,10 +55,8 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       <CheckboxLabeled
         Label="Select All"
         className="lucid-SearchableMultiSelect-CheckboxLabeled"
-        isDisabled={false}
         isIndeterminate={false}
         isSelected={true}
-        onSelect={[Function]}
       />
     </DropMenu.FixedOption>
   </DropMenu>
@@ -119,10 +117,8 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       <CheckboxLabeled
         Label="Select All"
         className="lucid-SearchableMultiSelect-CheckboxLabeled"
-        isDisabled={false}
         isIndeterminate={false}
         isSelected={false}
-        onSelect={[Function]}
       />
     </DropMenu.FixedOption>
     <DropMenu.OptionGroup
@@ -172,10 +168,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         <CheckboxLabeled
           callbackId={0}
           className="lucid-SearchableMultiSelect-CheckboxLabeled"
-          isDisabled={false}
-          isIndeterminate={false}
           isSelected={false}
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             <span
@@ -196,10 +189,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         <CheckboxLabeled
           callbackId={1}
           className="lucid-SearchableMultiSelect-CheckboxLabeled"
-          isDisabled={false}
-          isIndeterminate={false}
           isSelected={false}
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             <span
@@ -220,10 +210,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         <CheckboxLabeled
           callbackId={2}
           className="lucid-SearchableMultiSelect-CheckboxLabeled"
-          isDisabled={false}
-          isIndeterminate={false}
           isSelected={false}
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             <span
@@ -244,10 +231,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         <CheckboxLabeled
           callbackId={3}
           className="lucid-SearchableMultiSelect-CheckboxLabeled"
-          isDisabled={false}
-          isIndeterminate={false}
           isSelected={false}
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             <span
@@ -268,10 +252,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         <CheckboxLabeled
           callbackId={4}
           className="lucid-SearchableMultiSelect-CheckboxLabeled"
-          isDisabled={false}
-          isIndeterminate={false}
           isSelected={false}
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             <span
@@ -292,10 +273,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         <CheckboxLabeled
           callbackId={5}
           className="lucid-SearchableMultiSelect-CheckboxLabeled"
-          isDisabled={false}
-          isIndeterminate={false}
           isSelected={false}
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             <span
@@ -316,10 +294,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         <CheckboxLabeled
           callbackId={6}
           className="lucid-SearchableMultiSelect-CheckboxLabeled"
-          isDisabled={false}
-          isIndeterminate={false}
           isSelected={false}
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             <span
@@ -340,10 +315,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         <CheckboxLabeled
           callbackId={7}
           className="lucid-SearchableMultiSelect-CheckboxLabeled"
-          isDisabled={false}
-          isIndeterminate={false}
           isSelected={false}
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             <span
@@ -364,10 +336,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         <CheckboxLabeled
           callbackId={8}
           className="lucid-SearchableMultiSelect-CheckboxLabeled"
-          isDisabled={false}
-          isIndeterminate={false}
           isSelected={false}
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             <span
@@ -388,10 +357,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         <CheckboxLabeled
           callbackId={9}
           className="lucid-SearchableMultiSelect-CheckboxLabeled"
-          isDisabled={false}
-          isIndeterminate={false}
           isSelected={false}
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             <span
@@ -412,10 +378,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         <CheckboxLabeled
           callbackId={10}
           className="lucid-SearchableMultiSelect-CheckboxLabeled"
-          isDisabled={false}
-          isIndeterminate={false}
           isSelected={false}
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             <span
@@ -478,10 +441,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         <CheckboxLabeled
           callbackId={11}
           className="lucid-SearchableMultiSelect-CheckboxLabeled"
-          isDisabled={false}
-          isIndeterminate={false}
           isSelected={false}
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             <span
@@ -502,10 +462,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         <CheckboxLabeled
           callbackId={12}
           className="lucid-SearchableMultiSelect-CheckboxLabeled"
-          isDisabled={false}
-          isIndeterminate={false}
           isSelected={false}
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             <span
@@ -526,10 +483,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         <CheckboxLabeled
           callbackId={13}
           className="lucid-SearchableMultiSelect-CheckboxLabeled"
-          isDisabled={false}
-          isIndeterminate={false}
           isSelected={false}
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             <span
@@ -550,10 +504,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         <CheckboxLabeled
           callbackId={14}
           className="lucid-SearchableMultiSelect-CheckboxLabeled"
-          isDisabled={false}
-          isIndeterminate={false}
           isSelected={false}
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             <span
@@ -574,10 +525,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         <CheckboxLabeled
           callbackId={15}
           className="lucid-SearchableMultiSelect-CheckboxLabeled"
-          isDisabled={false}
-          isIndeterminate={false}
           isSelected={false}
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             <span
@@ -598,10 +546,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         <CheckboxLabeled
           callbackId={16}
           className="lucid-SearchableMultiSelect-CheckboxLabeled"
-          isDisabled={false}
-          isIndeterminate={false}
           isSelected={false}
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             <span
@@ -622,10 +567,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         <CheckboxLabeled
           callbackId={17}
           className="lucid-SearchableMultiSelect-CheckboxLabeled"
-          isDisabled={false}
-          isIndeterminate={false}
           isSelected={false}
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             <span
@@ -646,10 +588,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         <CheckboxLabeled
           callbackId={18}
           className="lucid-SearchableMultiSelect-CheckboxLabeled"
-          isDisabled={false}
-          isIndeterminate={false}
           isSelected={false}
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             <span
@@ -670,10 +609,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         <CheckboxLabeled
           callbackId={19}
           className="lucid-SearchableMultiSelect-CheckboxLabeled"
-          isDisabled={false}
-          isIndeterminate={false}
           isSelected={false}
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             <span
@@ -694,10 +630,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         <CheckboxLabeled
           callbackId={20}
           className="lucid-SearchableMultiSelect-CheckboxLabeled"
-          isDisabled={false}
-          isIndeterminate={false}
           isSelected={false}
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             <span
@@ -718,10 +651,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         <CheckboxLabeled
           callbackId={21}
           className="lucid-SearchableMultiSelect-CheckboxLabeled"
-          isDisabled={false}
-          isIndeterminate={false}
           isSelected={false}
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             <span
@@ -742,10 +672,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         <CheckboxLabeled
           callbackId={22}
           className="lucid-SearchableMultiSelect-CheckboxLabeled"
-          isDisabled={false}
-          isIndeterminate={false}
           isSelected={false}
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             <span
@@ -808,10 +735,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         <CheckboxLabeled
           callbackId={23}
           className="lucid-SearchableMultiSelect-CheckboxLabeled"
-          isDisabled={false}
-          isIndeterminate={false}
           isSelected={false}
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             <span
@@ -832,10 +756,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         <CheckboxLabeled
           callbackId={24}
           className="lucid-SearchableMultiSelect-CheckboxLabeled"
-          isDisabled={false}
-          isIndeterminate={false}
           isSelected={false}
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             <span
@@ -856,10 +777,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         <CheckboxLabeled
           callbackId={25}
           className="lucid-SearchableMultiSelect-CheckboxLabeled"
-          isDisabled={false}
-          isIndeterminate={false}
           isSelected={false}
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             <span
@@ -880,10 +798,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         <CheckboxLabeled
           callbackId={26}
           className="lucid-SearchableMultiSelect-CheckboxLabeled"
-          isDisabled={false}
-          isIndeterminate={false}
           isSelected={false}
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             <span
@@ -904,10 +819,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         <CheckboxLabeled
           callbackId={27}
           className="lucid-SearchableMultiSelect-CheckboxLabeled"
-          isDisabled={false}
-          isIndeterminate={false}
           isSelected={false}
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             <span
@@ -928,10 +840,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         <CheckboxLabeled
           callbackId={28}
           className="lucid-SearchableMultiSelect-CheckboxLabeled"
-          isDisabled={false}
-          isIndeterminate={false}
           isSelected={false}
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             <span
@@ -952,10 +861,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         <CheckboxLabeled
           callbackId={29}
           className="lucid-SearchableMultiSelect-CheckboxLabeled"
-          isDisabled={false}
-          isIndeterminate={false}
           isSelected={false}
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             <span
@@ -976,10 +882,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         <CheckboxLabeled
           callbackId={30}
           className="lucid-SearchableMultiSelect-CheckboxLabeled"
-          isDisabled={false}
-          isIndeterminate={false}
           isSelected={false}
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             <span
@@ -1000,10 +903,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         <CheckboxLabeled
           callbackId={31}
           className="lucid-SearchableMultiSelect-CheckboxLabeled"
-          isDisabled={false}
-          isIndeterminate={false}
           isSelected={false}
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             <span
@@ -1024,10 +924,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         <CheckboxLabeled
           callbackId={32}
           className="lucid-SearchableMultiSelect-CheckboxLabeled"
-          isDisabled={false}
-          isIndeterminate={false}
           isSelected={false}
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             <span
@@ -1048,10 +945,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         <CheckboxLabeled
           callbackId={33}
           className="lucid-SearchableMultiSelect-CheckboxLabeled"
-          isDisabled={false}
-          isIndeterminate={false}
           isSelected={false}
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             <span
@@ -1072,10 +966,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         <CheckboxLabeled
           callbackId={34}
           className="lucid-SearchableMultiSelect-CheckboxLabeled"
-          isDisabled={false}
-          isIndeterminate={false}
           isSelected={false}
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             <span
@@ -1114,10 +1005,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         <CheckboxLabeled
           callbackId={35}
           className="lucid-SearchableMultiSelect-CheckboxLabeled"
-          isDisabled={false}
-          isIndeterminate={false}
           isSelected={false}
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             <span
@@ -1138,10 +1026,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         <CheckboxLabeled
           callbackId={36}
           className="lucid-SearchableMultiSelect-CheckboxLabeled"
-          isDisabled={false}
-          isIndeterminate={false}
           isSelected={false}
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             <span
@@ -1162,10 +1047,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         <CheckboxLabeled
           callbackId={37}
           className="lucid-SearchableMultiSelect-CheckboxLabeled"
-          isDisabled={false}
-          isIndeterminate={false}
           isSelected={false}
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             <span
@@ -1186,10 +1068,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         <CheckboxLabeled
           callbackId={38}
           className="lucid-SearchableMultiSelect-CheckboxLabeled"
-          isDisabled={false}
-          isIndeterminate={false}
           isSelected={false}
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             <span
@@ -1243,10 +1122,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         <CheckboxLabeled
           callbackId={39}
           className="lucid-SearchableMultiSelect-CheckboxLabeled"
-          isDisabled={false}
-          isIndeterminate={false}
           isSelected={false}
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             <span
@@ -1267,10 +1143,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         <CheckboxLabeled
           callbackId={40}
           className="lucid-SearchableMultiSelect-CheckboxLabeled"
-          isDisabled={false}
-          isIndeterminate={false}
           isSelected={false}
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             <span
@@ -1291,10 +1164,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         <CheckboxLabeled
           callbackId={41}
           className="lucid-SearchableMultiSelect-CheckboxLabeled"
-          isDisabled={false}
-          isIndeterminate={false}
           isSelected={false}
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             <span
@@ -1315,10 +1185,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         <CheckboxLabeled
           callbackId={42}
           className="lucid-SearchableMultiSelect-CheckboxLabeled"
-          isDisabled={false}
-          isIndeterminate={false}
           isSelected={false}
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             <span
@@ -1339,10 +1206,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         <CheckboxLabeled
           callbackId={43}
           className="lucid-SearchableMultiSelect-CheckboxLabeled"
-          isDisabled={false}
-          isIndeterminate={false}
           isSelected={false}
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             <span
@@ -1363,10 +1227,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         <CheckboxLabeled
           callbackId={44}
           className="lucid-SearchableMultiSelect-CheckboxLabeled"
-          isDisabled={false}
-          isIndeterminate={false}
           isSelected={false}
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             <span
@@ -1387,10 +1248,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         <CheckboxLabeled
           callbackId={45}
           className="lucid-SearchableMultiSelect-CheckboxLabeled"
-          isDisabled={false}
-          isIndeterminate={false}
           isSelected={false}
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             <span
@@ -1411,10 +1269,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         <CheckboxLabeled
           callbackId={46}
           className="lucid-SearchableMultiSelect-CheckboxLabeled"
-          isDisabled={false}
-          isIndeterminate={false}
           isSelected={false}
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             <span
@@ -1435,10 +1290,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         <CheckboxLabeled
           callbackId={47}
           className="lucid-SearchableMultiSelect-CheckboxLabeled"
-          isDisabled={false}
-          isIndeterminate={false}
           isSelected={false}
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             <span
@@ -1460,10 +1312,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       <CheckboxLabeled
         callbackId={48}
         className="lucid-SearchableMultiSelect-CheckboxLabeled"
-        isDisabled={false}
-        isIndeterminate={false}
         isSelected={false}
-        onSelect={[Function]}
       >
         <CheckboxLabeled.Label>
           <span
@@ -1484,10 +1333,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       <CheckboxLabeled
         callbackId={49}
         className="lucid-SearchableMultiSelect-CheckboxLabeled"
-        isDisabled={false}
-        isIndeterminate={false}
         isSelected={false}
-        onSelect={[Function]}
       >
         <CheckboxLabeled.Label>
           <span
@@ -1557,10 +1403,8 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       <CheckboxLabeled
         Label="Select All"
         className="lucid-SearchableMultiSelect-CheckboxLabeled"
-        isDisabled={false}
         isIndeterminate={false}
         isSelected={false}
-        onSelect={[Function]}
       />
     </DropMenu.FixedOption>
     <DropMenu.Option
@@ -1572,10 +1416,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       <CheckboxLabeled
         callbackId={0}
         className="lucid-SearchableMultiSelect-CheckboxLabeled"
-        isDisabled={false}
-        isIndeterminate={false}
         isSelected={false}
-        onSelect={[Function]}
       >
         <CheckboxLabeled.Label>
           <span
@@ -1596,10 +1437,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       <CheckboxLabeled
         callbackId={1}
         className="lucid-SearchableMultiSelect-CheckboxLabeled"
-        isDisabled={false}
-        isIndeterminate={false}
         isSelected={false}
-        onSelect={[Function]}
       >
         <CheckboxLabeled.Label>
           <span
@@ -1620,10 +1458,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       <CheckboxLabeled
         callbackId={2}
         className="lucid-SearchableMultiSelect-CheckboxLabeled"
-        isDisabled={false}
-        isIndeterminate={false}
         isSelected={false}
-        onSelect={[Function]}
       >
         <CheckboxLabeled.Label>
           <span
@@ -1644,10 +1479,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       <CheckboxLabeled
         callbackId={3}
         className="lucid-SearchableMultiSelect-CheckboxLabeled"
-        isDisabled={false}
-        isIndeterminate={false}
         isSelected={false}
-        onSelect={[Function]}
       >
         <CheckboxLabeled.Label>
           <span
@@ -1668,10 +1500,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       <CheckboxLabeled
         callbackId={4}
         className="lucid-SearchableMultiSelect-CheckboxLabeled"
-        isDisabled={false}
-        isIndeterminate={false}
         isSelected={false}
-        onSelect={[Function]}
       >
         <CheckboxLabeled.Label>
           <span
@@ -1692,10 +1521,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       <CheckboxLabeled
         callbackId={5}
         className="lucid-SearchableMultiSelect-CheckboxLabeled"
-        isDisabled={false}
-        isIndeterminate={false}
         isSelected={false}
-        onSelect={[Function]}
       >
         <CheckboxLabeled.Label>
           <span
@@ -1716,10 +1542,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       <CheckboxLabeled
         callbackId={6}
         className="lucid-SearchableMultiSelect-CheckboxLabeled"
-        isDisabled={false}
-        isIndeterminate={false}
         isSelected={false}
-        onSelect={[Function]}
       >
         <CheckboxLabeled.Label>
           <span
@@ -1740,10 +1563,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       <CheckboxLabeled
         callbackId={7}
         className="lucid-SearchableMultiSelect-CheckboxLabeled"
-        isDisabled={false}
-        isIndeterminate={false}
         isSelected={false}
-        onSelect={[Function]}
       >
         <CheckboxLabeled.Label>
           <span
@@ -1764,10 +1584,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       <CheckboxLabeled
         callbackId={8}
         className="lucid-SearchableMultiSelect-CheckboxLabeled"
-        isDisabled={false}
-        isIndeterminate={false}
         isSelected={false}
-        onSelect={[Function]}
       >
         <CheckboxLabeled.Label>
           <span
@@ -1788,10 +1605,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       <CheckboxLabeled
         callbackId={9}
         className="lucid-SearchableMultiSelect-CheckboxLabeled"
-        isDisabled={false}
-        isIndeterminate={false}
         isSelected={false}
-        onSelect={[Function]}
       >
         <CheckboxLabeled.Label>
           <span
@@ -1812,10 +1626,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       <CheckboxLabeled
         callbackId={10}
         className="lucid-SearchableMultiSelect-CheckboxLabeled"
-        isDisabled={false}
-        isIndeterminate={false}
         isSelected={false}
-        onSelect={[Function]}
       >
         <CheckboxLabeled.Label>
           <span
@@ -1836,10 +1647,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       <CheckboxLabeled
         callbackId={11}
         className="lucid-SearchableMultiSelect-CheckboxLabeled"
-        isDisabled={false}
-        isIndeterminate={false}
         isSelected={false}
-        onSelect={[Function]}
       >
         <CheckboxLabeled.Label>
           <span
@@ -1860,10 +1668,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       <CheckboxLabeled
         callbackId={12}
         className="lucid-SearchableMultiSelect-CheckboxLabeled"
-        isDisabled={false}
-        isIndeterminate={false}
         isSelected={false}
-        onSelect={[Function]}
       >
         <CheckboxLabeled.Label>
           <span
@@ -1884,10 +1689,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       <CheckboxLabeled
         callbackId={13}
         className="lucid-SearchableMultiSelect-CheckboxLabeled"
-        isDisabled={false}
-        isIndeterminate={false}
         isSelected={false}
-        onSelect={[Function]}
       >
         <CheckboxLabeled.Label>
           <span
@@ -1908,10 +1710,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       <CheckboxLabeled
         callbackId={14}
         className="lucid-SearchableMultiSelect-CheckboxLabeled"
-        isDisabled={false}
-        isIndeterminate={false}
         isSelected={false}
-        onSelect={[Function]}
       >
         <CheckboxLabeled.Label>
           <span
@@ -1932,10 +1731,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       <CheckboxLabeled
         callbackId={15}
         className="lucid-SearchableMultiSelect-CheckboxLabeled"
-        isDisabled={false}
-        isIndeterminate={false}
         isSelected={false}
-        onSelect={[Function]}
       >
         <CheckboxLabeled.Label>
           <span
@@ -1956,10 +1752,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       <CheckboxLabeled
         callbackId={16}
         className="lucid-SearchableMultiSelect-CheckboxLabeled"
-        isDisabled={false}
-        isIndeterminate={false}
         isSelected={false}
-        onSelect={[Function]}
       >
         <CheckboxLabeled.Label>
           <span
@@ -1980,10 +1773,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       <CheckboxLabeled
         callbackId={17}
         className="lucid-SearchableMultiSelect-CheckboxLabeled"
-        isDisabled={false}
-        isIndeterminate={false}
         isSelected={false}
-        onSelect={[Function]}
       >
         <CheckboxLabeled.Label>
           <span
@@ -2004,10 +1794,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       <CheckboxLabeled
         callbackId={18}
         className="lucid-SearchableMultiSelect-CheckboxLabeled"
-        isDisabled={false}
-        isIndeterminate={false}
         isSelected={false}
-        onSelect={[Function]}
       >
         <CheckboxLabeled.Label>
           <span
@@ -2028,10 +1815,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       <CheckboxLabeled
         callbackId={19}
         className="lucid-SearchableMultiSelect-CheckboxLabeled"
-        isDisabled={false}
-        isIndeterminate={false}
         isSelected={false}
-        onSelect={[Function]}
       >
         <CheckboxLabeled.Label>
           <span
@@ -2052,10 +1836,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       <CheckboxLabeled
         callbackId={20}
         className="lucid-SearchableMultiSelect-CheckboxLabeled"
-        isDisabled={false}
-        isIndeterminate={false}
         isSelected={false}
-        onSelect={[Function]}
       >
         <CheckboxLabeled.Label>
           <span
@@ -2076,10 +1857,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       <CheckboxLabeled
         callbackId={21}
         className="lucid-SearchableMultiSelect-CheckboxLabeled"
-        isDisabled={false}
-        isIndeterminate={false}
         isSelected={false}
-        onSelect={[Function]}
       >
         <CheckboxLabeled.Label>
           <span
@@ -2100,10 +1878,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       <CheckboxLabeled
         callbackId={22}
         className="lucid-SearchableMultiSelect-CheckboxLabeled"
-        isDisabled={false}
-        isIndeterminate={false}
         isSelected={false}
-        onSelect={[Function]}
       >
         <CheckboxLabeled.Label>
           <span
@@ -2124,10 +1899,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       <CheckboxLabeled
         callbackId={23}
         className="lucid-SearchableMultiSelect-CheckboxLabeled"
-        isDisabled={false}
-        isIndeterminate={false}
         isSelected={false}
-        onSelect={[Function]}
       >
         <CheckboxLabeled.Label>
           <span
@@ -2148,10 +1920,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       <CheckboxLabeled
         callbackId={24}
         className="lucid-SearchableMultiSelect-CheckboxLabeled"
-        isDisabled={false}
-        isIndeterminate={false}
         isSelected={false}
-        onSelect={[Function]}
       >
         <CheckboxLabeled.Label>
           <span
@@ -2172,10 +1941,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       <CheckboxLabeled
         callbackId={25}
         className="lucid-SearchableMultiSelect-CheckboxLabeled"
-        isDisabled={false}
-        isIndeterminate={false}
         isSelected={false}
-        onSelect={[Function]}
       >
         <CheckboxLabeled.Label>
           <span
@@ -2196,10 +1962,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       <CheckboxLabeled
         callbackId={26}
         className="lucid-SearchableMultiSelect-CheckboxLabeled"
-        isDisabled={false}
-        isIndeterminate={false}
         isSelected={false}
-        onSelect={[Function]}
       >
         <CheckboxLabeled.Label>
           <span
@@ -2220,10 +1983,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       <CheckboxLabeled
         callbackId={27}
         className="lucid-SearchableMultiSelect-CheckboxLabeled"
-        isDisabled={false}
-        isIndeterminate={false}
         isSelected={false}
-        onSelect={[Function]}
       >
         <CheckboxLabeled.Label>
           <span
@@ -2244,10 +2004,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       <CheckboxLabeled
         callbackId={28}
         className="lucid-SearchableMultiSelect-CheckboxLabeled"
-        isDisabled={false}
-        isIndeterminate={false}
         isSelected={false}
-        onSelect={[Function]}
       >
         <CheckboxLabeled.Label>
           <span
@@ -2268,10 +2025,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       <CheckboxLabeled
         callbackId={29}
         className="lucid-SearchableMultiSelect-CheckboxLabeled"
-        isDisabled={false}
-        isIndeterminate={false}
         isSelected={false}
-        onSelect={[Function]}
       >
         <CheckboxLabeled.Label>
           <span
@@ -2292,10 +2046,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       <CheckboxLabeled
         callbackId={30}
         className="lucid-SearchableMultiSelect-CheckboxLabeled"
-        isDisabled={false}
-        isIndeterminate={false}
         isSelected={false}
-        onSelect={[Function]}
       >
         <CheckboxLabeled.Label>
           <span
@@ -2316,10 +2067,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       <CheckboxLabeled
         callbackId={31}
         className="lucid-SearchableMultiSelect-CheckboxLabeled"
-        isDisabled={false}
-        isIndeterminate={false}
         isSelected={false}
-        onSelect={[Function]}
       >
         <CheckboxLabeled.Label>
           <span
@@ -2340,10 +2088,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       <CheckboxLabeled
         callbackId={32}
         className="lucid-SearchableMultiSelect-CheckboxLabeled"
-        isDisabled={false}
-        isIndeterminate={false}
         isSelected={false}
-        onSelect={[Function]}
       >
         <CheckboxLabeled.Label>
           <span
@@ -2364,10 +2109,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       <CheckboxLabeled
         callbackId={33}
         className="lucid-SearchableMultiSelect-CheckboxLabeled"
-        isDisabled={false}
-        isIndeterminate={false}
         isSelected={false}
-        onSelect={[Function]}
       >
         <CheckboxLabeled.Label>
           <span
@@ -2388,10 +2130,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       <CheckboxLabeled
         callbackId={34}
         className="lucid-SearchableMultiSelect-CheckboxLabeled"
-        isDisabled={false}
-        isIndeterminate={false}
         isSelected={false}
-        onSelect={[Function]}
       >
         <CheckboxLabeled.Label>
           <span
@@ -2412,10 +2151,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       <CheckboxLabeled
         callbackId={35}
         className="lucid-SearchableMultiSelect-CheckboxLabeled"
-        isDisabled={false}
-        isIndeterminate={false}
         isSelected={false}
-        onSelect={[Function]}
       >
         <CheckboxLabeled.Label>
           <span
@@ -2436,10 +2172,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       <CheckboxLabeled
         callbackId={36}
         className="lucid-SearchableMultiSelect-CheckboxLabeled"
-        isDisabled={false}
-        isIndeterminate={false}
         isSelected={false}
-        onSelect={[Function]}
       >
         <CheckboxLabeled.Label>
           <span
@@ -2460,10 +2193,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       <CheckboxLabeled
         callbackId={37}
         className="lucid-SearchableMultiSelect-CheckboxLabeled"
-        isDisabled={false}
-        isIndeterminate={false}
         isSelected={false}
-        onSelect={[Function]}
       >
         <CheckboxLabeled.Label>
           <span
@@ -2484,10 +2214,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       <CheckboxLabeled
         callbackId={38}
         className="lucid-SearchableMultiSelect-CheckboxLabeled"
-        isDisabled={false}
-        isIndeterminate={false}
         isSelected={false}
-        onSelect={[Function]}
       >
         <CheckboxLabeled.Label>
           <span
@@ -2508,10 +2235,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       <CheckboxLabeled
         callbackId={39}
         className="lucid-SearchableMultiSelect-CheckboxLabeled"
-        isDisabled={false}
-        isIndeterminate={false}
         isSelected={false}
-        onSelect={[Function]}
       >
         <CheckboxLabeled.Label>
           <span
@@ -2532,10 +2256,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       <CheckboxLabeled
         callbackId={40}
         className="lucid-SearchableMultiSelect-CheckboxLabeled"
-        isDisabled={false}
-        isIndeterminate={false}
         isSelected={false}
-        onSelect={[Function]}
       >
         <CheckboxLabeled.Label>
           <span
@@ -2556,10 +2277,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       <CheckboxLabeled
         callbackId={41}
         className="lucid-SearchableMultiSelect-CheckboxLabeled"
-        isDisabled={false}
-        isIndeterminate={false}
         isSelected={false}
-        onSelect={[Function]}
       >
         <CheckboxLabeled.Label>
           <span
@@ -2580,10 +2298,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       <CheckboxLabeled
         callbackId={42}
         className="lucid-SearchableMultiSelect-CheckboxLabeled"
-        isDisabled={false}
-        isIndeterminate={false}
         isSelected={false}
-        onSelect={[Function]}
       >
         <CheckboxLabeled.Label>
           <span
@@ -2604,10 +2319,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       <CheckboxLabeled
         callbackId={43}
         className="lucid-SearchableMultiSelect-CheckboxLabeled"
-        isDisabled={false}
-        isIndeterminate={false}
         isSelected={false}
-        onSelect={[Function]}
       >
         <CheckboxLabeled.Label>
           <span
@@ -2628,10 +2340,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       <CheckboxLabeled
         callbackId={44}
         className="lucid-SearchableMultiSelect-CheckboxLabeled"
-        isDisabled={false}
-        isIndeterminate={false}
         isSelected={false}
-        onSelect={[Function]}
       >
         <CheckboxLabeled.Label>
           <span
@@ -2652,10 +2361,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       <CheckboxLabeled
         callbackId={45}
         className="lucid-SearchableMultiSelect-CheckboxLabeled"
-        isDisabled={false}
-        isIndeterminate={false}
         isSelected={false}
-        onSelect={[Function]}
       >
         <CheckboxLabeled.Label>
           <span
@@ -2676,10 +2382,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       <CheckboxLabeled
         callbackId={46}
         className="lucid-SearchableMultiSelect-CheckboxLabeled"
-        isDisabled={false}
-        isIndeterminate={false}
         isSelected={false}
-        onSelect={[Function]}
       >
         <CheckboxLabeled.Label>
           <span
@@ -2700,10 +2403,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       <CheckboxLabeled
         callbackId={47}
         className="lucid-SearchableMultiSelect-CheckboxLabeled"
-        isDisabled={false}
-        isIndeterminate={false}
         isSelected={false}
-        onSelect={[Function]}
       >
         <CheckboxLabeled.Label>
           <span
@@ -2773,10 +2473,8 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       <CheckboxLabeled
         Label="Select All"
         className="lucid-SearchableMultiSelect-CheckboxLabeled"
-        isDisabled={false}
         isIndeterminate={false}
         isSelected={false}
-        onSelect={[Function]}
       />
     </DropMenu.FixedOption>
     <DropMenu.OptionGroup
@@ -2822,10 +2520,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         <CheckboxLabeled
           callbackId={0}
           className="lucid-SearchableMultiSelect-CheckboxLabeled"
-          isDisabled={false}
-          isIndeterminate={false}
           isSelected={false}
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             <Component
@@ -2843,10 +2538,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         <CheckboxLabeled
           callbackId={1}
           className="lucid-SearchableMultiSelect-CheckboxLabeled"
-          isDisabled={false}
-          isIndeterminate={false}
           isSelected={false}
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             <Component
@@ -2864,10 +2556,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         <CheckboxLabeled
           callbackId={2}
           className="lucid-SearchableMultiSelect-CheckboxLabeled"
-          isDisabled={false}
-          isIndeterminate={false}
           isSelected={false}
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             <Component
@@ -2935,10 +2624,8 @@ exports[`SearchableMultiSelect custom formatting should render Option child func
       <CheckboxLabeled
         Label="Select All"
         className="lucid-SearchableMultiSelect-CheckboxLabeled"
-        isDisabled={false}
         isIndeterminate={false}
         isSelected={false}
-        onSelect={[Function]}
       />
     </DropMenu.FixedOption>
     <DropMenu.Option
@@ -2951,10 +2638,7 @@ exports[`SearchableMultiSelect custom formatting should render Option child func
       <CheckboxLabeled
         callbackId={0}
         className="lucid-SearchableMultiSelect-CheckboxLabeled"
-        isDisabled={false}
-        isIndeterminate={false}
         isSelected={false}
-        onSelect={[Function]}
       >
         <CheckboxLabeled.Label>
           <Component
@@ -2973,10 +2657,7 @@ exports[`SearchableMultiSelect custom formatting should render Option child func
       <CheckboxLabeled
         callbackId={1}
         className="lucid-SearchableMultiSelect-CheckboxLabeled"
-        isDisabled={false}
-        isIndeterminate={false}
         isSelected={false}
-        onSelect={[Function]}
       >
         <CheckboxLabeled.Label>
           <Component
@@ -2995,10 +2676,7 @@ exports[`SearchableMultiSelect custom formatting should render Option child func
       <CheckboxLabeled
         callbackId={2}
         className="lucid-SearchableMultiSelect-CheckboxLabeled"
-        isDisabled={false}
-        isIndeterminate={false}
         isSelected={false}
-        onSelect={[Function]}
       >
         <CheckboxLabeled.Label>
           <Component
@@ -3065,10 +2743,8 @@ exports[`SearchableMultiSelect custom formatting should render Option.Selected i
       <CheckboxLabeled
         Label="Select All"
         className="lucid-SearchableMultiSelect-CheckboxLabeled"
-        isDisabled={false}
         isIndeterminate={true}
         isSelected={false}
-        onSelect={[Function]}
       />
     </DropMenu.FixedOption>
     <DropMenu.Option
@@ -3081,10 +2757,7 @@ exports[`SearchableMultiSelect custom formatting should render Option.Selected i
       <CheckboxLabeled
         callbackId={0}
         className="lucid-SearchableMultiSelect-CheckboxLabeled"
-        isDisabled={false}
-        isIndeterminate={false}
         isSelected={false}
-        onSelect={[Function]}
       >
         <CheckboxLabeled.Label>
           <div
@@ -3120,10 +2793,7 @@ exports[`SearchableMultiSelect custom formatting should render Option.Selected i
       <CheckboxLabeled
         callbackId={1}
         className="lucid-SearchableMultiSelect-CheckboxLabeled"
-        isDisabled={false}
-        isIndeterminate={false}
         isSelected={true}
-        onSelect={[Function]}
       >
         <CheckboxLabeled.Label>
           <div
@@ -3159,10 +2829,7 @@ exports[`SearchableMultiSelect custom formatting should render Option.Selected i
       <CheckboxLabeled
         callbackId={2}
         className="lucid-SearchableMultiSelect-CheckboxLabeled"
-        isDisabled={false}
-        isIndeterminate={false}
         isSelected={true}
-        onSelect={[Function]}
       >
         <CheckboxLabeled.Label>
           <div
@@ -3287,10 +2954,8 @@ exports[`SearchableMultiSelect custom formatting should render OptionGroup.Selec
       <CheckboxLabeled
         Label="Select All"
         className="lucid-SearchableMultiSelect-CheckboxLabeled"
-        isDisabled={false}
         isIndeterminate={true}
         isSelected={false}
-        onSelect={[Function]}
       />
     </DropMenu.FixedOption>
     <DropMenu.OptionGroup
@@ -3383,10 +3048,7 @@ exports[`SearchableMultiSelect custom formatting should render OptionGroup.Selec
         <CheckboxLabeled
           callbackId={0}
           className="lucid-SearchableMultiSelect-CheckboxLabeled"
-          isDisabled={false}
-          isIndeterminate={false}
           isSelected={false}
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             <div
@@ -3422,10 +3084,7 @@ exports[`SearchableMultiSelect custom formatting should render OptionGroup.Selec
         <CheckboxLabeled
           callbackId={1}
           className="lucid-SearchableMultiSelect-CheckboxLabeled"
-          isDisabled={false}
-          isIndeterminate={false}
           isSelected={true}
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             <div
@@ -3461,10 +3120,7 @@ exports[`SearchableMultiSelect custom formatting should render OptionGroup.Selec
         <CheckboxLabeled
           callbackId={2}
           className="lucid-SearchableMultiSelect-CheckboxLabeled"
-          isDisabled={false}
-          isIndeterminate={false}
           isSelected={true}
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             <div

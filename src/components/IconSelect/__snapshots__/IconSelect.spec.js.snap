@@ -62,10 +62,7 @@ exports[`IconSelect [common] example testing should match snapshot(s) for 2.sele
       <CheckboxLabeled
         Label="Foo Bar"
         className="lucid-IconSelect-Item-checkbox"
-        isDisabled={false}
-        isIndeterminate={false}
         isSelected={false}
-        onSelect={[Function]}
       />
     </figcaption>
   </figure>
@@ -82,10 +79,7 @@ exports[`IconSelect [common] example testing should match snapshot(s) for 2.sele
       <CheckboxLabeled
         Label="Bax Tar"
         className="lucid-IconSelect-Item-checkbox"
-        isDisabled={false}
-        isIndeterminate={false}
         isSelected={true}
-        onSelect={[Function]}
       />
     </figcaption>
   </figure>
@@ -109,10 +103,8 @@ exports[`IconSelect [common] example testing should match snapshot(s) for 3.part
       <CheckboxLabeled
         Label="Foo Bar"
         className="lucid-IconSelect-Item-checkbox"
-        isDisabled={false}
         isIndeterminate={false}
         isSelected={false}
-        onSelect={[Function]}
       />
     </figcaption>
   </figure>
@@ -129,10 +121,8 @@ exports[`IconSelect [common] example testing should match snapshot(s) for 3.part
       <CheckboxLabeled
         Label="Bax Tar"
         className="lucid-IconSelect-Item-checkbox"
-        isDisabled={false}
         isIndeterminate={true}
         isSelected={true}
-        onSelect={[Function]}
       />
     </figcaption>
   </figure>
@@ -158,9 +148,7 @@ exports[`IconSelect [common] example testing should match snapshot(s) for 4.disa
         Label="Always Disabled"
         className="lucid-IconSelect-Item-checkbox"
         isDisabled={true}
-        isIndeterminate={false}
         isSelected={false}
-        onSelect={[Function]}
       />
     </figcaption>
   </figure>
@@ -179,9 +167,7 @@ exports[`IconSelect [common] example testing should match snapshot(s) for 4.disa
         Label="Bax Tar"
         className="lucid-IconSelect-Item-checkbox"
         isDisabled={true}
-        isIndeterminate={false}
         isSelected={true}
-        onSelect={[Function]}
       />
     </figcaption>
   </figure>

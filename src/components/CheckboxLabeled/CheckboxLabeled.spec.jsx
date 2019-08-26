@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import assert from 'assert';
 import React from 'react';
-import { mount, shallow } from 'enzyme';
+import { shallow } from 'enzyme';
 
 import { common } from '../../util/generic-tests';
 
@@ -18,12 +18,6 @@ describe('CheckboxLabeled', () => {
 
 				assert.equal(wrapper.find(Checkbox).prop('isDisabled'), true);
 			});
-
-			it('defaults to `false`.', () => {
-				const wrapper = mount(<CheckboxLabeled />);
-
-				assert.equal(wrapper.prop('isDisabled'), false);
-			});
 		});
 
 		describe('isSelected', () => {
@@ -31,12 +25,6 @@ describe('CheckboxLabeled', () => {
 				const wrapper = shallow(<CheckboxLabeled isSelected={true} />);
 
 				assert.equal(wrapper.find(Checkbox).prop('isSelected'), true);
-			});
-
-			it('defaults to `false`.', () => {
-				const wrapper = mount(<CheckboxLabeled />);
-
-				assert.equal(wrapper.prop('isSelected'), false);
 			});
 		});
 
@@ -46,12 +34,6 @@ describe('CheckboxLabeled', () => {
 				const wrapper = shallow(<CheckboxLabeled onSelect={foo} />);
 
 				assert.equal(wrapper.find(Checkbox).prop('onSelect'), foo);
-			});
-
-			it('defaults to the Lodash `noop` method.', () => {
-				const wrapper = mount(<CheckboxLabeled />);
-
-				assert.equal(wrapper.prop('onSelect'), _.noop);
 			});
 		});
 
