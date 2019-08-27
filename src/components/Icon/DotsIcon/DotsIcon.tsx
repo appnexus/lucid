@@ -11,7 +11,7 @@ interface IDotsIconProps extends IIconProps {}
 
 const DotsIcon: FC<IDotsIconProps> = ({
 	className,
-	color = Color.ColorPrimary,
+	color = Color.primary,
 	...passThroughs
 }): React.ReactElement => {
 

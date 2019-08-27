@@ -9,11 +9,11 @@ const cx = lucidClassNames.bind('&-LoadingIcon');
 
 const { oneOf } = PropTypes;
 
-enum durations {
+export enum durations {
 	fast = '0.75s',
 	normal = '1.25s',
 	slow = '4s',
-};
+}
 
 interface ILoadingIconProps extends IIconProps {
 	/**	The speed of rotation of the spinner. */
@@ -52,7 +52,7 @@ const LoadingIcon: FC<ILoadingIconProps> = ({
 	);
 };
 
-LoadingIcon.displayName = 'LoadingIcon',
+LoadingIcon.displayName = 'LoadingIcon';
 LoadingIcon.peek = {
 	description: `
 		A loading icon.
@@ -63,7 +63,7 @@ LoadingIcon.peek = {
 };
 LoadingIcon.propTypes = {
 	...Icon.propTypes,
-	speed: oneOf(['fast', 'normal', 'slow'])`
+	speed: oneOf(_.values(durations))`
 		The speed of rotation of the spinner.
 	`,
 };

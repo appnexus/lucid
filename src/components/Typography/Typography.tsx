@@ -8,7 +8,7 @@ const cx = lucidClassNames.bind('&-Typography');
 
 const { node, string, oneOf } = PropTypes;
 
-enum ElementTypes {
+export enum ElementTypes {
 	p = 'p',
 	tabular = 'p',
 	h1 = 'h1',
@@ -22,24 +22,14 @@ enum ElementTypes {
 }
 
 export interface ITypographyProps {
-	//* Can contain elements or nested \`Typography\` components. */
+	/** Can contain elements or nested \`Typography\` components. */
 	children?: React.ReactNode;
 
 	/** Appended to the component-specific class names set on the root element. */
 	className?: string;
 
 	/** This prop defines the type of text that will be displayed. It may be an actual HTML element or something with extra semantic meaning. */
-	variant?:
-		| 'p'
-		| 'tabular'
-		| 'h1'
-		| 'h2'
-		| 'h3'
-		| 'a'
-		| 'pre'
-		| 'code'
-		| 'kbd'
-		| 'samp';
+	variant: keyof typeof ElementTypes;
 }
 
 const Typography: FC<ITypographyProps> = (props): React.ReactElement => {
@@ -76,18 +66,7 @@ Typography.propTypes = {
 		Appended to the component-specific class names set on the root element.
 	`,
 
-	variant: oneOf([
-		'p',
-		'tabular',
-		'h1',
-		'h2',
-		'h3',
-		'a',
-		'pre',
-		'code',
-		'kbd',
-		'samp',
-	]).isRequired`
+	variant: oneOf(_.values(ElementTypes)).isRequired`
 		This prop defines the type of text that will be displayed.
 		It may be an actual HTML element or something with extra semantic meaning.
 	`,
