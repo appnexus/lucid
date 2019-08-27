@@ -1,0 +1,56 @@
+@import (reference) '../../styles/variables.less';
+
+.@{prefix}-DraggableList {
+
+	font-size: @fontSize;
+	font-weight: @font-weight-medium;
+	color: @color-textColor;
+
+	.@{prefix}-DraggableList-Item {
+		background: @color-white;
+		border: @size-borderWidth solid @color-gray;
+		padding: 5px 5px 5px 9px;
+		cursor: grab;
+		display: flex;
+		align-items: center;
+
+		&:hover {
+			border: @size-borderWidth solid @color-mediumGray;
+			.@{prefix}-DotsIcon {
+				stroke: @color-primary;
+			}
+		}
+
+		&-content {
+			flex: 1;
+		}
+
+		&-handle {
+			transform: rotate(90deg);
+			.@{prefix}-DotsIcon {
+				stroke: @color-primary-50;
+
+				&:first-child {
+					margin-right: 2px;
+				}
+			}
+		}
+
+		&-is-dragging {
+			cursor: grabbing;
+		}
+	}
+
+	.@{prefix}-DraggableList-Divider {
+		height: 1px;
+		background: @color-primary;
+		visibility: hidden;
+		margin: 1px 0;
+		padding: 0;
+		border: 0;
+
+		&-is-visible {
+			visibility: visible;
+		}
+	}
+}

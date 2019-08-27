@@ -27,6 +27,18 @@ const colorList = [
 		variables: ['color-primaryLight', 'color-primary'],
 	},
 	{
+		category: 'Secondary',
+		description:
+			'Secondary colors are used to denote specific objects types. In our case we typically use these color for advertisers, insertion orders, and line items.',
+		variables: [
+			'color-secondary-1',
+			'color-secondary-2',
+			'color-secondary-3',
+			'color-secondary-4',
+			'color-secondary-5',
+		],
+	},
+	{
 		category: 'Text Colors',
 		variables: [
 			'color-textColor',
@@ -40,10 +52,15 @@ const colorList = [
 		description:
 			'Grays play an important role in lucid, and this set of grays forms the foundation for all the other variants. More prescriptive colors should be favored over these general grays when available.',
 		variables: [
-			'color-lightGray',
-			'color-gray',
-			'color-mediumGray',
-			'color-darkGray',
+			'color-neutral-1',
+			'color-neutral-2',
+			{ name: 'color-neutral-3', aliases: ['color-lightGray'] },
+			{ name: 'color-neutral-4', aliases: ['color-gray'] },
+			{ name: 'color-neutral-5', aliases: ['color-mediumGray'] },
+			'color-neutral-6',
+			'color-neutral-7',
+			'color-neutral-8',
+			{ name: 'color-neutral-9', aliases: ['color-darkGray'] },
 		],
 	},
 	{
@@ -168,6 +185,16 @@ const colorList = [
 		],
 	},
 	{
+		category: 'Chart 6',
+		variables: [
+			'color-chart-6-lightest',
+			'color-chart-6-light',
+			'color-chart-6',
+			'color-chart-6-dark',
+			'color-chart-6-darkest',
+		],
+	},
+	{
 		category: 'Chart Semantic Good',
 		variables: [
 			'color-chart-good-lightest',
@@ -260,20 +287,33 @@ const ColorPalette = createClass({
 
 				{_.map(colorList, (group, i) => (
 					<div key={i}>
-						<h3>{group.category}</h3>
+						<h3 style={{ marginTop: '1.5rem' }}>{group.category}</h3>
 
 						{group.description ? <p>{group.description}</p> : null}
 
-						{_.map(group.variables, (variable, j) => (
-							<div
-								key={j}
-								data-less-variable={variable}
-								className={classNames(cx('&-item', `&-${variable}`))}
-							>
-								<span>{`@${variable};`}</span>
-								<span>{hexMap[variable]}</span>
-							</div>
-						))}
+						{_.map(group.variables, (variable, j) => {
+							const hasAliases = _.isPlainObject(variable);
+							const variableName = hasAliases ? variable.name : variable;
+
+							return (
+								<div
+									key={j}
+									data-less-variable={variableName}
+									className={classNames(cx('&-item', `&-${variableName}`))}
+								>
+									<span>
+										{`@${variableName}; `}
+										{hasAliases
+											? `(aliases: ${variable.aliases
+													.map(v => `@${v};`)
+													.join(' ')})`
+											: null}
+									</span>
+
+									<span>{hexMap[variableName]}</span>
+								</div>
+							);
+						})}
 					</div>
 				))}
 			</div>

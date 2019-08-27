@@ -104,3 +104,38 @@ exports[`StickySection [common] example testing should match snapshot(s) for 3.s
   </div>
 </div>
 `;
+
+exports[`StickySection [common] example testing should match snapshot(s) for 4.top-offset 1`] = `
+<div
+  className="lucid-StickySection"
+  style={
+    Object {
+      "backgroundColor": "#2abbb0",
+      "color": "white",
+    }
+  }
+>
+  <div
+    className="lucid-StickySection-sticky-frame"
+    style={
+      Object {
+        "backgroundColor": "#2abbb0",
+        "color": "white",
+      }
+    }
+  >
+    <div
+      className="lucid-StickySection-sticky-section"
+      style={
+        Object {
+          "backgroundColor": "#2abbb0",
+          "color": "white",
+          "position": "relative",
+        }
+      }
+    >
+      This section has no lower bounds! but has a topOffset
+    </div>
+  </div>
+</div>
+`;

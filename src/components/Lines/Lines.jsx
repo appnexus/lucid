@@ -48,7 +48,7 @@ const Lines = createClass({
 			Takes one of the palettes exported from \`lucid.chartConstants\`.
 			Available palettes:
 
-			- \`PALETTE_6\` (default)
+			- \`PALETTE_7\` (default)
 			- \`PALETTE_30\`
 			- \`PALETTE_MONOCHROME_0_5\`
 			- \`PALETTE_MONOCHROME_1_5\`
@@ -56,6 +56,7 @@ const Lines = createClass({
 			- \`PALETTE_MONOCHROME_3_5\`
 			- \`PALETTE_MONOCHROME_4_5\`
 			- \`PALETTE_MONOCHROME_5_5\`
+			- \`PALETTE_MONOCHROME_6_5\`
 		`,
 
 		colorMap: object`
@@ -138,7 +139,7 @@ const Lines = createClass({
 			yFields: ['y'],
 			isStacked: false,
 			colorOffset: 0,
-			palette: chartConstants.PALETTE_6,
+			palette: chartConstants.PALETTE_7,
 		};
 	},
 

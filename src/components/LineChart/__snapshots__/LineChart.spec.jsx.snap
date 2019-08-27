@@ -71,6 +71,7 @@ exports[`LineChart [common] example testing should match snapshot(s) for 01.basi
           "color-chart-3",
           "color-chart-4",
           "color-chart-5",
+          "color-chart-6",
         ]
       }
       xField="x"
@@ -119,6 +120,7 @@ exports[`LineChart [common] example testing should match snapshot(s) for 01.basi
           "color-chart-3",
           "color-chart-4",
           "color-chart-5",
+          "color-chart-6",
         ]
       }
       xField="x"
@@ -386,6 +388,7 @@ exports[`LineChart [common] example testing should match snapshot(s) for 03.mult
           "color-chart-3",
           "color-chart-4",
           "color-chart-5",
+          "color-chart-6",
         ]
       }
       xField="x"
@@ -594,6 +597,7 @@ exports[`LineChart [common] example testing should match snapshot(s) for 03.mult
           "color-chart-3",
           "color-chart-4",
           "color-chart-5",
+          "color-chart-6",
         ]
       }
       xField="x"
@@ -918,6 +922,7 @@ exports[`LineChart [common] example testing should match snapshot(s) for 05.stac
           "color-chart-3",
           "color-chart-4",
           "color-chart-5",
+          "color-chart-6",
         ]
       }
       xField="x"
@@ -1009,6 +1014,7 @@ exports[`LineChart [common] example testing should match snapshot(s) for 05.stac
           "color-chart-3",
           "color-chart-4",
           "color-chart-5",
+          "color-chart-6",
         ]
       }
       xField="x"
@@ -1158,6 +1164,7 @@ exports[`LineChart [common] example testing should match snapshot(s) for 06.dual
           "color-chart-3",
           "color-chart-4",
           "color-chart-5",
+          "color-chart-6",
         ]
       }
       xField="x"
@@ -1216,6 +1223,7 @@ exports[`LineChart [common] example testing should match snapshot(s) for 06.dual
           "color-chart-3",
           "color-chart-4",
           "color-chart-5",
+          "color-chart-6",
         ]
       }
       xField="x"
@@ -1273,6 +1281,7 @@ exports[`LineChart [common] example testing should match snapshot(s) for 06.dual
           "color-chart-3",
           "color-chart-4",
           "color-chart-5",
+          "color-chart-6",
         ]
       }
       xField="x"
@@ -1331,6 +1340,7 @@ exports[`LineChart [common] example testing should match snapshot(s) for 06.dual
           "color-chart-3",
           "color-chart-4",
           "color-chart-5",
+          "color-chart-6",
         ]
       }
       xField="x"
@@ -1495,6 +1505,7 @@ exports[`LineChart [common] example testing should match snapshot(s) for 07.all-
           "color-chart-3",
           "color-chart-4",
           "color-chart-5",
+          "color-chart-6",
         ]
       }
       xField="date"
@@ -1562,6 +1573,7 @@ exports[`LineChart [common] example testing should match snapshot(s) for 07.all-
           "color-chart-3",
           "color-chart-4",
           "color-chart-5",
+          "color-chart-6",
         ]
       }
       xField="date"
@@ -1628,6 +1640,7 @@ exports[`LineChart [common] example testing should match snapshot(s) for 07.all-
           "color-chart-3",
           "color-chart-4",
           "color-chart-5",
+          "color-chart-6",
         ]
       }
       xField="date"
@@ -1726,6 +1739,7 @@ exports[`LineChart [common] example testing should match snapshot(s) for 08.stac
           "color-chart-3",
           "color-chart-4",
           "color-chart-5",
+          "color-chart-6",
         ]
       }
       xField="x"
@@ -1774,6 +1788,7 @@ exports[`LineChart [common] example testing should match snapshot(s) for 08.stac
           "color-chart-3",
           "color-chart-4",
           "color-chart-5",
+          "color-chart-6",
         ]
       }
       xField="x"
@@ -2020,6 +2035,7 @@ exports[`LineChart [common] example testing should match snapshot(s) for 10.abbr
           "color-chart-3",
           "color-chart-4",
           "color-chart-5",
+          "color-chart-6",
         ]
       }
       xField="x"
@@ -2072,6 +2088,7 @@ exports[`LineChart [common] example testing should match snapshot(s) for 10.abbr
           "color-chart-3",
           "color-chart-4",
           "color-chart-5",
+          "color-chart-6",
         ]
       }
       xField="x"
@@ -2291,6 +2308,7 @@ exports[`LineChart [common] example testing should match snapshot(s) for 11.colo
           "color-chart-3",
           "color-chart-4",
           "color-chart-5",
+          "color-chart-6",
         ]
       }
       xField="x"
@@ -2398,6 +2416,7 @@ exports[`LineChart [common] example testing should match snapshot(s) for 11.colo
           "color-chart-3",
           "color-chart-4",
           "color-chart-5",
+          "color-chart-6",
         ]
       }
       xField="x"
@@ -2504,6 +2523,7 @@ exports[`LineChart [common] example testing should match snapshot(s) for 11.colo
           "color-chart-3",
           "color-chart-4",
           "color-chart-5",
+          "color-chart-6",
         ]
       }
       xField="x"
@@ -2611,6 +2631,7 @@ exports[`LineChart [common] example testing should match snapshot(s) for 11.colo
           "color-chart-3",
           "color-chart-4",
           "color-chart-5",
+          "color-chart-6",
         ]
       }
       xField="x"
@@ -2901,6 +2922,7 @@ exports[`LineChart [common] example testing should match snapshot(s) for 16.fine
           "color-chart-3",
           "color-chart-4",
           "color-chart-5",
+          "color-chart-6",
         ]
       }
       xField="x"
@@ -2945,6 +2967,7 @@ exports[`LineChart [common] example testing should match snapshot(s) for 16.fine
           "color-chart-3",
           "color-chart-4",
           "color-chart-5",
+          "color-chart-6",
         ]
       }
       xField="x"

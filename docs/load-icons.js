@@ -500,6 +500,23 @@ module.exports = [
 	},
 
 	{
+		name: 'FlagIcon',
+		component: getDefaultExport(
+			require('../src/components/Icon/FlagIcon/FlagIcon')
+		),
+		examplesContext: require.context(
+			'../src/components/Icon/FlagIcon/examples',
+			true,
+			/\.jsx?$/
+		),
+		examplesContextRaw: require.context(
+			'!!raw-loader!../src/components/Icon/FlagIcon/examples',
+			true,
+			/\.jsx?$/
+		),
+	},
+
+	{
 		name: 'FolderIcon',
 		component: getDefaultExport(
 			require('../src/components/Icon/FolderIcon/FolderIcon')
@@ -511,6 +528,23 @@ module.exports = [
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Icon/FolderIcon/examples',
+			true,
+			/\.jsx?$/
+		),
+	},
+
+	{
+		name: 'FourSquaresIcon',
+		component: getDefaultExport(
+			require('../src/components/Icon/FourSquaresIcon/FourSquaresIcon')
+		),
+		examplesContext: require.context(
+			'../src/components/Icon/FourSquaresIcon/examples',
+			true,
+			/\.jsx?$/
+		),
+		examplesContextRaw: require.context(
+			'!!raw-loader!../src/components/Icon/FourSquaresIcon/examples',
 			true,
 			/\.jsx?$/
 		),

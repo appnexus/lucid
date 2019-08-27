@@ -178,6 +178,13 @@ const DataTable = createClass({
 		};
 	},
 
+	getInitialState() {
+		return {
+			// Represents the actively changing width as the cell is resized.
+			activeWidth: {},
+		};
+	},
+
 	components: {
 		Column: createClass({
 			displayName: 'DataTable.Column',
@@ -246,7 +253,15 @@ const DataTable = createClass({
 		this.fixedHeaderUnfixedColumnsRef.scrollLeft = event.target.scrollLeft;
 		this.fixedBodyFixedColumnsRef.scrollTop = event.target.scrollTop;
 	},
-
+	handleResize(columnWidth, { props: childProps }) {
+		// setting latest column width to Tbody
+		this.setState(state => ({
+			activeWidth: {
+				...state.activeWidth,
+				[childProps.children]: columnWidth,
+			},
+		}));
+	},
 	renderHeader(
 		startColumn,
 		endColumn,
@@ -280,7 +295,7 @@ const DataTable = createClass({
 								>
 									<Checkbox
 										isDisabled={!data || !data.length}
-										isSelected={data && data.length && allSelected}
+										isSelected={!!data && data.length > 0 && allSelected}
 										isIndeterminate={
 											!allSelected && !!data.find(d => d.isSelected)
 										}
@@ -292,6 +307,7 @@ const DataTable = createClass({
 							_.map(childComponentElements, ({ props, type }, index) =>
 								type === DataTable.Column ? (
 									<Th
+										onResize={props.isResizable ? this.handleResize : null}
 										{..._.omit(props, ['field', 'children', 'title'])}
 										onClick={
 											DataTable.shouldColumnHandleSort(props)
@@ -428,7 +444,9 @@ const DataTable = createClass({
 																endColumn
 												}
 												style={{
-													width: columnProps.width,
+													width:
+														this.state.activeWidth[columnProps.children] ||
+														columnProps.width,
 												}}
 												key={
 													'row' +

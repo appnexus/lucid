@@ -80,6 +80,7 @@ exports[`BarChart [common] example testing should match snapshot(s) for 01.basic
           "color-chart-3",
           "color-chart-4",
           "color-chart-5",
+          "color-chart-6",
         ]
       }
       renderTooltipBody={null}
@@ -324,6 +325,7 @@ exports[`BarChart [common] example testing should match snapshot(s) for 04.group
           "color-chart-3",
           "color-chart-4",
           "color-chart-5",
+          "color-chart-6",
         ]
       }
       renderTooltipBody={null}
@@ -469,6 +471,7 @@ exports[`BarChart [common] example testing should match snapshot(s) for 05.limit
           "color-chart-3",
           "color-chart-4",
           "color-chart-5",
+          "color-chart-6",
         ]
       }
       renderTooltipBody={null}
@@ -590,6 +593,7 @@ exports[`BarChart [common] example testing should match snapshot(s) for 06.all-t
           "color-chart-3",
           "color-chart-4",
           "color-chart-5",
+          "color-chart-6",
         ]
       }
       renderTooltipBody={null}
@@ -693,6 +697,7 @@ exports[`BarChart [common] example testing should match snapshot(s) for 07.stack
           "color-chart-3",
           "color-chart-4",
           "color-chart-5",
+          "color-chart-6",
         ]
       }
       renderTooltipBody={null}
@@ -795,6 +800,7 @@ exports[`BarChart [common] example testing should match snapshot(s) for 08.unfor
           "color-chart-3",
           "color-chart-4",
           "color-chart-5",
+          "color-chart-6",
         ]
       }
       renderTooltipBody={null}
@@ -895,6 +901,7 @@ exports[`BarChart [common] example testing should match snapshot(s) for 09.forma
           "color-chart-3",
           "color-chart-4",
           "color-chart-5",
+          "color-chart-6",
         ]
       }
       renderTooltipBody={null}
@@ -995,6 +1002,7 @@ exports[`BarChart [common] example testing should match snapshot(s) for 10.forma
           "color-chart-3",
           "color-chart-4",
           "color-chart-5",
+          "color-chart-6",
         ]
       }
       renderTooltipBody={[Function]}
@@ -1961,6 +1969,7 @@ exports[`BarChart [common] example testing should match snapshot(s) for 13.many-
           "color-chart-3",
           "color-chart-4",
           "color-chart-5",
+          "color-chart-6",
         ]
       }
       renderTooltipBody={null}

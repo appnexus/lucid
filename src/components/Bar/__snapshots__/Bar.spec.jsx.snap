@@ -392,7 +392,7 @@ exports[`Bar [common] example testing should match snapshot(s) for regular-color
 
 exports[`Bar [common] example testing should match snapshot(s) for regular-colors 31`] = `
 <rect
-  className="lucid-Bar lucid-Bar-color-chart-good-light"
+  className="lucid-Bar lucid-Bar-color-chart-6-lightest"
   height={100}
   style={Object {}}
   width={10}
@@ -403,7 +403,7 @@ exports[`Bar [common] example testing should match snapshot(s) for regular-color
 
 exports[`Bar [common] example testing should match snapshot(s) for regular-colors 32`] = `
 <rect
-  className="lucid-Bar lucid-Bar-color-chart-good"
+  className="lucid-Bar lucid-Bar-color-chart-6-light"
   height={100}
   style={Object {}}
   width={10}
@@ -414,7 +414,7 @@ exports[`Bar [common] example testing should match snapshot(s) for regular-color
 
 exports[`Bar [common] example testing should match snapshot(s) for regular-colors 33`] = `
 <rect
-  className="lucid-Bar lucid-Bar-color-chart-good-dark"
+  className="lucid-Bar lucid-Bar-color-chart-6"
   height={100}
   style={Object {}}
   width={10}
@@ -425,7 +425,7 @@ exports[`Bar [common] example testing should match snapshot(s) for regular-color
 
 exports[`Bar [common] example testing should match snapshot(s) for regular-colors 34`] = `
 <rect
-  className="lucid-Bar lucid-Bar-color-chart-bad-light"
+  className="lucid-Bar lucid-Bar-color-chart-6-dark"
   height={100}
   style={Object {}}
   width={10}
@@ -436,7 +436,7 @@ exports[`Bar [common] example testing should match snapshot(s) for regular-color
 
 exports[`Bar [common] example testing should match snapshot(s) for regular-colors 35`] = `
 <rect
-  className="lucid-Bar lucid-Bar-color-chart-bad"
+  className="lucid-Bar lucid-Bar-color-chart-6-darkest"
   height={100}
   style={Object {}}
   width={10}
@@ -447,7 +447,7 @@ exports[`Bar [common] example testing should match snapshot(s) for regular-color
 
 exports[`Bar [common] example testing should match snapshot(s) for regular-colors 36`] = `
 <rect
-  className="lucid-Bar lucid-Bar-color-chart-bad-dark"
+  className="lucid-Bar lucid-Bar-color-chart-good-light"
   height={100}
   style={Object {}}
   width={10}
@@ -457,6 +457,61 @@ exports[`Bar [common] example testing should match snapshot(s) for regular-color
 `;
 
 exports[`Bar [common] example testing should match snapshot(s) for regular-colors 37`] = `
+<rect
+  className="lucid-Bar lucid-Bar-color-chart-good"
+  height={100}
+  style={Object {}}
+  width={10}
+  x={5}
+  y={0}
+/>
+`;
+
+exports[`Bar [common] example testing should match snapshot(s) for regular-colors 38`] = `
+<rect
+  className="lucid-Bar lucid-Bar-color-chart-good-dark"
+  height={100}
+  style={Object {}}
+  width={10}
+  x={5}
+  y={0}
+/>
+`;
+
+exports[`Bar [common] example testing should match snapshot(s) for regular-colors 39`] = `
+<rect
+  className="lucid-Bar lucid-Bar-color-chart-bad-light"
+  height={100}
+  style={Object {}}
+  width={10}
+  x={5}
+  y={0}
+/>
+`;
+
+exports[`Bar [common] example testing should match snapshot(s) for regular-colors 40`] = `
+<rect
+  className="lucid-Bar lucid-Bar-color-chart-bad"
+  height={100}
+  style={Object {}}
+  width={10}
+  x={5}
+  y={0}
+/>
+`;
+
+exports[`Bar [common] example testing should match snapshot(s) for regular-colors 41`] = `
+<rect
+  className="lucid-Bar lucid-Bar-color-chart-bad-dark"
+  height={100}
+  style={Object {}}
+  width={10}
+  x={5}
+  y={0}
+/>
+`;
+
+exports[`Bar [common] example testing should match snapshot(s) for regular-colors 42`] = `
 <rect
   className="lucid-Bar lucid-Bar-color-chart-neutral"
   height={100}

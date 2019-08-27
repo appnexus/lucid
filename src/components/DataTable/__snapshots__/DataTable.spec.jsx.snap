@@ -25,6 +25,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
           isSorted={false}
           key="id"
           onClick={null}
+          onResize={null}
           rowSpan={null}
           sortDirection="up"
         >
@@ -36,6 +37,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
           isSorted={false}
           key="first_name"
           onClick={null}
+          onResize={null}
           rowSpan={null}
           sortDirection="up"
           width={100}
@@ -48,6 +50,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
           isSorted={false}
           key="last_name"
           onClick={null}
+          onResize={null}
           rowSpan={null}
           sortDirection="up"
           width={100}
@@ -60,6 +63,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
           isSorted={false}
           key="email"
           onClick={null}
+          onResize={null}
           rowSpan={null}
           sortDirection="up"
         >
@@ -71,6 +75,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
           isSorted={false}
           key="occupation"
           onClick={null}
+          onResize={null}
           rowSpan={null}
           sortDirection="up"
           width={100}
@@ -83,6 +88,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
           isSorted={false}
           key="salary"
           onClick={null}
+          onResize={null}
           rowSpan={null}
           sortDirection="up"
           width={100}
@@ -95,6 +101,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
           isSorted={false}
           key="status"
           onClick={null}
+          onResize={null}
           rowSpan={null}
           sortDirection="up"
           width={100}
@@ -1145,6 +1152,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
           isSorted={false}
           key="id"
           onClick={null}
+          onResize={null}
           rowSpan={2}
           sortDirection="up"
         >
@@ -1166,6 +1174,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
           isSorted={false}
           key="email"
           onClick={null}
+          onResize={null}
           rowSpan={2}
           sortDirection="up"
         >
@@ -1178,6 +1187,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
           isSorted={false}
           key="occupation"
           onClick={null}
+          onResize={null}
           rowSpan={2}
           sortDirection="up"
           width={100}
@@ -1191,6 +1201,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
           isSorted={false}
           key="salary"
           onClick={null}
+          onResize={null}
           rowSpan={2}
           sortDirection="up"
           width={100}
@@ -1204,6 +1215,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
           isSorted={false}
           key="status"
           onClick={null}
+          onResize={null}
           rowSpan={2}
           sortDirection="up"
           width={100}
@@ -2313,6 +2325,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
           isSorted={false}
           key="id"
           onClick={null}
+          onResize={null}
           rowSpan={null}
           sortDirection="up"
         >
@@ -2326,6 +2339,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
           isSorted={false}
           key="first_name"
           onClick={[Function]}
+          onResize={null}
           rowSpan={null}
           sortDirection="up"
           width={100}
@@ -2340,6 +2354,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
           isSorted={false}
           key="last_name"
           onClick={[Function]}
+          onResize={null}
           rowSpan={null}
           sortDirection="up"
           width={100}
@@ -2352,6 +2367,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
           isSorted={false}
           key="email"
           onClick={null}
+          onResize={null}
           rowSpan={null}
           sortDirection="up"
         >
@@ -2364,6 +2380,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
           isSorted={false}
           key="occupation"
           onClick={null}
+          onResize={null}
           rowSpan={null}
           sortDirection="up"
           width={100}
@@ -2377,6 +2394,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
           isSorted={false}
           key="salary"
           onClick={null}
+          onResize={null}
           rowSpan={null}
           sortDirection="up"
           width={100}
@@ -2390,6 +2408,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
           isSorted={false}
           key="status"
           onClick={null}
+          onResize={null}
           rowSpan={null}
           sortDirection="up"
           width={100}
@@ -3568,6 +3587,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           isSorted={true}
           key="id"
           onClick={[Function]}
+          onResize={null}
           rowSpan={null}
           sortDirection="down"
           width={41}
@@ -3584,6 +3604,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           isSorted={false}
           key="first_name"
           onClick={[Function]}
+          onResize={[Function]}
           rowSpan={null}
           sortDirection="down"
           width={100}
@@ -3598,6 +3619,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           isSorted={false}
           key="last_name"
           onClick={[Function]}
+          onResize={[Function]}
           rowSpan={null}
           sortDirection="down"
           width={100}
@@ -3611,6 +3633,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           isSorted={false}
           key="email"
           onClick={[Function]}
+          onResize={null}
           rowSpan={null}
           sortDirection="down"
         >
@@ -3624,6 +3647,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           isSorted={false}
           key="occupation"
           onClick={[Function]}
+          onResize={null}
           rowSpan={null}
           sortDirection="down"
           width={100}
@@ -3638,6 +3662,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           isSorted={false}
           key="salary"
           onClick={[Function]}
+          onResize={null}
           rowSpan={null}
           sortDirection="down"
           width={100}
@@ -3651,6 +3676,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           isSorted={false}
           key="status"
           onClick={null}
+          onResize={null}
           rowSpan={null}
           sortDirection="up"
           width={100}
@@ -4888,6 +4914,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
           isSorted={false}
           key="id"
           onClick={null}
+          onResize={null}
           rowSpan={null}
           sortDirection="up"
         >
@@ -4899,6 +4926,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
           isSorted={false}
           key="first_name"
           onClick={null}
+          onResize={null}
           rowSpan={null}
           sortDirection="up"
           width={100}
@@ -4911,6 +4939,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
           isSorted={false}
           key="last_name"
           onClick={null}
+          onResize={null}
           rowSpan={null}
           sortDirection="up"
           width={100}
@@ -4923,6 +4952,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
           isSorted={false}
           key="email"
           onClick={null}
+          onResize={null}
           rowSpan={null}
           sortDirection="up"
         >
@@ -4934,6 +4964,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
           isSorted={false}
           key="occupation"
           onClick={null}
+          onResize={null}
           rowSpan={null}
           sortDirection="up"
           width={100}
@@ -4946,6 +4977,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
           isSorted={false}
           key="salary"
           onClick={null}
+          onResize={null}
           rowSpan={null}
           sortDirection="up"
           width={100}
@@ -4958,6 +4990,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
           isSorted={false}
           key="status"
           onClick={null}
+          onResize={null}
           rowSpan={null}
           sortDirection="up"
           width={100}
@@ -6008,6 +6041,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 06.empt
           isSorted={false}
           key="id"
           onClick={null}
+          onResize={null}
           rowSpan={null}
           sortDirection="up"
         >
@@ -6019,6 +6053,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 06.empt
           isSorted={false}
           key="first_name"
           onClick={null}
+          onResize={null}
           rowSpan={null}
           sortDirection="up"
           width={100}
@@ -6031,6 +6066,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 06.empt
           isSorted={false}
           key="last_name"
           onClick={null}
+          onResize={null}
           rowSpan={null}
           sortDirection="up"
           width={100}
@@ -6043,6 +6079,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 06.empt
           isSorted={false}
           key="email"
           onClick={null}
+          onResize={null}
           rowSpan={null}
           sortDirection="up"
         >
@@ -6054,6 +6091,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 06.empt
           isSorted={false}
           key="occupation"
           onClick={null}
+          onResize={null}
           rowSpan={null}
           sortDirection="up"
           width={100}
@@ -6774,6 +6812,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
           isSorted={false}
           key="id"
           onClick={null}
+          onResize={null}
           rowSpan={null}
           sortDirection="up"
         >
@@ -6785,6 +6824,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
           isSorted={false}
           key="first_name"
           onClick={null}
+          onResize={null}
           rowSpan={null}
           sortDirection="up"
           width={100}
@@ -6797,6 +6837,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
           isSorted={false}
           key="last_name"
           onClick={null}
+          onResize={null}
           rowSpan={null}
           sortDirection="up"
           width={100}
@@ -6809,6 +6850,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
           isSorted={false}
           key="email"
           onClick={null}
+          onResize={null}
           rowSpan={null}
           sortDirection="up"
         >
@@ -6820,6 +6862,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
           isSorted={false}
           key="occupation"
           onClick={null}
+          onResize={null}
           rowSpan={null}
           sortDirection="up"
           width={100}
@@ -7873,6 +7916,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 08.empt
           isSorted={false}
           key="id"
           onClick={[Function]}
+          onResize={null}
           rowSpan={null}
           sortDirection="up"
           width={41}
@@ -7886,6 +7930,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 08.empt
           isSorted={false}
           key="first_name"
           onClick={null}
+          onResize={null}
           rowSpan={null}
           sortDirection="up"
           width={100}
@@ -7899,6 +7944,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 08.empt
           isSorted={false}
           key="last_name"
           onClick={null}
+          onResize={null}
           rowSpan={null}
           sortDirection="up"
           width={100}
@@ -7911,6 +7957,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 08.empt
           isSorted={false}
           key="email"
           onClick={null}
+          onResize={null}
           rowSpan={null}
           sortDirection="up"
         >
@@ -7923,6 +7970,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 08.empt
           isSorted={false}
           key="occupation"
           onClick={null}
+          onResize={null}
           rowSpan={null}
           sortDirection="up"
           width={100}
@@ -8633,6 +8681,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.load
           isSorted={false}
           key="id"
           onClick={null}
+          onResize={null}
           rowSpan={null}
           sortDirection="up"
         >
@@ -8644,6 +8693,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.load
           isSorted={false}
           key="first_name"
           onClick={null}
+          onResize={null}
           rowSpan={null}
           sortDirection="up"
           width={100}
@@ -8656,6 +8706,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.load
           isSorted={false}
           key="last_name"
           onClick={null}
+          onResize={null}
           rowSpan={null}
           sortDirection="up"
           width={100}
@@ -8668,6 +8719,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.load
           isSorted={false}
           key="email"
           onClick={null}
+          onResize={null}
           rowSpan={null}
           sortDirection="up"
         >
@@ -8679,6 +8731,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.load
           isSorted={false}
           key="occupation"
           onClick={null}
+          onResize={null}
           rowSpan={null}
           sortDirection="up"
           width={100}
@@ -9405,6 +9458,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.min-
           isSorted={false}
           key="id"
           onClick={null}
+          onResize={null}
           rowSpan={null}
           sortDirection="up"
         >
@@ -9416,6 +9470,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.min-
           isSorted={false}
           key="first_name"
           onClick={null}
+          onResize={null}
           rowSpan={null}
           sortDirection="up"
           width={100}
@@ -9428,6 +9483,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.min-
           isSorted={false}
           key="last_name"
           onClick={null}
+          onResize={null}
           rowSpan={null}
           sortDirection="up"
           width={100}
@@ -9440,6 +9496,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.min-
           isSorted={false}
           key="email"
           onClick={null}
+          onResize={null}
           rowSpan={null}
           sortDirection="up"
         >
@@ -9451,6 +9508,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.min-
           isSorted={false}
           key="occupation"
           onClick={null}
+          onResize={null}
           rowSpan={null}
           sortDirection="up"
           width={100}
@@ -9463,6 +9521,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.min-
           isSorted={false}
           key="salary"
           onClick={null}
+          onResize={null}
           rowSpan={null}
           sortDirection="up"
           width={100}
@@ -9475,6 +9534,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.min-
           isSorted={false}
           key="status"
           onClick={null}
+          onResize={null}
           rowSpan={null}
           sortDirection="up"
           width={100}
@@ -10274,6 +10334,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.fixe
                 isSorted={false}
                 key="id"
                 onClick={null}
+                onResize={null}
                 rowSpan={null}
                 sortDirection="up"
                 width={35}
@@ -10307,6 +10368,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.fixe
                 isSorted={false}
                 key="first_name"
                 onClick={null}
+                onResize={null}
                 rowSpan={null}
                 sortDirection="up"
                 width={100}
@@ -10319,6 +10381,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.fixe
                 isSorted={false}
                 key="last_name"
                 onClick={null}
+                onResize={null}
                 rowSpan={null}
                 sortDirection="up"
                 width={100}
@@ -10331,6 +10394,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.fixe
                 isSorted={false}
                 key="email"
                 onClick={null}
+                onResize={null}
                 rowSpan={null}
                 sortDirection="up"
                 width={900}
@@ -10343,6 +10407,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.fixe
                 isSorted={false}
                 key="occupation"
                 onClick={null}
+                onResize={null}
                 rowSpan={null}
                 sortDirection="up"
                 width={100}
@@ -10355,6 +10420,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.fixe
                 isSorted={false}
                 key="salary"
                 onClick={null}
+                onResize={null}
                 rowSpan={null}
                 sortDirection="up"
                 width={100}
@@ -10367,6 +10433,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.fixe
                 isSorted={false}
                 key="status"
                 onClick={null}
+                onResize={null}
                 rowSpan={null}
                 sortDirection="up"
                 width={100}

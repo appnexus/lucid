@@ -37,6 +37,11 @@ const Banner = createClass({
 			Set this to \`true\` if you want to have a \`x\` close icon.
 		`,
 
+		isFilled: bool`
+			Defaults to true.
+			If set to \`false\` the banner will not be filled in.
+		`,
+
 		isSmall: bool`
 			If set to \`true\` the banner have smaller padding on the inside.
 		`,
@@ -67,6 +72,7 @@ const Banner = createClass({
 		return {
 			icon: null,
 			isCloseable: true,
+			isFilled: true,
 			isSmall: false,
 			kind: 'default',
 			onClose: _.noop,
@@ -87,6 +93,7 @@ const Banner = createClass({
 			children,
 			isCloseable,
 			isClosed,
+			isFilled,
 			isSmall,
 			...passThroughs
 		} = this.props;
@@ -117,6 +124,7 @@ const Banner = createClass({
 								'&-danger': kind === 'danger',
 								'&-info': kind === 'info',
 								'&-small': isSmall,
+								'&-filled': isFilled,
 							},
 							className
 						)}

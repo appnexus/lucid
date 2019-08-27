@@ -97,6 +97,44 @@ export default createClass({
 						Has Custom Icon
 					</Banner>
 				</div>
+
+				<div>
+					<Banner style={{ marginBottom: 8 }} isSmall={true} isFilled={false}>
+						Default -- Outline Only
+					</Banner>
+					<Banner
+						kind='success'
+						style={{ marginBottom: 8 }}
+						isSmall={true}
+						isFilled={false}
+					>
+						Success -- Outline Only
+					</Banner>
+					<Banner
+						kind='warning'
+						style={{ marginBottom: 8 }}
+						isSmall={true}
+						isFilled={false}
+					>
+						Warning -- Outline Only
+					</Banner>
+					<Banner
+						kind='danger'
+						style={{ marginBottom: 8 }}
+						isSmall={true}
+						isFilled={false}
+					>
+						Danger -- Outline Only
+					</Banner>
+					<Banner
+						kind='info'
+						style={{ marginBottom: 8 }}
+						isSmall={true}
+						isFilled={false}
+					>
+						Info -- Outline Only
+					</Banner>
+				</div>
 			</div>
 		);
 	},

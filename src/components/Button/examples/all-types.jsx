@@ -27,6 +27,15 @@ export default () => (
 						{size ? size : 'standard'} {kind}
 					</Button>
 					<Button
+						isDisabled
+						style={{ gridColumn: sizeIndex + 1 }}
+						size={size}
+						kind={kind}
+					>
+						<CheckIcon />
+						disabled {size ? size : 'standard'} {kind}
+					</Button>
+					<Button
 						style={{ gridColumn: sizeIndex + 1 }}
 						size={size}
 						kind={kind}
