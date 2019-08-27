@@ -21,6 +21,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
       >
         <Table.Th
           align="left"
+          field="id"
           isResizable={false}
           isSorted={false}
           key="id"
@@ -33,6 +34,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
         </Table.Th>
         <Table.Th
           align="left"
+          field="first_name"
           isResizable={false}
           isSorted={false}
           key="first_name"
@@ -46,6 +48,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
         </Table.Th>
         <Table.Th
           align="left"
+          field="last_name"
           isResizable={false}
           isSorted={false}
           key="last_name"
@@ -59,6 +62,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
         </Table.Th>
         <Table.Th
           align="left"
+          field="email"
           isResizable={false}
           isSorted={false}
           key="email"
@@ -71,6 +75,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
         </Table.Th>
         <Table.Th
           align="left"
+          field="occupation"
           isResizable={false}
           isSorted={false}
           key="occupation"
@@ -84,6 +89,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
         </Table.Th>
         <Table.Th
           align="right"
+          field="salary"
           isResizable={false}
           isSorted={false}
           key="salary"
@@ -97,6 +103,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
         </Table.Th>
         <Table.Th
           align="center"
+          field="status"
           isResizable={false}
           isSorted={false}
           key="status"
@@ -1148,6 +1155,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
       >
         <Table.Th
           align="left"
+          field="id"
           isResizable={false}
           isSorted={false}
           key="id"
@@ -1170,6 +1178,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
         </Table.Th>
         <Table.Th
           align="left"
+          field="email"
           isResizable={false}
           isSorted={false}
           key="email"
@@ -1182,6 +1191,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
         </Table.Th>
         <Table.Th
           align="left"
+          field="occupation"
           hasBorderLeft={true}
           isResizable={false}
           isSorted={false}
@@ -1196,6 +1206,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
         </Table.Th>
         <Table.Th
           align="right"
+          field="salary"
           hasBorderLeft={true}
           isResizable={false}
           isSorted={false}
@@ -1210,6 +1221,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
         </Table.Th>
         <Table.Th
           align="center"
+          field="status"
           hasBorderLeft={true}
           isResizable={false}
           isSorted={false}
@@ -2320,6 +2332,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
         </Table.Th>
         <Table.Th
           align="left"
+          field="id"
           hasBorderLeft={true}
           isResizable={false}
           isSorted={false}
@@ -2333,6 +2346,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
         </Table.Th>
         <Table.Th
           align="left"
+          field="first_name"
           hasBorderLeft={true}
           isResizable={false}
           isSortable={true}
@@ -2348,6 +2362,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
         </Table.Th>
         <Table.Th
           align="left"
+          field="last_name"
           hasBorderRight={true}
           isResizable={false}
           isSortable={true}
@@ -2363,6 +2378,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
         </Table.Th>
         <Table.Th
           align="left"
+          field="email"
           isResizable={false}
           isSorted={false}
           key="email"
@@ -2375,6 +2391,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
         </Table.Th>
         <Table.Th
           align="left"
+          field="occupation"
           hasBorderLeft={true}
           isResizable={false}
           isSorted={false}
@@ -2389,6 +2406,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
         </Table.Th>
         <Table.Th
           align="right"
+          field="salary"
           hasBorderLeft={true}
           isResizable={false}
           isSorted={false}
@@ -2403,6 +2421,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
         </Table.Th>
         <Table.Th
           align="center"
+          field="status"
           hasBorderLeft={true}
           isResizable={false}
           isSorted={false}
@@ -3611,6 +3630,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
         </Table.Th>
         <Table.Th
           align="left"
+          field="id"
           hasBorderLeft={true}
           isResizable={false}
           isSortable={true}
@@ -3627,6 +3647,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
         <Table.Th
           align="left"
           className="parent"
+          field="first_name"
           hasBorderLeft={true}
           hasBorderRight={true}
           isResizable={true}
@@ -3643,6 +3664,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
         </Table.Th>
         <Table.Th
           align="left"
+          field="last_name"
           hasBorderRight={true}
           isResizable={true}
           isSortable={true}
@@ -3658,6 +3680,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
         </Table.Th>
         <Table.Th
           align="left"
+          field="email"
           isResizable={false}
           isSortable={true}
           isSorted={false}
@@ -3671,6 +3694,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
         </Table.Th>
         <Table.Th
           align="left"
+          field="occupation"
           hasBorderLeft={true}
           isResizable={false}
           isSortable={true}
@@ -3686,6 +3710,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
         </Table.Th>
         <Table.Th
           align="right"
+          field="salary"
           hasBorderLeft={true}
           isResizable={false}
           isSortable={true}
@@ -3701,6 +3726,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
         </Table.Th>
         <Table.Th
           align="center"
+          field="status"
           hasBorderLeft={true}
           isResizable={false}
           isSorted={false}
@@ -4969,6 +4995,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
       >
         <Table.Th
           align="left"
+          field="id"
           isResizable={false}
           isSorted={false}
           key="id"
@@ -4981,6 +5008,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
         </Table.Th>
         <Table.Th
           align="left"
+          field="first_name"
           isResizable={false}
           isSorted={false}
           key="first_name"
@@ -4994,6 +5022,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
         </Table.Th>
         <Table.Th
           align="left"
+          field="last_name"
           isResizable={false}
           isSorted={false}
           key="last_name"
@@ -5007,6 +5036,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
         </Table.Th>
         <Table.Th
           align="left"
+          field="email"
           isResizable={false}
           isSorted={false}
           key="email"
@@ -5019,6 +5049,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
         </Table.Th>
         <Table.Th
           align="left"
+          field="occupation"
           isResizable={false}
           isSorted={false}
           key="occupation"
@@ -5032,6 +5063,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
         </Table.Th>
         <Table.Th
           align="right"
+          field="salary"
           isResizable={false}
           isSorted={false}
           key="salary"
@@ -5045,6 +5077,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
         </Table.Th>
         <Table.Th
           align="center"
+          field="status"
           isResizable={false}
           isSorted={false}
           key="status"
@@ -6096,6 +6129,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 06.empt
       >
         <Table.Th
           align="left"
+          field="id"
           isResizable={false}
           isSorted={false}
           key="id"
@@ -6108,6 +6142,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 06.empt
         </Table.Th>
         <Table.Th
           align="left"
+          field="first_name"
           isResizable={false}
           isSorted={false}
           key="first_name"
@@ -6121,6 +6156,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 06.empt
         </Table.Th>
         <Table.Th
           align="left"
+          field="last_name"
           isResizable={false}
           isSorted={false}
           key="last_name"
@@ -6134,6 +6170,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 06.empt
         </Table.Th>
         <Table.Th
           align="center"
+          field="email"
           isResizable={false}
           isSorted={false}
           key="email"
@@ -6146,6 +6183,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 06.empt
         </Table.Th>
         <Table.Th
           align="right"
+          field="occupation"
           isResizable={false}
           isSorted={false}
           key="occupation"
@@ -6867,6 +6905,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
       >
         <Table.Th
           align="left"
+          field="id"
           isResizable={false}
           isSorted={false}
           key="id"
@@ -6879,6 +6918,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
         </Table.Th>
         <Table.Th
           align="left"
+          field="first_name"
           isResizable={false}
           isSorted={false}
           key="first_name"
@@ -6892,6 +6932,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
         </Table.Th>
         <Table.Th
           align="left"
+          field="last_name"
           isResizable={false}
           isSorted={false}
           key="last_name"
@@ -6905,6 +6946,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
         </Table.Th>
         <Table.Th
           align="center"
+          field="email"
           isResizable={false}
           isSorted={false}
           key="email"
@@ -6917,6 +6959,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
         </Table.Th>
         <Table.Th
           align="right"
+          field="occupation"
           isResizable={false}
           isSorted={false}
           key="occupation"
@@ -7969,6 +8012,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 08.empt
       >
         <Table.Th
           align="center"
+          field="id"
           hasBorderLeft={true}
           isResizable={false}
           isSortable={true}
@@ -7984,6 +8028,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 08.empt
         </Table.Th>
         <Table.Th
           align="left"
+          field="first_name"
           hasBorderLeft={true}
           isResizable={false}
           isSorted={false}
@@ -7998,6 +8043,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 08.empt
         </Table.Th>
         <Table.Th
           align="left"
+          field="last_name"
           hasBorderRight={true}
           isResizable={false}
           isSorted={false}
@@ -8012,6 +8058,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 08.empt
         </Table.Th>
         <Table.Th
           align="center"
+          field="email"
           isResizable={false}
           isSorted={false}
           key="email"
@@ -8024,6 +8071,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 08.empt
         </Table.Th>
         <Table.Th
           align="right"
+          field="occupation"
           hasBorderLeft={true}
           isResizable={false}
           isSorted={false}
@@ -8736,6 +8784,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.load
       >
         <Table.Th
           align="left"
+          field="id"
           isResizable={false}
           isSorted={false}
           key="id"
@@ -8748,6 +8797,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.load
         </Table.Th>
         <Table.Th
           align="left"
+          field="first_name"
           isResizable={false}
           isSorted={false}
           key="first_name"
@@ -8761,6 +8811,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.load
         </Table.Th>
         <Table.Th
           align="left"
+          field="last_name"
           isResizable={false}
           isSorted={false}
           key="last_name"
@@ -8774,6 +8825,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.load
         </Table.Th>
         <Table.Th
           align="center"
+          field="email"
           isResizable={false}
           isSorted={false}
           key="email"
@@ -8786,6 +8838,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.load
         </Table.Th>
         <Table.Th
           align="right"
+          field="occupation"
           isResizable={false}
           isSorted={false}
           key="occupation"
@@ -9513,6 +9566,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.min-
         </Table.Th>
         <Table.Th
           align="left"
+          field="id"
           isResizable={false}
           isSorted={false}
           key="id"
@@ -9525,6 +9579,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.min-
         </Table.Th>
         <Table.Th
           align="left"
+          field="first_name"
           isResizable={false}
           isSorted={false}
           key="first_name"
@@ -9538,6 +9593,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.min-
         </Table.Th>
         <Table.Th
           align="left"
+          field="last_name"
           isResizable={false}
           isSorted={false}
           key="last_name"
@@ -9551,6 +9607,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.min-
         </Table.Th>
         <Table.Th
           align="left"
+          field="email"
           isResizable={false}
           isSorted={false}
           key="email"
@@ -9563,6 +9620,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.min-
         </Table.Th>
         <Table.Th
           align="left"
+          field="occupation"
           isResizable={false}
           isSorted={false}
           key="occupation"
@@ -9576,6 +9634,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.min-
         </Table.Th>
         <Table.Th
           align="right"
+          field="salary"
           isResizable={false}
           isSorted={false}
           key="salary"
@@ -9589,6 +9648,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.min-
         </Table.Th>
         <Table.Th
           align="center"
+          field="status"
           isResizable={false}
           isSorted={false}
           key="status"
@@ -10401,6 +10461,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.fixe
               </Table.Th>
               <Table.Th
                 align="left"
+                field="id"
                 isResizable={false}
                 isSorted={false}
                 key="id"
@@ -10435,6 +10496,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.fixe
             >
               <Table.Th
                 align="left"
+                field="first_name"
                 isResizable={false}
                 isSorted={false}
                 key="first_name"
@@ -10448,6 +10510,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.fixe
               </Table.Th>
               <Table.Th
                 align="left"
+                field="last_name"
                 isResizable={false}
                 isSorted={false}
                 key="last_name"
@@ -10461,6 +10524,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.fixe
               </Table.Th>
               <Table.Th
                 align="left"
+                field="email"
                 isResizable={false}
                 isSorted={false}
                 key="email"
@@ -10474,6 +10538,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.fixe
               </Table.Th>
               <Table.Th
                 align="left"
+                field="occupation"
                 isResizable={false}
                 isSorted={false}
                 key="occupation"
@@ -10487,6 +10552,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.fixe
               </Table.Th>
               <Table.Th
                 align="right"
+                field="salary"
                 isResizable={false}
                 isSorted={false}
                 key="salary"
@@ -10500,11 +10566,3097 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.fixe
               </Table.Th>
               <Table.Th
                 align="center"
+                field="status"
                 isResizable={false}
                 isSorted={false}
                 key="status"
                 onClick={null}
                 onResize={null}
+                rowSpan={null}
+                sortDirection="up"
+                width={100}
+              >
+                Status
+              </Table.Th>
+            </Table.Tr>
+          </Table.Thead>
+        </Table>
+      </div>
+    </div>
+    <div
+      className="lucid-DataTable-fixed-body"
+    >
+      <div
+        className="lucid-DataTable-fixed-body-fixed-columns"
+      >
+        <Table
+          className="lucid-DataTable-fixed-body-fixed-columns-Table"
+          density="extended"
+          hasBorder={false}
+          hasHover={true}
+          hasLightHeader={false}
+          hasWordWrap={false}
+        >
+          <Table.Tbody>
+            <Table.Tr
+              isActionable={false}
+              isActive={false}
+              isDisabled={false}
+              isSelected={false}
+              key="row0"
+              onClick={[Function]}
+              style={
+                Object {
+                  "height": 50,
+                }
+              }
+            >
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="lucid-DataTable-row-selector"
+                width={41}
+              >
+                <Checkbox
+                  isDisabled={false}
+                  isIndeterminate={false}
+                  isSelected={false}
+                  onSelect={[Function]}
+                />
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={true}
+                key="row0id"
+                style={
+                  Object {
+                    "width": 35,
+                  }
+                }
+              >
+                1
+              </Table.Td>
+            </Table.Tr>
+            <Table.Tr
+              isActionable={false}
+              isActive={false}
+              isDisabled={false}
+              isSelected={true}
+              key="row1"
+              onClick={[Function]}
+              style={
+                Object {
+                  "height": 50,
+                }
+              }
+            >
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="lucid-DataTable-row-selector"
+                width={41}
+              >
+                <Checkbox
+                  isDisabled={false}
+                  isIndeterminate={false}
+                  isSelected={true}
+                  onSelect={[Function]}
+                />
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={true}
+                key="row1id"
+                style={
+                  Object {
+                    "width": 35,
+                  }
+                }
+              >
+                2
+              </Table.Td>
+            </Table.Tr>
+            <Table.Tr
+              isActionable={false}
+              isActive={true}
+              isDisabled={false}
+              isSelected={false}
+              key="row2"
+              onClick={[Function]}
+              style={
+                Object {
+                  "height": 50,
+                }
+              }
+            >
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="lucid-DataTable-row-selector"
+                width={41}
+              >
+                <Checkbox
+                  isDisabled={false}
+                  isIndeterminate={false}
+                  isSelected={false}
+                  onSelect={[Function]}
+                />
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={true}
+                key="row2id"
+                style={
+                  Object {
+                    "width": 35,
+                  }
+                }
+              >
+                3
+              </Table.Td>
+            </Table.Tr>
+            <Table.Tr
+              isActionable={false}
+              isActive={false}
+              isDisabled={false}
+              isSelected={false}
+              key="row3"
+              onClick={[Function]}
+              style={
+                Object {
+                  "height": 50,
+                }
+              }
+            >
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="lucid-DataTable-row-selector"
+                width={41}
+              >
+                <Checkbox
+                  isDisabled={false}
+                  isIndeterminate={false}
+                  isSelected={false}
+                  onSelect={[Function]}
+                />
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={true}
+                key="row3id"
+                style={
+                  Object {
+                    "width": 35,
+                  }
+                }
+              >
+                4
+              </Table.Td>
+            </Table.Tr>
+            <Table.Tr
+              isActionable={false}
+              isActive={false}
+              isDisabled={false}
+              isSelected={false}
+              key="row4"
+              onClick={[Function]}
+              style={
+                Object {
+                  "height": 50,
+                }
+              }
+            >
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="lucid-DataTable-row-selector"
+                width={41}
+              >
+                <Checkbox
+                  isDisabled={false}
+                  isIndeterminate={false}
+                  isSelected={false}
+                  onSelect={[Function]}
+                />
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={true}
+                key="row4id"
+                style={
+                  Object {
+                    "width": 35,
+                  }
+                }
+              >
+                5
+              </Table.Td>
+            </Table.Tr>
+            <Table.Tr
+              isActionable={false}
+              isActive={false}
+              isDisabled={false}
+              isSelected={false}
+              key="row5"
+              onClick={[Function]}
+              style={
+                Object {
+                  "height": 50,
+                }
+              }
+            >
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="lucid-DataTable-row-selector"
+                width={41}
+              >
+                <Checkbox
+                  isDisabled={false}
+                  isIndeterminate={false}
+                  isSelected={false}
+                  onSelect={[Function]}
+                />
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={true}
+                key="row5id"
+                style={
+                  Object {
+                    "width": 35,
+                  }
+                }
+              >
+                6
+              </Table.Td>
+            </Table.Tr>
+            <Table.Tr
+              isActionable={false}
+              isActive={false}
+              isDisabled={false}
+              isSelected={false}
+              key="row6"
+              onClick={[Function]}
+              style={
+                Object {
+                  "height": 50,
+                }
+              }
+            >
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="lucid-DataTable-row-selector"
+                width={41}
+              >
+                <Checkbox
+                  isDisabled={false}
+                  isIndeterminate={false}
+                  isSelected={false}
+                  onSelect={[Function]}
+                />
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={true}
+                key="row6id"
+                style={
+                  Object {
+                    "width": 35,
+                  }
+                }
+              >
+                7
+              </Table.Td>
+            </Table.Tr>
+            <Table.Tr
+              isActionable={false}
+              isActive={false}
+              isDisabled={false}
+              isSelected={false}
+              key="row7"
+              onClick={[Function]}
+              style={
+                Object {
+                  "height": 50,
+                }
+              }
+            >
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="lucid-DataTable-row-selector"
+                width={41}
+              >
+                <Checkbox
+                  isDisabled={false}
+                  isIndeterminate={false}
+                  isSelected={false}
+                  onSelect={[Function]}
+                />
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={true}
+                key="row7id"
+                style={
+                  Object {
+                    "width": 35,
+                  }
+                }
+              >
+                8
+              </Table.Td>
+            </Table.Tr>
+            <Table.Tr
+              isActionable={false}
+              isActive={false}
+              isDisabled={false}
+              isSelected={false}
+              key="row8"
+              onClick={[Function]}
+              style={
+                Object {
+                  "height": 50,
+                }
+              }
+            >
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="lucid-DataTable-row-selector"
+                width={41}
+              >
+                <Checkbox
+                  isDisabled={false}
+                  isIndeterminate={false}
+                  isSelected={false}
+                  onSelect={[Function]}
+                />
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={true}
+                key="row8id"
+                style={
+                  Object {
+                    "width": 35,
+                  }
+                }
+              >
+                9
+              </Table.Td>
+            </Table.Tr>
+            <Table.Tr
+              isActionable={false}
+              isActive={false}
+              isDisabled={false}
+              isSelected={false}
+              key="row9"
+              onClick={[Function]}
+              style={
+                Object {
+                  "height": 50,
+                }
+              }
+            >
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="lucid-DataTable-row-selector"
+                width={41}
+              >
+                <Checkbox
+                  isDisabled={false}
+                  isIndeterminate={false}
+                  isSelected={false}
+                  onSelect={[Function]}
+                />
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={true}
+                key="row9id"
+                style={
+                  Object {
+                    "width": 35,
+                  }
+                }
+              >
+                10
+              </Table.Td>
+            </Table.Tr>
+          </Table.Tbody>
+        </Table>
+      </div>
+      <div
+        className="lucid-DataTable-fixed-body-unfixed-columns"
+        onScroll={[Function]}
+      >
+        <span
+          className="lucid-DataTable-fixed-body-unfixed-columns-shadow"
+        />
+        <Table
+          className="lucid-DataTable-fixed-body-unfixed-columns-Table"
+          density="extended"
+          hasBorder={false}
+          hasHover={true}
+          hasLightHeader={false}
+          hasWordWrap={false}
+        >
+          <Table.Tbody>
+            <Table.Tr
+              isActionable={false}
+              isActive={false}
+              isDisabled={false}
+              isSelected={false}
+              key="row0"
+              onClick={[Function]}
+              style={
+                Object {
+                  "height": 50,
+                }
+              }
+            >
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row0first_name"
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+              >
+                Isaac
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row0last_name"
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+              >
+                Newton
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row0email"
+                style={
+                  Object {
+                    "width": 900,
+                  }
+                }
+              >
+                inewton@example.com
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row0occupation"
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+              >
+                Physicist
+              </Table.Td>
+              <Table.Td
+                align="right"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row0salary"
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+              >
+                $100.01
+              </Table.Td>
+              <Table.Td
+                align="center"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row0status"
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+              >
+                <SuccessIcon />
+              </Table.Td>
+            </Table.Tr>
+            <Table.Tr
+              isActionable={false}
+              isActive={false}
+              isDisabled={false}
+              isSelected={true}
+              key="row1"
+              onClick={[Function]}
+              style={
+                Object {
+                  "height": 50,
+                }
+              }
+            >
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row1first_name"
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+              >
+                Albert
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row1last_name"
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+              >
+                Einstein
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row1email"
+                style={
+                  Object {
+                    "width": 900,
+                  }
+                }
+              >
+                aeinstein@example.com
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row1occupation"
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+              >
+                Physicist
+              </Table.Td>
+              <Table.Td
+                align="right"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row1salary"
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+              >
+                $100.02
+              </Table.Td>
+              <Table.Td
+                align="center"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row1status"
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+              >
+                <SuccessIcon />
+              </Table.Td>
+            </Table.Tr>
+            <Table.Tr
+              isActionable={false}
+              isActive={true}
+              isDisabled={false}
+              isSelected={false}
+              key="row2"
+              onClick={[Function]}
+              style={
+                Object {
+                  "height": 50,
+                }
+              }
+            >
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row2first_name"
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+              >
+                Leonardo
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row2last_name"
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+              >
+                da Vinci
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row2email"
+                style={
+                  Object {
+                    "width": 900,
+                  }
+                }
+              >
+                ldvinci@example.com
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row2occupation"
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+              >
+                Engineer
+              </Table.Td>
+              <Table.Td
+                align="right"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row2salary"
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+              >
+                $100.03
+              </Table.Td>
+              <Table.Td
+                align="center"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row2status"
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+              >
+                <SuccessIcon />
+              </Table.Td>
+            </Table.Tr>
+            <Table.Tr
+              isActionable={false}
+              isActive={false}
+              isDisabled={false}
+              isSelected={false}
+              key="row3"
+              onClick={[Function]}
+              style={
+                Object {
+                  "height": 50,
+                }
+              }
+            >
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row3first_name"
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+              >
+                Aristotle
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row3last_name"
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+              >
+                --
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row3email"
+                style={
+                  Object {
+                    "width": 900,
+                  }
+                }
+              >
+                aristotle@example.com
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row3occupation"
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+              >
+                Tutor
+              </Table.Td>
+              <Table.Td
+                align="right"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row3salary"
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+              >
+                $100.04
+              </Table.Td>
+              <Table.Td
+                align="center"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row3status"
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+              >
+                <SuccessIcon />
+              </Table.Td>
+            </Table.Tr>
+            <Table.Tr
+              isActionable={false}
+              isActive={false}
+              isDisabled={false}
+              isSelected={false}
+              key="row4"
+              onClick={[Function]}
+              style={
+                Object {
+                  "height": 50,
+                }
+              }
+            >
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row4first_name"
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+              >
+                Galileo
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row4last_name"
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+              >
+                --
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row4email"
+                style={
+                  Object {
+                    "width": 900,
+                  }
+                }
+              >
+                ggalilei@example.com
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row4occupation"
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+              >
+                Physicist
+              </Table.Td>
+              <Table.Td
+                align="right"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row4salary"
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+              >
+                $100.05
+              </Table.Td>
+              <Table.Td
+                align="center"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row4status"
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+              >
+                <SuccessIcon />
+              </Table.Td>
+            </Table.Tr>
+            <Table.Tr
+              isActionable={false}
+              isActive={false}
+              isDisabled={false}
+              isSelected={false}
+              key="row5"
+              onClick={[Function]}
+              style={
+                Object {
+                  "height": 50,
+                }
+              }
+            >
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row5first_name"
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+              >
+                Charles
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row5last_name"
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+              >
+                Darwin
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row5email"
+                style={
+                  Object {
+                    "width": 900,
+                  }
+                }
+              >
+                cdarwin@example.com
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row5occupation"
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+              >
+                Biologist
+              </Table.Td>
+              <Table.Td
+                align="right"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row5salary"
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+              >
+                $100.06
+              </Table.Td>
+              <Table.Td
+                align="center"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row5status"
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+              >
+                <SuccessIcon />
+              </Table.Td>
+            </Table.Tr>
+            <Table.Tr
+              isActionable={false}
+              isActive={false}
+              isDisabled={false}
+              isSelected={false}
+              key="row6"
+              onClick={[Function]}
+              style={
+                Object {
+                  "height": 50,
+                }
+              }
+            >
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row6first_name"
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+              >
+                Alexander
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row6last_name"
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+              >
+                Macedon
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row6email"
+                style={
+                  Object {
+                    "width": 900,
+                  }
+                }
+              >
+                amacedon@example.com
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row6occupation"
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+              >
+                Head of State
+              </Table.Td>
+              <Table.Td
+                align="right"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row6salary"
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+              >
+                $100.07
+              </Table.Td>
+              <Table.Td
+                align="center"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row6status"
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+              >
+                <SuccessIcon />
+              </Table.Td>
+            </Table.Tr>
+            <Table.Tr
+              isActionable={false}
+              isActive={false}
+              isDisabled={false}
+              isSelected={false}
+              key="row7"
+              onClick={[Function]}
+              style={
+                Object {
+                  "height": 50,
+                }
+              }
+            >
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row7first_name"
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+              >
+                Plato
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row7last_name"
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+              >
+                Plato
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row7email"
+                style={
+                  Object {
+                    "width": 900,
+                  }
+                }
+              >
+                plato@example.com
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row7occupation"
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+              >
+                Philosopher
+              </Table.Td>
+              <Table.Td
+                align="right"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row7salary"
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+              >
+                $100.08
+              </Table.Td>
+              <Table.Td
+                align="center"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row7status"
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+              >
+                <SuccessIcon />
+              </Table.Td>
+            </Table.Tr>
+            <Table.Tr
+              isActionable={false}
+              isActive={false}
+              isDisabled={false}
+              isSelected={false}
+              key="row8"
+              onClick={[Function]}
+              style={
+                Object {
+                  "height": 50,
+                }
+              }
+            >
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row8first_name"
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+              >
+                Mahatma
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row8last_name"
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+              >
+                Gandhi
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row8email"
+                style={
+                  Object {
+                    "width": 900,
+                  }
+                }
+              >
+                mgandhi@example.com
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row8occupation"
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+              >
+                Politician
+              </Table.Td>
+              <Table.Td
+                align="right"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row8salary"
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+              >
+                $100.09
+              </Table.Td>
+              <Table.Td
+                align="center"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row8status"
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+              >
+                <SuccessIcon />
+              </Table.Td>
+            </Table.Tr>
+            <Table.Tr
+              isActionable={false}
+              isActive={false}
+              isDisabled={false}
+              isSelected={false}
+              key="row9"
+              onClick={[Function]}
+              style={
+                Object {
+                  "height": 50,
+                }
+              }
+            >
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row9first_name"
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+              >
+                William
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row9last_name"
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+              >
+                Shakespeare
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row9email"
+                style={
+                  Object {
+                    "width": 900,
+                  }
+                }
+              >
+                wshakespear@example.com
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row9occupation"
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+              >
+                Playwright
+              </Table.Td>
+              <Table.Td
+                align="right"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row9salary"
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+              >
+                $100.10
+              </Table.Td>
+              <Table.Td
+                align="center"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row9status"
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+              >
+                <SuccessIcon />
+              </Table.Td>
+            </Table.Tr>
+          </Table.Tbody>
+        </Table>
+      </div>
+    </div>
+  </div>
+</EmptyStateWrapper>
+`;
+
+
+exports[`DataTable [common] example testing should match snapshot(s) for 12.resizable-fixed-headers-table 1`] = `
+<EmptyStateWrapper
+  Body="Try creating a new object or removing a filter."
+  Title="No items found."
+  className="lucid-DataTable-EmptyStateWrapper-has-fixed-header"
+  isEmpty={false}
+>
+  <div
+    className="lucid-DataTable-fixed"
+  >
+    <div
+      className="lucid-DataTable-fixed-header"
+    >
+      <div
+        className="lucid-DataTable-fixed-header-fixed-columns"
+      >
+        <Table
+          className="lucid-DataTable-fixed-header-fixed-columns-Table"
+          density="extended"
+          hasBorder={false}
+          hasHover={true}
+          hasLightHeader={false}
+          hasWordWrap={true}
+        >
+          <Table.Thead>
+            <Table.Tr
+              isActive={false}
+              isDisabled={false}
+              isSelected={false}
+            >
+              <Table.Th
+                align="left"
+                isResizable={false}
+                isSorted={false}
+                key="lucid-DataTable-row-selector"
+                rowSpan={null}
+                sortDirection="up"
+                width={41}
+              >
+                <Checkbox
+                  isDisabled={false}
+                  isIndeterminate={true}
+                  isSelected={false}
+                  onSelect={[Function]}
+                />
+              </Table.Th>
+              <Table.Th
+                align="left"
+                field="id"
+                isResizable={true}
+                isSorted={false}
+                key="id"
+                onClick={null}
+                onResize={[Function]}
+                rowSpan={null}
+                sortDirection="up"
+                width={35}
+              >
+                ID
+              </Table.Th>
+            </Table.Tr>
+          </Table.Thead>
+        </Table>
+      </div>
+      <div
+        className="lucid-DataTable-fixed-header-unfixed-columns"
+      >
+        <Table
+          className="lucid-DataTable-fixed-header-unfixed-columns-Table"
+          density="extended"
+          hasBorder={false}
+          hasHover={true}
+          hasLightHeader={false}
+          hasWordWrap={true}
+        >
+          <Table.Thead>
+            <Table.Tr
+              isActive={false}
+              isDisabled={false}
+              isSelected={false}
+            >
+              <Table.Th
+                align="left"
+                field="first_name"
+                isResizable={true}
+                isSorted={false}
+                key="first_name"
+                onClick={null}
+                onResize={[Function]}
+                rowSpan={null}
+                sortDirection="up"
+                width={100}
+              >
+                First
+              </Table.Th>
+              <Table.Th
+                align="left"
+                field="last_name"
+                isResizable={true}
+                isSorted={false}
+                key="last_name"
+                onClick={null}
+                onResize={[Function]}
+                rowSpan={null}
+                sortDirection="up"
+                width={100}
+              >
+                Last
+              </Table.Th>
+              <Table.Th
+                align="left"
+                field="email"
+                isResizable={true}
+                isSorted={false}
+                key="email"
+                onClick={null}
+                onResize={[Function]}
+                rowSpan={null}
+                sortDirection="up"
+                width={900}
+              >
+                E-Mail
+              </Table.Th>
+              <Table.Th
+                align="left"
+                field="occupation"
+                isResizable={true}
+                isSorted={false}
+                key="occupation"
+                onClick={null}
+                onResize={[Function]}
+                rowSpan={null}
+                sortDirection="up"
+                width={100}
+              >
+                Occupation
+              </Table.Th>
+              <Table.Th
+                align="right"
+                field="salary"
+                isResizable={true}
+                isSorted={false}
+                key="salary"
+                onClick={null}
+                onResize={[Function]}
+                rowSpan={null}
+                sortDirection="up"
+                width={100}
+              >
+                Salary
+              </Table.Th>
+              <Table.Th
+                align="center"
+                field="status"
+                isResizable={true}
+                isSorted={false}
+                key="status"
+                onClick={null}
+                onResize={[Function]}
+                rowSpan={null}
+                sortDirection="up"
+                width={100}
+              >
+                Status
+              </Table.Th>
+            </Table.Tr>
+          </Table.Thead>
+        </Table>
+      </div>
+    </div>
+    <div
+      className="lucid-DataTable-fixed-body"
+    >
+      <div
+        className="lucid-DataTable-fixed-body-fixed-columns"
+      >
+        <Table
+          className="lucid-DataTable-fixed-body-fixed-columns-Table"
+          density="extended"
+          hasBorder={false}
+          hasHover={true}
+          hasLightHeader={false}
+          hasWordWrap={false}
+        >
+          <Table.Tbody>
+            <Table.Tr
+              isActionable={false}
+              isActive={false}
+              isDisabled={false}
+              isSelected={false}
+              key="row0"
+              onClick={[Function]}
+              style={
+                Object {
+                  "height": 50,
+                }
+              }
+            >
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="lucid-DataTable-row-selector"
+                width={41}
+              >
+                <Checkbox
+                  isDisabled={false}
+                  isIndeterminate={false}
+                  isSelected={false}
+                  onSelect={[Function]}
+                />
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={true}
+                key="row0id"
+                style={
+                  Object {
+                    "width": 35,
+                  }
+                }
+              >
+                1
+              </Table.Td>
+            </Table.Tr>
+            <Table.Tr
+              isActionable={false}
+              isActive={false}
+              isDisabled={false}
+              isSelected={true}
+              key="row1"
+              onClick={[Function]}
+              style={
+                Object {
+                  "height": 50,
+                }
+              }
+            >
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="lucid-DataTable-row-selector"
+                width={41}
+              >
+                <Checkbox
+                  isDisabled={false}
+                  isIndeterminate={false}
+                  isSelected={true}
+                  onSelect={[Function]}
+                />
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={true}
+                key="row1id"
+                style={
+                  Object {
+                    "width": 35,
+                  }
+                }
+              >
+                2
+              </Table.Td>
+            </Table.Tr>
+            <Table.Tr
+              isActionable={false}
+              isActive={true}
+              isDisabled={false}
+              isSelected={false}
+              key="row2"
+              onClick={[Function]}
+              style={
+                Object {
+                  "height": 50,
+                }
+              }
+            >
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="lucid-DataTable-row-selector"
+                width={41}
+              >
+                <Checkbox
+                  isDisabled={false}
+                  isIndeterminate={false}
+                  isSelected={false}
+                  onSelect={[Function]}
+                />
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={true}
+                key="row2id"
+                style={
+                  Object {
+                    "width": 35,
+                  }
+                }
+              >
+                3
+              </Table.Td>
+            </Table.Tr>
+            <Table.Tr
+              isActionable={false}
+              isActive={false}
+              isDisabled={false}
+              isSelected={false}
+              key="row3"
+              onClick={[Function]}
+              style={
+                Object {
+                  "height": 50,
+                }
+              }
+            >
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="lucid-DataTable-row-selector"
+                width={41}
+              >
+                <Checkbox
+                  isDisabled={false}
+                  isIndeterminate={false}
+                  isSelected={false}
+                  onSelect={[Function]}
+                />
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={true}
+                key="row3id"
+                style={
+                  Object {
+                    "width": 35,
+                  }
+                }
+              >
+                4
+              </Table.Td>
+            </Table.Tr>
+            <Table.Tr
+              isActionable={false}
+              isActive={false}
+              isDisabled={false}
+              isSelected={false}
+              key="row4"
+              onClick={[Function]}
+              style={
+                Object {
+                  "height": 50,
+                }
+              }
+            >
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="lucid-DataTable-row-selector"
+                width={41}
+              >
+                <Checkbox
+                  isDisabled={false}
+                  isIndeterminate={false}
+                  isSelected={false}
+                  onSelect={[Function]}
+                />
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={true}
+                key="row4id"
+                style={
+                  Object {
+                    "width": 35,
+                  }
+                }
+              >
+                5
+              </Table.Td>
+            </Table.Tr>
+            <Table.Tr
+              isActionable={false}
+              isActive={false}
+              isDisabled={false}
+              isSelected={false}
+              key="row5"
+              onClick={[Function]}
+              style={
+                Object {
+                  "height": 50,
+                }
+              }
+            >
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="lucid-DataTable-row-selector"
+                width={41}
+              >
+                <Checkbox
+                  isDisabled={false}
+                  isIndeterminate={false}
+                  isSelected={false}
+                  onSelect={[Function]}
+                />
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={true}
+                key="row5id"
+                style={
+                  Object {
+                    "width": 35,
+                  }
+                }
+              >
+                6
+              </Table.Td>
+            </Table.Tr>
+            <Table.Tr
+              isActionable={false}
+              isActive={false}
+              isDisabled={false}
+              isSelected={false}
+              key="row6"
+              onClick={[Function]}
+              style={
+                Object {
+                  "height": 50,
+                }
+              }
+            >
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="lucid-DataTable-row-selector"
+                width={41}
+              >
+                <Checkbox
+                  isDisabled={false}
+                  isIndeterminate={false}
+                  isSelected={false}
+                  onSelect={[Function]}
+                />
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={true}
+                key="row6id"
+                style={
+                  Object {
+                    "width": 35,
+                  }
+                }
+              >
+                7
+              </Table.Td>
+            </Table.Tr>
+            <Table.Tr
+              isActionable={false}
+              isActive={false}
+              isDisabled={false}
+              isSelected={false}
+              key="row7"
+              onClick={[Function]}
+              style={
+                Object {
+                  "height": 50,
+                }
+              }
+            >
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="lucid-DataTable-row-selector"
+                width={41}
+              >
+                <Checkbox
+                  isDisabled={false}
+                  isIndeterminate={false}
+                  isSelected={false}
+                  onSelect={[Function]}
+                />
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={true}
+                key="row7id"
+                style={
+                  Object {
+                    "width": 35,
+                  }
+                }
+              >
+                8
+              </Table.Td>
+            </Table.Tr>
+            <Table.Tr
+              isActionable={false}
+              isActive={false}
+              isDisabled={false}
+              isSelected={false}
+              key="row8"
+              onClick={[Function]}
+              style={
+                Object {
+                  "height": 50,
+                }
+              }
+            >
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="lucid-DataTable-row-selector"
+                width={41}
+              >
+                <Checkbox
+                  isDisabled={false}
+                  isIndeterminate={false}
+                  isSelected={false}
+                  onSelect={[Function]}
+                />
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={true}
+                key="row8id"
+                style={
+                  Object {
+                    "width": 35,
+                  }
+                }
+              >
+                9
+              </Table.Td>
+            </Table.Tr>
+            <Table.Tr
+              isActionable={false}
+              isActive={false}
+              isDisabled={false}
+              isSelected={false}
+              key="row9"
+              onClick={[Function]}
+              style={
+                Object {
+                  "height": 50,
+                }
+              }
+            >
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="lucid-DataTable-row-selector"
+                width={41}
+              >
+                <Checkbox
+                  isDisabled={false}
+                  isIndeterminate={false}
+                  isSelected={false}
+                  onSelect={[Function]}
+                />
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={true}
+                key="row9id"
+                style={
+                  Object {
+                    "width": 35,
+                  }
+                }
+              >
+                10
+              </Table.Td>
+            </Table.Tr>
+          </Table.Tbody>
+        </Table>
+      </div>
+      <div
+        className="lucid-DataTable-fixed-body-unfixed-columns"
+        onScroll={[Function]}
+      >
+        <span
+          className="lucid-DataTable-fixed-body-unfixed-columns-shadow"
+        />
+        <Table
+          className="lucid-DataTable-fixed-body-unfixed-columns-Table"
+          density="extended"
+          hasBorder={false}
+          hasHover={true}
+          hasLightHeader={false}
+          hasWordWrap={false}
+        >
+          <Table.Tbody>
+            <Table.Tr
+              isActionable={false}
+              isActive={false}
+              isDisabled={false}
+              isSelected={false}
+              key="row0"
+              onClick={[Function]}
+              style={
+                Object {
+                  "height": 50,
+                }
+              }
+            >
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row0first_name"
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+              >
+                Isaac
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row0last_name"
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+              >
+                Newton
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row0email"
+                style={
+                  Object {
+                    "width": 900,
+                  }
+                }
+              >
+                inewton@example.com
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row0occupation"
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+              >
+                Physicist
+              </Table.Td>
+              <Table.Td
+                align="right"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row0salary"
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+              >
+                $100.01
+              </Table.Td>
+              <Table.Td
+                align="center"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row0status"
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+              >
+                <SuccessIcon />
+              </Table.Td>
+            </Table.Tr>
+            <Table.Tr
+              isActionable={false}
+              isActive={false}
+              isDisabled={false}
+              isSelected={true}
+              key="row1"
+              onClick={[Function]}
+              style={
+                Object {
+                  "height": 50,
+                }
+              }
+            >
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row1first_name"
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+              >
+                Albert
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row1last_name"
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+              >
+                Einstein
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row1email"
+                style={
+                  Object {
+                    "width": 900,
+                  }
+                }
+              >
+                aeinstein@example.com
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row1occupation"
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+              >
+                Physicist
+              </Table.Td>
+              <Table.Td
+                align="right"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row1salary"
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+              >
+                $100.02
+              </Table.Td>
+              <Table.Td
+                align="center"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row1status"
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+              >
+                <SuccessIcon />
+              </Table.Td>
+            </Table.Tr>
+            <Table.Tr
+              isActionable={false}
+              isActive={true}
+              isDisabled={false}
+              isSelected={false}
+              key="row2"
+              onClick={[Function]}
+              style={
+                Object {
+                  "height": 50,
+                }
+              }
+            >
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row2first_name"
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+              >
+                Leonardo
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row2last_name"
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+              >
+                da Vinci
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row2email"
+                style={
+                  Object {
+                    "width": 900,
+                  }
+                }
+              >
+                ldvinci@example.com
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row2occupation"
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+              >
+                Engineer
+              </Table.Td>
+              <Table.Td
+                align="right"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row2salary"
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+              >
+                $100.03
+              </Table.Td>
+              <Table.Td
+                align="center"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row2status"
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+              >
+                <SuccessIcon />
+              </Table.Td>
+            </Table.Tr>
+            <Table.Tr
+              isActionable={false}
+              isActive={false}
+              isDisabled={false}
+              isSelected={false}
+              key="row3"
+              onClick={[Function]}
+              style={
+                Object {
+                  "height": 50,
+                }
+              }
+            >
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row3first_name"
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+              >
+                Aristotle
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row3last_name"
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+              >
+                --
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row3email"
+                style={
+                  Object {
+                    "width": 900,
+                  }
+                }
+              >
+                aristotle@example.com
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row3occupation"
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+              >
+                Tutor
+              </Table.Td>
+              <Table.Td
+                align="right"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row3salary"
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+              >
+                $100.04
+              </Table.Td>
+              <Table.Td
+                align="center"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row3status"
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+              >
+                <SuccessIcon />
+              </Table.Td>
+            </Table.Tr>
+            <Table.Tr
+              isActionable={false}
+              isActive={false}
+              isDisabled={false}
+              isSelected={false}
+              key="row4"
+              onClick={[Function]}
+              style={
+                Object {
+                  "height": 50,
+                }
+              }
+            >
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row4first_name"
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+              >
+                Galileo
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row4last_name"
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+              >
+                --
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row4email"
+                style={
+                  Object {
+                    "width": 900,
+                  }
+                }
+              >
+                ggalilei@example.com
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row4occupation"
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+              >
+                Physicist
+              </Table.Td>
+              <Table.Td
+                align="right"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row4salary"
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+              >
+                $100.05
+              </Table.Td>
+              <Table.Td
+                align="center"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row4status"
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+              >
+                <SuccessIcon />
+              </Table.Td>
+            </Table.Tr>
+            <Table.Tr
+              isActionable={false}
+              isActive={false}
+              isDisabled={false}
+              isSelected={false}
+              key="row5"
+              onClick={[Function]}
+              style={
+                Object {
+                  "height": 50,
+                }
+              }
+            >
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row5first_name"
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+              >
+                Charles
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row5last_name"
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+              >
+                Darwin
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row5email"
+                style={
+                  Object {
+                    "width": 900,
+                  }
+                }
+              >
+                cdarwin@example.com
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row5occupation"
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+              >
+                Biologist
+              </Table.Td>
+              <Table.Td
+                align="right"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row5salary"
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+              >
+                $100.06
+              </Table.Td>
+              <Table.Td
+                align="center"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row5status"
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+              >
+                <SuccessIcon />
+              </Table.Td>
+            </Table.Tr>
+            <Table.Tr
+              isActionable={false}
+              isActive={false}
+              isDisabled={false}
+              isSelected={false}
+              key="row6"
+              onClick={[Function]}
+              style={
+                Object {
+                  "height": 50,
+                }
+              }
+            >
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row6first_name"
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+              >
+                Alexander
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row6last_name"
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+              >
+                Macedon
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row6email"
+                style={
+                  Object {
+                    "width": 900,
+                  }
+                }
+              >
+                amacedon@example.com
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row6occupation"
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+              >
+                Head of State
+              </Table.Td>
+              <Table.Td
+                align="right"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row6salary"
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+              >
+                $100.07
+              </Table.Td>
+              <Table.Td
+                align="center"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row6status"
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+              >
+                <SuccessIcon />
+              </Table.Td>
+            </Table.Tr>
+            <Table.Tr
+              isActionable={false}
+              isActive={false}
+              isDisabled={false}
+              isSelected={false}
+              key="row7"
+              onClick={[Function]}
+              style={
+                Object {
+                  "height": 50,
+                }
+              }
+            >
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row7first_name"
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+              >
+                Plato
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row7last_name"
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+              >
+                Plato
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row7email"
+                style={
+                  Object {
+                    "width": 900,
+                  }
+                }
+              >
+                plato@example.com
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row7occupation"
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+              >
+                Philosopher
+              </Table.Td>
+              <Table.Td
+                align="right"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row7salary"
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+              >
+                $100.08
+              </Table.Td>
+              <Table.Td
+                align="center"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row7status"
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+              >
+                <SuccessIcon />
+              </Table.Td>
+            </Table.Tr>
+            <Table.Tr
+              isActionable={false}
+              isActive={false}
+              isDisabled={false}
+              isSelected={false}
+              key="row8"
+              onClick={[Function]}
+              style={
+                Object {
+                  "height": 50,
+                }
+              }
+            >
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row8first_name"
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+              >
+                Mahatma
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row8last_name"
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+              >
+                Gandhi
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row8email"
+                style={
+                  Object {
+                    "width": 900,
+                  }
+                }
+              >
+                mgandhi@example.com
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row8occupation"
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+              >
+                Politician
+              </Table.Td>
+              <Table.Td
+                align="right"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row8salary"
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+              >
+                $100.09
+              </Table.Td>
+              <Table.Td
+                align="center"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row8status"
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+              >
+                <SuccessIcon />
+              </Table.Td>
+            </Table.Tr>
+            <Table.Tr
+              isActionable={false}
+              isActive={false}
+              isDisabled={false}
+              isSelected={false}
+              key="row9"
+              onClick={[Function]}
+              style={
+                Object {
+                  "height": 50,
+                }
+              }
+            >
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row9first_name"
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+              >
+                William
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row9last_name"
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+              >
+                Shakespeare
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row9email"
+                style={
+                  Object {
+                    "width": 900,
+                  }
+                }
+              >
+                wshakespear@example.com
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row9occupation"
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+              >
+                Playwright
+              </Table.Td>
+              <Table.Td
+                align="right"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row9salary"
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+              >
+                $100.10
+              </Table.Td>
+              <Table.Td
+                align="center"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row9status"
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+              >
+                <SuccessIcon />
+              </Table.Td>
+            </Table.Tr>
+          </Table.Tbody>
+        </Table>
+      </div>
+    </div>
+  </div>
+</EmptyStateWrapper>
+`;
+
+exports[`DataTable [common] example testing should match snapshot(s) for 12.resizable-fixed-headers-table 1`] = `
+<EmptyStateWrapper
+  Body="Try creating a new object or removing a filter."
+  Title="No items found."
+  className="lucid-DataTable-EmptyStateWrapper-has-fixed-header"
+  isEmpty={false}
+>
+  <div
+    className="lucid-DataTable-fixed"
+  >
+    <div
+      className="lucid-DataTable-fixed-header"
+    >
+      <div
+        className="lucid-DataTable-fixed-header-fixed-columns"
+      >
+        <Table
+          className="lucid-DataTable-fixed-header-fixed-columns-Table"
+          density="extended"
+          hasBorder={false}
+          hasHover={true}
+          hasLightHeader={false}
+          hasWordWrap={true}
+        >
+          <Table.Thead>
+            <Table.Tr
+              isActive={false}
+              isDisabled={false}
+              isSelected={false}
+            >
+              <Table.Th
+                align="left"
+                isResizable={false}
+                isSorted={false}
+                key="lucid-DataTable-row-selector"
+                rowSpan={null}
+                sortDirection="up"
+                width={41}
+              >
+                <Checkbox
+                  isDisabled={false}
+                  isIndeterminate={true}
+                  isSelected={false}
+                  onSelect={[Function]}
+                />
+              </Table.Th>
+              <Table.Th
+                align="left"
+                field="id"
+                isResizable={true}
+                isSorted={false}
+                key="id"
+                onClick={null}
+                onResize={[Function]}
+                rowSpan={null}
+                sortDirection="up"
+                width={35}
+              >
+                ID
+              </Table.Th>
+            </Table.Tr>
+          </Table.Thead>
+        </Table>
+      </div>
+      <div
+        className="lucid-DataTable-fixed-header-unfixed-columns"
+      >
+        <Table
+          className="lucid-DataTable-fixed-header-unfixed-columns-Table"
+          density="extended"
+          hasBorder={false}
+          hasHover={true}
+          hasLightHeader={false}
+          hasWordWrap={true}
+        >
+          <Table.Thead>
+            <Table.Tr
+              isActive={false}
+              isDisabled={false}
+              isSelected={false}
+            >
+              <Table.Th
+                align="left"
+                field="first_name"
+                isResizable={true}
+                isSorted={false}
+                key="first_name"
+                onClick={null}
+                onResize={[Function]}
+                rowSpan={null}
+                sortDirection="up"
+                width={100}
+              >
+                First
+              </Table.Th>
+              <Table.Th
+                align="left"
+                field="last_name"
+                isResizable={true}
+                isSorted={false}
+                key="last_name"
+                onClick={null}
+                onResize={[Function]}
+                rowSpan={null}
+                sortDirection="up"
+                width={100}
+              >
+                Last
+              </Table.Th>
+              <Table.Th
+                align="left"
+                field="email"
+                isResizable={true}
+                isSorted={false}
+                key="email"
+                onClick={null}
+                onResize={[Function]}
+                rowSpan={null}
+                sortDirection="up"
+                width={900}
+              >
+                E-Mail
+              </Table.Th>
+              <Table.Th
+                align="left"
+                field="occupation"
+                isResizable={true}
+                isSorted={false}
+                key="occupation"
+                onClick={null}
+                onResize={[Function]}
+                rowSpan={null}
+                sortDirection="up"
+                width={100}
+              >
+                Occupation
+              </Table.Th>
+              <Table.Th
+                align="right"
+                field="salary"
+                isResizable={true}
+                isSorted={false}
+                key="salary"
+                onClick={null}
+                onResize={[Function]}
+                rowSpan={null}
+                sortDirection="up"
+                width={100}
+              >
+                Salary
+              </Table.Th>
+              <Table.Th
+                align="center"
+                field="status"
+                isResizable={true}
+                isSorted={false}
+                key="status"
+                onClick={null}
+                onResize={[Function]}
                 rowSpan={null}
                 sortDirection="up"
                 width={100}
