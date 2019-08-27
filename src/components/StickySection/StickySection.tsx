@@ -16,7 +16,7 @@ interface IStickySectionProps {
 	className?: string;
 
 	/** Styles that are passed through to the root container. */
-	style?: object;
+	style?: React.CSSProperties;
 
 	/**
 	 * Pixel value from the top of the document. When scrolled passed, the
