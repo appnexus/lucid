@@ -9,11 +9,11 @@ const cx = lucidClassNames.bind('&-EligibilityIcon');
 
 const { oneOf } = PropTypes;
 
-enum EligibilityOptions {
-	Left = 'left',
-	Right = 'right',
-	Neither = 'neither',
-	Both = 'both',
+export enum EligibilityOptions {
+	left = 'left',
+	right = 'right',
+	neither = 'neither',
+	both = 'both',
 }
 
 interface IEligibilityIconProps extends IIconProps {
@@ -22,7 +22,7 @@ interface IEligibilityIconProps extends IIconProps {
 
 const EligibilityIcon: FC<IEligibilityIconProps> = ({
 	className,
-	eligibility = EligibilityOptions.Neither,
+	eligibility = EligibilityOptions.neither,
 	...passThroughs
 }): React.ReactElement => {
 
@@ -35,13 +35,13 @@ const EligibilityIcon: FC<IEligibilityIconProps> = ({
 			<g>
 				<path
 					className={cx('&-half-circle', {
-						'&-is-selected': eligibility === EligibilityOptions.Left || eligibility === EligibilityOptions.Both,
+						'&-is-selected': eligibility === EligibilityOptions.left || eligibility === EligibilityOptions.both,
 					})}
 					d='M6.98.928C3.51 1.424.844 4.398.844 8c0 3.604 2.666 6.576 6.133 7.072V.928z'
 				/>
 				<path
 					className={cx('&-half-circle', {
-						'&-is-selected': eligibility === EligibilityOptions.Right || eligibility === EligibilityOptions.Both,
+						'&-is-selected': eligibility === EligibilityOptions.right || eligibility === EligibilityOptions.both,
 					})}
 					d='M9.022.928c3.465.496 6.133 3.47 6.133 7.072 0 3.604-2.668 6.576-6.133 7.072V.928z'
 				/>
@@ -61,7 +61,7 @@ EligibilityIcon.peek = {
 };
 EligibilityIcon.propTypes = {
 	...Icon.propTypes,
-	eligibility: oneOf(['both', 'neither', 'left', 'right'])`
+	eligibility: oneOf(_.values(EligibilityOptions))`
 		Eligibility variations of the icon.
 	`,
 };

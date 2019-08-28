@@ -16,9 +16,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 1`] 
     >
       <Point
         color="color-chart-0"
-        hasStroke={false}
         kind={1}
-        scale={1}
         x={6}
         y={6}
       />
@@ -37,9 +35,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 1`] 
     >
       <Point
         color="color-chart-1"
-        hasStroke={false}
         kind={1}
-        scale={1}
         x={6}
         y={6}
       />
@@ -58,9 +54,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 1`] 
     >
       <Point
         color="color-chart-2"
-        hasStroke={false}
         kind={1}
-        scale={1}
         x={6}
         y={6}
       />
@@ -79,9 +73,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 1`] 
     >
       <Point
         color="color-chart-3"
-        hasStroke={false}
         kind={1}
-        scale={1}
         x={6}
         y={6}
       />
@@ -100,9 +92,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 1`] 
     >
       <Point
         color="color-chart-4"
-        hasStroke={false}
         kind={1}
-        scale={1}
         x={6}
         y={6}
       />
@@ -121,14 +111,31 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 1`] 
     >
       <Point
         color="color-chart-5"
-        hasStroke={false}
         kind={1}
-        scale={1}
         x={6}
         y={6}
       />
     </svg>
     Partner 5
+  </li>
+  <li
+    className="lucid-Legend-Item"
+    key="6"
+    onClick={[Function]}
+  >
+    <svg
+      className="lucid-Legend-Item-indicator"
+      height={12}
+      width={12}
+    >
+      <Point
+        color="color-chart-6"
+        kind={1}
+        x={6}
+        y={6}
+      />
+    </svg>
+    Partner 6
   </li>
 </ul>
 `;
@@ -149,9 +156,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 2`] 
     >
       <Point
         color="color-chart-0"
-        hasStroke={false}
         kind={0}
-        scale={1}
         x={6}
         y={6}
       />
@@ -170,9 +175,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 2`] 
     >
       <Point
         color="color-chart-1"
-        hasStroke={false}
         kind={1}
-        scale={1}
         x={6}
         y={6}
       />
@@ -191,9 +194,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 2`] 
     >
       <Point
         color="color-chart-2"
-        hasStroke={false}
         kind={2}
-        scale={1}
         x={6}
         y={6}
       />
@@ -212,9 +213,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 2`] 
     >
       <Point
         color="color-chart-3"
-        hasStroke={false}
         kind={3}
-        scale={1}
         x={6}
         y={6}
       />
@@ -233,9 +232,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 2`] 
     >
       <Point
         color="color-chart-4"
-        hasStroke={false}
         kind={4}
-        scale={1}
         x={6}
         y={6}
       />
@@ -254,14 +251,31 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 2`] 
     >
       <Point
         color="color-chart-5"
-        hasStroke={false}
         kind={5}
-        scale={1}
         x={6}
         y={6}
       />
     </svg>
     Partner 5
+  </li>
+  <li
+    className="lucid-Legend-Item"
+    key="6"
+    onClick={[Function]}
+  >
+    <svg
+      className="lucid-Legend-Item-indicator"
+      height={12}
+      width={12}
+    >
+      <Point
+        color="color-chart-6"
+        kind={6}
+        x={6}
+        y={6}
+      />
+    </svg>
+    Partner 6
   </li>
 </ul>
 `;
@@ -378,6 +392,24 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 3`] 
     </svg>
     Partner 5
   </li>
+  <li
+    className="lucid-Legend-Item"
+    key="6"
+    onClick={[Function]}
+  >
+    <svg
+      className="lucid-Legend-Item-indicator"
+      height={12}
+      width={22}
+    >
+      <Line
+        color="color-chart-6"
+        d="M0,6 L22,6"
+        isDotted={false}
+      />
+    </svg>
+    Partner 6
+  </li>
 </ul>
 `;
 
@@ -397,9 +429,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 4`] 
     >
       <Point
         color="color-chart-0"
-        hasStroke={false}
         kind={0}
-        scale={1}
         x={11}
         y={6}
       />
@@ -423,9 +453,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 4`] 
     >
       <Point
         color="color-chart-1"
-        hasStroke={false}
         kind={1}
-        scale={1}
         x={11}
         y={6}
       />
@@ -449,9 +477,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 4`] 
     >
       <Point
         color="color-chart-2"
-        hasStroke={false}
         kind={2}
-        scale={1}
         x={11}
         y={6}
       />
@@ -475,9 +501,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 4`] 
     >
       <Point
         color="color-chart-3"
-        hasStroke={false}
         kind={3}
-        scale={1}
         x={11}
         y={6}
       />
@@ -501,9 +525,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 4`] 
     >
       <Point
         color="color-chart-4"
-        hasStroke={false}
         kind={4}
-        scale={1}
         x={11}
         y={6}
       />
@@ -527,9 +549,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 4`] 
     >
       <Point
         color="color-chart-5"
-        hasStroke={false}
         kind={5}
-        scale={1}
         x={11}
         y={6}
       />
@@ -540,6 +560,30 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 4`] 
       />
     </svg>
     Partner 5
+  </li>
+  <li
+    className="lucid-Legend-Item"
+    key="6"
+    onClick={[Function]}
+  >
+    <svg
+      className="lucid-Legend-Item-indicator"
+      height={12}
+      width={22}
+    >
+      <Point
+        color="color-chart-6"
+        kind={6}
+        x={11}
+        y={6}
+      />
+      <Line
+        color="color-chart-6"
+        d="M0,6 L22,6"
+        isDotted={false}
+      />
+    </svg>
+    Partner 6
   </li>
 </ul>
 `;
@@ -560,9 +604,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 5`] 
     >
       <Point
         color="color-chart-0"
-        hasStroke={false}
         kind={0}
-        scale={1}
         x={11}
         y={6}
       />
@@ -586,9 +628,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 5`] 
     >
       <Point
         color="color-chart-1"
-        hasStroke={false}
         kind={1}
-        scale={1}
         x={11}
         y={6}
       />
@@ -612,9 +652,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 5`] 
     >
       <Point
         color="color-chart-2"
-        hasStroke={false}
         kind={2}
-        scale={1}
         x={11}
         y={6}
       />
@@ -638,9 +676,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 5`] 
     >
       <Point
         color="color-chart-3"
-        hasStroke={false}
         kind={3}
-        scale={1}
         x={11}
         y={6}
       />
@@ -664,9 +700,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 5`] 
     >
       <Point
         color="color-chart-4"
-        hasStroke={false}
         kind={4}
-        scale={1}
         x={11}
         y={6}
       />
@@ -690,9 +724,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 5`] 
     >
       <Point
         color="color-chart-5"
-        hasStroke={false}
         kind={5}
-        scale={1}
         x={11}
         y={6}
       />
@@ -703,6 +735,30 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 5`] 
       />
     </svg>
     Partner 5
+  </li>
+  <li
+    className="lucid-Legend-Item"
+    key="6"
+    onClick={[Function]}
+  >
+    <svg
+      className="lucid-Legend-Item-indicator"
+      height={12}
+      width={22}
+    >
+      <Point
+        color="color-chart-6"
+        kind={6}
+        x={11}
+        y={6}
+      />
+      <Line
+        color="color-chart-6"
+        d="M0,6 L22,6"
+        isDotted={false}
+      />
+    </svg>
+    Partner 6
   </li>
 </ul>
 `;
@@ -759,9 +815,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 6`] 
     >
       <Point
         color="color-chart-0"
-        hasStroke={false}
         kind={1}
-        scale={1}
         x={6}
         y={6}
       />
@@ -780,9 +834,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 6`] 
     >
       <Point
         color="color-chart-1"
-        hasStroke={false}
         kind={1}
-        scale={1}
         x={6}
         y={6}
       />
@@ -844,9 +896,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 7`] 
     >
       <Point
         color="color-chart-0"
-        hasStroke={false}
         kind={1}
-        scale={1}
         x={6}
         y={6}
       />
@@ -865,9 +915,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 7`] 
     >
       <Point
         color="color-chart-1"
-        hasStroke={false}
         kind={1}
-        scale={1}
         x={6}
         y={6}
       />
@@ -929,9 +977,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 8`] 
     >
       <Point
         color="color-chart-0"
-        hasStroke={false}
         kind={1}
-        scale={1}
         x={11}
         y={6}
       />
@@ -950,9 +996,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 8`] 
     >
       <Point
         color="color-chart-1"
-        hasStroke={false}
         kind={1}
-        scale={1}
         x={11}
         y={6}
       />
@@ -1014,9 +1058,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 9`] 
     >
       <Point
         color="color-chart-0"
-        hasStroke={false}
         kind={1}
-        scale={1}
         x={11}
         y={6}
       />
@@ -1035,9 +1077,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 9`] 
     >
       <Point
         color="color-chart-1"
-        hasStroke={false}
         kind={1}
-        scale={1}
         x={11}
         y={6}
       />

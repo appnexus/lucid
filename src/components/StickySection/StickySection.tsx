@@ -16,7 +16,7 @@ interface IStickySectionProps {
 	className?: string;
 
 	/** Styles that are passed through to the root container. */
-	style?: object;
+	style?: React.CSSProperties;
 
 	/**
 	 * Pixel value from the top of the document. When scrolled passed, the
@@ -29,6 +29,13 @@ interface IStickySectionProps {
 	 * omitted, it defaults to the last width of the section.
 	 */
 	viewportWidth?: number;
+
+
+	/**
+	 * Top offset threshold before sticking to the top. The sticky content will
+	 * display with this offset.
+	 */
+	topOffset?: number;
 }
 
 interface IContainerRect extends ClientRect {
@@ -75,6 +82,10 @@ class StickySection extends React.Component<
 			Width of section when it sticks to the top edge of the screen. When
 			omitted, it defaults to the last width of the section.
 		`,
+               topOffset: number`
+                       Top offset threshold before sticking to the top. The sticky content will
+                       display with this offset.
+               `,
 	};
 
 	private scrollContainer = React.createRef<HTMLDivElement>();
@@ -96,13 +107,13 @@ class StickySection extends React.Component<
 	};
 
 	handleScroll = (): void => {
-		const { lowerBound } = this.props;
+		const { lowerBound, topOffset = 0 } = this.props;
 
 		const { isAboveFold, containerRect } = this.state;
 
 		const nextContainerRect = this.getContainerRect();
 
-		if (window.pageYOffset >= nextContainerRect.top) {
+		if (window.pageYOffset + topOffset >= nextContainerRect.top) {
 			if (!isAboveFold) {
 				this.setState({
 					isAboveFold: true,
@@ -177,6 +188,7 @@ class StickySection extends React.Component<
 			children,
 			className,
 			style,
+			topOffset = 0,
 			viewportWidth,
 			...passThroughs
 		} = this.props;
@@ -195,6 +207,7 @@ class StickySection extends React.Component<
 					...(isAboveFold
 						? {
 								height: containerRect.height,
+								visibility: 'hidden',
 						  }
 						: {}),
 					...style,
@@ -207,8 +220,9 @@ class StickySection extends React.Component<
 					style={{
 						...(isAboveFold
 							? {
+									visibility: 'visible',
 									position: 'fixed',
-									top: 0,
+									top: topOffset,
 									width: _.isNumber(viewportWidth)
 										? viewportWidth
 										: containerRect.width,

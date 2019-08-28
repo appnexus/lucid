@@ -17,7 +17,7 @@ interface ISidePanelHeaderProps {
 	children?: React.ReactNode;
 }
 const SidePanelHeader: FC<ISidePanelHeaderProps> = ({
-	children
+	children,
 }): React.ReactElement => {
 	return <div>{children}</div>;
 };
@@ -57,17 +57,21 @@ export interface ISidePanelProps {
 
 	/** Callback triggered when user clicks the background, hits the Esc key, or
 	 * clicks the close button in the Header. */
-	onCollapse: (
-		{ event, props }: {
-			event: React.MouseEvent | KeyboardEvent;
-			props: ISidePanelProps;
-		}
-	) => void;
+	onCollapse: ({
+		event,
+		props,
+	}: {
+		event: React.MouseEvent | KeyboardEvent;
+		props: ISidePanelProps;
+	}) => void;
 
 	/** Callback triggered after a user resizes to a new width. */
 	onResize: (
 		width: number,
-		{ event, props }: {
+		{
+			event,
+			props,
+		}: {
 			event: MouseEvent | TouchEvent;
 			props: ISidePanelProps;
 		}
@@ -80,7 +84,6 @@ export interface ISidePanelProps {
 	 * is true. This is accomplished by setting \`document.body.style.overflow =
 	 * 'hidden'\`. */
 	preventBodyScroll: boolean;
-
 
 	/** Sets the initial width in pixels. The actual width may change if the user
 	 * resizes it. */
@@ -96,7 +99,6 @@ interface ISidePanelState {
 	startWidth: number;
 	isExpanded: boolean;
 }
-
 
 class SidePanel extends React.Component<ISidePanelProps, ISidePanelState, {}> {
 	static displayName = 'SidePanel';
@@ -156,9 +158,9 @@ class SidePanel extends React.Component<ISidePanelProps, ISidePanelState, {}> {
 
 	state = {
 		isResizing: false,
-		width: (this.props.width as number),
-		startWidth: (this.props.width as number),
-		isExpanded: (this.props.isExpanded as boolean),
+		width: this.props.width as number,
+		startWidth: this.props.width as number,
+		isExpanded: this.props.isExpanded as boolean,
 	};
 
 	static defaultProps = {
@@ -180,48 +182,55 @@ class SidePanel extends React.Component<ISidePanelProps, ISidePanelState, {}> {
 	}, 1);
 
 	handleResizeStart = (): void => {
-
 		this.setState({
 			isResizing: true,
 		});
-	}
+	};
 
 	handleResize = ({ dX }: { dX: number }): void => {
 		const { startWidth } = this.state;
 		this.setState({
 			width: startWidth + dX * (this.props.position === 'right' ? -1 : 1),
 		});
-	}
+	};
 
 	handleResizeEnd = (
 		{ dX }: { dX: number },
 		{ event }: { event: MouseEvent | TouchEvent }
-		): void => {
-			const { startWidth } = this.state;
-			this.setState({
-				width: startWidth + dX * (this.props.position === 'right' ? -1 : 1),
-				isResizing: false,
-			});
-			this.props.onResize(startWidth - dX, { props: this.props, event });
-		}
+	): void => {
+		const { startWidth } = this.state;
+		this.setState({
+			width: startWidth + dX * (this.props.position === 'right' ? -1 : 1),
+			isResizing: false,
+		});
+		this.props.onResize(startWidth - dX, { props: this.props, event });
+	};
 
-	handleCollapse = ({ event }: { event: React.MouseEvent | KeyboardEvent }): void => {
-		this.props.onCollapse({ event, props: this.props })
-	}
+	handleCollapse = ({
+		event,
+	}: {
+		event: React.MouseEvent | KeyboardEvent;
+	}): void => {
+		this.props.onCollapse({ event, props: this.props });
+	};
 
 	componentDidUpdate(prevProps: ISidePanelProps): void {
 		if (prevProps.isExpanded !== this.props.isExpanded) {
 			this.timerId = setTimeout((): void => {
 				this.setState({
-					isExpanded: (this.props.isExpanded as boolean),
+					isExpanded: this.props.isExpanded as boolean,
 				});
 			}, 1);
 		}
 	}
 
 	componentWillUnmount(): void {
+		const { preventBodyScroll } = this.props;
 		if (this.timerId) {
 			clearTimeout(this.timerId);
+		}
+		if (preventBodyScroll) {
+			window.document.body.style.overflow = '';
 		}
 	}
 
@@ -264,11 +273,7 @@ class SidePanel extends React.Component<ISidePanelProps, ISidePanelState, {}> {
 				style={{
 					marginTop: topOffset,
 				}}
-				{...omitProps(
-					passThroughs,
-					undefined,
-					_.keys(SidePanel.propTypes)
-				)}
+				{...omitProps(passThroughs, undefined, _.keys(SidePanel.propTypes))}
 			>
 				<div
 					className={cx('&-pane')}

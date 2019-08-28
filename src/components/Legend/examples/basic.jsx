@@ -11,7 +11,7 @@ export default createClass({
 		return (
 			<div>
 				<Legend>
-					{_.map(chartConstants.PALETTE_6, (color, i) => (
+					{_.map(chartConstants.PALETTE_7, (color, i) => (
 						<Item key={color} hasPoint color={color}>
 							{`Partner ${i}`}
 						</Item>
@@ -21,7 +21,7 @@ export default createClass({
 				<br />
 
 				<Legend>
-					{_.map(chartConstants.PALETTE_6, (color, i) => (
+					{_.map(chartConstants.PALETTE_7, (color, i) => (
 						<Item key={color} hasPoint pointKind={i} color={color}>
 							{`Partner ${i}`}
 						</Item>
@@ -31,7 +31,7 @@ export default createClass({
 				<br />
 
 				<Legend>
-					{_.map(chartConstants.PALETTE_6, (color, i) => (
+					{_.map(chartConstants.PALETTE_7, (color, i) => (
 						<Item key={color} hasLine color={color}>
 							{`Partner ${i}`}
 						</Item>
@@ -41,7 +41,7 @@ export default createClass({
 				<br />
 
 				<Legend>
-					{_.map(chartConstants.PALETTE_6, (color, i) => (
+					{_.map(chartConstants.PALETTE_7, (color, i) => (
 						<Item key={color} hasPoint hasLine pointKind={i} color={color}>
 							{`Partner ${i}`}
 						</Item>
@@ -51,7 +51,7 @@ export default createClass({
 				<br />
 
 				<Legend isReversed>
-					{_.map(chartConstants.PALETTE_6, (color, i) => (
+					{_.map(chartConstants.PALETTE_7, (color, i) => (
 						<Item key={color} hasPoint hasLine pointKind={i} color={color}>
 							{`Partner ${i}`}
 						</Item>

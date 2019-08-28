@@ -81,7 +81,7 @@ export interface IPanelProps {
 	/**
 	 * Styles that are passed through to root element.
 	 */
-	style?: object;
+	style?: React.CSSProperties;
 
 	/**
 	 * If set to true, makes content overflow scrollable, when Panel has a set

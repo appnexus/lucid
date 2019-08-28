@@ -9,15 +9,15 @@ const cx = lucidClassNames.bind('&-Icon');
 const { any, string, number, bool, func, oneOf, oneOfType } = PropTypes;
 
 export enum Color {
-	ColorNeutralDark = 'neutral-dark',
-	ColorNeutralLight = 'neutral-light',
-	ColorPrimary = 'primary',
-	ColorWhite = 'white',
-	ColorSuccess = 'success',
-	ColorWarning = 'warning',
-	ColorSecondaryOne = 'secondary-one',
-	ColorSecondaryTwo = 'secondary-two',
-	ColorSecondaryThree = 'secondary-three',
+	'neutral-dark' = 'neutral-dark',
+	'neutral-light' = 'neutral-light',
+	primary = 'primary',
+	white = 'white',
+	success = 'success',
+	warning = 'warning',
+	'secondary-one' = 'secondary-one',
+	'secondary-two' = 'secondary-two',
+	'secondary-three' = 'secondary-three',
 }
 
 export interface IIconProps {
@@ -69,7 +69,7 @@ export interface IIconProps {
 	children?: React.ReactNode;
 
 	/** Sets the color of the Icon.  May not be applicable for icons that are tied to specific colors (e.g. DangerIcon). */
-	color?: Color;
+	color?: keyof typeof Color;
 
 	// TODO: move this to a generic interface that all components extend their props from
 	style?: React.CSSProperties;
@@ -79,7 +79,7 @@ const Icon: FC<IIconProps> = (props): React.ReactElement => {
 	const {
 		className,
 		children,
-		color = Color.ColorPrimary,
+		color = Color.primary,
 		size = 16,
 		width = null,
 		height = null,

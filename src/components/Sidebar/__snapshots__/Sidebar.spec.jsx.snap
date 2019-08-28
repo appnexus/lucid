@@ -704,11 +704,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
     >
       <div>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="0"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -716,11 +712,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="1"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -728,11 +720,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="2"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -740,11 +728,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="3"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -752,11 +736,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="4"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -764,11 +744,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="5"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -776,11 +752,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="6"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -788,11 +760,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="7"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -800,11 +768,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="8"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -812,11 +776,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="9"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -824,11 +784,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="10"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -836,11 +792,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="11"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -848,11 +800,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="12"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -860,11 +808,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="13"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -872,11 +816,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="14"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -884,11 +824,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="15"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -896,11 +832,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="16"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -908,11 +840,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="17"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -920,11 +848,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="18"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -932,11 +856,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="19"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -944,11 +864,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="20"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -956,11 +872,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="21"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -968,11 +880,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="22"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -980,11 +888,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="23"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -992,11 +896,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="24"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -1004,11 +904,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="25"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -1016,11 +912,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="26"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -1028,11 +920,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="27"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -1040,11 +928,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="28"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -1052,11 +936,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="29"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -1064,11 +944,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="30"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -1076,11 +952,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="31"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -1088,11 +960,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="32"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -1100,11 +968,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="33"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -1112,11 +976,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="34"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -1124,11 +984,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="35"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -1136,11 +992,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="36"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -1148,11 +1000,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="37"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -1160,11 +1008,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="38"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -1172,11 +1016,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="39"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -1184,11 +1024,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="40"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -1196,11 +1032,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="41"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -1208,11 +1040,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="42"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -1220,11 +1048,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="43"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -1232,11 +1056,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="44"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -1244,11 +1064,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="45"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -1256,11 +1072,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="46"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -1268,11 +1080,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="47"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -1280,11 +1088,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="48"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -1292,11 +1096,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="49"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -1304,11 +1104,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="50"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -1316,11 +1112,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="51"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -1328,11 +1120,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="52"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -1340,11 +1128,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="53"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -1352,11 +1136,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="54"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -1364,11 +1144,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="55"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -1376,11 +1152,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="56"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -1388,11 +1160,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="57"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -1400,11 +1168,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="58"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -1412,11 +1176,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="59"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -1424,11 +1184,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="60"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -1436,11 +1192,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="61"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -1448,11 +1200,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="62"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -1460,11 +1208,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="63"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -1472,11 +1216,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="64"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -1484,11 +1224,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="65"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -1496,11 +1232,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="66"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -1508,11 +1240,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="67"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -1520,11 +1248,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="68"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -1532,11 +1256,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="69"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -1544,11 +1264,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="70"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -1556,11 +1272,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="71"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -1568,11 +1280,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="72"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -1580,11 +1288,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="73"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -1592,11 +1296,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="74"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -1604,11 +1304,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="75"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -1616,11 +1312,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="76"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -1628,11 +1320,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="77"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -1640,11 +1328,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="78"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -1652,11 +1336,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="79"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -1664,11 +1344,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="80"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -1676,11 +1352,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="81"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -1688,11 +1360,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="82"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -1700,11 +1368,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="83"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -1712,11 +1376,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="84"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -1724,11 +1384,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="85"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -1736,11 +1392,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="86"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -1748,11 +1400,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="87"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -1760,11 +1408,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="88"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -1772,11 +1416,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="89"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -1784,11 +1424,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="90"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -1796,11 +1432,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="91"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -1808,11 +1440,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="92"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -1820,11 +1448,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="93"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -1832,11 +1456,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="94"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -1844,11 +1464,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="95"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -1856,11 +1472,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="96"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -1868,11 +1480,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="97"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -1880,11 +1488,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="98"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -1892,11 +1496,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="99"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -2006,11 +1606,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 11.differ
           placeholder="Search country"
         />
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="0"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -2018,11 +1614,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 11.differ
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="1"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -2030,11 +1622,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 11.differ
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="2"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -2042,11 +1630,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 11.differ
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="3"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -2054,11 +1638,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 11.differ
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="4"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -2066,11 +1646,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 11.differ
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="5"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -2078,11 +1654,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 11.differ
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="6"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -2090,11 +1662,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 11.differ
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="7"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -2102,11 +1670,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 11.differ
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="8"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #
@@ -2114,11 +1678,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 11.differ
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
           key="9"
-          onSelect={[Function]}
         >
           <CheckboxLabeled.Label>
             Filter #

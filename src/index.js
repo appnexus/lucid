@@ -91,7 +91,9 @@ import EnvelopeIcon from './components/Icon/EnvelopeIcon/EnvelopeIcon';
 import EqualsIcon from './components/Icon/EqualsIcon/EqualsIcon';
 import FileIcon from './components/Icon/FileIcon/FileIcon';
 import FilterIcon from './components/Icon/FilterIcon/FilterIcon';
+import FlagIcon from './components/Icon/FlagIcon/FlagIcon';
 import FolderIcon from './components/Icon/FolderIcon/FolderIcon';
+import FourSquaresIcon from './components/Icon/FourSquaresIcon/FourSquaresIcon';
 import Grid from './components/Grid/Grid';
 import HelpIcon from './components/Icon/HelpIcon/HelpIcon';
 import HomeIcon from './components/Icon/HomeIcon/HomeIcon';
@@ -129,6 +131,7 @@ import QuestionMarkIcon from './components/Icon/QuestionMarkIcon/QuestionMarkIco
 import RadioButton from './components/RadioButton/RadioButton';
 import RadioButtonLabeled from './components/RadioButtonLabeled/RadioButtonLabeled';
 import RefreshIcon from './components/Icon/RefreshIcon/RefreshIcon';
+import DraggableList from './components/DraggableList/DraggableList';
 import ResizeIcon from './components/Icon/ResizeIcon/ResizeIcon';
 import Resizer from './components/Resizer/Resizer';
 import ScrollTable from './components/ScrollTable/ScrollTable';
@@ -254,7 +257,9 @@ export {
 	ExpanderPanelDumb,
 	FileIcon,
 	FilterIcon,
+	FlagIcon,
 	FolderIcon,
+	FourSquaresIcon,
 	Grid,
 	HelpIcon,
 	HomeIcon,
@@ -298,6 +303,7 @@ export {
 	RadioGroup,
 	RadioGroupDumb,
 	RefreshIcon,
+	DraggableList,
 	ResizeIcon,
 	Resizer,
 	ScrollTable,

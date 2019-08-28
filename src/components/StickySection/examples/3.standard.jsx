@@ -9,6 +9,7 @@ export default createClass({
 				style={{
 					color: 'rgba(128,128,128,.25)',
 					marginBottom: 700,
+					height: 3000,
 				}}
 			>
 				Post-ironic health goth austin mixtape mlkshk. Cold-pressed ennui

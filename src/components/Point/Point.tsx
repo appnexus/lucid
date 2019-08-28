@@ -2,7 +2,7 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, omitProps } from '../../util/component-types';
+import { omitProps, FC } from '../../util/component-types';
 import { transformFromCenter } from '../../util/chart-helpers';
 import * as chartConstants from '../../constants/charts';
 
@@ -20,48 +20,109 @@ const PATHS = [
 	'M2.594,9.406 C-0.812,6 -0.812,6 2.594,2.594 C6,-0.812 6,-0.812 9.406,2.594 C12.812,6 12.812,6 9.406,9.406 C6,12.812 6,12.812 2.594,9.406 z',
 ];
 
-const Point = createClass({
-	displayName: 'Point',
+export enum Kind {
+	Circle,
+	Square,
+	TriangleUp,
+	TriangleDown,
+	Diamond,
+}
 
-	statics: {
-		peek: {
-			description: `
+export interface IPointProps {
+	style?: React.CSSProperties,
+	className?: string,
+	hasStroke?: boolean,
+	kind?: Kind,
+	color?: string,
+	scale?: number,
+	x?: number,
+	y?: number,
+};
+
+const Point: FC<IPointProps> = (props) : React.ReactElement => {
+	const {
+		color = chartConstants.COLOR_0,
+		hasStroke = false,
+		kind = 0,
+		x = 0,
+		y = 0,
+		scale = 1,
+		className,
+		style,
+	...passThroughs
+	} = props;
+
+	const kindIndex = kind % 5;
+
+	const isCustomColor = _.startsWith(color, '#');
+	const colorStyle = isCustomColor ? { fill: color } : null;
+
+	// These transforms are used to center the icon on the x y coordinate
+	// provided.
+	const transforms = [
+		transformFromCenter(x, y, 6, 6, scale),
+		transformFromCenter(x, y, 6, 6, scale),
+		transformFromCenter(x, y, 7, 6, scale), // triangle
+		transformFromCenter(x, y, 7, 6, scale), // triangle
+		transformFromCenter(x, y, 6, 6, scale),
+	];
+
+	return (
+		<path
+			{...omitProps(passThroughs, undefined, _.keys(Point.propTypes))}
+			style={{
+				...style,
+				...colorStyle,
+			}}
+			className={cx(className, '&', {
+				'&-has-stroke': hasStroke,
+				[`&-${color}`]: !isCustomColor,
+			})}
+			transform={transforms[kindIndex]}
+			d={PATHS[kindIndex]}
+		/>
+	);
+};
+
+Point.displayName = 'Point';
+
+Point.peek = {
+	description: `
 				*For use within an \`svg\`*
 
 				Points are typically used for scatter plots or overlaying shapes on
 				lines.
 			`,
-			categories: ['visualizations', 'geoms'],
-		},
-	},
+	categories: ['visualizations', 'geoms'],
+};
 
-	propTypes: {
-		style: object`
+Point.propTypes = {
+	style: object`
 			Passed through to the root element.
 		`,
 
-		className: string`
+	className: string`
 			Appended to the component-specific class names set on the root element.
 		`,
 
-		hasStroke: bool`
+	hasStroke: bool`
 			Determines if the point has a white stroke around it.
 		`,
 
-		x: number`
+	x: number`
 			x coordinate
 		`,
 
-		y: number`
+	y: number`
 			y coordinate
 		`,
 
-		kind: number`
+	kind: number`
 			Zero-based set of shapes. It's recommended that you pass the index of
 			your array for shapes.
 		`,
 
-		color: string`
+	color: string`
 			Strings should match an existing color class unless they start with a '#'
 			for specific colors. E.g.:
 
@@ -70,66 +131,9 @@ const Point = createClass({
 			- \`'#123abc'\`
 		`,
 
-		scale: number`
+	scale: number`
 			Scale up the size of the symbol. 2 would be double the original size.
 		`,
-	},
-
-	getDefaultProps() {
-		return {
-			x: 0,
-			y: 0,
-			kind: 0,
-			color: chartConstants.COLOR_0,
-			hasStroke: false,
-			scale: 1,
-		};
-	},
-
-	render() {
-		const {
-			className,
-			color,
-			hasStroke,
-			style,
-			kind,
-			x,
-			y,
-			scale,
-			...passThroughs
-		} = this.props;
-
-		const kindIndex = kind % 5;
-
-		const isCustomColor = _.startsWith(color, '#');
-		const colorStyle = isCustomColor ? { fill: color } : null;
-
-		// These transforms are used to center the icon on the x y coordinate
-		// provided.
-		const transforms = [
-			transformFromCenter(x, y, 6, 6, scale),
-			transformFromCenter(x, y, 6, 6, scale),
-			transformFromCenter(x, y, 7, 6, scale), // triangle
-			transformFromCenter(x, y, 7, 6, scale), // triangle
-			transformFromCenter(x, y, 6, 6, scale),
-		];
-
-		return (
-			<path
-				{...omitProps(passThroughs, Point)}
-				style={{
-					...style,
-					...colorStyle,
-				}}
-				className={cx(className, '&', {
-					'&-has-stroke': hasStroke,
-					[`&-${color}`]: !isCustomColor,
-				})}
-				transform={transforms[kindIndex]}
-				d={PATHS[kindIndex]}
-			/>
-		);
-	},
-});
+};
 
 export default Point;

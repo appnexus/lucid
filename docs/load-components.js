@@ -701,6 +701,20 @@ module.exports = [
 		),
 	},
 	{
+		name: 'DraggableList',
+		component: getDefaultExport(require('../src/components/DraggableList/DraggableList')),
+		examplesContext: require.context(
+			'../src/components/DraggableList/examples',
+			true,
+			/\.jsx?$/
+		),
+		examplesContextRaw: require.context(
+			'!!raw-loader!../src/components/DraggableList/examples',
+			true,
+			/\.jsx?$/
+		),
+	},
+	{
 		name: 'Resizer',
 		component: getDefaultExport(require('../src/components/Resizer/Resizer')),
 		examplesContext: require.context(

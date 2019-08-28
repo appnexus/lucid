@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { mount, shallow } from 'enzyme';
 
 import { common } from '../../util/generic-tests';
 import SidePanel from './SidePanel';
@@ -68,6 +68,19 @@ describe('SidePanel', () => {
 				);
 				expect(onResize).toHaveBeenCalled();
 			});
+		});
+	});
+
+	describe('preventBodyScroll', () => {
+		it('should hide the body overflow to prevent scrolling', () => {
+			mount(<SidePanel isExpanded preventBodyScroll />);
+			expect(document.body.style.overflow).toEqual('hidden');
+		});
+
+		it('should hide the body overflow to prevent scrolling', () => {
+			const wrapper = mount(<SidePanel isExpanded preventBodyScroll />);
+			wrapper.unmount();
+			expect(document.body.style.overflow).toEqual('');
 		});
 	});
 

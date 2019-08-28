@@ -9,20 +9,20 @@ const cx = lucidClassNames.bind('&-EligibilityLightIcon');
 
 const { oneOf } = PropTypes;
 
-enum EligibilityOptions {
-	Left = 'left',
-	Right = 'right',
-	Neither = 'neither',
-	Both = 'both',
+export enum EligibilityOptions {
+	left = 'left',
+	right = 'right',
+	neither = 'neither',
+	both = 'both',
 }
 
 interface IEligibilityLightIconProps extends IIconProps {
-	eligibility: EligibilityOptions;
+	eligibility?: EligibilityOptions;
 }
 
 const EligibilityLightIcon: FC<IEligibilityLightIconProps> = ({
 	className,
-	eligibility = EligibilityOptions.Neither,
+	eligibility = EligibilityOptions.neither,
 	isDisabled = false,
 	...passThroughs
 }): React.ReactElement => {
@@ -37,14 +37,14 @@ const EligibilityLightIcon: FC<IEligibilityLightIconProps> = ({
 			<g>
 				<path
 					className={cx('&-half-circle', {
-						'&-is-selected': eligibility === EligibilityOptions.Left || eligibility === EligibilityOptions.Both,
+						'&-is-selected': eligibility === EligibilityOptions.left || eligibility === EligibilityOptions.both,
 						'&-half-circle-is-disabled': isDisabled,
 					})}
 					d='M6.98.928C3.51 1.424.844 4.398.844 8c0 3.604 2.666 6.576 6.133 7.072V.928z'
 				/>
 				<path
 					className={cx('&-half-circle', {
-						'&-is-selected': eligibility === EligibilityOptions.Right || eligibility === EligibilityOptions.Both,
+						'&-is-selected': eligibility === EligibilityOptions.right || eligibility === EligibilityOptions.both,
 						'&-half-circle-is-disabled': isDisabled,
 					})}
 					d='M9.022.928c3.465.496 6.133 3.47 6.133 7.072 0 3.604-2.668 6.576-6.133 7.072V.928z'
@@ -54,7 +54,7 @@ const EligibilityLightIcon: FC<IEligibilityLightIconProps> = ({
 	);
 };
 
-EligibilityLightIcon.displayName = 'EligibilityLightIcon',
+EligibilityLightIcon.displayName = 'EligibilityLightIcon';
 EligibilityLightIcon.peek = {
 	description: `
 		An eligibility icon.
@@ -65,7 +65,7 @@ EligibilityLightIcon.peek = {
 };
 EligibilityLightIcon.propTypes = {
 	...Icon.propTypes,
-	eligibility: oneOf(['both', 'neither', 'left', 'right'])`
+	eligibility: oneOf(_.values(EligibilityOptions))`
 		Eligibility variations of the icon.
 	`,
 };

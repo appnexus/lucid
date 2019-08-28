@@ -8,19 +8,19 @@ const cx = lucidClassNames.bind('&-Badge');
 
 const { node, string, oneOf } = PropTypes;
 
-enum Kind {
-	Default = 'default',
-	Primary = 'primary',
-	Success = 'success',
-	Danger = 'danger',
-	Warning = 'warning',
-	Info = 'info',
-	Dark = 'dark',
+export enum Kind {
+	default = 'default',
+	primary = 'primary',
+	success = 'success',
+	danger = 'danger',
+	warning = 'warning',
+	info = 'info',
+	dark = 'dark',
 }
 
-enum Type {
-	Filled = 'filled',
-	Stroke = 'stroke',
+export enum Type {
+	filled = 'filled',
+	stroke = 'stroke',
 }
 
 export interface IBadgeProps {
@@ -29,16 +29,16 @@ export interface IBadgeProps {
 	 * */
 	className?: string;
 	/** Style variations for the `Badge` */
-	kind?: Kind;
+	kind?: keyof typeof Kind;
 	/** Fill variations for the `Badge` */
-	type?: Type;
+	type?: keyof typeof Type;
 }
 
 const Badge: FC<IBadgeProps> = (props): React.ReactElement => {
 	const {
 		className,
-		kind = Kind.Default,
-		type = Type.Filled,
+		kind = Kind.default,
+		type = Type.filled,
 		children,
 		...passThroughs
 	} = props;

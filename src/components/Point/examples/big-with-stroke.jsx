@@ -22,7 +22,7 @@ export default createClass({
 	render() {
 		return (
 			<div>
-				{_.map(chartConstants.PALETTE_6, (color, i) => (
+				{_.map(chartConstants.PALETTE_7, (color, i) => (
 					<svg key={i} {...svgProps}>
 						<Point {...pointProps} kind={i} color={color} />
 					</svg>

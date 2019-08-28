@@ -214,7 +214,7 @@ export function getFirst<P>(
 // Note: The Partial<P> type is referring to the props passed into the omitProps,
 // not the props defined on the component.
 export function omitProps<P extends object>(
-	props: P,
+	props: Partial<P>,
 	component: ICreateClassComponentClass<P> | undefined,
 	keys: string[] = [],
 	targetIsDOMElement = true

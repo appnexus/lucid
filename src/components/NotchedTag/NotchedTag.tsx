@@ -8,39 +8,39 @@ const { node, string, oneOf, object } = PropTypes;
 
 const cx = lucidClassNames.bind('&-NotchedTag');
 
-enum TagStyle {
-	One = 'style-one',
-	Two = 'style-two',
-	Three = 'style-three',
+export enum TagStyle {
+	'style-one' = 'style-one',
+	'style-two' = 'style-two',
+	'style-three' = 'style-three',
 }
 
-enum Type {
-	Filled = 'filled',
-	Stroke = 'stroke',
+export enum Type {
+	filled = 'filled',
+	stroke = 'stroke',
 }
 
-enum Size {
-	Large = 'large',
-	Small = 'small',
+export enum Size {
+	large = 'large',
+	small = 'small',
 }
 
 const NOTCH_HEIGHT_LARGE = 5;
 const NOTCH_HEIGHT_SMALL = 4;
 
 const SIZE_DIMENSION_MAP = {
-	[Size.Large]: {
+	[Size.large]: {
 		height: '24px',
 		width: '40px',
 	},
-	[Size.Small]: {
+	[Size.small]: {
 		height: '18px',
 		width: '30px',
 	},
 };
 
 const SIZE_NOTCH_MAP: { [key in Size]: number } = {
-	[Size.Large]: NOTCH_HEIGHT_LARGE,
-	[Size.Small]: NOTCH_HEIGHT_SMALL,
+	[Size.large]: NOTCH_HEIGHT_LARGE,
+	[Size.small]: NOTCH_HEIGHT_SMALL,
 };
 
 const STROKE_SIZE = '2px';
@@ -53,13 +53,13 @@ interface INotchedTagProps {
 	className?: string;
 
 	/** Style variations. */
-	type?: Type;
+	type?: keyof typeof Type;
 
 	/** Size variations. */
-	size?: Size;
+	size?: keyof typeof Size;
 
 	/** Tag style variations. */
-	tagStyle?: TagStyle;
+	tagStyle?: keyof typeof TagStyle;
 
 	/** Passed through to the root element. */
 	style?: React.CSSProperties;
@@ -71,8 +71,8 @@ const NotchedTag: FC<INotchedTagProps> = (props): React.ReactElement => {
 		className,
 		type,
 		style,
-		size = Size.Large,
-		tagStyle = TagStyle.One,
+		size = Size.large,
+		tagStyle = TagStyle["style-one"],
 		...passThroughs
 	} = props;
 
@@ -105,7 +105,7 @@ const NotchedTag: FC<INotchedTagProps> = (props): React.ReactElement => {
 				'&',
 				`&-${tagStyle}`,
 				`&-${size}`,
-				type === Type.Filled ? '&-no-border' : '',
+				type === Type.filled ? '&-no-border' : '',
 				className
 			)}
 			{...passThroughs}
@@ -118,7 +118,7 @@ const NotchedTag: FC<INotchedTagProps> = (props): React.ReactElement => {
 			<div
 				className={cx(
 					'&-container',
-					type === Type.Filled ? '&-container-filled' : ''
+					type === Type.filled ? '&-container-filled' : ''
 				)}
 				style={{
 					top: STROKE_SIZE,

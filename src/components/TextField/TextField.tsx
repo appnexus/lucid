@@ -17,7 +17,7 @@ interface ITextFieldProps {
 	className?: string;
 
 	/** Styles that are passed through to native control. */
-	style: object;
+	style: React.CSSProperties;
 
 	/** Set the TextField to multi line mode. Under the hood this will use a `textarea` instead of an `input` if set to `true`. */
 	isMultiLine: boolean;
