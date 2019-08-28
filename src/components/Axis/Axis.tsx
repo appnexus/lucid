@@ -1,0 +1,318 @@
+import _ from 'lodash';
+import React from 'react';
+import PropTypes from 'react-peek/prop-types';
+import { lucidClassNames } from '../../util/style-helpers';
+import { discreteTicks } from '../../util/chart-helpers';
+import { omitProps, FC } from '../../util/component-types';
+import * as d3scale from 'd3-scale';
+
+const cx = lucidClassNames.bind('&-Axis');
+
+const { string, array, func, number, oneOf } = PropTypes;
+
+export interface IAxisProps {
+	/** Any valid React children. */
+	children?: React.ReactNode;
+
+	/** Classes that are appended to the component defaults. This prop is run through the `classnames` library. */
+	className?: string;
+
+	/** Must be a d3 scale. Lucid exposes the \`lucid.d3Scale\` library for use here.
+	 We support `ScaleTime | ScaleBand | ScalePoint` and possibly more. */
+	scale: d3scale.ScaleBand<number>
+		| d3scale.ScalePoint<number>
+		| d3scale.ScaleContinuousNumeric<number, number>;
+		// | d3scale.ScalePower<number, number>
+		// | d3scale.ScaleLogarithmic<number, number>;
+
+	/** Size of the ticks for each discrete tick mark. */
+	innerTickSize: number;
+
+	/** Size of the tick marks found at the beginning and end of the axis. It's
+		common to set this to \`0\` to remove them. */
+	outerTickSize: number;
+
+	/** An optional function that can format ticks. Generally this shouldn't be
+		needed since d3 has very good default formatters for most data. */
+	tickFormat: (d: number | { valueOf(): number }) => string;
+
+	/** If you need fine grained control over the axis ticks, you can pass them
+		in this array. */
+	ticks: number[];
+
+	/** Determines the spacing between each tick and its text. */
+	tickPadding: number;
+
+	/** Determines the orientation of the ticks. \`left\` and \`right\` will
+		generate a vertical axis, whereas \`top\` and \`bottom\` will generate a
+		horizontal axis. */
+	orient: 'top' | 'bottom' | 'left' | 'right';
+
+	/** Control the number of ticks displayed. If the scale is time based or
+		linear, this number acts a "hint" per the default behavior of D3. If it's
+		an ordinal scale, this number is treated as an absolute number of ticks
+		to display and is powered by our own utility function \`discreteTicks\`. */
+	tickCount: number;
+
+	/** Determines the orientation of the tick text. This may override what the orient prop
+		tries to determine. This defaults to `horizontal`.  */
+	textOrientation: 'vertical' | 'horizontal' | 'diagonal';
+}
+
+const Axis: FC<IAxisProps> = (props): React.ReactElement => {
+	const {
+		className,
+		scale,
+		orient = 'bottom',
+		tickCount = null,
+		ticks = "ticks" in scale
+			? scale.ticks((tickCount as number))
+			: discreteTicks(scale.domain(), tickCount), // ordinal scales don't have `ticks` but they do have `domains`
+		innerTickSize = 6, // same as d3
+		outerTickSize = 6, // same as d3
+		tickFormat = "tickFormat" in scale ? scale.tickFormat() : _.identity,
+		tickPadding = 3, // same as d3
+		textOrientation = 'horizontal',
+		...passThroughs
+	} = props;
+
+	const tickSpacing = Math.max(innerTickSize, 0) + tickPadding;
+
+	// Domain
+	const range = scale.range();
+	const sign = orient === 'top' || orient === 'left' ? -1 : 1;
+	const isH = orient === 'top' || orient === 'bottom'; // is horizontal
+	const getOrientationProperties = (orient: string, textOrientation: string): {
+		transform: string;
+		textAnchor: 'end' | 'middle' | 'start';
+		x: number;
+		y: number;
+		dy: string;
+	} => {
+		let textAnchor: 'end' | 'middle' | 'start',
+			x: number,
+			y: number,
+			dy: string;
+		let orientationSign = sign;
+
+		const transform = textOrientation === 'vertical'
+			? 'rotate(-90)'
+			: textOrientation === 'horizontal'
+			? ''
+			: 'rotate(-30)';
+
+		switch (orient) {
+			case 'bottom':
+				if (textOrientation === 'vertical') {
+					orientationSign = -orientationSign;
+				}
+				textAnchor =
+					textOrientation === 'vertical'
+						? 'end'
+						: textOrientation === 'diagonal'
+						? 'end'
+						: 'middle';
+				x =
+					textOrientation === 'vertical'
+						? orientationSign * tickSpacing
+						: textOrientation === 'diagonal'
+						? -orientationSign * tickSpacing
+						: 0;
+				y =
+					textOrientation === 'vertical' ? 0 : orientationSign * tickSpacing;
+				dy = textOrientation === 'vertical' ? '.32em' : '.71em';
+				break;
+			case 'top':
+				if (textOrientation === 'vertical') {
+					orientationSign = -orientationSign;
+				}
+				textAnchor =
+					textOrientation === 'vertical'
+						? 'start'
+						: textOrientation === 'diagonal'
+						? 'start'
+						: 'middle';
+				x =
+					textOrientation === 'vertical' || textOrientation === 'diagonal'
+						? -orientationSign * tickSpacing
+						: 0;
+				y =
+					textOrientation === 'vertical' ? 0 : orientationSign * tickSpacing;
+				dy =
+					textOrientation === 'vertical' || textOrientation === 'diagonal'
+						? '.32em'
+						: '0em';
+				break;
+			case 'right':
+				textAnchor = textOrientation === 'vertical' ? 'middle' : 'start';
+				x =
+					textOrientation === 'vertical' ? 0 : orientationSign * tickSpacing;
+				y =
+					textOrientation === 'vertical'
+						? orientationSign * tickSpacing
+						: textOrientation === 'horizontal'
+						? 0
+						: orientationSign * tickSpacing;
+				dy = textOrientation === 'vertical' ? '.71em' : '.32em';
+				break;
+			case 'left':
+				textAnchor = textOrientation === 'vertical' ? 'middle' : 'end';
+				x =
+					textOrientation === 'vertical' ? 0 : orientationSign * tickSpacing;
+				y =
+					textOrientation === 'vertical' || textOrientation === 'diagonal'
+						? orientationSign * tickSpacing
+						: 0;
+				dy =
+					textOrientation === 'vertical'
+						? '0em'
+						: textOrientation === 'horizontal'
+						? '.32em'
+						: '.71em';
+				break;
+			default:
+					textAnchor = 'start';
+					x = 0;
+					y = 0;
+					dy= 'null';
+			};
+			return {
+				transform,
+				textAnchor,
+				x,
+				y,
+				dy,
+			};
+	};
+	const orientationProperties = {
+		vertical: getOrientationProperties(orient, 'vertical'),
+		horizontal: getOrientationProperties(orient, 'horizontal'),
+		diagonal: getOrientationProperties(orient, 'diagonal'),
+	};
+	const orientationKey = textOrientation || 'horizontal';
+
+
+	// Only band scales have `bandwidth`, this conditional helps center the
+	// ticks on the bands
+	const scaleNormalized = "bandwidth" in scale
+		? (d: number): number => (scale(d) as number) + scale.bandwidth() / 2
+		: scale;
+
+
+	return (
+		<g
+			{...omitProps(passThroughs, undefined, _.keys(Axis.propTypes))}
+			className={cx(className, '&')}
+		>
+			{isH ? (
+				<path
+					className={cx('&-domain')}
+					d={`M${range[0]},${sign * outerTickSize}V0H${range[1]}V${sign *
+						outerTickSize}`}
+				/>
+			) : (
+				<path
+					className={cx('&-domain')}
+					d={`M${sign * outerTickSize},${range[0]}H0V${range[1]}H${sign *
+						outerTickSize}`}
+				/>
+			)}
+			{_.map(ticks, (tick: number): JSX.Element => (
+				<g
+					key={tick}
+					transform={`translate(${isH ? scaleNormalized(tick) : 0}, ${
+						isH ? 0 : scaleNormalized(tick)
+					})`}
+				>
+					<line
+						className={cx('&-tick')}
+						x2={isH ? 0 : sign * innerTickSize}
+						y2={isH ? sign * innerTickSize : 0}
+					/>
+					<text
+						className={cx('&-tick-text')}
+						x={orientationProperties[orientationKey].x}
+						y={orientationProperties[orientationKey].y}
+						dy={orientationProperties[orientationKey].dy}
+						style={{
+							textAnchor: orientationProperties[orientationKey].textAnchor,
+						}}
+						transform={orientationProperties[orientationKey].transform}
+					>
+						{tickFormat(tick)}
+					</text>
+				</g>
+			))}
+		</g>
+	);
+};
+
+Axis.displayName = 'Axis';
+Axis.peek = {
+	description: `
+	*For use within an \`svg\`*
+
+	Axes are used to help render human-readable reference marks on charts.
+	They can either be horizontal or vertical and really only need a scale
+	to be able to draw properly.
+
+	This component is a very close sister to d3's svg axis and most of the
+	logic pwas ported from there.
+`,
+	categories: ['visualizations', 'chart primitives'],
+};
+Axis.propTypes = {
+	className: string`
+		Appended to the component-specific class names set on the root element.
+	`,
+
+	scale: func.isRequired`
+		Must be a d3 scale. Lucid exposes the \`lucid.d3Scale\` library for use
+		here.
+	`,
+
+	innerTickSize: number`
+		Size of the ticks for each discrete tick mark.
+	`,
+
+	outerTickSize: number`
+		Size of the tick marks found at the beginning and end of the axis. It's
+		common to set this to \`0\` to remove them.
+	`,
+
+	tickFormat: func`
+		An optional function that can format ticks. Generally this shouldn't be
+		needed since d3 has very good default formatters for most data.
+		Signature: \`(tick) => {}\`
+	`,
+
+	ticks: array`
+		If you need fine grained control over the axis ticks, you can pass them
+		in this array.
+	`,
+
+	tickPadding: number`
+		Determines the spacing between each tick and its text.
+	`,
+
+	orient: oneOf(['top', 'bottom', 'left', 'right'])`
+		Determines the orientation of the ticks. \`left\` and \`right\` will
+		generate a vertical axis, whereas \`top\` and \`bottom\` will generate a
+		horizontal axis.
+	`,
+
+	tickCount: number`
+		Control the number of ticks displayed. If the scale is time based or
+		linear, this number acts a "hint" per the default behavior of D3. If it's
+		an ordinal scale, this number is treated as an absolute number of ticks
+		to display and is powered by our own utility function \`discreteTicks\`.
+	`,
+
+	textOrientation: oneOf(['vertical', 'horizontal', 'diagonal'])`
+		Determines the orientation of the tick text. This may override what the orient prop
+		tries to determine. This defaults to \`horizontal\`.
+	`,
+};
+
+
+export default Axis;
