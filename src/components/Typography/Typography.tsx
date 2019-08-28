@@ -66,7 +66,7 @@ Typography.propTypes = {
 		Appended to the component-specific class names set on the root element.
 	`,
 
-	variant: oneOf(_.values(ElementTypes)).isRequired`
+	variant: oneOf(_.keys(ElementTypes)).isRequired`
 		This prop defines the type of text that will be displayed.
 		It may be an actual HTML element or something with extra semantic meaning.
 	`,

@@ -63,7 +63,7 @@ LoadingIcon.peek = {
 };
 LoadingIcon.propTypes = {
 	...Icon.propTypes,
-	speed: oneOf(_.values(durations))`
+	speed: oneOf(_.keys(durations))`
 		The speed of rotation of the spinner.
 	`,
 };
