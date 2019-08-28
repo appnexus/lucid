@@ -59,9 +59,8 @@ interface ISlidePanelProps {
 interface ISlidePanelState {
 	translateXPixel: number;
 	startX: number;
-	isAnimated: boolean;
 	isDragging: boolean;
-	offsetTranslate: number;
+	isAnimated: boolean;
 }
 
 
@@ -119,14 +118,15 @@ class SlidePanel extends React.Component<ISlidePanelProps, ISlidePanelState, {}>
 
 	static Slide = SlidePanelSlide;
 
+	offsetTranslate = this.props.isLooped
+		? Math.floor(_.size(findTypes(this.props, SlidePanel.Slide)) / 2)
+		: 0;
+
 	state = {
 		translateXPixel: 0,
 		startX: 0,
 		isAnimated: (this.props.isAnimated as boolean),
 		isDragging: false,
-		offsetTranslate: this.props.isLooped
-			? Math.floor(_.size(findTypes(this.props, SlidePanel.Slide)) / 2)
-			: 0,
 	};
 
 	static defaultProps = {
@@ -166,8 +166,8 @@ class SlidePanel extends React.Component<ISlidePanelProps, ISlidePanelState, {}>
 		}
 		this.setState({
 			translateXPixel: 0,
-			isAnimated: (this.props.isAnimated as boolean),
 			isDragging: false,
+			isAnimated: (this.props.isAnimated as boolean),
 		});
 	};
 
@@ -178,26 +178,28 @@ class SlidePanel extends React.Component<ISlidePanelProps, ISlidePanelState, {}>
 		}
 	};
 
-	async componentDidUpdate(
+	componentDidUpdate(
 		prevProps: ISlidePanelProps,
 		prevState: ISlidePanelState
-	): Promise<void> {
+	): void {
 		const slides = findTypes(this.props, SlidePanel.Slide);
 		const offsetDiff = (this.props.offset as number) - (prevProps.offset as number);
 		if (offsetDiff !== 0 && this.props.isLooped) {
-			const currOffset = this.state.offsetTranslate;
-			await this.setState({
-				offsetTranslate: modulo(
-					_.size(slides),
-					currOffset - offsetDiff
-				)
-			});
+			this.offsetTranslate = modulo(
+				_.size(slides),
+				this.offsetTranslate - offsetDiff
+			);
 
-			_.delay(async (): Promise<void> => {
+			_.delay((): void => {
 				shiftChildren((this.slideStrip.current as HTMLElement), -offsetDiff);
-				await this.setState({ isAnimated: false });
-				await this.forceUpdate();
-				await this.setState({ isAnimated: (this.props.isAnimated as boolean) })
+				this.setState({
+					isAnimated: false,
+				}, (): void => {
+					this.forceUpdate();
+					this.setState({
+						isAnimated: (this.props.isAnimated as boolean),
+					});
+				});
 			}, 200)
 		}
 	};
@@ -210,7 +212,7 @@ class SlidePanel extends React.Component<ISlidePanelProps, ISlidePanelState, {}>
 			isLooped,
 			...passThroughs
 		} = this.props;
-		const offset = (realOffset as number) + this.state.offsetTranslate;
+		const offset = (realOffset as number) + this.offsetTranslate;
 
 		const slides = findTypes(this.props, SlidePanel.Slide);
 		const translateXPercentage =
