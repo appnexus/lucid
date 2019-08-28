@@ -4,14 +4,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 01.b
 <DropMenu
   ContextMenu={
     Object {
-      "alignment": "start",
-      "direction": "down",
-      "directonOffset": 0,
-      "getAlignmentOffset": [Function],
-      "isExpanded": true,
-      "minWidthOffset": 0,
-      "onClickOut": null,
-      "portalId": null,
+      "directonOffset": -1,
     }
   }
   alignment="start"
@@ -80,14 +73,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 02.n
 <DropMenu
   ContextMenu={
     Object {
-      "alignment": "start",
-      "direction": "down",
-      "directonOffset": 0,
-      "getAlignmentOffset": [Function],
-      "isExpanded": true,
-      "minWidthOffset": 0,
-      "onClickOut": null,
-      "portalId": null,
+      "directonOffset": -1,
     }
   }
   alignment="start"
@@ -159,14 +145,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 03.f
 <DropMenu
   ContextMenu={
     Object {
-      "alignment": "start",
-      "direction": "down",
-      "directonOffset": 0,
-      "getAlignmentOffset": [Function],
-      "isExpanded": true,
-      "minWidthOffset": 0,
-      "onClickOut": null,
-      "portalId": null,
+      "directonOffset": -1,
     }
   }
   alignment="start"
@@ -277,14 +256,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 04.g
 <DropMenu
   ContextMenu={
     Object {
-      "alignment": "start",
-      "direction": "down",
-      "directonOffset": 0,
-      "getAlignmentOffset": [Function],
-      "isExpanded": true,
-      "minWidthOffset": 0,
-      "onClickOut": null,
-      "portalId": null,
+      "directonOffset": -1,
     }
   }
   alignment="start"
@@ -418,14 +390,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 05.d
 <DropMenu
   ContextMenu={
     Object {
-      "alignment": "start",
-      "direction": "down",
-      "directonOffset": 0,
-      "getAlignmentOffset": [Function],
-      "isExpanded": true,
-      "minWidthOffset": 0,
-      "onClickOut": null,
-      "portalId": null,
+      "directonOffset": -1,
     }
   }
   alignment="start"
@@ -494,14 +459,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 06.d
 <DropMenu
   ContextMenu={
     Object {
-      "alignment": "start",
-      "direction": "down",
-      "directonOffset": 0,
-      "getAlignmentOffset": [Function],
-      "isExpanded": true,
-      "minWidthOffset": 0,
-      "onClickOut": null,
-      "portalId": null,
+      "directonOffset": -1,
     }
   }
   alignment="start"
@@ -570,14 +528,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.n
 <DropMenu
   ContextMenu={
     Object {
-      "alignment": "start",
-      "direction": "down",
-      "directonOffset": 0,
-      "getAlignmentOffset": [Function],
-      "isExpanded": true,
-      "minWidthOffset": 0,
-      "onClickOut": null,
-      "portalId": null,
+      "directonOffset": -1,
     }
   }
   alignment="start"
@@ -646,14 +597,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 08.m
 <DropMenu
   ContextMenu={
     Object {
-      "alignment": "start",
-      "direction": "down",
-      "directonOffset": 0,
-      "getAlignmentOffset": [Function],
-      "isExpanded": true,
-      "minWidthOffset": 0,
-      "onClickOut": null,
-      "portalId": null,
+      "directonOffset": -1,
     }
   }
   alignment="start"
@@ -1826,14 +1770,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 09.r
 <DropMenu
   ContextMenu={
     Object {
-      "alignment": "start",
-      "direction": "down",
-      "directonOffset": 0,
-      "getAlignmentOffset": [Function],
-      "isExpanded": true,
-      "minWidthOffset": 0,
-      "onClickOut": null,
-      "portalId": null,
+      "directonOffset": -1,
     }
   }
   alignment="start"
@@ -1930,14 +1867,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 10.n
 <DropMenu
   ContextMenu={
     Object {
-      "alignment": "start",
-      "direction": "down",
-      "directonOffset": 0,
-      "getAlignmentOffset": [Function],
-      "isExpanded": true,
-      "minWidthOffset": 0,
-      "onClickOut": null,
-      "portalId": null,
+      "directonOffset": -1,
     }
   }
   alignment="start"
@@ -2006,14 +1936,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 11.a
 <DropMenu
   ContextMenu={
     Object {
-      "alignment": "start",
-      "direction": "down",
-      "directonOffset": 0,
-      "getAlignmentOffset": [Function],
-      "isExpanded": true,
-      "minWidthOffset": 0,
-      "onClickOut": null,
-      "portalId": null,
+      "directonOffset": -1,
     }
   }
   alignment="start"
@@ -2082,14 +2005,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 12.s
 <DropMenu
   ContextMenu={
     Object {
-      "alignment": "start",
-      "direction": "down",
       "directonOffset": 0,
-      "getAlignmentOffset": [Function],
-      "isExpanded": true,
-      "minWidthOffset": 0,
-      "onClickOut": null,
-      "portalId": null,
     }
   }
   alignment="start"
@@ -2199,14 +2115,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 13.i
 <DropMenu
   ContextMenu={
     Object {
-      "alignment": "start",
-      "direction": "down",
-      "directonOffset": 0,
-      "getAlignmentOffset": [Function],
-      "isExpanded": true,
-      "minWidthOffset": 0,
-      "onClickOut": null,
-      "portalId": null,
+      "directonOffset": -1,
     }
   }
   alignment="start"
@@ -2275,14 +2184,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 14.i
 <DropMenu
   ContextMenu={
     Object {
-      "alignment": "start",
-      "direction": "down",
-      "directonOffset": 0,
-      "getAlignmentOffset": [Function],
-      "isExpanded": true,
-      "minWidthOffset": 0,
-      "onClickOut": null,
-      "portalId": null,
+      "directonOffset": -1,
     }
   }
   alignment="start"
@@ -2351,14 +2253,7 @@ exports[`SingleSelect child elements Option should render Option.Selected in the
 <DropMenu
   ContextMenu={
     Object {
-      "alignment": "start",
-      "direction": "down",
       "directonOffset": 0,
-      "getAlignmentOffset": [Function],
-      "isExpanded": true,
-      "minWidthOffset": 0,
-      "onClickOut": null,
-      "portalId": null,
     }
   }
   alignment="start"
