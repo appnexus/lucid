@@ -250,6 +250,10 @@ const Th = createClass({
 		isFirstSingle: bool`
 			Define the cell as being the first 1-height cell in the row.
 		`,
+
+		field: string`
+			Sets the field value for the cell.
+		`,
 	},
 
 	getDefaultProps() {
