@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import _ from 'lodash';
 import { lucidClassNames } from '../../util/style-helpers';
-import { omitProps } from '../../util/component-types';
+import { omitProps, StandardProps } from '../../util/component-types';
 import reducers from './TextField.reducers';
 import * as KEYCODE from '../../constants/key-code';
 import { ITextFieldState } from './TextField.reducers';
@@ -12,13 +12,7 @@ const cx = lucidClassNames.bind('&-TextField');
 
 const { bool, string, func, number, object, oneOfType } = PropTypes;
 
-interface ITextFieldProps {
-	/** Appended to the component-specific class names set on the root element. */
-	className?: string;
-
-	/** Styles that are passed through to native control. */
-	style: React.CSSProperties;
-
+interface ITextFieldProps extends StandardProps {
 	/** Set the TextField to multi line mode. Under the hood this will use a `textarea` instead of an `input` if set to `true`. */
 	isMultiLine: boolean;
 
