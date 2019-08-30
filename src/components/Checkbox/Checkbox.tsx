@@ -69,7 +69,6 @@ const Checkbox: FC<ICheckboxProps> = (props): React.ReactElement => {
 		onSelect,
 		...passThroughs
 	} = props;
-	console.log('jdlm', isIndeterminate);
 
 	const nativeElement = React.createRef<HTMLInputElement>();
 

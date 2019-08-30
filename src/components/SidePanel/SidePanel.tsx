@@ -175,6 +175,9 @@ class SidePanel extends React.Component<ISidePanelProps, ISidePanelState, {}> {
 		width: 240,
 	};
 
+	static getDefaultProps = (): typeof SidePanel.defaultProps =>
+		SidePanel.defaultProps;
+
 	static Header = SidePanelHeader;
 
 	timerId = setTimeout((): void => {
