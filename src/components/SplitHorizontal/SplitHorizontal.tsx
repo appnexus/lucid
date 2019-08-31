@@ -80,9 +80,7 @@ SplitHorizontalBottomPane.defaultProps = {
 	isPrimary: false,
 }
 
-interface ISplitHorizontalDividerProps {
-	children?: React.ReactNode;
-}
+interface ISplitHorizontalDividerProps extends StandardProps {}
 const SplitHorizontalDivider: FC<ISplitHorizontalDividerProps> = (
 	props
 ): React.ReactElement => <div>{props.children}</div>;
@@ -143,7 +141,7 @@ class SplitHorizontal extends React.Component<ISplitHorizontalProps, ISplitHoriz
 		categories: ['helpers'],
 		madeFrom: ['DragCaptureZone'],
 	};
-	// static _isPrivate = true;
+	static _isPrivate = true;
 	static propTypes = {
 		className: string`
 			Appended to the component-specific class names set on the root element.
@@ -205,8 +203,8 @@ class SplitHorizontal extends React.Component<ISplitHorizontalProps, ISplitHoriz
 	private topPaneRef = React.createRef<HTMLDivElement>();
 	private bottomPaneRef = React.createRef<HTMLDivElement>();
 
-	secondaryStartRect = this.bottomPaneRef.current
-		? this.bottomPaneRef.current.getBoundingClientRect()
+	secondaryStartRect = this.topPaneRef.current
+		? this.topPaneRef.current.getBoundingClientRect()
 		: null;
 
 	getPanes = (): {
@@ -216,27 +214,25 @@ class SplitHorizontal extends React.Component<ISplitHorizontalProps, ISplitHoriz
 		secondary: ISplitHorizontalTopPaneProps | ISplitHorizontalBottomPaneProps,
 		primaryRef: React.RefObject<HTMLDivElement>,
 		secondaryRef: React.RefObject<HTMLDivElement>,
-	}=> {
+	} => {
 		const { children } = this.props;
 		const { topPaneRef, bottomPaneRef } = this;
 
 		const topPaneElement = _.get(
-			filterTypes<ISplitHorizontalProps>(children, SplitHorizontalTopPane),
+			filterTypes<ISplitHorizontalProps>(children, SplitHorizontal.TopPane),
 			0,
-			<SplitHorizontalTopPane />
+			<SplitHorizontal.TopPane />
 		);
 		const bottomPaneElement = _.get(
-			filterTypes<ISplitHorizontalProps>(children, SplitHorizontalBottomPane),
+			filterTypes<ISplitHorizontalProps>(children, SplitHorizontal.BottomPane),
 			0,
-			<SplitHorizontalBottomPane />
+			<SplitHorizontal.BottomPane />
 		);
 		let primaryElement, primaryRef;
 		let secondaryElement, secondaryRef;
 
 		if (
-			topPaneElement
-			&& topPaneElement.props
-			&& topPaneElement.props.isPrimary
+			topPaneElement.props.isPrimary
 			&& !bottomPaneElement.props.isPrimary
 		) {
 			primaryElement = topPaneElement;
