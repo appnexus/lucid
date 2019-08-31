@@ -46,7 +46,6 @@ SplitHorizontalTopPane.propTypes = {
 SplitHorizontalTopPane.defaultProps = {
 	isPrimary: false,
 }
-// SplitHorizontalTopPane.type = SplitHorizontalTopPane;
 
 interface ISplitHorizontalBottomPaneProps extends StandardProps {
 	/** Set height of this pane. */
@@ -80,7 +79,6 @@ SplitHorizontalBottomPane.propTypes = {
 SplitHorizontalBottomPane.defaultProps = {
 	isPrimary: false,
 }
-// SplitHorizontalBottomPane.type = SplitHorizontalBottomPane;
 
 interface ISplitHorizontalDividerProps {
 	children?: React.ReactNode;
@@ -101,8 +99,6 @@ SplitHorizontalDivider.propTypes = {
 		Any valid React children.
 	`,
 };
-// SplitHorizontalDivider.type = SplitHorizontalDivider;
-
 
 interface ISplitHorizontalProps extends StandardProps {
 	/** Render as expanded or collapsed. */
@@ -147,7 +143,7 @@ class SplitHorizontal extends React.Component<ISplitHorizontalProps, ISplitHoriz
 		categories: ['helpers'],
 		madeFrom: ['DragCaptureZone'],
 	};
-	static _isPrivate = true;
+	// static _isPrivate = true;
 	static propTypes = {
 		className: string`
 			Appended to the component-specific class names set on the root element.
@@ -181,9 +177,13 @@ class SplitHorizontal extends React.Component<ISplitHorizontalProps, ISplitHoriz
 		collapseShift: number`
 			Use this prop to shift the collapsed position by a known value.
 		`,
+
+		TopPane: node,
+		BottomPane: node,
+		Divider: node,
 	};
 
-	defaultProps = {
+	static defaultProps = {
 		isExpanded: true,
 		isAnimated: false,
 		collapseShift: 0,
