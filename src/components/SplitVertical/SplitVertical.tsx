@@ -187,6 +187,10 @@ class SplitVertical extends React.Component<
 		collapseShift: number`
 			Use this prop to shift the collapsed position by a known value.
 		`,
+
+		RightPane: node,
+		LeftPane: node,
+		Divider: node,
 	};
 
 	static defaultProps = {

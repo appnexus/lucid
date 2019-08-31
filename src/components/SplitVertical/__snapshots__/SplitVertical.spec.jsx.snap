@@ -279,7 +279,7 @@ exports[`SplitVertical render should render expanded & collapsed 1`] = `
               "flexBasis": "calc(50% - 3px)",
               "flexGrow": 0,
               "flexShrink": 0,
-              "marginLeft": null,
+              "marginLeft": undefined,
               "overflow": "auto",
             }
           }
