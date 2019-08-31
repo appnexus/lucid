@@ -1,16 +1,15 @@
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import { getFirst, omitProps, FC } from '../../util/component-types';
+import { getFirst, omitProps, FC, StandardProps } from '../../util/component-types';
 import _ from 'lodash';
 
 const cx = lucidClassNames.bind('&-Validation');
 
 const { string, any } = PropTypes;
 
-interface IValidationErrorProps {
+interface IValidationErrorProps extends StandardProps {
 	description?: string;
-	children?: React.ReactNode;
 }
 
 const ValidationError: FC<IValidationErrorProps> = (
@@ -29,13 +28,7 @@ ValidationError.propTypes = {
 	children: any,
 };
 
-export interface IValidationProps {
-	/** Any valid React children. */
-	children?: React.ReactNode;
-
-	/** Classes that are appended to the component defaults. This prop is run through the \`classnames\` library. */
-	className?: string;
-
+export interface IValidationProps extends StandardProps {
 	/** In most cases this will be a string, but it also accepts any valid React
 			element. If this is a falsey value, then no error message will be
 			displayed.  If this is the literal \`true\`, it will add the

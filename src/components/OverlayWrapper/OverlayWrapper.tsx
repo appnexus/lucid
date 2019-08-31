@@ -8,6 +8,7 @@ import {
 	getFirst,
 	rejectTypes,
 	omitProps,
+	StandardProps,
 } from '../../util/component-types';
 import ReactTransitionGroup from 'react-transition-group/CSSTransitionGroup';
 
@@ -15,9 +16,7 @@ const cx = lucidClassNames.bind('&-OverlayWrapper');
 
 const { bool, node, oneOf, string } = PropTypes;
 
-interface IMessageProps {
-	children?: React.ReactNode;
-}
+interface IMessageProps extends StandardProps {}
 
 const Message: FC<IMessageProps> = (props): React.ReactElement => (
 	<div>{props.children}</div>
@@ -34,7 +33,7 @@ Message.propTypes = {
 	children: node,
 };
 
-export interface IOverlayWrapperProps {
+export interface IOverlayWrapperProps extends StandardProps {
 	/** Controls whether the message should be displayed over the wrapped content. */
 	isVisible: boolean;
 
@@ -44,12 +43,6 @@ export interface IOverlayWrapperProps {
 	 * @default true
 	 */
 	hasOverlay?: boolean;
-
-	/** Class names that are appended to the defaults. */
-	className?: string;
-
-	/** Any valid React children. */
-	children?: React.ReactNode;
 
 	/** Style variations for the overlay behind the message.
 	 *

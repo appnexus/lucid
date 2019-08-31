@@ -3,20 +3,14 @@ import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import { discreteTicks } from '../../util/chart-helpers';
-import { omitProps, FC } from '../../util/component-types';
+import { omitProps, FC, StandardProps } from '../../util/component-types';
 import * as d3scale from 'd3-scale';
 
 const cx = lucidClassNames.bind('&-Axis');
 
 const { string, array, func, number, oneOf } = PropTypes;
 
-export interface IAxisProps {
-	/** Any valid React children. */
-	children?: React.ReactNode;
-
-	/** Classes that are appended to the component defaults. This prop is run through the `classnames` library. */
-	className?: string;
-
+export interface IAxisProps extends StandardProps {
 	/** Must be a d3 scale. Lucid exposes the \`lucid.d3Scale\` library for use here.
 	 We support `ScaleTime | ScaleBand | ScalePoint` and possibly more. */
 	scale: d3scale.ScaleBand<number>

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import ReactDOM from 'react-dom';
-import { omitProps } from '../../util/component-types';
+import { omitProps, StandardProps } from '../../util/component-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import classNames from 'classnames';
 
@@ -9,13 +9,7 @@ const cx = lucidClassNames.bind('&-Portal');
 
 const { any, node, string } = PropTypes;
 
-interface IPortalProps {
-	/** Appended to the component-specific class names set on the root element. */
-	className?: string;
-
-	/** Any valid React children */
-	children?: React.ReactNode;
-
+interface IPortalProps extends StandardProps {
 	/** The `id` of the portal element that is appended to `document.body`. */
 	portalId?: string;
 }

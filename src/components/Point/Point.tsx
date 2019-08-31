@@ -2,7 +2,7 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import { omitProps, FC } from '../../util/component-types';
+import { omitProps, FC, StandardProps } from '../../util/component-types';
 import { transformFromCenter } from '../../util/chart-helpers';
 import * as chartConstants from '../../constants/charts';
 
@@ -28,9 +28,7 @@ export enum Kind {
 	Diamond,
 }
 
-export interface IPointProps {
-	style?: React.CSSProperties,
-	className?: string,
+export interface IPointProps extends StandardProps {
 	hasStroke?: boolean,
 	kind?: Kind,
 	color?: string,

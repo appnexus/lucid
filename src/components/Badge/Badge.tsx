@@ -2,7 +2,7 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import { omitProps, FC } from '../../util/component-types';
+import { omitProps, FC, StandardProps } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-Badge');
 
@@ -23,12 +23,7 @@ export enum Type {
 	stroke = 'stroke',
 }
 
-export interface IBadgeProps {
-	children: React.ReactNode;
-	/** Appended to the component-specific class names set on the root element.
-	 * */
-	className?: string;
-	/** Style variations for the `Badge` */
+export interface IBadgeProps extends StandardProps {
 	kind?: keyof typeof Kind;
 	/** Fill variations for the `Badge` */
 	type?: keyof typeof Type;

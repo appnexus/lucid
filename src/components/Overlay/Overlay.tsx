@@ -4,19 +4,13 @@ import PropTypes from 'react-peek/prop-types';
 import Portal from '../Portal/Portal';
 import ReactTransitionGroup from 'react-transition-group/CSSTransitionGroup';
 import { lucidClassNames, uniqueName } from '../../util/style-helpers';
-import { omitProps } from '../../util/component-types';
+import { omitProps, StandardProps } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-Overlay');
 
 const { string, bool, func, node } = PropTypes;
 
-export interface IOverlayProps {
-	/** Appended to the component-specific class names set on the root element. */
-	className?: string;
-
-	/** SlidePanel.Slide elements are passed in as children. */
-	children?: React.ReactNode;
-
+export interface IOverlayProps extends StandardProps {
 	/** Styles that are passed through to native control. */
 	style?: React.CSSProperties;
 

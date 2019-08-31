@@ -2,15 +2,13 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import { findTypes, omitProps, FC } from '../../util/component-types';
+import { findTypes, omitProps, FC, StandardProps } from '../../util/component-types';
 import Checkbox, { ICheckboxProps } from '../Checkbox/Checkbox';
 
 const cx = lucidClassNames.bind('&-CheckboxLabeled');
 const { any, node, object, string } = PropTypes;
 
-interface ILabelProps {
-	children?: React.ReactNode;
-}
+interface ILabelProps extends StandardProps {}
 
 const Label: FC<ILabelProps> = (props): React.ReactElement => (
 	<div>{props.children}</div>
@@ -33,15 +31,7 @@ Label.propTypes = {
 };
 
 export interface ICheckboxLabeledProps extends ICheckboxProps {
-	/** Appended to the component-specific class names set on the root element. */
-	className?: string;
-
-	/** Passed through to the root element. */
-	style?: React.CSSProperties;
-
-	/** Child element whose children are used to identify the purpose of this
-	 *  checkbox to the user.
-	 */
+	/** Child element whose children are used to identify the purpose of this  checkbox to the user. */
 	Label?: React.ReactNode & { props: ILabelProps };
 }
 
