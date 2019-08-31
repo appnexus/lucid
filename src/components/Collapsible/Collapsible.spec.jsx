@@ -68,7 +68,7 @@ describe('Collapsible', () => {
 			*/
 
 			it('should default to true', () => {
-				assert.equal(true, _.get(Collapsible.getDefaultProps(), 'isExpanded'));
+				assert.equal(true, _.get(Collapsible.defaultProps, 'isExpanded'));
 			});
 
 			/*
@@ -143,7 +143,7 @@ describe('Collapsible', () => {
 			*/
 
 			it('should default to true', () => {
-				assert.equal(true, _.get(Collapsible.getDefaultProps(), 'isAnimated'));
+				assert.equal(true, _.get(Collapsible.defaultProps, 'isAnimated'));
 			});
 
 			/*
@@ -200,7 +200,7 @@ describe('Collapsible', () => {
 			it('should default to true', () => {
 				assert.equal(
 					true,
-					_.get(Collapsible.getDefaultProps(), 'isMountControlled')
+					_.get(Collapsible.defaultProps, 'isMountControlled')
 				);
 			});
 
@@ -261,7 +261,7 @@ describe('Collapsible', () => {
 
 		describe('rootType', () => {
 			it('should default to `div`', () => {
-				assert.equal('div', _.get(Collapsible.getDefaultProps(), 'rootType'));
+				assert.equal('div', _.get(Collapsible.defaultProps, 'rootType'));
 			});
 
 			it('should render a root container of the passed in type', () => {
