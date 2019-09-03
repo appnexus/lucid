@@ -1,6 +1,6 @@
 {
   "name": "lucid-ui",
-  "version": "4.5.0-typescript.4",
+  "version": "4.5.0-typescript.5",
   "description": "A UI component library from AppNexus.",
   "main": "dist/index.js",
   "module": "lib/index.js",
