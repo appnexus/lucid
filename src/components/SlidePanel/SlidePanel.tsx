@@ -5,7 +5,11 @@ import { Motion, spring, PlainStyle } from 'react-motion';
 import { QUICK_SLIDE_MOTION } from '../../constants/motion-spring';
 import { lucidClassNames } from '../../util/style-helpers';
 import { shiftChildren } from '../../util/dom-helpers';
-import { findTypes, omitProps } from '../../util/component-types';
+import {
+	findTypes,
+	omitProps,
+	StandardProps,
+} from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-SlidePanel');
 
@@ -13,9 +17,8 @@ const { bool, func, node, number, string, any } = PropTypes;
 
 const modulo = (n: number, a: number): number => a - n * Math.floor(a / n);
 
-interface ISlidePanelSlideProps {
+interface ISlidePanelSlideProps extends StandardProps {
 	description?: string;
-	children?: React.ReactNode;
 }
 class SlidePanelSlide extends React.Component<ISlidePanelSlideProps, {}, {}> {
 	static displayName = 'SlidePanel.Slide';
@@ -26,13 +29,7 @@ class SlidePanelSlide extends React.Component<ISlidePanelSlideProps, {}, {}> {
 	}
 }
 
-interface ISlidePanelProps {
-	/** Appended to the component-specific class names set on the root element. */
-	className?: string;
-
-	/** SlidePanel.Slide elements are passed in as children. */
-	children?: React.ReactNode;
-
+interface ISlidePanelProps extends StandardProps {
 	/** Max number of viewable slides to show simultaneously. */
 	slidesToShow: number;
 

@@ -2,7 +2,7 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, findTypes, omitProps } from '../../util/component-types';
+import { createClass, findTypes, omitProps, StandardProps } from '../../util/component-types';
 import { buildHybridComponent } from '../../util/state-management';
 import ChevronIcon from '../Icon/ChevronIcon/ChevronIcon';
 import Collapsible from '../Collapsible/Collapsible';
@@ -13,23 +13,15 @@ const cx = lucidClassNames.bind('&-Expander');
 
 const { any, bool, func, node, object, oneOf, string } = PropTypes;
 
-interface IExpanderLabelProps {
+interface IExpanderLabelProps extends StandardProps {
 	description?: string;
-	children?: React.ReactNode;
 }
 
-interface IExpanderAdditionalLabelProps {
+interface IExpanderAdditionalLabelProps extends StandardProps {
 	description?: string;
-	children?: React.ReactNode;
 }
 
-export interface IExpanderProps {
-	/** Expandable content. */
-	children?: React.ReactNode;
-
-	/** Appended to the component-specific class names set on the root element. */
-	className?: string;
-
+export interface IExpanderProps extends StandardProps {
 	/**
 	 * Indicates that the component is in the "expanded" state when true and in
 	 * the "unexpanded" state when false.

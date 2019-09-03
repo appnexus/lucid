@@ -2,16 +2,18 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import { omitProps, FC, PropsWithDefaults } from '../../util/component-types';
+import {
+	omitProps,
+	FC,
+	PropsWithDefaults,
+	StandardProps,
+} from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-Checkbox');
 
 const { bool, func, object, string } = PropTypes;
 
-export interface ICheckboxProps {
-	/** Appended to the component-specific class names set on the root element. */
-	className?: string;
-
+export interface ICheckboxProps extends StandardProps {
 	/** Indicates whether the component should appear in an "indeterminate" or
 	 * "partially checked" state. This prop takes precedence over
 	 * \`isSelected\`.

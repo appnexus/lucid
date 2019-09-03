@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 import createReactClass from 'create-react-class';
 import PropTypes from 'react-peek/prop-types';
 import _ from 'lodash';
@@ -6,6 +6,16 @@ import {
 	isPlainObjectOrEsModule,
 	omitFunctionPropsDeep,
 } from './state-management';
+
+export interface StandardProps {
+	/** Appended to the component-specific class names set on the root element.
+			Value is run through the `classnames` library. */
+	className?: string;
+	/** Any valid React children. */
+	children?: React.ReactNode;
+	/** Styles that are passed through to native control. */
+	style?: React.CSSProperties;
+}
 
 // `P`: props
 // `D`: default props
@@ -40,6 +50,8 @@ export interface FC<P, D = {}> extends React.FC<P> {
 type TypesType<P> =
 	| ICreateClassComponentClass<P>
 	| Array<ICreateClassComponentClass<P>>
+	| FC<P>
+	| Array<FC<P>>
 	| { propName?: string };
 
 interface ICreateClassComponentSpec<P extends { [key: string]: any }, S>
@@ -129,17 +141,46 @@ export function createClass<P, S>(
 export function filterTypes<P>(
 	children: React.ReactNode,
 	types?: TypesType<P>
+): React.ReactElement[] {
+	if (types === undefined) return [];
+
+	return _.filter(
+		React.Children.toArray(children),
+		(element): boolean =>
+			React.isValidElement(element) &&
+			_.includes(_.castArray(types), element.type)
+	) as React.ReactElement[];
+}
+
+// return all elements found in props and children of the specified types
+export function findTypes<P extends { children?: React.ReactNode }>(
+	props: P,
+	types?: TypesType<P>
 ): React.ReactNode[] {
 	if (types === undefined) {
 		return [];
 	}
 
-	types = _.castArray(types);
-
-	return _.filter(
-		React.Children.toArray(children),
-		element => React.isValidElement(element) && _.includes(types, element.type)
+	// get elements from props (using types.propName)
+	const elementsFromProps: React.ReactNode[] = _.reduce(
+		_.castArray(types),
+		(acc: React.ReactNode[], type): React.ReactNode[] => {
+			return _.isNil(type.propName)
+				? []
+				: createElements(
+						type,
+						_.flatten(_.values(_.pick(props, type.propName)))
+				  );
+		},
+		[]
 	);
+
+	if (props.children === undefined) {
+		return elementsFromProps;
+	}
+
+	// return elements from props and elements from children
+	return elementsFromProps.concat(filterTypes<P>(props.children, types));
 }
 
 // return all elements not matching the specified types
@@ -181,37 +222,6 @@ export function createElements<P>(
 		},
 		[]
 	);
-}
-
-// return all elements found in props and children of the specified types
-export function findTypes<P extends { children?: React.ReactNode }>(
-	props: P,
-	types?: TypesType<P>
-): React.ReactNode[] {
-	if (types === undefined) {
-		return [];
-	}
-
-	// get elements from props (using types.propName)
-	const elementsFromProps: React.ReactNode[] = _.reduce(
-		_.castArray(types),
-		(acc: React.ReactNode[], type): React.ReactNode[] => {
-			return _.isNil(type.propName)
-				? []
-				: createElements(
-						type,
-						_.flatten(_.values(_.pick(props, type.propName)))
-				  );
-		},
-		[]
-	);
-
-	if (props.children === undefined) {
-		return elementsFromProps;
-	}
-
-	// return elements from props and elements from children
-	return elementsFromProps.concat(filterTypes<P>(props.children, types));
 }
 
 // return the first element found in props and children of the specificed type(s)

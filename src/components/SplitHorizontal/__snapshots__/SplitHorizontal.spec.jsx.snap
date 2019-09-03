@@ -267,7 +267,7 @@ exports[`SplitHorizontal render should render expanded & collapsed 1`] = `
               "flexBasis": "calc(50% - 3px)",
               "flexGrow": 0,
               "flexShrink": 0,
-              "marginTop": null,
+              "marginTop": undefined,
               "overflow": "auto",
             }
           }

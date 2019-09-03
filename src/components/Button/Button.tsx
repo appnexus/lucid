@@ -2,13 +2,13 @@ import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import _ from 'lodash';
 import { lucidClassNames } from '../../util/style-helpers';
-import { omitProps, FC } from '../../util/component-types';
+import { omitProps, FC, StandardProps } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-Button');
 
 const { arrayOf, bool, func, node, oneOf, oneOfType, string } = PropTypes;
 
-export interface IButtonProps {
+export interface IButtonProps extends StandardProps {
 	/**
 	 * Disables the Button by greying it out
 	 *
@@ -23,18 +23,12 @@ export interface IButtonProps {
 	 **/
 	isActive?: boolean;
 
-	/** Activates the Button by giving it a "pressed down" look */
-	className?: string;
-
 	/**
 	 * Set this to \`true\` if you want the Button to only contain an icon.
 	 *
 	 * @default false
 	 * */
 	hasOnlyIcon?: boolean;
-
-	/** Any valid React children */
-	children?: React.ReactNode;
 
 	/** Style variations of the Button */
 	kind?: 'primary' | 'link' | 'danger' | 'invisible';

@@ -7,15 +7,13 @@ import GripperVerticalIcon from '../Icon/GripperVerticalIcon/GripperVerticalIcon
 import CloseIcon from '../Icon/CloseIcon/CloseIcon';
 import DragCaptureZone from '../DragCaptureZone/DragCaptureZone';
 import Button from '../Button/Button';
-import { getFirst, omitProps, FC } from '../../util/component-types';
+import { getFirst, omitProps, FC, StandardProps } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-SidePanel');
 
 const { any, bool, func, oneOf, node, number, string, oneOfType } = PropTypes;
 
-interface ISidePanelHeaderProps {
-	children?: React.ReactNode;
-}
+interface ISidePanelHeaderProps extends StandardProps {}
 const SidePanelHeader: FC<ISidePanelHeaderProps> = ({
 	children,
 }): React.ReactElement => {
@@ -35,14 +33,7 @@ SidePanelHeader.propTypes = {
 	`,
 };
 
-export interface ISidePanelProps {
-	/** Appended to the component-specific class names set on the root element. */
-	className?: string;
-
-	/** Generally you should only have a single child element so the centering works
-	 * correctly. */
-	children?: React.ReactNode;
-
+export interface ISidePanelProps extends StandardProps {
 	/** Alternative to using `<SidePanel.Header>`. */
 	Header?: React.ReactNode & { props: ISidePanelHeaderProps };
 

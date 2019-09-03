@@ -3,15 +3,13 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import { findTypes, omitProps, FC } from '../../util/component-types';
+import { findTypes, omitProps, FC, StandardProps } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-Breadcrumb');
 
 const { any, node } = PropTypes;
 
-interface IBreadcrumbItemProps {
-	children?: React.ReactNode;
-}
+interface IBreadcrumbItemProps extends StandardProps {}
 const BreadcrumbItem: FC<IBreadcrumbItemProps> = (
 	props
 ): React.ReactElement => <div>{props.children}</div>;
@@ -27,12 +25,7 @@ BreadcrumbItem.propTypes = {
 	children: node,
 };
 
-interface IBreadcrumbProps {
-	/** All children should be \`Breadcrumb.Item\`s. Others are ignored. */
-	children?: React.ReactNode;
-	/** Appended to the component-specific class names set on the root element. */
-	className?: string;
-
+interface IBreadcrumbProps extends StandardProps {
 	Item?: string | React.ReactNode & { props: IBreadcrumbItemProps };
 }
 

@@ -4,63 +4,52 @@ import PropTypes from 'react-peek/prop-types';
 import { Motion, spring } from 'react-motion';
 import { QUICK_SLIDE_MOTION } from '../../constants/motion-spring';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, omitProps } from '../../util/component-types';
+import { omitProps, StandardProps } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-Collapsible');
 
 const { any, bool, node, number, string } = PropTypes;
 
-export interface ICollapsibleProps {
-	/** Expandable content. */
-	children?: React.ReactNode;
-
-	/** Appended to the component-specific class names set on the root element. */
-	className?: string;
-
-	/**
-	 * Indicates that the component is in the "expanded" state when true and in
-	 * the "unexpanded" state when false.
-	 * */
+export interface ICollapsibleProps extends StandardProps {
+	/** Indicates that the component is in the "expanded" state when true and in
+	 * the "unexpanded" state when false. */
 	isExpanded?: boolean;
 
-	/**
-	 * Show an animated transition for alternating values of \`isExpanded\`.
-	 * */
+	/** Show an animated transition for alternating values of \`isExpanded\`. */
 	isAnimated?: boolean;
 
-	/**
-	 * If true, do not render children when fully collapsed.
-	 * */
+	/** If true, do not render children when fully collapsed. */
 	isMountControlled?: boolean;
 
-	/**
-	 * If \`isMountControlled\` is true, this value sets is the minimum height
-	 * the container needs to reach to not render any children.
-	 * */
+	/** If \isMountControlled\ is true, this value sets is the minimum height
+	 * the container needs to reach to not render any children. */
 	mountControlThreshold?: number;
 
-	/**
-	 * Pass in a custom root element type.
-	 * */
+	/** Pass in a custom root element type. */
 	rootType?: any;
 }
 
-const Collapsible = createClass<ICollapsibleProps, {}>({
-	displayName: 'Collapsible',
+export interface ICollapsibleState {
+	maxHeight: number;
+}
 
-	statics: {
-		peek: {
-			description: `
-				This is a simple container that can render content as expanded or
-				collapsed.
-			`,
-			categories: ['utility'],
-		},
-	},
 
-	_isPrivate: true,
 
-	propTypes: {
+class Collapsible extends React.Component<
+	ICollapsibleProps,
+	ICollapsibleState,
+	{}
+>{
+	static displayName = 'Collapsible';
+	static peek = {
+		description: `
+			This is a simple container that can render content as expanded or
+			collapsed.
+		`,
+		categories: ['utility'],
+	};
+	// static _isPrivate = true;
+	static propTypes = {
 		children: node`
 			Expandable content.
 		`,
@@ -90,43 +79,45 @@ const Collapsible = createClass<ICollapsibleProps, {}>({
 		rootType: any`
 			Pass in a custom root element type.
 		`,
-	},
+	};
 
-	getDefaultProps() {
-		return {
-			isExpanded: true,
-			isAnimated: true,
-			isMountControlled: true,
-			mountControlThreshold: 4,
-			rootType: 'div',
-		};
-	},
+	private rootRef = React.createRef<HTMLDivElement>();
 
-	getInitialState() {
-		return {
-			maxHeight: null,
-		};
-	},
+	isAnimated: boolean | undefined = false;
+	delayTimer: number | null = null;
 
-	componentWillMount() {
+	static defaultProps = {
+		isExpanded: true,
+		isAnimated: true,
+		isMountControlled: true,
+		mountControlThreshold: 4,
+		rootType: 'div',
+	};
+
+	state = {
+		maxHeight: 0,
+	};
+
+	componentWillMount(): void {
 		this.isAnimated = false;
 		this.delayTimer = null;
-	},
+	};
 
-	componentDidMount() {
-		_.delay(() => {
+	componentDidMount(): void {
+		_.delay((): void => {
+			// const maxHeight = _.get(this, 'rootRef.current.scrollHeight');
 			this.setState({
-				maxHeight: _.get(this, 'rootRef.scrollHeight'),
+				maxHeight: _.get(this, 'rootRef.current.scrollHeight'),
 			});
 			this.isAnimated = this.props.isAnimated;
 		}, 32);
-	},
+	};
 
-	componentDidUpdate() {
+	componentDidUpdate(): void {
 		this.isAnimated = false;
-		this.delayTimer = _.delay(() => {
+		this.delayTimer = _.delay((): void => {
 			if (this.props.isExpanded) {
-				const maxHeight = _.get(this, 'rootRef.scrollHeight');
+				const maxHeight = _.get(this, 'rootRef.current.scrollHeight');
 				if (maxHeight !== this.state.maxHeight) {
 					this.setState({
 						maxHeight,
@@ -135,13 +126,13 @@ const Collapsible = createClass<ICollapsibleProps, {}>({
 			}
 			this.isAnimated = this.props.isAnimated;
 		}, 32);
-	},
+	};
 
-	componentWillUnmount() {
+	componentWillUnmount(): void {
 		this.delayTimer && clearTimeout(this.delayTimer);
-	},
+	};
 
-	render() {
+	render(): React.ReactNode {
 		const {
 			children,
 			className,
@@ -159,22 +150,23 @@ const Collapsible = createClass<ICollapsibleProps, {}>({
 				style={
 					this.isAnimated
 						? {
-								height:
-									isExpanded && !_.isNull(maxHeight)
-										? spring(maxHeight, QUICK_SLIDE_MOTION)
-										: spring(0, QUICK_SLIDE_MOTION),
-						  }
-						: {
-								height: isExpanded && !_.isNull(maxHeight) ? maxHeight : 0,
-						  }
+							height: isExpanded
+								? spring(maxHeight, QUICK_SLIDE_MOTION)
+								: spring(0, QUICK_SLIDE_MOTION),
+							}
+						: {	height: isExpanded ? maxHeight : 0 }
 				}
 			>
-				{tween =>
+				{(tween): JSX.Element =>
 					React.createElement(
 						rootType,
 						{
-							...omitProps(passThroughs, Collapsible),
-							ref: (ref: any) => (this.rootRef = ref),
+							...omitProps(
+								passThroughs,
+								undefined,
+								Object.keys(Collapsible.propTypes),
+							),
+							ref: this.rootRef,
 							className: cx('&', className),
 							style: {
 								height:
@@ -196,7 +188,7 @@ const Collapsible = createClass<ICollapsibleProps, {}>({
 							>
 								{isMountControlled && !isExpanded
 									? _.isNull(maxHeight) ||
-									  Math.abs(tween.height) > mountControlThreshold
+									  Math.abs(tween.height) > (mountControlThreshold as number)
 										? children
 										: null
 									: children}
@@ -206,7 +198,7 @@ const Collapsible = createClass<ICollapsibleProps, {}>({
 				}
 			</Motion>
 		);
-	},
-});
+	};
+};
 
 export default Collapsible;

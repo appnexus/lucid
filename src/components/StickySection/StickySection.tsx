@@ -2,39 +2,23 @@ import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import _ from 'lodash';
 import { lucidClassNames } from '../../util/style-helpers';
-import { omitProps } from '../../util/component-types';
+import { omitProps, StandardProps } from '../../util/component-types';
 import { getAbsoluteBoundingClientRect } from '../../util/dom-helpers';
 
 const cx = lucidClassNames.bind('&-StickySection');
 const { node, number, object, string } = PropTypes;
 
-interface IStickySectionProps {
-	/** any valid React children */
-	children?: React.ReactNode;
-
-	/** Appended to the component-specific class names set on the root element. */
-	className?: string;
-
-	/** Styles that are passed through to the root container. */
-	style?: React.CSSProperties;
-
-	/**
-	 * Pixel value from the top of the document. When scrolled passed, the
-	 * sticky header is no longer sticky, and renders normally.
-	 */
+interface IStickySectionProps extends StandardProps {
+	/** Pixel value from the top of the document. When scrolled passed, the
+	 * sticky header is no longer sticky, and renders normally. */
 	lowerBound?: number;
 
-	/**
-	 * Width of section when it sticks to the top edge of the screen. When
-	 * omitted, it defaults to the last width of the section.
-	 */
+	/** Width of section when it sticks to the top edge of the screen. When
+	 * omitted, it defaults to the last width of the section. */
 	viewportWidth?: number;
 
-
-	/**
-	 * Top offset threshold before sticking to the top. The sticky content will
-	 * display with this offset.
-	 */
+	/** Top offset threshold before sticking to the top. The sticky content will
+	 * display with this offset. */
 	topOffset?: number;
 }
 
@@ -82,10 +66,10 @@ class StickySection extends React.Component<
 			Width of section when it sticks to the top edge of the screen. When
 			omitted, it defaults to the last width of the section.
 		`,
-               topOffset: number`
-                       Top offset threshold before sticking to the top. The sticky content will
-                       display with this offset.
-               `,
+		topOffset: number`
+			Top offset threshold before sticking to the top. The sticky content will
+			display with this offset.
+		`,
 	};
 
 	private scrollContainer = React.createRef<HTMLDivElement>();

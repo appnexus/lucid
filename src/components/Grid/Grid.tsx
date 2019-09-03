@@ -2,7 +2,7 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import { findTypes, omitProps, FC } from '../../util/component-types';
+import { findTypes, omitProps, FC, StandardProps } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-Grid');
 
@@ -12,10 +12,7 @@ const { string, bool, node } = PropTypes;
 // Type definitions
 // -----------------------------------------------------------------------------
 
-interface IGridProps {
-	/** Appended to the component-specific class names set on the root element. */
-	className?: string;
-
+interface IGridProps extends StandardProps {
 	/** explicitly set the primary axis of the grid to Y */
 	isVertical?: boolean;
 
@@ -32,7 +29,7 @@ interface IGridProps {
 	children?: React.ReactNode;
 }
 
-interface ICellProps {
+interface ICellProps extends StandardProps {
 	/** fill all twelve columns of the primary grid axis */
 	isFull?: boolean;
 

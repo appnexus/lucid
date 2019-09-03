@@ -2,27 +2,20 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import { omitProps, getFirst, FC } from '../../util/component-types';
+import { omitProps, getFirst, FC, StandardProps } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-ProgressBar');
 
 const { number, string, oneOf, node } = PropTypes;
 
-interface ITitleProps {
-	children: React.ReactNode;
-}
+interface ITitleProps extends StandardProps {}
 
-interface IProgressBarProps {
-	/** Appended to the component-specific class names set on the root element. */
-	className: string;
-
+interface IProgressBarProps extends StandardProps {
 	/** Applies a color style for the kind of ProgressBar. */
 	kind: 'default' | 'success' | 'danger' | 'info' | 'warning';
 
 	/** Percentage ProgressBar is complete. */
 	percentComplete: number;
-
-	children: React.ReactNode;
 
 	/** *Child Element* - Title contents. Only one \`Title\` is used. */
 	Title: string | React.ReactNode & { props: ITitleProps };

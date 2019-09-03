@@ -2,16 +2,12 @@ import _ from 'lodash';
 import React, { createRef } from 'react';
 import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import { omitProps, FC } from '../../util/component-types';
+import { omitProps, FC, StandardProps } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-Switch');
 const { bool, func, object, string } = PropTypes;
 
-export interface ISwitchProps {
-	/** Appended to the component-specific class names set on the root element.
-	 * */
-	className?: string;
-
+export interface ISwitchProps extends StandardProps {
 	/** Indicates whether the component should appear and act disabled by having
 	 * a "greyed out" palette and ignoring user interactions. */
 	isDisabled?: boolean;
@@ -34,9 +30,6 @@ export interface ISwitchProps {
 			props: ISwitchProps;
 		}
 	) => void;
-
-	/** Passed through to the root element. */
-	style?: React.CSSProperties;
 
 	/** Offers a red/green styling to the switch. */
 	isIncludeExclude?: boolean;

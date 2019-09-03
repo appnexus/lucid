@@ -2,15 +2,12 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import { omitProps, FC } from '../../util/component-types';
+import { omitProps, FC, StandardProps } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-RadioButton');
 const { bool, func, object, string } = PropTypes;
 
-interface IRadioButtonProps {
-	/** Appended to the component-specific class names set on the root element. */
-	className?: string;
-
+interface IRadioButtonProps extends StandardProps {
 	/** Indicates whether the component should appear and act disabled by having
 	 * a "greyed out" palette and ignoring user interactions.
 	 *
@@ -39,9 +36,6 @@ interface IRadioButtonProps {
 			props: IRadioButtonProps;
 		}
 	) => void;
-
-	/** Passed through to the root element. */
-	style?: React.CSSProperties;
 }
 
 const RadioButton: FC<IRadioButtonProps> = (props): React.ReactElement => {

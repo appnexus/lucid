@@ -2,18 +2,13 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import { omitProps } from '../../util/component-types';
+import { omitProps, StandardProps } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-DragCaptureZone');
 const { func, string } = PropTypes;
 
-interface IDragCaptureZoneProps {
-	/** Appended to the component-specific class names set on the root element.
-	 */
-	className?: string;
-
-	/** Called as the user drags the mouse.
-	 */
+interface IDragCaptureZoneProps extends StandardProps {
+	/** Called as the user drags the mouse. */
 	onDrag: (
 		{
 			dX,
@@ -35,8 +30,7 @@ interface IDragCaptureZoneProps {
 		}
 	) => void;
 
-	/** Called when the user releases the mouse button after having dragged.
-	 */
+	/** Called when the user releases the mouse button after having dragged. */
 	onDragEnd: (
 		{
 			dX,
@@ -58,8 +52,7 @@ interface IDragCaptureZoneProps {
 		}
 	) => void;
 
-	/** Called when the user presses the mouse button down while over the component.
-	 */
+	/** Called when the user presses the mouse button down while over the component. */
 	onDragStart: (
 		{
 			dX,
@@ -82,8 +75,7 @@ interface IDragCaptureZoneProps {
 	) => void;
 
 	/** Called when the drag event is canceled due to user interaction.
-	 * For example: if a system alert pops up during a touch event.
-	 */
+	 * For example: if a system alert pops up during a touch event. */
 	onDragCancel: ({
 		event,
 		props,

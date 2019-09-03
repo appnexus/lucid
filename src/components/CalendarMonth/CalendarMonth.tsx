@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import DayPicker from 'react-day-picker';
 import { lucidClassNames } from '../../util/style-helpers';
+import { StandardProps } from '../../util/component-types';
 
 const { DateUtils } = DayPicker;
 
@@ -9,11 +10,7 @@ const cx = lucidClassNames.bind('&-CalendarMonth');
 
 const { bool, instanceOf, number, oneOf, string } = PropTypes;
 
-interface ICalendarProps {
-	/** Appended to the component-specific class names set on the root element.
-	 */
-	className?: string;
-
+interface ICalendarProps extends StandardProps {
 	/** The offset of the rendered month, where 0 is the \`initialMonth\`.
 	 * Negative values will show previous months.
 	 */
