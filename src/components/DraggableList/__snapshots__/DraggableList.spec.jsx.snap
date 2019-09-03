@@ -311,6 +311,10 @@ exports[`DraggableList [common] example testing should match snapshot(s) for 3.w
         >
           <CheckboxLabeled
             Label="Item One"
+            isDisabled={false}
+            isIndeterminate={false}
+            isSelected={false}
+            onSelect={[Function]}
           />
         </div>
       </div>
@@ -353,6 +357,10 @@ exports[`DraggableList [common] example testing should match snapshot(s) for 3.w
         >
           <CheckboxLabeled
             Label="Item Two"
+            isDisabled={false}
+            isIndeterminate={false}
+            isSelected={false}
+            onSelect={[Function]}
           />
         </div>
       </div>
@@ -395,6 +403,10 @@ exports[`DraggableList [common] example testing should match snapshot(s) for 3.w
         >
           <CheckboxLabeled
             Label="Item Three"
+            isDisabled={false}
+            isIndeterminate={false}
+            isSelected={false}
+            onSelect={[Function]}
           />
         </div>
       </div>
@@ -437,6 +449,10 @@ exports[`DraggableList [common] example testing should match snapshot(s) for 3.w
         >
           <CheckboxLabeled
             Label="Item Four"
+            isDisabled={false}
+            isIndeterminate={false}
+            isSelected={false}
+            onSelect={[Function]}
           />
         </div>
       </div>
@@ -479,6 +495,10 @@ exports[`DraggableList [common] example testing should match snapshot(s) for 3.w
         >
           <CheckboxLabeled
             Label="Item Five"
+            isDisabled={false}
+            isIndeterminate={false}
+            isSelected={false}
+            onSelect={[Function]}
           />
         </div>
       </div>

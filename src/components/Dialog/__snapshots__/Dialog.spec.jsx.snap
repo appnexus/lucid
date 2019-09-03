@@ -824,6 +824,8 @@ exports[`Dialog [common] example testing should match snapshot(s) for 4.complex 
         Flavor
       </p>
       <CheckboxLabeled
+        isDisabled={false}
+        isIndeterminate={false}
         isSelected={true}
         name="interactive-checkboxes"
         onSelect={[Function]}
@@ -838,6 +840,8 @@ exports[`Dialog [common] example testing should match snapshot(s) for 4.complex 
         </CheckboxLabeled.Label>
       </CheckboxLabeled>
       <CheckboxLabeled
+        isDisabled={false}
+        isIndeterminate={false}
         isSelected={false}
         name="interactive-checkboxes"
         onSelect={[Function]}
