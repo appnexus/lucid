@@ -24,21 +24,28 @@ export interface IOverlayProps extends StandardProps {
 		contents, and it won't capture any of the user click events. */
 	isModal: boolean;
 
-
 	/** Set your own id for the \`Portal\` is that is opened up to contain the
 		contents. In practice you should never need to set this manually. */
 	portalId?: string;
 
 	/** Fired when the user hits escape.  Signature: \`({ event, props }) => {}\; */
-	onEscape: (
-		{ event, props }: { event: KeyboardEvent; props: IOverlayProps }
-	) => void;
+	onEscape: ({
+		event,
+		props,
+	}: {
+		event: KeyboardEvent;
+		props: IOverlayProps;
+	}) => void;
 
 	/** Fired when the user clicks on the background, this may or may not be
 		visible depending on \`isModal\`.  Signature: \`({ event, props }) => {}\` */
-	onBackgroundClick: (
-		{ event, props }: { event: React.MouseEvent; props: IOverlayProps }
-	) => void;
+	onBackgroundClick: ({
+		event,
+		props,
+	}: {
+		event: React.MouseEvent;
+		props: IOverlayProps;
+	}) => void;
 }
 
 interface IOverlayState {
@@ -47,7 +54,6 @@ interface IOverlayState {
 
 class Overlay extends React.Component<IOverlayProps, IOverlayState, {}> {
 	static displayName = 'Overlay';
-
 
 	static peek = {
 		description: `
@@ -105,6 +111,9 @@ class Overlay extends React.Component<IOverlayProps, IOverlayState, {}> {
 		isAnimated: true,
 	};
 
+	static getDefaultProps = (): typeof Overlay.defaultProps =>
+		Overlay.defaultProps;
+
 	state = {
 		// This must be in state because getDefaultProps only runs once per
 		// component import which causes collisions
@@ -115,7 +124,7 @@ class Overlay extends React.Component<IOverlayProps, IOverlayState, {}> {
 		if (window && window.document) {
 			window.document.addEventListener('keydown', this.handleDocumentKeyDown);
 		}
-	};
+	}
 
 	componentWillUnmount(): void {
 		if (window && window.document) {
@@ -124,7 +133,7 @@ class Overlay extends React.Component<IOverlayProps, IOverlayState, {}> {
 				this.handleDocumentKeyDown
 			);
 		}
-	};
+	}
 
 	handleDocumentKeyDown = (event: KeyboardEvent): void => {
 		// If the user hits the "escape" key, then fire an `onEscape`
@@ -137,8 +146,10 @@ class Overlay extends React.Component<IOverlayProps, IOverlayState, {}> {
 	handleBackgroundClick = (event: React.MouseEvent): void => {
 		// Use the reference we previously stored from the `ref` to check what
 		// element was clicked on.
-		if (this.rootHTMLDivElement.current &&
-			event.target === this.rootHTMLDivElement.current) {
+		if (
+			this.rootHTMLDivElement.current &&
+			event.target === this.rootHTMLDivElement.current
+		) {
 			this.props.onBackgroundClick({ event, props: this.props });
 		}
 	};
@@ -157,11 +168,7 @@ class Overlay extends React.Component<IOverlayProps, IOverlayState, {}> {
 
 		const overlayElement = isShown ? (
 			<div
-				{...omitProps(
-					passThroughs,
-					undefined,
-					Object.keys(Overlay.propTypes)
-				)}
+				{...omitProps(passThroughs, undefined, Object.keys(Overlay.propTypes))}
 				className={cx(className, '&', {
 					'&-is-not-modal': !isModal,
 					'&-is-animated': isAnimated,
@@ -188,7 +195,7 @@ class Overlay extends React.Component<IOverlayProps, IOverlayState, {}> {
 				)}
 			</Portal>
 		);
-	};
-};
+	}
+}
 
 export default Overlay;

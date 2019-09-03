@@ -38,7 +38,12 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 1.sta
           rowSpan={2}
           sortDirection="up"
         >
-          <Checkbox />
+          <Checkbox
+            isDisabled={false}
+            isIndeterminate={false}
+            isSelected={false}
+            onSelect={[Function]}
+          />
         </Table.Th>
         <Table.Th
           align="left"
@@ -138,7 +143,12 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 1.sta
           hasBorderLeft={false}
           hasBorderRight={false}
         >
-          <Checkbox />
+          <Checkbox
+            isDisabled={false}
+            isIndeterminate={false}
+            isSelected={false}
+            onSelect={[Function]}
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -204,7 +214,12 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 1.sta
           hasBorderLeft={false}
           hasBorderRight={false}
         >
-          <Checkbox />
+          <Checkbox
+            isDisabled={false}
+            isIndeterminate={false}
+            isSelected={false}
+            onSelect={[Function]}
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -272,7 +287,12 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 1.sta
           hasBorderLeft={false}
           hasBorderRight={false}
         >
-          <Checkbox />
+          <Checkbox
+            isDisabled={false}
+            isIndeterminate={false}
+            isSelected={false}
+            onSelect={[Function]}
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -339,7 +359,12 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 1.sta
           hasBorderLeft={false}
           hasBorderRight={false}
         >
-          <Checkbox />
+          <Checkbox
+            isDisabled={false}
+            isIndeterminate={false}
+            isSelected={false}
+            onSelect={[Function]}
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -406,7 +431,12 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 1.sta
           hasBorderLeft={false}
           hasBorderRight={false}
         >
-          <Checkbox />
+          <Checkbox
+            isDisabled={false}
+            isIndeterminate={false}
+            isSelected={false}
+            onSelect={[Function]}
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -476,7 +506,12 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 1.sta
           hasBorderLeft={false}
           hasBorderRight={false}
         >
-          <Checkbox />
+          <Checkbox
+            isDisabled={false}
+            isIndeterminate={false}
+            isSelected={false}
+            onSelect={[Function]}
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -548,7 +583,12 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 1.sta
           hasBorderLeft={false}
           hasBorderRight={false}
         >
-          <Checkbox />
+          <Checkbox
+            isDisabled={false}
+            isIndeterminate={false}
+            isSelected={false}
+            onSelect={[Function]}
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -619,7 +659,12 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 1.sta
           hasBorderLeft={false}
           hasBorderRight={false}
         >
-          <Checkbox />
+          <Checkbox
+            isDisabled={false}
+            isIndeterminate={false}
+            isSelected={false}
+            onSelect={[Function]}
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -691,7 +736,10 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 1.sta
           hasBorderRight={false}
         >
           <Checkbox
+            isDisabled={false}
+            isIndeterminate={false}
             isSelected={true}
+            onSelect={[Function]}
           />
         </Table.Td>
         <Table.Td
@@ -759,7 +807,10 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 1.sta
           hasBorderRight={false}
         >
           <Checkbox
+            isDisabled={false}
+            isIndeterminate={false}
             isSelected={true}
+            onSelect={[Function]}
           />
         </Table.Td>
         <Table.Td
@@ -829,7 +880,10 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 1.sta
           hasBorderRight={false}
         >
           <Checkbox
+            isDisabled={false}
+            isIndeterminate={false}
             isSelected={true}
+            onSelect={[Function]}
           />
         </Table.Td>
         <Table.Td
@@ -898,7 +952,10 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 1.sta
           hasBorderRight={false}
         >
           <Checkbox
+            isDisabled={false}
+            isIndeterminate={false}
             isSelected={true}
+            onSelect={[Function]}
           />
         </Table.Td>
         <Table.Td
@@ -967,7 +1024,12 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 1.sta
           hasBorderLeft={false}
           hasBorderRight={false}
         >
-          <Checkbox />
+          <Checkbox
+            isDisabled={false}
+            isIndeterminate={false}
+            isSelected={false}
+            onSelect={[Function]}
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -1034,7 +1096,12 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 1.sta
           hasBorderLeft={false}
           hasBorderRight={false}
         >
-          <Checkbox />
+          <Checkbox
+            isDisabled={false}
+            isIndeterminate={false}
+            isSelected={false}
+            onSelect={[Function]}
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -1134,7 +1201,12 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 2.wit
           rowSpan={2}
           sortDirection="up"
         >
-          <Checkbox />
+          <Checkbox
+            isDisabled={false}
+            isIndeterminate={false}
+            isSelected={false}
+            onSelect={[Function]}
+          />
         </Table.Th>
         <Table.Th
           align="left"
@@ -1234,7 +1306,12 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 2.wit
           hasBorderLeft={false}
           hasBorderRight={false}
         >
-          <Checkbox />
+          <Checkbox
+            isDisabled={false}
+            isIndeterminate={false}
+            isSelected={false}
+            onSelect={[Function]}
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -1300,7 +1377,12 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 2.wit
           hasBorderLeft={false}
           hasBorderRight={false}
         >
-          <Checkbox />
+          <Checkbox
+            isDisabled={false}
+            isIndeterminate={false}
+            isSelected={false}
+            onSelect={[Function]}
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -1368,7 +1450,12 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 2.wit
           hasBorderLeft={false}
           hasBorderRight={false}
         >
-          <Checkbox />
+          <Checkbox
+            isDisabled={false}
+            isIndeterminate={false}
+            isSelected={false}
+            onSelect={[Function]}
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -1435,7 +1522,12 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 2.wit
           hasBorderLeft={false}
           hasBorderRight={false}
         >
-          <Checkbox />
+          <Checkbox
+            isDisabled={false}
+            isIndeterminate={false}
+            isSelected={false}
+            onSelect={[Function]}
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -1502,7 +1594,12 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 2.wit
           hasBorderLeft={false}
           hasBorderRight={false}
         >
-          <Checkbox />
+          <Checkbox
+            isDisabled={false}
+            isIndeterminate={false}
+            isSelected={false}
+            onSelect={[Function]}
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -1572,7 +1669,12 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 2.wit
           hasBorderLeft={false}
           hasBorderRight={false}
         >
-          <Checkbox />
+          <Checkbox
+            isDisabled={false}
+            isIndeterminate={false}
+            isSelected={false}
+            onSelect={[Function]}
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -1644,7 +1746,12 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 2.wit
           hasBorderLeft={false}
           hasBorderRight={false}
         >
-          <Checkbox />
+          <Checkbox
+            isDisabled={false}
+            isIndeterminate={false}
+            isSelected={false}
+            onSelect={[Function]}
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -1715,7 +1822,12 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 2.wit
           hasBorderLeft={false}
           hasBorderRight={false}
         >
-          <Checkbox />
+          <Checkbox
+            isDisabled={false}
+            isIndeterminate={false}
+            isSelected={false}
+            onSelect={[Function]}
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -1787,7 +1899,10 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 2.wit
           hasBorderRight={false}
         >
           <Checkbox
+            isDisabled={false}
+            isIndeterminate={false}
             isSelected={true}
+            onSelect={[Function]}
           />
         </Table.Td>
         <Table.Td
@@ -1855,7 +1970,10 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 2.wit
           hasBorderRight={false}
         >
           <Checkbox
+            isDisabled={false}
+            isIndeterminate={false}
             isSelected={true}
+            onSelect={[Function]}
           />
         </Table.Td>
         <Table.Td
@@ -1925,7 +2043,10 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 2.wit
           hasBorderRight={false}
         >
           <Checkbox
+            isDisabled={false}
+            isIndeterminate={false}
             isSelected={true}
+            onSelect={[Function]}
           />
         </Table.Td>
         <Table.Td
@@ -1994,7 +2115,10 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 2.wit
           hasBorderRight={false}
         >
           <Checkbox
+            isDisabled={false}
+            isIndeterminate={false}
             isSelected={true}
+            onSelect={[Function]}
           />
         </Table.Td>
         <Table.Td
@@ -2063,7 +2187,12 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 2.wit
           hasBorderLeft={false}
           hasBorderRight={false}
         >
-          <Checkbox />
+          <Checkbox
+            isDisabled={false}
+            isIndeterminate={false}
+            isSelected={false}
+            onSelect={[Function]}
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -2130,7 +2259,12 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 2.wit
           hasBorderLeft={false}
           hasBorderRight={false}
         >
-          <Checkbox />
+          <Checkbox
+            isDisabled={false}
+            isIndeterminate={false}
+            isSelected={false}
+            onSelect={[Function]}
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -2236,7 +2370,12 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 3.set
           rowSpan={2}
           sortDirection="up"
         >
-          <Checkbox />
+          <Checkbox
+            isDisabled={false}
+            isIndeterminate={false}
+            isSelected={false}
+            onSelect={[Function]}
+          />
         </Table.Th>
         <Table.Th
           align="left"
@@ -2336,7 +2475,12 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 3.set
           hasBorderLeft={false}
           hasBorderRight={false}
         >
-          <Checkbox />
+          <Checkbox
+            isDisabled={false}
+            isIndeterminate={false}
+            isSelected={false}
+            onSelect={[Function]}
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -2402,7 +2546,12 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 3.set
           hasBorderLeft={false}
           hasBorderRight={false}
         >
-          <Checkbox />
+          <Checkbox
+            isDisabled={false}
+            isIndeterminate={false}
+            isSelected={false}
+            onSelect={[Function]}
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -2470,7 +2619,12 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 3.set
           hasBorderLeft={false}
           hasBorderRight={false}
         >
-          <Checkbox />
+          <Checkbox
+            isDisabled={false}
+            isIndeterminate={false}
+            isSelected={false}
+            onSelect={[Function]}
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -2537,7 +2691,12 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 3.set
           hasBorderLeft={false}
           hasBorderRight={false}
         >
-          <Checkbox />
+          <Checkbox
+            isDisabled={false}
+            isIndeterminate={false}
+            isSelected={false}
+            onSelect={[Function]}
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -2604,7 +2763,12 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 3.set
           hasBorderLeft={false}
           hasBorderRight={false}
         >
-          <Checkbox />
+          <Checkbox
+            isDisabled={false}
+            isIndeterminate={false}
+            isSelected={false}
+            onSelect={[Function]}
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -2674,7 +2838,12 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 3.set
           hasBorderLeft={false}
           hasBorderRight={false}
         >
-          <Checkbox />
+          <Checkbox
+            isDisabled={false}
+            isIndeterminate={false}
+            isSelected={false}
+            onSelect={[Function]}
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -2746,7 +2915,12 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 3.set
           hasBorderLeft={false}
           hasBorderRight={false}
         >
-          <Checkbox />
+          <Checkbox
+            isDisabled={false}
+            isIndeterminate={false}
+            isSelected={false}
+            onSelect={[Function]}
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -2817,7 +2991,12 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 3.set
           hasBorderLeft={false}
           hasBorderRight={false}
         >
-          <Checkbox />
+          <Checkbox
+            isDisabled={false}
+            isIndeterminate={false}
+            isSelected={false}
+            onSelect={[Function]}
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -2889,7 +3068,10 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 3.set
           hasBorderRight={false}
         >
           <Checkbox
+            isDisabled={false}
+            isIndeterminate={false}
             isSelected={true}
+            onSelect={[Function]}
           />
         </Table.Td>
         <Table.Td
@@ -2957,7 +3139,10 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 3.set
           hasBorderRight={false}
         >
           <Checkbox
+            isDisabled={false}
+            isIndeterminate={false}
             isSelected={true}
+            onSelect={[Function]}
           />
         </Table.Td>
         <Table.Td
@@ -3027,7 +3212,10 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 3.set
           hasBorderRight={false}
         >
           <Checkbox
+            isDisabled={false}
+            isIndeterminate={false}
             isSelected={true}
+            onSelect={[Function]}
           />
         </Table.Td>
         <Table.Td
@@ -3096,7 +3284,10 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 3.set
           hasBorderRight={false}
         >
           <Checkbox
+            isDisabled={false}
+            isIndeterminate={false}
             isSelected={true}
+            onSelect={[Function]}
           />
         </Table.Td>
         <Table.Td
@@ -3165,7 +3356,12 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 3.set
           hasBorderLeft={false}
           hasBorderRight={false}
         >
-          <Checkbox />
+          <Checkbox
+            isDisabled={false}
+            isIndeterminate={false}
+            isSelected={false}
+            onSelect={[Function]}
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -3232,7 +3428,12 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 3.set
           hasBorderLeft={false}
           hasBorderRight={false}
         >
-          <Checkbox />
+          <Checkbox
+            isDisabled={false}
+            isIndeterminate={false}
+            isSelected={false}
+            onSelect={[Function]}
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -3332,7 +3533,12 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 4.ful
           rowSpan={2}
           sortDirection="up"
         >
-          <Checkbox />
+          <Checkbox
+            isDisabled={false}
+            isIndeterminate={false}
+            isSelected={false}
+            onSelect={[Function]}
+          />
         </Table.Th>
         <Table.Th
           align="left"
@@ -3522,7 +3728,12 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 4.ful
           hasBorderLeft={false}
           hasBorderRight={false}
         >
-          <Checkbox />
+          <Checkbox
+            isDisabled={false}
+            isIndeterminate={false}
+            isSelected={false}
+            onSelect={[Function]}
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -3658,7 +3869,12 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 4.ful
           hasBorderLeft={false}
           hasBorderRight={false}
         >
-          <Checkbox />
+          <Checkbox
+            isDisabled={false}
+            isIndeterminate={false}
+            isSelected={false}
+            onSelect={[Function]}
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -3796,7 +4012,12 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 4.ful
           hasBorderLeft={false}
           hasBorderRight={false}
         >
-          <Checkbox />
+          <Checkbox
+            isDisabled={false}
+            isIndeterminate={false}
+            isSelected={false}
+            onSelect={[Function]}
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -3933,7 +4154,12 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 4.ful
           hasBorderLeft={false}
           hasBorderRight={false}
         >
-          <Checkbox />
+          <Checkbox
+            isDisabled={false}
+            isIndeterminate={false}
+            isSelected={false}
+            onSelect={[Function]}
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -4070,7 +4296,12 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 4.ful
           hasBorderLeft={false}
           hasBorderRight={false}
         >
-          <Checkbox />
+          <Checkbox
+            isDisabled={false}
+            isIndeterminate={false}
+            isSelected={false}
+            onSelect={[Function]}
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -4210,7 +4441,12 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 4.ful
           hasBorderLeft={false}
           hasBorderRight={false}
         >
-          <Checkbox />
+          <Checkbox
+            isDisabled={false}
+            isIndeterminate={false}
+            isSelected={false}
+            onSelect={[Function]}
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -4352,7 +4588,12 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 4.ful
           hasBorderLeft={false}
           hasBorderRight={false}
         >
-          <Checkbox />
+          <Checkbox
+            isDisabled={false}
+            isIndeterminate={false}
+            isSelected={false}
+            onSelect={[Function]}
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -4493,7 +4734,12 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 4.ful
           hasBorderLeft={false}
           hasBorderRight={false}
         >
-          <Checkbox />
+          <Checkbox
+            isDisabled={false}
+            isIndeterminate={false}
+            isSelected={false}
+            onSelect={[Function]}
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -4635,7 +4881,10 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 4.ful
           hasBorderRight={false}
         >
           <Checkbox
+            isDisabled={false}
+            isIndeterminate={false}
             isSelected={true}
+            onSelect={[Function]}
           />
         </Table.Td>
         <Table.Td
@@ -4773,7 +5022,10 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 4.ful
           hasBorderRight={false}
         >
           <Checkbox
+            isDisabled={false}
+            isIndeterminate={false}
             isSelected={true}
+            onSelect={[Function]}
           />
         </Table.Td>
         <Table.Td
@@ -4913,7 +5165,10 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 4.ful
           hasBorderRight={false}
         >
           <Checkbox
+            isDisabled={false}
+            isIndeterminate={false}
             isSelected={true}
+            onSelect={[Function]}
           />
         </Table.Td>
         <Table.Td
@@ -5052,7 +5307,10 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 4.ful
           hasBorderRight={false}
         >
           <Checkbox
+            isDisabled={false}
+            isIndeterminate={false}
             isSelected={true}
+            onSelect={[Function]}
           />
         </Table.Td>
         <Table.Td
@@ -5191,7 +5449,12 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 4.ful
           hasBorderLeft={false}
           hasBorderRight={false}
         >
-          <Checkbox />
+          <Checkbox
+            isDisabled={false}
+            isIndeterminate={false}
+            isSelected={false}
+            onSelect={[Function]}
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -5328,7 +5591,12 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 4.ful
           hasBorderLeft={false}
           hasBorderRight={false}
         >
-          <Checkbox />
+          <Checkbox
+            isDisabled={false}
+            isIndeterminate={false}
+            isSelected={false}
+            onSelect={[Function]}
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -5498,7 +5766,12 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 5.set
           rowSpan={2}
           sortDirection="up"
         >
-          <Checkbox />
+          <Checkbox
+            isDisabled={false}
+            isIndeterminate={false}
+            isSelected={false}
+            onSelect={[Function]}
+          />
         </Table.Th>
         <Table.Th
           align="left"
@@ -5598,7 +5871,12 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 5.set
           hasBorderLeft={false}
           hasBorderRight={false}
         >
-          <Checkbox />
+          <Checkbox
+            isDisabled={false}
+            isIndeterminate={false}
+            isSelected={false}
+            onSelect={[Function]}
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -5664,7 +5942,12 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 5.set
           hasBorderLeft={false}
           hasBorderRight={false}
         >
-          <Checkbox />
+          <Checkbox
+            isDisabled={false}
+            isIndeterminate={false}
+            isSelected={false}
+            onSelect={[Function]}
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -5732,7 +6015,12 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 5.set
           hasBorderLeft={false}
           hasBorderRight={false}
         >
-          <Checkbox />
+          <Checkbox
+            isDisabled={false}
+            isIndeterminate={false}
+            isSelected={false}
+            onSelect={[Function]}
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -5799,7 +6087,12 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 5.set
           hasBorderLeft={false}
           hasBorderRight={false}
         >
-          <Checkbox />
+          <Checkbox
+            isDisabled={false}
+            isIndeterminate={false}
+            isSelected={false}
+            onSelect={[Function]}
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -5866,7 +6159,12 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 5.set
           hasBorderLeft={false}
           hasBorderRight={false}
         >
-          <Checkbox />
+          <Checkbox
+            isDisabled={false}
+            isIndeterminate={false}
+            isSelected={false}
+            onSelect={[Function]}
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -5936,7 +6234,12 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 5.set
           hasBorderLeft={false}
           hasBorderRight={false}
         >
-          <Checkbox />
+          <Checkbox
+            isDisabled={false}
+            isIndeterminate={false}
+            isSelected={false}
+            onSelect={[Function]}
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -6008,7 +6311,12 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 5.set
           hasBorderLeft={false}
           hasBorderRight={false}
         >
-          <Checkbox />
+          <Checkbox
+            isDisabled={false}
+            isIndeterminate={false}
+            isSelected={false}
+            onSelect={[Function]}
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -6079,7 +6387,12 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 5.set
           hasBorderLeft={false}
           hasBorderRight={false}
         >
-          <Checkbox />
+          <Checkbox
+            isDisabled={false}
+            isIndeterminate={false}
+            isSelected={false}
+            onSelect={[Function]}
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -6151,7 +6464,10 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 5.set
           hasBorderRight={false}
         >
           <Checkbox
+            isDisabled={false}
+            isIndeterminate={false}
             isSelected={true}
+            onSelect={[Function]}
           />
         </Table.Td>
         <Table.Td
@@ -6219,7 +6535,10 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 5.set
           hasBorderRight={false}
         >
           <Checkbox
+            isDisabled={false}
+            isIndeterminate={false}
             isSelected={true}
+            onSelect={[Function]}
           />
         </Table.Td>
         <Table.Td
@@ -6289,7 +6608,10 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 5.set
           hasBorderRight={false}
         >
           <Checkbox
+            isDisabled={false}
+            isIndeterminate={false}
             isSelected={true}
+            onSelect={[Function]}
           />
         </Table.Td>
         <Table.Td
@@ -6358,7 +6680,10 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 5.set
           hasBorderRight={false}
         >
           <Checkbox
+            isDisabled={false}
+            isIndeterminate={false}
             isSelected={true}
+            onSelect={[Function]}
           />
         </Table.Td>
         <Table.Td
@@ -6427,7 +6752,12 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 5.set
           hasBorderLeft={false}
           hasBorderRight={false}
         >
-          <Checkbox />
+          <Checkbox
+            isDisabled={false}
+            isIndeterminate={false}
+            isSelected={false}
+            onSelect={[Function]}
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -6494,7 +6824,12 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 5.set
           hasBorderLeft={false}
           hasBorderRight={false}
         >
-          <Checkbox />
+          <Checkbox
+            isDisabled={false}
+            isIndeterminate={false}
+            isSelected={false}
+            onSelect={[Function]}
+          />
         </Table.Td>
         <Table.Td
           align="left"
