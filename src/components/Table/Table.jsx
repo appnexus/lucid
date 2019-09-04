@@ -314,7 +314,7 @@ const Th = createClass({
 
 		return (
 			<th
-				{..._.omit(passThroughs, Th, ['onResize'])}
+				{...omitProps(passThroughs, Th)}
 				className={cx(
 					'&-Th',
 					{
