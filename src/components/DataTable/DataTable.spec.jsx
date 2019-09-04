@@ -760,7 +760,19 @@ describe('DataTable', () => {
 				);
 
 				const dragCaptureZoneWrapper = wrapper.find(DragCaptureZone).at(1);
-				dragCaptureZoneWrapper.prop('onResize');
+				const mockEvent = new Event('mouseup');
+				dragCaptureZoneWrapper.prop('onDragEnd')(
+					{
+						dx: 100,
+						dy: 0,
+						pageX: 100,
+						pageY: 0,
+					},
+					{
+						event: mockEvent,
+						props: {},
+					}
+				);
 			});
 		});
 	});
