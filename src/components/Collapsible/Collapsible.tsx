@@ -33,13 +33,11 @@ export interface ICollapsibleState {
 	maxHeight: number;
 }
 
-
-
 class Collapsible extends React.Component<
 	ICollapsibleProps,
 	ICollapsibleState,
 	{}
->{
+> {
 	static displayName = 'Collapsible';
 	static peek = {
 		description: `
@@ -101,7 +99,7 @@ class Collapsible extends React.Component<
 	componentWillMount(): void {
 		this.isAnimated = false;
 		this.delayTimer = null;
-	};
+	}
 
 	componentDidMount(): void {
 		_.delay((): void => {
@@ -111,7 +109,7 @@ class Collapsible extends React.Component<
 			});
 			this.isAnimated = this.props.isAnimated;
 		}, 32);
-	};
+	}
 
 	componentDidUpdate(): void {
 		this.isAnimated = false;
@@ -126,11 +124,11 @@ class Collapsible extends React.Component<
 			}
 			this.isAnimated = this.props.isAnimated;
 		}, 32);
-	};
+	}
 
 	componentWillUnmount(): void {
 		this.delayTimer && clearTimeout(this.delayTimer);
-	};
+	}
 
 	render(): React.ReactNode {
 		const {
@@ -150,11 +148,11 @@ class Collapsible extends React.Component<
 				style={
 					this.isAnimated
 						? {
-							height: isExpanded
-								? spring(maxHeight, QUICK_SLIDE_MOTION)
-								: spring(0, QUICK_SLIDE_MOTION),
-							}
-						: {	height: isExpanded ? maxHeight : 0 }
+								height: isExpanded
+									? spring(maxHeight, QUICK_SLIDE_MOTION)
+									: spring(0, QUICK_SLIDE_MOTION),
+						  }
+						: { height: isExpanded ? maxHeight : 0 }
 				}
 			>
 				{(tween): JSX.Element =>
@@ -164,7 +162,7 @@ class Collapsible extends React.Component<
 							...omitProps(
 								passThroughs,
 								undefined,
-								Object.keys(Collapsible.propTypes),
+								Object.keys(Collapsible.propTypes)
 							),
 							ref: this.rootRef,
 							className: cx('&', className),
@@ -198,7 +196,7 @@ class Collapsible extends React.Component<
 				}
 			</Motion>
 		);
-	};
-};
+	}
+}
 
 export default Collapsible;

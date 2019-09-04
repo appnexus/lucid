@@ -24,8 +24,8 @@ class SlidePanelSlide extends React.Component<ISlidePanelSlideProps, {}, {}> {
 	static displayName = 'SlidePanel.Slide';
 	static propName = 'Slide';
 
-	render(): React.ReactNode {
-		return <div>{this.props.children}</div>;
+	render(): null {
+		return null;
 	}
 }
 

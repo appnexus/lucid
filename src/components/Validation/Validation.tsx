@@ -1,7 +1,12 @@
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import { getFirst, omitProps, FC, StandardProps } from '../../util/component-types';
+import {
+	getFirst,
+	omitProps,
+	FC,
+	StandardProps,
+} from '../../util/component-types';
 import _ from 'lodash';
 
 const cx = lucidClassNames.bind('&-Validation');
@@ -12,9 +17,7 @@ interface IValidationErrorProps extends StandardProps {
 	description?: string;
 }
 
-const ValidationError: FC<IValidationErrorProps> = (
-	props
-): React.ReactElement => <div>{props.children}</div>;
+const ValidationError: FC<IValidationErrorProps> = (): null => null;
 
 ValidationError.displayName = 'Validation.Error';
 ValidationError.peek = {

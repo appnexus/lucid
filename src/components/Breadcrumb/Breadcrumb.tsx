@@ -3,16 +3,19 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import { findTypes, omitProps, FC, StandardProps } from '../../util/component-types';
+import {
+	findTypes,
+	omitProps,
+	FC,
+	StandardProps,
+} from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-Breadcrumb');
 
 const { any, node } = PropTypes;
 
 interface IBreadcrumbItemProps extends StandardProps {}
-const BreadcrumbItem: FC<IBreadcrumbItemProps> = (
-	props
-): React.ReactElement => <div>{props.children}</div>;
+const BreadcrumbItem: FC<IBreadcrumbItemProps> = (): null => null;
 
 BreadcrumbItem.displayName = 'Breadcrumb.Item';
 BreadcrumbItem.peek = {

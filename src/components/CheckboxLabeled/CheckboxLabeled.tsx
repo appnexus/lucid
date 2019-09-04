@@ -18,9 +18,7 @@ const { any, node, object, string, bool, func } = PropTypes;
 
 interface ILabelProps extends StandardProps {}
 
-const Label: FC<ILabelProps> = (props): React.ReactElement => (
-	<div>{props.children}</div>
-);
+const Label: FC<ILabelProps> = (props): null => null;
 
 Label.displayName = 'CheckboxLabeled.Label';
 Label.peek = {

@@ -158,7 +158,7 @@ const Expander = createClass<IExpanderProps, IExpanderState>({
 		};
 	},
 
-	render() {
+	render(): React.ReactElement {
 		const {
 			children,
 			className,

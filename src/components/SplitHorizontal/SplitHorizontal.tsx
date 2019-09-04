@@ -6,7 +6,7 @@ import {
 	filterTypes,
 	omitProps,
 	FC,
-	StandardProps
+	StandardProps,
 } from '../../util/component-types';
 import DragCaptureZone from '../DragCaptureZone/DragCaptureZone';
 import { Motion, spring, OpaqueConfig } from 'react-motion';
@@ -23,9 +23,9 @@ interface ISplitHorizontalTopPaneProps extends StandardProps {
 		collapsed, this pane becomes full height. */
 	isPrimary?: boolean;
 }
-export const SplitHorizontalTopPane: FC<ISplitHorizontalTopPaneProps> = (
-	props
-): React.ReactElement => <div>{props.children}</div>;
+export const SplitHorizontalTopPane: FC<
+	ISplitHorizontalTopPaneProps
+> = (): null => null;
 SplitHorizontalTopPane.displayName = 'SplitHorizontal.TopPane';
 SplitHorizontalTopPane.peek = {
 	description: `Top pane of the split.`,
@@ -45,7 +45,7 @@ SplitHorizontalTopPane.propTypes = {
 };
 SplitHorizontalTopPane.defaultProps = {
 	isPrimary: false,
-}
+};
 
 interface ISplitHorizontalBottomPaneProps extends StandardProps {
 	/** Set height of this pane. */
@@ -54,9 +54,9 @@ interface ISplitHorizontalBottomPaneProps extends StandardProps {
 		collapsed, this pane becomes full height. */
 	isPrimary?: boolean;
 }
-const SplitHorizontalBottomPane: FC<ISplitHorizontalBottomPaneProps> = (
-	props
-): React.ReactElement => <div>{props.children}</div>;
+const SplitHorizontalBottomPane: FC<
+	ISplitHorizontalBottomPaneProps
+> = (): null => null;
 SplitHorizontalBottomPane.displayName = 'SplitHorizontal.BottomPane';
 SplitHorizontalBottomPane.peek = {
 	description: `
@@ -78,12 +78,11 @@ SplitHorizontalBottomPane.propTypes = {
 };
 SplitHorizontalBottomPane.defaultProps = {
 	isPrimary: false,
-}
+};
 
 interface ISplitHorizontalDividerProps extends StandardProps {}
-const SplitHorizontalDivider: FC<ISplitHorizontalDividerProps> = (
-	props
-): React.ReactElement => <div>{props.children}</div>;
+const SplitHorizontalDivider: FC<ISplitHorizontalDividerProps> = (): null =>
+	null;
 SplitHorizontalDivider.displayName = 'SplitHorizontal.Divider';
 SplitHorizontalDivider.peek = {
 	description: `
@@ -108,7 +107,10 @@ interface ISplitHorizontalProps extends StandardProps {
 	/** Called when the user is currently resizing the split with the Divider. */
 	onResizing: (
 		height: number,
-		{ event, props }: {
+		{
+			event,
+			props,
+		}: {
 			event: MouseEvent | TouchEvent;
 			props: ISplitHorizontalProps;
 		}
@@ -117,7 +119,10 @@ interface ISplitHorizontalProps extends StandardProps {
 	/** Called when the user resizes the split with the Divider. */
 	onResize: (
 		height: number,
-		{ event, props }: {
+		{
+			event,
+			props,
+		}: {
 			event: MouseEvent | TouchEvent;
 			props: ISplitHorizontalProps;
 		}
@@ -132,7 +137,11 @@ interface ISplitHorizontalState {
 	isExpanded: boolean;
 }
 
-class SplitHorizontal extends React.Component<ISplitHorizontalProps, ISplitHorizontalState, {}> {
+class SplitHorizontal extends React.Component<
+	ISplitHorizontalProps,
+	ISplitHorizontalState,
+	{}
+> {
 	static displayName = 'SplitHorizontal';
 	static peek = {
 		description: `
@@ -208,12 +217,12 @@ class SplitHorizontal extends React.Component<ISplitHorizontalProps, ISplitHoriz
 		: null;
 
 	getPanes = (): {
-		top: ISplitHorizontalTopPaneProps,
-		bottom: ISplitHorizontalBottomPaneProps,
-		primary: ISplitHorizontalTopPaneProps | ISplitHorizontalBottomPaneProps,
-		secondary: ISplitHorizontalTopPaneProps | ISplitHorizontalBottomPaneProps,
-		primaryRef: React.RefObject<HTMLDivElement>,
-		secondaryRef: React.RefObject<HTMLDivElement>,
+		top: ISplitHorizontalTopPaneProps;
+		bottom: ISplitHorizontalBottomPaneProps;
+		primary: ISplitHorizontalTopPaneProps | ISplitHorizontalBottomPaneProps;
+		secondary: ISplitHorizontalTopPaneProps | ISplitHorizontalBottomPaneProps;
+		primaryRef: React.RefObject<HTMLDivElement>;
+		secondaryRef: React.RefObject<HTMLDivElement>;
 	} => {
 		const { children } = this.props;
 		const { topPaneRef, bottomPaneRef } = this;
@@ -231,10 +240,7 @@ class SplitHorizontal extends React.Component<ISplitHorizontalProps, ISplitHoriz
 		let primaryElement, primaryRef;
 		let secondaryElement, secondaryRef;
 
-		if (
-			topPaneElement.props.isPrimary
-			&& !bottomPaneElement.props.isPrimary
-		) {
+		if (topPaneElement.props.isPrimary && !bottomPaneElement.props.isPrimary) {
 			primaryElement = topPaneElement;
 			primaryRef = topPaneRef;
 			secondaryElement = bottomPaneElement;
@@ -286,7 +292,8 @@ class SplitHorizontal extends React.Component<ISplitHorizontalProps, ISplitHoriz
 				return secondaryStartRect.height - overlapHeight;
 			} else {
 				this.expandSecondary();
-				(secondaryRef.current as HTMLDivElement).style.flexBasis = `${(dY + collapseShift) *
+				(secondaryRef.current as HTMLDivElement).style.flexBasis = `${(dY +
+					collapseShift) *
 					(secondary === bottom ? -1 : 1)}px`;
 				return (dY + collapseShift) * (secondary === bottom ? -1 : 1);
 			}
@@ -332,50 +339,52 @@ class SplitHorizontal extends React.Component<ISplitHorizontalProps, ISplitHoriz
 
 	handleDrag = (
 		{ dY }: { dY: number },
-		{ event }: { event: MouseEvent | TouchEvent}
+		{ event }: { event: MouseEvent | TouchEvent }
 	): void => {
 		const { isExpanded, collapseShift, onResizing } = this.props;
 
 		const { secondaryRef, secondary, bottom, primaryRef } = this.panes;
 
-		this.secondaryStartRect && onResizing(
-			this.applyDeltaToSecondaryHeight(
-				dY,
-				isExpanded,
-				this.secondaryStartRect,
-				secondaryRef,
-				secondary,
-				bottom,
-				this.innerRef,
-				primaryRef,
-				collapseShift
-			),
-			{ event, props: this.props }
-		);
+		this.secondaryStartRect &&
+			onResizing(
+				this.applyDeltaToSecondaryHeight(
+					dY,
+					isExpanded,
+					this.secondaryStartRect,
+					secondaryRef,
+					secondary,
+					bottom,
+					this.innerRef,
+					primaryRef,
+					collapseShift
+				),
+				{ event, props: this.props }
+			);
 	};
 
 	handleDragEnd = (
 		{ dY }: { dY: number },
-		{ event }: { event: MouseEvent | TouchEvent}
+		{ event }: { event: MouseEvent | TouchEvent }
 	): void => {
 		const { isExpanded, collapseShift, onResize } = this.props;
 
 		const { secondaryRef, secondary, bottom, primaryRef } = this.panes;
 
-		this.secondaryStartRect && onResize(
-			this.applyDeltaToSecondaryHeight(
-				dY,
-				isExpanded,
-				this.secondaryStartRect,
-				secondaryRef,
-				secondary,
-				bottom,
-				this.innerRef,
-				primaryRef,
-				collapseShift
-			),
-			{ event, props: this.props }
-		);
+		this.secondaryStartRect &&
+			onResize(
+				this.applyDeltaToSecondaryHeight(
+					dY,
+					isExpanded,
+					this.secondaryStartRect,
+					secondaryRef,
+					secondary,
+					bottom,
+					this.innerRef,
+					primaryRef,
+					collapseShift
+				),
+				{ event, props: this.props }
+			);
 
 		this.resetAnimation(this.innerRef, secondaryRef, primaryRef);
 	};
@@ -393,7 +402,8 @@ class SplitHorizontal extends React.Component<ISplitHorizontalProps, ISplitHoriz
 			const secondaryRect = secondaryRef.current
 				? secondaryRef.current.getBoundingClientRect()
 				: null;
-				secondaryRect && this.collapseSecondary(secondaryRect.height - collapseShift);
+			secondaryRect &&
+				this.collapseSecondary(secondaryRect.height - collapseShift);
 		} else if (!this.props.isExpanded && isExpanded) {
 			// expand secondary
 			this.expandSecondary();
@@ -404,7 +414,7 @@ class SplitHorizontal extends React.Component<ISplitHorizontalProps, ISplitHoriz
 				isAnimated,
 			});
 		}
-	};
+	}
 
 	componentDidMount(): void {
 		const { isAnimated, isExpanded, collapseShift } = this.props;
@@ -419,17 +429,20 @@ class SplitHorizontal extends React.Component<ISplitHorizontalProps, ISplitHoriz
 			const secondaryRect = secondaryRef.current
 				? secondaryRef.current.getBoundingClientRect()
 				: null;
-			secondaryRect && this.collapseSecondary(secondaryRect.height - collapseShift);
+			secondaryRect &&
+				this.collapseSecondary(secondaryRect.height - collapseShift);
 		}
 
 		if (this.state.isAnimated !== isAnimated) {
-			_.defer((): void => {
-				this.setState({
-					isAnimated,
-				});
-			});
+			_.defer(
+				(): void => {
+					this.setState({
+						isAnimated,
+					});
+				}
+			);
 		}
-	};
+	}
 
 	render(): React.ReactNode {
 		const { children, className, ...passThroughs } = this.props;
@@ -465,7 +478,7 @@ class SplitHorizontal extends React.Component<ISplitHorizontalProps, ISplitHoriz
 				{...omitProps(
 					this.props,
 					undefined,
-					Object.keys(SplitHorizontal.propTypes),
+					Object.keys(SplitHorizontal.propTypes)
 				)}
 				className={cx(
 					'&',
@@ -485,7 +498,10 @@ class SplitHorizontal extends React.Component<ISplitHorizontalProps, ISplitHoriz
 					defaultStyle={from}
 					style={
 						isAnimated
-							? _.mapValues(to, (val): OpaqueConfig => spring(val, QUICK_SLIDE_MOTION))
+							? _.mapValues(
+									to,
+									(val): OpaqueConfig => spring(val, QUICK_SLIDE_MOTION)
+							  )
 							: to
 					}
 				>
@@ -505,7 +521,7 @@ class SplitHorizontal extends React.Component<ISplitHorizontalProps, ISplitHoriz
 								{...omitProps(
 									topPaneProps,
 									undefined,
-									_.keys(SplitHorizontalTopPane.propTypes),
+									_.keys(SplitHorizontalTopPane.propTypes)
 								)}
 								className={cx(
 									'&-TopPane',
@@ -587,8 +603,7 @@ class SplitHorizontal extends React.Component<ISplitHorizontalProps, ISplitHoriz
 				</Motion>
 			</div>
 		);
-	};
-};
+	}
+}
 
 export default SplitHorizontal;
-
