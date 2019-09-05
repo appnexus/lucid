@@ -253,12 +253,17 @@ const DataTable = createClass({
 		this.fixedHeaderUnfixedColumnsRef.scrollLeft = event.target.scrollLeft;
 		this.fixedBodyFixedColumnsRef.scrollTop = event.target.scrollTop;
 	},
-	handleResize(columnWidth, { props }, fieldName) {
+	handleResize(
+		columnWidth,
+		{
+			props: { field },
+		}
+	) {
 		// setting latest column width to Tbody
 		this.setState(state => ({
 			activeWidth: {
 				...state.activeWidth,
-				[fieldName]: columnWidth,
+				[field]: columnWidth,
 			},
 		}));
 	},
@@ -307,14 +312,7 @@ const DataTable = createClass({
 							_.map(childComponentElements, ({ props, type }, index) =>
 								type === DataTable.Column ? (
 									<Th
-										onResize={
-											props.isResizable
-												? _.partialRight(
-														this.handleResize,
-														props.field || index
-												  )
-												: null
-										}
+										onResize={props.isResizable ? this.handleResize : null}
 										{..._.omit(props, ['children', 'title'])}
 										onClick={
 											DataTable.shouldColumnHandleSort(props)
@@ -322,6 +320,7 @@ const DataTable = createClass({
 												: null
 										}
 										rowSpan={hasGroupedColumns ? 2 : null}
+										field={props.field || index}
 										key={_.get(props, 'field', index)}
 									>
 										{props.title || props.children}
