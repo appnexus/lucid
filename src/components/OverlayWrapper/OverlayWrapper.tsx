@@ -18,9 +18,7 @@ const { bool, node, oneOf, string } = PropTypes;
 
 interface IMessageProps extends StandardProps {}
 
-const Message: FC<IMessageProps> = (props): React.ReactElement => (
-	<div>{props.children}</div>
-);
+const Message: FC<IMessageProps> = (): null => null;
 
 Message.displayName = 'OverlayWrapper.Message';
 Message.peek = {

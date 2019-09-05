@@ -2,7 +2,12 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import { omitProps, FC, StandardProps } from '../../util/component-types';
+import {
+	omitProps,
+	FC,
+	PropsWithDefaults,
+	StandardProps,
+} from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-Checkbox');
 
@@ -13,24 +18,24 @@ export interface ICheckboxProps extends StandardProps {
 	 * "partially checked" state. This prop takes precedence over
 	 * \`isSelected\`.
 	 */
-	isIndeterminate?: boolean;
+	isIndeterminate: boolean;
 
 	/** Indicates whether the component should appear and act disabled by having
 	 * a "greyed out" palette and ignoring user interactions.
 	 */
-	isDisabled?: boolean;
+	isDisabled: boolean;
 
 	/** Indicates that the component is in the "selected" state when true and in
 	 * the "unselected" state when false. This props is ignored if
 	 * \`isIndeterminate\` is \`true\`.
 	 */
-	isSelected?: boolean;
+	isSelected: boolean;
 
 	/** Called when the user clicks on the component or when they press the space
 	 * key while the component is in focus.  Signature:
 	 * \`(isSelected, { event, props }) => {}\`
 	 */
-	onSelect?: (
+	onSelect: (
 		isSelected: boolean,
 		{
 			event,
@@ -48,15 +53,22 @@ export interface ICheckboxProps extends StandardProps {
 	title?: string;
 }
 
+export const defaultPropsCheckbox = {
+	isIndeterminate: false,
+	isDisabled: false,
+	isSelected: false,
+	onSelect: _.noop,
+};
+
 const Checkbox: FC<ICheckboxProps> = (props): React.ReactElement => {
 	const {
 		className,
-		isIndeterminate = false,
-		isSelected = false,
-		isDisabled = false,
+		isIndeterminate,
+		isSelected,
+		isDisabled,
 		style,
 		title,
-		onSelect = _.noop,
+		onSelect,
 		...passThroughs
 	} = props;
 
@@ -142,6 +154,11 @@ Checkbox.peek = {
 	categories: ['controls', 'toggles'],
 };
 
+Checkbox.defaultProps = defaultPropsCheckbox;
+
+Checkbox.getDefaultProps = (): typeof defaultPropsCheckbox =>
+	defaultPropsCheckbox;
+
 Checkbox.propTypes = {
 	className: string`
 		Appended to the component-specific class names set on the root element.
@@ -179,4 +196,7 @@ Checkbox.propTypes = {
 	`,
 };
 
-export default Checkbox;
+export default Checkbox as FC<
+	PropsWithDefaults<ICheckboxProps, typeof defaultPropsCheckbox>,
+	typeof defaultPropsCheckbox
+>;

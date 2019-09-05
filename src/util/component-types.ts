@@ -8,16 +8,34 @@ import {
 } from './state-management';
 
 export interface StandardProps {
-		/** Appended to the component-specific class names set on the root element.
+	/** Appended to the component-specific class names set on the root element.
 			Value is run through the `classnames` library. */
-		className?: string;
-		/** Any valid React children. */
-		children?: React.ReactNode;
-		/** Styles that are passed through to native control. */
-		style?: React.CSSProperties;
+	className?: string;
+	/** Any valid React children. */
+	children?: React.ReactNode;
+	/** Styles that are passed through to native control. */
+	style?: React.CSSProperties;
 }
 
-export interface FC<P> extends React.FC<P> {
+// `P`: props
+// `D`: default props
+//
+// We decided to create this utility defintion because of the issues outlined
+// here: https://github.com/microsoft/TypeScript/issues/31247
+//
+// Typescript is able to behave correctly (wrt to default props) if we were to
+// rely on type inference for our functional components, but since we also have
+// other properties (e.g. `_isPrivate`) we need to explicitly define the type.
+//
+// This helper allows us to have props _within_ the component that are
+// considered not nullable (when defined in D) whereas the props exposed to the
+// consumer are potentially nullable based on the shape of `D`.
+export type PropsWithDefaults<P, D> = Pick<P, Exclude<keyof P, keyof D>> &
+	Partial<D>;
+
+// `D`: default props (should be provided when a functional component supports
+// default props)
+export interface FC<P, D = {}> extends React.FC<P> {
 	peek: {
 		description: string;
 		categories?: string[];
@@ -26,7 +44,7 @@ export interface FC<P> extends React.FC<P> {
 	};
 	propName?: string; // TODO confirm this is needed
 	_isPrivate?: boolean;
-	type?: FC<P>;
+	getDefaultProps?: () => D;
 }
 
 type TypesType<P> =
@@ -128,11 +146,9 @@ export function filterTypes<P>(
 
 	return _.filter(
 		React.Children.toArray(children),
-		(element): boolean => React.isValidElement(element)
-			&& _.includes(
-				_.castArray(types),
-				element.type
-			)
+		(element): boolean =>
+			React.isValidElement(element) &&
+			_.includes(_.castArray(types), element.type)
 	) as React.ReactElement[];
 }
 

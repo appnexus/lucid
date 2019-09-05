@@ -7,18 +7,18 @@ import GripperVerticalIcon from '../Icon/GripperVerticalIcon/GripperVerticalIcon
 import CloseIcon from '../Icon/CloseIcon/CloseIcon';
 import DragCaptureZone from '../DragCaptureZone/DragCaptureZone';
 import Button from '../Button/Button';
-import { getFirst, omitProps, FC, StandardProps } from '../../util/component-types';
+import {
+	getFirst,
+	omitProps,
+	FC,
+	StandardProps,
+} from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-SidePanel');
 
 const { any, bool, func, oneOf, node, number, string, oneOfType } = PropTypes;
 
-interface ISidePanelHeaderProps extends StandardProps {}
-const SidePanelHeader: FC<ISidePanelHeaderProps> = ({
-	children,
-}): React.ReactElement => {
-	return <div>{children}</div>;
-};
+const SidePanelHeader: FC<StandardProps> = (): null => null;
 SidePanelHeader.displayName = 'SidePanel.Header';
 SidePanelHeader.propName = 'Header';
 SidePanelHeader.peek = {
@@ -35,7 +35,7 @@ SidePanelHeader.propTypes = {
 
 export interface ISidePanelProps extends StandardProps {
 	/** Alternative to using `<SidePanel.Header>`. */
-	Header?: React.ReactNode & { props: ISidePanelHeaderProps };
+	Header?: React.ReactNode & { props: StandardProps };
 
 	/** Enables animated transitions during expansion and collapse. */
 	isAnimated: boolean;
@@ -165,6 +165,9 @@ class SidePanel extends React.Component<ISidePanelProps, ISidePanelState, {}> {
 		topOffset: 0,
 		width: 240,
 	};
+
+	static getDefaultProps = (): typeof SidePanel.defaultProps =>
+		SidePanel.defaultProps;
 
 	static Header = SidePanelHeader;
 

@@ -2,7 +2,12 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import { findTypes, omitProps, FC, StandardProps } from '../../util/component-types';
+import {
+	findTypes,
+	omitProps,
+	FC,
+	StandardProps,
+} from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-Panel');
 
@@ -12,9 +17,7 @@ interface IPanelHeaderProps extends StandardProps {
 	description?: string;
 }
 
-const PanelHeader: FC<IPanelHeaderProps> = (props): React.ReactElement => (
-	<div>{props.children}</div>
-);
+const PanelHeader: FC<IPanelHeaderProps> = (): null => null;
 PanelHeader.displayName = 'Panel.Header';
 PanelHeader.peek = {
 	description: `
@@ -30,7 +33,7 @@ PanelHeader.propName = 'Header';
 interface IPanelFooterProps extends StandardProps {
 	description?: string;
 }
-const PanelFooter: FC<IPanelFooterProps> = props => <div>{props.children}</div>;
+const PanelFooter: FC<IPanelFooterProps> = (): null => null;
 
 PanelFooter.displayName = 'Panel.Footer';
 PanelFooter.peek = {

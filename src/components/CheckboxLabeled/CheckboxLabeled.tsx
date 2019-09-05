@@ -2,17 +2,23 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import { findTypes, omitProps, FC, StandardProps } from '../../util/component-types';
-import Checkbox, { ICheckboxProps } from '../Checkbox/Checkbox';
+import {
+	findTypes,
+	omitProps,
+	FC,
+	StandardProps,
+} from '../../util/component-types';
+import Checkbox, {
+	ICheckboxProps,
+	defaultPropsCheckbox,
+} from '../Checkbox/Checkbox';
 
 const cx = lucidClassNames.bind('&-CheckboxLabeled');
-const { any, node, object, string } = PropTypes;
+const { any, node, object, string, bool, func } = PropTypes;
 
 interface ILabelProps extends StandardProps {}
 
-const Label: FC<ILabelProps> = (props): React.ReactElement => (
-	<div>{props.children}</div>
-);
+const Label: FC<ILabelProps> = (props): null => null;
 
 Label.displayName = 'CheckboxLabeled.Label';
 Label.peek = {
@@ -42,10 +48,10 @@ export interface ICheckboxLabeledFC extends FC<ICheckboxLabeledProps> {
 const CheckboxLabeled: ICheckboxLabeledFC = (props): React.ReactElement => {
 	const {
 		className,
-		isIndeterminate = false,
-		isDisabled = false,
-		isSelected = false,
-		onSelect = _.noop,
+		isIndeterminate,
+		isDisabled,
+		isSelected,
+		onSelect,
 		style,
 		...passThroughs
 	} = props;
@@ -88,6 +94,7 @@ const CheckboxLabeled: ICheckboxLabeledFC = (props): React.ReactElement => {
 };
 
 CheckboxLabeled.displayName = 'CheckboxLabeled';
+
 CheckboxLabeled.peek = {
 	description: `
 		This is a composite of the \`Checkbox\` component and the native
@@ -96,8 +103,38 @@ CheckboxLabeled.peek = {
 	categories: ['controls', 'toggles'],
 	madeFrom: ['Checkbox'],
 };
+
+CheckboxLabeled.defaultProps = defaultPropsCheckbox;
+
+CheckboxLabeled.getDefaultProps = (): typeof defaultPropsCheckbox =>
+	defaultPropsCheckbox;
+
+// Can't just `...Checkbox.propTypes` anymore because of the way we have to
+// handle default props. They are duplicated here on purpose which is okay
+// since in the future we'll be removing proptypes in favor is just typescript.
 CheckboxLabeled.propTypes = {
-	...Checkbox.propTypes,
+	isIndeterminate: bool`
+		Indicates whether the component should appear in an "indeterminate" or
+		"partially checked" state. This prop takes precedence over
+		\`isSelected\`.
+	`,
+
+	isDisabled: bool`
+		Indicates whether the component should appear and act disabled by having
+		a "greyed out" palette and ignoring user interactions.
+	`,
+
+	isSelected: bool`
+		Indicates that the component is in the "selected" state when true and in
+		the "unselected" state when false. This props is ignored if
+		\`isIndeterminate\` is \`true\`.
+	`,
+
+	onSelect: func`
+		Called when the user clicks on the component or when they press the space
+		key while the component is in focus.  Signature:
+		\`(isSelected, { event, props }) => {}\`
+	`,
 
 	className: string`
 		Appended to the component-specific class names set on the root element.
@@ -112,6 +149,7 @@ CheckboxLabeled.propTypes = {
 		checkbox to the user.
 	`,
 };
+
 CheckboxLabeled.Label = Label;
 
 export default CheckboxLabeled;

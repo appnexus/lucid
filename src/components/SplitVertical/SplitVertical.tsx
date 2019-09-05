@@ -23,9 +23,7 @@ interface ISplitVerticalRightPaneProps extends StandardProps {
 		collapsed, this pane becomes full width. */
 	isPrimary?: boolean;
 }
-export const SplitVerticalRightPane: FC<ISplitVerticalRightPaneProps> = (
-	props
-): React.ReactElement => <div>{props.children}</div>;
+export const SplitVerticalRightPane: FC<ISplitVerticalRightPaneProps> = (): null => null;
 SplitVerticalRightPane.displayName = 'SplitVertical.RightPane';
 SplitVerticalRightPane.peek = {
 	description: `Right pane of the split.`,
@@ -54,9 +52,7 @@ interface ISplitVerticalLeftPaneProps extends StandardProps {
 		collapsed, this pane becomes full width. */
 	isPrimary?: boolean;
 }
-const SplitVerticalLeftPane: FC<ISplitVerticalLeftPaneProps> = (
-	props
-): React.ReactElement => <div>{props.children}</div>;
+const SplitVerticalLeftPane: FC<ISplitVerticalLeftPaneProps> = (): null => null;
 SplitVerticalLeftPane.displayName = 'SplitVertical.LeftPane';
 SplitVerticalLeftPane.peek = {
 	description: `
@@ -80,10 +76,7 @@ SplitVerticalLeftPane.defaultProps = {
 	isPrimary: false,
 }
 
-interface ISplitVerticalDividerProps extends StandardProps {}
-const SplitVerticalDivider: FC<ISplitVerticalDividerProps> = (
-	props
-): React.ReactElement => <div>{props.children}</div>;
+const SplitVerticalDivider: FC<StandardProps> = (): null => null;
 SplitVerticalDivider.displayName = 'SplitVertical.Divider';
 SplitVerticalDivider.peek = {
 	description: `

@@ -2435,6 +2435,9 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
           width={41}
         >
           <Checkbox
+            isDisabled={false}
+            isIndeterminate={false}
+            isSelected={false}
             onSelect={[Function]}
           />
         </Table.Td>
@@ -2547,6 +2550,9 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
           width={41}
         >
           <Checkbox
+            isDisabled={false}
+            isIndeterminate={false}
+            isSelected={false}
             onSelect={[Function]}
           />
         </Table.Td>
@@ -2659,6 +2665,9 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
           width={41}
         >
           <Checkbox
+            isDisabled={false}
+            isIndeterminate={false}
+            isSelected={false}
             onSelect={[Function]}
           />
         </Table.Td>
@@ -2771,6 +2780,9 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
           width={41}
         >
           <Checkbox
+            isDisabled={false}
+            isIndeterminate={false}
+            isSelected={false}
             onSelect={[Function]}
           />
         </Table.Td>
@@ -2883,6 +2895,9 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
           width={41}
         >
           <Checkbox
+            isDisabled={false}
+            isIndeterminate={false}
+            isSelected={false}
             onSelect={[Function]}
           />
         </Table.Td>
@@ -2995,6 +3010,9 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
           width={41}
         >
           <Checkbox
+            isDisabled={false}
+            isIndeterminate={false}
+            isSelected={false}
             onSelect={[Function]}
           />
         </Table.Td>
@@ -3107,6 +3125,9 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
           width={41}
         >
           <Checkbox
+            isDisabled={false}
+            isIndeterminate={false}
+            isSelected={false}
             onSelect={[Function]}
           />
         </Table.Td>
@@ -3219,6 +3240,9 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
           width={41}
         >
           <Checkbox
+            isDisabled={false}
+            isIndeterminate={false}
+            isSelected={false}
             onSelect={[Function]}
           />
         </Table.Td>
@@ -3331,6 +3355,9 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
           width={41}
         >
           <Checkbox
+            isDisabled={false}
+            isIndeterminate={false}
+            isSelected={false}
             onSelect={[Function]}
           />
         </Table.Td>
@@ -3443,6 +3470,9 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
           width={41}
         >
           <Checkbox
+            isDisabled={false}
+            isIndeterminate={false}
+            isSelected={false}
             onSelect={[Function]}
           />
         </Table.Td>
@@ -3703,6 +3733,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           width={41}
         >
           <Checkbox
+            isDisabled={false}
+            isIndeterminate={false}
             isSelected={true}
             onSelect={[Function]}
           />
@@ -3823,6 +3855,9 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           width={41}
         >
           <Checkbox
+            isDisabled={false}
+            isIndeterminate={false}
+            isSelected={false}
             onSelect={[Function]}
           />
         </Table.Td>
@@ -3942,6 +3977,9 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           width={41}
         >
           <Checkbox
+            isDisabled={false}
+            isIndeterminate={false}
+            isSelected={false}
             onSelect={[Function]}
           />
         </Table.Td>
@@ -4068,6 +4106,9 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           width={41}
         >
           <Checkbox
+            isDisabled={false}
+            isIndeterminate={false}
+            isSelected={false}
             onSelect={[Function]}
           />
         </Table.Td>
@@ -4187,6 +4228,9 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           width={41}
         >
           <Checkbox
+            isDisabled={false}
+            isIndeterminate={false}
+            isSelected={false}
             onSelect={[Function]}
           />
         </Table.Td>
@@ -4306,6 +4350,9 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           width={41}
         >
           <Checkbox
+            isDisabled={false}
+            isIndeterminate={false}
+            isSelected={false}
             onSelect={[Function]}
           />
         </Table.Td>
@@ -4425,6 +4472,9 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           width={41}
         >
           <Checkbox
+            isDisabled={false}
+            isIndeterminate={false}
+            isSelected={false}
             onSelect={[Function]}
           />
         </Table.Td>
@@ -4544,6 +4594,9 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           width={41}
         >
           <Checkbox
+            isDisabled={false}
+            isIndeterminate={false}
+            isSelected={false}
             onSelect={[Function]}
           />
         </Table.Td>
@@ -4663,6 +4716,9 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           width={41}
         >
           <Checkbox
+            isDisabled={false}
+            isIndeterminate={false}
+            isSelected={false}
             onSelect={[Function]}
           />
         </Table.Td>
@@ -4782,6 +4838,9 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           width={41}
         >
           <Checkbox
+            isDisabled={false}
+            isIndeterminate={false}
+            isSelected={false}
             onSelect={[Function]}
           />
         </Table.Td>
@@ -9561,6 +9620,9 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.min-
           width={41}
         >
           <Checkbox
+            isDisabled={false}
+            isIndeterminate={false}
+            isSelected={false}
             onSelect={[Function]}
           />
         </Table.Td>
@@ -9673,6 +9735,9 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.min-
           width={41}
         >
           <Checkbox
+            isDisabled={false}
+            isIndeterminate={false}
+            isSelected={false}
             onSelect={[Function]}
           />
         </Table.Td>
@@ -9785,6 +9850,9 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.min-
           width={41}
         >
           <Checkbox
+            isDisabled={false}
+            isIndeterminate={false}
+            isSelected={false}
             onSelect={[Function]}
           />
         </Table.Td>
@@ -9897,6 +9965,9 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.min-
           width={41}
         >
           <Checkbox
+            isDisabled={false}
+            isIndeterminate={false}
+            isSelected={false}
             onSelect={[Function]}
           />
         </Table.Td>
@@ -10481,6 +10552,9 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.fixe
                 width={41}
               >
                 <Checkbox
+                  isDisabled={false}
+                  isIndeterminate={false}
+                  isSelected={false}
                   onSelect={[Function]}
                 />
               </Table.Td>
@@ -10519,6 +10593,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.fixe
                 width={41}
               >
                 <Checkbox
+                  isDisabled={false}
+                  isIndeterminate={false}
                   isSelected={true}
                   onSelect={[Function]}
                 />
@@ -10558,6 +10634,9 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.fixe
                 width={41}
               >
                 <Checkbox
+                  isDisabled={false}
+                  isIndeterminate={false}
+                  isSelected={false}
                   onSelect={[Function]}
                 />
               </Table.Td>
@@ -10596,6 +10675,9 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.fixe
                 width={41}
               >
                 <Checkbox
+                  isDisabled={false}
+                  isIndeterminate={false}
+                  isSelected={false}
                   onSelect={[Function]}
                 />
               </Table.Td>
@@ -10634,6 +10716,9 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.fixe
                 width={41}
               >
                 <Checkbox
+                  isDisabled={false}
+                  isIndeterminate={false}
+                  isSelected={false}
                   onSelect={[Function]}
                 />
               </Table.Td>
@@ -10672,6 +10757,9 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.fixe
                 width={41}
               >
                 <Checkbox
+                  isDisabled={false}
+                  isIndeterminate={false}
+                  isSelected={false}
                   onSelect={[Function]}
                 />
               </Table.Td>
@@ -10710,6 +10798,9 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.fixe
                 width={41}
               >
                 <Checkbox
+                  isDisabled={false}
+                  isIndeterminate={false}
+                  isSelected={false}
                   onSelect={[Function]}
                 />
               </Table.Td>
@@ -10748,6 +10839,9 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.fixe
                 width={41}
               >
                 <Checkbox
+                  isDisabled={false}
+                  isIndeterminate={false}
+                  isSelected={false}
                   onSelect={[Function]}
                 />
               </Table.Td>
@@ -10786,6 +10880,9 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.fixe
                 width={41}
               >
                 <Checkbox
+                  isDisabled={false}
+                  isIndeterminate={false}
+                  isSelected={false}
                   onSelect={[Function]}
                 />
               </Table.Td>
@@ -10824,6 +10921,9 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.fixe
                 width={41}
               >
                 <Checkbox
+                  isDisabled={false}
+                  isIndeterminate={false}
+                  isSelected={false}
                   onSelect={[Function]}
                 />
               </Table.Td>

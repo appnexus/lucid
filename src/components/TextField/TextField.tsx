@@ -7,7 +7,6 @@ import reducers from './TextField.reducers';
 import * as KEYCODE from '../../constants/key-code';
 import { ITextFieldState } from './TextField.reducers';
 
-
 const cx = lucidClassNames.bind('&-TextField');
 
 const { bool, string, func, number, object, oneOfType } = PropTypes;
@@ -26,7 +25,10 @@ interface ITextFieldProps extends StandardProps {
 	/** Fires an event every time the user types text into the TextField. */
 	onChange: (
 		value: number | string,
-		{ event, props }: {
+		{
+			event,
+			props,
+		}: {
 			event: React.FormEvent;
 			props: ITextFieldProps;
 		}
@@ -35,7 +37,10 @@ interface ITextFieldProps extends StandardProps {
 	/** Fires an on the `input`'s onBlur. */
 	onBlur: (
 		currentValue: number | string,
-		{ event, props }: {
+		{
+			event,
+			props,
+		}: {
 			event: React.FocusEvent;
 			props: ITextFieldProps;
 		}
@@ -45,24 +50,31 @@ interface ITextFieldProps extends StandardProps {
 		into the TextField. */
 	onChangeDebounced: (
 		value: number | string,
-		{ event, props }: {
+		{
+			event,
+			props,
+		}: {
 			event: React.FormEvent;
 			props: ITextFieldProps;
 		}
 	) => void;
 
 	/** Fires an event on every keydown */
-	onKeyDown: (
-		{ event, props }: {
-			event: React.KeyboardEvent;
-			props: ITextFieldProps;
-		}
-	) => void;
+	onKeyDown?: ({
+		event,
+		props,
+	}: {
+		event: React.KeyboardEvent;
+		props: ITextFieldProps;
+	}) => void;
 
 	/** Fires an event when the user hits "enter" from the TextField. You shouldn't use it if you're using `isMultiLine`. */
 	onSubmit: (
 		value: number | string,
-		{ event, props }: {
+		{
+			event,
+			props,
+		}: {
 			event: React.FormEvent;
 			props: ITextFieldProps;
 		}
@@ -81,8 +93,6 @@ interface ITextFieldProps extends StandardProps {
 		heavily inspired by the [lazy-input](https:/docs.npmjs.com/package/lazy-input) component. */
 	lazyLevel: number;
 }
-
-
 
 class TextField extends React.Component<ITextFieldProps, ITextFieldState, {}> {
 	static displayName = 'TextField';
@@ -165,6 +175,7 @@ class TextField extends React.Component<ITextFieldProps, ITextFieldState, {}> {
 		isHolding: false,
 		isMounted: false,
 	};
+
 	static defaultProps = {
 		style: null,
 		isDisabled: false,
@@ -177,21 +188,34 @@ class TextField extends React.Component<ITextFieldProps, ITextFieldState, {}> {
 		debounceLevel: 500,
 		lazyLevel: 1000,
 		value: '',
-		...reducers,
 	};
+
+	static reducers = reducers;
+
+	static getDefaultProps = (): typeof TextField.defaultProps =>
+		TextField.defaultProps;
 
 	private textareaElement = React.createRef<HTMLTextAreaElement>();
 	private inputElement = React.createRef<HTMLInputElement>();
-	private nativeElement = this.props.isMultiLine ? this.textareaElement : this.inputElement;
+	private nativeElement = this.props.isMultiLine
+		? this.textareaElement
+		: this.inputElement;
 
-	private handleChangeDebounced = _.debounce((
-		value: number | string,
-		{ event, props }: {
-			event: React.FormEvent;
-			props: ITextFieldProps
-		}): void => {
-		this.props.onChangeDebounced(value, { event, props });
-	}, this.props.debounceLevel);
+	private handleChangeDebounced = _.debounce(
+		(
+			value: number | string,
+			{
+				event,
+				props,
+			}: {
+				event: React.FormEvent;
+				props: ITextFieldProps;
+			}
+		): void => {
+			this.props.onChangeDebounced(value, { event, props });
+		},
+		this.props.debounceLevel
+	);
 
 	private releaseHold = _.debounce((): void => {
 		if (!this.state.isMounted) {
@@ -268,11 +292,11 @@ class TextField extends React.Component<ITextFieldProps, ITextFieldState, {}> {
 
 	componentWillMount(): void {
 		this.setState({ isMounted: true });
-	};
+	}
 
 	componentWillUnmount(): void {
 		this.setState({ isMounted: false });
-	};
+	}
 
 	componentWillReceiveProps(nextProps: ITextFieldProps): void {
 		// Allow consumer to optionally control state
@@ -283,7 +307,7 @@ class TextField extends React.Component<ITextFieldProps, ITextFieldState, {}> {
 				this.setState({ value: nextProps.value });
 			}
 		}
-	};
+	}
 
 	render(): React.ReactNode {
 		const {
@@ -298,11 +322,10 @@ class TextField extends React.Component<ITextFieldProps, ITextFieldState, {}> {
 		const { value } = this.state;
 
 		const finalProps = {
-			...omitProps(
-				passThroughs,
-				undefined,
-				[...Object.keys(TextField.propTypes), 'children']
-			),
+			...omitProps(passThroughs, undefined, [
+				...Object.keys(TextField.propTypes),
+				'children',
+			]),
 			className: cx(
 				'&',
 				{
@@ -322,18 +345,11 @@ class TextField extends React.Component<ITextFieldProps, ITextFieldState, {}> {
 		};
 
 		return isMultiLine ? (
-			<textarea
-				ref={this.textareaElement}
-				{...finalProps}
-			/>
+			<textarea ref={this.textareaElement} {...finalProps} />
 		) : (
-			<input
-				type='text'
-				ref={this.inputElement}
-				{...finalProps}
-			/>
+			<input type='text' ref={this.inputElement} {...finalProps} />
 		);
-	};
-};
+	}
+}
 
 export default TextField;

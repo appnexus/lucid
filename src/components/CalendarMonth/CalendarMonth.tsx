@@ -14,35 +14,35 @@ interface ICalendarProps extends StandardProps {
 	/** The offset of the rendered month, where 0 is the \`initialMonth\`.
 	 * Negative values will show previous months.
 	 */
-	monthOffset?: number;
+	monthOffset: number;
 
 	/**Sets the month of the calendar. The 0 value for the \`monthOffset\` prop
 	 * refers to this month.
 	 */
-	initialMonth?: Date;
+	initialMonth: Date;
 
 	/** Set the cursor to target date. Primarily used to preview expected ranges
 	 * when the cursor is on a target date.
 	 */
-	cursor?: Date;
+	cursor: Date | null;
 
 	/** Sets the start date in a date range.
 	 */
-	from?: Date;
+	from: Date | null;
 
 	/** Sets the end date in a date range.
 	 */
-	to?: Date;
+	to: Date | null;
 
 	/** The next selection that is expected. Primarily used to preview expected
 	 * ranges when the cursor is on a target date.
 	 */
-	selectMode?: 'day' | 'from' | 'to';
+	selectMode: 'day' | 'from' | 'to';
 
 	/** Used to skip re-rendering of this component when true. Primarily used for
 	 * CalendarMonths which are rendered out of view.
 	 */
-	shouldComponentUpdate?: boolean;
+	shouldComponentUpdate: boolean;
 
 	/** These are values that we've allowed our API to accept, which will go directly
 	 * into the `modifers` object that we pass to DayPicker.
@@ -97,6 +97,7 @@ class CalendarMonth extends React.Component<ICalendarProps, {}, {}> {
 			CalendarMonths which are rendered out of view.
 		`,
 	};
+
 	static defaultProps = {
 		monthOffset: 0,
 		initialMonth: new Date(),
@@ -106,6 +107,9 @@ class CalendarMonth extends React.Component<ICalendarProps, {}, {}> {
 		selectMode: 'day',
 		shouldComponentUpdate: true,
 	};
+
+	static getDefaultProps = (): typeof CalendarMonth.defaultProps =>
+		CalendarMonth.defaultProps;
 
 	modifierRange = (day: Date): boolean => {
 		const { cursor, from, to, selectMode } = this.props;
@@ -135,18 +139,18 @@ class CalendarMonth extends React.Component<ICalendarProps, {}, {}> {
 	modifierFrom = (day: Date): boolean => {
 		const { from } = this.props;
 
-		return DateUtils.isSameDay(day, new Date((from as Date)));
+		return DateUtils.isSameDay(day, new Date(from as Date));
 	};
 
 	modifierTo = (day: Date): boolean => {
 		const { to } = this.props;
 
-		return DateUtils.isSameDay(day, new Date((to as Date)));
+		return DateUtils.isSameDay(day, new Date(to as Date));
 	};
 
 	shouldComponentUpdate(): boolean {
-		return (this.props.shouldComponentUpdate as boolean);
-	};
+		return this.props.shouldComponentUpdate as boolean;
+	}
 
 	render(): React.ReactNode {
 		const {
@@ -156,33 +160,32 @@ class CalendarMonth extends React.Component<ICalendarProps, {}, {}> {
 			...passThroughs
 		} = this.props;
 
-			// It can be tricky to increment months using JavaScript dates, this should
-			// handle the edge cases.
-			// http://stackoverflow.com/questions/499838/javascript-date-next-month
-			const monthDate = new Date(
-				(initialMonth as Date).getFullYear(),
-				(initialMonth as Date).getMonth() + (monthOffset as number),
-				1
-			);
+		// It can be tricky to increment months using JavaScript dates, this should
+		// handle the edge cases.
+		// http://stackoverflow.com/questions/499838/javascript-date-next-month
+		const monthDate = new Date(
+			(initialMonth as Date).getFullYear(),
+			(initialMonth as Date).getMonth() + (monthOffset as number),
+			1
+		);
 
-			return (
-				<DayPicker
-					key={monthOffset}
-					className={cx('&', className)}
-					initialMonth={monthDate}
-					canChangeMonth={false}
-					weekdaysShort={['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']}
-					{...passThroughs}
-					modifiers={{
-						range: this.modifierRange,
-						from: this.modifierFrom,
-						to: this.modifierTo,
-						...passThroughs.modifiers,
-					}}
-				/>
-			);
+		return (
+			<DayPicker
+				key={monthOffset}
+				className={cx('&', className)}
+				initialMonth={monthDate}
+				canChangeMonth={false}
+				weekdaysShort={['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']}
+				{...passThroughs}
+				modifiers={{
+					range: this.modifierRange,
+					from: this.modifierFrom,
+					to: this.modifierTo,
+					...passThroughs.modifiers,
+				}}
+			/>
+		);
 	}
-
-};
+}
 
 export default CalendarMonth;
