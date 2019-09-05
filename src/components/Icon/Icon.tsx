@@ -2,7 +2,7 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import { omitProps, FC } from '../../util/component-types';
+import { omitProps, FC, StandardProps } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-Icon');
 
@@ -20,12 +20,7 @@ export enum Color {
 	'secondary-three' = 'secondary-three',
 }
 
-export interface IIconProps {
-	/**
-	 * Classes that are appended to the component defaults. This prop is run through the \`classnames\` library.
-	 */
-	className?: string;
-
+export interface IIconProps extends StandardProps {
 	/** Size variations of the icons. \`size\` directly effects height and width but the developer should also be conscious of the relationship with \`viewBox\`. */
 	size?: number;
 
@@ -64,15 +59,8 @@ export interface IIconProps {
 		event: React.MouseEvent;
 		props: IIconProps;
 	}) => void;
-
-	/** Any valid React children */
-	children?: React.ReactNode;
-
 	/** Sets the color of the Icon.  May not be applicable for icons that are tied to specific colors (e.g. DangerIcon). */
 	color?: keyof typeof Color;
-
-	// TODO: move this to a generic interface that all components extend their props from
-	style?: React.CSSProperties;
 }
 
 const Icon: FC<IIconProps> = (props): React.ReactElement => {
