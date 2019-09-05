@@ -156,9 +156,6 @@ Checkbox.peek = {
 
 Checkbox.defaultProps = defaultPropsCheckbox;
 
-Checkbox.getDefaultProps = (): typeof defaultPropsCheckbox =>
-	defaultPropsCheckbox;
-
 Checkbox.propTypes = {
 	className: string`
 		Appended to the component-specific class names set on the root element.
@@ -197,6 +194,5 @@ Checkbox.propTypes = {
 };
 
 export default Checkbox as FC<
-	PropsWithDefaults<ICheckboxProps, typeof defaultPropsCheckbox>,
-	typeof defaultPropsCheckbox
+	PropsWithDefaults<ICheckboxProps, typeof defaultPropsCheckbox>
 >;

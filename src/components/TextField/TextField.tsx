@@ -192,9 +192,6 @@ class TextField extends React.Component<ITextFieldProps, ITextFieldState, {}> {
 
 	static reducers = reducers;
 
-	static getDefaultProps = (): typeof TextField.defaultProps =>
-		TextField.defaultProps;
-
 	private textareaElement = React.createRef<HTMLTextAreaElement>();
 	private inputElement = React.createRef<HTMLInputElement>();
 	private nativeElement = this.props.isMultiLine

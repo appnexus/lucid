@@ -137,9 +137,6 @@ class SlidePanel extends React.Component<
 		isLooped: false,
 	};
 
-	static getDefaultProps = (): typeof SlidePanel.defaultProps =>
-		SlidePanel.defaultProps;
-
 	handleTouchStart = (event: React.TouchEvent): void => {
 		this.setState({
 			startX: event.touches[0].screenX,

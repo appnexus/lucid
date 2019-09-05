@@ -111,9 +111,6 @@ class Overlay extends React.Component<IOverlayProps, IOverlayState, {}> {
 		isAnimated: true,
 	};
 
-	static getDefaultProps = (): typeof Overlay.defaultProps =>
-		Overlay.defaultProps;
-
 	state = {
 		// This must be in state because getDefaultProps only runs once per
 		// component import which causes collisions

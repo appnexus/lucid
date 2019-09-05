@@ -106,9 +106,6 @@ CheckboxLabeled.peek = {
 
 CheckboxLabeled.defaultProps = defaultPropsCheckbox;
 
-CheckboxLabeled.getDefaultProps = (): typeof defaultPropsCheckbox =>
-	defaultPropsCheckbox;
-
 // Can't just `...Checkbox.propTypes` anymore because of the way we have to
 // handle default props. They are duplicated here on purpose which is okay
 // since in the future we'll be removing proptypes in favor is just typescript.

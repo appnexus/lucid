@@ -144,9 +144,6 @@ class DragCaptureZone extends React.Component<
 		onDragCancel: _.noop,
 	};
 
-	static getDefaultProps = (): typeof DragCaptureZone.defaultProps =>
-		DragCaptureZone.defaultProps;
-
 	handleDrag = (event: MouseEvent | TouchEvent): void => {
 		let pageX;
 		let pageY;
