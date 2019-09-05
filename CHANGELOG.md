@@ -2,6 +2,18 @@
 
 - Nothing at the moment.
 
+## 4.5.0
+
+- #1036 [patch] Fix issues with PR #1030
+- #1033 [patch] Update active multi line `Tab` styling
+- #1032 [patch] Fix `ToolTip` default carat border styling
+- #1030 [patch] Fix issues with resizable columns with fixed header `DataTable`s
+- #1028 [patch] Fix prop warning on `DataTable`
+- #1026 [patch] Fix various small styling issues with `SingleSelect`
+- #1035 [minor] Improve `Bars` formatter props by passing the callback the entire data points
+
+https://github.com/appnexus/lucid/compare/v4.4.0...v4.5.0
+
 ## 4.4.0
 
 - #1015 [minor] Add new `Flag` icon.
