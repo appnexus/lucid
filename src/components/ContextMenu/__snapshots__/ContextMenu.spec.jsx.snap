@@ -14,8 +14,12 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 1.bas
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": 0,
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "top": 0,
       }
     }
   >
@@ -38,8 +42,12 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 2.bas
       Object {
         "background": "white",
         "boxShadow": "1px -1px 4px black",
+        "left": 0,
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "top": 0,
       }
     }
   >
@@ -100,8 +108,12 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 4.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": 0,
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "top": 0,
         "width": 210,
       }
     }
@@ -137,8 +149,12 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": 0,
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "top": 0,
       }
     }
   >
@@ -170,8 +186,12 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": -15,
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "top": 0,
       }
     }
   >
@@ -203,8 +223,12 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": 15,
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "top": 0,
       }
     }
   >
@@ -236,8 +260,12 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": 0,
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "top": -15,
       }
     }
   >
@@ -269,8 +297,12 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": -15,
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "top": -15,
       }
     }
   >
@@ -302,8 +334,12 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": 15,
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "top": -15,
       }
     }
   >
@@ -335,8 +371,12 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": 0,
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "top": 15,
       }
     }
   >
@@ -368,8 +408,12 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": -15,
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "top": 15,
       }
     }
   >
@@ -401,8 +445,12 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": 15,
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "top": 15,
       }
     }
   >
@@ -434,8 +482,12 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": 0,
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "top": 0,
       }
     }
   >
@@ -467,8 +519,12 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": 15,
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "top": 0,
       }
     }
   >
@@ -500,8 +556,12 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": -15,
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "top": 0,
       }
     }
   >
@@ -533,8 +593,12 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": 0,
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "top": -15,
       }
     }
   >
@@ -566,8 +630,12 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": 15,
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "top": -15,
       }
     }
   >
@@ -599,8 +667,12 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": -15,
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "top": -15,
       }
     }
   >
@@ -632,8 +704,12 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": 0,
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "top": 15,
       }
     }
   >
@@ -665,8 +741,12 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": 15,
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "top": 15,
       }
     }
   >
@@ -698,8 +778,12 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": -15,
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "top": 15,
       }
     }
   >
@@ -731,8 +815,13 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": "auto",
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "right": 0,
+        "top": 0,
       }
     }
   >
@@ -764,8 +853,13 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": "auto",
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "right": -15,
+        "top": 0,
       }
     }
   >
@@ -797,8 +891,13 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": "auto",
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "right": 15,
+        "top": 0,
       }
     }
   >
@@ -830,8 +929,13 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": "auto",
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "right": 0,
+        "top": -15,
       }
     }
   >
@@ -863,8 +967,13 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": "auto",
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "right": -15,
+        "top": -15,
       }
     }
   >
@@ -896,8 +1005,13 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": "auto",
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "right": 15,
+        "top": -15,
       }
     }
   >
@@ -929,8 +1043,13 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": "auto",
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "right": 0,
+        "top": 15,
       }
     }
   >
@@ -962,8 +1081,13 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": "auto",
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "right": -15,
+        "top": 15,
       }
     }
   >
@@ -995,8 +1119,13 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": "auto",
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "right": 15,
+        "top": 15,
       }
     }
   >
@@ -1028,8 +1157,12 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": 0,
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "top": 0,
       }
     }
   >
@@ -1061,8 +1194,12 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": -15,
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "top": 0,
       }
     }
   >
@@ -1094,8 +1231,12 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": 15,
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "top": 0,
       }
     }
   >
@@ -1127,8 +1268,12 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": 0,
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "top": 15,
       }
     }
   >
@@ -1160,8 +1305,12 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": -15,
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "top": 15,
       }
     }
   >
@@ -1193,8 +1342,12 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": 15,
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "top": 15,
       }
     }
   >
@@ -1226,8 +1379,12 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": 0,
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "top": -15,
       }
     }
   >
@@ -1259,8 +1416,12 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": -15,
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "top": -15,
       }
     }
   >
@@ -1292,8 +1453,12 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": 15,
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "top": -15,
       }
     }
   >
@@ -1325,8 +1490,12 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": 0,
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "top": 0,
       }
     }
   >
@@ -1358,8 +1527,12 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": 15,
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "top": 0,
       }
     }
   >
@@ -1391,8 +1564,12 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": -15,
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "top": 0,
       }
     }
   >
@@ -1424,8 +1601,12 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": 0,
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "top": 15,
       }
     }
   >
@@ -1457,8 +1638,12 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": 15,
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "top": 15,
       }
     }
   >
@@ -1490,8 +1675,12 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": -15,
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "top": 15,
       }
     }
   >
@@ -1523,8 +1712,12 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": 0,
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "top": -15,
       }
     }
   >
@@ -1556,8 +1749,12 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": 15,
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "top": -15,
       }
     }
   >
@@ -1589,8 +1786,12 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": -15,
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "top": -15,
       }
     }
   >
@@ -1622,8 +1823,13 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": "auto",
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "right": 0,
+        "top": 0,
       }
     }
   >
@@ -1655,8 +1861,13 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": "auto",
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "right": -15,
+        "top": 0,
       }
     }
   >
@@ -1688,8 +1899,13 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": "auto",
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "right": 15,
+        "top": 0,
       }
     }
   >
@@ -1721,8 +1937,13 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": "auto",
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "right": 0,
+        "top": 15,
       }
     }
   >
@@ -1754,8 +1975,13 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": "auto",
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "right": -15,
+        "top": 15,
       }
     }
   >
@@ -1787,8 +2013,13 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": "auto",
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "right": 15,
+        "top": 15,
       }
     }
   >
@@ -1820,8 +2051,13 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": "auto",
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "right": 0,
+        "top": -15,
       }
     }
   >
@@ -1853,8 +2089,13 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": "auto",
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "right": -15,
+        "top": -15,
       }
     }
   >
@@ -1886,8 +2127,13 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": "auto",
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "right": 15,
+        "top": -15,
       }
     }
   >
@@ -1919,8 +2165,13 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": "auto",
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "right": 0,
+        "top": 0,
       }
     }
   >
@@ -1952,8 +2203,13 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": "auto",
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "right": 0,
+        "top": -15,
       }
     }
   >
@@ -1985,8 +2241,13 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": "auto",
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "right": 0,
+        "top": 15,
       }
     }
   >
@@ -2018,8 +2279,13 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": "auto",
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "right": 15,
+        "top": 0,
       }
     }
   >
@@ -2051,8 +2317,13 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": "auto",
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "right": 15,
+        "top": -15,
       }
     }
   >
@@ -2084,8 +2355,13 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": "auto",
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "right": 15,
+        "top": 15,
       }
     }
   >
@@ -2117,8 +2393,13 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": "auto",
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "right": -15,
+        "top": 0,
       }
     }
   >
@@ -2150,8 +2431,13 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": "auto",
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "right": -15,
+        "top": -15,
       }
     }
   >
@@ -2183,8 +2469,13 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": "auto",
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "right": -15,
+        "top": 15,
       }
     }
   >
@@ -2216,8 +2507,13 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": "auto",
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "right": 0,
+        "top": 0,
       }
     }
   >
@@ -2249,8 +2545,13 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": "auto",
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "right": 0,
+        "top": 15,
       }
     }
   >
@@ -2282,8 +2583,13 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": "auto",
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "right": 0,
+        "top": -15,
       }
     }
   >
@@ -2315,8 +2621,13 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": "auto",
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "right": 15,
+        "top": 0,
       }
     }
   >
@@ -2348,8 +2659,13 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": "auto",
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "right": 15,
+        "top": 15,
       }
     }
   >
@@ -2381,8 +2697,13 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": "auto",
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "right": 15,
+        "top": -15,
       }
     }
   >
@@ -2414,8 +2735,13 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": "auto",
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "right": -15,
+        "top": 0,
       }
     }
   >
@@ -2447,8 +2773,13 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": "auto",
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "right": -15,
+        "top": 15,
       }
     }
   >
@@ -2480,8 +2811,13 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": "auto",
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "right": -15,
+        "top": -15,
       }
     }
   >
@@ -2513,8 +2849,13 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": "auto",
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "right": 0,
+        "top": 0,
       }
     }
   >
@@ -2546,8 +2887,13 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": "auto",
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "right": 0,
+        "top": 15,
       }
     }
   >
@@ -2579,8 +2925,13 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": "auto",
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "right": 0,
+        "top": -15,
       }
     }
   >
@@ -2612,8 +2963,13 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": "auto",
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "right": 15,
+        "top": 0,
       }
     }
   >
@@ -2645,8 +3001,13 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": "auto",
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "right": 15,
+        "top": 15,
       }
     }
   >
@@ -2678,8 +3039,13 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": "auto",
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "right": 15,
+        "top": -15,
       }
     }
   >
@@ -2711,8 +3077,13 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": "auto",
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "right": -15,
+        "top": 0,
       }
     }
   >
@@ -2744,8 +3115,13 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": "auto",
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "right": -15,
+        "top": 15,
       }
     }
   >
@@ -2777,8 +3153,13 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": "auto",
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "right": -15,
+        "top": -15,
       }
     }
   >
@@ -2810,8 +3191,12 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": 0,
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "top": 0,
       }
     }
   >
@@ -2843,8 +3228,12 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": 0,
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "top": -15,
       }
     }
   >
@@ -2876,8 +3265,12 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": 0,
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "top": 15,
       }
     }
   >
@@ -2909,8 +3302,12 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": 15,
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "top": 0,
       }
     }
   >
@@ -2942,8 +3339,12 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": 15,
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "top": -15,
       }
     }
   >
@@ -2975,8 +3376,12 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": 15,
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "top": 15,
       }
     }
   >
@@ -3008,8 +3413,12 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": -15,
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "top": 0,
       }
     }
   >
@@ -3041,8 +3450,12 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": -15,
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "top": -15,
       }
     }
   >
@@ -3074,8 +3487,12 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": -15,
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "top": 15,
       }
     }
   >
@@ -3107,8 +3524,12 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": 0,
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "top": 0,
       }
     }
   >
@@ -3140,8 +3561,12 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": 0,
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "top": 15,
       }
     }
   >
@@ -3173,8 +3598,12 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": 0,
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "top": -15,
       }
     }
   >
@@ -3206,8 +3635,12 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": 15,
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "top": 0,
       }
     }
   >
@@ -3239,8 +3672,12 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": 15,
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "top": 15,
       }
     }
   >
@@ -3272,8 +3709,12 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": 15,
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "top": -15,
       }
     }
   >
@@ -3305,8 +3746,12 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": -15,
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "top": 0,
       }
     }
   >
@@ -3338,8 +3783,12 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": -15,
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "top": 15,
       }
     }
   >
@@ -3371,8 +3820,12 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": -15,
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "top": -15,
       }
     }
   >
@@ -3404,8 +3857,12 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": 0,
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "top": 0,
       }
     }
   >
@@ -3437,8 +3894,12 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": 0,
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "top": 15,
       }
     }
   >
@@ -3470,8 +3931,12 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": 0,
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "top": -15,
       }
     }
   >
@@ -3503,8 +3968,12 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": 15,
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "top": 0,
       }
     }
   >
@@ -3536,8 +4005,12 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": 15,
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "top": 15,
       }
     }
   >
@@ -3569,8 +4042,12 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": 15,
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "top": -15,
       }
     }
   >
@@ -3602,8 +4079,12 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": -15,
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "top": 0,
       }
     }
   >
@@ -3635,8 +4116,12 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": -15,
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "top": 15,
       }
     }
   >
@@ -3668,8 +4153,12 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
       Object {
         "background": "white",
         "boxShadow": "1px 1px 4px black",
+        "left": -15,
+        "maxHeight": "none",
         "minWidth": 0,
+        "opacity": 1,
         "padding": 4,
+        "top": -15,
       }
     }
   >
