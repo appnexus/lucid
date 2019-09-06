@@ -298,12 +298,6 @@ class DragCaptureZone extends React.Component<
 				key='DragCaptureZone'
 				onMouseDown={this.handleDragStart}
 				onTouchStart={this.handleDragStart}
-				// onMouseDown={this.handleDragStart}
-				// onMouseMove={this.handleDrag}
-				// onMouseUp={this.handleDragEnd}
-				// onTouchMove={this.handleDrag}
-				// onTouchEnd={this.handleDragEnd}
-				// onTouchCancel={this.handleDragCancel}
 				ref={this.elementRef}
 			/>
 		);
