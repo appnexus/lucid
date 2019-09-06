@@ -4,6 +4,7 @@
   "description": "A UI component library from AppNexus.",
   "main": "dist/index.js",
   "module": "lib/index.js",
+  "types": "lib/index.d.ts",
   "sideEffects": [
     "*.css",
     "*.less"
