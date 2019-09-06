@@ -18,11 +18,6 @@ const InfiniteSlidePanelSlide: FC<IInfiniteSlidePanelSlideProps> = (): null => n
 InfiniteSlidePanelSlide.displayName = 'InfiniteSlidePanel.Slide';
 InfiniteSlidePanelSlide.propName = 'Slide';
 InfiniteSlidePanelSlide.peek = { description: `The slide.` }
-InfiniteSlidePanelSlide.propTypes = {
-
-};
-
-
 
 export interface IInfiniteSlidePanelProps extends StandardProps {
 	/**	The only allowed child is a render function which is passed the current

@@ -233,6 +233,8 @@ const ToolTip = createClass({
 		return (
 			<ContextMenu
 				className={cx('&', className)}
+				// WARNING: Alignment is always set to center because the getAlignmentOffset function
+				// handles the alignment instead of delegating to ContextMenu
 				alignment={ContextMenu.CENTER}
 				direction={direction}
 				directonOffset={15}
