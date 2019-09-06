@@ -8,7 +8,7 @@ const isProduction = process.env.NODE_ENV === 'production';
 
 module.exports = {
 	mode: isProduction ? 'production' : 'development',
-	entry: path.join(__dirname, 'src', 'index.js'),
+	entry: path.join(__dirname, 'src', 'index.ts'),
 	output: {
 		path: path.join(__dirname, 'dist'),
 		filename: isProduction ? 'lucid.min.js' : 'lucid.js',
