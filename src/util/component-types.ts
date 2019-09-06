@@ -35,7 +35,7 @@ export type PropsWithDefaults<P, D> = Pick<P, Exclude<keyof P, keyof D>> &
 
 // `D`: default props (should be provided when a functional component supports
 // default props)
-export interface FC<P, D = {}> extends React.FC<P> {
+export interface FC<P> extends React.FC<P> {
 	peek: {
 		description: string;
 		categories?: string[];
@@ -44,7 +44,6 @@ export interface FC<P, D = {}> extends React.FC<P> {
 	};
 	propName?: string; // TODO confirm this is needed
 	_isPrivate?: boolean;
-	getDefaultProps?: () => D;
 }
 
 type TypesType<P> =

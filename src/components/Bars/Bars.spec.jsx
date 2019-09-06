@@ -313,6 +313,43 @@ describe('Bars', () => {
 					'SEE'
 				);
 			});
+
+			it('should have access to the full datum', () => {
+				const wrapper = shallow(
+					<Bars
+						data={defaultData}
+						xScale={defaultXScale}
+						yScale={defaultYScale}
+						hasToolTips
+						xFormatter={(str, d) => `${str.toUpperCase()} ${d.y2}`}
+					/>
+				).find(PureToolTip);
+
+				assert.equal(
+					wrapper
+						.at(0)
+						.shallow()
+						.find(ToolTip.Title)
+						.prop('children'),
+					'AYE 20'
+				);
+				assert.equal(
+					wrapper
+						.at(1)
+						.shallow()
+						.find(ToolTip.Title)
+						.prop('children'),
+					'BEE 35'
+				);
+				assert.equal(
+					wrapper
+						.at(2)
+						.shallow()
+						.find(ToolTip.Title)
+						.prop('children'),
+					'SEE 3'
+				);
+			});
 		});
 
 		describe('yScale', () => {

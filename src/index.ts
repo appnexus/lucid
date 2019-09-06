@@ -1,47 +1,68 @@
 // components with reducers
+// @ts-ignore: not converted yet
 import Accordion, { AccordionDumb } from './components/Accordion/Accordion';
 import Autocomplete, {
 	AutocompleteDumb,
+// @ts-ignore: not converted yet
 } from './components/Autocomplete/Autocomplete';
 import ButtonGroup, {
 	ButtonGroupDumb,
+// @ts-ignore: not converted yet
 } from './components/ButtonGroup/ButtonGroup';
 import SearchableSelect, {
 	SearchableSelectDumb,
+// @ts-ignore: not converted yet
 } from './components/SearchableSelect/SearchableSelect';
+// @ts-ignore: not converted yet
 import DateSelect, { DateSelectDumb } from './components/DateSelect/DateSelect';
 import SearchableMultiSelect, {
 	SearchableMultiSelectDumb,
+// @ts-ignore: not converted yet
 } from './components/SearchableMultiSelect/SearchableMultiSelect';
 import SearchableSingleSelect, {
 	SearchableSingleSelectDumb,
+// @ts-ignore: not converted yet
 } from './components/SearchableSingleSelect/SearchableSingleSelect';
+// @ts-ignore: not converted yet
 import DropMenu, { DropMenuDumb } from './components/DropMenu/DropMenu';
 import Expander, { ExpanderDumb } from './components/Expander/Expander';
 import ExpanderPanel, {
 	ExpanderPanelDumb,
+// @ts-ignore: not converted yet
 } from './components/ExpanderPanel/ExpanderPanel';
+// @ts-ignore: not converted yet
 import Paginator, { PaginatorDumb } from './components/Paginator/Paginator';
+// @ts-ignore: not converted yet
 import PieChart, { PieChartDumb } from './components/PieChart/PieChart';
+// @ts-ignore: not converted yet
 import RadioGroup, { RadioGroupDumb } from './components/RadioGroup/RadioGroup';
 import SearchField, {
 	SearchFieldDumb,
+// @ts-ignore: not converted yet
 } from './components/SearchField/SearchField';
+// @ts-ignore: not converted yet
 import Sidebar, { SidebarDumb } from './components/Sidebar/Sidebar';
 import SingleSelect, {
 	SingleSelectDumb,
+// @ts-ignore: not converted yet
 } from './components/SingleSelect/SingleSelect';
 import SplitButton, {
 	SplitButtonDumb,
+// @ts-ignore: not converted yet
 } from './components/SplitButton/SplitButton';
+// @ts-ignore: not converted yet
 import Submarine, { SubmarineDumb } from './components/Submarine/Submarine';
+// @ts-ignore: not converted yet
 import Tabs, { TabsDumb } from './components/Tabs/Tabs';
+// @ts-ignore: not converted yet
 import ToolTip, { ToolTipDumb } from './components/ToolTip/ToolTip';
 import VerticalListMenu, {
 	VerticalListMenuDumb,
+// @ts-ignore: not converted yet
 } from './components/VerticalListMenu/VerticalListMenu';
 import VerticalTabs, {
 	VerticalTabsDumb,
+// @ts-ignore: not converted yet
 } from './components/VerticalTabs/VerticalTabs';
 
 // dumb components
@@ -52,11 +73,16 @@ import AsteriskIcon from './components/Icon/AsteriskIcon/AsteriskIcon';
 import AttachIcon from './components/Icon/AttachIcon/AttachIcon';
 import AudioIcon from './components/Icon/AudioIcon/AudioIcon';
 import Axis from './components/Axis/Axis';
+// @ts-ignore: not converted yet
 import AxisLabel from './components/AxisLabel/AxisLabel';
 import Badge from './components/Badge/Badge';
+// @ts-ignore: not converted yet
 import Banner from './components/Banner/Banner';
+// @ts-ignore: not converted yet
 import Bar from './components/Bar/Bar';
+// @ts-ignore: not converted yet
 import BarChart from './components/BarChart/BarChart';
+// @ts-ignore: not converted yet
 import Bars from './components/Bars/Bars';
 import BellIcon from './components/Icon/BellIcon/BellIcon';
 import BookIcon from './components/Icon/BookIcon/BookIcon';
@@ -71,14 +97,17 @@ import ChevronIcon from './components/Icon/ChevronIcon/ChevronIcon';
 import ClockIcon from './components/Icon/ClockIcon/ClockIcon';
 import CodeIcon from './components/Icon/CodeIcon/CodeIcon';
 import Collapsible from './components/Collapsible/Collapsible';
+// @ts-ignore: not converted yet
 import ContextMenu from './components/ContextMenu/ContextMenu';
 import CloseIcon from './components/Icon/CloseIcon/CloseIcon';
 import CrownIcon from './components/Icon/CrownIcon/CrownIcon';
 import DangerIcon from './components/Icon/DangerIcon/DangerIcon';
 import DangerLightIcon from './components/Icon/DangerLightIcon/DangerLightIcon';
+// @ts-ignore: not converted yet
 import DataTable from './components/DataTable/DataTable';
 import DeleteIcon from './components/Icon/DeleteIcon/DeleteIcon';
 import DotsIcon from './components/Icon/DotsIcon/DotsIcon';
+// @ts-ignore: not converted yet
 import Dialog from './components/Dialog/Dialog';
 import DownloadIcon from './components/Icon/DownloadIcon/DownloadIcon';
 import DragCaptureZone from './components/DragCaptureZone/DragCaptureZone';
@@ -86,29 +115,38 @@ import DuplicateIcon from './components/Icon/DuplicateIcon/DuplicateIcon';
 import EditIcon from './components/Icon/EditIcon/EditIcon';
 import EligibilityIcon from './components/Icon/EligibilityIcon/EligibilityIcon';
 import EligibilityLightIcon from './components/Icon/EligibilityLightIcon/EligibilityLightIcon';
+// @ts-ignore: not converted yet
 import EmptyStateWrapper from './components/EmptyStateWrapper/EmptyStateWrapper';
 import EnvelopeIcon from './components/Icon/EnvelopeIcon/EnvelopeIcon';
 import EqualsIcon from './components/Icon/EqualsIcon/EqualsIcon';
 import FileIcon from './components/Icon/FileIcon/FileIcon';
+// @ts-ignore: not converted yet
 import FilterIcon from './components/Icon/FilterIcon/FilterIcon';
+// @ts-ignore: not converted yet
 import FlagIcon from './components/Icon/FlagIcon/FlagIcon';
 import FolderIcon from './components/Icon/FolderIcon/FolderIcon';
+// @ts-ignore: not converted yet
 import FourSquaresIcon from './components/Icon/FourSquaresIcon/FourSquaresIcon';
 import Grid from './components/Grid/Grid';
 import HelpIcon from './components/Icon/HelpIcon/HelpIcon';
 import HomeIcon from './components/Icon/HomeIcon/HomeIcon';
 import Icon from './components/Icon/Icon';
+// @ts-ignore: not converted yet
 import IconSelect from './components/IconSelect/IconSelect';
 import ImageIcon from './components/Icon/ImageIcon/ImageIcon';
 import InfoIcon from './components/Icon/InfoIcon/InfoIcon';
 import InfoLightIcon from './components/Icon/InfoLightIcon/InfoLightIcon';
+// @ts-ignore: not converted yet
 import Legend from './components/Legend/Legend';
 import Line from './components/Line/Line';
+// @ts-ignore: not converted yet
 import LineChart from './components/LineChart/LineChart';
 import Lines from './components/Lines/Lines';
 import LinkedIcon from './components/Icon/LinkedIcon/LinkedIcon';
 import LoadingIcon from './components/Icon/LoadingIcon/LoadingIcon';
+// @ts-ignore: not converted yet
 import LoadingIndicator from './components/LoadingIndicator/LoadingIndicator';
+// @ts-ignore: not converted yet
 import LoadingMessage from './components/LoadingMessage/LoadingMessage';
 import LockedIcon from './components/Icon/LockedIcon/LockedIcon';
 import MaximizeIcon from './components/Icon/MaximizeIcon/MaximizeIcon';
@@ -124,18 +162,23 @@ import OverlayWrapper from './components/OverlayWrapper/OverlayWrapper';
 import Panel from './components/Panel/Panel';
 import PlusIcon from './components/Icon/PlusIcon/PlusIcon';
 import Point from './components/Point/Point';
+// @ts-ignore: not converted yet
 import Points from './components/Points/Points';
 import Portal from './components/Portal/Portal';
 import ProgressBar from './components/ProgressBar/ProgressBar';
 import QuestionMarkIcon from './components/Icon/QuestionMarkIcon/QuestionMarkIcon';
 import RadioButton from './components/RadioButton/RadioButton';
+// @ts-ignore: not converted yet
 import RadioButtonLabeled from './components/RadioButtonLabeled/RadioButtonLabeled';
 import RefreshIcon from './components/Icon/RefreshIcon/RefreshIcon';
+// @ts-ignore: not converted yet
 import DraggableList from './components/DraggableList/DraggableList';
 import ResizeIcon from './components/Icon/ResizeIcon/ResizeIcon';
 import Resizer from './components/Resizer/Resizer';
+// @ts-ignore: not converted yet
 import ScrollTable from './components/ScrollTable/ScrollTable';
 import SearchIcon from './components/Icon/SearchIcon/SearchIcon';
+// @ts-ignore: not converted yet
 import Selection from './components/Selection/Selection';
 import SeparatorIcon from './components/Icon/SeparatorIcon/SeparatorIcon';
 import SettingsIcon from './components/Icon/SettingsIcon/SettingsIcon';
@@ -151,13 +194,18 @@ import SuccessIcon from './components/Icon/SuccessIcon/SuccessIcon';
 import SuccessLightIcon from './components/Icon/SuccessLightIcon/SuccessLightIcon';
 import Switch from './components/Switch/Switch';
 import SwitchIcon from './components/Icon/SwitchIcon/SwitchIcon';
+// @ts-ignore: not converted yet
 import SwitchLabeled from './components/SwitchLabeled/SwitchLabeled';
+// @ts-ignore: not converted yet
 import Table from './components/Table/Table';
+// @ts-ignore: not converted yet
 import Tag from './components/Tag/Tag';
 import TextField from './components/TextField/TextField';
+// @ts-ignore: not converted yet
 import TextFieldValidated from './components/TextFieldValidated/TextFieldValidated';
 import TextIcon from './components/Icon/TextIcon/TextIcon';
 import Typography from './components/Typography/Typography';
+// @ts-ignore: not converted yet
 import Underline from './components/Underline/Underline';
 import UnlinkedIcon from './components/Icon/UnlinkedIcon/UnlinkedIcon';
 import UnlockedIcon from './components/Icon/UnlockedIcon/UnlockedIcon';

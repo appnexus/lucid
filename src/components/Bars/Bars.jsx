@@ -181,7 +181,7 @@ const Bars = createClass({
 					>
 						{yTooltipFormatter(
 							_.get(legend, field, field),
-							yFormatter(dataPoint[field]),
+							yFormatter(dataPoint[field], dataPoint),
 							dataPoint[field]
 						)}
 					</Legend.Item>
@@ -376,7 +376,9 @@ export const PureToolTip = createClass({
 					/>
 				</ToolTip.Target>
 
-				<ToolTip.Title>{xFormatter(data[seriesIndex][xField])}</ToolTip.Title>
+				<ToolTip.Title>
+					{xFormatter(data[seriesIndex][xField], data[seriesIndex])}
+				</ToolTip.Title>
 
 				<ToolTip.Body>{renderBody(data[seriesIndex])}</ToolTip.Body>
 			</ToolTip>

@@ -108,9 +108,6 @@ class CalendarMonth extends React.Component<ICalendarProps, {}, {}> {
 		shouldComponentUpdate: true,
 	};
 
-	static getDefaultProps = (): typeof CalendarMonth.defaultProps =>
-		CalendarMonth.defaultProps;
-
 	modifierRange = (day: Date): boolean => {
 		const { cursor, from, to, selectMode } = this.props;
 
