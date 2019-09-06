@@ -1,6 +1,6 @@
 import React from 'react';
 import _ from 'lodash';
-import { SearchableMultiSelect } from '../../../index.js';
+import { SearchableMultiSelect } from '../../../index';
 
 // eslint-disable-next-line react/prop-types
 const OptionCols = ({ col1, col2, textMatch }) => (

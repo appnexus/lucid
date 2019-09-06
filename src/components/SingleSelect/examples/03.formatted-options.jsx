@@ -1,5 +1,5 @@
 import React from 'react';
-import { SingleSelect } from '../../../index.js';
+import { SingleSelect } from '../../../index';
 
 // eslint-disable-next-line react/prop-types
 const OptionCols = ({ col1, col2 }) => (

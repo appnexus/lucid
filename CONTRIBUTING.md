@@ -42,7 +42,7 @@ Start your dev server and go to `http://localhost:8080/#/components/ExampleCompo
 * Example dir `docs/examples/MyNewComponent/`
 * Example component `docs/examples/MyNewComponent/WithDefaults.js`
 
-4. Add your component's JSX file to `/src/index.js`
+4. Add your component's JSX file to `/src/index.ts`
 ```javascript
 import MyNewComponent from './components/MyNewComponent/MyNewComponent';
 

@@ -190,7 +190,7 @@ export function common(
 
 		// Only run this test if it's a public component
 		if (!Component._isPrivate && !noExport) {
-			it('should be available as an exported module from index.js', () => {
+			it('should be available as an exported module from index.ts', () => {
 				assert(lucid[Component.displayName]);
 			});
 		}

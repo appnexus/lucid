@@ -1,6 +1,6 @@
 import React from 'react';
 import _ from 'lodash';
-import { SearchableSelect, Underline } from '../../../index.js';
+import { SearchableSelect, Underline } from '../../../index';
 
 // eslint-disable-next-line react/prop-types
 const OptionCols = ({ col1, col2, textMatch }) => (
