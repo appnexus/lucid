@@ -63,6 +63,7 @@ describe('ContextMenu', () => {
 				const flyout = _.first(
 					document.getElementById('ContextMenu-test456').children
 				);
+				console.log(flyout.style)
 				assert(_.isEmpty(flyout.style.opacity));
 			});
 

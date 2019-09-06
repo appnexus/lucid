@@ -66,6 +66,15 @@ export interface FlyoutPosition {
 	top: string | number;
 }
 
+/** default styling hides portal because its position can't be calculated
+ * properly until after 1st render so here we unhide it if the ref exists */
+const defaultFlyoutPosition = {
+	opacity: 1,
+	maxHeight: 'none',
+	left: 'auto',
+	top: 'auto',
+};
+
 type GetAlignmentOffset = (n: number) => number;
 
 interface IContextMenuProps extends StandardProps {
@@ -105,6 +114,9 @@ interface IContextMenuProps extends StandardProps {
 	/** The `id` of the FlyOut portal element that is appended to
 		`document.body`. Defaults to a generated `id`. */
 	portalId?: string;
+
+	FlyOut?: React.ReactNode;
+	Target?: React.ReactNode;
 }
 interface IContextMenuState {
 	portalId: string;
@@ -188,6 +200,9 @@ class ContextMenu  extends React.Component<
 			The \`id\` of the FlyOut portal element that is appended to
 			\`document.body\`. Defaults to a generated \`id\`.
 		`,
+
+		FlyOut: node,
+		Target: node,
 	};
 
 	// all of these should be removed, but it's a breaking change to do so :(
@@ -262,20 +277,17 @@ class ContextMenu  extends React.Component<
 
 		// in this block, I assert the type of target because EventTarget -> Element -> HtmlElement (from general to specific typing)
 		const eventTarget = event.target as HTMLElement | null;
-		const currentRef = targetRef.current;
-		const portalRef = flyOutPortalRef.current;
 
 		if (onClickOut
-			&& flyOutPortalRef
+			&& flyOutPortalRef.current
+			&& targetRef.current
 			&& eventTarget
 			&& eventTarget.nodeName
-			&& portalRef
-			&& currentRef
 		) {
-			const flyOutEl = portalRef.portalElement.firstChild;
+			const flyOutEl = flyOutPortalRef.current.portalElement.firstChild;
 			const wasALabelClick =
 				eventTarget.nodeName === 'INPUT' &&
-				sharesAncestor(eventTarget, currentRef, 'LABEL');
+				sharesAncestor(eventTarget, targetRef.current, 'LABEL');
 
 			// Attempt to detect <label> click and ignore it
 			if (wasALabelClick) {
@@ -284,21 +296,12 @@ class ContextMenu  extends React.Component<
 
 			if (
 				!((flyOutEl as HTMLDivElement).contains(eventTarget)
-					|| currentRef.contains(eventTarget))
+					|| targetRef.current.contains(eventTarget))
 				&& event.type === 'click'
 			) {
 				onClickOut({ props, event: (event as MouseEvent) });
 			}
 		}
-	};
-
-	/** default styling hides portal because its position can't be calculated
-	 * properly until after 1st render so here we unhide it if the ref exists */
-	defaultStyle = {
-		opacity: 1,
-		maxHeight: 'none',
-		left: 'auto',
-		top: 'auto',
 	};
 
 	calcAlignmentOffset = (
@@ -432,10 +435,8 @@ class ContextMenu  extends React.Component<
 			},
 		};
 
-		// debugger;
-
 		return {
-			...this.defaultStyle,
+			...defaultFlyoutPosition,
 			...options[direction][alignment],
 		};
 	};
@@ -456,11 +457,9 @@ class ContextMenu  extends React.Component<
 			flyOutPortalRef,
 		} = this;
 
-		console.log(alignment)
-
 		const { clientWidth } = document.body;
 
-		if (!flyOutPortalRef) return {};
+		if (!flyOutPortalRef.current) return {};
 
 		if (direction && alignment) {
 			return this.getMatch(
@@ -492,7 +491,7 @@ class ContextMenu  extends React.Component<
 	alignFlyOut = (doRedunancyCheck = false): void => {
 		const { flyOutPortalRef, targetRef } = this;
 
-		if (!targetRef || !flyOutPortalRef) {
+		if (!targetRef.current || !flyOutPortalRef.current) {
 			return;
 		}
 
@@ -508,12 +507,6 @@ class ContextMenu  extends React.Component<
 			targetRect.width === this.state.targetRect.width
 		) {
 			return;
-		}
-
-		if (!flyOutPortalRef) {
-			return this.setState({
-				targetRect,
-			});
 		}
 
 		if (portalRef) {
