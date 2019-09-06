@@ -1,5 +1,5 @@
 import React from 'react';
-import { SidePanel } from '../../../index.js';
+import { SidePanel } from '../../../index';
 
 export default class extends React.Component {
 	constructor(...args) {
