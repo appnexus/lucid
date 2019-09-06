@@ -29,7 +29,7 @@ class SlidePanelSlide extends React.Component<ISlidePanelSlideProps, {}, {}> {
 	}
 }
 
-interface ISlidePanelProps extends StandardProps {
+export interface ISlidePanelProps extends StandardProps {
 	/** Max number of viewable slides to show simultaneously. */
 	slidesToShow: number;
 
