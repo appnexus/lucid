@@ -21,7 +21,7 @@ export enum Color {
 }
 
 export interface IIconProps extends StandardProps {
-	/** Size variations of the icons. \`size\` directly effects height and width but the developer should also be conscious of the relationship with \`viewBox\`. */
+	/** Size variations of the icons. `size` directly effects height and width but the developer should also be conscious of the relationship with `viewBox`. */
 	size?: number;
 
 	/** Size handles width and height, whereas `width` can manually override the width that would be set by size. */
@@ -30,7 +30,7 @@ export interface IIconProps extends StandardProps {
 	/** Size handles width and height, whereas `height` can manually override the height that would be set by size. */
 	height?: number | string;
 
-	/** \`viewBox\` is very important for SVGs. You can think of \`viewBox\` as the "artboard" for our SVG while \`size\` is the presented height and width. */
+	/** `viewBox` is very important for SVGs. You can think of `viewBox` as the "artboard" for our SVG while `size` is the presented height and width. */
 	viewBox?: string;
 
 	/** Any valid SVG aspect ratio. */
@@ -42,7 +42,7 @@ export interface IIconProps extends StandardProps {
 	/** Adds styling that makes the icon appear disabled. Also forces isClickable to be false. */
 	isDisabled?: boolean;
 
-	/** Called when the user clicks the \`Icon\`. */
+	/** Called when the user clicks the `Icon`. */
 	onClick?: ({
 		event,
 		props,
@@ -51,7 +51,7 @@ export interface IIconProps extends StandardProps {
 		props: IIconProps;
 	}) => void;
 
-	/** Called when the user clicks an active, clickable \`Icon\`. Signature: \`({event, props}) => {}\` */
+	/** Called when the user clicks an active, clickable `Icon`. */
 	onSelect?: ({
 		event,
 		props,
@@ -59,7 +59,8 @@ export interface IIconProps extends StandardProps {
 		event: React.MouseEvent;
 		props: IIconProps;
 	}) => void;
-	/** Sets the color of the Icon.  May not be applicable for icons that are tied to specific colors (e.g. DangerIcon). */
+
+	/** Sets the color of the Icon. May not be applicable for icons that are tied to specific colors (e.g. DangerIcon). */
 	color?: keyof typeof Color;
 }
 
