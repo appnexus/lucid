@@ -55,6 +55,8 @@ export interface IInfiniteSlidePanelProps extends StandardProps {
 	/** The number of slides rendered at any given time. A good rule-of-thumb is
 	that this should be at least 4 times the \`slidesToShow\` value. */
 	totalSlides?: number;
+
+	Slide?: React.ReactNode;
 }
 
 interface IInfiniteSlidePanelFC extends FC<IInfiniteSlidePanelProps> {
@@ -135,8 +137,8 @@ const InfiniteSlidePanel: IInfiniteSlidePanelFC = (props): React.ReactElement =>
 	);
 };
 
-InfiniteSlidePanel.Slide = InfiniteSlidePanelSlide
-// InfiniteSlidePanel._isPrivate = true,
+InfiniteSlidePanel.Slide = InfiniteSlidePanelSlide;
+InfiniteSlidePanel._isPrivate = true;
 InfiniteSlidePanel.displayName = 'InfiniteSlidePanel';
 InfiniteSlidePanel.peek = {
 	description: `
@@ -180,6 +182,8 @@ InfiniteSlidePanel.propTypes = {
 		The number of slides rendered at any given time. A good rule-of-thumb is
 		that this should be at least 4 times the \`slidesToShow\` value.
 	`,
+
+	Slide: node,
 };
 
 export default InfiniteSlidePanel;
