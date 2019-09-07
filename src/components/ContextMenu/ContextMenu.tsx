@@ -563,8 +563,8 @@ class ContextMenu  extends React.Component<
 				{...omitProps(
 					passThroughs,
 					undefined,
-					_.keys(ContextMenu.propTypes))
-				}
+					_.keys(ContextMenu.propTypes)
+				)}
 				className={cx('&', className)}
 				style={style}
 			>
