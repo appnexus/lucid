@@ -16,9 +16,7 @@ const { string, any } = PropTypes;
 interface IValidationErrorProps extends StandardProps {
 	description?: string;
 }
-
 const ValidationError: FC<IValidationErrorProps> = (): null => null;
-
 ValidationError.displayName = 'Validation.Error';
 ValidationError.peek = {
 	description: `
@@ -40,7 +38,7 @@ export interface IValidationProps extends StandardProps {
 	Error?: string | React.ReactNode & { props: IValidationErrorProps };
 }
 
-interface IValidationFC extends FC<IValidationProps> {
+export interface IValidationFC extends FC<IValidationProps> {
 	Error: FC<IValidationErrorProps>;
 }
 
