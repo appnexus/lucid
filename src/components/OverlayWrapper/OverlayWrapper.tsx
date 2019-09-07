@@ -18,16 +18,15 @@ const { bool, node, oneOf, string } = PropTypes;
 
 interface IMessageProps extends StandardProps {}
 
-const Message: FC<IMessageProps> = (): null => null;
-
-Message.displayName = 'OverlayWrapper.Message';
-Message.peek = {
+export const OverlayWrapperMessage: FC<IMessageProps> = (): null => null;
+OverlayWrapperMessage.displayName = 'OverlayWrapper.Message';
+OverlayWrapperMessage.peek = {
 	description: `
 		The Message to display in the overlay.
 	`,
 };
-Message.propName = 'Message';
-Message.propTypes = {
+OverlayWrapperMessage.propName = 'Message';
+OverlayWrapperMessage.propTypes = {
 	children: node,
 };
 
@@ -49,11 +48,11 @@ export interface IOverlayWrapperProps extends StandardProps {
 	overlayKind?: 'light' | 'dark';
 
 	/** *Child Element* The Message to display in the overlay. */
-	Message: FC<IMessageProps>;
+	Message?: FC<IMessageProps>;
 }
 
 interface IOverlayWrapperFC extends FC<IOverlayWrapperProps> {
-	Message: FC<IMessageProps>;
+	Message?: FC<IMessageProps>;
 }
 
 const OverlayWrapper: IOverlayWrapperFC = (props): React.ReactElement => {
@@ -66,14 +65,12 @@ const OverlayWrapper: IOverlayWrapperFC = (props): React.ReactElement => {
 		...passThroughs
 	} = props;
 
-	const { Message } = OverlayWrapper;
-
 	const messageElementProp = _.get(
-		getFirst<IMessageProps>(props, Message),
+		getFirst<IMessageProps>(props, OverlayWrapperMessage),
 		'props',
 		{}
 	);
-	const otherChildren = rejectTypes(children, [Message]);
+	const otherChildren = rejectTypes(children, [OverlayWrapperMessage]);
 
 	return (
 		<div
@@ -138,6 +135,6 @@ OverlayWrapper.propTypes = {
 	`,
 };
 
-OverlayWrapper.Message = Message;
+OverlayWrapper.Message = OverlayWrapperMessage;
 
 export default OverlayWrapper;
