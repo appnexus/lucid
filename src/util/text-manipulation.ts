@@ -10,7 +10,11 @@ import React from 'react';
  *
  * @return string[]
  */
-export function partitionText(text: string, pattern: RegExp, length: number) {
+export function partitionText(
+	text: string,
+	pattern: RegExp,
+	length?: number
+): string[] {
 	let index: number;
 
 	if (length) {
