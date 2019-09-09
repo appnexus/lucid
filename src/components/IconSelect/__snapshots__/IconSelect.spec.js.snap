@@ -17,9 +17,7 @@ exports[`IconSelect [common] example testing should match snapshot(s) for 1.sele
       <RadioButtonLabeled
         Label="Foo Bar"
         className="lucid-IconSelect-Item-radio"
-        isDisabled={false}
         isSelected={false}
-        onSelect={[Function]}
       />
     </figcaption>
   </figure>
@@ -36,9 +34,7 @@ exports[`IconSelect [common] example testing should match snapshot(s) for 1.sele
       <RadioButtonLabeled
         Label="Bax Tar"
         className="lucid-IconSelect-Item-radio"
-        isDisabled={false}
         isSelected={true}
-        onSelect={[Function]}
       />
     </figcaption>
   </figure>
