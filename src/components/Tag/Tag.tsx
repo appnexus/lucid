@@ -22,19 +22,18 @@ export interface ITagProps extends StandardProps {
 	/** Set this prop if you're using three levels of tags so it can be styled
 		appropriately. This is required because we aren't able to know if your
 		Tags have grand children efficiently. */
-	isTop: boolean;
-
+	isTop?: boolean;
 
 	/** Use the light background when your tags are on a white page background.
 		Use a dark background when your tags need to be placed on a darker
 		background (e.g. in a page header). */
-	hasLightBackground: boolean;
+	hasLightBackground?: boolean;
 
 	/** Shows or hides the little "x" for a given tag. */
-	isRemovable: boolean;
+	isRemovable?: boolean;
 
 	/** Called when the user clicks to remove a tag. */
-	onRemove: ({
+	onRemove?: ({
 		event,
 		props,
 	}: {
@@ -42,7 +41,6 @@ export interface ITagProps extends StandardProps {
 		props: IIconProps;
 	}) => void;
 }
-
 
 const Tag: FC<ITagProps> = (props): React.ReactElement => {
 
@@ -56,13 +54,11 @@ const Tag: FC<ITagProps> = (props): React.ReactElement => {
 		...passThroughs
 	} = props;
 
-	const handleRemove = ({ event, props }: {
-		event: React.MouseEvent,
-		props: IIconProps
+	const handleRemove = ({ event }: {
+		event: React.MouseEvent
 	}): void => {
-		onRemove({ props: props, event });
+		onRemove({ props, event });
 	};
-
 
 	const subTags = filterTypes(children, Tag);
 	const otherChildren = rejectTypes(children, Tag);
@@ -71,7 +67,10 @@ const Tag: FC<ITagProps> = (props): React.ReactElement => {
 
 	return (
 		<div
-		{...omitProps(passThroughs, undefined, _.keys(Tag.propTypes))}
+			{...omitProps(passThroughs, undefined, [
+				..._.keys(Tag.propTypes),
+				'callbackId',
+			])}
 			className={cx(
 				'&',
 				{
