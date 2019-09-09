@@ -5,7 +5,7 @@ import { lucidClassNames } from '../../util/style-helpers';
 import { FC, omitProps, StandardProps } from '../../util/component-types';
 import { groupByFields } from '../../util/chart-helpers';
 import * as d3Shape from 'd3-shape';
-import * as d3scale from 'd3-scale';
+import * as d3Scale from 'd3-scale';
 import * as chartConstants from '../../constants/charts';
 
 import Line from '../Line/Line';
@@ -76,15 +76,15 @@ export interface ILinesProps extends StandardProps {
 	/** The scale for the x axis. Must be a d3 scale. Lucid exposes the
 		`lucid.d3Scale` library for use here. */
 	xScale:
-		d3scale.ScaleBand<number | string>
-		| d3scale.ScalePoint<number | string>;
+		d3Scale.ScaleBand<number | string>
+		| d3Scale.ScalePoint<number | string>;
 
 	/** The scale for the y axis. Must be a d3 scale. Lucid exposes the
 		`lucid.d3Scale` library for use here. */
 	yScale:
-		d3scale.ScaleContinuousNumeric<number, number>
-		| d3scale.ScaleBand<number>
-		| d3scale.ScalePoint<number>;
+		d3Scale.ScaleContinuousNumeric<number, number>
+		| d3Scale.ScaleBand<number>
+		| d3Scale.ScalePoint<number>;
 
 	/** Typically this number can be derived from the yScale. However when we're
 		\`isStacked\` we need to calculate a new domain for the yScale based on
