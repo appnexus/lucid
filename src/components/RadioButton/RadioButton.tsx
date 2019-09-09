@@ -7,7 +7,7 @@ import { omitProps, FC, StandardProps } from '../../util/component-types';
 const cx = lucidClassNames.bind('&-RadioButton');
 const { bool, func, object, string } = PropTypes;
 
-interface IRadioButtonProps extends StandardProps {
+export interface IRadioButtonProps extends StandardProps {
 	/** Indicates whether the component should appear and act disabled by having
 	 * a "greyed out" palette and ignoring user interactions.
 	 *
