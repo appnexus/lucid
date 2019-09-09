@@ -258,7 +258,7 @@ const SearchableMultiSelect = createClass({
 			optionFilter: propsSearch,
 			searchText: '',
 			selectedIndices: [],
-			DropMenu: DropMenu.getDefaultProps(),
+			DropMenu: DropMenu.defaultProps,
 			responsiveMode: 'large',
 			hasRemoveAll: true,
 			hasSelections: true,

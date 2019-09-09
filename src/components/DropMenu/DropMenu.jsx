@@ -430,7 +430,7 @@ const DropMenu = createClass({
 			onFocusNext: _.noop,
 			onFocusPrev: _.noop,
 			onFocusOption: _.noop,
-			ContextMenu: ContextMenu.getDefaultProps(),
+			ContextMenu: ContextMenu.defaultProps,
 		};
 	},
 

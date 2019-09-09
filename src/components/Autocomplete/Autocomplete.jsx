@@ -80,7 +80,7 @@ const Autocomplete = createClass({
 			onChange: _.noop,
 			onSelect: _.noop,
 			onExpand: _.noop,
-			DropMenu: DropMenu.getDefaultProps(),
+			DropMenu: DropMenu.defaultProps,
 		};
 	},
 

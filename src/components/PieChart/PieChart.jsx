@@ -185,7 +185,7 @@ const PieChart = createClass({
 			hasStroke: true,
 			isDonut: false,
 			donutWidth: DONUT_WIDTH,
-			ToolTip: ToolTip.getDefaultProps(),
+			ToolTip: ToolTip.defaultProps,
 
 			isHovering: false,
 			hoveringIndex: 0,
