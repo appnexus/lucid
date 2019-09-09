@@ -24,7 +24,7 @@ export interface IButtonProps extends StandardProps {
 	isActive?: boolean;
 
 	/**
-	 * Set this to \`true\` if you want the Button to only contain an icon.
+	 * Set this to `true` if you want the Button to only contain an icon.
 	 *
 	 * @default false
 	 * */

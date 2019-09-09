@@ -13,7 +13,7 @@ const matchAllRegexp = /^.*$/;
 
 export interface IUnderlineProps  extends StandardProps {
 	/** The first match of the given pattern has the underline style applied to it. */
-	match: string | RegExp;
+	match?: string | RegExp;
 }
 
 const Underline: FC<IUnderlineProps> = ({

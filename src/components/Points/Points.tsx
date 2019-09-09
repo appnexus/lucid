@@ -110,7 +110,7 @@ export interface IPointsProps  extends StandardProps {
 	colorOffset?: number;
 
 	/** Display a stroke around each of the points. */
-	hasStroke: boolean;
+	hasStroke?: boolean;
 }
 
 const Points: FC<IPointsProps> = ({
