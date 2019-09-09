@@ -46,32 +46,32 @@ export interface IPointsProps  extends StandardProps {
 			'rev': COLOR_3,
 			'clicks': '#abc123',
 		} */
-		colorMap?: object;
+	colorMap?: object;
 
-		/** De-normalized data, e.g.
+	/** De-normalized data, e.g.
 
-			[
-				{ x: 'one'   , y: 1 },
-				{ x: 'two'   , y: 2 },
-				{ x: 'three' , y: 2 },
-				{ x: 'four'  , y: 3 },
-				{ x: 'five'  , y: 4 },
-			]
+		[
+			{ x: 'one'   , y: 1 },
+			{ x: 'two'   , y: 2 },
+			{ x: 'three' , y: 2 },
+			{ x: 'four'  , y: 3 },
+			{ x: 'five'  , y: 4 },
+		]
 
-		Or (be sure to set \`yFields\` to \`['y0', 'y1', 'y2', 'y3']\`)
+	Or (be sure to set \`yFields\` to \`['y0', 'y1', 'y2', 'y3']\`)
 
-			[
-				{ x: 'one'   , y0: 1  , y1: 2 , y2: 3 , y3: 5 },
-				{ x: 'two'   , y0: 2  , y1: 3 , y2: 4 , y3: 6 },
-				{ x: 'three' , y0: 2  , y1: 4 , y2: 5 , y3: 6 },
-				{ x: 'four'  , y0: 3  , y1: 6 , y2: 7 , y3: 7 },
-				{ x: 'five'  , y0: 4  , y1: 8 , y2: 9 , y3: 8 },
-				{ x: 'six'   , y0: 20 , y1: 8 , y2: 9 , y3: 1 },
-			] */
-		data: Array<
-			{ [key: string]: number; }
-			& { x: number | string; }
-		>;
+		[
+			{ x: 'one'   , y0: 1  , y1: 2 , y2: 3 , y3: 5 },
+			{ x: 'two'   , y0: 2  , y1: 3 , y2: 4 , y3: 6 },
+			{ x: 'three' , y0: 2  , y1: 4 , y2: 5 , y3: 6 },
+			{ x: 'four'  , y0: 3  , y1: 6 , y2: 7 , y3: 7 },
+			{ x: 'five'  , y0: 4  , y1: 8 , y2: 9 , y3: 8 },
+			{ x: 'six'   , y0: 20 , y1: 8 , y2: 9 , y3: 1 },
+		] */
+	data: Array<
+		{ [key: string]: number; }
+		& { x: number | string; }
+	>;
 
 	/** The scale for the x axis. Must be a d3 scale. Lucid exposes the
 		`lucid.d3Scale` library for use here. */

@@ -60,7 +60,7 @@ const Banner: FC<IBannerProps> = ({
 		event: React.MouseEvent,
 		props: IIconProps
 	}): void => {
-		return onClose({ event, props });
+		onClose({ event, props });
 	}
 
 	let displayedIcon = null;
