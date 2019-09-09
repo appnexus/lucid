@@ -2126,92 +2126,62 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 11.differ
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <Tag
-          hasLightBackground={true}
           isRemovable={true}
-          isTop={false}
           key="0"
-          onRemove={[Function]}
         >
           Tag # 0
         </Tag>
         <Tag
-          hasLightBackground={true}
           isRemovable={true}
-          isTop={false}
           key="1"
-          onRemove={[Function]}
         >
           Tag # 1
         </Tag>
         <Tag
-          hasLightBackground={true}
           isRemovable={true}
-          isTop={false}
           key="2"
-          onRemove={[Function]}
         >
           Tag # 2
         </Tag>
         <Tag
-          hasLightBackground={true}
           isRemovable={true}
-          isTop={false}
           key="3"
-          onRemove={[Function]}
         >
           Tag # 3
         </Tag>
         <Tag
-          hasLightBackground={true}
           isRemovable={true}
-          isTop={false}
           key="4"
-          onRemove={[Function]}
         >
           Tag # 4
         </Tag>
         <Tag
-          hasLightBackground={true}
           isRemovable={true}
-          isTop={false}
           key="5"
-          onRemove={[Function]}
         >
           Tag # 5
         </Tag>
         <Tag
-          hasLightBackground={true}
           isRemovable={true}
-          isTop={false}
           key="6"
-          onRemove={[Function]}
         >
           Tag # 6
         </Tag>
         <Tag
-          hasLightBackground={true}
           isRemovable={true}
-          isTop={false}
           key="7"
-          onRemove={[Function]}
         >
           Tag # 7
         </Tag>
         <Tag
-          hasLightBackground={true}
           isRemovable={true}
-          isTop={false}
           key="8"
-          onRemove={[Function]}
         >
           Tag # 8
         </Tag>
         <Tag
-          hasLightBackground={true}
           isRemovable={true}
-          isTop={false}
           key="9"
-          onRemove={[Function]}
         >
           Tag # 9
         </Tag>
