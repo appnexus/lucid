@@ -20,12 +20,10 @@ RadioButtonLabeledLabel.peek = {
 	`,
 };
 RadioButtonLabeledLabel.propName = 'Label';
-RadioButtonLabeledLabel.propTypes = {
-	description: string,
-	children: any,
-};
 
 export interface IRadioButtonLabeledProps extends IRadioButtonProps {
+	/** Child element whose children are used to identify the purpose of this
+		radio button to the user. */
 	Label?: string | React.ReactNode & { props: IRadioButtonLabeledLabelProps };
 }
 
