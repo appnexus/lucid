@@ -18,24 +18,24 @@ export interface ICheckboxProps extends StandardProps {
 	 * "partially checked" state. This prop takes precedence over
 	 * \`isSelected\`.
 	 */
-	isIndeterminate: boolean;
+	isIndeterminate?: boolean;
 
 	/** Indicates whether the component should appear and act disabled by having
 	 * a "greyed out" palette and ignoring user interactions.
 	 */
-	isDisabled: boolean;
+	isDisabled?: boolean;
 
 	/** Indicates that the component is in the "selected" state when true and in
 	 * the "unselected" state when false. This props is ignored if
 	 * \`isIndeterminate\` is \`true\`.
 	 */
-	isSelected: boolean;
+	isSelected?: boolean;
 
 	/** Called when the user clicks on the component or when they press the space
 	 * key while the component is in focus.  Signature:
 	 * \`(isSelected, { event, props }) => {}\`
 	 */
-	onSelect: (
+	onSelect?: (
 		isSelected: boolean,
 		{
 			event,
@@ -45,9 +45,6 @@ export interface ICheckboxProps extends StandardProps {
 			props: ICheckboxProps;
 		}
 	) => void;
-
-	/** Passed through to the root element. */
-	style?: React.CSSProperties;
 
 	/** A string title that is displayed on hover. */
 	title?: string;
@@ -79,7 +76,7 @@ const Checkbox: FC<ICheckboxProps> = (props): React.ReactElement => {
 	}
 
 	function handleClicked(event: React.MouseEvent<HTMLInputElement>): void {
-		if (!isDisabled) {
+		if (!isDisabled && onSelect) {
 			onSelect(!isSelected, { event, props });
 			if (nativeElement.current) {
 				nativeElement.current.focus();
