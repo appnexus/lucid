@@ -2,6 +2,11 @@
 
 - Nothing at the moment.
 
+## 5.0.0
+
+- #1037 [major] Replace `getDefaultProps` with `defaultProps` on all components in preparation for the move to FCs, ES6 classes, and TypeScript components
+- #1038 [patch] Fix `Banner` wanring close icon color
+
 ## 4.5.0
 
 - #1036 [patch] Fix issues with PR #1030
