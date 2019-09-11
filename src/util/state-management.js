@@ -216,7 +216,7 @@ export function buildHybridComponent(
 			const { initialState } = this.props; //initial state overrides
 			return _.mergeWith(
 				{},
-				omitFunctionPropsDeep(baseComponent.getDefaultProps()),
+				omitFunctionPropsDeep(baseComponent.defaultProps),
 				initialState,
 				safeMerge
 			);

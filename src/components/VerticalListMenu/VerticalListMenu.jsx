@@ -153,7 +153,7 @@ const VerticalListMenu = createClass({
 					const {
 						hasExpander = false,
 						isActionable = true,
-						Collapsible: collapsibleProps = Collapsible.getDefaultProps(),
+						Collapsible: collapsibleProps = Collapsible.defaultProps,
 					} = itemChildProp;
 
 					const itemChildrenAsArray = React.Children.toArray(

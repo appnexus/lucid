@@ -56,7 +56,7 @@ const TextFieldValidated = createClass({
 	},
 
 	getDefaultProps() {
-		return TextField.getDefaultProps();
+		return TextField.defaultProps;
 	},
 
 	focus() {
