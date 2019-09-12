@@ -279,7 +279,7 @@ exports[`SplitVertical render should render expanded & collapsed 1`] = `
               "flexBasis": "calc(50% - 3px)",
               "flexGrow": 0,
               "flexShrink": 0,
-              "marginLeft": null,
+              "marginLeft": undefined,
               "overflow": "auto",
             }
           }
@@ -301,6 +301,7 @@ exports[`SplitVertical render should render expanded & collapsed 1`] = `
             className="lucid-DragCaptureZone lucid-SplitVertical-Divider lucid-SplitVertical-Divider-is-resizeable"
             key="DragCaptureZone"
             onMouseDown={[Function]}
+            onTouchStart={[Function]}
             style={
               Object {
                 "boxSizing": "border-box",
@@ -336,11 +337,11 @@ exports[`SplitVertical render should render expanded & collapsed 2`] = `
 >
   <div
     class="lucid-SplitVertical-inner"
-    style="display: flex;"
+    style="display: flex; transform: translateX(0px);"
   >
     <div
       class="lucid-SplitVertical-LeftPane lucid-SplitVertical-is-secondary"
-      style="overflow: auto;"
+      style="flex-grow: 0; flex-shrink: 0; overflow: auto;"
     />
     <div
       class="lucid-DragCaptureZone lucid-SplitVertical-Divider lucid-SplitVertical-Divider-is-resizeable"
@@ -350,7 +351,7 @@ exports[`SplitVertical render should render expanded & collapsed 2`] = `
     </div>
     <div
       class="lucid-SplitVertical-RightPane"
-      style="margin-right: 0px; overflow: auto;"
+      style="flex-grow: 1; flex-shrink: 1; flex-basis: 0%; margin-right: 0px; overflow: auto;"
     />
   </div>
 </div>

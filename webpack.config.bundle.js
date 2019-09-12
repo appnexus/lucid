@@ -8,7 +8,7 @@ const isProduction = process.env.NODE_ENV === 'production';
 
 module.exports = {
 	mode: isProduction ? 'production' : 'development',
-	entry: path.join(__dirname, 'src', 'index.js'),
+	entry: path.join(__dirname, 'src', 'index.ts'),
 	output: {
 		path: path.join(__dirname, 'dist'),
 		filename: isProduction ? 'lucid.min.js' : 'lucid.js',
@@ -18,7 +18,7 @@ module.exports = {
 	module: {
 		rules: [
 			{
-				test: /\.jsx?$/,
+				test: /\.[jt]sx?$/,
 				loader: 'babel-loader',
 				include: [path.resolve(__dirname, 'src')],
 			},
@@ -34,7 +34,7 @@ module.exports = {
 		],
 	},
 	resolve: {
-		extensions: ['.js', '.jsx'],
+		extensions: ['.js', '.jsx', '.ts', '.tsx'],
 	},
 	devtool: isProduction ? false : 'source-map',
 	externals: {

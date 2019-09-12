@@ -46,9 +46,6 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
     >
       <Button
         className="lucid-SplitButton-Button-primary"
-        hasOnlyIcon={false}
-        isActive={false}
-        isDisabled={false}
         onClick={[Function]}
         type="button"
       >
@@ -59,8 +56,6 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
         hasOnlyIcon={true}
         isActive={false}
         isDisabled={false}
-        onClick={[Function]}
-        type="button"
       >
         <ChevronIcon
           className="lucid-SplitButton-ChevronIcon"
@@ -135,9 +130,6 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
     >
       <Button
         className="lucid-SplitButton-Button-primary"
-        hasOnlyIcon={false}
-        isActive={false}
-        isDisabled={false}
         kind="primary"
         onClick={[Function]}
         type="button"
@@ -150,8 +142,6 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
         isActive={false}
         isDisabled={false}
         kind="primary"
-        onClick={[Function]}
-        type="button"
       >
         <ChevronIcon
           className="lucid-SplitButton-ChevronIcon"
@@ -226,8 +216,6 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 03.di
     >
       <Button
         className="lucid-SplitButton-Button-primary"
-        hasOnlyIcon={false}
-        isActive={false}
         isDisabled={true}
         onClick={[Function]}
         type="button"
@@ -239,8 +227,6 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 03.di
         hasOnlyIcon={true}
         isActive={false}
         isDisabled={false}
-        onClick={[Function]}
-        type="button"
       >
         <ChevronIcon
           className="lucid-SplitButton-ChevronIcon"
@@ -323,9 +309,6 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 04.up
     >
       <Button
         className="lucid-SplitButton-Button-primary"
-        hasOnlyIcon={false}
-        isActive={false}
-        isDisabled={false}
         kind="primary"
         onClick={[Function]}
         type="button"
@@ -338,8 +321,6 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 04.up
         isActive={false}
         isDisabled={false}
         kind="primary"
-        onClick={[Function]}
-        type="button"
       >
         <ChevronIcon
           className="lucid-SplitButton-ChevronIcon"
@@ -423,9 +404,6 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 4.siz
     >
       <Button
         className="lucid-SplitButton-Button-primary"
-        hasOnlyIcon={false}
-        isActive={false}
-        isDisabled={false}
         onClick={[Function]}
         size="large"
         type="button"
@@ -437,9 +415,7 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 4.siz
         hasOnlyIcon={true}
         isActive={false}
         isDisabled={false}
-        onClick={[Function]}
         size="large"
-        type="button"
       >
         <ChevronIcon
           className="lucid-SplitButton-ChevronIcon"
@@ -515,9 +491,6 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 4.siz
     >
       <Button
         className="lucid-SplitButton-Button-primary"
-        hasOnlyIcon={false}
-        isActive={false}
-        isDisabled={false}
         onClick={[Function]}
         size="small"
         type="button"
@@ -529,9 +502,7 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 4.siz
         hasOnlyIcon={true}
         isActive={false}
         isDisabled={false}
-        onClick={[Function]}
         size="small"
-        type="button"
       >
         <ChevronIcon
           className="lucid-SplitButton-ChevronIcon"
@@ -607,9 +578,6 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 4.siz
     >
       <Button
         className="lucid-SplitButton-Button-primary"
-        hasOnlyIcon={false}
-        isActive={false}
-        isDisabled={false}
         onClick={[Function]}
         size="short"
         type="button"
@@ -621,9 +589,7 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 4.siz
         hasOnlyIcon={true}
         isActive={false}
         isDisabled={false}
-        onClick={[Function]}
         size="short"
-        type="button"
       >
         <ChevronIcon
           className="lucid-SplitButton-ChevronIcon"
@@ -655,10 +621,32 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 4.siz
 exports[`SplitButton click handlers primary button should trigger \`handleClick\` 1`] = `
 Object {
   "event": Object {
-    "stopPropagation": [Function],
+    "stopPropagation": [MockFunction] {
+      "calls": Array [
+        Array [],
+      ],
+      "results": Array [
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+      ],
+    },
   },
   "props": Object {
-    "onClick": [Function],
+    "onClick": [MockFunction] {
+      "calls": Array [
+        Array [
+          [Circular],
+        ],
+      ],
+      "results": Array [
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+      ],
+    },
   },
 }
 `;
@@ -667,7 +655,19 @@ exports[`SplitButton click handlers secondary buttons should call the click hand
 Object {
   "event": Object {},
   "props": Object {
-    "onClick": [Function],
+    "onClick": [MockFunction] {
+      "calls": Array [
+        Array [
+          [Circular],
+        ],
+      ],
+      "results": Array [
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+      ],
+    },
   },
 }
 `;
@@ -676,7 +676,19 @@ exports[`SplitButton click handlers secondary buttons should call the click hand
 Object {
   "event": Object {},
   "props": Object {
-    "onClick": [Function],
+    "onClick": [MockFunction] {
+      "calls": Array [
+        Array [
+          [Circular],
+        ],
+      ],
+      "results": Array [
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+      ],
+    },
   },
 }
 `;

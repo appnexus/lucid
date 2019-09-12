@@ -2,13 +2,7 @@
 
 exports[`FileIcon [common] example testing should match snapshot(s) for 1.default 1`] = `
 <Icon
-  aspectRatio="xMidYMid meet"
   className="lucid-FileIcon"
-  color="primary"
-  isClickable={false}
-  isDisabled={false}
-  size={16}
-  viewBox="0 0 16 16"
 >
   <path
     d="M2.5.5v15h11v-11l-4-4z"

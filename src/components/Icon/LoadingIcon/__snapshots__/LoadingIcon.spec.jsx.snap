@@ -2,12 +2,7 @@
 
 exports[`LoadingIcon [common] example testing should match snapshot(s) for 1.default 1`] = `
 <Icon
-  aspectRatio="xMidYMid meet"
   className="lucid-LoadingIcon"
-  color="primary"
-  isClickable={false}
-  isDisabled={false}
-  size={16}
   style={
     Object {
       "animationDuration": "1.25s",
@@ -44,12 +39,7 @@ exports[`LoadingIcon [common] example testing should match snapshot(s) for 1.def
 
 exports[`LoadingIcon [common] example testing should match snapshot(s) for 1.default 2`] = `
 <Icon
-  aspectRatio="xMidYMid meet"
   className="lucid-LoadingIcon"
-  color="primary"
-  isClickable={false}
-  isDisabled={false}
-  size={16}
   style={
     Object {
       "animationDuration": "4s",
@@ -86,12 +76,7 @@ exports[`LoadingIcon [common] example testing should match snapshot(s) for 1.def
 
 exports[`LoadingIcon [common] example testing should match snapshot(s) for 1.default 3`] = `
 <Icon
-  aspectRatio="xMidYMid meet"
   className="lucid-LoadingIcon"
-  color="primary"
-  isClickable={false}
-  isDisabled={false}
-  size={16}
   style={
     Object {
       "animationDuration": "0.75s",

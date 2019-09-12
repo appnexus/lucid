@@ -8,9 +8,6 @@ exports[`LoadingIndicator [common] example testing should match snapshot(s) for 
   overlayKind="dark"
 >
   <Button
-    hasOnlyIcon={false}
-    isActive={false}
-    isDisabled={false}
     key=".0"
     onClick={[Function]}
     style={
@@ -18,17 +15,12 @@ exports[`LoadingIndicator [common] example testing should match snapshot(s) for 
         "margin": 10,
       }
     }
-    type="button"
   >
     Get more data
   </Button>
   <Button
-    hasOnlyIcon={false}
-    isActive={false}
-    isDisabled={false}
     key=".1"
     onClick={[Function]}
-    type="button"
   >
     Switch overlay color
   </Button>
@@ -259,13 +251,7 @@ exports[`LoadingIndicator [common] example testing should match snapshot(s) for 
     >
       <LoadingMessage.Icon>
         <LoadingIcon
-          aspectRatio="xMidYMid meet"
-          color="primary"
-          isClickable={false}
-          isDisabled={false}
-          size={16}
           speed="slow"
-          viewBox="0 0 16 16"
         />
       </LoadingMessage.Icon>
       <LoadingMessage.Title>
@@ -356,13 +342,7 @@ exports[`LoadingIndicator [common] example testing should match snapshot(s) for 
       Body="Please wait"
       Icon={
         <LoadingIcon
-          aspectRatio="xMidYMid meet"
-          color="primary"
-          isClickable={false}
-          isDisabled={false}
-          size={16}
           speed="fast"
-          viewBox="0 0 16 16"
         />
       }
       Title="Enhancing..."

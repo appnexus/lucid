@@ -327,7 +327,9 @@ exports[`CheckboxLabeled [common] example testing should match snapshot(s) for l
   <div
     className="lucid-CheckboxLabeled-label"
   >
-    <span>
+    <span
+      key="1"
+    >
       HTML element in an array
     </span>
   </div>

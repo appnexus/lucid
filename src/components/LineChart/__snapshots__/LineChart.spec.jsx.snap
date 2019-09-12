@@ -13,28 +13,23 @@ exports[`LineChart [common] example testing should match snapshot(s) for 01.basi
     transform="translate(80, 335)"
   >
     <Axis
-      innerTickSize={6}
       orient="bottom"
       outerTickSize={0}
       scale={[Function]}
       textOrientation="horizontal"
       tickCount={null}
       tickFormat={[Function]}
-      tickPadding={3}
     />
   </g>
   <g
     transform="translate(80, 10)"
   >
     <Axis
-      innerTickSize={6}
       orient="left"
-      outerTickSize={6}
       scale={[Function]}
       textOrientation="horizontal"
       tickCount={null}
       tickFormat={[Function]}
-      tickPadding={3}
     />
   </g>
   <g
@@ -110,7 +105,6 @@ exports[`LineChart [common] example testing should match snapshot(s) for 01.basi
           },
         ]
       }
-      hasStroke={true}
       isStacked={false}
       palette={
         Array [
@@ -161,28 +155,23 @@ exports[`LineChart [common] example testing should match snapshot(s) for 03.mult
     transform="translate(80, 335)"
   >
     <Axis
-      innerTickSize={6}
       orient="bottom"
       outerTickSize={0}
       scale={[Function]}
       textOrientation="horizontal"
       tickCount={null}
       tickFormat={[Function]}
-      tickPadding={3}
     />
   </g>
   <g
     transform="translate(80, 10)"
   >
     <Axis
-      innerTickSize={6}
       orient="left"
-      outerTickSize={6}
       scale={[Function]}
       textOrientation="horizontal"
       tickCount={null}
       tickFormat={[Function]}
-      tickPadding={3}
     />
   </g>
   <g
@@ -587,7 +576,6 @@ exports[`LineChart [common] example testing should match snapshot(s) for 03.mult
           },
         ]
       }
-      hasStroke={true}
       isStacked={false}
       palette={
         Array [
@@ -640,28 +628,23 @@ exports[`LineChart [common] example testing should match snapshot(s) for 04.mult
     transform="translate(80, 335)"
   >
     <Axis
-      innerTickSize={6}
       orient="bottom"
       outerTickSize={0}
       scale={[Function]}
       textOrientation="horizontal"
       tickCount={null}
       tickFormat={[Function]}
-      tickPadding={3}
     />
   </g>
   <g
     transform="translate(80, 10)"
   >
     <Axis
-      innerTickSize={6}
       orient="left"
-      outerTickSize={6}
       scale={[Function]}
       textOrientation="horizontal"
       tickCount={null}
       tickFormat={[Function]}
-      tickPadding={3}
     />
   </g>
   <g
@@ -764,7 +747,6 @@ exports[`LineChart [common] example testing should match snapshot(s) for 04.mult
           },
         ]
       }
-      hasStroke={true}
       isStacked={false}
       palette={
         Array [
@@ -815,28 +797,23 @@ exports[`LineChart [common] example testing should match snapshot(s) for 05.stac
     transform="translate(80, 335)"
   >
     <Axis
-      innerTickSize={6}
       orient="bottom"
       outerTickSize={0}
       scale={[Function]}
       textOrientation="horizontal"
       tickCount={null}
       tickFormat={[Function]}
-      tickPadding={3}
     />
   </g>
   <g
     transform="translate(80, 10)"
   >
     <Axis
-      innerTickSize={6}
       orient="left"
-      outerTickSize={6}
       scale={[Function]}
       textOrientation="horizontal"
       tickCount={null}
       tickFormat={[Function]}
-      tickPadding={3}
     />
   </g>
   <g
@@ -1004,7 +981,6 @@ exports[`LineChart [common] example testing should match snapshot(s) for 05.stac
           },
         ]
       }
-      hasStroke={true}
       isStacked={true}
       palette={
         Array [
@@ -1060,28 +1036,23 @@ exports[`LineChart [common] example testing should match snapshot(s) for 06.dual
     transform="translate(80, 335)"
   >
     <Axis
-      innerTickSize={6}
       orient="bottom"
       outerTickSize={0}
       scale={[Function]}
       textOrientation="horizontal"
       tickCount={null}
       tickFormat={[Function]}
-      tickPadding={3}
     />
   </g>
   <g
     transform="translate(80, 10)"
   >
     <Axis
-      innerTickSize={6}
       orient="left"
-      outerTickSize={6}
       scale={[Function]}
       textOrientation="horizontal"
       tickCount={null}
       tickFormat={[Function]}
-      tickPadding={3}
     />
   </g>
   <g
@@ -1099,14 +1070,10 @@ exports[`LineChart [common] example testing should match snapshot(s) for 06.dual
     transform="translate(920, 10)"
   >
     <Axis
-      innerTickSize={6}
       orient="right"
-      outerTickSize={6}
       scale={[Function]}
-      textOrientation="horizontal"
       tickCount={null}
       tickFormat={[Function]}
-      tickPadding={3}
     />
   </g>
   <g
@@ -1213,7 +1180,6 @@ exports[`LineChart [common] example testing should match snapshot(s) for 06.dual
           },
         ]
       }
-      hasStroke={true}
       isStacked={false}
       palette={
         Array [
@@ -1330,7 +1296,6 @@ exports[`LineChart [common] example testing should match snapshot(s) for 06.dual
           },
         ]
       }
-      hasStroke={true}
       isStacked={false}
       palette={
         Array [
@@ -1381,14 +1346,12 @@ exports[`LineChart [common] example testing should match snapshot(s) for 07.all-
     transform="translate(80, 335)"
   >
     <Axis
-      innerTickSize={6}
       orient="bottom"
       outerTickSize={0}
       scale={[Function]}
       textOrientation="horizontal"
       tickCount={5}
       tickFormat={[Function]}
-      tickPadding={3}
     />
   </g>
   <g
@@ -1406,14 +1369,11 @@ exports[`LineChart [common] example testing should match snapshot(s) for 07.all-
     transform="translate(80, 10)"
   >
     <Axis
-      innerTickSize={6}
       orient="left"
-      outerTickSize={6}
       scale={[Function]}
       textOrientation="horizontal"
       tickCount={5}
       tickFormat={[Function]}
-      tickPadding={3}
     />
   </g>
   <g
@@ -1431,14 +1391,10 @@ exports[`LineChart [common] example testing should match snapshot(s) for 07.all-
     transform="translate(920, 10)"
   >
     <Axis
-      innerTickSize={6}
       orient="right"
-      outerTickSize={6}
       scale={[Function]}
-      textOrientation="horizontal"
       tickCount={5}
       tickFormat={[Function]}
-      tickPadding={3}
     />
   </g>
   <g
@@ -1563,7 +1519,6 @@ exports[`LineChart [common] example testing should match snapshot(s) for 07.all-
           },
         ]
       }
-      hasStroke={true}
       isStacked={false}
       palette={
         Array [
@@ -1681,28 +1636,23 @@ exports[`LineChart [common] example testing should match snapshot(s) for 08.stac
     transform="translate(80, 335)"
   >
     <Axis
-      innerTickSize={6}
       orient="bottom"
       outerTickSize={0}
       scale={[Function]}
       textOrientation="horizontal"
       tickCount={null}
       tickFormat={[Function]}
-      tickPadding={3}
     />
   </g>
   <g
     transform="translate(80, 10)"
   >
     <Axis
-      innerTickSize={6}
       orient="left"
-      outerTickSize={6}
       scale={[Function]}
       textOrientation="horizontal"
       tickCount={null}
       tickFormat={[Function]}
-      tickPadding={3}
     />
   </g>
   <g
@@ -1778,7 +1728,6 @@ exports[`LineChart [common] example testing should match snapshot(s) for 08.stac
           },
         ]
       }
-      hasStroke={true}
       isStacked={true}
       palette={
         Array [
@@ -1829,28 +1778,23 @@ exports[`LineChart [common] example testing should match snapshot(s) for 09.stac
     transform="translate(80, 335)"
   >
     <Axis
-      innerTickSize={6}
       orient="bottom"
       outerTickSize={0}
       scale={[Function]}
       textOrientation="horizontal"
       tickCount={null}
       tickFormat={[Function]}
-      tickPadding={3}
     />
   </g>
   <g
     transform="translate(80, 10)"
   >
     <Axis
-      innerTickSize={6}
       orient="left"
-      outerTickSize={6}
       scale={[Function]}
       textOrientation="horizontal"
       tickCount={null}
       tickFormat={[Function]}
-      tickPadding={3}
     />
   </g>
   <g
@@ -1973,28 +1917,23 @@ exports[`LineChart [common] example testing should match snapshot(s) for 10.abbr
     transform="translate(80, 335)"
   >
     <Axis
-      innerTickSize={6}
       orient="bottom"
       outerTickSize={0}
       scale={[Function]}
       textOrientation="horizontal"
       tickCount={null}
       tickFormat={[Function]}
-      tickPadding={3}
     />
   </g>
   <g
     transform="translate(80, 10)"
   >
     <Axis
-      innerTickSize={6}
       orient="left"
-      outerTickSize={6}
       scale={[Function]}
       textOrientation="horizontal"
       tickCount={null}
       tickFormat={[Function]}
-      tickPadding={3}
     />
   </g>
   <g
@@ -2078,7 +2017,6 @@ exports[`LineChart [common] example testing should match snapshot(s) for 10.abbr
           },
         ]
       }
-      hasStroke={true}
       isStacked={false}
       palette={
         Array [
@@ -2129,14 +2067,12 @@ exports[`LineChart [common] example testing should match snapshot(s) for 11.colo
     transform="translate(80, 335)"
   >
     <Axis
-      innerTickSize={6}
       orient="bottom"
       outerTickSize={0}
       scale={[Function]}
       textOrientation="horizontal"
       tickCount={null}
       tickFormat={[Function]}
-      tickPadding={3}
     />
     <ContextMenu
       alignment="center"
@@ -2191,28 +2127,21 @@ exports[`LineChart [common] example testing should match snapshot(s) for 11.colo
     transform="translate(80, 10)"
   >
     <Axis
-      innerTickSize={6}
       orient="left"
-      outerTickSize={6}
       scale={[Function]}
       textOrientation="horizontal"
       tickCount={null}
       tickFormat={[Function]}
-      tickPadding={3}
     />
   </g>
   <g
     transform="translate(920, 10)"
   >
     <Axis
-      innerTickSize={6}
       orient="right"
-      outerTickSize={6}
       scale={[Function]}
-      textOrientation="horizontal"
       tickCount={null}
       tickFormat={[Function]}
-      tickPadding={3}
     />
   </g>
   <g
@@ -2406,7 +2335,6 @@ exports[`LineChart [common] example testing should match snapshot(s) for 11.colo
           },
         ]
       }
-      hasStroke={true}
       isStacked={false}
       palette={
         Array [
@@ -2621,7 +2549,6 @@ exports[`LineChart [common] example testing should match snapshot(s) for 11.colo
           },
         ]
       }
-      hasStroke={true}
       isStacked={false}
       palette={
         Array [
@@ -2673,27 +2600,17 @@ exports[`LineChart [common] example testing should match snapshot(s) for 12.empt
       transform="translate(80, 10)"
     >
       <Axis
-        innerTickSize={6}
         orient="left"
-        outerTickSize={6}
         scale={[Function]}
-        textOrientation="horizontal"
-        tickCount={null}
-        tickPadding={3}
       />
     </g>
     <g
       transform="translate(80, 335)"
     >
       <Axis
-        innerTickSize={6}
         orient="bottom"
-        outerTickSize={6}
         scale={[Function]}
-        textOrientation="horizontal"
-        tickCount={null}
         tickFormat={[Function]}
-        tickPadding={3}
       />
     </g>
   </svg>
@@ -2725,27 +2642,17 @@ exports[`LineChart [common] example testing should match snapshot(s) for 13.empt
       transform="translate(80, 10)"
     >
       <Axis
-        innerTickSize={6}
         orient="left"
-        outerTickSize={6}
         scale={[Function]}
-        textOrientation="horizontal"
-        tickCount={null}
-        tickPadding={3}
       />
     </g>
     <g
       transform="translate(80, 335)"
     >
       <Axis
-        innerTickSize={6}
         orient="bottom"
-        outerTickSize={6}
         scale={[Function]}
-        textOrientation="horizontal"
-        tickCount={null}
         tickFormat={[Function]}
-        tickPadding={3}
       />
     </g>
   </svg>
@@ -2766,13 +2673,7 @@ exports[`LineChart [common] example testing should match snapshot(s) for 14.empt
       }
     }
   >
-    <Button
-      hasOnlyIcon={false}
-      isActive={false}
-      isDisabled={false}
-      onClick={[Function]}
-      type="button"
-    >
+    <Button>
       Action
     </Button>
   </EmptyStateWrapper.Body>
@@ -2785,27 +2686,17 @@ exports[`LineChart [common] example testing should match snapshot(s) for 14.empt
       transform="translate(80, 10)"
     >
       <Axis
-        innerTickSize={6}
         orient="left"
-        outerTickSize={6}
         scale={[Function]}
-        textOrientation="horizontal"
-        tickCount={null}
-        tickPadding={3}
       />
     </g>
     <g
       transform="translate(80, 335)"
     >
       <Axis
-        innerTickSize={6}
         orient="bottom"
-        outerTickSize={6}
         scale={[Function]}
-        textOrientation="horizontal"
-        tickCount={null}
         tickFormat={[Function]}
-        tickPadding={3}
       />
     </g>
   </svg>
@@ -2827,27 +2718,17 @@ exports[`LineChart [common] example testing should match snapshot(s) for 15.load
       transform="translate(80, 10)"
     >
       <Axis
-        innerTickSize={6}
         orient="left"
-        outerTickSize={6}
         scale={[Function]}
-        textOrientation="horizontal"
-        tickCount={null}
-        tickPadding={3}
       />
     </g>
     <g
       transform="translate(80, 335)"
     >
       <Axis
-        innerTickSize={6}
         orient="bottom"
-        outerTickSize={6}
         scale={[Function]}
-        textOrientation="horizontal"
-        tickCount={null}
         tickFormat={[Function]}
-        tickPadding={3}
       />
     </g>
   </svg>
@@ -2867,14 +2748,12 @@ exports[`LineChart [common] example testing should match snapshot(s) for 16.fine
     transform="translate(80, 335)"
   >
     <Axis
-      innerTickSize={6}
       orient="bottom"
       outerTickSize={0}
       scale={[Function]}
       textOrientation="horizontal"
       tickCount={null}
       tickFormat={[Function]}
-      tickPadding={3}
       ticks={
         Array [
           2018-01-01T08:00:00.000Z,
@@ -2888,14 +2767,11 @@ exports[`LineChart [common] example testing should match snapshot(s) for 16.fine
     transform="translate(80, 10)"
   >
     <Axis
-      innerTickSize={6}
       orient="left"
-      outerTickSize={6}
       scale={[Function]}
       textOrientation="horizontal"
       tickCount={null}
       tickFormat={[Function]}
-      tickPadding={3}
     />
   </g>
   <g
@@ -2963,7 +2839,6 @@ exports[`LineChart [common] example testing should match snapshot(s) for 16.fine
           },
         ]
       }
-      hasStroke={true}
       isStacked={false}
       palette={
         Array [

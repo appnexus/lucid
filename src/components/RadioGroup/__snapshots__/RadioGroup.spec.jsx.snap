@@ -11,7 +11,6 @@ exports[`RadioGroup [common] example testing should match snapshot(s) for defaul
       }
     }
     callbackId={0}
-    isDisabled={false}
     isSelected={true}
     key="0"
     name="1-lucid-RadioGroup-3"
@@ -33,7 +32,6 @@ exports[`RadioGroup [common] example testing should match snapshot(s) for defaul
       }
     }
     callbackId={1}
-    isDisabled={false}
     isSelected={false}
     key="1"
     name="1-lucid-RadioGroup-3"
@@ -55,7 +53,6 @@ exports[`RadioGroup [common] example testing should match snapshot(s) for defaul
       }
     }
     callbackId={2}
-    isDisabled={false}
     isSelected={false}
     key="2"
     name="1-lucid-RadioGroup-3"
@@ -77,7 +74,6 @@ exports[`RadioGroup [common] example testing should match snapshot(s) for defaul
       }
     }
     callbackId={3}
-    isDisabled={false}
     isSelected={false}
     key="3"
     name="1-lucid-RadioGroup-3"
@@ -99,7 +95,6 @@ exports[`RadioGroup [common] example testing should match snapshot(s) for defaul
       }
     }
     callbackId={4}
-    isDisabled={false}
     isSelected={false}
     key="4"
     name="1-lucid-RadioGroup-3"
@@ -245,7 +240,6 @@ exports[`RadioGroup [common] example testing should match snapshot(s) for nested
       }
     }
     callbackId={0}
-    isDisabled={false}
     isSelected={true}
     key="0"
     name="1-lucid-RadioGroup-3"
@@ -266,20 +260,12 @@ exports[`RadioGroup [common] example testing should match snapshot(s) for nested
         "children": Array [
           "Simon",
           <RadioGroup>
-            <RadioButton
-              isDisabled={false}
-              isSelected={false}
-              onSelect={[Function]}
-            >
+            <RadioButton>
               <RadioGroup.Label>
                 1
               </RadioGroup.Label>
             </RadioButton>
-            <RadioButton
-              isDisabled={false}
-              isSelected={false}
-              onSelect={[Function]}
-            >
+            <RadioButton>
               <RadioGroup.Label>
                 2
               </RadioGroup.Label>
@@ -289,7 +275,6 @@ exports[`RadioGroup [common] example testing should match snapshot(s) for nested
       }
     }
     callbackId={1}
-    isDisabled={false}
     isSelected={false}
     key="1"
     name="1-lucid-RadioGroup-3"
@@ -303,20 +288,12 @@ exports[`RadioGroup [common] example testing should match snapshot(s) for nested
     <RadioGroup.Label>
       Simon
       <RadioGroup>
-        <RadioButton
-          isDisabled={false}
-          isSelected={false}
-          onSelect={[Function]}
-        >
+        <RadioButton>
           <RadioGroup.Label>
             1
           </RadioGroup.Label>
         </RadioButton>
-        <RadioButton
-          isDisabled={false}
-          isSelected={false}
-          onSelect={[Function]}
-        >
+        <RadioButton>
           <RadioGroup.Label>
             2
           </RadioGroup.Label>
@@ -338,7 +315,6 @@ exports[`RadioGroup [common] example testing should match snapshot(s) for nested
       }
     }
     callbackId={2}
-    isDisabled={false}
     isSelected={false}
     key="2"
     name="1-lucid-RadioGroup-3"
@@ -380,7 +356,6 @@ exports[`RadioGroup [common] example testing should match snapshot(s) for select
       }
     }
     callbackId={0}
-    isDisabled={false}
     isSelected={false}
     key="0"
     name="name"
@@ -402,7 +377,6 @@ exports[`RadioGroup [common] example testing should match snapshot(s) for select
       }
     }
     callbackId={1}
-    isDisabled={false}
     isSelected={false}
     key="1"
     name="name"
@@ -424,7 +398,6 @@ exports[`RadioGroup [common] example testing should match snapshot(s) for select
       }
     }
     callbackId={2}
-    isDisabled={false}
     isSelected={false}
     key="2"
     name="name"
@@ -446,7 +419,6 @@ exports[`RadioGroup [common] example testing should match snapshot(s) for select
       }
     }
     callbackId={3}
-    isDisabled={false}
     isSelected={true}
     key="3"
     name="name"
@@ -468,7 +440,6 @@ exports[`RadioGroup [common] example testing should match snapshot(s) for select
       }
     }
     callbackId={4}
-    isDisabled={false}
     isSelected={false}
     key="4"
     name="name"
@@ -490,7 +461,6 @@ exports[`RadioGroup [common] example testing should match snapshot(s) for select
       }
     }
     callbackId={5}
-    isDisabled={false}
     isSelected={false}
     key="5"
     name="name"
@@ -525,7 +495,6 @@ exports[`RadioGroup [common] example testing should match snapshot(s) for select
       }
     }
     callbackId={0}
-    isDisabled={false}
     isSelected={false}
     key="0"
     name="name"
@@ -547,7 +516,6 @@ exports[`RadioGroup [common] example testing should match snapshot(s) for select
       }
     }
     callbackId={1}
-    isDisabled={false}
     isSelected={false}
     key="1"
     name="name"
@@ -569,7 +537,6 @@ exports[`RadioGroup [common] example testing should match snapshot(s) for select
       }
     }
     callbackId={2}
-    isDisabled={false}
     isSelected={true}
     key="2"
     name="name"
@@ -591,7 +558,6 @@ exports[`RadioGroup [common] example testing should match snapshot(s) for select
       }
     }
     callbackId={3}
-    isDisabled={false}
     isSelected={false}
     key="3"
     name="name"
@@ -613,7 +579,6 @@ exports[`RadioGroup [common] example testing should match snapshot(s) for select
       }
     }
     callbackId={4}
-    isDisabled={false}
     isSelected={false}
     key="4"
     name="name"
@@ -642,7 +607,6 @@ exports[`RadioGroup [common] example testing should match snapshot(s) for statef
       }
     }
     callbackId={0}
-    isDisabled={false}
     isSelected={true}
     key="0"
     name="1-lucid-RadioGroup-3"
@@ -664,7 +628,6 @@ exports[`RadioGroup [common] example testing should match snapshot(s) for statef
       }
     }
     callbackId={1}
-    isDisabled={false}
     isSelected={false}
     key="1"
     name="1-lucid-RadioGroup-3"
@@ -686,7 +649,6 @@ exports[`RadioGroup [common] example testing should match snapshot(s) for statef
       }
     }
     callbackId={2}
-    isDisabled={false}
     isSelected={false}
     key="2"
     name="1-lucid-RadioGroup-3"

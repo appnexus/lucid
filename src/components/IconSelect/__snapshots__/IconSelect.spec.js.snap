@@ -17,9 +17,7 @@ exports[`IconSelect [common] example testing should match snapshot(s) for 1.sele
       <RadioButtonLabeled
         Label="Foo Bar"
         className="lucid-IconSelect-Item-radio"
-        isDisabled={false}
         isSelected={false}
-        onSelect={[Function]}
       />
     </figcaption>
   </figure>
@@ -36,9 +34,7 @@ exports[`IconSelect [common] example testing should match snapshot(s) for 1.sele
       <RadioButtonLabeled
         Label="Bax Tar"
         className="lucid-IconSelect-Item-radio"
-        isDisabled={false}
         isSelected={true}
-        onSelect={[Function]}
       />
     </figcaption>
   </figure>
@@ -146,7 +142,6 @@ exports[`IconSelect [common] example testing should match snapshot(s) for 4.disa
   <figure
     className="lucid-IconSelect-Item lucid-IconSelect-Item-is-disabled lucid-IconSelect-Item-multi"
     data-id="item1"
-    disabled={true}
     key="iconselectitem_0"
     onClick={[Function]}
   >
@@ -167,7 +162,6 @@ exports[`IconSelect [common] example testing should match snapshot(s) for 4.disa
   <figure
     className="lucid-IconSelect-Item lucid-IconSelect-Item-is-disabled lucid-IconSelect-Item-is-selected lucid-IconSelect-Item-multi"
     data-id="item2"
-    disabled={true}
     key="iconselectitem_1"
     onClick={[Function]}
   >

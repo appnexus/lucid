@@ -27,11 +27,9 @@ exports[`DraggableList [common] example testing should match snapshot(s) for 1.b
         className="lucid-DraggableList-Item-handle"
       >
         <DotsIcon
-          color="primary"
           size={8}
         />
         <DotsIcon
-          color="primary"
           size={8}
         />
       </span>
@@ -59,11 +57,9 @@ exports[`DraggableList [common] example testing should match snapshot(s) for 1.b
         className="lucid-DraggableList-Item-handle"
       >
         <DotsIcon
-          color="primary"
           size={8}
         />
         <DotsIcon
-          color="primary"
           size={8}
         />
       </span>
@@ -91,11 +87,9 @@ exports[`DraggableList [common] example testing should match snapshot(s) for 1.b
         className="lucid-DraggableList-Item-handle"
       >
         <DotsIcon
-          color="primary"
           size={8}
         />
         <DotsIcon
-          color="primary"
           size={8}
         />
       </span>
@@ -123,11 +117,9 @@ exports[`DraggableList [common] example testing should match snapshot(s) for 1.b
         className="lucid-DraggableList-Item-handle"
       >
         <DotsIcon
-          color="primary"
           size={8}
         />
         <DotsIcon
-          color="primary"
           size={8}
         />
       </span>
@@ -155,11 +147,9 @@ exports[`DraggableList [common] example testing should match snapshot(s) for 1.b
         className="lucid-DraggableList-Item-handle"
       >
         <DotsIcon
-          color="primary"
           size={8}
         />
         <DotsIcon
-          color="primary"
           size={8}
         />
       </span>
@@ -332,11 +322,9 @@ exports[`DraggableList [common] example testing should match snapshot(s) for 3.w
         className="lucid-DraggableList-Item-handle"
       >
         <DotsIcon
-          color="primary"
           size={8}
         />
         <DotsIcon
-          color="primary"
           size={8}
         />
       </span>
@@ -380,11 +368,9 @@ exports[`DraggableList [common] example testing should match snapshot(s) for 3.w
         className="lucid-DraggableList-Item-handle"
       >
         <DotsIcon
-          color="primary"
           size={8}
         />
         <DotsIcon
-          color="primary"
           size={8}
         />
       </span>
@@ -428,11 +414,9 @@ exports[`DraggableList [common] example testing should match snapshot(s) for 3.w
         className="lucid-DraggableList-Item-handle"
       >
         <DotsIcon
-          color="primary"
           size={8}
         />
         <DotsIcon
-          color="primary"
           size={8}
         />
       </span>
@@ -476,11 +460,9 @@ exports[`DraggableList [common] example testing should match snapshot(s) for 3.w
         className="lucid-DraggableList-Item-handle"
       >
         <DotsIcon
-          color="primary"
           size={8}
         />
         <DotsIcon
-          color="primary"
           size={8}
         />
       </span>
@@ -524,11 +506,9 @@ exports[`DraggableList [common] example testing should match snapshot(s) for 3.w
         className="lucid-DraggableList-Item-handle"
       >
         <DotsIcon
-          color="primary"
           size={8}
         />
         <DotsIcon
-          color="primary"
           size={8}
         />
       </span>

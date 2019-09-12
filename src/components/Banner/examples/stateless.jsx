@@ -62,7 +62,7 @@ export default createClass({
 
 				<div>
 					<Banner kind='warning' style={{ marginBottom: 8 }}>
-						Warning <a href='#'>Don't Click Here</a>
+						Warning <a href='#'>Don&apos;t Click Here</a>
 					</Banner>
 					<Banner
 						kind='warning'

@@ -3,9 +3,7 @@
 exports[`ExpanderPanel [common] example testing should match snapshot(s) for 1.basic 1`] = `
 <Panel
   className="lucid-ExpanderPanel lucid-ExpanderPanel-is-collapsed"
-  hasMargin={true}
   isGutterless={false}
-  isScrollable={true}
 >
   <Panel.Header
     className="lucid-ExpanderPanel-header"
@@ -14,11 +12,7 @@ exports[`ExpanderPanel [common] example testing should match snapshot(s) for 1.b
     <Button
       className="lucid-ExpanderPanel-icon"
       hasOnlyIcon={true}
-      isActive={false}
-      isDisabled={false}
       kind="invisible"
-      onClick={[Function]}
-      type="button"
     >
       <ChevronIcon
         direction="down"
@@ -454,9 +448,7 @@ exports[`ExpanderPanel [common] example testing should match snapshot(s) for 1.b
 exports[`ExpanderPanel [common] example testing should match snapshot(s) for 2.no-padding 1`] = `
 <Panel
   className="lucid-ExpanderPanel lucid-ExpanderPanel-is-collapsed"
-  hasMargin={true}
   isGutterless={true}
-  isScrollable={true}
 >
   <Panel.Header
     className="lucid-ExpanderPanel-header"
@@ -465,11 +457,7 @@ exports[`ExpanderPanel [common] example testing should match snapshot(s) for 2.n
     <Button
       className="lucid-ExpanderPanel-icon"
       hasOnlyIcon={true}
-      isActive={false}
-      isDisabled={false}
       kind="invisible"
-      onClick={[Function]}
-      type="button"
     >
       <ChevronIcon
         direction="down"

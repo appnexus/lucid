@@ -29,9 +29,11 @@ export default createClass({
 					/>
 					<CheckboxLabeled
 						Label={[
-							<span>HTML element in an array</span>,
-							<span>Again only the first value in the array is used</span>,
-							<span>The rest should not be rendered</span>,
+							<span key='1'>HTML element in an array</span>,
+							<span key='2'>
+								Again only the first value in the array is used
+							</span>,
+							<span key='3'>The rest should not be rendered</span>,
 						]}
 						style={style}
 					/>

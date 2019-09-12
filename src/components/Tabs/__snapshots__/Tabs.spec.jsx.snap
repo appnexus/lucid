@@ -158,13 +158,7 @@ exports[`Tabs [common] example testing should match snapshot(s) for 03-complex-t
         Array [
           "One",
           <br />,
-          <Button
-            hasOnlyIcon={false}
-            isActive={false}
-            isDisabled={false}
-            onClick={[Function]}
-            type="button"
-          >
+          <Button>
             Button
           </Button>,
         ]
@@ -186,13 +180,7 @@ exports[`Tabs [common] example testing should match snapshot(s) for 03-complex-t
       <Tabs.Title>
         One
         <br />
-        <Button
-          hasOnlyIcon={false}
-          isActive={false}
-          isDisabled={false}
-          onClick={[Function]}
-          type="button"
-        >
+        <Button>
           Button
         </Button>
       </Tabs.Title>
@@ -234,29 +222,17 @@ exports[`Tabs [common] example testing should match snapshot(s) for 03-complex-t
         <RadioGroup
           selectedIndex={1}
         >
-          <RadioButton
-            isDisabled={false}
-            isSelected={false}
-            onSelect={[Function]}
-          >
+          <RadioButton>
             <RadioGroup.Label>
               Captain America
             </RadioGroup.Label>
           </RadioButton>
-          <RadioButton
-            isDisabled={false}
-            isSelected={false}
-            onSelect={[Function]}
-          >
+          <RadioButton>
             <RadioGroup.Label>
               Iron Man
             </RadioGroup.Label>
           </RadioButton>
-          <RadioButton
-            isDisabled={false}
-            isSelected={false}
-            onSelect={[Function]}
-          >
+          <RadioButton>
             <RadioGroup.Label>
               Thor
             </RadioGroup.Label>
@@ -281,29 +257,17 @@ exports[`Tabs [common] example testing should match snapshot(s) for 03-complex-t
         <RadioGroup
           selectedIndex={1}
         >
-          <RadioButton
-            isDisabled={false}
-            isSelected={false}
-            onSelect={[Function]}
-          >
+          <RadioButton>
             <RadioGroup.Label>
               Captain America
             </RadioGroup.Label>
           </RadioButton>
-          <RadioButton
-            isDisabled={false}
-            isSelected={false}
-            onSelect={[Function]}
-          >
+          <RadioButton>
             <RadioGroup.Label>
               Iron Man
             </RadioGroup.Label>
           </RadioButton>
-          <RadioButton
-            isDisabled={false}
-            isSelected={false}
-            onSelect={[Function]}
-          >
+          <RadioButton>
             <RadioGroup.Label>
               Thor
             </RadioGroup.Label>
@@ -341,13 +305,7 @@ exports[`Tabs [common] example testing should match snapshot(s) for 03-complex-t
     <Tabs.Title>
       One
       <br />
-      <Button
-        hasOnlyIcon={false}
-        isActive={false}
-        isDisabled={false}
-        onClick={[Function]}
-        type="button"
-      >
+      <Button>
         Button
       </Button>
     </Tabs.Title>

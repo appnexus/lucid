@@ -352,13 +352,6 @@ describe('Points', () => {
 					wrapper
 						.find(Point)
 						.at(1)
-						.prop('x'),
-					0
-				);
-				assert.equal(
-					wrapper
-						.find(Point)
-						.at(1)
 						.prop('y'),
 					500
 				);

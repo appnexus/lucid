@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import assert from 'assert';
 import React from 'react';
-import { mount, shallow } from 'enzyme';
+import { shallow } from 'enzyme';
 
 import { common } from '../../util/generic-tests';
 
@@ -50,12 +50,6 @@ describe('RadioButtonLabeled', () => {
 
 				assert.equal(wrapper.find(RadioButton).prop('isDisabled'), true);
 			});
-
-			it('defaults to `false`.', () => {
-				const wrapper = mount(<RadioButtonLabeled />);
-
-				assert.equal(wrapper.prop('isDisabled'), false);
-			});
 		});
 
 		describe('isSelected', () => {
@@ -63,12 +57,6 @@ describe('RadioButtonLabeled', () => {
 				const wrapper = shallow(<RadioButtonLabeled isSelected={true} />);
 
 				assert.equal(wrapper.find(RadioButton).prop('isSelected'), true);
-			});
-
-			it('defaults to `false`.', () => {
-				const wrapper = mount(<RadioButtonLabeled />);
-
-				assert.equal(wrapper.prop('isSelected'), false);
 			});
 		});
 
@@ -78,12 +66,6 @@ describe('RadioButtonLabeled', () => {
 				const wrapper = shallow(<RadioButtonLabeled onSelect={foo} />);
 
 				assert.equal(wrapper.find(RadioButton).prop('onSelect'), foo);
-			});
-
-			it('defaults to the Lodash `noop` method.', () => {
-				const wrapper = mount(<RadioButtonLabeled />);
-
-				assert.equal(wrapper.prop('onSelect'), _.noop);
 			});
 		});
 

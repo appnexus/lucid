@@ -2,7 +2,6 @@
 import _ from 'lodash';
 import PropTypes from 'react-peek/prop-types';
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { buildHybridComponent } from '../../util/state-management';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, getFirst, omitProps } from '../../util/component-types';
@@ -212,7 +211,7 @@ const DateSelect = createClass({
 		const monthsShown = clampMonthsShown(monthsShownRaw);
 
 		if (isFontSizeRelative) {
-			const rootElement = ReactDOM.findDOMNode(this.rootRef);
+			const rootElement = this.rootRef;
 			const { width, height } = rootElement.getBoundingClientRect();
 			const navButtonsWidth = NAV_BUTTON_SIZE * 2;
 			const oneMonthShownWidth =
@@ -297,9 +296,7 @@ const DateSelect = createClass({
 		/* istanbul ignore next */
 		return (
 			<section
-				ref={ref => {
-					this.rootRef = ref;
-				}}
+				ref={ref => (this.rootRef = ref)}
 				className={cx('&', className, {
 					'&-show-divider': showDivider,
 				})}

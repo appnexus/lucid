@@ -39,12 +39,8 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 01.defaul
       <Button
         className="lucid-Sidebar-expander"
         hasOnlyIcon={true}
-        isActive={false}
-        isDisabled={false}
         kind="invisible"
-        onClick={[Function]}
         onMouseDown={[Function]}
-        type="button"
       >
         <ChevronIcon
           direction="left"
@@ -112,12 +108,8 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 02.disabl
       <Button
         className="lucid-Sidebar-expander"
         hasOnlyIcon={true}
-        isActive={false}
-        isDisabled={false}
         kind="invisible"
-        onClick={[Function]}
         onMouseDown={[Function]}
-        type="button"
       >
         <ChevronIcon
           direction="left"
@@ -185,12 +177,8 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 03.initia
       <Button
         className="lucid-Sidebar-expander"
         hasOnlyIcon={true}
-        isActive={false}
-        isDisabled={false}
         kind="invisible"
-        onClick={[Function]}
         onMouseDown={[Function]}
-        type="button"
       >
         <ChevronIcon
           direction="left"
@@ -258,12 +246,8 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 04.positi
       <Button
         className="lucid-Sidebar-expander"
         hasOnlyIcon={true}
-        isActive={false}
-        isDisabled={false}
         kind="invisible"
-        onClick={[Function]}
         onMouseDown={[Function]}
-        type="button"
       >
         <ChevronIcon
           direction="right"
@@ -334,12 +318,8 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 05.custom
       <Button
         className="lucid-Sidebar-expander"
         hasOnlyIcon={true}
-        isActive={false}
-        isDisabled={false}
         kind="invisible"
-        onClick={[Function]}
         onMouseDown={[Function]}
-        type="button"
       >
         <ChevronIcon
           direction="left"
@@ -424,12 +404,8 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 06.custom
       <Button
         className="lucid-Sidebar-expander"
         hasOnlyIcon={true}
-        isActive={false}
-        isDisabled={false}
         kind="invisible"
-        onClick={[Function]}
         onMouseDown={[Function]}
-        type="button"
       >
         <ChevronIcon
           direction="left"
@@ -497,12 +473,8 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 07.contro
       <Button
         className="lucid-Sidebar-expander"
         hasOnlyIcon={true}
-        isActive={false}
-        isDisabled={false}
         kind="invisible"
-        onClick={[Function]}
         onMouseDown={[Function]}
-        type="button"
       >
         <ChevronIcon
           direction="right"
@@ -570,12 +542,8 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 08.handle
       <Button
         className="lucid-Sidebar-expander"
         hasOnlyIcon={true}
-        isActive={false}
-        isDisabled={false}
         kind="invisible"
-        onClick={[Function]}
         onMouseDown={[Function]}
-        type="button"
       >
         <ChevronIcon
           direction="left"
@@ -643,12 +611,8 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 09.nested
       <Button
         className="lucid-Sidebar-expander"
         hasOnlyIcon={true}
-        isActive={false}
-        isDisabled={false}
         kind="invisible"
-        onClick={[Function]}
         onMouseDown={[Function]}
-        type="button"
       >
         <ChevronIcon
           direction="left"
@@ -727,12 +691,8 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
       <Button
         className="lucid-Sidebar-expander"
         hasOnlyIcon={true}
-        isActive={false}
-        isDisabled={false}
         kind="invisible"
-        onClick={[Function]}
         onMouseDown={[Function]}
-        type="button"
       >
         <ChevronIcon
           direction="left"
@@ -2010,12 +1970,8 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 11.differ
       <Button
         className="lucid-Sidebar-expander"
         hasOnlyIcon={true}
-        isActive={false}
-        isDisabled={false}
         kind="invisible"
-        onClick={[Function]}
         onMouseDown={[Function]}
-        type="button"
       >
         <ChevronIcon
           direction="left"
@@ -2170,92 +2126,62 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 11.differ
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <Tag
-          hasLightBackground={true}
           isRemovable={true}
-          isTop={false}
           key="0"
-          onRemove={[Function]}
         >
           Tag # 0
         </Tag>
         <Tag
-          hasLightBackground={true}
           isRemovable={true}
-          isTop={false}
           key="1"
-          onRemove={[Function]}
         >
           Tag # 1
         </Tag>
         <Tag
-          hasLightBackground={true}
           isRemovable={true}
-          isTop={false}
           key="2"
-          onRemove={[Function]}
         >
           Tag # 2
         </Tag>
         <Tag
-          hasLightBackground={true}
           isRemovable={true}
-          isTop={false}
           key="3"
-          onRemove={[Function]}
         >
           Tag # 3
         </Tag>
         <Tag
-          hasLightBackground={true}
           isRemovable={true}
-          isTop={false}
           key="4"
-          onRemove={[Function]}
         >
           Tag # 4
         </Tag>
         <Tag
-          hasLightBackground={true}
           isRemovable={true}
-          isTop={false}
           key="5"
-          onRemove={[Function]}
         >
           Tag # 5
         </Tag>
         <Tag
-          hasLightBackground={true}
           isRemovable={true}
-          isTop={false}
           key="6"
-          onRemove={[Function]}
         >
           Tag # 6
         </Tag>
         <Tag
-          hasLightBackground={true}
           isRemovable={true}
-          isTop={false}
           key="7"
-          onRemove={[Function]}
         >
           Tag # 7
         </Tag>
         <Tag
-          hasLightBackground={true}
           isRemovable={true}
-          isTop={false}
           key="8"
-          onRemove={[Function]}
         >
           Tag # 8
         </Tag>
         <Tag
-          hasLightBackground={true}
           isRemovable={true}
-          isTop={false}
           key="9"
-          onRemove={[Function]}
         >
           Tag # 9
         </Tag>
@@ -2266,47 +2192,27 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 11.differ
             }
           }
         >
-          <RadioButton
-            isDisabled={false}
-            isSelected={false}
-            onSelect={[Function]}
-          >
+          <RadioButton>
             <RadioGroup.Label>
               All (unfiltered)
             </RadioGroup.Label>
           </RadioButton>
-          <RadioButton
-            isDisabled={false}
-            isSelected={false}
-            onSelect={[Function]}
-          >
+          <RadioButton>
             <RadioGroup.Label>
               Eligible
             </RadioGroup.Label>
           </RadioButton>
-          <RadioButton
-            isDisabled={false}
-            isSelected={false}
-            onSelect={[Function]}
-          >
+          <RadioButton>
             <RadioGroup.Label>
               Blocked by You
             </RadioGroup.Label>
           </RadioButton>
-          <RadioButton
-            isDisabled={false}
-            isSelected={false}
-            onSelect={[Function]}
-          >
+          <RadioButton>
             <RadioGroup.Label>
               Blocked by Seller
             </RadioGroup.Label>
           </RadioButton>
-          <RadioButton
-            isDisabled={false}
-            isSelected={false}
-            onSelect={[Function]}
-          >
+          <RadioButton>
             <RadioGroup.Label>
               Mutually Blocked
             </RadioGroup.Label>

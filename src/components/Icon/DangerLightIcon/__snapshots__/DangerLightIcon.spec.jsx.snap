@@ -2,13 +2,7 @@
 
 exports[`DangerLightIcon [common] example testing should match snapshot(s) for 1.default 1`] = `
 <Icon
-  aspectRatio="xMidYMid meet"
   className="lucid-DangerLightIcon"
-  color="primary"
-  isClickable={false}
-  isDisabled={false}
-  size={16}
-  viewBox="0 0 16 16"
 >
   <circle
     className="lucid-DangerLightIcon-background"
@@ -25,13 +19,8 @@ exports[`DangerLightIcon [common] example testing should match snapshot(s) for 1
 
 exports[`DangerLightIcon [common] example testing should match snapshot(s) for 1.default 2`] = `
 <Icon
-  aspectRatio="xMidYMid meet"
   className="lucid-DangerLightIcon lucid-DangerLightIcon-is-clickable"
-  color="primary"
   isClickable={true}
-  isDisabled={false}
-  size={16}
-  viewBox="0 0 16 16"
 >
   <circle
     className="lucid-DangerLightIcon-background"
@@ -48,13 +37,8 @@ exports[`DangerLightIcon [common] example testing should match snapshot(s) for 1
 
 exports[`DangerLightIcon [common] example testing should match snapshot(s) for 1.default 3`] = `
 <Icon
-  aspectRatio="xMidYMid meet"
   className="lucid-DangerLightIcon lucid-DangerLightIcon-is-disabled"
-  color="primary"
-  isClickable={false}
   isDisabled={true}
-  size={16}
-  viewBox="0 0 16 16"
 >
   <circle
     className="lucid-DangerLightIcon-background"

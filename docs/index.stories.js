@@ -1,12 +1,11 @@
 import React from 'react';
 import ReactDOMServer from 'react-dom/server';
 import _ from 'lodash';
-import * as path from 'path';
 import marksy from 'marksy/components';
 import { storiesOf } from '@storybook/react';
 import LinkTo from '@storybook/addon-links/react';
-import { withOptions } from '@storybook/addon-options';
 import { exampleStory } from '../.storybook/lucid-docs-addon';
+import { stripIndent } from '../.storybook/lucid-docs-addon/util';
 import readmeText from '!!raw-loader!../README.md';
 import introText from '!!raw-loader!./intro.md';
 import childComponentsText from '!!raw-loader!./child-components.md';
@@ -18,16 +17,16 @@ import SyntaxHighlighter, {
 } from 'react-syntax-highlighter/prism-light';
 import jsx from 'react-syntax-highlighter/languages/prism/jsx';
 import okaidia from 'react-syntax-highlighter/styles/prism/okaidia';
+import ColorPalette from './color-palette';
+
 import '../src/index.less';
 import '../src/styles/master.less';
-import ColorPalette from './color-palette';
-import { withPanelToggles } from '../.storybook/lucid-docs-addon/PanelToggles';
+import './index.less'; // very minimal overrides
 
 registerLanguage('jsx', jsx);
 
 const articlePageOptions = { showAddonPanel: false };
 const examplePageOptions = { showAddonPanel: true, addonPanelInRight: true };
-const withTogglePanelAddonParameters = { panelToggles: true };
 
 const loadAllKeys = (reqContext, rawContext) => {
 	return _.map(_.get(reqContext, 'keys', _.constant([]))(), key => ({
@@ -63,7 +62,7 @@ const checkIconSVG = `<?xml version="1.0" encoding="utf-8"?>
 
 const styles = {
 	link: {
-		color: '#2abbb0',
+		color: '#587eba',
 		textDecoration: 'underline',
 		cursor: 'pointer',
 		outline: 'none',
@@ -137,8 +136,8 @@ class ArticlePage extends React.Component {
 	}
 }
 
-storiesOf('Lucid UI', module)
-	.addDecorator(withOptions(articlePageOptions))
+storiesOf('Documentation', module)
+	.addParameters({ options: articlePageOptions })
 	.add('Introduction', () => (
 		<ArticlePage>
 			<div
@@ -174,71 +173,62 @@ const filteredComponents = _.reject(loadedComponents, ({ component }) =>
 	isPrivate(component)
 );
 
-const groupedComponents = _.groupBy(filteredComponents, ({ component }) =>
-	_.get(component, 'peek.categories[0]', 'misc')
-);
-_.reduce(
-	groupedComponents,
-	(storyKind, componentGroup, category) => {
-		const subGroupedComponents = _.groupBy(componentGroup, ({ component }) =>
-			_.get(component, 'peek.categories[1]', 'misc')
+// const storiesOfComponents = storiesOf('Components', module)
+// 	.addParameters({ options: examplePageOptions })
+// 	.add(
+// 		'Overview',
+// 		() => (
+// 			<ArticlePage>
+// 				<h1>Components</h1>
+// 			</ArticlePage>
+// 		),
+// 		{ options: articlePageOptions, panelToggles: undefined }
+// 	);
+
+const storiesOfAddSequence = [];
+
+_.forEach(
+	filteredComponents,
+	({ name: componentName, component, examplesContext, examplesContextRaw }) => {
+		const examples = getExamplesFromContext(
+			examplesContext,
+			examplesContextRaw
 		);
-		return storyKind.add(_.capitalize(category), () => (
-			<ArticlePage>
-				<h1>{_.capitalize(category)}</h1>
-				<section
-					style={{
-						display: 'flex',
-						flexWrap: 'wrap',
-					}}
-				>
-					{_.map(subGroupedComponents, (componentSubGroup, subCategory) => (
-						<section
-							key={subCategory}
-							style={{
-								marginRight: 10,
-								marginBottom: 10,
-								backgroundColor: 'rgb(247,247,247)',
-								padding: 6,
-								width: 200,
-							}}
-						>
-							{subCategory !== 'misc' && (
-								<h3
-									style={{
-										marginTop: 0,
-										textAlign: 'center',
-									}}
-								>
-									{_.capitalize(subCategory)}
-								</h3>
-							)}
-							<section
-								style={{
-									display: 'flex',
-									flexDirection: 'column',
-								}}
-							>
-								{_.map(componentSubGroup, ({ name }) => (
-									<div
-										key={name}
-										style={{
-											margin: 10,
-										}}
-									>
-										<LinkTo style={styles.link} kind={name}>
-											{name}
-										</LinkTo>
-									</div>
-								))}
-							</section>
-						</section>
-					))}
-				</section>
-			</ArticlePage>
-		));
-	},
-	storiesOf('Categories', module).addDecorator(withOptions(articlePageOptions))
+
+		const componentRef = getDefaultExport(component);
+		const notes =
+			_.has(componentRef, 'peek.description') &&
+			stripIndent(componentRef.peek.description);
+
+		const category =
+			_.has(componentRef, 'peek.categories') &&
+			stripIndent(componentRef.peek.categories[0]);
+
+		// TODO: Find a way to add per example notes
+		_.forEach(examples, ({ name, Example, source }) => {
+			storiesOfAddSequence.push([
+				componentName,
+				() => {
+					storiesOf(`Components/${category}/${componentName}`, module)
+						.addParameters({ options: examplePageOptions })
+						.add(
+							name,
+							exampleStory({
+								component,
+								code: source,
+								example: Example,
+								path: [componentName],
+							}),
+							{ notes: notes, info: { inline: true, header: false } }
+						);
+				},
+			]);
+		});
+	}
+);
+
+_.forEach(_.sortBy(storiesOfAddSequence, _.property('0')), ([, addStory]) =>
+	addStory()
 );
 
 const loadedIcons = require('./load-icons');
@@ -248,43 +238,56 @@ const filteredIcons = _.reject(loadedIcons, ({ component }) =>
 );
 
 const storiesOfIcons = storiesOf('Icons', module)
-	.addDecorator(withOptions(examplePageOptions))
-	.addDecorator(withPanelToggles(withTogglePanelAddonParameters))
+	.addParameters({ options: examplePageOptions })
 	.add(
-		'All',
+		'Overview',
 		() => (
 			<ArticlePage>
 				<h1>Icons</h1>
-				<section style={{margin: '10px 0'}}>
+				<section style={{ margin: '10px 0' }}>
 					<h2>Color Variations</h2>
 					<div
 						style={{
 							display: 'inline-flex',
-							backgroundImage: 'linear-gradient(45deg, #d3d1d1 25%, transparent 25%), linear-gradient(-45deg, #d3d1d1 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #d3d1d1 75%), linear-gradient(-45deg, transparent 75%, #d3d1d1 75%)',
+							backgroundImage:
+								'linear-gradient(45deg, #d3d1d1 25%, transparent 25%), linear-gradient(-45deg, #d3d1d1 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #d3d1d1 75%), linear-gradient(-45deg, transparent 75%, #d3d1d1 75%)',
 							backgroundSize: '4px 4px',
 							backgroundPosition: '0 0, 0 10px, 10px -10px, -10px 0px',
 						}}
 					>
-						{_.map(['neutral-dark', 'neutral-light', 'primary', 'white', 'success', 'warning', 'secondary-one', 'secondary-two', 'secondary-three'], (color) => {
-							const Icon = _.head(filteredIcons).component;
-							return (
-								<div
-									style={{
-										padding: '5px',
-										marginRight: '20px',
-										display: 'flex',
-										flexDirection: 'column',
-										alignItems: 'center'
-									}}
-								>
-									<Icon size={32} color={color} isClickable/>
-									<div>{color}</div>
-								</div>
-							);
-						})}
+						{_.map(
+							[
+								'neutral-dark',
+								'neutral-light',
+								'primary',
+								'white',
+								'success',
+								'warning',
+								'secondary-one',
+								'secondary-two',
+								'secondary-three',
+							],
+							color => {
+								const Icon = _.head(filteredIcons).component;
+								return (
+									<div
+										style={{
+											padding: '5px',
+											marginRight: '20px',
+											display: 'flex',
+											flexDirection: 'column',
+											alignItems: 'center',
+										}}
+									>
+										<Icon size={32} color={color} isClickable />
+										<div>{color}</div>
+									</div>
+								);
+							}
+						)}
 					</div>
 				</section>
-				<section style={{margin: '10px 0'}}>
+				<section style={{ margin: '10px 0' }}>
 					<h2>Available Icons</h2>
 					<div
 						style={{
@@ -332,54 +335,4 @@ _.forEach(
 			})
 		);
 	}
-);
-
-const storiesOfAddSequence = [];
-
-_.forEach(
-	filteredComponents,
-	({ name: componentName, component, examplesContext, examplesContextRaw }) => {
-		const examples = getExamplesFromContext(
-			examplesContext,
-			examplesContextRaw
-		);
-		_.forEach(examples, ({ name, Example, source }) => {
-			storiesOfAddSequence.push([
-				componentName,
-				() => {
-					storiesOf(componentName, module)
-						.addDecorator(withOptions(examplePageOptions))
-						.addDecorator(withPanelToggles(withTogglePanelAddonParameters))
-						.add(
-							name,
-							exampleStory({
-								component,
-								code: source,
-								example: Example,
-								path: [componentName],
-							})
-						);
-				},
-			]);
-		});
-	}
-);
-
-const requireExampleDotStoriesJs = require.context(
-	'./examples',
-	true,
-	/.stories.js$/
-);
-
-requireExampleDotStoriesJs.keys().forEach(filename => {
-	const componentName = path.basename(filename, '.stories.js');
-	storiesOfAddSequence.push([
-		componentName,
-		() => {
-			requireExampleDotStoriesJs(filename);
-		},
-	]);
-});
-_.forEach(_.sortBy(storiesOfAddSequence, _.property('0')), ([, addStory]) =>
-	addStory()
 );

@@ -26,7 +26,6 @@ export default createClass({
 				xAxisFormatter={xFormatter}
 				xAxisTickCount={5}
 				xAxisTitle='Weekdays'
-				xAxisTickCount={2}
 				yAxisFields={['apples', 'oranges']}
 				yAxisFormatter={yFormatter}
 				yAxisTitle='Fruit Count'

@@ -48,13 +48,20 @@ describe('text-manipulation', () => {
 			assert.equal(getCombinedChildText(element.props), 'child');
 		});
 
-		it('should recursively combine children', () => {
+		it('should recursively combine strings from children, ignoring other types', () => {
 			const element = (
 				<div>
 					1
 					<div>
 						<div>2</div>
-						<div>3</div>
+						<>
+							<div>{'3'}</div>
+						</>
+						<></>
+						<div></div>
+						<div>{null}</div>
+						<div>{true}</div>
+						<div>{4}</div>{/* this value should be ignored since it is a number, not a string */}
 					</div>
 				</div>
 			);

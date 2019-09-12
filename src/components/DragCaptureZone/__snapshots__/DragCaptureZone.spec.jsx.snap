@@ -5,6 +5,7 @@ exports[`DragCaptureZone [common] example testing should match snapshot(s) for i
   className="lucid-DragCaptureZone"
   key="DragCaptureZone"
   onMouseDown={[Function]}
+  onTouchStart={[Function]}
 >
   <div
     style={

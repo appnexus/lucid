@@ -2,13 +2,7 @@
 
 exports[`WarningIcon [common] example testing should match snapshot(s) for 1.default 1`] = `
 <Icon
-  aspectRatio="xMidYMid meet"
   className="lucid-WarningIcon"
-  color="primary"
-  isClickable={false}
-  isDisabled={false}
-  size={16}
-  viewBox="0 0 16 16"
 >
   <path
     className="lucid-WarningIcon-background"

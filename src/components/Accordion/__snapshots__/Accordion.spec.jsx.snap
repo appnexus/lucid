@@ -22,7 +22,7 @@ exports[`Accordion [common] example testing should match snapshot(s) for 1.basic
     key="1"
     onToggle={[Function]}
   >
-    Raymond "Ray" Stantz, Ph.D. is a fictional character from the Ghostbusters franchise. He appears in the films Ghostbusters, Ghostbusters II, Casper, and the animated television series The Real Ghostbusters. He was portrayed by Dan Aykroyd in both live action films, and voiced by Frank Welker in the animated series. He is a member of the Ghostbusters and one of the three doctors of parapsychology, along with Dr. Peter Venkman and Dr. Egon Spengler.
+    Raymond Ray Stantz, Ph.D. is a fictional character from the Ghostbusters franchise. He appears in the films Ghostbusters, Ghostbusters II, Casper, and the animated television series The Real Ghostbusters. He was portrayed by Dan Aykroyd in both live action films, and voiced by Frank Welker in the animated series. He is a member of the Ghostbusters and one of the three doctors of parapsychology, along with Dr. Peter Venkman and Dr. Egon Spengler.
   </ExpanderPanel>
   <ExpanderPanel
     Header="Egon Spengler"
@@ -59,7 +59,7 @@ exports[`Accordion [common] example testing should match snapshot(s) for 2.initi
     key="1"
     onToggle={[Function]}
   >
-    Raymond "Ray" Stantz, Ph.D. is a fictional character from the Ghostbusters franchise. He appears in the films Ghostbusters, Ghostbusters II, Casper, and the animated television series The Real Ghostbusters. He was portrayed by Dan Aykroyd in both live action films, and voiced by Frank Welker in the animated series. He is a member of the Ghostbusters and one of the three doctors of parapsychology, along with Dr. Peter Venkman and Dr. Egon Spengler.
+    Raymond Ray Stantz, Ph.D. is a fictional character from the Ghostbusters franchise. He appears in the films Ghostbusters, Ghostbusters II, Casper, and the animated television series The Real Ghostbusters. He was portrayed by Dan Aykroyd in both live action films, and voiced by Frank Welker in the animated series. He is a member of the Ghostbusters and one of the three doctors of parapsychology, along with Dr. Peter Venkman and Dr. Egon Spengler.
   </ExpanderPanel>
   <ExpanderPanel
     Header="Egon Spengler"
@@ -96,7 +96,7 @@ exports[`Accordion [common] example testing should match snapshot(s) for 3.fixed
     key="1"
     onToggle={[Function]}
   >
-    Raymond "Ray" Stantz, Ph.D. is a fictional character from the Ghostbusters franchise. He appears in the films Ghostbusters, Ghostbusters II, Casper, and the animated television series The Real Ghostbusters. He was portrayed by Dan Aykroyd in both live action films, and voiced by Frank Welker in the animated series. He is a member of the Ghostbusters and one of the three doctors of parapsychology, along with Dr. Peter Venkman and Dr. Egon Spengler.
+    Raymond Ray Stantz, Ph.D. is a fictional character from the Ghostbusters franchise. He appears in the films Ghostbusters, Ghostbusters II, Casper, and the animated television series The Real Ghostbusters. He was portrayed by Dan Aykroyd in both live action films, and voiced by Frank Welker in the animated series. He is a member of the Ghostbusters and one of the three doctors of parapsychology, along with Dr. Peter Venkman and Dr. Egon Spengler.
   </ExpanderPanel>
   <ExpanderPanel
     Header="Egon Spengler"
@@ -134,7 +134,7 @@ exports[`Accordion [common] example testing should match snapshot(s) for 4.disab
     key="1"
     onToggle={[Function]}
   >
-    Raymond "Ray" Stantz, Ph.D. is a fictional character from the Ghostbusters franchise. He appears in the films Ghostbusters, Ghostbusters II, Casper, and the animated television series The Real Ghostbusters. He was portrayed by Dan Aykroyd in both live action films, and voiced by Frank Welker in the animated series. He is a member of the Ghostbusters and one of the three doctors of parapsychology, along with Dr. Peter Venkman and Dr. Egon Spengler.
+    Raymond Ray Stantz, Ph.D. is a fictional character from the Ghostbusters franchise. He appears in the films Ghostbusters, Ghostbusters II, Casper, and the animated television series The Real Ghostbusters. He was portrayed by Dan Aykroyd in both live action films, and voiced by Frank Welker in the animated series. He is a member of the Ghostbusters and one of the three doctors of parapsychology, along with Dr. Peter Venkman and Dr. Egon Spengler.
   </ExpanderPanel>
   <ExpanderPanel
     Header="Egon Spengler"
@@ -176,7 +176,7 @@ exports[`Accordion [common] example testing should match snapshot(s) for 5.using
     <ExpanderPanel.Header>
       Ray Stantz
     </ExpanderPanel.Header>
-    Raymond "Ray" Stantz, Ph.D. is a fictional character from the Ghostbusters franchise. He appears in the films Ghostbusters, Ghostbusters II, Casper, and the animated television series The Real Ghostbusters. He was portrayed by Dan Aykroyd in both live action films, and voiced by Frank Welker in the animated series. He is a member of the Ghostbusters and one of the three doctors of parapsychology, along with Dr. Peter Venkman and Dr. Egon Spengler.
+    Raymond Ray Stantz, Ph.D. is a fictional character from the Ghostbusters franchise. He appears in the films Ghostbusters, Ghostbusters II, Casper, and the animated television series The Real Ghostbusters. He was portrayed by Dan Aykroyd in both live action films, and voiced by Frank Welker in the animated series. He is a member of the Ghostbusters and one of the three doctors of parapsychology, along with Dr. Peter Venkman and Dr. Egon Spengler.
   </ExpanderPanel>
   <ExpanderPanel
     className="lucid-Accordion-Item"

@@ -2,13 +2,7 @@
 
 exports[`ChevronIcon [common] example testing should match snapshot(s) for 1.default 1`] = `
 <Icon
-  aspectRatio="xMidYMid meet"
   className="lucid-ChevronIcon lucid-ChevronIcon-is-down"
-  color="primary"
-  isClickable={false}
-  isDisabled={false}
-  size={16}
-  viewBox="0 0 16 16"
 >
   <path
     d="M.5 4.5l7.5 7 7.5-7"
@@ -18,13 +12,7 @@ exports[`ChevronIcon [common] example testing should match snapshot(s) for 1.def
 
 exports[`ChevronIcon [common] example testing should match snapshot(s) for 1.default 2`] = `
 <Icon
-  aspectRatio="xMidYMid meet"
   className="lucid-ChevronIcon lucid-ChevronIcon-is-up"
-  color="primary"
-  isClickable={false}
-  isDisabled={false}
-  size={16}
-  viewBox="0 0 16 16"
 >
   <path
     d="M.5 4.5l7.5 7 7.5-7"
@@ -34,13 +22,7 @@ exports[`ChevronIcon [common] example testing should match snapshot(s) for 1.def
 
 exports[`ChevronIcon [common] example testing should match snapshot(s) for 1.default 3`] = `
 <Icon
-  aspectRatio="xMidYMid meet"
   className="lucid-ChevronIcon lucid-ChevronIcon-is-down"
-  color="primary"
-  isClickable={false}
-  isDisabled={false}
-  size={16}
-  viewBox="0 0 16 16"
 >
   <path
     d="M.5 4.5l7.5 7 7.5-7"
@@ -50,13 +32,7 @@ exports[`ChevronIcon [common] example testing should match snapshot(s) for 1.def
 
 exports[`ChevronIcon [common] example testing should match snapshot(s) for 1.default 4`] = `
 <Icon
-  aspectRatio="xMidYMid meet"
   className="lucid-ChevronIcon lucid-ChevronIcon-is-left"
-  color="primary"
-  isClickable={false}
-  isDisabled={false}
-  size={16}
-  viewBox="0 0 16 16"
 >
   <path
     d="M.5 4.5l7.5 7 7.5-7"
@@ -66,13 +42,7 @@ exports[`ChevronIcon [common] example testing should match snapshot(s) for 1.def
 
 exports[`ChevronIcon [common] example testing should match snapshot(s) for 1.default 5`] = `
 <Icon
-  aspectRatio="xMidYMid meet"
   className="lucid-ChevronIcon lucid-ChevronIcon-is-right"
-  color="primary"
-  isClickable={false}
-  isDisabled={false}
-  size={16}
-  viewBox="0 0 16 16"
 >
   <path
     d="M.5 4.5l7.5 7 7.5-7"

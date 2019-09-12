@@ -24,14 +24,17 @@ function isReactComponentClass(componentClass) {
 describe('component-types', () => {
 	describe('createClass', () => {
 		it('should return a React component type.', () => {
-			assert(isReactComponentClass(createClass()), 'must be a React component');
+			assert(
+				isReactComponentClass(createClass({})),
+				'must be a React component'
+			);
 		});
 
 		it('should make child `components` static properties.', () => {
 			const Panel = createClass({
 				components: {
-					Header: createClass(),
-					Footer: createClass(),
+					Header: createClass({}),
+					Footer: createClass({}),
 				},
 			});
 
@@ -151,13 +154,13 @@ describe('component-types', () => {
 
 	describe('filterTypes', () => {
 		it('should filter elements by a single component type', () => {
-			const Option = createClass();
+			const Option = createClass({});
 			const elements = [
-				<span>Many</span>,
-				<Option>Hands</Option>,
-				<span>Make</span>,
-				<Option>Light</Option>,
-				<span>Work</span>,
+				<span key='1'>Many</span>,
+				<Option key='2'>Hands</Option>,
+				<span key='3'>Make</span>,
+				<Option key='4'>Light</Option>,
+				<span key='5'>Work</span>,
 			];
 
 			const spanElements = filterTypes(elements, 'span');
@@ -193,13 +196,13 @@ describe('component-types', () => {
 		});
 
 		it('should filter elements by many component types', () => {
-			const Option = createClass();
+			const Option = createClass({});
 			const elements = [
-				<span>Many</span>,
-				<Option>Hands</Option>,
-				<section>Make</section>,
-				<Option>Light</Option>,
-				<section>Work</section>,
+				<span key='1'>Many</span>,
+				<Option key='2'>Hands</Option>,
+				<section key='3'>Make</section>,
+				<Option key='4'>Light</Option>,
+				<section key='5'>Work</section>,
 			];
 
 			const spanElements = filterTypes(elements, ['section', Option]);
@@ -238,13 +241,13 @@ describe('component-types', () => {
 
 	describe('rejectTypes', () => {
 		it('should reject elements of a single component type', () => {
-			const Option = createClass();
+			const Option = createClass({});
 			const elements = [
-				<span>Many</span>,
-				<Option>Hands</Option>,
-				<span>Make</span>,
-				<Option>Light</Option>,
-				<span>Work</span>,
+				<span key='1'>Many</span>,
+				<Option key='2'>Hands</Option>,
+				<span key='3'>Make</span>,
+				<Option key='4'>Light</Option>,
+				<span key='5'>Work</span>,
 			];
 
 			const nonSpanElements = rejectTypes(elements, 'span');
@@ -273,13 +276,13 @@ describe('component-types', () => {
 		});
 
 		it('should reject elements of many component types', () => {
-			const Option = createClass();
+			const Option = createClass({});
 			const elements = [
-				<span>Many</span>,
-				<Option>Hands</Option>,
-				<section>Make</section>,
-				<Option>Light</Option>,
-				<span>Work</span>,
+				<span key='1'>Many</span>,
+				<Option key='2'>Hands</Option>,
+				<section key='3'>Make</section>,
+				<Option key='4'>Light</Option>,
+				<span key='5'>Work</span>,
 			];
 
 			const remainingElements = rejectTypes(elements, [Option, 'span']);
@@ -304,11 +307,11 @@ describe('component-types', () => {
 
 	describe('createElements', () => {
 		it('should create elements of the given type from the array', () => {
-			const Option = createClass();
+			const Option = createClass({});
 
 			const elements = createElements(Option, [
-				<Option />,
-				<button />,
+				<Option key='1' />,
+				<button key='2' />,
 				'red',
 				null,
 				{ isDisabled: true },

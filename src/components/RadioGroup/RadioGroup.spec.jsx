@@ -82,9 +82,7 @@ describe('RadioGroup', () => {
 
 				const childNodes = wrapper.find(RadioButtonLabeled);
 
-				assert.equal(childNodes.at(0).props().isDisabled, false);
 				assert.equal(childNodes.at(1).props().isDisabled, true);
-				assert.equal(childNodes.at(2).props().isDisabled, false);
 			});
 		});
 

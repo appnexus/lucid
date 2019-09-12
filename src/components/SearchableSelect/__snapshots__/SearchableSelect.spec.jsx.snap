@@ -880,15 +880,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
     isWrapped={true}
     key="SearchableSelectLoading"
   >
-    <LoadingIcon
-      aspectRatio="xMidYMid meet"
-      color="primary"
-      isClickable={false}
-      isDisabled={false}
-      size={16}
-      speed="normal"
-      viewBox="0 0 16 16"
-    />
+    <LoadingIcon />
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={true}
@@ -2257,6 +2249,130 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
   >
     Hawaii
   </DropMenu.Option>
+</DropMenu>
+`;
+
+exports[`SearchableSelect [common] example testing should match snapshot(s) for 05.formatted-options 1`] = `
+<DropMenu
+  ContextMenu={
+    Object {
+      "alignment": "start",
+      "direction": "down",
+      "directonOffset": 0,
+      "getAlignmentOffset": [Function],
+      "isExpanded": true,
+      "minWidthOffset": 0,
+      "onClickOut": null,
+      "portalId": null,
+    }
+  }
+  alignment="start"
+  className="lucid-SearchableSelect"
+  direction="down"
+  flyOutStyle={
+    Object {
+      "maxHeight": "18em",
+    }
+  }
+  focusedIndex={null}
+  isDisabled={false}
+  isExpanded={false}
+  onCollapse={[Function]}
+  onExpand={[Function]}
+  onFocusNext={[Function]}
+  onFocusOption={[Function]}
+  onFocusPrev={[Function]}
+  onSelect={[Function]}
+  optionContainerStyle={Object {}}
+  selectedIndices={Array []}
+>
+  <DropMenu.Control>
+    <div
+      className="lucid-SearchableSelect-Control"
+      tabIndex={0}
+    >
+      <span
+        className="lucid-SearchableSelect-Control-content"
+      >
+        Select
+      </span>
+      <ChevronIcon
+        direction="down"
+        size={12}
+      />
+    </div>
+  </DropMenu.Control>
+  <DropMenu.Header
+    className="lucid-SearchableSelect-Search-container"
+  >
+    <SearchField
+      autoComplete="off"
+      debounceLevel={500}
+      isDisabled={false}
+      onChange={[Function]}
+      onChangeDebounced={[Function]}
+      onSubmit={[Function]}
+      placeholder="Search..."
+      value=""
+    />
+  </DropMenu.Header>
+  <DropMenu.OptionGroup
+    isHidden={false}
+    key="SearchableSelectOptionGroup0"
+  >
+    <OptionCols
+      col1="ID"
+      col2="NAME"
+    />
+    <SearchableSelect.Option
+      Selected="Foo (1234)"
+      filterText="Foo"
+    >
+      <Component />
+    </SearchableSelect.Option>
+    <SearchableSelect.Option
+      Selected="Bar (2345)"
+      filterText="Bar"
+    >
+      <Component />
+    </SearchableSelect.Option>
+    <SearchableSelect.Option
+      Selected="Baz (3456)"
+      filterText="Baz"
+    >
+      <Component />
+    </SearchableSelect.Option>
+    <DropMenu.Option
+      isDisabled={false}
+      isHidden={false}
+      isWrapped={true}
+      key="SearchableSelectOption0"
+    >
+      <Component
+        searchText=""
+      />
+    </DropMenu.Option>
+    <DropMenu.Option
+      isDisabled={false}
+      isHidden={false}
+      isWrapped={true}
+      key="SearchableSelectOption1"
+    >
+      <Component
+        searchText=""
+      />
+    </DropMenu.Option>
+    <DropMenu.Option
+      isDisabled={false}
+      isHidden={false}
+      isWrapped={true}
+      key="SearchableSelectOption2"
+    >
+      <Component
+        searchText=""
+      />
+    </DropMenu.Option>
+  </DropMenu.OptionGroup>
 </DropMenu>
 `;
 

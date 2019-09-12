@@ -190,7 +190,7 @@ export function common(
 
 		// Only run this test if it's a public component
 		if (!Component._isPrivate && !noExport) {
-			it('should be available as an exported module from index.js', () => {
+			it('should be available as an exported module from index.ts', () => {
 				assert(lucid[Component.displayName]);
 			});
 		}
@@ -218,18 +218,6 @@ export function controls(
 ) {
 	// Use DOM tests here since some of our controls use dom events under the hood
 	describe('[control]', () => {
-		/* eslint-disable no-console */
-		let error;
-
-		beforeEach(() => {
-			error = console.error;
-			console.error = jest.fn();
-		});
-
-		afterEach(() => {
-			console.error = error;
-		});
-
 		it('should callback with `event` and `props`', () => {
 			const expectedSpecialProp = 32;
 			const props = {
@@ -256,11 +244,7 @@ export function controls(
 				expectedSpecialProp,
 				'incorrect or missing specialProp'
 			);
-
-			expect(console.error).toHaveBeenCalledTimes(1);
 		});
-
-		/* eslint-enable no-console */
 	});
 }
 

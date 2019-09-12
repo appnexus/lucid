@@ -141,7 +141,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 02.n
 </DropMenu>
 `;
 
-exports[`SingleSelect [common] example testing should match snapshot(s) for 03.disabled-options 1`] = `
+exports[`SingleSelect [common] example testing should match snapshot(s) for 03.formatted-options 1`] = `
 <DropMenu
   ContextMenu={
     Object {
@@ -175,7 +175,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 03.d
       <span
         className="lucid-SingleSelect-Control-content"
       >
-        Select Color
+        Select
       </span>
       <ChevronIcon
         direction="down"
@@ -183,103 +183,76 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 03.d
       />
     </div>
   </DropMenu.Control>
-  <DropMenu.Option
-    isDisabled={true}
+  <DropMenu.OptionGroup
     isHidden={false}
-    isWrapped={true}
-    key="SingleSelectOption0"
+    key="SingleSelectOptionGroup0"
   >
-    Red
-  </DropMenu.Option>
-  <DropMenu.Option
-    isDisabled={false}
-    isHidden={false}
-    isWrapped={true}
-    key="SingleSelectOption1"
-  >
-    Green
-  </DropMenu.Option>
-  <DropMenu.Option
-    isDisabled={true}
-    isHidden={false}
-    isWrapped={true}
-    key="SingleSelectOption2"
-  >
-    Blue
-  </DropMenu.Option>
-</DropMenu>
-`;
-
-exports[`SingleSelect [common] example testing should match snapshot(s) for 04.disabled-select 1`] = `
-<DropMenu
-  ContextMenu={
-    Object {
-      "directonOffset": -1,
-    }
-  }
-  alignment="start"
-  className="lucid-SingleSelect"
-  direction="down"
-  flyOutStyle={
-    Object {
-      "maxHeight": "18em",
-    }
-  }
-  focusedIndex={null}
-  isDisabled={true}
-  isExpanded={false}
-  onCollapse={[Function]}
-  onExpand={[Function]}
-  onFocusNext={[Function]}
-  onFocusOption={[Function]}
-  onFocusPrev={[Function]}
-  onSelect={[Function]}
-  selectedIndices={Array []}
->
-  <DropMenu.Control>
-    <div
-      className="lucid-SingleSelect-Control lucid-SingleSelect-Control-is-disabled lucid-SingleSelect-Control-is-null-option"
-      tabIndex={0}
+    <OptionCols
+      col1="ID"
+      col2="NAME"
+    />
+    <SingleSelect.Option
+      Selected="Foo (1234)"
     >
-      <span
-        className="lucid-SingleSelect-Control-content"
-      >
-        Select Color
-      </span>
-      <ChevronIcon
-        direction="down"
-        size={12}
+      <OptionCols
+        col1="1234"
+        col2="Foo"
       />
-    </div>
-  </DropMenu.Control>
-  <DropMenu.Option
-    isDisabled={false}
-    isHidden={false}
-    isWrapped={true}
-    key="SingleSelectOption0"
-  >
-    Red
-  </DropMenu.Option>
-  <DropMenu.Option
-    isDisabled={false}
-    isHidden={false}
-    isWrapped={true}
-    key="SingleSelectOption1"
-  >
-    Green
-  </DropMenu.Option>
-  <DropMenu.Option
-    isDisabled={false}
-    isHidden={false}
-    isWrapped={true}
-    key="SingleSelectOption2"
-  >
-    Blue
-  </DropMenu.Option>
+    </SingleSelect.Option>
+    <SingleSelect.Option
+      Selected="Bar (2345)"
+    >
+      <OptionCols
+        col1="2345"
+        col2="Bar"
+      />
+    </SingleSelect.Option>
+    <SingleSelect.Option
+      Selected="Baz (3456)"
+    >
+      <OptionCols
+        col1="3456"
+        col2="Baz"
+      />
+    </SingleSelect.Option>
+    <DropMenu.Option
+      isDisabled={false}
+      isHidden={false}
+      isWrapped={true}
+      key="SingleSelectOption0"
+    >
+      <OptionCols
+        col1="1234"
+        col2="Foo"
+      />
+    </DropMenu.Option>
+    <DropMenu.Option
+      isDisabled={false}
+      isHidden={false}
+      isWrapped={true}
+      key="SingleSelectOption1"
+    >
+      <OptionCols
+        col1="2345"
+        col2="Bar"
+      />
+    </DropMenu.Option>
+    <DropMenu.Option
+      isDisabled={false}
+      isHidden={false}
+      isWrapped={true}
+      key="SingleSelectOption2"
+    >
+      <OptionCols
+        col1="3456"
+        col2="Baz"
+      />
+    </DropMenu.Option>
+  </DropMenu.OptionGroup>
 </DropMenu>
 `;
 
-exports[`SingleSelect [common] example testing should match snapshot(s) for 05.grouped-options 1`] = `
+exports[`SingleSelect [common] example testing should match snapshot(s) for 04.grouped-options 1`] = `
 <DropMenu
   ContextMenu={
     Object {
@@ -413,7 +386,145 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 05.g
 </DropMenu>
 `;
 
-exports[`SingleSelect [common] example testing should match snapshot(s) for 06.no-unselect 1`] = `
+exports[`SingleSelect [common] example testing should match snapshot(s) for 05.disabled-options 1`] = `
+<DropMenu
+  ContextMenu={
+    Object {
+      "directonOffset": -1,
+    }
+  }
+  alignment="start"
+  className="lucid-SingleSelect"
+  direction="down"
+  flyOutStyle={
+    Object {
+      "maxHeight": "18em",
+    }
+  }
+  focusedIndex={null}
+  isDisabled={false}
+  isExpanded={false}
+  onCollapse={[Function]}
+  onExpand={[Function]}
+  onFocusNext={[Function]}
+  onFocusOption={[Function]}
+  onFocusPrev={[Function]}
+  onSelect={[Function]}
+  selectedIndices={Array []}
+>
+  <DropMenu.Control>
+    <div
+      className="lucid-SingleSelect-Control lucid-SingleSelect-Control-is-null-option"
+      tabIndex={0}
+    >
+      <span
+        className="lucid-SingleSelect-Control-content"
+      >
+        Select Color
+      </span>
+      <ChevronIcon
+        direction="down"
+        size={12}
+      />
+    </div>
+  </DropMenu.Control>
+  <DropMenu.Option
+    isDisabled={true}
+    isHidden={false}
+    isWrapped={true}
+    key="SingleSelectOption0"
+  >
+    Red
+  </DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={true}
+    key="SingleSelectOption1"
+  >
+    Green
+  </DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={true}
+    isHidden={false}
+    isWrapped={true}
+    key="SingleSelectOption2"
+  >
+    Blue
+  </DropMenu.Option>
+</DropMenu>
+`;
+
+exports[`SingleSelect [common] example testing should match snapshot(s) for 06.disabled-select 1`] = `
+<DropMenu
+  ContextMenu={
+    Object {
+      "directonOffset": -1,
+    }
+  }
+  alignment="start"
+  className="lucid-SingleSelect"
+  direction="down"
+  flyOutStyle={
+    Object {
+      "maxHeight": "18em",
+    }
+  }
+  focusedIndex={null}
+  isDisabled={true}
+  isExpanded={false}
+  onCollapse={[Function]}
+  onExpand={[Function]}
+  onFocusNext={[Function]}
+  onFocusOption={[Function]}
+  onFocusPrev={[Function]}
+  onSelect={[Function]}
+  selectedIndices={Array []}
+>
+  <DropMenu.Control>
+    <div
+      className="lucid-SingleSelect-Control lucid-SingleSelect-Control-is-disabled lucid-SingleSelect-Control-is-null-option"
+      tabIndex={0}
+    >
+      <span
+        className="lucid-SingleSelect-Control-content"
+      >
+        Select Color
+      </span>
+      <ChevronIcon
+        direction="down"
+        size={12}
+      />
+    </div>
+  </DropMenu.Control>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={true}
+    key="SingleSelectOption0"
+  >
+    Red
+  </DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={true}
+    key="SingleSelectOption1"
+  >
+    Green
+  </DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={true}
+    key="SingleSelectOption2"
+  >
+    Blue
+  </DropMenu.Option>
+</DropMenu>
+`;
+
+exports[`SingleSelect [common] example testing should match snapshot(s) for 07.no-unselect 1`] = `
 <DropMenu
   ContextMenu={
     Object {
@@ -482,7 +593,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 06.n
 </DropMenu>
 `;
 
-exports[`SingleSelect [common] example testing should match snapshot(s) for 07.max-menu-height 1`] = `
+exports[`SingleSelect [common] example testing should match snapshot(s) for 08.max-menu-height 1`] = `
 <DropMenu
   ContextMenu={
     Object {
@@ -1655,7 +1766,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
 </DropMenu>
 `;
 
-exports[`SingleSelect [common] example testing should match snapshot(s) for 08.rich-content 1`] = `
+exports[`SingleSelect [common] example testing should match snapshot(s) for 09.rich-content 1`] = `
 <DropMenu
   ContextMenu={
     Object {
@@ -1752,7 +1863,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 08.r
 </DropMenu>
 `;
 
-exports[`SingleSelect [common] example testing should match snapshot(s) for 09.no-selection-highlighting 1`] = `
+exports[`SingleSelect [common] example testing should match snapshot(s) for 10.no-selection-highlighting 1`] = `
 <DropMenu
   ContextMenu={
     Object {
@@ -1821,7 +1932,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 09.n
 </DropMenu>
 `;
 
-exports[`SingleSelect [common] example testing should match snapshot(s) for 10.array-options 1`] = `
+exports[`SingleSelect [common] example testing should match snapshot(s) for 11.array-options 1`] = `
 <DropMenu
   ContextMenu={
     Object {
@@ -1890,7 +2001,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 10.a
 </DropMenu>
 `;
 
-exports[`SingleSelect [common] example testing should match snapshot(s) for 11.stateless 1`] = `
+exports[`SingleSelect [common] example testing should match snapshot(s) for 12.stateless 1`] = `
 <DropMenu
   ContextMenu={
     Object {
@@ -1927,7 +2038,6 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 11.s
         Green
       </span>
       <ChevronIcon
-        direction="down"
         size={12}
       />
     </div>
@@ -2001,7 +2111,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 11.s
 </DropMenu>
 `;
 
-exports[`SingleSelect [common] example testing should match snapshot(s) for 12.invisible 1`] = `
+exports[`SingleSelect [common] example testing should match snapshot(s) for 13.invisible 1`] = `
 <DropMenu
   ContextMenu={
     Object {
@@ -2070,7 +2180,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 12.i
 </DropMenu>
 `;
 
-exports[`SingleSelect [common] example testing should match snapshot(s) for 13.invisible-and-disabled 1`] = `
+exports[`SingleSelect [common] example testing should match snapshot(s) for 14.invisible-and-disabled 1`] = `
 <DropMenu
   ContextMenu={
     Object {

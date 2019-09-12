@@ -6,13 +6,8 @@ module.exports = function(api) {
 		env: {
 			test: {
 				plugins: [
-					['@babel/plugin-proposal-object-rest-spread'],
-					[
-						'babel-plugin-transform-require-ignore',
-						{
-							extensions: ['.less', '.css'],
-						},
-					],
+					'@babel/plugin-proposal-object-rest-spread',
+					'@babel/plugin-proposal-class-properties',
 				],
 				presets: [
 					[
@@ -23,11 +18,16 @@ module.exports = function(api) {
 							},
 						},
 					],
+					'@babel/preset-typescript',
 					'@babel/react',
 				],
 			},
 			development: {
-				plugins: [['@babel/plugin-proposal-object-rest-spread'], 'lodash'],
+				plugins: [
+					'@babel/plugin-proposal-object-rest-spread',
+					'@babel/plugin-proposal-class-properties',
+					'lodash',
+				],
 				presets: [
 					[
 						'@babel/env',
@@ -37,29 +37,25 @@ module.exports = function(api) {
 							},
 						},
 					],
+					'@babel/preset-typescript',
 					'@babel/react',
 				],
 			},
 			production: {
 				plugins: [
-					['@babel/plugin-proposal-object-rest-spread'],
+					'@babel/plugin-proposal-object-rest-spread',
+					'@babel/plugin-proposal-class-properties',
 					'lodash',
 					...(isDocsBuild
 						? []
 						: [
-								[
-									'babel-plugin-transform-require-ignore',
-									{
-										extensions: ['.less', '.css'],
-									},
-								],
 								[
 									'react-peek/babel',
 									{
 										minifyStatics: true,
 									},
 								],
-							]),
+						  ]),
 				],
 				presets: [
 					[
@@ -70,18 +66,14 @@ module.exports = function(api) {
 							},
 						},
 					],
+					'@babel/preset-typescript',
 					'@babel/react',
 				],
 			},
 			modules: {
 				plugins: [
-					['@babel/plugin-proposal-object-rest-spread'],
-					[
-						'babel-plugin-transform-require-ignore',
-						{
-							extensions: ['.less', '.css'],
-						},
-					],
+					'@babel/plugin-proposal-object-rest-spread',
+					'@babel/plugin-proposal-class-properties',
 					[
 						'react-peek/babel',
 						{
@@ -100,6 +92,7 @@ module.exports = function(api) {
 							modules: false,
 						},
 					],
+					'@babel/preset-typescript',
 					'@babel/react',
 				],
 			},

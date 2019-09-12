@@ -1,0 +1,203 @@
+import _ from 'lodash';
+import React from 'react';
+import PropTypes from 'react-peek/prop-types';
+import Overlay, { IOverlayProps } from '../Overlay/Overlay';
+import { lucidClassNames } from '../../util/style-helpers';
+import { FC, StandardProps, getFirst, omitProps } from '../../util/component-types';
+import Button, { IButtonProps } from '../Button/Button';
+import CloseIcon from '../Icon/CloseIcon/CloseIcon';
+
+const cx = lucidClassNames.bind('&-Dialog');
+
+const { node, oneOf, bool, func } = PropTypes;
+
+enum EnumSize {
+	small = 'small',
+	medium = 'medium',
+	large = 'large',
+};
+type Size = keyof typeof EnumSize;
+
+interface IDialogHeaderProps extends StandardProps {
+	description?: string;
+}
+const DialogHeader: FC<IDialogHeaderProps> = (): null => null;
+DialogHeader.displayName = 'Dialog.Header';
+DialogHeader.peek = {
+	description: `
+		Renders a \`<div>\`.
+	`,
+};
+DialogHeader.propName = 'Header';
+
+interface IDialogFooterProps extends StandardProps {
+	description?: string;
+}
+const DialogFooter: FC<IDialogFooterProps> = (): null => null;
+DialogFooter.displayName = 'Dialog.Footer';
+DialogFooter.peek = {
+	description: `
+		Renders a \`<footer>\`.
+	`,
+};
+DialogFooter.propName = 'Footer';
+
+
+export interface IDialogProps extends IOverlayProps {
+
+	/** Size variations that only affect the width of the dialog. All the sizes
+		will grow in height until they get too big, at which point they will
+		scroll inside. */
+	size: Size;
+
+	/** If this is truthy (if a function is provided). the close button will show.
+		The function that is called when the close button is triggered. */
+	handleClose: ({
+		event,
+		props,
+	}: {
+		event: React.MouseEvent;
+		props: IButtonProps;
+	}) => void;
+
+	/** Provides a more segregated design to organize more content in the Dialog.
+	 * @default = false */
+	isComplex: boolean;
+
+	/** A true or false value that dictates whether or not the Body has padding. */
+	hasGutters: boolean;
+
+	/** *Child Element* - Header contents. Only one \`Header\` is used. */
+	Header?: string | React.ReactNode & { props: IDialogHeaderProps };
+
+	/** *Child Element* - Footer contents. Only one \`Footer\` is used. */
+	Footer?: string | React.ReactNode & { props: IDialogFooterProps };
+}
+
+export interface IDialogFC extends FC<IDialogProps> {
+	Header: FC<IDialogHeaderProps>;
+	Footer: FC<IDialogFooterProps>;
+}
+
+const Dialog: IDialogFC = (props): React.ReactElement => {
+
+	const {
+		className,
+		size = EnumSize.medium,
+		handleClose,
+		hasGutters = true,
+		isShown,
+		isComplex = false,
+		...passThroughs
+	} = props;
+
+	const headerChildProp = _.get(
+		getFirst(props, Dialog.Header),
+		'props',
+		{}
+	);
+	const footerChildProp = _.get(
+		getFirst(props, Dialog.Footer),
+		'props',
+		null
+	);
+
+	return (
+		<Overlay
+			{...omitProps(
+				passThroughs,
+				undefined,
+				_.keys(Dialog.propTypes),
+				false
+			)}
+			{..._.pick(passThroughs, _.keys(Overlay.propTypes))}
+			isShown={isShown}
+			className={cx('&', className)}
+		>
+			<div
+				className={cx('&-window', {
+					'&-window-is-small': size === EnumSize.small,
+					'&-window-is-medium': size === EnumSize.medium,
+					'&-window-is-large': size === EnumSize.large,
+					'&-is-complex': isComplex,
+					'&-no-footer': !footerChildProp,
+				})}
+			>
+				<header className={cx('&-header')}>
+					{headerChildProp.children}
+
+					{handleClose && (
+						<Button
+							kind='invisible'
+							hasOnlyIcon
+							className={cx('&-close-button')}
+							onClick={handleClose}
+						>
+							<CloseIcon />
+						</Button>
+					)}
+				</header>
+
+				<section
+					className={cx('&-body', hasGutters ? '' : '&-body-no-gutters')}
+				>
+					{props.children}
+				</section>
+
+				{footerChildProp && (
+					<footer {...footerChildProp} className={cx('&-footer')} />
+				)}
+			</div>
+		</Overlay>
+	);
+};
+
+Dialog.displayName = 'Dialog';
+
+Dialog.peek = {
+	description: `
+		Dialog is used to pop open a window so the user doesn't lose the
+		context of the page behind it. Extra props are spread through to the
+		underlying \`Overlay\`
+	`,
+	categories: ['layout'],
+	extend: 'Overlay',
+	madeFrom: ['Portal', 'Overlay'],
+};
+
+Dialog.propTypes = {
+	...Overlay.propTypes,
+
+	size: oneOf(['small', 'medium', 'large'])`
+		Size variations that only affect the width of the dialog. All the sizes
+		will grow in height until they get too big, at which point they will
+		scroll inside.
+	`,
+
+	handleClose: func`
+		If this is truthy (if a function is provided). the close button will show.
+		The function that is called when the close button is triggered.
+	`,
+
+	isComplex: bool`
+		Defaults to false.
+		Provides a more segregated design to organize more content in the Dialog.
+	`,
+
+	hasGutters: bool`
+		A true or false value that dictates whether or not the Body has padding.
+	`,
+
+	Header: node`
+		*Child Element* - Header contents. Only one \`Header\` is used.
+	`,
+
+	Footer: node`
+		*Child Element* - Footer contents. Only one \`Footer\` is used.
+	`,
+};
+
+Dialog.Header = DialogHeader;
+Dialog.Footer = DialogFooter;
+
+export default Dialog;

@@ -170,12 +170,7 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 1.sta
           hasBorderRight={false}
         >
           <Button
-            hasOnlyIcon={false}
-            isActive={false}
-            isDisabled={false}
-            onClick={[Function]}
             size="small"
-            type="button"
           >
             button
           </Button>
@@ -246,12 +241,8 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 1.sta
           hasBorderRight={false}
         >
           <Button
-            hasOnlyIcon={false}
-            isActive={false}
             isDisabled={true}
-            onClick={[Function]}
             size="small"
-            type="button"
           >
             button
           </Button>
@@ -323,12 +314,7 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 1.sta
           hasBorderRight={false}
         >
           <Button
-            hasOnlyIcon={false}
-            isActive={false}
-            isDisabled={false}
-            onClick={[Function]}
             size="small"
-            type="button"
           >
             button
           </Button>
@@ -400,12 +386,8 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 1.sta
           hasBorderRight={false}
         >
           <Button
-            hasOnlyIcon={false}
-            isActive={false}
             isDisabled={true}
-            onClick={[Function]}
             size="small"
-            type="button"
           >
             button
           </Button>
@@ -480,12 +462,7 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 1.sta
           hasBorderRight={false}
         >
           <Button
-            hasOnlyIcon={false}
-            isActive={false}
-            isDisabled={false}
-            onClick={[Function]}
             size="small"
-            type="button"
           >
             button
           </Button>
@@ -560,12 +537,8 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 1.sta
           hasBorderRight={false}
         >
           <Button
-            hasOnlyIcon={false}
-            isActive={false}
             isDisabled={true}
-            onClick={[Function]}
             size="small"
-            type="button"
           >
             button
           </Button>
@@ -641,12 +614,7 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 1.sta
           hasBorderRight={false}
         >
           <Button
-            hasOnlyIcon={false}
-            isActive={false}
-            isDisabled={false}
-            onClick={[Function]}
             size="small"
-            type="button"
           >
             button
           </Button>
@@ -722,12 +690,8 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 1.sta
           hasBorderRight={false}
         >
           <Button
-            hasOnlyIcon={false}
-            isActive={false}
             isDisabled={true}
-            onClick={[Function]}
             size="small"
-            type="button"
           >
             button
           </Button>
@@ -798,12 +762,7 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 1.sta
           hasBorderRight={false}
         >
           <Button
-            hasOnlyIcon={false}
-            isActive={false}
-            isDisabled={false}
-            onClick={[Function]}
             size="small"
-            type="button"
           >
             button
           </Button>
@@ -874,12 +833,8 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 1.sta
           hasBorderRight={false}
         >
           <Button
-            hasOnlyIcon={false}
-            isActive={false}
             isDisabled={true}
-            onClick={[Function]}
             size="small"
-            type="button"
           >
             button
           </Button>
@@ -951,12 +906,7 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 1.sta
           hasBorderRight={false}
         >
           <Button
-            hasOnlyIcon={false}
-            isActive={false}
-            isDisabled={false}
-            onClick={[Function]}
             size="small"
-            type="button"
           >
             button
           </Button>
@@ -1028,12 +978,8 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 1.sta
           hasBorderRight={false}
         >
           <Button
-            hasOnlyIcon={false}
-            isActive={false}
             isDisabled={true}
-            onClick={[Function]}
             size="small"
-            type="button"
           >
             button
           </Button>
@@ -1105,12 +1051,7 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 1.sta
           hasBorderRight={false}
         >
           <Button
-            hasOnlyIcon={false}
-            isActive={false}
-            isDisabled={false}
-            onClick={[Function]}
             size="small"
-            type="button"
           >
             button
           </Button>
@@ -1182,12 +1123,8 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 1.sta
           hasBorderRight={false}
         >
           <Button
-            hasOnlyIcon={false}
-            isActive={false}
             isDisabled={true}
-            onClick={[Function]}
             size="small"
-            type="button"
           >
             button
           </Button>
@@ -1396,12 +1333,7 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 2.wit
           hasBorderRight={false}
         >
           <Button
-            hasOnlyIcon={false}
-            isActive={false}
-            isDisabled={false}
-            onClick={[Function]}
             size="small"
-            type="button"
           >
             button
           </Button>
@@ -1472,12 +1404,8 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 2.wit
           hasBorderRight={false}
         >
           <Button
-            hasOnlyIcon={false}
-            isActive={false}
             isDisabled={true}
-            onClick={[Function]}
             size="small"
-            type="button"
           >
             button
           </Button>
@@ -1549,12 +1477,7 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 2.wit
           hasBorderRight={false}
         >
           <Button
-            hasOnlyIcon={false}
-            isActive={false}
-            isDisabled={false}
-            onClick={[Function]}
             size="small"
-            type="button"
           >
             button
           </Button>
@@ -1626,12 +1549,8 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 2.wit
           hasBorderRight={false}
         >
           <Button
-            hasOnlyIcon={false}
-            isActive={false}
             isDisabled={true}
-            onClick={[Function]}
             size="small"
-            type="button"
           >
             button
           </Button>
@@ -1706,12 +1625,7 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 2.wit
           hasBorderRight={false}
         >
           <Button
-            hasOnlyIcon={false}
-            isActive={false}
-            isDisabled={false}
-            onClick={[Function]}
             size="small"
-            type="button"
           >
             button
           </Button>
@@ -1786,12 +1700,8 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 2.wit
           hasBorderRight={false}
         >
           <Button
-            hasOnlyIcon={false}
-            isActive={false}
             isDisabled={true}
-            onClick={[Function]}
             size="small"
-            type="button"
           >
             button
           </Button>
@@ -1867,12 +1777,7 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 2.wit
           hasBorderRight={false}
         >
           <Button
-            hasOnlyIcon={false}
-            isActive={false}
-            isDisabled={false}
-            onClick={[Function]}
             size="small"
-            type="button"
           >
             button
           </Button>
@@ -1948,12 +1853,8 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 2.wit
           hasBorderRight={false}
         >
           <Button
-            hasOnlyIcon={false}
-            isActive={false}
             isDisabled={true}
-            onClick={[Function]}
             size="small"
-            type="button"
           >
             button
           </Button>
@@ -2024,12 +1925,7 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 2.wit
           hasBorderRight={false}
         >
           <Button
-            hasOnlyIcon={false}
-            isActive={false}
-            isDisabled={false}
-            onClick={[Function]}
             size="small"
-            type="button"
           >
             button
           </Button>
@@ -2100,12 +1996,8 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 2.wit
           hasBorderRight={false}
         >
           <Button
-            hasOnlyIcon={false}
-            isActive={false}
             isDisabled={true}
-            onClick={[Function]}
             size="small"
-            type="button"
           >
             button
           </Button>
@@ -2177,12 +2069,7 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 2.wit
           hasBorderRight={false}
         >
           <Button
-            hasOnlyIcon={false}
-            isActive={false}
-            isDisabled={false}
-            onClick={[Function]}
             size="small"
-            type="button"
           >
             button
           </Button>
@@ -2254,12 +2141,8 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 2.wit
           hasBorderRight={false}
         >
           <Button
-            hasOnlyIcon={false}
-            isActive={false}
             isDisabled={true}
-            onClick={[Function]}
             size="small"
-            type="button"
           >
             button
           </Button>
@@ -2331,12 +2214,7 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 2.wit
           hasBorderRight={false}
         >
           <Button
-            hasOnlyIcon={false}
-            isActive={false}
-            isDisabled={false}
-            onClick={[Function]}
             size="small"
-            type="button"
           >
             button
           </Button>
@@ -2408,12 +2286,8 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 2.wit
           hasBorderRight={false}
         >
           <Button
-            hasOnlyIcon={false}
-            isActive={false}
             isDisabled={true}
-            onClick={[Function]}
             size="small"
-            type="button"
           >
             button
           </Button>
@@ -2628,12 +2502,7 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 3.set
           hasBorderRight={false}
         >
           <Button
-            hasOnlyIcon={false}
-            isActive={false}
-            isDisabled={false}
-            onClick={[Function]}
             size="small"
-            type="button"
           >
             button
           </Button>
@@ -2704,12 +2573,8 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 3.set
           hasBorderRight={false}
         >
           <Button
-            hasOnlyIcon={false}
-            isActive={false}
             isDisabled={true}
-            onClick={[Function]}
             size="small"
-            type="button"
           >
             button
           </Button>
@@ -2781,12 +2646,7 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 3.set
           hasBorderRight={false}
         >
           <Button
-            hasOnlyIcon={false}
-            isActive={false}
-            isDisabled={false}
-            onClick={[Function]}
             size="small"
-            type="button"
           >
             button
           </Button>
@@ -2858,12 +2718,8 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 3.set
           hasBorderRight={false}
         >
           <Button
-            hasOnlyIcon={false}
-            isActive={false}
             isDisabled={true}
-            onClick={[Function]}
             size="small"
-            type="button"
           >
             button
           </Button>
@@ -2938,12 +2794,7 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 3.set
           hasBorderRight={false}
         >
           <Button
-            hasOnlyIcon={false}
-            isActive={false}
-            isDisabled={false}
-            onClick={[Function]}
             size="small"
-            type="button"
           >
             button
           </Button>
@@ -3018,12 +2869,8 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 3.set
           hasBorderRight={false}
         >
           <Button
-            hasOnlyIcon={false}
-            isActive={false}
             isDisabled={true}
-            onClick={[Function]}
             size="small"
-            type="button"
           >
             button
           </Button>
@@ -3099,12 +2946,7 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 3.set
           hasBorderRight={false}
         >
           <Button
-            hasOnlyIcon={false}
-            isActive={false}
-            isDisabled={false}
-            onClick={[Function]}
             size="small"
-            type="button"
           >
             button
           </Button>
@@ -3180,12 +3022,8 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 3.set
           hasBorderRight={false}
         >
           <Button
-            hasOnlyIcon={false}
-            isActive={false}
             isDisabled={true}
-            onClick={[Function]}
             size="small"
-            type="button"
           >
             button
           </Button>
@@ -3256,12 +3094,7 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 3.set
           hasBorderRight={false}
         >
           <Button
-            hasOnlyIcon={false}
-            isActive={false}
-            isDisabled={false}
-            onClick={[Function]}
             size="small"
-            type="button"
           >
             button
           </Button>
@@ -3332,12 +3165,8 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 3.set
           hasBorderRight={false}
         >
           <Button
-            hasOnlyIcon={false}
-            isActive={false}
             isDisabled={true}
-            onClick={[Function]}
             size="small"
-            type="button"
           >
             button
           </Button>
@@ -3409,12 +3238,7 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 3.set
           hasBorderRight={false}
         >
           <Button
-            hasOnlyIcon={false}
-            isActive={false}
-            isDisabled={false}
-            onClick={[Function]}
             size="small"
-            type="button"
           >
             button
           </Button>
@@ -3486,12 +3310,8 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 3.set
           hasBorderRight={false}
         >
           <Button
-            hasOnlyIcon={false}
-            isActive={false}
             isDisabled={true}
-            onClick={[Function]}
             size="small"
-            type="button"
           >
             button
           </Button>
@@ -3563,12 +3383,7 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 3.set
           hasBorderRight={false}
         >
           <Button
-            hasOnlyIcon={false}
-            isActive={false}
-            isDisabled={false}
-            onClick={[Function]}
             size="small"
-            type="button"
           >
             button
           </Button>
@@ -3640,12 +3455,8 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 3.set
           hasBorderRight={false}
         >
           <Button
-            hasOnlyIcon={false}
-            isActive={false}
             isDisabled={true}
-            onClick={[Function]}
             size="small"
-            type="button"
           >
             button
           </Button>
@@ -3944,12 +3755,7 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 4.ful
           hasBorderRight={false}
         >
           <Button
-            hasOnlyIcon={false}
-            isActive={false}
-            isDisabled={false}
-            onClick={[Function]}
             size="small"
-            type="button"
           >
             button
           </Button>
@@ -4090,12 +3896,8 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 4.ful
           hasBorderRight={false}
         >
           <Button
-            hasOnlyIcon={false}
-            isActive={false}
             isDisabled={true}
-            onClick={[Function]}
             size="small"
-            type="button"
           >
             button
           </Button>
@@ -4237,12 +4039,7 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 4.ful
           hasBorderRight={false}
         >
           <Button
-            hasOnlyIcon={false}
-            isActive={false}
-            isDisabled={false}
-            onClick={[Function]}
             size="small"
-            type="button"
           >
             button
           </Button>
@@ -4384,12 +4181,8 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 4.ful
           hasBorderRight={false}
         >
           <Button
-            hasOnlyIcon={false}
-            isActive={false}
             isDisabled={true}
-            onClick={[Function]}
             size="small"
-            type="button"
           >
             button
           </Button>
@@ -4534,12 +4327,7 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 4.ful
           hasBorderRight={false}
         >
           <Button
-            hasOnlyIcon={false}
-            isActive={false}
-            isDisabled={false}
-            onClick={[Function]}
             size="small"
-            type="button"
           >
             button
           </Button>
@@ -4684,12 +4472,8 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 4.ful
           hasBorderRight={false}
         >
           <Button
-            hasOnlyIcon={false}
-            isActive={false}
             isDisabled={true}
-            onClick={[Function]}
             size="small"
-            type="button"
           >
             button
           </Button>
@@ -4835,12 +4619,7 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 4.ful
           hasBorderRight={false}
         >
           <Button
-            hasOnlyIcon={false}
-            isActive={false}
-            isDisabled={false}
-            onClick={[Function]}
             size="small"
-            type="button"
           >
             button
           </Button>
@@ -4986,12 +4765,8 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 4.ful
           hasBorderRight={false}
         >
           <Button
-            hasOnlyIcon={false}
-            isActive={false}
             isDisabled={true}
-            onClick={[Function]}
             size="small"
-            type="button"
           >
             button
           </Button>
@@ -5132,12 +4907,7 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 4.ful
           hasBorderRight={false}
         >
           <Button
-            hasOnlyIcon={false}
-            isActive={false}
-            isDisabled={false}
-            onClick={[Function]}
             size="small"
-            type="button"
           >
             button
           </Button>
@@ -5278,12 +5048,8 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 4.ful
           hasBorderRight={false}
         >
           <Button
-            hasOnlyIcon={false}
-            isActive={false}
             isDisabled={true}
-            onClick={[Function]}
             size="small"
-            type="button"
           >
             button
           </Button>
@@ -5425,12 +5191,7 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 4.ful
           hasBorderRight={false}
         >
           <Button
-            hasOnlyIcon={false}
-            isActive={false}
-            isDisabled={false}
-            onClick={[Function]}
             size="small"
-            type="button"
           >
             button
           </Button>
@@ -5572,12 +5333,8 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 4.ful
           hasBorderRight={false}
         >
           <Button
-            hasOnlyIcon={false}
-            isActive={false}
             isDisabled={true}
-            onClick={[Function]}
             size="small"
-            type="button"
           >
             button
           </Button>
@@ -5719,12 +5476,7 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 4.ful
           hasBorderRight={false}
         >
           <Button
-            hasOnlyIcon={false}
-            isActive={false}
-            isDisabled={false}
-            onClick={[Function]}
             size="small"
-            type="button"
           >
             button
           </Button>
@@ -5866,12 +5618,8 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 4.ful
           hasBorderRight={false}
         >
           <Button
-            hasOnlyIcon={false}
-            isActive={false}
             isDisabled={true}
-            onClick={[Function]}
             size="small"
-            type="button"
           >
             button
           </Button>
@@ -6150,12 +5898,7 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 5.set
           hasBorderRight={false}
         >
           <Button
-            hasOnlyIcon={false}
-            isActive={false}
-            isDisabled={false}
-            onClick={[Function]}
             size="small"
-            type="button"
           >
             button
           </Button>
@@ -6226,12 +5969,8 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 5.set
           hasBorderRight={false}
         >
           <Button
-            hasOnlyIcon={false}
-            isActive={false}
             isDisabled={true}
-            onClick={[Function]}
             size="small"
-            type="button"
           >
             button
           </Button>
@@ -6303,12 +6042,7 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 5.set
           hasBorderRight={false}
         >
           <Button
-            hasOnlyIcon={false}
-            isActive={false}
-            isDisabled={false}
-            onClick={[Function]}
             size="small"
-            type="button"
           >
             button
           </Button>
@@ -6380,12 +6114,8 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 5.set
           hasBorderRight={false}
         >
           <Button
-            hasOnlyIcon={false}
-            isActive={false}
             isDisabled={true}
-            onClick={[Function]}
             size="small"
-            type="button"
           >
             button
           </Button>
@@ -6460,12 +6190,7 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 5.set
           hasBorderRight={false}
         >
           <Button
-            hasOnlyIcon={false}
-            isActive={false}
-            isDisabled={false}
-            onClick={[Function]}
             size="small"
-            type="button"
           >
             button
           </Button>
@@ -6540,12 +6265,8 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 5.set
           hasBorderRight={false}
         >
           <Button
-            hasOnlyIcon={false}
-            isActive={false}
             isDisabled={true}
-            onClick={[Function]}
             size="small"
-            type="button"
           >
             button
           </Button>
@@ -6621,12 +6342,7 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 5.set
           hasBorderRight={false}
         >
           <Button
-            hasOnlyIcon={false}
-            isActive={false}
-            isDisabled={false}
-            onClick={[Function]}
             size="small"
-            type="button"
           >
             button
           </Button>
@@ -6702,12 +6418,8 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 5.set
           hasBorderRight={false}
         >
           <Button
-            hasOnlyIcon={false}
-            isActive={false}
             isDisabled={true}
-            onClick={[Function]}
             size="small"
-            type="button"
           >
             button
           </Button>
@@ -6778,12 +6490,7 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 5.set
           hasBorderRight={false}
         >
           <Button
-            hasOnlyIcon={false}
-            isActive={false}
-            isDisabled={false}
-            onClick={[Function]}
             size="small"
-            type="button"
           >
             button
           </Button>
@@ -6854,12 +6561,8 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 5.set
           hasBorderRight={false}
         >
           <Button
-            hasOnlyIcon={false}
-            isActive={false}
             isDisabled={true}
-            onClick={[Function]}
             size="small"
-            type="button"
           >
             button
           </Button>
@@ -6931,12 +6634,7 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 5.set
           hasBorderRight={false}
         >
           <Button
-            hasOnlyIcon={false}
-            isActive={false}
-            isDisabled={false}
-            onClick={[Function]}
             size="small"
-            type="button"
           >
             button
           </Button>
@@ -7008,12 +6706,8 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 5.set
           hasBorderRight={false}
         >
           <Button
-            hasOnlyIcon={false}
-            isActive={false}
             isDisabled={true}
-            onClick={[Function]}
             size="small"
-            type="button"
           >
             button
           </Button>
@@ -7085,12 +6779,7 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 5.set
           hasBorderRight={false}
         >
           <Button
-            hasOnlyIcon={false}
-            isActive={false}
-            isDisabled={false}
-            onClick={[Function]}
             size="small"
-            type="button"
           >
             button
           </Button>
@@ -7162,12 +6851,8 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 5.set
           hasBorderRight={false}
         >
           <Button
-            hasOnlyIcon={false}
-            isActive={false}
             isDisabled={true}
-            onClick={[Function]}
             size="small"
-            type="button"
           >
             button
           </Button>

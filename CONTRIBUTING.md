@@ -42,7 +42,7 @@ Start your dev server and go to `http://localhost:8080/#/components/ExampleCompo
 * Example dir `docs/examples/MyNewComponent/`
 * Example component `docs/examples/MyNewComponent/WithDefaults.js`
 
-4. Add your component's JSX file to `/src/index.js`
+4. Add your component's JSX file to `/src/index.ts`
 ```javascript
 import MyNewComponent from './components/MyNewComponent/MyNewComponent';
 
@@ -137,6 +137,14 @@ describe('MyComponent', () => {
 
 [waffle]: https://waffle.io/appnexus/lucid/
 [perf]: https://medium.com/@esamatti/react-js-pure-render-performance-anti-pattern-fb88c101332f
+
+### Statistics
+
+To get statistics on the module dependencies, both internal to the project and external NPM packages, run the following command:
+
+```bash
+NODE_ENV=development npx webpack --config webpack.config.bundle.js --json --stats > stats.json
+```
 
 ## Troubleshooting Frequent Component Errors
 

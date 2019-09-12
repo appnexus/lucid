@@ -30,12 +30,6 @@ describe('Switch', () => {
 					);
 				});
 			});
-
-			it('defaults to `false`.', () => {
-				const wrapper = mount(<Switch />);
-
-				assert.equal(wrapper.prop('isDisabled'), false);
-			});
 		});
 
 		describe('isSelected', () => {
@@ -48,20 +42,6 @@ describe('Switch', () => {
 						testValue
 					);
 				});
-			});
-
-			it('defaults to `false`.', () => {
-				const wrapper = mount(<Switch />);
-
-				assert.equal(wrapper.prop('isSelected'), false);
-			});
-		});
-
-		describe('onSelect', () => {
-			it('defaults to the Lodash `noop` method.', () => {
-				const wrapper = mount(<Switch />);
-
-				assert.equal(wrapper.prop('onSelect'), _.noop);
 			});
 		});
 
