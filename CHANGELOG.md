@@ -2,10 +2,73 @@
 
 - Nothing at the moment.
 
+## 5.1.0
+
+- #1013 [minor] TLDR; converted many components to TypeScript and upgraded Storybook
+  - Converted the following to TypeScript:
+    - `Axis`
+    - `Badge`
+    - `Banner`
+    - `Bar`
+    - `Breadcrumb`
+    - `Button`
+    - `CalendarMonth`
+    - `Checkbox`
+    - `CheckboxLabeled`
+    - `Collapsible`
+    - `ContextMenu`
+    - `Dialog`
+    - `DragCaptureZone`
+    - `Expander`
+    - `Grid`
+    - `InfiniteSlidePanel`
+    - `Line`
+    - `Lines`
+    - `LoadingIndicator`
+    - `LoadingMessage`
+    - `NotchedTag`
+    - `Overlay`
+    - `OverlayWrapper`
+    - `Panel`
+    - `Point`
+    - `Points`
+    - `Portal`
+    - `ProgressBar`
+    - `RadioButton`
+    - `RadioButtonLabeled`
+    - `Resizer`
+    - `SidePanel`
+    - `SlidePanel`
+    - `SplitHorizontal`
+    - `SplitVertical`
+    - `StickySection`
+    - `Switch`
+    - `Tag`
+    - `TextField`
+    - `Typography`
+    - `Underline`
+    - `Validation`
+    - `componentTypes`
+    - `domHelpers`
+  - Moved eslint configuration into lucid to aid getting new TS rules setup
+  - Upgraded Storybook to v5
+  - Added Chromatic to the travis build pipeline but had to disable cause we have to pay up
+  - Removed private `PanelToggles` storybook addon
+  - Updated Babel and friends and configured it to strip TypeScript
+  - Restructured many examples
+  - Overhauled npm scripts and parallelized many tasks
+  - Upgraded `reselect` to v4
+  - Upgraded `eslint` to v6
+  - Upgraded `jest` to v24
+
+https://github.com/appnexus/lucid/compare/v5.0.0...v5.1.0
+
 ## 5.0.0
 
 - #1037 [major] Replace `getDefaultProps` with `defaultProps` on all components in preparation for the move to FCs, ES6 classes, and TypeScript components
 - #1038 [patch] Fix `Banner` wanring close icon color
+
+https://github.com/appnexus/lucid/compare/v4.5.0...v5.0.0
 
 ## 4.5.0
 
