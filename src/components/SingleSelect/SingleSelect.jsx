@@ -180,7 +180,7 @@ const SingleSelect = createClass({
 			isDisabled: false,
 			isInvisible: false,
 			selectedIndex: null,
-			DropMenu: DropMenu.getDefaultProps(),
+			DropMenu: DropMenu.defaultProps,
 		};
 	},
 

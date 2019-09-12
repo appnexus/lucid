@@ -118,6 +118,24 @@ describe('component-types', () => {
 			);
 		});
 
+		it('should move `getDefaultProps` to `defaultProps` on the returned item', () => {
+			const defaultProps = { name: 'jon' };
+
+			const NameBadge = createClass({
+				getDefaultProps: () => defaultProps,
+			});
+
+			assert(
+				!_.has(NameBadge, 'getDefaultProps'),
+				'must not have `getDefaultProps` as a static property'
+			);
+			assert.deepEqual(
+				NameBadge.defaultProps,
+				defaultProps,
+				'static `defaultProps` must equal expected value passed as `getDefaultProps`'
+			);
+		});
+
 		it('should make `propName` a static property.', () => {
 			const Panel = createClass({
 				propName: ['Panel', 'panel', 'panels'],

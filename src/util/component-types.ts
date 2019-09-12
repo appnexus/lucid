@@ -133,7 +133,17 @@ export function createClass<P, S>(
 		newDefinition.statics.definition = newDefinition;
 	}
 
-	return createReactClass(newDefinition);
+	const newClass = createReactClass(newDefinition);
+
+	// This conditional (and breaking change) was introduced to help us move from
+	// legacy React classes to functional components & es6 classes which lack
+	// `getDefaultProps`.
+	if (newClass.getDefaultProps) {
+		newClass.defaultProps = newClass.getDefaultProps();
+		delete newClass.getDefaultProps;
+	}
+
+	return newClass;
 }
 
 // return all elements matching the specified types

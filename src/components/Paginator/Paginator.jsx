@@ -125,7 +125,7 @@ const Paginator = createClass({
 			totalCount: null,
 			pageSizeOptions: [10, 50, 100],
 			SingleSelect: {
-				...SingleSelect.getDefaultProps(),
+				...SingleSelect.defaultProps,
 				selectedIndex: 0,
 			},
 			TextField: TextField.defaultProps,

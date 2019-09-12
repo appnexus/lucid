@@ -13,7 +13,7 @@ exports[`RadioGroup [common] example testing should match snapshot(s) for defaul
     callbackId={0}
     isSelected={true}
     key="0"
-    name="1-lucid-RadioGroup-2"
+    name="1-lucid-RadioGroup-3"
     onSelect={[Function]}
     style={
       Object {
@@ -34,7 +34,7 @@ exports[`RadioGroup [common] example testing should match snapshot(s) for defaul
     callbackId={1}
     isSelected={false}
     key="1"
-    name="1-lucid-RadioGroup-2"
+    name="1-lucid-RadioGroup-3"
     onSelect={[Function]}
     style={
       Object {
@@ -55,7 +55,7 @@ exports[`RadioGroup [common] example testing should match snapshot(s) for defaul
     callbackId={2}
     isSelected={false}
     key="2"
-    name="1-lucid-RadioGroup-2"
+    name="1-lucid-RadioGroup-3"
     onSelect={[Function]}
     style={
       Object {
@@ -76,7 +76,7 @@ exports[`RadioGroup [common] example testing should match snapshot(s) for defaul
     callbackId={3}
     isSelected={false}
     key="3"
-    name="1-lucid-RadioGroup-2"
+    name="1-lucid-RadioGroup-3"
     onSelect={[Function]}
     style={
       Object {
@@ -97,7 +97,7 @@ exports[`RadioGroup [common] example testing should match snapshot(s) for defaul
     callbackId={4}
     isSelected={false}
     key="4"
-    name="1-lucid-RadioGroup-2"
+    name="1-lucid-RadioGroup-3"
     onSelect={[Function]}
     style={
       Object {
@@ -126,7 +126,7 @@ exports[`RadioGroup [common] example testing should match snapshot(s) for is-dis
     isDisabled={true}
     isSelected={true}
     key="0"
-    name="1-lucid-RadioGroup-2"
+    name="1-lucid-RadioGroup-3"
     onSelect={[Function]}
     style={
       Object {
@@ -148,7 +148,7 @@ exports[`RadioGroup [common] example testing should match snapshot(s) for is-dis
     isDisabled={true}
     isSelected={false}
     key="1"
-    name="1-lucid-RadioGroup-2"
+    name="1-lucid-RadioGroup-3"
     onSelect={[Function]}
     style={
       Object {
@@ -170,7 +170,7 @@ exports[`RadioGroup [common] example testing should match snapshot(s) for is-dis
     isDisabled={true}
     isSelected={false}
     key="2"
-    name="1-lucid-RadioGroup-2"
+    name="1-lucid-RadioGroup-3"
     onSelect={[Function]}
     style={
       Object {
@@ -192,7 +192,7 @@ exports[`RadioGroup [common] example testing should match snapshot(s) for is-dis
     isDisabled={true}
     isSelected={false}
     key="3"
-    name="1-lucid-RadioGroup-2"
+    name="1-lucid-RadioGroup-3"
     onSelect={[Function]}
     style={
       Object {
@@ -214,7 +214,7 @@ exports[`RadioGroup [common] example testing should match snapshot(s) for is-dis
     isDisabled={true}
     isSelected={false}
     key="4"
-    name="1-lucid-RadioGroup-2"
+    name="1-lucid-RadioGroup-3"
     onSelect={[Function]}
     style={
       Object {
@@ -242,7 +242,7 @@ exports[`RadioGroup [common] example testing should match snapshot(s) for nested
     callbackId={0}
     isSelected={true}
     key="0"
-    name="1-lucid-RadioGroup-2"
+    name="1-lucid-RadioGroup-3"
     onSelect={[Function]}
     style={
       Object {
@@ -277,7 +277,7 @@ exports[`RadioGroup [common] example testing should match snapshot(s) for nested
     callbackId={1}
     isSelected={false}
     key="1"
-    name="1-lucid-RadioGroup-2"
+    name="1-lucid-RadioGroup-3"
     onSelect={[Function]}
     style={
       Object {
@@ -317,7 +317,7 @@ exports[`RadioGroup [common] example testing should match snapshot(s) for nested
     callbackId={2}
     isSelected={false}
     key="2"
-    name="1-lucid-RadioGroup-2"
+    name="1-lucid-RadioGroup-3"
     onSelect={[Function]}
     style={
       Object {
@@ -609,7 +609,7 @@ exports[`RadioGroup [common] example testing should match snapshot(s) for statef
     callbackId={0}
     isSelected={true}
     key="0"
-    name="1-lucid-RadioGroup-2"
+    name="1-lucid-RadioGroup-3"
     onSelect={[Function]}
     style={
       Object {
@@ -630,7 +630,7 @@ exports[`RadioGroup [common] example testing should match snapshot(s) for statef
     callbackId={1}
     isSelected={false}
     key="1"
-    name="1-lucid-RadioGroup-2"
+    name="1-lucid-RadioGroup-3"
     onSelect={[Function]}
     style={
       Object {
@@ -651,7 +651,7 @@ exports[`RadioGroup [common] example testing should match snapshot(s) for statef
     callbackId={2}
     isSelected={false}
     key="2"
-    name="1-lucid-RadioGroup-2"
+    name="1-lucid-RadioGroup-3"
     onSelect={[Function]}
     style={
       Object {

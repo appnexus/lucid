@@ -195,7 +195,7 @@ const SearchableSingleSelect = createClass({
 			optionFilter: propsSearch,
 			searchText: '',
 			selectedIndex: null,
-			DropMenu: DropMenu.getDefaultProps(),
+			DropMenu: DropMenu.defaultProps,
 		};
 	},
 

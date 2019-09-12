@@ -291,8 +291,8 @@ describe('DataTable', () => {
 
 			it('should render without prop warning for isSelected when data is empty array', () => {
 				const emptyData = [];
-				
-				const wrapper = shallow(<DataTable isSelectable data={emptyData}/>);
+
+				const wrapper = shallow(<DataTable isSelectable data={emptyData} />);
 
 				expect(wrapper.find(Checkbox).props().isSelected).toEqual(false);
 			});

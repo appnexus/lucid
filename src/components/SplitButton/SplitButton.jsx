@@ -103,7 +103,7 @@ const SplitButton = createClass({
 		return {
 			direction: 'down',
 			type: 'button',
-			DropMenu: DropMenu.getDefaultProps(),
+			DropMenu: DropMenu.defaultProps,
 		};
 	},
 
