@@ -149,12 +149,12 @@ class DragCaptureZone extends React.Component<
 		let pageY;
 
 		/* istanbul ignore next */
-		if (event instanceof TouchEvent && event.touches) {
+		if ('touches' in event) {
 			pageX = event.touches[0].pageX;
 			pageY = event.touches[0].pageY;
 		} else {
-			pageX = (event as MouseEvent).pageX;
-			pageY = (event as MouseEvent).pageY;
+			pageX = event.pageX;
+			pageY = event.pageY;
 		}
 
 		event.preventDefault();
@@ -178,12 +178,12 @@ class DragCaptureZone extends React.Component<
 		let pageY;
 
 		/* istanbul ignore next */
-		if (event instanceof TouchEvent && event.touches) {
+		if ('touches' in event) {
 			pageX = event.touches[0].pageX;
 			pageY = event.touches[0].pageY;
 		} else {
-			pageX = (event as React.MouseEvent).pageX;
-			pageY = (event as React.MouseEvent).pageY;
+			pageX = event.pageX;
+			pageY = event.pageY;
 
 			window.document.addEventListener('mousemove', this.handleDrag);
 			window.document.addEventListener('mouseup', this.handleDragEnd);
@@ -215,12 +215,12 @@ class DragCaptureZone extends React.Component<
 		let pageY;
 
 		/* istanbul ignore next */
-		if (event instanceof TouchEvent && event.touches) {
+		if ('changedTouches' in event) {
 			pageX = event.changedTouches[0].pageX;
 			pageY = event.changedTouches[0].pageY;
 		} else {
-			pageX = (event as MouseEvent).pageX;
-			pageY = (event as MouseEvent).pageY;
+			pageX = event.pageX;
+			pageY = event.pageY;
 		}
 
 		window.document.removeEventListener('mousemove', this.handleDrag);
