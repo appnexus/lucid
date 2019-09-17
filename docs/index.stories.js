@@ -25,8 +25,8 @@ import './index.less'; // very minimal overrides
 
 registerLanguage('jsx', jsx);
 
-const articlePageOptions = { showAddonPanel: false };
-const examplePageOptions = { showAddonPanel: true, addonPanelInRight: true };
+const articlePageOptions = { showPanel: false };
+const examplePageOptions = { showPanel: true, panelPosition: 'right' };
 
 const loadAllKeys = (reqContext, rawContext) => {
 	return _.map(_.get(reqContext, 'keys', _.constant([]))(), key => ({
@@ -136,6 +136,36 @@ class ArticlePage extends React.Component {
 	}
 }
 
+// We use `<hr>` tags directly here instead of the --- markdown because storybook adds their own styling that hides ---
+// see https://github.com/storybookjs/storybook/issues/8074
+const formatNotes = ({overview, intendedUse, technicalRecommendations, exampleNotes}) => `
+### Overview
+
+${overview}
+
+<hr style="border-bottom:1px solid #e8e6e6">
+
+### Intended Use
+
+${intendedUse}
+
+<hr style="border-bottom:1px solid #e8e6e6">
+
+### Technical Recommendations
+
+${technicalRecommendations}
+
+<hr style="border-bottom:1px solid #e8e6e6">
+
+${exampleNotes ? 
+`
+### Example Notes
+
+${exampleNotes}
+`
+: ''}
+`;
+
 storiesOf('Documentation', module)
 	.addParameters({ options: articlePageOptions })
 	.add('Introduction', () => (
@@ -173,18 +203,6 @@ const filteredComponents = _.reject(loadedComponents, ({ component }) =>
 	isPrivate(component)
 );
 
-// const storiesOfComponents = storiesOf('Components', module)
-// 	.addParameters({ options: examplePageOptions })
-// 	.add(
-// 		'Overview',
-// 		() => (
-// 			<ArticlePage>
-// 				<h1>Components</h1>
-// 			</ArticlePage>
-// 		),
-// 		{ options: articlePageOptions, panelToggles: undefined }
-// 	);
-
 const storiesOfAddSequence = [];
 
 _.forEach(
@@ -196,15 +214,16 @@ _.forEach(
 		);
 
 		const componentRef = getDefaultExport(component);
+
+		// TODO: Find a way to add per example notes
 		const notes =
-			_.has(componentRef, 'peek.description') &&
-			stripIndent(componentRef.peek.description);
+			_.has(componentRef, 'peek.notes') &&
+			formatNotes(_.mapValues(componentRef.peek.notes, stripIndent));
 
 		const category =
 			_.has(componentRef, 'peek.categories') &&
 			stripIndent(componentRef.peek.categories[0]);
 
-		// TODO: Find a way to add per example notes
 		_.forEach(examples, ({ name, Example, source }) => {
 			storiesOfAddSequence.push([
 				componentName,
