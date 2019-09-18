@@ -13,7 +13,9 @@ const cx = lucidClassNames.bind('&-Checkbox');
 
 const { bool, func, object, string } = PropTypes;
 
-export interface ICheckboxProps extends StandardProps {
+export interface ICheckboxProps
+	extends StandardProps,
+		Omit<React.HTMLProps<HTMLInputElement>, keyof ICheckboxProps> {
 	/** Indicates whether the component should appear in an "indeterminate" or
 	 * "partially checked" state. This prop takes precedence over
 	 * \`isSelected\`.

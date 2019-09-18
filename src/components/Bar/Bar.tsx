@@ -9,7 +9,9 @@ const cx = lucidClassNames.bind('&-Bar');
 
 const { number, bool, string, object } = PropTypes;
 
-export interface IBarProps extends StandardProps {
+export interface IBarProps
+	extends StandardProps,
+		React.SVGProps<SVGRectElement> {
 	/** x coordinate. */
 	x: number;
 
@@ -36,27 +38,22 @@ export interface IBarProps extends StandardProps {
 }
 
 const Bar: FC<IBarProps> = ({
-		className,
-		color = chartConstants.COLOR_0,
-		hasStroke,
-		height = 0,
-		width = 0,
-		style,
-		x = 0,
-		y = 0,
-		...passThroughs
+	className,
+	color = chartConstants.COLOR_0,
+	hasStroke,
+	height = 0,
+	width = 0,
+	style,
+	x = 0,
+	y = 0,
+	...passThroughs
 }): React.ReactElement => {
-
 	const isCustomColor = _.startsWith(color, '#');
 	const colorStyle = isCustomColor ? { fill: color } : null;
 
 	return (
 		<rect
-			{...omitProps<IBarProps>(
-				passThroughs,
-				undefined,
-				_.keys(Bar.propTypes)
-			)}
+			{...omitProps<IBarProps>(passThroughs, undefined, _.keys(Bar.propTypes))}
 			className={cx(className, '&', {
 				'&-has-stroke': hasStroke,
 				[`&-${color}`]: !isCustomColor,

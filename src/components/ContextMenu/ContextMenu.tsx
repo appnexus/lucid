@@ -3,7 +3,12 @@ import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import _ from 'lodash';
 import Portal from '../Portal/Portal';
-import { FC, getFirst, omitProps, StandardProps } from '../../util/component-types';
+import {
+	FC,
+	getFirst,
+	omitProps,
+	StandardProps,
+} from '../../util/component-types';
 import {
 	getAbsoluteBoundingClientRect,
 	sharesAncestor,
@@ -23,13 +28,13 @@ ContextMenuTarget.propName = 'Target';
 ContextMenuTarget.peek = {
 	description: `Renders an element of \`elementType\` (defaults to \`<span>\`)
 	that the menu \`FlyOut\` anchors to.`,
-}
+};
 ContextMenuTarget.propTypes = {
-	elementType: string
+	elementType: string,
 };
 ContextMenuTarget.defaultProps = {
 	elementType: 'span',
-}
+};
 
 interface IContextMenuFlyOutProps extends StandardProps {}
 const ContextMenuFlyOut: FC<IContextMenuFlyOutProps> = (): null => null;
@@ -37,7 +42,7 @@ ContextMenuFlyOut.displayName = 'ContextMenu.FlyOut';
 ContextMenuFlyOut.propName = 'FlyOut';
 ContextMenuFlyOut.peek = {
 	description: `Renders a \`<Portal>\` anchored to the \`Target\`.`,
-}
+};
 
 /** These have to be lowercase because:
  * 1. the key and value have to match
@@ -49,14 +54,14 @@ export enum EnumDirection {
 	down = 'down',
 	left = 'left',
 	right = 'right',
-};
+}
 export type Direction = keyof typeof EnumDirection;
 
 export enum EnumAlignment {
 	start = 'start',
 	center = 'center',
 	end = 'end',
-};
+}
 export type Alignment = keyof typeof EnumAlignment;
 
 export interface FlyoutPosition {
@@ -77,8 +82,12 @@ const defaultFlyoutPosition = {
 
 type GetAlignmentOffset = (n: number) => number;
 
-interface IContextMenuProps extends StandardProps {
-
+// TODO: Is there a better way to add type checks for passThroughs in this case
+// where the underling element could be anything vs just extending
+// `React.HTMLProps<HTMLElement>`? Related to issue #1045
+interface IContextMenuProps
+	extends StandardProps,
+		React.HTMLProps<HTMLElement> {
 	/** direction of the FlyOut relative to Target. */
 	direction?: Direction;
 
@@ -104,12 +113,13 @@ interface IContextMenuProps extends StandardProps {
 	isExpanded?: boolean;
 
 	/** Called when a click event happenens outside of the ContextMenu */
-	onClickOut?: (
-		{ event, props }: {
-			event: MouseEvent;
-			props: IContextMenuProps;
-		}
-	) => void;
+	onClickOut?: ({
+		event,
+		props,
+	}: {
+		event: MouseEvent;
+		props: IContextMenuProps;
+	}) => void;
 
 	/** The `id` of the FlyOut portal element that is appended to
 		`document.body`. Defaults to a generated `id`. */
@@ -132,11 +142,11 @@ interface IContextMenuState {
 	flyOutWidth: number;
 }
 
-class ContextMenu  extends React.Component<
+class ContextMenu extends React.Component<
 	IContextMenuProps,
 	IContextMenuState,
 	{}
->{
+> {
 	static displayName = 'ContextMenu';
 	static peek = {
 		description: `
@@ -278,11 +288,12 @@ class ContextMenu  extends React.Component<
 		// in this block, I assert the type of target because EventTarget -> Element -> HtmlElement (from general to specific typing)
 		const eventTarget = event.target as HTMLElement | null;
 
-		if (onClickOut
-			&& flyOutPortalRef.current
-			&& targetRef.current
-			&& eventTarget
-			&& eventTarget.nodeName
+		if (
+			onClickOut &&
+			flyOutPortalRef.current &&
+			targetRef.current &&
+			eventTarget &&
+			eventTarget.nodeName
 		) {
 			const flyOutEl = flyOutPortalRef.current.portalElement.firstChild;
 			const wasALabelClick =
@@ -295,86 +306,73 @@ class ContextMenu  extends React.Component<
 			}
 
 			if (
-				!((flyOutEl as HTMLDivElement).contains(eventTarget)
-					|| targetRef.current.contains(eventTarget))
-				&& event.type === 'click'
+				!(
+					(flyOutEl as HTMLDivElement).contains(eventTarget) ||
+					targetRef.current.contains(eventTarget)
+				) &&
+				event.type === 'click'
 			) {
-				onClickOut({ props, event: (event as MouseEvent) });
+				onClickOut({ props, event: event as MouseEvent });
 			}
 		}
 	};
 
-	calcAlignmentOffset = (
-		{
-			direction,
-			alignment,
-			getAlignmentOffset,
-			flyOutHeight,
-			flyOutWidth
-		}: {
-			direction: Direction,
-			alignment: Alignment,
-			getAlignmentOffset: GetAlignmentOffset,
-			flyOutHeight: number,
-			flyOutWidth: number,
-		}
-	): number => {
-		const {	up: UP,	down: DOWN	} = EnumDirection;
-		const {	center: CENTER	} = EnumAlignment;
+	calcAlignmentOffset = ({
+		direction,
+		alignment,
+		getAlignmentOffset,
+		flyOutHeight,
+		flyOutWidth,
+	}: {
+		direction: Direction;
+		alignment: Alignment;
+		getAlignmentOffset: GetAlignmentOffset;
+		flyOutHeight: number;
+		flyOutWidth: number;
+	}): number => {
+		const { up: UP, down: DOWN } = EnumDirection;
+		const { center: CENTER } = EnumAlignment;
 
 		return !_.isUndefined(this.props.alignmentOffset)
 			? this.props.alignmentOffset
 			: alignment === CENTER
 			? getAlignmentOffset(
-					_.includes([UP, DOWN], direction)
-						? flyOutWidth
-						: flyOutHeight
-				)
+					_.includes([UP, DOWN], direction) ? flyOutWidth : flyOutHeight
+			  )
 			: 0;
-	}
+	};
 
-	getMatch = (
-		{
-			direction,
-			alignment,
-			flyOutHeight,
-			flyOutWidth,
-			clientWidth,
-			directonOffset,
-			alignmentOffset,
-			top,
-			bottom,
-			left,
-			right,
-			width,
-			height,
-		}: {
-			direction: Direction;
-			alignment: Alignment;
-			flyOutHeight: number;
-			flyOutWidth: number;
-			clientWidth: number;
-			directonOffset: number;
-			alignmentOffset: number;
-			top: number;
-			bottom: number;
-			left: number;
-			right: number;
-			width: number;
-			height: number;
+	getMatch = ({
+		direction,
+		alignment,
+		flyOutHeight,
+		flyOutWidth,
+		clientWidth,
+		directonOffset,
+		alignmentOffset,
+		top,
+		bottom,
+		left,
+		right,
+		width,
+		height,
+	}: {
+		direction: Direction;
+		alignment: Alignment;
+		flyOutHeight: number;
+		flyOutWidth: number;
+		clientWidth: number;
+		directonOffset: number;
+		alignmentOffset: number;
+		top: number;
+		bottom: number;
+		left: number;
+		right: number;
+		width: number;
+		height: number;
 	}): FlyoutPosition => {
-
-		const {
-			up: UP,
-			down: DOWN,
-			left: LEFT,
-			right: RIGHT
-		} = EnumDirection;
-		const {
-			start: START,
-			center: CENTER,
-			end: END
-		} = EnumAlignment;
+		const { up: UP, down: DOWN, left: LEFT, right: RIGHT } = EnumDirection;
+		const { start: START, center: CENTER, end: END } = EnumAlignment;
 
 		const options = {
 			[UP]: {
@@ -462,29 +460,27 @@ class ContextMenu  extends React.Component<
 		if (!flyOutPortalRef.current) return {};
 
 		if (direction && alignment) {
-			return this.getMatch(
-				{
+			return this.getMatch({
+				direction,
+				alignment,
+				flyOutHeight,
+				flyOutWidth,
+				clientWidth,
+				directonOffset,
+				alignmentOffset: this.calcAlignmentOffset({
 					direction,
 					alignment,
+					getAlignmentOffset,
 					flyOutHeight,
 					flyOutWidth,
-					clientWidth,
-					directonOffset,
-					alignmentOffset: this.calcAlignmentOffset({
-						direction,
-						alignment,
-						getAlignmentOffset,
-						flyOutHeight,
-						flyOutWidth,
-					}),
-					top,
-					bottom,
-					left,
-					right,
-					width,
-					height
-				}
-			);
+				}),
+				top,
+				bottom,
+				left,
+				right,
+				width,
+				height,
+			});
 		}
 	};
 
@@ -495,7 +491,9 @@ class ContextMenu  extends React.Component<
 			return;
 		}
 
-		const targetRect = getAbsoluteBoundingClientRect((targetRef.current as HTMLDivElement));
+		const targetRect = getAbsoluteBoundingClientRect(
+			targetRef.current as HTMLDivElement
+		);
 		const portalRef = flyOutPortalRef.current as Portal;
 
 		// Don't cause a state-change if target dimensions are the same
@@ -511,7 +509,10 @@ class ContextMenu  extends React.Component<
 
 		if (portalRef) {
 			const flyOutEl = portalRef.portalElement.firstChild;
-			const { height, width } = (flyOutEl as HTMLDivElement).getBoundingClientRect();
+			const {
+				height,
+				width,
+			} = (flyOutEl as HTMLDivElement).getBoundingClientRect();
 			this.setState({
 				targetRect,
 				flyOutHeight: height,
@@ -522,7 +523,7 @@ class ContextMenu  extends React.Component<
 
 	componentWillReceiveProps(): void {
 		_.defer((): void => this.alignFlyOut());
-	};
+	}
 
 	componentDidMount(): void {
 		_.defer((): void => this.alignFlyOut());
@@ -530,12 +531,12 @@ class ContextMenu  extends React.Component<
 
 		document.body.addEventListener('touchstart', this.handleBodyClick);
 		document.body.addEventListener('click', this.handleBodyClick);
-	};
+	}
 
 	componentWillUnmount(): void {
 		this.endAlignment();
 		document.body.removeEventListener('click', this.handleBodyClick);
-	};
+	}
 
 	render(): React.ReactNode {
 		const {
@@ -550,7 +551,10 @@ class ContextMenu  extends React.Component<
 			state: { portalId, targetRect },
 		} = this;
 
-		const targetElement = getFirst(this.props, ContextMenu.Target) as React.ReactElement;
+		const targetElement = getFirst(
+			this.props,
+			ContextMenu.Target
+		) as React.ReactElement;
 		const targetChildren = _.get(targetElement, 'props.children', null);
 		const TargetElementType = targetElement.props.elementType;
 
@@ -560,11 +564,7 @@ class ContextMenu  extends React.Component<
 		return (
 			<TargetElementType
 				ref={this.targetRef}
-				{...omitProps(
-					passThroughs,
-					undefined,
-					_.keys(ContextMenu.propTypes)
-				)}
+				{...omitProps(passThroughs, undefined, _.keys(ContextMenu.propTypes))}
 				className={cx('&', className)}
 				style={style}
 			>
@@ -590,7 +590,7 @@ class ContextMenu  extends React.Component<
 				) : null}
 			</TargetElementType>
 		);
-	};
-};
+	}
+}
 
 export default ContextMenu;

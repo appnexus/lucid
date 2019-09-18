@@ -2,7 +2,12 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, findTypes, omitProps, StandardProps } from '../../util/component-types';
+import {
+	createClass,
+	findTypes,
+	omitProps,
+	StandardProps,
+} from '../../util/component-types';
 import { buildHybridComponent } from '../../util/state-management';
 import ChevronIcon from '../Icon/ChevronIcon/ChevronIcon';
 import Collapsible from '../Collapsible/Collapsible';
@@ -21,7 +26,9 @@ interface IExpanderAdditionalLabelProps extends StandardProps {
 	description?: string;
 }
 
-export interface IExpanderProps extends StandardProps {
+export interface IExpanderProps
+	extends StandardProps,
+		React.HTMLProps<HTMLDivElement> {
 	/**
 	 * Indicates that the component is in the "expanded" state when true and in
 	 * the "unexpanded" state when false.

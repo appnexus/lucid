@@ -2,7 +2,12 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import { omitProps, getFirst, FC, StandardProps } from '../../util/component-types';
+import {
+	omitProps,
+	getFirst,
+	FC,
+	StandardProps,
+} from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-ProgressBar');
 
@@ -10,7 +15,9 @@ const { number, string, oneOf, node } = PropTypes;
 
 interface ITitleProps extends StandardProps {}
 
-interface IProgressBarProps extends StandardProps {
+interface IProgressBarProps
+	extends StandardProps,
+		React.HTMLProps<HTMLDivElement> {
 	/** Applies a color style for the kind of ProgressBar. */
 	kind: 'default' | 'success' | 'danger' | 'info' | 'warning';
 

@@ -7,7 +7,9 @@ import { omitProps, FC, StandardProps } from '../../util/component-types';
 const cx = lucidClassNames.bind('&-Switch');
 const { bool, func, object, string } = PropTypes;
 
-export interface ISwitchProps extends StandardProps {
+export interface ISwitchProps
+	extends StandardProps,
+		Omit<React.HTMLProps<HTMLSpanElement>, keyof ISwitchProps> {
 	/** Indicates whether the component should appear and act disabled by having
 	 * a "greyed out" palette and ignoring user interactions. */
 	isDisabled?: boolean;

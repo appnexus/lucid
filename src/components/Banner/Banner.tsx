@@ -11,8 +11,9 @@ const cx = lucidClassNames.bind('&-Banner');
 
 const { bool, element, func, node, oneOf, string } = PropTypes;
 
-export interface IBannerProps extends StandardProps {
-
+export interface IBannerProps
+	extends StandardProps,
+		React.HTMLProps<HTMLDivElement> {
 	/** Pass in a icon component for custom icons within `Banner`. */
 	icon: React.ReactElement;
 
@@ -55,13 +56,15 @@ const Banner: FC<IBannerProps> = ({
 	onClose = _.noop,
 	...passThroughs
 }): React.ReactElement => {
-
-	const handleClose = ({ event, props }: {
-		event: React.MouseEvent,
-		props: IIconProps
+	const handleClose = ({
+		event,
+		props,
+	}: {
+		event: React.MouseEvent;
+		props: IIconProps;
 	}): void => {
 		onClose({ event, props });
-	}
+	};
 
 	let displayedIcon = null;
 
@@ -77,11 +80,7 @@ const Banner: FC<IBannerProps> = ({
 		>
 			{!isClosed ? (
 				<section
-					{...omitProps(
-							passThroughs,
-							undefined,
-							_.keys(Banner.propTypes)
-					)}
+					{...omitProps(passThroughs, undefined, _.keys(Banner.propTypes))}
 					className={cx(
 						'&',
 						{

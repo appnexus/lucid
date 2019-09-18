@@ -9,7 +9,9 @@ const cx = lucidClassNames.bind('&-Line');
 
 const { string, object, bool } = PropTypes;
 
-export interface ILineProps extends StandardProps {
+export interface ILineProps
+	extends StandardProps,
+		React.SVGProps<SVGPathElement> {
 	/** The path for the line. */
 	d?: string;
 
@@ -32,7 +34,6 @@ const Line: FC<ILineProps> = ({
 	style,
 	...passThroughs
 }): React.ReactElement => {
-
 	const isCustomColor = _.startsWith(color, '#');
 	const colorStyle = isCustomColor ? { fill: color, stroke: color } : null;
 

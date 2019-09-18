@@ -47,7 +47,9 @@ PanelFooter.propTypes = {
 };
 PanelFooter.propName = 'Footer';
 
-export interface IPanelProps extends StandardProps {
+export interface IPanelProps
+	extends StandardProps,
+		React.HTMLProps<HTMLDivElement> {
 	/** *Child Element* - Header contents. Only one \`Header\` is used. */
 	Header?: React.ReactNode & { props: IPanelHeaderProps };
 
@@ -59,9 +61,6 @@ export interface IPanelProps extends StandardProps {
 
 	/** If set to false, removes margin around the Panel */
 	hasMargin?: boolean;
-
-	/** Styles that are passed through to root element. */
-	style?: React.CSSProperties;
 
 	/** If set to true, makes content overflow scrollable, when Panel has a set
 	 * height. */

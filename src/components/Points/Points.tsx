@@ -23,7 +23,9 @@ function isValidSeries(series: any): boolean {
 	return _.isFinite(series) || _.isDate(series);
 }
 
-export interface IPointsProps  extends StandardProps {
+export interface IPointsProps
+	extends StandardProps,
+		React.SVGProps<SVGGElement> {
 	/** 	Takes one of the palettes exported from \`lucid.chartConstants\`.
 	Available palettes:
 
@@ -68,21 +70,18 @@ export interface IPointsProps  extends StandardProps {
 			{ x: 'five'  , y0: 4  , y1: 8 , y2: 9 , y3: 8 },
 			{ x: 'six'   , y0: 20 , y1: 8 , y2: 9 , y3: 1 },
 		] */
-	data: Array<
-		{ [key: string]: number; }
-		& { x: number | string; }
-	>;
+	data: Array<{ [key: string]: number } & { x: number | string }>;
 
 	/** The scale for the x axis. Must be a d3 scale. Lucid exposes the
 		`lucid.d3Scale` library for use here. */
-		xScale:
-		d3Scale.ScaleBand<number | string>
+	xScale:
+		| d3Scale.ScaleBand<number | string>
 		| d3Scale.ScalePoint<number | string>;
 
 	/** The scale for the y axis. Must be a d3 scale. Lucid exposes the
 		`lucid.d3Scale` library for use here. */
 	yScale:
-		d3Scale.ScaleContinuousNumeric<number, number>
+		| d3Scale.ScaleContinuousNumeric<number, number>
 		| d3Scale.ScaleBand<number>
 		| d3Scale.ScalePoint<number>;
 
@@ -128,7 +127,6 @@ const Points: FC<IPointsProps> = ({
 	yScale: yScaleOriginal,
 	...passThroughs
 }): React.ReactElement => {
-
 	// Copy the original so we can mutate it
 	const yScale = yScaleOriginal.copy();
 
@@ -152,25 +150,30 @@ const Points: FC<IPointsProps> = ({
 			{...omitProps(passThroughs, undefined, _.keys(Points.propTypes))}
 			className={cx(className, '&')}
 		>
-			{_.map(transformedData, (d, dIndex): any[] =>
-				_.map(d, (series, seriesIndex):JSX.Element | undefined => {
-					if (isValidSeries(series)) {
-						return (
-							<Point
-								key={`${seriesIndex}${dIndex}`}
-								x={xScale(data[seriesIndex][xField])}
-								y={yScale(_.isArray(series) ? _.last(series) : series)}
-								hasStroke={hasStroke}
-								kind={dIndex + colorOffset}
-								color={_.get(
-									colorMap,
-									yFields[dIndex],
-									palette[(dIndex + colorOffset) % palette.length]
-								)}
-							/>
-						)
-					}
-				})
+			{_.map(
+				transformedData,
+				(d, dIndex): any[] =>
+					_.map(
+						d,
+						(series, seriesIndex): JSX.Element | undefined => {
+							if (isValidSeries(series)) {
+								return (
+									<Point
+										key={`${seriesIndex}${dIndex}`}
+										x={xScale(data[seriesIndex][xField])}
+										y={yScale(_.isArray(series) ? _.last(series) : series)}
+										hasStroke={hasStroke}
+										kind={dIndex + colorOffset}
+										color={_.get(
+											colorMap,
+											yFields[dIndex],
+											palette[(dIndex + colorOffset) % palette.length]
+										)}
+									/>
+								);
+							}
+						}
+					)
 			)}
 		</g>
 	);

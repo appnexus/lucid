@@ -2,7 +2,12 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import { FC, StandardProps, findTypes, omitProps } from '../../util/component-types';
+import {
+	FC,
+	StandardProps,
+	findTypes,
+	omitProps,
+} from '../../util/component-types';
 import RadioButton, { IRadioButtonProps } from '../RadioButton/RadioButton';
 
 const cx = lucidClassNames.bind('&-RadioButtonLabeled');
@@ -11,7 +16,8 @@ const { any, object, string } = PropTypes;
 interface IRadioButtonLabeledLabelProps extends StandardProps {
 	description?: string;
 }
-const RadioButtonLabeledLabel: FC<IRadioButtonLabeledLabelProps> = (): null => null;
+const RadioButtonLabeledLabel: FC<IRadioButtonLabeledLabelProps> = (): null =>
+	null;
 RadioButtonLabeledLabel.displayName = 'RadioButtonLabeled.Label';
 RadioButtonLabeledLabel.peek = {
 	description: `
@@ -31,8 +37,9 @@ export interface IRadioButtonLabeledFC extends FC<IRadioButtonLabeledProps> {
 	Label: FC<IRadioButtonLabeledLabelProps>;
 }
 
-const RadioButtonLabeled: IRadioButtonLabeledFC = (props): React.ReactElement => {
-
+const RadioButtonLabeled: IRadioButtonLabeledFC = (
+	props
+): React.ReactElement => {
 	const {
 		className,
 		isDisabled = false,
@@ -77,7 +84,6 @@ const RadioButtonLabeled: IRadioButtonLabeledFC = (props): React.ReactElement =>
 
 RadioButtonLabeled.displayName = 'RadioButtonLabeled';
 
-
 RadioButtonLabeled.peek = {
 	description: `
 		This is a composite of the \`RadioButton\` component and the native
@@ -103,7 +109,7 @@ RadioButtonLabeled.propTypes = {
 		Child element whose children are used to identify the purpose of this
 		radio button to the user.
 	`,
-},
+};
 
 RadioButtonLabeled.Label = RadioButtonLabeledLabel;
 

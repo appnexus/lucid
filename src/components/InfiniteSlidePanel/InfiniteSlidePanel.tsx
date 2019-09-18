@@ -19,33 +19,13 @@ InfiniteSlidePanelSlide.displayName = 'InfiniteSlidePanel.Slide';
 InfiniteSlidePanelSlide.propName = 'Slide';
 InfiniteSlidePanelSlide.peek = { description: `The slide.` }
 
-export interface IInfiniteSlidePanelProps extends StandardProps {
+export interface IInfiniteSlidePanelProps extends StandardProps, ISlidePanelProps {
 	/**	The only allowed child is a render function which is passed the current
 		slide's offset and returns the slide contents. Alternatively, you could pass one
 		`<InfiniteSlidePanelSlide {...}>` element with the render function.
 		The only reason do to the latter is to pass addiontal props to the slide
 		element. */
 	children?: React.ReactNode | ((slideOffset: number) => React.ReactNode);
-
-	/** The offset of the left-most rendered slide. */
-	offset?: number;
-
-	/** Max number of viewable slides to show simultaneously. */
-	slidesToShow?: number;
-
-	/** Called when a user's swipe would change the offset. Callback passes
-		number of slides by the user (positive for forward swipes, negative for
-		backwards swipes). */
-	onSwipe?: (
-		slidesSwiped: number,
-		{
-			event,
-			props,
-		}: {
-			event: React.TouchEvent;
-			props: ISlidePanelProps;
-		}
-	) => void;
 
 	/** The number of slides rendered at any given time. A good rule-of-thumb is
 	that this should be at least 4 times the \`slidesToShow\` value. */

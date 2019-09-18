@@ -28,16 +28,18 @@ export enum Kind {
 	Diamond,
 }
 
-export interface IPointProps extends StandardProps {
-	hasStroke?: boolean,
-	kind?: Kind,
-	color?: string,
-	scale?: number,
-	x?: number,
-	y?: number,
-};
+export interface IPointProps
+	extends StandardProps,
+		React.SVGProps<SVGPathElement> {
+	hasStroke?: boolean;
+	kind?: Kind;
+	color?: string;
+	scale?: number;
+	x?: number;
+	y?: number;
+}
 
-const Point: FC<IPointProps> = (props) : React.ReactElement => {
+const Point: FC<IPointProps> = (props): React.ReactElement => {
 	const {
 		color = chartConstants.COLOR_0,
 		hasStroke = false,
@@ -47,7 +49,7 @@ const Point: FC<IPointProps> = (props) : React.ReactElement => {
 		scale = 1,
 		className,
 		style,
-	...passThroughs
+		...passThroughs
 	} = props;
 
 	const kindIndex = kind % 5;

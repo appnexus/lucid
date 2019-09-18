@@ -2,7 +2,12 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import { findTypes, omitProps, FC, StandardProps } from '../../util/component-types';
+import {
+	findTypes,
+	omitProps,
+	FC,
+	StandardProps,
+} from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-Grid');
 
@@ -12,7 +17,7 @@ const { string, bool, node } = PropTypes;
 // Type definitions
 // -----------------------------------------------------------------------------
 
-interface IGridProps extends StandardProps {
+interface IGridProps extends StandardProps, React.HTMLProps<HTMLElement> {
 	/** explicitly set the primary axis of the grid to Y */
 	isVertical?: boolean;
 

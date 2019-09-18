@@ -23,7 +23,9 @@ export enum Type {
 	stroke = 'stroke',
 }
 
-export interface IBadgeProps extends StandardProps {
+export interface IBadgeProps
+	extends StandardProps,
+		React.HTMLProps<HTMLSpanElement> {
 	kind?: keyof typeof Kind;
 	/** Fill variations for the `Badge` */
 	type?: keyof typeof Type;

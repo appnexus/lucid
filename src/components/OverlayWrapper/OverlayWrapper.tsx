@@ -30,7 +30,9 @@ OverlayWrapperMessage.propTypes = {
 	children: node,
 };
 
-export interface IOverlayWrapperProps extends StandardProps {
+export interface IOverlayWrapperProps
+	extends StandardProps,
+		React.HTMLProps<HTMLDivElement> {
 	/** Controls whether the message should be displayed over the wrapped content. */
 	isVisible: boolean;
 

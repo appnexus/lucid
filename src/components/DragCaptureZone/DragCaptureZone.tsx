@@ -7,7 +7,9 @@ import { omitProps, StandardProps } from '../../util/component-types';
 const cx = lucidClassNames.bind('&-DragCaptureZone');
 const { func, string } = PropTypes;
 
-interface IDragCaptureZoneProps extends StandardProps {
+interface IDragCaptureZoneProps
+	extends StandardProps,
+		Omit<React.HTMLProps<HTMLDivElement>, keyof IDragCaptureZoneProps> {
 	/** Called as the user drags the mouse. */
 	onDrag: (
 		{

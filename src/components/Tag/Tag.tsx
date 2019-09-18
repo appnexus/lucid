@@ -16,9 +16,9 @@ const cx = lucidClassNames.bind('&-Tag');
 
 const { bool, func, node, string } = PropTypes;
 
-
-export interface ITagProps extends StandardProps {
-
+export interface ITagProps
+	extends StandardProps,
+		React.HTMLProps<HTMLDivElement> {
 	/** Set this prop if you're using three levels of tags so it can be styled
 		appropriately. This is required because we aren't able to know if your
 		Tags have grand children efficiently. */
@@ -43,7 +43,6 @@ export interface ITagProps extends StandardProps {
 }
 
 const Tag: FC<ITagProps> = (props): React.ReactElement => {
-
 	const {
 		isTop = false,
 		isRemovable,
@@ -54,9 +53,7 @@ const Tag: FC<ITagProps> = (props): React.ReactElement => {
 		...passThroughs
 	} = props;
 
-	const handleRemove = ({ event }: {
-		event: React.MouseEvent
-	}): void => {
+	const handleRemove = ({ event }: { event: React.MouseEvent }): void => {
 		onRemove({ props, event });
 	};
 

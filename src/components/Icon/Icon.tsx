@@ -20,7 +20,9 @@ export enum Color {
 	'secondary-three' = 'secondary-three',
 }
 
-export interface IIconProps extends StandardProps {
+export interface IIconProps
+	extends StandardProps,
+		Omit<React.HTMLProps<SVGSVGElement>, keyof IIconProps> {
 	/** Size variations of the icons. `size` directly effects height and width but the developer should also be conscious of the relationship with `viewBox`. */
 	size?: number;
 

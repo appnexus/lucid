@@ -10,7 +10,12 @@ const cx = lucidClassNames.bind('&-Collapsible');
 
 const { any, bool, node, number, string } = PropTypes;
 
-export interface ICollapsibleProps extends StandardProps {
+// TODO: Is there a better way to add type checks for passThroughs in this case
+// where the underling element could be anything vs just extending
+// `React.HTMLProps<HTMLElement>`? Related to issue #1045
+export interface ICollapsibleProps
+	extends StandardProps,
+		React.HTMLProps<HTMLElement> {
 	/** Indicates that the component is in the "expanded" state when true and in
 	 * the "unexpanded" state when false. */
 	isExpanded?: boolean;

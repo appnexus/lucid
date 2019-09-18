@@ -14,10 +14,12 @@ const cx = lucidClassNames.bind('&-Lines');
 
 const { arrayOf, func, number, object, bool, string } = PropTypes;
 
-const isUniform = (array: any[]): boolean => _.every(array, (val): boolean => val === _.first(array));
+const isUniform = (array: any[]): boolean =>
+	_.every(array, (val): boolean => val === _.first(array));
 
-export interface ILinesProps extends StandardProps {
-
+export interface ILinesProps
+	extends StandardProps,
+		React.SVGProps<SVGGElement> {
 	/** Top */
 	top?: number;
 
@@ -68,21 +70,18 @@ export interface ILinesProps extends StandardProps {
 			{ x: 'five'  , y0: 4  , y1: 8 , y2: 9 , y3: 8 },
 			{ x: 'six'   , y0: 20 , y1: 8 , y2: 9 , y3: 1 },
 		] */
-	data: Array<
-		{ [key: string]: number; }
-		& { x: number | string; }
-	>;
+	data: Array<{ [key: string]: number } & { x: number | string }>;
 
 	/** The scale for the x axis. Must be a d3 scale. Lucid exposes the
 		`lucid.d3Scale` library for use here. */
 	xScale:
-		d3Scale.ScaleBand<number | string>
+		| d3Scale.ScaleBand<number | string>
 		| d3Scale.ScalePoint<number | string>;
 
 	/** The scale for the y axis. Must be a d3 scale. Lucid exposes the
 		`lucid.d3Scale` library for use here. */
 	yScale:
-		d3Scale.ScaleContinuousNumeric<number, number>
+		| d3Scale.ScaleContinuousNumeric<number, number>
 		| d3Scale.ScaleBand<number>
 		| d3Scale.ScalePoint<number>;
 
@@ -110,7 +109,6 @@ export interface ILinesProps extends StandardProps {
 	colorOffset?: number;
 }
 
-
 const Lines: FC<ILinesProps> = ({
 	className,
 	data,
@@ -125,7 +123,6 @@ const Lines: FC<ILinesProps> = ({
 	yStackedMax,
 	...passThroughs
 }): React.ReactElement => {
-
 	// Copy the original so we can mutate it
 	const yScale = yScaleOriginal.copy();
 
@@ -136,17 +133,17 @@ const Lines: FC<ILinesProps> = ({
 		: groupByFields(data, yFields);
 
 	const stackedArea = d3Shape
-				.area<[number, number]>()
-				.defined((a): boolean => _.isFinite(a[0]) && _.isFinite(a[1]))
-				.x((a, i): number => xScale(data[i][xField]) as number)
-				.y0((a): number => yScale(a[1]) as number)
-				.y1((a): number => yScale(a[0]) as number);
+		.area<[number, number]>()
+		.defined((a): boolean => _.isFinite(a[0]) && _.isFinite(a[1]))
+		.x((a, i): number => xScale(data[i][xField]) as number)
+		.y0((a): number => yScale(a[1]) as number)
+		.y1((a): number => yScale(a[0]) as number);
 
 	const area = d3Shape
-				.area<number>()
-				.defined((a): boolean => _.isFinite(a) || _.isDate(a))
-				.x((a, i): number => xScale(data[i][xField]) as number)
-				.y((a, i): number => yScale(a) as number);
+		.area<number>()
+		.defined((a): boolean => _.isFinite(a) || _.isDate(a))
+		.x((a, i): number => xScale(data[i][xField]) as number)
+		.y((a, i): number => yScale(a) as number);
 
 	// If we are stacked, we need to calculate a new domain based on the sum of
 	// the various group's y data
@@ -166,20 +163,23 @@ const Lines: FC<ILinesProps> = ({
 			)}
 			className={cx(className, '&')}
 		>
-			{_.map(transformedData, (d, dIndex): React.ReactElement => (
-				<g key={dIndex}>
-					<Line
-						color={_.get(
-							colorMap,
-							yFields[dIndex],
-							palette[(dIndex + colorOffset) % palette.length]
-						)}
-						d={(isStacked ? stackedArea(d) : area(d)) as string}
-						// Fixes a bug in chrome by forcing a reflow of the element (ANXR-1405)
-						style={isUniform(d) ? { transform: 'scaleX(0.999)' } : undefined}
-					/>
-				</g>
-			))}
+			{_.map(
+				transformedData,
+				(d, dIndex): React.ReactElement => (
+					<g key={dIndex}>
+						<Line
+							color={_.get(
+								colorMap,
+								yFields[dIndex],
+								palette[(dIndex + colorOffset) % palette.length]
+							)}
+							d={(isStacked ? stackedArea(d) : area(d)) as string}
+							// Fixes a bug in chrome by forcing a reflow of the element (ANXR-1405)
+							style={isUniform(d) ? { transform: 'scaleX(0.999)' } : undefined}
+						/>
+					</g>
+				)
+			)}
 		</g>
 	);
 };

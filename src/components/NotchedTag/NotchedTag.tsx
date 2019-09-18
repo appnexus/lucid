@@ -2,7 +2,7 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import { FC } from '../../util/component-types';
+import { FC, StandardProps } from '../../util/component-types';
 
 const { node, string, oneOf, object } = PropTypes;
 
@@ -45,13 +45,9 @@ const SIZE_NOTCH_MAP: { [key in Size]: number } = {
 
 const STROKE_SIZE = '2px';
 
-interface INotchedTagProps {
-	/** Any valid React children. */
-	children?: React.ReactNode;
-
-	/** Appended to the component-specific class names set on the root element. */
-	className?: string;
-
+interface INotchedTagProps
+	extends StandardProps,
+		Omit<React.HTMLProps<HTMLDivElement>, keyof INotchedTagProps> {
 	/** Style variations. */
 	type?: keyof typeof Type;
 
@@ -60,9 +56,6 @@ interface INotchedTagProps {
 
 	/** Tag style variations. */
 	tagStyle?: keyof typeof TagStyle;
-
-	/** Passed through to the root element. */
-	style?: React.CSSProperties;
 }
 
 const NotchedTag: FC<INotchedTagProps> = (props): React.ReactElement => {
@@ -72,7 +65,7 @@ const NotchedTag: FC<INotchedTagProps> = (props): React.ReactElement => {
 		type,
 		style,
 		size = Size.large,
-		tagStyle = TagStyle["style-one"],
+		tagStyle = TagStyle['style-one'],
 		...passThroughs
 	} = props;
 

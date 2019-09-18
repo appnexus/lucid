@@ -2,7 +2,7 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import Overlay from '../Overlay/Overlay';
+import Overlay, { IOverlayProps } from '../Overlay/Overlay';
 import GripperVerticalIcon from '../Icon/GripperVerticalIcon/GripperVerticalIcon';
 import CloseIcon from '../Icon/CloseIcon/CloseIcon';
 import DragCaptureZone from '../DragCaptureZone/DragCaptureZone';
@@ -33,12 +33,9 @@ SidePanelHeader.propTypes = {
 	`,
 };
 
-export interface ISidePanelProps extends StandardProps {
+export interface ISidePanelProps extends IOverlayProps {
 	/** Alternative to using `<SidePanel.Header>`. */
 	Header?: React.ReactNode & { props: StandardProps };
-
-	/** Enables animated transitions during expansion and collapse. */
-	isAnimated: boolean;
 
 	/** Controls the expanded/collapsed state as a boolean prop. */
 	isExpanded: boolean;

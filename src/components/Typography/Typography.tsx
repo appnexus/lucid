@@ -2,7 +2,7 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import { omitProps, FC } from '../../util/component-types';
+import { omitProps, FC, StandardProps } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-Typography');
 
@@ -21,13 +21,9 @@ export enum ElementTypes {
 	samp = 'samp',
 }
 
-export interface ITypographyProps {
-	/** Can contain elements or nested \`Typography\` components. */
-	children?: React.ReactNode;
-
-	/** Appended to the component-specific class names set on the root element. */
-	className?: string;
-
+export interface ITypographyProps
+	extends StandardProps,
+		React.HTMLProps<HTMLElement> {
 	/** This prop defines the type of text that will be displayed. It may be an actual HTML element or something with extra semantic meaning. */
 	variant: keyof typeof ElementTypes;
 }

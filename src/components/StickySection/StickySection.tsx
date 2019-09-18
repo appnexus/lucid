@@ -8,7 +8,9 @@ import { getAbsoluteBoundingClientRect } from '../../util/dom-helpers';
 const cx = lucidClassNames.bind('&-StickySection');
 const { node, number, object, string } = PropTypes;
 
-interface IStickySectionProps extends StandardProps {
+interface IStickySectionProps
+	extends StandardProps,
+		React.HTMLProps<HTMLDivElement> {
 	/** Pixel value from the top of the document. When scrolled passed, the
 	 * sticky header is no longer sticky, and renders normally. */
 	lowerBound?: number;

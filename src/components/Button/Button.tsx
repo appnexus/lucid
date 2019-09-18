@@ -8,7 +8,9 @@ const cx = lucidClassNames.bind('&-Button');
 
 const { arrayOf, bool, func, node, oneOf, oneOfType, string } = PropTypes;
 
-export interface IButtonProps extends StandardProps {
+export interface IButtonProps
+	extends StandardProps,
+		Omit<React.HTMLProps<HTMLButtonElement>, keyof IButtonProps> {
 	/**
 	 * Disables the Button by greying it out
 	 *

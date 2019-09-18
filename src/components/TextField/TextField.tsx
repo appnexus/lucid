@@ -2,7 +2,11 @@ import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import _ from 'lodash';
 import { lucidClassNames } from '../../util/style-helpers';
-import { omitProps, StandardProps } from '../../util/component-types';
+import {
+	omitProps,
+	StandardProps,
+	PropsWithDefaults,
+} from '../../util/component-types';
 import reducers from './TextField.reducers';
 import * as KEYCODE from '../../constants/key-code';
 import { ITextFieldState } from './TextField.reducers';
@@ -11,7 +15,23 @@ const cx = lucidClassNames.bind('&-TextField');
 
 const { bool, string, func, number, object, oneOfType } = PropTypes;
 
-interface ITextFieldProps extends StandardProps {
+const defaultProps = {
+	style: null,
+	isDisabled: false,
+	isMultiLine: false,
+	onBlur: _.noop,
+	onChange: _.noop,
+	onChangeDebounced: _.noop,
+	onSubmit: _.noop,
+	rows: 5,
+	debounceLevel: 500,
+	lazyLevel: 1000,
+	value: '',
+};
+
+interface ITextFieldProps
+	extends StandardProps,
+		Omit<React.HTMLProps<HTMLInputElement>, keyof ITextFieldProps> {
 	/** Set the TextField to multi line mode. Under the hood this will use a `textarea` instead of an `input` if set to `true`. */
 	isMultiLine: boolean;
 
@@ -176,19 +196,7 @@ class TextField extends React.Component<ITextFieldProps, ITextFieldState, {}> {
 		isMounted: false,
 	};
 
-	static defaultProps = {
-		style: null,
-		isDisabled: false,
-		isMultiLine: false,
-		onBlur: _.noop,
-		onChange: _.noop,
-		onChangeDebounced: _.noop,
-		onSubmit: _.noop,
-		rows: 5,
-		debounceLevel: 500,
-		lazyLevel: 1000,
-		value: '',
-	};
+	static defaultProps = defaultProps;
 
 	static reducers = reducers;
 
@@ -348,5 +356,9 @@ class TextField extends React.Component<ITextFieldProps, ITextFieldState, {}> {
 		);
 	}
 }
+
+// FIXME: this is busted and it needs fixing
+// const foo = <TextField className='sdf' type='number' min={0} />;
+
 
 export default TextField;

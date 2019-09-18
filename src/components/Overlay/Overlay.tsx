@@ -10,13 +10,13 @@ const cx = lucidClassNames.bind('&-Overlay');
 
 const { string, bool, func, node } = PropTypes;
 
-export interface IOverlayProps extends StandardProps {
-	/** Styles that are passed through to native control. */
-	style?: React.CSSProperties;
-
+export interface IOverlayProps
+	extends StandardProps,
+		React.HTMLProps<HTMLDivElement> {
 	/** Controls visibility. */
 	isShown: boolean;
 
+	/** Enables animated transitions during expansion and collapse. */
 	isAnimated: boolean;
 
 	/** Determines if it shows with a gray background. If `false`, the

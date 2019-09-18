@@ -10,14 +10,17 @@ const cx = lucidClassNames.bind('&-Axis');
 
 const { string, array, func, number, oneOf } = PropTypes;
 
-export interface IAxisProps extends StandardProps {
+export interface IAxisProps
+	extends StandardProps,
+		Omit<React.SVGProps<SVGGElement>, keyof IAxisProps> {
 	/** Must be a d3 scale. Lucid exposes the \`lucid.d3Scale\` library for use here.
 	 We support `ScaleTime | ScaleBand | ScalePoint` and possibly more. */
-	scale: d3scale.ScaleBand<number>
+	scale:
+		| d3scale.ScaleBand<number>
 		| d3scale.ScalePoint<number>
 		| d3scale.ScaleContinuousNumeric<number, number>;
-		// | d3scale.ScalePower<number, number>
-		// | d3scale.ScaleLogarithmic<number, number>;
+	// | d3scale.ScalePower<number, number>
+	// | d3scale.ScaleLogarithmic<number, number>;
 
 	/** Size of the ticks for each discrete tick mark. */
 	innerTickSize?: number;
@@ -59,12 +62,12 @@ const Axis: FC<IAxisProps> = (props): React.ReactElement => {
 		scale,
 		orient = 'bottom',
 		tickCount = null,
-		ticks = "ticks" in scale
-			? scale.ticks((tickCount as number))
+		ticks = 'ticks' in scale
+			? scale.ticks(tickCount as number)
 			: discreteTicks(scale.domain(), tickCount), // ordinal scales don't have `ticks` but they do have `domains`
 		innerTickSize = 6, // same as d3
 		outerTickSize = 6, // same as d3
-		tickFormat = "tickFormat" in scale ? scale.tickFormat() : _.identity,
+		tickFormat = 'tickFormat' in scale ? scale.tickFormat() : _.identity,
 		tickPadding = 3, // same as d3
 		textOrientation = 'horizontal',
 		...passThroughs
@@ -76,7 +79,10 @@ const Axis: FC<IAxisProps> = (props): React.ReactElement => {
 	const range = scale.range();
 	const sign = orient === 'top' || orient === 'left' ? -1 : 1;
 	const isH = orient === 'top' || orient === 'bottom'; // is horizontal
-	const getOrientationProperties = (orient: string, textOrientation: string): {
+	const getOrientationProperties = (
+		orient: string,
+		textOrientation: string
+	): {
 		transform: string;
 		textAnchor: 'end' | 'middle' | 'start';
 		x: number;
@@ -89,11 +95,12 @@ const Axis: FC<IAxisProps> = (props): React.ReactElement => {
 			dy: string;
 		let orientationSign = sign;
 
-		const transform = textOrientation === 'vertical'
-			? 'rotate(-90)'
-			: textOrientation === 'horizontal'
-			? ''
-			: 'rotate(-30)';
+		const transform =
+			textOrientation === 'vertical'
+				? 'rotate(-90)'
+				: textOrientation === 'horizontal'
+				? ''
+				: 'rotate(-30)';
 
 		switch (orient) {
 			case 'bottom':
@@ -112,8 +119,7 @@ const Axis: FC<IAxisProps> = (props): React.ReactElement => {
 						: textOrientation === 'diagonal'
 						? -orientationSign * tickSpacing
 						: 0;
-				y =
-					textOrientation === 'vertical' ? 0 : orientationSign * tickSpacing;
+				y = textOrientation === 'vertical' ? 0 : orientationSign * tickSpacing;
 				dy = textOrientation === 'vertical' ? '.32em' : '.71em';
 				break;
 			case 'top':
@@ -130,8 +136,7 @@ const Axis: FC<IAxisProps> = (props): React.ReactElement => {
 					textOrientation === 'vertical' || textOrientation === 'diagonal'
 						? -orientationSign * tickSpacing
 						: 0;
-				y =
-					textOrientation === 'vertical' ? 0 : orientationSign * tickSpacing;
+				y = textOrientation === 'vertical' ? 0 : orientationSign * tickSpacing;
 				dy =
 					textOrientation === 'vertical' || textOrientation === 'diagonal'
 						? '.32em'
@@ -139,8 +144,7 @@ const Axis: FC<IAxisProps> = (props): React.ReactElement => {
 				break;
 			case 'right':
 				textAnchor = textOrientation === 'vertical' ? 'middle' : 'start';
-				x =
-					textOrientation === 'vertical' ? 0 : orientationSign * tickSpacing;
+				x = textOrientation === 'vertical' ? 0 : orientationSign * tickSpacing;
 				y =
 					textOrientation === 'vertical'
 						? orientationSign * tickSpacing
@@ -151,8 +155,7 @@ const Axis: FC<IAxisProps> = (props): React.ReactElement => {
 				break;
 			case 'left':
 				textAnchor = textOrientation === 'vertical' ? 'middle' : 'end';
-				x =
-					textOrientation === 'vertical' ? 0 : orientationSign * tickSpacing;
+				x = textOrientation === 'vertical' ? 0 : orientationSign * tickSpacing;
 				y =
 					textOrientation === 'vertical' || textOrientation === 'diagonal'
 						? orientationSign * tickSpacing
@@ -165,18 +168,18 @@ const Axis: FC<IAxisProps> = (props): React.ReactElement => {
 						: '.71em';
 				break;
 			default:
-					textAnchor = 'start';
-					x = 0;
-					y = 0;
-					dy= 'null';
-			};
-			return {
-				transform,
-				textAnchor,
-				x,
-				y,
-				dy,
-			};
+				textAnchor = 'start';
+				x = 0;
+				y = 0;
+				dy = 'null';
+		}
+		return {
+			transform,
+			textAnchor,
+			x,
+			y,
+			dy,
+		};
 	};
 	const orientationProperties = {
 		vertical: getOrientationProperties(orient, 'vertical'),
@@ -185,13 +188,12 @@ const Axis: FC<IAxisProps> = (props): React.ReactElement => {
 	};
 	const orientationKey = textOrientation || 'horizontal';
 
-
 	// Only band scales have `bandwidth`, this conditional helps center the
 	// ticks on the bands
-	const scaleNormalized = "bandwidth" in scale
-		? (d: number): number => (scale(d) as number) + scale.bandwidth() / 2
-		: scale;
-
+	const scaleNormalized =
+		'bandwidth' in scale
+			? (d: number): number => (scale(d) as number) + scale.bandwidth() / 2
+			: scale;
 
 	return (
 		<g
@@ -211,32 +213,35 @@ const Axis: FC<IAxisProps> = (props): React.ReactElement => {
 						outerTickSize}`}
 				/>
 			)}
-			{_.map(ticks, (tick: number): JSX.Element => (
-				<g
-					key={tick}
-					transform={`translate(${isH ? scaleNormalized(tick) : 0}, ${
-						isH ? 0 : scaleNormalized(tick)
-					})`}
-				>
-					<line
-						className={cx('&-tick')}
-						x2={isH ? 0 : sign * innerTickSize}
-						y2={isH ? sign * innerTickSize : 0}
-					/>
-					<text
-						className={cx('&-tick-text')}
-						x={orientationProperties[orientationKey].x}
-						y={orientationProperties[orientationKey].y}
-						dy={orientationProperties[orientationKey].dy}
-						style={{
-							textAnchor: orientationProperties[orientationKey].textAnchor,
-						}}
-						transform={orientationProperties[orientationKey].transform}
+			{_.map(
+				ticks,
+				(tick: number): JSX.Element => (
+					<g
+						key={tick}
+						transform={`translate(${isH ? scaleNormalized(tick) : 0}, ${
+							isH ? 0 : scaleNormalized(tick)
+						})`}
 					>
-						{tickFormat(tick)}
-					</text>
-				</g>
-			))}
+						<line
+							className={cx('&-tick')}
+							x2={isH ? 0 : sign * innerTickSize}
+							y2={isH ? sign * innerTickSize : 0}
+						/>
+						<text
+							className={cx('&-tick-text')}
+							x={orientationProperties[orientationKey].x}
+							y={orientationProperties[orientationKey].y}
+							dy={orientationProperties[orientationKey].dy}
+							style={{
+								textAnchor: orientationProperties[orientationKey].textAnchor,
+							}}
+							transform={orientationProperties[orientationKey].transform}
+						>
+							{tickFormat(tick)}
+						</text>
+					</g>
+				)
+			)}
 		</g>
 	);
 };
@@ -307,6 +312,5 @@ Axis.propTypes = {
 		tries to determine. This defaults to \`horizontal\`.
 	`,
 };
-
 
 export default Axis;

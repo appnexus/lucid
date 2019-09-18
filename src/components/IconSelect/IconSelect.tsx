@@ -3,7 +3,9 @@ import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 
 import Icon from '../Icon/Icon';
-import RadioButtonLabeled, { IRadioButtonLabeledFC } from '../RadioButtonLabeled/RadioButtonLabeled';
+import RadioButtonLabeled, {
+	IRadioButtonLabeledFC,
+} from '../RadioButtonLabeled/RadioButtonLabeled';
 import CheckboxLabeled from '../CheckboxLabeled/CheckboxLabeled';
 
 import { lucidClassNames } from '../../util/style-helpers';
@@ -28,17 +30,19 @@ const getFigureParent = (domNode: HTMLElement): HTMLElement | undefined => {
 };
 
 interface Item {
-	id: string,
-	icon?: React.ReactElement,
-	label?: React.ReactElement,
-	isSelected?: boolean,
-	isPartial?: boolean,
-	tabIndex?: number,
-	isDisabled?: boolean,
-	className?: string,
+	id: string;
+	icon?: React.ReactElement;
+	label?: React.ReactElement;
+	isSelected?: boolean;
+	isPartial?: boolean;
+	tabIndex?: number;
+	isDisabled?: boolean;
+	className?: string;
 }
 
-export interface IIconSelectProps extends StandardProps {
+export interface IIconSelectProps
+	extends StandardProps,
+		Omit<React.HTMLProps<HTMLSpanElement>, keyof IIconSelectProps> {
 	/** Items in the IconSelect group. Each item should have an id. */
 	items: Item[];
 
@@ -48,19 +52,22 @@ export interface IIconSelectProps extends StandardProps {
 
 	/** A function that is called with the id of the Item in the IconSelect group
 		is clicked. */
-	onSelect?: (id: string, { event, props }: {
-		event: React.MouseEvent,
-		props: IIconSelectProps
-
-	}) => void;
+	onSelect?: (
+		id: string,
+		{
+			event,
+			props,
+		}: {
+			event: React.MouseEvent;
+			props: IIconSelectProps;
+		}
+	) => void;
 
 	/** Disabled all IconSelect Items. */
 	isDisabled?: boolean;
 }
 
 const IconSelect: FC<IIconSelectProps> = (props): React.ReactElement => {
-
-
 	const {
 		className,
 		children,
@@ -73,7 +80,7 @@ const IconSelect: FC<IIconSelectProps> = (props): React.ReactElement => {
 
 	const handleClick = (event: React.MouseEvent): void => {
 		if (!props.isDisabled) {
-			const domNode = getFigureParent((event.target as HTMLElement));
+			const domNode = getFigureParent(event.target as HTMLElement);
 			if (domNode) {
 				const id = domNode.dataset.id;
 
@@ -96,7 +103,9 @@ const IconSelect: FC<IIconSelectProps> = (props): React.ReactElement => {
 		);
 	};
 
-	const getInputComponent = (item: Item): React.ReactElement<IRadioButtonLabeledFC> => {
+	const getInputComponent = (
+		item: Item
+	): React.ReactElement<IRadioButtonLabeledFC> => {
 		const { kind, className, isDisabled } = props;
 		const Label = item.label;
 		const singleSelect = _.isEqual(kind, 'single');
@@ -117,7 +126,7 @@ const IconSelect: FC<IIconSelectProps> = (props): React.ReactElement => {
 				className={cx('&-Item-checkbox', {
 					[`${className}-checkbox`]: className,
 				})}
-				isDisabled={(isDisabled || item.isDisabled) ? true : false}
+				isDisabled={isDisabled || item.isDisabled ? true : false}
 				isIndeterminate={item.isPartial ? true : false}
 				isSelected={item.isSelected ? true : false}
 				// tabIndex={item.tabIndex}
@@ -127,39 +136,38 @@ const IconSelect: FC<IIconSelectProps> = (props): React.ReactElement => {
 
 	return (
 		<span
-			{...omitProps(
-				passThroughs,
-				undefined,
-				[
-					..._.keys(IconSelect.propTypes),
-					'items',
-				]
-			)}
+			{...omitProps(passThroughs, undefined, [
+				..._.keys(IconSelect.propTypes),
+				'items',
+			])}
 			className={cx('&', className)}
 		>
-			{_.map(items, (childItem, index): React.ReactElement => {
-				return (
-					<figure
-						key={`iconselectitem_${index}`}
-						className={cx('&-Item', childItem.className, {
-							[`${className}-Item`]: className,
-							'&-Item-is-disabled': isDisabled || childItem.isDisabled,
-							'&-Item-is-partial': childItem.isPartial,
-							'&-Item-is-selected': childItem.isSelected,
-							'&-Item-multi': kind === 'multiple',
-							'&-Item-single': kind === 'single',
-						})}
-						data-id={childItem.id}
-						onClick={handleClick}
-						// disabled={isDisabled || childItem.isDisabled}
-					>
-						{childItem.icon && getChildIcon(childItem.icon)}
-						<figcaption className={cx('&-Item-figcaption')}>
-							{getInputComponent(childItem)}
-						</figcaption>
-					</figure>
-				);
-			})}
+			{_.map(
+				items,
+				(childItem, index): React.ReactElement => {
+					return (
+						<figure
+							key={`iconselectitem_${index}`}
+							className={cx('&-Item', childItem.className, {
+								[`${className}-Item`]: className,
+								'&-Item-is-disabled': isDisabled || childItem.isDisabled,
+								'&-Item-is-partial': childItem.isPartial,
+								'&-Item-is-selected': childItem.isSelected,
+								'&-Item-multi': kind === 'multiple',
+								'&-Item-single': kind === 'single',
+							})}
+							data-id={childItem.id}
+							onClick={handleClick}
+							// disabled={isDisabled || childItem.isDisabled}
+						>
+							{childItem.icon && getChildIcon(childItem.icon)}
+							<figcaption className={cx('&-Item-figcaption')}>
+								{getInputComponent(childItem)}
+							</figcaption>
+						</figure>
+					);
+				}
+			)}
 			{children}
 		</span>
 	);
