@@ -47,16 +47,17 @@ const DataTable = createClass({
 					
 					Tables that cover the entire page, or are the main focus on the page. Generally used for managing and monitoring objects.
 					
-					Styling notes
-					
-					- Use grey footer for full page tables, \`hasLightFooter={false}\`
-					
 					**In-line tables**
 					
 					Tables insides containers such as \`Dialog\` or \`Panel\`. Generally used for details panels and actions dialogs.
+										
+					**Styling notes**
 					
-					Styling notes
-					
+					- Preferred column alignment shown in \`basic\` example, column header alignment should match column content
+						- strings left-aligned
+						- currency right-aligned
+						- icons/buttons centered
+					- Use grey footer for full page tables, \`hasLightFooter={false}\`
 					- Use white footer for in-line tables, \`hasLightFooter={true}\`
 				`,
 				technicalRecommendations: `
