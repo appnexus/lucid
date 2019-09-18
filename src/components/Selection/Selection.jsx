@@ -215,7 +215,7 @@ const Selection = createClass({
 					</div>
 					{!_.isEmpty(children) &&
 						<div className={cx('&-children-container')}>
-							{_.map(children, (child, i) => {
+							{_.map(React.Children.toArray(children), (child, i) => {
 								if (React.isValidElement(child) && child.type === Selection) {
 									return (
 										<Selection
