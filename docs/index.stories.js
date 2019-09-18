@@ -155,10 +155,10 @@ ${intendedUse}
 
 ${technicalRecommendations}
 
-<hr style="border-bottom:1px solid #e8e6e6">
-
 ${exampleNotes ? 
 `
+<hr style="border-bottom:1px solid #e8e6e6">
+
 ### Example Notes
 
 ${exampleNotes}
