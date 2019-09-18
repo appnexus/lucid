@@ -20,7 +20,14 @@ exports[`Selection render should match snapshot for container 1`] = `
         size={8}
       />
     </div>
-    cont
+    <div
+      className="lucid-Selection-children-container"
+    >
+      c
+      o
+      n
+      t
+    </div>
   </div>
 </div>
 `;
@@ -48,13 +55,14 @@ exports[`Selection render should match snapshot for custom icons 1`] = `
         size={8}
       />
     </div>
-    <Selection.Icon
-      key=".0"
+    <div
+      className="lucid-Selection-children-container"
     >
-      <div
-        className="fake-icon"
-      />
-    </Selection.Icon>
+      <Component />
+      <Component />
+      <Component />
+      <Component />
+    </div>
   </div>
 </div>
 `;
@@ -82,7 +90,14 @@ exports[`Selection render should match snapshot for danger 1`] = `
         size={8}
       />
     </div>
-    cont
+    <div
+      className="lucid-Selection-children-container"
+    >
+      c
+      o
+      n
+      t
+    </div>
   </div>
 </div>
 `;
@@ -110,7 +125,14 @@ exports[`Selection render should match snapshot for info 1`] = `
         size={8}
       />
     </div>
-    cont
+    <div
+      className="lucid-Selection-children-container"
+    >
+      c
+      o
+      n
+      t
+    </div>
   </div>
 </div>
 `;
@@ -138,11 +160,12 @@ exports[`Selection render should match snapshot for nested selections 1`] = `
     <div
       className="lucid-Selection-children-container"
     >
+      Hello
       <Selection
         hasBackground={false}
         isBold={false}
         isRemovable={true}
-        key="[object Object]0"
+        key="[object Object]1"
         kind="default"
         onRemove={[Function]}
         responsiveMode="large"
@@ -150,7 +173,6 @@ exports[`Selection render should match snapshot for nested selections 1`] = `
         There
       </Selection>
     </div>
-    Hello
   </div>
 </div>
 `;
@@ -193,7 +215,14 @@ exports[`Selection render should match snapshot for responsiveMode small 1`] = `
         size={16}
       />
     </div>
-    Yolo
+    <div
+      className="lucid-Selection-children-container"
+    >
+      Y
+      o
+      l
+      o
+    </div>
   </div>
 </div>
 `;
@@ -221,7 +250,14 @@ exports[`Selection render should match snapshot for success 1`] = `
         size={8}
       />
     </div>
-    cont
+    <div
+      className="lucid-Selection-children-container"
+    >
+      c
+      o
+      n
+      t
+    </div>
   </div>
 </div>
 `;
@@ -249,7 +285,14 @@ exports[`Selection render should match snapshot for warning 1`] = `
         size={8}
       />
     </div>
-    cont
+    <div
+      className="lucid-Selection-children-container"
+    >
+      c
+      o
+      n
+      t
+    </div>
   </div>
 </div>
 `;

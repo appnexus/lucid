@@ -11,8 +11,6 @@ import {
 	createClass,
 	omitProps,
 	getFirst,
-	filterTypes,
-	rejectTypes,
 } from '../../util/component-types';
 
 const { createElement } = React;
@@ -163,8 +161,6 @@ const Selection = createClass({
 		const responsiveMode = responsiveMap[responsiveModeInput];
 		const isSmall = responsiveMode === 'small';
 
-		const selectionChildren = filterTypes(children, Selection);
-		const otherChildren = rejectTypes(children, Selection);
 		const labelProps = _.get(
 			getFirst(this.props, Selection.Label),
 			'props',
@@ -217,24 +213,27 @@ const Selection = createClass({
 							/>
 						) : null}
 					</div>
-
-					{_.isEmpty(selectionChildren) ? null : (
+					{!_.isEmpty(children) &&
 						<div className={cx('&-children-container')}>
-							{_.map(selectionChildren, ({ props }, i) => (
-								<Selection
-									key={
-										_.get(
-											getFirst(props, Selection.Label),
-											['props', 'children'],
-											{}
-										) + i
-									}
-									{...props}
-								/>
-							))}
+							{_.map(children, (child, i) => {
+								if (React.isValidElement(child) && child.type === Selection) {
+									return (
+										<Selection
+											key={
+												_.get(
+													getFirst(child.props, Selection.Label),
+													['props', 'children'],
+													{}
+												) + i
+											}
+											{...child.props}
+										/>
+									);
+								}
+								return child;
+							})}
 						</div>
-					)}
-					{otherChildren}
+					}
 				</div>
 			</div>
 		);
