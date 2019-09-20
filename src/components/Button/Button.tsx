@@ -2,35 +2,39 @@ import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import _ from 'lodash';
 import { lucidClassNames } from '../../util/style-helpers';
-import { omitProps, FC, StandardProps } from '../../util/component-types';
+import {
+	omitProps,
+	FC,
+	StandardProps,
+	PropsWithDefaults,
+} from '../../util/component-types';
+import { Overwrite } from 'type-zoo';
 
 const cx = lucidClassNames.bind('&-Button');
 
 const { arrayOf, bool, func, node, oneOf, oneOfType, string } = PropTypes;
 
-export interface IButtonProps
-	extends StandardProps,
-		Omit<React.HTMLProps<HTMLButtonElement>, keyof IButtonProps> {
+export interface IButtonProps extends StandardProps {
 	/**
 	 * Disables the Button by greying it out
 	 *
 	 * @default false
 	 **/
-	isDisabled?: boolean;
+	isDisabled: boolean;
 
 	/**
 	 * Activates the Button by giving it a "pressed down" look
 	 *
 	 * @default false
 	 **/
-	isActive?: boolean;
+	isActive: boolean;
 
 	/**
 	 * Set this to `true` if you want the Button to only contain an icon.
 	 *
 	 * @default false
 	 * */
-	hasOnlyIcon?: boolean;
+	hasOnlyIcon: boolean;
 
 	/** Style variations of the Button */
 	kind?: 'primary' | 'link' | 'danger' | 'invisible';
@@ -39,7 +43,7 @@ export interface IButtonProps
 	size?: 'short' | 'small' | 'large';
 
 	/** Called when the user clicks the \`Button\`. */
-	onClick?: ({
+	onClick: ({
 		event,
 		props,
 	}: {
@@ -52,21 +56,39 @@ export interface IButtonProps
 	 *
 	 * @default "button"
 	 * */
-	type?: 'submit' | 'reset' | 'button';
+	type: 'submit' | 'reset' | 'button';
 }
 
+type IButtonPropsWithPassthroughs = Overwrite<
+	React.DetailedHTMLProps<
+		React.InputHTMLAttributes<HTMLInputElement>,
+		HTMLInputElement
+	>,
+	IButtonProps
+>;
+
+const defaultProps = {
+	isDisabled: false,
+	isActive: false,
+	onClick: _.noop,
+	type: 'button' as const,
+	hasOnlyIcon: false,
+};
+
 /** Test Button description */
-const Button: FC<IButtonProps> = (props): React.ReactElement => {
+const Button: FC<IButtonPropsWithPassthroughs> = (
+	props
+): React.ReactElement => {
 	const {
-		isDisabled = false,
-		isActive = false,
-		onClick = _.noop,
-		hasOnlyIcon = false,
+		isDisabled,
+		isActive,
+		onClick,
+		hasOnlyIcon,
 		kind,
 		size,
 		className,
 		children,
-		type = 'button',
+		type,
 		...passThroughs
 	} = props;
 
@@ -114,6 +136,8 @@ const Button: FC<IButtonProps> = (props): React.ReactElement => {
 		</button>
 	);
 };
+
+Button.defaultProps = defaultProps;
 
 Button.displayName = 'Button';
 
@@ -165,4 +189,6 @@ Button.propTypes = {
 	`,
 };
 
-export default Button;
+export default Button as FC<
+	PropsWithDefaults<IButtonPropsWithPassthroughs, typeof defaultProps>
+>;
