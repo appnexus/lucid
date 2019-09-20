@@ -3,7 +3,12 @@ import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import ReactTransitionGroup from 'react-transition-group/CSSTransitionGroup';
 import { lucidClassNames } from '../../util/style-helpers';
-import { FC, omitProps, StandardProps } from '../../util/component-types';
+import {
+	FC,
+	omitProps,
+	StandardProps,
+	PropsWithDefaults,
+} from '../../util/component-types';
 import CloseIcon from '../Icon/CloseIcon/CloseIcon';
 import { IIconProps } from '../Icon/Icon';
 
@@ -13,9 +18,9 @@ const { bool, element, func, node, oneOf, string } = PropTypes;
 
 export interface IBannerProps
 	extends StandardProps,
-		React.HTMLProps<HTMLDivElement> {
+		React.HTMLAttributes<HTMLDivElement> {
 	/** Pass in a icon component for custom icons within `Banner`. */
-	icon: React.ReactElement;
+	icon: React.ReactElement | null;
 
 	/** Set this to `true` if you want to have a `x` close icon. */
 	isCloseable: boolean;
@@ -44,16 +49,26 @@ export interface IBannerProps
 	isClosed: boolean;
 }
 
+const defaultProps = {
+	icon: null,
+	isCloseable: true,
+	isFilled: true,
+	isSmall: false,
+	kind: 'default' as const,
+	onClose: _.noop,
+	isClosed: false,
+};
+
 const Banner: FC<IBannerProps> = ({
-	icon = null,
-	kind = 'default',
+	icon,
+	kind,
 	className,
 	children,
-	isCloseable = true,
+	isCloseable,
 	isClosed,
-	isFilled = true,
-	isSmall = false,
-	onClose = _.noop,
+	isFilled,
+	isSmall,
+	onClose,
 	...passThroughs
 }): React.ReactElement => {
 	const handleClose = ({
@@ -117,6 +132,7 @@ const Banner: FC<IBannerProps> = ({
 	);
 };
 
+Banner.defaultProps = defaultProps;
 Banner.displayName = 'Banner';
 Banner.peek = {
 	description: `
@@ -170,4 +186,6 @@ Banner.propTypes = {
 	`,
 };
 
-export default Banner;
+export default Banner as FC<
+	PropsWithDefaults<IBannerProps, typeof defaultProps>
+>;

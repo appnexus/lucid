@@ -52,7 +52,7 @@ export interface ICheckboxProps
 	title?: string;
 }
 
-export const defaultPropsCheckbox = {
+export const defaultProps = {
 	isIndeterminate: false,
 	isDisabled: false,
 	isSelected: false,
@@ -153,7 +153,7 @@ Checkbox.peek = {
 	categories: ['controls', 'toggles'],
 };
 
-Checkbox.defaultProps = defaultPropsCheckbox;
+Checkbox.defaultProps = defaultProps;
 
 Checkbox.propTypes = {
 	className: string`
@@ -193,5 +193,5 @@ Checkbox.propTypes = {
 };
 
 export default Checkbox as FC<
-	PropsWithDefaults<ICheckboxProps, typeof defaultPropsCheckbox>
+	PropsWithDefaults<ICheckboxProps, typeof defaultProps>
 >;

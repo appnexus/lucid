@@ -23,6 +23,9 @@ export interface StandardProps {
 // We decided to create this utility defintion because of the issues outlined
 // here: https://github.com/microsoft/TypeScript/issues/31247
 //
+// This utility is really only needed with functional components. Class
+// components behave correctly with default props.
+//
 // Typescript is able to behave correctly (wrt to default props) if we were to
 // rely on type inference for our functional components, but since we also have
 // other properties (e.g. `_isPrivate`) we need to explicitly define the type.

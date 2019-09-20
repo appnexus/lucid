@@ -2,7 +2,12 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import { FC, omitProps, StandardProps } from '../../util/component-types';
+import {
+	FC,
+	omitProps,
+	StandardProps,
+	PropsWithDefaults,
+} from '../../util/component-types';
 import * as chartConstants from '../../constants/charts';
 
 const cx = lucidClassNames.bind('&-Bar');
@@ -11,7 +16,7 @@ const { number, bool, string, object } = PropTypes;
 
 export interface IBarProps
 	extends StandardProps,
-		React.SVGProps<SVGRectElement> {
+		React.SVGAttributes<SVGRectElement> {
 	/** x coordinate. */
 	x: number;
 
@@ -36,6 +41,15 @@ export interface IBarProps
 	 */
 	color: string;
 }
+
+const defaultProps = {
+	x: 0,
+	y: 0,
+	height: 0,
+	width: 0,
+	color: chartConstants.COLOR_0,
+	hasStroke: false,
+};
 
 const Bar: FC<IBarProps> = ({
 	className,
@@ -70,6 +84,7 @@ const Bar: FC<IBarProps> = ({
 	);
 };
 
+Bar.defaultProps = defaultProps;
 Bar.displayName = 'Bar';
 Bar.peek = {
 	description: `
@@ -119,4 +134,4 @@ Bar.propTypes = {
 	`,
 };
 
-export default Bar;
+export default Bar as FC<PropsWithDefaults<IBarProps, typeof defaultProps>>;

@@ -3,7 +3,12 @@ import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import Overlay, { IOverlayProps } from '../Overlay/Overlay';
 import { lucidClassNames } from '../../util/style-helpers';
-import { FC, StandardProps, getFirst, omitProps } from '../../util/component-types';
+import {
+	FC,
+	StandardProps,
+	getFirst,
+	omitProps,
+} from '../../util/component-types';
 import Button, { IButtonProps } from '../Button/Button';
 import CloseIcon from '../Icon/CloseIcon/CloseIcon';
 
@@ -15,7 +20,7 @@ enum EnumSize {
 	small = 'small',
 	medium = 'medium',
 	large = 'large',
-};
+}
 type Size = keyof typeof EnumSize;
 
 interface IDialogHeaderProps extends StandardProps {
@@ -42,9 +47,7 @@ DialogFooter.peek = {
 };
 DialogFooter.propName = 'Footer';
 
-
 export interface IDialogProps extends IOverlayProps {
-
 	/** Size variations that only affect the width of the dialog. All the sizes
 		will grow in height until they get too big, at which point they will
 		scroll inside. */
@@ -80,7 +83,6 @@ export interface IDialogFC extends FC<IDialogProps> {
 }
 
 const Dialog: IDialogFC = (props): React.ReactElement => {
-
 	const {
 		className,
 		size = EnumSize.medium,
@@ -91,25 +93,12 @@ const Dialog: IDialogFC = (props): React.ReactElement => {
 		...passThroughs
 	} = props;
 
-	const headerChildProp = _.get(
-		getFirst(props, Dialog.Header),
-		'props',
-		{}
-	);
-	const footerChildProp = _.get(
-		getFirst(props, Dialog.Footer),
-		'props',
-		null
-	);
+	const headerChildProp = _.get(getFirst(props, Dialog.Header), 'props', {});
+	const footerChildProp = _.get(getFirst(props, Dialog.Footer), 'props', null);
 
 	return (
 		<Overlay
-			{...omitProps(
-				passThroughs,
-				undefined,
-				_.keys(Dialog.propTypes),
-				false
-			)}
+			{...omitProps(passThroughs, undefined, _.keys(Dialog.propTypes), false)}
 			{..._.pick(passThroughs, _.keys(Overlay.propTypes))}
 			isShown={isShown}
 			className={cx('&', className)}

@@ -3,16 +3,20 @@ import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import { discreteTicks } from '../../util/chart-helpers';
-import { omitProps, FC, StandardProps } from '../../util/component-types';
+import {
+	omitProps,
+	FC,
+	StandardProps,
+	PropsWithDefaults,
+} from '../../util/component-types';
 import * as d3scale from 'd3-scale';
+import { Overwrite } from 'type-zoo';
 
 const cx = lucidClassNames.bind('&-Axis');
 
 const { string, array, func, number, oneOf } = PropTypes;
 
-export interface IAxisProps
-	extends StandardProps,
-		Omit<React.SVGProps<SVGGElement>, keyof IAxisProps> {
+export interface IAxisProps extends StandardProps {
 	/** Must be a d3 scale. Lucid exposes the \`lucid.d3Scale\` library for use here.
 	 We support `ScaleTime | ScaleBand | ScalePoint` and possibly more. */
 	scale:
@@ -23,11 +27,11 @@ export interface IAxisProps
 	// | d3scale.ScaleLogarithmic<number, number>;
 
 	/** Size of the ticks for each discrete tick mark. */
-	innerTickSize?: number;
+	innerTickSize: number;
 
 	/** Size of the tick marks found at the beginning and end of the axis. It's
 		common to set this to \`0\` to remove them. */
-	outerTickSize?: number;
+	outerTickSize: number;
 
 	/** An optional function that can format ticks. Generally this shouldn't be
 		needed since d3 has very good default formatters for most data. */
@@ -38,38 +42,52 @@ export interface IAxisProps
 	ticks?: number[];
 
 	/** Determines the spacing between each tick and its text. */
-	tickPadding?: number;
+	tickPadding: number;
 
 	/** Determines the orientation of the ticks. \`left\` and \`right\` will
 		generate a vertical axis, whereas \`top\` and \`bottom\` will generate a
 		horizontal axis. */
-	orient?: 'top' | 'bottom' | 'left' | 'right';
+	orient: 'top' | 'bottom' | 'left' | 'right';
 
 	/** Control the number of ticks displayed. If the scale is time based or
 		linear, this number acts a "hint" per the default behavior of D3. If it's
 		an ordinal scale, this number is treated as an absolute number of ticks
 		to display and is powered by our own utility function \`discreteTicks\`. */
-	tickCount?: number;
+	tickCount: number | null;
 
 	/** Determines the orientation of the tick text. This may override what the orient prop
 		tries to determine. This defaults to `horizontal`.  */
-	textOrientation?: 'vertical' | 'horizontal' | 'diagonal';
+	textOrientation: 'vertical' | 'horizontal' | 'diagonal';
 }
 
-const Axis: FC<IAxisProps> = (props): React.ReactElement => {
+type IAxisPropsWithPassThroughs = Overwrite<
+	React.SVGAttributes<SVGGElement>,
+	IAxisProps
+>;
+
+const defaultProps = {
+	innerTickSize: 6, // same as d3
+	outerTickSize: 6, // same as d3
+	tickPadding: 3, // same as d3
+	textOrientation: 'horizontal' as const, // https://stackoverflow.com/a/55387357/895558
+	orient: 'bottom' as const, // https://stackoverflow.com/a/55387357/895558
+	tickCount: null,
+};
+
+const Axis: FC<IAxisPropsWithPassThroughs> = (props): React.ReactElement => {
 	const {
 		className,
 		scale,
-		orient = 'bottom',
-		tickCount = null,
+		orient,
+		tickCount,
 		ticks = 'ticks' in scale
 			? scale.ticks(tickCount as number)
 			: discreteTicks(scale.domain(), tickCount), // ordinal scales don't have `ticks` but they do have `domains`
-		innerTickSize = 6, // same as d3
-		outerTickSize = 6, // same as d3
+		innerTickSize,
+		outerTickSize,
 		tickFormat = 'tickFormat' in scale ? scale.tickFormat() : _.identity,
-		tickPadding = 3, // same as d3
-		textOrientation = 'horizontal',
+		tickPadding,
+		textOrientation,
 		...passThroughs
 	} = props;
 
@@ -246,6 +264,7 @@ const Axis: FC<IAxisProps> = (props): React.ReactElement => {
 	);
 };
 
+Axis.defaultProps = defaultProps;
 Axis.displayName = 'Axis';
 Axis.peek = {
 	description: `
@@ -313,4 +332,6 @@ Axis.propTypes = {
 	`,
 };
 
-export default Axis;
+export default Axis as FC<
+	PropsWithDefaults<IAxisPropsWithPassThroughs, typeof defaultProps>
+>;
