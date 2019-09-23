@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import PropTypes from 'react-peek/prop-types'
+import PropTypes from 'react-peek/prop-types';
 import Icon, { IIconProps } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
 import { FC, omitProps } from '../../../util/component-types';
@@ -26,10 +26,14 @@ const EligibilityLightIcon: FC<IEligibilityLightIconProps> = ({
 	isDisabled = false,
 	...passThroughs
 }): React.ReactElement => {
-
 	return (
 		<Icon
-			{...omitProps(passThroughs, undefined, _.keys(EligibilityLightIcon.propTypes), false)}
+			{...omitProps(
+				passThroughs,
+				undefined,
+				_.keys(EligibilityLightIcon.propTypes),
+				false
+			)}
 			{..._.pick(passThroughs, _.keys(Icon.propTypes))}
 			isDisabled={isDisabled}
 			className={cx('&', className)}
@@ -37,17 +41,21 @@ const EligibilityLightIcon: FC<IEligibilityLightIconProps> = ({
 			<g>
 				<path
 					className={cx('&-half-circle', {
-						'&-is-selected': eligibility === EligibilityOptions.left || eligibility === EligibilityOptions.both,
+						'&-is-selected':
+							eligibility === EligibilityOptions.left ||
+							eligibility === EligibilityOptions.both,
 						'&-half-circle-is-disabled': isDisabled,
 					})}
-					d='M6.98.928C3.51 1.424.844 4.398.844 8c0 3.604 2.666 6.576 6.133 7.072V.928z'
+					d='M6 14.71A7.003 7.003 0 0 1 6 1.29v13.42z'
 				/>
 				<path
 					className={cx('&-half-circle', {
-						'&-is-selected': eligibility === EligibilityOptions.right || eligibility === EligibilityOptions.both,
+						'&-is-selected':
+							eligibility === EligibilityOptions.right ||
+							eligibility === EligibilityOptions.both,
 						'&-half-circle-is-disabled': isDisabled,
 					})}
-					d='M9.022.928c3.465.496 6.133 3.47 6.133 7.072 0 3.604-2.668 6.576-6.133 7.072V.928z'
+					d='M10 1.29a7.003 7.003 0 0 1 0 13.42V1.29z'
 				/>
 			</g>
 		</Icon>
