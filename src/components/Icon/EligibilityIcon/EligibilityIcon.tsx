@@ -58,15 +58,15 @@ const EligibilityIcon: FC<IEligibilityIconProps> = ({
 	);
 };
 
-(EligibilityIcon.displayName = 'EligibilityIcon'),
-	(EligibilityIcon.peek = {
-		description: `
+EligibilityIcon.displayName = 'EligibilityIcon';
+EligibilityIcon.peek = {
+	description: `
 		An eligibility icon.
 	`,
-		categories: ['visual design', 'icons'],
-		extend: 'Icon',
-		madeFrom: ['Icon'],
-	});
+	categories: ['visual design', 'icons'],
+	extend: 'Icon',
+	madeFrom: ['Icon'],
+};
 EligibilityIcon.propTypes = {
 	...Icon.propTypes,
 	eligibility: oneOf(_.values(EligibilityOptions))`
