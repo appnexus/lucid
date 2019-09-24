@@ -33,8 +33,11 @@ export interface StandardProps {
 // This helper allows us to have props _within_ the component that are
 // considered not nullable (when defined in D) whereas the props exposed to the
 // consumer are potentially nullable based on the shape of `D`.
-export type PropsWithDefaults<P, D> = Pick<P, Exclude<keyof P, keyof D>> &
-	Partial<D>;
+export type PropsWithDefaults<P, D extends Partial<P>> = Pick<
+	P,
+	Exclude<keyof P, keyof D>
+> &
+	Partial<Pick<P, Extract<keyof P, keyof D>>>;
 
 // `D`: default props (should be provided when a functional component supports
 // default props)
