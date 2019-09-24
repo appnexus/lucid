@@ -23,10 +23,10 @@ export enum ElementTypes {
 
 export interface ITypographyProps
 	extends StandardProps,
-		React.HTMLProps<HTMLElement> {
-	/** This prop defines the type of text that will be displayed. It may be an actual HTML element or something with extra semantic meaning. */
-	variant: keyof typeof ElementTypes;
-}
+	React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> {
+		/** This prop defines the type of text that will be displayed. It may be an actual HTML element or something with extra semantic meaning. */
+		variant: keyof typeof ElementTypes;
+	}
 
 const Typography: FC<ITypographyProps> = (props): React.ReactElement => {
 	const { children, className, variant, ...passThroughs } = props;

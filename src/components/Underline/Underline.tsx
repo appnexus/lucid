@@ -11,9 +11,9 @@ const { node, string, instanceOf, oneOfType } = PropTypes;
 
 const matchAllRegexp = /^.*$/;
 
-export interface IUnderlineProps
-	extends StandardProps,
-		React.HTMLProps<HTMLSpanElement> {
+export interface IUnderlineProps 
+	extends StandardProps, 
+	React.DetailedHTMLProps<React.HTMLAttributes<HTMLSpanElement>, HTMLSpanElement> {
 	/** The first match of the given pattern has the underline style applied to it. */
 	match?: string | RegExp;
 }
