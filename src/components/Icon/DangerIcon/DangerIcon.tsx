@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import Icon, { IIconProps } from '../Icon';
+import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
 import { FC, omitProps } from '../../../util/component-types';
 
@@ -14,11 +14,15 @@ const DangerIcon: FC<IDangerIconProps> = ({
 	isDisabled,
 	...passThroughs
 }): React.ReactElement => {
-
 	return (
 		<Icon
-			{...omitProps(passThroughs, undefined, _.keys(DangerIcon.propTypes), false)}
-			{..._.pick(passThroughs, _.keys(Icon.propTypes))}
+			{...omitProps(
+				passThroughs,
+				undefined,
+				_.keys(DangerIcon.propTypes),
+				false
+			)}
+			{..._.pick(passThroughs, _.keys(iconPropTypes))}
 			isClickable={isClickable}
 			isDisabled={isDisabled}
 			className={cx(
@@ -34,7 +38,7 @@ const DangerIcon: FC<IDangerIconProps> = ({
 	);
 };
 
-DangerIcon.displayName = 'DangerIcon',
+DangerIcon.displayName = 'DangerIcon';
 DangerIcon.peek = {
 	description: `
 		DANGER WILL ROBINSON DANGER
@@ -43,8 +47,6 @@ DangerIcon.peek = {
 	extend: 'Icon',
 	madeFrom: ['Icon'],
 };
-DangerIcon.propTypes = {
-	...Icon.propTypes,
-};
+DangerIcon.propTypes = iconPropTypes;
 
 export default DangerIcon;

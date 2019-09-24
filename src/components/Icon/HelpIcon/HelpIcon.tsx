@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import Icon, { IIconProps } from '../Icon';
+import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
 import { FC, omitProps } from '../../../util/component-types';
 
@@ -14,11 +14,10 @@ const HelpIcon: FC<IHelpIconProps> = ({
 	isClickable,
 	...passThroughs
 }): React.ReactElement => {
-
 	return (
 		<Icon
 			{...omitProps(passThroughs, undefined, _.keys(HelpIcon.propTypes), false)}
-			{..._.pick(passThroughs, _.keys(Icon.propTypes))}
+			{..._.pick(passThroughs, _.keys(iconPropTypes))}
 			isClickable={isClickable}
 			isDisabled={isDisabled}
 			className={cx(
@@ -35,7 +34,7 @@ const HelpIcon: FC<IHelpIconProps> = ({
 	);
 };
 
-HelpIcon.displayName = 'HelpIcon',
+HelpIcon.displayName = 'HelpIcon';
 HelpIcon.peek = {
 	description: `
 		Help me Rhonda.
@@ -44,8 +43,6 @@ HelpIcon.peek = {
 	extend: 'Icon',
 	madeFrom: ['Icon'],
 };
-HelpIcon.propTypes = {
-	...Icon.propTypes,
-};
+HelpIcon.propTypes = iconPropTypes;
 
 export default HelpIcon;

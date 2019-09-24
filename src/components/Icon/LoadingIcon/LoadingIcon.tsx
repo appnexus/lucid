@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
-import Icon, { IIconProps } from '../Icon';
+import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
 import { FC, omitProps } from '../../../util/component-types';
 
@@ -27,13 +27,17 @@ const LoadingIcon: FC<ILoadingIconProps> = ({
 	isDisabled,
 	...passThroughs
 }): React.ReactElement => {
-
 	const animationDuration = `${durations[speed] || durations.normal}`;
 
 	return (
 		<Icon
-			{...omitProps(passThroughs, undefined, _.keys(LoadingIcon.propTypes), false)}
-			{..._.pick(passThroughs, _.keys(Icon.propTypes))}
+			{...omitProps(
+				passThroughs,
+				undefined,
+				_.keys(LoadingIcon.propTypes),
+				false
+			)}
+			{..._.pick(passThroughs, _.keys(iconPropTypes))}
 			viewBox='0 0 100 100'
 			className={cx('&', className)}
 			style={{ animationDuration, ...style }}
@@ -62,7 +66,7 @@ LoadingIcon.peek = {
 	madeFrom: ['Icon'],
 };
 LoadingIcon.propTypes = {
-	...Icon.propTypes,
+	...iconPropTypes,
 	speed: oneOf(_.keys(durations))`
 		The speed of rotation of the spinner.
 	`,

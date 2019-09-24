@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import Icon, { IIconProps } from '../Icon';
+import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
 import { FC, omitProps } from '../../../util/component-types';
 
@@ -12,11 +12,15 @@ const LockedIcon: FC<ILockedIconProps> = ({
 	className,
 	...passThroughs
 }): React.ReactElement => {
-
 	return (
 		<Icon
-			{...omitProps(passThroughs, undefined, _.keys(LockedIcon.propTypes), false)}
-			{..._.pick(passThroughs, _.keys(Icon.propTypes))}
+			{...omitProps(
+				passThroughs,
+				undefined,
+				_.keys(LockedIcon.propTypes),
+				false
+			)}
+			{..._.pick(passThroughs, _.keys(iconPropTypes))}
 			className={cx('&', className)}
 		>
 			<path d='M1.5 6.5h13v9h-13zm2 0V5a4.5 4.5 0 0 1 9 0v1.5m-4.51 6.793v-3' />
@@ -25,7 +29,7 @@ const LockedIcon: FC<ILockedIconProps> = ({
 	);
 };
 
-LockedIcon.displayName = 'LockedIcon',
+LockedIcon.displayName = 'LockedIcon';
 LockedIcon.peek = {
 	description: `
 		You shall not pass!
@@ -34,8 +38,6 @@ LockedIcon.peek = {
 	extend: 'Icon',
 	madeFrom: ['Icon'],
 };
-LockedIcon.propTypes = {
-	...Icon.propTypes,
-};
+LockedIcon.propTypes = iconPropTypes;
 
 export default LockedIcon;

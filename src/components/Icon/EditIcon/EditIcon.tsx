@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import Icon, { IIconProps } from '../Icon';
+import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
 import { FC, omitProps } from '../../../util/component-types';
 
@@ -12,11 +12,10 @@ const EditIcon: FC<IEditIconProps> = ({
 	className,
 	...passThroughs
 }): React.ReactElement => {
-
 	return (
 		<Icon
 			{...omitProps(passThroughs, undefined, _.keys(EditIcon.propTypes), false)}
-			{..._.pick(passThroughs, _.keys(Icon.propTypes))}
+			{..._.pick(passThroughs, _.keys(iconPropTypes))}
 			className={cx('&', className)}
 		>
 			<path d='M4.541 14.522L.548 15.547l.974-4.006L12.452.472l3.019 2.981zm5.924-12.038l3.019 2.981M2.5 10.5l3 3' />
@@ -24,7 +23,7 @@ const EditIcon: FC<IEditIconProps> = ({
 	);
 };
 
-EditIcon.displayName = 'EditIcon',
+EditIcon.displayName = 'EditIcon';
 EditIcon.peek = {
 	description: `
 		An edit icon.
@@ -33,8 +32,6 @@ EditIcon.peek = {
 	extend: 'Icon',
 	madeFrom: ['Icon'],
 };
-EditIcon.propTypes = {
-	...Icon.propTypes,
-};
+EditIcon.propTypes = iconPropTypes;
 
 export default EditIcon;

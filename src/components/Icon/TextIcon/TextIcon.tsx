@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import Icon, { IIconProps } from '../Icon';
+import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
 import { FC, omitProps } from '../../../util/component-types';
 
@@ -12,11 +12,10 @@ const TextIcon: FC<ITextIconProps> = ({
 	className,
 	...passThroughs
 }): React.ReactElement => {
-
 	return (
 		<Icon
 			{...omitProps(passThroughs, undefined, _.keys(TextIcon.propTypes), false)}
-			{..._.pick(passThroughs, _.keys(Icon.propTypes))}
+			{..._.pick(passThroughs, _.keys(iconPropTypes))}
 			className={cx('&', className)}
 		>
 			<path d='M.5 2.5v-2h15v2' />
@@ -26,7 +25,7 @@ const TextIcon: FC<ITextIconProps> = ({
 	);
 };
 
-TextIcon.displayName = 'TextIcon',
+TextIcon.displayName = 'TextIcon';
 TextIcon.peek = {
 	description: `
 		A text icon.
@@ -35,8 +34,6 @@ TextIcon.peek = {
 	extend: 'Icon',
 	madeFrom: ['Icon'],
 };
-TextIcon.propTypes = {
-	...Icon.propTypes,
-};
+TextIcon.propTypes = iconPropTypes;
 
 export default TextIcon;

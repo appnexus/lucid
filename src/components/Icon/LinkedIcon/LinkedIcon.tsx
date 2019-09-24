@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import Icon, { IIconProps } from '../Icon';
+import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
 import { FC, omitProps } from '../../../util/component-types';
 
@@ -12,11 +12,15 @@ const LinkedIcon: FC<ILinkedIconProps> = ({
 	className,
 	...passThroughs
 }): React.ReactElement => {
-
 	return (
 		<Icon
-			{...omitProps(passThroughs, undefined, _.keys(LinkedIcon.propTypes), false)}
-			{..._.pick(passThroughs, _.keys(Icon.propTypes))}
+			{...omitProps(
+				passThroughs,
+				undefined,
+				_.keys(LinkedIcon.propTypes),
+				false
+			)}
+			{..._.pick(passThroughs, _.keys(iconPropTypes))}
 			className={cx('&', className)}
 		>
 			<path d='M5 11l6-6' />
@@ -25,7 +29,7 @@ const LinkedIcon: FC<ILinkedIconProps> = ({
 	);
 };
 
-LinkedIcon.displayName = 'LinkedIcon',
+LinkedIcon.displayName = 'LinkedIcon';
 LinkedIcon.peek = {
 	description: `
 		Get linked in with this fresh new icon!
@@ -34,8 +38,6 @@ LinkedIcon.peek = {
 	extend: 'Icon',
 	madeFrom: ['Icon'],
 };
-LinkedIcon.propTypes = {
-	...Icon.propTypes,
-};
+LinkedIcon.propTypes = iconPropTypes;
 
 export default LinkedIcon;

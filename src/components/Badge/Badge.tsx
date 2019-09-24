@@ -6,7 +6,7 @@ import {
 	omitProps,
 	FC,
 	StandardProps,
-	PropsWithDefaults,
+	FixDefaults,
 } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-Badge');
@@ -30,10 +30,13 @@ export enum Type {
 
 export interface IBadgeProps
 	extends StandardProps,
-		React.HTMLAttributes<HTMLSpanElement> {
-	kind: keyof typeof Kind;
+		React.DetailedHTMLProps<
+			React.HTMLAttributes<HTMLSpanElement>,
+			HTMLSpanElement
+		> {
+	kind?: keyof typeof Kind;
 	/** Fill variations for the `Badge` */
-	type: keyof typeof Type;
+	type?: keyof typeof Type;
 }
 
 const defaultProps = {
@@ -42,7 +45,13 @@ const defaultProps = {
 };
 
 const Badge: FC<IBadgeProps> = (props): React.ReactElement => {
-	const { className, kind, type, children, ...passThroughs } = props;
+	const {
+		className,
+		kind,
+		type,
+		children,
+		...passThroughs
+	} = props as FixDefaults<IBadgeProps, typeof defaultProps>;
 
 	return (
 		<span
@@ -81,4 +90,4 @@ Badge.propTypes = {
 		`,
 };
 
-export default Badge as FC<PropsWithDefaults<IBadgeProps, typeof defaultProps>>;
+export default Badge;

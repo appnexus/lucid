@@ -30,14 +30,10 @@ export interface StandardProps {
 // rely on type inference for our functional components, but since we also have
 // other properties (e.g. `_isPrivate`) we need to explicitly define the type.
 //
-// This helper allows us to have props _within_ the component that are
-// considered not nullable (when defined in D) whereas the props exposed to the
-// consumer are potentially nullable based on the shape of `D`.
-export type PropsWithDefaults<P, D extends Partial<P>> = Pick<
-	P,
-	Exclude<keyof P, keyof D>
-> &
-	Partial<Pick<P, Extract<keyof P, keyof D>>>;
+// This helper allows us to cast props used _within_ the component to consider
+// properties found on defaultProps to be required.
+export type FixDefaults<P, D extends Partial<P>> = Pick<P, Exclude<keyof P, keyof D>> &
+	Required<Pick<P, Extract<keyof P, keyof D>>>;
 
 // `D`: default props (should be provided when a functional component supports
 // default props)

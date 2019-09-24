@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import Icon, { IIconProps } from '../Icon';
+import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
 import { FC, omitProps } from '../../../util/component-types';
 
@@ -12,11 +12,15 @@ const NewWindowIcon: FC<INewWindowIconProps> = ({
 	className,
 	...passThroughs
 }): React.ReactElement => {
-
 	return (
 		<Icon
-			{...omitProps(passThroughs, undefined, _.keys(NewWindowIcon.propTypes), false)}
-			{..._.pick(passThroughs, _.keys(Icon.propTypes))}
+			{...omitProps(
+				passThroughs,
+				undefined,
+				_.keys(NewWindowIcon.propTypes),
+				false
+			)}
+			{..._.pick(passThroughs, _.keys(iconPropTypes))}
 			className={cx('&', className)}
 		>
 			<path d='M9.5.5h6v6m-10-6h-5v15h15v-5' />
@@ -25,7 +29,7 @@ const NewWindowIcon: FC<INewWindowIconProps> = ({
 	);
 };
 
-NewWindowIcon.displayName = 'NewWindowIcon',
+NewWindowIcon.displayName = 'NewWindowIcon';
 NewWindowIcon.peek = {
 	description: `
 		A new window icon.
@@ -34,8 +38,6 @@ NewWindowIcon.peek = {
 	extend: 'Icon',
 	madeFrom: ['Icon'],
 };
-NewWindowIcon.propTypes = {
-	...Icon.propTypes,
-};
+NewWindowIcon.propTypes = iconPropTypes;
 
 export default NewWindowIcon;

@@ -1,11 +1,10 @@
 import _ from 'lodash';
 import React from 'react';
-import Icon, { IIconProps } from '../Icon';
+import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
 import { FC, omitProps } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-AudioIcon');
-
 
 interface IAudioIconProps extends IIconProps {}
 
@@ -13,11 +12,15 @@ const AudioIcon: FC<IAudioIconProps> = ({
 	className,
 	...passThroughs
 }): React.ReactElement => {
-
 	return (
 		<Icon
-		{...omitProps(passThroughs, undefined, _.keys(AudioIcon.propTypes), false)}
-		{..._.pick(passThroughs, _.keys(Icon.propTypes))}
+			{...omitProps(
+				passThroughs,
+				undefined,
+				_.keys(AudioIcon.propTypes),
+				false
+			)}
+			{..._.pick(passThroughs, _.keys(iconPropTypes))}
 			className={cx('&', className)}
 		>
 			<path d='M.5 5.5v5h4l4 4v-13l-4 4zM10.786 11s1.714-.857 1.714-3-1.714-3-1.714-3' />
@@ -26,7 +29,7 @@ const AudioIcon: FC<IAudioIconProps> = ({
 	);
 };
 
-AudioIcon.displayName = 'AudioIcon',
+AudioIcon.displayName = 'AudioIcon';
 AudioIcon.peek = {
 	description: `
 		An audio icon. Can you hear me now? Good.
@@ -35,8 +38,6 @@ AudioIcon.peek = {
 	extend: 'Icon',
 	madeFrom: ['Icon'],
 };
-AudioIcon.propTypes = {
-	...Icon.propTypes,
-};
+AudioIcon.propTypes = iconPropTypes;
 
 export default AudioIcon;

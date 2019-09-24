@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import Icon, { IIconProps } from '../Icon';
+import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
 import { FC, omitProps } from '../../../util/component-types';
 
@@ -12,11 +12,15 @@ const ShoppingCartIcon: FC<IShoppingCartIconProps> = ({
 	className,
 	...passThroughs
 }): React.ReactElement => {
-
 	return (
 		<Icon
-			{...omitProps(passThroughs, undefined, _.keys(ShoppingCartIcon.propTypes), false)}
-			{..._.pick(passThroughs, _.keys(Icon.propTypes))}
+			{...omitProps(
+				passThroughs,
+				undefined,
+				_.keys(ShoppingCartIcon.propTypes),
+				false
+			)}
+			{..._.pick(passThroughs, _.keys(iconPropTypes))}
 			className={cx('&', className)}
 		>
 			<path d='M13.5 14a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zM7 13.5a.5.5 0 1 0 0 1 .5.5 0 0 0 0-1z' />
@@ -26,7 +30,7 @@ const ShoppingCartIcon: FC<IShoppingCartIconProps> = ({
 	);
 };
 
-ShoppingCartIcon.displayName = 'ShoppingCartIcon',
+ShoppingCartIcon.displayName = 'ShoppingCartIcon';
 ShoppingCartIcon.peek = {
 	description: `
 		Buy buy buy!
@@ -35,8 +39,6 @@ ShoppingCartIcon.peek = {
 	extend: 'Icon',
 	madeFrom: ['Icon'],
 };
-ShoppingCartIcon.propTypes = {
-	...Icon.propTypes,
-};
+ShoppingCartIcon.propTypes = iconPropTypes;
 
 export default ShoppingCartIcon;

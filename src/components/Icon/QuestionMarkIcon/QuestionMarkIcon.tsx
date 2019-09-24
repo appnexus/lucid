@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import Icon, { IIconProps } from '../Icon';
+import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
 import { FC, omitProps } from '../../../util/component-types';
 
@@ -12,11 +12,15 @@ const QuestionMarkIcon: FC<IQuestionMarkIconProps> = ({
 	className,
 	...passThroughs
 }): React.ReactElement => {
-
 	return (
 		<Icon
-			{...omitProps(passThroughs, undefined, _.keys(QuestionMarkIcon.propTypes), false)}
-			{..._.pick(passThroughs, _.keys(Icon.propTypes))}
+			{...omitProps(
+				passThroughs,
+				undefined,
+				_.keys(QuestionMarkIcon.propTypes),
+				false
+			)}
+			{..._.pick(passThroughs, _.keys(iconPropTypes))}
 			className={cx('&', className)}
 		>
 			<path d='M3.752 5C3.752 2.515 5.514.5 8 .5s4.28 1.936 4.28 4.421c0 1.187-.679 2.257-2.148 3.214C8.759 9.032 8 9.604 8 10.755v1.652' />
@@ -25,7 +29,7 @@ const QuestionMarkIcon: FC<IQuestionMarkIconProps> = ({
 	);
 };
 
-QuestionMarkIcon.displayName = 'QuestionMarkIcon',
+QuestionMarkIcon.displayName = 'QuestionMarkIcon';
 QuestionMarkIcon.peek = {
 	description: `
 		Question mark circle icon.
@@ -34,8 +38,6 @@ QuestionMarkIcon.peek = {
 	extend: 'Icon',
 	madeFrom: ['Icon'],
 };
-QuestionMarkIcon.propTypes = {
-	...Icon.propTypes,
-};
+QuestionMarkIcon.propTypes = iconPropTypes;
 
 export default QuestionMarkIcon;

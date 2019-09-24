@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import Icon, { IIconProps } from '../Icon';
+import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
 import { FC, omitProps } from '../../../util/component-types';
 
@@ -12,11 +12,15 @@ const CheckIcon: FC<ICheckIconProps> = ({
 	className,
 	...passThroughs
 }): React.ReactElement => {
-
 	return (
 		<Icon
-		{...omitProps(passThroughs, undefined, _.keys(CheckIcon.propTypes), false)}
-		{..._.pick(passThroughs, _.keys(Icon.propTypes))}
+			{...omitProps(
+				passThroughs,
+				undefined,
+				_.keys(CheckIcon.propTypes),
+				false
+			)}
+			{..._.pick(passThroughs, _.keys(iconPropTypes))}
 			className={cx('&', className)}
 		>
 			<path d='M.5 7L6 12.5 15.5 3' />
@@ -24,17 +28,17 @@ const CheckIcon: FC<ICheckIconProps> = ({
 	);
 };
 
-CheckIcon.displayName = 'CheckIcon',
-CheckIcon.peek = {
-	description: `
+(CheckIcon.displayName = 'CheckIcon'),
+	(CheckIcon.peek = {
+		description: `
 		A check icon.
 	`,
-	categories: ['visual design', 'icons'],
-	extend: 'Icon',
-	madeFrom: ['Icon'],
-};
+		categories: ['visual design', 'icons'],
+		extend: 'Icon',
+		madeFrom: ['Icon'],
+	});
 CheckIcon.propTypes = {
-	...Icon.propTypes,
+	...iconPropTypes,
 };
 
 export default CheckIcon;

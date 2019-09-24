@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import Icon, { IIconProps } from '../Icon';
+import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
 import { FC, omitProps } from '../../../util/component-types';
 
@@ -12,11 +12,15 @@ const SearchIcon: FC<ISearchIconProps> = ({
 	className,
 	...passThroughs
 }): React.ReactElement => {
-
 	return (
 		<Icon
-			{...omitProps(passThroughs, undefined, _.keys(SearchIcon.propTypes), false)}
-			{..._.pick(passThroughs, _.keys(Icon.propTypes))}
+			{...omitProps(
+				passThroughs,
+				undefined,
+				_.keys(SearchIcon.propTypes),
+				false
+			)}
+			{..._.pick(passThroughs, _.keys(iconPropTypes))}
 			className={cx('&', className)}
 		>
 			<circle cx='6' cy='6' r='5.5' />
@@ -25,7 +29,7 @@ const SearchIcon: FC<ISearchIconProps> = ({
 	);
 };
 
-SearchIcon.displayName = 'SearchIcon',
+SearchIcon.displayName = 'SearchIcon';
 SearchIcon.peek = {
 	description: `
 		A search icon.
@@ -34,8 +38,6 @@ SearchIcon.peek = {
 	extend: 'Icon',
 	madeFrom: ['Icon'],
 };
-SearchIcon.propTypes = {
-	...Icon.propTypes,
-};
+SearchIcon.propTypes = iconPropTypes;
 
 export default SearchIcon;

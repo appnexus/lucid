@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import Icon, { IIconProps } from '../Icon';
+import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
 import { FC, omitProps } from '../../../util/component-types';
 
@@ -14,11 +14,15 @@ const CloseIcon: FC<ICloseIconProps> = ({
 	isClickable,
 	...passThroughs
 }): React.ReactElement => {
-
 	return (
 		<Icon
-			{...omitProps(passThroughs, undefined, _.keys(CloseIcon.propTypes), false)}
-			{..._.pick(passThroughs, _.keys(Icon.propTypes))}
+			{...omitProps(
+				passThroughs,
+				undefined,
+				_.keys(CloseIcon.propTypes),
+				false
+			)}
+			{..._.pick(passThroughs, _.keys(iconPropTypes))}
 			isClickable={isClickable}
 			isDisabled={isDisabled}
 			className={cx(
@@ -33,7 +37,7 @@ const CloseIcon: FC<ICloseIconProps> = ({
 	);
 };
 
-CloseIcon.displayName = 'CloseIcon',
+CloseIcon.displayName = 'CloseIcon';
 CloseIcon.peek = {
 	description: `
 		A larger close X icon
@@ -42,8 +46,6 @@ CloseIcon.peek = {
 	extend: 'Icon',
 	madeFrom: ['Icon'],
 };
-CloseIcon.propTypes = {
-	...Icon.propTypes,
-};
+CloseIcon.propTypes = iconPropTypes;
 
 export default CloseIcon;

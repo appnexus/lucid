@@ -7,7 +7,7 @@ import {
 	omitProps,
 	FC,
 	StandardProps,
-	PropsWithDefaults,
+	FixDefaults,
 } from '../../util/component-types';
 import * as d3scale from 'd3-scale';
 import { Overwrite } from 'type-zoo';
@@ -16,7 +16,7 @@ const cx = lucidClassNames.bind('&-Axis');
 
 const { string, array, func, number, oneOf } = PropTypes;
 
-export interface IAxisProps extends StandardProps {
+interface IAxisPropsRaw extends StandardProps {
 	/** Must be a d3 scale. Lucid exposes the \`lucid.d3Scale\` library for use here.
 	 We support `ScaleTime | ScaleBand | ScalePoint` and possibly more. */
 	scale:
@@ -27,11 +27,11 @@ export interface IAxisProps extends StandardProps {
 	// | d3scale.ScaleLogarithmic<number, number>;
 
 	/** Size of the ticks for each discrete tick mark. */
-	innerTickSize: number;
+	innerTickSize?: number;
 
 	/** Size of the tick marks found at the beginning and end of the axis. It's
 		common to set this to \`0\` to remove them. */
-	outerTickSize: number;
+	outerTickSize?: number;
 
 	/** An optional function that can format ticks. Generally this shouldn't be
 		needed since d3 has very good default formatters for most data. */
@@ -42,39 +42,39 @@ export interface IAxisProps extends StandardProps {
 	ticks?: number[];
 
 	/** Determines the spacing between each tick and its text. */
-	tickPadding: number;
+	tickPadding?: number;
 
 	/** Determines the orientation of the ticks. \`left\` and \`right\` will
 		generate a vertical axis, whereas \`top\` and \`bottom\` will generate a
 		horizontal axis. */
-	orient: 'top' | 'bottom' | 'left' | 'right';
+	orient?: 'top' | 'bottom' | 'left' | 'right';
 
 	/** Control the number of ticks displayed. If the scale is time based or
 		linear, this number acts a "hint" per the default behavior of D3. If it's
 		an ordinal scale, this number is treated as an absolute number of ticks
 		to display and is powered by our own utility function \`discreteTicks\`. */
-	tickCount: number | null;
+	tickCount?: number | null;
 
 	/** Determines the orientation of the tick text. This may override what the orient prop
 		tries to determine. This defaults to `horizontal`.  */
-	textOrientation: 'vertical' | 'horizontal' | 'diagonal';
+	textOrientation?: 'vertical' | 'horizontal' | 'diagonal';
 }
 
-type IAxisPropsWithPassThroughs = Overwrite<
+export type IAxisProps = Overwrite<
 	React.SVGAttributes<SVGGElement>,
-	IAxisProps
+	IAxisPropsRaw
 >;
 
 const defaultProps = {
 	innerTickSize: 6, // same as d3
 	outerTickSize: 6, // same as d3
 	tickPadding: 3, // same as d3
-	textOrientation: 'horizontal' as const, // https://stackoverflow.com/a/55387357/895558
-	orient: 'bottom' as const, // https://stackoverflow.com/a/55387357/895558
+	textOrientation: 'horizontal' as const,
+	orient: 'bottom' as const,
 	tickCount: null,
 };
 
-const Axis: FC<IAxisPropsWithPassThroughs> = (props): React.ReactElement => {
+const Axis: FC<IAxisProps> = (props): React.ReactElement => {
 	const {
 		className,
 		scale,
@@ -89,7 +89,7 @@ const Axis: FC<IAxisPropsWithPassThroughs> = (props): React.ReactElement => {
 		tickPadding,
 		textOrientation,
 		...passThroughs
-	} = props;
+	} = props as FixDefaults<IAxisProps, typeof defaultProps>;
 
 	const tickSpacing = Math.max(innerTickSize, 0) + tickPadding;
 
@@ -332,6 +332,4 @@ Axis.propTypes = {
 	`,
 };
 
-export default Axis as FC<
-	PropsWithDefaults<IAxisPropsWithPassThroughs, typeof defaultProps>
->;
+export default Axis;

@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import Icon, { IIconProps } from '../Icon';
+import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
 import { FC, omitProps } from '../../../util/component-types';
 
@@ -12,11 +12,15 @@ const DownloadIcon: FC<IDownloadIconProps> = ({
 	className,
 	...passThroughs
 }): React.ReactElement => {
-
 	return (
 		<Icon
-			{...omitProps(passThroughs, undefined, _.keys(DownloadIcon.propTypes), false)}
-			{..._.pick(passThroughs, _.keys(Icon.propTypes))}
+			{...omitProps(
+				passThroughs,
+				undefined,
+				_.keys(DownloadIcon.propTypes),
+				false
+			)}
+			{..._.pick(passThroughs, _.keys(iconPropTypes))}
 			className={cx('&', className)}
 		>
 			<path d='M8 0v12m5-5l-5 5-5-5' />
@@ -25,7 +29,7 @@ const DownloadIcon: FC<IDownloadIconProps> = ({
 	);
 };
 
-DownloadIcon.displayName = 'DownloadIcon',
+DownloadIcon.displayName = 'DownloadIcon';
 DownloadIcon.peek = {
 	description: `
 		Typically used to denote that something is available for download.
@@ -34,8 +38,6 @@ DownloadIcon.peek = {
 	extend: 'Icon',
 	madeFrom: ['Icon'],
 };
-DownloadIcon.propTypes = {
-	...Icon.propTypes,
-};
+DownloadIcon.propTypes = iconPropTypes;
 
 export default DownloadIcon;

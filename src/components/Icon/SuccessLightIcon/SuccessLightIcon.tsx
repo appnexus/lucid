@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
-import Icon, { IIconProps } from '../Icon';
+import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
 import { FC, omitProps } from '../../../util/component-types';
 
@@ -22,11 +22,15 @@ const SuccessLightIcon: FC<ISuccessLightIconProps> = ({
 	isDisabled,
 	...passThroughs
 }): React.ReactElement => {
-
 	return (
 		<Icon
-			{...omitProps(passThroughs, undefined, _.keys(SuccessLightIcon.propTypes), false)}
-			{..._.pick(passThroughs, _.keys(Icon.propTypes))}
+			{...omitProps(
+				passThroughs,
+				undefined,
+				_.keys(SuccessLightIcon.propTypes),
+				false
+			)}
+			{..._.pick(passThroughs, _.keys(iconPropTypes))}
 			isClickable={isClickable}
 			isDisabled={isDisabled}
 			className={cx(
@@ -43,7 +47,7 @@ const SuccessLightIcon: FC<ISuccessLightIconProps> = ({
 	);
 };
 
-SuccessLightIcon.displayName = 'SuccessLightIcon',
+SuccessLightIcon.displayName = 'SuccessLightIcon';
 SuccessLightIcon.peek = {
 	description: `
 		Nothing like a mild success in the morning to get the blood flowing!
@@ -53,7 +57,7 @@ SuccessLightIcon.peek = {
 	madeFrom: ['Icon'],
 };
 SuccessLightIcon.propTypes = {
-	...Icon.propTypes,
+	...iconPropTypes,
 	isActive: bool`
 		Controls the active state of the Icon. Basically toggles the same "look n
 		feel" as when you hover.

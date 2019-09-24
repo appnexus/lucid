@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import Icon, { IIconProps } from '../Icon';
+import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
 import { FC, omitProps } from '../../../util/component-types';
 
@@ -12,11 +12,10 @@ const PlusIcon: FC<IPlusIconProps> = ({
 	className,
 	...passThroughs
 }): React.ReactElement => {
-
 	return (
 		<Icon
 			{...omitProps(passThroughs, undefined, _.keys(PlusIcon.propTypes), false)}
-			{..._.pick(passThroughs, _.keys(Icon.propTypes))}
+			{..._.pick(passThroughs, _.keys(iconPropTypes))}
 			className={cx('&', className)}
 		>
 			<path d='M8 .5v15M15.5 8H.5' />
@@ -24,7 +23,7 @@ const PlusIcon: FC<IPlusIconProps> = ({
 	);
 };
 
-PlusIcon.displayName = 'PlusIcon',
+PlusIcon.displayName = 'PlusIcon';
 PlusIcon.peek = {
 	description: `
 		A plus icon.
@@ -33,8 +32,6 @@ PlusIcon.peek = {
 	extend: 'Icon',
 	madeFrom: ['Icon'],
 };
-PlusIcon.propTypes = {
-	...Icon.propTypes,
-};
+PlusIcon.propTypes = iconPropTypes;
 
 export default PlusIcon;

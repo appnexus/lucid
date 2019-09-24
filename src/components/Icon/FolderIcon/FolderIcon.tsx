@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import Icon, { IIconProps } from '../Icon';
+import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
 import { FC, omitProps } from '../../../util/component-types';
 
@@ -12,11 +12,15 @@ const FolderIcon: FC<IFolderIconProps> = ({
 	className,
 	...passThroughs
 }): React.ReactElement => {
-
 	return (
 		<Icon
-			{...omitProps(passThroughs, undefined, _.keys(FolderIcon.propTypes), false)}
-			{..._.pick(passThroughs, _.keys(Icon.propTypes))}
+			{...omitProps(
+				passThroughs,
+				undefined,
+				_.keys(FolderIcon.propTypes),
+				false
+			)}
+			{..._.pick(passThroughs, _.keys(iconPropTypes))}
 			className={cx('&', className)}
 		>
 			<path d='M.5 4.5h15v10H.5zm0 0v-3h5l2 3' />
@@ -24,7 +28,7 @@ const FolderIcon: FC<IFolderIconProps> = ({
 	);
 };
 
-FolderIcon.displayName = 'FolderIcon',
+FolderIcon.displayName = 'FolderIcon';
 FolderIcon.peek = {
 	description: `
 		An edit icon.
@@ -33,8 +37,6 @@ FolderIcon.peek = {
 	extend: 'Icon',
 	madeFrom: ['Icon'],
 };
-FolderIcon.propTypes = {
-	...Icon.propTypes,
-};
+FolderIcon.propTypes = iconPropTypes;
 
 export default FolderIcon;
