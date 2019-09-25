@@ -94,9 +94,11 @@ interface ITextFieldProps extends StandardProps {
 		heavily inspired by the [lazy-input](https:/docs.npmjs.com/package/lazy-input) component. */
 	lazyLevel: number;
 }
-
 type ITextFieldPropsWithPassThroughs = Overwrite<
-	React.InputHTMLAttributes<HTMLInputElement>,
+	React.DetailedHTMLProps<
+		React.InputHTMLAttributes<HTMLInputElement>, 
+		HTMLInputElement
+	>,
 	ITextFieldProps
 >;
 
