@@ -32,8 +32,15 @@ export interface StandardProps {
 //
 // This helper allows us to cast props used _within_ the component to consider
 // properties found on defaultProps to be required.
-export type FixDefaults<P, D extends Partial<P>> = Pick<P, Exclude<keyof P, keyof D>> &
+export type FixDefaults<P, D extends Partial<P>> = Pick<
+	P,
+	Exclude<keyof P, keyof D>
+> &
 	Required<Pick<P, Extract<keyof P, keyof D>>>;
+
+// Like `T & U`, but where there are overlapping properties using the type from U only.
+// From https://github.com/pelotom/type-zoo/blob/1a08384d77967ed322356005636fbb8db3c16702/types/index.d.ts#L43
+export type Overwrite<T, U> = Omit<T, keyof T & keyof U> & U;
 
 // `D`: default props (should be provided when a functional component supports
 // default props)

@@ -2,30 +2,35 @@ import _ from 'lodash';
 import React, { createRef } from 'react';
 import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import { omitProps, FC, StandardProps, FixDefaults } from '../../util/component-types';
-import { Overwrite } from 'type-zoo';
+import {
+	omitProps,
+	FC,
+	StandardProps,
+	FixDefaults,
+	Overwrite,
+} from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-Switch');
 const { bool, func, object, string } = PropTypes;
 
 export interface ISwitchPropsRaw extends StandardProps {
 	/** Indicates whether the component should appear and act disabled by having
-	 * a "greyed out" palette and ignoring user interactions. 
-	 * 
+	 * a "greyed out" palette and ignoring user interactions.
+	 *
 	 * @default false
 	 * */
 	isDisabled?: boolean;
 
 	/** Indicates that the component is in the "selected" state when true and in
-	 * the "unselected" state when false. 
-	 * 
+	 * the "unselected" state when false.
+	 *
 	 * @default false
 	 * */
 	isSelected?: boolean;
 
 	/** Called when the user clicks on the component or when they press the space
-	 * key while the component is in focus. 
-	 * 
+	 * key while the component is in focus.
+	 *
 	 * @default _.noop
 	 * */
 	onSelect?: (
@@ -41,10 +46,10 @@ export interface ISwitchPropsRaw extends StandardProps {
 		}
 	) => void;
 
-	/** Offers a red/green styling to the switch. 
-	 * 
+	/** Offers a red/green styling to the switch.
+	 *
 	 * @default false
-	*/
+	 */
 	isIncludeExclude?: boolean;
 }
 
@@ -60,8 +65,8 @@ const defaultProps = {
 	isDisabled: false,
 	isSelected: false,
 	onSelect: _.noop,
-	isIncludeExclude: false
-}
+	isIncludeExclude: false,
+};
 
 const Switch: FC<ISwitchProps> = (props): React.ReactElement => {
 	const {

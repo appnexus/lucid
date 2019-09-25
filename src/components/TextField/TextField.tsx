@@ -2,11 +2,14 @@ import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import _ from 'lodash';
 import { lucidClassNames } from '../../util/style-helpers';
-import { omitProps, StandardProps } from '../../util/component-types';
+import {
+	omitProps,
+	StandardProps,
+	Overwrite,
+} from '../../util/component-types';
 import reducers from './TextField.reducers';
 import * as KEYCODE from '../../constants/key-code';
 import { ITextFieldState } from './TextField.reducers';
-import { Overwrite } from 'type-zoo';
 
 const cx = lucidClassNames.bind('&-TextField');
 

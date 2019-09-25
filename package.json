@@ -137,7 +137,6 @@
     "timemachine": "^0.3.0",
     "ts-jest": "^24.0.2",
     "ts-loader": "^6.0.4",
-    "type-zoo": "^3.4.1",
     "typescript": "^3.5.3",
     "webpack": "^4.27.1",
     "webpack-cli": "^3.1.2",

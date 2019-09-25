@@ -1,7 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
-import { Overwrite } from 'type-zoo';
 
 import Icon from '../Icon/Icon';
 import RadioButtonLabeled, {
@@ -15,6 +14,7 @@ import {
 	StandardProps,
 	omitProps,
 	FixDefaults,
+	Overwrite,
 } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-IconSelect');

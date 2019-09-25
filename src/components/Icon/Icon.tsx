@@ -7,8 +7,8 @@ import {
 	FC,
 	StandardProps,
 	FixDefaults,
+	Overwrite,
 } from '../../util/component-types';
-import { Overwrite } from 'type-zoo';
 
 const cx = lucidClassNames.bind('&-Icon');
 
