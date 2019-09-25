@@ -11,7 +11,6 @@ import {
 	omitProps,
 	FixDefaults
 } from '../../util/component-types';
-import { IIconProps } from '../Icon/Icon';
 
 const cx = lucidClassNames.bind('&-Tag');
 
@@ -41,7 +40,7 @@ export interface ITagProps
 		props,
 		event,
 	}: {
-		props: IIconProps;
+		props: ITagProps;
 		event: React.MouseEvent;
 	}) => void;
 }
