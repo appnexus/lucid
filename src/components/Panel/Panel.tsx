@@ -7,6 +7,7 @@ import {
 	omitProps,
 	FC,
 	StandardProps,
+	FixDefaults,
 } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-Panel');
@@ -49,7 +50,10 @@ PanelFooter.propName = 'Footer';
 
 export interface IPanelProps
 	extends StandardProps,
-		React.HTMLProps<HTMLDivElement> {
+		React.DetailedHTMLProps<
+			React.HTMLAttributes<HTMLDivElement>,
+			HTMLDivElement
+		> {
 	/** *Child Element* - Header contents. Only one \`Header\` is used. */
 	Header?: React.ReactNode & { props: IPanelHeaderProps };
 
@@ -72,16 +76,22 @@ export interface IPanelFC extends FC<IPanelProps> {
 	Footer: FC<IPanelFooterProps>;
 }
 
+const defaultProps = {
+	isGutterless: false,
+	hasMargin: true,
+	isScrollable: true,
+};
+
 const Panel: IPanelFC = (props): React.ReactElement => {
 	const {
 		children,
 		className,
-		isGutterless = false,
-		hasMargin = true,
+		isGutterless,
+		hasMargin,
 		style,
-		isScrollable = true,
+		isScrollable,
 		...passThroughs
-	} = props;
+	} = props as FixDefaults<IPanelProps, typeof defaultProps>;
 
 	const headerChildProp = _.first(
 		_.map(findTypes(props, Panel.Header), 'props')
@@ -123,6 +133,7 @@ const Panel: IPanelFC = (props): React.ReactElement => {
 	);
 };
 
+Panel.defaultProps = defaultProps;
 Panel.displayName = 'Panel';
 Panel.peek = {
 	description: `
