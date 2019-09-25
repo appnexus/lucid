@@ -2,14 +2,18 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import { omitProps, FC, StandardProps } from '../../util/component-types';
+import {
+	omitProps,
+	FC,
+	StandardProps,
+	FixDefaults,
+} from '../../util/component-types';
+import { Overwrite } from 'type-zoo';
 
 const cx = lucidClassNames.bind('&-RadioButton');
 const { bool, func, object, string } = PropTypes;
 
-export interface IRadioButtonProps
-	extends StandardProps,
-		Omit<React.HTMLProps<HTMLSpanElement>, keyof IRadioButtonProps> {
+interface IRadioButtonPropsRaw extends StandardProps {
 	/** Indicates whether the component should appear and act disabled by having
 	 * a "greyed out" palette and ignoring user interactions.
 	 *
@@ -40,15 +44,29 @@ export interface IRadioButtonProps
 	) => void;
 }
 
+export type IRadioButtonProps = Overwrite<
+	React.DetailedHTMLProps<
+		React.HTMLAttributes<HTMLSpanElement>,
+		HTMLSpanElement
+	>,
+	IRadioButtonPropsRaw
+>;
+
+export const defaultProps = {
+	isDisabled: false,
+	isSelected: false,
+	onSelect: _.noop,
+};
+
 const RadioButton: FC<IRadioButtonProps> = (props): React.ReactElement => {
 	const {
 		className,
-		isDisabled = false,
-		isSelected = false,
-		onSelect = _.noop,
+		isDisabled,
+		isSelected,
+		onSelect,
 		style,
 		...passThroughs
-	} = props;
+	} = props as FixDefaults<IRadioButtonProps, typeof defaultProps>;
 
 	const nativeElement = React.createRef<HTMLInputElement>();
 
@@ -100,6 +118,8 @@ const RadioButton: FC<IRadioButtonProps> = (props): React.ReactElement => {
 		</span>
 	);
 };
+
+RadioButton.defaultProps = defaultProps;
 
 RadioButton.displayName = 'RadioButton';
 

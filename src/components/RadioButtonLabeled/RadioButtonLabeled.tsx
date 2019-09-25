@@ -7,8 +7,12 @@ import {
 	StandardProps,
 	findTypes,
 	omitProps,
+	FixDefaults,
 } from '../../util/component-types';
-import RadioButton, { IRadioButtonProps } from '../RadioButton/RadioButton';
+import RadioButton, {
+	IRadioButtonProps,
+	defaultProps as radioButtonDefaultProps,
+} from '../RadioButton/RadioButton';
 
 const cx = lucidClassNames.bind('&-RadioButtonLabeled');
 const { any, object, string } = PropTypes;
@@ -42,12 +46,12 @@ const RadioButtonLabeled: IRadioButtonLabeledFC = (
 ): React.ReactElement => {
 	const {
 		className,
-		isDisabled = false,
-		isSelected = false,
-		onSelect = _.noop,
+		isDisabled,
+		isSelected,
+		onSelect,
 		style,
 		...passThroughs
-	} = props;
+	} = props as FixDefaults<IRadioButtonProps, typeof radioButtonDefaultProps>;
 
 	const labelChildProps = _.first(
 		_.map(findTypes(props, RadioButtonLabeled.Label), 'props')
@@ -83,6 +87,8 @@ const RadioButtonLabeled: IRadioButtonLabeledFC = (
 };
 
 RadioButtonLabeled.displayName = 'RadioButtonLabeled';
+
+RadioButtonLabeled.defaultProps = radioButtonDefaultProps;
 
 RadioButtonLabeled.peek = {
 	description: `
