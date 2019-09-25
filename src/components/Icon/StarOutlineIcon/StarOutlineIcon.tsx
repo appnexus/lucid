@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import Icon, { IIconProps } from '../Icon';
+import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
 import { FC, omitProps } from '../../../util/component-types';
 
@@ -12,11 +12,15 @@ const StarOutlineIcon: FC<IStarOutlineIconProps> = ({
 	className,
 	...passThroughs
 }): React.ReactElement => {
-
 	return (
 		<Icon
-			{...omitProps(passThroughs, undefined, _.keys(StarOutlineIcon.propTypes), false)}
-			{..._.pick(passThroughs, _.keys(Icon.propTypes))}
+			{...omitProps(
+				passThroughs,
+				undefined,
+				_.keys(StarOutlineIcon.propTypes),
+				false
+			)}
+			{..._.pick(passThroughs, _.keys(iconPropTypes))}
 			className={cx('&', className)}
 		>
 			<path d='M8 .75l2.318 4.696 5.182.753-3.75 3.655.885 5.162L8 12.579l-4.635 2.437.885-5.162L.5 6.199l5.182-.753z' />
@@ -24,7 +28,7 @@ const StarOutlineIcon: FC<IStarOutlineIconProps> = ({
 	);
 };
 
-StarOutlineIcon.displayName = 'StarOutlineIcon',
+StarOutlineIcon.displayName = 'StarOutlineIcon';
 StarOutlineIcon.peek = {
 	description: `
 		It's gone supernova.
@@ -33,8 +37,6 @@ StarOutlineIcon.peek = {
 	extend: 'Icon',
 	madeFrom: ['Icon'],
 };
-StarOutlineIcon.propTypes = {
-	...Icon.propTypes,
-};
+StarOutlineIcon.propTypes = iconPropTypes;
 
 export default StarOutlineIcon;

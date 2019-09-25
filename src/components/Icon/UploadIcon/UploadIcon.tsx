@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import Icon, { IIconProps } from '../Icon';
+import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
 import { FC, omitProps } from '../../../util/component-types';
 
@@ -12,11 +12,15 @@ const UploadIcon: FC<IUploadIconProps> = ({
 	className,
 	...passThroughs
 }): React.ReactElement => {
-
 	return (
 		<Icon
-			{...omitProps(passThroughs, undefined, _.keys(UploadIcon.propTypes), false)}
-			{..._.pick(passThroughs, _.keys(Icon.propTypes))}
+			{...omitProps(
+				passThroughs,
+				undefined,
+				_.keys(UploadIcon.propTypes),
+				false
+			)}
+			{..._.pick(passThroughs, _.keys(iconPropTypes))}
 			className={cx('&', className)}
 		>
 			<path d='M8 12V.5m5 5l-5-5-5 5' />
@@ -25,7 +29,7 @@ const UploadIcon: FC<IUploadIconProps> = ({
 	);
 };
 
-UploadIcon.displayName = 'UploadIcon',
+UploadIcon.displayName = 'UploadIcon';
 UploadIcon.peek = {
 	description: `
 		Upload files
@@ -34,8 +38,6 @@ UploadIcon.peek = {
 	extend: 'Icon',
 	madeFrom: ['Icon'],
 };
-UploadIcon.propTypes = {
-	...Icon.propTypes,
-};
+UploadIcon.propTypes = iconPropTypes;
 
 export default UploadIcon;

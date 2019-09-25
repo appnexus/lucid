@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
-import Icon, { IIconProps } from '../Icon';
+import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
 import { FC, omitProps } from '../../../util/component-types';
 
@@ -34,7 +34,7 @@ const EligibilityLightIcon: FC<IEligibilityLightIconProps> = ({
 				_.keys(EligibilityLightIcon.propTypes),
 				false
 			)}
-			{..._.pick(passThroughs, _.keys(Icon.propTypes))}
+			{..._.pick(passThroughs, _.keys(iconPropTypes))}
 			isDisabled={isDisabled}
 			className={cx('&', className)}
 		>
@@ -72,7 +72,7 @@ EligibilityLightIcon.peek = {
 	madeFrom: ['Icon'],
 };
 EligibilityLightIcon.propTypes = {
-	...Icon.propTypes,
+	...iconPropTypes,
 	eligibility: oneOf(_.values(EligibilityOptions))`
 		Eligibility variations of the icon.
 	`,

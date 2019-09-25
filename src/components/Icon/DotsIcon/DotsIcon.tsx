@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import Icon, { IIconProps } from '../Icon';
+import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
 import { FC, omitProps } from '../../../util/component-types';
 import { Color } from '../Icon';
@@ -14,11 +14,10 @@ const DotsIcon: FC<IDotsIconProps> = ({
 	color = Color.primary,
 	...passThroughs
 }): React.ReactElement => {
-
 	return (
 		<Icon
 			{...omitProps(passThroughs, undefined, _.keys(DotsIcon.propTypes), false)}
-			{..._.pick(passThroughs, _.keys(Icon.propTypes))}
+			{..._.pick(passThroughs, _.keys(iconPropTypes))}
 			color={color}
 			className={cx('&', className)}
 		>
@@ -29,7 +28,7 @@ const DotsIcon: FC<IDotsIconProps> = ({
 	);
 };
 
-DotsIcon.displayName = 'DotsIcon',
+DotsIcon.displayName = 'DotsIcon';
 DotsIcon.peek = {
 	description: `
 		Three dots in a row.
@@ -38,8 +37,6 @@ DotsIcon.peek = {
 	extend: 'Icon',
 	madeFrom: ['Icon'],
 };
-DotsIcon.propTypes = {
-	...Icon.propTypes,
-};
+DotsIcon.propTypes = iconPropTypes;
 
 export default DotsIcon;

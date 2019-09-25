@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import Icon, { IIconProps } from '../Icon';
+import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
 import { FC, omitProps } from '../../../util/component-types';
 
@@ -12,11 +12,15 @@ const GripperHorizontalIcon: FC<IGripperHorizontalIconProps> = ({
 	className,
 	...passThroughs
 }): React.ReactElement => {
-
 	return (
 		<Icon
-			{...omitProps(passThroughs, undefined, _.keys(GripperHorizontalIcon.propTypes), false)}
-			{..._.pick(passThroughs, _.keys(Icon.propTypes))}
+			{...omitProps(
+				passThroughs,
+				undefined,
+				_.keys(GripperHorizontalIcon.propTypes),
+				false
+			)}
+			{..._.pick(passThroughs, _.keys(iconPropTypes))}
 			width={16}
 			height={2}
 			viewBox='0 0 16 2'
@@ -27,8 +31,9 @@ const GripperHorizontalIcon: FC<IGripperHorizontalIconProps> = ({
 	);
 };
 
-GripperHorizontalIcon._isPrivate = true,
-GripperHorizontalIcon.displayName = 'GripperHorizontalIcon',
+GripperHorizontalIcon._isPrivate = true;
+GripperHorizontalIcon.defaultProps = Icon.defaultProps;
+GripperHorizontalIcon.displayName = 'GripperHorizontalIcon';
 GripperHorizontalIcon.peek = {
 	description: `
 		A horizontal gripper icon.
@@ -37,8 +42,6 @@ GripperHorizontalIcon.peek = {
 	extend: 'Icon',
 	madeFrom: ['Icon'],
 };
-GripperHorizontalIcon.propTypes = {
-	...Icon.propTypes,
-};
+GripperHorizontalIcon.propTypes = iconPropTypes;
 
 export default GripperHorizontalIcon;

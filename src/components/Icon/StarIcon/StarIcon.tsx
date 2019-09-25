@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import Icon, { IIconProps } from '../Icon';
+import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
 import { FC, omitProps } from '../../../util/component-types';
 
@@ -14,11 +14,10 @@ const StarIcon: FC<IStarIconProps> = ({
 	isDisabled,
 	...passThroughs
 }): React.ReactElement => {
-
 	return (
 		<Icon
 			{...omitProps(passThroughs, undefined, _.keys(StarIcon.propTypes), false)}
-			{..._.pick(passThroughs, _.keys(Icon.propTypes))}
+			{..._.pick(passThroughs, _.keys(iconPropTypes))}
 			isDisabled={isDisabled}
 			isClickable={isClickable}
 			className={cx(
@@ -36,7 +35,7 @@ const StarIcon: FC<IStarIconProps> = ({
 	);
 };
 
-StarIcon.displayName = 'StarIcon',
+StarIcon.displayName = 'StarIcon';
 StarIcon.peek = {
 	description: `
 		You're a shooting star!
@@ -45,8 +44,6 @@ StarIcon.peek = {
 	extend: 'Icon',
 	madeFrom: ['Icon'],
 };
-StarIcon.propTypes = {
-	...Icon.propTypes,
-};
+StarIcon.propTypes = iconPropTypes;
 
 export default StarIcon;

@@ -2,7 +2,13 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import { omitProps, FC, StandardProps } from '../../util/component-types';
+import {
+	omitProps,
+	FC,
+	StandardProps,
+	FixDefaults,
+	Overwrite,
+} from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-Icon');
 
@@ -20,7 +26,7 @@ export enum Color {
 	'secondary-three' = 'secondary-three',
 }
 
-export interface IIconProps extends StandardProps {
+export interface IIconPropsRaw extends StandardProps {
 	/** Size variations of the icons. `size` directly effects height and width but the developer should also be conscious of the relationship with `viewBox`. */
 	size?: number;
 
@@ -64,22 +70,38 @@ export interface IIconProps extends StandardProps {
 	color?: keyof typeof Color;
 }
 
+export type IIconProps = Overwrite<
+	React.HTMLProps<SVGSVGElement>,
+	IIconPropsRaw
+>;
+
+const defaultProps = {
+	size: 16,
+	aspectRatio: 'xMidYMid meet',
+	viewBox: '0 0 16 16',
+	isDisabled: false,
+	isClickable: false,
+	color: Color.primary,
+	onClick: _.noop,
+	onSelect: _.noop,
+};
+
 const Icon: FC<IIconProps> = (props): React.ReactElement => {
 	const {
 		className,
 		children,
-		color = Color.primary,
-		size = 16,
-		width = null,
-		height = null,
-		viewBox = '0 0 16 16',
-		aspectRatio = 'xMidYMid meet',
-		isClickable = false,
-		isDisabled = false,
-		onClick = _.noop,
-		onSelect = _.noop,
+		color,
+		size,
+		width,
+		height,
+		viewBox,
+		aspectRatio,
+		isClickable,
+		isDisabled,
+		onClick,
+		onSelect,
 		...passThroughs
-	} = props;
+	} = props as FixDefaults<IIconProps, typeof defaultProps>;
 
 	const svgRef = React.createRef<SVGSVGElement>();
 
@@ -123,7 +145,7 @@ const Icon: FC<IIconProps> = (props): React.ReactElement => {
 };
 
 Icon.displayName = 'Icon';
-
+Icon.defaultProps = defaultProps;
 Icon.peek = {
 	description: `
 		A basic svg icon. Any props that are not explicitly called out below
@@ -132,7 +154,7 @@ Icon.peek = {
 	categories: ['visual design', 'icons'],
 };
 
-Icon.propTypes = {
+export const propTypes = {
 	className: any`
 		Classes that are appended to the component defaults. This prop is run
 		through the \`classnames\` library.
@@ -190,5 +212,7 @@ Icon.propTypes = {
 		to specific colors (e.g. DangerIcon).
 	`,
 };
+
+Icon.propTypes = propTypes;
 
 export default Icon;

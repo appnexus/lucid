@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import Icon, { IIconProps } from '../Icon';
+import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
 import { FC, omitProps } from '../../../util/component-types';
 
@@ -12,11 +12,15 @@ const EqualsIcon: FC<IEqualsIconProps> = ({
 	className,
 	...passThroughs
 }): React.ReactElement => {
-
 	return (
 		<Icon
-			{...omitProps(passThroughs, undefined, _.keys(EqualsIcon.propTypes), false)}
-			{..._.pick(passThroughs, _.keys(Icon.propTypes))}
+			{...omitProps(
+				passThroughs,
+				undefined,
+				_.keys(EqualsIcon.propTypes),
+				false
+			)}
+			{..._.pick(passThroughs, _.keys(iconPropTypes))}
 			className={cx('&', className)}
 		>
 			<path d='M.5 5.5h15m-15 5h15' />
@@ -24,7 +28,7 @@ const EqualsIcon: FC<IEqualsIconProps> = ({
 	);
 };
 
-EqualsIcon.displayName = 'EqualsIcon',
+EqualsIcon.displayName = 'EqualsIcon';
 EqualsIcon.peek = {
 	description: `
 		An equals icon.
@@ -33,8 +37,6 @@ EqualsIcon.peek = {
 	extend: 'Icon',
 	madeFrom: ['Icon'],
 };
-EqualsIcon.propTypes = {
-	...Icon.propTypes,
-};
+EqualsIcon.propTypes = iconPropTypes;
 
 export default EqualsIcon;

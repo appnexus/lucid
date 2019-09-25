@@ -2,17 +2,19 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import { omitProps } from '../../util/component-types';
+import { omitProps, StandardProps } from '../../util/component-types';
 import elementResizeDetectorMaker from 'element-resize-detector';
 
 const cx = lucidClassNames.bind('&-Resizer');
 
 const { func, string } = PropTypes;
 
-interface IResizerProps {
-	/** Appended to the component-specific class names set on the root elements. */
-	className?: string;
-
+interface IResizerProps
+	extends StandardProps,
+		React.DetailedHTMLProps<
+			React.HTMLAttributes<HTMLDivElement>,
+			HTMLDivElement
+		> {
 	/** A function that returns your rendered content with the signature:
 	 * \`(width, height) => {}\`
 	 */
@@ -54,7 +56,6 @@ class Resizer extends React.Component<IResizerProps, IResizerState, {}> {
 		width: 0,
 		height: 0,
 	};
-
 
 	handleResize = ({
 		offsetWidth,

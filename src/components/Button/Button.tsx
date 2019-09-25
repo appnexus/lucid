@@ -2,13 +2,19 @@ import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import _ from 'lodash';
 import { lucidClassNames } from '../../util/style-helpers';
-import { omitProps, FC, StandardProps } from '../../util/component-types';
+import {
+	omitProps,
+	FC,
+	StandardProps,
+	FixDefaults,
+	Overwrite,
+} from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-Button');
 
 const { arrayOf, bool, func, node, oneOf, oneOfType, string } = PropTypes;
 
-export interface IButtonProps extends StandardProps {
+export interface IButtonPropsRaw extends StandardProps {
 	/**
 	 * Disables the Button by greying it out
 	 *
@@ -53,20 +59,36 @@ export interface IButtonProps extends StandardProps {
 	type?: 'submit' | 'reset' | 'button';
 }
 
+export type IButtonProps = Overwrite<
+	React.DetailedHTMLProps<
+		React.ButtonHTMLAttributes<HTMLButtonElement>,
+		HTMLButtonElement
+	>,
+	IButtonPropsRaw
+>;
+
+const defaultProps = {
+	isDisabled: false,
+	isActive: false,
+	onClick: _.noop,
+	type: 'button' as const,
+	hasOnlyIcon: false,
+};
+
 /** Test Button description */
 const Button: FC<IButtonProps> = (props): React.ReactElement => {
 	const {
-		isDisabled = false,
-		isActive = false,
-		onClick = _.noop,
-		hasOnlyIcon = false,
+		isDisabled,
+		isActive,
+		onClick,
+		hasOnlyIcon,
 		kind,
 		size,
 		className,
 		children,
-		type = 'button',
+		type,
 		...passThroughs
-	} = props;
+	} = props as FixDefaults<IButtonProps, typeof defaultProps>;
 
 	const buttonRef = React.createRef<HTMLButtonElement>();
 
@@ -112,6 +134,8 @@ const Button: FC<IButtonProps> = (props): React.ReactElement => {
 		</button>
 	);
 };
+
+Button.defaultProps = defaultProps;
 
 Button.displayName = 'Button';
 

@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import Icon, { IIconProps } from '../Icon';
+import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
 import { FC, omitProps } from '../../../util/component-types';
 
@@ -12,11 +12,15 @@ const CrownIcon: FC<ICrownIconProps> = ({
 	className,
 	...passThroughs
 }): React.ReactElement => {
-
 	return (
 		<Icon
-			{...omitProps(passThroughs, undefined, _.keys(CrownIcon.propTypes), false)}
-			{..._.pick(passThroughs, _.keys(Icon.propTypes))}
+			{...omitProps(
+				passThroughs,
+				undefined,
+				_.keys(CrownIcon.propTypes),
+				false
+			)}
+			{..._.pick(passThroughs, _.keys(iconPropTypes))}
 			className={cx('&', className)}
 		>
 			<path d='M1.5 14.5h13' />
@@ -25,7 +29,7 @@ const CrownIcon: FC<ICrownIconProps> = ({
 	);
 };
 
-CrownIcon.displayName = 'CrownIcon',
+CrownIcon.displayName = 'CrownIcon';
 CrownIcon.peek = {
 	description: `
 		A crown icon, used for indicating super or admin users.
@@ -34,8 +38,6 @@ CrownIcon.peek = {
 	extend: 'Icon',
 	madeFrom: ['Icon'],
 };
-CrownIcon.propTypes = {
-	...Icon.propTypes,
-};
+CrownIcon.propTypes = iconPropTypes;
 
 export default CrownIcon;

@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import Icon, { IIconProps } from '../Icon';
+import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
 import { FC, omitProps } from '../../../util/component-types';
 
@@ -12,11 +12,10 @@ const UserIcon: FC<IUserIconProps> = ({
 	className,
 	...passThroughs
 }): React.ReactElement => {
-
 	return (
 		<Icon
 			{...omitProps(passThroughs, undefined, _.keys(UserIcon.propTypes), false)}
-			{..._.pick(passThroughs, _.keys(Icon.propTypes))}
+			{..._.pick(passThroughs, _.keys(iconPropTypes))}
 			className={cx('&', className)}
 		>
 			<path d='M.5 16a7.5 7.5 0 0 1 15 0' />
@@ -25,7 +24,7 @@ const UserIcon: FC<IUserIconProps> = ({
 	);
 };
 
-UserIcon.displayName = 'UserIcon',
+UserIcon.displayName = 'UserIcon';
 UserIcon.peek = {
 	description: `
 		It's all about you.
@@ -34,8 +33,6 @@ UserIcon.peek = {
 	extend: 'Icon',
 	madeFrom: ['Icon'],
 };
-UserIcon.propTypes = {
-	...Icon.propTypes,
-};
+UserIcon.propTypes = iconPropTypes;
 
 export default UserIcon;

@@ -9,6 +9,7 @@ import {
 	rejectTypes,
 	omitProps,
 	StandardProps,
+	FixDefaults,
 } from '../../util/component-types';
 import ReactTransitionGroup from 'react-transition-group/CSSTransitionGroup';
 
@@ -30,7 +31,12 @@ OverlayWrapperMessage.propTypes = {
 	children: node,
 };
 
-export interface IOverlayWrapperProps extends StandardProps {
+export interface IOverlayWrapperProps
+	extends StandardProps,
+		React.DetailedHTMLProps<
+			React.HTMLAttributes<HTMLDivElement>,
+			HTMLDivElement
+		> {
 	/** Controls whether the message should be displayed over the wrapped content. */
 	isVisible: boolean;
 
@@ -55,15 +61,20 @@ interface IOverlayWrapperFC extends FC<IOverlayWrapperProps> {
 	Message?: FC<IMessageProps>;
 }
 
+const defaultProps = {
+	hasOverlay: true,
+	overlayKind: 'light' as const,
+};
+
 const OverlayWrapper: IOverlayWrapperFC = (props): React.ReactElement => {
 	const {
-		hasOverlay = true,
+		hasOverlay,
 		isVisible,
 		className,
 		children,
-		overlayKind = 'light',
+		overlayKind,
 		...passThroughs
-	} = props;
+	} = props as FixDefaults<IOverlayWrapperProps, typeof defaultProps>;
 
 	const messageElementProp = _.get(
 		getFirst<IMessageProps>(props, OverlayWrapperMessage),
@@ -98,6 +109,7 @@ const OverlayWrapper: IOverlayWrapperFC = (props): React.ReactElement => {
 	);
 };
 
+OverlayWrapper.defaultProps = defaultProps;
 OverlayWrapper.displayName = 'OverlayWrapper';
 OverlayWrapper.peek = {
 	description: `

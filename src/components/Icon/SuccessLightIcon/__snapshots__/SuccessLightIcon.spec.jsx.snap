@@ -2,7 +2,15 @@
 
 exports[`SuccessLightIcon [common] example testing should match snapshot(s) for 1.default 1`] = `
 <Icon
+  aspectRatio="xMidYMid meet"
   className="lucid-SuccessLightIcon"
+  color="primary"
+  isClickable={false}
+  isDisabled={false}
+  onClick={[Function]}
+  onSelect={[Function]}
+  size={16}
+  viewBox="0 0 16 16"
 >
   <circle
     className="lucid-SuccessLightIcon-background"
@@ -19,8 +27,15 @@ exports[`SuccessLightIcon [common] example testing should match snapshot(s) for 
 
 exports[`SuccessLightIcon [common] example testing should match snapshot(s) for 1.default 2`] = `
 <Icon
+  aspectRatio="xMidYMid meet"
   className="lucid-SuccessLightIcon lucid-SuccessLightIcon-is-clickable"
+  color="primary"
   isClickable={true}
+  isDisabled={false}
+  onClick={[Function]}
+  onSelect={[Function]}
+  size={16}
+  viewBox="0 0 16 16"
 >
   <circle
     className="lucid-SuccessLightIcon-background"
@@ -37,9 +52,15 @@ exports[`SuccessLightIcon [common] example testing should match snapshot(s) for 
 
 exports[`SuccessLightIcon [common] example testing should match snapshot(s) for 1.default 3`] = `
 <Icon
+  aspectRatio="xMidYMid meet"
   className="lucid-SuccessLightIcon lucid-SuccessLightIcon-is-disabled lucid-SuccessLightIcon-is-clickable"
+  color="primary"
   isClickable={true}
   isDisabled={true}
+  onClick={[Function]}
+  onSelect={[Function]}
+  size={16}
+  viewBox="0 0 16 16"
 >
   <circle
     className="lucid-SuccessLightIcon-background"
@@ -56,7 +77,15 @@ exports[`SuccessLightIcon [common] example testing should match snapshot(s) for 
 
 exports[`SuccessLightIcon [common] example testing should match snapshot(s) for 1.default 4`] = `
 <Icon
+  aspectRatio="xMidYMid meet"
   className="lucid-SuccessLightIcon lucid-SuccessLightIcon-is-active"
+  color="primary"
+  isClickable={false}
+  isDisabled={false}
+  onClick={[Function]}
+  onSelect={[Function]}
+  size={16}
+  viewBox="0 0 16 16"
 >
   <circle
     className="lucid-SuccessLightIcon-background"
@@ -73,8 +102,15 @@ exports[`SuccessLightIcon [common] example testing should match snapshot(s) for 
 
 exports[`SuccessLightIcon [common] example testing should match snapshot(s) for 1.default 5`] = `
 <Icon
+  aspectRatio="xMidYMid meet"
   className="lucid-SuccessLightIcon lucid-SuccessLightIcon-is-clickable lucid-SuccessLightIcon-is-active"
+  color="primary"
   isClickable={true}
+  isDisabled={false}
+  onClick={[Function]}
+  onSelect={[Function]}
+  size={16}
+  viewBox="0 0 16 16"
 >
   <circle
     className="lucid-SuccessLightIcon-background"
@@ -91,9 +127,15 @@ exports[`SuccessLightIcon [common] example testing should match snapshot(s) for 
 
 exports[`SuccessLightIcon [common] example testing should match snapshot(s) for 1.default 6`] = `
 <Icon
+  aspectRatio="xMidYMid meet"
   className="lucid-SuccessLightIcon lucid-SuccessLightIcon-is-disabled lucid-SuccessLightIcon-is-clickable lucid-SuccessLightIcon-is-active"
+  color="primary"
   isClickable={true}
   isDisabled={true}
+  onClick={[Function]}
+  onSelect={[Function]}
+  size={16}
+  viewBox="0 0 16 16"
 >
   <circle
     className="lucid-SuccessLightIcon-background"

@@ -3,7 +3,12 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import { FC, getFirst, omitProps, StandardProps } from '../../util/component-types';
+import {
+	FC,
+	getFirst,
+	omitProps,
+	StandardProps,
+} from '../../util/component-types';
 import LoadingIcon from '../Icon/LoadingIcon/LoadingIcon';
 
 const cx = lucidClassNames.bind('&-LoadingMessage');
@@ -60,10 +65,12 @@ LoadingMessageBody.propTypes = {
 	children: any,
 };
 
-
-
-
-export interface ILoadingMessageProps extends StandardProps {
+export interface ILoadingMessageProps
+	extends StandardProps,
+		React.DetailedHTMLProps<
+			React.HTMLAttributes<HTMLDivElement>,
+			HTMLDivElement
+		> {
 	/** Custom Icon element (alias for `LoadingMessage.Icon`) */
 	Icon?: React.ReactNode;
 
@@ -81,7 +88,6 @@ export interface ILoadingMessageFC extends FC<ILoadingMessageProps> {
 }
 
 const LoadingMessage: ILoadingMessageFC = (props): React.ReactElement => {
-
 	const { className, ...passThroughs } = props;
 	const { Icon, Title, Body } = LoadingMessage;
 
@@ -95,11 +101,7 @@ const LoadingMessage: ILoadingMessageFC = (props): React.ReactElement => {
 
 	return (
 		<div
-			{...omitProps(
-				passThroughs,
-				undefined,
-				_.keys(LoadingMessage.propTypes)
-			)}
+			{...omitProps(passThroughs, undefined, _.keys(LoadingMessage.propTypes))}
 			className={cx(
 				'&',
 				{ '&-no-content': _.isNull(titleChildren) && !bodyChildren },

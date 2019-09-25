@@ -28,7 +28,12 @@ BreadcrumbItem.propTypes = {
 	children: node,
 };
 
-interface IBreadcrumbProps extends StandardProps {
+interface IBreadcrumbProps
+	extends StandardProps,
+		React.DetailedHTMLProps<
+			React.HTMLAttributes<HTMLDivElement>,
+			HTMLDivElement
+		> {
 	Item?: string | React.ReactNode & { props: IBreadcrumbItemProps };
 }
 

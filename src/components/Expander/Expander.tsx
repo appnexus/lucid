@@ -2,7 +2,12 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, findTypes, omitProps, StandardProps } from '../../util/component-types';
+import {
+	findTypes,
+	omitProps,
+	StandardProps,
+	FC,
+} from '../../util/component-types';
 import { buildHybridComponent } from '../../util/state-management';
 import ChevronIcon from '../Icon/ChevronIcon/ChevronIcon';
 import Collapsible from '../Collapsible/Collapsible';
@@ -21,17 +26,52 @@ interface IExpanderAdditionalLabelProps extends StandardProps {
 	description?: string;
 }
 
-export interface IExpanderProps extends StandardProps {
+const Label: FC<IExpanderLabelProps> = (): null => null;
+Label.displayName = 'Expander.Label';
+Label.peek = {
+	description: `
+						Renders a \`<span>\` to be shown next to the expander icon.
+					`,
+};
+Label.propName = 'Label';
+Label.propTypes = {
+	children: node`
+					Used to identify the purpose of this switch to the user -- can be any
+					renderable content.
+				`,
+};
+
+const AdditionalLabelContent: FC<IExpanderAdditionalLabelProps> = (): null =>
+	null;
+AdditionalLabelContent.displayName = 'Expander.AdditionalLabelContent';
+AdditionalLabelContent.peek = {
+	description: `
+						Renders a \`<span>\` to be shown next to the expander label.
+					`,
+};
+AdditionalLabelContent.propName = 'AdditionalLabelContent';
+AdditionalLabelContent.propTypes = {
+	children: node`
+					Used to display additional information or/and actions next to expander label.
+				`,
+};
+
+export interface IExpanderProps
+	extends StandardProps,
+		React.DetailedHTMLProps<
+			React.HTMLAttributes<HTMLDivElement>,
+			HTMLDivElement
+		> {
 	/**
 	 * Indicates that the component is in the "expanded" state when true and in
 	 * the "unexpanded" state when false.
 	 * */
-	isExpanded?: boolean;
+	isExpanded: boolean;
 
 	/**
 	 * Called when the user clicks on the component's header.
 	 * */
-	onToggle?: (
+	onToggle: (
 		isExpanded: boolean,
 		{ event, props }: { event: React.MouseEvent; props: IExpanderProps }
 	) => void;
@@ -52,66 +92,30 @@ export interface IExpanderProps extends StandardProps {
 	/** Renders different variants of Expander. 'simple' is default.
 	 * 'highlighted' is more prominant.
 	 * */
-	kind?: 'simple' | 'highlighted';
+	kind: 'simple' | 'highlighted';
 }
+
+const defaultProps = {
+	isExpanded: false,
+	onToggle: _.noop,
+	kind: 'simple',
+};
 
 export interface IExpanderState {
 	isExpanded: boolean;
 }
 
-const Expander = createClass<IExpanderProps, IExpanderState>({
-	displayName: 'Expander',
-
-	statics: {
-		peek: {
-			description: `
+class Expander extends React.Component<IExpanderProps, IExpanderState> {
+	static displayName = 'Expander';
+	static peek = {
+		description: `
 				This is a container that provides a toggle that controls when the
 				content is shown.
 			`,
-			categories: ['layout'],
-			madeFrom: ['ChevronIcon'],
-		},
-	},
-
-	components: {
-		Label: createClass<IExpanderLabelProps, {}>({
-			displayName: 'Expander.Label',
-			statics: {
-				peek: {
-					description: `
-						Renders a \`<span>\` to be shown next to the expander icon.
-					`,
-				},
-			},
-			propName: 'Label',
-			propTypes: {
-				children: node`
-					Used to identify the purpose of this switch to the user -- can be any
-					renderable content.
-				`,
-			},
-		}),
-		AdditionalLabelContent: createClass<IExpanderAdditionalLabelProps, {}>({
-			displayName: 'Expander.AdditionalLabelContent',
-			statics: {
-				peek: {
-					description: `
-						Renders a \`<span>\` to be shown next to the expander label.
-					`,
-				},
-			},
-			propName: 'AdditionalLabelContent',
-			propTypes: {
-				children: node`
-					Used to display additional information or/and actions next to expander label.
-				`,
-			},
-		}),
-	},
-
-	reducers,
-
-	propTypes: {
+		categories: ['layout'],
+		madeFrom: ['ChevronIcon'],
+	};
+	static propTypes = {
 		children: node`
 			Expandable content.
 		`,
@@ -148,17 +152,32 @@ const Expander = createClass<IExpanderProps, IExpanderState>({
 			Renders different variants of Expander. 'simple' is default.
 			'highlighted' is more prominant.
 		`,
-	},
+	};
 
-	getDefaultProps() {
-		return {
-			isExpanded: false,
-			onToggle: _.noop,
-			kind: 'simple',
-		};
-	},
+	static defaultProps = defaultProps;
 
-	render(): React.ReactElement {
+	static reducers = reducers;
+
+	static Label = Label;
+	static AdditionalLabelContent = AdditionalLabelContent;
+
+	// For backward compatibility with buildHybridComponent
+	static definition = {
+		statics: {
+			Label,
+			AdditionalLabelContent,
+			reducers,
+		},
+	};
+
+	handleToggle = (event: React.MouseEvent): void => {
+		this.props.onToggle(!this.props.isExpanded, {
+			event,
+			props: this.props,
+		});
+	};
+
+	render(): React.ReactNode {
 		const {
 			children,
 			className,
@@ -166,7 +185,7 @@ const Expander = createClass<IExpanderProps, IExpanderState>({
 			style,
 			kind,
 			...passThroughs
-		} = this.props as IExpanderProps;
+		} = this.props;
 
 		const labelChildProp = _.first(
 			_.map(findTypes(this.props, Expander.Label), 'props')
@@ -178,7 +197,7 @@ const Expander = createClass<IExpanderProps, IExpanderState>({
 
 		return (
 			<div
-				{...omitProps<IExpanderProps>(passThroughs, Expander)}
+				{...omitProps(passThroughs, undefined, _.keys(Expander.propTypes))}
 				className={cx(
 					'&',
 					{
@@ -217,15 +236,8 @@ const Expander = createClass<IExpanderProps, IExpanderState>({
 				</Collapsible>
 			</div>
 		);
-	},
-
-	handleToggle(event: React.MouseEvent) {
-		this.props.onToggle(!this.props.isExpanded, {
-			event,
-			props: this.props,
-		});
-	},
-});
+	}
+}
 
 export default buildHybridComponent(Expander);
 export { Expander as ExpanderDumb };

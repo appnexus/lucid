@@ -23,15 +23,24 @@ export interface StandardProps {
 // We decided to create this utility defintion because of the issues outlined
 // here: https://github.com/microsoft/TypeScript/issues/31247
 //
+// This utility is really only needed with functional components. Class
+// components behave correctly with default props.
+//
 // Typescript is able to behave correctly (wrt to default props) if we were to
 // rely on type inference for our functional components, but since we also have
 // other properties (e.g. `_isPrivate`) we need to explicitly define the type.
 //
-// This helper allows us to have props _within_ the component that are
-// considered not nullable (when defined in D) whereas the props exposed to the
-// consumer are potentially nullable based on the shape of `D`.
-export type PropsWithDefaults<P, D> = Pick<P, Exclude<keyof P, keyof D>> &
-	Partial<D>;
+// This helper allows us to cast props used _within_ the component to consider
+// properties found on defaultProps to be required.
+export type FixDefaults<P, D extends Partial<P>> = Pick<
+	P,
+	Exclude<keyof P, keyof D>
+> &
+	Required<Pick<P, Extract<keyof P, keyof D>>>;
+
+// Like `T & U`, but where there are overlapping properties using the type from U only.
+// From https://github.com/pelotom/type-zoo/blob/1a08384d77967ed322356005636fbb8db3c16702/types/index.d.ts#L43
+export type Overwrite<T, U> = Omit<T, keyof T & keyof U> & U;
 
 // `D`: default props (should be provided when a functional component supports
 // default props)

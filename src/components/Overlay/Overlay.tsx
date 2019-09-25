@@ -10,13 +10,16 @@ const cx = lucidClassNames.bind('&-Overlay');
 
 const { string, bool, func, node } = PropTypes;
 
-export interface IOverlayProps extends StandardProps {
-	/** Styles that are passed through to native control. */
-	style?: React.CSSProperties;
-
+export interface IOverlayProps
+	extends StandardProps,
+		React.DetailedHTMLProps<
+			React.HTMLAttributes<HTMLDivElement>,
+			HTMLDivElement
+		> {
 	/** Controls visibility. */
 	isShown: boolean;
 
+	/** Enables animated transitions during expansion and collapse. */
 	isAnimated: boolean;
 
 	/** Determines if it shows with a gray background. If `false`, the
@@ -51,6 +54,14 @@ export interface IOverlayProps extends StandardProps {
 interface IOverlayState {
 	portalId: string;
 }
+
+export const defaultProps = {
+		isShown: false,
+		isModal: true,
+		onEscape: _.noop,
+		onBackgroundClick: _.noop,
+		isAnimated: true,
+};
 
 class Overlay extends React.Component<IOverlayProps, IOverlayState, {}> {
 	static displayName = 'Overlay';
@@ -103,13 +114,7 @@ class Overlay extends React.Component<IOverlayProps, IOverlayState, {}> {
 
 	private rootHTMLDivElement = React.createRef<HTMLDivElement>();
 
-	static defaultProps = {
-		isShown: false,
-		isModal: true,
-		onEscape: _.noop,
-		onBackgroundClick: _.noop,
-		isAnimated: true,
-	};
+	static defaultProps = defaultProps;
 
 	state = {
 		// This must be in state because getDefaultProps only runs once per

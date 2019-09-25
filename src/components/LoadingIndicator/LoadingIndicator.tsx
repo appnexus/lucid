@@ -2,15 +2,26 @@
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import { FC, getFirst, rejectTypes, StandardProps, omitProps } from '../../util/component-types';
-import OverlayWrapper, { OverlayWrapperMessage } from '../OverlayWrapper/OverlayWrapper';
-import LoadingMessage, { ILoadingMessageProps } from '../LoadingMessage/LoadingMessage';
+import {
+	FC,
+	getFirst,
+	rejectTypes,
+	omitProps,
+	FixDefaults,
+} from '../../util/component-types';
+import OverlayWrapper, {
+	OverlayWrapperMessage,
+	IOverlayWrapperProps,
+} from '../OverlayWrapper/OverlayWrapper';
+import LoadingMessage, {
+	ILoadingMessageProps,
+} from '../LoadingMessage/LoadingMessage';
 
 const cx = lucidClassNames.bind('&-LoadingIndicator');
 
 const { bool, node, oneOf, string } = PropTypes;
 
-export interface ILoadingIndicatorProps extends StandardProps {
+export interface ILoadingIndicatorProps extends IOverlayWrapperProps {
 	/** Set this to `false` if you don't want the semi-transparent overlay over
 		the wrapped content */
 	hasOverlay?: boolean;
@@ -26,15 +37,23 @@ export interface ILoadingIndicatorFC extends FC<ILoadingIndicatorProps> {
 	LoadingMessage: FC<ILoadingMessageProps>;
 }
 
+const defaultProps = {
+	hasOverlay: true,
+	isLoading: false,
+	overlayKind: 'light' as const,
+};
+
 const LoadingIndicator: ILoadingIndicatorFC = (props): React.ReactElement => {
+	const { children, className, isLoading } = props as FixDefaults<
+		ILoadingIndicatorProps,
+		typeof defaultProps
+	>;
 
-	const {
-		children,
-		className,
-		isLoading = false,
-	} = props;
-
-	const messageElement = getFirst(props, LoadingIndicator.LoadingMessage, <LoadingMessage />);
+	const messageElement = getFirst(
+		props,
+		LoadingIndicator.LoadingMessage,
+		<LoadingMessage />
+	);
 	const otherChildren = rejectTypes(children, LoadingIndicator.LoadingMessage);
 
 	return (
@@ -86,10 +105,6 @@ LoadingIndicator.propTypes = {
 		Style variations for the overlay behind the loading indicator.
 	`,
 };
-LoadingIndicator.defaultProps = {
-	hasOverlay: true,
-	isLoading: false,
-	overlayKind: 'light',
-}
+LoadingIndicator.defaultProps = defaultProps;
 
 export default LoadingIndicator;

@@ -2,14 +2,21 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import { FC, omitProps, StandardProps } from '../../util/component-types';
+import {
+	FC,
+	omitProps,
+	StandardProps,
+	FixDefaults,
+} from '../../util/component-types';
 import * as chartConstants from '../../constants/charts';
 
 const cx = lucidClassNames.bind('&-Line');
 
 const { string, object, bool } = PropTypes;
 
-export interface ILineProps extends StandardProps {
+export interface ILineProps
+	extends StandardProps,
+		React.SVGProps<SVGPathElement> {
 	/** The path for the line. */
 	d?: string;
 
@@ -24,15 +31,20 @@ export interface ILineProps extends StandardProps {
 	isDotted?: boolean;
 }
 
-const Line: FC<ILineProps> = ({
-	className,
-	color = chartConstants.COLOR_0,
-	isDotted = false,
-	d,
-	style,
-	...passThroughs
-}): React.ReactElement => {
+const defaultProps = {
+	color: chartConstants.COLOR_0,
+	isDotted: false,
+};
 
+const Line: FC<ILineProps> = (props): React.ReactElement => {
+	const {
+		className,
+		color,
+		isDotted,
+		d,
+		style,
+		...passThroughs
+	} = props as FixDefaults<ILineProps, typeof defaultProps>;
 	const isCustomColor = _.startsWith(color, '#');
 	const colorStyle = isCustomColor ? { fill: color, stroke: color } : null;
 
@@ -55,6 +67,8 @@ const Line: FC<ILineProps> = ({
 		/>
 	);
 };
+
+Line.defaultProps = defaultProps;
 
 Line.displayName = 'Line';
 Line.peek = {

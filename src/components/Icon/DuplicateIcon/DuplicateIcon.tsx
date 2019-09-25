@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import Icon, { IIconProps } from '../Icon';
+import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
 import { FC, omitProps } from '../../../util/component-types';
 
@@ -12,11 +12,15 @@ const DuplicateIcon: FC<IDuplicateIconProps> = ({
 	className,
 	...passThroughs
 }): React.ReactElement => {
-
 	return (
 		<Icon
-			{...omitProps(passThroughs, undefined, _.keys(DuplicateIcon.propTypes), false)}
-			{..._.pick(passThroughs, _.keys(Icon.propTypes))}
+			{...omitProps(
+				passThroughs,
+				undefined,
+				_.keys(DuplicateIcon.propTypes),
+				false
+			)}
+			{..._.pick(passThroughs, _.keys(iconPropTypes))}
 			className={cx('&', className)}
 		>
 			<path d='M1.5 4.5h9v11h-9z' />
@@ -25,7 +29,7 @@ const DuplicateIcon: FC<IDuplicateIconProps> = ({
 	);
 };
 
-DuplicateIcon.displayName = 'DuplicateIcon',
+DuplicateIcon.displayName = 'DuplicateIcon';
 DuplicateIcon.peek = {
 	description: `
 		Typically used when something can be duplicated.
@@ -34,8 +38,6 @@ DuplicateIcon.peek = {
 	extend: 'Icon',
 	madeFrom: ['Icon'],
 };
-DuplicateIcon.propTypes = {
-	...Icon.propTypes,
-};
+DuplicateIcon.propTypes = iconPropTypes;
 
 export default DuplicateIcon;

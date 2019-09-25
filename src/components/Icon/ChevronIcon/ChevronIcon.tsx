@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
-import Icon, { IIconProps } from '../Icon';
+import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
 import { FC, omitProps } from '../../../util/component-types';
 
@@ -17,11 +17,15 @@ const ChevronIcon: FC<IChevronIconProps> = ({
 	direction = 'down',
 	...passThroughs
 }): React.ReactElement => {
-
 	return (
 		<Icon
-			{...omitProps(passThroughs, undefined, _.keys(ChevronIcon.propTypes), false)}
-			{..._.pick(passThroughs, _.keys(Icon.propTypes))}
+			{...omitProps(
+				passThroughs,
+				undefined,
+				_.keys(ChevronIcon.propTypes),
+				false
+			)}
+			{..._.pick(passThroughs, _.keys(iconPropTypes))}
 			className={cx(
 				'&',
 				{
@@ -38,7 +42,7 @@ const ChevronIcon: FC<IChevronIconProps> = ({
 	);
 };
 
-ChevronIcon.displayName = 'ChevronIcon',
+ChevronIcon.displayName = 'ChevronIcon';
 ChevronIcon.peek = {
 	description: `
 		A chevron icon.
@@ -48,7 +52,7 @@ ChevronIcon.peek = {
 	madeFrom: ['Icon'],
 };
 ChevronIcon.propTypes = {
-	...Icon.propTypes,
+	...iconPropTypes,
 	direction: oneOf(['up', 'down', 'left', 'right'])`
 		direction variations of the icon
 	`,

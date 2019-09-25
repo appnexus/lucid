@@ -20,6 +20,7 @@ exports[`TextFieldValidated [common] example testing should match snapshot(s) fo
     onBlur={[Function]}
     onChange={[Function]}
     onChangeDebounced={[Function]}
+    onKeyDown={[Function]}
     onSubmit={[Function]}
     rows={5}
     style={null}
@@ -48,6 +49,7 @@ exports[`TextFieldValidated [common] example testing should match snapshot(s) fo
     onBlur={[Function]}
     onChange={[Function]}
     onChangeDebounced={[Function]}
+    onKeyDown={[Function]}
     onSubmit={[Function]}
     rows={5}
     style={null}

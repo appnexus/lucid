@@ -3,7 +3,7 @@ import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import { partitionText } from '../../util/text-manipulation';
 import { lucidClassNames } from '../../util/style-helpers';
-import { StandardProps, FC } from '../../util/component-types';
+import { StandardProps, FC, omitProps } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-Underline');
 
@@ -11,7 +11,9 @@ const { node, string, instanceOf, oneOfType } = PropTypes;
 
 const matchAllRegexp = /^.*$/;
 
-export interface IUnderlineProps  extends StandardProps {
+export interface IUnderlineProps 
+	extends StandardProps, 
+	React.DetailedHTMLProps<React.HTMLAttributes<HTMLSpanElement>, HTMLSpanElement> {
 	/** The first match of the given pattern has the underline style applied to it. */
 	match?: string | RegExp;
 }
@@ -32,10 +34,15 @@ const Underline: FC<IUnderlineProps> = ({
 
 	if (!_.isString(children)) {
 		return (
-			<span className={cx('&', className)} {...passThroughs}>
+			<span
+				className={cx('&', className)}
+				{...omitProps(passThroughs, undefined, _.keys(Underline.propTypes))}
+			>
 				<span
 					style={
-						match === matchAllRegexp ? { textDecoration: 'underline' } : undefined
+						match === matchAllRegexp
+							? { textDecoration: 'underline' }
+							: undefined
 					}
 				>
 					{children}
@@ -47,7 +54,10 @@ const Underline: FC<IUnderlineProps> = ({
 	const [pre, matchText, post] = partitionText(children, match);
 
 	return (
-		<span className={cx('&', className)} {...passThroughs}>
+		<span
+			className={cx('&', className)}
+			{...omitProps(passThroughs, undefined, _.keys(Underline.propTypes))}
+		>
 			{[
 				pre && <span key='pre'>{pre}</span>,
 				matchText && (

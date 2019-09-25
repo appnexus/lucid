@@ -6,7 +6,9 @@ exports[`ButtonGroup [common] example testing should match snapshot(s) for fixed
 >
   <Button
     callbackId={0}
+    hasOnlyIcon={false}
     isActive={false}
+    isDisabled={false}
     key="0"
     onClick={[Function]}
     style={
@@ -14,12 +16,15 @@ exports[`ButtonGroup [common] example testing should match snapshot(s) for fixed
         "width": "100px",
       }
     }
+    type="button"
   >
     Smol
   </Button>
   <Button
     callbackId={1}
+    hasOnlyIcon={false}
     isActive={false}
+    isDisabled={false}
     key="1"
     onClick={[Function]}
     style={
@@ -27,12 +32,15 @@ exports[`ButtonGroup [common] example testing should match snapshot(s) for fixed
         "width": "100px",
       }
     }
+    type="button"
   >
     Lonnnnnnnng
   </Button>
   <Button
     callbackId={2}
+    hasOnlyIcon={false}
     isActive={false}
+    isDisabled={false}
     key="2"
     onClick={[Function]}
     style={
@@ -40,6 +48,7 @@ exports[`ButtonGroup [common] example testing should match snapshot(s) for fixed
         "width": "100px",
       }
     }
+    type="button"
   >
     Medium
   </Button>
@@ -79,33 +88,45 @@ exports[`ButtonGroup [common] example testing should match snapshot(s) for state
 >
   <Button
     callbackId={0}
+    hasOnlyIcon={false}
     isActive={false}
+    isDisabled={false}
     key="0"
     onClick={[Function]}
+    type="button"
   >
     Zero
   </Button>
   <Button
     callbackId={1}
+    hasOnlyIcon={false}
     isActive={false}
+    isDisabled={false}
     key="1"
     onClick={[Function]}
+    type="button"
   >
     One
   </Button>
   <Button
     callbackId={2}
+    hasOnlyIcon={false}
     isActive={false}
+    isDisabled={false}
     key="2"
     onClick={[Function]}
+    type="button"
   >
     Two
   </Button>
   <Button
     callbackId={3}
+    hasOnlyIcon={false}
     isActive={false}
+    isDisabled={false}
     key="3"
     onClick={[Function]}
+    type="button"
   >
     Three
   </Button>
@@ -130,82 +151,111 @@ exports[`ButtonGroup [common] example testing should match snapshot(s) for state
 >
   <Button
     callbackId={0}
+    hasOnlyIcon={false}
     isActive={false}
+    isDisabled={false}
     key="0"
     onClick={[Function]}
+    type="button"
   >
     Zero
   </Button>
   <Button
     callbackId={1}
+    hasOnlyIcon={false}
     isActive={false}
+    isDisabled={false}
     key="1"
     onClick={[Function]}
+    type="button"
   >
     One
   </Button>
   <Button
     callbackId={2}
+    hasOnlyIcon={false}
     isActive={false}
+    isDisabled={false}
     key="2"
     onClick={[Function]}
+    type="button"
   >
     Two
   </Button>
   <Button
     callbackId={3}
+    hasOnlyIcon={false}
     isActive={false}
+    isDisabled={false}
     key="3"
     onClick={[Function]}
+    type="button"
   >
     Three
   </Button>
   <Button
     callbackId={4}
+    hasOnlyIcon={false}
     isActive={false}
+    isDisabled={false}
     key="4"
     onClick={[Function]}
+    type="button"
   >
     Four
   </Button>
   <Button
     callbackId={5}
+    hasOnlyIcon={false}
     isActive={false}
     isDisabled={true}
     key="5"
     onClick={[Function]}
+    type="button"
   >
     Five
   </Button>
   <Button
     callbackId={6}
+    hasOnlyIcon={false}
     isActive={false}
+    isDisabled={false}
     key="6"
     onClick={[Function]}
+    type="button"
   >
     Six
   </Button>
   <Button
     callbackId={7}
+    hasOnlyIcon={false}
     isActive={true}
+    isDisabled={false}
     key="7"
     onClick={[Function]}
+    type="button"
   >
     Seven
   </Button>
   <Button
     callbackId={8}
+    hasOnlyIcon={false}
     isActive={true}
+    isDisabled={false}
     key="8"
     onClick={[Function]}
+    type="button"
   >
     Eight
   </Button>
   <Button
     callbackId={9}
+    hasOnlyIcon={false}
     isActive={false}
+    isDisabled={false}
     key="9"
     onClick={[Function]}
+    type="button"
   >
     Nine
   </Button>

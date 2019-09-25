@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import Icon, { IIconProps } from '../Icon';
+import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
 import { FC, omitProps } from '../../../util/component-types';
 
@@ -12,11 +12,15 @@ const GripperVerticalIcon: FC<IGripperVerticalIconProps> = ({
 	className,
 	...passThroughs
 }): React.ReactElement => {
-
 	return (
 		<Icon
-			{...omitProps(passThroughs, undefined, _.keys(GripperVerticalIcon.propTypes), false)}
-			{..._.pick(passThroughs, _.keys(Icon.propTypes))}
+			{...omitProps(
+				passThroughs,
+				undefined,
+				_.keys(GripperVerticalIcon.propTypes),
+				false
+			)}
+			{..._.pick(passThroughs, _.keys(iconPropTypes))}
 			width={2}
 			height={16}
 			viewBox='0 0 2 16'
@@ -27,8 +31,8 @@ const GripperVerticalIcon: FC<IGripperVerticalIconProps> = ({
 	);
 };
 
-GripperVerticalIcon._isPrivate = true,
-GripperVerticalIcon.displayName = 'GripperVerticalIcon',
+GripperVerticalIcon._isPrivate = true;
+GripperVerticalIcon.displayName = 'GripperVerticalIcon';
 GripperVerticalIcon.peek = {
 	description: `
 		A vertical gripper icon.
@@ -37,8 +41,6 @@ GripperVerticalIcon.peek = {
 	extend: 'Icon',
 	madeFrom: ['Icon'],
 };
-GripperVerticalIcon.propTypes = {
-	...Icon.propTypes,
-};
+GripperVerticalIcon.propTypes = iconPropTypes;
 
 export default GripperVerticalIcon;

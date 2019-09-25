@@ -9,16 +9,19 @@ import {
 	filterTypes,
 	rejectTypes,
 	omitProps,
+	FixDefaults
 } from '../../util/component-types';
-import { IIconProps } from '../Icon/Icon';
 
 const cx = lucidClassNames.bind('&-Tag');
 
 const { bool, func, node, string } = PropTypes;
 
-
-export interface ITagProps extends StandardProps {
-
+export interface ITagProps
+	extends StandardProps,
+		React.DetailedHTMLProps<
+			React.HTMLAttributes<HTMLDivElement>,
+			HTMLDivElement
+		> {
 	/** Set this prop if you're using three levels of tags so it can be styled
 		appropriately. This is required because we aren't able to know if your
 		Tags have grand children efficiently. */
@@ -34,29 +37,33 @@ export interface ITagProps extends StandardProps {
 
 	/** Called when the user clicks to remove a tag. */
 	onRemove?: ({
-		event,
 		props,
+		event,
 	}: {
+		props: ITagProps;
 		event: React.MouseEvent;
-		props: IIconProps;
 	}) => void;
 }
 
-const Tag: FC<ITagProps> = (props): React.ReactElement => {
+const defaultProps = {
+	isTop: false,
+	hasLightBackground: true,
+	isRemovable: false,
+	onRemove: _.noop
+};
 
+const Tag: FC<ITagProps> = (props): React.ReactElement => {
 	const {
-		isTop = false,
+		isTop,
 		isRemovable,
 		children,
 		className,
-		onRemove = _.noop,
-		hasLightBackground = true,
+		onRemove,
+		hasLightBackground,
 		...passThroughs
-	} = props;
+	} = props as FixDefaults<ITagProps, typeof defaultProps>;
 
-	const handleRemove = ({ event }: {
-		event: React.MouseEvent
-	}): void => {
+	const handleRemove = ({ event }: { event: React.MouseEvent }): void => {
 		onRemove({ props, event });
 	};
 
@@ -100,6 +107,7 @@ const Tag: FC<ITagProps> = (props): React.ReactElement => {
 	);
 };
 
+Tag.defaultProps = defaultProps;
 Tag.displayName = 'Tag';
 
 Tag.peek = {

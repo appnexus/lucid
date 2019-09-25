@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import Icon, { IIconProps } from '../Icon';
+import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
 import { FC, omitProps } from '../../../util/component-types';
 
@@ -12,11 +12,15 @@ const ResizeIcon: FC<IResizeIconProps> = ({
 	className,
 	...passThroughs
 }): React.ReactElement => {
-
 	return (
 		<Icon
-			{...omitProps(passThroughs, undefined, _.keys(ResizeIcon.propTypes), false)}
-			{..._.pick(passThroughs, _.keys(Icon.propTypes))}
+			{...omitProps(
+				passThroughs,
+				undefined,
+				_.keys(ResizeIcon.propTypes),
+				false
+			)}
+			{..._.pick(passThroughs, _.keys(iconPropTypes))}
 			className={cx('&', className)}
 		>
 			<path d='M13.5 15.5l2-2m-6 2l6-6' />
@@ -24,7 +28,7 @@ const ResizeIcon: FC<IResizeIconProps> = ({
 	);
 };
 
-ResizeIcon.displayName = 'ResizeIcon',
+ResizeIcon.displayName = 'ResizeIcon';
 ResizeIcon.peek = {
 	description: `
 		An asterisk icon.
@@ -33,8 +37,6 @@ ResizeIcon.peek = {
 	extend: 'Icon',
 	madeFrom: ['Icon'],
 };
-ResizeIcon.propTypes = {
-	...Icon.propTypes,
-};
+ResizeIcon.propTypes = iconPropTypes;
 
 export default ResizeIcon;

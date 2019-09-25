@@ -2,7 +2,15 @@
 
 exports[`EnvelopeIcon [common] example testing should match snapshot(s) for 1.default 1`] = `
 <Icon
+  aspectRatio="xMidYMid meet"
   className="lucid-EnvelopeIcon"
+  color="primary"
+  isClickable={false}
+  isDisabled={false}
+  onClick={[Function]}
+  onSelect={[Function]}
+  size={16}
+  viewBox="0 0 16 16"
 >
   <path
     d="M.5 2.5h15v11H.5z"

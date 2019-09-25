@@ -2,22 +2,37 @@ import _ from 'lodash';
 import React, { createRef } from 'react';
 import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import { omitProps, FC, StandardProps } from '../../util/component-types';
+import {
+	omitProps,
+	FC,
+	StandardProps,
+	FixDefaults,
+	Overwrite,
+} from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-Switch');
 const { bool, func, object, string } = PropTypes;
 
-export interface ISwitchProps extends StandardProps {
+export interface ISwitchPropsRaw extends StandardProps {
 	/** Indicates whether the component should appear and act disabled by having
-	 * a "greyed out" palette and ignoring user interactions. */
+	 * a "greyed out" palette and ignoring user interactions.
+	 *
+	 * @default false
+	 * */
 	isDisabled?: boolean;
 
 	/** Indicates that the component is in the "selected" state when true and in
-	 * the "unselected" state when false. */
+	 * the "unselected" state when false.
+	 *
+	 * @default false
+	 * */
 	isSelected?: boolean;
 
 	/** Called when the user clicks on the component or when they press the space
-	 * key while the component is in focus. */
+	 * key while the component is in focus.
+	 *
+	 * @default _.noop
+	 * */
 	onSelect?: (
 		isSelected: boolean,
 		{
@@ -31,20 +46,38 @@ export interface ISwitchProps extends StandardProps {
 		}
 	) => void;
 
-	/** Offers a red/green styling to the switch. */
+	/** Offers a red/green styling to the switch.
+	 *
+	 * @default false
+	 */
 	isIncludeExclude?: boolean;
 }
+
+export type ISwitchProps = Overwrite<
+	React.DetailedHTMLProps<
+		React.HTMLAttributes<HTMLSpanElement>,
+		HTMLSpanElement
+	>,
+	ISwitchPropsRaw
+>;
+
+const defaultProps = {
+	isDisabled: false,
+	isSelected: false,
+	onSelect: _.noop,
+	isIncludeExclude: false,
+};
 
 const Switch: FC<ISwitchProps> = (props): React.ReactElement => {
 	const {
 		className,
-		isDisabled = false,
-		isSelected = false,
+		isDisabled,
+		isSelected,
 		style,
 		isIncludeExclude,
-		onSelect = _.noop,
+		onSelect,
 		...passThroughs
-	} = props;
+	} = props as FixDefaults<ISwitchProps, typeof defaultProps>;
 
 	const nativeElement = createRef<HTMLInputElement>();
 
@@ -94,7 +127,7 @@ const Switch: FC<ISwitchProps> = (props): React.ReactElement => {
 		</span>
 	);
 };
-
+Switch.defaultProps = defaultProps;
 Switch.displayName = 'Switch';
 Switch.peek = {
 	description: `

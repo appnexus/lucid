@@ -1,8 +1,8 @@
 import _ from 'lodash';
 import React from 'react';
-import Icon, { IIconProps } from '../Icon';
+import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
-import { FC } from '../../../util/component-types';
+import { FC, omitProps } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-AnalyzeDataIcon');
 
@@ -12,11 +12,15 @@ const AnalyzeDataIcon: FC<IAnalyzeDataIconProps> = ({
 	className,
 	...passThroughs
 }): React.ReactElement => {
-
 	return (
 		<Icon
-			{...passThroughs}
-			{..._.pick(passThroughs, _.keys(AnalyzeDataIcon.propTypes))}
+			{...omitProps(
+				passThroughs,
+				undefined,
+				_.keys(AnalyzeDataIcon.propTypes),
+				false
+			)}
+			{..._.pick(passThroughs, _.keys(iconPropTypes))}
 			className={cx('&', className)}
 		>
 			<path d='M0 15.5h16' />
@@ -37,8 +41,6 @@ AnalyzeDataIcon.peek = {
 	extend: 'Icon',
 	madeFrom: ['Icon'],
 };
-AnalyzeDataIcon.propTypes = {
-	...Icon.propTypes,
-};
+AnalyzeDataIcon.propTypes = iconPropTypes;
 
 export default AnalyzeDataIcon;

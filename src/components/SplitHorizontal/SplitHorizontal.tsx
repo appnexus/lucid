@@ -97,7 +97,12 @@ SplitHorizontalDivider.propTypes = {
 	`,
 };
 
-interface ISplitHorizontalProps extends StandardProps {
+interface ISplitHorizontalProps
+	extends StandardProps,
+		React.DetailedHTMLProps<
+			React.HTMLAttributes<HTMLDivElement>,
+			HTMLDivElement
+		> {
 	/** Render as expanded or collapsed. */
 	isExpanded: boolean;
 

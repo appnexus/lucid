@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import Icon, { IIconProps } from '../Icon';
+import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
 import { FC, omitProps } from '../../../util/component-types';
 
@@ -12,11 +12,15 @@ const MinimizeIcon: FC<IMinimizeIconProps> = ({
 	className,
 	...passThroughs
 }): React.ReactElement => {
-
 	return (
 		<Icon
-			{...omitProps(passThroughs, undefined, _.keys(MinimizeIcon.propTypes), false)}
-			{..._.pick(passThroughs, _.keys(Icon.propTypes))}
+			{...omitProps(
+				passThroughs,
+				undefined,
+				_.keys(MinimizeIcon.propTypes),
+				false
+			)}
+			{..._.pick(passThroughs, _.keys(iconPropTypes))}
 			className={cx('&', className)}
 		>
 			<path d='M15.5 6.5h-6v-6m-3 15v-6h-6' />
@@ -24,7 +28,7 @@ const MinimizeIcon: FC<IMinimizeIconProps> = ({
 	);
 };
 
-MinimizeIcon.displayName = 'MinimizeIcon',
+MinimizeIcon.displayName = 'MinimizeIcon';
 MinimizeIcon.peek = {
 	description: `
 		A minimize icon.
@@ -33,8 +37,6 @@ MinimizeIcon.peek = {
 	extend: 'Icon',
 	madeFrom: ['Icon'],
 };
-MinimizeIcon.propTypes = {
-	...Icon.propTypes,
-};
+MinimizeIcon.propTypes = iconPropTypes;
 
 export default MinimizeIcon;

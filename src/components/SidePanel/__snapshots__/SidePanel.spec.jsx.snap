@@ -37,8 +37,11 @@ exports[`SidePanel [common] example testing should match snapshot(s) for 01.no-m
         <Button
           className="lucid-SidePanel-header-closer-button"
           hasOnlyIcon={true}
+          isActive={false}
+          isDisabled={false}
           kind="invisible"
           onClick={[Function]}
+          type="button"
         >
           <CloseIcon
             className="lucid-SidePanel-header-closer"
@@ -184,8 +187,11 @@ exports[`SidePanel [common] example testing should match snapshot(s) for 03.with
         <Button
           className="lucid-SidePanel-header-closer-button"
           hasOnlyIcon={true}
+          isActive={false}
+          isDisabled={false}
           kind="invisible"
           onClick={[Function]}
+          type="button"
         >
           <CloseIcon
             className="lucid-SidePanel-header-closer"
@@ -282,8 +288,11 @@ exports[`SidePanel [common] example testing should match snapshot(s) for 04.with
         <Button
           className="lucid-SidePanel-header-closer-button"
           hasOnlyIcon={true}
+          isActive={false}
+          isDisabled={false}
           kind="invisible"
           onClick={[Function]}
+          type="button"
         >
           <CloseIcon
             className="lucid-SidePanel-header-closer"
@@ -371,8 +380,11 @@ exports[`SidePanel [common] example testing should match snapshot(s) for 05.with
         <Button
           className="lucid-SidePanel-header-closer-button"
           hasOnlyIcon={true}
+          isActive={false}
+          isDisabled={false}
           kind="invisible"
           onClick={[Function]}
+          type="button"
         >
           <CloseIcon
             className="lucid-SidePanel-header-closer"
@@ -448,8 +460,11 @@ exports[`SidePanel [common] example testing should match snapshot(s) for 06.with
         <Button
           className="lucid-SidePanel-header-closer-button"
           hasOnlyIcon={true}
+          isActive={false}
+          isDisabled={false}
           kind="invisible"
           onClick={[Function]}
+          type="button"
         >
           <CloseIcon
             className="lucid-SidePanel-header-closer"
@@ -514,8 +529,11 @@ exports[`SidePanel [common] example testing should match snapshot(s) for 07.with
         <Button
           className="lucid-SidePanel-header-closer-button"
           hasOnlyIcon={true}
+          isActive={false}
+          isDisabled={false}
           kind="invisible"
           onClick={[Function]}
+          type="button"
         >
           <CloseIcon
             className="lucid-SidePanel-header-closer"
@@ -597,8 +615,11 @@ exports[`SidePanel [common] example testing should match snapshot(s) for 08.with
         <Button
           className="lucid-SidePanel-header-closer-button"
           hasOnlyIcon={true}
+          isActive={false}
+          isDisabled={false}
           kind="invisible"
           onClick={[Function]}
+          type="button"
         >
           <CloseIcon
             className="lucid-SidePanel-header-closer"
@@ -695,8 +716,11 @@ exports[`SidePanel Header should match snapshot 1`] = `
         <Button
           className="lucid-SidePanel-header-closer-button"
           hasOnlyIcon={true}
+          isActive={false}
+          isDisabled={false}
           kind="invisible"
           onClick={[Function]}
+          type="button"
         >
           <CloseIcon
             className="lucid-SidePanel-header-closer"

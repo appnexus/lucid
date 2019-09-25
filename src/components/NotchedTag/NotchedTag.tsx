@@ -2,7 +2,7 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import { FC } from '../../util/component-types';
+import { FC, StandardProps, FixDefaults } from '../../util/component-types';
 
 const { node, string, oneOf, object } = PropTypes;
 
@@ -45,13 +45,12 @@ const SIZE_NOTCH_MAP: { [key in Size]: number } = {
 
 const STROKE_SIZE = '2px';
 
-interface INotchedTagProps {
-	/** Any valid React children. */
-	children?: React.ReactNode;
-
-	/** Appended to the component-specific class names set on the root element. */
-	className?: string;
-
+interface INotchedTagProps
+	extends StandardProps,
+		React.DetailedHTMLProps<
+			React.HTMLAttributes<HTMLDivElement>,
+			HTMLDivElement
+		> {
 	/** Style variations. */
 	type?: keyof typeof Type;
 
@@ -60,10 +59,12 @@ interface INotchedTagProps {
 
 	/** Tag style variations. */
 	tagStyle?: keyof typeof TagStyle;
-
-	/** Passed through to the root element. */
-	style?: React.CSSProperties;
 }
+
+const defaultProps = {
+	size: Size.large,
+	tagStyle: TagStyle['style-one'],
+};
 
 const NotchedTag: FC<INotchedTagProps> = (props): React.ReactElement => {
 	const {
@@ -71,10 +72,10 @@ const NotchedTag: FC<INotchedTagProps> = (props): React.ReactElement => {
 		className,
 		type,
 		style,
-		size = Size.large,
-		tagStyle = TagStyle["style-one"],
+		size,
+		tagStyle,
 		...passThroughs
-	} = props;
+	} = props as FixDefaults<INotchedTagProps, typeof defaultProps>;
 
 	const notchHeight = SIZE_NOTCH_MAP[size];
 	const notchWidth = notchHeight * Math.sqrt(3); //we want to maintain a 60 degree slice (30,60,90 triangle)
@@ -133,6 +134,7 @@ const NotchedTag: FC<INotchedTagProps> = (props): React.ReactElement => {
 		</div>
 	);
 };
+NotchedTag.defaultProps = defaultProps;
 NotchedTag.displayName = 'NotchedTag';
 NotchedTag.propTypes = {
 	children: node`

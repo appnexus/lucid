@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import Icon, { IIconProps } from '../Icon';
+import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
 import { FC, omitProps } from '../../../util/component-types';
 
@@ -12,10 +12,14 @@ const EnvelopeIcon: FC<IEnvelopeIconProps> = ({
 	className,
 	...passThroughs
 }): React.ReactElement => {
-
 	return (
 		<Icon
-			{...omitProps(passThroughs, undefined, _.keys(EnvelopeIcon.propTypes), false)}
+			{...omitProps(
+				passThroughs,
+				undefined,
+				_.keys(EnvelopeIcon.propTypes),
+				false
+			)}
 			{..._.pick(passThroughs, _.keys(Icon.propTypes))}
 			className={cx('&', className)}
 		>
@@ -25,7 +29,7 @@ const EnvelopeIcon: FC<IEnvelopeIconProps> = ({
 	);
 };
 
-EnvelopeIcon.displayName = 'EnvelopeIcon',
+EnvelopeIcon.displayName = 'EnvelopeIcon';
 EnvelopeIcon.peek = {
 	description: `
 		An Envelope icon.
@@ -34,8 +38,6 @@ EnvelopeIcon.peek = {
 	extend: 'Icon',
 	madeFrom: ['Icon'],
 };
-EnvelopeIcon.propTypes = {
-	...Icon.propTypes,
-};
+EnvelopeIcon.propTypes = iconPropTypes;
 
 export default EnvelopeIcon;

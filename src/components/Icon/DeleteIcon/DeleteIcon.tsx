@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import Icon, { IIconProps } from '../Icon';
+import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
 import { FC, omitProps } from '../../../util/component-types';
 
@@ -12,11 +12,15 @@ const DeleteIcon: FC<IDeleteIconProps> = ({
 	className,
 	...passThroughs
 }): React.ReactElement => {
-
 	return (
 		<Icon
-			{...omitProps(passThroughs, undefined, _.keys(DeleteIcon.propTypes), false)}
-			{..._.pick(passThroughs, _.keys(Icon.propTypes))}
+			{...omitProps(
+				passThroughs,
+				undefined,
+				_.keys(DeleteIcon.propTypes),
+				false
+			)}
+			{..._.pick(passThroughs, _.keys(iconPropTypes))}
 			className={cx('&', className)}
 		>
 			<path d='M1.5 3h13' />
@@ -27,7 +31,7 @@ const DeleteIcon: FC<IDeleteIconProps> = ({
 	);
 };
 
-DeleteIcon.displayName = 'DeleteIcon',
+DeleteIcon.displayName = 'DeleteIcon';
 DeleteIcon.peek = {
 	description: `
 		A trash icon, used for indicating the deletion of a ui component.
@@ -36,8 +40,6 @@ DeleteIcon.peek = {
 	extend: 'Icon',
 	madeFrom: ['Icon'],
 };
-DeleteIcon.propTypes = {
-	...Icon.propTypes,
-};
+DeleteIcon.propTypes = iconPropTypes;
 
 export default DeleteIcon;

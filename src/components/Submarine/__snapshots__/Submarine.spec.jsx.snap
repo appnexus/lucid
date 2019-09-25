@@ -26,8 +26,11 @@ exports[`Submarine [common] example testing should match snapshot(s) for 1.defau
       <Button
         className="lucid-Submarine-expander"
         hasOnlyIcon={true}
+        isActive={false}
+        isDisabled={false}
         kind="invisible"
         onClick={[Function]}
+        type="button"
       >
         <ChevronIcon
           direction="down"
@@ -44,7 +47,15 @@ exports[`Submarine [common] example testing should match snapshot(s) for 1.defau
     className="lucid-Submarine-Divider"
   >
     <GripperHorizontalIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Submarine-Divider-gripper"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
     />
   </SplitHorizontal.Divider>
   <SplitHorizontal.TopPane
@@ -82,8 +93,11 @@ exports[`Submarine [common] example testing should match snapshot(s) for 2.disab
       <Button
         className="lucid-Submarine-expander"
         hasOnlyIcon={true}
+        isActive={false}
+        isDisabled={false}
         kind="invisible"
         onClick={[Function]}
+        type="button"
       >
         <ChevronIcon
           direction="down"
@@ -100,7 +114,15 @@ exports[`Submarine [common] example testing should match snapshot(s) for 2.disab
     className="lucid-Submarine-Divider"
   >
     <GripperHorizontalIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Submarine-Divider-gripper"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
     />
   </SplitHorizontal.Divider>
   <SplitHorizontal.TopPane
@@ -138,8 +160,11 @@ exports[`Submarine [common] example testing should match snapshot(s) for 3.initi
       <Button
         className="lucid-Submarine-expander"
         hasOnlyIcon={true}
+        isActive={false}
+        isDisabled={false}
         kind="invisible"
         onClick={[Function]}
+        type="button"
       >
         <ChevronIcon
           direction="down"
@@ -156,7 +181,15 @@ exports[`Submarine [common] example testing should match snapshot(s) for 3.initi
     className="lucid-Submarine-Divider"
   >
     <GripperHorizontalIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Submarine-Divider-gripper"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
     />
   </SplitHorizontal.Divider>
   <SplitHorizontal.TopPane
@@ -194,8 +227,11 @@ exports[`Submarine [common] example testing should match snapshot(s) for 4.posit
       <Button
         className="lucid-Submarine-expander"
         hasOnlyIcon={true}
+        isActive={false}
+        isDisabled={false}
         kind="invisible"
         onClick={[Function]}
+        type="button"
       >
         <ChevronIcon
           direction="up"
@@ -212,7 +248,15 @@ exports[`Submarine [common] example testing should match snapshot(s) for 4.posit
     className="lucid-Submarine-Divider"
   >
     <GripperHorizontalIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Submarine-Divider-gripper"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
     />
   </SplitHorizontal.Divider>
   <SplitHorizontal.BottomPane
@@ -255,8 +299,11 @@ exports[`Submarine [common] example testing should match snapshot(s) for 5.custo
       <Button
         className="lucid-Submarine-expander"
         hasOnlyIcon={true}
+        isActive={false}
+        isDisabled={false}
         kind="invisible"
         onClick={[Function]}
+        type="button"
       >
         <ChevronIcon
           direction="down"
@@ -289,7 +336,15 @@ exports[`Submarine [common] example testing should match snapshot(s) for 5.custo
     className="lucid-Submarine-Divider"
   >
     <GripperHorizontalIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Submarine-Divider-gripper"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
     />
   </SplitHorizontal.Divider>
   <SplitHorizontal.TopPane
@@ -327,8 +382,11 @@ exports[`Submarine [common] example testing should match snapshot(s) for 6.custo
       <Button
         className="lucid-Submarine-expander"
         hasOnlyIcon={true}
+        isActive={false}
+        isDisabled={false}
         kind="invisible"
         onClick={[Function]}
+        type="button"
       >
         <ChevronIcon
           direction="down"
@@ -345,7 +403,15 @@ exports[`Submarine [common] example testing should match snapshot(s) for 6.custo
     className="lucid-Submarine-Divider"
   >
     <GripperHorizontalIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Submarine-Divider-gripper"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
     />
   </SplitHorizontal.Divider>
   <SplitHorizontal.TopPane
@@ -383,8 +449,11 @@ exports[`Submarine [common] example testing should match snapshot(s) for 7.contr
       <Button
         className="lucid-Submarine-expander"
         hasOnlyIcon={true}
+        isActive={false}
+        isDisabled={false}
         kind="invisible"
         onClick={[Function]}
+        type="button"
       >
         <ChevronIcon
           direction="up"
@@ -401,7 +470,15 @@ exports[`Submarine [common] example testing should match snapshot(s) for 7.contr
     className="lucid-Submarine-Divider"
   >
     <GripperHorizontalIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Submarine-Divider-gripper"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
     />
   </SplitHorizontal.Divider>
   <SplitHorizontal.TopPane
@@ -439,8 +516,11 @@ exports[`Submarine [common] example testing should match snapshot(s) for 8.handl
       <Button
         className="lucid-Submarine-expander"
         hasOnlyIcon={true}
+        isActive={false}
+        isDisabled={false}
         kind="invisible"
         onClick={[Function]}
+        type="button"
       >
         <ChevronIcon
           direction="down"
@@ -457,7 +537,15 @@ exports[`Submarine [common] example testing should match snapshot(s) for 8.handl
     className="lucid-Submarine-Divider"
   >
     <GripperHorizontalIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Submarine-Divider-gripper"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
     />
   </SplitHorizontal.Divider>
   <SplitHorizontal.TopPane
@@ -495,8 +583,11 @@ exports[`Submarine [common] example testing should match snapshot(s) for 9.neste
       <Button
         className="lucid-Submarine-expander"
         hasOnlyIcon={true}
+        isActive={false}
+        isDisabled={false}
         kind="invisible"
         onClick={[Function]}
+        type="button"
       >
         <ChevronIcon
           direction="up"
@@ -513,7 +604,15 @@ exports[`Submarine [common] example testing should match snapshot(s) for 9.neste
     className="lucid-Submarine-Divider"
   >
     <GripperHorizontalIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Submarine-Divider-gripper"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
     />
   </SplitHorizontal.Divider>
   <SplitHorizontal.BottomPane
@@ -560,8 +659,11 @@ exports[`Submarine [common] example testing should match snapshot(s) for 9.neste
       <Button
         className="lucid-Submarine-expander"
         hasOnlyIcon={true}
+        isActive={false}
+        isDisabled={false}
         kind="invisible"
         onClick={[Function]}
+        type="button"
       >
         <ChevronIcon
           direction="down"
@@ -578,7 +680,15 @@ exports[`Submarine [common] example testing should match snapshot(s) for 9.neste
     className="lucid-Submarine-Divider"
   >
     <GripperHorizontalIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Submarine-Divider-gripper"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
     />
   </SplitHorizontal.Divider>
   <SplitHorizontal.TopPane
@@ -618,8 +728,11 @@ exports[`Submarine [common] example testing should match snapshot(s) for 10.hidd
       <Button
         className="lucid-Submarine-expander"
         hasOnlyIcon={true}
+        isActive={false}
+        isDisabled={false}
         kind="invisible"
         onClick={[Function]}
+        type="button"
       >
         <ChevronIcon
           direction="down"
@@ -636,7 +749,15 @@ exports[`Submarine [common] example testing should match snapshot(s) for 10.hidd
     className="lucid-Submarine-Divider"
   >
     <GripperHorizontalIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Submarine-Divider-gripper"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
     />
   </SplitHorizontal.Divider>
   <SplitHorizontal.TopPane
@@ -676,8 +797,11 @@ exports[`Submarine [common] example testing should match snapshot(s) for 11-titl
       <Button
         className="lucid-Submarine-expander"
         hasOnlyIcon={true}
+        isActive={false}
+        isDisabled={false}
         kind="invisible"
         onClick={[Function]}
+        type="button"
       >
         <ChevronIcon
           direction="down"
@@ -694,7 +818,15 @@ exports[`Submarine [common] example testing should match snapshot(s) for 11-titl
     className="lucid-Submarine-Divider"
   >
     <GripperHorizontalIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Submarine-Divider-gripper"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
     />
   </SplitHorizontal.Divider>
   <SplitHorizontal.TopPane

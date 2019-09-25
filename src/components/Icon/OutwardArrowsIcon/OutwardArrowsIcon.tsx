@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import Icon, { IIconProps } from '../Icon';
+import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
 import { FC, omitProps } from '../../../util/component-types';
 import PropTypes from 'react-peek/prop-types';
@@ -32,11 +32,15 @@ const OutwardArrowsIcon: FC<IOutwardArrowsIconProps> = ({
 	kind = 'horizontal',
 	...passThroughs
 }): React.ReactElement => {
-
 	return (
 		<Icon
-			{...omitProps(passThroughs, undefined, _.keys(OutwardArrowsIcon.propTypes), false)}
-			{..._.pick(passThroughs, _.keys(Icon.propTypes))}
+			{...omitProps(
+				passThroughs,
+				undefined,
+				_.keys(OutwardArrowsIcon.propTypes),
+				false
+			)}
+			{..._.pick(passThroughs, _.keys(iconPropTypes))}
 			className={cx('&', className)}
 		>
 			{paths[kind]}
@@ -44,7 +48,7 @@ const OutwardArrowsIcon: FC<IOutwardArrowsIconProps> = ({
 	);
 };
 
-OutwardArrowsIcon.displayName = 'OutwardArrowsIcon',
+OutwardArrowsIcon.displayName = 'OutwardArrowsIcon';
 OutwardArrowsIcon.peek = {
 	description: `
 		Typically used to denote width, height, or aspect ratio.
@@ -54,7 +58,7 @@ OutwardArrowsIcon.peek = {
 	madeFrom: ['Icon'],
 };
 OutwardArrowsIcon.propTypes = {
-	...Icon.propTypes,
+	...iconPropTypes,
 	kind: oneOf(['horizontal', 'vertical', 'diagonal'])`
 		Determines the kind of arrows you want to display. \`horizontal\` is
 		usually used for width. \`vertical\` is usually used for height.

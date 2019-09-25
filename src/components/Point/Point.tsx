@@ -2,7 +2,12 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import { omitProps, FC, StandardProps } from '../../util/component-types';
+import {
+	omitProps,
+	FC,
+	StandardProps,
+	FixDefaults,
+} from '../../util/component-types';
 import { transformFromCenter } from '../../util/chart-helpers';
 import * as chartConstants from '../../constants/charts';
 
@@ -28,27 +33,38 @@ export enum Kind {
 	Diamond,
 }
 
-export interface IPointProps extends StandardProps {
-	hasStroke?: boolean,
-	kind?: Kind,
-	color?: string,
-	scale?: number,
-	x?: number,
-	y?: number,
+export interface IPointProps
+	extends StandardProps,
+		React.SVGProps<SVGPathElement> {
+	hasStroke?: boolean;
+	kind?: Kind;
+	color?: string;
+	scale?: number;
+	x?: number;
+	y?: number;
+}
+
+const defaultProps = {
+	x: 0,
+	y: 0,
+	kind: 0,
+	color: chartConstants.COLOR_0,
+	hasStroke: false,
+	scale: 1,
 };
 
-const Point: FC<IPointProps> = (props) : React.ReactElement => {
+const Point: FC<IPointProps> = (props): React.ReactElement => {
 	const {
-		color = chartConstants.COLOR_0,
-		hasStroke = false,
-		kind = 0,
-		x = 0,
-		y = 0,
-		scale = 1,
+		color,
+		hasStroke,
+		kind,
+		x,
+		y,
+		scale,
 		className,
 		style,
-	...passThroughs
-	} = props;
+		...passThroughs
+	} = props as FixDefaults<IPointProps, typeof defaultProps>;
 
 	const kindIndex = kind % 5;
 
@@ -81,6 +97,8 @@ const Point: FC<IPointProps> = (props) : React.ReactElement => {
 		/>
 	);
 };
+
+Point.defaultProps = defaultProps;
 
 Point.displayName = 'Point';
 

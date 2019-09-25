@@ -3,7 +3,12 @@ import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import ReactTransitionGroup from 'react-transition-group/CSSTransitionGroup';
 import { lucidClassNames } from '../../util/style-helpers';
-import { FC, omitProps, StandardProps } from '../../util/component-types';
+import {
+	FC,
+	omitProps,
+	StandardProps,
+	FixDefaults,
+} from '../../util/component-types';
 import CloseIcon from '../Icon/CloseIcon/CloseIcon';
 import { IIconProps } from '../Icon/Icon';
 
@@ -11,27 +16,31 @@ const cx = lucidClassNames.bind('&-Banner');
 
 const { bool, element, func, node, oneOf, string } = PropTypes;
 
-export interface IBannerProps extends StandardProps {
-
+export interface IBannerProps
+	extends StandardProps,
+		React.DetailedHTMLProps<
+			React.HTMLAttributes<HTMLDivElement>,
+			HTMLDivElement
+		> {
 	/** Pass in a icon component for custom icons within `Banner`. */
-	icon: React.ReactElement;
+	icon?: React.ReactElement | null;
 
 	/** Set this to `true` if you want to have a `x` close icon. */
-	isCloseable: boolean;
+	isCloseable?: boolean;
 
 	/** If set to `false` the banner will not be filled in.
 	 * @default = true
 	 */
-	isFilled: boolean;
+	isFilled?: boolean;
 
 	/** If set to `true` the banner have smaller padding on the inside. */
-	isSmall: boolean;
+	isSmall?: boolean;
 
 	/** Style variations of the `Banner`. */
-	kind: 'primary' | 'success' | 'warning' | 'danger' | 'info' | 'default';
+	kind?: 'primary' | 'success' | 'warning' | 'danger' | 'info' | 'default';
 
 	/** Called when the user closes the `Banner`. */
-	onClose: ({
+	onClose?: ({
 		event,
 		props,
 	}: {
@@ -40,28 +49,42 @@ export interface IBannerProps extends StandardProps {
 	}) => void;
 
 	/** Controls the visibility of the `Banner`. */
-	isClosed: boolean;
+	isClosed?: boolean;
 }
 
-const Banner: FC<IBannerProps> = ({
-	icon = null,
-	kind = 'default',
-	className,
-	children,
-	isCloseable = true,
-	isClosed,
-	isFilled = true,
-	isSmall = false,
-	onClose = _.noop,
-	...passThroughs
-}): React.ReactElement => {
+const defaultProps = {
+	icon: null,
+	isCloseable: true,
+	isFilled: true,
+	isSmall: false,
+	kind: 'default' as const,
+	onClose: _.noop,
+	isClosed: false,
+};
 
-	const handleClose = ({ event, props }: {
-		event: React.MouseEvent,
-		props: IIconProps
+const Banner: FC<IBannerProps> = (props): React.ReactElement => {
+	const {
+		icon,
+		kind,
+		className,
+		children,
+		isCloseable,
+		isClosed,
+		isFilled,
+		isSmall,
+		onClose,
+		...passThroughs
+	} = props as FixDefaults<IBannerProps, typeof defaultProps>;
+
+	const handleClose = ({
+		event,
+		props,
+	}: {
+		event: React.MouseEvent;
+		props: IIconProps;
 	}): void => {
 		onClose({ event, props });
-	}
+	};
 
 	let displayedIcon = null;
 
@@ -77,11 +100,7 @@ const Banner: FC<IBannerProps> = ({
 		>
 			{!isClosed ? (
 				<section
-					{...omitProps(
-							passThroughs,
-							undefined,
-							_.keys(Banner.propTypes)
-					)}
+					{...omitProps(passThroughs, undefined, _.keys(Banner.propTypes))}
 					className={cx(
 						'&',
 						{
@@ -118,6 +137,7 @@ const Banner: FC<IBannerProps> = ({
 	);
 };
 
+Banner.defaultProps = defaultProps;
 Banner.displayName = 'Banner';
 Banner.peek = {
 	description: `

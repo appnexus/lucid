@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import Icon, { IIconProps } from '../Icon';
+import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
 import { FC, omitProps } from '../../../util/component-types';
 
@@ -12,11 +12,10 @@ const BookIcon: FC<IBookIconProps> = ({
 	className,
 	...passThroughs
 }): React.ReactElement => {
-
 	return (
 		<Icon
-		{...omitProps(passThroughs, undefined, _.keys(BookIcon.propTypes), false)}
-		{..._.pick(passThroughs, _.keys(Icon.propTypes))}
+			{...omitProps(passThroughs, undefined, _.keys(BookIcon.propTypes), false)}
+			{..._.pick(passThroughs, _.keys(iconPropTypes))}
 			className={cx('&', className)}
 		>
 			<path d='M2.5 2.5h-2v13h15v-13h-2' />
@@ -25,7 +24,7 @@ const BookIcon: FC<IBookIconProps> = ({
 	);
 };
 
-BookIcon.displayName = 'BookIcon',
+BookIcon.displayName = 'BookIcon';
 BookIcon.peek = {
 	description: `
 		A book icon.
@@ -34,8 +33,6 @@ BookIcon.peek = {
 	extend: 'Icon',
 	madeFrom: ['Icon'],
 };
-BookIcon.propTypes = {
-	...Icon.propTypes,
-};
+BookIcon.propTypes = iconPropTypes;
 
 export default BookIcon;

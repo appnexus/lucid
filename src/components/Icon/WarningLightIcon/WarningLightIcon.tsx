@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import Icon, { IIconProps } from '../Icon';
+import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
 import { FC, omitProps } from '../../../util/component-types';
 
@@ -14,11 +14,15 @@ const WarningLightIcon: FC<IWarningLightIconProps> = ({
 	isDisabled,
 	...passThroughs
 }): React.ReactElement => {
-
 	return (
 		<Icon
-			{...omitProps(passThroughs, undefined, _.keys(WarningLightIcon.propTypes), false)}
-			{..._.pick(passThroughs, _.keys(Icon.propTypes))}
+			{...omitProps(
+				passThroughs,
+				undefined,
+				_.keys(WarningLightIcon.propTypes),
+				false
+			)}
+			{..._.pick(passThroughs, _.keys(iconPropTypes))}
 			isClickable={isClickable}
 			isDisabled={isDisabled}
 			className={cx(
@@ -35,7 +39,7 @@ const WarningLightIcon: FC<IWarningLightIconProps> = ({
 	);
 };
 
-WarningLightIcon.displayName = 'WarningLightIcon',
+WarningLightIcon.displayName = 'WarningLightIcon';
 WarningLightIcon.peek = {
 	description: `
 		Diet version.
@@ -44,8 +48,6 @@ WarningLightIcon.peek = {
 	extend: 'Icon',
 	madeFrom: ['Icon'],
 };
-WarningLightIcon.propTypes = {
-	...Icon.propTypes,
-};
+WarningLightIcon.propTypes = iconPropTypes;
 
 export default WarningLightIcon;

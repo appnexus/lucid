@@ -2,12 +2,16 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import { omitProps, StandardProps } from '../../util/component-types';
+import {
+	omitProps,
+	StandardProps,
+	Overwrite,
+} from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-DragCaptureZone');
 const { func, string } = PropTypes;
 
-interface IDragCaptureZoneProps extends StandardProps {
+interface IDragCaptureZonePropsRaw extends StandardProps {
 	/** Called as the user drags the mouse. */
 	onDrag: (
 		{
@@ -84,6 +88,11 @@ interface IDragCaptureZoneProps extends StandardProps {
 		props: IDragCaptureZoneProps;
 	}) => void;
 }
+
+type IDragCaptureZoneProps = Overwrite<
+	React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>,
+	IDragCaptureZonePropsRaw
+>;
 
 interface IDragCaptureZoneState {
 	pageX: number;

@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import Icon, { IIconProps } from '../Icon';
+import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
 import { FC, omitProps } from '../../../util/component-types';
 
@@ -14,11 +14,15 @@ const MinusCircleIcon: FC<IMinusCircleIconProps> = ({
 	isDisabled,
 	...passThroughs
 }): React.ReactElement => {
-
 	return (
 		<Icon
-			{...omitProps(passThroughs, undefined, _.keys(MinusCircleIcon.propTypes), false)}
-			{..._.pick(passThroughs, _.keys(Icon.propTypes))}
+			{...omitProps(
+				passThroughs,
+				undefined,
+				_.keys(MinusCircleIcon.propTypes),
+				false
+			)}
+			{..._.pick(passThroughs, _.keys(iconPropTypes))}
 			isClickable={isClickable}
 			isDisabled={isDisabled}
 			className={cx(
@@ -34,7 +38,7 @@ const MinusCircleIcon: FC<IMinusCircleIconProps> = ({
 	);
 };
 
-MinusCircleIcon.displayName = 'MinusCircleIcon',
+MinusCircleIcon.displayName = 'MinusCircleIcon';
 MinusCircleIcon.peek = {
 	description: `
 		Minus circle icon
@@ -43,8 +47,6 @@ MinusCircleIcon.peek = {
 	extend: 'Icon',
 	madeFrom: ['Icon'],
 };
-MinusCircleIcon.propTypes = {
-	...Icon.propTypes,
-};
+MinusCircleIcon.propTypes = iconPropTypes;
 
 export default MinusCircleIcon;

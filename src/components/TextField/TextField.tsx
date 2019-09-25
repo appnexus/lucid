@@ -2,7 +2,11 @@ import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import _ from 'lodash';
 import { lucidClassNames } from '../../util/style-helpers';
-import { omitProps, StandardProps } from '../../util/component-types';
+import {
+	omitProps,
+	StandardProps,
+	Overwrite,
+} from '../../util/component-types';
 import reducers from './TextField.reducers';
 import * as KEYCODE from '../../constants/key-code';
 import { ITextFieldState } from './TextField.reducers';
@@ -24,7 +28,7 @@ interface ITextFieldProps extends StandardProps {
 
 	/** Fires an event every time the user types text into the TextField. */
 	onChange: (
-		value: number | string,
+		value: string,
 		{
 			event,
 			props,
@@ -36,7 +40,7 @@ interface ITextFieldProps extends StandardProps {
 
 	/** Fires an on the `input`'s onBlur. */
 	onBlur: (
-		currentValue: number | string,
+		currentValue: string,
 		{
 			event,
 			props,
@@ -49,7 +53,7 @@ interface ITextFieldProps extends StandardProps {
 	/** Fires an event, debounced by `debounceLevel` when the user types text
 		into the TextField. */
 	onChangeDebounced: (
-		value: number | string,
+		value: string,
 		{
 			event,
 			props,
@@ -70,7 +74,7 @@ interface ITextFieldProps extends StandardProps {
 
 	/** Fires an event when the user hits "enter" from the TextField. You shouldn't use it if you're using `isMultiLine`. */
 	onSubmit: (
-		value: number | string,
+		value: string,
 		{
 			event,
 			props,
@@ -81,7 +85,7 @@ interface ITextFieldProps extends StandardProps {
 	) => void;
 
 	/** Set the value of the input. */
-	value: number | string;
+	value: string | number;
 
 	/** Number of milliseconds to debounce the `onChangeDebounced` callback. Only useful if you provide an `onChangeDebounced` handler. */
 	debounceLevel: number;
@@ -93,8 +97,19 @@ interface ITextFieldProps extends StandardProps {
 		heavily inspired by the [lazy-input](https:/docs.npmjs.com/package/lazy-input) component. */
 	lazyLevel: number;
 }
+type ITextFieldPropsWithPassThroughs = Overwrite<
+	React.DetailedHTMLProps<
+		React.InputHTMLAttributes<HTMLInputElement>,
+		HTMLInputElement
+	>,
+	ITextFieldProps
+>;
 
-class TextField extends React.Component<ITextFieldProps, ITextFieldState, {}> {
+class TextField extends React.Component<
+	ITextFieldPropsWithPassThroughs,
+	ITextFieldState,
+	{}
+> {
 	static displayName = 'TextField';
 	static peek = {
 		description: `
@@ -184,6 +199,7 @@ class TextField extends React.Component<ITextFieldProps, ITextFieldState, {}> {
 		onChange: _.noop,
 		onChangeDebounced: _.noop,
 		onSubmit: _.noop,
+		onKeyDown: _.noop,
 		rows: 5,
 		debounceLevel: 500,
 		lazyLevel: 1000,
@@ -200,7 +216,7 @@ class TextField extends React.Component<ITextFieldProps, ITextFieldState, {}> {
 
 	private handleChangeDebounced = _.debounce(
 		(
-			value: number | string,
+			value: string,
 			{
 				event,
 				props,

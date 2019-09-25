@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import Icon, { IIconProps } from '../Icon';
+import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
 import { FC, omitProps } from '../../../util/component-types';
 
@@ -12,11 +12,10 @@ const FileIcon: FC<IFileIconProps> = ({
 	className,
 	...passThroughs
 }): React.ReactElement => {
-
 	return (
 		<Icon
 			{...omitProps(passThroughs, undefined, _.keys(FileIcon.propTypes), false)}
-			{..._.pick(passThroughs, _.keys(Icon.propTypes))}
+			{..._.pick(passThroughs, _.keys(iconPropTypes))}
 			className={cx('&', className)}
 		>
 			<path d='M2.5.5v15h11v-11l-4-4z' />
@@ -25,7 +24,7 @@ const FileIcon: FC<IFileIconProps> = ({
 	);
 };
 
-FileIcon.displayName = 'FileIcon',
+FileIcon.displayName = 'FileIcon';
 FileIcon.peek = {
 	description: `
 		An icon for a file.
@@ -34,8 +33,6 @@ FileIcon.peek = {
 	extend: 'Icon',
 	madeFrom: ['Icon'],
 };
-FileIcon.propTypes = {
-	...Icon.propTypes,
-};
+FileIcon.propTypes = iconPropTypes;
 
 export default FileIcon;

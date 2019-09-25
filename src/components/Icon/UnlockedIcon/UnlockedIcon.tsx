@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import Icon, { IIconProps } from '../Icon';
+import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
 import { FC, omitProps } from '../../../util/component-types';
 
@@ -12,11 +12,15 @@ const UnlockedIcon: FC<IUnlockedIconProps> = ({
 	className,
 	...passThroughs
 }): React.ReactElement => {
-
 	return (
 		<Icon
-			{...omitProps(passThroughs, undefined, _.keys(UnlockedIcon.propTypes), false)}
-			{..._.pick(passThroughs, _.keys(Icon.propTypes))}
+			{...omitProps(
+				passThroughs,
+				undefined,
+				_.keys(UnlockedIcon.propTypes),
+				false
+			)}
+			{..._.pick(passThroughs, _.keys(iconPropTypes))}
 			className={cx('&', className)}
 		>
 			<path d='M1.5 6.5h13v9h-13zm2 0V5a4.5 4.5 0 0 1 8.741-1.508M7.99 13.293v-3' />
@@ -25,7 +29,7 @@ const UnlockedIcon: FC<IUnlockedIconProps> = ({
 	);
 };
 
-UnlockedIcon.displayName = 'UnlockedIcon',
+UnlockedIcon.displayName = 'UnlockedIcon';
 UnlockedIcon.peek = {
 	description: `
 		Unlock it.
@@ -34,8 +38,6 @@ UnlockedIcon.peek = {
 	extend: 'Icon',
 	madeFrom: ['Icon'],
 };
-UnlockedIcon.propTypes = {
-	...Icon.propTypes,
-};
+UnlockedIcon.propTypes = iconPropTypes;
 
 export default UnlockedIcon;

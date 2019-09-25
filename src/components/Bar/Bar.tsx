@@ -2,28 +2,35 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import { FC, omitProps, StandardProps } from '../../util/component-types';
+import {
+	FC,
+	omitProps,
+	StandardProps,
+	FixDefaults,
+} from '../../util/component-types';
 import * as chartConstants from '../../constants/charts';
 
 const cx = lucidClassNames.bind('&-Bar');
 
 const { number, bool, string, object } = PropTypes;
 
-export interface IBarProps extends StandardProps {
+export interface IBarProps
+	extends StandardProps,
+		React.SVGProps<SVGRectElement> {
 	/** x coordinate. */
-	x: number;
+	x?: number;
 
 	/** y coordinate. */
-	y: number;
+	y?: number;
 
 	/** Height of the bar. */
-	height: number | string;
+	height?: number | string;
 
 	/** Width of the bar. */
-	width: number | string;
+	width?: number | string;
 
 	/** Determines if the bar has a white stroke around it. */
-	hasStroke: boolean;
+	hasStroke?: boolean;
 
 	/** Strings should match an existing color class unless they start with a '#'
 		for specific colors. E.g.:
@@ -32,31 +39,37 @@ export interface IBarProps extends StandardProps {
 		- \`COLOR_GOOD\`
 		- \`'#123abc'\`
 	 */
-	color: string;
+	color?: string;
 }
 
-const Bar: FC<IBarProps> = ({
+const defaultProps = {
+	x: 0,
+	y: 0,
+	height: 0,
+	width: 0,
+	color: chartConstants.COLOR_0,
+	hasStroke: false,
+};
+
+const Bar: FC<IBarProps> = (props): React.ReactElement => {
+	const {
 		className,
-		color = chartConstants.COLOR_0,
+		color,
 		hasStroke,
-		height = 0,
-		width = 0,
+		height,
+		width,
 		style,
-		x = 0,
-		y = 0,
+		x,
+		y,
 		...passThroughs
-}): React.ReactElement => {
+	} = props as FixDefaults<IBarProps, typeof defaultProps>;
 
 	const isCustomColor = _.startsWith(color, '#');
 	const colorStyle = isCustomColor ? { fill: color } : null;
 
 	return (
 		<rect
-			{...omitProps<IBarProps>(
-				passThroughs,
-				undefined,
-				_.keys(Bar.propTypes)
-			)}
+			{...omitProps<IBarProps>(passThroughs, undefined, _.keys(Bar.propTypes))}
 			className={cx(className, '&', {
 				'&-has-stroke': hasStroke,
 				[`&-${color}`]: !isCustomColor,
@@ -73,6 +86,7 @@ const Bar: FC<IBarProps> = ({
 	);
 };
 
+Bar.defaultProps = defaultProps;
 Bar.displayName = 'Bar';
 Bar.peek = {
 	description: `

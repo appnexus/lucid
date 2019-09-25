@@ -236,7 +236,7 @@ export function buildHybridComponent(
 		reducers = _.get(baseComponent, 'definition.statics.reducers', {}),
 		selectors = _.get(baseComponent, 'definition.statics.selectors', {}),
 	} = {}
-) {
+): any {
 	const {
 		_isLucidHybridComponent,
 		displayName,

@@ -2,8 +2,17 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import { FC, StandardProps, findTypes, omitProps } from '../../util/component-types';
-import RadioButton, { IRadioButtonProps } from '../RadioButton/RadioButton';
+import {
+	FC,
+	StandardProps,
+	findTypes,
+	omitProps,
+	FixDefaults,
+} from '../../util/component-types';
+import RadioButton, {
+	IRadioButtonProps,
+	defaultProps as radioButtonDefaultProps,
+} from '../RadioButton/RadioButton';
 
 const cx = lucidClassNames.bind('&-RadioButtonLabeled');
 const { any, object, string } = PropTypes;
@@ -11,7 +20,8 @@ const { any, object, string } = PropTypes;
 interface IRadioButtonLabeledLabelProps extends StandardProps {
 	description?: string;
 }
-const RadioButtonLabeledLabel: FC<IRadioButtonLabeledLabelProps> = (): null => null;
+const RadioButtonLabeledLabel: FC<IRadioButtonLabeledLabelProps> = (): null =>
+	null;
 RadioButtonLabeledLabel.displayName = 'RadioButtonLabeled.Label';
 RadioButtonLabeledLabel.peek = {
 	description: `
@@ -31,16 +41,17 @@ export interface IRadioButtonLabeledFC extends FC<IRadioButtonLabeledProps> {
 	Label: FC<IRadioButtonLabeledLabelProps>;
 }
 
-const RadioButtonLabeled: IRadioButtonLabeledFC = (props): React.ReactElement => {
-
+const RadioButtonLabeled: IRadioButtonLabeledFC = (
+	props
+): React.ReactElement => {
 	const {
 		className,
-		isDisabled = false,
-		isSelected = false,
-		onSelect = _.noop,
+		isDisabled,
+		isSelected,
+		onSelect,
 		style,
 		...passThroughs
-	} = props;
+	} = props as FixDefaults<IRadioButtonProps, typeof radioButtonDefaultProps>;
 
 	const labelChildProps = _.first(
 		_.map(findTypes(props, RadioButtonLabeled.Label), 'props')
@@ -77,6 +88,7 @@ const RadioButtonLabeled: IRadioButtonLabeledFC = (props): React.ReactElement =>
 
 RadioButtonLabeled.displayName = 'RadioButtonLabeled';
 
+RadioButtonLabeled.defaultProps = radioButtonDefaultProps;
 
 RadioButtonLabeled.peek = {
 	description: `
@@ -103,7 +115,7 @@ RadioButtonLabeled.propTypes = {
 		Child element whose children are used to identify the purpose of this
 		radio button to the user.
 	`,
-},
+};
 
 RadioButtonLabeled.Label = RadioButtonLabeledLabel;
 

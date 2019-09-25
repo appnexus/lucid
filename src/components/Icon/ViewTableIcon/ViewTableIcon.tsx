@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import Icon, { IIconProps } from '../Icon';
+import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
 import { FC, omitProps } from '../../../util/component-types';
 
@@ -12,11 +12,15 @@ const ViewTableIcon: FC<IViewTableIconProps> = ({
 	className,
 	...passThroughs
 }): React.ReactElement => {
-
 	return (
 		<Icon
-			{...omitProps(passThroughs, undefined, _.keys(ViewTableIcon.propTypes), false)}
-			{..._.pick(passThroughs, _.keys(Icon.propTypes))}
+			{...omitProps(
+				passThroughs,
+				undefined,
+				_.keys(ViewTableIcon.propTypes),
+				false
+			)}
+			{..._.pick(passThroughs, _.keys(iconPropTypes))}
 			className={cx('&', className)}
 		>
 			<path d='M7.25 13.5h8.25' />
@@ -26,7 +30,7 @@ const ViewTableIcon: FC<IViewTableIconProps> = ({
 	);
 };
 
-ViewTableIcon.displayName = 'ViewTableIcon',
+ViewTableIcon.displayName = 'ViewTableIcon';
 ViewTableIcon.peek = {
 	description: `
 		Would you just look at it?!
@@ -35,8 +39,6 @@ ViewTableIcon.peek = {
 	extend: 'Icon',
 	madeFrom: ['Icon'],
 };
-ViewTableIcon.propTypes = {
-	...Icon.propTypes,
-};
+ViewTableIcon.propTypes = iconPropTypes;
 
 export default ViewTableIcon;

@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import Icon, { IIconProps } from '../Icon';
+import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
 import { FC, omitProps } from '../../../util/component-types';
 
@@ -12,11 +12,15 @@ const UnlinkedIcon: FC<IUnlinkedIconProps> = ({
 	className,
 	...passThroughs
 }): React.ReactElement => {
-
 	return (
 		<Icon
-			{...omitProps(passThroughs, undefined, _.keys(UnlinkedIcon.propTypes), false)}
-			{..._.pick(passThroughs, _.keys(Icon.propTypes))}
+			{...omitProps(
+				passThroughs,
+				undefined,
+				_.keys(UnlinkedIcon.propTypes),
+				false
+			)}
+			{..._.pick(passThroughs, _.keys(iconPropTypes))}
 			className={cx('&', className)}
 		>
 			<path d='M5.5 3.5l-1-2m8 9l2 1m-4 1l1 2m-8-9l-2-1' />
@@ -25,7 +29,7 @@ const UnlinkedIcon: FC<IUnlinkedIconProps> = ({
 	);
 };
 
-UnlinkedIcon.displayName = 'UnlinkedIcon',
+UnlinkedIcon.displayName = 'UnlinkedIcon';
 UnlinkedIcon.peek = {
 	description: `
 		For all those times you just need to break away.
@@ -34,8 +38,6 @@ UnlinkedIcon.peek = {
 	extend: 'Icon',
 	madeFrom: ['Icon'],
 };
-UnlinkedIcon.propTypes = {
-	...Icon.propTypes,
-};
+UnlinkedIcon.propTypes = iconPropTypes;
 
 export default UnlinkedIcon;

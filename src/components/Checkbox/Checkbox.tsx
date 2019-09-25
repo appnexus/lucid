@@ -5,15 +5,16 @@ import { lucidClassNames } from '../../util/style-helpers';
 import {
 	omitProps,
 	FC,
-	PropsWithDefaults,
+	FixDefaults,
 	StandardProps,
+	Overwrite,
 } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-Checkbox');
 
 const { bool, func, object, string } = PropTypes;
 
-export interface ICheckboxProps extends StandardProps {
+export interface ICheckboxPropsRaw extends StandardProps {
 	/** Indicates whether the component should appear in an "indeterminate" or
 	 * "partially checked" state. This prop takes precedence over
 	 * \`isSelected\`.
@@ -50,7 +51,15 @@ export interface ICheckboxProps extends StandardProps {
 	title?: string;
 }
 
-export const defaultPropsCheckbox = {
+export type ICheckboxProps = Overwrite<
+	React.DetailedHTMLProps<
+		React.InputHTMLAttributes<HTMLInputElement>,
+		HTMLInputElement
+	>,
+	ICheckboxPropsRaw
+>;
+
+export const defaultProps = {
 	isIndeterminate: false,
 	isDisabled: false,
 	isSelected: false,
@@ -67,7 +76,7 @@ const Checkbox: FC<ICheckboxProps> = (props): React.ReactElement => {
 		title,
 		onSelect,
 		...passThroughs
-	} = props;
+	} = props as FixDefaults<ICheckboxProps, typeof defaultProps>;
 
 	const nativeElement = React.createRef<HTMLInputElement>();
 
@@ -151,7 +160,7 @@ Checkbox.peek = {
 	categories: ['controls', 'toggles'],
 };
 
-Checkbox.defaultProps = defaultPropsCheckbox;
+Checkbox.defaultProps = defaultProps;
 
 Checkbox.propTypes = {
 	className: string`
@@ -190,6 +199,4 @@ Checkbox.propTypes = {
 	`,
 };
 
-export default Checkbox as FC<
-	PropsWithDefaults<ICheckboxProps, typeof defaultPropsCheckbox>
->;
+export default Checkbox;

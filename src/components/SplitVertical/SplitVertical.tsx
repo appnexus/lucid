@@ -23,7 +23,9 @@ interface ISplitVerticalRightPaneProps extends StandardProps {
 		collapsed, this pane becomes full width. */
 	isPrimary?: boolean;
 }
-export const SplitVerticalRightPane: FC<ISplitVerticalRightPaneProps> = (): null => null;
+export const SplitVerticalRightPane: FC<
+	ISplitVerticalRightPaneProps
+> = (): null => null;
 SplitVerticalRightPane.displayName = 'SplitVertical.RightPane';
 SplitVerticalRightPane.peek = {
 	description: `Right pane of the split.`,
@@ -43,7 +45,7 @@ SplitVerticalRightPane.propTypes = {
 };
 SplitVerticalRightPane.defaultProps = {
 	isPrimary: false,
-}
+};
 
 interface ISplitVerticalLeftPaneProps extends StandardProps {
 	/** Set width of this pane. */
@@ -74,7 +76,7 @@ SplitVerticalLeftPane.propTypes = {
 };
 SplitVerticalLeftPane.defaultProps = {
 	isPrimary: false,
-}
+};
 
 const SplitVerticalDivider: FC<StandardProps> = (): null => null;
 SplitVerticalDivider.displayName = 'SplitVertical.Divider';
@@ -91,8 +93,12 @@ SplitVerticalDivider.propTypes = {
 	`,
 };
 
-
-interface ISplitVerticalProps extends StandardProps {
+interface ISplitVerticalProps
+	extends StandardProps,
+		React.DetailedHTMLProps<
+			React.HTMLAttributes<HTMLDivElement>,
+			HTMLDivElement
+		> {
 	/** Render as expanded or collapsed. */
 	isExpanded: boolean;
 
@@ -105,7 +111,10 @@ interface ISplitVerticalProps extends StandardProps {
 	/** Called when the user is currently resizing the split with the Divider. */
 	onResizing: (
 		height: number,
-		{ event, props }: {
+		{
+			event,
+			props,
+		}: {
 			event: MouseEvent | TouchEvent;
 			props: ISplitVerticalProps;
 		}
@@ -114,7 +123,10 @@ interface ISplitVerticalProps extends StandardProps {
 	/** Called when the user resizes the split with the Divider. */
 	onResize: (
 		height: number,
-		{ event, props }: {
+		{
+			event,
+			props,
+		}: {
 			event: MouseEvent | TouchEvent;
 			props: ISplitVerticalProps;
 		}
@@ -214,12 +226,12 @@ class SplitVertical extends React.Component<
 		: null;
 
 	getPanes = (): {
-		right: ISplitVerticalRightPaneProps,
-		left: ISplitVerticalLeftPaneProps,
-		primary: ISplitVerticalRightPaneProps | ISplitVerticalLeftPaneProps,
-		secondary: ISplitVerticalRightPaneProps | ISplitVerticalLeftPaneProps,
-		primaryRef: React.RefObject<HTMLDivElement>,
-		secondaryRef: React.RefObject<HTMLDivElement>,
+		right: ISplitVerticalRightPaneProps;
+		left: ISplitVerticalLeftPaneProps;
+		primary: ISplitVerticalRightPaneProps | ISplitVerticalLeftPaneProps;
+		secondary: ISplitVerticalRightPaneProps | ISplitVerticalLeftPaneProps;
+		primaryRef: React.RefObject<HTMLDivElement>;
+		secondaryRef: React.RefObject<HTMLDivElement>;
 	} => {
 		const { children } = this.props;
 		const { leftPaneRef, rightPaneRef } = this;
@@ -237,10 +249,7 @@ class SplitVertical extends React.Component<
 		let primaryElement, primaryRef;
 		let secondaryElement, secondaryRef;
 
-		if (
-				leftPaneElement.props.isPrimary
-				&& !rightPaneElement.props.isPrimary
-		) {
+		if (leftPaneElement.props.isPrimary && !rightPaneElement.props.isPrimary) {
 			primaryElement = leftPaneElement;
 			primaryRef = leftPaneRef;
 			secondaryElement = rightPaneElement;
@@ -292,7 +301,8 @@ class SplitVertical extends React.Component<
 				return secondaryStartRect.width - overlapWidth;
 			} else {
 				this.expandSecondary();
-				(secondaryRef.current as HTMLDivElement).style.flexBasis = `${(dX + collapseShift) *
+				(secondaryRef.current as HTMLDivElement).style.flexBasis = `${(dX +
+					collapseShift) *
 					(secondary === right ? -1 : 1)}px`;
 				return (dX + collapseShift) * (secondary === right ? -1 : 1);
 			}
@@ -338,50 +348,52 @@ class SplitVertical extends React.Component<
 
 	handleDrag = (
 		{ dX }: { dX: number },
-		{ event }: { event: MouseEvent | TouchEvent}
+		{ event }: { event: MouseEvent | TouchEvent }
 	): void => {
 		const { isExpanded, collapseShift, onResizing } = this.props;
 
 		const { secondaryRef, secondary, right, primaryRef } = this.panes;
 
-		this.secondaryStartRect && onResizing(
-			this.applyDeltaToSecondaryWidth(
-				dX,
-				isExpanded,
-				this.secondaryStartRect,
-				secondaryRef,
-				secondary,
-				right,
-				this.innerRef,
-				primaryRef,
-				collapseShift
-			),
-			{ props: this.props, event }
-		);
+		this.secondaryStartRect &&
+			onResizing(
+				this.applyDeltaToSecondaryWidth(
+					dX,
+					isExpanded,
+					this.secondaryStartRect,
+					secondaryRef,
+					secondary,
+					right,
+					this.innerRef,
+					primaryRef,
+					collapseShift
+				),
+				{ props: this.props, event }
+			);
 	};
 
 	handleDragEnd = (
 		{ dX }: { dX: number },
-		{ event }: { event: MouseEvent | TouchEvent}
+		{ event }: { event: MouseEvent | TouchEvent }
 	): void => {
 		const { isExpanded, collapseShift, onResize } = this.props;
 
 		const { secondaryRef, secondary, right, primaryRef } = this.panes;
 
-		this.secondaryStartRect &&  onResize(
-			this.applyDeltaToSecondaryWidth(
-				dX,
-				isExpanded,
-				this.secondaryStartRect,
-				secondaryRef,
-				secondary,
-				right,
-				this.innerRef,
-				primaryRef,
-				collapseShift
-			),
-			{ props: this.props, event }
-		);
+		this.secondaryStartRect &&
+			onResize(
+				this.applyDeltaToSecondaryWidth(
+					dX,
+					isExpanded,
+					this.secondaryStartRect,
+					secondaryRef,
+					secondary,
+					right,
+					this.innerRef,
+					primaryRef,
+					collapseShift
+				),
+				{ props: this.props, event }
+			);
 
 		this.resetAnimation(this.innerRef, secondaryRef, primaryRef);
 	};
@@ -408,7 +420,7 @@ class SplitVertical extends React.Component<
 				isAnimated,
 			});
 		}
-	};
+	}
 
 	componentDidMount(): void {
 		const { isAnimated, isExpanded, collapseShift } = this.props;
@@ -425,13 +437,15 @@ class SplitVertical extends React.Component<
 		}
 
 		if (this.state.isAnimated !== isAnimated) {
-			_.defer((): void => {
-				this.setState({
-					isAnimated,
-				});
-			});
+			_.defer(
+				(): void => {
+					this.setState({
+						isAnimated,
+					});
+				}
+			);
 		}
-	};
+	}
 
 	render(): React.ReactNode {
 		const { children, className, isResizeable, ...passThroughs } = this.props;
@@ -464,11 +478,7 @@ class SplitVertical extends React.Component<
 
 		return (
 			<div
-				{...omitProps(
-					passThroughs,
-					undefined,
-					_.keys(SplitVertical.propTypes))
-				}
+				{...omitProps(passThroughs, undefined, _.keys(SplitVertical.propTypes))}
 				className={cx(
 					'&',
 					{
@@ -504,8 +514,8 @@ class SplitVertical extends React.Component<
 								{...omitProps(
 									leftPaneProps,
 									undefined,
-									_.keys(SplitVerticalLeftPane.propTypes))
-								}
+									_.keys(SplitVerticalLeftPane.propTypes)
+								)}
 								className={cx(
 									'&-LeftPane',
 									{
@@ -558,10 +568,10 @@ class SplitVertical extends React.Component<
 							) : (
 								<div
 									{...omitProps(
-											dividerProps,
-											undefined,
-											_.keys(SplitVerticalDivider.propTypes))
-									}
+										dividerProps,
+										undefined,
+										_.keys(SplitVerticalDivider.propTypes)
+									)}
 									className={cx('&-Divider', dividerProps.className)}
 								>
 									{dividerProps.children || ' '}
@@ -571,8 +581,8 @@ class SplitVertical extends React.Component<
 								{...omitProps(
 									rightPaneProps,
 									undefined,
-									_.keys(SplitVerticalRightPane.propTypes))
-								}
+									_.keys(SplitVerticalRightPane.propTypes)
+								)}
 								className={cx(
 									'&-RightPane',
 									{
@@ -603,7 +613,7 @@ class SplitVertical extends React.Component<
 				</Motion>
 			</div>
 		);
-	};
-};
+	}
+}
 
 export default SplitVertical;

@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import Icon, { IIconProps } from '../Icon';
+import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
 import { FC, omitProps } from '../../../util/component-types';
 
@@ -14,11 +14,15 @@ const InfoLightIcon: FC<IInfoLightIconProps> = ({
 	isDisabled,
 	...passThroughs
 }): React.ReactElement => {
-
 	return (
 		<Icon
-			{...omitProps(passThroughs, undefined, _.keys(InfoLightIcon.propTypes), false)}
-			{..._.pick(passThroughs, _.keys(Icon.propTypes))}
+			{...omitProps(
+				passThroughs,
+				undefined,
+				_.keys(InfoLightIcon.propTypes),
+				false
+			)}
+			{..._.pick(passThroughs, _.keys(iconPropTypes))}
 			isClickable={isClickable}
 			isDisabled={isDisabled}
 			className={cx(
@@ -35,7 +39,7 @@ const InfoLightIcon: FC<IInfoLightIconProps> = ({
 	);
 };
 
-InfoLightIcon.displayName = 'InfoLightIcon',
+InfoLightIcon.displayName = 'InfoLightIcon';
 InfoLightIcon.peek = {
 	description: `
 		A light info icon.
@@ -44,8 +48,6 @@ InfoLightIcon.peek = {
 	extend: 'Icon',
 	madeFrom: ['Icon'],
 };
-InfoLightIcon.propTypes = {
-	...Icon.propTypes,
-};
+InfoLightIcon.propTypes = iconPropTypes;
 
 export default InfoLightIcon;

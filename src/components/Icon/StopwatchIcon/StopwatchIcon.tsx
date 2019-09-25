@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import Icon, { IIconProps } from '../Icon';
+import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
 import { FC, omitProps } from '../../../util/component-types';
 
@@ -12,11 +12,15 @@ const StopwatchIcon: FC<IStopwatchIconProps> = ({
 	className,
 	...passThroughs
 }): React.ReactElement => {
-
 	return (
 		<Icon
-			{...omitProps(passThroughs, undefined, _.keys(StopwatchIcon.propTypes), false)}
-			{..._.pick(passThroughs, _.keys(Icon.propTypes))}
+			{...omitProps(
+				passThroughs,
+				undefined,
+				_.keys(StopwatchIcon.propTypes),
+				false
+			)}
+			{..._.pick(passThroughs, _.keys(iconPropTypes))}
 			className={cx('&', className)}
 		>
 			<path d='M7.5.5h3M9 .5v1.98M.5 6h5m-5 3h3m-3 3h4' />
@@ -26,7 +30,7 @@ const StopwatchIcon: FC<IStopwatchIconProps> = ({
 	);
 };
 
-StopwatchIcon.displayName = 'StopwatchIcon',
+StopwatchIcon.displayName = 'StopwatchIcon';
 StopwatchIcon.peek = {
 	description: `
 		A Stopwatch Icon.
@@ -35,8 +39,6 @@ StopwatchIcon.peek = {
 	extend: 'Icon',
 	madeFrom: ['Icon'],
 };
-StopwatchIcon.propTypes = {
-	...Icon.propTypes,
-};
+StopwatchIcon.propTypes = iconPropTypes;
 
 export default StopwatchIcon;
