@@ -43,7 +43,7 @@ const EligibilityIcon: FC<IEligibilityIconProps> = ({
 							eligibility === EligibilityOptions.left ||
 							eligibility === EligibilityOptions.both,
 					})}
-					d='M6.98.928C3.51 1.424.844 4.398.844 8c0 3.604 2.666 6.576 6.133 7.072V.928z'
+					d='M6 14.71A7.003 7.003 0 0 1 6 1.29v13.42z'
 				/>
 				<path
 					className={cx('&-half-circle', {
@@ -51,7 +51,7 @@ const EligibilityIcon: FC<IEligibilityIconProps> = ({
 							eligibility === EligibilityOptions.right ||
 							eligibility === EligibilityOptions.both,
 					})}
-					d='M9.022.928c3.465.496 6.133 3.47 6.133 7.072 0 3.604-2.668 6.576-6.133 7.072V.928z'
+					d='M10 1.29a7.003 7.003 0 0 1 0 13.42V1.29z'
 				/>
 			</g>
 		</Icon>

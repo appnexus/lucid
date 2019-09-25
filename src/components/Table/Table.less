@@ -115,13 +115,16 @@
 		background-color: @color-table-header-dark-background;
 		color: @color-table-header-light-color;
 
-		// Table header cell styles
-		& > .@{prefix}-Table-Tr > .@{prefix}-Table-Th {
-			border-bottom: 1px solid @color-table-header-border;
-			&.@{prefix}-Table-has-light-header {
+		&:hover {
+			& > .@{prefix}-Table-Tr > .@{prefix}-Table-Th {
 				border-color: @color-table-header-border;
 			}
+		}
 
+		// Table header cell styles
+		& > .@{prefix}-Table-Tr > .@{prefix}-Table-Th {
+			border: 1px solid transparent;
+			border-bottom: 1px solid @color-table-header-border;
 			height: @size-standard-height; // effectively min height
 
 			// remove all borders from the perimeter of the header
@@ -150,6 +153,10 @@
 			}
 
 			&.@{prefix}-Table-is-sorted > .@{prefix}-Table-Th-inner > .@{prefix}-Table-Th-inner-caret > .@{prefix}-Table-sort-icon {
+				opacity: 1;
+			}
+
+			&.@{prefix}-Table-is-resizing > .@{prefix}-Table-Th-inner > .@{prefix}-Table-Th-inner-resize {
 				opacity: 1;
 			}
 
@@ -182,7 +189,7 @@
 				.@{prefix}-Table-Th-inner-resize {
 					cursor: ew-resize;
 					width: 3px;
-					background-color: fade(@color-black, 70%);
+					background-color: @color-neutral-5;
 					opacity: 0;
 					transition: opacity @timing-animation-hover;
 
