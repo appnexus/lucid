@@ -6,7 +6,7 @@ import {
 	FC,
 	omitProps,
 	StandardProps,
-	PropsWithDefaults,
+	FixDefaults,
 } from '../../util/component-types';
 import * as chartConstants from '../../constants/charts';
 
@@ -16,21 +16,21 @@ const { number, bool, string, object } = PropTypes;
 
 export interface IBarProps
 	extends StandardProps,
-		React.SVGAttributes<SVGRectElement> {
+		React.SVGProps<SVGRectElement> {
 	/** x coordinate. */
-	x: number;
+	x?: number;
 
 	/** y coordinate. */
-	y: number;
+	y?: number;
 
 	/** Height of the bar. */
-	height: number | string;
+	height?: number | string;
 
 	/** Width of the bar. */
-	width: number | string;
+	width?: number | string;
 
 	/** Determines if the bar has a white stroke around it. */
-	hasStroke: boolean;
+	hasStroke?: boolean;
 
 	/** Strings should match an existing color class unless they start with a '#'
 		for specific colors. E.g.:
@@ -39,7 +39,7 @@ export interface IBarProps
 		- \`COLOR_GOOD\`
 		- \`'#123abc'\`
 	 */
-	color: string;
+	color?: string;
 }
 
 const defaultProps = {
@@ -51,17 +51,19 @@ const defaultProps = {
 	hasStroke: false,
 };
 
-const Bar: FC<IBarProps> = ({
-	className,
-	color = chartConstants.COLOR_0,
-	hasStroke,
-	height = 0,
-	width = 0,
-	style,
-	x = 0,
-	y = 0,
-	...passThroughs
-}): React.ReactElement => {
+const Bar: FC<IBarProps> = (props): React.ReactElement => {
+	const {
+		className,
+		color,
+		hasStroke,
+		height,
+		width,
+		style,
+		x,
+		y,
+		...passThroughs
+	} = props as FixDefaults<IBarProps, typeof defaultProps>;
+
 	const isCustomColor = _.startsWith(color, '#');
 	const colorStyle = isCustomColor ? { fill: color } : null;
 
@@ -134,4 +136,4 @@ Bar.propTypes = {
 	`,
 };
 
-export default Bar as FC<PropsWithDefaults<IBarProps, typeof defaultProps>>;
+export default Bar;

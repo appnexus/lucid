@@ -67,7 +67,10 @@ LoadingMessageBody.propTypes = {
 
 export interface ILoadingMessageProps
 	extends StandardProps,
-		React.HTMLProps<HTMLDivElement> {
+		React.DetailedHTMLProps<
+			React.HTMLAttributes<HTMLDivElement>,
+			HTMLDivElement
+		> {
 	/** Custom Icon element (alias for `LoadingMessage.Icon`) */
 	Icon?: React.ReactNode;
 

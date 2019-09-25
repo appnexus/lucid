@@ -2,7 +2,12 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import { FC, omitProps, StandardProps } from '../../util/component-types';
+import {
+	FC,
+	omitProps,
+	StandardProps,
+	FixDefaults,
+} from '../../util/component-types';
 import { groupByFields } from '../../util/chart-helpers';
 import * as d3Shape from 'd3-shape';
 import * as d3Scale from 'd3-scale';
@@ -109,20 +114,30 @@ export interface ILinesProps
 	colorOffset?: number;
 }
 
-const Lines: FC<ILinesProps> = ({
-	className,
-	data,
-	isStacked = false,
-	palette = chartConstants.PALETTE_7,
-	colorMap,
-	colorOffset = 0,
-	xScale,
-	xField = 'x',
-	yFields = ['y'],
-	yScale: yScaleOriginal,
-	yStackedMax,
-	...passThroughs
-}): React.ReactElement => {
+const defaultProps = {
+	xField: 'x',
+	yFields: ['y'],
+	isStacked: false,
+	colorOffset: 0,
+	palette: chartConstants.PALETTE_7,
+};
+
+const Lines: FC<ILinesProps> = (props): React.ReactElement => {
+	const {
+		className,
+		data,
+		isStacked,
+		palette,
+		colorMap,
+		colorOffset,
+		xScale,
+		xField,
+		yFields,
+		yScale: yScaleOriginal,
+		yStackedMax,
+		...passThroughs
+	} = props as FixDefaults<ILinesProps, typeof defaultProps>;
+
 	// Copy the original so we can mutate it
 	const yScale = yScaleOriginal.copy();
 
@@ -184,6 +199,7 @@ const Lines: FC<ILinesProps> = ({
 	);
 };
 
+Lines.defaultProps = defaultProps;
 Lines.displayName = 'Lines';
 Lines.peek = {
 	description: `

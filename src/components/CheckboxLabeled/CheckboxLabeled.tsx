@@ -10,7 +10,7 @@ import {
 } from '../../util/component-types';
 import Checkbox, {
 	ICheckboxProps,
-	defaultPropsCheckbox,
+	defaultProps as defaultPropsCheckbox,
 } from '../Checkbox/Checkbox';
 
 const cx = lucidClassNames.bind('&-CheckboxLabeled');

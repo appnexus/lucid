@@ -1,6 +1,7 @@
 import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
+import { Overwrite } from 'type-zoo';
 
 import Icon from '../Icon/Icon';
 import RadioButtonLabeled, {
@@ -9,7 +10,12 @@ import RadioButtonLabeled, {
 import CheckboxLabeled from '../CheckboxLabeled/CheckboxLabeled';
 
 import { lucidClassNames } from '../../util/style-helpers';
-import { FC, StandardProps, omitProps } from '../../util/component-types';
+import {
+	FC,
+	StandardProps,
+	omitProps,
+	FixDefaults,
+} from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-IconSelect');
 
@@ -40,9 +46,7 @@ interface Item {
 	className?: string;
 }
 
-export interface IIconSelectProps
-	extends StandardProps,
-		Omit<React.HTMLProps<HTMLSpanElement>, keyof IIconSelectProps> {
+interface IIconSelectPropsRaw extends StandardProps {
 	/** Items in the IconSelect group. Each item should have an id. */
 	items: Item[];
 
@@ -67,16 +71,30 @@ export interface IIconSelectProps
 	isDisabled?: boolean;
 }
 
+export type IIconSelectProps = Overwrite<
+	React.DetailedHTMLProps<
+		React.HTMLAttributes<HTMLSpanElement>,
+		HTMLSpanElement
+	>,
+	IIconSelectPropsRaw
+>;
+
+const defaultProps = {
+	kind: 'multiple' as const,
+	isDisabled: false,
+	onSelect: _.noop,
+};
+
 const IconSelect: FC<IIconSelectProps> = (props): React.ReactElement => {
 	const {
 		className,
 		children,
-		kind = 'multiple',
+		kind,
 		items,
-		isDisabled = false,
-		onSelect = _.noop,
+		isDisabled,
+		onSelect,
 		...passThroughs
-	} = props;
+	} = props as FixDefaults<IIconSelectProps, typeof defaultProps>;
 
 	const handleClick = (event: React.MouseEvent): void => {
 		if (!props.isDisabled) {
@@ -174,6 +192,8 @@ const IconSelect: FC<IIconSelectProps> = (props): React.ReactElement => {
 };
 
 IconSelect.displayName = 'IconSelect';
+
+IconSelect.defaultProps = defaultProps;
 
 IconSelect.peek = {
 	description: `

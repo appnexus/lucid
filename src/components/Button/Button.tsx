@@ -6,7 +6,7 @@ import {
 	omitProps,
 	FC,
 	StandardProps,
-	PropsWithDefaults,
+	FixDefaults,
 } from '../../util/component-types';
 import { Overwrite } from 'type-zoo';
 
@@ -14,27 +14,27 @@ const cx = lucidClassNames.bind('&-Button');
 
 const { arrayOf, bool, func, node, oneOf, oneOfType, string } = PropTypes;
 
-export interface IButtonProps extends StandardProps {
+export interface IButtonPropsRaw extends StandardProps {
 	/**
 	 * Disables the Button by greying it out
 	 *
 	 * @default false
 	 **/
-	isDisabled: boolean;
+	isDisabled?: boolean;
 
 	/**
 	 * Activates the Button by giving it a "pressed down" look
 	 *
 	 * @default false
 	 **/
-	isActive: boolean;
+	isActive?: boolean;
 
 	/**
 	 * Set this to `true` if you want the Button to only contain an icon.
 	 *
 	 * @default false
 	 * */
-	hasOnlyIcon: boolean;
+	hasOnlyIcon?: boolean;
 
 	/** Style variations of the Button */
 	kind?: 'primary' | 'link' | 'danger' | 'invisible';
@@ -43,7 +43,7 @@ export interface IButtonProps extends StandardProps {
 	size?: 'short' | 'small' | 'large';
 
 	/** Called when the user clicks the \`Button\`. */
-	onClick: ({
+	onClick?: ({
 		event,
 		props,
 	}: {
@@ -56,15 +56,15 @@ export interface IButtonProps extends StandardProps {
 	 *
 	 * @default "button"
 	 * */
-	type: 'submit' | 'reset' | 'button';
+	type?: 'submit' | 'reset' | 'button';
 }
 
-type IButtonPropsWithPassthroughs = Overwrite<
+export type IButtonProps = Overwrite<
 	React.DetailedHTMLProps<
-		React.InputHTMLAttributes<HTMLInputElement>,
-		HTMLInputElement
+		React.ButtonHTMLAttributes<HTMLButtonElement>,
+		HTMLButtonElement
 	>,
-	IButtonProps
+	IButtonPropsRaw
 >;
 
 const defaultProps = {
@@ -76,9 +76,7 @@ const defaultProps = {
 };
 
 /** Test Button description */
-const Button: FC<IButtonPropsWithPassthroughs> = (
-	props
-): React.ReactElement => {
+const Button: FC<IButtonProps> = (props): React.ReactElement => {
 	const {
 		isDisabled,
 		isActive,
@@ -90,7 +88,7 @@ const Button: FC<IButtonPropsWithPassthroughs> = (
 		children,
 		type,
 		...passThroughs
-	} = props;
+	} = props as FixDefaults<IButtonProps, typeof defaultProps>;
 
 	const buttonRef = React.createRef<HTMLButtonElement>();
 
@@ -189,6 +187,4 @@ Button.propTypes = {
 	`,
 };
 
-export default Button as FC<
-	PropsWithDefaults<IButtonPropsWithPassthroughs, typeof defaultProps>
->;
+export default Button;

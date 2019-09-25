@@ -87,16 +87,19 @@ type GetAlignmentOffset = (n: number) => number;
 // `React.HTMLProps<HTMLElement>`? Related to issue #1045
 interface IContextMenuProps
 	extends StandardProps,
-		React.HTMLProps<HTMLElement> {
+		React.DetailedHTMLProps<
+			React.HTMLAttributes<HTMLDivElement>,
+			HTMLDivElement
+		> {
 	/** direction of the FlyOut relative to Target. */
-	direction?: Direction;
+	direction: Direction;
 
 	// TODO: fix this mispelling, but it's a breaking change :(
 	/**	the px offset along the axis of the direction */
-	directonOffset?: number;
+	directonOffset: number;
 
 	/** alignment of the Flyout relative to Target in the cross axis from `direction`. */
-	alignment?: Alignment;
+	alignment: Alignment;
 
 	/** the px offset along the axis of the alignment */
 	alignmentOffset?: number;
@@ -104,26 +107,26 @@ interface IContextMenuProps
 	/** an alternative to `alignmentOffset` a function that is applied with
 		the width/height of the flyout. the result is used as the
 		`alignmentOffset` */
-	getAlignmentOffset?: GetAlignmentOffset;
+	getAlignmentOffset: GetAlignmentOffset;
 
 	/** The number of px's to grow or shrink the minWidth of the FlyOut */
-	minWidthOffset?: number;
+	minWidthOffset: number;
 
 	/** Indicates whether the FlyOut will render or not. */
-	isExpanded?: boolean;
+	isExpanded: boolean;
 
 	/** Called when a click event happenens outside of the ContextMenu */
-	onClickOut?: ({
+	onClickOut: ({
 		event,
 		props,
 	}: {
 		event: MouseEvent;
 		props: IContextMenuProps;
-	}) => void;
+	}) => void | null;
 
 	/** The `id` of the FlyOut portal element that is appended to
 		`document.body`. Defaults to a generated `id`. */
-	portalId?: string;
+	portalId: string | null;
 
 	FlyOut?: React.ReactNode;
 	Target?: React.ReactNode;

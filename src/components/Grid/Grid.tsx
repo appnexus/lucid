@@ -17,7 +17,9 @@ const { string, bool, node } = PropTypes;
 // Type definitions
 // -----------------------------------------------------------------------------
 
-interface IGridProps extends StandardProps, React.HTMLProps<HTMLElement> {
+interface IGridProps
+	extends StandardProps,
+		React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> {
 	/** explicitly set the primary axis of the grid to Y */
 	isVertical?: boolean;
 

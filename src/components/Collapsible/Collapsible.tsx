@@ -15,23 +15,23 @@ const { any, bool, node, number, string } = PropTypes;
 // `React.HTMLProps<HTMLElement>`? Related to issue #1045
 export interface ICollapsibleProps
 	extends StandardProps,
-		React.HTMLProps<HTMLElement> {
+		React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> {
 	/** Indicates that the component is in the "expanded" state when true and in
 	 * the "unexpanded" state when false. */
-	isExpanded?: boolean;
+	isExpanded: boolean;
 
 	/** Show an animated transition for alternating values of \`isExpanded\`. */
-	isAnimated?: boolean;
+	isAnimated: boolean;
 
 	/** If true, do not render children when fully collapsed. */
-	isMountControlled?: boolean;
+	isMountControlled: boolean;
 
 	/** If \isMountControlled\ is true, this value sets is the minimum height
 	 * the container needs to reach to not render any children. */
-	mountControlThreshold?: number;
+	mountControlThreshold: number;
 
 	/** Pass in a custom root element type. */
-	rootType?: any;
+	rootType: any;
 }
 
 export interface ICollapsibleState {

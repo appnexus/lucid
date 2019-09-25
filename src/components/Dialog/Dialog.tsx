@@ -8,6 +8,7 @@ import {
 	StandardProps,
 	getFirst,
 	omitProps,
+	FixDefaults,
 } from '../../util/component-types';
 import Button, { IButtonProps } from '../Button/Button';
 import CloseIcon from '../Icon/CloseIcon/CloseIcon';
@@ -47,15 +48,22 @@ DialogFooter.peek = {
 };
 DialogFooter.propName = 'Footer';
 
+const defaultProps = {
+	...Overlay.defaultProps,
+	size: EnumSize.medium,
+	isComplex: false,
+	hasGutters: true,
+};
+
 export interface IDialogProps extends IOverlayProps {
 	/** Size variations that only affect the width of the dialog. All the sizes
 		will grow in height until they get too big, at which point they will
 		scroll inside. */
-	size: Size;
+	size?: Size;
 
 	/** If this is truthy (if a function is provided). the close button will show.
 		The function that is called when the close button is triggered. */
-	handleClose: ({
+	handleClose?: ({
 		event,
 		props,
 	}: {
@@ -65,10 +73,10 @@ export interface IDialogProps extends IOverlayProps {
 
 	/** Provides a more segregated design to organize more content in the Dialog.
 	 * @default = false */
-	isComplex: boolean;
+	isComplex?: boolean;
 
 	/** A true or false value that dictates whether or not the Body has padding. */
-	hasGutters: boolean;
+	hasGutters?: boolean;
 
 	/** *Child Element* - Header contents. Only one \`Header\` is used. */
 	Header?: string | React.ReactNode & { props: IDialogHeaderProps };
@@ -85,13 +93,13 @@ export interface IDialogFC extends FC<IDialogProps> {
 const Dialog: IDialogFC = (props): React.ReactElement => {
 	const {
 		className,
-		size = EnumSize.medium,
+		size,
 		handleClose,
-		hasGutters = true,
+		hasGutters,
 		isShown,
-		isComplex = false,
+		isComplex,
 		...passThroughs
-	} = props;
+	} = props as FixDefaults<IDialogProps, typeof defaultProps>;
 
 	const headerChildProp = _.get(getFirst(props, Dialog.Header), 'props', {});
 	const footerChildProp = _.get(getFirst(props, Dialog.Footer), 'props', null);
@@ -99,7 +107,7 @@ const Dialog: IDialogFC = (props): React.ReactElement => {
 	return (
 		<Overlay
 			{...omitProps(passThroughs, undefined, _.keys(Dialog.propTypes), false)}
-			{..._.pick(passThroughs, _.keys(Overlay.propTypes))}
+			{..._.pick<any>(passThroughs, _.keys(Overlay.propTypes))}
 			isShown={isShown}
 			className={cx('&', className)}
 		>
@@ -143,6 +151,8 @@ const Dialog: IDialogFC = (props): React.ReactElement => {
 
 Dialog.displayName = 'Dialog';
 
+Dialog.defaultProps = defaultProps;
+
 Dialog.peek = {
 	description: `
 		Dialog is used to pop open a window so the user doesn't lose the
@@ -185,7 +195,6 @@ Dialog.propTypes = {
 		*Child Element* - Footer contents. Only one \`Footer\` is used.
 	`,
 };
-
 Dialog.Header = DialogHeader;
 Dialog.Footer = DialogFooter;
 

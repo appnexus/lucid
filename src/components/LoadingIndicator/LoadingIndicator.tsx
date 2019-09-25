@@ -7,6 +7,7 @@ import {
 	getFirst,
 	rejectTypes,
 	omitProps,
+	FixDefaults,
 } from '../../util/component-types';
 import OverlayWrapper, {
 	OverlayWrapperMessage,
@@ -36,8 +37,17 @@ export interface ILoadingIndicatorFC extends FC<ILoadingIndicatorProps> {
 	LoadingMessage: FC<ILoadingMessageProps>;
 }
 
+const defaultProps = {
+	hasOverlay: true,
+	isLoading: false,
+	overlayKind: 'light' as const,
+};
+
 const LoadingIndicator: ILoadingIndicatorFC = (props): React.ReactElement => {
-	const { children, className, isLoading = false } = props;
+	const { children, className, isLoading } = props as FixDefaults<
+		ILoadingIndicatorProps,
+		typeof defaultProps
+	>;
 
 	const messageElement = getFirst(
 		props,
@@ -95,10 +105,6 @@ LoadingIndicator.propTypes = {
 		Style variations for the overlay behind the loading indicator.
 	`,
 };
-LoadingIndicator.defaultProps = {
-	hasOverlay: true,
-	isLoading: false,
-	overlayKind: 'light',
-};
+LoadingIndicator.defaultProps = defaultProps;
 
 export default LoadingIndicator;

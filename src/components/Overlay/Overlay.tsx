@@ -12,7 +12,10 @@ const { string, bool, func, node } = PropTypes;
 
 export interface IOverlayProps
 	extends StandardProps,
-		React.HTMLAttributes<HTMLDivElement> {
+		React.DetailedHTMLProps<
+			React.HTMLAttributes<HTMLDivElement>,
+			HTMLDivElement
+		> {
 	/** Controls visibility. */
 	isShown: boolean;
 

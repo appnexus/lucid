@@ -5,7 +5,7 @@ import { lucidClassNames } from '../../util/style-helpers';
 import {
 	omitProps,
 	FC,
-	PropsWithDefaults,
+	FixDefaults,
 	StandardProps,
 } from '../../util/component-types';
 import { Overwrite } from 'type-zoo';
@@ -14,29 +14,29 @@ const cx = lucidClassNames.bind('&-Checkbox');
 
 const { bool, func, object, string } = PropTypes;
 
-export interface ICheckboxProps extends StandardProps {
+export interface ICheckboxPropsRaw extends StandardProps {
 	/** Indicates whether the component should appear in an "indeterminate" or
 	 * "partially checked" state. This prop takes precedence over
 	 * \`isSelected\`.
 	 */
-	isIndeterminate: boolean;
+	isIndeterminate?: boolean;
 
 	/** Indicates whether the component should appear and act disabled by having
 	 * a "greyed out" palette and ignoring user interactions.
 	 */
-	isDisabled: boolean;
+	isDisabled?: boolean;
 
 	/** Indicates that the component is in the "selected" state when true and in
 	 * the "unselected" state when false. This props is ignored if
 	 * \`isIndeterminate\` is \`true\`.
 	 */
-	isSelected: boolean;
+	isSelected?: boolean;
 
 	/** Called when the user clicks on the component or when they press the space
 	 * key while the component is in focus.  Signature:
 	 * \`(isSelected, { event, props }) => {}\`
 	 */
-	onSelect: (
+	onSelect?: (
 		isSelected: boolean,
 		{
 			event,
@@ -51,9 +51,12 @@ export interface ICheckboxProps extends StandardProps {
 	title?: string;
 }
 
-type ICheckboxPropsWithPassthroughs = Overwrite<
-	React.InputHTMLAttributes<HTMLInputElement>,
-	ICheckboxProps
+export type ICheckboxProps = Overwrite<
+	React.DetailedHTMLProps<
+		React.InputHTMLAttributes<HTMLInputElement>,
+		HTMLInputElement
+	>,
+	ICheckboxPropsRaw
 >;
 
 export const defaultProps = {
@@ -63,9 +66,7 @@ export const defaultProps = {
 	onSelect: _.noop,
 };
 
-const Checkbox: FC<ICheckboxPropsWithPassthroughs> = (
-	props
-): React.ReactElement => {
+const Checkbox: FC<ICheckboxProps> = (props): React.ReactElement => {
 	const {
 		className,
 		isIndeterminate,
@@ -75,7 +76,7 @@ const Checkbox: FC<ICheckboxPropsWithPassthroughs> = (
 		title,
 		onSelect,
 		...passThroughs
-	} = props;
+	} = props as FixDefaults<ICheckboxProps, typeof defaultProps>;
 
 	const nativeElement = React.createRef<HTMLInputElement>();
 
@@ -198,6 +199,4 @@ Checkbox.propTypes = {
 	`,
 };
 
-export default Checkbox as FC<
-	PropsWithDefaults<ICheckboxProps, typeof defaultProps>
->;
+export default Checkbox;

@@ -2,7 +2,13 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import { FC, getFirst, omitProps, StandardProps } from '../../util/component-types';
+import {
+	FC,
+	getFirst,
+	omitProps,
+	StandardProps,
+	FixDefaults,
+} from '../../util/component-types';
 import SlidePanel, { ISlidePanelProps } from '../SlidePanel/SlidePanel';
 
 const cx = lucidClassNames.bind('&-InfiniteSlidePanel');
@@ -10,16 +16,17 @@ const cx = lucidClassNames.bind('&-InfiniteSlidePanel');
 const { func, node, number, oneOfType, string } = PropTypes;
 
 const modulo = (n: number, a: number): number => {
-	return a - n * Math.floor(a / n)
+	return a - n * Math.floor(a / n);
 };
 
 interface IInfiniteSlidePanelSlideProps extends StandardProps {}
-const InfiniteSlidePanelSlide: FC<IInfiniteSlidePanelSlideProps> = (): null => null;
+const InfiniteSlidePanelSlide: FC<IInfiniteSlidePanelSlideProps> = (): null =>
+	null;
 InfiniteSlidePanelSlide.displayName = 'InfiniteSlidePanel.Slide';
 InfiniteSlidePanelSlide.propName = 'Slide';
-InfiniteSlidePanelSlide.peek = { description: `The slide.` }
+InfiniteSlidePanelSlide.peek = { description: `The slide.` };
 
-export interface IInfiniteSlidePanelProps extends StandardProps, ISlidePanelProps {
+export interface IInfiniteSlidePanelProps extends ISlidePanelProps {
 	/**	The only allowed child is a render function which is passed the current
 		slide's offset and returns the slide contents. Alternatively, you could pass one
 		`<InfiniteSlidePanelSlide {...}>` element with the render function.
@@ -38,21 +45,31 @@ interface IInfiniteSlidePanelFC extends FC<IInfiniteSlidePanelProps> {
 	Slide: FC<IInfiniteSlidePanelSlideProps>;
 }
 
-const InfiniteSlidePanel: IInfiniteSlidePanelFC = (props): React.ReactElement => {
+const defaultProps = {
+	offset: 0,
+	slidesToShow: 1,
+	onSwipe: _.noop,
+	totalSlides: 8,
+};
 
+const InfiniteSlidePanel: IInfiniteSlidePanelFC = (
+	props
+): React.ReactElement => {
 	const {
 		children,
 		className,
-		offset = 0,
-		slidesToShow = 1,
-		onSwipe = _.noop,
-		totalSlides = 8,
+		offset,
+		slidesToShow,
+		onSwipe,
+		totalSlides,
 		...passThroughs
-	} = props;
+	} = props as FixDefaults<IInfiniteSlidePanelProps, typeof defaultProps>;
 
-	const slide = getFirst(props, InfiniteSlidePanel.Slide, (
+	const slide = getFirst(
+		props,
+		InfiniteSlidePanel.Slide,
 		<InfiniteSlidePanelSlide>{children}</InfiniteSlidePanelSlide>
-	)) as React.ReactElement;
+	) as React.ReactElement;
 	const slideChildRenderFunction = slide.props.children;
 	if (!_.isFunction(slideChildRenderFunction)) {
 		throw new Error(
@@ -92,26 +109,30 @@ const InfiniteSlidePanel: IInfiniteSlidePanelFC = (props): React.ReactElement =>
 			onSwipe={onSwipe}
 			isLooped
 		>
-			{_.map(slideOffsetArray, (slideOffset, elementOffset): React.ReactElement => (
-				<SlidePanel.Slide
-					key={elementOffset}
-					{...slide.props}
-					className={cx(
-						{
-							'&-Slide-in-frame':
-								slideOffset - offset < slidesToShow &&
-								slideOffset - offset >= 0,
-						},
-						slide.props.className
-					)}
-				>
-					{slideChildRenderFunction(slideOffset)}
-				</SlidePanel.Slide>
-			))}
+			{_.map(
+				slideOffsetArray,
+				(slideOffset, elementOffset): React.ReactElement => (
+					<SlidePanel.Slide
+						key={elementOffset}
+						{...slide.props}
+						className={cx(
+							{
+								'&-Slide-in-frame':
+									slideOffset - offset < slidesToShow &&
+									slideOffset - offset >= 0,
+							},
+							slide.props.className
+						)}
+					>
+						{slideChildRenderFunction(slideOffset)}
+					</SlidePanel.Slide>
+				)
+			)}
 		</SlidePanel>
 	);
 };
 
+InfiniteSlidePanel.defaultProps = defaultProps;
 InfiniteSlidePanel.Slide = InfiniteSlidePanelSlide;
 InfiniteSlidePanel._isPrivate = true;
 InfiniteSlidePanel.displayName = 'InfiniteSlidePanel';
