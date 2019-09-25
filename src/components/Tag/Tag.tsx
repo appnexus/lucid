@@ -62,7 +62,7 @@ const Tag: FC<ITagProps> = (props): React.ReactElement => {
 		onRemove,
 		hasLightBackground,
 		...passThroughs
-	} = props as FixDefaults<ITagProps, typeof defaultProps>;;
+	} = props as FixDefaults<ITagProps, typeof defaultProps>;
 
 	const handleRemove = ({ event }: { event: React.MouseEvent }): void => {
 		onRemove({ props, event });
