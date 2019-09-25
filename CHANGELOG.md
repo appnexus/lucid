@@ -2,6 +2,13 @@
 
 - Nothing at the moment.
 
+## 5.1.1
+
+- #1051 [patch] Several major fixes to the TypeScript defintions of all converted components
+- #1041 [patch] Normalized the size of `EligibilityIcon` and `EligibilityLightIcon`
+- #1046 [patch] Maintain the order of children passed in with `Selection`
+- #1048 [patch] Adjust `Table` header's border and style behavior
+
 ## 5.1.0
 
 - #1013 [minor] TLDR; converted many components to TypeScript and upgraded Storybook
