@@ -2,7 +2,15 @@
 
 exports[`HelpIcon [common] example testing should match snapshot(s) for 1.default 1`] = `
 <Icon
+  aspectRatio="xMidYMid meet"
   className="lucid-HelpIcon"
+  color="primary"
+  isClickable={false}
+  isDisabled={false}
+  onClick={[Function]}
+  onSelect={[Function]}
+  size={16}
+  viewBox="0 0 16 16"
 >
   <path
     d="M5.5 6.138C5.5 4.681 6.533 3.5 7.99 3.5s2.51 1.135 2.51 2.592c0 .696-.398 1.323-1.259 1.885-.806.525-1.251.861-1.251 1.536V10"
@@ -23,8 +31,15 @@ exports[`HelpIcon [common] example testing should match snapshot(s) for 1.defaul
 
 exports[`HelpIcon [common] example testing should match snapshot(s) for 1.default 2`] = `
 <Icon
+  aspectRatio="xMidYMid meet"
   className="lucid-HelpIcon lucid-HelpIcon-is-clickable"
+  color="primary"
   isClickable={true}
+  isDisabled={false}
+  onClick={[Function]}
+  onSelect={[Function]}
+  size={16}
+  viewBox="0 0 16 16"
 >
   <path
     d="M5.5 6.138C5.5 4.681 6.533 3.5 7.99 3.5s2.51 1.135 2.51 2.592c0 .696-.398 1.323-1.259 1.885-.806.525-1.251.861-1.251 1.536V10"
@@ -45,8 +60,15 @@ exports[`HelpIcon [common] example testing should match snapshot(s) for 1.defaul
 
 exports[`HelpIcon [common] example testing should match snapshot(s) for 1.default 3`] = `
 <Icon
+  aspectRatio="xMidYMid meet"
   className="lucid-HelpIcon lucid-HelpIcon-is-disabled"
+  color="primary"
+  isClickable={false}
   isDisabled={true}
+  onClick={[Function]}
+  onSelect={[Function]}
+  size={16}
+  viewBox="0 0 16 16"
 >
   <path
     d="M5.5 6.138C5.5 4.681 6.533 3.5 7.99 3.5s2.51 1.135 2.51 2.592c0 .696-.398 1.323-1.259 1.885-.806.525-1.251.861-1.251 1.536V10"

@@ -96,7 +96,7 @@ interface ITextFieldProps extends StandardProps {
 }
 type ITextFieldPropsWithPassThroughs = Overwrite<
 	React.DetailedHTMLProps<
-		React.InputHTMLAttributes<HTMLInputElement>, 
+		React.InputHTMLAttributes<HTMLInputElement>,
 		HTMLInputElement
 	>,
 	ITextFieldProps

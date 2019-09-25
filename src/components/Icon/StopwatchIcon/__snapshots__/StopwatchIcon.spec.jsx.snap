@@ -2,7 +2,15 @@
 
 exports[`StopwatchIcon [common] example testing should match snapshot(s) for 1.default 1`] = `
 <Icon
+  aspectRatio="xMidYMid meet"
   className="lucid-StopwatchIcon"
+  color="primary"
+  isClickable={false}
+  isDisabled={false}
+  onClick={[Function]}
+  onSelect={[Function]}
+  size={16}
+  viewBox="0 0 16 16"
 >
   <path
     d="M7.5.5h3M9 .5v1.98M.5 6h5m-5 3h3m-3 3h4"

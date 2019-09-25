@@ -2,7 +2,15 @@
 
 exports[`AnalyzeDataIcon [common] example testing should match snapshot(s) for 1.default 1`] = `
 <Icon
+  aspectRatio="xMidYMid meet"
   className="lucid-AnalyzeDataIcon"
+  color="primary"
+  isClickable={false}
+  isDisabled={false}
+  onClick={[Function]}
+  onSelect={[Function]}
+  size={16}
+  viewBox="0 0 16 16"
 >
   <path
     d="M0 15.5h16"
@@ -23,8 +31,15 @@ exports[`AnalyzeDataIcon [common] example testing should match snapshot(s) for 1
 
 exports[`AnalyzeDataIcon [common] example testing should match snapshot(s) for 1.default 2`] = `
 <Icon
+  aspectRatio="xMidYMid meet"
   className="lucid-AnalyzeDataIcon"
+  color="primary"
   isClickable={true}
+  isDisabled={false}
+  onClick={[Function]}
+  onSelect={[Function]}
+  size={16}
+  viewBox="0 0 16 16"
 >
   <path
     d="M0 15.5h16"
@@ -45,8 +60,15 @@ exports[`AnalyzeDataIcon [common] example testing should match snapshot(s) for 1
 
 exports[`AnalyzeDataIcon [common] example testing should match snapshot(s) for 1.default 3`] = `
 <Icon
+  aspectRatio="xMidYMid meet"
   className="lucid-AnalyzeDataIcon"
+  color="primary"
+  isClickable={false}
   isDisabled={true}
+  onClick={[Function]}
+  onSelect={[Function]}
+  size={16}
+  viewBox="0 0 16 16"
 >
   <path
     d="M0 15.5h16"

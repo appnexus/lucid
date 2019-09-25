@@ -11,6 +11,7 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for int
 >
   <Switch
     isDisabled={false}
+    isIncludeExclude={false}
     isSelected={false}
     onSelect={[Function]}
   >
@@ -52,6 +53,7 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for int
 >
   <Switch
     isDisabled={false}
+    isIncludeExclude={false}
     isSelected={false}
     onSelect={[Function]}
   >
@@ -93,6 +95,7 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for int
 >
   <Switch
     isDisabled={false}
+    isIncludeExclude={false}
     isSelected={false}
     onSelect={[Function]}
   >
@@ -134,6 +137,7 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for int
 >
   <Switch
     isDisabled={false}
+    isIncludeExclude={false}
     isSelected={true}
     onSelect={[Function]}
   />
@@ -171,6 +175,7 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for int
 >
   <Switch
     isDisabled={false}
+    isIncludeExclude={false}
     isSelected={true}
     onSelect={[Function]}
   />
@@ -208,6 +213,7 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for int
 >
   <Switch
     isDisabled={false}
+    isIncludeExclude={false}
     isSelected={true}
     onSelect={[Function]}
   />
@@ -245,6 +251,7 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for int
 >
   <Switch
     isDisabled={false}
+    isIncludeExclude={false}
     isSelected={true}
     onSelect={[Function]}
   >
@@ -286,6 +293,7 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for lab
 >
   <Switch
     isDisabled={false}
+    isIncludeExclude={false}
     isSelected={false}
     onSelect={[Function]}
   />
@@ -323,6 +331,7 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for lab
 >
   <Switch
     isDisabled={false}
+    isIncludeExclude={false}
     isSelected={false}
     onSelect={[Function]}
   />
@@ -362,6 +371,7 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for lab
 >
   <Switch
     isDisabled={false}
+    isIncludeExclude={false}
     isSelected={false}
     onSelect={[Function]}
   />
@@ -399,6 +409,7 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for lab
 >
   <Switch
     isDisabled={false}
+    isIncludeExclude={false}
     isSelected={false}
     onSelect={[Function]}
   />
@@ -441,6 +452,7 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for sta
 >
   <Switch
     isDisabled={false}
+    isIncludeExclude={false}
     isSelected={false}
     onSelect={[Function]}
   >
@@ -483,6 +495,7 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for sta
 >
   <Switch
     isDisabled={false}
+    isIncludeExclude={false}
     isSelected={true}
     onSelect={[Function]}
   >
@@ -525,6 +538,7 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for sta
 >
   <Switch
     isDisabled={true}
+    isIncludeExclude={false}
     isSelected={false}
     onSelect={[Function]}
   >
@@ -567,6 +581,7 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for sta
 >
   <Switch
     isDisabled={true}
+    isIncludeExclude={false}
     isSelected={true}
     onSelect={[Function]}
   >

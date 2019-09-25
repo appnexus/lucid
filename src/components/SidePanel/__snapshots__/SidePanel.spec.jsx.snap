@@ -5,7 +5,7 @@ exports[`SidePanel [common] example testing should match snapshot(s) for 01.no-m
   className="lucid-SidePanel lucid-SidePanel-is-expanded lucid-SidePanel-position-right lucid-SidePanel-is-animated"
   isAnimated={true}
   isModal={false}
-  isShown={true}
+  isShown={false}
   onBackgroundClick={[Function]}
   onEscape={[Function]}
   style={
@@ -37,8 +37,11 @@ exports[`SidePanel [common] example testing should match snapshot(s) for 01.no-m
         <Button
           className="lucid-SidePanel-header-closer-button"
           hasOnlyIcon={true}
+          isActive={false}
+          isDisabled={false}
           kind="invisible"
           onClick={[Function]}
+          type="button"
         >
           <CloseIcon
             className="lucid-SidePanel-header-closer"
@@ -82,7 +85,7 @@ exports[`SidePanel [common] example testing should match snapshot(s) for 02.with
   className="lucid-SidePanel lucid-SidePanel-is-expanded lucid-SidePanel-position-right lucid-SidePanel-is-animated"
   isAnimated={true}
   isModal={true}
-  isShown={true}
+  isShown={false}
   onBackgroundClick={[Function]}
   onEscape={[Function]}
   style={
@@ -146,7 +149,7 @@ exports[`SidePanel [common] example testing should match snapshot(s) for 03.with
   className="lucid-SidePanel lucid-SidePanel-is-expanded lucid-SidePanel-position-right lucid-SidePanel-is-animated"
   isAnimated={true}
   isModal={true}
-  isShown={true}
+  isShown={false}
   onBackgroundClick={[Function]}
   onEscape={[Function]}
   style={
@@ -184,8 +187,11 @@ exports[`SidePanel [common] example testing should match snapshot(s) for 03.with
         <Button
           className="lucid-SidePanel-header-closer-button"
           hasOnlyIcon={true}
+          isActive={false}
+          isDisabled={false}
           kind="invisible"
           onClick={[Function]}
+          type="button"
         >
           <CloseIcon
             className="lucid-SidePanel-header-closer"
@@ -250,7 +256,7 @@ exports[`SidePanel [common] example testing should match snapshot(s) for 04.with
   className="lucid-SidePanel lucid-SidePanel-is-expanded lucid-SidePanel-position-left lucid-SidePanel-is-animated"
   isAnimated={true}
   isModal={true}
-  isShown={true}
+  isShown={false}
   onBackgroundClick={[Function]}
   onEscape={[Function]}
   style={
@@ -282,8 +288,11 @@ exports[`SidePanel [common] example testing should match snapshot(s) for 04.with
         <Button
           className="lucid-SidePanel-header-closer-button"
           hasOnlyIcon={true}
+          isActive={false}
+          isDisabled={false}
           kind="invisible"
           onClick={[Function]}
+          type="button"
         >
           <CloseIcon
             className="lucid-SidePanel-header-closer"
@@ -339,7 +348,7 @@ exports[`SidePanel [common] example testing should match snapshot(s) for 05.with
   className="lucid-SidePanel lucid-SidePanel-is-expanded lucid-SidePanel-position-right"
   isAnimated={false}
   isModal={true}
-  isShown={true}
+  isShown={false}
   onBackgroundClick={[Function]}
   onEscape={[Function]}
   style={
@@ -371,8 +380,11 @@ exports[`SidePanel [common] example testing should match snapshot(s) for 05.with
         <Button
           className="lucid-SidePanel-header-closer-button"
           hasOnlyIcon={true}
+          isActive={false}
+          isDisabled={false}
           kind="invisible"
           onClick={[Function]}
+          type="button"
         >
           <CloseIcon
             className="lucid-SidePanel-header-closer"
@@ -416,7 +428,7 @@ exports[`SidePanel [common] example testing should match snapshot(s) for 06.with
   className="lucid-SidePanel lucid-SidePanel-is-expanded lucid-SidePanel-position-right lucid-SidePanel-is-animated"
   isAnimated={true}
   isModal={true}
-  isShown={true}
+  isShown={false}
   onBackgroundClick={[Function]}
   onEscape={[Function]}
   style={
@@ -448,8 +460,11 @@ exports[`SidePanel [common] example testing should match snapshot(s) for 06.with
         <Button
           className="lucid-SidePanel-header-closer-button"
           hasOnlyIcon={true}
+          isActive={false}
+          isDisabled={false}
           kind="invisible"
           onClick={[Function]}
+          type="button"
         >
           <CloseIcon
             className="lucid-SidePanel-header-closer"
@@ -482,7 +497,7 @@ exports[`SidePanel [common] example testing should match snapshot(s) for 07.with
   className="lucid-SidePanel lucid-SidePanel-is-expanded lucid-SidePanel-position-right lucid-SidePanel-is-animated"
   isAnimated={true}
   isModal={true}
-  isShown={true}
+  isShown={false}
   onBackgroundClick={[Function]}
   onEscape={[Function]}
   style={
@@ -514,8 +529,11 @@ exports[`SidePanel [common] example testing should match snapshot(s) for 07.with
         <Button
           className="lucid-SidePanel-header-closer-button"
           hasOnlyIcon={true}
+          isActive={false}
+          isDisabled={false}
           kind="invisible"
           onClick={[Function]}
+          type="button"
         >
           <CloseIcon
             className="lucid-SidePanel-header-closer"
@@ -559,7 +577,7 @@ exports[`SidePanel [common] example testing should match snapshot(s) for 08.with
   className="lucid-SidePanel lucid-SidePanel-is-expanded lucid-SidePanel-position-right lucid-SidePanel-is-animated"
   isAnimated={true}
   isModal={true}
-  isShown={true}
+  isShown={false}
   onBackgroundClick={[Function]}
   onEscape={[Function]}
   style={
@@ -597,8 +615,11 @@ exports[`SidePanel [common] example testing should match snapshot(s) for 08.with
         <Button
           className="lucid-SidePanel-header-closer-button"
           hasOnlyIcon={true}
+          isActive={false}
+          isDisabled={false}
           kind="invisible"
           onClick={[Function]}
+          type="button"
         >
           <CloseIcon
             className="lucid-SidePanel-header-closer"
@@ -663,7 +684,7 @@ exports[`SidePanel Header should match snapshot 1`] = `
   className="lucid-SidePanel lucid-SidePanel-is-expanded lucid-SidePanel-position-right lucid-SidePanel-is-animated"
   isAnimated={true}
   isModal={true}
-  isShown={true}
+  isShown={false}
   onBackgroundClick={[Function]}
   onEscape={[Function]}
   style={
@@ -695,8 +716,11 @@ exports[`SidePanel Header should match snapshot 1`] = `
         <Button
           className="lucid-SidePanel-header-closer-button"
           hasOnlyIcon={true}
+          isActive={false}
+          isDisabled={false}
           kind="invisible"
           onClick={[Function]}
+          type="button"
         >
           <CloseIcon
             className="lucid-SidePanel-header-closer"
@@ -733,7 +757,7 @@ exports[`SidePanel isAnimated should match snapshot 1`] = `
   className="lucid-SidePanel lucid-SidePanel-is-expanded lucid-SidePanel-position-right"
   isAnimated={false}
   isModal={true}
-  isShown={true}
+  isShown={false}
   onBackgroundClick={[Function]}
   onEscape={[Function]}
   style={
@@ -823,7 +847,7 @@ exports[`SidePanel isResizeDisabled should match snapshot 1`] = `
   className="lucid-SidePanel lucid-SidePanel-is-expanded lucid-SidePanel-position-right lucid-SidePanel-is-animated"
   isAnimated={true}
   isModal={true}
-  isShown={true}
+  isShown={false}
   onBackgroundClick={[Function]}
   onEscape={[Function]}
   style={
@@ -857,7 +881,7 @@ exports[`SidePanel position should match snapshot 1`] = `
   className="lucid-SidePanel lucid-SidePanel-is-expanded lucid-SidePanel-position-left lucid-SidePanel-is-animated"
   isAnimated={true}
   isModal={true}
-  isShown={true}
+  isShown={false}
   onBackgroundClick={[Function]}
   onEscape={[Function]}
   style={
@@ -902,7 +926,7 @@ exports[`SidePanel width should match snapshot 1`] = `
   className="lucid-SidePanel lucid-SidePanel-is-expanded lucid-SidePanel-position-right lucid-SidePanel-is-animated"
   isAnimated={true}
   isModal={true}
-  isShown={true}
+  isShown={false}
   onBackgroundClick={[Function]}
   onEscape={[Function]}
   style={

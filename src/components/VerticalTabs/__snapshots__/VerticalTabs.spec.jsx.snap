@@ -225,6 +225,7 @@ exports[`VerticalTabs [common] example testing should match snapshot(s) for 3-co
             width={200}
           >
             <Lines
+              colorOffset={0}
               data={
                 Array [
                   Object {
@@ -253,7 +254,25 @@ exports[`VerticalTabs [common] example testing should match snapshot(s) for 3-co
                   },
                 ]
               }
+              isStacked={false}
+              palette={
+                Array [
+                  "color-chart-0",
+                  "color-chart-1",
+                  "color-chart-2",
+                  "color-chart-3",
+                  "color-chart-4",
+                  "color-chart-5",
+                  "color-chart-6",
+                ]
+              }
+              xField="x"
               xScale={[Function]}
+              yFields={
+                Array [
+                  "y",
+                ]
+              }
               yScale={[Function]}
             />
           </svg>
