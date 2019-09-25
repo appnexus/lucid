@@ -2,7 +2,12 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import { FC, StandardProps, omitProps } from '../../util/component-types';
+import {
+	FC,
+	StandardProps,
+	omitProps,
+	FixDefaults,
+} from '../../util/component-types';
 import { groupByFields } from '../../util/chart-helpers';
 import * as d3Shape from 'd3-shape';
 import * as d3Scale from 'd3-scale';
@@ -112,21 +117,31 @@ export interface IPointsProps
 	hasStroke?: boolean;
 }
 
-const Points: FC<IPointsProps> = ({
-	className,
-	data,
-	palette = chartConstants.PALETTE_7,
-	colorMap,
-	colorOffset = 0,
-	xField = 'x',
-	hasStroke = true,
-	xScale,
-	yFields = ['y'],
-	yStackedMax,
-	isStacked = false,
-	yScale: yScaleOriginal,
-	...passThroughs
-}): React.ReactElement => {
+const defaultProps = {
+	xField: 'x',
+	yFields: ['y'],
+	colorOffset: 0,
+	hasStroke: true,
+	isStacked: false,
+	palette: chartConstants.PALETTE_7,
+};
+
+const Points: FC<IPointsProps> = (props): React.ReactElement => {
+	const {
+		className,
+		data,
+		palette,
+		colorMap,
+		colorOffset,
+		xField,
+		hasStroke,
+		xScale,
+		yFields,
+		yStackedMax,
+		isStacked,
+		yScale: yScaleOriginal,
+		...passThroughs
+	} = props as FixDefaults<IPointsProps, typeof defaultProps>;
 	// Copy the original so we can mutate it
 	const yScale = yScaleOriginal.copy();
 
@@ -178,6 +193,8 @@ const Points: FC<IPointsProps> = ({
 		</g>
 	);
 };
+
+Points.defaultProps = defaultProps;
 
 Points.displayName = 'Points';
 
