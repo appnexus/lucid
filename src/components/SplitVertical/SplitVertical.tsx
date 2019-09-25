@@ -95,7 +95,10 @@ SplitVerticalDivider.propTypes = {
 
 interface ISplitVerticalProps
 	extends StandardProps,
-		React.HTMLProps<HTMLDivElement> {
+		React.DetailedHTMLProps<
+			React.HTMLAttributes<HTMLDivElement>,
+			HTMLDivElement
+		> {
 	/** Render as expanded or collapsed. */
 	isExpanded: boolean;
 

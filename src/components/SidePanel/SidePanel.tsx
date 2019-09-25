@@ -2,7 +2,10 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import Overlay, { IOverlayProps } from '../Overlay/Overlay';
+import Overlay, {
+	IOverlayProps,
+	defaultProps as overlayDefaultProps,
+} from '../Overlay/Overlay';
 import GripperVerticalIcon from '../Icon/GripperVerticalIcon/GripperVerticalIcon';
 import CloseIcon from '../Icon/CloseIcon/CloseIcon';
 import DragCaptureZone from '../DragCaptureZone/DragCaptureZone';
@@ -152,6 +155,7 @@ class SidePanel extends React.Component<ISidePanelProps, ISidePanelState, {}> {
 	};
 
 	static defaultProps = {
+		...overlayDefaultProps,
 		isAnimated: true,
 		isExpanded: true,
 		isResizeDisabled: false,
@@ -261,7 +265,12 @@ class SidePanel extends React.Component<ISidePanelProps, ISidePanelState, {}> {
 				style={{
 					marginTop: topOffset,
 				}}
-				{...omitProps(passThroughs, undefined, _.keys(SidePanel.propTypes))}
+				{...omitProps(
+					passThroughs,
+					undefined,
+					_.keys(SidePanel.propTypes),
+					false
+				)}
 			>
 				<div
 					className={cx('&-pane')}

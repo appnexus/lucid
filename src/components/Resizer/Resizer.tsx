@@ -9,7 +9,12 @@ const cx = lucidClassNames.bind('&-Resizer');
 
 const { func, string } = PropTypes;
 
-interface IResizerProps extends StandardProps, React.HTMLProps<HTMLDivElement> {
+interface IResizerProps
+	extends StandardProps,
+		React.DetailedHTMLProps<
+			React.HTMLAttributes<HTMLDivElement>,
+			HTMLDivElement
+		> {
 	/** A function that returns your rendered content with the signature:
 	 * \`(width, height) => {}\`
 	 */

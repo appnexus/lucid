@@ -10,7 +10,10 @@ const { node, number, object, string } = PropTypes;
 
 interface IStickySectionProps
 	extends StandardProps,
-		React.HTMLProps<HTMLDivElement> {
+		React.DetailedHTMLProps<
+			React.HTMLAttributes<HTMLDivElement>,
+			HTMLDivElement
+		> {
 	/** Pixel value from the top of the document. When scrolled passed, the
 	 * sticky header is no longer sticky, and renders normally. */
 	lowerBound?: number;

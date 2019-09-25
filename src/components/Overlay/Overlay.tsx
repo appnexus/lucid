@@ -55,6 +55,14 @@ interface IOverlayState {
 	portalId: string;
 }
 
+export const defaultProps = {
+		isShown: false,
+		isModal: true,
+		onEscape: _.noop,
+		onBackgroundClick: _.noop,
+		isAnimated: true,
+};
+
 class Overlay extends React.Component<IOverlayProps, IOverlayState, {}> {
 	static displayName = 'Overlay';
 
@@ -106,13 +114,7 @@ class Overlay extends React.Component<IOverlayProps, IOverlayState, {}> {
 
 	private rootHTMLDivElement = React.createRef<HTMLDivElement>();
 
-	static defaultProps = {
-		isShown: false,
-		isModal: true,
-		onEscape: _.noop,
-		onBackgroundClick: _.noop,
-		isAnimated: true,
-	};
+	static defaultProps = defaultProps;
 
 	state = {
 		// This must be in state because getDefaultProps only runs once per
