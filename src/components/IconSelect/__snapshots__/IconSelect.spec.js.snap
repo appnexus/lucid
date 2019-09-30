@@ -147,7 +147,6 @@ exports[`IconSelect [common] example testing should match snapshot(s) for 4.disa
     className="lucid-IconSelect-Item lucid-IconSelect-Item-is-disabled lucid-IconSelect-Item-multi"
     data-id="item1"
     key="iconselectitem_0"
-    onClick={[Function]}
   >
     <ClockIcon />
     <figcaption
@@ -167,7 +166,6 @@ exports[`IconSelect [common] example testing should match snapshot(s) for 4.disa
     className="lucid-IconSelect-Item lucid-IconSelect-Item-is-disabled lucid-IconSelect-Item-is-selected lucid-IconSelect-Item-multi"
     data-id="item2"
     key="iconselectitem_1"
-    onClick={[Function]}
   >
     <ClockIcon />
     <figcaption
