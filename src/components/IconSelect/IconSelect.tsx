@@ -163,20 +163,20 @@ const IconSelect: FC<IIconSelectProps> = (props): React.ReactElement => {
 			{_.map(
 				items,
 				(childItem, index): React.ReactElement => {
+					const itemDisabled = isDisabled || childItem.isDisabled;
 					return (
 						<figure
 							key={`iconselectitem_${index}`}
 							className={cx('&-Item', childItem.className, {
 								[`${className}-Item`]: className,
-								'&-Item-is-disabled': isDisabled || childItem.isDisabled,
+								'&-Item-is-disabled': itemDisabled,
 								'&-Item-is-partial': childItem.isPartial,
 								'&-Item-is-selected': childItem.isSelected,
 								'&-Item-multi': kind === 'multiple',
 								'&-Item-single': kind === 'single',
 							})}
 							data-id={childItem.id}
-							onClick={handleClick}
-							// disabled={isDisabled || childItem.isDisabled}
+							onClick={itemDisabled ? undefined : handleClick}
 						>
 							{childItem.icon && getChildIcon(childItem.icon)}
 							<figcaption className={cx('&-Item-figcaption')}>
