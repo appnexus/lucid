@@ -154,8 +154,8 @@ addons.register('lucid-docs', api => {
 	api.setOptions({
 		name: 'Lucid UI',
 		url: 'https://github.com/appnexus/lucid',
-		showAddonPanel: false,
-		addonPanelInRight: true,
+		showPanel: false,
+		panelPosition: 'right',
 	});
 
 	// Also need to set a unique name to the panel.
@@ -175,14 +175,14 @@ addons.register('lucid-docs', api => {
 	addons.getChannel().on('lucid-docs-panel-layout-toggle', () => {
 		const urlState = api.getUrlState();
 		api.setOptions({
-			addonPanelInRight: !urlState.panelRight,
+			panelPosition: !urlState.panelRight ? 'right' : 'bottom',
 		});
 	});
 
 	addons.getChannel().on('lucid-docs-panel-hide-toggle', () => {
 		const urlState = api.getUrlState();
 		api.setOptions({
-			showAddonPanel: !urlState.addons,
+			showPanel: !urlState.addons,
 		});
 	});
 });

@@ -11,3 +11,7 @@ export default createClass({
 		);
 	},
 });
+
+export const notes = `
+If needed, you can pass your dropdown option data as an array.
+`;

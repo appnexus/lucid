@@ -156,3 +156,7 @@ export default createClass({
 		);
 	},
 });
+
+export const notes = `
+You can provide a fixed menu height to accommodate your layout. This will allow users to scroll through the options within a fixed space.
+`;

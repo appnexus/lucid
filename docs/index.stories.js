@@ -50,6 +50,7 @@ const getExamplesFromContext = (reqExamples, rawContext) =>
 	_.map(loadAllKeys(reqExamples, rawContext), ({ key, module, raw }) => ({
 		name: _.join(_.reject(_.words(key), w => /^(\d+)|jsx?$/.test(w)), ' '),
 		Example: getDefaultExport(module),
+		exampleNotes: module.notes,
 		source: raw,
 	}));
 
@@ -136,20 +137,18 @@ class ArticlePage extends React.Component {
 	}
 }
 
-// We use `<hr>` tags directly here instead of the --- markdown because storybook adds their own styling that hides ---
-// see https://github.com/storybookjs/storybook/issues/8074
 const formatNotes = ({overview, intendedUse, technicalRecommendations, exampleNotes}) => `
 ### Overview
 
 ${overview}
 
-<hr style="border-bottom:1px solid #e8e6e6">
+---
 
 ### Intended Use
 
 ${intendedUse}
 
-<hr style="border-bottom:1px solid #e8e6e6">
+---
 
 ### Technical Recommendations
 
@@ -157,7 +156,7 @@ ${technicalRecommendations}
 
 ${exampleNotes ? 
 `
-<hr style="border-bottom:1px solid #e8e6e6">
+---
 
 ### Example Notes
 
@@ -165,6 +164,12 @@ ${exampleNotes}
 `
 : ''}
 `;
+
+const formatSource = (source) => source
+		.replace(/(\.\.\/)*(src\/)?index(\.js)?/, 'lucid-ui')
+		.replace(/\t/g, '  ')
+		.replace(/export const notes[\s\S]*;/,'')
+		.replace(/\n*$/,'\n');
 
 storiesOf('Documentation', module)
 	.addParameters({ options: articlePageOptions })
@@ -215,7 +220,6 @@ _.forEach(
 
 		const componentRef = getDefaultExport(component);
 
-		// TODO: Find a way to add per example notes
 		const notes =
 			_.has(componentRef, 'peek.notes') &&
 			formatNotes(_.mapValues(componentRef.peek.notes, stripIndent));
@@ -224,12 +228,17 @@ _.forEach(
 			_.has(componentRef, 'peek.categories') &&
 			stripIndent(componentRef.peek.categories[0]);
 
-		_.forEach(examples, ({ name, Example, source }) => {
+		_.forEach(examples, ({ name, Example, exampleNotes, source }) => {
 			storiesOfAddSequence.push([
 				componentName,
 				() => {
 					storiesOf(`Components/${category}/${componentName}`, module)
-						.addParameters({ options: examplePageOptions })
+						.addParameters({
+							options: examplePageOptions,
+							docs: { storyDescription: exampleNotes },
+							mdxSource: formatSource(source),
+							notes,
+						})
 						.add(
 							name,
 							exampleStory({
@@ -237,8 +246,7 @@ _.forEach(
 								code: source,
 								example: Example,
 								path: [componentName],
-							}),
-							{ notes: notes, info: { inline: true, header: false } }
+							})
 						);
 				},
 			]);

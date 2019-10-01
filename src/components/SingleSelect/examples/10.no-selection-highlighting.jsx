@@ -18,3 +18,7 @@ export default createClass({
 		);
 	},
 });
+
+export const notes = `
+Use this state for default or null selections such as All or Any.
+`;

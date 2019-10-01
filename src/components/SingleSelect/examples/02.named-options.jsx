@@ -45,3 +45,7 @@ export default createClass({
 		);
 	},
 });
+
+export const notes = `
+Use this for cases where you need different values to display within the dropdown and elsewhere on the screen after the user makes a selection.
+`;

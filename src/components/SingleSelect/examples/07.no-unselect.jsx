@@ -16,3 +16,7 @@ export default createClass({
 		);
 	},
 });
+
+export const notes = `
+Use this for cases where you don't want to allow users to reset once they have made a selection.
+`;

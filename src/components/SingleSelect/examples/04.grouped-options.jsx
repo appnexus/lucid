@@ -28,3 +28,7 @@ export default createClass({
 		);
 	},
 });
+
+export const notes = `
+You can group options to help frame users' understanding of the options.
+`;
