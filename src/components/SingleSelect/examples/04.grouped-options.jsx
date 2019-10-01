@@ -29,6 +29,8 @@ export default createClass({
 	},
 });
 
+// begin-hide-from-docs
 export const notes = `
 You can group options to help frame users' understanding of the options.
 `;
+// end-hide-from-docs

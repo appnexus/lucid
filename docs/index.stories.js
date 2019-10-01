@@ -5,7 +5,7 @@ import marksy from 'marksy/components';
 import { storiesOf } from '@storybook/react';
 import LinkTo from '@storybook/addon-links/react';
 import { exampleStory } from '../.storybook/lucid-docs-addon';
-import { stripIndent } from '../.storybook/lucid-docs-addon/util';
+import { stripIndent, formatSource } from '../.storybook/lucid-docs-addon/util';
 import readmeText from '!!raw-loader!../README.md';
 import introText from '!!raw-loader!./intro.md';
 import childComponentsText from '!!raw-loader!./child-components.md';
@@ -164,12 +164,6 @@ ${exampleNotes}
 `
 : ''}
 `;
-
-const formatSource = (source) => source
-		.replace(/(\.\.\/)*(src\/)?index(\.js)?/, 'lucid-ui')
-		.replace(/\t/g, '  ')
-		.replace(/export const notes[\s\S]*;/,'')
-		.replace(/\n*$/,'\n');
 
 storiesOf('Documentation', module)
 	.addParameters({ options: articlePageOptions })

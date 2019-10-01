@@ -14,3 +14,9 @@ export const stripIndent = text => {
 		.map(line => line.replace(minimumLeadingWhitespace, ''))
 		.join('\n');
 };
+
+export const formatSource = (source) => source
+		.replace(/(\.\.\/)*(src\/)?index(\.js)?/, 'lucid-ui')
+		.replace(/\t/g, '  ')
+		.replace(/\/\/\s?begin-hide-from-docs[\s\S]*\/\/\s?end-hide-from-docs/,'')
+		.replace(/\n*$/,'\n');

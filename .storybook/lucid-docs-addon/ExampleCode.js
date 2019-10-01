@@ -5,6 +5,7 @@ import SyntaxHighlighter, {
 } from 'react-syntax-highlighter/prism-light';
 import jsx from 'react-syntax-highlighter/languages/prism/jsx';
 import okaidia from 'react-syntax-highlighter/styles/prism/okaidia';
+import { formatSource } from './util';
 
 const okaidiaTabSpace2 = {
 	...okaidia,
@@ -140,7 +141,7 @@ ReactDOM.render(
 						margin: 0,
 					}}
 				>
-					{code.replace(/(\.\.\/)*(src\/)?index(\.js)?/, 'lucid-ui')}
+					{formatSource(code)}
 				</SyntaxHighlighter>
 			</div>
 		</div>
