@@ -133,7 +133,7 @@ const DataTable = createClass({
 
 		fixedColumnCount: number`
 			Sets the number of columns you want to have fixed. You must specify
-			\`fixedRowHeight\` when setting this prop.
+			\`fixedRowHeight\` and enable \`hasFixedHeader\`when setting this prop.
 		`,
 
 		fixedRowHeight: number`
