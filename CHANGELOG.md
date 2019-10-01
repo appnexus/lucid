@@ -11,12 +11,16 @@
 - #1052 [patch] Fix padding on `SearchField` where text could flow under the magnifying glass icon
 - #1054 [patch] Fix regressing from TS conversion that broke Redux utils when `selectors` was `undefined`
 
+https://github.com/appnexus/lucid/compare/v5.1.1...v5.1.2
+
 ## 5.1.1
 
 - #1051 [patch] Several major fixes to the TypeScript defintions of all converted components
 - #1041 [patch] Normalized the size of `EligibilityIcon` and `EligibilityLightIcon`
 - #1046 [patch] Maintain the order of children passed in with `Selection`
 - #1048 [patch] Adjust `Table` header's border and style behavior
+
+https://github.com/appnexus/lucid/compare/v5.1.0...v5.1.1
 
 ## 5.1.0
 
