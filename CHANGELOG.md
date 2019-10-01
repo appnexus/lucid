@@ -2,6 +2,15 @@
 
 - Nothing at the moment.
 
+## 5.1.2
+
+- #1055 [none] Improve prop documentation for `fixedColumnCount` on `DataTablePanel`
+- #1053 [patch] Fix `onClick` for disabled `IconSelect`s
+- #1040 [patch] Bump _lodash_ for security patch
+- #1044 [patch] Fix hover/active/focus background styling for `Button` links
+- #1052 [patch] Fix padding on `SearchField` where text could flow under the magnifying glass icon
+- #1054 [patch] Fix regressing from TS conversion that broke Redux utils when `selectors` was `undefined`
+
 ## 5.1.1
 
 - #1051 [patch] Several major fixes to the TypeScript defintions of all converted components
