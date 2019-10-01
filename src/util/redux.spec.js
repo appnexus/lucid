@@ -128,6 +128,18 @@ describe('redux utils', () => {
 					assert.equal(viewState.foo.uppercase, 'FOO', 'must equal "FOO"');
 				});
 
+				it('should pass state through unharmed if selectors are undefined', () => {
+					const {
+						connectors: [mapStateToProps],
+					} = getReduxPrimitives({
+						reducers,
+						initialState,
+					});
+
+					const viewState = mapStateToProps(initialState);
+					assert.deepEqual(viewState, initialState);
+				});
+
 				describe('rootPath', () => {
 					const {
 						connectors: [mapStateToProps],

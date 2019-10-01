@@ -71,7 +71,7 @@ Components should have an \`initialState\` property or a \`getDefaultProps\` def
 	let dispatchTree: object;
 
 	const reducer = createReduxReducer(reducers, initialState, rootPath);
-	const selector = selectors ? reduceSelectors(selectors) : _.noop;
+	const selector = selectors ? reduceSelectors(selectors) : _.identity;
 	const rootPathSelector = (state: object) =>
 		_.isEmpty(rootPath) ? state : _.get(state, rootPath);
 
