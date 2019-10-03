@@ -128,6 +128,7 @@
     "prettier": "^1.17.0",
     "raw-loader": "^0.5.1",
     "react": "^16.6.3",
+    "react-docgen-typescript-loader": "^3.3.0",
     "react-dom": "^16.6.3",
     "react-syntax-highlighter": "^7.0.0",
     "sinon": "^2.0.0-pre",

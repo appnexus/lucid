@@ -28,15 +28,15 @@ const CheckIcon: FC<ICheckIconProps> = ({
 	);
 };
 
-(CheckIcon.displayName = 'CheckIcon'),
-	(CheckIcon.peek = {
-		description: `
+CheckIcon.displayName = 'CheckIcon';
+CheckIcon.peek = {
+	description: `
 		A check icon.
 	`,
-		categories: ['visual design', 'icons'],
-		extend: 'Icon',
-		madeFrom: ['Icon'],
-	});
+	categories: ['visual design', 'icons'],
+	extend: 'Icon',
+	madeFrom: ['Icon'],
+};
 CheckIcon.propTypes = {
 	...iconPropTypes,
 };

@@ -137,7 +137,12 @@ class ArticlePage extends React.Component {
 	}
 }
 
-const formatNotes = ({overview, intendedUse, technicalRecommendations, exampleNotes}) => `
+const formatNotes = ({
+	overview,
+	intendedUse,
+	technicalRecommendations,
+	exampleNotes,
+}) => `
 ### Overview
 
 ${overview}
@@ -154,15 +159,17 @@ ${intendedUse}
 
 ${technicalRecommendations}
 
-${exampleNotes ? 
-`
+${
+	exampleNotes
+		? `
 ---
-
+	
 ### Example Notes
-
+	
 ${exampleNotes}
 `
-: ''}
+		: ''
+}
 `;
 
 storiesOf('Documentation', module)
@@ -204,6 +211,29 @@ const filteredComponents = _.reject(loadedComponents, ({ component }) =>
 
 const storiesOfAddSequence = [];
 
+// One of our webpack loaders strips default values from component docgen info
+// Reapply them here so they will appear in storybook docs
+// Also set the prop optional for consumers since we have mark them required for internal use
+// Accurate as of 2019-10-02
+const fixDocgen = component => {
+	const docgenProps = _.get(component, '__docgenInfo.props');
+	const defaultProps = component.defaultProps;
+
+	if (docgenProps && defaultProps) {
+		_.forEach(defaultProps, (value, prop) => {
+			docgenProps[prop] = {
+				...docgenProps[prop],
+				defaultValue: {
+					value: _.isFunction(value) ? value.name : value,
+				},
+				required: false,
+			};
+		});
+	}
+
+	return component;
+};
+
 _.forEach(
 	filteredComponents,
 	({ name: componentName, component, examplesContext, examplesContextRaw }) => {
@@ -228,6 +258,7 @@ _.forEach(
 				() => {
 					storiesOf(`Components/${category}/${componentName}`, module)
 						.addParameters({
+							component: fixDocgen(component),
 							options: examplePageOptions,
 							docs: { storyDescription: exampleNotes },
 							mdxSource: formatSource(source),
