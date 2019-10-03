@@ -8,7 +8,7 @@ const cx = lucidClassNames.bind('&-EditIcon');
 
 interface IEditIconProps extends IIconProps {}
 
-const EditIcon: FC<IEditIconProps> = ({
+export const EditIcon: FC<IEditIconProps> = ({
 	className,
 	...passThroughs
 }): React.ReactElement => {

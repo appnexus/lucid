@@ -43,7 +43,7 @@ const defaultProps = {
 	overlayKind: 'light' as const,
 };
 
-const LoadingIndicator: ILoadingIndicatorFC = (props): React.ReactElement => {
+export const LoadingIndicator: ILoadingIndicatorFC = (props): React.ReactElement => {
 	const { children, className, isLoading } = props as FixDefaults<
 		ILoadingIndicatorProps,
 		typeof defaultProps

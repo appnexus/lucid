@@ -82,7 +82,7 @@ const defaultProps = {
 	isScrollable: true,
 };
 
-const Panel: IPanelFC = (props): React.ReactElement => {
+export const Panel: IPanelFC = (props): React.ReactElement => {
 	const {
 		children,
 		className,

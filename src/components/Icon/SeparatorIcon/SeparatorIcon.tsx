@@ -8,7 +8,7 @@ const cx = lucidClassNames.bind('&-SeparatorIcon');
 
 interface ISeparatorIconProps extends IIconProps {}
 
-const SeparatorIcon: FC<ISeparatorIconProps> = ({
+export const SeparatorIcon: FC<ISeparatorIconProps> = ({
 	className,
 	...passThroughs
 }): React.ReactElement => {

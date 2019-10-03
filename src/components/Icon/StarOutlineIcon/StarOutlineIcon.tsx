@@ -8,7 +8,7 @@ const cx = lucidClassNames.bind('&-StarOutlineIcon');
 
 interface IStarOutlineIconProps extends IIconProps {}
 
-const StarOutlineIcon: FC<IStarOutlineIconProps> = ({
+export const StarOutlineIcon: FC<IStarOutlineIconProps> = ({
 	className,
 	...passThroughs
 }): React.ReactElement => {

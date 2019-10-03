@@ -13,7 +13,7 @@ interface IArrowIconProps extends IIconProps {
 	direction?: 'up' | 'down' | 'left' | 'right';
 }
 
-const ArrowIcon: FC<IArrowIconProps> = ({
+export const ArrowIcon: FC<IArrowIconProps> = ({
 	className,
 	direction = 'left',
 	...passThroughs

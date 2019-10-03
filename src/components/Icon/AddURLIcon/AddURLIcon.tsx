@@ -8,7 +8,7 @@ const cx = lucidClassNames.bind('&-AddURLIcon');
 
 interface IAddURLIconProps extends IIconProps {}
 
-const AddURLIcon: FC<IAddURLIconProps> = ({
+export const AddURLIcon: FC<IAddURLIconProps> = ({
 	className,
 	...passThroughs
 }): React.ReactElement => {

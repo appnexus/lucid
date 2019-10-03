@@ -66,7 +66,7 @@ const defaultProps = {
 	tagStyle: TagStyle['style-one'],
 };
 
-const NotchedTag: FC<INotchedTagProps> = (props): React.ReactElement => {
+export const NotchedTag: FC<INotchedTagProps> = (props): React.ReactElement => {
 	const {
 		children,
 		className,

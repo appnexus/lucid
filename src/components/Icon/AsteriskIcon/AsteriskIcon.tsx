@@ -8,7 +8,7 @@ const cx = lucidClassNames.bind('&-AsteriskIcon');
 
 interface IAsteriskIconProps extends IIconProps {}
 
-const AsteriskIcon: FC<IAsteriskIconProps> = ({
+export const AsteriskIcon: FC<IAsteriskIconProps> = ({
 	className,
 	...passThroughs
 }): React.ReactElement => {

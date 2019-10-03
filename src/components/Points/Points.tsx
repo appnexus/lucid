@@ -126,7 +126,7 @@ const defaultProps = {
 	palette: chartConstants.PALETTE_7,
 };
 
-const Points: FC<IPointsProps> = (props): React.ReactElement => {
+export const Points: FC<IPointsProps> = (props): React.ReactElement => {
 	const {
 		className,
 		data,

@@ -8,7 +8,7 @@ const cx = lucidClassNames.bind('&-SuccessIcon');
 
 interface ISuccessIconProps extends IIconProps {}
 
-const SuccessIcon: FC<ISuccessIconProps> = ({
+export const SuccessIcon: FC<ISuccessIconProps> = ({
 	className,
 	isClickable,
 	isDisabled,

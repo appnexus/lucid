@@ -8,7 +8,7 @@ const cx = lucidClassNames.bind('&-MinusCircleIcon');
 
 interface IMinusCircleIconProps extends IIconProps {}
 
-const MinusCircleIcon: FC<IMinusCircleIconProps> = ({
+export const MinusCircleIcon: FC<IMinusCircleIconProps> = ({
 	className,
 	isClickable,
 	isDisabled,

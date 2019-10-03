@@ -8,7 +8,7 @@ const cx = lucidClassNames.bind('&-AttachIcon');
 
 interface IAttachIconProps extends IIconProps {}
 
-const AttachIcon: FC<IAttachIconProps> = ({
+export const AttachIcon: FC<IAttachIconProps> = ({
 	className,
 	...passThroughs
 }): React.ReactElement => {

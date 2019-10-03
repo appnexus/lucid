@@ -8,7 +8,7 @@ const cx = lucidClassNames.bind('&-NewWindowIcon');
 
 interface INewWindowIconProps extends IIconProps {}
 
-const NewWindowIcon: FC<INewWindowIconProps> = ({
+export const NewWindowIcon: FC<INewWindowIconProps> = ({
 	className,
 	...passThroughs
 }): React.ReactElement => {

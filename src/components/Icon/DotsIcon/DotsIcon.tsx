@@ -9,7 +9,7 @@ const cx = lucidClassNames.bind('&-DotsIcon');
 
 interface IDotsIconProps extends IIconProps {}
 
-const DotsIcon: FC<IDotsIconProps> = ({
+export const DotsIcon: FC<IDotsIconProps> = ({
 	className,
 	color = Color.primary,
 	...passThroughs

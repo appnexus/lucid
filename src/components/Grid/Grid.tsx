@@ -165,7 +165,7 @@ Cell.peek = {
 // -----------------------------------------------------------------------------
 // Grid
 // -----------------------------------------------------------------------------
-const Grid: IGridFC = (props): React.ReactElement => {
+export const Grid: IGridFC = (props): React.ReactElement => {
 	const {
 		className,
 		children,

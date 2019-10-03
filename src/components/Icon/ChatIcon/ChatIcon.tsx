@@ -8,7 +8,7 @@ const cx = lucidClassNames.bind('&-ChatIcon');
 
 interface IChatIconProps extends IIconProps {}
 
-const ChatIcon: FC<IChatIconProps> = ({
+export const ChatIcon: FC<IChatIconProps> = ({
 	className,
 	...passThroughs
 }): React.ReactElement => {

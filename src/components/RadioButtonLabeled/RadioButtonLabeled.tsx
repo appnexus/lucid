@@ -41,7 +41,7 @@ export interface IRadioButtonLabeledFC extends FC<IRadioButtonLabeledProps> {
 	Label: FC<IRadioButtonLabeledLabelProps>;
 }
 
-const RadioButtonLabeled: IRadioButtonLabeledFC = (
+export const RadioButtonLabeled: IRadioButtonLabeledFC = (
 	props
 ): React.ReactElement => {
 	const {

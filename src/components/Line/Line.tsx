@@ -36,7 +36,7 @@ const defaultProps = {
 	isDotted: false,
 };
 
-const Line: FC<ILineProps> = (props): React.ReactElement => {
+export const Line: FC<ILineProps> = (props): React.ReactElement => {
 	const {
 		className,
 		color,

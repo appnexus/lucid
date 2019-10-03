@@ -27,7 +27,7 @@ interface IOutwardArrowsIconProps extends IIconProps {
 	kind: 'horizontal' | 'vertical' | 'diagonal';
 }
 
-const OutwardArrowsIcon: FC<IOutwardArrowsIconProps> = ({
+export const OutwardArrowsIcon: FC<IOutwardArrowsIconProps> = ({
 	className,
 	kind = 'horizontal',
 	...passThroughs

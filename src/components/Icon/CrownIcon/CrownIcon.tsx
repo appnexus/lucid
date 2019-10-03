@@ -8,7 +8,7 @@ const cx = lucidClassNames.bind('&-CrownIcon');
 
 interface ICrownIconProps extends IIconProps {}
 
-const CrownIcon: FC<ICrownIconProps> = ({
+export const CrownIcon: FC<ICrownIconProps> = ({
 	className,
 	...passThroughs
 }): React.ReactElement => {

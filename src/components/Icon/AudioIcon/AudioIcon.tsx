@@ -8,7 +8,7 @@ const cx = lucidClassNames.bind('&-AudioIcon');
 
 interface IAudioIconProps extends IIconProps {}
 
-const AudioIcon: FC<IAudioIconProps> = ({
+export const AudioIcon: FC<IAudioIconProps> = ({
 	className,
 	...passThroughs
 }): React.ReactElement => {

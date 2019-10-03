@@ -8,7 +8,7 @@ const cx = lucidClassNames.bind('&-RefreshIcon');
 
 interface IRefreshIconProps extends IIconProps {}
 
-const RefreshIcon: FC<IRefreshIconProps> = ({
+export const RefreshIcon: FC<IRefreshIconProps> = ({
 	className,
 	...passThroughs
 }): React.ReactElement => {
