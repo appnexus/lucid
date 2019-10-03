@@ -245,8 +245,10 @@ _.forEach(
 		const componentRef = getDefaultExport(component);
 
 		const notes =
-			_.has(componentRef, 'peek.notes') &&
-			formatNotes(_.mapValues(componentRef.peek.notes, stripIndent));
+			(_.has(componentRef, 'peek.notes') &&
+				formatNotes(_.mapValues(componentRef.peek.notes, stripIndent))) ||
+			(_.has(componentRef, 'peek.description') &&
+				stripIndent(componentRef.peek.description));
 
 		const category =
 			_.has(componentRef, 'peek.categories') &&
