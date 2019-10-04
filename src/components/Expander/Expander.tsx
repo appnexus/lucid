@@ -107,14 +107,6 @@ export interface IExpanderState {
 
 class Expander extends React.Component<IExpanderProps, IExpanderState> {
 	static displayName = 'Expander';
-	static peek = {
-		description: `
-				This is a container that provides a toggle that controls when the
-				content is shown.
-			`,
-		categories: ['layout'],
-		madeFrom: ['ChevronIcon'],
-	};
 	static propTypes = {
 		children: node`
 			Expandable content.
@@ -167,6 +159,14 @@ class Expander extends React.Component<IExpanderProps, IExpanderState> {
 			Label,
 			AdditionalLabelContent,
 			reducers,
+			peek: {
+				description: `
+				This is a container that provides a toggle that controls when the
+				content is shown.
+			`,
+				categories: ['layout'],
+				madeFrom: ['ChevronIcon'],
+			},
 		},
 	};
 
