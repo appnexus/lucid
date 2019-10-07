@@ -28,7 +28,6 @@ import DropMenu, { DropMenuDumb } from './components/DropMenu/DropMenu';
 import Expander, { ExpanderDumb } from './components/Expander/Expander';
 import ExpanderPanel, {
 	ExpanderPanelDumb,
-	// @ts-ignore: not converted yet
 } from './components/ExpanderPanel/ExpanderPanel';
 // @ts-ignore: not converted yet
 import Paginator, { PaginatorDumb } from './components/Paginator/Paginator';

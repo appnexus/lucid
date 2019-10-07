@@ -14,7 +14,9 @@ const cx = lucidClassNames.bind('&-Panel');
 
 const { bool, node, object, string } = PropTypes;
 
-interface IPanelHeaderProps extends StandardProps {
+interface IPanelHeaderProps
+	extends StandardProps,
+		React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> {
 	description?: string;
 }
 
@@ -31,7 +33,9 @@ PanelHeader.propTypes = {
 };
 PanelHeader.propName = 'Header';
 
-interface IPanelFooterProps extends StandardProps {
+interface IPanelFooterProps
+	extends StandardProps,
+		React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> {
 	description?: string;
 }
 const PanelFooter: FC<IPanelFooterProps> = (): null => null;
