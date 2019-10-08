@@ -3,10 +3,11 @@ import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import {
-	createClass,
 	filterTypes,
 	findTypes,
 	omitProps,
+	StandardProps,
+	FC,
 } from '../../util/component-types';
 import { buildHybridComponent } from '../../util/state-management';
 import * as reducers from './Submarine.reducers';
@@ -15,27 +16,149 @@ import ChevronIcon from '../Icon/ChevronIcon/ChevronIcon';
 import GripperHorizontalIcon from '../Icon/GripperHorizontalIcon/GripperHorizontalIcon';
 import Button from '../Button/Button';
 
+export interface ISubmarineState {
+	isExpanded: boolean;
+	height: number;
+}
+
 const cx = lucidClassNames.bind('&-Submarine');
 
 const { any, bool, func, node, number, string, oneOf, oneOfType } = PropTypes;
 
-const Submarine = createClass({
-	displayName: 'Submarine',
+interface ISubmarinePrimaryProps extends StandardProps {}
 
-	statics: {
-		peek: {
-			description: `
+interface ISumbarineTitleProps extends StandardProps {}
+
+interface ISubmarineBarProps extends StandardProps {
+	Title: ISumbarineTitleProps;
+}
+
+const Primary: FC<ISubmarinePrimaryProps> = (): null => null;
+Primary.peek = {
+	description: `
+		Primary content rendered beside the Submarine.
+	`,
+};
+Primary.displayName = 'SplitHorizontal.Primary';
+Primary.propName = 'Primary';
+
+const Title: FC<ISumbarineTitleProps> = (): null => null;
+Title.peek = {
+	description: `
+		Submarine title;
+	`,
+};
+Title.displayName = 'Submarine.Title';
+Title.propName = 'Title';
+
+const Bar: FC<ISubmarineBarProps> = (): null => null;
+Bar.peek = {
+	description: `
+		Submarine bar;
+	`,
+};
+Bar.displayName = 'Submarine.Bar';
+Bar.propName = 'Bar';
+Bar.propTypes = {
+	Title: any`
+		Set the title of the Submarine. (alias for \`Submarine.Title\`)
+	`,
+};
+
+const defaultProps = {
+	isExpanded: true,
+	isAnimated: true,
+	height: 250,
+	position: 'bottom',
+	isResizeDisabled: false,
+	isHidden: false,
+	isTitleShownCollapsed: false,
+	onResizing: _.noop,
+	onResize: _.noop,
+	onToggle: _.noop,
+};
+
+interface ISubmarineProps extends StandardProps {
+	/** Sets the starting height of the Bar. */
+	height?: number;
+
+	/** Force the Submarine to be expanded or collapsed. */
+	isExpanded?: boolean;
+
+	/** Indicates if the Submarine should be shown or not.  This will override
+			the value of isExpanded. */
+	isHidden?: boolean;
+
+	/** Indicates if the Title should be shown when the Submarine is collapsed */
+	isTitleShownCollapsed?: boolean;
+
+	/** Allows animated expand and collapse behavior. */
+	isAnimated?: boolean;
+
+	/** Render the Submarine to the top or bottom of primary content. */
+	position?: 'top' | 'bottom';
+
+	/** Disable user resizing of the Submarine. */
+	isResizeDisabled?: boolean;
+
+	/** Set the title of the Submarine. */
+	Title?: React.ReactNode;
+
+	/** Set the title of the Submarine. */
+	Primary?: React.ReactNode;
+
+	/** Set the title of the Submarine. */
+	Bar?: React.ReactNode;
+
+	/** Called when the user is currently resizing the Submarine. */
+	onResizing?: (
+		height: number,
+		{ event, props }: { event: MouseEvent | TouchEvent; props: ISubmarineProps }
+	) => void;
+
+	/** Called when the user resizes the Submarine. */
+	onResize?: (
+		height: number,
+		{ event, props }: { event: MouseEvent | TouchEvent; props: ISubmarineProps }
+	) => void;
+
+	/** Called when the user expands or collapses the Submarine. */
+	onToggle: ({
+		event,
+		props,
+	}: {
+		event: React.MouseEvent<HTMLButtonElement>;
+		props: ISubmarineProps;
+	}) => void;
+}
+
+class Submarine extends React.Component<ISubmarineProps, ISubmarineState> {
+	static displayName = 'Submarine';
+
+	static Bar = Bar;
+	static Title = Title;
+	static Primary = Primary;
+
+	static definition = {
+		statics: {
+			Bar,
+			Primary,
+			Title,
+			reducers,
+			peek: {
+				description: `
 				\`Submarine\` renders a collapsible, resizeable side bar panel next to
 				primary content.
 			`,
-			categories: ['layout'],
-			madeFrom: ['SplitHorizontal', 'ChevronIcon', 'GripperHorizontalIcon'],
+				categories: ['layout'],
+				madeFrom: ['SplitHorizontal', 'ChevronIcon', 'GripperHorizontalIcon'],
+			},
 		},
-	},
+	};
 
-	reducers,
+	static reducers = reducers;
 
-	propTypes: {
+	static propTypes = {
 		className: string`
 			Appended to the component-specific class names set on the root element.
 			Value is run through the \`classnames\` library.
@@ -80,6 +203,14 @@ const Submarine = createClass({
 			Set the title of the Submarine.
 		`,
 
+		Bar: any`
+			Set the submarine bar content.
+		`,
+
+		Primary: any`
+			Set the primary content of the Submarine.
+		`,
+
 		onResizing: func`
 			Called when the user is currently resizing the Submarine.  Signature:
 			\`(height, { event, props }) => {}\`
@@ -94,73 +225,41 @@ const Submarine = createClass({
 			Called when the user expands or collapses the Submarine.  Signature:
 			\`({ event, props }) => {}\`
 		`,
-	},
+	};
 
-	components: {
-		Bar: createClass({
-			displayName: 'Submarine.Bar',
-			propTypes: {
-				children: node`
-					Submarine content. Also can define <Submarine.Title> here as well.
-				`,
-				Title: any`
-					Set the title of the Submarine. (alias for \`Submarine.Title\`)
-				`,
-			},
-		}),
+	static defaultProps = defaultProps;
 
-		Primary: createClass({
-			displayName: 'SplitHorizontal.Primary',
-			propTypes: {
-				children: node`
-					Primary content rendered beside the Submarine.
-				`,
-			},
-		}),
-
-		Title: createClass({
-			displayName: 'Submarine.Title',
-			propName: ['Title'],
-			propTypes: {
-				children: node`
-					Submarine title.
-				`,
-			},
-		}),
-	},
-
-	getDefaultProps() {
-		return {
-			isExpanded: true,
-			isAnimated: true,
-			height: 250,
-			position: 'bottom',
-			isResizeDisabled: false,
-			isHidden: false,
-			isTitleShownCollapsed: false,
-			onResizing: _.noop,
-			onResize: _.noop,
-			onToggle: _.noop,
-		};
-	},
-
-	handleExpanderClick(event) {
+	handleExpanderClick = ({
+		event,
+	}: {
+		event: React.MouseEvent<HTMLButtonElement>;
+	}) => {
 		const { onToggle } = this.props;
 
 		onToggle({ props: this.props, event });
-	},
+	};
 
-	handleResizing(height, { event }) {
+	handleResizing = (
+		height: number,
+		{ event }: { event: MouseEvent | TouchEvent }
+	) => {
 		const { onResizing } = this.props;
 
-		onResizing(height, { props: this.props, event });
-	},
+		if (onResizing) {
+			onResizing(height, { props: this.props, event });
+		}
+	};
 
-	handleResize(height, { event }) {
+	handleResize = (
+		height: number,
+		{ event }: { event: MouseEvent | TouchEvent }
+	) => {
 		const { onResize } = this.props;
 
-		onResize(height, { props: this.props, event });
-	},
+		if (onResize) {
+			onResize(height, { props: this.props, event });
+		}
+	};
 
 	render() {
 		const {
@@ -208,7 +307,7 @@ const Submarine = createClass({
 
 		return (
 			<SplitHorizontal
-				{...omitProps(passThroughs, Submarine, [], false)}
+				{...omitProps(passThroughs, undefined, _.keys(Submarine), false)}
 				className={cx(
 					'&',
 					{
@@ -225,7 +324,7 @@ const Submarine = createClass({
 				onResize={this.handleResize}
 			>
 				<BarPane
-					{...omitProps(barProps, Submarine.Bar, [], false)}
+					{...omitProps(barProps, undefined, _.keys(Submarine.Bar), false)}
 					className={cx('&-Bar', barProps.className)}
 					height={height}
 				>
@@ -267,8 +366,8 @@ const Submarine = createClass({
 				/>
 			</SplitHorizontal>
 		);
-	},
-});
+	}
+}
 
 export default buildHybridComponent(Submarine);
 export { Submarine as SubmarineDumb };

@@ -49,7 +49,6 @@ import SplitButton, {
 	SplitButtonDumb,
 	// @ts-ignore: not converted yet
 } from './components/SplitButton/SplitButton';
-// @ts-ignore: not converted yet
 import Submarine, { SubmarineDumb } from './components/Submarine/Submarine';
 import Tabs, { TabsDumb } from './components/Tabs/Tabs';
 // @ts-ignore: not converted yet
