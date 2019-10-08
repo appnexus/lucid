@@ -92,7 +92,7 @@ export interface IExpanderProps
 	/** Renders different variants of Expander. 'simple' is default.
 	 * 'highlighted' is more prominant.
 	 * */
-	kind: 'simple' | 'highlighted';
+	kind?: 'simple' | 'highlighted';
 }
 
 const defaultProps = {
