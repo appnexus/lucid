@@ -172,7 +172,7 @@ ${exampleNotes}
 }
 `;
 
-storiesOf('Documentation', module)
+storiesOf('Documentation|Documentation', module)
 	.addParameters({ options: articlePageOptions })
 	.add('Introduction', () => (
 		<ArticlePage>
@@ -211,29 +211,6 @@ const filteredComponents = _.reject(loadedComponents, ({ component }) =>
 
 const storiesOfAddSequence = [];
 
-// One of our webpack loaders strips default values from component docgen info
-// Reapply them here so they will appear in storybook docs
-// Also set the prop optional for consumers since we have mark them required for internal use
-// Accurate as of 2019-10-02
-const fixDocgen = component => {
-	const docgenProps = _.get(component, '__docgenInfo.props');
-	const defaultProps = component.defaultProps;
-
-	if (docgenProps && defaultProps) {
-		_.forEach(defaultProps, (value, prop) => {
-			docgenProps[prop] = {
-				...docgenProps[prop],
-				defaultValue: {
-					value: _.isFunction(value) ? value.name : value,
-				},
-				required: false,
-			};
-		});
-	}
-
-	return component;
-};
-
 _.forEach(
 	filteredComponents,
 	({ name: componentName, component, examplesContext, examplesContextRaw }) => {
@@ -258,9 +235,9 @@ _.forEach(
 			storiesOfAddSequence.push([
 				componentName,
 				() => {
-					storiesOf(`Components/${category}/${componentName}`, module)
+					storiesOf(`${category}|${componentName}`, module)
 						.addParameters({
-							component: fixDocgen(component),
+							component,
 							options: examplePageOptions,
 							docs: { storyDescription: exampleNotes },
 							mdxSource: formatSource(source),
@@ -291,7 +268,7 @@ const filteredIcons = _.reject(loadedIcons, ({ component }) =>
 	isPrivate(component)
 );
 
-const storiesOfIcons = storiesOf('Icons', module)
+const storiesOfIcons = storiesOf('Icons|Icons', module)
 	.addParameters({ options: examplePageOptions })
 	.add(
 		'Overview',
