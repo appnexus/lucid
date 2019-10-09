@@ -57,6 +57,8 @@ export interface IButtonPropsRaw extends StandardProps {
 	 * @default "button"
 	 * */
 	type?: 'submit' | 'reset' | 'button';
+
+	callbackId?: any;
 }
 
 export type IButtonProps = Overwrite<

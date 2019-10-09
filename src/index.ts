@@ -7,7 +7,6 @@ import Autocomplete, {
 } from './components/Autocomplete/Autocomplete';
 import ButtonGroup, {
 	ButtonGroupDumb,
-	// @ts-ignore: not converted yet
 } from './components/ButtonGroup/ButtonGroup';
 import SearchableSelect, {
 	SearchableSelectDumb,
