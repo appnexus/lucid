@@ -36,7 +36,6 @@ import PieChart, { PieChartDumb } from './components/PieChart/PieChart';
 import RadioGroup, { RadioGroupDumb } from './components/RadioGroup/RadioGroup';
 import SearchField, {
 	SearchFieldDumb,
-	// @ts-ignore: not converted yet
 } from './components/SearchField/SearchField';
 import Sidebar, { SidebarDumb } from './components/Sidebar/Sidebar';
 import SingleSelect, {

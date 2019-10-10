@@ -153,7 +153,6 @@ exports[`SearchField [common] example testing should match snapshot(s) for 6.cus
     debounceLevel={500}
     isDisabled={false}
     isMultiLine={false}
-    key=".0"
     lazyLevel={1000}
     onBlur={[Function]}
     onChange={[Function]}
@@ -388,7 +387,6 @@ exports[`SearchField [common] example testing should match snapshot(s) for 8.pro
     debounceLevel={500}
     isDisabled={false}
     isMultiLine={false}
-    key=".0"
     lazyLevel={1000}
     onBlur={[Function]}
     onChange={[Function]}
