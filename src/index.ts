@@ -38,7 +38,6 @@ import SearchField, {
 	SearchFieldDumb,
 	// @ts-ignore: not converted yet
 } from './components/SearchField/SearchField';
-// @ts-ignore: not converted yet
 import Sidebar, { SidebarDumb } from './components/Sidebar/Sidebar';
 import SingleSelect, {
 	SingleSelectDumb,

@@ -9,6 +9,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 01.defaul
   isResizeable={true}
   onResize={[Function]}
   onResizing={[Function]}
+  onToggle={[Function]}
   style={
     Object {
       "minWidth": 256,
@@ -17,6 +18,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 01.defaul
 >
   <SplitVertical.LeftPane
     className="lucid-Sidebar-Bar"
+    hasGutters={true}
     isPrimary={false}
     style={
       Object {
@@ -82,6 +84,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 02.disabl
   isResizeable={true}
   onResize={[Function]}
   onResizing={[Function]}
+  onToggle={[Function]}
   style={
     Object {
       "minWidth": 256,
@@ -90,6 +93,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 02.disabl
 >
   <SplitVertical.LeftPane
     className="lucid-Sidebar-Bar"
+    hasGutters={true}
     isPrimary={false}
     style={
       Object {
@@ -155,6 +159,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 03.initia
   isResizeable={true}
   onResize={[Function]}
   onResizing={[Function]}
+  onToggle={[Function]}
   style={
     Object {
       "minWidth": 256,
@@ -163,6 +168,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 03.initia
 >
   <SplitVertical.LeftPane
     className="lucid-Sidebar-Bar"
+    hasGutters={true}
     isPrimary={false}
     style={
       Object {
@@ -228,6 +234,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 04.positi
   isResizeable={true}
   onResize={[Function]}
   onResizing={[Function]}
+  onToggle={[Function]}
   style={
     Object {
       "minWidth": 256,
@@ -236,6 +243,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 04.positi
 >
   <SplitVertical.RightPane
     className="lucid-Sidebar-Bar"
+    hasGutters={true}
     isPrimary={false}
     style={
       Object {
@@ -301,6 +309,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 05.custom
   isResizeable={true}
   onResize={[Function]}
   onResizing={[Function]}
+  onToggle={[Function]}
   style={
     Object {
       "minWidth": 256,
@@ -309,6 +318,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 05.custom
 >
   <SplitVertical.LeftPane
     className="lucid-Sidebar-Bar"
+    hasGutters={true}
     isPrimary={false}
     style={
       Object {
@@ -394,6 +404,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 06.custom
   isResizeable={true}
   onResize={[Function]}
   onResizing={[Function]}
+  onToggle={[Function]}
   style={
     Object {
       "minWidth": 406,
@@ -402,6 +413,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 06.custom
 >
   <SplitVertical.LeftPane
     className="lucid-Sidebar-Bar"
+    hasGutters={true}
     isPrimary={false}
     style={
       Object {
@@ -467,14 +479,16 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 07.contro
   isResizeable={true}
   onResize={[Function]}
   onResizing={[Function]}
+  onToggle={[Function]}
   style={
     Object {
-      "minWidth": null,
+      "minWidth": undefined,
     }
   }
 >
   <SplitVertical.LeftPane
     className="lucid-Sidebar-Bar"
+    hasGutters={true}
     isPrimary={false}
     style={
       Object {
@@ -540,6 +554,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 08.handle
   isResizeable={true}
   onResize={[Function]}
   onResizing={[Function]}
+  onToggle={[Function]}
   style={
     Object {
       "minWidth": 256,
@@ -548,6 +563,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 08.handle
 >
   <SplitVertical.LeftPane
     className="lucid-Sidebar-Bar"
+    hasGutters={true}
     isPrimary={false}
     style={
       Object {
@@ -613,6 +629,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 09.nested
   isResizeable={true}
   onResize={[Function]}
   onResizing={[Function]}
+  onToggle={[Function]}
   style={
     Object {
       "minWidth": 256,
@@ -621,6 +638,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 09.nested
 >
   <SplitVertical.LeftPane
     className="lucid-Sidebar-Bar"
+    hasGutters={true}
     isPrimary={false}
     style={
       Object {
@@ -680,9 +698,9 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 09.nested
       >
         Id mumblecore blue bottle vegan, fingerstache commodo health goth man bun bitters. Ad ennui authentic, offal humblebrag paleo minim vero hammock kickstarter reprehenderit gastropub.
       </Sidebar.Bar>
-      <Sidebar.Primary>
+      <SplitHorizontal.Primary>
         Dreamcatcher jean shorts veniam paleo humblebrag, nihil venmo consequat. Tempor kickstarter fingerstache veniam austin, assumenda lomo eu YOLO small batch 3 wolf moon. Chia offal cliche, thundercats try-hard before they sold out tofu freegan ethical scenester polaroid quis next level jean shorts. Sed hoodie ullamco, XOXO laboris yuccie farm-to-table narwhal jean shorts odio affogato irure. Marfa echo park mixtape pinterest accusamus, ullamco normcore deep v hammock. Odio cronut authentic id sunt, knausgaard YOLO. Roof party mollit kickstarter sustainable sriracha.
-      </Sidebar.Primary>
+      </SplitHorizontal.Primary>
     </Sidebar>
   </SplitVertical.RightPane>
 </SplitVertical>
@@ -697,6 +715,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
   isResizeable={true}
   onResize={[Function]}
   onResizing={[Function]}
+  onToggle={[Function]}
   style={
     Object {
       "minWidth": 256,
@@ -705,6 +724,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
 >
   <SplitVertical.LeftPane
     className="lucid-Sidebar-Bar"
+    hasGutters={true}
     isPrimary={false}
     style={
       Object {
@@ -1980,6 +2000,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 11.differ
   isResizeable={true}
   onResize={[Function]}
   onResizing={[Function]}
+  onToggle={[Function]}
   style={
     Object {
       "minWidth": 256,
@@ -1988,6 +2009,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 11.differ
 >
   <SplitVertical.LeftPane
     className="lucid-Sidebar-Bar"
+    hasGutters={true}
     isPrimary={false}
     style={
       Object {

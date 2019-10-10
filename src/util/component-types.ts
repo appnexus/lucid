@@ -51,7 +51,7 @@ export interface FC<P> extends React.FC<P> {
 		extend?: string;
 		madeFrom?: string[];
 	};
-	propName?: string; // TODO confirm this is needed
+	propName?: string | string[];
 	_isPrivate?: boolean;
 }
 
@@ -60,13 +60,13 @@ type TypesType<P> =
 	| Array<ICreateClassComponentClass<P>>
 	| FC<P>
 	| Array<FC<P>>
-	| { propName?: string };
+	| { propName?: string | string[] };
 
 interface ICreateClassComponentSpec<P extends { [key: string]: any }, S>
 	extends React.Mixin<P, S> {
 	_isPrivate?: boolean;
 	initialState?: S;
-	propName?: string;
+	propName?: string | string[];
 	components?: {
 		[key: string]: ICreateClassComponentClass<{}>;
 	};
@@ -87,7 +87,7 @@ interface ICreateClassComponentSpec<P extends { [key: string]: any }, S>
 
 export interface ICreateClassComponentClass<P>
 	extends React.ClassicComponentClass<P> {
-	propName?: string;
+	propName?: string | string[];
 
 	// TODO: fix this too
 	[key: string]: any;
