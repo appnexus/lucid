@@ -98,10 +98,7 @@ export interface ITextFieldProps extends StandardProps {
 	lazyLevel?: number;
 }
 type ITextFieldPropsWithPassThroughs = Overwrite<
-	React.DetailedHTMLProps<
-		React.InputHTMLAttributes<HTMLInputElement>,
-		HTMLInputElement
-	>,
+	React.InputHTMLAttributes<HTMLInputElement>,
 	ITextFieldProps
 >;
 

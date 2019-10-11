@@ -195,7 +195,6 @@ import Table from './components/Table/Table';
 // @ts-ignore: not converted yet
 import Tag from './components/Tag/Tag';
 import TextField from './components/TextField/TextField';
-// @ts-ignore: not converted yet
 import TextFieldValidated from './components/TextFieldValidated/TextFieldValidated';
 import TextIcon from './components/Icon/TextIcon/TextIcon';
 import Typography from './components/Typography/Typography';
