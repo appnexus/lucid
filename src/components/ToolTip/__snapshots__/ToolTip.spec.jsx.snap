@@ -10,6 +10,7 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 1.interac
   isExpanded={false}
   minWidthOffset={0}
   onClickOut={null}
+  onClose={[Function]}
   onMouseOut={[Function]}
   onMouseOver={[Function]}
   portalId={null}
@@ -62,6 +63,7 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 1.interac
   isExpanded={false}
   minWidthOffset={0}
   onClickOut={null}
+  onClose={[Function]}
   onMouseOut={[Function]}
   onMouseOver={[Function]}
   portalId={null}
@@ -114,6 +116,7 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 1.interac
   isExpanded={false}
   minWidthOffset={0}
   onClickOut={null}
+  onClose={[Function]}
   onMouseOut={[Function]}
   onMouseOver={[Function]}
   portalId={null}
@@ -166,6 +169,7 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 1.interac
   isExpanded={false}
   minWidthOffset={0}
   onClickOut={null}
+  onClose={[Function]}
   onMouseOut={[Function]}
   onMouseOver={[Function]}
   portalId={null}
@@ -218,6 +222,7 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 1.interac
   isExpanded={false}
   minWidthOffset={0}
   onClickOut={null}
+  onClose={[Function]}
   onMouseOut={[Function]}
   onMouseOver={[Function]}
   portalId={null}
@@ -270,6 +275,7 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 1.interac
   isExpanded={false}
   minWidthOffset={0}
   onClickOut={null}
+  onClose={[Function]}
   onMouseOut={[Function]}
   onMouseOver={[Function]}
   portalId={null}
@@ -322,6 +328,7 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 1.interac
   isExpanded={false}
   minWidthOffset={0}
   onClickOut={null}
+  onClose={[Function]}
   onMouseOut={[Function]}
   onMouseOver={[Function]}
   portalId={null}
@@ -374,6 +381,7 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 1.interac
   isExpanded={false}
   minWidthOffset={0}
   onClickOut={null}
+  onClose={[Function]}
   onMouseOut={[Function]}
   onMouseOver={[Function]}
   portalId={null}
@@ -426,6 +434,7 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 1.interac
   isExpanded={false}
   minWidthOffset={0}
   onClickOut={null}
+  onClose={[Function]}
   onMouseOut={[Function]}
   onMouseOver={[Function]}
   portalId={null}
@@ -478,6 +487,7 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 1.interac
   isExpanded={false}
   minWidthOffset={0}
   onClickOut={null}
+  onClose={[Function]}
   onMouseOut={[Function]}
   onMouseOver={[Function]}
   portalId={null}
@@ -530,6 +540,7 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 1.interac
   isExpanded={false}
   minWidthOffset={0}
   onClickOut={null}
+  onClose={[Function]}
   onMouseOut={[Function]}
   onMouseOver={[Function]}
   portalId={null}
@@ -582,6 +593,7 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 1.interac
   isExpanded={false}
   minWidthOffset={0}
   onClickOut={null}
+  onClose={[Function]}
   onMouseOut={[Function]}
   onMouseOver={[Function]}
   portalId={null}
@@ -634,6 +646,7 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 2.variant
   isExpanded={true}
   minWidthOffset={0}
   onClickOut={null}
+  onClose={[Function]}
   onMouseOut={[Function]}
   onMouseOver={[Function]}
   portalId={null}
@@ -671,6 +684,7 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 2.variant
   isExpanded={true}
   minWidthOffset={0}
   onClickOut={null}
+  onClose={[Function]}
   onMouseOut={[Function]}
   onMouseOver={[Function]}
   portalId={null}
@@ -714,6 +728,7 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 2.variant
   isExpanded={true}
   minWidthOffset={0}
   onClickOut={null}
+  onClose={[Function]}
   onMouseOut={[Function]}
   onMouseOver={[Function]}
   portalId={null}
@@ -762,6 +777,7 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 2.variant
   isExpanded={true}
   minWidthOffset={0}
   onClickOut={null}
+  onClose={[Function]}
   onMouseOut={[Function]}
   onMouseOver={[Function]}
   portalId={null}
@@ -799,6 +815,7 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 2.variant
   isExpanded={true}
   minWidthOffset={0}
   onClickOut={null}
+  onClose={[Function]}
   onMouseOut={[Function]}
   onMouseOver={[Function]}
   portalId={null}
@@ -842,6 +859,7 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 2.variant
   isExpanded={true}
   minWidthOffset={0}
   onClickOut={null}
+  onClose={[Function]}
   onMouseOut={[Function]}
   onMouseOver={[Function]}
   portalId={null}
@@ -890,6 +908,7 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 3.static 
   isExpanded={true}
   minWidthOffset={0}
   onClickOut={null}
+  onClose={[Function]}
   onMouseOut={[Function]}
   onMouseOver={[Function]}
   portalId={null}
@@ -942,6 +961,7 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 3.static 
   isExpanded={true}
   minWidthOffset={0}
   onClickOut={null}
+  onClose={[Function]}
   onMouseOut={[Function]}
   onMouseOver={[Function]}
   portalId={null}
@@ -994,6 +1014,7 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 3.static 
   isExpanded={true}
   minWidthOffset={0}
   onClickOut={null}
+  onClose={[Function]}
   onMouseOut={[Function]}
   onMouseOver={[Function]}
   portalId={null}
@@ -1046,6 +1067,7 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 3.static 
   isExpanded={true}
   minWidthOffset={0}
   onClickOut={null}
+  onClose={[Function]}
   onMouseOut={[Function]}
   onMouseOver={[Function]}
   portalId={null}
@@ -1098,6 +1120,7 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 3.static 
   isExpanded={true}
   minWidthOffset={0}
   onClickOut={null}
+  onClose={[Function]}
   onMouseOut={[Function]}
   onMouseOver={[Function]}
   portalId={null}
@@ -1150,6 +1173,7 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 3.static 
   isExpanded={true}
   minWidthOffset={0}
   onClickOut={null}
+  onClose={[Function]}
   onMouseOut={[Function]}
   onMouseOver={[Function]}
   portalId={null}
@@ -1202,6 +1226,7 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 3.static 
   isExpanded={true}
   minWidthOffset={0}
   onClickOut={null}
+  onClose={[Function]}
   onMouseOut={[Function]}
   onMouseOver={[Function]}
   portalId={null}
@@ -1254,6 +1279,7 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 3.static 
   isExpanded={true}
   minWidthOffset={0}
   onClickOut={null}
+  onClose={[Function]}
   onMouseOut={[Function]}
   onMouseOver={[Function]}
   portalId={null}
@@ -1306,6 +1332,7 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 3.static 
   isExpanded={true}
   minWidthOffset={0}
   onClickOut={null}
+  onClose={[Function]}
   onMouseOut={[Function]}
   onMouseOver={[Function]}
   portalId={null}
@@ -1358,6 +1385,7 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 3.static 
   isExpanded={true}
   minWidthOffset={0}
   onClickOut={null}
+  onClose={[Function]}
   onMouseOut={[Function]}
   onMouseOver={[Function]}
   portalId={null}
@@ -1410,6 +1438,7 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 3.static 
   isExpanded={true}
   minWidthOffset={0}
   onClickOut={null}
+  onClose={[Function]}
   onMouseOut={[Function]}
   onMouseOver={[Function]}
   portalId={null}
@@ -1462,6 +1491,7 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 3.static 
   isExpanded={true}
   minWidthOffset={0}
   onClickOut={null}
+  onClose={[Function]}
   onMouseOut={[Function]}
   onMouseOver={[Function]}
   portalId={null}

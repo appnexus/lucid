@@ -6,7 +6,7 @@ import { FC, omitProps } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-CloseIcon');
 
-interface ICloseIconProps extends IIconProps {}
+export interface ICloseIconProps extends IIconProps {}
 
 const CloseIcon: FC<ICloseIconProps> = ({
 	className,

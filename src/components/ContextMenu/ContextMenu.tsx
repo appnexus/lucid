@@ -36,7 +36,8 @@ ContextMenuTarget.defaultProps = {
 	elementType: 'span',
 };
 
-interface IContextMenuFlyOutProps extends StandardProps {}
+interface IContextMenuFlyOutProps
+	extends React.HTMLAttributes<HTMLDivElement> {}
 const ContextMenuFlyOut: FC<IContextMenuFlyOutProps> = (): null => null;
 ContextMenuFlyOut.displayName = 'ContextMenu.FlyOut';
 ContextMenuFlyOut.propName = 'FlyOut';
