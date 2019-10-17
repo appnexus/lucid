@@ -4,6 +4,7 @@ import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import {
 	FC,
+	Overwrite,
 	getFirst,
 	omitProps,
 	StandardProps,
@@ -26,7 +27,7 @@ InfiniteSlidePanelSlide.displayName = 'InfiniteSlidePanel.Slide';
 InfiniteSlidePanelSlide.propName = 'Slide';
 InfiniteSlidePanelSlide.peek = { description: `The slide.` };
 
-export interface IInfiniteSlidePanelProps extends ISlidePanelProps {
+export interface IInfiniteSlidePanelPropsRaw {
 	/**	The only allowed child is a render function which is passed the current
 		slide's offset and returns the slide contents. Alternatively, you could pass one
 		`<InfiniteSlidePanelSlide {...}>` element with the render function.
@@ -38,8 +39,21 @@ export interface IInfiniteSlidePanelProps extends ISlidePanelProps {
 	that this should be at least 4 times the \`slidesToShow\` value. */
 	totalSlides?: number;
 
+	/** Animate slides transitions from changes in `offset`. */
+	isAnimated?: boolean;
+
+	/** Slides are rendered in a continuous loop, where the first slide repeats
+	 * after the last slide and vice-versa. DOM elements are re-ordered and
+	 * re-used. */
+	isLooped?: boolean;
+
 	Slide?: React.ReactNode;
 }
+
+type IInfiniteSlidePanelProps = Overwrite<
+	ISlidePanelProps,
+	IInfiniteSlidePanelPropsRaw
+>;
 
 interface IInfiniteSlidePanelFC extends FC<IInfiniteSlidePanelProps> {
 	Slide: FC<IInfiniteSlidePanelSlideProps>;
@@ -50,6 +64,8 @@ const defaultProps = {
 	slidesToShow: 1,
 	onSwipe: _.noop,
 	totalSlides: 8,
+	isAnimated: SlidePanel.defaultProps.isAnimated,
+	isLooped: SlidePanel.defaultProps.isLooped,
 };
 
 const InfiniteSlidePanel: IInfiniteSlidePanelFC = (
