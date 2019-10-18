@@ -172,7 +172,7 @@ ${exampleNotes}
 }
 `;
 
-storiesOf('Documentation|Documentation', module)
+storiesOf('Documentation|Introduction', module)
 	.addParameters({ options: articlePageOptions })
 	.add('Introduction', () => (
 		<ArticlePage>
@@ -186,17 +186,32 @@ storiesOf('Documentation|Documentation', module)
 			</div>
 			{compile(introText).tree}
 		</ArticlePage>
-	))
-	.add('Readme', () => <ArticlePage>{compile(readmeText).tree}</ArticlePage>)
+	));
+
+storiesOf('Documentation|Readme', module)
+	.addParameters({ options: articlePageOptions })
+	.add('Readme', () => <ArticlePage>{compile(readmeText).tree}</ArticlePage>);
+
+storiesOf('Documentation|Child Components', module)
+	.addParameters({ options: articlePageOptions })
 	.add('Child Components', () => (
 		<ArticlePage>{compile(childComponentsText).tree}</ArticlePage>
-	))
+	));
+
+storiesOf('Documentation|Hybrid State Components', module)
+	.addParameters({ options: articlePageOptions })
 	.add('Hybrid State Components', () => (
 		<ArticlePage>{compile(hybridComponentsText).tree}</ArticlePage>
-	))
+	));
+
+storiesOf('Documentation|Computed Props', module)
+	.addParameters({ options: articlePageOptions })
 	.add('Computed Props', () => (
 		<ArticlePage>{compile(computedPropsText).tree}</ArticlePage>
-	))
+	));
+
+storiesOf('Documentation|Color Palette', module)
+	.addParameters({ options: articlePageOptions })
 	.add('Color Palette', () => (
 		<ArticlePage>
 			<ColorPalette />
