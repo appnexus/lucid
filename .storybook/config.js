@@ -10,11 +10,11 @@ function loadStories() {
 addParameters({
 	options: {
 		showNav: true,
-		isToolshown: false,
+		isToolshown: true,
 	},
-  docs: {
-    container: DocsContainer,
-    page: DocsPage,
+	docs: {
+		container: DocsContainer,
+		page: DocsPage,
 		getPropDefs,
 	},
 });
