@@ -203,73 +203,76 @@ storiesOf('Documentation|Documentation', module)
 		</ArticlePage>
 	));
 
-const loadedComponents = require('./load-components');
+const addStories = (components, separator, categoryOverride) => {
+	const storiesOfAddSequence = [];
 
+	_.forEach(
+		components,
+		({ name: componentName, component, examplesContext, examplesContextRaw }) => {
+			const examples = getExamplesFromContext(
+				examplesContext,
+				examplesContextRaw
+			);
+
+			const componentRef = getDefaultExport(component);
+
+			const notes =
+				(_.has(componentRef, 'peek.notes') &&
+					formatNotes(_.mapValues(componentRef.peek.notes, stripIndent))) ||
+				(_.has(componentRef, 'peek.description') &&
+					stripIndent(componentRef.peek.description));
+
+			const category =
+				categoryOverride ||
+				_.has(componentRef, 'peek.categories') &&
+				stripIndent(componentRef.peek.categories[0]);
+
+			_.forEach(examples, ({ name, Example, exampleNotes, source }) => {
+				storiesOfAddSequence.push([
+					componentName,
+					() => {
+						storiesOf(`${category}${separator}${componentName}`, module)
+							.addParameters({
+								component,
+								options: examplePageOptions,
+								docs: { storyDescription: exampleNotes },
+								mdxSource: formatSource(source),
+								notes,
+							})
+							.add(
+								name,
+								exampleStory({
+									component,
+									code: source,
+									example: Example,
+									path: [componentName],
+								})
+							);
+					},
+				]);
+			});
+		}
+	);
+
+	_.forEach(_.sortBy(storiesOfAddSequence, _.property('0')), ([, addStory]) =>
+			addStory()
+	);
+}
+
+const loadedComponents = require('./load-components');
 const filteredComponents = _.reject(loadedComponents, ({ component }) =>
 	isPrivate(component)
 );
 
-const storiesOfAddSequence = [];
-
-_.forEach(
-	filteredComponents,
-	({ name: componentName, component, examplesContext, examplesContextRaw }) => {
-		const examples = getExamplesFromContext(
-			examplesContext,
-			examplesContextRaw
-		);
-
-		const componentRef = getDefaultExport(component);
-
-		const notes =
-			(_.has(componentRef, 'peek.notes') &&
-				formatNotes(_.mapValues(componentRef.peek.notes, stripIndent))) ||
-			(_.has(componentRef, 'peek.description') &&
-				stripIndent(componentRef.peek.description));
-
-		const category =
-			_.has(componentRef, 'peek.categories') &&
-			stripIndent(componentRef.peek.categories[0]);
-
-		_.forEach(examples, ({ name, Example, exampleNotes, source }) => {
-			storiesOfAddSequence.push([
-				componentName,
-				() => {
-					storiesOf(`${category}|${componentName}`, module)
-						.addParameters({
-							component,
-							options: examplePageOptions,
-							docs: { storyDescription: exampleNotes },
-							mdxSource: formatSource(source),
-							notes,
-						})
-						.add(
-							name,
-							exampleStory({
-								component,
-								code: source,
-								example: Example,
-								path: [componentName],
-							})
-						);
-				},
-			]);
-		});
-	}
-);
-
-_.forEach(_.sortBy(storiesOfAddSequence, _.property('0')), ([, addStory]) =>
-	addStory()
-);
+addStories(filteredComponents, '|');
 
 const loadedIcons = require('./load-icons');
-
 const filteredIcons = _.reject(loadedIcons, ({ component }) =>
 	isPrivate(component)
 );
 
-const storiesOfIcons = storiesOf('Icons|Icons', module)
-	.addParameters({ options: examplePageOptions })
+storiesOf('Icons', module)
+	.addParameters({ options: articlePageOptions })
 	.add(
 		'Overview',
 		() => (
@@ -335,7 +338,7 @@ const storiesOfIcons = storiesOf('Icons|Icons', module)
 								}}
 							>
 								<Icon />{' '}
-								<LinkTo style={styles.link} kind='Icons' story={name}>
+								<LinkTo style={styles.link} kind={`Icons|Icons/${name}`}>
 									{name}
 								</LinkTo>
 							</div>
@@ -343,27 +346,7 @@ const storiesOfIcons = storiesOf('Icons|Icons', module)
 					</div>
 				</section>
 			</ArticlePage>
-		),
-		{ options: articlePageOptions, panelToggles: undefined }
+		)
 	);
 
-_.forEach(
-	filteredIcons,
-	({ name, component, examplesContext, examplesContextRaw }) => {
-		const examples = getExamplesFromContext(
-			examplesContext,
-			examplesContextRaw
-		);
-		const firstExample = _.first(examples);
-		const FirstExampleComponent = firstExample.Example;
-		storiesOfIcons.add(
-			name,
-			exampleStory({
-				component,
-				code: firstExample.source,
-				example: FirstExampleComponent,
-				path: [name],
-			})
-		);
-	}
-);
+addStories(filteredIcons, '/', 'Icons|Icons');
