@@ -8,7 +8,7 @@ const cx = lucidClassNames.bind('&-DuplicateIcon');
 
 interface IDuplicateIconProps extends IIconProps {}
 
-const DuplicateIcon: FC<IDuplicateIconProps> = ({
+export const DuplicateIcon: FC<IDuplicateIconProps> = ({
 	className,
 	...passThroughs
 }): React.ReactElement => {

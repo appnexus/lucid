@@ -5,7 +5,7 @@ import marksy from 'marksy/components';
 import { storiesOf } from '@storybook/react';
 import LinkTo from '@storybook/addon-links/react';
 import { exampleStory } from '../.storybook/lucid-docs-addon';
-import { stripIndent } from '../.storybook/lucid-docs-addon/util';
+import { stripIndent, formatSource } from '../.storybook/lucid-docs-addon/util';
 import readmeText from '!!raw-loader!../README.md';
 import introText from '!!raw-loader!./intro.md';
 import childComponentsText from '!!raw-loader!./child-components.md';
@@ -25,8 +25,8 @@ import './index.less'; // very minimal overrides
 
 registerLanguage('jsx', jsx);
 
-const articlePageOptions = { showAddonPanel: false };
-const examplePageOptions = { showAddonPanel: true, addonPanelInRight: true };
+const articlePageOptions = { showPanel: false };
+const examplePageOptions = { showPanel: true, panelPosition: 'right' };
 
 const loadAllKeys = (reqContext, rawContext) => {
 	return _.map(_.get(reqContext, 'keys', _.constant([]))(), key => ({
@@ -50,6 +50,7 @@ const getExamplesFromContext = (reqExamples, rawContext) =>
 	_.map(loadAllKeys(reqExamples, rawContext), ({ key, module, raw }) => ({
 		name: _.join(_.reject(_.words(key), w => /^(\d+)|jsx?$/.test(w)), ' '),
 		Example: getDefaultExport(module),
+		exampleNotes: module.notes,
 		source: raw,
 	}));
 
@@ -136,7 +137,42 @@ class ArticlePage extends React.Component {
 	}
 }
 
-storiesOf('Documentation', module)
+const formatNotes = ({
+	overview,
+	intendedUse,
+	technicalRecommendations,
+	exampleNotes,
+}) => `
+### Overview
+
+${overview}
+
+---
+
+### Intended Use
+
+${intendedUse}
+
+---
+
+### Technical Recommendations
+
+${technicalRecommendations}
+
+${
+	exampleNotes
+		? `
+---
+	
+### Example Notes
+	
+${exampleNotes}
+`
+		: ''
+}
+`;
+
+storiesOf('Documentation|Introduction', module)
 	.addParameters({ options: articlePageOptions })
 	.add('Introduction', () => (
 		<ArticlePage>
@@ -150,95 +186,108 @@ storiesOf('Documentation', module)
 			</div>
 			{compile(introText).tree}
 		</ArticlePage>
-	))
-	.add('Readme', () => <ArticlePage>{compile(readmeText).tree}</ArticlePage>)
+	));
+
+storiesOf('Documentation|Readme', module)
+	.addParameters({ options: articlePageOptions })
+	.add('Readme', () => <ArticlePage>{compile(readmeText).tree}</ArticlePage>);
+
+storiesOf('Documentation|Child Components', module)
+	.addParameters({ options: articlePageOptions })
 	.add('Child Components', () => (
 		<ArticlePage>{compile(childComponentsText).tree}</ArticlePage>
-	))
+	));
+
+storiesOf('Documentation|Hybrid State Components', module)
+	.addParameters({ options: articlePageOptions })
 	.add('Hybrid State Components', () => (
 		<ArticlePage>{compile(hybridComponentsText).tree}</ArticlePage>
-	))
+	));
+
+storiesOf('Documentation|Computed Props', module)
+	.addParameters({ options: articlePageOptions })
 	.add('Computed Props', () => (
 		<ArticlePage>{compile(computedPropsText).tree}</ArticlePage>
-	))
+	));
+
+storiesOf('Documentation|Color Palette', module)
+	.addParameters({ options: articlePageOptions })
 	.add('Color Palette', () => (
 		<ArticlePage>
 			<ColorPalette />
 		</ArticlePage>
 	));
 
-const loadedComponents = require('./load-components');
+const addStories = (components, separator, categoryOverride) => {
+	const storiesOfAddSequence = [];
 
+	_.forEach(
+		components,
+		({ name: componentName, component, examplesContext, examplesContextRaw }) => {
+			const examples = getExamplesFromContext(
+				examplesContext,
+				examplesContextRaw
+			);
+
+			const componentRef = getDefaultExport(component);
+
+			const notes =
+				(_.has(componentRef, 'peek.notes') &&
+					formatNotes(_.mapValues(componentRef.peek.notes, stripIndent))) ||
+				(_.has(componentRef, 'peek.description') &&
+					stripIndent(componentRef.peek.description));
+
+			const category =
+				categoryOverride ||
+				_.has(componentRef, 'peek.categories') &&
+				stripIndent(componentRef.peek.categories[0]);
+
+			_.forEach(examples, ({ name, Example, exampleNotes, source }) => {
+				storiesOfAddSequence.push([
+					componentName,
+					() => {
+						storiesOf(`${category}${separator}${componentName}`, module)
+							.addParameters({
+								component,
+								options: examplePageOptions,
+								docs: { storyDescription: exampleNotes },
+								mdxSource: formatSource(source),
+								notes,
+							})
+							.add(
+								name,
+								exampleStory({
+									component,
+									code: source,
+									example: Example,
+									path: [componentName],
+								})
+							);
+					},
+				]);
+			});
+		}
+	);
+
+	_.forEach(_.sortBy(storiesOfAddSequence, _.property('0')), ([, addStory]) =>
+			addStory()
+	);
+}
+
+const loadedComponents = require('./load-components');
 const filteredComponents = _.reject(loadedComponents, ({ component }) =>
 	isPrivate(component)
 );
 
-// const storiesOfComponents = storiesOf('Components', module)
-// 	.addParameters({ options: examplePageOptions })
-// 	.add(
-// 		'Overview',
-// 		() => (
-// 			<ArticlePage>
-// 				<h1>Components</h1>
-// 			</ArticlePage>
-// 		),
-// 		{ options: articlePageOptions, panelToggles: undefined }
-// 	);
-
-const storiesOfAddSequence = [];
-
-_.forEach(
-	filteredComponents,
-	({ name: componentName, component, examplesContext, examplesContextRaw }) => {
-		const examples = getExamplesFromContext(
-			examplesContext,
-			examplesContextRaw
-		);
-
-		const componentRef = getDefaultExport(component);
-		const notes =
-			_.has(componentRef, 'peek.description') &&
-			stripIndent(componentRef.peek.description);
-
-		const category =
-			_.has(componentRef, 'peek.categories') &&
-			stripIndent(componentRef.peek.categories[0]);
-
-		// TODO: Find a way to add per example notes
-		_.forEach(examples, ({ name, Example, source }) => {
-			storiesOfAddSequence.push([
-				componentName,
-				() => {
-					storiesOf(`Components/${category}/${componentName}`, module)
-						.addParameters({ options: examplePageOptions })
-						.add(
-							name,
-							exampleStory({
-								component,
-								code: source,
-								example: Example,
-								path: [componentName],
-							}),
-							{ notes: notes, info: { inline: true, header: false } }
-						);
-				},
-			]);
-		});
-	}
-);
-
-_.forEach(_.sortBy(storiesOfAddSequence, _.property('0')), ([, addStory]) =>
-	addStory()
-);
+addStories(filteredComponents, '|');
 
 const loadedIcons = require('./load-icons');
-
 const filteredIcons = _.reject(loadedIcons, ({ component }) =>
 	isPrivate(component)
 );
 
-const storiesOfIcons = storiesOf('Icons', module)
-	.addParameters({ options: examplePageOptions })
+storiesOf('Icons', module)
+	.addParameters({ options: articlePageOptions })
 	.add(
 		'Overview',
 		() => (
@@ -304,7 +353,7 @@ const storiesOfIcons = storiesOf('Icons', module)
 								}}
 							>
 								<Icon />{' '}
-								<LinkTo style={styles.link} kind='Icons' story={name}>
+								<LinkTo style={styles.link} kind={`Icons|Icons/${name}`}>
 									{name}
 								</LinkTo>
 							</div>
@@ -312,27 +361,7 @@ const storiesOfIcons = storiesOf('Icons', module)
 					</div>
 				</section>
 			</ArticlePage>
-		),
-		{ options: articlePageOptions, panelToggles: undefined }
+		)
 	);
 
-_.forEach(
-	filteredIcons,
-	({ name, component, examplesContext, examplesContextRaw }) => {
-		const examples = getExamplesFromContext(
-			examplesContext,
-			examplesContextRaw
-		);
-		const firstExample = _.first(examples);
-		const FirstExampleComponent = firstExample.Example;
-		storiesOfIcons.add(
-			name,
-			exampleStory({
-				component,
-				code: firstExample.source,
-				example: FirstExampleComponent,
-				path: [name],
-			})
-		);
-	}
-);
+addStories(filteredIcons, '/', 'Icons|Icons');

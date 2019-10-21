@@ -8,7 +8,7 @@ const cx = lucidClassNames.bind('&-FilterIcon');
 
 interface IFilterIconProps extends IIconProps {}
 
-const FilterIcon: FC<IFilterIconProps> = ({
+export const FilterIcon: FC<IFilterIconProps> = ({
 	className,
 	...passThroughs
 }): React.ReactElement => {

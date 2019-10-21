@@ -8,7 +8,7 @@ const cx = lucidClassNames.bind('&-InfoLightIcon');
 
 interface IInfoLightIconProps extends IIconProps {}
 
-const InfoLightIcon: FC<IInfoLightIconProps> = ({
+export const InfoLightIcon: FC<IInfoLightIconProps> = ({
 	className,
 	isClickable,
 	isDisabled,

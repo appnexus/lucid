@@ -90,7 +90,7 @@ export interface IDialogFC extends FC<IDialogProps> {
 	Footer: FC<IDialogFooterProps>;
 }
 
-const Dialog: IDialogFC = (props): React.ReactElement => {
+export const Dialog: IDialogFC = (props): React.ReactElement => {
 	const {
 		className,
 		size,

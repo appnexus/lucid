@@ -12,7 +12,7 @@ const cx = lucidClassNames.bind('&-ChevronIcon');
 interface IChevronIconProps extends IIconProps {
 	direction?: 'up' | 'down' | 'left' | 'right';
 }
-const ChevronIcon: FC<IChevronIconProps> = ({
+export const ChevronIcon: FC<IChevronIconProps> = ({
 	className,
 	direction = 'down',
 	...passThroughs

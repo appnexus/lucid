@@ -15,7 +15,7 @@ interface ISuccessLightIconProps extends IIconProps {
 	isActive?: boolean;
 }
 
-const SuccessLightIcon: FC<ISuccessLightIconProps> = ({
+export const SuccessLightIcon: FC<ISuccessLightIconProps> = ({
 	className,
 	isActive,
 	isClickable,

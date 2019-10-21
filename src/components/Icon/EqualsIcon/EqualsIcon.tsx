@@ -8,7 +8,7 @@ const cx = lucidClassNames.bind('&-EqualsIcon');
 
 interface IEqualsIconProps extends IIconProps {}
 
-const EqualsIcon: FC<IEqualsIconProps> = ({
+export const EqualsIcon: FC<IEqualsIconProps> = ({
 	className,
 	...passThroughs
 }): React.ReactElement => {

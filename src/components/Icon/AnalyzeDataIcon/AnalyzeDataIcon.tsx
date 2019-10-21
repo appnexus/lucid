@@ -8,7 +8,7 @@ const cx = lucidClassNames.bind('&-AnalyzeDataIcon');
 
 interface IAnalyzeDataIconProps extends IIconProps {}
 
-const AnalyzeDataIcon: FC<IAnalyzeDataIconProps> = ({
+export const AnalyzeDataIcon: FC<IAnalyzeDataIconProps> = ({
 	className,
 	...passThroughs
 }): React.ReactElement => {

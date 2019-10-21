@@ -8,7 +8,7 @@ const cx = lucidClassNames.bind('&-CloseIcon');
 
 interface ICloseIconProps extends IIconProps {}
 
-const CloseIcon: FC<ICloseIconProps> = ({
+export const CloseIcon: FC<ICloseIconProps> = ({
 	className,
 	isDisabled,
 	isClickable,

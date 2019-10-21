@@ -8,7 +8,7 @@ const cx = lucidClassNames.bind('&-ResizeIcon');
 
 interface IResizeIconProps extends IIconProps {}
 
-const ResizeIcon: FC<IResizeIconProps> = ({
+export const ResizeIcon: FC<IResizeIconProps> = ({
 	className,
 	...passThroughs
 }): React.ReactElement => {

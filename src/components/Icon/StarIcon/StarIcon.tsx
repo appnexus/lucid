@@ -8,7 +8,7 @@ const cx = lucidClassNames.bind('&-StarIcon');
 
 interface IStarIconProps extends IIconProps {}
 
-const StarIcon: FC<IStarIconProps> = ({
+export const StarIcon: FC<IStarIconProps> = ({
 	className,
 	isClickable,
 	isDisabled,

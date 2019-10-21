@@ -41,7 +41,7 @@ interface IBreadcrumbFC extends FC<IBreadcrumbProps> {
 	Item: FC<IBreadcrumbItemProps>;
 }
 
-const Breadcrumb: IBreadcrumbFC = (props): React.ReactElement => {
+export const Breadcrumb: IBreadcrumbFC = (props): React.ReactElement => {
 	const { className, ...passThroughs } = props;
 	const items = findTypes(props, Breadcrumb.Item);
 	const initialItems = _.initial(items);

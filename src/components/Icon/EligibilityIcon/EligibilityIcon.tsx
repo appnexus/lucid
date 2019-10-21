@@ -20,7 +20,7 @@ interface IEligibilityIconProps extends IIconProps {
 	eligibility: EligibilityOptions;
 }
 
-const EligibilityIcon: FC<IEligibilityIconProps> = ({
+export const EligibilityIcon: FC<IEligibilityIconProps> = ({
 	className,
 	eligibility = EligibilityOptions.neither,
 	...passThroughs

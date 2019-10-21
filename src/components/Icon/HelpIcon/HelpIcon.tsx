@@ -8,7 +8,7 @@ const cx = lucidClassNames.bind('&-HelpIcon');
 
 interface IHelpIconProps extends IIconProps {}
 
-const HelpIcon: FC<IHelpIconProps> = ({
+export const HelpIcon: FC<IHelpIconProps> = ({
 	className,
 	isDisabled,
 	isClickable,

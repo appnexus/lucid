@@ -122,7 +122,7 @@ const defaultProps = {
 	palette: chartConstants.PALETTE_7,
 };
 
-const Lines: FC<ILinesProps> = (props): React.ReactElement => {
+export const Lines: FC<ILinesProps> = (props): React.ReactElement => {
 	const {
 		className,
 		data,

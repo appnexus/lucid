@@ -8,7 +8,7 @@ const cx = lucidClassNames.bind('&-ViewTableIcon');
 
 interface IViewTableIconProps extends IIconProps {}
 
-const ViewTableIcon: FC<IViewTableIconProps> = ({
+export const ViewTableIcon: FC<IViewTableIconProps> = ({
 	className,
 	...passThroughs
 }): React.ReactElement => {

@@ -1,7 +1,7 @@
 import React from 'react';
 import _ from 'lodash';
 import addons from '@storybook/addons';
-import { stripIndent } from './util';
+import { getPropsData, stripIndent} from './util';
 import marksy from 'marksy';
 
 const compile = marksy({ createElement: React.createElement });
@@ -13,64 +13,6 @@ const isReactComponent = value =>
 
 const isChildComponent = (value, key) =>
 	isReactComponent(value) || (/^[A-Z]/.test(key) && _.isFunction(value));
-
-const getDefaultPropValue = (componentRef, property) => {
-	const defaultValue = _.get(componentRef, ['defaultProps', property]);
-	return _.isUndefined(defaultValue)
-		? _.get(componentRef, ['peekDefaultProps', property])
-		: defaultValue;
-};
-
-const getPropTypeData = resolverFn => {
-	const type = _.get(resolverFn, ['peek', 'type']);
-	let dynamicData;
-
-	if (type === 'oneOf') {
-		dynamicData = _.get(resolverFn, ['peek', 'args', 0]);
-	}
-
-	if (type === 'arrayOf') {
-		const arrayOfResolverFn = _.get(resolverFn, ['peek', 'args', 0]);
-		dynamicData = getPropTypeData(arrayOfResolverFn);
-	}
-
-	if (type === 'oneOfType') {
-		const oneOfTypeResolverFns = _.get(resolverFn, ['peek', 'args', 0]);
-		dynamicData = _.map(oneOfTypeResolverFns, getPropTypeData);
-	}
-
-	if (type === 'instanceOf') {
-		const instanceOfClass = _.get(resolverFn, ['peek', 'args', 0]);
-		dynamicData = instanceOfClass.name;
-	}
-
-	if (type === 'objectOf') {
-		const objectOfResolverFn = _.get(resolverFn, ['peek', 'args', 0]);
-		dynamicData = getPropTypeData(objectOfResolverFn);
-	}
-
-	if (type === 'shape') {
-		const shapeObject = _.get(resolverFn, ['peek', 'args', 0]);
-		dynamicData = _.mapValues(shapeObject, getPropTypeData);
-	}
-
-	return {
-		...resolverFn.peek,
-		type,
-		text: stripIndent(_.get(resolverFn, ['peek', 'text'])).trim(),
-		dynamicData,
-	};
-};
-
-const getPropsData = componentRef => {
-	return _.map(componentRef.propTypes, (resolverFn, property) => {
-		return {
-			...getPropTypeData(resolverFn),
-			name: property,
-			defaultValue: getDefaultPropValue(componentRef, property),
-		};
-	});
-};
 
 const getChildComponentsData = (
 	componentRef,

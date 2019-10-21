@@ -66,7 +66,7 @@ export const defaultProps = {
 	onSelect: _.noop,
 };
 
-const Checkbox: FC<ICheckboxProps> = (props): React.ReactElement => {
+export const Checkbox: FC<ICheckboxProps> = (props): React.ReactElement => {
 	const {
 		className,
 		isIndeterminate,

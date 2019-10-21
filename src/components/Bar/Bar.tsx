@@ -51,7 +51,7 @@ const defaultProps = {
 	hasStroke: false,
 };
 
-const Bar: FC<IBarProps> = (props): React.ReactElement => {
+export const Bar: FC<IBarProps> = (props): React.ReactElement => {
 	const {
 		className,
 		color,

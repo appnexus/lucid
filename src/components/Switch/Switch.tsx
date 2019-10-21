@@ -68,7 +68,7 @@ const defaultProps = {
 	isIncludeExclude: false,
 };
 
-const Switch: FC<ISwitchProps> = (props): React.ReactElement => {
+export const Switch: FC<ISwitchProps> = (props): React.ReactElement => {
 	const {
 		className,
 		isDisabled,

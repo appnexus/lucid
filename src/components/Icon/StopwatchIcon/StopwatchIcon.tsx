@@ -8,7 +8,7 @@ const cx = lucidClassNames.bind('&-StopwatchIcon');
 
 interface IStopwatchIconProps extends IIconProps {}
 
-const StopwatchIcon: FC<IStopwatchIconProps> = ({
+export const StopwatchIcon: FC<IStopwatchIconProps> = ({
 	className,
 	...passThroughs
 }): React.ReactElement => {

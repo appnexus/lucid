@@ -8,7 +8,7 @@ const cx = lucidClassNames.bind('&-DeleteIcon');
 
 interface IDeleteIconProps extends IIconProps {}
 
-const DeleteIcon: FC<IDeleteIconProps> = ({
+export const DeleteIcon: FC<IDeleteIconProps> = ({
 	className,
 	...passThroughs
 }): React.ReactElement => {

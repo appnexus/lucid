@@ -18,7 +18,7 @@ export interface IUnderlineProps
 	match?: string | RegExp;
 }
 
-const Underline: FC<IUnderlineProps> = ({
+export const Underline: FC<IUnderlineProps> = ({
 	className,
 	children,
 	match,

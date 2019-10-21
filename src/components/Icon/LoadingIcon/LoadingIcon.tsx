@@ -20,7 +20,7 @@ interface ILoadingIconProps extends IIconProps {
 	speed?: keyof typeof durations;
 }
 
-const LoadingIcon: FC<ILoadingIconProps> = ({
+export const LoadingIcon: FC<ILoadingIconProps> = ({
 	className,
 	speed = 'normal',
 	style,

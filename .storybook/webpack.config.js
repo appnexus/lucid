@@ -6,6 +6,8 @@
 // When you add this file, we won't add the default configurations which is similar
 // to "React Create App". This only has babel loader to load JavaScript.
 
+const path = require('path');
+
 module.exports = ({ config, mode }) => {
 	config = {
 		...config,
@@ -19,7 +21,24 @@ module.exports = ({ config, mode }) => {
 				...config.module.rules,
 				{
 					test: /\.tsx?$/,
-					loader: 'ts-loader',
+					use: [
+						{
+							loader: 'ts-loader',
+						},
+						{
+							loader: 'react-docgen-typescript-loader',
+							options: {
+								tsconfigPath: path.resolve(__dirname, '../tsconfig.json'),
+								setDisplayName: false,
+								propFilter: (prop, component) => {
+									if (prop.parent) {
+										return !prop.parent.fileName.includes('node_modules');
+									}
+									return true;
+								},
+							},
+						},
+					],
 					exclude: /node_modules/,
 				},
 				{

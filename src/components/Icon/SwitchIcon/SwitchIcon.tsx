@@ -8,7 +8,7 @@ const cx = lucidClassNames.bind('&-SwitchIcon');
 
 interface ISwitchIconProps extends IIconProps {}
 
-const SwitchIcon: FC<ISwitchIconProps> = ({
+export const SwitchIcon: FC<ISwitchIconProps> = ({
 	className,
 	...passThroughs
 }): React.ReactElement => {

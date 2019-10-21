@@ -52,7 +52,7 @@ const defaultProps = {
 	totalSlides: 8,
 };
 
-const InfiniteSlidePanel: IInfiniteSlidePanelFC = (
+export const InfiniteSlidePanel: IInfiniteSlidePanelFC = (
 	props
 ): React.ReactElement => {
 	const {

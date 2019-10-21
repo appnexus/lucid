@@ -8,7 +8,7 @@ const cx = lucidClassNames.bind('&-FolderIcon');
 
 interface IFolderIconProps extends IIconProps {}
 
-const FolderIcon: FC<IFolderIconProps> = ({
+export const FolderIcon: FC<IFolderIconProps> = ({
 	className,
 	...passThroughs
 }): React.ReactElement => {

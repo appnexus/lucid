@@ -8,7 +8,7 @@ const cx = lucidClassNames.bind('&-LinkedIcon');
 
 interface ILinkedIconProps extends IIconProps {}
 
-const LinkedIcon: FC<ILinkedIconProps> = ({
+export const LinkedIcon: FC<ILinkedIconProps> = ({
 	className,
 	...passThroughs
 }): React.ReactElement => {

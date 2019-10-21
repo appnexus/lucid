@@ -2026,6 +2026,11 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 12.s
       1,
     ]
   }
+  style={
+    Object {
+      "minHeight": 220,
+    }
+  }
 >
   <DropMenu.Control>
     <div

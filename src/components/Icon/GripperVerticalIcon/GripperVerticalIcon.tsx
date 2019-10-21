@@ -8,7 +8,7 @@ const cx = lucidClassNames.bind('&-GripperVerticalIcon');
 
 interface IGripperVerticalIconProps extends IIconProps {}
 
-const GripperVerticalIcon: FC<IGripperVerticalIconProps> = ({
+export const GripperVerticalIcon: FC<IGripperVerticalIconProps> = ({
 	className,
 	...passThroughs
 }): React.ReactElement => {

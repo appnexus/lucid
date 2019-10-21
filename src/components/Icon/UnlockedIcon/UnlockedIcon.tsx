@@ -8,7 +8,7 @@ const cx = lucidClassNames.bind('&-UnlockedIcon');
 
 interface IUnlockedIconProps extends IIconProps {}
 
-const UnlockedIcon: FC<IUnlockedIconProps> = ({
+export const UnlockedIcon: FC<IUnlockedIconProps> = ({
 	className,
 	...passThroughs
 }): React.ReactElement => {

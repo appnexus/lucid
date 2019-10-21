@@ -53,7 +53,7 @@ const defaultProps = {
 	scale: 1,
 };
 
-const Point: FC<IPointProps> = (props): React.ReactElement => {
+export const Point: FC<IPointProps> = (props): React.ReactElement => {
 	const {
 		color,
 		hasStroke,

@@ -8,7 +8,7 @@ const cx = lucidClassNames.bind('&-MinusIcon');
 
 interface IMinusIconProps extends IIconProps {}
 
-const MinusIcon: FC<IMinusIconProps> = ({
+export const MinusIcon: FC<IMinusIconProps> = ({
 	className,
 	...passThroughs
 }): React.ReactElement => {

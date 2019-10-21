@@ -8,7 +8,7 @@ const cx = lucidClassNames.bind('&-MaximizeIcon');
 
 interface IMaximizeIconProps extends IIconProps {}
 
-const MaximizeIcon: FC<IMaximizeIconProps> = ({
+export const MaximizeIcon: FC<IMaximizeIconProps> = ({
 	className,
 	...passThroughs
 }): React.ReactElement => {
