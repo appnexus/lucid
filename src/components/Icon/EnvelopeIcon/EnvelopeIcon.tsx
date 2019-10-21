@@ -8,7 +8,7 @@ const cx = lucidClassNames.bind('&-EnvelopeIcon');
 
 interface IEnvelopeIconProps extends IIconProps {}
 
-const EnvelopeIcon: FC<IEnvelopeIconProps> = ({
+export const EnvelopeIcon: FC<IEnvelopeIconProps> = ({
 	className,
 	...passThroughs
 }): React.ReactElement => {

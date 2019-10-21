@@ -28,10 +28,24 @@ const SingleSelect = createClass({
 	statics: {
 		peek: {
 			description: `
-				A selector control (like native \`<select>\`) which is used to select a
-				single option from a dropdown list.  Supports option groups with and
-				without labels.
+			A dropdown list. 
 			`,
+			notes: {
+				overview: `
+					A dropdown list. A dropdown menu appears when you click on the trigger and allows you to choose one option and execute relevant actions.
+				`,
+				intendedUse: `
+					Allow users to select a single item from a list of 3-10 options.
+										
+					**Styling notes**
+					
+					- Use \`basic\` in forms. The blue outline helps users clearly see that a selection has been made.
+					- Use \`no selection highlighting\` if the default selection is All or a null state. The grey outline indicates that this selection does not need users' attention.
+					- Use \`invisible\` for filters within a full page table header. The lack of outline allows the dropdown to have a lighter visual weight within a data-intense layout.
+				`,
+				technicalRecommendations: `
+				`,
+			},
 			categories: ['controls', 'selectors'],
 			madeFrom: ['DropMenu'],
 		},

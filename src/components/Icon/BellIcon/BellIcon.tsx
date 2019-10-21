@@ -8,7 +8,7 @@ const cx = lucidClassNames.bind('&-BellIcon');
 
 interface IBellIconProps extends IIconProps {}
 
-const BellIcon: FC<IBellIconProps> = ({
+export const BellIcon: FC<IBellIconProps> = ({
 	className,
 	...passThroughs
 }): React.ReactElement => {

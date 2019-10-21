@@ -8,7 +8,7 @@ const cx = lucidClassNames.bind('&-CheckIcon');
 
 interface ICheckIconProps extends IIconProps {}
 
-const CheckIcon: FC<ICheckIconProps> = ({
+export const CheckIcon: FC<ICheckIconProps> = ({
 	className,
 	...passThroughs
 }): React.ReactElement => {
@@ -28,15 +28,15 @@ const CheckIcon: FC<ICheckIconProps> = ({
 	);
 };
 
-(CheckIcon.displayName = 'CheckIcon'),
-	(CheckIcon.peek = {
-		description: `
+CheckIcon.displayName = 'CheckIcon';
+CheckIcon.peek = {
+	description: `
 		A check icon.
 	`,
-		categories: ['visual design', 'icons'],
-		extend: 'Icon',
-		madeFrom: ['Icon'],
-	});
+	categories: ['visual design', 'icons'],
+	extend: 'Icon',
+	madeFrom: ['Icon'],
+};
 CheckIcon.propTypes = {
 	...iconPropTypes,
 };

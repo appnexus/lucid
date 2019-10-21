@@ -50,7 +50,7 @@ const defaultProps = {
 	percentComplete: 0,
 };
 
-const ProgressBar: IProgressBarFC = (props): React.ReactElement => {
+export const ProgressBar: IProgressBarFC = (props): React.ReactElement => {
 	const {
 		kind,
 		percentComplete,

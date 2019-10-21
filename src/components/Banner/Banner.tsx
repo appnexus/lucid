@@ -62,7 +62,7 @@ const defaultProps = {
 	isClosed: false,
 };
 
-const Banner: FC<IBannerProps> = (props): React.ReactElement => {
+export const Banner: FC<IBannerProps> = (props): React.ReactElement => {
 	const {
 		icon,
 		kind,

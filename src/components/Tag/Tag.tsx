@@ -52,7 +52,7 @@ const defaultProps = {
 	onRemove: _.noop
 };
 
-const Tag: FC<ITagProps> = (props): React.ReactElement => {
+export const Tag: FC<ITagProps> = (props): React.ReactElement => {
 	const {
 		isTop,
 		isRemovable,

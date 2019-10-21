@@ -8,7 +8,7 @@ const cx = lucidClassNames.bind('&-SettingsIcon');
 
 interface ISettingsIconProps extends IIconProps {}
 
-const SettingsIcon: FC<ISettingsIconProps> = ({
+export const SettingsIcon: FC<ISettingsIconProps> = ({
 	className,
 	...passThroughs
 }): React.ReactElement => {

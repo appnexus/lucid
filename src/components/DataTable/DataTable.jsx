@@ -34,6 +34,37 @@ const DataTable = createClass({
 				component to make it easier to define data-driven tables and render an
 				array of objects.
 			`,
+			notes: {
+				overview: `
+					\`DataTable\` provides a simple abstraction over the \`Table\`
+					component to make it easier to define data-driven tables and render an
+					array of objects.
+				`,
+				intendedUse: `
+					\`DataTable\` is optimized for our two main uses, full page and in-line tables.
+	
+					**Full page table**
+					
+					Tables that cover the entire page, or are the main focus on the page. Generally used for managing and monitoring objects.
+					
+					**In-line tables**
+					
+					Tables insides containers such as \`Dialog\` or \`Panel\`. Generally used for details panels and actions dialogs.
+										
+					**Styling notes**
+					
+					- Preferred column alignment shown in \`basic\` example, column header alignment should match column content
+						- strings left-aligned
+						- currency right-aligned
+						- icons/buttons centered
+					- Use grey footer for full page tables, \`hasLightFooter={false}\`
+					- Use white footer for in-line tables, \`hasLightFooter={true}\`
+				`,
+				technicalRecommendations: `
+					- There is a pre-styled state for tables with no data, see the \`empty\` example
+					- There should be no row hover state if the rows are not clickable, see example (?)
+				`,
+			},
 			categories: ['table'],
 			madeFrom: ['Checkbox', 'EmptyStateWrapper', 'ScrollTable'],
 		},

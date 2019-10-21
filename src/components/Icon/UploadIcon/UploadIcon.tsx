@@ -8,7 +8,7 @@ const cx = lucidClassNames.bind('&-UploadIcon');
 
 interface IUploadIconProps extends IIconProps {}
 
-const UploadIcon: FC<IUploadIconProps> = ({
+export const UploadIcon: FC<IUploadIconProps> = ({
 	className,
 	...passThroughs
 }): React.ReactElement => {

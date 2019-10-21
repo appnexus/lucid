@@ -45,7 +45,7 @@ export interface ICheckboxLabeledFC extends FC<ICheckboxLabeledProps> {
 	Label: FC<ILabelProps>;
 }
 
-const CheckboxLabeled: ICheckboxLabeledFC = (props): React.ReactElement => {
+export const CheckboxLabeled: ICheckboxLabeledFC = (props): React.ReactElement => {
 	const {
 		className,
 		isIndeterminate,

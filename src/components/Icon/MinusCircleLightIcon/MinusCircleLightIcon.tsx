@@ -15,7 +15,7 @@ interface IMinusCircleLightIconProps extends IIconProps {
 	isActive?: boolean;
 }
 
-const MinusCircleLightIcon: FC<IMinusCircleLightIconProps> = ({
+export const MinusCircleLightIcon: FC<IMinusCircleLightIconProps> = ({
 	className,
 	isActive,
 	isDisabled,

@@ -66,7 +66,7 @@ const defaultProps = {
 	overlayKind: 'light' as const,
 };
 
-const OverlayWrapper: IOverlayWrapperFC = (props): React.ReactElement => {
+export const OverlayWrapper: IOverlayWrapperFC = (props): React.ReactElement => {
 	const {
 		hasOverlay,
 		isVisible,

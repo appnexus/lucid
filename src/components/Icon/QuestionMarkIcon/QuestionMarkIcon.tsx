@@ -8,7 +8,7 @@ const cx = lucidClassNames.bind('&-QuestionMarkIcon');
 
 interface IQuestionMarkIconProps extends IIconProps {}
 
-const QuestionMarkIcon: FC<IQuestionMarkIconProps> = ({
+export const QuestionMarkIcon: FC<IQuestionMarkIconProps> = ({
 	className,
 	...passThroughs
 }): React.ReactElement => {

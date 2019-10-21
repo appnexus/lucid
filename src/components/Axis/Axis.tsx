@@ -74,7 +74,7 @@ const defaultProps = {
 	tickCount: null,
 };
 
-const Axis: FC<IAxisProps> = (props): React.ReactElement => {
+export const Axis: FC<IAxisProps> = (props): React.ReactElement => {
 	const {
 		className,
 		scale,

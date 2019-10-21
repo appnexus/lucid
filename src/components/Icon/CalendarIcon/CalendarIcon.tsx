@@ -8,7 +8,7 @@ const cx = lucidClassNames.bind('&-CalendarIcon');
 
 interface ICalendarIconProps extends IIconProps {}
 
-const CalendarIcon: FC<ICalendarIconProps> = ({
+export const CalendarIcon: FC<ICalendarIconProps> = ({
 	className,
 	...passThroughs
 }): React.ReactElement => {

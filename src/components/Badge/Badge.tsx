@@ -44,7 +44,7 @@ const defaultProps = {
 	type: Type.filled,
 };
 
-const Badge: FC<IBadgeProps> = (props): React.ReactElement => {
+export const Badge: FC<IBadgeProps> = (props): React.ReactElement => {
 	const {
 		className,
 		kind,

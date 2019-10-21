@@ -154,6 +154,22 @@ class ToolTip extends React.Component<IToolTipProps, IToolTipState> {
 				A utility component that creates a transient message anchored to
 				another component.
 			`,
+				notes: {
+					overview: `
+					A text popup shown on hover.
+				`,
+					intendedUse: `
+					Use to provide an explanation for a button, text, or an operation. Often used in conjunction with \`HelpIcon\`.
+										
+					**Styling notes**
+					
+					- Use the {direction} and {alignment} that best suit your layout.
+					- Tooltip titles should fit on a single line and not wrap.
+					- Use black tooltips in most interactions. White tooltips are reserved for use within charts, for example \`LineChart\`.
+				`,
+					technicalRecommendations: `
+				`,
+				},
 				categories: ['communication'],
 				madeFrom: ['ContextMenu'],
 			},

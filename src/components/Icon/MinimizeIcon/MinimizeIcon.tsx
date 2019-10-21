@@ -8,7 +8,7 @@ const cx = lucidClassNames.bind('&-MinimizeIcon');
 
 interface IMinimizeIconProps extends IIconProps {}
 
-const MinimizeIcon: FC<IMinimizeIconProps> = ({
+export const MinimizeIcon: FC<IMinimizeIconProps> = ({
 	className,
 	...passThroughs
 }): React.ReactElement => {

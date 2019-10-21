@@ -86,7 +86,7 @@ const defaultProps = {
 	onSelect: _.noop,
 };
 
-const Icon: FC<IIconProps> = (props): React.ReactElement => {
+export const Icon: FC<IIconProps> = (props): React.ReactElement => {
 	const {
 		className,
 		children,

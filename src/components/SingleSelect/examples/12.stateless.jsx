@@ -10,6 +10,7 @@ export default createClass({
 			<SingleSelect
 				selectedIndex={1}
 				DropMenu={{ focusedIndex: 2, isExpanded: true }}
+				style={{ minHeight: 220 }}
 			>
 				<Placeholder>Select Color</Placeholder>
 

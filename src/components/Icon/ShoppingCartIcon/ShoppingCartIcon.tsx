@@ -8,7 +8,7 @@ const cx = lucidClassNames.bind('&-ShoppingCartIcon');
 
 interface IShoppingCartIconProps extends IIconProps {}
 
-const ShoppingCartIcon: FC<IShoppingCartIconProps> = ({
+export const ShoppingCartIcon: FC<IShoppingCartIconProps> = ({
 	className,
 	...passThroughs
 }): React.ReactElement => {

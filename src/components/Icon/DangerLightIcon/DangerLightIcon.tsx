@@ -8,7 +8,7 @@ const cx = lucidClassNames.bind('&-DangerLightIcon');
 
 interface IDangerLightIconProps extends IIconProps {}
 
-const DangerLightIcon: FC<IDangerLightIconProps> = ({
+export const DangerLightIcon: FC<IDangerLightIconProps> = ({
 	className,
 	isClickable,
 	isDisabled,

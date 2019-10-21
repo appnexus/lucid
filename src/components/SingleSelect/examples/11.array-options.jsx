@@ -11,3 +11,9 @@ export default createClass({
 		);
 	},
 });
+
+// begin-hide-from-docs
+export const notes = `
+If needed, you can pass your dropdown option data as an array.
+`;
+// end-hide-from-docs

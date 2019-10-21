@@ -8,7 +8,7 @@ const cx = lucidClassNames.bind('&-ViewIcon');
 
 interface IViewIconProps extends IIconProps {}
 
-const ViewIcon: FC<IViewIconProps> = ({
+export const ViewIcon: FC<IViewIconProps> = ({
 	className,
 	...passThroughs
 }): React.ReactElement => {

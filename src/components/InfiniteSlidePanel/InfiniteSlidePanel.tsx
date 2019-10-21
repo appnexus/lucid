@@ -68,7 +68,7 @@ const defaultProps = {
 	isLooped: SlidePanel.defaultProps.isLooped,
 };
 
-const InfiniteSlidePanel: IInfiniteSlidePanelFC = (
+export const InfiniteSlidePanel: IInfiniteSlidePanelFC = (
 	props
 ): React.ReactElement => {
 	const {

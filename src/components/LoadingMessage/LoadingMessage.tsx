@@ -87,7 +87,7 @@ export interface ILoadingMessageFC extends FC<ILoadingMessageProps> {
 	Body: FC<ILoadingMessageBodyProps>;
 }
 
-const LoadingMessage: ILoadingMessageFC = (props): React.ReactElement => {
+export const LoadingMessage: ILoadingMessageFC = (props): React.ReactElement => {
 	const { className, ...passThroughs } = props;
 	const { Icon, Title, Body } = LoadingMessage;
 

@@ -8,7 +8,7 @@ const cx = lucidClassNames.bind('&-UserIcon');
 
 interface IUserIconProps extends IIconProps {}
 
-const UserIcon: FC<IUserIconProps> = ({
+export const UserIcon: FC<IUserIconProps> = ({
 	className,
 	...passThroughs
 }): React.ReactElement => {

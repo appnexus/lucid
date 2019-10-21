@@ -28,7 +28,7 @@ export interface ITypographyProps
 		variant: keyof typeof ElementTypes;
 	}
 
-const Typography: FC<ITypographyProps> = (props): React.ReactElement => {
+export const Typography: FC<ITypographyProps> = (props): React.ReactElement => {
 	const { children, className, variant, ...passThroughs } = props;
 	const Element = ElementTypes[variant ? variant : 'p'];
 

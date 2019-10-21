@@ -8,7 +8,7 @@ const cx = lucidClassNames.bind('&-DownloadIcon');
 
 interface IDownloadIconProps extends IIconProps {}
 
-const DownloadIcon: FC<IDownloadIconProps> = ({
+export const DownloadIcon: FC<IDownloadIconProps> = ({
 	className,
 	...passThroughs
 }): React.ReactElement => {

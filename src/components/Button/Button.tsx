@@ -78,7 +78,7 @@ const defaultProps = {
 };
 
 /** Test Button description */
-const Button: FC<IButtonProps> = (props): React.ReactElement => {
+export const Button: FC<IButtonProps> = (props): React.ReactElement => {
 	const {
 		isDisabled,
 		isActive,

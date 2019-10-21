@@ -8,7 +8,7 @@ const cx = lucidClassNames.bind('&-SearchIcon');
 
 interface ISearchIconProps extends IIconProps {}
 
-const SearchIcon: FC<ISearchIconProps> = ({
+export const SearchIcon: FC<ISearchIconProps> = ({
 	className,
 	...passThroughs
 }): React.ReactElement => {
