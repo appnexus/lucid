@@ -59,7 +59,7 @@ export interface IDateSelectProps extends StandardProps {
 
 	/** The next selection that is expected. Primarily used to preview expected
 			ranges when the cursor is on a target date. */
-	selectMode: 'day' | 'from' | 'to';
+	selectMode?: 'day' | 'from' | 'to';
 
 	/** Sets first month in view on render. The 0 value for the \`offset\` prop
 			refers to this month. */

@@ -24,6 +24,8 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 01.b
   onFocusOption={[Function]}
   onFocusPrev={[Function]}
   onSelect={[Function]}
+  optionContainerStyle={Object {}}
+  portalId=""
   selectedIndices={Array []}
 >
   <DropMenu.Control>
@@ -93,6 +95,8 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 02.n
   onFocusOption={[Function]}
   onFocusPrev={[Function]}
   onSelect={[Function]}
+  optionContainerStyle={Object {}}
+  portalId=""
   selectedIndices={Array []}
 >
   <DropMenu.Control>
@@ -165,6 +169,8 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 03.f
   onFocusOption={[Function]}
   onFocusPrev={[Function]}
   onSelect={[Function]}
+  optionContainerStyle={Object {}}
+  portalId=""
   selectedIndices={Array []}
 >
   <DropMenu.Control>
@@ -276,6 +282,8 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 04.g
   onFocusOption={[Function]}
   onFocusPrev={[Function]}
   onSelect={[Function]}
+  optionContainerStyle={Object {}}
+  portalId=""
   selectedIndices={Array []}
 >
   <DropMenu.Control>
@@ -410,6 +418,8 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 05.d
   onFocusOption={[Function]}
   onFocusPrev={[Function]}
   onSelect={[Function]}
+  optionContainerStyle={Object {}}
+  portalId=""
   selectedIndices={Array []}
 >
   <DropMenu.Control>
@@ -479,6 +489,8 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 06.d
   onFocusOption={[Function]}
   onFocusPrev={[Function]}
   onSelect={[Function]}
+  optionContainerStyle={Object {}}
+  portalId=""
   selectedIndices={Array []}
 >
   <DropMenu.Control>
@@ -548,6 +560,8 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.n
   onFocusOption={[Function]}
   onFocusPrev={[Function]}
   onSelect={[Function]}
+  optionContainerStyle={Object {}}
+  portalId=""
   selectedIndices={Array []}
 >
   <DropMenu.Control>
@@ -617,6 +631,8 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 08.m
   onFocusOption={[Function]}
   onFocusPrev={[Function]}
   onSelect={[Function]}
+  optionContainerStyle={Object {}}
+  portalId=""
   selectedIndices={Array []}
 >
   <DropMenu.Control>
@@ -1790,6 +1806,8 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 09.r
   onFocusOption={[Function]}
   onFocusPrev={[Function]}
   onSelect={[Function]}
+  optionContainerStyle={Object {}}
+  portalId=""
   selectedIndices={Array []}
 >
   <DropMenu.Control>
@@ -1887,6 +1905,8 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 10.n
   onFocusOption={[Function]}
   onFocusPrev={[Function]}
   onSelect={[Function]}
+  optionContainerStyle={Object {}}
+  portalId=""
   selectedIndices={Array []}
 >
   <DropMenu.Control>
@@ -1956,6 +1976,8 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 11.a
   onFocusOption={[Function]}
   onFocusPrev={[Function]}
   onSelect={[Function]}
+  optionContainerStyle={Object {}}
+  portalId=""
   selectedIndices={Array []}
 >
   <DropMenu.Control>
@@ -2021,6 +2043,8 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 12.s
   onFocusOption={[Function]}
   onFocusPrev={[Function]}
   onSelect={[Function]}
+  optionContainerStyle={Object {}}
+  portalId=""
   selectedIndices={
     Array [
       1,
@@ -2140,6 +2164,8 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 13.i
   onFocusOption={[Function]}
   onFocusPrev={[Function]}
   onSelect={[Function]}
+  optionContainerStyle={Object {}}
+  portalId=""
   selectedIndices={Array []}
 >
   <DropMenu.Control>
@@ -2209,6 +2235,8 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 14.i
   onFocusOption={[Function]}
   onFocusPrev={[Function]}
   onSelect={[Function]}
+  optionContainerStyle={Object {}}
+  portalId=""
   selectedIndices={Array []}
 >
   <DropMenu.Control>
@@ -2278,6 +2306,8 @@ exports[`SingleSelect child elements Option should render Option.Selected in the
   onFocusOption={[Function]}
   onFocusPrev={[Function]}
   onSelect={[Function]}
+  optionContainerStyle={Object {}}
+  portalId=""
   selectedIndices={
     Array [
       1,

@@ -80,26 +80,26 @@ const defaultProps = {
 
 interface ISubmarineProps extends StandardProps {
 	/** Sets the starting height of the Bar. */
-	height?: number;
+	height: number;
 
 	/** Force the Submarine to be expanded or collapsed. */
-	isExpanded?: boolean;
+	isExpanded: boolean;
 
 	/** Indicates if the Submarine should be shown or not.  This will override
 			the value of isExpanded. */
-	isHidden?: boolean;
+	isHidden: boolean;
 
 	/** Indicates if the Title should be shown when the Submarine is collapsed */
-	isTitleShownCollapsed?: boolean;
+	isTitleShownCollapsed: boolean;
 
 	/** Allows animated expand and collapse behavior. */
-	isAnimated?: boolean;
+	isAnimated: boolean;
 
 	/** Render the Submarine to the top or bottom of primary content. */
-	position?: 'top' | 'bottom';
+	position: 'top' | 'bottom';
 
 	/** Disable user resizing of the Submarine. */
-	isResizeDisabled?: boolean;
+	isResizeDisabled: boolean;
 
 	/** Set the title of the Submarine. */
 	Title?: React.ReactNode;

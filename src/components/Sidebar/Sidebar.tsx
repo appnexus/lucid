@@ -110,19 +110,19 @@ export interface ISidebarState {
 
 export interface ISidebarProps extends StandardProps {
 	/** Sets the starting width of the Bar. */
-	width?: number;
+	width: number;
 
 	/** Force the Sidebar to be expanded or collapsed. */
-	isExpanded?: boolean;
+	isExpanded: boolean;
 
 	/** Allows animated expand and collapse behavior. */
-	isAnimated?: boolean;
+	isAnimated: boolean;
 
 	/** Render the Sidebar to the left or right of primary content. */
-	position?: 'left' | 'right';
+	position: 'left' | 'right';
 
 	/** Disable user resizing of the Sidebar. */
-	isResizeDisabled?: boolean;
+	isResizeDisabled: boolean;
 
 	/** Set the title of the Sidebar. (alias for \`Title\` and \`Sidebar.Title\`) */
 	title?: React.ReactNode;

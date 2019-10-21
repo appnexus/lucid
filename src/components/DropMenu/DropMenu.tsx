@@ -223,7 +223,7 @@ export interface IDropMenuProps extends StandardProps {
 	selectedIndices: number[];
 
 	/** The currently focused index of \`DropMenu.Option\`. Can also be \`null\`. */
-	focusedIndex: number;
+	focusedIndex: number | null;
 
 	/** The \`id\` of the flyout menu portal element that is appended to
 			\`document.body\`. Defaults to a generated id. */
@@ -300,34 +300,34 @@ export interface IDropMenuProps extends StandardProps {
 
 	/** *Child Element* - The control target which the flyout menu is anchored
 			to. Only one \`Control\` is used. */
-	Control: React.ReactNode;
+	Control?: React.ReactNode;
 
 	/** *Child Element* - These are menu options. The \`optionIndex\` is in-order
 			of rendering regardless of group nesting, starting with index \`0\`.
 			Each \`Option\` may be passed a prop called \`isDisabled\` to disable
 			selection of that \`Option\`.  Any other props pass to Option will be
 			available from the \`onSelect\` handler. */
-	Option: React.ReactNode;
+	Option?: React.ReactNode;
 
 	/** *Child Element* - Used to group \`Option\`s within the menu. Any
 			non-\`Option\`s passed in will be rendered as a label for the group. */
-	OptionGroup: React.ReactNode;
+	OptionGroup?: React.ReactNode;
 
 	/** *Child Element* - A special kind of \`Option\` that is always rendered at
 			the top of the menu and has an \`optionIndex\` of \`null\`. Useful for
 			unselect. */
-	NullOption: React.ReactNode;
+	NullOption?: React.ReactNode;
 
 	/** *Child Element* - An optional header to be displayed within the expanded
 			Flyout, above all \`Option\`s. */
-	Header: React.ReactNode;
+	Header?: React.ReactNode;
 
 	/** *Child Element* - props pass through to the underlying ContextMenu
 			component */
-	ContextMenu: React.ReactNode;
+	ContextMenu?: React.ReactNode;
 	/** *Child Element* - A special kind of \`Option\` that is always rendered at the top of
 			the menu. */
-	FixedOption: React.ReactNode;
+	FixedOption?: React.ReactNode;
 }
 
 interface IOptionsData {
@@ -358,7 +358,6 @@ class DropMenu extends React.Component<IDropMenuProps, IDropMenuState> {
 
 	constructor(props: IDropMenuProps) {
 		super(props);
-
 		this.state = {
 			optionGroups: [],
 			flattenedOptionsData: [],
@@ -555,6 +554,8 @@ class DropMenu extends React.Component<IDropMenuProps, IDropMenuState> {
 		onFocusNext: _.noop,
 		onFocusPrev: _.noop,
 		onFocusOption: _.noop,
+		portalId: '',
+		optionContainerStyle: {},
 		ContextMenu: ContextMenu.defaultProps,
 	};
 
@@ -679,7 +680,7 @@ class DropMenu extends React.Component<IDropMenuProps, IDropMenuState> {
 				event.preventDefault();
 				const focusedOptionData = _.get(
 					flattenedOptionsData,
-					focusedIndex,
+					_.isNil(focusedIndex) ? '' : focusedIndex,
 					null
 				);
 				const focusedOptionProps = _.get(
@@ -705,7 +706,7 @@ class DropMenu extends React.Component<IDropMenuProps, IDropMenuState> {
 							onFocusOption(null, { props, event });
 						}
 					}
-					if (focusedIndex > 0) {
+					if (!_.isNil(focusedIndex) && focusedIndex > 0) {
 						event.preventDefault();
 						onFocusOption(
 							_.findLastIndex(
@@ -744,7 +745,11 @@ class DropMenu extends React.Component<IDropMenuProps, IDropMenuState> {
 				} else {
 					event.preventDefault();
 					onFocusOption(
-						_.findIndex(flattenedOptionsData, isOptionVisible, focusedIndex),
+						_.findIndex(
+							flattenedOptionsData,
+							isOptionVisible,
+							!_.isNil(focusedIndex) ? focusedIndex : undefined
+						),
 						{ props, event }
 					);
 				}

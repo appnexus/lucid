@@ -26,8 +26,6 @@ ButtonGroupButton.peek = {
 
 const defaultProps = {
 	onSelect: _.noop,
-	className: null,
-	children: null,
 	selectedIndices: [],
 };
 

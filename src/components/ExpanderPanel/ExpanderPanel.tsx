@@ -44,14 +44,14 @@ Header.propTypes = {
 interface IExpanderPanelProps extends StandardProps {
 	/** Indicates that the component is in the "expanded" state when true and in
 			the "unexpanded" state when false. */
-	isExpanded?: boolean;
+	isExpanded: boolean;
 
 	/** Indicates that the component is in the "disabled" state when true and in
 			the "enabled" state when false. */
-	isDisabled?: boolean;
+	isDisabled: boolean;
 
 	/** Controls the presence of padding on the inner content. */
-	hasPadding?: boolean;
+	hasPadding: boolean;
 
 	/** Called when the user clicks on the component's header.
 			Signature: \`(isExpanded, { event, props }) => {}\` */
@@ -134,6 +134,7 @@ class ExpanderPanel extends React.Component<
 		isExpanded: false,
 		onToggle: _.noop,
 		hasPadding: true,
+		isDisabled: false,
 	};
 
 	handleToggle = (event: React.MouseEvent) => {

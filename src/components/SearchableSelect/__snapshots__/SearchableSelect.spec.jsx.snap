@@ -36,6 +36,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
       "maxHeight": "200",
     }
   }
+  portalId=""
   selectedIndices={Array []}
 >
   <DropMenu.Control>
@@ -841,6 +842,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
       "maxHeight": "200",
     }
   }
+  portalId=""
   selectedIndices={Array []}
 >
   <DropMenu.Control>
@@ -1380,6 +1382,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
       "maxHeight": "200",
     }
   }
+  portalId=""
   selectedIndices={Array []}
 >
   <DropMenu.Control>
@@ -1483,6 +1486,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
       "maxHeight": "200",
     }
   }
+  portalId=""
   selectedIndices={Array []}
 >
   <DropMenu.Control>
@@ -2284,6 +2288,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
   onFocusPrev={[Function]}
   onSelect={[Function]}
   optionContainerStyle={Object {}}
+  portalId=""
   selectedIndices={Array []}
 >
   <DropMenu.Control>
@@ -2408,6 +2413,7 @@ exports[`SearchableSelect child elements Option should render Option child funct
   onFocusPrev={[Function]}
   onSelect={[Function]}
   optionContainerStyle={Object {}}
+  portalId=""
   selectedIndices={Array []}
 >
   <DropMenu.Control>
@@ -2508,6 +2514,7 @@ exports[`SearchableSelect child elements Option should render Option.Selected in
   onFocusPrev={[Function]}
   onSelect={[Function]}
   optionContainerStyle={Object {}}
+  portalId=""
   selectedIndices={
     Array [
       1,
