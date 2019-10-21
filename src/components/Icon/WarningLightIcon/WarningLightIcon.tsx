@@ -33,7 +33,7 @@ export const WarningLightIcon: FC<IWarningLightIconProps> = ({
 			)}
 		>
 			<path className={cx('&-background')} d='M.5 15h15L8 .5z' />
-			<path className={cx('&-mark')} d='M7.99 6v4' />
+			<path className={cx('&-mark')} d='M7.99 5v4' />
 			<circle className={cx('&-mark')} cx='7.99' cy='12' r='.293' />
 		</Icon>
 	);
