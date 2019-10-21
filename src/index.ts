@@ -22,7 +22,6 @@ import SearchableSingleSelect, {
 	SearchableSingleSelectDumb,
 	// @ts-ignore: not converted yet
 } from './components/SearchableSingleSelect/SearchableSingleSelect';
-// @ts-ignore: not converted yet
 import DropMenu, { DropMenuDumb } from './components/DropMenu/DropMenu';
 import Expander, { ExpanderDumb } from './components/Expander/Expander';
 import ExpanderPanel, {

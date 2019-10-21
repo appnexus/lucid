@@ -20,7 +20,7 @@ const cx = lucidClassNames.bind('&-ContextMenu');
 const { bool, node, func, number, object, oneOf, string } = PropTypes;
 
 interface IContextMenuTargetProps extends StandardProps {
-	elementType: string;
+	elementType?: string;
 }
 const ContextMenuTarget: FC<IContextMenuTargetProps> = (): null => null;
 ContextMenuTarget.displayName = 'ContextMenu.Target';
