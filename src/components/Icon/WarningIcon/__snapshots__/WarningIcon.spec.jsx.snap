@@ -18,7 +18,7 @@ exports[`WarningIcon [common] example testing should match snapshot(s) for 1.def
   />
   <path
     className="lucid-WarningIcon-mark"
-    d="M7.99 6v4"
+    d="M7.99 5v4"
   />
   <circle
     className="lucid-WarningIcon-mark"
