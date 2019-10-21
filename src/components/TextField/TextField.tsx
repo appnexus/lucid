@@ -39,7 +39,7 @@ export interface ITextFieldProps extends StandardProps {
 	) => void;
 
 	/** Fires an on the `input`'s onBlur. */
-	onBlur?: (
+	onBlur: (
 		currentValue: string,
 		{
 			event,
@@ -271,9 +271,7 @@ class TextField extends React.Component<
 		if (onChangeDebounced !== _.noop) {
 			this.handleChangeDebounced.flush();
 		}
-		if (onBlur) {
-			onBlur(value, { event, props: this.props });
-		}
+		onBlur(value, { event, props: this.props });
 	};
 
 	handleKeyDown = (event: React.KeyboardEvent): void => {

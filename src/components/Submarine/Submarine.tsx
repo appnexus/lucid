@@ -111,13 +111,13 @@ interface ISubmarineProps extends StandardProps {
 	Bar?: React.ReactNode;
 
 	/** Called when the user is currently resizing the Submarine. */
-	onResizing?: (
+	onResizing: (
 		height: number,
 		{ event, props }: { event: MouseEvent | TouchEvent; props: ISubmarineProps }
 	) => void;
 
 	/** Called when the user resizes the Submarine. */
-	onResize?: (
+	onResize: (
 		height: number,
 		{ event, props }: { event: MouseEvent | TouchEvent; props: ISubmarineProps }
 	) => void;
@@ -245,9 +245,7 @@ class Submarine extends React.Component<ISubmarineProps, ISubmarineState> {
 	) => {
 		const { onResizing } = this.props;
 
-		if (onResizing) {
-			onResizing(height, { props: this.props, event });
-		}
+		onResizing(height, { props: this.props, event });
 	};
 
 	handleResize = (
@@ -256,9 +254,7 @@ class Submarine extends React.Component<ISubmarineProps, ISubmarineState> {
 	) => {
 		const { onResize } = this.props;
 
-		if (onResize) {
-			onResize(height, { props: this.props, event });
-		}
+		onResize(height, { props: this.props, event });
 	};
 
 	render() {

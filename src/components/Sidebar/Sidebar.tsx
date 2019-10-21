@@ -131,19 +131,19 @@ export interface ISidebarProps extends StandardProps {
 	Title?: React.ReactNode;
 
 	/** Called when the user is currently resizing the Sidebar. */
-	onResizing?: (
+	onResizing: (
 		width: number,
 		{ event, props }: { event: MouseEvent | TouchEvent; props: ISidebarProps }
 	) => void;
 
 	/** Called when the user resizes the Sidebar. */
-	onResize?: (
+	onResize: (
 		width: number,
 		{ event, props }: { event: MouseEvent | TouchEvent; props: ISidebarProps }
 	) => void;
 
 	/** 	Called when the user expands or collapses the Sidebar. */
-	onToggle?: ({
+	onToggle: ({
 		event,
 		props,
 	}: {
@@ -249,9 +249,7 @@ class Sidebar extends React.Component<ISidebarProps, ISidebarState> {
 	handleExpanderClick = (event: React.MouseEvent<HTMLButtonElement>) => {
 		const { onToggle } = this.props;
 
-		if (onToggle) {
-			onToggle({ props: this.props, event });
-		}
+		onToggle({ props: this.props, event });
 	};
 
 	handleResizing = (
@@ -260,9 +258,7 @@ class Sidebar extends React.Component<ISidebarProps, ISidebarState> {
 	) => {
 		const { onResizing } = this.props;
 
-		if (onResizing) {
-			onResizing(width, { props: this.props, event });
-		}
+		onResizing(width, { props: this.props, event });
 	};
 
 	handleResize = (
@@ -271,9 +267,7 @@ class Sidebar extends React.Component<ISidebarProps, ISidebarState> {
 	) => {
 		const { onResize } = this.props;
 
-		if (onResize) {
-			onResize(width, { props: this.props, event });
-		}
+		onResize(width, { props: this.props, event });
 	};
 
 	render() {
