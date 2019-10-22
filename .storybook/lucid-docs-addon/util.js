@@ -73,7 +73,7 @@ const mergePropwithDefaults = (
 	return {
 		name,
 		type,
-		required: required && _.isNil(defaultValueValue),
+		required: required && _.isUndefined(defaultValueValue),
 		description,
 		defaultValue: defaultValueValue,
 	};
