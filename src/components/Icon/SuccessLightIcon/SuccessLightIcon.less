@@ -5,14 +5,13 @@
 	stroke: @featured-color-success;
 
 	&-is-clickable:not(&-is-disabled):hover &-background,
-	&-is-active &-background {
-		stroke: @featured-color-success-colorHover;
-		fill: @featured-color-success-colorHover;
+	&-is-active:hover &-background {
+		stroke: @featured-color-success;
+		fill: @featured-color-success;
 	}
 
 	&-is-clickable:not(&-is-disabled):hover &-check,
-	&-is-active &-check {
+	&-is-active:hover &-check {
 		stroke: @color-white;
 	}
 }
-
