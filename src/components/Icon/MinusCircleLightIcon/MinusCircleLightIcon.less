@@ -5,7 +5,7 @@
 	stroke: @color-secondary-1;
 
 	&-is-clickable:not(&-is-disabled):hover &-dash,
-	&-is-active:hover &-dash {
+	&-is-active &-dash {
 		stroke: @color-white;
 	}
 
@@ -13,8 +13,13 @@
 		stroke: @color-secondary-1;
 	}
 
+	&-is-clickable&-is-active:not(&-is-disabled):hover &-background {
+		fill: @color-secondary-1-hover;
+		stroke: @color-secondary-1-hover;
+	}
+
 	&-is-clickable:not(&-is-disabled):hover &-background,
-	&-is-active:hover &-background {
+	&-is-active &-background {
 		stroke: @color-secondary-1;
 		fill: @color-secondary-1;
 	}
