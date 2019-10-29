@@ -75,6 +75,7 @@ import AudioIcon from './components/Icon/AudioIcon/AudioIcon';
 import Axis from './components/Axis/Axis';
 // @ts-ignore: not converted yet
 import AxisLabel from './components/AxisLabel/AxisLabel';
+import BackUpArrowIcon from './components/Icon/BackUpArrowIcon/BackUpArrowIcon';
 import Badge from './components/Badge/Badge';
 // @ts-ignore: not converted yet
 import Banner from './components/Banner/Banner';
@@ -257,6 +258,7 @@ export {
 	AutocompleteDumb,
 	Axis,
 	AxisLabel,
+	BackUpArrowIcon,
 	Badge,
 	Banner,
 	Bar,
