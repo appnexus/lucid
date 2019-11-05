@@ -47,6 +47,11 @@ export type Overwrite<T, U> = Omit<T, keyof T & keyof U> & U;
 export interface FC<P> extends React.FC<P> {
 	peek: {
 		description: string;
+		notes?: {
+			overview: string;
+			intendedUse: string;
+			technicalRecommendations: string;
+		};
 		categories?: string[];
 		extend?: string;
 		madeFrom?: string[];
