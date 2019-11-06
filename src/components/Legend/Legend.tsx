@@ -73,6 +73,17 @@ export interface ILegendProps
 
 export interface ILegendFC extends FC<ILegendProps> {
 	Item: FC<ILegendProps>;
+
+		/** Called when the user clicks the \`Item\`. */
+		onClick?: ({
+			index,
+			event,
+			props,
+		}: {
+			index: any;
+			event: React.MouseEvent<HTMLLegendElement>;
+			props: ILegendProps;
+		}) => void;
 }
 
 //const Legend = createClass({
@@ -89,20 +100,14 @@ export const Legend: FC<ILegendProps> = (props): React.ReactElement => {
 		...passThroughs
 	} = props as FixDefaults<ILegendProps, typeof defaultProps>;
 
-	const handleItemClick = ({
-		index,
-		props,
-		event,
-	}: {
-		index: number;
-		event: React.MouseEvent;
-		props: ILegendProps;
-	}): any => {	
+	const handleItemClick = (index: any, props: ILegendProps, event: React.MouseEvent<HTMLButtonElement>): void {
 		if (!props.onClick) {
-			return null;
+			return void;
 		}
+
 		props.onClick(index, { props, event });
-	};
+	}
+
 
 	const isHorizontal = orient === 'horizontal';
 	const isVertical = orient === 'vertical';
@@ -137,6 +142,7 @@ export const Legend: FC<ILegendProps> = (props): React.ReactElement => {
 					<li
 						key={index}
 						className={cx(itemClass, '&-Item')}
+						//onClick={_.partial(this.handleItemClick, index, itemProps[index])}
 						onClick={_.partial(this.handleItemClick, index, itemProps[index])}
 					>
 						{hasPoint || hasLine ? (
@@ -174,7 +180,9 @@ export const Legend: FC<ILegendProps> = (props): React.ReactElement => {
 Legend.Item = LegendItem;
 
 Legend.defaultProps = defaultProps;
+
 Legend.displayName = 'Legend';
+
 Legend.peek = {
 	description: `
 			Contrary to the other chart primitives, this component is not rendered
