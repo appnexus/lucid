@@ -210,6 +210,4 @@ export const Legend: FC<ILegendProps> = (props): React.ReactElement => {
 	);
 };
 
-Legend.defaultProps = defaultProps;
-
 export default Legend;
