@@ -18,38 +18,6 @@ const cx = lucidClassNames.bind('&-Legend');
 
 const { number, bool, string, object } = PropTypes;
 
-export interface ILegendProps
-	extends StandardProps {
-	/** Determines if the legend has points */
-	hasPoint?: boolean;
-
-	/** Determines the kind of point  */
-	pointKind?: string;
-		
-	/** Determines if the legend has lines */
-	hasLine?: boolean;
-
-	/** Determines if the sort order of legend items is reversed or not */
-	isReversed?: boolean;
-
-	/** Strings should match an existing color class unless they start with a '#'
-		for specific colors. E.g.:
-
-		- \`COLOR_0\`
-		- \`COLOR_GOOD\`
-		- \`'#123abc'\`
-	 */
-	color?: string;
-}
-
-const defaultProps = {
-	hasPoint: true,
-	pointKind: "",
-	hasLine: true,
-	isReversed: false,
-	color: chartConstants.COLOR_0,
-}
-
 //export default createClass({
 //	render() {
 

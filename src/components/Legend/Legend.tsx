@@ -4,7 +4,7 @@ import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import { 
 	FC,
-	createClass, 
+	//createClass, 
 	findTypes, 
 	omitProps,
 	StandardProps,
@@ -74,38 +74,14 @@ export const Legend: FC<ILegendProps> = (props): React.ReactElement => {
 		...passThroughs
 	} = props as FixDefaults<ILegendProps, typeof defaultProps>;
 
-
-	components: {
-		Item: createClass({
-			displayName: 'Legend.Item',
-			statics: {
-				peek: {
-					description: `
-						Renders a \`<li>\` that describes the data series.
-					`,
-				},
-			},
-			propsName: 'Item',
-			propTypes: {
-				hasPoint: bool,
-				hasLine: bool,
-				color: string`
-					Strings should match an existing color class unless they start with a '#' for specific colors. E.g.:
-
-					- \`COLOR_0\`
-					- \`COLOR_GOOD\`
-					- \`'#123abc'\`
-				`,
-				pointKind: number,
-				onClick: func,
-				className: string`
-					Class names that are appended to the defaults.
-				`,
-			},
-		}),
-	},
-
-	handleItemClick(index, props, event) {
+	const handleItemClick = ({
+		index, 
+		props, 
+		event}: {
+			index: number;
+			event: React.MouseEvent;
+			props: ILegendProps;
+		}): void => {
 		if (!props.onClick) {
 			return null;
 		}
