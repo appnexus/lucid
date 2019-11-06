@@ -2,10 +2,10 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import { 
+import {
 	FC,
-	//createClass, 
-	findTypes, 
+	//createClass,
+	findTypes,
 	omitProps,
 	StandardProps,
 	FixDefaults,
@@ -22,18 +22,19 @@ const LINE_WIDTH = 22;
 
 const { number, string, oneOf, bool, func } = PropTypes;
 
-export interface ILegendProps
-	extends StandardProps {
-
+export interface ILegendProps extends StandardProps {
 	/** Determines if the legend is vertical or horizontal */
-	orient: string;
-	
+	orient?: string;
+
 	/** Determines if the legend has points */
 	hasPoint?: boolean;
 
+	/** Determines if the legend has borders */
+	hasBorders?: boolean;
+
 	/** Determines the kind of point  */
 	pointKind?: string;
-		
+
 	/** Determines if the legend has lines */
 	hasLine?: boolean;
 
@@ -54,10 +55,24 @@ const defaultProps = {
 	orient: 'vertical',
 	hasBorders: true,
 	hasPoint: true,
-	pointKind: "",
+	pointKind: '',
 	hasLine: true,
 	isReversed: false,
 	color: chartConstants.COLOR_0,
+};
+
+export interface ILegendProps
+	extends StandardProps,
+		React.DetailedHTMLProps<
+			React.HTMLAttributes<HTMLDivElement>,
+			HTMLDivElement
+	> {
+		/** Custom Item element (alias for `Legend.Item`) */
+		Item?: React.ReactNode;
+}
+
+export interface ILegendFC extends FC<ILegendProps> {
+	Item: FC<ILegendProps>;
 }
 
 //const Legend = createClass({
@@ -75,27 +90,19 @@ export const Legend: FC<ILegendProps> = (props): React.ReactElement => {
 	} = props as FixDefaults<ILegendProps, typeof defaultProps>;
 
 	const handleItemClick = ({
-		index, 
-		props, 
-		event}: {
-			index: number;
-			event: React.MouseEvent;
-			props: ILegendProps;
-		}): void => {
+		index,
+		props,
+		event,
+	}: {
+		index: number;
+		event: React.MouseEvent;
+		props: ILegendProps;
+	}): any => {	
 		if (!props.onClick) {
 			return null;
 		}
-
 		props.onClick(index, { props, event });
-	},
-
-	const {
-		orient,
-		className,
-		hasBorders,
-		isReversed,
-		...passThroughs
-	} = this.props;
+	};
 
 	const isHorizontal = orient === 'horizontal';
 	const isVertical = orient === 'vertical';
@@ -141,9 +148,7 @@ export const Legend: FC<ILegendProps> = (props): React.ReactElement => {
 								{hasPoint ? (
 									<Point
 										x={
-											hasLine || hasSomeLines
-												? LINE_WIDTH / 2
-												: POINT_SIZE / 2
+											hasLine || hasSomeLines ? LINE_WIDTH / 2 : POINT_SIZE / 2
 										}
 										y={POINT_SIZE / 2}
 										color={color}
@@ -152,8 +157,7 @@ export const Legend: FC<ILegendProps> = (props): React.ReactElement => {
 								) : null}
 								{hasLine ? (
 									<Line
-										d={`M0,${POINT_SIZE / 2} L${LINE_WIDTH},${POINT_SIZE /
-											2}`}
+										d={`M0,${POINT_SIZE / 2} L${LINE_WIDTH},${POINT_SIZE / 2}`}
 										color={color}
 									/>
 								) : null}
@@ -167,10 +171,12 @@ export const Legend: FC<ILegendProps> = (props): React.ReactElement => {
 	);
 };
 
+Legend.Item = LegendItem;
+
 Legend.defaultProps = defaultProps;
 Legend.displayName = 'Legend';
 Legend.peek = {
-		description: `
+	description: `
 			Contrary to the other chart primitives, this component is not rendered
 			in svg. In order to sanely render horizontal legends, we need to know
 			the width of the text elements ahead of rendering time. Since we're
@@ -178,9 +184,11 @@ Legend.peek = {
 			the width is with the DOM function \`getComputedTextLength\`. Variable
 			widths are much more easy to implement outside of svg.
 		`,
-		categories: ['visualizations', 'chart primitives'],
-	};
-Legend.HEIGHT = 28; // exposed for consumer convenience
+	categories: ['visualizations', 'chart primitives'],
+};
+//TODO: Extend the fuctional component for this Height case
+//Legend.HEIGHT = 28; // exposed for consumer convenience
+
 Legend.propTypes = {
 	className: string`
 		Appended to the component-specific class names set on the root element.
@@ -197,7 +205,7 @@ Legend.propTypes = {
 	`,
 };
 
-Item.displayName 'Legend.Item';
+Item.displayName = 'Legend.Item';
 Item.peek = {
 	description: `
 					Renders a \`<li>\` that describes the data series.
@@ -219,7 +227,6 @@ Item.propTypes = {
 	className: string`
 		Class names that are appended to the defaults.
 	`,
-}
-
+};
 
 export default Legend;
