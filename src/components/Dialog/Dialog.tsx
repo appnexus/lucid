@@ -90,7 +90,9 @@ export interface IDialogFC extends FC<IDialogProps> {
 	Footer: FC<IDialogFooterProps>;
 }
 
-export const Dialog: IDialogFC = (props): React.ReactElement => {
+export const Dialog = (
+	props: FixDefaults<IDialogProps, typeof defaultProps>
+) => {
 	const {
 		className,
 		size,
@@ -99,7 +101,7 @@ export const Dialog: IDialogFC = (props): React.ReactElement => {
 		isShown,
 		isComplex,
 		...passThroughs
-	} = props as FixDefaults<IDialogProps, typeof defaultProps>;
+	} = props;
 
 	const headerChildProp = _.get(getFirst(props, Dialog.Header), 'props', {});
 	const footerChildProp = _.get(getFirst(props, Dialog.Footer), 'props', null);
