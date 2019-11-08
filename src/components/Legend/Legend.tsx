@@ -4,7 +4,6 @@ import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import {
 	FC,
-	//createClass,
 	findTypes,
 	omitProps,
 	StandardProps,
@@ -53,8 +52,10 @@ export interface ILegendProps
 
 }
 
+type ILegendItemFC = FC<ILegendItemProps>;
+
 export interface ILegendFC extends FC<ILegendProps> {
-	Item: FC<ILegendItemProps>;
+	Item: ILegendItemFC;
 }
 
 interface ILegendItemProps extends StandardProps {
@@ -67,7 +68,6 @@ interface ILegendItemProps extends StandardProps {
 
 	/** Strings should match an existing color class unless they start with a '#'
 		for specific colors. E.g.:
-
 		- \`COLOR_0\`
 		- \`COLOR_GOOD\`
 		- \`'#123abc'\`
@@ -100,27 +100,24 @@ const handleItemClick = (index: number, props: ILegendItemProps, event: React.Mo
 	props.onClick(index, { props, event });
 }
 
-//const Legend = createClass({
-export const Legend: FC<ILegendProps> = (props): React.ReactElement => {
+export const Legend: ILegendFC = (props): React.ReactElement => {
 	const {
 		className,
 		orient,
 		hasBorders,
 		isReversed,
 		...passThroughs
-	} = props as FixDefaults<ILegendProps, typeof defaultProps>;
+	} = props;
 
 	const isHorizontal = orient === 'horizontal';
 	const isVertical = orient === 'vertical';
 	const itemProps = _.map(findTypes(props, LegendItem), 'props');
 	const hasSomeLines =
-		isVertical && _.some(itemProps, ({ hasLine }) => hasLine);
+		isVertical && _.some(itemProps, ({ hasLine }): boolean => hasLine);
 
 	return (
 		<ul
-			//{...omitProps(passThroughs, Legend)}
 			{...omitProps(passThroughs, undefined, _.keys(Legend.propTypes))}
-			//className={cx(className, '&', {
 			className={cx(
 				'&', 
 				{
@@ -144,11 +141,10 @@ export const Legend: FC<ILegendProps> = (props): React.ReactElement => {
 						className: itemClass,
 					},
 					index
-				) => (
+				): React.ReactElement => (
 					<li
 						key={index}
 						className={cx(itemClass, '&-Item')}
-						//onClick={_.partial(this.handleItemClick, index, itemProps[index])}
 						onClick={_.partial(handleItemClick, index, itemProps[index])}
 					>
 						{hasPoint || hasLine ? (
@@ -183,8 +179,6 @@ export const Legend: FC<ILegendProps> = (props): React.ReactElement => {
 	);
 };
 
-//Legend.Item = LegendItem;
-
 Legend.defaultProps = defaultProps;
 
 Legend.displayName = 'Legend';
@@ -200,6 +194,7 @@ Legend.peek = {
 		`,
 	categories: ['visualizations', 'chart primitives'],
 };
+
 //TODO: Extend the fuctional component for this Height case
 //Legend.HEIGHT = 28; // exposed for consumer convenience
 
@@ -222,8 +217,8 @@ Legend.propTypes = {
 	`,
 };
 
-
 LegendItem.displayName = 'Legend.Item';
+Legend.Item = LegendItem;
 LegendItem.peek = {
 	description: `Renders a \`<li>\` that describes the data series.
 	`,
@@ -232,7 +227,6 @@ LegendItem.propName = 'Item';
 LegendItem.propTypes = {
 	children: any,
 };
-
 LegendItem.propTypes = {
 	hasPoint: bool,
 	hasLine: bool,
