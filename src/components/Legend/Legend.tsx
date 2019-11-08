@@ -14,42 +14,14 @@ import * as chartConstants from '../../constants/charts';
 
 import Point from '../Point/Point';
 import Line from '../Line/Line';
+import { any } from 'prop-types';
 
 const cx = lucidClassNames.bind('&-Legend');
 
 const POINT_SIZE = 12;
 const LINE_WIDTH = 22;
 
-const { number, string, oneOf, bool, func } = PropTypes;
-
-export interface ILegendProps extends StandardProps {
-	/** Determines if the legend is vertical or horizontal */
-	orient?: string;
-
-	/** Determines if the legend has points */
-	hasPoint?: boolean;
-
-	/** Determines if the legend has borders */
-	hasBorders?: boolean;
-
-	/** Determines the kind of point  */
-	pointKind?: string;
-
-	/** Determines if the legend has lines */
-	hasLine?: boolean;
-
-	/** Determines if the sort order of legend items is reversed or not */
-	isReversed?: boolean;
-
-	/** Strings should match an existing color class unless they start with a '#'
-		for specific colors. E.g.:
-
-		- \`COLOR_0\`
-		- \`COLOR_GOOD\`
-		- \`'#123abc'\`
-	 */
-	color?: string;
-}
+const { number, string, oneOf, node, bool, func } = PropTypes;
 
 const defaultProps = {
 	orient: 'vertical',
@@ -67,63 +39,100 @@ export interface ILegendProps
 			React.HTMLAttributes<HTMLDivElement>,
 			HTMLDivElement
 	> {
-		/** Custom Item element (alias for `Legend.Item`) */
-		Item?: React.ReactNode;
+	/** Custom Item element (alias for `Legend.Item`) */
+	Item?: React.ReactNode;
+	
+	/** Determines if the legend is vertical or horizontal */
+	orient?: string;
+
+	/** Determines if the legend has borders */
+	hasBorders?: boolean;
+	
+	/** Determines if the sort order of legend items is reversed or not */
+	isReversed?: boolean;
+
 }
 
 export interface ILegendFC extends FC<ILegendProps> {
-	Item: FC<ILegendProps>;
-
-		/** Called when the user clicks the \`Item\`. */
-		onClick?: ({
-			index,
-			event,
-			props,
-		}: {
-			index: any;
-			event: React.MouseEvent<HTMLLegendElement>;
-			props: ILegendProps;
-		}) => void;
+	Item: FC<ILegendItemProps>;
 }
+
+interface ILegendItemProps extends StandardProps {
+
+	/** Determines if the legend item has points */
+	hasPoint?: boolean;
+
+	/** Determines if the legend item has a line */
+	hasLine: boolean;
+
+	/** Strings should match an existing color class unless they start with a '#'
+		for specific colors. E.g.:
+
+		- \`COLOR_0\`
+		- \`COLOR_GOOD\`
+		- \`'#123abc'\`
+	 */
+	color?: string;
+
+	/** //TODO: give it a description */
+	pointKind?: number;
+
+	/** Called when a user clicks a legend \`Item\`. */
+	onClick?: (
+		index: number,
+	{
+		event,
+		props,
+	}: {
+		event: React.MouseEvent<HTMLLIElement>;
+		props: ILegendItemProps;
+	}) => void;
+
+}
+
+const LegendItem: FC<ILegendItemProps> = (): null => null;
 
 //const Legend = createClass({
 export const Legend: FC<ILegendProps> = (props): React.ReactElement => {
 	const {
+		className,
 		orient,
 		hasBorders,
-		hasPoint,
-		pointKind,
-		hasLine,
 		isReversed,
 		color,
 		style,
 		...passThroughs
 	} = props as FixDefaults<ILegendProps, typeof defaultProps>;
 
-	const handleItemClick = (index: any, props: ILegendProps, event: React.MouseEvent<HTMLButtonElement>): void {
+	const handleItemClick = (index: number, props: ILegendItemProps, event: React.MouseEvent<HTMLLIElement>): void => {
 		if (!props.onClick) {
-			return void;
+			return;
 		}
 
 		props.onClick(index, { props, event });
 	}
 
-
 	const isHorizontal = orient === 'horizontal';
 	const isVertical = orient === 'vertical';
-	const itemProps = _.map(findTypes(this.props, Legend.Item), 'props');
+	const itemProps = _.map(findTypes(props, LegendItem), 'props');
 	const hasSomeLines =
 		isVertical && _.some(itemProps, ({ hasLine }) => hasLine);
 
 	return (
 		<ul
-			{...omitProps(passThroughs, Legend)}
-			className={cx(className, '&', {
-				'&-is-horizontal': isHorizontal,
-				'&-is-vertical': isVertical,
-				'&-has-borders': hasBorders,
-				'&-is-reversed': isReversed,
-			})}
+			//{...omitProps(passThroughs, Legend)}
+			{...omitProps(passThroughs, undefined, _.keys(Legend.propTypes))}
+			//className={cx(className, '&', {
+			className={cx(
+				'&', 
+				{
+					'&-is-horizontal': isHorizontal,
+					'&-is-vertical': isVertical,
+					'&-has-borders': hasBorders,
+					'&-is-reversed': isReversed,
+				},
+				className
+			)}
 		>
 			{_.map(
 				itemProps,
@@ -133,7 +142,6 @@ export const Legend: FC<ILegendProps> = (props): React.ReactElement => {
 						hasPoint,
 						pointKind = 1,
 						color,
-						onClick,
 						children,
 						className: itemClass,
 					},
@@ -143,7 +151,7 @@ export const Legend: FC<ILegendProps> = (props): React.ReactElement => {
 						key={index}
 						className={cx(itemClass, '&-Item')}
 						//onClick={_.partial(this.handleItemClick, index, itemProps[index])}
-						onClick={_.partial(this.handleItemClick, index, itemProps[index])}
+						onClick={_.partial(handleItemClick, index, itemProps[index])}
 					>
 						{hasPoint || hasLine ? (
 							<svg
@@ -177,7 +185,7 @@ export const Legend: FC<ILegendProps> = (props): React.ReactElement => {
 	);
 };
 
-Legend.Item = LegendItem;
+//Legend.Item = LegendItem;
 
 Legend.defaultProps = defaultProps;
 
@@ -198,6 +206,9 @@ Legend.peek = {
 //Legend.HEIGHT = 28; // exposed for consumer convenience
 
 Legend.propTypes = {
+	Item: node`
+	Child element whose children represent content to be shown inside Legend.
+	`,
 	className: string`
 		Appended to the component-specific class names set on the root element.
 	`,
@@ -213,14 +224,18 @@ Legend.propTypes = {
 	`,
 };
 
-Item.displayName = 'Legend.Item';
-Item.peek = {
-	description: `
-					Renders a \`<li>\` that describes the data series.
-				`,
+
+LegendItem.displayName = 'Legend.Item';
+LegendItem.peek = {
+	description: `Renders a \`<li>\` that describes the data series.
+	`,
 };
-Item.propsName = 'Item';
-Item.propTypes = {
+LegendItem.propName = 'Item';
+LegendItem.propTypes = {
+	children: any,
+};
+
+LegendItem.propTypes = {
 	hasPoint: bool,
 	hasLine: bool,
 	color: string`
