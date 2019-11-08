@@ -92,6 +92,14 @@ interface ILegendItemProps extends StandardProps {
 
 const LegendItem: FC<ILegendItemProps> = (): null => null;
 
+const handleItemClick = (index: number, props: ILegendItemProps, event: React.MouseEvent<HTMLLIElement>): void => {
+	if (!props.onClick) {
+		return;
+	}
+
+	props.onClick(index, { props, event });
+}
+
 //const Legend = createClass({
 export const Legend: FC<ILegendProps> = (props): React.ReactElement => {
 	const {
@@ -99,18 +107,8 @@ export const Legend: FC<ILegendProps> = (props): React.ReactElement => {
 		orient,
 		hasBorders,
 		isReversed,
-		color,
-		style,
 		...passThroughs
 	} = props as FixDefaults<ILegendProps, typeof defaultProps>;
-
-	const handleItemClick = (index: number, props: ILegendItemProps, event: React.MouseEvent<HTMLLIElement>): void => {
-		if (!props.onClick) {
-			return;
-		}
-
-		props.onClick(index, { props, event });
-	}
 
 	const isHorizontal = orient === 'horizontal';
 	const isVertical = orient === 'vertical';
