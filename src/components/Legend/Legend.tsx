@@ -7,7 +7,6 @@ import {
 	findTypes,
 	omitProps,
 	StandardProps,
-	FixDefaults,
 } from '../../util/component-types';
 import * as chartConstants from '../../constants/charts';
 
