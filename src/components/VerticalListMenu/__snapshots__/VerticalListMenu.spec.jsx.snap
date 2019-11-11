@@ -3,8 +3,6 @@
 exports[`VerticalListMenu [common] example testing should match snapshot(s) for 1.basic 1`] = `
 <ul
   className="lucid-VerticalListMenu"
-  onSelect={[Function]}
-  onToggle={[Function]}
   style={
     Object {
       "width": 250,
@@ -83,8 +81,6 @@ exports[`VerticalListMenu [common] example testing should match snapshot(s) for 
 exports[`VerticalListMenu [common] example testing should match snapshot(s) for 2.nested-with-expander 1`] = `
 <ul
   className="lucid-VerticalListMenu"
-  onSelect={[Function]}
-  onToggle={[Function]}
   style={
     Object {
       "width": 250,
@@ -726,8 +722,6 @@ exports[`VerticalListMenu [common] example testing should match snapshot(s) for 
 exports[`VerticalListMenu [common] example testing should match snapshot(s) for 3.nested-full-width 1`] = `
 <ul
   className="lucid-VerticalListMenu"
-  onSelect={[Function]}
-  onToggle={[Function]}
 >
   <li
     className="lucid-VerticalListMenu-Item"
@@ -929,8 +923,6 @@ exports[`VerticalListMenu [common] example testing should match snapshot(s) for 
 exports[`VerticalListMenu [common] example testing should match snapshot(s) for 4.no-animations 1`] = `
 <ul
   className="lucid-VerticalListMenu"
-  onSelect={[Function]}
-  onToggle={[Function]}
   style={
     Object {
       "width": 250,

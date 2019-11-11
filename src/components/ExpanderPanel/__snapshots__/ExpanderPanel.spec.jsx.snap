@@ -6,7 +6,6 @@ exports[`ExpanderPanel [common] example testing should match snapshot(s) for 1.b
   hasMargin={true}
   isGutterless={false}
   isScrollable={true}
-  onToggle={[Function]}
 >
   <Panel.Header
     className="lucid-ExpanderPanel-header"
@@ -458,7 +457,6 @@ exports[`ExpanderPanel [common] example testing should match snapshot(s) for 2.n
   hasMargin={true}
   isGutterless={true}
   isScrollable={true}
-  onToggle={[Function]}
 >
   <Panel.Header
     className="lucid-ExpanderPanel-header"

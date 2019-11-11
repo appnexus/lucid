@@ -3,7 +3,6 @@
 exports[`Tabs [common] example testing should match snapshot(s) for 01-title-as-prop 1`] = `
 <div
   className="lucid-Tabs"
-  onSelect={[Function]}
 >
   <ul
     className="lucid-Tabs-bar lucid-Tabs-variable-width"
@@ -70,7 +69,6 @@ exports[`Tabs [common] example testing should match snapshot(s) for 01-title-as-
 exports[`Tabs [common] example testing should match snapshot(s) for 02-title-as-child 1`] = `
 <div
   className="lucid-Tabs"
-  onSelect={[Function]}
 >
   <ul
     className="lucid-Tabs-bar lucid-Tabs-variable-width"
@@ -151,7 +149,6 @@ exports[`Tabs [common] example testing should match snapshot(s) for 02-title-as-
 exports[`Tabs [common] example testing should match snapshot(s) for 03-complex-title-as-child 1`] = `
 <div
   className="lucid-Tabs"
-  onSelect={[Function]}
 >
   <ul
     className="lucid-Tabs-bar lucid-Tabs-bar-is-multiline lucid-Tabs-variable-width"
@@ -362,7 +359,6 @@ exports[`Tabs [common] example testing should match snapshot(s) for 03-complex-t
 exports[`Tabs [common] example testing should match snapshot(s) for 04-tab-as-prop 1`] = `
 <div
   className="lucid-Tabs"
-  onSelect={[Function]}
 >
   <ul
     className="lucid-Tabs-bar lucid-Tabs-variable-width"
@@ -403,7 +399,6 @@ exports[`Tabs [common] example testing should match snapshot(s) for 04-tab-as-pr
 exports[`Tabs [common] example testing should match snapshot(s) for 05-full-width 1`] = `
 <div
   className="lucid-Tabs"
-  onSelect={[Function]}
 >
   <ul
     className="lucid-Tabs-bar"
@@ -468,7 +463,6 @@ exports[`Tabs [common] example testing should match snapshot(s) for 05-full-widt
 exports[`Tabs [common] example testing should match snapshot(s) for 06-variable-width 1`] = `
 <div
   className="lucid-Tabs"
-  onSelect={[Function]}
 >
   <ul
     className="lucid-Tabs-bar lucid-Tabs-variable-width"
@@ -548,7 +542,6 @@ exports[`Tabs [common] example testing should match snapshot(s) for 06-variable-
 exports[`Tabs [common] example testing should match snapshot(s) for 07-progression 1`] = `
 <div
   className="lucid-Tabs"
-  onSelect={[Function]}
 >
   <ul
     className="lucid-Tabs-bar lucid-Tabs-variable-width"
@@ -627,7 +620,6 @@ exports[`Tabs [common] example testing should match snapshot(s) for 07-progressi
 exports[`Tabs [common] example testing should match snapshot(s) for 08-progression-variable-width 1`] = `
 <div
   className="lucid-Tabs"
-  onSelect={[Function]}
 >
   <ul
     className="lucid-Tabs-bar lucid-Tabs-variable-width"
@@ -731,7 +723,6 @@ exports[`Tabs [common] example testing should match snapshot(s) for 08-progressi
 exports[`Tabs [common] example testing should match snapshot(s) for 09-with-count 1`] = `
 <div
   className="lucid-Tabs"
-  onSelect={[Function]}
 >
   <ul
     className="lucid-Tabs-bar lucid-Tabs-variable-width"
@@ -833,7 +824,6 @@ exports[`Tabs [common] example testing should match snapshot(s) for 09-with-coun
 exports[`Tabs [common] example testing should match snapshot(s) for 09-with-count 2`] = `
 <div
   className="lucid-Tabs"
-  onSelect={[Function]}
 >
   <ul
     className="lucid-Tabs-bar lucid-Tabs-variable-width"
@@ -922,7 +912,6 @@ exports[`Tabs [common] example testing should match snapshot(s) for 09-with-coun
 exports[`Tabs [common] example testing should match snapshot(s) for 10-floating 1`] = `
 <div
   className="lucid-Tabs"
-  onSelect={[Function]}
 >
   <ul
     className="lucid-Tabs-bar lucid-Tabs-variable-width lucid-Tabs-floating"

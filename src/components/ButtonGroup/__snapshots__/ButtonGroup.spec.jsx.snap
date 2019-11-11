@@ -3,7 +3,6 @@
 exports[`ButtonGroup [common] example testing should match snapshot(s) for fixed-width 1`] = `
 <span
   className="lucid-ButtonGroup"
-  onSelect={[Function]}
 >
   <Button
     callbackId={0}
@@ -86,7 +85,6 @@ exports[`ButtonGroup [common] example testing should match snapshot(s) for fixed
 exports[`ButtonGroup [common] example testing should match snapshot(s) for stateful 1`] = `
 <span
   className="lucid-ButtonGroup"
-  onSelect={[Function]}
 >
   <Button
     callbackId={0}
@@ -150,7 +148,6 @@ exports[`ButtonGroup [common] example testing should match snapshot(s) for state
 exports[`ButtonGroup [common] example testing should match snapshot(s) for stateless 1`] = `
 <span
   className="lucid-ButtonGroup"
-  onSelect={[Function]}
 >
   <Button
     callbackId={0}

@@ -8,7 +8,6 @@ exports[`Submarine [common] example testing should match snapshot(s) for 1.defau
   isExpanded={true}
   onResize={[Function]}
   onResizing={[Function]}
-  onToggle={[Function]}
 >
   <SplitHorizontal.BottomPane
     className="lucid-Submarine-Bar"
@@ -76,7 +75,6 @@ exports[`Submarine [common] example testing should match snapshot(s) for 2.disab
   isExpanded={true}
   onResize={[Function]}
   onResizing={[Function]}
-  onToggle={[Function]}
 >
   <SplitHorizontal.BottomPane
     className="lucid-Submarine-Bar"
@@ -144,7 +142,6 @@ exports[`Submarine [common] example testing should match snapshot(s) for 3.initi
   isExpanded={true}
   onResize={[Function]}
   onResizing={[Function]}
-  onToggle={[Function]}
 >
   <SplitHorizontal.BottomPane
     className="lucid-Submarine-Bar"
@@ -212,7 +209,6 @@ exports[`Submarine [common] example testing should match snapshot(s) for 4.posit
   isExpanded={true}
   onResize={[Function]}
   onResizing={[Function]}
-  onToggle={[Function]}
 >
   <SplitHorizontal.TopPane
     className="lucid-Submarine-Bar"
@@ -280,7 +276,6 @@ exports[`Submarine [common] example testing should match snapshot(s) for 5.custo
   isExpanded={true}
   onResize={[Function]}
   onResizing={[Function]}
-  onToggle={[Function]}
 >
   <SplitHorizontal.BottomPane
     className="lucid-Submarine-Bar"
@@ -369,7 +364,6 @@ exports[`Submarine [common] example testing should match snapshot(s) for 6.custo
   isExpanded={true}
   onResize={[Function]}
   onResizing={[Function]}
-  onToggle={[Function]}
 >
   <SplitHorizontal.BottomPane
     className="lucid-Submarine-Bar"
@@ -437,7 +431,6 @@ exports[`Submarine [common] example testing should match snapshot(s) for 7.contr
   isExpanded={false}
   onResize={[Function]}
   onResizing={[Function]}
-  onToggle={[Function]}
 >
   <SplitHorizontal.BottomPane
     className="lucid-Submarine-Bar"
@@ -505,7 +498,6 @@ exports[`Submarine [common] example testing should match snapshot(s) for 8.handl
   isExpanded={true}
   onResize={[Function]}
   onResizing={[Function]}
-  onToggle={[Function]}
 >
   <SplitHorizontal.BottomPane
     className="lucid-Submarine-Bar"
@@ -573,7 +565,6 @@ exports[`Submarine [common] example testing should match snapshot(s) for 9.neste
   isExpanded={true}
   onResize={[Function]}
   onResizing={[Function]}
-  onToggle={[Function]}
 >
   <SplitHorizontal.TopPane
     className="lucid-Submarine-Bar"
@@ -650,7 +641,6 @@ exports[`Submarine [common] example testing should match snapshot(s) for 9.neste
   isExpanded={true}
   onResize={[Function]}
   onResizing={[Function]}
-  onToggle={[Function]}
 >
   <SplitHorizontal.BottomPane
     className="lucid-Submarine-Bar"
@@ -718,7 +708,6 @@ exports[`Submarine [common] example testing should match snapshot(s) for 10.hidd
   isExpanded={false}
   onResize={[Function]}
   onResizing={[Function]}
-  onToggle={[Function]}
 >
   <SplitHorizontal.BottomPane
     className="lucid-Submarine-Bar"
@@ -788,7 +777,6 @@ exports[`Submarine [common] example testing should match snapshot(s) for 11-titl
   isExpanded={true}
   onResize={[Function]}
   onResizing={[Function]}
-  onToggle={[Function]}
 >
   <SplitHorizontal.BottomPane
     className="lucid-Submarine-Bar"
