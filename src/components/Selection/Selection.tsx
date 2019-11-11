@@ -10,9 +10,10 @@ import { IIconProps } from '../Icon/Icon';
 import { lucidClassNames } from '../../util/style-helpers';
 import {
 	omitProps,
-	getFirst,
+    getFirst,
     FC,
-    StandardProps
+    StandardProps,
+    FixDefaults
 } from '../../util/component-types';
 
 const { createElement } = React;
@@ -21,10 +22,9 @@ const { bool, func, string, node, oneOf } = PropTypes;
 
 const cx = lucidClassNames.bind('&-Selection');
 
-function defaultIcon(kind: SelectionKind, responsiveMode: SelectionResponsiveMode) {
-	return kind === EnumSelectionKind.default ?
-    null : kind === EnumSelectionKind.container ?
-    null : kind === EnumSelectionKind.success ? (
+function defaultIcon(kind: SelectionKind, responsiveMode?: SelectionResponsiveMode) {
+	return kind === 'default' ? null : kind === 'container' ? null : kind === 
+      'success' ? (
 		<SuccessIcon className={cx('&-Icon', `&-Icon-is-${responsiveMode}`)} />
 	) : kind === 'danger' ? (
 		<MinusCircleIcon className={cx('&-Icon', `&-Icon-is-${responsiveMode}`)} />
@@ -35,9 +35,9 @@ function defaultIcon(kind: SelectionKind, responsiveMode: SelectionResponsiveMod
 	) : null;
 }
 
-export interface ISelectionIconProps extends StandardProps {}
-export type SelectionIconFC = FC<ISelectionIconProps>
-const SelectionIcon: SelectionIconFC = (): null => null;
+interface ISelectionIconProps extends StandardProps {}
+
+const SelectionIcon: FC<ISelectionIconProps> = (): null => null;
 SelectionIcon.peek = {
     description: `
         Icon that is displayed within the Selection. Any of the lucid \`*Icon\` components should work.
@@ -46,9 +46,9 @@ SelectionIcon.peek = {
 SelectionIcon.displayName = 'Selection.Icon';
 SelectionIcon.propName = 'Icon';
 
-export interface ISelectionLabelProps extends StandardProps {}
-export type SelectionLabelFC = FC<ISelectionLabelProps>
-const SelectionLabel: SelectionLabelFC = (): null => null;
+interface ISelectionLabelProps extends StandardProps {}
+
+const SelectionLabel: FC<ISelectionLabelProps> = (): null => null;
 SelectionLabel.peek = {
     description: `
         Label for the Selection.
@@ -57,72 +57,95 @@ SelectionLabel.peek = {
 SelectionLabel.displayName = 'Selection.Label';
 SelectionLabel.propName = 'Label';
 
-export enum EnumSelectionKind {
-    default = 'default',
-    container = 'container',
-    success = 'success',
-    danger = 'danger',
-    info = 'info',
-    warning = 'warning'
-}
-export type SelectionKind = keyof typeof EnumSelectionKind;
+type SelectionKind = 'default' | 'container' | 'success' | 'danger' | 'info' | 'warning'
 
-export enum EnumSelectionResponsiveMode {
-    small = 'small',
-    medium = 'medium',
-    large = 'large'
-}
-export type SelectionResponsiveMode = keyof typeof EnumSelectionResponsiveMode;
+type SelectionResponsiveMode = 'small' | 'medium' | 'large'
 
-interface ISelectionProps extends StandardProps {
-    kind: SelectionKind,
+interface ISelectionProps 
+    extends StandardProps,
+        React.DetailedHTMLProps<
+            React.HTMLAttributes<HTMLDivElement>, 
+            HTMLDivElement
+        > {
+    /** Applies an icon and styles for the kind of selection. */
+    kind?: SelectionKind,
+
+    /** Apply to the top of a nested sequence of Selection components.
+	 * Adds some spacing for a list of top level Selections with nested Selctions inside each. 
+     * */
     isTop?: boolean,
+
+    /** Only applies to \`container\` Selection components.
+	 * Fills with a darker gray background.
+	 * Defaults to false. 
+     * */
     isFilled?: boolean,
-    isRemovable: boolean,
-    hasBackground: boolean,
-    isBold: boolean,
-    
-    onRemove : ({
+
+    /** Shows or hides the little "x" for a given item. */
+    isRemovable?: boolean,
+
+    /** Called when the close button is clicked. */
+    onRemove?: ({
         props,
         event
     }: {
         props: IIconProps;
-        event: React.MouseEvent; //need keyboard event?
-    }) => void;
+        event: React.MouseEvent;
+    }) => void,
 
+    /** Gives the selection a background. This is desirable when you only have
+	 * one level of nested selections. 
+     * */
+    hasBackground?: boolean,
+    
+    /** Make the content text bold. This is desirable when you only have one
+     * level of nested selections. 
+     * */
+    isBold?: boolean,
+
+    /** Label of the component. */
     Label?: React.ReactNode,
+
+    /** Display a custom icon for the selection. Generally you shouldn't need
+	 * this prop since the \`kind\` prop will pick the correct icon for you. 
+     * */
     Icon?: React.ReactNode,
-    responsiveMode: SelectionResponsiveMode
-}
+
+    /** Adjusts the display of this component. This should typically be driven by
+	 * screen size. Currently \`small\` and \`large\` are explicitly handled by
+	 * this component. 
+     * */
+    responsiveMode?: SelectionResponsiveMode,
+} 
 
 interface ISelectionFC extends FC<ISelectionProps> {
-    Icon: SelectionIconFC,
-    Label: SelectionLabelFC
+    Icon: FC<ISelectionIconProps>,
+    Label: FC<ISelectionLabelProps>
 }
 
 const defaultProps = {
-    kind: EnumSelectionKind.default,
     isRemovable: true,
     onRemove: _.noop,
     hasBackground: false,
     isBold: false,
-    responsiveMode: EnumSelectionResponsiveMode.large,
-};
+    kind: 'default' as SelectionKind,
+    responsiveMode: 'large' as SelectionResponsiveMode
+}
 
 const Selection: ISelectionFC = (props): React.ReactElement => {
     const {
         className,
-        kind,
         isRemovable,
         children,
         hasBackground,
         isBold,
         isFilled,
         isTop,
-        responsiveMode,
+        kind,
         onRemove,
+        responsiveMode,
         ...passThroughs
-    } = props;
+    } = props as FixDefaults<ISelectionProps, typeof defaultProps>;
 
     const isSmall = responsiveMode === 'small';
 
@@ -174,7 +197,7 @@ const Selection: ISelectionFC = (props): React.ReactElement => {
                                 '&-close-button',
                                 isSmall && '&-close-button-is-small'
                             )}
-                            onClick={({ event }) => { onRemove({ event, props }) }}
+                            onClick={({ event, props: iconprops }) => { onRemove({ event, props: iconprops }) }}
                         />
                     ) : null}
                 </div>
@@ -209,9 +232,9 @@ Selection.Icon = SelectionIcon;
 Selection.Label = SelectionLabel;
 Selection.peek = {
             description: `
-                        Used to indicate selections. It's very similar to \`Tag\` but is meant
-                        to be used in areas of the UI that have more space available to them.
-                    `,
+                Used to indicate selections. It's very similar to \`Tag\` but is meant
+                to be used in areas of the UI that have more space available to them.
+            `,
             categories: ['communication'],
         }
 Selection.defaultProps = defaultProps;
