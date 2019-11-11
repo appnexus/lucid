@@ -8,7 +8,7 @@ import {
 	omitProps,
 	StandardProps,
 } from '../../util/component-types';
-import * as chartConstants from '../../constants/charts';
+//import * as chartConstants from '../../constants/charts';
 
 import Point from '../Point/Point';
 import Line from '../Line/Line';
@@ -21,14 +21,11 @@ const LINE_WIDTH = 22;
 
 const { number, string, oneOf, node, bool, func } = PropTypes;
 
+// Default props for the Legend component
 const defaultProps = {
 	orient: 'vertical',
 	hasBorders: true,
-	hasPoint: true,
-	pointKind: '',
-	hasLine: true,
 	isReversed: false,
-	color: chartConstants.COLOR_0,
 };
 
 export interface ILegendProps
@@ -36,29 +33,28 @@ export interface ILegendProps
 		React.DetailedHTMLProps<
 			React.HTMLAttributes<HTMLDivElement>,
 			HTMLDivElement
-	> {
+		> {
 	/** Custom Item element (alias for `Legend.Item`) */
 	Item?: React.ReactNode;
-	
+
 	/** Determines if the legend is vertical or horizontal */
 	orient?: string;
 
 	/** Determines if the legend has borders */
 	hasBorders?: boolean;
-	
+
 	/** Determines if the sort order of legend items is reversed or not */
 	isReversed?: boolean;
-
 }
 
 type ILegendItemFC = FC<ILegendItemProps>;
 
 export interface ILegendFC extends FC<ILegendProps> {
 	Item: ILegendItemFC;
+	HEIGHT: number;
 }
 
 interface ILegendItemProps extends StandardProps {
-
 	/** Determines if the legend item has points */
 	hasPoint?: boolean;
 
@@ -79,34 +75,32 @@ interface ILegendItemProps extends StandardProps {
 	/** Called when a user clicks a legend \`Item\`. */
 	onClick?: (
 		index: number,
-	{
-		event,
-		props,
-	}: {
-		event: React.MouseEvent<HTMLLIElement>;
-		props: ILegendItemProps;
-	}) => void;
-
+		{
+			event,
+			props,
+		}: {
+			event: React.MouseEvent<HTMLLIElement>;
+			props: ILegendItemProps;
+		}
+	) => void;
 }
 
 const LegendItem: FC<ILegendItemProps> = (): null => null;
 
-const handleItemClick = (index: number, props: ILegendItemProps, event: React.MouseEvent<HTMLLIElement>): void => {
+const handleItemClick = (
+	index: number,
+	props: ILegendItemProps,
+	event: React.MouseEvent<HTMLLIElement>
+): void => {
 	if (!props.onClick) {
 		return;
 	}
 
 	props.onClick(index, { props, event });
-}
+};
 
 export const Legend: ILegendFC = (props): React.ReactElement => {
-	const {
-		className,
-		orient,
-		hasBorders,
-		isReversed,
-		...passThroughs
-	} = props;
+	const { className, orient, hasBorders, isReversed, ...passThroughs } = props;
 
 	const isHorizontal = orient === 'horizontal';
 	const isVertical = orient === 'vertical';
@@ -118,7 +112,7 @@ export const Legend: ILegendFC = (props): React.ReactElement => {
 		<ul
 			{...omitProps(passThroughs, undefined, _.keys(Legend.propTypes))}
 			className={cx(
-				'&', 
+				'&',
 				{
 					'&-is-horizontal': isHorizontal,
 					'&-is-vertical': isVertical,
@@ -194,8 +188,7 @@ Legend.peek = {
 	categories: ['visualizations', 'chart primitives'],
 };
 
-//TODO: Extend the fuctional component for this Height case
-//Legend.HEIGHT = 28; // exposed for consumer convenience
+Legend.HEIGHT = 28; // exposed for consumer convenience
 
 Legend.propTypes = {
 	Item: node`
