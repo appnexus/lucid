@@ -2,15 +2,10 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import Validation, { IValidationProps } from '../Validation/Validation';
-import TextField from '../TextField/TextField';
+import TextField, { ITextFieldProps } from '../TextField/TextField';
 import reducers from '../TextField/TextField.reducers';
 import { lucidClassNames } from '../../util/style-helpers';
-import {
-	FC,
-	StandardProps,
-	findTypes,
-	omitProps,
-} from '../../util/component-types';
+import { FC, findTypes, omitProps } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-TextFieldValidated');
 
@@ -30,7 +25,7 @@ TextFieldValidatedError.peek = {
 };
 TextFieldValidatedError.propName = 'Error';
 
-export interface ITextFieldValidatedProps extends StandardProps {
+export interface ITextFieldValidatedProps extends ITextFieldProps {
 	Error?: React.ReactNode;
 }
 
