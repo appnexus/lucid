@@ -53,8 +53,7 @@ interface IExpanderPanelProps extends StandardProps {
 	/** Controls the presence of padding on the inner content. */
 	hasPadding: boolean;
 
-	/** Called when the user clicks on the component's header.
-			Signature: \`(isExpanded, { event, props }) => {}\` */
+	/** Called when the user clicks on the component's header. */
 	onToggle: (
 		isExpanded: boolean,
 		{

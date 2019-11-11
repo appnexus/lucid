@@ -33,8 +33,7 @@ export interface ICheckboxPropsRaw extends StandardProps {
 	isSelected?: boolean;
 
 	/** Called when the user clicks on the component or when they press the space
-	 * key while the component is in focus.  Signature:
-	 * \`(isSelected, { event, props }) => {}\`
+	 * key while the component is in focus. 
 	 */
 	onSelect?: (
 		isSelected: boolean,
