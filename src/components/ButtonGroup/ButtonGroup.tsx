@@ -137,7 +137,7 @@ class ButtonGroup extends React.Component<
 
 		return (
 			<span
-				{...omitProps(passThroughs, undefined, _.keys(ButtonGroup))}
+				{...omitProps(passThroughs, undefined, _.keys(ButtonGroup.propTypes))}
 				className={cx('&', className)}
 			>
 				{_.map(buttonChildProps, (buttonChildProp, index) => {

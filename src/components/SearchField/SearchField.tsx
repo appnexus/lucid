@@ -240,7 +240,7 @@ class SearchField extends React.Component<
 
 		return (
 			<div
-				{...omitProps(passThroughs, undefined, _.keys(SearchField))}
+				{...omitProps(passThroughs, undefined, _.keys(SearchField.propTypes))}
 				className={cx('&', className)}
 			>
 				{textFieldElement}

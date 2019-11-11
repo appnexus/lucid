@@ -95,7 +95,7 @@ class TextFieldValidated extends React.Component<
 					{...omitProps(
 						passThroughs,
 						undefined,
-						_.keys(TextFieldValidated),
+						_.keys(TextFieldValidated.propTypes),
 						false
 					)}
 					ref={this.textFieldRef}

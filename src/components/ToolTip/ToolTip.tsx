@@ -354,7 +354,12 @@ class ToolTip extends React.Component<IToolTipProps, IToolTipState> {
 				isExpanded={isExpanded}
 				style={style}
 				portalId={portalId}
-				{...omitProps(passThroughs, undefined, _.keys(ToolTip), false)}
+				{...omitProps(
+					passThroughs,
+					undefined,
+					_.keys(ToolTip.propTypes),
+					false
+				)}
 				onMouseOver={this.handleMouseOverTarget}
 				onMouseOut={this.handleMouseOutTarget}
 			>

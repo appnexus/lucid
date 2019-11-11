@@ -163,7 +163,12 @@ class ExpanderPanel extends React.Component<
 
 		return (
 			<Panel
-				{...omitProps(passThroughs, undefined, _.keys(ExpanderPanel), false)}
+				{...omitProps(
+					passThroughs,
+					undefined,
+					_.keys(ExpanderPanel.propTypes),
+					false
+				)}
 				className={cx(
 					'&',
 					{

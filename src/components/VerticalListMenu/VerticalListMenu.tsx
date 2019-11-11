@@ -240,7 +240,11 @@ class VerticalListMenu extends React.Component<
 
 		return (
 			<ul
-				{...omitProps(passThroughs, undefined, _.keys(VerticalListMenu))}
+				{...omitProps(
+					passThroughs,
+					undefined,
+					_.keys(VerticalListMenu.propTypes)
+				)}
 				className={cx('&', className)}
 				style={style}
 			>

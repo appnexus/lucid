@@ -303,7 +303,7 @@ class Submarine extends React.Component<ISubmarineProps, ISubmarineState> {
 
 		return (
 			<SplitHorizontal
-				{...omitProps(passThroughs, undefined, _.keys(Submarine), false)}
+				{...omitProps(passThroughs, undefined, _.keys(Submarine.propTypes), false)}
 				className={cx(
 					'&',
 					{
@@ -320,7 +320,7 @@ class Submarine extends React.Component<ISubmarineProps, ISubmarineState> {
 				onResize={this.handleResize}
 			>
 				<BarPane
-					{...omitProps(barProps, undefined, _.keys(Submarine.Bar), false)}
+					{...omitProps(barProps, undefined, _.keys(Submarine.Bar.propTypes), false)}
 					className={cx('&-Bar', barProps.className)}
 					height={height}
 				>

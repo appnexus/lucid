@@ -312,7 +312,12 @@ class Sidebar extends React.Component<ISidebarProps, ISidebarState> {
 
 		return (
 			<SplitVertical
-				{...omitProps(passThroughs, undefined, _.keys(Sidebar), false)}
+				{...omitProps(
+					passThroughs,
+					undefined,
+					_.keys(Sidebar.propTypes),
+					false
+				)}
 				style={{
 					minWidth: isExpanded
 						? _.isNumber(width)
@@ -337,7 +342,12 @@ class Sidebar extends React.Component<ISidebarProps, ISidebarState> {
 				onResize={this.handleResize}
 			>
 				<BarPane
-					{...omitProps(barProps, undefined, _.keys(Sidebar.Bar), false)}
+					{...omitProps(
+						barProps,
+						undefined,
+						_.keys(Sidebar.Bar.propTypes),
+						false
+					)}
 					className={cx('&-Bar', barProps.className)}
 					width={width}
 					style={{

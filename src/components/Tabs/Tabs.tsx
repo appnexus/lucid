@@ -105,7 +105,7 @@ const Tab: FC<ITabPropsWithPassThroughs> = (props): React.ReactElement => {
 				className
 			)}
 			onClick={handleClick}
-			{...omitProps(passThroughs, undefined, _.keys(Tab))}
+			{...omitProps(passThroughs, undefined, _.keys(Tab.propTypes))}
 		>
 			<span className={cx('&-Tab-content')}>
 				{Title}
@@ -379,7 +379,7 @@ class Tabs extends React.Component<ITabsProps, ITabsState> {
 				: selectedIndex;
 		return (
 			<div
-				{...omitProps(passThroughs, undefined, _.keys(Tabs))}
+				{...omitProps(passThroughs, undefined, _.keys(Tabs.propTypes))}
 				className={cx('&', className)}
 			>
 				<ul
