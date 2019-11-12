@@ -8,7 +8,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 1`] = 
     key="0"
   >
     <Bar
-      color="color-chart-0"
+      color="color-chart-3"
       hasStroke={false}
       height={20}
       key="0"
@@ -17,7 +17,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 1`] = 
       y={380}
     />
     <Bar
-      color="color-chart-1"
+      color="color-chart-0-darkest"
       hasStroke={false}
       height={40}
       key="1"
@@ -35,7 +35,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 1`] = 
       y={340}
     />
     <Bar
-      color="color-chart-3"
+      color="color-chart-4-lightest"
       hasStroke={false}
       height={100}
       key="3"
@@ -127,7 +127,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 1`] = 
     key="1"
   >
     <Bar
-      color="color-chart-0"
+      color="color-chart-3"
       hasStroke={false}
       height={40}
       key="0"
@@ -136,7 +136,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 1`] = 
       y={360}
     />
     <Bar
-      color="color-chart-1"
+      color="color-chart-0-darkest"
       hasStroke={false}
       height={60}
       key="1"
@@ -154,7 +154,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 1`] = 
       y={320}
     />
     <Bar
-      color="color-chart-3"
+      color="color-chart-4-lightest"
       hasStroke={false}
       height={120}
       key="3"
@@ -246,7 +246,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 1`] = 
     key="2"
   >
     <Bar
-      color="color-chart-0"
+      color="color-chart-3"
       hasStroke={false}
       height={40}
       key="0"
@@ -255,7 +255,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 1`] = 
       y={360}
     />
     <Bar
-      color="color-chart-1"
+      color="color-chart-0-darkest"
       hasStroke={false}
       height={80}
       key="1"
@@ -273,7 +273,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 1`] = 
       y={300}
     />
     <Bar
-      color="color-chart-3"
+      color="color-chart-4-lightest"
       hasStroke={false}
       height={120}
       key="3"
@@ -365,7 +365,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 1`] = 
     key="3"
   >
     <Bar
-      color="color-chart-0"
+      color="color-chart-3"
       hasStroke={false}
       height={60}
       key="0"
@@ -374,7 +374,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 1`] = 
       y={340}
     />
     <Bar
-      color="color-chart-1"
+      color="color-chart-0-darkest"
       hasStroke={false}
       height={120}
       key="1"
@@ -392,7 +392,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 1`] = 
       y={260}
     />
     <Bar
-      color="color-chart-3"
+      color="color-chart-4-lightest"
       hasStroke={false}
       height={140}
       key="3"
@@ -484,7 +484,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 1`] = 
     key="4"
   >
     <Bar
-      color="color-chart-0"
+      color="color-chart-3"
       hasStroke={false}
       height={80}
       key="0"
@@ -493,7 +493,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 1`] = 
       y={320}
     />
     <Bar
-      color="color-chart-1"
+      color="color-chart-0-darkest"
       hasStroke={false}
       height={160}
       key="1"
@@ -511,7 +511,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 1`] = 
       y={220}
     />
     <Bar
-      color="color-chart-3"
+      color="color-chart-4-lightest"
       hasStroke={false}
       height={160}
       key="3"
@@ -603,7 +603,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 1`] = 
     key="5"
   >
     <Bar
-      color="color-chart-0"
+      color="color-chart-3"
       hasStroke={false}
       height={400}
       key="0"
@@ -612,7 +612,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 1`] = 
       y={0}
     />
     <Bar
-      color="color-chart-1"
+      color="color-chart-0-darkest"
       hasStroke={false}
       height={160}
       key="1"
@@ -630,7 +630,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 1`] = 
       y={220}
     />
     <Bar
-      color="color-chart-3"
+      color="color-chart-4-lightest"
       hasStroke={false}
       height={20}
       key="3"
@@ -729,7 +729,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 2`] = 
     key="0"
   >
     <Bar
-      color="color-chart-0"
+      color="color-chart-3"
       hasStroke={false}
       height={10.5263157894737}
       key="0"
@@ -738,7 +738,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 2`] = 
       y={389.4736842105263}
     />
     <Bar
-      color="color-chart-1"
+      color="color-chart-0-darkest"
       hasStroke={false}
       height={21.05263157894734}
       key="1"
@@ -756,7 +756,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 2`] = 
       y={336.8421052631579}
     />
     <Bar
-      color="color-chart-3"
+      color="color-chart-4-lightest"
       hasStroke={false}
       height={52.63157894736844}
       key="3"
@@ -848,7 +848,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 2`] = 
     key="1"
   >
     <Bar
-      color="color-chart-0"
+      color="color-chart-3"
       hasStroke={false}
       height={21.05263157894734}
       key="0"
@@ -857,7 +857,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 2`] = 
       y={378.94736842105266}
     />
     <Bar
-      color="color-chart-1"
+      color="color-chart-0-darkest"
       hasStroke={false}
       height={31.578947368421098}
       key="1"
@@ -875,7 +875,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 2`] = 
       y={305.2631578947369}
     />
     <Bar
-      color="color-chart-3"
+      color="color-chart-4-lightest"
       hasStroke={false}
       height={63.15789473684214}
       key="3"
@@ -967,7 +967,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 2`] = 
     key="2"
   >
     <Bar
-      color="color-chart-0"
+      color="color-chart-3"
       hasStroke={false}
       height={21.05263157894734}
       key="0"
@@ -976,7 +976,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 2`] = 
       y={378.94736842105266}
     />
     <Bar
-      color="color-chart-1"
+      color="color-chart-0-darkest"
       hasStroke={false}
       height={42.10526315789474}
       key="1"
@@ -994,7 +994,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 2`] = 
       y={284.2105263157895}
     />
     <Bar
-      color="color-chart-3"
+      color="color-chart-4-lightest"
       hasStroke={false}
       height={63.15789473684211}
       key="3"
@@ -1086,7 +1086,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 2`] = 
     key="3"
   >
     <Bar
-      color="color-chart-0"
+      color="color-chart-3"
       hasStroke={false}
       height={31.57894736842104}
       key="0"
@@ -1095,7 +1095,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 2`] = 
       y={368.42105263157896}
     />
     <Bar
-      color="color-chart-1"
+      color="color-chart-0-darkest"
       hasStroke={false}
       height={63.15789473684208}
       key="1"
@@ -1113,7 +1113,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 2`] = 
       y={231.57894736842107}
     />
     <Bar
-      color="color-chart-3"
+      color="color-chart-4-lightest"
       hasStroke={false}
       height={73.68421052631581}
       key="3"
@@ -1205,7 +1205,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 2`] = 
     key="4"
   >
     <Bar
-      color="color-chart-0"
+      color="color-chart-3"
       hasStroke={false}
       height={42.10526315789474}
       key="0"
@@ -1214,7 +1214,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 2`] = 
       y={357.89473684210526}
     />
     <Bar
-      color="color-chart-1"
+      color="color-chart-0-darkest"
       hasStroke={false}
       height={84.21052631578948}
       key="1"
@@ -1232,7 +1232,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 2`] = 
       y={178.9473684210526}
     />
     <Bar
-      color="color-chart-3"
+      color="color-chart-4-lightest"
       hasStroke={false}
       height={84.21052631578948}
       key="3"
@@ -1324,7 +1324,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 2`] = 
     key="5"
   >
     <Bar
-      color="color-chart-0"
+      color="color-chart-3"
       hasStroke={false}
       height={210.52631578947367}
       key="0"
@@ -1333,7 +1333,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 2`] = 
       y={189.47368421052633}
     />
     <Bar
-      color="color-chart-1"
+      color="color-chart-0-darkest"
       hasStroke={false}
       height={84.21052631578945}
       key="1"
@@ -1351,7 +1351,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 2`] = 
       y={10.5263157894737}
     />
     <Bar
-      color="color-chart-3"
+      color="color-chart-4-lightest"
       hasStroke={false}
       height={10.5263157894737}
       key="3"
@@ -1459,7 +1459,7 @@ exports[`Bars [common] example testing should match snapshot(s) for custom-color
       y={380}
     />
     <Bar
-      color="color-chart-1"
+      color="color-chart-0-darkest"
       hasStroke={false}
       height={40}
       key="1"
@@ -1477,7 +1477,7 @@ exports[`Bars [common] example testing should match snapshot(s) for custom-color
       y={340}
     />
     <Bar
-      color="color-chart-3"
+      color="color-chart-4-lightest"
       hasStroke={false}
       height={100}
       key="3"
@@ -1578,7 +1578,7 @@ exports[`Bars [common] example testing should match snapshot(s) for custom-color
       y={360}
     />
     <Bar
-      color="color-chart-1"
+      color="color-chart-0-darkest"
       hasStroke={false}
       height={60}
       key="1"
@@ -1596,7 +1596,7 @@ exports[`Bars [common] example testing should match snapshot(s) for custom-color
       y={320}
     />
     <Bar
-      color="color-chart-3"
+      color="color-chart-4-lightest"
       hasStroke={false}
       height={120}
       key="3"
@@ -1697,7 +1697,7 @@ exports[`Bars [common] example testing should match snapshot(s) for custom-color
       y={360}
     />
     <Bar
-      color="color-chart-1"
+      color="color-chart-0-darkest"
       hasStroke={false}
       height={80}
       key="1"
@@ -1715,7 +1715,7 @@ exports[`Bars [common] example testing should match snapshot(s) for custom-color
       y={300}
     />
     <Bar
-      color="color-chart-3"
+      color="color-chart-4-lightest"
       hasStroke={false}
       height={120}
       key="3"
@@ -1816,7 +1816,7 @@ exports[`Bars [common] example testing should match snapshot(s) for custom-color
       y={340}
     />
     <Bar
-      color="color-chart-1"
+      color="color-chart-0-darkest"
       hasStroke={false}
       height={120}
       key="1"
@@ -1834,7 +1834,7 @@ exports[`Bars [common] example testing should match snapshot(s) for custom-color
       y={260}
     />
     <Bar
-      color="color-chart-3"
+      color="color-chart-4-lightest"
       hasStroke={false}
       height={140}
       key="3"
@@ -1935,7 +1935,7 @@ exports[`Bars [common] example testing should match snapshot(s) for custom-color
       y={320}
     />
     <Bar
-      color="color-chart-1"
+      color="color-chart-0-darkest"
       hasStroke={false}
       height={160}
       key="1"
@@ -1953,7 +1953,7 @@ exports[`Bars [common] example testing should match snapshot(s) for custom-color
       y={220}
     />
     <Bar
-      color="color-chart-3"
+      color="color-chart-4-lightest"
       hasStroke={false}
       height={160}
       key="3"
@@ -2054,7 +2054,7 @@ exports[`Bars [common] example testing should match snapshot(s) for custom-color
       y={0}
     />
     <Bar
-      color="color-chart-1"
+      color="color-chart-0-darkest"
       hasStroke={false}
       height={160}
       key="1"
@@ -2072,7 +2072,7 @@ exports[`Bars [common] example testing should match snapshot(s) for custom-color
       y={220}
     />
     <Bar
-      color="color-chart-3"
+      color="color-chart-4-lightest"
       hasStroke={false}
       height={20}
       key="3"
