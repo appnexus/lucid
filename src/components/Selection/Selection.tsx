@@ -89,7 +89,7 @@ interface ISelectionProps
         props,
         event
     }: {
-        props: IIconProps;
+        props: ISelectionProps;
         event: React.MouseEvent;
     }) => void,
 
@@ -197,7 +197,7 @@ const Selection: ISelectionFC = (props): React.ReactElement => {
                                 '&-close-button',
                                 isSmall && '&-close-button-is-small'
                             )}
-                            onClick={({ event, props: iconprops }) => { onRemove({ event, props: iconprops }) }}
+                            onClick={({ event }) => { onRemove({ event, props }) }}
                         />
                     ) : null}
                 </div>
