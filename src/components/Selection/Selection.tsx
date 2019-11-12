@@ -131,7 +131,7 @@ const defaultProps = {
     responsiveMode: 'large' as SelectionResponsiveMode
 }
 
-const Selection: ISelectionFC = (props): React.ReactElement => {
+const Selection: ISelectionFC = (props) => {
     const {
         className,
         isRemovable,
