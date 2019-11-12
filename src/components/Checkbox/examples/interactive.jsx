@@ -20,7 +20,7 @@ export default createClass({
 		return (
 			<ul>
 				<li>
-					<label>Plain</label>
+					<label>Plain (interactive)</label>
 					<Checkbox
 						title='Little Plain Checkbox'
 						isIndeterminate={this.state.isSelected === 1}

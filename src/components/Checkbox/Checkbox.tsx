@@ -148,15 +148,28 @@ export const Checkbox: FC<ICheckboxProps> = (props): React.ReactElement => {
 
 Checkbox.displayName = 'Checkbox';
 
+Checkbox._isPrivate = true;
+
 Checkbox.peek = {
 	description: `
-		This is a checkbox. It's a component that is in one of two particular
-		states at any given moment. It features a custom visualization of the
-		native checkbox button control to reflect its current state.
+		Checkbox is a square two-state toggle used to create \`CheckboxLabeled\`.
 
 		It uses a hidden native checkbox control under the hood but leverages
 		other HTML elements to visualize its state.
 	`,
+	notes: {
+		overview: `
+			Checkbox is a square two-state toggle. 
+		`,
+		intendedUse: `
+			Used to create \`CheckboxLabeled\`. Use \`CheckboxLabeled\` in your applications.			
+		`,
+		technicalRecommendations: `
+			- Use the Selected state when a filter or setting will be applied.
+			- Use the Unselected state when a filter or setting will not be applied.
+			- Use the Indeterminate state for parent checkboxes where some of the child checkboxes are Selected and some are Unselected. For example, the master checkbox in the header row of the interactive table example in \`DataTable\`.
+		`,
+	},
 	categories: ['controls', 'toggles'],
 };
 
