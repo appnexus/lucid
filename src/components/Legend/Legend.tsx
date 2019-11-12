@@ -8,8 +8,6 @@ import {
 	omitProps,
 	StandardProps,
 } from '../../util/component-types';
-//import * as chartConstants from '../../constants/charts';
-
 import Point from '../Point/Point';
 import Line from '../Line/Line';
 import { any } from 'prop-types';
@@ -69,7 +67,7 @@ interface ILegendItemProps extends StandardProps {
 	 */
 	color?: string;
 
-	/** //TODO: give it a description */
+	/** Determines the kind of point */
 	pointKind?: number;
 
 	/** Called when a user clicks a legend \`Item\`. */
