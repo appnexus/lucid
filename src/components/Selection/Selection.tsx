@@ -280,8 +280,7 @@ Selection.propTypes = {
 		`,
 
 		onRemove: func`
-			Called when the close button is clicked.  Signature:
-			\`({ props, event }) => {}\`
+			Called when the close button is clicked.
 		`,
 
 		Label: node`
