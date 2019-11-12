@@ -6,7 +6,6 @@ import SuccessIcon from '../Icon/SuccessIcon/SuccessIcon';
 import CloseIcon from '../Icon/CloseIcon/CloseIcon';
 import InfoIcon from '../Icon/InfoIcon/InfoIcon';
 import WarningIcon from '../Icon/WarningIcon/WarningIcon';
-import { IIconProps } from '../Icon/Icon';
 import { lucidClassNames } from '../../util/style-helpers';
 import {
 	omitProps,
