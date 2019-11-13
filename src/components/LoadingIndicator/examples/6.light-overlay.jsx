@@ -7,6 +7,7 @@ export default createClass({
 		return (
 			<LoadingIndicator isLoading overlayKind='light'>
 				<BarChart
+					width={750}
 					data={[
 						{ x: '2015-01-01', y: 1 },
 						{ x: '2015-01-02', y: 2 },

@@ -13,7 +13,7 @@ export default createClass({
 	render() {
 		return (
 			<div>
-				<BarChart data={data} yAxisTitle='Revenue' margin={{ top: 20 }} />
+				<BarChart width={750} data={data} yAxisTitle='Revenue' margin={{ top: 20 }} />
 			</div>
 		);
 	},

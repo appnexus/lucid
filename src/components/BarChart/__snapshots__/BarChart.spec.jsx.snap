@@ -4,7 +4,7 @@ exports[`BarChart [common] example testing should match snapshot(s) for 01.basic
 <svg
   className="lucid-BarChart"
   height={400}
-  width={1000}
+  width={750}
 >
   <g
     transform="translate(80, 350)"
@@ -105,7 +105,7 @@ exports[`BarChart [common] example testing should match snapshot(s) for 03.group
 <svg
   className="lucid-BarChart"
   height={400}
-  width={1000}
+  width={750}
 >
   <g
     transform="translate(80, 350)"
@@ -241,7 +241,7 @@ exports[`BarChart [common] example testing should match snapshot(s) for 04.group
 <svg
   className="lucid-BarChart"
   height={400}
-  width={1000}
+  width={750}
 >
   <g
     transform="translate(80, 350)"
@@ -354,7 +354,7 @@ exports[`BarChart [common] example testing should match snapshot(s) for 05.limit
 <svg
   className="lucid-BarChart"
   height={400}
-  width={1000}
+  width={750}
 >
   <g
     transform="translate(80, 350)"
@@ -496,7 +496,7 @@ exports[`BarChart [common] example testing should match snapshot(s) for 06.all-t
 <svg
   className="lucid-BarChart"
   height={400}
-  width={1000}
+  width={750}
 >
   <g
     transform="translate(80, 350)"
@@ -520,7 +520,7 @@ exports[`BarChart [common] example testing should match snapshot(s) for 06.all-t
       height={50}
       label="Weekdays"
       orient="bottom"
-      width={900}
+      width={650}
     />
   </g>
   <g
@@ -619,7 +619,7 @@ exports[`BarChart [common] example testing should match snapshot(s) for 07.stack
 <svg
   className="lucid-BarChart"
   height={400}
-  width={1000}
+  width={750}
 >
   <g
     transform="translate(80, 350)"
@@ -724,7 +724,7 @@ exports[`BarChart [common] example testing should match snapshot(s) for 08.unfor
 <svg
   className="lucid-BarChart"
   height={400}
-  width={1000}
+  width={750}
 >
   <g
     transform="translate(80, 350)"
@@ -825,7 +825,7 @@ exports[`BarChart [common] example testing should match snapshot(s) for 09.forma
 <svg
   className="lucid-BarChart"
   height={400}
-  width={1000}
+  width={750}
 >
   <g
     transform="translate(80, 350)"
@@ -926,7 +926,7 @@ exports[`BarChart [common] example testing should match snapshot(s) for 10.forma
 <svg
   className="lucid-BarChart"
   height={400}
-  width={1000}
+  width={750}
 >
   <g
     transform="translate(80, 350)"
@@ -1031,7 +1031,7 @@ exports[`BarChart [common] example testing should match snapshot(s) for 11.empty
   <svg
     className="lucid-BarChart"
     height={400}
-    width={1000}
+    width={750}
   >
     <g
       transform="translate(80, 350)"
@@ -1083,7 +1083,7 @@ exports[`BarChart [common] example testing should match snapshot(s) for 12.empty
   <svg
     className="lucid-BarChart"
     height={400}
-    width={1000}
+    width={750}
   >
     <g
       transform="translate(80, 350)"

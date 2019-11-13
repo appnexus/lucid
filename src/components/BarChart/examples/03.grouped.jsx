@@ -22,6 +22,7 @@ export default createClass({
 		return (
 			<div>
 				<BarChart
+					width={750}
 					data={data}
 					yAxisFields={['apples', 'pears', 'peaches', 'bananas', 'oranges']}
 					yAxisMin={0}
