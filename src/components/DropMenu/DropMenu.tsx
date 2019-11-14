@@ -337,7 +337,7 @@ interface IOptionsData {
 	optionProps: IDropMenuOptionProps;
 }
 
-export interface IDropMenuState {
+interface IDropMenuState {
 	isMouseTriggered: boolean;
 	optionGroups: OptionGroup[];
 	flattenedOptionsData: IOptionsData[];
