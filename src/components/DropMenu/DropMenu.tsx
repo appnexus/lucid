@@ -337,7 +337,7 @@ interface IOptionsData {
 	optionProps: IDropMenuOptionProps;
 }
 
-interface IDropMenuState {
+export interface IDropMenuState {
 	isMouseTriggered: boolean;
 	optionGroups: OptionGroup[];
 	flattenedOptionsData: IOptionsData[];
@@ -1051,4 +1051,4 @@ class DropMenu extends React.Component<IDropMenuProps, IDropMenuState> {
 }
 
 export default buildHybridComponent(DropMenu);
-export { DropMenu as DropMenuDumb };
+export { DropMenu as DropMenuDumb, NullOption, OptionGroup };
