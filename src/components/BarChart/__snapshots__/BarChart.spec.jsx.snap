@@ -74,12 +74,12 @@ exports[`BarChart [common] example testing should match snapshot(s) for 01.basic
       isStacked={false}
       palette={
         Array [
-          "color-chart-0",
-          "color-chart-1",
-          "color-chart-2",
           "color-chart-3",
-          "color-chart-4",
+          "color-chart-0-darkest",
+          "color-chart-2",
+          "color-chart-4-lightest",
           "color-chart-5",
+          "color-chart-1-light",
           "color-chart-6",
         ]
       }
@@ -319,12 +319,12 @@ exports[`BarChart [common] example testing should match snapshot(s) for 04.group
       isStacked={false}
       palette={
         Array [
-          "color-chart-0",
-          "color-chart-1",
-          "color-chart-2",
           "color-chart-3",
-          "color-chart-4",
+          "color-chart-0-darkest",
+          "color-chart-2",
+          "color-chart-4-lightest",
           "color-chart-5",
+          "color-chart-1-light",
           "color-chart-6",
         ]
       }
@@ -465,12 +465,12 @@ exports[`BarChart [common] example testing should match snapshot(s) for 05.limit
       isStacked={false}
       palette={
         Array [
-          "color-chart-0",
-          "color-chart-1",
-          "color-chart-2",
           "color-chart-3",
-          "color-chart-4",
+          "color-chart-0-darkest",
+          "color-chart-2",
+          "color-chart-4-lightest",
           "color-chart-5",
+          "color-chart-1-light",
           "color-chart-6",
         ]
       }
@@ -587,12 +587,12 @@ exports[`BarChart [common] example testing should match snapshot(s) for 06.all-t
       isStacked={false}
       palette={
         Array [
-          "color-chart-0",
-          "color-chart-1",
-          "color-chart-2",
           "color-chart-3",
-          "color-chart-4",
+          "color-chart-0-darkest",
+          "color-chart-2",
+          "color-chart-4-lightest",
           "color-chart-5",
+          "color-chart-1-light",
           "color-chart-6",
         ]
       }
@@ -691,12 +691,12 @@ exports[`BarChart [common] example testing should match snapshot(s) for 07.stack
       isStacked={true}
       palette={
         Array [
-          "color-chart-0",
-          "color-chart-1",
-          "color-chart-2",
           "color-chart-3",
-          "color-chart-4",
+          "color-chart-0-darkest",
+          "color-chart-2",
+          "color-chart-4-lightest",
           "color-chart-5",
+          "color-chart-1-light",
           "color-chart-6",
         ]
       }
@@ -794,12 +794,12 @@ exports[`BarChart [common] example testing should match snapshot(s) for 08.unfor
       isStacked={false}
       palette={
         Array [
-          "color-chart-0",
-          "color-chart-1",
-          "color-chart-2",
           "color-chart-3",
-          "color-chart-4",
+          "color-chart-0-darkest",
+          "color-chart-2",
+          "color-chart-4-lightest",
           "color-chart-5",
+          "color-chart-1-light",
           "color-chart-6",
         ]
       }
@@ -895,12 +895,12 @@ exports[`BarChart [common] example testing should match snapshot(s) for 09.forma
       isStacked={false}
       palette={
         Array [
-          "color-chart-0",
-          "color-chart-1",
-          "color-chart-2",
           "color-chart-3",
-          "color-chart-4",
+          "color-chart-0-darkest",
+          "color-chart-2",
+          "color-chart-4-lightest",
           "color-chart-5",
+          "color-chart-1-light",
           "color-chart-6",
         ]
       }
@@ -996,12 +996,12 @@ exports[`BarChart [common] example testing should match snapshot(s) for 10.forma
       isStacked={false}
       palette={
         Array [
-          "color-chart-0",
-          "color-chart-1",
-          "color-chart-2",
           "color-chart-3",
-          "color-chart-4",
+          "color-chart-0-darkest",
+          "color-chart-2",
+          "color-chart-4-lightest",
           "color-chart-5",
+          "color-chart-1-light",
           "color-chart-6",
         ]
       }
@@ -1963,12 +1963,12 @@ exports[`BarChart [common] example testing should match snapshot(s) for 13.many-
       isStacked={false}
       palette={
         Array [
-          "color-chart-0",
-          "color-chart-1",
-          "color-chart-2",
           "color-chart-3",
-          "color-chart-4",
+          "color-chart-0-darkest",
+          "color-chart-2",
+          "color-chart-4-lightest",
           "color-chart-5",
+          "color-chart-1-light",
           "color-chart-6",
         ]
       }

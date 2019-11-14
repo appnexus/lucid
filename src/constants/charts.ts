@@ -49,24 +49,24 @@ export const COLOR_BAD_DARKEST = 'color-chart-bad-darkest';
 export const COLOR_NEUTRAL = 'color-chart-neutral';
 
 export const PALETTE_6: string[] = [
-	COLOR_0,
-	COLOR_1,
-	COLOR_2,
 	COLOR_3,
-	COLOR_4,
+	COLOR_0_DARKEST,
+	COLOR_2,
+	COLOR_4_LIGHTEST,
 	COLOR_5,
+	COLOR_1_LIGHT,
 ];
 
 // In order to keep the naming scheme correct I'm introducing a new default
 // palette that has 7 items while not breaking existing code that uses a 6
 // color palette.
 export const PALETTE_7: string[] = [
-	COLOR_0,
-	COLOR_1,
-	COLOR_2,
 	COLOR_3,
-	COLOR_4,
+	COLOR_0_DARKEST,
+	COLOR_2,
+	COLOR_4_LIGHTEST,
 	COLOR_5,
+	COLOR_1_LIGHT,
 	COLOR_6,
 ];
 
