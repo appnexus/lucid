@@ -39,12 +39,12 @@ exports[`OverlayWrapper [common] example testing should match snapshot(s) for 1.
     }
     palette={
       Array [
-        "color-chart-0",
-        "color-chart-1",
-        "color-chart-2",
         "color-chart-3",
-        "color-chart-4",
+        "color-chart-0-darkest",
+        "color-chart-2",
+        "color-chart-4-lightest",
         "color-chart-5",
+        "color-chart-1-light",
         "color-chart-6",
       ]
     }
