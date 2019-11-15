@@ -57,22 +57,22 @@ export interface IVerticalListMenuProps extends StandardProps {
 export interface IVerticalListMenuItemProps extends StandardProps {
 	/** 	Show or hide the expand button. Should be \`true\` if you want to
 					nest menus. */
-	hasExpander: boolean;
+	hasExpander?: boolean;
 
 	/** Determines the visibility of nested menus. */
-	isExpanded: boolean;
+	isExpanded?: boolean;
 
 	/** If \`true\` then a small bar on the left side of the item will be
 	shown indicating this item is selected. */
-	isSelected: boolean;
+	isSelected?: boolean;
 
 	/** Determines the visibility of the small bar on the left when the user
 	hovers over the item. This should indicate to the user that an item
 	is clickable. */
-	isActionable: boolean;
+	isActionable?: boolean;
 
 	/** Called when the user clicks the main body of the item. */
-	onSelect: (
+	onSelect?: (
 		index: number,
 		{
 			event,
@@ -84,7 +84,7 @@ export interface IVerticalListMenuItemProps extends StandardProps {
 	) => void;
 
 	/** Called when the user clicks the expand button. */
-	onToggle: (
+	onToggle?: (
 		index: number,
 		{
 			event,
@@ -97,7 +97,7 @@ export interface IVerticalListMenuItemProps extends StandardProps {
 
 	/** Props that are passed through to the underlying Collapsible component
 	if the item has children. */
-	Collapsible: ICollapsibleProps;
+	Collapsible?: ICollapsibleProps;
 }
 const Item: FC<IVerticalListMenuItemProps> = (): null => null;
 Item.peek = {

@@ -51,7 +51,7 @@ exports[`VerticalTabs [common] example testing should match snapshot(s) for 1-ti
       <span
         className="lucid-VerticalTabs-Tab-content"
       >
-        Five
+        Four
       </span>
     </VerticalListMenu.Item>
   </VerticalListMenu>
