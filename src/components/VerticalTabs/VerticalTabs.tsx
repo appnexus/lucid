@@ -77,6 +77,10 @@ const VerticalTabsTab: FC<IVerticalTabsTab> = (): null => null;
 
 const VerticalTabsTitle: FC<IVerticalTabsTitle> = (): null => null;
 
+export interface IVerticalTabsState {
+    selectedIndex: number
+}
+
 /** Default props for the VerticalTabs component */
 const defaultProps = {
     selectedIndex: 0,
