@@ -1,16 +1,24 @@
 import * as React from 'react';
 import { render } from 'react-dom';
-import { Button, ButtonGroup } from 'lucid-ui';
+import { Expander, Button, ButtonGroup } from 'lucid-ui';
 
 import 'lucid-ui/src/index.less';
 
 function App(): React.ReactElement {
 	return (
 		<div className='App'>
-			<h1>Hello CodeSandbox</h1>
-			<h2>Start editing to see some magic happen!</h2>
-			<ButtonGroup></ButtonGroup>
-			<Button onClick={() => console.log('hello')}>hello</Button>
+			<h1>Hello Lucid UI</h1>
+			<ButtonGroup sdlkfj>
+				<ButtonGroup.Button>Button 1</ButtonGroup.Button>
+				<ButtonGroup.Button>Button 2</ButtonGroup.Button>
+			</ButtonGroup>
+			<Button>
+				hello
+			</Button>
+			<Expander>
+				<Expander.Label>label</Expander.Label>
+				<p>expander content</p>
+			</Expander>
 		</div>
 	);
 }
