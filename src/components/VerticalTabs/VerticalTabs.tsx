@@ -13,7 +13,6 @@ import {
 import { buildHybridComponent } from '../../util/state-management';
 import * as reducers from './VerticalTabs.reducers';
 import {
-	IVerticalListMenuProps,
 	IVerticalListMenuItemProps,
 	VerticalListMenuDumb as VerticalListMenu,
 } from '../VerticalListMenu/VerticalListMenu';
