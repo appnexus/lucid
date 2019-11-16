@@ -1,59 +1,103 @@
-// import _ from 'lodash';
-// import React from 'react';
-// import PropTypes from 'react-peek/prop-types';
-// import { lucidClassNames } from '../../util/style-helpers';
-// import {
-// 	FC,
-// 	FixDefaults,
-// 	findTypes,
-// 	getFirst,
-// 	omitProps,
-// 	Overwrite,
-// 	StandardProps,
-// } from '../../util/component-types';
+import _ from 'lodash';
+import React from 'react';
+import PropTypes from 'react-peek/prop-types';
+import { lucidClassNames } from '../../util/style-helpers';
+import {
+	findTypes,
+	FC,
+	getFirst,
+	omitProps,
+	Overwrite,
+	StandardProps,
+} from '../../util/component-types';
+import { buildHybridComponent } from '../../util/state-management';
+import * as reducers from './VerticalTabs.reducers';
+import {
+	IVerticalListMenuProps,
+	IVerticalListMenuItemProps,
+	VerticalListMenuDumb as VerticalListMenu,
+} from '../VerticalListMenu/VerticalListMenu';
 
-// import { buildHybridComponent } from '../../util/state-management';
+const cx = lucidClassNames.bind('&-VerticalTabs');
 
-// //TODO: convert reducers file to tsx
-// import * as reducers from './VerticalTabs.reducers';
-// //TODO: convert vertical list menu first
-// import {
-// 	IVerticalListMenuItemProps,
-// 	VerticalListMenuDumb as VerticalListMenu,
-// } from '../VerticalListMenu/VerticalListMenu';
+const { string, number, bool, func } = PropTypes;
 
-// const cx = lucidClassNames.bind('&-VerticalTabs');
-
-// const { string, number, bool, func } = PropTypes;
-
-// interface IVerticalTabsPropsRaw extends StandardProps {
-// 	/** Custom Tab component (alias for `VerticalTabs.Tab`) */
-// 	Tab?: React.ReactNode;
-
-// 	/** Custom Title component (alias for `VerticalTabs.Title`) */
-// 	Title?: React.ReactNode;
-
-// 	/** Indicates which of the \`VerticalTabs.Tab\` children is currently
-//     selected */
-// 	selectedIndex?: number;
-
-// 	/** Callback fired when the user selects a \`VerticalListMenu.Item\`.*/
-// 	onSelect: (
-// 		index: number,
-// 		{
-// 			event,
-// 			props,
-// 		}: {
-// 			event: React.MouseEvent;
-// 			props: IVerticalListMenuItemProps;
-// 		}
-// 	) => void;
+// export interface IVerticalTabsFC extends FC<IVerticalTabsProps> {
+// 	Tab: FC<IVerticalTabsProps>;
+// 	Title: FC<IVerticalTabsProps>;
 // }
 
-// type IVerticalTabsProps = Overwrite<
-// 	React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>,
-// 	IVerticalTabsPropsRaw
-// >;
+/** Vertical Tabs Tab */
+interface IVerticalTabsTabProps extends StandardProps {
+	description?: string;
+
+	/** Determines if the Tab is selected */
+	isSelected?: boolean;
+}
+
+const Tab: FC<IVerticalTabsTabProps> = (): null => null;
+
+Tab.displayName = 'VerticalTabs.Tab';
+Tab.peek = {
+	description: `
+        Content that will be rendered in a tab. Be sure to nest a Title
+        inside each Tab or provide it as a prop.
+    `,
+};
+Tab.propName = 'Tab';
+Tab.propTypes = {
+	isSelected: bool`
+        Determines if the Tab is selected.
+    `,
+};
+
+/** Vertical Tabs Title */
+interface IVerticalTabsTitleProps extends StandardProps {
+	description?: string;
+}
+
+const Title: FC<IVerticalTabsTitleProps> = (): null => null;
+
+Title.displayName = 'VerticalTabs.Title';
+Title.peek = {
+	description: `
+        Titles can be provided as a child or prop to a Tab.
+    `,
+};
+Title.propName = 'Title';
+
+/** Vertical Tabs */
+
+interface IVerticalTabsPropsRaw extends StandardProps {
+	/** Custom Tab component (alias for `VerticalTabs.Tab`) */
+	Tab?: React.ReactNode;
+
+	/** Custom Title component (alias for `VerticalTabs.Title`) */
+	Title?: React.ReactNode;
+
+	/** Indicates which of the \`VerticalTabs.Tab\` children is currently
+    selected */
+	selectedIndex?: number;
+
+	//actualSelectedIndex: number;
+
+	/** Callback fired when the user selects a \`VerticalListMenu.Item\`.*/
+	onSelect: (
+		index: number,
+		{
+			event,
+			props,
+		}: {
+			event: React.MouseEvent;
+			props: IVerticalListMenuItemProps;
+		}
+	) => void;
+}
+
+type IVerticalTabsProps = Overwrite<
+	React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>,
+	IVerticalTabsPropsRaw
+>;
 
 // export interface IVerticalTabsFC extends FC<IVerticalTabsProps> {
 // 	Tab: FC<IVerticalTabsProps>;
@@ -61,142 +105,117 @@
 // 	reducers: any;
 // }
 
-// interface IVerticalTabsTab extends StandardProps {
-// 	/** Determines if the Tab is selected */
-// 	isSelected?: boolean;
-// }
+/** Default props for the VerticalTabs component */
+const defaultProps = {
+	selectedIndex: 0,
+	onSelect: _.noop,
+};
 
-// // TODO: Is Title a child of Tab or VerticalTabs? Remove this if it has no props?
-// interface IVerticalTabsTitle extends StandardProps {}
+export interface IVerticalTabsState {
+	selectedIndex: number;
+}
 
-// const VerticalTabsTab: FC<IVerticalTabsTab> = (): null => null;
+class VerticalTabs extends React.Component<
+	IVerticalTabsProps,
+	IVerticalTabsState
+> {
+	static displayName = 'VerticalTabs';
+	static propTypes = {
+		className: string`
+			Class names that are appended to the defaults.
+		`,
 
-// const VerticalTabsTitle: FC<IVerticalTabsTitle> = (): null => null;
+		selectedIndex: number`
+			Indicates which of the \`VerticalTabs.Tab\` children is currently
+			selected. The index of the last \`VerticalTabs.Tab\` child with
+			\`isSelected\` equal to \`true\` takes precedence over this prop.
+		`,
 
-// export interface IVerticalTabsState {
-// 	selectedIndex: number;
-// }
+		onSelect: func`
+			Callback for when the user clicks a tab. Called with the index of the tab
+			that was clicked.  Signature: \`(index, { event, props}) => {}\`
+		`,
+	};
 
-// /** Default props for the VerticalTabs component */
-// const defaultProps = {
-// 	selectedIndex: 0,
-// 	onSelect: _.noop,
-// };
+	static defaultProps = defaultProps;
+	static reducers = reducers;
+	static Tab = Tab;
+	static Title = Title;
 
-// /** Vertical Tabs description */
-// export const VerticalTabs: IVerticalTabsFC = (props): React.ReactElement => {
-// 	const {
-// 		className,
-// 		onSelect,
-// 		selectedIndex,
-// 		...passThroughs
-// 	} = props as FixDefaults<IVerticalTabsProps, typeof defaultProps>;
+	// for backward compatibility with buildHybridComponent
+	static definition = {
+		statics: {
+			reducers,
+			Tab,
+			Title,
+			peek: {
+				description: `
+                \`VerticalTabs\` provides vertically tabbed navigation. It has a
+                flexible interface that allows tab content to be passed as regular
+                React children or through props.
+            `,
+				categories: ['navigation'],
+				madeFrom: ['VerticalListMenu'],
+			},
+		},
+	};
 
-// 	// Grab props array from each Tab
-// 	const tabChildProps = _.map(findTypes(props, VerticalTabs.Tab), 'props');
+	render(): React.ReactNode {
+		const { className, onSelect, selectedIndex, ...passThroughs } = this.props;
 
-// 	const selectedIndexFromChildren = _.findLastIndex(tabChildProps, {
-// 		isSelected: true,
-// 	});
+		// Grab props array from each Tab
+		const tabChildProps = _.map(
+			findTypes(this.props, VerticalTabs.Tab),
+			'props'
+		);
 
-// 	const actualSelectedIndex =
-// 		selectedIndexFromChildren !== -1
-// 			? selectedIndexFromChildren
-// 			: selectedIndex;
+		const selectedIndexFromChildren = _.findLastIndex(tabChildProps, {
+			isSelected: true,
+		});
 
-// 	return (
-// 		<div
-// 			{...omitProps(passThroughs, undefined, _.keys(VerticalTabs.propTypes))}
-// 			className={cx('&', className)}
-// 		>
-// 			<VerticalListMenu
-// 				selectedIndices={[actualSelectedIndex]}
-// 				onSelect={onSelect}
-// 			>
-// 				{_.map(tabChildProps, (tabChildProp, index) => (
-// 					<VerticalListMenu.Item
-// 						className={cx('&-Tab', {
-// 							'&-Tab-is-active': actualSelectedIndex === index,
-// 						})}
-// 						key={index}
-// 					>
-// 						<span className={cx('&-Tab-content')}>
-// 							{_.get(
-// 								getFirst(tabChildProp, VerticalTabs.Title),
-// 								'props.children',
-// 								''
-// 							)}
-// 						</span>
-// 					</VerticalListMenu.Item>
-// 				))}
-// 			</VerticalListMenu>
-// 			<div className={cx('&-content')}>
-// 				{_.get(tabChildProps, [actualSelectedIndex, 'children'])}
-// 			</div>
-// 		</div>
-// 	);
-// };
+		const actualSelectedIndex =
+			selectedIndexFromChildren !== -1
+				? selectedIndexFromChildren
+				: selectedIndex;
 
-// /** Vertical Tabs */
-// VerticalTabs.defaultProps = defaultProps;
-// //TODO: deal with the reducers...
-// VerticalTabs.reducers = reducers;
+		return (
+			<div
+				{...omitProps(passThroughs, undefined, _.keys(VerticalTabs.propTypes))}
+				className={cx('&', className)}
+			>
+				<VerticalListMenu
+					selectedIndices={[
+						_.isUndefined(actualSelectedIndex) ? 0 : actualSelectedIndex,
+					]}
+					onSelect={onSelect}
+				>
+					{_.map(tabChildProps, (tabChildProp, index) => (
+						<VerticalListMenu.Item
+							className={cx('&-Tab', {
+								'&-Tab-is-active': actualSelectedIndex === index,
+							})}
+							key={index}
+						>
+							<span className={cx('&-Tab-content')}>
+								{_.get(
+									getFirst(tabChildProp, VerticalTabs.Title),
+									'props.children',
+									''
+								)}
+							</span>
+						</VerticalListMenu.Item>
+					))}
+				</VerticalListMenu>
+				<div className={cx('&-content')}>
+					{_.get(tabChildProps, [
+						_.isUndefined(actualSelectedIndex) ? '' : actualSelectedIndex,
+						'children',
+					])}
+				</div>
+			</div>
+		);
+	}
+}
 
-// VerticalTabs.displayName = 'VerticalTabs';
-
-// VerticalTabs.peek = {
-// 	description: `
-//         \`VerticalTabs\` provides vertically tabbed navigation. It has a
-//         flexible interface that allows tab content to be passed as regular
-//         React children or through props.
-//     `,
-// 	categories: ['navigation'],
-// 	madeFrom: ['VerticalListMenu'],
-// };
-
-// VerticalTabs.propTypes = {
-// 	className: string`
-//         Class names that are appended to the defaults.
-//     `,
-
-// 	selectedIndex: number`
-//         Indicates which of the \`VerticalTabs.Tab\` children is currently
-//         selected. The index of the last \`VerticalTabs.Tab\` child with
-//         \`isSelected\` equal to \`true\` takes precedence over this prop.
-//     `,
-
-// 	onSelect: func`
-//         Callback for when the user clicks a tab. Called with the index of the tab
-//         that was clicked.  Signature: \`(index, { event, props}) => {}\`
-//     `,
-// };
-
-// /** Vertical Tabs Tab */
-// VerticalTabsTab.displayName = 'VerticalTabs.Tab';
-// VerticalTabs.Tab = VerticalTabsTab;
-// VerticalTabsTab.propName = 'Tab';
-// VerticalTabsTab.peek = {
-// 	description: `
-//         Content that will be rendered in a tab. Be sure to nest a Title
-//         inside each Tab or provide it as a prop.
-//     `,
-// };
-
-// VerticalTabsTab.propTypes = {
-// 	isSelected: bool`
-//         Determines if the Tab is selected.
-//     `,
-// };
-
-// /** Vertical Tabs Title */
-// VerticalTabs.Title = VerticalTabsTitle;
-// VerticalTabsTitle.displayName = 'VerticalTabs.Title';
-// VerticalTabsTitle.propName = 'Title';
-// VerticalTabsTitle.peek = {
-// 	description: `
-//         Titles can be provided as a child or prop to a Tab.
-//     `,
-// };
-
-// export default buildHybridComponent(VerticalTabs);
-// export { VerticalTabs as VerticalTabsDumb };
+export default buildHybridComponent(VerticalTabs);
+export { VerticalTabs as VerticalTabsDumb };
