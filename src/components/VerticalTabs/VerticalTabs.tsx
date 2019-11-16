@@ -21,15 +21,8 @@ const cx = lucidClassNames.bind('&-VerticalTabs');
 
 const { string, number, bool, func } = PropTypes;
 
-// export interface IVerticalTabsFC extends FC<IVerticalTabsProps> {
-// 	Tab: FC<IVerticalTabsProps>;
-// 	Title: FC<IVerticalTabsProps>;
-// }
-
-/** Vertical Tabs Tab */
+/** Vertical Tabs Tab Child Component */
 interface IVerticalTabsTabProps extends StandardProps {
-	description?: string;
-
 	/** Determines if the Tab is selected */
 	isSelected?: boolean;
 }
@@ -50,10 +43,8 @@ Tab.propTypes = {
     `,
 };
 
-/** Vertical Tabs Title */
-interface IVerticalTabsTitleProps extends StandardProps {
-	description?: string;
-}
+/** Vertical Tabs Title Child Component */
+interface IVerticalTabsTitleProps extends StandardProps {}
 
 const Title: FC<IVerticalTabsTitleProps> = (): null => null;
 
@@ -65,8 +56,7 @@ Title.peek = {
 };
 Title.propName = 'Title';
 
-/** Vertical Tabs */
-
+/** Vertical Tabs Component */
 interface IVerticalTabsPropsRaw extends StandardProps {
 	/** Custom Tab component (alias for `VerticalTabs.Tab`) */
 	Tab?: React.ReactNode;
@@ -97,12 +87,6 @@ type IVerticalTabsProps = Overwrite<
 	React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>,
 	IVerticalTabsPropsRaw
 >;
-
-// export interface IVerticalTabsFC extends FC<IVerticalTabsProps> {
-// 	Tab: FC<IVerticalTabsProps>;
-// 	Title: FC<IVerticalTabsProps>;
-// 	reducers: any;
-// }
 
 /** Default props for the VerticalTabs component */
 const defaultProps = {
@@ -141,7 +125,7 @@ class VerticalTabs extends React.Component<
 	static Tab = Tab;
 	static Title = Title;
 
-	// for backward compatibility with buildHybridComponent
+	// For backward compatibility with buildHybridComponent
 	static definition = {
 		statics: {
 			reducers,
@@ -207,7 +191,7 @@ class VerticalTabs extends React.Component<
 				</VerticalListMenu>
 				<div className={cx('&-content')}>
 					{_.get(tabChildProps, [
-						_.isUndefined(actualSelectedIndex) ? '' : actualSelectedIndex,
+						_.isUndefined(actualSelectedIndex) ? 0 : actualSelectedIndex,
 						'children',
 					])}
 				</div>
