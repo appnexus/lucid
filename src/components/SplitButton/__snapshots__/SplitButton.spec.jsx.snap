@@ -31,6 +31,8 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
   onFocusOption={[Function]}
   onFocusPrev={[Function]}
   onSelect={[Function]}
+  optionContainerStyle={Object {}}
+  portalId=""
   selectedIndices={Array []}
   style={
     Object {
@@ -40,7 +42,6 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
 >
   <DropMenu.Control>
     <ButtonGroup
-      className={null}
       onSelect={[Function]}
       selectedIndices={Array []}
     >
@@ -120,6 +121,8 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
   onFocusOption={[Function]}
   onFocusPrev={[Function]}
   onSelect={[Function]}
+  optionContainerStyle={Object {}}
+  portalId=""
   selectedIndices={Array []}
   style={
     Object {
@@ -129,7 +132,6 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
 >
   <DropMenu.Control>
     <ButtonGroup
-      className={null}
       onSelect={[Function]}
       selectedIndices={Array []}
     >
@@ -211,6 +213,8 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 03.di
   onFocusOption={[Function]}
   onFocusPrev={[Function]}
   onSelect={[Function]}
+  optionContainerStyle={Object {}}
+  portalId=""
   selectedIndices={Array []}
   style={
     Object {
@@ -220,7 +224,6 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 03.di
 >
   <DropMenu.Control>
     <ButtonGroup
-      className={null}
       onSelect={[Function]}
       selectedIndices={Array []}
     >
@@ -308,6 +311,8 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 04.up
   onFocusOption={[Function]}
   onFocusPrev={[Function]}
   onSelect={[Function]}
+  optionContainerStyle={Object {}}
+  portalId=""
   selectedIndices={Array []}
   style={
     Object {
@@ -317,7 +322,6 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 04.up
 >
   <DropMenu.Control>
     <ButtonGroup
-      className={null}
       onSelect={[Function]}
       selectedIndices={Array []}
     >
@@ -407,6 +411,8 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 4.siz
   onFocusOption={[Function]}
   onFocusPrev={[Function]}
   onSelect={[Function]}
+  optionContainerStyle={Object {}}
+  portalId=""
   selectedIndices={Array []}
   style={
     Object {
@@ -417,7 +423,6 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 4.siz
 >
   <DropMenu.Control>
     <ButtonGroup
-      className={null}
       onSelect={[Function]}
       selectedIndices={Array []}
     >
@@ -499,6 +504,8 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 4.siz
   onFocusOption={[Function]}
   onFocusPrev={[Function]}
   onSelect={[Function]}
+  optionContainerStyle={Object {}}
+  portalId=""
   selectedIndices={Array []}
   style={
     Object {
@@ -509,7 +516,6 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 4.siz
 >
   <DropMenu.Control>
     <ButtonGroup
-      className={null}
       onSelect={[Function]}
       selectedIndices={Array []}
     >
@@ -591,6 +597,8 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 4.siz
   onFocusOption={[Function]}
   onFocusPrev={[Function]}
   onSelect={[Function]}
+  optionContainerStyle={Object {}}
+  portalId=""
   selectedIndices={Array []}
   style={
     Object {
@@ -601,7 +609,6 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 4.siz
 >
   <DropMenu.Control>
     <ButtonGroup
-      className={null}
       onSelect={[Function]}
       selectedIndices={Array []}
     >

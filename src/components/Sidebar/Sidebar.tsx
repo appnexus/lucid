@@ -3,7 +3,8 @@ import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import {
-	createClass,
+	FC,
+	StandardProps,
 	filterTypes,
 	findTypes,
 	omitProps,
@@ -29,22 +30,153 @@ const {
 	oneOfType,
 } = PropTypes;
 
-const Sidebar = createClass({
-	displayName: 'Sidebar',
+const defaultProps = {
+	isExpanded: true,
+	isAnimated: true,
+	width: 250,
+	position: 'left',
+	isResizeDisabled: false,
+	onResizing: _.noop,
+	onResize: _.noop,
+	onToggle: _.noop,
+};
 
-	statics: {
-		peek: {
-			description: `
-				\`Sidebar\` renders a collapsible, resizeable side bar panel next to
-				primary content.
-			`,
-			categories: ['layout'],
+interface ISidebarPrimaryProps extends StandardProps {}
+
+interface ISidebarTitleProps extends StandardProps {}
+
+interface ISidebarBarProps extends StandardProps {
+	Title?: ISidebarTitleProps;
+	title?: ISidebarTitleProps;
+	hasGutters?: boolean;
+}
+
+const Primary: FC<ISidebarPrimaryProps> = (): null => null;
+Primary.peek = {
+	description: `
+		Main pane content that will have a paired \`Bar\`.
+	`,
+};
+Primary.displayName = 'SplitHorizontal.Primary';
+Primary.propName = 'Primary';
+
+const Title: FC<ISidebarTitleProps> = (): null => null;
+Title.peek = {
+	description: `
+		Sidebar title;
+	`,
+};
+Title.propTypes = {
+	children: node`
+		Content that will be displayed as the title of the Bar. It's only
+		shown when the user has the Bar expanded.
+	`,
+};
+Title.propTypes = {
+	children: node`
+		Sidebar title.
+	`,
+};
+Title.displayName = 'Sidebar.Title';
+Title.propName = ['Title', 'title'];
+
+const Bar: FC<ISidebarBarProps> = (): null => null;
+Bar.peek = {
+	description: `
+		Content to be placed alongside the Primary pane.
+	`,
+};
+Bar.displayName = 'Sidebar.Bar';
+Bar.propName = 'Bar';
+Bar.propTypes = {
+	Title: any`
+		Set the title of the Sidebar. (alias for \`title\` and \`Sidebar.Title\`)
+	`,
+	title: any`
+		Set the title of the Sidebar. (alias for \`Title\` and \`Sidebar.Title\`)
+	`,
+	hasGutters: bool`
+		Adds default padding to the sidebar content.
+	`,
+};
+Bar.defaultProps = {
+	hasGutters: true,
+};
+
+export interface ISidebarState {
+	isExpanded: boolean;
+	width: number;
+}
+
+export interface ISidebarProps extends StandardProps {
+	/** Sets the starting width of the Bar. */
+	width: number;
+
+	/** Force the Sidebar to be expanded or collapsed. */
+	isExpanded: boolean;
+
+	/** Allows animated expand and collapse behavior. */
+	isAnimated: boolean;
+
+	/** Render the Sidebar to the left or right of primary content. */
+	position: 'left' | 'right';
+
+	/** Disable user resizing of the Sidebar. */
+	isResizeDisabled: boolean;
+
+	/** Set the title of the Sidebar. (alias for \`Title\` and \`Sidebar.Title\`) */
+	title?: React.ReactNode;
+
+	/** Set the title of the Sidebar. (alias for \`title\` and \`Sidebar.Title\`) */
+	Title?: React.ReactNode;
+
+	/** Called when the user is currently resizing the Sidebar. */
+	onResizing: (
+		width: number,
+		{ event, props }: { event: MouseEvent | TouchEvent; props: ISidebarProps }
+	) => void;
+
+	/** Called when the user resizes the Sidebar. */
+	onResize: (
+		width: number,
+		{ event, props }: { event: MouseEvent | TouchEvent; props: ISidebarProps }
+	) => void;
+
+	/** 	Called when the user expands or collapses the Sidebar. */
+	onToggle: ({
+		event,
+		props,
+	}: {
+		event: React.MouseEvent<HTMLButtonElement>;
+		props: ISidebarProps;
+	}) => void;
+}
+
+class Sidebar extends React.Component<ISidebarProps, ISidebarState> {
+	static displayName = 'Sidebar';
+
+	static Bar = Bar;
+	static Primary = Primary;
+	static Title = Title;
+	static definition = {
+		statics: {
+			reducers,
+			Bar,
+			Primary,
+			Title,
+			peek: {
+				description: `
+					\`Sidebar\` renders a collapsible, resizeable side bar panel next to
+					primary content.
+				`,
+				categories: ['layout'],
+			},
 		},
-	},
+	};
 
-	reducers,
+	static reducers = reducers;
 
-	propTypes: {
+	static propTypes = {
 		style: object`
 			Style object that gets applied to the outer element.
 		`,
@@ -88,6 +220,14 @@ const Sidebar = createClass({
 			Set the title of the Sidebar. (alias for \`title\` and \`Sidebar.Title\`)
 		`,
 
+		Bar: any`
+			Content to be placed alongside the Primary pane.
+		`,
+
+		Primary: any`
+			Main pane content that will have a paired \`Bar\`.
+		`,
+
 		onResizing: func`
 			Called when the user is currently resizing the Sidebar.  Signature:
 			\`(width, { event, props }) => {}\`
@@ -102,106 +242,33 @@ const Sidebar = createClass({
 			Called when the user expands or collapses the Sidebar.  Signature: \`({
 			event, props }) => {}\`
 		`,
-	},
+	};
 
-	components: {
-		Bar: createClass({
-			displayName: 'Sidebar.Bar',
-			statics: {
-				peek: {
-					description: `
-						Content to be placed alongside the Primary pane.
-					`,
-				},
-			},
-			propTypes: {
-				children: node`
-					Sidebar content. Also can define <Sidebar.Title> here as well.
-				`,
-				title: any`
-					Set the title of the Sidebar. (alias for \`Title\` and
-					\`Sidebar.Title\`)
-				`,
-				Title: any`
-					Set the title of the Sidebar. (alias for \`title\` and
-					\`Sidebar.Title\`)
-				`,
-				hasGutters: bool`
-					Adds default padding to the sidebar content.
-				`,
-			},
-			getDefaultProps() {
-				return {
-					hasGutters: true,
-				};
-			},
-		}),
+	static defaultProps = defaultProps;
 
-		Primary: createClass({
-			displayName: 'Sidebar.Primary',
-			statics: {
-				peek: {
-					description: `
-						Main pane content that will have a paired \`Bar\`.
-					`,
-				},
-			},
-			propTypes: {
-				children: node`
-					Primary content rendered beside the Sidebar.
-				`,
-			},
-		}),
-
-		Title: createClass({
-			displayName: 'Sidebar.Title',
-			statics: {
-				peek: {
-					description: `
-						Content that will be displayed as the title of the Bar. It's only
-						shown when the user has the Bar expanded.
-					`,
-				},
-			},
-			propName: ['Title', 'title'],
-			propTypes: {
-				children: node`
-					Sidebar title.
-				`,
-			},
-		}),
-	},
-
-	getDefaultProps() {
-		return {
-			isExpanded: true,
-			isAnimated: true,
-			width: 250,
-			position: 'left',
-			isResizeDisabled: false,
-			onResizing: _.noop,
-			onResize: _.noop,
-			onToggle: _.noop,
-		};
-	},
-
-	handleExpanderClick(event) {
+	handleExpanderClick = (event: React.MouseEvent<HTMLButtonElement>) => {
 		const { onToggle } = this.props;
 
 		onToggle({ props: this.props, event });
-	},
+	};
 
-	handleResizing(width, { event }) {
+	handleResizing = (
+		width: number,
+		{ event }: { event: MouseEvent | TouchEvent }
+	) => {
 		const { onResizing } = this.props;
 
 		onResizing(width, { props: this.props, event });
-	},
+	};
 
-	handleResize(width, { event }) {
+	handleResize = (
+		width: number,
+		{ event }: { event: MouseEvent | TouchEvent }
+	) => {
 		const { onResize } = this.props;
 
 		onResize(width, { props: this.props, event });
-	},
+	};
 
 	render() {
 		const {
@@ -245,13 +312,18 @@ const Sidebar = createClass({
 
 		return (
 			<SplitVertical
-				{...omitProps(passThroughs, Sidebar, [], false)}
+				{...omitProps(
+					passThroughs,
+					undefined,
+					_.keys(Sidebar.propTypes),
+					false
+				)}
 				style={{
 					minWidth: isExpanded
 						? _.isNumber(width)
 							? width + 6
 							: `calc(${width} + 6px)`
-						: null,
+						: undefined,
 					...style,
 				}}
 				className={cx(
@@ -270,7 +342,12 @@ const Sidebar = createClass({
 				onResize={this.handleResize}
 			>
 				<BarPane
-					{...omitProps(barProps, Sidebar.Bar, [], false)}
+					{...omitProps(
+						barProps,
+						undefined,
+						_.keys(Sidebar.Bar.propTypes),
+						false
+					)}
 					className={cx('&-Bar', barProps.className)}
 					width={width}
 					style={{
@@ -317,8 +394,8 @@ const Sidebar = createClass({
 				/>
 			</SplitVertical>
 		);
-	},
-});
+	}
+}
 
 export default buildHybridComponent(Sidebar);
 export { Sidebar as SidebarDumb };

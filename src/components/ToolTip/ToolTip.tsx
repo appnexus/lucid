@@ -2,10 +2,15 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import ContextMenu from '../ContextMenu/ContextMenu';
-import CloseIcon from '../Icon/CloseIcon/CloseIcon';
+import CloseIcon, { ICloseIconProps } from '../Icon/CloseIcon/CloseIcon';
 import * as reducers from './ToolTip.reducers';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, findTypes, omitProps } from '../../util/component-types';
+import {
+	StandardProps,
+	FC,
+	findTypes,
+	omitProps,
+} from '../../util/component-types';
 import { buildHybridComponent } from '../../util/state-management';
 
 const cx = lucidClassNames.bind('&-ToolTip');
@@ -24,19 +29,136 @@ const {
 
 const { Target, FlyOut } = ContextMenu;
 
-const ToolTip = createClass({
-	displayName: 'ToolTip',
+interface IToolTipTargetProps extends StandardProps {
+	description?: string;
+}
 
-	statics: {
-		peek: {
-			description: `
-				
+const ToolTipTarget: FC<IToolTipTargetProps> = (): null => null;
+ToolTipTarget.displayName = 'ToolTip.Target';
+ToolTipTarget.peek = {
+	description: `
+		The hover target that will trigger the ToolTip to be displayed.
+	`,
+};
+ToolTipTarget.propName = 'Target';
+
+interface IToolTipTitleProps extends StandardProps {
+	description?: string;
+}
+
+const ToolTipTitle: FC<IToolTipTitleProps> = (): null => null;
+ToolTipTitle.displayName = 'ToolTip.Title';
+ToolTipTitle.peek = {
+	description: `
+		The title displayed at the top of the ToolTip.
+	`,
+};
+ToolTipTitle.propName = 'Title';
+
+interface IToolTipBodyProps extends StandardProps {
+	description?: string;
+}
+
+const ToolTipBody: FC<IToolTipBodyProps> = (): null => null;
+ToolTipBody.displayName = 'ToolTip.Body';
+ToolTipBody.peek = {
+	description: `
+		The body of the ToolTip displayed below the Title.
+	`,
+};
+ToolTipBody.propName = 'Body';
+
+export interface IToolTipState {
+	isExpanded: boolean;
+	isMouseOverFlyout: boolean;
+	isMouseOverTarget: boolean;
+}
+
+export interface IToolTipProps extends StandardProps {
+	/** Set this to \`true\` if you want to have a \`x\` close icon. */
+	isCloseable: boolean;
+
+	/** Offers a lighter style for the tooltip window. Defaults to false. */
+	isLight: boolean;
+
+	/** Called when the user closes the \`Banner\`. */
+	onClose: ({
+		event,
+		props,
+	}: {
+		event: React.MouseEvent;
+		props: IToolTipProps;
+	}) => void;
+
+	/** Passed through to the root FlyOut element. */
+	flyOutStyle: React.CSSProperties;
+
+	/** maximum width of the ToolTip FlyOut. Defaults to 200px. */
+	flyOutMaxWidth?: number | string;
+
+	/** direction of the FlyOut relative to Target. */
+	direction: 'down' | 'up' | 'right' | 'left';
+
+	/** alignment of the Flyout relative to Target in the cross axis from \`direction\ */
+	alignment: 'start' | 'center' | 'end';
+
+	/** Indicates whether the ToolTip will render or not. */
+	isExpanded: boolean;
+
+	/** Called when cursor moves over the target */
+	onMouseOver: ({
+		event,
+		props,
+	}: {
+		event: React.MouseEvent;
+		props: IToolTipProps;
+	}) => void;
+
+	/** Called when cursor leaves the target and the ToolTip */
+	onMouseOut: ({
+		event,
+		props,
+	}: {
+		event: React.MouseEvent;
+		props: IToolTipProps;
+	}) => void;
+
+	/** 			The \`id\` of the FlyOut portal element that is appended to
+			\`document.body\`. Defaults to a generated \`id\`. */
+	portalId: string | null;
+}
+
+class ToolTip extends React.Component<IToolTipProps, IToolTipState> {
+	constructor(props: IToolTipProps) {
+		super(props);
+		this.state = {
+			isMouseOverFlyout: false,
+			isMouseOverTarget: false,
+			isExpanded: false,
+		};
+	}
+	static displayName = 'ToolTip';
+
+	static Title = ToolTipTitle;
+	static Target = ToolTipTarget;
+	static Body = ToolTipBody;
+
+	static definition = {
+		statics: {
+			reducers,
+			Title: ToolTipTitle,
+			Target: ToolTipTarget,
+			Body: ToolTipBody,
+			peek: {
+				description: `
+				A utility component that creates a transient message anchored to
+				another component.
 			`,
-			notes: {
-				overview: `
+				notes: {
+					overview: `
 					A text popup shown on hover.
 				`,
-				intendedUse: `
+					intendedUse: `
 					Use to provide an explanation for a button, text, or an operation. Often used in conjunction with \`HelpIcon\`.
 										
 					**Styling notes**
@@ -45,17 +167,18 @@ const ToolTip = createClass({
 					- Tooltip titles should fit on a single line and not wrap.
 					- Use black tooltips in most interactions. White tooltips are reserved for use within charts, for example \`LineChart\`.
 				`,
-				technicalRecommendations: `
+					technicalRecommendations: `
 				`,
+				},
+				categories: ['communication'],
+				madeFrom: ['ContextMenu'],
 			},
-			categories: ['communication'],
-			madeFrom: ['ContextMenu'],
 		},
-	},
+	};
 
-	reducers,
+	static reducers = reducers;
 
-	propTypes: {
+	static propTypes = {
 		children: node`
 			\`children\` should include exactly one ToolTip.Target and one
 			ToolTip.FlyOut.
@@ -117,65 +240,34 @@ const ToolTip = createClass({
 			The \`id\` of the FlyOut portal element that is appended to
 			\`document.body\`. Defaults to a generated \`id\`.
 		`,
-	},
 
-	components: {
-		Target: createClass({
-			displayName: 'ToolTip.Target',
-			statics: {
-				peek: {
-					description: `
-						The hover target that will trigger the ToolTip to be displayed.
-					`,
-				},
-			},
-		}),
-		Title: createClass({
-			displayName: 'ToolTip.Title',
-			statics: {
-				peek: {
-					description: `
-						The title displayed at the top of the ToolTip.
-					`,
-				},
-			},
-		}),
-		Body: createClass({
-			displayName: 'ToolTip.Body',
-			statics: {
-				peek: {
-					description: `
-						The body of the ToolTip displayed below the Title.
-					`,
-				},
-			},
-		}),
-	},
+		Body: node`
+			The body of the ToolTip displayed below the Title.
+		`,
 
-	getDefaultProps() {
-		return {
-			alignment: ContextMenu.CENTER,
-			direction: ContextMenu.UP,
-			flyOutStyle: {},
-			isCloseable: false,
-			isExpanded: false,
-			// kind: 'default',
-			isLight: false,
-			onClose: _.noop,
-			onMouseOut: _.noop,
-			onMouseOver: _.noop,
-			portalId: null,
-		};
-	},
+		Title: node`
+			The title displayed at the top of the ToolTip.
+		`,
 
-	getInitialState() {
-		return {
-			isMouseOverFlyout: false,
-			isMouseOverTarget: false,
-		};
-	},
+		Target: node`
+			The hover target that will trigger the ToolTip to be displayed.
+		`,
+	};
 
-	handleMouseOut(event) {
+	static defaultProps = {
+		alignment: ContextMenu.CENTER,
+		direction: ContextMenu.UP,
+		flyOutStyle: {},
+		isCloseable: false,
+		isExpanded: false,
+		isLight: false,
+		onClose: _.noop,
+		onMouseOut: _.noop,
+		onMouseOver: _.noop,
+		portalId: null,
+	};
+
+	handleMouseOut = (event: React.MouseEvent): void => {
 		setTimeout(() => {
 			const {
 				props,
@@ -186,30 +278,36 @@ const ToolTip = createClass({
 				onMouseOut({ props, event });
 			}
 		}, 100);
-	},
+	};
 
-	handleMouseOverFlyout() {
+	handleMouseOverFlyout = () => {
 		this.setState({ isMouseOverFlyout: true });
-	},
+	};
 
-	handleMouseOutFlyout() {
+	handleMouseOutFlyout = (event: React.MouseEvent) => {
 		this.setState({ isMouseOverFlyout: false });
-		this.handleMouseOut();
-	},
+		this.handleMouseOut(event);
+	};
 
-	handleMouseOverTarget(event) {
+	handleMouseOverTarget = (event: React.MouseEvent) => {
 		this.setState({ isMouseOverTarget: true });
 		this.props.onMouseOver({ props: this.props, event });
-	},
+	};
 
-	handleMouseOutTarget() {
+	handleMouseOutTarget = (event: React.MouseEvent) => {
 		this.setState({ isMouseOverTarget: false });
-		this.handleMouseOut();
-	},
+		this.handleMouseOut(event);
+	};
 
-	handleClose(event) {
+	handleClose = ({
+		event,
+		props,
+	}: {
+		event: React.MouseEvent;
+		props: ICloseIconProps;
+	}) => {
 		this.props.onClose({ event, props: this.props });
-	},
+	};
 
 	render() {
 		const {
@@ -221,7 +319,6 @@ const ToolTip = createClass({
 			isCloseable,
 			isExpanded,
 			isLight,
-			// kind,
 			portalId,
 			style,
 			...passThroughs
@@ -238,7 +335,7 @@ const ToolTip = createClass({
 			_.first(_.map(findTypes(this.props, ToolTip.Body), 'props')),
 			'children'
 		);
-		const getAlignmentOffset = n =>
+		const getAlignmentOffset = (n: number) =>
 			alignment === ContextMenu.CENTER
 				? 0
 				: alignment === ContextMenu.START
@@ -257,7 +354,12 @@ const ToolTip = createClass({
 				isExpanded={isExpanded}
 				style={style}
 				portalId={portalId}
-				{...omitProps(passThroughs, ToolTip, [], false)}
+				{...omitProps(
+					passThroughs,
+					undefined,
+					_.keys(ToolTip.propTypes),
+					false
+				)}
 				onMouseOver={this.handleMouseOverTarget}
 				onMouseOut={this.handleMouseOutTarget}
 			>
@@ -297,8 +399,8 @@ const ToolTip = createClass({
 				</FlyOut>
 			</ContextMenu>
 		);
-	},
-});
+	}
+}
 
 export default buildHybridComponent(ToolTip);
 export { ToolTip as ToolTipDumb };

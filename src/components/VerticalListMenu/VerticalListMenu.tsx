@@ -2,85 +2,187 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import { bindClassNames } from '../../util/style-helpers';
-import { createClass, findTypes, omitProps } from '../../util/component-types';
+import {
+	findTypes,
+	omitProps,
+	FC,
+	StandardProps,
+} from '../../util/component-types';
 import { buildHybridComponent } from '../../util/state-management';
 import * as reducers from './VerticalListMenu.reducers';
 import ChevronIcon from '../Icon/ChevronIcon/ChevronIcon';
-import Collapsible from '../Collapsible/Collapsible';
+import Collapsible, { ICollapsibleProps } from '../Collapsible/Collapsible';
 
 const cx = bindClassNames('lucid-VerticalListMenu');
 
 const { func, arrayOf, bool, string, number, node, object, shape } = PropTypes;
 
-const VerticalListMenu = createClass({
-	displayName: 'VerticalListMenu',
+export interface IVerticalListMenuProps extends StandardProps {
+	/** Indicates which of the \`VerticalListMenu.Item\` children are currently
+	selected. You can also put the \`isSelected\` prop directly on the
+	\`VerticalListMenu.Item\`s if you wish. */
+	selectedIndices: number[];
 
-	statics: {
-		peek: {
-			description: `
-				Used primarily for navigation lists. It supports nesting
-				\`VerticalListMenu\`s below \`VerticalListMenu.Item\`s and animating
-				expanding of those sub lists.  The default reducer behavior is for only
-				one \`VerticalListMenu.Item\` to be selected at any given time; that is
-				easily overridden by handling \`onSelect\` yourself.
-			`,
-			categories: ['navigation'],
-			madeFrom: ['ChevronIcon'],
-		},
-	},
+	/** Indicates which of the \`VerticalListMenu.Item\` children are currently
+	expanded. You can also put the \`isExpanded\` prop directly on the
+	\`VerticalListMenu.Item\`s if you wish. */
+	expandedIndices: number[];
 
-	reducers,
+	/** Callback fired when the user selects a \`VerticalListMenu.Item\`.*/
+	onSelect: (
+		index: number,
+		{
+			event,
+			props,
+		}: {
+			event: React.MouseEvent;
+			props: IVerticalListMenuItemProps;
+		}
+	) => void;
 
-	components: {
-		Item: createClass({
-			displayName: 'VerticalListMenu.Item',
-			statics: {
-				peek: {
-					description: `
-						A child item that can contain content or another VerticalListMenu.
-					`,
-				},
-			},
-			propTypes: {
-				hasExpander: bool`
+	/** Callback fired when the user expands or collapses an expandable
+	\`VerticalListMenu.Item\`. */
+	onToggle: (
+		index: number,
+		{
+			event,
+			props,
+		}: {
+			event: React.MouseEvent;
+			props: IVerticalListMenuItemProps;
+		}
+	) => void;
+}
+
+export interface IVerticalListMenuItemProps extends StandardProps {
+	/** 	Show or hide the expand button. Should be \`true\` if you want to
+					nest menus. */
+	hasExpander: boolean;
+
+	/** Determines the visibility of nested menus. */
+	isExpanded: boolean;
+
+	/** If \`true\` then a small bar on the left side of the item will be
+	shown indicating this item is selected. */
+	isSelected: boolean;
+
+	/** Determines the visibility of the small bar on the left when the user
+	hovers over the item. This should indicate to the user that an item
+	is clickable. */
+	isActionable: boolean;
+
+	/** Called when the user clicks the main body of the item. */
+	onSelect: (
+		index: number,
+		{
+			event,
+			props,
+		}: {
+			event: React.MouseEvent;
+			props: IVerticalListMenuItemProps;
+		}
+	) => void;
+
+	/** Called when the user clicks the expand button. */
+	onToggle: (
+		index: number,
+		{
+			event,
+			props,
+		}: {
+			event: React.MouseEvent;
+			props: IVerticalListMenuItemProps;
+		}
+	) => void;
+
+	/** Props that are passed through to the underlying Collapsible component
+	if the item has children. */
+	Collapsible: ICollapsibleProps;
+}
+const Item: FC<IVerticalListMenuItemProps> = (): null => null;
+Item.peek = {
+	description: `
+		A child item that can contain content or another VerticalListMenu.
+	`,
+};
+Item.displayName = 'VerticalListMenu.Item';
+Item.propTypes = {
+	hasExpander: bool`
 					Show or hide the expand button. Should be \`true\` if you want to
 					nest menus.
 				`,
+	isExpanded: bool`
+				Determines the visibility of nested menus.
+			`,
 
-				isExpanded: bool`
-					Determines the visibility of nested menus.
-				`,
+	isSelected: bool`
+				If \`true\` then a small bar on the left side of the item will be
+				shown indicating this item is selected.
+			`,
 
-				isSelected: bool`
-					If \`true\` then a small bar on the left side of the item will be
-					shown indicating this item is selected.
-				`,
+	isActionable: bool`
+				Determines the visibility of the small bar on the left when the user
+				hovers over the item. This should indicate to the user that an item
+				is clickable.
+			`,
 
-				isActionable: bool`
-					Determines the visibility of the small bar on the left when the user
-					hovers over the item. This should indicate to the user that an item
-					is clickable.
-				`,
+	onSelect: func`
+				Called when the user clicks the main body of the item.  Signature:
+				\`(index, { event, props}) => {}\`
+			`,
 
-				onSelect: func`
-					Called when the user clicks the main body of the item.  Signature:
-					\`(index, { event, props}) => {}\`
-				`,
+	onToggle: func`
+				Called when the user clicks the expand button.  Signature:
+				\`(index, { event, props}) => {}\`
+			`,
 
-				onToggle: func`
-					Called when the user clicks the expand button.  Signature:
-					\`(index, { event, props}) => {}\`
-				`,
+	Collapsible: shape(Collapsible.propTypes)`
+				Props that are passed through to the underlying Collapsible component
+				if the item has children.
+			`,
+};
 
-				Collapsible: shape(Collapsible.propTypes)`
-					Props that are passed through to the underlying Collapsible component
-					if the item has children.
+export interface IVerticalListMenuState {
+	selectedIndices?: number[];
+	expandedIndices?: number[];
+}
+
+const defaultProps = {
+	onSelect: _.noop,
+	onToggle: _.noop,
+	expandedIndices: [],
+	selectedIndices: [],
+};
+
+class VerticalListMenu extends React.Component<
+	IVerticalListMenuProps,
+	IVerticalListMenuState
+> {
+	static displayName = 'VerticalListMenu';
+
+	static Item = Item;
+
+	static definition = {
+		statics: {
+			Item,
+			reducers,
+			peek: {
+				description: `
+					Used primarily for navigation lists. It supports nesting
+					\`VerticalListMenu\`s below \`VerticalListMenu.Item\`s and animating
+					expanding of those sub lists.  The default reducer behavior is for only
+					one \`VerticalListMenu.Item\` to be selected at any given time; that is
+					easily overridden by handling \`onSelect\` yourself.
 				`,
+				categories: ['navigation'],
+				madeFrom: ['ChevronIcon'],
 			},
-		}),
-	},
+		},
+	};
 
-	propTypes: {
+	static reducers = reducers;
+
+	static propTypes = {
 		children: node`
 			Regular \`children\` aren't really used in this component, but if you do
 			add them they will be placed at the end of the component. You should be
@@ -117,16 +219,9 @@ const VerticalListMenu = createClass({
 			\`VerticalListMenu.Item\`.  Signature:
 			\`(index, { event, props }) => {}\`
 		`,
-	},
+	};
 
-	getDefaultProps() {
-		return {
-			onSelect: _.noop,
-			onToggle: _.noop,
-			expandedIndices: [],
-			selectedIndices: [],
-		};
-	},
+	static defaultProps = defaultProps;
 
 	render() {
 		const {
@@ -145,7 +240,11 @@ const VerticalListMenu = createClass({
 
 		return (
 			<ul
-				{...omitProps(passThroughs, VerticalListMenu)}
+				{...omitProps(
+					passThroughs,
+					undefined,
+					_.keys(VerticalListMenu.propTypes)
+				)}
 				className={cx('&', className)}
 				style={style}
 			>
@@ -233,9 +332,13 @@ const VerticalListMenu = createClass({
 				{children}
 			</ul>
 		);
-	},
+	}
 
-	handleToggle(index, itemChildProp, event) {
+	handleToggle = (
+		index: number,
+		itemChildProp: IVerticalListMenuItemProps,
+		event: React.MouseEvent
+	) => {
 		const { onToggle } = itemChildProp;
 
 		// Prevent the user from also selecting the current item.
@@ -246,9 +349,13 @@ const VerticalListMenu = createClass({
 		if (onToggle) {
 			onToggle(index, { event, props: itemChildProp });
 		}
-	},
+	};
 
-	handleClickItem(index, itemChildProp, event) {
+	handleClickItem = (
+		index: number,
+		itemChildProp: IVerticalListMenuItemProps,
+		event: React.MouseEvent
+	) => {
 		const { onSelect } = itemChildProp;
 
 		this.props.onSelect(index, { event, props: itemChildProp });
@@ -256,8 +363,8 @@ const VerticalListMenu = createClass({
 		if (onSelect) {
 			onSelect(index, { event, props: itemChildProp });
 		}
-	},
-});
+	};
+}
 
 export default buildHybridComponent(VerticalListMenu);
 export { VerticalListMenu as VerticalListMenuDumb };

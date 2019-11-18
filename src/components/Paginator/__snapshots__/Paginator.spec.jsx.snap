@@ -471,6 +471,8 @@ exports[`Paginator [common] example testing should match snapshot(s) for 4.show-
           "onFocusOption": [Function],
           "onFocusPrev": [Function],
           "onSelect": [Function],
+          "optionContainerStyle": Object {},
+          "portalId": "",
           "selectedIndices": Array [],
         }
       }
@@ -584,6 +586,8 @@ exports[`Paginator [common] example testing should match snapshot(s) for 4.show-
           "onFocusOption": [Function],
           "onFocusPrev": [Function],
           "onSelect": [Function],
+          "optionContainerStyle": Object {},
+          "portalId": "",
           "selectedIndices": Array [],
         }
       }
@@ -697,6 +701,8 @@ exports[`Paginator [common] example testing should match snapshot(s) for 4.show-
           "onFocusOption": [Function],
           "onFocusPrev": [Function],
           "onSelect": [Function],
+          "optionContainerStyle": Object {},
+          "portalId": "",
           "selectedIndices": Array [],
         }
       }
@@ -810,6 +816,8 @@ exports[`Paginator [common] example testing should match snapshot(s) for 4.show-
           "onFocusOption": [Function],
           "onFocusPrev": [Function],
           "onSelect": [Function],
+          "optionContainerStyle": Object {},
+          "portalId": "",
           "selectedIndices": Array [],
         }
       }
