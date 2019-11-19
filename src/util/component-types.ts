@@ -1,4 +1,4 @@
-import React, { ReactElement } from 'react';
+import React from 'react';
 import createReactClass from 'create-react-class';
 import PropTypes from 'react-peek/prop-types';
 import _ from 'lodash';
@@ -67,11 +67,13 @@ type TypesType<P> =
 	| Array<FC<P>>
 	| { propName?: string };
 
-interface ICreateClassComponentSpec<P extends { [key: string]: any }, S>
-	extends React.Mixin<P, S> {
+interface ICreateClassComponentSpec<P, S> extends React.Mixin<P, S> {
 	_isPrivate?: boolean;
 	initialState?: S;
 	propName?: string;
+	propTypes?: Required<{
+		[key in keyof P]: any;
+	}>;
 	components?: {
 		[key: string]: ICreateClassComponentClass<{}>;
 	};
@@ -82,7 +84,7 @@ interface ICreateClassComponentSpec<P extends { [key: string]: any }, S>
 	// TODO: improve these with a stricter type https://stackoverflow.com/a/54775885/895558
 	reducers?: { [K in keyof P]?: (arg0: S, ...args: any[]) => S };
 	selectors?: { [K in keyof P]?: (arg0: S) => any };
-	render?(): React.ReactNode;
+	render?(this: { props: P }): React.ReactNode;
 
 	// TODO: could this be better handled by adding a third type parameter that
 	// allows the components to define what the extra class properties would
@@ -93,13 +95,10 @@ interface ICreateClassComponentSpec<P extends { [key: string]: any }, S>
 export interface ICreateClassComponentClass<P>
 	extends React.ClassicComponentClass<P> {
 	propName?: string;
-
-	// TODO: fix this too
-	[key: string]: any;
 }
 
 // creates a React component
-export function createClass<P, S>(
+export function createClass<P, S={}>(
 	spec: ICreateClassComponentSpec<P, S>
 ): ICreateClassComponentClass<P> {
 	const {
@@ -113,7 +112,7 @@ export function createClass<P, S>(
 			omitFunctionPropsDeep(getDefaultProps.apply(spec)),
 		propName = null,
 		propTypes = {},
-		render = () => null,
+		render = (): null => null,
 		...restDefinition
 	} = spec;
 
@@ -136,7 +135,7 @@ export function createClass<P, S>(
 			propTypes,
 			_.mapValues(
 				spec.components,
-				(componentValue, componentKey) =>
+				(componentValue, componentKey): {} =>
 					PropTypes.any`Props for ${componentValue.displayName || componentKey}`
 			)
 		),
@@ -215,7 +214,7 @@ export function rejectTypes<P>(
 
 	return _.reject(
 		React.Children.toArray(children),
-		element => React.isValidElement(element) && _.includes(types, element.type)
+		(element): boolean => React.isValidElement(element) && _.includes(types, element.type)
 	);
 }
 
