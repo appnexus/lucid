@@ -45,7 +45,7 @@ export interface IAccordionState {
 }
 
 const defaultProps = {
-	onToggle: _.noop,
+	onSelect: _.noop,
 }
 
 class Accordion extends React.Component<IAccordionProps, IAccordionState> {
