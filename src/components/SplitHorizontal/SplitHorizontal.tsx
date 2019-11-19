@@ -97,7 +97,7 @@ SplitHorizontalDivider.propTypes = {
 	`,
 };
 
-interface ISplitHorizontalProps
+export interface ISplitHorizontalProps
 	extends StandardProps,
 		React.DetailedHTMLProps<
 			React.HTMLAttributes<HTMLDivElement>,

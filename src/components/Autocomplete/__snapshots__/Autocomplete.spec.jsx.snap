@@ -31,6 +31,8 @@ exports[`Autocomplete [common] example testing should match snapshot(s) for 1.ba
   onFocusOption={[Function]}
   onFocusPrev={[Function]}
   onSelect={[Function]}
+  optionContainerStyle={Object {}}
+  portalId=""
   selectedIndices={Array []}
 >
   <DropMenu.Control
@@ -138,6 +140,8 @@ exports[`Autocomplete [common] example testing should match snapshot(s) for 2.in
   onFocusOption={[Function]}
   onFocusPrev={[Function]}
   onSelect={[Function]}
+  optionContainerStyle={Object {}}
+  portalId=""
   selectedIndices={Array []}
 >
   <DropMenu.Control
@@ -2237,6 +2241,8 @@ exports[`Autocomplete [common] example testing should match snapshot(s) for 3.di
   onFocusOption={[Function]}
   onFocusPrev={[Function]}
   onSelect={[Function]}
+  optionContainerStyle={Object {}}
+  portalId=""
   selectedIndices={Array []}
 >
   <DropMenu.Control
@@ -2288,6 +2294,8 @@ exports[`Autocomplete [common] example testing should match snapshot(s) for 4.st
   onFocusOption={[Function]}
   onFocusPrev={[Function]}
   onSelect={[Function]}
+  optionContainerStyle={Object {}}
+  portalId=""
   selectedIndices={Array []}
 >
   <DropMenu.Control

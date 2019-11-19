@@ -20,7 +20,7 @@ const cx = lucidClassNames.bind('&-ContextMenu');
 const { bool, node, func, number, object, oneOf, string } = PropTypes;
 
 interface IContextMenuTargetProps extends StandardProps {
-	elementType: string;
+	elementType?: string;
 }
 const ContextMenuTarget: FC<IContextMenuTargetProps> = (): null => null;
 ContextMenuTarget.displayName = 'ContextMenu.Target';
@@ -36,7 +36,8 @@ ContextMenuTarget.defaultProps = {
 	elementType: 'span',
 };
 
-interface IContextMenuFlyOutProps extends StandardProps {}
+interface IContextMenuFlyOutProps
+	extends React.HTMLAttributes<HTMLDivElement> {}
 const ContextMenuFlyOut: FC<IContextMenuFlyOutProps> = (): null => null;
 ContextMenuFlyOut.displayName = 'ContextMenu.FlyOut';
 ContextMenuFlyOut.propName = 'FlyOut';

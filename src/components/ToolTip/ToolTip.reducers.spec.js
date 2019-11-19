@@ -1,5 +1,5 @@
 import assert from 'assert';
-import { onMouseOver, onMouseOut } from './ToolTip.reducers.js';
+import { onMouseOver, onMouseOut } from './ToolTip.reducers';
 
 describe('ToolTip reducers', () => {
 	describe('onMouseOver', () => {

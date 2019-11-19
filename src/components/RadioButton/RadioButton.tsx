@@ -30,7 +30,7 @@ interface IRadioButtonPropsRaw extends StandardProps {
 
 	/** Called when the user clicks on the component or when they press the space
 	 * key while the component is in focus, and only called when the component
-	 * is in the unselected state.  Signature: \`(true, { event, props }) => {}\`
+	 * is in the unselected state.
 	 */
 	onSelect?: (
 		isSelected: boolean,
@@ -58,7 +58,9 @@ export const defaultProps = {
 	onSelect: _.noop,
 };
 
-export const RadioButton: FC<IRadioButtonProps> = (props): React.ReactElement => {
+export const RadioButton: FC<IRadioButtonProps> = (
+	props
+): React.ReactElement => {
 	const {
 		className,
 		isDisabled,
