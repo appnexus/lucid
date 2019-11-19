@@ -68,8 +68,6 @@ interface IVerticalTabsPropsRaw extends StandardProps {
     selected */
 	selectedIndex?: number;
 
-	//actualSelectedIndex: number;
-
 	/** Callback fired when the user selects a \`VerticalListMenu.Item\`.*/
 	onSelect: (
 		index: number,
