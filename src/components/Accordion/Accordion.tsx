@@ -3,7 +3,10 @@ import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import { buildHybridComponent } from '../../util/state-management';
-import { ExpanderPanelDumb as ExpanderPanel, IExpanderPanelHeaderProps } from '../ExpanderPanel/ExpanderPanel';
+import {
+	ExpanderPanelDumb as ExpanderPanel,
+	IExpanderPanelHeaderProps,
+} from '../ExpanderPanel/ExpanderPanel';
 import {
 	findTypes,
 	omitProps,
@@ -18,35 +21,36 @@ const { any, func, object, number, string } = PropTypes;
 
 interface IAccordionPropsRaw extends StandardProps {
 	/**
-	* Indicates which item is expanded
-	* */
-	selectedIndex: number,
+	 * Indicates which item is expanded
+	 * */
+	selectedIndex: number;
 	/**
-	* Called when the user clicks on the component's header of an item.
-	* */ 
-	onSelect: (selectedIndex: number | null, {
-		event,
-		props
-	}: {event: React.MouseEvent, props: IAccordionProps}) => void
+	 * Called when the user clicks on the component's header of an item.
+	 * */
+
+	onSelect: (
+		selectedIndex: number | null,
+		{ event, props }: { event: React.MouseEvent; props: IAccordionProps }
+	) => void;
 	/**
-	* Prop alternative to Header child component passed through to the
-	* underlying ExpanderPanel
-	*/
-	Header: IExpanderPanelHeaderProps
+	 * Prop alternative to Header child component passed through to the
+	 * underlying ExpanderPanel
+	 */
+	Header: IExpanderPanelHeaderProps;
 }
 
-type IAccordionProps = Overwrite<React.DetailedHTMLProps<
-			React.HTMLAttributes<HTMLDivElement>,
-			HTMLDivElement
-		>, IAccordionPropsRaw>
+type IAccordionProps = Overwrite<
+	React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>,
+	IAccordionPropsRaw
+>;
 
 export interface IAccordionState {
-	selectedIndex: number | null
+	selectedIndex: number | null;
 }
 
 const defaultProps = {
 	onSelect: _.noop,
-}
+};
 
 class Accordion extends React.Component<IAccordionProps, IAccordionState> {
 	static displayName = 'Accordion';
@@ -67,7 +71,7 @@ class Accordion extends React.Component<IAccordionProps, IAccordionState> {
 			Prop alternative to Header child component passed through to the
 			underlying ExpanderPanel
 		`,
-	}
+	};
 	static definition = {
 		statics: {
 			Item: ExpanderPanel,
