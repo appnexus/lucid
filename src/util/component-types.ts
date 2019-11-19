@@ -32,6 +32,8 @@ export interface StandardProps {
 //
 // This helper allows us to cast props used _within_ the component to consider
 // properties found on defaultProps to be required.
+//
+// TODO: `MakeDefaultsRequired` and fix usage across the library.
 export type FixDefaults<P, D extends Partial<P>> = Pick<
 	P,
 	Exclude<keyof P, keyof D>

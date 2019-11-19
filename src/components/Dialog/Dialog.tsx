@@ -8,7 +8,6 @@ import {
 	StandardProps,
 	getFirst,
 	omitProps,
-	FixDefaults,
 } from '../../util/component-types';
 import Button, { IButtonProps } from '../Button/Button';
 import CloseIcon from '../Icon/CloseIcon/CloseIcon';
@@ -59,7 +58,7 @@ export interface IDialogProps extends IOverlayProps {
 	/** Size variations that only affect the width of the dialog. All the sizes
 		will grow in height until they get too big, at which point they will
 		scroll inside. */
-	size?: Size;
+	size: Size;
 
 	/** If this is truthy (if a function is provided). the close button will show.
 		The function that is called when the close button is triggered. */
@@ -73,10 +72,10 @@ export interface IDialogProps extends IOverlayProps {
 
 	/** Provides a more segregated design to organize more content in the Dialog.
 	 * @default = false */
-	isComplex?: boolean;
+	isComplex: boolean;
 
 	/** A true or false value that dictates whether or not the Body has padding. */
-	hasGutters?: boolean;
+	hasGutters: boolean;
 
 	/** *Child Element* - Header contents. Only one \`Header\` is used. */
 	Header?: string | React.ReactNode & { props: IDialogHeaderProps };
@@ -90,7 +89,7 @@ export interface IDialogFC extends FC<IDialogProps> {
 	Footer: FC<IDialogFooterProps>;
 }
 
-export const Dialog: IDialogFC = (props): React.ReactElement => {
+export const Dialog = (props: IDialogProps): React.ReactElement => {
 	const {
 		className,
 		size,
@@ -99,7 +98,7 @@ export const Dialog: IDialogFC = (props): React.ReactElement => {
 		isShown,
 		isComplex,
 		...passThroughs
-	} = props as FixDefaults<IDialogProps, typeof defaultProps>;
+	} = props;
 
 	const headerChildProp = _.get(getFirst(props, Dialog.Header), 'props', {});
 	const footerChildProp = _.get(getFirst(props, Dialog.Footer), 'props', null);
