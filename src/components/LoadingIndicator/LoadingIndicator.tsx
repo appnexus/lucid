@@ -80,6 +80,18 @@ LoadingIndicator.peek = {
 	description: `
 		A loading indicator wrapper with optional overlay.
 	`,
+	notes: {
+		overview: `
+			A visual indication that a section or component of the interface is loading.
+		`,
+		intendedUse: `
+			- Use in places where data takes time to load. LoadingIndicator lets users know that the information they expect to see will appear shortly.
+			- Use the light overlay, \`overlayKind: "light"\`
+		`,
+		technicalRecommendations: `
+			If a page is displaying a lot of data coming from multiple sources, try as best as possible to load the individual parts of the UI, so as not to disrupt the user and block them from interacting with the entire page until all data is loaded.
+		`,
+	},
 	categories: ['communication'],
 	madeFrom: ['OverlayWrapper', 'LoadingMessage'],
 };

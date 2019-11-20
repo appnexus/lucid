@@ -147,9 +147,6 @@ export const Checkbox: FC<ICheckboxProps> = (props): React.ReactElement => {
 };
 
 Checkbox.displayName = 'Checkbox';
-
-Checkbox._isPrivate = true;
-
 Checkbox.peek = {
 	description: `
 		Checkbox is a square two-state toggle used to create \`CheckboxLabeled\`.
@@ -159,10 +156,10 @@ Checkbox.peek = {
 	`,
 	notes: {
 		overview: `
-			Checkbox is a square two-state toggle. 
+			Checkbox is a square two-state toggle. Use \`CheckboxLabeled\` in your applications.
 		`,
 		intendedUse: `
-			Used to create \`CheckboxLabeled\`. Use \`CheckboxLabeled\` in your applications.			
+			Used to create \`CheckboxLabeled\`. 			
 		`,
 		technicalRecommendations: `
 			- Use the Selected state when a filter or setting will be applied.

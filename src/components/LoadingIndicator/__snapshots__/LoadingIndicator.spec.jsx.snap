@@ -77,7 +77,7 @@ exports[`LoadingIndicator [common] example testing should match snapshot(s) for 
       ]
     }
     renderTooltipBody={null}
-    width={1000}
+    width={750}
     xAxisField="x"
     xAxisFormatter={[Function]}
     xAxisTextOrientation="horizontal"
@@ -155,7 +155,7 @@ exports[`LoadingIndicator [common] example testing should match snapshot(s) for 
       ]
     }
     renderTooltipBody={null}
-    width={1000}
+    width={750}
     xAxisField="x"
     xAxisFormatter={[Function]}
     xAxisTextOrientation="horizontal"
@@ -233,7 +233,7 @@ exports[`LoadingIndicator [common] example testing should match snapshot(s) for 
       ]
     }
     renderTooltipBody={null}
-    width={1000}
+    width={750}
     xAxisField="x"
     xAxisFormatter={[Function]}
     xAxisTextOrientation="horizontal"
@@ -325,7 +325,7 @@ exports[`LoadingIndicator [common] example testing should match snapshot(s) for 
       ]
     }
     renderTooltipBody={null}
-    width={1000}
+    width={750}
     xAxisField="x"
     xAxisFormatter={[Function]}
     xAxisTextOrientation="horizontal"
@@ -412,7 +412,7 @@ exports[`LoadingIndicator [common] example testing should match snapshot(s) for 
       ]
     }
     renderTooltipBody={null}
-    width={1000}
+    width={750}
     xAxisField="x"
     xAxisFormatter={[Function]}
     xAxisTextOrientation="horizontal"
@@ -493,7 +493,7 @@ exports[`LoadingIndicator [common] example testing should match snapshot(s) for 
       ]
     }
     renderTooltipBody={null}
-    width={1000}
+    width={750}
     xAxisField="x"
     xAxisFormatter={[Function]}
     xAxisTextOrientation="horizontal"
@@ -571,7 +571,7 @@ exports[`LoadingIndicator [common] example testing should match snapshot(s) for 
       ]
     }
     renderTooltipBody={null}
-    width={1000}
+    width={750}
     xAxisField="x"
     xAxisFormatter={[Function]}
     xAxisTextOrientation="horizontal"

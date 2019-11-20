@@ -27,6 +27,7 @@ export default createClass({
 		return (
 			<div>
 				<BarChart
+					width={750}
 					data={data}
 					yAxisMin={0}
 					xAxisTickCount={5}
