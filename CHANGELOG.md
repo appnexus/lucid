@@ -17,7 +17,8 @@
 - #1062 [none] Add `index.less` as entrypoint for webpack for use in codepen
 - #1059 [none] Improve ordering of props in DocsPage
 - #1056 [none] Upgrade Storybook to v5.2.1 and implement DocsPage
-https://github.com/appnexus/lucid/compare/v5.1.2...v5.2.0
+
+https://github.com/appnexus/lucid/compare/v5.1.2...5.2.0
 
 ## 5.1.2
 
