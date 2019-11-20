@@ -38,9 +38,12 @@ export const DangerLightIcon: FC<IDangerLightIconProps> = ({
 	);
 };
 
+DangerLightIcon._isPrivate = true;
 DangerLightIcon.displayName = 'DangerLightIcon';
 DangerLightIcon.peek = {
 	description: `
+		DEPRECATED: this component should not be used and will be removed from the library in a future release.
+		
 		DANGER WILL ROBINSON DANGER (but lighter)
 	`,
 	categories: ['visual design', 'icons'],

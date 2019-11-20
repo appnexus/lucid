@@ -39,9 +39,12 @@ export const WarningLightIcon: FC<IWarningLightIconProps> = ({
 	);
 };
 
+WarningLightIcon._isPrivate = true;
 WarningLightIcon.displayName = 'WarningLightIcon';
 WarningLightIcon.peek = {
 	description: `
+		DEPRECATED: this component should not be used and will be removed from the library in a future release.
+		
 		Diet version.
 	`,
 	categories: ['visual design', 'icons'],
