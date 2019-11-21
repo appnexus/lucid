@@ -11,7 +11,7 @@ interface INewWindowIconProps extends IIconProps {}
 export const NewWindowIcon = ({
 	className,
 	...passThroughs
-}: INewWindowIconProps) => {
+}: INewWindowIconProps): React.ReactElement => {
 	return (
 		<Icon
 			{...omitProps(

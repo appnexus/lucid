@@ -11,7 +11,7 @@ interface IEnvelopeIconProps extends IIconProps {}
 export const EnvelopeIcon = ({
 	className,
 	...passThroughs
-}: IEnvelopeIconProps) => {
+}: IEnvelopeIconProps): React.ReactElement => {
 	return (
 		<Icon
 			{...omitProps(

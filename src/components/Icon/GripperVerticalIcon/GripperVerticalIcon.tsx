@@ -11,7 +11,7 @@ interface IGripperVerticalIconProps extends IIconProps {}
 export const GripperVerticalIcon = ({
 	className,
 	...passThroughs
-}: IGripperVerticalIconProps) => {
+}: IGripperVerticalIconProps): React.ReactElement => {
 	return (
 		<Icon
 			{...omitProps(

@@ -11,7 +11,7 @@ interface ICalendarIconProps extends IIconProps {}
 export const CalendarIcon = ({
 	className,
 	...passThroughs
-}: ICalendarIconProps) => {
+}: ICalendarIconProps): React.ReactElement => {
 	return (
 		<Icon
 			{...omitProps(

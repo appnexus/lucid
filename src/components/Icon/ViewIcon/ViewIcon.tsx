@@ -8,7 +8,10 @@ const cx = lucidClassNames.bind('&-ViewIcon');
 
 interface IViewIconProps extends IIconProps {}
 
-export const ViewIcon = ({ className, ...passThroughs }: IViewIconProps) => {
+export const ViewIcon = ({
+	className,
+	...passThroughs
+}: IViewIconProps): React.ReactElement => {
 	return (
 		<Icon
 			{...omitProps(passThroughs, undefined, _.keys(ViewIcon.propTypes), false)}

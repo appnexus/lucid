@@ -13,7 +13,7 @@ export const MinusCircleIcon = ({
 	isClickable,
 	isDisabled,
 	...passThroughs
-}: IMinusCircleIconProps) => {
+}: IMinusCircleIconProps): React.ReactElement => {
 	return (
 		<Icon
 			{...omitProps(

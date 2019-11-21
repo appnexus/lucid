@@ -11,7 +11,7 @@ interface IQuestionMarkIconProps extends IIconProps {}
 export const QuestionMarkIcon = ({
 	className,
 	...passThroughs
-}: IQuestionMarkIconProps) => {
+}: IQuestionMarkIconProps): React.ReactElement => {
 	return (
 		<Icon
 			{...omitProps(

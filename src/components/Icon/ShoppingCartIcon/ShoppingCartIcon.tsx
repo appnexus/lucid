@@ -11,7 +11,7 @@ interface IShoppingCartIconProps extends IIconProps {}
 export const ShoppingCartIcon = ({
 	className,
 	...passThroughs
-}: IShoppingCartIconProps) => {
+}: IShoppingCartIconProps): React.ReactElement => {
 	return (
 		<Icon
 			{...omitProps(

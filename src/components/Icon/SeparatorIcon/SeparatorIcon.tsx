@@ -11,7 +11,7 @@ interface ISeparatorIconProps extends IIconProps {}
 export const SeparatorIcon = ({
 	className,
 	...passThroughs
-}: ISeparatorIconProps) => {
+}: ISeparatorIconProps): React.ReactElement => {
 	return (
 		<Icon
 			{...omitProps(

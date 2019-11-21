@@ -13,7 +13,7 @@ export const DangerLightIcon = ({
 	isClickable,
 	isDisabled,
 	...passThroughs
-}: IDangerLightIconProps) => {
+}: IDangerLightIconProps): React.ReactElement => {
 	return (
 		<Icon
 			{...omitProps(

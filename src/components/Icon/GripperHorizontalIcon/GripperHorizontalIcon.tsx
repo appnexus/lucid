@@ -11,7 +11,7 @@ interface IGripperHorizontalIconProps extends IIconProps {}
 export const GripperHorizontalIcon = ({
 	className,
 	...passThroughs
-}: IGripperHorizontalIconProps) => {
+}: IGripperHorizontalIconProps): React.ReactElement => {
 	return (
 		<Icon
 			{...omitProps(

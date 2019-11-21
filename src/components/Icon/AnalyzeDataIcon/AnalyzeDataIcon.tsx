@@ -11,7 +11,7 @@ interface IAnalyzeDataIconProps extends IIconProps {}
 export const AnalyzeDataIcon = ({
 	className,
 	...passThroughs
-}: IAnalyzeDataIconProps) => {
+}: IAnalyzeDataIconProps): React.ReactElement => {
 	return (
 		<Icon
 			{...omitProps(

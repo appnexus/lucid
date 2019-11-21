@@ -13,7 +13,7 @@ export const DotsIcon = ({
 	className,
 	color = Color.primary,
 	...passThroughs
-}: IDotsIconProps) => {
+}: IDotsIconProps): React.ReactElement => {
 	return (
 		<Icon
 			{...omitProps(passThroughs, undefined, _.keys(DotsIcon.propTypes), false)}

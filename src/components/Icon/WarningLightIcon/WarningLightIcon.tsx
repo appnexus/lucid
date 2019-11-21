@@ -13,7 +13,7 @@ export const WarningLightIcon = ({
 	isClickable,
 	isDisabled,
 	...passThroughs
-}: IWarningLightIconProps) => {
+}: IWarningLightIconProps): React.ReactElement => {
 	return (
 		<Icon
 			{...omitProps(

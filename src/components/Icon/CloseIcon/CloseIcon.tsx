@@ -13,7 +13,7 @@ export const CloseIcon = ({
 	isDisabled,
 	isClickable,
 	...passThroughs
-}: ICloseIconProps) => {
+}: ICloseIconProps): React.ReactElement => {
 	return (
 		<Icon
 			{...omitProps(

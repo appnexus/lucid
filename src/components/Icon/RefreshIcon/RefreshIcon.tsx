@@ -11,7 +11,7 @@ interface IRefreshIconProps extends IIconProps {}
 export const RefreshIcon = ({
 	className,
 	...passThroughs
-}: IRefreshIconProps) => {
+}: IRefreshIconProps): React.ReactElement => {
 	return (
 		<Icon
 			{...omitProps(

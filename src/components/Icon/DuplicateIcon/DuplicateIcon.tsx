@@ -11,7 +11,7 @@ interface IDuplicateIconProps extends IIconProps {}
 export const DuplicateIcon = ({
 	className,
 	...passThroughs
-}: IDuplicateIconProps) => {
+}: IDuplicateIconProps): React.ReactElement => {
 	return (
 		<Icon
 			{...omitProps(

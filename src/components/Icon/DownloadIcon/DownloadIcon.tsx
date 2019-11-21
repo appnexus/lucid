@@ -11,7 +11,7 @@ interface IDownloadIconProps extends IIconProps {}
 export const DownloadIcon = ({
 	className,
 	...passThroughs
-}: IDownloadIconProps) => {
+}: IDownloadIconProps): React.ReactElement => {
 	return (
 		<Icon
 			{...omitProps(

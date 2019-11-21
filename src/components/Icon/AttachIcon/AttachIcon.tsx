@@ -11,7 +11,7 @@ interface IAttachIconProps extends IIconProps {}
 export const AttachIcon = ({
 	className,
 	...passThroughs
-}: IAttachIconProps) => {
+}: IAttachIconProps): React.ReactElement => {
 	return (
 		<Icon
 			{...omitProps(

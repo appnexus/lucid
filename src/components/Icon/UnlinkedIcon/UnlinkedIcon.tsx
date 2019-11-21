@@ -11,7 +11,7 @@ interface IUnlinkedIconProps extends IIconProps {}
 export const UnlinkedIcon = ({
 	className,
 	...passThroughs
-}: IUnlinkedIconProps) => {
+}: IUnlinkedIconProps): React.ReactElement => {
 	return (
 		<Icon
 			{...omitProps(

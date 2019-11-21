@@ -11,7 +11,7 @@ interface IMaximizeIconProps extends IIconProps {}
 export const MaximizeIcon = ({
 	className,
 	...passThroughs
-}: IMaximizeIconProps) => {
+}: IMaximizeIconProps): React.ReactElement => {
 	return (
 		<Icon
 			{...omitProps(

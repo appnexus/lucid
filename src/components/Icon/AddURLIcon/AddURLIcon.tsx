@@ -11,7 +11,7 @@ interface IAddURLIconProps extends IIconProps {}
 export const AddURLIcon = ({
 	className,
 	...passThroughs
-}: IAddURLIconProps) => {
+}: IAddURLIconProps): React.ReactElement => {
 	return (
 		<Icon
 			{...omitProps(

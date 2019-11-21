@@ -11,7 +11,7 @@ interface ISearchIconProps extends IIconProps {}
 export const SearchIcon = ({
 	className,
 	...passThroughs
-}: ISearchIconProps) => {
+}: ISearchIconProps): React.ReactElement => {
 	return (
 		<Icon
 			{...omitProps(

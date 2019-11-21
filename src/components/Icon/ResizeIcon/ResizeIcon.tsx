@@ -11,7 +11,7 @@ interface IResizeIconProps extends IIconProps {}
 export const ResizeIcon = ({
 	className,
 	...passThroughs
-}: IResizeIconProps) => {
+}: IResizeIconProps): React.ReactElement => {
 	return (
 		<Icon
 			{...omitProps(

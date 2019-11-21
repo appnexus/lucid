@@ -11,7 +11,7 @@ interface IStopwatchIconProps extends IIconProps {}
 export const StopwatchIcon = ({
 	className,
 	...passThroughs
-}: IStopwatchIconProps) => {
+}: IStopwatchIconProps): React.ReactElement => {
 	return (
 		<Icon
 			{...omitProps(

@@ -11,7 +11,7 @@ interface ILinkedIconProps extends IIconProps {}
 export const LinkedIcon = ({
 	className,
 	...passThroughs
-}: ILinkedIconProps) => {
+}: ILinkedIconProps): React.ReactElement => {
 	return (
 		<Icon
 			{...omitProps(

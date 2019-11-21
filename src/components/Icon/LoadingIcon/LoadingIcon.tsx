@@ -26,7 +26,7 @@ export const LoadingIcon = ({
 	style,
 	isDisabled,
 	...passThroughs
-}: ILoadingIconProps) => {
+}: ILoadingIconProps): React.ReactElement => {
 	const animationDuration = `${durations[speed] || durations.normal}`;
 
 	return (

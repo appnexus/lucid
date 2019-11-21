@@ -11,7 +11,7 @@ interface IDeleteIconProps extends IIconProps {}
 export const DeleteIcon = ({
 	className,
 	...passThroughs
-}: IDeleteIconProps) => {
+}: IDeleteIconProps): React.ReactElement => {
 	return (
 		<Icon
 			{...omitProps(

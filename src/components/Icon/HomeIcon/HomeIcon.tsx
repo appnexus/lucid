@@ -8,7 +8,10 @@ const cx = lucidClassNames.bind('&-HomeIcon');
 
 interface IHomeIconProps extends IIconProps {}
 
-export const HomeIcon = ({ className, ...passThroughs }: IHomeIconProps) => {
+export const HomeIcon = ({
+	className,
+	...passThroughs
+}: IHomeIconProps): React.ReactElement => {
 	return (
 		<Icon
 			{...omitProps(passThroughs, undefined, _.keys(HomeIcon.propTypes), false)}

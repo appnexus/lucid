@@ -21,7 +21,7 @@ export const MinusCircleLightIcon = ({
 	isDisabled,
 	isClickable,
 	...passThroughs
-}: IMinusCircleLightIconProps) => {
+}: IMinusCircleLightIconProps): React.ReactElement => {
 	return (
 		<Icon
 			{...omitProps(

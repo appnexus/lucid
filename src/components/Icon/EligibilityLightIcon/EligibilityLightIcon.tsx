@@ -25,7 +25,7 @@ export const EligibilityLightIcon = ({
 	eligibility = EligibilityOptions.neither,
 	isDisabled = false,
 	...passThroughs
-}: IEligibilityLightIconProps) => {
+}: IEligibilityLightIconProps): React.ReactElement => {
 	return (
 		<Icon
 			{...omitProps(

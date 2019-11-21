@@ -8,7 +8,10 @@ const cx = lucidClassNames.bind('&-VideoIcon');
 
 interface IVideoIconProps extends IIconProps {}
 
-export const VideoIcon = ({ className, ...passThroughs }: IVideoIconProps) => {
+export const VideoIcon = ({
+	className,
+	...passThroughs
+}: IVideoIconProps): React.ReactElement => {
 	return (
 		<Icon
 			{...omitProps(

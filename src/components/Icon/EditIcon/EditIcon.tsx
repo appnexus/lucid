@@ -8,7 +8,10 @@ const cx = lucidClassNames.bind('&-EditIcon');
 
 interface IEditIconProps extends IIconProps {}
 
-export const EditIcon = ({ className, ...passThroughs }: IEditIconProps) => {
+export const EditIcon = ({
+	className,
+	...passThroughs
+}: IEditIconProps): React.ReactElement => {
 	return (
 		<Icon
 			{...omitProps(passThroughs, undefined, _.keys(EditIcon.propTypes), false)}

@@ -11,7 +11,7 @@ interface IFilterIconProps extends IIconProps {}
 export const FilterIcon = ({
 	className,
 	...passThroughs
-}: IFilterIconProps) => {
+}: IFilterIconProps): React.ReactElement => {
 	return (
 		<Icon
 			{...omitProps(

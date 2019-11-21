@@ -11,7 +11,7 @@ interface IMinimizeIconProps extends IIconProps {}
 export const MinimizeIcon = ({
 	className,
 	...passThroughs
-}: IMinimizeIconProps) => {
+}: IMinimizeIconProps): React.ReactElement => {
 	return (
 		<Icon
 			{...omitProps(

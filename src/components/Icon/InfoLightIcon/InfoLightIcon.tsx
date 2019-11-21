@@ -13,7 +13,7 @@ export const InfoLightIcon = ({
 	isClickable,
 	isDisabled,
 	...passThroughs
-}: IInfoLightIconProps) => {
+}: IInfoLightIconProps): React.ReactElement => {
 	return (
 		<Icon
 			{...omitProps(

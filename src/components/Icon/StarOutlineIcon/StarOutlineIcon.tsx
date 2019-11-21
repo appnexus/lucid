@@ -11,7 +11,7 @@ interface IStarOutlineIconProps extends IIconProps {}
 export const StarOutlineIcon = ({
 	className,
 	...passThroughs
-}: IStarOutlineIconProps) => {
+}: IStarOutlineIconProps): React.ReactElement => {
 	return (
 		<Icon
 			{...omitProps(

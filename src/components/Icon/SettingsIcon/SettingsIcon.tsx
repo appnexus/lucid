@@ -11,7 +11,7 @@ interface ISettingsIconProps extends IIconProps {}
 export const SettingsIcon = ({
 	className,
 	...passThroughs
-}: ISettingsIconProps) => {
+}: ISettingsIconProps): React.ReactElement => {
 	return (
 		<Icon
 			{...omitProps(

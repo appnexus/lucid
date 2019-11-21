@@ -11,7 +11,7 @@ interface IUploadIconProps extends IIconProps {}
 export const UploadIcon = ({
 	className,
 	...passThroughs
-}: IUploadIconProps) => {
+}: IUploadIconProps): React.ReactElement => {
 	return (
 		<Icon
 			{...omitProps(

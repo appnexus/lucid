@@ -8,7 +8,10 @@ const cx = lucidClassNames.bind('&-FileIcon');
 
 interface IFileIconProps extends IIconProps {}
 
-export const FileIcon = ({ className, ...passThroughs }: IFileIconProps) => {
+export const FileIcon = ({
+	className,
+	...passThroughs
+}: IFileIconProps): React.ReactElement => {
 	return (
 		<Icon
 			{...omitProps(passThroughs, undefined, _.keys(FileIcon.propTypes), false)}

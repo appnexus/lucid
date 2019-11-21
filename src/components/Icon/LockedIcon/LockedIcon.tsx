@@ -11,7 +11,7 @@ interface ILockedIconProps extends IIconProps {}
 export const LockedIcon = ({
 	className,
 	...passThroughs
-}: ILockedIconProps) => {
+}: ILockedIconProps): React.ReactElement => {
 	return (
 		<Icon
 			{...omitProps(

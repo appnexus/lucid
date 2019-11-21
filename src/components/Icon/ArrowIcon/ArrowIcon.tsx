@@ -17,7 +17,7 @@ export const ArrowIcon = ({
 	className,
 	direction = 'left',
 	...passThroughs
-}: IArrowIconProps) => {
+}: IArrowIconProps): React.ReactElement => {
 	return (
 		<Icon
 			{...omitProps(

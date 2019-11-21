@@ -13,7 +13,7 @@ export const HelpIcon = ({
 	isDisabled,
 	isClickable,
 	...passThroughs
-}: IHelpIconProps) => {
+}: IHelpIconProps): React.ReactElement => {
 	return (
 		<Icon
 			{...omitProps(passThroughs, undefined, _.keys(HelpIcon.propTypes), false)}

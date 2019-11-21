@@ -11,7 +11,7 @@ interface IEqualsIconProps extends IIconProps {}
 export const EqualsIcon = ({
 	className,
 	...passThroughs
-}: IEqualsIconProps) => {
+}: IEqualsIconProps): React.ReactElement => {
 	return (
 		<Icon
 			{...omitProps(

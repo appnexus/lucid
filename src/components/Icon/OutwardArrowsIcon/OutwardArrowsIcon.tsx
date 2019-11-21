@@ -31,7 +31,7 @@ export const OutwardArrowsIcon = ({
 	className,
 	kind = 'horizontal',
 	...passThroughs
-}: IOutwardArrowsIconProps) => {
+}: IOutwardArrowsIconProps): React.ReactElement => {
 	return (
 		<Icon
 			{...omitProps(

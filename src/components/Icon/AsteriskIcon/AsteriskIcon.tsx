@@ -11,7 +11,7 @@ interface IAsteriskIconProps extends IIconProps {}
 export const AsteriskIcon = ({
 	className,
 	...passThroughs
-}: IAsteriskIconProps) => {
+}: IAsteriskIconProps): React.ReactElement => {
 	return (
 		<Icon
 			{...omitProps(

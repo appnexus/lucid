@@ -13,7 +13,7 @@ export const StarIcon = ({
 	isClickable,
 	isDisabled,
 	...passThroughs
-}: IStarIconProps) => {
+}: IStarIconProps): React.ReactElement => {
 	return (
 		<Icon
 			{...omitProps(passThroughs, undefined, _.keys(StarIcon.propTypes), false)}

@@ -11,7 +11,7 @@ interface IFolderIconProps extends IIconProps {}
 export const FolderIcon = ({
 	className,
 	...passThroughs
-}: IFolderIconProps) => {
+}: IFolderIconProps): React.ReactElement => {
 	return (
 		<Icon
 			{...omitProps(

@@ -21,7 +21,7 @@ export const SuccessLightIcon = ({
 	isClickable,
 	isDisabled,
 	...passThroughs
-}: ISuccessLightIconProps) => {
+}: ISuccessLightIconProps): React.ReactElement => {
 	return (
 		<Icon
 			{...omitProps(

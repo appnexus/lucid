@@ -11,7 +11,7 @@ interface IViewTableIconProps extends IIconProps {}
 export const ViewTableIcon = ({
 	className,
 	...passThroughs
-}: IViewTableIconProps) => {
+}: IViewTableIconProps): React.ReactElement => {
 	return (
 		<Icon
 			{...omitProps(

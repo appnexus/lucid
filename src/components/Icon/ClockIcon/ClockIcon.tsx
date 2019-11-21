@@ -8,7 +8,10 @@ const cx = lucidClassNames.bind('&-ClockIcon');
 
 interface IClockIconProps extends IIconProps {}
 
-export const ClockIcon = ({ className, ...passThroughs }: IClockIconProps) => {
+export const ClockIcon = ({
+	className,
+	...passThroughs
+}: IClockIconProps): React.ReactElement => {
 	return (
 		<Icon
 			{...omitProps(

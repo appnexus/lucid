@@ -11,7 +11,7 @@ interface ISwitchIconProps extends IIconProps {}
 export const SwitchIcon = ({
 	className,
 	...passThroughs
-}: ISwitchIconProps) => {
+}: ISwitchIconProps): React.ReactElement => {
 	return (
 		<Icon
 			{...omitProps(

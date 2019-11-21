@@ -8,7 +8,10 @@ const cx = lucidClassNames.bind('&-BookIcon');
 
 interface IBookIconProps extends IIconProps {}
 
-export const BookIcon = ({ className, ...passThroughs }: IBookIconProps) => {
+export const BookIcon = ({
+	className,
+	...passThroughs
+}: IBookIconProps): React.ReactElement => {
 	return (
 		<Icon
 			{...omitProps(passThroughs, undefined, _.keys(BookIcon.propTypes), false)}

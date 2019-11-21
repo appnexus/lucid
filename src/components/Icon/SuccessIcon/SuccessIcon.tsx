@@ -13,7 +13,7 @@ export const SuccessIcon = ({
 	isClickable,
 	isDisabled,
 	...passThroughs
-}: ISuccessIconProps) => {
+}: ISuccessIconProps): React.ReactElement => {
 	return (
 		<Icon
 			{...omitProps(

@@ -8,7 +8,10 @@ const cx = lucidClassNames.bind('&-PlusIcon');
 
 interface IPlusIconProps extends IIconProps {}
 
-export const PlusIcon = ({ className, ...passThroughs }: IPlusIconProps) => {
+export const PlusIcon = ({
+	className,
+	...passThroughs
+}: IPlusIconProps): React.ReactElement => {
 	return (
 		<Icon
 			{...omitProps(passThroughs, undefined, _.keys(PlusIcon.propTypes), false)}

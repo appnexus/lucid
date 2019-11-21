@@ -8,7 +8,10 @@ const cx = lucidClassNames.bind('&-ChatIcon');
 
 interface IChatIconProps extends IIconProps {}
 
-export const ChatIcon = ({ className, ...passThroughs }: IChatIconProps) => {
+export const ChatIcon = ({
+	className,
+	...passThroughs
+}: IChatIconProps): React.ReactElement => {
 	return (
 		<Icon
 			{...omitProps(passThroughs, undefined, _.keys(ChatIcon.propTypes), false)}

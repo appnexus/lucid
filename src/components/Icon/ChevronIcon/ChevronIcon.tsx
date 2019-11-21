@@ -16,7 +16,7 @@ export const ChevronIcon = ({
 	className,
 	direction = 'down',
 	...passThroughs
-}: IChevronIconProps) => {
+}: IChevronIconProps): React.ReactElement => {
 	return (
 		<Icon
 			{...omitProps(
