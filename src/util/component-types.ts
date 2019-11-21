@@ -1,4 +1,4 @@
-import React, { ReactElement } from 'react';
+import React, { ReactElement, ElementType } from 'react';
 import createReactClass from 'create-react-class';
 import PropTypes from 'react-peek/prop-types';
 import _ from 'lodash';
@@ -60,7 +60,13 @@ export interface FC<P> extends React.FC<P> {
 	_isPrivate?: boolean;
 }
 
+class ReactClassComponent extends React.Component<{},{}> {}
+
+type IReactClassComponent = (typeof ReactClassComponent)
+
 type TypesType<P> =
+	| IReactClassComponent
+	| Array<IReactClassComponent>
 	| ICreateClassComponentClass<P>
 	| Array<ICreateClassComponentClass<P>>
 	| FC<P>
@@ -176,9 +182,9 @@ export function filterTypes<P>(
 }
 
 // return all elements found in props and children of the specified types
-export function findTypes<P extends { children?: React.ReactNode }>(
-	props: P,
-	types?: TypesType<P>
+export function findTypes<P2>(
+	props: { children?: React.ReactNode },
+	types?: TypesType<P2>
 ): React.ReactNode[] {
 	if (types === undefined) {
 		return [];
@@ -203,7 +209,7 @@ export function findTypes<P extends { children?: React.ReactNode }>(
 	}
 
 	// return elements from props and elements from children
-	return elementsFromProps.concat(filterTypes<P>(props.children, types));
+	return elementsFromProps.concat(filterTypes<P2>(props.children, types));
 }
 
 // return all elements not matching the specified types
@@ -247,6 +253,7 @@ export function createElements<P>(
 	);
 }
 
+//does this work?
 // return the first element found in props and children of the specificed type(s)
 export function getFirst<P>(
 	props: P,

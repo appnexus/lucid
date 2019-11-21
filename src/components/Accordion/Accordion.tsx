@@ -109,7 +109,7 @@ class Accordion extends React.Component<IAccordionProps, IAccordionState> {
 		const { style, className, selectedIndex, ...passThroughs } = this.props;
 
 		const itemChildProps = _.map(
-			findTypes(this.props, Accordion.Item as { propName?: string | string[] }),
+			findTypes(this.props, Accordion.Item),
 			'props'
 		);
 
