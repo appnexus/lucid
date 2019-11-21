@@ -3,7 +3,6 @@ import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import {
-	FC,
 	StandardProps,
 	filterTypes,
 	findTypes,
@@ -48,10 +47,10 @@ interface ISidebarTitleProps extends StandardProps {}
 interface ISidebarBarProps extends StandardProps {
 	Title?: ISidebarTitleProps;
 	title?: ISidebarTitleProps;
-	hasGutters?: boolean;
+	hasGutters: boolean;
 }
 
-const Primary: FC<ISidebarPrimaryProps> = (): null => null;
+const Primary = (_props: ISidebarPrimaryProps): null => null;
 Primary.peek = {
 	description: `
 		Main pane content that will have a paired \`Bar\`.
@@ -60,7 +59,7 @@ Primary.peek = {
 Primary.displayName = 'SplitHorizontal.Primary';
 Primary.propName = 'Primary';
 
-const Title: FC<ISidebarTitleProps> = (): null => null;
+const Title = (_props: ISidebarTitleProps): null => null;
 Title.peek = {
 	description: `
 		Sidebar title;
@@ -80,7 +79,7 @@ Title.propTypes = {
 Title.displayName = 'Sidebar.Title';
 Title.propName = ['Title', 'title'];
 
-const Bar: FC<ISidebarBarProps> = (): null => null;
+const Bar = (_props: ISidebarBarProps): null => null;
 Bar.peek = {
 	description: `
 		Content to be placed alongside the Primary pane.

@@ -2,18 +2,18 @@ import _ from 'lodash';
 import React from 'react';
 import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
-import { FC, omitProps } from '../../../util/component-types';
+import { omitProps } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-SuccessIcon');
 
 interface ISuccessIconProps extends IIconProps {}
 
-export const SuccessIcon: FC<ISuccessIconProps> = ({
+export const SuccessIcon = ({
 	className,
 	isClickable,
 	isDisabled,
 	...passThroughs
-}): React.ReactElement => {
+}: ISuccessIconProps) => {
 	return (
 		<Icon
 			{...omitProps(
@@ -48,5 +48,6 @@ SuccessIcon.peek = {
 	madeFrom: ['Icon'],
 };
 SuccessIcon.propTypes = iconPropTypes;
+SuccessIcon.defaultProps = Icon.defaultProps;
 
 export default SuccessIcon;

@@ -4,12 +4,7 @@ import PropTypes from 'react-peek/prop-types';
 import React from 'react';
 import { buildHybridComponent } from '../../util/state-management';
 import { lucidClassNames } from '../../util/style-helpers';
-import {
-	StandardProps,
-	FC,
-	getFirst,
-	omitProps,
-} from '../../util/component-types';
+import { StandardProps, getFirst, omitProps } from '../../util/component-types';
 import * as reducers from './DateSelect.reducers';
 import InfiniteSlidePanel from '../InfiniteSlidePanel/InfiniteSlidePanel';
 import { ISlidePanelProps } from '../SlidePanel/SlidePanel';
@@ -28,7 +23,7 @@ interface IDateSelectCalendarMonthProps extends StandardProps {
 	description?: string;
 }
 
-const DateSelectCalendarMonth: FC<IDateSelectCalendarMonthProps> = (): null =>
+const DateSelectCalendarMonth = (_props: IDateSelectCalendarMonthProps): null =>
 	null;
 DateSelectCalendarMonth.displayName = 'DateSelect.CalendarMonth';
 DateSelectCalendarMonth.peek = {

@@ -7,18 +7,13 @@ import GripperVerticalIcon from '../Icon/GripperVerticalIcon/GripperVerticalIcon
 import CloseIcon from '../Icon/CloseIcon/CloseIcon';
 import DragCaptureZone from '../DragCaptureZone/DragCaptureZone';
 import Button from '../Button/Button';
-import {
-	getFirst,
-	omitProps,
-	FC,
-	StandardProps,
-} from '../../util/component-types';
+import { getFirst, omitProps, StandardProps } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-SidePanel');
 
 const { any, bool, func, oneOf, node, number, string, oneOfType } = PropTypes;
 
-const SidePanelHeader: FC<StandardProps> = (): null => null;
+const SidePanelHeader = (_props: StandardProps): null => null;
 SidePanelHeader.displayName = 'SidePanel.Header';
 SidePanelHeader.propName = 'Header';
 SidePanelHeader.peek = {

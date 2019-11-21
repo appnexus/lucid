@@ -2,18 +2,18 @@ import _ from 'lodash';
 import React from 'react';
 import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
-import { FC, omitProps } from '../../../util/component-types';
+import { omitProps } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-InfoIcon');
 
 interface IInfoIconProps extends IIconProps {}
 
-export const InfoIcon: FC<IInfoIconProps> = ({
+export const InfoIcon = ({
 	className,
 	isDisabled,
 	isClickable,
 	...passThroughs
-}): React.ReactElement => {
+}: IInfoIconProps) => {
 	return (
 		<Icon
 			{...omitProps(passThroughs, undefined, _.keys(InfoIcon.propTypes), false)}
@@ -44,5 +44,6 @@ InfoIcon.peek = {
 	madeFrom: ['Icon'],
 };
 InfoIcon.propTypes = iconPropTypes;
+InfoIcon.defaultProps = Icon.defaultProps;
 
 export default InfoIcon;

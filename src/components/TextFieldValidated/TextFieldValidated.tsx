@@ -5,7 +5,7 @@ import Validation, { IValidationProps } from '../Validation/Validation';
 import TextField, { ITextFieldProps } from '../TextField/TextField';
 import reducers from '../TextField/TextField.reducers';
 import { lucidClassNames } from '../../util/style-helpers';
-import { FC, findTypes, omitProps } from '../../util/component-types';
+import { findTypes, omitProps } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-TextFieldValidated');
 
@@ -15,7 +15,7 @@ interface ITextFieldValidatedErrorProps extends IValidationProps {
 	description?: string;
 }
 
-const TextFieldValidatedError: FC<ITextFieldValidatedErrorProps> = (): null =>
+const TextFieldValidatedError = (_props: ITextFieldValidatedErrorProps): null =>
 	null;
 TextFieldValidatedError.displayName = 'TextFieldValidated.Error';
 TextFieldValidatedError.peek = {

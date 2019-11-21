@@ -3,11 +3,9 @@ import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import {
-	FC,
 	StandardProps,
 	findTypes,
 	omitProps,
-	FixDefaults,
 } from '../../util/component-types';
 import RadioButton, {
 	IRadioButtonProps,
@@ -20,7 +18,7 @@ const { any, object, string } = PropTypes;
 interface IRadioButtonLabeledLabelProps extends StandardProps {
 	description?: string;
 }
-const RadioButtonLabeledLabel: FC<IRadioButtonLabeledLabelProps> = (): null =>
+const RadioButtonLabeledLabel = (_props: IRadioButtonLabeledLabelProps): null =>
 	null;
 RadioButtonLabeledLabel.displayName = 'RadioButtonLabeled.Label';
 RadioButtonLabeledLabel.peek = {
@@ -37,12 +35,8 @@ export interface IRadioButtonLabeledProps extends IRadioButtonProps {
 	Label?: string | React.ReactNode & { props: IRadioButtonLabeledLabelProps };
 }
 
-export interface IRadioButtonLabeledFC extends FC<IRadioButtonLabeledProps> {
-	Label: FC<IRadioButtonLabeledLabelProps>;
-}
-
-export const RadioButtonLabeled: IRadioButtonLabeledFC = (
-	props
+export const RadioButtonLabeled = (
+	props: IRadioButtonLabeledProps
 ): React.ReactElement => {
 	const {
 		className,
@@ -51,7 +45,7 @@ export const RadioButtonLabeled: IRadioButtonLabeledFC = (
 		onSelect,
 		style,
 		...passThroughs
-	} = props as FixDefaults<IRadioButtonProps, typeof radioButtonDefaultProps>;
+	} = props;
 
 	const labelChildProps = _.first(
 		_.map(findTypes(props, RadioButtonLabeled.Label), 'props')

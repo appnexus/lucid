@@ -17,27 +17,6 @@ export interface StandardProps {
 	style?: React.CSSProperties;
 }
 
-// `P`: props
-// `D`: default props
-//
-// We decided to create this utility defintion because of the issues outlined
-// here: https://github.com/microsoft/TypeScript/issues/31247
-//
-// This utility is really only needed with functional components. Class
-// components behave correctly with default props.
-//
-// Typescript is able to behave correctly (wrt to default props) if we were to
-// rely on type inference for our functional components, but since we also have
-// other properties (e.g. `_isPrivate`) we need to explicitly define the type.
-//
-// This helper allows us to cast props used _within_ the component to consider
-// properties found on defaultProps to be required.
-export type FixDefaults<P, D extends Partial<P>> = Pick<
-	P,
-	Exclude<keyof P, keyof D>
-> &
-	Required<Pick<P, Extract<keyof P, keyof D>>>;
-
 // Like `T & U`, but where there are overlapping properties using the type from U only.
 // From https://github.com/pelotom/type-zoo/blob/1a08384d77967ed322356005636fbb8db3c16702/types/index.d.ts#L43
 export type Overwrite<T, U> = Omit<T, keyof T & keyof U> & U;
@@ -60,7 +39,8 @@ type TypesType<P> =
 	| Array<ICreateClassComponentClass<P>>
 	| FC<P>
 	| Array<FC<P>>
-	| { propName?: string | string[] };
+	| { propName?: string | string[] }
+	| any; // TODO: figure out a type that works with inferred functional components
 
 interface ICreateClassComponentSpec<P extends { [key: string]: any }, S>
 	extends React.Mixin<P, S> {
@@ -243,7 +223,7 @@ export function createElements<P>(
 }
 
 // return the first element found in props and children of the specificed type(s)
-export function getFirst<P>(
+export function getFirst<P, CustomType = {}>(
 	props: P,
 	types: TypesType<P> | undefined,
 	defaultValue?: React.ReactNode

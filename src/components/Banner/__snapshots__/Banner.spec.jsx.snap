@@ -23,10 +23,15 @@ exports[`Banner [common] example testing should match snapshot(s) for small 1`] 
       Default
     </span>
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Banner-close"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={8}
+      viewBox="0 0 16 16"
     />
   </section>
 </CSSTransitionGroup>
@@ -82,10 +87,15 @@ exports[`Banner [common] example testing should match snapshot(s) for small 3`] 
       Success
     </span>
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Banner-close"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={8}
+      viewBox="0 0 16 16"
     />
   </section>
 </CSSTransitionGroup>
@@ -141,10 +151,15 @@ exports[`Banner [common] example testing should match snapshot(s) for small 5`] 
       Warning
     </span>
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Banner-close"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={8}
+      viewBox="0 0 16 16"
     />
   </section>
 </CSSTransitionGroup>
@@ -200,10 +215,15 @@ exports[`Banner [common] example testing should match snapshot(s) for small 7`] 
       Danger
     </span>
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Banner-close"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={8}
+      viewBox="0 0 16 16"
     />
   </section>
 </CSSTransitionGroup>
@@ -259,10 +279,15 @@ exports[`Banner [common] example testing should match snapshot(s) for small 9`] 
       Info
     </span>
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Banner-close"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={8}
+      viewBox="0 0 16 16"
     />
   </section>
 </CSSTransitionGroup>
@@ -323,10 +348,15 @@ exports[`Banner [common] example testing should match snapshot(s) for small 11`]
       Has Custom Icon
     </span>
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Banner-close"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={8}
+      viewBox="0 0 16 16"
     />
   </section>
 </CSSTransitionGroup>
@@ -355,10 +385,15 @@ exports[`Banner [common] example testing should match snapshot(s) for small 12`]
       Default -- Outline Only
     </span>
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Banner-close"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={8}
+      viewBox="0 0 16 16"
     />
   </section>
 </CSSTransitionGroup>
@@ -387,10 +422,15 @@ exports[`Banner [common] example testing should match snapshot(s) for small 13`]
       Success -- Outline Only
     </span>
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Banner-close"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={8}
+      viewBox="0 0 16 16"
     />
   </section>
 </CSSTransitionGroup>
@@ -419,10 +459,15 @@ exports[`Banner [common] example testing should match snapshot(s) for small 14`]
       Warning -- Outline Only
     </span>
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Banner-close"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={8}
+      viewBox="0 0 16 16"
     />
   </section>
 </CSSTransitionGroup>
@@ -451,10 +496,15 @@ exports[`Banner [common] example testing should match snapshot(s) for small 15`]
       Danger -- Outline Only
     </span>
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Banner-close"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={8}
+      viewBox="0 0 16 16"
     />
   </section>
 </CSSTransitionGroup>
@@ -483,10 +533,15 @@ exports[`Banner [common] example testing should match snapshot(s) for small 16`]
       Info -- Outline Only
     </span>
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Banner-close"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={8}
+      viewBox="0 0 16 16"
     />
   </section>
 </CSSTransitionGroup>
@@ -510,10 +565,15 @@ exports[`Banner [common] example testing should match snapshot(s) for stateful 1
       Default
     </span>
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Banner-close"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={8}
+      viewBox="0 0 16 16"
     />
   </section>
 </CSSTransitionGroup>
@@ -563,10 +623,15 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
       </div>
     </span>
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Banner-close"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={8}
+      viewBox="0 0 16 16"
     />
   </section>
 </CSSTransitionGroup>
@@ -622,10 +687,15 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
       Success
     </span>
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Banner-close"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={8}
+      viewBox="0 0 16 16"
     />
   </section>
 </CSSTransitionGroup>
@@ -686,10 +756,15 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
       </a>
     </span>
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Banner-close"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={8}
+      viewBox="0 0 16 16"
     />
   </section>
 </CSSTransitionGroup>
@@ -745,10 +820,15 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
       Danger
     </span>
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Banner-close"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={8}
+      viewBox="0 0 16 16"
     />
   </section>
 </CSSTransitionGroup>
@@ -804,10 +884,15 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
       Info
     </span>
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Banner-close"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={8}
+      viewBox="0 0 16 16"
     />
   </section>
 </CSSTransitionGroup>
@@ -860,7 +945,16 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
     <span
       className="lucid-Banner-icon"
     >
-      <ChatIcon />
+      <ChatIcon
+        aspectRatio="xMidYMid meet"
+        color="primary"
+        isClickable={false}
+        isDisabled={false}
+        onClick={[Function]}
+        onSelect={[Function]}
+        size={16}
+        viewBox="0 0 16 16"
+      />
     </span>
     <span
       className="lucid-Banner-content"
@@ -868,10 +962,15 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
       Has Icon
     </span>
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Banner-close"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={8}
+      viewBox="0 0 16 16"
     />
   </section>
 </CSSTransitionGroup>
@@ -900,10 +999,15 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
       Default -- Outline Only
     </span>
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Banner-close"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={8}
+      viewBox="0 0 16 16"
     />
   </section>
 </CSSTransitionGroup>
@@ -932,10 +1036,15 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
       Success -- Outline Only
     </span>
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Banner-close"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={8}
+      viewBox="0 0 16 16"
     />
   </section>
 </CSSTransitionGroup>
@@ -964,10 +1073,15 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
       Warning -- Outline Only
     </span>
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Banner-close"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={8}
+      viewBox="0 0 16 16"
     />
   </section>
 </CSSTransitionGroup>
@@ -996,10 +1110,15 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
       Danger -- Outline Only
     </span>
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Banner-close"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={8}
+      viewBox="0 0 16 16"
     />
   </section>
 </CSSTransitionGroup>
@@ -1028,10 +1147,15 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
       Info -- Outline Only
     </span>
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Banner-close"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={8}
+      viewBox="0 0 16 16"
     />
   </section>
 </CSSTransitionGroup>
@@ -1057,7 +1181,16 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
     <span
       className="lucid-Banner-icon"
     >
-      <ChatIcon />
+      <ChatIcon
+        aspectRatio="xMidYMid meet"
+        color="primary"
+        isClickable={false}
+        isDisabled={false}
+        onClick={[Function]}
+        onSelect={[Function]}
+        size={16}
+        viewBox="0 0 16 16"
+      />
     </span>
     <span
       className="lucid-Banner-content"
@@ -1065,10 +1198,15 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
       Has Icon -- Outline Only
     </span>
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Banner-close"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={8}
+      viewBox="0 0 16 16"
     />
   </section>
 </CSSTransitionGroup>

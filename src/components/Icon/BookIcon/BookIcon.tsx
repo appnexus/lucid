@@ -2,16 +2,13 @@ import _ from 'lodash';
 import React from 'react';
 import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
-import { FC, omitProps } from '../../../util/component-types';
+import { omitProps } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-BookIcon');
 
 interface IBookIconProps extends IIconProps {}
 
-export const BookIcon: FC<IBookIconProps> = ({
-	className,
-	...passThroughs
-}): React.ReactElement => {
+export const BookIcon = ({ className, ...passThroughs }: IBookIconProps) => {
 	return (
 		<Icon
 			{...omitProps(passThroughs, undefined, _.keys(BookIcon.propTypes), false)}
@@ -34,5 +31,6 @@ BookIcon.peek = {
 	madeFrom: ['Icon'],
 };
 BookIcon.propTypes = iconPropTypes;
+BookIcon.defaultProps = Icon.defaultProps;
 
 export default BookIcon;

@@ -2,12 +2,7 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import {
-	FC,
-	omitProps,
-	StandardProps,
-	FixDefaults,
-} from '../../util/component-types';
+import { omitProps, StandardProps } from '../../util/component-types';
 import * as chartConstants from '../../constants/charts';
 
 const cx = lucidClassNames.bind('&-Bar');
@@ -18,19 +13,19 @@ export interface IBarProps
 	extends StandardProps,
 		React.SVGProps<SVGRectElement> {
 	/** x coordinate. */
-	x?: number;
+	x: number;
 
 	/** y coordinate. */
-	y?: number;
+	y: number;
 
 	/** Height of the bar. */
-	height?: number | string;
+	height: number | string;
 
 	/** Width of the bar. */
-	width?: number | string;
+	width: number | string;
 
 	/** Determines if the bar has a white stroke around it. */
-	hasStroke?: boolean;
+	hasStroke: boolean;
 
 	/** Strings should match an existing color class unless they start with a '#'
 		for specific colors. E.g.:
@@ -39,7 +34,7 @@ export interface IBarProps
 		- \`COLOR_GOOD\`
 		- \`'#123abc'\`
 	 */
-	color?: string;
+	color: string;
 }
 
 const defaultProps = {
@@ -51,7 +46,7 @@ const defaultProps = {
 	hasStroke: false,
 };
 
-export const Bar: FC<IBarProps> = (props): React.ReactElement => {
+export const Bar = (props: IBarProps): React.ReactElement => {
 	const {
 		className,
 		color,
@@ -62,7 +57,7 @@ export const Bar: FC<IBarProps> = (props): React.ReactElement => {
 		x,
 		y,
 		...passThroughs
-	} = props as FixDefaults<IBarProps, typeof defaultProps>;
+	} = props;
 
 	const isCustomColor = _.startsWith(color, '#');
 	const colorStyle = isCustomColor ? { fill: color } : null;

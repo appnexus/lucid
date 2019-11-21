@@ -694,10 +694,15 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 2.variant
     }
   >
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-ToolTip-FlyOut-close"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={8}
+      viewBox="0 0 16 16"
     />
     ToolTip is a utility component to create a transient message anchored to another component.
   </ContextMenu.FlyOut>
@@ -737,10 +742,15 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 2.variant
     }
   >
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-ToolTip-FlyOut-close"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={8}
+      viewBox="0 0 16 16"
     />
     <h2
       className="lucid-ToolTip-FlyOut-Title"
@@ -822,10 +832,15 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 2.variant
     }
   >
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-ToolTip-FlyOut-close"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={8}
+      viewBox="0 0 16 16"
     />
     ToolTip is a utility component to create a transient message anchored to another component.
   </ContextMenu.FlyOut>
@@ -865,10 +880,15 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 2.variant
     }
   >
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-ToolTip-FlyOut-close"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={8}
+      viewBox="0 0 16 16"
     />
     <h2
       className="lucid-ToolTip-FlyOut-Title"

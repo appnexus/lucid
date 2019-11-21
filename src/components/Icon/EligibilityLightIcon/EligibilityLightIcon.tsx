@@ -3,7 +3,7 @@ import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
-import { FC, omitProps } from '../../../util/component-types';
+import { omitProps } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-EligibilityLightIcon');
 
@@ -20,12 +20,12 @@ interface IEligibilityLightIconProps extends IIconProps {
 	eligibility?: EligibilityOptions;
 }
 
-export const EligibilityLightIcon: FC<IEligibilityLightIconProps> = ({
+export const EligibilityLightIcon = ({
 	className,
 	eligibility = EligibilityOptions.neither,
 	isDisabled = false,
 	...passThroughs
-}): React.ReactElement => {
+}: IEligibilityLightIconProps) => {
 	return (
 		<Icon
 			{...omitProps(
@@ -77,5 +77,6 @@ EligibilityLightIcon.propTypes = {
 		Eligibility variations of the icon.
 	`,
 };
+EligibilityLightIcon.defaultProps = Icon.defaultProps;
 
 export default EligibilityLightIcon;

@@ -4,9 +4,7 @@ import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import {
 	omitProps,
-	FC,
 	StandardProps,
-	FixDefaults,
 	Overwrite,
 } from '../../util/component-types';
 
@@ -19,20 +17,20 @@ interface IRadioButtonPropsRaw extends StandardProps {
 	 *
 	 * @default false
 	 */
-	isDisabled?: boolean;
+	isDisabled: boolean;
 
 	/** Indicates that the component is in the "selected" state when true and in
 	 * the "unselected" state when false.
 	 *
 	 * @default false
 	 */
-	isSelected?: boolean;
+	isSelected: boolean;
 
 	/** Called when the user clicks on the component or when they press the space
 	 * key while the component is in focus, and only called when the component
 	 * is in the unselected state.
 	 */
-	onSelect?: (
+	onSelect: (
 		isSelected: boolean,
 		{
 			event,
@@ -58,9 +56,7 @@ export const defaultProps = {
 	onSelect: _.noop,
 };
 
-export const RadioButton: FC<IRadioButtonProps> = (
-	props
-): React.ReactElement => {
+export const RadioButton = (props: IRadioButtonProps): React.ReactElement => {
 	const {
 		className,
 		isDisabled,
@@ -68,7 +64,7 @@ export const RadioButton: FC<IRadioButtonProps> = (
 		onSelect,
 		style,
 		...passThroughs
-	} = props as FixDefaults<IRadioButtonProps, typeof defaultProps>;
+	} = props;
 
 	const nativeElement = React.createRef<HTMLInputElement>();
 

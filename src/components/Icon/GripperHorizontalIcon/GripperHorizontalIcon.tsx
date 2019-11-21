@@ -2,16 +2,16 @@ import _ from 'lodash';
 import React from 'react';
 import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
-import { FC, omitProps } from '../../../util/component-types';
+import { omitProps } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-GripperHorizontalIcon');
 
 interface IGripperHorizontalIconProps extends IIconProps {}
 
-export const GripperHorizontalIcon: FC<IGripperHorizontalIconProps> = ({
+export const GripperHorizontalIcon = ({
 	className,
 	...passThroughs
-}): React.ReactElement => {
+}: IGripperHorizontalIconProps) => {
 	return (
 		<Icon
 			{...omitProps(
@@ -43,5 +43,6 @@ GripperHorizontalIcon.peek = {
 	madeFrom: ['Icon'],
 };
 GripperHorizontalIcon.propTypes = iconPropTypes;
+GripperHorizontalIcon.defaultProps = Icon.defaultProps;
 
 export default GripperHorizontalIcon;

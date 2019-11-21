@@ -2,16 +2,16 @@ import _ from 'lodash';
 import React from 'react';
 import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
-import { FC, omitProps } from '../../../util/component-types';
+import { omitProps } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-DownloadIcon');
 
 interface IDownloadIconProps extends IIconProps {}
 
-export const DownloadIcon: FC<IDownloadIconProps> = ({
+export const DownloadIcon = ({
 	className,
 	...passThroughs
-}): React.ReactElement => {
+}: IDownloadIconProps) => {
 	return (
 		<Icon
 			{...omitProps(
@@ -39,5 +39,6 @@ DownloadIcon.peek = {
 	madeFrom: ['Icon'],
 };
 DownloadIcon.propTypes = iconPropTypes;
+DownloadIcon.defaultProps = Icon.defaultProps;
 
 export default DownloadIcon;

@@ -4,7 +4,6 @@ import React, { createElement } from 'react';
 import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import {
-	FC,
 	StandardProps,
 	getFirst,
 	omitProps,
@@ -22,7 +21,7 @@ const { bool, func, node, number, oneOfType, string } = PropTypes;
 
 interface ISearchFieldIcon extends StandardProps {}
 
-const SearchFieldIcon: FC<ISearchFieldIcon> = (): null => null;
+const SearchFieldIcon = (_props: ISearchFieldIcon): null => null;
 SearchFieldIcon.peek = {
 	description: `
 		Icon this is displayed on the right side of the SearchField. Any of the lucid \`*Icon\` components should work.
@@ -33,7 +32,7 @@ SearchFieldIcon.propName = 'Icon';
 
 interface ISearchFieldTextField extends ITextFieldProps {}
 
-const SearchFieldTextField: FC<ISearchFieldTextField> = (): null => null;
+const SearchFieldTextField = (_props: ISearchFieldTextField): null => null;
 SearchFieldTextField.peek = {
 	description: `
 		Icon this is displayed on the right side of the SearchField. Any of the lucid \`*Icon\` components should work.

@@ -2,16 +2,13 @@ import _ from 'lodash';
 import React from 'react';
 import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
-import { FC, omitProps } from '../../../util/component-types';
+import { omitProps } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-ClockIcon');
 
 interface IClockIconProps extends IIconProps {}
 
-export const ClockIcon: FC<IClockIconProps> = ({
-	className,
-	...passThroughs
-}): React.ReactElement => {
+export const ClockIcon = ({ className, ...passThroughs }: IClockIconProps) => {
 	return (
 		<Icon
 			{...omitProps(
@@ -39,5 +36,6 @@ ClockIcon.peek = {
 	madeFrom: ['Icon'],
 };
 ClockIcon.propTypes = iconPropTypes;
+ClockIcon.defaultProps = Icon.defaultProps;
 
 export default ClockIcon;

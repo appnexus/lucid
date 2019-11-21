@@ -2,12 +2,7 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import {
-	getFirst,
-	omitProps,
-	StandardProps,
-	FC,
-} from '../../util/component-types';
+import { getFirst, omitProps, StandardProps } from '../../util/component-types';
 import { buildHybridComponent } from '../../util/state-management';
 import { IExpanderState } from '../Expander/Expander';
 import ChevronIcon from '../Icon/ChevronIcon/ChevronIcon';
@@ -25,7 +20,7 @@ interface IExpanderPanelHeaderProps extends StandardProps {
 	description?: string;
 }
 
-const Header: FC<IExpanderPanelHeaderProps> = (): null => null;
+const Header = (_props: IExpanderPanelHeaderProps): null => null;
 Header.displayName = 'ExpanderPanel.Header';
 Header.peek = {
 	description: `

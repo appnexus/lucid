@@ -33,7 +33,15 @@ exports[`Submarine [common] example testing should match snapshot(s) for 1.defau
         type="button"
       >
         <ChevronIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
           direction="down"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
         />
       </Button>
     </div>
@@ -100,7 +108,15 @@ exports[`Submarine [common] example testing should match snapshot(s) for 2.disab
         type="button"
       >
         <ChevronIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
           direction="down"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
         />
       </Button>
     </div>
@@ -167,7 +183,15 @@ exports[`Submarine [common] example testing should match snapshot(s) for 3.initi
         type="button"
       >
         <ChevronIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
           direction="down"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
         />
       </Button>
     </div>
@@ -234,7 +258,15 @@ exports[`Submarine [common] example testing should match snapshot(s) for 4.posit
         type="button"
       >
         <ChevronIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
           direction="up"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
         />
       </Button>
     </div>
@@ -306,7 +338,15 @@ exports[`Submarine [common] example testing should match snapshot(s) for 5.custo
         type="button"
       >
         <ChevronIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
           direction="down"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
         />
       </Button>
     </div>
@@ -389,7 +429,15 @@ exports[`Submarine [common] example testing should match snapshot(s) for 6.custo
         type="button"
       >
         <ChevronIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
           direction="down"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
         />
       </Button>
     </div>
@@ -456,7 +504,15 @@ exports[`Submarine [common] example testing should match snapshot(s) for 7.contr
         type="button"
       >
         <ChevronIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
           direction="up"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
         />
       </Button>
     </div>
@@ -523,7 +579,15 @@ exports[`Submarine [common] example testing should match snapshot(s) for 8.handl
         type="button"
       >
         <ChevronIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
           direction="down"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
         />
       </Button>
     </div>
@@ -590,7 +654,15 @@ exports[`Submarine [common] example testing should match snapshot(s) for 9.neste
         type="button"
       >
         <ChevronIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
           direction="up"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
         />
       </Button>
     </div>
@@ -666,7 +738,15 @@ exports[`Submarine [common] example testing should match snapshot(s) for 9.neste
         type="button"
       >
         <ChevronIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
           direction="down"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
         />
       </Button>
     </div>
@@ -735,7 +815,15 @@ exports[`Submarine [common] example testing should match snapshot(s) for 10.hidd
         type="button"
       >
         <ChevronIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
           direction="down"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
         />
       </Button>
     </div>
@@ -804,7 +892,15 @@ exports[`Submarine [common] example testing should match snapshot(s) for 11-titl
         type="button"
       >
         <ChevronIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
           direction="down"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
         />
       </Button>
     </div>
