@@ -177,10 +177,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 15
   >
     Amet
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -195,10 +200,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 16
   >
     nam
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -213,10 +223,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 17
   >
     beatae
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -231,10 +246,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 18
   >
     quibusdam
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -249,10 +269,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 19
   >
     repudiandae
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -267,10 +292,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 20
   >
     facilis,
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -285,10 +315,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 21
   >
     ratione
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -303,10 +338,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 22
   >
     ratione.
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -321,10 +361,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 23
   >
     Hic
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -339,10 +384,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 24
   >
     molestias
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -357,10 +407,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 25
   >
     nobis
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -375,10 +430,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 26
   >
     autem
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -393,10 +453,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 27
   >
     sapiente
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -411,10 +476,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 28
   >
     vitae.
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -618,10 +688,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 38
   >
     Apples
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -636,10 +711,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 39
   >
     Oranges
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -654,10 +734,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 40
   >
     Bananas
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -711,10 +796,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 42
   >
     Carrots
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -729,10 +819,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 43
   >
     Spinach
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -747,10 +842,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 44
   >
     Celery
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -765,10 +865,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 45
   >
     Fruits
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
   <Tag
@@ -864,10 +969,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 46
   >
     Apples
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -882,10 +992,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 47
   >
     Oranges
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -900,10 +1015,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 48
   >
     Bananas
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -918,10 +1038,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 49
   >
     Apples
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -936,10 +1061,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 50
   >
     Oranges
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -954,10 +1084,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 51
   >
     Bananas
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -972,10 +1107,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 52
   >
     Apples
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -990,10 +1130,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 53
   >
     Oranges
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -1008,10 +1153,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 54
   >
     Bananas
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -1026,10 +1176,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 55
   >
     Vegetables
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
   <Tag
@@ -1071,10 +1226,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 56
   >
     Carrots
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -1089,10 +1249,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 57
   >
     Spinach
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -1107,10 +1272,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 58
   >
     Celery
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -1125,10 +1295,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 59
   >
     Produce
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
   <Tag
@@ -1225,10 +1400,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 60
   >
     Fruits
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
   <Tag
@@ -1279,10 +1459,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 61
   >
     Apples
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -1297,10 +1482,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 62
   >
     Oranges
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -1315,10 +1505,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 63
   >
     Bananas
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -1393,10 +1588,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 66
   >
     Carrots
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -1411,10 +1611,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 67
   >
     Spinach
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -1429,10 +1634,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 68
   >
     Celery
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -1553,10 +1763,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 71
   >
     Fruits
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
   <Tag
@@ -1607,10 +1822,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 72
   >
     Apples
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -1625,10 +1845,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 73
   >
     Oranges
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -1643,10 +1868,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 74
   >
     Bananas
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -1721,10 +1951,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 77
   >
     Carrots
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -1739,10 +1974,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 78
   >
     Spinach
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -1757,10 +1997,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 79
   >
     Celery
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -3749,10 +3994,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
   >
     Last Man on Earth
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
   <Tag
@@ -3777,10 +4027,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
   >
     Phil
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -3795,10 +4050,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
   >
     Last Woman on Earth
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
   <Tag
@@ -3823,10 +4083,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
   >
     Carol
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -3841,10 +4106,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
   >
     Star Wars
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
   <Tag
@@ -4049,10 +4319,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
   >
     Ask Aak
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -4067,10 +4342,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
   >
     Admiral Gial Ackbar
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -4085,10 +4365,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
   >
     Acros-Krik
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -4103,10 +4388,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
   >
     Ak-Rev
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -4121,10 +4411,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
   >
     Stass Allie
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -4139,10 +4434,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
   >
     Almec
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -4157,10 +4457,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
   >
     Mas Amedda
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -4175,10 +4480,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
   >
     Amee
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -4193,10 +4503,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
   >
     Padmé Amidala
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -4211,10 +4526,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
   >
     Cassian Andor
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -4229,10 +4549,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
   >
     Bail Antilles
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -4247,10 +4572,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
   >
     Raymus Antilles
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -4265,10 +4595,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
   >
     Wedge Antilles
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -4283,10 +4618,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
   >
     Queen Apailana
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -4301,10 +4641,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
   >
     Commander Appo
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -4319,10 +4664,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
   >
     Passel Argente
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -4337,10 +4687,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
   >
     Faro Argyus
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -4355,10 +4710,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
   >
     Seti Ashgad
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -4373,10 +4733,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
   >
     AZI-3
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -4391,10 +4756,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
   >
     Lord of the Rings
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
   <Tag
@@ -4759,10 +5129,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
   >
     Adrahil
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -4777,10 +5152,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
   >
     Adrahil II
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -4795,10 +5175,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
   >
     Aegnor
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -4813,10 +5198,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
   >
     Aerandir
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -4831,10 +5221,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
   >
     Aghan
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -4849,10 +5244,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
   >
     Aglahad
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -4867,10 +5267,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
   >
     Ailinel
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -4885,10 +5290,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
   >
     Alatar
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -4903,10 +5313,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
   >
     Aldamir
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -4921,10 +5336,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
   >
     Aldor
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -4939,10 +5359,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
   >
     Almarian
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -4957,10 +5382,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
   >
     Almiel
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -4975,10 +5405,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
   >
     Amandil
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -4993,10 +5428,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
   >
     Amdír
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -5011,10 +5451,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
   >
     Amlaith
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -5029,10 +5474,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
   >
     Amrod
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -5047,10 +5497,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
   >
     Amroth
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -5065,10 +5520,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
   >
     Anardil
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -5083,10 +5543,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
   >
     Anborn
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -5101,10 +5566,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
   >
     Ancalagon The Black
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -5119,10 +5589,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
   >
     Andróg
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -5137,10 +5612,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
   >
     Angbor
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -5155,10 +5635,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
   >
     Angelimar
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -5173,10 +5658,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
   >
     Angelimir
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -5191,10 +5681,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
   >
     Angrod
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -5209,10 +5704,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
   >
     Anárion
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -5227,10 +5727,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
   >
     Ar-Adûnakhôr
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -5245,10 +5750,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
   >
     Ar-Gimilzôr
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -5263,10 +5773,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
   >
     Ar-Pharazôn
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -5281,10 +5796,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
   >
     Ar-Sakalthôr
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -5299,10 +5819,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
   >
     Ar-Zimrathôn
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -5317,10 +5842,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
   >
     Arador
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -5335,10 +5865,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
   >
     Araglas
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -5353,10 +5888,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
   >
     Aragorn I
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -5371,10 +5911,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
   >
     Aragorn II Elessar
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -5389,10 +5934,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
   >
     Star Trek
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
   <Tag
@@ -5507,10 +6057,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
   >
     Jonathan Archer
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -5525,10 +6080,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
   >
     Ayala
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -5543,10 +6103,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
   >
     Azan
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -5561,10 +6126,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
   >
     Reginald Barclay
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -5579,10 +6149,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
   >
     Lieutenant, JG (TNG,FCT)
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -5597,10 +6172,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
   >
     Engineering Officer (TNG,Movies)
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -5615,10 +6195,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
   >
     Bareil Antos
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -5633,10 +6218,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
   >
     Julian Bashir
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -5651,10 +6241,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
   >
     Season 6 (TNG)
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>
@@ -5669,10 +6264,15 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
   >
     Lieutenant, JG (S1-3)
     <CloseIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"
+      color="primary"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={7}
+      viewBox="0 0 16 16"
     />
   </span>
 </div>

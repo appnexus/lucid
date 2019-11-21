@@ -50,8 +50,15 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
         Select State
       </span>
       <ChevronIcon
+        aspectRatio="xMidYMid meet"
+        color="primary"
         direction="down"
+        isClickable={false}
+        isDisabled={false}
+        onClick={[Function]}
+        onSelect={[Function]}
         size={12}
+        viewBox="0 0 16 16"
       />
     </div>
   </DropMenu.Control>
@@ -856,8 +863,15 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
         Select State
       </span>
       <ChevronIcon
+        aspectRatio="xMidYMid meet"
+        color="primary"
         direction="down"
+        isClickable={false}
+        isDisabled={false}
+        onClick={[Function]}
+        onSelect={[Function]}
         size={12}
+        viewBox="0 0 16 16"
       />
     </div>
   </DropMenu.Control>
@@ -882,7 +896,16 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
     isWrapped={true}
     key="SearchableSelectLoading"
   >
-    <LoadingIcon />
+    <LoadingIcon
+      aspectRatio="xMidYMid meet"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
+    />
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={true}
@@ -1396,8 +1419,15 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
         Select Color
       </span>
       <ChevronIcon
+        aspectRatio="xMidYMid meet"
+        color="primary"
         direction="down"
+        isClickable={false}
+        isDisabled={false}
+        onClick={[Function]}
+        onSelect={[Function]}
         size={12}
+        viewBox="0 0 16 16"
       />
     </div>
   </DropMenu.Control>
@@ -1500,8 +1530,15 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
         Select State
       </span>
       <ChevronIcon
+        aspectRatio="xMidYMid meet"
+        color="primary"
         direction="down"
+        isClickable={false}
+        isDisabled={false}
+        onClick={[Function]}
+        onSelect={[Function]}
         size={12}
+        viewBox="0 0 16 16"
       />
     </div>
   </DropMenu.Control>
@@ -2302,8 +2339,15 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
         Select
       </span>
       <ChevronIcon
+        aspectRatio="xMidYMid meet"
+        color="primary"
         direction="down"
+        isClickable={false}
+        isDisabled={false}
+        onClick={[Function]}
+        onSelect={[Function]}
         size={12}
+        viewBox="0 0 16 16"
       />
     </div>
   </DropMenu.Control>
@@ -2427,8 +2471,15 @@ exports[`SearchableSelect child elements Option should render Option child funct
         select one
       </span>
       <ChevronIcon
+        aspectRatio="xMidYMid meet"
+        color="primary"
         direction="down"
+        isClickable={false}
+        isDisabled={false}
+        onClick={[Function]}
+        onSelect={[Function]}
         size={12}
+        viewBox="0 0 16 16"
       />
     </div>
   </DropMenu.Control>
@@ -2532,8 +2583,15 @@ exports[`SearchableSelect child elements Option should render Option.Selected in
         option b
       </span>
       <ChevronIcon
+        aspectRatio="xMidYMid meet"
+        color="primary"
         direction="down"
+        isClickable={false}
+        isDisabled={false}
+        onClick={[Function]}
+        onSelect={[Function]}
         size={12}
+        viewBox="0 0 16 16"
       />
     </div>
   </DropMenu.Control>

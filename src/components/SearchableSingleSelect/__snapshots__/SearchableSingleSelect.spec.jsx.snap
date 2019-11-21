@@ -491,7 +491,16 @@ exports[`SearchableSingleSelect [common] example testing should match snapshot(s
       isWrapped={true}
       key="SearchableSingleSelectLoading"
     >
-      <LoadingIcon />
+      <LoadingIcon
+        aspectRatio="xMidYMid meet"
+        color="primary"
+        isClickable={false}
+        isDisabled={false}
+        onClick={[Function]}
+        onSelect={[Function]}
+        size={16}
+        viewBox="0 0 16 16"
+      />
     </DropMenu.Option>
     <DropMenu.Option
       isDisabled={true}
