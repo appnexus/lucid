@@ -3,12 +3,7 @@ import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import _ from 'lodash';
 import Portal from '../Portal/Portal';
-import {
-	FC,
-	getFirst,
-	omitProps,
-	StandardProps,
-} from '../../util/component-types';
+import { getFirst, omitProps, StandardProps } from '../../util/component-types';
 import {
 	getAbsoluteBoundingClientRect,
 	sharesAncestor,
@@ -20,9 +15,9 @@ const cx = lucidClassNames.bind('&-ContextMenu');
 const { bool, node, func, number, object, oneOf, string } = PropTypes;
 
 interface IContextMenuTargetProps extends StandardProps {
-	elementType?: string;
+	elementType: string;
 }
-const ContextMenuTarget: FC<IContextMenuTargetProps> = (): null => null;
+const ContextMenuTarget = (_props: IContextMenuTargetProps): null => null;
 ContextMenuTarget.displayName = 'ContextMenu.Target';
 ContextMenuTarget.propName = 'Target';
 ContextMenuTarget.peek = {
@@ -38,7 +33,7 @@ ContextMenuTarget.defaultProps = {
 
 interface IContextMenuFlyOutProps
 	extends React.HTMLAttributes<HTMLDivElement> {}
-const ContextMenuFlyOut: FC<IContextMenuFlyOutProps> = (): null => null;
+const ContextMenuFlyOut = (_props: IContextMenuFlyOutProps): null => null;
 ContextMenuFlyOut.displayName = 'ContextMenu.FlyOut';
 ContextMenuFlyOut.propName = 'FlyOut';
 ContextMenuFlyOut.peek = {

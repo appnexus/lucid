@@ -2,12 +2,7 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import {
-	FC,
-	omitProps,
-	StandardProps,
-	FixDefaults,
-} from '../../util/component-types';
+import { omitProps, StandardProps } from '../../util/component-types';
 import * as chartConstants from '../../constants/charts';
 
 const cx = lucidClassNames.bind('&-Line');
@@ -25,10 +20,10 @@ export interface ILineProps
 		- \`COLOR_0\`
 		- \`COLOR_GOOD\`
 		- \`'#123abc'\` */
-	color?: string;
+	color: string;
 
 	/** Display a dotted line. */
-	isDotted?: boolean;
+	isDotted: boolean;
 }
 
 const defaultProps = {
@@ -36,15 +31,8 @@ const defaultProps = {
 	isDotted: false,
 };
 
-export const Line: FC<ILineProps> = (props): React.ReactElement => {
-	const {
-		className,
-		color,
-		isDotted,
-		d,
-		style,
-		...passThroughs
-	} = props as FixDefaults<ILineProps, typeof defaultProps>;
+export const Line = (props: ILineProps): React.ReactElement => {
+	const { className, color, isDotted, d, style, ...passThroughs } = props;
 	const isCustomColor = _.startsWith(color, '#');
 	const colorStyle = isCustomColor ? { fill: color, stroke: color } : null;
 

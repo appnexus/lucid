@@ -2,16 +2,16 @@ import _ from 'lodash';
 import React from 'react';
 import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
-import { FC, omitProps } from '../../../util/component-types';
+import { omitProps } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-LinkedIcon');
 
 interface ILinkedIconProps extends IIconProps {}
 
-export const LinkedIcon: FC<ILinkedIconProps> = ({
+export const LinkedIcon = ({
 	className,
 	...passThroughs
-}): React.ReactElement => {
+}: ILinkedIconProps) => {
 	return (
 		<Icon
 			{...omitProps(
@@ -39,5 +39,6 @@ LinkedIcon.peek = {
 	madeFrom: ['Icon'],
 };
 LinkedIcon.propTypes = iconPropTypes;
+LinkedIcon.defaultProps = Icon.defaultProps;
 
 export default LinkedIcon;

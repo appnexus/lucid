@@ -7,7 +7,6 @@ import * as reducers from './ToolTip.reducers';
 import { lucidClassNames } from '../../util/style-helpers';
 import {
 	StandardProps,
-	FC,
 	findTypes,
 	omitProps,
 } from '../../util/component-types';
@@ -33,7 +32,7 @@ interface IToolTipTargetProps extends StandardProps {
 	description?: string;
 }
 
-const ToolTipTarget: FC<IToolTipTargetProps> = (): null => null;
+const ToolTipTarget = (_props: IToolTipTargetProps): null => null;
 ToolTipTarget.displayName = 'ToolTip.Target';
 ToolTipTarget.peek = {
 	description: `
@@ -46,7 +45,7 @@ interface IToolTipTitleProps extends StandardProps {
 	description?: string;
 }
 
-const ToolTipTitle: FC<IToolTipTitleProps> = (): null => null;
+const ToolTipTitle = (_props: IToolTipTitleProps): null => null;
 ToolTipTitle.displayName = 'ToolTip.Title';
 ToolTipTitle.peek = {
 	description: `
@@ -59,7 +58,7 @@ interface IToolTipBodyProps extends StandardProps {
 	description?: string;
 }
 
-const ToolTipBody: FC<IToolTipBodyProps> = (): null => null;
+const ToolTipBody = (_props: IToolTipBodyProps): null => null;
 ToolTipBody.displayName = 'ToolTip.Body';
 ToolTipBody.peek = {
 	description: `

@@ -2,16 +2,16 @@ import _ from 'lodash';
 import React from 'react';
 import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
-import { FC, omitProps } from '../../../util/component-types';
+import { omitProps } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-NewWindowIcon');
 
 interface INewWindowIconProps extends IIconProps {}
 
-export const NewWindowIcon: FC<INewWindowIconProps> = ({
+export const NewWindowIcon = ({
 	className,
 	...passThroughs
-}): React.ReactElement => {
+}: INewWindowIconProps) => {
 	return (
 		<Icon
 			{...omitProps(
@@ -39,5 +39,6 @@ NewWindowIcon.peek = {
 	madeFrom: ['Icon'],
 };
 NewWindowIcon.propTypes = iconPropTypes;
+NewWindowIcon.defaultProps = Icon.defaultProps;
 
 export default NewWindowIcon;

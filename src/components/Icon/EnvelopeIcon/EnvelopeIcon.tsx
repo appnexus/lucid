@@ -2,16 +2,16 @@ import _ from 'lodash';
 import React from 'react';
 import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
-import { FC, omitProps } from '../../../util/component-types';
+import { omitProps } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-EnvelopeIcon');
 
 interface IEnvelopeIconProps extends IIconProps {}
 
-export const EnvelopeIcon: FC<IEnvelopeIconProps> = ({
+export const EnvelopeIcon = ({
 	className,
 	...passThroughs
-}): React.ReactElement => {
+}: IEnvelopeIconProps) => {
 	return (
 		<Icon
 			{...omitProps(
@@ -39,5 +39,6 @@ EnvelopeIcon.peek = {
 	madeFrom: ['Icon'],
 };
 EnvelopeIcon.propTypes = iconPropTypes;
+EnvelopeIcon.defaultProps = Icon.defaultProps;
 
 export default EnvelopeIcon;

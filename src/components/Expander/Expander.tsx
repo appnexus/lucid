@@ -6,7 +6,6 @@ import {
 	findTypes,
 	omitProps,
 	StandardProps,
-	FC,
 } from '../../util/component-types';
 import { buildHybridComponent } from '../../util/state-management';
 import ChevronIcon from '../Icon/ChevronIcon/ChevronIcon';
@@ -26,7 +25,7 @@ interface IExpanderAdditionalLabelProps extends StandardProps {
 	description?: string;
 }
 
-const Label: FC<IExpanderLabelProps> = (): null => null;
+const Label = (_props: IExpanderLabelProps): null => null;
 Label.displayName = 'Expander.Label';
 Label.peek = {
 	description: `
@@ -41,7 +40,7 @@ Label.propTypes = {
 				`,
 };
 
-const AdditionalLabelContent: FC<IExpanderAdditionalLabelProps> = (): null =>
+const AdditionalLabelContent = (_props: IExpanderAdditionalLabelProps): null =>
 	null;
 AdditionalLabelContent.displayName = 'Expander.AdditionalLabelContent';
 AdditionalLabelContent.peek = {

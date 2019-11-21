@@ -3,22 +3,17 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import {
-	FC,
-	getFirst,
-	omitProps,
-	StandardProps,
-} from '../../util/component-types';
+import { getFirst, omitProps, StandardProps } from '../../util/component-types';
 import LoadingIcon from '../Icon/LoadingIcon/LoadingIcon';
 
 const cx = lucidClassNames.bind('&-LoadingMessage');
 
 const { any, node, string } = PropTypes;
 
-interface ILoadingMessageIconProps extends StandardProps {
+export interface ILoadingMessageIconProps extends StandardProps {
 	description?: string;
 }
-const LoadingMessageIcon: FC<ILoadingMessageIconProps> = (): null => null;
+const LoadingMessageIcon = (_props: ILoadingMessageIconProps): null => null;
 LoadingMessageIcon.displayName = 'LoadingMessage.Icon';
 LoadingMessageIcon.peek = {
 	description: `
@@ -31,10 +26,10 @@ LoadingMessageIcon.propTypes = {
 	children: any,
 };
 
-interface ILoadingMessageTitleProps extends StandardProps {
+export interface ILoadingMessageTitleProps extends StandardProps {
 	description?: string;
 }
-const LoadingMessageTitle: FC<ILoadingMessageTitleProps> = (): null => null;
+const LoadingMessageTitle = (_props: ILoadingMessageTitleProps): null => null;
 LoadingMessageTitle.displayName = 'LoadingMessage.Title';
 LoadingMessageTitle.peek = {
 	description: `
@@ -48,10 +43,10 @@ LoadingMessageTitle.propTypes = {
 	children: any,
 };
 
-interface ILoadingMessageBodyProps extends StandardProps {
+export interface ILoadingMessageBodyProps extends StandardProps {
 	description?: string;
 }
-const LoadingMessageBody: FC<ILoadingMessageBodyProps> = (): null => null;
+const LoadingMessageBody = (_props: ILoadingMessageBodyProps): null => null;
 LoadingMessageBody.displayName = 'LoadingMessage.Body';
 LoadingMessageBody.peek = {
 	description: `
@@ -81,13 +76,9 @@ export interface ILoadingMessageProps
 	Body?: React.ReactNode;
 }
 
-export interface ILoadingMessageFC extends FC<ILoadingMessageProps> {
-	Icon: FC<ILoadingMessageIconProps>;
-	Title: FC<ILoadingMessageTitleProps>;
-	Body: FC<ILoadingMessageBodyProps>;
-}
-
-export const LoadingMessage: ILoadingMessageFC = (props): React.ReactElement => {
+export const LoadingMessage = (
+	props: ILoadingMessageProps
+): React.ReactElement => {
 	const { className, ...passThroughs } = props;
 	const { Icon, Title, Body } = LoadingMessage;
 

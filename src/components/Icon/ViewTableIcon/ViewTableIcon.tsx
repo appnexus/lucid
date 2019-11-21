@@ -2,16 +2,16 @@ import _ from 'lodash';
 import React from 'react';
 import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
-import { FC, omitProps } from '../../../util/component-types';
+import { omitProps } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-ViewTableIcon');
 
 interface IViewTableIconProps extends IIconProps {}
 
-export const ViewTableIcon: FC<IViewTableIconProps> = ({
+export const ViewTableIcon = ({
 	className,
 	...passThroughs
-}): React.ReactElement => {
+}: IViewTableIconProps) => {
 	return (
 		<Icon
 			{...omitProps(
@@ -40,5 +40,6 @@ ViewTableIcon.peek = {
 	madeFrom: ['Icon'],
 };
 ViewTableIcon.propTypes = iconPropTypes;
+ViewTableIcon.defaultProps = Icon.defaultProps;
 
 export default ViewTableIcon;

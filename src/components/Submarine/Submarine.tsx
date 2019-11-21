@@ -7,7 +7,6 @@ import {
 	findTypes,
 	omitProps,
 	StandardProps,
-	FC,
 } from '../../util/component-types';
 import { buildHybridComponent } from '../../util/state-management';
 import * as reducers from './Submarine.reducers';
@@ -33,7 +32,7 @@ interface ISubmarineBarProps extends StandardProps {
 	Title: ISumbarineTitleProps;
 }
 
-const Primary: FC<ISubmarinePrimaryProps> = (): null => null;
+const Primary = (_props: ISubmarinePrimaryProps): null => null;
 Primary.peek = {
 	description: `
 		Primary content rendered beside the Submarine.
@@ -42,7 +41,7 @@ Primary.peek = {
 Primary.displayName = 'SplitHorizontal.Primary';
 Primary.propName = 'Primary';
 
-const Title: FC<ISumbarineTitleProps> = (): null => null;
+const Title = (_props: ISumbarineTitleProps): null => null;
 Title.peek = {
 	description: `
 		Submarine title;
@@ -51,7 +50,7 @@ Title.peek = {
 Title.displayName = 'Submarine.Title';
 Title.propName = 'Title';
 
-const Bar: FC<ISubmarineBarProps> = (): null => null;
+const Bar = (_props: ISubmarineBarProps): null => null;
 Bar.peek = {
 	description: `
 		Submarine bar;
@@ -303,7 +302,12 @@ class Submarine extends React.Component<ISubmarineProps, ISubmarineState> {
 
 		return (
 			<SplitHorizontal
-				{...omitProps(passThroughs, undefined, _.keys(Submarine.propTypes), false)}
+				{...omitProps(
+					passThroughs,
+					undefined,
+					_.keys(Submarine.propTypes),
+					false
+				)}
 				className={cx(
 					'&',
 					{
@@ -320,7 +324,12 @@ class Submarine extends React.Component<ISubmarineProps, ISubmarineState> {
 				onResize={this.handleResize}
 			>
 				<BarPane
-					{...omitProps(barProps, undefined, _.keys(Submarine.Bar.propTypes), false)}
+					{...omitProps(
+						barProps,
+						undefined,
+						_.keys(Submarine.Bar.propTypes),
+						false
+					)}
 					className={cx('&-Bar', barProps.className)}
 					height={height}
 				>

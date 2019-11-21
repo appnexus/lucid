@@ -2,16 +2,16 @@ import _ from 'lodash';
 import React from 'react';
 import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
-import { FC, omitProps } from '../../../util/component-types';
+import { omitProps } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-UnlinkedIcon');
 
 interface IUnlinkedIconProps extends IIconProps {}
 
-export const UnlinkedIcon: FC<IUnlinkedIconProps> = ({
+export const UnlinkedIcon = ({
 	className,
 	...passThroughs
-}): React.ReactElement => {
+}: IUnlinkedIconProps) => {
 	return (
 		<Icon
 			{...omitProps(
@@ -39,5 +39,6 @@ UnlinkedIcon.peek = {
 	madeFrom: ['Icon'],
 };
 UnlinkedIcon.propTypes = iconPropTypes;
+UnlinkedIcon.defaultProps = Icon.defaultProps;
 
 export default UnlinkedIcon;

@@ -2,16 +2,13 @@ import _ from 'lodash';
 import React from 'react';
 import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
-import { FC, omitProps } from '../../../util/component-types';
+import { omitProps } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-VideoIcon');
 
 interface IVideoIconProps extends IIconProps {}
 
-export const VideoIcon: FC<IVideoIconProps> = ({
-	className,
-	...passThroughs
-}): React.ReactElement => {
+export const VideoIcon = ({ className, ...passThroughs }: IVideoIconProps) => {
 	return (
 		<Icon
 			{...omitProps(
@@ -39,5 +36,6 @@ VideoIcon.peek = {
 	madeFrom: ['Icon'],
 };
 VideoIcon.propTypes = iconPropTypes;
+VideoIcon.defaultProps = Icon.defaultProps;
 
 export default VideoIcon;

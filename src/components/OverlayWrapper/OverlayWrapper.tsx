@@ -4,12 +4,10 @@ import PropTypes from 'react-peek/prop-types';
 import _ from 'lodash';
 import { lucidClassNames } from '../../util/style-helpers';
 import {
-	FC,
 	getFirst,
 	rejectTypes,
 	omitProps,
 	StandardProps,
-	FixDefaults,
 } from '../../util/component-types';
 import ReactTransitionGroup from 'react-transition-group/CSSTransitionGroup';
 
@@ -19,7 +17,7 @@ const { bool, node, oneOf, string } = PropTypes;
 
 interface IMessageProps extends StandardProps {}
 
-export const OverlayWrapperMessage: FC<IMessageProps> = (): null => null;
+export const OverlayWrapperMessage = (_props: IMessageProps): null => null;
 OverlayWrapperMessage.displayName = 'OverlayWrapper.Message';
 OverlayWrapperMessage.peek = {
 	description: `
@@ -38,27 +36,23 @@ export interface IOverlayWrapperProps
 			HTMLDivElement
 		> {
 	/** Controls whether the message should be displayed over the wrapped content. */
-	isVisible: boolean;
+	isVisible?: boolean;
 
 	/** Set this to \`false\` if you don't want the semi-transparent overlay over
 	 * the wrapped content.
 	 *
 	 * @default true
 	 */
-	hasOverlay?: boolean;
+	hasOverlay: boolean;
 
 	/** Style variations for the overlay behind the message.
 	 *
 	 * @default 'light'
 	 * */
-	overlayKind?: 'light' | 'dark';
+	overlayKind: 'light' | 'dark';
 
 	/** *Child Element* The Message to display in the overlay. */
-	Message?: FC<IMessageProps>;
-}
-
-interface IOverlayWrapperFC extends FC<IOverlayWrapperProps> {
-	Message?: FC<IMessageProps>;
+	Message?: React.ReactNode & { props: IMessageProps };
 }
 
 const defaultProps = {
@@ -66,7 +60,9 @@ const defaultProps = {
 	overlayKind: 'light' as const,
 };
 
-export const OverlayWrapper: IOverlayWrapperFC = (props): React.ReactElement => {
+export const OverlayWrapper = (
+	props: IOverlayWrapperProps
+): React.ReactElement => {
 	const {
 		hasOverlay,
 		isVisible,
@@ -74,7 +70,7 @@ export const OverlayWrapper: IOverlayWrapperFC = (props): React.ReactElement => 
 		children,
 		overlayKind,
 		...passThroughs
-	} = props as FixDefaults<IOverlayWrapperProps, typeof defaultProps>;
+	} = props;
 
 	const messageElementProp = _.get(
 		getFirst<IMessageProps>(props, OverlayWrapperMessage),

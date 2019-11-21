@@ -7,7 +7,6 @@ import {
 	findTypes,
 	omitProps,
 	StandardProps,
-	FC,
 	Overwrite,
 } from '../../util/component-types';
 import { buildHybridComponent } from '../../util/state-management';
@@ -19,7 +18,7 @@ const cx = lucidClassNames.bind('&-Tabs');
 const { bool, func, node, number, string, any } = PropTypes;
 
 interface ITitleProps extends StandardProps {}
-const Title: FC<ITitleProps> = (): null => null;
+const Title = (props: ITitleProps): null => null;
 Title.peek = {
 	description: `Titles can be provided as a child or prop to a Tab.`,
 };
@@ -71,7 +70,7 @@ type ITabPropsWithPassThroughs = Overwrite<
 	ITabProps
 >;
 
-const Tab: FC<ITabPropsWithPassThroughs> = (props): React.ReactElement => {
+const Tab = (props: ITabPropsWithPassThroughs): React.ReactElement => {
 	const {
 		isDisabled,
 		isLastTab,

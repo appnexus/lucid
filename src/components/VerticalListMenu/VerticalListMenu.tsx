@@ -5,7 +5,6 @@ import { bindClassNames } from '../../util/style-helpers';
 import {
 	findTypes,
 	omitProps,
-	FC,
 	StandardProps,
 } from '../../util/component-types';
 import { buildHybridComponent } from '../../util/state-management';
@@ -99,7 +98,7 @@ export interface IVerticalListMenuItemProps extends StandardProps {
 	if the item has children. */
 	Collapsible: ICollapsibleProps;
 }
-const Item: FC<IVerticalListMenuItemProps> = (): null => null;
+const Item = (_props: IVerticalListMenuItemProps): null => null;
 Item.peek = {
 	description: `
 		A child item that can contain content or another VerticalListMenu.

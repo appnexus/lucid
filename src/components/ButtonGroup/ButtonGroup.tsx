@@ -6,7 +6,6 @@ import { lucidClassNames } from '../../util/style-helpers';
 import {
 	findTypes,
 	omitProps,
-	FC,
 	StandardProps,
 } from '../../util/component-types';
 import reducers from './ButtonGroup.reducers';
@@ -16,7 +15,7 @@ const cx = lucidClassNames.bind('&-ButtonGroup');
 
 const { any, func, arrayOf, number } = PropTypes;
 
-const ButtonGroupButton: FC<IButtonProps> = (): null => null;
+const ButtonGroupButton = (_props: IButtonProps): null => null;
 ButtonGroupButton.displayName = 'ButtonGroup.Button';
 ButtonGroupButton.peek = {
 	description: `
