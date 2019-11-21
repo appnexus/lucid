@@ -65,12 +65,12 @@ exports[`LineChart [common] example testing should match snapshot(s) for 01.basi
       isStacked={false}
       palette={
         Array [
-          "color-chart-0",
-          "color-chart-1",
-          "color-chart-2",
           "color-chart-3",
-          "color-chart-4",
+          "color-chart-0-darkest",
+          "color-chart-2",
+          "color-chart-4-lightest",
           "color-chart-5",
+          "color-chart-1-light",
           "color-chart-6",
         ]
       }
@@ -114,12 +114,12 @@ exports[`LineChart [common] example testing should match snapshot(s) for 01.basi
       isStacked={false}
       palette={
         Array [
-          "color-chart-0",
-          "color-chart-1",
-          "color-chart-2",
           "color-chart-3",
-          "color-chart-4",
+          "color-chart-0-darkest",
+          "color-chart-2",
+          "color-chart-4-lightest",
           "color-chart-5",
+          "color-chart-1-light",
           "color-chart-6",
         ]
       }
@@ -382,12 +382,12 @@ exports[`LineChart [common] example testing should match snapshot(s) for 03.mult
       isStacked={false}
       palette={
         Array [
-          "color-chart-0",
-          "color-chart-1",
-          "color-chart-2",
           "color-chart-3",
-          "color-chart-4",
+          "color-chart-0-darkest",
+          "color-chart-2",
+          "color-chart-4-lightest",
           "color-chart-5",
+          "color-chart-1-light",
           "color-chart-6",
         ]
       }
@@ -591,12 +591,12 @@ exports[`LineChart [common] example testing should match snapshot(s) for 03.mult
       isStacked={false}
       palette={
         Array [
-          "color-chart-0",
-          "color-chart-1",
-          "color-chart-2",
           "color-chart-3",
-          "color-chart-4",
+          "color-chart-0-darkest",
+          "color-chart-2",
+          "color-chart-4-lightest",
           "color-chart-5",
+          "color-chart-1-light",
           "color-chart-6",
         ]
       }
@@ -916,12 +916,12 @@ exports[`LineChart [common] example testing should match snapshot(s) for 05.stac
       isStacked={true}
       palette={
         Array [
-          "color-chart-0",
-          "color-chart-1",
-          "color-chart-2",
           "color-chart-3",
-          "color-chart-4",
+          "color-chart-0-darkest",
+          "color-chart-2",
+          "color-chart-4-lightest",
           "color-chart-5",
+          "color-chart-1-light",
           "color-chart-6",
         ]
       }
@@ -1008,12 +1008,12 @@ exports[`LineChart [common] example testing should match snapshot(s) for 05.stac
       isStacked={true}
       palette={
         Array [
-          "color-chart-0",
-          "color-chart-1",
-          "color-chart-2",
           "color-chart-3",
-          "color-chart-4",
+          "color-chart-0-darkest",
+          "color-chart-2",
+          "color-chart-4-lightest",
           "color-chart-5",
+          "color-chart-1-light",
           "color-chart-6",
         ]
       }
@@ -1158,12 +1158,12 @@ exports[`LineChart [common] example testing should match snapshot(s) for 06.dual
       isStacked={false}
       palette={
         Array [
-          "color-chart-0",
-          "color-chart-1",
-          "color-chart-2",
           "color-chart-3",
-          "color-chart-4",
+          "color-chart-0-darkest",
+          "color-chart-2",
+          "color-chart-4-lightest",
           "color-chart-5",
+          "color-chart-1-light",
           "color-chart-6",
         ]
       }
@@ -1217,12 +1217,12 @@ exports[`LineChart [common] example testing should match snapshot(s) for 06.dual
       isStacked={false}
       palette={
         Array [
-          "color-chart-0",
-          "color-chart-1",
-          "color-chart-2",
           "color-chart-3",
-          "color-chart-4",
+          "color-chart-0-darkest",
+          "color-chart-2",
+          "color-chart-4-lightest",
           "color-chart-5",
+          "color-chart-1-light",
           "color-chart-6",
         ]
       }
@@ -1275,12 +1275,12 @@ exports[`LineChart [common] example testing should match snapshot(s) for 06.dual
       isStacked={false}
       palette={
         Array [
-          "color-chart-0",
-          "color-chart-1",
-          "color-chart-2",
           "color-chart-3",
-          "color-chart-4",
+          "color-chart-0-darkest",
+          "color-chart-2",
+          "color-chart-4-lightest",
           "color-chart-5",
+          "color-chart-1-light",
           "color-chart-6",
         ]
       }
@@ -1334,12 +1334,12 @@ exports[`LineChart [common] example testing should match snapshot(s) for 06.dual
       isStacked={false}
       palette={
         Array [
-          "color-chart-0",
-          "color-chart-1",
-          "color-chart-2",
           "color-chart-3",
-          "color-chart-4",
+          "color-chart-0-darkest",
+          "color-chart-2",
+          "color-chart-4-lightest",
           "color-chart-5",
+          "color-chart-1-light",
           "color-chart-6",
         ]
       }
@@ -1499,12 +1499,12 @@ exports[`LineChart [common] example testing should match snapshot(s) for 07.all-
       isStacked={false}
       palette={
         Array [
-          "color-chart-0",
-          "color-chart-1",
-          "color-chart-2",
           "color-chart-3",
-          "color-chart-4",
+          "color-chart-0-darkest",
+          "color-chart-2",
+          "color-chart-4-lightest",
           "color-chart-5",
+          "color-chart-1-light",
           "color-chart-6",
         ]
       }
@@ -1567,12 +1567,12 @@ exports[`LineChart [common] example testing should match snapshot(s) for 07.all-
       isStacked={false}
       palette={
         Array [
-          "color-chart-0",
-          "color-chart-1",
-          "color-chart-2",
           "color-chart-3",
-          "color-chart-4",
+          "color-chart-0-darkest",
+          "color-chart-2",
+          "color-chart-4-lightest",
           "color-chart-5",
+          "color-chart-1-light",
           "color-chart-6",
         ]
       }
@@ -1634,12 +1634,12 @@ exports[`LineChart [common] example testing should match snapshot(s) for 07.all-
       isStacked={false}
       palette={
         Array [
-          "color-chart-0",
-          "color-chart-1",
-          "color-chart-2",
           "color-chart-3",
-          "color-chart-4",
+          "color-chart-0-darkest",
+          "color-chart-2",
+          "color-chart-4-lightest",
           "color-chart-5",
+          "color-chart-1-light",
           "color-chart-6",
         ]
       }
@@ -1733,12 +1733,12 @@ exports[`LineChart [common] example testing should match snapshot(s) for 08.stac
       isStacked={true}
       palette={
         Array [
-          "color-chart-0",
-          "color-chart-1",
-          "color-chart-2",
           "color-chart-3",
-          "color-chart-4",
+          "color-chart-0-darkest",
+          "color-chart-2",
+          "color-chart-4-lightest",
           "color-chart-5",
+          "color-chart-1-light",
           "color-chart-6",
         ]
       }
@@ -1782,12 +1782,12 @@ exports[`LineChart [common] example testing should match snapshot(s) for 08.stac
       isStacked={true}
       palette={
         Array [
-          "color-chart-0",
-          "color-chart-1",
-          "color-chart-2",
           "color-chart-3",
-          "color-chart-4",
+          "color-chart-0-darkest",
+          "color-chart-2",
+          "color-chart-4-lightest",
           "color-chart-5",
+          "color-chart-1-light",
           "color-chart-6",
         ]
       }
@@ -2029,12 +2029,12 @@ exports[`LineChart [common] example testing should match snapshot(s) for 10.abbr
       isStacked={false}
       palette={
         Array [
-          "color-chart-0",
-          "color-chart-1",
-          "color-chart-2",
           "color-chart-3",
-          "color-chart-4",
+          "color-chart-0-darkest",
+          "color-chart-2",
+          "color-chart-4-lightest",
           "color-chart-5",
+          "color-chart-1-light",
           "color-chart-6",
         ]
       }
@@ -2082,12 +2082,12 @@ exports[`LineChart [common] example testing should match snapshot(s) for 10.abbr
       isStacked={false}
       palette={
         Array [
-          "color-chart-0",
-          "color-chart-1",
-          "color-chart-2",
           "color-chart-3",
-          "color-chart-4",
+          "color-chart-0-darkest",
+          "color-chart-2",
+          "color-chart-4-lightest",
           "color-chart-5",
+          "color-chart-1-light",
           "color-chart-6",
         ]
       }
@@ -2166,7 +2166,7 @@ exports[`LineChart [common] example testing should match snapshot(s) for 11.colo
           orient="horizontal"
         >
           <Legend.Item
-            color="color-chart-3"
+            color="color-chart-4-lightest"
             hasLine={true}
             hasPoint={true}
             key="0"
@@ -2175,7 +2175,7 @@ exports[`LineChart [common] example testing should match snapshot(s) for 11.colo
             apples
           </Legend.Item>
           <Legend.Item
-            color="color-chart-5"
+            color="color-chart-1-light"
             hasLine={true}
             hasPoint={true}
             key="0"
@@ -2302,12 +2302,12 @@ exports[`LineChart [common] example testing should match snapshot(s) for 11.colo
       isStacked={false}
       palette={
         Array [
-          "color-chart-0",
-          "color-chart-1",
-          "color-chart-2",
           "color-chart-3",
-          "color-chart-4",
+          "color-chart-0-darkest",
+          "color-chart-2",
+          "color-chart-4-lightest",
           "color-chart-5",
+          "color-chart-1-light",
           "color-chart-6",
         ]
       }
@@ -2410,12 +2410,12 @@ exports[`LineChart [common] example testing should match snapshot(s) for 11.colo
       isStacked={false}
       palette={
         Array [
-          "color-chart-0",
-          "color-chart-1",
-          "color-chart-2",
           "color-chart-3",
-          "color-chart-4",
+          "color-chart-0-darkest",
+          "color-chart-2",
+          "color-chart-4-lightest",
           "color-chart-5",
+          "color-chart-1-light",
           "color-chart-6",
         ]
       }
@@ -2517,12 +2517,12 @@ exports[`LineChart [common] example testing should match snapshot(s) for 11.colo
       isStacked={false}
       palette={
         Array [
-          "color-chart-0",
-          "color-chart-1",
-          "color-chart-2",
           "color-chart-3",
-          "color-chart-4",
+          "color-chart-0-darkest",
+          "color-chart-2",
+          "color-chart-4-lightest",
           "color-chart-5",
+          "color-chart-1-light",
           "color-chart-6",
         ]
       }
@@ -2625,12 +2625,12 @@ exports[`LineChart [common] example testing should match snapshot(s) for 11.colo
       isStacked={false}
       palette={
         Array [
-          "color-chart-0",
-          "color-chart-1",
-          "color-chart-2",
           "color-chart-3",
-          "color-chart-4",
+          "color-chart-0-darkest",
+          "color-chart-2",
+          "color-chart-4-lightest",
           "color-chart-5",
+          "color-chart-1-light",
           "color-chart-6",
         ]
       }
@@ -2922,12 +2922,12 @@ exports[`LineChart [common] example testing should match snapshot(s) for 16.fine
       isStacked={false}
       palette={
         Array [
-          "color-chart-0",
-          "color-chart-1",
-          "color-chart-2",
           "color-chart-3",
-          "color-chart-4",
+          "color-chart-0-darkest",
+          "color-chart-2",
+          "color-chart-4-lightest",
           "color-chart-5",
+          "color-chart-1-light",
           "color-chart-6",
         ]
       }
@@ -2967,12 +2967,12 @@ exports[`LineChart [common] example testing should match snapshot(s) for 16.fine
       isStacked={false}
       palette={
         Array [
-          "color-chart-0",
-          "color-chart-1",
-          "color-chart-2",
           "color-chart-3",
-          "color-chart-4",
+          "color-chart-0-darkest",
+          "color-chart-2",
+          "color-chart-4-lightest",
           "color-chart-5",
+          "color-chart-1-light",
           "color-chart-6",
         ]
       }

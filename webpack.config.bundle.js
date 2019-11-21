@@ -8,7 +8,10 @@ const isProduction = process.env.NODE_ENV === 'production';
 
 module.exports = {
 	mode: isProduction ? 'production' : 'development',
-	entry: path.join(__dirname, 'src', 'index.ts'),
+	entry: [
+		path.join(__dirname, 'src', 'index.ts'),
+		path.join(__dirname, 'src', 'index.less'),
+	],
 	output: {
 		path: path.join(__dirname, 'dist'),
 		filename: isProduction ? 'lucid.min.js' : 'lucid.js',
@@ -44,10 +47,6 @@ module.exports = {
 	plugins: [
 		new MiniCssExtractPlugin({
 			filename: 'lucid.css',
-			disable: !isProduction,
-		}),
-		new MiniCssExtractPlugin({
-			filename: 'index.css',
 			disable: !isProduction,
 		}),
 	],

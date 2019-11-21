@@ -136,14 +136,32 @@ Banner.defaultProps = defaultProps;
 Banner.displayName = 'Banner';
 Banner.peek = {
 	description: `
-		A basic Banner. Any props that are not explicitly called out below will
-		be passed through to the native \`Banner\` component.
-
-		Short single line content can be passed in as a simple string. Multi
-		line messages should be passed wrapped in a \`<p>\` tag.
-
-		It is valid to use \`strong\` or \`em\` within a \`Banner\` message.
+		A banner that displays a prominent message.
 	`,
+	notes: {
+		overview: `
+			A banner that displays a prominent message.
+		`,
+		intendedUse: `
+			Communicates information, success, a warning, or an error. 
+								
+			**Styling notes**
+			
+			- Banners usually display at the top of a page.
+			- Use the solid filled banner for single-line content.
+			- Use the outlined banner for multi-line content.
+			- Color use:
+				- Use blue banners for information, like instructions for a feature.
+				- Use green banners for success messages, like completing a task successfully.
+				- Use yellow banners for warnings, like a line item that is under-delivering.
+				- Use orange banners for danger messages, like an error message for missing required content.
+				- Use grey banners for new feature announcements.
+		`,
+		technicalRecommendations: `
+			Short single-line content can be passed in as a simple string. Multi-line messages should be passed wrapped in a \`<p>\` tag.
+			You can apply styling as needed within a banner, for example using \`strong\`, \`a href\`, or \`em\`.
+		`,
+	},
 	categories: ['communication'],
 };
 Banner.propTypes = {

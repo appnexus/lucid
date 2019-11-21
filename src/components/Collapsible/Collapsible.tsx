@@ -88,6 +88,7 @@ class Collapsible extends React.Component<
 
 	isAnimated: boolean | undefined = false;
 	delayTimer: number | null = null;
+	_isMounted = false;
 
 	static defaultProps = {
 		isExpanded: true,
@@ -102,16 +103,20 @@ class Collapsible extends React.Component<
 	};
 
 	componentWillMount(): void {
+		this._isMounted = false;
 		this.isAnimated = false;
 		this.delayTimer = null;
 	}
 
 	componentDidMount(): void {
+		this._isMounted = true;
 		_.delay((): void => {
 			// const maxHeight = _.get(this, 'rootRef.current.scrollHeight');
-			this.setState({
-				maxHeight: _.get(this, 'rootRef.current.scrollHeight'),
-			});
+			if (this._isMounted) {
+				this.setState({
+					maxHeight: _.get(this, 'rootRef.current.scrollHeight'),
+				});
+			}
 			this.isAnimated = this.props.isAnimated;
 		}, 32);
 	}
@@ -122,9 +127,11 @@ class Collapsible extends React.Component<
 			if (this.props.isExpanded) {
 				const maxHeight = _.get(this, 'rootRef.current.scrollHeight');
 				if (maxHeight !== this.state.maxHeight) {
-					this.setState({
-						maxHeight,
-					});
+					if (this._isMounted) {
+						this.setState({
+							maxHeight,
+						});
+					}
 				}
 			}
 			this.isAnimated = this.props.isAnimated;

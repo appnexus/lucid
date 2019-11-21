@@ -39,9 +39,12 @@ export const InfoLightIcon = ({
 	);
 };
 
+InfoLightIcon._isPrivate = true;
 InfoLightIcon.displayName = 'InfoLightIcon';
 InfoLightIcon.peek = {
 	description: `
+		DEPRECATED: this component should not be used and will be removed from the library in a future release.
+		
 		A light info icon.
 	`,
 	categories: ['visual design', 'icons'],

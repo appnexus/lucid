@@ -15,7 +15,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 1`] 
       width={12}
     >
       <Point
-        color="color-chart-0"
+        color="color-chart-3"
         hasStroke={false}
         kind={1}
         scale={1}
@@ -36,7 +36,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 1`] 
       width={12}
     >
       <Point
-        color="color-chart-1"
+        color="color-chart-0-darkest"
         hasStroke={false}
         kind={1}
         scale={1}
@@ -78,7 +78,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 1`] 
       width={12}
     >
       <Point
-        color="color-chart-3"
+        color="color-chart-4-lightest"
         hasStroke={false}
         kind={1}
         scale={1}
@@ -99,7 +99,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 1`] 
       width={12}
     >
       <Point
-        color="color-chart-4"
+        color="color-chart-5"
         hasStroke={false}
         kind={1}
         scale={1}
@@ -120,7 +120,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 1`] 
       width={12}
     >
       <Point
-        color="color-chart-5"
+        color="color-chart-1-light"
         hasStroke={false}
         kind={1}
         scale={1}
@@ -169,7 +169,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 2`] 
       width={12}
     >
       <Point
-        color="color-chart-0"
+        color="color-chart-3"
         hasStroke={false}
         kind={0}
         scale={1}
@@ -190,7 +190,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 2`] 
       width={12}
     >
       <Point
-        color="color-chart-1"
+        color="color-chart-0-darkest"
         hasStroke={false}
         kind={1}
         scale={1}
@@ -232,7 +232,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 2`] 
       width={12}
     >
       <Point
-        color="color-chart-3"
+        color="color-chart-4-lightest"
         hasStroke={false}
         kind={3}
         scale={1}
@@ -253,7 +253,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 2`] 
       width={12}
     >
       <Point
-        color="color-chart-4"
+        color="color-chart-5"
         hasStroke={false}
         kind={4}
         scale={1}
@@ -274,7 +274,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 2`] 
       width={12}
     >
       <Point
-        color="color-chart-5"
+        color="color-chart-1-light"
         hasStroke={false}
         kind={5}
         scale={1}
@@ -323,7 +323,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 3`] 
       width={22}
     >
       <Line
-        color="color-chart-0"
+        color="color-chart-3"
         d="M0,6 L22,6"
         isDotted={false}
       />
@@ -341,7 +341,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 3`] 
       width={22}
     >
       <Line
-        color="color-chart-1"
+        color="color-chart-0-darkest"
         d="M0,6 L22,6"
         isDotted={false}
       />
@@ -377,7 +377,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 3`] 
       width={22}
     >
       <Line
-        color="color-chart-3"
+        color="color-chart-4-lightest"
         d="M0,6 L22,6"
         isDotted={false}
       />
@@ -395,7 +395,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 3`] 
       width={22}
     >
       <Line
-        color="color-chart-4"
+        color="color-chart-5"
         d="M0,6 L22,6"
         isDotted={false}
       />
@@ -413,7 +413,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 3`] 
       width={22}
     >
       <Line
-        color="color-chart-5"
+        color="color-chart-1-light"
         d="M0,6 L22,6"
         isDotted={false}
       />
@@ -456,7 +456,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 4`] 
       width={22}
     >
       <Point
-        color="color-chart-0"
+        color="color-chart-3"
         hasStroke={false}
         kind={0}
         scale={1}
@@ -464,7 +464,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 4`] 
         y={6}
       />
       <Line
-        color="color-chart-0"
+        color="color-chart-3"
         d="M0,6 L22,6"
         isDotted={false}
       />
@@ -482,7 +482,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 4`] 
       width={22}
     >
       <Point
-        color="color-chart-1"
+        color="color-chart-0-darkest"
         hasStroke={false}
         kind={1}
         scale={1}
@@ -490,7 +490,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 4`] 
         y={6}
       />
       <Line
-        color="color-chart-1"
+        color="color-chart-0-darkest"
         d="M0,6 L22,6"
         isDotted={false}
       />
@@ -534,7 +534,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 4`] 
       width={22}
     >
       <Point
-        color="color-chart-3"
+        color="color-chart-4-lightest"
         hasStroke={false}
         kind={3}
         scale={1}
@@ -542,7 +542,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 4`] 
         y={6}
       />
       <Line
-        color="color-chart-3"
+        color="color-chart-4-lightest"
         d="M0,6 L22,6"
         isDotted={false}
       />
@@ -560,7 +560,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 4`] 
       width={22}
     >
       <Point
-        color="color-chart-4"
+        color="color-chart-5"
         hasStroke={false}
         kind={4}
         scale={1}
@@ -568,7 +568,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 4`] 
         y={6}
       />
       <Line
-        color="color-chart-4"
+        color="color-chart-5"
         d="M0,6 L22,6"
         isDotted={false}
       />
@@ -586,7 +586,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 4`] 
       width={22}
     >
       <Point
-        color="color-chart-5"
+        color="color-chart-1-light"
         hasStroke={false}
         kind={5}
         scale={1}
@@ -594,7 +594,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 4`] 
         y={6}
       />
       <Line
-        color="color-chart-5"
+        color="color-chart-1-light"
         d="M0,6 L22,6"
         isDotted={false}
       />
@@ -645,7 +645,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 5`] 
       width={22}
     >
       <Point
-        color="color-chart-0"
+        color="color-chart-3"
         hasStroke={false}
         kind={0}
         scale={1}
@@ -653,7 +653,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 5`] 
         y={6}
       />
       <Line
-        color="color-chart-0"
+        color="color-chart-3"
         d="M0,6 L22,6"
         isDotted={false}
       />
@@ -671,7 +671,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 5`] 
       width={22}
     >
       <Point
-        color="color-chart-1"
+        color="color-chart-0-darkest"
         hasStroke={false}
         kind={1}
         scale={1}
@@ -679,7 +679,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 5`] 
         y={6}
       />
       <Line
-        color="color-chart-1"
+        color="color-chart-0-darkest"
         d="M0,6 L22,6"
         isDotted={false}
       />
@@ -723,7 +723,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 5`] 
       width={22}
     >
       <Point
-        color="color-chart-3"
+        color="color-chart-4-lightest"
         hasStroke={false}
         kind={3}
         scale={1}
@@ -731,7 +731,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 5`] 
         y={6}
       />
       <Line
-        color="color-chart-3"
+        color="color-chart-4-lightest"
         d="M0,6 L22,6"
         isDotted={false}
       />
@@ -749,7 +749,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 5`] 
       width={22}
     >
       <Point
-        color="color-chart-4"
+        color="color-chart-5"
         hasStroke={false}
         kind={4}
         scale={1}
@@ -757,7 +757,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 5`] 
         y={6}
       />
       <Line
-        color="color-chart-4"
+        color="color-chart-5"
         d="M0,6 L22,6"
         isDotted={false}
       />
@@ -775,7 +775,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 5`] 
       width={22}
     >
       <Point
-        color="color-chart-5"
+        color="color-chart-1-light"
         hasStroke={false}
         kind={5}
         scale={1}
@@ -783,7 +783,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 5`] 
         y={6}
       />
       <Line
-        color="color-chart-5"
+        color="color-chart-1-light"
         d="M0,6 L22,6"
         isDotted={false}
       />

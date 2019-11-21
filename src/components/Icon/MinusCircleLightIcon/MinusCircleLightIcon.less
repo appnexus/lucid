@@ -13,10 +13,14 @@
 		stroke: @color-secondary-1;
 	}
 
+	&-is-clickable&-is-active:not(&-is-disabled):hover &-background {
+		fill: @color-secondary-1-hover;
+		stroke: @color-secondary-1-hover;
+	}
+
 	&-is-clickable:not(&-is-disabled):hover &-background,
 	&-is-active &-background {
-		stroke: shade(@color-secondary-1, 20%);
-		fill: shade(@color-secondary-1, 20%);
+		stroke: @color-secondary-1;
+		fill: @color-secondary-1;
 	}
 }
-

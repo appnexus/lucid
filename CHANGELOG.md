@@ -2,6 +2,24 @@
 
 - Nothing at the moment.
 
+## 5.2.0
+- #1065 [minor] Make `Checkbox` private, update `CheckboxLabeled` documentation
+- #1061 [minor] Add `BackUpArrowIcon`
+- #1077 [patch] Make `DangerLightIcon`, `InfoLightIcon`, and `WarningLightIcon` private
+- #1071 [patch] Update `LoadingIndicator` documentation
+- #1065 [patch] Update `Banner` documentation
+- #1068 [patch] Update chart color palette for better contrast
+- #1063 [patch] Fix `Collapsible` to prevent calling `setState` on an unmounted component
+- #1064 [patch] Update `FC` utility interface to include optional `notes` for documentation
+- #1057 [patch] Update `WarningIcon` path for better rendering at small sizes
+- #1060 [patch] Update `SuccessLightIcon` and `MinusCircleLightIcon` hover state colors
+- #1050 [patch] Update `OverlayWrapper` z-index to use `zindex-modal` var
+- #1062 [none] Add `index.less` as entrypoint for webpack for use in codepen
+- #1059 [none] Improve ordering of props in DocsPage
+- #1056 [none] Upgrade Storybook to v5.2.1 and implement DocsPage
+
+https://github.com/appnexus/lucid/compare/v5.1.2...5.2.0
+
 ## 5.1.2
 
 - #1055 [none] Improve prop documentation for `fixedColumnCount` on `DataTablePanel`
