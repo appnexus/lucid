@@ -4,41 +4,48 @@ import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
 import { FC, omitProps } from '../../../util/component-types';
 
-const cx = lucidClassNames.bind('&-SaveIcon');
+const cx = lucidClassNames.bind('&-HideIcon');
 
-interface ISaveIconProps extends IIconProps {}
+interface IHideIconProps extends IIconProps {}
 
-export const SaveIcon: FC<ISaveIconProps> = ({
+export const HideIcon: FC<IHideIconProps> = ({
 	className,
 	...passThroughs
 }): React.ReactElement => {
 	return (
 		<Icon
-			{...omitProps(passThroughs, undefined, _.keys(SaveIcon.propTypes), false)}
+			{...omitProps(passThroughs, undefined, _.keys(HideIcon.propTypes), false)}
 			{..._.pick(passThroughs, _.keys(iconPropTypes))}
 			className={cx('&', className)}
 		>
-			<circle cx='8' cy='10' r='2.25' />
 			<path
+				d='M15.5 8s-3-4.5-7.5-4.5S.5 8 .5 8 4 12.5 8 12.5 15.5 8 15.5 8z'
 				fill='none'
 				stroke='#000'
 				stroke-width='1.3'
 				stroke-miterlimit='10'
-				d='M12 .5v4H4v-4'
+			/>
+			<circle
+				cx='8'
+				cy='8'
+				r='1.25'
+				stroke='#000'
+				stroke-width='1.3'
+				stroke-miterlimit='10'
 			/>
 		</Icon>
 	);
 };
 
-SaveIcon.displayName = 'SaveIcon';
-SaveIcon.peek = {
+HideIcon.displayName = 'HideIcon';
+HideIcon.peek = {
 	description: `
-		A save icon.
+		A hide icon.
 	`,
 	categories: ['visual design', 'icons'],
 	extend: 'Icon',
 	madeFrom: ['Icon'],
 };
-SaveIcon.propTypes = iconPropTypes;
+HideIcon.propTypes = iconPropTypes;
 
-export default SaveIcon;
+export default HideIcon;
