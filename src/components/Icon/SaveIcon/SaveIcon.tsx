@@ -19,13 +19,7 @@ export const SaveIcon: FC<ISaveIconProps> = ({
 			className={cx('&', className)}
 		>
 			<circle cx='8' cy='10' r='2.25' />
-			<path
-				fill='none'
-				stroke='#000'
-				stroke-width='1.3'
-				stroke-miterlimit='10'
-				d='M12 .5v4H4v-4'
-			/>
+			<path d='M12 .5v4H4v-4' />
 		</Icon>
 	);
 };
