@@ -6,6 +6,7 @@ import {
 	isPlainObjectOrEsModule,
 	omitFunctionPropsDeep,
 } from './state-management';
+import { ValidationMap } from 'prop-types';
 
 export interface StandardProps {
 	/** Appended to the component-specific class names set on the root element.
@@ -71,9 +72,7 @@ interface ICreateClassComponentSpec<P, S> extends React.Mixin<P, S> {
 	_isPrivate?: boolean;
 	initialState?: S;
 	propName?: string;
-	propTypes?: Required<{
-		[key in keyof P]: any;
-	}>;
+	propTypes?: Required<{ [key in keyof P]: any }>;
 	components?: {
 		[key: string]: ICreateClassComponentClass<{}>;
 	};
@@ -98,7 +97,7 @@ export interface ICreateClassComponentClass<P>
 }
 
 // creates a React component
-export function createClass<P, S={}>(
+export function createClass<P, S = {}>(
 	spec: ICreateClassComponentSpec<P, S>
 ): ICreateClassComponentClass<P> {
 	const {
@@ -116,9 +115,18 @@ export function createClass<P, S={}>(
 		...restDefinition
 	} = spec;
 
+	const propTypeValidators: ValidationMap<any> = {
+		...propTypes,
+		..._.mapValues(
+			spec.components,
+			(componentValue, componentKey): {} =>
+				PropTypes.any`Props for ${componentValue.displayName || componentKey}`
+		),
+	};
+
 	// Intentionally keep this object type inferred so it can be passed to
 	// `createReactClass`
-	const newDefinition = {
+	const newDefinition: React.ComponentSpec<P, S> = {
 		getDefaultProps,
 		...restDefinition,
 		statics: {
@@ -130,15 +138,7 @@ export function createClass<P, S={}>(
 			initialState,
 			propName,
 		},
-		propTypes: _.assign(
-			{},
-			propTypes,
-			_.mapValues(
-				spec.components,
-				(componentValue, componentKey): {} =>
-					PropTypes.any`Props for ${componentValue.displayName || componentKey}`
-			)
-		),
+		propTypes: propTypeValidators,
 		render,
 	};
 
@@ -170,7 +170,7 @@ export function filterTypes<P>(
 		React.Children.toArray(children),
 		(element): boolean =>
 			React.isValidElement(element) &&
-			_.includes(_.castArray(types), element.type)
+			_.includes(_.castArray<any>(types), element.type)
 	) as React.ReactElement[];
 }
 
@@ -185,7 +185,7 @@ export function findTypes<P extends { children?: React.ReactNode }>(
 
 	// get elements from props (using types.propName)
 	const elementsFromProps: React.ReactNode[] = _.reduce(
-		_.castArray(types),
+		_.castArray<any>(types),
 		(acc: React.ReactNode[], type): React.ReactNode[] => {
 			return _.isNil(type.propName)
 				? []
@@ -214,7 +214,8 @@ export function rejectTypes<P>(
 
 	return _.reject(
 		React.Children.toArray(children),
-		(element): boolean => React.isValidElement(element) && _.includes(types, element.type)
+		(element): boolean =>
+			React.isValidElement(element) && _.includes<any>(types, element.type)
 	);
 }
 
