@@ -128,8 +128,10 @@ import FlagIcon from './components/Icon/FlagIcon/FlagIcon';
 import FolderIcon from './components/Icon/FolderIcon/FolderIcon';
 // @ts-ignore: not converted yet
 import FourSquaresIcon from './components/Icon/FourSquaresIcon/FourSquaresIcon';
+import GetMaximumIcon from './components/Icon/GetMaximumIcon/GetMaximumIcon';
 import Grid from './components/Grid/Grid';
 import HelpIcon from './components/Icon/HelpIcon/HelpIcon';
+import Hide from './components/Icon/HideIcon/HideIcon';
 import HomeIcon from './components/Icon/HomeIcon/HomeIcon';
 import Icon from './components/Icon/Icon';
 // @ts-ignore: not converted yet
