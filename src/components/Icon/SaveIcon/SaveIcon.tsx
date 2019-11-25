@@ -18,6 +18,7 @@ export const SaveIcon: FC<ISaveIconProps> = ({
 			{..._.pick(passThroughs, _.keys(iconPropTypes))}
 			className={cx('&', className)}
 		>
+			<path d='M15.5 15.5H.5V.5h12l3 3z' />
 			<circle cx='8' cy='10' r='2.25' />
 			<path d='M12 .5v4H4v-4' />
 		</Icon>
