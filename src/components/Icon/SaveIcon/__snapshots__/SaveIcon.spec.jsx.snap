@@ -12,6 +12,9 @@ exports[`SaveIcon [common] example testing should match snapshot(s) for 1default
   size={16}
   viewBox="0 0 16 16"
 >
+  <path
+    d="M15.5 15.5H.5V.5h12l3 3z"
+  />
   <circle
     cx="8"
     cy="10"

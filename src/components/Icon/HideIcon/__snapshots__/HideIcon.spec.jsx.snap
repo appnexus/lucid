@@ -20,5 +20,8 @@ exports[`HideIcon [common] example testing should match snapshot(s) for 1default
     cy="8"
     r="1.25"
   />
+  <path
+    d="M2.5 13.5l11-11"
+  />
 </Icon>
 `;
