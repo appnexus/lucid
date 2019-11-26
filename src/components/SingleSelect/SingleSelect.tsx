@@ -14,7 +14,9 @@ import * as reducers from './SingleSelect.reducers';
 import {
 	IDropMenuProps,
 	IDropMenuState,
+	OptionGroupFC,
 	IDropMenuOptionProps,
+	IDropMenuOptionGroupProps,
 	IOptionsData,
 	DropMenuDumb as DropMenu,
 } from '../DropMenu/DropMenu';
@@ -58,22 +60,22 @@ interface ISingleSelectOptionProps extends StandardProps {
 	Selected?: React.ReactNode;
 }
 
-const Option: FC<ISingleSelectOptionProps> = (): null => null;
+// const Option: FC<ISingleSelectOptionProps> = (): null => null;
 
-Option.displayName = 'SingleSelect.Option';
-Option.peek = {
-	description: `
-		A selectable option in the list.
-	`,
-};
-Option.propName = 'Option';
-Option.propTypes = {
-	Selected: any`
-		Customizes the rendering of the Option when it is selected and is
-		displayed instead of the Placeholder.
-	`,
-	...DropMenu.Option.propTypes,
-};
+// Option.displayName = 'SingleSelect.Option';
+// Option.peek = {
+// 	description: `
+// 		A selectable option in the list.
+// 	`,
+// };
+// Option.propName = 'Option';
+// Option.propTypes = {
+// 	Selected: any`
+// 		Customizes the rendering of the Option when it is selected and is
+// 		displayed instead of the Placeholder.
+// 	`,
+// 	...DropMenu.Option.propTypes,
+// };
 
 /** Option.Selected Child Component */
 // interface ISingleSelectOptionSelectedProps extends StandardProps {
@@ -97,16 +99,16 @@ interface ISingleSelectOptionGroupProps extends StandardProps {
 	description?: string;
 }
 
-const OptionGroup: FC<ISingleSelectOptionGroupProps> = (): null => null;
+// const OptionGroup: FC<ISingleSelectOptionGroupProps> = (): null => null;
 
-OptionGroup.displayName = 'SingleSelect.OptionGroup';
-OptionGroup.peek = {
-	description: `
-		Groups \`Option\`s together with a non-selectable heading.
-	`,
-};
-OptionGroup.propName = 'OptionGroup';
-OptionGroup.propTypes = DropMenu.OptionGroup.propTypes;
+// OptionGroup.displayName = 'SingleSelect.OptionGroup';
+// OptionGroup.peek = {
+// 	description: `
+// 		Groups \`Option\`s together with a non-selectable heading.
+// 	`,
+// };
+// OptionGroup.propName = 'OptionGroup';
+// OptionGroup.propTypes = DropMenu.OptionGroup.propTypes;
 
 /** Single Select Component */
 interface ISingleSelectPropsRaw extends StandardProps {
@@ -121,7 +123,7 @@ interface ISingleSelectPropsRaw extends StandardProps {
 	Selected?: React.ReactNode;
 
 	/** Custom OptionGroup component (alias for `SingleSelect.OptionGroup`)  */
-	OptionGroup?: React.ReactNode;
+	OptionGroup?: IDropMenuOptionGroupProps;
 
 	hasReset: boolean;
 
@@ -133,7 +135,7 @@ interface ISingleSelectPropsRaw extends StandardProps {
 
 	selectedIndex: number;
 
-	DropMenu: DropMenu.propTypes;
+	DropMenu: IDropMenuProps;
 
 	maxMenuHeight: number | string;
 
@@ -144,12 +146,12 @@ interface ISingleSelectPropsRaw extends StandardProps {
 			event,
 		}: {
 			props: IDropMenuOptionProps;
-			event: React.MouseEvent;
+			event: React.MouseEvent | React.KeyboardEvent;
 		}
 	) => void;
 }
 
-type ISingleSelectProps = Overwrite<
+export type ISingleSelectProps = Overwrite<
 	React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement>,
 	ISingleSelectPropsRaw
 >;
@@ -176,10 +178,10 @@ export interface ISingleSelectState {
 // }
 
 export interface ISingleSelectOptionGroupState {
-	optionGroups: OptionGroup[];
+	optionGroups: OptionGroupFC[];
 	flattenedOptionsData: IOptionsData[];
 	ungroupedOptionData: IOptionsData[];
-	optionGroupDataLookup: { [key: number]: OptionGroup[] };
+	optionGroupDataLookup: { [key: number]: OptionGroupFC[] };
 }
 
 const defaultProps = {
@@ -202,9 +204,11 @@ class SingleSelect extends React.Component<
 		statics: {
 			reducers,
 			Placeholder,
-			Option,
+			Option: DropMenu.Option,
 			Selected,
-			OptionGroup,
+			NullOption: DropMenu.NullOption,
+			FixedOption: DropMenu.FixedOption,
+			OptionGroup: DropMenu.OptionGroup,
 			peek: {
 				description: `
 				A dropdown list. 
@@ -234,9 +238,11 @@ class SingleSelect extends React.Component<
 	static defaultProps = defaultProps;
 	static reducers = reducers;
 	static Placeholder = Placeholder;
-	static Option = Option;
+	static Option = DropMenu.Option;
 	static Selected = Selected;
-	static OptionGroup = OptionGroup;
+	static OptionGroup = DropMenu.OptionGroup;
+	static NullOption = DropMenu.NullOption;
+	static FixedOption = DropMenu.FixedOption;
 
 	static propTypes = {
 		children: node`

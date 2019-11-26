@@ -11,6 +11,10 @@ import {
 } from '../../util/component-types';
 import { scrollParentTo } from '../../util/dom-helpers';
 import { buildHybridComponent } from '../../util/state-management';
+import {
+	ISingleSelectProps,
+	SingleSelectDumb as SingleSelect,
+} from '../SingleSelect/SingleSelect';
 import * as KEYCODE from '../../constants/key-code';
 import * as reducers from './DropMenu.reducers';
 import ContextMenu from '../ContextMenu/ContextMenu';
@@ -84,10 +88,12 @@ Control.peek = {
 Control.propName = 'Control';
 Control.propTypes = {};
 
-interface IDropMenuOptionGroupProps extends StandardProps {
+export interface IDropMenuOptionGroupProps extends StandardProps {
 	description?: string;
 	isHidden: boolean;
 }
+
+export type OptionGroupFC = (props: IDropMenuOptionGroupProps) => null;
 
 const OptionGroup = (_props: IDropMenuOptionGroupProps): null => null;
 OptionGroup.displayName = 'DropMenu.OptionGroup';
@@ -563,8 +569,10 @@ class DropMenu extends React.Component<IDropMenuProps, IDropMenuState> {
 	};
 
 	static preprocessOptionData = (
-		props: IDropMenuProps,
-		ParentType = DropMenu
+		//props: IDropMenuProps,
+		props: StandardProps,
+		//TODO: ask about this fix
+		ParentType: typeof DropMenu | typeof SingleSelect = DropMenu
 	) => {
 		const { OptionGroup, Option, NullOption, FixedOption } = ParentType;
 
