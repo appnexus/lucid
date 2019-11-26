@@ -89,13 +89,13 @@ export interface IPaginatorProps
 	pageSizeOptions: number[];
 
 	/** Object of SingleSelect props which are passed thru to the underlying SingleSelect component for the page size selector. */
-	// SingleSelect: {
-	// 	...SingleSelect.defaultProps,
-	// 	selectedIndex: number;
-	// };
+	SingleSelect: {
+		...SingleSelect.defaultProps,
+		selectedIndex: number
+	};
 
 	/** Object of TextField props which are passed thru to the underlying TextField component. */
-	//TextField: TextField.defaultProps;
+	TextField: TextField.defaultProps;
 }
 
 export interface IPaginatorState {
@@ -209,7 +209,8 @@ class Paginator extends React.Component<IPaginatorProps, IPaginatorState> {
 		`,
 	};
 
-	handleTextFieldChange(pageNum: string, { props: IPaginatorProps, event: React.MouseEvent }): void {
+	handleTextFieldChange(
+		pageNum: string, { props: IPaginatorProps, event: React.MouseEvent }): void {
 		const { onPageSelect, selectedPageIndex, totalPages } = this.props;
 		const parsedPageNum = _.parseInt(pageNum);
 		if (_.isNaN(parsedPageNum)) {

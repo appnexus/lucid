@@ -3,7 +3,6 @@ import PropTypes from 'react-peek/prop-types';
 import _ from 'lodash';
 import { lucidClassNames } from '../../util/style-helpers';
 import {
-	createClass,
 	FC,
 	findTypes,
 	getFirst,
@@ -14,6 +13,8 @@ import { buildHybridComponent } from '../../util/state-management';
 import * as reducers from './SingleSelect.reducers';
 import {
 	IDropMenuProps,
+	IDropMenuState,
+	IDropMenuOptionProps,
 	IOptionsData,
 	DropMenuDumb as DropMenu,
 } from '../DropMenu/DropMenu';
@@ -82,13 +83,13 @@ interface ISingleSelectOptionSelectedProps extends ISingleSelectOptionProps {
 
 const Selected: FC<ISingleSelectOptionSelectedProps> = (): null => null;
 
-(Selected.displayName = 'SingleSelect.Option.Selected'),
-	(Selected.peek = {
-		description: `
+Selected.displayName = 'SingleSelect.Option.Selected';
+Selected.peek = {
+	description: `
 		Customizes the rendering of the Option when it is selected
 		and is displayed instead of the Placeholder.
 	`,
-	});
+};
 Selected.propName = 'Selected';
 
 /** OptionGroup Child Component */
@@ -159,20 +160,20 @@ export interface ISingleSelectState {
 }
 
 //TODO: IDropMenuOptionProps delete when the import works
-interface IDropMenuOptionProps extends StandardProps {
-	description?: string;
-	isDisabled?: boolean;
-	isHidden?: boolean;
-	isWrapped?: boolean;
-}
+// interface IDropMenuOptionProps extends StandardProps {
+// 	description?: string;
+// 	isDisabled?: boolean;
+// 	isHidden?: boolean;
+// 	isWrapped?: boolean;
+// }
 
 //TODO: delete IOptionsData when the import works
-interface IOptionsData {
-	localOptionIndex: number;
-	optionIndex: number;
-	optionGroupIndex: number | null;
-	optionProps: IDropMenuOptionProps;
-}
+// interface IOptionsData {
+// 	localOptionIndex: number;
+// 	optionIndex: number;
+// 	optionGroupIndex: number | null;
+// 	optionProps: IDropMenuOptionProps;
+// }
 
 export interface ISingleSelectOptionGroupState {
 	optionGroups: OptionGroup[];
