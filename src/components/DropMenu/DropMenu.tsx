@@ -108,7 +108,7 @@ OptionGroup.defaultProps = {
 	isHidden: false,
 };
 
-interface IDropMenuOptionProps extends StandardProps {
+export interface IDropMenuOptionProps extends StandardProps {
 	description?: string;
 	isDisabled?: boolean;
 	isHidden?: boolean;
@@ -329,7 +329,7 @@ export interface IDropMenuProps extends StandardProps {
 	FixedOption?: React.ReactNode;
 }
 
-interface IOptionsData {
+export interface IOptionsData {
 	localOptionIndex: number;
 	optionIndex: number;
 	optionGroupIndex: number | null;
