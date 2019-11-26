@@ -1,13 +1,13 @@
+import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
-import _ from 'lodash';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass } from '../../util/component-types';
+import { StandardProps } from '../../util/component-types';
 import * as reducers from './Paginator.reducers';
 import selectors from './Paginator.selectors';
 import { SingleSelectDumb as SingleSelect } from '../SingleSelect/SingleSelect';
 import TextField from '../TextField/TextField';
-import Button from '../Button/Button';
+import { IButtonProps, Button } from '../Button/Button';
 import ArrowIcon from '../Icon/ArrowIcon/ArrowIcon';
 import { buildHybridComponent } from '../../util/state-management';
 
@@ -26,24 +26,119 @@ const {
 
 const { Option } = SingleSelect;
 
-const Paginator = createClass({
-	displayName: 'Paginator',
+export interface IPaginatorProps
+	extends StandardProps,
+		React.DetailedHTMLProps<
+			React.HTMLAttributes<HTMLDivElement>,
+			HTMLDivElement
+		> {
+	/** Whether or not to show the page size selector. */
+	hasPageSizeSelector: boolean;
 
-	statics: {
-		peek: {
-			description: `
-				A paginator with page size selector.
-			`,
-			categories: ['navigation'],
-			madeFrom: ['ArrowIcon', 'TextField', 'Button', 'SingleSelect'],
-		},
+	/** Disables the Paginator from being clicked or focused. */
+	isDisabled: boolean;
+
+	/** Label when showTotalObjects is true with 1 or fewer objects. */
+	objectLabel: string;
+
+	/** Label when showTotalObjects is true with more than 1 objects. */
+	objectLabelPlural: string;
+
+	/** Called when a page is selected. */
+	onPageSelect: (
+		pageIndex: number,
+		totalPages: number,
+		{
+			props,
+			event,
+		}: {
+			props: IButtonProps;
+			event: React.MouseEvent;
+		}
+	) => void;
+
+	/** Called when a page size is selected. */
+	onPageSizeSelect: (
+		pageSizeIndex: number,
+		{
+			props,
+			event,
+		}: {
+			props: IButtonProps;
+			event: React.MouseEvent;
+		}
+	) => void;
+
+	/** 0-indexed currently selected page number. */
+	selectedPageIndex: number;
+
+	/** Currently selected page size option index. */
+	selectedPageSizeIndex: number;
+
+	/** Show total count of objects. */
+	showTotalObjects: boolean;
+
+	/** Number to display in \`of \${totalPages}\`, calculated from
+	\`totalPages\` and selected page size by default.  */
+	totalPages: number;
+
+	/** Total number of items across all pages. */
+	totalCount: number | null;
+
+	/** Array of numbers representing page size options. */
+	pageSizeOptions: number[];
+
+	/** Object of SingleSelect props which are passed thru to the underlying SingleSelect component for the page size selector. */
+	// SingleSelect: {
+	// 	...SingleSelect.defaultProps,
+	// 	selectedIndex: number;
+	// };
+
+	/** Object of TextField props which are passed thru to the underlying TextField component. */
+	//TextField: TextField.defaultProps;
+}
+
+export interface IPaginatorState {
+	pageIndex: number;
+	totalPages: number;
+	selectedPageIndex: number;
+	selectedPageSizeIndex: number;
+	//TODO: define SingleSelect
+	SingleSelect: {};
+}
+
+const defaultProps = {
+	hasPageSizeSelector: false,
+	isDisabled: false,
+	objectLabel: 'Object',
+	onPageSelect: _.noop,
+	selectedPageIndex: 0,
+	selectedPageSizeIndex: 0,
+	showTotalObjects: false,
+	totalCount: null,
+	pageSizeOptions: [10, 50, 100],
+	SingleSelect: {
+		...SingleSelect.defaultProps,
+		selectedIndex: 0,
 	},
+	TextField: TextField.defaultProps,
+};
 
-	reducers,
+class Paginator extends React.Component<IPaginatorProps, IPaginatorState> {
+	static displayName = 'Paginator';
+	static peek = {
+		description: `
+			A paginator with page size selector.
+		`,
+		categories: ['navigation'],
+		madeFrom: ['ArrowIcon', 'TextField', 'Button', 'SingleSelect'],
+	};
 
-	selectors,
+	static reducers = reducers;
+	static selectors = selectors;
+	static defaultProps = defaultProps;
 
-	propTypes: {
+	static propTypes = {
 		className: string`
 			Appended to the component-specific class names set on the root elements.
 		`,
@@ -61,11 +156,11 @@ const Paginator = createClass({
 		`,
 
 		selectedPageIndex: number`
-			0-indexed currently selected page number
+			0-indexed currently selected page number.
 		`,
 
 		selectedPageSizeIndex: number`
-			currently selected page size option index
+			Currently selected page size option index.
 		`,
 
 		SingleSelect: shape(SingleSelect.propTypes)`
@@ -80,21 +175,22 @@ const Paginator = createClass({
 		objectLabel: string`
 			Label when showTotalObjects is true with 1 or fewer objects.
 		`,
+
 		objectLabelPlural: string`
 			Label when showTotalObjects is true with more than 1 objects.
 		`,
 
 		totalPages: number`
-			number to display in \`of \${totalPages}\`, calculated from
+			Number to display in \`of \${totalPages}\`, calculated from
 			\`totalPages\` and selected page size by default.
 		`,
 
 		totalCount: number`
-			total number of items across all pages
+			Total number of items across all pages.
 		`,
 
 		pageSizeOptions: arrayOf(number)`
-			array of numbers representing page size options
+			Array of numbers representing page size options.
 		`,
 
 		TextField: shape(TextField.propTypes)`
@@ -111,37 +207,18 @@ const Paginator = createClass({
 			Called when a page size is selected.  Has the signature \`(pageSizeIndex,
 			{props, event}) => {}\` where pageSizeIndex is a number.
 		`,
-	},
+	};
 
-	getDefaultProps() {
-		return {
-			hasPageSizeSelector: false,
-			isDisabled: false,
-			objectLabel: 'Object',
-			onPageSelect: _.noop,
-			selectedPageIndex: 0,
-			selectedPageSizeIndex: 0,
-			showTotalObjects: false,
-			totalCount: null,
-			pageSizeOptions: [10, 50, 100],
-			SingleSelect: {
-				...SingleSelect.defaultProps,
-				selectedIndex: 0,
-			},
-			TextField: TextField.defaultProps,
-		};
-	},
-
-	handleTextFieldChange(pageNum, { props, event }) {
+	handleTextFieldChange(pageNum: string, { props: IPaginatorProps, event: React.MouseEvent }): void {
 		const { onPageSelect, selectedPageIndex, totalPages } = this.props;
 		const parsedPageNum = _.parseInt(pageNum);
 		if (_.isNaN(parsedPageNum)) {
 			return onPageSelect(selectedPageIndex, totalPages, { props, event });
 		}
 		return onPageSelect(parsedPageNum - 1, totalPages, { props, event });
-	},
+	}
 
-	render() {
+	render(): React.ReactNode {
 		const {
 			className,
 			hasPageSizeSelector,
@@ -219,8 +296,8 @@ const Paginator = createClass({
 				</Button>
 			</div>
 		);
-	},
-});
+	}
+}
 
 export default buildHybridComponent(Paginator);
 export { Paginator as PaginatorDumb };
