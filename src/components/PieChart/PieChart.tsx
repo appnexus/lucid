@@ -3,7 +3,6 @@ import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import {
-	createClass,
 	omitProps,
 	StandardProps,
 	Overwrite
@@ -136,10 +135,7 @@ export interface IPieChartPropsRaw
 	yAxisFormatter: (y: number) => number
 }
 
-type IPieChartProps = Overwrite<React.DetailedHTMLProps<
-			React.HTMLAttributes<HTMLDivElement>,
-			HTMLDivElement
-		>, IPieChartPropsRaw>
+type IPieChartProps = Overwrite<React.SVGProps<SVGGElement>, IPieChartPropsRaw>
 
 const defaultProps = {
 			height: 200,
