@@ -405,7 +405,7 @@ class PieChart extends React.Component<
 		}
 
 		const innerWidth = width - margin.left - margin.right;
-		const innerHeight = height - margin.top - margin.bottom; 
+		const innerHeight = height - margin.top - margin.bottom;
 
 		const outerRadius = Math.min(innerWidth, innerHeight) / 2;
 
@@ -465,7 +465,7 @@ class PieChart extends React.Component<
 											className={cx('&-slice', {
 												'&-slice-has-stroke': hasStroke,
 											})}
-											d={`${arcData}`}
+											d={arcData}
 											color={_.get(
 												colorMap,
 												data[index][xAxisField],
@@ -479,7 +479,7 @@ class PieChart extends React.Component<
 										{/* This hidden path is useful for capturing hovers when we're in donut mode */}
 										<path
 											className={cx('&-slice-hover')}
-											d={`${arcFullData}`}
+											d={arcFullData}
 											transform={`scale(${HOVER_SCALE})`}
 											onMouseOver={_.partial(this.handleMouseOver, index)}
 											onMouseOut={hasToolTips ? _.noop : this.handleMouseOut}
