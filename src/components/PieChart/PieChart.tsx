@@ -332,18 +332,18 @@ class PieChart extends React.Component<
 
 	static defaultProps = defaultProps;
 
-	handleMouseOver(index: number, event: React.MouseEvent) {
+	handleMouseOver = (index: number, event: React.MouseEvent): void => {
 		this.props.onMouseOver(index, {
 			props: this.props,
 			event,
 		});
 	};
 
-	handleMouseOut({
+	handleMouseOut = ({
 		event,
 	} : {
 		event: React.MouseEvent
-	}){
+	}) : void => {
 		this.props.onMouseOut({
 			props: this.props,
 			event,
