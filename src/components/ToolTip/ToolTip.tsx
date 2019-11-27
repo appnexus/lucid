@@ -10,7 +10,10 @@ import {
 	findTypes,
 	omitProps,
 } from '../../util/component-types';
-import { buildHybridComponent } from '../../util/state-management';
+import {
+	buildHybridComponent,
+	buildModernHybridComponent,
+} from '../../util/state-management';
 
 const cx = lucidClassNames.bind('&-ToolTip');
 const flyOutCx = cx.bind('&-FlyOut');
@@ -400,6 +403,14 @@ class ToolTip extends React.Component<IToolTipProps, IToolTipState> {
 		);
 	}
 }
+
+const ModernHybridToolTipPre = buildModernHybridComponent<
+	IToolTipProps & { initialState?: IToolTipState },
+	IToolTipState
+>(ToolTip, { reducers });
+
+export const ModernHybridToolTip = ModernHybridToolTipPre as typeof ModernHybridToolTipPre &
+	typeof ToolTip;
 
 export default buildHybridComponent(ToolTip);
 export { ToolTip as ToolTipDumb };

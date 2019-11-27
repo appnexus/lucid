@@ -2,7 +2,9 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import Validation, { IValidationProps } from '../Validation/Validation';
-import TextField, { ITextFieldProps } from '../TextField/TextField';
+import TextField, {
+	ITextFieldPropsWithPassThroughs,
+} from '../TextField/TextField';
 import reducers from '../TextField/TextField.reducers';
 import { lucidClassNames } from '../../util/style-helpers';
 import { findTypes, omitProps } from '../../util/component-types';
@@ -25,7 +27,8 @@ TextFieldValidatedError.peek = {
 };
 TextFieldValidatedError.propName = 'Error';
 
-export interface ITextFieldValidatedProps extends ITextFieldProps {
+export interface ITextFieldValidatedProps
+	extends ITextFieldPropsWithPassThroughs {
 	Error?: React.ReactNode;
 }
 

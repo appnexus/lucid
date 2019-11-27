@@ -52,6 +52,7 @@
   "license": "Apache-2.0",
   "dependencies": {
     "@babel/parser": "^7.2.2",
+    "@types/hoist-non-react-statics": "^3.3.1",
     "classnames": "^2.2.3",
     "create-react-class": "^15.6.2",
     "d3-format": "^1.0.2",
@@ -60,6 +61,7 @@
     "d3-time": "^1.0.0",
     "d3-time-format": "^2.0.0",
     "element-resize-detector": "^1.1.6",
+    "hoist-non-react-statics": "^3.3.1",
     "prop-types": "^15.6.0",
     "react-addons-shallow-compare": "^15.6.2",
     "react-day-picker": "^6.2.1",
