@@ -9,7 +9,7 @@ import {
 	StandardProps,
 	Overwrite,
 } from '../../util/component-types';
-import { buildHybridComponent } from '../../util/state-management';
+import { buildModernHybridComponent } from '../../util/state-management';
 import * as reducers from './Tabs.reducers';
 import Badge from '../Badge/Badge';
 
@@ -267,6 +267,15 @@ class Tabs extends React.Component<ITabsProps, ITabsState> {
 
 	static reducers = reducers;
 
+	static peek = {
+		description: `
+				\`Tabs\` provides tabbed navigation. It has a flexible interface that
+				allows tab content to be passed as regular React children or through
+				props.
+			`,
+		categories: ['navigation'],
+	};
+
 	static propTypes = {
 		className: string`
 			Class names that are appended to the defaults.
@@ -314,23 +323,6 @@ class Tabs extends React.Component<ITabsProps, ITabsState> {
 			*Child Element* Can be used to define one or more individual \`Tab\`s in
 			the sequence of \`Tabs\`.
 		`,
-	};
-
-	// For backward compatibility with buildHybridComponent
-	static definition = {
-		statics: {
-			Title,
-			Tab,
-			reducers,
-			peek: {
-				description: `
-				\`Tabs\` provides tabbed navigation. It has a flexible interface that
-				allows tab content to be passed as regular React children or through
-				props.
-			`,
-				categories: ['navigation'],
-			},
-		},
 	};
 
 	static defaultProps = {
@@ -417,5 +409,8 @@ class Tabs extends React.Component<ITabsProps, ITabsState> {
 	}
 }
 
-export default buildHybridComponent(Tabs);
+export default buildModernHybridComponent<ITabsProps, ITabsState, typeof Tabs>(
+	Tabs,
+	{ reducers }
+);
 export { Tabs as TabsDumb };

@@ -7,7 +7,7 @@ import {
 	omitProps,
 	StandardProps,
 } from '../../util/component-types';
-import { buildHybridComponent } from '../../util/state-management';
+import { buildModernHybridComponent } from '../../util/state-management';
 import ChevronIcon from '../Icon/ChevronIcon/ChevronIcon';
 import Collapsible from '../Collapsible/Collapsible';
 import * as reducers from './Expander.reducers';
@@ -97,7 +97,7 @@ export interface IExpanderProps
 const defaultProps = {
 	isExpanded: false,
 	onToggle: _.noop,
-	kind: 'simple',
+	kind: 'simple' as const,
 };
 
 export interface IExpanderState {
@@ -152,21 +152,13 @@ class Expander extends React.Component<IExpanderProps, IExpanderState> {
 	static Label = Label;
 	static AdditionalLabelContent = AdditionalLabelContent;
 
-	// For backward compatibility with buildHybridComponent
-	static definition = {
-		statics: {
-			Label,
-			AdditionalLabelContent,
-			reducers,
-			peek: {
-				description: `
+	static peek = {
+		description: `
 				This is a container that provides a toggle that controls when the
 				content is shown.
 			`,
-				categories: ['layout'],
-				madeFrom: ['ChevronIcon'],
-			},
-		},
+		categories: ['layout'],
+		madeFrom: ['ChevronIcon'],
 	};
 
 	handleToggle = (event: React.MouseEvent): void => {
@@ -238,5 +230,9 @@ class Expander extends React.Component<IExpanderProps, IExpanderState> {
 	}
 }
 
-export default buildHybridComponent(Expander);
+export default buildModernHybridComponent<
+	IExpanderProps,
+	IExpanderState,
+	typeof Expander
+>(Expander, { reducers });
 export { Expander as ExpanderDumb };

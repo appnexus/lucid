@@ -33,10 +33,6 @@ interface IBaseComponentType<P> {
 	displayName: string;
 }
 
-export interface IHybridCompatibleProps<S = {}> {
-	initialState?: S;
-}
-
 export function getDeepPaths(
 	obj: { [k: string]: any },
 	path: string[] = []
@@ -304,18 +300,10 @@ export function buildHybridComponent(
 	});
 }
 
-interface IHybridCompatibleComponent<P, S extends object> {
-	reducers?: Reducers<P, S>;
-}
-
-/*
- * TODO: Make this work when we're ready to start switching components over
- * to modern react component definitions.
- *
- */
 export function buildModernHybridComponent<
-	P extends IHybridCompatibleProps<S> & { initialState?: S },
-	S extends object = {}
+	P extends object = {},
+	S extends object = {},
+	BaseType extends object = {}
 >(
 	BaseComponent: React.ComponentType<P>,
 	{
@@ -326,12 +314,16 @@ export function buildModernHybridComponent<
 ) {
 	// TODO: make sure hybrid components don't get double wrapped. Maybe use a type guard?
 
+	type AugmentedProps = P & { initialState?: P & S };
+
 	const selector = reduceSelectors(selectors);
 
-	class HybridComponent extends React.Component<P, S> {
+	class HybridComponent extends React.Component<AugmentedProps, S> {
 		boundContext?: IBoundContext<P, S>;
 
-		displayName = `Hybrid${BaseComponent.displayName}`;
+		// It would be nice to prepend "Hybrid" to this but some of our component
+		// sadly rely on the displayName remaining unchanged. E.g. `VerticalListMenu`.
+		static displayName = BaseComponent.displayName;
 
 		static propTypes = BaseComponent.propTypes;
 		static reducers = reducers;
@@ -342,7 +334,7 @@ export function buildModernHybridComponent<
 		// effectively eliminate our ability to distinguish what props the user
 		// explicity included.
 
-		constructor(props: P) {
+		constructor(props: AugmentedProps) {
 			super(props);
 
 			const { initialState } = props; // initial state overrides
@@ -395,7 +387,12 @@ export function buildModernHybridComponent<
 		}
 	}
 
-	return hoistNonReactStatics(HybridComponent, BaseComponent);
+	const HoistedComponent = hoistNonReactStatics(HybridComponent, BaseComponent);
+
+	// I used a type cast and intersection with `BaseType` here because I
+	// couldn't figure out any other way to generate a valid type signuture to
+	// reflected all the statics on the unerlying base component. @jondlm 2019-11-27
+	return HoistedComponent as typeof HoistedComponent & BaseType;
 }
 
 /*
