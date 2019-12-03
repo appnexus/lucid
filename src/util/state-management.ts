@@ -300,6 +300,12 @@ export function buildHybridComponent(
 	});
 }
 
+export interface IHybridComponent<P, S extends object> {
+	reducers: Reducers<P, S>;
+	selectors: Selectors<P, S>;
+	peekDefaultProps: { [key: string]: any }; // not sure how to give this a better type
+}
+
 export function buildModernHybridComponent<
 	P extends object = {},
 	S extends object = {},
@@ -319,11 +325,11 @@ export function buildModernHybridComponent<
 	const selector = reduceSelectors(selectors);
 
 	class HybridComponent extends React.Component<AugmentedProps, S> {
-		boundContext?: IBoundContext<P, S>;
+		private boundContext?: IBoundContext<P, S>;
 
 		// It would be nice to prepend "Hybrid" to this but some of our component
 		// sadly rely on the displayName remaining unchanged. E.g. `VerticalListMenu`.
-		static displayName = BaseComponent.displayName;
+		// static displayName = BaseComponent.displayName;
 
 		static propTypes = BaseComponent.propTypes;
 		static reducers = reducers;
@@ -387,12 +393,11 @@ export function buildModernHybridComponent<
 		}
 	}
 
-	const HoistedComponent = hoistNonReactStatics(HybridComponent, BaseComponent);
-
 	// I used a type cast and intersection with `BaseType` here because I
 	// couldn't figure out any other way to generate a valid type signuture to
 	// reflected all the statics on the unerlying base component. @jondlm 2019-11-27
-	return HoistedComponent as typeof HoistedComponent & BaseType;
+	return hoistNonReactStatics(HybridComponent, BaseComponent) as BaseType &
+		IHybridComponent<P, S>;
 }
 
 /*
