@@ -15,6 +15,8 @@ export interface StandardProps {
 	children?: React.ReactNode;
 	/** Styles that are passed through to native control. */
 	style?: React.CSSProperties;
+
+    callbackId?: string,
 }
 
 // `P`: props
