@@ -16,7 +16,7 @@
   "scripts": {
     "build:bundle:development": "NODE_ENV=development webpack --config webpack.config.bundle.js",
     "build:bundle:minified": "NODE_ENV=production webpack --config webpack.config.bundle.js",
-    "build:docs": "rm -rf ./dist/docs && NODE_DEST_ENV=docs build-storybook --docs -s ./docs/public -o ./dist/docs",
+    "build:docs": "rm -rf ./dist/docs && NODE_DEST_ENV=docs build-storybook --docs -s .storybook/static -o ./dist/docs",
     "build:js": "NODE_ENV=production babel --extensions .js,.jsx,.ts,.tsx --ignore spec.js,docs,examples,test-entry.js,coverage ./src --out-dir ./dist",
     "build:modules:babel": "NODE_ENV=production BABEL_ENV=modules babel --extensions .js,.jsx,.ts,.tsx --ignore spec.js,docs,examples,test-entry.js,coverage ./src --out-dir ./lib",
     "build:modules:definitions": "tsc --outDir lib --declaration --emitDeclarationOnly --declarationDir lib",
@@ -24,7 +24,7 @@
     "clean:dist": "rm -rf dist",
     "clean:lib": "rm -rf lib",
     "cover": "npm run jest -- --coverage",
-    "dev": "start-storybook --docs -p 6006",
+    "dev": "start-storybook --docs -p 6006 -s .storybook/static",
     "docs:upload:docspot": "scripts/upload-docs-build-docspot.sh",
     "docs:upload:gh": "scripts/upload-docs-build-gh.sh",
     "jest": "NODE_ENV=test TZ=UTC jest",

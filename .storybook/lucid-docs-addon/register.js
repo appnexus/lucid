@@ -1,5 +1,6 @@
 import React from 'react';
 import addons from '@storybook/addons';
+import { DOCS_RENDERED, STORY_RENDERED } from '@storybook/core-events';
 import _ from 'lodash';
 import ExampleCode from './ExampleCode';
 import PropTypes from './PropTypes';
@@ -149,13 +150,23 @@ class PropsPanel extends React.Component {
 	}
 }
 
+function getName(title) {
+	const parts = title.indexOf('|') > 0 ? title.split('|') : [title];
+	const name = parts[parts.length - 1];
+	return name;
+}
+
 // Register the addon with a unique name.
 addons.register('lucid-docs', api => {
-	api.setOptions({
-		name: 'Lucid UI',
-		url: 'https://github.com/appnexus/lucid',
-		showPanel: false,
-		panelPosition: 'right',
+	api.on(STORY_RENDERED, () => {
+		const storyData = api.getCurrentStoryData();
+		const name = getName(storyData.kind);
+		document.title = `${name} - Lucid UI`;
+	});
+
+	api.on(DOCS_RENDERED, (title) => {
+		const name = getName(title);
+		document.title = `${name} - Lucid UI`;
 	});
 
 	// Also need to set a unique name to the panel.
