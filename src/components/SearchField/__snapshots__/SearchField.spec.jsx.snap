@@ -1,5 +1,261 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`SearchField [common] example testing should match snapshot(s) for 1.default 1`] = `
+<div
+  className="lucid-SearchField"
+>
+  <TextField
+    debounceLevel={500}
+    isDisabled={false}
+    isMultiLine={false}
+    lazyLevel={1000}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onChangeDebounced={[Function]}
+    onKeyDown={[Function]}
+    onSubmit={[Function]}
+    rows={5}
+    style={null}
+    value=""
+  />
+  <div
+    className="lucid-SearchField-Icon-container"
+  >
+    <SearchIcon
+      aspectRatio="xMidYMid meet"
+      className="lucid-SearchField-Icon"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={12}
+      viewBox="0 0 16 16"
+    />
+  </div>
+</div>
+`;
+
+exports[`SearchField [common] example testing should match snapshot(s) for 2.interactive 1`] = `
+<div
+  className="lucid-SearchField"
+>
+  <TextField
+    debounceLevel={500}
+    isDisabled={false}
+    isMultiLine={false}
+    lazyLevel={1000}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onChangeDebounced={[Function]}
+    onKeyDown={[Function]}
+    onSubmit={[Function]}
+    rows={5}
+    style={null}
+    value=""
+  />
+  <div
+    className="lucid-SearchField-Icon-container"
+  >
+    <SearchIcon
+      aspectRatio="xMidYMid meet"
+      className="lucid-SearchField-Icon"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={12}
+      viewBox="0 0 16 16"
+    />
+  </div>
+</div>
+`;
+
+exports[`SearchField [common] example testing should match snapshot(s) for 3.placeholder 1`] = `
+<div
+  className="lucid-SearchField"
+>
+  <TextField
+    debounceLevel={500}
+    isDisabled={false}
+    isMultiLine={false}
+    lazyLevel={1000}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onChangeDebounced={[Function]}
+    onKeyDown={[Function]}
+    onSubmit={[Function]}
+    placeholder="Name/ID"
+    rows={5}
+    style={null}
+    value=""
+  />
+  <div
+    className="lucid-SearchField-Icon-container"
+  >
+    <SearchIcon
+      aspectRatio="xMidYMid meet"
+      className="lucid-SearchField-Icon"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={12}
+      viewBox="0 0 16 16"
+    />
+  </div>
+</div>
+`;
+
+exports[`SearchField [common] example testing should match snapshot(s) for 4.disabled 1`] = `
+<div
+  className="lucid-SearchField"
+>
+  <TextField
+    debounceLevel={500}
+    isDisabled={true}
+    isMultiLine={false}
+    lazyLevel={1000}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onChangeDebounced={[Function]}
+    onKeyDown={[Function]}
+    onSubmit={[Function]}
+    rows={5}
+    style={null}
+    value=""
+  />
+  <div
+    className="lucid-SearchField-Icon-container"
+  >
+    <SearchIcon
+      aspectRatio="xMidYMid meet"
+      className="lucid-SearchField-Icon"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={12}
+      viewBox="0 0 16 16"
+    />
+  </div>
+</div>
+`;
+
+exports[`SearchField [common] example testing should match snapshot(s) for 5.custom-icon 1`] = `
+<div
+  className="lucid-SearchField"
+>
+  <TextField
+    debounceLevel={500}
+    isDisabled={false}
+    isMultiLine={false}
+    lazyLevel={1000}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onChangeDebounced={[Function]}
+    onKeyDown={[Function]}
+    onSubmit={[Function]}
+    rows={5}
+    style={null}
+    value=""
+  />
+  <div
+    className="lucid-SearchField-Icon-container"
+  >
+    <LoadingIcon
+      aspectRatio="xMidYMid meet"
+      className="lucid-SearchField-Icon"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
+    />
+  </div>
+</div>
+`;
+
+exports[`SearchField [common] example testing should match snapshot(s) for 6.custom-text-field 1`] = `
+<div
+  className="lucid-SearchField"
+>
+  <TextField
+    debounceLevel={500}
+    isDisabled={false}
+    isMultiLine={false}
+    lazyLevel={1000}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onChangeDebounced={[Function]}
+    onKeyDown={[Function]}
+    onSubmit={[Function]}
+    rows={5}
+    style={null}
+    value=""
+  />
+  <div
+    className="lucid-SearchField-Icon-container"
+  >
+    <SearchIcon
+      aspectRatio="xMidYMid meet"
+      className="lucid-SearchField-Icon"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={12}
+      viewBox="0 0 16 16"
+    />
+  </div>
+</div>
+`;
+
+exports[`SearchField [common] example testing should match snapshot(s) for 7.valid-search 1`] = `
+<div
+  className="lucid-SearchField"
+  onBlur={[Function]}
+  onKeyDown={[Function]}
+>
+  <TextField
+    debounceLevel={500}
+    isDisabled={false}
+    isMultiLine={false}
+    lazyLevel={1000}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onChangeDebounced={[Function]}
+    onKeyDown={[Function]}
+    onSubmit={[Function]}
+    placeholder="icon doesn't become active until you type at least three characters ----->"
+    rows={5}
+    style={null}
+    value=""
+  />
+  <div
+    className="lucid-SearchField-Icon-container"
+  >
+    <SearchIcon
+      aspectRatio="xMidYMid meet"
+      className="lucid-SearchField-Icon"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={12}
+      viewBox="0 0 16 16"
+    />
+  </div>
+</div>
+`;
+
 exports[`SearchField [common] example testing should match snapshot(s) for 8.props 1`] = `
 <div
   className="lucid-SearchField"

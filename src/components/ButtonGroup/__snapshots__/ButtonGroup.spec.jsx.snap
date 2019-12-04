@@ -82,6 +82,69 @@ exports[`ButtonGroup [common] example testing should match snapshot(s) for fixed
 </span>
 `;
 
+exports[`ButtonGroup [common] example testing should match snapshot(s) for stateful 1`] = `
+<span
+  className="lucid-ButtonGroup"
+>
+  <Button
+    callbackId={0}
+    hasOnlyIcon={false}
+    isActive={false}
+    isDisabled={false}
+    key="0"
+    onClick={[Function]}
+    type="button"
+  >
+    Zero
+  </Button>
+  <Button
+    callbackId={1}
+    hasOnlyIcon={false}
+    isActive={false}
+    isDisabled={false}
+    key="1"
+    onClick={[Function]}
+    type="button"
+  >
+    One
+  </Button>
+  <Button
+    callbackId={2}
+    hasOnlyIcon={false}
+    isActive={false}
+    isDisabled={false}
+    key="2"
+    onClick={[Function]}
+    type="button"
+  >
+    Two
+  </Button>
+  <Button
+    callbackId={3}
+    hasOnlyIcon={false}
+    isActive={false}
+    isDisabled={false}
+    key="3"
+    onClick={[Function]}
+    type="button"
+  >
+    Three
+  </Button>
+  <ButtonGroup.Button>
+    Zero
+  </ButtonGroup.Button>
+  <ButtonGroup.Button>
+    One
+  </ButtonGroup.Button>
+  <ButtonGroup.Button>
+    Two
+  </ButtonGroup.Button>
+  <ButtonGroup.Button>
+    Three
+  </ButtonGroup.Button>
+</span>
+`;
+
 exports[`ButtonGroup [common] example testing should match snapshot(s) for stateless 1`] = `
 <span
   className="lucid-ButtonGroup"

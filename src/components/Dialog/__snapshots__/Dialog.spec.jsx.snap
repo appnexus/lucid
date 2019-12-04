@@ -967,7 +967,7 @@ exports[`Dialog [common] example testing should match snapshot(s) for 4.complex 
       >
         Flavor Combination Research
       </p>
-      <HybridComponent
+      <SearchField
         placeholder="Sundae school..."
       />
       <p

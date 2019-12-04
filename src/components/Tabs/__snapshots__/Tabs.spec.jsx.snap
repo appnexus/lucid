@@ -1,0 +1,994 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tabs [common] example testing should match snapshot(s) for 01-title-as-prop 1`] = `
+<div
+  className="lucid-Tabs"
+>
+  <ul
+    className="lucid-Tabs-bar lucid-Tabs-variable-width"
+  >
+    <Tabs.Tab
+      Title="One"
+      className="one"
+      index={0}
+      isLastTab={false}
+      isOpen={true}
+      isProgressive={false}
+      isSelected={true}
+      key="0"
+      onSelect={[Function]}
+    >
+      One content
+    </Tabs.Tab>
+    <Tabs.Tab
+      Title="Two"
+      index={1}
+      isDisabled={true}
+      isLastTab={false}
+      isOpen={true}
+      isProgressive={false}
+      isSelected={false}
+      key="1"
+      onSelect={[Function]}
+    >
+      Two content
+    </Tabs.Tab>
+    <Tabs.Tab
+      Title="Three"
+      index={2}
+      isLastTab={false}
+      isOpen={true}
+      isProgressive={false}
+      isSelected={false}
+      key="2"
+      onSelect={[Function]}
+    >
+      Three content
+    </Tabs.Tab>
+    <Tabs.Tab
+      Title="Four"
+      index={3}
+      isLastTab={true}
+      isOpen={true}
+      isProgressive={false}
+      isSelected={false}
+      key="3"
+      onSelect={[Function]}
+    >
+      Four content
+    </Tabs.Tab>
+  </ul>
+  <div
+    className="lucid-Tabs-content"
+  >
+    One content
+  </div>
+</div>
+`;
+
+exports[`Tabs [common] example testing should match snapshot(s) for 02-title-as-child 1`] = `
+<div
+  className="lucid-Tabs"
+>
+  <ul
+    className="lucid-Tabs-bar lucid-Tabs-variable-width"
+  >
+    <Tabs.Tab
+      Title="One"
+      index={0}
+      isLastTab={false}
+      isOpen={true}
+      isProgressive={false}
+      isSelected={true}
+      key="0"
+      onSelect={[Function]}
+    >
+      <Tabs.Title>
+        One
+      </Tabs.Title>
+      One content
+    </Tabs.Tab>
+    <Tabs.Tab
+      Title="Two"
+      index={1}
+      isDisabled={true}
+      isLastTab={false}
+      isOpen={true}
+      isProgressive={false}
+      isSelected={false}
+      key="1"
+      onSelect={[Function]}
+    >
+      <Tabs.Title>
+        Two
+      </Tabs.Title>
+      Two content
+    </Tabs.Tab>
+    <Tabs.Tab
+      Title="Three"
+      index={2}
+      isLastTab={false}
+      isOpen={true}
+      isProgressive={false}
+      isSelected={false}
+      key="2"
+      onSelect={[Function]}
+    >
+      <Tabs.Title>
+        Three
+      </Tabs.Title>
+      Three content
+    </Tabs.Tab>
+    <Tabs.Tab
+      Title="Four"
+      index={3}
+      isLastTab={true}
+      isOpen={true}
+      isProgressive={false}
+      isSelected={false}
+      key="3"
+      onSelect={[Function]}
+    >
+      <Tabs.Title>
+        Four
+      </Tabs.Title>
+      Four content
+    </Tabs.Tab>
+  </ul>
+  <div
+    className="lucid-Tabs-content"
+  >
+    <Tabs.Title>
+      One
+    </Tabs.Title>
+    One content
+  </div>
+</div>
+`;
+
+exports[`Tabs [common] example testing should match snapshot(s) for 03-complex-title-as-child 1`] = `
+<div
+  className="lucid-Tabs"
+>
+  <ul
+    className="lucid-Tabs-bar lucid-Tabs-bar-is-multiline lucid-Tabs-variable-width"
+  >
+    <Tabs.Tab
+      Title={
+        Array [
+          "One",
+          <br />,
+          <Button
+            hasOnlyIcon={false}
+            isActive={false}
+            isDisabled={false}
+            onClick={[Function]}
+            type="button"
+          >
+            Button
+          </Button>,
+        ]
+      }
+      index={0}
+      isLastTab={false}
+      isOpen={true}
+      isProgressive={false}
+      isSelected={true}
+      key="0"
+      onSelect={[Function]}
+      style={
+        Object {
+          "height": "100px",
+          "width": "200px",
+        }
+      }
+    >
+      <Tabs.Title>
+        One
+        <br />
+        <Button
+          hasOnlyIcon={false}
+          isActive={false}
+          isDisabled={false}
+          onClick={[Function]}
+          type="button"
+        >
+          Button
+        </Button>
+      </Tabs.Title>
+      One content
+    </Tabs.Tab>
+    <Tabs.Tab
+      Title={
+        Array [
+          "Two",
+          <br />,
+          "Line Two",
+          <SearchField />,
+        ]
+      }
+      index={1}
+      isLastTab={false}
+      isOpen={true}
+      isProgressive={false}
+      isSelected={false}
+      key="1"
+      onSelect={[Function]}
+      style={
+        Object {
+          "height": "100px",
+          "width": "200px",
+        }
+      }
+    >
+      <Tabs.Title>
+        Two
+        <br />
+        Line Two
+        <SearchField />
+      </Tabs.Title>
+      Two content
+    </Tabs.Tab>
+    <Tabs.Tab
+      Title={
+        <RadioGroup
+          selectedIndex={1}
+        >
+          <RadioButton
+            isDisabled={false}
+            isSelected={false}
+            onSelect={[Function]}
+          >
+            <RadioGroup.Label>
+              Captain America
+            </RadioGroup.Label>
+          </RadioButton>
+          <RadioButton
+            isDisabled={false}
+            isSelected={false}
+            onSelect={[Function]}
+          >
+            <RadioGroup.Label>
+              Iron Man
+            </RadioGroup.Label>
+          </RadioButton>
+          <RadioButton
+            isDisabled={false}
+            isSelected={false}
+            onSelect={[Function]}
+          >
+            <RadioGroup.Label>
+              Thor
+            </RadioGroup.Label>
+          </RadioButton>
+        </RadioGroup>
+      }
+      index={2}
+      isLastTab={false}
+      isOpen={true}
+      isProgressive={false}
+      isSelected={false}
+      key="2"
+      onSelect={[Function]}
+      style={
+        Object {
+          "height": "100px",
+          "width": "200px",
+        }
+      }
+    >
+      <Tabs.Title>
+        <RadioGroup
+          selectedIndex={1}
+        >
+          <RadioButton
+            isDisabled={false}
+            isSelected={false}
+            onSelect={[Function]}
+          >
+            <RadioGroup.Label>
+              Captain America
+            </RadioGroup.Label>
+          </RadioButton>
+          <RadioButton
+            isDisabled={false}
+            isSelected={false}
+            onSelect={[Function]}
+          >
+            <RadioGroup.Label>
+              Iron Man
+            </RadioGroup.Label>
+          </RadioButton>
+          <RadioButton
+            isDisabled={false}
+            isSelected={false}
+            onSelect={[Function]}
+          >
+            <RadioGroup.Label>
+              Thor
+            </RadioGroup.Label>
+          </RadioButton>
+        </RadioGroup>
+      </Tabs.Title>
+      Three content
+    </Tabs.Tab>
+    <Tabs.Tab
+      Title="Four"
+      index={3}
+      isDisabled={true}
+      isLastTab={true}
+      isOpen={true}
+      isProgressive={false}
+      isSelected={false}
+      key="3"
+      onSelect={[Function]}
+      style={
+        Object {
+          "height": "100px",
+          "width": "200px",
+        }
+      }
+    >
+      <Tabs.Title>
+        Four
+      </Tabs.Title>
+      Four content
+    </Tabs.Tab>
+  </ul>
+  <div
+    className="lucid-Tabs-content"
+  >
+    <Tabs.Title>
+      One
+      <br />
+      <Button
+        hasOnlyIcon={false}
+        isActive={false}
+        isDisabled={false}
+        onClick={[Function]}
+        type="button"
+      >
+        Button
+      </Button>
+    </Tabs.Title>
+    One content
+  </div>
+</div>
+`;
+
+exports[`Tabs [common] example testing should match snapshot(s) for 04-tab-as-prop 1`] = `
+<div
+  className="lucid-Tabs"
+>
+  <ul
+    className="lucid-Tabs-bar lucid-Tabs-variable-width"
+  >
+    <Tabs.Tab
+      Title="Bert"
+      index={0}
+      isLastTab={false}
+      isOpen={true}
+      isProgressive={false}
+      isSelected={true}
+      key="0"
+      onSelect={[Function]}
+    >
+      Bert
+    </Tabs.Tab>
+    <Tabs.Tab
+      Title="Ernie"
+      index={1}
+      isLastTab={true}
+      isOpen={true}
+      isProgressive={false}
+      isSelected={false}
+      key="1"
+      onSelect={[Function]}
+    >
+      Ernie
+    </Tabs.Tab>
+  </ul>
+  <div
+    className="lucid-Tabs-content"
+  >
+    Bert
+  </div>
+</div>
+`;
+
+exports[`Tabs [common] example testing should match snapshot(s) for 05-full-width 1`] = `
+<div
+  className="lucid-Tabs"
+>
+  <ul
+    className="lucid-Tabs-bar"
+  >
+    <Tabs.Tab
+      Title="One"
+      index={0}
+      isLastTab={false}
+      isOpen={true}
+      isProgressive={false}
+      isSelected={true}
+      key="0"
+      onSelect={[Function]}
+    >
+      <Tabs.Title>
+        One
+      </Tabs.Title>
+      One content
+    </Tabs.Tab>
+    <Tabs.Tab
+      Title="Two"
+      index={1}
+      isLastTab={false}
+      isOpen={true}
+      isProgressive={false}
+      isSelected={false}
+      key="1"
+      onSelect={[Function]}
+    >
+      <Tabs.Title>
+        Two
+      </Tabs.Title>
+      Two content
+    </Tabs.Tab>
+    <Tabs.Tab
+      Title="Three"
+      index={2}
+      isLastTab={true}
+      isOpen={true}
+      isProgressive={false}
+      isSelected={false}
+      key="2"
+      onSelect={[Function]}
+    >
+      <Tabs.Title>
+        Three
+      </Tabs.Title>
+      Three content
+    </Tabs.Tab>
+  </ul>
+  <div
+    className="lucid-Tabs-content"
+  >
+    <Tabs.Title>
+      One
+    </Tabs.Title>
+    One content
+  </div>
+</div>
+`;
+
+exports[`Tabs [common] example testing should match snapshot(s) for 06-variable-width 1`] = `
+<div
+  className="lucid-Tabs"
+>
+  <ul
+    className="lucid-Tabs-bar lucid-Tabs-variable-width"
+  >
+    <Tabs.Tab
+      Title="One"
+      index={0}
+      isLastTab={false}
+      isOpen={true}
+      isProgressive={false}
+      isSelected={true}
+      key="0"
+      onSelect={[Function]}
+      style={
+        Object {
+          "width": "100px",
+        }
+      }
+    >
+      <Tabs.Title>
+        One
+      </Tabs.Title>
+      One content
+    </Tabs.Tab>
+    <Tabs.Tab
+      Title="Two"
+      index={1}
+      isLastTab={false}
+      isOpen={true}
+      isProgressive={false}
+      isSelected={false}
+      key="1"
+      onSelect={[Function]}
+      style={
+        Object {
+          "width": "100px",
+        }
+      }
+    >
+      <Tabs.Title>
+        Two
+      </Tabs.Title>
+      Two content
+    </Tabs.Tab>
+    <Tabs.Tab
+      Title="Three"
+      index={2}
+      isLastTab={true}
+      isOpen={true}
+      isProgressive={false}
+      isSelected={false}
+      key="2"
+      onSelect={[Function]}
+      style={
+        Object {
+          "width": "100px",
+        }
+      }
+    >
+      <Tabs.Title>
+        Three
+      </Tabs.Title>
+      Three content
+    </Tabs.Tab>
+  </ul>
+  <div
+    className="lucid-Tabs-content"
+  >
+    <Tabs.Title>
+      One
+    </Tabs.Title>
+    One content
+  </div>
+</div>
+`;
+
+exports[`Tabs [common] example testing should match snapshot(s) for 07-progression 1`] = `
+<div
+  className="lucid-Tabs"
+>
+  <ul
+    className="lucid-Tabs-bar lucid-Tabs-variable-width"
+  >
+    <Tabs.Tab
+      Title="One"
+      index={0}
+      isLastTab={false}
+      isOpen={false}
+      isProgressive={true}
+      isSelected={true}
+      key="0"
+      onSelect={[Function]}
+    >
+      One content
+    </Tabs.Tab>
+    <Tabs.Tab
+      Title="Two"
+      index={1}
+      isLastTab={false}
+      isOpen={false}
+      isProgressive={true}
+      isSelected={false}
+      key="1"
+      onSelect={[Function]}
+    >
+      Two content
+    </Tabs.Tab>
+    <Tabs.Tab
+      Title="Three"
+      index={2}
+      isLastTab={false}
+      isOpen={false}
+      isProgressive={true}
+      isSelected={false}
+      key="2"
+      onSelect={[Function]}
+    >
+      Three content
+    </Tabs.Tab>
+    <Tabs.Tab
+      Title="Disabled"
+      index={3}
+      isDisabled={true}
+      isLastTab={false}
+      isOpen={false}
+      isProgressive={true}
+      isSelected={false}
+      key="3"
+      onSelect={[Function]}
+    >
+      Disabled Content
+    </Tabs.Tab>
+    <Tabs.Tab
+      Title="Five"
+      index={4}
+      isDisabled={true}
+      isLastTab={true}
+      isOpen={false}
+      isProgressive={true}
+      isSelected={false}
+      key="4"
+      onSelect={[Function]}
+    >
+      Four content
+    </Tabs.Tab>
+  </ul>
+  <div
+    className="lucid-Tabs-content"
+  >
+    One content
+  </div>
+</div>
+`;
+
+exports[`Tabs [common] example testing should match snapshot(s) for 08-progression-variable-width 1`] = `
+<div
+  className="lucid-Tabs"
+>
+  <ul
+    className="lucid-Tabs-bar lucid-Tabs-variable-width"
+  >
+    <Tabs.Tab
+      Title="One"
+      index={0}
+      isLastTab={false}
+      isOpen={false}
+      isProgressive={true}
+      isSelected={true}
+      key="0"
+      onSelect={[Function]}
+      style={
+        Object {
+          "width": "100px",
+        }
+      }
+    >
+      One content
+    </Tabs.Tab>
+    <Tabs.Tab
+      Title="Two"
+      index={1}
+      isLastTab={false}
+      isOpen={false}
+      isProgressive={true}
+      isSelected={false}
+      key="1"
+      onSelect={[Function]}
+      style={
+        Object {
+          "width": "100px",
+        }
+      }
+    >
+      Two content
+    </Tabs.Tab>
+    <Tabs.Tab
+      Title="Three"
+      index={2}
+      isLastTab={false}
+      isOpen={false}
+      isProgressive={true}
+      isSelected={false}
+      key="2"
+      onSelect={[Function]}
+      style={
+        Object {
+          "width": "100px",
+        }
+      }
+    >
+      Three content
+    </Tabs.Tab>
+    <Tabs.Tab
+      Title="Disabled"
+      index={3}
+      isDisabled={true}
+      isLastTab={false}
+      isOpen={false}
+      isProgressive={true}
+      isSelected={false}
+      key="3"
+      onSelect={[Function]}
+      style={
+        Object {
+          "width": "100px",
+        }
+      }
+    >
+      Disabled Content
+    </Tabs.Tab>
+    <Tabs.Tab
+      Title="Five"
+      index={4}
+      isDisabled={true}
+      isLastTab={true}
+      isOpen={false}
+      isProgressive={true}
+      isSelected={false}
+      key="4"
+      onSelect={[Function]}
+      style={
+        Object {
+          "width": "100px",
+        }
+      }
+    >
+      Four content
+    </Tabs.Tab>
+  </ul>
+  <div
+    className="lucid-Tabs-content"
+  >
+    One content
+  </div>
+</div>
+`;
+
+exports[`Tabs [common] example testing should match snapshot(s) for 09-with-count 1`] = `
+<div
+  className="lucid-Tabs"
+>
+  <ul
+    className="lucid-Tabs-bar lucid-Tabs-variable-width"
+  >
+    <Tabs.Tab
+      Title="One"
+      count={12}
+      index={0}
+      isLastTab={false}
+      isOpen={true}
+      isProgressive={false}
+      isSelected={true}
+      key="0"
+      onSelect={[Function]}
+    >
+      <Tabs.Title>
+        One
+      </Tabs.Title>
+      One content
+    </Tabs.Tab>
+    <Tabs.Tab
+      Title="Two"
+      count={15}
+      index={1}
+      isLastTab={false}
+      isOpen={true}
+      isProgressive={false}
+      isSelected={false}
+      key="1"
+      onSelect={[Function]}
+    >
+      <Tabs.Title>
+        Two
+      </Tabs.Title>
+      Two content
+    </Tabs.Tab>
+    <Tabs.Tab
+      Title="Three"
+      count={7}
+      index={2}
+      isLastTab={false}
+      isOpen={true}
+      isProgressive={false}
+      isSelected={false}
+      key="2"
+      onSelect={[Function]}
+    >
+      <Tabs.Title>
+        Three
+      </Tabs.Title>
+      Three content
+    </Tabs.Tab>
+    <Tabs.Tab
+      Title="Four"
+      count={3}
+      index={3}
+      isDisabled={true}
+      isLastTab={false}
+      isOpen={true}
+      isProgressive={false}
+      isSelected={false}
+      key="3"
+      onSelect={[Function]}
+    >
+      <Tabs.Title>
+        Four
+      </Tabs.Title>
+      Four content
+    </Tabs.Tab>
+    <Tabs.Tab
+      Title="Five"
+      count={0}
+      index={4}
+      isDisabled={true}
+      isLastTab={true}
+      isOpen={true}
+      isProgressive={false}
+      isSelected={false}
+      key="4"
+      onSelect={[Function]}
+    >
+      <Tabs.Title>
+        Five
+      </Tabs.Title>
+      Five content
+    </Tabs.Tab>
+  </ul>
+  <div
+    className="lucid-Tabs-content"
+  >
+    <Tabs.Title>
+      One
+    </Tabs.Title>
+    One content
+  </div>
+</div>
+`;
+
+exports[`Tabs [common] example testing should match snapshot(s) for 09-with-count 2`] = `
+<div
+  className="lucid-Tabs"
+>
+  <ul
+    className="lucid-Tabs-bar lucid-Tabs-variable-width"
+  >
+    <Tabs.Tab
+      Title="One"
+      count={1231321}
+      index={0}
+      isLastTab={false}
+      isOpen={true}
+      isProgressive={false}
+      isSelected={true}
+      isVariableCountWidth={true}
+      key="0"
+      onSelect={[Function]}
+    >
+      <Tabs.Title>
+        One
+      </Tabs.Title>
+      One content
+    </Tabs.Tab>
+    <Tabs.Tab
+      Title="Two"
+      count={6546541612}
+      index={1}
+      isLastTab={false}
+      isOpen={true}
+      isProgressive={false}
+      isSelected={false}
+      isVariableCountWidth={true}
+      key="1"
+      onSelect={[Function]}
+    >
+      <Tabs.Title>
+        Two
+      </Tabs.Title>
+      Two content
+    </Tabs.Tab>
+    <Tabs.Tab
+      Title="Three"
+      count={7}
+      index={2}
+      isLastTab={false}
+      isOpen={true}
+      isProgressive={false}
+      isSelected={false}
+      isVariableCountWidth={true}
+      key="2"
+      onSelect={[Function]}
+    >
+      <Tabs.Title>
+        Three
+      </Tabs.Title>
+      Three content
+    </Tabs.Tab>
+    <Tabs.Tab
+      Title="Four"
+      count={123}
+      index={3}
+      isDisabled={true}
+      isLastTab={true}
+      isOpen={true}
+      isProgressive={false}
+      isSelected={false}
+      isVariableCountWidth={true}
+      key="3"
+      onSelect={[Function]}
+    >
+      <Tabs.Title>
+        Four
+      </Tabs.Title>
+      Four content
+    </Tabs.Tab>
+  </ul>
+  <div
+    className="lucid-Tabs-content"
+  >
+    <Tabs.Title>
+      One
+    </Tabs.Title>
+    One content
+  </div>
+</div>
+`;
+
+exports[`Tabs [common] example testing should match snapshot(s) for 10-floating 1`] = `
+<div
+  className="lucid-Tabs"
+>
+  <ul
+    className="lucid-Tabs-bar lucid-Tabs-variable-width lucid-Tabs-floating"
+  >
+    <Tabs.Tab
+      Title="One"
+      count={12}
+      index={0}
+      isLastTab={false}
+      isOpen={true}
+      isProgressive={false}
+      isSelected={true}
+      key="0"
+      onSelect={[Function]}
+    >
+      <Tabs.Title>
+        One
+      </Tabs.Title>
+      One content
+    </Tabs.Tab>
+    <Tabs.Tab
+      Title="Two"
+      count={15}
+      index={1}
+      isLastTab={false}
+      isOpen={true}
+      isProgressive={false}
+      isSelected={false}
+      key="1"
+      onSelect={[Function]}
+    >
+      <Tabs.Title>
+        Two
+      </Tabs.Title>
+      Two content
+    </Tabs.Tab>
+    <Tabs.Tab
+      Title="Three"
+      count={7}
+      index={2}
+      isLastTab={false}
+      isOpen={true}
+      isProgressive={false}
+      isSelected={false}
+      key="2"
+      onSelect={[Function]}
+    >
+      <Tabs.Title>
+        Three
+      </Tabs.Title>
+      Three content
+    </Tabs.Tab>
+    <Tabs.Tab
+      Title="Three"
+      count={3}
+      index={3}
+      isDisabled={true}
+      isLastTab={true}
+      isOpen={true}
+      isProgressive={false}
+      isSelected={false}
+      key="3"
+      onSelect={[Function]}
+    >
+      <Tabs.Title>
+        Three
+      </Tabs.Title>
+      Three content
+    </Tabs.Tab>
+  </ul>
+  <div
+    className="lucid-Tabs-content"
+  >
+    <Tabs.Title>
+      One
+    </Tabs.Title>
+    One content
+  </div>
+</div>
+`;
