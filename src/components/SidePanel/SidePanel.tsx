@@ -28,9 +28,9 @@ SidePanelHeader.propTypes = {
 	`,
 };
 
-export interface ISidePanelProps extends IOverlayProps {
+export interface ISidePanelProps extends Partial<IOverlayProps> {
 	/** Alternative to using `<SidePanel.Header>`. */
-	Header?: React.ReactNode & { props: StandardProps };
+	Header?: string | React.ReactNode & { props: StandardProps };
 
 	/** Controls the expanded/collapsed state as a boolean prop. */
 	isExpanded: boolean;

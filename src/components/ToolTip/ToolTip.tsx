@@ -10,7 +10,7 @@ import {
 	findTypes,
 	omitProps,
 } from '../../util/component-types';
-import { buildHybridComponent } from '../../util/state-management';
+import { buildModernHybridComponent } from '../../util/state-management';
 
 const cx = lucidClassNames.bind('&-ToolTip');
 const flyOutCx = cx.bind('&-FlyOut');
@@ -142,22 +142,16 @@ class ToolTip extends React.Component<IToolTipProps, IToolTipState> {
 	static Target = ToolTipTarget;
 	static Body = ToolTipBody;
 
-	static definition = {
-		statics: {
-			reducers,
-			Title: ToolTipTitle,
-			Target: ToolTipTarget,
-			Body: ToolTipBody,
-			peek: {
-				description: `
+	static peek = {
+		description: `
 				A utility component that creates a transient message anchored to
 				another component.
 			`,
-				notes: {
-					overview: `
+		notes: {
+			overview: `
 					A text popup shown on hover.
 				`,
-					intendedUse: `
+			intendedUse: `
 					Use to provide an explanation for a button, text, or an operation. Often used in conjunction with \`HelpIcon\`.
 										
 					**Styling notes**
@@ -166,13 +160,11 @@ class ToolTip extends React.Component<IToolTipProps, IToolTipState> {
 					- Tooltip titles should fit on a single line and not wrap.
 					- Use black tooltips in most interactions. White tooltips are reserved for use within charts, for example \`LineChart\`.
 				`,
-					technicalRecommendations: `
+			technicalRecommendations: `
 				`,
-				},
-				categories: ['communication'],
-				madeFrom: ['ContextMenu'],
-			},
 		},
+		categories: ['communication'],
+		madeFrom: ['ContextMenu'],
 	};
 
 	static reducers = reducers;
@@ -401,5 +393,10 @@ class ToolTip extends React.Component<IToolTipProps, IToolTipState> {
 	}
 }
 
-export default buildHybridComponent(ToolTip);
+export default buildModernHybridComponent<
+	IToolTipProps,
+	IToolTipState,
+	typeof ToolTip
+>(ToolTip, { reducers });
+
 export { ToolTip as ToolTipDumb };

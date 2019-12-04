@@ -9,13 +9,13 @@ import {
 	StandardProps,
 } from '../../util/component-types';
 import reducers from './ButtonGroup.reducers';
-import { buildHybridComponent } from '../../util/state-management';
+import { buildModernHybridComponent } from '../../util/state-management';
 
 const cx = lucidClassNames.bind('&-ButtonGroup');
 
 const { any, func, arrayOf, number } = PropTypes;
 
-const ButtonGroupButton = (_props: IButtonProps): null => null;
+const ButtonGroupButton = (_props: Partial<IButtonProps>): null => null;
 ButtonGroupButton.displayName = 'ButtonGroup.Button';
 ButtonGroupButton.peek = {
 	description: `
@@ -51,20 +51,14 @@ class ButtonGroup extends React.Component<
 > {
 	static displayName = 'ButtonGroup';
 
-	static definition = {
-		statics: {
-			reducers,
-			Button: ButtonGroupButton,
-			peek: {
-				description: `
-				Button groups allow you to pair buttons together to form a seamless
-				cluster.  Any props not explicitly called out are spread on to the root
-				component.
-			`,
-				categories: ['controls', 'buttons'],
-				madeFrom: ['Button'],
-			},
-		},
+	static peek = {
+		description: `
+			Button groups allow you to pair buttons together to form a seamless
+			cluster.  Any props not explicitly called out are spread on to the root
+			component.
+		`,
+		categories: ['controls', 'buttons'],
+		madeFrom: ['Button'],
 	};
 
 	static Button = ButtonGroupButton;
@@ -162,5 +156,10 @@ class ButtonGroup extends React.Component<
 	}
 }
 
-export default buildHybridComponent(ButtonGroup);
+export default buildModernHybridComponent<
+	IButtonGroupProps,
+	IButtonGroupState,
+	typeof ButtonGroup
+>(ButtonGroup, { reducers });
+
 export { ButtonGroup as ButtonGroupDumb };
