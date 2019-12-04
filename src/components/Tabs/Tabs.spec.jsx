@@ -1,9 +1,9 @@
+import _ from 'lodash';
 import sinon from 'sinon';
 import React from 'react';
 import assert from 'assert';
 import { shallow } from 'enzyme';
 import { common } from '../../util/generic-tests';
-
 import { TabsDumb as Tabs } from './Tabs';
 
 describe('Tabs', () => {
@@ -157,13 +157,14 @@ describe('Tabs', () => {
 				assert(onSelect.called);
 				assert.equal(selectedIndex, 1);
 				assert.equal(meta.event, clickEvent);
-				assert.deepEqual(meta.props, {
+				assert.deepEqual(_.omit(meta.props, 'onSelect'), {
 					isLastTab: true,
 					isOpen: true,
 					isProgressive: false,
 					isSelected: false,
 					Title: '',
 					children: 'Two',
+					index: 1,
 				});
 			});
 

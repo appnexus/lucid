@@ -8,40 +8,7 @@ export default createClass({
 			<div>
 				<div>
 					<Banner style={{ marginBottom: 8 }}>
-						<div>
-							Sit totam voluptas error dolorum ullam Quo ipsam esse amet
-							mollitia consequuntur Cumque cum nisi porro cumque sit nisi
-							Facilis placeat suscipit earum blanditiis eveniet Earum dolor
-							voluptates perferendis quis
-						</div>
-						<div>
-							Adipisicing culpa atque totam quidem dicta consequatur fugiat
-							quaerat Facilis cupiditate amet nam in perferendis Veritatis iusto
-							molestiae illum doloribus deserunt Odit autem obcaecati dolores ad
-							incidunt? Ipsa eveniet modi.
-						</div>
-						<div>
-							Consectetur eos maiores veniam maiores incidunt dolores Quas magni
-							velit ullam necessitatibus atque. Animi harum aliquam totam quod
-							unde Deserunt molestiae consequatur suscipit debitis sed? At sit
-							nostrum ratione deserunt?
-						</div>
-						<div>
-							Lorem sit explicabo vitae illum labore Nostrum inventore dolor
-							nisi deserunt voluptatem Voluptas itaque nesciunt omnis
-							necessitatibus asperiores! Eius error ab consequatur
-							necessitatibus repudiandae quibusdam Odio consequuntur at
-							necessitatibus at
-						</div>
-						<div>
-							Dolor nihil delectus numquam laudantium nisi Minus accusantium hic
-							consequatur accusantium assumenda illum quod! Praesentium qui vel
-							nemo ea reiciendis. Accusantium officiis molestiae delectus
-							nesciunt aperiam Fugit ipsam esse accusamus.
-						</div>
-						<div>
-							<a href='#'>Click Me</a>
-						</div>
+						Default
 					</Banner>
 					<Banner isCloseable={false} style={{ marginBottom: 8 }}>
 						Default -- No Close {String.fromCharCode(0x00d7)}
@@ -99,19 +66,60 @@ export default createClass({
 
 				<div>
 					<Banner style={{ marginBottom: 8 }} isFilled={false}>
-						Default -- Outline Only
+					<div>
+							Sit totam voluptas error dolorum ullam Quo ipsam esse amet
+							mollitia consequuntur Cumque cum nisi porro cumque sit nisi
+							Facilis placeat suscipit earum blanditiis eveniet Earum dolor
+							voluptates perferendis quis
+						</div>
+						<div>
+							Adipisicing culpa atque totam quidem dicta consequatur fugiat
+							quaerat Facilis cupiditate amet nam in perferendis Veritatis iusto
+							molestiae illum doloribus deserunt Odit autem obcaecati dolores ad
+							incidunt? Ipsa eveniet modi.
+						</div>
+						<div>
+							Lorem sit explicabo vitae illum labore Nostrum inventore dolor
+							nisi deserunt voluptatem Voluptas itaque nesciunt omnis
+							necessitatibus asperiores! Eius error ab consequatur
+							necessitatibus repudiandae quibusdam Odio consequuntur at
+							necessitatibus at
+						</div>
+						<div>
+							<a href='#'>Click Me</a>
+						</div>
 					</Banner>
 					<Banner kind='success' style={{ marginBottom: 8 }} isFilled={false}>
-						Success -- Outline Only
+					<div>
+						Success -- Outline 
+					</div>	
+					<div>
+						Outline banners are for messages with multi-line content.
+					</div>	
 					</Banner>
 					<Banner kind='warning' style={{ marginBottom: 8 }} isFilled={false}>
-						Warning -- Outline Only
+					<div>
+						Warning -- Outline 
+					</div>	
+					<div>
+						Outline banners are for messages with multi-line content.
+					</div>
 					</Banner>
 					<Banner kind='danger' style={{ marginBottom: 8 }} isFilled={false}>
-						Danger -- Outline Only
+					<div>
+						Danger -- Outline 
+					</div>	
+					<div>
+						Outline banners are for messages with multi-line content.
+					</div>
 					</Banner>
 					<Banner kind='info' style={{ marginBottom: 8 }} isFilled={false}>
-						Info -- Outline Only
+					<div>
+						Info -- Outline 
+					</div>	
+					<div>
+						Outline banners are for messages with multi-line content.
+					</div>
 					</Banner>
 					<Banner
 						style={{ marginBottom: 8 }}
@@ -119,7 +127,12 @@ export default createClass({
 						kind='danger'
 						isFilled={false}
 					>
-						Has Icon -- Outline Only
+					<div>
+						Has Icon -- Outline 
+					</div>	
+					<div>
+						Outline banners are for messages with multi-line content.
+					</div>
 					</Banner>
 				</div>
 			</div>

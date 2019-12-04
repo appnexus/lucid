@@ -4,6 +4,6 @@ import { BarChart } from '../../../index';
 
 export default createClass({
 	render() {
-		return <BarChart data={[]} yAxisTitle='Revenue' />;
+		return <BarChart width={750} data={[]} yAxisTitle='Revenue' />;
 	},
 });

@@ -2,16 +2,16 @@ import _ from 'lodash';
 import React from 'react';
 import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
-import { FC, omitProps } from '../../../util/component-types';
+import { omitProps } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-LockedIcon');
 
 interface ILockedIconProps extends IIconProps {}
 
-export const LockedIcon: FC<ILockedIconProps> = ({
+export const LockedIcon = ({
 	className,
 	...passThroughs
-}): React.ReactElement => {
+}: ILockedIconProps) => {
 	return (
 		<Icon
 			{...omitProps(
@@ -39,5 +39,6 @@ LockedIcon.peek = {
 	madeFrom: ['Icon'],
 };
 LockedIcon.propTypes = iconPropTypes;
+LockedIcon.defaultProps = Icon.defaultProps;
 
 export default LockedIcon;

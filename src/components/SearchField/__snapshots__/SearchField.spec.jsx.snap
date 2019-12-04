@@ -22,8 +22,15 @@ exports[`SearchField [common] example testing should match snapshot(s) for 1.def
     className="lucid-SearchField-Icon-container"
   >
     <SearchIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-SearchField-Icon"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
       size={12}
+      viewBox="0 0 16 16"
     />
   </div>
 </div>
@@ -51,8 +58,15 @@ exports[`SearchField [common] example testing should match snapshot(s) for 2.int
     className="lucid-SearchField-Icon-container"
   >
     <SearchIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-SearchField-Icon"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
       size={12}
+      viewBox="0 0 16 16"
     />
   </div>
 </div>
@@ -81,8 +95,15 @@ exports[`SearchField [common] example testing should match snapshot(s) for 3.pla
     className="lucid-SearchField-Icon-container"
   >
     <SearchIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-SearchField-Icon"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
       size={12}
+      viewBox="0 0 16 16"
     />
   </div>
 </div>
@@ -110,8 +131,15 @@ exports[`SearchField [common] example testing should match snapshot(s) for 4.dis
     className="lucid-SearchField-Icon-container"
   >
     <SearchIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-SearchField-Icon"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
       size={12}
+      viewBox="0 0 16 16"
     />
   </div>
 </div>
@@ -139,7 +167,15 @@ exports[`SearchField [common] example testing should match snapshot(s) for 5.cus
     className="lucid-SearchField-Icon-container"
   >
     <LoadingIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-SearchField-Icon"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
     />
   </div>
 </div>
@@ -153,7 +189,6 @@ exports[`SearchField [common] example testing should match snapshot(s) for 6.cus
     debounceLevel={500}
     isDisabled={false}
     isMultiLine={false}
-    key=".0"
     lazyLevel={1000}
     onBlur={[Function]}
     onChange={[Function]}
@@ -168,8 +203,15 @@ exports[`SearchField [common] example testing should match snapshot(s) for 6.cus
     className="lucid-SearchField-Icon-container"
   >
     <SearchIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-SearchField-Icon"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
       size={12}
+      viewBox="0 0 16 16"
     />
   </div>
 </div>
@@ -200,8 +242,15 @@ exports[`SearchField [common] example testing should match snapshot(s) for 7.val
     className="lucid-SearchField-Icon-container"
   >
     <SearchIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-SearchField-Icon"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
       size={12}
+      viewBox="0 0 16 16"
     />
   </div>
 </div>
@@ -229,8 +278,15 @@ exports[`SearchField [common] example testing should match snapshot(s) for 8.pro
     className="lucid-SearchField-Icon-container"
   >
     <SearchIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-SearchField-Icon lucid-SearchField-Icon-active"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
       size={12}
+      viewBox="0 0 16 16"
     />
   </div>
 </div>
@@ -259,8 +315,15 @@ exports[`SearchField [common] example testing should match snapshot(s) for 8.pro
     className="lucid-SearchField-Icon-container"
   >
     <SearchIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-SearchField-Icon"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
       size={12}
+      viewBox="0 0 16 16"
     />
   </div>
 </div>
@@ -288,8 +351,15 @@ exports[`SearchField [common] example testing should match snapshot(s) for 8.pro
     className="lucid-SearchField-Icon-container"
   >
     <SearchIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-SearchField-Icon"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
       size={12}
+      viewBox="0 0 16 16"
     />
   </div>
 </div>
@@ -317,8 +387,15 @@ exports[`SearchField [common] example testing should match snapshot(s) for 8.pro
     className="lucid-SearchField-Icon-container"
   >
     <SearchIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-SearchField-Icon"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
       size={12}
+      viewBox="0 0 16 16"
     />
   </div>
 </div>
@@ -346,7 +423,15 @@ exports[`SearchField [common] example testing should match snapshot(s) for 8.pro
     className="lucid-SearchField-Icon-container"
   >
     <LoadingIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-SearchField-Icon"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
     />
   </div>
 </div>
@@ -374,7 +459,15 @@ exports[`SearchField [common] example testing should match snapshot(s) for 8.pro
     className="lucid-SearchField-Icon-container"
   >
     <LoadingIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-SearchField-Icon lucid-SearchField-Icon-active"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
     />
   </div>
 </div>
@@ -388,7 +481,6 @@ exports[`SearchField [common] example testing should match snapshot(s) for 8.pro
     debounceLevel={500}
     isDisabled={false}
     isMultiLine={false}
-    key=".0"
     lazyLevel={1000}
     onBlur={[Function]}
     onChange={[Function]}
@@ -403,8 +495,15 @@ exports[`SearchField [common] example testing should match snapshot(s) for 8.pro
     className="lucid-SearchField-Icon-container"
   >
     <SearchIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-SearchField-Icon lucid-SearchField-Icon-active"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
       size={12}
+      viewBox="0 0 16 16"
     />
   </div>
 </div>
@@ -437,8 +536,15 @@ exports[`SearchField [common] example testing should match snapshot(s) for 9.deb
     className="lucid-SearchField-Icon-container"
   >
     <SearchIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-SearchField-Icon lucid-SearchField-Icon-active"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
       size={12}
+      viewBox="0 0 16 16"
     />
   </div>
 </div>

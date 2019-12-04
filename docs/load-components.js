@@ -702,7 +702,9 @@ module.exports = [
 	},
 	{
 		name: 'DraggableList',
-		component: getDefaultExport(require('../src/components/DraggableList/DraggableList')),
+		component: getDefaultExport(
+			require('../src/components/DraggableList/DraggableList')
+		),
 		examplesContext: require.context(
 			'../src/components/DraggableList/examples',
 			true,
@@ -1082,12 +1084,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/ToolTip/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/ToolTip/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 	{

@@ -2,16 +2,16 @@ import _ from 'lodash';
 import React from 'react';
 import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
-import { FC, omitProps } from '../../../util/component-types';
+import { omitProps } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-AsteriskIcon');
 
 interface IAsteriskIconProps extends IIconProps {}
 
-export const AsteriskIcon: FC<IAsteriskIconProps> = ({
+export const AsteriskIcon = ({
 	className,
 	...passThroughs
-}): React.ReactElement => {
+}: IAsteriskIconProps) => {
 	return (
 		<Icon
 			{...omitProps(
@@ -38,5 +38,6 @@ AsteriskIcon.peek = {
 	madeFrom: ['Icon'],
 };
 AsteriskIcon.propTypes = iconPropTypes;
+AsteriskIcon.defaultProps = Icon.defaultProps;
 
 export default AsteriskIcon;

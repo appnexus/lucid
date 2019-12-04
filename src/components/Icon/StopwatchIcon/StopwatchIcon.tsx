@@ -2,16 +2,16 @@ import _ from 'lodash';
 import React from 'react';
 import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
-import { FC, omitProps } from '../../../util/component-types';
+import { omitProps } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-StopwatchIcon');
 
 interface IStopwatchIconProps extends IIconProps {}
 
-export const StopwatchIcon: FC<IStopwatchIconProps> = ({
+export const StopwatchIcon = ({
 	className,
 	...passThroughs
-}): React.ReactElement => {
+}: IStopwatchIconProps) => {
 	return (
 		<Icon
 			{...omitProps(
@@ -40,5 +40,6 @@ StopwatchIcon.peek = {
 	madeFrom: ['Icon'],
 };
 StopwatchIcon.propTypes = iconPropTypes;
+StopwatchIcon.defaultProps = Icon.defaultProps;
 
 export default StopwatchIcon;

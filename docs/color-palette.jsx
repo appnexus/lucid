@@ -316,9 +316,30 @@ const ColorPalette = createClass({
 						})}
 					</div>
 				))}
+
+				<h2 style={{ margin: '2rem 0 1rem 0' }}>Chart Color Matrix</h2>
+				<div
+					style={{
+						display: 'grid',
+						gridTemplateRows: 'repeat(5, 1fr)',
+						gridAutoFlow: 'column',
+						height: 250,
+						gridGap: 15,
+					}}
+				>
+					{_.map(_.times(7 * 5), n => (
+						<div
+							className={cx(
+								`&-color-chart-${Math.floor(n / 5)}${shades[n % 5]}`
+							)}
+						/>
+					))}
+				</div>
 			</div>
 		);
 	},
 });
+
+const shades = ['-lightest', '-light', '', '-dark', '-darkest'];
 
 export default ColorPalette;

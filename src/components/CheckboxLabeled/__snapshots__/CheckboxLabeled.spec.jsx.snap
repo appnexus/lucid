@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CheckboxLabeled [common] example testing should match snapshot(s) for interactive 1`] = `
+exports[`CheckboxLabeled [common] example testing should match snapshot(s) for 0.interactive 1`] = `
 <label
   className="lucid-CheckboxLabeled"
   style={
@@ -29,7 +29,7 @@ exports[`CheckboxLabeled [common] example testing should match snapshot(s) for i
 </label>
 `;
 
-exports[`CheckboxLabeled [common] example testing should match snapshot(s) for interactive 2`] = `
+exports[`CheckboxLabeled [common] example testing should match snapshot(s) for 0.interactive 2`] = `
 <label
   className="lucid-CheckboxLabeled"
   style={
@@ -58,7 +58,7 @@ exports[`CheckboxLabeled [common] example testing should match snapshot(s) for i
 </label>
 `;
 
-exports[`CheckboxLabeled [common] example testing should match snapshot(s) for interactive 3`] = `
+exports[`CheckboxLabeled [common] example testing should match snapshot(s) for 0.interactive 3`] = `
 <label
   className="lucid-CheckboxLabeled"
   style={
@@ -87,7 +87,7 @@ exports[`CheckboxLabeled [common] example testing should match snapshot(s) for i
 </label>
 `;
 
-exports[`CheckboxLabeled [common] example testing should match snapshot(s) for interactive 4`] = `
+exports[`CheckboxLabeled [common] example testing should match snapshot(s) for 0.interactive 4`] = `
 <label
   className="lucid-CheckboxLabeled"
   style={
@@ -105,18 +105,18 @@ exports[`CheckboxLabeled [common] example testing should match snapshot(s) for i
     onSelect={[Function]}
   >
     <CheckboxLabeled.Label>
-      Polaroid four dollar toast bespoke succulents. Kickstarter truffaut PBR&B fashion axe, lyft actually viral everyday carry iPhone tote bag mumblecore umami. Skateboard you probably haven't heard of them before they sold out, edison bulb paleo poutine jianbing blue bottle mixtape. Normcore farm-to-table coloring book cliche before they sold out. Roof party authentic hoodie paleo next level, bicycle rights selvage you probably haven't heard of them leggings venmo etsy cronut williamsburg. Dreamcatcher vice gastropub austin fam. Actually subway tile kickstarter, messenger bag shabby chic activated charcoal lomo.
+      Salted Caramel
     </CheckboxLabeled.Label>
   </Checkbox>
   <div
     className="lucid-CheckboxLabeled-label"
   >
-    Polaroid four dollar toast bespoke succulents. Kickstarter truffaut PBR&B fashion axe, lyft actually viral everyday carry iPhone tote bag mumblecore umami. Skateboard you probably haven't heard of them before they sold out, edison bulb paleo poutine jianbing blue bottle mixtape. Normcore farm-to-table coloring book cliche before they sold out. Roof party authentic hoodie paleo next level, bicycle rights selvage you probably haven't heard of them leggings venmo etsy cronut williamsburg. Dreamcatcher vice gastropub austin fam. Actually subway tile kickstarter, messenger bag shabby chic activated charcoal lomo.
+    Salted Caramel
   </div>
 </label>
 `;
 
-exports[`CheckboxLabeled [common] example testing should match snapshot(s) for interactive 5`] = `
+exports[`CheckboxLabeled [common] example testing should match snapshot(s) for 0.interactive 5`] = `
 <label
   className="lucid-CheckboxLabeled"
   style={
@@ -134,23 +134,24 @@ exports[`CheckboxLabeled [common] example testing should match snapshot(s) for i
     onSelect={[Function]}
   >
     <CheckboxLabeled.Label>
-      Unicorn helvetica glossier pop-up letterpress snackwave raw denim. Lomo blog tattooed helvetica seitan DIY. Tbh kombucha shabby chic cornhole, microdosing seitan snackwave gastropub celiac. Biodiesel 90's fixie drinking vinegar literally unicorn readymade fap, vape wolf direct trade kickstarter pickled disrupt fashion axe. Heirloom subway tile hell of, austin portland meditation PBR&B tacos raclette. Prism fanny pack banh mi trust fund unicorn, thundercats chicharrones salvia pour-over VHS. Distillery organic pork belly squid.
+      Mint chocolate chip (the best)
     </CheckboxLabeled.Label>
   </Checkbox>
   <div
     className="lucid-CheckboxLabeled-label"
   >
-    Unicorn helvetica glossier pop-up letterpress snackwave raw denim. Lomo blog tattooed helvetica seitan DIY. Tbh kombucha shabby chic cornhole, microdosing seitan snackwave gastropub celiac. Biodiesel 90's fixie drinking vinegar literally unicorn readymade fap, vape wolf direct trade kickstarter pickled disrupt fashion axe. Heirloom subway tile hell of, austin portland meditation PBR&B tacos raclette. Prism fanny pack banh mi trust fund unicorn, thundercats chicharrones salvia pour-over VHS. Distillery organic pork belly squid.
+    Mint chocolate chip (the best)
   </div>
 </label>
 `;
 
-exports[`CheckboxLabeled [common] example testing should match snapshot(s) for interactive 6`] = `
+exports[`CheckboxLabeled [common] example testing should match snapshot(s) for 1.states 1`] = `
 <label
   className="lucid-CheckboxLabeled"
   style={
     Object {
       "marginBottom": "3px",
+      "marginRight": "13px",
     }
   }
 >
@@ -159,22 +160,108 @@ exports[`CheckboxLabeled [common] example testing should match snapshot(s) for i
     isDisabled={false}
     isIndeterminate={false}
     isSelected={false}
-    name="interactive-checkboxes"
     onSelect={[Function]}
   >
     <CheckboxLabeled.Label>
-      Heirloom keffiyeh schlitz cray. Keytar tumblr dreamcatcher art party polaroid, sriracha etsy pinterest typewriter. IPhone ugh williamsburg man bun waistcoat literally paleo direct trade. Taxidermy cold-pressed pabst green juice, freegan tumblr post-ironic everyday carry disrupt distillery. Hell of lumbersexual cliche, whatever tilde raclette pop-up blue bottle skateboard butcher meditation four dollar toast tattooed health goth pinterest. Poutine polaroid YOLO, biodiesel chambray gentrify microdosing kickstarter bushwick humblebrag yr cred intelligentsia you probably haven't heard of them. Blog meditation locavore tousled, edison bulb cronut occupy +1 you probably haven't heard of them echo park distillery chambray.
+      (default props)
     </CheckboxLabeled.Label>
   </Checkbox>
   <div
     className="lucid-CheckboxLabeled-label"
   >
-    Heirloom keffiyeh schlitz cray. Keytar tumblr dreamcatcher art party polaroid, sriracha etsy pinterest typewriter. IPhone ugh williamsburg man bun waistcoat literally paleo direct trade. Taxidermy cold-pressed pabst green juice, freegan tumblr post-ironic everyday carry disrupt distillery. Hell of lumbersexual cliche, whatever tilde raclette pop-up blue bottle skateboard butcher meditation four dollar toast tattooed health goth pinterest. Poutine polaroid YOLO, biodiesel chambray gentrify microdosing kickstarter bushwick humblebrag yr cred intelligentsia you probably haven't heard of them. Blog meditation locavore tousled, edison bulb cronut occupy +1 you probably haven't heard of them echo park distillery chambray.
+    (default props)
   </div>
 </label>
 `;
 
-exports[`CheckboxLabeled [common] example testing should match snapshot(s) for label-as-child 1`] = `
+exports[`CheckboxLabeled [common] example testing should match snapshot(s) for 1.states 2`] = `
+<label
+  className="lucid-CheckboxLabeled lucid-CheckboxLabeled-is-disabled"
+  style={
+    Object {
+      "marginBottom": "3px",
+      "marginRight": "13px",
+    }
+  }
+>
+  <Checkbox
+    className="lucid-CheckboxLabeled-Checkbox"
+    isDisabled={true}
+    isIndeterminate={false}
+    isSelected={false}
+    onSelect={[Function]}
+  >
+    <CheckboxLabeled.Label>
+      Disabled
+    </CheckboxLabeled.Label>
+  </Checkbox>
+  <div
+    className="lucid-CheckboxLabeled-label"
+  >
+    Disabled
+  </div>
+</label>
+`;
+
+exports[`CheckboxLabeled [common] example testing should match snapshot(s) for 1.states 3`] = `
+<label
+  className="lucid-CheckboxLabeled lucid-CheckboxLabeled-is-selected"
+  style={
+    Object {
+      "marginBottom": "3px",
+      "marginRight": "13px",
+    }
+  }
+>
+  <Checkbox
+    className="lucid-CheckboxLabeled-Checkbox"
+    isDisabled={false}
+    isIndeterminate={false}
+    isSelected={true}
+    onSelect={[Function]}
+  >
+    <CheckboxLabeled.Label>
+      Selected
+    </CheckboxLabeled.Label>
+  </Checkbox>
+  <div
+    className="lucid-CheckboxLabeled-label"
+  >
+    Selected
+  </div>
+</label>
+`;
+
+exports[`CheckboxLabeled [common] example testing should match snapshot(s) for 1.states 4`] = `
+<label
+  className="lucid-CheckboxLabeled lucid-CheckboxLabeled-is-disabled lucid-CheckboxLabeled-is-selected"
+  style={
+    Object {
+      "marginBottom": "3px",
+      "marginRight": "13px",
+    }
+  }
+>
+  <Checkbox
+    className="lucid-CheckboxLabeled-Checkbox"
+    isDisabled={true}
+    isIndeterminate={false}
+    isSelected={true}
+    onSelect={[Function]}
+  >
+    <CheckboxLabeled.Label>
+      Disabled & selected
+    </CheckboxLabeled.Label>
+  </Checkbox>
+  <div
+    className="lucid-CheckboxLabeled-label"
+  >
+    Disabled & selected
+  </div>
+</label>
+`;
+
+exports[`CheckboxLabeled [common] example testing should match snapshot(s) for 2.label-as-child 1`] = `
 <label
   className="lucid-CheckboxLabeled"
   style={
@@ -202,7 +289,7 @@ exports[`CheckboxLabeled [common] example testing should match snapshot(s) for l
 </label>
 `;
 
-exports[`CheckboxLabeled [common] example testing should match snapshot(s) for label-as-child 2`] = `
+exports[`CheckboxLabeled [common] example testing should match snapshot(s) for 2.label-as-child 2`] = `
 <label
   className="lucid-CheckboxLabeled"
   style={
@@ -234,7 +321,7 @@ exports[`CheckboxLabeled [common] example testing should match snapshot(s) for l
 </label>
 `;
 
-exports[`CheckboxLabeled [common] example testing should match snapshot(s) for label-as-prop 1`] = `
+exports[`CheckboxLabeled [common] example testing should match snapshot(s) for 3.label-as-prop 1`] = `
 <label
   className="lucid-CheckboxLabeled"
   style={
@@ -258,7 +345,7 @@ exports[`CheckboxLabeled [common] example testing should match snapshot(s) for l
 </label>
 `;
 
-exports[`CheckboxLabeled [common] example testing should match snapshot(s) for label-as-prop 2`] = `
+exports[`CheckboxLabeled [common] example testing should match snapshot(s) for 3.label-as-prop 2`] = `
 <label
   className="lucid-CheckboxLabeled"
   style={
@@ -284,7 +371,7 @@ exports[`CheckboxLabeled [common] example testing should match snapshot(s) for l
 </label>
 `;
 
-exports[`CheckboxLabeled [common] example testing should match snapshot(s) for label-as-prop 3`] = `
+exports[`CheckboxLabeled [common] example testing should match snapshot(s) for 3.label-as-prop 3`] = `
 <label
   className="lucid-CheckboxLabeled"
   style={
@@ -308,7 +395,7 @@ exports[`CheckboxLabeled [common] example testing should match snapshot(s) for l
 </label>
 `;
 
-exports[`CheckboxLabeled [common] example testing should match snapshot(s) for label-as-prop 4`] = `
+exports[`CheckboxLabeled [common] example testing should match snapshot(s) for 3.label-as-prop 4`] = `
 <label
   className="lucid-CheckboxLabeled"
   style={
@@ -332,122 +419,6 @@ exports[`CheckboxLabeled [common] example testing should match snapshot(s) for l
     >
       HTML element in an array
     </span>
-  </div>
-</label>
-`;
-
-exports[`CheckboxLabeled [common] example testing should match snapshot(s) for states 1`] = `
-<label
-  className="lucid-CheckboxLabeled"
-  style={
-    Object {
-      "marginBottom": "3px",
-      "marginRight": "13px",
-    }
-  }
->
-  <Checkbox
-    className="lucid-CheckboxLabeled-Checkbox"
-    isDisabled={false}
-    isIndeterminate={false}
-    isSelected={false}
-    onSelect={[Function]}
-  >
-    <CheckboxLabeled.Label>
-      (default props)
-    </CheckboxLabeled.Label>
-  </Checkbox>
-  <div
-    className="lucid-CheckboxLabeled-label"
-  >
-    (default props)
-  </div>
-</label>
-`;
-
-exports[`CheckboxLabeled [common] example testing should match snapshot(s) for states 2`] = `
-<label
-  className="lucid-CheckboxLabeled lucid-CheckboxLabeled-is-disabled"
-  style={
-    Object {
-      "marginBottom": "3px",
-      "marginRight": "13px",
-    }
-  }
->
-  <Checkbox
-    className="lucid-CheckboxLabeled-Checkbox"
-    isDisabled={true}
-    isIndeterminate={false}
-    isSelected={false}
-    onSelect={[Function]}
-  >
-    <CheckboxLabeled.Label>
-      Disabled
-    </CheckboxLabeled.Label>
-  </Checkbox>
-  <div
-    className="lucid-CheckboxLabeled-label"
-  >
-    Disabled
-  </div>
-</label>
-`;
-
-exports[`CheckboxLabeled [common] example testing should match snapshot(s) for states 3`] = `
-<label
-  className="lucid-CheckboxLabeled lucid-CheckboxLabeled-is-selected"
-  style={
-    Object {
-      "marginBottom": "3px",
-      "marginRight": "13px",
-    }
-  }
->
-  <Checkbox
-    className="lucid-CheckboxLabeled-Checkbox"
-    isDisabled={false}
-    isIndeterminate={false}
-    isSelected={true}
-    onSelect={[Function]}
-  >
-    <CheckboxLabeled.Label>
-      Selected
-    </CheckboxLabeled.Label>
-  </Checkbox>
-  <div
-    className="lucid-CheckboxLabeled-label"
-  >
-    Selected
-  </div>
-</label>
-`;
-
-exports[`CheckboxLabeled [common] example testing should match snapshot(s) for states 4`] = `
-<label
-  className="lucid-CheckboxLabeled lucid-CheckboxLabeled-is-disabled lucid-CheckboxLabeled-is-selected"
-  style={
-    Object {
-      "marginBottom": "3px",
-      "marginRight": "13px",
-    }
-  }
->
-  <Checkbox
-    className="lucid-CheckboxLabeled-Checkbox"
-    isDisabled={true}
-    isIndeterminate={false}
-    isSelected={true}
-    onSelect={[Function]}
-  >
-    <CheckboxLabeled.Label>
-      Disabled & selected
-    </CheckboxLabeled.Label>
-  </Checkbox>
-  <div
-    className="lucid-CheckboxLabeled-label"
-  >
-    Disabled & selected
   </div>
 </label>
 `;

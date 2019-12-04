@@ -2,16 +2,16 @@ import _ from 'lodash';
 import React from 'react';
 import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
-import { FC, omitProps } from '../../../util/component-types';
+import { omitProps } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-ShoppingCartIcon');
 
 interface IShoppingCartIconProps extends IIconProps {}
 
-export const ShoppingCartIcon: FC<IShoppingCartIconProps> = ({
+export const ShoppingCartIcon = ({
 	className,
 	...passThroughs
-}): React.ReactElement => {
+}: IShoppingCartIconProps) => {
 	return (
 		<Icon
 			{...omitProps(
@@ -40,5 +40,6 @@ ShoppingCartIcon.peek = {
 	madeFrom: ['Icon'],
 };
 ShoppingCartIcon.propTypes = iconPropTypes;
+ShoppingCartIcon.defaultProps = Icon.defaultProps;
 
 export default ShoppingCartIcon;

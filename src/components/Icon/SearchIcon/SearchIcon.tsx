@@ -2,16 +2,16 @@ import _ from 'lodash';
 import React from 'react';
 import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
-import { FC, omitProps } from '../../../util/component-types';
+import { omitProps } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-SearchIcon');
 
 interface ISearchIconProps extends IIconProps {}
 
-export const SearchIcon: FC<ISearchIconProps> = ({
+export const SearchIcon = ({
 	className,
 	...passThroughs
-}): React.ReactElement => {
+}: ISearchIconProps) => {
 	return (
 		<Icon
 			{...omitProps(
@@ -39,5 +39,6 @@ SearchIcon.peek = {
 	madeFrom: ['Icon'],
 };
 SearchIcon.propTypes = iconPropTypes;
+SearchIcon.defaultProps = Icon.defaultProps;
 
 export default SearchIcon;

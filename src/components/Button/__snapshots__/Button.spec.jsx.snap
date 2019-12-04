@@ -36,7 +36,16 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
   <span
     className="lucid-Button-content"
   >
-    <CheckIcon />
+    <CheckIcon
+      aspectRatio="xMidYMid meet"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
+    />
     standard
      
   </span>
@@ -58,7 +67,16 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
   <span
     className="lucid-Button-content"
   >
-    <CheckIcon />
+    <CheckIcon
+      aspectRatio="xMidYMid meet"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
+    />
     disabled 
     standard
      
@@ -81,7 +99,16 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
   <span
     className="lucid-Button-content"
   >
-    <CheckIcon />
+    <CheckIcon
+      aspectRatio="xMidYMid meet"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
+    />
   </span>
 </button>
 `;
@@ -123,7 +150,16 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
   <span
     className="lucid-Button-content"
   >
-    <CheckIcon />
+    <CheckIcon
+      aspectRatio="xMidYMid meet"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
+    />
     standard
      
     primary
@@ -146,7 +182,16 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
   <span
     className="lucid-Button-content"
   >
-    <CheckIcon />
+    <CheckIcon
+      aspectRatio="xMidYMid meet"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
+    />
     disabled 
     standard
      
@@ -170,7 +215,16 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
   <span
     className="lucid-Button-content"
   >
-    <CheckIcon />
+    <CheckIcon
+      aspectRatio="xMidYMid meet"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
+    />
   </span>
 </button>
 `;
@@ -212,7 +266,16 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
   <span
     className="lucid-Button-content"
   >
-    <CheckIcon />
+    <CheckIcon
+      aspectRatio="xMidYMid meet"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
+    />
     standard
      
     link
@@ -235,7 +298,16 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
   <span
     className="lucid-Button-content"
   >
-    <CheckIcon />
+    <CheckIcon
+      aspectRatio="xMidYMid meet"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
+    />
     disabled 
     standard
      
@@ -259,7 +331,16 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
   <span
     className="lucid-Button-content"
   >
-    <CheckIcon />
+    <CheckIcon
+      aspectRatio="xMidYMid meet"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
+    />
   </span>
 </button>
 `;
@@ -301,7 +382,16 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
   <span
     className="lucid-Button-content"
   >
-    <CheckIcon />
+    <CheckIcon
+      aspectRatio="xMidYMid meet"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
+    />
     standard
      
     danger
@@ -324,7 +414,16 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
   <span
     className="lucid-Button-content"
   >
-    <CheckIcon />
+    <CheckIcon
+      aspectRatio="xMidYMid meet"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
+    />
     disabled 
     standard
      
@@ -348,7 +447,16 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
   <span
     className="lucid-Button-content"
   >
-    <CheckIcon />
+    <CheckIcon
+      aspectRatio="xMidYMid meet"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
+    />
   </span>
 </button>
 `;
@@ -390,7 +498,16 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
   <span
     className="lucid-Button-content"
   >
-    <CheckIcon />
+    <CheckIcon
+      aspectRatio="xMidYMid meet"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
+    />
     standard
      
     invisible
@@ -413,7 +530,16 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
   <span
     className="lucid-Button-content"
   >
-    <CheckIcon />
+    <CheckIcon
+      aspectRatio="xMidYMid meet"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
+    />
     disabled 
     standard
      
@@ -437,7 +563,16 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
   <span
     className="lucid-Button-content"
   >
-    <CheckIcon />
+    <CheckIcon
+      aspectRatio="xMidYMid meet"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
+    />
   </span>
 </button>
 `;
@@ -478,7 +613,16 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
   <span
     className="lucid-Button-content"
   >
-    <CheckIcon />
+    <CheckIcon
+      aspectRatio="xMidYMid meet"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
+    />
     small
      
   </span>
@@ -500,7 +644,16 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
   <span
     className="lucid-Button-content"
   >
-    <CheckIcon />
+    <CheckIcon
+      aspectRatio="xMidYMid meet"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
+    />
     disabled 
     small
      
@@ -523,7 +676,16 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
   <span
     className="lucid-Button-content"
   >
-    <CheckIcon />
+    <CheckIcon
+      aspectRatio="xMidYMid meet"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
+    />
   </span>
 </button>
 `;
@@ -565,7 +727,16 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
   <span
     className="lucid-Button-content"
   >
-    <CheckIcon />
+    <CheckIcon
+      aspectRatio="xMidYMid meet"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
+    />
     small
      
     primary
@@ -588,7 +759,16 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
   <span
     className="lucid-Button-content"
   >
-    <CheckIcon />
+    <CheckIcon
+      aspectRatio="xMidYMid meet"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
+    />
     disabled 
     small
      
@@ -612,7 +792,16 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
   <span
     className="lucid-Button-content"
   >
-    <CheckIcon />
+    <CheckIcon
+      aspectRatio="xMidYMid meet"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
+    />
   </span>
 </button>
 `;
@@ -654,7 +843,16 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
   <span
     className="lucid-Button-content"
   >
-    <CheckIcon />
+    <CheckIcon
+      aspectRatio="xMidYMid meet"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
+    />
     small
      
     link
@@ -677,7 +875,16 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
   <span
     className="lucid-Button-content"
   >
-    <CheckIcon />
+    <CheckIcon
+      aspectRatio="xMidYMid meet"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
+    />
     disabled 
     small
      
@@ -701,7 +908,16 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
   <span
     className="lucid-Button-content"
   >
-    <CheckIcon />
+    <CheckIcon
+      aspectRatio="xMidYMid meet"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
+    />
   </span>
 </button>
 `;
@@ -743,7 +959,16 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
   <span
     className="lucid-Button-content"
   >
-    <CheckIcon />
+    <CheckIcon
+      aspectRatio="xMidYMid meet"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
+    />
     small
      
     danger
@@ -766,7 +991,16 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
   <span
     className="lucid-Button-content"
   >
-    <CheckIcon />
+    <CheckIcon
+      aspectRatio="xMidYMid meet"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
+    />
     disabled 
     small
      
@@ -790,7 +1024,16 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
   <span
     className="lucid-Button-content"
   >
-    <CheckIcon />
+    <CheckIcon
+      aspectRatio="xMidYMid meet"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
+    />
   </span>
 </button>
 `;
@@ -832,7 +1075,16 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
   <span
     className="lucid-Button-content"
   >
-    <CheckIcon />
+    <CheckIcon
+      aspectRatio="xMidYMid meet"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
+    />
     small
      
     invisible
@@ -855,7 +1107,16 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
   <span
     className="lucid-Button-content"
   >
-    <CheckIcon />
+    <CheckIcon
+      aspectRatio="xMidYMid meet"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
+    />
     disabled 
     small
      
@@ -879,7 +1140,16 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
   <span
     className="lucid-Button-content"
   >
-    <CheckIcon />
+    <CheckIcon
+      aspectRatio="xMidYMid meet"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
+    />
   </span>
 </button>
 `;
@@ -920,7 +1190,16 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
   <span
     className="lucid-Button-content"
   >
-    <CheckIcon />
+    <CheckIcon
+      aspectRatio="xMidYMid meet"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
+    />
     short
      
   </span>
@@ -942,7 +1221,16 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
   <span
     className="lucid-Button-content"
   >
-    <CheckIcon />
+    <CheckIcon
+      aspectRatio="xMidYMid meet"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
+    />
     disabled 
     short
      
@@ -965,7 +1253,16 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
   <span
     className="lucid-Button-content"
   >
-    <CheckIcon />
+    <CheckIcon
+      aspectRatio="xMidYMid meet"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
+    />
   </span>
 </button>
 `;
@@ -1007,7 +1304,16 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
   <span
     className="lucid-Button-content"
   >
-    <CheckIcon />
+    <CheckIcon
+      aspectRatio="xMidYMid meet"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
+    />
     short
      
     primary
@@ -1030,7 +1336,16 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
   <span
     className="lucid-Button-content"
   >
-    <CheckIcon />
+    <CheckIcon
+      aspectRatio="xMidYMid meet"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
+    />
     disabled 
     short
      
@@ -1054,7 +1369,16 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
   <span
     className="lucid-Button-content"
   >
-    <CheckIcon />
+    <CheckIcon
+      aspectRatio="xMidYMid meet"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
+    />
   </span>
 </button>
 `;
@@ -1096,7 +1420,16 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
   <span
     className="lucid-Button-content"
   >
-    <CheckIcon />
+    <CheckIcon
+      aspectRatio="xMidYMid meet"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
+    />
     short
      
     link
@@ -1119,7 +1452,16 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
   <span
     className="lucid-Button-content"
   >
-    <CheckIcon />
+    <CheckIcon
+      aspectRatio="xMidYMid meet"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
+    />
     disabled 
     short
      
@@ -1143,7 +1485,16 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
   <span
     className="lucid-Button-content"
   >
-    <CheckIcon />
+    <CheckIcon
+      aspectRatio="xMidYMid meet"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
+    />
   </span>
 </button>
 `;
@@ -1185,7 +1536,16 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
   <span
     className="lucid-Button-content"
   >
-    <CheckIcon />
+    <CheckIcon
+      aspectRatio="xMidYMid meet"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
+    />
     short
      
     danger
@@ -1208,7 +1568,16 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
   <span
     className="lucid-Button-content"
   >
-    <CheckIcon />
+    <CheckIcon
+      aspectRatio="xMidYMid meet"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
+    />
     disabled 
     short
      
@@ -1232,7 +1601,16 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
   <span
     className="lucid-Button-content"
   >
-    <CheckIcon />
+    <CheckIcon
+      aspectRatio="xMidYMid meet"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
+    />
   </span>
 </button>
 `;
@@ -1274,7 +1652,16 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
   <span
     className="lucid-Button-content"
   >
-    <CheckIcon />
+    <CheckIcon
+      aspectRatio="xMidYMid meet"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
+    />
     short
      
     invisible
@@ -1297,7 +1684,16 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
   <span
     className="lucid-Button-content"
   >
-    <CheckIcon />
+    <CheckIcon
+      aspectRatio="xMidYMid meet"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
+    />
     disabled 
     short
      
@@ -1321,7 +1717,16 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
   <span
     className="lucid-Button-content"
   >
-    <CheckIcon />
+    <CheckIcon
+      aspectRatio="xMidYMid meet"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
+    />
   </span>
 </button>
 `;
@@ -1362,7 +1767,16 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
   <span
     className="lucid-Button-content"
   >
-    <CheckIcon />
+    <CheckIcon
+      aspectRatio="xMidYMid meet"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
+    />
     large
      
   </span>
@@ -1384,7 +1798,16 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
   <span
     className="lucid-Button-content"
   >
-    <CheckIcon />
+    <CheckIcon
+      aspectRatio="xMidYMid meet"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
+    />
     disabled 
     large
      
@@ -1407,7 +1830,16 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
   <span
     className="lucid-Button-content"
   >
-    <CheckIcon />
+    <CheckIcon
+      aspectRatio="xMidYMid meet"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
+    />
   </span>
 </button>
 `;
@@ -1449,7 +1881,16 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
   <span
     className="lucid-Button-content"
   >
-    <CheckIcon />
+    <CheckIcon
+      aspectRatio="xMidYMid meet"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
+    />
     large
      
     primary
@@ -1472,7 +1913,16 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
   <span
     className="lucid-Button-content"
   >
-    <CheckIcon />
+    <CheckIcon
+      aspectRatio="xMidYMid meet"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
+    />
     disabled 
     large
      
@@ -1496,7 +1946,16 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
   <span
     className="lucid-Button-content"
   >
-    <CheckIcon />
+    <CheckIcon
+      aspectRatio="xMidYMid meet"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
+    />
   </span>
 </button>
 `;
@@ -1538,7 +1997,16 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
   <span
     className="lucid-Button-content"
   >
-    <CheckIcon />
+    <CheckIcon
+      aspectRatio="xMidYMid meet"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
+    />
     large
      
     link
@@ -1561,7 +2029,16 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
   <span
     className="lucid-Button-content"
   >
-    <CheckIcon />
+    <CheckIcon
+      aspectRatio="xMidYMid meet"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
+    />
     disabled 
     large
      
@@ -1585,7 +2062,16 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
   <span
     className="lucid-Button-content"
   >
-    <CheckIcon />
+    <CheckIcon
+      aspectRatio="xMidYMid meet"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
+    />
   </span>
 </button>
 `;
@@ -1627,7 +2113,16 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
   <span
     className="lucid-Button-content"
   >
-    <CheckIcon />
+    <CheckIcon
+      aspectRatio="xMidYMid meet"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
+    />
     large
      
     danger
@@ -1650,7 +2145,16 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
   <span
     className="lucid-Button-content"
   >
-    <CheckIcon />
+    <CheckIcon
+      aspectRatio="xMidYMid meet"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
+    />
     disabled 
     large
      
@@ -1674,7 +2178,16 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
   <span
     className="lucid-Button-content"
   >
-    <CheckIcon />
+    <CheckIcon
+      aspectRatio="xMidYMid meet"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
+    />
   </span>
 </button>
 `;
@@ -1716,7 +2229,16 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
   <span
     className="lucid-Button-content"
   >
-    <CheckIcon />
+    <CheckIcon
+      aspectRatio="xMidYMid meet"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
+    />
     large
      
     invisible
@@ -1739,7 +2261,16 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
   <span
     className="lucid-Button-content"
   >
-    <CheckIcon />
+    <CheckIcon
+      aspectRatio="xMidYMid meet"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
+    />
     disabled 
     large
      
@@ -1763,7 +2294,16 @@ exports[`Button [common] example testing should match snapshot(s) for all-types 
   <span
     className="lucid-Button-content"
   >
-    <CheckIcon />
+    <CheckIcon
+      aspectRatio="xMidYMid meet"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
+    />
   </span>
 </button>
 `;

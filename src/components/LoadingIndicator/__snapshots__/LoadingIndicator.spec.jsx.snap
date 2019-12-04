@@ -67,17 +67,17 @@ exports[`LoadingIndicator [common] example testing should match snapshot(s) for 
     }
     palette={
       Array [
-        "color-chart-0",
-        "color-chart-1",
-        "color-chart-2",
         "color-chart-3",
-        "color-chart-4",
+        "color-chart-0-darkest",
+        "color-chart-2",
+        "color-chart-4-lightest",
         "color-chart-5",
+        "color-chart-1-light",
         "color-chart-6",
       ]
     }
     renderTooltipBody={null}
-    width={1000}
+    width={750}
     xAxisField="x"
     xAxisFormatter={[Function]}
     xAxisTextOrientation="horizontal"
@@ -145,17 +145,17 @@ exports[`LoadingIndicator [common] example testing should match snapshot(s) for 
     }
     palette={
       Array [
-        "color-chart-0",
-        "color-chart-1",
-        "color-chart-2",
         "color-chart-3",
-        "color-chart-4",
+        "color-chart-0-darkest",
+        "color-chart-2",
+        "color-chart-4-lightest",
         "color-chart-5",
+        "color-chart-1-light",
         "color-chart-6",
       ]
     }
     renderTooltipBody={null}
-    width={1000}
+    width={750}
     xAxisField="x"
     xAxisFormatter={[Function]}
     xAxisTextOrientation="horizontal"
@@ -223,17 +223,17 @@ exports[`LoadingIndicator [common] example testing should match snapshot(s) for 
     }
     palette={
       Array [
-        "color-chart-0",
-        "color-chart-1",
-        "color-chart-2",
         "color-chart-3",
-        "color-chart-4",
+        "color-chart-0-darkest",
+        "color-chart-2",
+        "color-chart-4-lightest",
         "color-chart-5",
+        "color-chart-1-light",
         "color-chart-6",
       ]
     }
     renderTooltipBody={null}
-    width={1000}
+    width={750}
     xAxisField="x"
     xAxisFormatter={[Function]}
     xAxisTextOrientation="horizontal"
@@ -259,7 +259,15 @@ exports[`LoadingIndicator [common] example testing should match snapshot(s) for 
     >
       <LoadingMessage.Icon>
         <LoadingIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
           speed="slow"
+          viewBox="0 0 16 16"
         />
       </LoadingMessage.Icon>
       <LoadingMessage.Title>
@@ -315,17 +323,17 @@ exports[`LoadingIndicator [common] example testing should match snapshot(s) for 
     }
     palette={
       Array [
-        "color-chart-0",
-        "color-chart-1",
-        "color-chart-2",
         "color-chart-3",
-        "color-chart-4",
+        "color-chart-0-darkest",
+        "color-chart-2",
+        "color-chart-4-lightest",
         "color-chart-5",
+        "color-chart-1-light",
         "color-chart-6",
       ]
     }
     renderTooltipBody={null}
-    width={1000}
+    width={750}
     xAxisField="x"
     xAxisFormatter={[Function]}
     xAxisTextOrientation="horizontal"
@@ -350,7 +358,15 @@ exports[`LoadingIndicator [common] example testing should match snapshot(s) for 
       Body="Please wait"
       Icon={
         <LoadingIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
           speed="fast"
+          viewBox="0 0 16 16"
         />
       }
       Title="Enhancing..."
@@ -402,17 +418,17 @@ exports[`LoadingIndicator [common] example testing should match snapshot(s) for 
     }
     palette={
       Array [
-        "color-chart-0",
-        "color-chart-1",
-        "color-chart-2",
         "color-chart-3",
-        "color-chart-4",
+        "color-chart-0-darkest",
+        "color-chart-2",
+        "color-chart-4-lightest",
         "color-chart-5",
+        "color-chart-1-light",
         "color-chart-6",
       ]
     }
     renderTooltipBody={null}
-    width={1000}
+    width={750}
     xAxisField="x"
     xAxisFormatter={[Function]}
     xAxisTextOrientation="horizontal"
@@ -483,17 +499,17 @@ exports[`LoadingIndicator [common] example testing should match snapshot(s) for 
     }
     palette={
       Array [
-        "color-chart-0",
-        "color-chart-1",
-        "color-chart-2",
         "color-chart-3",
-        "color-chart-4",
+        "color-chart-0-darkest",
+        "color-chart-2",
+        "color-chart-4-lightest",
         "color-chart-5",
+        "color-chart-1-light",
         "color-chart-6",
       ]
     }
     renderTooltipBody={null}
-    width={1000}
+    width={750}
     xAxisField="x"
     xAxisFormatter={[Function]}
     xAxisTextOrientation="horizontal"
@@ -561,17 +577,17 @@ exports[`LoadingIndicator [common] example testing should match snapshot(s) for 
     }
     palette={
       Array [
-        "color-chart-0",
-        "color-chart-1",
-        "color-chart-2",
         "color-chart-3",
-        "color-chart-4",
+        "color-chart-0-darkest",
+        "color-chart-2",
+        "color-chart-4-lightest",
         "color-chart-5",
+        "color-chart-1-light",
         "color-chart-6",
       ]
     }
     renderTooltipBody={null}
-    width={1000}
+    width={750}
     xAxisField="x"
     xAxisFormatter={[Function]}
     xAxisTextOrientation="horizontal"

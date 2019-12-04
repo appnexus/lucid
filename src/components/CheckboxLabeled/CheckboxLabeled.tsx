@@ -5,7 +5,6 @@ import { lucidClassNames } from '../../util/style-helpers';
 import {
 	findTypes,
 	omitProps,
-	FC,
 	StandardProps,
 } from '../../util/component-types';
 import Checkbox, {
@@ -18,7 +17,7 @@ const { any, node, object, string, bool, func } = PropTypes;
 
 interface ILabelProps extends StandardProps {}
 
-const Label: FC<ILabelProps> = (props): null => null;
+const Label = (props: ILabelProps): null => null;
 
 Label.displayName = 'CheckboxLabeled.Label';
 Label.peek = {
@@ -41,11 +40,9 @@ export interface ICheckboxLabeledProps extends ICheckboxProps {
 	Label?: React.ReactNode & { props: ILabelProps };
 }
 
-export interface ICheckboxLabeledFC extends FC<ICheckboxLabeledProps> {
-	Label: FC<ILabelProps>;
-}
-
-export const CheckboxLabeled: ICheckboxLabeledFC = (props): React.ReactElement => {
+export const CheckboxLabeled = (
+	props: ICheckboxLabeledProps
+): React.ReactElement => {
 	const {
 		className,
 		isIndeterminate,
@@ -97,9 +94,23 @@ CheckboxLabeled.displayName = 'CheckboxLabeled';
 
 CheckboxLabeled.peek = {
 	description: `
-		This is a composite of the \`Checkbox\` component and the native
-		\`label\` element.
 	`,
+	notes: {
+		overview: `
+			A square two-state toggle with a label that explains the action or selection. This is a composite of \`Checkbox\` and the native
+			\`label\` element.
+		`,
+		intendedUse: `
+			Use checkboxes to allow users to select one or more items. Commonly used to select filters or settings. For interactions where users can only select one option, use \`RadioButtonLabeled\`.
+		`,
+		technicalRecommendations: `
+			- Use the styles on the \`CheckboxLabeled\` parent container to ensure only the checkboxes and their labels are clickable.
+			- Use the Selected state when a filter or setting will be applied.
+			- Use the Unselected state when a filter or setting will not be applied.
+			- Use the Indeterminate state for parent checkboxes where some of the child checkboxes are Selected and some are Unselected. For example, the master checkbox in the header row of the interactive table example in \`DataTable\`.
+			- You can have the label as a child or a prop depending on the needs of your application. 
+		`,
+	},
 	categories: ['controls', 'toggles'],
 	madeFrom: ['Checkbox'],
 };

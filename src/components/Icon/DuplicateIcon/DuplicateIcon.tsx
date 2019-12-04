@@ -2,16 +2,16 @@ import _ from 'lodash';
 import React from 'react';
 import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
-import { FC, omitProps } from '../../../util/component-types';
+import { omitProps } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-DuplicateIcon');
 
 interface IDuplicateIconProps extends IIconProps {}
 
-export const DuplicateIcon: FC<IDuplicateIconProps> = ({
+export const DuplicateIcon = ({
 	className,
 	...passThroughs
-}): React.ReactElement => {
+}: IDuplicateIconProps) => {
 	return (
 		<Icon
 			{...omitProps(
@@ -39,5 +39,6 @@ DuplicateIcon.peek = {
 	madeFrom: ['Icon'],
 };
 DuplicateIcon.propTypes = iconPropTypes;
+DuplicateIcon.defaultProps = Icon.defaultProps;
 
 export default DuplicateIcon;

@@ -17,6 +17,7 @@ export default createClass({
 	render() {
 		return (
 			<BarChart
+				width={750}
 				data={data}
 				colorMap={{
 					apples: chartConstants.COLOR_GOOD,

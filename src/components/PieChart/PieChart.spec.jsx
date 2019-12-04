@@ -142,7 +142,7 @@ describe('PieChart', () => {
 						.find(Line)
 						.at(0)
 						.prop('color'),
-					'color-chart-0'
+					'color-chart-3'
 				);
 				assert.equal(
 					wrapper

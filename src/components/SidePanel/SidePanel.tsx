@@ -7,18 +7,13 @@ import GripperVerticalIcon from '../Icon/GripperVerticalIcon/GripperVerticalIcon
 import CloseIcon from '../Icon/CloseIcon/CloseIcon';
 import DragCaptureZone from '../DragCaptureZone/DragCaptureZone';
 import Button from '../Button/Button';
-import {
-	getFirst,
-	omitProps,
-	FC,
-	StandardProps,
-} from '../../util/component-types';
+import { getFirst, omitProps, StandardProps } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-SidePanel');
 
 const { any, bool, func, oneOf, node, number, string, oneOfType } = PropTypes;
 
-const SidePanelHeader: FC<StandardProps> = (): null => null;
+const SidePanelHeader = (_props: StandardProps): null => null;
 SidePanelHeader.displayName = 'SidePanel.Header';
 SidePanelHeader.propName = 'Header';
 SidePanelHeader.peek = {
@@ -33,9 +28,9 @@ SidePanelHeader.propTypes = {
 	`,
 };
 
-export interface ISidePanelProps extends IOverlayProps {
+export interface ISidePanelProps extends Partial<IOverlayProps> {
 	/** Alternative to using `<SidePanel.Header>`. */
-	Header?: React.ReactNode & { props: StandardProps };
+	Header?: string | React.ReactNode & { props: StandardProps };
 
 	/** Controls the expanded/collapsed state as a boolean prop. */
 	isExpanded: boolean;

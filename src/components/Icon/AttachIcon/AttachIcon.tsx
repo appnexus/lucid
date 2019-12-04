@@ -2,16 +2,16 @@ import _ from 'lodash';
 import React from 'react';
 import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
-import { FC, omitProps } from '../../../util/component-types';
+import { omitProps } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-AttachIcon');
 
 interface IAttachIconProps extends IIconProps {}
 
-export const AttachIcon: FC<IAttachIconProps> = ({
+export const AttachIcon = ({
 	className,
 	...passThroughs
-}): React.ReactElement => {
+}: IAttachIconProps) => {
 	return (
 		<Icon
 			{...omitProps(
@@ -38,5 +38,6 @@ AttachIcon.peek = {
 	madeFrom: ['Icon'],
 };
 AttachIcon.propTypes = iconPropTypes;
+AttachIcon.defaultProps = Icon.defaultProps;
 
 export default AttachIcon;

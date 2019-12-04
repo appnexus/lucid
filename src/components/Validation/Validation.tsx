@@ -1,12 +1,7 @@
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import {
-	getFirst,
-	omitProps,
-	FC,
-	StandardProps,
-} from '../../util/component-types';
+import { getFirst, omitProps, StandardProps } from '../../util/component-types';
 import _ from 'lodash';
 
 const cx = lucidClassNames.bind('&-Validation');
@@ -16,7 +11,7 @@ const { string, any } = PropTypes;
 interface IValidationErrorProps extends StandardProps {
 	description?: string;
 }
-const ValidationError: FC<IValidationErrorProps> = (): null => null;
+const ValidationError = (_props: IValidationErrorProps): null => null;
 ValidationError.displayName = 'Validation.Error';
 ValidationError.peek = {
 	description: `
@@ -35,19 +30,10 @@ export interface IValidationProps
 			React.HTMLAttributes<HTMLDivElement>,
 			HTMLDivElement
 		> {
-	/** In most cases this will be a string, but it also accepts any valid React
-			element. If this is a falsey value, then no error message will be
-			displayed.  If this is the literal \`true\`, it will add the
-			\`-is-error\` class to the wrapper div, but not render the
-			\`-error-content\` \`div\`. */
-	Error?: string | React.ReactNode & { props: IValidationErrorProps };
+	Error?: React.ReactNode;
 }
 
-export interface IValidationFC extends FC<IValidationProps> {
-	Error: FC<IValidationErrorProps>;
-}
-
-export const Validation: IValidationFC = (props): React.ReactElement => {
+export const Validation = (props: IValidationProps): React.ReactElement => {
 	const { className, children, ...passThroughs } = props;
 
 	const errorChildProps = _.get(

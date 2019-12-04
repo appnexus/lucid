@@ -23,7 +23,7 @@ exports[`ButtonGroup [common] example testing should match snapshot(s) for fixed
   <Button
     callbackId={1}
     hasOnlyIcon={false}
-    isActive={false}
+    isActive={true}
     isDisabled={false}
     key="1"
     onClick={[Function]}
@@ -39,7 +39,7 @@ exports[`ButtonGroup [common] example testing should match snapshot(s) for fixed
   <Button
     callbackId={2}
     hasOnlyIcon={false}
-    isActive={false}
+    isActive={true}
     isDisabled={false}
     key="2"
     onClick={[Function]}

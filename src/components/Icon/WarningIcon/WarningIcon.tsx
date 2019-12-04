@@ -2,18 +2,18 @@ import _ from 'lodash';
 import React from 'react';
 import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
-import { FC, omitProps } from '../../../util/component-types';
+import { omitProps } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-WarningIcon');
 
 interface IWarningIconProps extends IIconProps {}
 
-export const WarningIcon: FC<IWarningIconProps> = ({
+export const WarningIcon = ({
 	className,
 	isClickable,
 	isDisabled,
 	...passThroughs
-}): React.ReactElement => {
+}: IWarningIconProps) => {
 	return (
 		<Icon
 			{...omitProps(
@@ -49,5 +49,6 @@ WarningIcon.peek = {
 	madeFrom: ['Icon'],
 };
 WarningIcon.propTypes = iconPropTypes;
+WarningIcon.defaultProps = Icon.defaultProps;
 
 export default WarningIcon;
