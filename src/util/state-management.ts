@@ -329,7 +329,7 @@ export function buildModernHybridComponent<
 
 		// It would be nice to prepend "Hybrid" to this but some of our component
 		// sadly rely on the displayName remaining unchanged. E.g. `VerticalListMenu`.
-		// static displayName = BaseComponent.displayName;
+		static displayName = BaseComponent.displayName;
 
 		static propTypes = BaseComponent.propTypes;
 		static reducers = reducers;
