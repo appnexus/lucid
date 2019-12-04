@@ -28,7 +28,7 @@ SidePanelHeader.propTypes = {
 	`,
 };
 
-export interface ISidePanelProps extends IOverlayProps {
+export interface ISidePanelProps extends Partial<IOverlayProps> {
 	/** Alternative to using `<SidePanel.Header>`. */
 	Header?: string | React.ReactNode & { props: StandardProps };
 
@@ -147,7 +147,6 @@ class SidePanel extends React.Component<ISidePanelProps, ISidePanelState, {}> {
 	};
 
 	static defaultProps = {
-		...Overlay.defaultProps,
 		isAnimated: true,
 		isExpanded: true,
 		isResizeDisabled: false,
