@@ -16,6 +16,7 @@ const cx = lucidClassNames.bind('&-ButtonGroup');
 const { any, func, arrayOf, number } = PropTypes;
 
 const ButtonGroupButton = (_props: IButtonProps): null => null;
+ButtonGroupButton.defaultProps = Button.defaultProps;
 ButtonGroupButton.displayName = 'ButtonGroup.Button';
 ButtonGroupButton.peek = {
 	description: `
