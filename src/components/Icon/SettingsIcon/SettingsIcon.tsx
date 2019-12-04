@@ -2,16 +2,16 @@ import _ from 'lodash';
 import React from 'react';
 import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
-import { FC, omitProps } from '../../../util/component-types';
+import { omitProps } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-SettingsIcon');
 
 interface ISettingsIconProps extends IIconProps {}
 
-export const SettingsIcon: FC<ISettingsIconProps> = ({
+export const SettingsIcon = ({
 	className,
 	...passThroughs
-}): React.ReactElement => {
+}: ISettingsIconProps) => {
 	return (
 		<Icon
 			{...omitProps(
@@ -39,5 +39,6 @@ SettingsIcon.peek = {
 	madeFrom: ['Icon'],
 };
 SettingsIcon.propTypes = iconPropTypes;
+SettingsIcon.defaultProps = Icon.defaultProps;
 
 export default SettingsIcon;

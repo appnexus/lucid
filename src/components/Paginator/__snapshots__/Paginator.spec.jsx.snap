@@ -13,7 +13,15 @@ exports[`Paginator [common] example testing should match snapshot(s) for 1.basic
     type="button"
   >
     <ArrowIcon
+      aspectRatio="xMidYMid meet"
+      color="primary"
       direction="left"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
     />
   </Button>
   <TextField
@@ -39,7 +47,15 @@ exports[`Paginator [common] example testing should match snapshot(s) for 1.basic
     type="button"
   >
     <ArrowIcon
+      aspectRatio="xMidYMid meet"
+      color="primary"
       direction="right"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
     />
   </Button>
 </div>
@@ -95,7 +111,15 @@ exports[`Paginator [common] example testing should match snapshot(s) for 2.page-
     type="button"
   >
     <ArrowIcon
+      aspectRatio="xMidYMid meet"
+      color="primary"
       direction="left"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
     />
   </Button>
   <TextField
@@ -121,7 +145,15 @@ exports[`Paginator [common] example testing should match snapshot(s) for 2.page-
     type="button"
   >
     <ArrowIcon
+      aspectRatio="xMidYMid meet"
+      color="primary"
       direction="right"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
     />
   </Button>
 </div>
@@ -140,7 +172,15 @@ exports[`Paginator [common] example testing should match snapshot(s) for 3.disab
     type="button"
   >
     <ArrowIcon
+      aspectRatio="xMidYMid meet"
+      color="primary"
       direction="left"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
     />
   </Button>
   <TextField
@@ -166,7 +206,15 @@ exports[`Paginator [common] example testing should match snapshot(s) for 3.disab
     type="button"
   >
     <ArrowIcon
+      aspectRatio="xMidYMid meet"
+      color="primary"
       direction="right"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
     />
   </Button>
 </div>
@@ -222,7 +270,15 @@ exports[`Paginator [common] example testing should match snapshot(s) for 3.disab
     type="button"
   >
     <ArrowIcon
+      aspectRatio="xMidYMid meet"
+      color="primary"
       direction="left"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
     />
   </Button>
   <TextField
@@ -248,7 +304,15 @@ exports[`Paginator [common] example testing should match snapshot(s) for 3.disab
     type="button"
   >
     <ArrowIcon
+      aspectRatio="xMidYMid meet"
+      color="primary"
       direction="right"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
     />
   </Button>
 </div>
@@ -311,7 +375,15 @@ exports[`Paginator [common] example testing should match snapshot(s) for 4.show-
     type="button"
   >
     <ArrowIcon
+      aspectRatio="xMidYMid meet"
+      color="primary"
       direction="left"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
     />
   </Button>
   <TextField
@@ -337,7 +409,15 @@ exports[`Paginator [common] example testing should match snapshot(s) for 4.show-
     type="button"
   >
     <ArrowIcon
+      aspectRatio="xMidYMid meet"
+      color="primary"
       direction="right"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
     />
   </Button>
 </div>
@@ -393,7 +473,15 @@ exports[`Paginator [common] example testing should match snapshot(s) for 4.show-
     type="button"
   >
     <ArrowIcon
+      aspectRatio="xMidYMid meet"
+      color="primary"
       direction="left"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
     />
   </Button>
   <TextField
@@ -419,7 +507,15 @@ exports[`Paginator [common] example testing should match snapshot(s) for 4.show-
     type="button"
   >
     <ArrowIcon
+      aspectRatio="xMidYMid meet"
+      color="primary"
       direction="right"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
     />
   </Button>
 </div>
@@ -471,6 +567,8 @@ exports[`Paginator [common] example testing should match snapshot(s) for 4.show-
           "onFocusOption": [Function],
           "onFocusPrev": [Function],
           "onSelect": [Function],
+          "optionContainerStyle": Object {},
+          "portalId": "",
           "selectedIndices": Array [],
         }
       }
@@ -506,7 +604,15 @@ exports[`Paginator [common] example testing should match snapshot(s) for 4.show-
     type="button"
   >
     <ArrowIcon
+      aspectRatio="xMidYMid meet"
+      color="primary"
       direction="left"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
     />
   </Button>
   <TextField
@@ -532,7 +638,15 @@ exports[`Paginator [common] example testing should match snapshot(s) for 4.show-
     type="button"
   >
     <ArrowIcon
+      aspectRatio="xMidYMid meet"
+      color="primary"
       direction="right"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
     />
   </Button>
 </div>
@@ -584,6 +698,8 @@ exports[`Paginator [common] example testing should match snapshot(s) for 4.show-
           "onFocusOption": [Function],
           "onFocusPrev": [Function],
           "onSelect": [Function],
+          "optionContainerStyle": Object {},
+          "portalId": "",
           "selectedIndices": Array [],
         }
       }
@@ -619,7 +735,15 @@ exports[`Paginator [common] example testing should match snapshot(s) for 4.show-
     type="button"
   >
     <ArrowIcon
+      aspectRatio="xMidYMid meet"
+      color="primary"
       direction="left"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
     />
   </Button>
   <TextField
@@ -645,7 +769,15 @@ exports[`Paginator [common] example testing should match snapshot(s) for 4.show-
     type="button"
   >
     <ArrowIcon
+      aspectRatio="xMidYMid meet"
+      color="primary"
       direction="right"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
     />
   </Button>
 </div>
@@ -697,6 +829,8 @@ exports[`Paginator [common] example testing should match snapshot(s) for 4.show-
           "onFocusOption": [Function],
           "onFocusPrev": [Function],
           "onSelect": [Function],
+          "optionContainerStyle": Object {},
+          "portalId": "",
           "selectedIndices": Array [],
         }
       }
@@ -732,7 +866,15 @@ exports[`Paginator [common] example testing should match snapshot(s) for 4.show-
     type="button"
   >
     <ArrowIcon
+      aspectRatio="xMidYMid meet"
+      color="primary"
       direction="left"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
     />
   </Button>
   <TextField
@@ -758,7 +900,15 @@ exports[`Paginator [common] example testing should match snapshot(s) for 4.show-
     type="button"
   >
     <ArrowIcon
+      aspectRatio="xMidYMid meet"
+      color="primary"
       direction="right"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
     />
   </Button>
 </div>
@@ -810,6 +960,8 @@ exports[`Paginator [common] example testing should match snapshot(s) for 4.show-
           "onFocusOption": [Function],
           "onFocusPrev": [Function],
           "onSelect": [Function],
+          "optionContainerStyle": Object {},
+          "portalId": "",
           "selectedIndices": Array [],
         }
       }
@@ -845,7 +997,15 @@ exports[`Paginator [common] example testing should match snapshot(s) for 4.show-
     type="button"
   >
     <ArrowIcon
+      aspectRatio="xMidYMid meet"
+      color="primary"
       direction="left"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
     />
   </Button>
   <TextField
@@ -871,7 +1031,15 @@ exports[`Paginator [common] example testing should match snapshot(s) for 4.show-
     type="button"
   >
     <ArrowIcon
+      aspectRatio="xMidYMid meet"
+      color="primary"
       direction="right"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
     />
   </Button>
 </div>

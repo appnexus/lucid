@@ -60,7 +60,7 @@ describe('DateSelect', () => {
 				/>
 			);
 			const dateSelectInstance = wrapper.instance();
-			dateSelectInstance.handlePrev(mockEvent);
+			dateSelectInstance.handlePrev({ event: mockEvent });
 
 			expect(onPrev).toHaveBeenCalledWith({
 				event: mockEvent,
@@ -78,7 +78,7 @@ describe('DateSelect', () => {
 				/>
 			);
 			const dateSelectInstance = wrapper.instance();
-			dateSelectInstance.handleNext(mockEvent);
+			dateSelectInstance.handleNext({ event: mockEvent });
 
 			expect(onNext).toHaveBeenCalledWith({
 				event: mockEvent,

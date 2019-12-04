@@ -15,16 +15,16 @@ const cx = lucidClassNames.bind('&-TextField');
 
 const { bool, string, func, number, object, oneOfType } = PropTypes;
 
-interface ITextFieldProps extends StandardProps {
+export interface ITextFieldProps extends StandardProps {
 	/** Set the TextField to multi line mode. Under the hood this will use a `textarea` instead of an `input` if set to `true`. */
-	isMultiLine: boolean;
+	isMultiLine?: boolean;
 
 	/** Disables the TextField by greying it out. */
-	isDisabled: boolean;
+	isDisabled?: boolean;
 
 	/** Initial number of rows a multi line TextField should have. Ignored when
 		not in multi-line mode. */
-	rows: number;
+	rows?: number;
 
 	/** Fires an event every time the user types text into the TextField. */
 	onChange: (
@@ -88,20 +88,18 @@ interface ITextFieldProps extends StandardProps {
 	value: string | number;
 
 	/** Number of milliseconds to debounce the `onChangeDebounced` callback. Only useful if you provide an `onChangeDebounced` handler. */
-	debounceLevel: number;
+	debounceLevel?: number;
 
 	/** Set the holding time, in milliseconds, that the component will wait if
 		the user is typing and the component gets a new `value` prop.  Any time
 		the user hits a key, it starts a timer that prevents state changes from
 		flowing in to the component until the timer has elapsed.  This was
 		heavily inspired by the [lazy-input](https:/docs.npmjs.com/package/lazy-input) component. */
-	lazyLevel: number;
+	lazyLevel?: number;
 }
-type ITextFieldPropsWithPassThroughs = Overwrite<
-	React.DetailedHTMLProps<
-		React.InputHTMLAttributes<HTMLInputElement>,
-		HTMLInputElement
-	>,
+
+export type ITextFieldPropsWithPassThroughs = Overwrite<
+	React.InputHTMLAttributes<HTMLInputElement>,
 	ITextFieldProps
 >;
 

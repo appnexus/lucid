@@ -2,16 +2,13 @@ import _ from 'lodash';
 import React from 'react';
 import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
-import { FC, omitProps } from '../../../util/component-types';
+import { omitProps } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-AudioIcon');
 
 interface IAudioIconProps extends IIconProps {}
 
-export const AudioIcon: FC<IAudioIconProps> = ({
-	className,
-	...passThroughs
-}): React.ReactElement => {
+export const AudioIcon = ({ className, ...passThroughs }: IAudioIconProps) => {
 	return (
 		<Icon
 			{...omitProps(
@@ -39,5 +36,6 @@ AudioIcon.peek = {
 	madeFrom: ['Icon'],
 };
 AudioIcon.propTypes = iconPropTypes;
+AudioIcon.defaultProps = Icon.defaultProps;
 
 export default AudioIcon;

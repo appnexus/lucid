@@ -30,6 +30,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
     onFocusPrev={[Function]}
     onSelect={[Function]}
     optionContainerStyle={Object {}}
+    portalId=""
     selectedIndices={null}
   >
     <DropMenu.Control>
@@ -95,6 +96,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
     onFocusPrev={[Function]}
     onSelect={[Function]}
     optionContainerStyle={Object {}}
+    portalId=""
     selectedIndices={null}
   >
     <DropMenu.Control>
@@ -1533,6 +1535,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
     onFocusPrev={[Function]}
     onSelect={[Function]}
     optionContainerStyle={Object {}}
+    portalId=""
     selectedIndices={null}
   >
     <DropMenu.Control>
@@ -2749,6 +2752,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
     onFocusPrev={[Function]}
     onSelect={[Function]}
     optionContainerStyle={Object {}}
+    portalId=""
     selectedIndices={null}
   >
     <DropMenu.Control>
@@ -2911,6 +2915,7 @@ exports[`SearchableMultiSelect custom formatting should render Option child func
     onFocusPrev={[Function]}
     onSelect={[Function]}
     optionContainerStyle={Object {}}
+    portalId=""
     selectedIndices={null}
   >
     <DropMenu.Control>
@@ -3041,6 +3046,7 @@ exports[`SearchableMultiSelect custom formatting should render Option.Selected i
     onFocusPrev={[Function]}
     onSelect={[Function]}
     optionContainerStyle={Object {}}
+    portalId=""
     selectedIndices={null}
   >
     <DropMenu.Control>
@@ -3263,6 +3269,7 @@ exports[`SearchableMultiSelect custom formatting should render OptionGroup.Selec
     onFocusPrev={[Function]}
     onSelect={[Function]}
     optionContainerStyle={Object {}}
+    portalId=""
     selectedIndices={null}
   >
     <DropMenu.Control>

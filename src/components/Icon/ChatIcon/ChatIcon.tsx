@@ -2,16 +2,13 @@ import _ from 'lodash';
 import React from 'react';
 import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
-import { FC, omitProps } from '../../../util/component-types';
+import { omitProps } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-ChatIcon');
 
 interface IChatIconProps extends IIconProps {}
 
-export const ChatIcon: FC<IChatIconProps> = ({
-	className,
-	...passThroughs
-}): React.ReactElement => {
+export const ChatIcon = ({ className, ...passThroughs }: IChatIconProps) => {
 	return (
 		<Icon
 			{...omitProps(passThroughs, undefined, _.keys(ChatIcon.propTypes), false)}
@@ -34,5 +31,6 @@ ChatIcon.peek = {
 	madeFrom: ['Icon'],
 };
 ChatIcon.propTypes = iconPropTypes;
+ChatIcon.defaultProps = Icon.defaultProps;
 
 export default ChatIcon;

@@ -5,7 +5,6 @@ import { lucidClassNames } from '../../util/style-helpers';
 import {
 	findTypes,
 	omitProps,
-	FC,
 	StandardProps,
 } from '../../util/component-types';
 import Checkbox, {
@@ -18,7 +17,7 @@ const { any, node, object, string, bool, func } = PropTypes;
 
 interface ILabelProps extends StandardProps {}
 
-const Label: FC<ILabelProps> = (props): null => null;
+const Label = (props: ILabelProps): null => null;
 
 Label.displayName = 'CheckboxLabeled.Label';
 Label.peek = {
@@ -41,11 +40,9 @@ export interface ICheckboxLabeledProps extends ICheckboxProps {
 	Label?: React.ReactNode & { props: ILabelProps };
 }
 
-export interface ICheckboxLabeledFC extends FC<ICheckboxLabeledProps> {
-	Label: FC<ILabelProps>;
-}
-
-export const CheckboxLabeled: ICheckboxLabeledFC = (props): React.ReactElement => {
+export const CheckboxLabeled = (
+	props: ICheckboxLabeledProps
+): React.ReactElement => {
 	const {
 		className,
 		isIndeterminate,

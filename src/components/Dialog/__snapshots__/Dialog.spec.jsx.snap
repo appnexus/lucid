@@ -25,7 +25,16 @@ exports[`Dialog [common] example testing should match snapshot(s) for 1.small 1`
         onClick={[Function]}
         type="button"
       >
-        <CloseIcon />
+        <CloseIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
+        />
       </Button>
     </header>
     <section
@@ -172,7 +181,16 @@ exports[`Dialog [common] example testing should match snapshot(s) for 2.medium 1
         onClick={[Function]}
         type="button"
       >
-        <CloseIcon />
+        <CloseIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
+        />
       </Button>
     </header>
     <section
@@ -521,7 +539,16 @@ exports[`Dialog [common] example testing should match snapshot(s) for 3.large-wi
         onClick={[Function]}
         type="button"
       >
-        <CloseIcon />
+        <CloseIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
+        />
       </Button>
     </header>
     <section
@@ -874,7 +901,16 @@ exports[`Dialog [common] example testing should match snapshot(s) for 4.complex 
         onClick={[Function]}
         type="button"
       >
-        <CloseIcon />
+        <CloseIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
+        />
       </Button>
     </header>
     <section
@@ -1073,7 +1109,16 @@ exports[`Dialog [common] example testing should match snapshot(s) for 5.no-modal
         onClick={[Function]}
         type="button"
       >
-        <CloseIcon />
+        <CloseIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
+        />
       </Button>
     </header>
     <section
@@ -1166,7 +1211,16 @@ exports[`Dialog [common] example testing should match snapshot(s) for 6.no-foote
         onClick={[Function]}
         type="button"
       >
-        <CloseIcon />
+        <CloseIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
+        />
       </Button>
     </header>
     <section
@@ -1203,7 +1257,16 @@ exports[`Dialog [common] example testing should match snapshot(s) for 7.no-gutte
         onClick={[Function]}
         type="button"
       >
-        <CloseIcon />
+        <CloseIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
+        />
       </Button>
     </header>
     <section

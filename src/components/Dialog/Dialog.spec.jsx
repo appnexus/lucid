@@ -1,6 +1,6 @@
 import React from 'react';
 import { mount, shallow } from 'enzyme';
-import { common } from '../../util/generic-tests';
+import { common, functionalComponents } from '../../util/generic-tests';
 import assert from 'assert';
 
 import Dialog from './Dialog';
@@ -13,6 +13,8 @@ describe('Dialog', () => {
 		},
 		selectRoot: wrapper => wrapper.find('.lucid-Dialog'),
 	});
+
+	functionalComponents(Dialog);
 
 	it('should pass `isModal` to underlying Overlay', () => {
 		const wrapper = shallow(<Dialog isModal={false} />);

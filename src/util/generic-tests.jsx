@@ -248,6 +248,41 @@ export function controls(
 	});
 }
 
+// Common tests for all Functional Components
+//
+// These tests are intended to help us make sure our FCs are shaped corrected.
+// They are necessary because there isn't a perfect way to get the defaultProps
+// to be factored in correctly yet with React/TypeScript:
+// https://github.com/DefinitelyTyped/DefinitelyTyped/issues/30695#issuecomment-474780159
+export function functionalComponents(FC) {
+	// Use DOM tests here since some of our controls use dom events under the hood
+	describe('[functionalComponent]', () => {
+		it('should have the correct `peek` properties', () => {
+			expect(FC.propName === undefined || typeof FC.propName === 'string').toBe(
+				true
+			);
+			expect(
+				FC._isPrivate === undefined || typeof FC._isPrivate === 'boolean'
+			).toBe(true);
+
+			expect(typeof FC.peek).toBe('object');
+			expect(typeof FC.peek.description).toBe('string');
+			expect(
+				FC.peek.extend === undefined || typeof FC.peek.extend === 'string'
+			).toBe(true);
+			expect(
+				FC.peek.extend === undefined || typeof FC.peek.extend === 'string'
+			).toBe(true);
+			expect(
+				FC.peek.categories === undefined || Array.isArray(FC.peek.categories)
+			).toBe(true);
+			expect(
+				FC.peek.madeFrom === undefined || Array.isArray(FC.peek.madeFrom)
+			).toBe(true);
+		});
+	});
+}
+
 const NativeDate = global.Date;
 const createMockDateClass = (...args) =>
 	_.assign(

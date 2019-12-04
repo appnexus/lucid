@@ -31,7 +31,7 @@ export interface IOverlayProps
 		contents. In practice you should never need to set this manually. */
 	portalId?: string;
 
-	/** Fired when the user hits escape.  Signature: \`({ event, props }) => {}\; */
+	/** Fired when the user hits escape. */
 	onEscape: ({
 		event,
 		props,
@@ -41,7 +41,7 @@ export interface IOverlayProps
 	}) => void;
 
 	/** Fired when the user clicks on the background, this may or may not be
-		visible depending on \`isModal\`.  Signature: \`({ event, props }) => {}\` */
+		visible depending on \`isModal\`. */
 	onBackgroundClick: ({
 		event,
 		props,
@@ -56,11 +56,11 @@ interface IOverlayState {
 }
 
 export const defaultProps = {
-		isShown: false,
-		isModal: true,
-		onEscape: _.noop,
-		onBackgroundClick: _.noop,
-		isAnimated: true,
+	isShown: false,
+	isModal: true,
+	onEscape: _.noop,
+	onBackgroundClick: _.noop,
+	isAnimated: true,
 };
 
 class Overlay extends React.Component<IOverlayProps, IOverlayState, {}> {

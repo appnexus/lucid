@@ -47,7 +47,15 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 01.defaul
         type="button"
       >
         <ChevronIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
           direction="left"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
         />
       </Button>
     </div>
@@ -61,7 +69,15 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 01.defaul
     className="lucid-Sidebar-Divider"
   >
     <GripperVerticalIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Sidebar-Divider-gripper"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
     />
   </SplitVertical.Divider>
   <SplitVertical.RightPane
@@ -120,7 +136,15 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 02.disabl
         type="button"
       >
         <ChevronIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
           direction="left"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
         />
       </Button>
     </div>
@@ -134,7 +158,15 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 02.disabl
     className="lucid-Sidebar-Divider"
   >
     <GripperVerticalIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Sidebar-Divider-gripper"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
     />
   </SplitVertical.Divider>
   <SplitVertical.RightPane
@@ -193,7 +225,15 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 03.initia
         type="button"
       >
         <ChevronIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
           direction="left"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
         />
       </Button>
     </div>
@@ -207,7 +247,15 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 03.initia
     className="lucid-Sidebar-Divider"
   >
     <GripperVerticalIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Sidebar-Divider-gripper"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
     />
   </SplitVertical.Divider>
   <SplitVertical.RightPane
@@ -266,7 +314,15 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 04.positi
         type="button"
       >
         <ChevronIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
           direction="right"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
         />
       </Button>
     </div>
@@ -280,7 +336,15 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 04.positi
     className="lucid-Sidebar-Divider"
   >
     <GripperVerticalIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Sidebar-Divider-gripper"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
     />
   </SplitVertical.Divider>
   <SplitVertical.LeftPane
@@ -342,7 +406,15 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 05.custom
         type="button"
       >
         <ChevronIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
           direction="left"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
         />
       </Button>
     </div>
@@ -373,7 +445,15 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 05.custom
     className="lucid-Sidebar-Divider"
   >
     <GripperVerticalIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Sidebar-Divider-gripper"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
     />
   </SplitVertical.Divider>
   <SplitVertical.RightPane
@@ -432,7 +512,15 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 06.custom
         type="button"
       >
         <ChevronIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
           direction="left"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
         />
       </Button>
     </div>
@@ -446,7 +534,15 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 06.custom
     className="lucid-Sidebar-Divider"
   >
     <GripperVerticalIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Sidebar-Divider-gripper"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
     />
   </SplitVertical.Divider>
   <SplitVertical.RightPane
@@ -469,7 +565,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 07.contro
   onResizing={[Function]}
   style={
     Object {
-      "minWidth": null,
+      "minWidth": undefined,
     }
   }
 >
@@ -505,7 +601,15 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 07.contro
         type="button"
       >
         <ChevronIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
           direction="right"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
         />
       </Button>
     </div>
@@ -519,7 +623,15 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 07.contro
     className="lucid-Sidebar-Divider"
   >
     <GripperVerticalIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Sidebar-Divider-gripper"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
     />
   </SplitVertical.Divider>
   <SplitVertical.RightPane
@@ -578,7 +690,15 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 08.handle
         type="button"
       >
         <ChevronIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
           direction="left"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
         />
       </Button>
     </div>
@@ -592,7 +712,15 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 08.handle
     className="lucid-Sidebar-Divider"
   >
     <GripperVerticalIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Sidebar-Divider-gripper"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
     />
   </SplitVertical.Divider>
   <SplitVertical.RightPane
@@ -651,7 +779,15 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 09.nested
         type="button"
       >
         <ChevronIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
           direction="left"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
         />
       </Button>
     </div>
@@ -665,7 +801,15 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 09.nested
     className="lucid-Sidebar-Divider"
   >
     <GripperVerticalIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Sidebar-Divider-gripper"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
     />
   </SplitVertical.Divider>
   <SplitVertical.RightPane
@@ -680,9 +824,9 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 09.nested
       >
         Id mumblecore blue bottle vegan, fingerstache commodo health goth man bun bitters. Ad ennui authentic, offal humblebrag paleo minim vero hammock kickstarter reprehenderit gastropub.
       </Sidebar.Bar>
-      <Sidebar.Primary>
+      <SplitHorizontal.Primary>
         Dreamcatcher jean shorts veniam paleo humblebrag, nihil venmo consequat. Tempor kickstarter fingerstache veniam austin, assumenda lomo eu YOLO small batch 3 wolf moon. Chia offal cliche, thundercats try-hard before they sold out tofu freegan ethical scenester polaroid quis next level jean shorts. Sed hoodie ullamco, XOXO laboris yuccie farm-to-table narwhal jean shorts odio affogato irure. Marfa echo park mixtape pinterest accusamus, ullamco normcore deep v hammock. Odio cronut authentic id sunt, knausgaard YOLO. Roof party mollit kickstarter sustainable sriracha.
-      </Sidebar.Primary>
+      </SplitHorizontal.Primary>
     </Sidebar>
   </SplitVertical.RightPane>
 </SplitVertical>
@@ -735,7 +879,15 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
         type="button"
       >
         <ChevronIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
           direction="left"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
         />
       </Button>
     </div>
@@ -1950,7 +2102,15 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
     className="lucid-Sidebar-Divider"
   >
     <GripperVerticalIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Sidebar-Divider-gripper"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
     />
   </SplitVertical.Divider>
   <SplitVertical.RightPane
@@ -2018,7 +2178,15 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 11.differ
         type="button"
       >
         <ChevronIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
           direction="left"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
         />
       </Button>
     </div>
@@ -2319,7 +2487,15 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 11.differ
     className="lucid-Sidebar-Divider"
   >
     <GripperVerticalIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-Sidebar-Divider-gripper"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
     />
   </SplitVertical.Divider>
   <SplitVertical.RightPane
