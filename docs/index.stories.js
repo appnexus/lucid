@@ -46,9 +46,9 @@ const getDefaultExport = module => {
 const isPrivate = component =>
 	component._isPrivate || (component.peek && component.peek.isPrivate);
 
-const getExamplesFromContext = (reqExamples, rawContext) =>
+const getExamplesFromContext = (reqExamples, rawContext) => 
 	_.map(loadAllKeys(reqExamples, rawContext), ({ key, module, raw }) => ({
-		name: _.join(_.reject(_.words(key), w => /^(\d+)|jsx?$/.test(w)), ' '),
+		name: _.join(_.reject(_.words(key), w => /^(\d+)|^(j|t)sx?$/.test(w)), ' '),
 		Example: getDefaultExport(module),
 		exampleNotes: module.notes,
 		source: raw,

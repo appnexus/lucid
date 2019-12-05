@@ -97,7 +97,7 @@ interface ISelectionProps
     hasBackground: boolean,
     
     /** Make the content text bold. This is desirable when you only have one
-     * level of nested selections. 
+     * level of nested selections.
      * */
     isBold: boolean,
 
@@ -111,7 +111,7 @@ interface ISelectionProps
 
     /** Adjusts the display of this component. This should typically be driven by
 	 * screen size. Currently \`small\` and \`large\` are explicitly handled by
-	 * this component. 
+	 * this component.
      * */
     responsiveMode: SelectionResponsiveMode,
 } 
