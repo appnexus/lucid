@@ -42,7 +42,7 @@ interface ISingleSelectPlaceholderProps extends StandardProps {
 	description?: string;
 }
 
-const Placeholder: FC<ISingleSelectPlaceholderProps> = (): null => null;
+const Placeholder = (_props: ISingleSelectPlaceholderProps): null => null;
 
 Placeholder.displayName = 'SingleSelect.Placeholder';
 Placeholder.peek = {
@@ -60,12 +60,11 @@ interface ISingleSelectOptionProps extends StandardProps {
 	Selected?: React.ReactNode;
 }
 
-interface ISingleSelectOptionPropsSelected
-	extends FC<ISingleSelectOptionProps> {
-	Selected?: FC<ISingleSelectOptionSelectedProps>;
-}
+// interface ISingleSelectOptionPropsSelected extends ISingleSelectOptionProps {
+// 	Selected?: FC<ISingleSelectOptionSelectedProps>;
+// }
 
-const Selected: FC<ISingleSelectOptionSelectedProps> = (): null => null;
+const Selected = (_props: { children?: React.ReactNode }): null => null;
 
 Selected.displayName = 'SingleSelect.Option.Selected';
 Selected.peek = {
@@ -76,7 +75,7 @@ Selected.peek = {
 };
 Selected.propName = 'Selected';
 
-const Option: ISingleSelectOptionPropsSelected = (): null => null;
+const Option = (_props: IDropMenuOptionProps): null => null;
 
 Option.displayName = 'SingleSelect.Option';
 Option.peek = {
@@ -96,16 +95,16 @@ Option.propTypes = {
 
 /** Option.Selected Child Component */
 // interface ISingleSelectOptionSelectedProps extends StandardProps {
-interface ISingleSelectOptionSelectedProps extends ISingleSelectOptionProps {
-	description?: string;
-}
+// interface ISingleSelectOptionSelectedProps extends ISingleSelectOptionProps {
+// 	description?: string;
+// }
 
 /** OptionGroup Child Component */
 // interface ISingleSelectOptionGroupProps extends StandardProps {
 // 	description?: string;
 // }
 
-const OptionGroup: FC<IDropMenuOptionGroupProps> = (): null => null;
+const OptionGroup = (_props: IDropMenuOptionGroupProps): null => null;
 
 OptionGroup.displayName = 'SingleSelect.OptionGroup';
 OptionGroup.peek = {
