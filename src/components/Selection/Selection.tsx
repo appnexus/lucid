@@ -12,7 +12,6 @@ import {
     getFirst,
     FC,
     StandardProps,
-    FixDefaults
 } from '../../util/component-types';
 
 const { createElement } = React;
@@ -67,7 +66,7 @@ interface ISelectionProps
             HTMLDivElement
         > {
     /** Applies an icon and styles for the kind of selection. */
-    kind?: SelectionKind,
+    kind: SelectionKind,
 
     /** Apply to the top of a nested sequence of Selection components.
 	 * Adds some spacing for a list of top level Selections with nested Selctions inside each. 
@@ -81,10 +80,10 @@ interface ISelectionProps
     isFilled?: boolean,
 
     /** Shows or hides the little "x" for a given item. */
-    isRemovable?: boolean,
+    isRemovable: boolean,
 
     /** Called when the close button is clicked. */
-    onRemove?: ({
+    onRemove: ({
         props,
         event
     }: {
@@ -95,12 +94,12 @@ interface ISelectionProps
     /** Gives the selection a background. This is desirable when you only have
 	 * one level of nested selections. 
      * */
-    hasBackground?: boolean,
+    hasBackground: boolean,
     
     /** Make the content text bold. This is desirable when you only have one
      * level of nested selections. 
      * */
-    isBold?: boolean,
+    isBold: boolean,
 
     /** Label of the component. */
     Label?: React.ReactNode,
@@ -114,13 +113,8 @@ interface ISelectionProps
 	 * screen size. Currently \`small\` and \`large\` are explicitly handled by
 	 * this component. 
      * */
-    responsiveMode?: SelectionResponsiveMode,
+    responsiveMode: SelectionResponsiveMode,
 } 
-
-interface ISelectionFC extends FC<ISelectionProps> {
-    Icon: FC<ISelectionIconProps>,
-    Label: FC<ISelectionLabelProps>
-}
 
 const defaultProps = {
     isRemovable: true,
@@ -131,7 +125,7 @@ const defaultProps = {
     responsiveMode: 'large' as SelectionResponsiveMode
 }
 
-const Selection: ISelectionFC = (props) => {
+const Selection = (props: ISelectionProps) => {
     const {
         className,
         isRemovable,
@@ -144,7 +138,7 @@ const Selection: ISelectionFC = (props) => {
         onRemove,
         responsiveMode,
         ...passThroughs
-    } = props as FixDefaults<ISelectionProps, typeof defaultProps>;
+    } = props;
 
     const isSmall = responsiveMode === 'small';
 
