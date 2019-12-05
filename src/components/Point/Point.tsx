@@ -2,12 +2,7 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import {
-	omitProps,
-	FC,
-	StandardProps,
-	FixDefaults,
-} from '../../util/component-types';
+import { omitProps, StandardProps } from '../../util/component-types';
 import { transformFromCenter } from '../../util/chart-helpers';
 import * as chartConstants from '../../constants/charts';
 
@@ -36,12 +31,12 @@ export enum Kind {
 export interface IPointProps
 	extends StandardProps,
 		React.SVGProps<SVGPathElement> {
-	hasStroke?: boolean;
-	kind?: Kind;
-	color?: string;
-	scale?: number;
-	x?: number;
-	y?: number;
+	hasStroke: boolean;
+	kind: Kind;
+	color: string;
+	scale: number;
+	x: number;
+	y: number;
 }
 
 const defaultProps = {
@@ -53,7 +48,7 @@ const defaultProps = {
 	scale: 1,
 };
 
-export const Point: FC<IPointProps> = (props): React.ReactElement => {
+export const Point = (props: IPointProps): React.ReactElement => {
 	const {
 		color,
 		hasStroke,
@@ -64,7 +59,7 @@ export const Point: FC<IPointProps> = (props): React.ReactElement => {
 		className,
 		style,
 		...passThroughs
-	} = props as FixDefaults<IPointProps, typeof defaultProps>;
+	} = props;
 
 	const kindIndex = kind % 5;
 

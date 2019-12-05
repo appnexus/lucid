@@ -14,6 +14,7 @@ export default createClass({
 		return (
 			<div>
 				<BarChart
+					width={750}
 					data={data}
 					yAxisTitle='Revenue'
 					yAxisTooltipFormatter={(yField, yValueFormatted, yValue) => yValue}

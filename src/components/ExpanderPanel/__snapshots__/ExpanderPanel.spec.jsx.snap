@@ -21,7 +21,15 @@ exports[`ExpanderPanel [common] example testing should match snapshot(s) for 1.b
       type="button"
     >
       <ChevronIcon
+        aspectRatio="xMidYMid meet"
+        color="primary"
         direction="down"
+        isClickable={false}
+        isDisabled={false}
+        onClick={[Function]}
+        onSelect={[Function]}
+        size={16}
+        viewBox="0 0 16 16"
       />
     </Button>
     <span>
@@ -472,7 +480,15 @@ exports[`ExpanderPanel [common] example testing should match snapshot(s) for 2.n
       type="button"
     >
       <ChevronIcon
+        aspectRatio="xMidYMid meet"
+        color="primary"
         direction="down"
+        isClickable={false}
+        isDisabled={false}
+        onClick={[Function]}
+        onSelect={[Function]}
+        size={16}
+        viewBox="0 0 16 16"
       />
     </Button>
     <span>

@@ -3,13 +3,7 @@ import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import Overlay, { IOverlayProps } from '../Overlay/Overlay';
 import { lucidClassNames } from '../../util/style-helpers';
-import {
-	FC,
-	StandardProps,
-	getFirst,
-	omitProps,
-	FixDefaults,
-} from '../../util/component-types';
+import { StandardProps, getFirst, omitProps } from '../../util/component-types';
 import Button, { IButtonProps } from '../Button/Button';
 import CloseIcon from '../Icon/CloseIcon/CloseIcon';
 
@@ -27,7 +21,7 @@ type Size = keyof typeof EnumSize;
 interface IDialogHeaderProps extends StandardProps {
 	description?: string;
 }
-const DialogHeader: FC<IDialogHeaderProps> = (): null => null;
+const DialogHeader = (_props: IDialogHeaderProps): null => null;
 DialogHeader.displayName = 'Dialog.Header';
 DialogHeader.peek = {
 	description: `
@@ -39,7 +33,7 @@ DialogHeader.propName = 'Header';
 interface IDialogFooterProps extends StandardProps {
 	description?: string;
 }
-const DialogFooter: FC<IDialogFooterProps> = (): null => null;
+const DialogFooter = (_props: IDialogFooterProps): null => null;
 DialogFooter.displayName = 'Dialog.Footer';
 DialogFooter.peek = {
 	description: `
@@ -59,7 +53,7 @@ export interface IDialogProps extends IOverlayProps {
 	/** Size variations that only affect the width of the dialog. All the sizes
 		will grow in height until they get too big, at which point they will
 		scroll inside. */
-	size?: Size;
+	size: Size;
 
 	/** If this is truthy (if a function is provided). the close button will show.
 		The function that is called when the close button is triggered. */
@@ -73,10 +67,10 @@ export interface IDialogProps extends IOverlayProps {
 
 	/** Provides a more segregated design to organize more content in the Dialog.
 	 * @default = false */
-	isComplex?: boolean;
+	isComplex: boolean;
 
 	/** A true or false value that dictates whether or not the Body has padding. */
-	hasGutters?: boolean;
+	hasGutters: boolean;
 
 	/** *Child Element* - Header contents. Only one \`Header\` is used. */
 	Header?: string | React.ReactNode & { props: IDialogHeaderProps };
@@ -85,12 +79,7 @@ export interface IDialogProps extends IOverlayProps {
 	Footer?: string | React.ReactNode & { props: IDialogFooterProps };
 }
 
-export interface IDialogFC extends FC<IDialogProps> {
-	Header: FC<IDialogHeaderProps>;
-	Footer: FC<IDialogFooterProps>;
-}
-
-export const Dialog: IDialogFC = (props): React.ReactElement => {
+export const Dialog = (props: IDialogProps): React.ReactElement => {
 	const {
 		className,
 		size,
@@ -99,7 +88,7 @@ export const Dialog: IDialogFC = (props): React.ReactElement => {
 		isShown,
 		isComplex,
 		...passThroughs
-	} = props as FixDefaults<IDialogProps, typeof defaultProps>;
+	} = props;
 
 	const headerChildProp = _.get(getFirst(props, Dialog.Header), 'props', {});
 	const footerChildProp = _.get(getFirst(props, Dialog.Footer), 'props', null);

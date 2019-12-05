@@ -127,8 +127,15 @@ exports[`VerticalListMenu [common] example testing should match snapshot(s) for 
           onClick={[Function]}
         >
           <ChevronIcon
+            aspectRatio="xMidYMid meet"
+            color="primary"
             direction="down"
+            isClickable={false}
+            isDisabled={false}
+            onClick={[Function]}
+            onSelect={[Function]}
             size={12}
+            viewBox="0 0 16 16"
           />
         </div>
       </div>
@@ -969,8 +976,15 @@ exports[`VerticalListMenu [common] example testing should match snapshot(s) for 
           onClick={[Function]}
         >
           <ChevronIcon
+            aspectRatio="xMidYMid meet"
+            color="primary"
             direction="down"
+            isClickable={false}
+            isDisabled={false}
+            onClick={[Function]}
+            onSelect={[Function]}
             size={12}
+            viewBox="0 0 16 16"
           />
         </div>
       </div>

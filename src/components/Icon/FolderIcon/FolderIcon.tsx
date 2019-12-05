@@ -2,16 +2,16 @@ import _ from 'lodash';
 import React from 'react';
 import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
-import { FC, omitProps } from '../../../util/component-types';
+import { omitProps } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-FolderIcon');
 
 interface IFolderIconProps extends IIconProps {}
 
-export const FolderIcon: FC<IFolderIconProps> = ({
+export const FolderIcon = ({
 	className,
 	...passThroughs
-}): React.ReactElement => {
+}: IFolderIconProps) => {
 	return (
 		<Icon
 			{...omitProps(
@@ -38,5 +38,6 @@ FolderIcon.peek = {
 	madeFrom: ['Icon'],
 };
 FolderIcon.propTypes = iconPropTypes;
+FolderIcon.defaultProps = Icon.defaultProps;
 
 export default FolderIcon;

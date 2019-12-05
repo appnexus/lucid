@@ -4,12 +4,10 @@ import _ from 'lodash';
 import { lucidClassNames } from '../../util/style-helpers';
 import CloseIcon from '../Icon/CloseIcon/CloseIcon';
 import {
-	FC,
 	StandardProps,
 	filterTypes,
 	rejectTypes,
 	omitProps,
-	FixDefaults
 } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-Tag');
@@ -25,18 +23,18 @@ export interface ITagProps
 	/** Set this prop if you're using three levels of tags so it can be styled
 		appropriately. This is required because we aren't able to know if your
 		Tags have grand children efficiently. */
-	isTop?: boolean;
+	isTop: boolean;
 
 	/** Use the light background when your tags are on a white page background.
 		Use a dark background when your tags need to be placed on a darker
 		background (e.g. in a page header). */
-	hasLightBackground?: boolean;
+	hasLightBackground: boolean;
 
 	/** Shows or hides the little "x" for a given tag. */
-	isRemovable?: boolean;
+	isRemovable: boolean;
 
 	/** Called when the user clicks to remove a tag. */
-	onRemove?: ({
+	onRemove: ({
 		props,
 		event,
 	}: {
@@ -49,10 +47,10 @@ const defaultProps = {
 	isTop: false,
 	hasLightBackground: true,
 	isRemovable: false,
-	onRemove: _.noop
+	onRemove: _.noop,
 };
 
-export const Tag: FC<ITagProps> = (props): React.ReactElement => {
+export const Tag = (props: ITagProps): React.ReactElement => {
 	const {
 		isTop,
 		isRemovable,
@@ -61,7 +59,7 @@ export const Tag: FC<ITagProps> = (props): React.ReactElement => {
 		onRemove,
 		hasLightBackground,
 		...passThroughs
-	} = props as FixDefaults<ITagProps, typeof defaultProps>;
+	} = props;
 
 	const handleRemove = ({ event }: { event: React.MouseEvent }): void => {
 		onRemove({ props, event });

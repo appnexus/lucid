@@ -3,17 +3,13 @@ import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 
 import Icon from '../Icon/Icon';
-import RadioButtonLabeled, {
-	IRadioButtonLabeledFC,
-} from '../RadioButtonLabeled/RadioButtonLabeled';
+import RadioButtonLabeled from '../RadioButtonLabeled/RadioButtonLabeled';
 import CheckboxLabeled from '../CheckboxLabeled/CheckboxLabeled';
 
 import { lucidClassNames } from '../../util/style-helpers';
 import {
-	FC,
 	StandardProps,
 	omitProps,
-	FixDefaults,
 	Overwrite,
 } from '../../util/component-types';
 
@@ -52,11 +48,11 @@ interface IIconSelectPropsRaw extends StandardProps {
 
 	/** Defines the type of IconSelect box. A 'single' select will create a radio
 		input type Item. A 'multiple' select will create a checkbox input type. */
-	kind?: 'single' | 'multiple';
+	kind: 'single' | 'multiple';
 
 	/** A function that is called with the id of the Item in the IconSelect group
 		is clicked. */
-	onSelect?: (
+	onSelect: (
 		id: string,
 		{
 			event,
@@ -68,7 +64,7 @@ interface IIconSelectPropsRaw extends StandardProps {
 	) => void;
 
 	/** Disabled all IconSelect Items. */
-	isDisabled?: boolean;
+	isDisabled: boolean;
 }
 
 export type IIconSelectProps = Overwrite<
@@ -85,7 +81,7 @@ const defaultProps = {
 	onSelect: _.noop,
 };
 
-export const IconSelect: FC<IIconSelectProps> = (props): React.ReactElement => {
+export const IconSelect = (props: IIconSelectProps): React.ReactElement => {
 	const {
 		className,
 		children,
@@ -94,7 +90,7 @@ export const IconSelect: FC<IIconSelectProps> = (props): React.ReactElement => {
 		isDisabled,
 		onSelect,
 		...passThroughs
-	} = props as FixDefaults<IIconSelectProps, typeof defaultProps>;
+	} = props;
 
 	const handleClick = (event: React.MouseEvent): void => {
 		if (!props.isDisabled) {
@@ -121,9 +117,7 @@ export const IconSelect: FC<IIconSelectProps> = (props): React.ReactElement => {
 		);
 	};
 
-	const getInputComponent = (
-		item: Item
-	): React.ReactElement<IRadioButtonLabeledFC> => {
+	const getInputComponent = (item: Item) => {
 		const { kind, className, isDisabled } = props;
 		const Label = item.label;
 		const singleSelect = _.isEqual(kind, 'single');

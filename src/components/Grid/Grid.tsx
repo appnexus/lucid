@@ -5,7 +5,6 @@ import { lucidClassNames } from '../../util/style-helpers';
 import {
 	findTypes,
 	omitProps,
-	FC,
 	StandardProps,
 } from '../../util/component-types';
 
@@ -89,14 +88,10 @@ interface ICellProps extends StandardProps {
 	isOffsetHalf?: boolean;
 }
 
-interface IGridFC extends FC<IGridProps> {
-	Cell: FC<ICellProps>;
-}
-
 // -----------------------------------------------------------------------------
 // Cell child component
 // -----------------------------------------------------------------------------
-const Cell: FC<ICellProps> = (): null => null;
+const Cell = (_props: ICellProps): null => null;
 Cell.displayName = 'Grid.Cell';
 Cell.peek = {
 	description: `
@@ -165,7 +160,7 @@ Cell.peek = {
 // -----------------------------------------------------------------------------
 // Grid
 // -----------------------------------------------------------------------------
-export const Grid: IGridFC = (props): React.ReactElement => {
+export const Grid = (props: IGridProps): React.ReactElement => {
 	const {
 		className,
 		children,

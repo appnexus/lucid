@@ -2,16 +2,16 @@ import _ from 'lodash';
 import React from 'react';
 import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
-import { FC, omitProps } from '../../../util/component-types';
+import { omitProps } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-DeleteIcon');
 
 interface IDeleteIconProps extends IIconProps {}
 
-export const DeleteIcon: FC<IDeleteIconProps> = ({
+export const DeleteIcon = ({
 	className,
 	...passThroughs
-}): React.ReactElement => {
+}: IDeleteIconProps) => {
 	return (
 		<Icon
 			{...omitProps(
@@ -41,5 +41,6 @@ DeleteIcon.peek = {
 	madeFrom: ['Icon'],
 };
 DeleteIcon.propTypes = iconPropTypes;
+DeleteIcon.defaultProps = Icon.defaultProps;
 
 export default DeleteIcon;

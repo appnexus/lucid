@@ -3,7 +3,7 @@ import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
-import { FC, omitProps } from '../../../util/component-types';
+import { omitProps } from '../../../util/component-types';
 
 const { bool } = PropTypes;
 
@@ -15,13 +15,13 @@ interface ISuccessLightIconProps extends IIconProps {
 	isActive?: boolean;
 }
 
-export const SuccessLightIcon: FC<ISuccessLightIconProps> = ({
+export const SuccessLightIcon = ({
 	className,
 	isActive,
 	isClickable,
 	isDisabled,
 	...passThroughs
-}): React.ReactElement => {
+}: ISuccessLightIconProps) => {
 	return (
 		<Icon
 			{...omitProps(
@@ -63,5 +63,6 @@ SuccessLightIcon.propTypes = {
 		feel" as when you hover.
 	`,
 };
+SuccessLightIcon.defaultProps = Icon.defaultProps;
 
 export default SuccessLightIcon;

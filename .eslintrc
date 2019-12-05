@@ -67,6 +67,7 @@
 		"@typescript-eslint/array-type": [2, "array-simple"],
 		"@typescript-eslint/explicit-member-accessibility": 0,
 		"@typescript-eslint/no-empty-interface": 1,
+		"@typescript-eslint/explicit-function-return-type": 0,
 		"prefer-const": 2,
 		"promise/always-return": 0,
 		"promise/catch-or-return": 2,

@@ -2,12 +2,7 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import {
-	FC,
-	omitProps,
-	StandardProps,
-	FixDefaults,
-} from '../../util/component-types';
+import { omitProps, StandardProps } from '../../util/component-types';
 import { groupByFields } from '../../util/chart-helpers';
 import * as d3Shape from 'd3-shape';
 import * as d3Scale from 'd3-scale';
@@ -43,7 +38,7 @@ export interface ILinesProps
 	- \`PALETTE_MONOCHROME_4_5\`
 	- \`PALETTE_MONOCHROME_5_5\`
 	- \`PALETTE_MONOCHROME_6_5\` */
-	palette?: string[];
+	palette: string[];
 
 	/** You can pass in an object if you want to map fields to
 	\`lucid.chartConstants\` or custom colors:
@@ -97,21 +92,21 @@ export interface ILinesProps
 	yStackedMax?: number;
 
 	/** The field we should look up your x data by. */
-	xField?: string;
+	xField: string;
 
 	/** The field(s) we should look up your y data by. Each entry represents a
 		series. Your actual y data should be numeric. */
-	yFields?: string[];
+	yFields: string[];
 
 	/** This will stack the data instead of grouping it. In order to stack the
 		data we have to calculate a new domain for the y scale that is based on
 		the \`sum\` of the data. */
-	isStacked?: boolean;
+	isStacked: boolean;
 
 	/** Sometimes you might not want the colors to start rotating at the blue
 		color, this number will be added the line index in determining which
 		color the lines are. */
-	colorOffset?: number;
+	colorOffset: number;
 }
 
 const defaultProps = {
@@ -122,7 +117,7 @@ const defaultProps = {
 	palette: chartConstants.PALETTE_7,
 };
 
-export const Lines: FC<ILinesProps> = (props): React.ReactElement => {
+export const Lines = (props: ILinesProps): React.ReactElement => {
 	const {
 		className,
 		data,
@@ -136,7 +131,7 @@ export const Lines: FC<ILinesProps> = (props): React.ReactElement => {
 		yScale: yScaleOriginal,
 		yStackedMax,
 		...passThroughs
-	} = props as FixDefaults<ILinesProps, typeof defaultProps>;
+	} = props;
 
 	// Copy the original so we can mutate it
 	const yScale = yScaleOriginal.copy();

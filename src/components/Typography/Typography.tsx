@@ -2,7 +2,7 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import { omitProps, FC, StandardProps } from '../../util/component-types';
+import { omitProps, StandardProps } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-Typography');
 
@@ -23,12 +23,12 @@ export enum ElementTypes {
 
 export interface ITypographyProps
 	extends StandardProps,
-	React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> {
-		/** This prop defines the type of text that will be displayed. It may be an actual HTML element or something with extra semantic meaning. */
-		variant: keyof typeof ElementTypes;
-	}
+		React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> {
+	/** This prop defines the type of text that will be displayed. It may be an actual HTML element or something with extra semantic meaning. */
+	variant: keyof typeof ElementTypes;
+}
 
-export const Typography: FC<ITypographyProps> = (props): React.ReactElement => {
+export const Typography = (props: ITypographyProps) => {
 	const { children, className, variant, ...passThroughs } = props;
 	const Element = ElementTypes[variant ? variant : 'p'];
 

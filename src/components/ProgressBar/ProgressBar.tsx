@@ -2,13 +2,7 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import {
-	omitProps,
-	getFirst,
-	FC,
-	StandardProps,
-	FixDefaults,
-} from '../../util/component-types';
+import { omitProps, getFirst, StandardProps } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-ProgressBar');
 
@@ -23,20 +17,16 @@ interface IProgressBarProps
 			HTMLDivElement
 		> {
 	/** Applies a color style for the kind of ProgressBar. */
-	kind?: 'default' | 'success' | 'danger' | 'info' | 'warning';
+	kind: 'default' | 'success' | 'danger' | 'info' | 'warning';
 
 	/** Percentage ProgressBar is complete. */
-	percentComplete?: number;
+	percentComplete: number;
 
 	/** *Child Element* - Title contents. Only one \`Title\` is used. */
 	Title?: string | React.ReactNode & { props: ITitleProps };
 }
 
-interface IProgressBarFC extends FC<IProgressBarProps> {
-	Title: FC<ITitleProps>;
-}
-
-const Title: FC<ITitleProps> = (): null => null;
+const Title = (_props: ITitleProps): null => null;
 Title.displayName = 'ProgressBar.Title';
 Title.propName = 'Title';
 Title.peek = {
@@ -50,13 +40,8 @@ const defaultProps = {
 	percentComplete: 0,
 };
 
-export const ProgressBar: IProgressBarFC = (props): React.ReactElement => {
-	const {
-		kind,
-		percentComplete,
-		className,
-		...passThroughs
-	} = props as FixDefaults<IProgressBarProps, typeof defaultProps>;
+export const ProgressBar = (props: IProgressBarProps): React.ReactElement => {
+	const { kind, percentComplete, className, ...passThroughs } = props;
 
 	const titleChildProp = _.get(getFirst(props, ProgressBar.Title), 'props', {});
 

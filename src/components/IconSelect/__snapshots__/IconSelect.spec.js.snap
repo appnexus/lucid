@@ -10,7 +10,16 @@ exports[`IconSelect [common] example testing should match snapshot(s) for 1.sele
     key="iconselectitem_0"
     onClick={[Function]}
   >
-    <ClockIcon />
+    <ClockIcon
+      aspectRatio="xMidYMid meet"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
+    />
     <figcaption
       className="lucid-IconSelect-Item-figcaption"
     >
@@ -29,7 +38,16 @@ exports[`IconSelect [common] example testing should match snapshot(s) for 1.sele
     key="iconselectitem_1"
     onClick={[Function]}
   >
-    <ClockIcon />
+    <ClockIcon
+      aspectRatio="xMidYMid meet"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
+    />
     <figcaption
       className="lucid-IconSelect-Item-figcaption"
     >
@@ -55,7 +73,16 @@ exports[`IconSelect [common] example testing should match snapshot(s) for 2.sele
     key="iconselectitem_0"
     onClick={[Function]}
   >
-    <ClockIcon />
+    <ClockIcon
+      aspectRatio="xMidYMid meet"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
+    />
     <figcaption
       className="lucid-IconSelect-Item-figcaption"
     >
@@ -75,7 +102,16 @@ exports[`IconSelect [common] example testing should match snapshot(s) for 2.sele
     key="iconselectitem_1"
     onClick={[Function]}
   >
-    <ClockIcon />
+    <ClockIcon
+      aspectRatio="xMidYMid meet"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
+    />
     <figcaption
       className="lucid-IconSelect-Item-figcaption"
     >
@@ -102,7 +138,16 @@ exports[`IconSelect [common] example testing should match snapshot(s) for 3.part
     key="iconselectitem_0"
     onClick={[Function]}
   >
-    <ClockIcon />
+    <ClockIcon
+      aspectRatio="xMidYMid meet"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
+    />
     <figcaption
       className="lucid-IconSelect-Item-figcaption"
     >
@@ -122,7 +167,16 @@ exports[`IconSelect [common] example testing should match snapshot(s) for 3.part
     key="iconselectitem_1"
     onClick={[Function]}
   >
-    <ClockIcon />
+    <ClockIcon
+      aspectRatio="xMidYMid meet"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
+    />
     <figcaption
       className="lucid-IconSelect-Item-figcaption"
     >
@@ -148,7 +202,16 @@ exports[`IconSelect [common] example testing should match snapshot(s) for 4.disa
     data-id="item1"
     key="iconselectitem_0"
   >
-    <ClockIcon />
+    <ClockIcon
+      aspectRatio="xMidYMid meet"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
+    />
     <figcaption
       className="lucid-IconSelect-Item-figcaption"
     >
@@ -167,7 +230,16 @@ exports[`IconSelect [common] example testing should match snapshot(s) for 4.disa
     data-id="item2"
     key="iconselectitem_1"
   >
-    <ClockIcon />
+    <ClockIcon
+      aspectRatio="xMidYMid meet"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
+      viewBox="0 0 16 16"
+    />
     <figcaption
       className="lucid-IconSelect-Item-figcaption"
     >

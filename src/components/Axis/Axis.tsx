@@ -5,9 +5,7 @@ import { lucidClassNames } from '../../util/style-helpers';
 import { discreteTicks } from '../../util/chart-helpers';
 import {
 	omitProps,
-	FC,
 	StandardProps,
-	FixDefaults,
 	Overwrite,
 } from '../../util/component-types';
 import * as d3scale from 'd3-scale';
@@ -27,11 +25,11 @@ interface IAxisPropsRaw extends StandardProps {
 	// | d3scale.ScaleLogarithmic<number, number>;
 
 	/** Size of the ticks for each discrete tick mark. */
-	innerTickSize?: number;
+	innerTickSize: number;
 
 	/** Size of the tick marks found at the beginning and end of the axis. It's
 		common to set this to \`0\` to remove them. */
-	outerTickSize?: number;
+	outerTickSize: number;
 
 	/** An optional function that can format ticks. Generally this shouldn't be
 		needed since d3 has very good default formatters for most data. */
@@ -42,22 +40,22 @@ interface IAxisPropsRaw extends StandardProps {
 	ticks?: number[];
 
 	/** Determines the spacing between each tick and its text. */
-	tickPadding?: number;
+	tickPadding: number;
 
 	/** Determines the orientation of the ticks. \`left\` and \`right\` will
 		generate a vertical axis, whereas \`top\` and \`bottom\` will generate a
 		horizontal axis. */
-	orient?: 'top' | 'bottom' | 'left' | 'right';
+	orient: 'top' | 'bottom' | 'left' | 'right';
 
 	/** Control the number of ticks displayed. If the scale is time based or
 		linear, this number acts a "hint" per the default behavior of D3. If it's
 		an ordinal scale, this number is treated as an absolute number of ticks
 		to display and is powered by our own utility function \`discreteTicks\`. */
-	tickCount?: number | null;
+	tickCount: number | null;
 
 	/** Determines the orientation of the tick text. This may override what the orient prop
 		tries to determine. This defaults to `horizontal`.  */
-	textOrientation?: 'vertical' | 'horizontal' | 'diagonal';
+	textOrientation: 'vertical' | 'horizontal' | 'diagonal';
 }
 
 export type IAxisProps = Overwrite<
@@ -74,7 +72,7 @@ const defaultProps = {
 	tickCount: null,
 };
 
-export const Axis: FC<IAxisProps> = (props): React.ReactElement => {
+export const Axis = (props: IAxisProps): React.ReactElement => {
 	const {
 		className,
 		scale,
@@ -89,7 +87,7 @@ export const Axis: FC<IAxisProps> = (props): React.ReactElement => {
 		tickPadding,
 		textOrientation,
 		...passThroughs
-	} = props as FixDefaults<IAxisProps, typeof defaultProps>;
+	} = props;
 
 	const tickSpacing = Math.max(innerTickSize, 0) + tickPadding;
 

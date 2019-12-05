@@ -64,9 +64,16 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
         type="button"
       >
         <ChevronIcon
+          aspectRatio="xMidYMid meet"
           className="lucid-SplitButton-ChevronIcon"
+          color="primary"
           direction="down"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
           size={10}
+          viewBox="0 0 16 16"
         />
       </Button>
     </ButtonGroup>
@@ -156,9 +163,16 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
         type="button"
       >
         <ChevronIcon
+          aspectRatio="xMidYMid meet"
           className="lucid-SplitButton-ChevronIcon"
+          color="primary"
           direction="down"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
           size={10}
+          viewBox="0 0 16 16"
         />
       </Button>
     </ButtonGroup>
@@ -246,9 +260,16 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 03.di
         type="button"
       >
         <ChevronIcon
+          aspectRatio="xMidYMid meet"
           className="lucid-SplitButton-ChevronIcon"
+          color="primary"
           direction="down"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
           size={10}
+          viewBox="0 0 16 16"
         />
       </Button>
     </ButtonGroup>
@@ -346,9 +367,16 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 04.up
         type="button"
       >
         <ChevronIcon
+          aspectRatio="xMidYMid meet"
           className="lucid-SplitButton-ChevronIcon"
+          color="primary"
           direction="up"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
           size={10}
+          viewBox="0 0 16 16"
         />
       </Button>
     </ButtonGroup>
@@ -447,9 +475,16 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 4.siz
         type="button"
       >
         <ChevronIcon
+          aspectRatio="xMidYMid meet"
           className="lucid-SplitButton-ChevronIcon"
+          color="primary"
           direction="down"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
           size={10}
+          viewBox="0 0 16 16"
         />
       </Button>
     </ButtonGroup>
@@ -540,9 +575,16 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 4.siz
         type="button"
       >
         <ChevronIcon
+          aspectRatio="xMidYMid meet"
           className="lucid-SplitButton-ChevronIcon"
+          color="primary"
           direction="down"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
           size={10}
+          viewBox="0 0 16 16"
         />
       </Button>
     </ButtonGroup>
@@ -633,9 +675,16 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 4.siz
         type="button"
       >
         <ChevronIcon
+          aspectRatio="xMidYMid meet"
           className="lucid-SplitButton-ChevronIcon"
+          color="primary"
           direction="down"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
           size={10}
+          viewBox="0 0 16 16"
         />
       </Button>
     </ButtonGroup>

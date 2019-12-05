@@ -5,9 +5,7 @@ import { lucidClassNames } from '../../util/style-helpers';
 import {
 	findTypes,
 	omitProps,
-	FC,
 	StandardProps,
-	FixDefaults,
 } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-Panel');
@@ -20,7 +18,7 @@ interface IPanelHeaderProps
 	description?: string;
 }
 
-const PanelHeader: FC<IPanelHeaderProps> = (): null => null;
+const PanelHeader = (_props: IPanelHeaderProps): null => null;
 PanelHeader.displayName = 'Panel.Header';
 PanelHeader.peek = {
 	description: `
@@ -38,7 +36,7 @@ interface IPanelFooterProps
 		React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> {
 	description?: string;
 }
-const PanelFooter: FC<IPanelFooterProps> = (): null => null;
+const PanelFooter = (_props: IPanelFooterProps): null => null;
 
 PanelFooter.displayName = 'Panel.Footer';
 PanelFooter.peek = {
@@ -65,19 +63,14 @@ export interface IPanelProps
 	Footer?: React.ReactNode & { props: IPanelFooterProps };
 
 	/** If set to true, creates a content section with no padding. */
-	isGutterless?: boolean;
+	isGutterless: boolean;
 
 	/** If set to false, removes margin around the Panel */
-	hasMargin?: boolean;
+	hasMargin: boolean;
 
 	/** If set to true, makes content overflow scrollable, when Panel has a set
 	 * height. */
-	isScrollable?: boolean;
-}
-
-export interface IPanelFC extends FC<IPanelProps> {
-	Header: FC<IPanelHeaderProps>;
-	Footer: FC<IPanelFooterProps>;
+	isScrollable: boolean;
 }
 
 const defaultProps = {
@@ -86,7 +79,7 @@ const defaultProps = {
 	isScrollable: true,
 };
 
-export const Panel: IPanelFC = (props): React.ReactElement => {
+export const Panel = (props: IPanelProps): React.ReactElement => {
 	const {
 		children,
 		className,
@@ -95,7 +88,7 @@ export const Panel: IPanelFC = (props): React.ReactElement => {
 		style,
 		isScrollable,
 		...passThroughs
-	} = props as FixDefaults<IPanelProps, typeof defaultProps>;
+	} = props;
 
 	const headerChildProp = _.first(
 		_.map(findTypes(props, Panel.Header), 'props')

@@ -4,8 +4,6 @@ import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import {
 	omitProps,
-	FC,
-	FixDefaults,
 	StandardProps,
 	Overwrite,
 } from '../../util/component-types';
@@ -19,23 +17,23 @@ export interface ICheckboxPropsRaw extends StandardProps {
 	 * "partially checked" state. This prop takes precedence over
 	 * \`isSelected\`.
 	 */
-	isIndeterminate?: boolean;
+	isIndeterminate: boolean;
 
 	/** Indicates whether the component should appear and act disabled by having
 	 * a "greyed out" palette and ignoring user interactions.
 	 */
-	isDisabled?: boolean;
+	isDisabled: boolean;
 
 	/** Indicates that the component is in the "selected" state when true and in
 	 * the "unselected" state when false. This props is ignored if
 	 * \`isIndeterminate\` is \`true\`.
 	 */
-	isSelected?: boolean;
+	isSelected: boolean;
 
 	/** Called when the user clicks on the component or when they press the space
-	 * key while the component is in focus. 
+	 * key while the component is in focus.
 	 */
-	onSelect?: (
+	onSelect: (
 		isSelected: boolean,
 		{
 			event,
@@ -65,7 +63,7 @@ export const defaultProps = {
 	onSelect: _.noop,
 };
 
-export const Checkbox: FC<ICheckboxProps> = (props): React.ReactElement => {
+export const Checkbox = (props: ICheckboxProps): React.ReactElement => {
 	const {
 		className,
 		isIndeterminate,
@@ -75,7 +73,7 @@ export const Checkbox: FC<ICheckboxProps> = (props): React.ReactElement => {
 		title,
 		onSelect,
 		...passThroughs
-	} = props as FixDefaults<ICheckboxProps, typeof defaultProps>;
+	} = props;
 
 	const nativeElement = React.createRef<HTMLInputElement>();
 
@@ -146,9 +144,6 @@ export const Checkbox: FC<ICheckboxProps> = (props): React.ReactElement => {
 };
 
 Checkbox.displayName = 'Checkbox';
-
-Checkbox._isPrivate = true;
-
 Checkbox.peek = {
 	description: `
 		Checkbox is a square two-state toggle used to create \`CheckboxLabeled\`.
@@ -158,10 +153,10 @@ Checkbox.peek = {
 	`,
 	notes: {
 		overview: `
-			Checkbox is a square two-state toggle. 
+			Checkbox is a square two-state toggle. Use \`CheckboxLabeled\` in your applications.
 		`,
 		intendedUse: `
-			Used to create \`CheckboxLabeled\`. Use \`CheckboxLabeled\` in your applications.			
+			Used to create \`CheckboxLabeled\`. 			
 		`,
 		technicalRecommendations: `
 			- Use the Selected state when a filter or setting will be applied.
