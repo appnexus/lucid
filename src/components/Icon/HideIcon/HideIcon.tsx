@@ -2,16 +2,13 @@ import _ from 'lodash';
 import React from 'react';
 import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
-import { FC, omitProps } from '../../../util/component-types';
+import { omitProps } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-HideIcon');
 
 interface IHideIconProps extends IIconProps {}
 
-export const HideIcon: FC<IHideIconProps> = ({
-	className,
-	...passThroughs
-}): React.ReactElement => {
+export const HideIcon = ({ className, ...passThroughs }: IHideIconProps) => {
 	return (
 		<Icon
 			{...omitProps(passThroughs, undefined, _.keys(HideIcon.propTypes), false)}
@@ -38,5 +35,6 @@ HideIcon.peek = {
 	madeFrom: ['Icon'],
 };
 HideIcon.propTypes = iconPropTypes;
+HideIcon.defaultProps = Icon.defaultProps;
 
 export default HideIcon;

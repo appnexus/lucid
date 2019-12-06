@@ -2,16 +2,16 @@ import _ from 'lodash';
 import React from 'react';
 import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
-import { FC, omitProps } from '../../../util/component-types';
+import { omitProps } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-GetMaximumIcon');
 
 interface IGetMaximumIconProps extends IIconProps {}
 
-export const GetMaximumIcon: FC<IGetMaximumIconProps> = ({
+export const GetMaximumIcon = ({
 	className,
 	...passThroughs
-}): React.ReactElement => {
+}: IGetMaximumIconProps) => {
 	return (
 		<Icon
 			{...omitProps(
@@ -40,5 +40,6 @@ GetMaximumIcon.peek = {
 	madeFrom: ['Icon'],
 };
 GetMaximumIcon.propTypes = iconPropTypes;
+GetMaximumIcon.defaultProps = Icon.defaultProps;
 
 export default GetMaximumIcon;

@@ -8,10 +8,7 @@ const cx = lucidClassNames.bind('&-SaveIcon');
 
 interface ISaveIconProps extends IIconProps {}
 
-export const SaveIcon: FC<ISaveIconProps> = ({
-	className,
-	...passThroughs
-}): React.ReactElement => {
+export const SaveIcon = ({ className, ...passThroughs }: ISaveIconProps) => {
 	return (
 		<Icon
 			{...omitProps(passThroughs, undefined, _.keys(SaveIcon.propTypes), false)}
@@ -35,5 +32,6 @@ SaveIcon.peek = {
 	madeFrom: ['Icon'],
 };
 SaveIcon.propTypes = iconPropTypes;
+SaveIcon.defaultProps = Icon.defaultProps;
 
 export default SaveIcon;
