@@ -2,16 +2,16 @@ import _ from 'lodash';
 import React from 'react';
 import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
-import { FC, omitProps } from '../../../util/component-types';
+import { omitProps } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-FilterIcon');
 
 interface IFilterIconProps extends IIconProps {}
 
-export const FilterIcon: FC<IFilterIconProps> = ({
+export const FilterIcon = ({
 	className,
 	...passThroughs
-}): React.ReactElement => {
+}: IFilterIconProps) => {
 	return (
 		<Icon
 			{...omitProps(
@@ -38,5 +38,6 @@ FilterIcon.peek = {
 	madeFrom: ['Icon'],
 };
 FilterIcon.propTypes = iconPropTypes;
+FilterIcon.defaultProps = Icon.defaultProps;
 
 export default FilterIcon;

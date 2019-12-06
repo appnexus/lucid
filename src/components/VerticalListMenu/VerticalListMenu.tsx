@@ -5,10 +5,9 @@ import { bindClassNames } from '../../util/style-helpers';
 import {
 	findTypes,
 	omitProps,
-	FC,
 	StandardProps,
 } from '../../util/component-types';
-import { buildHybridComponent } from '../../util/state-management';
+import { buildModernHybridComponent } from '../../util/state-management';
 import * as reducers from './VerticalListMenu.reducers';
 import ChevronIcon from '../Icon/ChevronIcon/ChevronIcon';
 import Collapsible, { ICollapsibleProps } from '../Collapsible/Collapsible';
@@ -99,7 +98,7 @@ export interface IVerticalListMenuItemProps extends StandardProps {
 	if the item has children. */
 	Collapsible?: ICollapsibleProps;
 }
-const Item: FC<IVerticalListMenuItemProps> = (): null => null;
+const Item = (_props: IVerticalListMenuItemProps): null => null;
 Item.peek = {
 	description: `
 		A child item that can contain content or another VerticalListMenu.
@@ -162,6 +161,21 @@ class VerticalListMenu extends React.Component<
 
 	static Item = Item;
 
+	static peek = {
+		description: `
+					Used primarily for navigation lists. It supports nesting
+					\`VerticalListMenu\`s below \`VerticalListMenu.Item\`s and animating
+					expanding of those sub lists.  The default reducer behavior is for only
+					one \`VerticalListMenu.Item\` to be selected at any given time; that is
+					easily overridden by handling \`onSelect\` yourself.
+				`,
+		categories: ['navigation'],
+		madeFrom: ['ChevronIcon'],
+	};
+
+	static reducers = reducers;
+
+	// TODO: remove this once we move to only buildModernHybridComponent
 	static definition = {
 		statics: {
 			Item,
@@ -179,8 +193,6 @@ class VerticalListMenu extends React.Component<
 			},
 		},
 	};
-
-	static reducers = reducers;
 
 	static propTypes = {
 		children: node`
@@ -366,5 +378,10 @@ class VerticalListMenu extends React.Component<
 	};
 }
 
-export default buildHybridComponent(VerticalListMenu);
+export default buildModernHybridComponent<
+	IVerticalListMenuProps,
+	IVerticalListMenuState,
+	typeof VerticalListMenu
+>(VerticalListMenu, { reducers });
+
 export { VerticalListMenu as VerticalListMenuDumb };

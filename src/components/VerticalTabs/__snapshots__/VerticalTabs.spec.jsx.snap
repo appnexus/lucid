@@ -159,7 +159,16 @@ exports[`VerticalTabs [common] example testing should match snapshot(s) for 3-co
         >
           One
         </h2>
-        <SuccessIcon />
+        <SuccessIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
+        />
         <span
           style={
             Object {
@@ -189,7 +198,16 @@ exports[`VerticalTabs [common] example testing should match snapshot(s) for 3-co
         >
           Two
         </h2>
-        <WarningIcon />
+        <WarningIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
+        />
         <span
           style={
             Object {
@@ -257,12 +275,12 @@ exports[`VerticalTabs [common] example testing should match snapshot(s) for 3-co
               isStacked={false}
               palette={
                 Array [
-                  "color-chart-0",
-                  "color-chart-1",
-                  "color-chart-2",
                   "color-chart-3",
-                  "color-chart-4",
+                  "color-chart-0-darkest",
+                  "color-chart-2",
+                  "color-chart-4-lightest",
                   "color-chart-5",
+                  "color-chart-1-light",
                   "color-chart-6",
                 ]
               }
@@ -303,7 +321,16 @@ exports[`VerticalTabs [common] example testing should match snapshot(s) for 3-co
       >
         One
       </h2>
-      <SuccessIcon />
+      <SuccessIcon
+        aspectRatio="xMidYMid meet"
+        color="primary"
+        isClickable={false}
+        isDisabled={false}
+        onClick={[Function]}
+        onSelect={[Function]}
+        size={16}
+        viewBox="0 0 16 16"
+      />
       <span
         style={
           Object {

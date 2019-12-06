@@ -2,16 +2,13 @@ import _ from 'lodash';
 import React from 'react';
 import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
-import { FC, omitProps } from '../../../util/component-types';
+import { omitProps } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-PlusIcon');
 
 interface IPlusIconProps extends IIconProps {}
 
-export const PlusIcon: FC<IPlusIconProps> = ({
-	className,
-	...passThroughs
-}): React.ReactElement => {
+export const PlusIcon = ({ className, ...passThroughs }: IPlusIconProps) => {
 	return (
 		<Icon
 			{...omitProps(passThroughs, undefined, _.keys(PlusIcon.propTypes), false)}
@@ -33,5 +30,6 @@ PlusIcon.peek = {
 	madeFrom: ['Icon'],
 };
 PlusIcon.propTypes = iconPropTypes;
+PlusIcon.defaultProps = Icon.defaultProps;
 
 export default PlusIcon;

@@ -2,18 +2,18 @@ import _ from 'lodash';
 import React from 'react';
 import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
-import { FC, omitProps } from '../../../util/component-types';
+import { omitProps } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-WarningLightIcon');
 
 interface IWarningLightIconProps extends IIconProps {}
 
-export const WarningLightIcon: FC<IWarningLightIconProps> = ({
+export const WarningLightIcon = ({
 	className,
 	isClickable,
 	isDisabled,
 	...passThroughs
-}): React.ReactElement => {
+}: IWarningLightIconProps) => {
 	return (
 		<Icon
 			{...omitProps(
@@ -39,9 +39,12 @@ export const WarningLightIcon: FC<IWarningLightIconProps> = ({
 	);
 };
 
+WarningLightIcon._isPrivate = true;
 WarningLightIcon.displayName = 'WarningLightIcon';
 WarningLightIcon.peek = {
 	description: `
+		DEPRECATED: this component should not be used and will be removed from the library in a future release.
+		
 		Diet version.
 	`,
 	categories: ['visual design', 'icons'],
@@ -49,5 +52,6 @@ WarningLightIcon.peek = {
 	madeFrom: ['Icon'],
 };
 WarningLightIcon.propTypes = iconPropTypes;
+WarningLightIcon.defaultProps = Icon.defaultProps;
 
 export default WarningLightIcon;

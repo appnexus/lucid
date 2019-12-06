@@ -62,7 +62,16 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 1.sta
           rowSpan={2}
           sortDirection="up"
         >
-          <SuccessIcon />
+          <SuccessIcon
+            aspectRatio="xMidYMid meet"
+            color="primary"
+            isClickable={false}
+            isDisabled={false}
+            onClick={[Function]}
+            onSelect={[Function]}
+            size={16}
+            viewBox="0 0 16 16"
+          />
         </Table.Th>
         <Table.Th
           align="left"
@@ -162,7 +171,16 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 1.sta
           hasBorderLeft={true}
           hasBorderRight={true}
         >
-          <SuccessIcon />
+          <SuccessIcon
+            aspectRatio="xMidYMid meet"
+            color="primary"
+            isClickable={false}
+            isDisabled={false}
+            onClick={[Function]}
+            onSelect={[Function]}
+            size={16}
+            viewBox="0 0 16 16"
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -238,7 +256,16 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 1.sta
           hasBorderLeft={true}
           hasBorderRight={true}
         >
-          <SuccessIcon />
+          <SuccessIcon
+            aspectRatio="xMidYMid meet"
+            color="primary"
+            isClickable={false}
+            isDisabled={false}
+            onClick={[Function]}
+            onSelect={[Function]}
+            size={16}
+            viewBox="0 0 16 16"
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -315,7 +342,16 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 1.sta
           hasBorderLeft={true}
           hasBorderRight={true}
         >
-          <SuccessIcon />
+          <SuccessIcon
+            aspectRatio="xMidYMid meet"
+            color="primary"
+            isClickable={false}
+            isDisabled={false}
+            onClick={[Function]}
+            onSelect={[Function]}
+            size={16}
+            viewBox="0 0 16 16"
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -392,7 +428,16 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 1.sta
           hasBorderLeft={true}
           hasBorderRight={true}
         >
-          <SuccessIcon />
+          <SuccessIcon
+            aspectRatio="xMidYMid meet"
+            color="primary"
+            isClickable={false}
+            isDisabled={false}
+            onClick={[Function]}
+            onSelect={[Function]}
+            size={16}
+            viewBox="0 0 16 16"
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -472,7 +517,16 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 1.sta
           hasBorderLeft={true}
           hasBorderRight={true}
         >
-          <SuccessIcon />
+          <SuccessIcon
+            aspectRatio="xMidYMid meet"
+            color="primary"
+            isClickable={false}
+            isDisabled={false}
+            onClick={[Function]}
+            onSelect={[Function]}
+            size={16}
+            viewBox="0 0 16 16"
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -552,7 +606,16 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 1.sta
           hasBorderLeft={true}
           hasBorderRight={true}
         >
-          <SuccessIcon />
+          <SuccessIcon
+            aspectRatio="xMidYMid meet"
+            color="primary"
+            isClickable={false}
+            isDisabled={false}
+            onClick={[Function]}
+            onSelect={[Function]}
+            size={16}
+            viewBox="0 0 16 16"
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -633,7 +696,16 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 1.sta
           hasBorderLeft={true}
           hasBorderRight={true}
         >
-          <SuccessIcon />
+          <SuccessIcon
+            aspectRatio="xMidYMid meet"
+            color="primary"
+            isClickable={false}
+            isDisabled={false}
+            onClick={[Function]}
+            onSelect={[Function]}
+            size={16}
+            viewBox="0 0 16 16"
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -714,7 +786,16 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 1.sta
           hasBorderLeft={true}
           hasBorderRight={true}
         >
-          <SuccessIcon />
+          <SuccessIcon
+            aspectRatio="xMidYMid meet"
+            color="primary"
+            isClickable={false}
+            isDisabled={false}
+            onClick={[Function]}
+            onSelect={[Function]}
+            size={16}
+            viewBox="0 0 16 16"
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -790,7 +871,16 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 1.sta
           hasBorderLeft={true}
           hasBorderRight={true}
         >
-          <SuccessIcon />
+          <SuccessIcon
+            aspectRatio="xMidYMid meet"
+            color="primary"
+            isClickable={false}
+            isDisabled={false}
+            onClick={[Function]}
+            onSelect={[Function]}
+            size={16}
+            viewBox="0 0 16 16"
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -866,7 +956,16 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 1.sta
           hasBorderLeft={true}
           hasBorderRight={true}
         >
-          <SuccessIcon />
+          <SuccessIcon
+            aspectRatio="xMidYMid meet"
+            color="primary"
+            isClickable={false}
+            isDisabled={false}
+            onClick={[Function]}
+            onSelect={[Function]}
+            size={16}
+            viewBox="0 0 16 16"
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -943,7 +1042,16 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 1.sta
           hasBorderLeft={true}
           hasBorderRight={true}
         >
-          <SuccessIcon />
+          <SuccessIcon
+            aspectRatio="xMidYMid meet"
+            color="primary"
+            isClickable={false}
+            isDisabled={false}
+            onClick={[Function]}
+            onSelect={[Function]}
+            size={16}
+            viewBox="0 0 16 16"
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -1020,7 +1128,16 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 1.sta
           hasBorderLeft={true}
           hasBorderRight={true}
         >
-          <SuccessIcon />
+          <SuccessIcon
+            aspectRatio="xMidYMid meet"
+            color="primary"
+            isClickable={false}
+            isDisabled={false}
+            onClick={[Function]}
+            onSelect={[Function]}
+            size={16}
+            viewBox="0 0 16 16"
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -1097,7 +1214,16 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 1.sta
           hasBorderLeft={true}
           hasBorderRight={true}
         >
-          <SuccessIcon />
+          <SuccessIcon
+            aspectRatio="xMidYMid meet"
+            color="primary"
+            isClickable={false}
+            isDisabled={false}
+            onClick={[Function]}
+            onSelect={[Function]}
+            size={16}
+            viewBox="0 0 16 16"
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -1174,7 +1300,16 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 1.sta
           hasBorderLeft={true}
           hasBorderRight={true}
         >
-          <SuccessIcon />
+          <SuccessIcon
+            aspectRatio="xMidYMid meet"
+            color="primary"
+            isClickable={false}
+            isDisabled={false}
+            onClick={[Function]}
+            onSelect={[Function]}
+            size={16}
+            viewBox="0 0 16 16"
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -1288,7 +1423,16 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 2.wit
           rowSpan={2}
           sortDirection="up"
         >
-          <SuccessIcon />
+          <SuccessIcon
+            aspectRatio="xMidYMid meet"
+            color="primary"
+            isClickable={false}
+            isDisabled={false}
+            onClick={[Function]}
+            onSelect={[Function]}
+            size={16}
+            viewBox="0 0 16 16"
+          />
         </Table.Th>
         <Table.Th
           align="left"
@@ -1388,7 +1532,16 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 2.wit
           hasBorderLeft={true}
           hasBorderRight={true}
         >
-          <SuccessIcon />
+          <SuccessIcon
+            aspectRatio="xMidYMid meet"
+            color="primary"
+            isClickable={false}
+            isDisabled={false}
+            onClick={[Function]}
+            onSelect={[Function]}
+            size={16}
+            viewBox="0 0 16 16"
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -1464,7 +1617,16 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 2.wit
           hasBorderLeft={true}
           hasBorderRight={true}
         >
-          <SuccessIcon />
+          <SuccessIcon
+            aspectRatio="xMidYMid meet"
+            color="primary"
+            isClickable={false}
+            isDisabled={false}
+            onClick={[Function]}
+            onSelect={[Function]}
+            size={16}
+            viewBox="0 0 16 16"
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -1541,7 +1703,16 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 2.wit
           hasBorderLeft={true}
           hasBorderRight={true}
         >
-          <SuccessIcon />
+          <SuccessIcon
+            aspectRatio="xMidYMid meet"
+            color="primary"
+            isClickable={false}
+            isDisabled={false}
+            onClick={[Function]}
+            onSelect={[Function]}
+            size={16}
+            viewBox="0 0 16 16"
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -1618,7 +1789,16 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 2.wit
           hasBorderLeft={true}
           hasBorderRight={true}
         >
-          <SuccessIcon />
+          <SuccessIcon
+            aspectRatio="xMidYMid meet"
+            color="primary"
+            isClickable={false}
+            isDisabled={false}
+            onClick={[Function]}
+            onSelect={[Function]}
+            size={16}
+            viewBox="0 0 16 16"
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -1698,7 +1878,16 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 2.wit
           hasBorderLeft={true}
           hasBorderRight={true}
         >
-          <SuccessIcon />
+          <SuccessIcon
+            aspectRatio="xMidYMid meet"
+            color="primary"
+            isClickable={false}
+            isDisabled={false}
+            onClick={[Function]}
+            onSelect={[Function]}
+            size={16}
+            viewBox="0 0 16 16"
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -1778,7 +1967,16 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 2.wit
           hasBorderLeft={true}
           hasBorderRight={true}
         >
-          <SuccessIcon />
+          <SuccessIcon
+            aspectRatio="xMidYMid meet"
+            color="primary"
+            isClickable={false}
+            isDisabled={false}
+            onClick={[Function]}
+            onSelect={[Function]}
+            size={16}
+            viewBox="0 0 16 16"
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -1859,7 +2057,16 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 2.wit
           hasBorderLeft={true}
           hasBorderRight={true}
         >
-          <SuccessIcon />
+          <SuccessIcon
+            aspectRatio="xMidYMid meet"
+            color="primary"
+            isClickable={false}
+            isDisabled={false}
+            onClick={[Function]}
+            onSelect={[Function]}
+            size={16}
+            viewBox="0 0 16 16"
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -1940,7 +2147,16 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 2.wit
           hasBorderLeft={true}
           hasBorderRight={true}
         >
-          <SuccessIcon />
+          <SuccessIcon
+            aspectRatio="xMidYMid meet"
+            color="primary"
+            isClickable={false}
+            isDisabled={false}
+            onClick={[Function]}
+            onSelect={[Function]}
+            size={16}
+            viewBox="0 0 16 16"
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -2016,7 +2232,16 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 2.wit
           hasBorderLeft={true}
           hasBorderRight={true}
         >
-          <SuccessIcon />
+          <SuccessIcon
+            aspectRatio="xMidYMid meet"
+            color="primary"
+            isClickable={false}
+            isDisabled={false}
+            onClick={[Function]}
+            onSelect={[Function]}
+            size={16}
+            viewBox="0 0 16 16"
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -2092,7 +2317,16 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 2.wit
           hasBorderLeft={true}
           hasBorderRight={true}
         >
-          <SuccessIcon />
+          <SuccessIcon
+            aspectRatio="xMidYMid meet"
+            color="primary"
+            isClickable={false}
+            isDisabled={false}
+            onClick={[Function]}
+            onSelect={[Function]}
+            size={16}
+            viewBox="0 0 16 16"
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -2169,7 +2403,16 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 2.wit
           hasBorderLeft={true}
           hasBorderRight={true}
         >
-          <SuccessIcon />
+          <SuccessIcon
+            aspectRatio="xMidYMid meet"
+            color="primary"
+            isClickable={false}
+            isDisabled={false}
+            onClick={[Function]}
+            onSelect={[Function]}
+            size={16}
+            viewBox="0 0 16 16"
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -2246,7 +2489,16 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 2.wit
           hasBorderLeft={true}
           hasBorderRight={true}
         >
-          <SuccessIcon />
+          <SuccessIcon
+            aspectRatio="xMidYMid meet"
+            color="primary"
+            isClickable={false}
+            isDisabled={false}
+            onClick={[Function]}
+            onSelect={[Function]}
+            size={16}
+            viewBox="0 0 16 16"
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -2323,7 +2575,16 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 2.wit
           hasBorderLeft={true}
           hasBorderRight={true}
         >
-          <SuccessIcon />
+          <SuccessIcon
+            aspectRatio="xMidYMid meet"
+            color="primary"
+            isClickable={false}
+            isDisabled={false}
+            onClick={[Function]}
+            onSelect={[Function]}
+            size={16}
+            viewBox="0 0 16 16"
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -2400,7 +2661,16 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 2.wit
           hasBorderLeft={true}
           hasBorderRight={true}
         >
-          <SuccessIcon />
+          <SuccessIcon
+            aspectRatio="xMidYMid meet"
+            color="primary"
+            isClickable={false}
+            isDisabled={false}
+            onClick={[Function]}
+            onSelect={[Function]}
+            size={16}
+            viewBox="0 0 16 16"
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -2520,7 +2790,16 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 3.set
           rowSpan={2}
           sortDirection="up"
         >
-          <SuccessIcon />
+          <SuccessIcon
+            aspectRatio="xMidYMid meet"
+            color="primary"
+            isClickable={false}
+            isDisabled={false}
+            onClick={[Function]}
+            onSelect={[Function]}
+            size={16}
+            viewBox="0 0 16 16"
+          />
         </Table.Th>
         <Table.Th
           align="left"
@@ -2620,7 +2899,16 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 3.set
           hasBorderLeft={true}
           hasBorderRight={true}
         >
-          <SuccessIcon />
+          <SuccessIcon
+            aspectRatio="xMidYMid meet"
+            color="primary"
+            isClickable={false}
+            isDisabled={false}
+            onClick={[Function]}
+            onSelect={[Function]}
+            size={16}
+            viewBox="0 0 16 16"
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -2696,7 +2984,16 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 3.set
           hasBorderLeft={true}
           hasBorderRight={true}
         >
-          <SuccessIcon />
+          <SuccessIcon
+            aspectRatio="xMidYMid meet"
+            color="primary"
+            isClickable={false}
+            isDisabled={false}
+            onClick={[Function]}
+            onSelect={[Function]}
+            size={16}
+            viewBox="0 0 16 16"
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -2773,7 +3070,16 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 3.set
           hasBorderLeft={true}
           hasBorderRight={true}
         >
-          <SuccessIcon />
+          <SuccessIcon
+            aspectRatio="xMidYMid meet"
+            color="primary"
+            isClickable={false}
+            isDisabled={false}
+            onClick={[Function]}
+            onSelect={[Function]}
+            size={16}
+            viewBox="0 0 16 16"
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -2850,7 +3156,16 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 3.set
           hasBorderLeft={true}
           hasBorderRight={true}
         >
-          <SuccessIcon />
+          <SuccessIcon
+            aspectRatio="xMidYMid meet"
+            color="primary"
+            isClickable={false}
+            isDisabled={false}
+            onClick={[Function]}
+            onSelect={[Function]}
+            size={16}
+            viewBox="0 0 16 16"
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -2930,7 +3245,16 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 3.set
           hasBorderLeft={true}
           hasBorderRight={true}
         >
-          <SuccessIcon />
+          <SuccessIcon
+            aspectRatio="xMidYMid meet"
+            color="primary"
+            isClickable={false}
+            isDisabled={false}
+            onClick={[Function]}
+            onSelect={[Function]}
+            size={16}
+            viewBox="0 0 16 16"
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -3010,7 +3334,16 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 3.set
           hasBorderLeft={true}
           hasBorderRight={true}
         >
-          <SuccessIcon />
+          <SuccessIcon
+            aspectRatio="xMidYMid meet"
+            color="primary"
+            isClickable={false}
+            isDisabled={false}
+            onClick={[Function]}
+            onSelect={[Function]}
+            size={16}
+            viewBox="0 0 16 16"
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -3091,7 +3424,16 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 3.set
           hasBorderLeft={true}
           hasBorderRight={true}
         >
-          <SuccessIcon />
+          <SuccessIcon
+            aspectRatio="xMidYMid meet"
+            color="primary"
+            isClickable={false}
+            isDisabled={false}
+            onClick={[Function]}
+            onSelect={[Function]}
+            size={16}
+            viewBox="0 0 16 16"
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -3172,7 +3514,16 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 3.set
           hasBorderLeft={true}
           hasBorderRight={true}
         >
-          <SuccessIcon />
+          <SuccessIcon
+            aspectRatio="xMidYMid meet"
+            color="primary"
+            isClickable={false}
+            isDisabled={false}
+            onClick={[Function]}
+            onSelect={[Function]}
+            size={16}
+            viewBox="0 0 16 16"
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -3248,7 +3599,16 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 3.set
           hasBorderLeft={true}
           hasBorderRight={true}
         >
-          <SuccessIcon />
+          <SuccessIcon
+            aspectRatio="xMidYMid meet"
+            color="primary"
+            isClickable={false}
+            isDisabled={false}
+            onClick={[Function]}
+            onSelect={[Function]}
+            size={16}
+            viewBox="0 0 16 16"
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -3324,7 +3684,16 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 3.set
           hasBorderLeft={true}
           hasBorderRight={true}
         >
-          <SuccessIcon />
+          <SuccessIcon
+            aspectRatio="xMidYMid meet"
+            color="primary"
+            isClickable={false}
+            isDisabled={false}
+            onClick={[Function]}
+            onSelect={[Function]}
+            size={16}
+            viewBox="0 0 16 16"
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -3401,7 +3770,16 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 3.set
           hasBorderLeft={true}
           hasBorderRight={true}
         >
-          <SuccessIcon />
+          <SuccessIcon
+            aspectRatio="xMidYMid meet"
+            color="primary"
+            isClickable={false}
+            isDisabled={false}
+            onClick={[Function]}
+            onSelect={[Function]}
+            size={16}
+            viewBox="0 0 16 16"
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -3478,7 +3856,16 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 3.set
           hasBorderLeft={true}
           hasBorderRight={true}
         >
-          <SuccessIcon />
+          <SuccessIcon
+            aspectRatio="xMidYMid meet"
+            color="primary"
+            isClickable={false}
+            isDisabled={false}
+            onClick={[Function]}
+            onSelect={[Function]}
+            size={16}
+            viewBox="0 0 16 16"
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -3555,7 +3942,16 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 3.set
           hasBorderLeft={true}
           hasBorderRight={true}
         >
-          <SuccessIcon />
+          <SuccessIcon
+            aspectRatio="xMidYMid meet"
+            color="primary"
+            isClickable={false}
+            isDisabled={false}
+            onClick={[Function]}
+            onSelect={[Function]}
+            size={16}
+            viewBox="0 0 16 16"
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -3632,7 +4028,16 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 3.set
           hasBorderLeft={true}
           hasBorderRight={true}
         >
-          <SuccessIcon />
+          <SuccessIcon
+            aspectRatio="xMidYMid meet"
+            color="primary"
+            isClickable={false}
+            isDisabled={false}
+            onClick={[Function]}
+            onSelect={[Function]}
+            size={16}
+            viewBox="0 0 16 16"
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -3746,7 +4151,16 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 4.ful
           rowSpan={2}
           sortDirection="up"
         >
-          <SuccessIcon />
+          <SuccessIcon
+            aspectRatio="xMidYMid meet"
+            color="primary"
+            isClickable={false}
+            isDisabled={false}
+            onClick={[Function]}
+            onSelect={[Function]}
+            size={16}
+            viewBox="0 0 16 16"
+          />
         </Table.Th>
         <Table.Th
           align="left"
@@ -3936,7 +4350,16 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 4.ful
           hasBorderLeft={true}
           hasBorderRight={true}
         >
-          <SuccessIcon />
+          <SuccessIcon
+            aspectRatio="xMidYMid meet"
+            color="primary"
+            isClickable={false}
+            isDisabled={false}
+            onClick={[Function]}
+            onSelect={[Function]}
+            size={16}
+            viewBox="0 0 16 16"
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -4082,7 +4505,16 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 4.ful
           hasBorderLeft={true}
           hasBorderRight={true}
         >
-          <SuccessIcon />
+          <SuccessIcon
+            aspectRatio="xMidYMid meet"
+            color="primary"
+            isClickable={false}
+            isDisabled={false}
+            onClick={[Function]}
+            onSelect={[Function]}
+            size={16}
+            viewBox="0 0 16 16"
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -4229,7 +4661,16 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 4.ful
           hasBorderLeft={true}
           hasBorderRight={true}
         >
-          <SuccessIcon />
+          <SuccessIcon
+            aspectRatio="xMidYMid meet"
+            color="primary"
+            isClickable={false}
+            isDisabled={false}
+            onClick={[Function]}
+            onSelect={[Function]}
+            size={16}
+            viewBox="0 0 16 16"
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -4376,7 +4817,16 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 4.ful
           hasBorderLeft={true}
           hasBorderRight={true}
         >
-          <SuccessIcon />
+          <SuccessIcon
+            aspectRatio="xMidYMid meet"
+            color="primary"
+            isClickable={false}
+            isDisabled={false}
+            onClick={[Function]}
+            onSelect={[Function]}
+            size={16}
+            viewBox="0 0 16 16"
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -4526,7 +4976,16 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 4.ful
           hasBorderLeft={true}
           hasBorderRight={true}
         >
-          <SuccessIcon />
+          <SuccessIcon
+            aspectRatio="xMidYMid meet"
+            color="primary"
+            isClickable={false}
+            isDisabled={false}
+            onClick={[Function]}
+            onSelect={[Function]}
+            size={16}
+            viewBox="0 0 16 16"
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -4676,7 +5135,16 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 4.ful
           hasBorderLeft={true}
           hasBorderRight={true}
         >
-          <SuccessIcon />
+          <SuccessIcon
+            aspectRatio="xMidYMid meet"
+            color="primary"
+            isClickable={false}
+            isDisabled={false}
+            onClick={[Function]}
+            onSelect={[Function]}
+            size={16}
+            viewBox="0 0 16 16"
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -4827,7 +5295,16 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 4.ful
           hasBorderLeft={true}
           hasBorderRight={true}
         >
-          <SuccessIcon />
+          <SuccessIcon
+            aspectRatio="xMidYMid meet"
+            color="primary"
+            isClickable={false}
+            isDisabled={false}
+            onClick={[Function]}
+            onSelect={[Function]}
+            size={16}
+            viewBox="0 0 16 16"
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -4978,7 +5455,16 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 4.ful
           hasBorderLeft={true}
           hasBorderRight={true}
         >
-          <SuccessIcon />
+          <SuccessIcon
+            aspectRatio="xMidYMid meet"
+            color="primary"
+            isClickable={false}
+            isDisabled={false}
+            onClick={[Function]}
+            onSelect={[Function]}
+            size={16}
+            viewBox="0 0 16 16"
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -5124,7 +5610,16 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 4.ful
           hasBorderLeft={true}
           hasBorderRight={true}
         >
-          <SuccessIcon />
+          <SuccessIcon
+            aspectRatio="xMidYMid meet"
+            color="primary"
+            isClickable={false}
+            isDisabled={false}
+            onClick={[Function]}
+            onSelect={[Function]}
+            size={16}
+            viewBox="0 0 16 16"
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -5270,7 +5765,16 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 4.ful
           hasBorderLeft={true}
           hasBorderRight={true}
         >
-          <SuccessIcon />
+          <SuccessIcon
+            aspectRatio="xMidYMid meet"
+            color="primary"
+            isClickable={false}
+            isDisabled={false}
+            onClick={[Function]}
+            onSelect={[Function]}
+            size={16}
+            viewBox="0 0 16 16"
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -5417,7 +5921,16 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 4.ful
           hasBorderLeft={true}
           hasBorderRight={true}
         >
-          <SuccessIcon />
+          <SuccessIcon
+            aspectRatio="xMidYMid meet"
+            color="primary"
+            isClickable={false}
+            isDisabled={false}
+            onClick={[Function]}
+            onSelect={[Function]}
+            size={16}
+            viewBox="0 0 16 16"
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -5564,7 +6077,16 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 4.ful
           hasBorderLeft={true}
           hasBorderRight={true}
         >
-          <SuccessIcon />
+          <SuccessIcon
+            aspectRatio="xMidYMid meet"
+            color="primary"
+            isClickable={false}
+            isDisabled={false}
+            onClick={[Function]}
+            onSelect={[Function]}
+            size={16}
+            viewBox="0 0 16 16"
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -5711,7 +6233,16 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 4.ful
           hasBorderLeft={true}
           hasBorderRight={true}
         >
-          <SuccessIcon />
+          <SuccessIcon
+            aspectRatio="xMidYMid meet"
+            color="primary"
+            isClickable={false}
+            isDisabled={false}
+            onClick={[Function]}
+            onSelect={[Function]}
+            size={16}
+            viewBox="0 0 16 16"
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -5858,7 +6389,16 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 4.ful
           hasBorderLeft={true}
           hasBorderRight={true}
         >
-          <SuccessIcon />
+          <SuccessIcon
+            aspectRatio="xMidYMid meet"
+            color="primary"
+            isClickable={false}
+            isDisabled={false}
+            onClick={[Function]}
+            onSelect={[Function]}
+            size={16}
+            viewBox="0 0 16 16"
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -6042,7 +6582,16 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 5.set
           rowSpan={2}
           sortDirection="up"
         >
-          <SuccessIcon />
+          <SuccessIcon
+            aspectRatio="xMidYMid meet"
+            color="primary"
+            isClickable={false}
+            isDisabled={false}
+            onClick={[Function]}
+            onSelect={[Function]}
+            size={16}
+            viewBox="0 0 16 16"
+          />
         </Table.Th>
         <Table.Th
           align="left"
@@ -6142,7 +6691,16 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 5.set
           hasBorderLeft={true}
           hasBorderRight={true}
         >
-          <SuccessIcon />
+          <SuccessIcon
+            aspectRatio="xMidYMid meet"
+            color="primary"
+            isClickable={false}
+            isDisabled={false}
+            onClick={[Function]}
+            onSelect={[Function]}
+            size={16}
+            viewBox="0 0 16 16"
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -6218,7 +6776,16 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 5.set
           hasBorderLeft={true}
           hasBorderRight={true}
         >
-          <SuccessIcon />
+          <SuccessIcon
+            aspectRatio="xMidYMid meet"
+            color="primary"
+            isClickable={false}
+            isDisabled={false}
+            onClick={[Function]}
+            onSelect={[Function]}
+            size={16}
+            viewBox="0 0 16 16"
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -6295,7 +6862,16 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 5.set
           hasBorderLeft={true}
           hasBorderRight={true}
         >
-          <SuccessIcon />
+          <SuccessIcon
+            aspectRatio="xMidYMid meet"
+            color="primary"
+            isClickable={false}
+            isDisabled={false}
+            onClick={[Function]}
+            onSelect={[Function]}
+            size={16}
+            viewBox="0 0 16 16"
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -6372,7 +6948,16 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 5.set
           hasBorderLeft={true}
           hasBorderRight={true}
         >
-          <SuccessIcon />
+          <SuccessIcon
+            aspectRatio="xMidYMid meet"
+            color="primary"
+            isClickable={false}
+            isDisabled={false}
+            onClick={[Function]}
+            onSelect={[Function]}
+            size={16}
+            viewBox="0 0 16 16"
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -6452,7 +7037,16 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 5.set
           hasBorderLeft={true}
           hasBorderRight={true}
         >
-          <SuccessIcon />
+          <SuccessIcon
+            aspectRatio="xMidYMid meet"
+            color="primary"
+            isClickable={false}
+            isDisabled={false}
+            onClick={[Function]}
+            onSelect={[Function]}
+            size={16}
+            viewBox="0 0 16 16"
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -6532,7 +7126,16 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 5.set
           hasBorderLeft={true}
           hasBorderRight={true}
         >
-          <SuccessIcon />
+          <SuccessIcon
+            aspectRatio="xMidYMid meet"
+            color="primary"
+            isClickable={false}
+            isDisabled={false}
+            onClick={[Function]}
+            onSelect={[Function]}
+            size={16}
+            viewBox="0 0 16 16"
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -6613,7 +7216,16 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 5.set
           hasBorderLeft={true}
           hasBorderRight={true}
         >
-          <SuccessIcon />
+          <SuccessIcon
+            aspectRatio="xMidYMid meet"
+            color="primary"
+            isClickable={false}
+            isDisabled={false}
+            onClick={[Function]}
+            onSelect={[Function]}
+            size={16}
+            viewBox="0 0 16 16"
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -6694,7 +7306,16 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 5.set
           hasBorderLeft={true}
           hasBorderRight={true}
         >
-          <SuccessIcon />
+          <SuccessIcon
+            aspectRatio="xMidYMid meet"
+            color="primary"
+            isClickable={false}
+            isDisabled={false}
+            onClick={[Function]}
+            onSelect={[Function]}
+            size={16}
+            viewBox="0 0 16 16"
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -6770,7 +7391,16 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 5.set
           hasBorderLeft={true}
           hasBorderRight={true}
         >
-          <SuccessIcon />
+          <SuccessIcon
+            aspectRatio="xMidYMid meet"
+            color="primary"
+            isClickable={false}
+            isDisabled={false}
+            onClick={[Function]}
+            onSelect={[Function]}
+            size={16}
+            viewBox="0 0 16 16"
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -6846,7 +7476,16 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 5.set
           hasBorderLeft={true}
           hasBorderRight={true}
         >
-          <SuccessIcon />
+          <SuccessIcon
+            aspectRatio="xMidYMid meet"
+            color="primary"
+            isClickable={false}
+            isDisabled={false}
+            onClick={[Function]}
+            onSelect={[Function]}
+            size={16}
+            viewBox="0 0 16 16"
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -6923,7 +7562,16 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 5.set
           hasBorderLeft={true}
           hasBorderRight={true}
         >
-          <SuccessIcon />
+          <SuccessIcon
+            aspectRatio="xMidYMid meet"
+            color="primary"
+            isClickable={false}
+            isDisabled={false}
+            onClick={[Function]}
+            onSelect={[Function]}
+            size={16}
+            viewBox="0 0 16 16"
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -7000,7 +7648,16 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 5.set
           hasBorderLeft={true}
           hasBorderRight={true}
         >
-          <SuccessIcon />
+          <SuccessIcon
+            aspectRatio="xMidYMid meet"
+            color="primary"
+            isClickable={false}
+            isDisabled={false}
+            onClick={[Function]}
+            onSelect={[Function]}
+            size={16}
+            viewBox="0 0 16 16"
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -7077,7 +7734,16 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 5.set
           hasBorderLeft={true}
           hasBorderRight={true}
         >
-          <SuccessIcon />
+          <SuccessIcon
+            aspectRatio="xMidYMid meet"
+            color="primary"
+            isClickable={false}
+            isDisabled={false}
+            onClick={[Function]}
+            onSelect={[Function]}
+            size={16}
+            viewBox="0 0 16 16"
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -7154,7 +7820,16 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 5.set
           hasBorderLeft={true}
           hasBorderRight={true}
         >
-          <SuccessIcon />
+          <SuccessIcon
+            aspectRatio="xMidYMid meet"
+            color="primary"
+            isClickable={false}
+            isDisabled={false}
+            onClick={[Function]}
+            onSelect={[Function]}
+            size={16}
+            viewBox="0 0 16 16"
+          />
         </Table.Td>
         <Table.Td
           align="left"

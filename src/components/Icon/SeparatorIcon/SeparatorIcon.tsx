@@ -2,16 +2,16 @@ import _ from 'lodash';
 import React from 'react';
 import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
-import { FC, omitProps } from '../../../util/component-types';
+import { omitProps } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-SeparatorIcon');
 
 interface ISeparatorIconProps extends IIconProps {}
 
-export const SeparatorIcon: FC<ISeparatorIconProps> = ({
+export const SeparatorIcon = ({
 	className,
 	...passThroughs
-}): React.ReactElement => {
+}: ISeparatorIconProps) => {
 	return (
 		<Icon
 			{...omitProps(
@@ -39,5 +39,6 @@ SeparatorIcon.peek = {
 	madeFrom: ['Icon'],
 };
 SeparatorIcon.propTypes = iconPropTypes;
+SeparatorIcon.defaultProps = Icon.defaultProps;
 
 export default SeparatorIcon;

@@ -5,7 +5,7 @@ exports[`Points [common] example testing should match snapshot(s) for basic 1`] 
   className="lucid-Points"
 >
   <Point
-    color="color-chart-0"
+    color="color-chart-3"
     hasStroke={true}
     key="00"
     kind={0}
@@ -14,7 +14,7 @@ exports[`Points [common] example testing should match snapshot(s) for basic 1`] 
     y={162.85714285714286}
   />
   <Point
-    color="color-chart-0"
+    color="color-chart-3"
     hasStroke={true}
     key="10"
     kind={0}
@@ -23,7 +23,7 @@ exports[`Points [common] example testing should match snapshot(s) for basic 1`] 
     y={217.14285714285714}
   />
   <Point
-    color="color-chart-0"
+    color="color-chart-3"
     hasStroke={true}
     key="20"
     kind={0}
@@ -32,7 +32,7 @@ exports[`Points [common] example testing should match snapshot(s) for basic 1`] 
     y={271.42857142857144}
   />
   <Point
-    color="color-chart-0"
+    color="color-chart-3"
     hasStroke={true}
     key="30"
     kind={0}
@@ -41,7 +41,7 @@ exports[`Points [common] example testing should match snapshot(s) for basic 1`] 
     y={325.7142857142857}
   />
   <Point
-    color="color-chart-0"
+    color="color-chart-3"
     hasStroke={true}
     key="40"
     kind={0}
@@ -50,7 +50,7 @@ exports[`Points [common] example testing should match snapshot(s) for basic 1`] 
     y={271.42857142857144}
   />
   <Point
-    color="color-chart-0"
+    color="color-chart-3"
     hasStroke={true}
     key="50"
     kind={0}
@@ -59,7 +59,7 @@ exports[`Points [common] example testing should match snapshot(s) for basic 1`] 
     y={217.14285714285714}
   />
   <Point
-    color="color-chart-0"
+    color="color-chart-3"
     hasStroke={true}
     key="60"
     kind={0}
@@ -68,7 +68,7 @@ exports[`Points [common] example testing should match snapshot(s) for basic 1`] 
     y={162.85714285714286}
   />
   <Point
-    color="color-chart-1"
+    color="color-chart-0-darkest"
     hasStroke={true}
     key="01"
     kind={1}
@@ -77,7 +77,7 @@ exports[`Points [common] example testing should match snapshot(s) for basic 1`] 
     y={108.57142857142856}
   />
   <Point
-    color="color-chart-1"
+    color="color-chart-0-darkest"
     hasStroke={true}
     key="11"
     kind={1}
@@ -86,7 +86,7 @@ exports[`Points [common] example testing should match snapshot(s) for basic 1`] 
     y={162.85714285714286}
   />
   <Point
-    color="color-chart-1"
+    color="color-chart-0-darkest"
     hasStroke={true}
     key="21"
     kind={1}
@@ -95,7 +95,7 @@ exports[`Points [common] example testing should match snapshot(s) for basic 1`] 
     y={217.14285714285714}
   />
   <Point
-    color="color-chart-1"
+    color="color-chart-0-darkest"
     hasStroke={true}
     key="31"
     kind={1}
@@ -104,7 +104,7 @@ exports[`Points [common] example testing should match snapshot(s) for basic 1`] 
     y={271.42857142857144}
   />
   <Point
-    color="color-chart-1"
+    color="color-chart-0-darkest"
     hasStroke={true}
     key="41"
     kind={1}
@@ -113,7 +113,7 @@ exports[`Points [common] example testing should match snapshot(s) for basic 1`] 
     y={217.14285714285714}
   />
   <Point
-    color="color-chart-1"
+    color="color-chart-0-darkest"
     hasStroke={true}
     key="51"
     kind={1}
@@ -122,7 +122,7 @@ exports[`Points [common] example testing should match snapshot(s) for basic 1`] 
     y={162.85714285714286}
   />
   <Point
-    color="color-chart-1"
+    color="color-chart-0-darkest"
     hasStroke={true}
     key="61"
     kind={1}
@@ -194,7 +194,7 @@ exports[`Points [common] example testing should match snapshot(s) for basic 1`] 
     y={54.28571428571428}
   />
   <Point
-    color="color-chart-3"
+    color="color-chart-4-lightest"
     hasStroke={true}
     key="03"
     kind={3}
@@ -203,7 +203,7 @@ exports[`Points [common] example testing should match snapshot(s) for basic 1`] 
     y={0}
   />
   <Point
-    color="color-chart-3"
+    color="color-chart-4-lightest"
     hasStroke={true}
     key="13"
     kind={3}
@@ -212,7 +212,7 @@ exports[`Points [common] example testing should match snapshot(s) for basic 1`] 
     y={54.28571428571428}
   />
   <Point
-    color="color-chart-3"
+    color="color-chart-4-lightest"
     hasStroke={true}
     key="23"
     kind={3}
@@ -221,7 +221,7 @@ exports[`Points [common] example testing should match snapshot(s) for basic 1`] 
     y={108.57142857142856}
   />
   <Point
-    color="color-chart-3"
+    color="color-chart-4-lightest"
     hasStroke={true}
     key="33"
     kind={3}
@@ -230,7 +230,7 @@ exports[`Points [common] example testing should match snapshot(s) for basic 1`] 
     y={162.85714285714286}
   />
   <Point
-    color="color-chart-3"
+    color="color-chart-4-lightest"
     hasStroke={true}
     key="43"
     kind={3}
@@ -239,7 +239,7 @@ exports[`Points [common] example testing should match snapshot(s) for basic 1`] 
     y={108.57142857142856}
   />
   <Point
-    color="color-chart-3"
+    color="color-chart-4-lightest"
     hasStroke={true}
     key="53"
     kind={3}
@@ -248,7 +248,7 @@ exports[`Points [common] example testing should match snapshot(s) for basic 1`] 
     y={54.28571428571428}
   />
   <Point
-    color="color-chart-3"
+    color="color-chart-4-lightest"
     hasStroke={true}
     key="63"
     kind={3}

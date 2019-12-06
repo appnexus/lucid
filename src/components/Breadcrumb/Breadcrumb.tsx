@@ -6,7 +6,6 @@ import { lucidClassNames } from '../../util/style-helpers';
 import {
 	findTypes,
 	omitProps,
-	FC,
 	StandardProps,
 } from '../../util/component-types';
 
@@ -15,7 +14,7 @@ const cx = lucidClassNames.bind('&-Breadcrumb');
 const { any, node } = PropTypes;
 
 interface IBreadcrumbItemProps extends StandardProps {}
-const BreadcrumbItem: FC<IBreadcrumbItemProps> = (): null => null;
+const BreadcrumbItem = (_props: IBreadcrumbItemProps): null => null;
 
 BreadcrumbItem.displayName = 'Breadcrumb.Item';
 BreadcrumbItem.peek = {
@@ -37,11 +36,7 @@ interface IBreadcrumbProps
 	Item?: string | React.ReactNode & { props: IBreadcrumbItemProps };
 }
 
-interface IBreadcrumbFC extends FC<IBreadcrumbProps> {
-	Item: FC<IBreadcrumbItemProps>;
-}
-
-export const Breadcrumb: IBreadcrumbFC = (props): React.ReactElement => {
+export const Breadcrumb = (props: IBreadcrumbProps): React.ReactElement => {
 	const { className, ...passThroughs } = props;
 	const items = findTypes(props, Breadcrumb.Item);
 	const initialItems = _.initial(items);

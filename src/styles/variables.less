@@ -20,16 +20,16 @@
 // 600    | Inter           | italic
 
 @fontSize: 12px;
-@fontFamily: GalanoGrotesque, "Helvetica Neue", Helvetica, Arial, sans-serif;
-@font-family-tabular: Inter, "Helvetica Neue", Helvetica, Arial, sans-serif;
+@fontFamily: GalanoGrotesque, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+@font-family-tabular: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif;
 @font-feature-settings-tabular: 'tnum' 1;
 @font: @fontSize @fontFamily;
 @font-chart: 11px sans-serif;
 
 // Our designers have agreed to keep the number of font weight variants to
 // what's outlined in these variables.
-@font-weight-regular: 400;  // Available with GalanoGrotesque and Inter
-@font-weight-medium: 500;   // Available with GalanoGrotesque
+@font-weight-regular: 400; // Available with GalanoGrotesque and Inter
+@font-weight-medium: 500; // Available with GalanoGrotesque
 @font-weight-semiBold: 600; // Available with GalanoGrotesque and Inter
 
 // -----------------------------------------------------------------------------
@@ -94,7 +94,12 @@
 // General colors
 @color-white: #fff;
 @color-black: #000;
-@color-transparent: rgba(255, 255, 255, 0); // normalize transparent due to Safari bug
+@color-transparent: rgba(
+	255,
+	255,
+	255,
+	0
+); // normalize transparent due to Safari bug
 
 // Primary colors
 @color-primary: #587eba;
@@ -111,7 +116,7 @@
 @color-secondary-4: #49b27b; // green
 @color-secondary-5: #00bebe; // teal
 
-@color-secondary-1-hover: shade(@color-secondary-1, 35%);
+@color-secondary-1-hover: shade(@color-secondary-1, 20%);
 
 //neutral colors
 @color-neutral-1: #fff;
@@ -244,53 +249,21 @@
 // counterparts in sync.
 
 // This list should always be in sync with the full set of chart colors
-@color-chart-variables:
-	color-chart-0,
-	color-chart-0-lightest,
-	color-chart-0-light,
-	color-chart-0-dark,
-	color-chart-0-darkest,
-	color-chart-1,
-	color-chart-1-lightest,
-	color-chart-1-light,
-	color-chart-1-dark,
-	color-chart-1-darkest,
-	color-chart-2,
-	color-chart-2-lightest,
-	color-chart-2-light,
-	color-chart-2-dark,
-	color-chart-2-darkest,
-	color-chart-3,
-	color-chart-3-lightest,
-	color-chart-3-light,
-	color-chart-3-dark,
-	color-chart-3-darkest,
-	color-chart-4,
-	color-chart-4-lightest,
-	color-chart-4-light,
-	color-chart-4-dark,
-	color-chart-4-darkest,
-	color-chart-5,
-	color-chart-5-lightest,
-	color-chart-5-light,
-	color-chart-5-dark,
-	color-chart-5-darkest,
-	color-chart-6,
-	color-chart-6-lightest,
-	color-chart-6-light,
-	color-chart-6-dark,
-	color-chart-6-darkest,
-	color-chart-good,
-	color-chart-good-lightest,
-	color-chart-good-light,
-	color-chart-good-dark,
-	color-chart-good-darkest,
-	color-chart-bad,
-	color-chart-bad-lightest,
-	color-chart-bad-light,
-	color-chart-bad-dark,
-	color-chart-bad-darkest,
-	color-chart-neutral;
+@color-chart-variables: color-chart-0, color-chart-0-lightest,
+	color-chart-0-light, color-chart-0-dark, color-chart-0-darkest, color-chart-1,
+	color-chart-1-lightest, color-chart-1-light, color-chart-1-dark,
+	color-chart-1-darkest, color-chart-2, color-chart-2-lightest,
+	color-chart-2-light, color-chart-2-dark, color-chart-2-darkest, color-chart-3,
+	color-chart-3-lightest, color-chart-3-light, color-chart-3-dark,
+	color-chart-3-darkest, color-chart-4, color-chart-4-lightest,
+	color-chart-4-light, color-chart-4-dark, color-chart-4-darkest, color-chart-5,
+	color-chart-5-lightest, color-chart-5-light, color-chart-5-dark,
+	color-chart-5-darkest, color-chart-6, color-chart-6-lightest,
+	color-chart-6-light, color-chart-6-dark, color-chart-6-darkest,
+	color-chart-good, color-chart-good-lightest, color-chart-good-light,
+	color-chart-good-dark, color-chart-good-darkest, color-chart-bad,
+	color-chart-bad-lightest, color-chart-bad-light, color-chart-bad-dark,
+	color-chart-bad-darkest, color-chart-neutral;
 
 @color-chart-0: @color-secondary-2;
 @color-chart-0-lightest: tint(@color-chart-0, 90%);
@@ -354,14 +327,15 @@
 // Borders
 // -----------------------------------------------------------------------------
 
-@border-standardBorder: @size-borderWidth solid @featured-color-default-borderColor;
+@border-standardBorder: @size-borderWidth solid
+	@featured-color-default-borderColor;
 @border-lightBorder: @size-borderWidth solid @color-borderColorLight;
 
 // -----------------------------------------------------------------------------
 // Patterns
 // -----------------------------------------------------------------------------
 
-@pattern-diagonal-striped: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0IiBoZWlnaHQ9IjQiPgo8cGF0aCBkPSJNLTEgNUw1IC0xWk01IDNMMyA1Wk0tMSAxTDEgLTEiIHN0cm9rZT0iI2UzZTNlMyIgc3Ryb2tlLXdpZHRoPSIxIj48L3BhdGg+Cjwvc3ZnPg==");
+@pattern-diagonal-striped: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0IiBoZWlnaHQ9IjQiPgo8cGF0aCBkPSJNLTEgNUw1IC0xWk01IDNMMyA1Wk0tMSAxTDEgLTEiIHN0cm9rZT0iI2UzZTNlMyIgc3Ryb2tlLXdpZHRoPSIxIj48L3BhdGg+Cjwvc3ZnPg==');
 
 @opacity-hover: 0.8;
 @opacity-disabled: 0.35;

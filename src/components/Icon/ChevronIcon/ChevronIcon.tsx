@@ -3,7 +3,7 @@ import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
-import { FC, omitProps } from '../../../util/component-types';
+import { omitProps } from '../../../util/component-types';
 
 const { oneOf } = PropTypes;
 
@@ -12,11 +12,11 @@ const cx = lucidClassNames.bind('&-ChevronIcon');
 interface IChevronIconProps extends IIconProps {
 	direction?: 'up' | 'down' | 'left' | 'right';
 }
-export const ChevronIcon: FC<IChevronIconProps> = ({
+export const ChevronIcon = ({
 	className,
 	direction = 'down',
 	...passThroughs
-}): React.ReactElement => {
+}: IChevronIconProps) => {
 	return (
 		<Icon
 			{...omitProps(
@@ -57,5 +57,6 @@ ChevronIcon.propTypes = {
 		direction variations of the icon
 	`,
 };
+ChevronIcon.defaultProps = Icon.defaultProps;
 
 export default ChevronIcon;

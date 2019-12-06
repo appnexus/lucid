@@ -2,20 +2,12 @@
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import {
-	FC,
-	getFirst,
-	rejectTypes,
-	omitProps,
-	FixDefaults,
-} from '../../util/component-types';
+import { getFirst, rejectTypes, omitProps } from '../../util/component-types';
 import OverlayWrapper, {
 	OverlayWrapperMessage,
 	IOverlayWrapperProps,
 } from '../OverlayWrapper/OverlayWrapper';
-import LoadingMessage, {
-	ILoadingMessageProps,
-} from '../LoadingMessage/LoadingMessage';
+import LoadingMessage from '../LoadingMessage/LoadingMessage';
 
 const cx = lucidClassNames.bind('&-LoadingIndicator');
 
@@ -24,17 +16,13 @@ const { bool, node, oneOf, string } = PropTypes;
 export interface ILoadingIndicatorProps extends IOverlayWrapperProps {
 	/** Set this to `false` if you don't want the semi-transparent overlay over
 		the wrapped content */
-	hasOverlay?: boolean;
+	hasOverlay: boolean;
 
 	/** Controls the visibility of the `LoadingMessage` and overlay. */
-	isLoading?: boolean;
+	isLoading: boolean;
 
 	/** Style variations for the overlay behind the loading indicator. */
-	overlayKind?: 'light' | 'dark';
-}
-
-export interface ILoadingIndicatorFC extends FC<ILoadingIndicatorProps> {
-	LoadingMessage: FC<ILoadingMessageProps>;
+	overlayKind: 'light' | 'dark';
 }
 
 const defaultProps = {
@@ -43,11 +31,10 @@ const defaultProps = {
 	overlayKind: 'light' as const,
 };
 
-export const LoadingIndicator: ILoadingIndicatorFC = (props): React.ReactElement => {
-	const { children, className, isLoading } = props as FixDefaults<
-		ILoadingIndicatorProps,
-		typeof defaultProps
-	>;
+export const LoadingIndicator = (
+	props: ILoadingIndicatorProps
+): React.ReactElement => {
+	const { children, className, isLoading } = props;
 
 	const messageElement = getFirst(
 		props,
@@ -80,6 +67,18 @@ LoadingIndicator.peek = {
 	description: `
 		A loading indicator wrapper with optional overlay.
 	`,
+	notes: {
+		overview: `
+			A visual indication that a section or component of the interface is loading.
+		`,
+		intendedUse: `
+			- Use in places where data takes time to load. LoadingIndicator lets users know that the information they expect to see will appear shortly.
+			- Use the light overlay, \`overlayKind: "light"\`
+		`,
+		technicalRecommendations: `
+			If a page is displaying a lot of data coming from multiple sources, try as best as possible to load the individual parts of the UI, so as not to disrupt the user and block them from interacting with the entire page until all data is loaded.
+		`,
+	},
 	categories: ['communication'],
 	madeFrom: ['OverlayWrapper', 'LoadingMessage'],
 };

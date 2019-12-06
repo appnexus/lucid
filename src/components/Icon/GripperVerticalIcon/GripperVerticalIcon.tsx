@@ -2,16 +2,16 @@ import _ from 'lodash';
 import React from 'react';
 import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
-import { FC, omitProps } from '../../../util/component-types';
+import { omitProps } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-GripperVerticalIcon');
 
 interface IGripperVerticalIconProps extends IIconProps {}
 
-export const GripperVerticalIcon: FC<IGripperVerticalIconProps> = ({
+export const GripperVerticalIcon = ({
 	className,
 	...passThroughs
-}): React.ReactElement => {
+}: IGripperVerticalIconProps) => {
 	return (
 		<Icon
 			{...omitProps(
@@ -42,5 +42,6 @@ GripperVerticalIcon.peek = {
 	madeFrom: ['Icon'],
 };
 GripperVerticalIcon.propTypes = iconPropTypes;
+GripperVerticalIcon.defaultProps = Icon.defaultProps;
 
 export default GripperVerticalIcon;

@@ -2,7 +2,7 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import { FC, StandardProps, FixDefaults } from '../../util/component-types';
+import { StandardProps } from '../../util/component-types';
 
 const { node, string, oneOf, object } = PropTypes;
 
@@ -55,10 +55,10 @@ interface INotchedTagProps
 	type?: keyof typeof Type;
 
 	/** Size variations. */
-	size?: keyof typeof Size;
+	size: keyof typeof Size;
 
 	/** Tag style variations. */
-	tagStyle?: keyof typeof TagStyle;
+	tagStyle: keyof typeof TagStyle;
 }
 
 const defaultProps = {
@@ -66,7 +66,7 @@ const defaultProps = {
 	tagStyle: TagStyle['style-one'],
 };
 
-export const NotchedTag: FC<INotchedTagProps> = (props): React.ReactElement => {
+export const NotchedTag = (props: INotchedTagProps): React.ReactElement => {
 	const {
 		children,
 		className,
@@ -75,7 +75,7 @@ export const NotchedTag: FC<INotchedTagProps> = (props): React.ReactElement => {
 		size,
 		tagStyle,
 		...passThroughs
-	} = props as FixDefaults<INotchedTagProps, typeof defaultProps>;
+	} = props;
 
 	const notchHeight = SIZE_NOTCH_MAP[size];
 	const notchWidth = notchHeight * Math.sqrt(3); //we want to maintain a 60 degree slice (30,60,90 triangle)

@@ -4,13 +4,12 @@ import React, { createElement } from 'react';
 import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import {
-	FC,
 	StandardProps,
 	getFirst,
 	omitProps,
 	Overwrite,
 } from '../../util/component-types';
-import { buildHybridComponent } from '../../util/state-management';
+import { buildModernHybridComponent } from '../../util/state-management';
 import TextField, { ITextFieldProps } from '../TextField/TextField';
 import SearchIcon from '../Icon/SearchIcon/SearchIcon';
 import reducers from './SearchField.reducers';
@@ -22,7 +21,7 @@ const { bool, func, node, number, oneOfType, string } = PropTypes;
 
 interface ISearchFieldIcon extends StandardProps {}
 
-const SearchFieldIcon: FC<ISearchFieldIcon> = (): null => null;
+const SearchFieldIcon = (_props: ISearchFieldIcon): null => null;
 SearchFieldIcon.peek = {
 	description: `
 		Icon this is displayed on the right side of the SearchField. Any of the lucid \`*Icon\` components should work.
@@ -33,7 +32,7 @@ SearchFieldIcon.propName = 'Icon';
 
 interface ISearchFieldTextField extends ITextFieldProps {}
 
-const SearchFieldTextField: FC<ISearchFieldTextField> = (): null => null;
+const SearchFieldTextField = (_props: ISearchFieldTextField): null => null;
 SearchFieldTextField.peek = {
 	description: `
 		Icon this is displayed on the right side of the SearchField. Any of the lucid \`*Icon\` components should work.
@@ -99,21 +98,14 @@ class SearchField extends React.Component<
 	static TextField = SearchFieldTextField;
 	static Icon = SearchFieldIcon;
 
-	static definition = {
-		statics: {
-			TextField: SearchFieldTextField,
-			Icon: SearchFieldIcon,
-			reducers,
-			peek: {
-				description: `
+	static peek = {
+		description: `
 					This is a wrapper around TextField that styles it for a search
 					use-case. The icon and TextField are customizable through child
 					components.
 				`,
-				categories: ['controls', 'text'],
-				madeFrom: ['TextField', 'SearchIcon'],
-			},
-		},
+		categories: ['controls', 'text'],
+		madeFrom: ['TextField', 'SearchIcon'],
 	};
 
 	static reducers = reducers;
@@ -250,5 +242,9 @@ class SearchField extends React.Component<
 	}
 }
 
-export default buildHybridComponent(SearchField);
+export default buildModernHybridComponent<
+	ISearchFieldPropsWithPassThroughs,
+	ISearchFieldState,
+	typeof SearchField
+>(SearchField, { reducers });
 export { SearchField as SearchFieldDumb };

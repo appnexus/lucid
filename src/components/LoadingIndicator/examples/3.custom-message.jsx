@@ -13,6 +13,7 @@ export default createClass({
 			<div>
 				<LoadingIndicator isLoading>
 					<BarChart
+						width={750}
 						data={[
 							{ x: '2015-01-01', y: 1 },
 							{ x: '2015-01-02', y: 2 },
@@ -31,6 +32,7 @@ export default createClass({
 
 				<LoadingIndicator isLoading>
 					<BarChart
+						width={750}
 						data={[
 							{ x: '2015-01-01', y: 1 },
 							{ x: '2015-01-02', y: 2 },

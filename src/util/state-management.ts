@@ -3,6 +3,7 @@ import _ from 'lodash';
 import { logger } from './logger';
 import { createSelector } from 'reselect';
 import createClass from 'create-react-class';
+import hoistNonReactStatics from 'hoist-non-react-statics';
 
 // TODO: could we somehow type the `...args` with a generic?
 export type Reducer<S extends object> = (arg0: S, ...args: any[]) => S;
@@ -23,20 +24,13 @@ interface IBoundContext<P, S extends object> {
 }
 
 interface IBuildHybridComponentOptions<P = {}, S extends object = {}> {
-	replaceEvents?: boolean; // TODO: pretty sure this isn't used in anx-react or lucid, I looked through the git history and even when Joe wrote it in 2016 he didn't seem to need to for any concrete use case
-	// TODO: do these need to be static?
+	replaceEvents?: boolean; // TODO: pretty sure this isn't used in anx-react or lucid, I looked through the git history and even when Joe wrote it in 2016 he didn't seem to need it for any concrete use case
 	reducers?: Reducers<P, S>;
-	// TODO: do these need to be static?
 	selectors?: Selectors<P, S>;
-	initialComponentState?: S;
 }
 
 interface IBaseComponentType<P> {
 	displayName: string;
-}
-
-export interface IHybridCompatibleProps<S = {}> {
-	initialState?: S;
 }
 
 export function getDeepPaths(
@@ -236,7 +230,7 @@ export function buildHybridComponent(
 		reducers = _.get(baseComponent, 'definition.statics.reducers', {}),
 		selectors = _.get(baseComponent, 'definition.statics.selectors', {}),
 	} = {}
-): any {
+) {
 	const {
 		_isLucidHybridComponent,
 		displayName,
@@ -306,43 +300,62 @@ export function buildHybridComponent(
 	});
 }
 
-/*
- * TODO: Make this work when we're ready to start switching components over
- * to modern react component definitions.
+export interface IHybridComponent<P, S extends object> {
+	reducers: Reducers<P, S>;
+	selectors: Selectors<P, S>;
+	peekDefaultProps: { [key: string]: any }; // not sure how to give this a better type
+}
+
 export function buildModernHybridComponent<
-	P extends IHybridCompatibleProps,
-	S extends object = {}
+	P extends object = {},
+	S extends object = {},
+	BaseType extends object = {}
 >(
-	BaseComponent: ComponentType<P> & IBaseComponentType<P>,
+	BaseComponent: React.ComponentType<P>,
 	{
 		replaceEvents = false,
 		reducers = {},
 		selectors = {},
-		initialComponentState, // TODO: why can't we default to `{}` here?
 	}: IBuildHybridComponentOptions<P, S>
 ) {
 	// TODO: make sure hybrid components don't get double wrapped. Maybe use a type guard?
 
-	class WrappedHybridComponent extends HybridComponent<P, S> {
-		boundContext?: IBoundContext<P, S>;
+	type AugmentedProps = P & { initialState?: P & S };
 
-		constructor(props: P) {
+	const selector = reduceSelectors(selectors);
+
+	class HybridComponent extends React.Component<AugmentedProps, S> {
+		private boundContext?: IBoundContext<P, S>;
+
+		// It would be nice to prepend "Hybrid" to this but some of our component
+		// sadly rely on the displayName remaining unchanged. E.g. `VerticalListMenu`.
+		static displayName = BaseComponent.displayName;
+
+		static propTypes = BaseComponent.propTypes;
+		static reducers = reducers;
+		static selectors = selectors;
+		static peekDefaultProps = BaseComponent.defaultProps;
+
+		// Note: we purposefully *do not* set defaultProps here as that would
+		// effectively eliminate our ability to distinguish what props the user
+		// explicity included.
+
+		constructor(props: AugmentedProps) {
 			super(props);
 
 			const { initialState } = props; // initial state overrides
-			const initialProps =
-				initialComponentState === undefined ? {} : initialComponentState;
 
 			this.state = _.mergeWith(
 				{},
-				omitFunctionPropsDeep(initialProps),
+				omitFunctionPropsDeep(BaseComponent.defaultProps),
 				initialState,
 				safeMerge
-			) as S;
+			);
 		}
 
 		componentWillMount() {
-			let synchronousState: S = this.state; //store reference to state, use in place of `this.state` in `getState`
+			// store reference to state, use in place of `this.state` in `getState`
+			let synchronousState: S = this.state;
 
 			this.boundContext = getStatefulPropsContext<P, S>(reducers, {
 				getState: () =>
@@ -360,10 +373,16 @@ export function buildModernHybridComponent<
 		}
 
 		render() {
-			const selector = reduceSelectors(selectors);
-
 			if (this.boundContext === undefined) {
 				return null;
+			}
+
+			if (replaceEvents) {
+				return React.createElement(
+					BaseComponent,
+					selector(this.boundContext.getPropReplaceReducers(this.props)),
+					this.props.children
+				);
 			}
 
 			return React.createElement(
@@ -374,11 +393,14 @@ export function buildModernHybridComponent<
 		}
 	}
 
-	WrappedHybridComponent.displayName = `Hybrid${BaseComponent.displayName}`;
-
-	return WrappedHybridComponent;
+	// I used a type cast and intersection with `BaseType` here because I
+	// couldn't figure out any other way to generate a valid type signuture to
+	// reflected all the statics on the unerlying base component. @jondlm 2019-11-27
+	return hoistNonReactStatics(HybridComponent, BaseComponent) as BaseType &
+		IHybridComponent<P, S>;
 }
 
+/*
 export function buildStatefulComponent(...args: any[]) {
 	logger.warnOnce(
 		'buildHybridComponent-once',
@@ -389,4 +411,4 @@ export function buildStatefulComponent(...args: any[]) {
 	// @ts-ignore
 	return buildHybridComponent(...args);
 }
-* */
+	 */

@@ -10,7 +10,7 @@ const {
 export default createClass({
 	render() {
 		return (
-			<BarChart data={[]} yAxisTitle='Revenue'>
+			<BarChart width={750} data={[]} yAxisTitle='Revenue'>
 				<EmptyStateWrapper>
 					<Title>Something went wrong.</Title>
 					<Body

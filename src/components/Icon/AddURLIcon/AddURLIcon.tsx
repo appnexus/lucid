@@ -2,16 +2,16 @@ import _ from 'lodash';
 import React from 'react';
 import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
-import { FC, omitProps } from '../../../util/component-types';
+import { omitProps } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-AddURLIcon');
 
 interface IAddURLIconProps extends IIconProps {}
 
-export const AddURLIcon: FC<IAddURLIconProps> = ({
+export const AddURLIcon = ({
 	className,
 	...passThroughs
-}): React.ReactElement => {
+}: IAddURLIconProps) => {
 	return (
 		<Icon
 			{...omitProps(
@@ -39,5 +39,6 @@ AddURLIcon.peek = {
 	madeFrom: ['Icon'],
 };
 AddURLIcon.propTypes = iconPropTypes;
+AddURLIcon.defaultProps = Icon.defaultProps;
 
 export default AddURLIcon;

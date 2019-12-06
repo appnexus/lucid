@@ -7,9 +7,8 @@ import {
 	findTypes,
 	omitProps,
 	StandardProps,
-	FC,
 } from '../../util/component-types';
-import { buildHybridComponent } from '../../util/state-management';
+import { buildModernHybridComponent } from '../../util/state-management';
 import * as reducers from './Submarine.reducers';
 import SplitHorizontal from '../SplitHorizontal/SplitHorizontal';
 import ChevronIcon from '../Icon/ChevronIcon/ChevronIcon';
@@ -33,7 +32,7 @@ interface ISubmarineBarProps extends StandardProps {
 	Title: ISumbarineTitleProps;
 }
 
-const Primary: FC<ISubmarinePrimaryProps> = (): null => null;
+const Primary = (_props: ISubmarinePrimaryProps): null => null;
 Primary.peek = {
 	description: `
 		Primary content rendered beside the Submarine.
@@ -42,7 +41,7 @@ Primary.peek = {
 Primary.displayName = 'SplitHorizontal.Primary';
 Primary.propName = 'Primary';
 
-const Title: FC<ISumbarineTitleProps> = (): null => null;
+const Title = (_props: ISumbarineTitleProps): null => null;
 Title.peek = {
 	description: `
 		Submarine title;
@@ -51,7 +50,7 @@ Title.peek = {
 Title.displayName = 'Submarine.Title';
 Title.propName = 'Title';
 
-const Bar: FC<ISubmarineBarProps> = (): null => null;
+const Bar = (_props: ISubmarineBarProps): null => null;
 Bar.peek = {
 	description: `
 		Submarine bar;
@@ -69,7 +68,7 @@ const defaultProps = {
 	isExpanded: true,
 	isAnimated: true,
 	height: 250,
-	position: 'bottom',
+	position: 'bottom' as const,
 	isResizeDisabled: false,
 	isHidden: false,
 	isTitleShownCollapsed: false,
@@ -139,21 +138,13 @@ class Submarine extends React.Component<ISubmarineProps, ISubmarineState> {
 	static Title = Title;
 	static Primary = Primary;
 
-	static definition = {
-		statics: {
-			Bar,
-			Primary,
-			Title,
-			reducers,
-			peek: {
-				description: `
+	static peek = {
+		description: `
 				\`Submarine\` renders a collapsible, resizeable side bar panel next to
 				primary content.
 			`,
-				categories: ['layout'],
-				madeFrom: ['SplitHorizontal', 'ChevronIcon', 'GripperHorizontalIcon'],
-			},
-		},
+		categories: ['layout'],
+		madeFrom: ['SplitHorizontal', 'ChevronIcon', 'GripperHorizontalIcon'],
 	};
 
 	static reducers = reducers;
@@ -303,7 +294,12 @@ class Submarine extends React.Component<ISubmarineProps, ISubmarineState> {
 
 		return (
 			<SplitHorizontal
-				{...omitProps(passThroughs, undefined, _.keys(Submarine.propTypes), false)}
+				{...omitProps(
+					passThroughs,
+					undefined,
+					_.keys(Submarine.propTypes),
+					false
+				)}
 				className={cx(
 					'&',
 					{
@@ -320,7 +316,12 @@ class Submarine extends React.Component<ISubmarineProps, ISubmarineState> {
 				onResize={this.handleResize}
 			>
 				<BarPane
-					{...omitProps(barProps, undefined, _.keys(Submarine.Bar.propTypes), false)}
+					{...omitProps(
+						barProps,
+						undefined,
+						_.keys(Submarine.Bar.propTypes),
+						false
+					)}
 					className={cx('&-Bar', barProps.className)}
 					height={height}
 				>
@@ -365,5 +366,9 @@ class Submarine extends React.Component<ISubmarineProps, ISubmarineState> {
 	}
 }
 
-export default buildHybridComponent(Submarine);
+export default buildModernHybridComponent<
+	ISubmarineProps,
+	ISubmarineState,
+	typeof Submarine
+>(Submarine, { reducers });
 export { Submarine as SubmarineDumb };

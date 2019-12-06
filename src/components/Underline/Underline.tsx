@@ -3,7 +3,7 @@ import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import { partitionText } from '../../util/text-manipulation';
 import { lucidClassNames } from '../../util/style-helpers';
-import { StandardProps, FC, omitProps } from '../../util/component-types';
+import { StandardProps, omitProps } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-Underline');
 
@@ -11,19 +11,22 @@ const { node, string, instanceOf, oneOfType } = PropTypes;
 
 const matchAllRegexp = /^.*$/;
 
-export interface IUnderlineProps 
-	extends StandardProps, 
-	React.DetailedHTMLProps<React.HTMLAttributes<HTMLSpanElement>, HTMLSpanElement> {
+export interface IUnderlineProps
+	extends StandardProps,
+		React.DetailedHTMLProps<
+			React.HTMLAttributes<HTMLSpanElement>,
+			HTMLSpanElement
+		> {
 	/** The first match of the given pattern has the underline style applied to it. */
 	match?: string | RegExp;
 }
 
-export const Underline: FC<IUnderlineProps> = ({
+export const Underline = ({
 	className,
 	children,
 	match,
 	...passThroughs
-}): React.ReactElement => {
+}: IUnderlineProps): React.ReactElement => {
 	if (!_.isRegExp(match)) {
 		if (_.isString(match)) {
 			match = new RegExp(_.escapeRegExp(match), 'i');

@@ -30,9 +30,15 @@ export const formatSource = source =>
 // then falls back on propTypes for non-TS components
 // in addition, it handles setting default values based on defaultProps
 export const getPropDefs = component =>
-	_.has(component, '__docgenInfo')
-		? getPropsFromDocgen(component)
-		: getPropsFromPropTypes(component);
+	_.sortBy(
+		_.sortBy(
+			_.has(component, '__docgenInfo')
+				? getPropsFromDocgen(component)
+				: getPropsFromPropTypes(component),
+			prop => prop.name
+		),
+		prop => !prop.required
+	);
 
 const getPropsFromDocgen = component =>
 	_.map(
@@ -73,7 +79,7 @@ const mergePropwithDefaults = (
 	return {
 		name,
 		type,
-		required: required && _.isNil(defaultValueValue),
+		required: required && _.isUndefined(defaultValueValue),
 		description,
 		defaultValue: defaultValueValue,
 	};

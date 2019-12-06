@@ -5,13 +5,12 @@ import { lucidClassNames, uniqueName } from '../../util/style-helpers';
 import {
 	StandardProps,
 	getFirst,
-	FC,
 	rejectTypes,
 	findTypes,
 	omitProps,
 } from '../../util/component-types';
 import { scrollParentTo } from '../../util/dom-helpers';
-import { buildHybridComponent } from '../../util/state-management';
+import { buildModernHybridComponent } from '../../util/state-management';
 import * as KEYCODE from '../../constants/key-code';
 import * as reducers from './DropMenu.reducers';
 import ContextMenu from '../ContextMenu/ContextMenu';
@@ -59,7 +58,7 @@ interface IDropMenuHeaderProps extends StandardProps {
 	description?: string;
 }
 
-const Header: FC<IDropMenuHeaderProps> = (): null => null;
+const Header = (_props: IDropMenuHeaderProps): null => null;
 Header.displayName = 'DropMenu.Header';
 Header.peek = {
 	description: `
@@ -74,7 +73,7 @@ interface IDropMenuControlProps extends StandardProps {
 	description?: string;
 }
 
-const Control: FC<IDropMenuControlProps> = (): null => null;
+const Control = (_props: IDropMenuControlProps): null => null;
 Control.displayName = 'DropMenu.Control';
 Control.peek = {
 	description: `
@@ -87,10 +86,10 @@ Control.propTypes = {};
 
 interface IDropMenuOptionGroupProps extends StandardProps {
 	description?: string;
-	isHidden?: boolean;
+	isHidden: boolean;
 }
 
-const OptionGroup: FC<IDropMenuOptionGroupProps> = (): null => null;
+const OptionGroup = (_props: IDropMenuOptionGroupProps): null => null;
 OptionGroup.displayName = 'DropMenu.OptionGroup';
 OptionGroup.peek = {
 	description: `
@@ -116,7 +115,7 @@ interface IDropMenuOptionProps extends StandardProps {
 	isWrapped?: boolean;
 }
 
-const Option: FC<IDropMenuOptionProps> = (): null => null;
+const Option = (_props: IDropMenuOptionProps): null => null;
 Option.displayName = 'DropMenu.Option';
 Option.peek = {
 	description: `
@@ -145,7 +144,7 @@ interface IDropMenuNullOptionProps extends StandardProps {
 	description?: string;
 }
 
-const NullOption: FC<IDropMenuNullOptionProps> = (): null => null;
+const NullOption = (_props: IDropMenuNullOptionProps): null => null;
 NullOption.displayName = 'DropMenu.NullOption';
 NullOption.peek = {
 	description: `
@@ -159,12 +158,12 @@ NullOption.propTypes = {};
 
 interface IDropMenuFixedOptionProps extends StandardProps {
 	description?: string;
-	isDisabled?: boolean;
-	isHidden?: boolean;
-	isWrapped?: boolean;
+	isDisabled: boolean;
+	isHidden: boolean;
+	isWrapped: boolean;
 }
 
-const FixedOption: FC<IDropMenuFixedOptionProps> = (): null => null;
+const FixedOption = (_props: IDropMenuFixedOptionProps): null => null;
 FixedOption.displayName = 'DropMenu.FixedOption';
 FixedOption.peek = {
 	description: `
@@ -194,7 +193,7 @@ interface IDropMenuContextMenuProps extends StandardProps {
 	description?: string;
 }
 
-const DropMenuContextMenu: FC<IDropMenuContextMenuProps> = (): null => null;
+const DropMenuContextMenu = (_props: IDropMenuContextMenuProps): null => null;
 DropMenuContextMenu.displayName = 'DropMenu.ContextMenu';
 DropMenuContextMenu.peek = {
 	description: `
@@ -388,26 +387,15 @@ class DropMenu extends React.Component<IDropMenuProps, IDropMenuState> {
 	static Control = Control;
 	static Header = Header;
 
-	static definition = {
-		statics: {
-			FixedOption,
-			NullOption,
-			Option,
-			OptionGroup,
-			Control,
-			Header,
-			reducers,
-			peek: {
-				ContextMenu: DropMenuContextMenu,
-				description: `
+	static peek = {
+		ContextMenu: DropMenuContextMenu,
+		description: `
 				This is a helper component used to render a menu of options attached to
 				any control. Supports option groups with and without labels as well as
 				special options with a \`null\` index for unselect.
 			`,
-				categories: ['helpers'],
-				madeFrom: ['ContextMenu'],
-			},
-		},
+		categories: ['helpers'],
+		madeFrom: ['ContextMenu'],
 	};
 
 	static reducers = reducers;
@@ -543,8 +531,8 @@ class DropMenu extends React.Component<IDropMenuProps, IDropMenuState> {
 	static defaultProps = {
 		isDisabled: false,
 		isExpanded: false,
-		direction: 'down',
-		alignment: 'start',
+		direction: 'down' as const,
+		alignment: 'start' as const,
 		selectedIndices: [],
 		focusedIndex: null,
 		flyOutStyle: { maxHeight: '18em' },
@@ -1050,5 +1038,9 @@ class DropMenu extends React.Component<IDropMenuProps, IDropMenuState> {
 	}
 }
 
-export default buildHybridComponent(DropMenu);
-export { DropMenu as DropMenuDumb };
+export default buildModernHybridComponent<
+	IDropMenuProps,
+	IDropMenuState,
+	typeof DropMenu
+>(DropMenu, { reducers });
+export { DropMenu as DropMenuDumb, NullOption, OptionGroup };

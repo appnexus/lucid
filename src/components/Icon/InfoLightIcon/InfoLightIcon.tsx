@@ -2,18 +2,18 @@ import _ from 'lodash';
 import React from 'react';
 import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
-import { FC, omitProps } from '../../../util/component-types';
+import { omitProps } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-InfoLightIcon');
 
 interface IInfoLightIconProps extends IIconProps {}
 
-export const InfoLightIcon: FC<IInfoLightIconProps> = ({
+export const InfoLightIcon = ({
 	className,
 	isClickable,
 	isDisabled,
 	...passThroughs
-}): React.ReactElement => {
+}: IInfoLightIconProps) => {
 	return (
 		<Icon
 			{...omitProps(
@@ -39,9 +39,12 @@ export const InfoLightIcon: FC<IInfoLightIconProps> = ({
 	);
 };
 
+InfoLightIcon._isPrivate = true;
 InfoLightIcon.displayName = 'InfoLightIcon';
 InfoLightIcon.peek = {
 	description: `
+		DEPRECATED: this component should not be used and will be removed from the library in a future release.
+		
 		A light info icon.
 	`,
 	categories: ['visual design', 'icons'],
@@ -49,5 +52,6 @@ InfoLightIcon.peek = {
 	madeFrom: ['Icon'],
 };
 InfoLightIcon.propTypes = iconPropTypes;
+InfoLightIcon.defaultProps = Icon.defaultProps;
 
 export default InfoLightIcon;

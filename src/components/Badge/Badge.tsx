@@ -2,12 +2,7 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import {
-	omitProps,
-	FC,
-	StandardProps,
-	FixDefaults,
-} from '../../util/component-types';
+import { omitProps, StandardProps } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-Badge');
 
@@ -34,9 +29,9 @@ export interface IBadgeProps
 			React.HTMLAttributes<HTMLSpanElement>,
 			HTMLSpanElement
 		> {
-	kind?: keyof typeof Kind;
+	kind: keyof typeof Kind;
 	/** Fill variations for the `Badge` */
-	type?: keyof typeof Type;
+	type: keyof typeof Type;
 }
 
 const defaultProps = {
@@ -44,14 +39,8 @@ const defaultProps = {
 	type: Type.filled,
 };
 
-export const Badge: FC<IBadgeProps> = (props): React.ReactElement => {
-	const {
-		className,
-		kind,
-		type,
-		children,
-		...passThroughs
-	} = props as FixDefaults<IBadgeProps, typeof defaultProps>;
+export const Badge = (props: IBadgeProps): React.ReactElement => {
+	const { className, kind, type, children, ...passThroughs } = props;
 
 	return (
 		<span

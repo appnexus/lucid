@@ -44,9 +44,15 @@ exports[`SidePanel [common] example testing should match snapshot(s) for 01.no-m
           type="button"
         >
           <CloseIcon
+            aspectRatio="xMidYMid meet"
             className="lucid-SidePanel-header-closer"
+            color="primary"
             isClickable={true}
+            isDisabled={false}
+            onClick={[Function]}
+            onSelect={[Function]}
             size={14}
+            viewBox="0 0 16 16"
           />
         </Button>
       </div>
@@ -62,6 +68,14 @@ exports[`SidePanel [common] example testing should match snapshot(s) for 01.no-m
         onDragStart={[Function]}
       >
         <GripperVerticalIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
           width="20"
         />
       </DragCaptureZone>
@@ -114,6 +128,14 @@ exports[`SidePanel [common] example testing should match snapshot(s) for 02.with
         onDragStart={[Function]}
       >
         <GripperVerticalIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
           width="20"
         />
       </DragCaptureZone>
@@ -194,9 +216,15 @@ exports[`SidePanel [common] example testing should match snapshot(s) for 03.with
           type="button"
         >
           <CloseIcon
+            aspectRatio="xMidYMid meet"
             className="lucid-SidePanel-header-closer"
+            color="primary"
             isClickable={true}
+            isDisabled={false}
+            onClick={[Function]}
+            onSelect={[Function]}
             size={14}
+            viewBox="0 0 16 16"
           />
         </Button>
       </div>
@@ -212,6 +240,14 @@ exports[`SidePanel [common] example testing should match snapshot(s) for 03.with
         onDragStart={[Function]}
       >
         <GripperVerticalIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
           width="20"
         />
       </DragCaptureZone>
@@ -295,9 +331,15 @@ exports[`SidePanel [common] example testing should match snapshot(s) for 04.with
           type="button"
         >
           <CloseIcon
+            aspectRatio="xMidYMid meet"
             className="lucid-SidePanel-header-closer"
+            color="primary"
             isClickable={true}
+            isDisabled={false}
+            onClick={[Function]}
+            onSelect={[Function]}
             size={14}
+            viewBox="0 0 16 16"
           />
         </Button>
       </div>
@@ -313,6 +355,14 @@ exports[`SidePanel [common] example testing should match snapshot(s) for 04.with
         onDragStart={[Function]}
       >
         <GripperVerticalIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
           width="20"
         />
       </DragCaptureZone>
@@ -387,9 +437,15 @@ exports[`SidePanel [common] example testing should match snapshot(s) for 05.with
           type="button"
         >
           <CloseIcon
+            aspectRatio="xMidYMid meet"
             className="lucid-SidePanel-header-closer"
+            color="primary"
             isClickable={true}
+            isDisabled={false}
+            onClick={[Function]}
+            onSelect={[Function]}
             size={14}
+            viewBox="0 0 16 16"
           />
         </Button>
       </div>
@@ -405,6 +461,14 @@ exports[`SidePanel [common] example testing should match snapshot(s) for 05.with
         onDragStart={[Function]}
       >
         <GripperVerticalIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
           width="20"
         />
       </DragCaptureZone>
@@ -467,9 +531,15 @@ exports[`SidePanel [common] example testing should match snapshot(s) for 06.with
           type="button"
         >
           <CloseIcon
+            aspectRatio="xMidYMid meet"
             className="lucid-SidePanel-header-closer"
+            color="primary"
             isClickable={true}
+            isDisabled={false}
+            onClick={[Function]}
+            onSelect={[Function]}
             size={14}
+            viewBox="0 0 16 16"
           />
         </Button>
       </div>
@@ -536,9 +606,15 @@ exports[`SidePanel [common] example testing should match snapshot(s) for 07.with
           type="button"
         >
           <CloseIcon
+            aspectRatio="xMidYMid meet"
             className="lucid-SidePanel-header-closer"
+            color="primary"
             isClickable={true}
+            isDisabled={false}
+            onClick={[Function]}
+            onSelect={[Function]}
             size={14}
+            viewBox="0 0 16 16"
           />
         </Button>
       </div>
@@ -554,6 +630,14 @@ exports[`SidePanel [common] example testing should match snapshot(s) for 07.with
         onDragStart={[Function]}
       >
         <GripperVerticalIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
           width="20"
         />
       </DragCaptureZone>
@@ -622,9 +706,15 @@ exports[`SidePanel [common] example testing should match snapshot(s) for 08.with
           type="button"
         >
           <CloseIcon
+            aspectRatio="xMidYMid meet"
             className="lucid-SidePanel-header-closer"
+            color="primary"
             isClickable={true}
+            isDisabled={false}
+            onClick={[Function]}
+            onSelect={[Function]}
             size={14}
+            viewBox="0 0 16 16"
           />
         </Button>
       </div>
@@ -640,6 +730,14 @@ exports[`SidePanel [common] example testing should match snapshot(s) for 08.with
         onDragStart={[Function]}
       >
         <GripperVerticalIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
           width="20"
         />
       </DragCaptureZone>
@@ -723,9 +821,15 @@ exports[`SidePanel Header should match snapshot 1`] = `
           type="button"
         >
           <CloseIcon
+            aspectRatio="xMidYMid meet"
             className="lucid-SidePanel-header-closer"
+            color="primary"
             isClickable={true}
+            isDisabled={false}
+            onClick={[Function]}
+            onSelect={[Function]}
             size={14}
+            viewBox="0 0 16 16"
           />
         </Button>
       </div>
@@ -741,6 +845,14 @@ exports[`SidePanel Header should match snapshot 1`] = `
         onDragStart={[Function]}
       >
         <GripperVerticalIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
           width="20"
         />
       </DragCaptureZone>
@@ -786,6 +898,14 @@ exports[`SidePanel isAnimated should match snapshot 1`] = `
         onDragStart={[Function]}
       >
         <GripperVerticalIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
           width="20"
         />
       </DragCaptureZone>
@@ -831,6 +951,14 @@ exports[`SidePanel isExpanded should match snapshot 1`] = `
         onDragStart={[Function]}
       >
         <GripperVerticalIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
           width="20"
         />
       </DragCaptureZone>
@@ -910,6 +1038,14 @@ exports[`SidePanel position should match snapshot 1`] = `
         onDragStart={[Function]}
       >
         <GripperVerticalIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
           width="20"
         />
       </DragCaptureZone>
@@ -955,6 +1091,14 @@ exports[`SidePanel width should match snapshot 1`] = `
         onDragStart={[Function]}
       >
         <GripperVerticalIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
           width="20"
         />
       </DragCaptureZone>

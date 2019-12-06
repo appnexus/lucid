@@ -2,15 +2,11 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import {
-	FC,
-	Overwrite,
-	getFirst,
-	omitProps,
-	StandardProps,
-	FixDefaults,
-} from '../../util/component-types';
-import SlidePanel, { ISlidePanelProps } from '../SlidePanel/SlidePanel';
+import { Overwrite, getFirst, omitProps } from '../../util/component-types';
+import SlidePanel, {
+	ISlidePanelProps,
+	ISlidePanelSlideProps,
+} from '../SlidePanel/SlidePanel';
 
 const cx = lucidClassNames.bind('&-InfiniteSlidePanel');
 
@@ -20,8 +16,8 @@ const modulo = (n: number, a: number): number => {
 	return a - n * Math.floor(a / n);
 };
 
-interface IInfiniteSlidePanelSlideProps extends StandardProps {}
-const InfiniteSlidePanelSlide: FC<IInfiniteSlidePanelSlideProps> = (): null =>
+interface IInfiniteSlidePanelSlideProps extends ISlidePanelSlideProps {}
+const InfiniteSlidePanelSlide = (_props: IInfiniteSlidePanelSlideProps): null =>
 	null;
 InfiniteSlidePanelSlide.displayName = 'InfiniteSlidePanel.Slide';
 InfiniteSlidePanelSlide.propName = 'Slide';
@@ -37,15 +33,15 @@ export interface IInfiniteSlidePanelPropsRaw {
 
 	/** The number of slides rendered at any given time. A good rule-of-thumb is
 	that this should be at least 4 times the \`slidesToShow\` value. */
-	totalSlides?: number;
+	totalSlides: number;
 
 	/** Animate slides transitions from changes in `offset`. */
-	isAnimated?: boolean;
+	isAnimated: boolean;
 
 	/** Slides are rendered in a continuous loop, where the first slide repeats
 	 * after the last slide and vice-versa. DOM elements are re-ordered and
 	 * re-used. */
-	isLooped?: boolean;
+	isLooped: boolean;
 
 	Slide?: React.ReactNode;
 }
@@ -54,10 +50,6 @@ type IInfiniteSlidePanelProps = Overwrite<
 	ISlidePanelProps,
 	IInfiniteSlidePanelPropsRaw
 >;
-
-interface IInfiniteSlidePanelFC extends FC<IInfiniteSlidePanelProps> {
-	Slide: FC<IInfiniteSlidePanelSlideProps>;
-}
 
 const defaultProps = {
 	offset: 0,
@@ -68,8 +60,8 @@ const defaultProps = {
 	isLooped: SlidePanel.defaultProps.isLooped,
 };
 
-export const InfiniteSlidePanel: IInfiniteSlidePanelFC = (
-	props
+export const InfiniteSlidePanel = (
+	props: IInfiniteSlidePanelProps
 ): React.ReactElement => {
 	const {
 		children,
@@ -79,7 +71,7 @@ export const InfiniteSlidePanel: IInfiniteSlidePanelFC = (
 		onSwipe,
 		totalSlides,
 		...passThroughs
-	} = props as FixDefaults<IInfiniteSlidePanelProps, typeof defaultProps>;
+	} = props;
 
 	const slide = getFirst(
 		props,
