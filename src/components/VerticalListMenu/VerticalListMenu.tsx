@@ -7,7 +7,7 @@ import {
 	omitProps,
 	StandardProps,
 } from '../../util/component-types';
-import { buildHybridComponent } from '../../util/state-management';
+import { buildModernHybridComponent } from '../../util/state-management';
 import * as reducers from './VerticalListMenu.reducers';
 import ChevronIcon from '../Icon/ChevronIcon/ChevronIcon';
 import Collapsible, { ICollapsibleProps } from '../Collapsible/Collapsible';
@@ -56,22 +56,22 @@ export interface IVerticalListMenuProps extends StandardProps {
 export interface IVerticalListMenuItemProps extends StandardProps {
 	/** 	Show or hide the expand button. Should be \`true\` if you want to
 					nest menus. */
-	hasExpander: boolean;
+	hasExpander?: boolean;
 
 	/** Determines the visibility of nested menus. */
-	isExpanded: boolean;
+	isExpanded?: boolean;
 
 	/** If \`true\` then a small bar on the left side of the item will be
 	shown indicating this item is selected. */
-	isSelected: boolean;
+	isSelected?: boolean;
 
 	/** Determines the visibility of the small bar on the left when the user
 	hovers over the item. This should indicate to the user that an item
 	is clickable. */
-	isActionable: boolean;
+	isActionable?: boolean;
 
 	/** Called when the user clicks the main body of the item. */
-	onSelect: (
+	onSelect?: (
 		index: number,
 		{
 			event,
@@ -83,7 +83,7 @@ export interface IVerticalListMenuItemProps extends StandardProps {
 	) => void;
 
 	/** Called when the user clicks the expand button. */
-	onToggle: (
+	onToggle?: (
 		index: number,
 		{
 			event,
@@ -96,7 +96,7 @@ export interface IVerticalListMenuItemProps extends StandardProps {
 
 	/** Props that are passed through to the underlying Collapsible component
 	if the item has children. */
-	Collapsible: ICollapsibleProps;
+	Collapsible?: ICollapsibleProps;
 }
 const Item = (_props: IVerticalListMenuItemProps): null => null;
 Item.peek = {
@@ -161,6 +161,21 @@ class VerticalListMenu extends React.Component<
 
 	static Item = Item;
 
+	static peek = {
+		description: `
+					Used primarily for navigation lists. It supports nesting
+					\`VerticalListMenu\`s below \`VerticalListMenu.Item\`s and animating
+					expanding of those sub lists.  The default reducer behavior is for only
+					one \`VerticalListMenu.Item\` to be selected at any given time; that is
+					easily overridden by handling \`onSelect\` yourself.
+				`,
+		categories: ['navigation'],
+		madeFrom: ['ChevronIcon'],
+	};
+
+	static reducers = reducers;
+
+	// TODO: remove this once we move to only buildModernHybridComponent
 	static definition = {
 		statics: {
 			Item,
@@ -178,8 +193,6 @@ class VerticalListMenu extends React.Component<
 			},
 		},
 	};
-
-	static reducers = reducers;
 
 	static propTypes = {
 		children: node`
@@ -365,5 +378,10 @@ class VerticalListMenu extends React.Component<
 	};
 }
 
-export default buildHybridComponent(VerticalListMenu);
+export default buildModernHybridComponent<
+	IVerticalListMenuProps,
+	IVerticalListMenuState,
+	typeof VerticalListMenu
+>(VerticalListMenu, { reducers });
+
 export { VerticalListMenu as VerticalListMenuDumb };

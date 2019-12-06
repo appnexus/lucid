@@ -10,11 +10,15 @@ import {
 	omitProps,
 } from '../../util/component-types';
 import { scrollParentTo } from '../../util/dom-helpers';
+<<<<<<< HEAD
 import { buildHybridComponent } from '../../util/state-management';
 import {
 	ISingleSelectProps,
 	SingleSelectDumb as SingleSelect,
 } from '../SingleSelect/SingleSelect';
+=======
+import { buildModernHybridComponent } from '../../util/state-management';
+>>>>>>> c0ecbcb7b61fdfb8ebab92909e4fc6b9f52a089a
 import * as KEYCODE from '../../constants/key-code';
 import * as reducers from './DropMenu.reducers';
 import ContextMenu from '../ContextMenu/ContextMenu';
@@ -393,26 +397,15 @@ class DropMenu extends React.Component<IDropMenuProps, IDropMenuState> {
 	static Control = Control;
 	static Header = Header;
 
-	static definition = {
-		statics: {
-			FixedOption,
-			NullOption,
-			Option,
-			OptionGroup,
-			Control,
-			Header,
-			reducers,
-			peek: {
-				ContextMenu: DropMenuContextMenu,
-				description: `
+	static peek = {
+		ContextMenu: DropMenuContextMenu,
+		description: `
 				This is a helper component used to render a menu of options attached to
 				any control. Supports option groups with and without labels as well as
 				special options with a \`null\` index for unselect.
 			`,
-				categories: ['helpers'],
-				madeFrom: ['ContextMenu'],
-			},
-		},
+		categories: ['helpers'],
+		madeFrom: ['ContextMenu'],
 	};
 
 	static reducers = reducers;
@@ -548,8 +541,8 @@ class DropMenu extends React.Component<IDropMenuProps, IDropMenuState> {
 	static defaultProps = {
 		isDisabled: false,
 		isExpanded: false,
-		direction: 'down',
-		alignment: 'start',
+		direction: 'down' as const,
+		alignment: 'start' as const,
 		selectedIndices: [],
 		focusedIndex: null,
 		flyOutStyle: { maxHeight: '18em' },
@@ -1057,5 +1050,9 @@ class DropMenu extends React.Component<IDropMenuProps, IDropMenuState> {
 	}
 }
 
-export default buildHybridComponent(DropMenu);
+export default buildModernHybridComponent<
+	IDropMenuProps,
+	IDropMenuState,
+	typeof DropMenu
+>(DropMenu, { reducers });
 export { DropMenu as DropMenuDumb, NullOption, OptionGroup };

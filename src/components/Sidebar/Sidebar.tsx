@@ -8,7 +8,7 @@ import {
 	findTypes,
 	omitProps,
 } from '../../util/component-types';
-import { buildHybridComponent } from '../../util/state-management';
+import { buildModernHybridComponent } from '../../util/state-management';
 import * as reducers from './Sidebar.reducers';
 import SplitVertical from '../SplitVertical/SplitVertical';
 import Button from '../Button/Button';
@@ -33,7 +33,7 @@ const defaultProps = {
 	isExpanded: true,
 	isAnimated: true,
 	width: 250,
-	position: 'left',
+	position: 'left' as const,
 	isResizeDisabled: false,
 	onResizing: _.noop,
 	onResize: _.noop,
@@ -157,20 +157,12 @@ class Sidebar extends React.Component<ISidebarProps, ISidebarState> {
 	static Bar = Bar;
 	static Primary = Primary;
 	static Title = Title;
-	static definition = {
-		statics: {
-			reducers,
-			Bar,
-			Primary,
-			Title,
-			peek: {
-				description: `
+	static peek = {
+		description: `
 					\`Sidebar\` renders a collapsible, resizeable side bar panel next to
 					primary content.
 				`,
-				categories: ['layout'],
-			},
-		},
+		categories: ['layout'],
 	};
 
 	static reducers = reducers;
@@ -396,5 +388,9 @@ class Sidebar extends React.Component<ISidebarProps, ISidebarState> {
 	}
 }
 
-export default buildHybridComponent(Sidebar);
+export default buildModernHybridComponent<
+	ISidebarProps,
+	ISidebarState,
+	typeof Sidebar
+>(Sidebar, { reducers });
 export { Sidebar as SidebarDumb };

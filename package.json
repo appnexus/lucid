@@ -1,6 +1,6 @@
 {
   "name": "lucid-ui",
-  "version": "5.2.1-beta.0",
+  "version": "5.2.1-beta.2",
   "description": "A UI component library from AppNexus.",
   "main": "dist/index.js",
   "module": "lib/index.js",
@@ -16,7 +16,7 @@
   "scripts": {
     "build:bundle:development": "NODE_ENV=development webpack --config webpack.config.bundle.js",
     "build:bundle:minified": "NODE_ENV=production webpack --config webpack.config.bundle.js",
-    "build:docs": "rm -rf ./dist/docs && NODE_DEST_ENV=docs build-storybook --docs -s ./docs/public -o ./dist/docs",
+    "build:docs": "rm -rf ./dist/docs && NODE_DEST_ENV=docs build-storybook --docs -s .storybook/static -o ./dist/docs",
     "build:js": "NODE_ENV=production babel --extensions .js,.jsx,.ts,.tsx --ignore spec.js,docs,examples,test-entry.js,coverage ./src --out-dir ./dist",
     "build:modules:babel": "NODE_ENV=production BABEL_ENV=modules babel --extensions .js,.jsx,.ts,.tsx --ignore spec.js,docs,examples,test-entry.js,coverage ./src --out-dir ./lib",
     "build:modules:definitions": "tsc --outDir lib --declaration --emitDeclarationOnly --declarationDir lib",
@@ -24,7 +24,7 @@
     "clean:dist": "rm -rf dist",
     "clean:lib": "rm -rf lib",
     "cover": "npm run jest -- --coverage",
-    "dev": "start-storybook --docs -p 6006",
+    "dev": "start-storybook --docs -p 6006 -s .storybook/static",
     "docs:upload:docspot": "scripts/upload-docs-build-docspot.sh",
     "docs:upload:gh": "scripts/upload-docs-build-gh.sh",
     "jest": "NODE_ENV=test TZ=UTC jest",
@@ -52,6 +52,7 @@
   "license": "Apache-2.0",
   "dependencies": {
     "@babel/parser": "^7.2.2",
+    "@types/hoist-non-react-statics": "^3.3.1",
     "classnames": "^2.2.3",
     "create-react-class": "^15.6.2",
     "d3-format": "^1.0.2",
@@ -60,6 +61,7 @@
     "d3-time": "^1.0.0",
     "d3-time-format": "^2.0.0",
     "element-resize-detector": "^1.1.6",
+    "hoist-non-react-statics": "^3.3.1",
     "prop-types": "^15.6.0",
     "react-addons-shallow-compare": "^15.6.2",
     "react-day-picker": "^6.2.1",

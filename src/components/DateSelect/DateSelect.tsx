@@ -2,7 +2,7 @@
 import _ from 'lodash';
 import PropTypes from 'react-peek/prop-types';
 import React from 'react';
-import { buildHybridComponent } from '../../util/state-management';
+import { buildModernHybridComponent } from '../../util/state-management';
 import { lucidClassNames } from '../../util/style-helpers';
 import { StandardProps, getFirst, omitProps } from '../../util/component-types';
 import * as reducers from './DateSelect.reducers';
@@ -47,10 +47,10 @@ export interface IDateSelectProps extends StandardProps {
 	offset: number;
 
 	/** Sets the start date in a date range. */
-	from: Date;
+	from: Date | null;
 
 	/** Sets the end date in a date range. */
-	to: Date;
+	to: Date | null;
 
 	/** The next selection that is expected. Primarily used to preview expected
 			ranges when the cursor is on a target date. */
@@ -139,19 +139,13 @@ class DateSelect extends React.Component<IDateSelectProps, IDateSelectState> {
 		};
 	}
 
-	static definition = {
-		statics: {
-			CalendarMonth: DateSelectCalendarMonth,
-			reducers,
-			peek: {
-				description: `
+	static peek = {
+		description: `
 				Date selection component capabaple of supporting single date and date
 				range selections.
 			`,
-				categories: ['controls', 'selectors'],
-				madeFrom: ['InfiniteSlidePanel', 'CalendarMonth'],
-			},
-		},
+		categories: ['controls', 'selectors'],
+		madeFrom: ['InfiniteSlidePanel', 'CalendarMonth'],
 	};
 
 	static propTypes = {
@@ -391,6 +385,11 @@ class DateSelect extends React.Component<IDateSelectProps, IDateSelectState> {
 		} = this.props;
 
 		const { cursor } = this.state;
+
+		//@ts-ignore
+		// For some reason react-day-pickers type doesn't allow `null` values but
+		// we seem to be passing them in and it seems to "work" at least in that
+		// the code doesn't blow up.
 		const isRangeSameDay = DateUtils.isSameDay(from, to);
 
 		const calendarMonthProps = _.get(
@@ -501,5 +500,9 @@ class DateSelect extends React.Component<IDateSelectProps, IDateSelectState> {
 	}
 }
 
-export default buildHybridComponent(DateSelect);
+export default buildModernHybridComponent<
+	IDateSelectProps,
+	IDateSelectState,
+	typeof DateSelect
+>(DateSelect, { reducers });
 export { DateSelect as DateSelectDumb };
