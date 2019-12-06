@@ -2,8 +2,11 @@
 
 - Nothing at the moment.
 
+## 5.3.1
+- #1086 [patch] Fix storybook register to be compatible with older versions
+
 ## 5.3.0
-- #1058 [minor] migrated another round of components to TypeScript and added a new utility function `buildModernHybridComponent` that works with class and functional React components. We also significantly reworked the way we annotate types of our functional components that should hopefully reduce the number of instances where optional props were incorrectly marked as required. 
+- #1058 [minor] Migrated another round of components to TypeScript and added a new utility function `buildModernHybridComponent` that works with class and functional React components. We also significantly reworked the way we annotate types of our functional components that should hopefully reduce the number of instances where optional props were incorrectly marked as required. 
   - Components converted to TypeScript:
     - `ButtonGroup`
     - `DateSelect`
@@ -33,8 +36,8 @@
   - Fixed the favicon
   - Put the lucid logo in the upper left side panel
   - The document.title changes to reflect the story or document the use looks at
-- #1079 #1078 #1072 [none] Added codesandbox build to lucid, there are still a couple lingering issues that we need to figure out before it's fully baked.
-- #1075 [patch] improved type signature for `createClass`
+- #1079 #1078 #1072 [none] Add codesandbox build to lucid, there are still a couple lingering issues that we need to figure out before it's fully baked.
+- #1075 [patch] Improve type signature for `createClass`
 
 https://github.com/appnexus/lucid/compare/5.2.0...v5.3.0
 
