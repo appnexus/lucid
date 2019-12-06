@@ -9,7 +9,7 @@ import {
 } from '../../util/component-types';
 import * as d3Shape from 'd3-shape';
 import * as chartConstants from '../../constants/charts';
-import { buildHybridComponent } from '../../util/state-management';
+import { buildModernHybridComponent } from '../../util/state-management';
 
 import Line from '../../components/Line/Line';
 import { ToolTipDumb as ToolTip, IToolTipProps } from '../../components/ToolTip/ToolTip';
@@ -88,7 +88,7 @@ export interface IPieChartPropsRaw
 			'rev': COLOR_3,
 			'clicks': '#abc123',
 		}*/
-	colorMap: object;
+	colorMap?: object;
 
 	/** 
 	An object of ToolTip props that are passed through to the underlying
@@ -112,27 +112,27 @@ export interface IPieChartPropsRaw
 	onMouseOver: (
 		index: number, 
 		{ event, props } : { event: React.MouseEvent, props: IPieChartProps }
-	) => {},
+	) => void,
 
 	/** Called when the user hovers away from either the pie or the tooltip. */
 	onMouseOut: (
 		{ event, props } : { event: React.MouseEvent, props: IPieChartProps }
-	) => {},
+	) => void,
 
 	/** Width of the donut in px. */
 	donutWidth: number,
 
 	/** The field we should look up your x data by. The data should be strings. */
-	xAxisField: number,
+	xAxisField: string,
 
 	/** An optional function used to format your x axis data. */
 	xAxisFormatter: (x: string | number) => string | number,
 
 	/** The field we should look up your y data by. The data should be numeric. */
-	yAxisField: number,
+	yAxisField: string,
 
 	/** An optional function used to format your y axis data. */
-	yAxisFormatter: (y: number) => number
+	yAxisFormatter: (y: number) => string | number
 }
 
 type IPieChartProps = Overwrite<React.SVGProps<SVGGElement>, IPieChartPropsRaw>
@@ -166,13 +166,179 @@ const defaultProps = {
 			yAxisFormatter: _.identity,
 		};
 
-class PieChart extends React.Component<
-	IPieChartProps,
-	IPieChartState
-> {
-	static displayName = "PieChart";
+const PieChart = (props: IPieChartProps) => {
+		const {
+			style,
+			className,
+			height,
+			width,
+			margin: marginOriginal,
+			data,
+			hasToolTips,
+			hasStroke,
+			palette,
+			colorMap,
+			isDonut,
+			ToolTip: toolTipProps,
 
-	static propTypes = {
+			isHovering,
+			hoveringIndex,
+
+			xAxisField,
+			xAxisFormatter,
+
+			yAxisField,
+			yAxisFormatter,
+
+			...passThroughs
+		} = props;
+
+		const margin = {
+			...PieChart.MARGIN,
+			...marginOriginal,
+		};
+
+		const svgClasses = cx(className, '&');
+
+		const pieChartProps = omitProps(
+			omitProps(passThroughs, undefined, _.keys(ToolTip.propTypes)), 
+			undefined, 
+			_.keys(PieChart.propTypes)
+		);
+
+		// TODO: Consider displaying something specific when there is no data,
+		// perhaps a loading indicator.
+		if (_.isEmpty(data) || width < 1 || height < 1) {
+			return (
+				<svg
+					{...pieChartProps}
+					style={style}
+					className={svgClasses}
+					width={width}
+					height={height}
+				/>
+			);
+		}
+
+		const innerWidth = width - margin.left - margin.right;
+		const innerHeight = height - margin.top - margin.bottom;
+
+		const outerRadius = Math.min(innerWidth, innerHeight) / 2;
+
+		const pie = d3Shape.pie().sort(null); // needed to put the slices in proper order
+		const pieData = pie(
+			_.map(data as Array<{ [key: string]: number }>, yAxisField)
+		);
+
+		const arc = d3Shape
+			.arc()
+			.innerRadius(isDonut ? outerRadius - PieChart.DONUT_WIDTH : INNER_RADIUS)
+			.outerRadius(outerRadius);
+
+		// Useful for capturing hovers when we're in donut mode
+		const arcFull = d3Shape
+			.arc()
+			.innerRadius(0)
+			.outerRadius(outerRadius);
+
+		const handleMouseOut = ({
+				event,
+			} : {
+				event: React.MouseEvent
+			}) : void => {
+				props.onMouseOut({
+					props,
+					event,
+				});		
+			}
+
+		const handleMouseOver = (index: number, event: React.MouseEvent): void => {
+			props.onMouseOver(index, {
+				props,
+				event,
+			});
+		}
+
+		return (
+			<svg
+				{...pieChartProps}
+				style={style}
+				className={svgClasses}
+				width={width}
+				height={height}
+			>
+				<ToolTip
+					{...toolTipProps}
+					isLight={true}
+					isExpanded={hasToolTips && isHovering}
+					onMouseOver={_.noop}
+					onMouseOut={handleMouseOut}
+				>
+					<ToolTip.Target elementType='g'>
+						<g transform={`translate(${margin.left}, ${margin.top})`}>
+							<g transform={`translate(${innerWidth / 2}, ${innerHeight / 2})`}>
+								{_.map(pieData, (pieDatum, index) => {
+									/* Even though innerRadius and outerRadius are set when
+									constructing arc and arcFull, these functions still expect a type
+									that includes innerRadius and outerRadius */ 
+									//@ts-ignore
+									const arcFullData = arcFull(pieDatum)
+									//@ts-ignore
+									const arcData = arc(pieDatum);
+
+									return (
+									<g
+										key={index}
+										className={cx('&-slice-group', {
+											'&-slice-group-is-hovering':
+												isHovering && hoveringIndex === index,
+										})}
+									>
+										<Line
+											key={index}
+											className={cx('&-slice', {
+												'&-slice-has-stroke': hasStroke,
+											})}
+											d={arcData}
+											color={_.get(
+												colorMap,
+												data[index][xAxisField],
+												palette[index % palette.length]
+											)}
+											transform={`scale(${
+												isHovering && hoveringIndex === index ? HOVER_SCALE : 1
+											})`}
+										/>
+
+										{/* This hidden path is useful for capturing hovers when we're in donut mode */}
+										<path
+											className={cx('&-slice-hover')}
+											d={arcFullData}
+											transform={`scale(${HOVER_SCALE})`}
+											onMouseOver={_.partial(handleMouseOver, index)}
+											onMouseOut={hasToolTips ? _.noop : handleMouseOut}
+										/>
+									</g>
+								)})}
+							</g>
+						</g>
+					</ToolTip.Target>
+
+					<ToolTip.Title>
+						{xAxisFormatter(_.get(data, `[${hoveringIndex}].${xAxisField}`))}
+					</ToolTip.Title>
+
+					<ToolTip.Body>
+						{yAxisFormatter(_.get(data, `[${hoveringIndex}].${yAxisField}`))}
+					</ToolTip.Body>
+				</ToolTip>
+			</svg>
+		);
+}
+
+PieChart.displayName = "PieChart";
+
+PieChart.propTypes = {
 		style: object`
 			Styles that are passed through to the root container.
 		`,
@@ -293,10 +459,7 @@ class PieChart extends React.Component<
 		`,
 	};
 
-	static definition = {
-		statics: {
-			reducers,
-			peek: {
+PieChart.peek = {
 				description: `
 					Pie charts are used for categorical data when you want to show the
 					relative size of each category to the whole. We use similar "x" and "y"
@@ -305,203 +468,26 @@ class PieChart extends React.Component<
 				`,
 				categories: ['visualizations', 'charts'],
 				madeFrom: ['ToolTip'],
-			},
-			HOVER_SCALE,
-			DONUT_WIDTH,
-			MARGIN: {
-				top: 10,
-				right: 10,
-				bottom: 10,
-				left: 10,
 			}
-		},
-	};
 
-	static MARGIN = {
+PieChart.MARGIN = {
 		top: 10,
 		right: 10,
 		bottom: 10,
 		left: 10,
 	}
 
-	static DONUT_WIDTH = DONUT_WIDTH;
+PieChart.DONUT_WIDTH = DONUT_WIDTH;
 
-	static HOVER_SCALE = HOVER_SCALE;
+PieChart.HOVER_SCALE = HOVER_SCALE;
 
-	static reducers = reducers;
+PieChart.reducers = reducers;
 
-	static defaultProps = defaultProps;
+PieChart.defaultProps = defaultProps;
 
-	handleMouseOver = (index: number, event: React.MouseEvent): void => {
-		this.props.onMouseOver(index, {
-			props: this.props,
-			event,
-		});
-	};
-
-	handleMouseOut = ({
-		event,
-	} : {
-		event: React.MouseEvent
-	}) : void => {
-		this.props.onMouseOut({
-			props: this.props,
-			event,
-		});		
-	}
-
-	render() {
-		const {
-			style,
-			className,
-			height,
-			width,
-			margin: marginOriginal,
-			data,
-			hasToolTips,
-			hasStroke,
-			palette,
-			colorMap,
-			isDonut,
-			ToolTip: toolTipProps,
-
-			isHovering,
-			hoveringIndex,
-
-			xAxisField,
-			xAxisFormatter,
-
-			yAxisField,
-			yAxisFormatter,
-
-			...passThroughs
-		} = this.props;
-
-		const margin = {
-			...PieChart.MARGIN,
-			...marginOriginal,
-		};
-
-		const svgClasses = cx(className, '&');
-
-		const pieChartProps = omitProps(
-			omitProps(passThroughs, undefined, _.keys(ToolTip.propTypes)), 
-			undefined, 
-			_.keys(PieChart.propTypes)
-		);
-
-		// TODO: Consider displaying something specific when there is no data,
-		// perhaps a loading indicator.
-		if (_.isEmpty(data) || width < 1 || height < 1) {
-			return (
-				<svg
-					{...pieChartProps}
-					style={style}
-					className={svgClasses}
-					width={width}
-					height={height}
-				/>
-			);
-		}
-
-		const innerWidth = width - margin.left - margin.right;
-		const innerHeight = height - margin.top - margin.bottom;
-
-		const outerRadius = Math.min(innerWidth, innerHeight) / 2;
-
-		const pie = d3Shape.pie().sort(null); // needed to put the slices in proper order
-		const pieData = pie(
-			_.map(data as Array<{ [key: string]: number }>, yAxisField)
-		);
-
-		const arc = d3Shape
-			.arc()
-			.innerRadius(isDonut ? outerRadius - PieChart.DONUT_WIDTH : INNER_RADIUS)
-			.outerRadius(outerRadius);
-
-		// Useful for capturing hovers when we're in donut mode
-		const arcFull = d3Shape
-			.arc()
-			.innerRadius(0)
-			.outerRadius(outerRadius);
-
-		return (
-			<svg
-				{...pieChartProps}
-				style={style}
-				className={svgClasses}
-				width={width}
-				height={height}
-			>
-				<ToolTip
-					{...toolTipProps}
-					isLight={true}
-					isExpanded={hasToolTips && isHovering}
-					onMouseOver={_.noop}
-					onMouseOut={this.handleMouseOut}
-				>
-					<ToolTip.Target elementType='g'>
-						<g transform={`translate(${margin.left}, ${margin.top})`}>
-							<g transform={`translate(${innerWidth / 2}, ${innerHeight / 2})`}>
-								{_.map(pieData, (pieDatum, index) => {
-									/* Even though innerRadius and outerRadius are set when
-									constructing arc and arcFull, these functions still expect a type
-									that includes innerRadius and outerRadius */ 
-									//@ts-ignore
-									const arcFullData = arcFull(pieDatum)
-									//@ts-ignore
-									const arcData = arc(pieDatum);
-
-									return (
-									<g
-										key={index}
-										className={cx('&-slice-group', {
-											'&-slice-group-is-hovering':
-												isHovering && hoveringIndex === index,
-										})}
-									>
-										<Line
-											key={index}
-											className={cx('&-slice', {
-												'&-slice-has-stroke': hasStroke,
-											})}
-											d={arcData}
-											color={_.get(
-												colorMap,
-												data[index][xAxisField],
-												palette[index % palette.length]
-											)}
-											transform={`scale(${
-												isHovering && hoveringIndex === index ? HOVER_SCALE : 1
-											})`}
-										/>
-
-										{/* This hidden path is useful for capturing hovers when we're in donut mode */}
-										<path
-											className={cx('&-slice-hover')}
-											d={arcFullData}
-											transform={`scale(${HOVER_SCALE})`}
-											onMouseOver={_.partial(this.handleMouseOver, index)}
-											onMouseOut={hasToolTips ? _.noop : this.handleMouseOut}
-										/>
-									</g>
-								)})}
-							</g>
-						</g>
-					</ToolTip.Target>
-
-					<ToolTip.Title>
-						{xAxisFormatter(_.get(data, `[${hoveringIndex}].${xAxisField}`))}
-					</ToolTip.Title>
-
-					<ToolTip.Body>
-						{yAxisFormatter(_.get(data, `[${hoveringIndex}].${yAxisField}`))}
-					</ToolTip.Body>
-				</ToolTip>
-			</svg>
-		);
-	};
-}
-
-export default buildHybridComponent(PieChart);
+export default buildModernHybridComponent<
+	IPieChartProps,
+	IPieChartState,
+	typeof PieChart
+>(PieChart, { reducers });
 export { PieChart as PieChartDumb };
