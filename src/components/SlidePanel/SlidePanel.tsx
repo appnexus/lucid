@@ -17,7 +17,7 @@ const { bool, func, node, number, string, any } = PropTypes;
 
 const modulo = (n: number, a: number): number => a - n * Math.floor(a / n);
 
-interface ISlidePanelSlideProps extends StandardProps {
+export interface ISlidePanelSlideProps extends StandardProps {
 	description?: string;
 }
 class SlidePanelSlide extends React.Component<ISlidePanelSlideProps, {}, {}> {

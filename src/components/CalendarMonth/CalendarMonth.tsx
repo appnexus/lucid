@@ -10,7 +10,7 @@ const cx = lucidClassNames.bind('&-CalendarMonth');
 
 const { bool, instanceOf, number, oneOf, string } = PropTypes;
 
-interface ICalendarProps extends StandardProps {
+export interface ICalendarProps extends StandardProps {
 	/** The offset of the rendered month, where 0 is the \`initialMonth\`.
 	 * Negative values will show previous months.
 	 */
@@ -48,6 +48,29 @@ interface ICalendarProps extends StandardProps {
 	 * into the `modifers` object that we pass to DayPicker.
 	 */
 	modifiers?: any;
+
+	/** Sets selected days. Passed through to \`CalendarMonth\` ->
+			\`react-day-picker\`. */
+	selectedDays: (date: Date) => boolean | Date | Date[];
+
+	/** Sets disabled days. Passed through to \`CalendarMonth\` ->
+			\`react-day-picker\`.*/
+	disabledDays: (date: Date) => boolean | Date | Date[];
+
+	/** Highlight dates and ranges based on cursor position. */
+	showCursorHighlight?: boolean;
+
+	key: string | number;
+
+	onDayClick: (
+		day: Date,
+		{ disabled }: { disabled: boolean },
+		event: React.MouseEvent
+	) => void;
+
+	onDayMouseEnter: (day: Date, { disabled }: { disabled: boolean }) => void;
+
+	onDayMouseLeave: () => void;
 }
 
 class CalendarMonth extends React.Component<ICalendarProps, {}, {}> {
@@ -167,6 +190,11 @@ class CalendarMonth extends React.Component<ICalendarProps, {}, {}> {
 		);
 
 		return (
+			/**typescript boundary with this component is tricky to get right with the way passthrough works
+			 * the component is being rewritten in typescript.  Going to punt on this for now
+			 * https://github.com/gpbl/react-day-picker/issues/942
+			 */
+			//@ts-ignore
 			<DayPicker
 				key={monthOffset}
 				className={cx('&', className)}

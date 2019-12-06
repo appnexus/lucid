@@ -2,16 +2,16 @@ import _ from 'lodash';
 import React from 'react';
 import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
-import { FC, omitProps } from '../../../util/component-types';
+import { omitProps } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-QuestionMarkIcon');
 
 interface IQuestionMarkIconProps extends IIconProps {}
 
-export const QuestionMarkIcon: FC<IQuestionMarkIconProps> = ({
+export const QuestionMarkIcon = ({
 	className,
 	...passThroughs
-}): React.ReactElement => {
+}: IQuestionMarkIconProps) => {
 	return (
 		<Icon
 			{...omitProps(
@@ -39,5 +39,6 @@ QuestionMarkIcon.peek = {
 	madeFrom: ['Icon'],
 };
 QuestionMarkIcon.propTypes = iconPropTypes;
+QuestionMarkIcon.defaultProps = Icon.defaultProps;
 
 export default QuestionMarkIcon;

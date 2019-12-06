@@ -21,7 +21,15 @@ exports[`Expander [common] example testing should match snapshot(s) for 1.expand
         type="button"
       >
         <ChevronIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
           direction="up"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
         />
       </Button>
       <span
@@ -70,7 +78,15 @@ exports[`Expander [common] example testing should match snapshot(s) for 2.intera
         type="button"
       >
         <ChevronIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
           direction="down"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
         />
       </Button>
       <span
@@ -134,7 +150,15 @@ exports[`Expander [common] example testing should match snapshot(s) for 3.intera
         type="button"
       >
         <ChevronIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
           direction="down"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
         />
       </Button>
       <span
@@ -198,7 +222,15 @@ exports[`Expander [common] example testing should match snapshot(s) for 4.intera
         type="button"
       >
         <ChevronIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
           direction="down"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
         />
       </Button>
       <span
@@ -218,7 +250,16 @@ exports[`Expander [common] example testing should match snapshot(s) for 4.intera
         onClick={[Function]}
         type="button"
       >
-        <EditIcon />
+        <EditIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
+        />
         Edit
       </Button>
       <Button
@@ -229,7 +270,16 @@ exports[`Expander [common] example testing should match snapshot(s) for 4.intera
         onClick={[Function]}
         type="button"
       >
-        <CloseIcon />
+        <CloseIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
+        />
         Clear All
       </Button>
     </div>
@@ -254,7 +304,16 @@ exports[`Expander [common] example testing should match snapshot(s) for 4.intera
         onClick={[Function]}
         type="button"
       >
-        <EditIcon />
+        <EditIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
+        />
         Edit
       </Button>
       <Button
@@ -265,7 +324,16 @@ exports[`Expander [common] example testing should match snapshot(s) for 4.intera
         onClick={[Function]}
         type="button"
       >
-        <CloseIcon />
+        <CloseIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
+        />
         Clear All
       </Button>
     </Expander.AdditionalLabelContent>
@@ -312,7 +380,15 @@ exports[`Expander [common] example testing should match snapshot(s) for 5.highli
         type="button"
       >
         <ChevronIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
           direction="down"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
         />
       </Button>
       <span

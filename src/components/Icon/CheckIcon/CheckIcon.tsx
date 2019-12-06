@@ -2,16 +2,13 @@ import _ from 'lodash';
 import React from 'react';
 import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
-import { FC, omitProps } from '../../../util/component-types';
+import { omitProps } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-CheckIcon');
 
 interface ICheckIconProps extends IIconProps {}
 
-export const CheckIcon: FC<ICheckIconProps> = ({
-	className,
-	...passThroughs
-}): React.ReactElement => {
+export const CheckIcon = ({ className, ...passThroughs }: ICheckIconProps) => {
 	return (
 		<Icon
 			{...omitProps(
@@ -37,8 +34,7 @@ CheckIcon.peek = {
 	extend: 'Icon',
 	madeFrom: ['Icon'],
 };
-CheckIcon.propTypes = {
-	...iconPropTypes,
-};
+CheckIcon.propTypes = iconPropTypes;
+CheckIcon.defaultProps = Icon.defaultProps;
 
 export default CheckIcon;

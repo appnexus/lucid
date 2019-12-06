@@ -24,6 +24,8 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 01.b
   onFocusOption={[Function]}
   onFocusPrev={[Function]}
   onSelect={[Function]}
+  optionContainerStyle={Object {}}
+  portalId=""
   selectedIndices={Array []}
 >
   <DropMenu.Control>
@@ -37,8 +39,15 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 01.b
         Select Color
       </span>
       <ChevronIcon
+        aspectRatio="xMidYMid meet"
+        color="primary"
         direction="down"
+        isClickable={false}
+        isDisabled={false}
+        onClick={[Function]}
+        onSelect={[Function]}
         size={12}
+        viewBox="0 0 16 16"
       />
     </div>
   </DropMenu.Control>
@@ -93,6 +102,8 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 02.n
   onFocusOption={[Function]}
   onFocusPrev={[Function]}
   onSelect={[Function]}
+  optionContainerStyle={Object {}}
+  portalId=""
   selectedIndices={Array []}
 >
   <DropMenu.Control>
@@ -106,8 +117,15 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 02.n
         Select Color
       </span>
       <ChevronIcon
+        aspectRatio="xMidYMid meet"
+        color="primary"
         direction="down"
+        isClickable={false}
+        isDisabled={false}
+        onClick={[Function]}
+        onSelect={[Function]}
         size={12}
+        viewBox="0 0 16 16"
       />
     </div>
   </DropMenu.Control>
@@ -165,6 +183,8 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 03.f
   onFocusOption={[Function]}
   onFocusPrev={[Function]}
   onSelect={[Function]}
+  optionContainerStyle={Object {}}
+  portalId=""
   selectedIndices={Array []}
 >
   <DropMenu.Control>
@@ -178,8 +198,15 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 03.f
         Select
       </span>
       <ChevronIcon
+        aspectRatio="xMidYMid meet"
+        color="primary"
         direction="down"
+        isClickable={false}
+        isDisabled={false}
+        onClick={[Function]}
+        onSelect={[Function]}
         size={12}
+        viewBox="0 0 16 16"
       />
     </div>
   </DropMenu.Control>
@@ -276,6 +303,8 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 04.g
   onFocusOption={[Function]}
   onFocusPrev={[Function]}
   onSelect={[Function]}
+  optionContainerStyle={Object {}}
+  portalId=""
   selectedIndices={Array []}
 >
   <DropMenu.Control>
@@ -289,8 +318,15 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 04.g
         Select Color
       </span>
       <ChevronIcon
+        aspectRatio="xMidYMid meet"
+        color="primary"
         direction="down"
+        isClickable={false}
+        isDisabled={false}
+        onClick={[Function]}
+        onSelect={[Function]}
         size={12}
+        viewBox="0 0 16 16"
       />
     </div>
   </DropMenu.Control>
@@ -410,6 +446,8 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 05.d
   onFocusOption={[Function]}
   onFocusPrev={[Function]}
   onSelect={[Function]}
+  optionContainerStyle={Object {}}
+  portalId=""
   selectedIndices={Array []}
 >
   <DropMenu.Control>
@@ -423,8 +461,15 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 05.d
         Select Color
       </span>
       <ChevronIcon
+        aspectRatio="xMidYMid meet"
+        color="primary"
         direction="down"
+        isClickable={false}
+        isDisabled={false}
+        onClick={[Function]}
+        onSelect={[Function]}
         size={12}
+        viewBox="0 0 16 16"
       />
     </div>
   </DropMenu.Control>
@@ -479,6 +524,8 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 06.d
   onFocusOption={[Function]}
   onFocusPrev={[Function]}
   onSelect={[Function]}
+  optionContainerStyle={Object {}}
+  portalId=""
   selectedIndices={Array []}
 >
   <DropMenu.Control>
@@ -492,8 +539,15 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 06.d
         Select Color
       </span>
       <ChevronIcon
+        aspectRatio="xMidYMid meet"
+        color="primary"
         direction="down"
+        isClickable={false}
+        isDisabled={false}
+        onClick={[Function]}
+        onSelect={[Function]}
         size={12}
+        viewBox="0 0 16 16"
       />
     </div>
   </DropMenu.Control>
@@ -548,6 +602,8 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.n
   onFocusOption={[Function]}
   onFocusPrev={[Function]}
   onSelect={[Function]}
+  optionContainerStyle={Object {}}
+  portalId=""
   selectedIndices={Array []}
 >
   <DropMenu.Control>
@@ -561,8 +617,15 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.n
         Select Foo
       </span>
       <ChevronIcon
+        aspectRatio="xMidYMid meet"
+        color="primary"
         direction="down"
+        isClickable={false}
+        isDisabled={false}
+        onClick={[Function]}
+        onSelect={[Function]}
         size={12}
+        viewBox="0 0 16 16"
       />
     </div>
   </DropMenu.Control>
@@ -617,6 +680,8 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 08.m
   onFocusOption={[Function]}
   onFocusPrev={[Function]}
   onSelect={[Function]}
+  optionContainerStyle={Object {}}
+  portalId=""
   selectedIndices={Array []}
 >
   <DropMenu.Control>
@@ -630,8 +695,15 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 08.m
         Select Color
       </span>
       <ChevronIcon
+        aspectRatio="xMidYMid meet"
+        color="primary"
         direction="down"
+        isClickable={false}
+        isDisabled={false}
+        onClick={[Function]}
+        onSelect={[Function]}
         size={12}
+        viewBox="0 0 16 16"
       />
     </div>
   </DropMenu.Control>
@@ -1790,6 +1862,8 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 09.r
   onFocusOption={[Function]}
   onFocusPrev={[Function]}
   onSelect={[Function]}
+  optionContainerStyle={Object {}}
+  portalId=""
   selectedIndices={Array []}
 >
   <DropMenu.Control>
@@ -1801,17 +1875,32 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 09.r
         className="lucid-SingleSelect-Control-content"
       >
         <SuccessIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
           style={
             Object {
               "marginRight": 4,
             }
           }
+          viewBox="0 0 16 16"
         />
          Add Color
       </span>
       <ChevronIcon
+        aspectRatio="xMidYMid meet"
+        color="primary"
         direction="down"
+        isClickable={false}
+        isDisabled={false}
+        onClick={[Function]}
+        onSelect={[Function]}
         size={12}
+        viewBox="0 0 16 16"
       />
     </div>
   </DropMenu.Control>
@@ -1822,11 +1911,19 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 09.r
     key="SingleSelectOption0"
   >
     <SuccessIcon
+      aspectRatio="xMidYMid meet"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
       style={
         Object {
           "marginRight": 4,
         }
       }
+      viewBox="0 0 16 16"
     />
      Red
   </DropMenu.Option>
@@ -1837,11 +1934,19 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 09.r
     key="SingleSelectOption1"
   >
     <SuccessIcon
+      aspectRatio="xMidYMid meet"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
       style={
         Object {
           "marginRight": 4,
         }
       }
+      viewBox="0 0 16 16"
     />
      Green
   </DropMenu.Option>
@@ -1852,11 +1957,19 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 09.r
     key="SingleSelectOption2"
   >
     <SuccessIcon
+      aspectRatio="xMidYMid meet"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={16}
       style={
         Object {
           "marginRight": 4,
         }
       }
+      viewBox="0 0 16 16"
     />
      Blue
   </DropMenu.Option>
@@ -1887,6 +2000,8 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 10.n
   onFocusOption={[Function]}
   onFocusPrev={[Function]}
   onSelect={[Function]}
+  optionContainerStyle={Object {}}
+  portalId=""
   selectedIndices={Array []}
 >
   <DropMenu.Control>
@@ -1900,8 +2015,15 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 10.n
         Select Foo
       </span>
       <ChevronIcon
+        aspectRatio="xMidYMid meet"
+        color="primary"
         direction="down"
+        isClickable={false}
+        isDisabled={false}
+        onClick={[Function]}
+        onSelect={[Function]}
         size={12}
+        viewBox="0 0 16 16"
       />
     </div>
   </DropMenu.Control>
@@ -1956,6 +2078,8 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 11.a
   onFocusOption={[Function]}
   onFocusPrev={[Function]}
   onSelect={[Function]}
+  optionContainerStyle={Object {}}
+  portalId=""
   selectedIndices={Array []}
 >
   <DropMenu.Control>
@@ -1969,8 +2093,15 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 11.a
         Select a number
       </span>
       <ChevronIcon
+        aspectRatio="xMidYMid meet"
+        color="primary"
         direction="down"
+        isClickable={false}
+        isDisabled={false}
+        onClick={[Function]}
+        onSelect={[Function]}
         size={12}
+        viewBox="0 0 16 16"
       />
     </div>
   </DropMenu.Control>
@@ -2021,6 +2152,8 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 12.s
   onFocusOption={[Function]}
   onFocusPrev={[Function]}
   onSelect={[Function]}
+  optionContainerStyle={Object {}}
+  portalId=""
   selectedIndices={
     Array [
       1,
@@ -2043,7 +2176,14 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 12.s
         Green
       </span>
       <ChevronIcon
+        aspectRatio="xMidYMid meet"
+        color="primary"
+        isClickable={false}
+        isDisabled={false}
+        onClick={[Function]}
+        onSelect={[Function]}
         size={12}
+        viewBox="0 0 16 16"
       />
     </div>
   </DropMenu.Control>
@@ -2140,6 +2280,8 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 13.i
   onFocusOption={[Function]}
   onFocusPrev={[Function]}
   onSelect={[Function]}
+  optionContainerStyle={Object {}}
+  portalId=""
   selectedIndices={Array []}
 >
   <DropMenu.Control>
@@ -2153,8 +2295,15 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 13.i
         Select Color
       </span>
       <ChevronIcon
+        aspectRatio="xMidYMid meet"
+        color="primary"
         direction="down"
+        isClickable={false}
+        isDisabled={false}
+        onClick={[Function]}
+        onSelect={[Function]}
         size={12}
+        viewBox="0 0 16 16"
       />
     </div>
   </DropMenu.Control>
@@ -2209,6 +2358,8 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 14.i
   onFocusOption={[Function]}
   onFocusPrev={[Function]}
   onSelect={[Function]}
+  optionContainerStyle={Object {}}
+  portalId=""
   selectedIndices={Array []}
 >
   <DropMenu.Control>
@@ -2222,8 +2373,15 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 14.i
         Select Color
       </span>
       <ChevronIcon
+        aspectRatio="xMidYMid meet"
+        color="primary"
         direction="down"
+        isClickable={false}
+        isDisabled={false}
+        onClick={[Function]}
+        onSelect={[Function]}
         size={12}
+        viewBox="0 0 16 16"
       />
     </div>
   </DropMenu.Control>
@@ -2278,6 +2436,8 @@ exports[`SingleSelect child elements Option should render Option.Selected in the
   onFocusOption={[Function]}
   onFocusPrev={[Function]}
   onSelect={[Function]}
+  optionContainerStyle={Object {}}
+  portalId=""
   selectedIndices={
     Array [
       1,
@@ -2295,8 +2455,15 @@ exports[`SingleSelect child elements Option should render Option.Selected in the
         option b
       </span>
       <ChevronIcon
+        aspectRatio="xMidYMid meet"
+        color="primary"
         direction="down"
+        isClickable={false}
+        isDisabled={false}
+        onClick={[Function]}
+        onSelect={[Function]}
         size={12}
+        viewBox="0 0 16 16"
       />
     </div>
   </DropMenu.Control>

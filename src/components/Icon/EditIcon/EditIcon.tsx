@@ -2,16 +2,13 @@ import _ from 'lodash';
 import React from 'react';
 import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
-import { FC, omitProps } from '../../../util/component-types';
+import { omitProps } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-EditIcon');
 
 interface IEditIconProps extends IIconProps {}
 
-export const EditIcon: FC<IEditIconProps> = ({
-	className,
-	...passThroughs
-}): React.ReactElement => {
+export const EditIcon = ({ className, ...passThroughs }: IEditIconProps) => {
 	return (
 		<Icon
 			{...omitProps(passThroughs, undefined, _.keys(EditIcon.propTypes), false)}
@@ -33,5 +30,6 @@ EditIcon.peek = {
 	madeFrom: ['Icon'],
 };
 EditIcon.propTypes = iconPropTypes;
+EditIcon.defaultProps = Icon.defaultProps;
 
 export default EditIcon;

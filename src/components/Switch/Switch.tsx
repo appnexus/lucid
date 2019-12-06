@@ -4,9 +4,7 @@ import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import {
 	omitProps,
-	FC,
 	StandardProps,
-	FixDefaults,
 	Overwrite,
 } from '../../util/component-types';
 
@@ -19,21 +17,21 @@ export interface ISwitchPropsRaw extends StandardProps {
 	 *
 	 * @default false
 	 * */
-	isDisabled?: boolean;
+	isDisabled: boolean;
 
 	/** Indicates that the component is in the "selected" state when true and in
 	 * the "unselected" state when false.
 	 *
 	 * @default false
 	 * */
-	isSelected?: boolean;
+	isSelected: boolean;
 
 	/** Called when the user clicks on the component or when they press the space
 	 * key while the component is in focus.
 	 *
 	 * @default _.noop
 	 * */
-	onSelect?: (
+	onSelect: (
 		isSelected: boolean,
 		{
 			event,
@@ -50,7 +48,7 @@ export interface ISwitchPropsRaw extends StandardProps {
 	 *
 	 * @default false
 	 */
-	isIncludeExclude?: boolean;
+	isIncludeExclude: boolean;
 }
 
 export type ISwitchProps = Overwrite<
@@ -68,7 +66,7 @@ const defaultProps = {
 	isIncludeExclude: false,
 };
 
-export const Switch: FC<ISwitchProps> = (props): React.ReactElement => {
+export const Switch = (props: ISwitchProps): React.ReactElement => {
 	const {
 		className,
 		isDisabled,
@@ -77,7 +75,7 @@ export const Switch: FC<ISwitchProps> = (props): React.ReactElement => {
 		isIncludeExclude,
 		onSelect,
 		...passThroughs
-	} = props as FixDefaults<ISwitchProps, typeof defaultProps>;
+	} = props;
 
 	const nativeElement = createRef<HTMLInputElement>();
 

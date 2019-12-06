@@ -4,9 +4,7 @@ import _ from 'lodash';
 import { lucidClassNames } from '../../util/style-helpers';
 import {
 	omitProps,
-	FC,
 	StandardProps,
-	FixDefaults,
 	Overwrite,
 } from '../../util/component-types';
 
@@ -20,21 +18,21 @@ export interface IButtonPropsRaw extends StandardProps {
 	 *
 	 * @default false
 	 **/
-	isDisabled?: boolean;
+	isDisabled: boolean;
 
 	/**
 	 * Activates the Button by giving it a "pressed down" look
 	 *
 	 * @default false
 	 **/
-	isActive?: boolean;
+	isActive: boolean;
 
 	/**
 	 * Set this to `true` if you want the Button to only contain an icon.
 	 *
 	 * @default false
 	 * */
-	hasOnlyIcon?: boolean;
+	hasOnlyIcon: boolean;
 
 	/** Style variations of the Button */
 	kind?: 'primary' | 'link' | 'danger' | 'invisible';
@@ -43,7 +41,7 @@ export interface IButtonPropsRaw extends StandardProps {
 	size?: 'short' | 'small' | 'large';
 
 	/** Called when the user clicks the \`Button\`. */
-	onClick?: ({
+	onClick: ({
 		event,
 		props,
 	}: {
@@ -56,7 +54,9 @@ export interface IButtonPropsRaw extends StandardProps {
 	 *
 	 * @default "button"
 	 * */
-	type?: 'submit' | 'reset' | 'button';
+	type: 'submit' | 'reset' | 'button';
+
+	callbackId?: any;
 }
 
 export type IButtonProps = Overwrite<
@@ -76,7 +76,7 @@ const defaultProps = {
 };
 
 /** Test Button description */
-export const Button: FC<IButtonProps> = (props): React.ReactElement => {
+export const Button = (props: IButtonProps): React.ReactElement => {
 	const {
 		isDisabled,
 		isActive,
@@ -88,7 +88,7 @@ export const Button: FC<IButtonProps> = (props): React.ReactElement => {
 		children,
 		type,
 		...passThroughs
-	} = props as FixDefaults<IButtonProps, typeof defaultProps>;
+	} = props;
 
 	const buttonRef = React.createRef<HTMLButtonElement>();
 

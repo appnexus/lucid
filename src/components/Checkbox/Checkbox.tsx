@@ -4,8 +4,6 @@ import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import {
 	omitProps,
-	FC,
-	FixDefaults,
 	StandardProps,
 	Overwrite,
 } from '../../util/component-types';
@@ -19,24 +17,23 @@ export interface ICheckboxPropsRaw extends StandardProps {
 	 * "partially checked" state. This prop takes precedence over
 	 * \`isSelected\`.
 	 */
-	isIndeterminate?: boolean;
+	isIndeterminate: boolean;
 
 	/** Indicates whether the component should appear and act disabled by having
 	 * a "greyed out" palette and ignoring user interactions.
 	 */
-	isDisabled?: boolean;
+	isDisabled: boolean;
 
 	/** Indicates that the component is in the "selected" state when true and in
 	 * the "unselected" state when false. This props is ignored if
 	 * \`isIndeterminate\` is \`true\`.
 	 */
-	isSelected?: boolean;
+	isSelected: boolean;
 
 	/** Called when the user clicks on the component or when they press the space
-	 * key while the component is in focus.  Signature:
-	 * \`(isSelected, { event, props }) => {}\`
+	 * key while the component is in focus.
 	 */
-	onSelect?: (
+	onSelect: (
 		isSelected: boolean,
 		{
 			event,
@@ -66,7 +63,7 @@ export const defaultProps = {
 	onSelect: _.noop,
 };
 
-export const Checkbox: FC<ICheckboxProps> = (props): React.ReactElement => {
+export const Checkbox = (props: ICheckboxProps): React.ReactElement => {
 	const {
 		className,
 		isIndeterminate,
@@ -76,7 +73,7 @@ export const Checkbox: FC<ICheckboxProps> = (props): React.ReactElement => {
 		title,
 		onSelect,
 		...passThroughs
-	} = props as FixDefaults<ICheckboxProps, typeof defaultProps>;
+	} = props;
 
 	const nativeElement = React.createRef<HTMLInputElement>();
 
@@ -147,16 +144,26 @@ export const Checkbox: FC<ICheckboxProps> = (props): React.ReactElement => {
 };
 
 Checkbox.displayName = 'Checkbox';
-
 Checkbox.peek = {
 	description: `
-		This is a checkbox. It's a component that is in one of two particular
-		states at any given moment. It features a custom visualization of the
-		native checkbox button control to reflect its current state.
+		Checkbox is a square two-state toggle used to create \`CheckboxLabeled\`.
 
 		It uses a hidden native checkbox control under the hood but leverages
 		other HTML elements to visualize its state.
 	`,
+	notes: {
+		overview: `
+			Checkbox is a square two-state toggle. Use \`CheckboxLabeled\` in your applications.
+		`,
+		intendedUse: `
+			Used to create \`CheckboxLabeled\`. 			
+		`,
+		technicalRecommendations: `
+			- Use the Selected state when a filter or setting will be applied.
+			- Use the Unselected state when a filter or setting will not be applied.
+			- Use the Indeterminate state for parent checkboxes where some of the child checkboxes are Selected and some are Unselected. For example, the master checkbox in the header row of the interactive table example in \`DataTable\`.
+		`,
+	},
 	categories: ['controls', 'toggles'],
 };
 

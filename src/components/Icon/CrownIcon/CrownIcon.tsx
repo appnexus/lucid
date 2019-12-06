@@ -2,16 +2,13 @@ import _ from 'lodash';
 import React from 'react';
 import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
-import { FC, omitProps } from '../../../util/component-types';
+import { omitProps } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-CrownIcon');
 
 interface ICrownIconProps extends IIconProps {}
 
-export const CrownIcon: FC<ICrownIconProps> = ({
-	className,
-	...passThroughs
-}): React.ReactElement => {
+export const CrownIcon = ({ className, ...passThroughs }: ICrownIconProps) => {
 	return (
 		<Icon
 			{...omitProps(
@@ -39,5 +36,6 @@ CrownIcon.peek = {
 	madeFrom: ['Icon'],
 };
 CrownIcon.propTypes = iconPropTypes;
+CrownIcon.defaultProps = Icon.defaultProps;
 
 export default CrownIcon;

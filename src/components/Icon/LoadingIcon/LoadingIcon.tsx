@@ -3,7 +3,7 @@ import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
-import { FC, omitProps } from '../../../util/component-types';
+import { omitProps } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-LoadingIcon');
 
@@ -20,13 +20,13 @@ interface ILoadingIconProps extends IIconProps {
 	speed?: keyof typeof durations;
 }
 
-export const LoadingIcon: FC<ILoadingIconProps> = ({
+export const LoadingIcon = ({
 	className,
 	speed = 'normal',
 	style,
 	isDisabled,
 	...passThroughs
-}): React.ReactElement => {
+}: ILoadingIconProps) => {
 	const animationDuration = `${durations[speed] || durations.normal}`;
 
 	return (
@@ -71,5 +71,6 @@ LoadingIcon.propTypes = {
 		The speed of rotation of the spinner.
 	`,
 };
+LoadingIcon.defaultProps = Icon.defaultProps;
 
 export default LoadingIcon;

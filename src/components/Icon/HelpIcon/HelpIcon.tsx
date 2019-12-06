@@ -2,18 +2,18 @@ import _ from 'lodash';
 import React from 'react';
 import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
-import { FC, omitProps } from '../../../util/component-types';
+import { omitProps } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-HelpIcon');
 
 interface IHelpIconProps extends IIconProps {}
 
-export const HelpIcon: FC<IHelpIconProps> = ({
+export const HelpIcon = ({
 	className,
 	isDisabled,
 	isClickable,
 	...passThroughs
-}): React.ReactElement => {
+}: IHelpIconProps) => {
 	return (
 		<Icon
 			{...omitProps(passThroughs, undefined, _.keys(HelpIcon.propTypes), false)}
@@ -44,5 +44,6 @@ HelpIcon.peek = {
 	madeFrom: ['Icon'],
 };
 HelpIcon.propTypes = iconPropTypes;
+HelpIcon.defaultProps = Icon.defaultProps;
 
 export default HelpIcon;

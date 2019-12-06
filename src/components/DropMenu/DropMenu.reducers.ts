@@ -1,23 +1,27 @@
 import _ from 'lodash';
+import { IDropMenuState } from './DropMenu';
 
-export function onExpand(state) {
+export function onExpand(state: IDropMenuState): IDropMenuState {
 	const { selectedIndices } = state;
-
+	const focusedIndex = _.last(selectedIndices);
 	return {
 		...state,
 		isExpanded: true,
-		focusedIndex: _.isEmpty(selectedIndices) ? null : _.last(selectedIndices),
+		focusedIndex: _.isNil(focusedIndex) ? null : focusedIndex,
 	};
 }
 
-export function onCollapse(state) {
+export function onCollapse(state: IDropMenuState): IDropMenuState {
 	return {
 		...state,
 		isExpanded: false,
 	};
 }
 
-export function onSelect(state, optionIndex) {
+export function onSelect(
+	state: IDropMenuState,
+	optionIndex: number
+): IDropMenuState {
 	return {
 		...state,
 		selectedIndices: [optionIndex],
@@ -25,7 +29,7 @@ export function onSelect(state, optionIndex) {
 	};
 }
 
-export function onFocusNext(state) {
+export function onFocusNext(state: IDropMenuState): IDropMenuState {
 	const { focusedIndex } = state;
 	let nextFocusedIndex = focusedIndex;
 
@@ -41,7 +45,7 @@ export function onFocusNext(state) {
 	};
 }
 
-export function onFocusPrev(state) {
+export function onFocusPrev(state: IDropMenuState): IDropMenuState {
 	const { focusedIndex } = state;
 	let nextFocusedIndex = focusedIndex;
 
@@ -57,7 +61,10 @@ export function onFocusPrev(state) {
 	};
 }
 
-export function onFocusOption(state, optionIndex) {
+export function onFocusOption(
+	state: IDropMenuState,
+	optionIndex: number
+): IDropMenuState {
 	return {
 		...state,
 		focusedIndex: optionIndex,

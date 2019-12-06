@@ -2,18 +2,18 @@ import _ from 'lodash';
 import React from 'react';
 import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
-import { FC, omitProps } from '../../../util/component-types';
+import { omitProps } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-StarIcon');
 
 interface IStarIconProps extends IIconProps {}
 
-export const StarIcon: FC<IStarIconProps> = ({
+export const StarIcon = ({
 	className,
 	isClickable,
 	isDisabled,
 	...passThroughs
-}): React.ReactElement => {
+}: IStarIconProps) => {
 	return (
 		<Icon
 			{...omitProps(passThroughs, undefined, _.keys(StarIcon.propTypes), false)}
@@ -45,5 +45,6 @@ StarIcon.peek = {
 	madeFrom: ['Icon'],
 };
 StarIcon.propTypes = iconPropTypes;
+StarIcon.defaultProps = Icon.defaultProps;
 
 export default StarIcon;

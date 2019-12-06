@@ -44,12 +44,20 @@ exports[`Panel [common] example testing should match snapshot(s) for 03.with-ico
     className="lucid-Panel-Header"
   >
     <SettingsIcon
+      aspectRatio="xMidYMid meet"
+      color="primary"
+      isClickable={false}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
       presetSize="large"
+      size={16}
       style={
         Object {
           "marginRight": "16px",
         }
       }
+      viewBox="0 0 16 16"
     />
     <span>
       Header
@@ -60,12 +68,20 @@ exports[`Panel [common] example testing should match snapshot(s) for 03.with-ico
   >
     <Panel.Header>
       <SettingsIcon
+        aspectRatio="xMidYMid meet"
+        color="primary"
+        isClickable={false}
+        isDisabled={false}
+        onClick={[Function]}
+        onSelect={[Function]}
         presetSize="large"
+        size={16}
         style={
           Object {
             "marginRight": "16px",
           }
         }
+        viewBox="0 0 16 16"
       />
       <span>
         Header

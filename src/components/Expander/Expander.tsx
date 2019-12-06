@@ -6,9 +6,8 @@ import {
 	findTypes,
 	omitProps,
 	StandardProps,
-	FC,
 } from '../../util/component-types';
-import { buildHybridComponent } from '../../util/state-management';
+import { buildModernHybridComponent } from '../../util/state-management';
 import ChevronIcon from '../Icon/ChevronIcon/ChevronIcon';
 import Collapsible from '../Collapsible/Collapsible';
 import * as reducers from './Expander.reducers';
@@ -26,7 +25,7 @@ interface IExpanderAdditionalLabelProps extends StandardProps {
 	description?: string;
 }
 
-const Label: FC<IExpanderLabelProps> = (): null => null;
+const Label = (_props: IExpanderLabelProps): null => null;
 Label.displayName = 'Expander.Label';
 Label.peek = {
 	description: `
@@ -41,7 +40,7 @@ Label.propTypes = {
 				`,
 };
 
-const AdditionalLabelContent: FC<IExpanderAdditionalLabelProps> = (): null =>
+const AdditionalLabelContent = (_props: IExpanderAdditionalLabelProps): null =>
 	null;
 AdditionalLabelContent.displayName = 'Expander.AdditionalLabelContent';
 AdditionalLabelContent.peek = {
@@ -98,7 +97,7 @@ export interface IExpanderProps
 const defaultProps = {
 	isExpanded: false,
 	onToggle: _.noop,
-	kind: 'simple',
+	kind: 'simple' as const,
 };
 
 export interface IExpanderState {
@@ -107,14 +106,6 @@ export interface IExpanderState {
 
 class Expander extends React.Component<IExpanderProps, IExpanderState> {
 	static displayName = 'Expander';
-	static peek = {
-		description: `
-				This is a container that provides a toggle that controls when the
-				content is shown.
-			`,
-		categories: ['layout'],
-		madeFrom: ['ChevronIcon'],
-	};
 	static propTypes = {
 		children: node`
 			Expandable content.
@@ -161,13 +152,13 @@ class Expander extends React.Component<IExpanderProps, IExpanderState> {
 	static Label = Label;
 	static AdditionalLabelContent = AdditionalLabelContent;
 
-	// For backward compatibility with buildHybridComponent
-	static definition = {
-		statics: {
-			Label,
-			AdditionalLabelContent,
-			reducers,
-		},
+	static peek = {
+		description: `
+				This is a container that provides a toggle that controls when the
+				content is shown.
+			`,
+		categories: ['layout'],
+		madeFrom: ['ChevronIcon'],
 	};
 
 	handleToggle = (event: React.MouseEvent): void => {
@@ -239,5 +230,9 @@ class Expander extends React.Component<IExpanderProps, IExpanderState> {
 	}
 }
 
-export default buildHybridComponent(Expander);
+export default buildModernHybridComponent<
+	IExpanderProps,
+	IExpanderState,
+	typeof Expander
+>(Expander, { reducers });
 export { Expander as ExpanderDumb };

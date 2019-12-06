@@ -2,18 +2,18 @@ import _ from 'lodash';
 import React from 'react';
 import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
-import { FC, omitProps } from '../../../util/component-types';
+import { omitProps } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-CloseIcon');
 
-interface ICloseIconProps extends IIconProps {}
+export interface ICloseIconProps extends IIconProps {}
 
-export const CloseIcon: FC<ICloseIconProps> = ({
+export const CloseIcon = ({
 	className,
 	isDisabled,
 	isClickable,
 	...passThroughs
-}): React.ReactElement => {
+}: ICloseIconProps) => {
 	return (
 		<Icon
 			{...omitProps(
@@ -47,5 +47,6 @@ CloseIcon.peek = {
 	madeFrom: ['Icon'],
 };
 CloseIcon.propTypes = iconPropTypes;
+CloseIcon.defaultProps = Icon.defaultProps;
 
 export default CloseIcon;

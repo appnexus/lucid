@@ -2,6 +2,60 @@
 
 - Nothing at the moment.
 
+## 5.3.0
+- #1058 [minor] migrated another round of components to TypeScript and added a new utility function `buildModernHybridComponent` that works with class and functional React components. We also significantly reworked the way we annotate types of our functional components that should hopefully reduce the number of instances where optional props were incorrectly marked as required. 
+  - Components converted to TypeScript:
+    - `ButtonGroup`
+    - `DateSelect`
+    - `DropMenu`
+    - `ExpanderPanel`
+    - `SearchField`
+    - `Sidebar`
+    - `Submarine`
+    - `Tabs`
+    - `TextFieldValidated`
+    - `ToolTip`
+    - `VerticalListMenu`
+  - Components converted to use `buildModernHybridComponent`:
+    - `ButtonGroup`
+    - `DateSelect`
+    - `DropMenu`
+    - `ExpanderPanel`
+    - `Expander`
+    - `SearchField`
+    - `Sidebar`
+    - `Submarine`
+    - `Tabs`
+    - `ToolTip`
+    - `VerticalListMenu`
+- #1084 [patch] Fix the icon alignment of `Expander`
+- #1085 [none] Some storybook fixes:
+  - Fixed the favicon
+  - Put the lucid logo in the upper left side panel
+  - The document.title changes to reflect the story or document the use looks at
+- #1079 #1078 #1072 [none] Added codesandbox build to lucid, there are still a couple lingering issues that we need to figure out before it's fully baked.
+- #1075 [patch] improved type signature for `createClass`
+
+https://github.com/appnexus/lucid/compare/5.2.0...v5.3.0
+
+## 5.2.0
+- #1065 [minor] Make `Checkbox` private, update `CheckboxLabeled` documentation
+- #1061 [minor] Add `BackUpArrowIcon`
+- #1077 [patch] Make `DangerLightIcon`, `InfoLightIcon`, and `WarningLightIcon` private
+- #1071 [patch] Update `LoadingIndicator` documentation
+- #1065 [patch] Update `Banner` documentation
+- #1068 [patch] Update chart color palette for better contrast
+- #1063 [patch] Fix `Collapsible` to prevent calling `setState` on an unmounted component
+- #1064 [patch] Update `FC` utility interface to include optional `notes` for documentation
+- #1057 [patch] Update `WarningIcon` path for better rendering at small sizes
+- #1060 [patch] Update `SuccessLightIcon` and `MinusCircleLightIcon` hover state colors
+- #1050 [patch] Update `OverlayWrapper` z-index to use `zindex-modal` var
+- #1062 [none] Add `index.less` as entrypoint for webpack for use in codepen
+- #1059 [none] Improve ordering of props in DocsPage
+- #1056 [none] Upgrade Storybook to v5.2.1 and implement DocsPage
+
+https://github.com/appnexus/lucid/compare/v5.1.2...5.2.0
+
 ## 5.1.2
 
 - #1055 [none] Improve prop documentation for `fixedColumnCount` on `DataTablePanel`
