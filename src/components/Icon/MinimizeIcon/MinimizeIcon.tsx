@@ -2,16 +2,16 @@ import _ from 'lodash';
 import React from 'react';
 import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
-import { FC, omitProps } from '../../../util/component-types';
+import { omitProps } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-MinimizeIcon');
 
 interface IMinimizeIconProps extends IIconProps {}
 
-export const MinimizeIcon: FC<IMinimizeIconProps> = ({
+export const MinimizeIcon = ({
 	className,
 	...passThroughs
-}): React.ReactElement => {
+}: IMinimizeIconProps) => {
 	return (
 		<Icon
 			{...omitProps(
@@ -38,5 +38,6 @@ MinimizeIcon.peek = {
 	madeFrom: ['Icon'],
 };
 MinimizeIcon.propTypes = iconPropTypes;
+MinimizeIcon.defaultProps = Icon.defaultProps;
 
 export default MinimizeIcon;

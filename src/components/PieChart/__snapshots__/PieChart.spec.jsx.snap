@@ -33,7 +33,7 @@ exports[`PieChart [common] example testing should match snapshot(s) for 1.basic 
           >
             <Line
               className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
-              color="color-chart-0"
+              color="color-chart-3"
               d="60"
               isDotted={false}
               key="0"
@@ -53,7 +53,7 @@ exports[`PieChart [common] example testing should match snapshot(s) for 1.basic 
           >
             <Line
               className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
-              color="color-chart-1"
+              color="color-chart-0-darkest"
               d="40"
               isDotted={false}
               key="1"
@@ -93,7 +93,7 @@ exports[`PieChart [common] example testing should match snapshot(s) for 1.basic 
           >
             <Line
               className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
-              color="color-chart-3"
+              color="color-chart-4-lightest"
               d="20"
               isDotted={false}
               key="3"
@@ -113,7 +113,7 @@ exports[`PieChart [common] example testing should match snapshot(s) for 1.basic 
           >
             <Line
               className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
-              color="color-chart-4"
+              color="color-chart-5"
               d="15"
               isDotted={false}
               key="4"
@@ -1013,7 +1013,7 @@ exports[`PieChart [common] example testing should match snapshot(s) for 2.basic-
           >
             <Line
               className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
-              color="color-chart-0"
+              color="color-chart-3"
               d="60"
               isDotted={false}
               key="0"
@@ -1033,7 +1033,7 @@ exports[`PieChart [common] example testing should match snapshot(s) for 2.basic-
           >
             <Line
               className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
-              color="color-chart-1"
+              color="color-chart-0-darkest"
               d="40"
               isDotted={false}
               key="1"
@@ -1073,7 +1073,7 @@ exports[`PieChart [common] example testing should match snapshot(s) for 2.basic-
           >
             <Line
               className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
-              color="color-chart-3"
+              color="color-chart-4-lightest"
               d="20"
               isDotted={false}
               key="3"
@@ -1093,7 +1093,7 @@ exports[`PieChart [common] example testing should match snapshot(s) for 2.basic-
           >
             <Line
               className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
-              color="color-chart-4"
+              color="color-chart-5"
               d="15"
               isDotted={false}
               key="4"
@@ -1993,7 +1993,7 @@ exports[`PieChart [common] example testing should match snapshot(s) for 3.legend
           >
             <Line
               className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
-              color="color-chart-0"
+              color="color-chart-3"
               d="80"
               isDotted={false}
               key="0"
@@ -2013,7 +2013,7 @@ exports[`PieChart [common] example testing should match snapshot(s) for 3.legend
           >
             <Line
               className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
-              color="color-chart-1"
+              color="color-chart-0-darkest"
               d="20"
               isDotted={false}
               key="1"
@@ -2053,7 +2053,7 @@ exports[`PieChart [common] example testing should match snapshot(s) for 3.legend
           >
             <Line
               className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
-              color="color-chart-3"
+              color="color-chart-4-lightest"
               d="30"
               isDotted={false}
               key="3"
@@ -2133,7 +2133,7 @@ exports[`PieChart [common] example testing should match snapshot(s) for 4.color-
           >
             <Line
               className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
-              color="color-chart-1"
+              color="color-chart-0-darkest"
               d="20"
               isDotted={false}
               key="1"
@@ -2173,7 +2173,7 @@ exports[`PieChart [common] example testing should match snapshot(s) for 4.color-
           >
             <Line
               className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
-              color="color-chart-3"
+              color="color-chart-4-lightest"
               d="30"
               isDotted={false}
               key="3"
@@ -2253,7 +2253,7 @@ exports[`PieChart [common] example testing should match snapshot(s) for 5.percen
           >
             <Line
               className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
-              color="color-chart-0"
+              color="color-chart-3"
               d="60"
               isDotted={false}
               key="0"
@@ -2273,7 +2273,7 @@ exports[`PieChart [common] example testing should match snapshot(s) for 5.percen
           >
             <Line
               className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
-              color="color-chart-1"
+              color="color-chart-0-darkest"
               d="40"
               isDotted={false}
               key="1"
@@ -2313,7 +2313,7 @@ exports[`PieChart [common] example testing should match snapshot(s) for 5.percen
           >
             <Line
               className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
-              color="color-chart-3"
+              color="color-chart-4-lightest"
               d="20"
               isDotted={false}
               key="3"
@@ -2333,7 +2333,7 @@ exports[`PieChart [common] example testing should match snapshot(s) for 5.percen
           >
             <Line
               className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
-              color="color-chart-4"
+              color="color-chart-5"
               d="15"
               isDotted={false}
               key="4"
@@ -2393,7 +2393,7 @@ exports[`PieChart [common] example testing should match snapshot(s) for 6.small-
           >
             <Line
               className="lucid-PieChart-slice"
-              color="color-chart-0"
+              color="color-chart-3"
               d="60"
               isDotted={false}
               key="0"
@@ -2413,7 +2413,7 @@ exports[`PieChart [common] example testing should match snapshot(s) for 6.small-
           >
             <Line
               className="lucid-PieChart-slice"
-              color="color-chart-1"
+              color="color-chart-0-darkest"
               d="40"
               isDotted={false}
               key="1"
@@ -2453,7 +2453,7 @@ exports[`PieChart [common] example testing should match snapshot(s) for 6.small-
           >
             <Line
               className="lucid-PieChart-slice"
-              color="color-chart-3"
+              color="color-chart-4-lightest"
               d="20"
               isDotted={false}
               key="3"
@@ -2473,7 +2473,7 @@ exports[`PieChart [common] example testing should match snapshot(s) for 6.small-
           >
             <Line
               className="lucid-PieChart-slice"
-              color="color-chart-4"
+              color="color-chart-5"
               d="15"
               isDotted={false}
               key="4"

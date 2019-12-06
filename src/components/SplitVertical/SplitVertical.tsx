@@ -3,7 +3,6 @@ import React, { RefObject } from 'react';
 import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import {
-	FC,
 	filterTypes,
 	omitProps,
 	StandardProps,
@@ -21,11 +20,11 @@ interface ISplitVerticalRightPaneProps extends StandardProps {
 	width?: number | string;
 	/** Define this pane as the primary content pane. When the split is
 		collapsed, this pane becomes full width. */
-	isPrimary?: boolean;
+	isPrimary: boolean;
 }
-export const SplitVerticalRightPane: FC<
-	ISplitVerticalRightPaneProps
-> = (): null => null;
+export const SplitVerticalRightPane = (
+	_props: ISplitVerticalRightPaneProps
+): null => null;
 SplitVerticalRightPane.displayName = 'SplitVertical.RightPane';
 SplitVerticalRightPane.peek = {
 	description: `Right pane of the split.`,
@@ -52,9 +51,10 @@ interface ISplitVerticalLeftPaneProps extends StandardProps {
 	width?: number | string;
 	/** Define this pane as the primary content pane. When the split is
 		collapsed, this pane becomes full width. */
-	isPrimary?: boolean;
+	isPrimary: boolean;
 }
-const SplitVerticalLeftPane: FC<ISplitVerticalLeftPaneProps> = (): null => null;
+const SplitVerticalLeftPane = (_props: ISplitVerticalLeftPaneProps): null =>
+	null;
 SplitVerticalLeftPane.displayName = 'SplitVertical.LeftPane';
 SplitVerticalLeftPane.peek = {
 	description: `
@@ -78,7 +78,7 @@ SplitVerticalLeftPane.defaultProps = {
 	isPrimary: false,
 };
 
-const SplitVerticalDivider: FC<StandardProps> = (): null => null;
+const SplitVerticalDivider = (_props: StandardProps): null => null;
 SplitVerticalDivider.displayName = 'SplitVertical.Divider';
 SplitVerticalDivider.peek = {
 	description: `

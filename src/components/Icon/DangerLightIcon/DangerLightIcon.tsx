@@ -2,18 +2,18 @@ import _ from 'lodash';
 import React from 'react';
 import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
-import { FC, omitProps } from '../../../util/component-types';
+import { omitProps } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-DangerLightIcon');
 
 interface IDangerLightIconProps extends IIconProps {}
 
-export const DangerLightIcon: FC<IDangerLightIconProps> = ({
+export const DangerLightIcon = ({
 	className,
 	isClickable,
 	isDisabled,
 	...passThroughs
-}): React.ReactElement => {
+}: IDangerLightIconProps) => {
 	return (
 		<Icon
 			{...omitProps(
@@ -38,9 +38,12 @@ export const DangerLightIcon: FC<IDangerLightIconProps> = ({
 	);
 };
 
+DangerLightIcon._isPrivate = true;
 DangerLightIcon.displayName = 'DangerLightIcon';
 DangerLightIcon.peek = {
 	description: `
+		DEPRECATED: this component should not be used and will be removed from the library in a future release.
+		
 		DANGER WILL ROBINSON DANGER (but lighter)
 	`,
 	categories: ['visual design', 'icons'],
@@ -48,5 +51,6 @@ DangerLightIcon.peek = {
 	madeFrom: ['Icon'],
 };
 DangerLightIcon.propTypes = iconPropTypes;
+DangerLightIcon.defaultProps = Icon.defaultProps;
 
 export default DangerLightIcon;

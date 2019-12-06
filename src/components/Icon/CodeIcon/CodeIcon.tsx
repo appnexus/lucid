@@ -2,16 +2,13 @@ import _ from 'lodash';
 import React from 'react';
 import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
-import { FC, omitProps } from '../../../util/component-types';
+import { omitProps } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-CodeIcon');
 
 interface ICodeIconProps extends IIconProps {}
 
-export const CodeIcon: FC<ICodeIconProps> = ({
-	className,
-	...passThroughs
-}): React.ReactElement => {
+export const CodeIcon = ({ className, ...passThroughs }: ICodeIconProps) => {
 	return (
 		<Icon
 			{...omitProps(passThroughs, undefined, _.keys(CodeIcon.propTypes), false)}
@@ -34,5 +31,6 @@ CodeIcon.peek = {
 	madeFrom: ['Icon'],
 };
 CodeIcon.propTypes = iconPropTypes;
+CodeIcon.defaultProps = Icon.defaultProps;
 
 export default CodeIcon;

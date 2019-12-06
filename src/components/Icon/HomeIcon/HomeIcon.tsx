@@ -2,16 +2,13 @@ import _ from 'lodash';
 import React from 'react';
 import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
-import { FC, omitProps } from '../../../util/component-types';
+import { omitProps } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-HomeIcon');
 
 interface IHomeIconProps extends IIconProps {}
 
-export const HomeIcon: FC<IHomeIconProps> = ({
-	className,
-	...passThroughs
-}): React.ReactElement => {
+export const HomeIcon = ({ className, ...passThroughs }: IHomeIconProps) => {
 	return (
 		<Icon
 			{...omitProps(passThroughs, undefined, _.keys(HomeIcon.propTypes), false)}
@@ -33,5 +30,6 @@ HomeIcon.peek = {
 	madeFrom: ['Icon'],
 };
 HomeIcon.propTypes = iconPropTypes;
+HomeIcon.defaultProps = Icon.defaultProps;
 
 export default HomeIcon;

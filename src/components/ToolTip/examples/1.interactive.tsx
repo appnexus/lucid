@@ -5,11 +5,17 @@ import { ToolTip } from '../../../index';
 
 const { Target, Title, Body } = ToolTip;
 
+type Direction = 'right' | 'up' | 'down' | 'left';
+type Alignment = 'start' | 'center' | 'end';
+
+const directions: Direction[] = ['right', 'up', 'down', 'left'];
+const alignments: Alignment[] = ['start', 'center', 'end'];
+
 export default createClass({
 	render() {
 		return (
 			<section style={{ display: 'flex', flexDirection: 'row' }}>
-				{_.map(['right', 'up', 'down', 'left'], direction => (
+				{_.map(directions, direction => (
 					<section
 						key={direction}
 						style={{
@@ -19,7 +25,7 @@ export default createClass({
 							flexGrow: 1,
 						}}
 					>
-						{_.map(['start', 'center', 'end'], alignment => (
+						{_.map(alignments, alignment => (
 							<section
 								key={`${direction}${alignment}`}
 								style={{ margin: '30px' }}

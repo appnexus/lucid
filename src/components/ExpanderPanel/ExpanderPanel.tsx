@@ -2,13 +2,8 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import {
-	getFirst,
-	omitProps,
-	StandardProps,
-	FC,
-} from '../../util/component-types';
-import { buildHybridComponent } from '../../util/state-management';
+import { getFirst, omitProps, StandardProps } from '../../util/component-types';
+import { buildModernHybridComponent } from '../../util/state-management';
 import { IExpanderState } from '../Expander/Expander';
 import ChevronIcon from '../Icon/ChevronIcon/ChevronIcon';
 import Collapsible from '../Collapsible/Collapsible';
@@ -25,7 +20,7 @@ export interface IExpanderPanelHeaderProps extends StandardProps {
 	description?: string;
 }
 
-const Header: FC<IExpanderPanelHeaderProps> = (): null => null;
+const Header = (_props: IExpanderPanelHeaderProps): null => null;
 Header.displayName = 'ExpanderPanel.Header';
 Header.peek = {
 	description: `
@@ -114,19 +109,13 @@ class ExpanderPanel extends React.Component<
 		`,
 	};
 
-	static definition = {
-		statics: {
-			Header,
-			reducers,
-			peek: {
-				description: `
+	static peek = {
+		description: `
 					This is a container that provides a toggle that controls when the
 					content is shown.
 				`,
-				categories: ['layout'],
-				madeFrom: ['ChevronIcon', 'Expander', 'Panel'],
-			},
-		},
+		categories: ['layout'],
+		madeFrom: ['ChevronIcon', 'Expander', 'Panel'],
 	};
 
 	static defaultProps = {
@@ -201,5 +190,9 @@ class ExpanderPanel extends React.Component<
 	}
 }
 
-export default buildHybridComponent(ExpanderPanel);
+export default buildModernHybridComponent<
+	IExpanderPanelProps,
+	IExpanderState,
+	typeof ExpanderPanel
+>(ExpanderPanel, { reducers });
 export { ExpanderPanel as ExpanderPanelDumb };

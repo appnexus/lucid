@@ -2,16 +2,16 @@ import _ from 'lodash';
 import React from 'react';
 import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
-import { FC, omitProps } from '../../../util/component-types';
+import { omitProps } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-StarOutlineIcon');
 
 interface IStarOutlineIconProps extends IIconProps {}
 
-export const StarOutlineIcon: FC<IStarOutlineIconProps> = ({
+export const StarOutlineIcon = ({
 	className,
 	...passThroughs
-}): React.ReactElement => {
+}: IStarOutlineIconProps) => {
 	return (
 		<Icon
 			{...omitProps(
@@ -38,5 +38,6 @@ StarOutlineIcon.peek = {
 	madeFrom: ['Icon'],
 };
 StarOutlineIcon.propTypes = iconPropTypes;
+StarOutlineIcon.defaultProps = Icon.defaultProps;
 
 export default StarOutlineIcon;

@@ -2,16 +2,13 @@ import _ from 'lodash';
 import React from 'react';
 import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
-import { FC, omitProps } from '../../../util/component-types';
+import { omitProps } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-TextIcon');
 
 interface ITextIconProps extends IIconProps {}
 
-export const TextIcon: FC<ITextIconProps> = ({
-	className,
-	...passThroughs
-}): React.ReactElement => {
+export const TextIcon = ({ className, ...passThroughs }: ITextIconProps) => {
 	return (
 		<Icon
 			{...omitProps(passThroughs, undefined, _.keys(TextIcon.propTypes), false)}
@@ -35,5 +32,6 @@ TextIcon.peek = {
 	madeFrom: ['Icon'],
 };
 TextIcon.propTypes = iconPropTypes;
+TextIcon.defaultProps = Icon.defaultProps;
 
 export default TextIcon;

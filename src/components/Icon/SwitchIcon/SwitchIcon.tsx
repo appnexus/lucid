@@ -2,16 +2,16 @@ import _ from 'lodash';
 import React from 'react';
 import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
-import { FC, omitProps } from '../../../util/component-types';
+import { omitProps } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-SwitchIcon');
 
 interface ISwitchIconProps extends IIconProps {}
 
-export const SwitchIcon: FC<ISwitchIconProps> = ({
+export const SwitchIcon = ({
 	className,
 	...passThroughs
-}): React.ReactElement => {
+}: ISwitchIconProps) => {
 	return (
 		<Icon
 			{...omitProps(
@@ -38,5 +38,6 @@ SwitchIcon.peek = {
 	madeFrom: ['Icon'],
 };
 SwitchIcon.propTypes = iconPropTypes;
+SwitchIcon.defaultProps = Icon.defaultProps;
 
 export default SwitchIcon;

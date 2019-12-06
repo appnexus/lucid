@@ -7,10 +7,9 @@ import {
 	findTypes,
 	omitProps,
 	StandardProps,
-	FC,
 	Overwrite,
 } from '../../util/component-types';
-import { buildHybridComponent } from '../../util/state-management';
+import { buildModernHybridComponent } from '../../util/state-management';
 import * as reducers from './Tabs.reducers';
 import Badge from '../Badge/Badge';
 
@@ -19,7 +18,7 @@ const cx = lucidClassNames.bind('&-Tabs');
 const { bool, func, node, number, string, any } = PropTypes;
 
 interface ITitleProps extends StandardProps {}
-const Title: FC<ITitleProps> = (): null => null;
+const Title = (props: ITitleProps): null => null;
 Title.peek = {
 	description: `Titles can be provided as a child or prop to a Tab.`,
 };
@@ -28,7 +27,7 @@ Title.propName = 'Title';
 
 interface ITabProps extends StandardProps {
 	/** The index of this \`Tab\` within the list of \`Tabs\`. */
-	index: number;
+	index?: number;
 
 	/**Styles a \`Tab\` as disabled. This is typically used with
 			\`isProgressive\` to disable steps that have not been completed and
@@ -49,7 +48,7 @@ interface ITabProps extends StandardProps {
 
 	/** Callback for when the user clicks a \`Tab\`. Called with the index of the
 			\`Tab\` that was clicked. */
-	onSelect: (
+	onSelect?: (
 		index: number,
 		tabProps: ITabProps,
 		event: React.MouseEvent<HTMLLIElement>
@@ -59,7 +58,7 @@ interface ITabProps extends StandardProps {
 	Title?: string | React.ReactNode & { props: ITitleProps };
 
 	/** Optional prop that will show a count number next to the tab's title. */
-	count?: number;
+	count?: number | string;
 
 	/** Defaults to false.
 			Allows the count bubble to grow large. Useful if working with huge numbers. */
@@ -71,7 +70,7 @@ type ITabPropsWithPassThroughs = Overwrite<
 	ITabProps
 >;
 
-const Tab: FC<ITabPropsWithPassThroughs> = (props): React.ReactElement => {
+const Tab = (props: ITabPropsWithPassThroughs): React.ReactElement => {
 	const {
 		isDisabled,
 		isLastTab,
@@ -82,8 +81,8 @@ const Tab: FC<ITabPropsWithPassThroughs> = (props): React.ReactElement => {
 		className,
 		count,
 		isVariableCountWidth,
-		index,
-		onSelect,
+		index = 0, // this defaults should not be invoked unless someone is using `Tab` outside of `Tabs`
+		onSelect = _.noop, // this defaults should not be invoked unless someone is using `Tab` outside of `Tabs`
 		...passThroughs
 	} = props;
 	const handleClick = (event: React.MouseEvent<HTMLLIElement>) => {
@@ -268,6 +267,15 @@ class Tabs extends React.Component<ITabsProps, ITabsState> {
 
 	static reducers = reducers;
 
+	static peek = {
+		description: `
+				\`Tabs\` provides tabbed navigation. It has a flexible interface that
+				allows tab content to be passed as regular React children or through
+				props.
+			`,
+		categories: ['navigation'],
+	};
+
 	static propTypes = {
 		className: string`
 			Class names that are appended to the defaults.
@@ -315,23 +323,6 @@ class Tabs extends React.Component<ITabsProps, ITabsState> {
 			*Child Element* Can be used to define one or more individual \`Tab\`s in
 			the sequence of \`Tabs\`.
 		`,
-	};
-
-	// For backward compatibility with buildHybridComponent
-	static definition = {
-		statics: {
-			Title,
-			Tab,
-			reducers,
-			peek: {
-				description: `
-				\`Tabs\` provides tabbed navigation. It has a flexible interface that
-				allows tab content to be passed as regular React children or through
-				props.
-			`,
-				categories: ['navigation'],
-			},
-		},
 	};
 
 	static defaultProps = {
@@ -418,5 +409,8 @@ class Tabs extends React.Component<ITabsProps, ITabsState> {
 	}
 }
 
-export default buildHybridComponent(Tabs);
+export default buildModernHybridComponent<ITabsProps, ITabsState, typeof Tabs>(
+	Tabs,
+	{ reducers }
+);
 export { Tabs as TabsDumb };

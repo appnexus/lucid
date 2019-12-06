@@ -11,11 +11,16 @@ exports[`DateSelect common tests [common] example testing should match snapshot(
 >
   <div>
     <ChevronIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-DateSelect-chevron"
+      color="primary"
       direction="left"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={32}
+      viewBox="0 0 16 16"
     />
   </div>
   <InfiniteSlidePanel
@@ -35,11 +40,16 @@ exports[`DateSelect common tests [common] example testing should match snapshot(
   </InfiniteSlidePanel>
   <div>
     <ChevronIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-DateSelect-chevron"
+      color="primary"
       direction="right"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={32}
+      viewBox="0 0 16 16"
     />
   </div>
 </section>
@@ -56,11 +66,16 @@ exports[`DateSelect common tests [common] example testing should match snapshot(
 >
   <div>
     <ChevronIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-DateSelect-chevron"
+      color="primary"
       direction="left"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={32}
+      viewBox="0 0 16 16"
     />
   </div>
   <InfiniteSlidePanel
@@ -80,11 +95,16 @@ exports[`DateSelect common tests [common] example testing should match snapshot(
   </InfiniteSlidePanel>
   <div>
     <ChevronIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-DateSelect-chevron"
+      color="primary"
       direction="right"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={32}
+      viewBox="0 0 16 16"
     />
   </div>
 </section>
@@ -101,11 +121,16 @@ exports[`DateSelect common tests [common] example testing should match snapshot(
 >
   <div>
     <ChevronIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-DateSelect-chevron"
+      color="primary"
       direction="left"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={32}
+      viewBox="0 0 16 16"
     />
   </div>
   <InfiniteSlidePanel
@@ -125,11 +150,16 @@ exports[`DateSelect common tests [common] example testing should match snapshot(
   </InfiniteSlidePanel>
   <div>
     <ChevronIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-DateSelect-chevron"
+      color="primary"
       direction="right"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={32}
+      viewBox="0 0 16 16"
     />
   </div>
 </section>
@@ -146,11 +176,16 @@ exports[`DateSelect common tests [common] example testing should match snapshot(
 >
   <div>
     <ChevronIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-DateSelect-chevron"
+      color="primary"
       direction="left"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={32}
+      viewBox="0 0 16 16"
     />
   </div>
   <InfiniteSlidePanel
@@ -170,11 +205,16 @@ exports[`DateSelect common tests [common] example testing should match snapshot(
   </InfiniteSlidePanel>
   <div>
     <ChevronIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-DateSelect-chevron"
+      color="primary"
       direction="right"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={32}
+      viewBox="0 0 16 16"
     />
   </div>
 </section>
@@ -191,11 +231,16 @@ exports[`DateSelect common tests [common] example testing should match snapshot(
 >
   <div>
     <ChevronIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-DateSelect-chevron"
+      color="primary"
       direction="left"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={32}
+      viewBox="0 0 16 16"
     />
   </div>
   <InfiniteSlidePanel
@@ -215,11 +260,16 @@ exports[`DateSelect common tests [common] example testing should match snapshot(
   </InfiniteSlidePanel>
   <div>
     <ChevronIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-DateSelect-chevron"
+      color="primary"
       direction="right"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={32}
+      viewBox="0 0 16 16"
     />
   </div>
 </section>
@@ -236,11 +286,16 @@ exports[`DateSelect common tests [common] example testing should match snapshot(
 >
   <div>
     <ChevronIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-DateSelect-chevron"
+      color="primary"
       direction="left"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={32}
+      viewBox="0 0 16 16"
     />
   </div>
   <InfiniteSlidePanel
@@ -260,11 +315,16 @@ exports[`DateSelect common tests [common] example testing should match snapshot(
   </InfiniteSlidePanel>
   <div>
     <ChevronIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-DateSelect-chevron"
+      color="primary"
       direction="right"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={32}
+      viewBox="0 0 16 16"
     />
   </div>
 </section>
@@ -282,11 +342,16 @@ exports[`DateSelect common tests [common] example testing should match snapshot(
 >
   <div>
     <ChevronIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-DateSelect-chevron"
+      color="primary"
       direction="left"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={32}
+      viewBox="0 0 16 16"
     />
   </div>
   <InfiniteSlidePanel
@@ -306,11 +371,16 @@ exports[`DateSelect common tests [common] example testing should match snapshot(
   </InfiniteSlidePanel>
   <div>
     <ChevronIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-DateSelect-chevron"
+      color="primary"
       direction="right"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={32}
+      viewBox="0 0 16 16"
     />
   </div>
 </section>
@@ -327,11 +397,16 @@ exports[`DateSelect common tests [common] example testing should match snapshot(
 >
   <div>
     <ChevronIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-DateSelect-chevron"
+      color="primary"
       direction="left"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={32}
+      viewBox="0 0 16 16"
     />
   </div>
   <div
@@ -388,11 +463,16 @@ exports[`DateSelect common tests [common] example testing should match snapshot(
   </div>
   <div>
     <ChevronIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-DateSelect-chevron"
+      color="primary"
       direction="right"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={32}
+      viewBox="0 0 16 16"
     />
   </div>
 </section>

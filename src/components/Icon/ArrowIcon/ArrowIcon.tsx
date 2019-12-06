@@ -3,7 +3,7 @@ import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
-import { FC, omitProps } from '../../../util/component-types';
+import { omitProps } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-ArrowIcon');
 
@@ -13,11 +13,11 @@ interface IArrowIconProps extends IIconProps {
 	direction?: 'up' | 'down' | 'left' | 'right';
 }
 
-export const ArrowIcon: FC<IArrowIconProps> = ({
+export const ArrowIcon = ({
 	className,
 	direction = 'left',
 	...passThroughs
-}): React.ReactElement => {
+}: IArrowIconProps) => {
 	return (
 		<Icon
 			{...omitProps(
@@ -58,5 +58,6 @@ ArrowIcon.propTypes = {
 		direction variations of the icon
 	`,
 };
+ArrowIcon.defaultProps = Icon.defaultProps;
 
 export default ArrowIcon;
