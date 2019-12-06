@@ -3,7 +3,6 @@ import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import {
-	FC,
 	findTypes,
 	omitProps,
 	StandardProps,
@@ -19,7 +18,6 @@ const LINE_WIDTH = 22;
 
 const { number, string, oneOf, node, bool, func } = PropTypes;
 
-// Default props for the Legend component
 const defaultProps = {
 	orient: 'vertical',
 	hasBorders: true,
@@ -45,19 +43,12 @@ export interface ILegendProps
 	isReversed?: boolean;
 }
 
-type ILegendItemFC = FC<ILegendItemProps>;
-
-export interface ILegendFC extends FC<ILegendProps> {
-	Item: ILegendItemFC;
-	HEIGHT: number;
-}
-
 interface ILegendItemProps extends StandardProps {
 	/** Determines if the legend item has points */
 	hasPoint?: boolean;
 
 	/** Determines if the legend item has a line */
-	hasLine: boolean;
+	hasLine?: boolean;
 
 	/** Strings should match an existing color class unless they start with a '#'
 		for specific colors. E.g.:
@@ -83,7 +74,7 @@ interface ILegendItemProps extends StandardProps {
 	) => void;
 }
 
-const LegendItem: FC<ILegendItemProps> = (): null => null;
+const LegendItem = (_props: ILegendItemProps): null => null;
 
 const handleItemClick = (
 	index: number,
@@ -97,7 +88,7 @@ const handleItemClick = (
 	props.onClick(index, { props, event });
 };
 
-export const Legend: ILegendFC = (props): React.ReactElement => {
+export const Legend = (props: ILegendProps): React.ReactElement => {
 	const { className, orient, hasBorders, isReversed, ...passThroughs } = props;
 
 	const isHorizontal = orient === 'horizontal';
