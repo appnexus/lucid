@@ -26,10 +26,6 @@ import DropMenu, { DropMenuDumb } from './components/DropMenu/DropMenu';
 import Expander, { ExpanderDumb } from './components/Expander/Expander';
 import ExpanderPanel, {
 	ExpanderPanelDumb,
-<<<<<<< HEAD
-	// @ts-ignore: not converted yet
-=======
->>>>>>> c0ecbcb7b61fdfb8ebab92909e4fc6b9f52a089a
 } from './components/ExpanderPanel/ExpanderPanel';
 // @ts-ignore: not converted yet
 import Paginator, { PaginatorDumb } from './components/Paginator/Paginator';
@@ -39,10 +35,6 @@ import PieChart, { PieChartDumb } from './components/PieChart/PieChart';
 import RadioGroup, { RadioGroupDumb } from './components/RadioGroup/RadioGroup';
 import SearchField, {
 	SearchFieldDumb,
-<<<<<<< HEAD
-	// @ts-ignore: not converted yet
-=======
->>>>>>> c0ecbcb7b61fdfb8ebab92909e4fc6b9f52a089a
 } from './components/SearchField/SearchField';
 import Sidebar, { SidebarDumb } from './components/Sidebar/Sidebar';
 import SingleSelect, {
