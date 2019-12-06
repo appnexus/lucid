@@ -2,16 +2,16 @@ import _ from 'lodash';
 import React from 'react';
 import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
-import { FC, omitProps } from '../../../util/component-types';
+import { omitProps } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-CalendarIcon');
 
 interface ICalendarIconProps extends IIconProps {}
 
-export const CalendarIcon: FC<ICalendarIconProps> = ({
+export const CalendarIcon = ({
 	className,
 	...passThroughs
-}): React.ReactElement => {
+}: ICalendarIconProps) => {
 	return (
 		<Icon
 			{...omitProps(
@@ -38,5 +38,6 @@ CalendarIcon.peek = {
 	madeFrom: ['Icon'],
 };
 CalendarIcon.propTypes = iconPropTypes;
+CalendarIcon.defaultProps = Icon.defaultProps;
 
 export default CalendarIcon;

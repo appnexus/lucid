@@ -3,7 +3,7 @@ import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
-import { FC, omitProps } from '../../../util/component-types';
+import { omitProps } from '../../../util/component-types';
 
 const { bool } = PropTypes;
 
@@ -15,13 +15,13 @@ interface IMinusCircleLightIconProps extends IIconProps {
 	isActive?: boolean;
 }
 
-export const MinusCircleLightIcon: FC<IMinusCircleLightIconProps> = ({
+export const MinusCircleLightIcon = ({
 	className,
 	isActive,
 	isDisabled,
 	isClickable,
 	...passThroughs
-}): React.ReactElement => {
+}: IMinusCircleLightIconProps) => {
 	return (
 		<Icon
 			{...omitProps(
@@ -63,5 +63,6 @@ MinusCircleLightIcon.propTypes = {
 		feel" as when you hover.
 	`,
 };
+MinusCircleLightIcon.defaultProps = Icon.defaultProps;
 
 export default MinusCircleLightIcon;

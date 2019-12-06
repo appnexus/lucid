@@ -7,7 +7,6 @@ import Autocomplete, {
 } from './components/Autocomplete/Autocomplete';
 import ButtonGroup, {
 	ButtonGroupDumb,
-	// @ts-ignore: not converted yet
 } from './components/ButtonGroup/ButtonGroup';
 import SearchableSelect, {
 	SearchableSelectDumb,
@@ -23,12 +22,14 @@ import SearchableSingleSelect, {
 	SearchableSingleSelectDumb,
 	// @ts-ignore: not converted yet
 } from './components/SearchableSingleSelect/SearchableSingleSelect';
-// @ts-ignore: not converted yet
 import DropMenu, { DropMenuDumb } from './components/DropMenu/DropMenu';
 import Expander, { ExpanderDumb } from './components/Expander/Expander';
 import ExpanderPanel, {
 	ExpanderPanelDumb,
+<<<<<<< HEAD
 	// @ts-ignore: not converted yet
+=======
+>>>>>>> c0ecbcb7b61fdfb8ebab92909e4fc6b9f52a089a
 } from './components/ExpanderPanel/ExpanderPanel';
 // @ts-ignore: not converted yet
 import Paginator, { PaginatorDumb } from './components/Paginator/Paginator';
@@ -38,9 +39,11 @@ import PieChart, { PieChartDumb } from './components/PieChart/PieChart';
 import RadioGroup, { RadioGroupDumb } from './components/RadioGroup/RadioGroup';
 import SearchField, {
 	SearchFieldDumb,
+<<<<<<< HEAD
 	// @ts-ignore: not converted yet
+=======
+>>>>>>> c0ecbcb7b61fdfb8ebab92909e4fc6b9f52a089a
 } from './components/SearchField/SearchField';
-// @ts-ignore: not converted yet
 import Sidebar, { SidebarDumb } from './components/Sidebar/Sidebar';
 import SingleSelect, {
 	SingleSelectDumb,
@@ -50,9 +53,7 @@ import SplitButton, {
 	SplitButtonDumb,
 	// @ts-ignore: not converted yet
 } from './components/SplitButton/SplitButton';
-// @ts-ignore: not converted yet
 import Submarine, { SubmarineDumb } from './components/Submarine/Submarine';
-// @ts-ignore: not converted yet
 import Tabs, { TabsDumb } from './components/Tabs/Tabs';
 // @ts-ignore: not converted yet
 import ToolTip, { ToolTipDumb } from './components/ToolTip/ToolTip';
@@ -205,7 +206,6 @@ import Table from './components/Table/Table';
 // @ts-ignore: not converted yet
 import Tag from './components/Tag/Tag';
 import TextField from './components/TextField/TextField';
-// @ts-ignore: not converted yet
 import TextFieldValidated from './components/TextFieldValidated/TextFieldValidated';
 import TextIcon from './components/Icon/TextIcon/TextIcon';
 import Typography from './components/Typography/Typography';

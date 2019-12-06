@@ -2,16 +2,13 @@ import _ from 'lodash';
 import React from 'react';
 import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
-import { FC, omitProps } from '../../../util/component-types';
+import { omitProps } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-BellIcon');
 
 interface IBellIconProps extends IIconProps {}
 
-export const BellIcon: FC<IBellIconProps> = ({
-	className,
-	...passThroughs
-}): React.ReactElement => {
+export const BellIcon = ({ className, ...passThroughs }: IBellIconProps) => {
 	return (
 		<Icon
 			{...omitProps(passThroughs, undefined, _.keys(BellIcon.propTypes), false)}
@@ -33,5 +30,6 @@ BellIcon.peek = {
 	madeFrom: ['Icon'],
 };
 BellIcon.propTypes = iconPropTypes;
+BellIcon.defaultProps = Icon.defaultProps;
 
 export default BellIcon;

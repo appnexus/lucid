@@ -11,15 +11,22 @@ exports[`DateSelect common tests [common] example testing should match snapshot(
 >
   <div>
     <ChevronIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-DateSelect-chevron"
+      color="primary"
       direction="left"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={32}
+      viewBox="0 0 16 16"
     />
   </div>
   <InfiniteSlidePanel
     className="lucid-DateSelect-InfiniteSlidePanel lucid-DateSelect-slidePanel"
+    isAnimated={true}
+    isLooped={false}
     offset={0}
     onSwipe={[Function]}
     slidesToShow={1}
@@ -33,11 +40,16 @@ exports[`DateSelect common tests [common] example testing should match snapshot(
   </InfiniteSlidePanel>
   <div>
     <ChevronIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-DateSelect-chevron"
+      color="primary"
       direction="right"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={32}
+      viewBox="0 0 16 16"
     />
   </div>
 </section>
@@ -54,15 +66,22 @@ exports[`DateSelect common tests [common] example testing should match snapshot(
 >
   <div>
     <ChevronIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-DateSelect-chevron"
+      color="primary"
       direction="left"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={32}
+      viewBox="0 0 16 16"
     />
   </div>
   <InfiniteSlidePanel
     className="lucid-DateSelect-InfiniteSlidePanel lucid-DateSelect-slidePanel"
+    isAnimated={true}
+    isLooped={false}
     offset={0}
     onSwipe={[Function]}
     slidesToShow={1}
@@ -76,11 +95,16 @@ exports[`DateSelect common tests [common] example testing should match snapshot(
   </InfiniteSlidePanel>
   <div>
     <ChevronIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-DateSelect-chevron"
+      color="primary"
       direction="right"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={32}
+      viewBox="0 0 16 16"
     />
   </div>
 </section>
@@ -97,15 +121,22 @@ exports[`DateSelect common tests [common] example testing should match snapshot(
 >
   <div>
     <ChevronIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-DateSelect-chevron"
+      color="primary"
       direction="left"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={32}
+      viewBox="0 0 16 16"
     />
   </div>
   <InfiniteSlidePanel
     className="lucid-DateSelect-InfiniteSlidePanel lucid-DateSelect-slidePanel"
+    isAnimated={true}
+    isLooped={false}
     offset={0}
     onSwipe={[Function]}
     slidesToShow={1}
@@ -119,11 +150,16 @@ exports[`DateSelect common tests [common] example testing should match snapshot(
   </InfiniteSlidePanel>
   <div>
     <ChevronIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-DateSelect-chevron"
+      color="primary"
       direction="right"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={32}
+      viewBox="0 0 16 16"
     />
   </div>
 </section>
@@ -140,15 +176,22 @@ exports[`DateSelect common tests [common] example testing should match snapshot(
 >
   <div>
     <ChevronIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-DateSelect-chevron"
+      color="primary"
       direction="left"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={32}
+      viewBox="0 0 16 16"
     />
   </div>
   <InfiniteSlidePanel
     className="lucid-DateSelect-InfiniteSlidePanel lucid-DateSelect-slidePanel"
+    isAnimated={true}
+    isLooped={false}
     offset={0}
     onSwipe={[Function]}
     slidesToShow={1}
@@ -162,11 +205,16 @@ exports[`DateSelect common tests [common] example testing should match snapshot(
   </InfiniteSlidePanel>
   <div>
     <ChevronIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-DateSelect-chevron"
+      color="primary"
       direction="right"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={32}
+      viewBox="0 0 16 16"
     />
   </div>
 </section>
@@ -183,15 +231,22 @@ exports[`DateSelect common tests [common] example testing should match snapshot(
 >
   <div>
     <ChevronIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-DateSelect-chevron"
+      color="primary"
       direction="left"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={32}
+      viewBox="0 0 16 16"
     />
   </div>
   <InfiniteSlidePanel
     className="lucid-DateSelect-InfiniteSlidePanel lucid-DateSelect-slidePanel"
+    isAnimated={true}
+    isLooped={false}
     offset={0}
     onSwipe={[Function]}
     slidesToShow={3}
@@ -205,11 +260,16 @@ exports[`DateSelect common tests [common] example testing should match snapshot(
   </InfiniteSlidePanel>
   <div>
     <ChevronIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-DateSelect-chevron"
+      color="primary"
       direction="right"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={32}
+      viewBox="0 0 16 16"
     />
   </div>
 </section>
@@ -226,15 +286,22 @@ exports[`DateSelect common tests [common] example testing should match snapshot(
 >
   <div>
     <ChevronIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-DateSelect-chevron"
+      color="primary"
       direction="left"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={32}
+      viewBox="0 0 16 16"
     />
   </div>
   <InfiniteSlidePanel
     className="lucid-DateSelect-InfiniteSlidePanel lucid-DateSelect-slidePanel"
+    isAnimated={true}
+    isLooped={false}
     offset={0}
     onSwipe={[Function]}
     slidesToShow={1}
@@ -248,11 +315,16 @@ exports[`DateSelect common tests [common] example testing should match snapshot(
   </InfiniteSlidePanel>
   <div>
     <ChevronIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-DateSelect-chevron"
+      color="primary"
       direction="right"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={32}
+      viewBox="0 0 16 16"
     />
   </div>
 </section>
@@ -270,15 +342,22 @@ exports[`DateSelect common tests [common] example testing should match snapshot(
 >
   <div>
     <ChevronIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-DateSelect-chevron"
+      color="primary"
       direction="left"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={32}
+      viewBox="0 0 16 16"
     />
   </div>
   <InfiniteSlidePanel
     className="lucid-DateSelect-InfiniteSlidePanel lucid-DateSelect-slidePanel"
+    isAnimated={true}
+    isLooped={false}
     offset={0}
     onSwipe={[Function]}
     slidesToShow={1}
@@ -292,11 +371,16 @@ exports[`DateSelect common tests [common] example testing should match snapshot(
   </InfiniteSlidePanel>
   <div>
     <ChevronIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-DateSelect-chevron"
+      color="primary"
       direction="right"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={32}
+      viewBox="0 0 16 16"
     />
   </div>
 </section>
@@ -313,11 +397,16 @@ exports[`DateSelect common tests [common] example testing should match snapshot(
 >
   <div>
     <ChevronIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-DateSelect-chevron"
+      color="primary"
       direction="left"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={32}
+      viewBox="0 0 16 16"
     />
   </div>
   <div
@@ -333,7 +422,7 @@ exports[`DateSelect common tests [common] example testing should match snapshot(
         <CalendarMonth
           className="lucid-DateSelect-CalendarMonth"
           cursor={null}
-          disabledDays={null}
+          disabledDays={[Function]}
           from={null}
           initialMonth={2016-02-17T22:25:23.000Z}
           monthOffset={0}
@@ -357,7 +446,7 @@ exports[`DateSelect common tests [common] example testing should match snapshot(
         <CalendarMonth
           className="lucid-DateSelect-CalendarMonth"
           cursor={null}
-          disabledDays={null}
+          disabledDays={[Function]}
           from={null}
           initialMonth={2016-02-17T22:25:23.000Z}
           monthOffset={1}
@@ -374,11 +463,16 @@ exports[`DateSelect common tests [common] example testing should match snapshot(
   </div>
   <div>
     <ChevronIcon
+      aspectRatio="xMidYMid meet"
       className="lucid-DateSelect-chevron"
+      color="primary"
       direction="right"
       isClickable={true}
+      isDisabled={false}
       onClick={[Function]}
+      onSelect={[Function]}
       size={32}
+      viewBox="0 0 16 16"
     />
   </div>
 </section>

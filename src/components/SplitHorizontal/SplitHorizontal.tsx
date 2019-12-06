@@ -5,7 +5,6 @@ import { lucidClassNames } from '../../util/style-helpers';
 import {
 	filterTypes,
 	omitProps,
-	FC,
 	StandardProps,
 } from '../../util/component-types';
 import DragCaptureZone from '../DragCaptureZone/DragCaptureZone';
@@ -21,11 +20,11 @@ interface ISplitHorizontalTopPaneProps extends StandardProps {
 	height?: number | string;
 	/** Define this pane as the primary content pane. When the split is
 		collapsed, this pane becomes full height. */
-	isPrimary?: boolean;
+	isPrimary: boolean;
 }
-export const SplitHorizontalTopPane: FC<
-	ISplitHorizontalTopPaneProps
-> = (): null => null;
+export const SplitHorizontalTopPane = (
+	_props: ISplitHorizontalTopPaneProps
+): null => null;
 SplitHorizontalTopPane.displayName = 'SplitHorizontal.TopPane';
 SplitHorizontalTopPane.peek = {
 	description: `Top pane of the split.`,
@@ -52,11 +51,11 @@ interface ISplitHorizontalBottomPaneProps extends StandardProps {
 	height?: number | string;
 	/** Define this pane as the primary content pane. When the split is
 		collapsed, this pane becomes full height. */
-	isPrimary?: boolean;
+	isPrimary: boolean;
 }
-const SplitHorizontalBottomPane: FC<
-	ISplitHorizontalBottomPaneProps
-> = (): null => null;
+const SplitHorizontalBottomPane = (
+	_props: ISplitHorizontalBottomPaneProps
+): null => null;
 SplitHorizontalBottomPane.displayName = 'SplitHorizontal.BottomPane';
 SplitHorizontalBottomPane.peek = {
 	description: `
@@ -81,7 +80,7 @@ SplitHorizontalBottomPane.defaultProps = {
 };
 
 interface ISplitHorizontalDividerProps extends StandardProps {}
-const SplitHorizontalDivider: FC<ISplitHorizontalDividerProps> = (): null =>
+const SplitHorizontalDivider = (_props: ISplitHorizontalDividerProps): null =>
 	null;
 SplitHorizontalDivider.displayName = 'SplitHorizontal.Divider';
 SplitHorizontalDivider.peek = {
@@ -97,7 +96,7 @@ SplitHorizontalDivider.propTypes = {
 	`,
 };
 
-interface ISplitHorizontalProps
+export interface ISplitHorizontalProps
 	extends StandardProps,
 		React.DetailedHTMLProps<
 			React.HTMLAttributes<HTMLDivElement>,

@@ -2,18 +2,18 @@ import _ from 'lodash';
 import React from 'react';
 import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
-import { FC, omitProps } from '../../../util/component-types';
+import { omitProps } from '../../../util/component-types';
 import { Color } from '../Icon';
 
 const cx = lucidClassNames.bind('&-DotsIcon');
 
 interface IDotsIconProps extends IIconProps {}
 
-export const DotsIcon: FC<IDotsIconProps> = ({
+export const DotsIcon = ({
 	className,
 	color = Color.primary,
 	...passThroughs
-}): React.ReactElement => {
+}: IDotsIconProps) => {
 	return (
 		<Icon
 			{...omitProps(passThroughs, undefined, _.keys(DotsIcon.propTypes), false)}
@@ -38,5 +38,6 @@ DotsIcon.peek = {
 	madeFrom: ['Icon'],
 };
 DotsIcon.propTypes = iconPropTypes;
+DotsIcon.defaultProps = Icon.defaultProps;
 
 export default DotsIcon;

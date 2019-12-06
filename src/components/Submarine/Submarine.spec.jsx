@@ -360,7 +360,7 @@ describe('Submarine', () => {
 					props: wrapper.props(),
 				};
 
-				expanderWrapperOnClick(lastArg.event);
+				expanderWrapperOnClick({ event: lastArg.event });
 
 				assert(onToggle.called, 'must be called');
 				assert.equal(

@@ -15,9 +15,7 @@ interface IResizerProps
 			React.HTMLAttributes<HTMLDivElement>,
 			HTMLDivElement
 		> {
-	/** A function that returns your rendered content with the signature:
-	 * \`(width, height) => {}\`
-	 */
+	/** A function that returns your rendered content. */
 	children?: (width: number, height: number) => React.ReactNode;
 }
 

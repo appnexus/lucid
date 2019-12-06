@@ -41,7 +41,16 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         rowSpan={2}
         sortDirection="up"
       >
-        <SuccessIcon />
+        <SuccessIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
+        />
       </Table.Th>
       <Table.Th
         align="left"
@@ -133,7 +142,16 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         hasBorderLeft={true}
         hasBorderRight={true}
       >
-        <SuccessIcon />
+        <SuccessIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
+        />
       </Table.Td>
       <Table.Td
         align="left"
@@ -209,7 +227,16 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         hasBorderLeft={true}
         hasBorderRight={true}
       >
-        <SuccessIcon />
+        <SuccessIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
+        />
       </Table.Td>
       <Table.Td
         align="left"
@@ -285,7 +312,16 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         hasBorderLeft={true}
         hasBorderRight={true}
       >
-        <SuccessIcon />
+        <SuccessIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
+        />
       </Table.Td>
       <Table.Td
         align="left"
@@ -362,7 +398,16 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         hasBorderLeft={true}
         hasBorderRight={true}
       >
-        <SuccessIcon />
+        <SuccessIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
+        />
       </Table.Td>
       <Table.Td
         align="left"
@@ -439,7 +484,16 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         hasBorderLeft={true}
         hasBorderRight={true}
       >
-        <SuccessIcon />
+        <SuccessIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
+        />
       </Table.Td>
       <Table.Td
         align="left"
@@ -519,7 +573,16 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         hasBorderLeft={true}
         hasBorderRight={true}
       >
-        <SuccessIcon />
+        <SuccessIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
+        />
       </Table.Td>
       <Table.Td
         align="left"
@@ -599,7 +662,16 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         hasBorderLeft={true}
         hasBorderRight={true}
       >
-        <SuccessIcon />
+        <SuccessIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
+        />
       </Table.Td>
       <Table.Td
         align="left"
@@ -680,7 +752,16 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         hasBorderLeft={true}
         hasBorderRight={true}
       >
-        <SuccessIcon />
+        <SuccessIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
+        />
       </Table.Td>
       <Table.Td
         align="left"
@@ -761,7 +842,16 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         hasBorderLeft={true}
         hasBorderRight={true}
       >
-        <SuccessIcon />
+        <SuccessIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
+        />
       </Table.Td>
       <Table.Td
         align="left"
@@ -837,7 +927,16 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         hasBorderLeft={true}
         hasBorderRight={true}
       >
-        <SuccessIcon />
+        <SuccessIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
+        />
       </Table.Td>
       <Table.Td
         align="left"
@@ -913,7 +1012,16 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         hasBorderLeft={true}
         hasBorderRight={true}
       >
-        <SuccessIcon />
+        <SuccessIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
+        />
       </Table.Td>
       <Table.Td
         align="left"
@@ -990,7 +1098,16 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         hasBorderLeft={true}
         hasBorderRight={true}
       >
-        <SuccessIcon />
+        <SuccessIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
+        />
       </Table.Td>
       <Table.Td
         align="left"
@@ -1067,7 +1184,16 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         hasBorderLeft={true}
         hasBorderRight={true}
       >
-        <SuccessIcon />
+        <SuccessIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
+        />
       </Table.Td>
       <Table.Td
         align="left"
@@ -1144,7 +1270,16 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         hasBorderLeft={true}
         hasBorderRight={true}
       >
-        <SuccessIcon />
+        <SuccessIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
+        />
       </Table.Td>
       <Table.Td
         align="left"
@@ -1221,7 +1356,16 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         hasBorderLeft={true}
         hasBorderRight={true}
       >
-        <SuccessIcon />
+        <SuccessIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
+        />
       </Table.Td>
       <Table.Td
         align="left"
@@ -1322,7 +1466,16 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         rowSpan={2}
         sortDirection="up"
       >
-        <SuccessIcon />
+        <SuccessIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
+        />
       </Table.Th>
       <Table.Th
         align="left"
@@ -1407,7 +1560,16 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         hasBorderLeft={true}
         hasBorderRight={true}
       >
-        <SuccessIcon />
+        <SuccessIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
+        />
       </Table.Td>
       <Table.Td
         align="left"
@@ -1483,7 +1645,16 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         hasBorderLeft={true}
         hasBorderRight={true}
       >
-        <SuccessIcon />
+        <SuccessIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
+        />
       </Table.Td>
       <Table.Td
         align="left"
@@ -1560,7 +1731,16 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         hasBorderLeft={true}
         hasBorderRight={true}
       >
-        <SuccessIcon />
+        <SuccessIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
+        />
       </Table.Td>
       <Table.Td
         align="left"
@@ -1637,7 +1817,16 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         hasBorderLeft={true}
         hasBorderRight={true}
       >
-        <SuccessIcon />
+        <SuccessIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
+        />
       </Table.Td>
       <Table.Td
         align="left"
@@ -1717,7 +1906,16 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         hasBorderLeft={true}
         hasBorderRight={true}
       >
-        <SuccessIcon />
+        <SuccessIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
+        />
       </Table.Td>
       <Table.Td
         align="left"
@@ -1797,7 +1995,16 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         hasBorderLeft={true}
         hasBorderRight={true}
       >
-        <SuccessIcon />
+        <SuccessIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
+        />
       </Table.Td>
       <Table.Td
         align="left"
@@ -1878,7 +2085,16 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         hasBorderLeft={true}
         hasBorderRight={true}
       >
-        <SuccessIcon />
+        <SuccessIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
+        />
       </Table.Td>
       <Table.Td
         align="left"
@@ -1959,7 +2175,16 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         hasBorderLeft={true}
         hasBorderRight={true}
       >
-        <SuccessIcon />
+        <SuccessIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
+        />
       </Table.Td>
       <Table.Td
         align="left"
@@ -2035,7 +2260,16 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         hasBorderLeft={true}
         hasBorderRight={true}
       >
-        <SuccessIcon />
+        <SuccessIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
+        />
       </Table.Td>
       <Table.Td
         align="left"
@@ -2111,7 +2345,16 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         hasBorderLeft={true}
         hasBorderRight={true}
       >
-        <SuccessIcon />
+        <SuccessIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
+        />
       </Table.Td>
       <Table.Td
         align="left"
@@ -2188,7 +2431,16 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         hasBorderLeft={true}
         hasBorderRight={true}
       >
-        <SuccessIcon />
+        <SuccessIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
+        />
       </Table.Td>
       <Table.Td
         align="left"
@@ -2265,7 +2517,16 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         hasBorderLeft={true}
         hasBorderRight={true}
       >
-        <SuccessIcon />
+        <SuccessIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
+        />
       </Table.Td>
       <Table.Td
         align="left"
@@ -2342,7 +2603,16 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         hasBorderLeft={true}
         hasBorderRight={true}
       >
-        <SuccessIcon />
+        <SuccessIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
+        />
       </Table.Td>
       <Table.Td
         align="left"
@@ -2419,7 +2689,16 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         hasBorderLeft={true}
         hasBorderRight={true}
       >
-        <SuccessIcon />
+        <SuccessIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
+        />
       </Table.Td>
       <Table.Td
         align="left"
@@ -2520,7 +2799,16 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         rowSpan={2}
         sortDirection="up"
       >
-        <SuccessIcon />
+        <SuccessIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
+        />
       </Table.Th>
       <Table.Th
         align="left"
@@ -2620,7 +2908,16 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         hasBorderLeft={true}
         hasBorderRight={true}
       >
-        <SuccessIcon />
+        <SuccessIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
+        />
       </Table.Td>
       <Table.Td
         align="left"
@@ -2696,7 +2993,16 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         hasBorderLeft={true}
         hasBorderRight={true}
       >
-        <SuccessIcon />
+        <SuccessIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
+        />
       </Table.Td>
       <Table.Td
         align="left"
@@ -2773,7 +3079,16 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         hasBorderLeft={true}
         hasBorderRight={true}
       >
-        <SuccessIcon />
+        <SuccessIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
+        />
       </Table.Td>
       <Table.Td
         align="left"
@@ -2850,7 +3165,16 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         hasBorderLeft={true}
         hasBorderRight={true}
       >
-        <SuccessIcon />
+        <SuccessIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
+        />
       </Table.Td>
       <Table.Td
         align="left"
@@ -2930,7 +3254,16 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         hasBorderLeft={true}
         hasBorderRight={true}
       >
-        <SuccessIcon />
+        <SuccessIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
+        />
       </Table.Td>
       <Table.Td
         align="left"
@@ -3010,7 +3343,16 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         hasBorderLeft={true}
         hasBorderRight={true}
       >
-        <SuccessIcon />
+        <SuccessIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
+        />
       </Table.Td>
       <Table.Td
         align="left"
@@ -3091,7 +3433,16 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         hasBorderLeft={true}
         hasBorderRight={true}
       >
-        <SuccessIcon />
+        <SuccessIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
+        />
       </Table.Td>
       <Table.Td
         align="left"
@@ -3172,7 +3523,16 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         hasBorderLeft={true}
         hasBorderRight={true}
       >
-        <SuccessIcon />
+        <SuccessIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
+        />
       </Table.Td>
       <Table.Td
         align="left"
@@ -3248,7 +3608,16 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         hasBorderLeft={true}
         hasBorderRight={true}
       >
-        <SuccessIcon />
+        <SuccessIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
+        />
       </Table.Td>
       <Table.Td
         align="left"
@@ -3324,7 +3693,16 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         hasBorderLeft={true}
         hasBorderRight={true}
       >
-        <SuccessIcon />
+        <SuccessIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
+        />
       </Table.Td>
       <Table.Td
         align="left"
@@ -3401,7 +3779,16 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         hasBorderLeft={true}
         hasBorderRight={true}
       >
-        <SuccessIcon />
+        <SuccessIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
+        />
       </Table.Td>
       <Table.Td
         align="left"
@@ -3478,7 +3865,16 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         hasBorderLeft={true}
         hasBorderRight={true}
       >
-        <SuccessIcon />
+        <SuccessIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
+        />
       </Table.Td>
       <Table.Td
         align="left"
@@ -3555,7 +3951,16 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         hasBorderLeft={true}
         hasBorderRight={true}
       >
-        <SuccessIcon />
+        <SuccessIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
+        />
       </Table.Td>
       <Table.Td
         align="left"
@@ -3632,7 +4037,16 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         hasBorderLeft={true}
         hasBorderRight={true}
       >
-        <SuccessIcon />
+        <SuccessIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
+        />
       </Table.Td>
       <Table.Td
         align="left"
@@ -3724,7 +4138,16 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         rowSpan={2}
         sortDirection="up"
       >
-        <SuccessIcon />
+        <SuccessIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
+        />
       </Table.Th>
       <Table.Th
         align="left"
@@ -3816,7 +4239,16 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         hasBorderLeft={false}
         hasBorderRight={false}
       >
-        <SuccessIcon />
+        <SuccessIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
+        />
       </Table.Td>
       <Table.Td
         align="left"
@@ -3892,7 +4324,16 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         hasBorderLeft={false}
         hasBorderRight={false}
       >
-        <SuccessIcon />
+        <SuccessIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
+        />
       </Table.Td>
       <Table.Td
         align="left"
@@ -3969,7 +4410,16 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         hasBorderLeft={false}
         hasBorderRight={false}
       >
-        <SuccessIcon />
+        <SuccessIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
+        />
       </Table.Td>
       <Table.Td
         align="left"
@@ -4046,7 +4496,16 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         hasBorderLeft={false}
         hasBorderRight={false}
       >
-        <SuccessIcon />
+        <SuccessIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
+        />
       </Table.Td>
       <Table.Td
         align="left"
@@ -4126,7 +4585,16 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         hasBorderLeft={false}
         hasBorderRight={false}
       >
-        <SuccessIcon />
+        <SuccessIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
+        />
       </Table.Td>
       <Table.Td
         align="left"
@@ -4206,7 +4674,16 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         hasBorderLeft={false}
         hasBorderRight={false}
       >
-        <SuccessIcon />
+        <SuccessIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
+        />
       </Table.Td>
       <Table.Td
         align="left"
@@ -4287,7 +4764,16 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         hasBorderLeft={false}
         hasBorderRight={false}
       >
-        <SuccessIcon />
+        <SuccessIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
+        />
       </Table.Td>
       <Table.Td
         align="left"
@@ -4368,7 +4854,16 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         hasBorderLeft={false}
         hasBorderRight={false}
       >
-        <SuccessIcon />
+        <SuccessIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
+        />
       </Table.Td>
       <Table.Td
         align="left"
@@ -4444,7 +4939,16 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         hasBorderLeft={false}
         hasBorderRight={false}
       >
-        <SuccessIcon />
+        <SuccessIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
+        />
       </Table.Td>
       <Table.Td
         align="left"
@@ -4520,7 +5024,16 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         hasBorderLeft={false}
         hasBorderRight={false}
       >
-        <SuccessIcon />
+        <SuccessIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
+        />
       </Table.Td>
       <Table.Td
         align="left"
@@ -4597,7 +5110,16 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         hasBorderLeft={false}
         hasBorderRight={false}
       >
-        <SuccessIcon />
+        <SuccessIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
+        />
       </Table.Td>
       <Table.Td
         align="left"
@@ -4674,7 +5196,16 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         hasBorderLeft={false}
         hasBorderRight={false}
       >
-        <SuccessIcon />
+        <SuccessIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
+        />
       </Table.Td>
       <Table.Td
         align="left"
@@ -4751,7 +5282,16 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         hasBorderLeft={false}
         hasBorderRight={false}
       >
-        <SuccessIcon />
+        <SuccessIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
+        />
       </Table.Td>
       <Table.Td
         align="left"
@@ -4828,7 +5368,16 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         hasBorderLeft={false}
         hasBorderRight={false}
       >
-        <SuccessIcon />
+        <SuccessIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
+        />
       </Table.Td>
       <Table.Td
         align="left"
@@ -4929,7 +5478,16 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         rowSpan={2}
         sortDirection="up"
       >
-        <SuccessIcon />
+        <SuccessIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
+        />
       </Table.Th>
       <Table.Th
         align="left"
@@ -5030,7 +5588,16 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         hasBorderLeft={true}
         hasBorderRight={true}
       >
-        <SuccessIcon />
+        <SuccessIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
+        />
       </Table.Td>
       <Table.Td
         align="left"
@@ -5107,7 +5674,16 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         hasBorderLeft={true}
         hasBorderRight={true}
       >
-        <SuccessIcon />
+        <SuccessIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
+        />
       </Table.Td>
       <Table.Td
         align="left"
@@ -5185,7 +5761,16 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         hasBorderLeft={true}
         hasBorderRight={true}
       >
-        <SuccessIcon />
+        <SuccessIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
+        />
       </Table.Td>
       <Table.Td
         align="left"
@@ -5263,7 +5848,16 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         hasBorderLeft={true}
         hasBorderRight={true}
       >
-        <SuccessIcon />
+        <SuccessIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
+        />
       </Table.Td>
       <Table.Td
         align="left"
@@ -5340,7 +5934,16 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         hasBorderLeft={true}
         hasBorderRight={true}
       >
-        <SuccessIcon />
+        <SuccessIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
+        />
       </Table.Td>
       <Table.Td
         align="left"
@@ -5417,7 +6020,16 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         hasBorderLeft={true}
         hasBorderRight={true}
       >
-        <SuccessIcon />
+        <SuccessIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
+        />
       </Table.Td>
       <Table.Td
         align="left"
@@ -5495,7 +6107,16 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         hasBorderLeft={true}
         hasBorderRight={true}
       >
-        <SuccessIcon />
+        <SuccessIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
+        />
       </Table.Td>
       <Table.Td
         align="left"
@@ -5573,7 +6194,16 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         hasBorderLeft={true}
         hasBorderRight={true}
       >
-        <SuccessIcon />
+        <SuccessIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
+        />
       </Table.Td>
       <Table.Td
         align="left"
@@ -5621,161 +6251,6 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
       </Table.Td>
     </Table.Tr>
     <Table.Tr
-      isActive={false}
-      isDisabled={false}
-      isSelected={true}
-    >
-      <Table.Td
-        align="left"
-        hasBorderLeft={false}
-        hasBorderRight={false}
-      >
-        <Checkbox
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={true}
-          onSelect={[Function]}
-        />
-      </Table.Td>
-      <Table.Td
-        align="left"
-        hasBorderLeft={false}
-        hasBorderRight={false}
-        isEmpty={true}
-      >
-        No Data
-      </Table.Td>
-      <Table.Td
-        align="left"
-        hasBorderLeft={true}
-        hasBorderRight={true}
-      >
-        <SuccessIcon />
-      </Table.Td>
-      <Table.Td
-        align="left"
-        hasBorderLeft={false}
-        hasBorderRight={false}
-      >
-        <Button
-          hasOnlyIcon={false}
-          isActive={false}
-          isDisabled={false}
-          onClick={[Function]}
-          size="small"
-          type="button"
-        >
-          button
-        </Button>
-      </Table.Td>
-      <Table.Td
-        align="left"
-        hasBorderLeft={false}
-        hasBorderRight={false}
-      >
-        Sorted Column
-      </Table.Td>
-      <Table.Td
-        align="left"
-        hasBorderLeft={true}
-        hasBorderRight={false}
-      >
-        align left
-      </Table.Td>
-      <Table.Td
-        align="center"
-        hasBorderLeft={false}
-        hasBorderRight={false}
-      >
-        align center
-      </Table.Td>
-      <Table.Td
-        align="right"
-        hasBorderLeft={false}
-        hasBorderRight={false}
-      >
-        align right
-      </Table.Td>
-    </Table.Tr>
-    <Table.Tr
-      isActive={false}
-      isDisabled={true}
-      isSelected={true}
-    >
-      <Table.Td
-        align="left"
-        hasBorderLeft={false}
-        hasBorderRight={false}
-      >
-        <Checkbox
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={true}
-          onSelect={[Function]}
-        />
-      </Table.Td>
-      <Table.Td
-        align="left"
-        hasBorderLeft={false}
-        hasBorderRight={false}
-        isEmpty={true}
-      >
-        No Data
-      </Table.Td>
-      <Table.Td
-        align="left"
-        hasBorderLeft={true}
-        hasBorderRight={true}
-      >
-        <SuccessIcon />
-      </Table.Td>
-      <Table.Td
-        align="left"
-        hasBorderLeft={false}
-        hasBorderRight={false}
-      >
-        <Button
-          hasOnlyIcon={false}
-          isActive={false}
-          isDisabled={true}
-          onClick={[Function]}
-          size="small"
-          type="button"
-        >
-          button
-        </Button>
-      </Table.Td>
-      <Table.Td
-        align="left"
-        hasBorderLeft={false}
-        hasBorderRight={false}
-      >
-        Sorted Column
-      </Table.Td>
-      <Table.Td
-        align="left"
-        hasBorderLeft={true}
-        hasBorderRight={false}
-      >
-        align left
-      </Table.Td>
-      <Table.Td
-        align="center"
-        hasBorderLeft={false}
-        hasBorderRight={false}
-      >
-        align center
-      </Table.Td>
-      <Table.Td
-        align="right"
-        hasBorderLeft={false}
-        hasBorderRight={false}
-      >
-        align right
-      </Table.Td>
-    </Table.Tr>
-    <Table.Tr
-      isActionable={true}
       isActive={false}
       isDisabled={false}
       isSelected={true}
@@ -5805,7 +6280,189 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         hasBorderLeft={true}
         hasBorderRight={true}
       >
-        <SuccessIcon />
+        <SuccessIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
+        />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}
+      >
+        <Button
+          hasOnlyIcon={false}
+          isActive={false}
+          isDisabled={false}
+          onClick={[Function]}
+          size="small"
+          type="button"
+        >
+          button
+        </Button>
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}
+      >
+        Sorted Column
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={true}
+        hasBorderRight={false}
+      >
+        align left
+      </Table.Td>
+      <Table.Td
+        align="center"
+        hasBorderLeft={false}
+        hasBorderRight={false}
+      >
+        align center
+      </Table.Td>
+      <Table.Td
+        align="right"
+        hasBorderLeft={false}
+        hasBorderRight={false}
+      >
+        align right
+      </Table.Td>
+    </Table.Tr>
+    <Table.Tr
+      isActive={false}
+      isDisabled={true}
+      isSelected={true}
+    >
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}
+      >
+        <Checkbox
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={true}
+          onSelect={[Function]}
+        />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}
+        isEmpty={true}
+      >
+        No Data
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={true}
+        hasBorderRight={true}
+      >
+        <SuccessIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
+        />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}
+      >
+        <Button
+          hasOnlyIcon={false}
+          isActive={false}
+          isDisabled={true}
+          onClick={[Function]}
+          size="small"
+          type="button"
+        >
+          button
+        </Button>
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}
+      >
+        Sorted Column
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={true}
+        hasBorderRight={false}
+      >
+        align left
+      </Table.Td>
+      <Table.Td
+        align="center"
+        hasBorderLeft={false}
+        hasBorderRight={false}
+      >
+        align center
+      </Table.Td>
+      <Table.Td
+        align="right"
+        hasBorderLeft={false}
+        hasBorderRight={false}
+      >
+        align right
+      </Table.Td>
+    </Table.Tr>
+    <Table.Tr
+      isActionable={true}
+      isActive={false}
+      isDisabled={false}
+      isSelected={true}
+    >
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}
+      >
+        <Checkbox
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={true}
+          onSelect={[Function]}
+        />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}
+        isEmpty={true}
+      >
+        No Data
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={true}
+        hasBorderRight={true}
+      >
+        <SuccessIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
+        />
       </Table.Td>
       <Table.Td
         align="left"
@@ -5883,7 +6540,16 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         hasBorderLeft={true}
         hasBorderRight={true}
       >
-        <SuccessIcon />
+        <SuccessIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
+        />
       </Table.Td>
       <Table.Td
         align="left"
@@ -5961,7 +6627,16 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         hasBorderLeft={true}
         hasBorderRight={true}
       >
-        <SuccessIcon />
+        <SuccessIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
+        />
       </Table.Td>
       <Table.Td
         align="left"
@@ -6039,7 +6714,16 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         hasBorderLeft={true}
         hasBorderRight={true}
       >
-        <SuccessIcon />
+        <SuccessIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
+        />
       </Table.Td>
       <Table.Td
         align="left"
@@ -6131,7 +6815,16 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         rowSpan={2}
         sortDirection="up"
       >
-        <SuccessIcon />
+        <SuccessIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
+        />
       </Table.Th>
       <Table.Th
         align="left"
@@ -6223,7 +6916,16 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         hasBorderLeft={true}
         hasBorderRight={true}
       >
-        <SuccessIcon />
+        <SuccessIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
+        />
       </Table.Td>
       <Table.Td
         align="left"
@@ -6299,7 +7001,16 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         hasBorderLeft={true}
         hasBorderRight={true}
       >
-        <SuccessIcon />
+        <SuccessIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
+        />
       </Table.Td>
       <Table.Td
         align="left"
@@ -6376,7 +7087,16 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         hasBorderLeft={true}
         hasBorderRight={true}
       >
-        <SuccessIcon />
+        <SuccessIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
+        />
       </Table.Td>
       <Table.Td
         align="left"
@@ -6453,7 +7173,16 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         hasBorderLeft={true}
         hasBorderRight={true}
       >
-        <SuccessIcon />
+        <SuccessIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
+        />
       </Table.Td>
       <Table.Td
         align="left"
@@ -6533,7 +7262,16 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         hasBorderLeft={true}
         hasBorderRight={true}
       >
-        <SuccessIcon />
+        <SuccessIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
+        />
       </Table.Td>
       <Table.Td
         align="left"
@@ -6613,7 +7351,16 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         hasBorderLeft={true}
         hasBorderRight={true}
       >
-        <SuccessIcon />
+        <SuccessIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
+        />
       </Table.Td>
       <Table.Td
         align="left"
@@ -6694,7 +7441,16 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         hasBorderLeft={true}
         hasBorderRight={true}
       >
-        <SuccessIcon />
+        <SuccessIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
+        />
       </Table.Td>
       <Table.Td
         align="left"
@@ -6775,7 +7531,16 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         hasBorderLeft={true}
         hasBorderRight={true}
       >
-        <SuccessIcon />
+        <SuccessIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
+        />
       </Table.Td>
       <Table.Td
         align="left"
@@ -6851,7 +7616,16 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         hasBorderLeft={true}
         hasBorderRight={true}
       >
-        <SuccessIcon />
+        <SuccessIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
+        />
       </Table.Td>
       <Table.Td
         align="left"
@@ -6927,7 +7701,16 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         hasBorderLeft={true}
         hasBorderRight={true}
       >
-        <SuccessIcon />
+        <SuccessIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
+        />
       </Table.Td>
       <Table.Td
         align="left"
@@ -7004,7 +7787,16 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         hasBorderLeft={true}
         hasBorderRight={true}
       >
-        <SuccessIcon />
+        <SuccessIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
+        />
       </Table.Td>
       <Table.Td
         align="left"
@@ -7081,7 +7873,16 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         hasBorderLeft={true}
         hasBorderRight={true}
       >
-        <SuccessIcon />
+        <SuccessIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
+        />
       </Table.Td>
       <Table.Td
         align="left"

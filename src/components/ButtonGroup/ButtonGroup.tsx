@@ -1,47 +1,73 @@
 import _ from 'lodash';
-import Button from '../Button/Button';
+import Button, { IButtonProps } from '../Button/Button';
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, findTypes, omitProps } from '../../util/component-types';
+import {
+	findTypes,
+	omitProps,
+	StandardProps,
+} from '../../util/component-types';
 import reducers from './ButtonGroup.reducers';
-import { buildHybridComponent } from '../../util/state-management';
+import { buildModernHybridComponent } from '../../util/state-management';
 
 const cx = lucidClassNames.bind('&-ButtonGroup');
 
 const { any, func, arrayOf, number } = PropTypes;
 
-const ButtonGroup = createClass({
-	displayName: 'ButtonGroup',
+const ButtonGroupButton = (_props: Partial<IButtonProps>): null => null;
+ButtonGroupButton.displayName = 'ButtonGroup.Button';
+ButtonGroupButton.peek = {
+	description: `
+		Renders a \`<Button\`> inside the \`ButtonGroup\`.
+	`,
+};
 
-	statics: {
-		peek: {
-			description: `
-				Button groups allow you to pair buttons together to form a seamless
-				cluster.  Any props not explicitly called out are spread on to the root
-				component.
-			`,
-			categories: ['controls', 'buttons'],
-			madeFrom: ['Button'],
-		},
-	},
+const defaultProps = {
+	onSelect: _.noop,
+	selectedIndices: [],
+};
 
-	components: {
-		Button: createClass({
-			displayName: 'ButtonGroup.Button',
-			statics: {
-				peek: {
-					description: `
-						Renders a \`<Button\`> inside the \`ButtonGroup\`.
-					`,
-				},
-			},
-		}),
-	},
+export interface IButtonGroupState {
+	selectedIndices: number[];
+}
 
-	reducers: reducers,
+export interface IButtonGroupProps extends StandardProps {
+	/** A function that is called with the index of the child button clicked. */
+	onSelect: (
+		selectedIndex: number,
+		{ event, props }: { event: React.MouseEvent; props: IButtonProps }
+	) => void;
 
-	propTypes: {
+	/** An array of currently selected \`ButtonGroup.Button\`s indices. You can
+	also pass the prop \`isActive\` to individual \`ButtonGroup.Button\`
+	components. */
+	selectedIndices: number[];
+}
+
+class ButtonGroup extends React.Component<
+	IButtonGroupProps,
+	IButtonGroupState
+> {
+	static displayName = 'ButtonGroup';
+
+	static peek = {
+		description: `
+			Button groups allow you to pair buttons together to form a seamless
+			cluster.  Any props not explicitly called out are spread on to the root
+			component.
+		`,
+		categories: ['controls', 'buttons'],
+		madeFrom: ['Button'],
+	};
+
+	static Button = ButtonGroupButton;
+
+	static reducers = reducers;
+
+	static defaultProps = defaultProps;
+
+	static propTypes = {
 		onSelect: func`
 			A function that is called with the index of the child button clicked.
 			\`props\` refers to the child button props.  Signature:
@@ -63,18 +89,15 @@ const ButtonGroup = createClass({
 			also pass the prop \`isActive\` to individual \`ButtonGroup.Button\`
 			components.
 		`,
-	},
+	};
 
-	getDefaultProps() {
-		return {
-			onSelect: _.noop,
-			className: null,
-			children: null,
-			selectedIndices: [],
-		};
-	},
-
-	handleSelect({ event, props: childProps }) {
+	handleSelect = ({
+		event,
+		props: childProps,
+	}: {
+		event: React.MouseEvent<HTMLButtonElement>;
+		props: IButtonProps;
+	}) => {
 		const { callbackId } = childProps;
 		const clickedButtonProps = _.get(
 			findTypes(this.props, ButtonGroup.Button)[callbackId],
@@ -90,7 +113,7 @@ const ButtonGroup = createClass({
 		}
 
 		this.props.onSelect(callbackId, { event, props: childProps });
-	},
+	};
 
 	render() {
 		const {
@@ -107,7 +130,7 @@ const ButtonGroup = createClass({
 
 		return (
 			<span
-				{...omitProps(passThroughs, ButtonGroup)}
+				{...omitProps(passThroughs, undefined, _.keys(ButtonGroup.propTypes))}
 				className={cx('&', className)}
 			>
 				{_.map(buttonChildProps, (buttonChildProp, index) => {
@@ -130,8 +153,13 @@ const ButtonGroup = createClass({
 				{children}
 			</span>
 		);
-	},
-});
+	}
+}
 
-export default buildHybridComponent(ButtonGroup);
+export default buildModernHybridComponent<
+	IButtonGroupProps,
+	IButtonGroupState,
+	typeof ButtonGroup
+>(ButtonGroup, { reducers });
+
 export { ButtonGroup as ButtonGroupDumb };

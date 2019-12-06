@@ -3,12 +3,7 @@ import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import ReactTransitionGroup from 'react-transition-group/CSSTransitionGroup';
 import { lucidClassNames } from '../../util/style-helpers';
-import {
-	FC,
-	omitProps,
-	StandardProps,
-	FixDefaults,
-} from '../../util/component-types';
+import { omitProps, StandardProps } from '../../util/component-types';
 import CloseIcon from '../Icon/CloseIcon/CloseIcon';
 import { IIconProps } from '../Icon/Icon';
 
@@ -23,24 +18,24 @@ export interface IBannerProps
 			HTMLDivElement
 		> {
 	/** Pass in a icon component for custom icons within `Banner`. */
-	icon?: React.ReactElement | null;
+	icon: React.ReactElement | null;
 
 	/** Set this to `true` if you want to have a `x` close icon. */
-	isCloseable?: boolean;
+	isCloseable: boolean;
 
 	/** If set to `false` the banner will not be filled in.
 	 * @default = true
 	 */
-	isFilled?: boolean;
+	isFilled: boolean;
 
 	/** If set to `true` the banner have smaller padding on the inside. */
-	isSmall?: boolean;
+	isSmall: boolean;
 
 	/** Style variations of the `Banner`. */
-	kind?: 'primary' | 'success' | 'warning' | 'danger' | 'info' | 'default';
+	kind: 'primary' | 'success' | 'warning' | 'danger' | 'info' | 'default';
 
 	/** Called when the user closes the `Banner`. */
-	onClose?: ({
+	onClose: ({
 		event,
 		props,
 	}: {
@@ -49,7 +44,7 @@ export interface IBannerProps
 	}) => void;
 
 	/** Controls the visibility of the `Banner`. */
-	isClosed?: boolean;
+	isClosed: boolean;
 }
 
 const defaultProps = {
@@ -62,7 +57,7 @@ const defaultProps = {
 	isClosed: false,
 };
 
-export const Banner: FC<IBannerProps> = (props): React.ReactElement => {
+export const Banner = (props: IBannerProps): React.ReactElement => {
 	const {
 		icon,
 		kind,
@@ -74,7 +69,7 @@ export const Banner: FC<IBannerProps> = (props): React.ReactElement => {
 		isSmall,
 		onClose,
 		...passThroughs
-	} = props as FixDefaults<IBannerProps, typeof defaultProps>;
+	} = props;
 
 	const handleClose = ({
 		event,

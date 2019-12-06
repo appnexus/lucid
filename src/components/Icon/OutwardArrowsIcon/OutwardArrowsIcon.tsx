@@ -2,7 +2,7 @@ import _ from 'lodash';
 import React from 'react';
 import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
-import { FC, omitProps } from '../../../util/component-types';
+import { omitProps } from '../../../util/component-types';
 import PropTypes from 'react-peek/prop-types';
 
 const { oneOf } = PropTypes;
@@ -24,14 +24,14 @@ interface IOutwardArrowsIconProps extends IIconProps {
 	/**	Determines the kind of arrows you want to display. \`horizontal\` is
 		usually used for width. \`vertical\` is usually used for height.
 		\`diagonal\` is usually used for aspect ratio. */
-	kind: 'horizontal' | 'vertical' | 'diagonal';
+	kind?: 'horizontal' | 'vertical' | 'diagonal';
 }
 
-export const OutwardArrowsIcon: FC<IOutwardArrowsIconProps> = ({
+export const OutwardArrowsIcon = ({
 	className,
 	kind = 'horizontal',
 	...passThroughs
-}): React.ReactElement => {
+}: IOutwardArrowsIconProps) => {
 	return (
 		<Icon
 			{...omitProps(
@@ -65,5 +65,6 @@ OutwardArrowsIcon.propTypes = {
 		\`diagonal\` is usually used for aspect ratio.
 	`,
 };
+OutwardArrowsIcon.defaultProps = Icon.defaultProps;
 
 export default OutwardArrowsIcon;
