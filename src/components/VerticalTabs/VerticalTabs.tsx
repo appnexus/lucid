@@ -4,13 +4,12 @@ import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import {
 	findTypes,
-	FC,
 	getFirst,
 	omitProps,
 	Overwrite,
 	StandardProps,
 } from '../../util/component-types';
-import { buildHybridComponent } from '../../util/state-management';
+import { buildModernHybridComponent } from '../../util/state-management';
 import * as reducers from './VerticalTabs.reducers';
 import {
 	IVerticalListMenuItemProps,
@@ -27,7 +26,7 @@ interface IVerticalTabsTabProps extends StandardProps {
 	isSelected?: boolean;
 }
 
-const Tab: FC<IVerticalTabsTabProps> = (): null => null;
+const Tab = (_props: IVerticalTabsTabProps): null => null;
 
 Tab.displayName = 'VerticalTabs.Tab';
 Tab.peek = {
@@ -46,7 +45,7 @@ Tab.propTypes = {
 /** Vertical Tabs Title Child Component */
 interface IVerticalTabsTitleProps extends StandardProps {}
 
-const Title: FC<IVerticalTabsTitleProps> = (): null => null;
+const Title = (_props: IVerticalTabsTitleProps): null => null;
 
 Title.displayName = 'VerticalTabs.Title';
 Title.peek = {
@@ -198,5 +197,10 @@ class VerticalTabs extends React.Component<
 	}
 }
 
-export default buildHybridComponent(VerticalTabs);
+export default buildModernHybridComponent<
+	IVerticalTabsProps,
+	IVerticalTabsState,
+	typeof VerticalTabs
+>(VerticalTabs, { reducers });
+
 export { VerticalTabs as VerticalTabsDumb };
