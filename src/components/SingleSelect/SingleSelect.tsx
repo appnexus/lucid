@@ -10,7 +10,7 @@ import {
 	StandardProps,
 } from '../../util/component-types';
 import {
-	buildHybridComponent,
+	//buildHybridComponent,
 	buildModernHybridComponent,
 } from '../../util/state-management';
 import * as reducers from './SingleSelect.reducers';
@@ -249,8 +249,8 @@ class SingleSelect extends React.Component<
 	static Option = Option;
 	static Selected = Selected;
 	static OptionGroup = OptionGroup;
-	// static NullOption = NullOption;
-	// static FixedOption = FixedOption;
+	static NullOption = DropMenu.NullOption;
+	static FixedOption = DropMenu.FixedOption;
 
 	static propTypes = {
 		children: node`
