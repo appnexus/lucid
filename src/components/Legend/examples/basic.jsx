@@ -113,7 +113,12 @@ export default createClass({
 				<br />
 				<br />
 
-				<ToolTip isExpanded={true} direction='right' alignment='end' isLight={true}>
+				<ToolTip
+					isExpanded={true}
+					direction='right'
+					alignment='end'
+					isLight={true}
+				>
 					<ToolTip.Target>Tooltip example</ToolTip.Target>
 
 					<ToolTip.Body>
