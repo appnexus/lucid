@@ -24,6 +24,9 @@ const { string, number, bool, func } = PropTypes;
 interface IVerticalTabsTabProps extends StandardProps {
 	/** Determines if the Tab is selected */
 	isSelected?: boolean;
+
+	/** Custom title for the tab */
+	Title?: string;
 }
 
 const Tab = (_props: IVerticalTabsTabProps): null => null;

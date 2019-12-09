@@ -10,18 +10,19 @@ import {
 } from '../../../index';
 
 const data = [
-	{ x: 1, y: 1 },
-	{ x: 2, y: 0 },
-	{ x: 3, y: 3 },
-	{ x: 4, y: 2 },
-	{ x: 5, y: 1 },
-	{ x: 6, y: 3 },
+	{ x: '1', y: 1 },
+	{ x: '2', y: 0 },
+	{ x: '3', y: 3 },
+	{ x: '4', y: 2 },
+	{ x: '5', y: 1 },
+	{ x: '6', y: 3 },
 ];
 const width = 200;
 const height = 50;
 const xScale = d3Scale
 	.scalePoint()
-	.domain(_.map(data, 'x'))
+	.domain(_.map(data, datum => `${datum.x}`))
+	//.domain(['0', '4'])
 	.range([0, width]);
 
 const yScale = d3Scale
