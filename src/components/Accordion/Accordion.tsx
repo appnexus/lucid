@@ -2,7 +2,7 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import { buildHybridComponent } from '../../util/state-management';
+import { buildModernHybridComponent } from '../../util/state-management';
 import {
 	ExpanderPanelDumb as ExpanderPanel,
 	IExpanderPanelHeaderProps,
@@ -23,7 +23,7 @@ interface IAccordionPropsRaw extends StandardProps {
 	/**
 	 * Indicates which item is expanded
 	 * */
-	selectedIndex: number;
+	selectedIndex?: number;
 	/**
 	 * Called when the user clicks on the component's header of an item.
 	 * */
@@ -36,7 +36,7 @@ interface IAccordionPropsRaw extends StandardProps {
 	 * Prop alternative to Header child component passed through to the
 	 * underlying ExpanderPanel
 	 */
-	Header: IExpanderPanelHeaderProps;
+	Header?: IExpanderPanelHeaderProps;
 }
 
 type IAccordionProps = Overwrite<
@@ -52,66 +52,22 @@ const defaultProps = {
 	onSelect: _.noop,
 };
 
-class Accordion extends React.Component<IAccordionProps, IAccordionState> {
-	static displayName = 'Accordion';
-	static propTypes = {
-		className: string`
-			Appended to the component-specific class names set on the root element.
-		`,
-		selectedIndex: number`
-			Indicates which item is expanded
-		`,
-		onSelect: func`
-			Called when the user clicks on the component's header of an item.
-		`,
-		style: object`
-			Passed through to the root element.
-		`,
-		Header: any`
-			Prop alternative to Header child component passed through to the
-			underlying ExpanderPanel
-		`,
-	};
-	static definition = {
-		statics: {
-			Item: ExpanderPanel,
-			Header: ExpanderPanel.Header,
-			reducers,
-			peek: {
-				description: `
-					This is a container that renders panels and controls its
-					expansion/retraction.
-				`,
-				categories: ['layout'],
-				madeFrom: ['ExpanderPanel'],
-			},
-		},
-	};
-
-	static defaultProps = defaultProps;
-
-	static reducers = reducers;
-
-	static Item = ExpanderPanel;
-
-	static Header = ExpanderPanel.Header;
-
-	handleToggle(isExpanded: boolean, index: number, event: React.MouseEvent) {
-		const selectedIndex = isExpanded ? index : null;
-
-		this.props.onSelect(selectedIndex, {
-			event,
-			props: this.props,
-		});
-	}
-
-	render() {
-		const { style, className, selectedIndex, ...passThroughs } = this.props;
+const Accordion = (props: IAccordionProps) => {
+		const { style, className, selectedIndex, ...passThroughs } = props;
 
 		const itemChildProps = _.map(
-			findTypes(this.props, Accordion.Item),
+			findTypes(props, Accordion.Item),
 			'props'
 		);
+
+		const handleToggle = (isExpanded: boolean, index: number, event: React.MouseEvent) => {
+			const selectedIndex = isExpanded ? index : null;
+
+			props.onSelect(selectedIndex, {
+				event,
+				props,
+			});
+		}
 
 		return (
 			<div
@@ -126,7 +82,7 @@ class Accordion extends React.Component<IAccordionProps, IAccordionState> {
 							{...itemChildProp}
 							className={cx('&-Item', itemChildProp.className)}
 							onToggle={(isExpanded, { event }) =>
-								this.handleToggle(isExpanded, index, event)
+								handleToggle(isExpanded, index, event)
 							}
 							isExpanded={!itemChildProp.isDisabled && selectedIndex === index}
 						/>
@@ -134,8 +90,50 @@ class Accordion extends React.Component<IAccordionProps, IAccordionState> {
 				})}
 			</div>
 		);
-	}
 }
 
-export default buildHybridComponent(Accordion);
+Accordion.displayName = 'Accordion';
+
+Accordion.propTypes = {
+	className: string`
+		Appended to the component-specific class names set on the root element.
+	`,
+	selectedIndex: number`
+		Indicates which item is expanded
+	`,
+	onSelect: func`
+		Called when the user clicks on the component's header of an item.
+	`,
+	style: object`
+		Passed through to the root element.
+	`,
+	Header: any`
+		Prop alternative to Header child component passed through to the
+		underlying ExpanderPanel
+	`,
+};
+
+Accordion.peek = {
+	description: `
+		This is a container that renders panels and controls its
+		expansion/retraction.
+	`,
+	categories: ['layout'],
+	madeFrom: ['ExpanderPanel'],
+}
+
+Accordion.defaultProps = defaultProps;
+
+Accordion.reducers = reducers;
+
+Accordion.Item = ExpanderPanel;
+
+Accordion.Header = ExpanderPanel.Header;
+
+export default buildModernHybridComponent<
+	IAccordionProps, 
+	IAccordionState,
+	typeof Accordion
+>(Accordion, { reducers });
+
 export { Accordion as AccordionDumb };

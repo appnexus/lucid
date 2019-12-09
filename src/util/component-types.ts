@@ -45,7 +45,6 @@ class ReactClassComponent extends React.Component<{},{}> {}
 type IReactClassComponent = (typeof ReactClassComponent)
 
 type TypesType<P> =
-	| IReactClassComponent
 	| Array<IReactClassComponent>
 	| ICreateClassComponentClass<P>
 	| Array<ICreateClassComponentClass<P>>
