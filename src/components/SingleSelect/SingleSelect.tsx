@@ -3,13 +3,16 @@ import PropTypes from 'react-peek/prop-types';
 import _ from 'lodash';
 import { lucidClassNames } from '../../util/style-helpers';
 import {
-	FC,
+	//	FC,
 	findTypes,
 	getFirst,
 	Overwrite,
 	StandardProps,
 } from '../../util/component-types';
-import { buildHybridComponent } from '../../util/state-management';
+import {
+	buildHybridComponent,
+	buildModernHybridComponent,
+} from '../../util/state-management';
 import * as reducers from './SingleSelect.reducers';
 import {
 	IDropMenuProps,
@@ -200,7 +203,7 @@ const defaultProps = {
 
 class SingleSelect extends React.Component<
 	ISingleSelectProps,
-	//ISingleSelectState,
+	ISingleSelectState,
 	ISingleSelectOptionGroupState
 > {
 	static displayName = 'SingleSelect';
@@ -465,7 +468,12 @@ class SingleSelect extends React.Component<
 	}
 }
 
-export default buildHybridComponent(SingleSelect);
+//export default buildHybridComponent(SingleSelect);
+export default buildModernHybridComponent<
+	ISingleSelectProps,
+	ISingleSelectState,
+	typeof SingleSelect
+>(SingleSelect, { reducers });
 export { SingleSelect as SingleSelectDumb };
 
 // import React from 'react';
