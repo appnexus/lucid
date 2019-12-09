@@ -18,14 +18,22 @@ const data = [
 	{ x: 6, y: 3 },
 ];
 
+// const data = [
+// 	{ x: '1', y: '1' },
+// 	{ x: '2', y: '0' },
+// 	{ x: '3', y: '3' },
+// 	{ x: '4', y: '2' },
+// 	{ x: '5', y: '1' },
+// 	{ x: '6', y: '3' },
+// ];
+
 const width = 200;
 const height = 50;
 const xScale = d3Scale
-	//const xScale: ScaleBand<ReactText> | ScalePoint<ReactText> = d3Scale
 	.scalePoint()
+	.domain(_.map(data, 'x'))
 	//.domain(_.map(data, datum => `${datum.x}`))
-	//.domain(_.map(data, 'x'))
-	.domain(['1', '2', '3', '4', '5', '6'])
+	//.domain(['1', '2', '3', '4', '5', '6'])
 	//.domain([1, 2, 3, 4, 5, 6])
 	.range([0, width]);
 
