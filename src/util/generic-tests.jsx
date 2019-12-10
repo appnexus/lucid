@@ -161,7 +161,7 @@ export function common(
 			);
 			_.each(fileNames, path => {
 				const Example = require('../../' + path).default;
-				const title = parse(path).base;
+				const title = parse(path).name;
 				it(`should match snapshot(s) for ${title}`, () => {
 					const shallowExample = shallow(<Example />, {
 						disableLifecycleMethods: true,
