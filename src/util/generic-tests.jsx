@@ -1,5 +1,5 @@
 import sinon from 'sinon';
-import { basename } from 'path';
+import { parse } from 'path';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { mount, shallow } from 'enzyme';
@@ -157,11 +157,11 @@ export function common(
 
 		describe('example testing', () => {
 			const fileNames = glob.sync(
-				`./src/components/**/${Component.displayName}/examples/*.jsx`
+				`./src/components/**/${Component.displayName}/examples/*.@(j|t)sx`
 			);
 			_.each(fileNames, path => {
 				const Example = require('../../' + path).default;
-				const title = basename(path, '.jsx');
+				const title = parse(path).base;
 				it(`should match snapshot(s) for ${title}`, () => {
 					const shallowExample = shallow(<Example />, {
 						disableLifecycleMethods: true,
