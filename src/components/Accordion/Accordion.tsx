@@ -23,20 +23,15 @@ interface IAccordionPropsRaw extends StandardProps {
 	/**
 	 * Indicates which item is expanded
 	 * */
-	selectedIndex?: number;
+	selectedIndex?: number | null;
+
 	/**
 	 * Called when the user clicks on the component's header of an item.
 	 * */
-
 	onSelect: (
 		selectedIndex: number | null,
 		{ event, props }: { event: React.MouseEvent; props: IAccordionProps }
 	) => void;
-	/**
-	 * Prop alternative to Header child component passed through to the
-	 * underlying ExpanderPanel
-	 */
-	Header?: IExpanderPanelHeaderProps;
 }
 
 type IAccordionProps = Overwrite<
@@ -106,10 +101,6 @@ Accordion.propTypes = {
 	`,
 	style: object`
 		Passed through to the root element.
-	`,
-	Header: any`
-		Prop alternative to Header child component passed through to the
-		underlying ExpanderPanel
 	`,
 };
 
