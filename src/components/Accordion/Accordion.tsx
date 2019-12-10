@@ -5,7 +5,6 @@ import { lucidClassNames } from '../../util/style-helpers';
 import { buildModernHybridComponent } from '../../util/state-management';
 import {
 	ExpanderPanelDumb as ExpanderPanel,
-	IExpanderPanelHeaderProps,
 } from '../ExpanderPanel/ExpanderPanel';
 import {
 	findTypes,
@@ -17,7 +16,7 @@ import * as reducers from '../Accordion/Accordion.reducers';
 
 const cx = lucidClassNames.bind('&-Accordion');
 
-const { any, func, object, number, string } = PropTypes;
+const { func, object, number, string } = PropTypes;
 
 interface IAccordionPropsRaw extends StandardProps {
 	/**
