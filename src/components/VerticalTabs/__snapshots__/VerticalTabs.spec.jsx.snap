@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`VerticalTabs render should render 1`] = `
+<div
+  className="lucid-VerticalTabs"
+>
+  <VerticalListMenu
+    expandedIndices={Array []}
+    onSelect={[Function]}
+    onToggle={[Function]}
+    selectedIndices={
+      Array [
+        0,
+      ]
+    }
+  >
+    <VerticalListMenu.Item
+      className="lucid-VerticalTabs-Tab lucid-VerticalTabs-Tab-is-active"
+      key="0"
+    >
+      <span
+        className="lucid-VerticalTabs-Tab-content"
+      >
+        One
+      </span>
+    </VerticalListMenu.Item>
+  </VerticalListMenu>
+  <div
+    className="lucid-VerticalTabs-content"
+  >
+    <VerticalTabs.Title>
+      One
+    </VerticalTabs.Title>
+    One content
+  </div>
+</div>
+`;
