@@ -6,6 +6,7 @@ import {
 	findTypes,
 	omitProps,
 	StandardProps,
+	Overwrite,
 } from '../../util/component-types';
 import { buildModernHybridComponent } from '../../util/state-management';
 import * as reducers from './VerticalListMenu.reducers';
@@ -16,7 +17,7 @@ const cx = bindClassNames('lucid-VerticalListMenu');
 
 const { func, arrayOf, bool, string, number, node, object, shape } = PropTypes;
 
-export interface IVerticalListMenuProps extends StandardProps {
+export interface IVerticalListMenuPropsRaw extends StandardProps {
 	/** Indicates which of the \`VerticalListMenu.Item\` children are currently
 	selected. You can also put the \`isSelected\` prop directly on the
 	\`VerticalListMenu.Item\`s if you wish. */
@@ -52,8 +53,15 @@ export interface IVerticalListMenuProps extends StandardProps {
 		}
 	) => void;
 }
+type IVerticalListMenuProps = Overwrite<
+	React.DetailedHTMLProps<
+		React.HTMLAttributes<HTMLUListElement>,
+		HTMLUListElement
+	>,
+	IVerticalListMenuPropsRaw
+>;
 
-export interface IVerticalListMenuItemProps extends StandardProps {
+export interface IVerticalListMenuItemPropsRaw extends StandardProps {
 	/** 	Show or hide the expand button. Should be \`true\` if you want to
 					nest menus. */
 	hasExpander?: boolean;
@@ -96,8 +104,12 @@ export interface IVerticalListMenuItemProps extends StandardProps {
 
 	/** Props that are passed through to the underlying Collapsible component
 	if the item has children. */
-	Collapsible?: ICollapsibleProps;
+	Collapsible?: Partial<ICollapsibleProps>;
 }
+type IVerticalListMenuItemProps = Overwrite<
+	React.DetailedHTMLProps<React.LiHTMLAttributes<HTMLLIElement>, HTMLLIElement>,
+	IVerticalListMenuItemPropsRaw
+>;
 const Item = (_props: IVerticalListMenuItemProps): null => null;
 Item.peek = {
 	description: `
