@@ -167,6 +167,10 @@ const SearchableMultiSelect = createClass({
 			Displays a LoadingIcon to allow for asynchronous loading of options.
 		`,
 
+		isValid: bool`
+			Applies warning color styling to the control if the value is \`false\`.
+		`,
+
 		maxMenuHeight: oneOfType([number, string])`
 			The max height of the fly-out menu.
 		`,
@@ -254,6 +258,7 @@ const SearchableMultiSelect = createClass({
 		return {
 			isDisabled: false,
 			isLoading: false,
+			isValid: true,
 			onRemoveAll: _.noop,
 			optionFilter: propsSearch,
 			searchText: '',
@@ -510,6 +515,7 @@ const SearchableMultiSelect = createClass({
 				className,
 				isLoading,
 				isDisabled,
+				isValid,
 				maxMenuHeight,
 				selectedIndices,
 				DropMenu: dropMenuProps,
@@ -554,7 +560,7 @@ const SearchableMultiSelect = createClass({
 					className={cx(
 						'&-DropMenu',
 						{
-							'&-DropMenu-is-small': isSmall,
+							'&-DropMenu-is-small': isSmall
 						},
 						dropMenuProps.className
 					)}
@@ -580,6 +586,7 @@ const SearchableMultiSelect = createClass({
 								'&-search',
 								{
 									'&-search-is-small': isSmall,
+									'&-search-is-invalid': !isValid
 								},
 								searchFieldProps.className
 							)}

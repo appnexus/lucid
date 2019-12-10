@@ -5,6 +5,18 @@ import { SearchableMultiSelect, Resizer } from '../../../index';
 const { Option } = SearchableMultiSelect;
 
 export default createClass({
+	getInitialState() {
+		return {
+			isRequired: false
+		};
+	},
+
+	handleChange(event) {
+		this.setState({
+			isRequired: event.length > 0
+		})
+	},
+
 	render() {
 		return (
 			<Resizer>
@@ -20,6 +32,16 @@ export default createClass({
 							>
 								<Option>Alabama</Option>
 							</SearchableMultiSelect>
+
+							<h5>Invalid</h5>
+							<SearchableMultiSelect
+								onSearch={this.handleChange}
+								responsiveMode={responsiveMode}
+								isValid={this.state.isRequired}
+							>
+								<Option>Alabama</Option>
+							</SearchableMultiSelect>
+
 
 							<h5>Disabled</h5>
 							<SearchableMultiSelect
