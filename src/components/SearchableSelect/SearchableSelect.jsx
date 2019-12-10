@@ -146,6 +146,10 @@ const SearchableSelect = createClass({
 			Applies primary color styling to the control when an item is selected.
 		`,
 
+		isValid: bool`
+			Applies warning color styling to the control if the value is \`false\`.
+		`,
+
 		maxMenuHeight: oneOfType([number, string])`
 			The max height of the fly-out menu.
 		`,
@@ -214,6 +218,7 @@ const SearchableSelect = createClass({
 			isDisabled: false,
 			isInvisible: false,
 			isLoading: false,
+			isValid: true,
 			optionFilter: propsSearch,
 			searchText: '',
 			selectedIndex: null,
@@ -386,6 +391,7 @@ const SearchableSelect = createClass({
 				isInvisible,
 				isLoading,
 				isSelectionHighlighted,
+				isValid,
 				maxMenuHeight,
 				searchText,
 				selectedIndex,
@@ -434,6 +440,7 @@ const SearchableSelect = createClass({
 							'&-Control-is-expanded': isExpanded,
 							'&-Control-is-invisible': isInvisible,
 							'&-Control-is-disabled': isDisabled,
+							'&-Control-is-invalid': !isValid
 						})}
 					>
 						<span
