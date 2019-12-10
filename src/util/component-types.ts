@@ -48,7 +48,8 @@ type TypesType<P> =
 	| { propName?: string | string[] }
 	| any; // TODO: figure out a type that works with inferred functional components
 
-interface ICreateClassComponentSpec<P, S> extends React.Mixin<P, S> {
+interface ICreateClassComponentSpec<P = any, S = any>
+	extends React.Mixin<P, S> {
 	_isPrivate?: boolean;
 	initialState?: S;
 	propName?: string | string[];
@@ -63,7 +64,11 @@ interface ICreateClassComponentSpec<P, S> extends React.Mixin<P, S> {
 	// TODO: improve these with a stricter type https://stackoverflow.com/a/54775885/895558
 	reducers?: { [K in keyof P]?: (arg0: S, ...args: any[]) => S };
 	selectors?: { [K in keyof P]?: (arg0: S) => any };
-	render?(this: { props: P }): React.ReactNode;
+	render?(
+		this: { props: P } & {
+			[k: string]: any;
+		} /* allow for extra properties on `this` to be backward compatible */
+	): React.ReactNode;
 
 	// TODO: could this be better handled by adding a third type parameter that
 	// allows the components to define what the extra class properties would
