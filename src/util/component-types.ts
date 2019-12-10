@@ -48,7 +48,7 @@ type TypesType<P> =
 	| { propName?: string | string[] }
 	| any; // TODO: figure out a type that works with inferred functional components
 
-interface ICreateClassComponentSpec<P = any, S = any>
+interface ICreateClassComponentSpec<P, S>
 	extends React.Mixin<P, S> {
 	_isPrivate?: boolean;
 	initialState?: S;
