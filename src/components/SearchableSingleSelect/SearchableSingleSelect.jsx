@@ -130,6 +130,10 @@ const SearchableSingleSelect = createClass({
 			Displays a LoadingIcon to allow for asynchronous loading of options.
 		`,
 
+		isValid: bool`
+			Applies warning color styling to the control if the value is \`false\`.
+		`,
+
 		maxMenuHeight: oneOfType([number, string])`
 			The max height of the fly-out menu.
 		`,
@@ -192,6 +196,7 @@ const SearchableSingleSelect = createClass({
 		return {
 			isDisabled: false,
 			isLoading: false,
+			isValid: true,
 			optionFilter: propsSearch,
 			searchText: '',
 			selectedIndex: null,
@@ -371,6 +376,7 @@ const SearchableSingleSelect = createClass({
 				className,
 				isLoading,
 				isDisabled,
+				isValid,
 				maxMenuHeight,
 				DropMenu: dropMenuProps,
 				DropMenu: { optionContainerStyle },
@@ -442,7 +448,10 @@ const SearchableSingleSelect = createClass({
 							{...searchFieldProps}
 							autoComplete={searchFieldProps.autoComplete || 'off'}
 							isDisabled={isDisabled}
-							className={cx('&-search', searchFieldProps.className)}
+							className={cx('&-search', {
+								'&-search-is-invalid': !isValid
+							},
+							searchFieldProps.className)}
 							value={searchText}
 							onChange={this.handleSearch}
 						/>
