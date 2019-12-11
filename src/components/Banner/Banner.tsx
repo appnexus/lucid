@@ -156,10 +156,10 @@ Banner.peek = {
 			- Use the solid filled banner for single-line content.
 			- Use the outlined banner for multi-line content.
 			- Color use:
-				- Use blue banners for information, like instructions for a feature.
-				- Use green banners for success messages, like completing a task successfully.
-				- Use yellow banners for warnings, like a line item that is under-delivering.
-				- Use orange banners for danger messages, like an error message for missing required content.
+				- Use \`kind:"info"\` (blue) for information, like instructions for a feature.
+				- Use \`kind:"success"\` (green) for success messages, like completing a task successfully.
+				- Use \`kind:"warning"\` (yellow) for warnings, like a line item that is under-delivering.
+				- Use \`kind:"danger"\` (orange) for danger messages, like an error message for missing required content.
 				- Use grey banners for new feature announcements.
 		`,
 		technicalRecommendations: `
