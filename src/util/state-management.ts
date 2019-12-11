@@ -6,8 +6,9 @@ import createClass from 'create-react-class';
 import hoistNonReactStatics from 'hoist-non-react-statics';
 
 // TODO: could we somehow type the `...args` with a generic?
-export type Reducer<S extends object> = (arg0: S, ...args: any[]) => S;
-export type Reducers<P, S extends object> = { [K in keyof P]?: Reducer<S> };
+export type Reducer<S extends object> = (arg0: S, ...args: any[]) => S
+
+export type Reducers<P, S extends object> = { [K in keyof P]?: Reducer<S> | Reducers<P[K], S> };
 export type Selector<S> = (arg0: S) => any;
 export type Selectors<P, S extends object> = {
 	[K in keyof P]?: (arg0: S) => any
@@ -33,6 +34,9 @@ interface IBaseComponentType<P> {
 	displayName: string;
 }
 
+/*
+	Returns an array of paths for each reducer function
+*/
 export function getDeepPaths(
 	obj: { [k: string]: any },
 	path: string[] = []
@@ -41,7 +45,9 @@ export function getDeepPaths(
 		obj,
 		(terminalKeys: string[][], value, key) =>
 			isPlainObjectOrEsModule(value)
+				//getDeepPaths if value is a module or object (another Reducers)
 				? terminalKeys.concat(getDeepPaths(value, path.concat(key)))
+				//add key to terminalKeys (probably a Reducer (function))
 				: terminalKeys.concat([path.concat(key)]),
 		[]
 	);
@@ -51,6 +57,9 @@ export function isPlainObjectOrEsModule(obj: any): boolean {
 	return _.isPlainObject(obj) || _.get(obj, '__esModule', false);
 }
 
+/**
+	Recursively removes function type properties from obj
+ */
 export function omitFunctionPropsDeep<P>(obj: object | P) {
 	return _.reduce<{ [k: string]: any }, { [k: string]: any }>(
 		obj,
@@ -93,6 +102,7 @@ export function bindReducersToState<P, S extends object>(
 	reducers: Reducers<P, S>,
 	{ getState, setState }: IStateOptions<S>
 ) {
+	console.log('getDeepPaths', getDeepPaths(reducers));
 	return _.reduce(
 		getDeepPaths(reducers),
 		(memo, path) => {
@@ -106,11 +116,16 @@ export function bindReducersToState<P, S extends object>(
 	);
 }
 
+/*
+
+*/
 export function getStatefulPropsContext<P, S extends object>(
 	reducers: Reducers<P, S>,
 	{ getState, setState }: IStateOptions<S>
 ): IBoundContext<P, S> {
 	const boundReducers = bindReducersToState(reducers, { getState, setState });
+
+	console.log('boundReducers', boundReducers);
 
 	const combineFunctionsCustomizer = (objValue: any, srcValue: any) => {
 		if (_.isFunction(srcValue) && _.isFunction(objValue)) {

@@ -3,28 +3,23 @@ import PropTypes from 'react-peek/prop-types';
 import _ from 'lodash';
 import { lucidClassNames } from '../../util/style-helpers';
 import {
-	//	FC,
 	findTypes,
 	getFirst,
 	Overwrite,
 	StandardProps,
 } from '../../util/component-types';
 import {
-	//buildHybridComponent,
 	buildModernHybridComponent,
 } from '../../util/state-management';
 import * as reducers from './SingleSelect.reducers';
 import {
 	IDropMenuProps,
 	IDropMenuState,
-	//OptionGroupFC,
 	IDropMenuOptionProps,
 	IDropMenuOptionGroupProps,
-	//IOptionsData,
 	DropMenuDumb as DropMenu,
 } from '../DropMenu/DropMenu';
 import ChevronIcon from '../Icon/ChevronIcon/ChevronIcon';
-//import { propsSearch } from '../../util/text-manipulation';
 
 const cx = lucidClassNames.bind('&-SingleSelect');
 
@@ -169,29 +164,6 @@ export interface ISingleSelectState extends IDropMenuState {
 	DropMenu: IDropMenuState;
 }
 
-// export interface ISingleSelectOptionGroupState {
-// 	optionGroups: OptionGroupFC[];
-// 	flattenedOptionsData: IOptionsData[];
-// 	ungroupedOptionData: IOptionsData[];
-// 	optionGroupDataLookup: { [key: number]: OptionGroupFC[] };
-// }
-
-//TODO: IDropMenuOptionProps delete when the import works
-// interface IDropMenuOptionProps extends StandardProps {
-// 	description?: string;
-// 	isDisabled?: boolean;
-// 	isHidden?: boolean;
-// 	isWrapped?: boolean;
-// }
-
-//TODO: delete IOptionsData when the import works
-// interface IOptionsData {
-// 	localOptionIndex: number;
-// 	optionIndex: number;
-// 	optionGroupIndex: number | null;
-// 	optionProps: IDropMenuOptionProps;
-// }
-
 const defaultProps = {
 	hasReset: true,
 	isSelectionHighlighted: true,
@@ -204,7 +176,6 @@ const defaultProps = {
 class SingleSelect extends React.Component<
 	ISingleSelectProps,
 	ISingleSelectState
-	//ISingleSelectOptionGroupState
 > {
 	static displayName = 'SingleSelect';
 
@@ -470,12 +441,12 @@ class SingleSelect extends React.Component<
 	}
 }
 
-//export default buildHybridComponent(SingleSelect);
 export default buildModernHybridComponent<
 	ISingleSelectProps,
 	ISingleSelectState,
 	typeof SingleSelect
 >(SingleSelect, { reducers });
+
 export { SingleSelect as SingleSelectDumb };
 
 // import React from 'react';
