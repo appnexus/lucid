@@ -157,7 +157,7 @@ export function common(
 
 		describe('example testing', () => {
 			const fileNames = glob.sync(
-				`./src/components/**/${Component.displayName}/examples/*.jsx`
+				`./src/components/**/${Component.displayName}/examples/*.*sx`
 			);
 			_.each(fileNames, path => {
 				const Example = require('../../' + path).default;

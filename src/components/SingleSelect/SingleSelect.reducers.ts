@@ -2,7 +2,7 @@ import _ from 'lodash';
 import * as DropMenu from '../DropMenu/DropMenu.reducers';
 import {
 	ISingleSelectState,
-	ISingleSelectOptionGroupState,
+	//ISingleSelectOptionGroupState,
 } from './SingleSelect';
 
 export function onSelect(

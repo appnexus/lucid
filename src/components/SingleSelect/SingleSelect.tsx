@@ -17,14 +17,14 @@ import * as reducers from './SingleSelect.reducers';
 import {
 	IDropMenuProps,
 	IDropMenuState,
-	OptionGroupFC,
+	//OptionGroupFC,
 	IDropMenuOptionProps,
 	IDropMenuOptionGroupProps,
-	IOptionsData,
+	//IOptionsData,
 	DropMenuDumb as DropMenu,
 } from '../DropMenu/DropMenu';
 import ChevronIcon from '../Icon/ChevronIcon/ChevronIcon';
-import { propsSearch } from '../../util/text-manipulation';
+//import { propsSearch } from '../../util/text-manipulation';
 
 const cx = lucidClassNames.bind('&-SingleSelect');
 
@@ -141,7 +141,7 @@ interface ISingleSelectPropsRaw extends StandardProps {
 
 	isInvisible: boolean;
 
-	selectedIndex: number;
+	selectedIndex: number | null;
 
 	DropMenu: IDropMenuProps;
 
@@ -164,10 +164,17 @@ export type ISingleSelectProps = Overwrite<
 	ISingleSelectPropsRaw
 >;
 
-export interface ISingleSelectState {
-	selectedIndex: number;
-	DropMenu: object;
+export interface ISingleSelectState extends IDropMenuState {
+	selectedIndex: number | null;
+	DropMenu: IDropMenuState;
 }
+
+// export interface ISingleSelectOptionGroupState {
+// 	optionGroups: OptionGroupFC[];
+// 	flattenedOptionsData: IOptionsData[];
+// 	ungroupedOptionData: IOptionsData[];
+// 	optionGroupDataLookup: { [key: number]: OptionGroupFC[] };
+// }
 
 //TODO: IDropMenuOptionProps delete when the import works
 // interface IDropMenuOptionProps extends StandardProps {
@@ -185,13 +192,6 @@ export interface ISingleSelectState {
 // 	optionProps: IDropMenuOptionProps;
 // }
 
-export interface ISingleSelectOptionGroupState {
-	optionGroups: OptionGroupFC[];
-	flattenedOptionsData: IOptionsData[];
-	ungroupedOptionData: IOptionsData[];
-	optionGroupDataLookup: { [key: number]: OptionGroupFC[] };
-}
-
 const defaultProps = {
 	hasReset: true,
 	isSelectionHighlighted: true,
@@ -203,8 +203,8 @@ const defaultProps = {
 
 class SingleSelect extends React.Component<
 	ISingleSelectProps,
-	ISingleSelectState,
-	ISingleSelectOptionGroupState
+	ISingleSelectState
+	//ISingleSelectOptionGroupState
 > {
 	static displayName = 'SingleSelect';
 
@@ -384,7 +384,7 @@ class SingleSelect extends React.Component<
 			<DropMenu
 				{...dropMenuProps}
 				isDisabled={isDisabled}
-				selectedIndices={isItemSelected ? [selectedIndex] : []}
+				selectedIndices={isItemSelected ? [selectedIndex as number] : []}
 				className={cx('&', className)}
 				onSelect={onSelect}
 				style={style}
@@ -417,11 +417,13 @@ class SingleSelect extends React.Component<
 							{isItemSelected
 								? _.get(
 										getFirst(
-											flattenedOptionsData[selectedIndex].optionProps,
+											flattenedOptionsData[selectedIndex as number].optionProps,
 											SingleSelect.Option.Selected
 										),
 										'props.children'
-								  ) || flattenedOptionsData[selectedIndex].optionProps.children
+								  ) ||
+								  flattenedOptionsData[selectedIndex as number].optionProps
+										.children
 								: placeholder}
 						</span>
 
