@@ -46,9 +46,7 @@ Tab.propTypes = {
 };
 
 /** Vertical Tabs Title Child Component */
-interface IVerticalTabsTitleProps extends StandardProps {}
-
-const Title = (_props: IVerticalTabsTitleProps): null => null;
+const Title = (_props: StandardProps): null => null;
 
 Title.displayName = 'VerticalTabs.Title';
 Title.peek = {
@@ -68,7 +66,7 @@ interface IVerticalTabsPropsRaw extends StandardProps {
 
 	/** Indicates which of the \`VerticalTabs.Tab\` children is currently
     selected */
-	selectedIndex?: number;
+	selectedIndex: number;
 
 	/** Callback fired when the user selects a \`VerticalListMenu.Item\`.*/
 	onSelect: (
@@ -126,21 +124,14 @@ class VerticalTabs extends React.Component<
 	static Title = Title;
 
 	// For backward compatibility with buildHybridComponent
-	static definition = {
-		statics: {
-			reducers,
-			Tab,
-			Title,
-			peek: {
-				description: `
+	static peek: {
+		description: `
                 \`VerticalTabs\` provides vertically tabbed navigation. It has a
                 flexible interface that allows tab content to be passed as regular
                 React children or through props.
-            `,
-				categories: ['navigation'],
-				madeFrom: ['VerticalListMenu'],
-			},
-		},
+            `;
+		categories: ['navigation'];
+		madeFrom: ['VerticalListMenu'];
 	};
 
 	render(): React.ReactNode {
@@ -167,9 +158,7 @@ class VerticalTabs extends React.Component<
 				className={cx('&', className)}
 			>
 				<VerticalListMenu
-					selectedIndices={[
-						_.isUndefined(actualSelectedIndex) ? 0 : actualSelectedIndex,
-					]}
+					selectedIndices={[actualSelectedIndex]}
 					onSelect={onSelect}
 				>
 					{_.map(tabChildProps, (tabChildProp, index) => (
@@ -190,10 +179,7 @@ class VerticalTabs extends React.Component<
 					))}
 				</VerticalListMenu>
 				<div className={cx('&-content')}>
-					{_.get(tabChildProps, [
-						_.isUndefined(actualSelectedIndex) ? 0 : actualSelectedIndex,
-						'children',
-					])}
+					{_.get(tabChildProps, [actualSelectedIndex, 'children'])}
 				</div>
 			</div>
 		);
