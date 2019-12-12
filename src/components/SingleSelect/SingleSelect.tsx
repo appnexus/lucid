@@ -8,9 +8,7 @@ import {
 	Overwrite,
 	StandardProps,
 } from '../../util/component-types';
-import {
-	buildModernHybridComponent,
-} from '../../util/state-management';
+import { buildModernHybridComponent } from '../../util/state-management';
 import * as reducers from './SingleSelect.reducers';
 import {
 	IDropMenuProps,
@@ -72,6 +70,7 @@ Selected.peek = {
 	`,
 };
 Selected.propName = 'Selected';
+Selected.propTypes = {};
 
 const Option = (_props: IDropMenuOptionProps): null => null;
 
