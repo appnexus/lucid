@@ -48,7 +48,7 @@ const isPrivate = component =>
 
 const getExamplesFromContext = (reqExamples, rawContext) => 
 	_.map(loadAllKeys(reqExamples, rawContext), ({ key, module, raw }) => ({
-		name: _.join(_.reject(_.words(key), w => /^(\d+)|^(j|t)sx?$/.test(w)), ' '),
+		name: _.join(_.reject(_.words(key), w => /^(\d+|[tj]sx?)$/.test(w)), ' '),
 		Example: getDefaultExport(module),
 		exampleNotes: module.notes,
 		source: raw,
@@ -163,9 +163,9 @@ ${
 	exampleNotes
 		? `
 ---
-	
+
 ### Example Notes
-	
+
 ${exampleNotes}
 `
 		: ''
@@ -223,7 +223,12 @@ const addStories = (components, separator, categoryOverride) => {
 
 	_.forEach(
 		components,
-		({ name: componentName, component, examplesContext, examplesContextRaw }) => {
+		({
+			name: componentName,
+			component,
+			examplesContext,
+			examplesContextRaw,
+		}) => {
 			const examples = getExamplesFromContext(
 				examplesContext,
 				examplesContextRaw
@@ -239,8 +244,8 @@ const addStories = (components, separator, categoryOverride) => {
 
 			const category =
 				categoryOverride ||
-				_.has(componentRef, 'peek.categories') &&
-				stripIndent(componentRef.peek.categories[0]);
+				(_.has(componentRef, 'peek.categories') &&
+					stripIndent(componentRef.peek.categories[0]));
 
 			_.forEach(examples, ({ name, Example, exampleNotes, source }) => {
 				storiesOfAddSequence.push([
@@ -270,9 +275,9 @@ const addStories = (components, separator, categoryOverride) => {
 	);
 
 	_.forEach(_.sortBy(storiesOfAddSequence, _.property('0')), ([, addStory]) =>
-			addStory()
+		addStory()
 	);
-}
+};
 
 const loadedComponents = require('./load-components');
 const filteredComponents = _.reject(loadedComponents, ({ component }) =>
@@ -288,80 +293,77 @@ const filteredIcons = _.reject(loadedIcons, ({ component }) =>
 
 storiesOf('Icons', module)
 	.addParameters({ options: articlePageOptions })
-	.add(
-		'Overview',
-		() => (
-			<ArticlePage>
-				<h1>Icons</h1>
-				<section style={{ margin: '10px 0' }}>
-					<h2>Color Variations</h2>
-					<div
-						style={{
-							display: 'inline-flex',
-							backgroundImage:
-								'linear-gradient(45deg, #d3d1d1 25%, transparent 25%), linear-gradient(-45deg, #d3d1d1 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #d3d1d1 75%), linear-gradient(-45deg, transparent 75%, #d3d1d1 75%)',
-							backgroundSize: '4px 4px',
-							backgroundPosition: '0 0, 0 10px, 10px -10px, -10px 0px',
-						}}
-					>
-						{_.map(
-							[
-								'neutral-dark',
-								'neutral-light',
-								'primary',
-								'white',
-								'success',
-								'warning',
-								'secondary-one',
-								'secondary-two',
-								'secondary-three',
-							],
-							color => {
-								const Icon = _.head(filteredIcons).component;
-								return (
-									<div
-										style={{
-											padding: '5px',
-											marginRight: '20px',
-											display: 'flex',
-											flexDirection: 'column',
-											alignItems: 'center',
-										}}
-									>
-										<Icon size={32} color={color} isClickable />
-										<div>{color}</div>
-									</div>
-								);
-							}
-						)}
-					</div>
-				</section>
-				<section style={{ margin: '10px 0' }}>
-					<h2>Available Icons</h2>
-					<div
-						style={{
-							display: 'flex',
-							flexWrap: 'wrap',
-						}}
-					>
-						{_.map(filteredIcons, ({ name, component: Icon }) => (
-							<div
-								key={name}
-								style={{
-									flexBasis: 256,
-									margin: 10,
-								}}
-							>
-								<Icon />{' '}
-								<LinkTo style={styles.link} kind={`Icons|Icons/${name}`}>
-									{name}
-								</LinkTo>
-							</div>
-						))}
-					</div>
-				</section>
-			</ArticlePage>
-		)
-	);
+	.add('Overview', () => (
+		<ArticlePage>
+			<h1>Icons</h1>
+			<section style={{ margin: '10px 0' }}>
+				<h2>Color Variations</h2>
+				<div
+					style={{
+						display: 'inline-flex',
+						backgroundImage:
+							'linear-gradient(45deg, #d3d1d1 25%, transparent 25%), linear-gradient(-45deg, #d3d1d1 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #d3d1d1 75%), linear-gradient(-45deg, transparent 75%, #d3d1d1 75%)',
+						backgroundSize: '4px 4px',
+						backgroundPosition: '0 0, 0 10px, 10px -10px, -10px 0px',
+					}}
+				>
+					{_.map(
+						[
+							'neutral-dark',
+							'neutral-light',
+							'primary',
+							'white',
+							'success',
+							'warning',
+							'secondary-one',
+							'secondary-two',
+							'secondary-three',
+						],
+						color => {
+							const Icon = _.head(filteredIcons).component;
+							return (
+								<div
+									style={{
+										padding: '5px',
+										marginRight: '20px',
+										display: 'flex',
+										flexDirection: 'column',
+										alignItems: 'center',
+									}}
+								>
+									<Icon size={32} color={color} isClickable />
+									<div>{color}</div>
+								</div>
+							);
+						}
+					)}
+				</div>
+			</section>
+			<section style={{ margin: '10px 0' }}>
+				<h2>Available Icons</h2>
+				<div
+					style={{
+						display: 'flex',
+						flexWrap: 'wrap',
+					}}
+				>
+					{_.map(filteredIcons, ({ name, component: Icon }) => (
+						<div
+							key={name}
+							style={{
+								flexBasis: 256,
+								margin: 10,
+							}}
+						>
+							<Icon />{' '}
+							<LinkTo style={styles.link} kind={`Icons|Icons/${name}`}>
+								{name}
+							</LinkTo>
+						</div>
+					))}
+				</div>
+			</section>
+		</ArticlePage>
+	));
 
 addStories(filteredIcons, '/', 'Icons|Icons');
