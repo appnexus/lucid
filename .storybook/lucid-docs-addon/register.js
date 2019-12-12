@@ -158,16 +158,19 @@ function getName(title) {
 
 // Register the addon with a unique name.
 addons.register('lucid-docs', api => {
-	api.on(STORY_RENDERED, () => {
-		const storyData = api.getCurrentStoryData();
-		const name = getName(storyData.kind);
-		document.title = `${name} - Lucid UI`;
-	});
+	// Check here is necessary to be compatible with older versions of storybook.
+	if (api.on) {
+		api.on(STORY_RENDERED, () => {
+			const storyData = api.getCurrentStoryData();
+			const name = getName(storyData.kind);
+			document.title = `${name} - Lucid UI`;
+		});
 
-	api.on(DOCS_RENDERED, (title) => {
-		const name = getName(title);
-		document.title = `${name} - Lucid UI`;
-	});
+		api.on(DOCS_RENDERED, title => {
+			const name = getName(title);
+			document.title = `${name} - Lucid UI`;
+		});
+	}
 
 	// Also need to set a unique name to the panel.
 	addons.addPanel('lucid-docs-panel-props', {
