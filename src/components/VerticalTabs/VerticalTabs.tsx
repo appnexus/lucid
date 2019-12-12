@@ -122,8 +122,6 @@ class VerticalTabs extends React.Component<
 	static reducers = reducers;
 	static Tab = Tab;
 	static Title = Title;
-
-	// For backward compatibility with buildHybridComponent
 	static peek: {
 		description: `
                 \`VerticalTabs\` provides vertically tabbed navigation. It has a
