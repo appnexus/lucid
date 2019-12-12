@@ -17,11 +17,6 @@ export default createClass({
 				<SearchableSingleSelect isDisabled={true}>
 					<Option>Alabama</Option>
 				</SearchableSingleSelect>
-
-				<h5>Invalid</h5>
-				<SearchableSingleSelect isValid={false}>
-					<Option>Alabama</Option>
-				</SearchableSingleSelect>
 			</section>
 		);
 	},
