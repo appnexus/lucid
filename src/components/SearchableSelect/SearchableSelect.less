@@ -40,6 +40,11 @@
 			}
 		}
 
+
+		&-is-error {
+			border-color: @featured-color-danger;
+		}
+
 		&::before {
 			border-radius: @size-borderRadius;
 		}
@@ -65,10 +70,6 @@
 			.opacity(@opacity-disabled);
 
 			cursor: not-allowed;
-		}
-
-		&-is-invalid {
-			border-color: @featured-color-danger;
 		}
 	}
 
@@ -133,6 +134,12 @@
 	&-noresults {
 		color: @color-disabledText;
 		font-style: italic;
+	}
+
+	&-error-content {
+		margin-top: @size-XXS;
+		color: @featured-color-danger;
+		font-size: @fontSize * 0.9;
 	}
 }
 

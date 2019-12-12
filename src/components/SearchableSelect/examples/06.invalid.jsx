@@ -7,22 +7,20 @@ const { Placeholder, Option, OptionGroup } = SearchableSelect;
 export default createClass({
 	getInitialState() {
 		return {
-            selectedIndex: null,
-            isValid: false
+            selectedIndex: null
 		};
 	},
 
 	handleSelect(optionIndex) {
 		this.setState({
-            selectedIndex: optionIndex,
-            isValid: true
+            selectedIndex: optionIndex
 		});
 	},
 
 	render() {
 		return (
 			<section style={{ marginBottom: '20px' }}>
-				<SearchableSelect onSelect={this.handleSelect} isValid={this.state.isValid} maxMenuHeight='200'>
+				<SearchableSelect onSelect={this.handleSelect} Error={this.state.selectedIndex === 0 ? null : 'Please choose option California'} maxMenuHeight='200'>
 					<Placeholder>Select State</Placeholder>
 					<Option value='AK'>Alaska</Option>
 					<Option value='HI'>Hawaii</Option>
