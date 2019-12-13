@@ -122,14 +122,14 @@ class VerticalTabs extends React.Component<
 	static reducers = reducers;
 	static Tab = Tab;
 	static Title = Title;
-	static peek: {
+	static peek = {
 		description: `
-                \`VerticalTabs\` provides vertically tabbed navigation. It has a
+				\`VerticalTabs\` provides vertically tabbed navigation. It has a
                 flexible interface that allows tab content to be passed as regular
                 React children or through props.
-            `;
-		categories: ['navigation'];
-		madeFrom: ['VerticalListMenu'];
+            `,
+		categories: ['navigation'],
+		madeFrom: ['VerticalListMenu'],
 	};
 
 	render(): React.ReactNode {
