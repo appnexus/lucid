@@ -34,7 +34,7 @@ export interface ILegendProps
 	Item?: React.ReactNode;
 
 	/** Determines if the legend is vertical or horizontal */
-	orient?: string;
+	orient?: 'vertical' | 'horizontal';
 
 	/** Determines if the legend has borders */
 	hasBorders?: boolean;
