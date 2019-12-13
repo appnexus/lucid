@@ -425,10 +425,12 @@ const SearchableSelect = createClass({
 		const isItemSelected = _.isNumber(selectedIndex);
 
 		return (
-			<div Error={errorChildProps}>
+			<div Error={errorChildProps}
+				className={cx('&', className)}
+				style={style}
+			>
 				<DropMenu
 					{...dropMenuProps}
-					className={cx('&', className)}
 					optionContainerStyle={_.assign(
 						{},
 						optionContainerStyle,
@@ -437,7 +439,7 @@ const SearchableSelect = createClass({
 					isDisabled={isDisabled}
 					onSelect={onSelect}
 					selectedIndices={isItemSelected ? [selectedIndex] : []}
-					style={style}
+
 				>
 					<DropMenu.Control>
 						<div

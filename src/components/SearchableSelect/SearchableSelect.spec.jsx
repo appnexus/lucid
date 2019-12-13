@@ -388,7 +388,7 @@ describe('SearchableSelect', () => {
 					</SearchableSelect>
 				);
 
-				const dropMenuHeader = wrapper.childAt(1);
+				const dropMenuHeader = wrapper.childAt(0).childAt(1);
 				const searchFieldWrapper = dropMenuHeader.childAt(0);
 
 				assert.equal(searchFieldWrapper.prop('placeholder'), 'custom');

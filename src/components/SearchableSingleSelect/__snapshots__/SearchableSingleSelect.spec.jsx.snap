@@ -2,6 +2,11 @@
 
 exports[`SearchableSingleSelect [common] example testing should match snapshot(s) for 01.basic 1`] = `
 <div
+  Error={
+    Object {
+      "children": null,
+    }
+  }
   className="lucid-SearchableSingleSelect"
   style={
     Object {
@@ -441,6 +446,11 @@ exports[`SearchableSingleSelect [common] example testing should match snapshot(s
 
 exports[`SearchableSingleSelect [common] example testing should match snapshot(s) for 02.props 1`] = `
 <div
+  Error={
+    Object {
+      "children": null,
+    }
+  }
   className="lucid-SearchableSingleSelect"
 >
   <DropMenu
@@ -516,6 +526,11 @@ exports[`SearchableSingleSelect [common] example testing should match snapshot(s
 
 exports[`SearchableSingleSelect [common] example testing should match snapshot(s) for 02.props 2`] = `
 <div
+  Error={
+    Object {
+      "children": null,
+    }
+  }
   className="lucid-SearchableSingleSelect"
 >
   <DropMenu
@@ -573,6 +588,11 @@ exports[`SearchableSingleSelect [common] example testing should match snapshot(s
 
 exports[`SearchableSingleSelect [common] example testing should match snapshot(s) for 03.asynchronous 1`] = `
 <div
+  Error={
+    Object {
+      "children": null,
+    }
+  }
   className="lucid-SearchableSingleSelect"
   hasSelections={false}
 >
@@ -624,6 +644,11 @@ exports[`SearchableSingleSelect [common] example testing should match snapshot(s
 
 exports[`SearchableSingleSelect [common] example testing should match snapshot(s) for 04.grouped-options 1`] = `
 <div
+  Error={
+    Object {
+      "children": null,
+    }
+  }
   className="lucid-SearchableSingleSelect"
 >
   <DropMenu
@@ -1248,6 +1273,11 @@ exports[`SearchableSingleSelect [common] example testing should match snapshot(s
 
 exports[`SearchableSingleSelect [common] example testing should match snapshot(s) for 05.selected-option 1`] = `
 <div
+  Error={
+    Object {
+      "children": null,
+    }
+  }
   className="lucid-SearchableSingleSelect"
 >
   <DropMenu
@@ -1320,8 +1350,96 @@ exports[`SearchableSingleSelect [common] example testing should match snapshot(s
 </div>
 `;
 
+exports[`SearchableSingleSelect [common] example testing should match snapshot(s) for 06.invalid-option 1`] = `
+<div
+  Error={
+    Object {
+      "children": "Please Choose Green",
+    }
+  }
+  className="lucid-SearchableSingleSelect"
+>
+  <DropMenu
+    ContextMenu={
+      Object {
+        "alignmentOffset": -13,
+        "directonOffset": -1,
+        "minWidthOffset": -28,
+      }
+    }
+    alignment="start"
+    className="lucid-SearchableSingleSelect-DropMenu lucid-SearchableSingleSelect-DropMenu-is-small"
+    direction="down"
+    flyOutStyle={
+      Object {
+        "maxHeight": "18em",
+      }
+    }
+    focusedIndex={null}
+    isDisabled={false}
+    isExpanded={false}
+    onCollapse={[Function]}
+    onExpand={[Function]}
+    onFocusNext={[Function]}
+    onFocusOption={[Function]}
+    onFocusPrev={[Function]}
+    onSelect={[Function]}
+    optionContainerStyle={Object {}}
+    portalId=""
+    selectedIndices={null}
+  >
+    <DropMenu.Control>
+      <SearchField
+        autoComplete="off"
+        className="lucid-SearchableSingleSelect-search lucid-SearchableSingleSelect-search-is-error"
+        debounceLevel={500}
+        isDisabled={false}
+        onChange={[Function]}
+        onChangeDebounced={[Function]}
+        onSubmit={[Function]}
+        value=""
+      />
+    </DropMenu.Control>
+    <DropMenu.Option
+      isDisabled={false}
+      isHidden={false}
+      isWrapped={true}
+      key="SearchableSingleSelectOption0"
+    >
+      Red
+    </DropMenu.Option>
+    <DropMenu.Option
+      isDisabled={false}
+      isHidden={false}
+      isWrapped={true}
+      key="SearchableSingleSelectOption1"
+    >
+      Blue
+    </DropMenu.Option>
+    <DropMenu.Option
+      isDisabled={false}
+      isHidden={false}
+      isWrapped={true}
+      key="SearchableSingleSelectOption2"
+    >
+      Green
+    </DropMenu.Option>
+  </DropMenu>
+  <div
+    className="lucid-SearchableSingleSelect-error-content"
+  >
+    Please Choose Green
+  </div>
+</div>
+`;
+
 exports[`SearchableSingleSelect custom formatting should render Option child function by passing in {searchText}, setting filterText on each option and using a custom optionFilter 1`] = `
 <div
+  Error={
+    Object {
+      "children": null,
+    }
+  }
   className="lucid-SearchableSingleSelect"
 >
   <DropMenu
