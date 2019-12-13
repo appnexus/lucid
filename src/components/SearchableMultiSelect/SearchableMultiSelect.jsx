@@ -17,6 +17,8 @@ import { DropMenuDumb as DropMenu } from '../DropMenu/DropMenu';
 import LoadingIcon from '../Icon/LoadingIcon/LoadingIcon';
 import CheckboxLabeled from '../CheckboxLabeled/CheckboxLabeled';
 import Selection from '../Selection/Selection';
+import { Validation } from '../Validation/Validation';
+
 
 import * as reducers from './SearchableMultiSelect.reducers';
 
@@ -167,10 +169,6 @@ const SearchableMultiSelect = createClass({
 			Displays a LoadingIcon to allow for asynchronous loading of options.
 		`,
 
-		isValid: bool`
-			Applies warning color styling to the control if the value is \`false\`.
-		`,
-
 		maxMenuHeight: oneOfType([number, string])`
 			The max height of the fly-out menu.
 		`,
@@ -243,6 +241,14 @@ const SearchableMultiSelect = createClass({
 		hasSelectAll: bool`
 			Controls whether to show a "Select All" option.
 		`,
+
+		Error: any`
+			In most cases this will be a string, but it also accepts any valid React
+			element. If this is a falsey value, then no error message will be
+			displayed.  If this is the literal \`true\`, it will add the
+			\`-is-error\` class to the wrapper div, but not render the
+			\`-error-content\` \`div\`.
+		`
 	},
 
 	getInitialState() {
@@ -258,7 +264,6 @@ const SearchableMultiSelect = createClass({
 		return {
 			isDisabled: false,
 			isLoading: false,
-			isValid: true,
 			onRemoveAll: _.noop,
 			optionFilter: propsSearch,
 			searchText: '',
@@ -268,6 +273,7 @@ const SearchableMultiSelect = createClass({
 			hasRemoveAll: true,
 			hasSelections: true,
 			hasSelectAll: false,
+			Error: null
 		};
 	},
 
@@ -515,7 +521,6 @@ const SearchableMultiSelect = createClass({
 				className,
 				isLoading,
 				isDisabled,
-				isValid,
 				maxMenuHeight,
 				selectedIndices,
 				DropMenu: dropMenuProps,
@@ -539,6 +544,9 @@ const SearchableMultiSelect = createClass({
 			'props',
 			{}
 		);
+		const errorChildProps = _.first(
+			_.map(findTypes(props, Validation.Error), 'props')
+		);
 		const selectionLabel = getFirst(
 			props,
 			SearchableMultiSelect.SelectionLabel
@@ -553,6 +561,7 @@ const SearchableMultiSelect = createClass({
 			<div
 				{...omitProps(passThroughs, SearchableMultiSelect)}
 				className={cx('&', className)}
+				Error={errorChildProps}
 			>
 				<DropMenu
 					{...dropMenuProps}
@@ -586,7 +595,7 @@ const SearchableMultiSelect = createClass({
 								'&-search',
 								{
 									'&-search-is-small': isSmall,
-									'&-search-is-invalid': !isValid
+									'&-search-is-error': errorChildProps && errorChildProps.children && errorChildProps.children !== true
 								},
 								searchFieldProps.className
 							)}
@@ -729,6 +738,16 @@ const SearchableMultiSelect = createClass({
 						})}
 					</Selection>
 				) : null}
+				{errorChildProps &&
+					errorChildProps.children &&
+					errorChildProps.children !== true ? (
+						<div
+							{...omitProps(errorChildProps, undefined)}
+							className={cx('&-error-content')}
+						>
+							{errorChildProps.children}
+						</div>
+					) : null}
 			</div>
 		);
 	},

@@ -33,7 +33,7 @@
 			}
 		}
 
-		&-is-invalid {
+		&-is-error {
 			.@{prefix}-TextField {
 				border: 2px solid @featured-color-danger;
 				border-radius: @size-standard-height / 2;
@@ -82,6 +82,12 @@
 
 	&-Option-select-all {
 		border-bottom: 1px solid @color-borderColorLight;
+	}
+
+	&-error-content {
+		margin-top: @size-XXS;
+		color: @featured-color-danger;
+		font-size: @fontSize * 0.9;
 	}
 }
 
