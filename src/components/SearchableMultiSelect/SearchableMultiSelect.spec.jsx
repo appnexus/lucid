@@ -233,6 +233,34 @@ describe('SearchableMultiSelect', () => {
 				expect(onSelect).toHaveBeenCalledWith([1]);
 			});
 		});
+
+		describe('Error', () => {
+			it('should apply the appropriate classNames to the saerch', () => {
+				const wrapper = shallow(
+					<SearchableMultiSelect Error={'Erroring out'}>
+						<Option>option a</Option>
+						<Option>option b</Option>
+					</SearchableMultiSelect>
+				);
+
+				const searchWrapper = wrapper.find('.lucid-SearchableMultiSelect-search-is-error');
+
+				expect(searchWrapper).toBeTruthy();
+			});
+
+			it('should render out the error div', () => {
+				const wrapper = shallow(
+					<SearchableMultiSelect Error={'Erroring out'}>
+						<Option>option a</Option>
+						<Option>option b</Option>
+					</SearchableMultiSelect>
+				);
+
+				const searchWrapper = wrapper.find('.lucid-SearchableMultiSelect-error-content');
+
+				expect(searchWrapper.text()).toEqual('Erroring out');
+			});
+		})
 	});
 
 	describe('custom formatting', () => {
