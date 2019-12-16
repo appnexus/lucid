@@ -1,5 +1,5 @@
 import assert from 'assert';
-import * as reducers from './Accordion.reducers.ts';
+import * as reducers from './Accordion.reducers';
 
 describe('Accordion reducers', () => {
 	it('onSelect should set selectedIndex properly', () => {

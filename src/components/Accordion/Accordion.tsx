@@ -3,9 +3,7 @@ import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import { buildModernHybridComponent } from '../../util/state-management';
-import {
-	ExpanderPanelDumb as ExpanderPanel,
-} from '../ExpanderPanel/ExpanderPanel';
+import { ExpanderPanelDumb as ExpanderPanel } from '../ExpanderPanel/ExpanderPanel';
 import {
 	findTypes,
 	omitProps,
@@ -47,44 +45,45 @@ const defaultProps = {
 };
 
 const Accordion = (props: IAccordionProps) => {
-		const { style, className, selectedIndex, ...passThroughs } = props;
+	const { style, className, selectedIndex, ...passThroughs } = props;
 
-		const itemChildProps = _.map(
-			findTypes(props, Accordion.Item),
-			'props'
-		);
+	const itemChildProps = _.map(findTypes(props, Accordion.Item), 'props');
 
-		const handleToggle = (isExpanded: boolean, index: number, event: React.MouseEvent) => {
-			const selectedIndex = isExpanded ? index : null;
+	const handleToggle = (
+		isExpanded: boolean,
+		index: number,
+		event: React.MouseEvent
+	) => {
+		const selectedIndex = isExpanded ? index : null;
 
-			props.onSelect(selectedIndex, {
-				event,
-				props,
-			});
-		}
+		props.onSelect(selectedIndex, {
+			event,
+			props,
+		});
+	};
 
-		return (
-			<div
-				{...omitProps(passThroughs, undefined, _.keys(Accordion.propTypes))}
-				className={cx('&', className)}
-				style={style}
-			>
-				{_.map(itemChildProps, (itemChildProp, index: number) => {
-					return (
-						<ExpanderPanel
-							key={index}
-							{...itemChildProp}
-							className={cx('&-Item', itemChildProp.className)}
-							onToggle={(isExpanded, { event }) =>
-								handleToggle(isExpanded, index, event)
-							}
-							isExpanded={!itemChildProp.isDisabled && selectedIndex === index}
-						/>
-					);
-				})}
-			</div>
-		);
-}
+	return (
+		<div
+			{...omitProps(passThroughs, undefined, _.keys(Accordion.propTypes))}
+			className={cx('&', className)}
+			style={style}
+		>
+			{_.map(itemChildProps, (itemChildProp, index: number) => {
+				return (
+					<ExpanderPanel
+						key={index}
+						{...itemChildProp}
+						className={cx('&-Item', itemChildProp.className)}
+						onToggle={(isExpanded, { event }) =>
+							handleToggle(isExpanded, index, event)
+						}
+						isExpanded={!itemChildProp.isDisabled && selectedIndex === index}
+					/>
+				);
+			})}
+		</div>
+	);
+};
 
 Accordion.displayName = 'Accordion';
 
@@ -105,12 +104,12 @@ Accordion.propTypes = {
 
 Accordion.peek = {
 	description: `
-		This is a container that renders panels and controls its
-		expansion/retraction.
+		Accordion is a container that renders panels and controls their
+		expansion or collapse.
 	`,
 	categories: ['layout'],
 	madeFrom: ['ExpanderPanel'],
-}
+};
 
 Accordion.defaultProps = defaultProps;
 
@@ -121,7 +120,7 @@ Accordion.Item = ExpanderPanel;
 Accordion.Header = ExpanderPanel.Header;
 
 export default buildModernHybridComponent<
-	IAccordionProps, 
+	IAccordionProps,
 	IAccordionState,
 	typeof Accordion
 >(Accordion, { reducers });
