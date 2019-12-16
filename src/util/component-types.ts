@@ -16,6 +16,8 @@ export interface StandardProps {
 	children?: React.ReactNode;
 	/** Styles that are passed through to native control. */
 	style?: React.CSSProperties;
+
+	callbackId?: string;
 }
 
 // Like `T & U`, but where there are overlapping properties using the type from U only.
@@ -52,8 +54,7 @@ type TypesType<P> =
 	| { propName?: string | string[] }
 	| any; // TODO: figure out a type that works with inferred functional components
 
-interface ICreateClassComponentSpec<P, S>
-	extends React.Mixin<P, S> {
+interface ICreateClassComponentSpec<P, S> extends React.Mixin<P, S> {
 	_isPrivate?: boolean;
 	initialState?: S;
 	propName?: string | string[];

@@ -818,12 +818,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Selection/examples',
 			true,
-			/\.jsx?$/
+			/\.tsx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Selection/examples',
 			true,
-			/\.jsx?$/
+			/\.tsx?$/
 		),
 	},
 	{
