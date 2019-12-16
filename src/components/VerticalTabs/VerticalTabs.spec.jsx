@@ -12,6 +12,20 @@ describe('VerticalTabs', () => {
 		exemptChildComponents: ['Tab', 'Title'],
 	});
 
+	describe('render', () => {
+		it('should render', () => {
+			const wrapper = shallow(
+				<VerticalTabs>
+					<VerticalTabs.Tab>
+						<VerticalTabs.Title>One</VerticalTabs.Title>
+						One content
+					</VerticalTabs.Tab>
+				</VerticalTabs>
+			);
+			expect(wrapper).toMatchSnapshot();
+		});
+	});
+
 	describe('props', () => {
 		it('Tab as children', () => {
 			const wrapper = shallow(

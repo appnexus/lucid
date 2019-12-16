@@ -9,7 +9,7 @@ import { AccordionDumb as Accordion } from './Accordion';
 import { ExpanderPanelDumb as ExpanderPanel } from '../ExpanderPanel/ExpanderPanel';
 
 describe('Accordion', () => {
-	common(Accordion);
+	common(Accordion, { exemptChildComponents: ['Header'] });
 
 	describe('props', () => {
 		describe('Item', () => {

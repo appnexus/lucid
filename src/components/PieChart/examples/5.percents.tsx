@@ -21,7 +21,7 @@ export default createClass({
 			<div>
 				<PieChart
 					data={data}
-					yAxisFormatter={value => {
+					yAxisFormatter={(value: number) => {
 						return `${((value / total) * 100).toFixed(1)}%`;
 					}}
 				/>

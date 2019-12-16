@@ -121,8 +121,10 @@ import FlagIcon from './components/Icon/FlagIcon/FlagIcon';
 import FolderIcon from './components/Icon/FolderIcon/FolderIcon';
 // @ts-ignore: not converted yet
 import FourSquaresIcon from './components/Icon/FourSquaresIcon/FourSquaresIcon';
+import GetMaximumIcon from './components/Icon/GetMaximumIcon/GetMaximumIcon';
 import Grid from './components/Grid/Grid';
 import HelpIcon from './components/Icon/HelpIcon/HelpIcon';
+import HideIcon from './components/Icon/HideIcon/HideIcon';
 import HomeIcon from './components/Icon/HomeIcon/HomeIcon';
 import Icon from './components/Icon/Icon';
 // @ts-ignore: not converted yet
@@ -169,6 +171,7 @@ import RefreshIcon from './components/Icon/RefreshIcon/RefreshIcon';
 import DraggableList from './components/DraggableList/DraggableList';
 import ResizeIcon from './components/Icon/ResizeIcon/ResizeIcon';
 import Resizer from './components/Resizer/Resizer';
+import SaveIcon from './components/Icon/SaveIcon/SaveIcon';
 // @ts-ignore: not converted yet
 import ScrollTable from './components/ScrollTable/ScrollTable';
 import SearchIcon from './components/Icon/SearchIcon/SearchIcon';
@@ -302,8 +305,10 @@ export {
 	FlagIcon,
 	FolderIcon,
 	FourSquaresIcon,
+	GetMaximumIcon,
 	Grid,
 	HelpIcon,
+	HideIcon,
 	HomeIcon,
 	Icon,
 	IconSelect,
@@ -348,6 +353,7 @@ export {
 	DraggableList,
 	ResizeIcon,
 	Resizer,
+	SaveIcon,
 	ScrollTable,
 	SearchableMultiSelect,
 	SearchableMultiSelectDumb,

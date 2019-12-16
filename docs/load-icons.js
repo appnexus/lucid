@@ -122,7 +122,7 @@ module.exports = [
 			'!!raw-loader!../src/components/Icon/BackUpArrowIcon/examples',
 			true,
 			/\.jsx?$/
-		)
+		),
 	},
 
 	{
@@ -568,6 +568,23 @@ module.exports = [
 	},
 
 	{
+		name: 'GetMaximumIcon',
+		component: getDefaultExport(
+			require('../src/components/Icon/GetMaximumIcon/GetMaximumIcon')
+		),
+		examplesContext: require.context(
+			'../src/components/Icon/GetMaximumIcon/examples',
+			true,
+			/\.jsx?$/
+		),
+		examplesContextRaw: require.context(
+			'!!raw-loader!../src/components/Icon/GetMaximumIcon/examples',
+			true,
+			/\.jsx?$/
+		),
+	},
+
+	{
 		name: 'HelpIcon',
 		component: getDefaultExport(
 			require('../src/components/Icon/HelpIcon/HelpIcon')
@@ -579,6 +596,23 @@ module.exports = [
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Icon/HelpIcon/examples',
+			true,
+			/\.jsx?$/
+		),
+	},
+
+	{
+		name: 'HideIcon',
+		component: getDefaultExport(
+			require('../src/components/Icon/HideIcon/HideIcon')
+		),
+		examplesContext: require.context(
+			'../src/components/Icon/HideIcon/examples',
+			true,
+			/\.jsx?$/
+		),
+		examplesContextRaw: require.context(
+			'!!raw-loader!../src/components/Icon/HideIcon/examples',
 			true,
 			/\.jsx?$/
 		),
@@ -885,6 +919,23 @@ module.exports = [
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Icon/ResizeIcon/examples',
+			true,
+			/\.jsx?$/
+		),
+	},
+
+	{
+		name: 'SaveIcon',
+		component: getDefaultExport(
+			require('../src/components/Icon/SaveIcon/SaveIcon')
+		),
+		examplesContext: require.context(
+			'../src/components/Icon/SaveIcon/examples',
+			true,
+			/\.jsx?$/
+		),
+		examplesContextRaw: require.context(
+			'!!raw-loader!../src/components/Icon/SaveIcon/examples',
 			true,
 			/\.jsx?$/
 		),
