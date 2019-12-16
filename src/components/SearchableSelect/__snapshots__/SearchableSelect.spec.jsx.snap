@@ -17,11 +17,6 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
         "portalId": null,
       }
     }
-    Error={
-      Object {
-        "children": null,
-      }
-    }
     alignment="start"
     direction="down"
     flyOutStyle={
@@ -838,11 +833,6 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
         "portalId": null,
       }
     }
-    Error={
-      Object {
-        "children": null,
-      }
-    }
     alignment="start"
     direction="down"
     flyOutStyle={
@@ -1402,11 +1392,6 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
         "portalId": null,
       }
     }
-    Error={
-      Object {
-        "children": null,
-      }
-    }
     alignment="start"
     direction="down"
     flyOutStyle={
@@ -1519,11 +1504,6 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
         "minWidthOffset": 0,
         "onClickOut": null,
         "portalId": null,
-      }
-    }
-    Error={
-      Object {
-        "children": null,
       }
     }
     alignment="start"
@@ -2342,11 +2322,6 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
         "portalId": null,
       }
     }
-    Error={
-      Object {
-        "children": null,
-      }
-    }
     alignment="start"
     direction="down"
     flyOutStyle={
@@ -2480,11 +2455,6 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
         "minWidthOffset": 0,
         "onClickOut": null,
         "portalId": null,
-      }
-    }
-    Error={
-      Object {
-        "children": "Please choose option California",
       }
     }
     alignment="start"
@@ -3308,11 +3278,6 @@ exports[`SearchableSelect child elements Option should render Option child funct
         "portalId": null,
       }
     }
-    Error={
-      Object {
-        "children": null,
-      }
-    }
     alignment="start"
     direction="down"
     flyOutStyle={
@@ -3422,11 +3387,6 @@ exports[`SearchableSelect child elements Option should render Option.Selected in
         "minWidthOffset": 0,
         "onClickOut": null,
         "portalId": null,
-      }
-    }
-    Error={
-      Object {
-        "children": null,
       }
     }
     alignment="start"

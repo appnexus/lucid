@@ -430,7 +430,6 @@ const SearchableSelect = createClass({
 				style={style}
 			>
 				<DropMenu
-					Error={errorChildProps}
 					{...dropMenuProps}
 					optionContainerStyle={_.assign(
 						{},

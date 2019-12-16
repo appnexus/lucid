@@ -563,7 +563,6 @@ const SearchableMultiSelect = createClass({
 				className={cx('&', className)}
 			>
 				<DropMenu
-					Error={errorChildProps}
 					{...dropMenuProps}
 					selectedIndices={null}
 					className={cx(

@@ -405,7 +405,7 @@ const SearchableSingleSelect = createClass({
 			].optionProps;
 
 			return (
-				<div Error={errorChildProps}>
+				<div>
 					<div
 						{...omitProps(passThroughs, SearchableSingleSelect)}
 						className={cx('&', className)}

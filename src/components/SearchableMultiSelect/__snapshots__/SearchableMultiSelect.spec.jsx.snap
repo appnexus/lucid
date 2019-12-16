@@ -12,11 +12,6 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         "minWidthOffset": -28,
       }
     }
-    Error={
-      Object {
-        "children": null,
-      }
-    }
     alignment="start"
     className="lucid-SearchableMultiSelect-DropMenu"
     direction="down"
@@ -81,11 +76,6 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         "alignmentOffset": -13,
         "directonOffset": -1,
         "minWidthOffset": -28,
-      }
-    }
-    Error={
-      Object {
-        "children": null,
       }
     }
     alignment="start"
@@ -1527,11 +1517,6 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         "minWidthOffset": -28,
       }
     }
-    Error={
-      Object {
-        "children": null,
-      }
-    }
     alignment="start"
     className="lucid-SearchableMultiSelect-DropMenu"
     direction="down"
@@ -2749,11 +2734,6 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         "minWidthOffset": -28,
       }
     }
-    Error={
-      Object {
-        "children": null,
-      }
-    }
     alignment="start"
     className="lucid-SearchableMultiSelect-DropMenu"
     direction="down"
@@ -2917,11 +2897,6 @@ exports[`SearchableMultiSelect custom formatting should render Option child func
         "minWidthOffset": -28,
       }
     }
-    Error={
-      Object {
-        "children": null,
-      }
-    }
     alignment="start"
     className="lucid-SearchableMultiSelect-DropMenu"
     direction="down"
@@ -3051,11 +3026,6 @@ exports[`SearchableMultiSelect custom formatting should render Option.Selected i
         "alignmentOffset": -13,
         "directonOffset": -1,
         "minWidthOffset": -28,
-      }
-    }
-    Error={
-      Object {
-        "children": null,
       }
     }
     alignment="start"
@@ -3279,11 +3249,6 @@ exports[`SearchableMultiSelect custom formatting should render OptionGroup.Selec
         "alignmentOffset": -13,
         "directonOffset": -1,
         "minWidthOffset": -28,
-      }
-    }
-    Error={
-      Object {
-        "children": null,
       }
     }
     alignment="start"
