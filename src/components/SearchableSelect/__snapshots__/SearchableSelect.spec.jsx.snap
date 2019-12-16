@@ -2,11 +2,6 @@
 
 exports[`SearchableSelect [common] example testing should match snapshot(s) for 01.basic 1`] = `
 <div
-  Error={
-    Object {
-      "children": null,
-    }
-  }
   className="lucid-SearchableSelect"
 >
   <DropMenu
@@ -20,6 +15,11 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
         "minWidthOffset": 0,
         "onClickOut": null,
         "portalId": null,
+      }
+    }
+    Error={
+      Object {
+        "children": null,
       }
     }
     alignment="start"
@@ -823,11 +823,6 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
 
 exports[`SearchableSelect [common] example testing should match snapshot(s) for 02.loading 1`] = `
 <div
-  Error={
-    Object {
-      "children": null,
-    }
-  }
   className="lucid-SearchableSelect"
 >
   <DropMenu
@@ -841,6 +836,11 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
         "minWidthOffset": 0,
         "onClickOut": null,
         "portalId": null,
+      }
+    }
+    Error={
+      Object {
+        "children": null,
       }
     }
     alignment="start"
@@ -1387,11 +1387,6 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
 
 exports[`SearchableSelect [common] example testing should match snapshot(s) for 03.custom-search-placeholder 1`] = `
 <div
-  Error={
-    Object {
-      "children": null,
-    }
-  }
   className="lucid-SearchableSelect"
 >
   <DropMenu
@@ -1405,6 +1400,11 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
         "minWidthOffset": 0,
         "onClickOut": null,
         "portalId": null,
+      }
+    }
+    Error={
+      Object {
+        "children": null,
       }
     }
     alignment="start"
@@ -1506,11 +1506,6 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
 
 exports[`SearchableSelect [common] example testing should match snapshot(s) for 04.invisible 1`] = `
 <div
-  Error={
-    Object {
-      "children": null,
-    }
-  }
   className="lucid-SearchableSelect"
 >
   <DropMenu
@@ -1524,6 +1519,11 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
         "minWidthOffset": 0,
         "onClickOut": null,
         "portalId": null,
+      }
+    }
+    Error={
+      Object {
+        "children": null,
       }
     }
     alignment="start"
@@ -2327,11 +2327,6 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
 
 exports[`SearchableSelect [common] example testing should match snapshot(s) for 05.formatted-options 1`] = `
 <div
-  Error={
-    Object {
-      "children": null,
-    }
-  }
   className="lucid-SearchableSelect"
 >
   <DropMenu
@@ -2345,6 +2340,11 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
         "minWidthOffset": 0,
         "onClickOut": null,
         "portalId": null,
+      }
+    }
+    Error={
+      Object {
+        "children": null,
       }
     }
     alignment="start"
@@ -2467,11 +2467,6 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
 
 exports[`SearchableSelect [common] example testing should match snapshot(s) for 06.invalid 1`] = `
 <div
-  Error={
-    Object {
-      "children": "Please choose option California",
-    }
-  }
   className="lucid-SearchableSelect"
 >
   <DropMenu
@@ -2485,6 +2480,11 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
         "minWidthOffset": 0,
         "onClickOut": null,
         "portalId": null,
+      }
+    }
+    Error={
+      Object {
+        "children": "Please choose option California",
       }
     }
     alignment="start"
@@ -3293,11 +3293,6 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
 
 exports[`SearchableSelect child elements Option should render Option child function by passing in {searchText}, setting filterText on each option and using a custom optionFilter 1`] = `
 <div
-  Error={
-    Object {
-      "children": null,
-    }
-  }
   className="lucid-SearchableSelect"
 >
   <DropMenu
@@ -3311,6 +3306,11 @@ exports[`SearchableSelect child elements Option should render Option child funct
         "minWidthOffset": 0,
         "onClickOut": null,
         "portalId": null,
+      }
+    }
+    Error={
+      Object {
+        "children": null,
       }
     }
     alignment="start"
@@ -3409,11 +3409,6 @@ exports[`SearchableSelect child elements Option should render Option child funct
 
 exports[`SearchableSelect child elements Option should render Option.Selected in the Placeholder area 1`] = `
 <div
-  Error={
-    Object {
-      "children": null,
-    }
-  }
   className="lucid-SearchableSelect"
 >
   <DropMenu
@@ -3427,6 +3422,11 @@ exports[`SearchableSelect child elements Option should render Option.Selected in
         "minWidthOffset": 0,
         "onClickOut": null,
         "portalId": null,
+      }
+    }
+    Error={
+      Object {
+        "children": null,
       }
     }
     alignment="start"

@@ -2,11 +2,6 @@
 
 exports[`SearchableMultiSelect [common] example testing should match snapshot(s) for 03.asynchronous 1`] = `
 <div
-  Error={
-    Object {
-      "children": null,
-    }
-  }
   className="lucid-SearchableMultiSelect"
 >
   <DropMenu
@@ -15,6 +10,11 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         "alignmentOffset": -13,
         "directonOffset": -1,
         "minWidthOffset": -28,
+      }
+    }
+    Error={
+      Object {
+        "children": null,
       }
     }
     alignment="start"
@@ -73,11 +73,6 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
 
 exports[`SearchableMultiSelect [common] example testing should match snapshot(s) for 04.grouped-options 1`] = `
 <div
-  Error={
-    Object {
-      "children": null,
-    }
-  }
   className="lucid-SearchableMultiSelect"
 >
   <DropMenu
@@ -86,6 +81,11 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         "alignmentOffset": -13,
         "directonOffset": -1,
         "minWidthOffset": -28,
+      }
+    }
+    Error={
+      Object {
+        "children": null,
       }
     }
     alignment="start"
@@ -1517,11 +1517,6 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
 
 exports[`SearchableMultiSelect [common] example testing should match snapshot(s) for 05.custom-selection-label 1`] = `
 <div
-  Error={
-    Object {
-      "children": null,
-    }
-  }
   className="lucid-SearchableMultiSelect"
 >
   <DropMenu
@@ -1530,6 +1525,11 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         "alignmentOffset": -13,
         "directonOffset": -1,
         "minWidthOffset": -28,
+      }
+    }
+    Error={
+      Object {
+        "children": null,
       }
     }
     alignment="start"
@@ -2739,11 +2739,6 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
 
 exports[`SearchableMultiSelect [common] example testing should match snapshot(s) for 07.formatted-options 1`] = `
 <div
-  Error={
-    Object {
-      "children": null,
-    }
-  }
   className="lucid-SearchableMultiSelect"
 >
   <DropMenu
@@ -2752,6 +2747,11 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         "alignmentOffset": -13,
         "directonOffset": -1,
         "minWidthOffset": -28,
+      }
+    }
+    Error={
+      Object {
+        "children": null,
       }
     }
     alignment="start"
@@ -2907,11 +2907,6 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
 
 exports[`SearchableMultiSelect custom formatting should render Option child function by passing in {searchText}, setting filterText on each option and using a custom optionFilter 1`] = `
 <div
-  Error={
-    Object {
-      "children": null,
-    }
-  }
   className="lucid-SearchableMultiSelect"
 >
   <DropMenu
@@ -2920,6 +2915,11 @@ exports[`SearchableMultiSelect custom formatting should render Option child func
         "alignmentOffset": -13,
         "directonOffset": -1,
         "minWidthOffset": -28,
+      }
+    }
+    Error={
+      Object {
+        "children": null,
       }
     }
     alignment="start"
@@ -3043,11 +3043,6 @@ exports[`SearchableMultiSelect custom formatting should render Option child func
 
 exports[`SearchableMultiSelect custom formatting should render Option.Selected in the SelectedItems area 1`] = `
 <div
-  Error={
-    Object {
-      "children": null,
-    }
-  }
   className="lucid-SearchableMultiSelect"
 >
   <DropMenu
@@ -3056,6 +3051,11 @@ exports[`SearchableMultiSelect custom formatting should render Option.Selected i
         "alignmentOffset": -13,
         "directonOffset": -1,
         "minWidthOffset": -28,
+      }
+    }
+    Error={
+      Object {
+        "children": null,
       }
     }
     alignment="start"
@@ -3271,11 +3271,6 @@ exports[`SearchableMultiSelect custom formatting should render Option.Selected i
 
 exports[`SearchableMultiSelect custom formatting should render OptionGroup.Selected in the SelectedItems area 1`] = `
 <div
-  Error={
-    Object {
-      "children": null,
-    }
-  }
   className="lucid-SearchableMultiSelect"
 >
   <DropMenu
@@ -3284,6 +3279,11 @@ exports[`SearchableMultiSelect custom formatting should render OptionGroup.Selec
         "alignmentOffset": -13,
         "directonOffset": -1,
         "minWidthOffset": -28,
+      }
+    }
+    Error={
+      Object {
+        "children": null,
       }
     }
     alignment="start"

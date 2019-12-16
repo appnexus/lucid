@@ -145,7 +145,7 @@ describe('SearchableSingleSelect', () => {
 
 				const searchWrapper = wrapper.find('.lucid-SearchableSingleSelect-search-is-error');
 
-				expect(searchWrapper).toBeTruthy();
+				expect(searchWrapper.exists()).toBeTruthy();
 			});
 
 			it('should render out the error div', () => {
@@ -159,6 +159,20 @@ describe('SearchableSingleSelect', () => {
 				const searchWrapper = wrapper.find('.lucid-SearchableSingleSelect-error-content');
 
 				expect(searchWrapper.text()).toEqual('Erroring out');
+			});
+
+			it('should not render the error div', () => {
+				const wrapper = shallow(
+					<SearchableSingleSelect Error={true}>
+						<Option>option a</Option>
+						<Option>option b</Option>
+					</SearchableSingleSelect>
+				);
+
+				const searchWrapper = wrapper.find('.lucid-SearchableSingleSelect-search-is-error');
+				const errorWrapper = wrapper.find('.lucid-SearchableSingleSelect-error-content');
+				expect(errorWrapper.exists()).toBeFalsy();
+				expect(searchWrapper).toBeTruthy();
 			});
 		})
 	});

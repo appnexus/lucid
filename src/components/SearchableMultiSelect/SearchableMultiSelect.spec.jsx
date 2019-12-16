@@ -245,7 +245,7 @@ describe('SearchableMultiSelect', () => {
 
 				const searchWrapper = wrapper.find('.lucid-SearchableMultiSelect-search-is-error');
 
-				expect(searchWrapper).toBeTruthy();
+				expect(searchWrapper.exists()).toBeTruthy();
 			});
 
 			it('should render out the error div', () => {
@@ -259,6 +259,20 @@ describe('SearchableMultiSelect', () => {
 				const searchWrapper = wrapper.find('.lucid-SearchableMultiSelect-error-content');
 
 				expect(searchWrapper.text()).toEqual('Erroring out');
+			});
+
+			it('should not render the error div', () => {
+				const wrapper = shallow(
+					<SearchableMultiSelect Error={true}>
+						<Option>option a</Option>
+						<Option>option b</Option>
+					</SearchableMultiSelect>
+				);
+
+				const searchWrapper = wrapper.find('.lucid-SearchableMultiSelect-search-is-error');
+				const errorWrapper = wrapper.find('.lucid-SearchableMultiSelect-error-content');
+				expect(errorWrapper.exists()).toBeFalsy();
+				expect(searchWrapper).toBeTruthy();
 			});
 		})
 	});

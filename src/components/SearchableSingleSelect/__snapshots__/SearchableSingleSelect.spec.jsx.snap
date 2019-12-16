@@ -2,11 +2,6 @@
 
 exports[`SearchableSingleSelect [common] example testing should match snapshot(s) for 01.basic 1`] = `
 <div
-  Error={
-    Object {
-      "children": null,
-    }
-  }
   className="lucid-SearchableSingleSelect"
   style={
     Object {
@@ -20,6 +15,11 @@ exports[`SearchableSingleSelect [common] example testing should match snapshot(s
         "alignmentOffset": -13,
         "directonOffset": -1,
         "minWidthOffset": -28,
+      }
+    }
+    Error={
+      Object {
+        "children": null,
       }
     }
     alignment="start"
@@ -446,11 +446,6 @@ exports[`SearchableSingleSelect [common] example testing should match snapshot(s
 
 exports[`SearchableSingleSelect [common] example testing should match snapshot(s) for 02.props 1`] = `
 <div
-  Error={
-    Object {
-      "children": null,
-    }
-  }
   className="lucid-SearchableSingleSelect"
 >
   <DropMenu
@@ -459,6 +454,11 @@ exports[`SearchableSingleSelect [common] example testing should match snapshot(s
         "alignmentOffset": -13,
         "directonOffset": -1,
         "minWidthOffset": -28,
+      }
+    }
+    Error={
+      Object {
+        "children": null,
       }
     }
     alignment="start"
@@ -526,11 +526,6 @@ exports[`SearchableSingleSelect [common] example testing should match snapshot(s
 
 exports[`SearchableSingleSelect [common] example testing should match snapshot(s) for 02.props 2`] = `
 <div
-  Error={
-    Object {
-      "children": null,
-    }
-  }
   className="lucid-SearchableSingleSelect"
 >
   <DropMenu
@@ -539,6 +534,11 @@ exports[`SearchableSingleSelect [common] example testing should match snapshot(s
         "alignmentOffset": -13,
         "directonOffset": -1,
         "minWidthOffset": -28,
+      }
+    }
+    Error={
+      Object {
+        "children": null,
       }
     }
     alignment="start"
@@ -588,11 +588,6 @@ exports[`SearchableSingleSelect [common] example testing should match snapshot(s
 
 exports[`SearchableSingleSelect [common] example testing should match snapshot(s) for 03.asynchronous 1`] = `
 <div
-  Error={
-    Object {
-      "children": null,
-    }
-  }
   className="lucid-SearchableSingleSelect"
   hasSelections={false}
 >
@@ -602,6 +597,11 @@ exports[`SearchableSingleSelect [common] example testing should match snapshot(s
         "alignmentOffset": -13,
         "directonOffset": -1,
         "minWidthOffset": -28,
+      }
+    }
+    Error={
+      Object {
+        "children": null,
       }
     }
     alignment="start"
@@ -644,11 +644,6 @@ exports[`SearchableSingleSelect [common] example testing should match snapshot(s
 
 exports[`SearchableSingleSelect [common] example testing should match snapshot(s) for 04.grouped-options 1`] = `
 <div
-  Error={
-    Object {
-      "children": null,
-    }
-  }
   className="lucid-SearchableSingleSelect"
 >
   <DropMenu
@@ -657,6 +652,11 @@ exports[`SearchableSingleSelect [common] example testing should match snapshot(s
         "alignmentOffset": -13,
         "directonOffset": -1,
         "minWidthOffset": -28,
+      }
+    }
+    Error={
+      Object {
+        "children": null,
       }
     }
     alignment="start"
@@ -1273,11 +1273,6 @@ exports[`SearchableSingleSelect [common] example testing should match snapshot(s
 
 exports[`SearchableSingleSelect [common] example testing should match snapshot(s) for 05.selected-option 1`] = `
 <div
-  Error={
-    Object {
-      "children": null,
-    }
-  }
   className="lucid-SearchableSingleSelect"
 >
   <DropMenu
@@ -1286,6 +1281,11 @@ exports[`SearchableSingleSelect [common] example testing should match snapshot(s
         "alignmentOffset": -13,
         "directonOffset": -1,
         "minWidthOffset": -28,
+      }
+    }
+    Error={
+      Object {
+        "children": null,
       }
     }
     alignment="start"
@@ -1352,11 +1352,6 @@ exports[`SearchableSingleSelect [common] example testing should match snapshot(s
 
 exports[`SearchableSingleSelect [common] example testing should match snapshot(s) for 06.invalid-option 1`] = `
 <div
-  Error={
-    Object {
-      "children": "Please Choose Green",
-    }
-  }
   className="lucid-SearchableSingleSelect"
 >
   <DropMenu
@@ -1365,6 +1360,11 @@ exports[`SearchableSingleSelect [common] example testing should match snapshot(s
         "alignmentOffset": -13,
         "directonOffset": -1,
         "minWidthOffset": -28,
+      }
+    }
+    Error={
+      Object {
+        "children": "Please Choose Green",
       }
     }
     alignment="start"
@@ -1435,11 +1435,6 @@ exports[`SearchableSingleSelect [common] example testing should match snapshot(s
 
 exports[`SearchableSingleSelect custom formatting should render Option child function by passing in {searchText}, setting filterText on each option and using a custom optionFilter 1`] = `
 <div
-  Error={
-    Object {
-      "children": null,
-    }
-  }
   className="lucid-SearchableSingleSelect"
 >
   <DropMenu
@@ -1448,6 +1443,11 @@ exports[`SearchableSingleSelect custom formatting should render Option child fun
         "alignmentOffset": -13,
         "directonOffset": -1,
         "minWidthOffset": -28,
+      }
+    }
+    Error={
+      Object {
+        "children": null,
       }
     }
     alignment="start"

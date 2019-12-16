@@ -381,7 +381,7 @@ const SearchableSelect = createClass({
 				<DropMenu.Option isDisabled>
 					<span className={cx('&-noresults')}>
 						No results match "{searchText}"
-				</span>
+					</span>
 				</DropMenu.Option>
 			);
 	},
@@ -419,17 +419,18 @@ const SearchableSelect = createClass({
 		const errorChildProps = _.first(
 			_.map(findTypes(props, Validation.Error), 'props')
 		);
-		
+
 
 		const placeholder = _.get(placeholderProps, 'children', 'Select');
 		const isItemSelected = _.isNumber(selectedIndex);
 
 		return (
-			<div Error={errorChildProps}
+			<div
 				className={cx('&', className)}
 				style={style}
 			>
 				<DropMenu
+					Error={errorChildProps}
 					{...dropMenuProps}
 					optionContainerStyle={_.assign(
 						{},
@@ -450,11 +451,11 @@ const SearchableSelect = createClass({
 									(isExpanded && isSelectionHighlighted),
 								'&-Control-is-selected':
 									!isDisabled && isItemSelected && isSelectionHighlighted &&
-										!(errorChildProps && errorChildProps.children && errorChildProps.children !== true),
+									!(errorChildProps && errorChildProps.children && errorChildProps.children !== true),
 								'&-Control-is-expanded': isExpanded,
 								'&-Control-is-invisible': isInvisible,
 								'&-Control-is-disabled': isDisabled,
-								'&-Control-is-error': errorChildProps && errorChildProps.children && errorChildProps.children !== true
+								'&-Control-is-error': errorChildProps && errorChildProps.children
 							})}
 						>
 							<span

@@ -442,9 +442,9 @@ const SearchableSingleSelect = createClass({
 			<div
 				{...omitProps(passThroughs, SearchableSingleSelect)}
 				className={cx('&', className)}
-				Error={errorChildProps}
 			>
 				<DropMenu
+					Error={errorChildProps}
 					{...dropMenuProps}
 					selectedIndices={null}
 					className={cx(
@@ -473,7 +473,7 @@ const SearchableSingleSelect = createClass({
 							autoComplete={searchFieldProps.autoComplete || 'off'}
 							isDisabled={isDisabled}
 							className={cx('&-search', {
-								'&-search-is-error': errorChildProps && errorChildProps.children && errorChildProps.children !== true
+								'&-search-is-error': errorChildProps && errorChildProps.children
 							},
 								searchFieldProps.className)}
 							value={searchText}

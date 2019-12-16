@@ -430,8 +430,8 @@ const SearchableMultiSelect = createClass({
 						{_.isString(optionProps.children)
 							? this.renderUnderlinedChildren(optionProps.children, searchText)
 							: _.isFunction(optionProps.children)
-							? React.createElement(optionProps.children, { searchText })
-							: optionProps.children}
+								? React.createElement(optionProps.children, { searchText })
+								: optionProps.children}
 					</CheckboxLabeled.Label>
 				</CheckboxLabeled>
 			</DropMenu.Option>
@@ -551,19 +551,19 @@ const SearchableMultiSelect = createClass({
 			props,
 			SearchableMultiSelect.SelectionLabel
 		) || (
-			<SearchableMultiSelect.SelectionLabel>
-				Selected
-			</SearchableMultiSelect.SelectionLabel>
-		);
+				<SearchableMultiSelect.SelectionLabel>
+					Selected
+				</SearchableMultiSelect.SelectionLabel>
+			);
 		const isSmall = responsiveMode === 'small';
 
 		return (
 			<div
 				{...omitProps(passThroughs, SearchableMultiSelect)}
 				className={cx('&', className)}
-				Error={errorChildProps}
 			>
 				<DropMenu
+					Error={errorChildProps}
 					{...dropMenuProps}
 					selectedIndices={null}
 					className={cx(
@@ -595,7 +595,7 @@ const SearchableMultiSelect = createClass({
 								'&-search',
 								{
 									'&-search-is-small': isSmall,
-									'&-search-is-error': errorChildProps && errorChildProps.children && errorChildProps.children !== true
+									'&-search-is-error': errorChildProps && errorChildProps.children
 								},
 								searchFieldProps.className
 							)}
@@ -654,11 +654,11 @@ const SearchableMultiSelect = createClass({
 												{!_.isNil(selectedOptionGroupChildren)
 													? selectedOptionGroupChildren
 													: _.first(
-															rejectTypes(
-																optionGroups[optionGroupIndex].children,
-																SearchableMultiSelect.Option
-															)
-													  )}
+														rejectTypes(
+															optionGroups[optionGroupIndex].children,
+															SearchableMultiSelect.Option
+														)
+													)}
 											</Selection.Label>
 											{_.map(
 												selectedGroupedOptions,
