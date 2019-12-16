@@ -70,7 +70,7 @@ export interface ILinesProps
 			{ x: 'five'  , y0: 4  , y1: 8 , y2: 9 , y3: 8 },
 			{ x: 'six'   , y0: 20 , y1: 8 , y2: 9 , y3: 1 },
 		] */
-	//data: Array<{ [key: string]: number } & { x: number | string }>;
+
 	data: Array<{ [key: string]: any }>;
 
 	//TODO: xScale can support several different types of scales, maybe all types; we need to enumerate what it acccepts and encode it into the type
@@ -140,7 +140,7 @@ export const Lines = (props: ILinesProps): React.ReactElement => {
 	// If we are stacked, we need to calculate a new domain based on the sum of
 	// the various series' y data. One row per series.
 	const transformedData = isStacked
-		? d3Shape.stack().keys(yFields)(data)
+		? d3Shape.stack().keys(yFields)(data as Array<{ [key: string]: number}>)
 		: groupByFields(data, yFields);
 
 	const stackedArea = d3Shape
