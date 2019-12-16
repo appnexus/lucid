@@ -61,7 +61,7 @@ type IVerticalListMenuProps = Overwrite<
 	IVerticalListMenuPropsRaw
 >;
 
-export interface IVerticalListMenuItemPropsRaw extends StandardProps {
+interface IVerticalListMenuItemPropsRaw extends StandardProps {
 	/** 	Show or hide the expand button. Should be \`true\` if you want to
 					nest menus. */
 	hasExpander?: boolean;
@@ -106,7 +106,8 @@ export interface IVerticalListMenuItemPropsRaw extends StandardProps {
 	if the item has children. */
 	Collapsible?: Partial<ICollapsibleProps>;
 }
-type IVerticalListMenuItemProps = Overwrite<
+
+export type IVerticalListMenuItemProps = Overwrite<
 	React.DetailedHTMLProps<React.LiHTMLAttributes<HTMLLIElement>, HTMLLIElement>,
 	IVerticalListMenuItemPropsRaw
 >;
