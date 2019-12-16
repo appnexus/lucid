@@ -451,7 +451,7 @@ const SearchableSelect = createClass({
 									(isExpanded && isSelectionHighlighted),
 								'&-Control-is-selected':
 									!isDisabled && isItemSelected && isSelectionHighlighted &&
-									!(errorChildProps && errorChildProps.children && errorChildProps.children !== true),
+									!(errorChildProps && errorChildProps.children),
 								'&-Control-is-expanded': isExpanded,
 								'&-Control-is-invisible': isInvisible,
 								'&-Control-is-disabled': isDisabled,
