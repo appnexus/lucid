@@ -139,7 +139,7 @@ interface ISingleSelectPropsRaw extends StandardProps {
 
 	DropMenu: IDropMenuProps;
 
-	maxMenuHeight: number | string;
+	maxMenuHeight?: number | string;
 
 	onSelect: (
 		optionIndex: number | null,
