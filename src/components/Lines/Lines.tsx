@@ -70,13 +70,14 @@ export interface ILinesProps
 			{ x: 'five'  , y0: 4  , y1: 8 , y2: 9 , y3: 8 },
 			{ x: 'six'   , y0: 20 , y1: 8 , y2: 9 , y3: 1 },
 		] */
-	data: Array<{ [key: string]: number | string }>;
 
+	data: Array<{ [key: string]: any }>;
+
+	//TODO: xScale can support several different types of scales, maybe all types; we need to enumerate what it acccepts and encode it into the type
+	// Having a number | string union type gets converted by TypeScript to ReactText; It may be related to the LibraryManagedAttributes
 	/** The scale for the x axis. Must be a d3 scale. Lucid exposes the
 		`lucid.d3Scale` library for use here. */
-	xScale:
-		| d3Scale.ScaleBand<number | string>
-		| d3Scale.ScalePoint<number | string>;
+	xScale: d3Scale.ScaleBand<string> | d3Scale.ScalePoint<string>;
 
 	/** The scale for the y axis. Must be a d3 scale. Lucid exposes the
 		`lucid.d3Scale` library for use here. */
