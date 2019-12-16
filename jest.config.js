@@ -5,6 +5,7 @@ module.exports = {
 	testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.jsx?$',
 	collectCoverageFrom: [
 		'components/**/*.{js,jsx}',
+		'components/**/*.{ts,tsx}',
 		'!components/**/examples/*',
 		'util/**/*.{js,jsx}',
 	],

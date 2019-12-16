@@ -13,7 +13,6 @@ export default createClass({
 						<div>
 							<div style={{ margin: '10px' }}>
 								<Selection
-									isSmall
 									isRemovable={false}
 									responsiveMode={responsiveMode}
 									kind='container'
@@ -23,7 +22,6 @@ export default createClass({
 
 							<div style={{ margin: '10px' }}>
 								<Selection
-									isSmall
 									responsiveMode={responsiveMode}
 									kind='container'
 									Label='Container Light'
@@ -32,7 +30,6 @@ export default createClass({
 
 							<div style={{ margin: '10px' }}>
 								<Selection
-									isSmall
 									isFilled
 									isRemovable={false}
 									responsiveMode={responsiveMode}
@@ -43,7 +40,6 @@ export default createClass({
 
 							<div style={{ margin: '10px' }}>
 								<Selection
-									isSmall
 									isFilled
 									responsiveMode={responsiveMode}
 									kind='container'
@@ -53,7 +49,6 @@ export default createClass({
 
 							<div style={{ margin: '10px' }}>
 								<Selection
-									isSmall
 									responsiveMode={responsiveMode}
 									Label='Default'
 								/>
@@ -61,7 +56,6 @@ export default createClass({
 
 							<div style={{ margin: '10px' }}>
 								<Selection
-									isSmall
 									responsiveMode={responsiveMode}
 									kind='success'
 									Label='Success'
@@ -70,7 +64,6 @@ export default createClass({
 
 							<div style={{ margin: '10px' }}>
 								<Selection
-									isSmall
 									responsiveMode={responsiveMode}
 									kind='danger'
 									Label='Danger'
@@ -79,7 +72,6 @@ export default createClass({
 
 							<div style={{ margin: '10px' }}>
 								<Selection
-									isSmall
 									responsiveMode={responsiveMode}
 									kind='info'
 									Label='Info'
@@ -88,7 +80,6 @@ export default createClass({
 
 							<div style={{ margin: '10px' }}>
 								<Selection
-									isSmall
 									responsiveMode={responsiveMode}
 									kind='warning'
 									Label='Warning'

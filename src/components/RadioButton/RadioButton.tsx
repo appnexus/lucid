@@ -123,21 +123,24 @@ RadioButton.displayName = 'RadioButton';
 
 RadioButton.peek = {
 	description: `
-		This is a toggle -- a component that is in one of two particular states
-		at any given moment in time -- that features a custom visualization of
-		the native radio button control to reflect its current state.
+		RadioButton is a round two-state toggle used to create \`RadioButtonLabeled\`.
 
-		The radio button is different from a standard toggle in that when it is
-		in the selected state user events do not cause it to toggle to the
-		unselected state so the \`onSelect\` function is called only when
-		\`isSelected\` is false.
-
-		It uses a hidden native radio button control under the hood but
-		leverages other HTML elements to visualize its state.
-
-		Any props that are not explicitly defined in \`propTypes\` are spread
-		onto the native control.
+		It uses a hidden native checkbox control under the hood but leverages
+		other HTML elements to visualize its state.
 		`,
+	notes: {
+		overview: `
+			RadioButton is a round two-state toggle. Use \`RadioButtonLabeled\` or \`RadioGroup\` in your applications.
+		`,
+		intendedUse: `
+			Used to create \`RadioButtonLabeled\` and \`RadioGroup\`. 			
+		`,
+		technicalRecommendations: `
+			- Use the Selected state when a filter or setting will be applied.
+			- Use the Unselected state when a filter or setting will not be applied.
+			- Any props that are not explicitly defined in \`propTypes\` are passed to the native radio button control.
+		`,
+	},
 	categories: ['controls', 'toggles'],
 };
 

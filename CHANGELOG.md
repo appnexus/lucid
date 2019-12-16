@@ -6,12 +6,12 @@
 - #1086 [patch] fix type signatures on `VerticalListMenu` and for `createClass`
   - It's worth noting that if you don't have time to pass the correct generics to `createClass` you can always just use it like `createClass<any, any>()` to avoid most of the type checking.
 
-https://github.com/appnexus/lucid/compare/5.3.1...v5.3.2
+https://github.com/appnexus/lucid/compare/v5.3.1...v5.3.2
 
 ## 5.3.1
 - #1086 [patch] Fix storybook register to be compatible with older versions
 
-https://github.com/appnexus/lucid/compare/5.3.0...v5.3.1
+https://github.com/appnexus/lucid/compare/v5.3.0...v5.3.1
 
 ## 5.3.0
 - #1058 [minor] Migrated another round of components to TypeScript and added a new utility function `buildModernHybridComponent` that works with class and functional React components. We also significantly reworked the way we annotate types of our functional components that should hopefully reduce the number of instances where optional props were incorrectly marked as required. 

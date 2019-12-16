@@ -16,7 +16,7 @@ const cx = lucidClassNames.bind('&-ExpanderPanel');
 
 const { any, bool, func, node, object, string } = PropTypes;
 
-interface IExpanderPanelHeaderProps extends StandardProps {
+export interface IExpanderPanelHeaderProps extends StandardProps {
 	description?: string;
 }
 
