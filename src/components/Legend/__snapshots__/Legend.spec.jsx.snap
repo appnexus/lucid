@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Legend [common] example testing should match snapshot(s) for basic.tsx 1`] = `
+exports[`Legend [common] example testing should match snapshot(s) for basic 1`] = `
 <ul
   className="lucid-Legend lucid-Legend-is-vertical lucid-Legend-has-borders"
 >
@@ -154,7 +154,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic.tsx 
 </ul>
 `;
 
-exports[`Legend [common] example testing should match snapshot(s) for basic.tsx 2`] = `
+exports[`Legend [common] example testing should match snapshot(s) for basic 2`] = `
 <ul
   className="lucid-Legend lucid-Legend-is-vertical lucid-Legend-has-borders"
 >
@@ -308,7 +308,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic.tsx 
 </ul>
 `;
 
-exports[`Legend [common] example testing should match snapshot(s) for basic.tsx 3`] = `
+exports[`Legend [common] example testing should match snapshot(s) for basic 3`] = `
 <ul
   className="lucid-Legend lucid-Legend-is-vertical lucid-Legend-has-borders"
 >
@@ -441,7 +441,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic.tsx 
 </ul>
 `;
 
-exports[`Legend [common] example testing should match snapshot(s) for basic.tsx 4`] = `
+exports[`Legend [common] example testing should match snapshot(s) for basic 4`] = `
 <ul
   className="lucid-Legend lucid-Legend-is-vertical lucid-Legend-has-borders"
 >
@@ -630,7 +630,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic.tsx 
 </ul>
 `;
 
-exports[`Legend [common] example testing should match snapshot(s) for basic.tsx 5`] = `
+exports[`Legend [common] example testing should match snapshot(s) for basic 5`] = `
 <ul
   className="lucid-Legend lucid-Legend-is-vertical lucid-Legend-has-borders lucid-Legend-is-reversed"
 >
@@ -819,7 +819,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic.tsx 
 </ul>
 `;
 
-exports[`Legend [common] example testing should match snapshot(s) for basic.tsx 6`] = `
+exports[`Legend [common] example testing should match snapshot(s) for basic 6`] = `
 <ul
   className="lucid-Legend lucid-Legend-is-horizontal lucid-Legend-has-borders"
 >
@@ -904,7 +904,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic.tsx 
 </ul>
 `;
 
-exports[`Legend [common] example testing should match snapshot(s) for basic.tsx 7`] = `
+exports[`Legend [common] example testing should match snapshot(s) for basic 7`] = `
 <ul
   className="lucid-Legend lucid-Legend-is-horizontal lucid-Legend-has-borders lucid-Legend-is-reversed"
 >
@@ -989,7 +989,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic.tsx 
 </ul>
 `;
 
-exports[`Legend [common] example testing should match snapshot(s) for basic.tsx 8`] = `
+exports[`Legend [common] example testing should match snapshot(s) for basic 8`] = `
 <ul
   className="lucid-Legend lucid-Legend-is-vertical lucid-Legend-has-borders"
 >
@@ -1074,7 +1074,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic.tsx 
 </ul>
 `;
 
-exports[`Legend [common] example testing should match snapshot(s) for basic.tsx 9`] = `
+exports[`Legend [common] example testing should match snapshot(s) for basic 9`] = `
 <ul
   className="lucid-Legend lucid-Legend-is-vertical"
 >
