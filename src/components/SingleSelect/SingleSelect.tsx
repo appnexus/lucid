@@ -49,9 +49,9 @@ Placeholder.peek = {
 Placeholder.propName = 'Placeholder';
 
 /** Option Child Component */
-interface ISingleSelectOptionProps extends StandardProps {
+interface ISingleSelectOptionProps extends IDropMenuOptionProps {
 	description?: string;
-
+	name?: string;
 	/** Custom Option component (alias for `SingleSelect.Option.Selected`)  */
 	Selected?: React.ReactNode;
 }
@@ -72,7 +72,8 @@ Selected.peek = {
 Selected.propName = 'Selected';
 Selected.propTypes = {};
 
-const Option = (_props: IDropMenuOptionProps): null => null;
+//const Option = (_props: IDropMenuOptionProps): null => null;
+const Option = (_props: ISingleSelectOptionProps): null => null;
 
 Option.displayName = 'SingleSelect.Option';
 Option.peek = {
@@ -112,6 +113,8 @@ OptionGroup.peek = {
 OptionGroup.propName = 'OptionGroup';
 OptionGroup.propTypes = DropMenu.OptionGroup.propTypes;
 
+type ISingleSelectDropMenuProps = Partial<IDropMenuProps>;
+
 /** Single Select Component */
 interface ISingleSelectPropsRaw extends StandardProps {
 	/** Custom Placeholder component (alias for `SingleSelect.Placeholder`)  */
@@ -137,17 +140,18 @@ interface ISingleSelectPropsRaw extends StandardProps {
 
 	selectedIndex: number | null;
 
-	DropMenu: IDropMenuProps;
+	//DropMenu: IDropMenuProps;
+	DropMenu: ISingleSelectDropMenuProps;
 
 	maxMenuHeight?: number | string;
 
-	onSelect: (
+	onSelect?: (
 		optionIndex: number | null,
 		{
 			props,
 			event,
 		}: {
-			props: IDropMenuOptionProps;
+			props: ISingleSelectOptionProps;
 			event: React.MouseEvent | React.KeyboardEvent;
 		}
 	) => void;

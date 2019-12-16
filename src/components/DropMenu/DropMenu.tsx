@@ -87,7 +87,7 @@ Control.propTypes = {};
 
 export interface IDropMenuOptionGroupProps extends StandardProps {
 	description?: string;
-	isHidden: boolean;
+	isHidden?: boolean;
 }
 
 export type OptionGroupFC = (props: IDropMenuOptionGroupProps) => null;
