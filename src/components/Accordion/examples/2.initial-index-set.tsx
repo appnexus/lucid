@@ -9,7 +9,7 @@ export default createClass({
 		};
 	},
 
-	handleChange(index) {
+	handleChange(index: number) {
 		this.setState({
 			index,
 		});
