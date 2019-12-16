@@ -405,35 +405,32 @@ const SearchableSingleSelect = createClass({
 			].optionProps;
 
 			return (
-				<div>
-					<div
-						{...omitProps(passThroughs, SearchableSingleSelect)}
-						className={cx('&', className)}
-					>
-						<Selection
-							Label={
-								_.isNil(selectedOptionProps.Selected)
-									? this.renderOptionContent(selectedOptionProps, '')
-									: selectedOptionProps.Selected
-							}
-							className={cx('&', {
-								'&-select-error': errorChildProps && errorChildProps.children && errorChildProps.children !== true
-							}, className)}
-							onRemove={this.removeSelection}
-							kind='default'
-						/>
-						{errorChildProps &&
-							errorChildProps.children &&
-							errorChildProps.children !== true ? (
-								<div
-									{...omitProps(errorChildProps, undefined)}
-									className={cx('&-error-select-content')}
-								>
-									{errorChildProps.children}
-								</div>
-							) : null}
-					</div>
-
+				<div
+					{...omitProps(passThroughs, SearchableSingleSelect)}
+					className={cx('&', className)}
+				>
+					<Selection
+						Label={
+							_.isNil(selectedOptionProps.Selected)
+								? this.renderOptionContent(selectedOptionProps, '')
+								: selectedOptionProps.Selected
+						}
+						className={cx('&', {
+							'&-select-error': errorChildProps && errorChildProps.children && errorChildProps.children !== true
+						}, className)}
+						onRemove={this.removeSelection}
+						kind='default'
+					/>
+					{errorChildProps &&
+						errorChildProps.children &&
+						errorChildProps.children !== true ? (
+							<div
+								{...omitProps(errorChildProps, undefined)}
+								className={cx('&-error-select-content')}
+							>
+								{errorChildProps.children}
+							</div>
+						) : null}
 				</div>
 			);
 		}
