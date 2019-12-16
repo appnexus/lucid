@@ -446,12 +446,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Legend/examples',
 			true,
-			/\.jsx?$/
+			/\.tsx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Legend/examples',
 			true,
-			/\.jsx?$/
+			/\.tsx?$/
 		),
 	},
 	{
