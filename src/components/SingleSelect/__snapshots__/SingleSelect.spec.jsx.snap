@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SingleSelect [common] example testing should match snapshot(s) for 01.basic.tsx 1`] = `
+exports[`SingleSelect [common] example testing should match snapshot(s) for 01.basic 1`] = `
 <DropMenu
   ContextMenu={
     Object {

@@ -234,7 +234,7 @@ describe('PieChart', () => {
 		});
 
 		describe('onMouseOut', () => {
-			it("should fire when hovering out when we' not using tooltips", () => {
+			it("should fire when hovering out when we're not using tooltips", () => {
 				const onMouseOut = sinon.spy();
 				const wrapper = shallow(
 					<PieChart
@@ -247,7 +247,7 @@ describe('PieChart', () => {
 
 				const target = wrapper.find('.lucid-PieChart-slice-hover').at(0);
 
-				target.simulate('mouseOut');
+				target.simulate('mouseOut',  { stopPropagation: () => undefined });
 
 				assert(onMouseOut.called, 'onMouseOut was not called');
 				assert.equal(onMouseOut.args[0][0].props.palette[0], 'bar');

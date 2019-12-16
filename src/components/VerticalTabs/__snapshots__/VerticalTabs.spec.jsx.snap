@@ -51,7 +51,7 @@ exports[`VerticalTabs [common] example testing should match snapshot(s) for 1-ti
       <span
         className="lucid-VerticalTabs-Tab-content"
       >
-        Five
+        Four
       </span>
     </VerticalListMenu.Item>
   </VerticalListMenu>
@@ -247,27 +247,27 @@ exports[`VerticalTabs [common] example testing should match snapshot(s) for 3-co
               data={
                 Array [
                   Object {
-                    "x": 1,
+                    "x": "OR",
                     "y": 1,
                   },
                   Object {
-                    "x": 2,
+                    "x": "CA",
                     "y": 0,
                   },
                   Object {
-                    "x": 3,
+                    "x": "WA",
                     "y": 3,
                   },
                   Object {
-                    "x": 4,
+                    "x": "NY",
                     "y": 2,
                   },
                   Object {
-                    "x": 5,
+                    "x": "TX",
                     "y": 1,
                   },
                   Object {
-                    "x": 6,
+                    "x": "WV",
                     "y": 3,
                   },
                 ]
@@ -342,6 +342,42 @@ exports[`VerticalTabs [common] example testing should match snapshot(s) for 3-co
       >
         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
       </span>
+    </VerticalTabs.Title>
+    One content
+  </div>
+</div>
+`;
+
+exports[`VerticalTabs render should render 1`] = `
+<div
+  className="lucid-VerticalTabs"
+>
+  <VerticalListMenu
+    expandedIndices={Array []}
+    onSelect={[Function]}
+    onToggle={[Function]}
+    selectedIndices={
+      Array [
+        0,
+      ]
+    }
+  >
+    <VerticalListMenu.Item
+      className="lucid-VerticalTabs-Tab lucid-VerticalTabs-Tab-is-active"
+      key="0"
+    >
+      <span
+        className="lucid-VerticalTabs-Tab-content"
+      >
+        One
+      </span>
+    </VerticalListMenu.Item>
+  </VerticalListMenu>
+  <div
+    className="lucid-VerticalTabs-content"
+  >
+    <VerticalTabs.Title>
+      One
     </VerticalTabs.Title>
     One content
   </div>

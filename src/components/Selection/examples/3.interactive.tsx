@@ -43,7 +43,7 @@ export default createClass({
 		};
 	},
 
-	handleRemove({ props: { callbackId } }) {
+	handleRemove({ props: { callbackId } } : { props: { callbackId: string }}) {
 		this.setState({
 			removedItems: _.set(this.state.removedItems, callbackId, true),
 		});

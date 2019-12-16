@@ -30,6 +30,7 @@ const { Target, FlyOut } = ContextMenu;
 
 interface IToolTipTargetProps extends StandardProps {
 	description?: string;
+	elementType?: string;
 }
 
 const ToolTipTarget = (_props: IToolTipTargetProps): null => null;

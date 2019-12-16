@@ -16,6 +16,8 @@ export interface StandardProps {
 	children?: React.ReactNode;
 	/** Styles that are passed through to native control. */
 	style?: React.CSSProperties;
+
+	callbackId?: string;
 }
 
 // Like `T & U`, but where there are overlapping properties using the type from U only.
@@ -40,6 +42,10 @@ export interface FC<P> extends React.FC<P> {
 	_isPrivate?: boolean;
 }
 
+class ReactClassComponent extends React.Component<{},{}> {}
+
+type IReactClassComponent = (typeof ReactClassComponent)
+
 type TypesType<P> =
 	| ICreateClassComponentClass<P>
 	| Array<ICreateClassComponentClass<P>>
@@ -63,7 +69,11 @@ interface ICreateClassComponentSpec<P, S> extends React.Mixin<P, S> {
 	// TODO: improve these with a stricter type https://stackoverflow.com/a/54775885/895558
 	reducers?: { [K in keyof P]?: (arg0: S, ...args: any[]) => S };
 	selectors?: { [K in keyof P]?: (arg0: S) => any };
-	render?(this: { props: P }): React.ReactNode;
+	render?(
+		this: { props: P } & {
+			[k: string]: any;
+		} /* allow for extra properties on `this` to be backward compatible */
+	): React.ReactNode;
 
 	// TODO: could this be better handled by adding a third type parameter that
 	// allows the components to define what the extra class properties would
@@ -185,6 +195,37 @@ export function findTypes<P extends { children?: React.ReactNode }>(
 	return elementsFromProps.concat(filterTypes<P>(props.children, types));
 }
 
+// return all elements found in props and children of the specified types
+// export function findTypes<P2>(
+// 	props: { children?: React.ReactNode },
+// 	types?: TypesType<P2>
+// ): React.ReactNode[] {
+// 	if (types === undefined) {
+// 		return [];
+// 	}
+
+// 	// get elements from props (using types.propName)
+// 	const elementsFromProps: React.ReactNode[] = _.reduce(
+// 		_.castArray<any>(types),
+// 		(acc: React.ReactNode[], type): React.ReactNode[] => {
+// 			return _.isNil(type.propName)
+// 				? []
+// 				: createElements(
+// 						type,
+// 						_.flatten(_.values(_.pick(props, type.propName)))
+// 				  );
+// 		},
+// 		[]
+// 	);
+
+// 	if (props.children === undefined) {
+// 		return elementsFromProps;
+// 	}
+
+// 	// return elements from props and elements from children
+// 	return elementsFromProps.concat(filterTypes<P2>(props.children, types));
+// }
+
 // return all elements not matching the specified types
 export function rejectTypes<P>(
 	children: React.ReactNode,
@@ -227,6 +268,7 @@ export function createElements<P>(
 	);
 }
 
+//does this work?
 // return the first element found in props and children of the specificed type(s)
 export function getFirst<P, CustomType = {}>(
 	props: P,

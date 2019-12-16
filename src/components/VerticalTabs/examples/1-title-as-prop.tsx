@@ -10,7 +10,7 @@ export default createClass({
 					<VerticalTabs.Tab Title='One'>One content</VerticalTabs.Tab>
 					<VerticalTabs.Tab Title='Two'>Two content</VerticalTabs.Tab>
 					<VerticalTabs.Tab Title='Three'>Three content</VerticalTabs.Tab>
-					<VerticalTabs.Tab Title='Five'>Four content</VerticalTabs.Tab>
+					<VerticalTabs.Tab Title='Four'>Four content</VerticalTabs.Tab>
 				</VerticalTabs>
 			</div>
 		);
