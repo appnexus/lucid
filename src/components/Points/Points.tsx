@@ -70,7 +70,7 @@ export interface IPointsProps
 			{ x: 'five'  , y0: 4  , y1: 8 , y2: 9 , y3: 8 },
 			{ x: 'six'   , y0: 20 , y1: 8 , y2: 9 , y3: 1 },
 		] */
-	data: Array<{ [key: string]: number } & { x: number | string }>;
+	data: Array<{[key: string]: string | number }>;
 
 	/** The scale for the x axis. Must be a d3 scale. Lucid exposes the
 		`lucid.d3Scale` library for use here. */
@@ -143,7 +143,7 @@ export const Points = (props: IPointsProps): React.ReactElement => {
 	// If we are stacked, we need to calculate a new domain based on the sum of
 	// the various series' y data. One row per series.
 	const transformedData = isStacked
-		? d3Shape.stack().keys(yFields)(data)
+		? d3Shape.stack().keys(yFields)(data as Array<{[key: string]: number}>)
 		: groupByFields(data, yFields);
 
 	// If we are stacked, we need to calculate a new domain based on the sum of
