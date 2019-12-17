@@ -4,7 +4,7 @@ import assert from 'assert';
 import sinon from 'sinon';
 import _ from 'lodash';
 import { common } from '../../util/generic-tests';
-import { buildHybridComponent } from '../../util/state-management';
+import { buildModernHybridComponent } from '../../util/state-management';
 import { SingleSelectDumb as SingleSelect } from '../SingleSelect/SingleSelect';
 import { PaginatorDumb as Paginator } from './Paginator';
 import Button from '../Button/Button';
@@ -145,7 +145,7 @@ describe('Paginator', () => {
 
 		describe('totalCount', () => {
 			it('should generate `totalPages` from `totalCount`', () => {
-				const HybridPaginator = buildHybridComponent(Paginator);
+				const HybridPaginator = buildModernHybridComponent(Paginator, {});
 				const totalCount = 100;
 				const wrapper = shallow(
 					<HybridPaginator totalCount={totalCount} pageSizeOptions={[10]} />

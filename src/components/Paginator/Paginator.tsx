@@ -14,7 +14,7 @@ import {
 import TextField, { ITextFieldProps } from '../TextField/TextField';
 import { IButtonProps, Button } from '../Button/Button';
 import ArrowIcon from '../Icon/ArrowIcon/ArrowIcon';
-import { buildHybridComponent } from '../../util/state-management';
+import { buildModernHybridComponent } from '../../util/state-management';
 
 const cx = lucidClassNames.bind('&-Paginator');
 
@@ -329,5 +329,9 @@ class Paginator extends React.Component<IPaginatorProps, IPaginatorState> {
 	}
 }
 
-export default buildHybridComponent(Paginator);
+export default buildModernHybridComponent<
+	IPaginatorProps,
+	IPaginatorState,
+	typeof Paginator
+>(Paginator, { reducers, selectors });
 export { Paginator as PaginatorDumb };
