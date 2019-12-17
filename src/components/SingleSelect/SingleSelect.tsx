@@ -49,7 +49,7 @@ Placeholder.peek = {
 Placeholder.propName = 'Placeholder';
 
 /** Option Child Component */
-interface ISingleSelectOptionProps extends IDropMenuOptionProps {
+export interface ISingleSelectOptionProps extends IDropMenuOptionProps {
 	description?: string;
 	name?: string;
 	/** Custom Option component (alias for `SingleSelect.Option.Selected`)  */
@@ -155,10 +155,14 @@ interface ISingleSelectPropsRaw extends StandardProps {
 			event: React.MouseEvent | React.KeyboardEvent;
 		}
 	) => void;
+
+	/** TODO: doublecheck this type */
+	ref?: string;
 }
 
+/** TODO: Revisit Overwrite */
 export type ISingleSelectProps = Overwrite<
-	React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement>,
+	React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>,
 	ISingleSelectPropsRaw
 >;
 
