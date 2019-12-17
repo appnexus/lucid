@@ -1,10 +1,15 @@
 import _ from 'lodash';
 
-function totalPagesSelector({
+export function totalPagesSelector({
 	pageSizeOptions,
 	selectedPageSizeIndex,
 	totalCount,
 	totalPages,
+}: {
+	pageSizeOptions: number[];
+	selectedPageSizeIndex: number;
+	totalCount: number;
+	totalPages: number;
 }) {
 	const pageSize = pageSizeOptions[selectedPageSizeIndex];
 	return _.isNumber(totalPages)

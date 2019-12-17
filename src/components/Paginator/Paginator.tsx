@@ -125,7 +125,6 @@ export interface IPaginatorState {
 	totalPages: number;
 	selectedPageIndex: number;
 	selectedPageSizeIndex: number;
-	//TODO: define SingleSelect
 	SingleSelect: ISingleSelectState;
 }
 
