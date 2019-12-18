@@ -143,7 +143,7 @@ const defaultProps = {
 	selectedPageSizeIndex: 0,
 	showTotalObjects: false,
 	totalCount: null,
-	totalPages: 0,
+	totalPages: undefined,
 	pageSizeOptions: [10, 50, 100],
 	SingleSelect: {
 		...SingleSelect.defaultProps,
