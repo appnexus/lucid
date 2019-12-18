@@ -35,9 +35,12 @@ exports[`Paginator [common] example testing should match snapshot(s) for 1.basic
     onKeyDown={[Function]}
     onSubmit={[Function]}
     rows={5}
-    style={null}
     value={1}
   />
+  <span>
+    of 
+    0
+  </span>
   <Button
     hasOnlyIcon={true}
     isActive={false}
@@ -133,9 +136,12 @@ exports[`Paginator [common] example testing should match snapshot(s) for 2.page-
     onKeyDown={[Function]}
     onSubmit={[Function]}
     rows={5}
-    style={null}
     value={1}
   />
+  <span>
+    of 
+    0
+  </span>
   <Button
     hasOnlyIcon={true}
     isActive={false}
@@ -194,9 +200,12 @@ exports[`Paginator [common] example testing should match snapshot(s) for 3.disab
     onKeyDown={[Function]}
     onSubmit={[Function]}
     rows={5}
-    style={null}
     value={1}
   />
+  <span>
+    of 
+    0
+  </span>
   <Button
     hasOnlyIcon={true}
     isActive={false}
@@ -292,9 +301,12 @@ exports[`Paginator [common] example testing should match snapshot(s) for 3.disab
     onKeyDown={[Function]}
     onSubmit={[Function]}
     rows={5}
-    style={null}
     value={1}
   />
+  <span>
+    of 
+    0
+  </span>
   <Button
     hasOnlyIcon={true}
     isActive={false}
@@ -397,9 +409,12 @@ exports[`Paginator [common] example testing should match snapshot(s) for 4.show-
     onKeyDown={[Function]}
     onSubmit={[Function]}
     rows={5}
-    style={null}
     value={1}
   />
+  <span>
+    of 
+    0
+  </span>
   <Button
     hasOnlyIcon={true}
     isActive={false}
@@ -495,9 +510,12 @@ exports[`Paginator [common] example testing should match snapshot(s) for 4.show-
     onKeyDown={[Function]}
     onSubmit={[Function]}
     rows={5}
-    style={null}
     value={1}
   />
+  <span>
+    of 
+    0
+  </span>
   <Button
     hasOnlyIcon={true}
     isActive={false}
@@ -626,9 +644,12 @@ exports[`Paginator [common] example testing should match snapshot(s) for 4.show-
     onKeyDown={[Function]}
     onSubmit={[Function]}
     rows={5}
-    style={null}
     value={1}
   />
+  <span>
+    of 
+    0
+  </span>
   <Button
     hasOnlyIcon={true}
     isActive={false}
@@ -757,9 +778,12 @@ exports[`Paginator [common] example testing should match snapshot(s) for 4.show-
     onKeyDown={[Function]}
     onSubmit={[Function]}
     rows={5}
-    style={null}
     value={1}
   />
+  <span>
+    of 
+    0
+  </span>
   <Button
     hasOnlyIcon={true}
     isActive={false}
@@ -888,9 +912,12 @@ exports[`Paginator [common] example testing should match snapshot(s) for 4.show-
     onKeyDown={[Function]}
     onSubmit={[Function]}
     rows={5}
-    style={null}
     value={1}
   />
+  <span>
+    of 
+    0
+  </span>
   <Button
     hasOnlyIcon={true}
     isActive={false}
@@ -1019,9 +1046,12 @@ exports[`Paginator [common] example testing should match snapshot(s) for 4.show-
     onKeyDown={[Function]}
     onSubmit={[Function]}
     rows={5}
-    style={null}
     value={1}
   />
+  <span>
+    of 
+    0
+  </span>
   <Button
     hasOnlyIcon={true}
     isActive={false}
