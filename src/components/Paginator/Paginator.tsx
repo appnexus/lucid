@@ -31,6 +31,10 @@ const {
 
 const { Option } = SingleSelect;
 
+type IPaginatorSingleSelectProps = Partial<ISingleSelectProps>;
+
+type ShowTotalObjects = (count: number) => string;
+
 export interface IPaginatorProps
 	extends StandardProps,
 		React.DetailedHTMLProps<
@@ -51,7 +55,7 @@ export interface IPaginatorProps
 
 	/** Label when showTotalObjects is true with more than 1 objects. */
 
-	objectLabelPlural: string;
+	objectLabelPlural?: string;
 
 	/** Called when a page is selected. */
 
@@ -69,7 +73,7 @@ export interface IPaginatorProps
 
 	/** Called when a page size is selected. */
 
-	onPageSizeSelect: (
+	onPageSizeSelect?: (
 		pageSizeIndex: number | null,
 		{
 			props,
@@ -90,7 +94,7 @@ export interface IPaginatorProps
 
 	/** Show total count of objects. */
 
-	showTotalObjects: boolean;
+	showTotalObjects: boolean | ShowTotalObjects;
 
 	/** Number to display in \`of \${totalPages}\`, calculated from	
 	\`totalPages\` and selected page size by default.  */
@@ -107,7 +111,7 @@ export interface IPaginatorProps
 
 	/** Object of SingleSelect props which are passed thru to the underlying SingleSelect component for the page size selector. */
 
-	SingleSelect: ISingleSelectProps;
+	SingleSelect: IPaginatorSingleSelectProps;
 	//{
 	//...SingleSelect.defaultProps,
 	//	ISingleSelectProps;
@@ -123,8 +127,10 @@ export interface IPaginatorProps
 export interface IPaginatorState {
 	pageIndex: number;
 	totalPages: number;
+	totalCount: number;
 	selectedPageIndex: number;
 	selectedPageSizeIndex: number;
+	pageSizeOptions: number[];
 	SingleSelect: ISingleSelectState;
 }
 
@@ -137,6 +143,7 @@ const defaultProps = {
 	selectedPageSizeIndex: 0,
 	showTotalObjects: false,
 	totalCount: null,
+	totalPages: 0,
 	pageSizeOptions: [10, 50, 100],
 	SingleSelect: {
 		...SingleSelect.defaultProps,
