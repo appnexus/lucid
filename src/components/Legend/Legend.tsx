@@ -173,6 +173,7 @@ Legend.peek = {
 			using a variable width font, the only way I know of to correctly get
 			the width is with the DOM function \`getComputedTextLength\`. Variable
 			widths are much more easy to implement outside of svg.
+			I was here....
 		`,
 	categories: ['visualizations', 'chart primitives'],
 };
