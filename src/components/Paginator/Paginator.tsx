@@ -334,4 +334,5 @@ export default buildModernHybridComponent<
 	IPaginatorState,
 	typeof Paginator
 >(Paginator, { reducers, selectors });
+
 export { Paginator as PaginatorDumb };

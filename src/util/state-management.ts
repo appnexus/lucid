@@ -6,9 +6,12 @@ import createClass from 'create-react-class';
 import hoistNonReactStatics from 'hoist-non-react-statics';
 
 // TODO: could we somehow type the `...args` with a generic?
-export type Reducer<S extends object> = (arg0: S, ...args: any[]) => S
+export type Reducer<S extends object> = (arg0: S, ...args: any[]) => S;
 
-export type Reducers<P, S extends object> = { [K in keyof P]?: Reducer<S> | Reducers<P[K], S> };
+export type Reducers<P, S extends object> = {
+	[K in keyof P]?: Reducer<S> | Reducers<P[K], S> | Reducers<P[K], any>
+};
+
 export type Selector<S> = (arg0: S) => any;
 export type Selectors<P, S extends object> = {
 	[K in keyof P]?: (arg0: S) => any
@@ -45,10 +48,10 @@ export function getDeepPaths(
 		obj,
 		(terminalKeys: string[][], value, key) =>
 			isPlainObjectOrEsModule(value)
-				//getDeepPaths if value is a module or object (another Reducers)
-				? terminalKeys.concat(getDeepPaths(value, path.concat(key)))
-				//add key to terminalKeys (probably a Reducer (function))
-				: terminalKeys.concat([path.concat(key)]),
+				? //getDeepPaths if value is a module or object (another Reducers)
+				  terminalKeys.concat(getDeepPaths(value, path.concat(key)))
+				: //add key to terminalKeys (probably a Reducer (function))
+				  terminalKeys.concat([path.concat(key)]),
 		[]
 	);
 }
