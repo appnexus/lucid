@@ -33,16 +33,6 @@ export default createClass({
 								<Option>Alabama</Option>
 							</SearchableMultiSelect>
 
-							<h5>Invalid</h5>
-							<SearchableMultiSelect
-								onSearch={this.handleChange}
-								responsiveMode={responsiveMode}
-								isValid={this.state.isRequired}
-							>
-								<Option>Alabama</Option>
-							</SearchableMultiSelect>
-
-
 							<h5>Disabled</h5>
 							<SearchableMultiSelect
 								responsiveMode={responsiveMode}
