@@ -143,7 +143,7 @@ Option.defaultProps = {
 	isWrapped: true,
 };
 
-interface IDropMenuNullOptionProps extends StandardProps {
+export interface IDropMenuNullOptionProps extends StandardProps {
 	description?: string;
 }
 
@@ -159,7 +159,7 @@ NullOption.peek = {
 NullOption.propName = 'NullOption';
 NullOption.propTypes = {};
 
-interface IDropMenuFixedOptionProps extends StandardProps {
+export interface IDropMenuFixedOptionProps extends StandardProps {
 	description?: string;
 	isDisabled: boolean;
 	isHidden: boolean;
