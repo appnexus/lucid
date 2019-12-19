@@ -186,24 +186,15 @@ class SingleSelect extends React.Component<
 > {
 	static displayName = 'SingleSelect';
 
-	static definition = {
-		statics: {
-			reducers,
-			Placeholder,
-			Option: DropMenu.Option,
-			Selected,
-			NullOption: DropMenu.NullOption as typeof DropMenu.NullOption,
-			FixedOption: DropMenu.FixedOption as typeof DropMenu.FixedOption,
-			OptionGroup: DropMenu.OptionGroup,
-			peek: {
-				description: `
+	static peek: {
+		description: `
 				\`SingleSelect\` is a dropdown list. 
-				`,
-				notes: {
-					overview: `
+				`;
+		notes: {
+			overview: `
 						A dropdown list. A dropdown menu appears when you click on the trigger and allows you to choose one option and execute relevant actions.
-					`,
-					intendedUse: `
+					`;
+			intendedUse: `
 						Allow users to select a single item from a list of 3-10 options.
 											
 						**Styling notes**
@@ -211,14 +202,12 @@ class SingleSelect extends React.Component<
 						- Use \`basic\` in forms. The blue outline helps users clearly see that a selection has been made.
 						- Use \`no selection highlighting\` if the default selection is All or a null state. The grey outline indicates that this selection does not need users' attention.
 						- Use \`invisible\` for filters within a full page table header. The lack of outline allows the dropdown to have a lighter visual weight within a data-intense layout.
-					`,
-					technicalRecommendations: `
-					`,
-				},
-				categories: ['controls', 'selectors'],
-				madeFrom: ['DropMenu'],
-			},
-		},
+					`;
+			technicalRecommendations: `
+					`;
+		};
+		categories: ['controls', 'selectors'];
+		madeFrom: ['DropMenu'];
 	};
 
 	static defaultProps = defaultProps;
@@ -227,8 +216,8 @@ class SingleSelect extends React.Component<
 	static Option = Option;
 	static Selected = Selected;
 	static OptionGroup = OptionGroup;
-	static NullOption = DropMenu.NullOption as typeof DropMenu.NullOption;
-	static FixedOption = DropMenu.FixedOption as typeof DropMenu.FixedOption;
+	static NullOption = DropMenu.NullOption;
+	static FixedOption = DropMenu.FixedOption;
 
 	static propTypes = {
 		children: node`
