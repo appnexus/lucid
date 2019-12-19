@@ -156,7 +156,7 @@ class Paginator extends React.Component<IPaginatorProps, IPaginatorState> {
 	static displayName = 'Paginator';
 	static peek = {
 		description: `	
-			A paginator with page size selector.	
+			A paginator that has an optional page size selector.	
 		`,
 		categories: ['navigation'],
 		madeFrom: ['ArrowIcon', 'TextField', 'Button', 'SingleSelect'],
