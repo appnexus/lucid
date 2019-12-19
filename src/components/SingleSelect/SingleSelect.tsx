@@ -197,7 +197,7 @@ class SingleSelect extends React.Component<
 			OptionGroup: DropMenu.OptionGroup,
 			peek: {
 				description: `
-				A dropdown list. 
+				\`SingleSelect\` is a dropdown list. 
 				`,
 				notes: {
 					overview: `
