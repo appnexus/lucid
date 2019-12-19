@@ -112,11 +112,6 @@ export interface IPaginatorProps
 	/** Object of SingleSelect props which are passed thru to the underlying SingleSelect component for the page size selector. */
 
 	SingleSelect: IPaginatorSingleSelectProps;
-	//{
-	//...SingleSelect.defaultProps,
-	//	ISingleSelectProps;
-	//	selectedIndex: number
-	//};
 
 	/** Object of TextField props which are passed thru to the underlying TextField component. */
 
