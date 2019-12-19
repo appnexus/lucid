@@ -237,7 +237,7 @@ class Paginator extends React.Component<IPaginatorProps, IPaginatorState> {
 		`,
 	};
 
-	handleTextFieldChange(
+	handleTextFieldChange = (
 		pageNum: string,
 		{
 			props,
@@ -246,14 +246,14 @@ class Paginator extends React.Component<IPaginatorProps, IPaginatorState> {
 			props: ITextFieldProps;
 			event: React.FocusEvent | React.FormEvent;
 		}
-	): void {
+	): void => {
 		const { onPageSelect, selectedPageIndex, totalPages } = this.props;
 		const parsedPageNum = _.parseInt(pageNum);
 		if (_.isNaN(parsedPageNum)) {
 			return onPageSelect(selectedPageIndex, totalPages, { props, event });
 		}
 		return onPageSelect(parsedPageNum - 1, totalPages, { props, event });
-	}
+	};
 
 	render(): React.ReactNode {
 		const {
