@@ -216,8 +216,8 @@ class SingleSelect extends React.Component<
 	static Option = Option;
 	static Selected = Selected;
 	static OptionGroup = OptionGroup;
-	static NullOption = DropMenu.NullOption as typeof DropMenu.NullOption;
-	static FixedOption = DropMenu.FixedOption as typeof DropMenu.FixedOption;
+	static NullOption = DropMenu.NullOption;
+	static FixedOption = DropMenu.FixedOption;
 
 	static propTypes = {
 		children: node`
