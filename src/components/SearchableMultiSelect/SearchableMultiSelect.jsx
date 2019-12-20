@@ -151,7 +151,7 @@ const SearchableMultiSelect = createClass({
 
 	propTypes: {
 		children: node`
-			Should be instances of {\`SearchableMultiSelect.Option\`}. Other direct
+			Should be instances of &#123;\`SearchableMultiSelect.Option\`&#125;. Other direct
 			child elements will not render.
 		`,
 
@@ -186,7 +186,7 @@ const SearchableMultiSelect = createClass({
 
 		onRemoveAll: func`
 			Called when the user clicks to remove all selections.  Signature:
-			\`({props, event}) => {}\`
+			\`({props, event}) => {}\`.
 		`,
 
 		optionFilter: func`

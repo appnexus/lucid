@@ -109,8 +109,8 @@ const SearchableSelect = createClass({
 
 	propTypes: {
 		children: node`
-			Should be instances of {\`SearchableSelect.Placeholder\`,
-			\`SearchableSelect.Option\`, \`SearchableSelect.OptionGroup\`}. Other
+			Should be instances of: &#123;\`SearchableSelect.Placeholder\`,
+			\`SearchableSelect.Option\`, \`SearchableSelect.OptionGroup\`&#125#. Other
 			direct child elements will not render.
 		`,
 

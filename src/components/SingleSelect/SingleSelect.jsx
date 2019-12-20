@@ -32,7 +32,7 @@ const SingleSelect = createClass({
 			`,
 			notes: {
 				overview: `
-					A dropdown list. A dropdown menu appears when you click on the trigger and allows you to choose one option and execute relevant actions.
+					\`SingleSelect\` is a dropdown list. A dropdown menu appears when you click on the trigger and allows you to choose one option and execute relevant actions.
 				`,
 				intendedUse: `
 					Allow users to select a single item from a list of 3-10 options.
@@ -113,8 +113,8 @@ const SingleSelect = createClass({
 
 	propTypes: {
 		children: node`
-			Should be instances of {\`SingleSelect.Placeholder\`,
-			\`SingleSelect.Option\`, \`SingleSelect.OptionGroup\`}. Other direct
+			Should be instances of: &#123;\`SingleSelect.Placeholder\`,
+			\`SingleSelect.Option\`, \`SingleSelect.OptionGroup\`&#125;. Other direct
 			child elements will not render.
 		`,
 
@@ -138,7 +138,7 @@ const SingleSelect = createClass({
 		`,
 
 		isDisabled: bool`
-			Disables the SingleSelect from being clicked or focused.
+			Disables the \`SingleSelect\` from being clicked or focused.
 		`,
 
 		isInvisible: bool`
@@ -156,7 +156,7 @@ const SingleSelect = createClass({
 		`,
 
 		DropMenu: shape(DropMenu.propTypes)`
-			Object of DropMenu props which are passed thru to the underlying DropMenu
+			Object of \`DropMenu\` props which are passed thru to the underlying \`DropMenu\`
 			component.
 		`,
 
