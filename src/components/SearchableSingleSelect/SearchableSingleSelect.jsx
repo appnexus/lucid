@@ -15,6 +15,7 @@ import { SearchFieldDumb as SearchField } from '../SearchField/SearchField';
 import { DropMenuDumb as DropMenu } from '../DropMenu/DropMenu';
 import LoadingIcon from '../Icon/LoadingIcon/LoadingIcon';
 import Selection from '../Selection/Selection';
+import { Validation } from '../Validation/Validation';
 
 import * as reducers from './SearchableSingleSelect.reducers';
 
@@ -177,6 +178,14 @@ const SearchableSingleSelect = createClass({
 			handler.  It also support the \`Selection\` prop that can be used to
 			forward along props to the underlying \`Selection\` component.
 		`,
+
+		Error: any`
+			In most cases this will be a string, but it also accepts any valid React
+			element. If this is a falsey value, then no error message will be
+			displayed.  If this is the literal \`true\`, it will add the
+			\`-is-error\` class to the wrapper div, but not render the
+			\`-error-content\` \`div\`.
+		`
 	},
 
 	getInitialState() {
@@ -196,6 +205,7 @@ const SearchableSingleSelect = createClass({
 			searchText: '',
 			selectedIndex: null,
 			DropMenu: DropMenu.defaultProps,
+			Error: null
 		};
 	},
 
@@ -290,8 +300,8 @@ const SearchableSingleSelect = createClass({
 			searchText.length > 0
 			? this.renderUnderlinedChildren(optionProps.children, searchText)
 			: _.isFunction(optionProps.children)
-			? React.createElement(optionProps.children, { searchText })
-			: optionProps.children;
+				? React.createElement(optionProps.children, { searchText })
+				: optionProps.children;
 	},
 
 	renderOption({ optionProps, optionIndex }) {
@@ -384,6 +394,9 @@ const SearchableSingleSelect = createClass({
 			'props',
 			{}
 		);
+		const errorChildProps = _.first(
+			_.map(findTypes(props, Validation.Error), 'props')
+		);
 
 		//user made a selection
 		if (!_.isNil(props.selectedIndex)) {
@@ -402,9 +415,22 @@ const SearchableSingleSelect = createClass({
 								? this.renderOptionContent(selectedOptionProps, '')
 								: selectedOptionProps.Selected
 						}
+						className={cx('&', {
+							'&-select-error': errorChildProps && errorChildProps.children && errorChildProps.children !== true
+						}, className)}
 						onRemove={this.removeSelection}
 						kind='default'
 					/>
+					{errorChildProps &&
+						errorChildProps.children &&
+						errorChildProps.children !== true ? (
+							<div
+								{...omitProps(errorChildProps, undefined)}
+								className={cx('&-error-select-content')}
+							>
+								{errorChildProps.children}
+							</div>
+						) : null}
 				</div>
 			);
 		}
@@ -415,6 +441,7 @@ const SearchableSingleSelect = createClass({
 				className={cx('&', className)}
 			>
 				<DropMenu
+					Error={errorChildProps}
 					{...dropMenuProps}
 					selectedIndices={null}
 					className={cx(
@@ -442,7 +469,10 @@ const SearchableSingleSelect = createClass({
 							{...searchFieldProps}
 							autoComplete={searchFieldProps.autoComplete || 'off'}
 							isDisabled={isDisabled}
-							className={cx('&-search', searchFieldProps.className)}
+							className={cx('&-search', {
+								'&-search-is-error': errorChildProps && errorChildProps.children
+							},
+								searchFieldProps.className)}
 							value={searchText}
 							onChange={this.handleSearch}
 						/>
@@ -458,6 +488,16 @@ const SearchableSingleSelect = createClass({
 					) : null}
 					{this.renderOptions()}
 				</DropMenu>
+				{errorChildProps &&
+					errorChildProps.children &&
+					errorChildProps.children !== true ? (
+						<div
+							{...omitProps(errorChildProps, undefined)}
+							className={cx('&-error-content')}
+						>
+							{errorChildProps.children}
+						</div>
+					) : null}
 			</div>
 		);
 	},
