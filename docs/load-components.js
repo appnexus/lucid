@@ -845,6 +845,16 @@ module.exports = [
 		component: getDefaultExport(
 			require('../src/components/SidePanel/SidePanel')
 		),
+		examplesContext: require.context(
+			'../src/components/SidePanel/examples',
+			true,
+			/\.(j|t)sx?$/
+		),
+		examplesContextRaw: require.context(
+			'!!raw-loader!../src/components/SidePanel/examples',
+			true,
+			/\.(j|t)sx?$/
+		),
 	},
 	{
 		name: 'SingleSelect',
