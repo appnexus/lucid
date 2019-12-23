@@ -17,7 +17,7 @@ export interface StandardProps {
 	/** Styles that are passed through to native control. */
 	style?: React.CSSProperties;
 
-	callbackId?: string;
+	callbackId?: string | number;
 }
 
 // Like `T & U`, but where there are overlapping properties using the type from U only.
@@ -42,9 +42,9 @@ export interface FC<P> extends React.FC<P> {
 	_isPrivate?: boolean;
 }
 
-class ReactClassComponent extends React.Component<{},{}> {}
+class ReactClassComponent extends React.Component<{}, {}> {}
 
-type IReactClassComponent = (typeof ReactClassComponent)
+type IReactClassComponent = typeof ReactClassComponent;
 
 type TypesType<P> =
 	| ICreateClassComponentClass<P>
