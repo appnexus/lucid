@@ -77,31 +77,11 @@ export interface ISplitButtonProps extends StandardProps {
 	/** Form element type variations of SplitButton. Passed through to DOM Button. */
 	type?: string;
 
-	// /** Handles clicks on the Primary Button */
-	// handleClick: ({
-	// 	event,
-	// }: {
-	// 	event: React.KeyboardEvent
-	// }) => void;
-
-	// /** Handles clicks in the DropMenu */
-	// handleSelect: (
-	// 	optionIndex: number,
-	// 	{ event }: { event: React.MouseEvent },
-	//  ) => void;
-
-	// /** Handles clicks in the  */
-	// handleButtonClick: (
-	// 	buttonProps: ISplitButtonButtonChildProps,
-	// 	event: React.MouseEvent,
-	// ) => void;
-
 	/** *Child Element* - props pass through to the underlying DropMenu
 			component */
 	DropMenu: IDropMenuProps;
 }
 
-//const SplitButton = createClass({
 class SplitButton extends React.Component<ISplitButtonProps, {}> {
 	static displayName = 'SplitButton';
 	static Button = ButtonChild;
@@ -159,16 +139,7 @@ class SplitButton extends React.Component<ISplitButtonProps, {}> {
 		DropMenu: DropMenu.defaultProps,
 	};
 
-	// getDefaultProps() {
-	// 	return {
-	// 		direction: 'down',
-	// 		type: 'button',
-	// 		DropMenu: DropMenu.defaultProps,
-	// 	};
-	// };
-
 	// Handles clicks on the Primary Button
-	//	handleClick({ event }) {
 	handleClick = (event: React.MouseEvent): void => {
 		const clickedButtonProps = _.get(
 			getFirst(this.props, SplitButton.Button),
@@ -182,7 +153,6 @@ class SplitButton extends React.Component<ISplitButtonProps, {}> {
 	};
 
 	// Handles clicks in the DropMenu
-	//handleSelect(optionIndex, { event }) {
 	handleSelect = (
 		optionIndex: number | null,
 		{ event }: { event: React.KeyboardEvent | React.MouseEvent }
@@ -197,7 +167,6 @@ class SplitButton extends React.Component<ISplitButtonProps, {}> {
 	};
 
 	// Handles clicks within handleClick and handleSelect
-	//handleButtonClick(buttonProps, event) {
 	handleButtonClick = (
 		buttonProps: ISplitButtonButtonChildProps,
 		event: React.KeyboardEvent | React.MouseEvent
