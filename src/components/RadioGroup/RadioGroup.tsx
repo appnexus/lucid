@@ -58,17 +58,18 @@ interface IRadioGroupProps extends StandardProps {
 	isDisabled: boolean;
 }
 
-const Label = () => null;
-Label.peek = {
+const RadioGroupLabel = () => null;
+RadioGroupLabel.peek = {
 	description: `
         Support radio button labels as \`RadioGroup.Label\` component which
         can be provided as a child of a \`RadioGroup.RadioButton\`
         component.
     `,
 };
-Label.propTypes = {
+RadioGroupLabel.propTypes = {
 	children: node,
 };
+RadioGroupLabel.displayName = 'RadioGroup.Label';
 
 const defaultProps = {
 	name: uniqueName(`${cx('&')}-`),
@@ -213,7 +214,7 @@ RadioGroup.reducers = reducers;
 
 RadioGroup.RadioButton = RadioButton;
 
-RadioGroup.Label = Label;
+RadioGroup.Label = RadioGroupLabel;
 
 export default buildModernHybridComponent<
 	IRadioGroupProps,
