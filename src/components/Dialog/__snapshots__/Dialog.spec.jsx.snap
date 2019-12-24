@@ -1010,16 +1010,32 @@ exports[`Dialog [common] example testing should match snapshot(s) for 4.complex 
         <SingleSelect.Placeholder>
           You must select a break...
         </SingleSelect.Placeholder>
-        <SingleSelect.Option>
+        <SingleSelect.Option
+          isDisabled={false}
+          isHidden={false}
+          isWrapped={true}
+        >
           10am
         </SingleSelect.Option>
-        <SingleSelect.Option>
+        <SingleSelect.Option
+          isDisabled={false}
+          isHidden={false}
+          isWrapped={true}
+        >
           11am
         </SingleSelect.Option>
-        <SingleSelect.Option>
+        <SingleSelect.Option
+          isDisabled={false}
+          isHidden={false}
+          isWrapped={true}
+        >
           1pm
         </SingleSelect.Option>
-        <SingleSelect.Option>
+        <SingleSelect.Option
+          isDisabled={false}
+          isHidden={false}
+          isWrapped={true}
+        >
           2pm
         </SingleSelect.Option>
       </SingleSelect>
