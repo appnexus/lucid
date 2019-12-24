@@ -3,7 +3,6 @@ import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import {
-	createClass,
 	filterTypes,
 	getFirst,
 	omitProps,
@@ -19,11 +18,10 @@ import {
 	DropMenuDumb as DropMenu,
 } from '../DropMenu/DropMenu';
 import * as reducers from './SplitButton.reducers';
-import { number } from 'prop-types';
 
 const cx = lucidClassNames.bind('&-SplitButton');
 
-const { any, bool, func, node, oneOf, shape, string } = PropTypes;
+const { bool, func, node, oneOf, shape, string } = PropTypes;
 
 /** SplitButton Button Child Component */
 interface ISplitButtonButtonChildProps extends StandardProps {
