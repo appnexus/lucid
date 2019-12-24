@@ -2439,45 +2439,45 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 11.differ
             isSelected={false}
             onSelect={[Function]}
           >
-            <RadioGroup.Label>
+            <Label>
               All (unfiltered)
-            </RadioGroup.Label>
+            </Label>
           </RadioButton>
           <RadioButton
             isDisabled={false}
             isSelected={false}
             onSelect={[Function]}
           >
-            <RadioGroup.Label>
+            <Label>
               Eligible
-            </RadioGroup.Label>
+            </Label>
           </RadioButton>
           <RadioButton
             isDisabled={false}
             isSelected={false}
             onSelect={[Function]}
           >
-            <RadioGroup.Label>
+            <Label>
               Blocked by You
-            </RadioGroup.Label>
+            </Label>
           </RadioButton>
           <RadioButton
             isDisabled={false}
             isSelected={false}
             onSelect={[Function]}
           >
-            <RadioGroup.Label>
+            <Label>
               Blocked by Seller
-            </RadioGroup.Label>
+            </Label>
           </RadioButton>
           <RadioButton
             isDisabled={false}
             isSelected={false}
             onSelect={[Function]}
           >
-            <RadioGroup.Label>
+            <Label>
               Mutually Blocked
-            </RadioGroup.Label>
+            </Label>
           </RadioButton>
         </RadioGroup>
       </div>

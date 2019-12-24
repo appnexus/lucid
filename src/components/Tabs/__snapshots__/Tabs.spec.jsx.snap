@@ -239,27 +239,27 @@ exports[`Tabs [common] example testing should match snapshot(s) for 03-complex-t
             isSelected={false}
             onSelect={[Function]}
           >
-            <RadioGroup.Label>
+            <Label>
               Captain America
-            </RadioGroup.Label>
+            </Label>
           </RadioButton>
           <RadioButton
             isDisabled={false}
             isSelected={false}
             onSelect={[Function]}
           >
-            <RadioGroup.Label>
+            <Label>
               Iron Man
-            </RadioGroup.Label>
+            </Label>
           </RadioButton>
           <RadioButton
             isDisabled={false}
             isSelected={false}
             onSelect={[Function]}
           >
-            <RadioGroup.Label>
+            <Label>
               Thor
-            </RadioGroup.Label>
+            </Label>
           </RadioButton>
         </RadioGroup>
       }
@@ -286,27 +286,27 @@ exports[`Tabs [common] example testing should match snapshot(s) for 03-complex-t
             isSelected={false}
             onSelect={[Function]}
           >
-            <RadioGroup.Label>
+            <Label>
               Captain America
-            </RadioGroup.Label>
+            </Label>
           </RadioButton>
           <RadioButton
             isDisabled={false}
             isSelected={false}
             onSelect={[Function]}
           >
-            <RadioGroup.Label>
+            <Label>
               Iron Man
-            </RadioGroup.Label>
+            </Label>
           </RadioButton>
           <RadioButton
             isDisabled={false}
             isSelected={false}
             onSelect={[Function]}
           >
-            <RadioGroup.Label>
+            <Label>
               Thor
-            </RadioGroup.Label>
+            </Label>
           </RadioButton>
         </RadioGroup>
       </Tabs.Title>
