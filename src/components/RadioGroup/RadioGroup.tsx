@@ -8,6 +8,7 @@ import {
 	rejectTypes,
 	omitProps,
 	StandardProps,
+	Overwrite,
 } from '../../util/component-types';
 import reducers, { IRadioGroupState } from './RadioGroup.reducers';
 import { buildModernHybridComponent } from '../../util/state-management';
@@ -19,7 +20,7 @@ const cx = lucidClassNames.bind('&-RadioGroup');
 
 const { func, node, number, string, bool } = PropTypes;
 
-interface IRadioGroupProps extends StandardProps {
+interface IRadioGroupPropsRaw extends StandardProps {
 	/**
 	 * Passed along to the \`RadioGroup.RadioButton\' children whose \'name\'
 	 * props are ignored.
@@ -57,6 +58,14 @@ interface IRadioGroupProps extends StandardProps {
 	 */
 	isDisabled: boolean;
 }
+
+type IRadioGroupProps = Overwrite<
+	React.DetailedHTMLProps<
+		React.HTMLAttributes<HTMLSpanElement>,
+		HTMLSpanElement
+	>,
+	IRadioGroupPropsRaw
+>;
 
 const RadioGroupLabel = () => null;
 RadioGroupLabel.peek = {
