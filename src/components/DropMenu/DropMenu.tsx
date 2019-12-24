@@ -14,6 +14,7 @@ import { buildModernHybridComponent } from '../../util/state-management';
 import * as KEYCODE from '../../constants/key-code';
 import * as reducers from './DropMenu.reducers';
 import ContextMenu from '../ContextMenu/ContextMenu';
+import { SearchableSelectDumb as SearchableSelect } from '../SearchableSelect/SearchableSelect';
 
 function joinArray(
 	array: React.ReactNode[],
@@ -84,7 +85,7 @@ Control.peek = {
 Control.propName = 'Control';
 Control.propTypes = {};
 
-interface IDropMenuOptionGroupProps extends StandardProps {
+export interface IDropMenuOptionGroupProps extends StandardProps {
 	description?: string;
 	isHidden: boolean;
 }
@@ -108,7 +109,7 @@ OptionGroup.defaultProps = {
 	isHidden: false,
 };
 
-interface IDropMenuOptionProps extends StandardProps {
+export interface IDropMenuOptionProps extends StandardProps {
 	description?: string;
 	isDisabled?: boolean;
 	isHidden?: boolean;
@@ -552,8 +553,8 @@ class DropMenu extends React.Component<IDropMenuProps, IDropMenuState> {
 	};
 
 	static preprocessOptionData = (
-		props: IDropMenuProps,
-		ParentType = DropMenu
+		props: StandardProps,
+		ParentType: typeof DropMenu | typeof SearchableSelect = DropMenu
 	) => {
 		const { OptionGroup, Option, NullOption, FixedOption } = ParentType;
 

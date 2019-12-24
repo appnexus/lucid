@@ -2,15 +2,15 @@
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import _ from 'lodash';
-import { createClass, omitProps, findTypes, getFirst } from '../../util/component-types';
+import { StandardProps, createClass, omitProps, findTypes, getFirst } from '../../util/component-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import { partitionText, propsSearch } from '../../util/text-manipulation';
-import { buildHybridComponent } from '../../util/state-management';
+import { buildModernHybridComponent } from '../../util/state-management';
 import * as reducers from './SearchableSelect.reducers';
 import ChevronIcon from '../Icon/ChevronIcon/ChevronIcon';
-import { DropMenuDumb as DropMenu } from '../DropMenu/DropMenu';
+import { DropMenuDumb as DropMenu, IDropMenuOptionProps, IDropMenuOptionGroupProps, IDropMenuProps, IDropMenuState } from '../DropMenu/DropMenu';
 import LoadingIcon from '../Icon/LoadingIcon/LoadingIcon';
-import { SearchFieldDumb as SearchField } from '../SearchField/SearchField';
+import { SearchFieldDumb as SearchField, ISearchFieldProps } from '../SearchField/SearchField';
 import { Validation } from '../Validation/Validation';
 
 const cx = lucidClassNames.bind('&-SearchableSelect');
@@ -27,88 +27,226 @@ const {
 	oneOfType,
 } = PropTypes;
 
-const SearchableSelect = createClass({
-	displayName: 'SearchableSelect',
+interface ISearchableSelectPlaceholderProps extends StandardProps {
+	description?: string;
+}
 
-	statics: {
-		peek: {
-			description: `
-				A selector control (like native \`<select>\`) which is used to select a
-				single option from a dropdown list using a SearchField.  Supports
-				option groups with and without labels.
-			`,
-			categories: ['controls', 'selectors'],
-			madeFrom: ['DropMenu', 'SearchField'],
-		},
-	},
+const Placeholder = (_props: ISearchableSelectPlaceholderProps): null => null;
+Placeholder.displayName = 'SearchableSelect.Placeholder';
+Placeholder.peek = {
+	description: `
+		The content rendered in the control when there is no
+		option is selected. Also rendered in the option list to remove current
+		selection.
+	`,
+};
+Placeholder.propName = 'Placeholder';
+Placeholder.propTypes = {};
 
-	reducers,
 
-	components: {
-		Placeholder: createClass({
-			displayName: 'SearchableSelect.Placeholder',
-			statics: {
-				peek: {
-					description: `
-						Content this is displayed when nothing is selected.
-					`,
-				},
-			},
-			propName: 'Placeholder',
-		}),
-		Option: createClass({
-			displayName: 'SearchableSelect.Option',
-			statics: {
-				peek: {
-					description: `
-						A selectable option in the list.
-					`,
-				},
-			},
-			propName: 'Option',
-			propTypes: {
-				Selected: any`
-					Customizes the rendering of the Option when it is selected and is
-					displayed instead of the Placeholder.
-				`,
-				filterText: string`
-					Text used to filter options when searching. By default, this is the
-					text rendered in the Option, but it can be customized further with
-					this prop.
-				`,
-				...DropMenu.Option.propTypes,
-			},
-			components: {
-				Selected: createClass({
-					displayName: 'SearchableSelect.Option.Selected',
-					statics: {
-						peek: {
-							description: `
-								Customizes the rendering of the Option when it is selected
-								and is displayed instead of the Placeholder.
-							`,
-						},
-					},
-					propName: 'Selected',
-				}),
-			},
-		}),
-		OptionGroup: createClass({
-			displayName: 'SearchableSelect.OptionGroup',
-			statics: {
-				peek: {
-					description: `
-						Groups \`Option\`s together with a non-selectable heading.
-					`,
-				},
-			},
-			propName: 'OptionGroup',
-			propTypes: DropMenu.OptionGroup.propTypes,
-		}),
-		SearchField,
-	},
+export interface ISearchableSelectOptionSelectedProps extends StandardProps {}
+const Selected = (_props: ISearchableSelectOptionSelectedProps): null => null;
+Selected.displayName = 'SearchableSelect.Option.Selected';
+Selected.peek = {
+	description: `
+		Customizes the rendering of the Option when it is selected
+		and is displayed instead of the Placeholder.
+	`,
+};
 
-	propTypes: {
+export interface ISearchableSelectOptionProps extends IDropMenuOptionProps {}
+const Option = (_props: ISearchableSelectOptionProps): null => null;
+Option.displayName = 'SearchableSelect.Option';
+Option.peek = {
+	description: `
+		The content rendered in the control when there is no
+		option is selected. Also rendered in the option list to remove current
+		selection.
+	`,
+};
+Option.propTypes = {
+	isDisabled: bool`
+		disables selection of the \`Option\`.
+	`,
+	isHidden: bool`
+		hides the \`Option\` from the list.
+	`,
+	isWrapped: bool`
+		controls wrapping of the text.
+	`,
+};
+Option.defaultProps = {
+	isDisabled: false,
+	isHidden: false,
+	isWrapped: true,
+};
+Option.Selected = Selected;
+
+const OptionGroup = (_props: IDropMenuOptionGroupProps): null => null;
+OptionGroup.displayName = 'SearchableSelect.OptionGroup';
+OptionGroup.peek = {
+	description: `
+		A special kind of \`Option\` that is always rendered at the top of
+		the menu and has an \`optionIndex\` of \`null\`. Useful for
+		unselect.
+	`,
+};
+OptionGroup.propName = 'OptionGroup';
+OptionGroup.propTypes = {
+	isHidden: bool`
+		hides the \`OptionGroup\` from the list.
+	`,
+};
+OptionGroup.defaultProps = {
+	isHidden: false,
+};
+
+export interface ISearchableSelectProps extends StandardProps {
+	hasReset?: boolean;
+	isDisabled?: boolean;
+	isInvisible?: boolean;
+	isLoading?: boolean;
+	isSelectionHighlighted?: boolean;
+	maxMenuHeight: number;
+	selectedIndex: number | null;
+	searchText: string;
+	DropMenu: IDropMenuProps;
+	Placeholder?: React.ReactNode;
+	Option?: React.ReactNode;
+	OptionGroup?: React.ReactNode;
+	Error?: React.ReactNode;
+	/** Called when an option is clicked, or when an option has focus and the
+			Enter key is pressed. */
+	onSelect: (
+		optionIndex: number | null,
+		{
+			props,
+			event,
+		}: {
+			props: IDropMenuOptionProps;
+			event: React.KeyboardEvent | React.MouseEvent;
+		}
+	) => void;
+
+	onSearch: (
+		searchText: string,
+		firstVisibleIndex: number | undefined
+	) => void;
+
+	optionFilter: (
+		searchValue: string,
+		props: IDropMenuOptionProps
+	) => boolean;
+		
+
+}
+
+export interface ISearchableSelectState extends IDropMenuState {
+	DropMenu: IDropMenuState;
+	selectedIndex: number | null;
+	searchText: string | null;
+}
+
+class SearchableSelect extends React.Component<ISearchableSelectProps, ISearchableSelectState> {
+	// constructor(props: ISearchableSelectProps) {
+	// 	super(props);
+	// 	this.state = {
+	// 		optionGroups: [],
+	// 		flattenedOptionsData: [],
+	// 		ungroupedOptionData: [],
+	// 		optionGroupDataLookup: {},
+	// 		DropMenu: DropMenu,
+	// 		selectedIndex: null,
+	// 		searchText: null
+	// 	}
+	// }
+	
+	static displayName: 'SearchableSelect';
+
+	static peek: {
+		description: `
+			A selector control (like native \`<select>\`) which is used to select a
+			single option from a dropdown list using a SearchField.  Supports
+			option groups with and without labels.
+		`,
+		categories: ['controls', 'selectors'],
+		madeFrom: ['DropMenu', 'SearchField'],
+	}
+	
+	static reducers = reducers;
+
+	static Placeholder = Placeholder;
+	static Option = Option;
+	static OptionGroup = OptionGroup;
+	static SearchField = SearchField;
+	static NullOption = DropMenu.NullOption;
+	static FixedOption = DropMenu.FixedOption;
+
+	// static components: {
+	// 	Placeholder: createClass({
+	// 		displayName: 'SearchableSelect.Placeholder',
+	// 		statics: {
+	// 			peek: {
+	// 				description: `
+	// 					Content this is displayed when nothing is selected.
+	// 				`,
+	// 			},
+	// 		},
+	// 		propName: 'Placeholder',
+	// 	}),
+	// 	Option: createClass({
+	// 		displayName: 'SearchableSelect.Option',
+	// 		statics: {
+	// 			peek: {
+	// 				description: `
+	// 					A selectable option in the list.
+	// 				`,
+	// 			},
+	// 		},
+	// 		propName: 'Option',
+	// 		propTypes: {
+	// 			Selected: any`
+	// 				Customizes the rendering of the Option when it is selected and is
+	// 				displayed instead of the Placeholder.
+	// 			`,
+	// 			filterText: string`
+	// 				Text used to filter options when searching. By default, this is the
+	// 				text rendered in the Option, but it can be customized further with
+	// 				this prop.
+	// 			`,
+	// 			...DropMenu.Option.propTypes,
+	// 		},
+	// 		components: {
+	// 			Selected: createClass({
+	// 				displayName: 'SearchableSelect.Option.Selected',
+	// 				statics: {
+	// 					peek: {
+	// 						description: `
+	// 							Customizes the rendering of the Option when it is selected
+	// 							and is displayed instead of the Placeholder.
+	// 						`,
+	// 					},
+	// 				},
+	// 				propName: 'Selected',
+	// 			}),
+	// 		},
+	// 	}),
+	// 	OptionGroup: createClass({
+	// 		displayName: 'SearchableSelect.OptionGroup',
+	// 		statics: {
+	// 			peek: {
+	// 				description: `
+	// 					Groups \`Option\`s together with a non-selectable heading.
+	// 				`,
+	// 			},
+	// 		},
+	// 		propName: 'OptionGroup',
+	// 		propTypes: DropMenu.OptionGroup.propTypes,
+	// 	}),
+	// 	SearchField,
+	// },
+
+	static propTypes = {
 		children: node`
 			Should be instances of {\`SearchableSelect.Placeholder\`,
 			\`SearchableSelect.Option\`, \`SearchableSelect.OptionGroup\`}. Other
@@ -214,23 +352,20 @@ const SearchableSelect = createClass({
 			\`-is-error\` class to the wrapper div, but not render the
 			\`-error-content\` \`div\`.
 		`
-	},
+	};
 
-	getDefaultProps() {
-		return {
-			hasReset: true,
-			isSelectionHighlighted: true,
-			isDisabled: false,
-			isInvisible: false,
-			isLoading: false,
-			isValid: true,
-			optionFilter: propsSearch,
-			searchText: '',
-			selectedIndex: null,
-			DropMenu: DropMenu.defaultProps,
-			Error: null
-		};
-	},
+	static defaultProps = {
+		hasReset: true,
+		isSelectionHighlighted: true,
+		isDisabled: false,
+		isInvisible: false,
+		isLoading: false,
+		optionFilter: propsSearch,
+		searchText: '',
+		selectedIndex: null,
+		DropMenu: DropMenu.defaultProps,
+		Error: null
+	};
 
 	getInitialState() {
 		return {
@@ -239,19 +374,20 @@ const SearchableSelect = createClass({
 			ungroupedOptionData: [],
 			optionGroupDataLookup: {},
 		};
-	},
+	};
 
+	
 	componentWillMount() {
 		// preprocess the options data before rendering
 		this.setState(DropMenu.preprocessOptionData(this.props, SearchableSelect));
-	},
+	};
 
-	componentWillReceiveProps(nextProps) {
+	componentWillReceiveProps = (nextProps: ISearchableSelectProps) => {
 		// only preprocess options data when it changes (via new props) - better performance than doing this each render
 		this.setState(DropMenu.preprocessOptionData(nextProps, SearchableSelect));
-	},
+	};
 
-	handleSearch(searchText) {
+	handleSearch = (searchText: string) => {
 		const {
 			props: { onSearch, optionFilter },
 		} = this;
@@ -266,9 +402,9 @@ const SearchableSelect = createClass({
 		);
 
 		onSearch(searchText, firstVisibleIndex);
-	},
+	};
 
-	renderUnderlinedChildren(childText, searchText) {
+	renderUnderlinedChildren = (childText: string, searchText: string) => {
 		const [pre, match, post] = partitionText(
 			childText,
 			new RegExp(_.escapeRegExp(searchText), 'i'),
@@ -292,9 +428,9 @@ const SearchableSelect = createClass({
 				</span>
 			),
 		];
-	},
+	};
 
-	renderOption(optionProps, optionIndex) {
+	renderOption = (optionProps: IDropMenuOptionProps, optionIndex: number) => {
 		const { isLoading, optionFilter, searchText } = this.props;
 
 		if (searchText) {
@@ -325,7 +461,7 @@ const SearchableSelect = createClass({
 					: optionProps.children}
 			</DropMenu.Option>
 		);
-	},
+	};
 
 	renderOptions() {
 		const { searchText } = this.props;
@@ -339,6 +475,7 @@ const SearchableSelect = createClass({
 		// for each option group passed in, render a DropMenu.OptionGroup, any
 		// label will be included in it's children, render each option inside the
 		// group
+		console.log(optionGroups);
 		const options = _.map(
 			optionGroups,
 			(optionGroupProps, optionGroupIndex) => {
@@ -384,7 +521,7 @@ const SearchableSelect = createClass({
 					</span>
 				</DropMenu.Option>
 			);
-	},
+	};
 
 	render() {
 		const {
@@ -438,7 +575,7 @@ const SearchableSelect = createClass({
 					)}
 					isDisabled={isDisabled}
 					onSelect={onSelect}
-					selectedIndices={isItemSelected ? [selectedIndex] : []}
+					selectedIndices={isItemSelected && selectedIndex ? [selectedIndex] : []}
 
 				>
 					<DropMenu.Control>
@@ -464,7 +601,7 @@ const SearchableSelect = createClass({
 									!isItemSelected ? _.get(placeholderProps, 'className') : null
 								)}
 							>
-								{isItemSelected
+								{isItemSelected && selectedIndex
 									? _.get(
 										getFirst(
 											flattenedOptionsData[selectedIndex].optionProps,
@@ -520,8 +657,11 @@ const SearchableSelect = createClass({
 					) : null}
 			</div>
 		);
-	},
-});
+	};
+};
 
-export default buildHybridComponent(SearchableSelect);
+export default buildModernHybridComponent<ISearchableSelectProps,
+	ISearchableSelectState,
+	typeof SearchableSelect
+>(SearchableSelect, { reducers });
 export { SearchableSelect as SearchableSelectDumb };

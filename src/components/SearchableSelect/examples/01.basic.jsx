@@ -18,6 +18,8 @@ export default createClass({
 	},
 
 	render() {
+		console.log(Option);
+		console.log(OptionGroup);
 		return (
 			<section style={{ marginBottom: '20px' }}>
 				<SearchableSelect onSelect={this.handleSelect} maxMenuHeight='200'>

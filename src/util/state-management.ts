@@ -7,7 +7,7 @@ import hoistNonReactStatics from 'hoist-non-react-statics';
 
 // TODO: could we somehow type the `...args` with a generic?
 export type Reducer<S extends object> = (arg0: S, ...args: any[]) => S;
-export type Reducers<P, S extends object> = { [K in keyof P]?: Reducer<S> };
+export type Reducers<P, S extends object> = {[K in keyof P]?: Reducer<S> | Reducers<P[K], S> | Reducers<P[K], any>};
 export type Selector<S> = (arg0: S) => any;
 export type Selectors<P, S extends object> = {
 	[K in keyof P]?: (arg0: S) => any
