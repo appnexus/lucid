@@ -85,6 +85,7 @@ Option.propTypes = {
 	`,
 	...DropMenu.Option.propTypes,
 };
+Option.defaultProps = DropMenu.Option.defaultProps;
 
 const OptionGroup = (_props: IDropMenuOptionGroupProps): null => null;
 
@@ -96,6 +97,7 @@ OptionGroup.peek = {
 };
 OptionGroup.propName = 'OptionGroup';
 OptionGroup.propTypes = DropMenu.OptionGroup.propTypes;
+OptionGroup.defaultProps = DropMenu.OptionGroup.defaultProps;
 
 type ISingleSelectDropMenuProps = Partial<IDropMenuProps>;
 

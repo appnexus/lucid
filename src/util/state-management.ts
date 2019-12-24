@@ -9,6 +9,8 @@ import hoistNonReactStatics from 'hoist-non-react-statics';
 export type Reducer<S extends object> = (arg0: S, ...args: any[]) => S;
 
 export type Reducers<P, S extends object> = {
+	//TODO: used any here to cover cases where a component's reducers file also
+	//exports child component reducers, e.g. SingleSelect/DropMenu
 	[K in keyof P]?: Reducer<S> | Reducers<P[K], S> | Reducers<P[K], any>
 };
 

@@ -555,10 +555,15 @@ class DropMenu extends React.Component<IDropMenuProps, IDropMenuState> {
 	};
 
 	static preprocessOptionData = (
-		//props: IDropMenuProps,
 		props: StandardProps,
 		//TODO: ask about this fix
-		ParentType: typeof DropMenu | typeof SingleSelect = DropMenu
+		ParentType: {
+			OptionGroup: typeof OptionGroup;
+			Option: typeof Option;
+			NullOption: typeof NullOption;
+			FixedOption: typeof FixedOption;
+		}
+		// ParentType: typeof DropMenu | typeof SingleSelect | typeof = DropMenu
 	) => {
 		const { OptionGroup, Option, NullOption, FixedOption } = ParentType;
 
