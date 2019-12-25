@@ -14,7 +14,6 @@ import { buildModernHybridComponent } from '../../util/state-management';
 import * as KEYCODE from '../../constants/key-code';
 import * as reducers from './DropMenu.reducers';
 import ContextMenu from '../ContextMenu/ContextMenu';
-import { SearchableSelectDumb as SearchableSelect } from '../SearchableSelect/SearchableSelect';
 
 function joinArray(
 	array: React.ReactNode[],
@@ -87,8 +86,10 @@ Control.propTypes = {};
 
 export interface IDropMenuOptionGroupProps extends StandardProps {
 	description?: string;
-	isHidden: boolean;
+	isHidden?: boolean;
 }
+
+export type OptionGroupFC = (props: IDropMenuOptionGroupProps) => null;
 
 const OptionGroup = (_props: IDropMenuOptionGroupProps): null => null;
 OptionGroup.displayName = 'DropMenu.OptionGroup';
@@ -138,10 +139,10 @@ Option.propTypes = {
 Option.defaultProps = {
 	isDisabled: false,
 	isHidden: false,
-	isWrapped: true,
+	isWrapped: true
 };
 
-interface IDropMenuNullOptionProps extends StandardProps {
+export interface IDropMenuNullOptionProps extends StandardProps {
 	description?: string;
 }
 
@@ -157,7 +158,7 @@ NullOption.peek = {
 NullOption.propName = 'NullOption';
 NullOption.propTypes = {};
 
-interface IDropMenuFixedOptionProps extends StandardProps {
+export interface IDropMenuFixedOptionProps extends StandardProps {
 	description?: string;
 	isDisabled: boolean;
 	isHidden: boolean;
@@ -330,7 +331,7 @@ export interface IDropMenuProps extends StandardProps {
 	FixedOption?: React.ReactNode;
 }
 
-interface IOptionsData {
+export interface IOptionsData {
 	localOptionIndex: number;
 	optionIndex: number;
 	optionGroupIndex: number | null;
@@ -554,7 +555,14 @@ class DropMenu extends React.Component<IDropMenuProps, IDropMenuState> {
 
 	static preprocessOptionData = (
 		props: StandardProps,
-		ParentType: typeof DropMenu | typeof SearchableSelect = DropMenu
+		//TODO: ask about this fix
+		ParentType: {
+			OptionGroup: typeof OptionGroup;
+			Option: typeof Option;
+			NullOption: typeof NullOption;
+			FixedOption: typeof FixedOption;
+		}
+		// ParentType: typeof DropMenu | typeof SingleSelect | typeof = DropMenu
 	) => {
 		const { OptionGroup, Option, NullOption, FixedOption } = ParentType;
 

@@ -2,7 +2,7 @@ import React from 'react';
 import { SingleSelect } from '../../../index';
 
 // eslint-disable-next-line react/prop-types
-const OptionCols = ({ col1, col2 }) => (
+const OptionCols = ({ col1, col2 }: { col1: string; col2: string }) => (
 	<div style={{ display: 'flex' }}>
 		<div style={{ width: 100 }}>{col1}</div>
 		<div>{col2}</div>

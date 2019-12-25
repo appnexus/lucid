@@ -190,7 +190,7 @@ class TextField extends React.Component<
 	};
 
 	static defaultProps = {
-		style: null,
+		style: undefined,
 		isDisabled: false,
 		isMultiLine: false,
 		onBlur: _.noop,

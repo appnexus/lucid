@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import selectors from './Paginator.selectors.js';
+import selectors from './Paginator.selectors';
 import assert from 'assert';
 
 const { totalPages } = selectors;

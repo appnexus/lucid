@@ -7,19 +7,17 @@ const { Placeholder, Option, OptionGroup } = SearchableSelect;
 export default createClass({
 	getInitialState() {
 		return {
-			selectedIndex: null,
+			selectedIndex: null
 		};
 	},
 
-	handleSelect(optionIndex) {
+	handleSelect(optionIndex: number) {
 		this.setState({
 			selectedIndex: optionIndex,
 		});
 	},
 
 	render() {
-		console.log(Option);
-		console.log(OptionGroup);
 		return (
 			<section style={{ marginBottom: '20px' }}>
 				<SearchableSelect onSelect={this.handleSelect} maxMenuHeight='200'>
