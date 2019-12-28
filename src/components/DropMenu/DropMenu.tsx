@@ -259,7 +259,7 @@ export interface IDropMenuProps extends StandardProps {
 	/** Called when an option is clicked, or when an option has focus and the
 			Enter key is pressed. */
 	onSelect: (
-		optionIndex: number | null,
+		optionIndex: any,
 		{
 			props,
 			event,
