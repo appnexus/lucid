@@ -115,6 +115,7 @@ export interface IDropMenuOptionProps extends StandardProps {
 	isDisabled?: boolean;
 	isHidden?: boolean;
 	isWrapped?: boolean;
+	Selected?: any;
 }
 
 const Option = (_props: IDropMenuOptionProps): null => null;
