@@ -7,7 +7,6 @@ import { buildModernHybridComponent } from '../../util/state-management';
 import { partitionText, propsSearch } from '../../util/text-manipulation';
 import {
 	StandardProps,
-	createClass,
 	omitProps,
 	getFirst,
 	findTypes,
@@ -23,7 +22,6 @@ import {
 import LoadingIcon from '../Icon/LoadingIcon/LoadingIcon';
 import Selection from '../Selection/Selection';
 import { Validation } from '../Validation/Validation';
-
 import * as reducers from './SearchableSingleSelect.reducers';
 
 const { any, bool, func, number, oneOfType, shape, string, node } = PropTypes;
@@ -163,7 +161,7 @@ class SearchableSingleSelect extends React.Component<ISearchableSingleSelectProp
 	static FixedOption = DropMenu.FixedOption;
 	static DropMenu = DropMenu;
 
-	static propTypes = {
+	static propTypes: any = {
 		children: node`
 			Should be instances of {\`SearchableSingleSelect.Option\`}. Other direct
 			child elements will not render.
@@ -249,7 +247,7 @@ class SearchableSingleSelect extends React.Component<ISearchableSingleSelectProp
 		`
 	};
 
-	getInitialState() {
+	getInitialState = () => {
 		return {
 			optionGroups: [],
 			flattenedOptionsData: [],
@@ -280,7 +278,7 @@ class SearchableSingleSelect extends React.Component<ISearchableSingleSelectProp
 		return onSelect(optionIndex, { event, props });
 	};
 
-	handleSearch(searchText: string, { event }: { event: React.KeyboardEvent<Element> | React.MouseEvent<Element, MouseEvent> }) {
+	handleSearch(searchText: string, { event }: { event: React.KeyboardEvent<Element> | React.MouseEvent<Element, MouseEvent> }): any {
 		const {
 			props,
 			props: {
@@ -288,7 +286,7 @@ class SearchableSingleSelect extends React.Component<ISearchableSingleSelectProp
 				optionFilter,
 				DropMenu: { onExpand },
 			},
-		} = this;
+		}: any = this;
 
 		const options = _.map(
 			findTypes(props, SearchableSingleSelect.Option),
@@ -301,7 +299,7 @@ class SearchableSingleSelect extends React.Component<ISearchableSingleSelectProp
 
 		// Just an extra call to make sure the search results show up when a user
 		// is typing
-		onExpand();
+		onExpand;
 
 		return onSearch(searchText, firstVisibleIndex, {
 			event,
@@ -430,7 +428,7 @@ class SearchableSingleSelect extends React.Component<ISearchableSingleSelectProp
 	};
 
 	removeSelection() {
-		this.props.DropMenu.onCollapse();
+		this.props.DropMenu.onCollapse;
 		this.props.onSearch('');
 		this.props.onSelect(null);
 	};
