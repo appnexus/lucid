@@ -65,7 +65,7 @@ export interface ISearchableSelectOptionProps extends IDropMenuOptionProps {
 
 const Selected = (_props: { children?: React.ReactNode }): null => null;
 
-Selected.displayName = 'SingleSelect.Option.Selected';
+Selected.displayName = 'SearchableSelect.Option.Selected';
 Selected.peek = {
 	description: `
 		Customizes the rendering of the Option when it is selected
@@ -77,7 +77,7 @@ Selected.propTypes = {};
 
 const Option = (_props: ISearchableSelectOptionProps): null => null;
 
-Option.displayName = 'SingleSelect.Option';
+Option.displayName = 'SearchableSelect.Option';
 Option.peek = {
 	description: `
 		A selectable option in the list.
