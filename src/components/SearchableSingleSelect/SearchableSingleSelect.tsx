@@ -6,13 +6,20 @@ import { lucidClassNames } from '../../util/style-helpers';
 import { buildHybridComponent } from '../../util/state-management';
 import { partitionText, propsSearch } from '../../util/text-manipulation';
 import {
+	StandardProps,
 	createClass,
 	omitProps,
 	getFirst,
 	findTypes,
 } from '../../util/component-types';
 import { SearchFieldDumb as SearchField } from '../SearchField/SearchField';
-import { DropMenuDumb as DropMenu } from '../DropMenu/DropMenu';
+import {
+	IDropMenuProps,
+	IDropMenuState,
+	IDropMenuOptionProps,
+	IDropMenuOptionGroupProps,
+	DropMenuDumb as DropMenu,
+} from '../DropMenu/DropMenu';
 import LoadingIcon from '../Icon/LoadingIcon/LoadingIcon';
 import Selection from '../Selection/Selection';
 import { Validation } from '../Validation/Validation';
@@ -22,6 +29,60 @@ import * as reducers from './SearchableSingleSelect.reducers';
 const { any, bool, func, number, oneOfType, shape, string, node } = PropTypes;
 
 const cx = lucidClassNames.bind('&-SearchableSingleSelect');
+
+const OptionGroup = (_props: IDropMenuOptionGroupProps): null => null;
+OptionGroup.displayName = 'SearchableSelect.OptionGroup';
+OptionGroup.peek = {
+	description: `
+		A special kind of \`Option\` that is always rendered at the top of
+		the menu and has an \`optionIndex\` of \`null\`. Useful for
+		unselect.
+	`,
+};
+OptionGroup.propName = 'OptionGroup';
+OptionGroup.propTypes = DropMenu.OptionGroup.propTypes;
+OptionGroup.defaultProps = DropMenu.OptionGroup.defaultProps;
+
+/** Option Child Component */
+export interface ISearchableSingleSelectOptionProps extends IDropMenuOptionProps {
+	description?: string;
+	name?: string;
+	Selected?: React.ReactNode;
+}
+
+const Selected = (_props: { children?: React.ReactNode }): null => null;
+
+Selected.displayName = 'SearchableSingleSelect.Option.Selected';
+Selected.peek = {
+	description: `
+		Customizes the rendering of the Option when it is selected
+		and is displayed instead of the Placeholder.
+	`,
+};
+Selected.propName = 'Selected';
+Selected.propTypes = {};
+
+const Option = (_props: ISearchableSingleSelectOptionProps): null => null;
+
+Option.displayName = 'SearchableSingleSelect.Option';
+Option.peek = {
+	description: `
+		A selectable option in the list.
+	`,
+};
+Option.Selected = Selected;
+Option.propName = 'Option';
+Option.propTypes = {
+	Selected: any`
+		Customizes the rendering of the Option when it is selected and is
+		displayed instead of the Placeholder.
+	`,
+	value: string,
+	filterText: string,
+	...DropMenu.Option.propTypes,
+};
+Option.defaultProps = DropMenu.Option.defaultProps;
+
 
 const SearchableSingleSelect = createClass({
 	displayName: 'SearchableSingleSelect',
