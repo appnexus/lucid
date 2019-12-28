@@ -31,7 +31,7 @@ const { any, bool, func, number, oneOfType, shape, string, node } = PropTypes;
 const cx = lucidClassNames.bind('&-SearchableSingleSelect');
 
 const OptionGroup = (_props: IDropMenuOptionGroupProps): null => null;
-OptionGroup.displayName = 'SearchableSelect.OptionGroup';
+OptionGroup.displayName = 'SearchableSingleSelect.OptionGroup';
 OptionGroup.peek = {
 	description: `
 		A special kind of \`Option\` that is always rendered at the top of
@@ -83,6 +83,186 @@ Option.propTypes = {
 };
 Option.defaultProps = DropMenu.Option.defaultProps;
 
+type ISearchableSelectDropMenuProps = Partial<IDropMenuProps>;
+
+export interface ISearchableSingleSelectProps extends StandardProps {
+	hasReset: boolean;
+	isDisabled: boolean;
+	isLoading: boolean;
+	maxMenuHeight?: string;
+	selectedIndex: number | null;
+	searchText: string;
+	DropMenu: ISearchableSelectDropMenuProps;
+	Option?: React.ReactNode;
+	OptionGroup?: IDropMenuOptionGroupProps;
+	Error: React.ReactNode;
+	/** Called when an option is clicked, or when an option has focus and the
+		Enter key is pressed. */
+	onSelect: (
+		optionIndex: number | null,
+		{
+			props,
+			event,
+		}: {
+			props: IDropMenuOptionProps;
+			event: React.KeyboardEvent | React.MouseEvent;
+		}
+	) => void;
+
+	onSearch: (
+		searchText: string,
+		firstVisibleIndex: number | undefined
+	) => void;
+
+	optionFilter: (
+		searchValue: string,
+		props: any
+	) => boolean;
+
+}
+
+export interface ISearchableSingleSelectState extends IDropMenuState {
+	DropMenu: IDropMenuState;
+	selectedIndex: number | null;
+	searchText: string | null;
+}
+
+const defaultProps = {
+	isDisabled: false,
+	isLoading: false,
+	optionFilter: propsSearch,
+	searchText: '',
+	selectedIndex: null,
+	DropMenu: DropMenu.defaultProps,
+	Error: null
+}
+
+class SearchableSingleSelect extends React.Component<ISearchableSingleSelectProps, ISearchableSingleSelectState> {
+	static displayName = 'SearchableSingleSelect';
+	static peek = {
+		description: `
+			A control used to select a single option from a dropdown list using a SearchField.
+		`,
+		categories: ['controls', 'selectors'],
+		madeFrom: ['Checkbox', 'SearchField', 'DropMenu', 'LoadingIcon'],
+	};
+
+	static defaultProps = defaultProps;
+	static reducers = reducers;
+	static Option = Option;
+	static OptionGroup = OptionGroup;
+	static SearchField = SearchField;
+	static NullOption = DropMenu.NullOption;
+	static FixedOption = DropMenu.FixedOption;
+
+	static propTypes = {
+		children: node`
+			Should be instances of {\`SearchableSingleSelect.Option\`}. Other direct
+			child elements will not render.
+		`,
+
+		className: string`
+			Appended to the component-specific class names set on the root element.
+		`,
+
+		isDisabled: bool`
+			Disables the control from being clicked or focused.
+		`,
+
+		isLoading: bool`
+			Displays a LoadingIcon to allow for asynchronous loading of options.
+		`,
+
+		maxMenuHeight: oneOfType([number, string])`
+			The max height of the fly-out menu.
+		`,
+
+		onSearch: func`
+			Called when the user enters a value to search for; the set of visible
+			Options will be filtered using the value.  Signature: \`(searchText,
+			firstVisibleIndex, {props, event}) => {}\` \`searchText\` is the value
+			from the \`SearchField\` and \`firstVisibleIndex\` is the index of the
+			first option that will be visible after filtering.
+		`,
+
+		onSelect: func`
+			Called when an option is selected.  Signature: \`(optionIndex, {props,
+			event}) => {}\` \`optionIndex\` is the new \`selectedIndex\` or \`null\`.
+		`,
+
+		optionFilter: func`
+			The function that will be run against each Option's props to determine
+			whether it should be visible or not. The default behavior of the function
+			is to match, ignoring case, against any text node descendant of the
+			\`Option\`.  Signature: \`(searchText, optionProps) => {}\` If \`true\`
+			is returned, the option will be visible. If \`false\`, the option will
+			not be visible.
+		`,
+
+		searchText: string`
+			The current search text to filter the list of options by.
+		`,
+
+		selectedIndex: number`
+			Currently selected \`SearchableSingleSelect.Option\` index
+			or \`null\` if nothing is selected.
+		`,
+
+		DropMenu: shape(DropMenu.propTypes)`
+			Object of DropMenu props which are passed through to the underlying
+			DropMenu component.
+		`,
+
+		Option: any`
+			*Child Element* - These are menu options. Each \`Option\` may be passed a
+			prop called \`isDisabled\` to disable selection of that \`Option\`. Any
+			other props pass to Option will be available from the \`onSelect\`
+			handler.  It also support the \`Selection\` prop that can be used to
+			forward along props to the underlying \`Selection\` component.
+		`,
+
+		Error: any`
+			In most cases this will be a string, but it also accepts any valid React
+			element. If this is a falsey value, then no error message will be
+			displayed.  If this is the literal \`true\`, it will add the
+			\`-is-error\` class to the wrapper div, but not render the
+			\`-error-content\` \`div\`.
+		`,
+		
+		FixedOption: any`
+			*Child Element* - A special kind of \`Option\` that is always rendered at the top of
+			the menu.
+		`,
+
+		NullOption: any`
+			*Child Element* - A special kind of \`Option\` that is always rendered at
+			the top of the menu and has an \`optionIndex\` of \`null\`. Useful for
+			unselect.
+		`
+	};
+
+	getInitialState() {
+		return {
+			optionGroups: [],
+			flattenedOptionsData: [],
+			ungroupedOptionData: [],
+			optionGroupDataLookup: {},
+		};
+	};
+
+	componentWillMount() {
+		// preprocess the options data before rendering
+		this.setState(DropMenu.preprocessOptionData(this.props, SearchableSingleSelect));
+	};
+
+	componentWillReceiveProps = (nextProps: ISearchableSingleSelectProps) => {
+		// only preprocess options data when it changes (via new props) - better performance than doing this each render
+		this.setState(DropMenu.preprocessOptionData(nextProps, SearchableSingleSelect));
+	};
+
+
+
+}
 
 const SearchableSingleSelect = createClass({
 	displayName: 'SearchableSingleSelect',
