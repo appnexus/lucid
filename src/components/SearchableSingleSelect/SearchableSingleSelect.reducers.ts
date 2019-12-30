@@ -3,9 +3,10 @@ import SearchField from '../SearchField/SearchField.reducers';
 import { ISearchableSingleSelectState } from './SearchableSingleSelect';
 
 export function onSelect(state: ISearchableSingleSelectState, selectedIndex: number) {
+	console.log(selectedIndex);
 	return {
-		selectedIndex,
 		...state,
+		selectedIndex
 	};
 }
 

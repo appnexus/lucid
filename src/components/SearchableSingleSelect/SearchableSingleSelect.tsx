@@ -23,6 +23,7 @@ import LoadingIcon from '../Icon/LoadingIcon/LoadingIcon';
 import Selection from '../Selection/Selection';
 import { Validation } from '../Validation/Validation';
 import * as reducers from './SearchableSingleSelect.reducers';
+import { onSelect } from '../Tabs/Tabs.reducers';
 
 const { any, bool, func, number, oneOfType, shape, string, node } = PropTypes;
 
@@ -101,7 +102,7 @@ export interface ISearchableSingleSelectProps extends StandardProps {
 		{
 			props,
 			event,
-		}?: {
+		}: {
 			props: IDropMenuOptionProps;
 			event: React.KeyboardEvent | React.MouseEvent;
 		}
@@ -109,11 +110,11 @@ export interface ISearchableSingleSelectProps extends StandardProps {
 
 	onSearch: (
 		searchText: string,
-		firstVisibleIndex?: number | undefined,
+		firstVisibleIndex: number | null,
 		{
 			props,
 			event,
-		}?: {
+		}: {
 			props: IDropMenuOptionProps;
 			event: React.KeyboardEvent | React.MouseEvent;
 		}
@@ -139,7 +140,9 @@ const defaultProps = {
 	searchText: '',
 	selectedIndex: null,
 	DropMenu: DropMenu.defaultProps,
-	Error: null
+	Error: null,
+	onSearch: _.noop,
+	onSelect: _.noop,
 }
 
 class SearchableSingleSelect extends React.Component<ISearchableSingleSelectProps, ISearchableSingleSelectState> {
@@ -256,58 +259,6 @@ class SearchableSingleSelect extends React.Component<ISearchableSingleSelectProp
 		};
 	};
 
-	// componentWillMount() {
-	// 	// preprocess the options data before rendering
-	// 	this.setState(DropMenu.preprocessOptionData(this.props, SearchableSingleSelect));
-	// };
-
-	// componentWillReceiveProps = (nextProps: ISearchableSingleSelectProps) => {
-	// 	// only preprocess options data when it changes (via new props) - better performance than doing this each render
-	// 	this.setState(DropMenu.preprocessOptionData(nextProps, SearchableSingleSelect));
-	// };
-
-	handleDropMenuSelect = (optionIndex: number, { event, props }: 
-		{
-			event: React.KeyboardEvent<Element> | React.MouseEvent<Element, MouseEvent>, 
-			props: ISearchableSingleSelectOptionProps
-		}) => {
-		const { onSelect } = this.props;
-
-		event.preventDefault();
-
-		return onSelect(optionIndex, { event, props });
-	};
-
-	handleSearch(searchText: string, { event }: { event: React.KeyboardEvent<Element> | React.MouseEvent<Element, MouseEvent> }): any {
-		console.log('searching...');
-		const {
-			props,
-			props: {
-				onSearch,
-				optionFilter,
-				DropMenu: { onExpand },
-			},
-		}: any = this;
-
-		const options = _.map(
-			findTypes(props, SearchableSingleSelect.Option),
-			'props'
-		);
-		const firstVisibleIndex = _.findIndex(options, option => {
-			return optionFilter(searchText, option);
-		});
-		const firstVisibleProps = options[firstVisibleIndex];
-
-		// Just an extra call to make sure the search results show up when a user
-		// is typing
-		onExpand();
-
-		return onSearch(searchText, firstVisibleIndex, {
-			event,
-			props: firstVisibleProps,
-		});
-	};
-
 	componentWillMount = () => {
 		// preprocess the options data before rendering
 		this.setState(
@@ -326,6 +277,35 @@ class SearchableSingleSelect extends React.Component<ISearchableSingleSelectProp
 				SearchableSingleSelect
 			)
 		);
+	};
+
+	handleSearch = (searchText: string, { event }: { event: React.KeyboardEvent<Element> | React.MouseEvent<Element, MouseEvent> }) => {
+		const {
+			props,
+			props: {
+				onSearch,
+				optionFilter,
+				DropMenu: { onExpand },
+			},
+		} = this;
+
+		const options = _.map(
+			findTypes(props, SearchableSingleSelect.Option),
+			'props'
+		);
+		const firstVisibleIndex = _.findIndex(options, option => {
+			return optionFilter(searchText, option);
+		});
+		const firstVisibleProps = options[firstVisibleIndex];
+
+		// Just an extra call to make sure the search results show up when a user
+		// is typing
+		onExpand;
+
+		return onSearch(searchText, firstVisibleIndex, {
+			event,
+			props: firstVisibleProps,
+		});
 	};
 
 	renderUnderlinedChildren = (childText: string, searchText: string) => {
@@ -428,13 +408,17 @@ class SearchableSingleSelect extends React.Component<ISearchableSingleSelectProp
 		return null;
 	};
 
-	removeSelection = () => {
+	removeSelection = ({ event, props }: 
+		{
+			event: React.KeyboardEvent<Element> | React.MouseEvent<Element, MouseEvent>, 
+			props: ISearchableSingleSelectOptionProps
+		}) => {
 		this.props.DropMenu.onCollapse;
-		this.props.onSearch('');
-		this.props.onSelect(null);
+		this.props.onSearch('', null, {event, props});
+		this.props.onSelect(null, { event, props });
 	};
 
-	render() {
+	render = () => {
 		const {
 			props,
 			props: {
@@ -446,14 +430,11 @@ class SearchableSingleSelect extends React.Component<ISearchableSingleSelectProp
 				DropMenu: { optionContainerStyle },
 				searchText,
 				selectedIndex,
+				onSelect,
 				...passThroughs
 			},
 		} = this;
 
-		console.log(this);
-
-		console.log(props.selectedIndex);
-		console.log(_.isNil(props.selectedIndex));
 		const searchFieldProps = _.get(
 			getFirst(props, SearchableSingleSelect.SearchField),
 			'props',
@@ -464,10 +445,9 @@ class SearchableSingleSelect extends React.Component<ISearchableSingleSelectProp
 		);
 
 		//user made a selection
-		if (!_.isNil(props.selectedIndex)) {
-			console.log(props.selectedIndex);
+		if (!_.isNil(selectedIndex)) {
 			const selectedOptionProps = this.state.flattenedOptionsData[
-				props.selectedIndex
+				selectedIndex
 			].optionProps;
 
 			return (
@@ -522,7 +502,7 @@ class SearchableSingleSelect extends React.Component<ISearchableSingleSelectProp
 						!_.isNil(maxMenuHeight) ? { maxHeight: maxMenuHeight } : null
 					)}
 					isDisabled={isDisabled}
-					onSelect={this.handleDropMenuSelect}
+					onSelect={onSelect}
 					ContextMenu={{
 						alignmentOffset: -13,
 						directonOffset: -1,
