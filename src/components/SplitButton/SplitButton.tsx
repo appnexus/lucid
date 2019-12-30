@@ -140,7 +140,7 @@ class SplitButton extends React.Component<ISplitButtonProps, {}> {
 	};
 
 	// Handles clicks on the Primary Button
-	handleClick = (event: React.MouseEvent): void => {
+	handleClick = ({ event }: { event: React.MouseEvent }): void => {
 		const clickedButtonProps = _.get(
 			getFirst(this.props, SplitButton.Button),
 			'props'
@@ -148,7 +148,6 @@ class SplitButton extends React.Component<ISplitButtonProps, {}> {
 
 		// Stop propagation to prevent this `Click` from expanding the `DropMenu`
 		event.stopPropagation();
-
 		this.handleButtonClick(clickedButtonProps, event);
 	};
 
