@@ -4,18 +4,18 @@ import { ISearchableSingleSelectState } from './SearchableSingleSelect';
 
 export function onSelect(state: ISearchableSingleSelectState, selectedIndex: number) {
 	return {
+		selectedIndex,
 		...state,
-		selectedIndex: selectedIndex,
 	};
 }
 
 export function onSearch(state: ISearchableSingleSelectState, searchText: string, firstVisibleIndex: number) {
 	return {
-		...state,
 		searchText,
 		DropMenu: {
 			...DropMenu.onFocusOption(state.DropMenu, firstVisibleIndex),
 		},
+		...state
 	};
 }
 

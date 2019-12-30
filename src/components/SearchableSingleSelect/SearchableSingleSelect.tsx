@@ -279,6 +279,7 @@ class SearchableSingleSelect extends React.Component<ISearchableSingleSelectProp
 	};
 
 	handleSearch(searchText: string, { event }: { event: React.KeyboardEvent<Element> | React.MouseEvent<Element, MouseEvent> }): any {
+		console.log('searching...');
 		const {
 			props,
 			props: {
@@ -299,7 +300,7 @@ class SearchableSingleSelect extends React.Component<ISearchableSingleSelectProp
 
 		// Just an extra call to make sure the search results show up when a user
 		// is typing
-		onExpand;
+		onExpand();
 
 		return onSearch(searchText, firstVisibleIndex, {
 			event,
@@ -327,7 +328,7 @@ class SearchableSingleSelect extends React.Component<ISearchableSingleSelectProp
 		);
 	};
 
-	renderUnderlinedChildren(childText: string, searchText: string) {
+	renderUnderlinedChildren = (childText: string, searchText: string) => {
 		const [pre, match, post] = partitionText(
 			childText,
 			new RegExp(_.escapeRegExp(searchText), 'i'),
@@ -353,7 +354,7 @@ class SearchableSingleSelect extends React.Component<ISearchableSingleSelectProp
 		];
 	};
 
-	renderOptionContent(optionProps: ISearchableSingleSelectOptionProps, searchText: string) {
+	renderOptionContent = (optionProps: ISearchableSingleSelectOptionProps, searchText: string) => {
 		return _.isString(optionProps.children) &&
 			_.isString(searchText) &&
 			searchText.length > 0
@@ -363,7 +364,7 @@ class SearchableSingleSelect extends React.Component<ISearchableSingleSelectProp
 				: optionProps.children;
 	};
 
-	renderOption({ optionProps, optionIndex }: { optionProps: ISearchableSingleSelectOptionProps, optionIndex: number | null}): any {
+	renderOption = ({ optionProps, optionIndex }: { optionProps: ISearchableSingleSelectOptionProps, optionIndex: number | null}) => {
 		const { searchText, isLoading, optionFilter } = this.props;
 		return (
 			<DropMenu.Option
@@ -377,7 +378,7 @@ class SearchableSingleSelect extends React.Component<ISearchableSingleSelectProp
 		);
 	};
 
-	renderOptions() {
+	renderOptions = () => {
 		const { searchText, isLoading } = this.props;
 
 		const {
@@ -427,7 +428,7 @@ class SearchableSingleSelect extends React.Component<ISearchableSingleSelectProp
 		return null;
 	};
 
-	removeSelection() {
+	removeSelection = () => {
 		this.props.DropMenu.onCollapse;
 		this.props.onSearch('');
 		this.props.onSelect(null);
@@ -444,10 +445,15 @@ class SearchableSingleSelect extends React.Component<ISearchableSingleSelectProp
 				DropMenu: dropMenuProps,
 				DropMenu: { optionContainerStyle },
 				searchText,
+				selectedIndex,
 				...passThroughs
 			},
 		} = this;
 
+		console.log(this);
+
+		console.log(props.selectedIndex);
+		console.log(_.isNil(props.selectedIndex));
 		const searchFieldProps = _.get(
 			getFirst(props, SearchableSingleSelect.SearchField),
 			'props',
@@ -459,6 +465,7 @@ class SearchableSingleSelect extends React.Component<ISearchableSingleSelectProp
 
 		//user made a selection
 		if (!_.isNil(props.selectedIndex)) {
+			console.log(props.selectedIndex);
 			const selectedOptionProps = this.state.flattenedOptionsData[
 				props.selectedIndex
 			].optionProps;
@@ -501,7 +508,7 @@ class SearchableSingleSelect extends React.Component<ISearchableSingleSelectProp
 			>
 				<DropMenu
 					{...dropMenuProps}
-					selectedIndices={undefined}
+					selectedIndices={null}
 					className={cx(
 						'&-DropMenu',
 						{
