@@ -5,6 +5,18 @@ import { SearchableMultiSelect, Resizer } from '../../../index';
 const { Option } = SearchableMultiSelect;
 
 export default createClass({
+	getInitialState() {
+		return {
+			isRequired: false
+		};
+	},
+
+	handleChange(event) {
+		this.setState({
+			isRequired: event.length > 0
+		})
+	},
+
 	render() {
 		return (
 			<Resizer>
