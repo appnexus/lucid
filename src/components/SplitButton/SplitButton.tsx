@@ -9,10 +9,11 @@ import {
 	StandardProps,
 } from '../../util/component-types';
 import { buildModernHybridComponent } from '../../util/state-management';
-import Button from '../Button/Button';
+import { IButtonProps, Button } from '../Button/Button';
 import { ButtonGroupDumb as ButtonGroup } from '../ButtonGroup/ButtonGroup';
 import ChevronIcon from '../Icon/ChevronIcon/ChevronIcon';
 import {
+	IDropMenuOptionProps,
 	IDropMenuState,
 	IDropMenuProps,
 	DropMenuDumb as DropMenu,
@@ -31,13 +32,13 @@ interface ISplitButtonButtonChildProps extends StandardProps {
 
 	/** Called when the user clicks the \`Button\`.
 	 * Signature: \`({ event, props }) => {}\` */
-	onClick?: ({
-		event,
-		props,
-	}: {
-		event: React.KeyboardEvent | React.MouseEvent;
-		props: ISplitButtonButtonChildProps;
-	}) => void;
+	// onClick: ({
+	// 	event,
+	// 	props,
+	// }: {
+	// 	event: React.KeyboardEvent | React.MouseEvent;
+	// 	props: ISplitButtonButtonChildProps;
+	// }) => void;
 }
 
 const ButtonChild = (_props: ISplitButtonButtonChildProps): null => null;
@@ -140,22 +141,19 @@ class SplitButton extends React.Component<ISplitButtonProps, {}> {
 		DropMenu: DropMenu.defaultProps,
 	};
 
-	// Handles clicks on the Primary Button
-	handleClick = ({ event }: { event: React.MouseEvent }): void => {
-		const clickedButtonProps = _.get(
-			getFirst(this.props, SplitButton.Button),
-			'props'
-		);
-
-		// Stop propagation to prevent this `Click` from expanding the `DropMenu`
-		event.stopPropagation();
-		this.handleButtonClick(clickedButtonProps, event);
-	};
-
-	// Handles clicks in the DropMenu
+	// Handles select events in the DropMenu
 	handleSelect = (
 		optionIndex: number | null,
-		{ event }: { event: React.KeyboardEvent | React.MouseEvent }
+		//{ event }: { event: React.KeyboardEvent | React.MouseEvent }
+		{
+			//TODO: match props to DropMenu interface
+			props,
+			event,
+		}: {
+			props: IDropMenuOptionProps;
+			event: React.KeyboardEvent<HTMLButtonElement> | React.MouseEvent;
+			//event: React.MouseEvent<HTMLButtonElement>;
+		}
 	): void => {
 		const buttonChildProps = _.map(
 			filterTypes(this.props.children, SplitButton.Button),
@@ -166,10 +164,28 @@ class SplitButton extends React.Component<ISplitButtonProps, {}> {
 		}
 	};
 
+	// Handles clicks on the Primary Button
+	handleClick = ({
+		event,
+	}: {
+		event: React.MouseEvent<HTMLButtonElement>;
+	}): void => {
+		const clickedButtonProps = _.get(
+			getFirst(this.props, SplitButton.Button),
+			'props'
+		);
+
+		// Stop propagation to prevent this `Click` from expanding the `DropMenu`
+		event.stopPropagation();
+		this.handleButtonClick(clickedButtonProps, event);
+	};
+
 	// Handles clicks within handleClick and handleSelect
 	handleButtonClick = (
-		buttonProps: ISplitButtonButtonChildProps,
-		event: React.KeyboardEvent | React.MouseEvent
+		//		buttonProps: ISplitButtonButtonChildProps,
+		buttonProps: IButtonProps,
+		//event: React.KeyboardEvent | React.MouseEvent
+		event: React.MouseEvent<HTMLButtonElement>
 	): void => {
 		const {
 			DropMenu: { onCollapse },
@@ -177,11 +193,7 @@ class SplitButton extends React.Component<ISplitButtonProps, {}> {
 
 		onCollapse({ props: this.props.DropMenu, event });
 
-		// if (_.has(buttonProps, 'onClick')) {
-		// 	buttonProps.onClick({ event, props: buttonProps });
-		// }
-
-		if (buttonProps.onClick) {
+		if (_.has(buttonProps, 'onClick')) {
 			buttonProps.onClick({ event, props: buttonProps });
 		}
 	};
@@ -214,6 +226,7 @@ class SplitButton extends React.Component<ISplitButtonProps, {}> {
 				)}
 				direction={direction}
 				className={cx('&', className)}
+				//DROPMENU(789) onSelect(optionIndex, { props: optionProps, event });
 				onSelect={this.handleSelect}
 			>
 				<DropMenu.Control>

@@ -196,7 +196,7 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
 </DropMenu>
 `;
 
-exports[`SplitButton [common] example testing should match snapshot(s) for 03.disabled 1`] = `
+exports[`SplitButton [common] example testing should match snapshot(s) for 02.disabled 1`] = `
 <DropMenu
   ContextMenu={
     Object {
@@ -301,7 +301,7 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 03.di
 </DropMenu>
 `;
 
-exports[`SplitButton [common] example testing should match snapshot(s) for 04.up 1`] = `
+exports[`SplitButton [common] example testing should match snapshot(s) for 03.up 1`] = `
 <DropMenu
   ContextMenu={
     Object {
@@ -408,7 +408,7 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 04.up
 </DropMenu>
 `;
 
-exports[`SplitButton [common] example testing should match snapshot(s) for 4.sizes 1`] = `
+exports[`SplitButton [common] example testing should match snapshot(s) for 04.sizes 1`] = `
 <DropMenu
   ContextMenu={
     Object {
@@ -508,7 +508,7 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 4.siz
 </DropMenu>
 `;
 
-exports[`SplitButton [common] example testing should match snapshot(s) for 4.sizes 2`] = `
+exports[`SplitButton [common] example testing should match snapshot(s) for 04.sizes 2`] = `
 <DropMenu
   ContextMenu={
     Object {
@@ -608,7 +608,7 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 4.siz
 </DropMenu>
 `;
 
-exports[`SplitButton [common] example testing should match snapshot(s) for 4.sizes 3`] = `
+exports[`SplitButton [common] example testing should match snapshot(s) for 04.sizes 3`] = `
 <DropMenu
   ContextMenu={
     Object {
