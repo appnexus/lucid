@@ -13,7 +13,7 @@ export default createClass({
 				</SplitButton>
 
 				<SplitButton kind='primary' style={{ marginRight: '20px' }}>
-					<SplitButton.Button kind='primary'>Primary</SplitButton.Button>
+					<SplitButton.Button>Primary</SplitButton.Button>
 					<SplitButton.Button>One</SplitButton.Button>
 					<SplitButton.Button>Two</SplitButton.Button>
 				</SplitButton>

@@ -24,13 +24,14 @@ const cx = lucidClassNames.bind('&-SplitButton');
 const { bool, func, node, oneOf, shape, string } = PropTypes;
 
 /** SplitButton Button Child Component */
+//interface ISplitButtonButtonChildProps extends ISplitButtonProps {
 interface ISplitButtonButtonChildProps extends StandardProps {
 	/** Disables selection of the \`Button\`. */
 	isDisabled?: boolean;
 
-	/** Called when the user clicks the \`Button\`.  Signature:
-		\`({ event, props }) => {}\` */
-	onClick: ({
+	/** Called when the user clicks the \`Button\`.
+	 * Signature: \`({ event, props }) => {}\` */
+	onClick?: ({
 		event,
 		props,
 	}: {
@@ -77,12 +78,12 @@ export interface ISplitButtonProps extends StandardProps {
 	/** Form element type variations of SplitButton. Passed through to DOM Button. */
 	type?: string;
 
-	/** *Child Element* - props pass through to the underlying DropMenu
-			component */
+	/** *Child Element* - props pass through to the underlying DropMenu component */
 	DropMenu: IDropMenuProps;
 }
 
 class SplitButton extends React.Component<ISplitButtonProps, {}> {
+	//class SplitButton extends React.Component<ISplitButtonButtonChildProps, {}> {
 	static displayName = 'SplitButton';
 	static Button = ButtonChild;
 
@@ -176,7 +177,11 @@ class SplitButton extends React.Component<ISplitButtonProps, {}> {
 
 		onCollapse({ props: this.props.DropMenu, event });
 
-		if (_.has(buttonProps, 'onClick')) {
+		// if (_.has(buttonProps, 'onClick')) {
+		// 	buttonProps.onClick({ event, props: buttonProps });
+		// }
+
+		if (buttonProps.onClick) {
 			buttonProps.onClick({ event, props: buttonProps });
 		}
 	};
