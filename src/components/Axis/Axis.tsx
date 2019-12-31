@@ -274,7 +274,7 @@ Axis.peek = {
 
 	This component is a very close sister to d3's svg axis and most of the
 	logic pwas ported from there.
-`,
+	`,
 	categories: ['visualizations', 'chart primitives'],
 };
 Axis.propTypes = {
