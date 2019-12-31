@@ -250,7 +250,7 @@ class SearchableSingleSelect extends React.Component<ISearchableSingleSelectProp
 		`
 	};
 
-	getInitialState = () => {
+	getInitialState(): any {
 		return {
 			optionGroups: [],
 			flattenedOptionsData: [],
@@ -259,7 +259,7 @@ class SearchableSingleSelect extends React.Component<ISearchableSingleSelectProp
 		};
 	};
 
-	componentWillMount = () => {
+	componentWillMount(): void {
 		// preprocess the options data before rendering
 		this.setState(
 			DropMenu.preprocessOptionData(
@@ -269,7 +269,7 @@ class SearchableSingleSelect extends React.Component<ISearchableSingleSelectProp
 		);
 	};
 
-	componentWillReceiveProps = (nextProps: ISearchableSingleSelectProps) => {
+	componentWillReceiveProps(nextProps: ISearchableSingleSelectProps): void {
 		// only preprocess options data when it changes (via new props) - better performance than doing this each render
 		this.setState(
 			DropMenu.preprocessOptionData(
@@ -408,6 +408,8 @@ class SearchableSingleSelect extends React.Component<ISearchableSingleSelectProp
 		return null;
 	};
 
+	// need to figure out how to trigger the onCollapse with different props
+	// specifically IDropMenuProps
 	removeSelection = ({ event, props }: 
 		{
 			event: React.KeyboardEvent<Element> | React.MouseEvent<Element, MouseEvent>, 
