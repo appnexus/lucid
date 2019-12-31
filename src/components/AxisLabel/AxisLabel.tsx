@@ -54,7 +54,6 @@ export const AxisLabel = (props: IAxisLabelProps): React.ReactElement => {
 
 	return (
 		<text
-			//{...omitProps(passThroughs, AxisLabel)}
 			{...omitProps(passThroughs, undefined, _.keys(AxisLabel.propTypes))}
 			style={{
 				...colorStyle,
