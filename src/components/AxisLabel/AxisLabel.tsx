@@ -3,7 +3,6 @@ import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import { StandardProps, omitProps } from '../../util/component-types';
-import { Axis } from '../..';
 
 const cx = lucidClassNames.bind('&-AxisLabel');
 
