@@ -24,7 +24,6 @@ const cx = lucidClassNames.bind('&-SplitButton');
 const { bool, func, node, oneOf, shape, string } = PropTypes;
 
 /** SplitButton Button Child Component */
-//interface ISplitButtonButtonChildProps extends ISplitButtonProps {
 interface ISplitButtonButtonChildProps extends StandardProps {
 	/** Disables selection of the \`Button\`. */
 	isDisabled?: boolean;
@@ -72,7 +71,6 @@ export interface ISplitButtonProps extends StandardProps {
 }
 
 class SplitButton extends React.Component<ISplitButtonProps, {}> {
-	//class SplitButton extends React.Component<ISplitButtonButtonChildProps, {}> {
 	static displayName = 'SplitButton';
 	static Button = ButtonChild;
 
@@ -132,15 +130,12 @@ class SplitButton extends React.Component<ISplitButtonProps, {}> {
 	// Handles select events in the DropMenu
 	handleSelect = (
 		optionIndex: number | null,
-		//{ event }: { event: React.KeyboardEvent | React.MouseEvent }
 		{
 			event,
 		}: {
-			//event: React.KeyboardEvent<HTMLButtonElement> | React.MouseEvent;
 			event:
 				| React.KeyboardEvent<Element>
 				| React.MouseEvent<Element, MouseEvent>;
-			//event: React.MouseEvent<HTMLButtonElement, MouseEvent>;
 		}
 	): void => {
 		const buttonChildProps = _.map(
@@ -169,13 +164,7 @@ class SplitButton extends React.Component<ISplitButtonProps, {}> {
 	};
 
 	// Handles clicks within handleClick and handleSelect
-	handleButtonClick = (
-		//		buttonProps: ISplitButtonButtonChildProps,
-		buttonProps: IButtonProps,
-		event: any
-		//		event: React.KeyboardEvent | React.MouseEvent
-		//event: React.MouseEvent<HTMLButtonElement>
-	): void => {
+	handleButtonClick = (buttonProps: IButtonProps, event: any): void => {
 		const {
 			DropMenu: { onCollapse },
 		} = this.props;
@@ -215,7 +204,6 @@ class SplitButton extends React.Component<ISplitButtonProps, {}> {
 				)}
 				direction={direction}
 				className={cx('&', className)}
-				//DROPMENU(789) onSelect(optionIndex, { props: optionProps, event });
 				onSelect={this.handleSelect}
 			>
 				<DropMenu.Control>

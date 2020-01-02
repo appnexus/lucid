@@ -886,12 +886,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/SplitButton/examples',
 			true,
-			/\.tsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/SplitButton/examples',
 			true,
-			/\.tsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 	{
