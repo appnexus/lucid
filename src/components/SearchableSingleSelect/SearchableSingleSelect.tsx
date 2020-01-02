@@ -23,7 +23,6 @@ import LoadingIcon from '../Icon/LoadingIcon/LoadingIcon';
 import Selection from '../Selection/Selection';
 import { Validation } from '../Validation/Validation';
 import * as reducers from './SearchableSingleSelect.reducers';
-import { onSelect } from '../Tabs/Tabs.reducers';
 
 const { any, bool, func, number, oneOfType, shape, string, node } = PropTypes;
 
