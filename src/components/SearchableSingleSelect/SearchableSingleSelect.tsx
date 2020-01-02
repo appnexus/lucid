@@ -296,13 +296,10 @@ class SearchableSingleSelect extends React.Component<ISearchableSingleSelectProp
 			findTypes(props, SearchableSingleSelect.Option),
 			'props'
 		);
-		console.log(options);
 		const firstVisibleIndex = _.findIndex(options, option => {
 			return optionFilter(searchText, option);
 		});
 		const firstVisibleProps = options[firstVisibleIndex];
-		console.log(firstVisibleProps);
-
 		// Just an extra call to make sure the search results show up when a user
 		// is typing
 		const dropMenuProps = this.props.DropMenu;
@@ -414,7 +411,9 @@ class SearchableSingleSelect extends React.Component<ISearchableSingleSelectProp
 		return null;
 	};
 
-	removeSelection = ({ event, props }: {event: React.KeyboardEvent<Element> | React.MouseEvent<Element, MouseEvent>, props: ISearchableSingleSelectOptionProps}): void => {
+	removeSelection = ({ event, props }: 
+		{event: React.KeyboardEvent<Element> | React.MouseEvent<Element, MouseEvent>, 
+			props: ISearchableSingleSelectOptionProps}): void => {
 		const dropMenuProps = this.props.DropMenu;
 		this.props.DropMenu.onCollapse({event, props: dropMenuProps});
 		this.props.onSearch('', null, {event, props});
