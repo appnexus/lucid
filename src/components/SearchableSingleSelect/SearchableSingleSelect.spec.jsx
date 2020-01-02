@@ -57,6 +57,9 @@ describe('SearchableSingleSelect', () => {
 					props: {
 						callbackId: 'zero',
 						children: 'Zero',
+						isDisabled: false,
+						isHidden: false,
+						isWrapped: true
 					},
 				};
 

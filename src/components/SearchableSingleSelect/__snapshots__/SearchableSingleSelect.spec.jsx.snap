@@ -2,7 +2,15 @@
 
 exports[`SearchableSingleSelect [common] example testing should match snapshot(s) for 01.basic 1`] = `
 <div
+  Error={null}
+  SearchField={
+    Object {
+      "placeholder": "Name/ID",
+    }
+  }
   className="lucid-SearchableSingleSelect"
+  onSearch={[Function]}
+  optionFilter={[Function]}
   style={
     Object {
       "maxWidth": "100px",
@@ -15,11 +23,6 @@ exports[`SearchableSingleSelect [common] example testing should match snapshot(s
         "alignmentOffset": -13,
         "directonOffset": -1,
         "minWidthOffset": -28,
-      }
-    }
-    Error={
-      Object {
-        "children": null,
       }
     }
     alignment="start"
@@ -52,7 +55,6 @@ exports[`SearchableSingleSelect [common] example testing should match snapshot(s
         onChange={[Function]}
         onChangeDebounced={[Function]}
         onSubmit={[Function]}
-        placeholder="Name/ID"
         value=""
       />
     </DropMenu.Control>
@@ -446,7 +448,10 @@ exports[`SearchableSingleSelect [common] example testing should match snapshot(s
 
 exports[`SearchableSingleSelect [common] example testing should match snapshot(s) for 02.props 1`] = `
 <div
+  Error={null}
   className="lucid-SearchableSingleSelect"
+  onSearch={[Function]}
+  optionFilter={[Function]}
 >
   <DropMenu
     ContextMenu={
@@ -454,11 +459,6 @@ exports[`SearchableSingleSelect [common] example testing should match snapshot(s
         "alignmentOffset": -13,
         "directonOffset": -1,
         "minWidthOffset": -28,
-      }
-    }
-    Error={
-      Object {
-        "children": null,
       }
     }
     alignment="start"
@@ -526,7 +526,10 @@ exports[`SearchableSingleSelect [common] example testing should match snapshot(s
 
 exports[`SearchableSingleSelect [common] example testing should match snapshot(s) for 02.props 2`] = `
 <div
+  Error={null}
   className="lucid-SearchableSingleSelect"
+  onSearch={[Function]}
+  optionFilter={[Function]}
 >
   <DropMenu
     ContextMenu={
@@ -534,11 +537,6 @@ exports[`SearchableSingleSelect [common] example testing should match snapshot(s
         "alignmentOffset": -13,
         "directonOffset": -1,
         "minWidthOffset": -28,
-      }
-    }
-    Error={
-      Object {
-        "children": null,
       }
     }
     alignment="start"
@@ -588,8 +586,16 @@ exports[`SearchableSingleSelect [common] example testing should match snapshot(s
 
 exports[`SearchableSingleSelect [common] example testing should match snapshot(s) for 03.asynchronous 1`] = `
 <div
+  Error={null}
+  SearchField={
+    Object {
+      "placeholder": "Type here to simulate an API backed search",
+    }
+  }
   className="lucid-SearchableSingleSelect"
   hasSelections={false}
+  onSearch={[Function]}
+  optionFilter={[Function]}
 >
   <DropMenu
     ContextMenu={
@@ -597,11 +603,6 @@ exports[`SearchableSingleSelect [common] example testing should match snapshot(s
         "alignmentOffset": -13,
         "directonOffset": -1,
         "minWidthOffset": -28,
-      }
-    }
-    Error={
-      Object {
-        "children": null,
       }
     }
     alignment="start"
@@ -634,7 +635,6 @@ exports[`SearchableSingleSelect [common] example testing should match snapshot(s
         onChange={[Function]}
         onChangeDebounced={[Function]}
         onSubmit={[Function]}
-        placeholder="Type here to simulate an API backed search"
         value=""
       />
     </DropMenu.Control>
@@ -644,7 +644,15 @@ exports[`SearchableSingleSelect [common] example testing should match snapshot(s
 
 exports[`SearchableSingleSelect [common] example testing should match snapshot(s) for 04.grouped-options 1`] = `
 <div
+  Error={null}
+  SearchField={
+    Object {
+      "placeholder": "State",
+    }
+  }
   className="lucid-SearchableSingleSelect"
+  onSearch={[Function]}
+  optionFilter={[Function]}
 >
   <DropMenu
     ContextMenu={
@@ -652,11 +660,6 @@ exports[`SearchableSingleSelect [common] example testing should match snapshot(s
         "alignmentOffset": -13,
         "directonOffset": -1,
         "minWidthOffset": -28,
-      }
-    }
-    Error={
-      Object {
-        "children": null,
       }
     }
     alignment="start"
@@ -689,7 +692,6 @@ exports[`SearchableSingleSelect [common] example testing should match snapshot(s
         onChange={[Function]}
         onChangeDebounced={[Function]}
         onSubmit={[Function]}
-        placeholder="State"
         value=""
       />
     </DropMenu.Control>
@@ -698,37 +700,81 @@ exports[`SearchableSingleSelect [common] example testing should match snapshot(s
       key="SearchableSingleSelectOptionGroup0"
     >
       Northeast
-      <SearchableSingleSelect.Option>
+      <SearchableSingleSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
+      >
         Connecticut
       </SearchableSingleSelect.Option>
-      <SearchableSingleSelect.Option>
+      <SearchableSingleSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
+      >
         Delaware
       </SearchableSingleSelect.Option>
-      <SearchableSingleSelect.Option>
+      <SearchableSingleSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
+      >
         Maine
       </SearchableSingleSelect.Option>
-      <SearchableSingleSelect.Option>
+      <SearchableSingleSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
+      >
         Maryland
       </SearchableSingleSelect.Option>
-      <SearchableSingleSelect.Option>
+      <SearchableSingleSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
+      >
         Massachusetts
       </SearchableSingleSelect.Option>
-      <SearchableSingleSelect.Option>
+      <SearchableSingleSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
+      >
         New Hampshire
       </SearchableSingleSelect.Option>
-      <SearchableSingleSelect.Option>
+      <SearchableSingleSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
+      >
         New Jersey
       </SearchableSingleSelect.Option>
-      <SearchableSingleSelect.Option>
+      <SearchableSingleSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
+      >
         New York
       </SearchableSingleSelect.Option>
-      <SearchableSingleSelect.Option>
+      <SearchableSingleSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
+      >
         Pennsylvania
       </SearchableSingleSelect.Option>
-      <SearchableSingleSelect.Option>
+      <SearchableSingleSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
+      >
         Rhode Island
       </SearchableSingleSelect.Option>
-      <SearchableSingleSelect.Option>
+      <SearchableSingleSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
+      >
         Vermont
       </SearchableSingleSelect.Option>
       <DropMenu.Option
@@ -825,40 +871,88 @@ exports[`SearchableSingleSelect [common] example testing should match snapshot(s
       key="SearchableSingleSelectOptionGroup1"
     >
       Southeast
-      <SearchableSingleSelect.Option>
+      <SearchableSingleSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
+      >
         Alabama
       </SearchableSingleSelect.Option>
-      <SearchableSingleSelect.Option>
+      <SearchableSingleSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
+      >
         Arkansas
       </SearchableSingleSelect.Option>
-      <SearchableSingleSelect.Option>
+      <SearchableSingleSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
+      >
         Florida
       </SearchableSingleSelect.Option>
-      <SearchableSingleSelect.Option>
+      <SearchableSingleSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
+      >
         Georgia
       </SearchableSingleSelect.Option>
-      <SearchableSingleSelect.Option>
+      <SearchableSingleSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
+      >
         Kentucky
       </SearchableSingleSelect.Option>
-      <SearchableSingleSelect.Option>
+      <SearchableSingleSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
+      >
         Louisiana
       </SearchableSingleSelect.Option>
-      <SearchableSingleSelect.Option>
+      <SearchableSingleSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
+      >
         Mississippi
       </SearchableSingleSelect.Option>
-      <SearchableSingleSelect.Option>
+      <SearchableSingleSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
+      >
         North Carolina
       </SearchableSingleSelect.Option>
-      <SearchableSingleSelect.Option>
+      <SearchableSingleSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
+      >
         South Carolina
       </SearchableSingleSelect.Option>
-      <SearchableSingleSelect.Option>
+      <SearchableSingleSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
+      >
         Tennessee
       </SearchableSingleSelect.Option>
-      <SearchableSingleSelect.Option>
+      <SearchableSingleSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
+      >
         Virginia
       </SearchableSingleSelect.Option>
-      <SearchableSingleSelect.Option>
+      <SearchableSingleSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
+      >
         West Virginia
       </SearchableSingleSelect.Option>
       <DropMenu.Option
@@ -963,40 +1057,88 @@ exports[`SearchableSingleSelect [common] example testing should match snapshot(s
       key="SearchableSingleSelectOptionGroup2"
     >
       Midwest
-      <SearchableSingleSelect.Option>
+      <SearchableSingleSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
+      >
         Illinois
       </SearchableSingleSelect.Option>
-      <SearchableSingleSelect.Option>
+      <SearchableSingleSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
+      >
         Indiana
       </SearchableSingleSelect.Option>
-      <SearchableSingleSelect.Option>
+      <SearchableSingleSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
+      >
         Iowa
       </SearchableSingleSelect.Option>
-      <SearchableSingleSelect.Option>
+      <SearchableSingleSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
+      >
         Kansas
       </SearchableSingleSelect.Option>
-      <SearchableSingleSelect.Option>
+      <SearchableSingleSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
+      >
         Michigan
       </SearchableSingleSelect.Option>
-      <SearchableSingleSelect.Option>
+      <SearchableSingleSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
+      >
         Minnesota
       </SearchableSingleSelect.Option>
-      <SearchableSingleSelect.Option>
+      <SearchableSingleSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
+      >
         Missouri
       </SearchableSingleSelect.Option>
-      <SearchableSingleSelect.Option>
+      <SearchableSingleSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
+      >
         Nebraska
       </SearchableSingleSelect.Option>
-      <SearchableSingleSelect.Option>
+      <SearchableSingleSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
+      >
         North Dakota
       </SearchableSingleSelect.Option>
-      <SearchableSingleSelect.Option>
+      <SearchableSingleSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
+      >
         Ohio
       </SearchableSingleSelect.Option>
-      <SearchableSingleSelect.Option>
+      <SearchableSingleSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
+      >
         South Dakota
       </SearchableSingleSelect.Option>
-      <SearchableSingleSelect.Option>
+      <SearchableSingleSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
+      >
         Wisconsin
       </SearchableSingleSelect.Option>
       <DropMenu.Option
@@ -1101,16 +1243,32 @@ exports[`SearchableSingleSelect [common] example testing should match snapshot(s
       key="SearchableSingleSelectOptionGroup3"
     >
       Southwest
-      <SearchableSingleSelect.Option>
+      <SearchableSingleSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
+      >
         Arizona
       </SearchableSingleSelect.Option>
-      <SearchableSingleSelect.Option>
+      <SearchableSingleSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
+      >
         New Mexico
       </SearchableSingleSelect.Option>
-      <SearchableSingleSelect.Option>
+      <SearchableSingleSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
+      >
         Oklahoma
       </SearchableSingleSelect.Option>
-      <SearchableSingleSelect.Option>
+      <SearchableSingleSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
+      >
         Texas
       </SearchableSingleSelect.Option>
       <DropMenu.Option
@@ -1151,31 +1309,67 @@ exports[`SearchableSingleSelect [common] example testing should match snapshot(s
       key="SearchableSingleSelectOptionGroup4"
     >
       West
-      <SearchableSingleSelect.Option>
+      <SearchableSingleSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
+      >
         California
       </SearchableSingleSelect.Option>
-      <SearchableSingleSelect.Option>
+      <SearchableSingleSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
+      >
         Colorado
       </SearchableSingleSelect.Option>
-      <SearchableSingleSelect.Option>
+      <SearchableSingleSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
+      >
         Idaho
       </SearchableSingleSelect.Option>
-      <SearchableSingleSelect.Option>
+      <SearchableSingleSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
+      >
         Montana
       </SearchableSingleSelect.Option>
-      <SearchableSingleSelect.Option>
+      <SearchableSingleSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
+      >
         Nevada
       </SearchableSingleSelect.Option>
-      <SearchableSingleSelect.Option>
+      <SearchableSingleSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
+      >
         Oregon
       </SearchableSingleSelect.Option>
-      <SearchableSingleSelect.Option>
+      <SearchableSingleSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
+      >
         Utah
       </SearchableSingleSelect.Option>
-      <SearchableSingleSelect.Option>
+      <SearchableSingleSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
+      >
         Washington
       </SearchableSingleSelect.Option>
-      <SearchableSingleSelect.Option>
+      <SearchableSingleSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
+      >
         Wyoming
       </SearchableSingleSelect.Option>
       <DropMenu.Option
@@ -1273,7 +1467,15 @@ exports[`SearchableSingleSelect [common] example testing should match snapshot(s
 
 exports[`SearchableSingleSelect [common] example testing should match snapshot(s) for 05.selected-option 1`] = `
 <div
+  Error={null}
+  SearchField={
+    Object {
+      "placeholder": "Color",
+    }
+  }
   className="lucid-SearchableSingleSelect"
+  onSearch={[Function]}
+  optionFilter={[Function]}
 >
   <DropMenu
     ContextMenu={
@@ -1281,11 +1483,6 @@ exports[`SearchableSingleSelect [common] example testing should match snapshot(s
         "alignmentOffset": -13,
         "directonOffset": -1,
         "minWidthOffset": -28,
-      }
-    }
-    Error={
-      Object {
-        "children": null,
       }
     }
     alignment="start"
@@ -1318,7 +1515,6 @@ exports[`SearchableSingleSelect [common] example testing should match snapshot(s
         onChange={[Function]}
         onChangeDebounced={[Function]}
         onSubmit={[Function]}
-        placeholder="Color"
         value=""
       />
     </DropMenu.Control>
@@ -1352,7 +1548,10 @@ exports[`SearchableSingleSelect [common] example testing should match snapshot(s
 
 exports[`SearchableSingleSelect [common] example testing should match snapshot(s) for 06.invalid-option 1`] = `
 <div
+  Error="Please Choose Green"
   className="lucid-SearchableSingleSelect"
+  onSearch={[Function]}
+  optionFilter={[Function]}
 >
   <DropMenu
     ContextMenu={
@@ -1360,11 +1559,6 @@ exports[`SearchableSingleSelect [common] example testing should match snapshot(s
         "alignmentOffset": -13,
         "directonOffset": -1,
         "minWidthOffset": -28,
-      }
-    }
-    Error={
-      Object {
-        "children": "Please Choose Green",
       }
     }
     alignment="start"
@@ -1435,7 +1629,10 @@ exports[`SearchableSingleSelect [common] example testing should match snapshot(s
 
 exports[`SearchableSingleSelect custom formatting should render Option child function by passing in {searchText}, setting filterText on each option and using a custom optionFilter 1`] = `
 <div
+  Error={null}
   className="lucid-SearchableSingleSelect"
+  onSearch={[Function]}
+  optionFilter={[Function]}
 >
   <DropMenu
     ContextMenu={
@@ -1443,11 +1640,6 @@ exports[`SearchableSingleSelect custom formatting should render Option child fun
         "alignmentOffset": -13,
         "directonOffset": -1,
         "minWidthOffset": -28,
-      }
-    }
-    Error={
-      Object {
-        "children": null,
       }
     }
     alignment="start"
