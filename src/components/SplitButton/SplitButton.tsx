@@ -13,7 +13,7 @@ import { IButtonProps, Button } from '../Button/Button';
 import { ButtonGroupDumb as ButtonGroup } from '../ButtonGroup/ButtonGroup';
 import ChevronIcon from '../Icon/ChevronIcon/ChevronIcon';
 import {
-	//	IDropMenuState,
+	IDropMenuState,
 	IDropMenuProps,
 	DropMenuDumb as DropMenu,
 } from '../DropMenu/DropMenu';
@@ -28,16 +28,6 @@ const { bool, func, node, oneOf, shape, string } = PropTypes;
 interface ISplitButtonButtonChildProps extends StandardProps {
 	/** Disables selection of the \`Button\`. */
 	isDisabled?: boolean;
-
-	/** Called when the user clicks the \`Button\`.
-	 * Signature: \`({ event, props }) => {}\` */
-	// onClick: ({
-	// 	event,
-	// 	props,
-	// }: {
-	// 	event: React.KeyboardEvent | React.MouseEvent;
-	// 	props: ISplitButtonButtonChildProps;
-	// }) => void;
 }
 
 const ButtonChild = (_props: ISplitButtonButtonChildProps): null => null;
@@ -52,7 +42,6 @@ ButtonChild.peek = {
 	`,
 };
 ButtonChild.propTypes = {
-	//	children: any`
 	children: node`
 		The children to render within the \`Button\`.
 	`,
@@ -145,11 +134,8 @@ class SplitButton extends React.Component<ISplitButtonProps, {}> {
 		optionIndex: number | null,
 		//{ event }: { event: React.KeyboardEvent | React.MouseEvent }
 		{
-			//TODO: match props to DropMenu interface
-			//props,
 			event,
 		}: {
-			//props: IDropMenuOptionProps;
 			//event: React.KeyboardEvent<HTMLButtonElement> | React.MouseEvent;
 			event:
 				| React.KeyboardEvent<Element>
