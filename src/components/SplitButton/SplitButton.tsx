@@ -13,8 +13,7 @@ import { IButtonProps, Button } from '../Button/Button';
 import { ButtonGroupDumb as ButtonGroup } from '../ButtonGroup/ButtonGroup';
 import ChevronIcon from '../Icon/ChevronIcon/ChevronIcon';
 import {
-	IDropMenuOptionProps,
-	IDropMenuState,
+	//	IDropMenuState,
 	IDropMenuProps,
 	DropMenuDumb as DropMenu,
 } from '../DropMenu/DropMenu';
@@ -147,12 +146,15 @@ class SplitButton extends React.Component<ISplitButtonProps, {}> {
 		//{ event }: { event: React.KeyboardEvent | React.MouseEvent }
 		{
 			//TODO: match props to DropMenu interface
-			props,
+			//props,
 			event,
 		}: {
-			props: IDropMenuOptionProps;
-			event: React.KeyboardEvent<HTMLButtonElement> | React.MouseEvent;
-			//event: React.MouseEvent<HTMLButtonElement>;
+			//props: IDropMenuOptionProps;
+			//event: React.KeyboardEvent<HTMLButtonElement> | React.MouseEvent;
+			event:
+				| React.KeyboardEvent<Element>
+				| React.MouseEvent<Element, MouseEvent>;
+			//event: React.MouseEvent<HTMLButtonElement, MouseEvent>;
 		}
 	): void => {
 		const buttonChildProps = _.map(
@@ -184,8 +186,9 @@ class SplitButton extends React.Component<ISplitButtonProps, {}> {
 	handleButtonClick = (
 		//		buttonProps: ISplitButtonButtonChildProps,
 		buttonProps: IButtonProps,
-		//event: React.KeyboardEvent | React.MouseEvent
-		event: React.MouseEvent<HTMLButtonElement>
+		event: any
+		//		event: React.KeyboardEvent | React.MouseEvent
+		//event: React.MouseEvent<HTMLButtonElement>
 	): void => {
 		const {
 			DropMenu: { onCollapse },
