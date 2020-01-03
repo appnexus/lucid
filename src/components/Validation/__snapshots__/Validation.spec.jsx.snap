@@ -15,7 +15,6 @@ exports[`Validation [common] example testing should match snapshot(s) for basic 
     onKeyDown={[Function]}
     onSubmit={[Function]}
     rows={5}
-    style={null}
     value="Text Field Text"
   />
   <div
@@ -46,7 +45,6 @@ exports[`Validation [common] example testing should match snapshot(s) for basic 
     onKeyDown={[Function]}
     onSubmit={[Function]}
     rows={5}
-    style={null}
     value="Text Field Text"
   />
   <div
@@ -75,7 +73,6 @@ exports[`Validation [common] example testing should match snapshot(s) for basic 
     onSubmit={[Function]}
     row={3}
     rows={5}
-    style={null}
     value="Text Area Text"
   />
   <div
@@ -107,7 +104,6 @@ exports[`Validation [common] example testing should match snapshot(s) for basic 
     onSubmit={[Function]}
     row={3}
     rows={5}
-    style={null}
     value="Text Area Text"
   />
   <div

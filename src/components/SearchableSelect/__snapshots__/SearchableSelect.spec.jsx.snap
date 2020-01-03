@@ -84,21 +84,33 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
     >
       PST
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="CA"
       >
         California
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="NV"
       >
         Nevada
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="OR"
       >
         Oregon
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="WA"
       >
         Washington
@@ -146,41 +158,65 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
     >
       MST
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="CO"
       >
         Colorado
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="ID"
       >
         Idaho
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="MT"
       >
         Montana
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="NM"
       >
         New Mexico
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="ND"
       >
         North Dakota
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="SD"
       >
         South Dakota
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="WI"
       >
         Wisconsin
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="WY"
       >
         Wyoming
@@ -264,81 +300,129 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
     >
       CST
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="AR"
       >
         Arkansas
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="IL"
       >
         Illinois
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="IN"
       >
         Indiana
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="IA"
       >
         Iowa
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="KS"
       >
         Kansas
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="KY"
       >
         Kentucky
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="MI"
       >
         Michigan
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="MN"
       >
         Minnesota
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="MS"
       >
         Mississippi
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="MO"
       >
         Missouri
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="NE"
       >
         Nebraska
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="OH"
       >
         Ohio
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="OK"
       >
         Oklahoma
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="TN"
       >
         Tennessee
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="TX"
       >
         Texas
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="UT"
       >
         Utah
@@ -494,6 +578,9 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
     >
       EST
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="AL"
       >
         <span>
@@ -502,101 +589,161 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
         Alabama
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="AZ"
       >
         Arizona
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="CT"
       >
         Connecticut
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="DE"
       >
         Delaware
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="DC"
       >
         District Of Columbia
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="FL"
       >
         Florida
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="GA"
       >
         Georgia
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="LA"
       >
         Louisiana
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="ME"
       >
         Maine
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="MD"
       >
         Maryland
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="MA"
       >
         Massachusetts
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="NH"
       >
         New Hampshire
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="NJ"
       >
         New Jersey
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="NY"
       >
         New York
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="NC"
       >
         North Carolina
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="PA"
       >
         Pennsylvania
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="RI"
       >
         Rhode Island
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="SC"
       >
         South Carolina
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="VT"
       >
         Vermont
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="VA"
       >
         Virginia
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="WV"
       >
         West Virginia
@@ -1573,21 +1720,33 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
     >
       PST
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="CA"
       >
         California
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="NV"
       >
         Nevada
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="OR"
       >
         Oregon
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="WA"
       >
         Washington
@@ -1635,41 +1794,65 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
     >
       MST
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="CO"
       >
         Colorado
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="ID"
       >
         Idaho
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="MT"
       >
         Montana
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="NM"
       >
         New Mexico
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="ND"
       >
         North Dakota
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="SD"
       >
         South Dakota
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="WI"
       >
         Wisconsin
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="WY"
       >
         Wyoming
@@ -1753,81 +1936,129 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
     >
       CST
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="AR"
       >
         Arkansas
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="IL"
       >
         Illinois
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="IN"
       >
         Indiana
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="IA"
       >
         Iowa
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="KS"
       >
         Kansas
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="KY"
       >
         Kentucky
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="MI"
       >
         Michigan
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="MN"
       >
         Minnesota
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="MS"
       >
         Mississippi
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="MO"
       >
         Missouri
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="NE"
       >
         Nebraska
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="OH"
       >
         Ohio
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="OK"
       >
         Oklahoma
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="TN"
       >
         Tennessee
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="TX"
       >
         Texas
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="UT"
       >
         Utah
@@ -1983,6 +2214,9 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
     >
       EST
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="AL"
       >
         <span>
@@ -1991,101 +2225,161 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
         Alabama
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="AZ"
       >
         Arizona
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="CT"
       >
         Connecticut
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="DE"
       >
         Delaware
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="DC"
       >
         District Of Columbia
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="FL"
       >
         Florida
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="GA"
       >
         Georgia
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="LA"
       >
         Louisiana
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="ME"
       >
         Maine
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="MD"
       >
         Maryland
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="MA"
       >
         Massachusetts
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="NH"
       >
         New Hampshire
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="NJ"
       >
         New Jersey
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="NY"
       >
         New York
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="NC"
       >
         North Carolina
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="PA"
       >
         Pennsylvania
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="RI"
       >
         Rhode Island
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="SC"
       >
         South Carolina
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="VT"
       >
         Vermont
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="VA"
       >
         Virginia
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="WV"
       >
         West Virginia
@@ -2390,18 +2684,27 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
       <SearchableSelect.Option
         Selected="Foo (1234)"
         filterText="Foo"
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
       >
         <Component />
       </SearchableSelect.Option>
       <SearchableSelect.Option
         Selected="Bar (2345)"
         filterText="Bar"
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
       >
         <Component />
       </SearchableSelect.Option>
       <SearchableSelect.Option
         Selected="Baz (3456)"
         filterText="Baz"
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
       >
         <Component />
       </SearchableSelect.Option>
@@ -2524,21 +2827,33 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
     >
       PST
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="CA"
       >
         California
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="NV"
       >
         Nevada
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="OR"
       >
         Oregon
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="WA"
       >
         Washington
@@ -2586,41 +2901,65 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
     >
       MST
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="CO"
       >
         Colorado
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="ID"
       >
         Idaho
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="MT"
       >
         Montana
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="NM"
       >
         New Mexico
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="ND"
       >
         North Dakota
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="SD"
       >
         South Dakota
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="WI"
       >
         Wisconsin
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="WY"
       >
         Wyoming
@@ -2704,81 +3043,129 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
     >
       CST
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="AR"
       >
         Arkansas
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="IL"
       >
         Illinois
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="IN"
       >
         Indiana
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="IA"
       >
         Iowa
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="KS"
       >
         Kansas
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="KY"
       >
         Kentucky
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="MI"
       >
         Michigan
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="MN"
       >
         Minnesota
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="MS"
       >
         Mississippi
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="MO"
       >
         Missouri
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="NE"
       >
         Nebraska
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="OH"
       >
         Ohio
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="OK"
       >
         Oklahoma
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="TN"
       >
         Tennessee
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="TX"
       >
         Texas
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="UT"
       >
         Utah
@@ -2934,6 +3321,9 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
     >
       EST
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="AL"
       >
         <span>
@@ -2942,101 +3332,161 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
         Alabama
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="AZ"
       >
         Arizona
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="CT"
       >
         Connecticut
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="DE"
       >
         Delaware
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="DC"
       >
         District Of Columbia
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="FL"
       >
         Florida
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="GA"
       >
         Georgia
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="LA"
       >
         Louisiana
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="ME"
       >
         Maine
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="MD"
       >
         Maryland
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="MA"
       >
         Massachusetts
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="NH"
       >
         New Hampshire
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="NJ"
       >
         New Jersey
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="NY"
       >
         New York
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="NC"
       >
         North Carolina
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="PA"
       >
         Pennsylvania
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="RI"
       >
         Rhode Island
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="SC"
       >
         South Carolina
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="VT"
       >
         Vermont
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="VA"
       >
         Virginia
       </SearchableSelect.Option>
       <SearchableSelect.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
         value="WV"
       >
         West Virginia

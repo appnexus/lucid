@@ -42,9 +42,9 @@ export interface FC<P> extends React.FC<P> {
 	_isPrivate?: boolean;
 }
 
-class ReactClassComponent extends React.Component<{},{}> {}
+class ReactClassComponent extends React.Component<{}, {}> {}
 
-type IReactClassComponent = (typeof ReactClassComponent)
+type IReactClassComponent = typeof ReactClassComponent;
 
 type TypesType<P> =
 	| ICreateClassComponentClass<P>

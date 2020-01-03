@@ -13,10 +13,8 @@ export default createClass({
 	},
 
 	handleSelect(
-		optionIndex,
-		{
-			props: { name },
-		}
+		optionIndex: number | null,
+		{ props: { name } }: { props: { name: string } }
 	) {
 		this.setState({
 			selectedIndex: optionIndex,
