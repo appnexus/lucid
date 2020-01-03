@@ -126,7 +126,8 @@ export interface ISearchableMultiSelectProps extends StandardProps {
     hasRemoveAll: boolean;
     hasSelectAll: boolean;
     hasSelections: boolean;
-    searchText?: string | null;
+    searchText: string;
+    responsiveMode: "large" | "medium" | "small";
     selectedIndices?: number[] | null;
     SearchField?: ISearchFieldProps;
 	DropMenu: IDropMenuProps;
@@ -136,7 +137,7 @@ export interface ISearchableMultiSelectProps extends StandardProps {
 	Error: React.ReactNode; 
 
     onSelect: (
-		optionIndices: number[] | number | null,
+		optionIndices: number[] | number,
 		{
 			props,
 			event,
@@ -446,20 +447,19 @@ class SearchableMultiSelect extends React.Component<ISearchableMultiSelectProps,
 				SearchableMultiSelect
 			)
 		);
-	},
+	};
 
-	componentWillReceiveProps(nextProps) {
+	componentWillReceiveProps(nextProps: ISearchableMultiSelectProps) {
 		// only preprocess options data when it changes (via new props) - better performance than doing this each render
 		this.setState(
 			DropMenu.preprocessOptionData(
 				nextProps,
-				SearchableMultiSelect,
-				props => !this.props.optionFilter(nextProps.searchText, props)
+				SearchableMultiSelect
 			)
 		);
-	},
+	};
 
-	renderUnderlinedChildren(childText, searchText) {
+	renderUnderlinedChildren(childText: string, searchText: string) {
 		const [pre, match, post] = partitionText(
 			childText,
 			new RegExp(_.escapeRegExp(searchText), 'i'),
@@ -483,9 +483,9 @@ class SearchableMultiSelect extends React.Component<ISearchableMultiSelectProps,
 				</span>
 			),
 		];
-	},
+	};
 
-	renderOption({ optionProps, optionIndex }) {
+	renderOption({ optionProps, optionIndex }: { optionProps: ISearchableMultiSelectOptionProps, optionIndex: number}) {
 		const { searchText, selectedIndices, isLoading, optionFilter } = this.props;
 
 		return (
@@ -497,7 +497,7 @@ class SearchableMultiSelect extends React.Component<ISearchableMultiSelectProps,
 			>
 				<CheckboxLabeled
 					className={cx('&-CheckboxLabeled')}
-					callbackId={optionIndex}
+					callbackId={optionIndex.toString()}
 					isSelected={_.includes(selectedIndices, optionIndex)}
 				>
 					<CheckboxLabeled.Label>
@@ -510,7 +510,7 @@ class SearchableMultiSelect extends React.Component<ISearchableMultiSelectProps,
 				</CheckboxLabeled>
 			</DropMenu.Option>
 		);
-	},
+	};
 
 	renderOptions() {
 		const { searchText, isLoading, hasSelectAll, selectedIndices } = this.props;
@@ -553,7 +553,7 @@ class SearchableMultiSelect extends React.Component<ISearchableMultiSelectProps,
 					isIndeterminate={
 						!isEveryVisibleOptionSelected && isAnyVisibleOptionSelected
 					}
-					Label='Select All'
+					Label={'Select All'}
 				/>
 			</DropMenu.FixedOption>,
 		].concat(
@@ -567,7 +567,7 @@ class SearchableMultiSelect extends React.Component<ISearchableMultiSelectProps,
 				</DropMenu.OptionGroup>
 			)).concat(
 				// then render all the ungrouped options at the end
-				_.map(ungroupedOptionData, this.renderOption)
+				_.map(ungroupedOptionData, option => this.renderOption(option))
 			)
 		);
 
@@ -586,7 +586,7 @@ class SearchableMultiSelect extends React.Component<ISearchableMultiSelectProps,
 		}
 
 		return null;
-	},
+	};
 
 	render() {
 		const {
