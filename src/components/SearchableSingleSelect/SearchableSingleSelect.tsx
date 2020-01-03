@@ -455,7 +455,6 @@ class SearchableSingleSelect extends React.Component<ISearchableSingleSelectProp
 			},
 		} = this;
 
-		console.log(SearchableSingleSelect.SearchField);
 		const searchFieldProps = _.get(
 			getFirst(props, SearchableSingleSelect.SearchField),
 			'props',
