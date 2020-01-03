@@ -11,7 +11,7 @@ import {
 	getFirst,
 	findTypes,
 } from '../../util/component-types';
-import { SearchFieldDumb as SearchField } from '../SearchField/SearchField';
+import { SearchFieldDumb as SearchField, ISearchFieldProps } from '../SearchField/SearchField';
 import {
 	IDropMenuProps,
 	IDropMenuState,
@@ -40,6 +40,18 @@ OptionGroup.peek = {
 OptionGroup.propName = 'OptionGroup';
 OptionGroup.propTypes = DropMenu.OptionGroup.propTypes;
 OptionGroup.defaultProps = DropMenu.OptionGroup.defaultProps;
+
+
+const SearchFieldComponent = (_props: ISearchFieldProps): null => null;
+SearchFieldComponent.displayName = 'SearchableSingleSelect.SearchField';
+SearchFieldComponent.peek = {
+	description: `
+		Passes props through to the \`Search Field\`.
+	`,
+};
+SearchFieldComponent.propName = 'SearchField';
+SearchFieldComponent.propTypes = SearchField.propTypes;
+SearchFieldComponent.defaultProps = SearchField.defaultProps;
 
 /** Option Child Component */
 export interface ISearchableSingleSelectOptionProps extends IDropMenuOptionProps {
@@ -81,6 +93,8 @@ Option.propTypes = {
 };
 Option.defaultProps = DropMenu.Option.defaultProps;
 
+
+
 export interface ISearchableSingleSelectProps extends StandardProps {
 	hasReset: boolean;
 	isDisabled: boolean;
@@ -88,6 +102,7 @@ export interface ISearchableSingleSelectProps extends StandardProps {
 	maxMenuHeight?: string;
 	selectedIndex: number | null;
 	searchText: string;
+	SearchField?: ISearchFieldProps;
 	DropMenu: IDropMenuProps;
 	Option?: React.ReactNode;
 	OptionGroup?: IDropMenuOptionGroupProps;
@@ -156,7 +171,7 @@ class SearchableSingleSelect extends React.Component<ISearchableSingleSelectProp
 	static reducers = reducers;
 	static Option = Option;
 	static OptionGroup = OptionGroup;
-	static SearchField = SearchField;
+	static SearchField = SearchFieldComponent;
 	static NullOption = DropMenu.NullOption;
 	static FixedOption = DropMenu.FixedOption;
 	static DropMenu = DropMenu;
@@ -249,6 +264,10 @@ class SearchableSingleSelect extends React.Component<ISearchableSingleSelectProp
 		OptionGroup: any`
 			*Child Element* - Used to group \`Option\`s within the menu. Any
 			non-\`Option\`s passed in will be rendered as a label for the group.
+		`,
+
+		SearchField: any`
+			*Child Element* - Passes props through to the \`SearchField\` component.
 		`
 	};
 
@@ -436,11 +455,13 @@ class SearchableSingleSelect extends React.Component<ISearchableSingleSelectProp
 			},
 		} = this;
 
+		console.log(SearchableSingleSelect.SearchField);
 		const searchFieldProps = _.get(
 			getFirst(props, SearchableSingleSelect.SearchField),
 			'props',
 			{}
 		);
+		
 		const errorChildProps = _.first(
 			_.map(findTypes(props, Validation.Error), 'props')
 		);
@@ -484,7 +505,7 @@ class SearchableSingleSelect extends React.Component<ISearchableSingleSelectProp
 
 		return (
 			<div
-				{...omitProps(passThroughs, undefined)}
+				{...omitProps(passThroughs, undefined, _.keys(SearchableSingleSelect.propTypes))}
 				className={cx('&', className)}
 			>
 				<DropMenu

@@ -2,15 +2,7 @@
 
 exports[`SearchableSingleSelect [common] example testing should match snapshot(s) for 01.basic 1`] = `
 <div
-  Error={null}
-  SearchField={
-    Object {
-      "placeholder": "Name/ID",
-    }
-  }
   className="lucid-SearchableSingleSelect"
-  onSearch={[Function]}
-  optionFilter={[Function]}
   style={
     Object {
       "maxWidth": "100px",
@@ -55,6 +47,7 @@ exports[`SearchableSingleSelect [common] example testing should match snapshot(s
         onChange={[Function]}
         onChangeDebounced={[Function]}
         onSubmit={[Function]}
+        placeholder="Name/ID"
         value=""
       />
     </DropMenu.Control>
@@ -448,10 +441,7 @@ exports[`SearchableSingleSelect [common] example testing should match snapshot(s
 
 exports[`SearchableSingleSelect [common] example testing should match snapshot(s) for 02.props 1`] = `
 <div
-  Error={null}
   className="lucid-SearchableSingleSelect"
-  onSearch={[Function]}
-  optionFilter={[Function]}
 >
   <DropMenu
     ContextMenu={
@@ -526,10 +516,7 @@ exports[`SearchableSingleSelect [common] example testing should match snapshot(s
 
 exports[`SearchableSingleSelect [common] example testing should match snapshot(s) for 02.props 2`] = `
 <div
-  Error={null}
   className="lucid-SearchableSingleSelect"
-  onSearch={[Function]}
-  optionFilter={[Function]}
 >
   <DropMenu
     ContextMenu={
@@ -586,16 +573,8 @@ exports[`SearchableSingleSelect [common] example testing should match snapshot(s
 
 exports[`SearchableSingleSelect [common] example testing should match snapshot(s) for 03.asynchronous 1`] = `
 <div
-  Error={null}
-  SearchField={
-    Object {
-      "placeholder": "Type here to simulate an API backed search",
-    }
-  }
   className="lucid-SearchableSingleSelect"
   hasSelections={false}
-  onSearch={[Function]}
-  optionFilter={[Function]}
 >
   <DropMenu
     ContextMenu={
@@ -635,6 +614,7 @@ exports[`SearchableSingleSelect [common] example testing should match snapshot(s
         onChange={[Function]}
         onChangeDebounced={[Function]}
         onSubmit={[Function]}
+        placeholder="Type here to simulate an API backed search"
         value=""
       />
     </DropMenu.Control>
@@ -644,15 +624,7 @@ exports[`SearchableSingleSelect [common] example testing should match snapshot(s
 
 exports[`SearchableSingleSelect [common] example testing should match snapshot(s) for 04.grouped-options 1`] = `
 <div
-  Error={null}
-  SearchField={
-    Object {
-      "placeholder": "State",
-    }
-  }
   className="lucid-SearchableSingleSelect"
-  onSearch={[Function]}
-  optionFilter={[Function]}
 >
   <DropMenu
     ContextMenu={
@@ -692,6 +664,7 @@ exports[`SearchableSingleSelect [common] example testing should match snapshot(s
         onChange={[Function]}
         onChangeDebounced={[Function]}
         onSubmit={[Function]}
+        placeholder="State"
         value=""
       />
     </DropMenu.Control>
@@ -1467,15 +1440,7 @@ exports[`SearchableSingleSelect [common] example testing should match snapshot(s
 
 exports[`SearchableSingleSelect [common] example testing should match snapshot(s) for 05.selected-option 1`] = `
 <div
-  Error={null}
-  SearchField={
-    Object {
-      "placeholder": "Color",
-    }
-  }
   className="lucid-SearchableSingleSelect"
-  onSearch={[Function]}
-  optionFilter={[Function]}
 >
   <DropMenu
     ContextMenu={
@@ -1515,6 +1480,7 @@ exports[`SearchableSingleSelect [common] example testing should match snapshot(s
         onChange={[Function]}
         onChangeDebounced={[Function]}
         onSubmit={[Function]}
+        placeholder="Color"
         value=""
       />
     </DropMenu.Control>
@@ -1548,10 +1514,7 @@ exports[`SearchableSingleSelect [common] example testing should match snapshot(s
 
 exports[`SearchableSingleSelect [common] example testing should match snapshot(s) for 06.invalid-option 1`] = `
 <div
-  Error="Please Choose Green"
   className="lucid-SearchableSingleSelect"
-  onSearch={[Function]}
-  optionFilter={[Function]}
 >
   <DropMenu
     ContextMenu={
@@ -1629,10 +1592,7 @@ exports[`SearchableSingleSelect [common] example testing should match snapshot(s
 
 exports[`SearchableSingleSelect custom formatting should render Option child function by passing in {searchText}, setting filterText on each option and using a custom optionFilter 1`] = `
 <div
-  Error={null}
   className="lucid-SearchableSingleSelect"
-  onSearch={[Function]}
-  optionFilter={[Function]}
 >
   <DropMenu
     ContextMenu={
