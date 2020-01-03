@@ -113,8 +113,8 @@ const SingleSelect = createClass({
 
 	propTypes: {
 		children: node`
-			Should be instances of: &#123;\`SingleSelect.Placeholder\`,
-			\`SingleSelect.Option\`, \`SingleSelect.OptionGroup\`&#125;. Other direct
+			Should be instances of: \`SingleSelect.Placeholder\`,
+			\`SingleSelect.Option\`, \`SingleSelect.OptionGroup\`. Other direct
 			child elements will not render.
 		`,
 

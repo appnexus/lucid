@@ -402,8 +402,8 @@ class DropMenu extends React.Component<IDropMenuProps, IDropMenuState> {
 
 	static propTypes = {
 		children: node`
-			Should be instances of: &#123;\`DropMenu.Control\`, \`DropMenu.Option\`,
-			\`DropMenu.OptionGroup\`, \`DropMenu.Nulloption\`&#125;. Other direct child
+			Should be instances of: \`DropMenu.Control\`, \`DropMenu.Option\`,
+			\`DropMenu.OptionGroup\`, \`DropMenu.Nulloption\`. Other direct child
 			elements will not render.
 		`,
 

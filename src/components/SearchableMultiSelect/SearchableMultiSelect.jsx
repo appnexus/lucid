@@ -151,7 +151,7 @@ const SearchableMultiSelect = createClass({
 
 	propTypes: {
 		children: node`
-			Should be instances of &#123;\`SearchableMultiSelect.Option\`&#125;. Other direct
+			Should be instances of \`SearchableMultiSelect.Option\`. Other direct
 			child elements will not render.
 		`,
 

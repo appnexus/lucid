@@ -32,7 +32,7 @@ const SearchableSelect = createClass({
 	statics: {
 		peek: {
 			description: `
-				A selector control (like native \`<select>\`) which is used to select a
+				\`SearchableSelect\` is a selector control (like native \`<select>\`) which is used to select a
 				single option from a dropdown list using a SearchField.  Supports
 				option groups with and without labels.
 			`,
@@ -109,8 +109,8 @@ const SearchableSelect = createClass({
 
 	propTypes: {
 		children: node`
-			Should be instances of: &#123;\`SearchableSelect.Placeholder\`,
-			\`SearchableSelect.Option\`, \`SearchableSelect.OptionGroup\`&#125#. Other
+			Should be instances of: \`SearchableSelect.Placeholder\`,
+			\`SearchableSelect.Option\`, \`SearchableSelect.OptionGroup\`. Other
 			direct child elements will not render.
 		`,
 

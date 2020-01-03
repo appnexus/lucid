@@ -114,7 +114,7 @@ const SearchableSingleSelect = createClass({
 
 	propTypes: {
 		children: node`
-			Should be instances of &#123;\`SearchableSingleSelect.Option\`&#125;. Other direct
+			Should be instances of \`SearchableSingleSelect.Option\`. Other direct
 			child elements will not render.
 		`,
 
