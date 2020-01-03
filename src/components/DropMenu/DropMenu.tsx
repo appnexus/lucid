@@ -221,7 +221,7 @@ export interface IDropMenuProps extends StandardProps {
 	alignment: 'start' | 'center' | 'end';
 
 	/** An array of currently selected \`DropMenu.Option\` indices. */
-	selectedIndices: number[];
+	selectedIndices: number[] | null;
 
 	/** The currently focused index of \`DropMenu.Option\`. Can also be \`null\`. */
 	focusedIndex: number | null;

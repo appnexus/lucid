@@ -1,9 +1,8 @@
 import _ from 'lodash';
 import * as DropMenu from '../DropMenu/DropMenu.reducers';
-import SearchField from '../SearchField/SearchField.reducers';
 import { ISearchableMultiSelectState } from './SearchableMultiSelect';
 
-export function onSelect(state: ISearchableMultiSelectState, selectedIndex: number[]) {
+export function onSelect(state: ISearchableMultiSelectState, selectedIndex: number[]): ISearchableMultiSelectState {
     const arr: number[] = [];
 	return {
 		...state,
@@ -11,7 +10,7 @@ export function onSelect(state: ISearchableMultiSelectState, selectedIndex: numb
 	};
 }
 
-export function onSearch(state: ISearchableMultiSelectState, searchText: string, firstVisibleIndex: number) {
+export function onSearch(state: ISearchableMultiSelectState, searchText: string, firstVisibleIndex: number): ISearchableMultiSelectState {
 	return {
 		...state,
 		searchText,
@@ -21,11 +20,9 @@ export function onSearch(state: ISearchableMultiSelectState, searchText: string,
 	};
 }
 
-export function onRemoveAll(state: ISearchableMultiSelectState) {
+export function onRemoveAll(state: ISearchableMultiSelectState): ISearchableMultiSelectState {
 	return {
 		...state,
 		selectedIndices: [],
 	};
 }
-
-export { DropMenu, SearchField };
