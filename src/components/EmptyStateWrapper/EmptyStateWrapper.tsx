@@ -1,13 +1,7 @@
 import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
-import {
-	createClass,
-	getFirst,
-	omitProps,
-	Overwrite,
-	StandardProps,
-} from '../../util/component-types';
+import { getFirst, omitProps, StandardProps } from '../../util/component-types';
 import { lucidClassNames } from '../../util/style-helpers';
 
 import LoadingIndicator from '../LoadingIndicator/LoadingIndicator';
