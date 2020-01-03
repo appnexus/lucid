@@ -47,7 +47,7 @@ SelectionIcon.peek = {
 SelectionIcon.displayName = 'Selection.Icon';
 SelectionIcon.propName = 'Icon';
 
-interface ISelectionLabelProps extends StandardProps {}
+export interface ISelectionLabelProps extends StandardProps {}
 
 const SelectionLabel: FC<ISelectionLabelProps> = (): null => null;
 SelectionLabel.peek = {
