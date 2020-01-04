@@ -16,7 +16,6 @@ import SearchableSelect, {
 import DateSelect, { DateSelectDumb } from './components/DateSelect/DateSelect';
 import SearchableMultiSelect, {
 	SearchableMultiSelectDumb,
-	// @ts-ignore: not converted yet
 } from './components/SearchableMultiSelect/SearchableMultiSelect';
 import SearchableSingleSelect, {
 	SearchableSingleSelectDumb,

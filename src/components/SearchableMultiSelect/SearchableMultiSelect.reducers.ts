@@ -1,5 +1,6 @@
 import _ from 'lodash';
 import * as DropMenu from '../DropMenu/DropMenu.reducers';
+import * as SearchField from '../SearchField/SearchField.reducers';
 import { ISearchableMultiSelectState } from './SearchableMultiSelect';
 
 export function onSelect(state: ISearchableMultiSelectState, selectedIndex: number[]): ISearchableMultiSelectState {
@@ -26,3 +27,6 @@ export function onRemoveAll(state: ISearchableMultiSelectState): ISearchableMult
 		selectedIndices: [],
 	};
 }
+
+export { DropMenu };
+export default SearchField;
