@@ -786,12 +786,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/SearchableSingleSelect/examples',
 			true,
-			/\.jsx?$/
+			/\.tsx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/SearchableSingleSelect/examples',
 			true,
-			/\.jsx?$/
+			/\.tsx?$/
 		),
 	},
 	{

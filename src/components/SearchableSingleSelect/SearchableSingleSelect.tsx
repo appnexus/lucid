@@ -28,6 +28,7 @@ const { any, bool, func, number, oneOfType, shape, string, node } = PropTypes;
 
 const cx = lucidClassNames.bind('&-SearchableSingleSelect');
 
+/** Option Group Child Component */
 const OptionGroup = (_props: IDropMenuOptionGroupProps): null => null;
 OptionGroup.displayName = 'SearchableSingleSelect.OptionGroup';
 OptionGroup.peek = {
@@ -41,7 +42,7 @@ OptionGroup.propName = 'OptionGroup';
 OptionGroup.propTypes = DropMenu.OptionGroup.propTypes;
 OptionGroup.defaultProps = DropMenu.OptionGroup.defaultProps;
 
-
+/** Search Field Child Component */
 const SearchFieldComponent = (_props: ISearchFieldProps): null => null;
 SearchFieldComponent.displayName = 'SearchableSingleSelect.SearchField';
 SearchFieldComponent.peek = {
@@ -53,7 +54,7 @@ SearchFieldComponent.propName = 'SearchField';
 SearchFieldComponent.propTypes = SearchField.propTypes;
 SearchFieldComponent.defaultProps = SearchField.defaultProps;
 
-/** Option Child Component */
+/** Option Child Component w/ Selection property */
 export interface ISearchableSingleSelectOptionProps extends IDropMenuOptionProps {
 	description?: string;
 	name?: string;
@@ -94,15 +95,15 @@ Option.propTypes = {
 Option.defaultProps = DropMenu.Option.defaultProps;
 
 
-
 export interface ISearchableSingleSelectProps extends StandardProps {
-	hasReset: boolean;
+	hasReset?: boolean;
+	hasSelections?: boolean;
 	isDisabled: boolean;
 	isLoading: boolean;
 	maxMenuHeight?: string;
 	selectedIndex: number | null;
 	searchText: string;
-	SearchField?: ISearchFieldProps;
+	SearchField: React.ReactNode;
 	DropMenu: IDropMenuProps;
 	Option?: React.ReactNode;
 	OptionGroup?: IDropMenuOptionGroupProps;
@@ -155,6 +156,7 @@ const defaultProps = {
 	Error: null,
 	onSearch: _.noop,
 	onSelect: _.noop,
+	SearchField: SearchField.defaultProps
 }
 
 class SearchableSingleSelect extends React.Component<ISearchableSingleSelectProps, ISearchableSingleSelectState> {
@@ -176,7 +178,7 @@ class SearchableSingleSelect extends React.Component<ISearchableSingleSelectProp
 	static FixedOption = DropMenu.FixedOption;
 	static DropMenu = DropMenu;
 
-	static propTypes: any = {
+	static propTypes = {
 		children: node`
 			Should be instances of {\`SearchableSingleSelect.Option\`}. Other direct
 			child elements will not render.
@@ -300,7 +302,7 @@ class SearchableSingleSelect extends React.Component<ISearchableSingleSelectProp
 		);
 	};
 
-	handleSearch = (searchText: string, { event }: { event: React.KeyboardEvent<Element> | React.MouseEvent<Element, MouseEvent> }) => {
+	handleSearch = (searchText: string, { event }: { event: React.KeyboardEvent<Element> | React.MouseEvent<Element, MouseEvent> }): void => {
 		const {
 			props,
 			props: {
@@ -329,7 +331,7 @@ class SearchableSingleSelect extends React.Component<ISearchableSingleSelectProp
 		});
 	};
 
-	renderUnderlinedChildren = (childText: string, searchText: string) => {
+	renderUnderlinedChildren = (childText: string, searchText: string): any[] => {
 		const [pre, match, post] = partitionText(
 			childText,
 			new RegExp(_.escapeRegExp(searchText), 'i'),
@@ -355,7 +357,7 @@ class SearchableSingleSelect extends React.Component<ISearchableSingleSelectProp
 		];
 	};
 
-	renderOptionContent = (optionProps: ISearchableSingleSelectOptionProps, searchText: string) => {
+	renderOptionContent = (optionProps: ISearchableSingleSelectOptionProps, searchText: string): any => {
 		return _.isString(optionProps.children) &&
 			_.isString(searchText) &&
 			searchText.length > 0
@@ -365,7 +367,7 @@ class SearchableSingleSelect extends React.Component<ISearchableSingleSelectProp
 				: optionProps.children;
 	};
 
-	renderOption = ({ optionProps, optionIndex }: { optionProps: ISearchableSingleSelectOptionProps, optionIndex: number | null}) => {
+	renderOption = ({ optionProps, optionIndex }: { optionProps: ISearchableSingleSelectOptionProps, optionIndex: number | null}): any  => {
 		const { searchText, isLoading, optionFilter } = this.props;
 		return (
 			<DropMenu.Option
@@ -379,7 +381,7 @@ class SearchableSingleSelect extends React.Component<ISearchableSingleSelectProp
 		);
 	};
 
-	renderOptions = () => {
+	renderOptions = (): any =>  {
 		const { searchText, isLoading } = this.props;
 
 		const {
