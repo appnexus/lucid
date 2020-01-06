@@ -7,7 +7,6 @@ import { lucidClassNames } from '../../util/style-helpers';
 import LoadingIndicator from '../LoadingIndicator/LoadingIndicator';
 import OverlayWrapper, {
 	OverlayWrapperMessage,
-	//	IOverlayWrapperProps,
 } from '../OverlayWrapper/OverlayWrapper';
 
 const cx = lucidClassNames.bind('&-EmptyStateWrapper');
@@ -24,7 +23,6 @@ interface IEmptyStateWrapperTitleProps extends StandardProps {}
 const EmptyStateWrapperTitle = (_props: IEmptyStateWrapperTitleProps): null =>
 	null;
 
-//interface IEmptyStateWrapperProps extends IOverlayWrapperProps {
 interface IEmptyStateWrapperProps extends StandardProps {
 	/** *Child Element* The element to display in the body of the overlay. */
 	Body?: React.ReactNode;
@@ -39,11 +37,9 @@ interface IEmptyStateWrapperProps extends StandardProps {
 	isLoading: boolean;
 }
 
-//const EmptyStateWrapper = createClass({
 export const EmptyStateWrapper = (
 	props: IEmptyStateWrapperProps
 ): React.ReactElement => {
-	//render(): React.ReactNode {
 	const { children, className, isEmpty, isLoading, ...passThroughs } = props;
 
 	const emptyMessageBodyProp = _.get(
@@ -61,7 +57,6 @@ export const EmptyStateWrapper = (
 		<LoadingIndicator
 			className={cx('&', className)}
 			isLoading
-			//			{...omitProps(passThroughs, EmptyStateWrapper, [], false)}
 			{...omitProps(
 				passThroughs,
 				undefined,
@@ -75,12 +70,10 @@ export const EmptyStateWrapper = (
 			className={cx('&', className)}
 			hasOverlay={false}
 			isVisible={isEmpty}
-			//		{...omitProps(passThroughs, EmptyStateWrapper, [], false)}
 			{...omitProps(
 				passThroughs,
 				undefined,
 				_.keys(EmptyStateWrapper.propTypes)
-				//['children', 'className', 'isLoading', 'Message']
 			)}
 		>
 			<OverlayWrapperMessage className={cx('&-message-container')}>
@@ -97,9 +90,7 @@ export const EmptyStateWrapper = (
 			{children}
 		</OverlayWrapper>
 	);
-	//};
 };
-//});
 
 EmptyStateWrapper._isPrivate = true;
 
