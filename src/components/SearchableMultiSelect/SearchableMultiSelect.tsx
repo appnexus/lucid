@@ -403,12 +403,10 @@ class SearchableMultiSelect extends React.Component<ISearchableMultiSelectProps,
 
 		const indices = _.isEmpty(unselected)
 			? _.map(selected, 'optionIndex')
-			: _.map(unselected, 'optionIndex');
-
-        const dropMenuProps = this.props.DropMenu;
-
+            : _.map(unselected, 'optionIndex');
+            
 		return onSelect(indices, {
-            props: dropMenuProps,
+            props: this.props,
             event
         });
 	};
@@ -427,8 +425,8 @@ class SearchableMultiSelect extends React.Component<ISearchableMultiSelectProps,
 		});
 	};
 
-	handleRemoveAll = ({ event }: {event: React.KeyboardEvent | React.MouseEvent;}): void => {
-		this.props.onRemoveAll({ event, props: this.props });
+	handleRemoveAll = ({ event, props }: {event: React.KeyboardEvent | React.MouseEvent, props: IDropMenuOptionProps}): void => {
+		this.props.onRemoveAll({ event, props });
 	};
 
 	handleSearch = (searchText: string, { event } : {event: React.KeyboardEvent | React.MouseEvent }): void => {
@@ -575,8 +573,12 @@ class SearchableMultiSelect extends React.Component<ISearchableMultiSelectProps,
 					isSelected={isEveryVisibleOptionSelected}
 					isIndeterminate={
 						!isEveryVisibleOptionSelected && isAnyVisibleOptionSelected
-					}
-				/>
+                    }
+                >
+                    <CheckboxLabeled.Label>
+                        Select All
+                    </CheckboxLabeled.Label>
+                </CheckboxLabeled>
 			</DropMenu.FixedOption>,
 		].concat(
 			_.map(optionGroups, (optionGroupProps, optionGroupIndex) => (

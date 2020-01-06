@@ -162,7 +162,7 @@ describe('SearchableMultiSelect', () => {
 					.first()
 					.prop('onSelect')(0, mockSelectionCallback);
 
-				expect(onSelect).toHaveBeenCalledWith([0, 1]);
+				expect(onSelect).toHaveBeenCalledWith([0, 1], mockSelectionCallback);
 			});
 
 			it('should work when deselecting all', () => {
@@ -188,7 +188,7 @@ describe('SearchableMultiSelect', () => {
 					.first()
 					.prop('onSelect')(0, mockSelectionCallback);
 
-				expect(onSelect).toHaveBeenCalledWith([0, 1]);
+				expect(onSelect).toHaveBeenCalledWith([0, 1], mockSelectionCallback);
 			});
 
 			it('should work when selecting some', () => {
