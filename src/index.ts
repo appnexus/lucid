@@ -109,7 +109,6 @@ import DuplicateIcon from './components/Icon/DuplicateIcon/DuplicateIcon';
 import EditIcon from './components/Icon/EditIcon/EditIcon';
 import EligibilityIcon from './components/Icon/EligibilityIcon/EligibilityIcon';
 import EligibilityLightIcon from './components/Icon/EligibilityLightIcon/EligibilityLightIcon';
-// @ts-ignore: not converted yet
 import EmptyStateWrapper from './components/EmptyStateWrapper/EmptyStateWrapper';
 import EnvelopeIcon from './components/Icon/EnvelopeIcon/EnvelopeIcon';
 import EqualsIcon from './components/Icon/EqualsIcon/EqualsIcon';
@@ -132,7 +131,6 @@ import IconSelect from './components/IconSelect/IconSelect';
 import ImageIcon from './components/Icon/ImageIcon/ImageIcon';
 import InfoIcon from './components/Icon/InfoIcon/InfoIcon';
 import InfoLightIcon from './components/Icon/InfoLightIcon/InfoLightIcon';
-// @ts-ignore: not converted yet
 import Legend from './components/Legend/Legend';
 import Line from './components/Line/Line';
 // @ts-ignore: not converted yet

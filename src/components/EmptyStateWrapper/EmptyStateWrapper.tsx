@@ -5,7 +5,10 @@ import { getFirst, omitProps, StandardProps } from '../../util/component-types';
 import { lucidClassNames } from '../../util/style-helpers';
 
 import LoadingIndicator from '../LoadingIndicator/LoadingIndicator';
-import OverlayWrapper from '../OverlayWrapper/OverlayWrapper';
+import OverlayWrapper, {
+	OverlayWrapperMessage,
+	//	IOverlayWrapperProps,
+} from '../OverlayWrapper/OverlayWrapper';
 
 const cx = lucidClassNames.bind('&-EmptyStateWrapper');
 
@@ -21,6 +24,7 @@ interface IEmptyStateWrapperTitleProps extends StandardProps {}
 const EmptyStateWrapperTitle = (_props: IEmptyStateWrapperTitleProps): null =>
 	null;
 
+//interface IEmptyStateWrapperProps extends IOverlayWrapperProps {
 interface IEmptyStateWrapperProps extends StandardProps {
 	/** *Child Element* The element to display in the body of the overlay. */
 	Body?: React.ReactNode;
@@ -34,11 +38,6 @@ interface IEmptyStateWrapperProps extends StandardProps {
 	/** Controls the visibility of the \`LoadingMessage\`. */
 	isLoading: boolean;
 }
-
-// type IEmptyStateWrapperProps = Overwrite<
-// 	React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>,
-// 	IEmptyStateWrapperPropsRaw
-// >;
 
 //const EmptyStateWrapper = createClass({
 export const EmptyStateWrapper = (
@@ -81,9 +80,10 @@ export const EmptyStateWrapper = (
 				passThroughs,
 				undefined,
 				_.keys(EmptyStateWrapper.propTypes)
+				//['children', 'className', 'isLoading', 'Message']
 			)}
 		>
-			<OverlayWrapper.Message className={cx('&-message-container')}>
+			<OverlayWrapperMessage className={cx('&-message-container')}>
 				<div className={cx('&-message-header')} />
 				<div className={cx('&-message-contents')}>
 					<header
@@ -92,7 +92,7 @@ export const EmptyStateWrapper = (
 					/>
 					{emptyMessageBodyProp && <div {...emptyMessageBodyProp} />}
 				</div>
-			</OverlayWrapper.Message>
+			</OverlayWrapperMessage>
 
 			{children}
 		</OverlayWrapper>
@@ -141,6 +141,7 @@ EmptyStateWrapper.propTypes = {
 };
 
 EmptyStateWrapperBody.displayName = 'EmptyStateWrapper.Body';
+EmptyStateWrapper.Body = EmptyStateWrapperBody;
 EmptyStateWrapperBody.peek = {
 	description: `
 		Body content for the message to display when there is no data.
@@ -149,6 +150,7 @@ EmptyStateWrapperBody.peek = {
 EmptyStateWrapperBody.propName = 'Body';
 
 EmptyStateWrapperTitle.displayName = 'EmptyStateWrapper.Title';
+EmptyStateWrapper.Title = EmptyStateWrapperTitle;
 EmptyStateWrapperTitle.peek = {
 	description: `
 		Title text for the message to display when there is no data.
