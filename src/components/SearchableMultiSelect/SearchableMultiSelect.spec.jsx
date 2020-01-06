@@ -74,6 +74,9 @@ describe('SearchableMultiSelect', () => {
 					props: {
 						callbackId: 'zero',
 						children: 'Zero',
+						isDisabled: false,
+						isHidden: false,
+						isWrapped: true
 					},
 				};
 
@@ -119,6 +122,9 @@ describe('SearchableMultiSelect', () => {
 					event: {},
 					props: {
 						callbackId: 'custom',
+						isDisabled: false,
+						isHidden: false,
+						isWrapped: true
 					},
 				};
 

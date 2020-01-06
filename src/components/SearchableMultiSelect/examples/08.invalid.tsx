@@ -10,7 +10,7 @@ export default createClass({
             selectedLength: 0
         }
     },
-    handleChange(option, event) {
+    handleChange(option: string, event: any) {
         let count = this.state.selectedLength;
         if (typeof event.props.children === 'string') {
             count--;
@@ -21,7 +21,7 @@ export default createClass({
             selectedLength: count
         })
     },
-    handleRemoveAll(option, event) {
+    handleRemoveAll(option: string, event: any) {
         this.setState({
             selectedLength: 0
         })

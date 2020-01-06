@@ -68,7 +68,7 @@ type SelectionKind =
 
 type SelectionResponsiveMode = 'small' | 'medium' | 'large';
 
-interface ISelectionProps
+export interface ISelectionProps
 	extends StandardProps,
 		React.DetailedHTMLProps<
 			React.HTMLAttributes<HTMLDivElement>,

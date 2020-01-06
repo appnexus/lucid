@@ -6,7 +6,6 @@ const { Option } = SearchableMultiSelect;
 
 export default createClass({
 	render() {
-		console.log(SearchableMultiSelect);
 		return (
 			<Resizer>
 				{width => {

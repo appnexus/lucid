@@ -11,7 +11,7 @@ export default createClass({
 		};
 	},
 
-	handleChange(event) {
+	handleChange(event: any) {
 		this.setState({
 			isRequired: event.length > 0
 		})

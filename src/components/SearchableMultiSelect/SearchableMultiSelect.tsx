@@ -22,7 +22,7 @@ import {
 } from '../DropMenu/DropMenu';
 import LoadingIcon from '../Icon/LoadingIcon/LoadingIcon';
 import CheckboxLabeled from '../CheckboxLabeled/CheckboxLabeled';
-import Selection, { ISelectionLabelProps } from '../Selection/Selection';
+import Selection, { ISelectionProps, ISelectionLabelProps } from '../Selection/Selection';
 import { Validation } from '../Validation/Validation';
 
 
@@ -43,9 +43,10 @@ const {
 
 const cx = lucidClassNames.bind('&-SearchableMultiSelect');
 
-const SelectionOption = (_props: { children?: React.ReactNode }): null => null;
+const SelectionOption = (_props: ISelectionProps): null => null;
 SelectionOption.displayName = 'SearchableMultiSelect.Option.Selection';
 SelectionOption.propTypes = Selection.propTypes;
+SelectionOption.defaultProps = Selection.defaultProps
 
 const Selected = (_props: { children?: React.ReactNode }): null => null;
 
@@ -59,7 +60,10 @@ Selected.peek = {
 Selected.propName = 'Selected';
 Selected.propTypes = {};
 
-const OptionGroup = (_props: IDropMenuOptionGroupProps): null => null;
+interface ISearchableSingleSelectOptionGroupProps extends IDropMenuOptionGroupProps {
+    Selected?: React.ReactNode
+}
+const OptionGroup = (_props: ISearchableSingleSelectOptionGroupProps): null => null;
 OptionGroup.displayName = 'SearchableMultiSelect.OptionGroup';
 OptionGroup.peek = {
 	description: `
@@ -89,7 +93,8 @@ SearchFieldComponent.defaultProps = SearchField.defaultProps;
 export interface ISearchableMultiSelectOptionProps extends IDropMenuOptionProps {
 	description?: string;
 	name?: string;
-	Selected?: React.ReactNode;
+    Selected?: React.ReactNode;
+    Selection?: React.ReactNode;
 }
 
 const Option = (_props: ISearchableMultiSelectOptionProps): null => null;
@@ -115,8 +120,8 @@ Option.propTypes = {
 Option.defaultProps = DropMenu.Option.defaultProps;
 
 export type Size = 'large' | 'medium' | 'small';
-export interface ISearchableMultiSelectProps extends StandardProps {
 
+export interface ISearchableMultiSelectProps extends StandardProps {
     isDisabled: boolean;
     isLoading: boolean;
     maxMenuHeight?: string | null;
@@ -124,9 +129,10 @@ export interface ISearchableMultiSelectProps extends StandardProps {
     hasSelectAll: boolean;
     hasSelections: boolean;
     searchText: string;
+    initialState?: any;
     responsiveMode: Size;
     selectedIndices: number[];
-    SearchField?: ISearchFieldProps;
+    SearchField?: React.ReactNode;
 	DropMenu: IDropMenuProps;
 	Option?: React.ReactNode;
     OptionGroup?: IDropMenuOptionGroupProps;
@@ -181,18 +187,18 @@ export interface ISearchableMultiSelectState extends IDropMenuState {
 
 const defaultProps = {
 	isDisabled: false,
-	isLoading: false,
-	onRemoveAll: _.noop,
-	optionFilter: propsSearch,
-	searchText: '',
-	selectedIndices: [],
-	DropMenu: DropMenu.defaultProps,
-	responsiveMode: 'large' as const,
-	hasRemoveAll: true,
+    isLoading: false,
+    hasRemoveAll: true,
 	hasSelections: true,
-	hasSelectAll: false,
+    hasSelectAll: false,
+    searchText: '',
+    responsiveMode: "large" as Size,
+    selectedIndices: [],
+    DropMenu: DropMenu.defaultProps,
     Error: null,
+    optionFilter: propsSearch,
     onSearch: _.noop,
+    onRemoveAll: _.noop,
     onSelect: _.noop
 };
 
@@ -215,7 +221,6 @@ class SearchableMultiSelect extends React.Component<ISearchableMultiSelectProps,
 
     static defaultProps = defaultProps;
     static reducers = reducers;
-
     static Option = Option;
 	static OptionGroup = OptionGroup;
 	static SearchField = SearchFieldComponent;
@@ -224,7 +229,7 @@ class SearchableMultiSelect extends React.Component<ISearchableMultiSelectProps,
     static DropMenu = DropMenu;
     static SelectionLabel = Selection.Label;
 
-    static propTypes: any =  {
+    static propTypes =  {
 		children: node`
 			Should be instances of {\`SearchableMultiSelect.Option\`}. Other direct
 			child elements will not render.
@@ -321,7 +326,33 @@ class SearchableMultiSelect extends React.Component<ISearchableMultiSelectProps,
 			displayed.  If this is the literal \`true\`, it will add the
 			\`-is-error\` class to the wrapper div, but not render the
 			\`-error-content\` \`div\`.
-		`
+        `,
+
+        FixedOption: any`
+			*Child Element* - A special kind of \`Option\` that is always rendered at the top of
+			the menu.
+		`,
+
+		NullOption: any`
+			*Child Element* - A special kind of \`Option\` that is always rendered at
+			the top of the menu and has an \`optionIndex\` of \`null\`. Useful for
+			unselect.
+		`,
+
+		OptionGroup: any`
+			*Child Element* - Used to group \`Option\`s within the menu. Any
+			non-\`Option\`s passed in will be rendered as a label for the group.
+        `,
+        
+        SearchField: any`
+            *Child Element* - The visual Search element that the user can pass text
+            to.
+        `,
+
+        Label: any`
+            *Child Element* - A custom label used as header text when options are
+            selected.
+        `
     };
 
     getInitialState(): any {
@@ -336,7 +367,7 @@ class SearchableMultiSelect extends React.Component<ISearchableMultiSelectProps,
 	handleDropMenuSelect = (optionIndex: number | null, { event, props }: {
         props: IDropMenuOptionProps;
 		event: React.KeyboardEvent | React.MouseEvent;
-    }) => {
+    }): void => {
 		const { onSelect } = this.props;
 
 		event.preventDefault();
@@ -350,7 +381,7 @@ class SearchableMultiSelect extends React.Component<ISearchableMultiSelectProps,
         }
 	};
 
-	handleSelectAll = (event: React.KeyboardEvent | React.MouseEvent) =>  {
+	handleSelectAll = (event: React.KeyboardEvent | React.MouseEvent): void =>  {
 		// This is needed otherwise clicking the checkbox will double fire this
 		// event _and_ the `handleDropMenuSelect` handler
 		const {
@@ -382,7 +413,7 @@ class SearchableMultiSelect extends React.Component<ISearchableMultiSelectProps,
         });
 	};
 
-	handleSelectionRemove = ({ event, props, props: { callbackId: optionIndex } }: {event: React.KeyboardEvent | React.MouseEvent, props: any}) => {
+	handleSelectionRemove = ({ event, props, props: { callbackId: optionIndex } }: {event: React.KeyboardEvent | React.MouseEvent, props: any}): void => {
 		// We don't want to send the consumer the selection's props so we have to
 		// lookup the option they clicked and send its props along
 		const selectedOptionProps = _.get(
@@ -396,11 +427,11 @@ class SearchableMultiSelect extends React.Component<ISearchableMultiSelectProps,
 		});
 	};
 
-	handleRemoveAll = ({ event }: {event: React.KeyboardEvent | React.MouseEvent;}) => {
+	handleRemoveAll = ({ event }: {event: React.KeyboardEvent | React.MouseEvent;}): void => {
 		this.props.onRemoveAll({ event, props: this.props });
 	};
 
-	handleSearch = (searchText: string, { event } : {event: React.KeyboardEvent | React.MouseEvent }) => {
+	handleSearch = (searchText: string, { event } : {event: React.KeyboardEvent | React.MouseEvent }): void => {
 		const {
 			props,
 			props: {
@@ -433,7 +464,7 @@ class SearchableMultiSelect extends React.Component<ISearchableMultiSelectProps,
 		});
 	};
 
-	componentWillMount() {
+	componentWillMount(): void {
 		// preprocess the options data before rendering
 		this.setState(
 			DropMenu.preprocessOptionData(
@@ -443,7 +474,7 @@ class SearchableMultiSelect extends React.Component<ISearchableMultiSelectProps,
 		);
 	};
 
-	componentWillReceiveProps(nextProps: ISearchableMultiSelectProps) {
+	componentWillReceiveProps(nextProps: ISearchableMultiSelectProps): void {
 		// only preprocess options data when it changes (via new props) - better performance than doing this each render
 		this.setState(
 			DropMenu.preprocessOptionData(
@@ -453,7 +484,7 @@ class SearchableMultiSelect extends React.Component<ISearchableMultiSelectProps,
 		);
 	};
 
-	renderUnderlinedChildren = (childText: string, searchText: string) => {
+	renderUnderlinedChildren = (childText: string, searchText: string): any => {
 		const [pre, match, post] = partitionText(
 			childText,
 			new RegExp(_.escapeRegExp(searchText), 'i'),
@@ -479,7 +510,7 @@ class SearchableMultiSelect extends React.Component<ISearchableMultiSelectProps,
 		];
 	};
 
-	renderOption = ({ optionProps, optionIndex }: { optionProps: ISearchableMultiSelectOptionProps, optionIndex: number}) => {
+	renderOption = ({ optionProps, optionIndex }: { optionProps: ISearchableMultiSelectOptionProps, optionIndex: number}): any => {
 		const { searchText, selectedIndices, isLoading, optionFilter } = this.props;
 		return (
 			<DropMenu.Option
@@ -505,7 +536,7 @@ class SearchableMultiSelect extends React.Component<ISearchableMultiSelectProps,
 		);
 	};
 
-	renderOptions = () => {
+	renderOptions = (): any => {
 		const { searchText, isLoading, hasSelectAll, selectedIndices } = this.props;
 
 		const {
