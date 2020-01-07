@@ -27,7 +27,6 @@ import { Validation } from '../Validation/Validation';
 
 
 import * as reducers from './SearchableMultiSelect.reducers';
-import { S_IFSOCK } from 'constants';
 
 const {
 	any,
@@ -44,16 +43,16 @@ const {
 
 const cx = lucidClassNames.bind('&-SearchableMultiSelect');
 
-const SelectionOption = (_props: ISelectionProps): null => null;
-SelectionOption.displayName = 'SearchableMultiSelect.Option.Selection';
-SelectionOption.propTypes = Selection.propTypes;
-SelectionOption.defaultProps = Selection.defaultProps;
-SelectionOption.peek = {
-	description: `
-		Customizes the rendering of the Option when it is selected
-		and is displayed instead of the Placeholder.
-	`,
-};
+// const SelectionOption = (_props: ISelectionProps): null => null;
+// SelectionOption.displayName = 'SearchableMultiSelect.Option.Selection';
+// SelectionOption.propTypes = Selection.propTypes;
+// SelectionOption.defaultProps = Selection.defaultProps;
+// SelectionOption.peek = {
+// 	description: `
+// 		Customizes the rendering of the Option when it is selected
+// 		and is displayed instead of the Placeholder.
+// 	`,
+// };
 
 const Selected = (_props: { children?: React.ReactNode }): null => null;
 
@@ -113,7 +112,8 @@ Option.peek = {
 		A selectable option in the list.
 	`,
 };
-Option.Selection = SelectionOption;
+Option.Selection = Selection;
+Option.Selection.displayName = 'SearchableMultiSelect.Option.Selection';
 Option.Selected = Selected;
 Option.propName = 'Option';
 Option.propTypes = {
@@ -145,7 +145,7 @@ export interface ISearchableMultiSelectProps extends StandardProps {
     selectedIndices: number[];
     SearchField?: React.ReactNode;
 	DropMenu: IDropMenuProps;
-    Option?: React.ReactNode;
+    Option?: ISearchableMultiSelectOptionProps;
     OptionGroup?: IDropMenuOptionGroupProps;
     SelectionLabel?: ISelectionLabelProps;
 	Error: React.ReactNode; 
@@ -814,9 +814,8 @@ class SearchableMultiSelect extends React.Component<ISearchableMultiSelectProps,
 									optionIndex: selectedIndex,
 								});
 								if (selectedUngroupedOptionData) {
-                                    const { optionProps } = selectedUngroupedOptionData;
-                                    console.log(optionProps);
-                                    console.log(getFirst(optionProps, SearchableMultiSelect.Option.Selection))
+									const { optionProps } = selectedUngroupedOptionData;
+									console.log(SearchableMultiSelect.Option.Selection);
 									const selectionProps = _.get(
 										getFirst(optionProps, SearchableMultiSelect.Option.Selection),
 										'props'
