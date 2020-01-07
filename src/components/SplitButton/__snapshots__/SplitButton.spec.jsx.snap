@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SplitButton [common] example testing should match snapshot(s) for 1-default 1`] = `
+exports[`SplitButton [common] example testing should match snapshot(s) for 1-basic 1`] = `
 <DropMenu
   ContextMenu={
     Object {
@@ -98,7 +98,7 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 1-def
 </DropMenu>
 `;
 
-exports[`SplitButton [common] example testing should match snapshot(s) for 1-default 2`] = `
+exports[`SplitButton [common] example testing should match snapshot(s) for 1-basic 2`] = `
 <DropMenu
   ContextMenu={
     Object {
