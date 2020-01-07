@@ -27,6 +27,7 @@ import { Validation } from '../Validation/Validation';
 
 
 import * as reducers from './SearchableMultiSelect.reducers';
+import { S_IFSOCK } from 'constants';
 
 const {
 	any,
@@ -46,7 +47,13 @@ const cx = lucidClassNames.bind('&-SearchableMultiSelect');
 const SelectionOption = (_props: ISelectionProps): null => null;
 SelectionOption.displayName = 'SearchableMultiSelect.Option.Selection';
 SelectionOption.propTypes = Selection.propTypes;
-SelectionOption.defaultProps = Selection.defaultProps
+SelectionOption.defaultProps = Selection.defaultProps;
+SelectionOption.peek = {
+	description: `
+		Customizes the rendering of the Option when it is selected
+		and is displayed instead of the Placeholder.
+	`,
+};
 
 const Selected = (_props: { children?: React.ReactNode }): null => null;
 
@@ -89,12 +96,13 @@ SearchFieldComponent.propName = 'SearchField';
 SearchFieldComponent.propTypes = SearchField.propTypes;
 SearchFieldComponent.defaultProps = SearchField.defaultProps;
 
+type ISearchableMultiSelectOptionSelectionProps = Partial<ISelectionProps>;
 /** Option Child Component */
 export interface ISearchableMultiSelectOptionProps extends IDropMenuOptionProps {
+    Selection?: ISearchableMultiSelectOptionSelectionProps;
 	description?: string;
 	name?: string;
     Selected?: React.ReactNode;
-    Selection?: React.ReactNode;
 }
 
 const Option = (_props: ISearchableMultiSelectOptionProps): null => null;
@@ -105,14 +113,17 @@ Option.peek = {
 		A selectable option in the list.
 	`,
 };
+Option.Selection = SelectionOption;
 Option.Selected = Selected;
-Option.Selection  = SelectionOption;
 Option.propName = 'Option';
 Option.propTypes = {
 	Selected: any`
 		Customizes the rendering of the Option when it is selected and is
 		displayed instead of the Placeholder.
-	`,
+    `,
+    Selection: any`
+        Uses a Selection object for custom rendering of the selected option
+    `,
 	value: string,
 	filterText: string,
 	...DropMenu.Option.propTypes,
@@ -134,7 +145,7 @@ export interface ISearchableMultiSelectProps extends StandardProps {
     selectedIndices: number[];
     SearchField?: React.ReactNode;
 	DropMenu: IDropMenuProps;
-	Option?: React.ReactNode;
+    Option?: React.ReactNode;
     OptionGroup?: IDropMenuOptionGroupProps;
     SelectionLabel?: ISelectionLabelProps;
 	Error: React.ReactNode; 
@@ -222,7 +233,7 @@ class SearchableMultiSelect extends React.Component<ISearchableMultiSelectProps,
     static defaultProps = defaultProps;
     static reducers = reducers;
     static Option = Option;
-	static OptionGroup = OptionGroup;
+    static OptionGroup = OptionGroup;
 	static SearchField = SearchFieldComponent;
 	static NullOption = DropMenu.NullOption;
 	static FixedOption = DropMenu.FixedOption;
@@ -635,7 +646,6 @@ class SearchableMultiSelect extends React.Component<ISearchableMultiSelectProps,
 			optionGroups,
 			ungroupedOptionData,
         } = this.state;
-        
 		const searchFieldProps = _.get(
 			getFirst(props, SearchableMultiSelect.SearchField),
 			'props',
@@ -730,7 +740,7 @@ class SearchableMultiSelect extends React.Component<ISearchableMultiSelectProps,
 									const selectedGroupedOptions = _.filter(
 										groupedOptionsData,
 										({ optionIndex }) => _.includes(selectedIndices, optionIndex)
-									);
+                                    );
 									if (!_.isEmpty(selectedGroupedOptions)) {
 										const selectedOptionGroupChildren = _.get(
 											getFirst(
@@ -767,7 +777,8 @@ class SearchableMultiSelect extends React.Component<ISearchableMultiSelectProps,
 																SearchableMultiSelect.Option.Selection
 															),
 															'props'
-														);
+                                                        );
+                                                        console.log(selectionProps);
 														return (
 															<Selection
 																key={optionIndex}
@@ -802,13 +813,16 @@ class SearchableMultiSelect extends React.Component<ISearchableMultiSelectProps,
 								const selectedUngroupedOptionData = _.find(ungroupedOptionData, {
 									optionIndex: selectedIndex,
 								});
-
 								if (selectedUngroupedOptionData) {
-									const { optionProps } = selectedUngroupedOptionData;
+                                    const { optionProps } = selectedUngroupedOptionData;
+                                    console.log(optionProps);
+                                    console.log(getFirst(optionProps, SearchableMultiSelect.Option.Selection))
 									const selectionProps = _.get(
 										getFirst(optionProps, SearchableMultiSelect.Option.Selection),
 										'props'
-									);
+                                    );
+                                    // console.log(selectionProps);
+                                    // console.log(SearchableMultiSelect.Option.Selection);
 									return (
 										<Selection
 											key={selectedIndex}
