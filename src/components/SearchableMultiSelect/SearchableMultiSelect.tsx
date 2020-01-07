@@ -43,16 +43,16 @@ const {
 
 const cx = lucidClassNames.bind('&-SearchableMultiSelect');
 
-// const SelectionOption = (_props: ISelectionProps): null => null;
-// SelectionOption.displayName = 'SearchableMultiSelect.Option.Selection';
-// SelectionOption.propTypes = Selection.propTypes;
-// SelectionOption.defaultProps = Selection.defaultProps;
-// SelectionOption.peek = {
-// 	description: `
-// 		Customizes the rendering of the Option when it is selected
-// 		and is displayed instead of the Placeholder.
-// 	`,
-// };
+const SelectionOption = (_props: ISelectionProps): null => null;
+SelectionOption.displayName = 'SearchableMultiSelect.Option.Selection';
+SelectionOption.propTypes = Selection.propTypes;
+SelectionOption.propName = 'Selection';
+SelectionOption.peek = {
+	description: `
+		Customizes the rendering of the Option when it is selected
+		and is displayed instead of the Placeholder.
+	`,
+};
 
 const Selected = (_props: { children?: React.ReactNode }): null => null;
 
@@ -112,8 +112,7 @@ Option.peek = {
 		A selectable option in the list.
 	`,
 };
-Option.Selection = Selection;
-Option.Selection.displayName = 'SearchableMultiSelect.Option.Selection';
+Option.Selection = SelectionOption;
 Option.Selected = Selected;
 Option.propName = 'Option';
 Option.propTypes = {
@@ -778,7 +777,6 @@ class SearchableMultiSelect extends React.Component<ISearchableMultiSelectProps,
 															),
 															'props'
                                                         );
-                                                        console.log(selectionProps);
 														return (
 															<Selection
 																key={optionIndex}
@@ -815,13 +813,10 @@ class SearchableMultiSelect extends React.Component<ISearchableMultiSelectProps,
 								});
 								if (selectedUngroupedOptionData) {
 									const { optionProps } = selectedUngroupedOptionData;
-									console.log(SearchableMultiSelect.Option.Selection);
 									const selectionProps = _.get(
 										getFirst(optionProps, SearchableMultiSelect.Option.Selection),
 										'props'
                                     );
-                                    // console.log(selectionProps);
-                                    // console.log(SearchableMultiSelect.Option.Selection);
 									return (
 										<Selection
 											key={selectedIndex}
