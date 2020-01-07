@@ -214,7 +214,7 @@ describe('SearchableMultiSelect', () => {
 					.first()
 					.prop('onSelect')(0, mockSelectionCallback);
 
-				expect(onSelect).toHaveBeenCalledWith([1]);
+				expect(onSelect).toHaveBeenCalledWith([1], mockSelectionCallback);
 			});
 
 			it('should work when selecting filtered options', () => {
@@ -236,7 +236,7 @@ describe('SearchableMultiSelect', () => {
 					.first()
 					.prop('onSelect')(0, mockSelectionCallback);
 
-				expect(onSelect).toHaveBeenCalledWith([1]);
+				expect(onSelect).toHaveBeenCalledWith([1], mockSelectionCallback);
 			});
 		});
 

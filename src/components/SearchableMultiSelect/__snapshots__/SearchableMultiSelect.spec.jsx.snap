@@ -59,7 +59,11 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         isIndeterminate={false}
         isSelected={true}
         onSelect={[Function]}
-      />
+      >
+        <CheckboxLabeled.Label>
+          Select All
+        </CheckboxLabeled.Label>
+      </CheckboxLabeled>
     </DropMenu.FixedOption>
   </DropMenu>
 </div>
@@ -123,7 +127,11 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         isIndeterminate={false}
         isSelected={false}
         onSelect={[Function]}
-      />
+      >
+        <CheckboxLabeled.Label>
+          Select All
+        </CheckboxLabeled.Label>
+      </CheckboxLabeled>
     </DropMenu.FixedOption>
     <DropMenu.OptionGroup
       isHidden={false}
@@ -1753,7 +1761,11 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         isIndeterminate={false}
         isSelected={false}
         onSelect={[Function]}
-      />
+      >
+        <CheckboxLabeled.Label>
+          Select All
+        </CheckboxLabeled.Label>
+      </CheckboxLabeled>
     </DropMenu.FixedOption>
     <DropMenu.Option
       isDisabled={false}
@@ -2969,7 +2981,11 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         isIndeterminate={false}
         isSelected={false}
         onSelect={[Function]}
-      />
+      >
+        <CheckboxLabeled.Label>
+          Select All
+        </CheckboxLabeled.Label>
+      </CheckboxLabeled>
     </DropMenu.FixedOption>
     <DropMenu.OptionGroup
       isHidden={false}
@@ -3140,7 +3156,11 @@ exports[`SearchableMultiSelect custom formatting should render Option child func
         isIndeterminate={false}
         isSelected={false}
         onSelect={[Function]}
-      />
+      >
+        <CheckboxLabeled.Label>
+          Select All
+        </CheckboxLabeled.Label>
+      </CheckboxLabeled>
     </DropMenu.FixedOption>
     <DropMenu.Option
       isDisabled={false}
@@ -3270,7 +3290,11 @@ exports[`SearchableMultiSelect custom formatting should render Option.Selected i
         isIndeterminate={true}
         isSelected={false}
         onSelect={[Function]}
-      />
+      >
+        <CheckboxLabeled.Label>
+          Select All
+        </CheckboxLabeled.Label>
+      </CheckboxLabeled>
     </DropMenu.FixedOption>
     <DropMenu.Option
       isDisabled={false}
@@ -3496,7 +3520,11 @@ exports[`SearchableMultiSelect custom formatting should render OptionGroup.Selec
         isIndeterminate={true}
         isSelected={false}
         onSelect={[Function]}
-      />
+      >
+        <CheckboxLabeled.Label>
+          Select All
+        </CheckboxLabeled.Label>
+      </CheckboxLabeled>
     </DropMenu.FixedOption>
     <DropMenu.OptionGroup
       isHidden={false}

@@ -373,7 +373,7 @@ class SearchableMultiSelect extends React.Component<ISearchableMultiSelectProps,
 		event.preventDefault();
 
 		if (optionIndex === 0) {
-			return this.handleSelectAll(event);
+			return this.handleSelectAll({event, props});
 		}
 		// this index is decremented to account for the "Select All" Option
         if (optionIndex) {
@@ -381,7 +381,7 @@ class SearchableMultiSelect extends React.Component<ISearchableMultiSelectProps,
         }
 	};
 
-	handleSelectAll = (event: React.KeyboardEvent | React.MouseEvent): void =>  {
+	handleSelectAll = ({event, props}: {event: React.KeyboardEvent | React.MouseEvent, props: IDropMenuOptionProps}): void =>  {
 		// This is needed otherwise clicking the checkbox will double fire this
 		// event _and_ the `handleDropMenuSelect` handler
 		const {
@@ -406,7 +406,7 @@ class SearchableMultiSelect extends React.Component<ISearchableMultiSelectProps,
             : _.map(unselected, 'optionIndex');
             
 		return onSelect(indices, {
-            props: this.props,
+            props: props,
             event
         });
 	};
