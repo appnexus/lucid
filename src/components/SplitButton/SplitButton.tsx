@@ -70,7 +70,7 @@ export interface ISplitButtonProps extends StandardProps {
 	DropMenu: IDropMenuProps;
 }
 
-class SplitButton extends React.Component<ISplitButtonProps, {}> {
+class SplitButton extends React.Component<ISplitButtonProps> {
 	static displayName = 'SplitButton';
 	static Button = ButtonChild;
 
