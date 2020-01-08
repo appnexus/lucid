@@ -8,6 +8,7 @@ import {
 	rejectTypes,
 	findTypes,
 	omitProps,
+	FC,
 } from '../../util/component-types';
 import { scrollParentTo } from '../../util/dom-helpers';
 import { buildModernHybridComponent } from '../../util/state-management';
@@ -36,7 +37,7 @@ function joinArray(
 	);
 }
 
-function isOptionVisible(option: Option) {
+function isOptionVisible(option: IOptionsData) {
 	return !option.optionProps.isHidden;
 }
 
@@ -111,13 +112,13 @@ OptionGroup.defaultProps = {
 };
 
 export interface IDropMenuOptionProps extends StandardProps {
-	description?: string;
 	isDisabled?: boolean;
 	isHidden?: boolean;
 	isWrapped?: boolean;
 }
 
-const Option = (_props: IDropMenuOptionProps): null => null;
+const Option: FC<IDropMenuOptionProps> = (_props: IDropMenuOptionProps): null =>
+	null;
 Option.displayName = 'DropMenu.Option';
 Option.peek = {
 	description: `
@@ -165,7 +166,9 @@ export interface IDropMenuFixedOptionProps extends StandardProps {
 	isWrapped: boolean;
 }
 
-const FixedOption = (_props: IDropMenuFixedOptionProps): null => null;
+const FixedOption: FC<IDropMenuFixedOptionProps> = (
+	_props: IDropMenuFixedOptionProps
+): null => null;
 FixedOption.displayName = 'DropMenu.FixedOption';
 FixedOption.peek = {
 	description: `
@@ -263,7 +266,7 @@ export interface IDropMenuProps extends StandardProps {
 			props,
 			event,
 		}: {
-			props: IDropMenuOptionProps;
+			props: IDropMenuOptionProps | undefined;
 			event: React.KeyboardEvent | React.MouseEvent;
 		}
 	) => void;
@@ -338,18 +341,30 @@ export interface IOptionsData {
 	optionProps: IDropMenuOptionProps;
 }
 
+export interface IHasOptionChildren<
+	OptionGroupProps,
+	OptionProps,
+	NullOptionProps,
+	FixedOptionProps
+> {
+	OptionGroup: FC<OptionGroupProps>;
+	Option: FC<OptionProps>;
+	NullOption: FC<NullOptionProps>;
+	FixedOption: FC<FixedOptionProps>;
+}
+
 export interface IDropMenuState {
 	isMouseTriggered: boolean;
-	optionGroups: OptionGroup[];
+	optionGroups: IDropMenuOptionGroupProps[];
 	flattenedOptionsData: IOptionsData[];
 	ungroupedOptionData: IOptionsData[];
-	optionGroupDataLookup: { [key: number]: OptionGroup[] };
+	optionGroupDataLookup: { [key: number]: IOptionsData[] };
 	fixedOptionData: IOptionsData[];
 	portalId: string;
 	isExpanded: boolean;
 	focusedIndex: number | null;
 	selectedIndices: number[];
-	nullOptions: NullOption[];
+	nullOptions: IDropMenuNullOptionProps[];
 	optionGroupIndex: number | null;
 	optionProps: [];
 }
@@ -553,14 +568,19 @@ class DropMenu extends React.Component<IDropMenuProps, IDropMenuState> {
 		return DropMenu.preprocessOptionData(props, DropMenu);
 	};
 
-	static preprocessOptionData = (
+	static preprocessOptionData = <
+		OptionGroupProps extends IDropMenuOptionGroupProps,
+		OptionProps extends IDropMenuOptionProps,
+		NullOptionProps extends IDropMenuNullOptionProps,
+		FixedOptionProps extends IDropMenuFixedOptionProps
+	>(
 		props: StandardProps,
-		ParentType: {
-			OptionGroup: typeof OptionGroup;
-			Option: typeof Option;
-			NullOption: typeof NullOption;
-			FixedOption: typeof FixedOption;
-		}
+		ParentType: IHasOptionChildren<
+			OptionGroupProps,
+			OptionProps,
+			NullOptionProps,
+			FixedOptionProps
+		>
 	) => {
 		const { OptionGroup, Option, NullOption, FixedOption } = ParentType;
 
@@ -571,7 +591,7 @@ class DropMenu extends React.Component<IDropMenuProps, IDropMenuState> {
 			? _.map(findTypes(props, NullOption), 'props')
 			: []; // find all NullOption props
 
-		const fixedOptionData = _.map(
+		const fixedOptionData: IOptionsData[] = _.map(
 			fixedOptions,
 			(optionProps, localOptionIndex) => {
 				return {
@@ -584,9 +604,9 @@ class DropMenu extends React.Component<IDropMenuProps, IDropMenuState> {
 		);
 
 		// flatten grouped options into array of objects to associate { index, group index, and props } for each option
-		const groupedOptionData = _.reduce(
+		const groupedOptionData: IOptionsData[] = _.reduce(
 			optionGroups,
-			(memo: OptionGroup[], optionGroupProps, optionGroupIndex) => {
+			(memo: IOptionsData[], optionGroupProps, optionGroupIndex) => {
 				const groupedOptions = _.map(
 					findTypes(optionGroupProps, Option),
 					'props'
@@ -616,7 +636,7 @@ class DropMenu extends React.Component<IDropMenuProps, IDropMenuState> {
 		);
 
 		// store ungrouped options into array of objects to associate { index, and props } for each option
-		const ungroupedOptionData = _.map(
+		const ungroupedOptionData: IOptionsData[] = _.map(
 			ungroupedOptions,
 			(optionProps, localOptionIndex) => {
 				return {

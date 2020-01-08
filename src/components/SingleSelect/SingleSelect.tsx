@@ -15,7 +15,10 @@ import {
 	IDropMenuState,
 	IDropMenuOptionProps,
 	IDropMenuOptionGroupProps,
+	IHasOptionChildren,
 	DropMenuDumb as DropMenu,
+	IDropMenuNullOptionProps,
+	IDropMenuFixedOptionProps,
 } from '../DropMenu/DropMenu';
 import ChevronIcon from '../Icon/ChevronIcon/ChevronIcon';
 
@@ -137,7 +140,7 @@ interface ISingleSelectPropsRaw extends StandardProps {
 			props,
 			event,
 		}: {
-			props: ISingleSelectOptionProps;
+			props: ISingleSelectOptionProps | undefined;
 			event: React.MouseEvent | React.KeyboardEvent;
 		}
 	) => void;
@@ -292,12 +295,32 @@ class SingleSelect extends React.Component<
 
 	componentWillMount() {
 		// preprocess the options data before rendering
-		this.setState(DropMenu.preprocessOptionData(this.props, SingleSelect));
+		this.setState(
+			DropMenu.preprocessOptionData(
+				this.props,
+				SingleSelect as IHasOptionChildren<
+					IDropMenuOptionGroupProps,
+					ISingleSelectOptionProps,
+					IDropMenuNullOptionProps,
+					IDropMenuFixedOptionProps
+				>
+			)
+		);
 	}
 
 	componentWillReceiveProps(nextProps: ISingleSelectProps): void {
 		// only preprocess options data when it changes (via new props) - better performance than doing this each render
-		this.setState(DropMenu.preprocessOptionData(nextProps, SingleSelect));
+		this.setState(
+			DropMenu.preprocessOptionData(
+				nextProps,
+				SingleSelect as IHasOptionChildren<
+					IDropMenuOptionGroupProps,
+					ISingleSelectOptionProps,
+					IDropMenuNullOptionProps,
+					IDropMenuFixedOptionProps
+				>
+			)
+		);
 	}
 
 	render(): React.ReactNode {
