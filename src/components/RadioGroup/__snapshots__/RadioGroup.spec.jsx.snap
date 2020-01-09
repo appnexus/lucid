@@ -328,10 +328,18 @@ exports[`RadioGroup [common] example testing should match snapshot(s) for nested
     Label={
       Object {
         "children": <SingleSelect>
-          <SingleSelect.Option>
+          <SingleSelect.Option
+            isDisabled={false}
+            isHidden={false}
+            isWrapped={true}
+          >
             One
           </SingleSelect.Option>
-          <SingleSelect.Option>
+          <SingleSelect.Option
+            isDisabled={false}
+            isHidden={false}
+            isWrapped={true}
+          >
             Two
           </SingleSelect.Option>
         </SingleSelect>,
@@ -351,10 +359,18 @@ exports[`RadioGroup [common] example testing should match snapshot(s) for nested
   >
     <RadioGroup.Label>
       <SingleSelect>
-        <SingleSelect.Option>
+        <SingleSelect.Option
+          isDisabled={false}
+          isHidden={false}
+          isWrapped={true}
+        >
           One
         </SingleSelect.Option>
-        <SingleSelect.Option>
+        <SingleSelect.Option
+          isDisabled={false}
+          isHidden={false}
+          isWrapped={true}
+        >
           Two
         </SingleSelect.Option>
       </SingleSelect>

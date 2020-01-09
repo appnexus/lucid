@@ -157,19 +157,19 @@ NotchedTag.peek = {
 			Notched tag helps users visually identify a high-priority object and its location in the object hierarchy.
 		`,
 		intendedUse: `
-			Use \`NotchedTag\` in tables, page headers, and in the global search to help users way-find while monitoring their objects. 
+			Use \`NotchedTag\` in tables, page headers, and in the global search to help users way-find while monitoring their objects. View \`DetailsPageHeader\` in ANX-React to see an example of Notched tag in context.
 								
 			**Styling notes**
 			
 			- Use filled in Notched tags, \`type:"filled"\`, for the currently-viewed or highest-priority object. 
 			- Use empty Notched tags, \`type:"stroke"\`, for the other objects associated with the viewed/priority object.
 			- Use \`size:"small"\` in tables.
-			- In page headers, use \`size:"large" type:"filled"\` for the highest-priority object, and \`size:"small" type:"stroke"\` for secondary objects.
+			- In page headers, use \`size:"large"\` \`type:"filled"\` for the highest-priority object, and \`size:"small"\` \`type:"stroke"\` for secondary objects.
+		`,
+		technicalRecommendations: `
 			- \`tagStyle:style-one"\` is for Advertiser objects.
 			- \`tagStyle:style-two"\` is for Insertion Order objects.
 			- \`tagStyle:style-three"\` is for Line Item objects.
-		`,
-		technicalRecommendations: `
 		`,
 	},
 	categories: ['visual design'],

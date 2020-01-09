@@ -70,7 +70,7 @@ export default createClass({
 					</p>
 					<Paginator
 						hasPageSizeSelector
-						showTotalObjects={count => `--${count}--`}
+						showTotalObjects={(count: number) => `--${count}--`}
 						totalCount={20}
 						objectLabel='object'
 						objectLabelPlural='objects'
