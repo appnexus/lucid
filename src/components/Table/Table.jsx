@@ -41,24 +41,24 @@ const Thead = createClass({
 
 Table.Thead.displayName = 'Table.Thead';
 
-statics: {
-	peek: {
-		description: `
-			\`Thead\` renders <thead>.
-		`,
-	},
-},
+// statics: {
+// 	peek: {
+// 		description: `
+// 			\`Thead\` renders <thead>.
+// 		`,
+// 	},
+// },
 
-propTypes: {
-	className: any`
-		Appended to the component-specific class names set on the root element.
-		Value is run through the \`classnames\` library.
-	`,
+// propTypes: {
+// 	className: any`
+// 		Appended to the component-specific class names set on the root element.
+// 		Value is run through the \`classnames\` library.
+// 	`,
 
-	children: node`
-		any valid React children
-	`,
-},
+// 	children: node`
+// 		any valid React children
+// 	`,
+// },
 
 const Tbody = createClass({
 	displayName: 'Table.Tbody',
