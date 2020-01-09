@@ -11,7 +11,7 @@ export default createClass({
 		};
 	},
 
-	handleSelect(optionIndex) {
+	handleSelect(optionIndex: number | null) {
 		this.setState({
 			selectedIndex: optionIndex,
 		});
@@ -20,7 +20,7 @@ export default createClass({
 	render() {
 		return (
 			<section>
-				<SingleSelect isInvisible isDisabled onSelect={this.handleSelect}>
+				<SingleSelect isInvisible onSelect={this.handleSelect}>
 					<Placeholder>Select Color</Placeholder>
 					<Option>Red</Option>
 					<Option>Green</Option>

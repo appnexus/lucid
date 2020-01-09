@@ -4,14 +4,14 @@ export interface ITextFieldState {
 	isMounted: boolean;
 }
 
-export default {
-	onChange(
-		state: ITextFieldState,
-		value: number | string
-	): ITextFieldState  {
-		return {
-			...state,
-			value: value,
-		};
-	},
-};
+export function onChange(
+	state: ITextFieldState,
+	value: number | string
+): ITextFieldState {
+	return {
+		...state,
+		value: value,
+	};
+}
+
+export default { onChange };

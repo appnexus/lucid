@@ -1,6 +1,6 @@
 import assert from 'assert';
 import * as SingleSelect from '../SingleSelect/SingleSelect.reducers';
-import { onPageSelect, onPageSizeSelect } from './Paginator.reducers.js';
+import { onPageSelect, onPageSizeSelect } from './Paginator.reducers';
 
 jest.mock('../SingleSelect/SingleSelect.reducers');
 

@@ -7,13 +7,16 @@ import hoistNonReactStatics from 'hoist-non-react-statics';
 
 // TODO: could we somehow type the `...args` with a generic?
 export type Reducer<S extends object> = (arg0: S, ...args: any[]) => S;
+
 export type Reducers<P, S extends object> = {
-	[K in keyof P]?: Reducer<S> | Reducers<P[K], S> | Reducers<P[K], any>
+	//TODO: used any here to cover cases where a component's reducers file also
+	//exports child component reducers, e.g. SingleSelect/DropMenu
+	[K in keyof P]?: Reducer<S> | Reducers<P[K], S> | Reducers<P[K], any>;
 };
 
 export type Selector<S> = (arg0: S) => any;
 export type Selectors<P, S extends object> = {
-	[K in keyof P]?: (arg0: S) => any
+	[K in keyof P]?: (arg0: S) => any;
 };
 
 interface IStateOptions<S extends object> {
@@ -36,6 +39,9 @@ interface IBaseComponentType<P> {
 	displayName: string;
 }
 
+/*
+	Returns an array of paths for each reducer function
+*/
 export function getDeepPaths(
 	obj: { [k: string]: any },
 	path: string[] = []
@@ -44,8 +50,10 @@ export function getDeepPaths(
 		obj,
 		(terminalKeys: string[][], value, key) =>
 			isPlainObjectOrEsModule(value)
-				? terminalKeys.concat(getDeepPaths(value, path.concat(key)))
-				: terminalKeys.concat([path.concat(key)]),
+				? //getDeepPaths if value is a module or object (another Reducers)
+				  terminalKeys.concat(getDeepPaths(value, path.concat(key)))
+				: //add key to terminalKeys (probably a Reducer (function))
+				  terminalKeys.concat([path.concat(key)]),
 		[]
 	);
 }
@@ -54,6 +62,9 @@ export function isPlainObjectOrEsModule(obj: any): boolean {
 	return _.isPlainObject(obj) || _.get(obj, '__esModule', false);
 }
 
+/**
+	Recursively removes function type properties from obj
+ */
 export function omitFunctionPropsDeep<P>(obj: object | P) {
 	return _.reduce<{ [k: string]: any }, { [k: string]: any }>(
 		obj,
@@ -96,6 +107,7 @@ export function bindReducersToState<P, S extends object>(
 	reducers: Reducers<P, S>,
 	{ getState, setState }: IStateOptions<S>
 ) {
+	console.log('getDeepPaths', getDeepPaths(reducers));
 	return _.reduce(
 		getDeepPaths(reducers),
 		(memo, path) => {
@@ -109,11 +121,16 @@ export function bindReducersToState<P, S extends object>(
 	);
 }
 
+/*
+
+*/
 export function getStatefulPropsContext<P, S extends object>(
 	reducers: Reducers<P, S>,
 	{ getState, setState }: IStateOptions<S>
 ): IBoundContext<P, S> {
 	const boundReducers = bindReducersToState(reducers, { getState, setState });
+
+	console.log('boundReducers', boundReducers);
 
 	const combineFunctionsCustomizer = (objValue: any, srcValue: any) => {
 		if (_.isFunction(srcValue) && _.isFunction(objValue)) {
@@ -192,19 +209,17 @@ export const reduceSelectors: any = _.memoize((selectors: object) => {
 	 * that individual branches maintain reference equality if they haven't been
 	 * modified, even if a sibling (and therefore the parent) has been modified.
 	 */
-	return createSelector(
-		_.identity,
-		(state: { [k: string]: any }) =>
-			_.reduce(
-				selectors,
-				(acc: object, selector: any, key: string) => ({
-					...acc,
-					[key]: _.isFunction(selector)
-						? selector(state)
-						: reduceSelectors(selector)(state[key]),
-				}),
-				state
-			)
+	return createSelector(_.identity, (state: { [k: string]: any }) =>
+		_.reduce(
+			selectors,
+			(acc: object, selector: any, key: string) => ({
+				...acc,
+				[key]: _.isFunction(selector)
+					? selector(state)
+					: reduceSelectors(selector)(state[key]),
+			}),
+			state
+		)
 	);
 });
 

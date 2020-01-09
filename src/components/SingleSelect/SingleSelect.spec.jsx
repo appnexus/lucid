@@ -10,7 +10,9 @@ import { DropMenuDumb as DropMenu } from '../DropMenu/DropMenu';
 const { Placeholder, Option, OptionGroup } = SingleSelect;
 
 describe('SingleSelect', () => {
-	common(SingleSelect);
+	common(SingleSelect, {
+		exemptChildComponents: ['Selected', 'FixedOption', 'NullOption'],
+	});
 
 	describe('render', () => {
 		it('should render a DropMenu', () => {
