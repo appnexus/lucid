@@ -11,7 +11,7 @@ export default createClass({
 		};
 	},
 
-	handleSelect(optionIndex) {
+	handleSelect(optionIndex: number | null) {
 		this.setState({
 			selectedIndex: optionIndex,
 		});
@@ -20,14 +20,14 @@ export default createClass({
 	render() {
 		return (
 			<section>
-				<SingleSelect onSelect={this.handleSelect}>
+				<SingleSelect isInvisible isDisabled onSelect={this.handleSelect}>
 					<Placeholder>Select Color</Placeholder>
 					<Option>Red</Option>
 					<Option>Green</Option>
 					<Option>Blue</Option>
 				</SingleSelect>
 
-				<section>
+				<section style={{ marginTop: '10px' }}>
 					Selected Index: {JSON.stringify(this.state.selectedIndex)}
 				</section>
 			</section>

@@ -2,10 +2,24 @@ import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import _ from 'lodash';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, findTypes, getFirst } from '../../util/component-types';
-import { buildHybridComponent } from '../../util/state-management';
+import {
+	findTypes,
+	getFirst,
+	Overwrite,
+	StandardProps,
+} from '../../util/component-types';
+import { buildModernHybridComponent } from '../../util/state-management';
 import * as reducers from './SingleSelect.reducers';
-import { DropMenuDumb as DropMenu } from '../DropMenu/DropMenu';
+import {
+	IDropMenuProps,
+	IDropMenuState,
+	IDropMenuOptionProps,
+	IDropMenuOptionGroupProps,
+	IHasOptionChildren,
+	DropMenuDumb as DropMenu,
+	IDropMenuNullOptionProps,
+	IDropMenuFixedOptionProps,
+} from '../DropMenu/DropMenu';
 import ChevronIcon from '../Icon/ChevronIcon/ChevronIcon';
 
 const cx = lucidClassNames.bind('&-SingleSelect');
@@ -22,96 +36,179 @@ const {
 	oneOfType,
 } = PropTypes;
 
-const SingleSelect = createClass({
-	displayName: 'SingleSelect',
+/** Placeholder Child Component */
+interface ISingleSelectPlaceholderProps extends StandardProps {
+	description?: string;
+}
 
-	statics: {
-		peek: {
-			description: `
-			A dropdown list. 
-			`,
-			notes: {
-				overview: `
-					A dropdown list. A dropdown menu appears when you click on the trigger and allows you to choose one option and execute relevant actions.
-				`,
-				intendedUse: `
-					Allow users to select a single item from a list of 3-10 options.
-										
-					**Styling notes**
-					
-					- Use \`basic\` in forms. The blue outline helps users clearly see that a selection has been made.
-					- Use \`no selection highlighting\` if the default selection is All or a null state. The grey outline indicates that this selection does not need users' attention.
-					- Use \`invisible\` for filters within a full page table header. The lack of outline allows the dropdown to have a lighter visual weight within a data-intense layout.
-				`,
-				technicalRecommendations: `
-				`,
-			},
-			categories: ['controls', 'selectors'],
-			madeFrom: ['DropMenu'],
-		},
-	},
+const Placeholder = (_props: ISingleSelectPlaceholderProps): null => null;
 
-	reducers,
+Placeholder.displayName = 'SingleSelect.Placeholder';
+Placeholder.peek = {
+	description: `
+		Content this is displayed when nothing is selected.
+	`,
+};
+Placeholder.propName = 'Placeholder';
 
-	components: {
-		Placeholder: createClass({
-			displayName: 'SingleSelect.Placeholder',
-			statics: {
-				peek: {
-					description: `
-						Content this is displayed when nothing is selected.
-					`,
-				},
-			},
-			propName: 'Placeholder',
-		}),
-		Option: createClass({
-			displayName: 'SingleSelect.Option',
-			statics: {
-				peek: {
-					description: `
-						A selectable option in the list.
-					`,
-				},
-			},
-			propName: 'Option',
-			propTypes: {
-				Selected: any`
-					Customizes the rendering of the Option when it is selected and is
-					displayed instead of the Placeholder.
-				`,
-				...DropMenu.Option.propTypes,
-			},
-			components: {
-				Selected: createClass({
-					displayName: 'SingleSelect.Option.Selected',
-					statics: {
-						peek: {
-							description: `
-								Customizes the rendering of the Option when it is selected
-								and is displayed instead of the Placeholder.
-							`,
-						},
-					},
-					propName: 'Selected',
-				}),
-			},
-		}),
-		OptionGroup: createClass({
-			displayName: 'SingleSelect.OptionGroup',
-			statics: {
-				peek: {
-					description: `
-						Groups \`Option\`s together with a non-selectable heading.
-					`,
-				},
-			},
-			propName: 'OptionGroup',
-			propTypes: DropMenu.OptionGroup.propTypes,
-		}),
-	},
+/** Option Child Component */
+export interface ISingleSelectOptionProps extends IDropMenuOptionProps {
+	description?: string;
+	name?: string;
+	/** Custom Option component (alias for `SingleSelect.Option.Selected`)  */
+	Selected?: React.ReactNode;
+}
 
-	propTypes: {
+const Selected = (_props: { children?: React.ReactNode }): null => null;
+
+Selected.displayName = 'SingleSelect.Option.Selected';
+Selected.peek = {
+	description: `
+		Customizes the rendering of the Option when it is selected
+		and is displayed instead of the Placeholder.
+	`,
+};
+Selected.propName = 'Selected';
+Selected.propTypes = {};
+
+const Option = (_props: ISingleSelectOptionProps): null => null;
+
+Option.displayName = 'SingleSelect.Option';
+Option.peek = {
+	description: `
+		A selectable option in the list.
+	`,
+};
+Option.Selected = Selected;
+Option.propName = 'Option';
+Option.propTypes = {
+	Selected: any`
+		Customizes the rendering of the Option when it is selected and is
+		displayed instead of the Placeholder.
+	`,
+	...DropMenu.Option.propTypes,
+};
+Option.defaultProps = DropMenu.Option.defaultProps;
+
+const OptionGroup = (_props: IDropMenuOptionGroupProps): null => null;
+
+OptionGroup.displayName = 'SingleSelect.OptionGroup';
+OptionGroup.peek = {
+	description: `
+		Groups \`Option\`s together with a non-selectable heading.
+	`,
+};
+OptionGroup.propName = 'OptionGroup';
+OptionGroup.propTypes = DropMenu.OptionGroup.propTypes;
+OptionGroup.defaultProps = DropMenu.OptionGroup.defaultProps;
+
+type ISingleSelectDropMenuProps = Partial<IDropMenuProps>;
+
+/** Single Select Component */
+interface ISingleSelectPropsRaw extends StandardProps {
+	/** Custom Placeholder component (alias for `SingleSelect.Placeholder`)  */
+	Placeholder?: React.ReactNode;
+
+	/** Custom Option component (alias for `SingleSelect.Option`)  */
+	Option?: React.ReactNode;
+
+	//TODO: Remove? Seems like this belongs on OptionProps not SingleSelectProps
+	/** Custom Option component (alias for `SingleSelect.Option.Selected`)  */
+	Selected?: React.ReactNode;
+
+	/** Custom OptionGroup component (alias for `SingleSelect.OptionGroup`)  */
+	OptionGroup?: IDropMenuOptionGroupProps;
+
+	hasReset: boolean;
+
+	isSelectionHighlighted: boolean;
+
+	isDisabled: boolean;
+
+	isInvisible: boolean;
+
+	selectedIndex: number | null;
+
+	//DropMenu: IDropMenuProps;
+	DropMenu: ISingleSelectDropMenuProps;
+
+	maxMenuHeight?: number | string;
+
+	onSelect?: (
+		optionIndex: number | null,
+		{
+			props,
+			event,
+		}: {
+			props: ISingleSelectOptionProps | undefined;
+			event: React.MouseEvent | React.KeyboardEvent;
+		}
+	) => void;
+
+	/** TODO: doublecheck this type */
+	ref?: string;
+}
+
+/** TODO: Revisit Overwrite */
+export type ISingleSelectProps = Overwrite<
+	React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>,
+	ISingleSelectPropsRaw
+>;
+
+export interface ISingleSelectState extends IDropMenuState {
+	selectedIndex: number | null;
+	DropMenu: IDropMenuState;
+}
+
+const defaultProps = {
+	hasReset: true,
+	isSelectionHighlighted: true,
+	isDisabled: false,
+	isInvisible: false,
+	selectedIndex: null,
+	DropMenu: DropMenu.defaultProps,
+};
+
+class SingleSelect extends React.Component<
+	ISingleSelectProps,
+	ISingleSelectState
+> {
+	static displayName = 'SingleSelect';
+
+	static peek: {
+		description: `
+				\`SingleSelect\` is a dropdown list. 
+				`;
+		notes: {
+			overview: `
+						A dropdown list. A dropdown menu appears when you click on the trigger and allows you to choose one option and execute relevant actions.
+					`;
+			intendedUse: `
+						Allow users to select a single item from a list of 3-10 options.
+											
+						**Styling notes**
+						
+						- Use \`basic\` in forms. The blue outline helps users clearly see that a selection has been made.
+						- Use \`no selection highlighting\` if the default selection is All or a null state. The grey outline indicates that this selection does not need users' attention.
+						- Use \`invisible\` for filters within a full page table header. The lack of outline allows the dropdown to have a lighter visual weight within a data-intense layout.
+					`;
+			technicalRecommendations: `
+					`;
+		};
+		categories: ['controls', 'selectors'];
+		madeFrom: ['DropMenu'];
+	};
+
+	static defaultProps = defaultProps;
+	static reducers = reducers;
+	static Placeholder = Placeholder;
+	static Option = Option;
+	static Selected = Selected;
+	static OptionGroup = OptionGroup;
+	static NullOption = DropMenu.NullOption;
+	static FixedOption = DropMenu.FixedOption;
+
+	static propTypes = {
 		children: node`
 			Should be instances of {\`SingleSelect.Placeholder\`,
 			\`SingleSelect.Option\`, \`SingleSelect.OptionGroup\`}. Other direct
@@ -185,18 +282,7 @@ const SingleSelect = createClass({
 			*Child Element* - Used to group \`Option\`s within the menu. Any
 			non-\`Option\`s passed in will be rendered as a label for the group.
 		`,
-	},
-
-	getDefaultProps() {
-		return {
-			hasReset: true,
-			isSelectionHighlighted: true,
-			isDisabled: false,
-			isInvisible: false,
-			selectedIndex: null,
-			DropMenu: DropMenu.defaultProps,
-		};
-	},
+	};
 
 	getInitialState() {
 		return {
@@ -205,19 +291,39 @@ const SingleSelect = createClass({
 			ungroupedOptionData: [],
 			optionGroupDataLookup: {},
 		};
-	},
+	}
 
 	componentWillMount() {
 		// preprocess the options data before rendering
-		this.setState(DropMenu.preprocessOptionData(this.props, SingleSelect));
-	},
+		this.setState(
+			DropMenu.preprocessOptionData(
+				this.props,
+				SingleSelect as IHasOptionChildren<
+					IDropMenuOptionGroupProps,
+					ISingleSelectOptionProps,
+					IDropMenuNullOptionProps,
+					IDropMenuFixedOptionProps
+				>
+			)
+		);
+	}
 
-	componentWillReceiveProps(nextProps) {
+	componentWillReceiveProps(nextProps: ISingleSelectProps): void {
 		// only preprocess options data when it changes (via new props) - better performance than doing this each render
-		this.setState(DropMenu.preprocessOptionData(nextProps, SingleSelect));
-	},
+		this.setState(
+			DropMenu.preprocessOptionData(
+				nextProps,
+				SingleSelect as IHasOptionChildren<
+					IDropMenuOptionGroupProps,
+					ISingleSelectOptionProps,
+					IDropMenuNullOptionProps,
+					IDropMenuFixedOptionProps
+				>
+			)
+		);
+	}
 
-	render() {
+	render(): React.ReactNode {
 		const {
 			style,
 			className,
@@ -254,7 +360,7 @@ const SingleSelect = createClass({
 			<DropMenu
 				{...dropMenuProps}
 				isDisabled={isDisabled}
-				selectedIndices={isItemSelected ? [selectedIndex] : []}
+				selectedIndices={isItemSelected ? [selectedIndex as number] : []}
 				className={cx('&', className)}
 				onSelect={onSelect}
 				style={style}
@@ -287,11 +393,13 @@ const SingleSelect = createClass({
 							{isItemSelected
 								? _.get(
 										getFirst(
-											flattenedOptionsData[selectedIndex].optionProps,
+											flattenedOptionsData[selectedIndex as number].optionProps,
 											SingleSelect.Option.Selected
 										),
 										'props.children'
-								  ) || flattenedOptionsData[selectedIndex].optionProps.children
+								  ) ||
+								  flattenedOptionsData[selectedIndex as number].optionProps
+										.children
 								: placeholder}
 						</span>
 
@@ -335,8 +443,13 @@ const SingleSelect = createClass({
 				)}
 			</DropMenu>
 		);
-	},
-});
+	}
+}
 
-export default buildHybridComponent(SingleSelect);
+export default buildModernHybridComponent<
+	ISingleSelectProps,
+	ISingleSelectState,
+	typeof SingleSelect
+>(SingleSelect, { reducers });
+
 export { SingleSelect as SingleSelectDumb };
