@@ -1,6 +1,6 @@
 ## PR Checklist
 
-Storybook Paginator can be viewed [here]()
+Storybook can be viewed [here]()
 
 - Manually tested across supported browsers
 
