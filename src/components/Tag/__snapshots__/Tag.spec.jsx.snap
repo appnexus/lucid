@@ -2,7 +2,7 @@
 
 exports[`Tag [common] example testing should match snapshot(s) for 01.default 1`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -14,7 +14,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 1`
 
 exports[`Tag [common] example testing should match snapshot(s) for 01.default 2`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -26,7 +26,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 2`
 
 exports[`Tag [common] example testing should match snapshot(s) for 01.default 3`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -38,7 +38,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 3`
 
 exports[`Tag [common] example testing should match snapshot(s) for 01.default 4`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -50,7 +50,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 4`
 
 exports[`Tag [common] example testing should match snapshot(s) for 01.default 5`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -62,7 +62,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 5`
 
 exports[`Tag [common] example testing should match snapshot(s) for 01.default 6`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -74,7 +74,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 6`
 
 exports[`Tag [common] example testing should match snapshot(s) for 01.default 7`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -86,7 +86,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 7`
 
 exports[`Tag [common] example testing should match snapshot(s) for 01.default 8`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -98,7 +98,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 8`
 
 exports[`Tag [common] example testing should match snapshot(s) for 01.default 9`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -110,7 +110,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 9`
 
 exports[`Tag [common] example testing should match snapshot(s) for 01.default 10`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -122,7 +122,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 10
 
 exports[`Tag [common] example testing should match snapshot(s) for 01.default 11`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -134,7 +134,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 11
 
 exports[`Tag [common] example testing should match snapshot(s) for 01.default 12`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -146,7 +146,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 12
 
 exports[`Tag [common] example testing should match snapshot(s) for 01.default 13`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -158,7 +158,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 13
 
 exports[`Tag [common] example testing should match snapshot(s) for 01.default 14`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -170,7 +170,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 14
 
 exports[`Tag [common] example testing should match snapshot(s) for 01.default 15`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -193,7 +193,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 15
 
 exports[`Tag [common] example testing should match snapshot(s) for 01.default 16`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -216,7 +216,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 16
 
 exports[`Tag [common] example testing should match snapshot(s) for 01.default 17`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -239,7 +239,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 17
 
 exports[`Tag [common] example testing should match snapshot(s) for 01.default 18`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -262,7 +262,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 18
 
 exports[`Tag [common] example testing should match snapshot(s) for 01.default 19`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -285,7 +285,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 19
 
 exports[`Tag [common] example testing should match snapshot(s) for 01.default 20`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -308,7 +308,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 20
 
 exports[`Tag [common] example testing should match snapshot(s) for 01.default 21`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -331,7 +331,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 21
 
 exports[`Tag [common] example testing should match snapshot(s) for 01.default 22`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -354,7 +354,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 22
 
 exports[`Tag [common] example testing should match snapshot(s) for 01.default 23`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -377,7 +377,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 23
 
 exports[`Tag [common] example testing should match snapshot(s) for 01.default 24`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -400,7 +400,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 24
 
 exports[`Tag [common] example testing should match snapshot(s) for 01.default 25`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -423,7 +423,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 25
 
 exports[`Tag [common] example testing should match snapshot(s) for 01.default 26`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -446,7 +446,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 26
 
 exports[`Tag [common] example testing should match snapshot(s) for 01.default 27`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -469,7 +469,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 27
 
 exports[`Tag [common] example testing should match snapshot(s) for 01.default 28`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -492,7 +492,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 28
 
 exports[`Tag [common] example testing should match snapshot(s) for 01.default 29`] = `
 <div
-  className="lucid-Tag lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -504,6 +504,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 29
     isRemovable={false}
     isTop={false}
     key=".1"
+    kind="default"
     onRemove={[Function]}
   >
     Apples
@@ -513,6 +514,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 29
     isRemovable={false}
     isTop={false}
     key=".2"
+    kind="default"
     onRemove={[Function]}
   >
     Oranges
@@ -522,6 +524,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 29
     isRemovable={false}
     isTop={false}
     key=".3"
+    kind="default"
     onRemove={[Function]}
   >
     Bananas
@@ -531,7 +534,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 29
 
 exports[`Tag [common] example testing should match snapshot(s) for 01.default 30`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -543,7 +546,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 30
 
 exports[`Tag [common] example testing should match snapshot(s) for 01.default 31`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -555,7 +558,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 31
 
 exports[`Tag [common] example testing should match snapshot(s) for 01.default 32`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -567,7 +570,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 32
 
 exports[`Tag [common] example testing should match snapshot(s) for 01.default 33`] = `
 <div
-  className="lucid-Tag lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -579,6 +582,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 33
     isRemovable={false}
     isTop={false}
     key=".1"
+    kind="default"
     onRemove={[Function]}
   >
     Carrots
@@ -588,6 +592,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 33
     isRemovable={false}
     isTop={false}
     key=".2"
+    kind="default"
     onRemove={[Function]}
   >
     Spinach
@@ -597,6 +602,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 33
     isRemovable={false}
     isTop={false}
     key=".3"
+    kind="default"
     onRemove={[Function]}
   >
     Celery
@@ -606,7 +612,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 33
 
 exports[`Tag [common] example testing should match snapshot(s) for 01.default 34`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -618,7 +624,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 34
 
 exports[`Tag [common] example testing should match snapshot(s) for 01.default 35`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -630,7 +636,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 35
 
 exports[`Tag [common] example testing should match snapshot(s) for 01.default 36`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -642,7 +648,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 36
 
 exports[`Tag [common] example testing should match snapshot(s) for 01.default 37`] = `
 <div
-  className="lucid-Tag lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -654,6 +660,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 37
     isRemovable={true}
     isTop={false}
     key=".1"
+    kind="default"
     onRemove={[Function]}
   >
     Apples
@@ -663,6 +670,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 37
     isRemovable={true}
     isTop={false}
     key=".2"
+    kind="default"
     onRemove={[Function]}
   >
     Oranges
@@ -672,6 +680,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 37
     isRemovable={true}
     isTop={false}
     key=".3"
+    kind="default"
     onRemove={[Function]}
   >
     Bananas
@@ -681,7 +690,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 37
 
 exports[`Tag [common] example testing should match snapshot(s) for 01.default 38`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -704,7 +713,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 38
 
 exports[`Tag [common] example testing should match snapshot(s) for 01.default 39`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -727,7 +736,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 39
 
 exports[`Tag [common] example testing should match snapshot(s) for 01.default 40`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -750,7 +759,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 40
 
 exports[`Tag [common] example testing should match snapshot(s) for 01.default 41`] = `
 <div
-  className="lucid-Tag lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -762,6 +771,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 41
     isRemovable={true}
     isTop={false}
     key=".1"
+    kind="default"
     onRemove={[Function]}
   >
     Carrots
@@ -771,6 +781,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 41
     isRemovable={true}
     isTop={false}
     key=".2"
+    kind="default"
     onRemove={[Function]}
   >
     Spinach
@@ -780,6 +791,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 41
     isRemovable={true}
     isTop={false}
     key=".3"
+    kind="default"
     onRemove={[Function]}
   >
     Celery
@@ -789,7 +801,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 41
 
 exports[`Tag [common] example testing should match snapshot(s) for 01.default 42`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -812,7 +824,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 42
 
 exports[`Tag [common] example testing should match snapshot(s) for 01.default 43`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -835,7 +847,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 43
 
 exports[`Tag [common] example testing should match snapshot(s) for 01.default 44`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -858,7 +870,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 44
 
 exports[`Tag [common] example testing should match snapshot(s) for 01.default 45`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -881,6 +893,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 45
     isRemovable={true}
     isTop={false}
     key=".1"
+    kind="default"
     onRemove={[Function]}
   >
     Apples
@@ -890,6 +903,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 45
     isRemovable={true}
     isTop={false}
     key=".2"
+    kind="default"
     onRemove={[Function]}
   >
     Oranges
@@ -899,6 +913,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 45
     isRemovable={true}
     isTop={false}
     key=".3"
+    kind="default"
     onRemove={[Function]}
   >
     Bananas
@@ -908,6 +923,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 45
     isRemovable={true}
     isTop={false}
     key=".4"
+    kind="default"
     onRemove={[Function]}
   >
     Apples
@@ -917,6 +933,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 45
     isRemovable={true}
     isTop={false}
     key=".5"
+    kind="default"
     onRemove={[Function]}
   >
     Oranges
@@ -926,6 +943,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 45
     isRemovable={true}
     isTop={false}
     key=".6"
+    kind="default"
     onRemove={[Function]}
   >
     Bananas
@@ -935,6 +953,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 45
     isRemovable={true}
     isTop={false}
     key=".7"
+    kind="default"
     onRemove={[Function]}
   >
     Apples
@@ -944,6 +963,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 45
     isRemovable={true}
     isTop={false}
     key=".8"
+    kind="default"
     onRemove={[Function]}
   >
     Oranges
@@ -953,6 +973,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 45
     isRemovable={true}
     isTop={false}
     key=".9"
+    kind="default"
     onRemove={[Function]}
   >
     Bananas
@@ -962,7 +983,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 45
 
 exports[`Tag [common] example testing should match snapshot(s) for 01.default 46`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -985,7 +1006,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 46
 
 exports[`Tag [common] example testing should match snapshot(s) for 01.default 47`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -1008,7 +1029,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 47
 
 exports[`Tag [common] example testing should match snapshot(s) for 01.default 48`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -1031,7 +1052,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 48
 
 exports[`Tag [common] example testing should match snapshot(s) for 01.default 49`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -1054,7 +1075,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 49
 
 exports[`Tag [common] example testing should match snapshot(s) for 01.default 50`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -1077,7 +1098,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 50
 
 exports[`Tag [common] example testing should match snapshot(s) for 01.default 51`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -1100,7 +1121,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 51
 
 exports[`Tag [common] example testing should match snapshot(s) for 01.default 52`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -1123,7 +1144,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 52
 
 exports[`Tag [common] example testing should match snapshot(s) for 01.default 53`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -1146,7 +1167,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 53
 
 exports[`Tag [common] example testing should match snapshot(s) for 01.default 54`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -1169,7 +1190,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 54
 
 exports[`Tag [common] example testing should match snapshot(s) for 01.default 55`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -1192,6 +1213,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 55
     isRemovable={true}
     isTop={false}
     key=".1"
+    kind="default"
     onRemove={[Function]}
   >
     Carrots
@@ -1201,6 +1223,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 55
     isRemovable={true}
     isTop={false}
     key=".2"
+    kind="default"
     onRemove={[Function]}
   >
     Spinach
@@ -1210,6 +1233,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 55
     isRemovable={true}
     isTop={false}
     key=".3"
+    kind="default"
     onRemove={[Function]}
   >
     Celery
@@ -1219,7 +1243,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 55
 
 exports[`Tag [common] example testing should match snapshot(s) for 01.default 56`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -1242,7 +1266,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 56
 
 exports[`Tag [common] example testing should match snapshot(s) for 01.default 57`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -1265,7 +1289,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 57
 
 exports[`Tag [common] example testing should match snapshot(s) for 01.default 58`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -1288,7 +1312,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 58
 
 exports[`Tag [common] example testing should match snapshot(s) for 01.default 59`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-top lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-top lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -1311,6 +1335,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 59
     isRemovable={true}
     isTop={false}
     key=".1"
+    kind="default"
     onRemove={[Function]}
   >
     Fruits
@@ -1318,6 +1343,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 59
       hasLightBackground={true}
       isRemovable={true}
       isTop={false}
+      kind="default"
       onRemove={[Function]}
     >
       Apples
@@ -1326,6 +1352,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 59
       hasLightBackground={true}
       isRemovable={true}
       isTop={false}
+      kind="default"
       onRemove={[Function]}
     >
       Oranges
@@ -1334,6 +1361,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 59
       hasLightBackground={true}
       isRemovable={true}
       isTop={false}
+      kind="default"
       onRemove={[Function]}
     >
       Bananas
@@ -1342,6 +1370,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 59
       hasLightBackground={true}
       isRemovable={false}
       isTop={false}
+      kind="default"
       onRemove={[Function]}
     >
       Pears
@@ -1352,6 +1381,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 59
     isRemovable={false}
     isTop={false}
     key=".2"
+    kind="default"
     onRemove={[Function]}
   >
     Vegetables
@@ -1359,6 +1389,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 59
       hasLightBackground={true}
       isRemovable={true}
       isTop={false}
+      kind="default"
       onRemove={[Function]}
     >
       Carrots
@@ -1367,6 +1398,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 59
       hasLightBackground={true}
       isRemovable={true}
       isTop={false}
+      kind="default"
       onRemove={[Function]}
     >
       Spinach
@@ -1375,6 +1407,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 59
       hasLightBackground={true}
       isRemovable={true}
       isTop={false}
+      kind="default"
       onRemove={[Function]}
     >
       Celery
@@ -1383,6 +1416,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 59
       hasLightBackground={true}
       isRemovable={false}
       isTop={false}
+      kind="default"
       onRemove={[Function]}
     >
       Cucumbers
@@ -1393,7 +1427,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 59
 
 exports[`Tag [common] example testing should match snapshot(s) for 01.default 60`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -1416,6 +1450,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 60
     isRemovable={true}
     isTop={false}
     key=".1"
+    kind="default"
     onRemove={[Function]}
   >
     Apples
@@ -1425,6 +1460,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 60
     isRemovable={true}
     isTop={false}
     key=".2"
+    kind="default"
     onRemove={[Function]}
   >
     Oranges
@@ -1434,6 +1470,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 60
     isRemovable={true}
     isTop={false}
     key=".3"
+    kind="default"
     onRemove={[Function]}
   >
     Bananas
@@ -1443,6 +1480,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 60
     isRemovable={false}
     isTop={false}
     key=".4"
+    kind="default"
     onRemove={[Function]}
   >
     Pears
@@ -1452,7 +1490,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 60
 
 exports[`Tag [common] example testing should match snapshot(s) for 01.default 61`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -1475,7 +1513,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 61
 
 exports[`Tag [common] example testing should match snapshot(s) for 01.default 62`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -1498,7 +1536,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 62
 
 exports[`Tag [common] example testing should match snapshot(s) for 01.default 63`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -1521,7 +1559,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 63
 
 exports[`Tag [common] example testing should match snapshot(s) for 01.default 64`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -1533,7 +1571,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 64
 
 exports[`Tag [common] example testing should match snapshot(s) for 01.default 65`] = `
 <div
-  className="lucid-Tag lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -1545,6 +1583,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 65
     isRemovable={true}
     isTop={false}
     key=".1"
+    kind="default"
     onRemove={[Function]}
   >
     Carrots
@@ -1554,6 +1593,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 65
     isRemovable={true}
     isTop={false}
     key=".2"
+    kind="default"
     onRemove={[Function]}
   >
     Spinach
@@ -1563,6 +1603,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 65
     isRemovable={true}
     isTop={false}
     key=".3"
+    kind="default"
     onRemove={[Function]}
   >
     Celery
@@ -1572,6 +1613,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 65
     isRemovable={false}
     isTop={false}
     key=".4"
+    kind="default"
     onRemove={[Function]}
   >
     Cucumbers
@@ -1581,7 +1623,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 65
 
 exports[`Tag [common] example testing should match snapshot(s) for 01.default 66`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -1604,7 +1646,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 66
 
 exports[`Tag [common] example testing should match snapshot(s) for 01.default 67`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -1627,7 +1669,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 67
 
 exports[`Tag [common] example testing should match snapshot(s) for 01.default 68`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -1650,7 +1692,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 68
 
 exports[`Tag [common] example testing should match snapshot(s) for 01.default 69`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -1662,7 +1704,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 69
 
 exports[`Tag [common] example testing should match snapshot(s) for 01.default 70`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-top"
+  className="lucid-Tag lucid-Tag-is-top lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -1674,6 +1716,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 70
     isRemovable={true}
     isTop={false}
     key=".1"
+    kind="default"
     onRemove={[Function]}
   >
     Fruits
@@ -1681,6 +1724,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 70
       hasLightBackground={true}
       isRemovable={true}
       isTop={false}
+      kind="default"
       onRemove={[Function]}
     >
       Apples
@@ -1689,6 +1733,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 70
       hasLightBackground={true}
       isRemovable={true}
       isTop={false}
+      kind="default"
       onRemove={[Function]}
     >
       Oranges
@@ -1697,6 +1742,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 70
       hasLightBackground={true}
       isRemovable={true}
       isTop={false}
+      kind="default"
       onRemove={[Function]}
     >
       Bananas
@@ -1705,6 +1751,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 70
       hasLightBackground={true}
       isRemovable={false}
       isTop={false}
+      kind="default"
       onRemove={[Function]}
     >
       Pears
@@ -1715,6 +1762,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 70
     isRemovable={false}
     isTop={false}
     key=".2"
+    kind="default"
     onRemove={[Function]}
   >
     Vegetables
@@ -1722,6 +1770,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 70
       hasLightBackground={true}
       isRemovable={true}
       isTop={false}
+      kind="default"
       onRemove={[Function]}
     >
       Carrots
@@ -1730,6 +1779,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 70
       hasLightBackground={true}
       isRemovable={true}
       isTop={false}
+      kind="default"
       onRemove={[Function]}
     >
       Spinach
@@ -1738,6 +1788,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 70
       hasLightBackground={true}
       isRemovable={true}
       isTop={false}
+      kind="default"
       onRemove={[Function]}
     >
       Celery
@@ -1746,6 +1797,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 70
       hasLightBackground={true}
       isRemovable={false}
       isTop={false}
+      kind="default"
       onRemove={[Function]}
     >
       Cucumbers
@@ -1756,7 +1808,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 70
 
 exports[`Tag [common] example testing should match snapshot(s) for 01.default 71`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -1779,6 +1831,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 71
     isRemovable={true}
     isTop={false}
     key=".1"
+    kind="default"
     onRemove={[Function]}
   >
     Apples
@@ -1788,6 +1841,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 71
     isRemovable={true}
     isTop={false}
     key=".2"
+    kind="default"
     onRemove={[Function]}
   >
     Oranges
@@ -1797,6 +1851,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 71
     isRemovable={true}
     isTop={false}
     key=".3"
+    kind="default"
     onRemove={[Function]}
   >
     Bananas
@@ -1806,6 +1861,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 71
     isRemovable={false}
     isTop={false}
     key=".4"
+    kind="default"
     onRemove={[Function]}
   >
     Pears
@@ -1815,7 +1871,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 71
 
 exports[`Tag [common] example testing should match snapshot(s) for 01.default 72`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -1838,7 +1894,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 72
 
 exports[`Tag [common] example testing should match snapshot(s) for 01.default 73`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -1861,7 +1917,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 73
 
 exports[`Tag [common] example testing should match snapshot(s) for 01.default 74`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -1884,7 +1940,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 74
 
 exports[`Tag [common] example testing should match snapshot(s) for 01.default 75`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -1896,7 +1952,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 75
 
 exports[`Tag [common] example testing should match snapshot(s) for 01.default 76`] = `
 <div
-  className="lucid-Tag lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -1908,6 +1964,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 76
     isRemovable={true}
     isTop={false}
     key=".1"
+    kind="default"
     onRemove={[Function]}
   >
     Carrots
@@ -1917,6 +1974,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 76
     isRemovable={true}
     isTop={false}
     key=".2"
+    kind="default"
     onRemove={[Function]}
   >
     Spinach
@@ -1926,6 +1984,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 76
     isRemovable={true}
     isTop={false}
     key=".3"
+    kind="default"
     onRemove={[Function]}
   >
     Celery
@@ -1935,6 +1994,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 76
     isRemovable={false}
     isTop={false}
     key=".4"
+    kind="default"
     onRemove={[Function]}
   >
     Cucumbers
@@ -1944,7 +2004,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 76
 
 exports[`Tag [common] example testing should match snapshot(s) for 01.default 77`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -1967,7 +2027,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 77
 
 exports[`Tag [common] example testing should match snapshot(s) for 01.default 78`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -1990,7 +2050,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 78
 
 exports[`Tag [common] example testing should match snapshot(s) for 01.default 79`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -2013,7 +2073,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 79
 
 exports[`Tag [common] example testing should match snapshot(s) for 01.default 80`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -2025,7 +2085,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 80
 
 exports[`Tag [common] example testing should match snapshot(s) for 02.nested 1`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -2037,7 +2097,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 1`]
 
 exports[`Tag [common] example testing should match snapshot(s) for 02.nested 2`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -2049,7 +2109,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 2`]
 
 exports[`Tag [common] example testing should match snapshot(s) for 02.nested 3`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -2061,7 +2121,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 3`]
 
 exports[`Tag [common] example testing should match snapshot(s) for 02.nested 4`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -2073,7 +2133,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 4`]
 
 exports[`Tag [common] example testing should match snapshot(s) for 02.nested 5`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -2085,7 +2145,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 5`]
 
 exports[`Tag [common] example testing should match snapshot(s) for 02.nested 6`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -2097,7 +2157,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 6`]
 
 exports[`Tag [common] example testing should match snapshot(s) for 02.nested 7`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -2109,7 +2169,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 7`]
 
 exports[`Tag [common] example testing should match snapshot(s) for 02.nested 8`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -2121,7 +2181,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 8`]
 
 exports[`Tag [common] example testing should match snapshot(s) for 02.nested 9`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -2133,7 +2193,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 9`]
 
 exports[`Tag [common] example testing should match snapshot(s) for 02.nested 10`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -2145,7 +2205,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 10`
 
 exports[`Tag [common] example testing should match snapshot(s) for 02.nested 11`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -2157,7 +2217,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 11`
 
 exports[`Tag [common] example testing should match snapshot(s) for 02.nested 12`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -2169,7 +2229,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 12`
 
 exports[`Tag [common] example testing should match snapshot(s) for 02.nested 13`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -2181,7 +2241,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 13`
 
 exports[`Tag [common] example testing should match snapshot(s) for 02.nested 14`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -2193,7 +2253,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 14`
 
 exports[`Tag [common] example testing should match snapshot(s) for 02.nested 15`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -2205,7 +2265,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 15`
 
 exports[`Tag [common] example testing should match snapshot(s) for 02.nested 16`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -2217,7 +2277,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 16`
 
 exports[`Tag [common] example testing should match snapshot(s) for 02.nested 17`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -2229,7 +2289,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 17`
 
 exports[`Tag [common] example testing should match snapshot(s) for 02.nested 18`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -2241,7 +2301,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 18`
 
 exports[`Tag [common] example testing should match snapshot(s) for 02.nested 19`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -2253,7 +2313,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 19`
 
 exports[`Tag [common] example testing should match snapshot(s) for 02.nested 20`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -2265,7 +2325,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 20`
 
 exports[`Tag [common] example testing should match snapshot(s) for 02.nested 21`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -2277,7 +2337,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 21`
 
 exports[`Tag [common] example testing should match snapshot(s) for 02.nested 22`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -2289,7 +2349,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 22`
 
 exports[`Tag [common] example testing should match snapshot(s) for 02.nested 23`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -2301,7 +2361,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 23`
 
 exports[`Tag [common] example testing should match snapshot(s) for 02.nested 24`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -2313,7 +2373,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 24`
 
 exports[`Tag [common] example testing should match snapshot(s) for 02.nested 25`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -2325,7 +2385,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 25`
 
 exports[`Tag [common] example testing should match snapshot(s) for 02.nested 26`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-top lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-top lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -2337,6 +2397,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 26`
     isRemovable={false}
     isTop={false}
     key=".1:$0"
+    kind="default"
     onRemove={[Function]}
   >
     Fashion
@@ -2346,6 +2407,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 26`
     isRemovable={false}
     isTop={false}
     key=".1:$1"
+    kind="default"
     onRemove={[Function]}
   >
     The
@@ -2355,6 +2417,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 26`
     isRemovable={false}
     isTop={false}
     key=".1:$2"
+    kind="default"
     onRemove={[Function]}
   >
     Vexillologist
@@ -2364,6 +2427,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 26`
     isRemovable={false}
     isTop={false}
     key=".1:$3"
+    kind="default"
     onRemove={[Function]}
   >
     Cold Brew
@@ -2373,6 +2437,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 26`
     isRemovable={false}
     isTop={false}
     key=".1:$4"
+    kind="default"
     onRemove={[Function]}
   >
     This is a longer sentence that should be handled okay but what if it is even longer than you could ever think imaginable
@@ -2382,6 +2447,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 26`
     isRemovable={false}
     isTop={false}
     key=".1:$5"
+    kind="default"
     onRemove={[Function]}
   >
     Fashion
@@ -2391,6 +2457,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 26`
     isRemovable={false}
     isTop={false}
     key=".1:$6"
+    kind="default"
     onRemove={[Function]}
   >
     The
@@ -2400,6 +2467,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 26`
     isRemovable={false}
     isTop={false}
     key=".1:$7"
+    kind="default"
     onRemove={[Function]}
   >
     Vexillologist
@@ -2409,6 +2477,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 26`
     isRemovable={false}
     isTop={false}
     key=".1:$8"
+    kind="default"
     onRemove={[Function]}
   >
     Cold Brew
@@ -2418,6 +2487,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 26`
     isRemovable={false}
     isTop={false}
     key=".1:$9"
+    kind="default"
     onRemove={[Function]}
   >
     This is a longer sentence that should be handled okay but what if it is even longer than you could ever think imaginable
@@ -2427,6 +2497,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 26`
     isRemovable={false}
     isTop={false}
     key=".1:$10"
+    kind="default"
     onRemove={[Function]}
   >
     Fashion
@@ -2436,6 +2507,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 26`
     isRemovable={false}
     isTop={false}
     key=".1:$11"
+    kind="default"
     onRemove={[Function]}
   >
     The
@@ -2445,6 +2517,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 26`
     isRemovable={false}
     isTop={false}
     key=".1:$12"
+    kind="default"
     onRemove={[Function]}
   >
     Vexillologist
@@ -2454,6 +2527,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 26`
     isRemovable={false}
     isTop={false}
     key=".1:$13"
+    kind="default"
     onRemove={[Function]}
   >
     Cold Brew
@@ -2463,6 +2537,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 26`
     isRemovable={false}
     isTop={false}
     key=".1:$14"
+    kind="default"
     onRemove={[Function]}
   >
     This is a longer sentence that should be handled okay but what if it is even longer than you could ever think imaginable
@@ -2472,6 +2547,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 26`
     isRemovable={false}
     isTop={false}
     key=".1:$15"
+    kind="default"
     onRemove={[Function]}
   >
     Fashion
@@ -2481,6 +2557,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 26`
     isRemovable={false}
     isTop={false}
     key=".1:$16"
+    kind="default"
     onRemove={[Function]}
   >
     The
@@ -2490,6 +2567,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 26`
     isRemovable={false}
     isTop={false}
     key=".1:$17"
+    kind="default"
     onRemove={[Function]}
   >
     Vexillologist
@@ -2499,6 +2577,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 26`
     isRemovable={false}
     isTop={false}
     key=".1:$18"
+    kind="default"
     onRemove={[Function]}
   >
     Cold Brew
@@ -2508,6 +2587,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 26`
     isRemovable={false}
     isTop={false}
     key=".1:$19"
+    kind="default"
     onRemove={[Function]}
   >
     This is a longer sentence that should be handled okay but what if it is even longer than you could ever think imaginable
@@ -2517,6 +2597,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 26`
     isRemovable={false}
     isTop={false}
     key=".1:$20"
+    kind="default"
     onRemove={[Function]}
   >
     Fashion
@@ -2526,6 +2607,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 26`
     isRemovable={false}
     isTop={false}
     key=".1:$21"
+    kind="default"
     onRemove={[Function]}
   >
     The
@@ -2535,6 +2617,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 26`
     isRemovable={false}
     isTop={false}
     key=".1:$22"
+    kind="default"
     onRemove={[Function]}
   >
     Vexillologist
@@ -2544,6 +2627,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 26`
     isRemovable={false}
     isTop={false}
     key=".1:$23"
+    kind="default"
     onRemove={[Function]}
   >
     Cold Brew
@@ -2553,6 +2637,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 26`
     isRemovable={false}
     isTop={false}
     key=".1:$24"
+    kind="default"
     onRemove={[Function]}
   >
     This is a longer sentence that should be handled okay but what if it is even longer than you could ever think imaginable
@@ -2562,7 +2647,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 26`
 
 exports[`Tag [common] example testing should match snapshot(s) for 02.nested 27`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -2574,7 +2659,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 27`
 
 exports[`Tag [common] example testing should match snapshot(s) for 02.nested 28`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -2586,7 +2671,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 28`
 
 exports[`Tag [common] example testing should match snapshot(s) for 02.nested 29`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -2598,7 +2683,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 29`
 
 exports[`Tag [common] example testing should match snapshot(s) for 02.nested 30`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -2610,7 +2695,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 30`
 
 exports[`Tag [common] example testing should match snapshot(s) for 02.nested 31`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -2622,7 +2707,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 31`
 
 exports[`Tag [common] example testing should match snapshot(s) for 02.nested 32`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -2634,7 +2719,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 32`
 
 exports[`Tag [common] example testing should match snapshot(s) for 02.nested 33`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -2646,7 +2731,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 33`
 
 exports[`Tag [common] example testing should match snapshot(s) for 02.nested 34`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -2658,7 +2743,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 34`
 
 exports[`Tag [common] example testing should match snapshot(s) for 02.nested 35`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -2670,7 +2755,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 35`
 
 exports[`Tag [common] example testing should match snapshot(s) for 02.nested 36`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -2682,7 +2767,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 36`
 
 exports[`Tag [common] example testing should match snapshot(s) for 02.nested 37`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -2694,7 +2779,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 37`
 
 exports[`Tag [common] example testing should match snapshot(s) for 02.nested 38`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -2706,7 +2791,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 38`
 
 exports[`Tag [common] example testing should match snapshot(s) for 02.nested 39`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -2718,7 +2803,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 39`
 
 exports[`Tag [common] example testing should match snapshot(s) for 02.nested 40`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -2730,7 +2815,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 40`
 
 exports[`Tag [common] example testing should match snapshot(s) for 02.nested 41`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -2742,7 +2827,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 41`
 
 exports[`Tag [common] example testing should match snapshot(s) for 02.nested 42`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -2754,7 +2839,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 42`
 
 exports[`Tag [common] example testing should match snapshot(s) for 02.nested 43`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -2766,7 +2851,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 43`
 
 exports[`Tag [common] example testing should match snapshot(s) for 02.nested 44`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -2778,7 +2863,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 44`
 
 exports[`Tag [common] example testing should match snapshot(s) for 02.nested 45`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -2790,7 +2875,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 45`
 
 exports[`Tag [common] example testing should match snapshot(s) for 02.nested 46`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -2802,7 +2887,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 46`
 
 exports[`Tag [common] example testing should match snapshot(s) for 02.nested 47`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -2814,7 +2899,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 47`
 
 exports[`Tag [common] example testing should match snapshot(s) for 02.nested 48`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -2826,7 +2911,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 48`
 
 exports[`Tag [common] example testing should match snapshot(s) for 02.nested 49`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -2838,7 +2923,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 49`
 
 exports[`Tag [common] example testing should match snapshot(s) for 02.nested 50`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -2850,7 +2935,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 50`
 
 exports[`Tag [common] example testing should match snapshot(s) for 02.nested 51`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -2862,7 +2947,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 51`
 
 exports[`Tag [common] example testing should match snapshot(s) for 02.nested 52`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-top lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-top lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -2874,6 +2959,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 52`
     isRemovable={false}
     isTop={false}
     key=".1:$0"
+    kind="default"
     onRemove={[Function]}
   >
     Fashion
@@ -2883,6 +2969,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 52`
     isRemovable={false}
     isTop={false}
     key=".1:$1"
+    kind="default"
     onRemove={[Function]}
   >
     The
@@ -2892,6 +2979,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 52`
     isRemovable={false}
     isTop={false}
     key=".1:$2"
+    kind="default"
     onRemove={[Function]}
   >
     Vexillologist
@@ -2901,6 +2989,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 52`
     isRemovable={false}
     isTop={false}
     key=".1:$3"
+    kind="default"
     onRemove={[Function]}
   >
     Cold Brew
@@ -2910,6 +2999,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 52`
     isRemovable={false}
     isTop={false}
     key=".1:$4"
+    kind="default"
     onRemove={[Function]}
   >
     This is a longer sentence that should be handled okay but what if it is even longer than you could ever think imaginable
@@ -2919,6 +3009,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 52`
     isRemovable={false}
     isTop={false}
     key=".1:$5"
+    kind="default"
     onRemove={[Function]}
   >
     Fashion
@@ -2928,6 +3019,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 52`
     isRemovable={false}
     isTop={false}
     key=".1:$6"
+    kind="default"
     onRemove={[Function]}
   >
     The
@@ -2937,6 +3029,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 52`
     isRemovable={false}
     isTop={false}
     key=".1:$7"
+    kind="default"
     onRemove={[Function]}
   >
     Vexillologist
@@ -2946,6 +3039,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 52`
     isRemovable={false}
     isTop={false}
     key=".1:$8"
+    kind="default"
     onRemove={[Function]}
   >
     Cold Brew
@@ -2955,6 +3049,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 52`
     isRemovable={false}
     isTop={false}
     key=".1:$9"
+    kind="default"
     onRemove={[Function]}
   >
     This is a longer sentence that should be handled okay but what if it is even longer than you could ever think imaginable
@@ -2964,6 +3059,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 52`
     isRemovable={false}
     isTop={false}
     key=".1:$10"
+    kind="default"
     onRemove={[Function]}
   >
     Fashion
@@ -2973,6 +3069,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 52`
     isRemovable={false}
     isTop={false}
     key=".1:$11"
+    kind="default"
     onRemove={[Function]}
   >
     The
@@ -2982,6 +3079,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 52`
     isRemovable={false}
     isTop={false}
     key=".1:$12"
+    kind="default"
     onRemove={[Function]}
   >
     Vexillologist
@@ -2991,6 +3089,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 52`
     isRemovable={false}
     isTop={false}
     key=".1:$13"
+    kind="default"
     onRemove={[Function]}
   >
     Cold Brew
@@ -3000,6 +3099,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 52`
     isRemovable={false}
     isTop={false}
     key=".1:$14"
+    kind="default"
     onRemove={[Function]}
   >
     This is a longer sentence that should be handled okay but what if it is even longer than you could ever think imaginable
@@ -3009,6 +3109,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 52`
     isRemovable={false}
     isTop={false}
     key=".1:$15"
+    kind="default"
     onRemove={[Function]}
   >
     Fashion
@@ -3018,6 +3119,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 52`
     isRemovable={false}
     isTop={false}
     key=".1:$16"
+    kind="default"
     onRemove={[Function]}
   >
     The
@@ -3027,6 +3129,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 52`
     isRemovable={false}
     isTop={false}
     key=".1:$17"
+    kind="default"
     onRemove={[Function]}
   >
     Vexillologist
@@ -3036,6 +3139,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 52`
     isRemovable={false}
     isTop={false}
     key=".1:$18"
+    kind="default"
     onRemove={[Function]}
   >
     Cold Brew
@@ -3045,6 +3149,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 52`
     isRemovable={false}
     isTop={false}
     key=".1:$19"
+    kind="default"
     onRemove={[Function]}
   >
     This is a longer sentence that should be handled okay but what if it is even longer than you could ever think imaginable
@@ -3054,6 +3159,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 52`
     isRemovable={false}
     isTop={false}
     key=".1:$20"
+    kind="default"
     onRemove={[Function]}
   >
     Fashion
@@ -3063,6 +3169,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 52`
     isRemovable={false}
     isTop={false}
     key=".1:$21"
+    kind="default"
     onRemove={[Function]}
   >
     The
@@ -3072,6 +3179,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 52`
     isRemovable={false}
     isTop={false}
     key=".1:$22"
+    kind="default"
     onRemove={[Function]}
   >
     Vexillologist
@@ -3081,6 +3189,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 52`
     isRemovable={false}
     isTop={false}
     key=".1:$23"
+    kind="default"
     onRemove={[Function]}
   >
     Cold Brew
@@ -3090,6 +3199,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 52`
     isRemovable={false}
     isTop={false}
     key=".1:$24"
+    kind="default"
     onRemove={[Function]}
   >
     This is a longer sentence that should be handled okay but what if it is even longer than you could ever think imaginable
@@ -3099,7 +3209,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 52`
 
 exports[`Tag [common] example testing should match snapshot(s) for 02.nested 53`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -3111,7 +3221,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 53`
 
 exports[`Tag [common] example testing should match snapshot(s) for 02.nested 54`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -3123,7 +3233,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 54`
 
 exports[`Tag [common] example testing should match snapshot(s) for 02.nested 55`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -3135,7 +3245,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 55`
 
 exports[`Tag [common] example testing should match snapshot(s) for 02.nested 56`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -3147,7 +3257,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 56`
 
 exports[`Tag [common] example testing should match snapshot(s) for 02.nested 57`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -3159,7 +3269,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 57`
 
 exports[`Tag [common] example testing should match snapshot(s) for 02.nested 58`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -3171,7 +3281,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 58`
 
 exports[`Tag [common] example testing should match snapshot(s) for 02.nested 59`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -3183,7 +3293,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 59`
 
 exports[`Tag [common] example testing should match snapshot(s) for 02.nested 60`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -3195,7 +3305,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 60`
 
 exports[`Tag [common] example testing should match snapshot(s) for 02.nested 61`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -3207,7 +3317,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 61`
 
 exports[`Tag [common] example testing should match snapshot(s) for 02.nested 62`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -3219,7 +3329,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 62`
 
 exports[`Tag [common] example testing should match snapshot(s) for 02.nested 63`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -3231,7 +3341,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 63`
 
 exports[`Tag [common] example testing should match snapshot(s) for 02.nested 64`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -3243,7 +3353,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 64`
 
 exports[`Tag [common] example testing should match snapshot(s) for 02.nested 65`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -3255,7 +3365,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 65`
 
 exports[`Tag [common] example testing should match snapshot(s) for 02.nested 66`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -3267,7 +3377,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 66`
 
 exports[`Tag [common] example testing should match snapshot(s) for 02.nested 67`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -3279,7 +3389,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 67`
 
 exports[`Tag [common] example testing should match snapshot(s) for 02.nested 68`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -3291,7 +3401,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 68`
 
 exports[`Tag [common] example testing should match snapshot(s) for 02.nested 69`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -3303,7 +3413,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 69`
 
 exports[`Tag [common] example testing should match snapshot(s) for 02.nested 70`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -3315,7 +3425,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 70`
 
 exports[`Tag [common] example testing should match snapshot(s) for 02.nested 71`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -3327,7 +3437,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 71`
 
 exports[`Tag [common] example testing should match snapshot(s) for 02.nested 72`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -3339,7 +3449,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 72`
 
 exports[`Tag [common] example testing should match snapshot(s) for 02.nested 73`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -3351,7 +3461,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 73`
 
 exports[`Tag [common] example testing should match snapshot(s) for 02.nested 74`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -3363,7 +3473,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 74`
 
 exports[`Tag [common] example testing should match snapshot(s) for 02.nested 75`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -3375,7 +3485,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 75`
 
 exports[`Tag [common] example testing should match snapshot(s) for 02.nested 76`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -3387,7 +3497,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 76`
 
 exports[`Tag [common] example testing should match snapshot(s) for 02.nested 77`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -3399,7 +3509,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 77`
 
 exports[`Tag [common] example testing should match snapshot(s) for 03.double-nested 1`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-top lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-top lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -3411,6 +3521,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.double-nes
     isRemovable={false}
     isTop={false}
     key=".1"
+    kind="default"
     onRemove={[Function]}
   >
     Group 1
@@ -3419,6 +3530,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.double-nes
       isRemovable={false}
       isTop={false}
       key="0"
+      kind="default"
       onRemove={[Function]}
     >
       Fashion
@@ -3428,6 +3540,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.double-nes
       isRemovable={false}
       isTop={false}
       key="1"
+      kind="default"
       onRemove={[Function]}
     >
       The
@@ -3437,6 +3550,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.double-nes
       isRemovable={false}
       isTop={false}
       key="2"
+      kind="default"
       onRemove={[Function]}
     >
       Vexillologist
@@ -3446,6 +3560,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.double-nes
       isRemovable={false}
       isTop={false}
       key="3"
+      kind="default"
       onRemove={[Function]}
     >
       Cold Brew
@@ -3456,6 +3571,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.double-nes
     isRemovable={false}
     isTop={false}
     key=".2"
+    kind="default"
     onRemove={[Function]}
   >
     Group 2
@@ -3464,6 +3580,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.double-nes
       isRemovable={false}
       isTop={false}
       key="0"
+      kind="default"
       onRemove={[Function]}
     >
       Fashion
@@ -3473,6 +3590,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.double-nes
       isRemovable={false}
       isTop={false}
       key="1"
+      kind="default"
       onRemove={[Function]}
     >
       The
@@ -3482,6 +3600,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.double-nes
       isRemovable={false}
       isTop={false}
       key="2"
+      kind="default"
       onRemove={[Function]}
     >
       Vexillologist
@@ -3491,6 +3610,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.double-nes
       isRemovable={false}
       isTop={false}
       key="3"
+      kind="default"
       onRemove={[Function]}
     >
       Cold Brew
@@ -3501,7 +3621,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.double-nes
 
 exports[`Tag [common] example testing should match snapshot(s) for 03.double-nested 2`] = `
 <div
-  className="lucid-Tag lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -3513,6 +3633,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.double-nes
     isRemovable={false}
     isTop={false}
     key=".1:$0"
+    kind="default"
     onRemove={[Function]}
   >
     Fashion
@@ -3522,6 +3643,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.double-nes
     isRemovable={false}
     isTop={false}
     key=".1:$1"
+    kind="default"
     onRemove={[Function]}
   >
     The
@@ -3531,6 +3653,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.double-nes
     isRemovable={false}
     isTop={false}
     key=".1:$2"
+    kind="default"
     onRemove={[Function]}
   >
     Vexillologist
@@ -3540,6 +3663,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.double-nes
     isRemovable={false}
     isTop={false}
     key=".1:$3"
+    kind="default"
     onRemove={[Function]}
   >
     Cold Brew
@@ -3549,7 +3673,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.double-nes
 
 exports[`Tag [common] example testing should match snapshot(s) for 03.double-nested 3`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -3561,7 +3685,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.double-nes
 
 exports[`Tag [common] example testing should match snapshot(s) for 03.double-nested 4`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -3573,7 +3697,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.double-nes
 
 exports[`Tag [common] example testing should match snapshot(s) for 03.double-nested 5`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -3585,7 +3709,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.double-nes
 
 exports[`Tag [common] example testing should match snapshot(s) for 03.double-nested 6`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -3597,7 +3721,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.double-nes
 
 exports[`Tag [common] example testing should match snapshot(s) for 03.double-nested 7`] = `
 <div
-  className="lucid-Tag lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -3609,6 +3733,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.double-nes
     isRemovable={false}
     isTop={false}
     key=".1:$0"
+    kind="default"
     onRemove={[Function]}
   >
     Fashion
@@ -3618,6 +3743,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.double-nes
     isRemovable={false}
     isTop={false}
     key=".1:$1"
+    kind="default"
     onRemove={[Function]}
   >
     The
@@ -3627,6 +3753,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.double-nes
     isRemovable={false}
     isTop={false}
     key=".1:$2"
+    kind="default"
     onRemove={[Function]}
   >
     Vexillologist
@@ -3636,6 +3763,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.double-nes
     isRemovable={false}
     isTop={false}
     key=".1:$3"
+    kind="default"
     onRemove={[Function]}
   >
     Cold Brew
@@ -3645,7 +3773,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.double-nes
 
 exports[`Tag [common] example testing should match snapshot(s) for 03.double-nested 8`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -3657,7 +3785,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.double-nes
 
 exports[`Tag [common] example testing should match snapshot(s) for 03.double-nested 9`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -3669,7 +3797,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.double-nes
 
 exports[`Tag [common] example testing should match snapshot(s) for 03.double-nested 10`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -3681,7 +3809,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.double-nes
 
 exports[`Tag [common] example testing should match snapshot(s) for 03.double-nested 11`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -3693,7 +3821,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.double-nes
 
 exports[`Tag [common] example testing should match snapshot(s) for 03.double-nested 12`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-top lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-top lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -3705,6 +3833,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.double-nes
     isRemovable={false}
     isTop={false}
     key=".1"
+    kind="default"
     onRemove={[Function]}
   >
     Group 1
@@ -3713,6 +3842,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.double-nes
       isRemovable={false}
       isTop={false}
       key="0"
+      kind="default"
       onRemove={[Function]}
     >
       Fashion
@@ -3722,6 +3852,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.double-nes
       isRemovable={false}
       isTop={false}
       key="1"
+      kind="default"
       onRemove={[Function]}
     >
       The
@@ -3731,6 +3862,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.double-nes
       isRemovable={false}
       isTop={false}
       key="2"
+      kind="default"
       onRemove={[Function]}
     >
       Vexillologist
@@ -3740,6 +3872,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.double-nes
       isRemovable={false}
       isTop={false}
       key="3"
+      kind="default"
       onRemove={[Function]}
     >
       Cold Brew
@@ -3750,6 +3883,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.double-nes
     isRemovable={false}
     isTop={false}
     key=".2"
+    kind="default"
     onRemove={[Function]}
   >
     Group 2
@@ -3758,6 +3892,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.double-nes
       isRemovable={false}
       isTop={false}
       key="0"
+      kind="default"
       onRemove={[Function]}
     >
       Fashion
@@ -3767,6 +3902,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.double-nes
       isRemovable={false}
       isTop={false}
       key="1"
+      kind="default"
       onRemove={[Function]}
     >
       The
@@ -3776,6 +3912,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.double-nes
       isRemovable={false}
       isTop={false}
       key="2"
+      kind="default"
       onRemove={[Function]}
     >
       Vexillologist
@@ -3785,6 +3922,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.double-nes
       isRemovable={false}
       isTop={false}
       key="3"
+      kind="default"
       onRemove={[Function]}
     >
       Cold Brew
@@ -3795,7 +3933,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.double-nes
 
 exports[`Tag [common] example testing should match snapshot(s) for 03.double-nested 13`] = `
 <div
-  className="lucid-Tag lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -3807,6 +3945,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.double-nes
     isRemovable={false}
     isTop={false}
     key=".1:$0"
+    kind="default"
     onRemove={[Function]}
   >
     Fashion
@@ -3816,6 +3955,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.double-nes
     isRemovable={false}
     isTop={false}
     key=".1:$1"
+    kind="default"
     onRemove={[Function]}
   >
     The
@@ -3825,6 +3965,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.double-nes
     isRemovable={false}
     isTop={false}
     key=".1:$2"
+    kind="default"
     onRemove={[Function]}
   >
     Vexillologist
@@ -3834,6 +3975,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.double-nes
     isRemovable={false}
     isTop={false}
     key=".1:$3"
+    kind="default"
     onRemove={[Function]}
   >
     Cold Brew
@@ -3843,7 +3985,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.double-nes
 
 exports[`Tag [common] example testing should match snapshot(s) for 03.double-nested 14`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -3855,7 +3997,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.double-nes
 
 exports[`Tag [common] example testing should match snapshot(s) for 03.double-nested 15`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -3867,7 +4009,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.double-nes
 
 exports[`Tag [common] example testing should match snapshot(s) for 03.double-nested 16`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -3879,7 +4021,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.double-nes
 
 exports[`Tag [common] example testing should match snapshot(s) for 03.double-nested 17`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -3891,7 +4033,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.double-nes
 
 exports[`Tag [common] example testing should match snapshot(s) for 03.double-nested 18`] = `
 <div
-  className="lucid-Tag lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -3903,6 +4045,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.double-nes
     isRemovable={false}
     isTop={false}
     key=".1:$0"
+    kind="default"
     onRemove={[Function]}
   >
     Fashion
@@ -3912,6 +4055,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.double-nes
     isRemovable={false}
     isTop={false}
     key=".1:$1"
+    kind="default"
     onRemove={[Function]}
   >
     The
@@ -3921,6 +4065,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.double-nes
     isRemovable={false}
     isTop={false}
     key=".1:$2"
+    kind="default"
     onRemove={[Function]}
   >
     Vexillologist
@@ -3930,6 +4075,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.double-nes
     isRemovable={false}
     isTop={false}
     key=".1:$3"
+    kind="default"
     onRemove={[Function]}
   >
     Cold Brew
@@ -3939,7 +4085,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.double-nes
 
 exports[`Tag [common] example testing should match snapshot(s) for 03.double-nested 19`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -3951,7 +4097,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.double-nes
 
 exports[`Tag [common] example testing should match snapshot(s) for 03.double-nested 20`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -3963,7 +4109,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.double-nes
 
 exports[`Tag [common] example testing should match snapshot(s) for 03.double-nested 21`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -3975,7 +4121,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.double-nes
 
 exports[`Tag [common] example testing should match snapshot(s) for 03.double-nested 22`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -3987,7 +4133,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.double-nes
 
 exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 1`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -4011,6 +4157,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     isRemovable={true}
     isTop={false}
     key=".1:$0.0"
+    kind="default"
     onRemove={[Function]}
   >
     Phil
@@ -4020,7 +4167,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
 
 exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 2`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -4043,7 +4190,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
 
 exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 3`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -4067,6 +4214,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     isRemovable={true}
     isTop={false}
     key=".1:$1.0"
+    kind="default"
     onRemove={[Function]}
   >
     Carol
@@ -4076,7 +4224,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
 
 exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 4`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -4099,7 +4247,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
 
 exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 5`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -4123,6 +4271,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     isRemovable={true}
     isTop={false}
     key=".1:$2.0"
+    kind="default"
     onRemove={[Function]}
   >
     Ask Aak
@@ -4133,6 +4282,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     isRemovable={true}
     isTop={false}
     key=".1:$2.1"
+    kind="default"
     onRemove={[Function]}
   >
     Admiral Gial Ackbar
@@ -4143,6 +4293,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     isRemovable={true}
     isTop={false}
     key=".1:$2.2"
+    kind="default"
     onRemove={[Function]}
   >
     Acros-Krik
@@ -4153,6 +4304,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     isRemovable={true}
     isTop={false}
     key=".1:$2.3"
+    kind="default"
     onRemove={[Function]}
   >
     Ak-Rev
@@ -4163,6 +4315,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     isRemovable={true}
     isTop={false}
     key=".1:$2.4"
+    kind="default"
     onRemove={[Function]}
   >
     Stass Allie
@@ -4173,6 +4326,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     isRemovable={true}
     isTop={false}
     key=".1:$2.5"
+    kind="default"
     onRemove={[Function]}
   >
     Almec
@@ -4183,6 +4337,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     isRemovable={true}
     isTop={false}
     key=".1:$2.6"
+    kind="default"
     onRemove={[Function]}
   >
     Mas Amedda
@@ -4193,6 +4348,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     isRemovable={true}
     isTop={false}
     key=".1:$2.7"
+    kind="default"
     onRemove={[Function]}
   >
     Amee
@@ -4203,6 +4359,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     isRemovable={true}
     isTop={false}
     key=".1:$2.8"
+    kind="default"
     onRemove={[Function]}
   >
     Padmé Amidala
@@ -4213,6 +4370,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     isRemovable={true}
     isTop={false}
     key=".1:$2.9"
+    kind="default"
     onRemove={[Function]}
   >
     Cassian Andor
@@ -4223,6 +4381,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     isRemovable={true}
     isTop={false}
     key=".1:$2.10"
+    kind="default"
     onRemove={[Function]}
   >
     Bail Antilles
@@ -4233,6 +4392,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     isRemovable={true}
     isTop={false}
     key=".1:$2.11"
+    kind="default"
     onRemove={[Function]}
   >
     Raymus Antilles
@@ -4243,6 +4403,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     isRemovable={true}
     isTop={false}
     key=".1:$2.12"
+    kind="default"
     onRemove={[Function]}
   >
     Wedge Antilles
@@ -4253,6 +4414,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     isRemovable={true}
     isTop={false}
     key=".1:$2.13"
+    kind="default"
     onRemove={[Function]}
   >
     Queen Apailana
@@ -4263,6 +4425,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     isRemovable={true}
     isTop={false}
     key=".1:$2.14"
+    kind="default"
     onRemove={[Function]}
   >
     Commander Appo
@@ -4273,6 +4436,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     isRemovable={true}
     isTop={false}
     key=".1:$2.15"
+    kind="default"
     onRemove={[Function]}
   >
     Passel Argente
@@ -4283,6 +4447,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     isRemovable={true}
     isTop={false}
     key=".1:$2.16"
+    kind="default"
     onRemove={[Function]}
   >
     Faro Argyus
@@ -4293,6 +4458,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     isRemovable={true}
     isTop={false}
     key=".1:$2.17"
+    kind="default"
     onRemove={[Function]}
   >
     Seti Ashgad
@@ -4303,6 +4469,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     isRemovable={true}
     isTop={false}
     key=".1:$2.18"
+    kind="default"
     onRemove={[Function]}
   >
     AZI-3
@@ -4312,7 +4479,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
 
 exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 6`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -4335,7 +4502,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
 
 exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 7`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -4358,7 +4525,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
 
 exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 8`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -4381,7 +4548,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
 
 exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 9`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -4404,7 +4571,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
 
 exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 10`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -4427,7 +4594,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
 
 exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 11`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -4450,7 +4617,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
 
 exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 12`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -4473,7 +4640,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
 
 exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 13`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -4496,7 +4663,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
 
 exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 14`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -4519,7 +4686,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
 
 exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 15`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -4542,7 +4709,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
 
 exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 16`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -4565,7 +4732,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
 
 exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 17`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -4588,7 +4755,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
 
 exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 18`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -4611,7 +4778,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
 
 exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 19`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -4634,7 +4801,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
 
 exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 20`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -4657,7 +4824,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
 
 exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 21`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -4680,7 +4847,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
 
 exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 22`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -4703,7 +4870,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
 
 exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 23`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -4726,7 +4893,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
 
 exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 24`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -4749,7 +4916,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
 
 exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 25`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -4773,6 +4940,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     isRemovable={true}
     isTop={false}
     key=".1:$3.0"
+    kind="default"
     onRemove={[Function]}
   >
     Adrahil
@@ -4783,6 +4951,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     isRemovable={true}
     isTop={false}
     key=".1:$3.1"
+    kind="default"
     onRemove={[Function]}
   >
     Adrahil II
@@ -4793,6 +4962,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     isRemovable={true}
     isTop={false}
     key=".1:$3.2"
+    kind="default"
     onRemove={[Function]}
   >
     Aegnor
@@ -4803,6 +4973,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     isRemovable={true}
     isTop={false}
     key=".1:$3.3"
+    kind="default"
     onRemove={[Function]}
   >
     Aerandir
@@ -4813,6 +4984,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     isRemovable={true}
     isTop={false}
     key=".1:$3.4"
+    kind="default"
     onRemove={[Function]}
   >
     Aghan
@@ -4823,6 +4995,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     isRemovable={true}
     isTop={false}
     key=".1:$3.5"
+    kind="default"
     onRemove={[Function]}
   >
     Aglahad
@@ -4833,6 +5006,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     isRemovable={true}
     isTop={false}
     key=".1:$3.6"
+    kind="default"
     onRemove={[Function]}
   >
     Ailinel
@@ -4843,6 +5017,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     isRemovable={true}
     isTop={false}
     key=".1:$3.7"
+    kind="default"
     onRemove={[Function]}
   >
     Alatar
@@ -4853,6 +5028,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     isRemovable={true}
     isTop={false}
     key=".1:$3.8"
+    kind="default"
     onRemove={[Function]}
   >
     Aldamir
@@ -4863,6 +5039,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     isRemovable={true}
     isTop={false}
     key=".1:$3.9"
+    kind="default"
     onRemove={[Function]}
   >
     Aldor
@@ -4873,6 +5050,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     isRemovable={true}
     isTop={false}
     key=".1:$3.10"
+    kind="default"
     onRemove={[Function]}
   >
     Almarian
@@ -4883,6 +5061,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     isRemovable={true}
     isTop={false}
     key=".1:$3.11"
+    kind="default"
     onRemove={[Function]}
   >
     Almiel
@@ -4893,6 +5072,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     isRemovable={true}
     isTop={false}
     key=".1:$3.12"
+    kind="default"
     onRemove={[Function]}
   >
     Amandil
@@ -4903,6 +5083,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     isRemovable={true}
     isTop={false}
     key=".1:$3.13"
+    kind="default"
     onRemove={[Function]}
   >
     Amdír
@@ -4913,6 +5094,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     isRemovable={true}
     isTop={false}
     key=".1:$3.14"
+    kind="default"
     onRemove={[Function]}
   >
     Amlaith
@@ -4923,6 +5105,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     isRemovable={true}
     isTop={false}
     key=".1:$3.15"
+    kind="default"
     onRemove={[Function]}
   >
     Amrod
@@ -4933,6 +5116,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     isRemovable={true}
     isTop={false}
     key=".1:$3.16"
+    kind="default"
     onRemove={[Function]}
   >
     Amroth
@@ -4943,6 +5127,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     isRemovable={true}
     isTop={false}
     key=".1:$3.17"
+    kind="default"
     onRemove={[Function]}
   >
     Anardil
@@ -4953,6 +5138,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     isRemovable={true}
     isTop={false}
     key=".1:$3.18"
+    kind="default"
     onRemove={[Function]}
   >
     Anborn
@@ -4963,6 +5149,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     isRemovable={true}
     isTop={false}
     key=".1:$3.19"
+    kind="default"
     onRemove={[Function]}
   >
     Ancalagon The Black
@@ -4973,6 +5160,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     isRemovable={true}
     isTop={false}
     key=".1:$3.20"
+    kind="default"
     onRemove={[Function]}
   >
     Andróg
@@ -4983,6 +5171,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     isRemovable={true}
     isTop={false}
     key=".1:$3.21"
+    kind="default"
     onRemove={[Function]}
   >
     Angbor
@@ -4993,6 +5182,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     isRemovable={true}
     isTop={false}
     key=".1:$3.22"
+    kind="default"
     onRemove={[Function]}
   >
     Angelimar
@@ -5003,6 +5193,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     isRemovable={true}
     isTop={false}
     key=".1:$3.23"
+    kind="default"
     onRemove={[Function]}
   >
     Angelimir
@@ -5013,6 +5204,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     isRemovable={true}
     isTop={false}
     key=".1:$3.24"
+    kind="default"
     onRemove={[Function]}
   >
     Angrod
@@ -5023,6 +5215,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     isRemovable={true}
     isTop={false}
     key=".1:$3.25"
+    kind="default"
     onRemove={[Function]}
   >
     Anárion
@@ -5033,6 +5226,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     isRemovable={true}
     isTop={false}
     key=".1:$3.26"
+    kind="default"
     onRemove={[Function]}
   >
     Ar-Adûnakhôr
@@ -5043,6 +5237,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     isRemovable={true}
     isTop={false}
     key=".1:$3.27"
+    kind="default"
     onRemove={[Function]}
   >
     Ar-Gimilzôr
@@ -5053,6 +5248,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     isRemovable={true}
     isTop={false}
     key=".1:$3.28"
+    kind="default"
     onRemove={[Function]}
   >
     Ar-Pharazôn
@@ -5063,6 +5259,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     isRemovable={true}
     isTop={false}
     key=".1:$3.29"
+    kind="default"
     onRemove={[Function]}
   >
     Ar-Sakalthôr
@@ -5073,6 +5270,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     isRemovable={true}
     isTop={false}
     key=".1:$3.30"
+    kind="default"
     onRemove={[Function]}
   >
     Ar-Zimrathôn
@@ -5083,6 +5281,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     isRemovable={true}
     isTop={false}
     key=".1:$3.31"
+    kind="default"
     onRemove={[Function]}
   >
     Arador
@@ -5093,6 +5292,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     isRemovable={true}
     isTop={false}
     key=".1:$3.32"
+    kind="default"
     onRemove={[Function]}
   >
     Araglas
@@ -5103,6 +5303,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     isRemovable={true}
     isTop={false}
     key=".1:$3.33"
+    kind="default"
     onRemove={[Function]}
   >
     Aragorn I
@@ -5113,6 +5314,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     isRemovable={true}
     isTop={false}
     key=".1:$3.34"
+    kind="default"
     onRemove={[Function]}
   >
     Aragorn II Elessar
@@ -5122,7 +5324,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
 
 exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 26`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -5145,7 +5347,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
 
 exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 27`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -5168,7 +5370,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
 
 exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 28`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -5191,7 +5393,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
 
 exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 29`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -5214,7 +5416,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
 
 exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 30`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -5237,7 +5439,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
 
 exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 31`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -5260,7 +5462,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
 
 exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 32`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -5283,7 +5485,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
 
 exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 33`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -5306,7 +5508,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
 
 exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 34`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -5329,7 +5531,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
 
 exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 35`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -5352,7 +5554,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
 
 exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 36`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -5375,7 +5577,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
 
 exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 37`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -5398,7 +5600,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
 
 exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 38`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -5421,7 +5623,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
 
 exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 39`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -5444,7 +5646,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
 
 exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 40`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -5467,7 +5669,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
 
 exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 41`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -5490,7 +5692,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
 
 exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 42`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -5513,7 +5715,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
 
 exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 43`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -5536,7 +5738,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
 
 exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 44`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -5559,7 +5761,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
 
 exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 45`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -5582,7 +5784,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
 
 exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 46`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -5605,7 +5807,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
 
 exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 47`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -5628,7 +5830,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
 
 exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 48`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -5651,7 +5853,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
 
 exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 49`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -5674,7 +5876,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
 
 exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 50`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -5697,7 +5899,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
 
 exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 51`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -5720,7 +5922,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
 
 exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 52`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -5743,7 +5945,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
 
 exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 53`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -5766,7 +5968,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
 
 exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 54`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -5789,7 +5991,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
 
 exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 55`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -5812,7 +6014,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
 
 exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 56`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -5835,7 +6037,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
 
 exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 57`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -5858,7 +6060,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
 
 exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 58`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -5881,7 +6083,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
 
 exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 59`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -5904,7 +6106,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
 
 exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 60`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -5927,7 +6129,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
 
 exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 61`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -5951,6 +6153,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     isRemovable={true}
     isTop={false}
     key=".1:$4.0"
+    kind="default"
     onRemove={[Function]}
   >
     Jonathan Archer
@@ -5961,6 +6164,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     isRemovable={true}
     isTop={false}
     key=".1:$4.1"
+    kind="default"
     onRemove={[Function]}
   >
     Ayala
@@ -5971,6 +6175,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     isRemovable={true}
     isTop={false}
     key=".1:$4.2"
+    kind="default"
     onRemove={[Function]}
   >
     Azan
@@ -5981,6 +6186,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     isRemovable={true}
     isTop={false}
     key=".1:$4.3"
+    kind="default"
     onRemove={[Function]}
   >
     Reginald Barclay
@@ -5991,6 +6197,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     isRemovable={true}
     isTop={false}
     key=".1:$4.4"
+    kind="default"
     onRemove={[Function]}
   >
     Lieutenant, JG (TNG,FCT)
@@ -6001,6 +6208,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     isRemovable={true}
     isTop={false}
     key=".1:$4.5"
+    kind="default"
     onRemove={[Function]}
   >
     Engineering Officer (TNG,Movies)
@@ -6011,6 +6219,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     isRemovable={true}
     isTop={false}
     key=".1:$4.6"
+    kind="default"
     onRemove={[Function]}
   >
     Bareil Antos
@@ -6021,6 +6230,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     isRemovable={true}
     isTop={false}
     key=".1:$4.7"
+    kind="default"
     onRemove={[Function]}
   >
     Julian Bashir
@@ -6031,6 +6241,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     isRemovable={true}
     isTop={false}
     key=".1:$4.8"
+    kind="default"
     onRemove={[Function]}
   >
     Season 6 (TNG)
@@ -6041,6 +6252,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     isRemovable={true}
     isTop={false}
     key=".1:$4.9"
+    kind="default"
     onRemove={[Function]}
   >
     Lieutenant, JG (S1-3)
@@ -6050,7 +6262,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
 
 exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 62`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -6073,7 +6285,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
 
 exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 63`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -6096,7 +6308,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
 
 exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 64`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -6119,7 +6331,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
 
 exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 65`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -6142,7 +6354,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
 
 exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 66`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -6165,7 +6377,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
 
 exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 67`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -6188,7 +6400,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
 
 exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 68`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -6211,7 +6423,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
 
 exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 69`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -6234,7 +6446,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
 
 exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 70`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
@@ -6257,12 +6469,191 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
 
 exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 71`] = `
 <div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background"
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
 >
   <span
     className="lucid-Tag-other-children"
   >
     Lieutenant, JG (S1-3)
+    <CloseIcon
+      aspectRatio="xMidYMid meet"
+      className="lucid-Tag-remove-button"
+      color="primary"
+      isClickable={true}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={7}
+      viewBox="0 0 16 16"
+    />
+  </span>
+</div>
+`;
+
+exports[`Tag [common] example testing should match snapshot(s) for 05.colors 1`] = `
+<div
+  className="lucid-Tag lucid-Tag-has-light-background lucid-Tag-default"
+>
+  <Tag
+    hasLightBackground={true}
+    isRemovable={false}
+    isTop={false}
+    key=".0"
+    kind="info"
+    onRemove={[Function]}
+  >
+    notitia
+  </Tag>
+  <Tag
+    hasLightBackground={true}
+    isRemovable={false}
+    isTop={false}
+    key=".1"
+    kind="danger"
+    onRemove={[Function]}
+  >
+    periculum
+  </Tag>
+  <Tag
+    hasLightBackground={true}
+    isRemovable={false}
+    isTop={false}
+    key=".2"
+    kind="default"
+    onRemove={[Function]}
+  >
+    deficio
+  </Tag>
+</div>
+`;
+
+exports[`Tag [common] example testing should match snapshot(s) for 05.colors 2`] = `
+<div
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-info"
+>
+  <span
+    className="lucid-Tag-other-children"
+  >
+    notitia
+  </span>
+</div>
+`;
+
+exports[`Tag [common] example testing should match snapshot(s) for 05.colors 3`] = `
+<div
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-danger"
+>
+  <span
+    className="lucid-Tag-other-children"
+  >
+    periculum
+  </span>
+</div>
+`;
+
+exports[`Tag [common] example testing should match snapshot(s) for 05.colors 4`] = `
+<div
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
+>
+  <span
+    className="lucid-Tag-other-children"
+  >
+    deficio
+  </span>
+</div>
+`;
+
+exports[`Tag [common] example testing should match snapshot(s) for 05.colors 5`] = `
+<div
+  className="lucid-Tag lucid-Tag-has-light-background lucid-Tag-default"
+>
+  <Tag
+    hasLightBackground={true}
+    isRemovable={true}
+    isTop={false}
+    key=".0"
+    kind="info"
+    onRemove={[Function]}
+  >
+    notitia
+  </Tag>
+  <Tag
+    hasLightBackground={true}
+    isRemovable={true}
+    isTop={false}
+    key=".1"
+    kind="danger"
+    onRemove={[Function]}
+  >
+    periculum
+  </Tag>
+  <Tag
+    hasLightBackground={true}
+    isRemovable={true}
+    isTop={false}
+    key=".2"
+    kind="default"
+    onRemove={[Function]}
+  >
+    deficio
+  </Tag>
+</div>
+`;
+
+exports[`Tag [common] example testing should match snapshot(s) for 05.colors 6`] = `
+<div
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-info"
+>
+  <span
+    className="lucid-Tag-other-children"
+  >
+    notitia
+    <CloseIcon
+      aspectRatio="xMidYMid meet"
+      className="lucid-Tag-remove-button"
+      color="primary"
+      isClickable={true}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={7}
+      viewBox="0 0 16 16"
+    />
+  </span>
+</div>
+`;
+
+exports[`Tag [common] example testing should match snapshot(s) for 05.colors 7`] = `
+<div
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-danger"
+>
+  <span
+    className="lucid-Tag-other-children"
+  >
+    periculum
+    <CloseIcon
+      aspectRatio="xMidYMid meet"
+      className="lucid-Tag-remove-button"
+      color="primary"
+      isClickable={true}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={7}
+      viewBox="0 0 16 16"
+    />
+  </span>
+</div>
+`;
+
+exports[`Tag [common] example testing should match snapshot(s) for 05.colors 8`] = `
+<div
+  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
+>
+  <span
+    className="lucid-Tag-other-children"
+  >
+    deficio
     <CloseIcon
       aspectRatio="xMidYMid meet"
       className="lucid-Tag-remove-button"

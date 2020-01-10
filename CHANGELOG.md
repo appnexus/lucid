@@ -2,19 +2,37 @@
 
 - Nothing at the moment.
 
+## 5.4.0
+
+- #1104 [minor] Change border colors for `Tag`.
+- #1089 [minor] Add validation state to `SearchableMultiSelect`, `SearchableSingleSelect`, `SearchableSelect`.
+- #1090 [minor] Move lodash library from "devDependencies" to "dependencies" in package.json
+- #1073 [patch] Convert `VerticalTabs` to TypeScript.
+- #1070 [patch] Convert `Selection` to TypeScript.
+- #1076 [patch] Convert `Accordion` to TypeScript.
+- #1082 [patch] Convert `Piechart` to TypeScript.
+- #1069 [patch] Convert `Legend` TypeScript.
+- #1081 [minor] Add `HideIcon`, `SaveIcon`, and `GetMaximumIcon`.
+- #1088 [none] Update text in `Banner` docs, added docs for `RadioButtonLabeled`.
+
+https://github.com/appnexus/lucid/compare/v5.3.2...5.4.0
+
 ## 5.3.2
+
 - #1086 [patch] fix type signatures on `VerticalListMenu` and for `createClass`
   - It's worth noting that if you don't have time to pass the correct generics to `createClass` you can always just use it like `createClass<any, any>()` to avoid most of the type checking.
 
 https://github.com/appnexus/lucid/compare/v5.3.1...v5.3.2
 
 ## 5.3.1
+
 - #1086 [patch] Fix storybook register to be compatible with older versions
 
 https://github.com/appnexus/lucid/compare/v5.3.0...v5.3.1
 
 ## 5.3.0
-- #1058 [minor] Migrated another round of components to TypeScript and added a new utility function `buildModernHybridComponent` that works with class and functional React components. We also significantly reworked the way we annotate types of our functional components that should hopefully reduce the number of instances where optional props were incorrectly marked as required. 
+
+- #1058 [minor] Migrated another round of components to TypeScript and added a new utility function `buildModernHybridComponent` that works with class and functional React components. We also significantly reworked the way we annotate types of our functional components that should hopefully reduce the number of instances where optional props were incorrectly marked as required.
   - Components converted to TypeScript:
     - `ButtonGroup`
     - `DateSelect`
@@ -50,6 +68,7 @@ https://github.com/appnexus/lucid/compare/v5.3.0...v5.3.1
 https://github.com/appnexus/lucid/compare/5.2.0...v5.3.0
 
 ## 5.2.0
+
 - #1065 [minor] Make `Checkbox` private, update `CheckboxLabeled` documentation
 - #1061 [minor] Add `BackUpArrowIcon`
 - #1077 [patch] Make `DangerLightIcon`, `InfoLightIcon`, and `WarningLightIcon` private
@@ -68,6 +87,7 @@ https://github.com/appnexus/lucid/compare/5.2.0...v5.3.0
 https://github.com/appnexus/lucid/compare/v5.1.2...5.2.0
 
 ## 5.1.2
+
 - #1055 [none] Improve prop documentation for `fixedColumnCount` on `DataTablePanel`
 - #1053 [patch] Fix `onClick` for disabled `IconSelect`s
 - #1040 [patch] Bump _lodash_ for security patch
@@ -78,6 +98,7 @@ https://github.com/appnexus/lucid/compare/v5.1.2...5.2.0
 https://github.com/appnexus/lucid/compare/v5.1.1...v5.1.2
 
 ## 5.1.1
+
 - #1051 [patch] Several major fixes to the TypeScript defintions of all converted components
 - #1041 [patch] Normalized the size of `EligibilityIcon` and `EligibilityLightIcon`
 - #1046 [patch] Maintain the order of children passed in with `Selection`
@@ -86,6 +107,7 @@ https://github.com/appnexus/lucid/compare/v5.1.1...v5.1.2
 https://github.com/appnexus/lucid/compare/v5.1.0...v5.1.1
 
 ## 5.1.0
+
 - #1013 [minor] TLDR; converted many components to TypeScript and upgraded Storybook
   - Converted the following to TypeScript:
     - `Axis`
@@ -191,7 +213,7 @@ https://github.com/appnexus/lucid/compare/v4.2.0...v4.3.0
 - #1004 [minor] Add `Typography` component
 - #1006 [minor] Add `DotsIcon`
 - #1005 [patch] Update `SidePanel` drop-shadow styling
-- #1007 [patch] Fix `SidePanel.Header` selector making all icons gray.  Only `CloseIcon` is selected now
+- #1007 [patch] Fix `SidePanel.Header` selector making all icons gray. Only `CloseIcon` is selected now
 
 https://github.com/appnexus/lucid/compare/v4.1.0...v4.2.0
 
@@ -211,15 +233,15 @@ https://github.com/appnexus/lucid/compare/v4.0.0...v4.1.0
 
 - removed `primary` kind from `Banner`.
 - removed `hasIcon` from `Banner`
-- removed `hasRoundedCorners` from `Banner`.  All Banners are now square.
+- removed `hasRoundedCorners` from `Banner`. All Banners are now square.
 - removed `isSmall` from `Banner`.
-- moved `CloseIcon` to lucid.  Shouldn't effect anx-react consumers.
+- moved `CloseIcon` to lucid. Shouldn't effect anx-react consumers.
 - added `NotchedTag`
-- custom icons in `Banner` probably don't look quite right.  Icons are now on a dark background
+- custom icons in `Banner` probably don't look quite right. Icons are now on a dark background
 - removed `Info` `Success` `Warning` as `Button` `kind`
 - removed the `inset-box-shadow` LESS mixin
 - removed `@TextField-size-padding` from `TextField`'s LESS
-- lot possible breakages to LESS mixins and variables.  Will enumerate when done.
+- lot possible breakages to LESS mixins and variables. Will enumerate when done.
 - table now defaults to `hasLightHeader`
 - removed `border` prop from `Table.td`
 - removed `isActionable` from `table`

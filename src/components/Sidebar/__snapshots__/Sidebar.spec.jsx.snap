@@ -2342,6 +2342,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 11.differ
           isRemovable={true}
           isTop={false}
           key="0"
+          kind="default"
           onRemove={[Function]}
         >
           Tag # 0
@@ -2351,6 +2352,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 11.differ
           isRemovable={true}
           isTop={false}
           key="1"
+          kind="default"
           onRemove={[Function]}
         >
           Tag # 1
@@ -2360,6 +2362,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 11.differ
           isRemovable={true}
           isTop={false}
           key="2"
+          kind="default"
           onRemove={[Function]}
         >
           Tag # 2
@@ -2369,6 +2372,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 11.differ
           isRemovable={true}
           isTop={false}
           key="3"
+          kind="default"
           onRemove={[Function]}
         >
           Tag # 3
@@ -2378,6 +2382,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 11.differ
           isRemovable={true}
           isTop={false}
           key="4"
+          kind="default"
           onRemove={[Function]}
         >
           Tag # 4
@@ -2387,6 +2392,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 11.differ
           isRemovable={true}
           isTop={false}
           key="5"
+          kind="default"
           onRemove={[Function]}
         >
           Tag # 5
@@ -2396,6 +2402,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 11.differ
           isRemovable={true}
           isTop={false}
           key="6"
+          kind="default"
           onRemove={[Function]}
         >
           Tag # 6
@@ -2405,6 +2412,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 11.differ
           isRemovable={true}
           isTop={false}
           key="7"
+          kind="default"
           onRemove={[Function]}
         >
           Tag # 7
@@ -2414,6 +2422,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 11.differ
           isRemovable={true}
           isTop={false}
           key="8"
+          kind="default"
           onRemove={[Function]}
         >
           Tag # 8
@@ -2423,6 +2432,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 11.differ
           isRemovable={true}
           isTop={false}
           key="9"
+          kind="default"
           onRemove={[Function]}
         >
           Tag # 9

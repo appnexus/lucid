@@ -46,7 +46,7 @@ const getDefaultExport = module => {
 const isPrivate = component =>
 	component._isPrivate || (component.peek && component.peek.isPrivate);
 
-const getExamplesFromContext = (reqExamples, rawContext) => 
+const getExamplesFromContext = (reqExamples, rawContext) =>
 	_.map(loadAllKeys(reqExamples, rawContext), ({ key, module, raw }) => ({
 		name: _.join(_.reject(_.words(key), w => /^(\d+|[tj]sx?)$/.test(w)), ' '),
 		Example: getDefaultExport(module),
@@ -319,23 +319,30 @@ storiesOf('Icons', module)
 							'secondary-two',
 							'secondary-three',
 						],
-						color => {
-							const Icon = _.head(filteredIcons).component;
-							return (
-								<div
-									style={{
-										padding: '5px',
-										marginRight: '20px',
-										display: 'flex',
-										flexDirection: 'column',
-										alignItems: 'center',
-									}}
+						color => (
+							<div
+								style={{
+									padding: '5px',
+									marginRight: '20px',
+									display: 'flex',
+									flexDirection: 'column',
+									alignItems: 'center',
+								}}
+							>
+								<svg
+									width='32'
+									height='32'
+									viewBox='0 0 36 36'
+									preserveAspectRatio='xMidYMid meet'
+									class={`lucid-Icon lucid-Icon-color-${color}`}
 								>
-									<Icon size={32} color={color} isClickable />
-									<div>{color}</div>
-								</div>
-							);
-						}
+									<circle cx='8.5' cy='5.5' r='5' />
+									<path d='M35.5 35.5L21 11.5l-14.5 24zm-29 0h-6l11-18 2.934 4.801' />
+									<path d='M16.399 19.102L18.5 21.5l3-3 3 3 2-1' />
+								</svg>
+								<div style={{ paddingTop: '3px' }}>{color}</div>
+							</div>
+						)
 					)}
 				</div>
 			</section>
