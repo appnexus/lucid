@@ -2,12 +2,7 @@ import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import _ from 'lodash';
 import { lucidClassNames } from '../../util/style-helpers';
-import {
-	findTypes,
-	getFirst,
-	Overwrite,
-	StandardProps,
-} from '../../util/component-types';
+import { findTypes, getFirst, StandardProps } from '../../util/component-types';
 import { buildModernHybridComponent } from '../../util/state-management';
 import * as reducers from './SingleSelect.reducers';
 import {
@@ -105,7 +100,7 @@ OptionGroup.defaultProps = DropMenu.OptionGroup.defaultProps;
 type ISingleSelectDropMenuProps = Partial<IDropMenuProps>;
 
 /** Single Select Component */
-interface ISingleSelectPropsRaw extends StandardProps {
+export interface ISingleSelectProps extends StandardProps {
 	/** Custom Placeholder component (alias for `SingleSelect.Placeholder`)  */
 	Placeholder?: React.ReactNode;
 
@@ -129,7 +124,6 @@ interface ISingleSelectPropsRaw extends StandardProps {
 
 	selectedIndex: number | null;
 
-	//DropMenu: IDropMenuProps;
 	DropMenu: ISingleSelectDropMenuProps;
 
 	maxMenuHeight?: number | string;
@@ -144,16 +138,7 @@ interface ISingleSelectPropsRaw extends StandardProps {
 			event: React.MouseEvent | React.KeyboardEvent;
 		}
 	) => void;
-
-	/** TODO: doublecheck this type */
-	ref?: string;
 }
-
-/** TODO: Revisit Overwrite */
-export type ISingleSelectProps = Overwrite<
-	React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>,
-	ISingleSelectPropsRaw
->;
 
 export interface ISingleSelectState extends IDropMenuState {
 	selectedIndex: number | null;
