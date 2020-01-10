@@ -10,7 +10,6 @@ import ButtonGroup, {
 } from './components/ButtonGroup/ButtonGroup';
 import SearchableSelect, {
 	SearchableSelectDumb,
-	// @ts-ignore: not converted yet
 } from './components/SearchableSelect/SearchableSelect';
 // @ts-ignore: not converted yet
 import DateSelect, { DateSelectDumb } from './components/DateSelect/DateSelect';
