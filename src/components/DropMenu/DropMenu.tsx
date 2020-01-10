@@ -117,8 +117,7 @@ export interface IDropMenuOptionProps extends StandardProps {
 	isWrapped?: boolean;
 }
 
-const Option: FC<IDropMenuOptionProps> = (_props: IDropMenuOptionProps): null =>
-	null;
+const Option = (_props: IDropMenuOptionProps): null => null;
 Option.displayName = 'DropMenu.Option';
 Option.peek = {
 	description: `
