@@ -574,12 +574,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Paginator/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Paginator/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 	{
@@ -854,12 +854,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/SingleSelect/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/SingleSelect/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 	{
