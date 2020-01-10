@@ -360,7 +360,7 @@ class SingleSelect extends React.Component<
 			<DropMenu
 				{...dropMenuProps}
 				isDisabled={isDisabled}
-				selectedIndices={isItemSelected ? [selectedIndex as number] : []}
+				selectedIndices={_.isNumber(selectedIndex) ? [selectedIndex] : []}
 				className={cx('&', className)}
 				onSelect={onSelect}
 				style={style}
