@@ -45,7 +45,7 @@ interface IRadioGroupPropsRaw extends StandardProps {
 	) => void;
 
 	/**
-	 * Indicates whether all \`RadioGroup.RadioButton\' children is currently
+	 * Indicates which \`RadioGroup.RadioButton\' child is currently
 	 * selected. The index of the last \`RadioGroup.RadioButton\` child with
 	 * \'isSelected\' equal to true takes precedence over this prop.
 	 */
