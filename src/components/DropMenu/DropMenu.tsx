@@ -8,7 +8,6 @@ import {
 	rejectTypes,
 	findTypes,
 	omitProps,
-	FC,
 } from '../../util/component-types';
 import { scrollParentTo } from '../../util/dom-helpers';
 import { buildModernHybridComponent } from '../../util/state-management';
@@ -117,8 +116,7 @@ export interface IDropMenuOptionProps extends StandardProps {
 	isWrapped?: boolean;
 }
 
-const Option: FC<IDropMenuOptionProps> = (_props: IDropMenuOptionProps): null =>
-	null;
+const Option = (_props: IDropMenuOptionProps): null => null;
 Option.displayName = 'DropMenu.Option';
 Option.peek = {
 	description: `
@@ -166,9 +164,7 @@ export interface IDropMenuFixedOptionProps extends StandardProps {
 	isWrapped: boolean;
 }
 
-const FixedOption: FC<IDropMenuFixedOptionProps> = (
-	_props: IDropMenuFixedOptionProps
-): null => null;
+const FixedOption = (_props: IDropMenuFixedOptionProps): null => null;
 FixedOption.displayName = 'DropMenu.FixedOption';
 FixedOption.peek = {
 	description: `
@@ -347,10 +343,10 @@ export interface IHasOptionChildren<
 	NullOptionProps,
 	FixedOptionProps
 > {
-	OptionGroup: FC<OptionGroupProps>;
-	Option: FC<OptionProps>;
-	NullOption: FC<NullOptionProps>;
-	FixedOption: FC<FixedOptionProps>;
+	OptionGroup: (_props: OptionGroupProps) => null;
+	Option: (_props: OptionProps) => null;
+	NullOption: (_props: NullOptionProps) => null;
+	FixedOption: (_props: FixedOptionProps) => null;
 }
 
 export interface IDropMenuState {
