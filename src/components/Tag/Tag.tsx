@@ -34,7 +34,7 @@ export interface ITagProps
 	isRemovable: boolean;
 
 	/** Style variations of the `Tag`. */
-	kind?: 'primary' | 'success' | 'warning' | 'danger' | 'info' | 'default';
+	kind?: 'success' | 'warning' | 'danger' | 'info' | 'default';
 
 	/** Called when the user clicks to remove a tag. */
 	onRemove: ({
@@ -143,7 +143,7 @@ Tag.propTypes = {
 		Shows or hides the little "x" for a given tag.
 	`,
 
-	kind: oneOf(['primary', 'success', 'warning', 'danger', 'info', 'default'])`
+	kind: oneOf(['success', 'warning', 'danger', 'info', 'default'])`
 		Style variations of the \`Tag\`.
 	`,
 
