@@ -24,12 +24,17 @@
 	}
 
 	&-search {
-		margin-bottom: @size-standard;
-
-		&-is-small {
+				&-is-small {
 			// Prevents zooming on focus
 			.@{prefix}-TextField {
 				font-size: 16px;
+			}
+		}
+
+		&-is-error {
+			.@{prefix}-TextField {
+				border: 2px solid @featured-color-danger;
+				border-radius: @size-standard-height / 2;
 			}
 		}
 	}
@@ -69,12 +74,22 @@
 		}
 	}
 
+	&-Selection-padding {
+		margin-top: 10px;
+	}
+
 	& &-Selection-section &-Selection-group {
-		margin-bottom: @size-XS;
+		margin-bottom: @size-XXS;
 	}
 
 	&-Option-select-all {
 		border-bottom: 1px solid @color-borderColorLight;
+	}
+
+	&-error-content {
+		margin-top: @size-XXS;
+		color: @featured-color-danger;
+		font-size: @fontSize * 0.9;
 	}
 }
 
