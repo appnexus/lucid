@@ -2,12 +2,7 @@ import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import _ from 'lodash';
 import { lucidClassNames } from '../../util/style-helpers';
-import {
-	findTypes,
-	getFirst,
-	Overwrite,
-	StandardProps,
-} from '../../util/component-types';
+import { findTypes, getFirst, StandardProps } from '../../util/component-types';
 import { buildModernHybridComponent } from '../../util/state-management';
 import * as reducers from './SingleSelect.reducers';
 import {
@@ -15,7 +10,10 @@ import {
 	IDropMenuState,
 	IDropMenuOptionProps,
 	IDropMenuOptionGroupProps,
+	IHasOptionChildren,
 	DropMenuDumb as DropMenu,
+	IDropMenuNullOptionProps,
+	IDropMenuFixedOptionProps,
 } from '../DropMenu/DropMenu';
 import ChevronIcon from '../Icon/ChevronIcon/ChevronIcon';
 
@@ -102,7 +100,7 @@ OptionGroup.defaultProps = DropMenu.OptionGroup.defaultProps;
 type ISingleSelectDropMenuProps = Partial<IDropMenuProps>;
 
 /** Single Select Component */
-interface ISingleSelectPropsRaw extends StandardProps {
+export interface ISingleSelectProps extends StandardProps {
 	/** Custom Placeholder component (alias for `SingleSelect.Placeholder`)  */
 	Placeholder?: React.ReactNode;
 
@@ -126,7 +124,6 @@ interface ISingleSelectPropsRaw extends StandardProps {
 
 	selectedIndex: number | null;
 
-	//DropMenu: IDropMenuProps;
 	DropMenu: ISingleSelectDropMenuProps;
 
 	maxMenuHeight?: number | string;
@@ -137,20 +134,11 @@ interface ISingleSelectPropsRaw extends StandardProps {
 			props,
 			event,
 		}: {
-			props: ISingleSelectOptionProps;
+			props: ISingleSelectOptionProps | undefined;
 			event: React.MouseEvent | React.KeyboardEvent;
 		}
 	) => void;
-
-	/** TODO: doublecheck this type */
-	ref?: string;
 }
-
-/** TODO: Revisit Overwrite */
-export type ISingleSelectProps = Overwrite<
-	React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>,
-	ISingleSelectPropsRaw
->;
 
 export interface ISingleSelectState extends IDropMenuState {
 	selectedIndex: number | null;
@@ -292,12 +280,32 @@ class SingleSelect extends React.Component<
 
 	componentWillMount() {
 		// preprocess the options data before rendering
-		this.setState(DropMenu.preprocessOptionData(this.props, SingleSelect));
+		this.setState(
+			DropMenu.preprocessOptionData(
+				this.props,
+				SingleSelect as IHasOptionChildren<
+					IDropMenuOptionGroupProps,
+					ISingleSelectOptionProps,
+					IDropMenuNullOptionProps,
+					IDropMenuFixedOptionProps
+				>
+			)
+		);
 	}
 
 	componentWillReceiveProps(nextProps: ISingleSelectProps): void {
 		// only preprocess options data when it changes (via new props) - better performance than doing this each render
-		this.setState(DropMenu.preprocessOptionData(nextProps, SingleSelect));
+		this.setState(
+			DropMenu.preprocessOptionData(
+				nextProps,
+				SingleSelect as IHasOptionChildren<
+					IDropMenuOptionGroupProps,
+					ISingleSelectOptionProps,
+					IDropMenuNullOptionProps,
+					IDropMenuFixedOptionProps
+				>
+			)
+		);
 	}
 
 	render(): React.ReactNode {
@@ -337,7 +345,7 @@ class SingleSelect extends React.Component<
 			<DropMenu
 				{...dropMenuProps}
 				isDisabled={isDisabled}
-				selectedIndices={isItemSelected ? [selectedIndex as number] : []}
+				selectedIndices={_.isNumber(selectedIndex) ? [selectedIndex] : []}
 				className={cx('&', className)}
 				onSelect={onSelect}
 				style={style}

@@ -79,7 +79,7 @@ export interface IPaginatorProps
 			props,
 			event,
 		}: {
-			props: ISingleSelectOptionProps;
+			props: ISingleSelectOptionProps | undefined;
 			event: React.MouseEvent | React.KeyboardEvent;
 		}
 	) => void;

@@ -26,7 +26,6 @@ import Expander, { ExpanderDumb } from './components/Expander/Expander';
 import ExpanderPanel, {
 	ExpanderPanelDumb,
 } from './components/ExpanderPanel/ExpanderPanel';
-// @ts-ignore: not converted yet
 import Paginator, { PaginatorDumb } from './components/Paginator/Paginator';
 // @ts-ignore: not converted yet
 import PieChart, { PieChartDumb } from './components/PieChart/PieChart';
@@ -38,7 +37,6 @@ import SearchField, {
 import Sidebar, { SidebarDumb } from './components/Sidebar/Sidebar';
 import SingleSelect, {
 	SingleSelectDumb,
-	// @ts-ignore: not converted yet
 } from './components/SingleSelect/SingleSelect';
 import SplitButton, {
 	SplitButtonDumb,
