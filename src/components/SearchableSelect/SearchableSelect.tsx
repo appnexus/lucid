@@ -2,13 +2,24 @@
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import _ from 'lodash';
-import { StandardProps, omitProps, findTypes, getFirst } from '../../util/component-types';
+import {
+	StandardProps,
+	omitProps,
+	findTypes,
+	getFirst,
+} from '../../util/component-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import { partitionText, propsSearch } from '../../util/text-manipulation';
 import { buildModernHybridComponent } from '../../util/state-management';
 import * as reducers from './SearchableSelect.reducers';
 import ChevronIcon from '../Icon/ChevronIcon/ChevronIcon';
-import { DropMenuDumb as DropMenu, IDropMenuOptionProps, IDropMenuOptionGroupProps, IDropMenuProps, IDropMenuState } from '../DropMenu/DropMenu';
+import {
+	DropMenuDumb as DropMenu,
+	IDropMenuOptionProps,
+	IDropMenuOptionGroupProps,
+	IDropMenuProps,
+	IDropMenuState,
+} from '../DropMenu/DropMenu';
 import LoadingIcon from '../Icon/LoadingIcon/LoadingIcon';
 import { SearchFieldDumb as SearchField } from '../SearchField/SearchField';
 import { Validation } from '../Validation/Validation';
@@ -120,21 +131,14 @@ export interface ISearchableSelectProps extends StandardProps {
 			props,
 			event,
 		}: {
-			props: IDropMenuOptionProps;
+			props: IDropMenuOptionProps | undefined;
 			event: React.KeyboardEvent | React.MouseEvent;
 		}
 	) => void;
 
-	onSearch: (
-		searchText: string,
-		firstVisibleIndex: number | undefined
-	) => void;
+	onSearch: (searchText: string, firstVisibleIndex: number | undefined) => void;
 
-	optionFilter: (
-		searchValue: string,
-		props: any
-	) => boolean;
-
+	optionFilter: (searchValue: string, props: any) => boolean;
 }
 
 export interface ISearchableSelectState extends IDropMenuState {
@@ -158,7 +162,10 @@ const defaultProps = {
 	onSelect: _.noop,
 };
 
-class SearchableSelect extends React.Component<ISearchableSelectProps, ISearchableSelectState> {
+class SearchableSelect extends React.Component<
+	ISearchableSelectProps,
+	ISearchableSelectState
+> {
 	static displayName = 'SearchableSelect';
 	static peek = {
 		description: `
@@ -295,7 +302,7 @@ class SearchableSelect extends React.Component<ISearchableSelectProps, ISearchab
 			displayed.  If this is the literal \`true\`, it will add the
 			\`-is-error\` class to the wrapper div, but not render the
 			\`-error-content\` \`div\`.
-		`
+		`,
 	};
 
 	getInitialState() {
@@ -305,13 +312,12 @@ class SearchableSelect extends React.Component<ISearchableSelectProps, ISearchab
 			ungroupedOptionData: [],
 			optionGroupDataLookup: {},
 		};
-	};
+	}
 
-	
 	componentWillMount() {
 		// preprocess the options data before rendering
 		this.setState(DropMenu.preprocessOptionData(this.props, SearchableSelect));
-	};
+	}
 
 	componentWillReceiveProps = (nextProps: ISearchableSelectProps) => {
 		// only preprocess options data when it changes (via new props) - better performance than doing this each render
@@ -375,8 +381,8 @@ class SearchableSelect extends React.Component<ISearchableSelectProps, ISearchab
 					{_.isString(optionProps.children)
 						? this.renderUnderlinedChildren(optionProps.children, searchText)
 						: _.isFunction(optionProps.children)
-							? React.createElement(optionProps.children, { searchText })
-							: optionProps.children}
+						? React.createElement(optionProps.children, { searchText })
+						: optionProps.children}
 				</DropMenu.Option>
 			);
 		}
@@ -445,13 +451,13 @@ class SearchableSelect extends React.Component<ISearchableSelectProps, ISearchab
 		return visibleOptionsCount > 0 ? (
 			options
 		) : (
-				<DropMenu.Option isDisabled>
-					<span className={cx('&-noresults')}>
-						No results match "{searchText}"
-					</span>
-				</DropMenu.Option>
-			);
-	};
+			<DropMenu.Option isDisabled>
+				<span className={cx('&-noresults')}>
+					No results match "{searchText}"
+				</span>
+			</DropMenu.Option>
+		);
+	}
 
 	render() {
 		const {
@@ -468,7 +474,7 @@ class SearchableSelect extends React.Component<ISearchableSelectProps, ISearchab
 				searchText,
 				selectedIndex,
 				onSelect,
-				DropMenu: dropMenuProps
+				DropMenu: dropMenuProps,
 			},
 		} = this;
 
@@ -487,15 +493,11 @@ class SearchableSelect extends React.Component<ISearchableSelectProps, ISearchab
 			_.map(findTypes(props, Validation.Error), 'props')
 		);
 
-
 		const placeholder = _.get(placeholderProps, 'children', 'Select');
 		const isItemSelected = _.isNumber(selectedIndex);
 
 		return (
-			<div
-				className={cx('&', className)}
-				style={style}
-			>
+			<div className={cx('&', className)} style={style}>
 				<DropMenu
 					{...dropMenuProps}
 					optionContainerStyle={_.assign(
@@ -505,8 +507,9 @@ class SearchableSelect extends React.Component<ISearchableSelectProps, ISearchab
 					)}
 					isDisabled={isDisabled}
 					onSelect={onSelect}
-					selectedIndices={isItemSelected && selectedIndex ? [selectedIndex] : []}
-
+					selectedIndices={
+						isItemSelected && selectedIndex ? [selectedIndex] : []
+					}
 				>
 					<DropMenu.Control>
 						<div
@@ -516,12 +519,15 @@ class SearchableSelect extends React.Component<ISearchableSelectProps, ISearchab
 									(!isDisabled && isItemSelected && isSelectionHighlighted) ||
 									(isExpanded && isSelectionHighlighted),
 								'&-Control-is-selected':
-									!isDisabled && isItemSelected && isSelectionHighlighted &&
+									!isDisabled &&
+									isItemSelected &&
+									isSelectionHighlighted &&
 									!(errorChildProps && errorChildProps.children),
 								'&-Control-is-expanded': isExpanded,
 								'&-Control-is-invisible': isInvisible,
 								'&-Control-is-disabled': isDisabled,
-								'&-Control-is-error': errorChildProps && errorChildProps.children
+								'&-Control-is-error':
+									errorChildProps && errorChildProps.children,
 							})}
 						>
 							<span
@@ -533,16 +539,16 @@ class SearchableSelect extends React.Component<ISearchableSelectProps, ISearchab
 							>
 								{isItemSelected && selectedIndex
 									? _.get(
-										getFirst(
-											flattenedOptionsData[selectedIndex].optionProps,
-											SearchableSelect.Option.Selected
-										),
-										'props.children'
-									) ||
-									(Children =>
-										_.isFunction(Children) ? <Children /> : Children)(
+											getFirst(
+												flattenedOptionsData[selectedIndex].optionProps,
+												SearchableSelect.Option.Selected
+											),
+											'props.children'
+									  ) ||
+									  (Children =>
+											_.isFunction(Children) ? <Children /> : Children)(
 											flattenedOptionsData[selectedIndex].optionProps.children
-										)
+									  )
 									: placeholder}
 							</span>
 							<ChevronIcon
@@ -576,21 +582,22 @@ class SearchableSelect extends React.Component<ISearchableSelectProps, ISearchab
 					{this.renderOptions()}
 				</DropMenu>
 				{errorChildProps &&
-					errorChildProps.children &&
-					errorChildProps.children !== true ? (
-						<div
-							{...omitProps(errorChildProps, undefined)}
-							className={cx('&-error-content')}
-						>
-							{errorChildProps.children}
-						</div>
-					) : null}
+				errorChildProps.children &&
+				errorChildProps.children !== true ? (
+					<div
+						{...omitProps(errorChildProps, undefined)}
+						className={cx('&-error-content')}
+					>
+						{errorChildProps.children}
+					</div>
+				) : null}
 			</div>
 		);
-	};
-};
+	}
+}
 
-export default buildModernHybridComponent<ISearchableSelectProps,
+export default buildModernHybridComponent<
+	ISearchableSelectProps,
 	ISearchableSelectState,
 	typeof SearchableSelect
 >(SearchableSelect, { reducers });
