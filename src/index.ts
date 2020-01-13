@@ -35,7 +35,6 @@ import SearchField, {
 import Sidebar, { SidebarDumb } from './components/Sidebar/Sidebar';
 import SingleSelect, {
 	SingleSelectDumb,
-	// @ts-ignore: not converted yet
 } from './components/SingleSelect/SingleSelect';
 import SplitButton, {
 	SplitButtonDumb,
