@@ -2,12 +2,7 @@ import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import _ from 'lodash';
 import { lucidClassNames } from '../../util/style-helpers';
-import {
-	findTypes,
-	getFirst,
-	Overwrite,
-	StandardProps,
-} from '../../util/component-types';
+import { findTypes, getFirst, StandardProps } from '../../util/component-types';
 import { buildModernHybridComponent } from '../../util/state-management';
 import * as reducers from './SingleSelect.reducers';
 import {
@@ -105,7 +100,7 @@ OptionGroup.defaultProps = DropMenu.OptionGroup.defaultProps;
 type ISingleSelectDropMenuProps = Partial<IDropMenuProps>;
 
 /** Single Select Component */
-interface ISingleSelectPropsRaw extends StandardProps {
+export interface ISingleSelectProps extends StandardProps {
 	/** Custom Placeholder component (alias for `SingleSelect.Placeholder`)  */
 	Placeholder?: React.ReactNode;
 
@@ -129,7 +124,6 @@ interface ISingleSelectPropsRaw extends StandardProps {
 
 	selectedIndex: number | null;
 
-	//DropMenu: IDropMenuProps;
 	DropMenu: ISingleSelectDropMenuProps;
 
 	maxMenuHeight?: number | string;
@@ -144,16 +138,7 @@ interface ISingleSelectPropsRaw extends StandardProps {
 			event: React.MouseEvent | React.KeyboardEvent;
 		}
 	) => void;
-
-	/** TODO: doublecheck this type */
-	ref?: string;
 }
-
-/** TODO: Revisit Overwrite */
-export type ISingleSelectProps = Overwrite<
-	React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>,
-	ISingleSelectPropsRaw
->;
 
 export interface ISingleSelectState extends IDropMenuState {
 	selectedIndex: number | null;
@@ -210,8 +195,8 @@ class SingleSelect extends React.Component<
 
 	static propTypes = {
 		children: node`
-			Should be instances of {\`SingleSelect.Placeholder\`,
-			\`SingleSelect.Option\`, \`SingleSelect.OptionGroup\`}. Other direct
+			Should be instances of: \`SingleSelect.Placeholder\`,
+			\`SingleSelect.Option\`, \`SingleSelect.OptionGroup\`. Other direct
 			child elements will not render.
 		`,
 
@@ -235,7 +220,7 @@ class SingleSelect extends React.Component<
 		`,
 
 		isDisabled: bool`
-			Disables the SingleSelect from being clicked or focused.
+			Disables the \`SingleSelect\` from being clicked or focused.
 		`,
 
 		isInvisible: bool`
@@ -253,7 +238,7 @@ class SingleSelect extends React.Component<
 		`,
 
 		DropMenu: shape(DropMenu.propTypes)`
-			Object of DropMenu props which are passed thru to the underlying DropMenu
+			Object of \`DropMenu\` props which are passed thru to the underlying \`DropMenu\`
 			component.
 		`,
 
@@ -360,7 +345,7 @@ class SingleSelect extends React.Component<
 			<DropMenu
 				{...dropMenuProps}
 				isDisabled={isDisabled}
-				selectedIndices={isItemSelected ? [selectedIndex as number] : []}
+				selectedIndices={_.isNumber(selectedIndex) ? [selectedIndex] : []}
 				className={cx('&', className)}
 				onSelect={onSelect}
 				style={style}

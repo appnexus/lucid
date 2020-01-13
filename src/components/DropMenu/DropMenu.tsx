@@ -8,7 +8,6 @@ import {
 	rejectTypes,
 	findTypes,
 	omitProps,
-	FC,
 } from '../../util/component-types';
 import { scrollParentTo } from '../../util/dom-helpers';
 import { buildModernHybridComponent } from '../../util/state-management';
@@ -117,8 +116,7 @@ export interface IDropMenuOptionProps extends StandardProps {
 	isWrapped?: boolean;
 }
 
-const Option: FC<IDropMenuOptionProps> = (_props: IDropMenuOptionProps): null =>
-	null;
+const Option = (_props: IDropMenuOptionProps): null => null;
 Option.displayName = 'DropMenu.Option';
 Option.peek = {
 	description: `
@@ -166,9 +164,7 @@ export interface IDropMenuFixedOptionProps extends StandardProps {
 	isWrapped: boolean;
 }
 
-const FixedOption: FC<IDropMenuFixedOptionProps> = (
-	_props: IDropMenuFixedOptionProps
-): null => null;
+const FixedOption = (_props: IDropMenuFixedOptionProps): null => null;
 FixedOption.displayName = 'DropMenu.FixedOption';
 FixedOption.peek = {
 	description: `
@@ -349,10 +345,10 @@ export interface IHasOptionChildren<
 	NullOptionProps,
 	FixedOptionProps
 > {
-	OptionGroup: FC<OptionGroupProps>;
-	Option: FC<OptionProps>;
-	NullOption: FC<NullOptionProps>;
-	FixedOption: FC<FixedOptionProps>;
+	OptionGroup: (_props: OptionGroupProps) => null;
+	Option: (_props: OptionProps) => null;
+	NullOption: (_props: NullOptionProps) => null;
+	FixedOption: (_props: FixedOptionProps) => null;
 }
 
 export interface IDropMenuState {
@@ -409,7 +405,7 @@ class DropMenu extends React.Component<IDropMenuProps, IDropMenuState> {
 	static peek = {
 		ContextMenu: DropMenuContextMenu,
 		description: `
-				This is a helper component used to render a menu of options attached to
+				\`DropMenu\` is a helper component used to render a menu of options attached to
 				any control. Supports option groups with and without labels as well as
 				special options with a \`null\` index for unselect.
 			`,
@@ -421,8 +417,8 @@ class DropMenu extends React.Component<IDropMenuProps, IDropMenuState> {
 
 	static propTypes = {
 		children: node`
-			Should be instances of {\`DropMenu.Control\`, \`DropMenu.Option\`,
-			\`DropMenu.OptionGroup\`, \`DropMenu.Nulloption\`}. Other direct child
+			Should be instances of: \`DropMenu.Control\`, \`DropMenu.Option\`,
+			\`DropMenu.OptionGroup\`, \`DropMenu.Nulloption\`. Other direct child
 			elements will not render.
 		`,
 

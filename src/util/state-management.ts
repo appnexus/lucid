@@ -107,7 +107,6 @@ export function bindReducersToState<P, S extends object>(
 	reducers: Reducers<P, S>,
 	{ getState, setState }: IStateOptions<S>
 ) {
-	console.log('getDeepPaths', getDeepPaths(reducers));
 	return _.reduce(
 		getDeepPaths(reducers),
 		(memo, path) => {
@@ -129,8 +128,6 @@ export function getStatefulPropsContext<P, S extends object>(
 	{ getState, setState }: IStateOptions<S>
 ): IBoundContext<P, S> {
 	const boundReducers = bindReducersToState(reducers, { getState, setState });
-
-	console.log('boundReducers', boundReducers);
 
 	const combineFunctionsCustomizer = (objValue: any, srcValue: any) => {
 		if (_.isFunction(srcValue) && _.isFunction(objValue)) {

@@ -60,12 +60,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/AxisLabel/examples',
 			true,
-			/\.jsx?$/
+			/\.tsx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/AxisLabel/examples',
 			true,
-			/\.jsx?$/
+			/\.tsx?$/
 		),
 	},
 	{
@@ -574,12 +574,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Paginator/examples',
 			true,
-			/\.tsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Paginator/examples',
 			true,
-			/\.tsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 	{
@@ -692,12 +692,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/RadioGroup/examples',
 			true,
-			/\.jsx?$/
+			/\.tsx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/RadioGroup/examples',
 			true,
-			/\.jsx?$/
+			/\.tsx?$/
 		),
 	},
 	{
@@ -854,12 +854,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/SingleSelect/examples',
 			true,
-			/\.tsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/SingleSelect/examples',
 			true,
-			/\.tsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 	{
