@@ -133,6 +133,48 @@ describe('SearchableSingleSelect', () => {
 				expect(onSelect).toHaveBeenCalledWith(null);
 			});
 		});
+
+		describe('Error', () => {
+			it('should apply the appropriate classNames to the saerch', () => {
+				const wrapper = shallow(
+					<SearchableSingleSelect Error={'Erroring out'}>
+						<Option>option a</Option>
+						<Option>option b</Option>
+					</SearchableSingleSelect>
+				);
+
+				const searchWrapper = wrapper.find('.lucid-SearchableSingleSelect-search-is-error');
+
+				expect(searchWrapper.exists()).toBeTruthy();
+			});
+
+			it('should render out the error div', () => {
+				const wrapper = shallow(
+					<SearchableSingleSelect Error={'Erroring out'}>
+						<Option>option a</Option>
+						<Option>option b</Option>
+					</SearchableSingleSelect>
+				);
+
+				const searchWrapper = wrapper.find('.lucid-SearchableSingleSelect-error-content');
+
+				expect(searchWrapper.text()).toEqual('Erroring out');
+			});
+
+			it('should not render the error div', () => {
+				const wrapper = shallow(
+					<SearchableSingleSelect Error={true}>
+						<Option>option a</Option>
+						<Option>option b</Option>
+					</SearchableSingleSelect>
+				);
+
+				const searchWrapper = wrapper.find('.lucid-SearchableSingleSelect-search-is-error');
+				const errorWrapper = wrapper.find('.lucid-SearchableSingleSelect-error-content');
+				expect(errorWrapper.exists()).toBeFalsy();
+				expect(searchWrapper).toBeTruthy();
+			});
+		})
 	});
 
 	describe('custom formatting', () => {

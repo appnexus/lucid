@@ -2,7 +2,7 @@
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import _ from 'lodash';
-import { createClass, findTypes, getFirst } from '../../util/component-types';
+import { createClass, omitProps, findTypes, getFirst } from '../../util/component-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import { partitionText, propsSearch } from '../../util/text-manipulation';
 import { buildHybridComponent } from '../../util/state-management';
@@ -11,6 +11,7 @@ import ChevronIcon from '../Icon/ChevronIcon/ChevronIcon';
 import { DropMenuDumb as DropMenu } from '../DropMenu/DropMenu';
 import LoadingIcon from '../Icon/LoadingIcon/LoadingIcon';
 import { SearchFieldDumb as SearchField } from '../SearchField/SearchField';
+import { Validation } from '../Validation/Validation';
 
 const cx = lucidClassNames.bind('&-SearchableSelect');
 
@@ -205,6 +206,14 @@ const SearchableSelect = createClass({
 			*Child Element* - Used to group \`Option\`s within the menu. Any
 			non-\`Option\`s passed in will be rendered as a label for the group.
 		`,
+
+		Error: any`
+			In most cases this will be a string, but it also accepts any valid React
+			element. If this is a falsey value, then no error message will be
+			displayed.  If this is the literal \`true\`, it will add the
+			\`-is-error\` class to the wrapper div, but not render the
+			\`-error-content\` \`div\`.
+		`
 	},
 
 	getDefaultProps() {
@@ -214,10 +223,12 @@ const SearchableSelect = createClass({
 			isDisabled: false,
 			isInvisible: false,
 			isLoading: false,
+			isValid: true,
 			optionFilter: propsSearch,
 			searchText: '',
 			selectedIndex: null,
 			DropMenu: DropMenu.defaultProps,
+			Error: null
 		};
 	},
 
@@ -297,8 +308,8 @@ const SearchableSelect = createClass({
 					{_.isString(optionProps.children)
 						? this.renderUnderlinedChildren(optionProps.children, searchText)
 						: _.isFunction(optionProps.children)
-						? React.createElement(optionProps.children, { searchText })
-						: optionProps.children}
+							? React.createElement(optionProps.children, { searchText })
+							: optionProps.children}
 				</DropMenu.Option>
 			);
 		}
@@ -367,12 +378,12 @@ const SearchableSelect = createClass({
 		return visibleOptionsCount > 0 ? (
 			options
 		) : (
-			<DropMenu.Option isDisabled>
-				<span className={cx('&-noresults')}>
-					No results match "{searchText}"
-				</span>
-			</DropMenu.Option>
-		);
+				<DropMenu.Option isDisabled>
+					<span className={cx('&-noresults')}>
+						No results match "{searchText}"
+					</span>
+				</DropMenu.Option>
+			);
 	},
 
 	render() {
@@ -390,7 +401,7 @@ const SearchableSelect = createClass({
 				searchText,
 				selectedIndex,
 				onSelect,
-				DropMenu: dropMenuProps,
+				DropMenu: dropMenuProps
 			},
 		} = this;
 
@@ -405,88 +416,109 @@ const SearchableSelect = createClass({
 		const placeholderProps = _.first(
 			_.map(findTypes(this.props, SearchableSelect.Placeholder), 'props')
 		);
+		const errorChildProps = _.first(
+			_.map(findTypes(props, Validation.Error), 'props')
+		);
+
+
 		const placeholder = _.get(placeholderProps, 'children', 'Select');
 		const isItemSelected = _.isNumber(selectedIndex);
 
 		return (
-			<DropMenu
-				{...dropMenuProps}
+			<div
 				className={cx('&', className)}
-				optionContainerStyle={_.assign(
-					{},
-					optionContainerStyle,
-					!_.isNil(maxMenuHeight) ? { maxHeight: maxMenuHeight } : null
-				)}
-				isDisabled={isDisabled}
-				onSelect={onSelect}
-				selectedIndices={isItemSelected ? [selectedIndex] : []}
 				style={style}
 			>
-				<DropMenu.Control>
-					<div
-						tabIndex={0}
-						className={cx('&-Control', {
-							'&-Control-is-highlighted':
-								(!isDisabled && isItemSelected && isSelectionHighlighted) ||
-								(isExpanded && isSelectionHighlighted),
-							'&-Control-is-selected':
-								!isDisabled && isItemSelected && isSelectionHighlighted,
-							'&-Control-is-expanded': isExpanded,
-							'&-Control-is-invisible': isInvisible,
-							'&-Control-is-disabled': isDisabled,
-						})}
-					>
-						<span
-							{...(!isItemSelected ? placeholderProps : null)}
-							className={cx(
-								'&-Control-content',
-								!isItemSelected ? _.get(placeholderProps, 'className') : null
-							)}
+				<DropMenu
+					{...dropMenuProps}
+					optionContainerStyle={_.assign(
+						{},
+						optionContainerStyle,
+						!_.isNil(maxMenuHeight) ? { maxHeight: maxMenuHeight } : null
+					)}
+					isDisabled={isDisabled}
+					onSelect={onSelect}
+					selectedIndices={isItemSelected ? [selectedIndex] : []}
+
+				>
+					<DropMenu.Control>
+						<div
+							tabIndex={0}
+							className={cx('&-Control', {
+								'&-Control-is-highlighted':
+									(!isDisabled && isItemSelected && isSelectionHighlighted) ||
+									(isExpanded && isSelectionHighlighted),
+								'&-Control-is-selected':
+									!isDisabled && isItemSelected && isSelectionHighlighted &&
+									!(errorChildProps && errorChildProps.children),
+								'&-Control-is-expanded': isExpanded,
+								'&-Control-is-invisible': isInvisible,
+								'&-Control-is-disabled': isDisabled,
+								'&-Control-is-error': errorChildProps && errorChildProps.children
+							})}
 						>
-							{isItemSelected
-								? _.get(
+							<span
+								{...(!isItemSelected ? placeholderProps : null)}
+								className={cx(
+									'&-Control-content',
+									!isItemSelected ? _.get(placeholderProps, 'className') : null
+								)}
+							>
+								{isItemSelected
+									? _.get(
 										getFirst(
 											flattenedOptionsData[selectedIndex].optionProps,
 											SearchableSelect.Option.Selected
 										),
 										'props.children'
-								  ) ||
-								  (Children =>
+									) ||
+									(Children =>
 										_.isFunction(Children) ? <Children /> : Children)(
-										flattenedOptionsData[selectedIndex].optionProps.children
-								  )
-								: placeholder}
-						</span>
-						<ChevronIcon
-							size={12}
-							direction={isExpanded ? direction : 'down'}
+											flattenedOptionsData[selectedIndex].optionProps.children
+										)
+									: placeholder}
+							</span>
+							<ChevronIcon
+								size={12}
+								direction={isExpanded ? direction : 'down'}
+							/>
+						</div>
+					</DropMenu.Control>
+					<DropMenu.Header className={cx('&-Search-container')}>
+						<SearchField
+							{...searchFieldProps}
+							autoComplete={searchFieldProps.autoComplete || 'off'}
+							onChange={this.handleSearch}
+							value={searchText}
 						/>
-					</div>
-				</DropMenu.Control>
-				<DropMenu.Header className={cx('&-Search-container')}>
-					<SearchField
-						{...searchFieldProps}
-						autoComplete={searchFieldProps.autoComplete || 'off'}
-						onChange={this.handleSearch}
-						value={searchText}
-					/>
-				</DropMenu.Header>
-				{isLoading && (
-					<DropMenu.Option
-						key='SearchableSelectLoading'
-						className={cx('&-Loading')}
-						isDisabled
-					>
-						<LoadingIcon />
-					</DropMenu.Option>
-				)}
-				{hasReset && isItemSelected && (
-					<DropMenu.NullOption {...placeholderProps}>
-						{placeholder}
-					</DropMenu.NullOption>
-				)}
-				{this.renderOptions()}
-			</DropMenu>
+					</DropMenu.Header>
+					{isLoading && (
+						<DropMenu.Option
+							key='SearchableSelectLoading'
+							className={cx('&-Loading')}
+							isDisabled
+						>
+							<LoadingIcon />
+						</DropMenu.Option>
+					)}
+					{hasReset && isItemSelected && (
+						<DropMenu.NullOption {...placeholderProps}>
+							{placeholder}
+						</DropMenu.NullOption>
+					)}
+					{this.renderOptions()}
+				</DropMenu>
+				{errorChildProps &&
+					errorChildProps.children &&
+					errorChildProps.children !== true ? (
+						<div
+							{...omitProps(errorChildProps, undefined)}
+							className={cx('&-error-content')}
+						>
+							{errorChildProps.children}
+						</div>
+					) : null}
+			</div>
 		);
 	},
 });

@@ -3195,47 +3195,51 @@ exports[`SearchableMultiSelect custom formatting should render Option.Selected i
       </CheckboxLabeled>
     </DropMenu.Option>
   </DropMenu>
-  <Selection
-    className="lucid-SearchableMultiSelect-Selection-section"
-    hasBackground={true}
-    isBold={true}
-    isRemovable={true}
-    kind="container"
-    onRemove={[Function]}
-    responsiveMode="large"
+  <div
+    className="lucid-SearchableMultiSelect-Selection-padding"
   >
-    <Selection.Label>
-      Selected
-    </Selection.Label>
     <Selection
-      callbackId={1}
-      hasBackground={false}
-      isBold={false}
+      className="lucid-SearchableMultiSelect-Selection-section"
+      hasBackground={true}
+      isBold={true}
       isRemovable={true}
-      key="1"
-      kind="default"
+      kind="container"
       onRemove={[Function]}
       responsiveMode="large"
     >
       <Selection.Label>
-        option b
+        Selected
       </Selection.Label>
+      <Selection
+        callbackId={1}
+        hasBackground={false}
+        isBold={false}
+        isRemovable={true}
+        key="1"
+        kind="default"
+        onRemove={[Function]}
+        responsiveMode="large"
+      >
+        <Selection.Label>
+          option b
+        </Selection.Label>
+      </Selection>
+      <Selection
+        callbackId={2}
+        hasBackground={false}
+        isBold={false}
+        isRemovable={true}
+        key="2"
+        kind="default"
+        onRemove={[Function]}
+        responsiveMode="large"
+      >
+        <Selection.Label>
+          option c
+        </Selection.Label>
+      </Selection>
     </Selection>
-    <Selection
-      callbackId={2}
-      hasBackground={false}
-      isBold={false}
-      isRemovable={true}
-      key="2"
-      kind="default"
-      onRemove={[Function]}
-      responsiveMode="large"
-    >
-      <Selection.Label>
-        option c
-      </Selection.Label>
-    </Selection>
-  </Selection>
+  </div>
 </div>
 `;
 
@@ -3499,60 +3503,64 @@ exports[`SearchableMultiSelect custom formatting should render OptionGroup.Selec
       </DropMenu.Option>
     </DropMenu.OptionGroup>
   </DropMenu>
-  <Selection
-    className="lucid-SearchableMultiSelect-Selection-section"
-    hasBackground={true}
-    isBold={true}
-    isRemovable={true}
-    kind="container"
-    onRemove={[Function]}
-    responsiveMode="large"
+  <div
+    className="lucid-SearchableMultiSelect-Selection-padding"
   >
-    <Selection.Label>
-      Selected
-    </Selection.Label>
     <Selection
-      className="lucid-SearchableMultiSelect-Selection-group"
-      hasBackground={false}
+      className="lucid-SearchableMultiSelect-Selection-section"
+      hasBackground={true}
       isBold={true}
-      isRemovable={false}
-      key="optionGroup-0"
+      isRemovable={true}
       kind="container"
       onRemove={[Function]}
       responsiveMode="large"
     >
       <Selection.Label>
-        Selected Foo
+        Selected
       </Selection.Label>
       <Selection
-        callbackId={1}
+        className="lucid-SearchableMultiSelect-Selection-group"
         hasBackground={false}
-        isBold={false}
-        isRemovable={true}
-        key="1"
-        kind="default"
+        isBold={true}
+        isRemovable={false}
+        key="optionGroup-0"
+        kind="container"
         onRemove={[Function]}
         responsiveMode="large"
       >
         <Selection.Label>
-          option b
+          Selected Foo
         </Selection.Label>
-      </Selection>
-      <Selection
-        callbackId={2}
-        hasBackground={false}
-        isBold={false}
-        isRemovable={true}
-        key="2"
-        kind="default"
-        onRemove={[Function]}
-        responsiveMode="large"
-      >
-        <Selection.Label>
-          option c
-        </Selection.Label>
+        <Selection
+          callbackId={1}
+          hasBackground={false}
+          isBold={false}
+          isRemovable={true}
+          key="1"
+          kind="default"
+          onRemove={[Function]}
+          responsiveMode="large"
+        >
+          <Selection.Label>
+            option b
+          </Selection.Label>
+        </Selection>
+        <Selection
+          callbackId={2}
+          hasBackground={false}
+          isBold={false}
+          isRemovable={true}
+          key="2"
+          kind="default"
+          onRemove={[Function]}
+          responsiveMode="large"
+        >
+          <Selection.Label>
+            option c
+          </Selection.Label>
+        </Selection>
       </Selection>
     </Selection>
-  </Selection>
+  </div>
 </div>
 `;

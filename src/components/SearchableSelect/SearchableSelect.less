@@ -40,6 +40,11 @@
 			}
 		}
 
+
+		&-is-error {
+			border: 2px solid @featured-color-danger;
+		}
+
 		&::before {
 			border-radius: @size-borderRadius;
 		}
@@ -129,6 +134,12 @@
 	&-noresults {
 		color: @color-disabledText;
 		font-style: italic;
+	}
+
+	&-error-content {
+		margin-top: @size-XXS;
+		color: @featured-color-danger;
+		font-size: @fontSize * 0.9;
 	}
 }
 

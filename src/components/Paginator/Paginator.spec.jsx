@@ -4,9 +4,11 @@ import assert from 'assert';
 import sinon from 'sinon';
 import _ from 'lodash';
 import { common } from '../../util/generic-tests';
-import { buildHybridComponent } from '../../util/state-management';
+import { buildModernHybridComponent } from '../../util/state-management';
 import { SingleSelectDumb as SingleSelect } from '../SingleSelect/SingleSelect';
 import { PaginatorDumb as Paginator } from './Paginator';
+import * as reducers from './Paginator.reducers';
+import selectors from './Paginator.selectors';
 import Button from '../Button/Button';
 import TextField from '../TextField/TextField';
 
@@ -145,7 +147,10 @@ describe('Paginator', () => {
 
 		describe('totalCount', () => {
 			it('should generate `totalPages` from `totalCount`', () => {
-				const HybridPaginator = buildHybridComponent(Paginator);
+				const HybridPaginator = buildModernHybridComponent(Paginator, {
+					reducers,
+					selectors,
+				});
 				const totalCount = 100;
 				const wrapper = shallow(
 					<HybridPaginator totalCount={totalCount} pageSizeOptions={[10]} />

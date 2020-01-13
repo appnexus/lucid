@@ -17,6 +17,8 @@ import { DropMenuDumb as DropMenu } from '../DropMenu/DropMenu';
 import LoadingIcon from '../Icon/LoadingIcon/LoadingIcon';
 import CheckboxLabeled from '../CheckboxLabeled/CheckboxLabeled';
 import Selection from '../Selection/Selection';
+import { Validation } from '../Validation/Validation';
+
 
 import * as reducers from './SearchableMultiSelect.reducers';
 
@@ -239,6 +241,14 @@ const SearchableMultiSelect = createClass({
 		hasSelectAll: bool`
 			Controls whether to show a "Select All" option.
 		`,
+
+		Error: any`
+			In most cases this will be a string, but it also accepts any valid React
+			element. If this is a falsey value, then no error message will be
+			displayed.  If this is the literal \`true\`, it will add the
+			\`-is-error\` class to the wrapper div, but not render the
+			\`-error-content\` \`div\`.
+		`
 	},
 
 	getInitialState() {
@@ -263,6 +273,7 @@ const SearchableMultiSelect = createClass({
 			hasRemoveAll: true,
 			hasSelections: true,
 			hasSelectAll: false,
+			Error: null
 		};
 	},
 
@@ -419,8 +430,8 @@ const SearchableMultiSelect = createClass({
 						{_.isString(optionProps.children)
 							? this.renderUnderlinedChildren(optionProps.children, searchText)
 							: _.isFunction(optionProps.children)
-							? React.createElement(optionProps.children, { searchText })
-							: optionProps.children}
+								? React.createElement(optionProps.children, { searchText })
+								: optionProps.children}
 					</CheckboxLabeled.Label>
 				</CheckboxLabeled>
 			</DropMenu.Option>
@@ -533,14 +544,17 @@ const SearchableMultiSelect = createClass({
 			'props',
 			{}
 		);
+		const errorChildProps = _.first(
+			_.map(findTypes(props, Validation.Error), 'props')
+		);
 		const selectionLabel = getFirst(
 			props,
 			SearchableMultiSelect.SelectionLabel
 		) || (
-			<SearchableMultiSelect.SelectionLabel>
-				Selected
-			</SearchableMultiSelect.SelectionLabel>
-		);
+				<SearchableMultiSelect.SelectionLabel>
+					Selected
+				</SearchableMultiSelect.SelectionLabel>
+			);
 		const isSmall = responsiveMode === 'small';
 
 		return (
@@ -554,7 +568,7 @@ const SearchableMultiSelect = createClass({
 					className={cx(
 						'&-DropMenu',
 						{
-							'&-DropMenu-is-small': isSmall,
+							'&-DropMenu-is-small': isSmall
 						},
 						dropMenuProps.className
 					)}
@@ -580,6 +594,7 @@ const SearchableMultiSelect = createClass({
 								'&-search',
 								{
 									'&-search-is-small': isSmall,
+									'&-search-is-error': errorChildProps && errorChildProps.children
 								},
 								searchFieldProps.className
 							)}
@@ -600,128 +615,140 @@ const SearchableMultiSelect = createClass({
 				</DropMenu>
 
 				{hasSelections && !_.isEmpty(selectedIndices) ? (
-					<Selection
-						className={cx('&-Selection-section')}
-						isBold
-						hasBackground
-						kind='container'
-						onRemove={this.handleRemoveAll}
-						responsiveMode={responsiveMode}
-						isRemovable={hasRemoveAll}
-					>
-						<Selection.Label>{selectionLabel.props.children}</Selection.Label>
-						{_.map(
-							optionGroupDataLookup,
-							(groupedOptionsData, optionGroupIndex) => {
-								const selectedGroupedOptions = _.filter(
-									groupedOptionsData,
-									({ optionIndex }) => _.includes(selectedIndices, optionIndex)
-								);
-								if (!_.isEmpty(selectedGroupedOptions)) {
-									const selectedOptionGroupChildren = _.get(
-										getFirst(
-											optionGroups[optionGroupIndex],
-											SearchableMultiSelect.OptionGroup.Selected
-										),
-										'props.children'
+					<div className={cx('&-Selection-padding')}>
+						<Selection
+							className={cx('&-Selection-section')}
+							isBold
+							hasBackground
+							kind='container'
+							onRemove={this.handleRemoveAll}
+							responsiveMode={responsiveMode}
+							isRemovable={hasRemoveAll}
+						>
+							<Selection.Label>{selectionLabel.props.children}</Selection.Label>
+							{_.map(
+								optionGroupDataLookup,
+								(groupedOptionsData, optionGroupIndex) => {
+									const selectedGroupedOptions = _.filter(
+										groupedOptionsData,
+										({ optionIndex }) => _.includes(selectedIndices, optionIndex)
 									);
-									return (
-										<Selection
-											className={cx('&-Selection-group')}
-											key={'optionGroup-' + optionGroupIndex}
-											responsiveMode={responsiveMode}
-											isRemovable={false}
-											isBold
-											kind='container'
-										>
-											<Selection.Label>
-												{!_.isNil(selectedOptionGroupChildren)
-													? selectedOptionGroupChildren
-													: _.first(
+									if (!_.isEmpty(selectedGroupedOptions)) {
+										const selectedOptionGroupChildren = _.get(
+											getFirst(
+												optionGroups[optionGroupIndex],
+												SearchableMultiSelect.OptionGroup.Selected
+											),
+											'props.children'
+										);
+										return (
+											<Selection
+												className={cx('&-Selection-group')}
+												key={'optionGroup-' + optionGroupIndex}
+												responsiveMode={responsiveMode}
+												isRemovable={false}
+												isBold
+												kind='container'
+											>
+												<Selection.Label>
+													{!_.isNil(selectedOptionGroupChildren)
+														? selectedOptionGroupChildren
+														: _.first(
 															rejectTypes(
 																optionGroups[optionGroupIndex].children,
 																SearchableMultiSelect.Option
 															)
-													  )}
+														)}
+												</Selection.Label>
+												{_.map(
+													selectedGroupedOptions,
+													({ optionIndex, optionProps }) => {
+														const selectionProps = _.get(
+															getFirst(
+																optionProps,
+																SearchableMultiSelect.Option.Selection
+															),
+															'props'
+														);
+														return (
+															<Selection
+																key={optionIndex}
+																{...selectionProps}
+																callbackId={optionIndex}
+																responsiveMode={responsiveMode}
+																onRemove={this.handleSelectionRemove}
+															>
+																<Selection.Label>
+																	{_.get(
+																		getFirst(
+																			optionProps,
+																			SearchableMultiSelect.Option.Selected
+																		),
+																		'props.children'
+																	) ||
+																		(_.isFunction(optionProps.children)
+																			? React.createElement(optionProps.children)
+																			: optionProps.children)}
+																</Selection.Label>
+															</Selection>
+														);
+													}
+												)}
+											</Selection>
+										);
+									}
+									return null;
+								}
+							)}
+							{_.map(selectedIndices, selectedIndex => {
+								const selectedUngroupedOptionData = _.find(ungroupedOptionData, {
+									optionIndex: selectedIndex,
+								});
+
+								if (selectedUngroupedOptionData) {
+									const { optionProps } = selectedUngroupedOptionData;
+									const selectionProps = _.get(
+										getFirst(optionProps, SearchableMultiSelect.Option.Selection),
+										'props'
+									);
+									return (
+										<Selection
+											key={selectedIndex}
+											{...selectionProps}
+											callbackId={selectedIndex}
+											responsiveMode={responsiveMode}
+											onRemove={this.handleSelectionRemove}
+										>
+											<Selection.Label>
+												{_.get(
+													getFirst(
+														optionProps,
+														SearchableMultiSelect.Option.Selected
+													),
+													'props.children'
+												) ||
+													(_.isFunction(optionProps.children)
+														? React.createElement(optionProps.children)
+														: optionProps.children)}
 											</Selection.Label>
-											{_.map(
-												selectedGroupedOptions,
-												({ optionIndex, optionProps }) => {
-													const selectionProps = _.get(
-														getFirst(
-															optionProps,
-															SearchableMultiSelect.Option.Selection
-														),
-														'props'
-													);
-													return (
-														<Selection
-															key={optionIndex}
-															{...selectionProps}
-															callbackId={optionIndex}
-															responsiveMode={responsiveMode}
-															onRemove={this.handleSelectionRemove}
-														>
-															<Selection.Label>
-																{_.get(
-																	getFirst(
-																		optionProps,
-																		SearchableMultiSelect.Option.Selected
-																	),
-																	'props.children'
-																) ||
-																	(_.isFunction(optionProps.children)
-																		? React.createElement(optionProps.children)
-																		: optionProps.children)}
-															</Selection.Label>
-														</Selection>
-													);
-												}
-											)}
 										</Selection>
 									);
 								}
 								return null;
-							}
-						)}
-						{_.map(selectedIndices, selectedIndex => {
-							const selectedUngroupedOptionData = _.find(ungroupedOptionData, {
-								optionIndex: selectedIndex,
-							});
-
-							if (selectedUngroupedOptionData) {
-								const { optionProps } = selectedUngroupedOptionData;
-								const selectionProps = _.get(
-									getFirst(optionProps, SearchableMultiSelect.Option.Selection),
-									'props'
-								);
-								return (
-									<Selection
-										key={selectedIndex}
-										{...selectionProps}
-										callbackId={selectedIndex}
-										responsiveMode={responsiveMode}
-										onRemove={this.handleSelectionRemove}
-									>
-										<Selection.Label>
-											{_.get(
-												getFirst(
-													optionProps,
-													SearchableMultiSelect.Option.Selected
-												),
-												'props.children'
-											) ||
-												(_.isFunction(optionProps.children)
-													? React.createElement(optionProps.children)
-													: optionProps.children)}
-										</Selection.Label>
-									</Selection>
-								);
-							}
-							return null;
-						})}
-					</Selection>
+							})}
+						</Selection>
+					</div>
 				) : null}
+				{errorChildProps &&
+					errorChildProps.children &&
+					errorChildProps.children !== true ? (
+						<div
+							{...omitProps(errorChildProps, undefined)}
+							className={cx('&-error-content')}
+						>
+							{errorChildProps.children}
+						</div>
+					) : null}
 			</div>
 		);
 	},

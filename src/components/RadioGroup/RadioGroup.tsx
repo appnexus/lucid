@@ -1,0 +1,233 @@
+import _ from 'lodash';
+import React from 'react';
+import PropTypes from 'react-peek/prop-types';
+import { lucidClassNames, uniqueName } from '../../util/style-helpers';
+import {
+	getFirst,
+	findTypes,
+	rejectTypes,
+	omitProps,
+	StandardProps,
+	Overwrite,
+} from '../../util/component-types';
+import reducers, { IRadioGroupState } from './RadioGroup.reducers';
+import { buildModernHybridComponent } from '../../util/state-management';
+
+import RadioButtonLabeled from '../RadioButtonLabeled/RadioButtonLabeled';
+import RadioButton, { IRadioButtonProps } from '../RadioButton/RadioButton';
+
+const cx = lucidClassNames.bind('&-RadioGroup');
+
+const { func, node, number, string, bool } = PropTypes;
+
+interface IRadioGroupPropsRaw extends StandardProps {
+	/**
+	 * Passed along to the \`RadioGroup.RadioButton\' children whose \'name\'
+	 * props are ignored.
+	 */
+	name: string;
+
+	/**
+	 * Called when the user clicks on one of the child radio buttons or when
+	 * they press the space key while one is in focus, and only called when the
+	 * component is in the unselected state. \`props\` refers to the child
+	 * \`RadioButton\` props.  Signature: \`(selectedIndex, { event, props }) => {}\`
+	 */
+	onSelect: (
+		selectedIndex: string | number,
+		{
+			event,
+			props,
+		}: {
+			event: React.MouseEvent;
+			props: IRadioButtonProps;
+		}
+	) => void;
+
+	/**
+	 * Indicates which \`RadioGroup.RadioButton\' child is currently
+	 * selected. The index of the last \`RadioGroup.RadioButton\` child with
+	 * \'isSelected\' equal to true takes precedence over this prop.
+	 */
+	selectedIndex: number;
+
+	/**
+	 * Indicates whether all \`RadioGroup.RadioButton\' children should appear
+	 * and act disabled by having a "greyed out" palette and ignoring user
+	 * interactions.
+	 */
+	isDisabled: boolean;
+}
+
+type IRadioGroupProps = Overwrite<
+	React.DetailedHTMLProps<
+		React.HTMLAttributes<HTMLSpanElement>,
+		HTMLSpanElement
+	>,
+	IRadioGroupPropsRaw
+>;
+
+const RadioGroupLabel = () => null;
+RadioGroupLabel.peek = {
+	description: `
+        Support radio button labels as \`RadioGroup.Label\` component which
+        can be provided as a child of a \`RadioGroup.RadioButton\`
+        component.
+    `,
+};
+RadioGroupLabel.propTypes = {
+	children: node,
+};
+RadioGroupLabel.displayName = 'RadioGroup.Label';
+
+const defaultProps = {
+	name: uniqueName(`${cx('&')}-`),
+	onSelect: _.noop,
+	selectedIndex: 0,
+	isDisabled: false,
+};
+
+const RadioGroup = (props: IRadioGroupProps) => {
+	const {
+		children,
+		className,
+		name,
+		selectedIndex,
+		isDisabled,
+		...passThroughs
+	} = props;
+
+	const handleSelected = (
+		isSelected: boolean,
+		{
+			event,
+			props: childProps,
+		}: { event: React.MouseEvent; props: IRadioButtonProps }
+	) => {
+		const { callbackId } = childProps;
+
+		if (callbackId !== undefined) {
+			const clickedRadioButtonProps = _.get(
+				_.map(findTypes(props, RadioGroup.RadioButton), 'props'),
+				callbackId
+			);
+			// If the `RadioGroup.RadioButton` child has an `onSelect` prop that is
+			// a function, call that prior to calling the group's `onSelect` prop.
+			if (_.isFunction(clickedRadioButtonProps.onSelect)) {
+				clickedRadioButtonProps.onSelect(isSelected, {
+					event,
+					props: childProps,
+				});
+			}
+			props.onSelect(callbackId, { event, props: childProps });
+		}
+	};
+
+	const radioButtonChildProps = _.map(
+		findTypes(props, RadioGroup.RadioButton),
+		'props'
+	);
+
+	const selectedIndexFromChildren = _.findLastIndex(radioButtonChildProps, {
+		isSelected: true,
+	});
+
+	// If there are any `RadioGroup.RadioButton` children with `isSelected`
+	// equal to true, then the index of the last one should override the
+	// value of the `selectedIndex` prop.
+	const actualSelectedIndex =
+		selectedIndexFromChildren !== -1
+			? selectedIndexFromChildren
+			: selectedIndex;
+
+	return (
+		<span
+			{...omitProps(passThroughs, undefined, _.keys(RadioGroup.propTypes))}
+			className={cx('&', className)}
+		>
+			{_.map(radioButtonChildProps, (radioButtonChildProp, index) => {
+				return (
+					<RadioButtonLabeled
+						{...radioButtonChildProp}
+						isDisabled={isDisabled || radioButtonChildProp.isDisabled}
+						isSelected={actualSelectedIndex === index}
+						key={index}
+						callbackId={index}
+						name={name}
+						onSelect={handleSelected}
+						Label={_.get(
+							getFirst(radioButtonChildProp, RadioGroup.Label),
+							'props',
+							null
+						)}
+					/>
+				);
+			})}
+			{rejectTypes(children, RadioGroup.RadioButton)}
+		</span>
+	);
+};
+
+RadioGroup.displayName = 'RadioGroup';
+
+RadioGroup.propTypes = {
+	children: node`
+    			Should be instances of \`RadioGroup.RadioButton\` which supports the same
+    			props as \`RadioButton\`.
+    		`,
+
+	className: string`
+    			Appended to the component-specific class names set on the root element.
+    		`,
+
+	name: string`
+    			Passed along to the \`RadioGroup.RadioButton\` children whose \`name\`
+    			props are ignored.
+    		`,
+
+	onSelect: func`
+    			Called when the user clicks on one of the child radio buttons or when
+    			they press the space key while one is in focus, and only called when the
+    			component is in the unselected state. \`props\` refers to the child
+    			\`RadioButton\` props.  Signature: \`(selectedIndex, { event, props }) => {}\`
+    		`,
+
+	selectedIndex: number`
+    			Indicates which of the \`RadioGroup.RadioButton\` children is currently
+    			selected. The index of the last \`RadioGroup.RadioButton\` child with
+    			\`isSelected\` equal to true takes precedence over this prop.
+    		`,
+
+	isDisabled: bool`
+    			Indicates whether all \`RadioGroup.RadioButton\` children should appear
+    			and act disabled by having a "greyed out" palette and ignoring user
+    			interactions.
+    		`,
+};
+
+RadioGroup.peek = {
+	description: `
+				This is a group of related radio buttons whose values are mutually
+				exclusive and one whom must be selected any given moment in time.
+
+				Any props that are not explicitly defined in \`propTypes\` are spread
+				onto the root element.
+			`,
+	categories: ['controls', 'toggles'],
+	madeFrom: ['RadioButton'],
+};
+
+RadioGroup.defaultProps = defaultProps;
+
+RadioGroup.reducers = reducers;
+
+RadioGroup.RadioButton = RadioButton;
+
+RadioGroup.Label = RadioGroupLabel;
+
+export default buildModernHybridComponent<
+	IRadioGroupProps,
+	IRadioGroupState,
+	typeof RadioGroup
+>(RadioGroup, { reducers });
+export { RadioGroup as RadioGroupDumb };
