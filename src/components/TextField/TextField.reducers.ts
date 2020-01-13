@@ -15,15 +15,3 @@ export function onChange(
 }
 
 export default { onChange };
-
-// export default {
-// 	onChange(
-// 		state: ITextFieldState,
-// 		value: number | string
-// 	): ITextFieldState  {
-// 		return {
-// 			...state,
-// 			value: value,
-// 		};
-// 	},
-// };

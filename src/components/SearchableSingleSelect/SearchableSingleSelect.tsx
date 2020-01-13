@@ -11,7 +11,10 @@ import {
 	getFirst,
 	findTypes,
 } from '../../util/component-types';
-import { SearchFieldDumb as SearchField, ISearchFieldProps } from '../SearchField/SearchField';
+import {
+	SearchFieldDumb as SearchField,
+	ISearchFieldProps,
+} from '../SearchField/SearchField';
 import {
 	IDropMenuProps,
 	IDropMenuState,
@@ -55,7 +58,8 @@ SearchFieldComponent.propTypes = SearchField.propTypes;
 SearchFieldComponent.defaultProps = SearchField.defaultProps;
 
 /** Option Child Component w/ Selection property */
-export interface ISearchableSingleSelectOptionProps extends IDropMenuOptionProps {
+export interface ISearchableSingleSelectOptionProps
+	extends IDropMenuOptionProps {
 	description?: string;
 	name?: string;
 	Selected?: React.ReactNode;
@@ -94,7 +98,6 @@ Option.propTypes = {
 };
 Option.defaultProps = DropMenu.Option.defaultProps;
 
-
 export interface ISearchableSingleSelectProps extends StandardProps {
 	hasReset?: boolean;
 	hasSelections?: boolean;
@@ -116,7 +119,7 @@ export interface ISearchableSingleSelectProps extends StandardProps {
 			props,
 			event,
 		}: {
-			props: IDropMenuOptionProps;
+			props: IDropMenuOptionProps | undefined;
 			event: React.KeyboardEvent | React.MouseEvent;
 		}
 	) => void;
@@ -133,11 +136,7 @@ export interface ISearchableSingleSelectProps extends StandardProps {
 		}
 	) => void;
 
-	optionFilter: (
-		searchValue: string,
-		props: any
-	) => boolean;
-
+	optionFilter: (searchValue: string, props: any) => boolean;
 }
 
 export interface ISearchableSingleSelectState extends IDropMenuState {
@@ -156,10 +155,13 @@ const defaultProps = {
 	Error: null,
 	onSearch: _.noop,
 	onSelect: _.noop,
-	SearchField: SearchField.defaultProps
-}
+	SearchField: SearchField.defaultProps,
+};
 
-class SearchableSingleSelect extends React.Component<ISearchableSingleSelectProps, ISearchableSingleSelectState> {
+class SearchableSingleSelect extends React.Component<
+	ISearchableSingleSelectProps,
+	ISearchableSingleSelectState
+> {
 	static displayName = 'SearchableSingleSelect';
 	static peek = {
 		description: `
@@ -270,7 +272,7 @@ class SearchableSingleSelect extends React.Component<ISearchableSingleSelectProp
 
 		SearchField: any`
 			*Child Element* - Passes props through to the \`SearchField\` component.
-		`
+		`,
 	};
 
 	getInitialState(): any {
@@ -280,29 +282,32 @@ class SearchableSingleSelect extends React.Component<ISearchableSingleSelectProp
 			ungroupedOptionData: [],
 			optionGroupDataLookup: {},
 		};
-	};
+	}
 
 	componentWillMount(): void {
 		// preprocess the options data before rendering
 		this.setState(
-			DropMenu.preprocessOptionData(
-				this.props,
-				SearchableSingleSelect
-			)
+			DropMenu.preprocessOptionData(this.props, SearchableSingleSelect)
 		);
-	};
+	}
 
 	componentWillReceiveProps(nextProps: ISearchableSingleSelectProps): void {
 		// only preprocess options data when it changes (via new props) - better performance than doing this each render
 		this.setState(
-			DropMenu.preprocessOptionData(
-				nextProps,
-				SearchableSingleSelect
-			)
+			DropMenu.preprocessOptionData(nextProps, SearchableSingleSelect)
 		);
-	};
+	}
 
-	handleSearch = (searchText: string, { event }: { event: React.KeyboardEvent<Element> | React.MouseEvent<Element, MouseEvent> }): void => {
+	handleSearch = (
+		searchText: string,
+		{
+			event,
+		}: {
+			event:
+				| React.KeyboardEvent<Element>
+				| React.MouseEvent<Element, MouseEvent>;
+		}
+	): void => {
 		const {
 			props,
 			props: {
@@ -323,7 +328,7 @@ class SearchableSingleSelect extends React.Component<ISearchableSingleSelectProp
 		// Just an extra call to make sure the search results show up when a user
 		// is typing
 		const dropMenuProps = this.props.DropMenu;
-		onExpand({event, props: dropMenuProps});
+		onExpand({ event, props: dropMenuProps });
 
 		return onSearch(searchText, firstVisibleIndex, {
 			event,
@@ -357,17 +362,26 @@ class SearchableSingleSelect extends React.Component<ISearchableSingleSelectProp
 		];
 	};
 
-	renderOptionContent = (optionProps: ISearchableSingleSelectOptionProps, searchText: string): any => {
+	renderOptionContent = (
+		optionProps: ISearchableSingleSelectOptionProps,
+		searchText: string
+	): any => {
 		return _.isString(optionProps.children) &&
 			_.isString(searchText) &&
 			searchText.length > 0
 			? this.renderUnderlinedChildren(optionProps.children, searchText)
 			: _.isFunction(optionProps.children)
-				? React.createElement(optionProps.children, { searchText })
-				: optionProps.children;
+			? React.createElement(optionProps.children, { searchText })
+			: optionProps.children;
 	};
 
-	renderOption = ({ optionProps, optionIndex }: { optionProps: ISearchableSingleSelectOptionProps, optionIndex: number | null}): any  => {
+	renderOption = ({
+		optionProps,
+		optionIndex,
+	}: {
+		optionProps: ISearchableSingleSelectOptionProps;
+		optionIndex: number | null;
+	}): any => {
 		const { searchText, isLoading, optionFilter } = this.props;
 		return (
 			<DropMenu.Option
@@ -381,7 +395,7 @@ class SearchableSingleSelect extends React.Component<ISearchableSingleSelectProp
 		);
 	};
 
-	renderOptions = (): any =>  {
+	renderOptions = (): any => {
 		const { searchText, isLoading } = this.props;
 
 		const {
@@ -431,12 +445,16 @@ class SearchableSingleSelect extends React.Component<ISearchableSingleSelectProp
 		return null;
 	};
 
-	removeSelection = ({ event, props }: 
-		{event: React.KeyboardEvent<Element> | React.MouseEvent<Element, MouseEvent>, 
-			props: ISearchableSingleSelectOptionProps}): void => {
+	removeSelection = ({
+		event,
+		props,
+	}: {
+		event: React.KeyboardEvent<Element> | React.MouseEvent<Element, MouseEvent>;
+		props: ISearchableSingleSelectOptionProps;
+	}): void => {
 		const dropMenuProps = this.props.DropMenu;
-		this.props.DropMenu.onCollapse({event, props: dropMenuProps});
-		this.props.onSearch('', null, {event, props});
+		this.props.DropMenu.onCollapse({ event, props: dropMenuProps });
+		this.props.onSearch('', null, { event, props });
 		this.props.onSelect(null, { event, props });
 	};
 
@@ -462,16 +480,15 @@ class SearchableSingleSelect extends React.Component<ISearchableSingleSelectProp
 			'props',
 			{}
 		);
-		
+
 		const errorChildProps = _.first(
 			_.map(findTypes(props, Validation.Error), 'props')
 		);
 
 		//user made a selection
 		if (!_.isNil(selectedIndex)) {
-			const selectedOptionProps = this.state.flattenedOptionsData[
-				selectedIndex
-			].optionProps;
+			const selectedOptionProps = this.state.flattenedOptionsData[selectedIndex]
+				.optionProps;
 
 			return (
 				<div
@@ -484,29 +501,40 @@ class SearchableSingleSelect extends React.Component<ISearchableSingleSelectProp
 								? this.renderOptionContent(selectedOptionProps, '')
 								: selectedOptionProps.Selected
 						}
-						className={cx('&', {
-							'&-select-error': errorChildProps && errorChildProps.children && errorChildProps.children !== true
-						}, className)}
+						className={cx(
+							'&',
+							{
+								'&-select-error':
+									errorChildProps &&
+									errorChildProps.children &&
+									errorChildProps.children !== true,
+							},
+							className
+						)}
 						onRemove={this.removeSelection}
 						kind='default'
 					/>
 					{errorChildProps &&
-						errorChildProps.children &&
-						errorChildProps.children !== true ? (
-							<div
-								{...omitProps(errorChildProps, undefined)}
-								className={cx('&-error-select-content')}
-							>
-								{errorChildProps.children}
-							</div>
-						) : null}
+					errorChildProps.children &&
+					errorChildProps.children !== true ? (
+						<div
+							{...omitProps(errorChildProps, undefined)}
+							className={cx('&-error-select-content')}
+						>
+							{errorChildProps.children}
+						</div>
+					) : null}
 				</div>
 			);
 		}
 
 		return (
 			<div
-				{...omitProps(passThroughs, undefined, _.keys(SearchableSingleSelect.propTypes))}
+				{...omitProps(
+					passThroughs,
+					undefined,
+					_.keys(SearchableSingleSelect.propTypes)
+				)}
 				className={cx('&', className)}
 			>
 				<DropMenu
@@ -537,10 +565,14 @@ class SearchableSingleSelect extends React.Component<ISearchableSingleSelectProp
 							{...searchFieldProps}
 							autoComplete={searchFieldProps.autoComplete || 'off'}
 							isDisabled={isDisabled}
-							className={cx('&-search', {
-								'&-search-is-error': errorChildProps && errorChildProps.children
-							},
-								searchFieldProps.className)}
+							className={cx(
+								'&-search',
+								{
+									'&-search-is-error':
+										errorChildProps && errorChildProps.children,
+								},
+								searchFieldProps.className
+							)}
 							value={searchText}
 							onChange={this.handleSearch}
 						/>
@@ -557,21 +589,22 @@ class SearchableSingleSelect extends React.Component<ISearchableSingleSelectProp
 					{this.renderOptions()}
 				</DropMenu>
 				{errorChildProps &&
-					errorChildProps.children &&
-					errorChildProps.children !== true ? (
-						<div
-							{...omitProps(errorChildProps, undefined)}
-							className={cx('&-error-content')}
-						>
-							{errorChildProps.children}
-						</div>
-					) : null}
+				errorChildProps.children &&
+				errorChildProps.children !== true ? (
+					<div
+						{...omitProps(errorChildProps, undefined)}
+						className={cx('&-error-content')}
+					>
+						{errorChildProps.children}
+					</div>
+				) : null}
 			</div>
 		);
-	}
+	};
 }
 
-export default buildModernHybridComponent<ISearchableSingleSelectProps,
+export default buildModernHybridComponent<
+	ISearchableSingleSelectProps,
 	ISearchableSingleSelectState,
 	typeof SearchableSingleSelect
 >(SearchableSingleSelect, { reducers });
