@@ -508,7 +508,7 @@ class SearchableSelect extends React.Component<
 					isDisabled={isDisabled}
 					onSelect={onSelect}
 					selectedIndices={
-						isItemSelected && selectedIndex ? [selectedIndex] : []
+						isItemSelected && _.isNumber(selectedIndex) ? [selectedIndex] : []
 					}
 				>
 					<DropMenu.Control>
@@ -537,7 +537,7 @@ class SearchableSelect extends React.Component<
 									!isItemSelected ? _.get(placeholderProps, 'className') : null
 								)}
 							>
-								{isItemSelected && selectedIndex
+								{isItemSelected && _.isNumber(selectedIndex)
 									? _.get(
 											getFirst(
 												flattenedOptionsData[selectedIndex].optionProps,
