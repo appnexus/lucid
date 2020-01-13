@@ -12,7 +12,7 @@ import {
 
 const cx = lucidClassNames.bind('&-Tag');
 
-const { bool, func, node, string } = PropTypes;
+const { bool, func, node, string, oneOf } = PropTypes;
 
 export interface ITagProps
 	extends StandardProps,
@@ -33,6 +33,9 @@ export interface ITagProps
 	/** Shows or hides the little "x" for a given tag. */
 	isRemovable: boolean;
 
+	/** Style variations of the `Tag`. */
+	kind?: 'primary' | 'success' | 'warning' | 'danger' | 'info' | 'default';
+
 	/** Called when the user clicks to remove a tag. */
 	onRemove: ({
 		props,
@@ -48,6 +51,7 @@ const defaultProps = {
 	hasLightBackground: true,
 	isRemovable: false,
 	onRemove: _.noop,
+	kind: 'default' as const,
 };
 
 export const Tag = (props: ITagProps): React.ReactElement => {
@@ -58,6 +62,7 @@ export const Tag = (props: ITagProps): React.ReactElement => {
 		className,
 		onRemove,
 		hasLightBackground,
+		kind,
 		...passThroughs
 	} = props;
 
@@ -83,6 +88,11 @@ export const Tag = (props: ITagProps): React.ReactElement => {
 					'&-is-leaf': isLeaf,
 					'&-is-removable': isRemovable,
 					'&-has-light-background': hasLightBackground,
+					'&-default': kind === 'default',
+					'&-success': kind === 'success',
+					'&-warning': kind === 'warning',
+					'&-danger': kind === 'danger',
+					'&-info': kind === 'info',
 				},
 				className
 			)}
@@ -131,6 +141,10 @@ Tag.propTypes = {
 
 	isRemovable: bool`
 		Shows or hides the little "x" for a given tag.
+	`,
+
+	kind: oneOf(['primary', 'success', 'warning', 'danger', 'info', 'default'])`
+		Style variations of the \`Tag\`.
 	`,
 
 	onRemove: func`
