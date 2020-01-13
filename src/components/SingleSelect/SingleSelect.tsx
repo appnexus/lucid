@@ -195,8 +195,8 @@ class SingleSelect extends React.Component<
 
 	static propTypes = {
 		children: node`
-			Should be instances of {\`SingleSelect.Placeholder\`,
-			\`SingleSelect.Option\`, \`SingleSelect.OptionGroup\`}. Other direct
+			Should be instances of: \`SingleSelect.Placeholder\`,
+			\`SingleSelect.Option\`, \`SingleSelect.OptionGroup\`. Other direct
 			child elements will not render.
 		`,
 
@@ -220,7 +220,7 @@ class SingleSelect extends React.Component<
 		`,
 
 		isDisabled: bool`
-			Disables the SingleSelect from being clicked or focused.
+			Disables the \`SingleSelect\` from being clicked or focused.
 		`,
 
 		isInvisible: bool`
@@ -238,7 +238,7 @@ class SingleSelect extends React.Component<
 		`,
 
 		DropMenu: shape(DropMenu.propTypes)`
-			Object of DropMenu props which are passed thru to the underlying DropMenu
+			Object of \`DropMenu\` props which are passed thru to the underlying \`DropMenu\`
 			component.
 		`,
 
