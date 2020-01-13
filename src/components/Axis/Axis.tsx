@@ -266,15 +266,15 @@ Axis.defaultProps = defaultProps;
 Axis.displayName = 'Axis';
 Axis.peek = {
 	description: `
-	*For use within an \`svg\`*
+	*\`Axis\` is used within an \`svg\`*
 
-	Axes are used to help render human-readable reference marks on charts.
-	They can either be horizontal or vertical and really only need a scale
+	An \`Axis\` is used to help render human-readable reference marks on charts.
+	It can either be horizontal or vertical and really only needs a scale
 	to be able to draw properly.
 
 	This component is a very close sister to d3's svg axis and most of the
-	logic pwas ported from there.
-`,
+	logic was ported from there.
+	`,
 	categories: ['visualizations', 'chart primitives'],
 };
 Axis.propTypes = {
