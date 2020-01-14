@@ -8,7 +8,6 @@ import {
 	rejectTypes,
 	findTypes,
 	omitProps,
-	FC,
 } from '../../util/component-types';
 import { scrollParentTo } from '../../util/dom-helpers';
 import { buildModernHybridComponent } from '../../util/state-management';
@@ -115,10 +114,10 @@ export interface IDropMenuOptionProps extends StandardProps {
 	isDisabled?: boolean;
 	isHidden?: boolean;
 	isWrapped?: boolean;
+	Selected?: any;
 }
 
-const Option: FC<IDropMenuOptionProps> = (_props: IDropMenuOptionProps): null =>
-	null;
+const Option = (_props: IDropMenuOptionProps): null => null;
 Option.displayName = 'DropMenu.Option';
 Option.peek = {
 	description: `
@@ -140,7 +139,7 @@ Option.propTypes = {
 Option.defaultProps = {
 	isDisabled: false,
 	isHidden: false,
-	isWrapped: true,
+	isWrapped: true
 };
 
 export interface IDropMenuNullOptionProps extends StandardProps {
@@ -166,9 +165,7 @@ export interface IDropMenuFixedOptionProps extends StandardProps {
 	isWrapped: boolean;
 }
 
-const FixedOption: FC<IDropMenuFixedOptionProps> = (
-	_props: IDropMenuFixedOptionProps
-): null => null;
+const FixedOption = (_props: IDropMenuFixedOptionProps): null => null;
 FixedOption.displayName = 'DropMenu.FixedOption';
 FixedOption.peek = {
 	description: `
@@ -224,7 +221,7 @@ export interface IDropMenuProps extends StandardProps {
 	alignment: 'start' | 'center' | 'end';
 
 	/** An array of currently selected \`DropMenu.Option\` indices. */
-	selectedIndices: number[];
+	selectedIndices: number[] | null;
 
 	/** The currently focused index of \`DropMenu.Option\`. Can also be \`null\`. */
 	focusedIndex: number | null;
@@ -261,7 +258,7 @@ export interface IDropMenuProps extends StandardProps {
 	/** Called when an option is clicked, or when an option has focus and the
 			Enter key is pressed. */
 	onSelect: (
-		optionIndex: number | null,
+		optionIndex: any,
 		{
 			props,
 			event,
@@ -347,10 +344,10 @@ export interface IHasOptionChildren<
 	NullOptionProps,
 	FixedOptionProps
 > {
-	OptionGroup: FC<OptionGroupProps>;
-	Option: FC<OptionProps>;
-	NullOption: FC<NullOptionProps>;
-	FixedOption: FC<FixedOptionProps>;
+	OptionGroup: (_props: OptionGroupProps) => null;
+	Option: (_props: OptionProps) => null;
+	NullOption: (_props: NullOptionProps) => null;
+	FixedOption: (_props: FixedOptionProps) => null;
 }
 
 export interface IDropMenuState {
@@ -407,7 +404,7 @@ class DropMenu extends React.Component<IDropMenuProps, IDropMenuState> {
 	static peek = {
 		ContextMenu: DropMenuContextMenu,
 		description: `
-				This is a helper component used to render a menu of options attached to
+				\`DropMenu\` is a helper component used to render a menu of options attached to
 				any control. Supports option groups with and without labels as well as
 				special options with a \`null\` index for unselect.
 			`,
@@ -419,8 +416,8 @@ class DropMenu extends React.Component<IDropMenuProps, IDropMenuState> {
 
 	static propTypes = {
 		children: node`
-			Should be instances of {\`DropMenu.Control\`, \`DropMenu.Option\`,
-			\`DropMenu.OptionGroup\`, \`DropMenu.Nulloption\`}. Other direct child
+			Should be instances of: \`DropMenu.Control\`, \`DropMenu.Option\`,
+			\`DropMenu.OptionGroup\`, \`DropMenu.Nulloption\`. Other direct child
 			elements will not render.
 		`,
 
