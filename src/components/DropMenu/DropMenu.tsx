@@ -403,7 +403,7 @@ class DropMenu extends React.Component<IDropMenuProps, IDropMenuState> {
 	static peek = {
 		ContextMenu: DropMenuContextMenu,
 		description: `
-				This is a helper component used to render a menu of options attached to
+				\`DropMenu\` is a helper component used to render a menu of options attached to
 				any control. Supports option groups with and without labels as well as
 				special options with a \`null\` index for unselect.
 			`,
@@ -415,8 +415,8 @@ class DropMenu extends React.Component<IDropMenuProps, IDropMenuState> {
 
 	static propTypes = {
 		children: node`
-			Should be instances of {\`DropMenu.Control\`, \`DropMenu.Option\`,
-			\`DropMenu.OptionGroup\`, \`DropMenu.Nulloption\`}. Other direct child
+			Should be instances of: \`DropMenu.Control\`, \`DropMenu.Option\`,
+			\`DropMenu.OptionGroup\`, \`DropMenu.Nulloption\`. Other direct child
 			elements will not render.
 		`,
 

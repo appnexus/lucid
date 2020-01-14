@@ -27,6 +27,7 @@ const {
 	oneOfType,
 } = PropTypes;
 
+<<<<<<< HEAD:src/components/SearchableSelect/SearchableSelect.tsx
 interface ISearchableSelectPlaceholderProps extends StandardProps {
 	description?: string;
 }
@@ -180,9 +181,93 @@ class SearchableSelect extends React.Component<ISearchableSelectProps, ISearchab
 	static FixedOption = DropMenu.FixedOption;
 
 	static propTypes = {
+=======
+const SearchableSelect = createClass({
+	displayName: 'SearchableSelect',
+
+	statics: {
+		peek: {
+			description: `
+				\`SearchableSelect\` is a selector control (like native \`<select>\`) which is used to select a
+				single option from a dropdown list using a SearchField.  Supports
+				option groups with and without labels.
+			`,
+			categories: ['controls', 'selectors'],
+			madeFrom: ['DropMenu', 'SearchField'],
+		},
+	},
+
+	reducers,
+
+	components: {
+		Placeholder: createClass({
+			displayName: 'SearchableSelect.Placeholder',
+			statics: {
+				peek: {
+					description: `
+						Content this is displayed when nothing is selected.
+					`,
+				},
+			},
+			propName: 'Placeholder',
+		}),
+		Option: createClass({
+			displayName: 'SearchableSelect.Option',
+			statics: {
+				peek: {
+					description: `
+						A selectable option in the list.
+					`,
+				},
+			},
+			propName: 'Option',
+			propTypes: {
+				Selected: any`
+					Customizes the rendering of the Option when it is selected and is
+					displayed instead of the Placeholder.
+				`,
+				filterText: string`
+					Text used to filter options when searching. By default, this is the
+					text rendered in the Option, but it can be customized further with
+					this prop.
+				`,
+				...DropMenu.Option.propTypes,
+			},
+			components: {
+				Selected: createClass({
+					displayName: 'SearchableSelect.Option.Selected',
+					statics: {
+						peek: {
+							description: `
+								Customizes the rendering of the Option when it is selected
+								and is displayed instead of the Placeholder.
+							`,
+						},
+					},
+					propName: 'Selected',
+				}),
+			},
+		}),
+		OptionGroup: createClass({
+			displayName: 'SearchableSelect.OptionGroup',
+			statics: {
+				peek: {
+					description: `
+						Groups \`Option\`s together with a non-selectable heading.
+					`,
+				},
+			},
+			propName: 'OptionGroup',
+			propTypes: DropMenu.OptionGroup.propTypes,
+		}),
+		SearchField,
+	},
+
+	propTypes: {
+>>>>>>> 6185c75a1d5b325afaaf78a02035e73787018c4e:src/components/SearchableSelect/SearchableSelect.jsx
 		children: node`
-			Should be instances of {\`SearchableSelect.Placeholder\`,
-			\`SearchableSelect.Option\`, \`SearchableSelect.OptionGroup\`}. Other
+			Should be instances of: \`SearchableSelect.Placeholder\`,
+			\`SearchableSelect.Option\`, \`SearchableSelect.OptionGroup\`. Other
 			direct child elements will not render.
 		`,
 
