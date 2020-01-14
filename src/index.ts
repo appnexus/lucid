@@ -19,7 +19,6 @@ import SearchableMultiSelect, {
 } from './components/SearchableMultiSelect/SearchableMultiSelect';
 import SearchableSingleSelect, {
 	SearchableSingleSelectDumb,
-	// @ts-ignore: not converted yet
 } from './components/SearchableSingleSelect/SearchableSingleSelect';
 import DropMenu, { DropMenuDumb } from './components/DropMenu/DropMenu';
 import Expander, { ExpanderDumb } from './components/Expander/Expander';
