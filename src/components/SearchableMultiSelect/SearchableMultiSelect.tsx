@@ -203,7 +203,7 @@ const defaultProps = {
 	hasSelections: true,
 	hasSelectAll: false,
 	searchText: '',
-	responsiveMode: 'large' as Size,
+	responsiveMode: 'large' as const,
 	selectedIndices: [],
 	DropMenu: DropMenu.defaultProps,
 	Error: null,
@@ -550,7 +550,7 @@ class SearchableMultiSelect extends React.Component<
 	}: {
 		optionProps: ISearchableMultiSelectOptionProps;
 		optionIndex: number;
-	}): any => {
+	}): React.ReactElement => {
 		const { searchText, selectedIndices, isLoading, optionFilter } = this.props;
 		return (
 			<DropMenu.Option
@@ -576,7 +576,7 @@ class SearchableMultiSelect extends React.Component<
 		);
 	};
 
-	renderOptions = (): any => {
+	renderOptions = (): React.ReactElement[] | React.ReactElement | null => {
 		const { searchText, isLoading, hasSelectAll, selectedIndices } = this.props;
 
 		const {
