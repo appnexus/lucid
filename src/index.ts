@@ -9,7 +9,6 @@ import ButtonGroup, {
 } from './components/ButtonGroup/ButtonGroup';
 import SearchableSelect, {
 	SearchableSelectDumb,
-	// @ts-ignore: not converted yet
 } from './components/SearchableSelect/SearchableSelect';
 import DateSelect, { DateSelectDumb } from './components/DateSelect/DateSelect';
 import SearchableMultiSelect, {
@@ -18,7 +17,6 @@ import SearchableMultiSelect, {
 } from './components/SearchableMultiSelect/SearchableMultiSelect';
 import SearchableSingleSelect, {
 	SearchableSingleSelectDumb,
-	// @ts-ignore: not converted yet
 } from './components/SearchableSingleSelect/SearchableSingleSelect';
 import DropMenu, { DropMenuDumb } from './components/DropMenu/DropMenu';
 import Expander, { ExpanderDumb } from './components/Expander/Expander';
@@ -99,7 +97,6 @@ import DuplicateIcon from './components/Icon/DuplicateIcon/DuplicateIcon';
 import EditIcon from './components/Icon/EditIcon/EditIcon';
 import EligibilityIcon from './components/Icon/EligibilityIcon/EligibilityIcon';
 import EligibilityLightIcon from './components/Icon/EligibilityLightIcon/EligibilityLightIcon';
-// @ts-ignore: not converted yet
 import EmptyStateWrapper from './components/EmptyStateWrapper/EmptyStateWrapper';
 import EnvelopeIcon from './components/Icon/EnvelopeIcon/EnvelopeIcon';
 import EqualsIcon from './components/Icon/EqualsIcon/EqualsIcon';

@@ -11,7 +11,7 @@ export default createClass({
 		};
 	},
 
-	handleSelect(optionIndex) {
+	handleSelect(optionIndex: number) {
 		this.setState({
             selectedIndex: optionIndex
 		});

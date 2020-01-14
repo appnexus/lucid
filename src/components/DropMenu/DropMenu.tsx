@@ -114,6 +114,7 @@ export interface IDropMenuOptionProps extends StandardProps {
 	isDisabled?: boolean;
 	isHidden?: boolean;
 	isWrapped?: boolean;
+	Selected?: any;
 }
 
 const Option = (_props: IDropMenuOptionProps): null => null;
@@ -220,7 +221,7 @@ export interface IDropMenuProps extends StandardProps {
 	alignment: 'start' | 'center' | 'end';
 
 	/** An array of currently selected \`DropMenu.Option\` indices. */
-	selectedIndices: number[];
+	selectedIndices: number[] | null;
 
 	/** The currently focused index of \`DropMenu.Option\`. Can also be \`null\`. */
 	focusedIndex: number | null;
@@ -257,7 +258,7 @@ export interface IDropMenuProps extends StandardProps {
 	/** Called when an option is clicked, or when an option has focus and the
 			Enter key is pressed. */
 	onSelect: (
-		optionIndex: number | null,
+		optionIndex: any,
 		{
 			props,
 			event,
