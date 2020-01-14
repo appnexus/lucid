@@ -34,7 +34,7 @@ export interface ITagProps
 	isRemovable: boolean;
 
 	/** Style variations of the `Tag`. */
-	kind?: 'success' | 'warning' | 'danger' | 'info' | 'default';
+	kind?: 'primary' | 'success' | 'warning' | 'danger' | 'info' | 'default';
 
 	/** Called when the user clicks to remove a tag. */
 	onRemove: ({
@@ -89,6 +89,7 @@ export const Tag = (props: ITagProps): React.ReactElement => {
 					'&-is-removable': isRemovable,
 					'&-has-light-background': hasLightBackground,
 					'&-default': kind === 'default',
+					'&-primary': kind === 'primary',
 					'&-success': kind === 'success',
 					'&-warning': kind === 'warning',
 					'&-danger': kind === 'danger',
@@ -143,7 +144,7 @@ Tag.propTypes = {
 		Shows or hides the little "x" for a given tag.
 	`,
 
-	kind: oneOf(['success', 'warning', 'danger', 'info', 'default'])`
+	kind: oneOf(['primary', 'success', 'warning', 'danger', 'info', 'default'])`
 		Style variations of the \`Tag\`.
 	`,
 
