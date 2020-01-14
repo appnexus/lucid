@@ -245,6 +245,7 @@ export interface IDropMenuProps extends StandardProps {
 		props: IDropMenuProps;
 		event: React.KeyboardEvent | React.MouseEvent;
 	}) => void;
+
 	/** Called when expanded and the user clicks the control or outside of the
 			menu, or when the control has focus and the Escape key is pressed */
 	onCollapse: ({
@@ -326,6 +327,7 @@ export interface IDropMenuProps extends StandardProps {
 	/** *Child Element* - props pass through to the underlying ContextMenu
 			component */
 	ContextMenu?: React.ReactNode;
+
 	/** *Child Element* - A special kind of \`Option\` that is always rendered at the top of
 			the menu. */
 	FixedOption?: React.ReactNode;

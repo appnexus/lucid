@@ -39,7 +39,6 @@ import SingleSelect, {
 } from './components/SingleSelect/SingleSelect';
 import SplitButton, {
 	SplitButtonDumb,
-	// @ts-ignore: not converted yet
 } from './components/SplitButton/SplitButton';
 import Submarine, { SubmarineDumb } from './components/Submarine/Submarine';
 import Tabs, { TabsDumb } from './components/Tabs/Tabs';
@@ -51,7 +50,6 @@ import VerticalListMenu, {
 } from './components/VerticalListMenu/VerticalListMenu';
 import VerticalTabs, {
 	VerticalTabsDumb,
-	// @ts-ignore: not converted yet
 } from './components/VerticalTabs/VerticalTabs';
 
 // dumb components

@@ -11,12 +11,12 @@ export type Reducer<S extends object> = (arg0: S, ...args: any[]) => S;
 export type Reducers<P, S extends object> = {
 	//TODO: used any here to cover cases where a component's reducers file also
 	//exports child component reducers, e.g. SingleSelect/DropMenu
-	[K in keyof P]?: Reducer<S> | Reducers<P[K], S> | Reducers<P[K], any>
+	[K in keyof P]?: Reducer<S> | Reducers<P[K], S> | Reducers<P[K], any>;
 };
 
 export type Selector<S> = (arg0: S) => any;
 export type Selectors<P, S extends object> = {
-	[K in keyof P]?: (arg0: S) => any
+	[K in keyof P]?: (arg0: S) => any;
 };
 
 interface IStateOptions<S extends object> {
@@ -206,19 +206,17 @@ export const reduceSelectors: any = _.memoize((selectors: object) => {
 	 * that individual branches maintain reference equality if they haven't been
 	 * modified, even if a sibling (and therefore the parent) has been modified.
 	 */
-	return createSelector(
-		_.identity,
-		(state: { [k: string]: any }) =>
-			_.reduce(
-				selectors,
-				(acc: object, selector: any, key: string) => ({
-					...acc,
-					[key]: _.isFunction(selector)
-						? selector(state)
-						: reduceSelectors(selector)(state[key]),
-				}),
-				state
-			)
+	return createSelector(_.identity, (state: { [k: string]: any }) =>
+		_.reduce(
+			selectors,
+			(acc: object, selector: any, key: string) => ({
+				...acc,
+				[key]: _.isFunction(selector)
+					? selector(state)
+					: reduceSelectors(selector)(state[key]),
+			}),
+			state
+		)
 	);
 });
 
