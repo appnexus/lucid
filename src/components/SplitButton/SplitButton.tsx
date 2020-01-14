@@ -55,7 +55,7 @@ ButtonChild.propTypes = {
 
 export interface ISplitButtonProps extends StandardProps {
 	/** Sets the direction the flyout menu will render relative to the SplitButton. */
-	direction?: 'up' | 'down';
+	direction: 'up' | 'down';
 
 	/** Style variations of the SplitButton. */
 	kind?: 'primary' | 'danger';
