@@ -3,18 +3,40 @@ import _ from 'lodash';
 import { SearchableMultiSelect } from '../../../index';
 
 // eslint-disable-next-line react/prop-types
-const OptionCols = ({ col1, col2, textMatch }) => (
+interface Props extends React.HTMLProps<HTMLParagraphElement> {
+	match?: any;
+}
+function P({ children, ...rest }: Props) {
+	return <p {...rest}>{children}</p>;
+}
+
+const OptionCols: any = ({
+	col1,
+	col2,
+	textMatch,
+}: {
+	col1: string;
+	col2: string;
+	textMatch: string;
+}) => (
 	<div style={{ display: 'flex' }}>
 		<div style={{ width: 100 }}>
-			<p match={textMatch}>{col1}</p>
+			<P match={textMatch}>{col1}</P>
 		</div>
 		<div>
-			<p match={textMatch}>{col2}</p>
+			<P match={textMatch}>{col2}</P>
 		</div>
 	</div>
 );
 
-const optionFilter = (searchText, { filterText }) => {
+const optionFilter = (
+	searchText: string,
+	{
+		filterText,
+	}: {
+		filterText: string;
+	}
+) => {
 	if (filterText) {
 		return new RegExp(_.escapeRegExp(searchText), 'i').test(filterText);
 	}
@@ -31,19 +53,19 @@ export default class extends React.Component {
 					</div>
 
 					<SearchableMultiSelect.Option filterText='Foo' Selected='Foo (1234)'>
-						{({ searchText }) => (
+						{({ searchText }: { searchText: string }) => (
 							<OptionCols col1='1234' col2='Foo' textMatch={searchText} />
 						)}
 					</SearchableMultiSelect.Option>
 
 					<SearchableMultiSelect.Option filterText='Bar' Selected='Bar (2345)'>
-						{({ searchText }) => (
+						{({ searchText }: { searchText: string }) => (
 							<OptionCols col1='2345' col2='Bar' textMatch={searchText} />
 						)}
 					</SearchableMultiSelect.Option>
 
 					<SearchableMultiSelect.Option filterText='Baz' Selected='Baz (3456)'>
-						{({ searchText }) => (
+						{({ searchText }: { searchText: string }) => (
 							<OptionCols col1='3456' col2='Baz' textMatch={searchText} />
 						)}
 					</SearchableMultiSelect.Option>

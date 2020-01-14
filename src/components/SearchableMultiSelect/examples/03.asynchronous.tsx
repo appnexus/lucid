@@ -4,7 +4,7 @@ import createClass from 'create-react-class';
 import { Selection, SearchableMultiSelect } from '../../../index';
 
 const { Option } = SearchableMultiSelect;
-const allData = {
+const allData: any = {
 	100: { name: 'Rita Daniel' },
 	101: { name: 'Meghan Mcgowan' },
 	102: { name: 'Latisha Kent' },
@@ -40,14 +40,14 @@ export default createClass({
 		this.handleSearch('');
 	},
 
-	handleSearch(searchText) {
+	handleSearch(searchText: string) {
 		this.setState({ isLoading: true });
 
 		// Fake an API call
 		setTimeout(() => {
 			const visibleIds = _.reduce(
 				allData,
-				(acc, { name }, id) => {
+				(acc: any[], { name }: {name: string}, id: string) => {
 					return _.includes(name.toLowerCase(), searchText.toLowerCase())
 						? acc.concat(id)
 						: acc;
@@ -62,16 +62,22 @@ export default createClass({
 		}, 750);
 	},
 
-	handleRemove({ props: { callbackId } }) {
+	handleRemove({ props: { callbackId } }: {props : {
+		callbackId: string
+	}}) {
 		this.setState({
 			selectedIds: _.without(this.state.selectedIds, callbackId),
 		});
 	},
 
 	handleSelect(
-		index,
+		index: number,
 		{
 			props: { callbackId },
+		}: {
+			props: {
+				callbackId: string
+			}
 		}
 	) {
 		this.setState({
@@ -85,7 +91,7 @@ export default createClass({
 		// Calculate selected indices based on selected ids
 		const selectedIndices = _.reduce(
 			visibleIds,
-			(acc, id, index) => {
+			(acc: any[], id: string, index: number) => {
 				return _.includes(selectedIds, id) ? acc.concat(index) : acc;
 			},
 			[]
