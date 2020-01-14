@@ -11,7 +11,7 @@ export default createClass({
 		};
 	},
 
-	handleSelect(optionIndex) {
+	handleSelect(optionIndex: string) {
 		this.setState({
 			selectedIndex: optionIndex,
 		});
@@ -20,7 +20,11 @@ export default createClass({
 	render() {
 		return (
 			<section style={{ marginBottom: '20px' }}>
-				<SearchableSelect onSelect={this.handleSelect} maxMenuHeight='200'>
+				<SearchableSelect
+					onSelect={this.handleSelect}
+					maxMenuHeight='200'
+					isInvisible={true}
+				>
 					<Placeholder>Select State</Placeholder>
 					<Option value='AK'>Alaska</Option>
 					<Option value='HI'>Hawaii</Option>
@@ -89,7 +93,7 @@ export default createClass({
 					</OptionGroup>
 				</SearchableSelect>
 
-				<section>
+				<section style={{ marginTop: '10px' }}>
 					Selected Index: {JSON.stringify(this.state.selectedIndex)}
 				</section>
 			</section>

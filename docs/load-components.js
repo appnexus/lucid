@@ -802,12 +802,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/SearchableSelect/examples',
 			true,
-			/\.jsx?$/
+			/\.tsx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/SearchableSelect/examples',
 			true,
-			/\.jsx?$/
+			/\.tsx?$/
 		),
 	},
 	{

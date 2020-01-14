@@ -490,7 +490,6 @@ describe('SearchableSelect', () => {
 					filterTypes(dropMenuChildren, DropMenu.Option),
 					'props'
 				);
-
 				assert.equal(_.size(optionsProps), 3);
 				assert(
 					_.isEqual(optionsProps[0], {
