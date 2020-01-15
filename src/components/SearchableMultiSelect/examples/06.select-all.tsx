@@ -15,6 +15,7 @@ export default createClass({
 						return (
 							<SearchableMultiSelect
 								hasSelectAll
+								selectAllText='Custom Select All Text'
 								responsiveMode={responsiveMode}
 							>
 								<Option>Alabama</Option>

@@ -144,6 +144,7 @@ export interface ISearchableMultiSelectProps extends StandardProps {
 	maxMenuHeight?: string | null;
 	hasRemoveAll: boolean;
 	hasSelectAll: boolean;
+	selectAllText?: string;
 	hasSelections: boolean;
 	searchText: string;
 	initialState?: any;
@@ -202,6 +203,7 @@ const defaultProps = {
 	hasRemoveAll: true,
 	hasSelections: true,
 	hasSelectAll: false,
+	selectAllText: 'Select All',
 	searchText: '',
 	responsiveMode: 'large' as const,
 	selectedIndices: [],
@@ -332,6 +334,10 @@ class SearchableMultiSelect extends React.Component<
 
 		hasSelectAll: bool`
 			Controls whether to show a "Select All" option.
+		`,
+
+		selectAllText: string`
+		The select all text.
 		`,
 
 		Error: any`
@@ -577,7 +583,7 @@ class SearchableMultiSelect extends React.Component<
 	};
 
 	renderOptions = (): React.ReactElement[] | React.ReactElement | null => {
-		const { searchText, isLoading, hasSelectAll, selectedIndices } = this.props;
+		const { searchText, isLoading, hasSelectAll, selectedIndices, selectAllText } = this.props;
 
 		const {
 			optionGroups,
@@ -617,7 +623,7 @@ class SearchableMultiSelect extends React.Component<
 						!isEveryVisibleOptionSelected && isAnyVisibleOptionSelected
 					}
 				>
-					<CheckboxLabeled.Label>Select All</CheckboxLabeled.Label>
+					<CheckboxLabeled.Label>{selectAllText}</CheckboxLabeled.Label>
 				</CheckboxLabeled>
 			</DropMenu.FixedOption>,
 		].concat(
