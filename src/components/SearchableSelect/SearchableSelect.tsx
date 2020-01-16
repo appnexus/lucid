@@ -115,7 +115,7 @@ export interface ISearchableSelectProps extends StandardProps {
 	isInvisible: boolean;
 	isLoading: boolean;
 	isSelectionHighlighted: boolean;
-	maxMenuHeight?: string;
+	maxMenuHeight?: string | number;
 	selectedIndex: number | null;
 	searchText: string;
 	DropMenu: ISearchableSelectDropMenuProps;

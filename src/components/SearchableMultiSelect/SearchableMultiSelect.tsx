@@ -11,6 +11,7 @@ import {
 	getFirst,
 	findTypes,
 	rejectTypes,
+	Overwrite,
 } from '../../util/component-types';
 import {
 	SearchFieldDumb as SearchField,
@@ -138,7 +139,7 @@ Option.defaultProps = DropMenu.Option.defaultProps;
 
 export type Size = 'large' | 'medium' | 'small';
 
-export interface ISearchableMultiSelectProps extends StandardProps {
+export interface ISearchableMultiSelectPropsRaw extends StandardProps {
 	isDisabled: boolean;
 	isLoading: boolean;
 	maxMenuHeight?: string | null;
@@ -190,6 +191,11 @@ export interface ISearchableMultiSelectProps extends StandardProps {
 		event: React.KeyboardEvent | React.MouseEvent;
 	}) => void;
 }
+
+export type ISearchableMultiSelectProps = Overwrite<
+	React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>,
+	ISearchableMultiSelectPropsRaw
+>;
 
 export interface ISearchableMultiSelectState extends IDropMenuState {
 	DropMenu: IDropMenuState;
@@ -583,7 +589,13 @@ class SearchableMultiSelect extends React.Component<
 	};
 
 	renderOptions = (): React.ReactElement[] | React.ReactElement | null => {
-		const { searchText, isLoading, hasSelectAll, selectedIndices, selectAllText } = this.props;
+		const {
+			searchText,
+			isLoading,
+			hasSelectAll,
+			selectedIndices,
+			selectAllText,
+		} = this.props;
 
 		const {
 			optionGroups,
