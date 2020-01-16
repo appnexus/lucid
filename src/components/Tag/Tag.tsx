@@ -89,6 +89,7 @@ export const Tag = (props: ITagProps): React.ReactElement => {
 					'&-is-removable': isRemovable,
 					'&-has-light-background': hasLightBackground,
 					'&-default': kind === 'default',
+					'&-primary': kind === 'primary',
 					'&-success': kind === 'success',
 					'&-warning': kind === 'warning',
 					'&-danger': kind === 'danger',

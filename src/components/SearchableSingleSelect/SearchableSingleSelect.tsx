@@ -10,6 +10,7 @@ import {
 	omitProps,
 	getFirst,
 	findTypes,
+	Overwrite,
 } from '../../util/component-types';
 import {
 	SearchFieldDumb as SearchField,
@@ -98,7 +99,7 @@ Option.propTypes = {
 };
 Option.defaultProps = DropMenu.Option.defaultProps;
 
-export interface ISearchableSingleSelectProps extends StandardProps {
+export interface ISearchableSingleSelectPropsRaw extends StandardProps {
 	hasReset?: boolean;
 	hasSelections?: boolean;
 	isDisabled: boolean;
@@ -138,6 +139,11 @@ export interface ISearchableSingleSelectProps extends StandardProps {
 
 	optionFilter: (searchValue: string, props: any) => boolean;
 }
+
+export type ISearchableSingleSelectProps = Overwrite<
+	React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>,
+	ISearchableSingleSelectPropsRaw
+>;
 
 export interface ISearchableSingleSelectState extends IDropMenuState {
 	DropMenu: IDropMenuState;

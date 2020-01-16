@@ -11,6 +11,7 @@ import {
 	getFirst,
 	findTypes,
 	rejectTypes,
+	Overwrite,
 } from '../../util/component-types';
 import {
 	SearchFieldDumb as SearchField,
@@ -138,12 +139,13 @@ Option.defaultProps = DropMenu.Option.defaultProps;
 
 export type Size = 'large' | 'medium' | 'small';
 
-export interface ISearchableMultiSelectProps extends StandardProps {
+export interface ISearchableMultiSelectPropsRaw extends StandardProps {
 	isDisabled: boolean;
 	isLoading: boolean;
 	maxMenuHeight?: string | null;
 	hasRemoveAll: boolean;
 	hasSelectAll: boolean;
+	selectAllText?: string;
 	hasSelections: boolean;
 	searchText: string;
 	initialState?: any;
@@ -190,6 +192,11 @@ export interface ISearchableMultiSelectProps extends StandardProps {
 	}) => void;
 }
 
+export type ISearchableMultiSelectProps = Overwrite<
+	React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>,
+	ISearchableMultiSelectPropsRaw
+>;
+
 export interface ISearchableMultiSelectState extends IDropMenuState {
 	DropMenu: IDropMenuState;
 	selectedIndex: number | null;
@@ -202,6 +209,7 @@ const defaultProps = {
 	hasRemoveAll: true,
 	hasSelections: true,
 	hasSelectAll: false,
+	selectAllText: 'Select All',
 	searchText: '',
 	responsiveMode: 'large' as const,
 	selectedIndices: [],
@@ -332,6 +340,10 @@ class SearchableMultiSelect extends React.Component<
 
 		hasSelectAll: bool`
 			Controls whether to show a "Select All" option.
+		`,
+
+		selectAllText: string`
+		The select all text.
 		`,
 
 		Error: any`
@@ -577,7 +589,13 @@ class SearchableMultiSelect extends React.Component<
 	};
 
 	renderOptions = (): React.ReactElement[] | React.ReactElement | null => {
-		const { searchText, isLoading, hasSelectAll, selectedIndices } = this.props;
+		const {
+			searchText,
+			isLoading,
+			hasSelectAll,
+			selectedIndices,
+			selectAllText,
+		} = this.props;
 
 		const {
 			optionGroups,
@@ -617,7 +635,7 @@ class SearchableMultiSelect extends React.Component<
 						!isEveryVisibleOptionSelected && isAnyVisibleOptionSelected
 					}
 				>
-					<CheckboxLabeled.Label>Select All</CheckboxLabeled.Label>
+					<CheckboxLabeled.Label>{selectAllText}</CheckboxLabeled.Label>
 				</CheckboxLabeled>
 			</DropMenu.FixedOption>,
 		].concat(

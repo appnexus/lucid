@@ -3,7 +3,6 @@
 
 .@{prefix}-Tag {
 	.no-firefox-svg-aliasing();
-	.kind-border(0, @color-neutral-5);
 
 	background: @color-neutral-4;
 
@@ -77,7 +76,6 @@
 
 		// border
 		border-radius: @size-tag / 2;
-		.kind-border(1px, @color-neutral-5);
 
 		// margin/padding
 		// margin-right: @size-XXS;
@@ -102,9 +100,6 @@
 	&-is-leaf&-is-removable,
 	& > &-is-leaf&-is-removable,
 	& > & > &-is-leaf&-is-removable {
-		// border
-		.kind-border(1px, @color-primary);
-
 		// margin/padding
 		padding: 0 0 0 @size-XS;
 
@@ -119,33 +114,32 @@
 		}
 	}
 
-	.kind-border (@defaultBorderWidth, @defaultColor) {
-		border-width: @defaultBorderWidth;
+	// ---------------
+	// kind props
+	// ---------------
+	@kind-colors: default @color-neutral-5, primary @color-primary,
+		success @featured-color-success, info @featured-color-info,
+		warning @featured-color-warning, danger @featured-color-danger;
 
-		&-default&-is-leaf&-is-removable,
-		& > &-default&-is-leaf&-is-removable,
-		& > & > &-default&-is-leaf&-is-removable {
-			border: 1px solid @color-primary;
+	.setLeafBorder(@kind-colors);
+
+	.setLeafBorder(@list, @i: 1) when(@i <= length(@list)) {
+		@pair: extract(@list, @i);
+		@label: extract(@pair, 1);
+		@color: extract(@pair, 2);
+
+		&-@{label}&-is-leaf,
+		& > &-@{label}&-is-leaf,
+		& > & > &-@{label}&-is-leaf {
+			border: 1px solid @color;
 		}
 
-		&-default {
-			border: @defaultBorderWidth solid @defaultColor;
-		}
-
-		&-success {
-			border: 1px solid @featured-color-success;
-		}
-
-		&-info {
-			border: 1px solid @featured-color-info;
-		}
-
-		&-warning {
-			border: 1px solid @featured-color-warning;
-		}
-
-		&-danger {
-			border: 1px solid @featured-color-danger;
-		}
+		.setLeafBorder(@list, @i + 1);
+	}
+	// override the default border for removable tags
+	&-default&-is-leaf&-is-removable,
+	& > &-default&-is-leaf&-is-removable,
+	& > & > &-default&-is-leaf&-is-removable {
+		border: 1px solid @color-primary;
 	}
 }
