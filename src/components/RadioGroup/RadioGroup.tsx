@@ -13,7 +13,9 @@ import {
 import reducers, { IRadioGroupState } from './RadioGroup.reducers';
 import { buildModernHybridComponent } from '../../util/state-management';
 
-import RadioButtonLabeled from '../RadioButtonLabeled/RadioButtonLabeled';
+import RadioButtonLabeled, {
+	IRadioButtonLabeledLabelProps,
+} from '../RadioButtonLabeled/RadioButtonLabeled';
 import RadioButton, { IRadioButtonProps } from '../RadioButton/RadioButton';
 
 const cx = lucidClassNames.bind('&-RadioGroup');
@@ -67,7 +69,7 @@ type IRadioGroupProps = Overwrite<
 	IRadioGroupPropsRaw
 >;
 
-const RadioGroupLabel = () => null;
+const RadioGroupLabel = (props: IRadioButtonLabeledLabelProps) => null;
 RadioGroupLabel.peek = {
 	description: `
         Support radio button labels as \`RadioGroup.Label\` component which
