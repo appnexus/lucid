@@ -2,6 +2,27 @@
 
 - Nothing at the moment.
 
+## 5.5.0
+
+- #1110 [patch] Remove `kind` type of `primary` from `Tag`, avoid adding `kind` border styles on parent `Tag`
+- #1109 [none] `NotchedTag` documentation
+- #1105 [none] Import css for example app
+- #1112 [patch] Fix props for `SearchableSelect`, `SearchableSingleSelect`, `SearchableMultiSelect` and `RadioGroup`
+- #1111 [minor] Add custom select all text as an option
+- #1108 [minor] Add converted components TypeScript linter
+- #1102 [minor] Convert `SearchableMultiSelect` to TypeScript
+- #1106 [patch] Convert `SplitButton` to TypeScript
+- #1101 [patch] Convert `EmptyStateWrapper`
+- #1099 [minor] Convert `SearchableSingleSelect`
+- #1095 [minor] Convert `SearchableSelect`
+- #1093 [none] Fix typos in the props documentation.
+- #1097 [patch] Convert `AxisLabel` to TypeScript
+- #1107 [none] Update PR Checklist
+- #1098 [minor] Convert `Legend`
+- #1092 [minor] Convert `Paginator` and `SingleSelect`
+- #1094 [minor] Convert `RadioGroup`
+- #1096 [minor] Bump handlebars 4.1.2 -> 4.5.3
+
 ## 5.4.0
 
 - #1104 [minor] Change border colors for `Tag`.
