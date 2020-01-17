@@ -25,9 +25,9 @@ Before updating the documentation and releasing to npm, follow these steps:
 
 ## Update documentation
 
-After enrusing the release is production-ready, determine a suitable version number based on the types of changes in the release.
+After ensuring the release is production-ready, determine a suitable version number based on the types of changes in the release.
 
-We follow [semver](https://semver.org/), which presrcribes that:
+We follow [semver](https://semver.org/), which prescribes that:
 
 - `semver-major`: Breaking changes are "major" (the left-most number).
 - `semver-minor`: Features are "minor" versions (the middle number).
