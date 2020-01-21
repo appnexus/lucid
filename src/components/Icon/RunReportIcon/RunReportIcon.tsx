@@ -23,7 +23,7 @@ export const RunReportIcon = ({
 			{..._.pick(passThroughs, _.keys(iconPropTypes))}
 			className={cx('&', className)}
 		>
-			<path d='M7 10.75h8.5' />
+			<path d='M7 10.75h8' />
 			<path d='M13.5 12.75l2-2-2-2M13.5 15.5h-11v-13h3M10.5 2.5h3V6' />
 			<path d='M9 1.5a1 1 0 00-2 0H5.5V4h5V1.5H9z' />
 		</Icon>
