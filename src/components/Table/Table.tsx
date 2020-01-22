@@ -6,6 +6,8 @@ import {
 	createClass,
 	filterTypes,
 	omitProps,
+	StandardProps,
+	Overwrite,
 } from '../../util/component-types';
 import ArrowIcon from '../Icon/ArrowIcon/ArrowIcon';
 import DragCaptureZone from '../DragCaptureZone/DragCaptureZone';
@@ -24,41 +26,47 @@ const {
 	oneOfType,
 } = PropTypes;
 
-const Thead = createClass({
-	displayName: 'Table.Thead',
+interface ITheadPropsRaw extends StandardProps {}
 
-	statics: {
-		peek: {
-			description: `
-				\`Thead\` renders <thead>.
-			`,
-		},
-	},
+type ITheadProps = Overwrite<
+	React.DetailedHTMLProps<
+		React.HTMLAttributes<HTMLTableHeaderCellElement>,
+		HTMLTableHeaderCellElement
+	>,
+	ITheadPropsRaw
+>;
 
-	propTypes: {
-		className: any`
-			Appended to the component-specific class names set on the root element.
-			Value is run through the \`classnames\` library.
-		`,
+const Thead = (props: ITheadProps) => {
+	const { children, className, ...passThroughs } = props;
 
-		children: node`
-			any valid React children
-		`,
-	},
+	return (
+		<thead
+			{...omitProps(passThroughs, undefined, _.keys(Thead.propTypes))}
+			className={cx('&-Thead', className)}
+		>
+			{renderRowsWithIdentifiedEdges(filterTypes(children, Tr), Th)}
+		</thead>
+	);
+};
 
-	render() {
-		const { children, className, ...passThroughs } = this.props;
+Thead.displayName = 'Table.Thead';
 
-		return (
-			<thead
-				{...omitProps(passThroughs, Thead)}
-				className={cx('&-Thead', className)}
-			>
-				{renderRowsWithIdentifiedEdges(filterTypes(children, Tr), Th)}
-			</thead>
-		);
-	},
-});
+Thead.propTypes = {
+	className: any`
+		Appended to the component-specific class names set on the root element.
+		Value is run through the \`classnames\` library.
+	`,
+
+	children: node`
+		any valid React children
+	`,
+};
+
+Thead.peek = {
+	description: `
+		\`Thead\` renders <thead>.
+	`,
+};
 
 const Tbody = createClass({
 	displayName: 'Table.Tbody',
