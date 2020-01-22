@@ -9,7 +9,7 @@ import { common } from '../../util/generic-tests';
 import assert from 'assert';
 
 import LineChart from './LineChart';
-import EmptyStateWrapper from '../EmptyStateWrapper/EmptyStateWrapper';
+import { EmptyStateWrapper } from '../EmptyStateWrapper/EmptyStateWrapper';
 
 const {
 	EmptyStateWrapper: { Title, Body },

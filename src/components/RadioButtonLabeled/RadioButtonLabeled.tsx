@@ -15,7 +15,7 @@ import RadioButton, {
 const cx = lucidClassNames.bind('&-RadioButtonLabeled');
 const { any, object, string } = PropTypes;
 
-interface IRadioButtonLabeledLabelProps extends StandardProps {
+export interface IRadioButtonLabeledLabelProps extends StandardProps {
 	description?: string;
 }
 const RadioButtonLabeledLabel = (_props: IRadioButtonLabeledLabelProps): null =>

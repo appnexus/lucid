@@ -47,7 +47,7 @@ SelectionIcon.peek = {
 SelectionIcon.displayName = 'Selection.Icon';
 SelectionIcon.propName = 'Icon';
 
-interface ISelectionLabelProps extends StandardProps {}
+export interface ISelectionLabelProps extends StandardProps {}
 
 const SelectionLabel: FC<ISelectionLabelProps> = (): null => null;
 SelectionLabel.peek = {
@@ -68,7 +68,7 @@ type SelectionKind =
 
 type SelectionResponsiveMode = 'small' | 'medium' | 'large';
 
-interface ISelectionProps
+export interface ISelectionProps
 	extends StandardProps,
 		React.DetailedHTMLProps<
 			React.HTMLAttributes<HTMLDivElement>,

@@ -4,7 +4,7 @@ import createClass from 'create-react-class';
 import { SearchableSingleSelect } from '../../../index';
 
 const { Option } = SearchableSingleSelect;
-const allData = {
+const allData: any = {
 	100: { name: 'Rita Daniel' },
 	101: { name: 'Meghan Mcgowan' },
 	102: { name: 'Latisha Kent' },
@@ -40,14 +40,14 @@ export default createClass({
 		this.handleSearch('');
 	},
 
-	handleSearch(searchText) {
+	handleSearch(searchText: string) {
 		this.setState({ isLoading: true });
 
 		// Fake an API call
 		setTimeout(() => {
 			const visibleIds = _.reduce(
 				allData,
-				(acc, { name }, id) => {
+				(acc: any[], { name }: {name: string}, id: string) => {
 					return _.includes(name.toLowerCase(), searchText.toLowerCase())
 						? acc.concat(id)
 						: acc;
@@ -62,7 +62,7 @@ export default createClass({
 		}, 750);
 	},
 
-	handleSelect(index, event) {
+	handleSelect(index: string, event: any) {
 		this.setState({
 			selectedId: _.get(event, 'props.callbackId', null),
 		});

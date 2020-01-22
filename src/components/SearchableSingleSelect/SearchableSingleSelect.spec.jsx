@@ -57,6 +57,9 @@ describe('SearchableSingleSelect', () => {
 					props: {
 						callbackId: 'zero',
 						children: 'Zero',
+						isDisabled: false,
+						isHidden: false,
+						isWrapped: true
 					},
 				};
 
@@ -114,6 +117,12 @@ describe('SearchableSingleSelect', () => {
 
 			it('should work when fired from the selection removal ', () => {
 				const onSelect = jest.fn();
+				const mockSelectionCallback = {
+					event: {
+						preventDefault: _.noop,
+					},
+					props: {},
+				};
 
 				const wrapper = shallow(
 					<SearchableSingleSelect
@@ -128,9 +137,9 @@ describe('SearchableSingleSelect', () => {
 				wrapper
 					.find('Selection')
 					.first()
-					.prop('onRemove')();
+					.prop('onRemove')(mockSelectionCallback);
 
-				expect(onSelect).toHaveBeenCalledWith(null);
+				expect(onSelect).toHaveBeenCalledWith(null, mockSelectionCallback);
 			});
 		});
 

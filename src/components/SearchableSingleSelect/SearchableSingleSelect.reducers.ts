@@ -1,28 +1,21 @@
-import _ from 'lodash';
 import * as DropMenu from '../DropMenu/DropMenu.reducers';
 import SearchField from '../SearchField/SearchField.reducers';
+import { ISearchableSingleSelectState } from './SearchableSingleSelect';
 
-export function onSelect(state, selectedIndex) {
+export function onSelect(state: ISearchableSingleSelectState, selectedIndex: number) {
 	return {
 		...state,
-		selectedIndices: _.xor(state.selectedIndices, [].concat(selectedIndex)),
+		selectedIndex
 	};
 }
 
-export function onSearch(state, searchText, firstVisibleIndex) {
+export function onSearch(state: ISearchableSingleSelectState, searchText: string, firstVisibleIndex: number) {
 	return {
 		...state,
 		searchText,
 		DropMenu: {
 			...DropMenu.onFocusOption(state.DropMenu, firstVisibleIndex),
-		},
-	};
-}
-
-export function onRemoveAll(state) {
-	return {
-		...state,
-		selectedIndices: [],
+		}
 	};
 }
 

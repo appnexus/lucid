@@ -1,6 +1,7 @@
 import * as DropMenu from '../DropMenu/DropMenu.reducers';
+import { ISearchableSelectState } from './SearchableSelect';
 
-export function onSelect(state, selectedIndex) {
+export function onSelect(state: ISearchableSelectState, selectedIndex: number): ISearchableSelectState {
 	return {
 		...state,
 		selectedIndex,
@@ -8,7 +9,7 @@ export function onSelect(state, selectedIndex) {
 	};
 }
 
-export function onSearch(state, searchText, firstVisibleIndex) {
+export function onSearch(state: ISearchableSelectState, searchText: string, firstVisibleIndex: number): ISearchableSelectState {
 	return {
 		...state,
 		searchText,

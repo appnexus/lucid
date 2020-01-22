@@ -76,7 +76,6 @@
 
 		// border
 		border-radius: @size-tag / 2;
-		border: 1px solid @color-neutral-5;
 
 		// margin/padding
 		// margin-right: @size-XXS;
@@ -101,9 +100,6 @@
 	&-is-leaf&-is-removable,
 	& > &-is-leaf&-is-removable,
 	& > & > &-is-leaf&-is-removable {
-		// border
-		border: 1px solid @color-primary;
-
 		// margin/padding
 		padding: 0 0 0 @size-XS;
 
@@ -116,5 +112,34 @@
 				margin: 1px 9px 0 7px;
 			}
 		}
+	}
+
+	// ---------------
+	// kind props
+	// ---------------
+	@kind-colors: default @color-neutral-5, primary @color-primary,
+		success @featured-color-success, info @featured-color-info,
+		warning @featured-color-warning, danger @featured-color-danger;
+
+	.setLeafBorder(@kind-colors);
+
+	.setLeafBorder(@list, @i: 1) when(@i <= length(@list)) {
+		@pair: extract(@list, @i);
+		@label: extract(@pair, 1);
+		@color: extract(@pair, 2);
+
+		&-@{label}&-is-leaf,
+		& > &-@{label}&-is-leaf,
+		& > & > &-@{label}&-is-leaf {
+			border: 1px solid @color;
+		}
+
+		.setLeafBorder(@list, @i + 1);
+	}
+	// override the default border for removable tags
+	&-default&-is-leaf&-is-removable,
+	& > &-default&-is-leaf&-is-removable,
+	& > & > &-default&-is-leaf&-is-removable {
+		border: 1px solid @color-primary;
 	}
 }

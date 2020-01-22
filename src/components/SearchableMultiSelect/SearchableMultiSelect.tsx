@@ -3,22 +3,34 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import { buildHybridComponent } from '../../util/state-management';
+import { buildModernHybridComponent } from '../../util/state-management';
 import { partitionText, propsSearch } from '../../util/text-manipulation';
 import {
-	createClass,
+	StandardProps,
 	omitProps,
 	getFirst,
 	findTypes,
 	rejectTypes,
+	Overwrite,
 } from '../../util/component-types';
-import { SearchFieldDumb as SearchField } from '../SearchField/SearchField';
-import { DropMenuDumb as DropMenu } from '../DropMenu/DropMenu';
+import {
+	SearchFieldDumb as SearchField,
+	ISearchFieldProps,
+} from '../SearchField/SearchField';
+import {
+	IDropMenuProps,
+	IDropMenuState,
+	IDropMenuOptionProps,
+	IDropMenuOptionGroupProps,
+	DropMenuDumb as DropMenu,
+} from '../DropMenu/DropMenu';
 import LoadingIcon from '../Icon/LoadingIcon/LoadingIcon';
 import CheckboxLabeled from '../CheckboxLabeled/CheckboxLabeled';
-import Selection from '../Selection/Selection';
+import Selection, {
+	ISelectionProps,
+	ISelectionLabelProps,
+} from '../Selection/Selection';
 import { Validation } from '../Validation/Validation';
-
 
 import * as reducers from './SearchableMultiSelect.reducers';
 
@@ -37,123 +49,211 @@ const {
 
 const cx = lucidClassNames.bind('&-SearchableMultiSelect');
 
-const SearchableMultiSelect = createClass({
-	displayName: 'SearchableMultiSelect',
+const SelectionOption = (_props: ISelectionProps): null => null;
+SelectionOption.displayName = 'SearchableMultiSelect.Option.Selection';
+SelectionOption.propTypes = Selection.propTypes;
+SelectionOption.propName = 'Selection';
+SelectionOption.peek = {
+	description: `
+		Customizes the rendering of the Option when it is selected
+		and is displayed instead of the Placeholder.
+	`,
+};
 
-	statics: {
-		peek: {
-			description: `
-				A control used to select multiple options from a dropdown list using a
-				SearchField.
-			`,
-			categories: ['controls', 'selectors'],
-			madeFrom: [
-				'Checkbox',
-				'SearchField',
-				'DropMenu',
-				'LoadingIcon',
-				'Selection',
-			],
-		},
-	},
+const Selected = (_props: { children?: React.ReactNode }): null => null;
 
-	reducers,
+Selected.displayName = 'SearchableMultiSelect.Option.Selected';
+Selected.peek = {
+	description: `
+		Customizes the rendering of the Option when it is selected
+		and is displayed instead of the Placeholder.
+	`,
+};
+Selected.propName = 'Selected';
+Selected.propTypes = {};
 
-	components: {
-		Option: createClass({
-			displayName: 'SearchableMultiSelect.Option',
-			statics: {
-				peek: {
-					description: `
-						A selectable option in the list.
-					`,
-				},
-			},
-			propName: 'Option',
-			propTypes: {
-				filterText: string`
-					Text used to filter options when searching. By default, this is the
-					text rendered in the Option, but it can be customized further with
-					this prop.
-				`,
-				...DropMenu.Option.propTypes,
-			},
-			components: {
-				Selected: createClass({
-					displayName: 'SearchableMultiSelect.Option.Selected',
-					statics: {
-						peek: {
-							description: `
-								Customizes the rendering of the Option label when it is
-								selected and is displayed .
-							`,
-						},
-					},
-					propName: 'Selected',
-				}),
-				Selection: createClass({
-					displayName: 'SearchableMultiSelect.Option.Selection',
-					propName: 'Selection',
-					propTypes: Selection.propTypes,
-				}),
-			},
-		}),
-		SearchField: createClass({
-			displayName: 'SearchableMultiSelect.SearchField',
-			statics: {
-				peek: {
-					description: `
-						Passes props through to the \`SearchField\` component.
-					`,
-				},
-			},
-			propName: 'SearchField',
-			propTypes: SearchField.propTypes,
-		}),
+interface ISearchableSingleSelectOptionGroupProps
+	extends IDropMenuOptionGroupProps {
+	Selected?: React.ReactNode;
+}
+const OptionGroup = (_props: ISearchableSingleSelectOptionGroupProps): null =>
+	null;
+OptionGroup.displayName = 'SearchableMultiSelect.OptionGroup';
+OptionGroup.peek = {
+	description: `
+		A special kind of \`Option\` that is always rendered at the top of
+		the menu and has an \`optionIndex\` of \`null\`. Useful for
+		unselect.
+	`,
+};
+OptionGroup.propName = 'OptionGroup';
+OptionGroup.propTypes = DropMenu.OptionGroup.propTypes;
+OptionGroup.defaultProps = DropMenu.OptionGroup.defaultProps;
+OptionGroup.Selected = Selected;
 
-		OptionGroup: createClass({
-			displayName: 'SearchableMultiSelect.OptionGroup',
-			statics: {
-				peek: {
-					description: `
-						Groups \`Option\`s together with a non-selectable heading.
-					`,
-				},
-			},
-			propName: 'OptionGroup',
-			propTypes: DropMenu.OptionGroup.propTypes,
-			components: {
-				Selected: createClass({
-					displayName: 'SearchableMultiSelect.OptionGroup.Selected',
-					statics: {
-						peek: {
-							description: `
-								Customizes the rendering of the OptionGroup label when it is
-								selected and is displayed.
-							`,
-						},
-					},
-					propName: 'Selected',
-				}),
-			},
-		}),
+const SearchFieldComponent = (_props: ISearchFieldProps): null => null;
+SearchFieldComponent.displayName = 'SearchableMultiSelect.SearchField';
+SearchFieldComponent.peek = {
+	description: `
+		Passes props through to the \`Search Field\`.
+	`,
+};
+SearchFieldComponent.propName = 'SearchField';
+SearchFieldComponent.propTypes = SearchField.propTypes;
+SearchFieldComponent.defaultProps = SearchField.defaultProps;
 
-		SelectionLabel: createClass({
-			displayName: 'SearchableMultiSelect.SelectionLabel',
-			statics: {
-				peek: {
-					description: `
-						Label for the selected section header.
-					`,
-				},
-			},
-			propName: 'SelectionLabel',
-		}),
-	},
+type ISearchableMultiSelectOptionSelectionProps = Partial<ISelectionProps>;
+/** Option Child Component */
+export interface ISearchableMultiSelectOptionProps
+	extends IDropMenuOptionProps {
+	Selection?: ISearchableMultiSelectOptionSelectionProps;
+	description?: string;
+	name?: string;
+	Selected?: React.ReactNode;
+}
 
-	propTypes: {
+const Option = (_props: ISearchableMultiSelectOptionProps): null => null;
+
+Option.displayName = 'SearchableMultiSelect.Option';
+Option.peek = {
+	description: `
+		A selectable option in the list.
+	`,
+};
+Option.Selection = SelectionOption;
+Option.Selected = Selected;
+Option.propName = 'Option';
+Option.propTypes = {
+	Selected: any`
+		Customizes the rendering of the Option when it is selected and is
+		displayed instead of the Placeholder.
+    `,
+	Selection: any`
+        Uses a Selection object for custom rendering of the selected option
+    `,
+	value: string,
+	filterText: string,
+	...DropMenu.Option.propTypes,
+};
+Option.defaultProps = DropMenu.Option.defaultProps;
+
+export type Size = 'large' | 'medium' | 'small';
+
+export interface ISearchableMultiSelectPropsRaw extends StandardProps {
+	isDisabled: boolean;
+	isLoading: boolean;
+	maxMenuHeight?: string | null;
+	hasRemoveAll: boolean;
+	hasSelectAll: boolean;
+	selectAllText?: string;
+	hasSelections: boolean;
+	searchText: string;
+	initialState?: any;
+	responsiveMode: Size;
+	selectedIndices: number[];
+	SearchField?: React.ReactNode;
+	DropMenu: IDropMenuProps;
+	Option?: ISearchableMultiSelectOptionProps;
+	OptionGroup?: IDropMenuOptionGroupProps;
+	SelectionLabel?: ISelectionLabelProps;
+	Error: React.ReactNode;
+
+	onSelect: (
+		optionIndices: number[] | number,
+		{
+			props,
+			event,
+		}: {
+			props: IDropMenuOptionProps | undefined;
+			event: React.KeyboardEvent | React.MouseEvent;
+		}
+	) => void;
+
+	onSearch: (
+		searchText: string,
+		firstVisibleIndex: number | null,
+		{
+			props,
+			event,
+		}: {
+			props: IDropMenuOptionProps;
+			event: React.KeyboardEvent | React.MouseEvent;
+		}
+	) => void;
+
+	optionFilter: (searchValue: string, props: any) => boolean;
+
+	onRemoveAll: ({
+		props,
+		event,
+	}: {
+		props: IDropMenuOptionProps;
+		event: React.KeyboardEvent | React.MouseEvent;
+	}) => void;
+}
+
+export type ISearchableMultiSelectProps = Overwrite<
+	React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>,
+	ISearchableMultiSelectPropsRaw
+>;
+
+export interface ISearchableMultiSelectState extends IDropMenuState {
+	DropMenu: IDropMenuState;
+	selectedIndex: number | null;
+	searchText: string | null;
+}
+
+const defaultProps = {
+	isDisabled: false,
+	isLoading: false,
+	hasRemoveAll: true,
+	hasSelections: true,
+	hasSelectAll: false,
+	selectAllText: 'Select All',
+	searchText: '',
+	responsiveMode: 'large' as const,
+	selectedIndices: [],
+	DropMenu: DropMenu.defaultProps,
+	Error: null,
+	optionFilter: propsSearch,
+	onSearch: _.noop,
+	onRemoveAll: _.noop,
+	onSelect: _.noop,
+};
+
+class SearchableMultiSelect extends React.Component<
+	ISearchableMultiSelectProps,
+	ISearchableMultiSelectState
+> {
+	static displayName = 'SearchableMultiSelect';
+	static peek = {
+		description: `
+            A control used to select multiple options from a dropdown list using a
+            SearchField.
+        `,
+		categories: ['controls', 'selectors'],
+		madeFrom: [
+			'Checkbox',
+			'SearchField',
+			'DropMenu',
+			'LoadingIcon',
+			'Selection',
+		],
+	};
+
+	static defaultProps = defaultProps;
+	static reducers = reducers;
+	static Option = Option;
+	static OptionGroup = OptionGroup;
+	static SearchField = SearchFieldComponent;
+	static NullOption = DropMenu.NullOption;
+	static FixedOption = DropMenu.FixedOption;
+	static DropMenu = DropMenu;
+	static SelectionLabel = Selection.Label;
+
+	static propTypes = {
 		children: node`
-			Should be instances of {\`SearchableMultiSelect.Option\`}. Other direct
+			Should be instances of \`SearchableMultiSelect.Option\`. Other direct
 			child elements will not render.
 		`,
 
@@ -188,7 +288,7 @@ const SearchableMultiSelect = createClass({
 
 		onRemoveAll: func`
 			Called when the user clicks to remove all selections.  Signature:
-			\`({props, event}) => {}\`
+			\`({props, event}) => {}\`.
 		`,
 
 		optionFilter: func`
@@ -242,54 +342,84 @@ const SearchableMultiSelect = createClass({
 			Controls whether to show a "Select All" option.
 		`,
 
+		selectAllText: string`
+		The select all text.
+		`,
+
 		Error: any`
 			In most cases this will be a string, but it also accepts any valid React
 			element. If this is a falsey value, then no error message will be
 			displayed.  If this is the literal \`true\`, it will add the
 			\`-is-error\` class to the wrapper div, but not render the
 			\`-error-content\` \`div\`.
-		`
-	},
+        `,
 
-	getInitialState() {
+		FixedOption: any`
+			*Child Element* - A special kind of \`Option\` that is always rendered at the top of
+			the menu.
+		`,
+
+		NullOption: any`
+			*Child Element* - A special kind of \`Option\` that is always rendered at
+			the top of the menu and has an \`optionIndex\` of \`null\`. Useful for
+			unselect.
+		`,
+
+		OptionGroup: any`
+			*Child Element* - Used to group \`Option\`s within the menu. Any
+			non-\`Option\`s passed in will be rendered as a label for the group.
+        `,
+
+		SearchField: any`
+            *Child Element* - The visual Search element that the user can pass text
+            to.
+        `,
+
+		Label: any`
+            *Child Element* - A custom label used as header text when options are
+            selected.
+        `,
+	};
+
+	getInitialState(): any {
 		return {
 			optionGroups: [],
 			flattenedOptionsData: [],
 			ungroupedOptionData: [],
 			optionGroupDataLookup: {},
 		};
-	},
+	}
 
-	getDefaultProps() {
-		return {
-			isDisabled: false,
-			isLoading: false,
-			onRemoveAll: _.noop,
-			optionFilter: propsSearch,
-			searchText: '',
-			selectedIndices: [],
-			DropMenu: DropMenu.defaultProps,
-			responsiveMode: 'large',
-			hasRemoveAll: true,
-			hasSelections: true,
-			hasSelectAll: false,
-			Error: null
-		};
-	},
-
-	handleDropMenuSelect(optionIndex, { event, props }) {
+	handleDropMenuSelect = (
+		optionIndex: number | null,
+		{
+			event,
+			props,
+		}: {
+			props: IDropMenuOptionProps | undefined;
+			event: React.KeyboardEvent | React.MouseEvent;
+		}
+	): void => {
 		const { onSelect } = this.props;
 
 		event.preventDefault();
 
 		if (optionIndex === 0) {
-			return this.handleSelectAll(event);
+			return this.handleSelectAll({ event, props });
 		}
 		// this index is decremented to account for the "Select All" Option
-		return onSelect(optionIndex - 1, { event, props });
-	},
+		if (optionIndex) {
+			return onSelect(optionIndex - 1, { event, props });
+		}
+	};
 
-	handleSelectAll(event) {
+	handleSelectAll = ({
+		event,
+		props,
+	}: {
+		event: React.KeyboardEvent | React.MouseEvent;
+		props: IDropMenuOptionProps | undefined;
+	}): void => {
 		// This is needed otherwise clicking the checkbox will double fire this
 		// event _and_ the `handleDropMenuSelect` handler
 		const {
@@ -313,10 +443,20 @@ const SearchableMultiSelect = createClass({
 			? _.map(selected, 'optionIndex')
 			: _.map(unselected, 'optionIndex');
 
-		return onSelect(indices);
-	},
+		return onSelect(indices, {
+			props: props,
+			event,
+		});
+	};
 
-	handleSelectionRemove({ event, props, props: { callbackId: optionIndex } }) {
+	handleSelectionRemove = ({
+		event,
+		props,
+		props: { callbackId: optionIndex },
+	}: {
+		event: React.KeyboardEvent | React.MouseEvent;
+		props: any;
+	}): void => {
 		// We don't want to send the consumer the selection's props so we have to
 		// lookup the option they clicked and send its props along
 		const selectedOptionProps = _.get(
@@ -328,13 +468,22 @@ const SearchableMultiSelect = createClass({
 			event,
 			props: selectedOptionProps,
 		});
-	},
+	};
 
-	handleRemoveAll({ event }) {
-		this.props.onRemoveAll({ event, props: this.props });
-	},
+	handleRemoveAll = ({
+		event,
+		props,
+	}: {
+		event: React.KeyboardEvent | React.MouseEvent;
+		props: IDropMenuOptionProps;
+	}): void => {
+		this.props.onRemoveAll({ event, props });
+	};
 
-	handleSearch(searchText, { event }) {
+	handleSearch = (
+		searchText: string,
+		{ event }: { event: React.KeyboardEvent | React.MouseEvent }
+	): void => {
 		const {
 			props,
 			props: {
@@ -352,40 +501,36 @@ const SearchableMultiSelect = createClass({
 			return optionFilter(searchText, option);
 		});
 		const firstVisibleProps = options[firstVisibleIndex];
+		const dropMenuProps = this.props.DropMenu;
 
 		// Just an extra call to make sure the search results show up when a user
 		// is typing
-		onExpand();
+		onExpand({
+			event,
+			props: dropMenuProps,
+		});
 
 		return onSearch(searchText, firstVisibleIndex, {
 			event,
 			props: firstVisibleProps,
 		});
-	},
+	};
 
-	componentWillMount() {
+	componentWillMount(): void {
 		// preprocess the options data before rendering
 		this.setState(
-			DropMenu.preprocessOptionData(
-				this.props,
-				SearchableMultiSelect,
-				props => !this.props.optionFilter(this.props.searchText, props)
-			)
+			DropMenu.preprocessOptionData(this.props, SearchableMultiSelect)
 		);
-	},
+	}
 
-	componentWillReceiveProps(nextProps) {
+	componentWillReceiveProps(nextProps: ISearchableMultiSelectProps): void {
 		// only preprocess options data when it changes (via new props) - better performance than doing this each render
 		this.setState(
-			DropMenu.preprocessOptionData(
-				nextProps,
-				SearchableMultiSelect,
-				props => !this.props.optionFilter(nextProps.searchText, props)
-			)
+			DropMenu.preprocessOptionData(nextProps, SearchableMultiSelect)
 		);
-	},
+	}
 
-	renderUnderlinedChildren(childText, searchText) {
+	renderUnderlinedChildren = (childText: string, searchText: string): any => {
 		const [pre, match, post] = partitionText(
 			childText,
 			new RegExp(_.escapeRegExp(searchText), 'i'),
@@ -409,11 +554,16 @@ const SearchableMultiSelect = createClass({
 				</span>
 			),
 		];
-	},
+	};
 
-	renderOption({ optionProps, optionIndex }) {
+	renderOption = ({
+		optionProps,
+		optionIndex,
+	}: {
+		optionProps: ISearchableMultiSelectOptionProps;
+		optionIndex: number;
+	}): React.ReactElement => {
 		const { searchText, selectedIndices, isLoading, optionFilter } = this.props;
-
 		return (
 			<DropMenu.Option
 				key={'SearchableMultiSelectOption' + optionIndex}
@@ -423,23 +573,29 @@ const SearchableMultiSelect = createClass({
 			>
 				<CheckboxLabeled
 					className={cx('&-CheckboxLabeled')}
-					callbackId={optionIndex}
+					callbackId={optionIndex.toString()}
 					isSelected={_.includes(selectedIndices, optionIndex)}
 				>
 					<CheckboxLabeled.Label>
 						{_.isString(optionProps.children)
 							? this.renderUnderlinedChildren(optionProps.children, searchText)
 							: _.isFunction(optionProps.children)
-								? React.createElement(optionProps.children, { searchText })
-								: optionProps.children}
+							? React.createElement(optionProps.children, { searchText })
+							: optionProps.children}
 					</CheckboxLabeled.Label>
 				</CheckboxLabeled>
 			</DropMenu.Option>
 		);
-	},
+	};
 
-	renderOptions() {
-		const { searchText, isLoading, hasSelectAll, selectedIndices } = this.props;
+	renderOptions = (): React.ReactElement[] | React.ReactElement | null => {
+		const {
+			searchText,
+			isLoading,
+			hasSelectAll,
+			selectedIndices,
+			selectAllText,
+		} = this.props;
 
 		const {
 			optionGroups,
@@ -452,7 +608,6 @@ const SearchableMultiSelect = createClass({
 			flattenedOptionsData,
 			'optionProps.isHidden'
 		);
-
 		const isAllOptionsHidden = _.isEmpty(visibleOptions);
 
 		const isEveryVisibleOptionSelected = _.every(
@@ -479,8 +634,9 @@ const SearchableMultiSelect = createClass({
 					isIndeterminate={
 						!isEveryVisibleOptionSelected && isAnyVisibleOptionSelected
 					}
-					Label='Select All'
-				/>
+				>
+					<CheckboxLabeled.Label>{selectAllText}</CheckboxLabeled.Label>
+				</CheckboxLabeled>
 			</DropMenu.FixedOption>,
 		].concat(
 			_.map(optionGroups, (optionGroupProps, optionGroupIndex) => (
@@ -489,11 +645,13 @@ const SearchableMultiSelect = createClass({
 					{..._.omit(optionGroupProps, 'children', 'Selected')}
 				>
 					{optionGroupProps.children}
-					{_.map(optionGroupDataLookup[optionGroupIndex], this.renderOption)}
+					{_.map(optionGroupDataLookup[optionGroupIndex], option =>
+						this.renderOption(option)
+					)}
 				</DropMenu.OptionGroup>
 			)).concat(
 				// then render all the ungrouped options at the end
-				_.map(ungroupedOptionData, this.renderOption)
+				_.map(ungroupedOptionData, option => this.renderOption(option))
 			)
 		);
 
@@ -512,9 +670,9 @@ const SearchableMultiSelect = createClass({
 		}
 
 		return null;
-	},
+	};
 
-	render() {
+	render = () => {
 		const {
 			props,
 			props: {
@@ -532,13 +690,11 @@ const SearchableMultiSelect = createClass({
 				...passThroughs
 			},
 		} = this;
-
 		const {
 			optionGroupDataLookup,
 			optionGroups,
 			ungroupedOptionData,
 		} = this.state;
-
 		const searchFieldProps = _.get(
 			getFirst(props, SearchableMultiSelect.SearchField),
 			'props',
@@ -547,19 +703,24 @@ const SearchableMultiSelect = createClass({
 		const errorChildProps = _.first(
 			_.map(findTypes(props, Validation.Error), 'props')
 		);
-		const selectionLabel = getFirst(
-			props,
-			SearchableMultiSelect.SelectionLabel
+		const selectionLabel = _.get(
+			getFirst(props, SearchableMultiSelect.SelectionLabel),
+			'props',
+			{}
 		) || (
-				<SearchableMultiSelect.SelectionLabel>
-					Selected
-				</SearchableMultiSelect.SelectionLabel>
-			);
+			<SearchableMultiSelect.SelectionLabel>
+				Selected
+			</SearchableMultiSelect.SelectionLabel>
+		);
 		const isSmall = responsiveMode === 'small';
 
 		return (
 			<div
-				{...omitProps(passThroughs, SearchableMultiSelect)}
+				{...omitProps(
+					passThroughs,
+					undefined,
+					_.keys(SearchableMultiSelect.propTypes)
+				)}
 				className={cx('&', className)}
 			>
 				<DropMenu
@@ -568,7 +729,7 @@ const SearchableMultiSelect = createClass({
 					className={cx(
 						'&-DropMenu',
 						{
-							'&-DropMenu-is-small': isSmall
+							'&-DropMenu-is-small': isSmall,
 						},
 						dropMenuProps.className
 					)}
@@ -594,7 +755,8 @@ const SearchableMultiSelect = createClass({
 								'&-search',
 								{
 									'&-search-is-small': isSmall,
-									'&-search-is-error': errorChildProps && errorChildProps.children
+									'&-search-is-error':
+										errorChildProps && errorChildProps.children,
 								},
 								searchFieldProps.className
 							)}
@@ -625,13 +787,16 @@ const SearchableMultiSelect = createClass({
 							responsiveMode={responsiveMode}
 							isRemovable={hasRemoveAll}
 						>
-							<Selection.Label>{selectionLabel.props.children}</Selection.Label>
+							<Selection.Label>
+								{selectionLabel.children ? selectionLabel.children : 'Selected'}
+							</Selection.Label>
 							{_.map(
 								optionGroupDataLookup,
-								(groupedOptionsData, optionGroupIndex) => {
+								(groupedOptionsData: any[], optionGroupIndex: number) => {
 									const selectedGroupedOptions = _.filter(
 										groupedOptionsData,
-										({ optionIndex }) => _.includes(selectedIndices, optionIndex)
+										({ optionIndex }) =>
+											_.includes(selectedIndices, optionIndex)
 									);
 									if (!_.isEmpty(selectedGroupedOptions)) {
 										const selectedOptionGroupChildren = _.get(
@@ -654,11 +819,11 @@ const SearchableMultiSelect = createClass({
 													{!_.isNil(selectedOptionGroupChildren)
 														? selectedOptionGroupChildren
 														: _.first(
-															rejectTypes(
-																optionGroups[optionGroupIndex].children,
-																SearchableMultiSelect.Option
-															)
-														)}
+																rejectTypes(
+																	optionGroups[optionGroupIndex].children,
+																	SearchableMultiSelect.Option
+																)
+														  )}
 												</Selection.Label>
 												{_.map(
 													selectedGroupedOptions,
@@ -687,7 +852,9 @@ const SearchableMultiSelect = createClass({
 																		'props.children'
 																	) ||
 																		(_.isFunction(optionProps.children)
-																			? React.createElement(optionProps.children)
+																			? React.createElement(
+																					optionProps.children
+																			  )
 																			: optionProps.children)}
 																</Selection.Label>
 															</Selection>
@@ -701,14 +868,19 @@ const SearchableMultiSelect = createClass({
 								}
 							)}
 							{_.map(selectedIndices, selectedIndex => {
-								const selectedUngroupedOptionData = _.find(ungroupedOptionData, {
-									optionIndex: selectedIndex,
-								});
-
+								const selectedUngroupedOptionData = _.find(
+									ungroupedOptionData,
+									{
+										optionIndex: selectedIndex,
+									}
+								);
 								if (selectedUngroupedOptionData) {
 									const { optionProps } = selectedUngroupedOptionData;
 									const selectionProps = _.get(
-										getFirst(optionProps, SearchableMultiSelect.Option.Selection),
+										getFirst(
+											optionProps,
+											SearchableMultiSelect.Option.Selection
+										),
 										'props'
 									);
 									return (
@@ -740,19 +912,23 @@ const SearchableMultiSelect = createClass({
 					</div>
 				) : null}
 				{errorChildProps &&
-					errorChildProps.children &&
-					errorChildProps.children !== true ? (
-						<div
-							{...omitProps(errorChildProps, undefined)}
-							className={cx('&-error-content')}
-						>
-							{errorChildProps.children}
-						</div>
-					) : null}
+				errorChildProps.children &&
+				errorChildProps.children !== true ? (
+					<div
+						{...omitProps(errorChildProps, undefined)}
+						className={cx('&-error-content')}
+					>
+						{errorChildProps.children}
+					</div>
+				) : null}
 			</div>
 		);
-	},
-});
+	};
+}
 
-export default buildHybridComponent(SearchableMultiSelect);
+export default buildModernHybridComponent<
+	ISearchableMultiSelectProps,
+	ISearchableMultiSelectState,
+	typeof SearchableMultiSelect
+>(SearchableMultiSelect, { reducers });
 export { SearchableMultiSelect as SearchableMultiSelectDumb };
