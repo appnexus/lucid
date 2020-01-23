@@ -147,7 +147,6 @@ export interface ISingleSelectState {
 	flattenedOptionsData: IOptionsData[];
 	ungroupedOptionData: IOptionsData[];
 	optionGroupDataLookup: { [key: number]: IOptionsData[] };
-
 	DropMenu: IDropMenuState;
 }
 
