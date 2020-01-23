@@ -305,15 +305,6 @@ class SearchableSelect extends React.Component<
 		`,
 	};
 
-	getInitialState() {
-		return {
-			optionGroups: [],
-			flattenedOptionsData: [],
-			ungroupedOptionData: [],
-			optionGroupDataLookup: {},
-		};
-	}
-
 	componentWillMount() {
 		// preprocess the options data before rendering
 		this.setState(DropMenu.preprocessOptionData(this.props, SearchableSelect));
