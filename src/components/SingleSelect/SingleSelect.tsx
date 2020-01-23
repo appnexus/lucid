@@ -10,10 +10,7 @@ import {
 	IDropMenuState,
 	IDropMenuOptionProps,
 	IDropMenuOptionGroupProps,
-	IHasOptionChildren,
 	DropMenuDumb as DropMenu,
-	IDropMenuNullOptionProps,
-	IDropMenuFixedOptionProps,
 	IOptionsData,
 } from '../DropMenu/DropMenu';
 import ChevronIcon from '../Icon/ChevronIcon/ChevronIcon';
@@ -281,15 +278,7 @@ class SingleSelect extends React.Component<
 			flattenedOptionsData,
 			ungroupedOptionData,
 			optionGroupDataLookup,
-		} = DropMenu.preprocessOptionData(
-			this.props,
-			SingleSelect as IHasOptionChildren<
-				IDropMenuOptionGroupProps,
-				ISingleSelectOptionProps,
-				IDropMenuNullOptionProps,
-				IDropMenuFixedOptionProps
-			>
-		);
+		} = DropMenu.preprocessOptionData(this.props, SingleSelect);
 
 		this.setState({
 			optionGroups,
@@ -306,15 +295,7 @@ class SingleSelect extends React.Component<
 			flattenedOptionsData,
 			ungroupedOptionData,
 			optionGroupDataLookup,
-		} = DropMenu.preprocessOptionData(
-			nextProps,
-			SingleSelect as IHasOptionChildren<
-				IDropMenuOptionGroupProps,
-				ISingleSelectOptionProps,
-				IDropMenuNullOptionProps,
-				IDropMenuFixedOptionProps
-			>
-		);
+		} = DropMenu.preprocessOptionData(nextProps, SingleSelect);
 
 		this.setState({
 			optionGroups,
