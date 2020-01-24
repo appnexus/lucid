@@ -28,7 +28,7 @@ export default createClass({
 				</SingleSelect>
 
 				<section>
-					Selected Index: {JSON.stringify(this.state.selectedIndex)}
+					<p>Selected Index: {JSON.stringify(this.state.selectedIndex)}</p>
 				</section>
 			</section>
 		);

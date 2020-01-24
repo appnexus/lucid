@@ -16,3 +16,7 @@ export default createClass({
 		);
 	},
 });
+
+export const notes = `
+Apply \`isDisabled\` to the dropdown if none of the options are currently available.
+`;

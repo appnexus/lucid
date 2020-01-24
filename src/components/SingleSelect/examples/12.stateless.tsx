@@ -28,3 +28,7 @@ export default createClass({
 		);
 	},
 });
+
+export const notes = `
+This example shows the various states available in \`SingleSelect\`.
+`;
