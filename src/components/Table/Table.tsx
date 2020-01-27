@@ -3,7 +3,6 @@ import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import {
-	createClass,
 	filterTypes,
 	omitProps,
 	StandardProps,
@@ -111,7 +110,6 @@ Tbody.propTypes = {
 };
 
 interface ITrPropsRaw extends StandardProps {
-
 	/** Applies disabled styles to the row. */
 	isDisabled: boolean;
 
@@ -132,7 +130,6 @@ type ITrProps = Overwrite<
 >;
 
 const Tr = (props: ITrProps) => {
-
 	const {
 		className,
 		children,
@@ -145,7 +142,11 @@ const Tr = (props: ITrProps) => {
 	return (
 		<tr
 			// {...omitProps(passThroughs, Tr, ['isActionable'])}
-			{...omitProps(passThroughs, undefined, _.keys(Tr.propTypes).concat(['isActionable']))}
+			{...omitProps(
+				passThroughs,
+				undefined,
+				_.keys(Tr.propTypes).concat(['isActionable'])
+			)}
 			className={cx(
 				'&-Tr',
 				{
@@ -165,7 +166,7 @@ Tr.defaultProps = {
 	isDisabled: false,
 	isSelected: false,
 	isActive: false,
-}
+};
 
 Tr.displayName = 'Table.Tr';
 
@@ -173,7 +174,7 @@ Tr.peek = {
 	description: `
 		\`Tr\` renders <tr>.
 	`,
-}
+};
 
 Tr.propTypes = {
 	children: node`
@@ -197,26 +198,27 @@ Tr.propTypes = {
 	isActive: bool`
 		Applies active styles to the row, usually when the row has been clicked.
 	`,
-}
+};
 
-interface IThProps extends StandardProps,
-	React.DetailedHTMLProps<
-		React.HTMLAttributes<HTMLTableHeaderCellElement>,
-		HTMLTableHeaderCellElement
-	> {
+interface IThProps
+	extends StandardProps,
+		React.DetailedHTMLProps<
+			React.HTMLAttributes<HTMLTableHeaderCellElement>,
+			HTMLTableHeaderCellElement
+		> {
 	/** Aligns the content of a cell. Can be \`left\`, \`center\`, or \`right\`. */
 	align: string;
 
 	/** Any valid React children */
 	//children: node;
-	
+
 	/** Appended to the component-specific class names set on the root element.
 		Value is run through the \`classnames\` library. */
 	className: any;
 
 	/*Should be \`true\` to render a right border. */
 	hasBorderRight: boolean;
-		
+
 	/** Should be \`true\` to render a left border. */
 	hasBorderLeft: boolean;
 
@@ -232,16 +234,16 @@ interface IThProps extends StandardProps,
 
 	/** Callback triggered as the user drags the resize handle to resize the column atop
 		which this table header cell sits. */
-		onResize: (
-			width: number | string | null,
-			{
-				event,
-				props,
-			}: {
-				event: MouseEvent | TouchEvent;
-				props: IThProps;
-			}
-		) => void;
+	onResize: (
+		width: number | string | null,
+		{
+			event,
+			props,
+		}: {
+			event: MouseEvent | TouchEvent;
+			props: IThProps;
+		}
+	) => void;
 	/** Sets the direction of the caret icon when \`isSorted\` is also set. */
 	sortDirection: 'left' | 'up' | 'right' | 'down' | undefined;
 
@@ -254,7 +256,7 @@ interface IThProps extends StandardProps,
 
 	/** Define the cell as being in the first row. */
 	isFirstRow: boolean;
-		
+
 	/** Define the cell as being in the last row. */
 	isLastRow: boolean;
 
@@ -272,144 +274,137 @@ interface IThProps extends StandardProps,
 }
 
 interface IThState {
-
 	// The actively changing width as the cell is resized.
 	activeWidth: number | string | null;
-	
+
 	// Indicates if a `width` prop was explicitly provided.
-	hasSetWidth: boolean,
-	
+	hasSetWidth: boolean;
+
 	// Indicates whether the cell is currently being resized.
 	isResizing: boolean;
-	
+
 	// Indicates a mouse drag is in progress
 	isDragging: boolean;
-	
+
 	// The width when the cell is not actively being resized.
-	passiveWidth: number | string | null,
+	passiveWidth: number | string | null;
 }
 
-private type coordinates = { dX: number; dY: number; pageX: number; pageY: number; };
+type coordinates = { dX: number; dY: number; pageX: number; pageY: number };
 
 //const Th = createClass({
-class Th extends React.Component<
-	IThProps,
-	IThState,
-	{}
-> {
-
+class Th extends React.Component<IThProps, IThState, {}> {
 	static displayName = 'Table.Th';
 
- 	static defaultProps = {
+	static defaultProps = {
 		align: 'left',
 		isResizable: false,
 		isSorted: false,
 		sortDirection: 'up',
-	}
+	};
 
 	static peek = {
 		description: `
 			\`Th\` renders <th>.
 		`,
-	}
+	};
 
 	static propTypes = {
 		align: string`
 			Aligns the content of a cell. Can be \`left\`, \`center\`, or \`right\`.
 		`,
-	
+
 		children: node`
 			any valid React children
 		`,
-	
+
 		className: any`
 			Appended to the component-specific class names set on the root element.
 			Value is run through the \`classnames\` library.
 		`,
-	
+
 		hasBorderRight: bool`
 			Should be \`true\` to render a right border.
 		`,
-	
+
 		hasBorderLeft: bool`
 			Should be \`true\` to render a left border.
 		`,
-	
+
 		isResizable: bool`
 			Styles the cell to indicate it should be resizable and sets up drag-
 			related events to enable this resizing functionality.
 		`,
-	
+
 		isSortable: bool`
 			Styles the cell to allow column sorting.
 		`,
-	
+
 		isSorted: bool`
 			Renders a caret icon to show that the column is sorted.
 		`,
-	
+
 		onResize: func`
 			Called as the user drags the resize handle to resize the column atop
 			which this table header cell sits.
 		`,
-	
+
 		sortDirection: oneOf(['left', 'up', 'right', 'down', undefined])`
 			Sets the direction of the caret icon when \`isSorted\` is also set.
 		`,
-	
+
 		style: object`
 			Styles that are passed through to root element.
 		`,
-	
+
 		width: oneOfType([number, string])`
 			Sets the width of the cell.
 		`,
-	
+
 		isFirstRow: bool`
 			Define the cell as being in the first row.
 		`,
-	
+
 		isLastRow: bool`
 			Define the cell as being in the last row.
 		`,
-	
+
 		isFirstCol: bool`
 			Define the cell as being in the first column.
 		`,
-	
+
 		isLastCol: bool`
 			Define the cell as being in the last column.
 		`,
-	
+
 		isFirstSingle: bool`
 			Define the cell as being the first 1-height cell in the row.
 		`,
-	
+
 		field: string`
 			Sets the field value for the cell.
 		`,
-	}
+	};
 
 	private rootRef = React.createRef<HTMLTableHeaderCellElement>();
-	/// private rootRef = HTMLElement | null = null;
+	//private rootRef = React.createRef<HTMLElement>();
 	//const width = this.props.width;
 
 	state = {
+		// Represents the actively changing width as the cell is resized.
+		activeWidth: this.props.width || null,
 
-			// Represents the actively changing width as the cell is resized.
-			activeWidth: this.props.width || null,
+		// Indicates if a `width` prop was explicitly provided.
+		hasSetWidth: !!this.props.width,
 
-			// Indicates if a `width` prop was explicitly provided.
-			hasSetWidth: !!this.props.width,
-			
-			// Indicates whether the cell is currently being resized.
-			isResizing: false,
-			
-			// Indicates a mouse drag is in progress
-			isDragging: false,
-			
-			// Represents the width when the cell is not actively being resized.
-			passiveWidth: this.props.width || null,
+		// Indicates whether the cell is currently being resized.
+		isResizing: false,
+
+		// Indicates a mouse drag is in progress
+		isDragging: false,
+
+		// Represents the width when the cell is not actively being resized.
+		passiveWidth: this.props.width || null,
 	};
 
 	// getInitialState() {
@@ -429,20 +424,21 @@ class Th extends React.Component<
 	// 	};
 	// },
 
-	componentWillReceiveProps({ width }: {width: number | string | null}) {
+	componentWillReceiveProps({ width }: { width: number | string | null }) {
 		if (!_.isNil(width) && width !== this.props.width) {
 			this.setState({
 				hasSetWidth: true,
 				passiveWidth: width,
 			});
 		}
-	};
+	}
 
 	getWidth = (): number => {
 		const styleWidth = _.get(this.rootRef, 'style.width');
 		if (_.endsWith(styleWidth, 'px')) {
 			return parseInt(styleWidth);
 		}
+
 		return this.rootRef.getBoundingClientRect().width;
 	};
 
@@ -468,7 +464,10 @@ class Th extends React.Component<
 	};
 
 	//handleDragEnded = (coordinates, { event }: { event: MouseEvent | TouchEvent }): void => {
-	handleDragEnded = (coordinates: coordinates, { event }: { event: MouseEvent | TouchEvent }): void => {
+	handleDragEnded = (
+		coordinates: coordinates,
+		{ event }: { event: MouseEvent | TouchEvent }
+	): void => {
 		this.setState({
 			isResizing: false,
 			passiveWidth: this.state.activeWidth,
@@ -485,7 +484,10 @@ class Th extends React.Component<
 	};
 
 	//handleDragStarted(coordinates, { event }: { event: MouseEvent | TouchEvent }) {
-	handleDragStarted= (coordinates: coordinates, { event }: { event: MouseEvent | TouchEvent }): void => {
+	handleDragStarted = (
+		coordinates: coordinates,
+		{ event }: { event: MouseEvent | TouchEvent }
+	): void => {
 		const startingWidth = this.getWidth();
 
 		this.setState({
@@ -507,9 +509,21 @@ class Th extends React.Component<
 	};
 
 	//handleDragged(coordinates, { event }: { event: MouseEvent | TouchEvent }) {
-	handleDragged = (coordinates: coordinates, { event }: { event: MouseEvent | TouchEvent }): void => {
+	handleDragged = (
+		coordinates: coordinates,
+		{ event }: { event: MouseEvent | TouchEvent }
+	): void => {
 		//const activeWidth = this.state.passiveWidth + coordinates.dX;
-		const activeWidth = this.state.passiveWidth + coordinates.dX;
+
+		let passiveWidth = this.state.passiveWidth;
+
+		if (passiveWidth === null) {
+			return;
+		} else if (_.isString(passiveWidth)) {
+			passiveWidth = parseInt(passiveWidth);
+		}
+
+		const activeWidth = passiveWidth + coordinates.dX;
 
 		this.setState({ activeWidth });
 
@@ -522,7 +536,6 @@ class Th extends React.Component<
 	};
 
 	render(): React.ReactNode {
-
 		const {
 			children,
 			className,
@@ -548,7 +561,6 @@ class Th extends React.Component<
 			<th
 				// {...omitProps(passThroughs, Th)}
 				{...omitProps(passThroughs, undefined, _.keys(Th.propTypes))}
-
 				className={cx(
 					'&-Th',
 					{
@@ -604,17 +616,18 @@ class Th extends React.Component<
 				</div>
 			</th>
 		);
-	};
-};
+	}
+}
 
-interface ITdProps extends StandardProps,
-	React.DetailedHTMLProps<
-		React.HTMLAttributes<HTMLTableHeaderCellElement>,
-		HTMLTableHeaderCellElement
-	> {
+interface ITdProps
+	extends StandardProps,
+		React.DetailedHTMLProps<
+			React.HTMLAttributes<HTMLTableHeaderCellElement>,
+			HTMLTableHeaderCellElement
+		> {
 	/** Aligns the content of a cell. Can be \`left\`, \`center\`, or \`right\`. */
 	align: 'left' | 'center' | 'right';
-	
+
 	/** Should be \`true\` to render a right border. */
 	hasBorderRight: boolean;
 
@@ -635,12 +648,10 @@ interface ITdProps extends StandardProps,
 
 	/** Define the cell as being the first 1-height cell in the row. */
 	isFirstSingle: boolean;
-
 }
 
 //const Td = createClass({
 const Td = (props: ITdProps): React.ReactElement => {
-
 	const {
 		className,
 		isFirstRow,
@@ -656,7 +667,11 @@ const Td = (props: ITdProps): React.ReactElement => {
 
 	return (
 		<td
-			{...omitProps(passThroughs, undefined, _.keys(Td.propTypes).concat(['sortDirection']))}
+			{...omitProps(
+				passThroughs,
+				undefined,
+				_.keys(Td.propTypes).concat(['sortDirection'])
+			)}
 			className={cx(
 				'&-Td',
 				{
@@ -694,7 +709,7 @@ Td.peek = {
 };
 
 Td.propTypes = {
-	align: oneOf(["left", "center", "right"])`
+	align: oneOf(['left', 'center', 'right'])`
 		Aligns the content of a cell. Can be \`left\`, \`center\`, or \`right\`.
 	`,
 
@@ -733,104 +748,110 @@ Td.propTypes = {
 };
 
 interface ITable extends StandardProps {
+	/** Adjusts the row density of the table to have more or less spacing. */
+	density: 'compressed' | 'extended';
 
+	/** Allows light header. */
+	hasLightHeader: boolean;
+
+	/** Render the table with borders on the outer edge. */
+	hasBorder: boolean;
+
+	/** Enables word wrapping in tables cells. */
+	hasWordWrap: boolean;
+
+	/** Applies a row hover to rows. Defaults to true. */
+	hasHover: boolean;
 }
+
+const defaultProps = {
+	density: 'extended',
+	hasBorder: false,
+	hasWordWrap: true,
+	hasLightHeader: true,
+	hasHover: true,
+};
 
 //const Table = createClass({
 const Table = (props: ITable) => {
-	
-	static displayName = 'Table';
+	const {
+		className,
+		hasBorder,
+		density,
+		hasWordWrap,
+		hasLightHeader,
+		hasHover,
+		style,
+		...passThroughs
+	} = props;
 
-	static peek = {
-			description: `
-				\`Table\` provides the most basic components to create a lucid table.
-				It is recommended to create a wrapper around this component rather than
-				using it directly in an app.
-			`,
-			categories: ['table'],
-			madeFrom: ['ArrowIcon', 'DragCaptureZone'],
-		},
-	};
+	return (
+		<table
+			{...omitProps(passThroughs, undefined, _.keys(Table))}
+			style={style}
+			className={cx(
+				'&',
+				{
+					'&-density-extended': density === 'extended',
+					'&-density-compressed': density === 'compressed',
+					'&-has-border': hasBorder,
+					'&-has-word-wrap': hasWordWrap,
+					'&-has-light-header': hasLightHeader,
+					'&-no-hover': !hasHover,
+				},
+				className
+			)}
+		/>
+	);
+};
 
-	components: {
-		Thead,
-		Tbody,
-		Tr,
-		Th,
-		Td,
-	},
+Table.displayName = 'Table';
 
-	propTypes: {
-		style: object`
-			Styles that are passed through to the root container.
-		`,
+Table.peek = {
+	description: `
+		\`Table\` provides the most basic components to create a lucid table.
+		It is recommended to create a wrapper around this component rather than
+		using it directly in an app.
+	`,
+	categories: ['table'],
+	madeFrom: ['ArrowIcon', 'DragCaptureZone'],
+};
 
-		className: string`
-			Class names that are appended to the defaults.
-		`,
+/** Components */
+Table.Thead = Thead;
+Table.Tbody = Tbody;
+Table.Tr = Tr;
+Table.Th = Th;
+Table.Td = Td;
 
-		density: oneOf(['compressed', 'extended'])`
-			Adjusts the row density of the table to have more or less spacing.
-		`,
+Table.propTypes = {
+	style: object`
+		Styles that are passed through to the root container.
+	`,
 
-		hasLightHeader: bool`
-			Allows light header.
-		`,
+	className: string`
+		Class names that are appended to the defaults.
+	`,
 
-		hasBorder: bool`
-			Render the table with borders on the outer edge.
-		`,
+	density: oneOf(['compressed', 'extended'])`
+		Adjusts the row density of the table to have more or less spacing.
+	`,
 
-		hasWordWrap: bool`
-			Enables word wrapping in tables cells.
-		`,
+	hasLightHeader: bool`
+		Allows light header.
+	`,
 
-		hasHover: bool`
-			Applies a row hover to rows. Defaults to true.
-		`,
-	},
+	hasBorder: bool`
+		Render the table with borders on the outer edge.
+	`,
 
-	getDefaultProps() {
-		return {
-			density: 'extended',
-			hasBorder: false,
-			hasWordWrap: true,
-			hasLightHeader: true,
-			hasHover: true,
-		};
-	},
+	hasWordWrap: bool`
+		Enables word wrapping in tables cells.
+	`,
 
-	render() {
-		const {
-			className,
-			hasBorder,
-			density,
-			hasWordWrap,
-			hasLightHeader,
-			hasHover,
-			style,
-			...passThroughs
-		} = this.props;
-
-		return (
-			<table
-				{...omitProps(passThroughs, Table)}
-				style={style}
-				className={cx(
-					'&',
-					{
-						'&-density-extended': density === 'extended',
-						'&-density-compressed': density === 'compressed',
-						'&-has-border': hasBorder,
-						'&-has-word-wrap': hasWordWrap,
-						'&-has-light-header': hasLightHeader,
-						'&-no-hover': !hasHover,
-					},
-					className
-				)}
-			/>
-		);
-	},
+	hasHover: bool`
+		Applies a row hover to rows. Defaults to true.
+	`,
 };
 
 /**
@@ -838,6 +859,7 @@ const Table = (props: ITable) => {
  *
  * Returns a 2 dimensional array of cell elements of the given component type. The map function can modify value of a cell.
  */
+
 function mapToGrid(trList, cellType = 'td', mapFn = _.property('element')) {
 	const cellRowList = _.map(trList, trElement =>
 		_.map(filterTypes(trElement.props.children, cellType))
@@ -941,6 +963,9 @@ function mapToGrid(trList, cellType = 'td', mapFn = _.property('element')) {
  *
  * Returns an equivalent list of Tr's where each cell on the perimeter has props set for: `isFirstRow`, `isLastRow`, `isFirstCol`, `isLastCol`, and `isFirstSingle`
  */
+
+//{renderRowsWithIdentifiedEdges(filterTypes(children, Tr), Th)}
+
 function renderRowsWithIdentifiedEdges(trList, cellType) {
 	const duplicateReferences = [];
 	const fullCellGrid = mapToGrid(
