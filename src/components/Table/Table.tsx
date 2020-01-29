@@ -143,7 +143,6 @@ const Tr = (props: ITrProps) => {
 
 	return (
 		<tr
-			// {...omitProps(passThroughs, Tr, ['isActionable'])}
 			{...omitProps(
 				passThroughs,
 				undefined,
@@ -211,25 +210,18 @@ interface IThProps
 	/** Aligns the content of a cell. Can be \`left\`, \`center\`, or \`right\`. */
 	align: string;
 
-	/** Any valid React children */
-	//children: node;
-
-	/** Appended to the component-specific class names set on the root element.
-		Value is run through the \`classnames\` library. */
-	className: any;
-
 	/*Should be \`true\` to render a right border. */
-	hasBorderRight: boolean;
+	hasBorderRight?: boolean;
 
 	/** Should be \`true\` to render a left border. */
-	hasBorderLeft: boolean;
+	hasBorderLeft?: boolean;
 
 	/** Styles the cell to indicate it should be resizable and sets up drag-
 		related events to enable this resizing functionality. */
 	isResizable: boolean;
 
 	/** Styles the cell to allow column sorting. */
-	isSortable: boolean;
+	isSortable?: boolean;
 
 	/** Renders a caret icon to show that the column is sorted. */
 	isSorted: boolean;
@@ -246,33 +238,30 @@ interface IThProps
 			props: IThProps;
 		}
 	) => void;
+
 	/** Sets the direction of the caret icon when \`isSorted\` is also set. */
 	sortDirection: 'left' | 'up' | 'right' | 'down' | undefined;
 
-	/** Styles that are passed through to root element. */
-	// style: object;
-
 	/** Sets the width of the cell. */
-	// width: oneOfType([number, string])
 	width: number | string;
 
 	/** Define the cell as being in the first row. */
-	isFirstRow: boolean;
+	isFirstRow?: boolean;
 
 	/** Define the cell as being in the last row. */
-	isLastRow: boolean;
+	isLastRow?: boolean;
 
 	/** Define the cell as being in the first column. */
-	isFirstCol: boolean;
+	isFirstCol?: boolean;
 
 	/** Define the cell as being in the last column. */
-	isLastCol: boolean;
+	isLastCol?: boolean;
 
 	/** Define the cell as being the first 1-height cell in the row. */
-	isFirstSingle: boolean;
+	isFirstSingle?: boolean;
 
 	/** Sets the field value for the cell. */
-	field: string;
+	field?: string;
 }
 
 interface IThState {
@@ -299,7 +288,6 @@ interface ICoordinates {
 	pageY: number;
 }
 
-//const Th = createClass({
 class Th extends React.Component<IThProps, IThState, {}> {
 	static displayName = 'Table.Th';
 
@@ -394,8 +382,6 @@ class Th extends React.Component<IThProps, IThState, {}> {
 	};
 
 	private rootRef = React.createRef<HTMLTableHeaderCellElement>();
-	//private rootRef = React.createRef<HTMLElement>();
-	//const width = this.props.width;
 
 	state = {
 		// Represents the actively changing width as the cell is resized.
@@ -413,23 +399,6 @@ class Th extends React.Component<IThProps, IThState, {}> {
 		// Represents the width when the cell is not actively being resized.
 		passiveWidth: this.props.width || null,
 	};
-
-	// getInitialState() {
-	// 	const { width } = this.props;
-
-	// 	return {
-	// 		Represents the actively changing width as the cell is resized.
-	// 		activeWidth: width || null,
-	// 		Indicates if a `width` prop was explicitly provided.
-	// 		hasSetWidth: !!width,
-	// 		Indicates whether the cell is currently being resized.
-	// 		isResizing: false,
-	// 		Indicates a mouse drag is in progress
-	// 		isDragging: false,
-	// 		Represents the width when the cell is not actively being resized.
-	// 		passiveWidth: width || null,
-	// 	};
-	// },
 
 	componentWillReceiveProps({ width }: { width: number | string | null }) {
 		if (!_.isNil(width) && width !== this.props.width) {
@@ -472,7 +441,6 @@ class Th extends React.Component<IThProps, IThState, {}> {
 		});
 	};
 
-	//handleDragEnded = (coordinates, { event }: { event: MouseEvent | TouchEvent }): void => {
 	handleDragEnded = (
 		coordinates: ICoordinates,
 		{ event }: { event: MouseEvent | TouchEvent }
@@ -492,7 +460,6 @@ class Th extends React.Component<IThProps, IThState, {}> {
 		}
 	};
 
-	//handleDragged(coordinates, { event }: { event: MouseEvent | TouchEvent }) {
 	handleDragged = (
 		coordinates: ICoordinates,
 		{
@@ -503,8 +470,6 @@ class Th extends React.Component<IThProps, IThState, {}> {
 			props: IDragCaptureZoneProps;
 		}
 	): void => {
-		//const activeWidth = this.state.passiveWidth + coordinates.dX;
-
 		let passiveWidth = this.state.passiveWidth;
 
 		if (passiveWidth === null) {
@@ -525,7 +490,6 @@ class Th extends React.Component<IThProps, IThState, {}> {
 		}
 	};
 
-	//handleDragStarted(coordinates, { event }: { event: MouseEvent | TouchEvent }) {
 	handleDragStarted = (
 		coordinates: ICoordinates,
 		{
@@ -582,7 +546,6 @@ class Th extends React.Component<IThProps, IThState, {}> {
 
 		return (
 			<th
-				// {...omitProps(passThroughs, Th)}
 				{...omitProps(passThroughs, undefined, _.keys(Th.propTypes))}
 				className={cx(
 					'&-Th',
@@ -605,7 +568,6 @@ class Th extends React.Component<IThProps, IThState, {}> {
 					},
 					className
 				)}
-				//ref={ref => (this.rootRef = ref)}
 				ref={this.rootRef}
 				onClickCapture={this.handleClickCapture}
 				onMouseEnter={this.handleMouseEnter}
@@ -659,22 +621,21 @@ interface ITdProps
 	hasBorderLeft: boolean;
 
 	/** Define the cell as being in the first row. */
-	isFirstRow: boolean;
+	isFirstRow?: boolean;
 
 	/** Define the cell as being in the last row. */
-	isLastRow: boolean;
+	isLastRow?: boolean;
 
 	/** Define the cell as being in the first column. */
-	isFirstCol: boolean;
+	isFirstCol?: boolean;
 
 	/** Define the cell as being in the last column. */
-	isLastCol: boolean;
+	isLastCol?: boolean;
 
 	/** Define the cell as being the first 1-height cell in the row. */
-	isFirstSingle: boolean;
+	isFirstSingle?: boolean;
 }
 
-//const Td = createClass({
 const Td = (props: ITdProps): React.ReactElement => {
 	const {
 		className,
@@ -788,15 +749,6 @@ interface ITable extends StandardProps {
 	hasHover: boolean;
 }
 
-const defaultProps = {
-	density: 'extended',
-	hasBorder: false,
-	hasWordWrap: true,
-	hasLightHeader: true,
-	hasHover: true,
-};
-
-//const Table = createClass({
 const Table = (props: ITable) => {
 	const {
 		className,
@@ -831,7 +783,13 @@ const Table = (props: ITable) => {
 
 Table.displayName = 'Table';
 
-Table.defaultProps = defaultProps;
+Table.defaultProps = {
+	density: 'extended',
+	hasBorder: false,
+	hasWordWrap: true,
+	hasLightHeader: true,
+	hasHover: true,
+};
 
 Table.peek = {
 	description: `
@@ -842,13 +800,6 @@ Table.peek = {
 	categories: ['table'],
 	madeFrom: ['ArrowIcon', 'DragCaptureZone'],
 };
-
-/** Components */
-Table.Thead = Thead;
-Table.Tbody = Tbody;
-Table.Tr = Tr;
-Table.Th = Th;
-Table.Td = Td;
 
 Table.propTypes = {
 	style: object`
@@ -880,6 +831,13 @@ Table.propTypes = {
 	`,
 };
 
+/** Components */
+Table.Thead = Thead;
+Table.Tbody = Tbody;
+Table.Tr = Tr;
+Table.Th = Th;
+Table.Td = Td;
+
 /**
  * mapToGrid
  *
@@ -906,28 +864,7 @@ interface IFinalGridCell extends StandardProps {
 	isFirstSingle?: boolean;
 }
 
-// (
-// 	{ element: { props }, isOriginal, canonicalPosition },
-// 	currentPos,
-// 	grid
-// ) => {
-// 	if (!isOriginal) {
-// 		// if cell spans multiple positions
-// 		// store current position and return original cell props reference
-// 		duplicateReferences.push(currentPos);
-// 		return grid[canonicalPosition.row][canonicalPosition.col];
-// 	}
-// 	return _.assign({}, props); // return a new props object based on old cell
-// }
-
-// finalGrid[rowIndex][colIndex] = mapFn(
-// 	grid[rowIndex][colIndex],
-// 	{ row: rowIndex, col: colIndex },
-// 	finalGrid
-// );
-
 function mapToGrid(
-	//	trList: { props: StandardProps }[],
 	trList: Array<{ props: StandardProps }>,
 	cellType: Th | Td = Td,
 	mapFn: (gridcell: IGridCell, ...args: any[]) => any = _.property('element')
@@ -1038,13 +975,10 @@ function mapToGrid(
 //{renderRowsWithIdentifiedEdges(filterTypes(children, Tr), Th)}
 
 function renderRowsWithIdentifiedEdges(
-	//	trList: { props: StandardProps }[],
 	trList: Array<{ props: StandardProps }>,
 	cellType: Th | Td = Td
 ): React.ReactElement[] {
-	//	const duplicateReferences: { row: number; col: number }[] = [];
 	const duplicateReferences: Array<{ row: number; col: number }> = [];
-	//const fullCellGrid: (IFinalGridCell | null)[][] = mapToGrid(
 	const fullCellGrid: Array<Array<IFinalGridCell | null>> = mapToGrid(
 		trList,
 		cellType,
