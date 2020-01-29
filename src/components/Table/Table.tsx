@@ -27,6 +27,7 @@ const {
 	oneOfType,
 } = PropTypes;
 
+/** Thead <Thead>: The Table Head component */
 interface ITheadPropsRaw extends StandardProps {}
 
 type ITheadProps = Overwrite<
@@ -52,6 +53,12 @@ const Thead = (props: ITheadProps) => {
 
 Thead.displayName = 'Table.Thead';
 
+Thead.peek = {
+	description: `
+		\`Thead\` renders <thead>.
+	`,
+};
+
 Thead.propTypes = {
 	className: any`
 		Appended to the component-specific class names set on the root element.
@@ -63,12 +70,7 @@ Thead.propTypes = {
 	`,
 };
 
-Thead.peek = {
-	description: `
-		\`Thead\` renders <thead>.
-	`,
-};
-
+/** Tbody <Tbody>: The Table Body component */
 interface ITBodyPropsRaw extends StandardProps {}
 
 type ITBodyProps = Overwrite<
@@ -111,6 +113,7 @@ Tbody.propTypes = {
 	`,
 };
 
+/** Tr <Tr>: The Table Row component */
 interface ITrPropsRaw extends StandardProps {
 	/** Applies disabled styles to the row. */
 	isDisabled: boolean;
@@ -121,6 +124,9 @@ interface ITrPropsRaw extends StandardProps {
 
 	/** Applies active styles to the row, usually when the row has been clicked. */
 	isActive: boolean;
+
+	/**  */
+	isActionable?: boolean;
 }
 
 type ITrProps = Overwrite<
@@ -201,6 +207,7 @@ Tr.propTypes = {
 	`,
 };
 
+/** Th <Th>: The Table Header Cell components */
 interface IThProps
 	extends StandardProps,
 		React.DetailedHTMLProps<
@@ -208,7 +215,7 @@ interface IThProps
 			HTMLTableHeaderCellElement
 		> {
 	/** Aligns the content of a cell. Can be \`left\`, \`center\`, or \`right\`. */
-	align: string;
+	align: 'left' | 'center' | 'right';
 
 	/*Should be \`true\` to render a right border. */
 	hasBorderRight?: boolean;
@@ -228,7 +235,7 @@ interface IThProps
 
 	/** Callback triggered as the user drags the resize handle to resize the column atop
 		which this table header cell sits. */
-	onResize: (
+	onResize?: (
 		width: number | string | null,
 		{
 			event,
@@ -243,7 +250,13 @@ interface IThProps
 	sortDirection: 'left' | 'up' | 'right' | 'down' | undefined;
 
 	/** Sets the width of the cell. */
-	width: number | string;
+	width?: number | string;
+
+	/** Indicates for how many rows the cell extends */
+	rowSpan?: number;
+
+	/** Indicates for how many columns the cell extends */
+	colSpan?: number;
 
 	/** Define the cell as being in the first row. */
 	isFirstRow?: boolean;
@@ -356,6 +369,14 @@ class Th extends React.Component<IThProps, IThState, {}> {
 			Sets the width of the cell.
 		`,
 
+		rowSpan: number`
+			Indicates for how many columns the cell extends.
+		`,
+
+		colSpan: number`
+			Indicates for how many rows the cell extends.
+		`,
+
 		isFirstRow: bool`
 			Define the cell as being in the first row.
 		`,
@@ -400,7 +421,7 @@ class Th extends React.Component<IThProps, IThState, {}> {
 		passiveWidth: this.props.width || null,
 	};
 
-	componentWillReceiveProps({ width }: { width: number | string | null }) {
+	componentWillReceiveProps({ width }: { width?: number | string | null }) {
 		if (!_.isNil(width) && width !== this.props.width) {
 			this.setState({
 				hasSetWidth: true,
@@ -605,6 +626,7 @@ class Th extends React.Component<IThProps, IThState, {}> {
 	}
 }
 
+/** Td <td>: The Table Data Cell element */
 interface ITdProps
 	extends StandardProps,
 		React.DetailedHTMLProps<
@@ -634,6 +656,12 @@ interface ITdProps
 
 	/** Define the cell as being the first 1-height cell in the row. */
 	isFirstSingle?: boolean;
+
+	/** Indicates for how many rows the cell extends */
+	rowSpan?: number;
+
+	/** Indicates if the cell has any data or not */
+	isEmpty?: boolean;
 }
 
 const Td = (props: ITdProps): React.ReactElement => {
@@ -730,8 +758,17 @@ Td.propTypes = {
 	isFirstSingle: bool`
 		Define the cell as being the first 1-height cell in the row.
 	`,
+
+	rowSpan: number`
+		Indicates for how many rows the cell extends.
+	`,
+
+	isEmpty: bool`
+		Indicates if the cell has any data or not.
+	`,
 };
 
+/** Table <Table> The Table Component */
 interface ITable extends StandardProps {
 	/** Adjusts the row density of the table to have more or less spacing. */
 	density: 'compressed' | 'extended';
@@ -831,11 +868,11 @@ Table.propTypes = {
 	`,
 };
 
-/** Components */
+/** ChildComponents */
 Table.Thead = Thead;
+Table.Th = Th;
 Table.Tbody = Tbody;
 Table.Tr = Tr;
-Table.Th = Th;
 Table.Td = Td;
 
 /**
