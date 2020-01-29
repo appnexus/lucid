@@ -297,7 +297,7 @@ class SearchableSingleSelect extends React.Component<
 		);
 	}
 
-	componentWillReceiveProps(nextProps: ISearchableSingleSelectProps): void {
+	UNSAFE_componentWillReceiveProps(nextProps: ISearchableSingleSelectProps): void {
 		// only preprocess options data when it changes (via new props) - better performance than doing this each render
 		this.setState(
 			DropMenu.preprocessOptionData(nextProps, SearchableSingleSelect)

@@ -72,7 +72,7 @@ const SwitchLabeled = createClass({
 		this._labelKey = 0;
 	},
 
-	componentWillReceiveProps(nextProps) {
+	UNSAFE_componentWillReceiveProps(nextProps) {
 		const currentLabel = _.get(
 			getFirst(this.props, SwitchLabeled.Label),
 			'props.children',

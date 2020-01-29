@@ -523,7 +523,7 @@ class SearchableMultiSelect extends React.Component<
 		);
 	}
 
-	componentWillReceiveProps(nextProps: ISearchableMultiSelectProps): void {
+	UNSAFE_componentWillReceiveProps(nextProps: ISearchableMultiSelectProps): void {
 		// only preprocess options data when it changes (via new props) - better performance than doing this each render
 		this.setState(
 			DropMenu.preprocessOptionData(nextProps, SearchableMultiSelect)

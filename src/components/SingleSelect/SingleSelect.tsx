@@ -293,7 +293,7 @@ class SingleSelect extends React.Component<
 		);
 	}
 
-	componentWillReceiveProps(nextProps: ISingleSelectProps): void {
+	UNSAFE_componentWillReceiveProps(nextProps: ISingleSelectProps): void {
 		// only preprocess options data when it changes (via new props) - better performance than doing this each render
 		this.setState(
 			DropMenu.preprocessOptionData(

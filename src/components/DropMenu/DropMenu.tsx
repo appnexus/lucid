@@ -871,7 +871,7 @@ class DropMenu extends React.Component<IDropMenuProps, IDropMenuState> {
 		);
 	};
 
-	componentWillReceiveProps = (nextProps: IDropMenuProps) => {
+	UNSAFE_componentWillReceiveProps = (nextProps: IDropMenuProps) => {
 		// only preprocess options data when it changes (via new props) - better performance than doing this each render
 		this.setState(this.getPreprocessedOptionData(nextProps));
 	};

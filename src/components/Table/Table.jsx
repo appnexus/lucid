@@ -282,7 +282,7 @@ const Th = createClass({
 		};
 	},
 
-	componentWillReceiveProps({ width }) {
+	UNSAFE_componentWillReceiveProps({ width }) {
 		if (!_.isNil(width) && width !== this.props.width) {
 			this.setState({
 				hasSetWidth: true,
