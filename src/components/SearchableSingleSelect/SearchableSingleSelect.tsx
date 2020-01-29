@@ -290,7 +290,7 @@ class SearchableSingleSelect extends React.Component<
 		};
 	}
 
-	componentWillMount(): void {
+	UNSAFE_componentWillMount(): void {
 		// preprocess the options data before rendering
 		this.setState(
 			DropMenu.preprocessOptionData(this.props, SearchableSingleSelect)

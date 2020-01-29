@@ -301,7 +301,7 @@ class TextField extends React.Component<
 		(this.nativeElement.current as HTMLElement).focus();
 	};
 
-	componentWillMount(): void {
+	UNSAFE_componentWillMount(): void {
 		this.setState({ isMounted: true });
 	}
 

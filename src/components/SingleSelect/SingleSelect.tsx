@@ -278,7 +278,7 @@ class SingleSelect extends React.Component<
 		};
 	}
 
-	componentWillMount() {
+	UNSAFE_componentWillMount() {
 		// preprocess the options data before rendering
 		this.setState(
 			DropMenu.preprocessOptionData(

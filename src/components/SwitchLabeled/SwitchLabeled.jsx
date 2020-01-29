@@ -68,7 +68,7 @@ const SwitchLabeled = createClass({
 		};
 	},
 
-	componentWillMount() {
+	UNSAFE_componentWillMount() {
 		this._labelKey = 0;
 	},
 
