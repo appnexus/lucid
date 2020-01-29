@@ -79,7 +79,6 @@ exports[`OverlayWrapper [common] example testing should match snapshot(s) for 1.
   >
     <div
       className="lucid-OverlayWrapper-message-container lucid-OverlayWrapper-has-overlay lucid-OverlayWrapper-kind-light"
-      style={Object {}}
     >
       <div>
         Message Goes Here

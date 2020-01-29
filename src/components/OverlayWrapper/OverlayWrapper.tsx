@@ -103,12 +103,10 @@ export const OverlayWrapper = (
 			>
 				{isVisible && (
 					<div
-						style={
-							anchorMessage ? { alignItems: 'flex-start', paddingTop: 100 } : {}
-						}
 						className={cx('&-message-container', {
 							'&-has-overlay': hasOverlay,
 							'&-kind-light': hasOverlay && overlayKind === 'light',
+							'&-anchored-message': anchorMessage,
 						})}
 					>
 						<div {...messageElementProp} />
