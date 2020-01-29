@@ -253,7 +253,7 @@ interface IThProps
 	width?: number | string;
 
 	/** Indicates for how many rows the cell extends */
-	rowSpan?: number;
+	rowSpan?: number | undefined;
 
 	/** Indicates for how many columns the cell extends */
 	colSpan?: number;
