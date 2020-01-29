@@ -51,6 +51,14 @@ export interface IOverlayWrapperProps
 	 * */
 	overlayKind: 'light' | 'dark';
 
+	/** By default, the OverlayMessage is vertically aligned to the middle of the
+	 *	OverlayWrapper. Set this to true to position the `OverlayMessage` near the top of
+	 *	the `OverlayWrapper`.
+	 *
+	 * @default false
+	 */
+	anchorMessage: boolean;
+
 	/** *Child Element* The Message to display in the overlay. */
 	Message?: React.ReactNode & { props: IMessageProps };
 }
@@ -58,6 +66,7 @@ export interface IOverlayWrapperProps
 const defaultProps = {
 	hasOverlay: true,
 	overlayKind: 'light' as const,
+	anchorMessage: false,
 };
 
 export const OverlayWrapper = (
@@ -69,6 +78,7 @@ export const OverlayWrapper = (
 		className,
 		children,
 		overlayKind,
+		anchorMessage,
 		...passThroughs
 	} = props;
 
@@ -77,6 +87,7 @@ export const OverlayWrapper = (
 		'props',
 		{}
 	);
+
 	const otherChildren = rejectTypes(children, [OverlayWrapperMessage]);
 
 	return (
@@ -92,6 +103,9 @@ export const OverlayWrapper = (
 			>
 				{isVisible && (
 					<div
+						style={
+							anchorMessage ? { alignItems: 'flex-start', paddingTop: 100 } : {}
+						}
 						className={cx('&-message-container', {
 							'&-has-overlay': hasOverlay,
 							'&-kind-light': hasOverlay && overlayKind === 'light',
@@ -136,6 +150,12 @@ OverlayWrapper.propTypes = {
 
 	overlayKind: oneOf(['light', 'dark'])`
 		Style variations for the overlay behind the message.
+	`,
+
+	anchorMessage: bool`
+		By default, the \`OverlayMessage\` is vertically aligned to the middle of the
+		OverlayWrapper. Set this to true to position the \`OverlayMessage\` near the top of 
+		the \`OverlayWrapper\`.
 	`,
 
 	Message: node`
