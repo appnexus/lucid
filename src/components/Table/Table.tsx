@@ -12,7 +12,6 @@ import ArrowIcon from '../Icon/ArrowIcon/ArrowIcon';
 import DragCaptureZone, {
 	IDragCaptureZoneProps,
 } from '../DragCaptureZone/DragCaptureZone';
-import { BooleanLiteral } from '@babel/types';
 
 const cx = lucidClassNames.bind('&-Table');
 
@@ -293,7 +292,12 @@ interface IThState {
 	passiveWidth: number | string | null;
 }
 
-type coordinates = { dX: number; dY: number; pageX: number; pageY: number };
+interface ICoordinates {
+	dX: number;
+	dY: number;
+	pageX: number;
+	pageY: number;
+}
 
 //const Th = createClass({
 class Th extends React.Component<IThProps, IThState, {}> {
@@ -470,7 +474,7 @@ class Th extends React.Component<IThProps, IThState, {}> {
 
 	//handleDragEnded = (coordinates, { event }: { event: MouseEvent | TouchEvent }): void => {
 	handleDragEnded = (
-		coordinates: coordinates,
+		coordinates: ICoordinates,
 		{ event }: { event: MouseEvent | TouchEvent }
 	): void => {
 		this.setState({
@@ -490,7 +494,7 @@ class Th extends React.Component<IThProps, IThState, {}> {
 
 	//handleDragged(coordinates, { event }: { event: MouseEvent | TouchEvent }) {
 	handleDragged = (
-		coordinates: coordinates,
+		coordinates: ICoordinates,
 		{
 			event,
 			props,
@@ -523,7 +527,7 @@ class Th extends React.Component<IThProps, IThState, {}> {
 
 	//handleDragStarted(coordinates, { event }: { event: MouseEvent | TouchEvent }) {
 	handleDragStarted = (
-		coordinates: coordinates,
+		coordinates: ICoordinates,
 		{
 			event,
 			props,
@@ -827,6 +831,8 @@ const Table = (props: ITable) => {
 
 Table.displayName = 'Table';
 
+Table.defaultProps = defaultProps;
+
 Table.peek = {
 	description: `
 		\`Table\` provides the most basic components to create a lucid table.
@@ -921,7 +927,8 @@ interface IFinalGridCell extends StandardProps {
 // );
 
 function mapToGrid(
-	trList: { props: StandardProps }[],
+	//	trList: { props: StandardProps }[],
+	trList: Array<{ props: StandardProps }>,
 	cellType: Th | Td = Td,
 	mapFn: (gridcell: IGridCell, ...args: any[]) => any = _.property('element')
 ) {
@@ -1031,11 +1038,14 @@ function mapToGrid(
 //{renderRowsWithIdentifiedEdges(filterTypes(children, Tr), Th)}
 
 function renderRowsWithIdentifiedEdges(
-	trList: { props: StandardProps }[],
+	//	trList: { props: StandardProps }[],
+	trList: Array<{ props: StandardProps }>,
 	cellType: Th | Td = Td
 ): React.ReactElement[] {
-	const duplicateReferences: { row: number; col: number }[] = [];
-	const fullCellGrid: (IFinalGridCell | null)[][] = mapToGrid(
+	//	const duplicateReferences: { row: number; col: number }[] = [];
+	const duplicateReferences: Array<{ row: number; col: number }> = [];
+	//const fullCellGrid: (IFinalGridCell | null)[][] = mapToGrid(
+	const fullCellGrid: Array<Array<IFinalGridCell | null>> = mapToGrid(
 		trList,
 		cellType,
 		(

@@ -187,11 +187,8 @@ class DragCaptureZone extends React.Component<
 	handleMouseDragStart = (
 		event: React.MouseEvent<HTMLDivElement, MouseEvent>
 	): void => {
-		let pageX;
-		let pageY;
-
-		pageX = event.pageX;
-		pageY = event.pageY;
+		const pageX = event.pageX;
+		const pageY = event.pageY;
 
 		window.document.addEventListener('mousemove', this.handleDrag);
 		window.document.addEventListener('mouseup', this.handleDragEnd);
@@ -218,12 +215,8 @@ class DragCaptureZone extends React.Component<
 	};
 
 	handleTouchDragStart = (event: React.TouchEvent<HTMLDivElement>): void => {
-		let pageX;
-		let pageY;
-
-		/* istanbul ignore next */
-		pageX = event.touches[0].pageX;
-		pageY = event.touches[0].pageY;
+		const pageX = event.touches[0].pageX;
+		const pageY = event.touches[0].pageY;
 
 		event.preventDefault();
 
