@@ -73,7 +73,9 @@ interface IDragCaptureZonePropsRaw extends StandardProps {
 			event,
 			props,
 		}: {
-			event: React.MouseEvent | React.TouchEvent;
+			event:
+				| React.MouseEvent<HTMLDivElement, MouseEvent>
+				| React.TouchEvent<HTMLDivElement>;
 			props: IDragCaptureZoneProps;
 		}
 	) => void;
@@ -89,7 +91,7 @@ interface IDragCaptureZonePropsRaw extends StandardProps {
 	}) => void;
 }
 
-type IDragCaptureZoneProps = Overwrite<
+export type IDragCaptureZoneProps = Overwrite<
 	React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>,
 	IDragCaptureZonePropsRaw
 >;
@@ -182,21 +184,46 @@ class DragCaptureZone extends React.Component<
 		);
 	};
 
-	handleDragStart = (event: React.MouseEvent | React.TouchEvent): void => {
+	handleMouseDragStart = (
+		event: React.MouseEvent<HTMLDivElement, MouseEvent>
+	): void => {
+		let pageX;
+		let pageY;
+
+		pageX = event.pageX;
+		pageY = event.pageY;
+
+		window.document.addEventListener('mousemove', this.handleDrag);
+		window.document.addEventListener('mouseup', this.handleDragEnd);
+
+		event.preventDefault();
+
+		this.props.onDragStart(
+			{
+				dX: 0,
+				dY: 0,
+				pageX,
+				pageY,
+			},
+			{
+				event,
+				props: this.props,
+			}
+		);
+
+		this.setState({
+			pageX,
+			pageY,
+		});
+	};
+
+	handleTouchDragStart = (event: React.TouchEvent<HTMLDivElement>): void => {
 		let pageX;
 		let pageY;
 
 		/* istanbul ignore next */
-		if ('touches' in event) {
-			pageX = event.touches[0].pageX;
-			pageY = event.touches[0].pageY;
-		} else {
-			pageX = event.pageX;
-			pageY = event.pageY;
-
-			window.document.addEventListener('mousemove', this.handleDrag);
-			window.document.addEventListener('mouseup', this.handleDragEnd);
-		}
+		pageX = event.touches[0].pageX;
+		pageY = event.touches[0].pageY;
 
 		event.preventDefault();
 
@@ -305,8 +332,8 @@ class DragCaptureZone extends React.Component<
 				{...omitProps(this.props, undefined, _.keys(DragCaptureZone.propTypes))}
 				className={cx('&', this.props.className)}
 				key='DragCaptureZone'
-				onMouseDown={this.handleDragStart}
-				onTouchStart={this.handleDragStart}
+				onMouseDown={this.handleMouseDragStart}
+				onTouchStart={this.handleTouchDragStart}
 				ref={this.elementRef}
 			/>
 		);

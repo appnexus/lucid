@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import React from 'react';
+import React, { ReactElement } from 'react';
 import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import {
@@ -9,7 +9,10 @@ import {
 	Overwrite,
 } from '../../util/component-types';
 import ArrowIcon from '../Icon/ArrowIcon/ArrowIcon';
-import DragCaptureZone from '../DragCaptureZone/DragCaptureZone';
+import DragCaptureZone, {
+	IDragCaptureZoneProps,
+} from '../DragCaptureZone/DragCaptureZone';
+import { BooleanLiteral } from '@babel/types';
 
 const cx = lucidClassNames.bind('&-Table');
 
@@ -240,7 +243,7 @@ interface IThProps
 			event,
 			props,
 		}: {
-			event: MouseEvent | TouchEvent;
+			event: React.MouseEvent | React.TouchEvent | MouseEvent | TouchEvent;
 			props: IThProps;
 		}
 	) => void;
@@ -433,13 +436,15 @@ class Th extends React.Component<IThProps, IThState, {}> {
 		}
 	}
 
-	getWidth = (): number => {
+	getWidth = (): number | null => {
 		const styleWidth = _.get(this.rootRef, 'style.width');
 		if (_.endsWith(styleWidth, 'px')) {
 			return parseInt(styleWidth);
 		}
-
-		return this.rootRef.getBoundingClientRect().width;
+		if (this.rootRef.current) {
+			return this.rootRef.current.getBoundingClientRect().width;
+		}
+		return null;
 	};
 
 	handleClickCapture = (event: React.MouseEvent | KeyboardEvent): void => {
@@ -483,35 +488,16 @@ class Th extends React.Component<IThProps, IThState, {}> {
 		}
 	};
 
-	//handleDragStarted(coordinates, { event }: { event: MouseEvent | TouchEvent }) {
-	handleDragStarted = (
-		coordinates: coordinates,
-		{ event }: { event: MouseEvent | TouchEvent }
-	): void => {
-		const startingWidth = this.getWidth();
-
-		this.setState({
-			activeWidth: startingWidth,
-			hasSetWidth: true,
-			isResizing: true,
-			isDragging: true,
-			passiveWidth: startingWidth,
-		});
-
-		window.document.body.style.cursor = 'ew-resize';
-
-		if (this.props.onResize) {
-			this.props.onResize(startingWidth, {
-				event,
-				props: this.props,
-			});
-		}
-	};
-
 	//handleDragged(coordinates, { event }: { event: MouseEvent | TouchEvent }) {
 	handleDragged = (
 		coordinates: coordinates,
-		{ event }: { event: MouseEvent | TouchEvent }
+		{
+			event,
+			props,
+		}: {
+			event: MouseEvent | TouchEvent;
+			props: IDragCaptureZoneProps;
+		}
 	): void => {
 		//const activeWidth = this.state.passiveWidth + coordinates.dX;
 
@@ -529,6 +515,39 @@ class Th extends React.Component<IThProps, IThState, {}> {
 
 		if (this.props.onResize) {
 			this.props.onResize(activeWidth, {
+				event,
+				props: this.props,
+			});
+		}
+	};
+
+	//handleDragStarted(coordinates, { event }: { event: MouseEvent | TouchEvent }) {
+	handleDragStarted = (
+		coordinates: coordinates,
+		{
+			event,
+			props,
+		}: {
+			event:
+				| React.MouseEvent<HTMLDivElement, MouseEvent>
+				| React.TouchEvent<HTMLDivElement>;
+			props: IDragCaptureZoneProps;
+		}
+	): void => {
+		const startingWidth = this.getWidth();
+
+		this.setState({
+			activeWidth: startingWidth,
+			hasSetWidth: true,
+			isResizing: true,
+			isDragging: true,
+			passiveWidth: startingWidth,
+		});
+
+		window.document.body.style.cursor = 'ew-resize';
+
+		if (this.props.onResize) {
+			this.props.onResize(startingWidth, {
 				event,
 				props: this.props,
 			});
@@ -582,7 +601,8 @@ class Th extends React.Component<IThProps, IThState, {}> {
 					},
 					className
 				)}
-				ref={ref => (this.rootRef = ref)}
+				//ref={ref => (this.rootRef = ref)}
+				ref={this.rootRef}
 				onClickCapture={this.handleClickCapture}
 				onMouseEnter={this.handleMouseEnter}
 				onMouseUp={this.handleMouseUp}
@@ -860,11 +880,55 @@ Table.propTypes = {
  * Returns a 2 dimensional array of cell elements of the given component type. The map function can modify value of a cell.
  */
 
-function mapToGrid(trList, cellType = 'td', mapFn = _.property('element')) {
+interface IGridCell extends StandardProps {
+	element: React.ReactElement;
+
+	canonicalPosition: {
+		row: number;
+		col: number;
+	};
+
+	isOriginal: boolean;
+}
+
+interface IFinalGridCell extends StandardProps {
+	grid: IGridCell;
+	isFirstRow?: boolean;
+	isLastRow?: boolean;
+	isFirstCol?: boolean;
+	isLastCol?: boolean;
+	isFirstSingle?: boolean;
+}
+
+// (
+// 	{ element: { props }, isOriginal, canonicalPosition },
+// 	currentPos,
+// 	grid
+// ) => {
+// 	if (!isOriginal) {
+// 		// if cell spans multiple positions
+// 		// store current position and return original cell props reference
+// 		duplicateReferences.push(currentPos);
+// 		return grid[canonicalPosition.row][canonicalPosition.col];
+// 	}
+// 	return _.assign({}, props); // return a new props object based on old cell
+// }
+
+// finalGrid[rowIndex][colIndex] = mapFn(
+// 	grid[rowIndex][colIndex],
+// 	{ row: rowIndex, col: colIndex },
+// 	finalGrid
+// );
+
+function mapToGrid(
+	trList: { props: StandardProps }[],
+	cellType: Th | Td = Td,
+	mapFn: (gridcell: IGridCell, ...args: any[]) => any = _.property('element')
+) {
 	const cellRowList = _.map(trList, trElement =>
 		_.map(filterTypes(trElement.props.children, cellType))
 	);
-	const grid = [];
+	const grid: IGridCell[][] = [];
 
 	if (_.isEmpty(cellRowList)) {
 		return [];
@@ -943,7 +1007,7 @@ function mapToGrid(trList, cellType = 'td', mapFn = _.property('element')) {
 	}
 
 	// map new values to each cell in the final grid
-	const finalGrid = [];
+	const finalGrid: IFinalGridCell[][] = [];
 	for (let rowIndex = 0; rowIndex < grid.length; rowIndex++) {
 		finalGrid[rowIndex] = [];
 		for (let colIndex = 0; colIndex < grid[rowIndex].length; colIndex++) {
@@ -966,9 +1030,12 @@ function mapToGrid(trList, cellType = 'td', mapFn = _.property('element')) {
 
 //{renderRowsWithIdentifiedEdges(filterTypes(children, Tr), Th)}
 
-function renderRowsWithIdentifiedEdges(trList, cellType) {
-	const duplicateReferences = [];
-	const fullCellGrid = mapToGrid(
+function renderRowsWithIdentifiedEdges(
+	trList: { props: StandardProps }[],
+	cellType: Th | Td = Td
+): React.ReactElement[] {
+	const duplicateReferences: { row: number; col: number }[] = [];
+	const fullCellGrid: (IFinalGridCell | null)[][] = mapToGrid(
 		trList,
 		cellType,
 		(
@@ -990,10 +1057,16 @@ function renderRowsWithIdentifiedEdges(trList, cellType) {
 		return [];
 	}
 
+	const firstRow = _.first(fullCellGrid);
+
+	if (_.isUndefined(firstRow)) {
+		return [];
+	}
+
 	const firstRowIndex = 0;
 	const lastRowIndex = fullCellGrid.length - 1;
 	const firstColIndex = 0;
-	const lastColIndex = _.first(fullCellGrid).length - 1;
+	const lastColIndex = firstRow.length - 1;
 	const firstSingleLookup = {};
 
 	// decorate the props of each cell with props that indicate its role in the table
@@ -1012,17 +1085,17 @@ function renderRowsWithIdentifiedEdges(trList, cellType) {
 				if (colIndex === lastColIndex) {
 					cellProps.isLastCol = true;
 				}
+				if (
+					!_.get(firstSingleLookup, rowIndex) &&
+					_.get(cellProps, 'rowSpan', 1) === 1
+				) {
+					_.set(firstSingleLookup, rowIndex, true);
+					cellProps.isFirstSingle = true;
+				}
 			}
 
 			if (!_.has(firstSingleLookup, rowIndex)) {
 				_.set(firstSingleLookup, rowIndex, false);
-			}
-			if (
-				!_.get(firstSingleLookup, rowIndex) &&
-				_.get(cellProps, 'rowSpan', 1) === 1
-			) {
-				_.set(firstSingleLookup, rowIndex, true);
-				cellProps.isFirstSingle = true;
 			}
 		})
 	);
@@ -1047,7 +1120,7 @@ function renderRowsWithIdentifiedEdges(trList, cellType) {
 							  ]
 							: []
 					),
-				[]
+				[] as React.ReactElement[]
 			)}
 		</Tr>
 	));
