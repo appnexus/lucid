@@ -35,6 +35,6 @@ export default class extends React.Component {
 
 // begin-hide-from-docs
 export const notes = `
-Use this for cases where users need additional data to hep them make their selection.
+This allows you to have multiple columns of data in your dropdown. Use this when additional data is needed to make a selection.
 `;
 // end-hide-from-docs
