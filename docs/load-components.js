@@ -116,12 +116,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/BarChart/examples',
 			true,
-			/\.(j)sx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/BarChart/examples',
 			true,
-			/\.(j)sx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 	{
