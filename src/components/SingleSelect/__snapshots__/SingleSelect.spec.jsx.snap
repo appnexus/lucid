@@ -220,6 +220,9 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 03.f
     />
     <SingleSelect.Option
       Selected="Foo (1234)"
+      isDisabled={false}
+      isHidden={false}
+      isWrapped={true}
     >
       <OptionCols
         col1="1234"
@@ -228,6 +231,9 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 03.f
     </SingleSelect.Option>
     <SingleSelect.Option
       Selected="Bar (2345)"
+      isDisabled={false}
+      isHidden={false}
+      isWrapped={true}
     >
       <OptionCols
         col1="2345"
@@ -236,6 +242,9 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 03.f
     </SingleSelect.Option>
     <SingleSelect.Option
       Selected="Baz (3456)"
+      isDisabled={false}
+      isHidden={false}
+      isWrapped={true}
     >
       <OptionCols
         col1="3456"
@@ -335,13 +344,25 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 04.g
     key="SingleSelectOptionGroup0"
   >
     Screen
-    <SingleSelect.Option>
+    <SingleSelect.Option
+      isDisabled={false}
+      isHidden={false}
+      isWrapped={true}
+    >
       Red
     </SingleSelect.Option>
-    <SingleSelect.Option>
+    <SingleSelect.Option
+      isDisabled={false}
+      isHidden={false}
+      isWrapped={true}
+    >
       Green
     </SingleSelect.Option>
-    <SingleSelect.Option>
+    <SingleSelect.Option
+      isDisabled={false}
+      isHidden={false}
+      isWrapped={true}
+    >
       Blue
     </SingleSelect.Option>
     <DropMenu.Option
@@ -374,16 +395,32 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 04.g
     key="SingleSelectOptionGroup1"
   >
     Print
-    <SingleSelect.Option>
+    <SingleSelect.Option
+      isDisabled={false}
+      isHidden={false}
+      isWrapped={true}
+    >
       Cyan
     </SingleSelect.Option>
-    <SingleSelect.Option>
+    <SingleSelect.Option
+      isDisabled={false}
+      isHidden={false}
+      isWrapped={true}
+    >
       Yellow
     </SingleSelect.Option>
-    <SingleSelect.Option>
+    <SingleSelect.Option
+      isDisabled={false}
+      isHidden={false}
+      isWrapped={true}
+    >
       Magenta
     </SingleSelect.Option>
-    <SingleSelect.Option>
+    <SingleSelect.Option
+      isDisabled={false}
+      isHidden={false}
+      isWrapped={true}
+    >
       Black
     </SingleSelect.Option>
     <DropMenu.Option
@@ -2195,13 +2232,25 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 12.s
     key="SingleSelectOptionGroup0"
   >
     Preferred
-    <SingleSelect.Option>
+    <SingleSelect.Option
+      isDisabled={false}
+      isHidden={false}
+      isWrapped={true}
+    >
       Red
     </SingleSelect.Option>
-    <SingleSelect.Option>
+    <SingleSelect.Option
+      isDisabled={false}
+      isHidden={false}
+      isWrapped={true}
+    >
       Green
     </SingleSelect.Option>
-    <SingleSelect.Option>
+    <SingleSelect.Option
+      isDisabled={false}
+      isHidden={false}
+      isWrapped={true}
+    >
       Blue
     </SingleSelect.Option>
     <DropMenu.Option

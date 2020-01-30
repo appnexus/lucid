@@ -374,6 +374,26 @@ describe('SearchableSelect', () => {
 				});
 			});
 		});
+
+		describe('Error', () => {
+			it('should pass the error class if the Error prop is passed', () => {
+
+				const wrapper = shallow(
+					<SearchableSelect Error={'Error message'}>
+						<Placeholder>control</Placeholder>
+						<Option>option a</Option>
+						<Option>option b</Option>
+						<Option>option c</Option>
+					</SearchableSelect>
+				);
+
+				const searchWrapper = wrapper.find('.lucid-SearchableSelect-Control-is-error');
+				const errorWrapper = wrapper.find('.lucid-SearchableSelect-error-content');
+				expect(errorWrapper.exists()).toBeTruthy();
+				expect(searchWrapper.exists()).toBeTruthy();
+				expect(errorWrapper.text()).toEqual('Error message');
+			});
+		});
 	});
 
 	describe('child elements', () => {
@@ -388,7 +408,7 @@ describe('SearchableSelect', () => {
 					</SearchableSelect>
 				);
 
-				const dropMenuHeader = wrapper.childAt(1);
+				const dropMenuHeader = wrapper.childAt(0).childAt(1);
 				const searchFieldWrapper = dropMenuHeader.childAt(0);
 
 				assert.equal(searchFieldWrapper.prop('placeholder'), 'custom');
@@ -470,7 +490,6 @@ describe('SearchableSelect', () => {
 					filterTypes(dropMenuChildren, DropMenu.Option),
 					'props'
 				);
-
 				assert.equal(_.size(optionsProps), 3);
 				assert(
 					_.isEqual(optionsProps[0], {

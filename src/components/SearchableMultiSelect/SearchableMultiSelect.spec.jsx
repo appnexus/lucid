@@ -74,6 +74,9 @@ describe('SearchableMultiSelect', () => {
 					props: {
 						callbackId: 'zero',
 						children: 'Zero',
+						isDisabled: false,
+						isHidden: false,
+						isWrapped: true
 					},
 				};
 
@@ -119,6 +122,9 @@ describe('SearchableMultiSelect', () => {
 					event: {},
 					props: {
 						callbackId: 'custom',
+						isDisabled: false,
+						isHidden: false,
+						isWrapped: true
 					},
 				};
 
@@ -156,7 +162,7 @@ describe('SearchableMultiSelect', () => {
 					.first()
 					.prop('onSelect')(0, mockSelectionCallback);
 
-				expect(onSelect).toHaveBeenCalledWith([0, 1]);
+				expect(onSelect).toHaveBeenCalledWith([0, 1], mockSelectionCallback);
 			});
 
 			it('should work when deselecting all', () => {
@@ -182,7 +188,7 @@ describe('SearchableMultiSelect', () => {
 					.first()
 					.prop('onSelect')(0, mockSelectionCallback);
 
-				expect(onSelect).toHaveBeenCalledWith([0, 1]);
+				expect(onSelect).toHaveBeenCalledWith([0, 1], mockSelectionCallback);
 			});
 
 			it('should work when selecting some', () => {
@@ -208,7 +214,7 @@ describe('SearchableMultiSelect', () => {
 					.first()
 					.prop('onSelect')(0, mockSelectionCallback);
 
-				expect(onSelect).toHaveBeenCalledWith([1]);
+				expect(onSelect).toHaveBeenCalledWith([1], mockSelectionCallback);
 			});
 
 			it('should work when selecting filtered options', () => {
@@ -230,9 +236,51 @@ describe('SearchableMultiSelect', () => {
 					.first()
 					.prop('onSelect')(0, mockSelectionCallback);
 
-				expect(onSelect).toHaveBeenCalledWith([1]);
+				expect(onSelect).toHaveBeenCalledWith([1], mockSelectionCallback);
 			});
 		});
+
+		describe('Error', () => {
+			it('should apply the appropriate classNames to the saerch', () => {
+				const wrapper = shallow(
+					<SearchableMultiSelect Error={'Erroring out'}>
+						<Option>option a</Option>
+						<Option>option b</Option>
+					</SearchableMultiSelect>
+				);
+
+				const searchWrapper = wrapper.find('.lucid-SearchableMultiSelect-search-is-error');
+
+				expect(searchWrapper.exists()).toBeTruthy();
+			});
+
+			it('should render out the error div', () => {
+				const wrapper = shallow(
+					<SearchableMultiSelect Error={'Erroring out'}>
+						<Option>option a</Option>
+						<Option>option b</Option>
+					</SearchableMultiSelect>
+				);
+
+				const searchWrapper = wrapper.find('.lucid-SearchableMultiSelect-error-content');
+
+				expect(searchWrapper.text()).toEqual('Erroring out');
+			});
+
+			it('should not render the error div', () => {
+				const wrapper = shallow(
+					<SearchableMultiSelect Error={true}>
+						<Option>option a</Option>
+						<Option>option b</Option>
+					</SearchableMultiSelect>
+				);
+
+				const searchWrapper = wrapper.find('.lucid-SearchableMultiSelect-search-is-error');
+				const errorWrapper = wrapper.find('.lucid-SearchableMultiSelect-error-content');
+				expect(errorWrapper.exists()).toBeFalsy();
+				expect(searchWrapper).toBeTruthy();
+			});
+		})
 	});
 
 	describe('custom formatting', () => {

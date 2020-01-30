@@ -60,12 +60,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/AxisLabel/examples',
 			true,
-			/\.jsx?$/
+			/\.tsx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/AxisLabel/examples',
 			true,
-			/\.jsx?$/
+			/\.tsx?$/
 		),
 	},
 	{
@@ -574,12 +574,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Paginator/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Paginator/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 	{
@@ -692,12 +692,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/RadioGroup/examples',
 			true,
-			/\.jsx?$/
+			/\.tsx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/RadioGroup/examples',
 			true,
-			/\.jsx?$/
+			/\.tsx?$/
 		),
 	},
 	{
@@ -770,12 +770,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/SearchableMultiSelect/examples',
 			true,
-			/\.jsx?$/
+			/\.tsx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/SearchableMultiSelect/examples',
 			true,
-			/\.jsx?$/
+			/\.tsx?$/
 		),
 	},
 	{
@@ -786,12 +786,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/SearchableSingleSelect/examples',
 			true,
-			/\.jsx?$/
+			/\.tsx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/SearchableSingleSelect/examples',
 			true,
-			/\.jsx?$/
+			/\.tsx?$/
 		),
 	},
 	{
@@ -802,12 +802,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/SearchableSelect/examples',
 			true,
-			/\.jsx?$/
+			/\.tsx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/SearchableSelect/examples',
 			true,
-			/\.jsx?$/
+			/\.tsx?$/
 		),
 	},
 	{
@@ -864,12 +864,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/SingleSelect/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/SingleSelect/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 	{
@@ -896,12 +896,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/SplitButton/examples',
 			true,
-			/\.jsx?$/
+			/\.tsx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/SplitButton/examples',
 			true,
-			/\.jsx?$/
+			/\.tsx?$/
 		),
 	},
 	{

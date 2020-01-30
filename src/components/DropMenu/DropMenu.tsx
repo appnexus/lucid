@@ -36,7 +36,7 @@ function joinArray(
 	);
 }
 
-function isOptionVisible(option: Option) {
+function isOptionVisible(option: IOptionsData) {
 	return !option.optionProps.isHidden;
 }
 
@@ -84,10 +84,12 @@ Control.peek = {
 Control.propName = 'Control';
 Control.propTypes = {};
 
-interface IDropMenuOptionGroupProps extends StandardProps {
+export interface IDropMenuOptionGroupProps extends StandardProps {
 	description?: string;
-	isHidden: boolean;
+	isHidden?: boolean;
 }
+
+export type OptionGroupFC = (props: IDropMenuOptionGroupProps) => null;
 
 const OptionGroup = (_props: IDropMenuOptionGroupProps): null => null;
 OptionGroup.displayName = 'DropMenu.OptionGroup';
@@ -108,11 +110,11 @@ OptionGroup.defaultProps = {
 	isHidden: false,
 };
 
-interface IDropMenuOptionProps extends StandardProps {
-	description?: string;
+export interface IDropMenuOptionProps extends StandardProps {
 	isDisabled?: boolean;
 	isHidden?: boolean;
 	isWrapped?: boolean;
+	Selected?: any;
 }
 
 const Option = (_props: IDropMenuOptionProps): null => null;
@@ -137,10 +139,10 @@ Option.propTypes = {
 Option.defaultProps = {
 	isDisabled: false,
 	isHidden: false,
-	isWrapped: true,
+	isWrapped: true
 };
 
-interface IDropMenuNullOptionProps extends StandardProps {
+export interface IDropMenuNullOptionProps extends StandardProps {
 	description?: string;
 }
 
@@ -156,7 +158,7 @@ NullOption.peek = {
 NullOption.propName = 'NullOption';
 NullOption.propTypes = {};
 
-interface IDropMenuFixedOptionProps extends StandardProps {
+export interface IDropMenuFixedOptionProps extends StandardProps {
 	description?: string;
 	isDisabled: boolean;
 	isHidden: boolean;
@@ -219,7 +221,7 @@ export interface IDropMenuProps extends StandardProps {
 	alignment: 'start' | 'center' | 'end';
 
 	/** An array of currently selected \`DropMenu.Option\` indices. */
-	selectedIndices: number[];
+	selectedIndices: number[] | null;
 
 	/** The currently focused index of \`DropMenu.Option\`. Can also be \`null\`. */
 	focusedIndex: number | null;
@@ -243,6 +245,7 @@ export interface IDropMenuProps extends StandardProps {
 		props: IDropMenuProps;
 		event: React.KeyboardEvent | React.MouseEvent;
 	}) => void;
+
 	/** Called when expanded and the user clicks the control or outside of the
 			menu, or when the control has focus and the Escape key is pressed */
 	onCollapse: ({
@@ -256,12 +259,12 @@ export interface IDropMenuProps extends StandardProps {
 	/** Called when an option is clicked, or when an option has focus and the
 			Enter key is pressed. */
 	onSelect: (
-		optionIndex: number | null,
+		optionIndex: any,
 		{
 			props,
 			event,
 		}: {
-			props: IDropMenuOptionProps;
+			props: IDropMenuOptionProps | undefined;
 			event: React.KeyboardEvent | React.MouseEvent;
 		}
 	) => void;
@@ -324,30 +327,43 @@ export interface IDropMenuProps extends StandardProps {
 	/** *Child Element* - props pass through to the underlying ContextMenu
 			component */
 	ContextMenu?: React.ReactNode;
+
 	/** *Child Element* - A special kind of \`Option\` that is always rendered at the top of
 			the menu. */
 	FixedOption?: React.ReactNode;
 }
 
-interface IOptionsData {
+export interface IOptionsData {
 	localOptionIndex: number;
 	optionIndex: number;
 	optionGroupIndex: number | null;
 	optionProps: IDropMenuOptionProps;
 }
 
+export interface IHasOptionChildren<
+	OptionGroupProps,
+	OptionProps,
+	NullOptionProps,
+	FixedOptionProps
+> {
+	OptionGroup: (_props: OptionGroupProps) => null;
+	Option: (_props: OptionProps) => null;
+	NullOption: (_props: NullOptionProps) => null;
+	FixedOption: (_props: FixedOptionProps) => null;
+}
+
 export interface IDropMenuState {
 	isMouseTriggered: boolean;
-	optionGroups: OptionGroup[];
+	optionGroups: IDropMenuOptionGroupProps[];
 	flattenedOptionsData: IOptionsData[];
 	ungroupedOptionData: IOptionsData[];
-	optionGroupDataLookup: { [key: number]: OptionGroup[] };
+	optionGroupDataLookup: { [key: number]: IOptionsData[] };
 	fixedOptionData: IOptionsData[];
 	portalId: string;
 	isExpanded: boolean;
 	focusedIndex: number | null;
 	selectedIndices: number[];
-	nullOptions: NullOption[];
+	nullOptions: IDropMenuNullOptionProps[];
 	optionGroupIndex: number | null;
 	optionProps: [];
 }
@@ -390,7 +406,7 @@ class DropMenu extends React.Component<IDropMenuProps, IDropMenuState> {
 	static peek = {
 		ContextMenu: DropMenuContextMenu,
 		description: `
-				This is a helper component used to render a menu of options attached to
+				\`DropMenu\` is a helper component used to render a menu of options attached to
 				any control. Supports option groups with and without labels as well as
 				special options with a \`null\` index for unselect.
 			`,
@@ -402,8 +418,8 @@ class DropMenu extends React.Component<IDropMenuProps, IDropMenuState> {
 
 	static propTypes = {
 		children: node`
-			Should be instances of {\`DropMenu.Control\`, \`DropMenu.Option\`,
-			\`DropMenu.OptionGroup\`, \`DropMenu.Nulloption\`}. Other direct child
+			Should be instances of: \`DropMenu.Control\`, \`DropMenu.Option\`,
+			\`DropMenu.OptionGroup\`, \`DropMenu.Nulloption\`. Other direct child
 			elements will not render.
 		`,
 
@@ -551,9 +567,19 @@ class DropMenu extends React.Component<IDropMenuProps, IDropMenuState> {
 		return DropMenu.preprocessOptionData(props, DropMenu);
 	};
 
-	static preprocessOptionData = (
-		props: IDropMenuProps,
-		ParentType = DropMenu
+	static preprocessOptionData = <
+		OptionGroupProps extends IDropMenuOptionGroupProps,
+		OptionProps extends IDropMenuOptionProps,
+		NullOptionProps extends IDropMenuNullOptionProps,
+		FixedOptionProps extends IDropMenuFixedOptionProps
+	>(
+		props: StandardProps,
+		ParentType: IHasOptionChildren<
+			OptionGroupProps,
+			OptionProps,
+			NullOptionProps,
+			FixedOptionProps
+		>
 	) => {
 		const { OptionGroup, Option, NullOption, FixedOption } = ParentType;
 
@@ -564,7 +590,7 @@ class DropMenu extends React.Component<IDropMenuProps, IDropMenuState> {
 			? _.map(findTypes(props, NullOption), 'props')
 			: []; // find all NullOption props
 
-		const fixedOptionData = _.map(
+		const fixedOptionData: IOptionsData[] = _.map(
 			fixedOptions,
 			(optionProps, localOptionIndex) => {
 				return {
@@ -577,9 +603,9 @@ class DropMenu extends React.Component<IDropMenuProps, IDropMenuState> {
 		);
 
 		// flatten grouped options into array of objects to associate { index, group index, and props } for each option
-		const groupedOptionData = _.reduce(
+		const groupedOptionData: IOptionsData[] = _.reduce(
 			optionGroups,
-			(memo: OptionGroup[], optionGroupProps, optionGroupIndex) => {
+			(memo: IOptionsData[], optionGroupProps, optionGroupIndex) => {
 				const groupedOptions = _.map(
 					findTypes(optionGroupProps, Option),
 					'props'
@@ -609,7 +635,7 @@ class DropMenu extends React.Component<IDropMenuProps, IDropMenuState> {
 		);
 
 		// store ungrouped options into array of objects to associate { index, and props } for each option
-		const ungroupedOptionData = _.map(
+		const ungroupedOptionData: IOptionsData[] = _.map(
 			ungroupedOptions,
 			(optionProps, localOptionIndex) => {
 				return {

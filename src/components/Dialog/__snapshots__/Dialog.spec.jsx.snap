@@ -983,16 +983,32 @@ exports[`Dialog [common] example testing should match snapshot(s) for 4.complex 
       <SearchableMultiSelect
         responsiveMode="large"
       >
-        <SearchableMultiSelect.Option>
+        <SearchableMultiSelect.Option
+          isDisabled={false}
+          isHidden={false}
+          isWrapped={true}
+        >
           cookie dough
         </SearchableMultiSelect.Option>
-        <SearchableMultiSelect.Option>
+        <SearchableMultiSelect.Option
+          isDisabled={false}
+          isHidden={false}
+          isWrapped={true}
+        >
           more ice cream
         </SearchableMultiSelect.Option>
-        <SearchableMultiSelect.Option>
+        <SearchableMultiSelect.Option
+          isDisabled={false}
+          isHidden={false}
+          isWrapped={true}
+        >
           mochi
         </SearchableMultiSelect.Option>
-        <SearchableMultiSelect.Option>
+        <SearchableMultiSelect.Option
+          isDisabled={false}
+          isHidden={false}
+          isWrapped={true}
+        >
           peanut butter cups
         </SearchableMultiSelect.Option>
       </SearchableMultiSelect>
@@ -1010,16 +1026,32 @@ exports[`Dialog [common] example testing should match snapshot(s) for 4.complex 
         <SingleSelect.Placeholder>
           You must select a break...
         </SingleSelect.Placeholder>
-        <SingleSelect.Option>
+        <SingleSelect.Option
+          isDisabled={false}
+          isHidden={false}
+          isWrapped={true}
+        >
           10am
         </SingleSelect.Option>
-        <SingleSelect.Option>
+        <SingleSelect.Option
+          isDisabled={false}
+          isHidden={false}
+          isWrapped={true}
+        >
           11am
         </SingleSelect.Option>
-        <SingleSelect.Option>
+        <SingleSelect.Option
+          isDisabled={false}
+          isHidden={false}
+          isWrapped={true}
+        >
           1pm
         </SingleSelect.Option>
-        <SingleSelect.Option>
+        <SingleSelect.Option
+          isDisabled={false}
+          isHidden={false}
+          isWrapped={true}
+        >
           2pm
         </SingleSelect.Option>
       </SingleSelect>

@@ -57,6 +57,9 @@ describe('SearchableSingleSelect', () => {
 					props: {
 						callbackId: 'zero',
 						children: 'Zero',
+						isDisabled: false,
+						isHidden: false,
+						isWrapped: true
 					},
 				};
 
@@ -114,6 +117,12 @@ describe('SearchableSingleSelect', () => {
 
 			it('should work when fired from the selection removal ', () => {
 				const onSelect = jest.fn();
+				const mockSelectionCallback = {
+					event: {
+						preventDefault: _.noop,
+					},
+					props: {},
+				};
 
 				const wrapper = shallow(
 					<SearchableSingleSelect
@@ -128,11 +137,53 @@ describe('SearchableSingleSelect', () => {
 				wrapper
 					.find('Selection')
 					.first()
-					.prop('onRemove')();
+					.prop('onRemove')(mockSelectionCallback);
 
-				expect(onSelect).toHaveBeenCalledWith(null);
+				expect(onSelect).toHaveBeenCalledWith(null, mockSelectionCallback);
 			});
 		});
+
+		describe('Error', () => {
+			it('should apply the appropriate classNames to the saerch', () => {
+				const wrapper = shallow(
+					<SearchableSingleSelect Error={'Erroring out'}>
+						<Option>option a</Option>
+						<Option>option b</Option>
+					</SearchableSingleSelect>
+				);
+
+				const searchWrapper = wrapper.find('.lucid-SearchableSingleSelect-search-is-error');
+
+				expect(searchWrapper.exists()).toBeTruthy();
+			});
+
+			it('should render out the error div', () => {
+				const wrapper = shallow(
+					<SearchableSingleSelect Error={'Erroring out'}>
+						<Option>option a</Option>
+						<Option>option b</Option>
+					</SearchableSingleSelect>
+				);
+
+				const searchWrapper = wrapper.find('.lucid-SearchableSingleSelect-error-content');
+
+				expect(searchWrapper.text()).toEqual('Erroring out');
+			});
+
+			it('should not render the error div', () => {
+				const wrapper = shallow(
+					<SearchableSingleSelect Error={true}>
+						<Option>option a</Option>
+						<Option>option b</Option>
+					</SearchableSingleSelect>
+				);
+
+				const searchWrapper = wrapper.find('.lucid-SearchableSingleSelect-search-is-error');
+				const errorWrapper = wrapper.find('.lucid-SearchableSingleSelect-error-content');
+				expect(errorWrapper.exists()).toBeFalsy();
+				expect(searchWrapper).toBeTruthy();
+			});
+		})
 	});
 
 	describe('custom formatting', () => {
