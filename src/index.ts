@@ -169,7 +169,6 @@ import Switch from './components/Switch/Switch';
 import SwitchIcon from './components/Icon/SwitchIcon/SwitchIcon';
 // @ts-ignore: not converted yet
 import SwitchLabeled from './components/SwitchLabeled/SwitchLabeled';
-// @ts-ignore: not converted yet
 import Table from './components/Table/Table';
 import Tag from './components/Tag/Tag';
 import TextField from './components/TextField/TextField';
