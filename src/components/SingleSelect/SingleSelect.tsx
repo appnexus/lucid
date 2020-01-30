@@ -278,7 +278,7 @@ class SingleSelect extends React.Component<
 		};
 	}
 
-	componentWillMount() {
+	UNSAFE_componentWillMount() {
 		// preprocess the options data before rendering
 		this.setState(
 			DropMenu.preprocessOptionData(
@@ -293,7 +293,7 @@ class SingleSelect extends React.Component<
 		);
 	}
 
-	componentWillReceiveProps(nextProps: ISingleSelectProps): void {
+	UNSAFE_componentWillReceiveProps(nextProps: ISingleSelectProps): void {
 		// only preprocess options data when it changes (via new props) - better performance than doing this each render
 		this.setState(
 			DropMenu.preprocessOptionData(
