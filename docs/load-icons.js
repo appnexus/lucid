@@ -925,6 +925,22 @@ module.exports = [
 	},
 
 	{
+		name: 'RunReportIcon',
+		component: getDefaultExport(
+			require('../src/components/Icon/RunReportIcon/RunReportIcon')
+		),
+		examplesContext: require.context(
+			'../src/components/Icon/RunReportIcon/examples',
+			true,
+			/\.(t|j)sx?$/
+		),
+		examplesContextRaw: require.context(
+			'!!raw-loader!../src/components/Icon/RunReportIcon/examples',
+			true,
+			/\.(t|j)sx?$/
+		),
+	},
+	{
 		name: 'SaveIcon',
 		component: getDefaultExport(
 			require('../src/components/Icon/SaveIcon/SaveIcon')

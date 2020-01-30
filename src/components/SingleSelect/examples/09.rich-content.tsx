@@ -24,3 +24,7 @@ export default createClass({
 		);
 	},
 });
+
+export const notes = `
+This allows you to include rich content in the dropdown. Use this where an image will help users make a selection, for example a company logo near the company name.
+`;
