@@ -222,6 +222,7 @@ exports[`Panel [common] example testing should match snapshot(s) for 06.no-margi
             align="left"
             isResizable={false}
             isSorted={false}
+            rowSpan={null}
             sortDirection="up"
           >
             Cell
@@ -230,6 +231,7 @@ exports[`Panel [common] example testing should match snapshot(s) for 06.no-margi
             align="left"
             isResizable={false}
             isSorted={false}
+            rowSpan={null}
             sortDirection="up"
           >
             Cell
@@ -238,6 +240,7 @@ exports[`Panel [common] example testing should match snapshot(s) for 06.no-margi
             align="left"
             isResizable={false}
             isSorted={false}
+            rowSpan={null}
             sortDirection="up"
           >
             Cell
@@ -254,6 +257,7 @@ exports[`Panel [common] example testing should match snapshot(s) for 06.no-margi
             align="left"
             hasBorderLeft={false}
             hasBorderRight={false}
+            rowSpan={null}
           >
             Cell
           </Table.Td>
@@ -261,6 +265,7 @@ exports[`Panel [common] example testing should match snapshot(s) for 06.no-margi
             align="left"
             hasBorderLeft={false}
             hasBorderRight={false}
+            rowSpan={null}
           >
             Cell
           </Table.Td>
@@ -268,33 +273,7 @@ exports[`Panel [common] example testing should match snapshot(s) for 06.no-margi
             align="left"
             hasBorderLeft={false}
             hasBorderRight={false}
-          >
-            Cell
-          </Table.Td>
-        </Table.Tr>
-        <Table.Tr
-          isActive={false}
-          isDisabled={false}
-          isSelected={false}
-        >
-          <Table.Td
-            align="left"
-            hasBorderLeft={false}
-            hasBorderRight={false}
-          >
-            Cell
-          </Table.Td>
-          <Table.Td
-            align="left"
-            hasBorderLeft={false}
-            hasBorderRight={false}
-          >
-            Cell
-          </Table.Td>
-          <Table.Td
-            align="left"
-            hasBorderLeft={false}
-            hasBorderRight={false}
+            rowSpan={null}
           >
             Cell
           </Table.Td>
@@ -308,6 +287,7 @@ exports[`Panel [common] example testing should match snapshot(s) for 06.no-margi
             align="left"
             hasBorderLeft={false}
             hasBorderRight={false}
+            rowSpan={null}
           >
             Cell
           </Table.Td>
@@ -315,6 +295,7 @@ exports[`Panel [common] example testing should match snapshot(s) for 06.no-margi
             align="left"
             hasBorderLeft={false}
             hasBorderRight={false}
+            rowSpan={null}
           >
             Cell
           </Table.Td>
@@ -322,6 +303,7 @@ exports[`Panel [common] example testing should match snapshot(s) for 06.no-margi
             align="left"
             hasBorderLeft={false}
             hasBorderRight={false}
+            rowSpan={null}
           >
             Cell
           </Table.Td>
@@ -335,6 +317,7 @@ exports[`Panel [common] example testing should match snapshot(s) for 06.no-margi
             align="left"
             hasBorderLeft={false}
             hasBorderRight={false}
+            rowSpan={null}
           >
             Cell
           </Table.Td>
@@ -342,6 +325,7 @@ exports[`Panel [common] example testing should match snapshot(s) for 06.no-margi
             align="left"
             hasBorderLeft={false}
             hasBorderRight={false}
+            rowSpan={null}
           >
             Cell
           </Table.Td>
@@ -349,6 +333,37 @@ exports[`Panel [common] example testing should match snapshot(s) for 06.no-margi
             align="left"
             hasBorderLeft={false}
             hasBorderRight={false}
+            rowSpan={null}
+          >
+            Cell
+          </Table.Td>
+        </Table.Tr>
+        <Table.Tr
+          isActive={false}
+          isDisabled={false}
+          isSelected={false}
+        >
+          <Table.Td
+            align="left"
+            hasBorderLeft={false}
+            hasBorderRight={false}
+            rowSpan={null}
+          >
+            Cell
+          </Table.Td>
+          <Table.Td
+            align="left"
+            hasBorderLeft={false}
+            hasBorderRight={false}
+            rowSpan={null}
+          >
+            Cell
+          </Table.Td>
+          <Table.Td
+            align="left"
+            hasBorderLeft={false}
+            hasBorderRight={false}
+            rowSpan={null}
           >
             Cell
           </Table.Td>
@@ -400,6 +415,7 @@ exports[`Panel [common] example testing should match snapshot(s) for 07.no-conte
             align="left"
             isResizable={false}
             isSorted={false}
+            rowSpan={null}
             sortDirection="up"
           >
             Cell
@@ -408,6 +424,7 @@ exports[`Panel [common] example testing should match snapshot(s) for 07.no-conte
             align="left"
             isResizable={false}
             isSorted={false}
+            rowSpan={null}
             sortDirection="up"
           >
             Cell
@@ -416,6 +433,7 @@ exports[`Panel [common] example testing should match snapshot(s) for 07.no-conte
             align="left"
             isResizable={false}
             isSorted={false}
+            rowSpan={null}
             sortDirection="up"
           >
             Cell
@@ -432,6 +450,7 @@ exports[`Panel [common] example testing should match snapshot(s) for 07.no-conte
             align="left"
             hasBorderLeft={false}
             hasBorderRight={false}
+            rowSpan={null}
           >
             Cell
           </Table.Td>
@@ -439,6 +458,7 @@ exports[`Panel [common] example testing should match snapshot(s) for 07.no-conte
             align="left"
             hasBorderLeft={false}
             hasBorderRight={false}
+            rowSpan={null}
           >
             Cell
           </Table.Td>
@@ -446,33 +466,7 @@ exports[`Panel [common] example testing should match snapshot(s) for 07.no-conte
             align="left"
             hasBorderLeft={false}
             hasBorderRight={false}
-          >
-            Cell
-          </Table.Td>
-        </Table.Tr>
-        <Table.Tr
-          isActive={false}
-          isDisabled={false}
-          isSelected={false}
-        >
-          <Table.Td
-            align="left"
-            hasBorderLeft={false}
-            hasBorderRight={false}
-          >
-            Cell
-          </Table.Td>
-          <Table.Td
-            align="left"
-            hasBorderLeft={false}
-            hasBorderRight={false}
-          >
-            Cell
-          </Table.Td>
-          <Table.Td
-            align="left"
-            hasBorderLeft={false}
-            hasBorderRight={false}
+            rowSpan={null}
           >
             Cell
           </Table.Td>
@@ -486,6 +480,7 @@ exports[`Panel [common] example testing should match snapshot(s) for 07.no-conte
             align="left"
             hasBorderLeft={false}
             hasBorderRight={false}
+            rowSpan={null}
           >
             Cell
           </Table.Td>
@@ -493,6 +488,7 @@ exports[`Panel [common] example testing should match snapshot(s) for 07.no-conte
             align="left"
             hasBorderLeft={false}
             hasBorderRight={false}
+            rowSpan={null}
           >
             Cell
           </Table.Td>
@@ -500,6 +496,7 @@ exports[`Panel [common] example testing should match snapshot(s) for 07.no-conte
             align="left"
             hasBorderLeft={false}
             hasBorderRight={false}
+            rowSpan={null}
           >
             Cell
           </Table.Td>
@@ -513,6 +510,7 @@ exports[`Panel [common] example testing should match snapshot(s) for 07.no-conte
             align="left"
             hasBorderLeft={false}
             hasBorderRight={false}
+            rowSpan={null}
           >
             Cell
           </Table.Td>
@@ -520,6 +518,7 @@ exports[`Panel [common] example testing should match snapshot(s) for 07.no-conte
             align="left"
             hasBorderLeft={false}
             hasBorderRight={false}
+            rowSpan={null}
           >
             Cell
           </Table.Td>
@@ -527,6 +526,37 @@ exports[`Panel [common] example testing should match snapshot(s) for 07.no-conte
             align="left"
             hasBorderLeft={false}
             hasBorderRight={false}
+            rowSpan={null}
+          >
+            Cell
+          </Table.Td>
+        </Table.Tr>
+        <Table.Tr
+          isActive={false}
+          isDisabled={false}
+          isSelected={false}
+        >
+          <Table.Td
+            align="left"
+            hasBorderLeft={false}
+            hasBorderRight={false}
+            rowSpan={null}
+          >
+            Cell
+          </Table.Td>
+          <Table.Td
+            align="left"
+            hasBorderLeft={false}
+            hasBorderRight={false}
+            rowSpan={null}
+          >
+            Cell
+          </Table.Td>
+          <Table.Td
+            align="left"
+            hasBorderLeft={false}
+            hasBorderRight={false}
+            rowSpan={null}
           >
             Cell
           </Table.Td>
@@ -578,6 +608,7 @@ exports[`Panel [common] example testing should match snapshot(s) for 08.no-margi
             align="left"
             isResizable={false}
             isSorted={false}
+            rowSpan={null}
             sortDirection="up"
           >
             Cell
@@ -586,6 +617,7 @@ exports[`Panel [common] example testing should match snapshot(s) for 08.no-margi
             align="left"
             isResizable={false}
             isSorted={false}
+            rowSpan={null}
             sortDirection="up"
           >
             Cell
@@ -594,6 +626,7 @@ exports[`Panel [common] example testing should match snapshot(s) for 08.no-margi
             align="left"
             isResizable={false}
             isSorted={false}
+            rowSpan={null}
             sortDirection="up"
           >
             Cell
@@ -610,6 +643,7 @@ exports[`Panel [common] example testing should match snapshot(s) for 08.no-margi
             align="left"
             hasBorderLeft={false}
             hasBorderRight={false}
+            rowSpan={null}
           >
             Cell
           </Table.Td>
@@ -617,6 +651,7 @@ exports[`Panel [common] example testing should match snapshot(s) for 08.no-margi
             align="left"
             hasBorderLeft={false}
             hasBorderRight={false}
+            rowSpan={null}
           >
             Cell
           </Table.Td>
@@ -624,33 +659,7 @@ exports[`Panel [common] example testing should match snapshot(s) for 08.no-margi
             align="left"
             hasBorderLeft={false}
             hasBorderRight={false}
-          >
-            Cell
-          </Table.Td>
-        </Table.Tr>
-        <Table.Tr
-          isActive={false}
-          isDisabled={false}
-          isSelected={false}
-        >
-          <Table.Td
-            align="left"
-            hasBorderLeft={false}
-            hasBorderRight={false}
-          >
-            Cell
-          </Table.Td>
-          <Table.Td
-            align="left"
-            hasBorderLeft={false}
-            hasBorderRight={false}
-          >
-            Cell
-          </Table.Td>
-          <Table.Td
-            align="left"
-            hasBorderLeft={false}
-            hasBorderRight={false}
+            rowSpan={null}
           >
             Cell
           </Table.Td>
@@ -664,6 +673,7 @@ exports[`Panel [common] example testing should match snapshot(s) for 08.no-margi
             align="left"
             hasBorderLeft={false}
             hasBorderRight={false}
+            rowSpan={null}
           >
             Cell
           </Table.Td>
@@ -671,6 +681,7 @@ exports[`Panel [common] example testing should match snapshot(s) for 08.no-margi
             align="left"
             hasBorderLeft={false}
             hasBorderRight={false}
+            rowSpan={null}
           >
             Cell
           </Table.Td>
@@ -678,6 +689,7 @@ exports[`Panel [common] example testing should match snapshot(s) for 08.no-margi
             align="left"
             hasBorderLeft={false}
             hasBorderRight={false}
+            rowSpan={null}
           >
             Cell
           </Table.Td>
@@ -691,6 +703,7 @@ exports[`Panel [common] example testing should match snapshot(s) for 08.no-margi
             align="left"
             hasBorderLeft={false}
             hasBorderRight={false}
+            rowSpan={null}
           >
             Cell
           </Table.Td>
@@ -698,6 +711,7 @@ exports[`Panel [common] example testing should match snapshot(s) for 08.no-margi
             align="left"
             hasBorderLeft={false}
             hasBorderRight={false}
+            rowSpan={null}
           >
             Cell
           </Table.Td>
@@ -705,6 +719,37 @@ exports[`Panel [common] example testing should match snapshot(s) for 08.no-margi
             align="left"
             hasBorderLeft={false}
             hasBorderRight={false}
+            rowSpan={null}
+          >
+            Cell
+          </Table.Td>
+        </Table.Tr>
+        <Table.Tr
+          isActive={false}
+          isDisabled={false}
+          isSelected={false}
+        >
+          <Table.Td
+            align="left"
+            hasBorderLeft={false}
+            hasBorderRight={false}
+            rowSpan={null}
+          >
+            Cell
+          </Table.Td>
+          <Table.Td
+            align="left"
+            hasBorderLeft={false}
+            hasBorderRight={false}
+            rowSpan={null}
+          >
+            Cell
+          </Table.Td>
+          <Table.Td
+            align="left"
+            hasBorderLeft={false}
+            hasBorderRight={false}
+            rowSpan={null}
           >
             Cell
           </Table.Td>

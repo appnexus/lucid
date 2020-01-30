@@ -252,9 +252,6 @@ interface IThProps
 	/** Sets the width of the cell. */
 	width?: number | string;
 
-	/** Indicates for how many rows the cell extends */
-	rowSpan?: number | null;
-
 	/** Indicates for how many columns the cell extends */
 	colSpan?: number;
 
@@ -275,6 +272,8 @@ interface IThProps
 
 	/** Sets the field value for the cell. */
 	field?: string;
+
+	rowSpan: number | null;
 }
 
 interface IThState {
@@ -301,7 +300,7 @@ interface ICoordinates {
 	pageY: number;
 }
 
-class Th extends React.Component<IThProps, IThState, {}> {
+class Th extends React.Component<IThProps, IThState> {
 	static displayName = 'Table.Th';
 
 	static defaultProps = {
@@ -309,6 +308,7 @@ class Th extends React.Component<IThProps, IThState, {}> {
 		isResizable: false,
 		isSorted: false,
 		sortDirection: 'up',
+		rowSpan: null,
 	};
 
 	static peek = {
@@ -367,14 +367,6 @@ class Th extends React.Component<IThProps, IThState, {}> {
 
 		width: oneOfType([number, string])`
 			Sets the width of the cell.
-		`,
-
-		rowSpan: number`
-			Indicates for how many columns the cell extends.
-		`,
-
-		colSpan: number`
-			Indicates for how many rows the cell extends.
 		`,
 
 		isFirstRow: bool`
@@ -657,11 +649,10 @@ interface ITdProps
 	/** Define the cell as being the first 1-height cell in the row. */
 	isFirstSingle?: boolean;
 
-	/** Indicates for how many rows the cell extends */
-	rowSpan?: number | null;
-
 	/** Indicates if the cell has any data or not */
 	isEmpty?: boolean;
+
+	rowSpan: number | null;
 }
 
 const Td = (props: ITdProps): React.ReactElement => {
@@ -711,6 +702,7 @@ Td.defaultProps = {
 	align: 'left',
 	hasBorderRight: false,
 	hasBorderLeft: false,
+	rowSpan: null,
 };
 
 Td.peek = {
@@ -757,10 +749,6 @@ Td.propTypes = {
 
 	isFirstSingle: bool`
 		Define the cell as being the first 1-height cell in the row.
-	`,
-
-	rowSpan: number`
-		Indicates for how many rows the cell extends.
 	`,
 
 	isEmpty: bool`

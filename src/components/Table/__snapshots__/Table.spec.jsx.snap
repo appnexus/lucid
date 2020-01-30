@@ -75,6 +75,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         colSpan={3}
         isResizable={false}
         isSorted={false}
+        rowSpan={null}
         sortDirection="up"
       >
         Alignments
@@ -89,6 +90,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="left"
         isResizable={false}
         isSorted={false}
+        rowSpan={null}
         sortDirection="up"
       >
         align left
@@ -97,6 +99,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="center"
         isResizable={false}
         isSorted={false}
+        rowSpan={null}
         sortDirection="up"
       >
         align center
@@ -106,6 +109,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         isResizable={false}
         isSortable={true}
         isSorted={true}
+        rowSpan={null}
         sortDirection="up"
       >
         align right
@@ -122,6 +126,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Checkbox
           isDisabled={false}
@@ -134,6 +139,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         Text
       </Table.Td>
@@ -141,6 +147,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="left"
         hasBorderLeft={true}
         hasBorderRight={true}
+        rowSpan={null}
       >
         <SuccessIcon
           aspectRatio="xMidYMid meet"
@@ -157,6 +164,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Button
           hasOnlyIcon={false}
@@ -173,6 +181,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         Sorted Column
       </Table.Td>
@@ -180,6 +189,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="left"
         hasBorderLeft={true}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align left
       </Table.Td>
@@ -187,6 +197,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="center"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align center
       </Table.Td>
@@ -194,6 +205,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="right"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align right
       </Table.Td>
@@ -207,6 +219,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Checkbox
           isDisabled={false}
@@ -219,6 +232,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         Row active
       </Table.Td>
@@ -226,6 +240,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="left"
         hasBorderLeft={true}
         hasBorderRight={true}
+        rowSpan={null}
       >
         <SuccessIcon
           aspectRatio="xMidYMid meet"
@@ -242,6 +257,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Button
           hasOnlyIcon={false}
@@ -258,6 +274,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         Sorted Column
       </Table.Td>
@@ -265,6 +282,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="left"
         hasBorderLeft={true}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align left
       </Table.Td>
@@ -272,6 +290,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="center"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align center
       </Table.Td>
@@ -279,6 +298,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="right"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align right
       </Table.Td>
@@ -292,6 +312,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Checkbox
           isDisabled={false}
@@ -304,6 +325,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         isDisabled
       </Table.Td>
@@ -311,6 +333,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="left"
         hasBorderLeft={true}
         hasBorderRight={true}
+        rowSpan={null}
       >
         <SuccessIcon
           aspectRatio="xMidYMid meet"
@@ -327,6 +350,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Button
           hasOnlyIcon={false}
@@ -343,6 +367,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         Sorted Column
       </Table.Td>
@@ -350,6 +375,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="left"
         hasBorderLeft={true}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align left
       </Table.Td>
@@ -357,6 +383,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="center"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align center
       </Table.Td>
@@ -364,6 +391,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="right"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align right
       </Table.Td>
@@ -378,6 +406,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Checkbox
           isDisabled={false}
@@ -390,6 +419,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         Text && isActionable
       </Table.Td>
@@ -397,6 +427,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="left"
         hasBorderLeft={true}
         hasBorderRight={true}
+        rowSpan={null}
       >
         <SuccessIcon
           aspectRatio="xMidYMid meet"
@@ -413,6 +444,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Button
           hasOnlyIcon={false}
@@ -429,6 +461,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         Sorted Column
       </Table.Td>
@@ -436,6 +469,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="left"
         hasBorderLeft={true}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align left
       </Table.Td>
@@ -443,6 +477,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="center"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align center
       </Table.Td>
@@ -450,6 +485,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="right"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align right
       </Table.Td>
@@ -464,6 +500,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Checkbox
           isDisabled={false}
@@ -476,6 +513,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         isDisabled && isActionable
       </Table.Td>
@@ -483,6 +521,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="left"
         hasBorderLeft={true}
         hasBorderRight={true}
+        rowSpan={null}
       >
         <SuccessIcon
           aspectRatio="xMidYMid meet"
@@ -499,6 +538,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Button
           hasOnlyIcon={false}
@@ -515,6 +555,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         Sorted Column
       </Table.Td>
@@ -522,6 +563,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="left"
         hasBorderLeft={true}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align left
       </Table.Td>
@@ -529,6 +571,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="center"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align center
       </Table.Td>
@@ -536,6 +579,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="right"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align right
       </Table.Td>
@@ -549,6 +593,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Checkbox
           isDisabled={false}
@@ -561,6 +606,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <a
           href="#"
@@ -572,6 +618,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="left"
         hasBorderLeft={true}
         hasBorderRight={true}
+        rowSpan={null}
       >
         <SuccessIcon
           aspectRatio="xMidYMid meet"
@@ -588,6 +635,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Button
           hasOnlyIcon={false}
@@ -604,6 +652,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         Sorted Column
       </Table.Td>
@@ -611,6 +660,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="left"
         hasBorderLeft={true}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align left
       </Table.Td>
@@ -618,6 +668,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="center"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align center
       </Table.Td>
@@ -625,6 +676,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="right"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align right
       </Table.Td>
@@ -638,6 +690,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Checkbox
           isDisabled={false}
@@ -650,6 +703,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <a
           href="#"
@@ -661,6 +715,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="left"
         hasBorderLeft={true}
         hasBorderRight={true}
+        rowSpan={null}
       >
         <SuccessIcon
           aspectRatio="xMidYMid meet"
@@ -677,6 +732,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Button
           hasOnlyIcon={false}
@@ -693,6 +749,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         Sorted Column
       </Table.Td>
@@ -700,6 +757,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="left"
         hasBorderLeft={true}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align left
       </Table.Td>
@@ -707,6 +765,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="center"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align center
       </Table.Td>
@@ -714,6 +773,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="right"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align right
       </Table.Td>
@@ -728,6 +788,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Checkbox
           isDisabled={false}
@@ -740,6 +801,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <a
           href="#"
@@ -751,6 +813,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="left"
         hasBorderLeft={true}
         hasBorderRight={true}
+        rowSpan={null}
       >
         <SuccessIcon
           aspectRatio="xMidYMid meet"
@@ -767,6 +830,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Button
           hasOnlyIcon={false}
@@ -783,6 +847,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         Sorted Column
       </Table.Td>
@@ -790,6 +855,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="left"
         hasBorderLeft={true}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align left
       </Table.Td>
@@ -797,6 +863,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="center"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align center
       </Table.Td>
@@ -804,6 +871,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="right"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align right
       </Table.Td>
@@ -818,6 +886,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Checkbox
           isDisabled={false}
@@ -830,6 +899,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <a
           href="#"
@@ -841,6 +911,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="left"
         hasBorderLeft={true}
         hasBorderRight={true}
+        rowSpan={null}
       >
         <SuccessIcon
           aspectRatio="xMidYMid meet"
@@ -857,6 +928,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Button
           hasOnlyIcon={false}
@@ -873,6 +945,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         Sorted Column
       </Table.Td>
@@ -880,6 +953,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="left"
         hasBorderLeft={true}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align left
       </Table.Td>
@@ -887,6 +961,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="center"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align center
       </Table.Td>
@@ -894,6 +969,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="right"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align right
       </Table.Td>
@@ -907,6 +983,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Checkbox
           isDisabled={false}
@@ -919,6 +996,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         isSelected
       </Table.Td>
@@ -926,6 +1004,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="left"
         hasBorderLeft={true}
         hasBorderRight={true}
+        rowSpan={null}
       >
         <SuccessIcon
           aspectRatio="xMidYMid meet"
@@ -942,6 +1021,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Button
           hasOnlyIcon={false}
@@ -958,6 +1038,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         Sorted Column
       </Table.Td>
@@ -965,6 +1046,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="left"
         hasBorderLeft={true}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align left
       </Table.Td>
@@ -972,6 +1054,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="center"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align center
       </Table.Td>
@@ -979,6 +1062,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="right"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align right
       </Table.Td>
@@ -992,6 +1076,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Checkbox
           isDisabled={false}
@@ -1004,6 +1089,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         isSelected && isDisabled
       </Table.Td>
@@ -1011,6 +1097,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="left"
         hasBorderLeft={true}
         hasBorderRight={true}
+        rowSpan={null}
       >
         <SuccessIcon
           aspectRatio="xMidYMid meet"
@@ -1027,6 +1114,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Button
           hasOnlyIcon={false}
@@ -1043,6 +1131,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         Sorted Column
       </Table.Td>
@@ -1050,6 +1139,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="left"
         hasBorderLeft={true}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align left
       </Table.Td>
@@ -1057,6 +1147,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="center"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align center
       </Table.Td>
@@ -1064,6 +1155,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="right"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align right
       </Table.Td>
@@ -1078,6 +1170,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Checkbox
           isDisabled={false}
@@ -1090,6 +1183,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         isSelected && isActionable
       </Table.Td>
@@ -1097,6 +1191,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="left"
         hasBorderLeft={true}
         hasBorderRight={true}
+        rowSpan={null}
       >
         <SuccessIcon
           aspectRatio="xMidYMid meet"
@@ -1113,6 +1208,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Button
           hasOnlyIcon={false}
@@ -1129,6 +1225,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         Sorted Column
       </Table.Td>
@@ -1136,6 +1233,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="left"
         hasBorderLeft={true}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align left
       </Table.Td>
@@ -1143,6 +1241,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="center"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align center
       </Table.Td>
@@ -1150,6 +1249,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="right"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align right
       </Table.Td>
@@ -1164,6 +1264,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Checkbox
           isDisabled={false}
@@ -1176,6 +1277,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         isSelected && isDisabled && isActionable
       </Table.Td>
@@ -1183,6 +1285,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="left"
         hasBorderLeft={true}
         hasBorderRight={true}
+        rowSpan={null}
       >
         <SuccessIcon
           aspectRatio="xMidYMid meet"
@@ -1199,6 +1302,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Button
           hasOnlyIcon={false}
@@ -1215,6 +1319,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         Sorted Column
       </Table.Td>
@@ -1222,6 +1327,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="left"
         hasBorderLeft={true}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align left
       </Table.Td>
@@ -1229,6 +1335,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="center"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align center
       </Table.Td>
@@ -1236,6 +1343,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="right"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align right
       </Table.Td>
@@ -1250,6 +1358,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Checkbox
           isDisabled={false}
@@ -1262,6 +1371,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         isActive
       </Table.Td>
@@ -1269,6 +1379,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="left"
         hasBorderLeft={true}
         hasBorderRight={true}
+        rowSpan={null}
       >
         <SuccessIcon
           aspectRatio="xMidYMid meet"
@@ -1285,6 +1396,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Button
           hasOnlyIcon={false}
@@ -1301,6 +1413,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         Sorted Column
       </Table.Td>
@@ -1308,6 +1421,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="left"
         hasBorderLeft={true}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align left
       </Table.Td>
@@ -1315,6 +1429,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="center"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align center
       </Table.Td>
@@ -1322,6 +1437,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="right"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align right
       </Table.Td>
@@ -1336,6 +1452,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Checkbox
           isDisabled={false}
@@ -1348,6 +1465,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         isActive && isDisabled
       </Table.Td>
@@ -1355,6 +1473,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="left"
         hasBorderLeft={true}
         hasBorderRight={true}
+        rowSpan={null}
       >
         <SuccessIcon
           aspectRatio="xMidYMid meet"
@@ -1371,6 +1490,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Button
           hasOnlyIcon={false}
@@ -1387,6 +1507,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         Sorted Column
       </Table.Td>
@@ -1394,6 +1515,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="left"
         hasBorderLeft={true}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align left
       </Table.Td>
@@ -1401,6 +1523,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="center"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align center
       </Table.Td>
@@ -1408,6 +1531,7 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         align="right"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align right
       </Table.Td>
@@ -1499,6 +1623,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="left"
         isResizable={false}
         isSorted={false}
+        rowSpan={null}
         sortDirection="up"
       >
         align left
@@ -1507,6 +1632,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="center"
         isResizable={false}
         isSorted={false}
+        rowSpan={null}
         sortDirection="up"
       >
         align center
@@ -1516,6 +1642,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         isResizable={false}
         isSortable={true}
         isSorted={true}
+        rowSpan={null}
         sortDirection="up"
       >
         align right
@@ -1540,6 +1667,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Checkbox
           isDisabled={false}
@@ -1552,6 +1680,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         Text
       </Table.Td>
@@ -1559,6 +1688,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="left"
         hasBorderLeft={true}
         hasBorderRight={true}
+        rowSpan={null}
       >
         <SuccessIcon
           aspectRatio="xMidYMid meet"
@@ -1575,6 +1705,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Button
           hasOnlyIcon={false}
@@ -1591,6 +1722,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         Sorted Column
       </Table.Td>
@@ -1598,6 +1730,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="left"
         hasBorderLeft={true}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align left
       </Table.Td>
@@ -1605,6 +1738,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="center"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align center
       </Table.Td>
@@ -1612,6 +1746,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="right"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align right
       </Table.Td>
@@ -1625,6 +1760,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Checkbox
           isDisabled={false}
@@ -1637,6 +1773,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         isDisabled
       </Table.Td>
@@ -1644,6 +1781,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="left"
         hasBorderLeft={true}
         hasBorderRight={true}
+        rowSpan={null}
       >
         <SuccessIcon
           aspectRatio="xMidYMid meet"
@@ -1660,6 +1798,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Button
           hasOnlyIcon={false}
@@ -1676,6 +1815,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         Sorted Column
       </Table.Td>
@@ -1683,6 +1823,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="left"
         hasBorderLeft={true}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align left
       </Table.Td>
@@ -1690,6 +1831,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="center"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align center
       </Table.Td>
@@ -1697,6 +1839,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="right"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align right
       </Table.Td>
@@ -1711,6 +1854,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Checkbox
           isDisabled={false}
@@ -1723,6 +1867,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         Text && isActionable
       </Table.Td>
@@ -1730,6 +1875,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="left"
         hasBorderLeft={true}
         hasBorderRight={true}
+        rowSpan={null}
       >
         <SuccessIcon
           aspectRatio="xMidYMid meet"
@@ -1746,6 +1892,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Button
           hasOnlyIcon={false}
@@ -1762,6 +1909,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         Sorted Column
       </Table.Td>
@@ -1769,6 +1917,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="left"
         hasBorderLeft={true}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align left
       </Table.Td>
@@ -1776,6 +1925,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="center"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align center
       </Table.Td>
@@ -1783,6 +1933,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="right"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align right
       </Table.Td>
@@ -1797,6 +1948,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Checkbox
           isDisabled={false}
@@ -1809,6 +1961,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         isDisabled && isActionable
       </Table.Td>
@@ -1816,6 +1969,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="left"
         hasBorderLeft={true}
         hasBorderRight={true}
+        rowSpan={null}
       >
         <SuccessIcon
           aspectRatio="xMidYMid meet"
@@ -1832,6 +1986,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Button
           hasOnlyIcon={false}
@@ -1848,6 +2003,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         Sorted Column
       </Table.Td>
@@ -1855,6 +2011,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="left"
         hasBorderLeft={true}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align left
       </Table.Td>
@@ -1862,6 +2019,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="center"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align center
       </Table.Td>
@@ -1869,6 +2027,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="right"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align right
       </Table.Td>
@@ -1882,6 +2041,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Checkbox
           isDisabled={false}
@@ -1894,6 +2054,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <a
           href="#"
@@ -1905,6 +2066,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="left"
         hasBorderLeft={true}
         hasBorderRight={true}
+        rowSpan={null}
       >
         <SuccessIcon
           aspectRatio="xMidYMid meet"
@@ -1921,6 +2083,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Button
           hasOnlyIcon={false}
@@ -1937,6 +2100,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         Sorted Column
       </Table.Td>
@@ -1944,6 +2108,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="left"
         hasBorderLeft={true}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align left
       </Table.Td>
@@ -1951,6 +2116,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="center"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align center
       </Table.Td>
@@ -1958,6 +2124,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="right"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align right
       </Table.Td>
@@ -1971,6 +2138,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Checkbox
           isDisabled={false}
@@ -1983,6 +2151,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <a
           href="#"
@@ -1994,6 +2163,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="left"
         hasBorderLeft={true}
         hasBorderRight={true}
+        rowSpan={null}
       >
         <SuccessIcon
           aspectRatio="xMidYMid meet"
@@ -2010,6 +2180,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Button
           hasOnlyIcon={false}
@@ -2026,6 +2197,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         Sorted Column
       </Table.Td>
@@ -2033,6 +2205,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="left"
         hasBorderLeft={true}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align left
       </Table.Td>
@@ -2040,6 +2213,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="center"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align center
       </Table.Td>
@@ -2047,6 +2221,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="right"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align right
       </Table.Td>
@@ -2061,6 +2236,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Checkbox
           isDisabled={false}
@@ -2073,6 +2249,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <a
           href="#"
@@ -2084,6 +2261,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="left"
         hasBorderLeft={true}
         hasBorderRight={true}
+        rowSpan={null}
       >
         <SuccessIcon
           aspectRatio="xMidYMid meet"
@@ -2100,6 +2278,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Button
           hasOnlyIcon={false}
@@ -2116,6 +2295,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         Sorted Column
       </Table.Td>
@@ -2123,6 +2303,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="left"
         hasBorderLeft={true}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align left
       </Table.Td>
@@ -2130,6 +2311,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="center"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align center
       </Table.Td>
@@ -2137,6 +2319,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="right"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align right
       </Table.Td>
@@ -2151,6 +2334,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Checkbox
           isDisabled={false}
@@ -2163,6 +2347,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <a
           href="#"
@@ -2174,6 +2359,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="left"
         hasBorderLeft={true}
         hasBorderRight={true}
+        rowSpan={null}
       >
         <SuccessIcon
           aspectRatio="xMidYMid meet"
@@ -2190,6 +2376,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Button
           hasOnlyIcon={false}
@@ -2206,6 +2393,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         Sorted Column
       </Table.Td>
@@ -2213,6 +2401,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="left"
         hasBorderLeft={true}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align left
       </Table.Td>
@@ -2220,6 +2409,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="center"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align center
       </Table.Td>
@@ -2227,6 +2417,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="right"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align right
       </Table.Td>
@@ -2240,6 +2431,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Checkbox
           isDisabled={false}
@@ -2252,6 +2444,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         isSelected
       </Table.Td>
@@ -2259,6 +2452,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="left"
         hasBorderLeft={true}
         hasBorderRight={true}
+        rowSpan={null}
       >
         <SuccessIcon
           aspectRatio="xMidYMid meet"
@@ -2275,6 +2469,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Button
           hasOnlyIcon={false}
@@ -2291,6 +2486,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         Sorted Column
       </Table.Td>
@@ -2298,6 +2494,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="left"
         hasBorderLeft={true}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align left
       </Table.Td>
@@ -2305,6 +2502,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="center"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align center
       </Table.Td>
@@ -2312,6 +2510,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="right"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align right
       </Table.Td>
@@ -2325,6 +2524,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Checkbox
           isDisabled={false}
@@ -2337,6 +2537,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         isSelected && isDisabled
       </Table.Td>
@@ -2344,6 +2545,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="left"
         hasBorderLeft={true}
         hasBorderRight={true}
+        rowSpan={null}
       >
         <SuccessIcon
           aspectRatio="xMidYMid meet"
@@ -2360,6 +2562,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Button
           hasOnlyIcon={false}
@@ -2376,6 +2579,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         Sorted Column
       </Table.Td>
@@ -2383,6 +2587,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="left"
         hasBorderLeft={true}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align left
       </Table.Td>
@@ -2390,6 +2595,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="center"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align center
       </Table.Td>
@@ -2397,6 +2603,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="right"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align right
       </Table.Td>
@@ -2411,6 +2618,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Checkbox
           isDisabled={false}
@@ -2423,6 +2631,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         isSelected && isActionable
       </Table.Td>
@@ -2430,6 +2639,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="left"
         hasBorderLeft={true}
         hasBorderRight={true}
+        rowSpan={null}
       >
         <SuccessIcon
           aspectRatio="xMidYMid meet"
@@ -2446,6 +2656,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Button
           hasOnlyIcon={false}
@@ -2462,6 +2673,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         Sorted Column
       </Table.Td>
@@ -2469,6 +2681,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="left"
         hasBorderLeft={true}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align left
       </Table.Td>
@@ -2476,6 +2689,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="center"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align center
       </Table.Td>
@@ -2483,6 +2697,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="right"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align right
       </Table.Td>
@@ -2497,6 +2712,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Checkbox
           isDisabled={false}
@@ -2509,6 +2725,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         isSelected && isDisabled && isActionable
       </Table.Td>
@@ -2516,6 +2733,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="left"
         hasBorderLeft={true}
         hasBorderRight={true}
+        rowSpan={null}
       >
         <SuccessIcon
           aspectRatio="xMidYMid meet"
@@ -2532,6 +2750,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Button
           hasOnlyIcon={false}
@@ -2548,6 +2767,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         Sorted Column
       </Table.Td>
@@ -2555,6 +2775,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="left"
         hasBorderLeft={true}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align left
       </Table.Td>
@@ -2562,6 +2783,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="center"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align center
       </Table.Td>
@@ -2569,6 +2791,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="right"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align right
       </Table.Td>
@@ -2583,6 +2806,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Checkbox
           isDisabled={false}
@@ -2595,6 +2819,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         isActive
       </Table.Td>
@@ -2602,6 +2827,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="left"
         hasBorderLeft={true}
         hasBorderRight={true}
+        rowSpan={null}
       >
         <SuccessIcon
           aspectRatio="xMidYMid meet"
@@ -2618,6 +2844,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Button
           hasOnlyIcon={false}
@@ -2634,6 +2861,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         Sorted Column
       </Table.Td>
@@ -2641,6 +2869,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="left"
         hasBorderLeft={true}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align left
       </Table.Td>
@@ -2648,6 +2877,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="center"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align center
       </Table.Td>
@@ -2655,6 +2885,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="right"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align right
       </Table.Td>
@@ -2669,6 +2900,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Checkbox
           isDisabled={false}
@@ -2681,6 +2913,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         isActive && isDisabled
       </Table.Td>
@@ -2688,6 +2921,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="left"
         hasBorderLeft={true}
         hasBorderRight={true}
+        rowSpan={null}
       >
         <SuccessIcon
           aspectRatio="xMidYMid meet"
@@ -2704,6 +2938,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Button
           hasOnlyIcon={false}
@@ -2720,6 +2955,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         Sorted Column
       </Table.Td>
@@ -2727,6 +2963,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="left"
         hasBorderLeft={true}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align left
       </Table.Td>
@@ -2734,6 +2971,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="center"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align center
       </Table.Td>
@@ -2741,6 +2979,7 @@ exports[`Table [common] example testing should match snapshot(s) for 2.gray-head
         align="right"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align right
       </Table.Td>
@@ -2833,6 +3072,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         colSpan={3}
         isResizable={false}
         isSorted={false}
+        rowSpan={null}
         sortDirection="up"
       >
         Alignments
@@ -2847,6 +3087,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="left"
         isResizable={false}
         isSorted={false}
+        rowSpan={null}
         sortDirection="up"
       >
         align left
@@ -2855,6 +3096,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="center"
         isResizable={true}
         isSorted={false}
+        rowSpan={null}
         sortDirection="up"
       >
         align center
@@ -2864,6 +3106,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         isResizable={false}
         isSortable={true}
         isSorted={true}
+        rowSpan={null}
         sortDirection="up"
       >
         align right
@@ -2888,6 +3131,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Checkbox
           isDisabled={false}
@@ -2900,6 +3144,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         Text
       </Table.Td>
@@ -2907,6 +3152,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="left"
         hasBorderLeft={true}
         hasBorderRight={true}
+        rowSpan={null}
       >
         <SuccessIcon
           aspectRatio="xMidYMid meet"
@@ -2923,6 +3169,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Button
           hasOnlyIcon={false}
@@ -2939,6 +3186,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         Sorted Column
       </Table.Td>
@@ -2946,6 +3194,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="left"
         hasBorderLeft={true}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align left
       </Table.Td>
@@ -2953,6 +3202,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="center"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align center
       </Table.Td>
@@ -2960,6 +3210,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="right"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align right
       </Table.Td>
@@ -2973,6 +3224,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Checkbox
           isDisabled={false}
@@ -2985,6 +3237,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         isDisabled
       </Table.Td>
@@ -2992,6 +3245,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="left"
         hasBorderLeft={true}
         hasBorderRight={true}
+        rowSpan={null}
       >
         <SuccessIcon
           aspectRatio="xMidYMid meet"
@@ -3008,6 +3262,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Button
           hasOnlyIcon={false}
@@ -3024,6 +3279,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         Sorted Column
       </Table.Td>
@@ -3031,6 +3287,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="left"
         hasBorderLeft={true}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align left
       </Table.Td>
@@ -3038,6 +3295,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="center"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align center
       </Table.Td>
@@ -3045,6 +3303,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="right"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align right
       </Table.Td>
@@ -3059,6 +3318,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Checkbox
           isDisabled={false}
@@ -3071,6 +3331,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         Text && isActionable
       </Table.Td>
@@ -3078,6 +3339,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="left"
         hasBorderLeft={true}
         hasBorderRight={true}
+        rowSpan={null}
       >
         <SuccessIcon
           aspectRatio="xMidYMid meet"
@@ -3094,6 +3356,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Button
           hasOnlyIcon={false}
@@ -3110,6 +3373,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         Sorted Column
       </Table.Td>
@@ -3117,6 +3381,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="left"
         hasBorderLeft={true}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align left
       </Table.Td>
@@ -3124,6 +3389,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="center"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align center
       </Table.Td>
@@ -3131,6 +3397,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="right"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align right
       </Table.Td>
@@ -3145,6 +3412,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Checkbox
           isDisabled={false}
@@ -3157,6 +3425,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         isDisabled && isActionable
       </Table.Td>
@@ -3164,6 +3433,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="left"
         hasBorderLeft={true}
         hasBorderRight={true}
+        rowSpan={null}
       >
         <SuccessIcon
           aspectRatio="xMidYMid meet"
@@ -3180,6 +3450,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Button
           hasOnlyIcon={false}
@@ -3196,6 +3467,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         Sorted Column
       </Table.Td>
@@ -3203,6 +3475,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="left"
         hasBorderLeft={true}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align left
       </Table.Td>
@@ -3210,6 +3483,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="center"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align center
       </Table.Td>
@@ -3217,6 +3491,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="right"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align right
       </Table.Td>
@@ -3230,6 +3505,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Checkbox
           isDisabled={false}
@@ -3242,6 +3518,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <a
           href="#"
@@ -3253,6 +3530,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="left"
         hasBorderLeft={true}
         hasBorderRight={true}
+        rowSpan={null}
       >
         <SuccessIcon
           aspectRatio="xMidYMid meet"
@@ -3269,6 +3547,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Button
           hasOnlyIcon={false}
@@ -3285,6 +3564,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         Sorted Column
       </Table.Td>
@@ -3292,6 +3572,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="left"
         hasBorderLeft={true}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align left
       </Table.Td>
@@ -3299,6 +3580,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="center"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align center
       </Table.Td>
@@ -3306,6 +3588,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="right"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align right
       </Table.Td>
@@ -3319,6 +3602,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Checkbox
           isDisabled={false}
@@ -3331,6 +3615,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <a
           href="#"
@@ -3342,6 +3627,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="left"
         hasBorderLeft={true}
         hasBorderRight={true}
+        rowSpan={null}
       >
         <SuccessIcon
           aspectRatio="xMidYMid meet"
@@ -3358,6 +3644,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Button
           hasOnlyIcon={false}
@@ -3374,6 +3661,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         Sorted Column
       </Table.Td>
@@ -3381,6 +3669,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="left"
         hasBorderLeft={true}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align left
       </Table.Td>
@@ -3388,6 +3677,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="center"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align center
       </Table.Td>
@@ -3395,6 +3685,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="right"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align right
       </Table.Td>
@@ -3409,6 +3700,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Checkbox
           isDisabled={false}
@@ -3421,6 +3713,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <a
           href="#"
@@ -3432,6 +3725,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="left"
         hasBorderLeft={true}
         hasBorderRight={true}
+        rowSpan={null}
       >
         <SuccessIcon
           aspectRatio="xMidYMid meet"
@@ -3448,6 +3742,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Button
           hasOnlyIcon={false}
@@ -3464,6 +3759,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         Sorted Column
       </Table.Td>
@@ -3471,6 +3767,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="left"
         hasBorderLeft={true}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align left
       </Table.Td>
@@ -3478,6 +3775,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="center"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align center
       </Table.Td>
@@ -3485,6 +3783,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="right"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align right
       </Table.Td>
@@ -3499,6 +3798,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Checkbox
           isDisabled={false}
@@ -3511,6 +3811,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <a
           href="#"
@@ -3522,6 +3823,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="left"
         hasBorderLeft={true}
         hasBorderRight={true}
+        rowSpan={null}
       >
         <SuccessIcon
           aspectRatio="xMidYMid meet"
@@ -3538,6 +3840,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Button
           hasOnlyIcon={false}
@@ -3554,6 +3857,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         Sorted Column
       </Table.Td>
@@ -3561,6 +3865,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="left"
         hasBorderLeft={true}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align left
       </Table.Td>
@@ -3568,6 +3873,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="center"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align center
       </Table.Td>
@@ -3575,6 +3881,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="right"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align right
       </Table.Td>
@@ -3588,6 +3895,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Checkbox
           isDisabled={false}
@@ -3600,6 +3908,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         isSelected
       </Table.Td>
@@ -3607,6 +3916,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="left"
         hasBorderLeft={true}
         hasBorderRight={true}
+        rowSpan={null}
       >
         <SuccessIcon
           aspectRatio="xMidYMid meet"
@@ -3623,6 +3933,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Button
           hasOnlyIcon={false}
@@ -3639,6 +3950,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         Sorted Column
       </Table.Td>
@@ -3646,6 +3958,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="left"
         hasBorderLeft={true}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align left
       </Table.Td>
@@ -3653,6 +3966,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="center"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align center
       </Table.Td>
@@ -3660,6 +3974,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="right"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align right
       </Table.Td>
@@ -3673,6 +3988,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Checkbox
           isDisabled={false}
@@ -3685,6 +4001,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         isSelected && isDisabled
       </Table.Td>
@@ -3692,6 +4009,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="left"
         hasBorderLeft={true}
         hasBorderRight={true}
+        rowSpan={null}
       >
         <SuccessIcon
           aspectRatio="xMidYMid meet"
@@ -3708,6 +4026,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Button
           hasOnlyIcon={false}
@@ -3724,6 +4043,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         Sorted Column
       </Table.Td>
@@ -3731,6 +4051,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="left"
         hasBorderLeft={true}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align left
       </Table.Td>
@@ -3738,6 +4059,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="center"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align center
       </Table.Td>
@@ -3745,6 +4067,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="right"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align right
       </Table.Td>
@@ -3759,6 +4082,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Checkbox
           isDisabled={false}
@@ -3771,6 +4095,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         isSelected && isActionable
       </Table.Td>
@@ -3778,6 +4103,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="left"
         hasBorderLeft={true}
         hasBorderRight={true}
+        rowSpan={null}
       >
         <SuccessIcon
           aspectRatio="xMidYMid meet"
@@ -3794,6 +4120,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Button
           hasOnlyIcon={false}
@@ -3810,6 +4137,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         Sorted Column
       </Table.Td>
@@ -3817,6 +4145,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="left"
         hasBorderLeft={true}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align left
       </Table.Td>
@@ -3824,6 +4153,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="center"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align center
       </Table.Td>
@@ -3831,6 +4161,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="right"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align right
       </Table.Td>
@@ -3845,6 +4176,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Checkbox
           isDisabled={false}
@@ -3857,6 +4189,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         isSelected && isDisabled && isActionable
       </Table.Td>
@@ -3864,6 +4197,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="left"
         hasBorderLeft={true}
         hasBorderRight={true}
+        rowSpan={null}
       >
         <SuccessIcon
           aspectRatio="xMidYMid meet"
@@ -3880,6 +4214,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Button
           hasOnlyIcon={false}
@@ -3896,6 +4231,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         Sorted Column
       </Table.Td>
@@ -3903,6 +4239,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="left"
         hasBorderLeft={true}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align left
       </Table.Td>
@@ -3910,6 +4247,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="center"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align center
       </Table.Td>
@@ -3917,6 +4255,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="right"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align right
       </Table.Td>
@@ -3931,6 +4270,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Checkbox
           isDisabled={false}
@@ -3943,6 +4283,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         isActive
       </Table.Td>
@@ -3950,6 +4291,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="left"
         hasBorderLeft={true}
         hasBorderRight={true}
+        rowSpan={null}
       >
         <SuccessIcon
           aspectRatio="xMidYMid meet"
@@ -3966,6 +4308,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Button
           hasOnlyIcon={false}
@@ -3982,6 +4325,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         Sorted Column
       </Table.Td>
@@ -3989,6 +4333,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="left"
         hasBorderLeft={true}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align left
       </Table.Td>
@@ -3996,6 +4341,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="center"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align center
       </Table.Td>
@@ -4003,6 +4349,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="right"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align right
       </Table.Td>
@@ -4017,6 +4364,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Checkbox
           isDisabled={false}
@@ -4029,6 +4377,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         isActive && isDisabled
       </Table.Td>
@@ -4036,6 +4385,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="left"
         hasBorderLeft={true}
         hasBorderRight={true}
+        rowSpan={null}
       >
         <SuccessIcon
           aspectRatio="xMidYMid meet"
@@ -4052,6 +4402,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Button
           hasOnlyIcon={false}
@@ -4068,6 +4419,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         Sorted Column
       </Table.Td>
@@ -4075,6 +4427,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="left"
         hasBorderLeft={true}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align left
       </Table.Td>
@@ -4082,6 +4435,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="center"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align center
       </Table.Td>
@@ -4089,6 +4443,7 @@ exports[`Table [common] example testing should match snapshot(s) for 3.compresse
         align="right"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align right
       </Table.Td>
@@ -4172,6 +4527,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         colSpan={3}
         isResizable={false}
         isSorted={false}
+        rowSpan={null}
         sortDirection="up"
       >
         Alignments
@@ -4186,6 +4542,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="left"
         isResizable={false}
         isSorted={false}
+        rowSpan={null}
         sortDirection="up"
       >
         align left
@@ -4194,6 +4551,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="center"
         isResizable={false}
         isSorted={false}
+        rowSpan={null}
         sortDirection="up"
       >
         align center
@@ -4203,6 +4561,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         isResizable={false}
         isSortable={true}
         isSorted={true}
+        rowSpan={null}
         sortDirection="up"
       >
         align right
@@ -4219,6 +4578,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Checkbox
           isDisabled={false}
@@ -4231,6 +4591,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         Text
       </Table.Td>
@@ -4238,6 +4599,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <SuccessIcon
           aspectRatio="xMidYMid meet"
@@ -4254,6 +4616,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Button
           hasOnlyIcon={false}
@@ -4270,6 +4633,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         Sorted Column
       </Table.Td>
@@ -4277,6 +4641,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align left
       </Table.Td>
@@ -4284,6 +4649,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="center"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align center
       </Table.Td>
@@ -4291,6 +4657,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="right"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align right
       </Table.Td>
@@ -4304,6 +4671,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Checkbox
           isDisabled={false}
@@ -4316,6 +4684,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         isDisabled
       </Table.Td>
@@ -4323,6 +4692,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <SuccessIcon
           aspectRatio="xMidYMid meet"
@@ -4339,6 +4709,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Button
           hasOnlyIcon={false}
@@ -4355,6 +4726,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         Sorted Column
       </Table.Td>
@@ -4362,6 +4734,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align left
       </Table.Td>
@@ -4369,6 +4742,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="center"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align center
       </Table.Td>
@@ -4376,6 +4750,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="right"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align right
       </Table.Td>
@@ -4390,6 +4765,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Checkbox
           isDisabled={false}
@@ -4402,6 +4778,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         Text && isActionable
       </Table.Td>
@@ -4409,6 +4786,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <SuccessIcon
           aspectRatio="xMidYMid meet"
@@ -4425,6 +4803,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Button
           hasOnlyIcon={false}
@@ -4441,6 +4820,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         Sorted Column
       </Table.Td>
@@ -4448,6 +4828,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align left
       </Table.Td>
@@ -4455,6 +4836,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="center"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align center
       </Table.Td>
@@ -4462,6 +4844,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="right"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align right
       </Table.Td>
@@ -4476,6 +4859,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Checkbox
           isDisabled={false}
@@ -4488,6 +4872,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         isDisabled && isActionable
       </Table.Td>
@@ -4495,6 +4880,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <SuccessIcon
           aspectRatio="xMidYMid meet"
@@ -4511,6 +4897,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Button
           hasOnlyIcon={false}
@@ -4527,6 +4914,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         Sorted Column
       </Table.Td>
@@ -4534,6 +4922,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align left
       </Table.Td>
@@ -4541,6 +4930,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="center"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align center
       </Table.Td>
@@ -4548,6 +4938,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="right"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align right
       </Table.Td>
@@ -4561,6 +4952,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Checkbox
           isDisabled={false}
@@ -4573,6 +4965,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <a
           href="#"
@@ -4584,6 +4977,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <SuccessIcon
           aspectRatio="xMidYMid meet"
@@ -4600,6 +4994,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Button
           hasOnlyIcon={false}
@@ -4616,6 +5011,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         Sorted Column
       </Table.Td>
@@ -4623,6 +5019,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align left
       </Table.Td>
@@ -4630,6 +5027,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="center"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align center
       </Table.Td>
@@ -4637,6 +5035,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="right"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align right
       </Table.Td>
@@ -4650,6 +5049,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Checkbox
           isDisabled={false}
@@ -4662,6 +5062,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <a
           href="#"
@@ -4673,6 +5074,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <SuccessIcon
           aspectRatio="xMidYMid meet"
@@ -4689,6 +5091,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Button
           hasOnlyIcon={false}
@@ -4705,6 +5108,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         Sorted Column
       </Table.Td>
@@ -4712,6 +5116,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align left
       </Table.Td>
@@ -4719,6 +5124,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="center"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align center
       </Table.Td>
@@ -4726,6 +5132,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="right"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align right
       </Table.Td>
@@ -4740,6 +5147,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Checkbox
           isDisabled={false}
@@ -4752,6 +5160,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <a
           href="#"
@@ -4763,6 +5172,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <SuccessIcon
           aspectRatio="xMidYMid meet"
@@ -4779,6 +5189,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Button
           hasOnlyIcon={false}
@@ -4795,6 +5206,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         Sorted Column
       </Table.Td>
@@ -4802,6 +5214,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align left
       </Table.Td>
@@ -4809,6 +5222,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="center"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align center
       </Table.Td>
@@ -4816,6 +5230,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="right"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align right
       </Table.Td>
@@ -4830,6 +5245,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Checkbox
           isDisabled={false}
@@ -4842,6 +5258,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <a
           href="#"
@@ -4853,6 +5270,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <SuccessIcon
           aspectRatio="xMidYMid meet"
@@ -4869,6 +5287,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Button
           hasOnlyIcon={false}
@@ -4885,6 +5304,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         Sorted Column
       </Table.Td>
@@ -4892,6 +5312,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align left
       </Table.Td>
@@ -4899,6 +5320,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="center"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align center
       </Table.Td>
@@ -4906,6 +5328,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="right"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align right
       </Table.Td>
@@ -4919,6 +5342,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Checkbox
           isDisabled={false}
@@ -4931,6 +5355,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         isSelected
       </Table.Td>
@@ -4938,6 +5363,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <SuccessIcon
           aspectRatio="xMidYMid meet"
@@ -4954,6 +5380,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Button
           hasOnlyIcon={false}
@@ -4970,6 +5397,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         Sorted Column
       </Table.Td>
@@ -4977,6 +5405,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align left
       </Table.Td>
@@ -4984,6 +5413,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="center"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align center
       </Table.Td>
@@ -4991,6 +5421,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="right"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align right
       </Table.Td>
@@ -5004,6 +5435,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Checkbox
           isDisabled={false}
@@ -5016,6 +5448,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         isSelected && isDisabled
       </Table.Td>
@@ -5023,6 +5456,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <SuccessIcon
           aspectRatio="xMidYMid meet"
@@ -5039,6 +5473,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Button
           hasOnlyIcon={false}
@@ -5055,6 +5490,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         Sorted Column
       </Table.Td>
@@ -5062,6 +5498,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align left
       </Table.Td>
@@ -5069,6 +5506,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="center"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align center
       </Table.Td>
@@ -5076,6 +5514,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="right"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align right
       </Table.Td>
@@ -5090,6 +5529,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Checkbox
           isDisabled={false}
@@ -5102,6 +5542,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         isSelected && isActionable
       </Table.Td>
@@ -5109,6 +5550,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <SuccessIcon
           aspectRatio="xMidYMid meet"
@@ -5125,6 +5567,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Button
           hasOnlyIcon={false}
@@ -5141,6 +5584,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         Sorted Column
       </Table.Td>
@@ -5148,6 +5592,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align left
       </Table.Td>
@@ -5155,6 +5600,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="center"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align center
       </Table.Td>
@@ -5162,6 +5608,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="right"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align right
       </Table.Td>
@@ -5176,6 +5623,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Checkbox
           isDisabled={false}
@@ -5188,6 +5636,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         isSelected && isDisabled && isActionable
       </Table.Td>
@@ -5195,6 +5644,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <SuccessIcon
           aspectRatio="xMidYMid meet"
@@ -5211,6 +5661,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Button
           hasOnlyIcon={false}
@@ -5227,6 +5678,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         Sorted Column
       </Table.Td>
@@ -5234,6 +5686,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align left
       </Table.Td>
@@ -5241,6 +5694,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="center"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align center
       </Table.Td>
@@ -5248,6 +5702,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="right"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align right
       </Table.Td>
@@ -5262,6 +5717,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Checkbox
           isDisabled={false}
@@ -5274,6 +5730,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         isActive
       </Table.Td>
@@ -5281,6 +5738,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <SuccessIcon
           aspectRatio="xMidYMid meet"
@@ -5297,6 +5755,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Button
           hasOnlyIcon={false}
@@ -5313,6 +5772,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         Sorted Column
       </Table.Td>
@@ -5320,6 +5780,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align left
       </Table.Td>
@@ -5327,6 +5788,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="center"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align center
       </Table.Td>
@@ -5334,6 +5796,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="right"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align right
       </Table.Td>
@@ -5348,6 +5811,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Checkbox
           isDisabled={false}
@@ -5360,6 +5824,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         isActive && isDisabled
       </Table.Td>
@@ -5367,6 +5832,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <SuccessIcon
           aspectRatio="xMidYMid meet"
@@ -5383,6 +5849,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Button
           hasOnlyIcon={false}
@@ -5399,6 +5866,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         Sorted Column
       </Table.Td>
@@ -5406,6 +5874,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align left
       </Table.Td>
@@ -5413,6 +5882,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="center"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align center
       </Table.Td>
@@ -5420,6 +5890,7 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-bord
         align="right"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align right
       </Table.Td>
@@ -5512,6 +5983,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         colSpan={3}
         isResizable={false}
         isSorted={false}
+        rowSpan={null}
         sortDirection="up"
       >
         Alignments
@@ -5526,6 +5998,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         align="left"
         isResizable={false}
         isSorted={false}
+        rowSpan={null}
         sortDirection="up"
       >
         align left
@@ -5534,6 +6007,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         align="center"
         isResizable={false}
         isSorted={false}
+        rowSpan={null}
         sortDirection="up"
       >
         align center
@@ -5543,6 +6017,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         isResizable={false}
         isSortable={true}
         isSorted={true}
+        rowSpan={null}
         sortDirection="up"
       >
         align right
@@ -5567,6 +6042,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Checkbox
           isDisabled={false}
@@ -5580,6 +6056,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         hasBorderLeft={false}
         hasBorderRight={false}
         isEmpty={true}
+        rowSpan={null}
       >
         No Data
       </Table.Td>
@@ -5587,6 +6064,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         align="left"
         hasBorderLeft={true}
         hasBorderRight={true}
+        rowSpan={null}
       >
         <SuccessIcon
           aspectRatio="xMidYMid meet"
@@ -5603,6 +6081,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Button
           hasOnlyIcon={false}
@@ -5619,6 +6098,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         Sorted Column
       </Table.Td>
@@ -5626,6 +6106,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         align="left"
         hasBorderLeft={true}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align left
       </Table.Td>
@@ -5633,6 +6114,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         align="center"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align center
       </Table.Td>
@@ -5640,6 +6122,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         align="right"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align right
       </Table.Td>
@@ -5653,6 +6136,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Checkbox
           isDisabled={false}
@@ -5666,6 +6150,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         hasBorderLeft={false}
         hasBorderRight={false}
         isEmpty={true}
+        rowSpan={null}
       >
         No Data
       </Table.Td>
@@ -5673,6 +6158,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         align="left"
         hasBorderLeft={true}
         hasBorderRight={true}
+        rowSpan={null}
       >
         <SuccessIcon
           aspectRatio="xMidYMid meet"
@@ -5689,6 +6175,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Button
           hasOnlyIcon={false}
@@ -5705,6 +6192,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         Sorted Column
       </Table.Td>
@@ -5712,6 +6200,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         align="left"
         hasBorderLeft={true}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align left
       </Table.Td>
@@ -5719,6 +6208,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         align="center"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align center
       </Table.Td>
@@ -5726,6 +6216,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         align="right"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align right
       </Table.Td>
@@ -5740,6 +6231,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Checkbox
           isDisabled={false}
@@ -5753,6 +6245,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         hasBorderLeft={false}
         hasBorderRight={false}
         isEmpty={true}
+        rowSpan={null}
       >
         No Data
       </Table.Td>
@@ -5760,6 +6253,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         align="left"
         hasBorderLeft={true}
         hasBorderRight={true}
+        rowSpan={null}
       >
         <SuccessIcon
           aspectRatio="xMidYMid meet"
@@ -5776,6 +6270,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Button
           hasOnlyIcon={false}
@@ -5792,6 +6287,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         Sorted Column
       </Table.Td>
@@ -5799,6 +6295,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         align="left"
         hasBorderLeft={true}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align left
       </Table.Td>
@@ -5806,6 +6303,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         align="center"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align center
       </Table.Td>
@@ -5813,6 +6311,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         align="right"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align right
       </Table.Td>
@@ -5827,6 +6326,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Checkbox
           isDisabled={false}
@@ -5840,6 +6340,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         hasBorderLeft={false}
         hasBorderRight={false}
         isEmpty={true}
+        rowSpan={null}
       >
         No Data
       </Table.Td>
@@ -5847,6 +6348,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         align="left"
         hasBorderLeft={true}
         hasBorderRight={true}
+        rowSpan={null}
       >
         <SuccessIcon
           aspectRatio="xMidYMid meet"
@@ -5863,6 +6365,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Button
           hasOnlyIcon={false}
@@ -5879,6 +6382,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         Sorted Column
       </Table.Td>
@@ -5886,6 +6390,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         align="left"
         hasBorderLeft={true}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align left
       </Table.Td>
@@ -5893,6 +6398,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         align="center"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align center
       </Table.Td>
@@ -5900,6 +6406,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         align="right"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align right
       </Table.Td>
@@ -5913,6 +6420,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Checkbox
           isDisabled={false}
@@ -5926,6 +6434,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         hasBorderLeft={false}
         hasBorderRight={false}
         isEmpty={true}
+        rowSpan={null}
       >
         No Data
       </Table.Td>
@@ -5933,6 +6442,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         align="left"
         hasBorderLeft={true}
         hasBorderRight={true}
+        rowSpan={null}
       >
         <SuccessIcon
           aspectRatio="xMidYMid meet"
@@ -5949,6 +6459,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Button
           hasOnlyIcon={false}
@@ -5965,6 +6476,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         Sorted Column
       </Table.Td>
@@ -5972,6 +6484,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         align="left"
         hasBorderLeft={true}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align left
       </Table.Td>
@@ -5979,6 +6492,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         align="center"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align center
       </Table.Td>
@@ -5986,6 +6500,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         align="right"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align right
       </Table.Td>
@@ -5999,6 +6514,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Checkbox
           isDisabled={false}
@@ -6012,6 +6528,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         hasBorderLeft={false}
         hasBorderRight={false}
         isEmpty={true}
+        rowSpan={null}
       >
         No Data
       </Table.Td>
@@ -6019,6 +6536,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         align="left"
         hasBorderLeft={true}
         hasBorderRight={true}
+        rowSpan={null}
       >
         <SuccessIcon
           aspectRatio="xMidYMid meet"
@@ -6035,6 +6553,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Button
           hasOnlyIcon={false}
@@ -6051,6 +6570,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         Sorted Column
       </Table.Td>
@@ -6058,6 +6578,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         align="left"
         hasBorderLeft={true}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align left
       </Table.Td>
@@ -6065,6 +6586,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         align="center"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align center
       </Table.Td>
@@ -6072,6 +6594,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         align="right"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align right
       </Table.Td>
@@ -6086,6 +6609,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Checkbox
           isDisabled={false}
@@ -6099,6 +6623,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         hasBorderLeft={false}
         hasBorderRight={false}
         isEmpty={true}
+        rowSpan={null}
       >
         No Data
       </Table.Td>
@@ -6106,6 +6631,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         align="left"
         hasBorderLeft={true}
         hasBorderRight={true}
+        rowSpan={null}
       >
         <SuccessIcon
           aspectRatio="xMidYMid meet"
@@ -6122,6 +6648,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Button
           hasOnlyIcon={false}
@@ -6138,6 +6665,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         Sorted Column
       </Table.Td>
@@ -6145,6 +6673,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         align="left"
         hasBorderLeft={true}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align left
       </Table.Td>
@@ -6152,6 +6681,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         align="center"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align center
       </Table.Td>
@@ -6159,6 +6689,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         align="right"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align right
       </Table.Td>
@@ -6173,6 +6704,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Checkbox
           isDisabled={false}
@@ -6186,6 +6718,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         hasBorderLeft={false}
         hasBorderRight={false}
         isEmpty={true}
+        rowSpan={null}
       >
         No Data
       </Table.Td>
@@ -6193,6 +6726,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         align="left"
         hasBorderLeft={true}
         hasBorderRight={true}
+        rowSpan={null}
       >
         <SuccessIcon
           aspectRatio="xMidYMid meet"
@@ -6209,6 +6743,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Button
           hasOnlyIcon={false}
@@ -6225,6 +6760,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         Sorted Column
       </Table.Td>
@@ -6232,6 +6768,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         align="left"
         hasBorderLeft={true}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align left
       </Table.Td>
@@ -6239,6 +6776,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         align="center"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align center
       </Table.Td>
@@ -6246,6 +6784,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         align="right"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align right
       </Table.Td>
@@ -6259,6 +6798,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Checkbox
           isDisabled={false}
@@ -6272,6 +6812,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         hasBorderLeft={false}
         hasBorderRight={false}
         isEmpty={true}
+        rowSpan={null}
       >
         No Data
       </Table.Td>
@@ -6279,6 +6820,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         align="left"
         hasBorderLeft={true}
         hasBorderRight={true}
+        rowSpan={null}
       >
         <SuccessIcon
           aspectRatio="xMidYMid meet"
@@ -6295,6 +6837,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Button
           hasOnlyIcon={false}
@@ -6311,6 +6854,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         Sorted Column
       </Table.Td>
@@ -6318,6 +6862,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         align="left"
         hasBorderLeft={true}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align left
       </Table.Td>
@@ -6325,6 +6870,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         align="center"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align center
       </Table.Td>
@@ -6332,6 +6878,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         align="right"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align right
       </Table.Td>
@@ -6345,6 +6892,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Checkbox
           isDisabled={false}
@@ -6358,6 +6906,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         hasBorderLeft={false}
         hasBorderRight={false}
         isEmpty={true}
+        rowSpan={null}
       >
         No Data
       </Table.Td>
@@ -6365,6 +6914,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         align="left"
         hasBorderLeft={true}
         hasBorderRight={true}
+        rowSpan={null}
       >
         <SuccessIcon
           aspectRatio="xMidYMid meet"
@@ -6381,6 +6931,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Button
           hasOnlyIcon={false}
@@ -6397,6 +6948,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         Sorted Column
       </Table.Td>
@@ -6404,6 +6956,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         align="left"
         hasBorderLeft={true}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align left
       </Table.Td>
@@ -6411,6 +6964,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         align="center"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align center
       </Table.Td>
@@ -6418,6 +6972,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         align="right"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align right
       </Table.Td>
@@ -6432,6 +6987,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Checkbox
           isDisabled={false}
@@ -6445,6 +7001,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         hasBorderLeft={false}
         hasBorderRight={false}
         isEmpty={true}
+        rowSpan={null}
       >
         No Data
       </Table.Td>
@@ -6452,6 +7009,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         align="left"
         hasBorderLeft={true}
         hasBorderRight={true}
+        rowSpan={null}
       >
         <SuccessIcon
           aspectRatio="xMidYMid meet"
@@ -6468,6 +7026,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Button
           hasOnlyIcon={false}
@@ -6484,6 +7043,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         Sorted Column
       </Table.Td>
@@ -6491,6 +7051,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         align="left"
         hasBorderLeft={true}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align left
       </Table.Td>
@@ -6498,6 +7059,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         align="center"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align center
       </Table.Td>
@@ -6505,6 +7067,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         align="right"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align right
       </Table.Td>
@@ -6519,6 +7082,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Checkbox
           isDisabled={false}
@@ -6532,6 +7096,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         hasBorderLeft={false}
         hasBorderRight={false}
         isEmpty={true}
+        rowSpan={null}
       >
         No Data
       </Table.Td>
@@ -6539,6 +7104,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         align="left"
         hasBorderLeft={true}
         hasBorderRight={true}
+        rowSpan={null}
       >
         <SuccessIcon
           aspectRatio="xMidYMid meet"
@@ -6555,6 +7121,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Button
           hasOnlyIcon={false}
@@ -6571,6 +7138,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         Sorted Column
       </Table.Td>
@@ -6578,6 +7146,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         align="left"
         hasBorderLeft={true}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align left
       </Table.Td>
@@ -6585,6 +7154,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         align="center"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align center
       </Table.Td>
@@ -6592,6 +7162,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         align="right"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align right
       </Table.Td>
@@ -6606,6 +7177,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Checkbox
           isDisabled={false}
@@ -6619,6 +7191,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         hasBorderLeft={false}
         hasBorderRight={false}
         isEmpty={true}
+        rowSpan={null}
       >
         No Data
       </Table.Td>
@@ -6626,6 +7199,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         align="left"
         hasBorderLeft={true}
         hasBorderRight={true}
+        rowSpan={null}
       >
         <SuccessIcon
           aspectRatio="xMidYMid meet"
@@ -6642,6 +7216,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Button
           hasOnlyIcon={false}
@@ -6658,6 +7233,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         Sorted Column
       </Table.Td>
@@ -6665,6 +7241,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         align="left"
         hasBorderLeft={true}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align left
       </Table.Td>
@@ -6672,6 +7249,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         align="center"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align center
       </Table.Td>
@@ -6679,6 +7257,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         align="right"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align right
       </Table.Td>
@@ -6693,6 +7272,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Checkbox
           isDisabled={false}
@@ -6706,6 +7286,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         hasBorderLeft={false}
         hasBorderRight={false}
         isEmpty={true}
+        rowSpan={null}
       >
         No Data
       </Table.Td>
@@ -6713,6 +7294,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         align="left"
         hasBorderLeft={true}
         hasBorderRight={true}
+        rowSpan={null}
       >
         <SuccessIcon
           aspectRatio="xMidYMid meet"
@@ -6729,6 +7311,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Button
           hasOnlyIcon={false}
@@ -6745,6 +7328,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         Sorted Column
       </Table.Td>
@@ -6752,6 +7336,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         align="left"
         hasBorderLeft={true}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align left
       </Table.Td>
@@ -6759,6 +7344,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         align="center"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align center
       </Table.Td>
@@ -6766,6 +7352,7 @@ exports[`Table [common] example testing should match snapshot(s) for 5.with-empt
         align="right"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align right
       </Table.Td>
@@ -6849,6 +7436,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         colSpan={3}
         isResizable={false}
         isSorted={false}
+        rowSpan={null}
         sortDirection="up"
       >
         Alignments
@@ -6863,6 +7451,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         align="left"
         isResizable={false}
         isSorted={false}
+        rowSpan={null}
         sortDirection="up"
       >
         align left
@@ -6871,6 +7460,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         align="center"
         isResizable={false}
         isSorted={false}
+        rowSpan={null}
         sortDirection="up"
       >
         align center
@@ -6880,6 +7470,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         isResizable={false}
         isSortable={true}
         isSorted={true}
+        rowSpan={null}
         sortDirection="up"
       >
         align right
@@ -6896,6 +7487,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Checkbox
           isDisabled={false}
@@ -6908,6 +7500,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         Text
       </Table.Td>
@@ -6915,6 +7508,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         align="left"
         hasBorderLeft={true}
         hasBorderRight={true}
+        rowSpan={null}
       >
         <SuccessIcon
           aspectRatio="xMidYMid meet"
@@ -6931,6 +7525,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Button
           hasOnlyIcon={false}
@@ -6947,6 +7542,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         Sorted Column
       </Table.Td>
@@ -6954,6 +7550,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         align="left"
         hasBorderLeft={true}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align left
       </Table.Td>
@@ -6961,6 +7558,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         align="center"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align center
       </Table.Td>
@@ -6968,6 +7566,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         align="right"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align right
       </Table.Td>
@@ -6981,6 +7580,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Checkbox
           isDisabled={false}
@@ -6993,6 +7593,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         isDisabled
       </Table.Td>
@@ -7000,6 +7601,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         align="left"
         hasBorderLeft={true}
         hasBorderRight={true}
+        rowSpan={null}
       >
         <SuccessIcon
           aspectRatio="xMidYMid meet"
@@ -7016,6 +7618,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Button
           hasOnlyIcon={false}
@@ -7032,6 +7635,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         Sorted Column
       </Table.Td>
@@ -7039,6 +7643,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         align="left"
         hasBorderLeft={true}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align left
       </Table.Td>
@@ -7046,6 +7651,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         align="center"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align center
       </Table.Td>
@@ -7053,6 +7659,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         align="right"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align right
       </Table.Td>
@@ -7067,6 +7674,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Checkbox
           isDisabled={false}
@@ -7079,6 +7687,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         Text && isActionable
       </Table.Td>
@@ -7086,6 +7695,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         align="left"
         hasBorderLeft={true}
         hasBorderRight={true}
+        rowSpan={null}
       >
         <SuccessIcon
           aspectRatio="xMidYMid meet"
@@ -7102,6 +7712,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Button
           hasOnlyIcon={false}
@@ -7118,6 +7729,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         Sorted Column
       </Table.Td>
@@ -7125,6 +7737,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         align="left"
         hasBorderLeft={true}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align left
       </Table.Td>
@@ -7132,6 +7745,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         align="center"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align center
       </Table.Td>
@@ -7139,6 +7753,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         align="right"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align right
       </Table.Td>
@@ -7153,6 +7768,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Checkbox
           isDisabled={false}
@@ -7165,6 +7781,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         isDisabled && isActionable
       </Table.Td>
@@ -7172,6 +7789,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         align="left"
         hasBorderLeft={true}
         hasBorderRight={true}
+        rowSpan={null}
       >
         <SuccessIcon
           aspectRatio="xMidYMid meet"
@@ -7188,6 +7806,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Button
           hasOnlyIcon={false}
@@ -7204,6 +7823,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         Sorted Column
       </Table.Td>
@@ -7211,6 +7831,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         align="left"
         hasBorderLeft={true}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align left
       </Table.Td>
@@ -7218,6 +7839,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         align="center"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align center
       </Table.Td>
@@ -7225,6 +7847,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         align="right"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align right
       </Table.Td>
@@ -7238,6 +7861,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Checkbox
           isDisabled={false}
@@ -7250,6 +7874,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <a
           href="#"
@@ -7261,6 +7886,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         align="left"
         hasBorderLeft={true}
         hasBorderRight={true}
+        rowSpan={null}
       >
         <SuccessIcon
           aspectRatio="xMidYMid meet"
@@ -7277,6 +7903,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Button
           hasOnlyIcon={false}
@@ -7293,6 +7920,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         Sorted Column
       </Table.Td>
@@ -7300,6 +7928,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         align="left"
         hasBorderLeft={true}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align left
       </Table.Td>
@@ -7307,6 +7936,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         align="center"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align center
       </Table.Td>
@@ -7314,6 +7944,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         align="right"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align right
       </Table.Td>
@@ -7327,6 +7958,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Checkbox
           isDisabled={false}
@@ -7339,6 +7971,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <a
           href="#"
@@ -7350,6 +7983,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         align="left"
         hasBorderLeft={true}
         hasBorderRight={true}
+        rowSpan={null}
       >
         <SuccessIcon
           aspectRatio="xMidYMid meet"
@@ -7366,6 +8000,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Button
           hasOnlyIcon={false}
@@ -7382,6 +8017,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         Sorted Column
       </Table.Td>
@@ -7389,6 +8025,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         align="left"
         hasBorderLeft={true}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align left
       </Table.Td>
@@ -7396,6 +8033,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         align="center"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align center
       </Table.Td>
@@ -7403,6 +8041,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         align="right"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align right
       </Table.Td>
@@ -7417,6 +8056,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Checkbox
           isDisabled={false}
@@ -7429,6 +8069,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <a
           href="#"
@@ -7440,6 +8081,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         align="left"
         hasBorderLeft={true}
         hasBorderRight={true}
+        rowSpan={null}
       >
         <SuccessIcon
           aspectRatio="xMidYMid meet"
@@ -7456,6 +8098,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Button
           hasOnlyIcon={false}
@@ -7472,6 +8115,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         Sorted Column
       </Table.Td>
@@ -7479,6 +8123,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         align="left"
         hasBorderLeft={true}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align left
       </Table.Td>
@@ -7486,6 +8131,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         align="center"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align center
       </Table.Td>
@@ -7493,6 +8139,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         align="right"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align right
       </Table.Td>
@@ -7507,6 +8154,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Checkbox
           isDisabled={false}
@@ -7519,6 +8167,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <a
           href="#"
@@ -7530,6 +8179,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         align="left"
         hasBorderLeft={true}
         hasBorderRight={true}
+        rowSpan={null}
       >
         <SuccessIcon
           aspectRatio="xMidYMid meet"
@@ -7546,6 +8196,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Button
           hasOnlyIcon={false}
@@ -7562,6 +8213,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         Sorted Column
       </Table.Td>
@@ -7569,6 +8221,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         align="left"
         hasBorderLeft={true}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align left
       </Table.Td>
@@ -7576,6 +8229,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         align="center"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align center
       </Table.Td>
@@ -7583,6 +8237,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         align="right"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align right
       </Table.Td>
@@ -7596,6 +8251,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Checkbox
           isDisabled={false}
@@ -7608,6 +8264,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         isSelected
       </Table.Td>
@@ -7615,6 +8272,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         align="left"
         hasBorderLeft={true}
         hasBorderRight={true}
+        rowSpan={null}
       >
         <SuccessIcon
           aspectRatio="xMidYMid meet"
@@ -7631,6 +8289,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Button
           hasOnlyIcon={false}
@@ -7647,6 +8306,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         Sorted Column
       </Table.Td>
@@ -7654,6 +8314,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         align="left"
         hasBorderLeft={true}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align left
       </Table.Td>
@@ -7661,6 +8322,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         align="center"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align center
       </Table.Td>
@@ -7668,6 +8330,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         align="right"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align right
       </Table.Td>
@@ -7681,6 +8344,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Checkbox
           isDisabled={false}
@@ -7693,6 +8357,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         isSelected && isDisabled
       </Table.Td>
@@ -7700,6 +8365,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         align="left"
         hasBorderLeft={true}
         hasBorderRight={true}
+        rowSpan={null}
       >
         <SuccessIcon
           aspectRatio="xMidYMid meet"
@@ -7716,6 +8382,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Button
           hasOnlyIcon={false}
@@ -7732,6 +8399,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         Sorted Column
       </Table.Td>
@@ -7739,6 +8407,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         align="left"
         hasBorderLeft={true}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align left
       </Table.Td>
@@ -7746,6 +8415,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         align="center"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align center
       </Table.Td>
@@ -7753,6 +8423,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         align="right"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align right
       </Table.Td>
@@ -7767,6 +8438,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Checkbox
           isDisabled={false}
@@ -7779,6 +8451,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         isSelected && isActionable
       </Table.Td>
@@ -7786,6 +8459,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         align="left"
         hasBorderLeft={true}
         hasBorderRight={true}
+        rowSpan={null}
       >
         <SuccessIcon
           aspectRatio="xMidYMid meet"
@@ -7802,6 +8476,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Button
           hasOnlyIcon={false}
@@ -7818,6 +8493,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         Sorted Column
       </Table.Td>
@@ -7825,6 +8501,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         align="left"
         hasBorderLeft={true}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align left
       </Table.Td>
@@ -7832,6 +8509,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         align="center"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align center
       </Table.Td>
@@ -7839,6 +8517,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         align="right"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align right
       </Table.Td>
@@ -7853,6 +8532,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Checkbox
           isDisabled={false}
@@ -7865,6 +8545,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         isSelected && isDisabled && isActionable
       </Table.Td>
@@ -7872,6 +8553,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         align="left"
         hasBorderLeft={true}
         hasBorderRight={true}
+        rowSpan={null}
       >
         <SuccessIcon
           aspectRatio="xMidYMid meet"
@@ -7888,6 +8570,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         <Button
           hasOnlyIcon={false}
@@ -7904,6 +8587,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         Sorted Column
       </Table.Td>
@@ -7911,6 +8595,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         align="left"
         hasBorderLeft={true}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align left
       </Table.Td>
@@ -7918,6 +8603,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         align="center"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align center
       </Table.Td>
@@ -7925,6 +8611,7 @@ exports[`Table [common] example testing should match snapshot(s) for 6.no-hover 
         align="right"
         hasBorderLeft={false}
         hasBorderRight={false}
+        rowSpan={null}
       >
         align right
       </Table.Td>
