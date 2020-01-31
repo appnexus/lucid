@@ -4,7 +4,7 @@ import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
 import { omitProps } from '../../../util/component-types';
 
-const cx = lucidClassNames.bind('&-VideoIcon');
+const cx = lucidClassNames.bind('&-VideoShortIcon');
 
 interface IVideoShortIconProps extends IIconProps {}
 
@@ -29,10 +29,10 @@ export const VideoShortIcon = ({
 	);
 };
 
-VideoShortIcon.displayName = 'VideoLongIcon';
+VideoShortIcon.displayName = 'VideoShortIcon';
 VideoShortIcon.peek = {
 	description: `
-		A video long icon.
+		A video short icon.
 	`,
 	categories: ['visual design', 'icons'],
 	extend: 'Icon',

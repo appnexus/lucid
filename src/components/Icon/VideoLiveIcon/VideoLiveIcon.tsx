@@ -4,7 +4,7 @@ import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
 import { omitProps } from '../../../util/component-types';
 
-const cx = lucidClassNames.bind('&-VideoIcon');
+const cx = lucidClassNames.bind('&-VideoLiveIcon');
 
 interface IVideoLiveIconProps extends IIconProps {}
 

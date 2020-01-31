@@ -4,7 +4,7 @@ import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
 import { omitProps } from '../../../util/component-types';
 
-const cx = lucidClassNames.bind('&-VideoIcon');
+const cx = lucidClassNames.bind('&-VideoOnDemandIcon');
 
 interface IVideoOnDemandIconProps extends IIconProps {}
 
@@ -32,7 +32,7 @@ export const VideoOnDemandIcon = ({
 VideoOnDemandIcon.displayName = 'VideoOnDemandIcon';
 VideoOnDemandIcon.peek = {
 	description: `
-		A video icon.
+		A video on demand (VOD) icon.
 	`,
 	categories: ['visual design', 'icons'],
 	extend: 'Icon',
