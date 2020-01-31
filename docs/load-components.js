@@ -994,12 +994,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Table/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Table/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 	{
