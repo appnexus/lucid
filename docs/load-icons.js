@@ -1230,6 +1230,74 @@ module.exports = [
 	},
 
 	{
+		name: 'VideoLiveIcon',
+		component: getDefaultExport(
+			require('../src/components/Icon/VideoLiveIcon/VideoLiveIcon')
+		),
+		examplesContext: require.context(
+			'../src/components/Icon/VideoLiveIcon/examples',
+			true,
+			/\.(j|t)sx?$/
+		),
+		examplesContextRaw: require.context(
+			'!!raw-loader!../src/components/Icon/VideoLiveIcon/examples',
+			true,
+			/\.(j|t)sx?$/
+		),
+	},
+
+	{
+		name: 'VideoLongIcon',
+		component: getDefaultExport(
+			require('../src/components/Icon/VideoLongIcon/VideoLongIcon')
+		),
+		examplesContext: require.context(
+			'../src/components/Icon/VideoLongIcon/examples',
+			true,
+			/\.(j|t)sx?$/
+		),
+		examplesContextRaw: require.context(
+			'!!raw-loader!../src/components/Icon/VideoLongIcon/examples',
+			true,
+			/\.(j|t)sx?$/
+		),
+	},
+
+	{
+		name: 'VideoOnDemandIcon',
+		component: getDefaultExport(
+			require('../src/components/Icon/VideoOnDemandIcon/VideoOnDemandIcon')
+		),
+		examplesContext: require.context(
+			'../src/components/Icon/VideoOnDemandIcon/examples',
+			true,
+			/\.(j|t)sx?$/
+		),
+		examplesContextRaw: require.context(
+			'!!raw-loader!../src/components/Icon/VideoOnDemandIcon/examples',
+			true,
+			/\.(j|t)sx?$/
+		),
+	},
+
+	{
+		name: 'VideoShortIcon',
+		component: getDefaultExport(
+			require('../src/components/Icon/VideoShortIcon/VideoShortIcon')
+		),
+		examplesContext: require.context(
+			'../src/components/Icon/VideoShortIcon/examples',
+			true,
+			/\.(j|t)sx?$/
+		),
+		examplesContextRaw: require.context(
+			'!!raw-loader!../src/components/Icon/VideoShortIcon/examples',
+			true,
+			/\.(j|t)sx?$/
+		),
+	},
+
+	{
 		name: 'ViewIcon',
 		component: getDefaultExport(
 			require('../src/components/Icon/ViewIcon/ViewIcon')
