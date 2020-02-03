@@ -128,6 +128,56 @@ describe('OverlayWrapper', () => {
 		});
 	});
 
+	describe('anchorMessage', () => {
+		describe('default', () => {
+			it('should not add `&-anchored-message` class', () => {
+				const wrapper = shallow(
+					<OverlayWrapper isVisible>
+						<div>Some content</div>
+					</OverlayWrapper>
+				);
+				const messageContainer = wrapper.find(
+					'.lucid-OverlayWrapper-message-container'
+				);
+				assert(
+					!messageContainer.hasClass('lucid-OverlayWrapper-anchored-message')
+				);
+			});
+		});
+
+		describe('true', () => {
+			it('should add `&-anchored-message` class', () => {
+				const wrapper = shallow(
+					<OverlayWrapper isVisible anchorMessage>
+						<div>Some content</div>
+					</OverlayWrapper>
+				);
+				const messageContainer = wrapper.find(
+					'.lucid-OverlayWrapper-message-container'
+				);
+				assert(
+					messageContainer.hasClass('lucid-OverlayWrapper-anchored-message')
+				);
+			});
+		});
+
+		describe('false', () => {
+			it('should not add `&-anchored-message` class', () => {
+				const wrapper = shallow(
+					<OverlayWrapper isVisible anchorMessage={false}>
+						<div>Some content</div>
+					</OverlayWrapper>
+				);
+				const messageContainer = wrapper.find(
+					'.lucid-OverlayWrapper-message-container'
+				);
+				assert(
+					!messageContainer.hasClass('lucid-OverlayWrapper-anchored-message')
+				);
+			});
+		});
+	});
+
 	describe('overlayKind', () => {
 		describe('light', () => {
 			it('should add `&-kind-light` class', () => {

@@ -107,6 +107,12 @@ const DataTable = createClass({
 			\`onSelectAll\` to be triggered.
 		`,
 
+		anchorMessage: bool`
+			Position the \`EmptyMessage\` and \`LoadingMessage\` near the top of the container. 
+			By default, they are vertically aligned to the middle of the table. Useful
+			for tables with many rows that extend past the viewport.
+		`,
+
 		style: object`
 			Styles that are passed through to the root container.
 		`,
@@ -548,6 +554,7 @@ const DataTable = createClass({
 			style,
 			hasFixedHeader,
 			fixedColumnCount,
+			anchorMessage,
 			...passThroughs
 		} = this.props;
 
@@ -602,6 +609,7 @@ const DataTable = createClass({
 				isEmpty={_.isEmpty(data)}
 				isLoading={isLoading}
 				className={emptyStateWrapperClassName}
+				anchorMessage={anchorMessage}
 			>
 				{emptyStateWrapper.props.children}
 				{hasFixedHeader ? (
