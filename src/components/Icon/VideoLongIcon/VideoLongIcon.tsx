@@ -25,7 +25,7 @@ export const VideoLongIcon = ({
 		>
 			<path d='M6.5 4v5l3.75-2.5zM15.5 12.5H.5' />
 			<path
-				stroke-linecap='butt'
+				strokeLinecap='butt'
 				d='M.5.5h15v15H.5zM2 15.5l3-3M.5 14L2 12.5M5 15.5l3-3M8 15.5l3-3M11 15.5l3-3M14 15.5l1.5-1.5'
 			/>
 		</Icon>
