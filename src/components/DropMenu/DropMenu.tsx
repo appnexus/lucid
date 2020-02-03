@@ -139,7 +139,7 @@ Option.propTypes = {
 Option.defaultProps = {
 	isDisabled: false,
 	isHidden: false,
-	isWrapped: true
+	isWrapped: true,
 };
 
 export interface IDropMenuNullOptionProps extends StandardProps {
