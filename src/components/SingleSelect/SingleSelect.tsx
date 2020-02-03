@@ -166,11 +166,11 @@ class SingleSelect extends React.Component<
 		description: `
 				\`SingleSelect\` is a dropdown list. 
 				`,
-				notes: {
-					overview: `
+		notes: {
+			overview: `
 						A dropdown list. When you click on the trigger a dropdown menu appears, allows you to choose one option, and execute relevant actions.
 					`,
-					intendedUse: `
+			intendedUse: `
 						Allow users to select one option from a list of 3-10 options.
 											
 						**Styling notes**
@@ -179,9 +179,9 @@ class SingleSelect extends React.Component<
 						- Use \`isSelectedHighlighted='false'\` if the default selection is All or a null state. See the \`no selection highlighting\` example.
 						- Use \`isInvisible\` for filters within a full page table header. See the \`invisible\` example.
 					`,
-					technicalRecommendations: `
+			technicalRecommendations: `
 					`,
-				},
+		},
 		categories: ['controls', 'selectors'],
 		madeFrom: ['DropMenu'],
 	};
@@ -271,7 +271,6 @@ class SingleSelect extends React.Component<
         `,
 	};
 
-<<<<<<< HEAD
 	getInitialState() {
 		return {
 			optionGroups: [],
@@ -282,9 +281,6 @@ class SingleSelect extends React.Component<
 	}
 
 	UNSAFE_componentWillMount() {
-=======
-	componentWillMount() {
->>>>>>> d7fc44eacd9f6e7025b844aff5ded06a359294a8
 		// preprocess the options data before rendering
 		const {
 			optionGroups,

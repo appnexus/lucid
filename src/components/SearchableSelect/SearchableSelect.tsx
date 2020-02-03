@@ -310,7 +310,6 @@ class SearchableSelect extends React.Component<
 		`,
 	};
 
-<<<<<<< HEAD
 	getInitialState() {
 		return {
 			optionGroups: [],
@@ -321,9 +320,6 @@ class SearchableSelect extends React.Component<
 	}
 
 	UNSAFE_componentWillMount() {
-=======
-	componentWillMount() {
->>>>>>> d7fc44eacd9f6e7025b844aff5ded06a359294a8
 		// preprocess the options data before rendering
 		const {
 			optionGroups,

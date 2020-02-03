@@ -286,7 +286,6 @@ class SearchableSingleSelect extends React.Component<
 		`,
 	};
 
-<<<<<<< HEAD
 	getInitialState(): any {
 		return {
 			optionGroups: [],
@@ -297,9 +296,6 @@ class SearchableSingleSelect extends React.Component<
 	}
 
 	UNSAFE_componentWillMount(): void {
-=======
-	componentWillMount(): void {
->>>>>>> d7fc44eacd9f6e7025b844aff5ded06a359294a8
 		// preprocess the options data before rendering
 		const {
 			optionGroups,
@@ -316,7 +312,9 @@ class SearchableSingleSelect extends React.Component<
 		});
 	}
 
-	UNSAFE_componentWillReceiveProps(nextProps: ISearchableSingleSelectProps): void {
+	UNSAFE_componentWillReceiveProps(
+		nextProps: ISearchableSingleSelectProps
+	): void {
 		// only preprocess options data when it changes (via new props) - better performance than doing this each render
 		const {
 			optionGroups,
