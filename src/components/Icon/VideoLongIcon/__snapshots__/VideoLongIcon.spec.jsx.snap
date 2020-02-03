@@ -17,6 +17,7 @@ exports[`VideoLongIcon [common] example testing should match snapshot(s) for 1.d
   />
   <path
     d="M.5.5h15v15H.5zM2 15.5l3-3M.5 14L2 12.5M5 15.5l3-3M8 15.5l3-3M11 15.5l3-3M14 15.5l1.5-1.5"
+    strokeLinecap="butt"
   />
 </Icon>
 `;
