@@ -2,6 +2,7 @@
 
 exports[`LoadingIndicator [common] example testing should match snapshot(s) for 1.interactive 1`] = `
 <OverlayWrapper
+  anchorMessage={false}
   className="lucid-LoadingIndicator"
   hasOverlay={true}
   isVisible={true}
@@ -105,6 +106,7 @@ exports[`LoadingIndicator [common] example testing should match snapshot(s) for 
 
 exports[`LoadingIndicator [common] example testing should match snapshot(s) for 2.default 1`] = `
 <OverlayWrapper
+  anchorMessage={false}
   className="lucid-LoadingIndicator"
   hasOverlay={true}
   isVisible={true}
@@ -183,6 +185,7 @@ exports[`LoadingIndicator [common] example testing should match snapshot(s) for 
 
 exports[`LoadingIndicator [common] example testing should match snapshot(s) for 3.custom-message 1`] = `
 <OverlayWrapper
+  anchorMessage={false}
   className="lucid-LoadingIndicator"
   hasOverlay={true}
   isVisible={true}
@@ -283,6 +286,7 @@ exports[`LoadingIndicator [common] example testing should match snapshot(s) for 
 
 exports[`LoadingIndicator [common] example testing should match snapshot(s) for 3.custom-message 2`] = `
 <OverlayWrapper
+  anchorMessage={false}
   className="lucid-LoadingIndicator"
   hasOverlay={true}
   isVisible={true}
@@ -378,6 +382,7 @@ exports[`LoadingIndicator [common] example testing should match snapshot(s) for 
 
 exports[`LoadingIndicator [common] example testing should match snapshot(s) for 4.no-title 1`] = `
 <OverlayWrapper
+  anchorMessage={false}
   className="lucid-LoadingIndicator"
   hasOverlay={true}
   isVisible={true}
@@ -459,6 +464,7 @@ exports[`LoadingIndicator [common] example testing should match snapshot(s) for 
 
 exports[`LoadingIndicator [common] example testing should match snapshot(s) for 5.no-overlay 1`] = `
 <OverlayWrapper
+  anchorMessage={false}
   className="lucid-LoadingIndicator"
   hasOverlay={false}
   isVisible={true}
@@ -537,6 +543,7 @@ exports[`LoadingIndicator [common] example testing should match snapshot(s) for 
 
 exports[`LoadingIndicator [common] example testing should match snapshot(s) for 6.light-overlay 1`] = `
 <OverlayWrapper
+  anchorMessage={false}
   className="lucid-LoadingIndicator"
   hasOverlay={true}
   isVisible={true}

@@ -35,12 +35,22 @@ interface IEmptyStateWrapperProps extends StandardProps {
 
 	/** Controls the visibility of the \`LoadingMessage\`. */
 	isLoading: boolean;
+
+	/** Position the `EmptyMessage` and `LoadingMessage` near the top of the container. */
+	anchorMessage: boolean;
 }
 
 export const EmptyStateWrapper = (
 	props: IEmptyStateWrapperProps
 ): React.ReactElement => {
-	const { children, className, isEmpty, isLoading, ...passThroughs } = props;
+	const {
+		children,
+		className,
+		isEmpty,
+		isLoading,
+		anchorMessage,
+		...passThroughs
+	} = props;
 
 	const emptyMessageBodyProp = _.get(
 		getFirst(props, EmptyStateWrapperBody),
@@ -62,6 +72,7 @@ export const EmptyStateWrapper = (
 				undefined,
 				_.keys(EmptyStateWrapper.propTypes)
 			)}
+			anchorMessage={anchorMessage}
 		>
 			{children}
 		</LoadingIndicator>
@@ -70,6 +81,7 @@ export const EmptyStateWrapper = (
 			className={cx('&', className)}
 			hasOverlay={false}
 			isVisible={isEmpty}
+			anchorMessage={anchorMessage}
 			{...omitProps(
 				passThroughs,
 				undefined,
@@ -120,6 +132,10 @@ EmptyStateWrapper.propTypes = {
 
 	isLoading: bool`
 		Controls the visibility of the \`LoadingMessage\`.
+	`,
+
+	anchorMessage: bool`
+		Position the \`EmptyMessage\` and \`LoadingMessage\` near the top of the container.
 	`,
 
 	Body: any`
