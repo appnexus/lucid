@@ -286,6 +286,7 @@ class SearchableSingleSelect extends React.Component<
 		`,
 	};
 
+<<<<<<< HEAD
 	getInitialState(): any {
 		return {
 			optionGroups: [],
@@ -295,6 +296,8 @@ class SearchableSingleSelect extends React.Component<
 		};
 	}
 
+=======
+>>>>>>> master
 	UNSAFE_componentWillMount(): void {
 		// preprocess the options data before rendering
 		const {

@@ -271,15 +271,6 @@ class SingleSelect extends React.Component<
         `,
 	};
 
-	getInitialState() {
-		return {
-			optionGroups: [],
-			flattenedOptionsData: [],
-			ungroupedOptionData: [],
-			optionGroupDataLookup: {},
-		};
-	}
-
 	UNSAFE_componentWillMount() {
 		// preprocess the options data before rendering
 		const {
