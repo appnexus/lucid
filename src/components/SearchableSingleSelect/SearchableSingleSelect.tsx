@@ -20,6 +20,7 @@ import {
 	IDropMenuProps,
 	IDropMenuState,
 	IDropMenuOptionProps,
+	IOptionsData,
 	IDropMenuOptionGroupProps,
 	DropMenuDumb as DropMenu,
 } from '../DropMenu/DropMenu';
@@ -145,10 +146,14 @@ export type ISearchableSingleSelectProps = Overwrite<
 	ISearchableSingleSelectPropsRaw
 >;
 
-export interface ISearchableSingleSelectState extends IDropMenuState {
+export interface ISearchableSingleSelectState {
 	DropMenu: IDropMenuState;
 	selectedIndex: number | null;
 	searchText: string | null;
+	optionGroups: IDropMenuOptionGroupProps[];
+	flattenedOptionsData: IOptionsData[];
+	ungroupedOptionData: IOptionsData[];
+	optionGroupDataLookup: { [key: number]: IOptionsData[] };
 }
 
 const defaultProps = {
@@ -281,27 +286,40 @@ class SearchableSingleSelect extends React.Component<
 		`,
 	};
 
-	getInitialState(): any {
-		return {
-			optionGroups: [],
-			flattenedOptionsData: [],
-			ungroupedOptionData: [],
-			optionGroupDataLookup: {},
-		};
-	}
-
 	UNSAFE_componentWillMount(): void {
 		// preprocess the options data before rendering
-		this.setState(
-			DropMenu.preprocessOptionData(this.props, SearchableSingleSelect)
-		);
+		const {
+			optionGroups,
+			flattenedOptionsData,
+			ungroupedOptionData,
+			optionGroupDataLookup,
+		} = DropMenu.preprocessOptionData(this.props, SearchableSingleSelect);
+
+		this.setState({
+			optionGroups,
+			flattenedOptionsData,
+			ungroupedOptionData,
+			optionGroupDataLookup,
+		});
 	}
 
-	UNSAFE_componentWillReceiveProps(nextProps: ISearchableSingleSelectProps): void {
+	UNSAFE_componentWillReceiveProps(
+		nextProps: ISearchableSingleSelectProps
+	): void {
 		// only preprocess options data when it changes (via new props) - better performance than doing this each render
-		this.setState(
-			DropMenu.preprocessOptionData(nextProps, SearchableSingleSelect)
-		);
+		const {
+			optionGroups,
+			flattenedOptionsData,
+			ungroupedOptionData,
+			optionGroupDataLookup,
+		} = DropMenu.preprocessOptionData(nextProps, SearchableSingleSelect);
+
+		this.setState({
+			optionGroups,
+			flattenedOptionsData,
+			ungroupedOptionData,
+			optionGroupDataLookup,
+		});
 	}
 
 	handleSearch = (

@@ -736,6 +736,30 @@ describe('DataTable', () => {
 			});
 		});
 
+		describe('anchorMessage', () => {
+			it('should position the `LoadingMessage`/`EmpyStateMessage` near the top of the table', () => {
+				const loadingWrapper = shallow(<DataTable isLoading anchorMessage />);
+
+				const loadingOverlayWrapper = loadingWrapper
+					.find(EmptyStateWrapper)
+					.shallow()
+					.find('LoadingIndicator')
+					.shallow()
+					.find('OverlayWrapper');
+
+				assert(loadingOverlayWrapper.prop('anchorMessage'));
+
+				const emptyWrapper = shallow(<DataTable data={[]} anchorMessage />);
+
+				const emptyOverlayWrapper = emptyWrapper
+					.find(EmptyStateWrapper)
+					.shallow()
+					.find('OverlayWrapper');
+
+				assert(emptyOverlayWrapper.prop('anchorMessage'));
+			});
+		});
+
 		describe('isFullWidth', () => {
 			it('should apply the `&-full-width` class if `isFullWidth` is true', () => {
 				const wrapper = shallow(<DataTable isFullWidth />);
