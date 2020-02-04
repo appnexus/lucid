@@ -310,18 +310,6 @@ class SearchableSelect extends React.Component<
 		`,
 	};
 
-<<<<<<< HEAD
-	getInitialState() {
-		return {
-			optionGroups: [],
-			flattenedOptionsData: [],
-			ungroupedOptionData: [],
-			optionGroupDataLookup: {},
-		};
-	}
-
-=======
->>>>>>> master
 	UNSAFE_componentWillMount() {
 		// preprocess the options data before rendering
 		const {

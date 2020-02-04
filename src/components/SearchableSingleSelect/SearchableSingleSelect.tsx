@@ -286,18 +286,6 @@ class SearchableSingleSelect extends React.Component<
 		`,
 	};
 
-<<<<<<< HEAD
-	getInitialState(): any {
-		return {
-			optionGroups: [],
-			flattenedOptionsData: [],
-			ungroupedOptionData: [],
-			optionGroupDataLookup: {},
-		};
-	}
-
-=======
->>>>>>> master
 	UNSAFE_componentWillMount(): void {
 		// preprocess the options data before rendering
 		const {
