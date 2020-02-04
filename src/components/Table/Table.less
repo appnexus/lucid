@@ -15,7 +15,6 @@
 	border-spacing: 0;
 	box-sizing: border-box;
 
-
 	/*
 		This removes the hover styles based upon hasHover equalling false
 	*/
@@ -23,10 +22,13 @@
 		.@{prefix}-Table-Tbody {
 			.@{prefix}-Table-Tr:hover {
 				& > .@{prefix}-Table-Td.@{prefix}-Table-is-first-single::after {
-				 display: none;
-			 	}
+					display: none;
+				}
 				& > .@{prefix}-Table-Td:not([rowspan]),
-				.@{prefix}-Table > .@{prefix}-Table-Tbody > .@{prefix}-Table-Tr:hover > .@{prefix}-Table-Td[rowspan='1'] {
+				.@{prefix}-Table
+					> .@{prefix}-Table-Tbody
+					> .@{prefix}-Table-Tr:hover
+					> .@{prefix}-Table-Td[rowspan='1'] {
 					background-color: white;
 				}
 			}
@@ -84,7 +86,6 @@
 		}
 	}
 
-
 	// `Table`.`hasWordWrap` prop
 	.@{prefix}-Table-Td,
 	.@{prefix}-Table-Th {
@@ -104,9 +105,9 @@
 		border-color: 1px solid @color-table-row-border;
 		& > .@{prefix}-Table-Tr > .@{prefix}-Table-Th {
 			&.@{prefix}-Table-is-sortable {
-					&:hover {
-						background-color: @color-table-header-light-sort-hover;
-					}
+				&:hover {
+					background-color: @color-table-header-light-sort-hover;
+				}
 			}
 		}
 	}
@@ -152,11 +153,16 @@
 				}
 			}
 
-			&.@{prefix}-Table-is-sorted > .@{prefix}-Table-Th-inner > .@{prefix}-Table-Th-inner-caret > .@{prefix}-Table-sort-icon {
+			&.@{prefix}-Table-is-sorted
+				> .@{prefix}-Table-Th-inner
+				> .@{prefix}-Table-Th-inner-caret
+				> .@{prefix}-Table-sort-icon {
 				opacity: 1;
 			}
 
-			&.@{prefix}-Table-is-resizing > .@{prefix}-Table-Th-inner > .@{prefix}-Table-Th-inner-resize {
+			&.@{prefix}-Table-is-resizing
+				> .@{prefix}-Table-Th-inner
+				> .@{prefix}-Table-Th-inner-resize {
 				opacity: 1;
 			}
 
@@ -200,15 +206,21 @@
 			}
 
 			// `Th`.`align` prop - use flex alignments in header
-			&.@{prefix}-Table-align-left > .@{prefix}-Table-Th-inner .@{prefix}-Table-Th-inner-content {
+			&.@{prefix}-Table-align-left
+				> .@{prefix}-Table-Th-inner
+				.@{prefix}-Table-Th-inner-content {
 				justify-content: flex-start;
 			}
 
-			&.@{prefix}-Table-align-center > .@{prefix}-Table-Th-inner .@{prefix}-Table-Th-inner-content {
+			&.@{prefix}-Table-align-center
+				> .@{prefix}-Table-Th-inner
+				.@{prefix}-Table-Th-inner-content {
 				justify-content: center;
 			}
 
-			&.@{prefix}-Table-align-right > .@{prefix}-Table-Th-inner .@{prefix}-Table-Th-inner-content {
+			&.@{prefix}-Table-align-right
+				> .@{prefix}-Table-Th-inner
+				.@{prefix}-Table-Th-inner-content {
 				justify-content: flex-end;
 			}
 		}
@@ -217,7 +229,6 @@
 	// Table body cell styles
 	& > &-Tbody {
 		& > .@{prefix}-Table-Tr {
-
 			// `Td`.`align` prop - use text alignments in body
 			// Table body cell styles
 			& > .@{prefix}-Table-Td {
@@ -256,39 +267,52 @@
 
 			// style row cells on hover
 			&:hover {
-				.selectCellsOnRow({ background-color: @color-table-row-hover-background;});
-			};
+				.selectCellsOnRow(
+					{background-color: @color-table-row-hover-background;}
+				);
+			}
+
+			// &:hover > .@{prefix}-Table-Td {
+			// 	background-color: @color-table-row-hover-background;
+			// }
 
 			// `Tr`.`isSelected` prop
 			// style row cells
 			&.@{prefix}-Table-is-selected {
-				.selectCellsOnRow({background-color: @color-table-row-selected-background;});
+				.selectCellsOnRow(
+					{background-color: @color-table-row-selected-background;}
+				);
 				&:hover {
-					.selectCellsOnRow({background-color: @color-table-row-selected-hover-background;});
+					.selectCellsOnRow(
+						{background-color: @color-table-row-selected-hover-background;}
+					);
 				}
 			}
 
 			// `Tr`.`isActive` prop
 			// style row cells
 			&.@{prefix}-Table-is-active {
-				.selectCellsOnRow({background-color: @color-table-row-active-background;});
+				.selectCellsOnRow(
+					{background-color: @color-table-row-active-background;}
+				);
 				// always show marker on first cell
-				.selectFirstCellOnRow({.left-marker(1);});
+				.selectFirstCellOnRow({.left-marker(1) ;});
 
 				// style row cells on hover
 				&:hover {
-					.selectCellsOnRow({background-color: @color-table-row-active-hover-background;});
+					.selectCellsOnRow(
+						{background-color: @color-table-row-active-hover-background;}
+					);
 				}
 			}
 
 			// place hidden marker on first cell
-			.selectFirstCellOnRow({ .left-marker(0); });
+			.selectFirstCellOnRow({.left-marker(0) ;});
 
 			// show marker on hover
 			&:hover {
-				.selectFirstCellOnRow({ .left-marker(1); });
+				.selectFirstCellOnRow({.left-marker(1) ;});
 			}
-
 		}
 	}
 
@@ -334,4 +358,3 @@
 		}
 	}
 }
-

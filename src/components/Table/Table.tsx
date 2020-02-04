@@ -757,7 +757,7 @@ Td.propTypes = {
 };
 
 /** Table <Table> The Table Component */
-interface ITable extends StandardProps {
+interface ITableProps extends StandardProps {
 	/** Adjusts the row density of the table to have more or less spacing. */
 	density: 'compressed' | 'extended';
 
@@ -774,7 +774,7 @@ interface ITable extends StandardProps {
 	hasHover: boolean;
 }
 
-const Table = (props: ITable) => {
+const Table = (props: ITableProps) => {
 	const {
 		className,
 		hasBorder,
@@ -788,7 +788,7 @@ const Table = (props: ITable) => {
 
 	return (
 		<table
-			{...omitProps(passThroughs, undefined, _.keys(Table))}
+			{...omitProps(passThroughs, undefined, _.keys(Table.propTypes))}
 			style={style}
 			className={cx(
 				'&',
@@ -1054,17 +1054,24 @@ function renderRowsWithIdentifiedEdges(
 				if (colIndex === lastColIndex) {
 					cellProps.isLastCol = true;
 				}
-				if (
-					!_.get(firstSingleLookup, rowIndex) &&
-					_.get(cellProps, 'rowSpan', 1) === 1
-				) {
-					_.set(firstSingleLookup, rowIndex, true);
-					cellProps.isFirstSingle = true;
-				}
 			}
 
 			if (!_.has(firstSingleLookup, rowIndex)) {
 				_.set(firstSingleLookup, rowIndex, false);
+			}
+
+			if (
+				!_.get(firstSingleLookup, rowIndex) &&
+				_.get(cellProps, 'rowSpan', 1) === 1
+			) {
+				_.set(firstSingleLookup, rowIndex, true);
+
+				//@ts-ignore
+				cellProps.isFirstSingle = true;
+
+				console.log(cellProps);
+			} else {
+				console.log(cellProps);
 			}
 		})
 	);
