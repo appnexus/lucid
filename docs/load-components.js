@@ -717,6 +717,22 @@ module.exports = [
 		),
 	},
 	{
+		name: 'ResizeGrid',
+		component: getDefaultExport(
+			require('../src/components/ResizeGrid/ResizeGrid')
+		),
+		examplesContext: require.context(
+			'../src/components/ResizeGrid/examples',
+			true,
+			/\.(j|t)sx?$/
+		),
+		examplesContextRaw: require.context(
+			'!!raw-loader!../src/components/ResizeGrid/examples',
+			true,
+			/\.(j|t)sx?$/
+		),
+	},
+	{
 		name: 'Resizer',
 		component: getDefaultExport(require('../src/components/Resizer/Resizer')),
 		examplesContext: require.context(
