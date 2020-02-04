@@ -520,7 +520,7 @@ class ContextMenu extends React.Component<
 		}
 	};
 
-	componentWillReceiveProps(): void {
+	UNSAFE_componentWillReceiveProps(): void {
 		_.defer((): void => this.alignFlyOut());
 	}
 

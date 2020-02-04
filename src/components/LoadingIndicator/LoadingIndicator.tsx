@@ -21,6 +21,11 @@ export interface ILoadingIndicatorProps extends IOverlayWrapperProps {
 	/** Controls the visibility of the `LoadingMessage` and overlay. */
 	isLoading: boolean;
 
+	/** Positions the loading message near the top of the container. By default,
+	 *  the loading message is vertically aligned to the middle of the container.
+	 */
+	anchorMessage: boolean;
+
 	/** Style variations for the overlay behind the loading indicator. */
 	overlayKind: 'light' | 'dark';
 }
@@ -29,12 +34,13 @@ const defaultProps = {
 	hasOverlay: true,
 	isLoading: false,
 	overlayKind: 'light' as const,
+	anchorMessage: false,
 };
 
 export const LoadingIndicator = (
 	props: ILoadingIndicatorProps
 ): React.ReactElement => {
-	const { children, className, isLoading } = props;
+	const { children, className, isLoading, anchorMessage } = props;
 
 	const messageElement = getFirst(
 		props,
@@ -53,6 +59,7 @@ export const LoadingIndicator = (
 			)}
 			className={cx('&', className)}
 			isVisible={isLoading}
+			anchorMessage={anchorMessage}
 		>
 			{otherChildren}
 			<OverlayWrapperMessage>{messageElement}</OverlayWrapperMessage>
@@ -92,12 +99,17 @@ LoadingIndicator.propTypes = {
 	`,
 
 	hasOverlay: bool`
-	Set this to \`false\` if you don't want the semi-transparent overlay over
-	the wrapped content
-`,
+		Set this to \`false\` if you don't want the semi-transparent overlay over
+		the wrapped content
+    `,
 
 	isLoading: bool`
 		Controls the visibility of the \`LoadingMessage\` and overlay.
+	`,
+
+	anchorMessage: bool`
+		Positions the loading message near the top of the container. By default,
+		the loading message is vertically aligned to the middle of the container.
 	`,
 
 	overlayKind: oneOf(['light', 'dark'])`

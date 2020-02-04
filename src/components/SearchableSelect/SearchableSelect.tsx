@@ -19,6 +19,7 @@ import {
 	IDropMenuOptionGroupProps,
 	IDropMenuProps,
 	IDropMenuState,
+	IOptionsData,
 } from '../DropMenu/DropMenu';
 import LoadingIcon from '../Icon/LoadingIcon/LoadingIcon';
 import { SearchFieldDumb as SearchField } from '../SearchField/SearchField';
@@ -141,10 +142,14 @@ export interface ISearchableSelectProps extends StandardProps {
 	optionFilter: (searchValue: string, props: any) => boolean;
 }
 
-export interface ISearchableSelectState extends IDropMenuState {
+export interface ISearchableSelectState {
 	DropMenu: IDropMenuState;
 	selectedIndex: number | null;
 	searchText: string | null;
+	optionGroups: IDropMenuOptionGroupProps[];
+	flattenedOptionsData: IOptionsData[];
+	ungroupedOptionData: IOptionsData[];
+	optionGroupDataLookup: { [key: number]: IOptionsData[] };
 }
 
 const defaultProps = {
@@ -305,23 +310,38 @@ class SearchableSelect extends React.Component<
 		`,
 	};
 
-	getInitialState() {
-		return {
-			optionGroups: [],
-			flattenedOptionsData: [],
-			ungroupedOptionData: [],
-			optionGroupDataLookup: {},
-		};
-	}
-
-	componentWillMount() {
+	UNSAFE_componentWillMount() {
 		// preprocess the options data before rendering
-		this.setState(DropMenu.preprocessOptionData(this.props, SearchableSelect));
+		const {
+			optionGroups,
+			flattenedOptionsData,
+			ungroupedOptionData,
+			optionGroupDataLookup,
+		} = DropMenu.preprocessOptionData(this.props, SearchableSelect);
+
+		this.setState({
+			optionGroups,
+			flattenedOptionsData,
+			ungroupedOptionData,
+			optionGroupDataLookup,
+		});
 	}
 
-	componentWillReceiveProps = (nextProps: ISearchableSelectProps) => {
+	UNSAFE_componentWillReceiveProps = (nextProps: ISearchableSelectProps) => {
 		// only preprocess options data when it changes (via new props) - better performance than doing this each render
-		this.setState(DropMenu.preprocessOptionData(nextProps, SearchableSelect));
+		const {
+			optionGroups,
+			flattenedOptionsData,
+			ungroupedOptionData,
+			optionGroupDataLookup,
+		} = DropMenu.preprocessOptionData(nextProps, SearchableSelect);
+
+		this.setState({
+			optionGroups,
+			flattenedOptionsData,
+			ungroupedOptionData,
+			optionGroupDataLookup,
+		});
 	};
 
 	handleSearch = (searchText: string) => {
