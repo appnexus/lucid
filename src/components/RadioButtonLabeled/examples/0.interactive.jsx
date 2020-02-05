@@ -98,7 +98,9 @@ export default createClass({
 						onSelect={this.handleSelectedMint}
 						style={style}
 					>
-						<RadioButtonLabeled.Label>Mint choc chip (the best)</RadioButtonLabeled.Label>
+						<RadioButtonLabeled.Label>
+							Mint choc chip (the best)
+						</RadioButtonLabeled.Label>
 					</RadioButtonLabeled>
 				</span>
 			</section>

@@ -3,7 +3,8 @@ import createClass from 'create-react-class';
 import { RadioButton } from '../../../index';
 
 const style = {
-	lineHeight: '22px',
+	display: 'flex',
+	alignItems: 'center',
 };
 
 export default createClass({
