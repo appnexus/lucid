@@ -3,6 +3,10 @@ import React from 'react';
 import createClass from 'create-react-class';
 import { RadioButton } from '../../../index';
 
+const style = {
+	lineHeight: '22px',
+};
+
 export default createClass({
 	getInitialState() {
 		return {
@@ -10,7 +14,7 @@ export default createClass({
 		};
 	},
 
-	handleSelected(isSelected) {
+	handleSelected(isSelected: boolean) {
 		this.setState(
 			_.assign({}, this.state, {
 				isSelected,
@@ -21,7 +25,7 @@ export default createClass({
 	render() {
 		return (
 			<ul>
-				<li>
+				<li style={style}>
 					<label>Enabled</label>
 					<RadioButton
 						isSelected={this.state.isSelected}

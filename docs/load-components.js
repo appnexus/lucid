@@ -660,12 +660,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/RadioButton/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/RadioButton/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 	{

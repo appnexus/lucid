@@ -26,6 +26,9 @@ export interface IRadioButtonPropsRaw extends StandardProps {
 	 */
 	isSelected: boolean;
 
+	/** Optional name for the input element */
+	name?: string;
+
 	/** Called when the user clicks on the component or when they press the space
 	 * key while the component is in focus, and only called when the component
 	 * is in the unselected state.
@@ -157,6 +160,10 @@ RadioButton.propTypes = {
 	isSelected: bool`
 		Indicates that the component is in the "selected" state when true and in
 		the "unselected" state when false.
+	`,
+
+	name: string`
+	Optional name for the input element.
 	`,
 
 	onSelect: func`
