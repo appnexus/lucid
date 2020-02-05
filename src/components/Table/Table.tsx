@@ -308,7 +308,7 @@ class Th extends React.Component<IThProps, IThState> {
 		isResizable: false,
 		isSorted: false,
 		sortDirection: 'up',
-		rowSpan: null,
+		rowSpan: 1,
 	};
 
 	static peek = {
@@ -702,7 +702,7 @@ Td.defaultProps = {
 	align: 'left',
 	hasBorderRight: false,
 	hasBorderLeft: false,
-	rowSpan: null,
+	rowSpan: 1,
 };
 
 Td.peek = {
@@ -1054,24 +1054,19 @@ function renderRowsWithIdentifiedEdges(
 				if (colIndex === lastColIndex) {
 					cellProps.isLastCol = true;
 				}
-			}
 
-			if (!_.has(firstSingleLookup, rowIndex)) {
-				_.set(firstSingleLookup, rowIndex, false);
-			}
+				if (!_.has(firstSingleLookup, rowIndex)) {
+					_.set(firstSingleLookup, rowIndex, false);
+				}
 
-			if (
-				!_.get(firstSingleLookup, rowIndex) &&
-				_.get(cellProps, 'rowSpan', 1) === 1
-			) {
-				_.set(firstSingleLookup, rowIndex, true);
+				if (
+					!_.get(firstSingleLookup, rowIndex) &&
+					_.get(cellProps, 'rowSpan', 1) === 1
+				) {
+					_.set(firstSingleLookup, rowIndex, true);
 
-				//@ts-ignore
-				cellProps.isFirstSingle = true;
-
-				console.log(cellProps);
-			} else {
-				console.log(cellProps);
+					cellProps.isFirstSingle = true;
+				}
 			}
 		})
 	);
