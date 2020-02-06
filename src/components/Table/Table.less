@@ -24,11 +24,7 @@
 				& > .@{prefix}-Table-Td.@{prefix}-Table-is-first-single::after {
 					display: none;
 				}
-				& > .@{prefix}-Table-Td:not([rowspan]),
-				.@{prefix}-Table
-					> .@{prefix}-Table-Tbody
-					> .@{prefix}-Table-Tr:hover
-					> .@{prefix}-Table-Td[rowspan='1'] {
+				& > .@{prefix}-Table-Td[rowspan] {
 					background-color: white;
 				}
 			}
@@ -42,13 +38,13 @@
 	*/
 	& .@{prefix}-Table-is-sorted.@{prefix}-Table-Th {
 		& > .@{prefix}-Table-Th-inner {
-			& > :not(:first-child) {
+			& > :not(:first-of-type) {
 				visibility: visible;
 			}
 		}
 	}
 	& .@{prefix}-Table-Th-inner {
-		& > :not(:first-child) {
+		& > :not(:first-of-type) {
 			visibility: hidden;
 		}
 	}
