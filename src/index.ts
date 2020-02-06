@@ -183,6 +183,10 @@ import UploadIcon from './components/Icon/UploadIcon/UploadIcon';
 import UserIcon from './components/Icon/UserIcon/UserIcon';
 import Validation from './components/Validation/Validation';
 import VideoIcon from './components/Icon/VideoIcon/VideoIcon';
+import VideoLiveIcon from './components/Icon/VideoLiveIcon/VideoLiveIcon';
+import VideoLongIcon from './components/Icon/VideoLongIcon/VideoLongIcon';
+import VideoOnDemandIcon from './components/Icon/VideoOnDemandIcon/VideoOnDemandIcon';
+import VideoShortIcon from './components/Icon/VideoShortIcon/VideoShortIcon';
 import ViewIcon from './components/Icon/ViewIcon/ViewIcon';
 import ViewTableIcon from './components/Icon/ViewTableIcon/ViewTableIcon';
 import WarningIcon from './components/Icon/WarningIcon/WarningIcon';
@@ -384,6 +388,10 @@ export {
 	VerticalTabs,
 	VerticalTabsDumb,
 	VideoIcon,
+	VideoLiveIcon,
+	VideoLongIcon,
+	VideoOnDemandIcon,
+	VideoShortIcon,
 	ViewIcon,
 	ViewTableIcon,
 	WarningIcon,
