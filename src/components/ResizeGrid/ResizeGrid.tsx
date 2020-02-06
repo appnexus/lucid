@@ -2,12 +2,35 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import { StandardProps } from '../../util/component-types';
+import { StandardProps, findTypes } from '../../util/component-types';
 import Resizer from '../Resizer/Resizer';
 
 const cx = lucidClassNames.bind('&-ResizeGrid');
 
-const { func, string, object } = PropTypes;
+const { string, object, bool } = PropTypes;
+
+interface IResizeGridCellProps extends StandardProps {
+	isFullWidth: boolean;
+}
+
+const Cell = (_props: IResizeGridCellProps): React.ReactElement => {
+	return <span>{_props.children}</span>;
+};
+Cell.displayName = 'ResizeGrid.Cell';
+Cell.peek = {
+	description: `
+		Renders an \`<article>\` as the grid cell
+	`,
+};
+Cell.propTypes = {
+	isFullWidth: bool`
+	`,
+};
+Cell.peek = {
+	description: `
+		Renders a grid cell
+	`,
+};
 
 interface IResizeGridProps
 	extends StandardProps,
@@ -16,53 +39,47 @@ interface IResizeGridProps
 			HTMLDivElement
 		> {
 	cards: Array<any>;
-}
-
-interface IResizeGridState {
 	width: number;
-	height: number;
 }
 
-class ResizeGrid extends React.Component<IResizeGridProps, IResizeGridState> {
+class ResizeGrid extends React.Component<IResizeGridProps> {
 	static displayName = 'ResizeGrid';
 
 	static peek = {
 		description: `
-			This is a helper component used for getting the width and height of a
-			containing element. This component doesn't take normal children. It
-			expects you to pass a single function for children. It will then call
-			that function with new \`width\` and \`height\` values if the container
-			size changes.
+		
 		`,
 		categories: ['utility'],
 	};
 
 	static propTypes = {
 		cards: object`
-			Cards to be arranged in a grid
+			Cards to be arranged in a grid.
 		`,
 
 		className: string`
 			Appended to the component-specific class names set on the root elements.
 		`,
-
-		children: func`
-			A function that returns your rendered content with the signature:
-			\`(width, height) => {}\`
-		`,
 	};
 
+	static Cell = Cell;
+
 	getColumnLayout = (n: number) => {
-		const { cards } = this.props;
+		// const cells = _.map(findTypes(this.props, Cell), 'props');
+		//@ts-ignore
+		const cells = _.map(this.props.children, 'props');
+
 		const columns = _.reduce(
-			cards,
+			_.map(cells, (cellChildProps: IResizeGridCellProps) => (
+				<span>{cellChildProps.children}</span>
+			)),
 			(cols: Array<any>, card: any, idx: number) => {
-				const insertIndex = idx % n;
-				cols[insertIndex] = [...cols[insertIndex], card];
+				cols[idx % n] = [...cols[idx % n], card];
 				return cols;
 			},
 			_.times(n, () => [])
 		);
+
 		return (
 			<div className={`cards-container ${n === 1 ? 'oneColumn' : ''}`}>
 				{_.map(columns, col => {
@@ -78,20 +95,32 @@ class ResizeGrid extends React.Component<IResizeGridProps, IResizeGridState> {
 
 	getThreeColumnLayout = () => this.getColumnLayout(3);
 
+	shouldComponentUpdate(nextProps: IResizeGridProps) {
+		const { width } = this.props;
+		const { width: nextWidth } = nextProps;
+
+		if (nextWidth < width) {
+			return (
+				(nextWidth < 420 && width > 420) || (nextWidth < 800 && width > 800)
+			);
+		} else if (nextWidth > width) {
+			return (
+				(nextWidth > 420 && width < 420) || (nextWidth > 800 && width < 800)
+			);
+		}
+		return false;
+	}
+
 	render() {
-		return (
-			<Resizer>
-				{width => {
-					if (width < 960) {
-						return this.getOneColumnLayout();
-					} else if (width >= 960 && width < 1249) {
-						return this.getTwoColumnLayout();
-					} else {
-						return this.getThreeColumnLayout();
-					}
-				}}
-			</Resizer>
-		);
+		const { width } = this.props;
+
+		if (width < 420) {
+			return this.getOneColumnLayout();
+		} else if (width >= 420 && width < 800) {
+			return this.getTwoColumnLayout();
+		} else {
+			return this.getThreeColumnLayout();
+		}
 	}
 }
 
