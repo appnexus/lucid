@@ -12,7 +12,6 @@ exports[`RadioButtonLabeled [common] example testing should match snapshot(s) fo
   <RadioButton
     isDisabled={false}
     isSelected={true}
-    name="interactive-radio-buttons"
     onSelect={[Function]}
   >
     <RadioButtonLabeled.Label>
@@ -39,7 +38,6 @@ exports[`RadioButtonLabeled [common] example testing should match snapshot(s) fo
   <RadioButton
     isDisabled={false}
     isSelected={false}
-    name="interactive-radio-buttons"
     onSelect={[Function]}
   >
     <RadioButtonLabeled.Label>
@@ -66,7 +64,6 @@ exports[`RadioButtonLabeled [common] example testing should match snapshot(s) fo
   <RadioButton
     isDisabled={false}
     isSelected={false}
-    name="interactive-radio-buttons"
     onSelect={[Function]}
   >
     <RadioButtonLabeled.Label>
@@ -93,7 +90,6 @@ exports[`RadioButtonLabeled [common] example testing should match snapshot(s) fo
   <RadioButton
     isDisabled={false}
     isSelected={false}
-    name="interactive-radio-buttons"
     onSelect={[Function]}
   >
     <RadioButtonLabeled.Label>
@@ -120,7 +116,6 @@ exports[`RadioButtonLabeled [common] example testing should match snapshot(s) fo
   <RadioButton
     isDisabled={false}
     isSelected={false}
-    name="interactive-radio-buttons"
     onSelect={[Function]}
   >
     <RadioButtonLabeled.Label>

@@ -16,7 +16,7 @@
 	}
 
 	&-label {
-		padding-top: 2px; // works better with Galano
+		padding-top: 3px;
 	}
 
 	&&-is-disabled {
@@ -38,9 +38,12 @@
 		.opacity(0);
 	}
 
-	&&-is-disabled&&-is-selected:hover > .@{prefix}-RadioButton .@{prefix}-RadioButton-visualization-container,
-	&&-is-selected > .@{prefix}-RadioButton .@{prefix}-RadioButton-visualization-container {
+	&&-is-disabled&&-is-selected:hover
+		> .@{prefix}-RadioButton
+		.@{prefix}-RadioButton-visualization-container,
+	&&-is-selected
+		> .@{prefix}-RadioButton
+		.@{prefix}-RadioButton-visualization-container {
 		border-color: @color-primary;
 	}
 }
-
