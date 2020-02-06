@@ -398,7 +398,7 @@ class SplitVertical extends React.Component<
 		this.resetAnimation(this.innerRef, secondaryRef, primaryRef);
 	};
 
-	componentWillReceiveProps(nextProps: ISplitVerticalProps): void {
+	UNSAFE_componentWillReceiveProps(nextProps: ISplitVerticalProps): void {
 		const { isAnimated, isExpanded, collapseShift } = nextProps;
 
 		const { secondaryRef } = this.getPanes();

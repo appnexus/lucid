@@ -22,6 +22,7 @@ import {
 	IDropMenuState,
 	IDropMenuOptionProps,
 	IDropMenuOptionGroupProps,
+	IOptionsData,
 	DropMenuDumb as DropMenu,
 } from '../DropMenu/DropMenu';
 import LoadingIcon from '../Icon/LoadingIcon/LoadingIcon';
@@ -197,10 +198,14 @@ export type ISearchableMultiSelectProps = Overwrite<
 	ISearchableMultiSelectPropsRaw
 >;
 
-export interface ISearchableMultiSelectState extends IDropMenuState {
+export interface ISearchableMultiSelectState {
 	DropMenu: IDropMenuState;
-	selectedIndex: number | null;
+	selectedIndices: number[];
 	searchText: string | null;
+	optionGroups: IDropMenuOptionGroupProps[];
+	flattenedOptionsData: IOptionsData[];
+	ungroupedOptionData: IOptionsData[];
+	optionGroupDataLookup: { [key: number]: IOptionsData[] };
 }
 
 const defaultProps = {
@@ -381,15 +386,6 @@ class SearchableMultiSelect extends React.Component<
         `,
 	};
 
-	getInitialState(): any {
-		return {
-			optionGroups: [],
-			flattenedOptionsData: [],
-			ungroupedOptionData: [],
-			optionGroupDataLookup: {},
-		};
-	}
-
 	handleDropMenuSelect = (
 		optionIndex: number | null,
 		{
@@ -516,18 +512,38 @@ class SearchableMultiSelect extends React.Component<
 		});
 	};
 
-	componentWillMount(): void {
+	UNSAFE_componentWillMount(): void {
 		// preprocess the options data before rendering
-		this.setState(
-			DropMenu.preprocessOptionData(this.props, SearchableMultiSelect)
-		);
+		const {
+			optionGroups,
+			flattenedOptionsData,
+			ungroupedOptionData,
+			optionGroupDataLookup,
+		} = DropMenu.preprocessOptionData(this.props, SearchableMultiSelect);
+
+		this.setState({
+			optionGroups,
+			flattenedOptionsData,
+			ungroupedOptionData,
+			optionGroupDataLookup,
+		});
 	}
 
-	componentWillReceiveProps(nextProps: ISearchableMultiSelectProps): void {
+	UNSAFE_componentWillReceiveProps(nextProps: ISearchableMultiSelectProps): void {
 		// only preprocess options data when it changes (via new props) - better performance than doing this each render
-		this.setState(
-			DropMenu.preprocessOptionData(nextProps, SearchableMultiSelect)
-		);
+		const {
+			optionGroups,
+			flattenedOptionsData,
+			ungroupedOptionData,
+			optionGroupDataLookup,
+		} = DropMenu.preprocessOptionData(nextProps, SearchableMultiSelect);
+
+		this.setState({
+			optionGroups,
+			flattenedOptionsData,
+			ungroupedOptionData,
+			optionGroupDataLookup,
+		});
 	}
 
 	renderUnderlinedChildren = (childText: string, searchText: string): any => {

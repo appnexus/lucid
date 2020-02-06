@@ -1,6 +1,7 @@
 ## unreleased
 
 - Nothing at the moment.
+- #1120 [none] Prefix `UNSAFE_` to legacy React component 'lifecycle' methods.
 
 ## 5.5.0
 

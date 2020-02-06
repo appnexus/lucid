@@ -282,7 +282,7 @@ export function buildHybridComponent(
 				safeMerge
 			);
 		},
-		componentWillMount() {
+		UNSAFE_componentWillMount() {
 			let synchronousState = this.state; //store reference to state, use in place of `this.state` in `getState`
 			this.boundContext = getStatefulPropsContext(reducers, {
 				getState: () =>
@@ -368,7 +368,7 @@ export function buildModernHybridComponent<
 			);
 		}
 
-		componentWillMount() {
+		UNSAFE_componentWillMount() {
 			// store reference to state, use in place of `this.state` in `getState`
 			let synchronousState: S = this.state;
 

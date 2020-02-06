@@ -3,7 +3,7 @@ import createClass from 'create-react-class';
 import CalendarMonth from '../CalendarMonth';
 
 export default createClass({
-	componentWillMount() {
+	UNSAFE_componentWillMount() {
 		this.fromDate = new Date();
 		this.fromDate.setDate(1);
 	},

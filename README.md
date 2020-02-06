@@ -16,8 +16,7 @@ or yarn
 
     import React from 'react';
     import ReactDOM from 'react-dom';
-    import Button from 'lucid-ui/Button';
-    // `import { Button } from 'lucid-ui'` also works but will result in larger bundle sizes
+    import { Button } from 'lucid-ui';
 
     ReactDOM.render(
       <Button>Hello World</Button>,
@@ -30,7 +29,7 @@ styles like so:
     @import "node_modules/lucid-ui/src/index.less";
 
 If you don't use `less`, you can use the precompiled css file
-`node_modules/lucid-ui/dist/index.css`.
+`node_modules/lucid-ui/dist/lucid.css`.
 
 ### Custom CSS Scope
 

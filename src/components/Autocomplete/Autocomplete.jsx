@@ -173,7 +173,7 @@ const Autocomplete = createClass({
 		this.setInputValue(value);
 	},
 
-	componentWillReceiveProps(nextProps) {
+	UNSAFE_componentWillReceiveProps(nextProps) {
 		const { value } = nextProps;
 		if (value !== this.getInputValue()) {
 			this.setInputValue(value);

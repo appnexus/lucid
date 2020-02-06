@@ -393,7 +393,7 @@ class SplitHorizontal extends React.Component<
 		this.resetAnimation(this.innerRef, secondaryRef, primaryRef);
 	};
 
-	componentWillReceiveProps(nextProps: ISplitHorizontalProps): void {
+	UNSAFE_componentWillReceiveProps(nextProps: ISplitHorizontalProps): void {
 		const { isAnimated, isExpanded, collapseShift } = nextProps;
 
 		const { secondaryRef } = this.getPanes();
