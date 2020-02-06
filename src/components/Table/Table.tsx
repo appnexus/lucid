@@ -997,8 +997,6 @@ function mapToGrid(
  * Returns an equivalent list of Tr's where each cell on the perimeter has props set for: `isFirstRow`, `isLastRow`, `isFirstCol`, `isLastCol`, and `isFirstSingle`
  */
 
-//{renderRowsWithIdentifiedEdges(filterTypes(children, Tr), Th)}
-
 function renderRowsWithIdentifiedEdges(
 	trList: Array<{ props: StandardProps }>,
 	cellType: Th | Td = Td
