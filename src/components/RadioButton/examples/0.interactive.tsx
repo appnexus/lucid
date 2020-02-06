@@ -4,6 +4,7 @@ import createClass from 'create-react-class';
 import { RadioButton } from '../../../index';
 
 const style = {
+	listStyleType: 'none',
 	display: 'flex',
 	alignItems: 'center',
 };
