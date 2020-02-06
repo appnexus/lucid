@@ -5,11 +5,15 @@ First of all, thank you for contributing. It’s appreciated.
 1. Install node >= `>=8.0.0`
 2. Clone the repo and install dependencies with `npm install`.
 3. Make a GitHub issue before doing any significant amount of work. Make sure the core team approves your idea. This step is really important. If you skip this, your PR might be rejected.
-  - Be sure to check out our [Waffle board][waffle] for a kanban view of all our issues.
+
+- Be sure to check out our [Waffle board][waffle] for a kanban view of all our issues.
+
 4. Below are some important commands for developing. Don't commit before fixing all errors and warnings.
-  - `npm start` runs the docs page and watches for changes
-  - `npm run dev` starts a blank storybook sandbox for quick, iterative development
-  - `npm run watch` runs tests and watches for changes, optimized for speed
+
+- `npm start` runs the docs page and watches for changes
+- `npm run dev` starts a blank storybook sandbox for quick, iterative development
+- `npm run watch` runs tests and watches for changes, optimized for speed
+
 5. Ensure your changes work properly on the latest versions of Chrome, Firefox, Safari, and IE Edge. Currently this step is manual.
 6. Reference the issue's number in your commit. E.g.: "Did this #12".
 7. Make a pull request.
@@ -24,34 +28,38 @@ First of all, thank you for contributing. It’s appreciated.
 - We use an issue template that provides a check list of tasks to consider for every PR.
 
 ## Writing Components
+
 ### Create a new Component (automated)
+
 Run command
-    npm run create-component MyNewComponent
+npm run create-component MyNewComponent
 
 ### Create a new Component (manual)
+
 Here are some basic steps to get you started building your first component.
 Start your dev server and go to `http://localhost:8080/#/components/ExampleComponent` for a component example.
 
 1. Create your new component folder
-`src/components/MyNewComponent/`
+   `src/components/MyNewComponent/`
 
 2. Create your component file(s). The only required file are `MyNewComponent.jsx` and `MyNewComponent.spec.js`.
 
 3. Create your docs example:
-* Storybook story definition `docs/examples/MyNewComponent.stories.js`
-* Example dir `docs/examples/MyNewComponent/`
-* Example component `docs/examples/MyNewComponent/WithDefaults.js`
+
+- Storybook story definition `docs/examples/MyNewComponent.stories.js`
+- Example dir `docs/examples/MyNewComponent/`
+- Example component `docs/examples/MyNewComponent/WithDefaults.js`
 
 4. Add your component's JSX file to `/src/index.ts`
+
 ```javascript
 import MyNewComponent from './components/MyNewComponent/MyNewComponent';
 
-export {
-  MyNewComponent,
-}
+export { MyNewComponent };
 ```
 
 5. (optional) - Add your component's style file to `/src/styles/components.less`
+
 ```css
 @import '../components/MyNewComponent/MyNewComponent';
 ```
@@ -61,6 +69,7 @@ export {
 7. In your browser open, `http://localhost:6006/`
 
 ### Prop Conventions
+
 - Use `isX` or `hasX` props for boolean types even when it differs from native.
 - Make sure all components allow `className` and `style` to be extended for consumer convenience.
 - Use `onX` props for all event handlers.
@@ -76,7 +85,7 @@ export {
 
 ### Styling
 
-- *All* css classes must be prefixed by the name of the component. E.g. `.lucid-Button-foo`. Use `const cx = lucidClassNames.bind('&-ExampleComponent');` to bind and auto-prefix classnames and include in your component with `<MyComponent classNames={cx}>`.
+- _All_ css classes must be prefixed by the name of the component. E.g. `.lucid-Button-foo`. Use `const cx = lucidClassNames.bind('&-ExampleComponent');` to bind and auto-prefix classnames and include in your component with `<MyComponent classNames={cx}>`.
 - Css classes used for state, such as `.is-active`, should also be prefixed with the component name. E.g. `lucid-Button-is-active`.
 - We have a naming convention for our props. Below is a list of examples that are valid. Please see the `variables.less` file for real world examples.
 
@@ -100,38 +109,40 @@ export {
   - "MyComponent"
   - "AnotherComponentHere.jsx"
 - We define component description & meta data in static property of components called `peek`.
+
 ```javascript
 MyExampleComponent.peek = {
-  description: `...`,
-  isPrivate: true,
-}
+	description: `...`,
+	isPrivate: true,
+};
 ```
+
 - We set the `isPrivate` boolean to indicate that the component isn't intended for external consumption yet. This will hide the component from the docs.
 
 ### Tests
 
-- Components should have a `Component.spec.jsx` that lives alongside the component jsx file.
+- Components should have a `Component.spec.jsx` or `Component.spec.tsx` that lives alongside the component `.jsx` or `.tsx` file.
 - Most tests should be shallow rendered using `enzyme`.
 - Sometimes we have tests with flaky timing, i.e. we're using `setTimeout`. In those rare cases we put the text `[mostly stable]` in the name of the test as a kind of tag for future reference.
 - Our test files have a certain structure to them, here's an example of it:
 
 ```javascript
 describe('MyComponent', () => {
-  common(MyComponent);
+	common(MyComponent);
 
-  describe('render', () => { });
+	describe('render', () => {});
 
-  describe('props', () => {
-    describe('myProp', () => { });
+	describe('props', () => {
+		describe('myProp', () => {});
 
-    describe('myOtherProp', () => { });
-  });
+		describe('myOtherProp', () => {});
+	});
 
-  describe('child components', () => {
-    describe('Foo', () => { });
+	describe('child components', () => {
+		describe('Foo', () => {});
 
-    describe('Bar', () => { });
-  });
+		describe('Bar', () => {});
+	});
 });
 ```
 
@@ -149,13 +160,15 @@ NODE_ENV=development npx webpack --config webpack.config.bundle.js --json --stat
 ## Troubleshooting Frequent Component Errors
 
 #### `Uncaught ReferenceError: [object] is not defined`
+
 Similar errors include saying `string`, `bool`, `boolean`, `node`, etc. are not defined. If you get this error, double check that all your defined propTypes in your component class are also destructured from PropTypes.
+
 ```javascript
 import PropTypes from 'react-peek/prop-types';
 
 const {
 	bool,
 	func,
-  object, //<-- destructuring the appropriate prop-type from PropTypes will solve the problem.
+	object, //<-- destructuring the appropriate prop-type from PropTypes will solve the problem.
 } = PropTypes;
 ```

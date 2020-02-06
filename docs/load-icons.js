@@ -14,12 +14,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Icon/AddURLIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Icon/AddURLIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 
@@ -31,12 +31,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Icon/AnalyzeDataIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Icon/AnalyzeDataIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 
@@ -48,12 +48,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Icon/ArrowIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Icon/ArrowIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 
@@ -65,12 +65,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Icon/AsteriskIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Icon/AsteriskIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 
@@ -82,12 +82,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Icon/AttachIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Icon/AttachIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 
@@ -99,12 +99,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Icon/AudioIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Icon/AudioIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 
@@ -116,12 +116,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Icon/BackUpArrowIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Icon/BackUpArrowIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 
@@ -133,12 +133,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Icon/BellIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Icon/BellIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 
@@ -150,12 +150,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Icon/BookIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Icon/BookIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 
@@ -167,12 +167,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Icon/CalendarIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Icon/CalendarIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 
@@ -184,12 +184,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Icon/ChatIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Icon/ChatIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 
@@ -201,12 +201,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Icon/CheckIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Icon/CheckIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 
@@ -218,12 +218,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Icon/ChevronIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Icon/ChevronIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 
@@ -235,12 +235,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Icon/ClockIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Icon/ClockIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 
@@ -252,12 +252,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Icon/CloseIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Icon/CloseIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 
@@ -269,12 +269,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Icon/CodeIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Icon/CodeIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 
@@ -286,12 +286,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Icon/CrownIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Icon/CrownIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 
@@ -303,12 +303,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Icon/DangerIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Icon/DangerIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 
@@ -320,12 +320,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Icon/DangerLightIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Icon/DangerLightIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 
@@ -337,12 +337,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Icon/DeleteIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Icon/DeleteIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 
@@ -354,12 +354,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Icon/DotsIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Icon/DotsIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 
@@ -371,12 +371,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Icon/DownloadIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Icon/DownloadIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 
@@ -388,12 +388,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Icon/DuplicateIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Icon/DuplicateIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 
@@ -405,12 +405,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Icon/EditIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Icon/EditIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 
@@ -422,12 +422,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Icon/EligibilityIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Icon/EligibilityIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 
@@ -439,12 +439,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Icon/EligibilityLightIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Icon/EligibilityLightIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 
@@ -456,12 +456,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Icon/EnvelopeIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Icon/EnvelopeIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 
@@ -473,12 +473,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Icon/EqualsIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Icon/EqualsIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 
@@ -490,12 +490,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Icon/FileIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Icon/FileIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 
@@ -507,12 +507,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Icon/FilterIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Icon/FilterIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 
@@ -524,12 +524,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Icon/FlagIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Icon/FlagIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 
@@ -541,12 +541,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Icon/FolderIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Icon/FolderIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 
@@ -558,12 +558,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Icon/FourSquaresIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Icon/FourSquaresIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 
@@ -575,12 +575,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Icon/GetMaximumIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Icon/GetMaximumIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 
@@ -592,12 +592,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Icon/HelpIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Icon/HelpIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 
@@ -609,12 +609,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Icon/HideIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Icon/HideIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 
@@ -626,12 +626,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Icon/HomeIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Icon/HomeIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 
@@ -643,12 +643,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Icon/ImageIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Icon/ImageIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 
@@ -660,12 +660,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Icon/InfoIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Icon/InfoIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 
@@ -677,12 +677,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Icon/InfoLightIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Icon/InfoLightIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 
@@ -694,12 +694,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Icon/LinkedIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Icon/LinkedIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 
@@ -711,12 +711,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Icon/LoadingIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Icon/LoadingIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 
@@ -728,12 +728,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Icon/LockedIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Icon/LockedIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 
@@ -745,12 +745,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Icon/MaximizeIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Icon/MaximizeIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 
@@ -762,12 +762,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Icon/MinimizeIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Icon/MinimizeIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 
@@ -779,12 +779,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Icon/MinusCircleIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Icon/MinusCircleIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 
@@ -796,12 +796,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Icon/MinusCircleLightIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Icon/MinusCircleLightIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 
@@ -813,12 +813,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Icon/MinusIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Icon/MinusIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 
@@ -830,12 +830,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Icon/NewWindowIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Icon/NewWindowIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 
@@ -847,12 +847,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Icon/OutwardArrowsIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Icon/OutwardArrowsIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 
@@ -864,12 +864,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Icon/PlusIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Icon/PlusIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 
@@ -881,12 +881,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Icon/QuestionMarkIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Icon/QuestionMarkIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 
@@ -898,12 +898,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Icon/RefreshIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Icon/RefreshIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 
@@ -915,12 +915,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Icon/ResizeIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Icon/ResizeIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 
@@ -948,12 +948,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Icon/SaveIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Icon/SaveIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 
@@ -965,12 +965,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Icon/SearchIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Icon/SearchIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 
@@ -982,12 +982,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Icon/SeparatorIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Icon/SeparatorIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 
@@ -999,12 +999,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Icon/SettingsIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Icon/SettingsIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 
@@ -1016,12 +1016,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Icon/ShoppingCartIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Icon/ShoppingCartIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 
@@ -1033,12 +1033,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Icon/StarIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Icon/StarIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 
@@ -1050,12 +1050,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Icon/StarOutlineIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Icon/StarOutlineIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 
@@ -1067,12 +1067,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Icon/StopwatchIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Icon/StopwatchIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 
@@ -1084,12 +1084,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Icon/SuccessIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Icon/SuccessIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 
@@ -1101,12 +1101,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Icon/SuccessLightIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Icon/SuccessLightIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 
@@ -1118,12 +1118,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Icon/SwitchIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Icon/SwitchIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 
@@ -1135,12 +1135,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Icon/TextIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Icon/TextIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 
@@ -1152,12 +1152,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Icon/UnlinkedIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Icon/UnlinkedIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 
@@ -1169,12 +1169,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Icon/UnlockedIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Icon/UnlockedIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 
@@ -1186,12 +1186,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Icon/UploadIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Icon/UploadIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 
@@ -1203,12 +1203,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Icon/UserIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Icon/UserIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 
@@ -1220,12 +1220,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Icon/VideoIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Icon/VideoIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 
@@ -1237,12 +1237,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Icon/ViewIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Icon/ViewIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 
@@ -1254,12 +1254,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Icon/ViewTableIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Icon/ViewTableIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 
@@ -1271,12 +1271,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Icon/WarningIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Icon/WarningIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 
@@ -1288,12 +1288,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Icon/WarningLightIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Icon/WarningLightIcon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 ];
