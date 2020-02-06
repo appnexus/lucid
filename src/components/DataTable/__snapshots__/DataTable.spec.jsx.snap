@@ -10588,6 +10588,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.empt
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row10id"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -10599,6 +10600,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.empt
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row10first_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -10610,6 +10612,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.empt
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row10last_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -10621,6 +10624,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.empt
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row10email"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -10632,6 +10636,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.empt
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row10occupation"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -10655,6 +10660,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.empt
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row11id"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -10666,6 +10672,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.empt
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row11first_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -10677,6 +10684,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.empt
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row11last_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -10688,6 +10696,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.empt
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row11email"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -10699,6 +10708,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.empt
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row11occupation"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -10722,6 +10732,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.empt
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row12id"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -10733,6 +10744,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.empt
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row12first_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -10744,6 +10756,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.empt
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row12last_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -10755,6 +10768,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.empt
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row12email"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -10766,6 +10780,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.empt
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row12occupation"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -10789,6 +10804,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.empt
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row13id"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -10800,6 +10816,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.empt
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row13first_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -10811,6 +10828,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.empt
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row13last_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -10822,6 +10840,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.empt
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row13email"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -10833,6 +10852,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.empt
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row13occupation"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -10856,6 +10876,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.empt
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row14id"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -10867,6 +10888,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.empt
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row14first_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -10878,6 +10900,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.empt
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row14last_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -10889,6 +10912,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.empt
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row14email"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -10900,6 +10924,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.empt
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row14occupation"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -11020,6 +11045,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row0id"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -11031,6 +11057,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row0first_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -11042,6 +11069,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row0last_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -11053,6 +11081,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row0email"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -11064,6 +11093,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row0occupation"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -11087,6 +11117,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row1id"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -11098,6 +11129,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row1first_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -11109,6 +11141,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row1last_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -11120,6 +11153,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row1email"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -11131,6 +11165,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row1occupation"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -11154,6 +11189,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row2id"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -11165,6 +11201,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row2first_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -11176,6 +11213,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row2last_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -11187,6 +11225,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row2email"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -11198,6 +11237,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row2occupation"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -11221,6 +11261,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row3id"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -11232,6 +11273,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row3first_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -11243,6 +11285,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row3last_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -11254,6 +11297,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row3email"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -11265,6 +11309,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row3occupation"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -11288,6 +11333,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row4id"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -11299,6 +11345,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row4first_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -11310,6 +11357,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row4last_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -11321,6 +11369,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row4email"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -11332,6 +11381,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row4occupation"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -11355,6 +11405,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row5id"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -11366,6 +11417,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row5first_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -11377,6 +11429,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row5last_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -11388,6 +11441,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row5email"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -11399,6 +11453,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row5occupation"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -11422,6 +11477,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row6id"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -11433,6 +11489,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row6first_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -11444,6 +11501,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row6last_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -11455,6 +11513,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row6email"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -11466,6 +11525,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row6occupation"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -11489,6 +11549,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row7id"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -11500,6 +11561,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row7first_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -11511,6 +11573,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row7last_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -11522,6 +11585,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row7email"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -11533,6 +11597,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row7occupation"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -11556,6 +11621,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row8id"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -11567,6 +11633,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row8first_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -11578,6 +11645,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row8last_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -11589,6 +11657,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row8email"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -11600,6 +11669,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row8occupation"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -11623,6 +11693,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row9id"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -11634,6 +11705,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row9first_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -11645,6 +11717,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row9last_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -11656,6 +11729,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row9email"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -11667,6 +11741,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row9occupation"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -11690,6 +11765,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row10id"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -11701,6 +11777,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row10first_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -11712,6 +11789,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row10last_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -11723,6 +11801,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row10email"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -11734,6 +11813,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row10occupation"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -11757,6 +11837,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row11id"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -11768,6 +11849,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row11first_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -11779,6 +11861,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row11last_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -11790,6 +11873,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row11email"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -11801,6 +11885,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row11occupation"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -11824,6 +11909,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row12id"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -11835,6 +11921,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row12first_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -11846,6 +11933,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row12last_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -11857,6 +11945,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row12email"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -11868,6 +11957,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row12occupation"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -11891,6 +11981,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row13id"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -11902,6 +11993,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row13first_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -11913,6 +12005,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row13last_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -11924,6 +12017,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row13email"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -11935,6 +12029,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row13occupation"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -11958,6 +12053,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row14id"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -11969,6 +12065,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row14first_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -11980,6 +12077,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row14last_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -11991,6 +12089,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row14email"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -12002,6 +12101,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row14occupation"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -12025,6 +12125,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row15id"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -12036,6 +12137,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row15first_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -12047,6 +12149,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row15last_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -12058,6 +12161,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row15email"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -12069,6 +12173,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row15occupation"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -12092,6 +12197,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row16id"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -12103,6 +12209,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row16first_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -12114,6 +12221,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row16last_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -12125,6 +12233,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row16email"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -12136,6 +12245,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row16occupation"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -12159,6 +12269,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row17id"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -12170,6 +12281,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row17first_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -12181,6 +12293,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row17last_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -12192,6 +12305,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row17email"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -12203,6 +12317,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row17occupation"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -12226,6 +12341,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row18id"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -12237,6 +12353,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row18first_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -12248,6 +12365,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row18last_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -12259,6 +12377,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row18email"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -12270,6 +12389,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row18occupation"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -12293,6 +12413,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row19id"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -12304,6 +12425,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row19first_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -12315,6 +12437,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row19last_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -12326,6 +12449,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row19email"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -12337,6 +12461,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row19occupation"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -12360,6 +12485,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row20id"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -12371,6 +12497,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row20first_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -12382,6 +12509,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row20last_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -12393,6 +12521,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row20email"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -12404,6 +12533,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row20occupation"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -12427,6 +12557,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row21id"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -12438,6 +12569,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row21first_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -12449,6 +12581,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row21last_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -12460,6 +12593,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row21email"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -12471,6 +12605,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row21occupation"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -12494,6 +12629,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row22id"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -12505,6 +12641,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row22first_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -12516,6 +12653,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row22last_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -12527,6 +12665,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row22email"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -12538,6 +12677,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row22occupation"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -12561,6 +12701,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row23id"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -12572,6 +12713,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row23first_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -12583,6 +12725,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row23last_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -12594,6 +12737,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row23email"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -12605,6 +12749,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row23occupation"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -12628,6 +12773,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row24id"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -12639,6 +12785,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row24first_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -12650,6 +12797,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row24last_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -12661,6 +12809,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row24email"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -12672,6 +12821,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row24occupation"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -12695,6 +12845,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row25id"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -12706,6 +12857,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row25first_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -12717,6 +12869,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row25last_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -12728,6 +12881,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row25email"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -12739,6 +12893,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row25occupation"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -12762,6 +12917,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row26id"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -12773,6 +12929,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row26first_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -12784,6 +12941,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row26last_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -12795,6 +12953,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row26email"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -12806,6 +12965,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row26occupation"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -12829,6 +12989,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row27id"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -12840,6 +13001,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row27first_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -12851,6 +13013,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row27last_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -12862,6 +13025,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row27email"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -12873,6 +13037,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row27occupation"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -12896,6 +13061,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row28id"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -12907,6 +13073,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row28first_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -12918,6 +13085,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row28last_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -12929,6 +13097,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row28email"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -12940,6 +13109,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row28occupation"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -12963,6 +13133,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row29id"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -12974,6 +13145,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row29first_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -12985,6 +13157,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row29last_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -12996,6 +13169,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row29email"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -13007,6 +13181,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row29occupation"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -13030,6 +13205,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row30id"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -13041,6 +13217,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row30first_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -13052,6 +13229,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row30last_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -13063,6 +13241,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row30email"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -13074,6 +13253,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row30occupation"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -13097,6 +13277,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row31id"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -13108,6 +13289,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row31first_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -13119,6 +13301,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row31last_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -13130,6 +13313,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row31email"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -13141,6 +13325,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row31occupation"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -13164,6 +13349,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row32id"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -13175,6 +13361,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row32first_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -13186,6 +13373,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row32last_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -13197,6 +13385,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row32email"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -13208,6 +13397,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row32occupation"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -13231,6 +13421,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row33id"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -13242,6 +13433,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row33first_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -13253,6 +13445,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row33last_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -13264,6 +13457,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row33email"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -13275,6 +13469,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row33occupation"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -13298,6 +13493,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row34id"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -13309,6 +13505,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row34first_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -13320,6 +13517,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row34last_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -13331,6 +13529,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row34email"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -13342,6 +13541,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row34occupation"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -13365,6 +13565,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row35id"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -13376,6 +13577,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row35first_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -13387,6 +13589,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row35last_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -13398,6 +13601,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row35email"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -13409,6 +13613,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row35occupation"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -13432,6 +13637,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row36id"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -13443,6 +13649,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row36first_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -13454,6 +13661,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row36last_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -13465,6 +13673,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row36email"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -13476,6 +13685,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row36occupation"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -13499,6 +13709,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row37id"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -13510,6 +13721,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row37first_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -13521,6 +13733,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row37last_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -13532,6 +13745,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row37email"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -13543,6 +13757,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row37occupation"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -13566,6 +13781,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row38id"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -13577,6 +13793,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row38first_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -13588,6 +13805,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row38last_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -13599,6 +13817,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row38email"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -13610,6 +13829,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row38occupation"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -13633,6 +13853,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row39id"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -13644,6 +13865,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row39first_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -13655,6 +13877,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row39last_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -13666,6 +13889,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row39email"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -13677,6 +13901,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row39occupation"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -13700,6 +13925,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row40id"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -13711,6 +13937,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row40first_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -13722,6 +13949,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row40last_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -13733,6 +13961,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row40email"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -13744,6 +13973,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row40occupation"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -13767,6 +13997,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row41id"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -13778,6 +14009,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row41first_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -13789,6 +14021,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row41last_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -13800,6 +14033,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row41email"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -13811,6 +14045,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row41occupation"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -13834,6 +14069,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row42id"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -13845,6 +14081,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row42first_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -13856,6 +14093,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row42last_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -13867,6 +14105,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row42email"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -13878,6 +14117,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row42occupation"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -13901,6 +14141,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row43id"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -13912,6 +14153,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row43first_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -13923,6 +14165,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row43last_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -13934,6 +14177,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row43email"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -13945,6 +14189,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row43occupation"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -13968,6 +14213,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row44id"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -13979,6 +14225,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row44first_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -13990,6 +14237,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row44last_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -14001,6 +14249,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row44email"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -14012,6 +14261,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row44occupation"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -14035,6 +14285,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row45id"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -14046,6 +14297,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row45first_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -14057,6 +14309,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row45last_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -14068,6 +14321,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row45email"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -14079,6 +14333,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row45occupation"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -14102,6 +14357,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row46id"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -14113,6 +14369,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row46first_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -14124,6 +14381,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row46last_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -14135,6 +14393,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row46email"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -14146,6 +14405,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row46occupation"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -14169,6 +14429,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row47id"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -14180,6 +14441,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row47first_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -14191,6 +14453,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row47last_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -14202,6 +14465,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row47email"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -14213,6 +14477,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row47occupation"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -14236,6 +14501,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row48id"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -14247,6 +14513,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row48first_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -14258,6 +14525,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row48last_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -14269,6 +14537,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row48email"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -14280,6 +14549,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row48occupation"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -14303,6 +14573,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row49id"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -14314,6 +14585,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row49first_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -14325,6 +14597,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row49last_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -14336,6 +14609,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row49email"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -14347,6 +14621,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row49occupation"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -14467,6 +14742,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row0id"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -14478,6 +14754,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row0first_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -14489,6 +14766,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row0last_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -14500,6 +14778,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row0email"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -14511,6 +14790,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row0occupation"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -14534,6 +14814,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row1id"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -14545,6 +14826,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row1first_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -14556,6 +14838,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row1last_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -14567,6 +14850,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row1email"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -14578,6 +14862,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row1occupation"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -14601,6 +14886,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row2id"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -14612,6 +14898,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row2first_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -14623,6 +14910,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row2last_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -14634,6 +14922,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row2email"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -14645,6 +14934,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row2occupation"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -14668,6 +14958,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row3id"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -14679,6 +14970,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row3first_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -14690,6 +14982,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row3last_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -14701,6 +14994,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row3email"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -14712,6 +15006,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row3occupation"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -14735,6 +15030,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row4id"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -14746,6 +15042,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row4first_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -14757,6 +15054,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row4last_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -14768,6 +15066,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row4email"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -14779,6 +15078,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row4occupation"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -14802,6 +15102,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row5id"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -14813,6 +15114,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row5first_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -14824,6 +15126,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row5last_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -14835,6 +15138,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row5email"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -14846,6 +15150,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row5occupation"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -14869,6 +15174,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row6id"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -14880,6 +15186,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row6first_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -14891,6 +15198,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row6last_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -14902,6 +15210,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row6email"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -14913,6 +15222,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row6occupation"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -14936,6 +15246,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row7id"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -14947,6 +15258,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row7first_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -14958,6 +15270,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row7last_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -14969,6 +15282,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row7email"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -14980,6 +15294,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row7occupation"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -15003,6 +15318,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row8id"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -15014,6 +15330,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row8first_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -15025,6 +15342,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row8last_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -15036,6 +15354,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row8email"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -15047,6 +15366,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row8occupation"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -15070,6 +15390,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row9id"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -15081,6 +15402,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row9first_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -15092,6 +15414,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row9last_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -15103,6 +15426,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row9email"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -15114,6 +15438,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row9occupation"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -15137,6 +15462,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row10id"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -15148,6 +15474,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row10first_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -15159,6 +15486,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row10last_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -15170,6 +15498,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row10email"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -15181,6 +15510,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row10occupation"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -15204,6 +15534,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row11id"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -15215,6 +15546,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row11first_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -15226,6 +15558,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row11last_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -15237,6 +15570,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row11email"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -15248,6 +15582,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row11occupation"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -15271,6 +15606,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row12id"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -15282,6 +15618,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row12first_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -15293,6 +15630,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row12last_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -15304,6 +15642,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row12email"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -15315,6 +15654,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row12occupation"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -15338,6 +15678,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row13id"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -15349,6 +15690,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row13first_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -15360,6 +15702,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row13last_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -15371,6 +15714,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row13email"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -15382,6 +15726,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row13occupation"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -15405,6 +15750,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row14id"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -15416,6 +15762,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row14first_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -15427,6 +15774,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row14last_name"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
@@ -15438,6 +15786,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row14email"
+          rowSpan={1}
           style={
             Object {
               "width": undefined,
@@ -15449,6 +15798,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.load
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row14occupation"
+          rowSpan={1}
           style={
             Object {
               "width": 100,
