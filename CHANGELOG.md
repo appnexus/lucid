@@ -15,6 +15,8 @@
 - #1114 [minor] Add `RunReportIcon` to the component icon library.
 - #1113 [none] Add instructions on how to release Lucid UI in `RELEASING.md` doc.
 
+https://github.com/appnexus/lucid/compare/v5.5.0...v5.6.0
+
 ## 5.5.0
 
 - #1110 [patch] Remove `kind` type of `primary` from `Tag`, avoid adding `kind` border styles on parent `Tag`.
@@ -36,6 +38,8 @@
 - #1094 [minor] Convert `RadioGroup` to TypeScript.
 - #1096 [minor] Bump handlebars 4.1.2 -> 4.5.3.
 
+https://github.com/appnexus/lucid/compare/v5.4.0...v5.5.0
+
 ## 5.4.0
 
 - #1104 [minor] Change border colors for `Tag`.
@@ -49,7 +53,7 @@
 - #1081 [minor] Add `HideIcon`, `SaveIcon`, and `GetMaximumIcon`.
 - #1088 [none] Update text in `Banner` docs, added docs for `RadioButtonLabeled`.
 
-https://github.com/appnexus/lucid/compare/v5.3.2...5.4.0
+https://github.com/appnexus/lucid/compare/v5.3.2...v5.4.0
 
 ## 5.3.2
 
@@ -134,7 +138,7 @@ https://github.com/appnexus/lucid/compare/v5.1.1...v5.1.2
 ## 5.1.1
 
 - #1051 [patch] Several major fixes to the TypeScript defintions of all converted components.
-- #1041 [patch] Normalized the size of `EligibilityIcon` and `EligibilityLightIcon`.
+- #1041 [patch] Normalize the size of `EligibilityIcon` and `EligibilityLightIcon`.
 - #1046 [patch] Maintain the order of children passed in with `Selection`.
 - #1048 [patch] Adjust `Table` header's border and style behavior.
 
@@ -188,7 +192,7 @@ https://github.com/appnexus/lucid/compare/v5.1.0...v5.1.1
     - `Validation`
     - `componentTypes`
     - `domHelpers`
-  - Moved eslint configuration into lucid to aid getting new TS rules setup.
+  - Moved eslint configuration into lucid to aid getting new TypeScript rules setup.
   - Upgraded Storybook to v5.
   - Added Chromatic to the travis build pipeline but had to disable cause we have to pay up.
   - Removed private `PanelToggles` storybook addon.
@@ -238,74 +242,74 @@ https://github.com/appnexus/lucid/compare/v4.3.0...v4.4.0
 - #1016 [minor] Add `DraggableList` component for drag + drop lists.
 - #1017 [minor] Add `FourSquaresIcon`.
 - #1011 [minor] Update `DataTable` to have a disabled checkbox when the data is empty.
-- #1014 [patch] remove display hidden on document.body when SidePanel is unmounted.
+- #1014 [patch] Remove display hidden on document.body when SidePanel is unmounted.
 
 https://github.com/appnexus/lucid/compare/v4.2.0...v4.3.0
 
 ## 4.2.0
 
-- #1004 [minor] Add `Typography` component
-- #1006 [minor] Add `DotsIcon`
-- #1005 [patch] Update `SidePanel` drop-shadow styling
-- #1007 [patch] Fix `SidePanel.Header` selector making all icons gray. Only `CloseIcon` is selected now
+- #1004 [minor] Add `Typography` component.
+- #1006 [minor] Add `DotsIcon`.
+- #1005 [patch] Update `SidePanel` drop-shadow styling.
+- #1007 [patch] Fix `SidePanel.Header` selector making all icons gray. Only `CloseIcon` is selected now.
 
 https://github.com/appnexus/lucid/compare/v4.1.0...v4.2.0
 
 ## 4.1.0
 
-- #997 [minor] add `color` prop to `Icon`
-- #997 [patch] fix `SidePanel` position an sizing to correctly scroll content
-- #1003 [patch] update `ToolTip` link styling to match Banners
-- #1002 [patch] create indeterminate state for `DataTable` select all when only some rows are selected
-- #996 [patch] updates to `SingleSelect` `isInvisible` styling
-- #1001 [patch] `SearchableSelect` `SearchableSingleSelect` `SearchableMultiSelect` now default the `autoComplete` attribute to off
-- #998 [patch] Fixed some cases where font-weights were too bold. `SidePanel` close icon is now gray
+- #997 [minor] Add `color` prop to `Icon`.
+- #997 [patch] Fix `SidePanel` position an sizing to correctly scroll content.
+- #1003 [patch] Update `ToolTip` link styling to match Banners.
+- #1002 [patch] Create indeterminate state for `DataTable` select all when only some rows are selected.
+- #996 [patch] Update `SingleSelect` `isInvisible` styling.
+- #1001 [patch] `SearchableSelect` `SearchableSingleSelect` `SearchableMultiSelect` now default the `autoComplete` attribute to off.
+- #998 [patch] Fix some cases where font-weights were too bold. `SidePanel` close icon is now gray.
 
 https://github.com/appnexus/lucid/compare/v4.0.0...v4.1.0
 
 ## 4.0.0
 
-- removed `primary` kind from `Banner`.
-- removed `hasIcon` from `Banner`
-- removed `hasRoundedCorners` from `Banner`. All Banners are now square.
-- removed `isSmall` from `Banner`.
-- moved `CloseIcon` to lucid. Shouldn't effect anx-react consumers.
-- added `NotchedTag`
-- custom icons in `Banner` probably don't look quite right. Icons are now on a dark background
-- removed `Info` `Success` `Warning` as `Button` `kind`
-- removed the `inset-box-shadow` LESS mixin
-- removed `@TextField-size-padding` from `TextField`'s LESS
-- lot possible breakages to LESS mixins and variables. Will enumerate when done.
-- table now defaults to `hasLightHeader`
-- removed `border` prop from `Table.td`
-- removed `isActionable` from `table`
-- added `isTop` to `Tag`. Necessary only for tiered tags that are three levels deep. (Use at the top level)
-- added `isTop` to `Selection`. Necessary only for tiered selections. (Use at the top level)
-- added `isInvisible` to `SingleSelect`. We do not use a button under the hood for this component, but this simulates an invisible `Button`, styling-wise.
-- removed `kindOf` from `ToolTip`
-- added `isLight` to `ToolTip`. The default now has dark styling, and this adds light styling.
-- added `isVariableCountWidth` to `Tabs`. Allows count badges to have fixed or variable widths.
-- added `isIncludeExclude` to `Switch`. Adds red/green styling.
-- removed `isBadge` from `Icon`. It was an ill conceived feature. All icons should not be allowed to be made circular via a prop.
-- returned `responsiveMode` in `Selection` to original meaning: `small` means small device with large style, and `large` means large device with small style. This was temporarily reversed out of a misunderstanding of the meaning of the prop.
-- removed `BeakerIcon`
-- removed `CaretIcon`, use `Chevron` or `Arrow` icons instead
-- removed `CrossIcon` in favor of `CloseIcon`
-- removed `DataViewIcon` in favor of `AnalyzeDataIcon`
-- removed `DownloadTableDataIcon` in favor of `DownloadIcon`
-- removed `EditPageIcon` in favor of `EditIcon`
-- removed `FourSquaresIcon`
-- renamed `QuestionMarkCircleIcon` to `QuestionMarkIcon` since it no longer has a circle around it
-- removed the `presetSize` prop from `SettingsIcon` since all our utility icons can now be scaled
-- removed `TableGearIcon` in favor of `SettingsIcon`
-- added `ViewTableIcon`
-- removed `ChevronThinIcon` in favor of just `Chevron`
-- added `topOffset` to `SidePanel`. This prop adds a top margin to the component.
-- added `isInvisible` to `SearchableSelect`
-- added `hasHover` to `Table` for removing hover styling on tables.
-- adjusted the default size of icons inside of `Button`s
-- added `handleClose` to `Dialog`
-- added `isComplex` to `Dialog`. Styling adjustments for a more complex `Dialog`.
-- added `CodeIcon`
+- Remove `primary` kind from `Banner`.
+- Remove `hasIcon` from `Banner`.
+- Remove `hasRoundedCorners` from `Banner`. All Banners are now square.
+- Remove `isSmall` from `Banner`.
+- Move `CloseIcon` to lucid. Shouldn't effect anx-react consumers.
+- Add `NotchedTag`.
+- Custom icons in `Banner` probably don't look quite right. Icons are now on a dark background.
+- Remove `Info` `Success` `Warning` as `Button` `kind`.
+- Remove the `inset-box-shadow` LESS mixin.
+- Remove `@TextField-size-padding` from `TextField`'s LESS.
+- Lot possible breakages to LESS mixins and variables. Will enumerate when done.
+- Table defaults to `hasLightHeader`.
+- Remove `border` prop from `Table.td`.
+- Remove `isActionable` from `table`.
+- Add `isTop` to `Tag`. Necessary only for tiered tags that are three levels deep. (Use at the top level).
+- Add `isTop` to `Selection`. Necessary only for tiered selections. (Use at the top level).
+- Add `isInvisible` to `SingleSelect`. We do not use a button under the hood for this component, but this simulates an invisible `Button`, styling-wise.
+- Remove `kindOf` from `ToolTip`.
+- Add `isLight` to `ToolTip`. The default now has dark styling, and this adds light styling.
+- Add `isVariableCountWidth` to `Tabs`. Allows count badges to have fixed or variable widths.
+- Add `isIncludeExclude` to `Switch`. Adds red/green styling.
+- Remove `isBadge` from `Icon`. It was an ill conceived feature. All icons should not be allowed to be made circular via a prop.
+- Return `responsiveMode` in `Selection` to original meaning: `small` means small device with large style, and `large` means large device with small style. This was temporarily reversed out of a misunderstanding of the meaning of the prop.
+- Remove `BeakerIcon`.
+- Remove `CaretIcon`, use `Chevron` or `Arrow` icons instead.
+- Remove `CrossIcon` in favor of `CloseIcon`.
+- Remove `DataViewIcon` in favor of `AnalyzeDataIcon`.
+- Remove `DownloadTableDataIcon` in favor of `DownloadIcon`.
+- Remove `EditPageIcon` in favor of `EditIcon`.
+- Remove `FourSquaresIcon`.
+- Rename `QuestionMarkCircleIcon` to `QuestionMarkIcon` since it no longer has a circle around it.
+- Remove the `presetSize` prop from `SettingsIcon` since all our utility icons can now be scaled.
+- Remove `TableGearIcon` in favor of `SettingsIcon`.
+- Add `ViewTableIcon`.
+- Remove `ChevronThinIcon` in favor of just `Chevron`.
+- Add `topOffset` to `SidePanel`. This prop adds a top margin to the component.
+- Add `isInvisible` to `SearchableSelect`.
+- Add `hasHover` to `Table` for removing hover styling on tables.
+- Adjust the default size of icons inside of `Button`s.
+- Add `handleClose` to `Dialog`.
+- Add `isComplex` to `Dialog`. Styling adjustments for a more complex `Dialog`.
+- Add `CodeIcon`.
 
 https://github.com/appnexus/lucid/compare/v3.2.2...v4.0.0

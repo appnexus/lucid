@@ -1,6 +1,6 @@
 ## PR Checklist
 
-Storybook can be viewed [here]()
+Storybook can be viewed [here](DOCSPOT_URL)
 
 - Manually tested across supported browsers
 

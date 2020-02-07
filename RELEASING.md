@@ -56,5 +56,5 @@ The other option is to update the version number using `npm version`:
 
 ## Publish Lucid UI to npm
 
-1. `git push origin master --follow-tags`: Add and commit the changes and push the changes and tags--by default, the `git push` command doesn't transfer tags to remote serves.
+1. Add and commit the changes, and then push the changes and tags: `git push origin master --follow-tags`. Note that by default, the `git push` command doesn't transfer tags to remote serves.
 2. `npm publish`: Publish the new version to npm.
