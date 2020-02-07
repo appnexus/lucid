@@ -1,6 +1,6 @@
 ## unreleased
 
-## 5.6.0
+## 5.6.1
 
 - #1226 [patch] Add div props to `RadioButtonLabeled` props interface.
 - #1225 [patch] Center align `RadioButton` text.
