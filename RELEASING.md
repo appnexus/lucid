@@ -12,7 +12,6 @@ Lucid UI is released to NPM as a public module.
 
 - An authorized corporate npm account.
 - `ssh` setup on GitHub. To check your credentials: `git remote -v`.
-- `.npmrc` file in your `\$HOME directory`. The `.npmrc` file is what tells `npm` _where_ the registry is.
 
 ## Prerelease check
 
@@ -34,19 +33,17 @@ We follow [semver](https://semver.org/), which prescribes that:
 - `semver-patch`: Fixes are a "patch" version (the right-most number).
 - `semver-none`: Changes to documentation, or other changes that don't impact the api or consumers get a "none" label.
 
-Document the changes contained in the release:
+Document, stage and push the changes contained in the release:
 
 1. `git log`. Find and add each merged pull request (PR) since the last release and add it to the changelog.
 2. `CHANGELOG.md`: Add details about the release--each PR gets a GitHub PR label, semver label, and short description.
+3. Update the value of the `"version"` field for Lucid UI in `package-json` and `package-lock.json`.
+4. Commit the documentation and `package-` changes. For example: `git commit -a -m "release v5.4.0"`
+5. Push the release to GitHub: `git push origin master`.
 
 ## Update version number
 
-One option is to update the version number manually:
-
-1. `package-json` and `package-lock.json`: Update the value of the `"version"` field for Lucid UI.
-2. `git tag {version number}`: Create a tag. For example, `git tag v5.4.0`.
-
-The other option is to update the version number using `npm version`:
+The recommended option is to update the version number using `npm version`:
 
 1. Use `npm` to publish the new NPM version that matches the version number and type of change (major, minor or patch) in `package.json`--this process creates a tag automatically.
 
@@ -54,7 +51,13 @@ The other option is to update the version number using `npm version`:
 - `npm version minor`
 - `npm version patch`
 
+2. Push the changes and tags: `git push origin master --follow-tags`. Note that by default, the `git push` command doesn't transfer tags to remote serves.
+
+Another option is to update the version number manually:
+
+1. Create a tag: `git tag {version number}`. For example: `git tag v5.4.0`.
+2. Push the tags. For example: `git push origin v5.4.0`.
+
 ## Publish Lucid UI to npm
 
-1. Add and commit the changes, and then push the changes and tags: `git push origin master --follow-tags`. Note that by default, the `git push` command doesn't transfer tags to remote serves.
-2. `npm publish`: Publish the new version to npm.
+1. Publish the new version to npm: `npm publish`.
