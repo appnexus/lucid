@@ -11,7 +11,7 @@ import {
 const cx = lucidClassNames.bind('&-DragCaptureZone');
 const { func, string } = PropTypes;
 
-interface IDragCaptureZonePropsRaw extends StandardProps {
+export interface IDragCaptureZonePropsRaw extends StandardProps {
 	/** Called as the user drags the mouse. */
 	onDrag: (
 		{
