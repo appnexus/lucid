@@ -31,6 +31,9 @@ Cell.peek = {
 		Renders a grid cell
 	`,
 };
+Cell.defaultProps = {
+	isFullWidth: false,
+};
 
 interface IResizeGridProps
 	extends StandardProps,
@@ -38,7 +41,8 @@ interface IResizeGridProps
 			React.HTMLAttributes<HTMLDivElement>,
 			HTMLDivElement
 		> {
-	cards: Array<any>;
+	cards?: Array<any>;
+	breakPoints: number[];
 	width: number;
 }
 
@@ -62,6 +66,10 @@ class ResizeGrid extends React.Component<IResizeGridProps> {
 		`,
 	};
 
+	static defaultProps = {
+		breakPoints: [960, 1430],
+	};
+
 	static Cell = Cell;
 
 	getColumnLayout = (n: number) => {
@@ -69,6 +77,20 @@ class ResizeGrid extends React.Component<IResizeGridProps> {
 		//@ts-ignore
 		const cells = _.map(this.props.children, 'props');
 
+		const fullWidth = _.reduce(
+			cells,
+			(acc: { [key: number]: any }, cell: any) => {
+				if (cell.isFullWidth) {
+					acc.push(cell);
+				} else {
+				}
+
+				return acc;
+			},
+			{}
+		);
+
+		console.log('redo column layout');
 		const columns = _.reduce(
 			_.map(cells, (cellChildProps: IResizeGridCellProps) => (
 				<span>{cellChildProps.children}</span>
@@ -96,31 +118,35 @@ class ResizeGrid extends React.Component<IResizeGridProps> {
 	getThreeColumnLayout = () => this.getColumnLayout(3);
 
 	shouldComponentUpdate(nextProps: IResizeGridProps) {
-		const { width } = this.props;
+		const { width, breakPoints } = this.props;
 		const { width: nextWidth } = nextProps;
+		const [breakOne, breakTwo] = breakPoints;
 
 		if (nextWidth < width) {
 			return (
-				(nextWidth < 420 && width > 420) || (nextWidth < 800 && width > 800)
+				(nextWidth < breakOne && width > breakOne) ||
+				(nextWidth < breakTwo && width > breakTwo)
 			);
 		} else if (nextWidth > width) {
 			return (
-				(nextWidth > 420 && width < 420) || (nextWidth > 800 && width < 800)
+				(nextWidth > breakOne && width < breakOne) ||
+				(nextWidth > breakTwo && width < breakTwo)
 			);
 		}
 		return false;
 	}
 
 	render() {
-		const { width } = this.props;
+		const { width, breakPoints } = this.props;
+		const [breakOne, breakTwo] = breakPoints;
 
-		if (width < 420) {
-			return this.getOneColumnLayout();
-		} else if (width >= 420 && width < 800) {
+		if (width < breakTwo) {
+			if (width < breakOne) {
+				return this.getOneColumnLayout();
+			}
 			return this.getTwoColumnLayout();
-		} else {
-			return this.getThreeColumnLayout();
 		}
+		return this.getThreeColumnLayout();
 	}
 }
 
