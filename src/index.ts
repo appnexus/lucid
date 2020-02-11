@@ -149,7 +149,6 @@ import ResizeIcon from './components/Icon/ResizeIcon/ResizeIcon';
 import Resizer from './components/Resizer/Resizer';
 import RunReportIcon from './components/Icon/RunReportIcon/RunReportIcon';
 import SaveIcon from './components/Icon/SaveIcon/SaveIcon';
-// @ts-ignore: not converted yet
 import ScrollTable from './components/ScrollTable/ScrollTable';
 import SearchIcon from './components/Icon/SearchIcon/SearchIcon';
 import Selection from './components/Selection/Selection';
