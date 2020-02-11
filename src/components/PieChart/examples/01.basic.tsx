@@ -12,10 +12,14 @@ const data = [
 	{ x: 'Ben', y: 15 },
 ];
 
+const style = {
+	paddingTop: '4rem',
+};
+
 export default createClass({
 	render() {
 		return (
-			<div>
+			<div style={style}>
 				<PieChart data={data} />
 				<PieChart data={data} palette={chartConstants.PALETTE_MONOCHROME_0_5} />
 				<PieChart data={data} palette={chartConstants.PALETTE_MONOCHROME_1_5} />

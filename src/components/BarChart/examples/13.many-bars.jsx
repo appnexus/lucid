@@ -8,18 +8,24 @@ const data = _.map(_.range(0, 70), n => ({
 	y: n,
 }));
 
+const style = {
+	paddingTop: '5rem',
+};
+
 export default createClass({
 	render() {
 		return (
-			<BarChart
-				data={data}
-				xAxisTextOrientation='diagonal'
-				yAxisTextOrientation='horizontal'
-				xAxisTickCount={20}
-				height={600}
-				width={750}
-				margin={{ bottom: 300, left: 300 }}
-			/>
+			<div style={style}>
+				<BarChart
+					data={data}
+					xAxisTextOrientation='diagonal'
+					yAxisTextOrientation='horizontal'
+					xAxisTickCount={20}
+					height={600}
+					width={750}
+					margin={{ bottom: 300, left: 300 }}
+				/>
+			</div>
 		);
 	},
 });

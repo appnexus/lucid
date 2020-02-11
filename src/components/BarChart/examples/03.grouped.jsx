@@ -17,10 +17,14 @@ const data = [
 	},
 ];
 
+const style = {
+	paddingTop: '10rem',
+};
+
 export default createClass({
 	render() {
 		return (
-			<div>
+			<div style={style}>
 				<BarChart
 					width={750}
 					data={data}
