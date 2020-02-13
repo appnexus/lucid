@@ -5,6 +5,7 @@ import { lucidClassNames } from '../../util/style-helpers';
 import {
 	StandardProps,
 	getFirst,
+	getFirstWithDefault,
 	omitProps,
 	Overwrite,
 } from '../../util/component-types';
@@ -791,14 +792,20 @@ class LineChart extends React.Component<ILineChartProps, ILineChartState, {}> {
 				this.props,
 				LineChart.EmptyStateWrapper
 			) || <LineChart.EmptyStateWrapper Title='You have no data.' />;
+			const emptyStateWrapperProps = _.get(emptyStateWrapper, 'props', {});
+			const emptyStateWrapperChildren = _.get(
+				emptyStateWrapperProps,
+				'children',
+				[]
+			);
 
 			return (
 				<EmptyStateWrapper
-					{...emptyStateWrapper.props}
+					{...emptyStateWrapperProps}
 					isEmpty={_.isEmpty(data)}
 					isLoading={isLoading}
 				>
-					{emptyStateWrapper.props.children}
+					{emptyStateWrapperChildren}
 					<svg
 						{...omitProps(passThroughs, undefined, _.keys(LineChart.propTypes))}
 						className={svgClasses}
