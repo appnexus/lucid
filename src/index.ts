@@ -147,6 +147,7 @@ import RadioButtonLabeled from './components/RadioButtonLabeled/RadioButtonLabel
 import RefreshIcon from './components/Icon/RefreshIcon/RefreshIcon';
 import ResizeIcon from './components/Icon/ResizeIcon/ResizeIcon';
 import Resizer from './components/Resizer/Resizer';
+import ResponsiveGrid from './components/ResponsiveGrid/ResponsiveGrid';
 import RunReportIcon from './components/Icon/RunReportIcon/RunReportIcon';
 import SaveIcon from './components/Icon/SaveIcon/SaveIcon';
 // @ts-ignore: not converted yet
@@ -327,6 +328,7 @@ export {
 	RefreshIcon,
 	ResizeIcon,
 	Resizer,
+	ResponsiveGrid,
 	RunReportIcon,
 	SaveIcon,
 	ScrollTable,

@@ -717,17 +717,17 @@ module.exports = [
 		),
 	},
 	{
-		name: 'ResizeGrid',
+		name: 'ResponsiveGrid',
 		component: getDefaultExport(
-			require('../src/components/ResizeGrid/ResizeGrid')
+			require('../src/components/ResponsiveGrid/ResponsiveGrid')
 		),
 		examplesContext: require.context(
-			'../src/components/ResizeGrid/examples',
+			'../src/components/ResponsiveGrid/examples',
 			true,
 			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
-			'!!raw-loader!../src/components/ResizeGrid/examples',
+			'!!raw-loader!../src/components/ResponsiveGrid/examples',
 			true,
 			/\.(j|t)sx?$/
 		),
