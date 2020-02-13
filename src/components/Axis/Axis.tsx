@@ -33,7 +33,7 @@ interface IAxisPropsRaw extends StandardProps {
 
 	/** An optional function that can format ticks. Generally this shouldn't be
 		needed since d3 has very good default formatters for most data. */
-	tickFormat?: (d: number | { valueOf(): number }) => string;
+	tickFormat?: (d: number | { valueOf(): number }) => string | number;
 
 	/** If you need fine grained control over the axis ticks, you can pass them
 		in this array. */

@@ -23,12 +23,12 @@ interface IEmptyStateWrapperTitleProps extends StandardProps {}
 const EmptyStateWrapperTitle = (_props: IEmptyStateWrapperTitleProps): null =>
 	null;
 
-interface IEmptyStateWrapperProps extends StandardProps {
+export interface IEmptyStateWrapperProps extends StandardProps {
 	/** *Child Element* The element to display in the body of the overlay. */
 	Body?: React.ReactNode;
 
 	/**	*Child Element* The element to display in the title of the overlay. */
-	Title?: React.ReactNode;
+	Title?: React.ReactNode | string;
 
 	/** Controls the visibility of the \`EmptyMessage\`. */
 	isEmpty: boolean;
@@ -39,6 +39,12 @@ interface IEmptyStateWrapperProps extends StandardProps {
 	/** Position the `EmptyMessage` and `LoadingMessage` near the top of the container. */
 	anchorMessage: boolean;
 }
+
+const defaultProps = {
+	isEmpty: false,
+	isLoading: false,
+	anchorMessage: false,
+};
 
 export const EmptyStateWrapper = (
 	props: IEmptyStateWrapperProps
@@ -116,6 +122,8 @@ EmptyStateWrapper.peek = {
 };
 
 EmptyStateWrapper.displayName = 'EmptyStateWrapper';
+
+EmptyStateWrapper.defaultProps = defaultProps;
 
 EmptyStateWrapper.propTypes = {
 	className: string`

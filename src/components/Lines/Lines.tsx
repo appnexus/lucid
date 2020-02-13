@@ -90,7 +90,7 @@ export interface ILinesProps
 		\`isStacked\` we need to calculate a new domain for the yScale based on
 		the sum of the data. If you need explicit control of the y max when
 		stacking, pass it in here. */
-	yStackedMax?: number;
+	yStackedMax?: number | object;
 
 	/** The field we should look up your x data by. */
 	xField: string;
@@ -140,7 +140,7 @@ export const Lines = (props: ILinesProps): React.ReactElement => {
 	// If we are stacked, we need to calculate a new domain based on the sum of
 	// the various series' y data. One row per series.
 	const transformedData = isStacked
-		? d3Shape.stack().keys(yFields)(data as Array<{ [key: string]: number}>)
+		? d3Shape.stack().keys(yFields)(data as Array<{ [key: string]: number }>)
 		: groupByFields(data, yFields);
 
 	const stackedArea = d3Shape
