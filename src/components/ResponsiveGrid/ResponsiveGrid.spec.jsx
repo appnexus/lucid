@@ -1,4 +1,3 @@
-import _ from 'lodash';
 import React from 'react';
 import { common } from '../../util/generic-tests';
 import { mount } from 'enzyme';

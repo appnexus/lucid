@@ -78,7 +78,7 @@ export class ResponsiveGrid extends React.Component<IResponsiveGridProps> {
 					{props.children}
 				</article>
 			)),
-			(columns: Array<Array<React.ReactElement>>, cell, idx: number) => {
+			(columns: React.ReactElement[][], cell, idx: number) => {
 				//@ts-ignore
 				columns[idx % numberOfColumns].push(cell);
 				return columns;

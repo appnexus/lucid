@@ -2,13 +2,12 @@ import React from 'react';
 import { SidePanel } from '../../../index';
 import { Panel } from '../../../index';
 import { ResponsiveGrid } from '../../../index';
-import _ from 'lodash';
 
 export default class extends React.Component {
 	//@ts-ignore
 	constructor(...args) {
 		//@ts-ignore
-		super(...(args as Array));
+		super(...(args as any[]));
 		this.state = { isExpanded: true };
 		this.handleToggle = this.handleToggle.bind(this);
 	}
