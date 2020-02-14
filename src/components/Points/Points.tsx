@@ -76,14 +76,16 @@ export interface IPointsProps
 		`lucid.d3Scale` library for use here. */
 	xScale:
 		| d3Scale.ScaleBand<number | string>
-		| d3Scale.ScalePoint<number | string>;
+		| d3Scale.ScalePoint<number | string>
+		| d3Scale.ScaleTime<number, number>;
 
 	/** The scale for the y axis. Must be a d3 scale. Lucid exposes the
 		`lucid.d3Scale` library for use here. */
 	yScale:
 		| d3Scale.ScaleContinuousNumeric<number, number>
 		| d3Scale.ScaleBand<number>
-		| d3Scale.ScalePoint<number>;
+		| d3Scale.ScalePoint<number>
+		| d3Scale.ScaleLinear<number, number>;
 
 	/** Typically this number can be derived from the yScale. However when we're
 		\`isStacked\` we need to calculate a new domain for the yScale based on

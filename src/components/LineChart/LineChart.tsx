@@ -141,7 +141,10 @@ export interface ILineChartPropsRaw extends StandardProps {
 	/** An optional function used to format your x axis data.
 	 * If you don't provide anything, we use the default D3 date variable formatter.
 	 * */
-	xAxisFormatter?: (x: string | number) => string | number;
+	//xAxisFormatter?: (x: string | number) => string | number;
+	xAxisFormatter?: (
+		d: number | Date | { valueOf(): number }
+	) => string | number;
 
 	/** An optional function used to format your x axis dates in the tooltips.*/
 	xAxisTooltipFormatter: (x: string | number) => string | number;
@@ -741,7 +744,7 @@ class LineChart extends React.Component<ILineChartProps, ILineChartState, {}> {
 					.scaleLinear()
 					.domain([y2AxisMin, y2AxisMax])
 					.range([innerHeight, 0])
-			: null;
+			: null; // scale cannot be null
 
 		const yAxisFinalFormatter = yAxisFormatter || yScale.tickFormat();
 		const y2AxisFinalFormatter = y2AxisFormatter

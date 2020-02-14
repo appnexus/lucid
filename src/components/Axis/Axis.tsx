@@ -14,13 +14,19 @@ const cx = lucidClassNames.bind('&-Axis');
 
 const { string, array, func, number, oneOf } = PropTypes;
 
-interface IAxisPropsRaw extends StandardProps {
+type FormatNumber = (d: number | { valueOf(): number }) => string | number;
+type FormatDate = (d: Date) => React.ReactText;
+type AxisType = number | Date;
+
+interface IAxisPropsRaw<P extends AxisType> extends StandardProps {
 	/** Must be a d3 scale. Lucid exposes the \`lucid.d3Scale\` library for use here.
 	 We support `ScaleTime | ScaleBand | ScalePoint` and possibly more. */
 	scale:
-		| d3scale.ScaleBand<number>
-		| d3scale.ScalePoint<number>
-		| d3scale.ScaleContinuousNumeric<number, number>;
+		| d3scale.ScaleBand<number | Date>
+		| d3scale.ScalePoint<number | Date>
+		| d3scale.ScaleTime<number | Date, number | Date>
+		| d3scale.ScaleLinear<number | Date, number | Date>
+		| d3scale.ScaleContinuousNumeric<number | Date, number | Date>;
 	// | d3scale.ScalePower<number, number>
 	// | d3scale.ScaleLogarithmic<number, number>;
 
@@ -33,11 +39,11 @@ interface IAxisPropsRaw extends StandardProps {
 
 	/** An optional function that can format ticks. Generally this shouldn't be
 		needed since d3 has very good default formatters for most data. */
-	tickFormat?: (d: number | { valueOf(): number }) => string | number;
+	tickFormat?: (d: P) => React.ReactText;
 
 	/** If you need fine grained control over the axis ticks, you can pass them
 		in this array. */
-	ticks?: number[];
+	ticks?: P[];
 
 	/** Determines the spacing between each tick and its text. */
 	tickPadding: number;
@@ -58,9 +64,9 @@ interface IAxisPropsRaw extends StandardProps {
 	textOrientation: 'vertical' | 'horizontal' | 'diagonal';
 }
 
-export type IAxisProps = Overwrite<
+export type IAxisProps<P extends AxisType> = Overwrite<
 	React.SVGAttributes<SVGGElement>,
-	IAxisPropsRaw
+	IAxisPropsRaw<P>
 >;
 
 const defaultProps = {
@@ -72,7 +78,9 @@ const defaultProps = {
 	tickCount: null,
 };
 
-export const Axis = (props: IAxisProps): React.ReactElement => {
+export const Axis = <P extends AxisType>(
+	props: IAxisProps<P>
+): React.ReactElement => {
 	const {
 		className,
 		scale,
@@ -208,7 +216,8 @@ export const Axis = (props: IAxisProps): React.ReactElement => {
 	// ticks on the bands
 	const scaleNormalized =
 		'bandwidth' in scale
-			? (d: number): number => (scale(d) as number) + scale.bandwidth() / 2
+			? (d: number | Date): number =>
+					(scale(d) as number) + scale.bandwidth() / 2
 			: scale;
 
 	return (
@@ -231,9 +240,9 @@ export const Axis = (props: IAxisProps): React.ReactElement => {
 			)}
 			{_.map(
 				ticks,
-				(tick: number): JSX.Element => (
+				(tick: P): JSX.Element => (
 					<g
-						key={tick}
+						key={`${tick}`}
 						transform={`translate(${isH ? scaleNormalized(tick) : 0}, ${
 							isH ? 0 : scaleNormalized(tick)
 						})`}
@@ -253,7 +262,7 @@ export const Axis = (props: IAxisProps): React.ReactElement => {
 							}}
 							transform={orientationProperties[orientationKey].transform}
 						>
-							{tickFormat(tick)}
+							{tickFormat<P>(tick)}
 						</text>
 					</g>
 				)
