@@ -10,7 +10,7 @@ const {
 export default createClass({
 	render() {
 		return (
-			<LineChart data={[]} yAxisFields={['blueberries']}>
+			<LineChart data={[]} yAxisFields={['blueberries']} width={800}>
 				<EmptyStateWrapper>
 					<Title>Something went wrong.</Title>
 					<Body

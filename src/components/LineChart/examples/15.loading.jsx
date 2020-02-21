@@ -4,6 +4,6 @@ import { LineChart } from '../../../index';
 
 export default createClass({
 	render() {
-		return <LineChart data={[]} isLoading />;
+		return <LineChart data={[]} width={800} isLoading />;
 	},
 });

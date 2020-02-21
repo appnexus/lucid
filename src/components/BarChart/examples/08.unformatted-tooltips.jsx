@@ -9,10 +9,14 @@ const data = [
 	{ x: '2015-01-04', y: 3000 },
 ];
 
+const style = {
+	paddingTop: '4rem',
+};
+
 export default createClass({
 	render() {
 		return (
-			<div>
+			<div style={style}>
 				<BarChart
 					width={750}
 					data={data}

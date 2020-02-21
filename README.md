@@ -44,8 +44,7 @@ In your webpack config use the [`DefinePlugin`][dp] to specify
       LUCID_CSS_NAMESPACE: "'something-custom'",
     });
 
-
-When you render the less, make sure to [set the `prefix` variable][lmv] to the
+When you render the `less`, make sure to [set the `prefix` variable][lmv] to the
 same thing you set in in your webpack config. E.g.
 
     lessc node_modules/lucid-ui/src/index.less --modify-var='prefix=something-custom'
@@ -60,7 +59,7 @@ Example package.json:
 
     {
       "dependencies": {
-        "lucid-ui": "^2.0.0",
+        "lucid-ui": "^5.0.0",
         "react": "^16.0.0",
         "react-dom": "^16.0.0",
       }
@@ -74,9 +73,9 @@ To contribute to lucid, please see `CONTRIBUTING.md`.
 - [Travis CI] for providing continuous integration infrastructure.
 - [CodeCov] for providing code coverage analysis infrastructure.
 
-[BrowserStack]: https://www.browserstack.com/
-[Travis CI]: https://travis-ci.org/
-[CodeCov]: https://codecov.io
+[browserstack]: https://www.browserstack.com/
+[travis ci]: https://travis-ci.org/
+[codecov]: https://codecov.io
 [bpi]: https://github.com/ant-design/babel-plugin-import
 [dp]: https://webpack.js.org/plugins/define-plugin/
 [lmv]: http://lesscss.org/usage/

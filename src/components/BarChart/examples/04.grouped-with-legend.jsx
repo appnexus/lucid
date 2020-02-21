@@ -20,10 +20,14 @@ const data = [
 const yAxisFields = ['apples', 'pears', 'peaches', 'bananas', 'oranges'];
 const palette = chartConstants.PALETTE_7;
 
+const style = {
+	paddingTop: '10rem',
+};
+
 export default createClass({
 	render() {
 		return (
-			<div>
+			<div style={style}>
 				<BarChart
 					width={750}
 					data={data}

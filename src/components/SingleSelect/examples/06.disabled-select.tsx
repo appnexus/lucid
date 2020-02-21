@@ -17,6 +17,8 @@ export default createClass({
 	},
 });
 
+// begin-hide-from-docs
 export const notes = `
 Apply \`isDisabled\` to the dropdown if none of the options are currently available.
 `;
+// end-hide-from-docs

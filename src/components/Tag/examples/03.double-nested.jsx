@@ -50,3 +50,9 @@ export default createClass({
 		);
 	},
 });
+
+// begin-hide-from-docs
+export const notes = `
+This allows you to add a third level of hierarchy to your tag categorization.
+`;
+// end-hide-from-docs

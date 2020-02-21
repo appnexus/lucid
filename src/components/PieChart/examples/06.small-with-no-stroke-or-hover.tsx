@@ -12,22 +12,28 @@ const data = [
 	{ x: 'Ben', y: 15 },
 ];
 
+const style = {
+	paddingTop: '4rem',
+};
+
 export default createClass({
 	render() {
 		return (
-			<PieChart
-				margin={{
-					top: 0,
-					right: 0,
-					bottom: 0,
-					left: 0,
-				}}
-				width={25}
-				height={25}
-				data={data}
-				hasStroke={false}
-				isHovering={false}
-			/>
+			<div style={style}>
+				<PieChart
+					margin={{
+						top: 0,
+						right: 0,
+						bottom: 0,
+						left: 0,
+					}}
+					width={25}
+					height={25}
+					data={data}
+					hasStroke={false}
+					isHovering={false}
+				/>
+			</div>
 		);
 	},
 });

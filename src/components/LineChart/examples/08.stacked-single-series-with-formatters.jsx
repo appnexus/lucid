@@ -9,15 +9,22 @@ const data = [
 	{ x: new Date('2015-01-04T00:00:00-08:00'), y: 5.99 },
 ];
 
+const style = {
+	paddingTop: '4rem',
+};
+
 export default createClass({
 	render() {
 		return (
-			<LineChart
-				yAxisIsStacked
-				yAxisFormatter={yValue => `$ ${yValue}`}
-				yAxisTooltipFormatter={(yField, yValueFormatted) => yValueFormatted}
-				data={data}
-			/>
+			<div style={style}>
+				<LineChart
+					yAxisIsStacked
+					yAxisFormatter={yValue => `$ ${yValue}`}
+					yAxisTooltipFormatter={(yField, yValueFormatted) => yValueFormatted}
+					data={data}
+					width={800}
+				/>
+			</div>
 		);
 	},
 });

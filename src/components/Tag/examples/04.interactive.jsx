@@ -145,3 +145,9 @@ export default createClass({
 		);
 	},
 });
+
+// begin-hide-from-docs
+export const notes = `
+Use interactive tags to allow users to remove a selection.
+`;
+// end-hide-from-docs

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Bars [common] example testing should match snapshot(s) for basic 1`] = `
+exports[`Bars [common] example testing should match snapshot(s) for 01.basic 1`] = `
 <g
   className="lucid-Bars"
 >
@@ -10,38 +10,38 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 1`] = 
     <Bar
       color="color-chart-3"
       hasStroke={false}
-      height={20}
+      height={36.363636363636374}
       key="0"
-      width={38}
+      width={28}
       x={1}
-      y={380}
+      y={363.6363636363636}
     />
     <Bar
       color="color-chart-0-darkest"
       hasStroke={false}
-      height={40}
+      height={72.72727272727275}
       key="1"
-      width={38}
-      x={39}
-      y={360}
+      width={28}
+      x={29}
+      y={327.27272727272725}
     />
     <Bar
       color="color-chart-2"
       hasStroke={false}
-      height={60}
+      height={109.09090909090907}
       key="2"
-      width={38}
-      x={77}
-      y={340}
+      width={28}
+      x={57}
+      y={290.90909090909093}
     />
     <Bar
       color="color-chart-4-lightest"
       hasStroke={false}
-      height={100}
+      height={181.8181818181818}
       key="3"
-      width={38}
-      x={115}
-      y={300}
+      width={28}
+      x={85}
+      y={218.1818181818182}
     />
     <Component
       data={
@@ -83,14 +83,14 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 1`] = 
           },
           Object {
             "x": "six",
-            "y0": 20,
+            "y0": 11,
             "y1": 8,
             "y2": 9,
-            "y3": 1,
+            "y3": 5,
           },
         ]
       }
-      height={100}
+      height={181.8181818181818}
       isExpanded={false}
       onMouseEnter={[Function]}
       onMouseOut={[Function]}
@@ -116,11 +116,11 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 1`] = 
         ]
       }
       seriesIndex={0}
-      width={152}
-      x={1}
+      width={114}
+      x={0}
       xField="x"
       xFormatter={[Function]}
-      y={300}
+      y={218.1818181818182}
     />
   </g>
   <g
@@ -129,38 +129,38 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 1`] = 
     <Bar
       color="color-chart-3"
       hasStroke={false}
-      height={40}
+      height={72.72727272727275}
       key="0"
-      width={38}
-      x={170}
-      y={360}
+      width={28}
+      x={128}
+      y={327.27272727272725}
     />
     <Bar
       color="color-chart-0-darkest"
       hasStroke={false}
-      height={60}
+      height={109.09090909090907}
       key="1"
-      width={38}
-      x={208}
-      y={340}
+      width={28}
+      x={156}
+      y={290.90909090909093}
     />
     <Bar
       color="color-chart-2"
       hasStroke={false}
-      height={80}
+      height={145.45454545454547}
       key="2"
-      width={38}
-      x={246}
-      y={320}
+      width={28}
+      x={184}
+      y={254.54545454545453}
     />
     <Bar
       color="color-chart-4-lightest"
       hasStroke={false}
-      height={120}
+      height={218.18181818181816}
       key="3"
-      width={38}
-      x={284}
-      y={280}
+      width={28}
+      x={212}
+      y={181.81818181818184}
     />
     <Component
       data={
@@ -202,14 +202,14 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 1`] = 
           },
           Object {
             "x": "six",
-            "y0": 20,
+            "y0": 11,
             "y1": 8,
             "y2": 9,
-            "y3": 1,
+            "y3": 5,
           },
         ]
       }
-      height={120}
+      height={218.18181818181816}
       isExpanded={false}
       onMouseEnter={[Function]}
       onMouseOut={[Function]}
@@ -235,11 +235,11 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 1`] = 
         ]
       }
       seriesIndex={1}
-      width={152}
-      x={170}
+      width={114}
+      x={127}
       xField="x"
       xFormatter={[Function]}
-      y={280}
+      y={181.81818181818184}
     />
   </g>
   <g
@@ -248,38 +248,38 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 1`] = 
     <Bar
       color="color-chart-3"
       hasStroke={false}
-      height={40}
+      height={72.72727272727275}
       key="0"
-      width={38}
-      x={339}
-      y={360}
+      width={28}
+      x={255}
+      y={327.27272727272725}
     />
     <Bar
       color="color-chart-0-darkest"
       hasStroke={false}
-      height={80}
+      height={145.45454545454547}
       key="1"
-      width={38}
-      x={377}
-      y={320}
+      width={28}
+      x={283}
+      y={254.54545454545453}
     />
     <Bar
       color="color-chart-2"
       hasStroke={false}
-      height={100}
+      height={181.8181818181818}
       key="2"
-      width={38}
-      x={415}
-      y={300}
+      width={28}
+      x={311}
+      y={218.1818181818182}
     />
     <Bar
       color="color-chart-4-lightest"
       hasStroke={false}
-      height={120}
+      height={218.18181818181816}
       key="3"
-      width={38}
-      x={453}
-      y={280}
+      width={28}
+      x={339}
+      y={181.81818181818184}
     />
     <Component
       data={
@@ -321,14 +321,14 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 1`] = 
           },
           Object {
             "x": "six",
-            "y0": 20,
+            "y0": 11,
             "y1": 8,
             "y2": 9,
-            "y3": 1,
+            "y3": 5,
           },
         ]
       }
-      height={120}
+      height={218.18181818181816}
       isExpanded={false}
       onMouseEnter={[Function]}
       onMouseOut={[Function]}
@@ -354,11 +354,11 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 1`] = 
         ]
       }
       seriesIndex={2}
-      width={152}
-      x={339}
+      width={114}
+      x={254}
       xField="x"
       xFormatter={[Function]}
-      y={280}
+      y={181.81818181818184}
     />
   </g>
   <g
@@ -367,38 +367,38 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 1`] = 
     <Bar
       color="color-chart-3"
       hasStroke={false}
-      height={60}
+      height={109.09090909090907}
       key="0"
-      width={38}
-      x={508}
-      y={340}
+      width={28}
+      x={382}
+      y={290.90909090909093}
     />
     <Bar
       color="color-chart-0-darkest"
       hasStroke={false}
-      height={120}
+      height={218.18181818181816}
       key="1"
-      width={38}
-      x={546}
-      y={280}
+      width={28}
+      x={410}
+      y={181.81818181818184}
     />
     <Bar
       color="color-chart-2"
       hasStroke={false}
-      height={140}
+      height={254.54545454545453}
       key="2"
-      width={38}
-      x={584}
-      y={260}
+      width={28}
+      x={438}
+      y={145.45454545454547}
     />
     <Bar
       color="color-chart-4-lightest"
       hasStroke={false}
-      height={140}
+      height={254.54545454545453}
       key="3"
-      width={38}
-      x={622}
-      y={260}
+      width={28}
+      x={466}
+      y={145.45454545454547}
     />
     <Component
       data={
@@ -440,14 +440,14 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 1`] = 
           },
           Object {
             "x": "six",
-            "y0": 20,
+            "y0": 11,
             "y1": 8,
             "y2": 9,
-            "y3": 1,
+            "y3": 5,
           },
         ]
       }
-      height={140}
+      height={254.54545454545453}
       isExpanded={false}
       onMouseEnter={[Function]}
       onMouseOut={[Function]}
@@ -473,11 +473,11 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 1`] = 
         ]
       }
       seriesIndex={3}
-      width={152}
-      x={508}
+      width={114}
+      x={381}
       xField="x"
       xFormatter={[Function]}
-      y={260}
+      y={145.45454545454547}
     />
   </g>
   <g
@@ -486,38 +486,38 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 1`] = 
     <Bar
       color="color-chart-3"
       hasStroke={false}
-      height={80}
+      height={145.45454545454547}
       key="0"
-      width={38}
-      x={677}
-      y={320}
+      width={28}
+      x={509}
+      y={254.54545454545453}
     />
     <Bar
       color="color-chart-0-darkest"
       hasStroke={false}
-      height={160}
+      height={290.90909090909093}
       key="1"
-      width={38}
-      x={715}
-      y={240}
+      width={28}
+      x={537}
+      y={109.09090909090907}
     />
     <Bar
       color="color-chart-2"
       hasStroke={false}
-      height={180}
+      height={327.2727272727273}
       key="2"
-      width={38}
-      x={753}
-      y={220}
+      width={28}
+      x={565}
+      y={72.72727272727269}
     />
     <Bar
       color="color-chart-4-lightest"
       hasStroke={false}
-      height={160}
+      height={290.90909090909093}
       key="3"
-      width={38}
-      x={791}
-      y={240}
+      width={28}
+      x={593}
+      y={109.09090909090907}
     />
     <Component
       data={
@@ -559,14 +559,14 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 1`] = 
           },
           Object {
             "x": "six",
-            "y0": 20,
+            "y0": 11,
             "y1": 8,
             "y2": 9,
-            "y3": 1,
+            "y3": 5,
           },
         ]
       }
-      height={180}
+      height={327.2727272727273}
       isExpanded={false}
       onMouseEnter={[Function]}
       onMouseOut={[Function]}
@@ -592,11 +592,11 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 1`] = 
         ]
       }
       seriesIndex={4}
-      width={152}
-      x={677}
+      width={114}
+      x={508}
       xField="x"
       xFormatter={[Function]}
-      y={220}
+      y={72.72727272727269}
     />
   </g>
   <g
@@ -607,36 +607,36 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 1`] = 
       hasStroke={false}
       height={400}
       key="0"
-      width={38}
-      x={846}
+      width={28}
+      x={636}
       y={0}
     />
     <Bar
       color="color-chart-0-darkest"
       hasStroke={false}
-      height={160}
+      height={290.90909090909093}
       key="1"
-      width={38}
-      x={884}
-      y={240}
+      width={28}
+      x={664}
+      y={109.09090909090907}
     />
     <Bar
       color="color-chart-2"
       hasStroke={false}
-      height={180}
+      height={327.2727272727273}
       key="2"
-      width={38}
-      x={922}
-      y={220}
+      width={28}
+      x={692}
+      y={72.72727272727269}
     />
     <Bar
       color="color-chart-4-lightest"
       hasStroke={false}
-      height={20}
+      height={181.8181818181818}
       key="3"
-      width={38}
-      x={960}
-      y={380}
+      width={28}
+      x={720}
+      y={218.1818181818182}
     />
     <Component
       data={
@@ -678,10 +678,10 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 1`] = 
           },
           Object {
             "x": "six",
-            "y0": 20,
+            "y0": 11,
             "y1": 8,
             "y2": 9,
-            "y3": 1,
+            "y3": 5,
           },
         ]
       }
@@ -694,7 +694,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 1`] = 
         Array [
           Array [
             0,
-            20,
+            11,
           ],
           Array [
             0,
@@ -706,13 +706,13 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 1`] = 
           ],
           Array [
             0,
-            1,
+            5,
           ],
         ]
       }
       seriesIndex={5}
-      width={152}
-      x={846}
+      width={114}
+      x={635}
       xField="x"
       xFormatter={[Function]}
       y={0}
@@ -721,7 +721,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 1`] = 
 </g>
 `;
 
-exports[`Bars [common] example testing should match snapshot(s) for basic 2`] = `
+exports[`Bars [common] example testing should match snapshot(s) for 01.basic 2`] = `
 <g
   className="lucid-Bars"
 >
@@ -731,38 +731,38 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 2`] = 
     <Bar
       color="color-chart-3"
       hasStroke={false}
-      height={10.5263157894737}
+      height={12.121212121212125}
       key="0"
-      width={152}
-      x={1}
-      y={389.4736842105263}
+      width={114}
+      x={0}
+      y={387.8787878787879}
     />
     <Bar
       color="color-chart-0-darkest"
       hasStroke={false}
-      height={21.05263157894734}
+      height={24.24242424242425}
       key="1"
-      width={152}
-      x={1}
-      y={368.42105263157896}
+      width={114}
+      x={0}
+      y={363.6363636363636}
     />
     <Bar
       color="color-chart-2"
       hasStroke={false}
-      height={31.57894736842104}
+      height={36.363636363636374}
       key="2"
-      width={152}
-      x={1}
-      y={336.8421052631579}
+      width={114}
+      x={0}
+      y={327.27272727272725}
     />
     <Bar
       color="color-chart-4-lightest"
       hasStroke={false}
-      height={52.63157894736844}
+      height={60.606060606060566}
       key="3"
-      width={152}
-      x={1}
-      y={284.2105263157895}
+      width={114}
+      x={0}
+      y={266.6666666666667}
     />
     <Component
       data={
@@ -804,14 +804,14 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 2`] = 
           },
           Object {
             "x": "six",
-            "y0": 20,
+            "y0": 11,
             "y1": 8,
             "y2": 9,
-            "y3": 1,
+            "y3": 5,
           },
         ]
       }
-      height={115.78947368421052}
+      height={133.33333333333331}
       isExpanded={false}
       onMouseEnter={[Function]}
       onMouseOut={[Function]}
@@ -837,11 +837,11 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 2`] = 
         ]
       }
       seriesIndex={0}
-      width={152}
-      x={1}
+      width={114}
+      x={0}
       xField="x"
       xFormatter={[Function]}
-      y={284.2105263157895}
+      y={266.6666666666667}
     />
   </g>
   <g
@@ -850,38 +850,38 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 2`] = 
     <Bar
       color="color-chart-3"
       hasStroke={false}
-      height={21.05263157894734}
+      height={24.24242424242425}
       key="0"
-      width={152}
-      x={170}
-      y={378.94736842105266}
+      width={114}
+      x={127}
+      y={375.75757575757575}
     />
     <Bar
       color="color-chart-0-darkest"
       hasStroke={false}
-      height={31.578947368421098}
+      height={36.363636363636374}
       key="1"
-      width={152}
-      x={170}
-      y={347.36842105263156}
+      width={114}
+      x={127}
+      y={339.3939393939394}
     />
     <Bar
       color="color-chart-2"
       hasStroke={false}
-      height={42.10526315789468}
+      height={48.48484848484844}
       key="2"
-      width={152}
-      x={170}
-      y={305.2631578947369}
+      width={114}
+      x={127}
+      y={290.90909090909093}
     />
     <Bar
       color="color-chart-4-lightest"
       hasStroke={false}
-      height={63.15789473684214}
+      height={72.72727272727275}
       key="3"
-      width={152}
-      x={170}
-      y={242.10526315789474}
+      width={114}
+      x={127}
+      y={218.1818181818182}
     />
     <Component
       data={
@@ -923,14 +923,14 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 2`] = 
           },
           Object {
             "x": "six",
-            "y0": 20,
+            "y0": 11,
             "y1": 8,
             "y2": 9,
-            "y3": 1,
+            "y3": 5,
           },
         ]
       }
-      height={157.89473684210526}
+      height={181.8181818181818}
       isExpanded={false}
       onMouseEnter={[Function]}
       onMouseOut={[Function]}
@@ -956,11 +956,11 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 2`] = 
         ]
       }
       seriesIndex={1}
-      width={152}
-      x={170}
+      width={114}
+      x={127}
       xField="x"
       xFormatter={[Function]}
-      y={242.10526315789474}
+      y={218.1818181818182}
     />
   </g>
   <g
@@ -969,38 +969,38 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 2`] = 
     <Bar
       color="color-chart-3"
       hasStroke={false}
-      height={21.05263157894734}
+      height={24.24242424242425}
       key="0"
-      width={152}
-      x={339}
-      y={378.94736842105266}
+      width={114}
+      x={254}
+      y={375.75757575757575}
     />
     <Bar
       color="color-chart-0-darkest"
       hasStroke={false}
-      height={42.10526315789474}
+      height={48.4848484848485}
       key="1"
-      width={152}
-      x={339}
-      y={336.8421052631579}
+      width={114}
+      x={254}
+      y={327.27272727272725}
     />
     <Bar
       color="color-chart-2"
       hasStroke={false}
-      height={52.63157894736844}
+      height={60.606060606060566}
       key="2"
-      width={152}
-      x={339}
-      y={284.2105263157895}
+      width={114}
+      x={254}
+      y={266.6666666666667}
     />
     <Bar
       color="color-chart-4-lightest"
       hasStroke={false}
-      height={63.15789473684211}
+      height={72.72727272727275}
       key="3"
-      width={152}
-      x={339}
-      y={221.05263157894737}
+      width={114}
+      x={254}
+      y={193.93939393939394}
     />
     <Component
       data={
@@ -1042,14 +1042,14 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 2`] = 
           },
           Object {
             "x": "six",
-            "y0": 20,
+            "y0": 11,
             "y1": 8,
             "y2": 9,
-            "y3": 1,
+            "y3": 5,
           },
         ]
       }
-      height={178.94736842105263}
+      height={206.06060606060606}
       isExpanded={false}
       onMouseEnter={[Function]}
       onMouseOut={[Function]}
@@ -1075,11 +1075,11 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 2`] = 
         ]
       }
       seriesIndex={2}
-      width={152}
-      x={339}
+      width={114}
+      x={254}
       xField="x"
       xFormatter={[Function]}
-      y={221.05263157894737}
+      y={193.93939393939394}
     />
   </g>
   <g
@@ -1088,38 +1088,38 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 2`] = 
     <Bar
       color="color-chart-3"
       hasStroke={false}
-      height={31.57894736842104}
+      height={36.363636363636374}
       key="0"
-      width={152}
-      x={508}
-      y={368.42105263157896}
+      width={114}
+      x={381}
+      y={363.6363636363636}
     />
     <Bar
       color="color-chart-0-darkest"
       hasStroke={false}
-      height={63.15789473684208}
+      height={72.72727272727269}
       key="1"
-      width={152}
-      x={508}
-      y={305.2631578947369}
+      width={114}
+      x={381}
+      y={290.90909090909093}
     />
     <Bar
       color="color-chart-2"
       hasStroke={false}
-      height={73.68421052631581}
+      height={84.84848484848487}
       key="2"
-      width={152}
-      x={508}
-      y={231.57894736842107}
+      width={114}
+      x={381}
+      y={206.06060606060606}
     />
     <Bar
       color="color-chart-4-lightest"
       hasStroke={false}
-      height={73.68421052631581}
+      height={84.84848484848487}
       key="3"
-      width={152}
-      x={508}
-      y={157.89473684210526}
+      width={114}
+      x={381}
+      y={121.21212121212119}
     />
     <Component
       data={
@@ -1161,14 +1161,14 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 2`] = 
           },
           Object {
             "x": "six",
-            "y0": 20,
+            "y0": 11,
             "y1": 8,
             "y2": 9,
-            "y3": 1,
+            "y3": 5,
           },
         ]
       }
-      height={242.10526315789474}
+      height={278.7878787878788}
       isExpanded={false}
       onMouseEnter={[Function]}
       onMouseOut={[Function]}
@@ -1194,11 +1194,11 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 2`] = 
         ]
       }
       seriesIndex={3}
-      width={152}
-      x={508}
+      width={114}
+      x={381}
       xField="x"
       xFormatter={[Function]}
-      y={157.89473684210526}
+      y={121.21212121212119}
     />
   </g>
   <g
@@ -1207,38 +1207,38 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 2`] = 
     <Bar
       color="color-chart-3"
       hasStroke={false}
-      height={42.10526315789474}
+      height={48.4848484848485}
       key="0"
-      width={152}
-      x={677}
-      y={357.89473684210526}
+      width={114}
+      x={508}
+      y={351.5151515151515}
     />
     <Bar
       color="color-chart-0-darkest"
       hasStroke={false}
-      height={84.21052631578948}
+      height={96.96969696969697}
       key="1"
-      width={152}
-      x={677}
-      y={273.6842105263158}
+      width={114}
+      x={508}
+      y={254.54545454545453}
     />
     <Bar
       color="color-chart-2"
       hasStroke={false}
-      height={94.73684210526318}
+      height={109.09090909090907}
       key="2"
-      width={152}
-      x={677}
-      y={178.9473684210526}
+      width={114}
+      x={508}
+      y={145.45454545454547}
     />
     <Bar
       color="color-chart-4-lightest"
       hasStroke={false}
-      height={84.21052631578948}
+      height={96.96969696969697}
       key="3"
-      width={152}
-      x={677}
-      y={94.73684210526312}
+      width={114}
+      x={508}
+      y={48.4848484848485}
     />
     <Component
       data={
@@ -1280,14 +1280,14 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 2`] = 
           },
           Object {
             "x": "six",
-            "y0": 20,
+            "y0": 11,
             "y1": 8,
             "y2": 9,
-            "y3": 1,
+            "y3": 5,
           },
         ]
       }
-      height={305.2631578947369}
+      height={351.5151515151515}
       isExpanded={false}
       onMouseEnter={[Function]}
       onMouseOut={[Function]}
@@ -1313,11 +1313,11 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 2`] = 
         ]
       }
       seriesIndex={4}
-      width={152}
-      x={677}
+      width={114}
+      x={508}
       xField="x"
       xFormatter={[Function]}
-      y={94.73684210526312}
+      y={48.4848484848485}
     />
   </g>
   <g
@@ -1326,37 +1326,37 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 2`] = 
     <Bar
       color="color-chart-3"
       hasStroke={false}
-      height={210.52631578947367}
+      height={133.33333333333331}
       key="0"
-      width={152}
-      x={846}
-      y={189.47368421052633}
+      width={114}
+      x={635}
+      y={266.6666666666667}
     />
     <Bar
       color="color-chart-0-darkest"
       hasStroke={false}
-      height={84.21052631578945}
+      height={96.969696969697}
       key="1"
-      width={152}
-      x={846}
-      y={105.26315789473688}
+      width={114}
+      x={635}
+      y={169.6969696969697}
     />
     <Bar
       color="color-chart-2"
       hasStroke={false}
-      height={94.73684210526318}
+      height={109.09090909090907}
       key="2"
-      width={152}
-      x={846}
-      y={10.5263157894737}
+      width={114}
+      x={635}
+      y={60.60606060606062}
     />
     <Bar
       color="color-chart-4-lightest"
       hasStroke={false}
-      height={10.5263157894737}
+      height={60.60606060606062}
       key="3"
-      width={152}
-      x={846}
+      width={114}
+      x={635}
       y={0}
     />
     <Component
@@ -1399,10 +1399,10 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 2`] = 
           },
           Object {
             "x": "six",
-            "y0": 20,
+            "y0": 11,
             "y1": 8,
             "y2": 9,
-            "y3": 1,
+            "y3": 5,
           },
         ]
       }
@@ -1415,25 +1415,25 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 2`] = 
         Array [
           Array [
             0,
-            20,
+            11,
           ],
           Array [
-            20,
+            11,
+            19,
+          ],
+          Array [
+            19,
             28,
           ],
           Array [
             28,
-            37,
-          ],
-          Array [
-            37,
-            38,
+            33,
           ],
         ]
       }
       seriesIndex={5}
-      width={152}
-      x={846}
+      width={114}
+      x={635}
       xField="x"
       xFormatter={[Function]}
       y={0}
@@ -1442,7 +1442,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 2`] = 
 </g>
 `;
 
-exports[`Bars [common] example testing should match snapshot(s) for custom-colors 1`] = `
+exports[`Bars [common] example testing should match snapshot(s) for 02.custom-colors 1`] = `
 <g
   className="lucid-Bars"
 >
@@ -1452,38 +1452,38 @@ exports[`Bars [common] example testing should match snapshot(s) for custom-color
     <Bar
       color="color-chart-good"
       hasStroke={false}
-      height={20}
+      height={36.363636363636374}
       key="0"
-      width={38}
+      width={28}
       x={1}
-      y={380}
+      y={363.6363636363636}
     />
     <Bar
       color="color-chart-0-darkest"
       hasStroke={false}
-      height={40}
+      height={72.72727272727275}
       key="1"
-      width={38}
-      x={39}
-      y={360}
+      width={28}
+      x={29}
+      y={327.27272727272725}
     />
     <Bar
       color="color-chart-bad"
       hasStroke={false}
-      height={60}
+      height={109.09090909090907}
       key="2"
-      width={38}
-      x={77}
-      y={340}
+      width={28}
+      x={57}
+      y={290.90909090909093}
     />
     <Bar
       color="color-chart-4-lightest"
       hasStroke={false}
-      height={100}
+      height={181.8181818181818}
       key="3"
-      width={38}
-      x={115}
-      y={300}
+      width={28}
+      x={85}
+      y={218.1818181818182}
     />
     <Component
       data={
@@ -1525,14 +1525,14 @@ exports[`Bars [common] example testing should match snapshot(s) for custom-color
           },
           Object {
             "x": "six",
-            "y0": 20,
+            "y0": 11,
             "y1": 8,
             "y2": 9,
-            "y3": 1,
+            "y3": 5,
           },
         ]
       }
-      height={100}
+      height={181.8181818181818}
       isExpanded={false}
       onMouseEnter={[Function]}
       onMouseOut={[Function]}
@@ -1558,11 +1558,11 @@ exports[`Bars [common] example testing should match snapshot(s) for custom-color
         ]
       }
       seriesIndex={0}
-      width={152}
-      x={1}
+      width={114}
+      x={0}
       xField="x"
       xFormatter={[Function]}
-      y={300}
+      y={218.1818181818182}
     />
   </g>
   <g
@@ -1571,38 +1571,38 @@ exports[`Bars [common] example testing should match snapshot(s) for custom-color
     <Bar
       color="color-chart-good"
       hasStroke={false}
-      height={40}
+      height={72.72727272727275}
       key="0"
-      width={38}
-      x={170}
-      y={360}
+      width={28}
+      x={128}
+      y={327.27272727272725}
     />
     <Bar
       color="color-chart-0-darkest"
       hasStroke={false}
-      height={60}
+      height={109.09090909090907}
       key="1"
-      width={38}
-      x={208}
-      y={340}
+      width={28}
+      x={156}
+      y={290.90909090909093}
     />
     <Bar
       color="color-chart-bad"
       hasStroke={false}
-      height={80}
+      height={145.45454545454547}
       key="2"
-      width={38}
-      x={246}
-      y={320}
+      width={28}
+      x={184}
+      y={254.54545454545453}
     />
     <Bar
       color="color-chart-4-lightest"
       hasStroke={false}
-      height={120}
+      height={218.18181818181816}
       key="3"
-      width={38}
-      x={284}
-      y={280}
+      width={28}
+      x={212}
+      y={181.81818181818184}
     />
     <Component
       data={
@@ -1644,14 +1644,14 @@ exports[`Bars [common] example testing should match snapshot(s) for custom-color
           },
           Object {
             "x": "six",
-            "y0": 20,
+            "y0": 11,
             "y1": 8,
             "y2": 9,
-            "y3": 1,
+            "y3": 5,
           },
         ]
       }
-      height={120}
+      height={218.18181818181816}
       isExpanded={false}
       onMouseEnter={[Function]}
       onMouseOut={[Function]}
@@ -1677,11 +1677,11 @@ exports[`Bars [common] example testing should match snapshot(s) for custom-color
         ]
       }
       seriesIndex={1}
-      width={152}
-      x={170}
+      width={114}
+      x={127}
       xField="x"
       xFormatter={[Function]}
-      y={280}
+      y={181.81818181818184}
     />
   </g>
   <g
@@ -1690,38 +1690,38 @@ exports[`Bars [common] example testing should match snapshot(s) for custom-color
     <Bar
       color="color-chart-good"
       hasStroke={false}
-      height={40}
+      height={72.72727272727275}
       key="0"
-      width={38}
-      x={339}
-      y={360}
+      width={28}
+      x={255}
+      y={327.27272727272725}
     />
     <Bar
       color="color-chart-0-darkest"
       hasStroke={false}
-      height={80}
+      height={145.45454545454547}
       key="1"
-      width={38}
-      x={377}
-      y={320}
+      width={28}
+      x={283}
+      y={254.54545454545453}
     />
     <Bar
       color="color-chart-bad"
       hasStroke={false}
-      height={100}
+      height={181.8181818181818}
       key="2"
-      width={38}
-      x={415}
-      y={300}
+      width={28}
+      x={311}
+      y={218.1818181818182}
     />
     <Bar
       color="color-chart-4-lightest"
       hasStroke={false}
-      height={120}
+      height={218.18181818181816}
       key="3"
-      width={38}
-      x={453}
-      y={280}
+      width={28}
+      x={339}
+      y={181.81818181818184}
     />
     <Component
       data={
@@ -1763,14 +1763,14 @@ exports[`Bars [common] example testing should match snapshot(s) for custom-color
           },
           Object {
             "x": "six",
-            "y0": 20,
+            "y0": 11,
             "y1": 8,
             "y2": 9,
-            "y3": 1,
+            "y3": 5,
           },
         ]
       }
-      height={120}
+      height={218.18181818181816}
       isExpanded={false}
       onMouseEnter={[Function]}
       onMouseOut={[Function]}
@@ -1796,11 +1796,11 @@ exports[`Bars [common] example testing should match snapshot(s) for custom-color
         ]
       }
       seriesIndex={2}
-      width={152}
-      x={339}
+      width={114}
+      x={254}
       xField="x"
       xFormatter={[Function]}
-      y={280}
+      y={181.81818181818184}
     />
   </g>
   <g
@@ -1809,38 +1809,38 @@ exports[`Bars [common] example testing should match snapshot(s) for custom-color
     <Bar
       color="color-chart-good"
       hasStroke={false}
-      height={60}
+      height={109.09090909090907}
       key="0"
-      width={38}
-      x={508}
-      y={340}
+      width={28}
+      x={382}
+      y={290.90909090909093}
     />
     <Bar
       color="color-chart-0-darkest"
       hasStroke={false}
-      height={120}
+      height={218.18181818181816}
       key="1"
-      width={38}
-      x={546}
-      y={280}
+      width={28}
+      x={410}
+      y={181.81818181818184}
     />
     <Bar
       color="color-chart-bad"
       hasStroke={false}
-      height={140}
+      height={254.54545454545453}
       key="2"
-      width={38}
-      x={584}
-      y={260}
+      width={28}
+      x={438}
+      y={145.45454545454547}
     />
     <Bar
       color="color-chart-4-lightest"
       hasStroke={false}
-      height={140}
+      height={254.54545454545453}
       key="3"
-      width={38}
-      x={622}
-      y={260}
+      width={28}
+      x={466}
+      y={145.45454545454547}
     />
     <Component
       data={
@@ -1882,14 +1882,14 @@ exports[`Bars [common] example testing should match snapshot(s) for custom-color
           },
           Object {
             "x": "six",
-            "y0": 20,
+            "y0": 11,
             "y1": 8,
             "y2": 9,
-            "y3": 1,
+            "y3": 5,
           },
         ]
       }
-      height={140}
+      height={254.54545454545453}
       isExpanded={false}
       onMouseEnter={[Function]}
       onMouseOut={[Function]}
@@ -1915,11 +1915,11 @@ exports[`Bars [common] example testing should match snapshot(s) for custom-color
         ]
       }
       seriesIndex={3}
-      width={152}
-      x={508}
+      width={114}
+      x={381}
       xField="x"
       xFormatter={[Function]}
-      y={260}
+      y={145.45454545454547}
     />
   </g>
   <g
@@ -1928,38 +1928,38 @@ exports[`Bars [common] example testing should match snapshot(s) for custom-color
     <Bar
       color="color-chart-good"
       hasStroke={false}
-      height={80}
+      height={145.45454545454547}
       key="0"
-      width={38}
-      x={677}
-      y={320}
+      width={28}
+      x={509}
+      y={254.54545454545453}
     />
     <Bar
       color="color-chart-0-darkest"
       hasStroke={false}
-      height={160}
+      height={290.90909090909093}
       key="1"
-      width={38}
-      x={715}
-      y={240}
+      width={28}
+      x={537}
+      y={109.09090909090907}
     />
     <Bar
       color="color-chart-bad"
       hasStroke={false}
-      height={180}
+      height={327.2727272727273}
       key="2"
-      width={38}
-      x={753}
-      y={220}
+      width={28}
+      x={565}
+      y={72.72727272727269}
     />
     <Bar
       color="color-chart-4-lightest"
       hasStroke={false}
-      height={160}
+      height={290.90909090909093}
       key="3"
-      width={38}
-      x={791}
-      y={240}
+      width={28}
+      x={593}
+      y={109.09090909090907}
     />
     <Component
       data={
@@ -2001,14 +2001,14 @@ exports[`Bars [common] example testing should match snapshot(s) for custom-color
           },
           Object {
             "x": "six",
-            "y0": 20,
+            "y0": 11,
             "y1": 8,
             "y2": 9,
-            "y3": 1,
+            "y3": 5,
           },
         ]
       }
-      height={180}
+      height={327.2727272727273}
       isExpanded={false}
       onMouseEnter={[Function]}
       onMouseOut={[Function]}
@@ -2034,11 +2034,11 @@ exports[`Bars [common] example testing should match snapshot(s) for custom-color
         ]
       }
       seriesIndex={4}
-      width={152}
-      x={677}
+      width={114}
+      x={508}
       xField="x"
       xFormatter={[Function]}
-      y={220}
+      y={72.72727272727269}
     />
   </g>
   <g
@@ -2049,36 +2049,36 @@ exports[`Bars [common] example testing should match snapshot(s) for custom-color
       hasStroke={false}
       height={400}
       key="0"
-      width={38}
-      x={846}
+      width={28}
+      x={636}
       y={0}
     />
     <Bar
       color="color-chart-0-darkest"
       hasStroke={false}
-      height={160}
+      height={290.90909090909093}
       key="1"
-      width={38}
-      x={884}
-      y={240}
+      width={28}
+      x={664}
+      y={109.09090909090907}
     />
     <Bar
       color="color-chart-bad"
       hasStroke={false}
-      height={180}
+      height={327.2727272727273}
       key="2"
-      width={38}
-      x={922}
-      y={220}
+      width={28}
+      x={692}
+      y={72.72727272727269}
     />
     <Bar
       color="color-chart-4-lightest"
       hasStroke={false}
-      height={20}
+      height={181.8181818181818}
       key="3"
-      width={38}
-      x={960}
-      y={380}
+      width={28}
+      x={720}
+      y={218.1818181818182}
     />
     <Component
       data={
@@ -2120,10 +2120,10 @@ exports[`Bars [common] example testing should match snapshot(s) for custom-color
           },
           Object {
             "x": "six",
-            "y0": 20,
+            "y0": 11,
             "y1": 8,
             "y2": 9,
-            "y3": 1,
+            "y3": 5,
           },
         ]
       }
@@ -2136,7 +2136,7 @@ exports[`Bars [common] example testing should match snapshot(s) for custom-color
         Array [
           Array [
             0,
-            20,
+            11,
           ],
           Array [
             0,
@@ -2148,13 +2148,13 @@ exports[`Bars [common] example testing should match snapshot(s) for custom-color
           ],
           Array [
             0,
-            1,
+            5,
           ],
         ]
       }
       seriesIndex={5}
-      width={152}
-      x={846}
+      width={114}
+      x={635}
       xField="x"
       xFormatter={[Function]}
       y={0}
