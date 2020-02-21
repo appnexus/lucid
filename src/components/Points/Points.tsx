@@ -70,7 +70,7 @@ export interface IPointsProps
 			{ x: 'five'  , y0: 4  , y1: 8 , y2: 9 , y3: 8 },
 			{ x: 'six'   , y0: 20 , y1: 8 , y2: 9 , y3: 1 },
 		] */
-	data: Array<{ [key: string]: string | number }>;
+	data: Array<{ [key: string]: string | number | Date }>;
 
 	/** The scale for the x axis. Must be a d3 scale. Lucid exposes the
 		`lucid.d3Scale` library for use here. */
@@ -172,6 +172,9 @@ export const Points = (props: IPointsProps): React.ReactElement => {
 								return (
 									<Point
 										key={`${seriesIndex}${dIndex}`}
+										/* Since data contains x and y values, data values may not have a uniform type that always matches
+											the expected input of the xScale */
+										//@ts-ignore
 										x={xScale(data[seriesIndex][xField])}
 										y={yScale(_.isArray(series) ? _.last(series) : series)}
 										hasStroke={hasStroke}

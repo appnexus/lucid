@@ -44,15 +44,17 @@ const {
 } = PropTypes;
 
 interface ILineChartMargin {
-	top: number;
-	right: number;
-	bottom: number;
-	left: number;
+	top?: number;
+	right?: number;
+	bottom?: number;
+	left?: number;
 }
+
+type yFormatterFunction = (y: number) => string;
 
 export interface ILineChartPropsRaw extends StandardProps {
 	/** Child components of LineChart */
-	EmptyStateWrapper: React.ReactNode;
+	EmptyStateWrapper?: React.ReactNode;
 
 	/** Height of the chart. */
 	height: number;
@@ -75,7 +77,7 @@ export interface ILineChartPropsRaw extends StandardProps {
 	 * { x: new Date('2015-01-05') , y: 5 } ,
 	 * ]
 	 */
-	data: Array<{ [key: string]: Date | number }>;
+	data: Array<{ [key: string]: Date | number | undefined }>;
 
 	/**
 	 * Legend is an object with human readable names for fields
@@ -131,20 +133,17 @@ export interface ILineChartPropsRaw extends StandardProps {
 	/** The minimum date the x axis should display.
 	 * Typically this will be the smallest items from your dataset.
 	 * */
-	xAxisMin: Date;
+	xAxisMin?: Date;
 
 	/** The maximum date the x axis should display.
 	 * This should almost always be the largest date from your dataset.
 	 * */
-	xAxisMax: Date;
+	xAxisMax?: Date;
 
 	/** An optional function used to format your x axis data.
 	 * If you don't provide anything, we use the default D3 date variable formatter.
 	 * */
-	//xAxisFormatter?: (x: string | number) => string | number;
-	xAxisFormatter?: (
-		d: number | Date | { valueOf(): number }
-	) => string | number;
+	xAxisFormatter: (d: Date) => string;
 
 	/** An optional function used to format your x axis dates in the tooltips.*/
 	xAxisTooltipFormatter: (x: string | number) => string | number;
@@ -158,7 +157,7 @@ export interface ILineChartPropsRaw extends StandardProps {
 	 * exactly where the tick marks should appear on the x axis.
 	 * This prop takes an array of dates (currently only dates are supported for the x axis).
 	 * This prop will override the \`xAxisTickCount\` prop. */
-	xAxisTicks?: [Date];
+	xAxisTicks?: Date[];
 
 	/** Set a title for the x axis. */
 	xAxisTitle?: string | null;
@@ -182,7 +181,7 @@ export interface ILineChartPropsRaw extends StandardProps {
 	 * unless you need to display multiple lines.
 	 * The order of the array determines the series order in the chart. */
 
-	yAxisFields: [string];
+	yAxisFields: string[];
 
 	/** The minimum number the y axis should display.
 	 * Typically this should be \`0\`. */
@@ -190,13 +189,11 @@ export interface ILineChartPropsRaw extends StandardProps {
 
 	/** The maximum number the y axis should display.
 	 * This should almost always be the largest number from your dataset. */
-	yAxisMax: number;
+	yAxisMax?: number;
 
 	/** An optional function used to format your y axis data.
 	 * If you don't provide anything, we use the default D3 formatter. */
-	yAxisFormatter?: (
-		y: number | string | { valueOf(): number }
-	) => string | number;
+	yAxisFormatter?: yFormatterFunction;
 
 	/** Stack the y axis data. This is only useful if you have multiple	\`yAxisFields\`.
 	 * Stacking will cause the chart to be aggregated by sum. */
@@ -228,14 +225,12 @@ export interface ILineChartPropsRaw extends StandardProps {
 	// 	y-value.  Signature: \`(yField, yValueFormatted, yValue) => {}\`
 	yAxisTooltipFormatter: (
 		yField: string,
-		yValueFormatted: number,
+		yValueFormatted: string | number,
 		yValue: number
-	) => object;
+	) => string | number;
 
 	/** An optional function used to format data in the tooltips. */
-	yAxisTooltipDataFormatter?: (
-		y: number | { valueOf(): number }
-	) => string | number;
+	yAxisTooltipDataFormatter?: (y: number) => string | number;
 
 	/** Set the starting index where colors start rotating for points and lines along the y axis. */
 	yAxisColorOffset: number;
@@ -251,15 +246,16 @@ export interface ILineChartPropsRaw extends StandardProps {
 
 	/** The maximum number the y2 axis should display.
 	 * This should almost always be the largest number from your dataset. */
-	y2AxisMax: number;
+	y2AxisMax?: number;
 
 	/** An optional function used to format your y2 axis data.
 	 * If you don't provide anything, we use the default D3 formatter. */
-	// ?? need to check the shape of this function..
-	y2AxisFormatter?: (value: number) => number;
+	y2AxisFormatter?: yFormatterFunction;
 
-	// 	An optional function used to format data in the tooltips.
-	y2AxisTooltipDataFormatter?: (value: number) => string;
+	/**
+	 * An optional function used to format data in the tooltips.
+	 */
+	y2AxisTooltipDataFormatter?: yFormatterFunction;
 
 	/** Stack the y2 axis data.
 	 * This is only useful if you have multiple	\`y2AxisFields\`.
@@ -606,6 +602,7 @@ class LineChart extends React.Component<ILineChartProps, ILineChartState, {}> {
 		hasLegend: false,
 		palette: chartConstants.PALETTE_7,
 		xAxisField: 'x',
+		xAxisFormatter: formatDate,
 		// E.g. "Mon 06/06/2016 15:46:19"
 		xAxisTooltipFormatter: d3TimeFormat.timeFormat('%a %x %X'),
 		xAxisTickCount: null,
@@ -658,6 +655,108 @@ class LineChart extends React.Component<ILineChartProps, ILineChartState, {}> {
 		}
 	};
 
+	renderY2Axis = (
+		xScale: d3Scale.ScaleTime<number, number>,
+		y2Scale: d3Scale.ScaleLinear<number, number>,
+		y2AxisFinalFormatter: yFormatterFunction,
+		margin: ILineChartMargin
+	) => {
+		const {
+			y2AxisFields,
+			yAxisFields,
+			y2AxisTickCount,
+			y2AxisTitle,
+			y2AxisTitleColor,
+			palette,
+			xAxisField,
+			y2AxisMax,
+			data,
+			y2AxisIsStacked,
+			y2AxisColorOffset,
+			colorMap,
+			y2AxisHasPoints,
+		} = this.props;
+
+		/* y2 axis */
+		const axis = y2AxisFields ? (
+			<g
+				transform={`translate(${(margin.left as number) + innerWidth}, ${
+					margin.top
+				})`}
+			>
+				<Axis
+					orient='right'
+					scale={y2Scale}
+					tickFormat={y2AxisFinalFormatter as any}
+					tickCount={y2AxisTickCount}
+				/>
+			</g>
+		) : null;
+
+		/* y2 axis title */
+		const axisTitle = y2AxisTitle ? (
+			<g
+				transform={`translate(${(margin.left as number) + innerWidth}, ${
+					margin.top
+				})`}
+			>
+				<AxisLabel
+					orient='right'
+					width={margin.right as number}
+					height={innerHeight}
+					label={y2AxisTitle}
+					color={
+						_.isString(y2AxisTitleColor)
+							? y2AxisTitleColor
+							: palette[y2AxisTitleColor % palette.length]
+					}
+				/>
+			</g>
+		) : null;
+
+		const axisLines = y2AxisFields ? (
+			<g transform={`translate(${margin.left as number}, ${margin.top})`}>
+				<Lines
+					xScale={xScale}
+					yScale={y2Scale}
+					xField={xAxisField}
+					yFields={y2AxisFields}
+					yStackedMax={y2AxisMax}
+					data={data}
+					isStacked={y2AxisIsStacked}
+					colorOffset={y2AxisColorOffset + yAxisFields.length}
+					colorMap={colorMap}
+					palette={palette}
+				/>
+			</g>
+		) : null;
+
+		const axisPoints =
+			y2AxisFields && y2AxisHasPoints ? (
+				<g transform={`translate(${margin.left}, ${margin.top})`}>
+					<Points
+						xScale={xScale}
+						yScale={y2Scale}
+						xField={xAxisField}
+						yFields={y2AxisFields}
+						yStackedMax={y2AxisMax}
+						data={data as any}
+						isStacked={y2AxisIsStacked}
+						colorOffset={y2AxisColorOffset + yAxisFields.length}
+						colorMap={colorMap}
+						palette={palette}
+					/>
+				</g>
+			) : null;
+
+		return {
+			title: axisTitle,
+			lines: axisLines,
+			points: axisPoints,
+			axis: axis,
+		};
+	};
+
 	render(): React.ReactNode {
 		const {
 			className,
@@ -677,7 +776,7 @@ class LineChart extends React.Component<ILineChartProps, ILineChartState, {}> {
 			xAxisTicks,
 			xAxisTitle,
 			xAxisTitleColor,
-			xAxisFormatter = formatDate,
+			xAxisFormatter,
 			xAxisTooltipFormatter,
 			xAxisMin = minByFields(data, xAxisField) as Date,
 			xAxisMax = maxByFields(data, xAxisField) as Date,
@@ -727,48 +826,19 @@ class LineChart extends React.Component<ILineChartProps, ILineChartState, {}> {
 		const innerWidth = width - margin.left - margin.right;
 		const innerHeight = height - margin.top - margin.bottom;
 
-		const allYFields = _.compact(yAxisFields.concat(y2AxisFields));
-
+		/**
+		 * x axis
+		 */
 		const xScale = d3Scale
 			.scaleTime()
 			.domain([xAxisMin, xAxisMax])
 			.range([0, innerWidth]);
 
-		const yScale = d3Scale
-			.scaleLinear()
-			.domain([yAxisMin, yAxisMax])
-			.range([innerHeight, 0]);
-
-		const y2Scale = y2AxisFields
-			? d3Scale
-					.scaleLinear()
-					.domain([y2AxisMin, y2AxisMax])
-					.range([innerHeight, 0])
-			: null; // scale cannot be null
-
-		const yAxisFinalFormatter = yAxisFormatter || yScale.tickFormat();
-		const y2AxisFinalFormatter = y2AxisFormatter
-			? y2AxisFormatter
-			: y2Scale
-			? y2Scale.tickFormat()
-			: _.identity;
-
 		const xFinalFormatter = xAxisFormatter
 			? xAxisFormatter
 			: xScale.tickFormat();
-		const yFinalFormatter = yAxisTooltipDataFormatter
-			? yAxisTooltipDataFormatter
-			: yAxisFinalFormatter;
-		const y2FinalFormatter = y2AxisTooltipDataFormatter
-			? y2AxisTooltipDataFormatter
-			: y2AxisFinalFormatter;
 
-		// This logic is getting a bit complicated
-		const yAxisHasPointsFinal = yAxisHasPoints || yAxisIsStacked;
-		const yAxisHasLinesFinal = !(yAxisIsStacked && !yAxisHasPoints);
-
-		const y2AxisHasPointsFinal = y2AxisHasPoints || y2AxisIsStacked;
-		const y2AxisHasLinesFinal = !(y2AxisIsStacked && !y2AxisHasPoints);
+		const allYFields = _.compact(yAxisFields.concat(y2AxisFields));
 
 		// This is used to map x mouse values back to data points.
 		const xPointMap = _.reduce(
@@ -776,7 +846,7 @@ class LineChart extends React.Component<ILineChartProps, ILineChartState, {}> {
 			(acc, d) => {
 				// `floor` to avoid rounding errors, it doesn't need to be super precise
 				// since we're dealing with pixels
-				const point = Math.floor(xScale(d[xAxisField]));
+				const point = Math.floor(xScale(d[xAxisField] as any));
 
 				_.each(allYFields, field => {
 					_.set(acc, `${point}.y.${field}`, d[field]);
@@ -788,6 +858,101 @@ class LineChart extends React.Component<ILineChartProps, ILineChartState, {}> {
 			{}
 		);
 		const xPoints = _.map(_.keys(xPointMap), _.toNumber);
+
+		/**
+		 * y axis
+		 */
+		const yScale = d3Scale
+			.scaleLinear()
+			.domain([yAxisMin, yAxisMax])
+			.range([innerHeight, 0]);
+
+		const yAxisFinalFormatter = yAxisFormatter || yScale.tickFormat();
+
+		const yFinalFormatter = yAxisTooltipDataFormatter
+			? yAxisTooltipDataFormatter
+			: yAxisFinalFormatter;
+
+		const yAxisHasLinesFinal = !(yAxisIsStacked && !yAxisHasPoints);
+		const yAxisHasPointsFinal = yAxisHasPoints || yAxisIsStacked;
+
+		/**
+		 * y2 axis
+		 */
+		let y2Axis = {};
+		let y2AxisLegend = null;
+		let y2AxisToolTip = null;
+		if (y2AxisFields) {
+			const y2Scale = d3Scale
+				.scaleLinear()
+				.domain([y2AxisMin, y2AxisMax])
+				.range([innerHeight, 0]);
+
+			const y2AxisFinalFormatter = y2AxisFormatter
+				? y2AxisFormatter
+				: y2Scale
+				? y2Scale.tickFormat()
+				: (_.identity as yFormatterFunction);
+
+			const y2FinalFormatter = y2AxisTooltipDataFormatter
+				? y2AxisTooltipDataFormatter
+				: y2AxisFinalFormatter;
+
+			const y2AxisHasPointsFinal = y2AxisHasPoints || y2AxisIsStacked;
+			const y2AxisHasLinesFinal = !(y2AxisIsStacked && !y2AxisHasPoints);
+
+			y2Axis = this.renderY2Axis(xScale, y2Scale, y2AxisFinalFormatter, margin);
+
+			y2AxisLegend = _.map(y2AxisFields, (field, index) => (
+				<Legend.Item
+					key={index}
+					hasPoint={y2AxisHasPointsFinal}
+					hasLine={y2AxisHasLinesFinal}
+					color={_.get(
+						colorMap,
+						field,
+						palette[
+							y2AxisColorOffset + index + (yAxisFields.length % palette.length)
+						]
+					)}
+					pointKind={
+						y2AxisHasPoints ? y2AxisColorOffset + index + yAxisFields.length : 1
+					}
+				>
+					{_.get(legend, field, field)}
+				</Legend.Item>
+			));
+
+			y2AxisToolTip = _.map(y2AxisFields, (field, index) =>
+				!_.isNil(_.get(xPointMap, mouseX + '.y.' + field)) ? (
+					<Legend.Item
+						key={index}
+						hasPoint={y2AxisHasPointsFinal}
+						hasLine={y2AxisHasLinesFinal}
+						color={_.get(
+							colorMap,
+							field,
+							palette[
+								y2AxisColorOffset +
+									index +
+									(yAxisFields.length % palette.length)
+							]
+						)}
+						pointKind={
+							y2AxisHasPoints
+								? y2AxisColorOffset + index + yAxisFields.length
+								: 1
+						}
+					>
+						{yAxisTooltipFormatter(
+							_.get(legend, field, field),
+							y2FinalFormatter(_.get(xPointMap, mouseX + '.y.' + field)),
+							_.get(xPointMap, mouseX + '.y.' + field)
+						)}
+					</Legend.Item>
+				) : null
+			);
+		}
 
 		if (_.isEmpty(data) || width < 1 || height < 1 || isLoading) {
 			const emptyStateWrapper = getFirst(
@@ -816,7 +981,11 @@ class LineChart extends React.Component<ILineChartProps, ILineChartState, {}> {
 					>
 						{/* y axis */}
 						<g transform={`translate(${margin.left}, ${margin.top})`}>
-							<Axis orient='left' scale={yScale} tickFormat={yAxisFormatter} />
+							<Axis
+								orient='left'
+								scale={yScale}
+								tickFormat={yAxisFormatter as any}
+							/>
 						</g>
 						{/* x axis */}
 						<g
@@ -826,7 +995,7 @@ class LineChart extends React.Component<ILineChartProps, ILineChartState, {}> {
 							<Axis
 								orient='bottom'
 								scale={xScale}
-								tickFormat={xFinalFormatter}
+								tickFormat={xFinalFormatter as any}
 							/>
 						</g>
 					</svg>
@@ -849,9 +1018,9 @@ class LineChart extends React.Component<ILineChartProps, ILineChartState, {}> {
 							isExpanded={true}
 							flyOutMaxWidth='none'
 							alignment={
-								mouseX < innerWidth * 0.15
+								((mouseX as unknown) as number) < innerWidth * 0.15
 									? 'start'
-									: mouseX > innerWidth * 0.85
+									: ((mouseX as unknown) as number) > innerWidth * 0.85
 									? 'end'
 									: 'center'
 							}
@@ -892,37 +1061,7 @@ class LineChart extends React.Component<ILineChartProps, ILineChartState, {}> {
 											</Legend.Item>
 										) : null
 									)}
-									{_.map(y2AxisFields, (field, index) =>
-										!_.isNil(_.get(xPointMap, mouseX + '.y.' + field)) ? (
-											<Legend.Item
-												key={index}
-												hasPoint={y2AxisHasPointsFinal}
-												hasLine={y2AxisHasLinesFinal}
-												color={_.get(
-													colorMap,
-													field,
-													palette[
-														y2AxisColorOffset +
-															index +
-															(yAxisFields.length % palette.length)
-													]
-												)}
-												pointKind={
-													y2AxisHasPoints
-														? y2AxisColorOffset + index + yAxisFields.length
-														: 1
-												}
-											>
-												{yAxisTooltipFormatter(
-													_.get(legend, field, field),
-													y2FinalFormatter(
-														_.get(xPointMap, mouseX + '.y.' + field)
-													),
-													_.get(xPointMap, mouseX + '.y.' + field)
-												)}
-											</Legend.Item>
-										) : null
-									)}
+									{y2AxisToolTip}
 								</Legend>
 							</ToolTip.Body>
 						</ToolTip>
@@ -935,7 +1074,7 @@ class LineChart extends React.Component<ILineChartProps, ILineChartState, {}> {
 						orient='bottom'
 						scale={xScale}
 						outerTickSize={0}
-						tickFormat={xFinalFormatter}
+						tickFormat={xFinalFormatter as any}
 						tickCount={xAxisTickCount}
 						ticks={xAxisTicks}
 						textOrientation={xAxisTextOrientation}
@@ -975,29 +1114,7 @@ class LineChart extends React.Component<ILineChartProps, ILineChartState, {}> {
 											{_.get(legend, field, field)}
 										</Legend.Item>
 									))}
-									{_.map(y2AxisFields, (field, index) => (
-										<Legend.Item
-											key={index}
-											hasPoint={y2AxisHasPointsFinal}
-											hasLine={y2AxisHasLinesFinal}
-											color={_.get(
-												colorMap,
-												field,
-												palette[
-													y2AxisColorOffset +
-														index +
-														(yAxisFields.length % palette.length)
-												]
-											)}
-											pointKind={
-												y2AxisHasPoints
-													? y2AxisColorOffset + index + yAxisFields.length
-													: 1
-											}
-										>
-											{_.get(legend, field, field)}
-										</Legend.Item>
-									))}
+									{y2AxisLegend}
 								</Legend>
 							</ContextMenu.FlyOut>
 						</ContextMenu>
@@ -1028,7 +1145,7 @@ class LineChart extends React.Component<ILineChartProps, ILineChartState, {}> {
 					<Axis
 						orient='left'
 						scale={yScale}
-						tickFormat={yAxisFinalFormatter}
+						tickFormat={yAxisFinalFormatter as any}
 						tickCount={yAxisTickCount}
 						textOrientation={yAxisTextOrientation}
 					/>
@@ -1052,37 +1169,10 @@ class LineChart extends React.Component<ILineChartProps, ILineChartState, {}> {
 				) : null}
 
 				{/* y2 axis */}
-				{y2AxisFields ? (
-					<g
-						transform={`translate(${margin.left + innerWidth}, ${margin.top})`}
-					>
-						<Axis
-							orient='right'
-							scale={y2Scale}
-							tickFormat={y2AxisFinalFormatter}
-							tickCount={y2AxisTickCount}
-						/>
-					</g>
-				) : null}
+				{_.get(y2Axis, 'axis', null)}
 
 				{/* y2 axis title */}
-				{y2AxisTitle ? (
-					<g
-						transform={`translate(${margin.left + innerWidth}, ${margin.top})`}
-					>
-						<AxisLabel
-							orient='right'
-							width={margin.right}
-							height={innerHeight}
-							label={y2AxisTitle}
-							color={
-								_.isString(y2AxisTitleColor)
-									? y2AxisTitleColor
-									: palette[y2AxisTitleColor % palette.length]
-							}
-						/>
-					</g>
-				) : null}
+				{_.get(y2Axis, 'title', null)}
 
 				{/* y axis lines */}
 				<g transform={`translate(${margin.left}, ${margin.top})`}>
@@ -1109,7 +1199,7 @@ class LineChart extends React.Component<ILineChartProps, ILineChartState, {}> {
 							xField={xAxisField}
 							yFields={yAxisFields}
 							yStackedMax={yAxisMax}
-							data={data}
+							data={data as any}
 							isStacked={yAxisIsStacked}
 							colorMap={colorMap}
 							palette={palette}
@@ -1119,40 +1209,10 @@ class LineChart extends React.Component<ILineChartProps, ILineChartState, {}> {
 				) : null}
 
 				{/* y2 axis lines */}
-				{y2AxisFields ? (
-					<g transform={`translate(${margin.left}, ${margin.top})`}>
-						<Lines
-							xScale={xScale}
-							yScale={y2Scale}
-							xField={xAxisField}
-							yFields={y2AxisFields}
-							yStackedMax={y2AxisMax}
-							data={data}
-							isStacked={y2AxisIsStacked}
-							colorOffset={y2AxisColorOffset + yAxisFields.length}
-							colorMap={colorMap}
-							palette={palette}
-						/>
-					</g>
-				) : null}
+				{_.get(y2Axis, 'lines', null)}
 
 				{/* y2 axis points */}
-				{y2AxisFields && y2AxisHasPoints ? (
-					<g transform={`translate(${margin.left}, ${margin.top})`}>
-						<Points
-							xScale={xScale}
-							yScale={y2Scale}
-							xField={xAxisField}
-							yFields={y2AxisFields}
-							yStackedMax={y2AxisMax}
-							data={data}
-							isStacked={y2AxisIsStacked}
-							colorOffset={y2AxisColorOffset + yAxisFields.length}
-							colorMap={colorMap}
-							palette={palette}
-						/>
-					</g>
-				) : null}
+				{_.get(y2Axis, 'points', null)}
 
 				{/* hover capture zone */}
 				{hasToolTips ? (
@@ -1162,7 +1222,13 @@ class LineChart extends React.Component<ILineChartProps, ILineChartState, {}> {
 							width={innerWidth}
 							height={innerHeight}
 							onMouseMove={event => {
-								this.handleToolTipHoverZone(event, xPoints);
+								this.handleToolTipHoverZone(
+									(event as unknown) as {
+										clientX: number;
+										target: SVGRectElement;
+									},
+									xPoints
+								);
 							}}
 							onMouseOut={() => {
 								this.setState({ isHovering: false });
