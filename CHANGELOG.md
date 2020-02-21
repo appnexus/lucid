@@ -15,7 +15,7 @@
 - #1114 [minor] Add `RunReportIcon` to the component icon library.
 - #1113 [none] Add instructions on how to release Lucid UI in `RELEASING.md` doc.
 
-https://github.com/appnexus/lucid/compare/v5.5.0...v5.6.0
+https://github.com/appnexus/lucid/compare/v5.5.0...v5.6.1
 
 ## 5.5.0
 
