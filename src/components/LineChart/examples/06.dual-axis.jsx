@@ -9,25 +9,32 @@ const data = [
 	{ x: new Date('2015-07-04T00:00:00-08:00'), bananas: 5, cherries: 6 },
 ];
 
+const style = {
+	paddingTop: '5rem',
+};
+
 export default createClass({
 	render() {
 		return (
-			<LineChart
-				data={data}
-				margin={{
-					right: 80,
-				}}
-				colorMap={{
-					bananas: chartConstants.COLOR_4,
-					cherries: chartConstants.COLOR_2,
-				}}
-				yAxisFields={['bananas']}
-				yAxisTitle='Number of Bananas'
-				yAxisTitleColor={chartConstants.COLOR_4}
-				y2AxisFields={['cherries']}
-				y2AxisTitle='Number of Cherries'
-				y2AxisTitleColor={chartConstants.COLOR_2}
-			/>
+			<div style={style}>
+				<LineChart
+					data={data}
+					margin={{
+						right: 80,
+					}}
+					width={800}
+					colorMap={{
+						bananas: chartConstants.COLOR_4,
+						cherries: chartConstants.COLOR_2,
+					}}
+					yAxisFields={['bananas']}
+					yAxisTitle='Number of Bananas'
+					yAxisTitleColor={chartConstants.COLOR_4}
+					y2AxisFields={['cherries']}
+					y2AxisTitle='Number of Cherries'
+					y2AxisTitleColor={chartConstants.COLOR_2}
+				/>
+			</div>
 		);
 	},
 });

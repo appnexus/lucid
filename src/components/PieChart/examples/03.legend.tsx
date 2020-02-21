@@ -12,15 +12,16 @@ const data = [
 
 const palette = chartConstants.PALETTE_7;
 
+const style = {
+	display: 'flex',
+	alignItems: 'center',
+	paddingTop: '4rem',
+};
+
 export default createClass({
 	render() {
 		return (
-			<div
-				style={{
-					display: 'flex',
-					alignItems: 'center',
-				}}
-			>
+			<div style={style}>
 				<PieChart data={data} palette={palette} />
 				<Legend>
 					{_.map(data, (d, index) => (

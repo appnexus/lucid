@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`PieChart [common] example testing should match snapshot(s) for 1.basic 1`] = `
+exports[`PieChart [common] example testing should match snapshot(s) for 01.basic 1`] = `
 <svg
   className="lucid-PieChart"
   height={200}
@@ -140,7 +140,7 @@ exports[`PieChart [common] example testing should match snapshot(s) for 1.basic 
 </svg>
 `;
 
-exports[`PieChart [common] example testing should match snapshot(s) for 1.basic 2`] = `
+exports[`PieChart [common] example testing should match snapshot(s) for 01.basic 2`] = `
 <svg
   className="lucid-PieChart"
   height={200}
@@ -280,7 +280,7 @@ exports[`PieChart [common] example testing should match snapshot(s) for 1.basic 
 </svg>
 `;
 
-exports[`PieChart [common] example testing should match snapshot(s) for 1.basic 3`] = `
+exports[`PieChart [common] example testing should match snapshot(s) for 01.basic 3`] = `
 <svg
   className="lucid-PieChart"
   height={200}
@@ -420,7 +420,7 @@ exports[`PieChart [common] example testing should match snapshot(s) for 1.basic 
 </svg>
 `;
 
-exports[`PieChart [common] example testing should match snapshot(s) for 1.basic 4`] = `
+exports[`PieChart [common] example testing should match snapshot(s) for 01.basic 4`] = `
 <svg
   className="lucid-PieChart"
   height={200}
@@ -560,7 +560,7 @@ exports[`PieChart [common] example testing should match snapshot(s) for 1.basic 
 </svg>
 `;
 
-exports[`PieChart [common] example testing should match snapshot(s) for 1.basic 5`] = `
+exports[`PieChart [common] example testing should match snapshot(s) for 01.basic 5`] = `
 <svg
   className="lucid-PieChart"
   height={200}
@@ -700,7 +700,7 @@ exports[`PieChart [common] example testing should match snapshot(s) for 1.basic 
 </svg>
 `;
 
-exports[`PieChart [common] example testing should match snapshot(s) for 1.basic 6`] = `
+exports[`PieChart [common] example testing should match snapshot(s) for 01.basic 6`] = `
 <svg
   className="lucid-PieChart"
   height={200}
@@ -840,7 +840,7 @@ exports[`PieChart [common] example testing should match snapshot(s) for 1.basic 
 </svg>
 `;
 
-exports[`PieChart [common] example testing should match snapshot(s) for 1.basic 7`] = `
+exports[`PieChart [common] example testing should match snapshot(s) for 01.basic 7`] = `
 <svg
   className="lucid-PieChart"
   height={200}
@@ -980,7 +980,7 @@ exports[`PieChart [common] example testing should match snapshot(s) for 1.basic 
 </svg>
 `;
 
-exports[`PieChart [common] example testing should match snapshot(s) for 2.basic-donuts 1`] = `
+exports[`PieChart [common] example testing should match snapshot(s) for 02.basic-donuts 1`] = `
 <svg
   className="lucid-PieChart"
   height={200}
@@ -1120,7 +1120,7 @@ exports[`PieChart [common] example testing should match snapshot(s) for 2.basic-
 </svg>
 `;
 
-exports[`PieChart [common] example testing should match snapshot(s) for 2.basic-donuts 2`] = `
+exports[`PieChart [common] example testing should match snapshot(s) for 02.basic-donuts 2`] = `
 <svg
   className="lucid-PieChart"
   height={200}
@@ -1260,7 +1260,7 @@ exports[`PieChart [common] example testing should match snapshot(s) for 2.basic-
 </svg>
 `;
 
-exports[`PieChart [common] example testing should match snapshot(s) for 2.basic-donuts 3`] = `
+exports[`PieChart [common] example testing should match snapshot(s) for 02.basic-donuts 3`] = `
 <svg
   className="lucid-PieChart"
   height={200}
@@ -1400,7 +1400,7 @@ exports[`PieChart [common] example testing should match snapshot(s) for 2.basic-
 </svg>
 `;
 
-exports[`PieChart [common] example testing should match snapshot(s) for 2.basic-donuts 4`] = `
+exports[`PieChart [common] example testing should match snapshot(s) for 02.basic-donuts 4`] = `
 <svg
   className="lucid-PieChart"
   height={200}
@@ -1540,7 +1540,7 @@ exports[`PieChart [common] example testing should match snapshot(s) for 2.basic-
 </svg>
 `;
 
-exports[`PieChart [common] example testing should match snapshot(s) for 2.basic-donuts 5`] = `
+exports[`PieChart [common] example testing should match snapshot(s) for 02.basic-donuts 5`] = `
 <svg
   className="lucid-PieChart"
   height={200}
@@ -1680,7 +1680,7 @@ exports[`PieChart [common] example testing should match snapshot(s) for 2.basic-
 </svg>
 `;
 
-exports[`PieChart [common] example testing should match snapshot(s) for 2.basic-donuts 6`] = `
+exports[`PieChart [common] example testing should match snapshot(s) for 02.basic-donuts 6`] = `
 <svg
   className="lucid-PieChart"
   height={200}
@@ -1820,7 +1820,7 @@ exports[`PieChart [common] example testing should match snapshot(s) for 2.basic-
 </svg>
 `;
 
-exports[`PieChart [common] example testing should match snapshot(s) for 2.basic-donuts 7`] = `
+exports[`PieChart [common] example testing should match snapshot(s) for 02.basic-donuts 7`] = `
 <svg
   className="lucid-PieChart"
   height={200}
@@ -1960,7 +1960,7 @@ exports[`PieChart [common] example testing should match snapshot(s) for 2.basic-
 </svg>
 `;
 
-exports[`PieChart [common] example testing should match snapshot(s) for 3.legend 1`] = `
+exports[`PieChart [common] example testing should match snapshot(s) for 03.legend 1`] = `
 <svg
   className="lucid-PieChart"
   height={200}
@@ -2080,7 +2080,7 @@ exports[`PieChart [common] example testing should match snapshot(s) for 3.legend
 </svg>
 `;
 
-exports[`PieChart [common] example testing should match snapshot(s) for 4.color-map 1`] = `
+exports[`PieChart [common] example testing should match snapshot(s) for 04.color-map 1`] = `
 <svg
   className="lucid-PieChart"
   height={200}
@@ -2220,7 +2220,7 @@ exports[`PieChart [common] example testing should match snapshot(s) for 4.color-
 </svg>
 `;
 
-exports[`PieChart [common] example testing should match snapshot(s) for 5.percents 1`] = `
+exports[`PieChart [common] example testing should match snapshot(s) for 05.percents 1`] = `
 <svg
   className="lucid-PieChart"
   height={200}
@@ -2360,7 +2360,7 @@ exports[`PieChart [common] example testing should match snapshot(s) for 5.percen
 </svg>
 `;
 
-exports[`PieChart [common] example testing should match snapshot(s) for 6.small-with-no-stroke-or-hover 1`] = `
+exports[`PieChart [common] example testing should match snapshot(s) for 06.small-with-no-stroke-or-hover 1`] = `
 <svg
   className="lucid-PieChart"
   height={25}

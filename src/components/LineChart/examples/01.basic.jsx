@@ -9,8 +9,16 @@ const data = [
 	{ x: new Date('2015-01-04T00:00:00-08:00'), y: 5 },
 ];
 
+const style = {
+	paddingTop: '4rem',
+};
+
 export default createClass({
 	render() {
-		return <LineChart data={data} />;
+		return (
+			<div style={style}>
+				<LineChart data={data} width={800} />
+			</div>
+		);
 	},
 });

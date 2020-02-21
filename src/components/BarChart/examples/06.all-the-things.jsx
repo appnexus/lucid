@@ -13,25 +13,31 @@ const data = [
 const yFormatter = d => `${d / 1000}k`;
 const xFormatter = d => d.toUpperCase().slice(0, 3);
 
+const style = {
+	paddingTop: '6rem',
+};
+
 export default createClass({
 	render() {
 		return (
-			<BarChart
-				width={750}
-				data={data}
-				colorMap={{
-					apples: chartConstants.COLOR_GOOD,
-					oranges: chartConstants.COLOR_1,
-				}}
-				xAxisField='day'
-				xAxisFormatter={xFormatter}
-				xAxisTickCount={5}
-				xAxisTitle='Weekdays'
-				yAxisFields={['apples', 'oranges']}
-				yAxisFormatter={yFormatter}
-				yAxisTitle='Fruit Count'
-				yAxisTickCount={4}
-			/>
+			<div style={style}>
+				<BarChart
+					width={750}
+					data={data}
+					colorMap={{
+						apples: chartConstants.COLOR_GOOD,
+						oranges: chartConstants.COLOR_1,
+					}}
+					xAxisField='day'
+					xAxisFormatter={xFormatter}
+					xAxisTickCount={5}
+					xAxisTitle='Weekdays'
+					yAxisFields={['apples', 'oranges']}
+					yAxisFormatter={yFormatter}
+					yAxisTitle='Fruit Count'
+					yAxisTickCount={4}
+				/>
+			</div>
 		);
 	},
 });

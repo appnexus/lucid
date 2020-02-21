@@ -12,15 +12,20 @@ const data = [
 const yAxisFields = ['apples', 'oranges', 'pears'];
 const palette = chartConstants.PALETTE_MONOCHROME_2_5;
 
+const style = {
+	paddingTop: '8rem',
+};
+
 export default createClass({
 	render() {
 		return (
-			<div>
+			<div style={style}>
 				<LineChart
 					data={data}
 					yAxisFields={yAxisFields}
 					yAxisTitle='Fruit Count'
 					palette={palette}
+					width={800}
 				/>
 
 				<Legend style={{ verticalAlign: 'top' }}>
