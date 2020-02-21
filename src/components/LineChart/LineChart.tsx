@@ -802,9 +802,6 @@ class LineChart extends React.Component<ILineChartProps, ILineChartState, {}> {
 			y2AxisTooltipDataFormatter,
 			y2AxisHasPoints,
 			y2AxisIsStacked,
-			y2AxisTickCount,
-			y2AxisTitle,
-			y2AxisTitleColor,
 			y2AxisMin,
 			y2AxisMax = (y2AxisFields && y2AxisIsStacked
 				? maxByFieldsStacked(data, y2AxisFields)

@@ -38,7 +38,7 @@ interface IAxisPropsRaw extends StandardProps {
 
 	/** If you need fine grained control over the axis ticks, you can pass them
 		in this array. */
-	ticks?: (number | Date)[];
+	ticks?: Array<number | Date>;
 
 	/** Determines the spacing between each tick and its text. */
 	tickPadding: number;
