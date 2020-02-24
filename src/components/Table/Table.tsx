@@ -28,7 +28,7 @@ const {
 } = PropTypes;
 
 /** Thead <Thead>: The Table Head component */
-interface ITheadPropsRaw extends StandardProps {}
+export interface ITheadPropsRaw extends StandardProps {}
 
 type ITheadProps = Overwrite<
 	React.DetailedHTMLProps<
@@ -71,7 +71,7 @@ Thead.propTypes = {
 };
 
 /** Tbody <Tbody>: The Table Body component */
-interface ITBodyPropsRaw extends StandardProps {}
+export interface ITBodyPropsRaw extends StandardProps {}
 
 type ITBodyProps = Overwrite<
 	React.DetailedHTMLProps<
@@ -114,7 +114,7 @@ Tbody.propTypes = {
 };
 
 /** Tr <Tr>: The Table Row component */
-interface ITrPropsRaw extends StandardProps {
+export interface ITrPropsRaw extends StandardProps {
 	/** Applies disabled styles to the row. */
 	isDisabled: boolean;
 
@@ -300,7 +300,7 @@ interface ICoordinates {
 	pageY: number;
 }
 
-class Th extends React.Component<IThProps, IThState> {
+export class Th extends React.Component<IThProps, IThState> {
 	static displayName = 'Table.Th';
 
 	static defaultProps = {
@@ -619,7 +619,7 @@ class Th extends React.Component<IThProps, IThState> {
 }
 
 /** Td <td>: The Table Data Cell element */
-interface ITdProps
+export interface ITdProps
 	extends StandardProps,
 		React.DetailedHTMLProps<
 			React.HTMLAttributes<HTMLTableHeaderCellElement>,

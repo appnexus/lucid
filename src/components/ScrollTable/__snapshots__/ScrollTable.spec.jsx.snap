@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ScrollTable [common] example testing should match snapshot(s) for 1.standard 1`] = `
+exports[`ScrollTable [common] example testing should match snapshot(s) for 01.standard 1`] = `
 <div
   className="lucid-ScrollTable"
 >
@@ -1477,7 +1477,7 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 1.sta
 </div>
 `;
 
-exports[`ScrollTable [common] example testing should match snapshot(s) for 2.with-border 1`] = `
+exports[`ScrollTable [common] example testing should match snapshot(s) for 02.with-border 1`] = `
 <div
   className="lucid-ScrollTable lucid-ScrollTable-has-border"
 >
@@ -2954,7 +2954,7 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 2.wit
 </div>
 `;
 
-exports[`ScrollTable [common] example testing should match snapshot(s) for 3.set-width-and-height 1`] = `
+exports[`ScrollTable [common] example testing should match snapshot(s) for 03.set-width-and-height 1`] = `
 <div
   className="lucid-ScrollTable"
   style={
@@ -4437,7 +4437,7 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 3.set
 </div>
 `;
 
-exports[`ScrollTable [common] example testing should match snapshot(s) for 4.full-width 1`] = `
+exports[`ScrollTable [common] example testing should match snapshot(s) for 04.full-width 1`] = `
 <div
   className="lucid-ScrollTable"
 >
@@ -7124,7 +7124,7 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 4.ful
 </div>
 `;
 
-exports[`ScrollTable [common] example testing should match snapshot(s) for 5.set-table-width 1`] = `
+exports[`ScrollTable [common] example testing should match snapshot(s) for 05.set-table-width 1`] = `
 <div
   className="lucid-ScrollTable"
 >
