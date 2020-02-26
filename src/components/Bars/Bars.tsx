@@ -84,21 +84,23 @@ interface IBarsProps extends StandardProps {
 	xField: string;
 
 	/** Function to format the x data. */
-	xFormatter: func;
+	xFormatter: <T>(value: T) => T;
 
 	/** The scale for the y axis. Is required.
 	 * Must be a d3 scale. 
 	 * Lucid exposes the \`lucid.d3Scale\` library for use here.
 	 * */
-	yScale: func;
+	yScale: any;
 
 	/** The field(s) we should look up your y data by. 
 	 * Each entry represents a series. 
 	 * The actual y data should be numeric. */
-	yFields: string[];
+	yFields: number[];
 
-	/** Function to format the y data. */
-	yFormatter: func;
+	/** Function to format the y data. 
+ 		* Signature yFormatter(dataPoint[field], dataPoint),
+	*/
+	yFormatter: (dataPoints: number, dataPoint: number) => number;
 
 	/** Typically this number can be derived from the yScale. 
 	 * However when we're \`isStacked\` we need to calculate a new domain for the yScale 
@@ -112,7 +114,10 @@ interface IBarsProps extends StandardProps {
 	 * and the third value is your non-formatted y-value. 
 	 * Signature: \`(yField, yValueFormatted, yValue) => {}\`
 	 * */
-	yTooltipFormatter: func;
+	// (yField, yValueFormatted) => `${yField}: ${yValueFormatted}`,
+	yTooltipFormatter?: (yField: string, yValueFormatted: number | string, yValue: number) => {
+		[key: string]: any 
+	};
 
 	/** This will stack the data instead of grouping it. 
 	 * In order to stack the data we have to calculate a new domain for the y scale 
@@ -128,11 +133,12 @@ interface IBarsProps extends StandardProps {
 	 * This formatter will over-ride yAxisTooltipFormatter and yAxisTooltipDataFormatter. 
 	 * Signature: \`dataPoint => {}\` 
 	*/
-	renderTooltipBody: func;
+	renderTooltipBody: (dataPoint: number) => {};
 }
 
 interface IBarsState {
 
+	hoveringSeriesIndex: null | number;
 }
 
 export class Bars extends PureComponent<IBarsProps, IBarsState> {
@@ -268,7 +274,7 @@ export class Bars extends PureComponent<IBarsProps, IBarsState> {
 		`,
 	}
 
-	defaultTooltipFormatter(dataPoint) {
+	defaultTooltipFormatter(dataPoint: number) {
 		const {
 			colorMap,
 			colorOffset,
@@ -316,7 +322,7 @@ export class Bars extends PureComponent<IBarsProps, IBarsState> {
 
 	shouldComponentUpdate = (...args) => {
 		//return shallowCompare(this, ...args);
-		return shouldComponentUpdate(this, ...args);
+		return this.shouldComponentUpdate(this, ...args);
 
 	}
 
@@ -436,12 +442,76 @@ export class Bars extends PureComponent<IBarsProps, IBarsState> {
 				))}
 			</g>
 		);
-	},
-});
+	}
+};
 
-export const PureToolTip = createClass({
-	_isPrivate: true,
-	propTypes: {
+interface IPureToolTipsProps extends StandardProps {
+	data: object[];
+	height: number;
+	isExpanded: boolean;
+	onMouseEnter: func;
+	onMouseOut: func;
+	renderBody: func;
+	seriesIndex: number;
+	width: number;
+	x: number;
+	xField: string;
+	xFormatter: func;
+	y: number;
+}
+
+//export const PureToolTip = createClass({
+export const PureToolTip = (props: IPureToolTipsProps): React.ReactElement => {
+
+	const shouldComponentUpdate = (...args) => {
+		//return shallowCompare(this, ...args);
+		return shouldComponentUpdate(this, ...args);
+	}
+
+	const handleMouseEnter = () => {
+		props.onMouseEnter(props.seriesIndex);
+	}
+
+	const {
+		isExpanded,
+		height,
+		width,
+		x,
+		y,
+		seriesIndex,
+		onMouseOut,
+		renderBody,
+		data,
+		xFormatter,
+		xField,
+	} = props;
+
+	return (
+		<ToolTip isExpanded={isExpanded} flyOutMaxWidth='none' isLight={true}>
+			<ToolTip.Target elementType='g'>
+				<rect
+					className={cx('&-tooltip-hover-zone')}
+					height={height}
+					width={width}
+					x={x}
+					y={y}
+					onMouseEnter={handleMouseEnter}
+					onMouseOut={onMouseOut}
+				/>
+			</ToolTip.Target>
+
+			<ToolTip.Title>
+				{xFormatter(data[seriesIndex][xField], data[seriesIndex])}
+			</ToolTip.Title>
+
+			<ToolTip.Body>{renderBody(data[seriesIndex])}</ToolTip.Body>
+		</ToolTip>
+	);
+};
+
+PureToolTip._isPrivate: true;
+
+PureToolTip.propTypes = {
 		data: arrayOf(object),
 		height: number,
 		isExpanded: bool,
@@ -454,54 +524,7 @@ export const PureToolTip = createClass({
 		xField: string,
 		xFormatter: func,
 		y: number,
-	},
+}
 
-	shouldComponentUpdate(...args) {
-		//return shallowCompare(this, ...args);
-		return this.shouldComponentUpdate(this, ...args);
-	},
-
-	handleMouseEnter() {
-		this.props.onMouseEnter(this.props.seriesIndex);
-	},
-
-	render() {
-		const {
-			isExpanded,
-			height,
-			width,
-			x,
-			y,
-			seriesIndex,
-			onMouseOut,
-			renderBody,
-			data,
-			xFormatter,
-			xField,
-		} = this.props;
-
-		return (
-			<ToolTip isExpanded={isExpanded} flyOutMaxWidth='none' isLight={true}>
-				<ToolTip.Target elementType='g'>
-					<rect
-						className={cx('&-tooltip-hover-zone')}
-						height={height}
-						width={width}
-						x={x}
-						y={y}
-						onMouseEnter={this.handleMouseEnter}
-						onMouseOut={onMouseOut}
-					/>
-				</ToolTip.Target>
-
-				<ToolTip.Title>
-					{xFormatter(data[seriesIndex][xField], data[seriesIndex])}
-				</ToolTip.Title>
-
-				<ToolTip.Body>{renderBody(data[seriesIndex])}</ToolTip.Body>
-			</ToolTip>
-		);
-	},
-};
 
 export default Bars;
