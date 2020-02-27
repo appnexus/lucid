@@ -3,16 +3,12 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import { extractFields, stackByFields } from '../../util/chart-helpers';
-import {
-	createClass,
-	omitProps,
-	StandardProps,
-} from '../../util/component-types';
+import { omitProps, StandardProps } from '../../util/component-types';
 import * as d3Scale from 'd3-scale';
 import * as chartConstants from '../../constants/charts';
 //import shallowCompare from 'react-addons-shallow-compare';
 import Bar from '../Bar/Bar';
-import { IToolTipProps, ToolTipDumb as ToolTip } from '../ToolTip/ToolTip';
+import { ToolTipDumb as ToolTip } from '../ToolTip/ToolTip';
 import Legend from '../Legend/Legend';
 
 // memoizing to maintain referential equality across renders, for performance
@@ -23,8 +19,6 @@ const memoizedStackByFields = _.memoize(stackByFields);
 const cx = lucidClassNames.bind('&-Bars');
 
 const { arrayOf, func, number, object, bool, string } = PropTypes;
-
-type yFormatterFunction = (y: number) => string;
 
 interface IBarsProps extends StandardProps {
 	/**
@@ -468,7 +462,7 @@ interface IPureToolTipsProps extends StandardProps {
 
 	y?: number;
 
-	series: [number, number][];
+	series: Array<[number, number]>;
 
 	seriesIndex: number;
 
