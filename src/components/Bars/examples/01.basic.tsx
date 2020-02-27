@@ -37,7 +37,7 @@ const xScale = d3Scale
 
 const yScale = d3Scale
 	.scaleLinear()
-	.domain([0, yMax])
+	.domain([0, yMax as any])
 	.range([height, 0]);
 
 const style = {
