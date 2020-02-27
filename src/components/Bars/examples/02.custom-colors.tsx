@@ -22,7 +22,7 @@ const yMax = _.max(
 	_.reduce(
 		yFields,
 		(acc, field) => {
-			return acc.concat(_.map(data, field));
+			return acc.concat(_.map(data, field) as any);
 		},
 		[]
 	)
@@ -37,7 +37,7 @@ const xScale = d3Scale
 
 const yScale = d3Scale
 	.scaleLinear()
-	.domain([0, yMax])
+	.domain([0, yMax as any])
 	.range([height, 0]);
 
 const style = {
@@ -51,8 +51,8 @@ export default createClass({
 				<svg width={width} height={height}>
 					<Bars
 						data={data}
-						xScale={xScale}
-						yScale={yScale}
+						x={xScale}
+						y={yScale}
 						yFields={yFields}
 						colorMap={{
 							y0: chartConstants.COLOR_GOOD,

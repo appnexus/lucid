@@ -409,8 +409,10 @@ export class Bars extends PureComponent<IBarsProps, IBarsState> {
 								x={
 									isStacked
 										? xScale(data[seriesIndex][xAxisField] as any)
-										: //@ts-ignore
-										  innerXScale(pointsIndex as any) +
+										: // prettier-ignore
+										  //@ts-ignore
+										  innerXScale(pointsIndex) +
+										// prettier-ignore
 										  //@ts-ignore
 										  xScale(data[seriesIndex][xAxisField] as any)
 								}
@@ -429,9 +431,11 @@ export class Bars extends PureComponent<IBarsProps, IBarsState> {
 							isExpanded={hasToolTips && hoveringSeriesIndex === seriesIndex}
 							height={
 								isStacked
-									? //@ts-ignore
+									? // prettier-ignore
+									  //@ts-ignore
 									  yScale.range()[0] - yScale(_.last(series)[1])
-									: //@ts-ignore
+									: // prettier-ignore
+									  //@ts-ignore
 									  yScale.range()[0] - yScale(_.max(_.flatten(series)))
 							}
 							width={xScale.bandwidth()}
