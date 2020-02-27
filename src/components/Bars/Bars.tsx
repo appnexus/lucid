@@ -3,7 +3,11 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import { extractFields, stackByFields } from '../../util/chart-helpers';
-import { createClass, omitProps, StandardProps } from '../../util/component-types';
+import {
+	createClass,
+	omitProps,
+	StandardProps,
+} from '../../util/component-types';
 import * as d3Scale from 'd3-scale';
 import * as chartConstants from '../../constants/charts';
 //import shallowCompare from 'react-addons-shallow-compare';
@@ -20,13 +24,12 @@ const cx = lucidClassNames.bind('&-Bars');
 
 const { arrayOf, func, number, object, bool, string } = PropTypes;
 
-type yFormatterFunction = (y: number) => string; 
+type yFormatterFunction = (y: number) => string;
 
 interface IBarsProps extends StandardProps {
-
-	/** 
+	/**
 	 * De-normalized data
-	 * 	
+	 *
 	 * [
 	 * 	{ x: 'one', y0: 1, y1: 2, y2: 3, y3: 5 },
 	 * 	{ x: 'two', y0: 2, y1: 3, y2: 4, y3: 6 },
@@ -35,7 +38,7 @@ interface IBarsProps extends StandardProps {
 	 * 	{ x: 'five', y0: 4, y1: 8, y2: 9, y3: 8 },
 	 * ]
 	 */
-	data: Array<{[key: string]: string | number}>
+	data: Array<{ [key: string]: string | number }>;
 
 	/**
 	 * 	An object with human readable names for fields that  will be used for tooltips. E.g:
@@ -65,21 +68,21 @@ interface IBarsProps extends StandardProps {
 	palette: string[];
 
 	/**
-	 * You can pass in an object if you want to map fields to `lucid.chartConstants\` 
+	 * You can pass in an object if you want to map fields to `lucid.chartConstants\`
 	 * or custom colors:
 	 * {
 	 * 	'imps': COLOR_0,
 	 * 	'rev': COLOR_3,
 	 * 	'clicks': '#abc123',
 	 * }
-	 * 
-	*/
+	 *
+	 */
 	colorMap?: object;
 
-	/** The scale for the x axis. 
-	 * Must be a d3 band scale. 
+	/** The scale for the x axis.
+	 * Must be a d3 band scale.
 	 * Lucid exposes the\`lucid.d3Scale.scaleBand\` library for use here.
-	*/
+	 */
 	//xScale: (x: string) => number | undefined;
 	xScale: d3Scale.ScaleBand<string> | d3Scale.ScalePoint<string>;
 
@@ -90,31 +93,36 @@ interface IBarsProps extends StandardProps {
 	xAxisFormatter: (d: Date) => string;
 
 	/** The scale for the y axis. Is required.
-	 * Must be a d3 scale. 
+	 * Must be a d3 scale.
 	 * Lucid exposes the \`lucid.d3Scale\` library for use here.
 	 * */
-	yScale: d3Scale.ScaleBand<string | number> | d3Scale.ScalePoint<string | number>;
+	yScale:
+		| d3Scale.ScaleBand<string | number>
+		| d3Scale.ScalePoint<string | number>;
 
-	/** The field(s) we should look up your y data by. 
-	 * Each entry represents a series. 
+	/** The field(s) we should look up your y data by.
+	 * Each entry represents a series.
 	 * The actual y data should be numeric. */
 	yFields: string[];
 
-	/** Function to format the y data. 
- 		* Signature yFormatter(dataPoint[field], dataPoint),
-	*/
-	yAxisFormatter: (y: string | number, dataPoint: {[key: string]: string | number}) => string;
+	/** Function to format the y data.
+	 * Signature yFormatter(dataPoint[field], dataPoint),
+	 */
+	yAxisFormatter: (
+		y: string | number,
+		dataPoint: { [key: string]: string | number }
+	) => string;
 
-	/** Typically this number can be derived from the yScale. 
-	 * However when we're \`isStacked\` we need to calculate a new domain for the yScale 
-	 * based on the sum of the data. 
+	/** Typically this number can be derived from the yScale.
+	 * However when we're \`isStacked\` we need to calculate a new domain for the yScale
+	 * based on the sum of the data.
 	 * If you need explicit control of the y max when stacking, pass it in here. */
 	yStackedMax: number;
 
-	/** An optional function used to format your y axis titles and data in the tooltips. 
-	 * The first value is the name of your y field, 
-	 * the second value is your post-formatted y value, 
-	 * and the third value is your non-formatted y-value. 
+	/** An optional function used to format your y axis titles and data in the tooltips.
+	 * The first value is the name of your y field,
+	 * the second value is your post-formatted y value,
+	 * and the third value is your non-formatted y-value.
 	 * Signature: \`(yField, yValueFormatted, yValue) => {}\`
 	 * */
 	// (yField, yValueFormatted) => `${yField}: ${yValueFormatted}`,
@@ -124,42 +132,40 @@ interface IBarsProps extends StandardProps {
 		yValue: number
 	) => string | number;
 
-	/** This will stack the data instead of grouping it. 
-	 * In order to stack the data we have to calculate a new domain for the y scale 
+	/** This will stack the data instead of grouping it.
+	 * In order to stack the data we have to calculate a new domain for the y scale
 	 * that is based on the \`sum\` of the data. */
-	isStacked: boolean;	
+	isStacked: boolean;
 
 	/** Sometimes you might not want the colors to start rotating at the blue color,
 	 * this number will be added the bar index in determining which color the bars are. */
 	colorOffset: number;
-		
-	/** An optional function used to format the entire tooltip body. 
-	 * The only arg is the associated data point. 
-	 * This formatter will over-ride yAxisTooltipFormatter and yAxisTooltipDataFormatter. 
-	 * Signature: \`dataPoint => {}\` 
-	*/
+
+	/** An optional function used to format the entire tooltip body.
+	 * The only arg is the associated data point.
+	 * This formatter will over-ride yAxisTooltipFormatter and yAxisTooltipDataFormatter.
+	 * Signature: \`dataPoint => {}\`
+	 */
 	renderTooltipBody: (dataPoint: number) => {};
 }
 
 interface IBarsState {
-
 	hoveringSeriesIndex: null | number;
 }
 
 export class Bars extends PureComponent<IBarsProps, IBarsState> {
-
 	static displayName = 'Bars';
 
 	static peek = {
-			description: `
+		description: `
 				*For use within an \`svg\`*
 
 				Bars are typically used to represent categorical data and can be
 				stacked or grouped.
 			`,
-			categories: ['visualizations', 'chart primitives'],
-			madeFrom: ['Bar', 'ToolTip', 'Legend'],
-		}
+		categories: ['visualizations', 'chart primitives'],
+		madeFrom: ['Bar', 'ToolTip', 'Legend'],
+	};
 
 	static propTypes = {
 		className: string`
@@ -277,9 +283,9 @@ export class Bars extends PureComponent<IBarsProps, IBarsState> {
 			and yAxisTooltipDataFormatter. Signature:
 			\`dataPoint => {}\`
 		`,
-	}
+	};
 
-	defaultTooltipFormatter(dataPoint: {[key: string]: number}) {
+	defaultTooltipFormatter(dataPoint: { [key: string]: number }) {
 		const {
 			colorMap,
 			colorOffset,
@@ -319,29 +325,29 @@ export class Bars extends PureComponent<IBarsProps, IBarsState> {
 		this.setState({
 			hoveringSeriesIndex,
 		});
-	}
+	};
 
 	handleMouseOut = () => {
 		this.setState({ hoveringSeriesIndex: null });
-	}
+	};
 
 	static defaultProps = {
-			hasToolTips: true,
-			xAxisField: 'x',
-			xAxisFormatter: _.identity,
-			yFields: ['y'],
-			yAxisFormatter: _.identity,
-			yAxisTooltipFormatter: (yField: string, yValueFormatted: any) =>
-				`${yField}: ${yValueFormatted}`,
-			renderTooltipBody: null,
-			isStacked: false,
-			colorOffset: 0,
-			palette: chartConstants.PALETTE_7,
+		hasToolTips: true,
+		xAxisField: 'x',
+		xAxisFormatter: _.identity,
+		yFields: ['y'],
+		yAxisFormatter: _.identity,
+		yAxisTooltipFormatter: (yField: string, yValueFormatted: any) =>
+			`${yField}: ${yValueFormatted}`,
+		renderTooltipBody: null,
+		isStacked: false,
+		colorOffset: 0,
+		palette: chartConstants.PALETTE_7,
 	};
 
 	state = {
-		hoveringSeriesIndex: null
-	}
+		hoveringSeriesIndex: null,
+	};
 
 	render() {
 		const {
@@ -391,7 +397,10 @@ export class Bars extends PureComponent<IBarsProps, IBarsState> {
 		}
 
 		return (
-			<g {...omitProps(passThroughs, undefined, _.keys(Bars.propTypes))} className={cx(className, '&')}>
+			<g
+				{...omitProps(passThroughs, undefined, _.keys(Bars.propTypes))}
+				className={cx(className, '&')}
+			>
 				{_.map(transformedData, (series, seriesIndex) => (
 					<g key={seriesIndex}>
 						{_.map(series, ([start, end], pointsIndex) => (
@@ -400,9 +409,9 @@ export class Bars extends PureComponent<IBarsProps, IBarsState> {
 								x={
 									isStacked
 										? xScale(data[seriesIndex][xAxisField] as any)
-										//@ts-ignore
-										: innerXScale(pointsIndex as any) +
-										//@ts-ignore
+										: //@ts-ignore
+										  innerXScale(pointsIndex as any) +
+										  //@ts-ignore
 										  xScale(data[seriesIndex][xAxisField] as any)
 								}
 								y={yScale(end)}
@@ -420,13 +429,13 @@ export class Bars extends PureComponent<IBarsProps, IBarsState> {
 							isExpanded={hasToolTips && hoveringSeriesIndex === seriesIndex}
 							height={
 								isStacked
-									//@ts-ignore
-									? yScale.range()[0] - yScale(_.last(series)[1])
-									//@ts-ignore
-									: yScale.range()[0] - yScale(_.max(_.flatten(series)))
+									? //@ts-ignore
+									  yScale.range()[0] - yScale(_.last(series)[1])
+									: //@ts-ignore
+									  yScale.range()[0] - yScale(_.max(_.flatten(series)))
 							}
 							width={xScale.bandwidth()}
-							x={xScale(data[seriesIndex][xAxisField] as any) }
+							x={xScale(data[seriesIndex][xAxisField] as any)}
 							y={yScale(_.max(_.flatten(series)) as any)}
 							series={series}
 							seriesIndex={seriesIndex}
@@ -442,46 +451,64 @@ export class Bars extends PureComponent<IBarsProps, IBarsState> {
 			</g>
 		);
 	}
-};
+}
 
 interface IPureToolTipsProps extends StandardProps {
-
 	isExpanded: boolean;
-	
+
 	height: number;
-	
+
 	width: number;
-	
+
 	x?: number;
-	
+
 	y?: number;
-	
+
 	series: [number, number][];
-	
+
 	seriesIndex: number;
-	
+
 	onMouseEnter: (seriesIndex: number) => void;
 	//onMouseEnter: (event: MouseEvent<SVGRectElement, MouseEvent>) => void
-	
-	onMouseOut?: ((event: React.MouseEvent<SVGRectElement, MouseEvent>) => void) | undefined;
-	
+
+	onMouseOut?:
+		| ((event: React.MouseEvent<SVGRectElement, MouseEvent>) => void)
+		| undefined;
+
 	xAxisFormatter: (d: Date, seriesIndex: number) => string;
-	
+
 	xAxisField: string;
-	
+
 	renderBody: (dataPoint: number) => {};
-	
-	data: Array<{ [key: string]: string | number; }>;
+
+	data: Array<{ [key: string]: string | number }>;
 }
 
 export class PureToolTip extends PureComponent<IPureToolTipsProps> {
+	static displayName = 'PureToolTip';
+
+	static _isPrivate = true;
+
+	static propTypes = {
+		data: arrayOf(object),
+		height: number,
+		isExpanded: bool,
+		onMouseEnter: func,
+		onMouseOut: func,
+		renderBody: func,
+		seriesIndex: number,
+		width: number,
+		x: number,
+		xField: string,
+		xAxisFormatter: func,
+		y: number,
+	};
 
 	handleMouseEnter = () => {
 		this.props.onMouseEnter(this.props.seriesIndex);
-	}
+	};
 
-	render() {
-
+	render(): React.ReactNode {
 		const {
 			isExpanded,
 			height,
@@ -495,47 +522,32 @@ export class PureToolTip extends PureComponent<IPureToolTipsProps> {
 			xAxisFormatter,
 			xAxisField,
 		} = this.props;
-		
+
 		return (
 			<ToolTip isExpanded={isExpanded} flyOutMaxWidth='none' isLight={true}>
-			<ToolTip.Target elementType='g'>
-				<rect
-					className={cx('&-tooltip-hover-zone')}
-					height={height}
-					width={width}
-					x={x}
-					y={y}
-					onMouseEnter={this.handleMouseEnter}
-					onMouseOut={onMouseOut}
+				<ToolTip.Target elementType='g'>
+					<rect
+						className={cx('&-tooltip-hover-zone')}
+						height={height}
+						width={width}
+						x={x}
+						y={y}
+						onMouseEnter={this.handleMouseEnter}
+						onMouseOut={onMouseOut}
 					/>
-			</ToolTip.Target>
+				</ToolTip.Target>
 
-			<ToolTip.Title>
-				{xAxisFormatter(data[seriesIndex][xAxisField] as any, data[seriesIndex] as any)}
-			</ToolTip.Title>
+				<ToolTip.Title>
+					{xAxisFormatter(
+						data[seriesIndex][xAxisField] as any,
+						data[seriesIndex] as any
+					)}
+				</ToolTip.Title>
 
-			<ToolTip.Body>{renderBody(data[seriesIndex] as any)}</ToolTip.Body>
-		</ToolTip>
-	);
+				<ToolTip.Body>{renderBody(data[seriesIndex] as any)}</ToolTip.Body>
+			</ToolTip>
+		);
 	}
-};
-
-
-PureToolTip._isPrivate: true;
-
-PureToolTip.propTypes = {
-		data: arrayOf(object),
-		height: number,
-		isExpanded: bool,
-		onMouseEnter: func,
-		onMouseOut: func,
-		renderBody: func,
-		seriesIndex: number,
-		width: number,
-		x: number,
-		xField: string,
-		xAxisFormatter: func,
-		y: number,
 }
 
 export default PureToolTip;
