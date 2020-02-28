@@ -48,7 +48,8 @@ exports[`BarChart [common] example testing should match snapshot(s) for 01.basic
   <g
     transform="translate(80, 20)"
   >
-    <PureToolTip
+    <Bars
+      colorOffset={0}
       data={
         Array [
           Object {
@@ -148,7 +149,8 @@ exports[`BarChart [common] example testing should match snapshot(s) for 03.group
   <g
     transform="translate(80, 10)"
   >
-    <PureToolTip
+    <Bars
+      colorOffset={0}
       data={
         Array [
           Object {
@@ -283,7 +285,8 @@ exports[`BarChart [common] example testing should match snapshot(s) for 04.group
   <g
     transform="translate(80, 10)"
   >
-    <PureToolTip
+    <Bars
+      colorOffset={0}
       data={
         Array [
           Object {
@@ -384,7 +387,8 @@ exports[`BarChart [common] example testing should match snapshot(s) for 05.limit
   <g
     transform="translate(80, 10)"
   >
-    <PureToolTip
+    <Bars
+      colorOffset={0}
       data={
         Array [
           Object {
@@ -547,13 +551,14 @@ exports[`BarChart [common] example testing should match snapshot(s) for 06.all-t
   <g
     transform="translate(80, 10)"
   >
-    <PureToolTip
+    <Bars
       colorMap={
         Object {
           "apples": "color-chart-good",
           "oranges": "color-chart-1",
         }
       }
+      colorOffset={0}
       data={
         Array [
           Object {
@@ -658,7 +663,8 @@ exports[`BarChart [common] example testing should match snapshot(s) for 07.stack
   <g
     transform="translate(80, 10)"
   >
-    <PureToolTip
+    <Bars
+      colorOffset={0}
       data={
         Array [
           Object {
@@ -762,7 +768,8 @@ exports[`BarChart [common] example testing should match snapshot(s) for 08.unfor
   <g
     transform="translate(80, 10)"
   >
-    <PureToolTip
+    <Bars
+      colorOffset={0}
       data={
         Array [
           Object {
@@ -862,7 +869,8 @@ exports[`BarChart [common] example testing should match snapshot(s) for 09.forma
   <g
     transform="translate(80, 10)"
   >
-    <PureToolTip
+    <Bars
+      colorOffset={0}
       data={
         Array [
           Object {
@@ -962,7 +970,8 @@ exports[`BarChart [common] example testing should match snapshot(s) for 10.forma
   <g
     transform="translate(80, 10)"
   >
-    <PureToolTip
+    <Bars
+      colorOffset={0}
       data={
         Array [
           Object {
@@ -1144,7 +1153,8 @@ exports[`BarChart [common] example testing should match snapshot(s) for 13.many-
   <g
     transform="translate(300, 10)"
   >
-    <PureToolTip
+    <Bars
+      colorOffset={0}
       data={
         Array [
           Object {

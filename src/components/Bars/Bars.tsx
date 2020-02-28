@@ -78,7 +78,10 @@ interface IBarsProps extends StandardProps {
 	 * Lucid exposes the\`lucid.d3Scale.scaleBand\` library for use here.
 	 */
 	//xScale: (x: string) => number | undefined;
-	xScale: d3Scale.ScaleBand<string> | d3Scale.ScalePoint<string>;
+	xScale:
+		| d3Scale.ScaleBand<string>
+		| d3Scale.ScaleBand<number>
+		| d3Scale.ScalePoint<string>;
 
 	/** The field we should look up your x data by.*/
 	xField: string;
@@ -279,7 +282,7 @@ export class Bars extends PureComponent<IBarsProps, IBarsState> {
 		`,
 	};
 
-	defaultTooltipFormatter(dataPoint: { [key: string]: number }) {
+	defaultTooltipFormatter = (dataPoint: { [key: string]: number }) => {
 		const {
 			colorMap,
 			colorOffset,
@@ -313,7 +316,7 @@ export class Bars extends PureComponent<IBarsProps, IBarsState> {
 				))}
 			</Legend>
 		);
-	}
+	};
 
 	handleMouseEnter = (hoveringSeriesIndex: number) => {
 		this.setState({
@@ -451,7 +454,7 @@ export class Bars extends PureComponent<IBarsProps, IBarsState> {
 	}
 }
 
-interface IPureToolTipsProps extends StandardProps {
+export interface IPureToolTipsProps extends StandardProps {
 	isExpanded: boolean;
 
 	height: number;
@@ -549,4 +552,4 @@ export class PureToolTip extends PureComponent<IPureToolTipsProps> {
 	}
 }
 
-export default PureToolTip;
+export default Bars;
