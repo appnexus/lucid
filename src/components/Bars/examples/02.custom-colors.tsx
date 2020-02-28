@@ -51,9 +51,7 @@ export default createClass({
 				<svg width={width} height={height}>
 					<Bars
 						data={data}
-						//@ts-ignore
 						x={xScale}
-						//@ts-ignore
 						y={yScale}
 						yFields={yFields}
 						colorMap={{

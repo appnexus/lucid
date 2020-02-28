@@ -537,8 +537,9 @@ export class PureToolTip extends PureComponent<IPureToolTipsProps> {
 
 				<ToolTip.Title>
 					{xFormatter(
-						data[seriesIndex][xField] as any,
-						data[seriesIndex] as any
+						//@ts-ignore
+						data[seriesIndex][xField],
+						data[seriesIndex]
 					)}
 				</ToolTip.Title>
 
