@@ -65,4 +65,9 @@ DotsIcon.propTypes = {
 	`,
 };
 
+DotsIcon.defaultProps = {
+	...Icon.defaultProps,
+	direction: Orientation.horizontal,
+};
+
 export default DotsIcon;
