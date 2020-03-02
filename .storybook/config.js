@@ -29,6 +29,7 @@ addParameters({
 		page: DocsPage,
 		getPropDefs,
 	},
+	chromatic: { disable: true },
 });
 
 configure(loadStories, module);
