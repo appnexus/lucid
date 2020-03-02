@@ -61,7 +61,7 @@ DotsIcon.peek = {
 DotsIcon.propTypes = {
 	...iconPropTypes,
 	direction: oneOf(_.values(Orientation))`
-		Sets the orientation of how the dots are displayed. 
+		Sets the orientation of how the dots are displayed. Defaults to 'horizontal'. 
 	`,
 };
 
