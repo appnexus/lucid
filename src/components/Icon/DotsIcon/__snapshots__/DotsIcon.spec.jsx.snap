@@ -272,3 +272,276 @@ exports[`DotsIcon [common] example testing should match snapshot(s) for 1.defaul
   />
 </Icon>
 `;
+
+exports[`DotsIcon [common] example testing should match snapshot(s) for 1.default 8`] = `
+<Icon
+  aspectRatio="xMidYMid meet"
+  className="lucid-DotsIcon"
+  color="primary"
+  isClickable={false}
+  isDisabled={false}
+  onClick={[Function]}
+  onSelect={[Function]}
+  size={16}
+  style={
+    Object {
+      "display": "block",
+      "margin": "10px",
+    }
+  }
+  viewBox="0 0 16 16"
+>
+  <circle
+    className="lucid-DotsIcon-color-primary"
+    cx="8"
+    cy="8"
+    r="1"
+  />
+  <circle
+    className="lucid-DotsIcon-color-primary"
+    cx="8"
+    cy="14.5"
+    r="1"
+  />
+  <circle
+    className="lucid-DotsIcon-color-primary"
+    cx="8"
+    cy="1.5"
+    r="1"
+  />
+</Icon>
+`;
+
+exports[`DotsIcon [common] example testing should match snapshot(s) for 1.default 9`] = `
+<Icon
+  aspectRatio="xMidYMid meet"
+  className="lucid-DotsIcon"
+  color="secondary-one"
+  isClickable={false}
+  isDisabled={false}
+  onClick={[Function]}
+  onSelect={[Function]}
+  size={16}
+  style={
+    Object {
+      "display": "block",
+      "margin": "10px",
+    }
+  }
+  viewBox="0 0 16 16"
+>
+  <circle
+    className="lucid-DotsIcon-color-secondary-one"
+    cx="8"
+    cy="8"
+    r="1"
+  />
+  <circle
+    className="lucid-DotsIcon-color-secondary-one"
+    cx="8"
+    cy="14.5"
+    r="1"
+  />
+  <circle
+    className="lucid-DotsIcon-color-secondary-one"
+    cx="8"
+    cy="1.5"
+    r="1"
+  />
+</Icon>
+`;
+
+exports[`DotsIcon [common] example testing should match snapshot(s) for 1.default 10`] = `
+<Icon
+  aspectRatio="xMidYMid meet"
+  className="lucid-DotsIcon"
+  color="secondary-two"
+  isClickable={false}
+  isDisabled={false}
+  onClick={[Function]}
+  onSelect={[Function]}
+  size={16}
+  style={
+    Object {
+      "display": "block",
+      "margin": "10px",
+    }
+  }
+  viewBox="0 0 16 16"
+>
+  <circle
+    className="lucid-DotsIcon-color-secondary-two"
+    cx="8"
+    cy="8"
+    r="1"
+  />
+  <circle
+    className="lucid-DotsIcon-color-secondary-two"
+    cx="8"
+    cy="14.5"
+    r="1"
+  />
+  <circle
+    className="lucid-DotsIcon-color-secondary-two"
+    cx="8"
+    cy="1.5"
+    r="1"
+  />
+</Icon>
+`;
+
+exports[`DotsIcon [common] example testing should match snapshot(s) for 1.default 11`] = `
+<Icon
+  aspectRatio="xMidYMid meet"
+  className="lucid-DotsIcon"
+  color="secondary-three"
+  isClickable={false}
+  isDisabled={false}
+  onClick={[Function]}
+  onSelect={[Function]}
+  size={16}
+  style={
+    Object {
+      "display": "block",
+      "margin": "10px",
+    }
+  }
+  viewBox="0 0 16 16"
+>
+  <circle
+    className="lucid-DotsIcon-color-secondary-three"
+    cx="8"
+    cy="8"
+    r="1"
+  />
+  <circle
+    className="lucid-DotsIcon-color-secondary-three"
+    cx="8"
+    cy="14.5"
+    r="1"
+  />
+  <circle
+    className="lucid-DotsIcon-color-secondary-three"
+    cx="8"
+    cy="1.5"
+    r="1"
+  />
+</Icon>
+`;
+
+exports[`DotsIcon [common] example testing should match snapshot(s) for 1.default 12`] = `
+<Icon
+  aspectRatio="xMidYMid meet"
+  className="lucid-DotsIcon"
+  color="success"
+  isClickable={false}
+  isDisabled={false}
+  onClick={[Function]}
+  onSelect={[Function]}
+  size={16}
+  style={
+    Object {
+      "display": "block",
+      "margin": "10px",
+    }
+  }
+  viewBox="0 0 16 16"
+>
+  <circle
+    className="lucid-DotsIcon-color-success"
+    cx="8"
+    cy="8"
+    r="1"
+  />
+  <circle
+    className="lucid-DotsIcon-color-success"
+    cx="8"
+    cy="14.5"
+    r="1"
+  />
+  <circle
+    className="lucid-DotsIcon-color-success"
+    cx="8"
+    cy="1.5"
+    r="1"
+  />
+</Icon>
+`;
+
+exports[`DotsIcon [common] example testing should match snapshot(s) for 1.default 13`] = `
+<Icon
+  aspectRatio="xMidYMid meet"
+  className="lucid-DotsIcon"
+  color="neutral-dark"
+  isClickable={false}
+  isDisabled={false}
+  onClick={[Function]}
+  onSelect={[Function]}
+  size={16}
+  style={
+    Object {
+      "display": "block",
+      "margin": "10px",
+    }
+  }
+  viewBox="0 0 16 16"
+>
+  <circle
+    className="lucid-DotsIcon-color-neutral-dark"
+    cx="8"
+    cy="8"
+    r="1"
+  />
+  <circle
+    className="lucid-DotsIcon-color-neutral-dark"
+    cx="8"
+    cy="14.5"
+    r="1"
+  />
+  <circle
+    className="lucid-DotsIcon-color-neutral-dark"
+    cx="8"
+    cy="1.5"
+    r="1"
+  />
+</Icon>
+`;
+
+exports[`DotsIcon [common] example testing should match snapshot(s) for 1.default 14`] = `
+<Icon
+  aspectRatio="xMidYMid meet"
+  className="lucid-DotsIcon"
+  color="neutral-light"
+  isClickable={false}
+  isDisabled={false}
+  onClick={[Function]}
+  onSelect={[Function]}
+  size={16}
+  style={
+    Object {
+      "display": "block",
+      "margin": "10px",
+    }
+  }
+  viewBox="0 0 16 16"
+>
+  <circle
+    className="lucid-DotsIcon-color-neutral-light"
+    cx="8"
+    cy="8"
+    r="1"
+  />
+  <circle
+    className="lucid-DotsIcon-color-neutral-light"
+    cx="8"
+    cy="14.5"
+    r="1"
+  />
+  <circle
+    className="lucid-DotsIcon-color-neutral-light"
+    cx="8"
+    cy="1.5"
+    r="1"
+  />
+</Icon>
+`;
