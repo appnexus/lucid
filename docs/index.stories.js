@@ -24,8 +24,7 @@ import '../src/index.less';
 import '../src/styles/master.less';
 
 if (!isChromatic()) {
-	// The exact method to do this will depend on your animation techniques.
-	require('./production-only.less');
+	require('./xandr-font-faces.less');
 }
 
 import './index.less'; // very minimal overrides
