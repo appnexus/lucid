@@ -46,13 +46,6 @@ export default createClass({
 	render() {
 		return (
 			<section>
-				<p>
-					<em>
-						(Use the styles on the parent container of{' '}
-						<code>RadioButtonLabeled</code> components to ensure only the radio
-						buttons and their labels are clickable)
-					</em>
-				</p>
 				<span
 					style={{
 						display: 'inline-flex',

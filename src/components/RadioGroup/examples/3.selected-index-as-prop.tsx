@@ -10,12 +10,6 @@ export default createClass({
 	render() {
 		return (
 			<section>
-				<p>
-					<em>
-						(Use the styles on the <code>RadioGroup</code> component to ensure
-						only the radio buttons and theirs labels are clickable)
-					</em>
-				</p>
 				<RadioGroup
 					name='name'
 					selectedIndex={3}
