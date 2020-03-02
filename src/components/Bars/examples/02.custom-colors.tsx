@@ -51,8 +51,8 @@ export default createClass({
 				<svg width={width} height={height}>
 					<Bars
 						data={data}
-						x={xScale}
-						y={yScale}
+						xScale={xScale}
+						yScale={yScale}
 						yFields={yFields}
 						colorMap={{
 							y0: chartConstants.COLOR_GOOD,

@@ -8,7 +8,7 @@ import { Bars, d3Scale } from '../../../index';
 const width = 750;
 const height = 400;
 
-const data = [
+const data: Array<{ [key: string]: string | number }> = [
 	{ x: 'one', y0: 1, y1: 2, y2: 3, y3: 5 },
 	{ x: 'two', y0: 2, y1: 3, y2: 4, y3: 6 },
 	{ x: 'three', y0: 2, y1: 4, y2: 5, y3: 6 },
@@ -21,8 +21,8 @@ const yFields = ['y0', 'y1', 'y2', 'y3'];
 const yMax = _.max(
 	_.reduce(
 		yFields,
-		(acc, field) => {
-			return acc.concat(_.map(data, field));
+		(acc: number[], field: string) => {
+			return acc.concat(_.map(data, field) as number[]);
 		},
 		[]
 	)
@@ -30,7 +30,7 @@ const yMax = _.max(
 
 const xScale = d3Scale
 	.scaleBand()
-	.domain(_.map(data, 'x'))
+	.domain(_.map(data, 'x') as string[])
 	.range([0, width])
 	.round(true)
 	.paddingInner(0.1);

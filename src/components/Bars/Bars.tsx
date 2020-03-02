@@ -41,7 +41,7 @@ interface IBarsProps extends StandardProps {
 	 * 		imps: 'Impressions',
 	 * 	}
 	 */
-	legend: object;
+	legend?: object;
 
 	/** Show tool tips on hover. Default is true. */
 	hasToolTips: boolean;
@@ -95,7 +95,8 @@ interface IBarsProps extends StandardProps {
 	 * */
 	yScale:
 		| d3Scale.ScaleBand<string | number>
-		| d3Scale.ScalePoint<string | number>;
+		| d3Scale.ScalePoint<string | number>
+		| d3Scale.ScaleLinear<number, number>;
 
 	/** The field(s) we should look up your y data by.
 	 * Each entry represents a series.
@@ -114,7 +115,7 @@ interface IBarsProps extends StandardProps {
 	 * However when we're \`isStacked\` we need to calculate a new domain for the yScale
 	 * based on the sum of the data.
 	 * If you need explicit control of the y max when stacking, pass it in here. */
-	yStackedMax: number;
+	yStackedMax?: number;
 
 	/** An optional function used to format your y axis titles and data in the tooltips.
 	 * The first value is the name of your y field,
@@ -387,7 +388,7 @@ export class Bars extends PureComponent<IBarsProps, IBarsState> {
 		// the various group's y data
 		if (isStacked) {
 			yScale.domain([
-				yScale.domain()[0],
+				yScale.domain()[0] as any,
 				//@ts-ignore
 				yStackedMax || _.max(_.map(transformedData, x => _.last(_.last(x)))),
 			]);
