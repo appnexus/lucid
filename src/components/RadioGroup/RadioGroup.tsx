@@ -209,12 +209,24 @@ RadioGroup.propTypes = {
 
 RadioGroup.peek = {
 	description: `
-				This is a group of related radio buttons whose values are mutually
-				exclusive and one whom must be selected any given moment in time.
-
-				Any props that are not explicitly defined in \`propTypes\` are spread
-				onto the root element.
-			`,
+		This is a composite of the \`RadioButton\` component and the native
+		\`label\` element.
+`,
+	notes: {
+		overview: `
+			A round two-state toggle with a label that explains the action or selection. This is a composite of \`RadioButton\` and the native
+			\`label\` element.		`,
+		intendedUse: `
+			- Use radio button to allow users to select one item. Commonly used to select filters or settings. For interactions where users can select mutiple options, use \`CheckboxLabeled\`. 
+			- Use radio buttons for 2-3 options where you want to expose all options.
+			- Use \`SingleSelect\` for 3-10 options where it is not a priority to expose all options.
+			- Use \`RadioGroup\` for horizontal lists of options. Use \`RadioButtonLabeled\` for vertical lists of options.
+	`,
+		technicalRecommendations: `
+			- Use the styles on the parent container of \`RadioGroup\` to ensure only the radio buttons and their labels are clickable.
+			- Any props that are not explicitly defined in \`propTypes\` are passed to the native radio button control.
+		`,
+},
 	categories: ['controls', 'toggles'],
 	madeFrom: ['RadioButton'],
 };
