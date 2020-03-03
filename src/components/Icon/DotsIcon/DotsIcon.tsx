@@ -24,7 +24,7 @@ export const DotsIcon = ({
 	color = Color.primary,
 	...passThroughs
 }: IDotsIconProps) => {
-	const isVerticalOrientation = _.isEqual(direction, Orientation.vertical);
+	const isVerticalOrientation = direction === Orientation.vertical;
 	const leftOrTopPosition = {
 		cx: isVerticalOrientation ? '8' : '14.5',
 		cy: isVerticalOrientation ? '14.5' : '8',
