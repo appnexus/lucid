@@ -9,22 +9,17 @@ import PropTypes from 'react-peek/prop-types';
 const cx = lucidClassNames.bind('&-DotsIcon');
 
 const { oneOf } = PropTypes;
-
-enum Orientation {
-	vertical = 'vertical',
-	horizontal = 'horizontal'
-}
 interface IDotsIconProps extends IIconProps {
-	direction?: keyof typeof Orientation;
+	direction?: 'vertical' | 'horizontal';
 }
 
 export const DotsIcon = ({
 	className,
-	direction = Orientation.horizontal,
+	direction = 'horizontal',
 	color = Color.primary,
 	...passThroughs
 }: IDotsIconProps) => {
-	const isVerticalOrientation = direction === Orientation.vertical;
+	const isVerticalOrientation = direction === 'vertical';
 	const leftOrTopPosition = {
 		cx: isVerticalOrientation ? '8' : '14.5',
 		cy: isVerticalOrientation ? '14.5' : '8',
@@ -60,14 +55,14 @@ DotsIcon.peek = {
 
 DotsIcon.propTypes = {
 	...iconPropTypes,
-	direction: oneOf(_.values(Orientation))`
+	direction: oneOf(['vertical', 'horizontal'])`
 		Sets the orientation of how the dots are displayed. Defaults to 'horizontal'. 
 	`,
 };
 
 DotsIcon.defaultProps = {
 	...Icon.defaultProps,
-	direction: Orientation.horizontal,
+	direction: 'horizontal',
 };
 
 export default DotsIcon;
