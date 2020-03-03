@@ -19,7 +19,7 @@ const Cell = (_props: IResponsiveGridCellProps): null => null;
 Cell.displayName = 'ResponsiveGrid.Cell';
 Cell.peek = {
 	description: `
-		Renders a \`<span>\` as the grid cell
+		Renders a \`<article>\` as the grid cell
 	`,
 };
 
@@ -65,21 +65,18 @@ export class ResponsiveGrid extends React.Component<IResponsiveGridProps> {
 	};
 
 	getColumnLayout = (numberOfColumns: number) => {
-		const cellProps = _.map(
+		const cellProps: IResponsiveGridCellProps[] = _.map(
 			findTypes(this.props, ResponsiveGridWrapper.Cell),
 			'props'
 		);
 
 		const columns = _.reduce(
-			/* We use ts-ignore below since the typescript compiler pattern matches this _.map
-			 to an array of booleans */
 			_.map(cellProps, (props: IResponsiveGridCellProps, key: number) => (
 				<article key={key} className={cx('&-Cell')}>
 					{props.children}
 				</article>
 			)),
 			(columns: React.ReactElement[][], cell, idx: number) => {
-				//@ts-ignore
 				columns[idx % numberOfColumns].push(cell);
 				return columns;
 			},
@@ -92,9 +89,9 @@ export class ResponsiveGrid extends React.Component<IResponsiveGridProps> {
 					'&-one-column': numberOfColumns === 1,
 				})}
 			>
-				{_.map(columns, (col, key) => {
+				{_.map(columns, (col, index) => {
 					return (
-						<div key={key} className={cx('&-Column')}>
+						<div key={index} className={cx('&-Column')}>
 							{col}
 						</div>
 					);
