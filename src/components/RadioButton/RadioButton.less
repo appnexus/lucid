@@ -20,6 +20,7 @@
 	position: relative;
 	user-select: none;
 	width: @RadioButton-size;
+	align-self: flex-start;
 
 	&-is-disabled {
 		cursor: not-allowed;
@@ -80,7 +81,7 @@
 
 	&-is-disabled&-is-selected &-visualization-container,
 	&-is-disabled&-is-selected &-visualization-dot {
-		.opacity(.5);
+		.opacity(0.5);
 	}
 
 	&-is-disabled&-is-selected:hover &-visualization-container {
@@ -100,7 +101,7 @@
 		border-color: @color-primary;
 
 		&:hover {
-			.opacity(.5)
+			.opacity(0.5);
 		}
 	}
 
@@ -108,4 +109,3 @@
 		.opacity(1);
 	}
 }
-

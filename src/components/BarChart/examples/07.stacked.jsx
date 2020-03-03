@@ -8,10 +8,14 @@ const data = [
 	{ x: 'Wednesday', apples: 5, pears: 15, peaches: 5 },
 ];
 
+const style = {
+	paddingTop: '7rem',
+};
+
 export default createClass({
 	render() {
 		return (
-			<div>
+			<div style={style}>
 				<BarChart
 					width={750}
 					data={data}

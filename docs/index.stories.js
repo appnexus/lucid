@@ -18,9 +18,15 @@ import SyntaxHighlighter, {
 import jsx from 'react-syntax-highlighter/languages/prism/jsx';
 import okaidia from 'react-syntax-highlighter/styles/prism/okaidia';
 import ColorPalette from './color-palette';
+import isChromatic from 'storybook-chromatic/isChromatic';
 
 import '../src/index.less';
 import '../src/styles/master.less';
+
+if (!isChromatic()) {
+	require('./xandr-font-faces.less');
+}
+
 import './index.less'; // very minimal overrides
 
 registerLanguage('jsx', jsx);

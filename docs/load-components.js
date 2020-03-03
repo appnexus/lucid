@@ -14,12 +14,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Accordion/examples',
 			true,
-			/\.tsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Accordion/examples',
 			true,
-			/\.tsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 	{
@@ -30,12 +30,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Autocomplete/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Autocomplete/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 	{
@@ -44,12 +44,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Axis/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Axis/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 	{
@@ -60,12 +60,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/AxisLabel/examples',
 			true,
-			/\.tsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/AxisLabel/examples',
 			true,
-			/\.tsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 	{
@@ -74,12 +74,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Badge/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Badge/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 	{
@@ -88,12 +88,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Banner/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Banner/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 	{
@@ -102,12 +102,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Bar/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Bar/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 	{
@@ -116,12 +116,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/BarChart/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/BarChart/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 	{
@@ -130,12 +130,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Bars/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Bars/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 	{
@@ -146,12 +146,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Breadcrumb/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Breadcrumb/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 	{
@@ -160,12 +160,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Button/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Button/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 	{
@@ -176,12 +176,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/ButtonGroup/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/ButtonGroup/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 	{
@@ -192,12 +192,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/CalendarMonth/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/CalendarMonth/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 	{
@@ -206,12 +206,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Checkbox/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Checkbox/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 	{
@@ -222,12 +222,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/CheckboxLabeled/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/CheckboxLabeled/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 	{
@@ -238,12 +238,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Collapsible/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Collapsible/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 	{
@@ -254,12 +254,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/ContextMenu/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/ContextMenu/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 	{
@@ -270,12 +270,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/DataTable/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/DataTable/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 	{
@@ -286,12 +286,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/DateSelect/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/DateSelect/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 	{
@@ -300,12 +300,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Dialog/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Dialog/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 	{
@@ -316,12 +316,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/DragCaptureZone/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/DragCaptureZone/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 	{
@@ -330,25 +330,25 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/DropMenu/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/DropMenu/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 	//{
 	//	name: 'EmptyStateWrapper',
 	//	component: getDefaultExport(require('../src/components/EmptyStateWrapper/EmptyStateWrapper')),
-	//	examplesContext: require.context('../src/components/EmptyStateWrapper/examples', true, /\.jsx?$/),
-	//	examplesContextRaw: require.context('!!raw-loader!../src/components/EmptyStateWrapper/examples', true, /\.jsx?$/),
+	//	examplesContext: require.context('../src/components/EmptyStateWrapper/examples', true, /\.(j|t)sx?$/),
+	//	examplesContextRaw: require.context('!!raw-loader!../src/components/EmptyStateWrapper/examples', true, /\.(j|t)sx?$/),
 	//},
 	//{
 	//	name: 'ExampleComponent',
 	//	component: getDefaultExport(require('../src/components/ExampleComponent/ExampleComponent')),
-	//	examplesContext: require.context('../src/components/ExampleComponent/examples', true, /\.jsx?$/),
-	//	examplesContextRaw: require.context('!!raw-loader!../src/components/ExampleComponent/examples', true, /\.jsx?$/),
+	//	examplesContext: require.context('../src/components/ExampleComponent/examples', true, /\.(j|t)sx?$/),
+	//	examplesContextRaw: require.context('!!raw-loader!../src/components/ExampleComponent/examples', true, /\.(j|t)sx?$/),
 	//},
 	{
 		name: 'Expander',
@@ -356,12 +356,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Expander/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Expander/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 	{
@@ -372,12 +372,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/ExpanderPanel/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/ExpanderPanel/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 	{
@@ -386,12 +386,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Grid/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Grid/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 	{
@@ -400,12 +400,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Icon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Icon/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 	{
@@ -416,12 +416,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/IconSelect/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/IconSelect/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 	{
@@ -432,12 +432,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/InfiniteSlidePanel/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/InfiniteSlidePanel/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 	{
@@ -460,12 +460,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Line/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Line/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 	{
@@ -476,12 +476,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/LineChart/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/LineChart/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 	{
@@ -490,12 +490,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Lines/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Lines/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 	{
@@ -506,19 +506,19 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/LoadingIndicator/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/LoadingIndicator/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 	//{
 	//	name: 'LoadingMessage',
 	//	component: getDefaultExport(require('../src/components/LoadingMessage/LoadingMessage')),
-	//	examplesContext: require.context('../src/components/LoadingMessage/examples', true, /\.jsx?$/),
-	//	examplesContextRaw: require.context('!!raw-loader!../src/components/LoadingMessage/examples', true, /\.jsx?$/),
+	//	examplesContext: require.context('../src/components/LoadingMessage/examples', true, /\.(j|t)sx?$/),
+	//	examplesContextRaw: require.context('!!raw-loader!../src/components/LoadingMessage/examples', true, /\.(j|t)sx?$/),
 	//},
 	{
 		name: 'NotchedTag',
@@ -528,12 +528,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/NotchedTag/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/NotchedTag/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 	{
@@ -542,12 +542,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Overlay/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Overlay/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 	{
@@ -558,12 +558,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/OverlayWrapper/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/OverlayWrapper/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 	{
@@ -588,12 +588,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Panel/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Panel/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 	{
@@ -616,12 +616,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Point/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Point/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 	{
@@ -630,12 +630,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Points/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Points/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 	{
@@ -644,12 +644,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Portal/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Portal/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 	{
@@ -660,12 +660,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/RadioButton/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/RadioButton/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 	{
@@ -676,12 +676,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/RadioButtonLabeled/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/RadioButtonLabeled/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 	{
@@ -708,12 +708,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/DraggableList/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/DraggableList/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 	{
@@ -738,12 +738,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Resizer/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Resizer/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 	{
@@ -754,12 +754,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/ScrollTable/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/ScrollTable/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 	{
@@ -770,12 +770,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/SearchField/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/SearchField/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 	{
@@ -848,12 +848,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Sidebar/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Sidebar/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 	{
@@ -896,12 +896,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/SlidePanel/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/SlidePanel/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 	{
@@ -928,12 +928,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/SplitHorizontal/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/SplitHorizontal/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 	{
@@ -944,12 +944,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/SplitVertical/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/SplitVertical/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 	{
@@ -960,12 +960,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/StickySection/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/StickySection/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 	{
@@ -976,12 +976,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Submarine/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Submarine/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 	{
@@ -990,12 +990,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Switch/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Switch/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 	{
@@ -1006,12 +1006,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/SwitchLabeled/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/SwitchLabeled/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 	{
@@ -1020,12 +1020,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Table/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Table/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 	{
@@ -1034,12 +1034,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Tabs/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Tabs/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 	{
@@ -1048,12 +1048,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Tag/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Tag/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 	{
@@ -1064,12 +1064,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Typography/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Typography/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 	{
@@ -1080,12 +1080,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/TextField/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/TextField/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 	{
@@ -1096,12 +1096,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/TextFieldValidated/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/TextFieldValidated/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 	{
@@ -1126,12 +1126,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Validation/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Validation/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 	{
@@ -1174,12 +1174,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/ProgressBar/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/ProgressBar/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 	{
@@ -1190,12 +1190,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/SidePanel/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/SidePanel/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 	{
@@ -1206,12 +1206,12 @@ module.exports = [
 		examplesContext: require.context(
 			'../src/components/Underline/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Underline/examples',
 			true,
-			/\.jsx?$/
+			/\.(j|t)sx?$/
 		),
 	},
 ];

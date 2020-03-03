@@ -150,7 +150,6 @@ import Resizer from './components/Resizer/Resizer';
 import ResponsiveGrid from './components/ResponsiveGrid/ResponsiveGrid';
 import RunReportIcon from './components/Icon/RunReportIcon/RunReportIcon';
 import SaveIcon from './components/Icon/SaveIcon/SaveIcon';
-// @ts-ignore: not converted yet
 import ScrollTable from './components/ScrollTable/ScrollTable';
 import SearchIcon from './components/Icon/SearchIcon/SearchIcon';
 import Selection from './components/Selection/Selection';
@@ -170,7 +169,6 @@ import Switch from './components/Switch/Switch';
 import SwitchIcon from './components/Icon/SwitchIcon/SwitchIcon';
 // @ts-ignore: not converted yet
 import SwitchLabeled from './components/SwitchLabeled/SwitchLabeled';
-// @ts-ignore: not converted yet
 import Table from './components/Table/Table';
 import Tag from './components/Tag/Tag';
 import TextField from './components/TextField/TextField';
@@ -184,6 +182,10 @@ import UploadIcon from './components/Icon/UploadIcon/UploadIcon';
 import UserIcon from './components/Icon/UserIcon/UserIcon';
 import Validation from './components/Validation/Validation';
 import VideoIcon from './components/Icon/VideoIcon/VideoIcon';
+import VideoLiveIcon from './components/Icon/VideoLiveIcon/VideoLiveIcon';
+import VideoLongIcon from './components/Icon/VideoLongIcon/VideoLongIcon';
+import VideoOnDemandIcon from './components/Icon/VideoOnDemandIcon/VideoOnDemandIcon';
+import VideoShortIcon from './components/Icon/VideoShortIcon/VideoShortIcon';
 import ViewIcon from './components/Icon/ViewIcon/ViewIcon';
 import ViewTableIcon from './components/Icon/ViewTableIcon/ViewTableIcon';
 import WarningIcon from './components/Icon/WarningIcon/WarningIcon';
@@ -386,6 +388,10 @@ export {
 	VerticalTabs,
 	VerticalTabsDumb,
 	VideoIcon,
+	VideoLiveIcon,
+	VideoLongIcon,
+	VideoOnDemandIcon,
+	VideoShortIcon,
 	ViewIcon,
 	ViewTableIcon,
 	WarningIcon,

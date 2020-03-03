@@ -53,17 +53,24 @@ const data = [
 	},
 ];
 
+const style = {
+	paddingTop: '10rem',
+};
+
 export default createClass({
 	render() {
 		return (
-			<LineChart
-				data={data}
-				yAxisFields={['apples', 'oranges', 'pears', 'bananas', 'kiwis']}
-				yAxisIsStacked={true}
-				yAxisHasPoints={false}
-				yAxisTitle='Fruit Count'
-				palette={chartConstants.PALETTE_MONOCHROME_0_5}
-			/>
+			<div style={style}>
+				<LineChart
+					data={data}
+					width={800}
+					yAxisFields={['apples', 'oranges', 'pears', 'bananas', 'kiwis']}
+					yAxisIsStacked={true}
+					yAxisHasPoints={false}
+					yAxisTitle='Fruit Count'
+					palette={chartConstants.PALETTE_MONOCHROME_0_5}
+				/>
+			</div>
 		);
 	},
 });
