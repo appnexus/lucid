@@ -127,7 +127,7 @@ export default createClass({
 	renderDataTable(props) {
 		return (
 			<DataTable data={data} {...props}>
-				<DataTable.Column field='id' align='left' width={35} isResizable>
+				<DataTable.Column field='id' align='left' width={35} minWidth={35} isResizable>
 					ID
 				</DataTable.Column>
 
@@ -135,6 +135,7 @@ export default createClass({
 					field='first_name'
 					align='left'
 					width={100}
+					minWidth={50}
 					isResizable
 				>
 					First
@@ -145,11 +146,13 @@ export default createClass({
 					align='left'
 					width={100}
 					isResizable
+					minWidth={50}
 				>
 					Last
 				</DataTable.Column>
 
-				<DataTable.Column field='email' align='left' width={900} isResizable>
+				<DataTable.Column field='email' align='left' width={100} 
+					minWidth={50} isResizable>
 					E-Mail
 				</DataTable.Column>
 
@@ -158,6 +161,7 @@ export default createClass({
 					align='left'
 					width={100}
 					isResizable
+					minWidth={55}
 				>
 					Occupation
 				</DataTable.Column>
