@@ -133,7 +133,7 @@ export default createClass({
 					Last
 				</DataTable.Column>
 
-				<DataTable.Column field='email' align='left' width={900}>
+				<DataTable.Column field='email' align='left' width={100}>
 					E-Mail
 				</DataTable.Column>
 
