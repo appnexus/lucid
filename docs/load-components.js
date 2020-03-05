@@ -717,6 +717,22 @@ module.exports = [
 		),
 	},
 	{
+		name: 'ResponsiveGrid',
+		component: getDefaultExport(
+			require('../src/components/ResponsiveGrid/ResponsiveGrid')
+		),
+		examplesContext: require.context(
+			'../src/components/ResponsiveGrid/examples',
+			true,
+			/\.(j|t)sx?$/
+		),
+		examplesContextRaw: require.context(
+			'!!raw-loader!../src/components/ResponsiveGrid/examples',
+			true,
+			/\.(j|t)sx?$/
+		),
+	},
+	{
 		name: 'Resizer',
 		component: getDefaultExport(require('../src/components/Resizer/Resizer')),
 		examplesContext: require.context(
@@ -844,6 +860,16 @@ module.exports = [
 		name: 'SidePanel',
 		component: getDefaultExport(
 			require('../src/components/SidePanel/SidePanel')
+		),
+		examplesContext: require.context(
+			'../src/components/SidePanel/examples',
+			true,
+			/\.(j|t)sx?$/
+		),
+		examplesContextRaw: require.context(
+			'!!raw-loader!../src/components/SidePanel/examples',
+			true,
+			/\.(j|t)sx?$/
 		),
 	},
 	{
