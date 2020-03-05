@@ -150,7 +150,7 @@ export default createClass({
 					Last
 				</DataTable.Column>
 
-				<DataTable.Column field='email' align='left' width={100} isResizable>
+				<DataTable.Column field='email' align='left' width={900} isResizable>
 					E-Mail
 				</DataTable.Column>
 

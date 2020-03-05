@@ -16907,7 +16907,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 13.fixe
                 onResize={null}
                 rowSpan={null}
                 sortDirection="up"
-                width={100}
+                width={900}
               >
                 E-Mail
               </Table.Th>
@@ -17471,7 +17471,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 13.fixe
                 rowSpan={1}
                 style={
                   Object {
-                    "width": 100,
+                    "width": 900,
                   }
                 }
               >
@@ -17578,7 +17578,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 13.fixe
                 rowSpan={1}
                 style={
                   Object {
-                    "width": 100,
+                    "width": 900,
                   }
                 }
               >
@@ -17685,7 +17685,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 13.fixe
                 rowSpan={1}
                 style={
                   Object {
-                    "width": 100,
+                    "width": 900,
                   }
                 }
               >
@@ -17792,7 +17792,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 13.fixe
                 rowSpan={1}
                 style={
                   Object {
-                    "width": 100,
+                    "width": 900,
                   }
                 }
               >
@@ -17899,7 +17899,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 13.fixe
                 rowSpan={1}
                 style={
                   Object {
-                    "width": 100,
+                    "width": 900,
                   }
                 }
               >
@@ -18006,7 +18006,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 13.fixe
                 rowSpan={1}
                 style={
                   Object {
-                    "width": 100,
+                    "width": 900,
                   }
                 }
               >
@@ -18113,7 +18113,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 13.fixe
                 rowSpan={1}
                 style={
                   Object {
-                    "width": 100,
+                    "width": 900,
                   }
                 }
               >
@@ -18220,7 +18220,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 13.fixe
                 rowSpan={1}
                 style={
                   Object {
-                    "width": 100,
+                    "width": 900,
                   }
                 }
               >
@@ -18327,7 +18327,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 13.fixe
                 rowSpan={1}
                 style={
                   Object {
-                    "width": 100,
+                    "width": 900,
                   }
                 }
               >
@@ -18434,7 +18434,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 13.fixe
                 rowSpan={1}
                 style={
                   Object {
-                    "width": 100,
+                    "width": 900,
                   }
                 }
               >
@@ -18620,7 +18620,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 14.resi
                 onResize={[Function]}
                 rowSpan={null}
                 sortDirection="up"
-                width={100}
+                width={900}
               >
                 E-Mail
               </Table.Th>
@@ -19185,7 +19185,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 14.resi
                 rowSpan={1}
                 style={
                   Object {
-                    "width": 100,
+                    "width": 900,
                   }
                 }
               >
@@ -19293,7 +19293,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 14.resi
                 rowSpan={1}
                 style={
                   Object {
-                    "width": 100,
+                    "width": 900,
                   }
                 }
               >
@@ -19401,7 +19401,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 14.resi
                 rowSpan={1}
                 style={
                   Object {
-                    "width": 100,
+                    "width": 900,
                   }
                 }
               >
@@ -19509,7 +19509,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 14.resi
                 rowSpan={1}
                 style={
                   Object {
-                    "width": 100,
+                    "width": 900,
                   }
                 }
               >
@@ -19617,7 +19617,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 14.resi
                 rowSpan={1}
                 style={
                   Object {
-                    "width": 100,
+                    "width": 900,
                   }
                 }
               >
@@ -19725,7 +19725,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 14.resi
                 rowSpan={1}
                 style={
                   Object {
-                    "width": 100,
+                    "width": 900,
                   }
                 }
               >
@@ -19833,7 +19833,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 14.resi
                 rowSpan={1}
                 style={
                   Object {
-                    "width": 100,
+                    "width": 900,
                   }
                 }
               >
@@ -19941,7 +19941,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 14.resi
                 rowSpan={1}
                 style={
                   Object {
-                    "width": 100,
+                    "width": 900,
                   }
                 }
               >
@@ -20049,7 +20049,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 14.resi
                 rowSpan={1}
                 style={
                   Object {
-                    "width": 100,
+                    "width": 900,
                   }
                 }
               >
@@ -20157,7 +20157,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 14.resi
                 rowSpan={1}
                 style={
                   Object {
-                    "width": 100,
+                    "width": 900,
                   }
                 }
               >
