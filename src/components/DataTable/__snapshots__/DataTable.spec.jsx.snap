@@ -18587,6 +18587,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 14.resi
                 isResizable={true}
                 isSorted={false}
                 key="first_name"
+                minWidth={50}
                 onClick={null}
                 onResize={[Function]}
                 rowSpan={null}
@@ -19152,6 +19153,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 14.resi
                 hasBorderLeft={false}
                 hasBorderRight={false}
                 key="row0first_name"
+                minWidth={50}
                 rowSpan={1}
                 style={
                   Object {
@@ -19259,6 +19261,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 14.resi
                 hasBorderLeft={false}
                 hasBorderRight={false}
                 key="row1first_name"
+                minWidth={50}
                 rowSpan={1}
                 style={
                   Object {
@@ -19366,6 +19369,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 14.resi
                 hasBorderLeft={false}
                 hasBorderRight={false}
                 key="row2first_name"
+                minWidth={50}
                 rowSpan={1}
                 style={
                   Object {
@@ -19473,6 +19477,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 14.resi
                 hasBorderLeft={false}
                 hasBorderRight={false}
                 key="row3first_name"
+                minWidth={50}
                 rowSpan={1}
                 style={
                   Object {
@@ -19580,6 +19585,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 14.resi
                 hasBorderLeft={false}
                 hasBorderRight={false}
                 key="row4first_name"
+                minWidth={50}
                 rowSpan={1}
                 style={
                   Object {
@@ -19687,6 +19693,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 14.resi
                 hasBorderLeft={false}
                 hasBorderRight={false}
                 key="row5first_name"
+                minWidth={50}
                 rowSpan={1}
                 style={
                   Object {
@@ -19794,6 +19801,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 14.resi
                 hasBorderLeft={false}
                 hasBorderRight={false}
                 key="row6first_name"
+                minWidth={50}
                 rowSpan={1}
                 style={
                   Object {
@@ -19901,6 +19909,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 14.resi
                 hasBorderLeft={false}
                 hasBorderRight={false}
                 key="row7first_name"
+                minWidth={50}
                 rowSpan={1}
                 style={
                   Object {
@@ -20008,6 +20017,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 14.resi
                 hasBorderLeft={false}
                 hasBorderRight={false}
                 key="row8first_name"
+                minWidth={50}
                 rowSpan={1}
                 style={
                   Object {
@@ -20115,6 +20125,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 14.resi
                 hasBorderLeft={false}
                 hasBorderRight={false}
                 key="row9first_name"
+                minWidth={50}
                 rowSpan={1}
                 style={
                   Object {

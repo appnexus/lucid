@@ -252,6 +252,9 @@ interface IThProps
 	/** Sets the width of the cell. */
 	width?: number | string;
 
+	/** Sets the min width of the cell. */
+	minWidth?: number | string;
+	
 	/** Indicates for how many columns the cell extends */
 	colSpan?: number;
 
@@ -367,6 +370,10 @@ export class Th extends React.Component<IThProps, IThState> {
 
 		width: oneOfType([number, string])`
 			Sets the width of the cell.
+		`,
+
+		minWidth: oneOfType([number, string])`
+			Sets the min width of the cell.
 		`,
 
 		isFirstRow: bool`
@@ -490,8 +497,8 @@ export class Th extends React.Component<IThProps, IThState> {
 		} else if (_.isString(passiveWidth)) {
 			passiveWidth = parseInt(passiveWidth);
 		}
-
-		const activeWidth = passiveWidth + coordinates.dX;
+		
+		const activeWidth = ((this.props.minWidth && passiveWidth + coordinates.dX > this.props.minWidth) || !this.props.minWidth) ? passiveWidth + coordinates.dX : this.props.minWidth;
 
 		this.setState({ activeWidth });
 
