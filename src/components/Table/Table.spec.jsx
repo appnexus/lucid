@@ -172,6 +172,29 @@ describe('Table', () => {
 
 				describe('isResizable', () => {
 					it('should apply the class name `lucid-Table-is-resizable`', () => {
+						const wrapper = shallow(<Th isResizable minWidth={50}/>);
+
+						assert.equal(wrapper.find('th.lucid-Table-is-resizable').length, 1);
+					});
+
+					it('should render a DragCaptureZone for resizable header content', () => {
+						const wrapper = shallow(<Th isResizable>foo</Th>);
+						assert.equal(
+							wrapper.find(DragCaptureZone).length,
+							1,
+							'must render a DragCaptureZone component'
+						);
+						assert(
+							wrapper
+								.find(DragCaptureZone)
+								.hasClass('lucid-Table-Th-inner-resize'),
+							'must have className `lucid-Table-Th-inner-resize`'
+						);
+					});
+				});
+
+				describe('isResizable without minwidth setup', () => {
+					it('should apply the class name `lucid-Table-is-resizable`', () => {
 						const wrapper = shallow(<Th isResizable />);
 
 						assert.equal(wrapper.find('th.lucid-Table-is-resizable').length, 1);

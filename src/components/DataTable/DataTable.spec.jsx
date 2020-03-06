@@ -775,7 +775,7 @@ describe('DataTable', () => {
 				const onResize = jest.fn();
 				const wrapper = mount(
 					<DataTable hasFixedHeader onResize={onResize} data={testData}>
-						<Column field='id' isResizable title='ID' />
+						<Column minWidth={50} field='id' isResizable title='ID' />
 						<Column field='first_name' isResizable title='First' />
 						<Column field='last_name' isResizable title='Last' />
 						<Column field='email' isResizable title='Email' />

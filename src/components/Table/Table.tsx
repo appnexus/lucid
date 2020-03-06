@@ -491,19 +491,15 @@ export class Th extends React.Component<IThProps, IThState> {
 		}
 	): void => {
 		let passiveWidth = this.state.passiveWidth;
-		
+
 		if (passiveWidth === null) {
 			return;
 		} else if (_.isString(passiveWidth)) {
 			passiveWidth = parseInt(passiveWidth);
 		}
+		
+		const activeWidth = ((this.props.minWidth && passiveWidth + coordinates.dX > this.props.minWidth) || !this.props.minWidth) ? passiveWidth + coordinates.dX : this.props.minWidth;
 
-		let activeWidth;
-		if(this.props.minWidth && passiveWidth + coordinates.dX > this.props.minWidth || !this.props.minWidth) {
-			activeWidth = passiveWidth + coordinates.dX;
-		} else {
-			activeWidth = this.props.minWidth
-		}
 		this.setState({ activeWidth });
 
 		if (this.props.onResize) {
