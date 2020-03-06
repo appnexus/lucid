@@ -135,7 +135,6 @@ export default createClass({
 					field='first_name'
 					align='left'
 					width={100}
-					minWidth={50}
 					isResizable
 				>
 					First
