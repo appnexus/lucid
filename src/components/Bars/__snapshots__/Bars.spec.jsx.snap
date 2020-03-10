@@ -43,7 +43,7 @@ exports[`Bars [common] example testing should match snapshot(s) for 01.basic 1`]
       x={85}
       y={218.1818181818182}
     />
-    <Component
+    <PureToolTip
       data={
         Array [
           Object {
@@ -162,7 +162,7 @@ exports[`Bars [common] example testing should match snapshot(s) for 01.basic 1`]
       x={212}
       y={181.81818181818184}
     />
-    <Component
+    <PureToolTip
       data={
         Array [
           Object {
@@ -281,7 +281,7 @@ exports[`Bars [common] example testing should match snapshot(s) for 01.basic 1`]
       x={339}
       y={181.81818181818184}
     />
-    <Component
+    <PureToolTip
       data={
         Array [
           Object {
@@ -400,7 +400,7 @@ exports[`Bars [common] example testing should match snapshot(s) for 01.basic 1`]
       x={466}
       y={145.45454545454547}
     />
-    <Component
+    <PureToolTip
       data={
         Array [
           Object {
@@ -519,7 +519,7 @@ exports[`Bars [common] example testing should match snapshot(s) for 01.basic 1`]
       x={593}
       y={109.09090909090907}
     />
-    <Component
+    <PureToolTip
       data={
         Array [
           Object {
@@ -638,7 +638,7 @@ exports[`Bars [common] example testing should match snapshot(s) for 01.basic 1`]
       x={720}
       y={218.1818181818182}
     />
-    <Component
+    <PureToolTip
       data={
         Array [
           Object {
@@ -764,7 +764,7 @@ exports[`Bars [common] example testing should match snapshot(s) for 01.basic 2`]
       x={0}
       y={266.6666666666667}
     />
-    <Component
+    <PureToolTip
       data={
         Array [
           Object {
@@ -883,7 +883,7 @@ exports[`Bars [common] example testing should match snapshot(s) for 01.basic 2`]
       x={127}
       y={218.1818181818182}
     />
-    <Component
+    <PureToolTip
       data={
         Array [
           Object {
@@ -1002,7 +1002,7 @@ exports[`Bars [common] example testing should match snapshot(s) for 01.basic 2`]
       x={254}
       y={193.93939393939394}
     />
-    <Component
+    <PureToolTip
       data={
         Array [
           Object {
@@ -1121,7 +1121,7 @@ exports[`Bars [common] example testing should match snapshot(s) for 01.basic 2`]
       x={381}
       y={121.21212121212119}
     />
-    <Component
+    <PureToolTip
       data={
         Array [
           Object {
@@ -1240,7 +1240,7 @@ exports[`Bars [common] example testing should match snapshot(s) for 01.basic 2`]
       x={508}
       y={48.4848484848485}
     />
-    <Component
+    <PureToolTip
       data={
         Array [
           Object {
@@ -1359,7 +1359,7 @@ exports[`Bars [common] example testing should match snapshot(s) for 01.basic 2`]
       x={635}
       y={0}
     />
-    <Component
+    <PureToolTip
       data={
         Array [
           Object {
@@ -1485,7 +1485,7 @@ exports[`Bars [common] example testing should match snapshot(s) for 02.custom-co
       x={85}
       y={218.1818181818182}
     />
-    <Component
+    <PureToolTip
       data={
         Array [
           Object {
@@ -1604,7 +1604,7 @@ exports[`Bars [common] example testing should match snapshot(s) for 02.custom-co
       x={212}
       y={181.81818181818184}
     />
-    <Component
+    <PureToolTip
       data={
         Array [
           Object {
@@ -1723,7 +1723,7 @@ exports[`Bars [common] example testing should match snapshot(s) for 02.custom-co
       x={339}
       y={181.81818181818184}
     />
-    <Component
+    <PureToolTip
       data={
         Array [
           Object {
@@ -1842,7 +1842,7 @@ exports[`Bars [common] example testing should match snapshot(s) for 02.custom-co
       x={466}
       y={145.45454545454547}
     />
-    <Component
+    <PureToolTip
       data={
         Array [
           Object {
@@ -1961,7 +1961,7 @@ exports[`Bars [common] example testing should match snapshot(s) for 02.custom-co
       x={593}
       y={109.09090909090907}
     />
-    <Component
+    <PureToolTip
       data={
         Array [
           Object {
@@ -2080,7 +2080,7 @@ exports[`Bars [common] example testing should match snapshot(s) for 02.custom-co
       x={720}
       y={218.1818181818182}
     />
-    <Component
+    <PureToolTip
       data={
         Array [
           Object {
