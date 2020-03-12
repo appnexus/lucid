@@ -31,7 +31,7 @@ export const HamburgerMenuIcon = ({
 	);
 };
 
-HamburgerMenuIcon.displayName = 'HamburgerIcon';
+HamburgerMenuIcon.displayName = 'HamburgerMenuIcon';
 HamburgerMenuIcon.peek = {
 	description: `
 		A hamburger menu icon.
