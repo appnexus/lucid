@@ -309,6 +309,22 @@ module.exports = [
 		),
 	},
 	{
+		name: 'DraggableList',
+		component: getDefaultExport(
+			require('../src/components/DraggableList/DraggableList')
+		),
+		examplesContext: require.context(
+			'../src/components/DraggableList/examples',
+			true,
+			/\.(j|t)sx?$/
+		),
+		examplesContextRaw: require.context(
+			'!!raw-loader!../src/components/DraggableList/examples',
+			true,
+			/\.(j|t)sx?$/
+		),
+	},
+	{
 		name: 'DragCaptureZone',
 		component: getDefaultExport(
 			require('../src/components/DragCaptureZone/DragCaptureZone')
@@ -698,22 +714,6 @@ module.exports = [
 			'!!raw-loader!../src/components/RadioGroup/examples',
 			true,
 			/\.tsx?$/
-		),
-	},
-	{
-		name: 'DraggableList',
-		component: getDefaultExport(
-			require('../src/components/DraggableList/DraggableList')
-		),
-		examplesContext: require.context(
-			'../src/components/DraggableList/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../src/components/DraggableList/examples',
-			true,
-			/\.(j|t)sx?$/
 		),
 	},
 	{

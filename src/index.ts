@@ -107,6 +107,7 @@ import FolderIcon from './components/Icon/FolderIcon/FolderIcon';
 import FourSquaresIcon from './components/Icon/FourSquaresIcon/FourSquaresIcon';
 import GetMaximumIcon from './components/Icon/GetMaximumIcon/GetMaximumIcon';
 import Grid from './components/Grid/Grid';
+import HamburgerMenuIcon from './components/Icon/HamburgerMenuIcon/HamburgerMenuIcon';
 import HelpIcon from './components/Icon/HelpIcon/HelpIcon';
 import HideIcon from './components/Icon/HideIcon/HideIcon';
 import HomeIcon from './components/Icon/HomeIcon/HomeIcon';
@@ -285,6 +286,7 @@ export {
 	FourSquaresIcon,
 	GetMaximumIcon,
 	Grid,
+	HamburgerMenuIcon,
 	HelpIcon,
 	HideIcon,
 	HomeIcon,
