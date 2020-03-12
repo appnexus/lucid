@@ -21,17 +21,16 @@ export const HamburgerMenuIcon = ({
 				false
 			)}
 			{..._.pick(passThroughs, _.keys(iconPropTypes))}
+			className={cx('&', className)}
 			width={16}
 			height={16}
 			viewBox='0 0 16 16'
-			className={cx('&', className)}
 		>
 			<path d='M.5 8h15M.5 13.5h15M.5 2.5h15' />
 		</Icon>
 	);
 };
 
-HamburgerMenuIcon._isPrivate = true;
 HamburgerMenuIcon.displayName = 'HamburgerIcon';
 HamburgerMenuIcon.peek = {
 	description: `
