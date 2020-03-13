@@ -1,6 +1,6 @@
 ## Unreleased
 
-## 5.6.2
+## 5.7.0
 
 - #1139 [minor] Add new `HamburgerMenuIcon`.
 - #1136 [minor] Add a prop to allow a vertical orientation to `DotsIcon`.
