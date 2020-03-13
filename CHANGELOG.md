@@ -13,7 +13,7 @@
 - #1127 [none] Updated the `Releasing.md` instructions.
 - #1131 [none] Update the docs for `Tag`.
 
-https://github.com/appnexus/lucid/compare/v5.6.1...v5.6.2
+https://github.com/appnexus/lucid/compare/v5.6.1...v5.7.0
 
 ## 5.6.1
 
