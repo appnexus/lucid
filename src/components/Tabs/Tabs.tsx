@@ -256,11 +256,16 @@ interface ITabsProps extends StandardProps {
 	Title?: string | React.ReactNode & { props: ITitleProps };
 }
 
+type ITabsPropsWithPassThroughs = Overwrite<
+	React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>,
+	ITabsProps
+>;
+
 export interface ITabsState {
 	selectedIndex: number;
 }
 
-class Tabs extends React.Component<ITabsProps, ITabsState> {
+class Tabs extends React.Component<ITabsPropsWithPassThroughs, ITabsState> {
 	static displayName = 'Tabs';
 	static Title = Title;
 	static Tab = Tab;
