@@ -1158,283 +1158,283 @@ exports[`BarChart [common] example testing should match snapshot(s) for 13.many-
       data={
         Array [
           Object {
-            "x": "Wed Dec 31 1969 16:00:00 GMT-0800 (Pacific Standard Time)0",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)0",
             "y": 0,
           },
           Object {
-            "x": "Wed Dec 31 1969 16:00:00 GMT-0800 (Pacific Standard Time)86400",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)86400",
             "y": 1,
           },
           Object {
-            "x": "Wed Dec 31 1969 16:00:00 GMT-0800 (Pacific Standard Time)172800",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)172800",
             "y": 2,
           },
           Object {
-            "x": "Wed Dec 31 1969 16:00:00 GMT-0800 (Pacific Standard Time)259200",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)259200",
             "y": 3,
           },
           Object {
-            "x": "Wed Dec 31 1969 16:00:00 GMT-0800 (Pacific Standard Time)345600",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)345600",
             "y": 4,
           },
           Object {
-            "x": "Wed Dec 31 1969 16:00:00 GMT-0800 (Pacific Standard Time)432000",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)432000",
             "y": 5,
           },
           Object {
-            "x": "Wed Dec 31 1969 16:00:00 GMT-0800 (Pacific Standard Time)518400",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)518400",
             "y": 6,
           },
           Object {
-            "x": "Wed Dec 31 1969 16:00:00 GMT-0800 (Pacific Standard Time)604800",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)604800",
             "y": 7,
           },
           Object {
-            "x": "Wed Dec 31 1969 16:00:00 GMT-0800 (Pacific Standard Time)691200",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)691200",
             "y": 8,
           },
           Object {
-            "x": "Wed Dec 31 1969 16:00:00 GMT-0800 (Pacific Standard Time)777600",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)777600",
             "y": 9,
           },
           Object {
-            "x": "Wed Dec 31 1969 16:00:00 GMT-0800 (Pacific Standard Time)864000",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)864000",
             "y": 10,
           },
           Object {
-            "x": "Wed Dec 31 1969 16:00:00 GMT-0800 (Pacific Standard Time)950400",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)950400",
             "y": 11,
           },
           Object {
-            "x": "Wed Dec 31 1969 16:00:00 GMT-0800 (Pacific Standard Time)1036800",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)1036800",
             "y": 12,
           },
           Object {
-            "x": "Wed Dec 31 1969 16:00:00 GMT-0800 (Pacific Standard Time)1123200",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)1123200",
             "y": 13,
           },
           Object {
-            "x": "Wed Dec 31 1969 16:00:00 GMT-0800 (Pacific Standard Time)1209600",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)1209600",
             "y": 14,
           },
           Object {
-            "x": "Wed Dec 31 1969 16:00:00 GMT-0800 (Pacific Standard Time)1296000",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)1296000",
             "y": 15,
           },
           Object {
-            "x": "Wed Dec 31 1969 16:00:00 GMT-0800 (Pacific Standard Time)1382400",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)1382400",
             "y": 16,
           },
           Object {
-            "x": "Wed Dec 31 1969 16:00:00 GMT-0800 (Pacific Standard Time)1468800",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)1468800",
             "y": 17,
           },
           Object {
-            "x": "Wed Dec 31 1969 16:00:00 GMT-0800 (Pacific Standard Time)1555200",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)1555200",
             "y": 18,
           },
           Object {
-            "x": "Wed Dec 31 1969 16:00:00 GMT-0800 (Pacific Standard Time)1641600",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)1641600",
             "y": 19,
           },
           Object {
-            "x": "Wed Dec 31 1969 16:00:00 GMT-0800 (Pacific Standard Time)1728000",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)1728000",
             "y": 20,
           },
           Object {
-            "x": "Wed Dec 31 1969 16:00:00 GMT-0800 (Pacific Standard Time)1814400",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)1814400",
             "y": 21,
           },
           Object {
-            "x": "Wed Dec 31 1969 16:00:00 GMT-0800 (Pacific Standard Time)1900800",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)1900800",
             "y": 22,
           },
           Object {
-            "x": "Wed Dec 31 1969 16:00:00 GMT-0800 (Pacific Standard Time)1987200",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)1987200",
             "y": 23,
           },
           Object {
-            "x": "Wed Dec 31 1969 16:00:00 GMT-0800 (Pacific Standard Time)2073600",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)2073600",
             "y": 24,
           },
           Object {
-            "x": "Wed Dec 31 1969 16:00:00 GMT-0800 (Pacific Standard Time)2160000",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)2160000",
             "y": 25,
           },
           Object {
-            "x": "Wed Dec 31 1969 16:00:00 GMT-0800 (Pacific Standard Time)2246400",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)2246400",
             "y": 26,
           },
           Object {
-            "x": "Wed Dec 31 1969 16:00:00 GMT-0800 (Pacific Standard Time)2332800",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)2332800",
             "y": 27,
           },
           Object {
-            "x": "Wed Dec 31 1969 16:00:00 GMT-0800 (Pacific Standard Time)2419200",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)2419200",
             "y": 28,
           },
           Object {
-            "x": "Wed Dec 31 1969 16:00:00 GMT-0800 (Pacific Standard Time)2505600",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)2505600",
             "y": 29,
           },
           Object {
-            "x": "Wed Dec 31 1969 16:00:00 GMT-0800 (Pacific Standard Time)2592000",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)2592000",
             "y": 30,
           },
           Object {
-            "x": "Wed Dec 31 1969 16:00:00 GMT-0800 (Pacific Standard Time)2678400",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)2678400",
             "y": 31,
           },
           Object {
-            "x": "Wed Dec 31 1969 16:00:00 GMT-0800 (Pacific Standard Time)2764800",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)2764800",
             "y": 32,
           },
           Object {
-            "x": "Wed Dec 31 1969 16:00:00 GMT-0800 (Pacific Standard Time)2851200",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)2851200",
             "y": 33,
           },
           Object {
-            "x": "Wed Dec 31 1969 16:00:00 GMT-0800 (Pacific Standard Time)2937600",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)2937600",
             "y": 34,
           },
           Object {
-            "x": "Wed Dec 31 1969 16:00:00 GMT-0800 (Pacific Standard Time)3024000",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)3024000",
             "y": 35,
           },
           Object {
-            "x": "Wed Dec 31 1969 16:00:00 GMT-0800 (Pacific Standard Time)3110400",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)3110400",
             "y": 36,
           },
           Object {
-            "x": "Wed Dec 31 1969 16:00:00 GMT-0800 (Pacific Standard Time)3196800",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)3196800",
             "y": 37,
           },
           Object {
-            "x": "Wed Dec 31 1969 16:00:00 GMT-0800 (Pacific Standard Time)3283200",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)3283200",
             "y": 38,
           },
           Object {
-            "x": "Wed Dec 31 1969 16:00:00 GMT-0800 (Pacific Standard Time)3369600",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)3369600",
             "y": 39,
           },
           Object {
-            "x": "Wed Dec 31 1969 16:00:00 GMT-0800 (Pacific Standard Time)3456000",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)3456000",
             "y": 40,
           },
           Object {
-            "x": "Wed Dec 31 1969 16:00:00 GMT-0800 (Pacific Standard Time)3542400",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)3542400",
             "y": 41,
           },
           Object {
-            "x": "Wed Dec 31 1969 16:00:00 GMT-0800 (Pacific Standard Time)3628800",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)3628800",
             "y": 42,
           },
           Object {
-            "x": "Wed Dec 31 1969 16:00:00 GMT-0800 (Pacific Standard Time)3715200",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)3715200",
             "y": 43,
           },
           Object {
-            "x": "Wed Dec 31 1969 16:00:00 GMT-0800 (Pacific Standard Time)3801600",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)3801600",
             "y": 44,
           },
           Object {
-            "x": "Wed Dec 31 1969 16:00:00 GMT-0800 (Pacific Standard Time)3888000",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)3888000",
             "y": 45,
           },
           Object {
-            "x": "Wed Dec 31 1969 16:00:00 GMT-0800 (Pacific Standard Time)3974400",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)3974400",
             "y": 46,
           },
           Object {
-            "x": "Wed Dec 31 1969 16:00:00 GMT-0800 (Pacific Standard Time)4060800",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)4060800",
             "y": 47,
           },
           Object {
-            "x": "Wed Dec 31 1969 16:00:00 GMT-0800 (Pacific Standard Time)4147200",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)4147200",
             "y": 48,
           },
           Object {
-            "x": "Wed Dec 31 1969 16:00:00 GMT-0800 (Pacific Standard Time)4233600",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)4233600",
             "y": 49,
           },
           Object {
-            "x": "Wed Dec 31 1969 16:00:00 GMT-0800 (Pacific Standard Time)4320000",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)4320000",
             "y": 50,
           },
           Object {
-            "x": "Wed Dec 31 1969 16:00:00 GMT-0800 (Pacific Standard Time)4406400",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)4406400",
             "y": 51,
           },
           Object {
-            "x": "Wed Dec 31 1969 16:00:00 GMT-0800 (Pacific Standard Time)4492800",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)4492800",
             "y": 52,
           },
           Object {
-            "x": "Wed Dec 31 1969 16:00:00 GMT-0800 (Pacific Standard Time)4579200",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)4579200",
             "y": 53,
           },
           Object {
-            "x": "Wed Dec 31 1969 16:00:00 GMT-0800 (Pacific Standard Time)4665600",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)4665600",
             "y": 54,
           },
           Object {
-            "x": "Wed Dec 31 1969 16:00:00 GMT-0800 (Pacific Standard Time)4752000",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)4752000",
             "y": 55,
           },
           Object {
-            "x": "Wed Dec 31 1969 16:00:00 GMT-0800 (Pacific Standard Time)4838400",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)4838400",
             "y": 56,
           },
           Object {
-            "x": "Wed Dec 31 1969 16:00:00 GMT-0800 (Pacific Standard Time)4924800",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)4924800",
             "y": 57,
           },
           Object {
-            "x": "Wed Dec 31 1969 16:00:00 GMT-0800 (Pacific Standard Time)5011200",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)5011200",
             "y": 58,
           },
           Object {
-            "x": "Wed Dec 31 1969 16:00:00 GMT-0800 (Pacific Standard Time)5097600",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)5097600",
             "y": 59,
           },
           Object {
-            "x": "Wed Dec 31 1969 16:00:00 GMT-0800 (Pacific Standard Time)5184000",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)5184000",
             "y": 60,
           },
           Object {
-            "x": "Wed Dec 31 1969 16:00:00 GMT-0800 (Pacific Standard Time)5270400",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)5270400",
             "y": 61,
           },
           Object {
-            "x": "Wed Dec 31 1969 16:00:00 GMT-0800 (Pacific Standard Time)5356800",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)5356800",
             "y": 62,
           },
           Object {
-            "x": "Wed Dec 31 1969 16:00:00 GMT-0800 (Pacific Standard Time)5443200",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)5443200",
             "y": 63,
           },
           Object {
-            "x": "Wed Dec 31 1969 16:00:00 GMT-0800 (Pacific Standard Time)5529600",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)5529600",
             "y": 64,
           },
           Object {
-            "x": "Wed Dec 31 1969 16:00:00 GMT-0800 (Pacific Standard Time)5616000",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)5616000",
             "y": 65,
           },
           Object {
-            "x": "Wed Dec 31 1969 16:00:00 GMT-0800 (Pacific Standard Time)5702400",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)5702400",
             "y": 66,
           },
           Object {
-            "x": "Wed Dec 31 1969 16:00:00 GMT-0800 (Pacific Standard Time)5788800",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)5788800",
             "y": 67,
           },
           Object {
-            "x": "Wed Dec 31 1969 16:00:00 GMT-0800 (Pacific Standard Time)5875200",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)5875200",
             "y": 68,
           },
           Object {
-            "x": "Wed Dec 31 1969 16:00:00 GMT-0800 (Pacific Standard Time)5961600",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)5961600",
             "y": 69,
           },
         ]
