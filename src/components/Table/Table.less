@@ -21,11 +21,19 @@
 	&-no-hover.@{prefix}-Table {
 		.@{prefix}-Table-Tbody {
 			.@{prefix}-Table-Tr:hover {
+				cursor: default;
+
 				& > .@{prefix}-Table-Td.@{prefix}-Table-is-first-single::after {
 					display: none;
 				}
 				& > .@{prefix}-Table-Td[rowspan] {
 					background-color: white;
+				}
+			}
+			.@{prefix}-Table-Tr.@{prefix}-Table-is-selected:hover {
+				cursor: default;
+				& > .@{prefix}-Table-Td[rowspan] {
+					background-color: #e6ecf5;
 				}
 			}
 		}
@@ -263,6 +271,8 @@
 
 			// style row cells on hover
 			&:hover {
+				cursor: pointer;
+
 				.selectCellsOnRow(
 					{background-color: @color-table-row-hover-background;}
 				);
