@@ -7,8 +7,8 @@ export default createClass({
 		return (
 			<div>
 				<div>
-					<Tag id='1'>Amet</Tag>
-					<Tag id='2'>nam</Tag>
+					<Tag>Amet</Tag>
+					<Tag>nam</Tag>
 					<Tag>quibusdam</Tag>
 					<Tag isRemovable>nobis</Tag>
 					<Tag isRemovable>autem</Tag>
