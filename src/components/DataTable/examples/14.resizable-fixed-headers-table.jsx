@@ -136,7 +136,6 @@ export default createClass({
 					align='left'
 					width={100}
 					isResizable
-					minWidth={50}
 				>
 					First
 				</DataTable.Column>
@@ -146,7 +145,6 @@ export default createClass({
 					align='left'
 					width={100}
 					isResizable
-					minWidth={100}
 				>
 					Last
 				</DataTable.Column>
