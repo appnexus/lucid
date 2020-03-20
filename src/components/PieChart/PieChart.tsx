@@ -185,6 +185,7 @@ const PieChart = (props: IPieChartProps) => {
 		palette,
 		colorMap,
 		isDonut,
+		donutWidth,
 		ToolTip: toolTipProps,
 
 		isHovering,
@@ -238,7 +239,7 @@ const PieChart = (props: IPieChartProps) => {
 
 	const arc = d3Shape
 		.arc()
-		.innerRadius(isDonut ? outerRadius - PieChart.DONUT_WIDTH : INNER_RADIUS)
+		.innerRadius(isDonut ? outerRadius - donutWidth : INNER_RADIUS)
 		.outerRadius(outerRadius);
 
 	// Useful for capturing hovers when we're in donut mode
