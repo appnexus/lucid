@@ -18,11 +18,17 @@ export default createClass({
 					<Tag isRemovable kind={'danger'}>
 						periculum
 					</Tag>
-					<Tag isRemovable kind={'default'}>
-						deficio
-					</Tag>
 				</Tag>
 			</div>
 		);
 	},
 });
+
+// begin-hide-from-docs
+export const notes = `
+Tags are available in two additional colors:
+
+- \`kind='danger'\` for settings that can not be saved, for example custom dates outside of the flight range.
+- \`kind='default\` for disabled items, for example past flights. This color can not be used for \`isRemovable\` tags.
+`;
+// end-hide-from-docs

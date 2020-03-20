@@ -10,15 +10,22 @@ const data = [
 	{ x: new Date('2015-01-11T00:00:00-08:00'), blueberries: 4230872156 },
 ];
 
+const style = {
+	paddingTop: '4rem',
+};
+
 export default createClass({
 	render() {
 		return (
-			<LineChart
-				data={data}
-				yAxisFields={['blueberries']}
-				yAxisFormatter={formatters.formatAbbreviatedNumber}
-				yAxisTooltipDataFormatter={formatters.formatThousands}
-			/>
+			<div style={style}>
+				<LineChart
+					data={data}
+					width={800}
+					yAxisFields={['blueberries']}
+					yAxisFormatter={formatters.formatAbbreviatedNumber}
+					yAxisTooltipDataFormatter={formatters.formatThousands}
+				/>
+			</div>
 		);
 	},
 });

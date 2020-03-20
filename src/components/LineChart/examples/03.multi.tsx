@@ -179,14 +179,21 @@ const data = [
 	},
 ];
 
+const style = {
+	paddingTop: '8rem',
+};
+
 export default createClass({
 	render() {
 		return (
-			<LineChart
-				data={data}
-				yAxisFields={['apples', 'oranges', 'pears']}
-				yAxisTitle='Fruit Count'
-			/>
+			<div style={style}>
+				<LineChart
+					data={data}
+					yAxisFields={['apples', 'oranges', 'pears']}
+					yAxisTitle='Fruit Count'
+					width={800}
+				/>
+			</div>
 		);
 	},
 });

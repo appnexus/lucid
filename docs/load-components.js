@@ -309,6 +309,22 @@ module.exports = [
 		),
 	},
 	{
+		name: 'DraggableList',
+		component: getDefaultExport(
+			require('../src/components/DraggableList/DraggableList')
+		),
+		examplesContext: require.context(
+			'../src/components/DraggableList/examples',
+			true,
+			/\.(j|t)sx?$/
+		),
+		examplesContextRaw: require.context(
+			'!!raw-loader!../src/components/DraggableList/examples',
+			true,
+			/\.(j|t)sx?$/
+		),
+	},
+	{
 		name: 'DragCaptureZone',
 		component: getDefaultExport(
 			require('../src/components/DragCaptureZone/DragCaptureZone')
@@ -701,17 +717,17 @@ module.exports = [
 		),
 	},
 	{
-		name: 'DraggableList',
+		name: 'ResponsiveGrid',
 		component: getDefaultExport(
-			require('../src/components/DraggableList/DraggableList')
+			require('../src/components/ResponsiveGrid/ResponsiveGrid')
 		),
 		examplesContext: require.context(
-			'../src/components/DraggableList/examples',
+			'../src/components/ResponsiveGrid/examples',
 			true,
 			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
-			'!!raw-loader!../src/components/DraggableList/examples',
+			'!!raw-loader!../src/components/ResponsiveGrid/examples',
 			true,
 			/\.(j|t)sx?$/
 		),
@@ -844,6 +860,16 @@ module.exports = [
 		name: 'SidePanel',
 		component: getDefaultExport(
 			require('../src/components/SidePanel/SidePanel')
+		),
+		examplesContext: require.context(
+			'../src/components/SidePanel/examples',
+			true,
+			/\.(j|t)sx?$/
+		),
+		examplesContextRaw: require.context(
+			'!!raw-loader!../src/components/SidePanel/examples',
+			true,
+			/\.(j|t)sx?$/
 		),
 	},
 	{

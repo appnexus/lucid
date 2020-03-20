@@ -8,31 +8,33 @@ const words = [
 	'The',
 	'Vexillologist',
 	'Cold Brew',
-	'This is a longer sentence that should be handled okay but what if it is even longer than you could ever think imaginable',
+	'This is a longer sentence that should be handled okay',
 ];
 
 export default createClass({
 	render() {
 		return (
 			<div>
-				{_.times(25, n => (
-					<Tag key={n}>{words[n % words.length]}</Tag>
-				))}
-
-				<Tag isTop>
+				<Tag>
 					Grouped items
-					{_.times(25, n => (
+					{_.times(8, n => (
 						<Tag key={n}>{words[n % words.length]}</Tag>
 					))}
 				</Tag>
 
-				<Tag isTop>
+				<Tag isRemovable>
 					Grouped items
-					{_.times(25, n => (
-						<Tag key={n}>{words[n % words.length]}</Tag>
+					{_.times(10, n => (
+						<Tag isRemovable key={n}>{words[n % words.length]}</Tag>
 					))}
 				</Tag>
 			</div>
 		);
 	},
 });
+
+// begin-hide-from-docs
+export const notes = `
+Use a parent tag to group child tags into categories. This example also shows you how to dynamically generate a list of tags.
+`;
+// end-hide-from-docs

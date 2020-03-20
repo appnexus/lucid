@@ -12,16 +12,22 @@ const data = [
 	{ x: 'Tammy', y: 40 },
 ];
 
+const style = {
+	paddingTop: '4rem',
+};
+
 export default createClass({
 	render() {
 		return (
-			<PieChart
-				data={data}
-				colorMap={{
-					Tammy: chartConstants.COLOR_BAD,
-					Leslie: chartConstants.COLOR_GOOD,
-				}}
-			/>
+			<div style={style}>
+				<PieChart
+					data={data}
+					colorMap={{
+						Tammy: chartConstants.COLOR_BAD,
+						Leslie: chartConstants.COLOR_GOOD,
+					}}
+				/>
+			</div>
 		);
 	},
 });

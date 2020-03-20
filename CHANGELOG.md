@@ -1,4 +1,19 @@
-## unreleased
+## Unreleased
+
+## 5.7.0
+
+- #1139 [minor] Add new `HamburgerMenuIcon`.
+- #1136 [minor] Add a prop to allow a vertical orientation to `DotsIcon`.
+- #1135 [minor] Add a check so that Chromatic tests do not try to load the proprietary Xandr font faces.
+- #1134 [minor] Convert `Bars` to TypeScript.
+- #1130 [minor] Add a new `ResponsiveGrid` component.
+- #1133 [minor] Remove content from `RadioButtonLabeled` example.
+- #1129 [minor] Convert `ScrollTable` to TypeScript.
+- #1128 [none] Fix the `ToolTips` on `Chart`.
+- #1127 [none] Updated the `Releasing.md` instructions.
+- #1131 [none] Update the docs for `Tag`.
+
+https://github.com/appnexus/lucid/compare/v5.6.1...v5.6.2
 
 ## 5.6.1
 
@@ -15,7 +30,7 @@
 - #1114 [minor] Add `RunReportIcon` to the component icon library.
 - #1113 [none] Add instructions on how to release Lucid UI in `RELEASING.md` doc.
 
-https://github.com/appnexus/lucid/compare/v5.5.0...v5.6.0
+https://github.com/appnexus/lucid/compare/v5.5.0...v5.6.1
 
 ## 5.5.0
 

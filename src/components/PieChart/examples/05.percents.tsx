@@ -15,10 +15,14 @@ const data = [
 
 const total = _.sum(_.map(data, 'y'));
 
+const style = {
+	paddingTop: '4rem',
+};
+
 export default createClass({
 	render() {
 		return (
-			<div>
+			<div style={style}>
 				<PieChart
 					data={data}
 					yAxisFormatter={(value: number) => {

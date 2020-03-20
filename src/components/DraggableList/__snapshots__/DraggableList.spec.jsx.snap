@@ -29,6 +29,7 @@ exports[`DraggableList [common] example testing should match snapshot(s) for 1.b
         <DotsIcon
           aspectRatio="xMidYMid meet"
           color="primary"
+          direction="horizontal"
           isClickable={false}
           isDisabled={false}
           onClick={[Function]}
@@ -39,6 +40,7 @@ exports[`DraggableList [common] example testing should match snapshot(s) for 1.b
         <DotsIcon
           aspectRatio="xMidYMid meet"
           color="primary"
+          direction="horizontal"
           isClickable={false}
           isDisabled={false}
           onClick={[Function]}
@@ -73,6 +75,7 @@ exports[`DraggableList [common] example testing should match snapshot(s) for 1.b
         <DotsIcon
           aspectRatio="xMidYMid meet"
           color="primary"
+          direction="horizontal"
           isClickable={false}
           isDisabled={false}
           onClick={[Function]}
@@ -83,6 +86,7 @@ exports[`DraggableList [common] example testing should match snapshot(s) for 1.b
         <DotsIcon
           aspectRatio="xMidYMid meet"
           color="primary"
+          direction="horizontal"
           isClickable={false}
           isDisabled={false}
           onClick={[Function]}
@@ -117,6 +121,7 @@ exports[`DraggableList [common] example testing should match snapshot(s) for 1.b
         <DotsIcon
           aspectRatio="xMidYMid meet"
           color="primary"
+          direction="horizontal"
           isClickable={false}
           isDisabled={false}
           onClick={[Function]}
@@ -127,6 +132,7 @@ exports[`DraggableList [common] example testing should match snapshot(s) for 1.b
         <DotsIcon
           aspectRatio="xMidYMid meet"
           color="primary"
+          direction="horizontal"
           isClickable={false}
           isDisabled={false}
           onClick={[Function]}
@@ -161,6 +167,7 @@ exports[`DraggableList [common] example testing should match snapshot(s) for 1.b
         <DotsIcon
           aspectRatio="xMidYMid meet"
           color="primary"
+          direction="horizontal"
           isClickable={false}
           isDisabled={false}
           onClick={[Function]}
@@ -171,6 +178,7 @@ exports[`DraggableList [common] example testing should match snapshot(s) for 1.b
         <DotsIcon
           aspectRatio="xMidYMid meet"
           color="primary"
+          direction="horizontal"
           isClickable={false}
           isDisabled={false}
           onClick={[Function]}
@@ -205,6 +213,7 @@ exports[`DraggableList [common] example testing should match snapshot(s) for 1.b
         <DotsIcon
           aspectRatio="xMidYMid meet"
           color="primary"
+          direction="horizontal"
           isClickable={false}
           isDisabled={false}
           onClick={[Function]}
@@ -215,6 +224,7 @@ exports[`DraggableList [common] example testing should match snapshot(s) for 1.b
         <DotsIcon
           aspectRatio="xMidYMid meet"
           color="primary"
+          direction="horizontal"
           isClickable={false}
           isDisabled={false}
           onClick={[Function]}
@@ -394,6 +404,7 @@ exports[`DraggableList [common] example testing should match snapshot(s) for 3.w
         <DotsIcon
           aspectRatio="xMidYMid meet"
           color="primary"
+          direction="horizontal"
           isClickable={false}
           isDisabled={false}
           onClick={[Function]}
@@ -404,6 +415,7 @@ exports[`DraggableList [common] example testing should match snapshot(s) for 3.w
         <DotsIcon
           aspectRatio="xMidYMid meet"
           color="primary"
+          direction="horizontal"
           isClickable={false}
           isDisabled={false}
           onClick={[Function]}
@@ -454,6 +466,7 @@ exports[`DraggableList [common] example testing should match snapshot(s) for 3.w
         <DotsIcon
           aspectRatio="xMidYMid meet"
           color="primary"
+          direction="horizontal"
           isClickable={false}
           isDisabled={false}
           onClick={[Function]}
@@ -464,6 +477,7 @@ exports[`DraggableList [common] example testing should match snapshot(s) for 3.w
         <DotsIcon
           aspectRatio="xMidYMid meet"
           color="primary"
+          direction="horizontal"
           isClickable={false}
           isDisabled={false}
           onClick={[Function]}
@@ -514,6 +528,7 @@ exports[`DraggableList [common] example testing should match snapshot(s) for 3.w
         <DotsIcon
           aspectRatio="xMidYMid meet"
           color="primary"
+          direction="horizontal"
           isClickable={false}
           isDisabled={false}
           onClick={[Function]}
@@ -524,6 +539,7 @@ exports[`DraggableList [common] example testing should match snapshot(s) for 3.w
         <DotsIcon
           aspectRatio="xMidYMid meet"
           color="primary"
+          direction="horizontal"
           isClickable={false}
           isDisabled={false}
           onClick={[Function]}
@@ -574,6 +590,7 @@ exports[`DraggableList [common] example testing should match snapshot(s) for 3.w
         <DotsIcon
           aspectRatio="xMidYMid meet"
           color="primary"
+          direction="horizontal"
           isClickable={false}
           isDisabled={false}
           onClick={[Function]}
@@ -584,6 +601,7 @@ exports[`DraggableList [common] example testing should match snapshot(s) for 3.w
         <DotsIcon
           aspectRatio="xMidYMid meet"
           color="primary"
+          direction="horizontal"
           isClickable={false}
           isDisabled={false}
           onClick={[Function]}
@@ -634,6 +652,7 @@ exports[`DraggableList [common] example testing should match snapshot(s) for 3.w
         <DotsIcon
           aspectRatio="xMidYMid meet"
           color="primary"
+          direction="horizontal"
           isClickable={false}
           isDisabled={false}
           onClick={[Function]}
@@ -644,6 +663,7 @@ exports[`DraggableList [common] example testing should match snapshot(s) for 3.w
         <DotsIcon
           aspectRatio="xMidYMid meet"
           color="primary"
+          direction="horizontal"
           isClickable={false}
           isDisabled={false}
           onClick={[Function]}

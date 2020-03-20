@@ -121,9 +121,25 @@ Tag.displayName = 'Tag';
 
 Tag.peek = {
 	description: `
-		Organizes items into removable items or groups. Can be nested to
-		facilitate grouping.
-	`,
+			\`Tag\` is a visualization for selected settings. 
+				`,
+		notes: {
+			overview: `
+					A visualization for items. Tags can be removable and can be nested into groups.
+					`,
+			intendedUse: `
+					Tags are typically used to display filter selections. Tags can be interactive or display-only. They can also be grouped into a parent container.
+											
+					**Styling notes**
+					
+					- The default style is not interactive, it does not have a \`CloseIcon\`.
+					- Use \`isRemovable='true'\` for interactive tags.
+					- Styling is optimized for 40 or fewer characters.
+					`,
+			technicalRecommendations: `
+					None
+			`,
+		},
 	categories: ['communication'],
 };
 

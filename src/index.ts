@@ -107,6 +107,7 @@ import FolderIcon from './components/Icon/FolderIcon/FolderIcon';
 import FourSquaresIcon from './components/Icon/FourSquaresIcon/FourSquaresIcon';
 import GetMaximumIcon from './components/Icon/GetMaximumIcon/GetMaximumIcon';
 import Grid from './components/Grid/Grid';
+import HamburgerMenuIcon from './components/Icon/HamburgerMenuIcon/HamburgerMenuIcon';
 import HelpIcon from './components/Icon/HelpIcon/HelpIcon';
 import HideIcon from './components/Icon/HideIcon/HideIcon';
 import HomeIcon from './components/Icon/HomeIcon/HomeIcon';
@@ -147,9 +148,9 @@ import RadioButtonLabeled from './components/RadioButtonLabeled/RadioButtonLabel
 import RefreshIcon from './components/Icon/RefreshIcon/RefreshIcon';
 import ResizeIcon from './components/Icon/ResizeIcon/ResizeIcon';
 import Resizer from './components/Resizer/Resizer';
+import ResponsiveGrid from './components/ResponsiveGrid/ResponsiveGrid';
 import RunReportIcon from './components/Icon/RunReportIcon/RunReportIcon';
 import SaveIcon from './components/Icon/SaveIcon/SaveIcon';
-// @ts-ignore: not converted yet
 import ScrollTable from './components/ScrollTable/ScrollTable';
 import SearchIcon from './components/Icon/SearchIcon/SearchIcon';
 import Selection from './components/Selection/Selection';
@@ -285,6 +286,7 @@ export {
 	FourSquaresIcon,
 	GetMaximumIcon,
 	Grid,
+	HamburgerMenuIcon,
 	HelpIcon,
 	HideIcon,
 	HomeIcon,
@@ -330,6 +332,7 @@ export {
 	RefreshIcon,
 	ResizeIcon,
 	Resizer,
+	ResponsiveGrid,
 	RunReportIcon,
 	SaveIcon,
 	ScrollTable,

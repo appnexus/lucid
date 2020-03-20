@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ResponsiveGrid [common] example testing should match snapshot(s) for 01-basic 1`] = `
+<Resizer
+  className="lucid-ResponsiveGrid"
+>
+  <Component />
+</Resizer>
+`;
+
+exports[`ResponsiveGrid [common] example testing should match snapshot(s) for 02-with-custom-breakpoints 1`] = `
+<Resizer
+  className="lucid-ResponsiveGrid"
+>
+  <Component />
+</Resizer>
+`;

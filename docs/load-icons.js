@@ -585,6 +585,23 @@ module.exports = [
 	},
 
 	{
+		name: 'HamburgerMenuIcon',
+		component: getDefaultExport(
+			require('../src/components/Icon/HamburgerMenuIcon/HamburgerMenuIcon')
+		),
+		examplesContext: require.context(
+			'../src/components/Icon/HamburgerMenuIcon/examples',
+			true,
+			/\.(j|t)sx?$/
+		),
+		examplesContextRaw: require.context(
+			'!!raw-loader!../src/components/Icon/HamburgerMenuIcon/examples',
+			true,
+			/\.(j|t)sx?$/
+		),
+	},
+
+	{
 		name: 'HelpIcon',
 		component: getDefaultExport(
 			require('../src/components/Icon/HelpIcon/HelpIcon')

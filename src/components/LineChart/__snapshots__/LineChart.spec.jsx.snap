@@ -4,7 +4,7 @@ exports[`LineChart [common] example testing should match snapshot(s) for 01.basi
 <svg
   className="lucid-LineChart"
   height={400}
-  width={1000}
+  width={800}
 >
   <g
     transform="translate(80, 10)"
@@ -243,7 +243,7 @@ exports[`LineChart [common] example testing should match snapshot(s) for 01.basi
       height={325}
       onMouseMove={[Function]}
       onMouseOut={[Function]}
-      width={840}
+      width={640}
     />
   </g>
 </svg>
@@ -253,7 +253,7 @@ exports[`LineChart [common] example testing should match snapshot(s) for 03.mult
 <svg
   className="lucid-LineChart"
   height={400}
-  width={1000}
+  width={800}
 >
   <g
     transform="translate(80, 10)"
@@ -1139,7 +1139,7 @@ exports[`LineChart [common] example testing should match snapshot(s) for 03.mult
       height={325}
       onMouseMove={[Function]}
       onMouseOut={[Function]}
-      width={840}
+      width={640}
     />
   </g>
 </svg>
@@ -1149,7 +1149,7 @@ exports[`LineChart [common] example testing should match snapshot(s) for 04.mult
 <svg
   className="lucid-LineChart"
   height={400}
-  width={1000}
+  width={800}
 >
   <g
     transform="translate(80, 10)"
@@ -1427,7 +1427,7 @@ exports[`LineChart [common] example testing should match snapshot(s) for 04.mult
       height={325}
       onMouseMove={[Function]}
       onMouseOut={[Function]}
-      width={840}
+      width={640}
     />
   </g>
 </svg>
@@ -1437,7 +1437,7 @@ exports[`LineChart [common] example testing should match snapshot(s) for 05.stac
 <svg
   className="lucid-LineChart"
   height={400}
-  width={1000}
+  width={800}
 >
   <g
     transform="translate(80, 10)"
@@ -1849,7 +1849,7 @@ exports[`LineChart [common] example testing should match snapshot(s) for 05.stac
       height={325}
       onMouseMove={[Function]}
       onMouseOut={[Function]}
-      width={840}
+      width={640}
     />
   </g>
 </svg>
@@ -1859,7 +1859,7 @@ exports[`LineChart [common] example testing should match snapshot(s) for 06.dual
 <svg
   className="lucid-LineChart"
   height={400}
-  width={1000}
+  width={800}
 >
   <g
     transform="translate(80, 10)"
@@ -2168,7 +2168,7 @@ exports[`LineChart [common] example testing should match snapshot(s) for 06.dual
       height={325}
       onMouseMove={[Function]}
       onMouseOut={[Function]}
-      width={840}
+      width={640}
     />
   </g>
 </svg>
@@ -2178,7 +2178,7 @@ exports[`LineChart [common] example testing should match snapshot(s) for 07.all-
 <svg
   className="lucid-LineChart"
   height={400}
-  width={1000}
+  width={800}
 >
   <g
     transform="translate(80, 10)"
@@ -2205,7 +2205,7 @@ exports[`LineChart [common] example testing should match snapshot(s) for 07.all-
       height={65}
       label="Date"
       orient="bottom"
-      width={840}
+      width={640}
     />
   </g>
   <g
@@ -2467,7 +2467,7 @@ exports[`LineChart [common] example testing should match snapshot(s) for 07.all-
       height={325}
       onMouseMove={[Function]}
       onMouseOut={[Function]}
-      width={840}
+      width={640}
     />
   </g>
 </svg>
@@ -2477,7 +2477,7 @@ exports[`LineChart [common] example testing should match snapshot(s) for 08.stac
 <svg
   className="lucid-LineChart"
   height={400}
-  width={1000}
+  width={800}
 >
   <g
     transform="translate(80, 10)"
@@ -2716,7 +2716,7 @@ exports[`LineChart [common] example testing should match snapshot(s) for 08.stac
       height={325}
       onMouseMove={[Function]}
       onMouseOut={[Function]}
-      width={840}
+      width={640}
     />
   </g>
 </svg>
@@ -2726,7 +2726,7 @@ exports[`LineChart [common] example testing should match snapshot(s) for 09.stac
 <svg
   className="lucid-LineChart"
   height={400}
-  width={1000}
+  width={800}
 >
   <g
     transform="translate(80, 10)"
@@ -3021,7 +3021,7 @@ exports[`LineChart [common] example testing should match snapshot(s) for 09.stac
       height={325}
       onMouseMove={[Function]}
       onMouseOut={[Function]}
-      width={840}
+      width={640}
     />
   </g>
 </svg>
@@ -3031,7 +3031,7 @@ exports[`LineChart [common] example testing should match snapshot(s) for 10.abbr
 <svg
   className="lucid-LineChart"
   height={400}
-  width={1000}
+  width={800}
 >
   <g
     transform="translate(80, 10)"
@@ -3286,7 +3286,7 @@ exports[`LineChart [common] example testing should match snapshot(s) for 10.abbr
       height={325}
       onMouseMove={[Function]}
       onMouseOut={[Function]}
-      width={840}
+      width={640}
     />
   </g>
 </svg>
@@ -3296,7 +3296,7 @@ exports[`LineChart [common] example testing should match snapshot(s) for 11.colo
 <svg
   className="lucid-LineChart"
   height={400}
-  width={1000}
+  width={800}
 >
   <g
     transform="translate(80, 10)"
@@ -3330,7 +3330,7 @@ exports[`LineChart [common] example testing should match snapshot(s) for 11.colo
         <rect
           className="lucid-LineChart-invisible"
           height={65}
-          width={840}
+          width={640}
         />
       </ContextMenu.Target>
       <ContextMenu.FlyOut
@@ -3827,7 +3827,7 @@ exports[`LineChart [common] example testing should match snapshot(s) for 11.colo
       height={325}
       onMouseMove={[Function]}
       onMouseOut={[Function]}
-      width={840}
+      width={640}
     />
   </g>
 </svg>
@@ -3843,7 +3843,7 @@ exports[`LineChart [common] example testing should match snapshot(s) for 12.empt
   <svg
     className="lucid-LineChart"
     height={400}
-    width={1000}
+    width={800}
   >
     <g
       transform="translate(80, 10)"
@@ -3897,7 +3897,7 @@ exports[`LineChart [common] example testing should match snapshot(s) for 13.empt
   <svg
     className="lucid-LineChart"
     height={400}
-    width={1000}
+    width={800}
   >
     <g
       transform="translate(80, 10)"
@@ -3959,7 +3959,7 @@ exports[`LineChart [common] example testing should match snapshot(s) for 14.empt
   <svg
     className="lucid-LineChart"
     height={400}
-    width={1000}
+    width={800}
   >
     <g
       transform="translate(80, 10)"
@@ -4002,7 +4002,7 @@ exports[`LineChart [common] example testing should match snapshot(s) for 15.load
   <svg
     className="lucid-LineChart"
     height={400}
-    width={1000}
+    width={800}
   >
     <g
       transform="translate(80, 10)"
@@ -4039,7 +4039,7 @@ exports[`LineChart [common] example testing should match snapshot(s) for 16.fine
 <svg
   className="lucid-LineChart"
   height={400}
-  width={1000}
+  width={800}
 >
   <g
     transform="translate(80, 10)"
@@ -4269,7 +4269,7 @@ exports[`LineChart [common] example testing should match snapshot(s) for 16.fine
       height={325}
       onMouseMove={[Function]}
       onMouseOut={[Function]}
-      width={840}
+      width={640}
     />
   </g>
 </svg>

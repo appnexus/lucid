@@ -1,0 +1,30 @@
+@import (reference) '../../styles/variables.less';
+@import (reference) '../../styles/mixins.less';
+
+.@{prefix}-ResponsiveGrid {
+	display: flex;
+
+	&.one-column {
+		flex-direction: column;
+		> .@{prefix}-ResponsiveGrid-Column {
+			width: 100%;
+		}
+	}
+
+	> .@{prefix}-ResponsiveGrid-Column {
+		flex: 1;
+		margin: 0 @size-standard 0 0;
+
+		&:last-child {
+			margin: 0;
+		}
+
+		> .@{prefix}-ResponsiveGrid-Cell {
+			margin: 0 0 @size-standard 0;
+
+			&:last-child {
+				margin: 0;
+			}
+		}
+	}
+}

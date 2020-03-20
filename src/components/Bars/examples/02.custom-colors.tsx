@@ -5,7 +5,7 @@ import React from 'react';
 import createClass from 'create-react-class';
 import { Bars, d3Scale, chartConstants } from '../../../index';
 
-const width = 1000;
+const width = 750;
 const height = 400;
 
 const data = [
@@ -14,7 +14,7 @@ const data = [
 	{ x: 'three', y0: 2, y1: 4, y2: 5, y3: 6 },
 	{ x: 'four', y0: 3, y1: 6, y2: 7, y3: 7 },
 	{ x: 'five', y0: 4, y1: 8, y2: 9, y3: 8 },
-	{ x: 'six', y0: 20, y1: 8, y2: 9, y3: 1 },
+	{ x: 'six', y0: 11, y1: 8, y2: 9, y3: 5 },
 ];
 
 const yFields = ['y0', 'y1', 'y2', 'y3'];
@@ -22,7 +22,7 @@ const yMax = _.max(
 	_.reduce(
 		yFields,
 		(acc, field) => {
-			return acc.concat(_.map(data, field));
+			return acc.concat(_.map(data, field) as any);
 		},
 		[]
 	)
@@ -37,13 +37,17 @@ const xScale = d3Scale
 
 const yScale = d3Scale
 	.scaleLinear()
-	.domain([0, yMax])
+	.domain([0, yMax as any])
 	.range([height, 0]);
+
+const style = {
+	paddingTop: '9rem',
+};
 
 export default createClass({
 	render() {
 		return (
-			<div>
+			<div style={style}>
 				<svg width={width} height={height}>
 					<Bars
 						data={data}
