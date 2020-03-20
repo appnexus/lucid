@@ -13,12 +13,12 @@ const cx = lucidClassNames.bind('&-EmptyStateWrapper');
 
 const { any, bool, node, string } = PropTypes;
 
-interface IEmptyStateWrapperBodyProps extends StandardProps {}
+export interface IEmptyStateWrapperBodyProps extends StandardProps {}
 
 const EmptyStateWrapperBody = (_props: IEmptyStateWrapperBodyProps): null =>
 	null;
 
-interface IEmptyStateWrapperTitleProps extends StandardProps {}
+export interface IEmptyStateWrapperTitleProps extends StandardProps {}
 
 const EmptyStateWrapperTitle = (_props: IEmptyStateWrapperTitleProps): null =>
 	null;
