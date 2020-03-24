@@ -1026,7 +1026,9 @@ exports[`BarChart [common] example testing should match snapshot(s) for 10.forma
 exports[`BarChart [common] example testing should match snapshot(s) for 11.empty 1`] = `
 <EmptyStateWrapper
   Title="You have no data."
+  anchorMessage={false}
   isEmpty={true}
+  isLoading={false}
 >
   <svg
     className="lucid-BarChart"
@@ -1066,7 +1068,9 @@ exports[`BarChart [common] example testing should match snapshot(s) for 11.empty
 
 exports[`BarChart [common] example testing should match snapshot(s) for 12.empty-with-custom-title-and-body 1`] = `
 <EmptyStateWrapper
+  anchorMessage={false}
   isEmpty={true}
+  isLoading={false}
 >
   <EmptyStateWrapper.Title>
     Something went wrong.

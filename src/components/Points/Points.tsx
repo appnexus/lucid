@@ -70,26 +70,28 @@ export interface IPointsProps
 			{ x: 'five'  , y0: 4  , y1: 8 , y2: 9 , y3: 8 },
 			{ x: 'six'   , y0: 20 , y1: 8 , y2: 9 , y3: 1 },
 		] */
-	data: Array<{[key: string]: string | number }>;
+	data: Array<{ [key: string]: string | number | Date }>;
 
 	/** The scale for the x axis. Must be a d3 scale. Lucid exposes the
 		`lucid.d3Scale` library for use here. */
 	xScale:
 		| d3Scale.ScaleBand<number | string>
-		| d3Scale.ScalePoint<number | string>;
+		| d3Scale.ScalePoint<number | string>
+		| d3Scale.ScaleTime<number, number>;
 
 	/** The scale for the y axis. Must be a d3 scale. Lucid exposes the
 		`lucid.d3Scale` library for use here. */
 	yScale:
 		| d3Scale.ScaleContinuousNumeric<number, number>
 		| d3Scale.ScaleBand<number>
-		| d3Scale.ScalePoint<number>;
+		| d3Scale.ScalePoint<number>
+		| d3Scale.ScaleLinear<number, number>;
 
 	/** Typically this number can be derived from the yScale. However when we're
 		\`isStacked\` we need to calculate a new domain for the yScale based on
 		the sum of the data. If you need explicit control of the y max when
 		stacking, pass it in here. */
-	yStackedMax?: number;
+	yStackedMax?: number | object;
 
 	/** The field we should look up your x data by. */
 	xField: string;
@@ -143,7 +145,7 @@ export const Points = (props: IPointsProps): React.ReactElement => {
 	// If we are stacked, we need to calculate a new domain based on the sum of
 	// the various series' y data. One row per series.
 	const transformedData = isStacked
-		? d3Shape.stack().keys(yFields)(data as Array<{[key: string]: number}>)
+		? d3Shape.stack().keys(yFields)(data as Array<{ [key: string]: number }>)
 		: groupByFields(data, yFields);
 
 	// If we are stacked, we need to calculate a new domain based on the sum of
@@ -170,6 +172,9 @@ export const Points = (props: IPointsProps): React.ReactElement => {
 								return (
 									<Point
 										key={`${seriesIndex}${dIndex}`}
+										/* Since data contains x and y values, data values may not have a uniform type that always matches
+											the expected input of the xScale */
+										//@ts-ignore
 										x={xScale(data[seriesIndex][xField])}
 										y={yScale(_.isArray(series) ? _.last(series) : series)}
 										hasStroke={hasStroke}

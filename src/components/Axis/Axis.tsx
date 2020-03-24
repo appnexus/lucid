@@ -20,7 +20,8 @@ interface IAxisPropsRaw extends StandardProps {
 	scale:
 		| d3scale.ScaleBand<number>
 		| d3scale.ScalePoint<number>
-		| d3scale.ScaleContinuousNumeric<number, number>;
+		| d3scale.ScaleContinuousNumeric<number, number>
+		| d3scale.ScaleTime<number, number>;
 	// | d3scale.ScalePower<number, number>
 	// | d3scale.ScaleLogarithmic<number, number>;
 
@@ -33,11 +34,11 @@ interface IAxisPropsRaw extends StandardProps {
 
 	/** An optional function that can format ticks. Generally this shouldn't be
 		needed since d3 has very good default formatters for most data. */
-	tickFormat?: (d: number | { valueOf(): number }) => string;
+	tickFormat?: (d: number | Date) => string;
 
 	/** If you need fine grained control over the axis ticks, you can pass them
 		in this array. */
-	ticks?: number[];
+	ticks?: Array<number | Date>;
 
 	/** Determines the spacing between each tick and its text. */
 	tickPadding: number;
@@ -253,7 +254,7 @@ export const Axis = (props: IAxisProps): React.ReactElement => {
 							}}
 							transform={orientationProperties[orientationKey].transform}
 						>
-							{tickFormat(tick)}
+							{tickFormat(tick as any)}
 						</text>
 					</g>
 				)
@@ -267,11 +268,9 @@ Axis.displayName = 'Axis';
 Axis.peek = {
 	description: `
 	*\`Axis\` is used within an \`svg\`*
-
 	An \`Axis\` is used to help render human-readable reference marks on charts.
 	It can either be horizontal or vertical and really only needs a scale
 	to be able to draw properly.
-
 	This component is a very close sister to d3's svg axis and most of the
 	logic was ported from there.
 	`,

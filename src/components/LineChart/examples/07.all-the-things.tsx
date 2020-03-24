@@ -30,8 +30,8 @@ const data = [
 		oranges: 6100,
 	},
 ];
-const yFormatter = d => `${d / 1000}k`;
-const xFormatter = d => `${d.getMonth() + 1}-${d.getDate()}`;
+const yFormatter = (d: number) => `${d / 1000}k`;
+const xFormatter = (d: Date) => `${d.getMonth() + 1}-${d.getDate()}`;
 
 const style = {
 	paddingTop: '5rem',

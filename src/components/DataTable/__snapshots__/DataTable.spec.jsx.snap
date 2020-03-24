@@ -4,8 +4,10 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
 <EmptyStateWrapper
   Body="Try creating a new object or removing a filter."
   Title="No items found."
+  anchorMessage={false}
   className=""
   isEmpty={false}
+  isLoading={false}
 >
   <ScrollTable
     className="lucid-DataTable"
@@ -1297,8 +1299,10 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
 <EmptyStateWrapper
   Body="Try creating a new object or removing a filter."
   Title="No items found."
+  anchorMessage={false}
   className=""
   isEmpty={false}
+  isLoading={false}
 >
   <ScrollTable
     className="lucid-DataTable"
@@ -2621,8 +2625,10 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
 <EmptyStateWrapper
   Body="Try creating a new object or removing a filter."
   Title="No items found."
+  anchorMessage={false}
   className=""
   isEmpty={false}
+  isLoading={false}
 >
   <ScrollTable
     className="lucid-DataTable"
@@ -4089,8 +4095,10 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
 <EmptyStateWrapper
   Body="Try creating a new object or removing a filter."
   Title="No items found."
+  anchorMessage={false}
   className=""
   isEmpty={false}
+  isLoading={false}
 >
   <ScrollTable
     className="lucid-DataTable"
@@ -5641,8 +5649,10 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
 <EmptyStateWrapper
   Body="Try creating a new object or removing a filter."
   Title="No items found."
+  anchorMessage={false}
   className=""
   isEmpty={false}
+  isLoading={false}
 >
   <ScrollTable
     className="lucid-DataTable"
@@ -6934,8 +6944,10 @@ exports[`DataTable [common] example testing should match snapshot(s) for 06.empt
 <EmptyStateWrapper
   Body="Try creating a new object or removing a filter."
   Title="No items found."
+  anchorMessage={false}
   className=""
   isEmpty={true}
+  isLoading={false}
 >
   <ScrollTable
     className="lucid-DataTable lucid-DataTable-full-width"
@@ -7748,8 +7760,10 @@ exports[`DataTable [common] example testing should match snapshot(s) for 06.empt
 
 exports[`DataTable [common] example testing should match snapshot(s) for 07.empty-with-custom-title-and-body 1`] = `
 <EmptyStateWrapper
+  anchorMessage={false}
   className=""
   isEmpty={true}
+  isLoading={false}
 >
   <EmptyStateWrapper.Title>
     Something went wrong.
@@ -8934,8 +8948,10 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
 
 exports[`DataTable [common] example testing should match snapshot(s) for 08.empty-with-image 1`] = `
 <EmptyStateWrapper
+  anchorMessage={false}
   className=""
   isEmpty={true}
+  isLoading={false}
 >
   <EmptyStateWrapper.Title>
     No items found.
@@ -9767,6 +9783,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.empt
   anchorMessage={true}
   className=""
   isEmpty={true}
+  isLoading={false}
 >
   <ScrollTable
     className="lucid-DataTable lucid-DataTable-full-width"
@@ -15815,8 +15832,10 @@ exports[`DataTable [common] example testing should match snapshot(s) for 12.min-
 <EmptyStateWrapper
   Body="Try creating a new object or removing a filter."
   Title="No items found."
+  anchorMessage={false}
   className=""
   isEmpty={false}
+  isLoading={false}
 >
   <ScrollTable
     className="lucid-DataTable lucid-DataTable-full-width"
@@ -16792,8 +16811,10 @@ exports[`DataTable [common] example testing should match snapshot(s) for 13.fixe
 <EmptyStateWrapper
   Body="Try creating a new object or removing a filter."
   Title="No items found."
+  anchorMessage={false}
   className="lucid-DataTable-EmptyStateWrapper-has-fixed-header"
   isEmpty={false}
+  isLoading={false}
 >
   <div
     className="lucid-DataTable-fixed"
@@ -18504,8 +18525,10 @@ exports[`DataTable [common] example testing should match snapshot(s) for 14.resi
 <EmptyStateWrapper
   Body="Try creating a new object or removing a filter."
   Title="No items found."
+  anchorMessage={false}
   className="lucid-DataTable-EmptyStateWrapper-has-fixed-header"
   isEmpty={false}
+  isLoading={false}
 >
   <div
     className="lucid-DataTable-fixed"

@@ -247,7 +247,7 @@ const FORMAT_YEAR = d3TimeFormat.timeFormat('%Y');
  * @param {date} date - input date
  * @return {string} - formatted date
  */
-export function formatDate(date: Date) {
+export function formatDate(date: Date): string {
 	return (d3Time.timeSecond(date) < date
 		? FORMAT_MILLISECOND
 		: d3Time.timeMinute(date) < date

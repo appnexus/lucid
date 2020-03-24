@@ -264,9 +264,8 @@ export function createElements<P>(
 	);
 }
 
-//does this work?
 // return the first element found in props and children of the specificed type(s)
-export function getFirst<P, CustomType = {}>(
+export function getFirst<P>(
 	props: P,
 	types: TypesType<P> | undefined,
 	defaultValue?: React.ReactNode
