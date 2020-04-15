@@ -31,7 +31,7 @@ interface IAccordionPropsRaw extends StandardProps {
 	) => void;
 }
 
-type IAccordionProps = Overwrite<
+export type IAccordionProps = Overwrite<
 	React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>,
 	IAccordionPropsRaw
 >;

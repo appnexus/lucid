@@ -53,7 +53,8 @@ export interface IVerticalListMenuPropsRaw extends StandardProps {
 		}
 	) => void;
 }
-type IVerticalListMenuProps = Overwrite<
+
+export type IVerticalListMenuProps = Overwrite<
 	React.DetailedHTMLProps<
 		React.HTMLAttributes<HTMLUListElement>,
 		HTMLUListElement

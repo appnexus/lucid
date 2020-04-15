@@ -81,7 +81,7 @@ interface IVerticalTabsPropsRaw extends StandardProps {
 	) => void;
 }
 
-type IVerticalTabsProps = Overwrite<
+export type IVerticalTabsProps = Overwrite<
 	React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>,
 	IVerticalTabsPropsRaw
 >;
