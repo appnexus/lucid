@@ -36,7 +36,7 @@ Header.propTypes = {
 	`,
 };
 
-interface IExpanderPanelProps extends StandardProps {
+export interface IExpanderPanelProps extends StandardProps {
 	/** Indicates that the component is in the "expanded" state when true and in
 			the "unexpanded" state when false. */
 	isExpanded: boolean;

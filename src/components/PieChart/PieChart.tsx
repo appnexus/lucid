@@ -141,7 +141,7 @@ export interface IPieChartPropsRaw extends StandardProps {
 	yAxisFormatter: (y: number) => string | number;
 }
 
-type IPieChartProps = Overwrite<React.SVGProps<SVGGElement>, IPieChartPropsRaw>;
+export type IPieChartProps = Overwrite<React.SVGProps<SVGGElement>, IPieChartPropsRaw>;
 
 const defaultProps = {
 	height: 200,
