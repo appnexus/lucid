@@ -126,6 +126,23 @@ module.exports = [
 	},
 
 	{
+		name: 'BellDotIcon',
+		component: getDefaultExport(
+			require('../src/components/Icon/BellDotIcon/BellDotIcon')
+		),
+		examplesContext: require.context(
+			'../src/components/Icon/BellDotIcon/examples',
+			true,
+			/\.(j|t)sx?$/
+		),
+		examplesContextRaw: require.context(
+			'!!raw-loader!../src/components/Icon/BellDotIcon/examples',
+			true,
+			/\.(j|t)sx?$/
+		),
+	},
+
+	{
 		name: 'BellIcon',
 		component: getDefaultExport(
 			require('../src/components/Icon/BellIcon/BellIcon')
@@ -154,6 +171,23 @@ module.exports = [
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Icon/BookIcon/examples',
+			true,
+			/\.(j|t)sx?$/
+		),
+	},
+
+	{
+		name: 'CalculatorIcon',
+		component: getDefaultExport(
+			require('../src/components/Icon/CalculatorIcon/CalculatorIcon')
+		),
+		examplesContext: require.context(
+			'../src/components/Icon/CalculatorIcon/examples',
+			true,
+			/\.(j|t)sx?$/
+		),
+		examplesContextRaw: require.context(
+			'!!raw-loader!../src/components/Icon/CalculatorIcon/examples',
 			true,
 			/\.(j|t)sx?$/
 		),

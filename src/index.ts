@@ -1,49 +1,115 @@
 // components with reducers
-import Accordion, { AccordionDumb, IAccordionState, IAccordionProps } from './components/Accordion/Accordion';
+import Accordion, {
+	AccordionDumb,
+	IAccordionState,
+	IAccordionProps,
+} from './components/Accordion/Accordion';
 import Autocomplete, {
 	AutocompleteDumb,
 	// @ts-ignore: not converted yet
 } from './components/Autocomplete/Autocomplete';
 import ButtonGroup, {
-	ButtonGroupDumb, IButtonGroupProps, IButtonGroupState
+	ButtonGroupDumb,
+	IButtonGroupProps,
+	IButtonGroupState,
 } from './components/ButtonGroup/ButtonGroup';
 import SearchableSelect, {
-	SearchableSelectDumb, ISearchableSelectProps, ISearchableSelectState, ISearchableSelectOptionProps
+	SearchableSelectDumb,
+	ISearchableSelectProps,
+	ISearchableSelectState,
+	ISearchableSelectOptionProps,
 } from './components/SearchableSelect/SearchableSelect';
-import DateSelect, { DateSelectDumb, IDateSelectProps, IDateSelectState } from './components/DateSelect/DateSelect';
+import DateSelect, {
+	DateSelectDumb,
+	IDateSelectProps,
+	IDateSelectState,
+} from './components/DateSelect/DateSelect';
 import SearchableMultiSelect, {
-	SearchableMultiSelectDumb, ISearchableMultiSelectProps, ISearchableMultiSelectState, ISearchableMultiSelectOptionProps, ISearchableMultiSelectPropsRaw
+	SearchableMultiSelectDumb,
+	ISearchableMultiSelectProps,
+	ISearchableMultiSelectState,
+	ISearchableMultiSelectOptionProps,
+	ISearchableMultiSelectPropsRaw,
 } from './components/SearchableMultiSelect/SearchableMultiSelect';
 import SearchableSingleSelect, {
-	SearchableSingleSelectDumb, ISearchableSingleSelectProps, ISearchableSingleSelectState, ISearchableSingleSelectOptionProps, ISearchableSingleSelectPropsRaw
+	SearchableSingleSelectDumb,
+	ISearchableSingleSelectProps,
+	ISearchableSingleSelectState,
+	ISearchableSingleSelectOptionProps,
+	ISearchableSingleSelectPropsRaw,
 } from './components/SearchableSingleSelect/SearchableSingleSelect';
-import DropMenu, { DropMenuDumb, IDropMenuProps, IDropMenuState, IDropMenuOptionProps, IDropMenuOptionGroupProps, IDropMenuFixedOptionProps, IDropMenuNullOptionProps } from './components/DropMenu/DropMenu';
-import Expander, { ExpanderDumb, IExpanderProps, IExpanderState } from './components/Expander/Expander';
+import DropMenu, {
+	DropMenuDumb,
+	IDropMenuProps,
+	IDropMenuState,
+	IDropMenuOptionProps,
+	IDropMenuOptionGroupProps,
+	IDropMenuFixedOptionProps,
+	IDropMenuNullOptionProps,
+} from './components/DropMenu/DropMenu';
+import Expander, {
+	ExpanderDumb,
+	IExpanderProps,
+	IExpanderState,
+} from './components/Expander/Expander';
 import ExpanderPanel, {
-	ExpanderPanelDumb, IExpanderPanelProps, IExpanderPanelHeaderProps
+	ExpanderPanelDumb,
+	IExpanderPanelProps,
+	IExpanderPanelHeaderProps,
 } from './components/ExpanderPanel/ExpanderPanel';
-import Paginator, { PaginatorDumb, IPaginatorProps, IPaginatorState } from './components/Paginator/Paginator';
-import PieChart, { PieChartDumb, IPieChartProps, IPieChartPropsRaw } from './components/PieChart/PieChart';
+import Paginator, {
+	PaginatorDumb,
+	IPaginatorProps,
+	IPaginatorState,
+} from './components/Paginator/Paginator';
+import PieChart, {
+	PieChartDumb,
+	IPieChartProps,
+	IPieChartPropsRaw,
+} from './components/PieChart/PieChart';
 // @ts-ignore: not converted yet
 import RadioGroup, { RadioGroupDumb } from './components/RadioGroup/RadioGroup';
 import SearchField, {
-	SearchFieldDumb, ISearchFieldProps, ISearchFieldState
+	SearchFieldDumb,
+	ISearchFieldProps,
+	ISearchFieldState,
 } from './components/SearchField/SearchField';
-import Sidebar, { SidebarDumb, ISidebarProps, ISidebarState } from './components/Sidebar/Sidebar';
+import Sidebar, {
+	SidebarDumb,
+	ISidebarProps,
+	ISidebarState,
+} from './components/Sidebar/Sidebar';
 import SingleSelect, {
-	SingleSelectDumb, ISingleSelectProps, ISingleSelectState, ISingleSelectOptionProps
+	SingleSelectDumb,
+	ISingleSelectProps,
+	ISingleSelectState,
+	ISingleSelectOptionProps,
 } from './components/SingleSelect/SingleSelect';
 import SplitButton, {
-	SplitButtonDumb, ISplitButtonProps
+	SplitButtonDumb,
+	ISplitButtonProps,
 } from './components/SplitButton/SplitButton';
-import Submarine, { SubmarineDumb, ISubmarineState } from './components/Submarine/Submarine';
+import Submarine, {
+	SubmarineDumb,
+	ISubmarineState,
+} from './components/Submarine/Submarine';
 import Tabs, { TabsDumb, ITabsState } from './components/Tabs/Tabs';
-import ToolTip, { ToolTipDumb, IToolTipProps, IToolTipState } from './components/ToolTip/ToolTip';
+import ToolTip, {
+	ToolTipDumb,
+	IToolTipProps,
+	IToolTipState,
+} from './components/ToolTip/ToolTip';
 import VerticalListMenu, {
-	VerticalListMenuDumb, IVerticalListMenuProps, IVerticalListMenuState, IVerticalListMenuItemProps, IVerticalListMenuPropsRaw
+	VerticalListMenuDumb,
+	IVerticalListMenuProps,
+	IVerticalListMenuState,
+	IVerticalListMenuItemProps,
+	IVerticalListMenuPropsRaw,
 } from './components/VerticalListMenu/VerticalListMenu';
 import VerticalTabs, {
-	VerticalTabsDumb, IVerticalTabsProps, IVerticalTabsState
+	VerticalTabsDumb,
+	IVerticalTabsProps,
+	IVerticalTabsState,
 } from './components/VerticalTabs/VerticalTabs';
 
 // dumb components
@@ -64,10 +130,12 @@ import Bar from './components/Bar/Bar';
 import BarChart from './components/BarChart/BarChart';
 // @ts-ignore: not converted yet
 import Bars from './components/Bars/Bars';
+import BellDotIcon from './components/Icon/BellDotIcon/BellDotIcon';
 import BellIcon from './components/Icon/BellIcon/BellIcon';
 import BookIcon from './components/Icon/BookIcon/BookIcon';
 import Breadcrumb from './components/Breadcrumb/Breadcrumb';
 import Button from './components/Button/Button';
+import CalculatorIcon from './components/Icon/CalculatorIcon/CalculatorIcon';
 import CalendarIcon from './components/Icon/CalendarIcon/CalendarIcon';
 import ChatIcon from './components/Icon/ChatIcon/ChatIcon';
 import CheckIcon from './components/Icon/CheckIcon/CheckIcon';
@@ -239,6 +307,7 @@ export {
 	Bar,
 	BarChart,
 	Bars,
+	BellDotIcon,
 	BellIcon,
 	BookIcon,
 	Breadcrumb,
@@ -247,6 +316,7 @@ export {
 	ButtonGroupDumb,
 	IButtonGroupProps,
 	IButtonGroupState,
+	CalculatorIcon,
 	CalendarIcon,
 	ChatIcon,
 	Checkbox,
@@ -276,9 +346,9 @@ export {
 	DropMenuDumb,
 	IDropMenuProps,
 	IDropMenuState,
-	IDropMenuOptionProps, 
-	IDropMenuOptionGroupProps, 
-	IDropMenuFixedOptionProps, 
+	IDropMenuOptionProps,
+	IDropMenuOptionGroupProps,
+	IDropMenuFixedOptionProps,
 	IDropMenuNullOptionProps,
 	DuplicateIcon,
 	EditIcon,
@@ -289,11 +359,11 @@ export {
 	EqualsIcon,
 	Expander,
 	ExpanderDumb,
-	IExpanderProps, 
+	IExpanderProps,
 	IExpanderState,
 	ExpanderPanel,
 	ExpanderPanelDumb,
-	IExpanderPanelProps, 
+	IExpanderPanelProps,
 	IExpanderPanelHeaderProps,
 	FileIcon,
 	FilterIcon,
@@ -332,7 +402,7 @@ export {
 	OverlayWrapper,
 	Paginator,
 	PaginatorDumb,
-	IPaginatorProps, 
+	IPaginatorProps,
 	IPaginatorState,
 	Panel,
 	PieChart,
@@ -375,7 +445,7 @@ export {
 	ISearchableSelectOptionProps,
 	SearchField,
 	SearchFieldDumb,
-	ISearchFieldProps, 
+	ISearchFieldProps,
 	ISearchFieldState,
 	SearchIcon,
 	Selection,
@@ -389,8 +459,8 @@ export {
 	ISidebarState,
 	SingleSelect,
 	SingleSelectDumb,
-	ISingleSelectProps, 
-	ISingleSelectState, 
+	ISingleSelectProps,
+	ISingleSelectState,
 	ISingleSelectOptionProps,
 	SplitButton,
 	SplitButtonDumb,
@@ -431,7 +501,7 @@ export {
 	VerticalListMenu,
 	VerticalListMenuDumb,
 	IVerticalListMenuProps,
-	IVerticalListMenuState, 
+	IVerticalListMenuState,
 	IVerticalListMenuItemProps,
 	IVerticalListMenuPropsRaw,
 	VerticalTabs,
