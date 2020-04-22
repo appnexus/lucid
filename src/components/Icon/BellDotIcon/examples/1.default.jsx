@@ -15,16 +15,16 @@ export default createClass({
 				</div>
 				<div style={whitespace}>
 					<span style={whitespace}>
-						<BellDotIcon featuredColor='info' />
+						<BellDotIcon featuredColor='info' hasDot />
 					</span>
 					<span style={whitespace}>
-						<BellDotIcon featuredColor='success' />
+						<BellDotIcon featuredColor='success' hasDot />
 					</span>
 					<span style={whitespace}>
-						<BellDotIcon featuredColor='warning' />
+						<BellDotIcon featuredColor='warning' hasDot />
 					</span>
 					<span style={whitespace}>
-						<BellDotIcon featuredColor='danger' />
+						<BellDotIcon featuredColor='danger' hasDot />
 					</span>
 				</div>
 			</>
