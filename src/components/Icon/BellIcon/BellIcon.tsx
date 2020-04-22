@@ -5,7 +5,7 @@ import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
 import { omitProps, Overwrite } from '../../../util/component-types';
 
-const cx = lucidClassNames.bind('&-BellDotIcon');
+const cx = lucidClassNames.bind('&-BellIcon');
 
 const { oneOf } = PropTypes;
 
@@ -62,7 +62,7 @@ export const BellIcon = ({
 	);
 };
 
-BellIcon.displayName = 'BellDotIcon';
+BellIcon.displayName = 'BellIcon';
 BellIcon.peek = {
 	description: `
 		Typically used for notifications. The dot indicates that there is an unread message.

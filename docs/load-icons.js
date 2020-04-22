@@ -126,23 +126,6 @@ module.exports = [
 	},
 
 	{
-		name: 'BellDotIcon',
-		component: getDefaultExport(
-			require('../src/components/Icon/BellDotIcon/BellDotIcon')
-		),
-		examplesContext: require.context(
-			'../src/components/Icon/BellDotIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../src/components/Icon/BellDotIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
-	},
-
-	{
 		name: 'BellIcon',
 		component: getDefaultExport(
 			require('../src/components/Icon/BellIcon/BellIcon')
