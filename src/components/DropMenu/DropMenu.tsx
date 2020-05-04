@@ -8,6 +8,7 @@ import {
 	rejectTypes,
 	findTypes,
 	omitProps,
+	Overwrite,
 } from '../../util/component-types';
 import { scrollParentTo } from '../../util/dom-helpers';
 import { buildModernHybridComponent } from '../../util/state-management';
@@ -57,6 +58,7 @@ const {
 interface IDropMenuHeaderProps extends StandardProps {
 	description?: string;
 }
+
 
 const Header = (_props: IDropMenuHeaderProps): null => null;
 Header.displayName = 'DropMenu.Header';
@@ -242,7 +244,7 @@ export interface IDropMenuProps extends StandardProps {
 		props,
 		event,
 	}: {
-		props: IDropMenuProps;
+		props: IDropMenuPropsWithPassThroughs;
 		event: React.KeyboardEvent | React.MouseEvent;
 	}) => void;
 
@@ -252,7 +254,7 @@ export interface IDropMenuProps extends StandardProps {
 		props,
 		event,
 	}: {
-		props: IDropMenuProps;
+		props: IDropMenuPropsWithPassThroughs;
 		event: React.KeyboardEvent | React.MouseEvent;
 	}) => void;
 
@@ -275,7 +277,7 @@ export interface IDropMenuProps extends StandardProps {
 		props,
 		event,
 	}: {
-		props: IDropMenuProps;
+		props: IDropMenuPropsWithPassThroughs;
 		event: React.KeyboardEvent;
 	}) => void;
 
@@ -285,7 +287,7 @@ export interface IDropMenuProps extends StandardProps {
 		props,
 		event,
 	}: {
-		props: IDropMenuProps;
+		props: IDropMenuPropsWithPassThroughs;
 		event: React.KeyboardEvent;
 	}) => void;
 
@@ -295,7 +297,7 @@ export interface IDropMenuProps extends StandardProps {
 			props,
 			event,
 		}: {
-			props: IDropMenuProps;
+			props: IDropMenuPropsWithPassThroughs;
 			event: React.KeyboardEvent | React.MouseEvent;
 		}
 	) => void;
@@ -333,6 +335,11 @@ export interface IDropMenuProps extends StandardProps {
 	FixedOption?: React.ReactNode;
 }
 
+type IDropMenuPropsWithPassThroughs = Overwrite<
+	React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>,
+	IDropMenuProps
+>;
+
 export interface IOptionsData {
 	localOptionIndex: number;
 	optionIndex: number;
@@ -368,10 +375,10 @@ export interface IDropMenuState {
 	optionProps: [];
 }
 
-class DropMenu extends React.Component<IDropMenuProps, IDropMenuState> {
+class DropMenu extends React.Component<IDropMenuPropsWithPassThroughs, IDropMenuState> {
 	private _header: React.RefObject<HTMLDivElement>;
 
-	constructor(props: IDropMenuProps) {
+	constructor(props: IDropMenuPropsWithPassThroughs) {
 		super(props);
 		this.state = {
 			optionGroups: [],
@@ -563,7 +570,7 @@ class DropMenu extends React.Component<IDropMenuProps, IDropMenuState> {
 		ContextMenu: ContextMenu.defaultProps,
 	};
 
-	getPreprocessedOptionData = (props: IDropMenuProps) => {
+	getPreprocessedOptionData = (props: IDropMenuPropsWithPassThroughs) => {
 		return DropMenu.preprocessOptionData(props, DropMenu);
 	};
 
@@ -701,7 +708,7 @@ class DropMenu extends React.Component<IDropMenuProps, IDropMenuState> {
 					focusedOptionData,
 					'optionProps',
 					Option.defaultProps
-				) as IDropMenuProps;
+				) as IDropMenuPropsWithPassThroughs;
 				if (focusedOptionData && !focusedOptionProps.isDisabled) {
 					onSelect(focusedIndex, { props: focusedOptionProps, event });
 				} else if (_.isNull(focusedIndex)) {
@@ -871,7 +878,7 @@ class DropMenu extends React.Component<IDropMenuProps, IDropMenuState> {
 		);
 	};
 
-	UNSAFE_componentWillReceiveProps = (nextProps: IDropMenuProps) => {
+	UNSAFE_componentWillReceiveProps = (nextProps: IDropMenuPropsWithPassThroughs) => {
 		// only preprocess options data when it changes (via new props) - better performance than doing this each render
 		this.setState(this.getPreprocessedOptionData(nextProps));
 	};
@@ -1065,7 +1072,7 @@ class DropMenu extends React.Component<IDropMenuProps, IDropMenuState> {
 }
 
 export default buildModernHybridComponent<
-	IDropMenuProps,
+	IDropMenuPropsWithPassThroughs,
 	IDropMenuState,
 	typeof DropMenu
 >(DropMenu, { reducers });
