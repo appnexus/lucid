@@ -1,5 +1,7 @@
 ## Unreleased
 
+## 5.8.0
+
 - #1138 [none] Min-width added for Table
 - #1140 [none] correct some of the releasing steps
 - #1141 [patch] Add HTML attributes to `Tabs` component
