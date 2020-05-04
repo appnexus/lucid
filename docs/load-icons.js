@@ -160,6 +160,23 @@ module.exports = [
 	},
 
 	{
+		name: 'CalculatorIcon',
+		component: getDefaultExport(
+			require('../src/components/Icon/CalculatorIcon/CalculatorIcon')
+		),
+		examplesContext: require.context(
+			'../src/components/Icon/CalculatorIcon/examples',
+			true,
+			/\.(j|t)sx?$/
+		),
+		examplesContextRaw: require.context(
+			'!!raw-loader!../src/components/Icon/CalculatorIcon/examples',
+			true,
+			/\.(j|t)sx?$/
+		),
+	},
+
+	{
 		name: 'CalendarIcon',
 		component: getDefaultExport(
 			require('../src/components/Icon/CalendarIcon/CalendarIcon')

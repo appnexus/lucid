@@ -32,7 +32,7 @@ export const QuestionMarkIcon = ({
 QuestionMarkIcon.displayName = 'QuestionMarkIcon';
 QuestionMarkIcon.peek = {
 	description: `
-		Question mark circle icon.
+		A question mark circle icon.
 	`,
 	categories: ['visual design', 'icons'],
 	extend: 'Icon',
