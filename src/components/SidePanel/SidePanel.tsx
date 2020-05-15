@@ -134,6 +134,12 @@ class SidePanel extends React.Component<ISidePanelProps, ISidePanelState, {}> {
 			Sets the initial width in pixels. The actual width may change if the user
 			resizes it.
 		`,
+		minWidth: number`
+		Sets the minimum width of the Side Panel.
+		`,
+		maxWidth: number`
+		Sets the maximum width of the Side Panel.
+		`,
 		topOffset: oneOfType([number, string])`
 			Sets the top margin for the panel. Defaults to \`0\`.
 		`,
@@ -156,6 +162,8 @@ class SidePanel extends React.Component<ISidePanelProps, ISidePanelState, {}> {
 		preventBodyScroll: false,
 		topOffset: 0,
 		width: 240,
+		minWidth: 200,
+		maxWidth: 500,
 	};
 
 	static Header = SidePanelHeader;
@@ -181,10 +189,11 @@ class SidePanel extends React.Component<ISidePanelProps, ISidePanelState, {}> {
 		{ dX }: { dX: number },
 		{ event }: { event: MouseEvent | TouchEvent }
 	): void => {
-		const { startWidth } = this.state;
+		const { startWidth, width } = this.state;
 		this.setState({
 			width: startWidth + dX * (this.props.position === 'right' ? -1 : 1),
 			isResizing: false,
+			startWidth:width,
 		});
 		this.props.onResize(startWidth - dX, { props: this.props, event });
 	};
