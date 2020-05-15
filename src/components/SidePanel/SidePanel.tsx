@@ -8,6 +8,7 @@ import CloseIcon from '../Icon/CloseIcon/CloseIcon';
 import DragCaptureZone from '../DragCaptureZone/DragCaptureZone';
 import Button from '../Button/Button';
 import { getFirst, omitProps, StandardProps } from '../../util/component-types';
+import {start} from "repl";
 
 const cx = lucidClassNames.bind('&-SidePanel');
 
@@ -71,6 +72,12 @@ export interface ISidePanelProps extends Partial<IOverlayProps> {
 	/** Sets the initial width in pixels. The actual width may change if the user
 	 * resizes it. */
 	width: number;
+
+	/** Sets the minimum width in pixels. */
+	minWidth: number;
+
+	/** Sets the maximim width in pixels. */
+	maxWidth: number;
 
 	/** Sets the top margin for the panel. Defaults to \`0\`. */
 	topOffset: number | string;
@@ -162,8 +169,8 @@ class SidePanel extends React.Component<ISidePanelProps, ISidePanelState, {}> {
 		preventBodyScroll: false,
 		topOffset: 0,
 		width: 240,
-		minWidth: 200,
-		maxWidth: 500,
+		minWidth: null,
+		maxWidth: null,
 	};
 
 	static Header = SidePanelHeader;
@@ -180,8 +187,11 @@ class SidePanel extends React.Component<ISidePanelProps, ISidePanelState, {}> {
 
 	handleResize = ({ dX }: { dX: number }): void => {
 		const { startWidth } = this.state;
+		const position = startWidth + dX * (this.props.position === 'right' ? -1 : 1);
+		const adjustedWidth = !_.isNil(this.props.minWidth) && position < this.props.minWidth ? this.props.minWidth
+			:!_.isNil(this.props.maxWidth) && position > this.props.maxWidth ? this.props.maxWidth : position;
 		this.setState({
-			width: startWidth + dX * (this.props.position === 'right' ? -1 : 1),
+			width: adjustedWidth,
 		});
 	};
 
