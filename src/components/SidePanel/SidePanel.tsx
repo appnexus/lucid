@@ -169,7 +169,7 @@ class SidePanel extends React.Component<ISidePanelProps, ISidePanelState, {}> {
 		topOffset: 0,
 		width: 240,
 		minWidth: -Infinity,
-		maxWidth: Infinity,
+		maxWidth: window.innerWidth,
 	};
 
 	static Header = SidePanelHeader;
