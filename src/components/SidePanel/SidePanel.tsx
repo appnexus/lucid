@@ -8,7 +8,6 @@ import CloseIcon from '../Icon/CloseIcon/CloseIcon';
 import DragCaptureZone from '../DragCaptureZone/DragCaptureZone';
 import Button from '../Button/Button';
 import { getFirst, omitProps, StandardProps } from '../../util/component-types';
-import {start} from "repl";
 
 const cx = lucidClassNames.bind('&-SidePanel');
 
@@ -169,8 +168,8 @@ class SidePanel extends React.Component<ISidePanelProps, ISidePanelState, {}> {
 		preventBodyScroll: false,
 		topOffset: 0,
 		width: 240,
-		minWidth: null,
-		maxWidth: null,
+		minWidth: -Infinity,
+		maxWidth: Infinity,
 	};
 
 	static Header = SidePanelHeader;
@@ -188,8 +187,9 @@ class SidePanel extends React.Component<ISidePanelProps, ISidePanelState, {}> {
 	handleResize = ({ dX }: { dX: number }): void => {
 		const { startWidth } = this.state;
 		const position = startWidth + dX * (this.props.position === 'right' ? -1 : 1);
-		const adjustedWidth = !_.isNil(this.props.minWidth) && position < this.props.minWidth ? this.props.minWidth
-			:!_.isNil(this.props.maxWidth) && position > this.props.maxWidth ? this.props.maxWidth : position;
+		//const adjustedWidth = !_.isNil(this.props.minWidth) && position < this.props.minWidth ? this.props.minWidth
+		//	:!_.isNil(this.props.maxWidth) && position > this.props.maxWidth ? this.props.maxWidth : position;
+		const adjustedWidth =  _.clamp(position, this.props.minWidth, this.props.maxWidth );
 		this.setState({
 			width: adjustedWidth,
 		});
