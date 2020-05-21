@@ -1,5 +1,12 @@
 ## Unreleased
 
+## 5.8.1
+
+- #1151 [patch] BUDE-420: Update Bars props
+- #1149 [patch] add bell dot and calculator icons and remove some svgs
+
+https://github.com/appnexus/lucid/compare/v5.8.0...v5.8.1
+
 ## 5.8.0
 
 - #1138 [none] Min-width added for Table
