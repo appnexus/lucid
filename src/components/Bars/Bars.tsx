@@ -20,7 +20,7 @@ const cx = lucidClassNames.bind('&-Bars');
 
 const { arrayOf, func, number, object, bool, string } = PropTypes;
 
-interface IBarsProps extends StandardProps {
+interface IBarsProps extends StandardProps, React.SVGProps<SVGGElement> {
 	/**
 	 * De-normalized data
 	 *
@@ -145,11 +145,6 @@ interface IBarsProps extends StandardProps {
 	 * Signature: \`dataPoint => {}\`
 	 */
 	renderTooltipBody: (dataPoint: number | string | object) => {};
-
-	/** Optional built in SVG transform attribute, used to transform the bars position
-	 * in the same way CSS transform is used, `translate(10, 20)`
-	 */
-	transform?: string;
 }
 
 interface IBarsState {
@@ -285,11 +280,6 @@ export class Bars extends PureComponent<IBarsProps, IBarsState> {
 			the associated data point. This formatter will over-ride yTooltipFormatter
 			and yAxisTooltipDataFormatter. Signature:
 			\`dataPoint => {}\`
-		`,
-
-		transform: string`
-			Optional built in SVG transform attribute, used to transform the bars position
-			in the same way CSS transform is used, \`translate(10, 20)\`
 		`,
 	};
 
