@@ -144,7 +144,12 @@ interface IBarsProps extends StandardProps {
 	 * This formatter will over-ride yTooltipFormatter and yAxisTooltipDataFormatter.
 	 * Signature: \`dataPoint => {}\`
 	 */
-	renderTooltipBody: (dataPoint: number) => {};
+	renderTooltipBody: (dataPoint: number | string | object) => {};
+
+	/** Optional built in SVG transform attribute, used to transform the bars position
+	 * in the same way CSS transform is used, `translate(10, 20)`
+	 */
+	transform?: string;
 }
 
 interface IBarsState {
@@ -280,6 +285,11 @@ export class Bars extends PureComponent<IBarsProps, IBarsState> {
 			the associated data point. This formatter will over-ride yTooltipFormatter
 			and yAxisTooltipDataFormatter. Signature:
 			\`dataPoint => {}\`
+		`,
+
+		transform: string`
+			Optional built in SVG transform attribute, used to transform the bars position
+			in the same way CSS transform is used, \`translate(10, 20)\`
 		`,
 	};
 
