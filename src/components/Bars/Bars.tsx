@@ -20,7 +20,7 @@ const cx = lucidClassNames.bind('&-Bars');
 
 const { arrayOf, func, number, object, bool, string } = PropTypes;
 
-interface IBarsProps extends StandardProps {
+interface IBarsProps extends StandardProps, React.SVGProps<SVGGElement> {
 	/**
 	 * De-normalized data
 	 *
@@ -144,7 +144,7 @@ interface IBarsProps extends StandardProps {
 	 * This formatter will over-ride yTooltipFormatter and yAxisTooltipDataFormatter.
 	 * Signature: \`dataPoint => {}\`
 	 */
-	renderTooltipBody: (dataPoint: number) => {};
+	renderTooltipBody: (dataPoint: number | string | object) => {};
 }
 
 interface IBarsState {
