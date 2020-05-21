@@ -1,16 +1,23 @@
 ## Unreleased
 
+## 5.8.1?
+
+- #1151 [patch] BUDE-420: Update Bars props
+- #1149 [patch] add bell dot and calculator icons and remove some svgs
+
+https://github.com/appnexus/lucid/compare/v5.8.0...v5.8.1
+
 ## 5.8.0
 
-- #1138 [none] Min-width added for Table
-- #1140 [none] correct some of the releasing steps
-- #1141 [patch] Add HTML attributes to `Tabs` component
-- #1142 [none] Update table cursor icon
-- #1144 [none] Use donutWidth prop to control width of a donut chart
-- #1145 [minor] TS convert linechart
-- #1146 [patch] extend `DropMenu` props to include div element passthroughs
-- #1147 [none] bump acorn from 5.7.3 to 5.7.4
 - #1148 [patch] expose component interfaces
+- #1147 [none] bump acorn from 5.7.3 to 5.7.4
+- #1146 [patch] extend `DropMenu` props to include div element passthroughs
+- #1145 [minor] TS convert linechart
+- #1144 [none] Use donutWidth prop to control width of a donut chart
+- #1142 [none] Update table cursor icon
+- #1141 [patch] Add HTML attributes to `Tabs` component
+- #1140 [none] correct some of the releasing steps
+- #1138 [none] Min-width added for Table
 
 ## 5.7.0
 
