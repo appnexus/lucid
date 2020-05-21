@@ -169,7 +169,7 @@ class SidePanel extends React.Component<ISidePanelProps, ISidePanelState, {}> {
 		topOffset: 0,
 		width: 240,
 		minWidth: -Infinity,
-		maxWidth: window.innerWidth,
+		maxWidth: Infinity,
 	};
 
 	static Header = SidePanelHeader;
@@ -187,11 +187,8 @@ class SidePanel extends React.Component<ISidePanelProps, ISidePanelState, {}> {
 	handleResize = ({ dX }: { dX: number }): void => {
 		const { startWidth } = this.state;
 		const position = startWidth + dX * (this.props.position === 'right' ? -1 : 1);
-		//const adjustedWidth = !_.isNil(this.props.minWidth) && position < this.props.minWidth ? this.props.minWidth
-		//	:!_.isNil(this.props.maxWidth) && position > this.props.maxWidth ? this.props.maxWidth : position;
-		const adjustedWidth =  _.clamp(position, this.props.minWidth, this.props.maxWidth );
 		this.setState({
-			width: adjustedWidth,
+			width: _.clamp(position, this.props.minWidth, this.props.maxWidth === Infinity? window.innerWidth : this.props.maxWidth ),
 		});
 	};
 
