@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
-import ReactTransitionGroup from 'react-transition-group/CSSTransitionGroup';
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, getFirst, omitProps } from '../../util/component-types';
 import Switch from '../Switch/Switch';
@@ -123,19 +123,20 @@ const SwitchLabeled = createClass({
 					onSelect={onSelect}
 					{...omitProps(passThroughs, SwitchLabeled, [], false)}
 				/>
-				<ReactTransitionGroup
-					transitionName={cx('&-text')}
-					transitionEnterTimeout={100}
-					transitionLeaveTimeout={100}
-					style={{ position: 'relative' }}
-					className={cx('&-text')}
-				>
-					{labelChildProps ? (
-						<span key={this._labelKey}>
-							{labelChildProps.children || labelChildProps}
-						</span>
-					) : null}
-				</ReactTransitionGroup>
+				<TransitionGroup>
+					<CSSTransition
+						classNames={cx('&-text')}
+						timeout={100}
+						style={{ position: 'relative' }}
+						className={cx('&-text')}
+					>
+						{labelChildProps ? (
+							<span key={this._labelKey}>
+								{labelChildProps.children || labelChildProps}
+							</span>
+						) : <React.Fragment></React.Fragment>}
+					</CSSTransition>
+				</TransitionGroup>
 			</label>
 		);
 	},

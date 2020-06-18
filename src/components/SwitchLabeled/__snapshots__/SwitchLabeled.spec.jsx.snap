@@ -19,26 +19,27 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for int
       Airplane Mode
     </SwitchLabeled.Label>
   </Switch>
-  <CSSTransitionGroup
-    className="lucid-SwitchLabeled-text"
-    style={
-      Object {
-        "position": "relative",
-      }
-    }
-    transitionAppear={false}
-    transitionEnter={true}
-    transitionEnterTimeout={100}
-    transitionLeave={true}
-    transitionLeaveTimeout={100}
-    transitionName="lucid-SwitchLabeled-text"
+  <TransitionGroup
+    childFactory={[Function]}
+    component="div"
   >
-    <span
-      key="0"
+    <CSSTransition
+      className="lucid-SwitchLabeled-text"
+      classNames="lucid-SwitchLabeled-text"
+      style={
+        Object {
+          "position": "relative",
+        }
+      }
+      timeout={100}
     >
-      Airplane Mode
-    </span>
-  </CSSTransitionGroup>
+      <span
+        key="0"
+      >
+        Airplane Mode
+      </span>
+    </CSSTransition>
+  </TransitionGroup>
 </label>
 `;
 
@@ -61,26 +62,27 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for int
       Bluetooth
     </SwitchLabeled.Label>
   </Switch>
-  <CSSTransitionGroup
-    className="lucid-SwitchLabeled-text"
-    style={
-      Object {
-        "position": "relative",
-      }
-    }
-    transitionAppear={false}
-    transitionEnter={true}
-    transitionEnterTimeout={100}
-    transitionLeave={true}
-    transitionLeaveTimeout={100}
-    transitionName="lucid-SwitchLabeled-text"
+  <TransitionGroup
+    childFactory={[Function]}
+    component="div"
   >
-    <span
-      key="0"
+    <CSSTransition
+      className="lucid-SwitchLabeled-text"
+      classNames="lucid-SwitchLabeled-text"
+      style={
+        Object {
+          "position": "relative",
+        }
+      }
+      timeout={100}
     >
-      Bluetooth
-    </span>
-  </CSSTransitionGroup>
+      <span
+        key="0"
+      >
+        Bluetooth
+      </span>
+    </CSSTransition>
+  </TransitionGroup>
 </label>
 `;
 
@@ -103,26 +105,27 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for int
       Cellular Data
     </SwitchLabeled.Label>
   </Switch>
-  <CSSTransitionGroup
-    className="lucid-SwitchLabeled-text"
-    style={
-      Object {
-        "position": "relative",
-      }
-    }
-    transitionAppear={false}
-    transitionEnter={true}
-    transitionEnterTimeout={100}
-    transitionLeave={true}
-    transitionLeaveTimeout={100}
-    transitionName="lucid-SwitchLabeled-text"
+  <TransitionGroup
+    childFactory={[Function]}
+    component="div"
   >
-    <span
-      key="0"
+    <CSSTransition
+      className="lucid-SwitchLabeled-text"
+      classNames="lucid-SwitchLabeled-text"
+      style={
+        Object {
+          "position": "relative",
+        }
+      }
+      timeout={100}
     >
-      Cellular Data
-    </span>
-  </CSSTransitionGroup>
+      <span
+        key="0"
+      >
+        Cellular Data
+      </span>
+    </CSSTransition>
+  </TransitionGroup>
 </label>
 `;
 
@@ -141,26 +144,27 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for int
     isSelected={true}
     onSelect={[Function]}
   />
-  <CSSTransitionGroup
-    className="lucid-SwitchLabeled-text"
-    style={
-      Object {
-        "position": "relative",
-      }
-    }
-    transitionAppear={false}
-    transitionEnter={true}
-    transitionEnterTimeout={100}
-    transitionLeave={true}
-    transitionLeaveTimeout={100}
-    transitionName="lucid-SwitchLabeled-text"
+  <TransitionGroup
+    childFactory={[Function]}
+    component="div"
   >
-    <span
-      key="0"
+    <CSSTransition
+      className="lucid-SwitchLabeled-text"
+      classNames="lucid-SwitchLabeled-text"
+      style={
+        Object {
+          "position": "relative",
+        }
+      }
+      timeout={100}
     >
-      Airplane Mode Activated
-    </span>
-  </CSSTransitionGroup>
+      <span
+        key="0"
+      >
+        Airplane Mode Activated
+      </span>
+    </CSSTransition>
+  </TransitionGroup>
 </label>
 `;
 
@@ -179,26 +183,27 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for int
     isSelected={true}
     onSelect={[Function]}
   />
-  <CSSTransitionGroup
-    className="lucid-SwitchLabeled-text"
-    style={
-      Object {
-        "position": "relative",
-      }
-    }
-    transitionAppear={false}
-    transitionEnter={true}
-    transitionEnterTimeout={100}
-    transitionLeave={true}
-    transitionLeaveTimeout={100}
-    transitionName="lucid-SwitchLabeled-text"
+  <TransitionGroup
+    childFactory={[Function]}
+    component="div"
   >
-    <span
-      key="0"
+    <CSSTransition
+      className="lucid-SwitchLabeled-text"
+      classNames="lucid-SwitchLabeled-text"
+      style={
+        Object {
+          "position": "relative",
+        }
+      }
+      timeout={100}
     >
-      Bluetooth Enabled
-    </span>
-  </CSSTransitionGroup>
+      <span
+        key="0"
+      >
+        Bluetooth Enabled
+      </span>
+    </CSSTransition>
+  </TransitionGroup>
 </label>
 `;
 
@@ -217,26 +222,27 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for int
     isSelected={true}
     onSelect={[Function]}
   />
-  <CSSTransitionGroup
-    className="lucid-SwitchLabeled-text"
-    style={
-      Object {
-        "position": "relative",
-      }
-    }
-    transitionAppear={false}
-    transitionEnter={true}
-    transitionEnterTimeout={100}
-    transitionLeave={true}
-    transitionLeaveTimeout={100}
-    transitionName="lucid-SwitchLabeled-text"
+  <TransitionGroup
+    childFactory={[Function]}
+    component="div"
   >
-    <span
-      key="0"
+    <CSSTransition
+      className="lucid-SwitchLabeled-text"
+      classNames="lucid-SwitchLabeled-text"
+      style={
+        Object {
+          "position": "relative",
+        }
+      }
+      timeout={100}
     >
-      Use Cellular Data
-    </span>
-  </CSSTransitionGroup>
+      <span
+        key="0"
+      >
+        Use Cellular Data
+      </span>
+    </CSSTransition>
+  </TransitionGroup>
 </label>
 `;
 
@@ -259,26 +265,27 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for int
       Yes! I would like to receive updates, special offers, and other information from AppNexus and its subsidiaries.
     </SwitchLabeled.Label>
   </Switch>
-  <CSSTransitionGroup
-    className="lucid-SwitchLabeled-text"
-    style={
-      Object {
-        "position": "relative",
-      }
-    }
-    transitionAppear={false}
-    transitionEnter={true}
-    transitionEnterTimeout={100}
-    transitionLeave={true}
-    transitionLeaveTimeout={100}
-    transitionName="lucid-SwitchLabeled-text"
+  <TransitionGroup
+    childFactory={[Function]}
+    component="div"
   >
-    <span
-      key="0"
+    <CSSTransition
+      className="lucid-SwitchLabeled-text"
+      classNames="lucid-SwitchLabeled-text"
+      style={
+        Object {
+          "position": "relative",
+        }
+      }
+      timeout={100}
     >
-      Yes! I would like to receive updates, special offers, and other information from AppNexus and its subsidiaries.
-    </span>
-  </CSSTransitionGroup>
+      <span
+        key="0"
+      >
+        Yes! I would like to receive updates, special offers, and other information from AppNexus and its subsidiaries.
+      </span>
+    </CSSTransition>
+  </TransitionGroup>
 </label>
 `;
 
@@ -297,26 +304,27 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for lab
     isSelected={false}
     onSelect={[Function]}
   />
-  <CSSTransitionGroup
-    className="lucid-SwitchLabeled-text"
-    style={
-      Object {
-        "position": "relative",
-      }
-    }
-    transitionAppear={false}
-    transitionEnter={true}
-    transitionEnterTimeout={100}
-    transitionLeave={true}
-    transitionLeaveTimeout={100}
-    transitionName="lucid-SwitchLabeled-text"
+  <TransitionGroup
+    childFactory={[Function]}
+    component="div"
   >
-    <span
-      key="0"
+    <CSSTransition
+      className="lucid-SwitchLabeled-text"
+      classNames="lucid-SwitchLabeled-text"
+      style={
+        Object {
+          "position": "relative",
+        }
+      }
+      timeout={100}
     >
-      Just text
-    </span>
-  </CSSTransitionGroup>
+      <span
+        key="0"
+      >
+        Just text
+      </span>
+    </CSSTransition>
+  </TransitionGroup>
 </label>
 `;
 
@@ -335,28 +343,29 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for lab
     isSelected={false}
     onSelect={[Function]}
   />
-  <CSSTransitionGroup
-    className="lucid-SwitchLabeled-text"
-    style={
-      Object {
-        "position": "relative",
-      }
-    }
-    transitionAppear={false}
-    transitionEnter={true}
-    transitionEnterTimeout={100}
-    transitionLeave={true}
-    transitionLeaveTimeout={100}
-    transitionName="lucid-SwitchLabeled-text"
+  <TransitionGroup
+    childFactory={[Function]}
+    component="div"
   >
-    <span
-      key="0"
+    <CSSTransition
+      className="lucid-SwitchLabeled-text"
+      classNames="lucid-SwitchLabeled-text"
+      style={
+        Object {
+          "position": "relative",
+        }
+      }
+      timeout={100}
     >
-      <span>
-        HTML element
+      <span
+        key="0"
+      >
+        <span>
+          HTML element
+        </span>
       </span>
-    </span>
-  </CSSTransitionGroup>
+    </CSSTransition>
+  </TransitionGroup>
 </label>
 `;
 
@@ -375,26 +384,27 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for lab
     isSelected={false}
     onSelect={[Function]}
   />
-  <CSSTransitionGroup
-    className="lucid-SwitchLabeled-text"
-    style={
-      Object {
-        "position": "relative",
-      }
-    }
-    transitionAppear={false}
-    transitionEnter={true}
-    transitionEnterTimeout={100}
-    transitionLeave={true}
-    transitionLeaveTimeout={100}
-    transitionName="lucid-SwitchLabeled-text"
+  <TransitionGroup
+    childFactory={[Function]}
+    component="div"
   >
-    <span
-      key="0"
+    <CSSTransition
+      className="lucid-SwitchLabeled-text"
+      classNames="lucid-SwitchLabeled-text"
+      style={
+        Object {
+          "position": "relative",
+        }
+      }
+      timeout={100}
     >
-      Text in an array
-    </span>
-  </CSSTransitionGroup>
+      <span
+        key="0"
+      >
+        Text in an array
+      </span>
+    </CSSTransition>
+  </TransitionGroup>
 </label>
 `;
 
@@ -413,30 +423,31 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for lab
     isSelected={false}
     onSelect={[Function]}
   />
-  <CSSTransitionGroup
-    className="lucid-SwitchLabeled-text"
-    style={
-      Object {
-        "position": "relative",
-      }
-    }
-    transitionAppear={false}
-    transitionEnter={true}
-    transitionEnterTimeout={100}
-    transitionLeave={true}
-    transitionLeaveTimeout={100}
-    transitionName="lucid-SwitchLabeled-text"
+  <TransitionGroup
+    childFactory={[Function]}
+    component="div"
   >
-    <span
-      key="0"
+    <CSSTransition
+      className="lucid-SwitchLabeled-text"
+      classNames="lucid-SwitchLabeled-text"
+      style={
+        Object {
+          "position": "relative",
+        }
+      }
+      timeout={100}
     >
       <span
-        key="1"
+        key="0"
       >
-        HTML element in an array
+        <span
+          key="1"
+        >
+          HTML element in an array
+        </span>
       </span>
-    </span>
-  </CSSTransitionGroup>
+    </CSSTransition>
+  </TransitionGroup>
 </label>
 `;
 
@@ -460,26 +471,27 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for sta
       (default props)
     </SwitchLabeled.Label>
   </Switch>
-  <CSSTransitionGroup
-    className="lucid-SwitchLabeled-text"
-    style={
-      Object {
-        "position": "relative",
-      }
-    }
-    transitionAppear={false}
-    transitionEnter={true}
-    transitionEnterTimeout={100}
-    transitionLeave={true}
-    transitionLeaveTimeout={100}
-    transitionName="lucid-SwitchLabeled-text"
+  <TransitionGroup
+    childFactory={[Function]}
+    component="div"
   >
-    <span
-      key="0"
+    <CSSTransition
+      className="lucid-SwitchLabeled-text"
+      classNames="lucid-SwitchLabeled-text"
+      style={
+        Object {
+          "position": "relative",
+        }
+      }
+      timeout={100}
     >
-      (default props)
-    </span>
-  </CSSTransitionGroup>
+      <span
+        key="0"
+      >
+        (default props)
+      </span>
+    </CSSTransition>
+  </TransitionGroup>
 </label>
 `;
 
@@ -503,26 +515,27 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for sta
       Selected
     </SwitchLabeled.Label>
   </Switch>
-  <CSSTransitionGroup
-    className="lucid-SwitchLabeled-text"
-    style={
-      Object {
-        "position": "relative",
-      }
-    }
-    transitionAppear={false}
-    transitionEnter={true}
-    transitionEnterTimeout={100}
-    transitionLeave={true}
-    transitionLeaveTimeout={100}
-    transitionName="lucid-SwitchLabeled-text"
+  <TransitionGroup
+    childFactory={[Function]}
+    component="div"
   >
-    <span
-      key="0"
+    <CSSTransition
+      className="lucid-SwitchLabeled-text"
+      classNames="lucid-SwitchLabeled-text"
+      style={
+        Object {
+          "position": "relative",
+        }
+      }
+      timeout={100}
     >
-      Selected
-    </span>
-  </CSSTransitionGroup>
+      <span
+        key="0"
+      >
+        Selected
+      </span>
+    </CSSTransition>
+  </TransitionGroup>
 </label>
 `;
 
@@ -546,26 +559,27 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for sta
       Disabled
     </SwitchLabeled.Label>
   </Switch>
-  <CSSTransitionGroup
-    className="lucid-SwitchLabeled-text"
-    style={
-      Object {
-        "position": "relative",
-      }
-    }
-    transitionAppear={false}
-    transitionEnter={true}
-    transitionEnterTimeout={100}
-    transitionLeave={true}
-    transitionLeaveTimeout={100}
-    transitionName="lucid-SwitchLabeled-text"
+  <TransitionGroup
+    childFactory={[Function]}
+    component="div"
   >
-    <span
-      key="0"
+    <CSSTransition
+      className="lucid-SwitchLabeled-text"
+      classNames="lucid-SwitchLabeled-text"
+      style={
+        Object {
+          "position": "relative",
+        }
+      }
+      timeout={100}
     >
-      Disabled
-    </span>
-  </CSSTransitionGroup>
+      <span
+        key="0"
+      >
+        Disabled
+      </span>
+    </CSSTransition>
+  </TransitionGroup>
 </label>
 `;
 
@@ -589,25 +603,26 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for sta
       Disabled & selected
     </SwitchLabeled.Label>
   </Switch>
-  <CSSTransitionGroup
-    className="lucid-SwitchLabeled-text"
-    style={
-      Object {
-        "position": "relative",
-      }
-    }
-    transitionAppear={false}
-    transitionEnter={true}
-    transitionEnterTimeout={100}
-    transitionLeave={true}
-    transitionLeaveTimeout={100}
-    transitionName="lucid-SwitchLabeled-text"
+  <TransitionGroup
+    childFactory={[Function]}
+    component="div"
   >
-    <span
-      key="0"
+    <CSSTransition
+      className="lucid-SwitchLabeled-text"
+      classNames="lucid-SwitchLabeled-text"
+      style={
+        Object {
+          "position": "relative",
+        }
+      }
+      timeout={100}
     >
-      Disabled & selected
-    </span>
-  </CSSTransitionGroup>
+      <span
+        key="0"
+      >
+        Disabled & selected
+      </span>
+    </CSSTransition>
+  </TransitionGroup>
 </label>
 `;

@@ -4,14 +4,15 @@ exports[`Overlay [common] example testing should match snapshot(s) for basic 1`]
 <Portal
   portalId="1-Overlay-Portal-6"
 >
-  <CSSTransitionGroup
-    transitionAppear={false}
-    transitionEnter={true}
-    transitionEnterTimeout={300}
-    transitionLeave={true}
-    transitionLeaveTimeout={300}
-    transitionName="lucid-Overlay"
-  />
+  <TransitionGroup
+    childFactory={[Function]}
+    component="div"
+  >
+    <CSSTransition
+      classNames="lucid-Overlay"
+      timeout={300}
+    />
+  </TransitionGroup>
 </Portal>
 `;
 
@@ -19,14 +20,15 @@ exports[`Overlay [common] example testing should match snapshot(s) for no-modal 
 <Portal
   portalId="1-Overlay-Portal-7"
 >
-  <CSSTransitionGroup
-    transitionAppear={false}
-    transitionEnter={true}
-    transitionEnterTimeout={300}
-    transitionLeave={true}
-    transitionLeaveTimeout={300}
-    transitionName="lucid-Overlay"
-  />
+  <TransitionGroup
+    childFactory={[Function]}
+    component="div"
+  >
+    <CSSTransition
+      classNames="lucid-Overlay"
+      timeout={300}
+    />
+  </TransitionGroup>
 </Portal>
 `;
 

@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
-import ReactTransitionGroup from 'react-transition-group/CSSTransitionGroup';
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import { lucidClassNames } from '../../util/style-helpers';
 import { omitProps, StandardProps } from '../../util/component-types';
 import CloseIcon from '../Icon/CloseIcon/CloseIcon';
@@ -88,47 +88,48 @@ export const Banner = (props: IBannerProps): React.ReactElement => {
 	}
 
 	return (
-		<ReactTransitionGroup
-			transitionName={cx('&')}
-			transitionEnterTimeout={300}
-			transitionLeaveTimeout={300}
-		>
-			{!isClosed ? (
-				<section
-					{...omitProps(passThroughs, undefined, _.keys(Banner.propTypes))}
-					className={cx(
-						'&',
-						{
-							'&-has-icon': displayedIcon,
-							'&-has-close': isCloseable,
-							'&-primary': kind === 'primary',
-							'&-success': kind === 'success',
-							'&-warning': kind === 'warning',
-							'&-danger': kind === 'danger',
-							'&-info': kind === 'info',
-							'&-small': isSmall,
-							'&-filled': isFilled,
-						},
-						className
-					)}
-				>
-					{displayedIcon ? (
-						<span className={cx('&-icon')}>{displayedIcon}</span>
-					) : null}
+		<TransitionGroup>
+			<CSSTransition
+				classNames={cx('&')}
+				timeout={300}
+			>
+				{!isClosed ? (
+					<section
+						{...omitProps(passThroughs, undefined, _.keys(Banner.propTypes))}
+						className={cx(
+							'&',
+							{
+								'&-has-icon': displayedIcon,
+								'&-has-close': isCloseable,
+								'&-primary': kind === 'primary',
+								'&-success': kind === 'success',
+								'&-warning': kind === 'warning',
+								'&-danger': kind === 'danger',
+								'&-info': kind === 'info',
+								'&-small': isSmall,
+								'&-filled': isFilled,
+							},
+							className
+						)}
+					>
+						{displayedIcon ? (
+							<span className={cx('&-icon')}>{displayedIcon}</span>
+						) : null}
 
-					<span className={cx('&-content')}>{children}</span>
+						<span className={cx('&-content')}>{children}</span>
 
-					{isCloseable ? (
-						<CloseIcon
-							isClickable
-							size={8}
-							className={cx('&-close')}
-							onClick={handleClose}
-						/>
-					) : null}
-				</section>
-			) : null}
-		</ReactTransitionGroup>
+						{isCloseable ? (
+							<CloseIcon
+								isClickable
+								size={8}
+								className={cx('&-close')}
+								onClick={handleClose}
+							/>
+						) : null}
+					</section>
+				) : <React.Fragment></React.Fragment>}
+			</CSSTransition>
+		</TransitionGroup>
 	);
 };
 
