@@ -1,6 +1,9 @@
 ## Unreleased
 
+## 5.8.2
+
 ## 5.8.1
+- #1154 [patch] BUDE-121: Upgrated react-transition-group library. This required changes to Banner, Overlay, OverlayWrapper, SwitchLabeled
 
 - #1151 [patch] BUDE-420: Update Bars props
 - #1149 [patch] add bell dot and calculator icons and remove some svgs
