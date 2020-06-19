@@ -3,6 +3,7 @@ import { mount, shallow } from 'enzyme';
 import { common } from '../../util/generic-tests';
 import sinon from 'sinon';
 import assert from 'assert';
+import { CSSTransition } from 'react-transition-group';
 
 import Overlay from './Overlay';
 
@@ -20,11 +21,29 @@ describe('Overlay', () => {
 		assert(wrapper.contains('Flux Capacitor'));
 	});
 
-	it('should not render when isShown is false', () => {
-		const wrapper = shallow(<Overlay isShown={false}>Flux Capacitor</Overlay>);
-
-		assert(!wrapper.contains('Flux Capacitor'));
+	describe('when isAnimated is false', () => {
+		describe('and when isShown is true', () => {
+			it('should render CSSTransition with in prop as false', () => {
+				const wrapper = shallow(<Overlay isShown={false} isAnimated={true}>Flux Capacitor</Overlay>);
+				assert.equal(wrapper.find(CSSTransition).props().in, false);
+			});
+		});
+		describe('and when isShown is false', () => {
+			it('should render CSSTransition with in prop as false', () => {
+				const wrapper = shallow(<Overlay isShown={true} isAnimated={true}>Flux Capacitor</Overlay>);
+				assert.equal(wrapper.find(CSSTransition).props().in, true);
+			});
+		});
 	});
+
+	describe('when isAnimated is true', () => {
+		it('should not render when isShown is false', () => {
+			const wrapper = shallow(<Overlay isShown={false} isAnimated={false}>Flux Capacitor</Overlay>);
+			assert(!wrapper.contains('Flux Capacitor'));
+		});
+	});
+
+
 
 	it('should have the correct class when isModal is false', () => {
 		const wrapper = shallow(

@@ -2,7 +2,7 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import Portal from '../Portal/Portal';
-import { CSSTransition, TransitionGroup } from 'react-transition-group';
+import { CSSTransition } from 'react-transition-group';
 import { lucidClassNames, uniqueName } from '../../util/style-helpers';
 import { omitProps, StandardProps } from '../../util/component-types';
 
@@ -168,7 +168,7 @@ class Overlay extends React.Component<IOverlayProps, IOverlayState, {}> {
 
 		const { portalId } = this.state;
 
-		const overlayElement = isShown ? (
+		const overlayElement = (
 			<div
 				{...omitProps(passThroughs, undefined, Object.keys(Overlay.propTypes))}
 				className={cx(className, '&', {
@@ -180,22 +180,22 @@ class Overlay extends React.Component<IOverlayProps, IOverlayState, {}> {
 			>
 				{children}
 			</div>
-		) : null;
+		);
 
 		return (
 			<Portal portalId={portalId}>
 				{isAnimated ? (
-					<TransitionGroup>
-						<CSSTransition
-							classNames={cx('&')}
-							timeout={300}
-						>
-							{overlayElement || <React.Fragment></React.Fragment>}
-						</CSSTransition>
-					</TransitionGroup>
-				) : (
+					<CSSTransition
+						in={isShown}
+						classNames={cx('&')}
+						timeout={300}
+						unmountOnExit
+					>
+						{overlayElement}
+					</CSSTransition>
+				) : isShown ? (
 					overlayElement
-				)}
+				) : null}
 			</Portal>
 		);
 	}

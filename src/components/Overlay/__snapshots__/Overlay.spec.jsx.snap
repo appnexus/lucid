@@ -4,15 +4,27 @@ exports[`Overlay [common] example testing should match snapshot(s) for basic 1`]
 <Portal
   portalId="1-Overlay-Portal-6"
 >
-  <TransitionGroup
-    childFactory={[Function]}
-    component="div"
+  <CSSTransition
+    classNames="lucid-Overlay"
+    in={false}
+    timeout={300}
+    unmountOnExit={true}
   >
-    <CSSTransition
-      classNames="lucid-Overlay"
-      timeout={300}
-    />
-  </TransitionGroup>
+    <div
+      className="lucid-Overlay lucid-Overlay-is-animated"
+      onClick={[Function]}
+    >
+      <div
+        style={
+          Object {
+            "color": "#fff",
+          }
+        }
+      >
+        User cannot interact with the background (except scrolling).
+      </div>
+    </div>
+  </CSSTransition>
 </Portal>
 `;
 
@@ -20,20 +32,42 @@ exports[`Overlay [common] example testing should match snapshot(s) for no-modal 
 <Portal
   portalId="1-Overlay-Portal-7"
 >
-  <TransitionGroup
-    childFactory={[Function]}
-    component="div"
+  <CSSTransition
+    classNames="lucid-Overlay"
+    in={false}
+    timeout={300}
+    unmountOnExit={true}
   >
-    <CSSTransition
-      classNames="lucid-Overlay"
-      timeout={300}
-    />
-  </TransitionGroup>
+    <div
+      className="lucid-Overlay lucid-Overlay-is-not-modal lucid-Overlay-is-animated"
+      onClick={[Function]}
+    >
+      <div
+        style={
+          Object {
+            "backgroundColor": "#eee",
+            "padding": "100px",
+          }
+        }
+      >
+        User can still interact with the background.
+        <Button
+          hasOnlyIcon={false}
+          isActive={false}
+          isDisabled={false}
+          onClick={[Function]}
+          type="button"
+        >
+          Close
+        </Button>
+      </div>
+    </div>
+  </CSSTransition>
 </Portal>
 `;
 
 exports[`Overlay should render with isAnimated=false 1`] = `
 <Portal
-  portalId="1-Overlay-Portal-11"
+  portalId="1-Overlay-Portal-13"
 />
 `;

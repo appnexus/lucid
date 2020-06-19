@@ -3,6 +3,7 @@ import { shallow } from 'enzyme';
 import assert from 'assert';
 import { common } from '../../util/generic-tests';
 import OverlayWrapper from './OverlayWrapper';
+import { CSSTransition } from 'react-transition-group';
 
 const { Message } = OverlayWrapper;
 
@@ -21,12 +22,8 @@ describe('OverlayWrapper', () => {
 				);
 			});
 
-			it('should not show the overlay message', () => {
-				assert.equal(
-					wrapper.find('.lucid-OverlayWrapper-message-container').length,
-					0
-				);
-				assert.equal(wrapper.find(Message).length, 0);
+			it('should render CSSTransition with correct in prop', () => {
+				assert.equal(wrapper.find(CSSTransition).props().in, false);
 			});
 
 			it('should render other content', () => {
@@ -45,12 +42,8 @@ describe('OverlayWrapper', () => {
 				);
 			});
 
-			it('should not show the overlay message', () => {
-				assert.equal(
-					wrapper.find('.lucid-OverlayWrapper-message-container').length,
-					0
-				);
-				assert.equal(wrapper.find(Message).length, 0);
+			it('should render CSSTransition with correct in prop', () => {
+				assert.equal(wrapper.find(CSSTransition).props().in, false);
 			});
 
 			it('should render other content', () => {
@@ -68,6 +61,10 @@ describe('OverlayWrapper', () => {
 						<div>Some content</div>
 					</OverlayWrapper>
 				);
+			});
+
+			it('should render CSSTransition with correct in prop', () => {
+				assert.equal(wrapper.find(CSSTransition).props().in, true);
 			});
 
 			it('should show the overlay message', () => {

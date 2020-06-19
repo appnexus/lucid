@@ -69,22 +69,19 @@ exports[`OverlayWrapper [common] example testing should match snapshot(s) for 1.
     yAxisTitleColor="#000"
     yAxisTooltipFormatter={[Function]}
   />
-  <TransitionGroup
-    childFactory={[Function]}
-    component="div"
+  <CSSTransition
+    classNames="lucid-OverlayWrapper-message-container"
+    in={true}
+    timeout={300}
+    unmountOnExit={true}
   >
-    <CSSTransition
-      classNames="lucid-OverlayWrapper-message-container"
-      timeout={300}
+    <div
+      className="lucid-OverlayWrapper-message-container lucid-OverlayWrapper-has-overlay lucid-OverlayWrapper-kind-light"
     >
-      <div
-        className="lucid-OverlayWrapper-message-container lucid-OverlayWrapper-has-overlay lucid-OverlayWrapper-kind-light"
-      >
-        <div>
-          Message Goes Here
-        </div>
+      <div>
+        Message Goes Here
       </div>
-    </CSSTransition>
-  </TransitionGroup>
+    </div>
+  </CSSTransition>
 </div>
 `;

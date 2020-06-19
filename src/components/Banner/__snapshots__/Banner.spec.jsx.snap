@@ -1,1223 +1,1124 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Banner [common] example testing should match snapshot(s) for 0.stateful 1`] = `
-<TransitionGroup
-  childFactory={[Function]}
-  component="div"
+<CSSTransition
+  classNames="lucid-Banner"
+  in={true}
+  timeout={300}
+  unmountOnExit={true}
 >
-  <CSSTransition
-    classNames="lucid-Banner"
-    timeout={300}
+  <section
+    className="lucid-Banner lucid-Banner-has-close lucid-Banner-filled"
   >
-    <section
-      className="lucid-Banner lucid-Banner-has-close lucid-Banner-filled"
+    <span
+      className="lucid-Banner-content"
     >
-      <span
-        className="lucid-Banner-content"
-      >
-        Default
-      </span>
-      <CloseIcon
-        aspectRatio="xMidYMid meet"
-        className="lucid-Banner-close"
-        color="primary"
-        isClickable={true}
-        isDisabled={false}
-        onClick={[Function]}
-        onSelect={[Function]}
-        size={8}
-        viewBox="0 0 16 16"
-      />
-    </section>
-  </CSSTransition>
-</TransitionGroup>
+      Default
+    </span>
+    <CloseIcon
+      aspectRatio="xMidYMid meet"
+      className="lucid-Banner-close"
+      color="primary"
+      isClickable={true}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={8}
+      viewBox="0 0 16 16"
+    />
+  </section>
+</CSSTransition>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for 1.stateless 1`] = `
-<TransitionGroup
-  childFactory={[Function]}
-  component="div"
+<CSSTransition
+  classNames="lucid-Banner"
+  in={true}
+  timeout={300}
+  unmountOnExit={true}
 >
-  <CSSTransition
-    classNames="lucid-Banner"
-    timeout={300}
-  >
-    <section
-      className="lucid-Banner lucid-Banner-has-close lucid-Banner-filled"
-      style={
-        Object {
-          "marginBottom": 8,
-        }
+  <section
+    className="lucid-Banner lucid-Banner-has-close lucid-Banner-filled"
+    style={
+      Object {
+        "marginBottom": 8,
       }
+    }
+  >
+    <span
+      className="lucid-Banner-content"
     >
-      <span
-        className="lucid-Banner-content"
-      >
-        Default
-      </span>
-      <CloseIcon
-        aspectRatio="xMidYMid meet"
-        className="lucid-Banner-close"
-        color="primary"
-        isClickable={true}
-        isDisabled={false}
-        onClick={[Function]}
-        onSelect={[Function]}
-        size={8}
-        viewBox="0 0 16 16"
-      />
-    </section>
-  </CSSTransition>
-</TransitionGroup>
+      Default
+    </span>
+    <CloseIcon
+      aspectRatio="xMidYMid meet"
+      className="lucid-Banner-close"
+      color="primary"
+      isClickable={true}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={8}
+      viewBox="0 0 16 16"
+    />
+  </section>
+</CSSTransition>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for 1.stateless 2`] = `
-<TransitionGroup
-  childFactory={[Function]}
-  component="div"
+<CSSTransition
+  classNames="lucid-Banner"
+  in={true}
+  timeout={300}
+  unmountOnExit={true}
 >
-  <CSSTransition
-    classNames="lucid-Banner"
-    timeout={300}
-  >
-    <section
-      className="lucid-Banner lucid-Banner-filled"
-      style={
-        Object {
-          "marginBottom": 8,
-        }
+  <section
+    className="lucid-Banner lucid-Banner-filled"
+    style={
+      Object {
+        "marginBottom": 8,
       }
+    }
+  >
+    <span
+      className="lucid-Banner-content"
     >
-      <span
-        className="lucid-Banner-content"
-      >
-        Default -- No Close 
-        ×
-      </span>
-    </section>
-  </CSSTransition>
-</TransitionGroup>
+      Default -- No Close 
+      ×
+    </span>
+  </section>
+</CSSTransition>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for 1.stateless 3`] = `
-<TransitionGroup
-  childFactory={[Function]}
-  component="div"
+<CSSTransition
+  classNames="lucid-Banner"
+  in={true}
+  timeout={300}
+  unmountOnExit={true}
 >
-  <CSSTransition
-    classNames="lucid-Banner"
-    timeout={300}
-  >
-    <section
-      className="lucid-Banner lucid-Banner-has-close lucid-Banner-success lucid-Banner-filled"
-      style={
-        Object {
-          "marginBottom": 8,
-        }
+  <section
+    className="lucid-Banner lucid-Banner-has-close lucid-Banner-success lucid-Banner-filled"
+    style={
+      Object {
+        "marginBottom": 8,
       }
+    }
+  >
+    <span
+      className="lucid-Banner-content"
     >
-      <span
-        className="lucid-Banner-content"
-      >
-        Success
-      </span>
-      <CloseIcon
-        aspectRatio="xMidYMid meet"
-        className="lucid-Banner-close"
-        color="primary"
-        isClickable={true}
-        isDisabled={false}
-        onClick={[Function]}
-        onSelect={[Function]}
-        size={8}
-        viewBox="0 0 16 16"
-      />
-    </section>
-  </CSSTransition>
-</TransitionGroup>
+      Success
+    </span>
+    <CloseIcon
+      aspectRatio="xMidYMid meet"
+      className="lucid-Banner-close"
+      color="primary"
+      isClickable={true}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={8}
+      viewBox="0 0 16 16"
+    />
+  </section>
+</CSSTransition>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for 1.stateless 4`] = `
-<TransitionGroup
-  childFactory={[Function]}
-  component="div"
+<CSSTransition
+  classNames="lucid-Banner"
+  in={true}
+  timeout={300}
+  unmountOnExit={true}
 >
-  <CSSTransition
-    classNames="lucid-Banner"
-    timeout={300}
-  >
-    <section
-      className="lucid-Banner lucid-Banner-success lucid-Banner-filled"
-      style={
-        Object {
-          "marginBottom": 8,
-        }
+  <section
+    className="lucid-Banner lucid-Banner-success lucid-Banner-filled"
+    style={
+      Object {
+        "marginBottom": 8,
       }
+    }
+  >
+    <span
+      className="lucid-Banner-content"
     >
-      <span
-        className="lucid-Banner-content"
-      >
-        Success -- No Close 
-        ×
-      </span>
-    </section>
-  </CSSTransition>
-</TransitionGroup>
+      Success -- No Close 
+      ×
+    </span>
+  </section>
+</CSSTransition>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for 1.stateless 5`] = `
-<TransitionGroup
-  childFactory={[Function]}
-  component="div"
+<CSSTransition
+  classNames="lucid-Banner"
+  in={true}
+  timeout={300}
+  unmountOnExit={true}
 >
-  <CSSTransition
-    classNames="lucid-Banner"
-    timeout={300}
-  >
-    <section
-      className="lucid-Banner lucid-Banner-has-close lucid-Banner-warning lucid-Banner-filled"
-      style={
-        Object {
-          "marginBottom": 8,
-        }
+  <section
+    className="lucid-Banner lucid-Banner-has-close lucid-Banner-warning lucid-Banner-filled"
+    style={
+      Object {
+        "marginBottom": 8,
       }
+    }
+  >
+    <span
+      className="lucid-Banner-content"
     >
-      <span
-        className="lucid-Banner-content"
+      Warning 
+      <a
+        href="#"
       >
-        Warning 
-        <a
-          href="#"
-        >
-          Don't Click Here
-        </a>
-      </span>
-      <CloseIcon
-        aspectRatio="xMidYMid meet"
-        className="lucid-Banner-close"
-        color="primary"
-        isClickable={true}
-        isDisabled={false}
-        onClick={[Function]}
-        onSelect={[Function]}
-        size={8}
-        viewBox="0 0 16 16"
-      />
-    </section>
-  </CSSTransition>
-</TransitionGroup>
+        Don't Click Here
+      </a>
+    </span>
+    <CloseIcon
+      aspectRatio="xMidYMid meet"
+      className="lucid-Banner-close"
+      color="primary"
+      isClickable={true}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={8}
+      viewBox="0 0 16 16"
+    />
+  </section>
+</CSSTransition>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for 1.stateless 6`] = `
-<TransitionGroup
-  childFactory={[Function]}
-  component="div"
+<CSSTransition
+  classNames="lucid-Banner"
+  in={true}
+  timeout={300}
+  unmountOnExit={true}
 >
-  <CSSTransition
-    classNames="lucid-Banner"
-    timeout={300}
-  >
-    <section
-      className="lucid-Banner lucid-Banner-warning lucid-Banner-filled"
-      style={
-        Object {
-          "marginBottom": 8,
-        }
+  <section
+    className="lucid-Banner lucid-Banner-warning lucid-Banner-filled"
+    style={
+      Object {
+        "marginBottom": 8,
       }
+    }
+  >
+    <span
+      className="lucid-Banner-content"
     >
-      <span
-        className="lucid-Banner-content"
-      >
-        Warning -- No Close 
-        ×
-      </span>
-    </section>
-  </CSSTransition>
-</TransitionGroup>
+      Warning -- No Close 
+      ×
+    </span>
+  </section>
+</CSSTransition>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for 1.stateless 7`] = `
-<TransitionGroup
-  childFactory={[Function]}
-  component="div"
+<CSSTransition
+  classNames="lucid-Banner"
+  in={true}
+  timeout={300}
+  unmountOnExit={true}
 >
-  <CSSTransition
-    classNames="lucid-Banner"
-    timeout={300}
-  >
-    <section
-      className="lucid-Banner lucid-Banner-has-close lucid-Banner-danger lucid-Banner-filled"
-      style={
-        Object {
-          "marginBottom": 8,
-        }
+  <section
+    className="lucid-Banner lucid-Banner-has-close lucid-Banner-danger lucid-Banner-filled"
+    style={
+      Object {
+        "marginBottom": 8,
       }
+    }
+  >
+    <span
+      className="lucid-Banner-content"
     >
-      <span
-        className="lucid-Banner-content"
-      >
-        Danger
-      </span>
-      <CloseIcon
-        aspectRatio="xMidYMid meet"
-        className="lucid-Banner-close"
-        color="primary"
-        isClickable={true}
-        isDisabled={false}
-        onClick={[Function]}
-        onSelect={[Function]}
-        size={8}
-        viewBox="0 0 16 16"
-      />
-    </section>
-  </CSSTransition>
-</TransitionGroup>
+      Danger
+    </span>
+    <CloseIcon
+      aspectRatio="xMidYMid meet"
+      className="lucid-Banner-close"
+      color="primary"
+      isClickable={true}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={8}
+      viewBox="0 0 16 16"
+    />
+  </section>
+</CSSTransition>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for 1.stateless 8`] = `
-<TransitionGroup
-  childFactory={[Function]}
-  component="div"
+<CSSTransition
+  classNames="lucid-Banner"
+  in={true}
+  timeout={300}
+  unmountOnExit={true}
 >
-  <CSSTransition
-    classNames="lucid-Banner"
-    timeout={300}
-  >
-    <section
-      className="lucid-Banner lucid-Banner-danger lucid-Banner-filled"
-      style={
-        Object {
-          "marginBottom": 8,
-        }
+  <section
+    className="lucid-Banner lucid-Banner-danger lucid-Banner-filled"
+    style={
+      Object {
+        "marginBottom": 8,
       }
+    }
+  >
+    <span
+      className="lucid-Banner-content"
     >
-      <span
-        className="lucid-Banner-content"
-      >
-        Danger -- No Close 
-        ×
-      </span>
-    </section>
-  </CSSTransition>
-</TransitionGroup>
+      Danger -- No Close 
+      ×
+    </span>
+  </section>
+</CSSTransition>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for 1.stateless 9`] = `
-<TransitionGroup
-  childFactory={[Function]}
-  component="div"
+<CSSTransition
+  classNames="lucid-Banner"
+  in={true}
+  timeout={300}
+  unmountOnExit={true}
 >
-  <CSSTransition
-    classNames="lucid-Banner"
-    timeout={300}
-  >
-    <section
-      className="lucid-Banner lucid-Banner-has-close lucid-Banner-info lucid-Banner-filled"
-      style={
-        Object {
-          "marginBottom": 8,
-        }
+  <section
+    className="lucid-Banner lucid-Banner-has-close lucid-Banner-info lucid-Banner-filled"
+    style={
+      Object {
+        "marginBottom": 8,
       }
+    }
+  >
+    <span
+      className="lucid-Banner-content"
     >
-      <span
-        className="lucid-Banner-content"
-      >
-        Info
-      </span>
-      <CloseIcon
-        aspectRatio="xMidYMid meet"
-        className="lucid-Banner-close"
-        color="primary"
-        isClickable={true}
-        isDisabled={false}
-        onClick={[Function]}
-        onSelect={[Function]}
-        size={8}
-        viewBox="0 0 16 16"
-      />
-    </section>
-  </CSSTransition>
-</TransitionGroup>
+      Info
+    </span>
+    <CloseIcon
+      aspectRatio="xMidYMid meet"
+      className="lucid-Banner-close"
+      color="primary"
+      isClickable={true}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={8}
+      viewBox="0 0 16 16"
+    />
+  </section>
+</CSSTransition>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for 1.stateless 10`] = `
-<TransitionGroup
-  childFactory={[Function]}
-  component="div"
+<CSSTransition
+  classNames="lucid-Banner"
+  in={true}
+  timeout={300}
+  unmountOnExit={true}
 >
-  <CSSTransition
-    classNames="lucid-Banner"
-    timeout={300}
-  >
-    <section
-      className="lucid-Banner lucid-Banner-info lucid-Banner-filled"
-      style={
-        Object {
-          "marginBottom": 8,
-        }
+  <section
+    className="lucid-Banner lucid-Banner-info lucid-Banner-filled"
+    style={
+      Object {
+        "marginBottom": 8,
       }
+    }
+  >
+    <span
+      className="lucid-Banner-content"
     >
-      <span
-        className="lucid-Banner-content"
-      >
-        Info -- No Close 
-        ×
-      </span>
-    </section>
-  </CSSTransition>
-</TransitionGroup>
+      Info -- No Close 
+      ×
+    </span>
+  </section>
+</CSSTransition>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for 1.stateless 11`] = `
-<TransitionGroup
-  childFactory={[Function]}
-  component="div"
+<CSSTransition
+  classNames="lucid-Banner"
+  in={true}
+  timeout={300}
+  unmountOnExit={true}
 >
-  <CSSTransition
-    classNames="lucid-Banner"
-    timeout={300}
-  >
-    <section
-      className="lucid-Banner lucid-Banner-has-icon lucid-Banner-has-close lucid-Banner-danger lucid-Banner-filled"
-      style={
-        Object {
-          "marginBottom": 8,
-        }
+  <section
+    className="lucid-Banner lucid-Banner-has-icon lucid-Banner-has-close lucid-Banner-danger lucid-Banner-filled"
+    style={
+      Object {
+        "marginBottom": 8,
       }
+    }
+  >
+    <span
+      className="lucid-Banner-icon"
     >
-      <span
-        className="lucid-Banner-icon"
-      >
-        <ChatIcon
-          aspectRatio="xMidYMid meet"
-          color="primary"
-          isClickable={false}
-          isDisabled={false}
-          onClick={[Function]}
-          onSelect={[Function]}
-          size={16}
-          viewBox="0 0 16 16"
-        />
-      </span>
-      <span
-        className="lucid-Banner-content"
-      >
-        Has Icon
-      </span>
-      <CloseIcon
+      <ChatIcon
         aspectRatio="xMidYMid meet"
-        className="lucid-Banner-close"
         color="primary"
-        isClickable={true}
+        isClickable={false}
         isDisabled={false}
         onClick={[Function]}
         onSelect={[Function]}
-        size={8}
+        size={16}
         viewBox="0 0 16 16"
       />
-    </section>
-  </CSSTransition>
-</TransitionGroup>
+    </span>
+    <span
+      className="lucid-Banner-content"
+    >
+      Has Icon
+    </span>
+    <CloseIcon
+      aspectRatio="xMidYMid meet"
+      className="lucid-Banner-close"
+      color="primary"
+      isClickable={true}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={8}
+      viewBox="0 0 16 16"
+    />
+  </section>
+</CSSTransition>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for 1.stateless 12`] = `
-<TransitionGroup
-  childFactory={[Function]}
-  component="div"
+<CSSTransition
+  classNames="lucid-Banner"
+  in={true}
+  timeout={300}
+  unmountOnExit={true}
 >
-  <CSSTransition
-    classNames="lucid-Banner"
-    timeout={300}
-  >
-    <section
-      className="lucid-Banner lucid-Banner-has-close"
-      style={
-        Object {
-          "marginBottom": 8,
-        }
+  <section
+    className="lucid-Banner lucid-Banner-has-close"
+    style={
+      Object {
+        "marginBottom": 8,
       }
+    }
+  >
+    <span
+      className="lucid-Banner-content"
     >
-      <span
-        className="lucid-Banner-content"
-      >
-        <div>
-          Sit totam voluptas error dolorum ullam Quo ipsam esse amet mollitia consequuntur Cumque cum nisi porro cumque sit nisi Facilis placeat suscipit earum blanditiis eveniet Earum dolor voluptates perferendis quis
-        </div>
-        <div>
-          Adipisicing culpa atque totam quidem dicta consequatur fugiat quaerat Facilis cupiditate amet nam in perferendis Veritatis iusto molestiae illum doloribus deserunt Odit autem obcaecati dolores ad incidunt? Ipsa eveniet modi.
-        </div>
-        <div>
-          Lorem sit explicabo vitae illum labore Nostrum inventore dolor nisi deserunt voluptatem Voluptas itaque nesciunt omnis necessitatibus asperiores! Eius error ab consequatur necessitatibus repudiandae quibusdam Odio consequuntur at necessitatibus at
-        </div>
-        <div>
-          <a
-            href="#"
-          >
-            Click Me
-          </a>
-        </div>
-      </span>
-      <CloseIcon
-        aspectRatio="xMidYMid meet"
-        className="lucid-Banner-close"
-        color="primary"
-        isClickable={true}
-        isDisabled={false}
-        onClick={[Function]}
-        onSelect={[Function]}
-        size={8}
-        viewBox="0 0 16 16"
-      />
-    </section>
-  </CSSTransition>
-</TransitionGroup>
+      <div>
+        Sit totam voluptas error dolorum ullam Quo ipsam esse amet mollitia consequuntur Cumque cum nisi porro cumque sit nisi Facilis placeat suscipit earum blanditiis eveniet Earum dolor voluptates perferendis quis
+      </div>
+      <div>
+        Adipisicing culpa atque totam quidem dicta consequatur fugiat quaerat Facilis cupiditate amet nam in perferendis Veritatis iusto molestiae illum doloribus deserunt Odit autem obcaecati dolores ad incidunt? Ipsa eveniet modi.
+      </div>
+      <div>
+        Lorem sit explicabo vitae illum labore Nostrum inventore dolor nisi deserunt voluptatem Voluptas itaque nesciunt omnis necessitatibus asperiores! Eius error ab consequatur necessitatibus repudiandae quibusdam Odio consequuntur at necessitatibus at
+      </div>
+      <div>
+        <a
+          href="#"
+        >
+          Click Me
+        </a>
+      </div>
+    </span>
+    <CloseIcon
+      aspectRatio="xMidYMid meet"
+      className="lucid-Banner-close"
+      color="primary"
+      isClickable={true}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={8}
+      viewBox="0 0 16 16"
+    />
+  </section>
+</CSSTransition>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for 1.stateless 13`] = `
-<TransitionGroup
-  childFactory={[Function]}
-  component="div"
+<CSSTransition
+  classNames="lucid-Banner"
+  in={true}
+  timeout={300}
+  unmountOnExit={true}
 >
-  <CSSTransition
-    classNames="lucid-Banner"
-    timeout={300}
-  >
-    <section
-      className="lucid-Banner lucid-Banner-has-close lucid-Banner-success"
-      style={
-        Object {
-          "marginBottom": 8,
-        }
+  <section
+    className="lucid-Banner lucid-Banner-has-close lucid-Banner-success"
+    style={
+      Object {
+        "marginBottom": 8,
       }
+    }
+  >
+    <span
+      className="lucid-Banner-content"
     >
-      <span
-        className="lucid-Banner-content"
-      >
-        <div>
-          Success -- Outline
-        </div>
-        <div>
-          Outline banners are for messages with multi-line content.
-        </div>
-      </span>
-      <CloseIcon
-        aspectRatio="xMidYMid meet"
-        className="lucid-Banner-close"
-        color="primary"
-        isClickable={true}
-        isDisabled={false}
-        onClick={[Function]}
-        onSelect={[Function]}
-        size={8}
-        viewBox="0 0 16 16"
-      />
-    </section>
-  </CSSTransition>
-</TransitionGroup>
+      <div>
+        Success -- Outline
+      </div>
+      <div>
+        Outline banners are for messages with multi-line content.
+      </div>
+    </span>
+    <CloseIcon
+      aspectRatio="xMidYMid meet"
+      className="lucid-Banner-close"
+      color="primary"
+      isClickable={true}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={8}
+      viewBox="0 0 16 16"
+    />
+  </section>
+</CSSTransition>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for 1.stateless 14`] = `
-<TransitionGroup
-  childFactory={[Function]}
-  component="div"
+<CSSTransition
+  classNames="lucid-Banner"
+  in={true}
+  timeout={300}
+  unmountOnExit={true}
 >
-  <CSSTransition
-    classNames="lucid-Banner"
-    timeout={300}
-  >
-    <section
-      className="lucid-Banner lucid-Banner-has-close lucid-Banner-warning"
-      style={
-        Object {
-          "marginBottom": 8,
-        }
+  <section
+    className="lucid-Banner lucid-Banner-has-close lucid-Banner-warning"
+    style={
+      Object {
+        "marginBottom": 8,
       }
+    }
+  >
+    <span
+      className="lucid-Banner-content"
     >
-      <span
-        className="lucid-Banner-content"
-      >
-        <div>
-          Warning -- Outline
-        </div>
-        <div>
-          Outline banners are for messages with multi-line content.
-        </div>
-      </span>
-      <CloseIcon
-        aspectRatio="xMidYMid meet"
-        className="lucid-Banner-close"
-        color="primary"
-        isClickable={true}
-        isDisabled={false}
-        onClick={[Function]}
-        onSelect={[Function]}
-        size={8}
-        viewBox="0 0 16 16"
-      />
-    </section>
-  </CSSTransition>
-</TransitionGroup>
+      <div>
+        Warning -- Outline
+      </div>
+      <div>
+        Outline banners are for messages with multi-line content.
+      </div>
+    </span>
+    <CloseIcon
+      aspectRatio="xMidYMid meet"
+      className="lucid-Banner-close"
+      color="primary"
+      isClickable={true}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={8}
+      viewBox="0 0 16 16"
+    />
+  </section>
+</CSSTransition>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for 1.stateless 15`] = `
-<TransitionGroup
-  childFactory={[Function]}
-  component="div"
+<CSSTransition
+  classNames="lucid-Banner"
+  in={true}
+  timeout={300}
+  unmountOnExit={true}
 >
-  <CSSTransition
-    classNames="lucid-Banner"
-    timeout={300}
-  >
-    <section
-      className="lucid-Banner lucid-Banner-has-close lucid-Banner-danger"
-      style={
-        Object {
-          "marginBottom": 8,
-        }
+  <section
+    className="lucid-Banner lucid-Banner-has-close lucid-Banner-danger"
+    style={
+      Object {
+        "marginBottom": 8,
       }
+    }
+  >
+    <span
+      className="lucid-Banner-content"
     >
-      <span
-        className="lucid-Banner-content"
-      >
-        <div>
-          Danger -- Outline
-        </div>
-        <div>
-          Outline banners are for messages with multi-line content.
-        </div>
-      </span>
-      <CloseIcon
-        aspectRatio="xMidYMid meet"
-        className="lucid-Banner-close"
-        color="primary"
-        isClickable={true}
-        isDisabled={false}
-        onClick={[Function]}
-        onSelect={[Function]}
-        size={8}
-        viewBox="0 0 16 16"
-      />
-    </section>
-  </CSSTransition>
-</TransitionGroup>
+      <div>
+        Danger -- Outline
+      </div>
+      <div>
+        Outline banners are for messages with multi-line content.
+      </div>
+    </span>
+    <CloseIcon
+      aspectRatio="xMidYMid meet"
+      className="lucid-Banner-close"
+      color="primary"
+      isClickable={true}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={8}
+      viewBox="0 0 16 16"
+    />
+  </section>
+</CSSTransition>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for 1.stateless 16`] = `
-<TransitionGroup
-  childFactory={[Function]}
-  component="div"
+<CSSTransition
+  classNames="lucid-Banner"
+  in={true}
+  timeout={300}
+  unmountOnExit={true}
 >
-  <CSSTransition
-    classNames="lucid-Banner"
-    timeout={300}
-  >
-    <section
-      className="lucid-Banner lucid-Banner-has-close lucid-Banner-info"
-      style={
-        Object {
-          "marginBottom": 8,
-        }
+  <section
+    className="lucid-Banner lucid-Banner-has-close lucid-Banner-info"
+    style={
+      Object {
+        "marginBottom": 8,
       }
+    }
+  >
+    <span
+      className="lucid-Banner-content"
     >
-      <span
-        className="lucid-Banner-content"
-      >
-        <div>
-          Info -- Outline
-        </div>
-        <div>
-          Outline banners are for messages with multi-line content.
-        </div>
-      </span>
-      <CloseIcon
-        aspectRatio="xMidYMid meet"
-        className="lucid-Banner-close"
-        color="primary"
-        isClickable={true}
-        isDisabled={false}
-        onClick={[Function]}
-        onSelect={[Function]}
-        size={8}
-        viewBox="0 0 16 16"
-      />
-    </section>
-  </CSSTransition>
-</TransitionGroup>
+      <div>
+        Info -- Outline
+      </div>
+      <div>
+        Outline banners are for messages with multi-line content.
+      </div>
+    </span>
+    <CloseIcon
+      aspectRatio="xMidYMid meet"
+      className="lucid-Banner-close"
+      color="primary"
+      isClickable={true}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={8}
+      viewBox="0 0 16 16"
+    />
+  </section>
+</CSSTransition>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for 1.stateless 17`] = `
-<TransitionGroup
-  childFactory={[Function]}
-  component="div"
+<CSSTransition
+  classNames="lucid-Banner"
+  in={true}
+  timeout={300}
+  unmountOnExit={true}
 >
-  <CSSTransition
-    classNames="lucid-Banner"
-    timeout={300}
-  >
-    <section
-      className="lucid-Banner lucid-Banner-has-icon lucid-Banner-has-close lucid-Banner-danger"
-      style={
-        Object {
-          "marginBottom": 8,
-        }
+  <section
+    className="lucid-Banner lucid-Banner-has-icon lucid-Banner-has-close lucid-Banner-danger"
+    style={
+      Object {
+        "marginBottom": 8,
       }
+    }
+  >
+    <span
+      className="lucid-Banner-icon"
     >
-      <span
-        className="lucid-Banner-icon"
-      >
-        <ChatIcon
-          aspectRatio="xMidYMid meet"
-          color="primary"
-          isClickable={false}
-          isDisabled={false}
-          onClick={[Function]}
-          onSelect={[Function]}
-          size={16}
-          viewBox="0 0 16 16"
-        />
-      </span>
-      <span
-        className="lucid-Banner-content"
-      >
-        <div>
-          Has Icon -- Outline
-        </div>
-        <div>
-          Outline banners are for messages with multi-line content.
-        </div>
-      </span>
-      <CloseIcon
+      <ChatIcon
         aspectRatio="xMidYMid meet"
-        className="lucid-Banner-close"
         color="primary"
-        isClickable={true}
+        isClickable={false}
         isDisabled={false}
         onClick={[Function]}
         onSelect={[Function]}
-        size={8}
+        size={16}
         viewBox="0 0 16 16"
       />
-    </section>
-  </CSSTransition>
-</TransitionGroup>
+    </span>
+    <span
+      className="lucid-Banner-content"
+    >
+      <div>
+        Has Icon -- Outline
+      </div>
+      <div>
+        Outline banners are for messages with multi-line content.
+      </div>
+    </span>
+    <CloseIcon
+      aspectRatio="xMidYMid meet"
+      className="lucid-Banner-close"
+      color="primary"
+      isClickable={true}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={8}
+      viewBox="0 0 16 16"
+    />
+  </section>
+</CSSTransition>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for 2.small 1`] = `
-<TransitionGroup
-  childFactory={[Function]}
-  component="div"
+<CSSTransition
+  classNames="lucid-Banner"
+  in={true}
+  timeout={300}
+  unmountOnExit={true}
 >
-  <CSSTransition
-    classNames="lucid-Banner"
-    timeout={300}
-  >
-    <section
-      className="lucid-Banner lucid-Banner-has-close lucid-Banner-small lucid-Banner-filled"
-      style={
-        Object {
-          "marginBottom": 8,
-        }
+  <section
+    className="lucid-Banner lucid-Banner-has-close lucid-Banner-small lucid-Banner-filled"
+    style={
+      Object {
+        "marginBottom": 8,
       }
+    }
+  >
+    <span
+      className="lucid-Banner-content"
     >
-      <span
-        className="lucid-Banner-content"
-      >
-        Default
-      </span>
-      <CloseIcon
-        aspectRatio="xMidYMid meet"
-        className="lucid-Banner-close"
-        color="primary"
-        isClickable={true}
-        isDisabled={false}
-        onClick={[Function]}
-        onSelect={[Function]}
-        size={8}
-        viewBox="0 0 16 16"
-      />
-    </section>
-  </CSSTransition>
-</TransitionGroup>
+      Default
+    </span>
+    <CloseIcon
+      aspectRatio="xMidYMid meet"
+      className="lucid-Banner-close"
+      color="primary"
+      isClickable={true}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={8}
+      viewBox="0 0 16 16"
+    />
+  </section>
+</CSSTransition>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for 2.small 2`] = `
-<TransitionGroup
-  childFactory={[Function]}
-  component="div"
+<CSSTransition
+  classNames="lucid-Banner"
+  in={true}
+  timeout={300}
+  unmountOnExit={true}
 >
-  <CSSTransition
-    classNames="lucid-Banner"
-    timeout={300}
-  >
-    <section
-      className="lucid-Banner lucid-Banner-small lucid-Banner-filled"
-      style={
-        Object {
-          "marginBottom": 8,
-        }
+  <section
+    className="lucid-Banner lucid-Banner-small lucid-Banner-filled"
+    style={
+      Object {
+        "marginBottom": 8,
       }
+    }
+  >
+    <span
+      className="lucid-Banner-content"
     >
-      <span
-        className="lucid-Banner-content"
-      >
-        Default -- No Close 
-        ×
-      </span>
-    </section>
-  </CSSTransition>
-</TransitionGroup>
+      Default -- No Close 
+      ×
+    </span>
+  </section>
+</CSSTransition>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for 2.small 3`] = `
-<TransitionGroup
-  childFactory={[Function]}
-  component="div"
+<CSSTransition
+  classNames="lucid-Banner"
+  in={true}
+  timeout={300}
+  unmountOnExit={true}
 >
-  <CSSTransition
-    classNames="lucid-Banner"
-    timeout={300}
-  >
-    <section
-      className="lucid-Banner lucid-Banner-has-close lucid-Banner-success lucid-Banner-small lucid-Banner-filled"
-      style={
-        Object {
-          "marginBottom": 8,
-        }
+  <section
+    className="lucid-Banner lucid-Banner-has-close lucid-Banner-success lucid-Banner-small lucid-Banner-filled"
+    style={
+      Object {
+        "marginBottom": 8,
       }
+    }
+  >
+    <span
+      className="lucid-Banner-content"
     >
-      <span
-        className="lucid-Banner-content"
-      >
-        Success
-      </span>
-      <CloseIcon
-        aspectRatio="xMidYMid meet"
-        className="lucid-Banner-close"
-        color="primary"
-        isClickable={true}
-        isDisabled={false}
-        onClick={[Function]}
-        onSelect={[Function]}
-        size={8}
-        viewBox="0 0 16 16"
-      />
-    </section>
-  </CSSTransition>
-</TransitionGroup>
+      Success
+    </span>
+    <CloseIcon
+      aspectRatio="xMidYMid meet"
+      className="lucid-Banner-close"
+      color="primary"
+      isClickable={true}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={8}
+      viewBox="0 0 16 16"
+    />
+  </section>
+</CSSTransition>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for 2.small 4`] = `
-<TransitionGroup
-  childFactory={[Function]}
-  component="div"
+<CSSTransition
+  classNames="lucid-Banner"
+  in={true}
+  timeout={300}
+  unmountOnExit={true}
 >
-  <CSSTransition
-    classNames="lucid-Banner"
-    timeout={300}
-  >
-    <section
-      className="lucid-Banner lucid-Banner-success lucid-Banner-small lucid-Banner-filled"
-      style={
-        Object {
-          "marginBottom": 8,
-        }
+  <section
+    className="lucid-Banner lucid-Banner-success lucid-Banner-small lucid-Banner-filled"
+    style={
+      Object {
+        "marginBottom": 8,
       }
+    }
+  >
+    <span
+      className="lucid-Banner-content"
     >
-      <span
-        className="lucid-Banner-content"
-      >
-        Success -- No Close 
-        ×
-      </span>
-    </section>
-  </CSSTransition>
-</TransitionGroup>
+      Success -- No Close 
+      ×
+    </span>
+  </section>
+</CSSTransition>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for 2.small 5`] = `
-<TransitionGroup
-  childFactory={[Function]}
-  component="div"
+<CSSTransition
+  classNames="lucid-Banner"
+  in={true}
+  timeout={300}
+  unmountOnExit={true}
 >
-  <CSSTransition
-    classNames="lucid-Banner"
-    timeout={300}
-  >
-    <section
-      className="lucid-Banner lucid-Banner-has-close lucid-Banner-warning lucid-Banner-small lucid-Banner-filled"
-      style={
-        Object {
-          "marginBottom": 8,
-        }
+  <section
+    className="lucid-Banner lucid-Banner-has-close lucid-Banner-warning lucid-Banner-small lucid-Banner-filled"
+    style={
+      Object {
+        "marginBottom": 8,
       }
+    }
+  >
+    <span
+      className="lucid-Banner-content"
     >
-      <span
-        className="lucid-Banner-content"
-      >
-        Warning
-      </span>
-      <CloseIcon
-        aspectRatio="xMidYMid meet"
-        className="lucid-Banner-close"
-        color="primary"
-        isClickable={true}
-        isDisabled={false}
-        onClick={[Function]}
-        onSelect={[Function]}
-        size={8}
-        viewBox="0 0 16 16"
-      />
-    </section>
-  </CSSTransition>
-</TransitionGroup>
+      Warning
+    </span>
+    <CloseIcon
+      aspectRatio="xMidYMid meet"
+      className="lucid-Banner-close"
+      color="primary"
+      isClickable={true}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={8}
+      viewBox="0 0 16 16"
+    />
+  </section>
+</CSSTransition>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for 2.small 6`] = `
-<TransitionGroup
-  childFactory={[Function]}
-  component="div"
+<CSSTransition
+  classNames="lucid-Banner"
+  in={true}
+  timeout={300}
+  unmountOnExit={true}
 >
-  <CSSTransition
-    classNames="lucid-Banner"
-    timeout={300}
-  >
-    <section
-      className="lucid-Banner lucid-Banner-warning lucid-Banner-small lucid-Banner-filled"
-      style={
-        Object {
-          "marginBottom": 8,
-        }
+  <section
+    className="lucid-Banner lucid-Banner-warning lucid-Banner-small lucid-Banner-filled"
+    style={
+      Object {
+        "marginBottom": 8,
       }
+    }
+  >
+    <span
+      className="lucid-Banner-content"
     >
-      <span
-        className="lucid-Banner-content"
-      >
-        Warning -- No Close 
-        ×
-      </span>
-    </section>
-  </CSSTransition>
-</TransitionGroup>
+      Warning -- No Close 
+      ×
+    </span>
+  </section>
+</CSSTransition>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for 2.small 7`] = `
-<TransitionGroup
-  childFactory={[Function]}
-  component="div"
+<CSSTransition
+  classNames="lucid-Banner"
+  in={true}
+  timeout={300}
+  unmountOnExit={true}
 >
-  <CSSTransition
-    classNames="lucid-Banner"
-    timeout={300}
-  >
-    <section
-      className="lucid-Banner lucid-Banner-has-close lucid-Banner-danger lucid-Banner-small lucid-Banner-filled"
-      style={
-        Object {
-          "marginBottom": 8,
-        }
+  <section
+    className="lucid-Banner lucid-Banner-has-close lucid-Banner-danger lucid-Banner-small lucid-Banner-filled"
+    style={
+      Object {
+        "marginBottom": 8,
       }
+    }
+  >
+    <span
+      className="lucid-Banner-content"
     >
-      <span
-        className="lucid-Banner-content"
-      >
-        Danger
-      </span>
-      <CloseIcon
-        aspectRatio="xMidYMid meet"
-        className="lucid-Banner-close"
-        color="primary"
-        isClickable={true}
-        isDisabled={false}
-        onClick={[Function]}
-        onSelect={[Function]}
-        size={8}
-        viewBox="0 0 16 16"
-      />
-    </section>
-  </CSSTransition>
-</TransitionGroup>
+      Danger
+    </span>
+    <CloseIcon
+      aspectRatio="xMidYMid meet"
+      className="lucid-Banner-close"
+      color="primary"
+      isClickable={true}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={8}
+      viewBox="0 0 16 16"
+    />
+  </section>
+</CSSTransition>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for 2.small 8`] = `
-<TransitionGroup
-  childFactory={[Function]}
-  component="div"
+<CSSTransition
+  classNames="lucid-Banner"
+  in={true}
+  timeout={300}
+  unmountOnExit={true}
 >
-  <CSSTransition
-    classNames="lucid-Banner"
-    timeout={300}
-  >
-    <section
-      className="lucid-Banner lucid-Banner-danger lucid-Banner-small lucid-Banner-filled"
-      style={
-        Object {
-          "marginBottom": 8,
-        }
+  <section
+    className="lucid-Banner lucid-Banner-danger lucid-Banner-small lucid-Banner-filled"
+    style={
+      Object {
+        "marginBottom": 8,
       }
+    }
+  >
+    <span
+      className="lucid-Banner-content"
     >
-      <span
-        className="lucid-Banner-content"
-      >
-        Danger -- No Close 
-        ×
-      </span>
-    </section>
-  </CSSTransition>
-</TransitionGroup>
+      Danger -- No Close 
+      ×
+    </span>
+  </section>
+</CSSTransition>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for 2.small 9`] = `
-<TransitionGroup
-  childFactory={[Function]}
-  component="div"
+<CSSTransition
+  classNames="lucid-Banner"
+  in={true}
+  timeout={300}
+  unmountOnExit={true}
 >
-  <CSSTransition
-    classNames="lucid-Banner"
-    timeout={300}
-  >
-    <section
-      className="lucid-Banner lucid-Banner-has-close lucid-Banner-info lucid-Banner-small lucid-Banner-filled"
-      style={
-        Object {
-          "marginBottom": 8,
-        }
+  <section
+    className="lucid-Banner lucid-Banner-has-close lucid-Banner-info lucid-Banner-small lucid-Banner-filled"
+    style={
+      Object {
+        "marginBottom": 8,
       }
+    }
+  >
+    <span
+      className="lucid-Banner-content"
     >
-      <span
-        className="lucid-Banner-content"
-      >
-        Info
-      </span>
-      <CloseIcon
-        aspectRatio="xMidYMid meet"
-        className="lucid-Banner-close"
-        color="primary"
-        isClickable={true}
-        isDisabled={false}
-        onClick={[Function]}
-        onSelect={[Function]}
-        size={8}
-        viewBox="0 0 16 16"
-      />
-    </section>
-  </CSSTransition>
-</TransitionGroup>
+      Info
+    </span>
+    <CloseIcon
+      aspectRatio="xMidYMid meet"
+      className="lucid-Banner-close"
+      color="primary"
+      isClickable={true}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={8}
+      viewBox="0 0 16 16"
+    />
+  </section>
+</CSSTransition>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for 2.small 10`] = `
-<TransitionGroup
-  childFactory={[Function]}
-  component="div"
+<CSSTransition
+  classNames="lucid-Banner"
+  in={true}
+  timeout={300}
+  unmountOnExit={true}
 >
-  <CSSTransition
-    classNames="lucid-Banner"
-    timeout={300}
-  >
-    <section
-      className="lucid-Banner lucid-Banner-info lucid-Banner-small lucid-Banner-filled"
-      style={
-        Object {
-          "marginBottom": 8,
-        }
+  <section
+    className="lucid-Banner lucid-Banner-info lucid-Banner-small lucid-Banner-filled"
+    style={
+      Object {
+        "marginBottom": 8,
       }
+    }
+  >
+    <span
+      className="lucid-Banner-content"
     >
-      <span
-        className="lucid-Banner-content"
-      >
-        Info -- No Close 
-        ×
-      </span>
-    </section>
-  </CSSTransition>
-</TransitionGroup>
+      Info -- No Close 
+      ×
+    </span>
+  </section>
+</CSSTransition>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for 2.small 11`] = `
-<TransitionGroup
-  childFactory={[Function]}
-  component="div"
+<CSSTransition
+  classNames="lucid-Banner"
+  in={true}
+  timeout={300}
+  unmountOnExit={true}
 >
-  <CSSTransition
-    classNames="lucid-Banner"
-    timeout={300}
-  >
-    <section
-      className="lucid-Banner lucid-Banner-has-close lucid-Banner-small"
-      style={
-        Object {
-          "marginBottom": 8,
-        }
+  <section
+    className="lucid-Banner lucid-Banner-has-close lucid-Banner-small"
+    style={
+      Object {
+        "marginBottom": 8,
       }
+    }
+  >
+    <span
+      className="lucid-Banner-content"
     >
-      <span
-        className="lucid-Banner-content"
-      >
-        Default -- Outline Only
-      </span>
-      <CloseIcon
-        aspectRatio="xMidYMid meet"
-        className="lucid-Banner-close"
-        color="primary"
-        isClickable={true}
-        isDisabled={false}
-        onClick={[Function]}
-        onSelect={[Function]}
-        size={8}
-        viewBox="0 0 16 16"
-      />
-    </section>
-  </CSSTransition>
-</TransitionGroup>
+      Default -- Outline Only
+    </span>
+    <CloseIcon
+      aspectRatio="xMidYMid meet"
+      className="lucid-Banner-close"
+      color="primary"
+      isClickable={true}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={8}
+      viewBox="0 0 16 16"
+    />
+  </section>
+</CSSTransition>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for 2.small 12`] = `
-<TransitionGroup
-  childFactory={[Function]}
-  component="div"
+<CSSTransition
+  classNames="lucid-Banner"
+  in={true}
+  timeout={300}
+  unmountOnExit={true}
 >
-  <CSSTransition
-    classNames="lucid-Banner"
-    timeout={300}
-  >
-    <section
-      className="lucid-Banner lucid-Banner-has-close lucid-Banner-success lucid-Banner-small"
-      style={
-        Object {
-          "marginBottom": 8,
-        }
+  <section
+    className="lucid-Banner lucid-Banner-has-close lucid-Banner-success lucid-Banner-small"
+    style={
+      Object {
+        "marginBottom": 8,
       }
+    }
+  >
+    <span
+      className="lucid-Banner-content"
     >
-      <span
-        className="lucid-Banner-content"
-      >
-        Success -- Outline Only
-      </span>
-      <CloseIcon
-        aspectRatio="xMidYMid meet"
-        className="lucid-Banner-close"
-        color="primary"
-        isClickable={true}
-        isDisabled={false}
-        onClick={[Function]}
-        onSelect={[Function]}
-        size={8}
-        viewBox="0 0 16 16"
-      />
-    </section>
-  </CSSTransition>
-</TransitionGroup>
+      Success -- Outline Only
+    </span>
+    <CloseIcon
+      aspectRatio="xMidYMid meet"
+      className="lucid-Banner-close"
+      color="primary"
+      isClickable={true}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={8}
+      viewBox="0 0 16 16"
+    />
+  </section>
+</CSSTransition>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for 2.small 13`] = `
-<TransitionGroup
-  childFactory={[Function]}
-  component="div"
+<CSSTransition
+  classNames="lucid-Banner"
+  in={true}
+  timeout={300}
+  unmountOnExit={true}
 >
-  <CSSTransition
-    classNames="lucid-Banner"
-    timeout={300}
-  >
-    <section
-      className="lucid-Banner lucid-Banner-has-close lucid-Banner-warning lucid-Banner-small"
-      style={
-        Object {
-          "marginBottom": 8,
-        }
+  <section
+    className="lucid-Banner lucid-Banner-has-close lucid-Banner-warning lucid-Banner-small"
+    style={
+      Object {
+        "marginBottom": 8,
       }
+    }
+  >
+    <span
+      className="lucid-Banner-content"
     >
-      <span
-        className="lucid-Banner-content"
-      >
-        Warning -- Outline Only
-      </span>
-      <CloseIcon
-        aspectRatio="xMidYMid meet"
-        className="lucid-Banner-close"
-        color="primary"
-        isClickable={true}
-        isDisabled={false}
-        onClick={[Function]}
-        onSelect={[Function]}
-        size={8}
-        viewBox="0 0 16 16"
-      />
-    </section>
-  </CSSTransition>
-</TransitionGroup>
+      Warning -- Outline Only
+    </span>
+    <CloseIcon
+      aspectRatio="xMidYMid meet"
+      className="lucid-Banner-close"
+      color="primary"
+      isClickable={true}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={8}
+      viewBox="0 0 16 16"
+    />
+  </section>
+</CSSTransition>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for 2.small 14`] = `
-<TransitionGroup
-  childFactory={[Function]}
-  component="div"
+<CSSTransition
+  classNames="lucid-Banner"
+  in={true}
+  timeout={300}
+  unmountOnExit={true}
 >
-  <CSSTransition
-    classNames="lucid-Banner"
-    timeout={300}
-  >
-    <section
-      className="lucid-Banner lucid-Banner-has-close lucid-Banner-danger lucid-Banner-small"
-      style={
-        Object {
-          "marginBottom": 8,
-        }
+  <section
+    className="lucid-Banner lucid-Banner-has-close lucid-Banner-danger lucid-Banner-small"
+    style={
+      Object {
+        "marginBottom": 8,
       }
+    }
+  >
+    <span
+      className="lucid-Banner-content"
     >
-      <span
-        className="lucid-Banner-content"
-      >
-        Danger -- Outline Only
-      </span>
-      <CloseIcon
-        aspectRatio="xMidYMid meet"
-        className="lucid-Banner-close"
-        color="primary"
-        isClickable={true}
-        isDisabled={false}
-        onClick={[Function]}
-        onSelect={[Function]}
-        size={8}
-        viewBox="0 0 16 16"
-      />
-    </section>
-  </CSSTransition>
-</TransitionGroup>
+      Danger -- Outline Only
+    </span>
+    <CloseIcon
+      aspectRatio="xMidYMid meet"
+      className="lucid-Banner-close"
+      color="primary"
+      isClickable={true}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={8}
+      viewBox="0 0 16 16"
+    />
+  </section>
+</CSSTransition>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for 2.small 15`] = `
-<TransitionGroup
-  childFactory={[Function]}
-  component="div"
+<CSSTransition
+  classNames="lucid-Banner"
+  in={true}
+  timeout={300}
+  unmountOnExit={true}
 >
-  <CSSTransition
-    classNames="lucid-Banner"
-    timeout={300}
-  >
-    <section
-      className="lucid-Banner lucid-Banner-has-close lucid-Banner-info lucid-Banner-small"
-      style={
-        Object {
-          "marginBottom": 8,
-        }
+  <section
+    className="lucid-Banner lucid-Banner-has-close lucid-Banner-info lucid-Banner-small"
+    style={
+      Object {
+        "marginBottom": 8,
       }
+    }
+  >
+    <span
+      className="lucid-Banner-content"
     >
-      <span
-        className="lucid-Banner-content"
-      >
-        Info -- Outline Only
-      </span>
-      <CloseIcon
-        aspectRatio="xMidYMid meet"
-        className="lucid-Banner-close"
-        color="primary"
-        isClickable={true}
-        isDisabled={false}
-        onClick={[Function]}
-        onSelect={[Function]}
-        size={8}
-        viewBox="0 0 16 16"
-      />
-    </section>
-  </CSSTransition>
-</TransitionGroup>
+      Info -- Outline Only
+    </span>
+    <CloseIcon
+      aspectRatio="xMidYMid meet"
+      className="lucid-Banner-close"
+      color="primary"
+      isClickable={true}
+      isDisabled={false}
+      onClick={[Function]}
+      onSelect={[Function]}
+      size={8}
+      viewBox="0 0 16 16"
+    />
+  </section>
+</CSSTransition>
 `;
