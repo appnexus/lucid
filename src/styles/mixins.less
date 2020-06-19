@@ -142,7 +142,7 @@
 // Animations
 // -----------------------------------------------------------------------------
 
-// This set of mixins in intended to be used with ReactCSSTransitionGroup. It's
+// This set of mixins in intended to be used with CSSTransition. It's
 // important that you place this mixin directly underneath the parent that
 // should be animating.
 
@@ -151,20 +151,18 @@
 		.opacity(0.01);
 	}
 
-	&-enter&-enter-active {
-		.opacity(1);
-
+	&-enter-active {
 		transition: opacity @timing ease-in;
-	}
-
-	&-leave {
 		.opacity(1);
 	}
 
-	&-leave&-leave-active {
+	&-exit {
+		.opacity(1);
+	}
+
+	&-exit-active {
+		transition: opacity @timing ease-in;
 		.opacity(0.01);
-
-		transition: opacity @timing ease-in;
 	}
 }
 

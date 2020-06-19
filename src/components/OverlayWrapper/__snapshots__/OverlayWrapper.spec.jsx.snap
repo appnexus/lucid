@@ -69,13 +69,11 @@ exports[`OverlayWrapper [common] example testing should match snapshot(s) for 1.
     yAxisTitleColor="#000"
     yAxisTooltipFormatter={[Function]}
   />
-  <CSSTransitionGroup
-    transitionAppear={false}
-    transitionEnter={true}
-    transitionEnterTimeout={300}
-    transitionLeave={true}
-    transitionLeaveTimeout={300}
-    transitionName="lucid-OverlayWrapper-message-container"
+  <CSSTransition
+    classNames="lucid-OverlayWrapper-message-container"
+    in={true}
+    timeout={300}
+    unmountOnExit={true}
   >
     <div
       className="lucid-OverlayWrapper-message-container lucid-OverlayWrapper-has-overlay lucid-OverlayWrapper-kind-light"
@@ -84,6 +82,6 @@ exports[`OverlayWrapper [common] example testing should match snapshot(s) for 1.
         Message Goes Here
       </div>
     </div>
-  </CSSTransitionGroup>
+  </CSSTransition>
 </div>
 `;

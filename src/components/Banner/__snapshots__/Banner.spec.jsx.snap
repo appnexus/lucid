@@ -1,13 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Banner [common] example testing should match snapshot(s) for 0.stateful 1`] = `
-<CSSTransitionGroup
-  transitionAppear={false}
-  transitionEnter={true}
-  transitionEnterTimeout={300}
-  transitionLeave={true}
-  transitionLeaveTimeout={300}
-  transitionName="lucid-Banner"
+<CSSTransition
+  classNames="lucid-Banner"
+  in={true}
+  timeout={300}
+  unmountOnExit={true}
 >
   <section
     className="lucid-Banner lucid-Banner-has-close lucid-Banner-filled"
@@ -29,17 +27,15 @@ exports[`Banner [common] example testing should match snapshot(s) for 0.stateful
       viewBox="0 0 16 16"
     />
   </section>
-</CSSTransitionGroup>
+</CSSTransition>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for 1.stateless 1`] = `
-<CSSTransitionGroup
-  transitionAppear={false}
-  transitionEnter={true}
-  transitionEnterTimeout={300}
-  transitionLeave={true}
-  transitionLeaveTimeout={300}
-  transitionName="lucid-Banner"
+<CSSTransition
+  classNames="lucid-Banner"
+  in={true}
+  timeout={300}
+  unmountOnExit={true}
 >
   <section
     className="lucid-Banner lucid-Banner-has-close lucid-Banner-filled"
@@ -66,17 +62,15 @@ exports[`Banner [common] example testing should match snapshot(s) for 1.stateles
       viewBox="0 0 16 16"
     />
   </section>
-</CSSTransitionGroup>
+</CSSTransition>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for 1.stateless 2`] = `
-<CSSTransitionGroup
-  transitionAppear={false}
-  transitionEnter={true}
-  transitionEnterTimeout={300}
-  transitionLeave={true}
-  transitionLeaveTimeout={300}
-  transitionName="lucid-Banner"
+<CSSTransition
+  classNames="lucid-Banner"
+  in={true}
+  timeout={300}
+  unmountOnExit={true}
 >
   <section
     className="lucid-Banner lucid-Banner-filled"
@@ -93,17 +87,15 @@ exports[`Banner [common] example testing should match snapshot(s) for 1.stateles
       ×
     </span>
   </section>
-</CSSTransitionGroup>
+</CSSTransition>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for 1.stateless 3`] = `
-<CSSTransitionGroup
-  transitionAppear={false}
-  transitionEnter={true}
-  transitionEnterTimeout={300}
-  transitionLeave={true}
-  transitionLeaveTimeout={300}
-  transitionName="lucid-Banner"
+<CSSTransition
+  classNames="lucid-Banner"
+  in={true}
+  timeout={300}
+  unmountOnExit={true}
 >
   <section
     className="lucid-Banner lucid-Banner-has-close lucid-Banner-success lucid-Banner-filled"
@@ -130,17 +122,15 @@ exports[`Banner [common] example testing should match snapshot(s) for 1.stateles
       viewBox="0 0 16 16"
     />
   </section>
-</CSSTransitionGroup>
+</CSSTransition>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for 1.stateless 4`] = `
-<CSSTransitionGroup
-  transitionAppear={false}
-  transitionEnter={true}
-  transitionEnterTimeout={300}
-  transitionLeave={true}
-  transitionLeaveTimeout={300}
-  transitionName="lucid-Banner"
+<CSSTransition
+  classNames="lucid-Banner"
+  in={true}
+  timeout={300}
+  unmountOnExit={true}
 >
   <section
     className="lucid-Banner lucid-Banner-success lucid-Banner-filled"
@@ -157,17 +147,15 @@ exports[`Banner [common] example testing should match snapshot(s) for 1.stateles
       ×
     </span>
   </section>
-</CSSTransitionGroup>
+</CSSTransition>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for 1.stateless 5`] = `
-<CSSTransitionGroup
-  transitionAppear={false}
-  transitionEnter={true}
-  transitionEnterTimeout={300}
-  transitionLeave={true}
-  transitionLeaveTimeout={300}
-  transitionName="lucid-Banner"
+<CSSTransition
+  classNames="lucid-Banner"
+  in={true}
+  timeout={300}
+  unmountOnExit={true}
 >
   <section
     className="lucid-Banner lucid-Banner-has-close lucid-Banner-warning lucid-Banner-filled"
@@ -199,17 +187,15 @@ exports[`Banner [common] example testing should match snapshot(s) for 1.stateles
       viewBox="0 0 16 16"
     />
   </section>
-</CSSTransitionGroup>
+</CSSTransition>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for 1.stateless 6`] = `
-<CSSTransitionGroup
-  transitionAppear={false}
-  transitionEnter={true}
-  transitionEnterTimeout={300}
-  transitionLeave={true}
-  transitionLeaveTimeout={300}
-  transitionName="lucid-Banner"
+<CSSTransition
+  classNames="lucid-Banner"
+  in={true}
+  timeout={300}
+  unmountOnExit={true}
 >
   <section
     className="lucid-Banner lucid-Banner-warning lucid-Banner-filled"
@@ -226,17 +212,15 @@ exports[`Banner [common] example testing should match snapshot(s) for 1.stateles
       ×
     </span>
   </section>
-</CSSTransitionGroup>
+</CSSTransition>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for 1.stateless 7`] = `
-<CSSTransitionGroup
-  transitionAppear={false}
-  transitionEnter={true}
-  transitionEnterTimeout={300}
-  transitionLeave={true}
-  transitionLeaveTimeout={300}
-  transitionName="lucid-Banner"
+<CSSTransition
+  classNames="lucid-Banner"
+  in={true}
+  timeout={300}
+  unmountOnExit={true}
 >
   <section
     className="lucid-Banner lucid-Banner-has-close lucid-Banner-danger lucid-Banner-filled"
@@ -263,17 +247,15 @@ exports[`Banner [common] example testing should match snapshot(s) for 1.stateles
       viewBox="0 0 16 16"
     />
   </section>
-</CSSTransitionGroup>
+</CSSTransition>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for 1.stateless 8`] = `
-<CSSTransitionGroup
-  transitionAppear={false}
-  transitionEnter={true}
-  transitionEnterTimeout={300}
-  transitionLeave={true}
-  transitionLeaveTimeout={300}
-  transitionName="lucid-Banner"
+<CSSTransition
+  classNames="lucid-Banner"
+  in={true}
+  timeout={300}
+  unmountOnExit={true}
 >
   <section
     className="lucid-Banner lucid-Banner-danger lucid-Banner-filled"
@@ -290,17 +272,15 @@ exports[`Banner [common] example testing should match snapshot(s) for 1.stateles
       ×
     </span>
   </section>
-</CSSTransitionGroup>
+</CSSTransition>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for 1.stateless 9`] = `
-<CSSTransitionGroup
-  transitionAppear={false}
-  transitionEnter={true}
-  transitionEnterTimeout={300}
-  transitionLeave={true}
-  transitionLeaveTimeout={300}
-  transitionName="lucid-Banner"
+<CSSTransition
+  classNames="lucid-Banner"
+  in={true}
+  timeout={300}
+  unmountOnExit={true}
 >
   <section
     className="lucid-Banner lucid-Banner-has-close lucid-Banner-info lucid-Banner-filled"
@@ -327,17 +307,15 @@ exports[`Banner [common] example testing should match snapshot(s) for 1.stateles
       viewBox="0 0 16 16"
     />
   </section>
-</CSSTransitionGroup>
+</CSSTransition>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for 1.stateless 10`] = `
-<CSSTransitionGroup
-  transitionAppear={false}
-  transitionEnter={true}
-  transitionEnterTimeout={300}
-  transitionLeave={true}
-  transitionLeaveTimeout={300}
-  transitionName="lucid-Banner"
+<CSSTransition
+  classNames="lucid-Banner"
+  in={true}
+  timeout={300}
+  unmountOnExit={true}
 >
   <section
     className="lucid-Banner lucid-Banner-info lucid-Banner-filled"
@@ -354,17 +332,15 @@ exports[`Banner [common] example testing should match snapshot(s) for 1.stateles
       ×
     </span>
   </section>
-</CSSTransitionGroup>
+</CSSTransition>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for 1.stateless 11`] = `
-<CSSTransitionGroup
-  transitionAppear={false}
-  transitionEnter={true}
-  transitionEnterTimeout={300}
-  transitionLeave={true}
-  transitionLeaveTimeout={300}
-  transitionName="lucid-Banner"
+<CSSTransition
+  classNames="lucid-Banner"
+  in={true}
+  timeout={300}
+  unmountOnExit={true}
 >
   <section
     className="lucid-Banner lucid-Banner-has-icon lucid-Banner-has-close lucid-Banner-danger lucid-Banner-filled"
@@ -405,17 +381,15 @@ exports[`Banner [common] example testing should match snapshot(s) for 1.stateles
       viewBox="0 0 16 16"
     />
   </section>
-</CSSTransitionGroup>
+</CSSTransition>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for 1.stateless 12`] = `
-<CSSTransitionGroup
-  transitionAppear={false}
-  transitionEnter={true}
-  transitionEnterTimeout={300}
-  transitionLeave={true}
-  transitionLeaveTimeout={300}
-  transitionName="lucid-Banner"
+<CSSTransition
+  classNames="lucid-Banner"
+  in={true}
+  timeout={300}
+  unmountOnExit={true}
 >
   <section
     className="lucid-Banner lucid-Banner-has-close"
@@ -457,17 +431,15 @@ exports[`Banner [common] example testing should match snapshot(s) for 1.stateles
       viewBox="0 0 16 16"
     />
   </section>
-</CSSTransitionGroup>
+</CSSTransition>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for 1.stateless 13`] = `
-<CSSTransitionGroup
-  transitionAppear={false}
-  transitionEnter={true}
-  transitionEnterTimeout={300}
-  transitionLeave={true}
-  transitionLeaveTimeout={300}
-  transitionName="lucid-Banner"
+<CSSTransition
+  classNames="lucid-Banner"
+  in={true}
+  timeout={300}
+  unmountOnExit={true}
 >
   <section
     className="lucid-Banner lucid-Banner-has-close lucid-Banner-success"
@@ -499,17 +471,15 @@ exports[`Banner [common] example testing should match snapshot(s) for 1.stateles
       viewBox="0 0 16 16"
     />
   </section>
-</CSSTransitionGroup>
+</CSSTransition>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for 1.stateless 14`] = `
-<CSSTransitionGroup
-  transitionAppear={false}
-  transitionEnter={true}
-  transitionEnterTimeout={300}
-  transitionLeave={true}
-  transitionLeaveTimeout={300}
-  transitionName="lucid-Banner"
+<CSSTransition
+  classNames="lucid-Banner"
+  in={true}
+  timeout={300}
+  unmountOnExit={true}
 >
   <section
     className="lucid-Banner lucid-Banner-has-close lucid-Banner-warning"
@@ -541,17 +511,15 @@ exports[`Banner [common] example testing should match snapshot(s) for 1.stateles
       viewBox="0 0 16 16"
     />
   </section>
-</CSSTransitionGroup>
+</CSSTransition>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for 1.stateless 15`] = `
-<CSSTransitionGroup
-  transitionAppear={false}
-  transitionEnter={true}
-  transitionEnterTimeout={300}
-  transitionLeave={true}
-  transitionLeaveTimeout={300}
-  transitionName="lucid-Banner"
+<CSSTransition
+  classNames="lucid-Banner"
+  in={true}
+  timeout={300}
+  unmountOnExit={true}
 >
   <section
     className="lucid-Banner lucid-Banner-has-close lucid-Banner-danger"
@@ -583,17 +551,15 @@ exports[`Banner [common] example testing should match snapshot(s) for 1.stateles
       viewBox="0 0 16 16"
     />
   </section>
-</CSSTransitionGroup>
+</CSSTransition>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for 1.stateless 16`] = `
-<CSSTransitionGroup
-  transitionAppear={false}
-  transitionEnter={true}
-  transitionEnterTimeout={300}
-  transitionLeave={true}
-  transitionLeaveTimeout={300}
-  transitionName="lucid-Banner"
+<CSSTransition
+  classNames="lucid-Banner"
+  in={true}
+  timeout={300}
+  unmountOnExit={true}
 >
   <section
     className="lucid-Banner lucid-Banner-has-close lucid-Banner-info"
@@ -625,17 +591,15 @@ exports[`Banner [common] example testing should match snapshot(s) for 1.stateles
       viewBox="0 0 16 16"
     />
   </section>
-</CSSTransitionGroup>
+</CSSTransition>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for 1.stateless 17`] = `
-<CSSTransitionGroup
-  transitionAppear={false}
-  transitionEnter={true}
-  transitionEnterTimeout={300}
-  transitionLeave={true}
-  transitionLeaveTimeout={300}
-  transitionName="lucid-Banner"
+<CSSTransition
+  classNames="lucid-Banner"
+  in={true}
+  timeout={300}
+  unmountOnExit={true}
 >
   <section
     className="lucid-Banner lucid-Banner-has-icon lucid-Banner-has-close lucid-Banner-danger"
@@ -681,17 +645,15 @@ exports[`Banner [common] example testing should match snapshot(s) for 1.stateles
       viewBox="0 0 16 16"
     />
   </section>
-</CSSTransitionGroup>
+</CSSTransition>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for 2.small 1`] = `
-<CSSTransitionGroup
-  transitionAppear={false}
-  transitionEnter={true}
-  transitionEnterTimeout={300}
-  transitionLeave={true}
-  transitionLeaveTimeout={300}
-  transitionName="lucid-Banner"
+<CSSTransition
+  classNames="lucid-Banner"
+  in={true}
+  timeout={300}
+  unmountOnExit={true}
 >
   <section
     className="lucid-Banner lucid-Banner-has-close lucid-Banner-small lucid-Banner-filled"
@@ -718,17 +680,15 @@ exports[`Banner [common] example testing should match snapshot(s) for 2.small 1`
       viewBox="0 0 16 16"
     />
   </section>
-</CSSTransitionGroup>
+</CSSTransition>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for 2.small 2`] = `
-<CSSTransitionGroup
-  transitionAppear={false}
-  transitionEnter={true}
-  transitionEnterTimeout={300}
-  transitionLeave={true}
-  transitionLeaveTimeout={300}
-  transitionName="lucid-Banner"
+<CSSTransition
+  classNames="lucid-Banner"
+  in={true}
+  timeout={300}
+  unmountOnExit={true}
 >
   <section
     className="lucid-Banner lucid-Banner-small lucid-Banner-filled"
@@ -745,17 +705,15 @@ exports[`Banner [common] example testing should match snapshot(s) for 2.small 2`
       ×
     </span>
   </section>
-</CSSTransitionGroup>
+</CSSTransition>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for 2.small 3`] = `
-<CSSTransitionGroup
-  transitionAppear={false}
-  transitionEnter={true}
-  transitionEnterTimeout={300}
-  transitionLeave={true}
-  transitionLeaveTimeout={300}
-  transitionName="lucid-Banner"
+<CSSTransition
+  classNames="lucid-Banner"
+  in={true}
+  timeout={300}
+  unmountOnExit={true}
 >
   <section
     className="lucid-Banner lucid-Banner-has-close lucid-Banner-success lucid-Banner-small lucid-Banner-filled"
@@ -782,17 +740,15 @@ exports[`Banner [common] example testing should match snapshot(s) for 2.small 3`
       viewBox="0 0 16 16"
     />
   </section>
-</CSSTransitionGroup>
+</CSSTransition>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for 2.small 4`] = `
-<CSSTransitionGroup
-  transitionAppear={false}
-  transitionEnter={true}
-  transitionEnterTimeout={300}
-  transitionLeave={true}
-  transitionLeaveTimeout={300}
-  transitionName="lucid-Banner"
+<CSSTransition
+  classNames="lucid-Banner"
+  in={true}
+  timeout={300}
+  unmountOnExit={true}
 >
   <section
     className="lucid-Banner lucid-Banner-success lucid-Banner-small lucid-Banner-filled"
@@ -809,17 +765,15 @@ exports[`Banner [common] example testing should match snapshot(s) for 2.small 4`
       ×
     </span>
   </section>
-</CSSTransitionGroup>
+</CSSTransition>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for 2.small 5`] = `
-<CSSTransitionGroup
-  transitionAppear={false}
-  transitionEnter={true}
-  transitionEnterTimeout={300}
-  transitionLeave={true}
-  transitionLeaveTimeout={300}
-  transitionName="lucid-Banner"
+<CSSTransition
+  classNames="lucid-Banner"
+  in={true}
+  timeout={300}
+  unmountOnExit={true}
 >
   <section
     className="lucid-Banner lucid-Banner-has-close lucid-Banner-warning lucid-Banner-small lucid-Banner-filled"
@@ -846,17 +800,15 @@ exports[`Banner [common] example testing should match snapshot(s) for 2.small 5`
       viewBox="0 0 16 16"
     />
   </section>
-</CSSTransitionGroup>
+</CSSTransition>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for 2.small 6`] = `
-<CSSTransitionGroup
-  transitionAppear={false}
-  transitionEnter={true}
-  transitionEnterTimeout={300}
-  transitionLeave={true}
-  transitionLeaveTimeout={300}
-  transitionName="lucid-Banner"
+<CSSTransition
+  classNames="lucid-Banner"
+  in={true}
+  timeout={300}
+  unmountOnExit={true}
 >
   <section
     className="lucid-Banner lucid-Banner-warning lucid-Banner-small lucid-Banner-filled"
@@ -873,17 +825,15 @@ exports[`Banner [common] example testing should match snapshot(s) for 2.small 6`
       ×
     </span>
   </section>
-</CSSTransitionGroup>
+</CSSTransition>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for 2.small 7`] = `
-<CSSTransitionGroup
-  transitionAppear={false}
-  transitionEnter={true}
-  transitionEnterTimeout={300}
-  transitionLeave={true}
-  transitionLeaveTimeout={300}
-  transitionName="lucid-Banner"
+<CSSTransition
+  classNames="lucid-Banner"
+  in={true}
+  timeout={300}
+  unmountOnExit={true}
 >
   <section
     className="lucid-Banner lucid-Banner-has-close lucid-Banner-danger lucid-Banner-small lucid-Banner-filled"
@@ -910,17 +860,15 @@ exports[`Banner [common] example testing should match snapshot(s) for 2.small 7`
       viewBox="0 0 16 16"
     />
   </section>
-</CSSTransitionGroup>
+</CSSTransition>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for 2.small 8`] = `
-<CSSTransitionGroup
-  transitionAppear={false}
-  transitionEnter={true}
-  transitionEnterTimeout={300}
-  transitionLeave={true}
-  transitionLeaveTimeout={300}
-  transitionName="lucid-Banner"
+<CSSTransition
+  classNames="lucid-Banner"
+  in={true}
+  timeout={300}
+  unmountOnExit={true}
 >
   <section
     className="lucid-Banner lucid-Banner-danger lucid-Banner-small lucid-Banner-filled"
@@ -937,17 +885,15 @@ exports[`Banner [common] example testing should match snapshot(s) for 2.small 8`
       ×
     </span>
   </section>
-</CSSTransitionGroup>
+</CSSTransition>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for 2.small 9`] = `
-<CSSTransitionGroup
-  transitionAppear={false}
-  transitionEnter={true}
-  transitionEnterTimeout={300}
-  transitionLeave={true}
-  transitionLeaveTimeout={300}
-  transitionName="lucid-Banner"
+<CSSTransition
+  classNames="lucid-Banner"
+  in={true}
+  timeout={300}
+  unmountOnExit={true}
 >
   <section
     className="lucid-Banner lucid-Banner-has-close lucid-Banner-info lucid-Banner-small lucid-Banner-filled"
@@ -974,17 +920,15 @@ exports[`Banner [common] example testing should match snapshot(s) for 2.small 9`
       viewBox="0 0 16 16"
     />
   </section>
-</CSSTransitionGroup>
+</CSSTransition>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for 2.small 10`] = `
-<CSSTransitionGroup
-  transitionAppear={false}
-  transitionEnter={true}
-  transitionEnterTimeout={300}
-  transitionLeave={true}
-  transitionLeaveTimeout={300}
-  transitionName="lucid-Banner"
+<CSSTransition
+  classNames="lucid-Banner"
+  in={true}
+  timeout={300}
+  unmountOnExit={true}
 >
   <section
     className="lucid-Banner lucid-Banner-info lucid-Banner-small lucid-Banner-filled"
@@ -1001,17 +945,15 @@ exports[`Banner [common] example testing should match snapshot(s) for 2.small 10
       ×
     </span>
   </section>
-</CSSTransitionGroup>
+</CSSTransition>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for 2.small 11`] = `
-<CSSTransitionGroup
-  transitionAppear={false}
-  transitionEnter={true}
-  transitionEnterTimeout={300}
-  transitionLeave={true}
-  transitionLeaveTimeout={300}
-  transitionName="lucid-Banner"
+<CSSTransition
+  classNames="lucid-Banner"
+  in={true}
+  timeout={300}
+  unmountOnExit={true}
 >
   <section
     className="lucid-Banner lucid-Banner-has-close lucid-Banner-small"
@@ -1038,17 +980,15 @@ exports[`Banner [common] example testing should match snapshot(s) for 2.small 11
       viewBox="0 0 16 16"
     />
   </section>
-</CSSTransitionGroup>
+</CSSTransition>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for 2.small 12`] = `
-<CSSTransitionGroup
-  transitionAppear={false}
-  transitionEnter={true}
-  transitionEnterTimeout={300}
-  transitionLeave={true}
-  transitionLeaveTimeout={300}
-  transitionName="lucid-Banner"
+<CSSTransition
+  classNames="lucid-Banner"
+  in={true}
+  timeout={300}
+  unmountOnExit={true}
 >
   <section
     className="lucid-Banner lucid-Banner-has-close lucid-Banner-success lucid-Banner-small"
@@ -1075,17 +1015,15 @@ exports[`Banner [common] example testing should match snapshot(s) for 2.small 12
       viewBox="0 0 16 16"
     />
   </section>
-</CSSTransitionGroup>
+</CSSTransition>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for 2.small 13`] = `
-<CSSTransitionGroup
-  transitionAppear={false}
-  transitionEnter={true}
-  transitionEnterTimeout={300}
-  transitionLeave={true}
-  transitionLeaveTimeout={300}
-  transitionName="lucid-Banner"
+<CSSTransition
+  classNames="lucid-Banner"
+  in={true}
+  timeout={300}
+  unmountOnExit={true}
 >
   <section
     className="lucid-Banner lucid-Banner-has-close lucid-Banner-warning lucid-Banner-small"
@@ -1112,17 +1050,15 @@ exports[`Banner [common] example testing should match snapshot(s) for 2.small 13
       viewBox="0 0 16 16"
     />
   </section>
-</CSSTransitionGroup>
+</CSSTransition>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for 2.small 14`] = `
-<CSSTransitionGroup
-  transitionAppear={false}
-  transitionEnter={true}
-  transitionEnterTimeout={300}
-  transitionLeave={true}
-  transitionLeaveTimeout={300}
-  transitionName="lucid-Banner"
+<CSSTransition
+  classNames="lucid-Banner"
+  in={true}
+  timeout={300}
+  unmountOnExit={true}
 >
   <section
     className="lucid-Banner lucid-Banner-has-close lucid-Banner-danger lucid-Banner-small"
@@ -1149,17 +1085,15 @@ exports[`Banner [common] example testing should match snapshot(s) for 2.small 14
       viewBox="0 0 16 16"
     />
   </section>
-</CSSTransitionGroup>
+</CSSTransition>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for 2.small 15`] = `
-<CSSTransitionGroup
-  transitionAppear={false}
-  transitionEnter={true}
-  transitionEnterTimeout={300}
-  transitionLeave={true}
-  transitionLeaveTimeout={300}
-  transitionName="lucid-Banner"
+<CSSTransition
+  classNames="lucid-Banner"
+  in={true}
+  timeout={300}
+  unmountOnExit={true}
 >
   <section
     className="lucid-Banner lucid-Banner-has-close lucid-Banner-info lucid-Banner-small"
@@ -1186,5 +1120,5 @@ exports[`Banner [common] example testing should match snapshot(s) for 2.small 15
       viewBox="0 0 16 16"
     />
   </section>
-</CSSTransitionGroup>
+</CSSTransition>
 `;

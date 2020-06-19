@@ -9,7 +9,7 @@ import {
 	omitProps,
 	StandardProps,
 } from '../../util/component-types';
-import ReactTransitionGroup from 'react-transition-group/CSSTransitionGroup';
+import { CSSTransition } from 'react-transition-group';
 
 const cx = lucidClassNames.bind('&-OverlayWrapper');
 
@@ -67,6 +67,7 @@ const defaultProps = {
 	hasOverlay: true,
 	overlayKind: 'light' as const,
 	anchorMessage: false,
+	isVisible: false,
 };
 
 export const OverlayWrapper = (
@@ -96,23 +97,22 @@ export const OverlayWrapper = (
 			className={cx('&', className)}
 		>
 			{otherChildren}
-			<ReactTransitionGroup
-				transitionName={cx('&-message-container')}
-				transitionEnterTimeout={300}
-				transitionLeaveTimeout={300}
+			<CSSTransition
+				in={isVisible}
+				classNames={cx('&-message-container')}
+				timeout={300}
+				unmountOnExit
 			>
-				{isVisible && (
-					<div
-						className={cx('&-message-container', {
-							'&-has-overlay': hasOverlay,
-							'&-kind-light': hasOverlay && overlayKind === 'light',
-							'&-anchored-message': anchorMessage,
-						})}
-					>
-						<div {...messageElementProp} />
-					</div>
-				)}
-			</ReactTransitionGroup>
+				<div
+					className={cx('&-message-container', {
+						'&-has-overlay': hasOverlay,
+						'&-kind-light': hasOverlay && overlayKind === 'light',
+						'&-anchored-message': anchorMessage,
+					})}
+				>
+					<div {...messageElementProp} />
+				</div>
+			</CSSTransition>
 		</div>
 	);
 };
