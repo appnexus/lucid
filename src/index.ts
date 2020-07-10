@@ -90,6 +90,7 @@ import DotsIcon from './components/Icon/DotsIcon/DotsIcon';
 import Dialog from './components/Dialog/Dialog';
 import DownloadIcon from './components/Icon/DownloadIcon/DownloadIcon';
 import DragCaptureZone from './components/DragCaptureZone/DragCaptureZone';
+import DraggableLineChart from './components/DraggableLineChart/DraggableLineChart';
 // @ts-ignore: not converted yet
 import DraggableList from './components/DraggableList/DraggableList';
 import DuplicateIcon from './components/Icon/DuplicateIcon/DuplicateIcon';
@@ -267,6 +268,7 @@ export {
 	DotsIcon,
 	DownloadIcon,
 	DragCaptureZone,
+	DraggableLineChart,
 	DraggableList,
 	DropMenu,
 	DropMenuDumb,
