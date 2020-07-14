@@ -5,7 +5,8 @@
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "jsx": "react",
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "isolatedModules": true
   },
   "include": [
     "src/**/*"
