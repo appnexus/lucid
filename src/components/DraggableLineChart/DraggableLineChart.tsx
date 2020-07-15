@@ -13,7 +13,7 @@ import * as d3Scale from 'd3-scale';
 import * as chartConstants from '../../constants/charts';
 import Axis from '../Axis/Axis';
 import AxisLabel from '../AxisLabel/AxisLabel';
-import Lines from '../Lines/Lines';
+// import Lines from '../Lines/Lines';
 // import Points from '../Points/Points';
 import EmptyStateWrapper from '../EmptyStateWrapper/EmptyStateWrapper';
 import { formatDate, maxByFields, minByFields } from '../../util/chart-helpers';
@@ -198,9 +198,7 @@ export type IDraggableLineChartProps = Overwrite<
 >;
 
 export interface IDraggableLineChartState {
-	dragStart: boolean;
 	dragging: boolean;
-	dragEnd: boolean;
 	mouseY?: number | string;
 }
 
@@ -415,9 +413,7 @@ class DraggableLineChart extends React.Component<
 	};
 
 	state = {
-		dragStart: false,
 		dragging: false,
-		dragEnd: false,
 		mouseY: undefined,
 	};
 
@@ -457,7 +453,7 @@ class DraggableLineChart extends React.Component<
 			...passThroughs
 		} = this.props;
 
-		const { dragStart, dragging, dragEnd, mouseY } = this.state;
+		const { dragging, mouseY } = this.state;
 
 		const margin = {
 			...DraggableLineChart.MARGIN,
@@ -468,6 +464,14 @@ class DraggableLineChart extends React.Component<
 
 		const innerWidth = width - margin.left - margin.right;
 		const innerHeight = height - margin.top - margin.bottom;
+
+		/**
+		 * Lines and Points
+		 */
+
+		// const linesAndPoints = {
+		// 	this.append()
+		// }
 
 		/**
 		 * x axis
@@ -543,6 +547,10 @@ class DraggableLineChart extends React.Component<
 				</EmptyStateWrapper>
 			);
 		}
+	// TODO:
+		const outerChart = {
+
+		}
 		return (
 			<svg
 				{...omitProps(
@@ -610,40 +618,43 @@ class DraggableLineChart extends React.Component<
 						/>
 					</g>
 				) : null}
-				{/* y axis lines */}
-				<g transform={`translate(${margin.left}, ${margin.top})`}>
-					<Lines
-						xScale={xScale}
-						yScale={yScale}
-						xField={xAxisField}
-						yFields={yAxisFields}
-						yStackedMax={yAxisMax}
-						data={data}
-						isStacked={false}
-						colorMap={colorMap}
-						palette={palette}
-						// colorOffset={yAxisColorOffset}
-					/>
-				</g>
+
+				{/*TODO: Custom lines and points go here??*/}
+				// TODO: call function?
+
+				{/*TODO: just a note, took out Lines and Points because D3 functionality*/}
+				{/*TODO: (not sure if we can make it work nicely with these components... I think it requires changing their base props)*/}
+				{/*/!* y axis lines *!/*/}
+				{/*<g transform={`translate(${margin.left}, ${margin.top})`}>*/}
+				{/*	<Lines*/}
+				{/*		xScale={xScale}*/}
+				{/*		yScale={yScale}*/}
+				{/*		xField={xAxisField}*/}
+				{/*		yFields={yAxisFields}*/}
+				{/*		yStackedMax={yAxisMax}*/}
+				{/*		data={data}*/}
+				{/*		isStacked={false}*/}
+				{/*		colorMap={colorMap}*/}
+				{/*		palette={palette}*/}
+				{/*		// colorOffset={yAxisColorOffset}*/}
+				{/*	/>*/}
+				{/*</g>*/}
+				{/*<g transform={`translate(${margin.left}, ${margin.top})`}>*/}
+				{/*	<Points*/}
+				{/*		xScale={xScale}*/}
+				{/*		yScale={yScale}*/}
+				{/*		xField={xAxisField}*/}
+				{/*		yFields={yAxisFields}*/}
+				{/*		yStackedMax={yAxisMax}*/}
+				{/*		data={data as any}*/}
+				{/*		// isStacked={yAxisIsStacked}*/}
+				{/*		colorMap={colorMap}*/}
+				{/*		palette={palette}*/}
+				{/*		// colorOffset={yAxisColorOffset}*/}
+				{/*	/>*/}
+				{/*</g>*/}
 
 				{/*TODO: not sure if I will leverage Points comp. or use the custom circles we did in observable.*/}
-				{/*/!* y axis points *!/*/}
-				{/*{yAxisHasPoints ? (*/}
-				{/*	<g transform={`translate(${margin.left}, ${margin.top})`}>*/}
-				{/*		<Points*/}
-				{/*			xScale={xScale}*/}
-				{/*			yScale={yScale}*/}
-				{/*			xField={xAxisField}*/}
-				{/*			yFields={yAxisFields}*/}
-				{/*			yStackedMax={yAxisMax}*/}
-				{/*			data={data as any}*/}
-				{/*			isStacked={yAxisIsStacked}*/}
-				{/*			colorMap={colorMap}*/}
-				{/*			palette={palette}*/}
-				{/*			colorOffset={yAxisColorOffset}*/}
-				{/*		/>*/}
-				{/*	</g>*/}
-				{/*) : null}*/}
 			</svg>
 		);
 	}
