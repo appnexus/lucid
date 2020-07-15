@@ -1,9 +1,18 @@
 ## Unreleased
 
+## 5.8.3
+
+- #1153 [patch] Removed the props and state re-exports from the index file. This may technically break some folks but it should never have been introduced in the first place it since it isn't compatible with babel typescript compilation.
+
+https://github.com/appnexus/lucid/compare/v5.8.2...v5.8.3
+
 ## 5.8.2
 
-## 5.8.1
 - #1154 [patch] BUDE-121: Upgrated react-transition-group library. This required changes to Banner, Overlay, OverlayWrapper, SwitchLabeled
+
+https://github.com/appnexus/lucid/compare/v5.8.1...v5.8.2
+
+## 5.8.1
 
 - #1151 [patch] BUDE-420: Update Bars props
 - #1149 [patch] add bell dot and calculator icons and remove some svgs
@@ -21,6 +30,8 @@ https://github.com/appnexus/lucid/compare/v5.8.0...v5.8.1
 - #1146 [patch] extend `DropMenu` props to include div element passthroughs
 - #1147 [none] bump acorn from 5.7.3 to 5.7.4
 - #1148 [patch] expose component interfaces
+
+https://github.com/appnexus/lucid/compare/v5.7.0...v5.8.0
 
 ## 5.7.0
 
