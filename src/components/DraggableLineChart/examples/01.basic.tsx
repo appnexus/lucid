@@ -17,7 +17,7 @@ export default createClass({
 	render() {
 		return (
 			<div style={style}>
-				<DraggableLineChart data={data} width={800} />
+				<DraggableLineChart data={data} />
 			</div>
 		);
 	},

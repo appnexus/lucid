@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import {
@@ -9,14 +9,20 @@ import {
 	Overwrite,
 } from '../../util/component-types';
 import * as d3Scale from 'd3-scale';
+import * as d3Selection from 'd3-selection';
+import * as d3Drag from 'd3-drag';
+import * as d3Shape from 'd3-shape';
+import * as d3Array from 'd3-array';
+import * as d3Axis from 'd3-axis';
 // import * as d3TimeFormat from 'd3-time-format';
 import * as chartConstants from '../../constants/charts';
-import Axis from '../Axis/Axis';
-import AxisLabel from '../AxisLabel/AxisLabel';
+// import Axis from '../Axis/Axis';
+// import AxisLabel from '../AxisLabel/AxisLabel';
 // import Lines from '../Lines/Lines';
 // import Points from '../Points/Points';
 import EmptyStateWrapper from '../EmptyStateWrapper/EmptyStateWrapper';
 import { formatDate, maxByFields, minByFields } from '../../util/chart-helpers';
+import Axis from '../Axis/Axis';
 
 const cx = lucidClassNames.bind('&-DraggableLineChart');
 
@@ -200,6 +206,7 @@ export type IDraggableLineChartProps = Overwrite<
 export interface IDraggableLineChartState {
 	dragging: boolean;
 	mouseY?: number | string;
+	adjustedYAxisData: string[];
 }
 
 class DraggableLineChart extends React.Component<
@@ -207,6 +214,75 @@ class DraggableLineChart extends React.Component<
 	IDraggableLineChartState,
 	{}
 > {
+
+	xScale = d3Scale
+		.scaleTime()
+		// @ts-ignore
+		.domain([_.minBy(this.props.data, 'x').x, _.maxBy(this.props.data, 'x').x])
+		// @ts-ignore
+		.range([this.props.margin.left, this.props.width - this.props.margin.right - this.props.margin.left]);
+
+	yScale = d3Scale
+		.scaleLinear()
+		// @ts-ignore
+		.domain([_.minBy(this.props.data, 'y').y, _.maxBy(this.props.data, 'y').y])
+		// @ts-ignore
+		.range([this.props.height - this.props.margin.bottom, this.props.margin.top]);
+
+	componentDidMount() {
+		const svg = d3Selection.select('svg.sample');
+		svg.append('g').call(g => g
+			.attr("transform", `translate(${0},${this.props.margin.top})`)
+			.attr("class", "x axis")
+			.call(d3Axis.axisTop(this.xScale).ticks(7))); // xAxis
+
+		svg
+			.append("g")
+			.call(g => g
+				.attr("transform", `translate(${this.props.margin.left},${0})`)
+				.call(d3Axis.axisLeft(this.yScale).ticks(5, "s")));
+
+		console.log(this.yScale(3))
+		svg
+			.append("path")
+			.classed("lines", true)
+			.datum(this.props.data)
+			// @ts-ignore
+			.attr("stroke", "#000000").attr("fill", "none").attr("d", d3Shape.line()
+			// @ts-ignore
+			.x(d => this.xScale(d.x))
+			// @ts-ignore
+			.y(d => this.yScale(d.y))
+		)
+			.enter()
+		svg
+			.append("g")
+			.selectAll("circle")
+			.data(this.props.data)
+			.join("circle")
+			.attr("cx", d => this.xScale(d.x))
+			.attr("cy", d => this.yScale(d.y))
+			.attr("r", 5)
+			.style("fill", "#009fdb")
+			.style("stroke","white")
+			.style("stroke-width", 1)
+			.on('mouseover', (d) => {
+				// @ts-ignore
+				// d3Selection.selectAll().attr({"fill": "red", "r": "8"})
+				console.log(d);
+			});
+		// .call(drag);
+
+		// svg.append("g")
+		// 	.append("circle")
+		// 	.attr("cx", 8)
+		// 	.attr("cy", 10)
+		// 	.attr("r", 5)
+		// 	.style("fill", "#009fdb")
+		// 	.style("stroke","white")
+		// 	.style("stroke-width", 1)
+	}
+
 	static displayName = 'DraggableLineChart';
 
 	static peek = {
@@ -392,7 +468,7 @@ class DraggableLineChart extends React.Component<
 		height: 400,
 		width: 1000,
 		margin: {
-			top: 10,
+			top: 50,
 			right: 80,
 			bottom: 65,
 			left: 80,
@@ -415,11 +491,8 @@ class DraggableLineChart extends React.Component<
 	state = {
 		dragging: false,
 		mouseY: undefined,
+		adjustedYAxisData: this.props.yAxisFields,
 	};
-
-	static EmptyStateWrapper = EmptyStateWrapper;
-
-	handleDrag = () => {};
 
 	render(): React.ReactNode {
 		const {
@@ -465,92 +538,6 @@ class DraggableLineChart extends React.Component<
 		const innerWidth = width - margin.left - margin.right;
 		const innerHeight = height - margin.top - margin.bottom;
 
-		/**
-		 * Lines and Points
-		 */
-
-		// const linesAndPoints = {
-		// 	this.append()
-		// }
-
-		/**
-		 * x axis
-		 */
-		const xScale = d3Scale
-			.scaleTime()
-			.domain([xAxisMin, xAxisMax])
-			.range([0, innerWidth]);
-
-		const xFinalFormatter = xAxisFormatter
-			? xAxisFormatter
-			: xScale.tickFormat();
-
-		/**
-		 * y axis
-		 */
-		const yScale = d3Scale
-			.scaleLinear()
-			.domain([yAxisMin, yAxisMax])
-			.range([innerHeight, 0]);
-
-		const yAxisFinalFormatter = yAxisFormatter || yScale.tickFormat();
-
-		if (_.isEmpty(data) || width < 1 || height < 1 || isLoading) {
-			const emptyStateWrapper = getFirst(
-				this.props,
-				DraggableLineChart.EmptyStateWrapper
-			) || <DraggableLineChart.EmptyStateWrapper Title='You have no data.' />;
-			const emptyStateWrapperProps = _.get(emptyStateWrapper, 'props', {});
-			const emptyStateWrapperChildren = _.get(
-				emptyStateWrapperProps,
-				'children',
-				[]
-			);
-
-			return (
-				<EmptyStateWrapper
-					{...emptyStateWrapperProps}
-					isEmpty={_.isEmpty(data)}
-					isLoading={isLoading}
-				>
-					{emptyStateWrapperChildren}
-					<svg
-						{...omitProps(
-							passThroughs,
-							undefined,
-							_.keys(DraggableLineChart.propTypes)
-						)}
-						className={svgClasses}
-						width={width}
-						height={height}
-					>
-						{/* y axis */}
-						<g transform={`translate(${margin.left}, ${margin.top})`}>
-							<Axis
-								orient='left'
-								scale={yScale}
-								tickFormat={yAxisFormatter as any}
-							/>
-						</g>
-						{/* x axis */}
-						<g
-							transform={`translate(${margin.left}, ${innerHeight +
-								margin.top})`}
-						>
-							<Axis
-								orient='bottom'
-								scale={xScale}
-								tickFormat={xFinalFormatter as any}
-							/>
-						</g>
-					</svg>
-				</EmptyStateWrapper>
-			);
-		}
-	// TODO:
-		const outerChart = {
-
-		}
 		return (
 			<svg
 				{...omitProps(
@@ -558,104 +545,22 @@ class DraggableLineChart extends React.Component<
 					undefined,
 					_.keys(DraggableLineChart.propTypes)
 				)}
-				className={svgClasses}
+				className='sample'
 				width={width}
-				height={height}
-			>
-				{/* x axis */}
-				<g transform={`translate(${margin.left}, ${innerHeight + margin.top})`}>
-					<Axis
-						orient='bottom'
-						scale={xScale}
-						outerTickSize={0}
-						tickFormat={xFinalFormatter as any}
-						tickCount={xAxisTickCount}
-						ticks={xAxisTicks}
-						textOrientation={xAxisTextOrientation}
-					/>
-				</g>
-				{/* x axis title */}
-				{xAxisTitle ? (
-					<g
-						transform={`translate(${margin.left}, ${margin.top + innerHeight})`}
-					>
-						<AxisLabel
-							orient='bottom'
-							width={innerWidth}
-							height={margin.bottom}
-							label={xAxisTitle}
-							color={
-								_.isString(xAxisTitleColor)
-									? xAxisTitleColor
-									: palette[xAxisTitleColor % palette.length]
-							}
-						/>
-					</g>
-				) : null}
-				{/* y axis */}
-				<g transform={`translate(${margin.left}, ${margin.top})`}>
-					<Axis
-						orient='left'
-						scale={yScale}
-						tickFormat={yAxisFinalFormatter as any}
-						tickCount={yAxisTickCount}
-						textOrientation={yAxisTextOrientation}
-					/>
-				</g>
-				{/* y axis title */}
-				{yAxisTitle ? (
-					<g transform={`translate(0, ${margin.top})`}>
-						<AxisLabel
-							orient='left'
-							width={margin.left}
-							height={innerHeight}
-							label={yAxisTitle}
-							color={
-								_.isString(yAxisTitleColor)
-									? yAxisTitleColor
-									: palette[yAxisTitleColor % palette.length]
-							}
-						/>
-					</g>
-				) : null}
-
-				{/*TODO: Custom lines and points go here??*/}
-				// TODO: call function?
-
-				{/*TODO: just a note, took out Lines and Points because D3 functionality*/}
-				{/*TODO: (not sure if we can make it work nicely with these components... I think it requires changing their base props)*/}
-				{/*/!* y axis lines *!/*/}
-				{/*<g transform={`translate(${margin.left}, ${margin.top})`}>*/}
-				{/*	<Lines*/}
-				{/*		xScale={xScale}*/}
-				{/*		yScale={yScale}*/}
-				{/*		xField={xAxisField}*/}
-				{/*		yFields={yAxisFields}*/}
-				{/*		yStackedMax={yAxisMax}*/}
-				{/*		data={data}*/}
-				{/*		isStacked={false}*/}
-				{/*		colorMap={colorMap}*/}
-				{/*		palette={palette}*/}
-				{/*		// colorOffset={yAxisColorOffset}*/}
+				height={height} >
+				{/*/!* x axis *!/*/}
+				{/*<g transform={`translate(${margin.left}, ${innerHeight + margin.top})`}>*/}
+				{/*	<Axis*/}
+				{/*		orient='bottom'*/}
+				{/*		scale={xScale}*/}
+				{/*		outerTickSize={0}*/}
+				{/*		tickFormat={xFinalFormatter as any}*/}
+				{/*		tickCount={xAxisTickCount}*/}
+				{/*		ticks={xAxisTicks}*/}
+				{/*		textOrientation={xAxisTextOrientation}*/}
 				{/*	/>*/}
 				{/*</g>*/}
-				{/*<g transform={`translate(${margin.left}, ${margin.top})`}>*/}
-				{/*	<Points*/}
-				{/*		xScale={xScale}*/}
-				{/*		yScale={yScale}*/}
-				{/*		xField={xAxisField}*/}
-				{/*		yFields={yAxisFields}*/}
-				{/*		yStackedMax={yAxisMax}*/}
-				{/*		data={data as any}*/}
-				{/*		// isStacked={yAxisIsStacked}*/}
-				{/*		colorMap={colorMap}*/}
-				{/*		palette={palette}*/}
-				{/*		// colorOffset={yAxisColorOffset}*/}
-				{/*	/>*/}
-				{/*</g>*/}
-
-				{/*TODO: not sure if I will leverage Points comp. or use the custom circles we did in observable.*/}
-			</svg>
+	</svg>
 		);
 	}
 }
