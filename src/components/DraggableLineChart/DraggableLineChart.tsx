@@ -23,6 +23,7 @@ import * as chartConstants from '../../constants/charts';
 import EmptyStateWrapper from '../EmptyStateWrapper/EmptyStateWrapper';
 import { formatDate, maxByFields, minByFields } from '../../util/chart-helpers';
 import Axis from '../Axis/Axis';
+import { grayscale } from 'react-syntax-highlighter/dist/styles/hljs';
 
 const cx = lucidClassNames.bind('&-DraggableLineChart');
 
@@ -214,6 +215,12 @@ class DraggableLineChart extends React.Component<
 	IDraggableLineChartState,
 	{}
 > {
+	// @ts-ignore
+	customDrag = function(d, y, something){
+		// @ts-ignore
+		console.log(d3Selection.select(this));
+
+	};
 
 	xScale = d3Scale
 		.scaleTime()
@@ -242,7 +249,7 @@ class DraggableLineChart extends React.Component<
 				.attr("transform", `translate(${this.props.margin.left},${0})`)
 				.call(d3Axis.axisLeft(this.yScale).ticks(5, "s")));
 
-		console.log(this.yScale(3))
+		// console.log(this.yScale(3))
 		svg
 			.append("path")
 			.classed("lines", true)
@@ -266,11 +273,25 @@ class DraggableLineChart extends React.Component<
 			.style("fill", "#009fdb")
 			.style("stroke","white")
 			.style("stroke-width", 1)
-			.on('mouseover', (d) => {
-				// @ts-ignore
-				// d3Selection.selectAll().attr({"fill": "red", "r": "8"})
-				console.log(d);
-			});
+			// @ts-ignore
+			.call(d3Drag.drag().on('drag', this.customDrag, this.yScale
+				// function(d){
+				// const thing = d3Selection.select(this);
+				// const [min, max] = this.yScale.range();
+				// if(d3.event.y > min || d3.event.y < max) return;
+				// const activeDot = d3.select(this);
+				// activeDot.attr("cy", d3.event.y);
+				// d.y1 = Number(y.invert(d3.event.y).toFixed(2));
+
+			// }
+			));
+			// .on('mouseover', function(d) {
+			// 	// @ts-ignore
+			// 	// d3Selection.selectAll().attr({"fill": "red", "r": "8"})
+			// 	const thing = d3Selection.select(this)
+			// 	// d.cx = 0;
+			//
+			// });
 		// .call(drag);
 
 		// svg.append("g")
