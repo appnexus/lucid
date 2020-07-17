@@ -216,93 +216,116 @@ class DraggableLineChart extends React.Component<
 	{}
 > {
 	// @ts-ignore
-	customDrag = function(d, y, something){
-		// @ts-ignore
-		console.log(d3Selection.select(this));
-
-	};
+	// customDrag = function(d, y, something){
+	// 	// @ts-ignore
+	// 	console.log(d, y, this);
+	//
+	// };
 
 	xScale = d3Scale
 		.scaleTime()
 		// @ts-ignore
 		.domain([_.minBy(this.props.data, 'x').x, _.maxBy(this.props.data, 'x').x])
+		.range([
+			this.props.margin.left,
 		// @ts-ignore
-		.range([this.props.margin.left, this.props.width - this.props.margin.right - this.props.margin.left]);
+			this.props.width - this.props.margin.right - this.props.margin.left,
+		]);
 
 	yScale = d3Scale
 		.scaleLinear()
 		// @ts-ignore
 		.domain([_.minBy(this.props.data, 'y').y, _.maxBy(this.props.data, 'y').y])
+		.range([
 		// @ts-ignore
-		.range([this.props.height - this.props.margin.bottom, this.props.margin.top]);
+			this.props.height - this.props.margin.bottom,
+			this.props.margin.top,
+		]);
 
 	componentDidMount() {
+		this.dragHandler();
+	}
+
+	componentDidUpdate(prevProps: Readonly<IDraggableLineChartProps>, prevState: Readonly<IDraggableLineChartState>, snapshot?: {}) {
+		this.dragHandler();
+	}
+
+	dragHandler = () => {
 		const svg = d3Selection.select('svg.sample');
-		svg.append('g').call(g => g
-			.attr("transform", `translate(${0},${this.props.margin.top})`)
-			.attr("class", "x axis")
-			.call(d3Axis.axisTop(this.xScale).ticks(7))); // xAxis
+		svg.append('g').call(g =>
+			g
+				.attr('transform', `translate(${0},${this.props.margin.top})`)
+				.attr('class', 'x axis')
+				.call(d3Axis.axisTop(this.xScale).ticks(7))
+		); // xAxis
 
 		svg
-			.append("g")
-			.call(g => g
-				.attr("transform", `translate(${this.props.margin.left},${0})`)
-				.call(d3Axis.axisLeft(this.yScale).ticks(5, "s")));
+			.append('g')
+			.call(g =>
+				g
+					.attr('transform', `translate(${this.props.margin.left},${0})`)
+					.call(d3Axis.axisLeft(this.yScale).ticks(5, 's'))
+			);
 
 		// console.log(this.yScale(3))
 		svg
-			.append("path")
-			.classed("lines", true)
+			.append('path')
+			.classed('lines', true)
 			.datum(this.props.data)
 			// @ts-ignore
-			.attr("stroke", "#000000").attr("fill", "none").attr("d", d3Shape.line()
-			// @ts-ignore
-			.x(d => this.xScale(d.x))
-			// @ts-ignore
-			.y(d => this.yScale(d.y))
-		)
-			.enter()
+			.attr('stroke', '#000000')
+			.attr('fill', 'none')
+			.attr(
+				'd',
+				// @ts-ignore
+				d3Shape
+					.line()
+					// @ts-ignore
+					.x(d => this.xScale(d.x))
+					// @ts-ignore
+					.y(d => this.yScale(d.y))
+			)
+			.enter();
+		const yScale = this.yScale;
+		const data = this.props.data;
 		svg
-			.append("g")
-			.selectAll("circle")
+			.append('g')
+			.selectAll('circle')
 			.data(this.props.data)
-			.join("circle")
-			.attr("cx", d => this.xScale(d.x))
-			.attr("cy", d => this.yScale(d.y))
-			.attr("r", 5)
-			.style("fill", "#009fdb")
-			.style("stroke","white")
-			.style("stroke-width", 1)
+			.join('circle')
+			.attr('cx', d => this.xScale(d.x))
+			.attr('cy', d => this.yScale(d.y))
+			.attr('r', 5)
+			.style('fill', '#009fdb')
+			.style('stroke', 'white')
+			.style('stroke-width', 1)
 			// @ts-ignore
-			.call(d3Drag.drag().on('drag', this.customDrag, this.yScale
-				// function(d){
-				// const thing = d3Selection.select(this);
-				// const [min, max] = this.yScale.range();
-				// if(d3.event.y > min || d3.event.y < max) return;
-				// const activeDot = d3.select(this);
-				// activeDot.attr("cy", d3.event.y);
-				// d.y1 = Number(y.invert(d3.event.y).toFixed(2));
-
-			// }
-			));
-			// .on('mouseover', function(d) {
-			// 	// @ts-ignore
-			// 	// d3Selection.selectAll().attr({"fill": "red", "r": "8"})
-			// 	const thing = d3Selection.select(this)
-			// 	// d.cx = 0;
-			//
-			// });
-		// .call(drag);
-
-		// svg.append("g")
-		// 	.append("circle")
-		// 	.attr("cx", 8)
-		// 	.attr("cy", 10)
-		// 	.attr("r", 5)
-		// 	.style("fill", "#009fdb")
-		// 	.style("stroke","white")
-		// 	.style("stroke-width", 1)
-	}
+			.call(
+				// @ts-ignore
+				d3Drag.drag().on(
+					'drag',
+					// function(d) {(this.customDrag(d, this.yScale))},
+					function(d) {
+						const [min, max] = yScale.range();
+						if (d3Selection.event.y > min || d3Selection.event.y < max) return;
+						const activeDot = d3Selection.select(this);
+						activeDot.attr('cy', d3Selection.event.y);
+						// @ts-ignore
+						d.y = Number(yScale.invert(d3Selection.event.y).toFixed(2));
+						// @ts-ignore
+						console.log(d.x, d.y);
+						// const lines = d3Selection.selectAll(".lines");
+						// lines
+						// 	.datum(data)
+						// 	.attr("stroke", "#000000").attr("fill", "none").attr("d", d3.line()
+						// 	.x(d => x(d.x))
+						// 	.y(d => y(d.y1))
+						// )
+						// 	.enter();
+					}
+				)
+			);
+	};
 
 	static displayName = 'DraggableLineChart';
 
@@ -568,7 +591,8 @@ class DraggableLineChart extends React.Component<
 				)}
 				className='sample'
 				width={width}
-				height={height} >
+				height={height}
+			>
 				{/*/!* x axis *!/*/}
 				{/*<g transform={`translate(${margin.left}, ${innerHeight + margin.top})`}>*/}
 				{/*	<Axis*/}
@@ -581,7 +605,7 @@ class DraggableLineChart extends React.Component<
 				{/*		textOrientation={xAxisTextOrientation}*/}
 				{/*	/>*/}
 				{/*</g>*/}
-	</svg>
+			</svg>
 		);
 	}
 }
