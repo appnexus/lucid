@@ -2,12 +2,7 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import {
-	StandardProps,
-	getFirst,
-	omitProps,
-	Overwrite,
-} from '../../util/component-types';
+import { omitProps, Overwrite, StandardProps } from '../../util/component-types';
 import * as d3Scale from 'd3-scale';
 // @ts-ignore
 import * as d3Selection from 'd3-selection';
@@ -21,10 +16,7 @@ import * as d3Axis from 'd3-axis';
 import * as chartConstants from '../../constants/charts';
 // import Axis from '../Axis/Axis';
 // import AxisLabel from '../AxisLabel/AxisLabel';
-import EmptyStateWrapper from '../EmptyStateWrapper/EmptyStateWrapper';
 import { formatDate, maxByFields, minByFields } from '../../util/chart-helpers';
-import { grayscale } from 'react-syntax-highlighter/dist/styles/hljs';
-import { d3Time } from '../../index';
 
 const cx = lucidClassNames.bind('&-DraggableLineChart');
 
@@ -243,20 +235,20 @@ class DraggableLineChart extends React.Component<
 
 	renderGraph = () => {
 		const svg = d3Selection.select('svg.sample');
-		svg.append('g').call(
-			(g: any) =>
-				g
-					.attr('transform', `translate(${0},${this.props.margin.top})`)
-					.attr('class', 'x axis')
-					.call(d3Axis.axisTop(this.xScale).tickFormat(formatDate))
+		svg.append('g').call((g: any) =>
+			g
+				.attr('transform', `translate(${0},${this.props.margin.top})`)
+				.attr('class', 'x axis')
+				.call(d3Axis.axisTop(this.xScale).tickFormat(formatDate))
 		);
 
-		svg.append('g').call(
-			(g: any) =>
+		svg
+			.append('g')
+			.call((g: any) =>
 				g
 					.attr('transform', `translate(${this.props.margin.left},${0})`)
 					.call(d3Axis.axisLeft(this.yScale))
-		);
+			);
 
 		svg
 			.append('path')
@@ -316,7 +308,8 @@ class DraggableLineChart extends React.Component<
 									.y(d => yScale(d.y))
 							)
 							.enter();
-					}));
+					})
+			);
 	};
 
 	static displayName = 'DraggableLineChart';
