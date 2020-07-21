@@ -1,6 +1,5 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import { common } from '../../util/generic-tests';
 import assert from 'assert';
 
 import DraggableLineChart from './DraggableLineChart';
@@ -26,11 +25,7 @@ describe('DraggableLineChart', () => {
 				/>
 			);
 
-			assert.equal(
-				wrapper.find('svg').length,
-				1,
-				'did not render an svg'
-			);
+			assert.equal(wrapper.find('svg').length, 1, 'did not render an svg');
 		});
 	});
 });
