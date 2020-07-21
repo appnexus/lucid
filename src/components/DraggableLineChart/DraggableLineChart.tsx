@@ -12,9 +12,6 @@ import * as d3Shape from 'd3-shape';
 import * as d3Array from 'd3-array';
 // @ts-ignore
 import * as d3Axis from 'd3-axis';
-// import * as chartConstants from '../../constants/charts';
-// import Axis from '../Axis/Axis';
-// import AxisLabel from '../AxisLabel/AxisLabel';
 import { formatDate } from '../../util/chart-helpers';
 
 const {
