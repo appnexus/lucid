@@ -18,8 +18,6 @@ import * as chartConstants from '../../constants/charts';
 // import AxisLabel from '../AxisLabel/AxisLabel';
 import { formatDate } from '../../util/chart-helpers';
 
-const cx = lucidClassNames.bind('&-DraggableLineChart');
-
 const {
 	arrayOf,
 	func,
@@ -39,8 +37,6 @@ interface IDraggableLineChartMargin {
 	bottom?: number;
 	left?: number;
 }
-
-type yFormatterFunction = (y: number) => string;
 
 export interface IDraggableLineChartPropsRaw extends StandardProps {
 	/** NOTE: for now, a lot of these are just brought in straight from LineChart.
@@ -71,17 +67,6 @@ export interface IDraggableLineChartPropsRaw extends StandardProps {
 	 * (brought in from LineChart)
 	 */
 	data: Array<{ [key: string]: Date | number | undefined }>;
-
-	/** The field we should look up your x data by.
-	 * The data must be valid javascript dates.
-	 */
-	xAxisField: string;
-
-	/** An array of your y axis fields. Typically this will just be a single item
-	 * unless you need to display multiple lines.
-	 * The order of the array determines the series order in the chart. */
-
-	yAxisFields: string[];
 }
 
 export type IDraggableLineChartProps = Overwrite<
@@ -212,9 +197,6 @@ class DraggableLineChart extends React.Component<IDraggableLineChartProps, {}> {
 	};
 
 	static propTypes = {
-		className: string`
-			Appended to the component-specific class names set on the root element.
-		`,
 
 		height: number`
 			Height of chart.
@@ -384,25 +366,6 @@ class DraggableLineChart extends React.Component<IDraggableLineChartProps, {}> {
 			bottom: 65,
 			left: 80,
 		},
-		palette: chartConstants.PALETTE_7,
-		xAxisField: 'x',
-		xAxisFormatter: formatDate,
-		xAxisTickCount: null,
-		xAxisTicks: undefined,
-		xAxisTitleColor: '#000',
-		xAxisTextOrientation: 'horizontal',
-		yAxisFields: ['y'],
-		yAxisMin: 0,
-		yAxisTickCount: null,
-		yAxisTitle: null,
-		yAxisTitleColor: '#000',
-		yAxisTextOrientation: 'horizontal',
-	};
-
-	state = {
-		dragging: false,
-		mouseY: undefined,
-		adjustedYAxisData: this.props.yAxisFields,
 	};
 
 	render(): React.ReactNode {
@@ -412,15 +375,8 @@ class DraggableLineChart extends React.Component<IDraggableLineChartProps, {}> {
 			width,
 			margin: marginOriginal,
 			data,
-			xAxisField,
-			yAxisFields,
 			...passThroughs
 		} = this.props;
-
-		const margin = {
-			...DraggableLineChart.MARGIN,
-			...marginOriginal,
-		};
 
 		return (
 			<svg
