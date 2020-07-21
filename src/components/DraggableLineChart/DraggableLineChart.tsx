@@ -16,7 +16,7 @@ import * as d3Axis from 'd3-axis';
 import * as chartConstants from '../../constants/charts';
 // import Axis from '../Axis/Axis';
 // import AxisLabel from '../AxisLabel/AxisLabel';
-import { formatDate, maxByFields, minByFields } from '../../util/chart-helpers';
+import { formatDate } from '../../util/chart-helpers';
 
 const cx = lucidClassNames.bind('&-DraggableLineChart');
 
@@ -72,124 +72,16 @@ export interface IDraggableLineChartPropsRaw extends StandardProps {
 	 */
 	data: Array<{ [key: string]: Date | number | undefined }>;
 
-	/** Controls the visibility of the \`LoadingMessage\`. */
-	isLoading?: boolean;
-
-	/**
-	 * Palette takes one of the palettes exported from \`lucid.chartConstants\`.
-	 * Available palettes:
-
-		- \`PALETTE_7\` (default)
-		- \`PALETTE_30\`
-		- \`PALETTE_MONOCHROME_0_5\`
-		- \`PALETTE_MONOCHROME_1_5\`
-		- \`PALETTE_MONOCHROME_2_5\`
-		- \`PALETTE_MONOCHROME_3_5\`
-		- \`PALETTE_MONOCHROME_4_5\`
-		- \`PALETTE_MONOCHROME_5_5\`
-		- \`PALETTE_MONOCHROME_6_5\`
-	 */
-	palette: string[];
-
-	/** colorMap allows you to pass in an object if you want to map fields to
-	 * \`lucid.chartConstants\` or custom colors:
-
-	 	{
-			'imps': COLOR_0,
-			'rev': COLOR_3,
-			'clicks': '#abc123',
-		}
-	 */
-	colorMap?: object;
-
 	/** The field we should look up your x data by.
 	 * The data must be valid javascript dates.
 	 */
 	xAxisField: string;
-
-	/** The minimum date the x axis should display.
-	 * Typically this will be the smallest items from your dataset.
-	 * */
-	xAxisMin?: Date;
-
-	/** The maximum date the x axis should display.
-	 * This should almost always be the largest date from your dataset.
-	 * */
-	xAxisMax?: Date;
-
-	/** An optional function used to format your x axis data.
-	 * If you don't provide anything, we use the default D3 date variable formatter.
-	 * */
-	xAxisFormatter: (d: Date) => string;
-
-	/** There are some cases where you need to only show a "sampling" of ticks on the x axis.
-	 * This number will control that.
-	 * */
-	xAxisTickCount: number | null;
-
-	/** In some cases xAxisTickCount is not enough and you want to specify
-	 * exactly where the tick marks should appear on the x axis.
-	 * This prop takes an array of dates (currently only dates are supported for the x axis).
-	 * This prop will override the \`xAxisTickCount\` prop. */
-	xAxisTicks?: Date[];
-
-	/** Set a title for the x axis. */
-	xAxisTitle?: string | null;
-
-	/** Set a color for the x axis title.
-	 * Use the color constants exported off `lucid.chartConstants\`.
-	 * E.g.:
-	 	- \`COLOR_0\`
-		- \`COLOR_GOOD\`
-		- \`'#123abc'\` // custom color hex
-
-		\`number\` is supported only for backwards compatability.
-	 */
-	xAxisTitleColor: number | string;
-
-	/** Determines the orientation of the tick text.
-	 * This may override what the orient prop tries to determine.*/
-	xAxisTextOrientation: 'vertical' | 'horizontal' | 'diagonal';
 
 	/** An array of your y axis fields. Typically this will just be a single item
 	 * unless you need to display multiple lines.
 	 * The order of the array determines the series order in the chart. */
 
 	yAxisFields: string[];
-
-	/** The minimum number the y axis should display.
-	 * Typically this should be \`0\`. */
-	yAxisMin: number;
-
-	/** The maximum number the y axis should display.
-	 * This should almost always be the largest number from your dataset. */
-	yAxisMax?: number;
-
-	/** An optional function used to format your y axis data.
-	 * If you don't provide anything, we use the default D3 formatter. */
-	yAxisFormatter?: yFormatterFunction;
-
-	/** There are some cases where you need to only show a "sampling" of ticks on the y axis.
-	 * This number will determine the number of ticks. */
-	yAxisTickCount: number | null;
-
-	/** Set a title for the y axis. */
-	yAxisTitle: string | null;
-
-	/** Set a color for the y axis title. Use the color constants exported off
-	 *	\`lucid.chartConstants\`. E.g.:
-	 *
-	 *		- \`COLOR_0\`
-	 *		- \`COLOR_GOOD\`
-	 *		- \`'#123abc'\` // custom color hex
-	 *
-	 *		\`number\` is supported only for backwards compatability.
-	 */
-	yAxisTitleColor: number | string;
-
-	/** Determines the orientation of the tick text.
-	 * This may override what the orient prop tries to determine.  */
-	yAxisTextOrientation: 'vertical' | 'horizontal' | 'diagonal';
 }
 
 export type IDraggableLineChartProps = Overwrite<
@@ -197,17 +89,7 @@ export type IDraggableLineChartProps = Overwrite<
 	IDraggableLineChartPropsRaw
 >;
 
-export interface IDraggableLineChartState {
-	dragging: boolean;
-	mouseY?: number | string;
-	adjustedYAxisData: string[];
-}
-
-class DraggableLineChart extends React.Component<
-	IDraggableLineChartProps,
-	IDraggableLineChartState,
-	{}
-> {
+class DraggableLineChart extends React.Component<IDraggableLineChartProps, {}> {
 	xScale = d3Scale
 		.scalePoint()
 		// @ts-ignore
@@ -530,42 +412,15 @@ class DraggableLineChart extends React.Component<
 			width,
 			margin: marginOriginal,
 			data,
-			isLoading,
-			palette,
-			colorMap,
-
 			xAxisField,
-			xAxisMin = minByFields(data, xAxisField) as Date,
-			xAxisMax = maxByFields(data, xAxisField) as Date,
-			xAxisFormatter,
-			xAxisTickCount,
-			xAxisTicks,
-			xAxisTitle,
-			xAxisTitleColor,
-			xAxisTextOrientation,
-
 			yAxisFields,
-			yAxisMin,
-			yAxisMax = (maxByFields(data, yAxisFields) as unknown) as number,
-			yAxisFormatter,
-			yAxisTickCount,
-			yAxisTitle,
-			yAxisTitleColor,
-			yAxisTextOrientation,
 			...passThroughs
 		} = this.props;
-
-		const { dragging, mouseY } = this.state;
 
 		const margin = {
 			...DraggableLineChart.MARGIN,
 			...marginOriginal,
 		};
-
-		const svgClasses = cx(className, '&');
-
-		const innerWidth = width - margin.left - margin.right;
-		const innerHeight = height - margin.top - margin.bottom;
 
 		return (
 			<svg
@@ -577,20 +432,7 @@ class DraggableLineChart extends React.Component<
 				className='sample'
 				width={width}
 				height={height}
-			>
-				{/*/!* x axis *!/*/}
-				{/*<g transform={`translate(${margin.left}, ${innerHeight + margin.top})`}>*/}
-				{/*	<Axis*/}
-				{/*		orient='bottom'*/}
-				{/*		scale={xScale}*/}
-				{/*		outerTickSize={0}*/}
-				{/*		tickFormat={xFinalFormatter as any}*/}
-				{/*		tickCount={xAxisTickCount}*/}
-				{/*		ticks={xAxisTicks}*/}
-				{/*		textOrientation={xAxisTextOrientation}*/}
-				{/*	/>*/}
-				{/*</g>*/}
-			</svg>
+			/>
 		);
 	}
 }
