@@ -217,7 +217,7 @@ class DraggableLineChart extends React.Component<
 	{}
 > {
 	xScale = d3Scale
-		.scaleTime()
+		.scalePoint()
 		// @ts-ignore
 		.domain(this.props.data.map(d => d.x))
 		.range([
