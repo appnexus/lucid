@@ -1,7 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
-import { lucidClassNames } from '../../util/style-helpers';
 import { omitProps, Overwrite, StandardProps } from '../../util/component-types';
 import * as d3Scale from 'd3-scale';
 // @ts-ignore
@@ -13,7 +12,7 @@ import * as d3Shape from 'd3-shape';
 import * as d3Array from 'd3-array';
 // @ts-ignore
 import * as d3Axis from 'd3-axis';
-import * as chartConstants from '../../constants/charts';
+// import * as chartConstants from '../../constants/charts';
 // import Axis from '../Axis/Axis';
 // import AxisLabel from '../AxisLabel/AxisLabel';
 import { formatDate } from '../../util/chart-helpers';
@@ -370,11 +369,11 @@ class DraggableLineChart extends React.Component<IDraggableLineChartProps, {}> {
 
 	render(): React.ReactNode {
 		const {
-			className,
+			// className,
 			height,
 			width,
-			margin: marginOriginal,
-			data,
+			// margin: marginOriginal,
+			// data,
 			...passThroughs
 		} = this.props;
 
