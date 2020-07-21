@@ -9,12 +9,16 @@ import {
 	Overwrite,
 } from '../../util/component-types';
 import * as d3Scale from 'd3-scale';
+// @ts-ignore
 import * as d3Selection from 'd3-selection';
+// @ts-ignore
 import * as d3Drag from 'd3-drag';
 import * as d3Shape from 'd3-shape';
+// @ts-ignore
 import * as d3Array from 'd3-array';
+// @ts-ignore
 import * as d3Axis from 'd3-axis';
-// import * as d3TimeFormat from 'd3-time-format';
+import * as d3TimeFormat from 'd3-time-format';
 import * as chartConstants from '../../constants/charts';
 // import Axis from '../Axis/Axis';
 // import AxisLabel from '../AxisLabel/AxisLabel';
@@ -22,6 +26,7 @@ import EmptyStateWrapper from '../EmptyStateWrapper/EmptyStateWrapper';
 import { formatDate, maxByFields, minByFields } from '../../util/chart-helpers';
 import Axis from '../Axis/Axis';
 import { grayscale } from 'react-syntax-highlighter/dist/styles/hljs';
+import { d3Time } from '../../index';
 
 const cx = lucidClassNames.bind('&-DraggableLineChart');
 
@@ -231,9 +236,11 @@ class DraggableLineChart extends React.Component<
 		// .domain([_minBy..., _.maxBy(this.props.data, 'y').y])
 		.domain([0, d3Array.max(this.props.data, d => d.y)])
 		.nice()
+		// @ts-ignore
 		.range([
 			// @ts-ignore
 			this.props.height - this.props.margin.bottom,
+			// @ts-ignore
 			this.props.margin.top,
 		]);
 
@@ -252,18 +259,21 @@ class DraggableLineChart extends React.Component<
 	renderGraph = () => {
 		const svg = d3Selection.select('svg.sample');
 		svg.append('g').call(
+			// @ts-ignore
 			g =>
 				g
 					.attr('transform', `translate(${0},${this.props.margin.top})`)
 					.attr('class', 'x axis')
-					.call(d3Axis.axisTop(this.xScale)) //
+					// @ts-ignore
+					.call(d3Axis.axisTop(this.xScale).tickFormat(formatDate))
 		);
 
 		svg.append('g').call(
+			// @ts-ignore
 			g =>
 				g
 					.attr('transform', `translate(${this.props.margin.left},${0})`)
-					.call(d3Axis.axisLeft(this.yScale)) //.ticks(5, 's'))
+					.call(d3Axis.axisLeft(this.yScale))
 		);
 
 		svg
@@ -286,13 +296,16 @@ class DraggableLineChart extends React.Component<
 			.enter();
 		const yScale = this.yScale;
 		const xScale = this.xScale;
+		const height = this.props.height;
 		// const data = this.props.data;
 		svg
 			.append('g')
 			.selectAll('circle')
 			.data(this.props.data)
 			.join('circle')
+			// @ts-ignore
 			.attr('cx', d => this.xScale(d.x))
+			// @ts-ignore
 			.attr('cy', d => this.yScale(d.y))
 			.attr('r', 5)
 			.style('fill', '#009fdb')
@@ -303,18 +316,23 @@ class DraggableLineChart extends React.Component<
 				// @ts-ignore
 				d3Drag
 					.drag()
+					// @ts-ignore
 					.on('drag', function(d) {
 						const [max, min] = yScale.range();
-						const bbox = (this as SVGSVGElement).getBBox();
-						const adjMouseY = d3Selection.event.y + bbox.y;
+						// const bbox = (this as SVGSVGElement).getBBox();
+						// const adjMouseY = bbox.y + d3Selection.event.y;
+						// const adjMouseY = bbox.y;
+						const adjMouseY = d3Selection.event.y;
 						if (adjMouseY > max || adjMouseY < min) return;
+						// @ts-ignore
 						const activeDot = d3Selection.select(this);
 						// @ts-ignore
-						console.log(adjMouseY, d3Selection.event.y);
 						activeDot.attr('cy', adjMouseY);
-						// @ts-ignore
 						// d.y = Number(d3Selection.event.dy);
+						console.log(Number(yScale.invert(adjMouseY)));
+						// @ts-ignore
 						d.y = Number(yScale.invert(adjMouseY));
+						// @ts-ignore
 						// @ts-ignore
 						const lines = d3Selection.selectAll('.lines');
 						lines
@@ -333,9 +351,10 @@ class DraggableLineChart extends React.Component<
 							)
 							.enter();
 					})
-					.on('start', d => console.log('start', d))
-					.on('end', d => console.log('end', d))
-			);
+					// @ts-ignore
+					.on('start', d => console.log(d3Selection.event))
+					// @ts-ignore
+					.on('end', d => console.log(d3Selection.event)));
 	};
 
 	static displayName = 'DraggableLineChart';
