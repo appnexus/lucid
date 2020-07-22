@@ -1,5 +1,8 @@
 ## Unreleased
-- [patch] We have added an on rest callback for Collapsible and ExpanderPanel
+
+## 5.8.4
+- #1158 [patch] We have added an on rest callback for Collapsible and ExpanderPanel
+https://github.com/appnexus/lucid/compare/v5.8.3...v5.8.4
 
 ## 5.8.3
 
