@@ -146,7 +146,46 @@ class DraggableLineChart extends React.Component<IDraggableLineChartProps, {}> {
 						// @ts-ignore
 						const activeDot = d3Selection.select(this);
 						const adjMouseY = initialPosition + d3Selection.event.y;
-						if (adjMouseY > max || adjMouseY < min) return;
+						if (adjMouseY > max){
+							d.y = Number(yScale.invert(max));
+							activeDot.attr('cy', max);
+							const lines = d3Selection.selectAll('.lines');
+							lines
+								.attr('stroke', '#000000')
+								.attr('fill', 'none')
+								.attr(
+									'd',
+									// @ts-ignore
+									d3Shape
+										.line()
+										// @ts-ignore
+										.x(d => xScale(d.x))
+										// @ts-ignore
+										.y(d => yScale(d.y))
+								)
+								.enter();
+							return;
+						}
+						if (adjMouseY < min){
+							d.y = Number(yScale.invert(min));
+							activeDot.attr('cy', min);
+							const lines = d3Selection.selectAll('.lines');
+							lines
+								.attr('stroke', '#000000')
+								.attr('fill', 'none')
+								.attr(
+									'd',
+									// @ts-ignore
+									d3Shape
+										.line()
+										// @ts-ignore
+										.x(d => xScale(d.x))
+										// @ts-ignore
+										.y(d => yScale(d.y))
+								)
+								.enter();
+							return;
+						}
 						d.y = Number(yScale.invert(adjMouseY));
 						activeDot.attr('cy', adjMouseY);
 						const lines = d3Selection.selectAll('.lines');
