@@ -16,15 +16,9 @@ import { formatDate } from '../../util/chart-helpers';
 
 const {
 	arrayOf,
-	func,
-	instanceOf,
 	number,
 	object,
 	shape,
-	string,
-	bool,
-	oneOfType,
-	oneOf,
 } = PropTypes;
 
 interface IDraggableLineChartMargin {
