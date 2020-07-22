@@ -3,14 +3,10 @@ import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import { omitProps, Overwrite, StandardProps } from '../../util/component-types';
 import * as d3Scale from 'd3-scale';
-// @ts-ignore
 import * as d3Selection from 'd3-selection';
-// @ts-ignore
 import * as d3Drag from 'd3-drag';
 import * as d3Shape from 'd3-shape';
-// @ts-ignore
 import * as d3Array from 'd3-array';
-// @ts-ignore
 import * as d3Axis from 'd3-axis';
 import { formatDate } from '../../util/chart-helpers';
 
@@ -102,6 +98,7 @@ class DraggableLineChart extends React.Component<IDraggableLineChartProps, {}> {
 			g
 				.attr('transform', `translate(${0},${this.props.margin.top})`)
 				.attr('class', 'x axis')
+				// @ts-ignore
 				.call(d3Axis.axisTop(this.xScale).tickFormat(formatDate))
 		);
 
@@ -121,6 +118,7 @@ class DraggableLineChart extends React.Component<IDraggableLineChartProps, {}> {
 			.attr('fill', 'none')
 			.attr(
 				'd',
+				// @ts-ignore
 				d3Shape
 					.line()
 					.x((d: any) => this.xScale(d.x))
@@ -142,6 +140,7 @@ class DraggableLineChart extends React.Component<IDraggableLineChartProps, {}> {
 			.style('stroke', 'white')
 			.style('stroke-width', 1)
 			.call(
+				// @ts-ignore
 				d3Drag
 					.drag()
 					.on('start', function() {
@@ -163,6 +162,7 @@ class DraggableLineChart extends React.Component<IDraggableLineChartProps, {}> {
 							.attr('fill', 'none')
 							.attr(
 								'd',
+								// @ts-ignore
 								d3Shape
 									.line()
 									// @ts-ignore
