@@ -1,4 +1,5 @@
 ## Unreleased
+- [patch] We have added an on rest callback for Collapsible and ExpanderPanel
 
 ## 5.8.3
 

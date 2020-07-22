@@ -48,6 +48,9 @@ export interface IExpanderPanelProps extends StandardProps {
 	/** Controls the presence of padding on the inner content. */
 	hasPadding: boolean;
 
+	onRest?: () => void;
+	onRestOnlyOnExpand?: boolean;
+
 	/** Called when the user clicks on the component's header. */
 	onToggle: (
 		isExpanded: boolean,
@@ -103,6 +106,9 @@ class ExpanderPanel extends React.Component<
 			Passed through to the root element.
 		`,
 
+		onRest: func`Optional. The callback that fires when the animation comes to a rest.`,
+		onRestOnlyOnExpand: bool`Only run onRest callback when rest state is open. Defaults to true.`,
+
 		Header: any`
 			prop alternative to Header child component passed through to the
 			underlying ExpanderPanel
@@ -123,6 +129,7 @@ class ExpanderPanel extends React.Component<
 		onToggle: _.noop,
 		hasPadding: true,
 		isDisabled: false,
+		onRestOnlyOnExpand: true,
 	};
 
 	handleToggle = (event: React.MouseEvent) => {
@@ -141,6 +148,8 @@ class ExpanderPanel extends React.Component<
 			isExpanded,
 			isDisabled,
 			hasPadding,
+			onRest,
+			onRestOnlyOnExpand,
 			style,
 			...passThroughs
 		} = this.props;
@@ -149,6 +158,8 @@ class ExpanderPanel extends React.Component<
 			getFirst(this.props, ExpanderPanel.Header),
 			'props'
 		);
+
+		const cleanedOnRest = (!onRestOnlyOnExpand || isExpanded) ? onRest : undefined
 
 		return (
 			<Panel
@@ -182,6 +193,7 @@ class ExpanderPanel extends React.Component<
 					className={cx('&-content', {
 						'&-content-is-expanded': isExpanded,
 					})}
+					onRest={cleanedOnRest}
 				>
 					<div className={cx('&-content-inner')}>{children}</div>
 				</Collapsible>

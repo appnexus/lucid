@@ -8,7 +8,7 @@ import { omitProps, StandardProps } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-Collapsible');
 
-const { any, bool, node, number, string } = PropTypes;
+const { any, bool, node, number, string, func } = PropTypes;
 
 // TODO: Is there a better way to add type checks for passThroughs in this case
 // where the underling element could be anything vs just extending
@@ -32,6 +32,9 @@ export interface ICollapsibleProps
 
 	/** Pass in a custom root element type. */
 	rootType: any;
+
+	/** Pass in a callback to be called after ExpanderPanel has came to a rest. */
+	onRest?: () => void;
 }
 
 export interface ICollapsibleState {
@@ -78,6 +81,8 @@ class Collapsible extends React.Component<
 			If \`isMountControlled\` is true, this value sets is the minimum height
 			the container needs to reach to not render any children.
 		`,
+
+		onRest: func`Optional. The callback that fires when the animation comes to a rest.`,
 
 		rootType: any`
 			Pass in a custom root element type.
@@ -150,6 +155,7 @@ class Collapsible extends React.Component<
 			isMountControlled,
 			mountControlThreshold,
 			rootType,
+			onRest,
 			...passThroughs
 		} = this.props;
 
@@ -166,6 +172,7 @@ class Collapsible extends React.Component<
 						  }
 						: { height: isExpanded ? maxHeight : 0 }
 				}
+				onRest={onRest}
 			>
 				{(tween): JSX.Element =>
 					React.createElement(
