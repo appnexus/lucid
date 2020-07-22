@@ -1,7 +1,11 @@
 import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
-import { omitProps, Overwrite, StandardProps } from '../../util/component-types';
+import {
+	omitProps,
+	Overwrite,
+	StandardProps,
+} from '../../util/component-types';
 import * as d3Scale from 'd3-scale';
 import * as d3Selection from 'd3-selection';
 import * as d3Drag from 'd3-drag';
@@ -31,11 +35,6 @@ interface IDraggableLineChartMargin {
 }
 
 export interface IDraggableLineChartPropsRaw extends StandardProps {
-	/** NOTE: for now, a lot of these are just brought in straight from LineChart.
-	 */
-	/** Child components of DraggableLineChart */
-	EmptyStateWrapper?: React.ReactNode;
-
 	/** Height of the chart. */
 	height: number;
 
@@ -193,7 +192,6 @@ class DraggableLineChart extends React.Component<IDraggableLineChartProps, {}> {
 	};
 
 	static propTypes = {
-
 		height: number`
 			Height of chart.
 		`,
@@ -223,134 +221,6 @@ class DraggableLineChart extends React.Component<IDraggableLineChartProps, {}> {
 					{ x: new Date('2015-01-05') , y: 5 } ,
 				]
 		`,
-
-		isLoading: bool`
-			Controls visibility of \`LoadingMessage\`
-		`,
-
-		palette: arrayOf(string)`
-			Takes one of the palettes exported from \`lucid.chartConstants\`.
-			Available palettes:
-	
-			- \`PALETTE_7\` (default)
-			- \`PALETTE_30\`
-			- \`PALETTE_MONOCHROME_0_5\`
-			- \`PALETTE_MONOCHROME_1_5\`
-			- \`PALETTE_MONOCHROME_2_5\`
-			- \`PALETTE_MONOCHROME_3_5\`
-			- \`PALETTE_MONOCHROME_4_5\`
-			- \`PALETTE_MONOCHROME_5_5\`
-			- \`PALETTE_MONOCHROME_6_5\`
-		`,
-
-		colorMap: object`
-			You can pass in an object if you want to map fields to
-			\`lucid.chartConstants\` or custom colors:
-	
-				{
-					'imps': COLOR_0,
-					'rev': COLOR_3,
-					'clicks': '#abc123',
-				}
-		`,
-
-		xAxisField: string`
-			The field we should look up your x data by. The data must be valid
-			javascript dates.
-		`,
-
-		xAxisMin: instanceOf(Date)`
-			The minimum date the x axis should display. Typically this will be the
-			smallest items from your dataset.
-		`,
-
-		xAxisMax: instanceOf(Date)`
-			The maximum date the x axis should display. This should almost always be
-			the largest date from your dataset.
-		`,
-
-		xAxisFormatter: func`
-			An optional function used to format your x axis data. If you don't
-			provide anything, we use the default D3 date variable formatter.
-		`,
-
-		xAxisTickCount: number`
-			There are some cases where you need to only show a "sampling" of ticks on
-			the x axis. This number will control that.
-		`,
-
-		xAxisTicks: arrayOf(instanceOf(Date))`
-			In some cases xAxisTickCount is not enough and you want to specify
-			exactly where the tick marks should appear on the x axis. This prop takes
-			an array of dates (currently only dates are supported for the x axis).
-			This prop will override the \`xAxisTickCount\` prop.
-		`,
-
-		xAxisTitle: string`
-			Set a title for the x axis.
-		`,
-
-		xAxisTitleColor: oneOfType([number, string])`
-			Set a color for the x axis title. Use the color constants exported off
-			\`lucid.chartConstants\`. E.g.:
-	
-			- \`COLOR_0\`
-			- \`COLOR_GOOD\`
-			- \`'#123abc'\` // custom color hex
-	
-			\`number\` is supported only for backwards compatability.
-		`,
-
-		xAxisTextOrientation: oneOf(['vertical', 'horizontal', 'diagonal'])`
-			Determines the orientation of the tick text. This may override what the orient prop
-			tries to determine.
-		`,
-
-		yAxisFields: arrayOf(string)`
-			An array of your y axis fields. Typically this will just be a single item
-			unless you need to display multiple lines. The order of the array
-			determines the series order in the chart.
-		`,
-
-		yAxisMin: number`
-			The minimum number the y axis should display. Typically this should be
-			\`0\`.
-		`,
-
-		yAxisMax: number`
-			The maximum number the y axis should display. This should almost always
-			be the largest number from your dataset.
-		`,
-
-		yAxisFormatter: func`
-			An optional function used to format your y axis data. If you don't
-			provide anything, we use the default D3 formatter.
-		`,
-
-		yAxisTickCount: number`
-			There are some cases where you need to only show a "sampling" of ticks on
-			the y axis. This number will control that.
-		`,
-
-		yAxisTitle: string`
-			Set a title for the y axis.
-		`,
-
-		yAxisTitleColor: oneOfType([number, string])`
-			Set a color for the y axis title. Use the color constants exported off
-			\`lucid.chartConstants\`. E.g.:
-	
-			- \`COLOR_0\`
-			- \`COLOR_GOOD\`
-			- \`'#123abc'\` // custom color hex
-	
-			\`number\` is supported only for backwards compatability.
-		`,
-
-		yAxisTextOrientation: oneOf(['vertical', 'horizontal', 'diagonal'])`
-			Determines the orientation of the tick text. This may override what the orient prop
-			tries to determine.
-		`,
 	};
 
 	static defaultProps = {
@@ -366,11 +236,8 @@ class DraggableLineChart extends React.Component<IDraggableLineChartProps, {}> {
 
 	render(): React.ReactNode {
 		const {
-			// className,
 			height,
 			width,
-			// margin: marginOriginal,
-			// data,
 			...passThroughs
 		} = this.props;
 
