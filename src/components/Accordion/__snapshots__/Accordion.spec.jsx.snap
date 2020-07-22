@@ -11,6 +11,7 @@ exports[`Accordion [common] example testing should match snapshot(s) for 1.basic
     isDisabled={false}
     isExpanded={false}
     key="0"
+    onRestOnlyOnExpand={true}
     onToggle={[Function]}
   >
     Peter Venkman, Ph.D. is a fictional character from the Ghostbusters franchise. He appears in the films Ghostbusters and Ghostbusters II and in the animated television series The Real Ghostbusters. In both live action films, he was portrayed by Bill Murray, and was voiced in the animated series first by Lorenzo Music and then by Dave Coulier. He is a parapsychologist and the leader of the Ghostbusters.
@@ -22,6 +23,7 @@ exports[`Accordion [common] example testing should match snapshot(s) for 1.basic
     isDisabled={false}
     isExpanded={false}
     key="1"
+    onRestOnlyOnExpand={true}
     onToggle={[Function]}
   >
     Raymond Ray Stantz, Ph.D. is a fictional character from the Ghostbusters franchise. He appears in the films Ghostbusters, Ghostbusters II, Casper, and the animated television series The Real Ghostbusters. He was portrayed by Dan Aykroyd in both live action films, and voiced by Frank Welker in the animated series. He is a member of the Ghostbusters and one of the three doctors of parapsychology, along with Dr. Peter Venkman and Dr. Egon Spengler.
@@ -33,6 +35,7 @@ exports[`Accordion [common] example testing should match snapshot(s) for 1.basic
     isDisabled={false}
     isExpanded={false}
     key="2"
+    onRestOnlyOnExpand={true}
     onToggle={[Function]}
   >
     Egon Spengler, Ph.D. is a fictional character from the Ghostbusters franchise. He appears in the films Ghostbusters and Ghostbusters II, in the animated television series The Real Ghostbusters, and later in Extreme Ghostbusters. Spengler was portrayed by Harold Ramis in the films and voiced by him in Ghostbusters: The Video Game, and voiced by Maurice LaMarche in the cartoon series. He is a member of the Ghostbusters and one of the three doctors of parapsychology, along with Dr. Peter Venkman and Dr. Raymond Stantz.
@@ -51,6 +54,7 @@ exports[`Accordion [common] example testing should match snapshot(s) for 2.initi
     isDisabled={false}
     isExpanded={false}
     key="0"
+    onRestOnlyOnExpand={true}
     onToggle={[Function]}
   >
     Peter Venkman, Ph.D. is a fictional character from the Ghostbusters franchise. He appears in the films Ghostbusters and Ghostbusters II and in the animated television series The Real Ghostbusters. In both live action films, he was portrayed by Bill Murray, and was voiced in the animated series first by Lorenzo Music and then by Dave Coulier. He is a parapsychologist and the leader of the Ghostbusters.
@@ -62,6 +66,7 @@ exports[`Accordion [common] example testing should match snapshot(s) for 2.initi
     isDisabled={false}
     isExpanded={false}
     key="1"
+    onRestOnlyOnExpand={true}
     onToggle={[Function]}
   >
     Raymond Ray Stantz, Ph.D. is a fictional character from the Ghostbusters franchise. He appears in the films Ghostbusters, Ghostbusters II, Casper, and the animated television series The Real Ghostbusters. He was portrayed by Dan Aykroyd in both live action films, and voiced by Frank Welker in the animated series. He is a member of the Ghostbusters and one of the three doctors of parapsychology, along with Dr. Peter Venkman and Dr. Egon Spengler.
@@ -73,6 +78,7 @@ exports[`Accordion [common] example testing should match snapshot(s) for 2.initi
     isDisabled={false}
     isExpanded={true}
     key="2"
+    onRestOnlyOnExpand={true}
     onToggle={[Function]}
   >
     Egon Spengler, Ph.D. is a fictional character from the Ghostbusters franchise. He appears in the films Ghostbusters and Ghostbusters II, in the animated television series The Real Ghostbusters, and later in Extreme Ghostbusters. Spengler was portrayed by Harold Ramis in the films and voiced by him in Ghostbusters: The Video Game, and voiced by Maurice LaMarche in the cartoon series. He is a member of the Ghostbusters and one of the three doctors of parapsychology, along with Dr. Peter Venkman and Dr. Raymond Stantz.
@@ -91,6 +97,7 @@ exports[`Accordion [common] example testing should match snapshot(s) for 3.fixed
     isDisabled={false}
     isExpanded={false}
     key="0"
+    onRestOnlyOnExpand={true}
     onToggle={[Function]}
   >
     Peter Venkman, Ph.D. is a fictional character from the Ghostbusters franchise. He appears in the films Ghostbusters and Ghostbusters II and in the animated television series The Real Ghostbusters. In both live action films, he was portrayed by Bill Murray, and was voiced in the animated series first by Lorenzo Music and then by Dave Coulier. He is a parapsychologist and the leader of the Ghostbusters.
@@ -102,6 +109,7 @@ exports[`Accordion [common] example testing should match snapshot(s) for 3.fixed
     isDisabled={false}
     isExpanded={true}
     key="1"
+    onRestOnlyOnExpand={true}
     onToggle={[Function]}
   >
     Raymond Ray Stantz, Ph.D. is a fictional character from the Ghostbusters franchise. He appears in the films Ghostbusters, Ghostbusters II, Casper, and the animated television series The Real Ghostbusters. He was portrayed by Dan Aykroyd in both live action films, and voiced by Frank Welker in the animated series. He is a member of the Ghostbusters and one of the three doctors of parapsychology, along with Dr. Peter Venkman and Dr. Egon Spengler.
@@ -113,6 +121,7 @@ exports[`Accordion [common] example testing should match snapshot(s) for 3.fixed
     isDisabled={false}
     isExpanded={false}
     key="2"
+    onRestOnlyOnExpand={true}
     onToggle={[Function]}
   >
     Egon Spengler, Ph.D. is a fictional character from the Ghostbusters franchise. He appears in the films Ghostbusters and Ghostbusters II, in the animated television series The Real Ghostbusters, and later in Extreme Ghostbusters. Spengler was portrayed by Harold Ramis in the films and voiced by him in Ghostbusters: The Video Game, and voiced by Maurice LaMarche in the cartoon series. He is a member of the Ghostbusters and one of the three doctors of parapsychology, along with Dr. Peter Venkman and Dr. Raymond Stantz.
@@ -131,6 +140,7 @@ exports[`Accordion [common] example testing should match snapshot(s) for 4.disab
     isDisabled={false}
     isExpanded={false}
     key="0"
+    onRestOnlyOnExpand={true}
     onToggle={[Function]}
   >
     Peter Venkman, Ph.D. is a fictional character from the Ghostbusters franchise. He appears in the films Ghostbusters and Ghostbusters II and in the animated television series The Real Ghostbusters. In both live action films, he was portrayed by Bill Murray, and was voiced in the animated series first by Lorenzo Music and then by Dave Coulier. He is a parapsychologist and the leader of the Ghostbusters.
@@ -142,6 +152,7 @@ exports[`Accordion [common] example testing should match snapshot(s) for 4.disab
     isDisabled={true}
     isExpanded={false}
     key="1"
+    onRestOnlyOnExpand={true}
     onToggle={[Function]}
   >
     Raymond Ray Stantz, Ph.D. is a fictional character from the Ghostbusters franchise. He appears in the films Ghostbusters, Ghostbusters II, Casper, and the animated television series The Real Ghostbusters. He was portrayed by Dan Aykroyd in both live action films, and voiced by Frank Welker in the animated series. He is a member of the Ghostbusters and one of the three doctors of parapsychology, along with Dr. Peter Venkman and Dr. Egon Spengler.
@@ -153,6 +164,7 @@ exports[`Accordion [common] example testing should match snapshot(s) for 4.disab
     isDisabled={false}
     isExpanded={false}
     key="2"
+    onRestOnlyOnExpand={true}
     onToggle={[Function]}
   >
     Egon Spengler, Ph.D. is a fictional character from the Ghostbusters franchise. He appears in the films Ghostbusters and Ghostbusters II, in the animated television series The Real Ghostbusters, and later in Extreme Ghostbusters. Spengler was portrayed by Harold Ramis in the films and voiced by him in Ghostbusters: The Video Game, and voiced by Maurice LaMarche in the cartoon series. He is a member of the Ghostbusters and one of the three doctors of parapsychology, along with Dr. Peter Venkman and Dr. Raymond Stantz.
@@ -170,6 +182,7 @@ exports[`Accordion [common] example testing should match snapshot(s) for 5.using
     isDisabled={false}
     isExpanded={false}
     key="0"
+    onRestOnlyOnExpand={true}
     onToggle={[Function]}
   >
     <ExpanderPanel.Header>
@@ -183,6 +196,7 @@ exports[`Accordion [common] example testing should match snapshot(s) for 5.using
     isDisabled={true}
     isExpanded={false}
     key="1"
+    onRestOnlyOnExpand={true}
     onToggle={[Function]}
   >
     <ExpanderPanel.Header>
@@ -196,6 +210,7 @@ exports[`Accordion [common] example testing should match snapshot(s) for 5.using
     isDisabled={false}
     isExpanded={false}
     key="2"
+    onRestOnlyOnExpand={true}
     onToggle={[Function]}
   >
     <ExpanderPanel.Header>
