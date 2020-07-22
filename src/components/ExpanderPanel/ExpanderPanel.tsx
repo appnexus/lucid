@@ -49,7 +49,7 @@ export interface IExpanderPanelProps extends StandardProps {
 	hasPadding: boolean;
 
 	onRest?: () => void;
-	onRestOnlyOnExpand?: boolean;
+	onRestAppliedOnCollapse?: boolean;
 
 	/** Called when the user clicks on the component's header. */
 	onToggle: (
@@ -107,7 +107,7 @@ class ExpanderPanel extends React.Component<
 		`,
 
 		onRest: func`Optional. The callback that fires when the animation comes to a rest.`,
-		onRestOnlyOnExpand: bool`Only run onRest callback when rest state is open. Defaults to true.`,
+		onRestAppliedOnCollapse: bool`Applies on onRest callback when rest state is closed.`,
 
 		Header: any`
 			prop alternative to Header child component passed through to the
@@ -129,7 +129,6 @@ class ExpanderPanel extends React.Component<
 		onToggle: _.noop,
 		hasPadding: true,
 		isDisabled: false,
-		onRestOnlyOnExpand: true,
 	};
 
 	handleToggle = (event: React.MouseEvent) => {
@@ -149,7 +148,7 @@ class ExpanderPanel extends React.Component<
 			isDisabled,
 			hasPadding,
 			onRest,
-			onRestOnlyOnExpand,
+			onRestAppliedOnCollapse,
 			style,
 			...passThroughs
 		} = this.props;
@@ -159,7 +158,7 @@ class ExpanderPanel extends React.Component<
 			'props'
 		);
 
-		const cleanedOnRest = (!onRestOnlyOnExpand || isExpanded) ? onRest : undefined
+		const cleanedOnRest = (onRestAppliedOnCollapse || isExpanded) ? onRest : undefined
 
 		return (
 			<Panel
