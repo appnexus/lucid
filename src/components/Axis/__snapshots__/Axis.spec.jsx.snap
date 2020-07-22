@@ -392,7 +392,7 @@ exports[`Axis [common] example testing should match snapshot(s) for 4.left 1`] =
   </g>
   <g
     key="30000"
-    transform="translate(0, 126)"
+    transform="translate(0, 125.99999999999999)"
   >
     <line
       className="lucid-Axis-tick"
@@ -488,7 +488,7 @@ exports[`Axis [common] example testing should match snapshot(s) for 4.left 1`] =
   </g>
   <g
     key="70000"
-    transform="translate(0, 54.000000000000014)"
+    transform="translate(0, 54.00000000000001)"
   >
     <line
       className="lucid-Axis-tick"
@@ -512,7 +512,7 @@ exports[`Axis [common] example testing should match snapshot(s) for 4.left 1`] =
   </g>
   <g
     key="80000"
-    transform="translate(0, 36)"
+    transform="translate(0, 35.99999999999999)"
   >
     <line
       className="lucid-Axis-tick"
@@ -536,7 +536,7 @@ exports[`Axis [common] example testing should match snapshot(s) for 4.left 1`] =
   </g>
   <g
     key="90000"
-    transform="translate(0, 18)"
+    transform="translate(0, 17.999999999999996)"
   >
     <line
       className="lucid-Axis-tick"
@@ -667,7 +667,7 @@ exports[`Axis [common] example testing should match snapshot(s) for 5.right 1`] 
   </g>
   <g
     key="15"
-    transform="translate(0, 126)"
+    transform="translate(0, 125.99999999999999)"
   >
     <line
       className="lucid-Axis-tick"
@@ -763,7 +763,7 @@ exports[`Axis [common] example testing should match snapshot(s) for 5.right 1`] 
   </g>
   <g
     key="35"
-    transform="translate(0, 54.000000000000014)"
+    transform="translate(0, 54.00000000000001)"
   >
     <line
       className="lucid-Axis-tick"
@@ -787,7 +787,7 @@ exports[`Axis [common] example testing should match snapshot(s) for 5.right 1`] 
   </g>
   <g
     key="40"
-    transform="translate(0, 36)"
+    transform="translate(0, 35.99999999999999)"
   >
     <line
       className="lucid-Axis-tick"
@@ -811,7 +811,7 @@ exports[`Axis [common] example testing should match snapshot(s) for 5.right 1`] 
   </g>
   <g
     key="45"
-    transform="translate(0, 18)"
+    transform="translate(0, 17.999999999999996)"
   >
     <line
       className="lucid-Axis-tick"
@@ -1824,7 +1824,7 @@ exports[`Axis [common] example testing should match snapshot(s) for 8.diagonal-t
   </g>
   <g
     key="80000"
-    transform="translate(0, 30)"
+    transform="translate(0, 29.999999999999993)"
   >
     <line
       className="lucid-Axis-tick"
@@ -1979,7 +1979,7 @@ exports[`Axis [common] example testing should match snapshot(s) for 8.diagonal-t
   </g>
   <g
     key="80000"
-    transform="translate(0, 30)"
+    transform="translate(0, 29.999999999999993)"
   >
     <line
       className="lucid-Axis-tick"
