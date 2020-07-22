@@ -47,3 +47,16 @@ exports[`Collapsible [common] example testing should match snapshot(s) for 4.ren
   <Component />
 </Motion>
 `;
+
+exports[`Collapsible [common] example testing should match snapshot(s) for 5.toggle-with-onRest-callback 1`] = `
+<Motion
+  onRest={[Function]}
+  style={
+    Object {
+      "height": 0,
+    }
+  }
+>
+  <Component />
+</Motion>
+`;
