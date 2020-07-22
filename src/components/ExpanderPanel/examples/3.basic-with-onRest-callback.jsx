@@ -11,7 +11,7 @@ export default createClass({
 	render() {
 		return (
 			<div>
-				<ExpanderPanel onRest={onRest} onRestOnlyOnExpand >
+				<ExpanderPanel onRest={onRest} onRestOnExpand >
 					<ExpanderPanel.Header>Show More</ExpanderPanel.Header>
 					{_.times(100, n => (
 						<div key={n}>{_.repeat('-', 75 * Math.sin(n / 5))}</div>
