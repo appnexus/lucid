@@ -516,7 +516,11 @@ class SearchableSingleSelect extends React.Component<
 
 			return (
 				<div
-					{...omitProps(passThroughs, undefined)}
+					{...omitProps(
+						passThroughs,
+						undefined,
+						_.keys(SearchableSingleSelect.propTypes)
+					)}
 					className={cx('&', className)}
 				>
 					<Selection
