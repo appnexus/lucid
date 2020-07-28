@@ -49,7 +49,7 @@ export default createClass({
 		});
 		this.setState({ data: temp });
 	},
-	onChangeHandler(item:any, value:any) {
+	onChangeHandler(item: any, value: any) {
 		const temp = _.map(this.state.data, dataPoint => {
 			if (dataPoint.x === item.x) {
 				dataPoint.y = Number(value);
@@ -66,7 +66,7 @@ export default createClass({
 					{data.map((d: any, i: number) => (
 						<TextField
 							value={d.y}
-							onChange={this.onChangeHandler.bind(this.onChangeHandler, d )}
+							onChange={this.onChangeHandler.bind(this.onChangeHandler, d)}
 							width={'30px'}
 							key={`${i}-text`}
 							style={{ width: '32px' }}

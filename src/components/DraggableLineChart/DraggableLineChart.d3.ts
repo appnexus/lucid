@@ -18,7 +18,7 @@ interface IDraggableLineChartParams {
 	yScale: any;
 	xScale: any;
 	data: Array<{ [key: string]: Date | number | undefined }>;
-	onDragEnd: (d:any) => (any);
+	onDragEnd: (d: any) => any;
 }
 
 class DraggableLineChartD3 {
@@ -41,7 +41,7 @@ class DraggableLineChartD3 {
 		this.selection = selection;
 		this.params = params;
 	}
-	renderXAxis = (cx:any) => {
+	renderXAxis = (cx: any) => {
 		this.selection.append('g').call((xAxis: any) => {
 			const { margin, xScale, height } = this.params;
 			xAxis
@@ -56,8 +56,8 @@ class DraggableLineChartD3 {
 						.tickSize(margin.top + margin.bottom - height)
 				);
 		});
-	}
-	renderYAxis = (cx:any) => {
+	};
+	renderYAxis = (cx: any) => {
 		this.selection.append('g').call((yAxis: any) => {
 			const { margin, yScale } = this.params;
 			yAxis
@@ -65,7 +65,7 @@ class DraggableLineChartD3 {
 				.attr('class', `${cx('', '&-Axis')}`)
 				.call(d3Axis.axisLeft(yScale));
 		});
-	}
+	};
 	renderLineChart = (cx: any) => {
 		this.renderXAxis(cx);
 		this.renderYAxis(cx);
@@ -93,10 +93,10 @@ class DraggableLineChartD3 {
 		const circle = this.selection
 			.append('g')
 			.selectAll('circle')
-			.data(this.params.data)
+			.data(this.params.data);
 
-			circle.exit().remove();
-			circle
+		circle.exit().remove();
+		circle
 			.join('circle')
 			.attr('cx', (d: any) => this.params.xScale(d.x))
 			.attr('cy', (d: any) => this.params.yScale(d.y))
@@ -129,22 +129,18 @@ class DraggableLineChartD3 {
 								// @ts-ignore
 								d3Shape
 									.line()
-									.x((d:any) => xScale(d.x))
-									.y((d:any) => yScale(d.y))
+									.x((d: any) => xScale(d.x))
+									.y((d: any) => yScale(d.y))
 							)
 							.enter();
 					})
 					.on('end', this.params.onDragEnd)
 			);
 	};
-	updateLineChart = (cx:any) => {
-		const circle = this.selection
-			.selectAll('circle')
-			.data(this.params.data)
+	updateLineChart = (cx: any) => {
+		const circle = this.selection.selectAll('circle').data(this.params.data);
 
-		circle
-			.attr("cy",(d: any) => this.params.yScale(d.y))
-			.attr("r",5);
+		circle.attr('cy', (d: any) => this.params.yScale(d.y)).attr('r', 5);
 
 		const lines = this.selection.selectAll(`.${cx('&-Line')}`);
 		lines
@@ -155,11 +151,11 @@ class DraggableLineChartD3 {
 				// @ts-ignore
 				d3Shape
 					.line()
-					.x((d:any) => this.params.xScale(d.x))
-					.y((d:any) => this.params.yScale(d.y))
+					.x((d: any) => this.params.xScale(d.x))
+					.y((d: any) => this.params.yScale(d.y))
 			)
 			.enter();
-	}
+	};
 }
 
 export default DraggableLineChartD3;

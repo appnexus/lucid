@@ -1,11 +1,7 @@
 import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
-import {
-	omitProps,
-	Overwrite,
-	StandardProps,
-} from '../../util/component-types';
+import { omitProps, Overwrite, StandardProps } from '../../util/component-types';
 import * as d3Scale from 'd3-scale';
 import * as d3Selection from 'd3-selection';
 import * as d3Array from 'd3-array';
