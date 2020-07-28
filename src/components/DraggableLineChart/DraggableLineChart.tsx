@@ -8,24 +8,18 @@ import {
 } from '../../util/component-types';
 import * as d3Scale from 'd3-scale';
 import * as d3Selection from 'd3-selection';
-import * as d3Drag from 'd3-drag';
-import * as d3Shape from 'd3-shape';
 import * as d3Array from 'd3-array';
-import * as d3Axis from 'd3-axis';
-import { formatDate } from '../../util/chart-helpers';
+import { lucidClassNames } from '../../util/style-helpers';
+import DraggableLineChartD3 from './DraggableLineChart.d3';
 
-const {
-	arrayOf,
-	number,
-	object,
-	shape,
-} = PropTypes;
+const cx = lucidClassNames.bind('&-DraggableLineChart');
+const { arrayOf, number, object, shape, func } = PropTypes;
 
 interface IDraggableLineChartMargin {
-	top?: number;
-	right?: number;
-	bottom?: number;
-	left?: number;
+	top: number;
+	right: number;
+	bottom: number;
+	left: number;
 }
 
 export interface IDraggableLineChartPropsRaw extends StandardProps {
@@ -52,6 +46,11 @@ export interface IDraggableLineChartPropsRaw extends StandardProps {
 	 * (brought in from LineChart)
 	 */
 	data: Array<{ [key: string]: Date | number | undefined }>;
+
+	/**
+	 * Drag handler function which is a callable function executed at the end of drag
+	 */
+	onDragEnd: (d: any) => any;
 }
 
 export type IDraggableLineChartProps = Overwrite<
@@ -60,13 +59,13 @@ export type IDraggableLineChartProps = Overwrite<
 >;
 
 class DraggableLineChart extends React.Component<IDraggableLineChartProps, {}> {
+	ref: any;
+	d3LineChart: any;
 	xScale = d3Scale
 		.scalePoint()
-		// @ts-ignore
-		.domain(this.props.data.map(d => d.x))
+		.domain(this.props.data.map((d: any) => d.x))
 		.range([
 			this.props.margin.left,
-			// @ts-ignore
 			this.props.width - this.props.margin.right - this.props.margin.left,
 		]);
 
@@ -75,137 +74,33 @@ class DraggableLineChart extends React.Component<IDraggableLineChartProps, {}> {
 		.domain([0, d3Array.max(this.props.data, (d: any) => d.y)])
 		.nice()
 		.range([
-			// @ts-ignore
 			this.props.height - this.props.margin.bottom,
-			// @ts-ignore
 			this.props.margin.top,
 		]);
-
-	componentDidMount() {
-		this.renderGraph();
+	constructor(props: any) {
+		super(props);
+		this.ref = React.createRef();
+		this.d3LineChart = null;
 	}
 
-	renderGraph = () => {
-		const svg = d3Selection.select('svg.sample');
-		svg.append('g').call((g: any) =>
-			g
-				.attr('transform', `translate(${0},${this.props.margin.top})`)
-				.attr('class', 'x axis')
-				// @ts-ignore
-				.call(d3Axis.axisTop(this.xScale).tickFormat(formatDate))
-		);
-
-		svg
-			.append('g')
-			.call((g: any) =>
-				g
-					.attr('transform', `translate(${this.props.margin.left},${0})`)
-					.call(d3Axis.axisLeft(this.yScale))
-			);
-
-		svg
-			.append('path')
-			.classed('lines', true)
-			.datum(this.props.data)
-			.attr('stroke', '#000000')
-			.attr('fill', 'none')
-			.attr(
-				'd',
-				// @ts-ignore
-				d3Shape
-					.line()
-					.x((d: any) => this.xScale(d.x))
-					.y((d: any) => this.yScale(d.y))
-			)
-			.enter();
-		const yScale = this.yScale;
-		const xScale = this.xScale;
-		let initialPosition: number;
-		svg
-			.append('g')
-			.selectAll('circle')
-			.data(this.props.data)
-			.join('circle')
-			.attr('cx', (d: any) => this.xScale(d.x))
-			.attr('cy', (d: any) => this.yScale(d.y))
-			.attr('r', 5)
-			.style('fill', '#009fdb')
-			.style('stroke', 'white')
-			.style('stroke-width', 1)
-			.call(
-				// @ts-ignore
-				d3Drag
-					.drag()
-					.on('start', function() {
-						// @ts-ignore
-						const activeDot = d3Selection.select(this);
-						initialPosition = Number(activeDot.attr('cy'));
-					})
-					.on('drag', function(d: any) {
-						const [max, min] = yScale.range();
-						// @ts-ignore
-						const activeDot = d3Selection.select(this);
-						const adjMouseY = initialPosition + d3Selection.event.y;
-						if (adjMouseY > max){
-							d.y = Number(yScale.invert(max));
-							activeDot.attr('cy', max);
-							const lines = d3Selection.selectAll('.lines');
-							lines
-								.attr('stroke', '#000000')
-								.attr('fill', 'none')
-								.attr(
-									'd',
-									// @ts-ignore
-									d3Shape
-										.line()
-										// @ts-ignore
-										.x(d => xScale(d.x))
-										// @ts-ignore
-										.y(d => yScale(d.y))
-								)
-								.enter();
-							return;
-						}
-						if (adjMouseY < min){
-							d.y = Number(yScale.invert(min));
-							activeDot.attr('cy', min);
-							const lines = d3Selection.selectAll('.lines');
-							lines
-								.attr('stroke', '#000000')
-								.attr('fill', 'none')
-								.attr(
-									'd',
-									// @ts-ignore
-									d3Shape
-										.line()
-										// @ts-ignore
-										.x(d => xScale(d.x))
-										// @ts-ignore
-										.y(d => yScale(d.y))
-								)
-								.enter();
-							return;
-						}
-						d.y = Number(yScale.invert(adjMouseY));
-						activeDot.attr('cy', adjMouseY);
-						const lines = d3Selection.selectAll('.lines');
-						lines
-							.attr('stroke', '#000000')
-							.attr('fill', 'none')
-							.attr(
-								'd',
-								// @ts-ignore
-								d3Shape
-									.line()
-									// @ts-ignore
-									.x(d => xScale(d.x))
-									// @ts-ignore
-									.y(d => yScale(d.y))
-							)
-							.enter();
-					})
-			);
-	};
+	componentDidUpdate() {
+		this.d3LineChart.params.data = this.props.data;
+		this.d3LineChart.updateLineChart(cx);
+	}
+	componentDidMount() {
+		const svg = d3Selection.select(this.ref);
+		const { margin, data, height, width, onDragEnd } = this.props;
+		this.d3LineChart = new DraggableLineChartD3(svg, {
+			margin,
+			data,
+			height,
+			width,
+			xScale: this.xScale,
+			yScale: this.yScale,
+			onDragEnd,
+		});
+		this.d3LineChart.renderLineChart(cx);
+	}
 
 	static displayName = 'DraggableLineChart';
 
@@ -254,10 +149,15 @@ class DraggableLineChart extends React.Component<IDraggableLineChartProps, {}> {
 					{ x: new Date('2015-01-05') , y: 5 } ,
 				]
 		`,
+
+		onDragEnd: func`
+			Called when the user stops to dragging an item.
+			Signature: \`({ event, props }) => {}\`
+		`,
 	};
 
 	static defaultProps = {
-		height: 400,
+		height: 300,
 		width: 1000,
 		margin: {
 			top: 50,
@@ -268,11 +168,7 @@ class DraggableLineChart extends React.Component<IDraggableLineChartProps, {}> {
 	};
 
 	render(): React.ReactNode {
-		const {
-			height,
-			width,
-			...passThroughs
-		} = this.props;
+		const { height, width, ...passThroughs } = this.props;
 
 		return (
 			<svg
@@ -281,7 +177,8 @@ class DraggableLineChart extends React.Component<IDraggableLineChartProps, {}> {
 					undefined,
 					_.keys(DraggableLineChart.propTypes)
 				)}
-				className='sample'
+				ref={(ref: SVGSVGElement) => (this.ref = ref)}
+				className={cx('', '&')}
 				width={width}
 				height={height}
 			/>
