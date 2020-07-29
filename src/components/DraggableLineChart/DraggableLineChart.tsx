@@ -43,12 +43,12 @@ export interface IDraggableLineChartPropsRaw extends StandardProps {
 	 * ]
 	 * (brought in from LineChart)
 	 */
-	data: Array<{ [key: string]: Date | number | undefined }>;
+	data: Array<{ [key: string]: Date | string | number | undefined }>;
 
 	/**
 	 * Drag handler function which is a callable function executed at the end of drag
 	 */
-	onDragEnd: (d: any) => any;
+	onDragEnd?: (d: any) => any;
 }
 
 export type IDraggableLineChartProps = Overwrite<

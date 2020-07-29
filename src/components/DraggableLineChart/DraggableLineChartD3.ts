@@ -16,8 +16,8 @@ interface IDraggableLineChartParams {
 	};
 	height: number;
 	width: number;
-	data: Array<{ [key: string]: Date | number | undefined }>;
-	onDragEnd: (d: any) => any;
+	data: Array<{ [key: string]: Date | string | number | undefined }>;
+	onDragEnd?: (d: any) => any;
 	cx: (d: any) => void;
 }
 
@@ -91,7 +91,7 @@ class DraggableLineChartD3 {
 						})
 				);
 			})
-			.on('end', onDragEnd);
+			.on('end', onDragEnd || _.noop);
 	};
 	renderXAxis = () => {
 		this.selection.append('g').call((xAxis: any) => {

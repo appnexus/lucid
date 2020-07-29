@@ -1,5 +1,4 @@
 import React from 'react';
-import _ from 'lodash';
 import createClass from 'create-react-class';
 import { DraggableLineChart } from '../../../index';
 
@@ -21,55 +20,14 @@ const data = [
 const style = {
 	paddingTop: '4rem',
 };
-const HourField = ({ data: localData, onChangeHandler }:{data:any, onChangeHandler:any }) => (
-	<>
-		{localData.map((d: any, i: number) => (
-			<input
-				type='number'
-				value={d.y}
-				onChange={x => onChangeHandler(x, d)}
-				key={`${i}-text`}
-				style={{ width: '40px', marginRight:'20px', padding:'2px' }}
-			/>
-		))}
-	</>
-);
 
 export default createClass({
-	getInitialState() {
-		return {
-			data,
-		};
-	},
-	onDragEndHandler(item: any) {
-		const temp = _.map(this.state.data, dataPoint => {
-			if (dataPoint.x === item.x) {
-				dataPoint.y = Number(parseFloat(item.y).toFixed(2));
-			}
-			return dataPoint;
-		});
-		this.setState({ data: temp });
-	},
-	onChangeHandler({ target:{value} }: any, item: any) {
-		const temp = _.map(this.state.data, dataPoint => {
-			if (dataPoint.x === item.x) {
-				dataPoint.y = Number(value);
-			}
-			return dataPoint;
-		});
-		this.setState({ data: temp });
-	},
 	render() {
-		const { data: stateData } = this.state;
 		return (
 			<div style={style}>
-				<div style={{ width:'85%', margin: 'auto' }}>
-					<HourField data={stateData} onChangeHandler={this.onChangeHandler} />
-				</div>
 				<DraggableLineChart
-					data={stateData}
+					data={data}
 					width={900}
-					onDragEnd={this.onDragEndHandler}
 				/>
 			</div>
 		);
