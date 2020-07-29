@@ -1,12 +1,14 @@
 import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
-import { omitProps, Overwrite, StandardProps } from '../../util/component-types';
-import * as d3Scale from 'd3-scale';
+import {
+	omitProps,
+	Overwrite,
+	StandardProps,
+} from '../../util/component-types';
 import * as d3Selection from 'd3-selection';
-import * as d3Array from 'd3-array';
 import { lucidClassNames } from '../../util/style-helpers';
-import DraggableLineChartD3 from './DraggableLineChart.d3';
+import DraggableLineChartD3 from './DraggableLineChartD3';
 
 const cx = lucidClassNames.bind('&-DraggableLineChart');
 const { arrayOf, number, object, shape, func } = PropTypes;
@@ -57,22 +59,6 @@ export type IDraggableLineChartProps = Overwrite<
 class DraggableLineChart extends React.Component<IDraggableLineChartProps, {}> {
 	ref: any;
 	d3LineChart: any;
-	xScale = d3Scale
-		.scalePoint()
-		.domain(this.props.data.map((d: any) => d.x))
-		.range([
-			this.props.margin.left,
-			this.props.width - this.props.margin.right - this.props.margin.left,
-		]);
-
-	yScale = d3Scale
-		.scaleLinear()
-		.domain([0, d3Array.max(this.props.data, (d: any) => d.y)])
-		.nice()
-		.range([
-			this.props.height - this.props.margin.bottom,
-			this.props.margin.top,
-		]);
 	constructor(props: any) {
 		super(props);
 		this.ref = React.createRef();
@@ -81,7 +67,7 @@ class DraggableLineChart extends React.Component<IDraggableLineChartProps, {}> {
 
 	componentDidUpdate() {
 		this.d3LineChart.params.data = this.props.data;
-		this.d3LineChart.updateLineChart(cx);
+		this.d3LineChart.updateLineChart();
 	}
 	componentDidMount() {
 		const svg = d3Selection.select(this.ref);
@@ -91,11 +77,10 @@ class DraggableLineChart extends React.Component<IDraggableLineChartProps, {}> {
 			data,
 			height,
 			width,
-			xScale: this.xScale,
-			yScale: this.yScale,
 			onDragEnd,
+			cx,
 		});
-		this.d3LineChart.renderLineChart(cx);
+		this.d3LineChart.renderLineChart();
 	}
 
 	static displayName = 'DraggableLineChart';
@@ -174,7 +159,7 @@ class DraggableLineChart extends React.Component<IDraggableLineChartProps, {}> {
 					_.keys(DraggableLineChart.propTypes)
 				)}
 				ref={(ref: SVGSVGElement) => (this.ref = ref)}
-				className={cx('', '&')}
+				className={cx('&')}
 				width={width}
 				height={height}
 			/>

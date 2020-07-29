@@ -1,38 +1,39 @@
 import React from 'react';
 import _ from 'lodash';
 import createClass from 'create-react-class';
-import { DraggableLineChart, TextField } from '../../../index';
+import { DraggableLineChart } from '../../../index';
 
 const data = [
-	{ x: new Date('2015-01-01T00:00:00-08:00'), y: 0 },
-	{ x: new Date('2015-01-01T01:00:00-08:00'), y: 0 },
-	{ x: new Date('2015-01-01T02:00:00-08:00'), y: 0 },
-	{ x: new Date('2015-01-01T03:00:00-08:00'), y: 0 },
-	{ x: new Date('2015-01-01T04:00:00-08:00'), y: 0 },
-	{ x: new Date('2015-01-01T05:00:00-08:00'), y: 0 },
-	{ x: new Date('2015-01-01T06:00:00-08:00'), y: 0 },
-	{ x: new Date('2015-01-01T07:00:00-08:00'), y: 0 },
-	{ x: new Date('2015-01-01T08:00:00-08:00'), y: 5 },
-	{ x: new Date('2015-01-01T09:00:00-08:00'), y: 5 },
-	{ x: new Date('2015-01-01T10:00:00-08:00'), y: 5 },
-	{ x: new Date('2015-01-01T11:00:00-08:00'), y: 5 },
-	{ x: new Date('2015-01-01T12:00:00-08:00'), y: 5 },
-	{ x: new Date('2015-01-01T13:00:00-08:00'), y: 5 },
-	{ x: new Date('2015-01-01T14:00:00-08:00'), y: 5 },
-	{ x: new Date('2015-01-01T15:00:00-08:00'), y: 10 },
-	{ x: new Date('2015-01-01T16:00:00-08:00'), y: 5 },
-	{ x: new Date('2015-01-01T17:00:00-08:00'), y: 5 },
-	{ x: new Date('2015-01-01T18:00:00-08:00'), y: 5 },
-	{ x: new Date('2015-01-01T19:00:00-08:00'), y: 5 },
-	{ x: new Date('2015-01-01T20:00:00-08:00'), y: 5 },
-	{ x: new Date('2015-01-01T21:00:00-08:00'), y: 5 },
-	{ x: new Date('2015-01-01T22:00:00-08:00'), y: 0 },
-	{ x: new Date('2015-01-01T23:00:00-08:00'), y: 0 },
+	{ x: '12 AM', y: 0 },
+	{ x: '1 AM', y: 0 },
+	{ x: '2 AM', y: 0 },
+	{ x: '3 AM', y: 0 },
+	{ x: '4 AM', y: 0 },
+	{ x: '5 AM', y: 0 },
+	{ x: '6 AM', y: 0 },
+	{ x: '7 AM', y: 0 },
+	{ x: '8 AM', y: 5 },
+	{ x: '9 AM', y: 5 },
+	{ x: '10 AM', y: 5 },
+	{ x: '11 AM', y: 5 },
 ];
 
 const style = {
 	paddingTop: '4rem',
 };
+const HourField = ({ data: localData, onChangeHandler }:{data:any, onChangeHandler:any }) => (
+	<>
+		{localData.map((d: any, i: number) => (
+			<input
+				type='number'
+				value={d.y}
+				onChange={x => onChangeHandler(x, d)}
+				key={`${i}-text`}
+				style={{ width: '40px', marginRight:'20px', padding:'2px' }}
+			/>
+		))}
+	</>
+);
 
 export default createClass({
 	getInitialState() {
@@ -49,7 +50,7 @@ export default createClass({
 		});
 		this.setState({ data: temp });
 	},
-	onChangeHandler(item: any, value: any) {
+	onChangeHandler({ target:{value} }: any, item: any) {
 		const temp = _.map(this.state.data, dataPoint => {
 			if (dataPoint.x === item.x) {
 				dataPoint.y = Number(value);
@@ -59,22 +60,14 @@ export default createClass({
 		this.setState({ data: temp });
 	},
 	render() {
-		const { data } = this.state;
+		const { data: stateData } = this.state;
 		return (
 			<div style={style}>
-				<div style={{ display: 'inline', margin: '3px' }}>
-					{data.map((d: any, i: number) => (
-						<TextField
-							value={d.y}
-							onChange={this.onChangeHandler.bind(this.onChangeHandler, d)}
-							width={'30px'}
-							key={`${i}-text`}
-							style={{ width: '32px' }}
-						/>
-					))}
+				<div style={{ width:'85%', margin: 'auto' }}>
+					<HourField data={stateData} onChangeHandler={this.onChangeHandler} />
 				</div>
 				<DraggableLineChart
-					data={data}
+					data={stateData}
 					width={900}
 					onDragEnd={this.onDragEndHandler}
 				/>
