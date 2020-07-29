@@ -7,6 +7,11 @@ import { d3Scale } from '../../index';
 import _ from 'lodash';
 import * as d3Array from 'd3-array';
 
+interface ChartData {
+	x: Date | string | number | undefined;
+	y: Date | string | number | undefined;
+}
+
 interface IDraggableLineChartParams {
 	margin: {
 		top: number;
@@ -59,7 +64,7 @@ class DraggableLineChartD3 {
 	}
 
 	drag = () => {
-		const { xScale, yScale } = this;
+		const { xScale, yScale, renderLine, renderPoints, selection } = this;
 		const { cx, onDragEnd } = this.params;
 		let initialPosition: number;
 		return d3Drag
@@ -68,30 +73,27 @@ class DraggableLineChartD3 {
 				const activeDot = d3Selection.select(this);
 				initialPosition = Number(activeDot.attr('cy'));
 			})
-			.on('drag', function(d: any) {
+			.on('drag', function(pointData: any) {
 				const [max, min] = yScale.range();
 				const activeDot = d3Selection.select(this);
 				const adjMouseY = initialPosition + d3Selection.event.y;
 				const newPointY =
 					adjMouseY < min ? min : adjMouseY > max ? max : adjMouseY;
-				const lines = d3Selection.selectAll(`.${cx('&-Line')}`);
+				const lines = selection.selectAll(`path.${cx('&-Line')}`);
 
-				d.y = Number(yScale.invert(newPointY));
+				pointData.y = Number(yScale.invert(newPointY));
 				activeDot.attr('cy', newPointY);
-				lines.attr(
-					'd',
-					// @ts-ignore
-					d3Shape
-						.line()
-						.x(function({ x }: any) {
-							return xScale(x);
-						})
-						.y(function({ y }: any) {
-							return yScale(y);
-						})
-				);
+				const line: any = d3Shape
+					.line<ChartData>()
+					.x((chartData: ChartData) => xScale(chartData.x))
+					.y((chartData: ChartData) => yScale(chartData.y));
+				lines.attr('d', line);
 			})
-			.on('end', onDragEnd || _.noop);
+			.on('end', d => {
+				if (onDragEnd) onDragEnd(d);
+				renderLine(false);
+				renderPoints(false);
+			});
 	};
 	renderXAxis = () => {
 		this.selection.append('g').call((xAxis: any) => {
@@ -124,12 +126,13 @@ class DraggableLineChartD3 {
 	};
 	renderLine = (isNew: boolean) => {
 		const { cx } = this.params;
-		const lines = isNew
-			? this.selection
-					.append('g')
-					.append('path')
-					.attr('class', `${cx('&-Line')}`)
-			: this.selection.selectAll(`.${cx('&-Line')}`);
+		if (isNew) {
+			this.selection
+				.append('g')
+				.append('path')
+				.attr('class', `${cx('&-Line')}`);
+		}
+		const lines = this.selection.selectAll(`path.${cx('&-Line')}`);
 		lines.datum(this.params.data).enter();
 		lines
 			.transition(d3Transition.transition().duration(500))
