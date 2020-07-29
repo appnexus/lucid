@@ -28,7 +28,7 @@ const HourField = ({ data: localData, onChangeHandler }:{data:any, onChangeHandl
 				type='number'
 				value={d.y}
 				max={100}
-				min={-100}
+				min={0}
 				onChange={x => onChangeHandler(x, d)}
 				key={`${i}-text`}
 				style={{ width: '40px', marginRight:'20px', padding:'2px' }}
