@@ -41,7 +41,6 @@ export interface IDraggableLineChartPropsRaw extends StandardProps {
 	 * { x: new Date('2015-01-04') , y: 2 } ,
 	 * { x: new Date('2015-01-05') , y: 5 } ,
 	 * ]
-	 * (brought in from LineChart)
 	 */
 	data: Array<{ [key: string]: Date | string | number | undefined }>;
 
