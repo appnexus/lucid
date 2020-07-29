@@ -28,6 +28,7 @@ export default createClass({
 				<DraggableLineChart
 					data={data}
 					width={900}
+					xAxisTicksVertical={true}
 				/>
 			</div>
 		);

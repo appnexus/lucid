@@ -29,7 +29,15 @@
 		shape-rendering: crispEdges;
 	}
 
-	&.xAxis {
+	&.NoVert {
+		.tick {
+			text {
+				transform: translate(0px, -5px);
+			}
+		}
+	}
+
+	&.Vert {
 		.tick {
 			text {
 				transform: translate(7px, -20px) rotate(-90deg);

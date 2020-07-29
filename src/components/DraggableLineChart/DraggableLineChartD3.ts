@@ -23,6 +23,7 @@ interface IDraggableLineChartParams {
 	width: number;
 	data: Array<{ [key: string]: Date | string | number | undefined }>;
 	onDragEnd?: (d: any) => any;
+	xAxisTicksVertical?: boolean;
 	cx: (d: any) => void;
 }
 
@@ -38,6 +39,7 @@ class DraggableLineChartD3 {
 		height: 300,
 		width: 1000,
 		onDragEnd: _.noop,
+		xAxisTicksVertical: false,
 		data: [],
 		cx: _.noop,
 	};
@@ -97,16 +99,20 @@ class DraggableLineChartD3 {
 	};
 	renderXAxis = () => {
 		this.selection.append('g').call((xAxis: any) => {
-			const { margin, height, cx } = this.params;
+			const { margin, height, xAxisTicksVertical, cx } = this.params;
 			xAxis
 				.attr('transform', `translate(${0},${margin.top})`)
 				.classed(`${cx('&-Axis')}`, true)
-				.classed('xAxis', true)
 				.call(
 					d3Axis
 						.axisTop(this.xScale)
 						.tickSize(margin.top + margin.bottom - height)
 				);
+			if (xAxisTicksVertical) {
+				xAxis.classed('Vert', true);
+			} else {
+				xAxis.classed('NoVert', true);
+			}
 		});
 	};
 	renderYAxis = () => {

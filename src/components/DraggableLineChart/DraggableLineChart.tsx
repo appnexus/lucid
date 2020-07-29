@@ -48,6 +48,11 @@ export interface IDraggableLineChartPropsRaw extends StandardProps {
 	 * Drag handler function which is a callable function executed at the end of drag
 	 */
 	onDragEnd?: (d: any) => any;
+
+	/**
+	 * Flag for if xAxis tick labels are vertical.
+	 */
+	xAxisTicksVertical?: boolean;
 }
 
 export type IDraggableLineChartProps = Overwrite<
@@ -70,13 +75,14 @@ class DraggableLineChart extends React.Component<IDraggableLineChartProps, {}> {
 	}
 	componentDidMount() {
 		const svg = d3Selection.select(this.ref);
-		const { margin, data, height, width, onDragEnd } = this.props;
+		const { margin, data, height, width, onDragEnd, xAxisTicksVertical } = this.props;
 		this.d3LineChart = new DraggableLineChartD3(svg, {
 			margin,
 			data,
 			height,
 			width,
 			onDragEnd,
+			xAxisTicksVertical,
 			cx,
 		});
 		this.d3LineChart.renderLineChart();
