@@ -46,7 +46,7 @@ export default createClass({
 	onDragEndHandler(item: any) {
 		const temp = _.map(this.state.data, dataPoint => {
 			if (dataPoint.x === item.x) {
-				dataPoint.y = Number(parseFloat(item.y).toFixed(2));
+				dataPoint.y = Number(parseFloat(item.y).toFixed(0));
 			}
 			return dataPoint;
 		});
