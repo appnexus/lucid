@@ -21,7 +21,13 @@ const data = [
 const style = {
 	paddingTop: '4rem',
 };
-const HourField = ({ data: localData, onChangeHandler }:{data:any, onChangeHandler:any }) => (
+const HourField = ({
+	data: localData,
+	onChangeHandler,
+}: {
+	data: any;
+	onChangeHandler: any;
+}) => (
 	<>
 		{localData.map((d: any, i: number) => (
 			<input
@@ -31,7 +37,7 @@ const HourField = ({ data: localData, onChangeHandler }:{data:any, onChangeHandl
 				min={0}
 				onChange={x => onChangeHandler(x, d)}
 				key={`${i}-text`}
-				style={{ width: '40px', marginRight:'20px', padding:'2px' }}
+				style={{ width: '40px', marginRight: '20px', padding: '2px' }}
 			/>
 		))}
 	</>
@@ -52,7 +58,7 @@ export default createClass({
 		});
 		this.setState({ data: temp });
 	},
-	onChangeHandler({ target:{value} }: any, item: any) {
+	onChangeHandler({ target: { value } }: any, item: any) {
 		const temp = _.map(this.state.data, dataPoint => {
 			if (dataPoint.x === item.x) {
 				dataPoint.y = Number(value);
@@ -65,13 +71,14 @@ export default createClass({
 		const { data: stateData } = this.state;
 		return (
 			<div style={style}>
-				<div style={{ width:'85%', margin: 'auto' }}>
+				<div style={{ width: '85%', margin: 'auto' }}>
 					<HourField data={stateData} onChangeHandler={this.onChangeHandler} />
 				</div>
 				<DraggableLineChart
 					data={stateData}
 					width={900}
 					onDragEnd={this.onDragEndHandler}
+					dataIsCentered={true}
 				/>
 			</div>
 		);

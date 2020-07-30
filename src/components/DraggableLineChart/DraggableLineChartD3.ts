@@ -24,6 +24,7 @@ interface IDraggableLineChartParams {
 	data: Array<{ [key: string]: Date | string | number | undefined }>;
 	onDragEnd?: (d: any) => any;
 	xAxisTicksVertical?: boolean;
+	dataIsCentered?: boolean;
 	cx: (d: any) => void;
 }
 
@@ -40,6 +41,7 @@ class DraggableLineChartD3 {
 		width: 1000,
 		onDragEnd: _.noop,
 		xAxisTicksVertical: false,
+		dataIsCentered: false,
 		data: [],
 		cx: _.noop,
 	};
@@ -48,13 +50,27 @@ class DraggableLineChartD3 {
 	constructor(selection: any, params: IDraggableLineChartParams) {
 		this.selection = selection;
 		this.params = params;
-		this.xScale = d3Scale
-			.scalePoint()
-			.domain(this.params.data.map((d: any) => d.x))
-			.range([
-				this.params.margin.left,
-				this.params.width - this.params.margin.right - this.params.margin.left,
-			]);
+		if (params.dataIsCentered) {
+			this.xScale = d3Scale
+				.scalePoint()
+				.domain([...this.params.data.map((d: any) => d.x), ''])
+				.range([
+					this.params.margin.left,
+					this.params.width -
+						this.params.margin.right -
+						this.params.margin.left,
+				]);
+		} else {
+			this.xScale = d3Scale
+				.scalePoint()
+				.domain(this.params.data.map((d: any) => d.x))
+				.range([
+					this.params.margin.left,
+					this.params.width -
+						this.params.margin.right -
+						this.params.margin.left,
+				]);
+		}
 		this.yScale = d3Scale
 			.scaleLinear()
 			.domain([0, d3Array.max(this.params.data, (d: any) => d.y)])
@@ -99,7 +115,13 @@ class DraggableLineChartD3 {
 	};
 	renderXAxis = () => {
 		this.selection.append('g').call((xAxis: any) => {
-			const { margin, height, xAxisTicksVertical, cx } = this.params;
+			const {
+				margin,
+				height,
+				xAxisTicksVertical,
+				dataIsCentered,
+				cx,
+			} = this.params;
 			xAxis
 				.attr('transform', `translate(${0},${margin.top})`)
 				.classed(`${cx('&-Axis')}`, true)
@@ -112,6 +134,9 @@ class DraggableLineChartD3 {
 				xAxis.classed('Vert', true);
 			} else {
 				xAxis.classed('NoVert', true);
+			}
+			if (dataIsCentered) {
+				xAxis.classed('Center', true);
 			}
 		});
 	};
@@ -131,12 +156,21 @@ class DraggableLineChartD3 {
 		});
 	};
 	renderLine = (isNew: boolean) => {
-		const { cx } = this.params;
+		const { dataIsCentered, cx } = this.params;
 		if (isNew) {
-			this.selection
-				.append('g')
-				.append('path')
-				.attr('class', `${cx('&-Line')}`);
+			if (dataIsCentered) {
+				const innerXTickWidth = this.xScale.step();
+				this.selection
+					.append('g')
+					.append('path')
+					.attr('class', `${cx('&-Line')}`)
+					.attr('transform', `translate(${innerXTickWidth / 2}, 0)`);
+			} else {
+				this.selection
+					.append('g')
+					.append('path')
+					.attr('class', `${cx('&-Line')}`);
+			}
 		}
 		const lines = this.selection.selectAll(`path.${cx('&-Line')}`);
 		lines.datum(this.params.data).enter();
@@ -152,7 +186,7 @@ class DraggableLineChartD3 {
 			);
 	};
 	renderPoints = (isNew: boolean) => {
-		const { data } = this.params;
+		const { data, dataIsCentered } = this.params;
 		const circle = isNew
 			? this.selection
 					.append('g')
@@ -164,16 +198,31 @@ class DraggableLineChartD3 {
 					.data(data)
 					.join('circle');
 
-		circle
-			.transition()
-			.duration(500)
-			.attr('cx', (d: any) => this.xScale(d.x))
-			.attr('cy', (d: any) => this.yScale(d.y))
-			.attr('r', 5)
-			.style('fill', '#009fdb')
-			.style('stroke', 'white')
-			.style('stroke-width', 1);
-		if (isNew) circle.call(this.drag());
+		if (dataIsCentered) {
+			const innerXTickWidth = this.xScale.step();
+			circle
+				.transition()
+				.duration(500)
+				.attr('cx', (d: any) => this.xScale(d.x))
+				.attr('cy', (d: any) => this.yScale(d.y))
+				.attr('r', 5)
+				.attr('transform', `translate(${innerXTickWidth / 2}, 0)`)
+				.style('fill', '#009fdb')
+				.style('stroke', 'white')
+				.style('stroke-width', 1);
+			if (isNew) circle.call(this.drag());
+		} else {
+			circle
+				.transition()
+				.duration(500)
+				.attr('cx', (d: any) => this.xScale(d.x))
+				.attr('cy', (d: any) => this.yScale(d.y))
+				.attr('r', 5)
+				.style('fill', '#009fdb')
+				.style('stroke', 'white')
+				.style('stroke-width', 1);
+			if (isNew) circle.call(this.drag());
+		}
 	};
 	renderLineChart = () => {
 		this.renderXAxis();

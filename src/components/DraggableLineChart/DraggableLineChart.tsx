@@ -53,6 +53,11 @@ export interface IDraggableLineChartPropsRaw extends StandardProps {
 	 * Flag for if xAxis tick labels are vertical.
 	 */
 	xAxisTicksVertical?: boolean;
+
+	/**
+	 * Flag for if data is center aligned rather than default left aligned.
+	 */
+	dataIsCentered?: boolean;
 }
 
 export type IDraggableLineChartProps = Overwrite<
@@ -75,7 +80,15 @@ class DraggableLineChart extends React.Component<IDraggableLineChartProps, {}> {
 	}
 	componentDidMount() {
 		const svg = d3Selection.select(this.ref);
-		const { margin, data, height, width, onDragEnd, xAxisTicksVertical } = this.props;
+		const {
+			margin,
+			data,
+			height,
+			width,
+			onDragEnd,
+			xAxisTicksVertical,
+			dataIsCentered,
+		} = this.props;
 		this.d3LineChart = new DraggableLineChartD3(svg, {
 			margin,
 			data,
@@ -83,6 +96,7 @@ class DraggableLineChart extends React.Component<IDraggableLineChartProps, {}> {
 			width,
 			onDragEnd,
 			xAxisTicksVertical,
+			dataIsCentered,
 			cx,
 		});
 		this.d3LineChart.renderLineChart();
