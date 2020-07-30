@@ -309,6 +309,22 @@ module.exports = [
 		),
 	},
 	{
+		name: 'DraggableLineChart',
+		component: getDefaultExport(
+			require('../src/components/DraggableLineChart/DraggableLineChart')
+		),
+		examplesContext: require.context(
+			'../src/components/DraggableLineChart/examples',
+			true,
+			/\.(j|t)sx?$/
+		),
+		examplesContextRaw: require.context(
+			'!!raw-loader!../src/components/DraggableLineChart/examples',
+			true,
+			/\.(j|t)sx?$/
+		),
+	},
+	{
 		name: 'DraggableList',
 		component: getDefaultExport(
 			require('../src/components/DraggableList/DraggableList')

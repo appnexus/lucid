@@ -1,0 +1,60 @@
+@import (reference) '../../styles/variables.less';
+@import (reference) '../../styles/mixins.less';
+
+.@{prefix}-DraggableLineChart {
+	&-invisible {
+		fill-opacity: 0;
+	}
+
+	&-tooltip-line {
+		shape-rendering: crispEdges;
+		stroke-width: 2;
+		stroke: @color-gray;
+	}
+
+	&-legend-container {
+		text-align: center;
+	}
+}
+.@{prefix}-DraggableLineChart-Axis {
+	text {
+		font: @font-chart;
+		fill: @color-textColor;
+	}
+
+	path,
+	line {
+		fill: none;
+		stroke: @color-gray;
+		shape-rendering: crispEdges;
+	}
+
+	&.NoVert {
+		.tick {
+			text {
+				transform: translate(0px, -5px);
+			}
+		}
+	}
+
+	&.Vert {
+		.tick {
+			text {
+				transform: translate(7px, -20px) rotate(-90deg);
+			}
+		}
+	}
+
+	&.Center {
+		.tick {
+			text {
+				transform: translate(25px, -5px);
+			}
+		}
+	}
+}
+.@{prefix}-DraggableLineChart-Line {
+	stroke-width: 2;
+	stroke: @color-neutral-9;
+	fill: none;
+}
