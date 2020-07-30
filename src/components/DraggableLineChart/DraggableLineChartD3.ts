@@ -25,6 +25,7 @@ interface IDraggableLineChartParams {
 	onDragEnd?: (d: any) => any;
 	xAxisTicksVertical?: boolean;
 	dataIsCentered?: boolean;
+	yAxisMin?: number;
 	cx: (d: any) => void;
 }
 
@@ -42,6 +43,7 @@ class DraggableLineChartD3 {
 		onDragEnd: _.noop,
 		xAxisTicksVertical: false,
 		dataIsCentered: false,
+		yAxisMin: 0,
 		data: [],
 		cx: _.noop,
 	};
@@ -73,7 +75,12 @@ class DraggableLineChartD3 {
 		}
 		this.yScale = d3Scale
 			.scaleLinear()
-			.domain([0, d3Array.max(this.params.data, (d: any) => d.y)])
+			.domain([
+				_.isUndefined(this.params.yAxisMin)
+					? d3Array.min(this.params.data, (d: any) => d.y)
+					: this.params.yAxisMin,
+				d3Array.max(this.params.data, (d: any) => d.y),
+			])
 			.nice()
 			.range([
 				this.params.height - this.params.margin.bottom,
@@ -232,7 +239,9 @@ class DraggableLineChartD3 {
 	};
 	updateLineChart = () => {
 		this.yScale.domain([
-			d3Array.min(this.params.data, (d: any) => d.y),
+			_.isUndefined(this.params.yAxisMin)
+				? d3Array.min(this.params.data, (d: any) => d.y)
+				: this.params.yAxisMin,
 			d3Array.max(this.params.data, (d: any) => d.y),
 		]);
 		this.renderLine(false);

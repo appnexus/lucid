@@ -58,6 +58,11 @@ export interface IDraggableLineChartPropsRaw extends StandardProps {
 	 * Flag for if data is center aligned rather than default left aligned.
 	 */
 	dataIsCentered?: boolean;
+
+	/**
+	 * Flag for yAxis sticking to minimum (not readjusting minimum)
+	 */
+	yAxisMin?: number;
 }
 
 export type IDraggableLineChartProps = Overwrite<
@@ -88,6 +93,7 @@ class DraggableLineChart extends React.Component<IDraggableLineChartProps, {}> {
 			onDragEnd,
 			xAxisTicksVertical,
 			dataIsCentered,
+			yAxisMin,
 		} = this.props;
 		this.d3LineChart = new DraggableLineChartD3(svg, {
 			margin,
@@ -97,6 +103,7 @@ class DraggableLineChart extends React.Component<IDraggableLineChartProps, {}> {
 			onDragEnd,
 			xAxisTicksVertical,
 			dataIsCentered,
+			yAxisMin,
 			cx,
 		});
 		this.d3LineChart.renderLineChart();

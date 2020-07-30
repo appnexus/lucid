@@ -79,6 +79,7 @@ export default createClass({
 					width={900}
 					onDragEnd={this.onDragEndHandler}
 					dataIsCentered={true}
+					yAxisMin={0}
 				/>
 			</div>
 		);
