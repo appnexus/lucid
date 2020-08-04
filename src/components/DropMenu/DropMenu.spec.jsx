@@ -770,6 +770,29 @@ describe('DropMenu', () => {
 				assert.equal(optionDOMNodes[0].innerHTML, 'option b');
 				assert.equal(optionDOMNodes[1].innerHTML, 'option c');
 			});
+
+			it('should render children options with `Selection` properties without generating React warnings', () => {
+				wrapper = mount(
+					<DropMenu isExpanded>
+						<Control>control</Control>
+						<Option Selection={{ kind: 'warning' }}>option a</Option>
+						<Option>option b</Option>
+						<Option>option c</Option>
+					</DropMenu>
+				);
+
+				const flyOutDOMNode = document.querySelector(
+					'.lucid-DropMenu.lucid-ContextMenu-FlyOut'
+				);
+				const optionDOMNodes = flyOutDOMNode.querySelectorAll(
+					'.lucid-DropMenu-Option'
+				);
+
+				assert.equal(optionDOMNodes.length, 3);
+				assert.equal(optionDOMNodes[0].innerHTML, 'option a');
+				assert.equal(optionDOMNodes[1].innerHTML, 'option b');
+				assert.equal(optionDOMNodes[2].innerHTML, 'option c');
+			});
 		});
 
 		describe('OptionGroup', () => {
