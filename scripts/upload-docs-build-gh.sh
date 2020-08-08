@@ -5,6 +5,8 @@ set -e
 
 # Get the current branch name
 CURRENT_BRANCH=`git symbolic-ref -q --short HEAD`
+IS_SSH=`git remote get-url origin | grep -qE '^git'; echo $?`
+REMOTE=`[ "$IS_SSH" = "0" ] && echo "git@github.com:appnexus/lucid.git" || echo "https://github.com/appnexus/lucid.git"`
 
 # Only run this script if we're on `master`
 if [ "$CURRENT_BRANCH" = "master" ]; then
@@ -20,6 +22,6 @@ if [ "$CURRENT_BRANCH" = "master" ]; then
 	# repo's gh-pages branch. (All previous history on the gh-pages branch
 	# will be lost, since we are overwriting it.) We redirect any output to
 	# /dev/null to hide any sensitive credential data that might otherwise be exposed.
-	git push --force --quiet "git@github.com:appnexus/lucid.git" master:gh-pages > /dev/null 2>&1
+	git push --force --quiet "$REMOTE" master:gh-pages > /dev/null 2>&1
 fi
 
