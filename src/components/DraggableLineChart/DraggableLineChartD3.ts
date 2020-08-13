@@ -6,11 +6,14 @@ import * as d3Transition from 'd3-transition';
 import { d3Scale } from '../../index';
 import _ from 'lodash';
 import * as d3Array from 'd3-array';
+import { lucidXAxis, IXAxisRenderProp } from '../../util/d3-helpers';
 
 interface ChartData {
-	x: Date | string | number | undefined;
-	y: Date | string | number | undefined;
+	x?: Date | string | number;
+	y?: Date | string | number;
 }
+export type IOnDragEnd = (newYValue: string, xValue: string) => void;
+export type IData = Array<{ x: string; y: number }>;
 
 interface IDraggableLineChartParams {
 	margin: {
@@ -21,12 +24,13 @@ interface IDraggableLineChartParams {
 	};
 	height: number;
 	width: number;
-	data: Array<{ [key: string]: Date | string | number | undefined }>;
-	onDragEnd?: (d: any) => any;
+	data: IData;
+	onDragEnd?: IOnDragEnd;
 	xAxisTicksVertical?: boolean;
 	dataIsCentered?: boolean;
 	yAxisMin?: number;
 	cx: (d: any) => void;
+	xAxisRenderProp?: IXAxisRenderProp;
 }
 
 class DraggableLineChartD3 {
@@ -114,8 +118,8 @@ class DraggableLineChartD3 {
 					.y((chartData: ChartData) => yScale(chartData.y));
 				lines.attr('d', line);
 			})
-			.on('end', d => {
-				if (onDragEnd) onDragEnd(d);
+			.on('end', (d: any) => {
+				if (onDragEnd) onDragEnd(d.y, d.x);
 				renderLine(false);
 				renderPoints(false);
 			});
@@ -128,15 +132,16 @@ class DraggableLineChartD3 {
 				xAxisTicksVertical,
 				dataIsCentered,
 				cx,
+				xAxisRenderProp,
 			} = this.params;
 			xAxis
 				.attr('transform', `translate(${0},${margin.top})`)
 				.classed(`${cx('&-Axis')}`, true)
-				.call(
-					d3Axis
-						.axisTop(this.xScale)
-						.tickSize(margin.top + margin.bottom - height)
-				);
+				.call(lucidXAxis, {
+					xScale: this.xScale,
+					tickSize: margin.top + margin.bottom - height,
+					xAxisRenderProp,
+				});
 			if (xAxisTicksVertical) {
 				xAxis.classed('Vert', true);
 			} else {
@@ -244,9 +249,10 @@ class DraggableLineChartD3 {
 				: this.params.yAxisMin,
 			d3Array.max(this.params.data, (d: any) => d.y),
 		]);
+		this.renderXAxis();
+		this.renderYAxis();
 		this.renderLine(false);
 		this.renderPoints(false);
-		this.renderYAxis();
 	};
 }
 

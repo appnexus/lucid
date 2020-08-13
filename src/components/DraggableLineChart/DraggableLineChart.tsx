@@ -8,7 +8,8 @@ import {
 } from '../../util/component-types';
 import * as d3Selection from 'd3-selection';
 import { lucidClassNames } from '../../util/style-helpers';
-import DraggableLineChartD3 from './DraggableLineChartD3';
+import DraggableLineChartD3, { IData, IOnDragEnd } from './DraggableLineChartD3';
+import { IXAxisRenderProp } from '../../util/d3-helpers';
 
 const cx = lucidClassNames.bind('&-DraggableLineChart');
 const { arrayOf, number, object, shape, func } = PropTypes;
@@ -42,12 +43,12 @@ export interface IDraggableLineChartPropsRaw extends StandardProps {
 	 * { x: new Date('2015-01-05') , y: 5 } ,
 	 * ]
 	 */
-	data: Array<{ [key: string]: Date | string | number | undefined }>;
+	data: IData;
 
 	/**
 	 * Drag handler function which is a callable function executed at the end of drag
 	 */
-	onDragEnd?: (d: any) => any;
+	onDragEnd?: IOnDragEnd;
 
 	/**
 	 * Flag for if xAxis tick labels are vertical.
@@ -63,6 +64,11 @@ export interface IDraggableLineChartPropsRaw extends StandardProps {
 	 * Flag for yAxis sticking to minimum (not readjusting minimum)
 	 */
 	yAxisMin?: number;
+
+	/**
+	 * Optional react component to render within X-Axis
+	 */
+	xAxisRenderProp?: IXAxisRenderProp;
 }
 
 export type IDraggableLineChartProps = Overwrite<
@@ -94,6 +100,7 @@ class DraggableLineChart extends React.Component<IDraggableLineChartProps, {}> {
 			xAxisTicksVertical,
 			dataIsCentered,
 			yAxisMin,
+			xAxisRenderProp,
 		} = this.props;
 		this.d3LineChart = new DraggableLineChartD3(svg, {
 			margin,
@@ -105,6 +112,7 @@ class DraggableLineChart extends React.Component<IDraggableLineChartProps, {}> {
 			dataIsCentered,
 			yAxisMin,
 			cx,
+			xAxisRenderProp,
 		});
 		this.d3LineChart.renderLineChart();
 	}
@@ -161,6 +169,9 @@ class DraggableLineChart extends React.Component<IDraggableLineChartProps, {}> {
 			Called when the user stops to dragging an item.
 			Signature: \`({ event, props }) => {}\`
 		`,
+		xAxisRenderProp: func`
+		  Optional react component to render within X-Axis
+		`
 	};
 
 	static defaultProps = {
