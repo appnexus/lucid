@@ -13,7 +13,7 @@ interface ChartData {
 	y?: Date | string | number;
 }
 export type IOnDragEnd = (newYValue: string, xValue: string) => void;
-export type IData = Array<{ x: string; y: number }>;
+export type IData = Array<{ x: string; y: number; ref?: any }>;
 
 interface IDraggableLineChartParams {
 	margin: {
@@ -142,7 +142,7 @@ class DraggableLineChartD3 {
 						xScale: this.xScale,
 						tickSize: margin.top + margin.bottom - height,
 						xAxisRenderProp,
-						dataIsCentered
+						dataIsCentered,
 					});
 				if (xAxisTicksVertical) {
 					xAxis.classed('Vert', true);

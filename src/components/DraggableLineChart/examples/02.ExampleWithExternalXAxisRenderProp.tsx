@@ -6,18 +6,18 @@ import { IXAxisRenderProp } from '../../../util/d3-helpers';
 import { IData } from '../DraggableLineChartD3';
 
 const initialCustomSpendDataPoints = [
-	{ x: '12 AM', y: 0 },
-	{ x: '1 AM', y: 0 },
-	{ x: '2 AM', y: 0 },
-	{ x: '3 AM', y: 0 },
-	{ x: '4 AM', y: 0 },
-	{ x: '5 AM', y: 5 },
-	{ x: '6 AM', y: 5 },
-	{ x: '7 AM', y: 10 },
-	{ x: '8 AM', y: 5 },
-	{ x: '9 AM', y: 5 },
-	{ x: '10 AM', y: 5 },
-	{ x: '11 AM', y: 5 },
+	{ x: '12 AM', y: 0, ref: React.createRef() },
+	{ x: '1 AM', y: 0, ref: React.createRef() },
+	{ x: '2 AM', y: 0, ref: React.createRef() },
+	{ x: '3 AM', y: 0, ref: React.createRef() },
+	{ x: '4 AM', y: 0, ref: React.createRef() },
+	{ x: '5 AM', y: 5, ref: React.createRef() },
+	{ x: '6 AM', y: 5, ref: React.createRef() },
+	{ x: '7 AM', y: 10, ref: React.createRef() },
+	{ x: '8 AM', y: 5, ref: React.createRef() },
+	{ x: '9 AM', y: 5, ref: React.createRef() },
+	{ x: '10 AM', y: 5, ref: React.createRef() },
+	{ x: '11 AM', y: 5, ref: React.createRef() },
 ];
 
 const style = {
@@ -54,7 +54,12 @@ const DataInput = ({
 	);
 	return (
 		<div style={{ width: '70%', margin: 'auto' }}>
-			<TextField value={customSpendDataPoint.y || 0} onBlur={onChange} tabIndex={0}/>
+			<TextField
+				value={customSpendDataPoint.y || 0}
+				onBlur={onChange}
+				tabIndex={1}
+				ref={customSpendDataPoint.ref}
+			/>
 			<div style={{ margin: 'auto', textAlign: 'center', width: '95%' }}>
 				{xValue}
 			</div>
@@ -68,6 +73,10 @@ export default createClass({
 		};
 	},
 	onChangeHandler(newYValue: string, xValue: string) {
+		const currentIndex = _.findIndex(this.state.customSpendDataPoints, [
+			'x',
+			xValue,
+		]);
 		const newCustomSpendDataPoints = _.map(
 			this.state.customSpendDataPoints,
 			dataPoint =>
@@ -76,6 +85,13 @@ export default createClass({
 					: dataPoint
 		);
 		this.setState({ customSpendDataPoints: newCustomSpendDataPoints });
+
+		const nextIndex =
+			currentIndex >= newCustomSpendDataPoints.length - 1
+				? 0
+				: currentIndex + 1;
+		const myRef = newCustomSpendDataPoints[nextIndex].ref;
+		setTimeout(() => myRef.current.focus(), 100);
 	},
 	getRenderProp(
 		{

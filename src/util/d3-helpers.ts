@@ -49,7 +49,6 @@ const getTickObj = (selection: ISelection): ISelection => {
 		data = selection
 			.selectAll('foreignObject')
 			.append('xhtml:div')
-			.attr('tabindex',0)
 			.style('transform', 'translate(0px, -50px)')
 			.classed('innerDiv', true);
 	}
