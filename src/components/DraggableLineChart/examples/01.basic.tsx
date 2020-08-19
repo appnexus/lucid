@@ -26,6 +26,7 @@ export default createClass({
 		return (
 			<div style={style}>
 				<DraggableLineChart
+					onDragEnd={(x, y) => console.log({ x, y })}
 					data={data}
 					width={900}
 					xAxisTicksVertical={true}
