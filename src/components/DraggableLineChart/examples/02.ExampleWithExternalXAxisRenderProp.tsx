@@ -3,7 +3,7 @@ import createClass from 'create-react-class';
 import _ from 'lodash';
 import { DraggableLineChart, TextField } from '../../../index';
 import { IXAxisRenderProp } from '../d3-helpers';
-import { IData } from '../DraggableLineChartD3';
+import { IChartData, IData } from '../DraggableLineChartD3';
 
 const initialCustomSpendDataPoints = [
 	{ x: '12 AM', y: 0, ref: React.createRef() },
@@ -40,7 +40,7 @@ const DataInput = ({
 }): JSX.Element => {
 	const customSpendDataPoint = useMemo(() => {
 		return (
-			_.find(customSpendDataPoints, ({ x }: { x: string }) => x === xValue) || {
+			_.find(customSpendDataPoints, ({ x }: IChartData) => x === xValue) || {
 				x: '',
 				y: 0,
 			}

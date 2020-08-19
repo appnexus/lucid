@@ -115,12 +115,6 @@ const lucidXAxis = (
 		.attr('y1', 0)
 		.attr('y2', 0);
 
-	// selection
-	// 	.attr('x1', min)
-	// 	.attr('x2', max)
-	// 	.attr('y1', 0)
-	// 	.attr('y2', 0);
-
 	const xLines = getGroups(axisGroup, 'xLines', domain);
 	const xLine = xLines.attr(
 		'transform',

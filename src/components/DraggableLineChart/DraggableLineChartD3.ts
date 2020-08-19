@@ -10,7 +10,7 @@ import * as d3Array from 'd3-array';
 import { StandardProps } from '../../util/component-types';
 import { IXAxisRenderProp, getGroup, lucidXAxis, ISelection } from './d3-helpers';
 
-interface IChartData {
+export interface IChartData {
 	x: string;
 	y: number;
 	ref?: any;
