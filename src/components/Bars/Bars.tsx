@@ -382,7 +382,7 @@ export class Bars extends PureComponent<IBarsProps, IBarsState> {
 		// the various series' y data. One row per series.
 		const transformedData = isStacked
 			? memoizedStackByFields(data, yFields)
-			: memoizedExtractFields(data, yFields);
+			: memoizedExtractFields(data, yFields, (yScale.domain() as number[])[0]);
 
 		// If we are stacked, we need to calculate a new domain based on the sum of
 		// the various group's y data
