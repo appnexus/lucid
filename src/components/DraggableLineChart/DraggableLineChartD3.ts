@@ -1,4 +1,5 @@
 import * as d3Axis from 'd3-axis';
+import { ScaleLinear, ScalePoint } from 'd3-scale';
 import * as d3Shape from 'd3-shape';
 import * as d3Drag from 'd3-drag';
 import * as d3Selection from 'd3-selection';
@@ -6,54 +7,50 @@ import * as d3Transition from 'd3-transition';
 import { d3Scale } from '../../index';
 import _ from 'lodash';
 import * as d3Array from 'd3-array';
-import { IXAxisRenderProp, getGroup, lucidXAxis } from '../../util/d3-helpers';
+import { StandardProps } from '../../util/component-types';
+import { IXAxisRenderProp, getGroup, lucidXAxis, ISelection } from './d3-helpers';
 
-interface ChartData {
-	x?: Date | string | number;
-	y?: Date | string | number;
+interface IChartData {
+	x: string;
+	y: number;
+	ref?: any;
 }
 export type IOnDragEnd = (newYValue: string, xValue: string) => void;
-export type IData = Array<{ x: string; y: number; ref?: any }>;
+export type IData = IChartData[];
 
-interface IDraggableLineChartParams {
-	margin: {
-		top: number;
-		right: number;
-		bottom: number;
-		left: number;
-	};
-	height: number;
-	width: number;
+interface IDraggableLineChartMargin {
+	top: number;
+	right: number;
+	bottom: number;
+	left: number;
+}
+
+export interface IDraggableLineChart extends StandardProps {
+	height?: number;
+	width?: number;
+	margin?: IDraggableLineChartMargin;
 	data: IData;
-	onDragEnd?: IOnDragEnd;
+	onDragEnd: IOnDragEnd;
 	xAxisTicksVertical?: boolean;
 	dataIsCentered?: boolean;
 	yAxisMin?: number;
-	cx: (d: any) => void;
 	xAxisRenderProp?: IXAxisRenderProp;
 }
 
+interface IDraggableLineChartParams extends IDraggableLineChart{
+	cx: (d: any) => void;
+	height: number;
+	width: number;
+	margin: IDraggableLineChartMargin;
+	yAxisMin: number;
+};
+
 class DraggableLineChartD3 {
-	selection: any;
-	params: IDraggableLineChartParams = {
-		margin: {
-			top: 10,
-			right: 80,
-			bottom: 65,
-			left: 80,
-		},
-		height: 300,
-		width: 1000,
-		onDragEnd: _.noop,
-		xAxisTicksVertical: false,
-		dataIsCentered: false,
-		yAxisMin: 0,
-		data: [],
-		cx: _.noop,
-	};
-	xScale: any;
-	yScale: any;
-	constructor(selection: any, params: IDraggableLineChartParams) {
+	selection: ISelection;
+	params: IDraggableLineChartParams;
+	xScale: ScalePoint<string>;
+	yScale: ScaleLinear<number, number>;
+	constructor(selection: ISelection, params: IDraggableLineChartParams) {
 		this.selection = selection;
 		this.params = params;
 		if (params.dataIsCentered) {
@@ -92,7 +89,7 @@ class DraggableLineChartD3 {
 			]);
 	}
 
-	drag = () => {
+	drag: any = () => {
 		const { xScale, yScale, renderLine, renderPoints, selection } = this;
 		const { cx, onDragEnd } = this.params;
 		let initialPosition: number;
@@ -113,9 +110,9 @@ class DraggableLineChartD3 {
 				pointData.y = Number(yScale.invert(newPointY));
 				activeDot.attr('cy', newPointY);
 				const line: any = d3Shape
-					.line<ChartData>()
-					.x((chartData: ChartData) => xScale(chartData.x))
-					.y((chartData: ChartData) => yScale(chartData.y));
+					.line<IChartData>()
+					.x((chartData: IChartData) => xScale(chartData.x) || 0)
+					.y((chartData: IChartData) => yScale(chartData.y));
 				lines.attr('d', line);
 			})
 			.on('end', (d: any) => {
@@ -186,7 +183,7 @@ class DraggableLineChartD3 {
 					.attr('class', `${cx('&-Line')}`);
 			}
 		}
-		const lines = this.selection.selectAll(`path.${cx('&-Line')}`);
+		const lines: any = this.selection.selectAll(`path.${cx('&-Line')}`);
 		lines.datum(this.params.data).enter();
 		lines
 			.transition(d3Transition.transition().duration(500))
@@ -195,7 +192,7 @@ class DraggableLineChartD3 {
 				'd',
 				d3Shape
 					.line()
-					.x((d: any) => this.xScale(d.x))
+					.x((d: any) => this.xScale(d.x) || 0)
 					.y((d: any) => this.yScale(d.y))
 			);
 	};
@@ -217,7 +214,7 @@ class DraggableLineChartD3 {
 			circle
 				.transition()
 				.duration(500)
-				.attr('cx', (d: any) => this.xScale(d.x))
+				.attr('cx', (d: any) => this.xScale(d.x) || 0)
 				.attr('cy', (d: any) => this.yScale(d.y))
 				.attr('r', 5)
 				.attr('transform', `translate(${innerXTickWidth / 2}, 0)`)
@@ -229,7 +226,7 @@ class DraggableLineChartD3 {
 			circle
 				.transition()
 				.duration(500)
-				.attr('cx', (d: any) => this.xScale(d.x))
+				.attr('cx', (d: any) => this.xScale(d.x) || 0)
 				.attr('cy', (d: any) => this.yScale(d.y))
 				.attr('r', 5)
 				.style('fill', '#009fdb')

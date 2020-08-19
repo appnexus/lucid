@@ -4,21 +4,7 @@ import * as d3Array from 'd3-array';
 import ReactDOM from 'react-dom';
 
 export type IXAxisRenderProp = (xValue: string) => JSX.Element;
-type ISelection = Selection<SVGElement | any, {} | any, null, undefined | any>;
-
-const setLineAttributes = (
-	selection: any,
-	orientation: any,
-	range: [number, number]
-) => {
-	const [min, max] = range;
-
-	selection
-		.attr('x1', min)
-		.attr('x2', max)
-		.attr('y1', 0)
-		.attr('y2', 0);
-};
+export type ISelection = Selection<SVGElement | any, {} | any, null, undefined>;
 
 const getGroup = (selection: ISelection, className: string): ISelection => {
 	const xAxisGroup = selection.select(`.${className}`);
@@ -124,7 +110,16 @@ const lucidXAxis = (
 	axisGroup
 		.append('line')
 		.attr('stroke', 'black')
-		.call(setLineAttributes, 'TOP', [rMin, rMax]);
+		.attr('x1', rMin)
+		.attr('x2', rMax)
+		.attr('y1', 0)
+		.attr('y2', 0);
+
+	// selection
+	// 	.attr('x1', min)
+	// 	.attr('x2', max)
+	// 	.attr('y1', 0)
+	// 	.attr('y2', 0);
 
 	const xLines = getGroups(axisGroup, 'xLines', domain);
 	const xLine = xLines.attr(

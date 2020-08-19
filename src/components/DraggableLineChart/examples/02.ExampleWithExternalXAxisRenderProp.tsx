@@ -2,7 +2,7 @@ import React, { useCallback, useMemo } from 'react';
 import createClass from 'create-react-class';
 import _ from 'lodash';
 import { DraggableLineChart, TextField } from '../../../index';
-import { IXAxisRenderProp } from '../../../util/d3-helpers';
+import { IXAxisRenderProp } from '../d3-helpers';
 import { IData } from '../DraggableLineChartD3';
 
 const initialCustomSpendDataPoints = [
