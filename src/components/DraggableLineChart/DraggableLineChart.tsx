@@ -21,6 +21,12 @@ const getCleanData = (data: IData): IData => {
 	return data.map(({ x, y }) => ({ x, y: Number.isInteger(y) ? y : 0 }));
 };
 
+const draggableLineChartDefaultProps = {
+	height: 300,
+	width: 1000,
+	margin: { top: 50, right: 80, bottom: 65, left: 80 },
+};
+
 class DraggableLineChart extends React.Component<IDraggableLineChartProps, {}> {
 	ref: any;
 	d3LineChart: any;
@@ -37,9 +43,9 @@ class DraggableLineChart extends React.Component<IDraggableLineChartProps, {}> {
 	componentDidMount() {
 		const svg = d3Selection.select(this.ref);
 		const {
-			height = 300,
-			width = 1000,
-			margin = { top: 50, right: 80, bottom: 65, left: 80 },
+			height,
+			width,
+			margin,
 			data,
 			onDragEnd,
 			xAxisTicksVertical,
@@ -48,9 +54,9 @@ class DraggableLineChart extends React.Component<IDraggableLineChartProps, {}> {
 			xAxisRenderProp,
 		} = this.props;
 		this.d3LineChart = new DraggableLineChartD3(svg, {
-			height,
-			width,
-			margin,
+			height: height || draggableLineChartDefaultProps.height,
+			width: width || draggableLineChartDefaultProps.width,
+			margin: margin || draggableLineChartDefaultProps.margin,
 			data: getCleanData(data),
 			onDragEnd,
 			xAxisTicksVertical,
@@ -129,6 +135,7 @@ class DraggableLineChart extends React.Component<IDraggableLineChartProps, {}> {
 			in the data.
 		`,
 	};
+	static defaultProps = draggableLineChartDefaultProps ;
 
 	render(): React.ReactNode {
 		const { height, width, ...passThroughs } = this.props;

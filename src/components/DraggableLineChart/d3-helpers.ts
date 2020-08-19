@@ -35,6 +35,7 @@ const getTickObj = (selection: ISelection): ISelection => {
 		data = selection
 			.selectAll('foreignObject')
 			.append('xhtml:div')
+			.style('position','fixed')
 			.style('transform', 'translate(0px, -50px)')
 			.classed('innerDiv', true);
 	}
