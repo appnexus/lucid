@@ -76,6 +76,10 @@ export type IDraggableLineChartProps = Overwrite<
 	IDraggableLineChartPropsRaw
 >;
 
+const getCleanData = (data: IData): IData => {
+	return data.map(({ x,y }) => ({x, y: Number.isInteger(y) ? y : 0}))
+}
+
 class DraggableLineChart extends React.Component<IDraggableLineChartProps, {}> {
 	ref: any;
 	d3LineChart: any;
@@ -86,7 +90,7 @@ class DraggableLineChart extends React.Component<IDraggableLineChartProps, {}> {
 	}
 
 	componentDidUpdate() {
-		this.d3LineChart.params.data = this.props.data;
+		this.d3LineChart.params.data = getCleanData(this.props.data);
 		this.d3LineChart.updateLineChart();
 	}
 	componentDidMount() {
@@ -104,7 +108,7 @@ class DraggableLineChart extends React.Component<IDraggableLineChartProps, {}> {
 		} = this.props;
 		this.d3LineChart = new DraggableLineChartD3(svg, {
 			margin,
-			data,
+			data: getCleanData(data),
 			height,
 			width,
 			onDragEnd,

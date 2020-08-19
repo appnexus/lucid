@@ -54,12 +54,10 @@ const DataInput = ({
 	);
 	return (
 		<div style={{ width: '70%', margin: 'auto' }}>
-			<TextField
-				value={customSpendDataPoint.y || 0}
-				onChange={onChange}
-				type='number'
-			/>
-			<div>{xValue}</div>
+			<TextField value={customSpendDataPoint.y || 0} onBlur={onChange} tabIndex={0}/>
+			<div style={{ margin: 'auto', textAlign: 'center', width: '95%' }}>
+				{xValue}
+			</div>
 		</div>
 	);
 };
@@ -74,7 +72,7 @@ export default createClass({
 			this.state.customSpendDataPoints,
 			dataPoint =>
 				dataPoint.x === xValue
-					? { ...dataPoint, y: Number(newYValue).toFixed(0) }
+					? { ...dataPoint, y: +Number(newYValue).toFixed(0) }
 					: dataPoint
 		);
 		this.setState({ customSpendDataPoints: newCustomSpendDataPoints });
@@ -98,7 +96,9 @@ export default createClass({
 	render() {
 		const { customSpendDataPoints } = this.state;
 		const onDragEnd = _.partial(this.onChangeHandler, _, _);
-		const renderProp:IXAxisRenderProp = _.partial(this.getRenderProp, { onDragEnd });
+		const renderProp: IXAxisRenderProp = _.partial(this.getRenderProp, {
+			onDragEnd,
+		});
 		return (
 			<div style={style}>
 				<DraggableLineChart

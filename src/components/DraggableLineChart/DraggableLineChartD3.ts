@@ -6,7 +6,7 @@ import * as d3Transition from 'd3-transition';
 import { d3Scale } from '../../index';
 import _ from 'lodash';
 import * as d3Array from 'd3-array';
-import { lucidXAxis, IXAxisRenderProp } from '../../util/d3-helpers';
+import { IXAxisRenderProp, getGroup, lucidXAxis } from '../../util/d3-helpers';
 
 interface ChartData {
 	x?: Date | string | number;
@@ -125,47 +125,49 @@ class DraggableLineChartD3 {
 			});
 	};
 	renderXAxis = () => {
-		this.selection.append('g').call((xAxis: any) => {
-			const {
-				margin,
-				height,
-				xAxisTicksVertical,
-				dataIsCentered,
-				cx,
-				xAxisRenderProp,
-			} = this.params;
-			xAxis
-				.attr('transform', `translate(${0},${margin.top})`)
-				.classed(`${cx('&-Axis')}`, true)
-				.call(lucidXAxis, {
-					xScale: this.xScale,
-					tickSize: margin.top + margin.bottom - height,
-					xAxisRenderProp,
-				});
-			if (xAxisTicksVertical) {
-				xAxis.classed('Vert', true);
-			} else {
-				xAxis.classed('NoVert', true);
-			}
-			if (dataIsCentered) {
-				xAxis.classed('Center', true);
-			}
-		});
+		const {
+			margin,
+			height,
+			xAxisTicksVertical,
+			dataIsCentered,
+			cx,
+			xAxisRenderProp,
+		} = this.params;
+		const xGroup = getGroup(this.selection, `${cx('&-Axis')}`);
+		xGroup
+			.call((xAxis: any) => {
+				xAxis
+					.attr('transform', `translate(${0},${margin.top})`)
+					.call(lucidXAxis, {
+						xScale: this.xScale,
+						tickSize: margin.top + margin.bottom - height,
+						xAxisRenderProp,
+						dataIsCentered
+					});
+				if (xAxisTicksVertical) {
+					xAxis.classed('Vert', true);
+				} else {
+					xAxis.classed('NoVert', true);
+				}
+				if (dataIsCentered) {
+					xAxis.classed('Center', true);
+				}
+			})
+			.call(() => xGroup);
 	};
 	renderYAxis = () => {
-		let yAxisGroup = this.selection.selectAll('.yAxisGroup');
-		if (yAxisGroup.empty()) {
-			yAxisGroup = this.selection.append('g').classed('yAxisGroup', true);
-		}
-		yAxisGroup.call((yAxis: any) => {
-			const { margin, cx } = this.params;
-			yAxis
-				.attr('transform', `translate(${margin.left},${0})`)
-				.classed(`${cx('&-Axis')}`, true)
-				.transition()
-				.duration(500)
-				.call(d3Axis.axisLeft(this.yScale).ticks(10));
-		});
+		const yGroup = getGroup(this.selection, 'yAxisGroup');
+		yGroup
+			.call((yAxis: any) => {
+				const { margin, cx } = this.params;
+				yAxis
+					.attr('transform', `translate(${margin.left},${0})`)
+					.classed(`${cx('&-Axis')}`, true)
+					.transition()
+					.duration(500)
+					.call(d3Axis.axisLeft(this.yScale).ticks(10));
+			})
+			.call(() => yGroup);
 	};
 	renderLine = (isNew: boolean) => {
 		const { dataIsCentered, cx } = this.params;
