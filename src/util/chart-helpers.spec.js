@@ -62,6 +62,19 @@ describe('chart-helpers', () => {
 				[[0, 10], [0, 0], [0, 0], [0, 100]],
 			]);
 		});
+		it('should use minimum domain value', () => {
+			const data = [
+				{ y: 1 },
+				{ y: 10 },
+				{ y: 100 },
+			];
+
+			assert.deepEqual(extractFields(data, ['y'], 1), [
+				[[1, 1]],
+				[[1, 10]],
+				[[1, 100]],
+			]);
+		});
 	});
 
 	describe('stackByFields', () => {
