@@ -57,7 +57,7 @@ const DataInput = ({
 			<TextField
 				value={customSpendDataPoint.y || 0}
 				onBlur={onChange}
-				tabIndex={1}
+				tabIndex={0}
 				ref={customSpendDataPoint.ref}
 			/>
 			<div style={{ margin: 'auto', textAlign: 'center', width: '95%' }}>
@@ -72,11 +72,7 @@ export default createClass({
 			customSpendDataPoints: initialCustomSpendDataPoints,
 		};
 	},
-	onChangeHandler(newYValue: string, xValue: string) {
-		const currentIndex = _.findIndex(this.state.customSpendDataPoints, [
-			'x',
-			xValue,
-		]);
+	onDragHandler(newYValue: string, xValue: string): IData {
 		const newCustomSpendDataPoints = _.map(
 			this.state.customSpendDataPoints,
 			dataPoint =>
@@ -85,19 +81,33 @@ export default createClass({
 					: dataPoint
 		);
 		this.setState({ customSpendDataPoints: newCustomSpendDataPoints });
+		return newCustomSpendDataPoints;
+	},
+	onChangeHandler(newYValue: string, xValue: string) {
+		const currentIndex = _.findIndex(this.state.customSpendDataPoints, [
+			'x',
+			xValue,
+		]);
+		const currentYValue = this.state.customSpendDataPoints[currentIndex].y;
+		const newCustomSpendDataPoints = this.onDragHandler(newYValue, xValue);
+		const nextValue = newCustomSpendDataPoints[currentIndex].y;
 
-		const nextIndex =
-			currentIndex >= newCustomSpendDataPoints.length - 1
-				? 0
-				: currentIndex + 1;
-		const myRef = newCustomSpendDataPoints[nextIndex].ref;
-		setTimeout(() => myRef.current.focus(), 100);
+		if (currentYValue !== nextValue) {
+			console.log({ currentYValue, newYValue });
+			const nextIndex =
+				currentIndex >= newCustomSpendDataPoints.length - 1
+					? 0
+					: currentIndex + 1;
+
+			const myRef = newCustomSpendDataPoints[nextIndex].ref;
+			setTimeout(() => myRef.current.focus(), 1);
+		}
 	},
 	getRenderProp(
 		{
-			onDragEnd,
+			onChangeHandler,
 		}: {
-			onDragEnd: (newYValue: string, xValue: string) => void;
+			onChangeHandler: (newYValue: string, xValue: string) => void;
 		},
 		xValue: string
 	): JSX.Element {
@@ -105,15 +115,14 @@ export default createClass({
 			<DataInput
 				xValue={xValue}
 				customSpendDataPoints={this.state.customSpendDataPoints}
-				changeHandler={onDragEnd}
+				changeHandler={onChangeHandler}
 			/>
 		);
 	},
 	render() {
 		const { customSpendDataPoints } = this.state;
-		const onDragEnd = _.partial(this.onChangeHandler, _, _);
 		const renderProp: IXAxisRenderProp = _.partial(this.getRenderProp, {
-			onDragEnd,
+			onChangeHandler: this.onChangeHandler,
 		});
 		return (
 			<div style={style}>
@@ -121,7 +130,7 @@ export default createClass({
 					data={customSpendDataPoints}
 					width={900}
 					dataIsCentered
-					onDragEnd={onDragEnd}
+					onDragEnd={this.onDragHandler}
 					xAxisRenderProp={renderProp}
 				/>
 			</div>
