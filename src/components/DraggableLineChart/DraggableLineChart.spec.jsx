@@ -28,4 +28,19 @@ describe('DraggableLineChart', () => {
 			assert.equal(wrapper.find('svg').length, 1, 'did not render an svg');
 		});
 	});
+	describe('when props update,', () => {
+		it('should call d3LineChart.updateLineChart', () => {
+			const data = [
+				{ x: '12:00', y: 1 },
+				{ x: '1:00', y: 2 },
+				{ x: '2:00', y: 3 },
+			];
+			wrapper = mount(<DraggableLineChart data={data} />);
+			wrapper.instance().d3LineChart.updateLineChart = jest.fn();
+			data.push({x: '3:00', y: 6});
+			wrapper.setProps({ data: data });
+
+			expect(wrapper.instance().d3LineChart.updateLineChart).toBeCalledTimes(1);
+		});
+	});
 });

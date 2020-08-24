@@ -8,7 +8,12 @@ import { d3Scale } from '../../index';
 import _ from 'lodash';
 import * as d3Array from 'd3-array';
 import { StandardProps } from '../../util/component-types';
-import { IXAxisRenderProp, getGroup, lucidXAxis, ISelection } from './d3-helpers';
+import {
+	IXAxisRenderProp,
+	getGroup,
+	lucidXAxis,
+	ISelection,
+} from './d3-helpers';
 
 export interface IChartData {
 	x: string;
@@ -37,7 +42,7 @@ export interface IDraggableLineChart extends StandardProps {
 	xAxisRenderProp?: IXAxisRenderProp;
 }
 
-interface IDraggableLineChartParams extends IDraggableLineChart{
+interface IDraggableLineChartParams extends IDraggableLineChart {
 	cx: (d: any) => void;
 	height: number;
 	width: number;
@@ -241,7 +246,8 @@ class DraggableLineChartD3 {
 		this.renderLine(true);
 		this.renderPoints(true);
 	};
-	updateLineChart = () => {
+	updateLineChart = (data: IData) => {
+		this.params.data = data;
 		this.yScale.domain([
 			_.isUndefined(this.params.yAxisMin)
 				? d3Array.min(this.params.data, (d: any) => d.y)

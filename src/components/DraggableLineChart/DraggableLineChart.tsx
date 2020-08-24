@@ -37,8 +37,7 @@ class DraggableLineChart extends React.Component<IDraggableLineChartProps, {}> {
 	}
 
 	componentDidUpdate() {
-		this.d3LineChart.params.data = getCleanData(this.props.data);
-		this.d3LineChart.updateLineChart();
+		this.d3LineChart.updateLineChart(this.props.data);
 	}
 	componentDidMount() {
 		const svg = d3Selection.select(this.ref);
