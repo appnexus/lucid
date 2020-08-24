@@ -1,74 +1,31 @@
+import * as d3Selection from 'd3-selection';
 import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
-import {
-	omitProps,
-	Overwrite,
-	StandardProps,
-} from '../../util/component-types';
-import * as d3Selection from 'd3-selection';
+import { omitProps, Overwrite } from '../../util/component-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import DraggableLineChartD3 from './DraggableLineChartD3';
+import DraggableLineChartD3, {
+	IData,
+	IDraggableLineChart,
+} from './DraggableLineChartD3';
 
 const cx = lucidClassNames.bind('&-DraggableLineChart');
-const { arrayOf, number, object, shape, func } = PropTypes;
-
-interface IDraggableLineChartMargin {
-	top: number;
-	right: number;
-	bottom: number;
-	left: number;
-}
-
-export interface IDraggableLineChartPropsRaw extends StandardProps {
-	/** Height of the chart. */
-	height: number;
-
-	/** Width of the chart. */
-	width: number;
-
-	/**
-	 * 	Margin is an object defining the margins of the chart. These margins will contain
-	 * 	the axis and labels.
-	 */
-	margin: IDraggableLineChartMargin;
-
-	/**
-	 * Data for the chart. E.g.
-	 * { x: new Date('2015-01-01') , y: 1 } ,
-	 * { x: new Date('2015-01-02') , y: 2 } ,
-	 * { x: new Date('2015-01-03') , y: 3 } ,
-	 * { x: new Date('2015-01-04') , y: 2 } ,
-	 * { x: new Date('2015-01-05') , y: 5 } ,
-	 * ]
-	 */
-	data: Array<{ [key: string]: Date | string | number | undefined }>;
-
-	/**
-	 * Drag handler function which is a callable function executed at the end of drag
-	 */
-	onDragEnd?: (d: any) => any;
-
-	/**
-	 * Flag for if xAxis tick labels are vertical.
-	 */
-	xAxisTicksVertical?: boolean;
-
-	/**
-	 * Flag for if data is center aligned rather than default left aligned.
-	 */
-	dataIsCentered?: boolean;
-
-	/**
-	 * Flag for yAxis sticking to minimum (not readjusting minimum)
-	 */
-	yAxisMin?: number;
-}
+const { arrayOf, number, object, shape, func, bool } = PropTypes;
 
 export type IDraggableLineChartProps = Overwrite<
 	React.SVGProps<SVGGElement>,
-	IDraggableLineChartPropsRaw
+	IDraggableLineChart
 >;
+
+const getCleanData = (data: IData): IData => {
+	return data.map(({ x, y }) => ({ x, y: Number.isInteger(y) ? y : 0 }));
+};
+
+const draggableLineChartDefaultProps = {
+	height: 300,
+	width: 1000,
+	margin: { top: 50, right: 80, bottom: 65, left: 80 },
+};
 
 class DraggableLineChart extends React.Component<IDraggableLineChartProps, {}> {
 	ref: any;
@@ -80,30 +37,31 @@ class DraggableLineChart extends React.Component<IDraggableLineChartProps, {}> {
 	}
 
 	componentDidUpdate() {
-		this.d3LineChart.params.data = this.props.data;
-		this.d3LineChart.updateLineChart();
+		this.d3LineChart.updateLineChart(this.props.data);
 	}
 	componentDidMount() {
 		const svg = d3Selection.select(this.ref);
 		const {
-			margin,
-			data,
 			height,
 			width,
+			margin,
+			data,
 			onDragEnd,
 			xAxisTicksVertical,
 			dataIsCentered,
-			yAxisMin,
+			yAxisMin = 0,
+			xAxisRenderProp,
 		} = this.props;
 		this.d3LineChart = new DraggableLineChartD3(svg, {
-			margin,
-			data,
-			height,
-			width,
+			height: height || draggableLineChartDefaultProps.height,
+			width: width || draggableLineChartDefaultProps.width,
+			margin: margin || draggableLineChartDefaultProps.margin,
+			data: getCleanData(data),
 			onDragEnd,
 			xAxisTicksVertical,
 			dataIsCentered,
 			yAxisMin,
+			xAxisRenderProp,
 			cx,
 		});
 		this.d3LineChart.renderLineChart();
@@ -119,60 +77,64 @@ class DraggableLineChart extends React.Component<IDraggableLineChartProps, {}> {
 		categories: ['visualizations', 'charts'],
 	};
 
-	static MARGIN = {
-		top: 10,
-		right: 80,
-		bottom: 65,
-		left: 80,
-	};
-
 	static propTypes = {
 		height: number`
-			Height of chart.
+			Height of the chart.
 		`,
-
 		width: number`
-			Width of chart.
+			Width of the chart.
 		`,
-
 		margin: shape({
 			top: number,
 			right: number,
 			bottom: number,
 			left: number,
 		})`
-			An object defining the margins of the chart. These margins will contain
-			the axis and labels.
+		   Margin is an object defining the margins of the chart. These margins will 
+		   contain the axis and labels.
 		`,
-
 		data: arrayOf(object)`
-			Data for the chart. E.g.
-	
-				[
-					{ x: new Date('2015-01-01') , y: 1 } ,
-					{ x: new Date('2015-01-02') , y: 2 } ,
-					{ x: new Date('2015-01-03') , y: 3 } ,
-					{ x: new Date('2015-01-04') , y: 2 } ,
-					{ x: new Date('2015-01-05') , y: 5 } ,
-				]
+			Data for the chart. 
+			Basic example:
+			[
+			 { x: new Date('2015-01-01') , y: 1 } ,
+			 { x: new Date('2015-01-02') , y: 2 } ,
+			 { x: new Date('2015-01-03') , y: 3 } ,
+			 { x: new Date('2015-01-04') , y: 2 } ,
+			 { x: new Date('2015-01-05') , y: 5 } ,
+			]
+			
+			If you want to be able to navigate to one of the components, you can use ref as well:
+			[
+			 { x: new Date('2015-01-01') , y: 1, ref: React.createRef() } ,
+			 { x: new Date('2015-01-02') , y: 2, ref: React.createRef() } ,
+			 { x: new Date('2015-01-03') , y: 3, ref: React.createRef() } ,
+			 { x: new Date('2015-01-04') , y: 2, ref: React.createRef() } ,
+			 { x: new Date('2015-01-05') , y: 5, ref: React.createRef() } ,
+			]
 		`,
-
 		onDragEnd: func`
+			Drag handler function which is a callable function executed at the end of drag.
 			Called when the user stops to dragging an item.
-			Signature: \`({ event, props }) => {}\`
+		  Signature: \`({ event, props }) => {}\`
+		`,
+		xAxisTicksVertical: bool`
+			Flag for if xAxis tick labels are vertical.
+		`,
+		dataIsCentered: bool`
+			Flag for if data is center aligned rather than default left aligned.
+		`,
+		yAxisMin: number`
+			Flag for yAxis sticking to minimum (not readjusting minimum).
+		`,
+		xAxisRenderProp: func`
+		  Optional react component to render within X-Axis.
+			Note: If you are using input boxes or similar and you want to navigate 
+			to the next component on tab, you will might need to provide refs 
+			in the data.
 		`,
 	};
-
-	static defaultProps = {
-		height: 300,
-		width: 1000,
-		margin: {
-			top: 50,
-			right: 80,
-			bottom: 65,
-			left: 80,
-		},
-	};
+	static defaultProps = draggableLineChartDefaultProps ;
 
 	render(): React.ReactNode {
 		const { height, width, ...passThroughs } = this.props;

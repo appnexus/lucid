@@ -1,4 +1,5 @@
 import * as d3Axis from 'd3-axis';
+import { ScaleLinear, ScalePoint } from 'd3-scale';
 import * as d3Shape from 'd3-shape';
 import * as d3Drag from 'd3-drag';
 import * as d3Selection from 'd3-selection';
@@ -6,50 +7,55 @@ import * as d3Transition from 'd3-transition';
 import { d3Scale } from '../../index';
 import _ from 'lodash';
 import * as d3Array from 'd3-array';
+import { StandardProps } from '../../util/component-types';
+import {
+	IXAxisRenderProp,
+	getGroup,
+	lucidXAxis,
+	ISelection,
+} from './d3-helpers';
 
-interface ChartData {
-	x: Date | string | number | undefined;
-	y: Date | string | number | undefined;
+export interface IChartData {
+	x: string;
+	y: number;
+	ref?: any;
+}
+export type IOnDragEnd = (newYValue: string, xValue: string) => void;
+export type IData = IChartData[];
+
+interface IDraggableLineChartMargin {
+	top: number;
+	right: number;
+	bottom: number;
+	left: number;
 }
 
-interface IDraggableLineChartParams {
-	margin: {
-		top: number;
-		right: number;
-		bottom: number;
-		left: number;
-	};
-	height: number;
-	width: number;
-	data: Array<{ [key: string]: Date | string | number | undefined }>;
-	onDragEnd?: (d: any) => any;
+export interface IDraggableLineChart extends StandardProps {
+	height?: number;
+	width?: number;
+	margin?: IDraggableLineChartMargin;
+	data: IData;
+	onDragEnd: IOnDragEnd;
 	xAxisTicksVertical?: boolean;
 	dataIsCentered?: boolean;
 	yAxisMin?: number;
+	xAxisRenderProp?: IXAxisRenderProp;
+}
+
+interface IDraggableLineChartParams extends IDraggableLineChart {
 	cx: (d: any) => void;
+	height: number;
+	width: number;
+	margin: IDraggableLineChartMargin;
+	yAxisMin: number;
 }
 
 class DraggableLineChartD3 {
-	selection: any;
-	params: IDraggableLineChartParams = {
-		margin: {
-			top: 10,
-			right: 80,
-			bottom: 65,
-			left: 80,
-		},
-		height: 300,
-		width: 1000,
-		onDragEnd: _.noop,
-		xAxisTicksVertical: false,
-		dataIsCentered: false,
-		yAxisMin: 0,
-		data: [],
-		cx: _.noop,
-	};
-	xScale: any;
-	yScale: any;
-	constructor(selection: any, params: IDraggableLineChartParams) {
+	selection: ISelection;
+	params: IDraggableLineChartParams;
+	xScale: ScalePoint<string>;
+	yScale: ScaleLinear<number, number>;
+	constructor(selection: ISelection, params: IDraggableLineChartParams) {
 		this.selection = selection;
 		this.params = params;
 		if (params.dataIsCentered) {
@@ -88,7 +94,7 @@ class DraggableLineChartD3 {
 			]);
 	}
 
-	drag = () => {
+	drag: any = () => {
 		const { xScale, yScale, renderLine, renderPoints, selection } = this;
 		const { cx, onDragEnd } = this.params;
 		let initialPosition: number;
@@ -109,58 +115,61 @@ class DraggableLineChartD3 {
 				pointData.y = Number(yScale.invert(newPointY));
 				activeDot.attr('cy', newPointY);
 				const line: any = d3Shape
-					.line<ChartData>()
-					.x((chartData: ChartData) => xScale(chartData.x))
-					.y((chartData: ChartData) => yScale(chartData.y));
+					.line<IChartData>()
+					.x((chartData: IChartData) => xScale(chartData.x) || 0)
+					.y((chartData: IChartData) => yScale(chartData.y));
 				lines.attr('d', line);
 			})
-			.on('end', d => {
-				if (onDragEnd) onDragEnd(d);
+			.on('end', (d: any) => {
+				if (onDragEnd) onDragEnd(d.y, d.x);
 				renderLine(false);
 				renderPoints(false);
 			});
 	};
 	renderXAxis = () => {
-		this.selection.append('g').call((xAxis: any) => {
-			const {
-				margin,
-				height,
-				xAxisTicksVertical,
-				dataIsCentered,
-				cx,
-			} = this.params;
-			xAxis
-				.attr('transform', `translate(${0},${margin.top})`)
-				.classed(`${cx('&-Axis')}`, true)
-				.call(
-					d3Axis
-						.axisTop(this.xScale)
-						.tickSize(margin.top + margin.bottom - height)
-				);
-			if (xAxisTicksVertical) {
-				xAxis.classed('Vert', true);
-			} else {
-				xAxis.classed('NoVert', true);
-			}
-			if (dataIsCentered) {
-				xAxis.classed('Center', true);
-			}
-		});
+		const {
+			margin,
+			height,
+			xAxisTicksVertical,
+			dataIsCentered,
+			cx,
+			xAxisRenderProp,
+		} = this.params;
+		const xGroup = getGroup(this.selection, `${cx('&-Axis')}`);
+		xGroup
+			.call((xAxis: any) => {
+				xAxis
+					.attr('transform', `translate(${0},${margin.top})`)
+					.call(lucidXAxis, {
+						xScale: this.xScale,
+						tickSize: margin.top + margin.bottom - height,
+						xAxisRenderProp,
+						dataIsCentered,
+					});
+				if (xAxisTicksVertical) {
+					xAxis.classed('Vert', true);
+				} else {
+					xAxis.classed('NoVert', true);
+				}
+				if (dataIsCentered) {
+					xAxis.classed('Center', true);
+				}
+			})
+			.call(() => xGroup);
 	};
 	renderYAxis = () => {
-		let yAxisGroup = this.selection.selectAll('.yAxisGroup');
-		if (yAxisGroup.empty()) {
-			yAxisGroup = this.selection.append('g').classed('yAxisGroup', true);
-		}
-		yAxisGroup.call((yAxis: any) => {
-			const { margin, cx } = this.params;
-			yAxis
-				.attr('transform', `translate(${margin.left},${0})`)
-				.classed(`${cx('&-Axis')}`, true)
-				.transition()
-				.duration(500)
-				.call(d3Axis.axisLeft(this.yScale).ticks(10));
-		});
+		const yGroup = getGroup(this.selection, 'yAxisGroup');
+		yGroup
+			.call((yAxis: any) => {
+				const { margin, cx } = this.params;
+				yAxis
+					.attr('transform', `translate(${margin.left},${0})`)
+					.classed(`${cx('&-Axis')}`, true)
+					.transition()
+					.duration(500)
+					.call(d3Axis.axisLeft(this.yScale).ticks(10));
+			})
+			.call(() => yGroup);
 	};
 	renderLine = (isNew: boolean) => {
 		const { dataIsCentered, cx } = this.params;
@@ -179,16 +188,16 @@ class DraggableLineChartD3 {
 					.attr('class', `${cx('&-Line')}`);
 			}
 		}
-		const lines = this.selection.selectAll(`path.${cx('&-Line')}`);
+		const lines: any = this.selection.selectAll(`path.${cx('&-Line')}`);
 		lines.datum(this.params.data).enter();
 		lines
-			.transition(d3Transition.transition().duration(500))
+			.transition(d3Transition.transition().duration(100))
 			.attr('fill', 'none')
 			.attr(
 				'd',
 				d3Shape
 					.line()
-					.x((d: any) => this.xScale(d.x))
+					.x((d: any) => this.xScale(d.x) || 0)
 					.y((d: any) => this.yScale(d.y))
 			);
 	};
@@ -209,8 +218,8 @@ class DraggableLineChartD3 {
 			const innerXTickWidth = this.xScale.step();
 			circle
 				.transition()
-				.duration(500)
-				.attr('cx', (d: any) => this.xScale(d.x))
+				.duration(100)
+				.attr('cx', (d: any) => this.xScale(d.x) || 0)
 				.attr('cy', (d: any) => this.yScale(d.y))
 				.attr('r', 5)
 				.attr('transform', `translate(${innerXTickWidth / 2}, 0)`)
@@ -221,8 +230,8 @@ class DraggableLineChartD3 {
 		} else {
 			circle
 				.transition()
-				.duration(500)
-				.attr('cx', (d: any) => this.xScale(d.x))
+				.duration(100)
+				.attr('cx', (d: any) => this.xScale(d.x) || 0)
 				.attr('cy', (d: any) => this.yScale(d.y))
 				.attr('r', 5)
 				.style('fill', '#009fdb')
@@ -237,16 +246,18 @@ class DraggableLineChartD3 {
 		this.renderLine(true);
 		this.renderPoints(true);
 	};
-	updateLineChart = () => {
+	updateLineChart = (data: IData) => {
+		this.params.data = data;
 		this.yScale.domain([
 			_.isUndefined(this.params.yAxisMin)
 				? d3Array.min(this.params.data, (d: any) => d.y)
 				: this.params.yAxisMin,
 			d3Array.max(this.params.data, (d: any) => d.y),
 		]);
+		this.renderXAxis();
+		this.renderYAxis();
 		this.renderLine(false);
 		this.renderPoints(false);
-		this.renderYAxis();
 	};
 }
 

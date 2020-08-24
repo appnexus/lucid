@@ -1,4 +1,6 @@
 ## Unreleased
+- #1166 [patch] We have updated the new DraggableLineChart to be able to take foreign react component
+
 ## 5.8.5
 - #1159 [patch] We have added a new DraggableLineChart component
 https://github.com/appnexus/lucid/compare/v5.8.4...v5.8.5
