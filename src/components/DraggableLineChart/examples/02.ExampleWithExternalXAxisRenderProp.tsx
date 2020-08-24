@@ -89,11 +89,10 @@ export default createClass({
 			xValue,
 		]);
 		const currentYValue = this.state.customSpendDataPoints[currentIndex].y;
-		const newCustomSpendDataPoints = this.onDragHandler(newYValue, xValue);
-		const nextValue = newCustomSpendDataPoints[currentIndex].y;
+		const nextValue = +Number(newYValue).toFixed(0);
 
 		if (currentYValue !== nextValue) {
-			console.log({ currentYValue, newYValue });
+			const newCustomSpendDataPoints = this.onDragHandler(newYValue, xValue);
 			const nextIndex =
 				currentIndex >= newCustomSpendDataPoints.length - 1
 					? 0

@@ -43,7 +43,7 @@ interface IDraggableLineChartParams extends IDraggableLineChart{
 	width: number;
 	margin: IDraggableLineChartMargin;
 	yAxisMin: number;
-};
+}
 
 class DraggableLineChartD3 {
 	selection: ISelection;
@@ -186,7 +186,7 @@ class DraggableLineChartD3 {
 		const lines: any = this.selection.selectAll(`path.${cx('&-Line')}`);
 		lines.datum(this.params.data).enter();
 		lines
-			.transition(d3Transition.transition().duration(500))
+			.transition(d3Transition.transition().duration(100))
 			.attr('fill', 'none')
 			.attr(
 				'd',
@@ -213,7 +213,7 @@ class DraggableLineChartD3 {
 			const innerXTickWidth = this.xScale.step();
 			circle
 				.transition()
-				.duration(500)
+				.duration(100)
 				.attr('cx', (d: any) => this.xScale(d.x) || 0)
 				.attr('cy', (d: any) => this.yScale(d.y))
 				.attr('r', 5)
@@ -225,7 +225,7 @@ class DraggableLineChartD3 {
 		} else {
 			circle
 				.transition()
-				.duration(500)
+				.duration(100)
 				.attr('cx', (d: any) => this.xScale(d.x) || 0)
 				.attr('cy', (d: any) => this.yScale(d.y))
 				.attr('r', 5)
