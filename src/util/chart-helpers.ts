@@ -54,12 +54,13 @@ export function stackByFields(
  */
 export function extractFields(
 	collection: Collection,
-	fields: Fields
+	fields: Fields,
+	minDomainValue: number = 0
 ): Array<Array<[number, number]>> {
 	const fieldsArray = _.castArray(fields);
 
 	return _.map(collection, d => {
-		return _.map(fieldsArray, field => [0, _.get(d, field, 0)]);
+		return _.map(fieldsArray, field => [minDomainValue, _.get(d, field, 0)]);
 	});
 }
 

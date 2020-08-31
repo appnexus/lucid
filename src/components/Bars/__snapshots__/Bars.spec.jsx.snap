@@ -2162,3 +2162,300 @@ exports[`Bars [common] example testing should match snapshot(s) for 02.custom-co
   </g>
 </g>
 `;
+
+exports[`Bars [common] example testing should match snapshot(s) for 03.log-scale 1`] = `
+<g
+  className="lucid-Bars"
+>
+  <g
+    key="0"
+  >
+    <Bar
+      color="color-chart-3"
+      hasStroke={false}
+      height={66.66666666666669}
+      key="0"
+      width={150}
+      x={0}
+      y={333.3333333333333}
+    />
+    <PureToolTip
+      data={
+        Array [
+          Object {
+            "x": "one",
+            "y": 10,
+          },
+          Object {
+            "x": "two",
+            "y": 100,
+          },
+          Object {
+            "x": "three",
+            "y": 1000,
+          },
+          Object {
+            "x": "four",
+            "y": 10000,
+          },
+          Object {
+            "x": "five",
+            "y": 100000,
+          },
+        ]
+      }
+      height={66.66666666666669}
+      isExpanded={false}
+      onMouseEnter={[Function]}
+      onMouseOut={[Function]}
+      renderBody={[Function]}
+      series={
+        Array [
+          Array [
+            1,
+            10,
+          ],
+        ]
+      }
+      seriesIndex={0}
+      width={150}
+      x={0}
+      xField="x"
+      xFormatter={[Function]}
+      y={333.3333333333333}
+    />
+  </g>
+  <g
+    key="1"
+  >
+    <Bar
+      color="color-chart-3"
+      hasStroke={false}
+      height={133.33333333333337}
+      key="0"
+      width={150}
+      x={150}
+      y={266.66666666666663}
+    />
+    <PureToolTip
+      data={
+        Array [
+          Object {
+            "x": "one",
+            "y": 10,
+          },
+          Object {
+            "x": "two",
+            "y": 100,
+          },
+          Object {
+            "x": "three",
+            "y": 1000,
+          },
+          Object {
+            "x": "four",
+            "y": 10000,
+          },
+          Object {
+            "x": "five",
+            "y": 100000,
+          },
+        ]
+      }
+      height={133.33333333333337}
+      isExpanded={false}
+      onMouseEnter={[Function]}
+      onMouseOut={[Function]}
+      renderBody={[Function]}
+      series={
+        Array [
+          Array [
+            1,
+            100,
+          ],
+        ]
+      }
+      seriesIndex={1}
+      width={150}
+      x={150}
+      xField="x"
+      xFormatter={[Function]}
+      y={266.66666666666663}
+    />
+  </g>
+  <g
+    key="2"
+  >
+    <Bar
+      color="color-chart-3"
+      hasStroke={false}
+      height={200}
+      key="0"
+      width={150}
+      x={300}
+      y={200}
+    />
+    <PureToolTip
+      data={
+        Array [
+          Object {
+            "x": "one",
+            "y": 10,
+          },
+          Object {
+            "x": "two",
+            "y": 100,
+          },
+          Object {
+            "x": "three",
+            "y": 1000,
+          },
+          Object {
+            "x": "four",
+            "y": 10000,
+          },
+          Object {
+            "x": "five",
+            "y": 100000,
+          },
+        ]
+      }
+      height={200}
+      isExpanded={false}
+      onMouseEnter={[Function]}
+      onMouseOut={[Function]}
+      renderBody={[Function]}
+      series={
+        Array [
+          Array [
+            1,
+            1000,
+          ],
+        ]
+      }
+      seriesIndex={2}
+      width={150}
+      x={300}
+      xField="x"
+      xFormatter={[Function]}
+      y={200}
+    />
+  </g>
+  <g
+    key="3"
+  >
+    <Bar
+      color="color-chart-3"
+      hasStroke={false}
+      height={266.6666666666667}
+      key="0"
+      width={150}
+      x={450}
+      y={133.33333333333331}
+    />
+    <PureToolTip
+      data={
+        Array [
+          Object {
+            "x": "one",
+            "y": 10,
+          },
+          Object {
+            "x": "two",
+            "y": 100,
+          },
+          Object {
+            "x": "three",
+            "y": 1000,
+          },
+          Object {
+            "x": "four",
+            "y": 10000,
+          },
+          Object {
+            "x": "five",
+            "y": 100000,
+          },
+        ]
+      }
+      height={266.6666666666667}
+      isExpanded={false}
+      onMouseEnter={[Function]}
+      onMouseOut={[Function]}
+      renderBody={[Function]}
+      series={
+        Array [
+          Array [
+            1,
+            10000,
+          ],
+        ]
+      }
+      seriesIndex={3}
+      width={150}
+      x={450}
+      xField="x"
+      xFormatter={[Function]}
+      y={133.33333333333331}
+    />
+  </g>
+  <g
+    key="4"
+  >
+    <Bar
+      color="color-chart-3"
+      hasStroke={false}
+      height={333.33333333333337}
+      key="0"
+      width={150}
+      x={600}
+      y={66.66666666666663}
+    />
+    <PureToolTip
+      data={
+        Array [
+          Object {
+            "x": "one",
+            "y": 10,
+          },
+          Object {
+            "x": "two",
+            "y": 100,
+          },
+          Object {
+            "x": "three",
+            "y": 1000,
+          },
+          Object {
+            "x": "four",
+            "y": 10000,
+          },
+          Object {
+            "x": "five",
+            "y": 100000,
+          },
+        ]
+      }
+      height={333.33333333333337}
+      isExpanded={false}
+      onMouseEnter={[Function]}
+      onMouseOut={[Function]}
+      renderBody={[Function]}
+      series={
+        Array [
+          Array [
+            1,
+            100000,
+          ],
+        ]
+      }
+      seriesIndex={4}
+      width={150}
+      x={600}
+      xField="x"
+      xFormatter={[Function]}
+      y={66.66666666666663}
+    />
+  </g>
+</g>
+`;
