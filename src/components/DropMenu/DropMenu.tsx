@@ -844,7 +844,7 @@ class DropMenu extends React.Component<IDropMenuPropsWithPassThroughs, IDropMenu
 				{...omitProps(
 					optionProps,
 					undefined,
-					_.keys(DropMenu.Option.propTypes)
+					[..._.keys(DropMenu.Option.propTypes), 'Selection']
 				)}
 				onClick={event =>
 					this.handleSelectOption(optionIndex, optionProps, event)
