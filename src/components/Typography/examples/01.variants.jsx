@@ -16,6 +16,7 @@ export default createClass({
 				<Typography variant='code'>code. snazzy code</Typography> <br />
 				<Typography variant='kbd'>kbd. keyboard inputs</Typography> <br />
 				<Typography variant='samp'>samp. sample code outputs</Typography> <br />
+				<Typography variant='span'>span. sample code outputs</Typography> <br />
 			</div>
 		);
 	},
