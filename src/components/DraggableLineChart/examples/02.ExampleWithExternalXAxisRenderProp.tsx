@@ -7,11 +7,11 @@ import { IChartData, IData } from '../DraggableLineChartD3';
 
 const initialCustomSpendDataPoints = [
 	{ x: '12 AM', y: 0, ref: React.createRef() },
-	{ x: '1 AM', y: 0, ref: React.createRef() },
-	{ x: '2 AM', y: 0, ref: React.createRef() },
-	{ x: '3 AM', y: 0, ref: React.createRef() },
-	{ x: '4 AM', y: 0, ref: React.createRef() },
-	{ x: '5 AM', y: 5, ref: React.createRef() },
+	{ x: '1 AM', y: 1, ref: React.createRef() },
+	{ x: '2 AM', y: 1.5, ref: React.createRef() },
+	{ x: '3 AM', y: 2, ref: React.createRef() },
+	{ x: '4 AM', y: 3.8, ref: React.createRef() },
+	{ x: '5 AM', y: 3.66, ref: React.createRef() },
 	{ x: '6 AM', y: 5, ref: React.createRef() },
 	{ x: '7 AM', y: 10, ref: React.createRef() },
 	{ x: '8 AM', y: 5, ref: React.createRef() },
@@ -72,13 +72,18 @@ export default createClass({
 			customSpendDataPoints: initialCustomSpendDataPoints,
 		};
 	},
-	onDragHandler(newYValue: string, xValue: string): IData {
+	onDragHandler(
+		newYValue: string,
+		xValue: string,
+		fromOnChangeHandler?: boolean
+	): IData {
+		const cleanedYValue = fromOnChangeHandler
+			? newYValue
+			: +Number(newYValue).toFixed(0);
 		const newCustomSpendDataPoints = _.map(
 			this.state.customSpendDataPoints,
 			dataPoint =>
-				dataPoint.x === xValue
-					? { ...dataPoint, y: +Number(newYValue).toFixed(0) }
-					: dataPoint
+				dataPoint.x === xValue ? { ...dataPoint, y: cleanedYValue } : dataPoint
 		);
 		this.setState({ customSpendDataPoints: newCustomSpendDataPoints });
 		return newCustomSpendDataPoints;
@@ -92,7 +97,11 @@ export default createClass({
 		const nextValue = +Number(newYValue).toFixed(0);
 
 		if (currentYValue !== nextValue) {
-			const newCustomSpendDataPoints = this.onDragHandler(newYValue, xValue);
+			const newCustomSpendDataPoints = this.onDragHandler(
+				newYValue,
+				xValue,
+				true
+			);
 			const nextIndex =
 				currentIndex >= newCustomSpendDataPoints.length - 1
 					? 0
@@ -126,7 +135,7 @@ export default createClass({
 		return (
 			<div style={style}>
 				<DraggableLineChart
-					data={customSpendDataPoints}
+					data={_.map(customSpendDataPoints, x => x)}
 					width={900}
 					dataIsCentered
 					onDragEnd={this.onDragHandler}
