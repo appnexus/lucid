@@ -18,7 +18,7 @@ export type IDraggableLineChartProps = Overwrite<
 >;
 
 const getCleanData = (data: IData): IData => {
-	return data.map(({ x, y }) => ({ x, y: Number.isInteger(y) ? y : 0 }));
+	return data.map(({ x, y }) => ({ x, y: Number.isFinite(y) ? y : 0 }));
 };
 
 const draggableLineChartDefaultProps = {

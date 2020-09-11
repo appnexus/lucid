@@ -1,8 +1,13 @@
+## 5.8.7
+- #1169 [patch] We have updated our test cases for DraggableLineChart. We have also added span as a type to Typography so users can have a div under them
+https://github.com/appnexus/lucid/compare/v5.8.6...v5.8.7
+
+
 ## 5.8.6
 - #1166 [patch] We have updated the new DraggableLineChart to be able to take foreign react component
 - #1163 [none] Improve the GH upload script to work with https
 - #1160 [patch] Fix SearchableSingleSelect warnings 
-https://github.com/appnexus/lucid/compare/v5.8.5...v5.8.4
+https://github.com/appnexus/lucid/compare/v5.8.5...v5.8.6
 
 ## 5.8.5
 - #1159 [patch] We have added a new DraggableLineChart component
