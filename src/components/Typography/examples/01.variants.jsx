@@ -1,6 +1,10 @@
 import React from 'react';
 import createClass from 'create-react-class';
 import { Typography } from '../../../index';
+import HelpIcon from '../../Icon/HelpIcon/HelpIcon';
+import ToolTip from '../../ToolTip/ToolTip';
+
+const { Title, Body, Target } = ToolTip;
 
 export default createClass({
 	render() {
@@ -16,7 +20,17 @@ export default createClass({
 				<Typography variant='code'>code. snazzy code</Typography> <br />
 				<Typography variant='kbd'>kbd. keyboard inputs</Typography> <br />
 				<Typography variant='samp'>samp. sample code outputs</Typography> <br />
-				<Typography variant='span'>span. sample code outputs</Typography> <br />
+				<Typography variant='span'>
+					span. sample code outputs with help bubble
+					<div className='HelpBubble'>
+						<ToolTip alignment={'start'} direction={'right'} name='I am a div under typography'>
+							<Title className='HelpBubble-title'>look at me</Title>
+							<Target>
+								<HelpIcon size={12} />
+							</Target>
+						</ToolTip>
+					</div>
+				</Typography> <br />
 			</div>
 		);
 	},

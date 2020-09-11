@@ -80,6 +80,14 @@ exports[`Typography [common] example testing should match snapshot(s) for 01.var
 </samp>
 `;
 
+exports[`Typography [common] example testing should match snapshot(s) for 01.variants 11`] = `
+<span
+  className="lucid-Typography lucid-Typography-span"
+>
+  span. sample code outputs
+</span>
+`;
+
 exports[`Typography [common] example testing should match snapshot(s) for 02.nested 1`] = `
 <h1
   className="lucid-Typography lucid-Typography-h1"
