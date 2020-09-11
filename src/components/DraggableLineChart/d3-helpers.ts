@@ -116,6 +116,13 @@ const lucidXAxis = (
 		.attr('x2', rMax)
 		.attr('y1', 0)
 		.attr('y2', 0);
+	axisGroup
+		.append('line')
+		.attr('stroke', 'black')
+		.attr('x1', rMin)
+		.attr('x2', rMax)
+		.attr('y1', -tickSize)
+		.attr('y2', -tickSize);
 
 	const xLines = getGroups(axisGroup, 'xLines', domain);
 	const xLine = xLines.attr(
