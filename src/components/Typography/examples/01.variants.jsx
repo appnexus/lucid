@@ -1,10 +1,10 @@
-import React from 'react';
 import createClass from 'create-react-class';
+import React from 'react';
 import { Typography } from '../../../index';
 import HelpIcon from '../../Icon/HelpIcon/HelpIcon';
 import ToolTip from '../../ToolTip/ToolTip';
 
-const { Title, Body, Target } = ToolTip;
+const { Title, Target } = ToolTip;
 
 export default createClass({
 	render() {
