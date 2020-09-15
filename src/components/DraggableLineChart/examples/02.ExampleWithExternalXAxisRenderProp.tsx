@@ -108,15 +108,13 @@ export default createClass({
 		}: {
 			onChangeHandler: (newYValue: string, xValue: string) => void;
 		},
-		xValue: string,
-		yValue: number,
-		myRef: any
+		{x, y, ref }: { x: string; y: number; ref?: any }
 	): JSX.Element {
 		return (
 			<DataInput
-				xValue={xValue}
-				yValue={yValue}
-				myRef={myRef}
+				xValue={x}
+				yValue={y}
+				myRef={ref}
 				changeHandler={onChangeHandler}
 			/>
 		);
@@ -129,7 +127,7 @@ export default createClass({
 		return (
 			<div style={style}>
 				<DraggableLineChart
-					data={_.map(customSpendDataPoints, x => x)}
+					data={customSpendDataPoints}
 					width={900}
 					dataIsCentered
 					onDragEnd={this.onDragHandler}

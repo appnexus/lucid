@@ -4,7 +4,7 @@ import * as d3Array from 'd3-array';
 import ReactDOM from 'react-dom';
 import { IData } from './DraggableLineChartD3';
 
-export type IXAxisRenderProp = (xValue: string, yValue: number, ref: any) => JSX.Element;
+export type IXAxisRenderProp = ({x, y, ref }: { x: string; y: number; ref?: any }) => JSX.Element;
 export type ISelection = Selection<SVGElement | any, {} | any, null, undefined>;
 
 const getGroup = (selection: ISelection, className: string): ISelection => {
@@ -143,7 +143,7 @@ const lucidXAxis = (
 			if (xValue !== '' && !_.isNil(xValue)) {
 				const subData = _.find(data, { x: xValue }) || { y: 0, ref: undefined};
 				ReactDOM.render(
-					xAxisRenderProp(xValue, subData.y, subData.ref),
+					xAxisRenderProp({ x: xValue, y: subData.y, ref: subData.ref}),
 					node[0]
 				);
 			} else return xValue;
