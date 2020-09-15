@@ -134,6 +134,7 @@ class DraggableLineChartD3 {
 			dataIsCentered,
 			cx,
 			xAxisRenderProp,
+			data,
 		} = this.params;
 		const xGroup = getGroup(this.selection, `${cx('&-Axis')}`);
 		xGroup
@@ -145,6 +146,7 @@ class DraggableLineChartD3 {
 						tickSize: margin.top + margin.bottom - height,
 						xAxisRenderProp,
 						dataIsCentered,
+						data
 					});
 				if (xAxisTicksVertical) {
 					xAxis.classed('Vert', true);

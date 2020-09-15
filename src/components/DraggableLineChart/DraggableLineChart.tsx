@@ -131,7 +131,7 @@ class DraggableLineChart extends React.Component<IDraggableLineChartProps, {}> {
 		  Optional react component to render within X-Axis.
 			Note: If you are using input boxes or similar and you want to navigate 
 			to the next component on tab, you will might need to provide refs 
-			in the data.
+			in the data. This react component will always be passed the following props: ({x, y, ref }: { x: string; y: number; ref?: any })
 		`,
 	};
 	static defaultProps = draggableLineChartDefaultProps ;

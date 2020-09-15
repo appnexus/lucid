@@ -2,8 +2,9 @@ import { Selection } from 'd3-selection';
 import _ from 'lodash';
 import * as d3Array from 'd3-array';
 import ReactDOM from 'react-dom';
+import { IData } from './DraggableLineChartD3';
 
-export type IXAxisRenderProp = (xValue: string) => JSX.Element;
+export type IXAxisRenderProp = ({x, y, ref }: { x: string; y: number; ref?: any }) => JSX.Element;
 export type ISelection = Selection<SVGElement | any, {} | any, null, undefined>;
 
 const getGroup = (selection: ISelection, className: string): ISelection => {
@@ -35,8 +36,8 @@ const getTickObj = (selection: ISelection): ISelection => {
 		data = selection
 			.selectAll('foreignObject')
 			.append('xhtml:div')
-			.attr('tabindex',0)
-			.style('position','fixed')
+			.attr('tabindex', 0)
+			.style('position', 'fixed')
 			.style('transform', 'translate(0px, -50px)')
 			.classed('innerDiv', true);
 	}
@@ -96,11 +97,13 @@ const lucidXAxis = (
 		tickSize,
 		xAxisRenderProp,
 		dataIsCentered,
+		data,
 	}: {
 		xScale: any;
 		tickSize: number;
 		xAxisRenderProp?: IXAxisRenderProp;
 		dataIsCentered?: boolean;
+		data: IData;
 	}
 ): void => {
 	const range = xScale.range();
@@ -116,6 +119,13 @@ const lucidXAxis = (
 		.attr('x2', rMax)
 		.attr('y1', 0)
 		.attr('y2', 0);
+	axisGroup
+		.append('line')
+		.attr('stroke', 'black')
+		.attr('x1', rMin)
+		.attr('x2', rMax)
+		.attr('y1', -tickSize)
+		.attr('y2', -tickSize);
 
 	const xLines = getGroups(axisGroup, 'xLines', domain);
 	const xLine = xLines.attr(
@@ -131,7 +141,11 @@ const lucidXAxis = (
 		const tickRender = getTickRender(tickObj, (rMax - rMin) / domainLength);
 		tickRender.html((xValue: any, num: any, node: any) => {
 			if (xValue !== '' && !_.isNil(xValue)) {
-				ReactDOM.render(xAxisRenderProp(xValue), node[0]);
+				const subData = _.find(data, { x: xValue }) || { y: 0, ref: undefined};
+				ReactDOM.render(
+					xAxisRenderProp({ x: xValue, y: subData.y, ref: subData.ref}),
+					node[0]
+				);
 			} else return xValue;
 		});
 	}

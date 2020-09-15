@@ -1,9 +1,9 @@
-import React, { useCallback, useMemo } from 'react';
 import createClass from 'create-react-class';
 import _ from 'lodash';
-import { DraggableLineChart, TextField } from '../../../index';
+import React, { useCallback } from 'react';
+import { DraggableLineChart, TextFieldValidated } from '../../../index';
 import { IXAxisRenderProp } from '../d3-helpers';
-import { IChartData, IData } from '../DraggableLineChartD3';
+import { IData } from '../DraggableLineChartD3';
 
 const initialCustomSpendDataPoints = [
 	{ x: '12 AM', y: 0, ref: React.createRef() },
@@ -23,42 +23,32 @@ const initialCustomSpendDataPoints = [
 const style = {
 	paddingTop: '4rem',
 };
-type IChangeHandler = (
-	newYValue: string,
-	xValue: string,
-	customSpendDataPoints: IData
-) => void;
+type IChangeHandler = (newYValue: string, xValue: string) => void;
 
 const DataInput = ({
 	xValue,
-	customSpendDataPoints,
+	yValue,
+	myRef,
 	changeHandler,
 }: {
 	xValue: string;
-	customSpendDataPoints: IData;
+	yValue: number;
+	myRef: any;
 	changeHandler: IChangeHandler;
 }): JSX.Element => {
-	const customSpendDataPoint = useMemo(() => {
-		return (
-			_.find(customSpendDataPoints, ({ x }: IChartData) => x === xValue) || {
-				x: '',
-				y: 0,
-			}
-		);
-	}, [customSpendDataPoints, xValue]);
 	const onChange = useCallback(
 		newYValue => {
-			changeHandler(newYValue, xValue, customSpendDataPoints);
+			changeHandler(newYValue, xValue);
 		},
-		[customSpendDataPoints, changeHandler, xValue]
+		[changeHandler, xValue]
 	);
 	return (
 		<div style={{ width: '70%', margin: 'auto' }}>
-			<TextField
-				value={customSpendDataPoint.y || 0}
+			<TextFieldValidated
+				value={yValue || 0}
 				onBlur={onChange}
 				tabIndex={0}
-				ref={customSpendDataPoint.ref}
+				ref={myRef}
 			/>
 			<div style={{ margin: 'auto', textAlign: 'center', width: '95%' }}>
 				{xValue}
@@ -117,12 +107,13 @@ export default createClass({
 		}: {
 			onChangeHandler: (newYValue: string, xValue: string) => void;
 		},
-		xValue: string
+		{x, y, ref }: { x: string; y: number; ref?: any }
 	): JSX.Element {
 		return (
 			<DataInput
-				xValue={xValue}
-				customSpendDataPoints={this.state.customSpendDataPoints}
+				xValue={x}
+				yValue={y}
+				myRef={ref}
 				changeHandler={onChangeHandler}
 			/>
 		);
@@ -135,7 +126,7 @@ export default createClass({
 		return (
 			<div style={style}>
 				<DraggableLineChart
-					data={_.map(customSpendDataPoints, x => x)}
+					data={customSpendDataPoints}
 					width={900}
 					dataIsCentered
 					onDragEnd={this.onDragHandler}
