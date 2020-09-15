@@ -1,3 +1,7 @@
+## 5.8.8
+- #1171 [patch] Cleaned up the new DraggableLineChart component
+https://github.com/appnexus/lucid/compare/v5.8.7...v5.8.8
+
 ## 5.8.7
 - #1169 [patch] We have updated our test cases for DraggableLineChart. We have also added span as a type to Typography so users can have a div under them
 https://github.com/appnexus/lucid/compare/v5.8.6...v5.8.7
