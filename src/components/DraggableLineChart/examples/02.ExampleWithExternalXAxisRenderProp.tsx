@@ -75,7 +75,6 @@ export default createClass({
 			dataPoint =>
 				dataPoint.x === xValue ? { ...dataPoint, y: cleanedYValue } : dataPoint
 		);
-		console.log({ newCustomSpendDataPoints });
 		this.setState({ customSpendDataPoints: newCustomSpendDataPoints });
 		return newCustomSpendDataPoints;
 	},
