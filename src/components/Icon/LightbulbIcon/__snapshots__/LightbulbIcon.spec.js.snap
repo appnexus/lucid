@@ -14,7 +14,6 @@ exports[`LightbulbIcon [common] example testing should match snapshot(s) for 1.d
 >
   <path
     d="M10 13.5H6M9 15.5H7"
-    stroke="#000"
   />
   <path
     clipRule="evenodd"
@@ -22,14 +21,9 @@ exports[`LightbulbIcon [common] example testing should match snapshot(s) for 1.d
     fill="none"
     fillRule="evenodd"
     id="a_1_"
-    stroke="#000"
-    strokeLinecap="square"
-    strokeMiterlimit="10"
-    strokeWidth="1.3"
   />
   <path
     d="M8 11.474V6M7 6h2"
-    stroke="#000"
   />
 </Icon>
 `;
