@@ -31,8 +31,6 @@ export const HostedIcon = ({
 	);
 };
 
-// <style>.st0{fill:none;stroke:#000;stroke-width:1.3;stroke-linecap:square;stroke-miterlimit:10}</style>
-
 HostedIcon.displayName = 'HostedIcon';
 HostedIcon.peek = {
 	description: `
