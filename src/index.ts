@@ -120,6 +120,7 @@ import ImageIcon from './components/Icon/ImageIcon/ImageIcon';
 import InfoIcon from './components/Icon/InfoIcon/InfoIcon';
 import InfoLightIcon from './components/Icon/InfoLightIcon/InfoLightIcon';
 import Legend from './components/Legend/Legend';
+import LightbulbIcon from './components/Icon/LightbulbIcon/LightbulbIcon';
 import Line from './components/Line/Line';
 // @ts-ignore: not converted yet
 import LineChart from './components/LineChart/LineChart';
@@ -159,6 +160,7 @@ import SearchIcon from './components/Icon/SearchIcon/SearchIcon';
 import Selection from './components/Selection/Selection';
 import SeparatorIcon from './components/Icon/SeparatorIcon/SeparatorIcon';
 import SettingsIcon from './components/Icon/SettingsIcon/SettingsIcon';
+import ShareIcon from './components/Icon/ShareIcon/ShareIcon';
 import ShoppingCartIcon from './components/Icon/ShoppingCartIcon/ShoppingCartIcon';
 import SidePanel from './components/SidePanel/SidePanel';
 import SplitHorizontal from './components/SplitHorizontal/SplitHorizontal';
@@ -194,6 +196,7 @@ import ViewIcon from './components/Icon/ViewIcon/ViewIcon';
 import ViewTableIcon from './components/Icon/ViewTableIcon/ViewTableIcon';
 import WarningIcon from './components/Icon/WarningIcon/WarningIcon';
 import WarningLightIcon from './components/Icon/WarningLightIcon/WarningLightIcon';
+import WrenchIcon from './components/Icon/WrenchIcon/WrenchIcon';
 
 // utils
 import * as componentTypes from './util/component-types';
@@ -302,6 +305,7 @@ export {
 	InfoIcon,
 	InfoLightIcon,
 	Legend,
+	LightbulbIcon,
 	Line,
 	LineChart,
 	Lines,
@@ -354,6 +358,7 @@ export {
 	Selection,
 	SeparatorIcon,
 	SettingsIcon,
+	ShareIcon,
 	ShoppingCartIcon,
 	SidePanel,
 	Sidebar,
@@ -404,4 +409,5 @@ export {
 	ViewTableIcon,
 	WarningIcon,
 	WarningLightIcon,
+	WrenchIcon,
 };
