@@ -670,6 +670,23 @@ module.exports = [
 	},
 
 	{
+		name: 'HostedIcon',
+		component: getDefaultExport(
+			require('../src/components/Icon/HostedIcon/HostedIcon')
+		),
+		examplesContext: require.context(
+			'../src/components/Icon/HostedIcon/examples',
+			true,
+			/\.(j|t)sx?$/
+		),
+		examplesContextRaw: require.context(
+			'!!raw-loader!../src/components/Icon/HostedIcon/examples',
+			true,
+			/\.(j|t)sx?$/
+		),
+	},
+
+	{
 		name: 'ImageIcon',
 		component: getDefaultExport(
 			require('../src/components/Icon/ImageIcon/ImageIcon')

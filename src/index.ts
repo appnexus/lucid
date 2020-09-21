@@ -113,6 +113,7 @@ import HamburgerMenuIcon from './components/Icon/HamburgerMenuIcon/HamburgerMenu
 import HelpIcon from './components/Icon/HelpIcon/HelpIcon';
 import HideIcon from './components/Icon/HideIcon/HideIcon';
 import HomeIcon from './components/Icon/HomeIcon/HomeIcon';
+import HostedIcon from './components/Icon/HostedIcon/HostedIcon';
 import Icon from './components/Icon/Icon';
 import IconSelect from './components/IconSelect/IconSelect';
 import ImageIcon from './components/Icon/ImageIcon/ImageIcon';
@@ -294,6 +295,7 @@ export {
 	HelpIcon,
 	HideIcon,
 	HomeIcon,
+	HostedIcon,
 	Icon,
 	IconSelect,
 	ImageIcon,

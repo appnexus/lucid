@@ -33,7 +33,17 @@
 	white-space: nowrap;
 
 	&:hover:not(&-is-disabled) {
-		background-color: @featured-color-default-backgroundColorHover;
+		//background-color: @featured-color-default-backgroundColorHover;
+
+		// if body.background-color is not white ( when it is @color-neutral-2), the
+		// background-color: multiply(#f9f8f7, #f4f2f2);
+		// document.style.body.backgroundColor
+		will-change: opacity;
+		mix-blend-mode: multiply;
+		background-color: multiply(
+			@color-neutral-2,
+			@featured-color-default-backgroundColorHover
+		);
 	}
 
 	&:active:not(&-is-disabled),
@@ -46,7 +56,9 @@
 		border: 0;
 	}
 
-	&::before { border-radius: @Button-size-borderRadius; }
+	&::before {
+		border-radius: @Button-size-borderRadius;
+	}
 
 	&&-has-only-icon {
 		padding: 0 7px;
@@ -97,7 +109,9 @@
 		border-color: @featured-color-primary-borderColor;
 		color: @color-white;
 
-		.@{prefix}-Icon { stroke: @color-white; }
+		.@{prefix}-Icon {
+			stroke: @color-white;
+		}
 
 		&:hover:not(.@{prefix}-Button-is-disabled) {
 			background-color: @featured-color-primary-backgroundColor;
@@ -129,7 +143,9 @@
 		border-color: @featured-color-danger-borderColor;
 		color: @color-white;
 
-		.@{prefix}-Icon { stroke: @color-white; }
+		.@{prefix}-Icon {
+			stroke: @color-white;
+		}
 
 		&:hover:not(.@{prefix}-Button-is-disabled) {
 			background-color: @featured-color-danger-backgroundColor;
@@ -218,7 +234,7 @@
 
 	&&-small {
 		height: @Button-size-height-small;
-		padding: 0 @Button-size-padding/1.5;
+		padding: 0 @Button-size-padding / 1.5;
 	}
 
 	&&-small&-has-only-icon {
