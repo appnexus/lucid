@@ -670,6 +670,23 @@ module.exports = [
 	},
 
 	{
+		name: 'HostedIcon',
+		component: getDefaultExport(
+			require('../src/components/Icon/HostedIcon/HostedIcon')
+		),
+		examplesContext: require.context(
+			'../src/components/Icon/HostedIcon/examples',
+			true,
+			/\.(j|t)sx?$/
+		),
+		examplesContextRaw: require.context(
+			'!!raw-loader!../src/components/Icon/HostedIcon/examples',
+			true,
+			/\.(j|t)sx?$/
+		),
+	},
+
+	{
 		name: 'ImageIcon',
 		component: getDefaultExport(
 			require('../src/components/Icon/ImageIcon/ImageIcon')
@@ -715,6 +732,23 @@ module.exports = [
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Icon/InfoLightIcon/examples',
+			true,
+			/\.(j|t)sx?$/
+		),
+	},
+
+	{
+		name: 'LightbulbIcon',
+		component: getDefaultExport(
+			require('../src/components/Icon/LightbulbIcon/LightbulbIcon')
+		),
+		examplesContext: require.context(
+			'../src/components/Icon/LightbulbIcon/examples',
+			true,
+			/\.(j|t)sx?$/
+		),
+		examplesContextRaw: require.context(
+			'!!raw-loader!../src/components/Icon/LightbulbIcon/examples',
 			true,
 			/\.(j|t)sx?$/
 		),
@@ -1037,6 +1071,23 @@ module.exports = [
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Icon/SettingsIcon/examples',
+			true,
+			/\.(j|t)sx?$/
+		),
+	},
+
+	{
+		name: 'ShareIcon',
+		component: getDefaultExport(
+			require('../src/components/Icon/ShareIcon/ShareIcon')
+		),
+		examplesContext: require.context(
+			'../src/components/Icon/ShareIcon/examples',
+			true,
+			/\.(j|t)sx?$/
+		),
+		examplesContextRaw: require.context(
+			'!!raw-loader!../src/components/Icon/ShareIcon/examples',
 			true,
 			/\.(j|t)sx?$/
 		),
@@ -1394,6 +1445,22 @@ module.exports = [
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Icon/WarningLightIcon/examples',
+			true,
+			/\.(j|t)sx?$/
+		),
+	},
+	{
+		name: 'WrenchIcon',
+		component: getDefaultExport(
+			require('../src/components/Icon/WrenchIcon/WrenchIcon')
+		),
+		examplesContext: require.context(
+			'../src/components/Icon/WrenchIcon/examples',
+			true,
+			/\.(j|t)sx?$/
+		),
+		examplesContextRaw: require.context(
+			'!!raw-loader!../src/components/Icon/WrenchIcon/examples',
 			true,
 			/\.(j|t)sx?$/
 		),
