@@ -225,7 +225,7 @@ class DraggableLineChartD3 {
 				.attr('cy', (d: any) => this.yScale(d.y))
 				.attr('r', 5)
 				.attr('transform', `translate(${innerXTickWidth / 2}, 0)`)
-				.style('fill', '#009fdb')
+				.style('fill', '#587EBA')
 				.style('stroke', 'white')
 				.style('stroke-width', 1);
 			if (isNew) circle.call(this.drag());
@@ -236,7 +236,7 @@ class DraggableLineChartD3 {
 				.attr('cx', (d: any) => this.xScale(d.x) || 0)
 				.attr('cy', (d: any) => this.yScale(d.y))
 				.attr('r', 5)
-				.style('fill', '#009fdb')
+				.style('fill', '#587EBA')
 				.style('stroke', 'white')
 				.style('stroke-width', 1);
 			if (isNew) circle.call(this.drag());
