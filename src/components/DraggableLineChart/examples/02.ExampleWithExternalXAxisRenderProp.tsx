@@ -50,7 +50,7 @@ const DataInput = ({
 				tabIndex={0}
 				ref={myRef}
 			/>
-			<div style={{ margin: 'auto', textAlign: 'center', width: '95%' }}>
+			<div style={{ margin: 'auto', textAlign: 'center', width: '95%', marginTop: '15px' }}>
 				{xValue}
 			</div>
 		</div>

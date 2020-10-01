@@ -22,9 +22,9 @@ const getCleanData = (data: IData): IData => {
 };
 
 const draggableLineChartDefaultProps = {
-	height: 300,
+	height: 315,
 	width: 1000,
-	margin: { top: 50, right: 80, bottom: 65, left: 80 },
+	margin: { top: 65, right: 80, bottom: 65, left: 80 },
 };
 
 class DraggableLineChart extends React.Component<IDraggableLineChartProps, {}> {
