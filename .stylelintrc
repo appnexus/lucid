@@ -21,7 +21,7 @@
 		"selector-type-no-unknown": [
       true,
       {
-        "ignoreTypes": ["x"],
+        "ignoreTypes": ["x", "foreignObject"],
       }
     ],
     "time-min-milliseconds": 100,
