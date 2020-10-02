@@ -1,3 +1,7 @@
+## 5.8.9
+
+- #1174 [patch] BUDE-811: Tweak spacing with inputs and graph padding
+- #1173 [patch] BUDE-811: Update color of point in DraggableLineChart
 - #1172 [patch] Added Wrench, Share, Lightbulb and Hosted icons.
 
 ## 5.8.8
