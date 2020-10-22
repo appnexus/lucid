@@ -65,7 +65,7 @@ export const LoadingIndicator = (
 				// _.keys(LoadingIndicator.propTypes)
 				['children', 'className', 'isLoading', 'Message']
 			)}
-			className={cx('&', className)}
+			className={cx('&', centerMessage && 'preventScroll', className)}
 			isVisible={isLoading}
 			anchorMessage={anchorMessage}
 			centerMessage={centerMessage}
