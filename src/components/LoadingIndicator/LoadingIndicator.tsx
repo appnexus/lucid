@@ -26,6 +26,13 @@ export interface ILoadingIndicatorProps extends IOverlayWrapperProps {
 	 */
 	anchorMessage: boolean;
 
+	/** Positions the loading message near the center of the container and
+	 * prevents scrolling behind the message. By default, the loading message is
+	 * vertically aligned to the middle of the container, and the content behind
+	 * is scrollable.
+	 */
+	centerMessage: boolean;
+
 	/** Style variations for the overlay behind the loading indicator. */
 	overlayKind: 'light' | 'dark';
 }
@@ -35,12 +42,13 @@ const defaultProps = {
 	isLoading: false,
 	overlayKind: 'light' as const,
 	anchorMessage: false,
+	centerMessage: false,
 };
 
 export const LoadingIndicator = (
 	props: ILoadingIndicatorProps
 ): React.ReactElement => {
-	const { children, className, isLoading, anchorMessage } = props;
+	const { children, className, isLoading, anchorMessage, centerMessage } = props;
 
 	const messageElement = getFirst(
 		props,
@@ -60,6 +68,7 @@ export const LoadingIndicator = (
 			className={cx('&', className)}
 			isVisible={isLoading}
 			anchorMessage={anchorMessage}
+			centerMessage={centerMessage}
 		>
 			{otherChildren}
 			<OverlayWrapperMessage>{messageElement}</OverlayWrapperMessage>
@@ -110,6 +119,13 @@ LoadingIndicator.propTypes = {
 	anchorMessage: bool`
 		Positions the loading message near the top of the container. By default,
 		the loading message is vertically aligned to the middle of the container.
+	`,
+
+	centerMessage: bool`
+		Positions the loading message near the center of the container and
+		prevents scrolling behind the message. By default, the loading message is
+		vertically aligned to the middle of the container, and the content behind
+		is scrollable.
 	`,
 
 	overlayKind: oneOf(['light', 'dark'])`
