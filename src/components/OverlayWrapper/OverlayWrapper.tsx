@@ -59,6 +59,14 @@ export interface IOverlayWrapperProps
 	 */
 	anchorMessage: boolean;
 
+	/** By default, the OverlayMessage is vertically aligned to the middle of the
+	 *	OverlayWrapper. Set this to true to position the `OverlayMessage` near the center of
+	 *	the `OverlayWrapper`, and prevent scrolling behind the message.
+	 *
+	 * @default false
+	 */
+	centerMessage: boolean;
+
 	/** *Child Element* The Message to display in the overlay. */
 	Message?: React.ReactNode & { props: IMessageProps };
 }
@@ -67,6 +75,7 @@ const defaultProps = {
 	hasOverlay: true,
 	overlayKind: 'light' as const,
 	anchorMessage: false,
+	centerMessage: false,
 	isVisible: false,
 };
 
@@ -80,6 +89,7 @@ export const OverlayWrapper = (
 		children,
 		overlayKind,
 		anchorMessage,
+		centerMessage,
 		...passThroughs
 	} = props;
 
@@ -108,6 +118,7 @@ export const OverlayWrapper = (
 						'&-has-overlay': hasOverlay,
 						'&-kind-light': hasOverlay && overlayKind === 'light',
 						'&-anchored-message': anchorMessage,
+						'&-centered-message': centerMessage,
 					})}
 				>
 					<div {...messageElementProp} />
@@ -154,6 +165,13 @@ OverlayWrapper.propTypes = {
 		By default, the \`OverlayMessage\` is vertically aligned to the middle of the
 		OverlayWrapper. Set this to true to position the \`OverlayMessage\` near the top of 
 		the \`OverlayWrapper\`.
+	`,
+
+	centerMessage: bool`
+		Positions the loading message near the center of the container and
+		prevents scrolling behind the message. By default, the loading message is
+		vertically aligned to the middle of the container, and the content behind
+		is scrollable.
 	`,
 
 	Message: node`
