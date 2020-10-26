@@ -1,3 +1,8 @@
+## 5.8.10
+
+- #1175 [patch] BUDE-479: Add option to LoadingIndicator and OverlayWrapper to center loading message and prevent scrolling
+  https://github.com/appnexus/lucid/compare/v5.8.9...v5.8.10
+
 ## 5.8.9
 
 - #1174 [patch] BUDE-811: Tweak spacing with inputs and graph padding
