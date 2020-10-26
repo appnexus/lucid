@@ -60,12 +60,13 @@ export interface IOverlayWrapperProps
 	anchorMessage: boolean;
 
 	/** By default, the OverlayMessage is vertically aligned to the middle of the
-	 *	OverlayWrapper. Set this to true to position the `OverlayMessage` near the center of
-	 *	the `OverlayWrapper`, and prevent scrolling behind the message.
+	 *	OverlayWrapper, and the `OverlayWrapper` is the height of the entire content.
+	 *	Set this to true to position the `OverlayMessage` near the center of the
+	 *	`OverlayWrapper`, and fix the `OverlayWrapper` to the screen height and width.
 	 *
 	 * @default false
 	 */
-	centerMessage: boolean;
+	fixedMessage: boolean;
 
 	/** *Child Element* The Message to display in the overlay. */
 	Message?: React.ReactNode & { props: IMessageProps };
@@ -75,7 +76,7 @@ const defaultProps = {
 	hasOverlay: true,
 	overlayKind: 'light' as const,
 	anchorMessage: false,
-	centerMessage: false,
+	fixedMessage: false,
 	isVisible: false,
 };
 
@@ -89,7 +90,7 @@ export const OverlayWrapper = (
 		children,
 		overlayKind,
 		anchorMessage,
-		centerMessage,
+		fixedMessage,
 		...passThroughs
 	} = props;
 
@@ -118,7 +119,7 @@ export const OverlayWrapper = (
 						'&-has-overlay': hasOverlay,
 						'&-kind-light': hasOverlay && overlayKind === 'light',
 						'&-anchored-message': anchorMessage,
-						'&-centered-message': centerMessage,
+						'&-fixed-message': fixedMessage,
 					})}
 				>
 					<div {...messageElementProp} />
@@ -167,11 +168,11 @@ OverlayWrapper.propTypes = {
 		the \`OverlayWrapper\`.
 	`,
 
-	centerMessage: bool`
-		Positions the loading message near the center of the container and
-		prevents scrolling behind the message. By default, the loading message is
-		vertically aligned to the middle of the container, and the content behind
-		is scrollable.
+	fixedMessage: bool`
+		By default, the OverlayMessage is vertically aligned to the middle of the
+		\`OverlayWrapper\` and the \`OverlayWrapper\` is the height of the entire content.
+		Set this to true to position the \`OverlayMessage\` near the center of the 
+		\`OverlayWrapper\`, and fix the \`OverlayWrapper\` to the screen height and width.
 	`,
 
 	Message: node`
