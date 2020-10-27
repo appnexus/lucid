@@ -26,12 +26,12 @@ export interface ILoadingIndicatorProps extends IOverlayWrapperProps {
 	 */
 	anchorMessage: boolean;
 
-	/** Positions the loading message near the center of the container and
-	 * prevents scrolling behind the message. By default, the loading message is
-	 * vertically aligned to the middle of the container, and the content behind
-	 * is scrollable.
+	/** By default, the OverlayMessage is vertically aligned to the middle of the
+	 *	OverlayWrapper, and the `OverlayWrapper` is the height of the entire content.
+	 *	Set this to true to position the `OverlayMessage` near the center of the
+	 *	`OverlayWrapper`, and fix the `OverlayWrapper` to the screen height and width.
 	 */
-	centerMessage: boolean;
+	fixedMessage: boolean;
 
 	/** Style variations for the overlay behind the loading indicator. */
 	overlayKind: 'light' | 'dark';
@@ -42,13 +42,13 @@ const defaultProps = {
 	isLoading: false,
 	overlayKind: 'light' as const,
 	anchorMessage: false,
-	centerMessage: false,
+	fixedMessage: false,
 };
 
 export const LoadingIndicator = (
 	props: ILoadingIndicatorProps
 ): React.ReactElement => {
-	const { children, className, isLoading, anchorMessage, centerMessage } = props;
+	const { children, className, isLoading, anchorMessage, fixedMessage } = props;
 
 	const messageElement = getFirst(
 		props,
@@ -65,10 +65,10 @@ export const LoadingIndicator = (
 				// _.keys(LoadingIndicator.propTypes)
 				['children', 'className', 'isLoading', 'Message']
 			)}
-			className={cx('&', centerMessage && 'preventScroll', className)}
+			className={cx('&', className)}
 			isVisible={isLoading}
 			anchorMessage={anchorMessage}
-			centerMessage={centerMessage}
+			fixedMessage={fixedMessage}
 		>
 			{otherChildren}
 			<OverlayWrapperMessage>{messageElement}</OverlayWrapperMessage>
@@ -121,11 +121,11 @@ LoadingIndicator.propTypes = {
 		the loading message is vertically aligned to the middle of the container.
 	`,
 
-	centerMessage: bool`
-		Positions the loading message near the center of the container and
-		prevents scrolling behind the message. By default, the loading message is
-		vertically aligned to the middle of the container, and the content behind
-		is scrollable.
+	fixedMessage: bool`
+		By default, the OverlayMessage is vertically aligned to the middle of the
+		\`OverlayWrapper\`, and the \`OverlayWrapper\` is the height of the entire content.
+		Set this to true to position the \`OverlayMessage\` near the center of the 
+		\`OverlayWrapper\`, and fix the \`OverlayWrapper\` to the screen height and width.
 	`,
 
 	overlayKind: oneOf(['light', 'dark'])`
