@@ -1,3 +1,8 @@
+## 5.8.11
+
+- #1176 [patch] BUDE-479: Fix scroll locked content
+  https://github.com/appnexus/lucid/compare/v5.8.10...v5.8.11
+  
 ## 5.8.10
 
 - #1175 [patch] BUDE-479: Add option to LoadingIndicator and OverlayWrapper to center loading message and prevent scrolling
