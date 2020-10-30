@@ -1121,6 +1121,22 @@ module.exports = [
 		),
 	},
 	{
+		name: 'TimeSelect',
+		component: getDefaultExport(
+			require('../src/components/TimeSelect/TimeSelect')
+		),
+		examplesContext: require.context(
+			'../src/components/TimeSelect/examples',
+			true,
+			/\.(j|t)sx?$/
+		),
+		examplesContextRaw: require.context(
+			'!!raw-loader!../src/components/TimeSelect/examples',
+			true,
+			/\.(j|t)sx?$/
+		),
+	},
+	{
 		name: 'ToolTip',
 		component: getDefaultExport(require('../src/components/ToolTip/ToolTip')),
 		examplesContext: require.context(

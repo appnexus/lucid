@@ -1,0 +1,54 @@
+import React, { useCallback } from 'react';
+import SingleSelect from '../SingleSelect/SingleSelect';
+import { MeridiemType } from './TimeSelect';
+
+const { Option } = SingleSelect;
+
+interface ITimeSelectMeridiem {
+	hour: number;
+	meridiem: MeridiemType;
+	isAM?: boolean;
+	time: Date;
+	isDisabled?: boolean;
+	onChange(time: Date): void;
+}
+
+const TimeSelectMeridiem = ({
+	hour,
+	meridiem,
+	isAM,
+	time,
+	isDisabled,
+	onChange,
+}: ITimeSelectMeridiem) => {
+	const onMeridiemChange = useCallback(
+		selectedIndex => {
+			const nextMeridiem =
+				selectedIndex === 0 ? MeridiemType.AM : MeridiemType.PM;
+			if (meridiem === nextMeridiem) {
+				return;
+			}
+			const updatedTime = new Date(time);
+			if (nextMeridiem === MeridiemType.AM) {
+				updatedTime.setHours(hour === 12 ? 0 : hour);
+			} else {
+				updatedTime.setHours(hour === 12 ? hour : hour + 12);
+			}
+			onChange(updatedTime);
+		},
+		[time, hour]
+	);
+	return (
+		<SingleSelect
+			selectedIndex={isAM ? 0 : 1}
+			isInvisible
+			onSelect={onMeridiemChange}
+			isDisabled={isDisabled}
+		>
+			<Option>{MeridiemType.AM}</Option>
+			<Option>{MeridiemType.PM}</Option>
+		</SingleSelect>
+	);
+};
+
+export default TimeSelectMeridiem;
