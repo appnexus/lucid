@@ -75,11 +75,11 @@ TimeSelect.peek = {
 	notes: {
 		overview: `
 			A time selector that is tab-able. Hour/Minute/Meridiem are tied together. As a user scrolls
-			up or down, the hours and meridiem will corresponding scroll.
+			up or down, the hours or minutes and meridiem will corresponding scroll.
 		`,
 		technicalRecommendations: `
-			User must provide value. This component will process and return the next valueS.
-			For use as a pluggable functional component
+			User must provide value. This component will process and return the next values.
+			For use as a pluggable pure functional component.
 		`,
 		intendedUse: `
 			Help users select a time with less risk of typing incorrect data.
