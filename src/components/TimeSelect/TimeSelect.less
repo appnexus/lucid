@@ -9,7 +9,38 @@
 	font-weight: @font-weight-medium;
 	color: @color-darkGray;
 	line-height: @size-standard-height;
-	padding: 0 @size-S;
+	//padding: 0 @size-S;
 	border: 1px solid @featured-color-default-borderColor;
 	width: fit-content;
+
+	@digit-width: 0.54em;
+	@colon-width: 0.217em;
+	// own padding + inputs padding + digits width + dots width
+	min-width: calc(~'(4px * 3) + ' @digit-width * 6 ~' + ' @colon-width * 2);
+	flex-grow: 1;
+	padding: 0 2px;
+	box-sizing: content-box;
+
+	&-time-hour {
+		text-align: right;
+	}
+
+	&-time {
+		border-style: none;
+		width: 1.5em;
+		height: 100%;
+		position: relative;
+		padding: 0 1px;
+		border: 0;
+		background: none;
+		font: inherit;
+		box-sizing: content-box;
+		-moz-appearance: textfield;
+
+		&::-webkit-outer-spin-button,
+		&::-webkit-inner-spin-button {
+			-webkit-appearance: none;
+			margin: 0;
+		}
+	}
 }

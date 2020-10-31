@@ -51,7 +51,6 @@ const TimeSelectMinute = ({
 			name='Minute'
 			onChange={onMinuteChange}
 			disabled={isDisabled}
-			showLeadingZeros
 			step={15}
 		/>
 	);

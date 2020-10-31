@@ -40,7 +40,7 @@ const TimeSelect = ({
 	const isAM = useMemo(() => meridiem === MeridiemType.AM, [meridiem]);
 
 	return (
-		<div className={cx('&')} id='TimeSelect'>
+		<div className={cx('&')}>
 			<TimeSelectHour
 				hour={hour}
 				time={time}

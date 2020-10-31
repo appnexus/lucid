@@ -1,5 +1,8 @@
 import React, { useCallback } from 'react';
+import { lucidClassNames } from '../../util/style-helpers';
 import TimeSelectInput from './TimeSelectInput';
+
+const cx = lucidClassNames.bind('&-TimeSelect');
 
 const getCleanedHour = (partialCleanedHour: number) => {
 	return partialCleanedHour < 0
@@ -68,6 +71,7 @@ const TimeSelectHour = ({
 
 	return (
 		<TimeSelectInput
+			className={cx('&-time-hour')}
 			value={hour}
 			name='Hour'
 			onChange={onHourChange}
