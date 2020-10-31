@@ -26,12 +26,11 @@ const getNextMinuteStep = (nextMinute: number) => {
 };
 
 const TimeSelectMinute = ({
-													minute,
-													time,
-													isDisabled,
-													onChange,
-												}: ITimeSelectMinute) => {
-
+	minute,
+	time,
+	isDisabled,
+	onChange,
+}: ITimeSelectMinute) => {
 	const onMinuteChange = useCallback(
 		nextMinuteString => {
 			const nextMinute = +nextMinuteString;
