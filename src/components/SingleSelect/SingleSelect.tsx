@@ -126,6 +126,8 @@ export interface ISingleSelectProps extends StandardProps {
 
 	maxMenuHeight?: number | string;
 
+	showIcon?: boolean;
+
 	onSelect?: (
 		optionIndex: number | null,
 		{
@@ -153,6 +155,7 @@ const defaultProps = {
 	isDisabled: false,
 	isInvisible: false,
 	selectedIndex: null,
+	showIcon: true,
 	DropMenu: DropMenu.defaultProps,
 };
 
@@ -239,6 +242,10 @@ class SingleSelect extends React.Component<
             The max height of the fly-out menu.
         `,
 
+		showIcon: bool`
+						Show or hide the dropndown icon
+				`,
+
 		DropMenu: shape(DropMenu.propTypes)`
             Object of \`DropMenu\` props which are passed thru to the underlying \`DropMenu\`
             component.
@@ -316,6 +323,7 @@ class SingleSelect extends React.Component<
 			selectedIndex,
 			maxMenuHeight,
 			onSelect,
+			showIcon,
 			DropMenu: dropMenuProps,
 		} = this.props;
 
@@ -385,10 +393,10 @@ class SingleSelect extends React.Component<
 								: placeholder}
 						</span>
 
-						<ChevronIcon
+						{showIcon && <ChevronIcon
 							size={12}
 							direction={isExpanded ? direction : 'down'}
-						/>
+						/>}
 					</div>
 				</DropMenu.Control>
 

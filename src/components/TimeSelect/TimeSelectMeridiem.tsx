@@ -1,7 +1,9 @@
 import React, { useCallback } from 'react';
+import { lucidClassNames } from '../../util/style-helpers';
 import SingleSelect from '../SingleSelect/SingleSelect';
 import { MeridiemType } from './TimeSelect';
 
+const cx = lucidClassNames.bind('&-TimeSelect');
 const { Option } = SingleSelect;
 
 interface ITimeSelectMeridiem {
@@ -40,6 +42,9 @@ const TimeSelectMeridiem = ({
 	);
 	return (
 		<SingleSelect
+			className={cx('&-meridiem')}
+			isSelectionHighlighted={false}
+			showIcon={false}
 			selectedIndex={isAM ? 0 : 1}
 			isInvisible
 			onSelect={onMeridiemChange}
