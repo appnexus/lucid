@@ -1,5 +1,4 @@
 import React, { useMemo } from 'react';
-import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import ClockIcon from '../Icon/ClockIcon/ClockIcon';
 import TimeSelectHour from './TimeSelectHour';
@@ -7,7 +6,6 @@ import TimeSelectMeridiem from './TimeSelectMeridiem';
 import TimeSelectMinute from './TimeSelectMinute';
 
 const cx = lucidClassNames.bind('&-TimeSelect');
-const { bool, func, instanceOf } = PropTypes;
 
 export interface ITimeSelect {
 	/** JS Date for the time to display and update	*/
