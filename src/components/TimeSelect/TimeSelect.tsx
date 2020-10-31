@@ -1,4 +1,5 @@
 import React, { useMemo } from 'react';
+import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import ClockIcon from '../Icon/ClockIcon/ClockIcon';
 import TimeSelectHour from './TimeSelectHour';
@@ -6,11 +7,20 @@ import TimeSelectMeridiem from './TimeSelectMeridiem';
 import TimeSelectMinute from './TimeSelectMinute';
 
 const cx = lucidClassNames.bind('&-TimeSelect');
+const { bool, func, instanceOf } = PropTypes;
 
 export interface ITimeSelect {
+	/** JS Date for the time to display and update	*/
 	time: Date;
+
+	/** Set to true to display the TimeSelect as a 24 hour clock. Set to false
+			to display the TimeSelect as a 12 hour clock */
 	is24HourClock?: boolean;
+
+	/** The callback that will take a new Date object */
 	onChange(time: Date): void;
+
+	/** Set to true to disable the TimeSelect */
 	isDisabled?: boolean;
 }
 
@@ -38,6 +48,7 @@ const TimeSelect = ({
 	}, [time, is24HourClock]);
 
 	const isAM = useMemo(() => meridiem === MeridiemType.AM, [meridiem]);
+	const isDisabledClass = isDisabled ? '&-time-disabled' : '';
 
 	return (
 		<div className={cx('&')}>
@@ -49,7 +60,7 @@ const TimeSelect = ({
 				isDisabled={isDisabled}
 				onChange={onChange}
 			/>
-			<span>:</span>
+			<span className={cx(isDisabledClass)}>:</span>
 			<TimeSelectMinute
 				minute={minute}
 				time={time}

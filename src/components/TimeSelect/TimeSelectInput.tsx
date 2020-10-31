@@ -27,9 +27,11 @@ const TimeSelectInput = ({
 		(event: any) => onChange(_.get(event, 'target.value', 0)),
 		[onChange]
 	);
+
+	const isDisabledClass = disabled ? '&-time-disabled' : '';
 	return (
 		<input
-			className={cx('&-time', className)}
+			className={cx('&-time', className, isDisabledClass)}
 			key='input'
 			aria-label={name}
 			autoComplete='off'

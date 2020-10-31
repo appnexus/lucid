@@ -9,17 +9,9 @@
 	font-weight: @font-weight-medium;
 	color: @color-darkGray;
 	line-height: @size-standard-height;
-	//padding: 0 @size-S;
 	border: 1px solid @featured-color-default-borderColor;
 	width: fit-content;
-
-	@digit-width: 0.54em;
-	@colon-width: 0.217em;
-	// own padding + inputs padding + digits width + dots width
-	min-width: calc(~'(4px * 3) + ' @digit-width * 6 ~' + ' @colon-width * 2);
-	flex-grow: 1;
-	padding: 0 2px;
-	box-sizing: content-box;
+	padding: 0 4px;
 
 	&-time-hour {
 		text-align: right;
@@ -38,6 +30,10 @@
 
 	&-clock {
 		stroke: @color-neutral-5;
+	}
+
+	&-time-disabled {
+		color: @color-neutral-6;
 	}
 
 	&-time {
