@@ -27,6 +27,7 @@ describe('TimeSelectMeridiem', () => {
 			isInvisible: true,
 			onSelect: expect.any(Function),
 			isDisabled: props.isDisabled,
+			hasReset: false,
 			children: expect.anything(),
 		});
 	});
