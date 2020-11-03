@@ -50,7 +50,6 @@ describe('TimeSelect', () => {
 			expect(component.find(TimeSelectMeridiem).props()).toEqual({
 				hour: 5,
 				meridiem: MeridiemType.PM,
-				isAM: false,
 				time: props.time,
 				isDisabled: props.isDisabled,
 				onChange: props.onChange,
