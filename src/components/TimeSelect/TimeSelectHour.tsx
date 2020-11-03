@@ -50,7 +50,7 @@ const TimeSelectHour = ({
 				updatedTime.setHours(cleanedNextHour);
 			} else {
 				const nextHouris12 = nextHour === 12;
-				const shouldRollOver = hour == 11 && nextHouris12;
+				const shouldRollOver = hour === 11 && nextHouris12;
 				const shouldRollBack = hour === 12 && nextHour === 11;
 				let cleanedHour;
 				if (shouldRollOver) {

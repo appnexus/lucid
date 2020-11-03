@@ -69,7 +69,6 @@ const TimeSelect = ({
 				<TimeSelectMeridiem
 					hour={hour}
 					meridiem={meridiem}
-					isAM={isAM}
 					time={time}
 					isDisabled={isDisabled}
 					onChange={onChange}

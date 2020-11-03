@@ -9,7 +9,6 @@ const { Option } = SingleSelect;
 interface ITimeSelectMeridiem {
 	hour: number;
 	meridiem: MeridiemType;
-	isAM?: boolean;
 	time: Date;
 	isDisabled?: boolean;
 	onChange(time: Date): void;
@@ -18,7 +17,6 @@ interface ITimeSelectMeridiem {
 const TimeSelectMeridiem = ({
 	hour,
 	meridiem,
-	isAM,
 	time,
 	isDisabled,
 	onChange,
@@ -45,7 +43,7 @@ const TimeSelectMeridiem = ({
 			className={cx('&-meridiem')}
 			isSelectionHighlighted={false}
 			showIcon={false}
-			selectedIndex={isAM ? 0 : 1}
+			selectedIndex={MeridiemType.AM === meridiem ? 0 : 1}
 			isInvisible
 			onSelect={onMeridiemChange}
 			isDisabled={isDisabled}
