@@ -21,7 +21,7 @@ const TimeSelectInput = ({
 	disabled,
 	onChange,
 }: ITimeSelectInput) => {
-	const cleanedValue = value !== null && value < 10 ? `0${value}` : value;
+	const cleanedValue = value !== null ? _.toString(value).padStart(2, '0') : '00';
 
 	const cleanOnChange = useCallback(
 		(event: any) => onChange(_.get(event, 'target.value', 0)),

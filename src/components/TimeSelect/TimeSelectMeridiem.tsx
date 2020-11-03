@@ -47,6 +47,7 @@ const TimeSelectMeridiem = ({
 			isInvisible
 			onSelect={onMeridiemChange}
 			isDisabled={isDisabled}
+			hasReset={false}
 		>
 			<Option>{MeridiemType.AM}</Option>
 			<Option>{MeridiemType.PM}</Option>
