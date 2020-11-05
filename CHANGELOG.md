@@ -1,3 +1,8 @@
+## 5.8.12
+
+- #1177 [patch] BUDE-634: Building out a new time selector
+  https://github.com/appnexus/lucid/compare/v5.8.11...v5.8.12
+  
 ## 5.8.11
 
 - #1176 [patch] BUDE-479: Fix scroll locked content
