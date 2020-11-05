@@ -180,6 +180,7 @@ import Tag from './components/Tag/Tag';
 import TextField from './components/TextField/TextField';
 import TextFieldValidated from './components/TextFieldValidated/TextFieldValidated';
 import TextIcon from './components/Icon/TextIcon/TextIcon';
+import TimeSelect from './components/TimeSelect/TimeSelect';
 import Typography from './components/Typography/Typography';
 import Underline from './components/Underline/Underline';
 import UnlinkedIcon from './components/Icon/UnlinkedIcon/UnlinkedIcon';
@@ -389,6 +390,7 @@ export {
 	TextFieldValidated,
 	ToolTip,
 	ToolTipDumb,
+	TimeSelect,
 	Typography,
 	Underline,
 	UnlinkedIcon,

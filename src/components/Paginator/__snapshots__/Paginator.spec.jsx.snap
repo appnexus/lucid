@@ -83,6 +83,7 @@ exports[`Paginator [common] example testing should match snapshot(s) for 2.page-
       isInvisible={true}
       isSelectionHighlighted={false}
       selectedIndex={0}
+      showIcon={true}
     >
       <SingleSelect.Option
         isDisabled={false}
@@ -249,6 +250,7 @@ exports[`Paginator [common] example testing should match snapshot(s) for 3.disab
       isInvisible={true}
       isSelectionHighlighted={false}
       selectedIndex={0}
+      showIcon={true}
     >
       <SingleSelect.Option
         isDisabled={false}
@@ -362,6 +364,7 @@ exports[`Paginator [common] example testing should match snapshot(s) for 4.show-
       isInvisible={true}
       isSelectionHighlighted={false}
       selectedIndex={0}
+      showIcon={true}
     >
       <SingleSelect.Option
         isDisabled={false}
@@ -468,6 +471,7 @@ exports[`Paginator [common] example testing should match snapshot(s) for 4.show-
       isInvisible={true}
       isSelectionHighlighted={false}
       selectedIndex={0}
+      showIcon={true}
     >
       <SingleSelect.Option
         isDisabled={false}
@@ -607,6 +611,7 @@ exports[`Paginator [common] example testing should match snapshot(s) for 4.show-
       isInvisible={true}
       isSelectionHighlighted={false}
       selectedIndex={0}
+      showIcon={true}
     >
       <SingleSelect.Option
         isDisabled={false}
@@ -746,6 +751,7 @@ exports[`Paginator [common] example testing should match snapshot(s) for 4.show-
       isInvisible={true}
       isSelectionHighlighted={false}
       selectedIndex={0}
+      showIcon={true}
     >
       <SingleSelect.Option
         isDisabled={false}
@@ -885,6 +891,7 @@ exports[`Paginator [common] example testing should match snapshot(s) for 4.show-
       isInvisible={true}
       isSelectionHighlighted={false}
       selectedIndex={0}
+      showIcon={true}
     >
       <SingleSelect.Option
         isDisabled={false}
@@ -1024,6 +1031,7 @@ exports[`Paginator [common] example testing should match snapshot(s) for 4.show-
       isInvisible={true}
       isSelectionHighlighted={false}
       selectedIndex={0}
+      showIcon={true}
     >
       <SingleSelect.Option
         isDisabled={false}

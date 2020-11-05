@@ -6,7 +6,8 @@
     "strict": true,
     "jsx": "react",
     "moduleResolution": "node",
-    "isolatedModules": true
+    "isolatedModules": true,
+    "outDir": "./lib"
   },
   "include": [
     "src/**/*"
