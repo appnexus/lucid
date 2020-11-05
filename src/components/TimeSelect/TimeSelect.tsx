@@ -74,7 +74,10 @@ const TimeSelect = ({
 					onChange={onChange}
 				/>
 			)}
-			<ClockIcon className={cx('&-clock')} disabled={isDisabled} />
+			<ClockIcon
+				className={cx('&-clock', { active: !isDisabled })}
+				disabled={isDisabled}
+			/>
 		</div>
 	);
 };

@@ -18,26 +18,30 @@
 			padding: 0;
 			border: 1px;
 			font-weight: 400;
+			height: 18px;
 		}
-		.lucid-SingleSelect-Control:not(.lucid-SingleSelect-Control-is-disabled).lucid-SingleSelect-Control:not(.lucid-SingleSelect-Control-is-expanded):hover {
-			background-color: transparent;
-		}
-
 		.lucid-SingleSelect-Control-content {
 			margin-right: 0;
 			padding: 2px;
 			height: 18px;
-
-			&:hover,
-			&:focus {
-				background: @color-primaryLight;
-			}
+		}
+		.lucid-DropMenu-Control:focus,
+		.lucid-SingleSelect-Control:not(.lucid-SingleSelect-Control-is-disabled).lucid-SingleSelect-Control:not(.lucid-SingleSelect-Control-is-expanded):hover,
+		.lucid-SingleSelect-Control:not(.lucid-SingleSelect-Control-is-disabled).lucid-SingleSelect-Control:not(.lucid-SingleSelect-Control-is-expanded):focus,
+		.lucid-SingleSelect-Control-content:hover,
+		.lucid-SingleSelect-Control-content:focus {
+			outline: none;
+			background-color: @color-primaryLight;
 		}
 	}
 
 	&-clock {
 		stroke: @color-neutral-5;
 		margin-left: 7px;
+
+		&.active {
+			stroke: @color-primary;
+		}
 	}
 
 	&-time-disabled {
