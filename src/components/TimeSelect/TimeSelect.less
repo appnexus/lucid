@@ -11,19 +11,22 @@
 	line-height: @size-standard-height;
 	border: 1px solid @featured-color-default-borderColor;
 	width: fit-content;
+	max-width: 92px;
 	padding: 0 4px;
 
 	&-meridiem {
 		.lucid-SingleSelect-Control {
 			padding: 0;
-			border: 1px;
+			border: none;
 			font-weight: 400;
-			height: 18px;
+			height: 100%;
+			line-height: 18px;
 		}
 		.lucid-SingleSelect-Control-content {
 			margin-right: 0;
-			padding: 2px;
-			height: 18px;
+			padding: 0 2px;
+			height: 100%;
+			line-height: 18px;
 		}
 		.lucid-DropMenu-Control:focus,
 		.lucid-SingleSelect-Control:not(.lucid-SingleSelect-Control-is-disabled).lucid-SingleSelect-Control:not(.lucid-SingleSelect-Control-is-expanded):hover,
@@ -51,14 +54,14 @@
 	&-time {
 		border-style: none;
 		width: 1.3em;
-		height: 100%;
 		position: relative;
 		border: 0;
 		background: none;
 		font: inherit;
 		box-sizing: content-box;
 		-moz-appearance: textfield;
-		padding: 2px 0 2px 1px;
+		//padding: 2px 0 2px 1px;
+		padding: 0 0 0 1px;
 
 		&::-webkit-outer-spin-button,
 		&::-webkit-inner-spin-button {
@@ -69,12 +72,16 @@
 
 	&-time-hour {
 		text-align: right;
-		padding: 2px 1px 2px 0;
+		//padding: 2px 1px 2px 0;
+		padding: 0 1px 0 0;
 	}
 
 	&-time-hour,
 	&-time {
 		font-weight: 400;
+		//height: 100%;
+		height: 18px;
+		line-height: 18px;
 
 		&:focus,
 		&:hover {
