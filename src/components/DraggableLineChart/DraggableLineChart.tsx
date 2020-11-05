@@ -51,6 +51,8 @@ class DraggableLineChart extends React.Component<IDraggableLineChartProps, {}> {
 			dataIsCentered,
 			yAxisMin = 0,
 			xAxisRenderProp,
+			showPreselect,
+			onPreselect,
 		} = this.props;
 		this.d3LineChart = new DraggableLineChartD3(svg, {
 			height: height || draggableLineChartDefaultProps.height,
@@ -63,6 +65,9 @@ class DraggableLineChart extends React.Component<IDraggableLineChartProps, {}> {
 			yAxisMin,
 			xAxisRenderProp,
 			cx,
+			showPreselect,
+			onPreselect,
+			isMouseDown: false,
 		});
 		this.d3LineChart.renderLineChart();
 	}
@@ -118,11 +123,19 @@ class DraggableLineChart extends React.Component<IDraggableLineChartProps, {}> {
 			Called when the user stops to dragging an item.
 		  Signature: \`({ event, props }) => {}\`
 		`,
+		onPreselectHandler: func`
+			Drag handler function which is a callable function executed at the end of drag.
+			Called when the user stops to dragging an item.
+		  Signature: \`({ event, props }) => {}\`
+		`,
 		xAxisTicksVertical: bool`
 			Flag for if xAxis tick labels are vertical.
 		`,
 		dataIsCentered: bool`
 			Flag for if data is center aligned rather than default left aligned.
+		`,
+		showPreselect: bool`
+			Flag for showing draggable pane.
 		`,
 		yAxisMin: number`
 			Flag for yAxis sticking to minimum (not readjusting minimum).
@@ -134,7 +147,7 @@ class DraggableLineChart extends React.Component<IDraggableLineChartProps, {}> {
 			in the data. This react component will always be passed the following props: ({x, y, ref }: { x: string; y: number; ref?: any })
 		`,
 	};
-	static defaultProps = draggableLineChartDefaultProps ;
+	static defaultProps = draggableLineChartDefaultProps;
 
 	render(): React.ReactNode {
 		const { height, width, ...passThroughs } = this.props;
