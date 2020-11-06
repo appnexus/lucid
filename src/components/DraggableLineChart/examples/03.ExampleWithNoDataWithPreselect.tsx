@@ -3,7 +3,7 @@ import _ from 'lodash';
 import React, { useCallback } from 'react';
 import { DraggableLineChart, TextFieldValidated } from '../../../index';
 import { IXAxisRenderProp } from '../d3-helpers';
-import { IData } from '../DraggableLineChartD3';
+import { IData, IOnPreselect, ISelectedChartData } from '../DraggableLineChartD3';
 
 const initialCustomSpendDataPoints = [
 	{ x: '12 AM', y: 0, ref: React.createRef() },
@@ -85,8 +85,13 @@ export default createClass({
 		this.setState({ customSpendDataPoints: newCustomSpendDataPoints });
 		return newCustomSpendDataPoints;
 	},
-	onPreselectHandler(data:IData): void {
-		this.setState({ customSpendDataPoints: data });
+	onPreselectHandler(data: ISelectedChartData[]): void {
+		const totalSelected = _.filter(data, ['isSelected', true]).length;
+		const avg = Math.round((100 / totalSelected) * 10) / 10;
+		const updatedData = _.map(data, (step) => ({ ref: step.ref, x: step.x, y: step.isSelected ? avg : step.y }));
+
+		console.log({data, avg, updatedData})
+		this.setState({ customSpendDataPoints: updatedData });
 	},
 	onChangeHandler(newYValue: string, xValue: string) {
 		const currentIndex = _.findIndex(this.state.customSpendDataPoints, [

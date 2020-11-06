@@ -8,6 +8,7 @@ import { d3Scale } from '../../index';
 import _ from 'lodash';
 import * as d3Array from 'd3-array';
 import { StandardProps } from '../../util/component-types';
+import { lucidClassNames } from '../../util/style-helpers';
 import {
 	IXAxisRenderProp,
 	getGroup,
@@ -15,14 +16,17 @@ import {
 	ISelection,
 } from './d3-helpers';
 
+const cx = lucidClassNames.bind('&-DraggableLineChart');
+
 export interface IChartData {
 	x: string;
 	y: number;
 	ref?: any;
 }
 export type IOnDragEnd = (newYValue: string, xValue: string) => void;
-export type IOnPreselect = (data: IData) => void;
 export type IData = IChartData[];
+export type ISelectedChartData = IChartData & { isSelected: boolean };
+export type IOnPreselect = (data: ISelectedChartData[]) => void;
 
 interface IDraggableLineChartMargin {
 	top: number;
@@ -43,16 +47,52 @@ const getAttributes = function(selection: ISelection, obj: string[]): any {
 	);
 };
 export interface IDraggableLineChart extends StandardProps {
+	/** Height of the chart. */
 	height?: number;
+	/** Width of the chart. */
 	width?: number;
+	/** Margin is an object defining the margins of the chart. These margins will
+	    contain the axis and labels. */
 	margin?: IDraggableLineChartMargin;
+	/** Data for the chart.
+			Basic example:
+			[
+			 { x: new Date('2015-01-01') , y: 1 } ,
+			 { x: new Date('2015-01-02') , y: 2 } ,
+			 { x: new Date('2015-01-03') , y: 3 } ,
+			 { x: new Date('2015-01-04') , y: 2 } ,
+			 { x: new Date('2015-01-05') , y: 5 } ,
+			]
+
+			If you want to be able to navigate to one of the components, you can use ref as well:
+			[
+			 { x: new Date('2015-01-01') , y: 1, ref: React.createRef() } ,
+			 { x: new Date('2015-01-02') , y: 2, ref: React.createRef() } ,
+			 { x: new Date('2015-01-03') , y: 3, ref: React.createRef() } ,
+			 { x: new Date('2015-01-04') , y: 2, ref: React.createRef() } ,
+			 { x: new Date('2015-01-05') , y: 5, ref: React.createRef() } ,
+			] */
 	data: IData;
+	/** Drag handler function which is a callable function executed at the end of drag.
+			Called when the user stops to dragging an item.
+		  Signature: `({ event, props }) => {}` */
 	onDragEnd: IOnDragEnd;
+	/** Drag handler function which is a callable function executed at the end of drag.
+			Called when the user stops to dragging an item.
+		  Signature: `({ event, props }) => {}` */
 	onPreselect?: IOnPreselect;
+	/** Flag for if xAxis tick labels are vertical. */
 	xAxisTicksVertical?: boolean;
+	/** Flag for if data is center aligned rather than default left aligned. */
 	dataIsCentered?: boolean;
+	/** Flag for showing draggable pane. */
 	showPreselect?: boolean;
+	/** Flag for yAxis sticking to minimum (not readjusting minimum). */
 	yAxisMin?: number;
+	/** Optional react component to render within X-Axis.
+			Note: If you are using input boxes or similar and you want to navigate
+			to the next component on tab, you will might need to provide refs
+			in the data. This react component will always be passed the following props: ({x, y, ref }: { x: string; y: number; ref?: any }) */
 	xAxisRenderProp?: IXAxisRenderProp;
 }
 
@@ -63,9 +103,8 @@ interface IDraggableLineChartParams extends IDraggableLineChart {
 	width: number;
 	margin: IDraggableLineChartMargin;
 	yAxisMin: number;
-	isMouseDown: boolean;
-	mouseDownX?: number;
-	currentMouseX?: number;
+	isMouseDown?: boolean;
+	mouseDownStep?: number;
 }
 
 class DraggableLineChartD3 {
@@ -112,16 +151,22 @@ class DraggableLineChartD3 {
 			]);
 	}
 
-	setMouseDown = (x: number) => {
-		this.params.mouseDownX = x;
-		this.params.isMouseDown = true;
+	setMouseDown = (isMouseDown: boolean, mouseDownStep?: number) => {
+		this.params.isMouseDown = isMouseDown;
+		this.params.mouseDownStep = mouseDownStep;
 	};
 
-	setCurrentMouseX = (x: number) => {
-		this.params.currentMouseX = x;
-	};
 	getIsMouseDown = () => {
 		return this.params.isMouseDown;
+	};
+
+	getMouseDownStep = () => {
+		return this.params.mouseDownStep || 0;
+	};
+
+	shouldShowPreselect = () => {
+		const hasUserValues = _.some(this.params.data, ({ y }) => y > 0);
+		return this.params.showPreselect && !hasUserValues;
 	};
 
 	drag: any = () => {
@@ -234,6 +279,10 @@ class DraggableLineChartD3 {
 			);
 	};
 	renderPoints = (isNew: boolean) => {
+		// if (this.shouldShowPreselect()) {
+		// 	this.selection.selectAll('circle').remove();
+		// 	return;
+		// }
 		const { data, dataIsCentered } = this.params;
 		const circle = isNew
 			? this.selection
@@ -273,22 +322,71 @@ class DraggableLineChartD3 {
 		}
 	};
 
+	reRenderDragBox = ({
+		dragBox,
+		mouseX,
+		xLeft,
+		xRight,
+		stepWidth,
+		stepCount,
+	}: {
+		dragBox: any;
+		mouseX: number;
+		xLeft: number;
+		xRight: number;
+		stepWidth: number;
+		stepCount: number;
+	}) => {
+		const isLeft = xLeft >= mouseX;
+		const isRight = xRight <= mouseX;
+		const mouseDownStep = this.getMouseDownStep();
+		if (isLeft) {
+			const difference = _.max([xLeft - mouseX, 0]) || 0;
+			const rawStepsSelected = Math.floor(difference / stepWidth) + 2;
+			const maxStepsAvailable = mouseDownStep + 1;
+			const stepsSelected = _.min([rawStepsSelected, maxStepsAvailable]) || 1;
+			const activeBoxWidth = stepsSelected * stepWidth;
+			const nextXLeft = xRight - activeBoxWidth;
+			dragBox.attr('x', nextXLeft);
+			dragBox.attr('width', activeBoxWidth);
+		} else if (isRight) {
+			const difference = _.max([mouseX - xRight, 0]) || 0;
+			const rawStepsSelected = Math.floor(difference / stepWidth) + 2;
+			const maxStepsAvailable = stepCount - mouseDownStep;
+			const stepsSelected = _.min([rawStepsSelected, maxStepsAvailable]) || 1;
+			const activeBoxWidth = stepsSelected * stepWidth;
+			dragBox.attr('x', xLeft);
+			dragBox.attr('width', activeBoxWidth);
+		} else {
+			dragBox.attr('x', xLeft);
+			dragBox.attr('width', stepWidth);
+		}
+	};
+
 	renderHoverTracker = () => {
 		const {
 			height,
 			margin: { top, bottom },
 			data,
 			onPreselect,
-			showPreselect,
 		} = this.params;
-		const { setMouseDown, getIsMouseDown, setCurrentMouseX } = this;
-		const hasNoUserValues = _.every(data, ({ y }) => _.isEmpty(y));
-		const { xScale, renderLine, renderPoints, selection } = this;
-		if (!showPreselect || !hasNoUserValues) {
+		const {
+			shouldShowPreselect,
+			setMouseDown,
+			getIsMouseDown,
+			getMouseDownStep,
+			reRenderDragBox,
+			xScale,
+			selection,
+		} = this;
+		if (!shouldShowPreselect()) {
 			selection.selectAll('.overlayContainer').remove();
 			return;
 		}
 		const innerHeight = height - top - bottom;
+		const stepWidth = xScale.step();
+		const stepCount = data.length;
+
 		const overlayContainer = selection
 			.append('g')
 			.classed('overlayContainer', true)
@@ -304,47 +402,84 @@ class DraggableLineChartD3 {
 			.attr('y', 0)
 			.attr('width', chartData => this.xScale.step())
 			.attr('height', innerHeight)
-			.classed('overlayTrack', true)
+			.classed(cx('&-overlayTrack'), true)
 			.on('mouseenter', (d, i, nodes) => {
-				d3Selection.select(nodes[i]).classed('active', true);
+				if (!getIsMouseDown()) {
+					d3Selection.select(nodes[i]).classed('active', true);
+				}
 			})
 			.on('mouseout', function(d, i, nodes) {
-				d3Selection.select(nodes[i]).classed('active', getIsMouseDown());
-			//	Can be removed
+				if (!getIsMouseDown()) {
+					d3Selection.select(nodes[i]).classed('active', false);
+				}
 			})
-			.on('mousedown', function() {
+			.on('mousedown', function(d, i) {
+				d3Selection.selectAll('.active').classed('active', false);
 				const currentTarget = d3Selection.select(this);
-				const { x } = getAttributes(currentTarget, ['x']);
-				setMouseDown(x);
-			})
-			.on('mouseup', function() {
-				const activeBox = d3Selection.select(this);
-				const { x, width } = getAttributes(activeBox, ['x', 'width']);
-				const range = xScale.range();
-				const rangePoints = d3Array.range(range[0], range[1], xScale.step());
-				const avg = 100 / (width / xScale.step());
-				_.reduce(
-					rangePoints,
-					(acc, d, i) => {
-						if (_.inRange(+d, x, +x + +width)) {
-							acc[i].y = +avg;
-						}
-						return acc;
-					},
-					data
-				);
+				const { x, y, width, height }: any = getAttributes(currentTarget, [
+					'x',
+					'y',
+					'width',
+					'height',
+				]);
+				setMouseDown(true, i);
+				const xLeft = +x;
+				const xRight = +x + +width;
+				// @ts-ignore
+				const container = d3Selection.select(this.parentNode);
+				container
+					.append('rect')
+					.attr('x', x)
+					.attr('y', y)
+					.attr('width', width)
+					.attr('height', height)
+					.classed(cx('&-overlayTrack'), true)
+					.classed('active', true)
+					.classed('dragBox', true)
+					.on('mouseout', function() {
+						// @ts-ignore
+						const [mouseX] = d3Selection.mouse(this);
+						const dragBox = selection.selectAll('.dragBox');
+						reRenderDragBox({
+							dragBox,
+							mouseX,
+							xLeft,
+							xRight,
+							stepWidth,
+							stepCount,
+						});
+					})
+					.on('mousemove', function() {
+						// @ts-ignore
+						const [mouseX] = d3Selection.mouse(this);
+						const dragBox = selection.selectAll('.dragBox');
+						reRenderDragBox({
+							dragBox,
+							mouseX,
+							xLeft,
+							xRight,
+							stepWidth,
+							stepCount,
+						});
+					})
+					.on('mouseup', function() {
+						const clickStep = getMouseDownStep();
+						const activeBox = selection.selectAll('.dragBox');
+						const { x, width } = getAttributes(activeBox, ['x', 'width']);
+						const isRight = xLeft === +x;
+						const steps = Math.round(+width / stepWidth);
+						const startingIndex = isRight ? clickStep : clickStep - steps + 1;
+						const endingIndex = clickStep ? clickStep + steps - 1 : clickStep;
+						const updatedData = data.map((step, i) => ({
+							...step,
+							isSelected: i >= startingIndex && i <= endingIndex,
+						}));
+						!!onPreselect && onPreselect(updatedData);
 
-				renderLine(false);
-				renderPoints(false);
-
-				!!onPreselect && onPreselect(data);
-				overlayContainer.remove();
-			})
-			.on('mousemove', function() {
-				const [currentX] = d3Selection.mouse(this);
-				// TODO: Lance, we stopped here. we need to move all loging on
-				// const showActive = (is current box x position between. Mouse start. x and current mouse x
-				setCurrentMouseX(currentX);
+						setMouseDown(false);
+						selection.selectAll('.dragBox').remove();
+						selection.selectAll('.overlayContainer').remove();
+					});
 			});
 	};
 	renderLineChart = () => {

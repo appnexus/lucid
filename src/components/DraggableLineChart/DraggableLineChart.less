@@ -15,17 +15,20 @@
 	&-legend-container {
 		text-align: center;
 	}
-}
-.overlayTrack{
-	stroke: @color-primary;
-	fill: @color-primary;
-	fill-opacity: 0%;
-	stroke-opacity: 0%;
-	&.active{
-		fill-opacity: 15%;
-		stroke-opacity: 100%;
+
+	&-overlayTrack {
+		stroke: @color-primary;
+		fill: @color-primary;
+		fill-opacity: 0%;
+		stroke-opacity: 0%;
+
+		&.active {
+			fill-opacity: 15%;
+			stroke-opacity: 100%;
+		}
 	}
 }
+
 .@{prefix}-DraggableLineChart-Axis {
 	text {
 		font: @font-chart;
