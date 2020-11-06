@@ -3,7 +3,7 @@ import _ from 'lodash';
 import React, { useCallback } from 'react';
 import { DraggableLineChart, TextFieldValidated } from '../../../index';
 import { IXAxisRenderProp } from '../d3-helpers';
-import { IData, IOnPreselect, ISelectedChartData } from '../DraggableLineChartD3';
+import { IData, ISelectedChartData } from '../DraggableLineChartD3';
 
 const initialCustomSpendDataPoints = [
 	{ x: '12 AM', y: 0, ref: React.createRef() },
