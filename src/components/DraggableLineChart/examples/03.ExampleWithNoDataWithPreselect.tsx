@@ -90,7 +90,6 @@ export default createClass({
 		const avg = Math.round((100 / totalSelected) * 10) / 10;
 		const updatedData = _.map(data, (step) => ({ ref: step.ref, x: step.x, y: step.isSelected ? avg : step.y }));
 
-		console.log({data, avg, updatedData})
 		this.setState({ customSpendDataPoints: updatedData });
 	},
 	onChangeHandler(newYValue: string, xValue: string) {
