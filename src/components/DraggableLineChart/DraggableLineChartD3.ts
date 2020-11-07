@@ -105,6 +105,8 @@ interface IDraggableLineChartParams extends IDraggableLineChart {
 	yAxisMin: number;
 	isMouseDown?: boolean;
 	mouseDownStep?: number;
+	hasRenderedPoint?: boolean;
+	hasRenderedLine?: boolean;
 }
 
 class DraggableLineChartD3 {
@@ -164,6 +166,22 @@ class DraggableLineChartD3 {
 		return this.params.mouseDownStep || 0;
 	};
 
+	getHasRenderedPoint = () => {
+		return !!this.params.hasRenderedPoint;
+	};
+
+	getHasRenderedLine = () => {
+		return !!this.params.hasRenderedLine;
+	};
+
+	setHasRenderedPoint = () => {
+		this.params.hasRenderedPoint = true;
+	};
+
+	setHasRenderedLine = () => {
+		this.params.hasRenderedLine = true;
+	};
+
 	shouldShowPreselect = () => {
 		const hasUserValues = _.some(this.params.data, ({ y }) => y > 0);
 		return this.params.showPreselect && !hasUserValues;
@@ -197,8 +215,8 @@ class DraggableLineChartD3 {
 			})
 			.on('end', (d: any) => {
 				if (onDragEnd) onDragEnd(d.y, d.x);
-				renderLine(false);
-				renderPoints(false);
+				renderLine();
+				renderPoints();
 			});
 	};
 	renderXAxis = () => {
@@ -248,9 +266,13 @@ class DraggableLineChartD3 {
 			})
 			.call(() => yGroup);
 	};
-	renderLine = (isNew: boolean) => {
+	renderLine = () => {
+		if (this.shouldShowPreselect()) {
+			return;
+		}
 		const { dataIsCentered, cx } = this.params;
-		if (isNew) {
+
+		if (!this.getHasRenderedLine()) {
 			if (dataIsCentered) {
 				const innerXTickWidth = this.xScale.step();
 				this.selection
@@ -264,6 +286,7 @@ class DraggableLineChartD3 {
 					.append('path')
 					.attr('class', `${cx('&-Line')}`);
 			}
+			this.setHasRenderedLine();
 		}
 		const lines: any = this.selection.selectAll(`path.${cx('&-Line')}`);
 		lines.datum(this.params.data).enter();
@@ -278,19 +301,18 @@ class DraggableLineChartD3 {
 					.y((d: any) => this.yScale(d.y))
 			);
 	};
-	renderPoints = (isNew: boolean) => {
-		// if (this.shouldShowPreselect()) {
-		// 	this.selection.selectAll('circle').remove();
-		// 	return;
-		// }
+	renderPoints = () => {
+		if (this.shouldShowPreselect()) {
+			return;
+		}
 		const { data, dataIsCentered } = this.params;
-		const circle = isNew
+		const circle = this.getHasRenderedPoint()
 			? this.selection
-					.append('g')
 					.selectAll('circle')
 					.data(data)
 					.join('circle')
 			: this.selection
+					.append('g')
 					.selectAll('circle')
 					.data(data)
 					.join('circle');
@@ -307,7 +329,6 @@ class DraggableLineChartD3 {
 				.style('fill', '#587EBA')
 				.style('stroke', 'white')
 				.style('stroke-width', 1);
-			if (isNew) circle.call(this.drag());
 		} else {
 			circle
 				.transition()
@@ -318,8 +339,9 @@ class DraggableLineChartD3 {
 				.style('fill', '#587EBA')
 				.style('stroke', 'white')
 				.style('stroke-width', 1);
-			if (isNew) circle.call(this.drag());
 		}
+		if (!this.getHasRenderedPoint()) circle.call(this.drag());
+		this.setHasRenderedPoint();
 	};
 
 	reRenderDragBox = ({
@@ -486,8 +508,8 @@ class DraggableLineChartD3 {
 		this.renderXAxis();
 		this.renderYAxis();
 		this.renderHoverTracker();
-		this.renderLine(true);
-		this.renderPoints(true);
+		this.renderLine();
+		this.renderPoints();
 	};
 	updateLineChart = (data: IData) => {
 		this.params.data = data;
@@ -497,11 +519,7 @@ class DraggableLineChartD3 {
 				: this.params.yAxisMin,
 			d3Array.max(this.params.data, (d: any) => d.y),
 		]);
-		this.renderXAxis();
-		this.renderYAxis();
-		this.renderHoverTracker();
-		this.renderLine(false);
-		this.renderPoints(false);
+		this.renderLineChart();
 	};
 }
 
