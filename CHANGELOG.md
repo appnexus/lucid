@@ -1,3 +1,6 @@
+## Latest
+- [patch] Fixing a default max Y value for DraggableLineChart
+
 ## 5.8.13
 
 - #1178 [patch] BUDE-848: Building out a preselect for the DraggableLineChart

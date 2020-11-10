@@ -144,7 +144,7 @@ class DraggableLineChartD3 {
 				_.isUndefined(this.params.yAxisMin)
 					? d3Array.min(this.params.data, (d: any) => d.y)
 					: this.params.yAxisMin,
-				d3Array.max(this.params.data, (d: any) => d.y),
+				d3Array.max(this.params.data, (d: any) => d.y) || 10,
 			])
 			.nice()
 			.range([
@@ -517,7 +517,7 @@ class DraggableLineChartD3 {
 			_.isUndefined(this.params.yAxisMin)
 				? d3Array.min(this.params.data, (d: any) => d.y)
 				: this.params.yAxisMin,
-			d3Array.max(this.params.data, (d: any) => d.y),
+			d3Array.max(this.params.data, (d: any) => d.y) || 10,
 		]);
 		this.renderLineChart();
 	};
