@@ -1,3 +1,8 @@
+## 5.8.13
+
+- #1178 [patch] BUDE-848: Building out a preselect for the DraggableLineChart
+  https://github.com/appnexus/lucid/compare/v5.8.12...v5.8.13
+
 ## 5.8.12
 
 - #1177 [patch] BUDE-634: Building out a new time selector
