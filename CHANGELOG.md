@@ -1,4 +1,4 @@
-## Latest
+## 5.8.14
 - [patch] Fixing a default max Y value for DraggableLineChart
 
 ## 5.8.13
