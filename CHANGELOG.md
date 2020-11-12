@@ -1,3 +1,7 @@
+## 5.8.16
+- [patch] Fixing issue with TimeSelect
+  https://github.com/appnexus/lucid/compare/v5.8.15...v5.8.16
+  
 ## 5.8.15
 - [patch] Fixing a less value for TimeSelect
   https://github.com/appnexus/lucid/compare/v5.8.14...v5.8.15

@@ -42,7 +42,7 @@ describe('TimeSelectHour', () => {
 						.props()
 						.onChange('24');
 					expect(props.onChange).toBeCalledWith(
-						new Date('2020-11-03T00:00:00')
+						new Date('2020-11-04T00:00:00')
 					);
 				});
 			});
@@ -54,7 +54,7 @@ describe('TimeSelectHour', () => {
 						.props()
 						.onChange('-1');
 					expect(props.onChange).toBeCalledWith(
-						new Date('2020-11-03T23:00:00')
+						new Date('2020-11-02T23:00:00')
 					);
 				});
 			});
@@ -107,7 +107,7 @@ describe('TimeSelectHour', () => {
 							.props()
 							.onChange('12');
 						expect(props.onChange).toBeCalledWith(
-							new Date('2020-11-03T00:00:00')
+							new Date('2020-11-04T00:00:00')
 						);
 					});
 				});
@@ -121,7 +121,7 @@ describe('TimeSelectHour', () => {
 							.props()
 							.onChange('11');
 						expect(props.onChange).toBeCalledWith(
-							new Date('2020-11-03T23:00:00')
+							new Date('2020-11-02T23:00:00')
 						);
 					});
 				});

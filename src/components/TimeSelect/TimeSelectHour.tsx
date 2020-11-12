@@ -46,7 +46,7 @@ const TimeSelectHour = ({
 			const updatedTime = new Date(time);
 			if (is24HourClock) {
 				const cleanedNextHour =
-					nextHour < 0 ? 23 : nextHour > 23 ? 0 : nextHour;
+					nextHour < 0 ? -1 : nextHour > 23 ? 24 : nextHour;
 				updatedTime.setHours(cleanedNextHour);
 			} else {
 				const nextHouris12 = nextHour === 12;
@@ -54,9 +54,9 @@ const TimeSelectHour = ({
 				const shouldRollBack = hour === 12 && nextHour === 11;
 				let cleanedHour;
 				if (shouldRollOver) {
-					cleanedHour = isAM ? 12 : 0;
+					cleanedHour = isAM ? 12 : 24;
 				} else if (shouldRollBack) {
-					cleanedHour = isAM ? 23 : 11;
+					cleanedHour = isAM ? -1 : 11;
 				} else {
 					cleanedHour = isAM
 						? getCleanedAMHour(nextHour)
