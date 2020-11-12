@@ -1,6 +1,11 @@
+## 5.8.15
+- [patch] Fixing a less value for TimeSelect
+  https://github.com/appnexus/lucid/compare/v5.8.14...v5.8.15
+  
 ## 5.8.14
 - [patch] Fixing a default max Y value for DraggableLineChart
-
+  https://github.com/appnexus/lucid/compare/v5.8.13...v5.8.14
+  
 ## 5.8.13
 
 - #1178 [patch] BUDE-848: Building out a preselect for the DraggableLineChart
