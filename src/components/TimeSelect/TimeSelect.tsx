@@ -47,9 +47,10 @@ const TimeSelect = ({
 
 	const isAM = useMemo(() => meridiem === MeridiemType.AM, [meridiem]);
 	const isDisabledClass = isDisabled ? '&-time-disabled' : '';
+	const timeSelectorClass = isDisabled ? '&-isDisabled' : '';
 
 	return (
-		<div className={cx('&')}>
+		<div className={cx('&', timeSelectorClass)}>
 			<TimeSelectHour
 				hour={hour}
 				time={time}

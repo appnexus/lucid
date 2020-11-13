@@ -8,10 +8,15 @@
 	font-size: @fontSize;
 	font-weight: @font-weight-medium;
 	color: @color-darkGray;
+	background-color: @color-white;
 	border: 1px solid @featured-color-default-borderColor;
 	width: -moz-fit-content;
 	width: fit-content;
 	padding: 3px 4px;
+
+	&-isDisabled {
+		background-color: @color-neutral-3;
+	}
 
 	&-meridiem {
 		.lucid-SingleSelect-Control {
