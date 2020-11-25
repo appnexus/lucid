@@ -314,7 +314,6 @@ class DraggableLineChartD3 {
 		}
 
 		const emptyDataObject = this.selection.selectAll('.emptyRender');
-		console.log({ emptyDataObject });
 		if (emptyDataObject.empty()) {
 			const emptyRender: ISelection = this.selection
 				.selectAll('.overlayContainer')
