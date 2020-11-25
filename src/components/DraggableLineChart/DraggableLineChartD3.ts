@@ -321,7 +321,7 @@ class DraggableLineChartD3 {
 				.append('foreignObject')
 				.attr('height', height)
 				.attr('width', width)
-				.attr('x', 80)
+				.attr('x', this.params.margin.left)
 				.classed('emptyRender', true);
 			emptyRender.html(
 				(value: any, num: any, node: any): any => {
