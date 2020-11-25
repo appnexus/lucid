@@ -96,7 +96,7 @@ export interface IDraggableLineChart extends StandardProps {
 			in the data. This react component will always be passed the following props: ({x, y, ref }: { x: string; y: number; ref?: any }) */
 	xAxisRenderProp?: IXAxisRenderProp;
 	/**
-	 * Text to show to users when there is no date
+	 * Text to show to users when there is no data selection
 	 */
 	preSelectText?: string;
 }
@@ -175,10 +175,6 @@ class DraggableLineChartD3 {
 	getHasRenderedPoint = () => {
 		return !!this.params.hasRenderedPoint;
 	};
-
-	// getHasRenderedEmptyBox = () => {
-	// 	return !!this.params.hasRenderedEmptyBox;
-	// };
 
 	getHasRenderedLine = () => {
 		return !!this.params.hasRenderedLine;
