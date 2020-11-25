@@ -1,3 +1,7 @@
+## 5.8.18
+- [patch] Adding helper text box for DraggableLineChart
+  https://github.com/appnexus/lucid/compare/v5.8.17...v5.8.18
+
 ## 5.8.17
 - [patch] Fixing less on TimeSelect
   https://github.com/appnexus/lucid/compare/v5.8.16...v5.8.17
