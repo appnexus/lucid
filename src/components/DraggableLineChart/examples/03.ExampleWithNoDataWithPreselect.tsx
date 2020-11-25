@@ -149,7 +149,6 @@ export default createClass({
 					dataIsCentered
 					onDragEnd={this.onDragHandler}
 					xAxisRenderProp={renderProp}
-					showPreselect={true}
 					onPreselect={this.onPreselectHandler}
 					preSelectText='Click and drag to select hours'
 				/>

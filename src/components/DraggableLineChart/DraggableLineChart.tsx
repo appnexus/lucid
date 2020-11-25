@@ -54,7 +54,6 @@ class DraggableLineChart extends React.Component<IDraggableLineChartProps, {}> {
 			dataIsCentered,
 			yAxisMin = 0,
 			xAxisRenderProp,
-			showPreselect,
 			onPreselect,
 			preSelectText,
 		} = this.props;
@@ -75,7 +74,6 @@ class DraggableLineChart extends React.Component<IDraggableLineChartProps, {}> {
 			xAxisRenderProp,
 			emptyRenderProp,
 			cx,
-			showPreselect,
 			onPreselect,
 		});
 		this.d3LineChart.renderLineChart();
@@ -108,7 +106,6 @@ class DraggableLineChart extends React.Component<IDraggableLineChartProps, {}> {
 					'dataIsCentered',
 					'yAxisMin',
 					'xAxisRenderProp',
-					'showPreselect',
 					'onPreselect',
 					'preSelectText',
 				])}

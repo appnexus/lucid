@@ -1,3 +1,7 @@
+## 5.8.19
+- [patch] Removing unneeded prop from DraggableLineChart
+  https://github.com/appnexus/lucid/compare/v5.8.18...v5.8.19
+
 ## 5.8.18
 - [patch] Adding helper text box for DraggableLineChart
   https://github.com/appnexus/lucid/compare/v5.8.17...v5.8.18

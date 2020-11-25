@@ -80,14 +80,13 @@ export interface IDraggableLineChart extends StandardProps {
 	onDragEnd: IOnDragEnd;
 	/** Drag handler function which is a callable function executed at the end of drag.
 			Called when the user stops to dragging an item.
-		  Signature: `({ event, props }) => {}` */
+		  Signature: `({ event, props }) => {}`
+	    When defined show draggable pane. */
 	onPreselect?: IOnPreselect;
 	/** Flag for if xAxis tick labels are vertical. */
 	xAxisTicksVertical?: boolean;
 	/** Flag for if data is center aligned rather than default left aligned. */
 	dataIsCentered?: boolean;
-	/** Flag for showing draggable pane. */
-	showPreselect?: boolean;
 	/** Flag for yAxis sticking to minimum (not readjusting minimum). */
 	yAxisMin?: number;
 	/** Optional react component to render within X-Axis.
@@ -190,7 +189,7 @@ class DraggableLineChartD3 {
 
 	shouldShowPreselect = () => {
 		const hasUserValues = _.some(this.params.data, ({ y }) => y > 0);
-		return this.params.showPreselect && !hasUserValues;
+		return !!this.params.onPreselect && !hasUserValues;
 	};
 
 	drag: any = () => {
