@@ -4,6 +4,7 @@ import * as d3Shape from 'd3-shape';
 import * as d3Drag from 'd3-drag';
 import * as d3Selection from 'd3-selection';
 import * as d3Transition from 'd3-transition';
+import ReactDOM from 'react-dom';
 import { d3Scale } from '../../index';
 import _ from 'lodash';
 import * as d3Array from 'd3-array';
@@ -94,6 +95,10 @@ export interface IDraggableLineChart extends StandardProps {
 			to the next component on tab, you will might need to provide refs
 			in the data. This react component will always be passed the following props: ({x, y, ref }: { x: string; y: number; ref?: any }) */
 	xAxisRenderProp?: IXAxisRenderProp;
+	/**
+	 * Text to show to users when there is no date
+	 */
+	preSelectText?: string;
 }
 
 interface IDraggableLineChartParams extends IDraggableLineChart {
@@ -107,6 +112,7 @@ interface IDraggableLineChartParams extends IDraggableLineChart {
 	mouseDownStep?: number;
 	hasRenderedPoint?: boolean;
 	hasRenderedLine?: boolean;
+	emptyRenderProp?: () => JSX.Element;
 }
 
 class DraggableLineChartD3 {
@@ -169,6 +175,10 @@ class DraggableLineChartD3 {
 	getHasRenderedPoint = () => {
 		return !!this.params.hasRenderedPoint;
 	};
+
+	// getHasRenderedEmptyBox = () => {
+	// 	return !!this.params.hasRenderedEmptyBox;
+	// };
 
 	getHasRenderedLine = () => {
 		return !!this.params.hasRenderedLine;
@@ -301,6 +311,29 @@ class DraggableLineChartD3 {
 					.y((d: any) => this.yScale(d.y))
 			);
 	};
+	renderEmptyRenderProp = (height: number, width: number) => {
+		const { emptyRenderProp } = this.params;
+		if (!emptyRenderProp || !this.shouldShowPreselect()) {
+			return;
+		}
+
+		const emptyDataObject = this.selection.selectAll('.emptyRender');
+		console.log({ emptyDataObject });
+		if (emptyDataObject.empty()) {
+			const emptyRender: ISelection = this.selection
+				.selectAll('.overlayContainer')
+				.append('foreignObject')
+				.attr('height', height)
+				.attr('width', width)
+				.attr('x', 80)
+				.classed('emptyRender', true);
+			emptyRender.html(
+				(value: any, num: any, node: any): any => {
+					ReactDOM.render(emptyRenderProp(), node[0]);
+				}
+			);
+		}
+	};
 	renderPoints = () => {
 		if (this.shouldShowPreselect()) {
 			return;
@@ -413,6 +446,8 @@ class DraggableLineChartD3 {
 			.append('g')
 			.classed('overlayContainer', true)
 			.attr('transform', `translate(${0},${top})`);
+
+		this.renderEmptyRenderProp(innerHeight, stepCount * stepWidth);
 
 		const overlayTrack = overlayContainer
 			.selectAll('rect')

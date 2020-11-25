@@ -9,6 +9,12 @@ import DraggableLineChartD3, {
 
 const cx = lucidClassNames.bind('&-DraggableLineChart');
 
+const getEmptyRenderProp = (preSelectText: string) => (
+	<div style={{ height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+		<div className={cx('&-empty-info')}>{preSelectText}</div>
+	</div>
+);
+
 export type IDraggableLineChartProps = Overwrite<
 	React.SVGProps<SVGGElement>,
 	IDraggableLineChart
@@ -50,7 +56,13 @@ class DraggableLineChart extends React.Component<IDraggableLineChartProps, {}> {
 			xAxisRenderProp,
 			showPreselect,
 			onPreselect,
+			preSelectText,
 		} = this.props;
+		const emptyRenderProp =
+			onPreselect && preSelectText
+				? () => getEmptyRenderProp(preSelectText)
+				: undefined;
+
 		this.d3LineChart = new DraggableLineChartD3(svg, {
 			height: height || draggableLineChartDefaultProps.height,
 			width: width || draggableLineChartDefaultProps.width,
@@ -61,6 +73,7 @@ class DraggableLineChart extends React.Component<IDraggableLineChartProps, {}> {
 			dataIsCentered,
 			yAxisMin,
 			xAxisRenderProp,
+			emptyRenderProp,
 			cx,
 			showPreselect,
 			onPreselect,
@@ -97,6 +110,7 @@ class DraggableLineChart extends React.Component<IDraggableLineChartProps, {}> {
 					'xAxisRenderProp',
 					'showPreselect',
 					'onPreselect',
+					'preSelectText',
 				])}
 				ref={(ref: SVGSVGElement) => (this.ref = ref)}
 				className={cx('&')}

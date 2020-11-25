@@ -88,7 +88,11 @@ export default createClass({
 	onPreselectHandler(data: ISelectedChartData[]): void {
 		const totalSelected = _.filter(data, ['isSelected', true]).length;
 		const avg = Math.round((100 / totalSelected) * 10) / 10;
-		const updatedData = _.map(data, (step) => ({ ref: step.ref, x: step.x, y: step.isSelected ? avg : step.y }));
+		const updatedData = _.map(data, step => ({
+			ref: step.ref,
+			x: step.x,
+			y: step.isSelected ? avg : step.y,
+		}));
 
 		this.setState({ customSpendDataPoints: updatedData });
 	},
@@ -147,6 +151,7 @@ export default createClass({
 					xAxisRenderProp={renderProp}
 					showPreselect={true}
 					onPreselect={this.onPreselectHandler}
+					preSelectText='Click and drag to select hours'
 				/>
 			</div>
 		);
