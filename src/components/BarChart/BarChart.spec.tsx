@@ -18,7 +18,7 @@ const {
 } = BarChart;
 
 describe('BarChart', () => {
-	let wrapper;
+	let wrapper: any;
 
 	afterEach(() => {
 		if (wrapper) {
@@ -32,7 +32,7 @@ describe('BarChart', () => {
 			'yAxisFormatter',
 			'yAxisTooltipFormatter',
 			'yAxisTooltipDataFormatter',
-		],
+		] as any,
 		getDefaultProps: () => ({
 			data: [
 				{ x: 'Monday', y: 1, y2: 2 },
@@ -47,7 +47,7 @@ describe('BarChart', () => {
 	describe('props', () => {
 		describe('isLoading', () => {
 			it('should show a `LoadingIndicator` if `isLoading`', () => {
-				wrapper = mount(<BarChart isLoading />);
+				wrapper = mount(<BarChart data={[]} isLoading />);
 
 				const loadingIndicatorWrapper = wrapper
 					.find(EmptyStateWrapper)
@@ -63,7 +63,7 @@ describe('BarChart', () => {
 			it('should render the message title element', () => {
 				const titleText = 'Here is the Title Text';
 				wrapper = mount(
-					<BarChart>
+					<BarChart data={[]}>
 						<EmptyStateWrapper>
 							<Title>{titleText}</Title>
 						</EmptyStateWrapper>
@@ -90,7 +90,7 @@ describe('BarChart', () => {
 					</div>
 				);
 				wrapper = mount(
-					<BarChart>
+					<BarChart data={[]}>
 						<EmptyStateWrapper>
 							<Body>{bodyElement}</Body>
 						</EmptyStateWrapper>

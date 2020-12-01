@@ -10,7 +10,7 @@ import * as lucid from '../index';
 
 // Common tests for all our components
 export function common(
-	Component,
+	Component: any,
 	{
 		getDefaultProps = _.constant({}),
 		exemptFunctionProps = [],
@@ -191,14 +191,14 @@ export function common(
 		// Only run this test if it's a public component
 		if (!Component._isPrivate && !noExport) {
 			it('should be available as an exported module from index.ts', () => {
-				assert(lucid[Component.displayName]);
+				assert((lucid as any)[Component.displayName]);
 			});
 		}
 	});
 }
 
 // Common tests for all our icon components
-export function icons(Component) {
+export function icons(Component: any) {
 	describe('[icon]', () => {
 		it('should add the correct class for isClickable', () => {
 			const wrapper = mount(<Component isClickable={true} />);
@@ -213,8 +213,8 @@ export function icons(Component) {
 
 // Common tests for all control components
 export function controls(
-	Component,
-	{ callbackName, controlSelector, eventType, additionalProps = {} }
+	Component: any,
+	{ callbackName, controlSelector, eventType, additionalProps = {} }: any
 ) {
 	// Use DOM tests here since some of our controls use dom events under the hood
 	describe('[control]', () => {
@@ -236,7 +236,7 @@ export function controls(
 			const {
 				props: { specialProp },
 				event,
-			} = _.last(props[callbackName].args[0]);
+			}: any = _.last(props[callbackName].args[0]);
 
 			assert(event, 'missing event');
 			assert.equal(
@@ -254,7 +254,7 @@ export function controls(
 // They are necessary because there isn't a perfect way to get the defaultProps
 // to be factored in correctly yet with React/TypeScript:
 // https://github.com/DefinitelyTyped/DefinitelyTyped/issues/30695#issuecomment-474780159
-export function functionalComponents(FC) {
+export function functionalComponents(FC: any) {
 	// Use DOM tests here since some of our controls use dom events under the hood
 	describe('[functionalComponent]', () => {
 		it('should have the correct `peek` properties', () => {
@@ -284,21 +284,24 @@ export function functionalComponents(FC) {
 }
 
 const NativeDate = global.Date;
-const createMockDateClass = (...args) =>
+const createMockDateClass = (...args: any) =>
 	_.assign(
 		function MockDate() {
+			// @ts-ignore
 			return new NativeDate(...args);
 		},
 		{
 			UTC: NativeDate.UTC,
 			parse: NativeDate.parse,
+				// @ts-ignore
 			now: () => new NativeDate(...args).getTime(),
 			prototype: NativeDate.prototype,
 		}
 	);
 
 export const mockDate = _.assign(
-	(...args) => {
+	(...args: any) => {
+		// @ts-ignore
 		global.Date = createMockDateClass(...args);
 	},
 	{
