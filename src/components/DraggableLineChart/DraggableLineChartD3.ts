@@ -520,7 +520,7 @@ class DraggableLineChartD3 {
 						const isRight = xLeft === +x;
 						const steps = Math.round(+width / stepWidth);
 						const startingIndex = isRight ? clickStep : clickStep - steps + 1;
-						const endingIndex = clickStep ? clickStep + steps - 1 : clickStep;
+						const endingIndex = startingIndex + steps - 1;
 						const updatedData = data.map((step, i) => ({
 							...step,
 							isSelected: i >= startingIndex && i <= endingIndex,
