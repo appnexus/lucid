@@ -661,6 +661,9 @@ export interface ITdProps
 	isEmpty?: boolean;
 
 	rowSpan: number | null;
+
+	/** Truncates `Table.Td` content with ellipses, must be used with `hasFixedHeader` */
+	truncateContent: boolean;
 }
 
 const Td = (props: ITdProps): React.ReactElement => {
@@ -674,6 +677,7 @@ const Td = (props: ITdProps): React.ReactElement => {
 		align,
 		hasBorderRight,
 		hasBorderLeft,
+		truncateContent,
 		...passThroughs
 	} = props;
 
@@ -697,6 +701,7 @@ const Td = (props: ITdProps): React.ReactElement => {
 					'&-align-right': align === 'right',
 					'&-has-border-right': hasBorderRight,
 					'&-has-border-left': hasBorderLeft,
+					'&-truncate-content': truncateContent,
 				},
 				className
 			)}
@@ -710,6 +715,7 @@ Td.defaultProps = {
 	align: 'left',
 	hasBorderRight: false,
 	hasBorderLeft: false,
+	truncateContent: false,
 	rowSpan: 1,
 };
 
@@ -761,6 +767,10 @@ Td.propTypes = {
 
 	isEmpty: bool`
 		Indicates if the cell has any data or not.
+	`,
+
+	truncateContent: bool`
+		Truncates \`Table.Td\` content with ellipses, must be used with \`hasFixedHeader\`
 	`,
 };
 

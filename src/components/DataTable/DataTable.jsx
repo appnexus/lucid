@@ -178,6 +178,10 @@ const DataTable = createClass({
 			using the \`fixedColumnCount\` prop.
 		`,
 
+		truncateContent: bool`
+			Truncates \`Table.Td\` content with ellipses, must be used with \`hasFixedHeader\`
+		`,
+
 		Column: any`
 			*Child Element*
 
@@ -212,6 +216,7 @@ const DataTable = createClass({
 			minRows: 10,
 			hasFixedHeader: false,
 			fixedColumnCount: 0,
+			truncateContent: false,
 		};
 	},
 
@@ -423,6 +428,7 @@ const DataTable = createClass({
 			minRows,
 			emptyCellText,
 			fixedRowHeight,
+			truncateContent
 		} = this.props;
 
 		const fillerRowCount = _.clamp(minRows - _.size(data), 0, Infinity);
@@ -497,6 +503,7 @@ const DataTable = createClass({
 													index +
 													_.get(columnProps, 'field', columnIndex)
 												}
+												truncateContent={truncateContent}
 											>
 												{isEmpty ? emptyCellText : cellValue}
 											</Td>
