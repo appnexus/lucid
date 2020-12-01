@@ -2,7 +2,7 @@ import _ from 'lodash';
 import React, { PureComponent } from 'react';
 import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import { extractFields, stackByFields } from '../../util/chart-helpers';
+import { Collection, extractFields, stackByFields } from '../../util/chart-helpers';
 import { omitProps, StandardProps } from '../../util/component-types';
 import * as d3Scale from 'd3-scale';
 import * as chartConstants from '../../constants/charts';
@@ -32,7 +32,7 @@ interface IBarsProps extends StandardProps, React.SVGProps<SVGGElement> {
 	 * 	{ x: 'five', y0: 4, y1: 8, y2: 9, y3: 8 },
 	 * ]
 	 */
-	data: Array<{ [key: string]: string | number }>;
+	data: Collection;
 
 	/**
 	 * 	An object with human readable names for fields that  will be used for tooltips. E.g:
@@ -406,12 +406,13 @@ export class Bars extends PureComponent<IBarsProps, IBarsState> {
 								key={pointsIndex}
 								x={
 									isStacked
-										? xScale(data[seriesIndex][xField] as any)
+										// @ts-ignore
+										? xScale(data[seriesIndex][xField])
 										: // prettier-ignore
-										//@ts-ignore
+										// @ts-ignore
 										innerXScale(pointsIndex) +
 										// prettier-ignore
-										//@ts-ignore
+										// @ts-ignore
 										xScale(data[seriesIndex][xField] as any)
 								}
 								y={yScale(end)}
@@ -437,7 +438,8 @@ export class Bars extends PureComponent<IBarsProps, IBarsState> {
 									yScale.range()[0] - yScale(_.max(_.flatten(series)))
 							}
 							width={xScale.bandwidth()}
-							x={xScale(data[seriesIndex][xField] as any)}
+							// @ts-ignore
+							x={xScale(data[seriesIndex][xField])}
 							y={yScale(_.max(_.flatten(series)) as any)}
 							series={series}
 							seriesIndex={seriesIndex}

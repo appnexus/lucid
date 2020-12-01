@@ -143,7 +143,7 @@ export interface ILineChartPropsRaw extends StandardProps {
 	/** An optional function used to format your x axis data.
 	 * If you don't provide anything, we use the default D3 date variable formatter.
 	 * */
-	xAxisFormatter: (d: Date) => string;
+	xAxisFormatter?: (d: Date) => string;
 
 	/** An optional function used to format your x axis dates in the tooltips.*/
 	xAxisTooltipFormatter: (x: string | number) => string | number;
