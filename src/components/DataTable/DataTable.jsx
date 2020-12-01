@@ -216,7 +216,6 @@ const DataTable = createClass({
 			minRows: 10,
 			hasFixedHeader: false,
 			fixedColumnCount: 0,
-			truncateContent: false,
 		};
 	},
 

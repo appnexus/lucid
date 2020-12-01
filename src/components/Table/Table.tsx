@@ -663,7 +663,7 @@ export interface ITdProps
 	rowSpan: number | null;
 
 	/** Truncates `Table.Td` content with ellipses, must be used with `hasFixedHeader` */
-	truncateContent: boolean;
+	truncateContent?: boolean;
 }
 
 const Td = (props: ITdProps): React.ReactElement => {
@@ -715,7 +715,6 @@ Td.defaultProps = {
 	align: 'left',
 	hasBorderRight: false,
 	hasBorderLeft: false,
-	truncateContent: false,
 	rowSpan: 1,
 };
 
