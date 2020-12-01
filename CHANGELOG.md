@@ -1,3 +1,6 @@
+## 5.8.21
+- [patch] Removing css `height` causing misalignment in `SwitchLabelled`  
+  https://github.com/appnexus/lucid/compare/v5.8.20...v5.8.21
 ## 5.8.20
 - [patch] Fixing bug with DraggableLineChart and selecting first row
   https://github.com/appnexus/lucid/compare/v5.8.19...v5.8.20
