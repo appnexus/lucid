@@ -312,6 +312,17 @@ describe('Table', () => {
 						);
 					});
 				});
+
+				describe('truncateContent', () => {
+					it('should apply the class name `lucid-Table-truncate-content`', () => {
+						const wrapper = shallow(<Td truncateContent />);
+
+						assert.equal(
+							wrapper.find('td.lucid-Table-truncate-content').length,
+							1
+						);
+					});
+				});
 			});
 		});
 	});
