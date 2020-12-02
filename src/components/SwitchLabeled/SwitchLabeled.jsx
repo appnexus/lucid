@@ -5,142 +5,134 @@ import { CSSTransition } from 'react-transition-group';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, getFirst, omitProps } from '../../util/component-types';
 import Switch from '../Switch/Switch';
+import { useState } from 'react';
+import { useEffect } from 'react';
 
 const cx = lucidClassNames.bind('&-SwitchLabeled');
 const { any, node, object, string } = PropTypes;
 
-const SwitchLabeled = createClass({
-	displayName: 'SwitchLabeled',
+const defaultProps = {
+	isDisabled: false,
+	isSelected: false,
+	onSelect: _.noop,
+};
 
+const defaultState = {
+	_labelKey: 0,
+};
+
+const SwitchLabeled = (props) => {
+	const {
+		className,
+		isDisabled,
+		isSelected,
+		onSelect,
+		style,
+		...passThroughs
+	} = props;
+
+	const [state, setState] = useState(defaultState);
+
+	const currentLabel = _.get(
+		getFirst(props, SwitchLabeled.Label),
+			'props.children',
+		null
+	);
+
+	useEffect(() => {
+		setState({ _labelKey: state._labelKey + 1 });
+	}, [currentLabel])
+
+	const labelChildProps = _.get(
+		getFirst(props, SwitchLabeled.Label),
+		'props'
+	);
+
+	const isShown = !!labelChildProps;
+
+	return (
+		<label
+			className={cx(
+				'&',
+				{
+					'&-is-disabled': isDisabled,
+					'&-is-selected': isSelected,
+				},
+				className
+			)}
+			style={style}
+		>
+			<Switch
+				className={className}
+				isDisabled={isDisabled}
+				isSelected={isSelected}
+				onSelect={onSelect}
+				{...omitProps(passThroughs, undefined, _.keys(SwitchLabeled.propTypes), false)}
+			/>
+			{labelChildProps && (
+				<CSSTransition
+					in={isShown}
+					classNames={cx('&-text')}
+					timeout={100}
+					style={{ position: 'relative' }}
+					className={cx('&-text')}
+					unmountOnExit
+				>
+					<span key={state._labelKey}>
+						{labelChildProps.children || labelChildProps}
+					</span>
+				</CSSTransition>
+			)}
+		</label>
+	)
+}
+
+SwitchLabeled.defaultProps = defaultProps;
+
+SwitchLabeled.displayName = 'SwitchLabeled';
+
+SwitchLabeled.peek = {
+	description: `
+		This is a composite of the \`Switch\` component and the native
+		\`label\` element.
+	`,
+	categories: ['controls', 'toggles'],
+	madeFrom: ['Switch'],
+};
+
+SwitchLabeled.Label = createClass({
+	displayName: 'SwitchLabeled.Label',
 	statics: {
 		peek: {
 			description: `
-				This is a composite of the \`Switch\` component and the native
-				\`label\` element.
+				Label to be shown alongside the switch.
 			`,
-			categories: ['controls', 'toggles'],
-			madeFrom: ['Switch'],
 		},
 	},
-
-	components: {
-		Label: createClass({
-			displayName: 'SwitchLabeled.Label',
-			statics: {
-				peek: {
-					description: `
-						Label to be shown alongside the switch.
-					`,
-				},
-			},
-			propName: 'Label',
-			propTypes: {
-				children: node`
-					Used to identify the purpose of this switch to the user -- can be any
-					renderable content.
-				`,
-			},
-		}),
-	},
-
+	propName: 'Label',
 	propTypes: {
-		...Switch.propTypes,
-
-		className: string`
-			Appended to the component-specific class names set on the root element.
-		`,
-
-		style: object`
-			Passed through to the root element.
-		`,
-
-		Label: any`
-			Child element whose children are used to identify the purpose of this
-			switch to the user.
+		children: node`
+			Used to identify the purpose of this switch to the user -- can be any
+			renderable content.
 		`,
 	},
+}),
 
-	getDefaultProps() {
-		return {
-			isDisabled: false,
-			isSelected: false,
-			onSelect: _.noop,
-		};
-	},
+SwitchLabeled.propTypes = {
+	...Switch.propTypes,
 
-	UNSAFE_componentWillMount() {
-		this._labelKey = 0;
-	},
+	className: string`
+		Appended to the component-specific class names set on the root element.
+	`,
 
-	UNSAFE_componentWillReceiveProps(nextProps) {
-		const currentLabel = _.get(
-			getFirst(this.props, SwitchLabeled.Label),
-			'props.children',
-			null
-		);
-		const nextLabel = _.get(
-			getFirst(nextProps, SwitchLabeled.Label),
-			'props.children',
-			null
-		);
+	style: object`
+		Passed through to the root element.
+	`,
 
-		if (currentLabel !== nextLabel) {
-			this._labelKey++;
-		}
-	},
-
-	render() {
-		const {
-			className,
-			isDisabled,
-			isSelected,
-			onSelect,
-			style,
-			...passThroughs
-		} = this.props;
-
-		const labelChildProps = _.get(
-			getFirst(this.props, SwitchLabeled.Label),
-			'props'
-		);
-		const isShown = !!labelChildProps;
-
-		return (
-			<label
-				className={cx(
-					'&',
-					{
-						'&-is-disabled': isDisabled,
-						'&-is-selected': isSelected,
-					},
-					className
-				)}
-				style={style}
-			>
-				<Switch
-					className={className}
-					isDisabled={isDisabled}
-					isSelected={isSelected}
-					onSelect={onSelect}
-					{...omitProps(passThroughs, SwitchLabeled, [], false)}
-				/>
-				{labelChildProps && (
-					<CSSTransition
-						in={isShown}
-						classNames={cx('&-text')}
-						timeout={100}
-						style={{ position: 'relative' }}
-						className={cx('&-text')}
-						unmountOnExit
-					>
-						<span key={this._labelKey}>
-							{labelChildProps.children || labelChildProps}
-						</span>
-					</CSSTransition>
-				)}
-			</label>
-		);
-	},
-});
+	Label: any`
+		Child element whose children are used to identify the purpose of this
+		switch to the user.
+	`,
+}
 
 export default SwitchLabeled;
