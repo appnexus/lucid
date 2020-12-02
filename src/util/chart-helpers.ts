@@ -2,7 +2,7 @@ import _ from 'lodash';
 import * as d3TimeFormat from 'd3-time-format';
 import * as d3Time from 'd3-time';
 
-type Collection = object[];
+export type Collection = Array<{ [key: string]: any }>;
 type Fields = string[] | string;
 
 /**

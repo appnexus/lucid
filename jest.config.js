@@ -2,7 +2,7 @@ module.exports = {
 	rootDir: 'src',
 	preset: 'ts-jest/presets/js-with-ts',
 	setupFilesAfterEnv: ['../tests/init', '../tests/enzyme-setup'],
-	testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.jsx?$',
+	testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.[tj]sx?$',
 	collectCoverageFrom: [
 		'components/**/*.{js,jsx}',
 		'components/**/*.{ts,tsx}',
