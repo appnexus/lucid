@@ -1,6 +1,11 @@
+## 5.8.22
+- #1181 [patch] BUDE-966: Add optional flag to truncate Table cell content
+  https://github.com/appnexus/lucid/compare/v5.8.21...v5.8.22
+
 ## 5.8.21
 - [patch] Removing css `height` causing misalignment in `SwitchLabelled`  
   https://github.com/appnexus/lucid/compare/v5.8.20...v5.8.21
+  
 ## 5.8.20
 - [patch] Fixing bug with DraggableLineChart and selecting first row
   https://github.com/appnexus/lucid/compare/v5.8.19...v5.8.20
