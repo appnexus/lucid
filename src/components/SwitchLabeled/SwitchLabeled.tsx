@@ -3,7 +3,7 @@ import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import { CSSTransition } from 'react-transition-group';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, getFirst, omitProps } from '../../util/component-types';
+import { createClass, getFirst, omitProps, StandardProps } from '../../util/component-types';
 import Switch from '../Switch/Switch';
 import { useState } from 'react';
 import { useEffect } from 'react';
@@ -21,7 +21,13 @@ const defaultState = {
 	_labelKey: 0,
 };
 
-const SwitchLabeled = (props) => {
+interface ISwitchLabeledProps	extends StandardProps {
+	isDisabled: boolean;
+	isSelected: boolean;
+	onSelect: any;
+}
+
+const SwitchLabeled = (props: ISwitchLabeledProps) => {
 	const {
 		className,
 		isDisabled,
