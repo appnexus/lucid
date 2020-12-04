@@ -16,7 +16,7 @@ const {
 	EmptyStateWrapper: { Title, Body },
 } = DataTable;
 
-const testData = [
+const testData: any = [
 	{
 		id: '01',
 		first_name: 'Isaac',
@@ -121,12 +121,12 @@ const testData = [
 
 describe('DataTable', () => {
 	common(DataTable, {
-		selectRoot: wrapper => wrapper.find(ScrollTable),
-	});
+		selectRoot: (wrapper: any) => wrapper.find(ScrollTable),
+	} as any);
 
 	describe('render', () => {
 		it('should render a minimal ScrollTable', () => {
-			const wrapper = shallow(<DataTable />);
+			const wrapper = shallow(<DataTable data={[]} />);
 
 			const scrollTableWrapper = wrapper.find(ScrollTable).shallow();
 
@@ -150,7 +150,7 @@ describe('DataTable', () => {
 	describe('props', () => {
 		describe('data', () => {
 			it('should render 10 empty rows by default if data is an empty array', () => {
-				const wrapper = shallow(<DataTable />);
+				const wrapper = shallow(<DataTable data={[]} />);
 
 				const TrWrapper = wrapper
 					.find(ScrollTable)
@@ -180,7 +180,7 @@ describe('DataTable', () => {
 			});
 
 			it('should render a cell in each row for each object property in the array elements', () => {
-				const testDataWithEmptyCells = [
+				const testDataWithEmptyCells: any = [
 					{
 						id: 1,
 						first_name: 'Isaac',
@@ -290,7 +290,7 @@ describe('DataTable', () => {
 			});
 
 			it('should render without prop warning for isSelected when data is empty array', () => {
-				const emptyData = [];
+				const emptyData: any = [];
 
 				const wrapper = shallow(<DataTable isSelectable data={emptyData} />);
 
@@ -300,7 +300,7 @@ describe('DataTable', () => {
 
 		describe('minRows', () => {
 			it('should render 10 empty rows if data is an empty array', () => {
-				const wrapper = shallow(<DataTable />);
+				const wrapper = shallow(<DataTable data={[]} />);
 
 				const TrWrapper = wrapper
 					.find(ScrollTable)
@@ -477,6 +477,7 @@ describe('DataTable', () => {
 					const checkBoxOnSelectFunction = tdArray[0]
 						.find(Checkbox)
 						.prop('onSelect');
+					// @ts-ignore
 					checkBoxOnSelectFunction({});
 
 					assert.equal(onSelect.callCount, index + 1, 'must be called');
@@ -562,6 +563,7 @@ describe('DataTable', () => {
 				const checkboxSelectAllFunction = selectAllCheckboxWrapper.prop(
 					'onSelect'
 				);
+				//@ts-ignore
 				checkboxSelectAllFunction({});
 
 				assert(onSelectAll.called, 'onSelectAll handler must be called');
@@ -592,6 +594,7 @@ describe('DataTable', () => {
 				// for each row check that isSelectable matches
 				bodyTrsWrapper.forEach((trWrapper, index) => {
 					const rowClickFunction = trWrapper.prop('onClick');
+					// @ts-ignore
 					rowClickFunction({ target: { tagName: 'tr' } });
 					assert.equal(onRowClick.callCount, index + 1, 'must be called');
 					assert.equal(
@@ -725,7 +728,7 @@ describe('DataTable', () => {
 
 		describe('isLoading', () => {
 			it('should show a `LoadingIndicator` if `isLoading`', () => {
-				const wrapper = shallow(<DataTable isLoading />);
+				const wrapper = shallow(<DataTable data={[]} isLoading />);
 
 				const loadingIndicatorWrapper = wrapper
 					.find(EmptyStateWrapper)
@@ -738,7 +741,7 @@ describe('DataTable', () => {
 
 		describe('anchorMessage', () => {
 			it('should position the `LoadingMessage`/`EmpyStateMessage` near the top of the table', () => {
-				const loadingWrapper = shallow(<DataTable isLoading anchorMessage />);
+				const loadingWrapper = shallow(<DataTable data={[]} isLoading anchorMessage />);
 
 				const loadingOverlayWrapper = loadingWrapper
 					.find(EmptyStateWrapper)
@@ -762,7 +765,7 @@ describe('DataTable', () => {
 
 		describe('isFullWidth', () => {
 			it('should apply the `&-full-width` class if `isFullWidth` is true', () => {
-				const wrapper = shallow(<DataTable isFullWidth />);
+				const wrapper = shallow(<DataTable data={[]} isFullWidth />);
 
 				assert(
 					wrapper.find(ScrollTable).hasClass('lucid-DataTable-full-width')
@@ -791,11 +794,11 @@ describe('DataTable', () => {
 						dy: 0,
 						pageX: 100,
 						pageY: 0,
-					},
+					} as any,
 					{
 						event: mockEvent,
 						props: {},
-					}
+					} as any
 				);
 			});
 		});
@@ -1011,7 +1014,7 @@ describe('DataTable', () => {
 			it('should render the message title element', () => {
 				const titleText = 'Here is the Title Text';
 				const wrapper = shallow(
-					<DataTable>
+					<DataTable data={[]}>
 						<EmptyStateWrapper>
 							<Title>{titleText}</Title>
 						</EmptyStateWrapper>
@@ -1040,9 +1043,9 @@ describe('DataTable', () => {
 					</div>
 				);
 				const wrapper = shallow(
-					<DataTable>
+					<DataTable data={[]}>
 						<EmptyStateWrapper>
-							<Body>{bodyElement}}</Body>
+							<Body>{bodyElement}</Body>
 						</EmptyStateWrapper>
 					</DataTable>
 				);

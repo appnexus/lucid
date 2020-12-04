@@ -208,14 +208,14 @@ Tr.propTypes = {
 };
 
 /** Th <Th>: The Table Header Cell components */
-interface IThProps
+export interface IThProps
 	extends StandardProps,
 		React.DetailedHTMLProps<
 			React.HTMLAttributes<HTMLTableHeaderCellElement>,
 			HTMLTableHeaderCellElement
 		> {
 	/** Aligns the content of a cell. Can be \`left\`, \`center\`, or \`right\`. */
-	align: 'left' | 'center' | 'right';
+	align?: 'left' | 'center' | 'right';
 
 	/*Should be \`true\` to render a right border. */
 	hasBorderRight?: boolean;
@@ -225,13 +225,13 @@ interface IThProps
 
 	/** Styles the cell to indicate it should be resizable and sets up drag-
 		related events to enable this resizing functionality. */
-	isResizable: boolean;
+	isResizable?: boolean;
 
 	/** Styles the cell to allow column sorting. */
 	isSortable?: boolean;
 
 	/** Renders a caret icon to show that the column is sorted. */
-	isSorted: boolean;
+	isSorted?: boolean;
 
 	/** Callback triggered as the user drags the resize handle to resize the column atop
 		which this table header cell sits. */
@@ -247,7 +247,7 @@ interface IThProps
 	) => void;
 
 	/** Sets the direction of the caret icon when \`isSorted\` is also set. */
-	sortDirection: 'left' | 'up' | 'right' | 'down' | undefined;
+	sortDirection?: 'left' | 'up' | 'right' | 'down' | undefined;
 
 	/** Sets the width of the cell. */
 	width?: number | string;
@@ -276,7 +276,7 @@ interface IThProps
 	/** Sets the field value for the cell. */
 	field?: string;
 
-	rowSpan: number | null;
+	rowSpan?: number | null;
 }
 
 interface IThState {
@@ -664,6 +664,9 @@ export interface ITdProps
 
 	/** Truncates `Table.Td` content with ellipses, must be used with `hasFixedHeader` */
 	truncateContent?: boolean;
+	
+	/** Sets the width of the cell. */
+	width?: number | string;
 }
 
 const Td = (props: ITdProps): React.ReactElement => {

@@ -13,7 +13,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
     className="lucid-DataTable"
     hasBorder={false}
     hasWordWrap={false}
-    tableWidth={null}
   >
     <Table.Thead>
       <Table.Tr
@@ -1309,7 +1308,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
     density="extended"
     hasBorder={false}
     hasWordWrap={false}
-    tableWidth={null}
   >
     <Table.Thead>
       <Table.Tr
@@ -2635,7 +2633,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
     density="extended"
     hasBorder={false}
     hasWordWrap={false}
-    tableWidth={null}
   >
     <Table.Thead>
       <Table.Tr
@@ -4105,7 +4102,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
     density="extended"
     hasBorder={false}
     hasWordWrap={false}
-    tableWidth={null}
   >
     <Table.Thead>
       <Table.Tr
@@ -5658,7 +5654,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
     className="lucid-DataTable"
     hasBorder={false}
     hasWordWrap={false}
-    tableWidth={null}
   >
     <Table.Thead>
       <Table.Tr
