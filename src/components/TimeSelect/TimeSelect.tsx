@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React, { useMemo, useState } from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
 import ClockIcon from '../Icon/ClockIcon/ClockIcon';
 import TimeSelectHour from './TimeSelectHour';
@@ -33,6 +33,7 @@ const TimeSelect = ({
 	onChange,
 	isDisabled,
 }: ITimeSelect) => {
+	const [inputFocus, setInputFocus] = useState(false);
 	const minute = useMemo(() => time.getMinutes(), [time]);
 	const { hour, meridiem = MeridiemType.AM } = useMemo(() => {
 		const hour = time.getHours();
@@ -49,8 +50,14 @@ const TimeSelect = ({
 	const isDisabledClass = isDisabled ? '&-time-disabled' : '';
 	const timeSelectorClass = isDisabled ? '&-isDisabled' : '';
 
+	const toggleInputFocus = () => setInputFocus(!inputFocus);
+
 	return (
-		<div className={cx('&', timeSelectorClass)}>
+		<div
+			className={cx('&', timeSelectorClass)}
+			onFocus={toggleInputFocus}
+			onBlur={toggleInputFocus}
+		>
 			<TimeSelectHour
 				hour={hour}
 				time={time}
@@ -76,7 +83,7 @@ const TimeSelect = ({
 				/>
 			)}
 			<ClockIcon
-				className={cx('&-clock', { active: !isDisabled })}
+				className={cx('&-clock', { active: !isDisabled && inputFocus })}
 				disabled={isDisabled}
 			/>
 		</div>
