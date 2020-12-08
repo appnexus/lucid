@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import * as DropMenu from '../DropMenu/DropMenu.reducers';
 
-export function onChange(state, value) {
+export function onChange(state: any, value: any) {
 	return {
 		...state,
 		value,
@@ -12,7 +12,7 @@ export function onChange(state, value) {
 	};
 }
 
-export function onSelect(state, selectedIndex) {
+export function onSelect(state: any, selectedIndex: any) {
 	const value = _.get(state.suggestions, selectedIndex);
 
 	return onChange(
@@ -28,7 +28,7 @@ export function onSelect(state, selectedIndex) {
 	);
 }
 
-export function onExpand(state) {
+export function onExpand(state: any) {
 	return {
 		...state,
 		DropMenu: {
