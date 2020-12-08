@@ -1,3 +1,11 @@
+## 5.8.23
+- #1187 [patch] BUDE-968: Toggle active class on clock icon on input focus
+- #1186 [patch] CXP-1038: Migrated Autocomplete to Typescript
+- #1185 [patch] CXP-1042: Converted SwitchLabeled to Typescript
+- #1184 [patch] CXP-695: Converted DataTable to Typescript
+- #1183 [patch] CXP-694: Migrated BarChart to typescript
+  https://github.com/appnexus/lucid/compare/v5.8.22...v5.8.23
+
 ## 5.8.22
 - #1181 [patch] BUDE-966: Add optional flag to truncate Table cell content
   https://github.com/appnexus/lucid/compare/v5.8.21...v5.8.22
