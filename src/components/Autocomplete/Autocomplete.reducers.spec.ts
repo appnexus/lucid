@@ -2,6 +2,7 @@
 
 import assert from 'assert';
 import _ from 'lodash';
+// @ts-ignore
 import { onChange, onSelect, onExpand } from './Autocomplete.reducers';
 
 describe('Autocomplete reducers', () => {
@@ -56,7 +57,7 @@ describe('Autocomplete reducers', () => {
 				},
 			};
 
-			const nextState = onExpand(initialState, 'foo');
+			const nextState = onExpand(initialState);
 			const {
 				DropMenu: { focusedIndex, isExpanded },
 			} = nextState;

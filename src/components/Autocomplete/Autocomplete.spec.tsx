@@ -5,6 +5,7 @@ import sinon from 'sinon';
 import { findTypes } from '../../util/component-types';
 import _ from 'lodash';
 import { common } from '../../util/generic-tests';
+// @ts-ignore
 import { AutocompleteDumb as Autocomplete } from './Autocomplete';
 import { DropMenuDumb as DropMenu } from '../DropMenu/DropMenu';
 import * as KEYCODE from '../../constants/key-code';
@@ -70,8 +71,8 @@ describe('Autocomplete', () => {
 		});
 
 		describe('value', () => {
-			let wrapper;
-			let rootMountNode;
+			let wrapper: any;
+			let rootMountNode: any;
 
 			beforeEach(() => {
 				rootMountNode = document.createElement('div');
@@ -91,7 +92,7 @@ describe('Autocomplete', () => {
 					attachTo: rootMountNode,
 				});
 
-				const inputDOMNode = document.querySelector(
+				const inputDOMNode: any = document.querySelector(
 					'.lucid-Autocomplete-Control-input'
 				);
 
@@ -111,7 +112,7 @@ describe('Autocomplete', () => {
 					...wrapper.props(),
 					value: 'Boston',
 				});
-				const inputDOMNode = document.querySelector(
+				const inputDOMNode: any = document.querySelector(
 					'.lucid-Autocomplete-Control-input'
 				);
 
@@ -136,7 +137,7 @@ describe('Autocomplete', () => {
 					{ disableLifecycleMethods: true }
 				);
 
-				const dropMenuProps = wrapper.find('DropMenu').props();
+				const dropMenuProps: any = wrapper.find('DropMenu').props();
 
 				_.forEach(explicitDropMenuProps, (value, key) => {
 					assert(_.isEqual(dropMenuProps[key], value));
@@ -145,8 +146,8 @@ describe('Autocomplete', () => {
 		});
 
 		describe('onChange', () => {
-			let wrapper;
-			let rootMountNode;
+			let wrapper: any;
+			let rootMountNode: any;
 
 			beforeEach(() => {
 				rootMountNode = document.createElement('div');
@@ -163,7 +164,7 @@ describe('Autocomplete', () => {
 
 			describe('suggestion', () => {
 				/* eslint-disable no-console */
-				let error;
+				let error: any;
 
 				beforeEach(() => {
 					error = console.error;
@@ -192,7 +193,7 @@ describe('Autocomplete', () => {
 						/>
 					);
 
-					const menuDOMNode = document.querySelector(
+					const menuDOMNode: any = document.querySelector(
 						'.lucid-ContextMenu-FlyOut .lucid-DropMenu-option-container'
 					);
 					menuDOMNode.children[2].click();
@@ -213,7 +214,7 @@ describe('Autocomplete', () => {
 						attachTo: rootMountNode,
 					});
 
-					const inputDOMNode = document.querySelector(
+					const inputDOMNode: any = document.querySelector(
 						'.lucid-Autocomplete-Control-input'
 					);
 
@@ -240,7 +241,7 @@ describe('Autocomplete', () => {
 		});
 
 		describe('onSelect', () => {
-			let wrapper;
+			let wrapper: any;
 
 			afterEach(() => {
 				if (wrapper) {
@@ -260,7 +261,7 @@ describe('Autocomplete', () => {
 					/>
 				);
 
-				const menuDOMNode = document.querySelector(
+				const menuDOMNode: any = document.querySelector(
 					'.lucid-ContextMenu-FlyOut .lucid-DropMenu-option-container'
 				);
 				menuDOMNode.children[2].click();
@@ -275,8 +276,8 @@ describe('Autocomplete', () => {
 		});
 
 		describe('onExpand', () => {
-			let wrapper;
-			let rootMountNode;
+			let wrapper: any;
+			let rootMountNode: any;
 
 			beforeEach(() => {
 				rootMountNode = document.createElement('div');
@@ -303,7 +304,7 @@ describe('Autocomplete', () => {
 					{ attachTo: rootMountNode }
 				);
 
-				const inputDOMNode = document.querySelector(
+				const inputDOMNode: any = document.querySelector(
 					'.lucid-Autocomplete-Control-input'
 				);
 

@@ -26,8 +26,6 @@ const Autocomplete = createClass({
 
 	displayName: 'Autocomplete',
 
-	_isPrivate: true,
-
 	reducers,
 
 	propTypes: {
