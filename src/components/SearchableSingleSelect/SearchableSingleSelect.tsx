@@ -352,7 +352,7 @@ class SearchableSingleSelect extends React.Component<
 		// Just an extra call to make sure the search results show up when a user
 		// is typing
 		const dropMenuProps = this.props.DropMenu;
-		onExpand({ event, props: dropMenuProps });
+		onExpand && onExpand({ event, props: dropMenuProps });
 
 		return onSearch(searchText, firstVisibleIndex, {
 			event,
@@ -477,7 +477,7 @@ class SearchableSingleSelect extends React.Component<
 		props: ISearchableSingleSelectOptionProps;
 	}): void => {
 		const dropMenuProps = this.props.DropMenu;
-		this.props.DropMenu.onCollapse({ event, props: dropMenuProps });
+		this.props.DropMenu.onCollapse && this.props.DropMenu.onCollapse({ event, props: dropMenuProps });
 		this.props.onSearch('', null, { event, props });
 		this.props.onSelect(null, { event, props });
 	};

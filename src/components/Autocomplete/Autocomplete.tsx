@@ -1,19 +1,29 @@
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import _ from 'lodash';
-import { createClass } from '../../util/component-types';
+import { createClass, StandardProps } from '../../util/component-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import { buildHybridComponent } from '../../util/state-management';
 import { partitionText } from '../../util/text-manipulation';
 import * as reducers from './Autocomplete.reducers';
 import * as KEYCODE from '../../constants/key-code';
-import { DropMenuDumb as DropMenu } from '../DropMenu/DropMenu';
+import { DropMenuDumb as DropMenu, IDropMenuProps } from '../DropMenu/DropMenu';
 
 const cx = lucidClassNames.bind('&-Autocomplete');
 
 const { arrayOf, bool, func, object, shape, string } = PropTypes;
 
-const Autocomplete = createClass({
+interface IAutocompleteProps extends StandardProps {
+	isDisabled?: boolean;
+	suggestions?: string[];
+	value?: any;   
+	onChange?: any;
+	onSelect?: any;
+	onExpand?: any;
+	DropMenu?: IDropMenuProps;
+}
+
+const Autocomplete = createClass<IAutocompleteProps>({
 	statics: {
 		peek: {
 			description: `
@@ -26,7 +36,7 @@ const Autocomplete = createClass({
 
 	displayName: 'Autocomplete',
 
-	reducers,
+	reducers: reducers as any, // TODO: typescript hack that should be removed 
 
 	propTypes: {
 		className: string`
@@ -68,7 +78,7 @@ const Autocomplete = createClass({
 			Called when menu is expected to expand. Has the signature
 			\`({props, event}) => {}\`.
 		`,
-	},
+	} as any, // TODO: typescript hack that should be removed
 
 	getDefaultProps() {
 		return {
@@ -79,17 +89,17 @@ const Autocomplete = createClass({
 			onSelect: _.noop,
 			onExpand: _.noop,
 			DropMenu: DropMenu.defaultProps,
-		};
+		} as any; // TODO: typescript hack that should be removed
 	},
 
-	handleSelect(optionIndex, { event }) {
+	handleSelect(optionIndex: number, { event }: any) {
 		const { suggestions, onChange, onSelect } = this.props;
 
 		onChange(suggestions[optionIndex], { event, props: this.props });
 		onSelect(optionIndex, { event, props: this.props });
 	},
 
-	handleInput(event) {
+	handleInput(event: any) {
 		const {
 			onChange,
 			onExpand,
@@ -108,13 +118,13 @@ const Autocomplete = createClass({
 		return _.get(this, 'inputRef.value', this.props.value);
 	},
 
-	setInputValue(value) {
+	setInputValue(value: any) {
 		if (this.inputRef) {
 			this.inputRef.value = value;
 		}
 	},
 
-	handleInputKeydown(event) {
+	handleInputKeydown(event:  React.KeyboardEvent<HTMLInputElement>) {
 		const {
 			onExpand,
 			DropMenu: { isExpanded, focusedIndex, onCollapse },
@@ -146,7 +156,7 @@ const Autocomplete = createClass({
 		}
 	},
 
-	handleControlClick(event) {
+	handleControlClick(event: React.MouseEvent<Element, MouseEvent>) {
 		const {
 			onExpand,
 			DropMenu: { isExpanded, onCollapse },
@@ -171,7 +181,7 @@ const Autocomplete = createClass({
 		this.setInputValue(value);
 	},
 
-	UNSAFE_componentWillReceiveProps(nextProps) {
+	UNSAFE_componentWillReceiveProps(nextProps: any) { // TODO: typescript hack that should be removed
 		const { value } = nextProps;
 		if (value !== this.getInputValue()) {
 			this.setInputValue(value);
@@ -192,7 +202,7 @@ const Autocomplete = createClass({
 			DropMenu: dropMenuProps,
 			suggestions,
 			...passThroughs
-		} = this.props;
+		} = this.props as any; // TODO: typescript hack that should be removed
 
 		const { isExpanded } = dropMenuProps;
 
@@ -208,7 +218,7 @@ const Autocomplete = createClass({
 				onSelect={this.handleSelect}
 				style={style}
 			>
-				<DropMenu.Control onClick={this.handleControlClick}>
+				<DropMenu.Control { ...{onClick: this.handleControlClick} /* TODO: typescript hack that should be removed */}> 
 					<div
 						className={cx('&-Control', {
 							'&-Control-is-expanded': isExpanded,
@@ -222,7 +232,7 @@ const Autocomplete = createClass({
 								'onExpand',
 								'value',
 								'children',
-							])}
+							]) as any} // TODO: typescript hack that should be removed
 							type='text'
 							className={cx('&-Control-input')}
 							ref={ref => (this.inputRef = ref)}

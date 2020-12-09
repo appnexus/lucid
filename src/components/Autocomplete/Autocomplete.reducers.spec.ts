@@ -2,7 +2,6 @@
 
 import assert from 'assert';
 import _ from 'lodash';
-// @ts-ignore
 import { onChange, onSelect, onExpand } from './Autocomplete.reducers';
 
 describe('Autocomplete reducers', () => {

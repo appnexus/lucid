@@ -501,7 +501,7 @@ class SearchableMultiSelect extends React.Component<
 
 		// Just an extra call to make sure the search results show up when a user
 		// is typing
-		onExpand({
+		onExpand && onExpand({
 			event,
 			props: dropMenuProps,
 		});

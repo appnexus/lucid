@@ -169,7 +169,7 @@ class SplitButton extends React.Component<ISplitButtonProps> {
 			DropMenu: { onCollapse },
 		} = this.props;
 
-		onCollapse({ props: this.props.DropMenu, event });
+		onCollapse && onCollapse({ props: this.props.DropMenu, event });
 
 		if (_.has(buttonProps, 'onClick')) {
 			buttonProps.onClick({ event, props: buttonProps });
