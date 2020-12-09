@@ -2,7 +2,6 @@
 import Accordion, { AccordionDumb } from './components/Accordion/Accordion';
 import Autocomplete, {
 	AutocompleteDumb,
-	// @ts-ignore: not converted yet
 } from './components/Autocomplete/Autocomplete';
 import ButtonGroup, {
 	ButtonGroupDumb,

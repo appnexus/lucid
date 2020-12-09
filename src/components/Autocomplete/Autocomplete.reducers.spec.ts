@@ -56,7 +56,7 @@ describe('Autocomplete reducers', () => {
 				},
 			};
 
-			const nextState = onExpand(initialState, 'foo');
+			const nextState = onExpand(initialState);
 			const {
 				DropMenu: { focusedIndex, isExpanded },
 			} = nextState;

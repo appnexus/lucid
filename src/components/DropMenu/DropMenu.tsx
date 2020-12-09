@@ -217,30 +217,30 @@ export interface IDropMenuProps extends StandardProps {
 	isExpanded?: boolean;
 
 	/** Sets the direction the flyout menu will render relative to the control. */
-	direction: 'down' | 'up';
+	direction?: 'down' | 'up';
 
 	/** Sets the alignment the flyout menu will render relative to the control. */
-	alignment: 'start' | 'center' | 'end';
+	alignment?: 'start' | 'center' | 'end';
 
 	/** An array of currently selected \`DropMenu.Option\` indices. */
-	selectedIndices: number[] | null;
+	selectedIndices?: number[] | null;
 
 	/** The currently focused index of \`DropMenu.Option\`. Can also be \`null\`. */
-	focusedIndex: number | null;
+	focusedIndex?: number | null;
 
 	/** The \`id\` of the flyout menu portal element that is appended to
 			\`document.body\`. Defaults to a generated id. */
-	portalId: string;
+	portalId?: string;
 
 	/** Styles that are passed through to the ContextMenu FlyOut element. */
-	flyOutStyle: object;
+	flyOutStyle?: object;
 
 	/** Styles that are passed through to the option container element. */
-	optionContainerStyle: object;
+	optionContainerStyle?: object;
 
 	/** Called when collapsed and the control is clicked, or when the control has
 			focus and the Down Arrow is pressed. */
-	onExpand: ({
+	onExpand?: ({
 		props,
 		event,
 	}: {
@@ -250,7 +250,7 @@ export interface IDropMenuProps extends StandardProps {
 
 	/** Called when expanded and the user clicks the control or outside of the
 			menu, or when the control has focus and the Escape key is pressed */
-	onCollapse: ({
+	onCollapse?: ({
 		props,
 		event,
 	}: {
@@ -260,7 +260,7 @@ export interface IDropMenuProps extends StandardProps {
 
 	/** Called when an option is clicked, or when an option has focus and the
 			Enter key is pressed. */
-	onSelect: (
+	onSelect?: (
 		optionIndex: any,
 		{
 			props,
@@ -273,7 +273,7 @@ export interface IDropMenuProps extends StandardProps {
 
 	/** Called when expanded and the the Down Arrow key is pressed. Not called
 			when focus is on the last option. */
-	onFocusNext: ({
+	onFocusNext?: ({
 		props,
 		event,
 	}: {
@@ -283,7 +283,7 @@ export interface IDropMenuProps extends StandardProps {
 
 	/** Called when expanded and the the Up Arrow key is pressed. Not called when
 			focus is on the first option. */
-	onFocusPrev: ({
+	onFocusPrev?: ({
 		props,
 		event,
 	}: {
@@ -291,7 +291,7 @@ export interface IDropMenuProps extends StandardProps {
 		event: React.KeyboardEvent;
 	}) => void;
 
-	onFocusOption: (
+	onFocusOption?: (
 		optionIndex: number | null,
 		{
 			props,
@@ -394,7 +394,7 @@ class DropMenu extends React.Component<IDropMenuPropsWithPassThroughs, IDropMenu
 			optionGroupIndex: null,
 			optionProps: [],
 			selectedIndices: [],
-			...this.getPreprocessedOptionData(props),
+			...this.getPreprocessedOptionData(props) as any, // TODO: typescript hack that should be removed
 		};
 
 		this._header = React.createRef<HTMLDivElement>();
@@ -710,26 +710,26 @@ class DropMenu extends React.Component<IDropMenuPropsWithPassThroughs, IDropMenu
 					Option.defaultProps
 				) as IDropMenuPropsWithPassThroughs;
 				if (focusedOptionData && !focusedOptionProps.isDisabled) {
-					onSelect(focusedIndex, { props: focusedOptionProps, event });
+					onSelect && onSelect(focusedIndex, { props: focusedOptionProps, event });
 				} else if (_.isNull(focusedIndex)) {
-					onSelect(null, { props: _.first(nullOptions), event });
+					onSelect && onSelect(null, { props: _.first(nullOptions), event });
 				}
 			}
 			if (event.keyCode === KEYCODE.Escape) {
 				event.preventDefault();
-				onCollapse({ props, event });
+				onCollapse && onCollapse({ props, event });
 			}
 			if (event.keyCode === KEYCODE.ArrowUp) {
 				if (_.isNumber(focusedIndex) || _.isNull(focusedIndex)) {
 					if (focusedIndex === 0) {
 						if (!_.isEmpty(nullOptions)) {
 							event.preventDefault();
-							onFocusOption(null, { props, event });
+							onFocusOption && onFocusOption(null, { props, event });
 						}
 					}
 					if (!_.isNil(focusedIndex) && focusedIndex > 0) {
 						event.preventDefault();
-						onFocusOption(
+						onFocusOption && onFocusOption(
 							_.findLastIndex(
 								flattenedOptionsData,
 								isOptionVisible,
@@ -740,7 +740,7 @@ class DropMenu extends React.Component<IDropMenuPropsWithPassThroughs, IDropMenu
 					}
 				} else {
 					event.preventDefault();
-					onFocusOption(
+					focusedIndex && onFocusOption && onFocusOption(
 						_.findLastIndex(
 							flattenedOptionsData,
 							isOptionVisible,
@@ -754,7 +754,7 @@ class DropMenu extends React.Component<IDropMenuPropsWithPassThroughs, IDropMenu
 				if (_.isNumber(focusedIndex)) {
 					if (focusedIndex < _.size(flattenedOptionsData) - 1) {
 						event.preventDefault();
-						onFocusOption(
+						onFocusOption && onFocusOption(
 							_.findIndex(
 								flattenedOptionsData,
 								isOptionVisible,
@@ -765,7 +765,7 @@ class DropMenu extends React.Component<IDropMenuPropsWithPassThroughs, IDropMenu
 					}
 				} else {
 					event.preventDefault();
-					onFocusOption(
+					onFocusOption && onFocusOption(
 						_.findIndex(
 							flattenedOptionsData,
 							isOptionVisible,
@@ -778,7 +778,7 @@ class DropMenu extends React.Component<IDropMenuPropsWithPassThroughs, IDropMenu
 		} else {
 			if (event.keyCode === KEYCODE.ArrowDown) {
 				event.preventDefault();
-				onExpand({ props, event });
+				onExpand && onExpand({ props, event });
 			}
 		}
 	};
@@ -790,9 +790,9 @@ class DropMenu extends React.Component<IDropMenuPropsWithPassThroughs, IDropMenu
 		} = this;
 
 		if (isExpanded) {
-			onCollapse({ props, event });
+			onCollapse && onCollapse({ props, event });
 		} else {
-			onExpand({ props, event });
+			onExpand && onExpand({ props, event });
 		}
 	};
 
@@ -808,7 +808,7 @@ class DropMenu extends React.Component<IDropMenuPropsWithPassThroughs, IDropMenu
 		});
 
 		if (!optionProps.isDisabled && focusedIndex !== optionIndex) {
-			onFocusOption(optionIndex, { props: this.props, event });
+			onFocusOption && onFocusOption(optionIndex, { props: this.props, event });
 		}
 	};
 
@@ -820,7 +820,7 @@ class DropMenu extends React.Component<IDropMenuPropsWithPassThroughs, IDropMenu
 		const { onSelect } = this.props;
 
 		if (!optionProps.isDisabled) {
-			onSelect(optionIndex, { props: optionProps, event });
+			onSelect && onSelect(optionIndex, { props: optionProps, event });
 		}
 	};
 
