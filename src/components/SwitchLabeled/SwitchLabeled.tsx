@@ -3,7 +3,7 @@ import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import { CSSTransition } from 'react-transition-group';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, getFirst, omitProps, StandardProps } from '../../util/component-types';
+import { getFirst, omitProps, StandardProps } from '../../util/component-types';
 import Switch from '../Switch/Switch';
 import { useState } from 'react';
 import { useEffect } from 'react';
@@ -106,23 +106,26 @@ SwitchLabeled.peek = {
 	madeFrom: ['Switch'],
 };
 
-SwitchLabeled.Label = createClass({
-	displayName: 'SwitchLabeled.Label',
-	statics: {
-		peek: {
-			description: `
-				Label to be shown alongside the switch.
-			`,
-		},
-	},
-	propName: 'Label',
-	propTypes: {
-		children: node`
-			Used to identify the purpose of this switch to the user -- can be any
-			renderable content.
-		`,
-	},
-}),
+const Label = () => { return null; }
+
+Label.displayName = 'SwitchLabeled.Label';
+
+Label.peek = {
+	description: `
+		Label to be shown alongside the switch.
+	`,
+};
+
+Label.propName = 'Label';
+
+Label.propTypes = {
+	children: node`
+		Used to identify the purpose of this switch to the user -- can be any
+		renderable content.
+	`,
+};
+
+SwitchLabeled.Label = Label;
 
 SwitchLabeled.propTypes = {
 	...Switch.propTypes,
