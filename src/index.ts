@@ -172,7 +172,6 @@ import SuccessIcon from './components/Icon/SuccessIcon/SuccessIcon';
 import SuccessLightIcon from './components/Icon/SuccessLightIcon/SuccessLightIcon';
 import Switch from './components/Switch/Switch';
 import SwitchIcon from './components/Icon/SwitchIcon/SwitchIcon';
-// @ts-ignore: not converted yet
 import SwitchLabeled from './components/SwitchLabeled/SwitchLabeled';
 import Table from './components/Table/Table';
 import Tag from './components/Tag/Tag';

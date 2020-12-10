@@ -90,6 +90,15 @@ describe('SwitchLabeled', () => {
 
 		describe('pass throughs', () => {
 			it('passes through all props not defined in `propTypes` to its `Switch` instance.', () => {
+
+				const extraProps = {
+					foo: 1,
+					bar: 2,
+					baz: 3,
+					qux: 4,
+					quux: 5
+				};
+
 				const wrapper = shallow(
 					<SwitchLabeled
 						className='wut'
@@ -97,11 +106,7 @@ describe('SwitchLabeled', () => {
 						isSelected={true}
 						style={{ fontWeight: 'bold' }}
 						onSelect={_.noop}
-						foo={1}
-						bar={2}
-						baz={3}
-						qux={4}
-						quux={5}
+						{...extraProps}
 					/>
 				);
 				const switchProps = wrapper.find(Switch).props();
