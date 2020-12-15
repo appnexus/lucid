@@ -1590,6 +1590,141 @@ exports[`SearchableSingleSelect [common] example testing should match snapshot(s
 </div>
 `;
 
+exports[`SearchableSingleSelect [common] example testing should match snapshot(s) for 07.formatted-options 1`] = `
+<div
+  className="lucid-SearchableSingleSelect"
+>
+  <DropMenu
+    ContextMenu={
+      Object {
+        "alignmentOffset": -13,
+        "directonOffset": -1,
+        "minWidthOffset": -28,
+      }
+    }
+    alignment="start"
+    className="lucid-SearchableSingleSelect-DropMenu lucid-SearchableSingleSelect-DropMenu-is-small"
+    direction="down"
+    flyOutStyle={
+      Object {
+        "maxHeight": "18em",
+      }
+    }
+    focusedIndex={null}
+    isDisabled={false}
+    isExpanded={false}
+    onCollapse={[Function]}
+    onExpand={[Function]}
+    onFocusNext={[Function]}
+    onFocusOption={[Function]}
+    onFocusPrev={[Function]}
+    onSelect={[Function]}
+    optionContainerStyle={Object {}}
+    portalId=""
+    selectedIndices={null}
+  >
+    <DropMenu.Control>
+      <SearchField
+        autoComplete="off"
+        className="lucid-SearchableSingleSelect-search"
+        debounceLevel={500}
+        isDisabled={false}
+        onChange={[Function]}
+        onChangeDebounced={[Function]}
+        onSubmit={[Function]}
+        value=""
+      />
+    </DropMenu.Control>
+    <DropMenu.OptionGroup
+      isHidden={false}
+      key="SearchableSingleSelectOptionGroup0"
+    >
+      <OptionCols
+        col1="ID"
+        col2="NAME"
+        col3="DESCRIPTION"
+      />
+      <SearchableSingleSelect.Option
+        Selected="Drone (13)"
+        filterText="13 Drone lorem ipsum dolor sit"
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
+      >
+        <Component />
+      </SearchableSingleSelect.Option>
+      <SearchableSingleSelect.Option
+        Selected="Appa (14)"
+        filterText="14 Appa dolor sit amet consectetur"
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
+      >
+        <Component />
+      </SearchableSingleSelect.Option>
+      <SearchableSingleSelect.Option
+        Selected="Breakfast (14)"
+        filterText="15 Breakfast amet consectetur adipiscing elit"
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
+      >
+        <Component />
+      </SearchableSingleSelect.Option>
+      <SearchableSingleSelect.Option
+        Selected="Scout (15)"
+        filterText="16 Scout adipiscing elit sed do"
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
+      >
+        <Component />
+      </SearchableSingleSelect.Option>
+      <DropMenu.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
+        key="SearchableSingleSelectOption0"
+      >
+        <Component
+          searchText=""
+        />
+      </DropMenu.Option>
+      <DropMenu.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
+        key="SearchableSingleSelectOption1"
+      >
+        <Component
+          searchText=""
+        />
+      </DropMenu.Option>
+      <DropMenu.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
+        key="SearchableSingleSelectOption2"
+      >
+        <Component
+          searchText=""
+        />
+      </DropMenu.Option>
+      <DropMenu.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
+        key="SearchableSingleSelectOption3"
+      >
+        <Component
+          searchText=""
+        />
+      </DropMenu.Option>
+    </DropMenu.OptionGroup>
+  </DropMenu>
+</div>
+`;
+
 exports[`SearchableSingleSelect custom formatting should render Option child function by passing in {searchText}, setting filterText on each option and using a custom optionFilter 1`] = `
 <div
   className="lucid-SearchableSingleSelect"

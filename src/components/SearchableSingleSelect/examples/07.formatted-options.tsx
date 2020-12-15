@@ -1,44 +1,94 @@
 import React from 'react';
-import createClass from 'create-react-class';
-import { SearchableSingleSelect } from '../../../index';
+import _ from 'lodash';
+import { SearchableSingleSelect, Underline } from '../../../index';
 
-const { Option, OptionGroup } = SearchableSingleSelect;
-
-const OptionCols = ({ col1, col2 }: { col1: string; col2: string }) => (
+// eslint-disable-next-line react/prop-types
+const OptionCols = ({
+	col1,
+	col2,
+	col3,
+	textMatch,
+}: {
+	col1: string;
+	col2: string;
+	col3: string;
+	textMatch?: string | undefined;
+}) => (
 	<div style={{ display: 'flex' }}>
-		<div style={{ width: 100 }}>{col1}</div>
-		<div>{col2}</div>
+		<div style={{ width: 100 }}>
+			<Underline match={textMatch}>{col1}</Underline>
+		</div>
+		<div style={{ width: 100 }}>
+			<Underline match={textMatch}>{col2}</Underline>
+		</div>
+		<div style={{ width: 200 }}>
+			<Underline match={textMatch}>{col3}</Underline>
+		</div>
 	</div>
 );
 
-export default createClass({
+const optionFilter = (
+	searchText: string,
+	{ filterText }: { filterText: string }
+) => {
+	if (filterText) {
+		return new RegExp(_.escapeRegExp(searchText), 'i').test(filterText);
+	}
+	return true;
+};
+
+export default class extends React.Component {
 	render() {
 		return (
-			<SearchableSingleSelect
-				SearchField={{
-					placeholder: 'Character',
-				}}
-			>
-				<OptionGroup>
-					<OptionCols col1='NAME' col2='NUMBER'  />
+			<SearchableSingleSelect optionFilter={optionFilter}>
+				<SearchableSingleSelect.OptionGroup>
+					<OptionCols col1='ID' col2='NAME' col3='DESCRIPTION' />
 
-					<Option Selected='Drone (13)'>
-						<OptionCols col1='Drone' col2='13' />
-					</Option>
+					<SearchableSingleSelect.Option filterText='13 Drone lorem ipsum dolor sit' Selected='Drone (13)'>
+						{({ searchText }: { searchText: string }) => (
+							<OptionCols
+								col1='13'
+								col2='Drone'
+								col3='lorem ipsum dolor sit'
+								textMatch={searchText}
+							/>
+						)}
+					</SearchableSingleSelect.Option>
 
-					<Option Selected='Appa (14)'>
-						<OptionCols col1='Appa' col2='14' />
-					</Option>
+					<SearchableSingleSelect.Option filterText='14 Appa dolor sit amet consectetur' Selected='Appa (14)'>
+						{({ searchText }: { searchText: string }) => (
+							<OptionCols
+								col1='14'
+								col2='Appa'
+								col3='dolor sit amet consectetur'
+								textMatch={searchText}
+							/>
+						)}
+					</SearchableSingleSelect.Option>
 
-					<Option Selected='Breakfast (15)'>
-						<OptionCols col1='Breakfast' col2='15' />
-					</Option>
+					<SearchableSingleSelect.Option filterText='15 Breakfast amet consectetur adipiscing elit' Selected='Breakfast (14)'>
+						{({ searchText }: { searchText: string }) => (
+							<OptionCols
+								col1='14'
+								col2='Breakfast'
+								col3='amet consectetur adipiscing elit'
+								textMatch={searchText}
+							/>
+						)}
+					</SearchableSingleSelect.Option>
 
-					<Option Selected='Scout (16)'>
-						<OptionCols col1='Scout' col2='16' />
-					</Option>
-				</OptionGroup>
+					<SearchableSingleSelect.Option filterText='16 Scout adipiscing elit sed do' Selected='Scout (15)'>
+						{({ searchText }: { searchText: string }) => (
+							<OptionCols
+								col1='15'
+								col2='Scout'
+								col3='adipiscing elit sed do'
+								textMatch={searchText}
+							/>
+						)}
+					</SearchableSingleSelect.Option>
+				</SearchableSingleSelect.OptionGroup>
 			</SearchableSingleSelect>
 		);
-	},
-});
+	}
+}
