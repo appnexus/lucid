@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
-import { bindClassNames, lucidClassNames } from '../../util/style-helpers';
+import { lucidClassNames } from '../../util/style-helpers';
 import {
 	findTypes,
 	omitProps,
