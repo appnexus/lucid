@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TicketIcon [common] example testing should match snapshot(s) for 1.default 1`] = `
+<Icon
+  aspectRatio="xMidYMid meet"
+  className="lucid-TicketIcon"
+  color="primary"
+  isClickable={false}
+  isDisabled={false}
+  onClick={[Function]}
+  onSelect={[Function]}
+  size={16}
+  viewBox="0 0 16 16"
+>
+  <path
+    d="M13.5 8c0-1.105.895-2 2-2V2.5H.5V6c1.105 0 2 .895 2 2s-.895 2-2 2v3.5h15V10c-1.105 0-2-.895-2-2zM8 2.5v1M8 13.5v-1M8 6.7v-.6M8 9.883v-.6"
+  />
+</Icon>
+`;
