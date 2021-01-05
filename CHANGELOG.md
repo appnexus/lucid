@@ -81,7 +81,7 @@
 
 - #1174 [patch] BUDE-811: Tweak spacing with inputs and graph padding.
 - #1173 [patch] BUDE-811: Update color of point in `DraggableLineChart`.
-- #1172 [patch] Added Wrench, Share, Lightbulb and Hosted icons.
+- #1172 [patch] Added `Wrench`, `Share`, `Lightbulb` and `Hosted` icons.
   https://github.com/appnexus/lucid/compare/v5.8.8...v5.8.9
 
 ## 5.8.8
@@ -98,7 +98,7 @@
 
 - #1166 [patch] Updated the new `DraggableLineChart` to be able to take foreign React component.
 - #1163 [none] Improve the GH upload script to work with https.
-- #1160 [patch] Fix SearchableSingleSelect warnings.
+- #1160 [patch] Fix `SearchableSingleSelect` warnings.
   https://github.com/appnexus/lucid/compare/v5.8.5...v5.8.6
 
 ## 5.8.5
@@ -119,28 +119,27 @@ https://github.com/appnexus/lucid/compare/v5.8.2...v5.8.3
 
 ## 5.8.2
 
-- #1154 [patch] BUDE-121: Upgrated react-transition-group library. This required changes to Banner, Overlay, OverlayWrapper, SwitchLabeled
+- #1154 [patch] BUDE-121: Upgrated react-transition-group library. This required changes to `Banner`, `Overlay`, `OverlayWrapper`, `SwitchLabeled`.
 
 https://github.com/appnexus/lucid/compare/v5.8.1...v5.8.2
 
 ## 5.8.1
 
-- #1151 [patch] BUDE-420: Update Bars props
-- #1149 [patch] add bell dot and calculator icons and remove some svgs
-
-https://github.com/appnexus/lucid/compare/v5.8.0...v5.8.1
+- #1151 [patch] BUDE-420: Update `Bars` props.
+- #1149 [patch] add `Bell`, `Dot` and `Calculator` icons and remove some svgs.
+  https://github.com/appnexus/lucid/compare/v5.8.0...v5.8.1
 
 ## 5.8.0
 
-- #1138 [none] Min-width added for Table
-- #1140 [none] correct some of the releasing steps
-- #1141 [patch] Add HTML attributes to `Tabs` component
-- #1142 [none] Update table cursor icon
-- #1144 [none] Use donutWidth prop to control width of a donut chart
-- #1145 [minor] TS convert linechart
-- #1146 [patch] extend `DropMenu` props to include div element passthroughs
+- #1138 [none] Min-width added for `Table`.
+- #1140 [none] correct some of the releasing steps.
+- #1141 [patch] Add HTML attributes to `Tabs` component.
+- #1142 [none] Update `Table` cursor icon.
+- #1144 [none] Use `donutWidth` prop to control width of a `Donut` chart.
+- #1145 [minor] TypeScript convert `LineChart`.
+- #1146 [patch] extend `DropMenu` props to include div element passthroughs.
 - #1147 [none] bump acorn from 5.7.3 to 5.7.4
-- #1148 [patch] expose component interfaces
+- #1148 [patch] expose component interfaces.
 
 https://github.com/appnexus/lucid/compare/v5.7.0...v5.8.0
 
