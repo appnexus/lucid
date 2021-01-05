@@ -47,6 +47,7 @@ import VerticalTabs, {
 
 // dumb components
 import AddURLIcon from './components/Icon/AddURLIcon/AddURLIcon';
+import AddColumnIcon from './components/Icon/AddColumnIcon/AddColumnIcon';
 import AnalyzeDataIcon from './components/Icon/AnalyzeDataIcon/AnalyzeDataIcon';
 import ArrowIcon from './components/Icon/ArrowIcon/ArrowIcon';
 import AsteriskIcon from './components/Icon/AsteriskIcon/AsteriskIcon';
@@ -61,6 +62,7 @@ import Banner from './components/Banner/Banner';
 import Bar from './components/Bar/Bar';
 // @ts-ignore: not converted yet
 import BarChart from './components/BarChart/BarChart';
+import BarChartIcon from './components/Icon/BarChartIcon/BarChartIcon';
 // @ts-ignore: not converted yet
 import Bars from './components/Bars/Bars';
 import BellIcon from './components/Icon/BellIcon/BellIcon';
@@ -227,6 +229,7 @@ export {
 	Accordion,
 	AccordionDumb,
 	AddURLIcon,
+	AddColumnIcon,
 	AnalyzeDataIcon,
 	ArrowIcon,
 	AsteriskIcon,
@@ -241,6 +244,7 @@ export {
 	Banner,
 	Bar,
 	BarChart,
+	BarChartIcon,
 	Bars,
 	BellIcon,
 	BookIcon,
