@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InheritedSettingsIcon [common] example testing should match snapshot(s) for 1.default 1`] = `
+<Icon
+  aspectRatio="xMidYMid meet"
+  className="lucid-InheritedSettingsIcon"
+  color="primary"
+  isClickable={false}
+  isDisabled={false}
+  onClick={[Function]}
+  onSelect={[Function]}
+  size={16}
+  viewBox="0 0 16 16"
+>
+  <circle
+    cx="8"
+    cy="3.25"
+    r="2.75"
+  />
+  <path
+    d="M2.75 15.5C3.993 15.5 5 14.493 5 13.25S3.993 11 2.75 11 .5 12.007.5 13.25s1.007 2.25 2.25 2.25zM13.25 15.5c1.243 0 2.25-1.007 2.25-2.25S14.493 11 13.25 11 11 12.007 11 13.25s1.007 2.25 2.25 2.25zM2.75 10.75V8.5h10.5v2.25M8 8.25v-2"
+  />
+</Icon>
+`;

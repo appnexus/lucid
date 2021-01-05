@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`RunReportIcon [common] example testing should match snapshot(s) for 1default 1`] = `
+exports[`ReportIcon [common] example testing should match snapshot(s) for 1.default 1`] = `
 <Icon
   aspectRatio="xMidYMid meet"
-  className="lucid-RunReportIcon"
+  className="lucid-ReportIcon"
   color="primary"
   isClickable={false}
   isDisabled={false}
@@ -13,13 +13,7 @@ exports[`RunReportIcon [common] example testing should match snapshot(s) for 1de
   viewBox="0 0 16 16"
 >
   <path
-    d="M7 10.75h8"
-    fill="none"
-    strokeMiterlimit="10"
-    strokeWidth="1.3"
-  />
-  <path
-    d="M13.5 12.75l2-2-2-2M13.75 15.5H2.25V3.25H4.5M11.5 3.25h2.25V6"
+    d="M11.5 3.25h2.25V15.5H2.25V3.25H4.5"
   />
   <path
     d="M9.5 2C9.5 1.172 8.828.5 8 .5S6.5 1.172 6.5 2h-2v2.75h7V2h-2z"

@@ -24,6 +24,23 @@ module.exports = [
 	},
 
 	{
+		name: 'AddColumnIcon',
+		component: getDefaultExport(
+			require('../src/components/Icon/AddColumnIcon/AddColumnIcon')
+		),
+		examplesContext: require.context(
+			'../src/components/Icon/AddColumnIcon/examples',
+			true,
+			/\.(j|t)sx?$/
+		),
+		examplesContextRaw: require.context(
+			'!!raw-loader!../src/components/Icon/AddColumnIcon/examples',
+			true,
+			/\.(j|t)sx?$/
+		),
+	},
+
+	{
 		name: 'AnalyzeDataIcon',
 		component: getDefaultExport(
 			require('../src/components/Icon/AnalyzeDataIcon/AnalyzeDataIcon')
@@ -120,6 +137,23 @@ module.exports = [
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Icon/BackUpArrowIcon/examples',
+			true,
+			/\.(j|t)sx?$/
+		),
+	},
+
+	{
+		name: 'BarChartIcon',
+		component: getDefaultExport(
+			require('../src/components/Icon/BarChartIcon/BarChartIcon')
+		),
+		examplesContext: require.context(
+			'../src/components/Icon/BarChartIcon/examples',
+			true,
+			/\.(j|t)sx?$/
+		),
+		examplesContextRaw: require.context(
+			'!!raw-loader!../src/components/Icon/BarChartIcon/examples',
 			true,
 			/\.(j|t)sx?$/
 		),
@@ -602,6 +636,23 @@ module.exports = [
 	},
 
 	{
+		name: 'GlobeIcon',
+		component: getDefaultExport(
+			require('../src/components/Icon/GlobeIcon/GlobeIcon')
+		),
+		examplesContext: require.context(
+			'../src/components/Icon/GlobeIcon/examples',
+			true,
+			/\.(j|t)sx?$/
+		),
+		examplesContextRaw: require.context(
+			'!!raw-loader!../src/components/Icon/GlobeIcon/examples',
+			true,
+			/\.(j|t)sx?$/
+		),
+	},
+
+	{
 		name: 'HamburgerMenuIcon',
 		component: getDefaultExport(
 			require('../src/components/Icon/HamburgerMenuIcon/HamburgerMenuIcon')
@@ -732,6 +783,23 @@ module.exports = [
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Icon/InfoLightIcon/examples',
+			true,
+			/\.(j|t)sx?$/
+		),
+	},
+
+	{
+		name: 'InheritedSettingsIcon',
+		component: getDefaultExport(
+			require('../src/components/Icon/InheritedSettingsIcon/InheritedSettingsIcon')
+		),
+		examplesContext: require.context(
+			'../src/components/Icon/InheritedSettingsIcon/examples',
+			true,
+			/\.(j|t)sx?$/
+		),
+		examplesContextRaw: require.context(
+			'!!raw-loader!../src/components/Icon/InheritedSettingsIcon/examples',
 			true,
 			/\.(j|t)sx?$/
 		),
@@ -976,6 +1044,23 @@ module.exports = [
 	},
 
 	{
+		name: 'ReportIcon',
+		component: getDefaultExport(
+			require('../src/components/Icon/ReportIcon/ReportIcon')
+		),
+		examplesContext: require.context(
+			'../src/components/Icon/ReportIcon/examples',
+			true,
+			/\.(t|j)sx?$/
+		),
+		examplesContextRaw: require.context(
+			'!!raw-loader!../src/components/Icon/ReportIcon/examples',
+			true,
+			/\.(t|j)sx?$/
+		),
+	},
+
+	{
 		name: 'ResizeIcon',
 		component: getDefaultExport(
 			require('../src/components/Icon/ResizeIcon/ResizeIcon')
@@ -1008,6 +1093,7 @@ module.exports = [
 			/\.(t|j)sx?$/
 		),
 	},
+
 	{
 		name: 'SaveIcon',
 		component: getDefaultExport(
@@ -1213,6 +1299,23 @@ module.exports = [
 	},
 
 	{
+		name: 'TableIcon',
+		component: getDefaultExport(
+			require('../src/components/Icon/TableIcon/TableIcon')
+		),
+		examplesContext: require.context(
+			'../src/components/Icon/TableIcon/examples',
+			true,
+			/\.(j|t)sx?$/
+		),
+		examplesContextRaw: require.context(
+			'!!raw-loader!../src/components/Icon/TableIcon/examples',
+			true,
+			/\.(j|t)sx?$/
+		),
+	},
+
+	{
 		name: 'TextIcon',
 		component: getDefaultExport(
 			require('../src/components/Icon/TextIcon/TextIcon')
@@ -1229,6 +1332,23 @@ module.exports = [
 		),
 	},
 
+	{
+		name: 'TicketIcon',
+		component: getDefaultExport(
+			require('../src/components/Icon/TicketIcon/TicketIcon')
+		),
+		examplesContext: require.context(
+			'../src/components/Icon/TicketIcon/examples',
+			true,
+			/\.(j|t)sx?$/
+		),
+		examplesContextRaw: require.context(
+			'!!raw-loader!../src/components/Icon/TicketIcon/examples',
+			true,
+			/\.(j|t)sx?$/
+		),
+	},
+	
 	{
 		name: 'UnlinkedIcon',
 		component: getDefaultExport(
