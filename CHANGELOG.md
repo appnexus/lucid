@@ -1,131 +1,145 @@
+## 5.8.24
+
+- #1189 [patch] Fixed class name binding on `VerticalListMenu`.
+- #1188 [patch] BUDE-969: Add formatted-options example to `SearchableSingleSelect`.
+
 ## 5.8.23
-- #1187 [patch] BUDE-968: Toggle active class on clock icon on input focus
-- #1186 [patch] CXP-1038: Migrated Autocomplete to Typescript
-- #1185 [patch] CXP-1042: Converted SwitchLabeled to Typescript
-- #1184 [patch] CXP-695: Converted DataTable to Typescript
-- #1183 [patch] CXP-694: Migrated BarChart to typescript
+
+- #1187 [patch] BUDE-968: Toggle active class on `ClockIcon` on input focus.
+- #1186 [patch] CXP-1038: Migrated `Autocomplete` to TypeScript.
+- #1185 [patch] CXP-1042: Converted `SwitchLabeled` to TypeScript.
+- #1184 [patch] CXP-695: Converted `DataTable` to TypeScript.
+- #1183 [patch] CXP-694: Migrated `BarChart` to TypeScript.
   https://github.com/appnexus/lucid/compare/v5.8.22...v5.8.23
 
 ## 5.8.22
-- #1181 [patch] BUDE-966: Add optional flag to truncate Table cell content
+
+- #1181 [patch] BUDE-966: Add optional flag to truncate `Table` cell content.
   https://github.com/appnexus/lucid/compare/v5.8.21...v5.8.22
 
 ## 5.8.21
-- [patch] Removing css `height` causing misalignment in `SwitchLabelled`  
+
+- [patch] Removing css `height` causing misalignment in `SwitchLabelled`.
   https://github.com/appnexus/lucid/compare/v5.8.20...v5.8.21
-  
+
 ## 5.8.20
-- [patch] Fixing bug with DraggableLineChart and selecting first row
+
+- [patch] Fixing bug with `DraggableLineChart` and selecting first row.
   https://github.com/appnexus/lucid/compare/v5.8.19...v5.8.20
 
 ## 5.8.19
-- [patch] Removing unneeded prop from DraggableLineChart
+
+- [patch] Removing unneeded prop from `DraggableLineChart`.
   https://github.com/appnexus/lucid/compare/v5.8.18...v5.8.19
 
 ## 5.8.18
-- [patch] Adding helper text box for DraggableLineChart
+
+- [patch] Adding helper text box for `DraggableLineChart`.
   https://github.com/appnexus/lucid/compare/v5.8.17...v5.8.18
 
 ## 5.8.17
-- [patch] Fixing less on TimeSelect
+
+- [patch] Fixing less on `TimeSelect`.
   https://github.com/appnexus/lucid/compare/v5.8.16...v5.8.17
-  
+
 ## 5.8.16
-- [patch] Fixing issue with TimeSelect
+
+- [patch] Fixing issue with `TimeSelect`.
   https://github.com/appnexus/lucid/compare/v5.8.15...v5.8.16
-  
+
 ## 5.8.15
-- [patch] Fixing a less value for TimeSelect
+
+- [patch] Fixing a less value for `TimeSelect`.
   https://github.com/appnexus/lucid/compare/v5.8.14...v5.8.15
-  
+
 ## 5.8.14
-- [patch] Fixing a default max Y value for DraggableLineChart
+
+- [patch] Fixing a default max Y value for `DraggableLineChart`.
   https://github.com/appnexus/lucid/compare/v5.8.13...v5.8.14
-  
+
 ## 5.8.13
 
-- #1178 [patch] BUDE-848: Building out a preselect for the DraggableLineChart
+- #1178 [patch] BUDE-848: Building out a preselect for the `DraggableLineChart`.
   https://github.com/appnexus/lucid/compare/v5.8.12...v5.8.13
 
 ## 5.8.12
 
-- #1177 [patch] BUDE-634: Building out a new time selector
+- #1177 [patch] BUDE-634: Building out a new time selector.
   https://github.com/appnexus/lucid/compare/v5.8.11...v5.8.12
-  
+
 ## 5.8.11
 
-- #1176 [patch] BUDE-479: Fix scroll locked content
+- #1176 [patch] BUDE-479: Fix scroll locked content.
   https://github.com/appnexus/lucid/compare/v5.8.10...v5.8.11
-  
+
 ## 5.8.10
 
-- #1175 [patch] BUDE-479: Add option to LoadingIndicator and OverlayWrapper to center loading message and prevent scrolling
+- #1175 [patch] BUDE-479: Add option to `LoadingIndicator` and `OverlayWrapper` to center loading message and prevent scrolling.
   https://github.com/appnexus/lucid/compare/v5.8.9...v5.8.10
 
 ## 5.8.9
 
-- #1174 [patch] BUDE-811: Tweak spacing with inputs and graph padding
-- #1173 [patch] BUDE-811: Update color of point in DraggableLineChart
-- #1172 [patch] Added Wrench, Share, Lightbulb and Hosted icons.
+- #1174 [patch] BUDE-811: Tweak spacing with inputs and graph padding.
+- #1173 [patch] BUDE-811: Update color of point in `DraggableLineChart`.
+- #1172 [patch] Added `Wrench`, `Share`, `Lightbulb` and `Hosted` icons.
   https://github.com/appnexus/lucid/compare/v5.8.8...v5.8.9
 
 ## 5.8.8
 
-- #1171 [patch] Cleaned up the new DraggableLineChart component
+- #1171 [patch] Cleaned up the new `DraggableLineChart` component.
   https://github.com/appnexus/lucid/compare/v5.8.7...v5.8.8
 
 ## 5.8.7
 
-- #1169 [patch] We have updated our test cases for DraggableLineChart. We have also added span as a type to Typography so users can have a div under them
+- #1169 [patch] We have updated our test cases for `DraggableLineChart`. We have also added span as a type to `Typography` so users can have a div under them.
   https://github.com/appnexus/lucid/compare/v5.8.6...v5.8.7
 
 ## 5.8.6
 
-- #1166 [patch] We have updated the new DraggableLineChart to be able to take foreign react component
-- #1163 [none] Improve the GH upload script to work with https
-- #1160 [patch] Fix SearchableSingleSelect warnings
+- #1166 [patch] Updated the new `DraggableLineChart` to be able to take foreign React component.
+- #1163 [none] Improve the GH upload script to work with https.
+- #1160 [patch] Fix `SearchableSingleSelect` warnings.
   https://github.com/appnexus/lucid/compare/v5.8.5...v5.8.6
 
 ## 5.8.5
 
-- #1159 [patch] We have added a new DraggableLineChart component
+- #1159 [patch] Added a new `DraggableLineChart` component.
   https://github.com/appnexus/lucid/compare/v5.8.4...v5.8.5
 
 ## 5.8.4
 
-- #1158 [patch] We have added an on rest callback for Collapsible and ExpanderPanel
+- #1158 [patch] Added an on rest callback for `Collapsible` and `ExpanderPanel`.
   https://github.com/appnexus/lucid/compare/v5.8.3...v5.8.4
 
 ## 5.8.3
 
-- #1153 [patch] Removed the props and state re-exports from the index file. This may technically break some folks but it should never have been introduced in the first place it since it isn't compatible with babel typescript compilation.
+- #1153 [patch] Removed the props and state re-exports from the index file. This may technically break some folks but it should never have been introduced in the first place it since it isn't compatible with Babel TypeScript compilation.
 
 https://github.com/appnexus/lucid/compare/v5.8.2...v5.8.3
 
 ## 5.8.2
 
-- #1154 [patch] BUDE-121: Upgrated react-transition-group library. This required changes to Banner, Overlay, OverlayWrapper, SwitchLabeled
+- #1154 [patch] BUDE-121: Upgrated react-transition-group library. This required changes to `Banner`, `Overlay`, `OverlayWrapper`, `SwitchLabeled`.
 
 https://github.com/appnexus/lucid/compare/v5.8.1...v5.8.2
 
 ## 5.8.1
 
-- #1151 [patch] BUDE-420: Update Bars props
-- #1149 [patch] add bell dot and calculator icons and remove some svgs
-
-https://github.com/appnexus/lucid/compare/v5.8.0...v5.8.1
+- #1151 [patch] BUDE-420: Update `Bars` props.
+- #1149 [patch] add `Bell`, `Dot` and `Calculator` icons and remove some svgs.
+  https://github.com/appnexus/lucid/compare/v5.8.0...v5.8.1
 
 ## 5.8.0
 
-- #1138 [none] Min-width added for Table
-- #1140 [none] correct some of the releasing steps
-- #1141 [patch] Add HTML attributes to `Tabs` component
-- #1142 [none] Update table cursor icon
-- #1144 [none] Use donutWidth prop to control width of a donut chart
-- #1145 [minor] TS convert linechart
-- #1146 [patch] extend `DropMenu` props to include div element passthroughs
+- #1138 [none] Min-width added for `Table`.
+- #1140 [none] correct some of the releasing steps.
+- #1141 [patch] Add HTML attributes to `Tabs` component.
+- #1142 [none] Update `Table` cursor icon.
+- #1144 [none] Use `donutWidth` prop to control width of a `Donut` chart.
+- #1145 [minor] TypeScript convert `LineChart`.
+- #1146 [patch] extend `DropMenu` props to include div element passthroughs.
 - #1147 [none] bump acorn from 5.7.3 to 5.7.4
-- #1148 [patch] expose component interfaces
+- #1148 [patch] expose component interfaces.
 
 https://github.com/appnexus/lucid/compare/v5.7.0...v5.8.0
 

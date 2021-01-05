@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
-import { bindClassNames } from '../../util/style-helpers';
+import { lucidClassNames } from '../../util/style-helpers';
 import {
 	findTypes,
 	omitProps,
@@ -13,7 +13,7 @@ import * as reducers from './VerticalListMenu.reducers';
 import ChevronIcon from '../Icon/ChevronIcon/ChevronIcon';
 import Collapsible, { ICollapsibleProps } from '../Collapsible/Collapsible';
 
-const cx = bindClassNames('lucid-VerticalListMenu');
+const cx = lucidClassNames.bind('&-VerticalListMenu');
 
 const { func, arrayOf, bool, string, number, node, object, shape } = PropTypes;
 
