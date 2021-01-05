@@ -24,6 +24,23 @@ module.exports = [
 	},
 
 	{
+		name: 'AddColumnIcon',
+		component: getDefaultExport(
+			require('../src/components/Icon/AddColumnIcon/AddColumnIcon')
+		),
+		examplesContext: require.context(
+			'../src/components/Icon/AddColumnIcon/examples',
+			true,
+			/\.(j|t)sx?$/
+		),
+		examplesContextRaw: require.context(
+			'!!raw-loader!../src/components/Icon/AddColumnIcon/examples',
+			true,
+			/\.(j|t)sx?$/
+		),
+	},
+
+	{
 		name: 'AnalyzeDataIcon',
 		component: getDefaultExport(
 			require('../src/components/Icon/AnalyzeDataIcon/AnalyzeDataIcon')
@@ -120,6 +137,23 @@ module.exports = [
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Icon/BackUpArrowIcon/examples',
+			true,
+			/\.(j|t)sx?$/
+		),
+	},
+
+	{
+		name: 'BarChartIcon',
+		component: getDefaultExport(
+			require('../src/components/Icon/BarChartIcon/BarChartIcon')
+		),
+		examplesContext: require.context(
+			'../src/components/Icon/BarChartIcon/examples',
+			true,
+			/\.(j|t)sx?$/
+		),
+		examplesContextRaw: require.context(
+			'!!raw-loader!../src/components/Icon/BarChartIcon/examples',
 			true,
 			/\.(j|t)sx?$/
 		),
