@@ -109,6 +109,7 @@ import FolderIcon from './components/Icon/FolderIcon/FolderIcon';
 // @ts-ignore: not converted yet
 import FourSquaresIcon from './components/Icon/FourSquaresIcon/FourSquaresIcon';
 import GetMaximumIcon from './components/Icon/GetMaximumIcon/GetMaximumIcon';
+import GlobeIcon from './components/Icon/GlobeIcon/GlobeIcon';
 import Grid from './components/Grid/Grid';
 import HamburgerMenuIcon from './components/Icon/HamburgerMenuIcon/HamburgerMenuIcon';
 import HelpIcon from './components/Icon/HelpIcon/HelpIcon';
@@ -120,6 +121,7 @@ import IconSelect from './components/IconSelect/IconSelect';
 import ImageIcon from './components/Icon/ImageIcon/ImageIcon';
 import InfoIcon from './components/Icon/InfoIcon/InfoIcon';
 import InfoLightIcon from './components/Icon/InfoLightIcon/InfoLightIcon';
+import InheritedSettingsIcon from './components/Icon/InheritedSettingsIcon/InheritedSettingsIcon';
 import Legend from './components/Legend/Legend';
 import LightbulbIcon from './components/Icon/LightbulbIcon/LightbulbIcon';
 import Line from './components/Line/Line';
@@ -151,6 +153,7 @@ import QuestionMarkIcon from './components/Icon/QuestionMarkIcon/QuestionMarkIco
 import RadioButton from './components/RadioButton/RadioButton';
 import RadioButtonLabeled from './components/RadioButtonLabeled/RadioButtonLabeled';
 import RefreshIcon from './components/Icon/RefreshIcon/RefreshIcon';
+import ReportIcon from './components/Icon/ReportIcon/ReportIcon';
 import ResizeIcon from './components/Icon/ResizeIcon/ResizeIcon';
 import Resizer from './components/Resizer/Resizer';
 import ResponsiveGrid from './components/ResponsiveGrid/ResponsiveGrid';
@@ -176,10 +179,12 @@ import Switch from './components/Switch/Switch';
 import SwitchIcon from './components/Icon/SwitchIcon/SwitchIcon';
 import SwitchLabeled from './components/SwitchLabeled/SwitchLabeled';
 import Table from './components/Table/Table';
+import TableIcon from './components/Icon/TableIcon/TableIcon';
 import Tag from './components/Tag/Tag';
 import TextField from './components/TextField/TextField';
 import TextFieldValidated from './components/TextFieldValidated/TextFieldValidated';
 import TextIcon from './components/Icon/TextIcon/TextIcon';
+import TicketIcon from './components/Icon/TicketIcon/TicketIcon';
 import TimeSelect from './components/TimeSelect/TimeSelect';
 import Typography from './components/Typography/Typography';
 import Underline from './components/Underline/Underline';
@@ -296,6 +301,7 @@ export {
 	FolderIcon,
 	FourSquaresIcon,
 	GetMaximumIcon,
+	GlobeIcon,
 	Grid,
 	HamburgerMenuIcon,
 	HelpIcon,
@@ -307,6 +313,7 @@ export {
 	ImageIcon,
 	InfoIcon,
 	InfoLightIcon,
+	InheritedSettingsIcon,
 	Legend,
 	LightbulbIcon,
 	Line,
@@ -343,6 +350,7 @@ export {
 	RadioGroup,
 	RadioGroupDumb,
 	RefreshIcon,
+	ReportIcon,
 	ResizeIcon,
 	Resizer,
 	ResponsiveGrid,
@@ -384,12 +392,14 @@ export {
 	SwitchIcon,
 	SwitchLabeled,
 	Table,
+	TableIcon,
 	Tabs,
 	TabsDumb,
 	Tag,
 	TextIcon,
 	TextField,
 	TextFieldValidated,
+	TicketIcon,
 	ToolTip,
 	ToolTipDumb,
 	TimeSelect,

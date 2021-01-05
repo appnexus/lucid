@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AddColumnIcon [common] example testing should match snapshot(s) for 1.default 1`] = `
+<Icon
+  aspectRatio="xMidYMid meet"
+  className="lucid-AddColumnIcon"
+  color="primary"
+  isClickable={false}
+  isDisabled={false}
+  onClick={[Function]}
+  onSelect={[Function]}
+  size={16}
+  viewBox="0 0 16 16"
+>
+  <path
+    d="M.5.5h4v15h-4zM8.5 7.554V.5h-4v15h4v-.375M9.5 11.25H13M11.25 9.5V13"
+  />
+  <circle
+    cx="11.25"
+    cy="11.25"
+    r="4.25"
+  />
+</Icon>
+`;
