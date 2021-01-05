@@ -23,9 +23,14 @@ export const RunReportIcon = ({
 			{..._.pick(passThroughs, _.keys(iconPropTypes))}
 			className={cx('&', className)}
 		>
-			<path d='M7 10.75h8' />
-			<path d='M13.5 12.75l2-2-2-2M13.5 15.5h-11v-13h3M10.5 2.5h3V6' />
-			<path d='M9 1.5a1 1 0 00-2 0H5.5V4h5V1.5H9z' />
+			<path
+				fill='none'
+				strokeWidth='1.3'
+				strokeMiterlimit='10'
+				d='M7 10.75h8'
+			/>
+			<path d='M13.5 12.75l2-2-2-2M13.75 15.5H2.25V3.25H4.5M11.5 3.25h2.25V6' />
+			<path d='M9.5 2C9.5 1.172 8.828.5 8 .5S6.5 1.172 6.5 2h-2v2.75h7V2h-2z' />
 		</Icon>
 	);
 };
