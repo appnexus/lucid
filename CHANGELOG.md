@@ -1,7 +1,9 @@
 ## 5.8.24
 
-- #1189 [patch] Fixed class name binding on `VerticalListMenu`.
-- #1188 [patch] BUDE-969: Add formatted-options example to `SearchableSingleSelect`.
+- #1191 [patch] Add `ReportsIcon`, `BarChartIcon`, `TableIcon`, `TicketIcon`, `GlobeIcon`, `InheritedSettingsIcon`, `AddColumnIcon` and update `RunReportIcon`.
+- #1190 [patch] Fixed class name binding on `VerticalListMenu`.
+- #1189 [patch] BUDE-969: Add formatted-options example to `SearchableSingleSelect`.
+  https://github.com/appnexus/lucid/compare/v5.8.23...v5.8.24
 
 ## 5.8.23
 
