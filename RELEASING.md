@@ -23,7 +23,7 @@ Before updating the documentation and releasing to npm, follow these steps:
 1. `git pull origin master`: Ensure that `master` is clean and in sync with GitHub.
 2. `npm install`: Ensure that you have the latest dependencies.
 3. `npm run test`: Run the test suite--if you need to update the Jest snapshots: `npm run snapshot`.
-4. `npm login`: Ensure that you're logged into npm.
+4. `npm login`: Ensure that you're logged into the npm registry at: https://registry.npmjs.org/ <https://registry.npmjs.org/>.
 
 ## Update Documentation
 
