@@ -1,6 +1,6 @@
 {
 	"name": "lucid-ui",
-	"version": "5.8.23",
+	"version": "5.8.24",
 	"description": "A UI component library from AppNexus.",
 	"main": "dist/index.js",
 	"module": "lib/index.js",
