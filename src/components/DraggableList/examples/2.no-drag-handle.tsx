@@ -9,9 +9,11 @@ export default createClass({
 		};
 	},
 
-	handleDrop({ oldIndex, newIndex }) {
+	handleDrop({ oldIndex, newIndex }: { oldIndex: number; newIndex: number }) {
 		const { items } = this.state;
-		const updatedItems = items.filter((column, index) => index !== oldIndex);
+		const updatedItems = items.filter(
+			(column: string, index: number) => index !== oldIndex
+		);
 		updatedItems.splice(newIndex, 0, items[oldIndex]);
 		this.setState({ items: updatedItems });
 	},
@@ -20,8 +22,8 @@ export default createClass({
 		const { items } = this.state;
 
 		return (
-			<DraggableList onDrop={this.handleDrop}>
-				{items.map(text => (
+			<DraggableList onDrop={this.handleDrop} hasDragHandle={false}>
+				{items.map((text: string) => (
 					<DraggableList.Item key={text}>{text}</DraggableList.Item>
 				))}
 			</DraggableList>
