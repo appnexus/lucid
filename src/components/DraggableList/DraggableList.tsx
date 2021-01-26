@@ -33,34 +33,47 @@ DraggableListItem.peek = {
 	Renders a \`<div>\` that acts as an item in the list
 	`,
 };
-DraggableListItem.propName = 'ContextMenu';
+DraggableListItem.propName = 'Item';
 DraggableListItem.propTypes = {
 	children: PropTypes.node``,
 };
 
 interface IDraggableListPropsRaw extends StandardProps {
-	hasDragHandle: boolean;
-	dragIndex: number;
-	dragOverIndex: number;
-	onDragStart: (
+	/** Render a drag handle on list items */
+	hasDragHandle?: boolean;
+	/** Index of the item the drag was started on */
+	dragIndex?: number;
+	/** Index of the item the dragged item is hovered over */
+	dragOverIndex?: number;
+	/** Called when the user starts to drag an item.
+	Signature: \`(dragIndex, { event, props }) => {}\` */
+	onDragStart?: (
 		dragIndex: number,
 		{ event, props }: { event: React.DragEvent; props: IDraggableListProps }
 	) => void;
-	onDragEnd: ({
+	/** Called when the user stops to dragging an item.
+	Signature: \`({ event, props }) => {}\` */
+	onDragEnd?: ({
 		event,
 		props,
 	}: {
 		event: React.DragEvent;
 		props: IDraggableListProps;
 	}) => void;
-	onDragOver: (
+	/** Called when the user drags an item over another item.
+	Signature: \`(dragOverIndex, { event, props }) => {}\` */
+	onDragOver?: (
 		dragOverIndex: number,
 		{ event, props }: { event: React.DragEvent; props: IDraggableListProps }
 	) => void;
-	onDrop: (
-		{ oldIndex, newIndex }: { newIndex: number; oldIndex: number },
+	/** Called when the user drops an item in the list
+	Signature: \`({oldIndex, newIndex}, { event, props }) => {}\` */
+	onDrop?: (
+		{ oldIndex, newIndex }: { newIndex?: number; oldIndex?: number },
 		{ event, props }: { event: React.DragEvent; props: IDraggableListProps }
 	) => void;
+	/** Props for DraggableList.Item */
+	Item?: React.ReactNode & { props: IDraggableListItemProps };
 }
 
 export interface IDraggableListProps
@@ -73,20 +86,20 @@ const DraggableList = (props: IDraggableListProps) => {
 	const {
 		style,
 		className,
-		hasDragHandle,
 		dragIndex,
 		dragOverIndex,
-		onDragStart,
-		onDragEnd,
-		onDragOver,
-		onDrop,
+		hasDragHandle = true,
+		onDragStart = _.noop,
+		onDragEnd = _.noop,
+		onDragOver = _.noop,
+		onDrop = _.noop,
 		...passThroughs
 	} = props;
 
 	const lastItemEl = useRef(null);
 
 	const isValidDropIndex = (index: number) => {
-		const { dragIndex } = props;
+		//@ts-ignore
 		return index < dragIndex || index > dragIndex + 1;
 	};
 
@@ -102,11 +115,13 @@ const DraggableList = (props: IDraggableListProps) => {
 
 	const handleDragEnd = (event: React.DragEvent) => {
 		onDragEnd({ event, props });
+		//@ts-ignore
 		if (isValidDropIndex(dragOverIndex)) {
 			onDrop(
 				{
 					oldIndex: dragIndex,
 					newIndex:
+						//@ts-ignore
 						dragOverIndex > dragIndex ? dragOverIndex - 1 : dragOverIndex,
 				},
 				{ event, props }
@@ -124,7 +139,6 @@ const DraggableList = (props: IDraggableListProps) => {
 	};
 
 	const handleDragLeave = (event: React.DragEvent) => {
-		const { dragIndex, onDragOver } = props;
 		const childCount = findTypes(props, DraggableList.Item).length;
 		const currentLastItemEl = lastItemEl.current;
 
@@ -140,6 +154,7 @@ const DraggableList = (props: IDraggableListProps) => {
 	const itemChildProps = _.map(findTypes(props, DraggableList.Item), 'props');
 
 	const dividerIndex =
+		//@ts-ignore
 		_.isNumber(dragIndex) && isValidDropIndex(dragOverIndex)
 			? dragOverIndex
 			: -1;
@@ -197,6 +212,7 @@ const DraggableList = (props: IDraggableListProps) => {
 			<hr
 				key='divider'
 				className={cx('&-Divider', {
+					//@ts-ignore
 					'&-Divider-is-visible': dividerIndex >= itemChildProps.length,
 				})}
 			/>
@@ -243,6 +259,9 @@ DraggableList.propTypes = {
 	onDrop: func`
 	Called when the user drops an item in the list
 	Signature: \`({oldIndex, newIndex}, { event, props }) => {}\`
+`,
+	Item: PropTypes.any`
+	Props for DraggableList.Item
 `,
 };
 

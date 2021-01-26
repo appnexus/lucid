@@ -92,7 +92,6 @@ import Dialog from './components/Dialog/Dialog';
 import DownloadIcon from './components/Icon/DownloadIcon/DownloadIcon';
 import DragCaptureZone from './components/DragCaptureZone/DragCaptureZone';
 import DraggableLineChart from './components/DraggableLineChart/DraggableLineChart';
-// @ts-ignore: not converted yet
 import DraggableList from './components/DraggableList/DraggableList';
 import DuplicateIcon from './components/Icon/DuplicateIcon/DuplicateIcon';
 import EditIcon from './components/Icon/EditIcon/EditIcon';

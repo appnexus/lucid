@@ -37,7 +37,7 @@ Label.propTypes = {
 
 export interface ICheckboxLabeledProps extends ICheckboxProps {
 	/** Child element whose children are used to identify the purpose of this  checkbox to the user. */
-	Label?: React.ReactNode & { props: ILabelProps };
+	Label?: string | React.ReactNode & { props: ILabelProps };
 }
 
 export const CheckboxLabeled = (

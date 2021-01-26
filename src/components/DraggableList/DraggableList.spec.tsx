@@ -36,7 +36,10 @@ describe('DraggableList', () => {
 					</DraggableList>
 				);
 
-				assert(wrapper.find('.lucid-DraggableList-Item-handle'), 4);
+				assert.equal(
+					wrapper.find('.lucid-DraggableList-Item-handle').length,
+					4
+				);
 			});
 
 			it('should not have a drag handle on items', () => {
@@ -49,7 +52,10 @@ describe('DraggableList', () => {
 					</DraggableList>
 				);
 
-				assert(wrapper.find('.lucid-DraggableList-Item-handle'), 0);
+				assert.equal(
+					wrapper.find('.lucid-DraggableList-Item-handle').length,
+					0
+				);
 			});
 		});
 
@@ -64,7 +70,10 @@ describe('DraggableList', () => {
 					</DraggableList>
 				);
 
-				assert(wrapper.find('.lucid-DraggableList-Divider-is-visible'), 1);
+				assert.equal(
+					wrapper.find('.lucid-DraggableList-Divider-is-visible').length,
+					1
+				);
 			});
 
 			it('should not have a highlighted divider when dragOverIndex is invalid', () => {
@@ -77,7 +86,10 @@ describe('DraggableList', () => {
 					</DraggableList>
 				);
 
-				assert(wrapper.find('.lucid-DraggableList-Divider-is-visible'), 0);
+				assert.equal(
+					wrapper.find('.lucid-DraggableList-Divider-is-visible').length,
+					0
+				);
 			});
 		});
 
@@ -148,21 +160,6 @@ describe('DraggableList', () => {
 	});
 
 	describe('pass throughs', () => {
-		it('passes through all props not defined in `propTypes` to the root element', () => {
-			const wrapper = shallow(
-				<DraggableList
-					className='wut'
-					style={{ marginRight: 10 }}
-					foo={1}
-					bar={2}
-				/>
-			);
-			const rootProps = wrapper.find('.lucid-DraggableList').props();
-
-			assert(_.has(rootProps, 'foo'), 'props missing "foo" prop');
-			assert(_.has(rootProps, 'bar'), 'props missing "bar" prop');
-		});
-
 		it('passes through Item className to the rendered item element', () => {
 			const wrapper = shallow(
 				<DraggableList>
