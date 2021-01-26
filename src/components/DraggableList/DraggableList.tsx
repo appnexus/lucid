@@ -82,6 +82,26 @@ export interface IDraggableListProps
 		IDraggableListPropsRaw
 	> {}
 
+interface IDraggableIndexes {
+	dragIndex: number;
+	dragOverIndex: number;
+}
+
+/** Verifies its ok to drop an item given the current drag indexes and
+ * provides a typeguard that dragIndex and dragOverIndex aren't undefined
+ */
+const isValidDropIndex = (dragIndexes: {
+	dragIndex?: number;
+	dragOverIndex?: number;
+}): dragIndexes is IDraggableIndexes => {
+	const { dragOverIndex, dragIndex } = dragIndexes;
+	return (
+		_.isNumber(dragOverIndex) &&
+		_.isNumber(dragIndex) &&
+		(dragOverIndex < dragIndex || dragOverIndex > dragIndex + 1)
+	);
+};
+
 const DraggableList = (props: IDraggableListProps) => {
 	const {
 		style,
@@ -98,10 +118,8 @@ const DraggableList = (props: IDraggableListProps) => {
 
 	const lastItemEl = useRef(null);
 
-	const isValidDropIndex = (index: number) => {
-		//@ts-ignore
-		return index < dragIndex || index > dragIndex + 1;
-	};
+	//This object helps handle 'undefined' indexes in a way that makes typescript happy
+	const dragIndexes = { dragIndex, dragOverIndex };
 
 	const handleDragStart = (index: number) => {
 		return (event: React.DragEvent) => {
@@ -115,14 +133,14 @@ const DraggableList = (props: IDraggableListProps) => {
 
 	const handleDragEnd = (event: React.DragEvent) => {
 		onDragEnd({ event, props });
-		//@ts-ignore
-		if (isValidDropIndex(dragOverIndex)) {
+		if (isValidDropIndex(dragIndexes)) {
 			onDrop(
 				{
 					oldIndex: dragIndex,
 					newIndex:
-						//@ts-ignore
-						dragOverIndex > dragIndex ? dragOverIndex - 1 : dragOverIndex,
+						dragIndexes.dragOverIndex > dragIndexes.dragIndex
+							? dragIndexes.dragOverIndex - 1
+							: dragOverIndex,
 				},
 				{ event, props }
 			);
@@ -153,11 +171,9 @@ const DraggableList = (props: IDraggableListProps) => {
 
 	const itemChildProps = _.map(findTypes(props, DraggableList.Item), 'props');
 
-	const dividerIndex =
-		//@ts-ignore
-		_.isNumber(dragIndex) && isValidDropIndex(dragOverIndex)
-			? dragOverIndex
-			: -1;
+	const dividerIndex = isValidDropIndex(dragIndexes)
+		? dragIndexes.dragOverIndex
+		: -1;
 
 	return (
 		<div
@@ -212,7 +228,6 @@ const DraggableList = (props: IDraggableListProps) => {
 			<hr
 				key='divider'
 				className={cx('&-Divider', {
-					//@ts-ignore
 					'&-Divider-is-visible': dividerIndex >= itemChildProps.length,
 				})}
 			/>
