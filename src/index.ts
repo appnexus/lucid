@@ -179,6 +179,7 @@ import SwitchIcon from './components/Icon/SwitchIcon/SwitchIcon';
 import SwitchLabeled from './components/SwitchLabeled/SwitchLabeled';
 import Table from './components/Table/Table';
 import TableIcon from './components/Icon/TableIcon/TableIcon';
+import TableLoadingSkeleton from './components/LoadingSkeletons/TableLoadingSkeleton';
 import Tag from './components/Tag/Tag';
 import TextField from './components/TextField/TextField';
 import TextFieldValidated from './components/TextFieldValidated/TextFieldValidated';
@@ -215,6 +216,7 @@ import * as logger from './util/logger';
 
 import * as d3Scale from 'd3-scale';
 import * as d3Time from 'd3-time';
+
 
 export {
 	componentTypes,
@@ -391,6 +393,7 @@ export {
 	SwitchIcon,
 	SwitchLabeled,
 	Table,
+	TableLoadingSkeleton,
 	TableIcon,
 	Tabs,
 	TabsDumb,

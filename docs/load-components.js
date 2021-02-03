@@ -546,6 +546,22 @@ module.exports = [
 			/\.(j|t)sx?$/
 		),
 	},
+	{
+		name: 'TableLoadingSkeleton',
+		component: getDefaultExport(
+			require('../src/components/LoadingSkeletons/TableLoadingSkeleton')
+		),
+		examplesContext: require.context(
+			'../src/components/LoadingSkeletons/examples/TableLoadingSkeleton',
+			true,
+			/\.(j|t)sx?$/
+		),
+		examplesContextRaw: require.context(
+			'!!raw-loader!../src/components/LoadingSkeletons/examples/TableLoadingSkeleton',
+			true,
+			/\.(j|t)sx?$/
+		),
+	},
 	//{
 	//	name: 'LoadingMessage',
 	//	component: getDefaultExport(require('../src/components/LoadingMessage/LoadingMessage')),
