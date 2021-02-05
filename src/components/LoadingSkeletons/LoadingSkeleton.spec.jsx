@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import LoadingSkeleton from './LoadingSkeleton';
 
-describe('apps/ui/bmw-ui/src/utils/LoadingIndicators/LoadingSkeleton.tsx', () => {
+describe('LoadingSkeleton.tsx', () => {
 	const props = {
 		isLoading: false,
 		children: {},

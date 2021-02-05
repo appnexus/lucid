@@ -48,10 +48,7 @@ export const TableSkeleton = (props: IStandardSkeleton): React.ReactElement => {
 	const { width, height, header, className } = { ...props };
 
 	return (
-		<div
-			data-test-id='loadingSkeleton-TableSkeleton'
-			//className={animationStyle('&', className)}
-		>
+		<div data-test-id='loadingSkeleton-TableSkeleton'>
 			<svg
 				data-test-id='loadingSkeleton-TableSkeleton-svg'
 				width={width}
