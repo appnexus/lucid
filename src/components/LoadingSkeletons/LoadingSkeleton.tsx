@@ -8,13 +8,13 @@ import LoadingIndicator from '../LoadingIndicator/LoadingIndicator';
 import Panel from '../Panel/Panel';
 
 export interface IStandardSkeleton extends StandardProps {
+	className?: string;
 	/** Displays LoadingSkeleton custom header. */
 	header?: React.ReactNode;
 	/** LoadingSkeleton height. */
 	height?: number | string;
 	/** LoadingSkeleton width. */
 	width?: number | string;
-	className?: string;
 }
 
 export interface ILoadingSkeletonProps extends IStandardSkeleton {
@@ -22,22 +22,20 @@ export interface ILoadingSkeletonProps extends IStandardSkeleton {
 	Skeleton?: FunctionComponent<IStandardSkeleton>;
 	/** Controls the visibility of the `LoadingSkeleton`. */
 	isLoading: boolean;
+	/** Children controls wrapped by skeleton. */
 	children?: React.ReactNode;
+
 	style?: CSS.Properties;
 	/** Controls if LoadingSkeleton is wrapped in Panel. */
 	isPanel?: boolean;
 	/** Controls if built-in LoadingIndicator has overlay. Does not apply to other skeletons */
 	hasOverlay?: boolean;
 	/** Style variations for the overlay behind the loading indicator for built-in LoadingIndicator. Does not apply to other skeletons */
-
 	overlayKind?: 'light' | 'dark';
-
 	/** Controls if LoadingSkeleton replicated in number of rows. Default = 1. */
 	numRows?: number;
 	/** Controls if LoadingSkeleton replicated in number of columns. Default = 1. */
 	numColumns?: number;
-
-	addBorder?: boolean;
 }
 
 const animationStyle = lucidClassNames.bind(
@@ -49,7 +47,6 @@ export const LoadingSkeleton = (
 ): React.ReactElement => {
 	const {
 		Skeleton,
-		addBorder = false,
 		isLoading,
 		children,
 		className,
@@ -89,8 +86,6 @@ export const LoadingSkeleton = (
 		<Skeleton data-test-id='loadingSkeleton_Skeleton' {...skeletonProps} />
 	);
 
-	const border = addBorder ? '2px solid #f4f2f2' : '';
-
 	const matrix = _.times(numColumns, column => (
 		<div
 			key={`column${column}`}
@@ -102,7 +97,7 @@ export const LoadingSkeleton = (
 					className={animationStyle('&', className)}
 					data-test-id='loadingSkeleton-ReactPlaceholder'
 					key={`row${row}`}
-					style={{ margin: 2, padding: 2, border: border }}
+					style={{ margin: 2, padding: 2 }}
 				>
 					<ReactPlaceholder
 						showLoadingAnimation={true}
