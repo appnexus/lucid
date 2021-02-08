@@ -78,6 +78,7 @@
 		"react-day-picker": "^6.2.1",
 		"react-motion": "^0.5.2",
 		"react-peek": "^1.0.5",
+		"react-placeholder": "^4.0.3",
 		"react-transition-group": "^4.4.1",
 		"reselect": "^4.0.0"
 	},
