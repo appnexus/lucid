@@ -145,7 +145,7 @@
 		"react-dom": "^16.6.3",
 		"react-syntax-highlighter": "^7.0.0",
 		"sinon": "^2.0.0-pre",
-		"storybook-chromatic": "^2.2.2",
+		"storybook-chromatic": "^4.0.2",
 		"style-loader": "^0.20.3",
 		"stylelint": "^7.10.1",
 		"stylelint-config-standard": "^16.0.0",
