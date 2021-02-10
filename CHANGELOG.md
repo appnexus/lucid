@@ -1,3 +1,11 @@
+## 6.0.0
+- #1195 [minor] Storybook-fixes the background image for Anx-react lib
+- #1194 [patch] Bwap 598 add skeletons to lucid, Removed addBorder, SWAP-598 Added react-placeholder
+- #1192 [major] Cxp 1039/draggable list typescript
+  https://github.com/appnexus/lucid/compare/v5.8.25...v6.0.0
+   
+## 5.8.25
+- #1191 [patch] Add `ReportsIcon`, `BarChartIcon`, `TableIcon`, `TicketIcon`, 
 ## 5.8.24
 
 - #1191 [patch] Add `ReportsIcon`, `BarChartIcon`, `TableIcon`, `TicketIcon`, `GlobeIcon`, `InheritedSettingsIcon`, `AddColumnIcon` and update `RunReportIcon`.
