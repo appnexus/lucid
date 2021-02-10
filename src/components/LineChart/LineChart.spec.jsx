@@ -90,7 +90,7 @@ describe('LineChart', () => {
 				wrapper = mount(
 					<LineChart>
 						<EmptyStateWrapper>
-							<Body>{bodyElement}}</Body>
+							<Body>{bodyElement}</Body>
 						</EmptyStateWrapper>
 					</LineChart>
 				);

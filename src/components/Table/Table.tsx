@@ -46,7 +46,7 @@ const Thead = (props: ITheadProps) => {
 			{...omitProps(passThroughs, undefined, _.keys(Thead.propTypes))}
 			className={cx('&-Thead', className)}
 		>
-			{renderRowsWithIdentifiedEdges(filterTypes(children, Tr), Th)}
+			{renderRowsWithIdentifiedEdges(filterTypes(children, Tr), Th as any)}
 		</thead>
 	);
 };
@@ -911,7 +911,7 @@ interface IFinalGridCell extends StandardProps {
 
 function mapToGrid(
 	trList: Array<{ props: StandardProps }>,
-	cellType: Th | Td = Td,
+	cellType: Th | typeof Td = Td,
 	mapFn: (gridcell: IGridCell, ...args: any[]) => any = _.property('element')
 ) {
 	const cellRowList = _.map(trList, trElement =>
@@ -1019,7 +1019,7 @@ function mapToGrid(
 
 function renderRowsWithIdentifiedEdges(
 	trList: Array<{ props: StandardProps }>,
-	cellType: Th | Td = Td
+	cellType: Th | typeof Td = Td
 ): React.ReactElement[] {
 	const duplicateReferences: Array<{ row: number; col: number }> = [];
 	const fullCellGrid: Array<Array<IFinalGridCell | null>> = mapToGrid(
@@ -1103,7 +1103,7 @@ function renderRowsWithIdentifiedEdges(
 						!_.isNull(cellProps)
 							? [
 									React.createElement(
-										cellType,
+										cellType as any,
 										_.assign({}, cellProps, { key: colIndex })
 									),
 							  ]

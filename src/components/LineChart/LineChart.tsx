@@ -843,7 +843,7 @@ class LineChart extends React.Component<ILineChartProps, ILineChartState, {}> {
 			(acc, d) => {
 				// `floor` to avoid rounding errors, it doesn't need to be super precise
 				// since we're dealing with pixels
-				const point = Math.floor(xScale(d[xAxisField] as any));
+				const point = Math.floor(xScale(d[xAxisField] as any) as any);
 
 				_.each(allYFields, field => {
 					_.set(acc, `${point}.y.${field}`, d[field]);

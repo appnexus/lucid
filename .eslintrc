@@ -64,7 +64,7 @@
 		"@typescript-eslint/no-use-before-define": 0,
 		"@typescript-eslint/camelcase": 1,
 		"@typescript-eslint/interface-name-prefix": 0,
-		"@typescript-eslint/array-type": [2, "array-simple"],
+		"@typescript-eslint/array-type": [2, { "default": "array-simple" }],
 		"@typescript-eslint/explicit-member-accessibility": 0,
 		"@typescript-eslint/no-empty-interface": 1,
 		"@typescript-eslint/explicit-function-return-type": 0,
@@ -79,6 +79,11 @@
 		"react/react-in-jsx-scope": 2,
 		"require-yield": 2,
 		"react/display-name": "off", // we have this all over our storybook examples
-		"react/no-unescaped-entities": "off" // this is purely to avoid changing all string quotemarks in JSX to their ampersand code equivalents
+		"react/no-unescaped-entities": "off", // this is purely to avoid changing all string quotemarks in JSX to their ampersand code equivalents
+
+		// Should fix these
+		"@typescript-eslint/ban-ts-ignore": "warn",
+		"@typescript-eslint/no-inferrable-types": "warn",
+		"@typescript-eslint/no-empty-function": "warn"
 	}
 }
