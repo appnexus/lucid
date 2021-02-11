@@ -144,7 +144,7 @@
 		"react-docgen-typescript-loader": "^3.3.0",
 		"react-dom": "^16.6.3",
 		"react-syntax-highlighter": "^7.0.0",
-		"sinon": "^2.0.0-pre",
+		"sinon": "^4.5.0",
 		"storybook-chromatic": "^1.1.0",
 		"style-loader": "^0.20.3",
 		"stylelint": "^13.10.0",
