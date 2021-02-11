@@ -66,7 +66,7 @@ describe('SlidePanel', () => {
 			let slidePanelInstance;
 
 			beforeEach(() => {
-				domHelpers.shiftChildren = jest.fn();
+				domHelpers.shiftChildren = jest.fn(); // eslint-disable-line no-import-assign
 
 				wrapper = shallow(
 					<SlidePanel isLooped offset={0}>
@@ -88,7 +88,7 @@ describe('SlidePanel', () => {
 			});
 
 			afterEach(() => {
-				domHelpers.shiftChildren = shiftChildren;
+				domHelpers.shiftChildren = shiftChildren; // eslint-disable-line no-import-assign
 				jest.useRealTimers();
 			});
 

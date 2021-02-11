@@ -57,7 +57,7 @@ describe('Paginator reducers', () => {
 		it('should set state.SingleSelect to the return value of SingleSelect.onSelect', () => {
 			const mockValue = {};
 			const pageIndex = 2;
-			SingleSelect.onSelect = () => mockValue;
+			SingleSelect.onSelect = () => mockValue; // eslint-disable-line no-import-assign
 			const nextState = onPageSizeSelect(initialState, pageIndex, totalPages);
 			assert.strictEqual(
 				nextState.SingleSelect,
