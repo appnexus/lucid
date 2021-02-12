@@ -411,6 +411,7 @@ export function buildModernHybridComponent<
 	// I used a type cast and intersection with `BaseType` here because I
 	// couldn't figure out any other way to generate a valid type signuture to
 	// reflected all the statics on the unerlying base component. @jondlm 2019-11-27
+	// @ts-ignore
 	return hoistNonReactStatics(HybridComponent, BaseComponent) as BaseType &
 		IHybridComponent<P, S>;
 }

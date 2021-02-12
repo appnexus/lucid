@@ -361,7 +361,7 @@ class DateSelect extends React.Component<IDateSelectProps, IDateSelectState> {
 				onDayClick={onDayClick}
 				onDayMouseEnter={showCursorHighlight ? onDayMouseEnter : _.noop}
 				onDayMouseLeave={showCursorHighlight ? onDayMouseLeave : _.noop}
-				{...rest}
+				{...rest as Partial<ICalendarProps>}
 			/>
 		);
 	};

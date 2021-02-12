@@ -74,7 +74,7 @@ exports[`Points [common] example testing should match snapshot(s) for basic 1`] 
     kind={1}
     scale={1}
     x={0}
-    y={108.57142857142856}
+    y={108.57142857142857}
   />
   <Point
     color="color-chart-0-darkest"
@@ -128,7 +128,7 @@ exports[`Points [common] example testing should match snapshot(s) for basic 1`] 
     kind={1}
     scale={1}
     x={980}
-    y={108.57142857142856}
+    y={108.57142857142857}
   />
   <Point
     color="color-chart-2"
@@ -137,7 +137,7 @@ exports[`Points [common] example testing should match snapshot(s) for basic 1`] 
     kind={2}
     scale={1}
     x={0}
-    y={54.28571428571428}
+    y={54.285714285714306}
   />
   <Point
     color="color-chart-2"
@@ -146,7 +146,7 @@ exports[`Points [common] example testing should match snapshot(s) for basic 1`] 
     kind={2}
     scale={1}
     x={163.33333333333334}
-    y={108.57142857142856}
+    y={108.57142857142857}
   />
   <Point
     color="color-chart-2"
@@ -182,7 +182,7 @@ exports[`Points [common] example testing should match snapshot(s) for basic 1`] 
     kind={2}
     scale={1}
     x={816.6666666666667}
-    y={108.57142857142856}
+    y={108.57142857142857}
   />
   <Point
     color="color-chart-2"
@@ -191,7 +191,7 @@ exports[`Points [common] example testing should match snapshot(s) for basic 1`] 
     kind={2}
     scale={1}
     x={980}
-    y={54.28571428571428}
+    y={54.285714285714306}
   />
   <Point
     color="color-chart-4-lightest"
@@ -209,7 +209,7 @@ exports[`Points [common] example testing should match snapshot(s) for basic 1`] 
     kind={3}
     scale={1}
     x={163.33333333333334}
-    y={54.28571428571428}
+    y={54.285714285714306}
   />
   <Point
     color="color-chart-4-lightest"
@@ -218,7 +218,7 @@ exports[`Points [common] example testing should match snapshot(s) for basic 1`] 
     kind={3}
     scale={1}
     x={326.6666666666667}
-    y={108.57142857142856}
+    y={108.57142857142857}
   />
   <Point
     color="color-chart-4-lightest"
@@ -236,7 +236,7 @@ exports[`Points [common] example testing should match snapshot(s) for basic 1`] 
     kind={3}
     scale={1}
     x={653.3333333333334}
-    y={108.57142857142856}
+    y={108.57142857142857}
   />
   <Point
     color="color-chart-4-lightest"
@@ -245,7 +245,7 @@ exports[`Points [common] example testing should match snapshot(s) for basic 1`] 
     kind={3}
     scale={1}
     x={816.6666666666667}
-    y={54.28571428571428}
+    y={54.285714285714306}
   />
   <Point
     color="color-chart-4-lightest"
@@ -333,7 +333,7 @@ exports[`Points [common] example testing should match snapshot(s) for custom-col
     kind={1}
     scale={1}
     x={0}
-    y={108.57142857142856}
+    y={108.57142857142857}
   />
   <Point
     color="color-chart-good"
@@ -387,7 +387,7 @@ exports[`Points [common] example testing should match snapshot(s) for custom-col
     kind={1}
     scale={1}
     x={980}
-    y={108.57142857142856}
+    y={108.57142857142857}
   />
   <Point
     color="#ff8800"
@@ -396,7 +396,7 @@ exports[`Points [common] example testing should match snapshot(s) for custom-col
     kind={2}
     scale={1}
     x={0}
-    y={54.28571428571428}
+    y={54.285714285714306}
   />
   <Point
     color="#ff8800"
@@ -405,7 +405,7 @@ exports[`Points [common] example testing should match snapshot(s) for custom-col
     kind={2}
     scale={1}
     x={163.33333333333334}
-    y={108.57142857142856}
+    y={108.57142857142857}
   />
   <Point
     color="#ff8800"
@@ -441,7 +441,7 @@ exports[`Points [common] example testing should match snapshot(s) for custom-col
     kind={2}
     scale={1}
     x={816.6666666666667}
-    y={108.57142857142856}
+    y={108.57142857142857}
   />
   <Point
     color="#ff8800"
@@ -450,7 +450,7 @@ exports[`Points [common] example testing should match snapshot(s) for custom-col
     kind={2}
     scale={1}
     x={980}
-    y={54.28571428571428}
+    y={54.285714285714306}
   />
   <Point
     color="#abc123"
@@ -468,7 +468,7 @@ exports[`Points [common] example testing should match snapshot(s) for custom-col
     kind={3}
     scale={1}
     x={163.33333333333334}
-    y={54.28571428571428}
+    y={54.285714285714306}
   />
   <Point
     color="#abc123"
@@ -477,7 +477,7 @@ exports[`Points [common] example testing should match snapshot(s) for custom-col
     kind={3}
     scale={1}
     x={326.6666666666667}
-    y={108.57142857142856}
+    y={108.57142857142857}
   />
   <Point
     color="#abc123"
@@ -495,7 +495,7 @@ exports[`Points [common] example testing should match snapshot(s) for custom-col
     kind={3}
     scale={1}
     x={653.3333333333334}
-    y={108.57142857142856}
+    y={108.57142857142857}
   />
   <Point
     color="#abc123"
@@ -504,7 +504,7 @@ exports[`Points [common] example testing should match snapshot(s) for custom-col
     kind={3}
     scale={1}
     x={816.6666666666667}
-    y={54.28571428571428}
+    y={54.285714285714306}
   />
   <Point
     color="#abc123"

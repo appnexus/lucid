@@ -37,11 +37,11 @@ exports[`Bars [common] example testing should match snapshot(s) for 01.basic 1`]
     <Bar
       color="color-chart-4-lightest"
       hasStroke={false}
-      height={181.8181818181818}
+      height={181.81818181818184}
       key="3"
       width={28}
       x={85}
-      y={218.1818181818182}
+      y={218.18181818181816}
     />
     <PureToolTip
       data={
@@ -90,7 +90,7 @@ exports[`Bars [common] example testing should match snapshot(s) for 01.basic 1`]
           },
         ]
       }
-      height={181.8181818181818}
+      height={181.81818181818184}
       isExpanded={false}
       onMouseEnter={[Function]}
       onMouseOut={[Function]}
@@ -120,7 +120,7 @@ exports[`Bars [common] example testing should match snapshot(s) for 01.basic 1`]
       x={0}
       xField="x"
       xFormatter={[Function]}
-      y={218.1818181818182}
+      y={218.18181818181816}
     />
   </g>
   <g
@@ -266,11 +266,11 @@ exports[`Bars [common] example testing should match snapshot(s) for 01.basic 1`]
     <Bar
       color="color-chart-2"
       hasStroke={false}
-      height={181.8181818181818}
+      height={181.81818181818184}
       key="2"
       width={28}
       x={311}
-      y={218.1818181818182}
+      y={218.18181818181816}
     />
     <Bar
       color="color-chart-4-lightest"
@@ -499,7 +499,7 @@ exports[`Bars [common] example testing should match snapshot(s) for 01.basic 1`]
       key="1"
       width={28}
       x={537}
-      y={109.09090909090907}
+      y={109.09090909090908}
     />
     <Bar
       color="color-chart-2"
@@ -508,7 +508,7 @@ exports[`Bars [common] example testing should match snapshot(s) for 01.basic 1`]
       key="2"
       width={28}
       x={565}
-      y={72.72727272727269}
+      y={72.7272727272727}
     />
     <Bar
       color="color-chart-4-lightest"
@@ -517,7 +517,7 @@ exports[`Bars [common] example testing should match snapshot(s) for 01.basic 1`]
       key="3"
       width={28}
       x={593}
-      y={109.09090909090907}
+      y={109.09090909090908}
     />
     <PureToolTip
       data={
@@ -596,7 +596,7 @@ exports[`Bars [common] example testing should match snapshot(s) for 01.basic 1`]
       x={508}
       xField="x"
       xFormatter={[Function]}
-      y={72.72727272727269}
+      y={72.7272727272727}
     />
   </g>
   <g
@@ -618,7 +618,7 @@ exports[`Bars [common] example testing should match snapshot(s) for 01.basic 1`]
       key="1"
       width={28}
       x={664}
-      y={109.09090909090907}
+      y={109.09090909090908}
     />
     <Bar
       color="color-chart-2"
@@ -627,16 +627,16 @@ exports[`Bars [common] example testing should match snapshot(s) for 01.basic 1`]
       key="2"
       width={28}
       x={692}
-      y={72.72727272727269}
+      y={72.7272727272727}
     />
     <Bar
       color="color-chart-4-lightest"
       hasStroke={false}
-      height={181.8181818181818}
+      height={181.81818181818184}
       key="3"
       width={28}
       x={720}
-      y={218.1818181818182}
+      y={218.18181818181816}
     />
     <PureToolTip
       data={
@@ -877,11 +877,11 @@ exports[`Bars [common] example testing should match snapshot(s) for 01.basic 2`]
     <Bar
       color="color-chart-4-lightest"
       hasStroke={false}
-      height={72.72727272727275}
+      height={72.72727272727278}
       key="3"
       width={114}
       x={127}
-      y={218.1818181818182}
+      y={218.18181818181816}
     />
     <PureToolTip
       data={
@@ -930,7 +930,7 @@ exports[`Bars [common] example testing should match snapshot(s) for 01.basic 2`]
           },
         ]
       }
-      height={181.8181818181818}
+      height={181.81818181818184}
       isExpanded={false}
       onMouseEnter={[Function]}
       onMouseOut={[Function]}
@@ -960,7 +960,7 @@ exports[`Bars [common] example testing should match snapshot(s) for 01.basic 2`]
       x={127}
       xField="x"
       xFormatter={[Function]}
-      y={218.1818181818182}
+      y={218.18181818181816}
     />
   </g>
   <g
@@ -1234,11 +1234,11 @@ exports[`Bars [common] example testing should match snapshot(s) for 01.basic 2`]
     <Bar
       color="color-chart-4-lightest"
       hasStroke={false}
-      height={96.96969696969697}
+      height={96.96969696969698}
       key="3"
       width={114}
       x={508}
-      y={48.4848484848485}
+      y={48.484848484848484}
     />
     <PureToolTip
       data={
@@ -1317,7 +1317,7 @@ exports[`Bars [common] example testing should match snapshot(s) for 01.basic 2`]
       x={508}
       xField="x"
       xFormatter={[Function]}
-      y={48.4848484848485}
+      y={48.484848484848484}
     />
   </g>
   <g
@@ -1344,16 +1344,16 @@ exports[`Bars [common] example testing should match snapshot(s) for 01.basic 2`]
     <Bar
       color="color-chart-2"
       hasStroke={false}
-      height={109.09090909090907}
+      height={109.0909090909091}
       key="2"
       width={114}
       x={635}
-      y={60.60606060606062}
+      y={60.606060606060595}
     />
     <Bar
       color="color-chart-4-lightest"
       hasStroke={false}
-      height={60.60606060606062}
+      height={60.606060606060595}
       key="3"
       width={114}
       x={635}
@@ -1479,11 +1479,11 @@ exports[`Bars [common] example testing should match snapshot(s) for 02.custom-co
     <Bar
       color="color-chart-4-lightest"
       hasStroke={false}
-      height={181.8181818181818}
+      height={181.81818181818184}
       key="3"
       width={28}
       x={85}
-      y={218.1818181818182}
+      y={218.18181818181816}
     />
     <PureToolTip
       data={
@@ -1532,7 +1532,7 @@ exports[`Bars [common] example testing should match snapshot(s) for 02.custom-co
           },
         ]
       }
-      height={181.8181818181818}
+      height={181.81818181818184}
       isExpanded={false}
       onMouseEnter={[Function]}
       onMouseOut={[Function]}
@@ -1562,7 +1562,7 @@ exports[`Bars [common] example testing should match snapshot(s) for 02.custom-co
       x={0}
       xField="x"
       xFormatter={[Function]}
-      y={218.1818181818182}
+      y={218.18181818181816}
     />
   </g>
   <g
@@ -1708,11 +1708,11 @@ exports[`Bars [common] example testing should match snapshot(s) for 02.custom-co
     <Bar
       color="color-chart-bad"
       hasStroke={false}
-      height={181.8181818181818}
+      height={181.81818181818184}
       key="2"
       width={28}
       x={311}
-      y={218.1818181818182}
+      y={218.18181818181816}
     />
     <Bar
       color="color-chart-4-lightest"
@@ -1941,7 +1941,7 @@ exports[`Bars [common] example testing should match snapshot(s) for 02.custom-co
       key="1"
       width={28}
       x={537}
-      y={109.09090909090907}
+      y={109.09090909090908}
     />
     <Bar
       color="color-chart-bad"
@@ -1950,7 +1950,7 @@ exports[`Bars [common] example testing should match snapshot(s) for 02.custom-co
       key="2"
       width={28}
       x={565}
-      y={72.72727272727269}
+      y={72.7272727272727}
     />
     <Bar
       color="color-chart-4-lightest"
@@ -1959,7 +1959,7 @@ exports[`Bars [common] example testing should match snapshot(s) for 02.custom-co
       key="3"
       width={28}
       x={593}
-      y={109.09090909090907}
+      y={109.09090909090908}
     />
     <PureToolTip
       data={
@@ -2038,7 +2038,7 @@ exports[`Bars [common] example testing should match snapshot(s) for 02.custom-co
       x={508}
       xField="x"
       xFormatter={[Function]}
-      y={72.72727272727269}
+      y={72.7272727272727}
     />
   </g>
   <g
@@ -2060,7 +2060,7 @@ exports[`Bars [common] example testing should match snapshot(s) for 02.custom-co
       key="1"
       width={28}
       x={664}
-      y={109.09090909090907}
+      y={109.09090909090908}
     />
     <Bar
       color="color-chart-bad"
@@ -2069,16 +2069,16 @@ exports[`Bars [common] example testing should match snapshot(s) for 02.custom-co
       key="2"
       width={28}
       x={692}
-      y={72.72727272727269}
+      y={72.7272727272727}
     />
     <Bar
       color="color-chart-4-lightest"
       hasStroke={false}
-      height={181.8181818181818}
+      height={181.81818181818184}
       key="3"
       width={28}
       x={720}
-      y={218.1818181818182}
+      y={218.18181818181816}
     />
     <PureToolTip
       data={
@@ -2409,7 +2409,7 @@ exports[`Bars [common] example testing should match snapshot(s) for 03.log-scale
       key="0"
       width={150}
       x={600}
-      y={66.66666666666663}
+      y={66.66666666666666}
     />
     <PureToolTip
       data={
@@ -2454,7 +2454,7 @@ exports[`Bars [common] example testing should match snapshot(s) for 03.log-scale
       x={600}
       xField="x"
       xFormatter={[Function]}
-      y={66.66666666666663}
+      y={66.66666666666666}
     />
   </g>
 </g>
