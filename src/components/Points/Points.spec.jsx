@@ -185,7 +185,7 @@ describe('Points', () => {
 						.find(Point)
 						.at(1)
 						.prop('y'),
-					450
+					449.99999999999994
 				);
 
 				assert.equal(
@@ -286,7 +286,7 @@ describe('Points', () => {
 						.find(Point)
 						.at(1)
 						.prop('y'),
-					450
+					449.99999999999994
 				);
 
 				assert.equal(
@@ -415,7 +415,7 @@ describe('Points', () => {
 						.find(Point)
 						.at(1)
 						.prop('y'),
-					450
+					449.99999999999994
 				);
 
 				assert.equal(
@@ -529,7 +529,7 @@ describe('Points', () => {
 						.find(Point)
 						.at(1)
 						.prop('y'),
-					450
+					449.99999999999994
 				);
 
 				assert.equal(
@@ -713,7 +713,7 @@ describe('Points', () => {
 						.find(Point)
 						.at(1)
 						.prop('y'),
-					466.0194174757281
+					466.0194174757282
 				);
 
 				assert.equal(
@@ -728,7 +728,7 @@ describe('Points', () => {
 						.find(Point)
 						.at(2)
 						.prop('y'),
-					29.126213592232943
+					29.126213592232997
 				);
 
 				assert.equal(

@@ -19,7 +19,7 @@ const gridStyle = {
 
 const fillCells = count => {
 	const cells = [];
-	for (var i = 0; i < count; i++) {
+	for (let i = 0; i < count; i++) {
 		cells.push(
 			<Grid.Cell key={i}>
 				<p style={{ ...gridStyle.auto, ...gridStyle.sharedStyles }}>auto</p>
