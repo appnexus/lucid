@@ -12,7 +12,7 @@ module.exports = {
 	snapshotSerializers: ['enzyme-to-json/serializer'],
 	globals: {
 		'ts-jest': {
-			tsConfig: {
+			tsconfig: {
 				module: 'commonjs',
 				allowJs: true,
 			},

@@ -19,5 +19,5 @@ env:
     - secure: "Recue3+sPDb4kQtKftZuYa0zwg6/+H+QO5tJP8WGa+Xq7OZBGzAt/bADW0Q7KvUPxtK6qUCynuWrnaBlEWc+UKIHlrcHCpFPn0zkpzGvzX6a+tvhjHAQNDB7x/VYORvYEQqMzWC5t+qLj6C9ffjXP+6uCo+o+y/5K5ydEyqa2e42LQblSJmiiCG754CqV1LxmasklGAC90+ldR6d7PFFpqXDc/BIsyDAIuS4FXfjyli+VnvCza7PQJ4XGkCoywmBNg8bcR82UwduA854/Gr7oYKZRUamMpBuQY25EupjwZ/GV2OyDSK3UcO3blEVrjRnP3gC9Ljd+WvcBqy7d1FJTCk0Vsy/pstxjVpP19H3I6xOU41buB3Pw1aLTkIp+PFmhoab5fu03bWfwUp/N1Xl1URKWcIKokwh/98NSA8OZ16VbMhFkxuUCs5bsFR+DB6SLdc2XNpzzdxdoe3XZHB5LxVOIoJY6CiskfYdNBPsEo+NZTrv+eUk+l4gMNTIYwgCWEbbIvXE6CwFITg9ERQhY7fvGJ37DOWfvLfxKnDc0jFqnlUnWgrtDppx7akE1vgfFu9W8jWRF4phGU/O4BwWUNhLtoGUgTH6RR4+4xoNv3LB1g6fnd50jUin4f6o2KSOkdPZFPmv74MygC7WyPERWR2IjpT2x+yfPIa6TetlY/c="
 language: node_js
 node_js:
-  - "10"
+  - "12"
 cache: npm
