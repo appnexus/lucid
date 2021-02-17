@@ -7,10 +7,13 @@ import { omitProps, Overwrite } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-BellIcon');
 
-const { oneOf } = PropTypes;
+const { oneOf, bool } = PropTypes;
 
 interface IBellIconPropsRaw extends IIconProps {
+	/** Show or hide a dot on the bell to indicate a notification. */
 	hasDot?: boolean;
+
+	/** Featured color of the dot */
 	featuredColor?: 'info' | 'success' | 'warning' | 'danger';
 }
 
@@ -73,10 +76,8 @@ BellIcon.peek = {
 };
 BellIcon.propTypes = {
 	...iconPropTypes,
-	hasDot: `Show or hide a dot on the bell to indicate a notification.`,
-	featuredColor: oneOf(['info', 'success', 'warning', 'danger'])`
-	featured color of the dot
-`,
+	hasDot: bool,
+	featuredColor: oneOf(['info', 'success', 'warning', 'danger']),
 };
 BellIcon.defaultProps = Icon.defaultProps;
 
