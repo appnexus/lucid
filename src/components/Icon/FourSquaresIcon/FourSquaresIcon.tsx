@@ -1,42 +1,36 @@
 import _ from 'lodash';
 import React from 'react';
-import Icon from '../Icon';
+import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
-import { createClass, omitProps } from '../../../util/component-types';
+import { omitProps } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-FourSquaresIcon');
 
-const FourSquaresIcon = createClass({
-	displayName: 'FourSquaresIcon',
+interface IFourSquaresIconProps extends IIconProps { }
 
-	statics: {
-		peek: {
-			description: `
+export const FourSquaresIcon = ({ className, ...passThroughs }: IFourSquaresIconProps) => {
+	return (
+		<Icon
+			{...omitProps(passThroughs, undefined, _.keys(FourSquaresIcon.propTypes), false)}
+			{..._.pick(passThroughs, _.keys(iconPropTypes))}
+			className={cx('&', className)}
+		>
+			<path d='M.5.5h6v6h-6v-6zm0 15h6v-6h-6v6zm9 0h6v-6h-6v6zm0-15v6h6v-6h-6z' />
+		</Icon>
+	);
+}
+
+FourSquaresIcon.displayName = 'FourSquaresIcon';
+
+FourSquaresIcon.peek = {
+	description: `
 				A four squares icon.
 			`,
-			categories: ['visual design', 'icons'],
-			extend: 'Icon',
-			madeFrom: ['Icon'],
-		},
-	},
+	categories: ['visual design', 'icons'],
+	extend: 'Icon',
+	madeFrom: ['Icon'],
+};
 
-	propTypes: {
-		...Icon.propTypes,
-	},
-
-	render() {
-		const { className, ...passThroughs } = this.props;
-
-		return (
-			<Icon
-				{...omitProps(passThroughs, FourSquaresIcon, [], false)}
-				{..._.pick(passThroughs, _.keys(Icon.propTypes))}
-				className={cx('&', className)}
-			>
-				<path d='M.5.5h6v6h-6v-6zm0 15h6v-6h-6v6zm9 0h6v-6h-6v6zm0-15v6h6v-6h-6z' />
-			</Icon>
-		);
-	},
-});
+FourSquaresIcon.propTypes = iconPropTypes;
 
 export default FourSquaresIcon;
