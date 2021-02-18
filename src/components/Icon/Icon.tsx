@@ -26,7 +26,7 @@ export enum Color {
 
 export interface IIconPropsRaw extends StandardProps {
 	/** Size variations of the icons. `size` directly effects height and width but the developer should also be conscious of the relationship with `viewBox`. */
-	size: number;
+	size?: number;
 
 	/** Size handles width and height, whereas `width` can manually override the width that would be set by size. */
 	width?: number | string;
@@ -35,19 +35,19 @@ export interface IIconPropsRaw extends StandardProps {
 	height?: number | string;
 
 	/** `viewBox` is very important for SVGs. You can think of `viewBox` as the "artboard" for our SVG while `size` is the presented height and width. */
-	viewBox: string;
+	viewBox?: string;
 
 	/** Any valid SVG aspect ratio. */
-	aspectRatio: string;
+	aspectRatio?: string;
 
 	/** Adds styling that makes the icon appear clickable. */
-	isClickable: boolean;
+	isClickable?: boolean;
 
 	/** Adds styling that makes the icon appear disabled. Also forces isClickable to be false. */
 	isDisabled?: boolean;
 
 	/** Called when the user clicks the `Icon`. */
-	onClick: ({
+	onClick?: ({
 		event,
 		props,
 	}: {
@@ -56,7 +56,7 @@ export interface IIconPropsRaw extends StandardProps {
 	}) => void;
 
 	/** Called when the user clicks an active, clickable `Icon`. */
-	onSelect: ({
+	onSelect?: ({
 		event,
 		props,
 	}: {
@@ -65,7 +65,7 @@ export interface IIconPropsRaw extends StandardProps {
 	}) => void;
 
 	/** Sets the color of the Icon. May not be applicable for icons that are tied to specific colors (e.g. DangerIcon). */
-	color: keyof typeof Color;
+	color?: keyof typeof Color;
 }
 
 export type IIconProps = Overwrite<
@@ -104,10 +104,10 @@ export const Icon = (props: IIconProps): React.ReactElement => {
 	const svgRef = React.createRef<SVGSVGElement>();
 
 	function handleClick(event: React.MouseEvent): void {
-		onClick({ event, props: props });
+		onClick && onClick({ event, props: props });
 
 		if (isClickable && !isDisabled) {
-			onSelect({ event, props: props });
+			onSelect && onSelect({ event, props: props });
 			if (svgRef.current) {
 				svgRef.current.focus();
 			}

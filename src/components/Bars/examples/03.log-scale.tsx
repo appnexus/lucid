@@ -36,7 +36,7 @@ export default function App() {
 						<text
 							textAnchor='middle'
 							x={xScale(item.x as string) as number + xScale.bandwidth() / 2}
-							y={yScale(item.y as number) - 10}
+							y={yScale(item.y as number) as any - 10}
 							fill='gray'
 						>
 							{item.y}

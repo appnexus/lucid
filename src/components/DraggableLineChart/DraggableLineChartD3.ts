@@ -215,7 +215,7 @@ class DraggableLineChartD3 {
 				const line: any = d3Shape
 					.line<IChartData>()
 					.x((chartData: IChartData) => xScale(chartData.x) || 0)
-					.y((chartData: IChartData) => yScale(chartData.y));
+					.y((chartData: IChartData) => yScale(chartData.y) as any);
 				lines.attr('d', line);
 			})
 			.on('end', (d: any) => {
@@ -303,7 +303,7 @@ class DraggableLineChartD3 {
 				d3Shape
 					.line()
 					.x((d: any) => this.xScale(d.x) || 0)
-					.y((d: any) => this.yScale(d.y))
+					.y((d: any) => this.yScale(d.y) as any)
 			);
 	};
 	renderEmptyRenderProp = (height: number, width: number) => {
@@ -350,7 +350,7 @@ class DraggableLineChartD3 {
 				.transition()
 				.duration(100)
 				.attr('cx', (d: any) => this.xScale(d.x) || 0)
-				.attr('cy', (d: any) => this.yScale(d.y))
+				.attr('cy', (d: any) => this.yScale(d.y) as any)
 				.attr('r', 5)
 				.attr('transform', `translate(${innerXTickWidth / 2}, 0)`)
 				.style('fill', '#587EBA')
@@ -361,7 +361,7 @@ class DraggableLineChartD3 {
 				.transition()
 				.duration(100)
 				.attr('cx', (d: any) => this.xScale(d.x) || 0)
-				.attr('cy', (d: any) => this.yScale(d.y))
+				.attr('cy', (d: any) => this.yScale(d.y) as any)
 				.attr('r', 5)
 				.style('fill', '#587EBA')
 				.style('stroke', 'white')

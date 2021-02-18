@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EnvelopeIcon [common] example testing should match snapshot(s) for 1.basic 1`] = `
+<Icon
+  aspectRatio="xMidYMid meet"
+  className="lucid-EnvelopeIcon"
+  color="primary"
+  isClickable={false}
+  isDisabled={false}
+  onClick={[Function]}
+  onSelect={[Function]}
+  size={16}
+  viewBox="0 0 16 16"
+>
+  <path
+    d="M.5 2.5h15v11H.5z"
+  />
+  <path
+    d="M.5 3.5l7.5 6 7.5-6m-15 10l6-5m3 0l6 5"
+  />
+</Icon>
+`;

@@ -51,7 +51,7 @@ export interface ICalendarProps extends StandardProps {
 
 	/** Sets selected days. Passed through to \`CalendarMonth\` ->
 			\`react-day-picker\`. */
-	selectedDays: (date: Date) => boolean | Date | Date[];
+	selectedDays: Date | ((date: Date) => boolean | Date | Date[]) | null;
 
 	/** Sets disabled days. Passed through to \`CalendarMonth\` ->
 			\`react-day-picker\`.*/
@@ -201,7 +201,7 @@ class CalendarMonth extends React.Component<ICalendarProps, {}, {}> {
 				initialMonth={monthDate}
 				canChangeMonth={false}
 				weekdaysShort={['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']}
-				{...passThroughs}
+				{...passThroughs as any}
 				modifiers={{
 					range: this.modifierRange,
 					from: this.modifierFrom,

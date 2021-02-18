@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`VideoShortIcon [common] example testing should match snapshot(s) for 1.basic 1`] = `
+<Icon
+  aspectRatio="xMidYMid meet"
+  className="lucid-VideoShortIcon"
+  color="primary"
+  isClickable={false}
+  isDisabled={false}
+  onClick={[Function]}
+  onSelect={[Function]}
+  size={16}
+  viewBox="0 0 16 16"
+>
+  <path
+    d="M6.5 4v5l3.75-2.5zM15.5 12.5H.5"
+  />
+  <path
+    d="M.5.5h15v15H.5zM8 12.5v3M2 15.5l3-3M.5 14L2 12.5M5 15.5l3-3"
+    strokeLinecap="butt"
+  />
+</Icon>
+`;

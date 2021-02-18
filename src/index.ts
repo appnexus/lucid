@@ -182,6 +182,7 @@ import TableIcon from './components/Icon/TableIcon/TableIcon';
 import TableLoadingSkeleton from './components/LoadingSkeletons/TableLoadingSkeleton';
 import Tag from './components/Tag/Tag';
 import TextField from './components/TextField/TextField';
+import TextFieldPlain from './components/TextField/TextFieldPlain';
 import TextFieldValidated from './components/TextFieldValidated/TextFieldValidated';
 import TextIcon from './components/Icon/TextIcon/TextIcon';
 import TicketIcon from './components/Icon/TicketIcon/TicketIcon';
@@ -400,6 +401,7 @@ export {
 	Tag,
 	TextIcon,
 	TextField,
+	TextFieldPlain,
 	TextFieldValidated,
 	TicketIcon,
 	ToolTip,

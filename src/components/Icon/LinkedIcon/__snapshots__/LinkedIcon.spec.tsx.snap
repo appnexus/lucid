@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LinkedIcon [common] example testing should match snapshot(s) for 1.basic 1`] = `
+<Icon
+  aspectRatio="xMidYMid meet"
+  className="lucid-LinkedIcon"
+  color="primary"
+  isClickable={false}
+  isDisabled={false}
+  onClick={[Function]}
+  onSelect={[Function]}
+  size={16}
+  viewBox="0 0 16 16"
+>
+  <path
+    d="M5 11l6-6"
+  />
+  <path
+    d="M8.968 7.032a3.009 3.009 0 0 1 0-4.243l1.414-1.414a3.009 3.009 0 0 1 4.243 0 3.009 3.009 0 0 1 0 4.243l-1.414 1.414a3.009 3.009 0 0 1-4.243 0zm-7.593 7.593a3.009 3.009 0 0 1 0-4.243l1.414-1.414a3.009 3.009 0 0 1 4.243 0 3.009 3.009 0 0 1 0 4.243l-1.414 1.414a3.009 3.009 0 0 1-4.243 0z"
+  />
+</Icon>
+`;

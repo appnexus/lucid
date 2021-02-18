@@ -1,0 +1,91 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ChevronIcon [common] example testing should match snapshot(s) for 1.basic 1`] = `
+<Icon
+  aspectRatio="xMidYMid meet"
+  className="lucid-ChevronIcon lucid-ChevronIcon-is-down"
+  color="primary"
+  isClickable={false}
+  isDisabled={false}
+  onClick={[Function]}
+  onSelect={[Function]}
+  size={16}
+  viewBox="0 0 16 16"
+>
+  <path
+    d="M.5 4.5l7.5 7 7.5-7"
+  />
+</Icon>
+`;
+
+exports[`ChevronIcon [common] example testing should match snapshot(s) for 1.basic 2`] = `
+<Icon
+  aspectRatio="xMidYMid meet"
+  className="lucid-ChevronIcon lucid-ChevronIcon-is-up"
+  color="primary"
+  isClickable={false}
+  isDisabled={false}
+  onClick={[Function]}
+  onSelect={[Function]}
+  size={16}
+  viewBox="0 0 16 16"
+>
+  <path
+    d="M.5 4.5l7.5 7 7.5-7"
+  />
+</Icon>
+`;
+
+exports[`ChevronIcon [common] example testing should match snapshot(s) for 1.basic 3`] = `
+<Icon
+  aspectRatio="xMidYMid meet"
+  className="lucid-ChevronIcon lucid-ChevronIcon-is-down"
+  color="primary"
+  isClickable={false}
+  isDisabled={false}
+  onClick={[Function]}
+  onSelect={[Function]}
+  size={16}
+  viewBox="0 0 16 16"
+>
+  <path
+    d="M.5 4.5l7.5 7 7.5-7"
+  />
+</Icon>
+`;
+
+exports[`ChevronIcon [common] example testing should match snapshot(s) for 1.basic 4`] = `
+<Icon
+  aspectRatio="xMidYMid meet"
+  className="lucid-ChevronIcon lucid-ChevronIcon-is-left"
+  color="primary"
+  isClickable={false}
+  isDisabled={false}
+  onClick={[Function]}
+  onSelect={[Function]}
+  size={16}
+  viewBox="0 0 16 16"
+>
+  <path
+    d="M.5 4.5l7.5 7 7.5-7"
+  />
+</Icon>
+`;
+
+exports[`ChevronIcon [common] example testing should match snapshot(s) for 1.basic 5`] = `
+<Icon
+  aspectRatio="xMidYMid meet"
+  className="lucid-ChevronIcon lucid-ChevronIcon-is-right"
+  color="primary"
+  isClickable={false}
+  isDisabled={false}
+  onClick={[Function]}
+  onSelect={[Function]}
+  size={16}
+  viewBox="0 0 16 16"
+>
+  <path
+    d="M.5 4.5l7.5 7 7.5-7"
+  />
+</Icon>
+`;

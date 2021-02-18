@@ -341,7 +341,7 @@ exports[`SplitVertical render should render expanded & collapsed 2`] = `
   >
     <div
       class="lucid-SplitVertical-LeftPane lucid-SplitVertical-is-secondary"
-      style="flex-grow: 0; flex-shrink: 0; overflow: auto;"
+      style="flex-grow: 0; flex-shrink: 0; flex-basis: calc(50% - 3px); overflow: auto;"
     />
     <div
       class="lucid-DragCaptureZone lucid-SplitVertical-Divider lucid-SplitVertical-Divider-is-resizeable"
