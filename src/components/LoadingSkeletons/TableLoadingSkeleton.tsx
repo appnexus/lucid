@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
 import LoadingMessage from '../LoadingMessage/LoadingMessage';
 
@@ -44,20 +44,20 @@ export const TableRowGroup = (props: ITableRow): React.ReactElement => {
 	);
 };
 
-export const TableSkeleton = (props: IStandardSkeleton): React.ReactElement => {
-	const { width, height, header, className } = { ...props };
+export const TableSkeleton: FunctionComponent<IStandardSkeleton> = props => {
+	const { width, height, className } = { ...props };
 
 	return (
-		<div data-test-id='loadingSkeleton-TableSkeleton'>
+		<div
+			data-test-id='loadingSkeleton-TableSkeleton'
+			style={{ display: 'inline-block', width: width, height: height }}
+		>
 			<svg
 				data-test-id='loadingSkeleton-TableSkeleton-svg'
 				width={width}
 				height={height}
 				xmlns='http://www.w3.org/2000/svg'
 			>
-				<title data-test-id='loadingSkeleton-TableSkeleton-title'>
-					{header}
-				</title>
 				<g
 					id='Details'
 					stroke='none'
@@ -192,7 +192,7 @@ TableLoadingSkeleton.peek = {
 			If a page is displaying a lot of data coming from multiple sources, try as best as possible to load the individual parts of the UI, so as not to disrupt the user and block them from interacting with the entire page until all data is loaded.
 		`,
 	},
-	categories: ['communication'],
+	categories: ['Loading Indicator'],
 	madeFrom: ['OverlayWrapper', 'LoadingMessage'],
 };
 

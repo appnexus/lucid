@@ -53,11 +53,5 @@ describe('', () => {
 				.find('[data-test-id="loadingSkeleton-TableSkeleton-svg"]')
 				.prop('height')
 		).toEqual(testProps.height);
-
-		expect(
-			component
-				.find('[data-test-id="loadingSkeleton-TableSkeleton-title"]')
-				.exists()
-		).toEqual(true);
 	});
 });

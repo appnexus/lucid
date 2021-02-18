@@ -9,8 +9,6 @@ import Panel from '../Panel/Panel';
 
 export interface IStandardSkeleton extends StandardProps {
 	className?: string;
-	/** Displays LoadingSkeleton custom header. */
-	header?: React.ReactNode;
 	/** LoadingSkeleton height. */
 	height?: number | string;
 	/** LoadingSkeleton width. */
@@ -24,6 +22,8 @@ export interface ILoadingSkeletonProps extends IStandardSkeleton {
 	isLoading: boolean;
 	/** Children controls wrapped by skeleton. */
 	children?: React.ReactNode;
+	/** Displays LoadingSkeleton custom header. */
+	header?: React.ReactNode;
 
 	style?: CSS.Properties;
 	/** Controls if LoadingSkeleton is wrapped in Panel. */
@@ -36,29 +36,36 @@ export interface ILoadingSkeletonProps extends IStandardSkeleton {
 	numRows?: number;
 	/** Controls if LoadingSkeleton replicated in number of columns. Default = 1. */
 	numColumns?: number;
+
+	marginBottom?: string | number | undefined;
+	marginTop?: string | number | undefined;
+	marginLeft?: string | number | undefined;
+	marginRight?: string | number | undefined;
 }
 
 const animationStyle = lucidClassNames.bind(
 	'&-LoadingSkeleton-animatedSkeleton'
 );
 
-export const LoadingSkeleton = (
-	props: ILoadingSkeletonProps
-): React.ReactElement => {
+export const LoadingSkeleton: FunctionComponent<ILoadingSkeletonProps> = props => {
 	const {
 		Skeleton,
 		isLoading,
 		children,
 		className,
+		header,
 		style,
 		width = '100%',
 		height = '100%',
-		header,
 		isPanel = false,
 		hasOverlay = false,
-		overlayKind,
+		overlayKind = 'light',
 		numRows = 1,
 		numColumns = 1,
+		marginTop = 2,
+		marginBottom = 2,
+		marginRight = 2,
+		marginLeft = 2,
 	} = { ...props };
 
 	if (!isLoading) {
@@ -89,45 +96,64 @@ export const LoadingSkeleton = (
 	const matrix = _.times(numColumns, column => (
 		<div
 			key={`column${column}`}
-			style={{ display: 'inline-block' }}
+			style={{
+				display: 'inline-block',
+				width: width,
+				height: height,
+				marginRight: marginRight,
+				marginLeft: marginLeft,
+			}}
 			data-test-id='loadingSkeleton-SkeletonColumn'
 		>
-			{_.times(numRows, row => (
-				<div
-					className={animationStyle('&', className)}
-					data-test-id='loadingSkeleton-ReactPlaceholder'
-					key={`row${row}`}
-					style={{ margin: 2, padding: 2 }}
-				>
-					<ReactPlaceholder
-						showLoadingAnimation={true}
-						ready={!isLoading}
-						customPlaceholder={skeletonPlaceholder}
+			<div
+				style={{
+					display: 'inline-block',
+					width: width,
+					height: height,
+				}}
+			>
+				{_.times(numRows, row => (
+					<div
+						className={animationStyle('&', className)}
+						data-test-id='loadingSkeleton-ReactPlaceholder'
+						key={`row${row}`}
+						style={{
+							marginTop: marginTop,
+							marginBottom: marginBottom,
+						}}
 					>
-						{}
-					</ReactPlaceholder>
-				</div>
-			))}
+						<div>
+							{header ? (
+								<div
+									data-test-id='loadingSkeleton-SkeletonHeader'
+									style={{
+										marginBottom: 2,
+									}}
+								>
+									{header}
+								</div>
+							) : null}
+							<ReactPlaceholder
+								showLoadingAnimation={true}
+								ready={!isLoading}
+								customPlaceholder={skeletonPlaceholder}
+							>
+								{}
+							</ReactPlaceholder>
+						</div>
+					</div>
+				))}
+			</div>
 		</div>
 	));
 
-	const skeleton = (
-		<div style={{ marginBottom: 5, marginTop: 5 }}>
-			<div
-				data-test-id='loadingSkeleton-SkeletonHeader'
-				style={{ marginBottom: 5, visibility: 'visible' }}
-			>
-				{header}
-			</div>
-			<div>{matrix}</div>
-		</div>
-	);
+	const skeletonMatrix = <div>{matrix}</div>;
 
 	return isPanel ? (
-		<Panel data-test-id='loadingSkeleton-Panel'>{skeleton}</Panel>
+		<Panel data-test-id='loadingSkeleton-Panel'>{skeletonMatrix}</Panel>
 	) : (
-		skeleton
+		skeletonMatrix
 	);
 };
 
-export default React.memo(LoadingSkeleton);
+export default LoadingSkeleton;
