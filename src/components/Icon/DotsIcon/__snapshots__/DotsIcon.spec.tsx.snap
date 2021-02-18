@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`DotsIcon [common] example testing should match snapshot(s) for 1.default 1`] = `
+exports[`DotsIcon [common] example testing should match snapshot(s) for 1.basic 1`] = `
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-DotsIcon"
@@ -39,7 +39,7 @@ exports[`DotsIcon [common] example testing should match snapshot(s) for 1.defaul
 </Icon>
 `;
 
-exports[`DotsIcon [common] example testing should match snapshot(s) for 1.default 2`] = `
+exports[`DotsIcon [common] example testing should match snapshot(s) for 1.basic 2`] = `
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-DotsIcon"
@@ -78,7 +78,7 @@ exports[`DotsIcon [common] example testing should match snapshot(s) for 1.defaul
 </Icon>
 `;
 
-exports[`DotsIcon [common] example testing should match snapshot(s) for 1.default 3`] = `
+exports[`DotsIcon [common] example testing should match snapshot(s) for 1.basic 3`] = `
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-DotsIcon"
@@ -117,7 +117,7 @@ exports[`DotsIcon [common] example testing should match snapshot(s) for 1.defaul
 </Icon>
 `;
 
-exports[`DotsIcon [common] example testing should match snapshot(s) for 1.default 4`] = `
+exports[`DotsIcon [common] example testing should match snapshot(s) for 1.basic 4`] = `
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-DotsIcon"
@@ -156,7 +156,7 @@ exports[`DotsIcon [common] example testing should match snapshot(s) for 1.defaul
 </Icon>
 `;
 
-exports[`DotsIcon [common] example testing should match snapshot(s) for 1.default 5`] = `
+exports[`DotsIcon [common] example testing should match snapshot(s) for 1.basic 5`] = `
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-DotsIcon"
@@ -195,7 +195,7 @@ exports[`DotsIcon [common] example testing should match snapshot(s) for 1.defaul
 </Icon>
 `;
 
-exports[`DotsIcon [common] example testing should match snapshot(s) for 1.default 6`] = `
+exports[`DotsIcon [common] example testing should match snapshot(s) for 1.basic 6`] = `
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-DotsIcon"
@@ -234,7 +234,7 @@ exports[`DotsIcon [common] example testing should match snapshot(s) for 1.defaul
 </Icon>
 `;
 
-exports[`DotsIcon [common] example testing should match snapshot(s) for 1.default 7`] = `
+exports[`DotsIcon [common] example testing should match snapshot(s) for 1.basic 7`] = `
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-DotsIcon"
@@ -273,7 +273,7 @@ exports[`DotsIcon [common] example testing should match snapshot(s) for 1.defaul
 </Icon>
 `;
 
-exports[`DotsIcon [common] example testing should match snapshot(s) for 1.default 8`] = `
+exports[`DotsIcon [common] example testing should match snapshot(s) for 1.basic 8`] = `
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-DotsIcon"
@@ -312,7 +312,7 @@ exports[`DotsIcon [common] example testing should match snapshot(s) for 1.defaul
 </Icon>
 `;
 
-exports[`DotsIcon [common] example testing should match snapshot(s) for 1.default 9`] = `
+exports[`DotsIcon [common] example testing should match snapshot(s) for 1.basic 9`] = `
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-DotsIcon"
@@ -351,7 +351,7 @@ exports[`DotsIcon [common] example testing should match snapshot(s) for 1.defaul
 </Icon>
 `;
 
-exports[`DotsIcon [common] example testing should match snapshot(s) for 1.default 10`] = `
+exports[`DotsIcon [common] example testing should match snapshot(s) for 1.basic 10`] = `
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-DotsIcon"
@@ -390,7 +390,7 @@ exports[`DotsIcon [common] example testing should match snapshot(s) for 1.defaul
 </Icon>
 `;
 
-exports[`DotsIcon [common] example testing should match snapshot(s) for 1.default 11`] = `
+exports[`DotsIcon [common] example testing should match snapshot(s) for 1.basic 11`] = `
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-DotsIcon"
@@ -429,7 +429,7 @@ exports[`DotsIcon [common] example testing should match snapshot(s) for 1.defaul
 </Icon>
 `;
 
-exports[`DotsIcon [common] example testing should match snapshot(s) for 1.default 12`] = `
+exports[`DotsIcon [common] example testing should match snapshot(s) for 1.basic 12`] = `
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-DotsIcon"
@@ -468,7 +468,7 @@ exports[`DotsIcon [common] example testing should match snapshot(s) for 1.defaul
 </Icon>
 `;
 
-exports[`DotsIcon [common] example testing should match snapshot(s) for 1.default 13`] = `
+exports[`DotsIcon [common] example testing should match snapshot(s) for 1.basic 13`] = `
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-DotsIcon"
@@ -507,7 +507,7 @@ exports[`DotsIcon [common] example testing should match snapshot(s) for 1.defaul
 </Icon>
 `;
 
-exports[`DotsIcon [common] example testing should match snapshot(s) for 1.default 14`] = `
+exports[`DotsIcon [common] example testing should match snapshot(s) for 1.basic 14`] = `
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-DotsIcon"

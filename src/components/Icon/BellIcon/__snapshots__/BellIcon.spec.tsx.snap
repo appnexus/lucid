@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`BellIcon [common] example testing should match snapshot(s) for 1.default 1`] = `
+exports[`BellIcon [common] example testing should match snapshot(s) for 1.basic 1`] = `
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-BellIcon"
@@ -20,7 +20,7 @@ exports[`BellIcon [common] example testing should match snapshot(s) for 1.defaul
 </Icon>
 `;
 
-exports[`BellIcon [common] example testing should match snapshot(s) for 1.default 2`] = `
+exports[`BellIcon [common] example testing should match snapshot(s) for 1.basic 2`] = `
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-BellIcon"
@@ -45,7 +45,7 @@ exports[`BellIcon [common] example testing should match snapshot(s) for 1.defaul
 </Icon>
 `;
 
-exports[`BellIcon [common] example testing should match snapshot(s) for 1.default 3`] = `
+exports[`BellIcon [common] example testing should match snapshot(s) for 1.basic 3`] = `
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-BellIcon"
@@ -70,7 +70,7 @@ exports[`BellIcon [common] example testing should match snapshot(s) for 1.defaul
 </Icon>
 `;
 
-exports[`BellIcon [common] example testing should match snapshot(s) for 1.default 4`] = `
+exports[`BellIcon [common] example testing should match snapshot(s) for 1.basic 4`] = `
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-BellIcon"
@@ -95,7 +95,7 @@ exports[`BellIcon [common] example testing should match snapshot(s) for 1.defaul
 </Icon>
 `;
 
-exports[`BellIcon [common] example testing should match snapshot(s) for 1.default 5`] = `
+exports[`BellIcon [common] example testing should match snapshot(s) for 1.basic 5`] = `
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-BellIcon"

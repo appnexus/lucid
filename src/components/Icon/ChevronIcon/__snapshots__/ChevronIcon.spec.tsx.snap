@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ChevronIcon [common] example testing should match snapshot(s) for 1.default 1`] = `
+exports[`ChevronIcon [common] example testing should match snapshot(s) for 1.basic 1`] = `
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-ChevronIcon lucid-ChevronIcon-is-down"
@@ -18,7 +18,7 @@ exports[`ChevronIcon [common] example testing should match snapshot(s) for 1.def
 </Icon>
 `;
 
-exports[`ChevronIcon [common] example testing should match snapshot(s) for 1.default 2`] = `
+exports[`ChevronIcon [common] example testing should match snapshot(s) for 1.basic 2`] = `
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-ChevronIcon lucid-ChevronIcon-is-up"
@@ -36,7 +36,7 @@ exports[`ChevronIcon [common] example testing should match snapshot(s) for 1.def
 </Icon>
 `;
 
-exports[`ChevronIcon [common] example testing should match snapshot(s) for 1.default 3`] = `
+exports[`ChevronIcon [common] example testing should match snapshot(s) for 1.basic 3`] = `
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-ChevronIcon lucid-ChevronIcon-is-down"
@@ -54,7 +54,7 @@ exports[`ChevronIcon [common] example testing should match snapshot(s) for 1.def
 </Icon>
 `;
 
-exports[`ChevronIcon [common] example testing should match snapshot(s) for 1.default 4`] = `
+exports[`ChevronIcon [common] example testing should match snapshot(s) for 1.basic 4`] = `
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-ChevronIcon lucid-ChevronIcon-is-left"
@@ -72,7 +72,7 @@ exports[`ChevronIcon [common] example testing should match snapshot(s) for 1.def
 </Icon>
 `;
 
-exports[`ChevronIcon [common] example testing should match snapshot(s) for 1.default 5`] = `
+exports[`ChevronIcon [common] example testing should match snapshot(s) for 1.basic 5`] = `
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-ChevronIcon lucid-ChevronIcon-is-right"

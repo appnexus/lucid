@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SuccessLightIcon [common] example testing should match snapshot(s) for 1.default 1`] = `
+exports[`SuccessLightIcon [common] example testing should match snapshot(s) for 1.basic 1`] = `
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-SuccessLightIcon"
@@ -25,7 +25,7 @@ exports[`SuccessLightIcon [common] example testing should match snapshot(s) for 
 </Icon>
 `;
 
-exports[`SuccessLightIcon [common] example testing should match snapshot(s) for 1.default 2`] = `
+exports[`SuccessLightIcon [common] example testing should match snapshot(s) for 1.basic 2`] = `
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-SuccessLightIcon lucid-SuccessLightIcon-is-clickable"
@@ -50,7 +50,7 @@ exports[`SuccessLightIcon [common] example testing should match snapshot(s) for 
 </Icon>
 `;
 
-exports[`SuccessLightIcon [common] example testing should match snapshot(s) for 1.default 3`] = `
+exports[`SuccessLightIcon [common] example testing should match snapshot(s) for 1.basic 3`] = `
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-SuccessLightIcon lucid-SuccessLightIcon-is-disabled lucid-SuccessLightIcon-is-clickable"
@@ -75,7 +75,7 @@ exports[`SuccessLightIcon [common] example testing should match snapshot(s) for 
 </Icon>
 `;
 
-exports[`SuccessLightIcon [common] example testing should match snapshot(s) for 1.default 4`] = `
+exports[`SuccessLightIcon [common] example testing should match snapshot(s) for 1.basic 4`] = `
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-SuccessLightIcon lucid-SuccessLightIcon-is-active"
@@ -100,7 +100,7 @@ exports[`SuccessLightIcon [common] example testing should match snapshot(s) for 
 </Icon>
 `;
 
-exports[`SuccessLightIcon [common] example testing should match snapshot(s) for 1.default 5`] = `
+exports[`SuccessLightIcon [common] example testing should match snapshot(s) for 1.basic 5`] = `
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-SuccessLightIcon lucid-SuccessLightIcon-is-disabled"
@@ -125,7 +125,7 @@ exports[`SuccessLightIcon [common] example testing should match snapshot(s) for 
 </Icon>
 `;
 
-exports[`SuccessLightIcon [common] example testing should match snapshot(s) for 1.default 6`] = `
+exports[`SuccessLightIcon [common] example testing should match snapshot(s) for 1.basic 6`] = `
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-SuccessLightIcon lucid-SuccessLightIcon-is-clickable lucid-SuccessLightIcon-is-active"
@@ -150,7 +150,7 @@ exports[`SuccessLightIcon [common] example testing should match snapshot(s) for 
 </Icon>
 `;
 
-exports[`SuccessLightIcon [common] example testing should match snapshot(s) for 1.default 7`] = `
+exports[`SuccessLightIcon [common] example testing should match snapshot(s) for 1.basic 7`] = `
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-SuccessLightIcon lucid-SuccessLightIcon-is-disabled lucid-SuccessLightIcon-is-clickable lucid-SuccessLightIcon-is-active"
@@ -175,7 +175,7 @@ exports[`SuccessLightIcon [common] example testing should match snapshot(s) for 
 </Icon>
 `;
 
-exports[`SuccessLightIcon [common] example testing should match snapshot(s) for 1.default 8`] = `
+exports[`SuccessLightIcon [common] example testing should match snapshot(s) for 1.basic 8`] = `
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-SuccessLightIcon lucid-SuccessLightIcon-is-clickable lucid-SuccessLightIcon-is-active"

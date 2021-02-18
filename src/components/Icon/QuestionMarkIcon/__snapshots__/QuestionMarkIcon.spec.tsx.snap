@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`QuestionMarkIcon [common] example testing should match snapshot(s) for 1.default 1`] = `
+exports[`QuestionMarkIcon [common] example testing should match snapshot(s) for 1.basic 1`] = `
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-QuestionMarkIcon"
@@ -23,7 +23,7 @@ exports[`QuestionMarkIcon [common] example testing should match snapshot(s) for 
 </Icon>
 `;
 
-exports[`QuestionMarkIcon [common] example testing should match snapshot(s) for 1.default 2`] = `
+exports[`QuestionMarkIcon [common] example testing should match snapshot(s) for 1.basic 2`] = `
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-QuestionMarkIcon"
@@ -46,7 +46,7 @@ exports[`QuestionMarkIcon [common] example testing should match snapshot(s) for 
 </Icon>
 `;
 
-exports[`QuestionMarkIcon [common] example testing should match snapshot(s) for 1.default 3`] = `
+exports[`QuestionMarkIcon [common] example testing should match snapshot(s) for 1.basic 3`] = `
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-QuestionMarkIcon"

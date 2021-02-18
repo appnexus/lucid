@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`GetMaximumIcon [common] example testing should match snapshot(s) for 1default 1`] = `
+exports[`GetMaximumIcon [common] example testing should match snapshot(s) for 1basic 1`] = `
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-GetMaximumIcon"

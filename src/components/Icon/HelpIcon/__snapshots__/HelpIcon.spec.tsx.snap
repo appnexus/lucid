@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`HelpIcon [common] example testing should match snapshot(s) for 1.default 1`] = `
+exports[`HelpIcon [common] example testing should match snapshot(s) for 1.basic 1`] = `
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-HelpIcon"
@@ -29,7 +29,7 @@ exports[`HelpIcon [common] example testing should match snapshot(s) for 1.defaul
 </Icon>
 `;
 
-exports[`HelpIcon [common] example testing should match snapshot(s) for 1.default 2`] = `
+exports[`HelpIcon [common] example testing should match snapshot(s) for 1.basic 2`] = `
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-HelpIcon lucid-HelpIcon-is-clickable"
@@ -58,7 +58,7 @@ exports[`HelpIcon [common] example testing should match snapshot(s) for 1.defaul
 </Icon>
 `;
 
-exports[`HelpIcon [common] example testing should match snapshot(s) for 1.default 3`] = `
+exports[`HelpIcon [common] example testing should match snapshot(s) for 1.basic 3`] = `
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-HelpIcon lucid-HelpIcon-is-disabled"

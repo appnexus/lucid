@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`RunReportIcon [common] example testing should match snapshot(s) for 1default 1`] = `
+exports[`RunReportIcon [common] example testing should match snapshot(s) for 1basic 1`] = `
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-RunReportIcon"

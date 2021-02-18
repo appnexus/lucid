@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AddURLIcon [common] example testing should match snapshot(s) for 1.default 1`] = `
+exports[`AddURLIcon [common] example testing should match snapshot(s) for 1.basic 1`] = `
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-AddURLIcon"
@@ -21,7 +21,7 @@ exports[`AddURLIcon [common] example testing should match snapshot(s) for 1.defa
 </Icon>
 `;
 
-exports[`AddURLIcon [common] example testing should match snapshot(s) for 1.default 2`] = `
+exports[`AddURLIcon [common] example testing should match snapshot(s) for 1.basic 2`] = `
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-AddURLIcon"
@@ -42,7 +42,7 @@ exports[`AddURLIcon [common] example testing should match snapshot(s) for 1.defa
 </Icon>
 `;
 
-exports[`AddURLIcon [common] example testing should match snapshot(s) for 1.default 3`] = `
+exports[`AddURLIcon [common] example testing should match snapshot(s) for 1.basic 3`] = `
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-AddURLIcon"

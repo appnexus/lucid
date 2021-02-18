@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`OutwardArrowsIcon [common] example testing should match snapshot(s) for default 1`] = `
+exports[`OutwardArrowsIcon [common] example testing should match snapshot(s) for basic 1`] = `
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-OutwardArrowsIcon"
@@ -18,7 +18,7 @@ exports[`OutwardArrowsIcon [common] example testing should match snapshot(s) for
 </Icon>
 `;
 
-exports[`OutwardArrowsIcon [common] example testing should match snapshot(s) for default 2`] = `
+exports[`OutwardArrowsIcon [common] example testing should match snapshot(s) for basic 2`] = `
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-OutwardArrowsIcon"
@@ -36,7 +36,7 @@ exports[`OutwardArrowsIcon [common] example testing should match snapshot(s) for
 </Icon>
 `;
 
-exports[`OutwardArrowsIcon [common] example testing should match snapshot(s) for default 3`] = `
+exports[`OutwardArrowsIcon [common] example testing should match snapshot(s) for basic 3`] = `
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-OutwardArrowsIcon"

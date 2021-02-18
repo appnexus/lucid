@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EligibilityLightIcon [common] example testing should match snapshot(s) for 1.default 1`] = `
+exports[`EligibilityLightIcon [common] example testing should match snapshot(s) for 1.basic 1`] = `
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-EligibilityLightIcon"
@@ -25,57 +25,7 @@ exports[`EligibilityLightIcon [common] example testing should match snapshot(s) 
 </Icon>
 `;
 
-exports[`EligibilityLightIcon [common] example testing should match snapshot(s) for 1.default 2`] = `
-<Icon
-  aspectRatio="xMidYMid meet"
-  className="lucid-EligibilityLightIcon"
-  color="primary"
-  isClickable={false}
-  isDisabled={false}
-  onClick={[Function]}
-  onSelect={[Function]}
-  size={16}
-  viewBox="0 0 16 16"
->
-  <g>
-    <path
-      className="lucid-EligibilityLightIcon-half-circle lucid-EligibilityLightIcon-is-selected"
-      d="M6 14.71A7.003 7.003 0 0 1 6 1.29v13.42z"
-    />
-    <path
-      className="lucid-EligibilityLightIcon-half-circle lucid-EligibilityLightIcon-is-selected"
-      d="M10 1.29a7.003 7.003 0 0 1 0 13.42V1.29z"
-    />
-  </g>
-</Icon>
-`;
-
-exports[`EligibilityLightIcon [common] example testing should match snapshot(s) for 1.default 3`] = `
-<Icon
-  aspectRatio="xMidYMid meet"
-  className="lucid-EligibilityLightIcon"
-  color="primary"
-  isClickable={false}
-  isDisabled={false}
-  onClick={[Function]}
-  onSelect={[Function]}
-  size={16}
-  viewBox="0 0 16 16"
->
-  <g>
-    <path
-      className="lucid-EligibilityLightIcon-half-circle"
-      d="M6 14.71A7.003 7.003 0 0 1 6 1.29v13.42z"
-    />
-    <path
-      className="lucid-EligibilityLightIcon-half-circle"
-      d="M10 1.29a7.003 7.003 0 0 1 0 13.42V1.29z"
-    />
-  </g>
-</Icon>
-`;
-
-exports[`EligibilityLightIcon [common] example testing should match snapshot(s) for 1.default 4`] = `
+exports[`EligibilityLightIcon [common] example testing should match snapshot(s) for 1.basic 2`] = `
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-EligibilityLightIcon"
@@ -93,6 +43,31 @@ exports[`EligibilityLightIcon [common] example testing should match snapshot(s) 
       d="M6 14.71A7.003 7.003 0 0 1 6 1.29v13.42z"
     />
     <path
+      className="lucid-EligibilityLightIcon-half-circle lucid-EligibilityLightIcon-is-selected"
+      d="M10 1.29a7.003 7.003 0 0 1 0 13.42V1.29z"
+    />
+  </g>
+</Icon>
+`;
+
+exports[`EligibilityLightIcon [common] example testing should match snapshot(s) for 1.basic 3`] = `
+<Icon
+  aspectRatio="xMidYMid meet"
+  className="lucid-EligibilityLightIcon"
+  color="primary"
+  isClickable={false}
+  isDisabled={false}
+  onClick={[Function]}
+  onSelect={[Function]}
+  size={16}
+  viewBox="0 0 16 16"
+>
+  <g>
+    <path
+      className="lucid-EligibilityLightIcon-half-circle"
+      d="M6 14.71A7.003 7.003 0 0 1 6 1.29v13.42z"
+    />
+    <path
       className="lucid-EligibilityLightIcon-half-circle"
       d="M10 1.29a7.003 7.003 0 0 1 0 13.42V1.29z"
     />
@@ -100,7 +75,32 @@ exports[`EligibilityLightIcon [common] example testing should match snapshot(s) 
 </Icon>
 `;
 
-exports[`EligibilityLightIcon [common] example testing should match snapshot(s) for 1.default 5`] = `
+exports[`EligibilityLightIcon [common] example testing should match snapshot(s) for 1.basic 4`] = `
+<Icon
+  aspectRatio="xMidYMid meet"
+  className="lucid-EligibilityLightIcon"
+  color="primary"
+  isClickable={false}
+  isDisabled={false}
+  onClick={[Function]}
+  onSelect={[Function]}
+  size={16}
+  viewBox="0 0 16 16"
+>
+  <g>
+    <path
+      className="lucid-EligibilityLightIcon-half-circle lucid-EligibilityLightIcon-is-selected"
+      d="M6 14.71A7.003 7.003 0 0 1 6 1.29v13.42z"
+    />
+    <path
+      className="lucid-EligibilityLightIcon-half-circle"
+      d="M10 1.29a7.003 7.003 0 0 1 0 13.42V1.29z"
+    />
+  </g>
+</Icon>
+`;
+
+exports[`EligibilityLightIcon [common] example testing should match snapshot(s) for 1.basic 5`] = `
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-EligibilityLightIcon"
@@ -125,7 +125,7 @@ exports[`EligibilityLightIcon [common] example testing should match snapshot(s) 
 </Icon>
 `;
 
-exports[`EligibilityLightIcon [common] example testing should match snapshot(s) for 1.default 6`] = `
+exports[`EligibilityLightIcon [common] example testing should match snapshot(s) for 1.basic 6`] = `
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-EligibilityLightIcon"
@@ -150,7 +150,7 @@ exports[`EligibilityLightIcon [common] example testing should match snapshot(s) 
 </Icon>
 `;
 
-exports[`EligibilityLightIcon [common] example testing should match snapshot(s) for 1.default 7`] = `
+exports[`EligibilityLightIcon [common] example testing should match snapshot(s) for 1.basic 7`] = `
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-EligibilityLightIcon"
@@ -175,7 +175,7 @@ exports[`EligibilityLightIcon [common] example testing should match snapshot(s) 
 </Icon>
 `;
 
-exports[`EligibilityLightIcon [common] example testing should match snapshot(s) for 1.default 8`] = `
+exports[`EligibilityLightIcon [common] example testing should match snapshot(s) for 1.basic 8`] = `
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-EligibilityLightIcon"
@@ -200,7 +200,7 @@ exports[`EligibilityLightIcon [common] example testing should match snapshot(s) 
 </Icon>
 `;
 
-exports[`EligibilityLightIcon [common] example testing should match snapshot(s) for 1.default 9`] = `
+exports[`EligibilityLightIcon [common] example testing should match snapshot(s) for 1.basic 9`] = `
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-EligibilityLightIcon"

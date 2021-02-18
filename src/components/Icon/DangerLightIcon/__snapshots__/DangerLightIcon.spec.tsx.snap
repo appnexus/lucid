@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`DangerLightIcon [common] example testing should match snapshot(s) for 1.default 1`] = `
+exports[`DangerLightIcon [common] example testing should match snapshot(s) for 1.basic 1`] = `
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-DangerLightIcon"
@@ -25,7 +25,7 @@ exports[`DangerLightIcon [common] example testing should match snapshot(s) for 1
 </Icon>
 `;
 
-exports[`DangerLightIcon [common] example testing should match snapshot(s) for 1.default 2`] = `
+exports[`DangerLightIcon [common] example testing should match snapshot(s) for 1.basic 2`] = `
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-DangerLightIcon lucid-DangerLightIcon-is-clickable"
@@ -50,7 +50,7 @@ exports[`DangerLightIcon [common] example testing should match snapshot(s) for 1
 </Icon>
 `;
 
-exports[`DangerLightIcon [common] example testing should match snapshot(s) for 1.default 3`] = `
+exports[`DangerLightIcon [common] example testing should match snapshot(s) for 1.basic 3`] = `
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-DangerLightIcon lucid-DangerLightIcon-is-disabled"

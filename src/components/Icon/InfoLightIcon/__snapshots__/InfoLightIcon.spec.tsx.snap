@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`InfoLightIcon [common] example testing should match snapshot(s) for 1.default 1`] = `
+exports[`InfoLightIcon [common] example testing should match snapshot(s) for 1.basic 1`] = `
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-InfoLightIcon"

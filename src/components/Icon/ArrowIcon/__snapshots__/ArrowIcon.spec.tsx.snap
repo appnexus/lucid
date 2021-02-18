@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ArrowIcon [common] example testing should match snapshot(s) for 1.default 1`] = `
+exports[`ArrowIcon [common] example testing should match snapshot(s) for 1.basic 1`] = `
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-ArrowIcon lucid-ArrowIcon-is-left"
@@ -18,7 +18,7 @@ exports[`ArrowIcon [common] example testing should match snapshot(s) for 1.defau
 </Icon>
 `;
 
-exports[`ArrowIcon [common] example testing should match snapshot(s) for 1.default 2`] = `
+exports[`ArrowIcon [common] example testing should match snapshot(s) for 1.basic 2`] = `
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-ArrowIcon lucid-ArrowIcon-is-up"
@@ -36,7 +36,7 @@ exports[`ArrowIcon [common] example testing should match snapshot(s) for 1.defau
 </Icon>
 `;
 
-exports[`ArrowIcon [common] example testing should match snapshot(s) for 1.default 3`] = `
+exports[`ArrowIcon [common] example testing should match snapshot(s) for 1.basic 3`] = `
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-ArrowIcon lucid-ArrowIcon-is-down"
@@ -54,7 +54,7 @@ exports[`ArrowIcon [common] example testing should match snapshot(s) for 1.defau
 </Icon>
 `;
 
-exports[`ArrowIcon [common] example testing should match snapshot(s) for 1.default 4`] = `
+exports[`ArrowIcon [common] example testing should match snapshot(s) for 1.basic 4`] = `
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-ArrowIcon lucid-ArrowIcon-is-right"
@@ -72,7 +72,7 @@ exports[`ArrowIcon [common] example testing should match snapshot(s) for 1.defau
 </Icon>
 `;
 
-exports[`ArrowIcon [common] example testing should match snapshot(s) for 1.default 5`] = `
+exports[`ArrowIcon [common] example testing should match snapshot(s) for 1.basic 5`] = `
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-ArrowIcon lucid-ArrowIcon-is-left"
