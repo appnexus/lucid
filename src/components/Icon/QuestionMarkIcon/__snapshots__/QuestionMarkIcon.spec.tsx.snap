@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`QuestionMarkIcon [common] example testing should match snapshot(s) for 1.basic 1`] = `
+<Icon
+  aspectRatio="xMidYMid meet"
+  className="lucid-QuestionMarkIcon"
+  color="primary"
+  isClickable={false}
+  isDisabled={false}
+  onClick={[Function]}
+  onSelect={[Function]}
+  size={16}
+  viewBox="0 0 16 16"
+>
+  <path
+    d="M3.752 5C3.752 2.515 5.514.5 8 .5s4.28 1.936 4.28 4.421c0 1.187-.679 2.257-2.148 3.214C8.759 9.032 8 9.604 8 10.755v1.652"
+  />
+  <circle
+    cx="8"
+    cy="15"
+    r=".5"
+  />
+</Icon>
+`;
+
+exports[`QuestionMarkIcon [common] example testing should match snapshot(s) for 1.basic 2`] = `
+<Icon
+  aspectRatio="xMidYMid meet"
+  className="lucid-QuestionMarkIcon"
+  color="primary"
+  isClickable={true}
+  isDisabled={false}
+  onClick={[Function]}
+  onSelect={[Function]}
+  size={16}
+  viewBox="0 0 16 16"
+>
+  <path
+    d="M3.752 5C3.752 2.515 5.514.5 8 .5s4.28 1.936 4.28 4.421c0 1.187-.679 2.257-2.148 3.214C8.759 9.032 8 9.604 8 10.755v1.652"
+  />
+  <circle
+    cx="8"
+    cy="15"
+    r=".5"
+  />
+</Icon>
+`;
+
+exports[`QuestionMarkIcon [common] example testing should match snapshot(s) for 1.basic 3`] = `
+<Icon
+  aspectRatio="xMidYMid meet"
+  className="lucid-QuestionMarkIcon"
+  color="primary"
+  isClickable={false}
+  isDisabled={true}
+  onClick={[Function]}
+  onSelect={[Function]}
+  size={100}
+  viewBox="0 0 16 16"
+>
+  <path
+    d="M3.752 5C3.752 2.515 5.514.5 8 .5s4.28 1.936 4.28 4.421c0 1.187-.679 2.257-2.148 3.214C8.759 9.032 8 9.604 8 10.755v1.652"
+  />
+  <circle
+    cx="8"
+    cy="15"
+    r=".5"
+  />
+</Icon>
+`;

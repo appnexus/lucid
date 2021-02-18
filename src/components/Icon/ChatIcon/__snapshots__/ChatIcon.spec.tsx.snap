@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ChatIcon [common] example testing should match snapshot(s) for 1.basic 1`] = `
+<Icon
+  aspectRatio="xMidYMid meet"
+  className="lucid-ChatIcon"
+  color="primary"
+  isClickable={false}
+  isDisabled={false}
+  onClick={[Function]}
+  onSelect={[Function]}
+  size={16}
+  viewBox="0 0 16 16"
+>
+  <path
+    d="M4.5 6a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zM8 5.5a.5.5 0 1 0 0 1 .5.5 0 0 0 0-1zm4 0a.5.5 0 1 0 0 1 .5.5 0 0 0 0-1z"
+  />
+  <path
+    d="M7.5 11.5H10c3.025 0 5.5-2.475 5.5-5.5S13.025.5 10 .5H6C2.975.5.5 2.975.5 6c0 2.118 1.234 3.967 3 4.884V14.5l4-3z"
+  />
+</Icon>
+`;

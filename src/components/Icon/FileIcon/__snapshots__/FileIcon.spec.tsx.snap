@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FileIcon [common] example testing should match snapshot(s) for 1.basic 1`] = `
+<Icon
+  aspectRatio="xMidYMid meet"
+  className="lucid-FileIcon"
+  color="primary"
+  isClickable={false}
+  isDisabled={false}
+  onClick={[Function]}
+  onSelect={[Function]}
+  size={16}
+  viewBox="0 0 16 16"
+>
+  <path
+    d="M2.5.5v15h11v-11l-4-4z"
+  />
+  <path
+    d="M13.25 5H9V.75"
+  />
+</Icon>
+`;

@@ -9,12 +9,7 @@ const cx = lucidClassNames.bind('&-EligibilityLightIcon');
 
 const { oneOf } = PropTypes;
 
-export enum EligibilityOptions {
-	left = 'left',
-	right = 'right',
-	neither = 'neither',
-	both = 'both',
-}
+export type EligibilityOptions = 'left' | 'right' | 'neither' | 'both';
 
 interface IEligibilityLightIconProps extends IIconProps {
 	eligibility?: EligibilityOptions;
@@ -22,7 +17,7 @@ interface IEligibilityLightIconProps extends IIconProps {
 
 export const EligibilityLightIcon = ({
 	className,
-	eligibility = EligibilityOptions.neither,
+	eligibility = 'neither',
 	isDisabled = false,
 	...passThroughs
 }: IEligibilityLightIconProps) => {
@@ -42,8 +37,8 @@ export const EligibilityLightIcon = ({
 				<path
 					className={cx('&-half-circle', {
 						'&-is-selected':
-							eligibility === EligibilityOptions.left ||
-							eligibility === EligibilityOptions.both,
+							eligibility === 'left' ||
+							eligibility === 'both',
 						'&-half-circle-is-disabled': isDisabled,
 					})}
 					d='M6 14.71A7.003 7.003 0 0 1 6 1.29v13.42z'
@@ -51,8 +46,8 @@ export const EligibilityLightIcon = ({
 				<path
 					className={cx('&-half-circle', {
 						'&-is-selected':
-							eligibility === EligibilityOptions.right ||
-							eligibility === EligibilityOptions.both,
+							eligibility === 'right' ||
+							eligibility === 'both',
 						'&-half-circle-is-disabled': isDisabled,
 					})}
 					d='M10 1.29a7.003 7.003 0 0 1 0 13.42V1.29z'
@@ -73,9 +68,6 @@ EligibilityLightIcon.peek = {
 };
 EligibilityLightIcon.propTypes = {
 	...iconPropTypes,
-	eligibility: oneOf(_.values(EligibilityOptions))`
-		Eligibility variations of the icon.
-	`,
 };
 EligibilityLightIcon.defaultProps = Icon.defaultProps;
 

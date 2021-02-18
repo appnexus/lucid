@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextIcon [common] example testing should match snapshot(s) for 1.basic 1`] = `
+<Icon
+  aspectRatio="xMidYMid meet"
+  className="lucid-TextIcon"
+  color="primary"
+  isClickable={false}
+  isDisabled={false}
+  onClick={[Function]}
+  onSelect={[Function]}
+  size={16}
+  viewBox="0 0 16 16"
+>
+  <path
+    d="M.5 2.5v-2h15v2"
+  />
+  <path
+    d="M8 15.5V.5"
+  />
+  <path
+    d="M4.5 15.5h7"
+  />
+</Icon>
+`;

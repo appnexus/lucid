@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DangerLightIcon [common] example testing should match snapshot(s) for 1.basic 1`] = `
+<Icon
+  aspectRatio="xMidYMid meet"
+  className="lucid-DangerLightIcon"
+  color="primary"
+  isClickable={false}
+  isDisabled={false}
+  onClick={[Function]}
+  onSelect={[Function]}
+  size={16}
+  viewBox="0 0 16 16"
+>
+  <circle
+    className="lucid-DangerLightIcon-background"
+    cx="8"
+    cy="8"
+    r="7.5"
+  />
+  <path
+    className="lucid-DangerLightIcon-x"
+    d="M5.5 5.5l5 5m0-5l-5 5"
+  />
+</Icon>
+`;
+
+exports[`DangerLightIcon [common] example testing should match snapshot(s) for 1.basic 2`] = `
+<Icon
+  aspectRatio="xMidYMid meet"
+  className="lucid-DangerLightIcon lucid-DangerLightIcon-is-clickable"
+  color="primary"
+  isClickable={true}
+  isDisabled={false}
+  onClick={[Function]}
+  onSelect={[Function]}
+  size={16}
+  viewBox="0 0 16 16"
+>
+  <circle
+    className="lucid-DangerLightIcon-background"
+    cx="8"
+    cy="8"
+    r="7.5"
+  />
+  <path
+    className="lucid-DangerLightIcon-x"
+    d="M5.5 5.5l5 5m0-5l-5 5"
+  />
+</Icon>
+`;
+
+exports[`DangerLightIcon [common] example testing should match snapshot(s) for 1.basic 3`] = `
+<Icon
+  aspectRatio="xMidYMid meet"
+  className="lucid-DangerLightIcon lucid-DangerLightIcon-is-disabled"
+  color="primary"
+  isClickable={false}
+  isDisabled={true}
+  onClick={[Function]}
+  onSelect={[Function]}
+  size={16}
+  viewBox="0 0 16 16"
+>
+  <circle
+    className="lucid-DangerLightIcon-background"
+    cx="8"
+    cy="8"
+    r="7.5"
+  />
+  <path
+    className="lucid-DangerLightIcon-x"
+    d="M5.5 5.5l5 5m0-5l-5 5"
+  />
+</Icon>
+`;
