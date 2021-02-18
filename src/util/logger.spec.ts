@@ -23,27 +23,35 @@ describe('logger', () => {
 
 	describe('logger', () => {
 		/* eslint-disable no-console */
-		let error, log, warn;
+		let originalError: any
+		let originalLog: any
+		let originalWarn: any;
+		let mockError: jest.Mock;
+		let mockLog: jest.Mock;
+		let mockWarn: jest.Mock;
 
 		beforeAll(() => {
-			console.error = jest.fn();
-			console.log = jest.fn();
-			console.warn = jest.fn();
-			error = console.error;
-			log = console.log;
-			warn = console.warn;
+			mockError = jest.fn();
+			mockLog = jest.fn();
+			mockWarn = jest.fn();
+			console.error = mockError;
+			console.log = mockLog;
+			console.warn = mockWarn;
+			originalError = console.error;
+			originalLog = console.log;
+			originalWarn = console.warn;
 		});
 
 		beforeEach(() => {
-			console.error.mockReset();
-			console.log.mockReset();
-			console.warn.mockReset();
+			mockError.mockReset();
+			mockLog.mockReset();
+			mockWarn.mockReset();
 		});
 
 		afterAll(() => {
-			console.error = error;
-			console.log = log;
-			console.warn = warn;
+			console.error = originalError;
+			console.log = originalLog;
+			console.warn = originalWarn;
 		});
 
 		it('should do stuff', () => {
@@ -66,15 +74,15 @@ describe('logger', () => {
 
 			it('should log a message', () => {
 				log('Message Sent.');
-				expect(console.log).toHaveBeenCalledTimes(1);
-				expect(console.log).toHaveBeenCalledWith('Message Sent.');
+				expect(mockLog).toHaveBeenCalledTimes(1);
+				expect(mockLog).toHaveBeenCalledWith('Message Sent.');
 			});
 
 			it('should log multiple messages', () => {
 				log('First Message.');
 				log('Second Message.');
-				expect(console.log).toHaveBeenCalledTimes(2);
-				const [firstCall, secondCall] = console.log.mock.calls;
+				expect(mockLog).toHaveBeenCalledTimes(2);
+				const [firstCall, secondCall] = mockLog.mock.calls;
 				expect(firstCall[0]).toEqual('First Message.');
 				expect(secondCall[0]).toEqual('Second Message.');
 			});
@@ -92,15 +100,15 @@ describe('logger', () => {
 
 			it('should log a message', () => {
 				logOnce(onceID1, 'Message Sent.');
-				expect(console.log).toHaveBeenCalledTimes(1);
-				expect(console.log).toHaveBeenCalledWith('Message Sent.');
+				expect(mockLog).toHaveBeenCalledTimes(1);
+				expect(mockLog).toHaveBeenCalledWith('Message Sent.');
 			});
 
 			it('should log multiple messages with different keys', () => {
 				logOnce(onceID1, 'First Message.');
 				logOnce(onceID2, 'Second Message.');
-				expect(console.log).toHaveBeenCalledTimes(2);
-				const [firstCall, secondCall] = console.log.mock.calls;
+				expect(mockLog).toHaveBeenCalledTimes(2);
+				const [firstCall, secondCall] = mockLog.mock.calls;
 				expect(firstCall[0]).toEqual('First Message.');
 				expect(secondCall[0]).toEqual('Second Message.');
 			});
@@ -108,8 +116,8 @@ describe('logger', () => {
 			it('should not log multiple messages with the same key', () => {
 				logOnce(onceID1, 'First Message.');
 				logOnce(onceID1, 'Second Message.');
-				expect(console.log).toHaveBeenCalledTimes(1);
-				expect(console.log).toHaveBeenCalledWith('First Message.');
+				expect(mockLog).toHaveBeenCalledTimes(1);
+				expect(mockLog).toHaveBeenCalledWith('First Message.');
 			});
 		});
 
@@ -118,15 +126,15 @@ describe('logger', () => {
 
 			it('should log a warn message', () => {
 				warn('Message Sent.');
-				expect(console.warn).toHaveBeenCalledTimes(1);
-				expect(console.warn).toHaveBeenCalledWith('Message Sent.');
+				expect(mockWarn).toHaveBeenCalledTimes(1);
+				expect(mockWarn).toHaveBeenCalledWith('Message Sent.');
 			});
 
 			it('should log multiple warn messages', () => {
 				warn('First Message.');
 				warn('Second Message.');
-				expect(console.warn).toHaveBeenCalledTimes(2);
-				const [firstCall, secondCall] = console.warn.mock.calls;
+				expect(mockWarn).toHaveBeenCalledTimes(2);
+				const [firstCall, secondCall] = mockWarn.mock.calls;
 				expect(firstCall[0]).toEqual('First Message.');
 				expect(secondCall[0]).toEqual('Second Message.');
 			});
@@ -145,15 +153,15 @@ describe('logger', () => {
 
 			it('should log a message', () => {
 				warnOnce(onceID1, 'Message Sent.');
-				expect(console.warn).toHaveBeenCalledTimes(1);
-				expect(console.warn).toHaveBeenCalledWith('Message Sent.');
+				expect(mockWarn).toHaveBeenCalledTimes(1);
+				expect(mockWarn).toHaveBeenCalledWith('Message Sent.');
 			});
 
 			it('should log multiple warn messages with different keys', () => {
 				warnOnce(onceID1, 'First Message.');
 				warnOnce(onceID2, 'Second Message.');
-				expect(console.warn).toHaveBeenCalledTimes(2);
-				const [firstCall, secondCall] = console.warn.mock.calls;
+				expect(mockWarn).toHaveBeenCalledTimes(2);
+				const [firstCall, secondCall] = mockWarn.mock.calls;
 				expect(firstCall[0]).toEqual('First Message.');
 				expect(secondCall[0]).toEqual('Second Message.');
 			});
@@ -161,8 +169,8 @@ describe('logger', () => {
 			it('should not log multiple warn messages with the same key', () => {
 				warnOnce(onceID1, 'First Message.');
 				warnOnce(onceID1, 'Second Message.');
-				expect(console.warn).toHaveBeenCalledTimes(1);
-				expect(console.warn).toHaveBeenCalledWith('First Message.');
+				expect(mockWarn).toHaveBeenCalledTimes(1);
+				expect(mockWarn).toHaveBeenCalledWith('First Message.');
 			});
 		});
 
@@ -171,14 +179,14 @@ describe('logger', () => {
 
 			it('should log an error message', () => {
 				error('Message Sent.');
-				expect(console.error).toHaveBeenCalledTimes(1);
-				expect(console.error).toHaveBeenCalledWith('Message Sent.');
+				expect(mockError).toHaveBeenCalledTimes(1);
+				expect(mockError).toHaveBeenCalledWith('Message Sent.');
 			});
 
 			it('should log multiple error messages', () => {
 				error('First Message.');
 				error('Second Message.');
-				const [firstCall, secondCall] = console.error.mock.calls;
+				const [firstCall, secondCall] = mockError.mock.calls;
 				expect(firstCall[0]).toEqual('First Message.');
 				expect(secondCall[0]).toEqual('Second Message.');
 			});
@@ -197,14 +205,14 @@ describe('logger', () => {
 
 			it('should log an error message', () => {
 				errorOnce(onceID1, 'Message Sent.');
-				expect(console.error).toHaveBeenCalledTimes(1);
-				expect(console.error).toHaveBeenCalledWith('Message Sent.');
+				expect(mockError).toHaveBeenCalledTimes(1);
+				expect(mockError).toHaveBeenCalledWith('Message Sent.');
 			});
 
 			it('should log multiple warn messages with different keys', () => {
 				errorOnce(onceID1, 'First Message.');
 				errorOnce(onceID2, 'Second Message.');
-				const [firstCall, secondCall] = console.error.mock.calls;
+				const [firstCall, secondCall] = mockError.mock.calls;
 				expect(firstCall[0]).toEqual('First Message.');
 				expect(secondCall[0]).toEqual('Second Message.');
 			});
@@ -212,8 +220,8 @@ describe('logger', () => {
 			it('should not log multiple warn messages with the same key', () => {
 				errorOnce(onceID1, 'First Message.');
 				errorOnce(onceID1, 'Second Message.');
-				expect(console.error).toHaveBeenCalledTimes(1);
-				expect(console.error).toHaveBeenCalledWith('First Message.');
+				expect(mockError).toHaveBeenCalledTimes(1);
+				expect(mockError).toHaveBeenCalledWith('First Message.');
 			});
 		});
 
@@ -228,16 +236,16 @@ describe('logger', () => {
 			it('should not log multiple messages with the same key', () => {
 				logOnce(onceID1, 'First Message.');
 				logOnce(onceID1, 'Second Message.');
-				expect(console.log).toHaveBeenCalledTimes(1);
-				expect(console.log).toHaveBeenCalledWith('First Message.');
+				expect(mockLog).toHaveBeenCalledTimes(1);
+				expect(mockLog).toHaveBeenCalledWith('First Message.');
 			});
 
 			it('should allow logging multiple messages with the same key if resetOnce is called', () => {
 				logOnce(onceID1, 'First Message.');
 				resetOnce(onceID1);
 				logOnce(onceID1, 'Second Message.');
-				expect(console.log).toHaveBeenCalledTimes(2);
-				const [firstCall, secondCall] = console.log.mock.calls;
+				expect(mockLog).toHaveBeenCalledTimes(2);
+				const [firstCall, secondCall] = mockLog.mock.calls;
 				expect(firstCall[0]).toEqual('First Message.');
 				expect(secondCall[0]).toEqual('Second Message.');
 			});

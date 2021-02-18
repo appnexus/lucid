@@ -43,7 +43,7 @@ interface IBaseComponentType<P> {
 	Returns an array of paths for each reducer function
 */
 export function getDeepPaths(
-	obj: { [k: string]: any },
+	obj: { [k: string]: any } | null = null,
 	path: string[] = []
 ): string[][] {
 	return _.reduce(
@@ -65,7 +65,7 @@ export function isPlainObjectOrEsModule(obj: any): boolean {
 /**
 	Recursively removes function type properties from obj
  */
-export function omitFunctionPropsDeep<P>(obj: object | P) {
+export function omitFunctionPropsDeep<P>(obj: object | P | null = null) {
 	return _.reduce<{ [k: string]: any }, { [k: string]: any }>(
 		obj,
 		(memo, value, key) => {

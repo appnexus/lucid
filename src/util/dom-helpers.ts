@@ -1,9 +1,13 @@
 import _ from 'lodash';
 
 export function getAbsoluteBoundingClientRect(
-	domNode: HTMLElement
+	domNode: HTMLElement | null
 ): ClientRect {
-	const elementRect: ClientRect = domNode.getBoundingClientRect();
+	if (!domNode) {
+		throw new Error('getAbsoluteBoundingClientRect called without a domNode');
+	}
+
+	const elementRect: ClientRect = domNode && domNode.getBoundingClientRect();
 
 	return {
 		bottom: elementRect.bottom + window.pageYOffset,
@@ -65,7 +69,7 @@ export function dispatchDOMEvent(
  */
 export function sharesAncestor(
 	node: Node,
-	siblingNode: Node,
+	siblingNode: Node | null,
 	nodeName: string
 ): boolean {
 	const currentNodeName = _.get(node, 'nodeName');

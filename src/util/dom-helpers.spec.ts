@@ -8,7 +8,7 @@ import {
 } from './dom-helpers';
 
 describe('#getAbsoluteBoundingClientRect', () => {
-	let div;
+	let div: any;
 
 	it('should throw if not passed a domNode', () => {
 		assert.throws(() => {
@@ -38,8 +38,8 @@ describe('#getAbsoluteBoundingClientRect', () => {
 });
 
 describe('#scrollParentTo', () => {
-	let parentElement;
-	let childNode;
+	let parentElement: any;
+	let childNode: any;
 
 	beforeEach(() => {
 		parentElement = document.createElement('div');
@@ -66,7 +66,7 @@ describe('#scrollParentTo', () => {
 	it('should align using the additionalOffset', () => {
 		// just using plain objects here to avoid having to deal with weird dom positioning
 		const parent = { scrollTop: 10 };
-		const child = { parentElement: parent, offsetTop: 15 };
+		const child: any = { parentElement: parent, offsetTop: 15 };
 		scrollParentTo(child, 10);
 		assert.equal(parent.scrollTop, 5);
 	});
@@ -103,10 +103,10 @@ describe('#scrollParentTo', () => {
 
 describe('#sharesAncestor', () => {
 	it('should correctly find an ancestor', () => {
-		const siblingNode = {};
+		const siblingNode: any = {};
 		const contains = jest.fn().mockReturnValue(true);
 
-		const node = {
+		const node: any = {
 			nodeName: 'DIV',
 			parentElement: {
 				nodeName: 'SPAN',
@@ -122,7 +122,7 @@ describe('#sharesAncestor', () => {
 	});
 
 	it('should correctly find not an ancestor', () => {
-		const node = {
+		const node: any = {
 			nodeName: 'DIV',
 			parentElement: {
 				nodeName: 'SPAN',

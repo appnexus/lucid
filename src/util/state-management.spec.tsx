@@ -111,12 +111,12 @@ describe('#bindReducerToState', () => {
 			getState() {
 				return state;
 			},
-			setState(nextState) {
+			setState(nextState: any) {
 				state = nextState;
 			},
 		};
 
-		function setValue(state, value) {
+		function setValue(state: any, value: any) {
 			return _.assign({}, state, { value });
 		}
 
@@ -138,12 +138,12 @@ describe('#bindReducerToState', () => {
 			getState() {
 				return state;
 			},
-			setState(nextState) {
+			setState(nextState: any) {
 				state = nextState;
 			},
 		};
 
-		function setValue(state, value) {
+		function setValue(state: any, value: any) {
 			return _.assign({}, state, { value });
 		}
 
@@ -168,27 +168,27 @@ describe('#bindReducersToState', () => {
 			getState() {
 				return state;
 			},
-			setState(nextState) {
+			setState(nextState: any) {
 				state = nextState;
 			},
 		};
 
 		const reducers = {
-			increaseCounter: state =>
+			increaseCounter: (state: any) =>
 				_.assign({}, state, {
 					counter: state.counter + 1,
 				}),
-			decreaseCounter: state =>
+			decreaseCounter: (state: any) =>
 				_.assign({}, state, {
 					counter: state.counter - 1,
 				}),
-			setCounter: (state, x) =>
+			setCounter: (state: any, x: any) =>
 				_.assign({}, state, {
 					counter: x,
 				}),
 		};
 
-		const boundReducers = bindReducersToState(reducers, stateManager);
+		const boundReducers: any = bindReducersToState(reducers, stateManager);
 
 		assert.equal(state.counter, 0);
 		boundReducers.increaseCounter();
@@ -211,33 +211,33 @@ describe('#bindReducersToState', () => {
 			getState() {
 				return state;
 			},
-			setState(nextState) {
+			setState(nextState: any) {
 				state = nextState;
 			},
 		};
 
 		const reducers = {
-			setName: (state, newName) =>
+			setName: (state: any, newName: any) =>
 				_.assign({}, state, {
 					name: newName,
 				}),
 			count: {
-				increaseCounter: state =>
+				increaseCounter: (state: any) =>
 					_.assign({}, state, {
 						counter: state.counter + 1,
 					}),
-				decreaseCounter: state =>
+				decreaseCounter: (state: any) =>
 					_.assign({}, state, {
 						counter: state.counter - 1,
 					}),
-				setCounter: (state, x) =>
+				setCounter: (state: any, x: any) =>
 					_.assign({}, state, {
 						counter: x,
 					}),
 			},
 		};
 
-		const boundReducers = bindReducersToState(reducers, stateManager);
+		const boundReducers: any = bindReducersToState(reducers, stateManager);
 
 		assert.equal(state.name, '');
 		assert.equal(state.count.counter, 0);
@@ -266,14 +266,14 @@ describe('#bindReducersToState', () => {
 });
 
 describe('#getStatefulPropsContext', () => {
-	function isFunctions(objValue, othValue) {
+	function isFunctions(objValue: any, othValue: any) {
 		if (_.isFunction(objValue) && _.isFunction(othValue)) {
 			return true;
 		}
 	}
 
 	it('should return an object with two functions on it', () => {
-		const statefulPropsContext = getStatefulPropsContext({}, {});
+		const statefulPropsContext = getStatefulPropsContext({}, {} as any);
 		const getPropReplaceReducers = _.get(
 			statefulPropsContext,
 			'getPropReplaceReducers'
@@ -284,10 +284,10 @@ describe('#getStatefulPropsContext', () => {
 	});
 
 	describe('statefulPropsContext', () => {
-		let state;
-		let stateManager;
-		let reducers;
-		let statefulPropsContext;
+		let state: any;
+		let stateManager: any;
+		let reducers: any;
+		let statefulPropsContext: any;
 
 		beforeEach(() => {
 			state = {
@@ -301,26 +301,26 @@ describe('#getStatefulPropsContext', () => {
 				getState() {
 					return state;
 				},
-				setState(nextState) {
+				setState(nextState: any) {
 					state = nextState;
 				},
 			};
 
 			reducers = {
-				setName: (state, newName) =>
+				setName: (state: any, newName: any) =>
 					_.assign({}, state, {
 						name: newName,
 					}),
 				count: {
-					increaseCounter: state =>
+					increaseCounter: (state: any) =>
 						_.assign({}, state, {
 							counter: state.counter + 1,
 						}),
-					decreaseCounter: state =>
+					decreaseCounter: (state: any) =>
 						_.assign({}, state, {
 							counter: state.counter - 1,
 						}),
-					setCounter: (state, x) =>
+					setCounter: (state: any, x: any) =>
 						_.assign({}, state, {
 							counter: x,
 						}),
@@ -475,13 +475,13 @@ describe('#getStatefulPropsContext', () => {
 
 describe('#reduceSelectors', () => {
 	const selectors = {
-		fooAndBar: ({ foo, bar }) => `${foo} and ${bar}`,
-		incrementedBaz: ({ baz }) => baz + 1,
+		fooAndBar: ({ foo, bar }: any) => `${foo} and ${bar}`,
+		incrementedBaz: ({ baz }: any) => baz + 1,
 		nested: {
-			nestedFooAndBar: ({ foo, bar }) => `${foo} & ${bar}`,
-			nestedIncrementedBaz: ({ baz }) => baz + 1,
+			nestedFooAndBar: ({ foo, bar }: any) => `${foo} & ${bar}`,
+			nestedIncrementedBaz: ({ baz }: any) => baz + 1,
 			moreNested: {
-				moreNestedFooAndBar: ({ foo, bar }) => `${foo} & ${bar}`,
+				moreNestedFooAndBar: ({ foo, bar }: any) => `${foo} & ${bar}`,
 			},
 		},
 	};
@@ -564,10 +564,12 @@ describe('#reduceSelectors', () => {
 			import them all, and directly pass those selectors to the stateful component.
 		 */
 
+		// eslint-disable-next-line @typescript-eslint/no-empty-function
 		function mockBabelModule() {}
 		mockBabelModule.prototype.foo = 'bar';
 
-		const someModule = new mockBabelModule();
+		// @ts-ignore
+		const someModule: any = new mockBabelModule();
 		someModule.someSelector = () => {};
 
 		Object.defineProperty(someModule, '__esModule', {
@@ -600,7 +602,7 @@ describe('#safeMerge', () => {
 		assert.equal(value, srcValue, 'must be srcValue');
 	});
 	it('should return srcValue array if objValue is undefined', () => {
-		const srcValue = [];
+		const srcValue: any = [];
 		const value = safeMerge(undefined, srcValue);
 		assert.equal(value, srcValue, 'must be srcValue');
 	});
@@ -615,23 +617,23 @@ describe('#buildHybridComponent', () => {
 			onDecrement: PropTypes.func,
 			countDisplay: PropTypes.string,
 			countModThree: PropTypes.number,
-		},
+		} as any,
 		getDefaultProps() {
 			return {
 				count: 0,
-			};
+			} as any;
 		},
 		reducers: {
-			onIncrement(state) {
-				return _.assign({}, state, { count: state.count + 1 });
+			onIncrement(state: any) {
+				return _.assign({}, state, { count: state.count + 1 }) as any;
 			},
-			onDecrement(state) {
+			onDecrement(state: any) {
 				return _.assign({}, state, { count: state.count - 1 });
 			},
-		},
+		} as any,
 		selectors: {
-			countDisplay: state => `count: ${state.count}`,
-			countModThree: state => state.count % 3,
+			countDisplay: (state: any) => `count: ${state.count}`,
+			countModThree: (state: any) => state.count % 3,
 		},
 		render() {
 			const {
@@ -640,7 +642,7 @@ describe('#buildHybridComponent', () => {
 				countModThree,
 				onIncrement,
 				onDecrement,
-			} = this.props;
+			} = this.props as any;
 
 			return (
 				<section>
@@ -700,7 +702,7 @@ describe('#buildHybridComponent', () => {
 
 	describe('wrapped component', () => {
 		/* eslint-disable no-console */
-		let warn;
+		let warn: any;
 
 		beforeEach(() => {
 			warn = console.warn;

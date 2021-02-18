@@ -36,9 +36,9 @@ export function thunk(fn: FunkThunk) {
 interface IGetReduxPrimitives {
 	initialState: object;
 	reducers: object;
-	rootPath: string[];
-	rootSelector: (arg0: any) => any;
-	selectors: object;
+	rootPath?: string[];
+	rootSelector?: (arg0: any) => any;
+	selectors?: object;
 }
 export function getReduxPrimitives({
 	initialState,
