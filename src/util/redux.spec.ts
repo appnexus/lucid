@@ -32,11 +32,11 @@ describe('redux utils', () => {
 	describe('#getReduxPrimitives', () => {
 		const reducers = {
 			foo: {
-				onChange: (state, payload) => {
+				onChange: (_state: any, payload: any) => {
 					return { value: payload };
 				},
 				bar: {
-					onChange: (state, payload) => ({ value: payload }),
+					onChange: (_state: any, payload: any) => ({ value: payload }),
 				},
 			},
 		};
@@ -64,14 +64,14 @@ describe('redux utils', () => {
 
 			it('should correctly apply state change', () => {
 				const action = { type: 'foo.onChange', payload: 'bar' };
-				const nextState = reducer(initialState, action);
+				const nextState: any = reducer(initialState, action);
 				assert.equal(nextState.foo.value, 'bar', 'must equal action payload');
 			});
 
 			describe('nested reducer', () => {
 				it('should correctly apply state change', () => {
 					const action = { type: 'foo.bar.onChange', payload: 'baz' };
-					const nextState = reducer(initialState, action);
+					const nextState: any = reducer(initialState, action);
 					assert.equal(
 						nextState.foo.bar.value,
 						'baz',
@@ -89,7 +89,7 @@ describe('redux utils', () => {
 
 				it('should correctly apply state change', () => {
 					const action = { type: 'root.foo.onChange', payload: 'bar' };
-					const nextState = reducerWithRootPath(initialState, action);
+					const nextState: any = reducerWithRootPath(initialState, action);
 					assert.equal(nextState.foo.value, 'bar', 'must equal action payload');
 				});
 			});
@@ -97,7 +97,7 @@ describe('redux utils', () => {
 			describe('thunks', () => {
 				it('should not include thunk paths in reducer', () => {
 					const action = { type: 'root.foo.asyncOperation' };
-					const nextState = reducer(initialState, action);
+					const nextState: any = reducer(initialState, action);
 					assert.deepEqual(
 						initialState,
 						nextState,
@@ -111,7 +111,7 @@ describe('redux utils', () => {
 			describe('selector/mapStateToProps', () => {
 				const selectors = {
 					foo: {
-						uppercase: ({ value }) => upperCase(value),
+						uppercase: ({ value }: any) => upperCase(value),
 					},
 				};
 
@@ -124,7 +124,7 @@ describe('redux utils', () => {
 				});
 
 				it('should apply selector', () => {
-					const viewState = mapStateToProps(initialState);
+					const viewState = mapStateToProps(initialState, null, null);
 					assert.equal(viewState.foo.uppercase, 'FOO', 'must equal "FOO"');
 				});
 
@@ -136,7 +136,7 @@ describe('redux utils', () => {
 						initialState,
 					});
 
-					const viewState = mapStateToProps(initialState);
+					const viewState = mapStateToProps(initialState, null, null);
 					assert.deepEqual(viewState, initialState);
 				});
 
@@ -151,7 +151,7 @@ describe('redux utils', () => {
 					});
 
 					it('should apply selector', () => {
-						const viewState = mapStateToProps({ root: initialState });
+						const viewState = mapStateToProps({ root: initialState }, null, null);
 						assert.equal(viewState.foo.uppercase, 'FOO', 'must equal "FOO"');
 					});
 				});
@@ -170,7 +170,7 @@ describe('redux utils', () => {
 					});
 
 					it('should apply rootSelector', () => {
-						const viewState = mapStateToProps(initialState);
+						const viewState = mapStateToProps(initialState, null, null);
 						assert.equal(viewState.computed, 'FOOfoo', 'must equal "FOOfoo"');
 					});
 				});
@@ -199,9 +199,9 @@ describe('redux utils', () => {
 						rootPath: ['qux', 'quux'],
 					});
 
-					const mockDispatch = sinon.spy(action => action);
+					const mockDispatch: any = sinon.spy(action => action);
 					const mapDispatchToProps = connectors[1];
-					const dispatchTree = mapDispatchToProps(mockDispatch);
+					const dispatchTree = mapDispatchToProps(mockDispatch, null, null);
 
 					beforeEach(() => {
 						mockDispatch.reset();
@@ -223,17 +223,17 @@ describe('redux utils', () => {
 				});
 
 				describe('thunks', () => {
-					const thunkSpy = sinon.spy();
+					const thunkSpy: any = sinon.spy();
 
 					const reducers = {
 						foo: {
-							onChange: (state, payload) => {
+							onChange: (state: any, payload: any) => {
 								return { value: payload };
 							},
 							bar: {
-								onChange: (state, payload) => ({ value: payload }),
+								onChange: (state: any, payload: any) => ({ value: payload }),
 							},
-							asyncOperation: thunk(payload => dispatchTree =>
+							asyncOperation: thunk(payload => (dispatchTree: { onChange: (arg0: any) => any; }) =>
 								dispatchTree.onChange(payload)
 							),
 							thunkSpy: thunk(() => thunkSpy),
@@ -265,12 +265,12 @@ describe('redux utils', () => {
 
 					const mapDispatchToProps = connectors[1];
 					const mockGetState = sinon.spy(() => rootState);
-					const mockDispatch = sinon.spy(action =>
+					const mockDispatch: any = sinon.spy(action =>
 						isFunction(action)
 							? action(mockDispatch, mockGetState, ...extraArgs)
 							: action
 					);
-					const dispatchTree = mapDispatchToProps(mockDispatch);
+					const dispatchTree = mapDispatchToProps(mockDispatch, null, null);
 
 					beforeEach(() => {
 						thunkSpy.reset();

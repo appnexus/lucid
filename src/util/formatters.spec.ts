@@ -6,7 +6,7 @@ import { formatAbbreviatedNumber, formatThousands } from './formatters';
 
 describe('formatters', () => {
 	describe('formatAbbreviatedNumber', () => {
-		const tests = [
+		const tests: Array<[string, number, string]> = [
 			['negative tens', -10, '-10'],
 			['tens', 10, '10'],
 			['hundreds', 100, '100'],
@@ -33,7 +33,7 @@ describe('formatters', () => {
 	});
 
 	describe('formatNumberNoDecimal', () => {
-		const tests = [
+		const tests: Array<[string, number, string]> = [
 			['negative tens', -10, '-10'],
 			['tens', 10, '10'],
 			['hundreds', 100, '100'],

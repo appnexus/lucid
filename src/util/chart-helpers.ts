@@ -188,7 +188,7 @@ export function maxByFieldsStacked(collection: Collection, fields: Fields) {
  * @param {number} size - should be greater than 1
  * @return {array}
  */
-export function discreteTicks<T>(array: T[], count: number | undefined | null) {
+export function discreteTicks<T>(array: T[], count: number | undefined | null = null) {
 	if (!array || _.isNil(count) || array.length <= count) {
 		return array;
 	}

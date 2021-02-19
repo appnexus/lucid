@@ -13,7 +13,7 @@ import {
 	omitProps,
 } from './component-types';
 
-function isReactComponentClass(componentClass) {
+function isReactComponentClass(componentClass: unknown) {
 	return (
 		_.isFunction(componentClass) &&
 		_.has(componentClass, 'prototype') &&
@@ -44,8 +44,9 @@ describe('component-types', () => {
 
 		it('should make `reducers` a static property.', () => {
 			const panelReducers = {
-				onExpand() {},
-			};
+				// eslint-disable-next-line @typescript-eslint/no-empty-function
+				onExpand() { },
+			} as any;
 
 			const Panel = createClass({
 				reducers: panelReducers,
@@ -64,7 +65,7 @@ describe('component-types', () => {
 
 		it('should make `selectors` a static property.', () => {
 			const panelSelectors = {
-				isValid() {},
+				isValid() { },
 			};
 
 			const Panel = createClass({
@@ -343,11 +344,11 @@ describe('component-types', () => {
 
 	describe('findTypes', () => {
 		it('should find all elements of the same type from children', done => {
-			const Option = createClass({ propName: 'option' });
+			const Option: any = createClass({ propName: 'option' });
 
-			const Selector = createClass({
+			const Selector: any = createClass({
 				render() {
-					const optionElements = findTypes(this.props, Option);
+					const optionElements: any = findTypes(this.props, Option);
 
 					assert.equal(2, optionElements.length, 'length must be 2');
 					assert.equal(
@@ -362,7 +363,7 @@ describe('component-types', () => {
 					);
 					done();
 				},
-			});
+			} as any);
 
 			shallow(
 				<Selector>
@@ -378,9 +379,9 @@ describe('component-types', () => {
 		it('should find all elements of the same type from props if type has `propName` defined', done => {
 			const Option = createClass({ propName: ['option', 'options'] });
 
-			const Selector = createClass({
+			const Selector: any = createClass({
 				render() {
-					const optionElements = findTypes(this.props, Option);
+					const optionElements: any = findTypes(this.props, Option);
 
 					assert.equal(3, optionElements.length, 'length must be 3');
 					assert.equal(
@@ -402,7 +403,7 @@ describe('component-types', () => {
 					);
 					done();
 				},
-			});
+			} as any);
 
 			shallow(
 				<Selector
@@ -413,11 +414,11 @@ describe('component-types', () => {
 		});
 
 		it('should find all elements of the same type from props and children', done => {
-			const Option = createClass({ propName: ['option', 'options'] });
+			const Option: any = createClass({ propName: ['option', 'options'] });
 
-			const Selector = createClass({
+			const Selector: any = createClass({
 				render() {
-					const optionElements = findTypes(this.props, Option);
+					const optionElements: any = findTypes(this.props, Option);
 
 					assert.equal(5, optionElements.length, 'length must be 3');
 					assert.equal(
@@ -449,7 +450,7 @@ describe('component-types', () => {
 					);
 					done();
 				},
-			});
+			} as any);
 
 			shallow(
 				<Selector
@@ -485,7 +486,7 @@ describe('component-types', () => {
 					isActive: true,
 					isPrimary: true,
 					size: 'normal',
-				},
+				} as any,
 				Button
 			);
 
@@ -508,7 +509,7 @@ describe('component-types', () => {
 					isPrimary: true,
 					size: 'normal',
 					callbackId: 'cant find me',
-				},
+				} as any,
 				Button
 			);
 
@@ -531,7 +532,7 @@ describe('component-types', () => {
 					isPrimary: true,
 					size: 'normal',
 					callbackId: 'can find me',
-				},
+				} as any,
 				Button,
 				[],
 				false
