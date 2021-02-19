@@ -65,7 +65,7 @@ describe('VerticalListMenu', () => {
 
 		describe('onSelect', () => {
 			it('should fire', () => {
-				const onSelect = sinon.spy();
+				const onSelect: any = sinon.spy();
 				const wrapper = shallow(
 					<VerticalListMenu onSelect={onSelect}>
 						<VerticalListMenu.Item>One</VerticalListMenu.Item>
@@ -95,7 +95,7 @@ describe('VerticalListMenu', () => {
 			});
 
 			it('should fire on the child', () => {
-				const onSelect = sinon.spy();
+				const onSelect: any = sinon.spy();
 				const wrapper = shallow(
 					<VerticalListMenu>
 						<VerticalListMenu.Item>One</VerticalListMenu.Item>
@@ -147,7 +147,7 @@ describe('VerticalListMenu', () => {
 		// Since onToggle uses a Button under the hood, we need to do a `mount` test
 		// to make sure it's passing the `event` object around correctly
 		describe('onToggle', () => {
-			let wrapper;
+			let wrapper: any;
 
 			afterEach(() => {
 				if (wrapper) {

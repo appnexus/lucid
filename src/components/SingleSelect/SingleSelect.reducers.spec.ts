@@ -5,7 +5,7 @@ import { onSelect } from './SingleSelect.reducers';
 describe('SingleSelect reducers', () => {
 	describe('onSelect', () => {
 		it('should set selectedIndex=[newIndex] and update DropMenu state', () => {
-			const initialState = {};
+			const initialState: any = {};
 
 			const newIndex = 3;
 

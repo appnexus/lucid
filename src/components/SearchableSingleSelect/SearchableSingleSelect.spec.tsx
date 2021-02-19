@@ -9,7 +9,7 @@ const { Option } = SearchableSingleSelect;
 
 describe('SearchableSingleSelect', () => {
 	common(SearchableSingleSelect, {
-		exemptFunctionProps: ['optionFilter'],
+		exemptFunctionProps: ['optionFilter'] as any,
 	});
 
 	describe('render', () => {
@@ -46,7 +46,7 @@ describe('SearchableSingleSelect', () => {
 		describe('onSearch', () => {
 			it('should work', () => {
 				const onSearch = jest.fn();
-				const wrapper = shallow(
+				const wrapper: any = shallow(
 					<SearchableSingleSelect onSearch={onSearch}>
 						<Option callbackId={'zero'}>Zero</Option>
 						<Option callbackId={'one'}>One</Option>
@@ -79,7 +79,7 @@ describe('SearchableSingleSelect', () => {
 					props: {},
 				};
 
-				const wrapper = shallow(
+				const wrapper: any = shallow(
 					<SearchableSingleSelect onSelect={onSelect}>
 						<Option>option a</Option>
 					</SearchableSingleSelect>
@@ -100,7 +100,7 @@ describe('SearchableSingleSelect', () => {
 					props: {},
 				};
 
-				const wrapper = shallow(
+				const wrapper: any = shallow(
 					<SearchableSingleSelect onSelect={onSelect}>
 						<Option isHidden>option a</Option>
 						<Option>option b</Option>
@@ -124,7 +124,7 @@ describe('SearchableSingleSelect', () => {
 					props: {},
 				};
 
-				const wrapper = shallow(
+				const wrapper: any = shallow(
 					<SearchableSingleSelect
 						onSelect={onSelect}
 						onSearch={_.noop}
@@ -188,7 +188,7 @@ describe('SearchableSingleSelect', () => {
 
 	describe('custom formatting', () => {
 		it('should render Option child function by passing in {searchText}, setting filterText on each option and using a custom optionFilter', () => {
-			const optionFilter = (searchText, { filterText }) => {
+			const optionFilter = (searchText: any, { filterText }: any) => {
 				if (filterText) {
 					return new RegExp(_.escapeRegExp(searchText), 'i').test(filterText);
 				}
@@ -199,7 +199,7 @@ describe('SearchableSingleSelect', () => {
 				shallow(
 					<SearchableSingleSelect optionFilter={optionFilter} searchText='tion'>
 						<Option name='OptionA' Selected='option a' filterText='option a'>
-							{({ searchText }) => (
+							{({ searchText }: any) => (
 								<div style={{ display: 'flex' }}>
 									<div style={{ width: 100 }}>{searchText}</div>
 									<div>option a</div>
@@ -207,7 +207,7 @@ describe('SearchableSingleSelect', () => {
 							)}
 						</Option>
 						<Option name='OptionB' Selected='option b' filterText='option b'>
-							{({ searchText }) => (
+							{({ searchText }: any) => (
 								<div style={{ display: 'flex' }}>
 									<div style={{ width: 100 }}>{searchText}</div>
 									<div>option b</div>
@@ -215,7 +215,7 @@ describe('SearchableSingleSelect', () => {
 							)}
 						</Option>
 						<Option name='OptionC' Selected='option c' filterText='option c'>
-							{({ searchText }) => (
+							{({ searchText }: any) => (
 								<div style={{ display: 'flex' }}>
 									<div style={{ width: 100 }}>{searchText}</div>
 									<div>option c</div>

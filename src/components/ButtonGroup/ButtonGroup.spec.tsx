@@ -41,7 +41,7 @@ describe('ButtonGroup', () => {
 
 describe('ButtonGroup', () => {
 	it('prop onSelect', () => {
-		const onSelect = sinon.spy();
+		const onSelect: any = sinon.spy();
 		const wrapper = mount(
 			<ButtonGroup onSelect={onSelect}>
 				<ButtonGroup.Button />

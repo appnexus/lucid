@@ -13,11 +13,11 @@ import { ToolTipDumb as ToolTip } from '../ToolTip/ToolTip';
 jest.mock('d3-shape', () => ({
 	arc: jest.fn(() => ({
 		innerRadius: jest.fn(() => ({
-			outerRadius: jest.fn(() => arg => `${arg}`),
+			outerRadius: jest.fn(() => (arg: any) => `${arg}`),
 		})),
 	})),
 	pie: jest.fn(() => ({
-		sort: jest.fn(() => arg => arg),
+		sort: jest.fn(() => (arg: any) => arg),
 	})),
 }));
 
@@ -29,7 +29,7 @@ const sampleData = [
 
 describe('PieChart', () => {
 	common(PieChart, {
-		exemptFunctionProps: ['xAxisFormatter', 'yAxisFormatter'],
+		exemptFunctionProps: ['xAxisFormatter', 'yAxisFormatter'] as any,
 	});
 
 	describe('render', () => {
@@ -164,7 +164,7 @@ describe('PieChart', () => {
 		describe('ToolTip', () => {
 			it('should pass through props to ToolTip', () => {
 				const wrapper = shallow(
-					<PieChart data={sampleData} ToolTip={{ kind: 'info' }} />
+					<PieChart data={sampleData} ToolTip={{ kind: 'info' } as any} />
 				);
 
 				assert.equal(wrapper.find(ToolTip).prop('kind'), 'info');
@@ -260,7 +260,7 @@ describe('PieChart', () => {
 				const wrapper = shallow(
 					<PieChart
 						data={sampleData}
-						xAxisFormatter={_.toUpper}
+						xAxisFormatter={_.toUpper as any} 
 						isHovering
 						hoveringIndex={0}
 					/>

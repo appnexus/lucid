@@ -16,7 +16,7 @@ const {
 } = LineChart;
 
 describe('LineChart', () => {
-	let wrapper;
+	let wrapper: any;
 
 	afterEach(() => {
 		if (wrapper) {
@@ -33,7 +33,7 @@ describe('LineChart', () => {
 			'yAxisFormatter',
 			'y2AxisFormatter',
 			'y2AxisTooltipDataFormatter',
-		],
+		] as any,
 		getDefaultProps: () => ({
 			data: [
 				{ x: new Date('2015-01-01T00:00:00Z'), y: 1 },

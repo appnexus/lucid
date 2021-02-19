@@ -10,8 +10,8 @@ import { Motion } from 'react-motion';
 
 describe('Collapsible', () => {
 	common(Collapsible, {
-		selectRoot: wrapper => wrapper.find(Motion).shallow(),
-	});
+		selectRoot: (wrapper: any) => wrapper.find(Motion).shallow(),
+	} as any);
 
 	describe('render', () => {
 		it('should render a root element wrapping a content element', () => {
@@ -49,7 +49,7 @@ describe('Collapsible', () => {
 		 * */
 		describe('isExpanded', () => {
 			/*
-			let wrapper;
+			let wrapper: any;
 			let testDomElement;
 
 			// only needed for the skipped tests:
@@ -124,7 +124,7 @@ describe('Collapsible', () => {
 		 * */
 		describe('isAnimated', () => {
 			/*
-			let wrapper;
+			let wrapper: any;
 			let testDomElement;
 
 			/* only needed for the skipped tests:
@@ -179,7 +179,7 @@ describe('Collapsible', () => {
 
 		describe('isMountControlled', () => {
 			/*
-			let wrapper;
+			let wrapper: any;
 			let testDomElement;
 
 			// only needed for the skipped tests:

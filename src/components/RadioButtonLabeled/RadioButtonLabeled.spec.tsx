@@ -78,11 +78,13 @@ describe('RadioButtonLabeled', () => {
 						isSelected={true}
 						style={{ fontWeight: 'bold' }}
 						onSelect={_.noop}
-						foo={1}
-						bar={2}
-						baz={3}
-						qux={4}
-						quux={5}
+						{...{
+							foo: 1,
+							bar: 2,
+							baz: 3,
+							qux: 4,
+							quux: 5
+						}}
 					/>
 				);
 				const radioButtonProps = wrapper.find(RadioButton).props();

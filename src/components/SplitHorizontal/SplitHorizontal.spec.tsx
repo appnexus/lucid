@@ -52,7 +52,7 @@ describe('SplitHorizontal', () => {
 
 	describe('props', () => {
 		describe('isExpanded', () => {
-			let mountWrapper;
+			let mountWrapper: any;
 
 			afterEach(() => {
 				if (mountWrapper) {
@@ -81,7 +81,7 @@ describe('SplitHorizontal', () => {
 		});
 
 		describe('isAnimated', () => {
-			let wrapper;
+			let wrapper: any;
 
 			afterEach(() => {
 				if (wrapper) {
@@ -130,8 +130,8 @@ describe('SplitHorizontal', () => {
 		});
 
 		describe('collapseShift', () => {
-			let wrapper;
-			let mountTestDiv;
+			let wrapper: any;
+			let mountTestDiv: any;
 
 			beforeEach(() => {
 				mountTestDiv = document.createElement('div');
@@ -192,8 +192,8 @@ describe('SplitHorizontal', () => {
 		});
 
 		describe('onResizing', () => {
-			let wrapper;
-			let mountTestDiv;
+			let wrapper: any;
+			let mountTestDiv: any;
 
 			beforeEach(() => {
 				mountTestDiv = document.createElement('div');
@@ -238,8 +238,8 @@ describe('SplitHorizontal', () => {
 		});
 
 		describe('onResize', () => {
-			let wrapper;
-			let mountTestDiv;
+			let wrapper: any;
+			let mountTestDiv: any;
 
 			beforeEach(() => {
 				mountTestDiv = document.createElement('div');
@@ -334,7 +334,7 @@ describe('SplitHorizontal', () => {
 				);
 
 				const motionWrapper = wrapper.find(Motion).shallow();
-				const TopPane = motionWrapper.find(
+				const TopPane: any = motionWrapper.find(
 					'.lucid-SplitHorizontal-inner > .lucid-SplitHorizontal-TopPane'
 				);
 
@@ -398,7 +398,7 @@ describe('SplitHorizontal', () => {
 				);
 
 				const motionWrapper = wrapper.find(Motion).shallow();
-				const BottomPane = motionWrapper.find(
+				const BottomPane: any = motionWrapper.find(
 					'.lucid-SplitHorizontal-inner > .lucid-SplitHorizontal-BottomPane'
 				);
 

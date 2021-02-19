@@ -1,7 +1,7 @@
 import { onSwipe, onPrev, onNext } from './DateSelect.reducers';
 
 describe('DateSelect reducers', () => {
-	const initialState = {
+	const initialState: any = {
 		offset: 0,
 	};
 

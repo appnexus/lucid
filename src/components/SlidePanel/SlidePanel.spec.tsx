@@ -20,7 +20,7 @@ describe('SlidePanel', () => {
 				</SlidePanel>,
 				{ disableLifecycleMethods: true }
 			);
-			const slidePanelInstance = wrapper.instance();
+			const slidePanelInstance: any = wrapper.instance();
 			slidePanelInstance.rootHTMLDivElement.current = {
 				getBoundingClientRect: jest.fn(() => ({ width: 100 })),
 			};
@@ -46,7 +46,7 @@ describe('SlidePanel', () => {
 				</SlidePanel>,
 				{ disableLifecycleMethods: true }
 			);
-			const slidePanelInstance = wrapper.instance();
+			const slidePanelInstance: any = wrapper.instance();
 			slidePanelInstance.rootHTMLDivElement.current = {
 				getBoundingClientRect: jest.fn(() => ({ width: 100 })),
 			};
@@ -62,11 +62,11 @@ describe('SlidePanel', () => {
 		describe('isLooped', () => {
 			const shiftChildren = domHelpers.shiftChildren;
 			const slidestripElement = {};
-			let wrapper;
-			let slidePanelInstance;
+			let wrapper: any;
+			let slidePanelInstance: any;
 
 			beforeEach(() => {
-				domHelpers.shiftChildren = jest.fn(); // eslint-disable-line no-import-assign
+				(domHelpers as any).shiftChildren = jest.fn(); // eslint-disable-line no-import-assign
 
 				wrapper = shallow(
 					<SlidePanel isLooped offset={0}>
@@ -88,7 +88,7 @@ describe('SlidePanel', () => {
 			});
 
 			afterEach(() => {
-				domHelpers.shiftChildren = shiftChildren; // eslint-disable-line no-import-assign
+				(domHelpers as any).shiftChildren = shiftChildren; // eslint-disable-line no-import-assign
 				jest.useRealTimers();
 			});
 

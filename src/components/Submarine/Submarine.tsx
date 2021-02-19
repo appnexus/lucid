@@ -29,7 +29,7 @@ interface ISubmarinePrimaryProps extends StandardProps {}
 interface ISumbarineTitleProps extends StandardProps {}
 
 interface ISubmarineBarProps extends StandardProps {
-	Title: ISumbarineTitleProps;
+	Title?: ISumbarineTitleProps | string;
 }
 
 const Primary = (_props: ISubmarinePrimaryProps): null => null;

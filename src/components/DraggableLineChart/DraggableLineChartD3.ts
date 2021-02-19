@@ -77,7 +77,7 @@ export interface IDraggableLineChart extends StandardProps {
 	/** Drag handler function which is a callable function executed at the end of drag.
 			Called when the user stops to dragging an item.
 		  Signature: `({ event, props }) => {}` */
-	onDragEnd: IOnDragEnd;
+	onDragEnd?: IOnDragEnd;
 	/** Drag handler function which is a callable function executed at the end of drag.
 			Called when the user stops to dragging an item.
 		  Signature: `({ event, props }) => {}`

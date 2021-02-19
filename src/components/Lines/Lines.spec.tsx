@@ -16,19 +16,19 @@ const defaultData = [
 ];
 
 // The scales are functions to guard against inadvertent scale mutation
-const defaultXScale = d3Scale
+const defaultXScale: any = d3Scale
 	.scaleLinear()
 	.domain([0, 10])
 	.range([0, 100]);
 
-const defaultYScale = d3Scale
+const defaultYScale: any = d3Scale
 	.scaleLinear()
 	.domain([0, 100])
 	.range([1000, 0]);
 
 describe('Lines', () => {
 	common(Lines, {
-		exemptFunctionProps: ['xScale', 'yScale'],
+		exemptFunctionProps: ['xScale', 'yScale'] as any,
 		getDefaultProps: () => ({
 			data: [{ x: new Date('2015-01-01T00:00:00Z'), y: 1 }],
 			xScale: d3Scale.scaleTime(),
@@ -201,7 +201,7 @@ describe('Lines', () => {
 
 		describe('yScale', () => {
 			it('should work with time scales', () => {
-				const yScale = d3Scale
+				const yScale: any = d3Scale
 					.scaleTime()
 					.domain([
 						new Date('2015-01-01T00:00:00Z'),

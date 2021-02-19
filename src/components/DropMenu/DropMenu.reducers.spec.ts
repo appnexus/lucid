@@ -12,7 +12,7 @@ import {
 describe('DropMenu reducers', () => {
 	describe('onExpand', () => {
 		it('should set isExpanded=true, focusedIndex=null if selectedIndices is empty', () => {
-			const initialState = {
+			const initialState: any = {
 				selectedIndices: [],
 			};
 
@@ -25,7 +25,7 @@ describe('DropMenu reducers', () => {
 		});
 
 		it('should set isExpanded=true, focusedIndex={last selectedIndices}', () => {
-			const initialState = {
+			const initialState: any = {
 				selectedIndices: [3, 2],
 			};
 
@@ -40,7 +40,7 @@ describe('DropMenu reducers', () => {
 
 	describe('onCollapse', () => {
 		it('should set isExpanded=false', () => {
-			const initialState = {};
+			const initialState: any = {};
 
 			const nextState = onCollapse(initialState);
 			const { isExpanded } = nextState;
@@ -51,7 +51,7 @@ describe('DropMenu reducers', () => {
 
 	describe('onSelect', () => {
 		it('should set isExpanded=false, selectedIndices=[optionIndex]', () => {
-			const initialState = {};
+			const initialState: any = {};
 
 			const optionIndex = 3;
 
@@ -65,7 +65,7 @@ describe('DropMenu reducers', () => {
 
 	describe('onFocusNext', () => {
 		it('should set focusedIndex=0 if focusedIndex=null', () => {
-			const initialState = {
+			const initialState: any = {
 				focusedIndex: null,
 			};
 
@@ -76,7 +76,7 @@ describe('DropMenu reducers', () => {
 		});
 
 		it('should set focusedIndex+=1 if focusedIndex={number}', () => {
-			const initialState = {
+			const initialState: any = {
 				focusedIndex: 2,
 			};
 
@@ -89,7 +89,7 @@ describe('DropMenu reducers', () => {
 
 	describe('onFocusPrev', () => {
 		it('should set focusedIndex=null if focusedIndex=null', () => {
-			const initialState = {
+			const initialState: any = {
 				focusedIndex: null,
 			};
 
@@ -100,7 +100,7 @@ describe('DropMenu reducers', () => {
 		});
 
 		it('should set focusedIndex=null if focusedIndex=0', () => {
-			const initialState = {
+			const initialState: any = {
 				focusedIndex: 0,
 			};
 
@@ -111,7 +111,7 @@ describe('DropMenu reducers', () => {
 		});
 
 		it('should set focusedIndex-=1 if focusedIndex={number}', () => {
-			const initialState = {
+			const initialState: any = {
 				focusedIndex: 2,
 			};
 
@@ -124,7 +124,7 @@ describe('DropMenu reducers', () => {
 
 	describe('onFocusOption', () => {
 		it('should set focusedIndex=optionIndex', () => {
-			const initialState = {};
+			const initialState: any = {};
 
 			const optionIndex = 3;
 

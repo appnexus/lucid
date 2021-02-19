@@ -12,7 +12,7 @@ describe('LoadingMessage', () => {
 	common(LoadingMessage);
 
 	describe('render', () => {
-		let wrapper;
+		let wrapper: any;
 
 		beforeEach(() => (wrapper = shallow(<LoadingMessage />)));
 
@@ -81,7 +81,7 @@ describe('LoadingMessage', () => {
 			});
 
 			describe('null', () => {
-				let wrapper;
+				let wrapper: any;
 
 				beforeEach(() => (wrapper = shallow(<LoadingMessage Title={null} />)));
 

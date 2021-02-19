@@ -4,6 +4,6 @@ import Banner from './Banner';
 
 describe('Banner', () => {
 	common(Banner, {
-		selectRoot: wrapper => wrapper.find('.lucid-Banner'),
-	});
+		selectRoot: (wrapper: any) => wrapper.find('.lucid-Banner'),
+	} as any);
 });

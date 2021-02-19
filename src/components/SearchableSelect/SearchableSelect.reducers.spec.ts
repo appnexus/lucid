@@ -5,7 +5,7 @@ import { onSelect, onSearch } from './SearchableSelect.reducers';
 describe('SearchableSelect reducers', () => {
 	describe('onSelect', () => {
 		it('should set selectedIndex=[newIndex] and update DropMenu state', () => {
-			const initialState = {};
+			const initialState: any = {};
 
 			const newIndex = 3;
 
@@ -19,7 +19,7 @@ describe('SearchableSelect reducers', () => {
 
 	describe('onSearch', () => {
 		it('should set searchText=[inputText], selectedIndex=null, and update DropMenu state', () => {
-			const initialState = {};
+			const initialState: any = {};
 
 			const inputText = 'search';
 			const firstVisibleIndex = 41;

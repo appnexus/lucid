@@ -96,10 +96,12 @@ describe('Checkbox', () => {
 					checked={true}
 					style={{ color: 'purple' }}
 					onSelect={_.noop}
-					foo={1}
-					bar={2}
-					baz={3}
-					qux={4}
+					{...{
+						foo: 1,
+						bar: 2,
+						baz: 3,
+						qux: 4
+					}}
 				/>
 			);
 
@@ -128,13 +130,13 @@ describe('Checkbox', () => {
 	});
 });
 
-function simulateEvent(reactElement, selector, event) {
+function simulateEvent(reactElement: any, selector: any, event: any) {
 	mount(reactElement)
 		.find(selector)
 		.simulate(event);
 }
 
-function verifyArgumentsWhenFalse(event) {
+function verifyArgumentsWhenFalse(event: any) {
 	_.forEach(
 		[
 			'',
@@ -144,7 +146,7 @@ function verifyArgumentsWhenFalse(event) {
 			'-visualization-checkmark',
 		],
 		classSubString => {
-			const onSelect = sinon.spy();
+			const onSelect: any = sinon.spy();
 
 			simulateEvent(
 				<Checkbox isSelected={false} onSelect={onSelect} />,
@@ -152,12 +154,12 @@ function verifyArgumentsWhenFalse(event) {
 				event
 			);
 			assert.equal(onSelect.args[0][0], true);
-			assert(_.last(onSelect.args[0]).event);
+			assert((_.last(onSelect.args[0]) as any).event);
 		}
 	);
 }
 
-function verifyArgumentsWhenTrue(event) {
+function verifyArgumentsWhenTrue(event: any) {
 	_.forEach(
 		[
 			'',
@@ -167,7 +169,7 @@ function verifyArgumentsWhenTrue(event) {
 			'-visualization-checkmark',
 		],
 		classSubString => {
-			const onSelect = sinon.spy();
+			const onSelect: any = sinon.spy();
 
 			simulateEvent(
 				<Checkbox isSelected={true} onSelect={onSelect} />,
@@ -175,12 +177,12 @@ function verifyArgumentsWhenTrue(event) {
 				event
 			);
 			assert.equal(onSelect.args[0][0], false);
-			assert(_.last(onSelect.args[0]).event);
+			assert((_.last(onSelect.args[0]) as any).event);
 		}
 	);
 }
 
-function verifyOnSelect(event) {
+function verifyOnSelect(event: any) {
 	_.forEach(
 		[
 			'',
@@ -190,7 +192,7 @@ function verifyOnSelect(event) {
 			'-visualization-checkmark',
 		],
 		classSubString => {
-			const onSelect = sinon.spy();
+			const onSelect: any = sinon.spy();
 
 			simulateEvent(
 				<Checkbox onSelect={onSelect} />,

@@ -23,8 +23,8 @@ describe('StickySection', () => {
 
 	describe('props', () => {
 		describe('lowerBound', () => {
-			let wrapper;
-			let mountTestdiv;
+			let wrapper: any;
+			let mountTestdiv: any;
 
 			beforeEach(() => {
 				document.body.style.height = '10000px';
@@ -48,7 +48,7 @@ describe('StickySection', () => {
 				});
 
 				// scroll to position 499
-				window.pageYOffset = 499;
+				(window as any).pageYOffset = 499;
 				dispatchDOMEvent(window, 'scroll');
 
 				// check that the fixed position sticky section is rendered
@@ -70,7 +70,7 @@ describe('StickySection', () => {
 				);
 
 				// scroll to position 501, past the lowerBound value
-				window.pageYOffset = 501;
+				(window as any).pageYOffset = 501;
 				dispatchDOMEvent(window, 'scroll');
 
 				// check that the sticky section is no longer fixed position

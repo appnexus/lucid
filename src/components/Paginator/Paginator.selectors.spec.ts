@@ -53,7 +53,7 @@ describe('Paginator selectors', () => {
 						expectedTotalPages: 2,
 					},
 				],
-				({ state, expectedTotalPages }) => {
+				({ state, expectedTotalPages }: any) => {
 					it('should calculate the totalPages', () => {
 						assert.equal(
 							totalPages(state),

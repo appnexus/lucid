@@ -8,7 +8,7 @@ import { TabsDumb as Tabs } from './Tabs';
 
 describe('Tabs', () => {
 	common(Tabs, {
-		exemptChildComponents: ['Tab', 'Title'],
+		exemptChildComponents: ['Tab', 'Title'] as any,
 	});
 
 	describe('props', () => {
@@ -25,7 +25,7 @@ describe('Tabs', () => {
 
 		it('Tab as props', () => {
 			const wrapper = shallow(
-				<Tabs Tab={[{ children: 'Bert' }, { children: 'Ernie' }]} />
+				<Tabs Tab={[{ children: 'Bert' }, { children: 'Ernie' }] as any} />
 			);
 
 			assert.equal(wrapper.find('.lucid-Tabs-bar').children().length, 2);
@@ -38,7 +38,7 @@ describe('Tabs', () => {
 					Tab={[
 						{ Title: 'Coolest', children: 'Bert' },
 						{ Title: 'Not so cool', children: 'Ernie' },
-					]}
+					] as any}
 				/>
 			);
 
@@ -130,10 +130,10 @@ describe('Tabs', () => {
 		});
 
 		describe('onSelect', () => {
-			const onSelect = sinon.spy();
-			let clickEvent;
-			let wrapper;
-			let tabBar;
+			const onSelect: any = sinon.spy();
+			let clickEvent: any;
+			let wrapper: any;
+			let tabBar: any;
 
 			beforeEach(() => {
 				onSelect.reset();

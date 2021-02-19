@@ -45,8 +45,8 @@ interface ISidebarPrimaryProps extends StandardProps {}
 interface ISidebarTitleProps extends StandardProps {}
 
 interface ISidebarBarProps extends StandardProps {
-	Title?: ISidebarTitleProps;
-	title?: ISidebarTitleProps;
+	Title?: ISidebarTitleProps | string;
+	title?: ISidebarTitleProps | string;
 	hasGutters: boolean;
 }
 

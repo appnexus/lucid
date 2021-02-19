@@ -3,7 +3,7 @@ import * as DropMenu from '../DropMenu/DropMenu.reducers';
 import * as SearchField from '../SearchField/SearchField.reducers';
 import { ISearchableMultiSelectState } from './SearchableMultiSelect';
 
-export function onSelect(state: ISearchableMultiSelectState, selectedIndex: number[]): ISearchableMultiSelectState {
+export function onSelect(state: ISearchableMultiSelectState, selectedIndex: number[] | number): ISearchableMultiSelectState {
     const arr: number[] = [];
 	return {
 		...state,

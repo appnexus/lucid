@@ -26,7 +26,7 @@ describe('Validation', () => {
 
 	describe('props', () => {
 		describe('Error', () => {
-			let wrapper;
+			let wrapper: any;
 
 			beforeEach(
 				() =>
@@ -50,7 +50,7 @@ describe('Validation', () => {
 		});
 
 		describe('null Error', () => {
-			let wrapper;
+			let wrapper: any;
 
 			beforeEach(
 				() =>

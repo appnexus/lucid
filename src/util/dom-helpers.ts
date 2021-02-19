@@ -48,7 +48,7 @@ export function scrollParentTo(
 export function dispatchDOMEvent(
 	node: EventTarget,
 	eventName: string,
-	assignedEventProps: any
+	assignedEventProps?: any
 ) {
 	const event = document.createEvent('Event');
 	event.initEvent(eventName, true, true);

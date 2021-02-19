@@ -76,7 +76,7 @@ describe('Selection', () => {
 	describe('props', () => {
 		it('onRemove', () => {
 			const onRemove = jest.fn();
-			const wrapper = shallow(<Selection onRemove={onRemove} />);
+			const wrapper: any = shallow(<Selection onRemove={onRemove} />);
 
 			wrapper.find('CloseIcon').prop('onClick')({});
 			expect(onRemove).toHaveBeenCalled();

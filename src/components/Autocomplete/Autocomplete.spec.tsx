@@ -249,7 +249,7 @@ describe('Autocomplete', () => {
 			});
 
 			it('should be called when a suggestion is selected from the menu', () => {
-				const onSelect = sinon.spy();
+				const onSelect: any = sinon.spy();
 
 				wrapper = mount(
 					<Autocomplete

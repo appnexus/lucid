@@ -50,7 +50,7 @@ describe('SplitVertical', () => {
 
 	describe('props', () => {
 		describe('isExpanded', () => {
-			let mountWrapper;
+			let mountWrapper: any;
 
 			afterEach(() => {
 				if (mountWrapper) {
@@ -79,7 +79,7 @@ describe('SplitVertical', () => {
 		});
 
 		describe('isAnimated', () => {
-			let wrapper;
+			let wrapper: any;
 
 			afterEach(() => {
 				if (wrapper) {
@@ -129,8 +129,8 @@ describe('SplitVertical', () => {
 		});
 
 		describe('collapseShift', () => {
-			let wrapper;
-			let mountTestDiv;
+			let wrapper: any;
+			let mountTestDiv: any;
 
 			beforeEach(() => {
 				mountTestDiv = document.createElement('div');
@@ -195,8 +195,8 @@ describe('SplitVertical', () => {
 		});
 
 		describe('onResizing', () => {
-			let wrapper;
-			let mountTestDiv;
+			let wrapper: any;
+			let mountTestDiv: any;
 
 			beforeEach(() => {
 				mountTestDiv = document.createElement('div');
@@ -245,8 +245,8 @@ describe('SplitVertical', () => {
 		});
 
 		describe('onResize', () => {
-			let wrapper;
-			let mountTestDiv;
+			let wrapper: any;
+			let mountTestDiv: any;
 
 			beforeEach(() => {
 				mountTestDiv = document.createElement('div');
@@ -377,7 +377,7 @@ describe('SplitVertical', () => {
 				);
 
 				const motionWrapper = wrapper.find(Motion).shallow();
-				const LeftPane = motionWrapper.find(
+				const LeftPane: any = motionWrapper.find(
 					'.lucid-SplitVertical-inner > .lucid-SplitVertical-LeftPane'
 				);
 
@@ -439,7 +439,7 @@ describe('SplitVertical', () => {
 				);
 
 				const motionWrapper = wrapper.find(Motion).shallow();
-				const RightPane = motionWrapper.find(
+				const RightPane: any = motionWrapper.find(
 					'.lucid-SplitVertical-inner > .lucid-SplitVertical-RightPane'
 				);
 

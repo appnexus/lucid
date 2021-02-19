@@ -51,7 +51,7 @@ describe('ToolTip', () => {
 
 		describe('className', () => {
 			describe('FlyOut', () => {
-				let wrapper;
+				let wrapper: any;
 
 				afterEach(() => {
 					if (wrapper) {
@@ -67,7 +67,7 @@ describe('ToolTip', () => {
 						</ToolTip>
 					);
 
-					const flyOutClassName = document.querySelector(
+					const flyOutClassName = (document as any).querySelector(
 						'.lucid-ToolTip-FlyOut.lucid-ContextMenu-FlyOut'
 					).className;
 
@@ -297,7 +297,7 @@ describe('ToolTip', () => {
 
 			it('should not call onMouseOut if cursor enters FlyOut', done => {
 				const spy = sinon.spy();
-				const wrapper = shallow(
+				const wrapper: any = shallow(
 					<ToolTip isExpanded onMouseOut={spy}>
 						<Target>Target</Target>
 						<Body>Body</Body>

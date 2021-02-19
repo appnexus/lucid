@@ -46,7 +46,7 @@ describe('DragCaptureZone', () => {
 
 		describe('pass throughs', () => {
 			it('passes through all props to the root element.', () => {
-				const wrapper = mount(<DragCaptureZone foo={1} bar={2} baz={3} />);
+				const wrapper = mount(<DragCaptureZone {...{ foo: 1, bar: 2, baz: 3 }} />);
 				const rootProps = wrapper.find('div').props();
 
 				_.forEach(['foo', 'bar', 'baz'], prop => {
@@ -72,7 +72,7 @@ describe('DragCaptureZone', () => {
 	};
 
 	describe('user presses the mouse button down over the rendered component', () => {
-		let onDragStart;
+		let onDragStart: any;
 
 		beforeEach(() => {
 			onDragStart = sinon.spy();
@@ -99,13 +99,13 @@ describe('DragCaptureZone', () => {
 		});
 
 		it('...and passes along a React synthetic event as part of the second argument.', () => {
-			assert(_.last(onDragStart.args[0]).event);
+			assert((_.last(onDragStart.args[0]) as any).event);
 		});
 	});
 
 	describe('user moves the mouse button after having started a drag interaction', () => {
 		let event;
-		let onDrag;
+		let onDrag: any;
 
 		beforeEach(() => {
 			event = document.createEvent('Event');
@@ -137,13 +137,13 @@ describe('DragCaptureZone', () => {
 		});
 
 		it('...and passes along a native event as part of the second argument.', () => {
-			assert(_.last(onDrag.args[0]).event instanceof window.Event);
+			assert((_.last(onDrag.args[0]) as any).event instanceof window.Event);
 		});
 	});
 
 	describe('user releases the mouse button after having started a drag interaction', () => {
 		let event;
-		let onDragEnd;
+		let onDragEnd: any;
 
 		beforeEach(() => {
 			event = document.createEvent('Event');
@@ -175,18 +175,18 @@ describe('DragCaptureZone', () => {
 		});
 
 		it('...and passes along a native event as part of the second argument.', () => {
-			assert(_.last(onDragEnd.args[0]).event instanceof window.Event);
+			assert((_.last(onDragEnd.args[0]) as any).event instanceof window.Event);
 		});
 	});
 
 	describe('the drag action is canceled', () => {
 		const mockEvent = {};
-		let onDragCancel;
+		let onDragCancel: any;
 
 		beforeEach(() => {
 			onDragCancel = sinon.spy();
 
-			const wrapper = shallow(<DragCaptureZone onDragCancel={onDragCancel} />, {
+			const wrapper: any = shallow(<DragCaptureZone onDragCancel={onDragCancel} />, {
 				disableLifecycleMethods: true,
 			});
 			wrapper.instance().handleDragCancel(mockEvent);
@@ -197,7 +197,7 @@ describe('DragCaptureZone', () => {
 		});
 
 		it('...and passes along a React synthetic event as part of the last argument.', () => {
-			assert(_.last(onDragCancel.args[0]).event);
+			assert((_.last(onDragCancel.args[0]) as any).event);
 		});
 	});
 });

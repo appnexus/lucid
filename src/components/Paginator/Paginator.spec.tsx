@@ -120,7 +120,7 @@ describe('Paginator', () => {
 						SingleSelect={explicitSingleSelectProps}
 					/>
 				);
-				const singleSelectProps = wrapper
+				const singleSelectProps: any = wrapper
 					.find('.lucid-Paginator-page-size-container')
 					.first()
 					.shallow()
@@ -147,10 +147,10 @@ describe('Paginator', () => {
 
 		describe('totalCount', () => {
 			it('should generate `totalPages` from `totalCount`', () => {
-				const HybridPaginator = buildModernHybridComponent(Paginator, {
+				const HybridPaginator: any = buildModernHybridComponent(Paginator, {
 					reducers,
 					selectors,
-				});
+				} as any);
 				const totalCount = 100;
 				const wrapper = shallow(
 					<HybridPaginator totalCount={totalCount} pageSizeOptions={[10]} />
@@ -190,7 +190,7 @@ describe('Paginator', () => {
 
 		describe('TextField', () => {
 			it('should propagate TextField props through to TextField component', () => {
-				const explicitTextFieldProps = {
+				const explicitTextFieldProps: any = {
 					style: {},
 					isMultiline: true,
 					rows: 2,
@@ -201,7 +201,7 @@ describe('Paginator', () => {
 				const wrapper = shallow(
 					<Paginator TextField={explicitTextFieldProps} />
 				);
-				const textFieldProps = wrapper
+				const textFieldProps: any = wrapper
 					.find(TextField)
 					.first()
 					.props();
@@ -213,7 +213,7 @@ describe('Paginator', () => {
 		});
 
 		describe('onPageSelect', () => {
-			let wrapper;
+			let wrapper: any;
 
 			afterEach(() => {
 				if (wrapper) {

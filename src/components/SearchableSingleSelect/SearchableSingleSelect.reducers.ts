@@ -2,7 +2,7 @@ import * as DropMenu from '../DropMenu/DropMenu.reducers';
 import SearchField from '../SearchField/SearchField.reducers';
 import { ISearchableSingleSelectState } from './SearchableSingleSelect';
 
-export function onSelect(state: ISearchableSingleSelectState, selectedIndex: number) {
+export function onSelect(state: ISearchableSingleSelectState, selectedIndex: number | null) {
 	return {
 		...state,
 		selectedIndex

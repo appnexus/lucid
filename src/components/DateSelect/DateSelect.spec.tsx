@@ -22,7 +22,7 @@ describe('DateSelect', () => {
 			const mockEvent = {};
 			const selectDate = new Date('2017-02-28T00:00:00Z');
 			const wrapper = shallow(<DateSelect onSelectDate={onSelectDate} />);
-			const dateSelectInstance = wrapper.instance();
+			const dateSelectInstance: any = wrapper.instance();
 			dateSelectInstance.handleDayClick(
 				selectDate,
 				{ disabled: false },
@@ -40,7 +40,7 @@ describe('DateSelect', () => {
 			const mockEvent = {};
 			const selectDate = new Date('2017-02-28T00:00:00Z');
 			const wrapper = shallow(<DateSelect onSelectDate={onSelectDate} />);
-			const dateSelectInstance = wrapper.instance();
+			const dateSelectInstance: any = wrapper.instance();
 			dateSelectInstance.handleDayClick(
 				selectDate,
 				{ disabled: true },
@@ -59,7 +59,7 @@ describe('DateSelect', () => {
 					onPrev={onPrev}
 				/>
 			);
-			const dateSelectInstance = wrapper.instance();
+			const dateSelectInstance: any = wrapper.instance();
 			dateSelectInstance.handlePrev({ event: mockEvent });
 
 			expect(onPrev).toHaveBeenCalledWith({
@@ -77,7 +77,7 @@ describe('DateSelect', () => {
 					onNext={onNext}
 				/>
 			);
-			const dateSelectInstance = wrapper.instance();
+			const dateSelectInstance: any = wrapper.instance();
 			dateSelectInstance.handleNext({ event: mockEvent });
 
 			expect(onNext).toHaveBeenCalledWith({
@@ -93,7 +93,7 @@ describe('DateSelect', () => {
 			const wrapper = shallow(
 				<DateSelect initialMonth={new Date('2017-02-01T00:00:00Z')} />
 			);
-			const dateSelectInstance = wrapper.instance();
+			const dateSelectInstance: any = wrapper.instance();
 			dateSelectInstance.handleDayMouseEnter(cursorDate, { disabled: false });
 			expect(dateSelectInstance.state.cursor).toBe(cursorDate);
 		});
@@ -103,7 +103,7 @@ describe('DateSelect', () => {
 			const wrapper = shallow(
 				<DateSelect initialMonth={new Date('2017-02-01T00:00:00Z')} />
 			);
-			const dateSelectInstance = wrapper.instance();
+			const dateSelectInstance: any = wrapper.instance();
 			dateSelectInstance.handleDayMouseEnter(cursorDate, { disabled: true });
 			expect(dateSelectInstance.state.cursor).not.toBe(cursorDate);
 		});
@@ -113,7 +113,7 @@ describe('DateSelect', () => {
 			const wrapper = shallow(
 				<DateSelect initialMonth={new Date('2017-02-01T00:00:00Z')} />
 			);
-			const dateSelectInstance = wrapper.instance();
+			const dateSelectInstance: any = wrapper.instance();
 			wrapper.setState(
 				{
 					cursor: cursorDate,

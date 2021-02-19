@@ -136,7 +136,7 @@ describe('RadioGroup', () => {
 		describe('pass throughs', () => {
 			it('passes through all props not defined in `propTypes` to the root element.', () => {
 				const wrapper = shallow(
-					<RadioGroup foo={1} bar={2} baz={3} qux={4} quux={5}>
+					<RadioGroup {...{foo: 1, bar: 2, baz: 3, qux: 4, quux: 5 }}>
 						<RadioGroup.RadioButton />
 						<RadioGroup.RadioButton />
 						<RadioGroup.RadioButton />
@@ -226,7 +226,7 @@ describe('RadioGroup', () => {
 
 	describe('user selects one of the radio button children', () => {
 		it('calls the function passed in as the `onSelect` prop...', () => {
-			const onSelect = sinon.spy();
+			const onSelect: any = sinon.spy();
 			const wrapper = mount(
 				<RadioGroup onSelect={onSelect}>
 					<RadioGroup.RadioButton />
@@ -245,7 +245,7 @@ describe('RadioGroup', () => {
 		});
 
 		it('...and passes along the index of that child as the first argument and a React synthetic event as the second argument.', () => {
-			const onSelect = sinon.spy();
+			const onSelect: any = sinon.spy();
 			const wrapper = mount(
 				<RadioGroup onSelect={onSelect}>
 					<RadioGroup.RadioButton />
@@ -261,12 +261,12 @@ describe('RadioGroup', () => {
 				.childAt(0)
 				.simulate('click');
 			assert.equal(onSelect.args[0][0], 1);
-			assert(_.last(onSelect.args[0]).event);
+			assert((_.last(onSelect.args[0]) as any).event);
 		});
 
 		it('calls the `onSelect` prop, if a function, of the child prior to calling its own.', () => {
 			const childOnSelect = sinon.spy();
-			const onSelect = sinon.spy();
+			const onSelect: any = sinon.spy();
 			const wrapper = mount(
 				<RadioGroup onSelect={onSelect}>
 					<RadioGroup.RadioButton />

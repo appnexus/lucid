@@ -5,8 +5,8 @@ import ProgressBar from './ProgressBar';
 
 describe('ProgressBar', () => {
 	common(ProgressBar, {
-		selectRoot: wrapper => wrapper.find('.lucid-ProgressBar'),
-	});
+		selectRoot: (wrapper: any) => wrapper.find('.lucid-ProgressBar'),
+	} as any);
 
 	describe('render', () => {
 		it('should render a ProgressBar', () => {

@@ -9,7 +9,7 @@ import { VerticalListMenuDumb as VerticalListMenu } from '../VerticalListMenu/Ve
 
 describe('VerticalTabs', () => {
 	common(VerticalTabs, {
-		exemptChildComponents: ['Tab', 'Title'],
+		exemptChildComponents: ['Tab', 'Title'] as any,
 	});
 
 	describe('render', () => {
@@ -175,8 +175,8 @@ describe('VerticalTabs', () => {
 		});
 
 		describe('onSelect', () => {
-			const onSelect = sinon.spy();
-			let wrapper;
+			const onSelect: any = sinon.spy();
+			let wrapper: any;
 
 			beforeEach(() => {
 				onSelect.reset();

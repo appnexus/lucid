@@ -7,11 +7,11 @@ import { common } from '../../util/generic-tests';
 import { SingleSelectDumb as SingleSelect } from './SingleSelect';
 import { DropMenuDumb as DropMenu } from '../DropMenu/DropMenu';
 
-const { Placeholder, Option, OptionGroup } = SingleSelect;
+const { Placeholder, Option, OptionGroup } = SingleSelect as any;
 
 describe('SingleSelect', () => {
 	common(SingleSelect, {
-		exemptChildComponents: ['Selected', 'FixedOption', 'NullOption'],
+		exemptChildComponents: ['Selected', 'FixedOption', 'NullOption'] as any,
 	});
 
 	describe('render', () => {
@@ -52,7 +52,7 @@ describe('SingleSelect', () => {
 		});
 
 		describe('hasReset', () => {
-			let wrapper;
+			let wrapper: any;
 
 			afterEach(() => {
 				if (wrapper) {
@@ -74,7 +74,7 @@ describe('SingleSelect', () => {
 					</SingleSelect>
 				);
 
-				const menuDOMNode = document.querySelector(
+				const menuDOMNode: any = document.querySelector(
 					'.lucid-ContextMenu-FlyOut .lucid-DropMenu-option-container'
 				);
 
@@ -100,7 +100,7 @@ describe('SingleSelect', () => {
 					</SingleSelect>
 				);
 
-				const menuDOMNode = document.querySelector('.lucid-ContextMenu-FlyOut');
+				const menuDOMNode: any = document.querySelector('.lucid-ContextMenu-FlyOut');
 
 				assert(
 					!_.includes(
@@ -247,14 +247,14 @@ describe('SingleSelect', () => {
 				);
 
 				const dropMenuWrapper = wrapper.find(DropMenu);
-				const flyOutStyle = dropMenuWrapper.prop('flyOutStyle');
+				const flyOutStyle: any = dropMenuWrapper.prop('flyOutStyle');
 				assert.equal(123, flyOutStyle.maxHeight, 'must match prop value');
 			});
 		});
 
 		describe('DropMenu', () => {
 			it('should pass thru all DropMenu props to the underlying DropMenu', () => {
-				const explicitDropMenuProps = {
+				const explicitDropMenuProps: any = {
 					isExpanded: true,
 					direction: 'up',
 					focusedIndex: 2,
@@ -269,7 +269,7 @@ describe('SingleSelect', () => {
 					</SingleSelect>
 				);
 
-				const dropMenuProps = wrapper.find('DropMenu').props();
+				const dropMenuProps: any = wrapper.find('DropMenu').props();
 
 				_.forEach(explicitDropMenuProps, (value, key) => {
 					assert(_.isEqual(dropMenuProps[key], value));
@@ -296,13 +296,13 @@ describe('SingleSelect', () => {
 				const controlProps = _.first(
 					_.map(filterTypes(dropMenuChildren, DropMenu.Control), 'props')
 				);
-				const dropMenuControlChildElement = _.first(
+				const dropMenuControlChildElement: any = _.first(
 					React.Children.toArray(controlProps.children)
 				);
 				const singleSelectControlChildren = React.Children.toArray(
 					dropMenuControlChildElement.props.children
 				);
-				const singleSelectControlContent = singleSelectControlChildren[0];
+				const singleSelectControlContent: any = singleSelectControlChildren[0];
 
 				assert.equal(
 					React.Children.toArray(singleSelectControlContent.props.children)[0],
@@ -412,10 +412,10 @@ describe('SingleSelect', () => {
 		});
 
 		describe('OptionGroup', () => {
-			let wrapper;
+			let wrapper: any;
 			let dropMenuWrapper;
 			let dropMenuChildren;
-			let optionGroupProps;
+			let optionGroupProps: any;
 
 			beforeEach(() => {
 				wrapper = shallow(

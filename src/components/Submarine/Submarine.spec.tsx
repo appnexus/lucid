@@ -297,7 +297,7 @@ describe('Submarine', () => {
 				const wrapper = shallow(<Submarine onResizing={onResizing} />);
 				const splitHorizontal = wrapper.find(SplitHorizontal);
 				const splitHorizontalOnResizing = splitHorizontal.prop('onResizing');
-				const lastArg = {
+				const lastArg: any = {
 					event: {},
 					props: wrapper.props(),
 				};
@@ -324,7 +324,7 @@ describe('Submarine', () => {
 				const wrapper = shallow(<Submarine onResize={onResize} />);
 				const splitHorizontal = wrapper.find(SplitHorizontal);
 				const splitHorizontalOnResize = splitHorizontal.prop('onResize');
-				const lastArg = {
+				const lastArg: any = {
 					event: {},
 					props: wrapper.props(),
 				};
@@ -354,8 +354,8 @@ describe('Submarine', () => {
 				const expanderWrapper = wrapper.find(
 					'.lucid-Submarine > .lucid-Submarine-Bar > .lucid-Submarine-Bar-header > .lucid-Submarine-expander'
 				);
-				const expanderWrapperOnClick = expanderWrapper.prop('onClick');
-				const lastArg = {
+				const expanderWrapperOnClick: any = expanderWrapper.prop('onClick');
+				const lastArg: any = {
 					event: {},
 					props: wrapper.props(),
 				};

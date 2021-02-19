@@ -12,7 +12,7 @@ describe('TimeSelectInput', () => {
 		onChange: jest.fn(),
 	};
 
-	let component;
+	let component: any;
 	beforeEach(() => {
 		component = shallow(<TimeSelectInput {...props} />);
 	});

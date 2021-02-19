@@ -15,7 +15,7 @@ describe('SidePanel', () => {
 				const onCollapse = jest.fn();
 				const wrapper = shallow(<SidePanel onCollapse={onCollapse} />);
 				const overlayWrapper = wrapper.find(Overlay);
-				const mockEvent = new Event('click');
+				const mockEvent: any = new Event('click');
 				overlayWrapper.prop('onBackgroundClick')({
 					event: mockEvent,
 					props: overlayWrapper.props(),
@@ -27,7 +27,7 @@ describe('SidePanel', () => {
 				const onCollapse = jest.fn();
 				const wrapper = shallow(<SidePanel onCollapse={onCollapse} />);
 				const overlayWrapper = wrapper.find(Overlay);
-				const mockEvent = new Event('keypress');
+				const mockEvent: any = new Event('keypress');
 				overlayWrapper.prop('onEscape')({
 					event: mockEvent,
 					props: overlayWrapper.props(),
@@ -60,11 +60,11 @@ describe('SidePanel', () => {
 						dy: 0,
 						pageX: 100,
 						pageY: 0,
-					},
+					} as any,
 					{
 						event: mockEvent,
 						props: dragCaptureZoneWrapper.props(),
-					}
+					} as any
 				);
 				expect(onResize).toHaveBeenCalled();
 			});

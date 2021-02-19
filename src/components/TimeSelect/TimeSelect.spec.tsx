@@ -14,7 +14,7 @@ describe('TimeSelect', () => {
 		isDisabled: false,
   };
 
-  let component;
+  let component: any;
   beforeEach(() => {
     component = shallow(<TimeSelect {...props} />);
   });

@@ -54,11 +54,13 @@ describe('Switch', () => {
 						isSelected={true}
 						style={{ fontWeight: 'bold' }}
 						onSelect={_.noop}
-						foo={1}
-						bar={2}
-						baz={3}
-						qux={4}
-						quux={5}
+						{...{
+							foo: 1,
+							bar: 2,
+							baz: 3,
+							qux: 4,
+							quux: 5,
+						}}
 					/>
 				);
 				const nativeProps = _.keys(
@@ -76,17 +78,17 @@ describe('Switch', () => {
 });
 
 describe('Switch', () => {
-	function simulateEvent(reactElement, selector, event) {
+	function simulateEvent(reactElement: any, selector: any, event: any) {
 		mount(reactElement)
 			.find(selector)
 			.simulate(event);
 	}
 
-	function verifyArgumentsWhenFalse(event) {
+	function verifyArgumentsWhenFalse(event: any) {
 		_.forEach(
 			['', '-native', '-visualization-container', '-visualization-handle'],
 			classSubString => {
-				const onSelect = sinon.spy();
+				const onSelect: any = sinon.spy();
 
 				simulateEvent(
 					<Switch isSelected={false} onSelect={onSelect} />,
@@ -94,16 +96,16 @@ describe('Switch', () => {
 					event
 				);
 				assert.equal(onSelect.args[0][0], true);
-				assert(_.last(onSelect.args[0]).event);
+				assert((_.last(onSelect.args[0]) as any).event);
 			}
 		);
 	}
 
-	function verifyArgumentsWhenTrue(event) {
+	function verifyArgumentsWhenTrue(event: any) {
 		_.forEach(
 			['', '-native', '-visualization-container', '-visualization-handle'],
 			classSubString => {
-				const onSelect = sinon.spy();
+				const onSelect: any = sinon.spy();
 
 				simulateEvent(
 					<Switch isSelected={true} onSelect={onSelect} />,
@@ -111,16 +113,16 @@ describe('Switch', () => {
 					event
 				);
 				assert.equal(onSelect.args[0][0], false);
-				assert(_.last(onSelect.args[0]).event);
+				assert((_.last(onSelect.args[0]) as any).event);
 			}
 		);
 	}
 
-	function verifyOnSelect(event) {
+	function verifyOnSelect(event: any) {
 		_.forEach(
 			['', '-native', '-visualization-container', '-visualization-handle'],
 			classSubString => {
-				const onSelect = sinon.spy();
+				const onSelect: any = sinon.spy();
 
 				simulateEvent(
 					<Switch onSelect={onSelect} />,

@@ -98,7 +98,7 @@ describe('Sidebar', () => {
 		});
 
 		describe('isExpanded', () => {
-			let wrapper;
+			let wrapper: any;
 
 			afterEach(() => {
 				if (wrapper && wrapper.exists()) {
@@ -324,7 +324,7 @@ describe('Sidebar', () => {
 				const wrapper = shallow(<Sidebar onResizing={onResizing} />);
 				const splitVertical = wrapper.find(SplitVertical);
 				const splitVerticalOnResize = splitVertical.prop('onResizing');
-				const lastArg = {
+				const lastArg: any = {
 					event: {},
 					props: wrapper.props(),
 				};
@@ -351,7 +351,7 @@ describe('Sidebar', () => {
 				const wrapper = shallow(<Sidebar onResize={onResize} />);
 				const splitVertical = wrapper.find(SplitVertical);
 				const splitVerticalOnResize = splitVertical.prop('onResize');
-				const lastArg = {
+				const lastArg: any = {
 					event: {},
 					props: wrapper.props(),
 				};
@@ -381,8 +381,8 @@ describe('Sidebar', () => {
 				const expanderWrapper = wrapper.find(
 					'.lucid-Sidebar > .lucid-Sidebar-Bar > .lucid-Sidebar-Bar-header > .lucid-Sidebar-expander'
 				);
-				const expanderWrapperOnMouseDown = expanderWrapper.prop('onMouseDown');
-				const lastArg = {
+				const expanderWrapperOnMouseDown: any = expanderWrapper.prop('onMouseDown');
+				const lastArg: any = {
 					event: {},
 					props: wrapper.props(),
 				};

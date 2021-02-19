@@ -5,7 +5,7 @@ import { onMouseOver, onMouseOut } from './PieChart.reducers';
 describe('PieChart reducers', () => {
 	describe('onMouseOver', () => {
 		it('should should set isHovering and hoveringIndex', () => {
-			const initialState = {
+			const initialState: any = {
 				foo: 1,
 			};
 
@@ -19,7 +19,7 @@ describe('PieChart reducers', () => {
 
 	describe('onMouseOut', () => {
 		it('should set isHovering to false', () => {
-			const initialState = {
+			const initialState: any = {
 				isHovering: true,
 			};
 

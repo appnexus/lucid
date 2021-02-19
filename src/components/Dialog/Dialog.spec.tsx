@@ -11,8 +11,8 @@ describe('Dialog', () => {
 		getDefaultProps: () => {
 			return { isShown: true };
 		},
-		selectRoot: wrapper => wrapper.find('.lucid-Dialog'),
-	});
+		selectRoot: (wrapper: any) => wrapper.find('.lucid-Dialog'),
+	} as any);
 
 	functionalComponents(Dialog);
 

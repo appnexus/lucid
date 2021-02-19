@@ -25,7 +25,7 @@ describe('CalendarMonth', () => {
 					cursor={new Date('2017-02-14T00:00:00Z')}
 				/>
 			);
-			const calendarMonthInstance = wrapper.instance();
+			const calendarMonthInstance: any = wrapper.instance();
 			const isInRange = calendarMonthInstance.modifierRange(
 				new Date('2017-02-14T00:00:00Z')
 			);
@@ -41,7 +41,7 @@ describe('CalendarMonth', () => {
 					cursor={new Date('2017-02-14T00:00:00Z')}
 				/>
 			);
-			const calendarMonthInstance = wrapper.instance();
+			const calendarMonthInstance: any = wrapper.instance();
 			const isInRange11 = calendarMonthInstance.modifierRange(
 				new Date('2017-02-11T00:00:00Z')
 			);
@@ -74,7 +74,7 @@ describe('CalendarMonth', () => {
 					cursor={new Date('2017-02-14T00:00:00Z')}
 				/>
 			);
-			const calendarMonthInstance = wrapper.instance();
+			const calendarMonthInstance: any = wrapper.instance();
 			const isInRange13 = calendarMonthInstance.modifierRange(
 				new Date('2017-02-13T00:00:00Z')
 			);
@@ -98,7 +98,7 @@ describe('CalendarMonth', () => {
 					to={new Date('2017-02-14T00:00:00Z')}
 				/>
 			);
-			const calendarMonthInstance = wrapper.instance();
+			const calendarMonthInstance: any = wrapper.instance();
 			const isInRange11 = calendarMonthInstance.modifierRange(
 				new Date('2017-02-11T00:00:00Z')
 			);
@@ -128,7 +128,7 @@ describe('CalendarMonth', () => {
 					cursor={null}
 				/>
 			);
-			const calendarMonthInstance = wrapper.instance();
+			const calendarMonthInstance: any = wrapper.instance();
 			const isInRange = calendarMonthInstance.modifierRange(
 				new Date('2017-02-14T00:00:00Z')
 			);
@@ -144,7 +144,7 @@ describe('CalendarMonth', () => {
 					from={new Date('2017-02-14T00:00:00Z')}
 				/>
 			);
-			const calendarMonthInstance = wrapper.instance();
+			const calendarMonthInstance: any = wrapper.instance();
 			const isFromDate = calendarMonthInstance.modifierFrom(
 				new Date('2017-02-14T00:00:00Z')
 			);
@@ -160,7 +160,7 @@ describe('CalendarMonth', () => {
 					to={new Date('2017-02-14T00:00:00Z')}
 				/>
 			);
-			const calendarMonthInstance = wrapper.instance();
+			const calendarMonthInstance: any = wrapper.instance();
 			const isToDate = calendarMonthInstance.modifierTo(
 				new Date('2017-02-14T00:00:00Z')
 			);
@@ -171,7 +171,7 @@ describe('CalendarMonth', () => {
 	describe('shouldComponentUpdate', () => {
 		it('should determine shouldComponentUpdate by using prop value', () => {
 			const wrapper = shallow(<CalendarMonth shouldComponentUpdate={true} />);
-			const calendarMonthInstance = wrapper.instance();
+			const calendarMonthInstance: any = wrapper.instance();
 			const shouldComponentUpdate = calendarMonthInstance.shouldComponentUpdate();
 			expect(shouldComponentUpdate).toBe(true);
 		});

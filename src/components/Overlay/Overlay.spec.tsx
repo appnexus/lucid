@@ -12,8 +12,8 @@ describe('Overlay', () => {
 		getDefaultProps: () => {
 			return { isShown: true };
 		},
-		selectRoot: wrapper => wrapper.find('.lucid-Overlay'),
-	});
+		selectRoot: (wrapper: any) => wrapper.find('.lucid-Overlay'),
+	} as any);
 
 	it('should render body content', () => {
 		const wrapper = shallow(<Overlay isShown={true}>Flux Capacitor</Overlay>);
@@ -63,7 +63,7 @@ describe('Overlay', () => {
 });
 
 describe('Overlay', () => {
-	let testDOMNode;
+	let testDOMNode: any;
 
 	beforeEach(() => {
 		testDOMNode = document.createElement('div');
@@ -107,7 +107,7 @@ describe('Overlay', () => {
 			null // relatedTarget : Only used with some event types (e.g. mouseover and mouseout). In other cases, pass null.
 		);
 
-		document.querySelector('#brolo .lucid-Overlay').dispatchEvent(event);
+		(document as any).querySelector('#brolo .lucid-Overlay').dispatchEvent(event);
 
 		assert(onBackgroundClick.called);
 		wrapper.unmount();
@@ -148,7 +148,7 @@ describe('Overlay', () => {
 			null // relatedTarget : Only used with some event types (e.g. mouseover and mouseout). In other cases, pass null.
 		);
 
-		document.querySelector('#regiewat #foo').dispatchEvent(event);
+		(document as any).querySelector('#regiewat #foo').dispatchEvent(event);
 
 		assert(onBackgroundClick.notCalled);
 		wrapper.unmount();
@@ -160,7 +160,7 @@ describe('Overlay', () => {
 			attachTo: testDOMNode,
 		});
 
-		const event = document.createEvent('Event');
+		const event: any = document.createEvent('Event');
 		event.initEvent('keydown', true, true);
 
 		event.keyCode = 27;

@@ -146,8 +146,10 @@ describe('Expander', () => {
 						isExpanded={true}
 						onToggle={_.noop}
 						style={{ marginRight: 10 }}
-						foo={1}
-						bar={2}
+						{...{
+							foo: 1,
+							bar: 2
+						}}
 					/>
 				);
 				const rootProps = wrapper.find('.lucid-Expander').props();
@@ -160,7 +162,7 @@ describe('Expander', () => {
 });
 
 describe('Expander', () => {
-	let wrapper;
+	let wrapper: any;
 
 	afterEach(() => {
 		if (wrapper) {

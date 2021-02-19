@@ -85,8 +85,10 @@ describe('ExpanderPanel', () => {
 						isExpanded={true}
 						onToggle={_.noop}
 						style={{ marginRight: 10 }}
-						foo={1}
-						bar={2}
+						{... {
+							foo: 1,
+							bar: 2
+						}}
 					/>
 				);
 				const rootProps = wrapper.find('.lucid-ExpanderPanel').props();
@@ -99,7 +101,7 @@ describe('ExpanderPanel', () => {
 });
 
 describe('ExpanderPanel', () => {
-	let wrapper;
+	let wrapper: any;
 
 	afterEach(() => {
 		if (wrapper) {
@@ -124,8 +126,7 @@ describe('ExpanderPanel', () => {
 			assert.equal(
 				onToggle.callCount,
 				2,
-				`onToggle called the wrong number of times, actual: ${
-					onToggle.callCount
+				`onToggle called the wrong number of times, actual: ${onToggle.callCount
 				}, expected: 2`
 			);
 		});

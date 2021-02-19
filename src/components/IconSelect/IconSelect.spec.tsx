@@ -21,11 +21,11 @@ const items = [
 describe('IconSelect', () => {
 	common(IconSelect, {
 		defaultProps: { items: [] },
-	});
+	} as any);
 
 	it('prop children', () => {
 		const wrapper = shallow(
-			<IconSelect items={items}>
+			<IconSelect items={items as any}>
 				<div className='jim' />
 			</IconSelect>
 		);
@@ -34,7 +34,7 @@ describe('IconSelect', () => {
 	});
 
 	it.skip('has a selected item', () => {
-		const wrapper = shallow(<IconSelect items={items} />);
+		const wrapper = shallow(<IconSelect items={items as any} />);
 
 		assert.equal(
 			wrapper
@@ -65,9 +65,9 @@ describe('IconSelect', () => {
 				},
 			};
 			const wrapper = shallow(
-				<IconSelect items={items} onSelect={onIconSelectClick} />
+				<IconSelect items={items as any} onSelect={onIconSelectClick} />
 			);
-			const onClickEvent = wrapper.instance();
+			const onClickEvent: any = wrapper.instance();
 
 			onClickEvent.handleClick(mockEvent);
 
@@ -95,12 +95,12 @@ describe('IconSelect', () => {
 			};
 			const wrapper = shallow(
 				<IconSelect
-					items={items}
+					items={items as any}
 					isDisabled={true}
 					onSelect={onIconSelectClick}
 				/>
 			);
-			const onClickEvent = wrapper.instance();
+			const onClickEvent: any = wrapper.instance();
 
 			onClickEvent.handleClick(mockEvent);
 

@@ -15,19 +15,19 @@ const defaultData = [
 	{ x: 'see', y: 100, y2: 3 },
 ];
 
-const defaultXScale = d3Scale
+const defaultXScale: any = d3Scale
 	.scalePoint()
 	.domain(['aye', 'bee', 'see'])
 	.range([0, 100]);
 
-const defaultYScale = d3Scale
+const defaultYScale: any = d3Scale
 	.scaleLinear()
 	.domain([0, 100])
 	.range([1000, 0]);
 
 describe('Points', () => {
 	common(Points, {
-		exemptFunctionProps: ['xScale', 'yScale'],
+		exemptFunctionProps: ['xScale', 'yScale'] as any,
 		getDefaultProps: () => ({
 			data: [{ x: new Date('2015-01-01T00:00:00Z'), y: 1 }],
 			xScale: d3Scale.scaleTime(),
@@ -205,7 +205,7 @@ describe('Points', () => {
 			});
 
 			it('should work with linear scales', () => {
-				const xScale = d3Scale
+				const xScale: any = d3Scale
 					.scaleLinear()
 					.domain([0, 10])
 					.range([0, 100]);
@@ -306,15 +306,15 @@ describe('Points', () => {
 			});
 
 			it('should work with time scales', () => {
-				const xScale = d3Scale
+				const xScale: any = d3Scale
 					.scalePoint()
 					.domain([
-						new Date('2015-01-01T00:00:00Z'),
-						new Date('2015-01-03T00:00:00Z'),
+						new Date('2015-01-01T00:00:00Z') as any,
+						new Date('2015-01-03T00:00:00Z') as any,
 					])
 					.range([0, 100]);
 
-				const yScale = d3Scale
+				const yScale: any = d3Scale
 					.scaleTime()
 					.domain([0, 100])
 					.range([1000, 0]);

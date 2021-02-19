@@ -12,7 +12,7 @@ describe('OverlayWrapper', () => {
 
 	describe('isVisible', () => {
 		describe('default', () => {
-			let wrapper;
+			let wrapper: any;
 
 			beforeEach(() => {
 				wrapper = shallow(
@@ -32,7 +32,7 @@ describe('OverlayWrapper', () => {
 		});
 
 		describe('false', () => {
-			let wrapper;
+			let wrapper: any;
 
 			beforeEach(() => {
 				wrapper = shallow(
@@ -52,7 +52,7 @@ describe('OverlayWrapper', () => {
 		});
 
 		describe('true', () => {
-			let wrapper;
+			let wrapper: any;
 
 			beforeEach(() => {
 				wrapper = shallow(

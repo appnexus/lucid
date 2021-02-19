@@ -9,7 +9,7 @@ import ContextMenu from './ContextMenu';
 
 describe('ContextMenu', () => {
 	common(ContextMenu, {
-		exemptFunctionProps: ['getAlignmentOffset'],
+		exemptFunctionProps: ['getAlignmentOffset'] as any,
 		getDefaultProps: () => ({
 			children: [
 				<ContextMenu.Target key='1'>Test</ContextMenu.Target>,
@@ -19,7 +19,7 @@ describe('ContextMenu', () => {
 	});
 
 	describe('props', () => {
-		let wrapper;
+		let wrapper: any;
 
 		afterEach(() => {
 			if (wrapper) {
@@ -36,7 +36,7 @@ describe('ContextMenu', () => {
 					</ContextMenu>
 				);
 
-				assert.equal(document.getElementById('ContextMenu-test123'), null);
+				assert.equal((document as any).getElementById('ContextMenu-test123'), null);
 			});
 
 			it('should render the flyout when true', () => {
@@ -48,7 +48,7 @@ describe('ContextMenu', () => {
 				);
 
 				assert.equal(
-					document.getElementById('ContextMenu-test123').textContent,
+					(document as any).getElementById('ContextMenu-test123').textContent,
 					'Open'
 				);
 			});
@@ -60,8 +60,8 @@ describe('ContextMenu', () => {
 						<ContextMenu.FlyOut>Open</ContextMenu.FlyOut>
 					</ContextMenu>
 				);
-				const flyout = _.first(
-					document.getElementById('ContextMenu-test456').children
+				const flyout: any = _.first(
+					(document as any).getElementById('ContextMenu-test456').children
 				);
 				assert(_.isEmpty(flyout.style.opacity));
 			});
@@ -73,8 +73,8 @@ describe('ContextMenu', () => {
 						<ContextMenu.FlyOut>Open</ContextMenu.FlyOut>
 					</ContextMenu>
 				);
-				const flyout = _.first(
-					document.getElementById('ContextMenu-test456').children
+				const flyout: any = _.first(
+					(document as any).getElementById('ContextMenu-test456').children
 				);
 				_.defer(() => {
 					assert.equal(flyout.style.opacity, 1);
@@ -84,7 +84,7 @@ describe('ContextMenu', () => {
 		});
 
 		describe('direction', () => {
-			_.forEach(['up', 'down', 'left', 'right'], direction => {
+			_.forEach(['up' as const, 'down' as const, 'left' as const, 'right' as const], direction => {
 				it(`should apply the 'lucid-ContextMenu-FlyOut-${direction}' className when '${direction}'`, () => {
 					wrapper = mount(
 						<ContextMenu
@@ -97,7 +97,7 @@ describe('ContextMenu', () => {
 						</ContextMenu>
 					);
 
-					const flyOutPortalDomNode = document.getElementById(
+					const flyOutPortalDomNode = (document as any).getElementById(
 						'ContextMenu-test123'
 					);
 
@@ -119,7 +119,7 @@ describe('ContextMenu', () => {
 					</ContextMenu>
 				);
 
-				assert(document.getElementById('ContextMenu-test123'));
+				assert((document as any).getElementById('ContextMenu-test123'));
 			});
 
 			it('should render the portal with a generated id when expanded', () => {
@@ -130,14 +130,14 @@ describe('ContextMenu', () => {
 					</ContextMenu>
 				);
 
-				const portalDomNode = document.body.querySelector('.lucid-Portal');
+				const portalDomNode: any = document.body.querySelector('.lucid-Portal');
 				assert(portalDomNode.parentNode.getAttribute('id'));
 			});
 		});
 
 		describe('onClickOut', () => {
-			let onClickOut;
-			let testSection;
+			let onClickOut: any;
+			let testSection: any;
 
 			beforeEach(() => {
 				onClickOut = sinon.spy();
@@ -159,7 +159,7 @@ describe('ContextMenu', () => {
 				);
 
 				testSection.querySelector('.lucid-ContextMenu').click();
-				document.body.querySelector('.lucid-ContextMenu-FlyOut').click();
+				(document as any).body.querySelector('.lucid-ContextMenu-FlyOut').click();
 
 				assert(onClickOut.notCalled);
 			});

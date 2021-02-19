@@ -9,7 +9,7 @@ import { AccordionDumb as Accordion } from './Accordion';
 import { ExpanderPanelDumb as ExpanderPanel } from '../ExpanderPanel/ExpanderPanel';
 
 describe('Accordion', () => {
-	common(Accordion, { exemptChildComponents: ['Header'] });
+	common(Accordion, { exemptChildComponents: ['Header'] as any });
 
 	describe('props', () => {
 		describe('Item', () => {
@@ -21,7 +21,7 @@ describe('Accordion', () => {
 					</Accordion>
 				);
 
-				assert(wrapper.find(ExpanderPanel), 2);
+				assert(wrapper.find(ExpanderPanel), 2 as any);
 			});
 
 			it('Item as children', () => {
@@ -89,7 +89,7 @@ describe('Accordion', () => {
 					</Accordion>
 				);
 
-				assert(wrapper.find('.lucid-ExpanderPanel-content-is-expanded'), 1);
+				assert(wrapper.find('.lucid-ExpanderPanel-content-is-expanded'), 1 as any);
 			});
 		});
 
@@ -99,8 +99,10 @@ describe('Accordion', () => {
 					<Accordion
 						className='wut'
 						style={{ marginRight: 10 }}
-						foo={1}
-						bar={2}
+						{...{
+							foo: 1,
+							bar: 2,
+						}}
 					/>
 				);
 				const rootProps = wrapper.find('.lucid-Accordion').props();
@@ -134,9 +136,9 @@ describe('Accordion', () => {
 });
 
 describe('Accordion', () => {
-	let wrapper;
-	const onSelect = sinon.spy();
-	let mountTestDiv;
+	let wrapper: any;
+	const onSelect: any = sinon.spy();
+	let mountTestDiv:any;
 
 	describe('user picks one of the items', () => {
 		beforeEach(() => {
@@ -176,8 +178,7 @@ describe('Accordion', () => {
 			assert.equal(
 				onSelect.callCount,
 				2,
-				`onSelect called the wrong number of times, actual: ${
-					onSelect.callCount
+				`onSelect called the wrong number of times, actual: ${onSelect.callCount
 				}, expected: 2`
 			);
 		});

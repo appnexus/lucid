@@ -36,7 +36,7 @@ describe('Bars', () => {
 			'yFormatter',
 			'yTooltipFormatter',
 			'renderTooltipBody',
-		],
+		] as any,
 		getDefaultProps: () => ({
 			data: defaultData,
 			xScale: defaultXScale,
@@ -284,7 +284,7 @@ describe('Bars', () => {
 						xScale={defaultXScale}
 						yScale={defaultYScale}
 						hasToolTips
-						xFormatter={str => str.toUpperCase()}
+						xFormatter={(str: any) => str.toUpperCase()}
 					/>
 				).find(PureToolTip);
 
@@ -321,7 +321,7 @@ describe('Bars', () => {
 						xScale={defaultXScale}
 						yScale={defaultYScale}
 						hasToolTips
-						xFormatter={(str, d) => `${str.toUpperCase()} ${d.y2}`}
+						xFormatter={((str: any, d: any) => `${str.toUpperCase()} ${d.y2}`) as any}
 					/>
 				).find(PureToolTip);
 
@@ -392,10 +392,10 @@ describe('Bars', () => {
 					.domain([
 						new Date('2015-01-01T00:00:00Z'),
 						new Date('2015-01-03T00:00:00Z'),
-					])
+					] as any)
 					.range([0, 100]);
 
-				const yScale = d3Scale
+				const yScale: any = d3Scale
 					.scaleTime()
 					.domain([0, 100])
 					.range([1000, 0]);
@@ -578,7 +578,7 @@ describe('Bars', () => {
 						xScale={defaultXScale}
 						yScale={defaultYScale}
 						hasToolTips
-						xFormatter={str => str.toUpperCase()}
+						xFormatter={(str: any) => str.toUpperCase()}
 					/>
 				).find(PureToolTip);
 
@@ -726,7 +726,7 @@ describe('Bars', () => {
 						xScale={defaultXScale}
 						yScale={defaultYScale}
 						hasToolTips
-						renderTooltipBody={(dataPoint, data) => dataPoint.x.toUpperCase()}
+						renderTooltipBody={((dataPoint: any, data: any) => dataPoint.x.toUpperCase()) as any}
 					/>
 				);
 				const toolTip = wrapper.find(PureToolTip);

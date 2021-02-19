@@ -5,7 +5,7 @@ import { onPageSelect, onPageSizeSelect } from './Paginator.reducers';
 jest.mock('../SingleSelect/SingleSelect.reducers');
 
 describe('Paginator reducers', () => {
-	const initialState = {
+	const initialState: any = {
 		selectedPageIndex: 1,
 		selectedPageSizeIndex: 0,
 		SingleSelect: {},
@@ -37,17 +37,17 @@ describe('Paginator reducers', () => {
 	});
 
 	describe('onPageSizeSelect', () => {
-		beforeEach(() => SingleSelect.onSelect.mockClear());
+		beforeEach(() => (SingleSelect.onSelect as any).mockClear());
 
 		it('should set the selectedPageIndex to 0', () => {
 			const pageIndex = 2;
-			const nextState = onPageSizeSelect(initialState, pageIndex, totalPages);
+			const nextState = onPageSizeSelect(initialState, pageIndex);
 			assert.equal(nextState.selectedPageIndex, 0, 'must be 0');
 		});
 
 		it('should call SingleSelect.onSelect with state.SingleSelect and selectedPageSizeIndex', () => {
 			const pageIndex = 2;
-			onPageSizeSelect(initialState, pageIndex, totalPages);
+			onPageSizeSelect(initialState, pageIndex);
 			expect(SingleSelect.onSelect).toHaveBeenCalledWith(
 				initialState.SingleSelect,
 				pageIndex
@@ -57,8 +57,8 @@ describe('Paginator reducers', () => {
 		it('should set state.SingleSelect to the return value of SingleSelect.onSelect', () => {
 			const mockValue = {};
 			const pageIndex = 2;
-			SingleSelect.onSelect = () => mockValue; // eslint-disable-line no-import-assign
-			const nextState = onPageSizeSelect(initialState, pageIndex, totalPages);
+			(SingleSelect as any).onSelect = () => mockValue; // eslint-disable-line no-import-assign
+			const nextState = onPageSizeSelect(initialState, pageIndex);
 			assert.strictEqual(
 				nextState.SingleSelect,
 				mockValue,

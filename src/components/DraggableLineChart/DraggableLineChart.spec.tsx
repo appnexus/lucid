@@ -5,7 +5,7 @@ import assert from 'assert';
 import DraggableLineChart from './DraggableLineChart';
 
 describe('DraggableLineChart', () => {
-	let wrapper;
+	let wrapper: any;
 
 	afterEach(() => {
 		if (wrapper) {
@@ -21,7 +21,7 @@ describe('DraggableLineChart', () => {
 						{ x: new Date(), y: 1 },
 						{ x: new Date(), y: 2 },
 						{ x: new Date(), y: 3 },
-					]}
+					] as any}
 				/>
 			);
 

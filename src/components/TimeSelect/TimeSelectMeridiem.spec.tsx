@@ -13,7 +13,7 @@ describe('TimeSelectMeridiem', () => {
 		onChange: jest.fn(),
 	};
 
-	let component;
+	let component: any;
 	beforeEach(() => {
 		component = shallow(<TimeSelectMeridiem {...props} />);
 	});

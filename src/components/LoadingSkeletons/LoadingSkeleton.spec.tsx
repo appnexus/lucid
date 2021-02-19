@@ -3,7 +3,7 @@ import { shallow } from 'enzyme';
 import LoadingSkeleton from './LoadingSkeleton';
 
 describe('LoadingSkeleton.tsx', () => {
-	const props = {
+	const props: any = {
 		isLoading: false,
 		children: {},
 		className: 'classNameTest',

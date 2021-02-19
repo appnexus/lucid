@@ -9,7 +9,7 @@ import { DropMenuDumb as DropMenu } from './DropMenu';
 import ContextMenu from '../ContextMenu/ContextMenu';
 import * as KEYCODE from '../../constants/key-code';
 
-const { Control, Header, Option, OptionGroup, NullOption } = DropMenu;
+const { Control, Header, Option, OptionGroup, NullOption } = DropMenu as any;
 
 describe('DropMenu', () => {
 	common(DropMenu);
@@ -66,7 +66,7 @@ describe('DropMenu', () => {
 			});
 
 			describe('FlyOut', () => {
-				let wrapper;
+				let wrapper: any;
 
 				afterEach(() => {
 					if (wrapper) {
@@ -84,7 +84,7 @@ describe('DropMenu', () => {
 						</DropMenu>
 					);
 
-					const flyOutClassName = document.querySelector(
+					const flyOutClassName = (document as any).querySelector(
 						'.lucid-DropMenu.lucid-ContextMenu-FlyOut'
 					).className;
 
@@ -189,7 +189,7 @@ describe('DropMenu', () => {
 		});
 
 		describe('selectedIndices', () => {
-			let wrapper;
+			let wrapper: any;
 
 			afterEach(() => {
 				wrapper.unmount();
@@ -230,7 +230,7 @@ describe('DropMenu', () => {
 		});
 
 		describe('focusedIndex', () => {
-			let wrapper;
+			let wrapper: any;
 
 			afterEach(() => {
 				wrapper.unmount();
@@ -271,7 +271,7 @@ describe('DropMenu', () => {
 		});
 
 		describe('portalId', () => {
-			let wrapper;
+			let wrapper: any;
 
 			afterEach(() => {
 				if (wrapper) {
@@ -289,7 +289,7 @@ describe('DropMenu', () => {
 					</DropMenu>
 				);
 
-				const portalDOMNode = document.getElementById('test-dropmenu-portal');
+				const portalDOMNode: any = document.getElementById('test-dropmenu-portal');
 
 				assert(_.isElement(portalDOMNode));
 				assert.equal(document.body, portalDOMNode.parentNode);
@@ -414,7 +414,7 @@ describe('DropMenu', () => {
 
 				it('should be called when DropMenu [expanded, ContextMenu onClickOut called]', () => {
 					const onCollapse = sinon.spy();
-					const wrapper = shallow(
+					const wrapper: any = shallow(
 						<DropMenu isExpanded={true} onCollapse={onCollapse}>
 							<Control>control</Control>
 							<Option>option a</Option>
@@ -453,8 +453,8 @@ describe('DropMenu', () => {
 
 		describe('onSelect', () => {
 			describe('mouse', () => {
-				let onSelect;
-				let wrapper;
+				let onSelect: any;
+				let wrapper: any;
 
 				beforeEach(() => {
 					onSelect = sinon.spy();
@@ -475,7 +475,7 @@ describe('DropMenu', () => {
 				});
 
 				it('should be called when DropMenu [expanded, option clicked]', () => {
-					const optionDOMNodes = document.querySelectorAll(
+					const optionDOMNodes: any = document.querySelectorAll(
 						'.lucid-ContextMenu-FlyOut .lucid-DropMenu-Option'
 					);
 
@@ -488,7 +488,7 @@ describe('DropMenu', () => {
 
 			describe('keyboard', () => {
 				it('should be called when DropMenu [expanded, option focused, Enter key  pressed]', () => {
-					const onSelect = sinon.spy();
+					const onSelect: any = sinon.spy();
 					const wrapper = shallow(
 						<DropMenu isExpanded={true} focusedIndex={2} onSelect={onSelect}>
 							<Control>control</Control>
@@ -651,8 +651,8 @@ describe('DropMenu', () => {
 			});
 
 			describe('mouse', () => {
-				let onFocusOption;
-				let wrapper;
+				let onFocusOption: any;
+				let wrapper: any;
 
 				beforeEach(() => {
 					onFocusOption = sinon.spy();
@@ -718,7 +718,7 @@ describe('DropMenu', () => {
 		});
 
 		describe('Option', () => {
-			let wrapper;
+			let wrapper: any;
 
 			afterEach(() => {
 				if (wrapper) {
@@ -736,7 +736,7 @@ describe('DropMenu', () => {
 					</DropMenu>
 				);
 
-				const flyOutDOMNode = document.querySelector(
+				const flyOutDOMNode: any = document.querySelector(
 					'.lucid-DropMenu.lucid-ContextMenu-FlyOut'
 				);
 				const optionDOMNodes = flyOutDOMNode.querySelectorAll(
@@ -759,7 +759,7 @@ describe('DropMenu', () => {
 					</DropMenu>
 				);
 
-				const flyOutDOMNode = document.querySelector(
+				const flyOutDOMNode: any = document.querySelector(
 					'.lucid-DropMenu.lucid-ContextMenu-FlyOut'
 				);
 				const optionDOMNodes = flyOutDOMNode.querySelectorAll(
@@ -781,7 +781,7 @@ describe('DropMenu', () => {
 					</DropMenu>
 				);
 
-				const flyOutDOMNode = document.querySelector(
+				const flyOutDOMNode: any = document.querySelector(
 					'.lucid-DropMenu.lucid-ContextMenu-FlyOut'
 				);
 				const optionDOMNodes = flyOutDOMNode.querySelectorAll(
@@ -796,7 +796,7 @@ describe('DropMenu', () => {
 		});
 
 		describe('OptionGroup', () => {
-			let wrapper;
+			let wrapper: any;
 
 			afterEach(() => {
 				if (wrapper) {
@@ -825,7 +825,7 @@ describe('DropMenu', () => {
 					</DropMenu>
 				);
 
-				const flyOutDOMNode = document.querySelector(
+				const flyOutDOMNode: any = document.querySelector(
 					'.lucid-DropMenu.lucid-ContextMenu-FlyOut .lucid-DropMenu-option-container'
 				);
 				assert.equal(flyOutDOMNode.children.length, 10);
@@ -913,7 +913,7 @@ describe('DropMenu', () => {
 					</DropMenu>
 				);
 
-				const flyOutDOMNode = document.querySelector(
+				const flyOutDOMNode: any = document.querySelector(
 					'.lucid-DropMenu.lucid-ContextMenu-FlyOut .lucid-DropMenu-option-container'
 				);
 				assert.equal(flyOutDOMNode.children.length, 7);
@@ -987,7 +987,7 @@ describe('DropMenu', () => {
 					</DropMenu>
 				);
 
-				const flyOutDOMNode = document.querySelector(
+				const flyOutDOMNode: any = document.querySelector(
 					'.lucid-DropMenu.lucid-ContextMenu-FlyOut .lucid-DropMenu-option-container'
 				);
 				assert.equal(flyOutDOMNode.children.length, 9);
@@ -1039,7 +1039,7 @@ describe('DropMenu', () => {
 					</DropMenu>
 				);
 
-				const flyOutDOMNode = document.querySelector(
+				const flyOutDOMNode: any = document.querySelector(
 					'.lucid-DropMenu.lucid-ContextMenu-FlyOut .lucid-DropMenu-option-container'
 				);
 				assert.equal(flyOutDOMNode.children.length, 4);
@@ -1058,7 +1058,7 @@ describe('DropMenu', () => {
 		});
 
 		describe('NullOption', () => {
-			let wrapper;
+			let wrapper: any;
 
 			afterEach(() => {
 				if (wrapper) {
@@ -1077,7 +1077,7 @@ describe('DropMenu', () => {
 					</DropMenu>
 				);
 
-				const flyOutDOMNode = document.querySelector(
+				const flyOutDOMNode: any = document.querySelector(
 					'.lucid-DropMenu.lucid-ContextMenu-FlyOut .lucid-DropMenu-option-container'
 				);
 
@@ -1125,7 +1125,7 @@ describe('DropMenu', () => {
 		});
 
 		describe('Header', () => {
-			let wrapper;
+			let wrapper: any;
 
 			afterEach(() => {
 				if (wrapper) {
@@ -1145,7 +1145,7 @@ describe('DropMenu', () => {
 					</DropMenu>
 				);
 
-				const flyOutDOMNode = document.querySelector(
+				const flyOutDOMNode: any = document.querySelector(
 					'.lucid-DropMenu.lucid-ContextMenu-FlyOut'
 				);
 

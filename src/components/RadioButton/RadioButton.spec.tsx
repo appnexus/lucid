@@ -54,11 +54,13 @@ describe('RadioButton', () => {
 						isSelected={true}
 						style={{ fontWeight: 'bold' }}
 						onSelect={_.noop}
-						foo={1}
-						bar={2}
-						baz={3}
-						qux={4}
-						quux={5}
+						{...{
+							foo: 1,
+							bar: 2,
+							baz: 3,
+							qux: 4,
+							quux: 5,
+						}}
 					/>
 				);
 				const nativeProps = wrapper.find('input[type="radio"]').props();
@@ -74,13 +76,13 @@ describe('RadioButton', () => {
 });
 
 describe('RadioButton', () => {
-	function simulateEvent(reactElement, selector, event) {
+	function simulateEvent(reactElement: any, selector: any, event: any) {
 		mount(reactElement)
 			.find(selector)
 			.simulate(event);
 	}
 
-	function verifyArguments(event) {
+	function verifyArguments(event: any) {
 		_.forEach(
 			[
 				'',
@@ -90,7 +92,7 @@ describe('RadioButton', () => {
 				'-visualization-dot',
 			],
 			classSubString => {
-				const onSelect = sinon.spy();
+				const onSelect: any = sinon.spy();
 
 				simulateEvent(
 					<RadioButton isSelected={false} onSelect={onSelect} />,
@@ -98,12 +100,12 @@ describe('RadioButton', () => {
 					event
 				);
 				assert.equal(onSelect.args[0][0], true);
-				assert(_.last(onSelect.args[0]).event);
+				assert((_.last(onSelect.args[0]) as any).event);
 			}
 		);
 	}
 
-	function verifyNoOnSelect(event) {
+	function verifyNoOnSelect(event: any) {
 		_.forEach(
 			[
 				'',
@@ -113,7 +115,7 @@ describe('RadioButton', () => {
 				'-visualization-dot',
 			],
 			classSubString => {
-				const onSelect = sinon.spy();
+				const onSelect: any = sinon.spy();
 
 				simulateEvent(
 					<RadioButton isSelected={true} onSelect={onSelect} />,
@@ -125,7 +127,7 @@ describe('RadioButton', () => {
 		);
 	}
 
-	function verifyOnSelect(event) {
+	function verifyOnSelect(event: any) {
 		_.forEach(
 			[
 				'',
@@ -135,7 +137,7 @@ describe('RadioButton', () => {
 				'-visualization-dot',
 			],
 			classSubString => {
-				const onSelect = sinon.spy();
+				const onSelect: any = sinon.spy();
 
 				simulateEvent(
 					<RadioButton isSelected={false} onSelect={onSelect} />,

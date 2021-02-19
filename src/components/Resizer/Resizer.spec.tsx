@@ -20,7 +20,7 @@ jest.mock('element-resize-detector', () => {
 
 describe('Resizer', () => {
 	common(Resizer, {
-		exemptFunctionProps: ['children'],
+		exemptFunctionProps: ['children'] as any,
 		getDefaultProps: () => {
 			return {
 				children: () => <div />,
@@ -30,9 +30,9 @@ describe('Resizer', () => {
 
 	describe('render', () => {
 		it('should call the correct function when unmounted', () => {
-			const wrapper = mount(<Resizer>{_.noop}</Resizer>);
+			const wrapper = mount(<Resizer>{_.noop as any}</Resizer>);
 
-			const instance = wrapper.instance();
+			const instance: any = wrapper.instance();
 			expect(instance.resizeDetector.removeListener).not.toHaveBeenCalled();
 
 			wrapper.unmount();

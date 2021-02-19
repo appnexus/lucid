@@ -7,7 +7,7 @@ describe('InfiniteSlidePanel', () => {
 	common(InfiniteSlidePanel, {
 		getDefaultProps() {
 			return {
-				children: slideOffset => <span>{slideOffset}</span>,
+				children: (slideOffset: any) => <span>{slideOffset}</span>,
 			};
 		},
 	});

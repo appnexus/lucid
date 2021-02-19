@@ -23,7 +23,7 @@ describe('Portal', () => {
 					</Portal>
 				);
 
-				assert(document.getElementById('test1234').querySelector('button'));
+				assert((document as any).getElementById('test1234').querySelector('button'));
 
 				wrapper.unmount();
 			});

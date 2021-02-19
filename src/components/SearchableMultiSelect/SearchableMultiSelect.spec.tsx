@@ -9,12 +9,12 @@ const { Option, OptionGroup } = SearchableMultiSelect;
 
 describe('SearchableMultiSelect', () => {
 	common(SearchableMultiSelect, {
-		exemptFunctionProps: ['optionFilter'],
+		exemptFunctionProps: ['optionFilter'] as any,
 	});
 
 	describe('render', () => {
 		it('should render selections', () => {
-			const wrapper = shallow(
+			const wrapper: any = shallow(
 				<SearchableMultiSelect>
 					<Option>option a</Option>
 					<Option>option b</Option>
@@ -26,7 +26,7 @@ describe('SearchableMultiSelect', () => {
 		});
 
 		it('should pass `isDisabled` to `Options`', () => {
-			const wrapper = shallow(
+			const wrapper: any = shallow(
 				<SearchableMultiSelect>
 					<Option isDisabled>option a</Option>
 					<Option>option b</Option>
@@ -35,7 +35,7 @@ describe('SearchableMultiSelect', () => {
 			);
 			const [first, second, third] = wrapper
 				.find(DropMenu.Option)
-				.map(option => option.prop('isDisabled'));
+				.map((option: any) => option.prop('isDisabled'));
 			expect(first).toBe(true);
 			expect(second).toBe(false);
 			expect(third).toBe(false);
@@ -46,7 +46,7 @@ describe('SearchableMultiSelect', () => {
 		it('onRemoveAll', () => {
 			const onRemoveAll = jest.fn();
 
-			const wrapper = shallow(
+			const wrapper: any = shallow(
 				<SearchableMultiSelect onRemoveAll={onRemoveAll} selectedIndices={[0]}>
 					<Option>option a</Option>
 				</SearchableMultiSelect>
@@ -63,7 +63,7 @@ describe('SearchableMultiSelect', () => {
 		describe('onSearch', () => {
 			it('should work', () => {
 				const onSearch = jest.fn();
-				const wrapper = shallow(
+				const wrapper: any = shallow(
 					<SearchableMultiSelect onSearch={onSearch}>
 						<Option callbackId={'zero'}>Zero</Option>
 						<Option callbackId={'one'}>One</Option>
@@ -96,7 +96,7 @@ describe('SearchableMultiSelect', () => {
 					props: {},
 				};
 
-				const wrapper = shallow(
+				const wrapper: any = shallow(
 					<SearchableMultiSelect onSelect={onSelect}>
 						<Option>option a</Option>
 					</SearchableMultiSelect>
@@ -128,7 +128,7 @@ describe('SearchableMultiSelect', () => {
 					},
 				};
 
-				const wrapper = shallow(
+				const wrapper: any = shallow(
 					<SearchableMultiSelect onSelect={onSelect} selectedIndices={[0, 1]}>
 						<Option>option a</Option>
 						<Option callbackId='custom' />
@@ -150,7 +150,7 @@ describe('SearchableMultiSelect', () => {
 					props: {},
 				};
 
-				const wrapper = shallow(
+				const wrapper: any = shallow(
 					<SearchableMultiSelect onSelect={onSelect}>
 						<Option>option a</Option>
 						<Option>option b</Option>
@@ -173,7 +173,7 @@ describe('SearchableMultiSelect', () => {
 				};
 				const selectedIndices = [0, 1];
 
-				const wrapper = shallow(
+				const wrapper: any = shallow(
 					<SearchableMultiSelect
 						selectedIndices={selectedIndices}
 						onSelect={onSelect}
@@ -199,7 +199,7 @@ describe('SearchableMultiSelect', () => {
 				};
 				const selectedIndices = [0];
 
-				const wrapper = shallow(
+				const wrapper: any = shallow(
 					<SearchableMultiSelect
 						selectedIndices={selectedIndices}
 						onSelect={onSelect}
@@ -224,7 +224,7 @@ describe('SearchableMultiSelect', () => {
 					props: {},
 				};
 
-				const wrapper = shallow(
+				const wrapper: any = shallow(
 					<SearchableMultiSelect onSelect={onSelect}>
 						<Option isHidden>option a</Option>
 						<Option>option b</Option>
@@ -242,7 +242,7 @@ describe('SearchableMultiSelect', () => {
 
 		describe('Error', () => {
 			it('should apply the appropriate classNames to the saerch', () => {
-				const wrapper = shallow(
+				const wrapper: any = shallow(
 					<SearchableMultiSelect Error={'Erroring out'}>
 						<Option>option a</Option>
 						<Option>option b</Option>
@@ -255,7 +255,7 @@ describe('SearchableMultiSelect', () => {
 			});
 
 			it('should render out the error div', () => {
-				const wrapper = shallow(
+				const wrapper: any = shallow(
 					<SearchableMultiSelect Error={'Erroring out'}>
 						<Option>option a</Option>
 						<Option>option b</Option>
@@ -268,7 +268,7 @@ describe('SearchableMultiSelect', () => {
 			});
 
 			it('should not render the error div', () => {
-				const wrapper = shallow(
+				const wrapper: any = shallow(
 					<SearchableMultiSelect Error={true}>
 						<Option>option a</Option>
 						<Option>option b</Option>
@@ -342,7 +342,7 @@ describe('SearchableMultiSelect', () => {
 		});
 
 		it('should render Option child function by passing in {searchText}, setting filterText on each option and using a custom optionFilter', () => {
-			const optionFilter = (searchText, { filterText }) => {
+			const optionFilter = (searchText: any, { filterText }: any) => {
 				if (filterText) {
 					return new RegExp(_.escapeRegExp(searchText), 'i').test(filterText);
 				}
@@ -353,7 +353,7 @@ describe('SearchableMultiSelect', () => {
 				shallow(
 					<SearchableMultiSelect optionFilter={optionFilter} searchText='tion'>
 						<Option name='OptionA' Selected='option a' filterText='option a'>
-							{({ searchText }) => (
+							{({ searchText }: any) => (
 								<div style={{ display: 'flex' }}>
 									<div style={{ width: 100 }}>{searchText}</div>
 									<div>option a</div>
@@ -361,7 +361,7 @@ describe('SearchableMultiSelect', () => {
 							)}
 						</Option>
 						<Option name='OptionB' Selected='option b' filterText='option b'>
-							{({ searchText }) => (
+							{({ searchText }: any) => (
 								<div style={{ display: 'flex' }}>
 									<div style={{ width: 100 }}>{searchText}</div>
 									<div>option b</div>
@@ -369,7 +369,7 @@ describe('SearchableMultiSelect', () => {
 							)}
 						</Option>
 						<Option name='OptionC' Selected='option c' filterText='option c'>
-							{({ searchText }) => (
+							{({ searchText }: any) => (
 								<div style={{ display: 'flex' }}>
 									<div style={{ width: 100 }}>{searchText}</div>
 									<div>option c</div>

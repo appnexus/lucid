@@ -8,11 +8,11 @@ import { common } from '../../util/generic-tests';
 import { SearchableSelectDumb as SearchableSelect } from './SearchableSelect';
 import { DropMenuDumb as DropMenu } from '../DropMenu/DropMenu';
 
-const { Placeholder, Option, OptionGroup, SearchField } = SearchableSelect;
+const { Placeholder, Option, OptionGroup, SearchField } = SearchableSelect as any;
 
 describe('SearchableSelect', () => {
 	common(SearchableSelect, {
-		exemptFunctionProps: ['optionFilter', 'richChildRenderer'],
+		exemptFunctionProps: ['optionFilter', 'richChildRenderer'] as any,
 	});
 
 	describe('render', () => {
@@ -53,7 +53,7 @@ describe('SearchableSelect', () => {
 		});
 
 		describe('hasReset', () => {
-			let wrapper;
+			let wrapper: any;
 
 			afterEach(() => {
 				if (wrapper) {
@@ -75,7 +75,7 @@ describe('SearchableSelect', () => {
 					</SearchableSelect>
 				);
 
-				const menuDOMNode = document.querySelector(
+				const menuDOMNode: any = document.querySelector(
 					'.lucid-ContextMenu-FlyOut .lucid-DropMenu-option-container'
 				);
 
@@ -101,7 +101,7 @@ describe('SearchableSelect', () => {
 					</SearchableSelect>
 				);
 
-				const menuDOMNode = document.querySelector(
+				const menuDOMNode: any = document.querySelector(
 					'.lucid-ContextMenu-FlyOut .lucid-DropMenu-option-container'
 				);
 
@@ -276,7 +276,7 @@ describe('SearchableSelect', () => {
 				);
 
 				const dropMenuWrapper = wrapper.find(DropMenu);
-				const optionContainerStyle = dropMenuWrapper.prop(
+				const optionContainerStyle: any = dropMenuWrapper.prop(
 					'optionContainerStyle'
 				);
 				assert.equal(
@@ -289,7 +289,7 @@ describe('SearchableSelect', () => {
 
 		describe('onSelect', () => {
 			/* eslint-disable no-console */
-			let error, wrapper;
+			let error: any, wrapper: any;
 
 			beforeEach(() => {
 				error = console.error;
@@ -304,7 +304,7 @@ describe('SearchableSelect', () => {
 			});
 
 			it('should be called when an option is selected with the appropriate arguments', () => {
-				const onSelect = sinon.spy();
+				const onSelect: any = sinon.spy();
 
 				wrapper = mount(
 					<SearchableSelect onSelect={onSelect} DropMenu={{ isExpanded: true }}>
@@ -315,7 +315,7 @@ describe('SearchableSelect', () => {
 					</SearchableSelect>
 				);
 
-				const menuDOMNode = document.querySelector(
+				const menuDOMNode: any = document.querySelector(
 					'.lucid-ContextMenu-FlyOut .lucid-DropMenu-option-container'
 				);
 				menuDOMNode.children[2].click();
@@ -352,7 +352,7 @@ describe('SearchableSelect', () => {
 
 		describe('DropMenu', () => {
 			it('should pass thru all DropMenu props to the underlying DropMenu', () => {
-				const explicitDropMenuProps = {
+				const explicitDropMenuProps: any = {
 					isExpanded: true,
 					direction: 'up',
 					focusedIndex: 2,
@@ -367,7 +367,7 @@ describe('SearchableSelect', () => {
 					</SearchableSelect>
 				);
 
-				const dropMenuProps = wrapper.find('DropMenu').props();
+				const dropMenuProps: any = wrapper.find('DropMenu').props();
 
 				_.forEach(explicitDropMenuProps, (value, key) => {
 					assert(_.isEqual(dropMenuProps[key], value));
@@ -432,13 +432,13 @@ describe('SearchableSelect', () => {
 				const controlProps = _.first(
 					_.map(filterTypes(dropMenuChildren, DropMenu.Control), 'props')
 				);
-				const dropMenuControlChildElement = _.first(
+				const dropMenuControlChildElement: any = _.first(
 					React.Children.toArray(controlProps.children)
 				);
 				const SearchableSelectControlChildren = React.Children.toArray(
 					dropMenuControlChildElement.props.children
 				);
-				const SearchableSelectControlContent =
+				const SearchableSelectControlContent: any =
 					SearchableSelectControlChildren[0];
 
 				assert.equal(
@@ -549,7 +549,7 @@ describe('SearchableSelect', () => {
 			});
 
 			it('should render Option child function by passing in {searchText}, setting filterText on each option and using a custom optionFilter', () => {
-				const optionFilter = (searchText, { filterText }) => {
+				const optionFilter = (searchText: any, { filterText }: any) => {
 					if (filterText) {
 						return new RegExp(_.escapeRegExp(searchText), 'i').test(filterText);
 					}
@@ -561,7 +561,7 @@ describe('SearchableSelect', () => {
 						<SearchableSelect optionFilter={optionFilter} searchText='tion'>
 							<Placeholder>select one</Placeholder>
 							<Option name='OptionA' Selected='option a' filterText='option a'>
-								{({ searchText }) => (
+								{({ searchText }: any) => (
 									<div style={{ display: 'flex' }}>
 										<div style={{ width: 100 }}>{searchText}</div>
 										<div>option a</div>
@@ -569,7 +569,7 @@ describe('SearchableSelect', () => {
 								)}
 							</Option>
 							<Option name='OptionB' Selected='option b' filterText='option b'>
-								{({ searchText }) => (
+								{({ searchText }: any) => (
 									<div style={{ display: 'flex' }}>
 										<div style={{ width: 100 }}>{searchText}</div>
 										<div>option b</div>
@@ -577,7 +577,7 @@ describe('SearchableSelect', () => {
 								)}
 							</Option>
 							<Option name='OptionC' Selected='option c' filterText='option c'>
-								{({ searchText }) => (
+								{({ searchText }: any) => (
 									<div style={{ display: 'flex' }}>
 										<div style={{ width: 100 }}>{searchText}</div>
 										<div>option c</div>
@@ -591,10 +591,10 @@ describe('SearchableSelect', () => {
 		});
 
 		describe('OptionGroup', () => {
-			let wrapper;
+			let wrapper: any;
 			let dropMenuWrapper;
 			let dropMenuChildren;
-			let optionGroupProps;
+			let optionGroupProps: any;
 
 			beforeEach(() => {
 				wrapper = shallow(
