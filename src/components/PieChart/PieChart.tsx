@@ -306,7 +306,7 @@ const PieChart = (props: IPieChartProps) => {
 											d={arcData}
 											color={_.get(
 												colorMap,
-												data[index][xAxisField],
+												data && data[index][xAxisField] || '', 
 												palette[index % palette.length]
 											)}
 											transform={`scale(${

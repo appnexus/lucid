@@ -23,6 +23,7 @@
 		"chromatic": "chromatic test --build-script-name build:docs --exit-zero-on-changes",
 		"clean:dist": "rm -rf dist",
 		"clean:lib": "rm -rf lib",
+		"clear-jest": "jest --clearCache",
 		"cover": "npm run jest -- --coverage",
 		"dev": "start-storybook --docs -p 6006 -s .storybook/static",
 		"docs:upload:docspot": "scripts/upload-docs-build-docspot.sh",
