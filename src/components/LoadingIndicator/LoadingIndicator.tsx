@@ -95,7 +95,7 @@ LoadingIndicator.peek = {
 			If a page is displaying a lot of data coming from multiple sources, try as best as possible to load the individual parts of the UI, so as not to disrupt the user and block them from interacting with the entire page until all data is loaded.
 		`,
 	},
-	categories: ['communication'],
+	categories: ['Loading Indicator'],
 	madeFrom: ['OverlayWrapper', 'LoadingMessage'],
 };
 LoadingIndicator.propTypes = {
