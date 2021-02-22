@@ -14,6 +14,10 @@ const lucidTheme = create({
 	brandTitle: 'Lucid UI',
 	brandUrl: 'https://github.com/appnexus/lucid',
 	brandImage: 'logo.svg',
+
+	appBg: 'white',
+	appContentBg: 'white',
+
 });
 
 addParameters({
