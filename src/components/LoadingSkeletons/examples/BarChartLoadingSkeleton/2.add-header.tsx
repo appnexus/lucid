@@ -7,7 +7,7 @@ export default createClass({
 		return (
 			<BarChartLoadingSkeleton
 				isLoading={true}
-				width={700}
+				width={880}
 				height={300}
 				header='BarChartLoadingSkeleton added header'
 			/>

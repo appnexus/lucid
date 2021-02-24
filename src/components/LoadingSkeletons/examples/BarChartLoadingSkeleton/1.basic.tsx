@@ -5,7 +5,7 @@ import { BarChartLoadingSkeleton } from '../../../../index';
 export default createClass({
 	render() {
 		return (
-			<BarChartLoadingSkeleton isLoading={true} width={900} height={300} />
+			<BarChartLoadingSkeleton isLoading={true} width={880} height={300} />
 		);
 	},
 });

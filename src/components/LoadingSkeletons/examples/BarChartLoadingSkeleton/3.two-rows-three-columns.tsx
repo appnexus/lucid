@@ -8,7 +8,7 @@ export default createClass({
 			<div>
 				<BarChartLoadingSkeleton
 					isLoading={true}
-					width={200}
+					width={210}
 					height={200}
 					numRows={2}
 					numColumns={3}
