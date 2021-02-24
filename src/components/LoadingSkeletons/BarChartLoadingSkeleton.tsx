@@ -1,18 +1,20 @@
-import React, { FunctionComponent } from 'react';
+import React from 'react';
 import LoadingMessage from '../LoadingMessage/LoadingMessage';
-import { backgroundGray } from './LoadingSkeletonsSvgUtil';
+import { cxBackgroundGray } from './LoadingSkeletonsSvgUtil';
 import LoadingSkeleton, {
 	ILoadingSkeletonProps,
 	IStandardSkeleton,
 } from './LoadingSkeleton';
 
-export const BarChartSkeleton: FunctionComponent<IStandardSkeleton> = props => {
+export const BarChartSkeleton = (
+	props: IStandardSkeleton
+): React.ReactElement => {
 	const { width, height, className } = { ...props };
 
 	return (
 		<div
 			data-test-id='loadingSkeleton-BarChartSkeleton'
-			className={backgroundGray('&', className)}
+			className={cxBackgroundGray('&', className)}
 		>
 			<svg
 				data-test-id='loadingSkeleton-BarChartSkeleton-svg'
@@ -33,7 +35,7 @@ export const BarChartSkeleton: FunctionComponent<IStandardSkeleton> = props => {
 					>
 						<g id='Bar-Chart' transform='translate(93.000000, 723.000000)'>
 							<path
-								className={backgroundGray('&', className)}
+								className={cxBackgroundGray('&', className)}
 								d='M54,59 L54,339 L21,339 L21,59 L54,59 Z M517,19 L517,339 L485,339 L485,19 L517,19 Z M105,19
                 L105,339 L72,339 L72,19 L105,19 Z M620,19 L620,339 L587,339 L587,19 L620,19 Z M157,113 L157,339 L124,339 L124,
                 113 L157,113 Z M569,113 L569,339 L536,339 L536,113 L569,113 Z M467,59 L467,339 L435,339 L435,59 L467,
@@ -47,7 +49,7 @@ export const BarChartSkeleton: FunctionComponent<IStandardSkeleton> = props => {
 								id='Combined-Shape'
 							/>
 							<path
-								className={backgroundGray('&', className)}
+								className={cxBackgroundGray('&', className)}
 								d='M0,340 L0,0 L1,0 L1,339 L1130,339 L1130,340 L0,340 Z'
 								id='Combined-Shape'
 							/>
