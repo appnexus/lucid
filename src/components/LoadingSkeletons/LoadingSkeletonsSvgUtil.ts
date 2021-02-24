@@ -15,14 +15,14 @@ export const SimpleTableSvgPath =
 	'0v10h-120V13h120zm171 0v10h-126V13h126zm151 0v10h-106V13h106zm151 0v10h-106V13h106zm191  ' +
 	'0v10h-146V13h146zm163 0v10h-118V13h118zm167 0v10h-122V13h122zm128 0v10h-83V13h83zm225 0v10h-180V13h180z';
 
-export const backgroundGray = lucidClassNames.bind(
+export const cxBackgroundGray = lucidClassNames.bind(
 	'&-LoadingSkeleton-backgroundGray'
 );
 
-export const backgroundNeutral = lucidClassNames.bind(
+export const cxBackgroundNeutral = lucidClassNames.bind(
 	'&-LoadingSkeleton-backgroundNeutral'
 );
 
-export const backgroundGrayStrokeNeutralFill = lucidClassNames.bind(
+export const cxBackgroundGrayStrokeNeutralFill = lucidClassNames.bind(
 	'&-LoadingSkeleton-grayStroke-neutralFill'
 );

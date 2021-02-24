@@ -1,6 +1,6 @@
 import React from 'react';
 import LoadingMessage from '../LoadingMessage/LoadingMessage';
-import { backgroundGray } from './LoadingSkeletonsSvgUtil';
+import { cxBackgroundGray } from './LoadingSkeletonsSvgUtil';
 import LoadingSkeleton, {
 	ILoadingSkeletonProps,
 	IStandardSkeleton,
@@ -14,7 +14,7 @@ export const CardSkeleton = (
 	return (
 		<div
 			data-test-id='loadingSkeleton-CardSkeleton'
-			className={backgroundGray('&', className)}
+			className={cxBackgroundGray('&', className)}
 		>
 			<svg
 				data-test-id='loadingSkeleton-CardSkeleton-svg'
@@ -30,7 +30,7 @@ export const CardSkeleton = (
 					fillRule='evenodd'
 				>
 					<g
-						className={backgroundGray('&', className)}
+						className={cxBackgroundGray('&', className)}
 						transform='translate(-20.000000, -78.000000)'
 					>
 						<path
