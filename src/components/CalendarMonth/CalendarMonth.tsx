@@ -28,11 +28,11 @@ export interface ICalendarProps extends StandardProps {
 
 	/** Sets the start date in a date range.
 	 */
-	from: Date | null;
+	from?: Date | null;
 
 	/** Sets the end date in a date range.
 	 */
-	to: Date | null;
+	to?: Date | null;
 
 	/** The next selection that is expected. Primarily used to preview expected
 	 * ranges when the cursor is on a target date.
@@ -51,26 +51,26 @@ export interface ICalendarProps extends StandardProps {
 
 	/** Sets selected days. Passed through to \`CalendarMonth\` ->
 			\`react-day-picker\`. */
-	selectedDays: Date | ((date: Date) => boolean | Date | Date[]) | null;
+	selectedDays?: Date | ((date: Date) => boolean | Date | Date[]) | null;
 
 	/** Sets disabled days. Passed through to \`CalendarMonth\` ->
 			\`react-day-picker\`.*/
-	disabledDays: (date: Date) => boolean | Date | Date[];
+	disabledDays?: (date: Date) => boolean | Date | Date[];
 
 	/** Highlight dates and ranges based on cursor position. */
 	showCursorHighlight?: boolean;
 
-	key: string | number;
+	key?: string | number;
 
-	onDayClick: (
+	onDayClick?: (
 		day: Date,
 		{ disabled }: { disabled: boolean },
 		event: React.MouseEvent
 	) => void;
 
-	onDayMouseEnter: (day: Date, { disabled }: { disabled: boolean }) => void;
+	onDayMouseEnter?: (day: Date, { disabled }: { disabled: boolean }) => void;
 
-	onDayMouseLeave: () => void;
+	onDayMouseLeave?: () => void;
 }
 
 class CalendarMonth extends React.Component<ICalendarProps, {}, {}> {

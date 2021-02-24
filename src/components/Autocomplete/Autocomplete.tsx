@@ -250,7 +250,7 @@ const Autocomplete = createClass<IAutocompleteProps>({
 										valuePattern,
 										value.length
 									);
-									const formattedSuggestion = [];
+									const formattedSuggestion: any = [];
 									if (pre) {
 										formattedSuggestion.push(
 											<span

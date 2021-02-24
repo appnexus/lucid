@@ -451,7 +451,7 @@ describe('DataTable', () => {
 
 		describe('onSelect', () => {
 			it('should be triggered when a checkbox is selected passing params row data and index', () => {
-				const onSelect = sinon.spy();
+				const onSelect: any = sinon.spy();
 				const wrapper = shallow(
 					<DataTable isSelectable onSelect={onSelect} data={testData}>
 						<Column field='id' title='ID' />

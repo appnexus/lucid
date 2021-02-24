@@ -88,7 +88,7 @@ interface IContextMenuProps
 			HTMLDivElement
 		> {
 	/** direction of the FlyOut relative to Target. */
-	direction: Direction;
+	direction?: Direction;
 
 	// TODO: fix this mispelling, but it's a breaking change :(
 	/**	the px offset along the axis of the direction */

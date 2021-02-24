@@ -1,0 +1,111 @@
+import React from 'react';
+import assert from 'assert';
+import { shallow } from 'enzyme';
+
+import { common } from '../../util/generic-tests';
+import IconSelect from './IconSelect';
+
+const items = [
+	{
+		id: 'one',
+		isSelected: false,
+		label: 'one',
+	},
+	{
+		id: 'two',
+		isSelected: true,
+		label: 'two',
+	},
+];
+
+describe('IconSelect', () => {
+	common(IconSelect, {
+		defaultProps: { items: [] },
+	} as any);
+
+	it('prop children', () => {
+		const wrapper = shallow(
+			<IconSelect items={items as any}>
+				<div className='jim' />
+			</IconSelect>
+		);
+
+		assert(wrapper.contains(<div className='jim' />));
+	});
+
+	it.skip('has a selected item', () => {
+		const wrapper = shallow(<IconSelect items={items as any} />);
+
+		assert.equal(
+			wrapper
+				.children()
+				.at(1)
+				.children()
+				.at(1)
+				.children()
+				.prop('isSelected'),
+			true
+		);
+	});
+
+	describe('IconSelect Events', () => {
+		it.skip('should call the onClick handler when clicked', () => {
+			const onIconSelect = jest.fn();
+			const onIconSelectClick = jest.fn();
+			const mockEvent = {
+				target: {
+					classList: {
+						contains: () => true,
+					},
+					focus: onIconSelect,
+					hasAttribute: () => false,
+					dataset: {
+						id: 'test',
+					},
+				},
+			};
+			const wrapper = shallow(
+				<IconSelect items={items as any} onSelect={onIconSelectClick} />
+			);
+			const onClickEvent: any = wrapper.instance();
+
+			onClickEvent.handleClick(mockEvent);
+
+			expect(onIconSelect).toHaveBeenCalled();
+			expect(onIconSelectClick).toHaveBeenCalledWith(
+				'test',
+				expect.objectContaining({
+					event: expect.anything(),
+					props: expect.anything(),
+				})
+			);
+		});
+
+		it.skip('should not use onClick if disabled', () => {
+			const onIconSelect = jest.fn();
+			const onIconSelectClick = jest.fn();
+			const mockEvent = {
+				target: {
+					focus: onIconSelect,
+					hasAttribute: () => true,
+					dataset: {
+						id: 'test',
+					},
+				},
+			};
+			const wrapper = shallow(
+				<IconSelect
+					items={items as any}
+					isDisabled={true}
+					onSelect={onIconSelectClick}
+				/>
+			);
+			const onClickEvent: any = wrapper.instance();
+
+			onClickEvent.handleClick(mockEvent);
+
+			expect(onIconSelect).not.toHaveBeenCalled();
+			expect(onIconSelectClick).not.toHaveBeenCalled();
+		});
+	});
+});

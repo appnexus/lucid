@@ -81,7 +81,7 @@ export const Banner = (props: IBannerProps): React.ReactElement => {
 		onClose({ event, props });
 	};
 
-	let displayedIcon = null;
+	let displayedIcon: any = null;
 
 	if (icon) {
 		displayedIcon = icon;

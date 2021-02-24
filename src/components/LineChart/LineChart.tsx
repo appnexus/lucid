@@ -77,7 +77,7 @@ export interface ILineChartPropsRaw extends StandardProps {
 	 * { x: new Date('2015-01-05') , y: 5 } ,
 	 * ]
 	 */
-	data: Array<{ [key: string]: Date | number | undefined }>;
+	data?: Array<{ [key: string]: Date | number | undefined }>;
 
 	/**
 	 * Legend is an object with human readable names for fields
@@ -675,7 +675,7 @@ class LineChart extends React.Component<ILineChartProps, ILineChartState, {}> {
 			y2AxisColorOffset,
 			colorMap,
 			y2AxisHasPoints,
-		} = this.props;
+		} = this.props as ILineChartPropsRaw;
 
 		/* y2 axis */
 		const axis = y2AxisFields ? (
@@ -722,7 +722,7 @@ class LineChart extends React.Component<ILineChartProps, ILineChartState, {}> {
 					xField={xAxisField}
 					yFields={y2AxisFields}
 					yStackedMax={y2AxisMax}
-					data={data}
+					data={data || {} as any}
 					isStacked={y2AxisIsStacked}
 					colorOffset={y2AxisColorOffset + yAxisFields.length}
 					colorMap={colorMap}
@@ -740,7 +740,7 @@ class LineChart extends React.Component<ILineChartProps, ILineChartState, {}> {
 						xField={xAxisField}
 						yFields={y2AxisFields}
 						yStackedMax={y2AxisMax}
-						data={data as any}
+						data={data || {} as any}
 						isStacked={y2AxisIsStacked}
 						colorOffset={y2AxisColorOffset + yAxisFields.length}
 						colorMap={colorMap}
@@ -778,8 +778,8 @@ class LineChart extends React.Component<ILineChartProps, ILineChartState, {}> {
 			xAxisTitleColor,
 			xAxisFormatter,
 			xAxisTooltipFormatter,
-			xAxisMin = minByFields(data, xAxisField) as Date,
-			xAxisMax = maxByFields(data, xAxisField) as Date,
+			xAxisMin = minByFields(data as any, xAxisField) as Date,
+			xAxisMax = maxByFields(data as any, xAxisField) as Date,
 			xAxisTextOrientation,
 
 			yAxisFields,
@@ -793,8 +793,8 @@ class LineChart extends React.Component<ILineChartProps, ILineChartState, {}> {
 			yAxisTooltipFormatter,
 			yAxisTooltipDataFormatter,
 			yAxisMax = (yAxisIsStacked
-				? maxByFieldsStacked(data, yAxisFields)
-				: maxByFields(data, yAxisFields)) as number,
+				? maxByFieldsStacked(data as any, yAxisFields)
+				: maxByFields(data as any, yAxisFields)) as number,
 			yAxisColorOffset,
 
 			y2AxisFields,
@@ -804,8 +804,8 @@ class LineChart extends React.Component<ILineChartProps, ILineChartState, {}> {
 			y2AxisIsStacked,
 			y2AxisMin,
 			y2AxisMax = (y2AxisFields && y2AxisIsStacked
-				? maxByFieldsStacked(data, y2AxisFields)
-				: maxByFields(data, y2AxisFields)) as number,
+				? maxByFieldsStacked(data as any, y2AxisFields)
+				: maxByFields(data as any, y2AxisFields)) as number,
 			y2AxisColorOffset,
 			yAxisTextOrientation,
 			...passThroughs
@@ -877,8 +877,8 @@ class LineChart extends React.Component<ILineChartProps, ILineChartState, {}> {
 		 * y2 axis
 		 */
 		let y2Axis = {};
-		let y2AxisLegend = null;
-		let y2AxisToolTip = null;
+		let y2AxisLegend: JSX.Element[] | null = null;
+		let y2AxisToolTip: Array<JSX.Element | null>| null = null;
 		if (y2AxisFields) {
 			const y2Scale = d3Scale
 				.scaleLinear()
@@ -1179,7 +1179,7 @@ class LineChart extends React.Component<ILineChartProps, ILineChartState, {}> {
 						xField={xAxisField}
 						yFields={yAxisFields}
 						yStackedMax={yAxisMax}
-						data={data}
+						data={data || {} as any}
 						isStacked={yAxisIsStacked}
 						colorMap={colorMap}
 						palette={palette}

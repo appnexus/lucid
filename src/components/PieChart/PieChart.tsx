@@ -28,10 +28,10 @@ const HOVER_SCALE = 1.1; // duplicated in .less file
 const INNER_RADIUS = 0.5;
 
 interface IPieChartMargin {
-	top: number;
-	right: number;
-	bottom: number;
-	left: number;
+	top?: number;
+	right?: number;
+	bottom?: number;
+	left?: number;
 }
 
 export interface IPieChartPropsRaw extends StandardProps {
@@ -45,7 +45,7 @@ export interface IPieChartPropsRaw extends StandardProps {
 	 * An object defining the margins of the chart. These margins typically
 	 * contain the axis and labels.
 	 */
-	margin: IPieChartMargin;
+	margin?: IPieChartMargin;
 
 	/**
 	 * Data for the chart. E.g.
@@ -58,7 +58,7 @@ export interface IPieChartPropsRaw extends StandardProps {
 	 *  { x: 'Friday'    , y: 5 } ,
 	 * ]
 	 */
-	data: Array<{ [key: string]: string | number }>;
+	data?: Array<{ [key: string]: string | number }>;
 
 	/** Show tool tips on hover. */
 	hasToolTips: boolean;
@@ -306,7 +306,7 @@ const PieChart = (props: IPieChartProps) => {
 											d={arcData}
 											color={_.get(
 												colorMap,
-												data[index][xAxisField],
+												data && data[index][xAxisField] || '', 
 												palette[index % palette.length]
 											)}
 											transform={`scale(${
