@@ -14,11 +14,11 @@ export default createClass({
 		this.setState({ isExpanded: !this.state.isExpanded });
 	},
 
-	handleResizing(height) {
+	handleResizing(height: any) {
 		this.setState({ resizeHeight: height });
 	},
 
-	handleResize(height) {
+	handleResize(height: any) {
 		this.setState({ resizeHeight: height });
 	},
 

@@ -15,7 +15,7 @@ export default createClass({
 		};
 	},
 
-	handleDisabledSelected(isSelected) {
+	handleDisabledSelected(isSelected: any) {
 		this.setState(
 			_.assign({}, this.state, {
 				disabled: _.assign({}, this.state.disabled, {
@@ -25,7 +25,7 @@ export default createClass({
 		);
 	},
 
-	handleEnabledSelected(isSelected) {
+	handleEnabledSelected(isSelected: any) {
 		this.setState(
 			_.assign({}, this.state, {
 				enabled: _.assign({}, this.state.enabled, {

@@ -24,21 +24,21 @@ export default createClass({
 			<div>
 				<Grid>
 					<Grid.Cell isHalf isOffsetHalf>
-						<p style={{ ...gridStyle.half, ...gridStyle.sharedStyles }}>
+						<p style={{ ...gridStyle.half, ...gridStyle.sharedStyles } as any}>
 							half with offset half
 						</p>
 					</Grid.Cell>
 				</Grid>
 				<Grid>
 					<Grid.Cell isQuarter isOffsetQuarter>
-						<p style={{ ...gridStyle.quarter, ...gridStyle.sharedStyles }}>
+						<p style={{ ...gridStyle.quarter, ...gridStyle.sharedStyles } as any}>
 							quarter with offset quarter
 						</p>
 					</Grid.Cell>
 				</Grid>
 				<Grid>
 					<Grid.Cell isThird isOffsetThird>
-						<p style={{ ...gridStyle.third, ...gridStyle.sharedStyles }}>
+						<p style={{ ...gridStyle.third, ...gridStyle.sharedStyles } as any}>
 							third with offset third
 						</p>
 					</Grid.Cell>

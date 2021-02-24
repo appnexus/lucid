@@ -26,7 +26,7 @@ export default createClass({
 				placeholder='Enter a word...'
 				suggestions={wordlist}
 				value='ab'
-				onSelect={index => {
+				onSelect={(index: any) => {
 					console.log(`selected: ${wordlist[index]}`);
 				}}
 				DropMenu={{

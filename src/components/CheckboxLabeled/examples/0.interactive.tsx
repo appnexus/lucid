@@ -14,7 +14,7 @@ export default createClass({
 		};
 	},
 
-	handleSelectedChocolate(isSelected) {
+	handleSelectedChocolate(isSelected: any) {
 		this.setState({
 			flavors: isSelected
 				? _.concat(this.state.flavors, 'chocolate')
@@ -22,7 +22,7 @@ export default createClass({
 		});
 	},
 
-	handleSelectedStrawberry(isSelected) {
+	handleSelectedStrawberry(isSelected: any) {
 		this.setState({
 			flavors: isSelected
 				? _.concat(this.state.flavors, 'strawberry')
@@ -30,7 +30,7 @@ export default createClass({
 		});
 	},
 
-	handleSelectedVanilla(isSelected) {
+	handleSelectedVanilla(isSelected: any) {
 		this.setState({
 			flavors: isSelected
 				? _.concat(this.state.flavors, 'vanilla')
@@ -38,7 +38,7 @@ export default createClass({
 		});
 	},
 
-	handleSelectedHipsum(isSelected) {
+	handleSelectedHipsum(isSelected: any) {
 		this.setState({
 			flavors: isSelected
 				? _.concat(this.state.flavors, 'hipsum')
@@ -46,7 +46,7 @@ export default createClass({
 		});
 	},
 
-	handleSelectedHipsum2(isSelected) {
+	handleSelectedHipsum2(isSelected: any) {
 		this.setState({
 			flavors: isSelected
 				? _.concat(this.state.flavors, 'hipsum2')
@@ -54,7 +54,7 @@ export default createClass({
 		});
 	},
 
-	handleSelectedHipsum3(isSelected) {
+	handleSelectedHipsum3(isSelected: any) {
 		this.setState({
 			flavors: isSelected
 				? _.concat(this.state.flavors, 'hipsum3')

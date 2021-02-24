@@ -9,30 +9,30 @@ export default createClass({
 		};
 	},
 
-	isSelected(id) {
+	isSelected(id: any) {
 		return this.state.selectedIcons.some(
-			({ id: selectedId }) => id === selectedId
+			({ id: selectedId }: any) => id === selectedId
 		);
 	},
 
-	isPartiallySelected(id) {
+	isPartiallySelected(id: any) {
 		return this.state.selectedIcons.some(
-			({ id: selectedId, isPartial }) => id === selectedId && isPartial
+			({ id: selectedId, isPartial }: any) => id === selectedId && isPartial
 		);
 	},
 
-	handleSelect(selectedId) {
+	handleSelect(selectedId: any) {
 		const selectedIcons = this.state.selectedIcons;
 
 		if (this.isPartiallySelected(selectedId)) {
 			// if partially selected, remove from the list
 			this.setState({
-				selectedIcons: selectedIcons.filter(({ id }) => id !== selectedId),
+				selectedIcons: selectedIcons.filter(({ id }: any) => id !== selectedId),
 			});
 		} else if (this.isSelected(selectedId)) {
 			// if already selected, ensure isPartial is true
 			this.setState({
-				selectedIcons: selectedIcons.map(({ id, isPartial }) => ({
+				selectedIcons: selectedIcons.map(({ id, isPartial }: any) => ({
 					id,
 					isPartial: isPartial || id === selectedId,
 				})),
@@ -64,7 +64,7 @@ export default createClass({
 						isPartial: this.isPartiallySelected('item2'),
 						label: 'Bax Tar',
 					},
-				]}
+				] as any}
 			/>
 		);
 	},

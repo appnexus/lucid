@@ -9,7 +9,7 @@ export default createClass({
 		};
 	},
 
-	handleSelect(id) {
+	handleSelect(id: any) {
 		// when selected, set `selectedIcon`
 		this.setState({ selectedIcon: id });
 	},
@@ -32,7 +32,7 @@ export default createClass({
 						isSelected: this.state.selectedIcon === 'item2',
 						label: 'Bax Tar',
 					},
-				]}
+				] as any}
 			/>
 		);
 	},

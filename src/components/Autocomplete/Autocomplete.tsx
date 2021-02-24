@@ -21,6 +21,7 @@ interface IAutocompleteProps extends StandardProps {
 	onSelect?: any;
 	onExpand?: any;
 	DropMenu?: IDropMenuProps;
+	placeholder?: any;
 }
 
 const Autocomplete = createClass<IAutocompleteProps>({

@@ -112,19 +112,19 @@ export default createClass({
 			isActionable: false,
 		};
 	},
-	handleToggle(stateItem) {
-		this.setState(prevState => ({ [stateItem]: !prevState[stateItem] }));
+	handleToggle(stateItem: any) {
+		this.setState((prevState: any) => ({ [stateItem]: !prevState[stateItem] }));
 	},
-	handleNumeric(stateItem, value) {
+	handleNumeric(stateItem: any, value: any) {
 		this.setState({ [stateItem]: value });
 	},
-	onChangeFixedColumnCount(prarm) {
+	onChangeFixedColumnCount(prarm: any) {
 		this.handleNumeric('fixedColumnCount', parseInt(prarm, 10));
 	},
-	onChangeFixedRowHeight(prarm) {
+	onChangeFixedRowHeight(prarm: any) {
 		this.handleNumeric('fixedRowHeight', parseInt(prarm, 10));
 	},
-	renderDataTable(props) {
+	renderDataTable(props: any) {
 		return (
 			<DataTable data={data} {...props}>
 				<DataTable.Column field='id' align='left' width={35} isResizable>

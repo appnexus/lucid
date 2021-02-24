@@ -1120,6 +1120,126 @@ exports[`Axis [common] example testing should match snapshot(s) for 6.time 2`] =
     </text>
   </g>
   <g
+    key="Sun Feb 01 2015 00:00:00 GMT+0000 (Coordinated Universal Time)"
+    transform="translate(14.645669291338583, 0)"
+  >
+    <line
+      className="lucid-Axis-tick"
+      x2={0}
+      y2={6}
+    />
+    <text
+      className="lucid-Axis-tick-text"
+      dy=".71em"
+      style={
+        Object {
+          "textAnchor": "middle",
+        }
+      }
+      transform=""
+      x={0}
+      y={9}
+    >
+      February
+    </text>
+  </g>
+  <g
+    key="Sun Mar 01 2015 00:00:00 GMT+0000 (Coordinated Universal Time)"
+    transform="translate(27.8740157480315, 0)"
+  >
+    <line
+      className="lucid-Axis-tick"
+      x2={0}
+      y2={6}
+    />
+    <text
+      className="lucid-Axis-tick-text"
+      dy=".71em"
+      style={
+        Object {
+          "textAnchor": "middle",
+        }
+      }
+      transform=""
+      x={0}
+      y={9}
+    >
+      March
+    </text>
+  </g>
+  <g
+    key="Wed Apr 01 2015 00:00:00 GMT+0000 (Coordinated Universal Time)"
+    transform="translate(42.51968503937008, 0)"
+  >
+    <line
+      className="lucid-Axis-tick"
+      x2={0}
+      y2={6}
+    />
+    <text
+      className="lucid-Axis-tick-text"
+      dy=".71em"
+      style={
+        Object {
+          "textAnchor": "middle",
+        }
+      }
+      transform=""
+      x={0}
+      y={9}
+    >
+      April
+    </text>
+  </g>
+  <g
+    key="Fri May 01 2015 00:00:00 GMT+0000 (Coordinated Universal Time)"
+    transform="translate(56.69291338582677, 0)"
+  >
+    <line
+      className="lucid-Axis-tick"
+      x2={0}
+      y2={6}
+    />
+    <text
+      className="lucid-Axis-tick-text"
+      dy=".71em"
+      style={
+        Object {
+          "textAnchor": "middle",
+        }
+      }
+      transform=""
+      x={0}
+      y={9}
+    >
+      May
+    </text>
+  </g>
+  <g
+    key="Mon Jun 01 2015 00:00:00 GMT+0000 (Coordinated Universal Time)"
+    transform="translate(71.33858267716535, 0)"
+  >
+    <line
+      className="lucid-Axis-tick"
+      x2={0}
+      y2={6}
+    />
+    <text
+      className="lucid-Axis-tick-text"
+      dy=".71em"
+      style={
+        Object {
+          "textAnchor": "middle",
+        }
+      }
+      transform=""
+      x={0}
+      y={9}
+    >
+      June
+    </text>
+  </g>
+  <g
     key="Wed Jul 01 2015 00:00:00 GMT+0000 (Coordinated Universal Time)"
     transform="translate(85.51181102362204, 0)"
   >
@@ -1141,6 +1261,126 @@ exports[`Axis [common] example testing should match snapshot(s) for 6.time 2`] =
       y={9}
     >
       July
+    </text>
+  </g>
+  <g
+    key="Sat Aug 01 2015 00:00:00 GMT+0000 (Coordinated Universal Time)"
+    transform="translate(100.15748031496064, 0)"
+  >
+    <line
+      className="lucid-Axis-tick"
+      x2={0}
+      y2={6}
+    />
+    <text
+      className="lucid-Axis-tick-text"
+      dy=".71em"
+      style={
+        Object {
+          "textAnchor": "middle",
+        }
+      }
+      transform=""
+      x={0}
+      y={9}
+    >
+      August
+    </text>
+  </g>
+  <g
+    key="Tue Sep 01 2015 00:00:00 GMT+0000 (Coordinated Universal Time)"
+    transform="translate(114.80314960629921, 0)"
+  >
+    <line
+      className="lucid-Axis-tick"
+      x2={0}
+      y2={6}
+    />
+    <text
+      className="lucid-Axis-tick-text"
+      dy=".71em"
+      style={
+        Object {
+          "textAnchor": "middle",
+        }
+      }
+      transform=""
+      x={0}
+      y={9}
+    >
+      September
+    </text>
+  </g>
+  <g
+    key="Thu Oct 01 2015 00:00:00 GMT+0000 (Coordinated Universal Time)"
+    transform="translate(128.97637795275588, 0)"
+  >
+    <line
+      className="lucid-Axis-tick"
+      x2={0}
+      y2={6}
+    />
+    <text
+      className="lucid-Axis-tick-text"
+      dy=".71em"
+      style={
+        Object {
+          "textAnchor": "middle",
+        }
+      }
+      transform=""
+      x={0}
+      y={9}
+    >
+      October
+    </text>
+  </g>
+  <g
+    key="Sun Nov 01 2015 00:00:00 GMT+0000 (Coordinated Universal Time)"
+    transform="translate(143.6220472440945, 0)"
+  >
+    <line
+      className="lucid-Axis-tick"
+      x2={0}
+      y2={6}
+    />
+    <text
+      className="lucid-Axis-tick-text"
+      dy=".71em"
+      style={
+        Object {
+          "textAnchor": "middle",
+        }
+      }
+      transform=""
+      x={0}
+      y={9}
+    >
+      November
+    </text>
+  </g>
+  <g
+    key="Tue Dec 01 2015 00:00:00 GMT+0000 (Coordinated Universal Time)"
+    transform="translate(157.79527559055117, 0)"
+  >
+    <line
+      className="lucid-Axis-tick"
+      x2={0}
+      y2={6}
+    />
+    <text
+      className="lucid-Axis-tick-text"
+      dy=".71em"
+      style={
+        Object {
+          "textAnchor": "middle",
+        }
+      }
+      transform=""
+      x={0}
+      y={9}
+    >
+      December
     </text>
   </g>
   <g
@@ -1168,6 +1408,126 @@ exports[`Axis [common] example testing should match snapshot(s) for 6.time 2`] =
     </text>
   </g>
   <g
+    key="Mon Feb 01 2016 00:00:00 GMT+0000 (Coordinated Universal Time)"
+    transform="translate(187.08661417322833, 0)"
+  >
+    <line
+      className="lucid-Axis-tick"
+      x2={0}
+      y2={6}
+    />
+    <text
+      className="lucid-Axis-tick-text"
+      dy=".71em"
+      style={
+        Object {
+          "textAnchor": "middle",
+        }
+      }
+      transform=""
+      x={0}
+      y={9}
+    >
+      February
+    </text>
+  </g>
+  <g
+    key="Tue Mar 01 2016 00:00:00 GMT+0000 (Coordinated Universal Time)"
+    transform="translate(200.78740157480314, 0)"
+  >
+    <line
+      className="lucid-Axis-tick"
+      x2={0}
+      y2={6}
+    />
+    <text
+      className="lucid-Axis-tick-text"
+      dy=".71em"
+      style={
+        Object {
+          "textAnchor": "middle",
+        }
+      }
+      transform=""
+      x={0}
+      y={9}
+    >
+      March
+    </text>
+  </g>
+  <g
+    key="Fri Apr 01 2016 00:00:00 GMT+0000 (Coordinated Universal Time)"
+    transform="translate(215.43307086614175, 0)"
+  >
+    <line
+      className="lucid-Axis-tick"
+      x2={0}
+      y2={6}
+    />
+    <text
+      className="lucid-Axis-tick-text"
+      dy=".71em"
+      style={
+        Object {
+          "textAnchor": "middle",
+        }
+      }
+      transform=""
+      x={0}
+      y={9}
+    >
+      April
+    </text>
+  </g>
+  <g
+    key="Sun May 01 2016 00:00:00 GMT+0000 (Coordinated Universal Time)"
+    transform="translate(229.60629921259843, 0)"
+  >
+    <line
+      className="lucid-Axis-tick"
+      x2={0}
+      y2={6}
+    />
+    <text
+      className="lucid-Axis-tick-text"
+      dy=".71em"
+      style={
+        Object {
+          "textAnchor": "middle",
+        }
+      }
+      transform=""
+      x={0}
+      y={9}
+    >
+      May
+    </text>
+  </g>
+  <g
+    key="Wed Jun 01 2016 00:00:00 GMT+0000 (Coordinated Universal Time)"
+    transform="translate(244.25196850393704, 0)"
+  >
+    <line
+      className="lucid-Axis-tick"
+      x2={0}
+      y2={6}
+    />
+    <text
+      className="lucid-Axis-tick-text"
+      dy=".71em"
+      style={
+        Object {
+          "textAnchor": "middle",
+        }
+      }
+      transform=""
+      x={0}
+      y={9}
+    >
+      June
+    </text>
+  </g>
+  <g
     key="Fri Jul 01 2016 00:00:00 GMT+0000 (Coordinated Universal Time)"
     transform="translate(258.4251968503937, 0)"
   >
@@ -1192,6 +1552,126 @@ exports[`Axis [common] example testing should match snapshot(s) for 6.time 2`] =
     </text>
   </g>
   <g
+    key="Mon Aug 01 2016 00:00:00 GMT+0000 (Coordinated Universal Time)"
+    transform="translate(273.07086614173227, 0)"
+  >
+    <line
+      className="lucid-Axis-tick"
+      x2={0}
+      y2={6}
+    />
+    <text
+      className="lucid-Axis-tick-text"
+      dy=".71em"
+      style={
+        Object {
+          "textAnchor": "middle",
+        }
+      }
+      transform=""
+      x={0}
+      y={9}
+    >
+      August
+    </text>
+  </g>
+  <g
+    key="Thu Sep 01 2016 00:00:00 GMT+0000 (Coordinated Universal Time)"
+    transform="translate(287.7165354330709, 0)"
+  >
+    <line
+      className="lucid-Axis-tick"
+      x2={0}
+      y2={6}
+    />
+    <text
+      className="lucid-Axis-tick-text"
+      dy=".71em"
+      style={
+        Object {
+          "textAnchor": "middle",
+        }
+      }
+      transform=""
+      x={0}
+      y={9}
+    >
+      September
+    </text>
+  </g>
+  <g
+    key="Sat Oct 01 2016 00:00:00 GMT+0000 (Coordinated Universal Time)"
+    transform="translate(301.8897637795275, 0)"
+  >
+    <line
+      className="lucid-Axis-tick"
+      x2={0}
+      y2={6}
+    />
+    <text
+      className="lucid-Axis-tick-text"
+      dy=".71em"
+      style={
+        Object {
+          "textAnchor": "middle",
+        }
+      }
+      transform=""
+      x={0}
+      y={9}
+    >
+      October
+    </text>
+  </g>
+  <g
+    key="Tue Nov 01 2016 00:00:00 GMT+0000 (Coordinated Universal Time)"
+    transform="translate(316.53543307086613, 0)"
+  >
+    <line
+      className="lucid-Axis-tick"
+      x2={0}
+      y2={6}
+    />
+    <text
+      className="lucid-Axis-tick-text"
+      dy=".71em"
+      style={
+        Object {
+          "textAnchor": "middle",
+        }
+      }
+      transform=""
+      x={0}
+      y={9}
+    >
+      November
+    </text>
+  </g>
+  <g
+    key="Thu Dec 01 2016 00:00:00 GMT+0000 (Coordinated Universal Time)"
+    transform="translate(330.70866141732284, 0)"
+  >
+    <line
+      className="lucid-Axis-tick"
+      x2={0}
+      y2={6}
+    />
+    <text
+      className="lucid-Axis-tick-text"
+      dy=".71em"
+      style={
+        Object {
+          "textAnchor": "middle",
+        }
+      }
+      transform=""
+      x={0}
+      y={9}
+    >
+      December
+    </text>
+  </g>
+  <g
     key="Sun Jan 01 2017 00:00:00 GMT+0000 (Coordinated Universal Time)"
     transform="translate(345.35433070866145, 0)"
   >
@@ -1213,6 +1693,30 @@ exports[`Axis [common] example testing should match snapshot(s) for 6.time 2`] =
       y={9}
     >
       2017
+    </text>
+  </g>
+  <g
+    key="Wed Feb 01 2017 00:00:00 GMT+0000 (Coordinated Universal Time)"
+    transform="translate(360, 0)"
+  >
+    <line
+      className="lucid-Axis-tick"
+      x2={0}
+      y2={6}
+    />
+    <text
+      className="lucid-Axis-tick-text"
+      dy=".71em"
+      style={
+        Object {
+          "textAnchor": "middle",
+        }
+      }
+      transform=""
+      x={0}
+      y={9}
+    >
+      February
     </text>
   </g>
 </g>

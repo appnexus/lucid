@@ -27,7 +27,7 @@ export interface ITextFieldProps extends StandardProps {
 	rows?: number;
 
 	/** Fires an event every time the user types text into the TextField. */
-	onChange: (
+	onChange?: (
 		value: string,
 		{
 			event,
@@ -39,7 +39,7 @@ export interface ITextFieldProps extends StandardProps {
 	) => void;
 
 	/** Fires an on the `input`'s onBlur. */
-	onBlur: (
+	onBlur?: (
 		currentValue: string,
 		{
 			event,
@@ -52,7 +52,7 @@ export interface ITextFieldProps extends StandardProps {
 
 	/** Fires an event, debounced by `debounceLevel` when the user types text
 		into the TextField. */
-	onChangeDebounced: (
+	onChangeDebounced?: (
 		value: string,
 		{
 			event,
@@ -73,7 +73,7 @@ export interface ITextFieldProps extends StandardProps {
 	}) => void;
 
 	/** Fires an event when the user hits "enter" from the TextField. You shouldn't use it if you're using `isMultiLine`. */
-	onSubmit: (
+	onSubmit?: (
 		value: string,
 		{
 			event,
@@ -223,7 +223,7 @@ class TextField extends React.Component<
 				props: ITextFieldProps;
 			}
 		): void => {
-			this.props.onChangeDebounced(value, { event, props });
+			this.props.onChangeDebounced && this.props.onChangeDebounced(value, { event, props });
 		},
 		this.props.debounceLevel
 	);
@@ -254,7 +254,7 @@ class TextField extends React.Component<
 		this.setState({ value, isHolding: true });
 		this.releaseHold();
 
-		onChange(value, { event, props: this.props });
+		onChange && onChange(value, { event, props: this.props });
 
 		// Also call the debounced handler in case the user wants debounced change
 		// events.
@@ -272,7 +272,7 @@ class TextField extends React.Component<
 		if (onChangeDebounced !== _.noop) {
 			this.handleChangeDebounced.flush();
 		}
-		onBlur(value, { event, props: this.props });
+		onBlur && onBlur(value, { event, props: this.props });
 	};
 
 	handleKeyDown = (event: React.KeyboardEvent): void => {
@@ -292,7 +292,7 @@ class TextField extends React.Component<
 				this.handleChangeDebounced.flush();
 			}
 
-			onSubmit(value, { event, props: this.props });
+			onSubmit && onSubmit(value, { event, props: this.props });
 		}
 	};
 

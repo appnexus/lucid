@@ -71,8 +71,7 @@ exports[`Validation [common] example testing should match snapshot(s) for basic 
     onChangeDebounced={[Function]}
     onKeyDown={[Function]}
     onSubmit={[Function]}
-    row={3}
-    rows={5}
+    rows={3}
     value="Text Area Text"
   />
   <div
@@ -102,8 +101,7 @@ exports[`Validation [common] example testing should match snapshot(s) for basic 
     onChangeDebounced={[Function]}
     onKeyDown={[Function]}
     onSubmit={[Function]}
-    row={3}
-    rows={5}
+    rows={3}
     value="Text Area Text"
   />
   <div

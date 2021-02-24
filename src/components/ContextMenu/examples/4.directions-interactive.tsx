@@ -33,7 +33,7 @@ export default createClass({
 					}}
 				>
 					<SingleSelect
-						onSelect={i => this.setState({ direction: directions[i] })}
+						onSelect={i => this.setState({ direction: directions[i as any] })}
 					>
 						<SingleSelect.Placeholder>
 							Select a direction
@@ -51,7 +51,7 @@ export default createClass({
 						onChange={directonOffset => this.setState({ directonOffset })}
 					/>
 					<SingleSelect
-						onSelect={i => this.setState({ alignment: alignments[i] })}
+						onSelect={i => this.setState({ alignment: alignments[i as any] })}
 					>
 						<SingleSelect.Placeholder>
 							Select an alignment

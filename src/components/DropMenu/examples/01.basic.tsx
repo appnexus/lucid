@@ -10,7 +10,7 @@ export default createClass({
 		};
 	},
 
-	handleSelect(optionIndex) {
+	handleSelect(optionIndex: any) {
 		this.setState({
 			selectedIndices: [optionIndex],
 		});
@@ -25,7 +25,7 @@ export default createClass({
 				<DropMenu.Control>
 					{_.isEmpty(selectedIndices)
 						? 'Select'
-						: options[_.last(selectedIndices)]}
+						: options[_.last(selectedIndices) as any]}
 				</DropMenu.Control>
 				{_.map(options, (optionText, index) => (
 					<DropMenu.Option key={'Option-' + index}>

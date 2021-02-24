@@ -22,8 +22,8 @@ export default createClass({
 							style={{ margin: '90px' }}
 						>
 							<ToolTipDumb
-								direction={direction}
-								alignment={alignment}
+								direction={direction as any}
+								alignment={alignment as any}
 								isExpanded={true}
 							>
 								<Title>

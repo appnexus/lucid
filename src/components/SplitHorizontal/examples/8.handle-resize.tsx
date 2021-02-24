@@ -9,11 +9,11 @@ export default createClass({
 		};
 	},
 
-	handleResizing(height) {
+	handleResizing(height: any) {
 		this.setState({ newHeight: height });
 	},
 
-	handleResize(height) {
+	handleResize(height: any) {
 		this.setState({ newHeight: height });
 	},
 

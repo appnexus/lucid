@@ -45,7 +45,6 @@ export default createClass({
 					<svg
 						width={horizontalAxisWidth}
 						height={horizontalAxisHeight}
-						margin='400'
 					>
 						<g
 							transform={`translate(${margin.left}, ${horizontalAxisHeight /

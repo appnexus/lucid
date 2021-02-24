@@ -1,9 +1,9 @@
 import React from 'react';
 import { SidePanel } from '../../../index';
 
-export default class extends React.Component {
-	constructor(...args) {
-		super(...args);
+export default class extends React.Component<any, any> {
+	constructor(props: any, state: any) {
+		super(props, state);
 		this.state = { isExpanded: true, width: 240 };
 		this.handleToggle = this.handleToggle.bind(this);
 		this.handleResize = this.handleResize.bind(this);
@@ -15,7 +15,7 @@ export default class extends React.Component {
 		});
 	}
 
-	handleResize(width) {
+	handleResize(width: any) {
 		this.setState({
 			width,
 		});

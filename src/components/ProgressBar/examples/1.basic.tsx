@@ -8,7 +8,7 @@ const style = {
 };
 
 export default class extends React.Component {
-	constructor(props) {
+	constructor(props: any) {
 		super(props);
 		this.state = {
 			value: '',
@@ -22,12 +22,12 @@ export default class extends React.Component {
 				Enter % complete:
 				<TextField
 					style={style}
-					value={this.state.value}
+					value={(this.state as any).value}
 					onSubmit={value =>
 						this.setState({ percentComplete: value, value: '' })
 					}
 				/>
-				<ProgressBar percentComplete={this.state.percentComplete} />
+				<ProgressBar percentComplete={(this.state as any).percentComplete} />
 			</div>
 		);
 	}

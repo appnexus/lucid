@@ -14,7 +14,7 @@ export default createClass({
 		};
 	},
 
-	handleSelectDate(date) {
+	handleSelectDate(date: any) {
 		this.setState({
 			selectedDate: date,
 		});

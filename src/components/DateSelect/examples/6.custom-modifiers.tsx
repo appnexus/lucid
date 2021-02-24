@@ -14,8 +14,8 @@ export default createClass({
 				<DateSelect>
 					<DateSelect.CalendarMonth
 						modifiers={{
-							tuesday: date => date.getDay() === 2,
-						}}
+							tuesday: (date: any) => date.getDay() === 2,
+						} as any}
 					/>
 				</DateSelect>
 

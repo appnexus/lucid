@@ -26,11 +26,11 @@ export default createClass({
 		};
 	},
 
-	handleShow(isShown) {
+	handleShow(isShown: any) {
 		this.setState({ isShown });
 	},
 
-	handleSelectedChocolate(isSelected) {
+	handleSelectedChocolate(isSelected: any) {
 		this.setState({
 			flavors: isSelected
 				? _.concat(this.state.flavors, 'chocolate')
@@ -38,7 +38,7 @@ export default createClass({
 		});
 	},
 
-	handleSelectedStrawberry(isSelected) {
+	handleSelectedStrawberry(isSelected: any) {
 		this.setState({
 			flavors: isSelected
 				? _.concat(this.state.flavors, 'strawberry')
@@ -59,7 +59,6 @@ export default createClass({
 					handleClose={_.partial(this.handleShow, !this.state.isShown)}
 					Header='Advanced Filters'
 					size='medium'
-					height={500}
 				>
 					<p style={{ fontSize: '16px' }}>Flavor</p>
 					<CheckboxLabeled

@@ -5,7 +5,7 @@ import { Sidebar } from '../../../index';
 export default createClass({
 	render() {
 		return (
-			<Sidebar initialState={{ isExpanded: false }}>
+			<Sidebar {...{ initialState: { isExpanded: false }}}>
 				<Sidebar.Bar>
 					Try-hard cornhole ea artisan, laborum wolf eiusmod chillwave irure.
 					Lomo chicharrones taxidermy narwhal. Cronut deep v PBR&B photo booth

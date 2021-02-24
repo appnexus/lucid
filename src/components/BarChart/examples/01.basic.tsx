@@ -21,7 +21,7 @@ export default createClass({
 					width={750}
 					data={data}
 					yAxisTitle='Revenue'
-					margin={{ top: 20 }}
+					margin={{ top: 20 } as any}
 				/>
 			</div>
 		);

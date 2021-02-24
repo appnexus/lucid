@@ -10,7 +10,7 @@ export default createClass({
 		};
 	},
 
-	handleOpenClose(isShown) {
+	handleOpenClose(isShown: any) {
 		this.setState({
 			isShown: isShown,
 		});

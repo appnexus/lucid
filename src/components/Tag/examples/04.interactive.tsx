@@ -94,7 +94,7 @@ export default createClass({
 		};
 	},
 
-	handleRemove({ props: { callbackId } }) {
+	handleRemove({ props: { callbackId } }: any) {
 		this.setState({
 			removedItems: _.set(this.state.removedItems, callbackId, true),
 		});

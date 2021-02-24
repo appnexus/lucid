@@ -7,7 +7,7 @@ const width = 400;
 const height = 40;
 const innerWidth = width - margin.right - margin.left;
 
-const x = d3Scale
+const x: any = d3Scale
 	.scaleBand()
 	.domain(['a', 'b', 'c', 'd'])
 	.range([0, innerWidth]);

@@ -18,7 +18,7 @@ export default createClass({
 							'Text in an array',
 							'Only the first value in the array is used',
 							'The rest of these should be ignored',
-						]}
+						] as any}
 						style={style}
 					/>
 					<RadioButtonLabeled
@@ -28,7 +28,7 @@ export default createClass({
 								Again only the first value in the array is used
 							</span>,
 							<span key='3'>The rest should not be rendered</span>,
-						]}
+						] as any}
 						style={style}
 					/>
 				</section>

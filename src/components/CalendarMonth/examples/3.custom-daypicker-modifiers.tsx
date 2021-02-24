@@ -8,7 +8,7 @@ export default createClass({
 			<section style={{ maxWidth: 400 }}>
 				<CalendarMonth
 					modifiers={{
-						tuesday: day => day.getDay() === 2,
+						tuesday: (day: any) => day.getDay() === 2,
 					}}
 				/>
 

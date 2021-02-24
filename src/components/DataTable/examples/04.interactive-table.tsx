@@ -109,7 +109,7 @@ export default createClass({
 		};
 	},
 
-	handleSelect(item, selectedIndex) {
+	handleSelect(_item: any, selectedIndex: any) {
 		const { data } = this.state;
 
 		this.setState({
@@ -141,13 +141,13 @@ export default createClass({
 		});
 	},
 
-	handleRowClick(item, rowIndex) {
+	handleRowClick(_item: any, rowIndex: any) {
 		this.setState({
 			activeIndex: rowIndex,
 		});
 	},
 
-	handleSort(field) {
+	handleSort(field: any) {
 		const {
 			currentlySortedField,
 			currentlySortedFieldDirection,

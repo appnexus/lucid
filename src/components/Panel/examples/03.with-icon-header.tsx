@@ -7,7 +7,7 @@ export default createClass({
 		return (
 			<Panel>
 				<Panel.Header>
-					<SettingsIcon presetSize='large' style={{ marginRight: '16px' }} />
+					<SettingsIcon style={{ marginRight: '16px' }} />
 					<span>Header</span>
 				</Panel.Header>
 				Meditation literally chia, schlitz banh mi mlkshk vape ennui art party.

@@ -5,9 +5,9 @@ const margins = {
 	margin: '0 0 16px 0',
 };
 
-export default class extends React.Component {
-	constructor(...args) {
-		super(...args);
+export default class extends React.Component<any, any> {
+	constructor(props: any, state: any) {
+		super(props, state);
 		this.state = { isExpanded: true };
 		this.handleToggle = this.handleToggle.bind(this);
 	}

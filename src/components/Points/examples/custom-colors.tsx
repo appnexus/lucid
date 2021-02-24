@@ -23,17 +23,17 @@ const data = [
 ];
 
 const yFields = ['y0', 'y1', 'y2', 'y3'];
-const yMax = _.max(
+const yMax: any = _.max(
 	_.reduce(
 		yFields,
 		(acc, field) => {
-			return acc.concat(_.map(data, field));
+			return acc.concat(_.map(data, field) as any);
 		},
 		[]
 	)
 );
 
-const xScale = d3Scale
+const xScale: any = d3Scale
 	.scalePoint()
 	.domain(_.map(data, 'x'))
 	.range([0, innerWidth]);

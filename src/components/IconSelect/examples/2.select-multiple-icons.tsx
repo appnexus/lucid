@@ -9,17 +9,17 @@ export default createClass({
 		};
 	},
 
-	isSelected(id) {
+	isSelected(id: any) {
 		return this.state.selectedIcons.includes(id);
 	},
 
-	handleSelect(selectedId) {
+	handleSelect(selectedId: any) {
 		const selectedIcons = this.state.selectedIcons;
 
 		// if selected, then remove from list
 		if (this.isSelected(selectedId)) {
 			this.setState({
-				selectedIcons: selectedIcons.filter(id => id !== selectedId),
+				selectedIcons: selectedIcons.filter((id: any) => id !== selectedId),
 			});
 		} else {
 			// add it to list
@@ -47,7 +47,7 @@ export default createClass({
 						isSelected: this.isSelected('item2'),
 						label: 'Bax Tar',
 					},
-				]}
+				] as any}
 			/>
 		);
 	},

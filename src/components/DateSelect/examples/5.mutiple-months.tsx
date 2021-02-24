@@ -11,7 +11,7 @@ export default createClass({
 	render() {
 		return (
 			<DateSelect
-				selectedDays={new Date()}
+				selectedDays={new Date() as any}
 				monthsShown={3}
 				calendarsRendered={9}
 				showDivider

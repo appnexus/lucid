@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SearchField [common] example testing should match snapshot(s) for 1.default 1`] = `
+exports[`SearchField [common] example testing should match snapshot(s) for 1.basic 1`] = `
 <div
   className="lucid-SearchField"
 >

@@ -52,7 +52,7 @@ export interface ISearchFieldProps extends StandardProps {
 
 	/** Fires an event, debounced by \`debounceLevel\`, when the user types text
 	into the TextField. */
-	onChangeDebounced: (
+	onChangeDebounced?: (
 		value: string,
 		{ event, props }: { event: React.FormEvent; props: ITextFieldProps }
 	) => void;

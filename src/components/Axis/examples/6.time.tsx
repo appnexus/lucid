@@ -24,12 +24,12 @@ export default createClass({
 					<Axis
 						orient='bottom'
 						scale={x}
-						ticks={x.ticks(d3Time.timeMonth, 6)}
+						ticks={x.ticks(d3Time.timeMonth)}
 					/>
 				</g>
 
 				<g transform={`translate(${margin.left}, ${(height / 3) * 2})`}>
-					<Axis orient='bottom' scale={x} ticks={x.ticks(d3Time.timeYear, 1)} />
+					<Axis orient='bottom' scale={x} ticks={x.ticks(d3Time.timeYear)} />
 				</g>
 			</svg>
 		);

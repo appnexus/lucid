@@ -3,7 +3,7 @@ import createClass from 'create-react-class';
 import { Button } from '../../../index';
 import InfiniteSlidePanel from '../InfiniteSlidePanel';
 
-const generateRGB = n => {
+const generateRGB = (n: any) => {
 	const R = Math.floor((Math.sin(n / Math.PI) + 1) * 128);
 	const G = Math.floor((Math.sin((2 * n) / Math.PI) + 1) * 128);
 	const B = Math.floor((Math.sin((3 * n) / Math.PI) + 1) * 128);
@@ -29,7 +29,7 @@ export default createClass({
 		});
 	},
 
-	handleSwipe(slidesSwiped) {
+	handleSwipe(slidesSwiped: any) {
 		this.setState({
 			offset: this.state.offset + slidesSwiped,
 		});

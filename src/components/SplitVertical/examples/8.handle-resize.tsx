@@ -9,11 +9,11 @@ export default createClass({
 		};
 	},
 
-	handleResizing(width) {
+	handleResizing(width: any) {
 		this.setState({ newWidth: width });
 	},
 
-	handleResize(width) {
+	handleResize(width: any) {
 		this.setState({ newWidth: width });
 	},
 

@@ -13,7 +13,7 @@ export default createClass({
 			<section style={{ maxWidth: 400 }}>
 				<DateSelect
 					initialMonth={new Date(2016, 1)}
-					selectedDays={new Date(2016, 1, 17)}
+					selectedDays={new Date(2016, 1, 17) as any}
 				/>
 			</section>
 		);

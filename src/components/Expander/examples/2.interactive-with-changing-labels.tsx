@@ -104,7 +104,7 @@ export default createClass({
 		);
 	},
 
-	handleExpanded(isExpanded) {
+	handleExpanded(isExpanded: any) {
 		this.setState({
 			isExpanded,
 		});

@@ -16,25 +16,25 @@ export default createClass({
 		};
 	},
 
-	handleSelectedAirplaneMode(isSelected) {
+	handleSelectedAirplaneMode(isSelected: any) {
 		this.setState({
 			airplaneMode: isSelected,
 		});
 	},
 
-	handleSelectedBluetooth(isSelected) {
+	handleSelectedBluetooth(isSelected: any) {
 		this.setState({
 			bluetooth: isSelected,
 		});
 	},
 
-	handleSelectedCellularData(isSelected) {
+	handleSelectedCellularData(isSelected: any) {
 		this.setState({
 			cellularData: isSelected,
 		});
 	},
 
-	handleSelectedSpam(isSelected) {
+	handleSelectedSpam(isSelected: any) {
 		this.setState({
 			spam: isSelected,
 		});

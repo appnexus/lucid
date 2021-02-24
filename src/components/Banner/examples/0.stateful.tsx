@@ -8,7 +8,7 @@ export default createClass({
 		return { isClosed: false };
 	},
 
-	handleChange(isClosed) {
+	handleChange(isClosed: any) {
 		this.setState({
 			isClosed,
 		});

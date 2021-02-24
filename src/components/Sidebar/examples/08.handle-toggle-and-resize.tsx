@@ -14,11 +14,11 @@ export default createClass({
 		this.setState({ isExpanded: !this.state.isExpanded });
 	},
 
-	handleResizing(width) {
+	handleResizing(width: any) {
 		this.setState({ resizeWidth: width });
 	},
 
-	handleResize(width) {
+	handleResize(width: any) {
 		this.setState({ resizeWidth: width });
 	},
 

@@ -1,6 +1,6 @@
 import _ from 'lodash';
 
-function exampleSelector({ number }) {
+function exampleSelector({ number }: any) {
 	return _.isNumber(number);
 }
 

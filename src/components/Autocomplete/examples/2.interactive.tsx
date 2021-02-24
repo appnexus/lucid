@@ -269,7 +269,7 @@ export default createClass({
 		};
 	},
 
-	handleChange(value) {
+	handleChange(value: any) {
 		this.setState({
 			value,
 		});

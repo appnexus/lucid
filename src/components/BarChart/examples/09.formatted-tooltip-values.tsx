@@ -21,7 +21,7 @@ export default createClass({
 					width={750}
 					data={data}
 					yAxisTitle='Revenue'
-					yAxisTooltipDataFormatter={formatters.formatAbbreviatedNumber}
+					yAxisTooltipDataFormatter={formatters.formatAbbreviatedNumber as any}
 				/>
 			</div>
 		);

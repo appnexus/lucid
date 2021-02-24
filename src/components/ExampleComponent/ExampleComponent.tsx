@@ -64,7 +64,7 @@ const ExampleComponent = createClass({
 	},
 
 	render() {
-		const { className, children, isX, style } = this.props;
+		const { className, children, isX, style } = this.props as any;
 
 		return (
 			<div

@@ -7,7 +7,7 @@ timemachine.config({
 	dateString: 'December 25, 2018 13:12:59',
 });
 
-function isPastDay(date) {
+function isPastDay(date: any) {
 	const day = new Date(date.getTime()).setHours(0, 0, 0, 0);
 	const today = new Date().setHours(0, 0, 0, 0);
 	return day < today;

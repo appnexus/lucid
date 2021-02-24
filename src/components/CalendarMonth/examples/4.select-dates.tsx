@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import React from 'react';
 import createClass from 'create-react-class';
-import { DateUtils } from 'react-day-picker';
+import ReactDayPicker from 'react-day-picker';
 import { Button } from '../../../index';
 import CalendarMonth from '../CalendarMonth';
 
@@ -26,7 +26,7 @@ export default createClass({
 		});
 	},
 
-	handleDayClick(date, { disabled }) {
+	handleDayClick(date: any, { disabled }: any) {
 		if (disabled) {
 			return;
 		}
@@ -34,12 +34,12 @@ export default createClass({
 		const { selectedDays } = this.state;
 
 		this.setState({
-			selectedDays: _.xorWith(selectedDays, [date], DateUtils.isSameDay),
+			selectedDays: _.xorWith(selectedDays, [date], ReactDayPicker.DateUtils.isSameDay),
 			cursor: date,
 		});
 	},
 
-	handleDayMouseEnter(day, { disabled }) {
+	handleDayMouseEnter(day: any, { disabled }: any) {
 		if (disabled) {
 			this.setState({
 				cursor: null,
@@ -72,7 +72,7 @@ export default createClass({
 						onDayClick={this.handleDayClick}
 						onDayMouseEnter={this.handleDayMouseEnter}
 						onDayMouseLeave={this.handleDayMouseLeave}
-						disabledDays={DateUtils.isPastDay}
+						disabledDays={ReactDayPicker.DateUtils.isPastDay}
 					/>
 
 					<Button onClick={this.handleNext}>{'>'}</Button>

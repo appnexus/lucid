@@ -72,7 +72,7 @@ export default createClass({
 		);
 	},
 
-	handleDragEnded(coordinates) {
+	handleDragEnded(coordinates: any) {
 		this.setState({
 			events: _.concat(this.state.events, {
 				type: 'end',
@@ -81,7 +81,7 @@ export default createClass({
 		});
 	},
 
-	handleDragStarted(coordinates) {
+	handleDragStarted(coordinates: any) {
 		this.setState({
 			events: _.concat(this.state.events, {
 				type: 'start',
@@ -90,8 +90,8 @@ export default createClass({
 		});
 	},
 
-	handleDragged(coordinates) {
-		const lastEvent = _.last(this.state.events);
+	handleDragged(coordinates: any) {
+		const lastEvent: any = _.last(this.state.events);
 		const alreadyDragging = lastEvent.type === 'start';
 
 		this.setState({

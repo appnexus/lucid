@@ -34,7 +34,7 @@ export default createClass({
 		});
 	},
 
-	handleSwipe(slidesSwiped) {
+	handleSwipe(slidesSwiped: any) {
 		this.setState({
 			offset: this.state.offset + slidesSwiped,
 		});

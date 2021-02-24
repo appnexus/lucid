@@ -4,17 +4,18 @@ import PropTypes from 'prop-types';
 
 import { Button, Portal } from '../../../index';
 
-const context = React.createContext({
+const context: any = React.createContext({
 	display: 'hello',
 });
 
 class ExampleApp extends React.Component {
-	constructor(props) {
+	static propTypes: { children: PropTypes.Requireable<PropTypes.ReactNodeLike>; };
+	constructor(props: any) {
 		super(props);
 		this.state = {
 			counter: 0,
 			increment: () => {
-				this.setState(({ counter }) => ({ counter: counter + 1 }));
+				this.setState(({ counter }: any) => ({ counter: counter + 1 }));
 			},
 		};
 	}
@@ -36,7 +37,7 @@ export default createClass({
 		return (
 			<ExampleApp>
 				<context.Consumer>
-					{({ counter, increment }) => (
+					{({ counter, increment }: any) => (
 						<div>
 							<h1>counter: {counter}</h1>
 							<Button kind='primary' onClick={increment}>
@@ -56,7 +57,7 @@ export default createClass({
 					}}
 				>
 					<context.Consumer>
-						{({ counter, increment }) => (
+						{({ counter, increment }: any) => (
 							<div>
 								inside the portal counter: {counter}
 								<Button kind='primary' onClick={increment}>

@@ -25,7 +25,7 @@ export default createClass({
 
 				<p>Text area with error (method 1)</p>
 				<Validation Error='Error Three'>
-					<TextField isMultiLine row={3} value='Text Area Text' />
+					<TextField isMultiLine rows={3} value='Text Area Text' />
 				</Validation>
 
 				<br />
@@ -35,7 +35,7 @@ export default createClass({
 					<Validation.Error>
 						<span>Error Four</span>
 					</Validation.Error>
-					<TextField isMultiLine row={3} value='Text Area Text' />
+					<TextField isMultiLine rows={3} value='Text Area Text' />
 				</Validation>
 			</div>
 		);

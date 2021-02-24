@@ -23,7 +23,7 @@ export default createClass({
 				<Typography variant='span'>
 					span. sample code outputs with help bubble
 					<div className='HelpBubble'>
-						<ToolTip alignment={'start'} direction={'right'} name='I am a div under typography'>
+						<ToolTip alignment={'start'} direction={'right'}>
 							<Title className='HelpBubble-title'>look at me</Title>
 							<Target>
 								<HelpIcon size={12} />

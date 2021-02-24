@@ -160,7 +160,9 @@ export function common(
 				`./src/components/**/${Component.displayName}/examples/*.@(j|t)sx`
 			);
 			_.each(fileNames, path => {
-				const Example = require('../../' + path).default;
+				const lib = require('../../' + path.replace('.tsx', ''));
+				const Example = lib.default;
+			
 				const title = parse(path).name;
 				it(`should match snapshot(s) for ${title}`, () => {
 					const shallowExample = shallow(<Example />, {

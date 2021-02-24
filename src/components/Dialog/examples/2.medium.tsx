@@ -10,7 +10,7 @@ export default createClass({
 		};
 	},
 
-	handleShow(isShown) {
+	handleShow(isShown: any) {
 		this.setState({ isShown });
 	},
 

@@ -10,8 +10,8 @@ const data = [
 	{ day: 'wednesday', apples: 3000, oranges: 2000 },
 	{ day: 'thursday', apples: 5000, oranges: 6000 },
 ];
-const yFormatter = d => `${d / 1000}k`;
-const xFormatter = d => d.toUpperCase().slice(0, 3);
+const yFormatter = (d: any) => `${d / 1000}k`;
+const xFormatter = (d: any) => d.toUpperCase().slice(0, 3);
 
 const style = {
 	paddingTop: '6rem',

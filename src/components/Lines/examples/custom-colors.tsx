@@ -18,11 +18,11 @@ const data = [
 ];
 
 const yFields = ['y0', 'y1', 'y2', 'y3'];
-const yMax = _.max(
+const yMax: any = _.max(
 	_.reduce(
 		yFields,
 		(acc, field) => {
-			return acc.concat(_.map(data, field));
+			return acc.concat(_.map(data, field) as any);
 		},
 		[]
 	)

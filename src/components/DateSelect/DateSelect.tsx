@@ -20,6 +20,7 @@ const clampMonthsShown = (monthsShown: number) => _.clamp(monthsShown, 1, 6);
 const { any, bool, node, func, instanceOf, number, oneOf, string } = PropTypes;
 
 interface IDateSelectCalendarMonthProps extends StandardProps {
+	modifiers: any;
 	description?: string;
 }
 

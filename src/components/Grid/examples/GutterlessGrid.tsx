@@ -17,8 +17,8 @@ const gridStyle = {
 	vertical: { height: '100px' },
 };
 
-const fillCells = count => {
-	const cells = [];
+const fillCells = (count: any) => {
+	const cells: any = [];
 	for (let i = 0; i < count; i++) {
 		cells.push(
 			<Grid.Cell key={i}>

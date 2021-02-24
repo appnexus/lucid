@@ -112,13 +112,13 @@ export default createClass({
 			isActionable: false,
 		};
 	},
-	handleToggle(stateItem) {
+	handleToggle(stateItem: any) {
 		this.setState({ [stateItem]: !this.state[stateItem] });
 	},
-	handleNumeric(stateItem, value) {
+	handleNumeric(stateItem: any, value: any) {
 		this.setState({ [stateItem]: value });
 	},
-	renderDataTable(props) {
+	renderDataTable(props: any) {
 		return (
 			<DataTable data={data} {...props}>
 				<DataTable.Column field='id' align='left' width={35}>
