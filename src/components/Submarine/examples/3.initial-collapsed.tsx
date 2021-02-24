@@ -12,7 +12,7 @@ export default createClass({
 					outline: '1px solid lightgray',
 				}}
 			>
-				<Submarine>
+				<Submarine initialState={{ isExpanded: false }}>
 					<Submarine.Bar>
 						Try-hard cornhole ea artisan, laborum wolf eiusmod chillwave irure.
 						Lomo chicharrones taxidermy narwhal. Cronut deep v PBR&B photo booth

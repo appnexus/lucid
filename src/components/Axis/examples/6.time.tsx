@@ -7,7 +7,7 @@ const width = 400;
 const height = 200;
 const innerWidth = width - margin.right - margin.left;
 
-const x = d3Scale
+const x: any = d3Scale
 	.scaleTime()
 	.domain([new Date('2015-01-01'), new Date('2017-02-01')])
 	.range([0, innerWidth]);
@@ -24,12 +24,12 @@ export default createClass({
 					<Axis
 						orient='bottom'
 						scale={x}
-						ticks={x.ticks(d3Time.timeMonth)}
+						ticks={x.ticks(d3Time.timeMonth, 6)}
 					/>
 				</g>
 
 				<g transform={`translate(${margin.left}, ${(height / 3) * 2})`}>
-					<Axis orient='bottom' scale={x} ticks={x.ticks(d3Time.timeYear)} />
+					<Axis orient='bottom' scale={x} ticks={x.ticks(d3Time.timeYear, 1)} />
 				</g>
 			</svg>
 		);

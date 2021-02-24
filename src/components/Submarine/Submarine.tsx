@@ -129,6 +129,8 @@ interface ISubmarineProps extends StandardProps {
 		event: React.MouseEvent<HTMLButtonElement>;
 		props: ISubmarineProps;
 	}) => void;
+
+	initialState?: Object;
 }
 
 class Submarine extends React.Component<ISubmarineProps, ISubmarineState> {
