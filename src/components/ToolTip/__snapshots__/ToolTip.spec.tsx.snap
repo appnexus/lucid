@@ -900,7 +900,7 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 2.variant
 </ContextMenu>
 `;
 
-exports[`ToolTip [common] example testing should match snapshot(s) for 3.static 1`] = `
+exports[`ToolTip [common] example testing should match snapshot(s) for 3.unchanging 1`] = `
 <ContextMenu
   alignment="center"
   className="lucid-ToolTip"
@@ -952,7 +952,7 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 3.static 
 </ContextMenu>
 `;
 
-exports[`ToolTip [common] example testing should match snapshot(s) for 3.static 2`] = `
+exports[`ToolTip [common] example testing should match snapshot(s) for 3.unchanging 2`] = `
 <ContextMenu
   alignment="center"
   className="lucid-ToolTip"
@@ -1004,7 +1004,7 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 3.static 
 </ContextMenu>
 `;
 
-exports[`ToolTip [common] example testing should match snapshot(s) for 3.static 3`] = `
+exports[`ToolTip [common] example testing should match snapshot(s) for 3.unchanging 3`] = `
 <ContextMenu
   alignment="center"
   className="lucid-ToolTip"
@@ -1056,7 +1056,7 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 3.static 
 </ContextMenu>
 `;
 
-exports[`ToolTip [common] example testing should match snapshot(s) for 3.static 4`] = `
+exports[`ToolTip [common] example testing should match snapshot(s) for 3.unchanging 4`] = `
 <ContextMenu
   alignment="center"
   className="lucid-ToolTip"
@@ -1108,7 +1108,7 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 3.static 
 </ContextMenu>
 `;
 
-exports[`ToolTip [common] example testing should match snapshot(s) for 3.static 5`] = `
+exports[`ToolTip [common] example testing should match snapshot(s) for 3.unchanging 5`] = `
 <ContextMenu
   alignment="center"
   className="lucid-ToolTip"
@@ -1160,7 +1160,7 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 3.static 
 </ContextMenu>
 `;
 
-exports[`ToolTip [common] example testing should match snapshot(s) for 3.static 6`] = `
+exports[`ToolTip [common] example testing should match snapshot(s) for 3.unchanging 6`] = `
 <ContextMenu
   alignment="center"
   className="lucid-ToolTip"
@@ -1212,7 +1212,7 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 3.static 
 </ContextMenu>
 `;
 
-exports[`ToolTip [common] example testing should match snapshot(s) for 3.static 7`] = `
+exports[`ToolTip [common] example testing should match snapshot(s) for 3.unchanging 7`] = `
 <ContextMenu
   alignment="center"
   className="lucid-ToolTip"
@@ -1264,7 +1264,7 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 3.static 
 </ContextMenu>
 `;
 
-exports[`ToolTip [common] example testing should match snapshot(s) for 3.static 8`] = `
+exports[`ToolTip [common] example testing should match snapshot(s) for 3.unchanging 8`] = `
 <ContextMenu
   alignment="center"
   className="lucid-ToolTip"
@@ -1316,7 +1316,7 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 3.static 
 </ContextMenu>
 `;
 
-exports[`ToolTip [common] example testing should match snapshot(s) for 3.static 9`] = `
+exports[`ToolTip [common] example testing should match snapshot(s) for 3.unchanging 9`] = `
 <ContextMenu
   alignment="center"
   className="lucid-ToolTip"
@@ -1368,7 +1368,7 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 3.static 
 </ContextMenu>
 `;
 
-exports[`ToolTip [common] example testing should match snapshot(s) for 3.static 10`] = `
+exports[`ToolTip [common] example testing should match snapshot(s) for 3.unchanging 10`] = `
 <ContextMenu
   alignment="center"
   className="lucid-ToolTip"
@@ -1420,7 +1420,7 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 3.static 
 </ContextMenu>
 `;
 
-exports[`ToolTip [common] example testing should match snapshot(s) for 3.static 11`] = `
+exports[`ToolTip [common] example testing should match snapshot(s) for 3.unchanging 11`] = `
 <ContextMenu
   alignment="center"
   className="lucid-ToolTip"
@@ -1472,7 +1472,7 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 3.static 
 </ContextMenu>
 `;
 
-exports[`ToolTip [common] example testing should match snapshot(s) for 3.static 12`] = `
+exports[`ToolTip [common] example testing should match snapshot(s) for 3.unchanging 12`] = `
 <ContextMenu
   alignment="center"
   className="lucid-ToolTip"
