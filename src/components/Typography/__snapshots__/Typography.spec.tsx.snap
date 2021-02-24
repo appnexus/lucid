@@ -91,7 +91,6 @@ exports[`Typography [common] example testing should match snapshot(s) for 01.var
     <ToolTip
       alignment="start"
       direction="right"
-      name="I am a div under typography"
     >
       <ToolTip.Title
         className="HelpBubble-title"

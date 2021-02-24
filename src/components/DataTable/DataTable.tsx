@@ -14,7 +14,7 @@ import {
 import Checkbox from '../Checkbox/Checkbox';
 import EmptyStateWrapper from '../EmptyStateWrapper/EmptyStateWrapper';
 import ScrollTable from '../ScrollTable/ScrollTable';
-import Table, { IThProps } from '../Table/Table';
+import Table, { IThProps, ITableProps } from '../Table/Table';
 
 const { Thead, Tbody, Tr, Th, Td } = ScrollTable;
 
@@ -24,7 +24,7 @@ const SELECTOR_COLUMN_WIDTH = 41;
 
 const { any, func, number, object, string: stringProps, bool, arrayOf } = PropTypes;
 
-interface IDataTableProps extends StandardProps,
+interface IDataTableProps extends ITableProps,
 	React.DetailedHTMLProps<
 	React.HTMLAttributes<HTMLDivElement>,
 	HTMLDivElement

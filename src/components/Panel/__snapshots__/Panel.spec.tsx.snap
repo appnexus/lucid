@@ -50,7 +50,6 @@ exports[`Panel [common] example testing should match snapshot(s) for 03.with-ico
       isDisabled={false}
       onClick={[Function]}
       onSelect={[Function]}
-      presetSize="large"
       size={16}
       style={
         Object {
@@ -74,7 +73,6 @@ exports[`Panel [common] example testing should match snapshot(s) for 03.with-ico
         isDisabled={false}
         onClick={[Function]}
         onSelect={[Function]}
-        presetSize="large"
         size={16}
         style={
           Object {

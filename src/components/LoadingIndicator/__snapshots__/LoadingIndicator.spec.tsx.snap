@@ -105,7 +105,7 @@ exports[`LoadingIndicator [common] example testing should match snapshot(s) for 
 </OverlayWrapper>
 `;
 
-exports[`LoadingIndicator [common] example testing should match snapshot(s) for 2.default 1`] = `
+exports[`LoadingIndicator [common] example testing should match snapshot(s) for 2.basic 1`] = `
 <OverlayWrapper
   anchorMessage={false}
   className="lucid-LoadingIndicator"

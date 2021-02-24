@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ExampleComponent [common] example testing should match snapshot(s) for 0.default 1`] = `
+exports[`ExampleComponent [common] example testing should match snapshot(s) for 0.basic 1`] = `
 <div
   className="lucid-ExampleComponent"
 >

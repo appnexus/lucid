@@ -878,7 +878,6 @@ exports[`Dialog [common] example testing should match snapshot(s) for 3.large-wi
 exports[`Dialog [common] example testing should match snapshot(s) for 4.complex 1`] = `
 <Overlay
   className="lucid-Dialog"
-  height={500}
   isAnimated={true}
   isModal={true}
   isShown={false}

@@ -924,7 +924,6 @@ exports[`ExpanderPanel [common] example testing should match snapshot(s) for 3.b
   hasMargin={true}
   isGutterless={false}
   isScrollable={true}
-  onRestOnExpand={true}
 >
   <Panel.Header
     className="lucid-ExpanderPanel-header"

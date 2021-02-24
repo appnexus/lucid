@@ -777,21 +777,21 @@ Td.propTypes = {
 };
 
 /** Table <Table> The Table Component */
-interface ITableProps extends StandardProps {
+export interface ITableProps extends StandardProps {
 	/** Adjusts the row density of the table to have more or less spacing. */
-	density: 'compressed' | 'extended';
+	density?: 'compressed' | 'extended';
 
 	/** Allows light header. */
-	hasLightHeader: boolean;
+	hasLightHeader?: boolean;
 
 	/** Render the table with borders on the outer edge. */
-	hasBorder: boolean;
+	hasBorder?: boolean;
 
 	/** Enables word wrapping in tables cells. */
-	hasWordWrap: boolean;
+	hasWordWrap?: boolean;
 
 	/** Applies a row hover to rows. Defaults to true. */
-	hasHover: boolean;
+	hasHover?: boolean;
 }
 
 const Table = (props: ITableProps) => {

@@ -10,6 +10,7 @@ type TextareaProps = JSX.IntrinsicElements['textarea'];
 interface TextFieldInputPlain extends InputProps {
 	isDisabled?: boolean;
 	isMultiLine?: boolean;
+	rows?: number;
 }
 interface TextFieldTextareaPlain extends TextareaProps {
 	isDisabled?: boolean;
