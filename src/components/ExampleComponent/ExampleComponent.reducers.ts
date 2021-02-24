@@ -1,5 +1,5 @@
 // Reducers file is optional. Include for all Lucid components which must handle their own state.
-export function onX(state, stateProp) {
+export function onX(state: any) {
 	return {
 		...state,
 	};

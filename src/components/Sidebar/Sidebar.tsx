@@ -47,7 +47,7 @@ interface ISidebarTitleProps extends StandardProps {}
 interface ISidebarBarProps extends StandardProps {
 	Title?: ISidebarTitleProps | string;
 	title?: ISidebarTitleProps | string;
-	hasGutters: boolean;
+	hasGutters?: boolean;
 }
 
 const Primary = (_props: ISidebarPrimaryProps): null => null;
@@ -109,19 +109,19 @@ export interface ISidebarState {
 
 export interface ISidebarProps extends StandardProps {
 	/** Sets the starting width of the Bar. */
-	width: number;
+	width?: number;
 
 	/** Force the Sidebar to be expanded or collapsed. */
-	isExpanded: boolean;
+	isExpanded?: boolean;
 
 	/** Allows animated expand and collapse behavior. */
-	isAnimated: boolean;
+	isAnimated?: boolean;
 
 	/** Render the Sidebar to the left or right of primary content. */
-	position: 'left' | 'right';
+	position?: 'left' | 'right';
 
 	/** Disable user resizing of the Sidebar. */
-	isResizeDisabled: boolean;
+	isResizeDisabled?: boolean;
 
 	/** Set the title of the Sidebar. (alias for \`Title\` and \`Sidebar.Title\`) */
 	title?: React.ReactNode;
@@ -130,19 +130,19 @@ export interface ISidebarProps extends StandardProps {
 	Title?: React.ReactNode;
 
 	/** Called when the user is currently resizing the Sidebar. */
-	onResizing: (
+	onResizing?: (
 		width: number,
 		{ event, props }: { event: MouseEvent | TouchEvent; props: ISidebarProps }
 	) => void;
 
 	/** Called when the user resizes the Sidebar. */
-	onResize: (
+	onResize?: (
 		width: number,
 		{ event, props }: { event: MouseEvent | TouchEvent; props: ISidebarProps }
 	) => void;
 
 	/** 	Called when the user expands or collapses the Sidebar. */
-	onToggle: ({
+	onToggle?: ({
 		event,
 		props,
 	}: {
@@ -240,7 +240,7 @@ class Sidebar extends React.Component<ISidebarProps, ISidebarState> {
 	handleExpanderClick = (event: React.MouseEvent<HTMLButtonElement>) => {
 		const { onToggle } = this.props;
 
-		onToggle({ props: this.props, event });
+		onToggle && onToggle({ props: this.props, event });
 	};
 
 	handleResizing = (
@@ -249,7 +249,7 @@ class Sidebar extends React.Component<ISidebarProps, ISidebarState> {
 	) => {
 		const { onResizing } = this.props;
 
-		onResizing(width, { props: this.props, event });
+		onResizing && onResizing(width, { props: this.props, event });
 	};
 
 	handleResize = (
@@ -258,7 +258,7 @@ class Sidebar extends React.Component<ISidebarProps, ISidebarState> {
 	) => {
 		const { onResize } = this.props;
 
-		onResize(width, { props: this.props, event });
+		onResize && onResize(width, { props: this.props, event });
 	};
 
 	render() {

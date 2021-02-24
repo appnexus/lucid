@@ -5,6 +5,7 @@
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "jsx": "react",
+    "noImplicitAny": false,
     "moduleResolution": "node",
     "isolatedModules": true,
     "outDir": "./lib"

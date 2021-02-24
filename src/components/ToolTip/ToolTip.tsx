@@ -76,13 +76,13 @@ export interface IToolTipState {
 
 export interface IToolTipProps extends StandardProps {
 	/** Set this to \`true\` if you want to have a \`x\` close icon. */
-	isCloseable: boolean;
+	isCloseable?: boolean;
 
 	/** Offers a lighter style for the tooltip window. Defaults to false. */
-	isLight: boolean;
+	isLight?: boolean;
 
 	/** Called when the user closes the \`Banner\`. */
-	onClose: ({
+	onClose?: ({
 		event,
 		props,
 	}: {
@@ -91,22 +91,22 @@ export interface IToolTipProps extends StandardProps {
 	}) => void;
 
 	/** Passed through to the root FlyOut element. */
-	flyOutStyle: React.CSSProperties;
+	flyOutStyle?: React.CSSProperties;
 
 	/** maximum width of the ToolTip FlyOut. Defaults to 200px. */
 	flyOutMaxWidth?: number | string;
 
 	/** direction of the FlyOut relative to Target. */
-	direction: 'down' | 'up' | 'right' | 'left';
+	direction?: 'down' | 'up' | 'right' | 'left';
 
 	/** alignment of the Flyout relative to Target in the cross axis from \`direction\ */
-	alignment: 'start' | 'center' | 'end';
+	alignment?: 'start' | 'center' | 'end';
 
 	/** Indicates whether the ToolTip will render or not. */
-	isExpanded: boolean;
+	isExpanded?: boolean;
 
 	/** Called when cursor moves over the target */
-	onMouseOver: ({
+	onMouseOver?: ({
 		event,
 		props,
 	}: {
@@ -115,7 +115,7 @@ export interface IToolTipProps extends StandardProps {
 	}) => void;
 
 	/** Called when cursor leaves the target and the ToolTip */
-	onMouseOut: ({
+	onMouseOut?: ({
 		event,
 		props,
 	}: {
@@ -125,7 +125,7 @@ export interface IToolTipProps extends StandardProps {
 
 	/** 			The \`id\` of the FlyOut portal element that is appended to
 			\`document.body\`. Defaults to a generated \`id\`. */
-	portalId: string | null;
+	portalId?: string | null;
 }
 
 class ToolTip extends React.Component<IToolTipProps, IToolTipState> {
@@ -267,7 +267,7 @@ class ToolTip extends React.Component<IToolTipProps, IToolTipState> {
 				props: { onMouseOut },
 			} = this;
 			if (!isMouseOverFlyout && !isMouseOverTarget) {
-				onMouseOut({ props, event });
+				onMouseOut && onMouseOut({ props, event });
 			}
 		}, 100);
 	};
@@ -283,7 +283,7 @@ class ToolTip extends React.Component<IToolTipProps, IToolTipState> {
 
 	handleMouseOverTarget = (event: React.MouseEvent) => {
 		this.setState({ isMouseOverTarget: true });
-		this.props.onMouseOver({ props: this.props, event });
+		this.props.onMouseOver && this.props.onMouseOver({ props: this.props, event });
 	};
 
 	handleMouseOutTarget = (event: React.MouseEvent) => {
@@ -298,7 +298,7 @@ class ToolTip extends React.Component<IToolTipProps, IToolTipState> {
 		event: React.MouseEvent;
 		props: ICloseIconProps;
 	}) => {
-		this.props.onClose({ event, props: this.props });
+		this.props.onClose && this.props.onClose({ event, props: this.props });
 	};
 
 	render() {
@@ -364,7 +364,7 @@ class ToolTip extends React.Component<IToolTipProps, IToolTipState> {
 				<FlyOut
 					style={{
 						...flyOutStyle,
-						maxWidth: flyOutMaxWidth || flyOutStyle.maxWidth || 200,
+						maxWidth: flyOutMaxWidth || (flyOutStyle && flyOutStyle.maxWidth) || 200,
 					}}
 					className={flyOutCx(
 						className,

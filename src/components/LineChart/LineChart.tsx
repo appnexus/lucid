@@ -877,8 +877,8 @@ class LineChart extends React.Component<ILineChartProps, ILineChartState, {}> {
 		 * y2 axis
 		 */
 		let y2Axis = {};
-		let y2AxisLegend = null;
-		let y2AxisToolTip = null;
+		let y2AxisLegend: JSX.Element[] | null = null;
+		let y2AxisToolTip: Array<JSX.Element | null>| null = null;
 		if (y2AxisFields) {
 			const y2Scale = d3Scale
 				.scaleLinear()

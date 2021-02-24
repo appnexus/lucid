@@ -1,5 +1,5 @@
 // Selectors Spec file is only necessary if you use the Component Selectors file.
-import selectors from './ExampleComponent.selectors.js';
+import selectors from './ExampleComponent.selectors';
 import assert from 'assert';
 
 const { selector } = selectors;

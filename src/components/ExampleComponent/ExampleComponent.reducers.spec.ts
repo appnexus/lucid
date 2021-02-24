@@ -2,7 +2,7 @@
 import { onX } from './ExampleComponent.reducers';
 
 describe('ExampleComponent reducers', () => {
-	const initialState = {
+	const initialState: any = {
 		test: 'this is text',
 	};
 
