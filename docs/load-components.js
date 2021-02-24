@@ -1,4 +1,4 @@
-const getDefaultExport = module => {
+const getDefaultExport = (module) => {
 	if (module.__esModule) {
 		return module.default;
 	}
@@ -246,6 +246,24 @@ module.exports = [
 			/\.(j|t)sx?$/
 		),
 	},
+
+	{
+		name: 'ComplexTableLoadingSkeleton',
+		component: getDefaultExport(
+			require('../src/components/LoadingSkeletons/ComplexTableLoadingSkeleton')
+		),
+		examplesContext: require.context(
+			'../src/components/LoadingSkeletons/examples/ComplexTableLoadingSkeleton',
+			true,
+			/\.(j|t)sx?$/
+		),
+		examplesContextRaw: require.context(
+			'!!raw-loader!../src/components/LoadingSkeletons/examples/ComplexTableLoadingSkeleton',
+			true,
+			/\.(j|t)sx?$/
+		),
+	},
+
 	{
 		name: 'ContextMenu',
 		component: getDefaultExport(
