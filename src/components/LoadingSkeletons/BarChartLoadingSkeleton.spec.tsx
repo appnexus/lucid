@@ -5,7 +5,7 @@ import BarChartLoadingSkeleton, {
 } from './BarChartLoadingSkeleton';
 import { ILoadingSkeletonProps, IStandardSkeleton } from './LoadingSkeleton';
 
-describe('', () => {
+describe('BarChartLoadingSkeleton', () => {
 	it('should render BarChartLoadingSkeleton', () => {
 		const standardSkeletonProps: IStandardSkeleton = {
 			width: 100,
