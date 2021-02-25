@@ -9,7 +9,7 @@ import LoadingSkeleton, {
 export const BarChartSkeleton = (
 	props: IStandardSkeleton
 ): React.ReactElement => {
-	const { width, height, className } = { ...props };
+	const { width = '100%', height = '100%', className } = { ...props };
 
 	return (
 		<div
@@ -23,17 +23,20 @@ export const BarChartSkeleton = (
 				version='1.1'
 			>
 				<g
-					id='Details'
+					id='BarChartSkeleton-Details'
 					stroke='none'
 					strokeWidth='1'
 					fill='none'
 					fillRule='evenodd'
 				>
 					<g
-						id='Analytics-Tab_Skeleton-DM'
+						id='BarChartSkeleton-DM'
 						transform='translate(-93.000000, -723.000000)'
 					>
-						<g id='Bar-Chart' transform='translate(93.000000, 723.000000)'>
+						<g
+							id='BarChartSkeleton-Chart'
+							transform='translate(93.000000, 723.000000)'
+						>
 							<path
 								className={cxBackgroundGray('&', className)}
 								d='M54,59 L54,339 L21,339 L21,59 L54,59 Z M517,19 L517,339 L485,339 L485,19 L517,19 Z M105,19
@@ -51,7 +54,7 @@ export const BarChartSkeleton = (
 							<path
 								className={cxBackgroundGray('&', className)}
 								d='M0,340 L0,0 L1,0 L1,339 L1130,339 L1130,340 L0,340 Z'
-								id='Combined-Shape'
+								id='BarChartSkeleton-Combined-Shape'
 							/>
 						</g>
 					</g>
