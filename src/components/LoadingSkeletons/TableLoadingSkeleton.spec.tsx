@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import TableLoadingSkeleton, { TableSkeleton } from './TableLoadingSkeleton';
 
-describe('', () => {
+describe('TableLoadingSkeleton', () => {
 	it('should render TableLoadingSkeleton', () => {
 		const standardSkeletonProps = {
 			width: 100,

@@ -1,4 +1,4 @@
-import React, { FunctionComponent } from 'react';
+import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
 import LoadingMessage from '../LoadingMessage/LoadingMessage';
 
@@ -44,8 +44,8 @@ export const TableRowGroup = (props: ITableRow): React.ReactElement => {
 	);
 };
 
-export const TableSkeleton: FunctionComponent<IStandardSkeleton> = props => {
-	const { width, height, className } = { ...props };
+export const TableSkeleton = (props: IStandardSkeleton): React.ReactElement => {
+	const { width = '100%', height = '100%', className } = { ...props };
 
 	return (
 		<div
@@ -59,21 +59,24 @@ export const TableSkeleton: FunctionComponent<IStandardSkeleton> = props => {
 				xmlns='http://www.w3.org/2000/svg'
 			>
 				<g
-					id='Details'
+					id='TableSkeleton-Details'
 					stroke='none'
 					strokeWidth='1'
 					fill='none'
 					fillRule='evenodd'
 				>
 					<g
-						id='Tab_Skeleton-DM'
+						id='TableSkeleton-Tab_Skeleton'
 						transform='translate(-31.000000, -3554.000000)'
 					>
 						<g
-							id='Lifetime-Failed'
+							id='TableSkeleton-Group-1'
 							transform='translate(30.000000, 3491.000000)'
 						>
-							<g id='Group-2' transform='translate(1.000000, 63.000000)'>
+							<g
+								id='TableSkeleton-Group-2'
+								transform='translate(1.000000, 63.000000)'
+							>
 								<TableRowGroup
 									transform='translate(0.000000, 31.000000)'
 									width={width}
@@ -151,7 +154,7 @@ export const TableSkeleton: FunctionComponent<IStandardSkeleton> = props => {
                   10 L140,20 L20,20 L20,10 L140,10 Z M350,10 L350,20 L230,20 L230,10 L350,10 Z M560,10 L560,20 L440,20 L440,
                   10 L560,10 Z M770,10 L770,20 L650,20 L650,10 L770,10 Z M980,10 L980,20 L860,20 L860,10 L980,10 Z M1190,10 L1190,
                   20 L1070,20 L1070,10 L1190,10 Z'
-									id='Combined-Shape'
+									id='TableSkeleton-Combined-Shape'
 								/>
 							</g>
 						</g>
