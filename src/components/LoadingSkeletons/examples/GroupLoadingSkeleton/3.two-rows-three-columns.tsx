@@ -12,7 +12,6 @@ export default createClass({
 					height={50}
 					numRows={2}
 					numColumns={3}
-					header={'Rows And Columns'}
 				/>
 			</div>
 		);

@@ -8,7 +8,7 @@ import LoadingSkeleton, {
 } from './LoadingSkeleton';
 
 export const GroupSkeleton = (props: IStandardSkeleton): React.ReactElement => {
-	const { width = '100%', height = '100%', className } = { ...props };
+	const { width = '100%', height = '100%', className } = props;
 
 	const bottomRectWidth = _.toNumber(width) - _.toNumber(width) / 3;
 	return (
