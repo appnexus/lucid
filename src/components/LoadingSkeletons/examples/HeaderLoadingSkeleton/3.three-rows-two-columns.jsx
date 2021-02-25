@@ -13,7 +13,6 @@ export default createClass({
 					numRows={3}
 					numColumns={2}
 					marginRight={20}
-					header={'Rows and Columns'}
 				/>
 			</div>
 		);
