@@ -5,7 +5,7 @@ import ComplexTableLoadingSkeleton, {
 } from './ComplexTableLoadingSkeleton';
 import { ILoadingSkeletonProps, IStandardSkeleton } from './LoadingSkeleton';
 
-describe('', () => {
+describe('ComplexTableLoadingSkeleton', () => {
 	it('should render ComplexTableLoadingSkeleton', () => {
 		const standardSkeletonProps: IStandardSkeleton = {
 			width: 100,
