@@ -200,6 +200,24 @@ module.exports = [
 			/\.(j|t)sx?$/
 		),
 	},
+
+	{
+		name: 'CardLoadingSkeleton',
+		component: getDefaultExport(
+			require('../src/components/LoadingSkeletons/CardLoadingSkeleton')
+		),
+		examplesContext: require.context(
+			'../src/components/LoadingSkeletons/examples/CardLoadingSkeleton',
+			true,
+			/\.(j|t)sx?$/
+		),
+		examplesContextRaw: require.context(
+			'!!raw-loader!../src/components/LoadingSkeletons/examples/CardLoadingSkeleton',
+			true,
+			/\.(j|t)sx?$/
+		),
+	},
+
 	{
 		name: 'Checkbox',
 		component: getDefaultExport(require('../src/components/Checkbox/Checkbox')),

@@ -205,6 +205,7 @@ import ViewTableIcon from './components/Icon/ViewTableIcon/ViewTableIcon';
 import WarningIcon from './components/Icon/WarningIcon/WarningIcon';
 import WarningLightIcon from './components/Icon/WarningLightIcon/WarningLightIcon';
 import WrenchIcon from './components/Icon/WrenchIcon/WrenchIcon';
+import CardLoadingSkeleton from './components/LoadingSkeletons/CardLoadingSkeleton';
 
 // utils
 import * as componentTypes from './util/component-types';
@@ -261,6 +262,7 @@ export {
 	ButtonGroupDumb,
 	CalculatorIcon,
 	CalendarIcon,
+	CardLoadingSkeleton,
 	ChatIcon,
 	Checkbox,
 	CheckboxLabeled,
