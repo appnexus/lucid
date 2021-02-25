@@ -9,7 +9,7 @@ import LoadingSkeleton, {
 export const HeaderSkeleton = (
 	props: IStandardSkeleton
 ): React.ReactElement => {
-	const { width = '100%', height = '100%', className } = { ...props };
+	const { width = '100%', height = '100%', className } = props;
 	return (
 		<div data-test-id='loadingSkeleton-HeaderSkeleton'>
 			<svg
