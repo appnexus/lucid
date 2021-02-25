@@ -283,6 +283,23 @@ module.exports = [
 	},
 
 	{
+		name: 'GroupLoadingSkeleton',
+		component: getDefaultExport(
+			require('../src/components/LoadingSkeletons/GroupLoadingSkeleton')
+		),
+		examplesContext: require.context(
+			'../src/components/LoadingSkeletons/examples/GroupLoadingSkeleton',
+			true,
+			/\.(j|t)sx?$/
+		),
+		examplesContextRaw: require.context(
+			'!!raw-loader!../src/components/LoadingSkeletons/examples/GroupLoadingSkeleton',
+			true,
+			/\.(j|t)sx?$/
+		),
+	},
+
+	{
 		name: 'ContextMenu',
 		component: getDefaultExport(
 			require('../src/components/ContextMenu/ContextMenu')

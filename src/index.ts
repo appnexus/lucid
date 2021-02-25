@@ -80,6 +80,7 @@ import ClockIcon from './components/Icon/ClockIcon/ClockIcon';
 import CodeIcon from './components/Icon/CodeIcon/CodeIcon';
 import Collapsible from './components/Collapsible/Collapsible';
 import ComplexTableLoadingSkeleton from './components/LoadingSkeletons/ComplexTableLoadingSkeleton';
+
 import ContextMenu from './components/ContextMenu/ContextMenu';
 import CloseIcon from './components/Icon/CloseIcon/CloseIcon';
 import CrownIcon from './components/Icon/CrownIcon/CrownIcon';
@@ -111,6 +112,7 @@ import FourSquaresIcon from './components/Icon/FourSquaresIcon/FourSquaresIcon';
 import GetMaximumIcon from './components/Icon/GetMaximumIcon/GetMaximumIcon';
 import GlobeIcon from './components/Icon/GlobeIcon/GlobeIcon';
 import Grid from './components/Grid/Grid';
+import GroupLoadingSkeleton from './components/LoadingSkeletons/GroupLoadingSkeleton';
 import HamburgerMenuIcon from './components/Icon/HamburgerMenuIcon/HamburgerMenuIcon';
 import HelpIcon from './components/Icon/HelpIcon/HelpIcon';
 import HideIcon from './components/Icon/HideIcon/HideIcon';
@@ -308,6 +310,7 @@ export {
 	GetMaximumIcon,
 	GlobeIcon,
 	Grid,
+	GroupLoadingSkeleton,
 	HamburgerMenuIcon,
 	HelpIcon,
 	HideIcon,
