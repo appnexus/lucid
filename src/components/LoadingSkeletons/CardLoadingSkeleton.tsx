@@ -9,7 +9,7 @@ import LoadingSkeleton, {
 export const CardSkeleton = (
 	props: IStandardSkeleton
 ): React.ReactElement<IStandardSkeleton> => {
-	const { width = 200, height, className } = { ...props };
+	const { width = '100%', height = '100%', className } = { ...props };
 
 	return (
 		<div
@@ -23,19 +23,20 @@ export const CardSkeleton = (
 				xmlns='http://www.w3.org/2000/svg'
 			>
 				<g
-					id='Details'
+					id='CardSkeleton-Details'
 					stroke='none'
 					strokeWidth='1'
 					fill='none'
 					fillRule='evenodd'
 				>
 					<g
+						id='CardSkeleton-Card'
 						className={cxBackgroundGray('&', className)}
 						transform='translate(-20.000000, -78.000000)'
 					>
 						<path
 							d='M120,95 L120,105 L20,105 L20,95 L120,95 Z M140,78 L140,88 L20,88 L20,78 L140,78 Z'
-							id='Combined-Shape'
+							id='CardSkeleton-Combined-Shape'
 						/>
 					</g>
 				</g>

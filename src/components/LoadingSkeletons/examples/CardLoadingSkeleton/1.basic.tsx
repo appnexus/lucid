@@ -4,6 +4,6 @@ import { CardLoadingSkeleton } from '../../../../index';
 
 export default createClass({
 	render() {
-		return <CardLoadingSkeleton isLoading={true} width={200} height={100} />;
+		return <CardLoadingSkeleton isLoading={true} height={30} />;
 	},
 });
