@@ -12,7 +12,6 @@ export default createClass({
 					height={200}
 					numRows={2}
 					numColumns={3}
-					header={'Rows And Columns'}
 					marginRight={100}
 					marginLeft={0}
 					marginTop={0}

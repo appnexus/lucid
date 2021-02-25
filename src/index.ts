@@ -63,6 +63,7 @@ import Bar from './components/Bar/Bar';
 // @ts-ignore: not converted yet
 import BarChart from './components/BarChart/BarChart';
 import BarChartIcon from './components/Icon/BarChartIcon/BarChartIcon';
+import BarChartLoadingSkeleton from './components/LoadingSkeletons/BarChartLoadingSkeleton';
 // @ts-ignore: not converted yet
 import Bars from './components/Bars/Bars';
 import BellIcon from './components/Icon/BellIcon/BellIcon';
@@ -253,6 +254,7 @@ export {
 	Bar,
 	BarChart,
 	BarChartIcon,
+	BarChartLoadingSkeleton,
 	Bars,
 	BellIcon,
 	BookIcon,
