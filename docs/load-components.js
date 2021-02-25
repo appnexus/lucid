@@ -263,7 +263,22 @@ module.exports = [
 			/\.(j|t)sx?$/
 		),
 	},
-
+	{
+		name: 'HeaderLoadingSkeleton',
+		component: getDefaultExport(
+			require('../src/components/LoadingSkeletons/HeaderLoadingSkeleton')
+		),
+		examplesContext: require.context(
+			'../src/components/LoadingSkeletons/examples/HeaderLoadingSkeleton',
+			true,
+			/\.(j|t)sx?$/
+		),
+		examplesContextRaw: require.context(
+			'!!raw-loader!../src/components/LoadingSkeletons/examples/HeaderLoadingSkeleton',
+			true,
+			/\.(j|t)sx?$/
+		),
+	},
 	{
 		name: 'ContextMenu',
 		component: getDefaultExport(

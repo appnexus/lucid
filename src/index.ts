@@ -112,6 +112,7 @@ import GetMaximumIcon from './components/Icon/GetMaximumIcon/GetMaximumIcon';
 import GlobeIcon from './components/Icon/GlobeIcon/GlobeIcon';
 import Grid from './components/Grid/Grid';
 import HamburgerMenuIcon from './components/Icon/HamburgerMenuIcon/HamburgerMenuIcon';
+import HeaderLoadingSkeleton from './components/LoadingSkeletons/HeaderLoadingSkeleton';
 import HelpIcon from './components/Icon/HelpIcon/HelpIcon';
 import HideIcon from './components/Icon/HideIcon/HideIcon';
 import HomeIcon from './components/Icon/HomeIcon/HomeIcon';
@@ -307,6 +308,7 @@ export {
 	GlobeIcon,
 	Grid,
 	HamburgerMenuIcon,
+	HeaderLoadingSkeleton,
 	HelpIcon,
 	HideIcon,
 	HomeIcon,
