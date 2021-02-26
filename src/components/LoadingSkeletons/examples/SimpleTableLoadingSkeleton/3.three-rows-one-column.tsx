@@ -6,7 +6,7 @@ export default createClass({
 	render() {
 		return (
 			<div>
-				<SimpleTableLoadingSkeleton isLoading={true} numRows={3} />
+				<SimpleTableLoadingSkeleton isLoading={true} height={50} numRows={3} />
 			</div>
 		);
 	},

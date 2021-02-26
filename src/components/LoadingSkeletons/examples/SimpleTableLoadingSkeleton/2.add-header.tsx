@@ -7,7 +7,7 @@ export default createClass({
 		return (
 			<SimpleTableLoadingSkeleton
 				isLoading={true}
-				height={100}
+				height={50}
 				header='Custom Header'
 			/>
 		);
