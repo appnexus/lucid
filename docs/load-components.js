@@ -142,17 +142,17 @@ module.exports = [
 	},
 
 	{
-		name: 'SmallBarChartLoadingSkeleton',
+		name: 'SmallDataTableLoadingSkeleton',
 		component: getDefaultExport(
-			require('../src/components/LoadingSkeletons/SmallBarChartLoadingSkeleton')
+			require('../src/components/LoadingSkeletons/SmallDataTableLoadingSkeleton')
 		),
 		examplesContext: require.context(
-			'../src/components/LoadingSkeletons/examples/SmallBarChartLoadingSkeleton',
+			'../src/components/LoadingSkeletons/examples/SmallDataTableLoadingSkeleton',
 			true,
 			/\.(j|t)sx?$/
 		),
 		examplesContextRaw: require.context(
-			'!!raw-loader!../src/components/LoadingSkeletons/examples/SmallBarChartLoadingSkeleton',
+			'!!raw-loader!../src/components/LoadingSkeletons/examples/SmallDataTableLoadingSkeleton',
 			true,
 			/\.(j|t)sx?$/
 		),

@@ -170,7 +170,7 @@ import SettingsIcon from './components/Icon/SettingsIcon/SettingsIcon';
 import ShareIcon from './components/Icon/ShareIcon/ShareIcon';
 import ShoppingCartIcon from './components/Icon/ShoppingCartIcon/ShoppingCartIcon';
 import SidePanel from './components/SidePanel/SidePanel';
-import SmallBarChartLoadingSkeleton from './components/LoadingSkeletons/SmallBarChartLoadingSkeleton';
+import SmallDataTableLoadingSkeleton from './components/LoadingSkeletons/SmallDataTableLoadingSkeleton';
 import SplitHorizontal from './components/SplitHorizontal/SplitHorizontal';
 import SplitVertical from './components/SplitVertical/SplitVertical';
 import StarIcon from './components/Icon/StarIcon/StarIcon';
@@ -389,7 +389,7 @@ export {
 	SingleSelectDumb,
 	SplitButton,
 	SplitButtonDumb,
-	SmallBarChartLoadingSkeleton,
+	SmallDataTableLoadingSkeleton,
 	SplitHorizontal,
 	SplitVertical,
 	StarIcon,

@@ -1,13 +1,13 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import SmallBarChartLoadingSkeleton, {
-	SmallBarChartSkeleton,
-} from './SmallBarChartLoadingSkeleton';
+import SmallDataTableLoadingSkeleton, {
+	SmallDataTableSkeleton,
+} from './SmallDataTableLoadingSkeleton';
 import { ILoadingSkeletonProps, IStandardSkeleton } from './LoadingSkeleton';
 
 describe('', () => {
-	it('should render SmallBarChartLoadingSkeleton', () => {
+	it('should render SmallDataTableLoadingSkeleton', () => {
 		const standardSkeletonProps: IStandardSkeleton = {
 			width: 100,
 			height: 100,
@@ -27,35 +27,35 @@ describe('', () => {
 		};
 
 		const testProps = { ...props };
-		let component = shallow(<SmallBarChartLoadingSkeleton {...testProps} />);
+		let component = shallow(<SmallDataTableLoadingSkeleton {...testProps} />);
 		expect(
 			component
-				.find('[data-test-id="loadingSkeleton-SmallBarChartLoadingSkeleton"]')
+				.find('[data-test-id="loadingSkeleton-SmallDataTableLoadingSkeleton"]')
 				.exists()
 		).toEqual(true);
 
-		component = shallow(<SmallBarChartSkeleton {...standardSkeletonProps} />);
+		component = shallow(<SmallDataTableSkeleton {...standardSkeletonProps} />);
 
 		expect(
 			component
-				.find('[data-test-id="loadingSkeleton-SmallBarChartSkeleton"]')
-				.exists()
-		).toEqual(true);
-
-		expect(
-			component
-				.find('[data-test-id="loadingSkeleton-SmallBarChartSkeleton-svg"]')
+				.find('[data-test-id="loadingSkeleton-SmallDataTableSkeleton"]')
 				.exists()
 		).toEqual(true);
 
 		expect(
 			component
-				.find('[data-test-id="loadingSkeleton-SmallBarChartSkeleton-svg"]')
+				.find('[data-test-id="loadingSkeleton-SmallDataTableSkeleton-svg"]')
+				.exists()
+		).toEqual(true);
+
+		expect(
+			component
+				.find('[data-test-id="loadingSkeleton-SmallDataTableSkeleton-svg"]')
 				.prop('width')
 		).toEqual(testProps.width);
 		expect(
 			component
-				.find('[data-test-id="loadingSkeleton-SmallBarChartSkeleton-svg"]')
+				.find('[data-test-id="loadingSkeleton-SmallDataTableSkeleton-svg"]')
 				.prop('height')
 		).toEqual(testProps.height);
 	});
