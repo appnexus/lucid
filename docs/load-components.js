@@ -317,6 +317,23 @@ module.exports = [
 	},
 
 	{
+		name: 'SimpleTableLoadingSkeleton',
+		component: getDefaultExport(
+			require('../src/components/LoadingSkeletons/SimpleTableLoadingSkeleton')
+		),
+		examplesContext: require.context(
+			'../src/components/LoadingSkeletons/examples/SimpleTableLoadingSkeleton',
+			true,
+			/\.(j|t)sx?$/
+		),
+		examplesContextRaw: require.context(
+			'!!raw-loader!../src/components/LoadingSkeletons/examples/SimpleTableLoadingSkeleton',
+			true,
+			/\.(j|t)sx?$/
+		),
+	},
+
+	{
 		name: 'ContextMenu',
 		component: getDefaultExport(
 			require('../src/components/ContextMenu/ContextMenu')
