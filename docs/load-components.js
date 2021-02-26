@@ -142,6 +142,23 @@ module.exports = [
 	},
 
 	{
+		name: 'SmallBarChartLoadingSkeleton',
+		component: getDefaultExport(
+			require('../src/components/LoadingSkeletons/SmallBarChartLoadingSkeleton')
+		),
+		examplesContext: require.context(
+			'../src/components/LoadingSkeletons/examples/SmallBarChartLoadingSkeleton',
+			true,
+			/\.(j|t)sx?$/
+		),
+		examplesContextRaw: require.context(
+			'!!raw-loader!../src/components/LoadingSkeletons/examples/SmallBarChartLoadingSkeleton',
+			true,
+			/\.(j|t)sx?$/
+		),
+	},
+
+	{
 		name: 'Bars',
 		component: getDefaultExport(require('../src/components/Bars/Bars')),
 		examplesContext: require.context(
