@@ -1,11 +1,11 @@
 import React from 'react';
 import createClass from 'create-react-class';
-import { SmallBarChartLoadingSkeleton } from '../../../../index';
+import { SmallDataTableLoadingSkeleton } from '../../../../index';
 
 export default createClass({
 	render() {
 		return (
-			<SmallBarChartLoadingSkeleton
+			<SmallDataTableLoadingSkeleton
 				isLoading={true}
 				height={100}
 				header='Added Header'
