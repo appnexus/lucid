@@ -159,6 +159,23 @@ module.exports = [
 	},
 
 	{
+		name: 'SmallDataTableLoadingSkeleton',
+		component: getDefaultExport(
+			require('../src/components/LoadingSkeletons/SmallDataTableLoadingSkeleton')
+		),
+		examplesContext: require.context(
+			'../src/components/LoadingSkeletons/examples/SmallDataTableLoadingSkeleton',
+			true,
+			/\.(j|t)sx?$/
+		),
+		examplesContextRaw: require.context(
+			'!!raw-loader!../src/components/LoadingSkeletons/examples/SmallDataTableLoadingSkeleton',
+			true,
+			/\.(j|t)sx?$/
+		),
+	},
+
+	{
 		name: 'Bars',
 		component: getDefaultExport(require('../src/components/Bars/Bars')),
 		examplesContext: require.context(
