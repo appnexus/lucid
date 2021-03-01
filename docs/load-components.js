@@ -330,6 +330,22 @@ module.exports = [
 			/\.(j|t)sx?$/
 		),
 	},
+	{
+		name: 'LineChartLoadingSkeleton',
+		component: getDefaultExport(
+			require('../src/components/LoadingSkeletons/LineChartLoadingSkeleton')
+		),
+		examplesContext: require.context(
+			'../src/components/LoadingSkeletons/examples/LineChartLoadingSkeleton',
+			true,
+			/\.(j|t)sx?$/
+		),
+		examplesContextRaw: require.context(
+			'!!raw-loader!../src/components/LoadingSkeletons/examples/LineChartLoadingSkeleton',
+			true,
+			/\.(j|t)sx?$/
+		),
+	},
 
 	{
 		name: 'ContextMenu',

@@ -131,6 +131,7 @@ import LightbulbIcon from './components/Icon/LightbulbIcon/LightbulbIcon';
 import Line from './components/Line/Line';
 // @ts-ignore: not converted yet
 import LineChart from './components/LineChart/LineChart';
+import LineChartLoadingSkeleton from './components/LoadingSkeletons/LineChartLoadingSkeleton';
 import Lines from './components/Lines/Lines';
 import LinkedIcon from './components/Icon/LinkedIcon/LinkedIcon';
 import LoadingIcon from './components/Icon/LoadingIcon/LoadingIcon';
@@ -330,6 +331,7 @@ export {
 	LightbulbIcon,
 	Line,
 	LineChart,
+	LineChartLoadingSkeleton,
 	Lines,
 	LinkedIcon,
 	LoadingIcon,
