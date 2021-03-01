@@ -115,6 +115,7 @@ import GlobeIcon from './components/Icon/GlobeIcon/GlobeIcon';
 import Grid from './components/Grid/Grid';
 import GroupLoadingSkeleton from './components/LoadingSkeletons/GroupLoadingSkeleton';
 import HamburgerMenuIcon from './components/Icon/HamburgerMenuIcon/HamburgerMenuIcon';
+import HeaderLoadingSkeleton from './components/LoadingSkeletons/HeaderLoadingSkeleton';
 import HelpIcon from './components/Icon/HelpIcon/HelpIcon';
 import HideIcon from './components/Icon/HideIcon/HideIcon';
 import HomeIcon from './components/Icon/HomeIcon/HomeIcon';
@@ -314,6 +315,7 @@ export {
 	Grid,
 	GroupLoadingSkeleton,
 	HamburgerMenuIcon,
+	HeaderLoadingSkeleton,
 	HelpIcon,
 	HideIcon,
 	HomeIcon,
