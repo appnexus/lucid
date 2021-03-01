@@ -142,6 +142,23 @@ module.exports = [
 	},
 
 	{
+		name: 'SingleLineLoadingSkeleton',
+		component: getDefaultExport(
+			require('../src/components/LoadingSkeletons/SingleLineLoadingSkeleton')
+		),
+		examplesContext: require.context(
+			'../src/components/LoadingSkeletons/examples/SingleLineLoadingSkeleton',
+			true,
+			/\.(j|t)sx?$/
+		),
+		examplesContextRaw: require.context(
+			'!!raw-loader!../src/components/LoadingSkeletons/examples/SingleLineLoadingSkeleton',
+			true,
+			/\.(j|t)sx?$/
+		),
+	},
+
+	{
 		name: 'Bars',
 		component: getDefaultExport(require('../src/components/Bars/Bars')),
 		examplesContext: require.context(

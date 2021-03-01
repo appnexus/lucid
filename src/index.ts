@@ -6,6 +6,7 @@ import Autocomplete, {
 import ButtonGroup, {
 	ButtonGroupDumb,
 } from './components/ButtonGroup/ButtonGroup';
+import SingleLineLoadingSkeleton from './components/LoadingSkeletons/SingleLineLoadingSkeleton';
 import SearchableSelect, {
 	SearchableSelectDumb,
 } from './components/SearchableSelect/SearchableSelect';
@@ -389,6 +390,7 @@ export {
 	SidePanel,
 	Sidebar,
 	SidebarDumb,
+	SingleLineLoadingSkeleton,
 	SingleSelect,
 	SingleSelectDumb,
 	SplitButton,
