@@ -9,7 +9,7 @@ export default createClass({
 				isLoading={true}
 				width={700}
 				height={50}
-				header='Custom Header'
+				header='Added Header'
 			/>
 		);
 	},
