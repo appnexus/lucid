@@ -12,7 +12,7 @@ import {
 export const ComplexTableSkeleton = (
 	props: IStandardSkeleton
 ): React.ReactElement<IStandardSkeleton> => {
-	const { width = 860, height = 80, className } = props;
+	const { width = 860, height = 92, className } = props;
 
 	return (
 		<div data-test-id='loadingSkeleton-ComplexTableSkeleton'>

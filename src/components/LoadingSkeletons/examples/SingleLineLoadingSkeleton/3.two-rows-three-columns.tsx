@@ -9,7 +9,7 @@ export default createClass({
 				<SingleLineLoadingSkeleton
 					isLoading={true}
 					width={250}
-					height={30}
+					height={20}
 					numRows={2}
 					numColumns={3}
 					marginRight={20}

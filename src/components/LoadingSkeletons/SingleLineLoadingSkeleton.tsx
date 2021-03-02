@@ -8,7 +8,7 @@ import { cxBackgroundGray } from './LoadingSkeletonsSvgUtil';
 export const SingleLineSkeleton = (
 	props: IStandardSkeleton
 ): React.ReactElement => {
-	const { width = 800, height = 30, className } = props;
+	const { width = 800, height = 20, className } = props;
 
 	return (
 		<div data-test-id='loadingSkeleton-SingleLineSkeleton'>
