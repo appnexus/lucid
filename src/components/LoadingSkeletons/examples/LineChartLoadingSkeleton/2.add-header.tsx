@@ -4,13 +4,6 @@ import { LineChartLoadingSkeleton } from '../../../../index';
 
 export default createClass({
 	render() {
-		return (
-			<LineChartLoadingSkeleton
-				isLoading={true}
-				width={1000}
-				height={300}
-				header='Added Header'
-			/>
-		);
+		return <LineChartLoadingSkeleton isLoading={true} header='Added Header' />;
 	},
 });

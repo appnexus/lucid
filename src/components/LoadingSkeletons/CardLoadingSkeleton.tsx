@@ -1,5 +1,4 @@
 import React from 'react';
-import LoadingMessage from '../LoadingMessage/LoadingMessage';
 import { cxBackgroundGray } from './LoadingSkeletonsSvgUtil';
 import LoadingSkeleton, {
 	ILoadingSkeletonProps,
@@ -9,7 +8,7 @@ import LoadingSkeleton, {
 export const CardSkeleton = (
 	props: IStandardSkeleton
 ): React.ReactElement<IStandardSkeleton> => {
-	const { width = '100%', height = '100%', className } = props;
+	const { width = 130, height = 30, className } = props;
 
 	return (
 		<div
@@ -57,8 +56,6 @@ const CardLoadingSkeleton = (
 	);
 };
 
-CardLoadingSkeleton.LoadingMessage = LoadingMessage;
-
 CardLoadingSkeleton.displayName = 'CardLoadingSkeleton';
 CardLoadingSkeleton.peek = {
 	description: `
@@ -77,7 +74,6 @@ CardLoadingSkeleton.peek = {
 		`,
 	},
 	categories: ['Loading Indicator'],
-	madeFrom: ['OverlayWrapper', 'LoadingMessage'],
 };
 
 export default CardLoadingSkeleton;

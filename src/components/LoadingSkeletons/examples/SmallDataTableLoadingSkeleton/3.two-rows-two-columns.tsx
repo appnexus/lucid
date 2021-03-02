@@ -9,7 +9,6 @@ export default createClass({
 				<SmallDataTableLoadingSkeleton
 					isLoading={true}
 					width={300}
-					height={100}
 					numRows={2}
 					numColumns={2}
 					marginRight={100}

@@ -1,5 +1,4 @@
 import React from 'react';
-import LoadingMessage from '../LoadingMessage/LoadingMessage';
 import LoadingSkeleton, {
 	ILoadingSkeletonProps,
 	IStandardSkeleton,
@@ -13,7 +12,7 @@ import {
 export const ComplexTableSkeleton = (
 	props: IStandardSkeleton
 ): React.ReactElement<IStandardSkeleton> => {
-	const { width, height, className } = { ...props };
+	const { width = 860, height = 80, className } = props;
 
 	return (
 		<div data-test-id='loadingSkeleton-ComplexTableSkeleton'>
@@ -54,8 +53,6 @@ const ComplexTableLoadingSkeleton = (
 	);
 };
 
-ComplexTableLoadingSkeleton.LoadingMessage = LoadingMessage;
-
 ComplexTableLoadingSkeleton.displayName = 'ComplexTableLoadingSkeleton';
 ComplexTableLoadingSkeleton.peek = {
 	description: `
@@ -74,7 +71,6 @@ ComplexTableLoadingSkeleton.peek = {
 		`,
 	},
 	categories: ['Loading Indicator'],
-	madeFrom: ['OverlayWrapper', 'LoadingMessage'],
 };
 
 export default ComplexTableLoadingSkeleton;

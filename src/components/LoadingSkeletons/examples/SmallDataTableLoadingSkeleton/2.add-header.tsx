@@ -7,7 +7,7 @@ export default createClass({
 		return (
 			<SmallDataTableLoadingSkeleton
 				isLoading={true}
-				height={100}
+				width={700}
 				header='Added Header'
 			/>
 		);

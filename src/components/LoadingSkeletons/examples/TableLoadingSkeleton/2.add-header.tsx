@@ -4,12 +4,6 @@ import { TableLoadingSkeleton } from '../../../../index';
 
 export default createClass({
 	render() {
-		return (
-			<TableLoadingSkeleton
-				isLoading={true}
-				width={700}
-				header='Added Header'
-			/>
-		);
+		return <TableLoadingSkeleton isLoading={true} header='Added Header' />;
 	},
 });

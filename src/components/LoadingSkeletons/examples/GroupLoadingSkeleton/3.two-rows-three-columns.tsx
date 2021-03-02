@@ -8,10 +8,11 @@ export default createClass({
 			<div>
 				<GroupLoadingSkeleton
 					isLoading={true}
-					width={200}
-					height={50}
+					width={250}
 					numRows={2}
 					numColumns={3}
+					marginBottom={30}
+					marginRight={30}
 				/>
 			</div>
 		);

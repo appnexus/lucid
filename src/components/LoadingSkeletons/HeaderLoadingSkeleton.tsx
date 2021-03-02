@@ -1,5 +1,4 @@
 import React from 'react';
-import LoadingMessage from '../LoadingMessage/LoadingMessage';
 import { cxBackgroundGray } from './LoadingSkeletonsSvgUtil';
 import LoadingSkeleton, {
 	ILoadingSkeletonProps,
@@ -9,7 +8,7 @@ import LoadingSkeleton, {
 export const HeaderSkeleton = (
 	props: IStandardSkeleton
 ): React.ReactElement => {
-	const { width = '100%', height = '100%', className } = props;
+	const { width = 580, height = 70, className } = props;
 	return (
 		<div data-test-id='loadingSkeleton-HeaderSkeleton'>
 			<svg
@@ -40,8 +39,6 @@ export const HeaderLoadingSkeleton = (
 	);
 };
 
-HeaderLoadingSkeleton.LoadingMessage = LoadingMessage;
-
 HeaderLoadingSkeleton.displayName = 'HeaderLoadingSkeleton';
 HeaderLoadingSkeleton.peek = {
 	description: `
@@ -60,7 +57,6 @@ HeaderLoadingSkeleton.peek = {
 		`,
 	},
 	categories: ['Loading Indicator'],
-	madeFrom: ['OverlayWrapper', 'LoadingMessage'],
 };
 
 export default HeaderLoadingSkeleton;

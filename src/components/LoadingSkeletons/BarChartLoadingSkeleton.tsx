@@ -1,5 +1,4 @@
 import React from 'react';
-import LoadingMessage from '../LoadingMessage/LoadingMessage';
 import { cxBackgroundGray } from './LoadingSkeletonsSvgUtil';
 import LoadingSkeleton, {
 	ILoadingSkeletonProps,
@@ -9,7 +8,7 @@ import LoadingSkeleton, {
 export const BarChartSkeleton = (
 	props: IStandardSkeleton
 ): React.ReactElement => {
-	const { width = '100%', height = '100%', className } = props;
+	const { width = 880, height = 350, className } = props;
 
 	return (
 		<div
@@ -76,8 +75,6 @@ export const BarChartLoadingSkeleton = (
 	);
 };
 
-BarChartLoadingSkeleton.LoadingMessage = LoadingMessage;
-
 BarChartLoadingSkeleton.displayName = 'BarChartLoadingSkeleton';
 BarChartLoadingSkeleton.peek = {
 	description: `
@@ -95,7 +92,6 @@ BarChartLoadingSkeleton.peek = {
 		`,
 	},
 	categories: ['Loading Indicator'],
-	madeFrom: ['OverlayWrapper', 'LoadingMessage'],
 };
 
 export default BarChartLoadingSkeleton;

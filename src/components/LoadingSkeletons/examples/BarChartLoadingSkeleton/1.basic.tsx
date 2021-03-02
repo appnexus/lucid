@@ -4,8 +4,6 @@ import { BarChartLoadingSkeleton } from '../../../../index';
 
 export default createClass({
 	render() {
-		return (
-			<BarChartLoadingSkeleton isLoading={true} width={840} height={200} />
-		);
+		return <BarChartLoadingSkeleton isLoading={true} />;
 	},
 });

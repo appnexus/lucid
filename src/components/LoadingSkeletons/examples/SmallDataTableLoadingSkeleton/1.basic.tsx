@@ -4,6 +4,6 @@ import { SmallDataTableLoadingSkeleton } from '../../../../index';
 
 export default createClass({
 	render() {
-		return <SmallDataTableLoadingSkeleton isLoading={true} height={100} />;
+		return <SmallDataTableLoadingSkeleton isLoading={true} />;
 	},
 });

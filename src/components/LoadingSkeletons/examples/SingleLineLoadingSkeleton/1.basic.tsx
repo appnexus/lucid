@@ -4,6 +4,6 @@ import { SingleLineLoadingSkeleton } from '../../../../index';
 
 export default createClass({
 	render() {
-		return <SingleLineLoadingSkeleton isLoading={true} height={30} />;
+		return <SingleLineLoadingSkeleton isLoading={true} />;
 	},
 });

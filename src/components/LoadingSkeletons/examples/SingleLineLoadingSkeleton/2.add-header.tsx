@@ -7,7 +7,7 @@ export default createClass({
 		return (
 			<SingleLineLoadingSkeleton
 				isLoading={true}
-				height={30}
+				width={500}
 				header='Custom Header'
 			/>
 		);

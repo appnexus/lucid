@@ -1,5 +1,4 @@
 import React from 'react';
-import LoadingMessage from '../LoadingMessage/LoadingMessage';
 import LoadingSkeleton, {
 	ILoadingSkeletonProps,
 	IStandardSkeleton,
@@ -13,7 +12,7 @@ import {
 export const SmallDataTableSkeleton = (
 	props: IStandardSkeleton
 ): React.ReactElement => {
-	const { width = '100%', height = '100%', className } = props;
+	const { width = 565, height = 130, className } = props;
 
 	return (
 		<div data-test-id='loadingSkeleton-SmallDataTableSkeleton'>
@@ -154,8 +153,6 @@ const SmallDataTableLoadingSkeleton = (
 	);
 };
 
-SmallDataTableLoadingSkeleton.LoadingMessage = LoadingMessage;
-
 SmallDataTableLoadingSkeleton.displayName = 'SmallDataTableLoadingSkeleton';
 SmallDataTableLoadingSkeleton.peek = {
 	description: `
@@ -174,7 +171,6 @@ SmallDataTableLoadingSkeleton.peek = {
 		`,
 	},
 	categories: ['Loading Indicator'],
-	madeFrom: ['OverlayWrapper', 'LoadingMessage'],
 };
 
 export default SmallDataTableLoadingSkeleton;
