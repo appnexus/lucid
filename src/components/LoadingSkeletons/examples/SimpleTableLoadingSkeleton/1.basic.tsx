@@ -4,6 +4,6 @@ import { SimpleTableLoadingSkeleton } from '../../../../index';
 
 export default createClass({
 	render() {
-		return <SimpleTableLoadingSkeleton isLoading={true} height={50} />;
+		return <SimpleTableLoadingSkeleton isLoading={true} />;
 	},
 });

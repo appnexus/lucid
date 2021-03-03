@@ -47,7 +47,9 @@ const animationStyle = lucidClassNames.bind(
 	'&-LoadingSkeleton-animatedSkeleton'
 );
 
-export const LoadingSkeleton: FunctionComponent<ILoadingSkeletonProps> = props => {
+export const LoadingSkeleton: FunctionComponent<ILoadingSkeletonProps> = (
+	props
+) => {
 	const {
 		Skeleton,
 		isLoading,
@@ -55,8 +57,8 @@ export const LoadingSkeleton: FunctionComponent<ILoadingSkeletonProps> = props =
 		className,
 		header,
 		style,
-		width = '100%',
-		height = '100%',
+		width = undefined,
+		height = undefined,
 		isPanel = false,
 		hasOverlay = false,
 		overlayKind = 'light',
@@ -93,13 +95,11 @@ export const LoadingSkeleton: FunctionComponent<ILoadingSkeletonProps> = props =
 		<Skeleton data-test-id='loadingSkeleton_Skeleton' {...skeletonProps} />
 	);
 
-	const matrix = _.times(numColumns, column => (
+	const matrix = _.times(numColumns, (column) => (
 		<div
 			key={`column${column}`}
 			style={{
 				display: 'inline-block',
-				width: width,
-				height: height,
 				marginRight: marginRight,
 				marginLeft: marginLeft,
 			}}
@@ -108,11 +108,9 @@ export const LoadingSkeleton: FunctionComponent<ILoadingSkeletonProps> = props =
 			<div
 				style={{
 					display: 'inline-block',
-					width: width,
-					height: height,
 				}}
 			>
-				{_.times(numRows, row => (
+				{_.times(numRows, (row) => (
 					<div
 						className={animationStyle('&', className)}
 						data-test-id='loadingSkeleton-ReactPlaceholder'

@@ -1,5 +1,5 @@
-import React, { FunctionComponent } from 'react';
-import LoadingMessage from '../LoadingMessage/LoadingMessage';
+import React from 'react';
+
 import {
 	cxBackgroundGray,
 	cxBackgroundGrayStrokeNeutralFill,
@@ -12,7 +12,7 @@ import LoadingSkeleton, {
 export const LineChartSkeleton = (
 	props: IStandardSkeleton
 ): React.ReactElement<IStandardSkeleton> => {
-	const { width = '100%', height = '100%', className } = props;
+	const { width = 900, height = 310, className } = props;
 
 	return (
 		<div data-test-id='loadingSkeleton-LineChartSkeleton'>
@@ -83,8 +83,6 @@ const LineChartLoadingSkeleton = (
 	);
 };
 
-LineChartLoadingSkeleton.LoadingMessage = LoadingMessage;
-
 LineChartLoadingSkeleton.displayName = 'LineChartLoadingSkeleton';
 LineChartLoadingSkeleton.peek = {
 	description: `
@@ -103,7 +101,6 @@ LineChartLoadingSkeleton.peek = {
 		`,
 	},
 	categories: ['Loading Indicator'],
-	madeFrom: ['OverlayWrapper', 'LoadingMessage'],
 };
 
 export default LineChartLoadingSkeleton;

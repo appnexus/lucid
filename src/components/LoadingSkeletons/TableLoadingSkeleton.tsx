@@ -1,7 +1,5 @@
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
-import LoadingMessage from '../LoadingMessage/LoadingMessage';
-
 import LoadingSkeleton, {
 	ILoadingSkeletonProps,
 	IStandardSkeleton,
@@ -20,7 +18,7 @@ const backgroundNeutral = lucidClassNames.bind(
 );
 
 export const TableRowGroup = (props: ITableRow): React.ReactElement => {
-	const { id, transform, width } = { ...props };
+	const { id, transform, width = '100%' } = props;
 
 	return (
 		<g id={id} transform={transform}>
@@ -45,7 +43,7 @@ export const TableRowGroup = (props: ITableRow): React.ReactElement => {
 };
 
 export const TableSkeleton = (props: IStandardSkeleton): React.ReactElement => {
-	const { width = '100%', height = '100%', className } = { ...props };
+	const { width = 800, height = 320, className } = props;
 
 	return (
 		<div
@@ -177,8 +175,6 @@ export const TableLoadingSkeleton = (
 	);
 };
 
-TableLoadingSkeleton.LoadingMessage = LoadingMessage;
-
 TableLoadingSkeleton.displayName = 'TableLoadingSkeleton';
 TableLoadingSkeleton.peek = {
 	description: `
@@ -196,7 +192,6 @@ TableLoadingSkeleton.peek = {
 		`,
 	},
 	categories: ['Loading Indicator'],
-	madeFrom: ['OverlayWrapper', 'LoadingMessage'],
 };
 
 export default TableLoadingSkeleton;

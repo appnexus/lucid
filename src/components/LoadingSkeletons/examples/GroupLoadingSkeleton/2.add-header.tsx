@@ -4,13 +4,6 @@ import { GroupLoadingSkeleton } from '../../../../index';
 
 export default createClass({
 	render() {
-		return (
-			<GroupLoadingSkeleton
-				isLoading={true}
-				width={200}
-				height={50}
-				header='Added Header'
-			/>
-		);
+		return <GroupLoadingSkeleton isLoading={true} header='Added Header' />;
 	},
 });

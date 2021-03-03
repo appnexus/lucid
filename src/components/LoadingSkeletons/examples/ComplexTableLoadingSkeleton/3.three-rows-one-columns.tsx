@@ -6,12 +6,7 @@ export default createClass({
 	render() {
 		return (
 			<div>
-				<ComplexTableLoadingSkeleton
-					isLoading={true}
-					width={800}
-					height={100}
-					numRows={3}
-				/>
+				<ComplexTableLoadingSkeleton isLoading={true} width={860} numRows={3} />
 			</div>
 		);
 	},

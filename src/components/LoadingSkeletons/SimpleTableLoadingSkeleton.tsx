@@ -1,6 +1,4 @@
 import React from 'react';
-import LoadingMessage from '../LoadingMessage/LoadingMessage';
-
 import {
 	cxBackgroundGray,
 	cxBackgroundNeutral,
@@ -14,7 +12,7 @@ import LoadingSkeleton, {
 export const SimpleTableSkeleton = (
 	props: IStandardSkeleton
 ): React.ReactElement => {
-	const { width = '100%', height = '100%', className } = props;
+	const { width = 880, height = 50, className } = props;
 
 	return (
 		<div data-test-id='loadingSkeleton-SimpleTableSkeleton'>
@@ -55,8 +53,6 @@ const SimpleTableLoadingSkeleton = (
 	);
 };
 
-SimpleTableLoadingSkeleton.LoadingMessage = LoadingMessage;
-
 SimpleTableLoadingSkeleton.displayName = 'SimpleTableLoadingSkeleton';
 SimpleTableLoadingSkeleton.peek = {
 	description: `
@@ -75,7 +71,6 @@ SimpleTableLoadingSkeleton.peek = {
 		`,
 	},
 	categories: ['Loading Indicator'],
-	madeFrom: ['OverlayWrapper', 'LoadingMessage'],
 };
 
 export default SimpleTableLoadingSkeleton;

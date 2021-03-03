@@ -1,6 +1,5 @@
 import _ from 'lodash';
 import React from 'react';
-import LoadingMessage from '../LoadingMessage/LoadingMessage';
 import { cxBackgroundGray } from './LoadingSkeletonsSvgUtil';
 import LoadingSkeleton, {
 	ILoadingSkeletonProps,
@@ -8,7 +7,7 @@ import LoadingSkeleton, {
 } from './LoadingSkeleton';
 
 export const GroupSkeleton = (props: IStandardSkeleton): React.ReactElement => {
-	const { width = '100%', height = '100%', className } = props;
+	const { width = 300, height = 55, className } = props;
 
 	const bottomRectWidth = _.toNumber(width) - _.toNumber(width) / 3;
 	return (
@@ -69,8 +68,6 @@ const GroupLoadingSkeleton = (
 	);
 };
 
-GroupLoadingSkeleton.LoadingMessage = LoadingMessage;
-
 GroupLoadingSkeleton.displayName = 'GroupLoadingSkeleton';
 GroupLoadingSkeleton.peek = {
 	description: `
@@ -89,7 +86,6 @@ GroupLoadingSkeleton.peek = {
 		`,
 	},
 	categories: ['Loading Indicator'],
-	madeFrom: ['OverlayWrapper', 'LoadingMessage'],
 };
 
 export default GroupLoadingSkeleton;

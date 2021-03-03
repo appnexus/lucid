@@ -1,5 +1,4 @@
 import React from 'react';
-import LoadingMessage from '../LoadingMessage/LoadingMessage';
 import LoadingSkeleton, {
 	ILoadingSkeletonProps,
 	IStandardSkeleton,
@@ -9,7 +8,7 @@ import { cxBackgroundGray } from './LoadingSkeletonsSvgUtil';
 export const SingleLineSkeleton = (
 	props: IStandardSkeleton
 ): React.ReactElement => {
-	const { width = '100%', height = '100%', className } = props;
+	const { width = 800, height = 20, className } = props;
 
 	return (
 		<div data-test-id='loadingSkeleton-SingleLineSkeleton'>
@@ -58,8 +57,6 @@ const SingleLineLoadingSkeleton = (
 	);
 };
 
-SingleLineLoadingSkeleton.LoadingMessage = LoadingMessage;
-
 SingleLineLoadingSkeleton.displayName = 'SingleLineLoadingSkeleton';
 SingleLineLoadingSkeleton.peek = {
 	description: `
@@ -78,7 +75,6 @@ SingleLineLoadingSkeleton.peek = {
 		`,
 	},
 	categories: ['Loading Indicator'],
-	madeFrom: ['OverlayWrapper', 'LoadingMessage'],
 };
 
 export default SingleLineLoadingSkeleton;
