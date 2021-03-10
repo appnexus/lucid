@@ -7,9 +7,12 @@ import PropTypes from './PropTypes';
 import ChildComponents from './ChildComponents';
 import packageJson from '../../package.json';
 
-class CodePanel extends React.Component {
-	constructor(...args) {
-		super(...args);
+class CodePanel extends React.Component<any, any> {
+	unmounted: boolean;
+
+	constructor(props, state) {
+		super(props, state);
+		this.unmounted = false;
 		this.state = { code: '' };
 		this.onSource = this.onSource.bind(this);
 	}
@@ -33,7 +36,7 @@ class CodePanel extends React.Component {
 	}
 
 	render() {
-		const { code } = this.state;
+		const { code } = this.state as any;
 
 		if (_.isEmpty(code) || !this.props.active) {
 			return null;
@@ -55,15 +58,17 @@ class CodePanel extends React.Component {
 	}
 }
 
-class PropsPanel extends React.Component {
-	constructor(...args) {
-		super(...args);
+class PropsPanel extends React.Component<any, any> {
+	unmounted: boolean;
+	constructor(props, state) {
+		super(props, state);
+		this.unmounted = false;
 		this.state = { props: null };
 		this.onDisplayProps = this.onDisplayProps.bind(this);
 		this.onDisplayChildComponents = this.onDisplayChildComponents.bind(this);
 	}
 
-	onDisplayProps(propsJSON) {
+	onDisplayProps(propsJSON = null) {
 		if (!_.isString(propsJSON)) {
 			return this.setState({
 				props: null,
@@ -72,7 +77,7 @@ class PropsPanel extends React.Component {
 
 		try {
 			this.setState({
-				props: JSON.parse(propsJSON),
+				props: JSON.parse(propsJSON || "{}"),
 			});
 		} catch (err) {
 			console.log('Error parsing props JSON.');
@@ -161,7 +166,7 @@ addons.register('lucid-docs', api => {
 	// Check here is necessary to be compatible with older versions of storybook.
 	if (api.on) {
 		api.on(STORY_RENDERED, () => {
-			const storyData = api.getCurrentStoryData();
+			const storyData: any = api.getCurrentStoryData();
 			const name = getName(storyData.kind);
 			document.title = `${name} - Lucid UI`;
 		});
@@ -187,14 +192,14 @@ addons.register('lucid-docs', api => {
 	});
 
 	addons.getChannel().on('lucid-docs-panel-layout-toggle', () => {
-		const urlState = api.getUrlState();
+		const urlState: any = api.getUrlState();
 		api.setOptions({
 			panelPosition: !urlState.panelRight ? 'right' : 'bottom',
 		});
 	});
 
 	addons.getChannel().on('lucid-docs-panel-hide-toggle', () => {
-		const urlState = api.getUrlState();
+		const urlState: any = api.getUrlState();
 		api.setOptions({
 			showPanel: !urlState.addons,
 		});

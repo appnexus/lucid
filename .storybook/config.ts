@@ -5,7 +5,7 @@ import 'storybook-chromatic';
 import { getPropDefs } from './lucid-docs-addon/util';
 
 function loadStories() {
-	require('../docs/index.stories.js');
+	require('../docs/index.stories');
 }
 
 const lucidTheme = create({

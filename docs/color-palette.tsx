@@ -246,7 +246,7 @@ const ColorPalette = createClass({
 		const hexMap = _.reduce(
 			allItems,
 			(acc, item) => {
-				const lessVariable = item.dataset.lessVariable;
+				const lessVariable = (item as any).dataset.lessVariable;
 				const hexString = rgb2hex(
 					window.getComputedStyle(item).getPropertyValue('background-color')
 				);
@@ -291,7 +291,7 @@ const ColorPalette = createClass({
 
 						{group.description ? <p>{group.description}</p> : null}
 
-						{_.map(group.variables, (variable, j) => {
+						{_.map(group.variables, (variable: any, j) => {
 							const hasAliases = _.isPlainObject(variable);
 							const variableName = hasAliases ? variable.name : variable;
 

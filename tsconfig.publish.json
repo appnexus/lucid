@@ -1,21 +1,23 @@
 {
   "compilerOptions": {
     "target": "ES2019",
+    "allowJs": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "jsx": "react",
     "noImplicitAny": false,
     "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "outDir": "./lib"
+    "resolveJsonModule": false,
+    "isolatedModules": false,
+    "declaration": true,
+    "outDir": "./dist",
+    "rootDir": "./src"
   },
-  "exclude": [
-    "examples/**/*"
-  ],
   "include": [
-    "src/**/*",
-    ".storybook/**/*"
+    "src/**/*"
+  ],
+  "exclude": [
+    "**/*.spec.*"
   ]
 }
