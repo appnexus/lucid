@@ -9,13 +9,9 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "outDir": "./lib"
   },
   "exclude": [
     "examples/**/*"
   ],
-  "include": [
-    "src/**/*",
-    ".storybook/**/*"
-  ]
+  "include": ["./"]
 }

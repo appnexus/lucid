@@ -114,7 +114,7 @@ const Block = ({ oneline, ...rest }) =>
 const PropType = ({ oneline, type, ...propData }) => {
 	if (type === 'oneOf') {
 		return (
-			<span style={PropType.style.root}>
+			<span style={PropType.style.root as any}>
 				{type}:
 				<Block
 					oneline={oneline}
@@ -128,7 +128,7 @@ const PropType = ({ oneline, type, ...propData }) => {
 
 	if (type === 'arrayOf') {
 		return (
-			<span style={PropType.style.root}>
+			<span style={PropType.style.root as any}>
 				{type}:
 				<Block oneline={oneline} style={PropType.style.section}>
 					<PropType {...propData.dynamicData} />
@@ -139,7 +139,7 @@ const PropType = ({ oneline, type, ...propData }) => {
 
 	if (type === 'oneOfType') {
 		return (
-			<span style={PropType.style.root}>
+			<span style={PropType.style.root as any}>
 				{type}:
 				{_.map(propData.dynamicData, (propTypeData, key) => (
 					<Block oneline={oneline} key={key} style={PropType.style.section}>
@@ -152,7 +152,7 @@ const PropType = ({ oneline, type, ...propData }) => {
 
 	if (type === 'instanceOf') {
 		return (
-			<span style={PropType.style.root}>
+			<span style={PropType.style.root as any}>
 				{type}: <span>{propData.dynamicData}</span>
 			</span>
 		);
@@ -160,7 +160,7 @@ const PropType = ({ oneline, type, ...propData }) => {
 
 	if (type === 'objectOf') {
 		return (
-			<span style={PropType.style.root}>
+			<span style={PropType.style.root as any}>
 				{type}:
 				<Block oneline={oneline} style={PropType.style.section}>
 					<PropType {...propData.dynamicData} />
@@ -171,7 +171,7 @@ const PropType = ({ oneline, type, ...propData }) => {
 
 	if (type === 'shape') {
 		return (
-			<span style={PropType.style.root}>
+			<span style={PropType.style.root as any}>
 				{type}:
 				<Block oneline={oneline} style={PropType.style.section}>
 					{'{'}
@@ -190,7 +190,7 @@ const PropType = ({ oneline, type, ...propData }) => {
 		);
 	}
 
-	return <span style={PropType.style.root}>{type}</span>;
+	return <span style={PropType.style.root as any}>{type}</span>;
 };
 
 PropType.style = {
@@ -208,14 +208,14 @@ const PropsList = ({ showIndex, showTopLinks, props }) => {
 	return (
 		<section>
 			{showIndex && [
-				showTopLinks ? <a name="top" /> : null,
+				showTopLinks ? <a className="top" /> : null,
 				<ul key="propsIndex" style={style.ul}>
 					{_.map(
 						sortedProps,
 						({ name, type, isRequired, defaultValue, text }) => (
 							<li key={name} style={style.li}>
 								<a
-									style={{ ...style.a, ...style.propName, ...style.propLink }}
+									style={{ ...style.a, ...style.propName, ...style.propLink } as any}
 									href={`#${name}`}
 								>
 									<span style={style.hashSymbol}>#</span>
@@ -234,10 +234,10 @@ const PropsList = ({ showIndex, showTopLinks, props }) => {
 				sortedProps,
 				({ name, type, isRequired, defaultValue, text, ...propData }) => (
 					<span key={name}>
-						{showIndex && <a name={name} />}
+						{showIndex && <a className={name} />}
 						<div style={style.propSection}>
 							<h3 style={style.propHeader}>
-								<span style={style.propName}>{name}</span>
+								<span style={style.propName as any}>{name}</span>
 							</h3>
 							<div>
 								<span style={style.propType}>
@@ -263,7 +263,7 @@ const PropsList = ({ showIndex, showTopLinks, props }) => {
 							)}
 							{showIndex &&
 								showTopLinks && (
-									<a style={{ ...style.a, ...style.top }} href="#top">
+									<a style={{ ...style.a, ...style.top } as any} href="#top">
 										top
 									</a>
 								)}

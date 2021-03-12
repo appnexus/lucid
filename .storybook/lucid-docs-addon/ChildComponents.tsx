@@ -84,11 +84,11 @@ const ChildComponent = ({
 	const childComponentName = _.isEmpty(path) ? name : path.join('.');
 	return (
 		<section style={styles.childComponent}>
-			<div style={styles.name}>
+			<div style={styles.name as any}>
 				{childComponentName}
 				{!isPrivate &&
 					childComponentName !== displayName && (
-						<span style={styles.displayName}>(see {displayName})</span>
+						<span style={styles.displayName as any}>(see {displayName})</span>
 					)}
 			</div>
 			<div>{compile(description).tree}</div>
@@ -102,7 +102,7 @@ const ChildComponents = ({ childComponents }) => {
 		<section>
 			<hr style={styles.divider} />
 			<div>
-				<span style={styles.headerText}>Child Components</span>
+				<span style={styles.headerText as any}>Child Components</span>
 			</div>
 			{!_.isEmpty(childComponents) &&
 				_.map(childComponents, (childComponent, key) => (

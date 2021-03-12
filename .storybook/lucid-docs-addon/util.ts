@@ -6,9 +6,14 @@ export const stripIndent = text => {
 	}
 
 	const sigLines = text.split(/\n/).filter(line => !/^\s*$/.test(line));
-	const leadingWhitespaces = sigLines.map(line => /^(\s*)/g.exec(line)[1]);
+	const leadingWhitespaces = sigLines.map((line) => {
+		const reg = /^(\s*)/g.exec(line);
+		reg ? reg[1] : null;
+	});
 	const minimumLeadingWhitespace = leadingWhitespaces.reduce(
-		(min, line) => (line.length < min.length ? line : min),
+		(min, line) => {
+			return (line && line.length < min && min.length ? line : min) 
+		},
 		leadingWhitespaces[0]
 	);
 	return text

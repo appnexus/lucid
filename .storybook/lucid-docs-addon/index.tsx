@@ -31,11 +31,11 @@ const getChildComponentsData = (
 				childComponent,
 				maxRecursiveHeight,
 				recursiveHeight + 1,
-				path.concat(key)
+				path.concat(key as any)
 			);
 			return {
 				name: key,
-				path: path.concat(key),
+				path: path.concat(key as any),
 				displayName: childComponent.displayName,
 				description: stripIndent(
 					_.get(childComponent, 'peek.description')
