@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "ES2019",
+    "allowJs": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "jsx": "react",
+    "noImplicitAny": false,
+    "moduleResolution": "node",
+    "resolveJsonModule": false,
+    "isolatedModules": false,
+    "declaration": true,
+    "outDir": "./lib",
+    "rootDir": "./src"
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "**/*.spec.*"
+  ]
+}

@@ -19,7 +19,7 @@
 		"build:docs": "rm -rf ./dist/docs && NODE_DEST_ENV=docs build-storybook --docs -s .storybook/static -o ./dist/docs",
 		"build:js": "NODE_ENV=production babel --extensions .js,.jsx,.ts,.tsx --ignore spec.js,docs,examples,test-entry.js,coverage ./src --out-dir ./dist",
 		"build:modules:babel": "NODE_ENV=production BABEL_ENV=modules babel --extensions .js,.jsx,.ts,.tsx --ignore spec.js,docs,examples,test-entry.js,coverage ./src --out-dir ./lib",
-		"build:modules:definitions": "tsc --outDir lib --declaration --emitDeclarationOnly --declarationDir lib --isolatedModules false",
+		"build:modules:definitions": "tsc --project tsconfig.publish.json --emitDeclarationOnly",
 		"chromatic": "chromatic test --build-script-name build:docs --exit-zero-on-changes",
 		"clean:dist": "rm -rf dist",
 		"clean:lib": "rm -rf lib",
