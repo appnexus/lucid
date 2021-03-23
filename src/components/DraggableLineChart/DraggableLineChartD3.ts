@@ -98,6 +98,7 @@ export interface IDraggableLineChart extends StandardProps {
 	 * Text to show to users when there is no data selection
 	 */
 	preSelectText?: string;
+	yAxisFormatter?: ((value:string) => string) | null;
 }
 
 interface IDraggableLineChartParams extends IDraggableLineChart {
@@ -261,13 +262,13 @@ class DraggableLineChartD3 {
 		const yGroup = getGroup(this.selection, 'yAxisGroup');
 		yGroup
 			.call((yAxis: any) => {
-				const { margin, cx } = this.params;
+				const { margin, cx, yAxisFormatter } = this.params;
 				yAxis
 					.attr('transform', `translate(${margin.left},${0})`)
 					.classed(`${cx('&-Axis')}`, true)
 					.transition()
 					.duration(500)
-					.call(d3Axis.axisLeft(this.yScale).ticks(10));
+					.call(d3Axis.axisLeft(this.yScale).tickFormat(yAxisFormatter  as (domainValue: any, index: number) => string));
 			})
 			.call(() => yGroup);
 	};
