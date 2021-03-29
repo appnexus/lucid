@@ -77,7 +77,7 @@ class PropsPanel extends React.Component<any, any> {
 
 		try {
 			this.setState({
-				props: JSON.parse(propsJSON || "{}"),
+				props: JSON.parse(propsJSON || '{}'),
 			});
 		} catch (err) {
 			console.log('Error parsing props JSON.');
@@ -162,7 +162,7 @@ function getName(title) {
 }
 
 // Register the addon with a unique name.
-addons.register('lucid-docs', api => {
+addons.register('lucid-docs', (api) => {
 	// Check here is necessary to be compatible with older versions of storybook.
 	if (api.on) {
 		api.on(STORY_RENDERED, () => {
@@ -171,7 +171,7 @@ addons.register('lucid-docs', api => {
 			document.title = `${name} - Lucid UI`;
 		});
 
-		api.on(DOCS_RENDERED, title => {
+		api.on(DOCS_RENDERED, (title) => {
 			const name = getName(title);
 			document.title = `${name} - Lucid UI`;
 		});

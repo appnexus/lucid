@@ -1,11 +1,44 @@
+## 7.0.1
+
+- #1221 [patch] Put the repeating triangle Xandr pattern background back.
+  https://github.com/appnexus/lucid/compare/v7.0.0...v7.0.1
+
+## 7.0.0
+
+- #1218 [major] Updated Storybook minor version and converted Storybook files to TypeScript
+- #1216 and #1217 [patch] Fix some Skeleton issues.
+- #1215 [minor] Add `SmallDataTableLoadingSkeleton`.
+- #1214 [minor] Add `SingleLineSkeleton`.
+- #1212 [minor] Add `SimpleTableSkeleton`.
+- #1211 [minor] Add `LineChartLoadingSkeleton`.
+- #1210 [minor] Add `HeaderLoadingSkeleton`.
+- #1209 [minor] Add `GroupLoadingSkeleton`.
+- #1208 [minor] Add `ComplexTableLoadingSkeleton`.
+- #1207 [minor] Add `CardLoadingSkeleton`.
+- #1206 [major] Massive TypeScript file conversion, part two.
+- #1205 [minor] Add `BarChartLoadingSkeleton`.
+- #1204 [major] Massive TypeScript file conversion, part one.
+- #1203 [minor] Impove `LoadingSkeleton` sizing and header placement.
+- #1202 [minor] Remove the Storybook background image.
+- #1201 [manor] Migrate `utils` folder to TypeScript.
+- #1200 [major] Convert remaining Icons to TypeScript.
+- #1199 [major] Update eslint, prettier, jest and TypeScript to latest.
+- #1198 [major] Update more vulnerable dependencies and update linting.
+- #1197 [minor] Add `TextFieldPlain`.
+- #1196 [patch] Update various vulnerable dependencies and update eslint.
+  https://github.com/appnexus/lucid/compare/v6.0.0...v7.0.0
+
 ## 6.0.0
-- #1195 [minor] Storybook-fixes the background image for Anx-react lib
-- #1194 [patch] Bwap 598 add skeletons to lucid, Removed addBorder, SWAP-598 Added react-placeholder
-- #1192 [major] Cxp 1039/draggable list typescript
+
+- #1195 [minor] Fix the background image for Anx-react library.
+- #1194 [patch] Add Skeletons. Removed addBorder, SWAP-598 Added React-placeholder.
+- #1192 [major] Convert `DraggableList` to TypeScript.
   https://github.com/appnexus/lucid/compare/v5.8.25...v6.0.0
-   
+
 ## 5.8.25
-- #1191 [patch] Add `ReportsIcon`, `BarChartIcon`, `TableIcon`, `TicketIcon`, 
+
+- #1191 [patch] Add `ReportsIcon`, `BarChartIcon`, `TableIcon`, and `TicketIcon`.
+
 ## 5.8.24
 
 - #1191 [patch] Add `ReportsIcon`, `BarChartIcon`, `TableIcon`, `TicketIcon`, `GlobeIcon`, `InheritedSettingsIcon`, `AddColumnIcon` and update `RunReportIcon`.
@@ -148,7 +181,7 @@ https://github.com/appnexus/lucid/compare/v5.8.1...v5.8.2
 - #1144 [none] Use `donutWidth` prop to control width of a `Donut` chart.
 - #1145 [minor] TypeScript convert `LineChart`.
 - #1146 [patch] extend `DropMenu` props to include div element passthroughs.
-- #1147 [none] bump acorn from 5.7.3 to 5.7.4
+- #1147 [none] bump acorn from 5.7.3 to 5.7.4.
 - #1148 [patch] expose component interfaces.
 
 https://github.com/appnexus/lucid/compare/v5.7.0...v5.8.0
