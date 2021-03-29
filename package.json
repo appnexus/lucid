@@ -1,8 +1,8 @@
 {
 	"name": "lucid-ui",
-	"version": "7.0.1",
+	"version": "7.0.2",
 	"description": "A UI component library from AppNexus.",
-  "main": "dist/index.js",
+	"main": "dist/index.js",
 	"sideEffects": [
 		"*.css",
 		"*.less"
@@ -12,7 +12,7 @@
 		"url": "https://github.com/appnexus/lucid.git"
 	},
 	"scripts": {
-    "build": "npm-run-all build:docs --parallel docs:upload:*",
+		"build": "npm-run-all build:docs --parallel docs:upload:*",
 		"build:bundle:development": "NODE_ENV=development webpack --config webpack.config.bundle.js",
 		"build:bundle:minified": "NODE_ENV=production webpack --config webpack.config.bundle.js",
 		"build:docs": "rm -rf ./dist/docs && NODE_DEST_ENV=docs build-storybook --docs -s .storybook/static -o ./dist/docs",
