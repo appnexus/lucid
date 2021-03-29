@@ -63,7 +63,7 @@ The recommended option is to update the version number using `npm version ...`.
 Another option is to update the version number manually:
 
 1. Update the value of the `"version"` field for Lucid in `package-json` and `package-lock.json`.
-2. Commit the documentation and `package-` changes. For example: `git commit -a -m "update documentation"`
+2. Commit the documentation and `package-` changes. For example: `git commit -a -m "update documentation"`.
 3. Create a tag: `git tag {version number}`. For example: `git tag v5.4.0`.
 4. Push the tags. For example: `git push origin v5.4.0`.
 
