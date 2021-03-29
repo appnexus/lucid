@@ -2,9 +2,7 @@
 	"name": "lucid-ui",
 	"version": "7.0.0",
 	"description": "A UI component library from AppNexus.",
-	"main": "dist",
-	"module": "lib/index.js",
-	"types": "lib/index.d.ts",
+  "main": "dist/index.js",
 	"sideEffects": [
 		"*.css",
 		"*.less"
@@ -14,12 +12,13 @@
 		"url": "https://github.com/appnexus/lucid.git"
 	},
 	"scripts": {
+    "build": "npm-run-all build:docs --parallel docs:upload:*",
 		"build:bundle:development": "NODE_ENV=development webpack --config webpack.config.bundle.js",
 		"build:bundle:minified": "NODE_ENV=production webpack --config webpack.config.bundle.js",
 		"build:docs": "rm -rf ./dist/docs && NODE_DEST_ENV=docs build-storybook --docs -s .storybook/static -o ./dist/docs",
 		"build:js": "NODE_ENV=production babel --extensions .js,.jsx,.ts,.tsx --ignore spec.js,docs,examples,test-entry.js,coverage ./src --out-dir ./dist",
 		"build:modules:babel": "NODE_ENV=production BABEL_ENV=modules babel --extensions .js,.jsx,.ts,.tsx --ignore spec.js,docs,examples,test-entry.js,coverage ./src --out-dir ./lib",
-		"build:tsc": "tsc --project tsconfig.publish.json && run-s build:bundle:*",
+		"build:tsc": "tsc --project tsconfig.publish.json",
 		"chromatic": "chromatic test --build-script-name build:docs --exit-zero-on-changes",
 		"clean:dist": "rm -rf dist",
 		"clean:lib": "rm -rf lib",
@@ -31,8 +30,8 @@
 		"jest": "NODE_ENV=test TZ=UTC jest",
 		"lint": "eslint ./src .storybook --ext .js,.jsx,.ts,.tsx",
 		"lint-fix": "eslint ./src .storybook --ext .js,.jsx,.ts,.tsx --fix",
-		"postpublish": "npm-run-all build:docs --parallel docs:upload:*",
-		"prepublishOnly": "npm-run-all clean:* lint --parallel build:tsc build:modules:* build:bundle:*",
+		"postpublish": "npm run build",
+		"prepublishOnly": "npm-run-all clean:* lint --parallel build:tsc build:bundle:*",
 		"prettier": "prettier --write '{src,tests,scripts}/**/*.{js,jsx}'",
 		"snapshot": "NODE_ENV=test TZ=UTC jest -u",
 		"stylelint": "stylelint 'src/**/*.less' --config .stylelintrc",
