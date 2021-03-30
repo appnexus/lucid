@@ -1,3 +1,13 @@
+## 7.0.3
+
+- #1220 [patch] Introduce YAxisTickFormatter prop for DraggableLineChart component.
+  https://github.com/appnexus/lucid/compare/v7.0.2...v7.0.3
+
+## 7.0.2
+
+- #1222 [patch] Fixed typescript build
+  https://github.com/appnexus/lucid/compare/v7.0.1...v7.0.2
+
 ## 7.0.1
 
 - #1221 [patch] Put the repeating triangle Xandr pattern background back.
