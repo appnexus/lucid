@@ -1,9 +1,9 @@
 {
 	"name": "lucid-ui",
-	"version": "7.0.3",
+	"version": "7.0.4",
 	"description": "A UI component library from AppNexus.",
 	"type": "module",
-  "main": "dist/index.js",
+	"main": "dist/index.js",
 	"sideEffects": [
 		"*.css",
 		"*.less"
