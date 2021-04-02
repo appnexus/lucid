@@ -1,3 +1,8 @@
+## 7.0.4
+
+- #1223 [patch] Set type to module.
+  https://github.com/appnexus/lucid/pull/1223
+
 ## 7.0.3
 
 - #1220 [patch] Introduce YAxisTickFormatter prop for DraggableLineChart component.
