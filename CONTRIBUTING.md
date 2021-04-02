@@ -154,7 +154,7 @@ describe('MyComponent', () => {
 To get statistics on the module dependencies, both internal to the project and external NPM packages, run the following command:
 
 ```bash
-NODE_ENV=development npx webpack --config webpack.config.bundle.js --json --stats > stats.json
+NODE_ENV=development npx webpack --config webpack.config.bundle.cjs --json --stats > stats.json
 ```
 
 ## Troubleshooting Frequent Component Errors
