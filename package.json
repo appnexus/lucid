@@ -3,7 +3,13 @@
 	"version": "7.0.4",
 	"description": "A UI component library from AppNexus.",
 	"type": "module",
-	"main": "dist/index.js",
+	"main": "./dist/cjs/index.js",
+	"module": "./dist/esm/index.js",
+	"exports": {
+		"require": "./dist/cjs/index.js",
+		"import": "./dist/esm/index.js"
+	},
+	"types": "./dist/esm/index.d.ts",
 	"sideEffects": [
 		"*.css",
 		"*.less"
@@ -19,7 +25,8 @@
 		"build:docs": "rm -rf ./dist/docs && NODE_DEST_ENV=docs build-storybook --docs -s .storybook/static -o ./dist/docs",
 		"build:js": "NODE_ENV=production babel --extensions .js,.jsx,.ts,.tsx --ignore spec.js,docs,examples,test-entry.js,coverage ./src --out-dir ./dist",
 		"build:modules:babel": "NODE_ENV=production BABEL_ENV=modules babel --extensions .js,.jsx,.ts,.tsx --ignore spec.js,docs,examples,test-entry.js,coverage ./src --out-dir ./lib",
-		"build:tsc": "tsc --project tsconfig.publish.json",
+		"build:esm": "tsc --project tsconfig.publish.json --module es2015 --target es5 --outDir dist/esm",
+		"build:cjs": "tsc --project tsconfig.publish.json --module commonjs --target es5 --outDir dist/cjs",
 		"chromatic": "chromatic test --build-script-name build:docs --exit-zero-on-changes",
 		"clean:dist": "rm -rf dist",
 		"clean:lib": "rm -rf lib",
@@ -32,7 +39,7 @@
 		"lint": "eslint ./src .storybook --ext .js,.jsx,.ts,.tsx",
 		"lint-fix": "eslint ./src .storybook --ext .js,.jsx,.ts,.tsx --fix",
 		"postpublish": "npm run build",
-		"prepublishOnly": "npm-run-all clean:* lint --parallel build:tsc build:bundle:*",
+		"prepublishOnly": "npm-run-all clean:* lint --parallel build:cjs build:esm build:bundle:*",
 		"prettier": "prettier --write '{src,tests,scripts}/**/*.{js,jsx}'",
 		"snapshot": "NODE_ENV=test TZ=UTC jest -u",
 		"stylelint": "stylelint 'src/**/*.less' --config .stylelintrc",
@@ -157,7 +164,6 @@
 		"stylelint": "^13.10.0",
 		"stylelint-config-standard": "^20.0.0",
 		"timemachine": "^0.3.0",
-		"ts-jest": "^26.5.1",
 		"ts-loader": "^6.0.4",
 		"typescript": "^4.1.5",
 		"webpack": "^4.27.1",
