@@ -18,23 +18,13 @@ module.exports = {
 			test: /\.tsx?$/,
 			use: [
 				{
-					loader: 'babel-loader',
-				},
-				{
-					loader: 'react-docgen-typescript-loader',
+					loader: require.resolve("babel-loader"),
 					options: {
-						tsconfigPath: path.resolve(__dirname, '../tsconfig.json'),
-						setDisplayName: false,
-						propFilter: (prop, component) => {
-							if (prop.parent) {
-								return !prop.parent.fileName.includes('node_modules');
-							}
-							return true;
-						},
-					},
+						presets: [require.resolve("babel-preset-react-app")]
+					}
 				},
-			],
-			// exclude: /node_modules/,
+				require.resolve("react-docgen-typescript-loader")
+			]
 		});
 
 		config.module.rules.push({
@@ -53,7 +43,7 @@ module.exports = {
 		});
 
 		config.resolve.extensions.push('.ts');
-		config.resolve.extensions.push('.tsx');
+		config.resolve.extensions.push('.tsx');		
 
 		return config;
 	},
@@ -66,6 +56,7 @@ module.exports = {
     config.module.rules.push({
 			test: /\.tsx?$/,
 			loader: 'babel-loader',
+			exclude: /node_modules/,
 		});
 
 		config.resolve.extensions.push('.ts');

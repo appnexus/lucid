@@ -6,4 +6,3 @@ node_modules
 .babelrc
 yarn.lock
 **/__snapshots__
-src
