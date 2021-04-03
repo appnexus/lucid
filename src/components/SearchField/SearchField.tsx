@@ -172,7 +172,7 @@ class SearchField extends React.Component<
 		value: '',
 	};
 
-	render() {
+	render(): React.ReactNode {
 		const {
 			props,
 			props: {
@@ -233,7 +233,7 @@ class SearchField extends React.Component<
 		return (
 			<div
 				{...omitProps(passThroughs, undefined, _.keys(SearchField.propTypes))}
-				className={cx('&', className)}
+				className={cx('&', { '&-is-disabled': isDisabled }, className)}
 			>
 				{textFieldElement}
 				<div className={cx('&-Icon-container')}>{icon}</div>

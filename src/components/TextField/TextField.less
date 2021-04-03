@@ -4,22 +4,30 @@
 @TextField-size-height: @size-standard-height;
 @TextField-color-font: @color-neutral-9;
 
-.@{prefix}-TextField, .@{prefix}-TextFieldPlain {
+.@{prefix}-TextField,
+.@{prefix}-TextFieldPlain {
 	.box-sizing();
 
+	border: @border-standardBorder;
 	background-color: @color-white;
 	border-radius: @size-borderRadius;
-	border: @border-standardBorder;
 	color: @TextField-color-font;
 	font-size: @fontSize;
 	margin: 0;
 	padding: 1px @size-S 0 @size-S;
 	width: 100%;
+	box-shadow: inset 0 1px 2px 0 rgba(33, 31, 31, 0.12);
 
 	&:focus {
 		border: @size-borderWidthFocused solid @color-primary;
 		outline: none;
 		border-color: @color-primary;
+		box-shadow: inset 0 1px 2px 0 rgba(33, 31, 31, 0.16);
+	}
+
+	&:hover {
+		border-color: @color-neutral-10;
+		box-shadow: inset 0 1px 2px 0 rgba(33, 31, 31, 0.16);
 	}
 
 	&&-is-single-line {
@@ -35,8 +43,9 @@
 
 	&&-is-disabled {
 		cursor: not-allowed;
-		background-color: #f4f2f2; // TODO: use a gray from `variables.less`
-		color: #a6a3a3; // TODO: use a gray from `variables.less`
+		background-color: @color-neutral-3;
+		color: @color-neutral-6;
+		border-color: @color-neutral-4;
+		box-shadow: none;
 	}
 }
-
