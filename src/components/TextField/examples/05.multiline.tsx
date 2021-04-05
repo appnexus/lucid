@@ -1,5 +1,6 @@
 import React from 'react';
 import createClass from 'create-react-class';
+
 import { Button, TextField } from '../../../index';
 
 const style = {
@@ -20,7 +21,7 @@ export default createClass({
 					style={style}
 					placeholder='default'
 					value={this.state.value}
-					onChange={value => this.setState({ value })}
+					onChange={(value) => this.setState({ value })}
 				/>
 
 				<TextField
@@ -28,10 +29,12 @@ export default createClass({
 					placeholder='isMultiLine'
 					style={style}
 					value={this.state.value}
-					onChange={value => this.setState({ value })}
+					onChange={(value) => this.setState({ value })}
 				/>
 
-				<div style={style}>this.state.value: {this.state.value}</div>
+				<div style={{ marginBottom: '10px', marginLeft: '10px' }}>
+					this.state.value: {this.state.value}
+				</div>
 
 				<Button
 					onClick={() => {

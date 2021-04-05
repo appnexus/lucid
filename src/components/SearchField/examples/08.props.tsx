@@ -1,5 +1,6 @@
 import React from 'react';
 import createClass from 'create-react-class';
+
 import { LoadingIcon, SearchFieldDumb as SearchField } from '../../../index';
 
 export default createClass({

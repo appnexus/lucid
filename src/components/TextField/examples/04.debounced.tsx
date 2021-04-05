@@ -1,10 +1,7 @@
 import React from 'react';
 import createClass from 'create-react-class';
-import { Button, TextField } from '../../../index';
 
-const style = {
-	marginBottom: '10px',
-};
+import { Button, TextField } from '../../../index';
 
 export default createClass({
 	getInitialState() {
@@ -17,12 +14,16 @@ export default createClass({
 		return (
 			<div>
 				<TextField
-					style={style}
+					style={{
+						marginBottom: '10px',
+					}}
 					value={this.state.value}
-					onChangeDebounced={value => this.setState({ value })}
+					onChangeDebounced={(value) => this.setState({ value })}
 				/>
 
-				<div style={style}>this.state.value: {this.state.value}</div>
+				<div style={{ marginBottom: '10px', marginLeft: '10px' }}>
+					this.state.value: {this.state.value}
+				</div>
 
 				<Button
 					onClick={() => {

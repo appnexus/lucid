@@ -1,6 +1,7 @@
 import React from 'react';
 import createClass from 'create-react-class';
-import { Button, TextField } from '../../../index';
+
+import { TextField } from '../../../index';
 
 const style = {
 	marginBottom: '10px',
