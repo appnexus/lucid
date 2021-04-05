@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SearchField [common] example testing should match snapshot(s) for 1.basic 1`] = `
+exports[`SearchField [common] example testing should match snapshot(s) for 01.basic 1`] = `
 <div
   className="lucid-SearchField"
 >
@@ -35,7 +35,7 @@ exports[`SearchField [common] example testing should match snapshot(s) for 1.bas
 </div>
 `;
 
-exports[`SearchField [common] example testing should match snapshot(s) for 2.interactive 1`] = `
+exports[`SearchField [common] example testing should match snapshot(s) for 02.interactive 1`] = `
 <div
   className="lucid-SearchField"
 >
@@ -70,7 +70,7 @@ exports[`SearchField [common] example testing should match snapshot(s) for 2.int
 </div>
 `;
 
-exports[`SearchField [common] example testing should match snapshot(s) for 3.placeholder 1`] = `
+exports[`SearchField [common] example testing should match snapshot(s) for 03.placeholder 1`] = `
 <div
   className="lucid-SearchField"
 >
@@ -106,7 +106,7 @@ exports[`SearchField [common] example testing should match snapshot(s) for 3.pla
 </div>
 `;
 
-exports[`SearchField [common] example testing should match snapshot(s) for 4.disabled 1`] = `
+exports[`SearchField [common] example testing should match snapshot(s) for 04.disabled 1`] = `
 <div
   className="lucid-SearchField"
 >
@@ -141,7 +141,7 @@ exports[`SearchField [common] example testing should match snapshot(s) for 4.dis
 </div>
 `;
 
-exports[`SearchField [common] example testing should match snapshot(s) for 5.custom-icon 1`] = `
+exports[`SearchField [common] example testing should match snapshot(s) for 05.custom-icon 1`] = `
 <div
   className="lucid-SearchField"
 >
@@ -176,7 +176,7 @@ exports[`SearchField [common] example testing should match snapshot(s) for 5.cus
 </div>
 `;
 
-exports[`SearchField [common] example testing should match snapshot(s) for 6.custom-text-field 1`] = `
+exports[`SearchField [common] example testing should match snapshot(s) for 06.custom-text-field 1`] = `
 <div
   className="lucid-SearchField"
 >
@@ -211,7 +211,7 @@ exports[`SearchField [common] example testing should match snapshot(s) for 6.cus
 </div>
 `;
 
-exports[`SearchField [common] example testing should match snapshot(s) for 7.valid-search 1`] = `
+exports[`SearchField [common] example testing should match snapshot(s) for 07.valid-search 1`] = `
 <div
   className="lucid-SearchField"
   onBlur={[Function]}
@@ -249,7 +249,7 @@ exports[`SearchField [common] example testing should match snapshot(s) for 7.val
 </div>
 `;
 
-exports[`SearchField [common] example testing should match snapshot(s) for 8.props 1`] = `
+exports[`SearchField [common] example testing should match snapshot(s) for 08.props 1`] = `
 <div
   className="lucid-SearchField"
 >
@@ -284,7 +284,7 @@ exports[`SearchField [common] example testing should match snapshot(s) for 8.pro
 </div>
 `;
 
-exports[`SearchField [common] example testing should match snapshot(s) for 8.props 2`] = `
+exports[`SearchField [common] example testing should match snapshot(s) for 08.props 2`] = `
 <div
   className="lucid-SearchField"
 >
@@ -320,7 +320,7 @@ exports[`SearchField [common] example testing should match snapshot(s) for 8.pro
 </div>
 `;
 
-exports[`SearchField [common] example testing should match snapshot(s) for 8.props 3`] = `
+exports[`SearchField [common] example testing should match snapshot(s) for 08.props 3`] = `
 <div
   className="lucid-SearchField"
 >
@@ -355,7 +355,7 @@ exports[`SearchField [common] example testing should match snapshot(s) for 8.pro
 </div>
 `;
 
-exports[`SearchField [common] example testing should match snapshot(s) for 8.props 4`] = `
+exports[`SearchField [common] example testing should match snapshot(s) for 08.props 4`] = `
 <div
   className="lucid-SearchField"
 >
@@ -390,7 +390,7 @@ exports[`SearchField [common] example testing should match snapshot(s) for 8.pro
 </div>
 `;
 
-exports[`SearchField [common] example testing should match snapshot(s) for 8.props 5`] = `
+exports[`SearchField [common] example testing should match snapshot(s) for 08.props 5`] = `
 <div
   className="lucid-SearchField"
 >
@@ -425,7 +425,7 @@ exports[`SearchField [common] example testing should match snapshot(s) for 8.pro
 </div>
 `;
 
-exports[`SearchField [common] example testing should match snapshot(s) for 8.props 6`] = `
+exports[`SearchField [common] example testing should match snapshot(s) for 08.props 6`] = `
 <div
   className="lucid-SearchField"
 >
@@ -460,7 +460,7 @@ exports[`SearchField [common] example testing should match snapshot(s) for 8.pro
 </div>
 `;
 
-exports[`SearchField [common] example testing should match snapshot(s) for 8.props 7`] = `
+exports[`SearchField [common] example testing should match snapshot(s) for 08.props 7`] = `
 <div
   className="lucid-SearchField"
 >
@@ -495,7 +495,7 @@ exports[`SearchField [common] example testing should match snapshot(s) for 8.pro
 </div>
 `;
 
-exports[`SearchField [common] example testing should match snapshot(s) for 9.debounced 1`] = `
+exports[`SearchField [common] example testing should match snapshot(s) for 09.debounced 1`] = `
 <div
   className="lucid-SearchField"
   style={

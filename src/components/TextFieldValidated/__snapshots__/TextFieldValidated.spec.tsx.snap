@@ -37,6 +37,11 @@ exports[`TextFieldValidated [common] example testing should match snapshot(s) fo
     ]
   }
   className="lucid-TextFieldValidated"
+  style={
+    Object {
+      "marginBottom": "10px",
+    }
+  }
 >
   <TextField
     debounceLevel={500}
