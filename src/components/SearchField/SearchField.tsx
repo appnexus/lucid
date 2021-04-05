@@ -13,7 +13,7 @@ import { buildModernHybridComponent } from '../../util/state-management';
 import TextField, { ITextFieldProps } from '../TextField/TextField';
 import SearchIcon from '../Icon/SearchIcon/SearchIcon';
 import reducers from './SearchField.reducers';
-import { ITextFieldState } from '../TextField/TextField.reducers';
+import { ITextFieldState } from '../TextField/TextField';
 
 const cx = lucidClassNames.bind('&-SearchField');
 
@@ -233,7 +233,7 @@ class SearchField extends React.Component<
 		return (
 			<div
 				{...omitProps(passThroughs, undefined, _.keys(SearchField.propTypes))}
-				className={cx('&', { '&-is-disabled': isDisabled }, className)}
+				className={cx('&', className)}
 			>
 				{textFieldElement}
 				<div className={cx('&-Icon-container')}>{icon}</div>

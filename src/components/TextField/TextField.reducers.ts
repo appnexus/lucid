@@ -1,8 +1,4 @@
-export interface ITextFieldState {
-	value: number | string;
-	isHolding: boolean;
-	isMounted: boolean;
-}
+import { ITextFieldState } from './TextField';
 
 export function onChange(
 	state: ITextFieldState,

@@ -1,13 +1,13 @@
 import { ITextFieldValidatedState } from './TextFieldValidated';
 
-export default {
-	onChange(
-		state: ITextFieldValidatedState = { value: '' },
-		value: string
-	): ITextFieldValidatedState {
-		return {
-			...state,
-			value: value,
-		};
-	},
-};
+export function onChange(
+	state: ITextFieldValidatedState = { value: '' },
+	value: string
+): ITextFieldValidatedState {
+	return {
+		...state,
+		value: value,
+	};
+}
+
+export default { onChange };

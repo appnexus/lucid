@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`TextField [common] example testing should match snapshot(s) for basic 1`] = `
+exports[`TextField [common] example testing should match snapshot(s) for 01.basic 1`] = `
 <input
   className="lucid-TextField lucid-TextField-is-single-line"
   disabled={false}
@@ -19,25 +19,25 @@ exports[`TextField [common] example testing should match snapshot(s) for basic 1
 />
 `;
 
-exports[`TextField [common] example testing should match snapshot(s) for basic 2`] = `
-<textarea
-  className="lucid-TextField lucid-TextField-is-multi-line"
+exports[`TextField [common] example testing should match snapshot(s) for 03.on-submit 1`] = `
+<input
+  className="lucid-TextField lucid-TextField-is-single-line"
   disabled={false}
   onBlur={[Function]}
   onChange={[Function]}
   onKeyDown={[Function]}
-  placeholder="isMultiLine"
   rows={5}
   style={
     Object {
       "marginBottom": "10px",
     }
   }
-  value=""
+  type="text"
+  value="Enter some text in and hit enter"
 />
 `;
 
-exports[`TextField [common] example testing should match snapshot(s) for debounced 1`] = `
+exports[`TextField [common] example testing should match snapshot(s) for 04.debounced 1`] = `
 <input
   className="lucid-TextField lucid-TextField-is-single-line"
   disabled={false}
@@ -55,13 +55,14 @@ exports[`TextField [common] example testing should match snapshot(s) for debounc
 />
 `;
 
-exports[`TextField [common] example testing should match snapshot(s) for on-submit 1`] = `
+exports[`TextField [common] example testing should match snapshot(s) for 05.multiline 1`] = `
 <input
   className="lucid-TextField lucid-TextField-is-single-line"
   disabled={false}
   onBlur={[Function]}
   onChange={[Function]}
   onKeyDown={[Function]}
+  placeholder="default"
   rows={5}
   style={
     Object {
@@ -69,6 +70,43 @@ exports[`TextField [common] example testing should match snapshot(s) for on-subm
     }
   }
   type="text"
-  value="Enter some text in and hit enter"
+  value=""
+/>
+`;
+
+exports[`TextField [common] example testing should match snapshot(s) for 05.multiline 2`] = `
+<textarea
+  className="lucid-TextField lucid-TextField-is-multi-line"
+  disabled={false}
+  onBlur={[Function]}
+  onChange={[Function]}
+  onKeyDown={[Function]}
+  placeholder="isMultiLine"
+  rows={5}
+  style={
+    Object {
+      "marginBottom": "10px",
+    }
+  }
+  value=""
+/>
+`;
+
+exports[`TextField [common] example testing should match snapshot(s) for 06.disabled 1`] = `
+<input
+  className="lucid-TextField lucid-TextField-is-disabled lucid-TextField-is-single-line"
+  disabled={true}
+  onBlur={[Function]}
+  onChange={[Function]}
+  onKeyDown={[Function]}
+  placeholder="disabled"
+  rows={5}
+  style={
+    Object {
+      "marginBottom": "10px",
+    }
+  }
+  type="text"
+  value=""
 />
 `;
