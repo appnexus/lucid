@@ -124,7 +124,7 @@ exports[`SearchField [common] example testing should match snapshot(s) for 04.di
     value=""
   />
   <div
-    className="lucid-SearchField-Icon-container"
+    className="lucid-SearchField-Icon-container lucid-SearchField-Icon-is-disabled"
   >
     <SearchIcon
       aspectRatio="xMidYMid meet"
@@ -227,7 +227,7 @@ exports[`SearchField [common] example testing should match snapshot(s) for 07.va
     onChangeDebounced={[Function]}
     onKeyDown={[Function]}
     onSubmit={[Function]}
-    placeholder="icon doesn't become active until you type at least three characters ----->"
+    placeholder="Search icon doesn't become active until you type at least three characters ----->"
     rows={5}
     value=""
   />
@@ -338,7 +338,7 @@ exports[`SearchField [common] example testing should match snapshot(s) for 08.pr
     value=""
   />
   <div
-    className="lucid-SearchField-Icon-container"
+    className="lucid-SearchField-Icon-container lucid-SearchField-Icon-is-disabled"
   >
     <SearchIcon
       aspectRatio="xMidYMid meet"
