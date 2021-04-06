@@ -2,6 +2,7 @@ import React from 'react';
 import addons from '@storybook/addons';
 import { DOCS_RENDERED, STORY_RENDERED } from '@storybook/core-events';
 import _ from 'lodash';
+
 import ExampleCode from './ExampleCode';
 import PropTypes from './PropTypes';
 import ChildComponents from './ChildComponents';
@@ -80,7 +81,7 @@ class PropsPanel extends React.Component<any, any> {
 				props: JSON.parse(propsJSON || '{}'),
 			});
 		} catch (err) {
-			console.log('Error parsing props JSON.');
+			console.error('Error parsing props JSON.');
 			console.error(err.stack);
 			this.setState({
 				props: null,
@@ -100,7 +101,7 @@ class PropsPanel extends React.Component<any, any> {
 				childComponents: JSON.parse(childComponentJSON),
 			});
 		} catch (err) {
-			console.log('Error parsing props JSON.');
+			console.error('Error parsing props JSON.');
 			console.error(err.stack);
 			this.setState({
 				childComponents: null,

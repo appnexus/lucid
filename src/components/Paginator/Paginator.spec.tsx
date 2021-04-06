@@ -3,6 +3,7 @@ import { mount, shallow } from 'enzyme';
 import assert from 'assert';
 import sinon from 'sinon';
 import _ from 'lodash';
+
 import { common } from '../../util/generic-tests';
 import { buildModernHybridComponent } from '../../util/state-management';
 import { SingleSelectDumb as SingleSelect } from '../SingleSelect/SingleSelect';
@@ -50,7 +51,7 @@ describe('Paginator', () => {
 					<Paginator selectedPageIndex={1} totalCount={30} isDisabled />
 				);
 				const buttons = wrapper.find(Button);
-				buttons.forEach(button => {
+				buttons.forEach((button) => {
 					assert(button.prop('isDisabled'), 'must be true');
 				});
 			});
@@ -77,10 +78,7 @@ describe('Paginator', () => {
 		describe('selectedPageIndex', () => {
 			it('should set the value of the TextField to selectedPageIndex + 1', () => {
 				const wrapper = shallow(<Paginator selectedPageIndex={1} />);
-				const textFieldWrapper = wrapper
-					.find(TextField)
-					.first()
-					.shallow();
+				const textFieldWrapper = wrapper.find(TextField).first().shallow();
 				assert.equal(textFieldWrapper.prop('value'), 2, 'must be 2');
 			});
 		});
@@ -156,11 +154,7 @@ describe('Paginator', () => {
 					<HybridPaginator totalCount={totalCount} pageSizeOptions={[10]} />
 				);
 				assert.equal(
-					wrapper
-						.find(Paginator)
-						.shallow()
-						.find('span')
-						.text(),
+					wrapper.find(Paginator).shallow().find('span').text(),
 					'of 10',
 					'must be "of 10"'
 				);
@@ -201,10 +195,7 @@ describe('Paginator', () => {
 				const wrapper = shallow(
 					<Paginator TextField={explicitTextFieldProps} />
 				);
-				const textFieldProps: any = wrapper
-					.find(TextField)
-					.first()
-					.props();
+				const textFieldProps: any = wrapper.find(TextField).first().props();
 
 				_.forEach(explicitTextFieldProps, (prop, name) => {
 					assert.strictEqual(textFieldProps[name], prop);
@@ -231,10 +222,7 @@ describe('Paginator', () => {
 							onPageSelect={onPageSelect}
 						/>
 					);
-					wrapper
-						.find('button')
-						.first()
-						.simulate('click');
+					wrapper.find('button').first().simulate('click');
 					assert(onPageSelect.calledOnce);
 					const [pageIndex, totalPages] = onPageSelect.firstCall.args;
 					assert.equal(pageIndex, 0, 'must be 0');
@@ -252,10 +240,7 @@ describe('Paginator', () => {
 							onPageSelect={onPageSelect}
 						/>
 					);
-					wrapper
-						.find('button')
-						.first()
-						.simulate('click');
+					wrapper.find('button').first().simulate('click');
 					assert(onPageSelect.calledOnce);
 					const [pageIndex, totalPages] = onPageSelect.firstCall.args;
 					assert.equal(pageIndex, 0, 'must be 0');
@@ -264,7 +249,7 @@ describe('Paginator', () => {
 			});
 
 			describe('input', () => {
-				_.forEach(['onBlur', 'onSubmit'], propName => {
+				_.forEach(['onBlur', 'onSubmit'], (propName) => {
 					it(`should get called with the correct args ${propName}`, () => {
 						const onPageSelect = sinon.spy();
 						wrapper = mount(
@@ -286,7 +271,7 @@ describe('Paginator', () => {
 
 		describe('onPageSizeSelect', () => {
 			it('should be passed through to SingleSelect as `onSelect`', () => {
-				const onPageSizeSelect = function() {};
+				const onPageSizeSelect = function () {};
 				const wrapper = shallow(
 					<Paginator hasPageSizeSelector onPageSizeSelect={onPageSizeSelect} />
 				);

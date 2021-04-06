@@ -77,7 +77,6 @@ describe('SearchField', () => {
 		describe('isValid', () => {
 			it('should pass the `&-Icon-active` class to the underlying TextField', () => {
 				const wrapper = shallow(<SearchField isValid={true} />);
-				console.warn(wrapper.debug());
 				const textFieldWrapper = wrapper.find(SearchIcon).first();
 				assert.strictEqual(
 					textFieldWrapper.hasClass('lucid-SearchField-Icon-active'),
@@ -86,7 +85,6 @@ describe('SearchField', () => {
 			});
 			it('should not pass the `-Icon-active` class to the underlying TextField', () => {
 				const wrapper = shallow(<SearchField isValid={false} />);
-				console.warn(wrapper.debug());
 				const textFieldWrapper = wrapper.find(SearchIcon).first();
 				assert.strictEqual(
 					textFieldWrapper.hasClass('lucid-SearchField-Icon-active'),

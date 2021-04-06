@@ -3,6 +3,7 @@ jest.mock('./logger');
 import assert from 'assert';
 import sinon from 'sinon';
 import { isFunction, upperCase } from 'lodash';
+
 import { cleanArgs, thunk, getReduxPrimitives } from './redux';
 
 describe('redux utils', () => {

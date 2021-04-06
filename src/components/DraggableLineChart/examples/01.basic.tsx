@@ -1,5 +1,6 @@
 import React from 'react';
 import createClass from 'create-react-class';
+
 import { DraggableLineChart } from '../../../index';
 
 const data = [
@@ -26,7 +27,7 @@ export default createClass({
 		return (
 			<div style={style}>
 				<DraggableLineChart
-					onDragEnd={(x, y) => console.log({ x, y })}
+					onDragEnd={(x, y) => console.warn({ x, y })}
 					data={data}
 					width={900}
 					xAxisTicksVertical={true}
