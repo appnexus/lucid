@@ -8,7 +8,7 @@ export default createClass({
 	render() {
 		return (
 			<SearchField
-				placeholder="icon doesn't become active until you type at least three characters ----->"
+				placeholder="Search icon doesn't become active until you type at least three characters ----->"
 				isValid={this.state.value.length > 2}
 				value={this.state.value}
 				onSubmit={(submission) => this.setState({ submission })}

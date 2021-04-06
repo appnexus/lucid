@@ -12,7 +12,7 @@ describe('TextFieldValidated', () => {
 		it('should pass through props to TextField', () => {
 			const onBlur = () => {};
 			const wrapper = shallow(<TextFieldValidated onBlur={onBlur} />);
-			assert.equal(wrapper.find(TextField).prop('onBlur'), onBlur);
+			assert.strictEqual(wrapper.find(TextField).prop('onBlur'), onBlur);
 		});
 	});
 });

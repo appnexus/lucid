@@ -2,6 +2,7 @@
 import _ from 'lodash';
 import React, { createElement } from 'react';
 import PropTypes from 'react-peek/prop-types';
+
 import { lucidClassNames } from '../../util/style-helpers';
 import {
 	StandardProps,
@@ -236,7 +237,13 @@ class SearchField extends React.Component<
 				className={cx('&', className)}
 			>
 				{textFieldElement}
-				<div className={cx('&-Icon-container')}>{icon}</div>
+				<div
+					className={cx('&-Icon-container', {
+						'&-Icon-is-disabled': isDisabled,
+					})}
+				>
+					{icon}
+				</div>
 			</div>
 		);
 	}
