@@ -1,10 +1,7 @@
 import React from 'react';
 import createClass from 'create-react-class';
-import { TextField } from '../../../index';
 
-const style = {
-	marginBottom: '10px',
-};
+import { TextField } from '../../../index';
 
 export default createClass({
 	getInitialState() {
@@ -17,12 +14,15 @@ export default createClass({
 		return (
 			<div>
 				<TextField
-					style={style}
+					style={{
+						marginBottom: '10px',
+					}}
 					value={this.state.value}
-					onSubmit={value => this.setState({ value })}
+					onSubmit={(value) => this.setState({ value })}
 				/>
-
-				<div style={style}>this.state.value: {this.state.value}</div>
+				<div style={{ marginTop: '10px', marginLeft: '10px' }}>
+					this.state.value: {this.state.value}
+				</div>
 			</div>
 		);
 	},

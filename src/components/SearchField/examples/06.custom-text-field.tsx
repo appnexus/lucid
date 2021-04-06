@@ -1,5 +1,6 @@
 import React from 'react';
 import createClass from 'create-react-class';
+
 import { SearchField } from '../../../index';
 
 export default createClass({
@@ -10,15 +11,17 @@ export default createClass({
 				<SearchField placeholder='Name/ID'>
 					<SearchField.TextField
 						value={this.state.value}
-						onSubmit={submission => this.setState({ submission })}
-						onChange={value => this.setState({ value })}
+						onSubmit={(submission) => this.setState({ submission })}
+						onChange={(value) => this.setState({ value })}
 						onKeyDown={({ event: { key } }) => this.setState({ key })}
-						onBlur={lastValue => this.setState({ lastValue })}
+						onBlur={(lastValue) => this.setState({ lastValue })}
 					/>
 				</SearchField>
-				<div>Hit "enter" to submit: {this.state.submission}</div>
-				<div>Last keydown: {this.state.key}</div>
-				<div>Value on blur: {this.state.lastValue}</div>
+				<div style={{ marginTop: '10px', marginLeft: '10px' }}>
+					<div>Hit "enter" to submit: {this.state.submission}</div>
+					<div>Last keydown: {this.state.key}</div>
+					<div>Value on blur: {this.state.lastValue}</div>
+				</div>
 			</div>
 		);
 	},

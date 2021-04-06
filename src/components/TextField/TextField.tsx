@@ -9,7 +9,6 @@ import {
 } from '../../util/component-types';
 import reducers from './TextField.reducers';
 import * as KEYCODE from '../../constants/key-code';
-import { ITextFieldState } from './TextField.reducers';
 
 const cx = lucidClassNames.bind('&-TextField');
 
@@ -102,6 +101,12 @@ export type ITextFieldPropsWithPassThroughs = Overwrite<
 	React.InputHTMLAttributes<HTMLInputElement>,
 	ITextFieldProps
 >;
+
+export interface ITextFieldState {
+	value: number | string;
+	isHolding: boolean;
+	isMounted: boolean;
+}
 
 class TextField extends React.Component<
 	ITextFieldPropsWithPassThroughs,
@@ -223,7 +228,8 @@ class TextField extends React.Component<
 				props: ITextFieldProps;
 			}
 		): void => {
-			this.props.onChangeDebounced && this.props.onChangeDebounced(value, { event, props });
+			this.props.onChangeDebounced &&
+				this.props.onChangeDebounced(value, { event, props });
 		},
 		this.props.debounceLevel
 	);

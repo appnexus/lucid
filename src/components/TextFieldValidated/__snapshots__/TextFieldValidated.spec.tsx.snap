@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`TextFieldValidated [common] example testing should match snapshot(s) for basic 1`] = `
+exports[`TextFieldValidated [common] example testing should match snapshot(s) for 01.basic 1`] = `
 <Validation
   Error={
     Array [
@@ -27,7 +27,7 @@ exports[`TextFieldValidated [common] example testing should match snapshot(s) fo
 </Validation>
 `;
 
-exports[`TextFieldValidated [common] example testing should match snapshot(s) for debounced 1`] = `
+exports[`TextFieldValidated [common] example testing should match snapshot(s) for 02.debounced 1`] = `
 <Validation
   Error={
     Array [
@@ -37,6 +37,11 @@ exports[`TextFieldValidated [common] example testing should match snapshot(s) fo
     ]
   }
   className="lucid-TextFieldValidated"
+  style={
+    Object {
+      "marginBottom": "10px",
+    }
+  }
 >
   <TextField
     debounceLevel={500}

@@ -2,6 +2,7 @@
 import _ from 'lodash';
 import React, { createElement } from 'react';
 import PropTypes from 'react-peek/prop-types';
+
 import { lucidClassNames } from '../../util/style-helpers';
 import {
 	StandardProps,
@@ -13,7 +14,7 @@ import { buildModernHybridComponent } from '../../util/state-management';
 import TextField, { ITextFieldProps } from '../TextField/TextField';
 import SearchIcon from '../Icon/SearchIcon/SearchIcon';
 import reducers from './SearchField.reducers';
-import { ITextFieldState } from '../TextField/TextField.reducers';
+import { ITextFieldState } from '../TextField/TextField';
 
 const cx = lucidClassNames.bind('&-SearchField');
 
@@ -172,7 +173,7 @@ class SearchField extends React.Component<
 		value: '',
 	};
 
-	render() {
+	render(): React.ReactNode {
 		const {
 			props,
 			props: {
@@ -236,7 +237,13 @@ class SearchField extends React.Component<
 				className={cx('&', className)}
 			>
 				{textFieldElement}
-				<div className={cx('&-Icon-container')}>{icon}</div>
+				<div
+					className={cx('&-Icon-container', {
+						'&-Icon-is-disabled': isDisabled,
+					})}
+				>
+					{icon}
+				</div>
 			</div>
 		);
 	}

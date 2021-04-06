@@ -2,6 +2,7 @@ import _ from 'lodash';
 import React from 'react';
 import sinon from 'sinon';
 import { shallow } from 'enzyme';
+
 import { common, controls } from '../../util/generic-tests';
 import * as KEYCODE from '../../constants/key-code';
 import assert from 'assert';
@@ -19,7 +20,7 @@ describe('TextField', () => {
 		},
 	});
 
-	it('should correctly debounce onChangeDebounced [mostly stable]', done => {
+	it('should correctly debounce onChangeDebounced [mostly stable]', (done) => {
 		const event = {
 			target: {
 				value: 'yolo',
@@ -37,28 +38,28 @@ describe('TextField', () => {
 
 		_.delay(() => {
 			assert(onChangeDebounced.called);
-			assert.equal(onChangeDebounced.args[0][0], 'yolo');
+			assert.strictEqual(onChangeDebounced.args[0][0], 'yolo');
 			done();
 		}, MOSTLY_STABLE_DELAY);
 	});
 
-	it('should accept a new `value` prop immediately if the user hasnt typed anything recently', () => {
+	it('should accept a new `value` prop immediately if the user has not typed anything recently', () => {
 		const wrapper = shallow(<TextField value='start' />);
 
 		wrapper.setProps({ value: 'end' });
 
-		assert.equal(wrapper.state('value'), 'end');
+		assert.strictEqual(wrapper.state('value'), 'end');
 	});
 
 	// This test had value, but it's been known to be flaky.
-	it('should postpone state changes if the user recently typed something in [mostly stable]', done => {
+	it('should postpone state changes if the user recently typed something in [mostly stable]', (done) => {
 		const wrapper = shallow(<TextField value='start' lazyLevel={1} />);
 
 		// Order of operations is crucial for this test
 		// 1) User starts typing something in
 		// 2) New props comes in from above while the user is typing
 		// 3) The props shouldn't take effect until the lazyLevel has elapsed
-		assert.equal(wrapper.state('value'), 'start');
+		assert.strictEqual(wrapper.state('value'), 'start');
 
 		wrapper
 			.find('input')
@@ -66,10 +67,10 @@ describe('TextField', () => {
 
 		wrapper.setProps({ value: 'end' });
 
-		assert.equal(wrapper.state('value'), 'user typed');
+		assert.strictEqual(wrapper.state('value'), 'user typed');
 
 		_.delay(() => {
-			assert.equal(wrapper.state('value'), 'end');
+			assert.strictEqual(wrapper.state('value'), 'end');
 			done();
 		}, MOSTLY_STABLE_DELAY);
 	});
@@ -86,7 +87,7 @@ describe('TextField', () => {
 		});
 
 		assert(onSubmit.called);
-		assert.equal(onSubmit.args[0][0], 'yolo');
+		assert.strictEqual(onSubmit.args[0][0], 'yolo');
 	});
 
 	it('should callback onBlur when the leaves input', () => {
@@ -100,20 +101,23 @@ describe('TextField', () => {
 		});
 
 		assert(onBlur.calledOnce);
-		assert.equal(onBlur.args[0][0], 'yolo');
+		assert.strictEqual(onBlur.args[0][0], 'yolo');
 	});
 
 	it('should respect isDisabled', () => {
 		const wrapper = shallow(<TextField isDisabled={true} />);
 
-		assert.equal(wrapper.find('input').prop('disabled'), true);
+		assert.strictEqual(wrapper.find('input').prop('disabled'), true);
 	});
 
 	it('should respect isMultiLine', () => {
 		const wrapper = shallow(<TextField isMultiLine={true} />);
 
-		assert.equal(wrapper.find('textarea').length, 1);
-		assert.equal(wrapper.find('.lucid-TextField-is-multi-line').length, 1);
+		assert.strictEqual(wrapper.find('textarea').length, 1);
+		assert.strictEqual(
+			wrapper.find('.lucid-TextField-is-multi-line').length,
+			1
+		);
 	});
 
 	it('should respect onKeyDown if passed in', () => {
