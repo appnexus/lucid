@@ -277,6 +277,9 @@ export interface IThProps
 	field?: string;
 
 	rowSpan?: number | null;
+
+	/** Truncates `Table.Th` content with ellipses, must be used with `hasFixedHeader` */
+	truncateContent?: boolean;
 }
 
 interface IThState {
@@ -399,6 +402,11 @@ export class Th extends React.Component<IThProps, IThState> {
 		field: string`
 			Sets the field value for the cell.
 		`,
+
+		/** Truncates `Table.Td` content with ellipses, must be used with `hasFixedHeader` */
+		truncateContent: bool`
+			Truncates header and adds ellipses.
+		`,
 	};
 
 	private rootRef = React.createRef<HTMLTableHeaderCellElement>();
@@ -420,7 +428,11 @@ export class Th extends React.Component<IThProps, IThState> {
 		passiveWidth: this.props.width || null,
 	};
 
-	UNSAFE_componentWillReceiveProps({ width }: { width?: number | string | null }) {
+	UNSAFE_componentWillReceiveProps({
+		width,
+	}: {
+		width?: number | string | null;
+	}) {
 		if (!_.isNil(width) && width !== this.props.width) {
 			this.setState({
 				hasSetWidth: true,
@@ -492,14 +504,20 @@ export class Th extends React.Component<IThProps, IThState> {
 	): void => {
 		let passiveWidth = this.state.passiveWidth;
 
-		const minWidth = (this.props.minWidth !== null && _.isString(this.props.minWidth)) ? parseInt(this.props.minWidth) : this.props.minWidth;
+		const minWidth =
+			this.props.minWidth !== null && _.isString(this.props.minWidth)
+				? parseInt(this.props.minWidth)
+				: this.props.minWidth;
 		if (passiveWidth === null) {
 			return;
 		} else if (_.isString(passiveWidth)) {
 			passiveWidth = parseInt(passiveWidth);
 		}
 
-		const activeWidth = ((minWidth && passiveWidth + coordinates.dX > minWidth) || !minWidth) ? passiveWidth + coordinates.dX : minWidth;
+		const activeWidth =
+			(minWidth && passiveWidth + coordinates.dX > minWidth) || !minWidth
+				? passiveWidth + coordinates.dX
+				: minWidth;
 
 		this.setState({ activeWidth });
 
@@ -560,6 +578,7 @@ export class Th extends React.Component<IThProps, IThState> {
 			isSorted,
 			sortDirection,
 			style,
+			truncateContent,
 			...passThroughs
 		} = this.props;
 
@@ -586,6 +605,7 @@ export class Th extends React.Component<IThProps, IThState> {
 						'&-is-sorted': isSorted,
 						'&-has-border-right': hasBorderRight,
 						'&-has-border-left': hasBorderLeft,
+						'&-truncate-content': truncateContent,
 					},
 					className
 				)}
@@ -664,7 +684,7 @@ export interface ITdProps
 
 	/** Truncates `Table.Td` content with ellipses, must be used with `hasFixedHeader` */
 	truncateContent?: boolean;
-	
+
 	/** Sets the width of the cell. */
 	width?: number | string;
 }
@@ -914,7 +934,7 @@ function mapToGrid(
 	cellType: Th | typeof Td = Td,
 	mapFn: (gridcell: IGridCell, ...args: any[]) => any = _.property('element')
 ) {
-	const cellRowList = _.map(trList, trElement =>
+	const cellRowList = _.map(trList, (trElement) =>
 		_.map(filterTypes(trElement.props.children, cellType))
 	);
 	const grid: IGridCell[][] = [];
