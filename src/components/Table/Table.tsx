@@ -428,11 +428,7 @@ export class Th extends React.Component<IThProps, IThState> {
 		passiveWidth: this.props.width || null,
 	};
 
-	UNSAFE_componentWillReceiveProps({
-		width,
-	}: {
-		width?: number | string | null;
-	}) {
+	UNSAFE_componentWillReceiveProps({ width }: { width?: number | string | null }) {
 		if (!_.isNil(width) && width !== this.props.width) {
 			this.setState({
 				hasSetWidth: true,
@@ -504,20 +500,14 @@ export class Th extends React.Component<IThProps, IThState> {
 	): void => {
 		let passiveWidth = this.state.passiveWidth;
 
-		const minWidth =
-			this.props.minWidth !== null && _.isString(this.props.minWidth)
-				? parseInt(this.props.minWidth)
-				: this.props.minWidth;
+		const minWidth = (this.props.minWidth !== null && _.isString(this.props.minWidth)) ? parseInt(this.props.minWidth) : this.props.minWidth;
 		if (passiveWidth === null) {
 			return;
 		} else if (_.isString(passiveWidth)) {
 			passiveWidth = parseInt(passiveWidth);
 		}
 
-		const activeWidth =
-			(minWidth && passiveWidth + coordinates.dX > minWidth) || !minWidth
-				? passiveWidth + coordinates.dX
-				: minWidth;
+		const activeWidth = ((minWidth && passiveWidth + coordinates.dX > minWidth) || !minWidth) ? passiveWidth + coordinates.dX : minWidth;
 
 		this.setState({ activeWidth });
 
@@ -934,7 +924,7 @@ function mapToGrid(
 	cellType: Th | typeof Td = Td,
 	mapFn: (gridcell: IGridCell, ...args: any[]) => any = _.property('element')
 ) {
-	const cellRowList = _.map(trList, (trElement) =>
+	const cellRowList = _.map(trList, trElement =>
 		_.map(filterTypes(trElement.props.children, cellType))
 	);
 	const grid: IGridCell[][] = [];
