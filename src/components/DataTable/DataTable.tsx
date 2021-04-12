@@ -157,7 +157,7 @@ interface IDataTableProps extends ITableProps,
 	 * 	- the required prop \`field\`
 	 * 	- the optional prop \`title\`
 	 */
-	Column: any;
+	Column?: any;
 
 	/*
 	 * 	*Child Element*
@@ -169,7 +169,7 @@ interface IDataTableProps extends ITableProps,
 
 	 * 	- the optional prop \`title\`
 	 */
-	ColumnGroup: any;
+	ColumnGroup?: any;
 
 	onResize?: any;
 }

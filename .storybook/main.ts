@@ -1,7 +1,7 @@
 import path from 'path';
 
 module.exports = {
-	// addons: [
+	// addons: [ // Storybook 6 will use this in the future
 	// 	'@storybook/addon-docs',
 	// 	'@storybook/addon-notes/register-panel',
 	// 	'@storybook/addon-options',
@@ -9,16 +9,47 @@ module.exports = {
 	// 	'./lucid-docs-addon'
 	// ],
 	webpackFinal: (config, { configType }) => {
-  	// `configType` has a value of 'DEVELOPMENT' or 'PRODUCTION'
-    // You can change the configuration based on that.
-    // 'PRODUCTION' is used when building the static version of storybook.
+		// `configType` has a value of 'DEVELOPMENT' or 'PRODUCTION'
+		// You can change the configuration based on that.
+		// 'PRODUCTION' is used when building the static version of storybook.
 
-    // Make whatever fine-grained changes you need
 		config.module.rules.push({
 			test: /\.tsx?$/,
 			use: [
 				{
-					loader: 'babel-loader',
+					loader: 'ts-loader',
+					options: {
+						configFile: '../tsconfig.json',
+						transpileOnly: true
+					}
+				},
+			],
+		});
+
+		// Load Typescript Files with React Docgen Typescript. This is very slow so
+		// we want to reduce the total number of files that pass through this
+		// loader to the bare minimum. Only components and or higher order component
+		// files should be processed by this.
+		config.module.rules.push({
+			test: /\.tsx?$/,
+			exclude: [
+				// Filter out non-components (Otherwise it needlessly processes typescript files)
+				/.storybook/,
+				/example/,
+				/utils?.ts/,
+				/reducers.ts/,
+				/selectors.ts/,
+				/queries.ts/,
+				/constants.ts/
+			],
+			use: [
+				{
+					// loader: 'ts-loader', 
+					loader: 'ts-loader',
+					options: {
+						configFile: '../tsconfig.json',
+						transpileOnly: true,
+					}
 				},
 				{
 					loader: 'react-docgen-typescript-loader',
@@ -34,7 +65,6 @@ module.exports = {
 					},
 				},
 			],
-			// exclude: /node_modules/,
 		});
 
 		config.module.rules.push({
@@ -58,19 +88,23 @@ module.exports = {
 		return config;
 	},
 	managerWebpack: (config, { configType }) => {
-    // `configType` has a value of 'DEVELOPMENT' or 'PRODUCTION'
-    // You can change the configuration based on that.
-    // 'PRODUCTION' is used when building the static version of storybook.
+		// `configType` has a value of 'DEVELOPMENT' or 'PRODUCTION'
+		// You can change the configuration based on that.
+		// 'PRODUCTION' is used when building the static version of storybook.
 
-    // Make whatever fine-grained changes you need
-    config.module.rules.push({
+		// Make whatever fine-grained changes you need
+		config.module.rules.push({
 			test: /\.tsx?$/,
-			loader: 'babel-loader',
+			loader: 'ts-loader',
+			options: {
+				configFile: '../tsconfig.json',
+				transpileOnly: true
+			}
 		});
 
 		config.resolve.extensions.push('.ts');
 		config.resolve.extensions.push('.tsx');
 
-    return config;
-  }
+		return config;
+	}
 }

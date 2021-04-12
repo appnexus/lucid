@@ -50,7 +50,7 @@ export function partitionText(
  *
  * @return string
  */
-export function getCombinedChildText(node: React.PropsWithChildren<{}> | null): string {
+export function getCombinedChildText(node): string {
 	if (!node || !node.children) {
 		return '';
 	}
@@ -76,7 +76,7 @@ export function getCombinedChildText(node: React.PropsWithChildren<{}> | null): 
  *
  * @return boolean
  */
-export function propsSearch(text: string | null = null, node: React.PropsWithChildren<{}> | null = null) {
+export function propsSearch(text: string | null = null, node = null) {
 	if (!text) {
 		return true;
 	}
