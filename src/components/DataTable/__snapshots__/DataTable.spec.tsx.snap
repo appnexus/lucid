@@ -20229,3 +20229,1417 @@ exports[`DataTable [common] example testing should match snapshot(s) for 14.resi
   </div>
 </EmptyStateWrapper>
 `;
+
+exports[`DataTable [common] example testing should match snapshot(s) for 15.truncate-content 1`] = `
+<EmptyStateWrapper
+  Body="Try creating a new object or removing a filter."
+  Title="No items found."
+  anchorMessage={false}
+  className="lucid-DataTable-EmptyStateWrapper-has-fixed-header"
+  isEmpty={false}
+  isLoading={false}
+>
+  <div
+    className="lucid-DataTable-fixed"
+  >
+    <div
+      className="lucid-DataTable-fixed-header"
+    >
+      <div
+        className="lucid-DataTable-fixed-header-fixed-columns"
+      />
+      <div
+        className="lucid-DataTable-fixed-header-unfixed-columns"
+      >
+        <Table
+          className="lucid-DataTable-fixed-header-unfixed-columns-Table"
+          density="extended"
+          hasBorder={false}
+          hasHover={true}
+          hasLightHeader={true}
+          hasWordWrap={true}
+        >
+          <Table.Thead>
+            <Table.Tr
+              isActive={false}
+              isDisabled={false}
+              isSelected={false}
+            >
+              <Table.Th
+                align="left"
+                field="id"
+                isResizable={false}
+                isSorted={false}
+                key="id"
+                onClick={null}
+                onResize={null}
+                rowSpan={null}
+                sortDirection="up"
+                truncateContent={true}
+                width={50}
+              >
+                ID
+              </Table.Th>
+              <Table.Th
+                align="left"
+                field="first_name"
+                isResizable={false}
+                isSorted={false}
+                key="first_name"
+                onClick={null}
+                onResize={null}
+                rowSpan={null}
+                sortDirection="up"
+                truncateContent={true}
+                width={100}
+              >
+                First
+              </Table.Th>
+              <Table.Th
+                align="left"
+                field="last_name"
+                isResizable={false}
+                isSorted={false}
+                key="last_name"
+                onClick={null}
+                onResize={null}
+                rowSpan={null}
+                sortDirection="up"
+                truncateContent={true}
+                width={100}
+              >
+                Last
+              </Table.Th>
+              <Table.Th
+                align="left"
+                field="email"
+                isResizable={false}
+                isSorted={false}
+                key="email"
+                onClick={null}
+                onResize={null}
+                rowSpan={null}
+                sortDirection="up"
+                truncateContent={true}
+              >
+                E-Mail
+              </Table.Th>
+              <Table.Th
+                align="left"
+                field="occupation"
+                isResizable={false}
+                isSorted={false}
+                key="occupation"
+                onClick={null}
+                onResize={null}
+                rowSpan={null}
+                sortDirection="up"
+                truncateContent={true}
+                width={100}
+              >
+                Long Occupation
+              </Table.Th>
+              <Table.Th
+                align="right"
+                field="salary"
+                isResizable={false}
+                isSorted={false}
+                key="salary"
+                onClick={null}
+                onResize={null}
+                rowSpan={null}
+                sortDirection="up"
+                truncateContent={true}
+                width={90}
+              >
+                Large Salary
+              </Table.Th>
+              <Table.Th
+                align="center"
+                field="status"
+                isResizable={false}
+                isSorted={false}
+                key="status"
+                onClick={null}
+                onResize={null}
+                rowSpan={null}
+                sortDirection="up"
+                truncateContent={true}
+                width={100}
+              >
+                Status
+              </Table.Th>
+            </Table.Tr>
+          </Table.Thead>
+        </Table>
+      </div>
+    </div>
+    <div
+      className="lucid-DataTable-fixed-body"
+    >
+      <div
+        className="lucid-DataTable-fixed-body-fixed-columns"
+      />
+      <div
+        className="lucid-DataTable-fixed-body-unfixed-columns"
+        onScroll={[Function]}
+      >
+        <span
+          className="lucid-DataTable-fixed-body-unfixed-columns-shadow"
+        />
+        <Table
+          className="lucid-DataTable-fixed-body-unfixed-columns-Table"
+          density="extended"
+          hasBorder={false}
+          hasHover={true}
+          hasLightHeader={true}
+          hasWordWrap={false}
+        >
+          <Table.Tbody>
+            <Table.Tr
+              isActionable={false}
+              isActive={false}
+              isDisabled={false}
+              isSelected={false}
+              key="row0"
+              onClick={[Function]}
+              style={Object {}}
+            >
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row0id"
+                rowSpan={1}
+                style={
+                  Object {
+                    "width": 50,
+                  }
+                }
+                truncateContent={true}
+              >
+                1
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row0first_name"
+                rowSpan={1}
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+                truncateContent={true}
+              >
+                Isaac
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row0last_name"
+                rowSpan={1}
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+                truncateContent={true}
+              >
+                Newton
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row0email"
+                rowSpan={1}
+                style={
+                  Object {
+                    "width": undefined,
+                  }
+                }
+                truncateContent={true}
+              >
+                inewton@example.com
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row0occupation"
+                rowSpan={1}
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+                truncateContent={true}
+              >
+                Physicist mathematician
+              </Table.Td>
+              <Table.Td
+                align="right"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row0salary"
+                rowSpan={1}
+                style={
+                  Object {
+                    "width": 90,
+                  }
+                }
+                truncateContent={true}
+              >
+                $100.01
+              </Table.Td>
+              <Table.Td
+                align="center"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row0status"
+                rowSpan={1}
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+                truncateContent={true}
+              >
+                <SuccessIcon
+                  aspectRatio="xMidYMid meet"
+                  color="primary"
+                  isClickable={false}
+                  isDisabled={false}
+                  onClick={[Function]}
+                  onSelect={[Function]}
+                  size={16}
+                  viewBox="0 0 16 16"
+                />
+              </Table.Td>
+            </Table.Tr>
+            <Table.Tr
+              isActionable={false}
+              isActive={false}
+              isDisabled={false}
+              isSelected={false}
+              key="row1"
+              onClick={[Function]}
+              style={Object {}}
+            >
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row1id"
+                rowSpan={1}
+                style={
+                  Object {
+                    "width": 50,
+                  }
+                }
+                truncateContent={true}
+              >
+                2
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row1first_name"
+                rowSpan={1}
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+                truncateContent={true}
+              >
+                Albert
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row1last_name"
+                rowSpan={1}
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+                truncateContent={true}
+              >
+                Einstein
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row1email"
+                rowSpan={1}
+                style={
+                  Object {
+                    "width": undefined,
+                  }
+                }
+                truncateContent={true}
+              >
+                aeinstein@example.com
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row1occupation"
+                rowSpan={1}
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+                truncateContent={true}
+              >
+                Physicist
+              </Table.Td>
+              <Table.Td
+                align="right"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row1salary"
+                rowSpan={1}
+                style={
+                  Object {
+                    "width": 90,
+                  }
+                }
+                truncateContent={true}
+              >
+                $100.02
+              </Table.Td>
+              <Table.Td
+                align="center"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row1status"
+                rowSpan={1}
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+                truncateContent={true}
+              >
+                <SuccessIcon
+                  aspectRatio="xMidYMid meet"
+                  color="primary"
+                  isClickable={false}
+                  isDisabled={false}
+                  onClick={[Function]}
+                  onSelect={[Function]}
+                  size={16}
+                  viewBox="0 0 16 16"
+                />
+              </Table.Td>
+            </Table.Tr>
+            <Table.Tr
+              isActionable={false}
+              isActive={false}
+              isDisabled={false}
+              isSelected={false}
+              key="row2"
+              onClick={[Function]}
+              style={Object {}}
+            >
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row2id"
+                rowSpan={1}
+                style={
+                  Object {
+                    "width": 50,
+                  }
+                }
+                truncateContent={true}
+              >
+                3
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row2first_name"
+                rowSpan={1}
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+                truncateContent={true}
+              >
+                Leonardo
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row2last_name"
+                rowSpan={1}
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+                truncateContent={true}
+              >
+                da Vinci
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row2email"
+                rowSpan={1}
+                style={
+                  Object {
+                    "width": undefined,
+                  }
+                }
+                truncateContent={true}
+              >
+                ldvinci@example.com
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row2occupation"
+                rowSpan={1}
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+                truncateContent={true}
+              >
+                Engineer
+              </Table.Td>
+              <Table.Td
+                align="right"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row2salary"
+                rowSpan={1}
+                style={
+                  Object {
+                    "width": 90,
+                  }
+                }
+                truncateContent={true}
+              >
+                $100.03
+              </Table.Td>
+              <Table.Td
+                align="center"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row2status"
+                rowSpan={1}
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+                truncateContent={true}
+              >
+                <SuccessIcon
+                  aspectRatio="xMidYMid meet"
+                  color="primary"
+                  isClickable={false}
+                  isDisabled={false}
+                  onClick={[Function]}
+                  onSelect={[Function]}
+                  size={16}
+                  viewBox="0 0 16 16"
+                />
+              </Table.Td>
+            </Table.Tr>
+            <Table.Tr
+              isActionable={false}
+              isActive={false}
+              isDisabled={false}
+              isSelected={false}
+              key="row3"
+              onClick={[Function]}
+              style={Object {}}
+            >
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row3id"
+                rowSpan={1}
+                style={
+                  Object {
+                    "width": 50,
+                  }
+                }
+                truncateContent={true}
+              >
+                4
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row3first_name"
+                rowSpan={1}
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+                truncateContent={true}
+              >
+                Aristotle
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row3last_name"
+                rowSpan={1}
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+                truncateContent={true}
+              >
+                --
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row3email"
+                rowSpan={1}
+                style={
+                  Object {
+                    "width": undefined,
+                  }
+                }
+                truncateContent={true}
+              >
+                aristotle@example.com
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row3occupation"
+                rowSpan={1}
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+                truncateContent={true}
+              >
+                Tutor
+              </Table.Td>
+              <Table.Td
+                align="right"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row3salary"
+                rowSpan={1}
+                style={
+                  Object {
+                    "width": 90,
+                  }
+                }
+                truncateContent={true}
+              >
+                $100.04
+              </Table.Td>
+              <Table.Td
+                align="center"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row3status"
+                rowSpan={1}
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+                truncateContent={true}
+              >
+                <SuccessIcon
+                  aspectRatio="xMidYMid meet"
+                  color="primary"
+                  isClickable={false}
+                  isDisabled={false}
+                  onClick={[Function]}
+                  onSelect={[Function]}
+                  size={16}
+                  viewBox="0 0 16 16"
+                />
+              </Table.Td>
+            </Table.Tr>
+            <Table.Tr
+              isActionable={false}
+              isActive={false}
+              isDisabled={false}
+              isSelected={false}
+              key="row4"
+              onClick={[Function]}
+              style={Object {}}
+            >
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row4id"
+                rowSpan={1}
+                style={
+                  Object {
+                    "width": 50,
+                  }
+                }
+                truncateContent={true}
+              >
+                5
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row4first_name"
+                rowSpan={1}
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+                truncateContent={true}
+              >
+                Galileo
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row4last_name"
+                rowSpan={1}
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+                truncateContent={true}
+              >
+                --
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row4email"
+                rowSpan={1}
+                style={
+                  Object {
+                    "width": undefined,
+                  }
+                }
+                truncateContent={true}
+              >
+                ggalilei@example.com
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row4occupation"
+                rowSpan={1}
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+                truncateContent={true}
+              >
+                Physicist
+              </Table.Td>
+              <Table.Td
+                align="right"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row4salary"
+                rowSpan={1}
+                style={
+                  Object {
+                    "width": 90,
+                  }
+                }
+                truncateContent={true}
+              >
+                $100.05
+              </Table.Td>
+              <Table.Td
+                align="center"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row4status"
+                rowSpan={1}
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+                truncateContent={true}
+              >
+                <SuccessIcon
+                  aspectRatio="xMidYMid meet"
+                  color="primary"
+                  isClickable={false}
+                  isDisabled={false}
+                  onClick={[Function]}
+                  onSelect={[Function]}
+                  size={16}
+                  viewBox="0 0 16 16"
+                />
+              </Table.Td>
+            </Table.Tr>
+            <Table.Tr
+              isActionable={false}
+              isActive={false}
+              isDisabled={false}
+              isSelected={false}
+              key="row5"
+              onClick={[Function]}
+              style={Object {}}
+            >
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row5id"
+                rowSpan={1}
+                style={
+                  Object {
+                    "width": 50,
+                  }
+                }
+                truncateContent={true}
+              >
+                6
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row5first_name"
+                rowSpan={1}
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+                truncateContent={true}
+              >
+                Charles
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row5last_name"
+                rowSpan={1}
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+                truncateContent={true}
+              >
+                Darwin
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row5email"
+                rowSpan={1}
+                style={
+                  Object {
+                    "width": undefined,
+                  }
+                }
+                truncateContent={true}
+              >
+                cdarwin@example.com
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row5occupation"
+                rowSpan={1}
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+                truncateContent={true}
+              >
+                Biologist
+              </Table.Td>
+              <Table.Td
+                align="right"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row5salary"
+                rowSpan={1}
+                style={
+                  Object {
+                    "width": 90,
+                  }
+                }
+                truncateContent={true}
+              >
+                $100.06
+              </Table.Td>
+              <Table.Td
+                align="center"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row5status"
+                rowSpan={1}
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+                truncateContent={true}
+              >
+                <SuccessIcon
+                  aspectRatio="xMidYMid meet"
+                  color="primary"
+                  isClickable={false}
+                  isDisabled={false}
+                  onClick={[Function]}
+                  onSelect={[Function]}
+                  size={16}
+                  viewBox="0 0 16 16"
+                />
+              </Table.Td>
+            </Table.Tr>
+            <Table.Tr
+              isActionable={false}
+              isActive={false}
+              isDisabled={false}
+              isSelected={false}
+              key="row6"
+              onClick={[Function]}
+              style={Object {}}
+            >
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row6id"
+                rowSpan={1}
+                style={
+                  Object {
+                    "width": 50,
+                  }
+                }
+                truncateContent={true}
+              >
+                7
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row6first_name"
+                rowSpan={1}
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+                truncateContent={true}
+              >
+                Alexander
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row6last_name"
+                rowSpan={1}
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+                truncateContent={true}
+              >
+                Macedon
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row6email"
+                rowSpan={1}
+                style={
+                  Object {
+                    "width": undefined,
+                  }
+                }
+                truncateContent={true}
+              >
+                amacedon@example.com
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row6occupation"
+                rowSpan={1}
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+                truncateContent={true}
+              >
+                Head of State
+              </Table.Td>
+              <Table.Td
+                align="right"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row6salary"
+                rowSpan={1}
+                style={
+                  Object {
+                    "width": 90,
+                  }
+                }
+                truncateContent={true}
+              >
+                $100.07
+              </Table.Td>
+              <Table.Td
+                align="center"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row6status"
+                rowSpan={1}
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+                truncateContent={true}
+              >
+                <SuccessIcon
+                  aspectRatio="xMidYMid meet"
+                  color="primary"
+                  isClickable={false}
+                  isDisabled={false}
+                  onClick={[Function]}
+                  onSelect={[Function]}
+                  size={16}
+                  viewBox="0 0 16 16"
+                />
+              </Table.Td>
+            </Table.Tr>
+            <Table.Tr
+              isActionable={false}
+              isActive={false}
+              isDisabled={false}
+              isSelected={false}
+              key="row7"
+              onClick={[Function]}
+              style={Object {}}
+            >
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row7id"
+                rowSpan={1}
+                style={
+                  Object {
+                    "width": 50,
+                  }
+                }
+                truncateContent={true}
+              >
+                8
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row7first_name"
+                rowSpan={1}
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+                truncateContent={true}
+              >
+                Plato
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row7last_name"
+                rowSpan={1}
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+                truncateContent={true}
+              >
+                Plato
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row7email"
+                rowSpan={1}
+                style={
+                  Object {
+                    "width": undefined,
+                  }
+                }
+                truncateContent={true}
+              >
+                plato@example.com
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row7occupation"
+                rowSpan={1}
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+                truncateContent={true}
+              >
+                Philosopher
+              </Table.Td>
+              <Table.Td
+                align="right"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row7salary"
+                rowSpan={1}
+                style={
+                  Object {
+                    "width": 90,
+                  }
+                }
+                truncateContent={true}
+              >
+                $100.08
+              </Table.Td>
+              <Table.Td
+                align="center"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row7status"
+                rowSpan={1}
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+                truncateContent={true}
+              >
+                <SuccessIcon
+                  aspectRatio="xMidYMid meet"
+                  color="primary"
+                  isClickable={false}
+                  isDisabled={false}
+                  onClick={[Function]}
+                  onSelect={[Function]}
+                  size={16}
+                  viewBox="0 0 16 16"
+                />
+              </Table.Td>
+            </Table.Tr>
+            <Table.Tr
+              isActionable={false}
+              isActive={false}
+              isDisabled={false}
+              isSelected={false}
+              key="row8"
+              onClick={[Function]}
+              style={Object {}}
+            >
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row8id"
+                rowSpan={1}
+                style={
+                  Object {
+                    "width": 50,
+                  }
+                }
+                truncateContent={true}
+              >
+                9
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row8first_name"
+                rowSpan={1}
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+                truncateContent={true}
+              >
+                Mahatma
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row8last_name"
+                rowSpan={1}
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+                truncateContent={true}
+              >
+                Gandhi
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row8email"
+                rowSpan={1}
+                style={
+                  Object {
+                    "width": undefined,
+                  }
+                }
+                truncateContent={true}
+              >
+                mgandhi@example.com
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row8occupation"
+                rowSpan={1}
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+                truncateContent={true}
+              >
+                Politician
+              </Table.Td>
+              <Table.Td
+                align="right"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row8salary"
+                rowSpan={1}
+                style={
+                  Object {
+                    "width": 90,
+                  }
+                }
+                truncateContent={true}
+              >
+                $100.09
+              </Table.Td>
+              <Table.Td
+                align="center"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row8status"
+                rowSpan={1}
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+                truncateContent={true}
+              >
+                <SuccessIcon
+                  aspectRatio="xMidYMid meet"
+                  color="primary"
+                  isClickable={false}
+                  isDisabled={false}
+                  onClick={[Function]}
+                  onSelect={[Function]}
+                  size={16}
+                  viewBox="0 0 16 16"
+                />
+              </Table.Td>
+            </Table.Tr>
+            <Table.Tr
+              isActionable={false}
+              isActive={false}
+              isDisabled={false}
+              isSelected={false}
+              key="row9"
+              onClick={[Function]}
+              style={Object {}}
+            >
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row9id"
+                rowSpan={1}
+                style={
+                  Object {
+                    "width": 50,
+                  }
+                }
+                truncateContent={true}
+              >
+                10
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row9first_name"
+                rowSpan={1}
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+                truncateContent={true}
+              >
+                William
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row9last_name"
+                rowSpan={1}
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+                truncateContent={true}
+              >
+                Shakespeare
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row9email"
+                rowSpan={1}
+                style={
+                  Object {
+                    "width": undefined,
+                  }
+                }
+                truncateContent={true}
+              >
+                wshakespear@example.com
+              </Table.Td>
+              <Table.Td
+                align="left"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row9occupation"
+                rowSpan={1}
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+                truncateContent={true}
+              >
+                Playwright
+              </Table.Td>
+              <Table.Td
+                align="right"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row9salary"
+                rowSpan={1}
+                style={
+                  Object {
+                    "width": 90,
+                  }
+                }
+                truncateContent={true}
+              >
+                $100.10
+              </Table.Td>
+              <Table.Td
+                align="center"
+                hasBorderLeft={false}
+                hasBorderRight={false}
+                key="row9status"
+                rowSpan={1}
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+                truncateContent={true}
+              >
+                <SuccessIcon
+                  aspectRatio="xMidYMid meet"
+                  color="primary"
+                  isClickable={false}
+                  isDisabled={false}
+                  onClick={[Function]}
+                  onSelect={[Function]}
+                  size={16}
+                  viewBox="0 0 16 16"
+                />
+              </Table.Td>
+            </Table.Tr>
+          </Table.Tbody>
+        </Table>
+      </div>
+    </div>
+  </div>
+</EmptyStateWrapper>
+`;

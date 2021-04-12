@@ -209,6 +209,23 @@
 				}
 			}
 
+			// header cell content displays ellipses if text overflows
+			// and <DataTable hasFixedHeader={true} truncateContent={true}>
+			&.@{prefix}-Table-truncate-content {
+				& > .@{prefix}-Table-Th-inner {
+					justify-content: flex-start;
+					align-items: center;
+					.@{prefix}-Table-Th-inner-content {
+						flex: unset;
+						display: unset;
+						text-overflow: ellipsis;
+						overflow: hidden;
+						white-space: nowrap;
+						text-align: left;
+					}
+				}
+			}
+
 			// `Th`.`align` prop - use flex alignments in header
 			&.@{prefix}-Table-align-left
 				> .@{prefix}-Table-Th-inner

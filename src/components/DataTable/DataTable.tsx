@@ -65,7 +65,7 @@ interface IDataTableProps extends ITableProps,
 	isSelectable: boolean;
 
 	/*
-	 * 	Position the \`EmptyMessage\` and \`LoadingMessage\` near the top of the container. 
+	 * 	Position the \`EmptyMessage\` and \`LoadingMessage\` near the top of the container.
 	 * 	By default, they are vertically aligned to the middle of the table. Useful
 	 * 	for tables with many rows that extend past the viewport.
 	 */
@@ -254,7 +254,7 @@ export const DataTable = (props: IDataTableProps) => {
 		childComponentElements: any,
 		flattenedColumns: any
 	) => {
-		const { isSelectable, data } = props;
+		const { isSelectable, data, truncateContent } = props;
 
 		const hasGroupedColumns = _.some(
 			childComponentElements,
@@ -303,6 +303,7 @@ export const DataTable = (props: IDataTableProps) => {
 										rowSpan={hasGroupedColumns ? 2 : null}
 										field={props.field || index}
 										key={_.get(props, 'field', index)}
+										truncateContent={truncateContent}
 									>
 										{props.title || props.children}
 									</Th>
@@ -861,7 +862,7 @@ Column.propTypes = {
 	isResizable: bool,
 };
 
-DataTable.Column = Column; 
+DataTable.Column = Column;
 
 interface IColumnGroupProps {
 	children?: any;

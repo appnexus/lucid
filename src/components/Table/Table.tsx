@@ -277,6 +277,9 @@ export interface IThProps
 	field?: string;
 
 	rowSpan?: number | null;
+
+	/** Truncates `Table.Th` content with ellipses, must be used with `hasFixedHeader` */
+	truncateContent?: boolean;
 }
 
 interface IThState {
@@ -398,6 +401,11 @@ export class Th extends React.Component<IThProps, IThState> {
 
 		field: string`
 			Sets the field value for the cell.
+		`,
+
+		/** Truncates `Table.Td` content with ellipses, must be used with `hasFixedHeader` */
+		truncateContent: bool`
+			Truncates header and adds ellipses.
 		`,
 	};
 
@@ -560,6 +568,7 @@ export class Th extends React.Component<IThProps, IThState> {
 			isSorted,
 			sortDirection,
 			style,
+			truncateContent,
 			...passThroughs
 		} = this.props;
 
@@ -586,6 +595,7 @@ export class Th extends React.Component<IThProps, IThState> {
 						'&-is-sorted': isSorted,
 						'&-has-border-right': hasBorderRight,
 						'&-has-border-left': hasBorderLeft,
+						'&-truncate-content': truncateContent,
 					},
 					className
 				)}
@@ -664,7 +674,7 @@ export interface ITdProps
 
 	/** Truncates `Table.Td` content with ellipses, must be used with `hasFixedHeader` */
 	truncateContent?: boolean;
-	
+
 	/** Sets the width of the cell. */
 	width?: number | string;
 }
