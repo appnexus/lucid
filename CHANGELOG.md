@@ -1,3 +1,8 @@
+
+## 7.1.0
+
+- #1227 [minor] Updated build to create cjs and esm assets.
+  https://github.com/appnexus/lucid/pull/1227
 ## 7.0.4
 
 - #1223 [patch] Set type to module.
