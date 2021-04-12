@@ -1,9 +1,10 @@
 {
   "compilerOptions": {
-    "target": "ES2019",
+    "target": "es6",
+    "lib": ["dom", "es5", "es6"],
     "allowJs": true,
-    "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
     "strict": true,
     "jsx": "react",
     "noImplicitAny": false,
@@ -14,7 +15,8 @@
   },
   "include": [
     "src/**/*",
-    ".storybook/**/*"
+    ".storybook/**/*",
+    "docs"
   ],
   "exclude": [
     "examples/**/*"
