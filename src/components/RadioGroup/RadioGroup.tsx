@@ -226,7 +226,7 @@ RadioGroup.peek = {
 			- Use the styles on the parent container of \`RadioGroup\` to ensure only the radio buttons and their labels are clickable.
 			- Any props that are not explicitly defined in \`propTypes\` are passed to the native radio button control.
 		`,
-},
+	},
 	categories: ['controls', 'toggles'],
 	madeFrom: ['RadioButton'],
 };

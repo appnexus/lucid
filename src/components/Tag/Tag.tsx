@@ -123,11 +123,11 @@ Tag.peek = {
 	description: `
 			\`Tag\` is a visualization for selected settings. 
 				`,
-		notes: {
-			overview: `
+	notes: {
+		overview: `
 					A visualization for items. Tags can be removable and can be nested into groups.
 					`,
-			intendedUse: `
+		intendedUse: `
 					Tags are typically used to display filter selections. Tags can be interactive or display-only. They can also be grouped into a parent container.
 											
 					**Styling notes**
@@ -136,10 +136,10 @@ Tag.peek = {
 					- Use \`isRemovable='true'\` for interactive tags.
 					- Styling is optimized for 40 or fewer characters.
 					`,
-			technicalRecommendations: `
+		technicalRecommendations: `
 					None
 			`,
-		},
+	},
 	categories: ['communication'],
 };
 

@@ -19,6 +19,6 @@ export function onDragOver(state = {}, dragOverIndex: number) {
 }
 
 export interface IDraggableListState {
-	dragIndex: number,
-	dragOverIndex: number
+	dragIndex: number;
+	dragOverIndex: number;
 }

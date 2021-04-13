@@ -33,7 +33,7 @@ interface IBreadcrumbProps
 			React.HTMLAttributes<HTMLDivElement>,
 			HTMLDivElement
 		> {
-	Item?: string | React.ReactNode & { props: IBreadcrumbItemProps };
+	Item?: string | (React.ReactNode & { props: IBreadcrumbItemProps });
 }
 
 export const Breadcrumb = (props: IBreadcrumbProps): React.ReactElement => {

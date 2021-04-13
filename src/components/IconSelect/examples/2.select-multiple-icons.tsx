@@ -34,20 +34,22 @@ export default createClass({
 			<IconSelect
 				kind='multiple' // default value, renders as checkboxes
 				onSelect={this.handleSelect}
-				items={[
-					{
-						id: 'item1',
-						icon: <ClockIcon />,
-						isSelected: this.isSelected('item1'),
-						label: 'Foo Bar',
-					},
-					{
-						id: 'item2',
-						icon: <ClockIcon />,
-						isSelected: this.isSelected('item2'),
-						label: 'Bax Tar',
-					},
-				] as any}
+				items={
+					[
+						{
+							id: 'item1',
+							icon: <ClockIcon />,
+							isSelected: this.isSelected('item1'),
+							label: 'Foo Bar',
+						},
+						{
+							id: 'item2',
+							icon: <ClockIcon />,
+							isSelected: this.isSelected('item2'),
+							label: 'Bax Tar',
+						},
+					] as any
+				}
 			/>
 		);
 	},

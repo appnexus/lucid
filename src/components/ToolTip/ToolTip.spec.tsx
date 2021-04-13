@@ -264,17 +264,13 @@ describe('ToolTip', () => {
 						<Body>Body</Body>
 					</ToolTip>
 				);
-				wrapper
-					.find(ContextMenu)
-					.shallow()
-					.find('span')
-					.simulate('mouseOver');
+				wrapper.find(ContextMenu).shallow().find('span').simulate('mouseOver');
 				assert(spy.calledOnce, 'onMouseOver must be called once');
 			});
 		});
 
 		describe('onMouseOut', () => {
-			it('should call onMouseOut when cursor leaves target', done => {
+			it('should call onMouseOut when cursor leaves target', (done) => {
 				const spy = sinon.spy();
 				const wrapper = shallow(
 					<ToolTip onMouseOut={spy}>
@@ -282,10 +278,7 @@ describe('ToolTip', () => {
 						<Body>Body</Body>
 					</ToolTip>
 				);
-				const root = wrapper
-					.find('ContextMenu')
-					.shallow()
-					.find('span');
+				const root = wrapper.find('ContextMenu').shallow().find('span');
 				root.simulate('mouseOver');
 				root.simulate('mouseOut');
 				// wait for timeout
@@ -295,7 +288,7 @@ describe('ToolTip', () => {
 				}, MOSTLY_STABLE_DELAY * 2);
 			});
 
-			it('should not call onMouseOut if cursor enters FlyOut', done => {
+			it('should not call onMouseOut if cursor enters FlyOut', (done) => {
 				const spy = sinon.spy();
 				const wrapper: any = shallow(
 					<ToolTip isExpanded onMouseOut={spy}>
@@ -303,10 +296,7 @@ describe('ToolTip', () => {
 						<Body>Body</Body>
 					</ToolTip>
 				);
-				const root = wrapper
-					.find(ContextMenu)
-					.shallow()
-					.find('span');
+				const root = wrapper.find(ContextMenu).shallow().find('span');
 				root.simulate('mouseOver');
 				// simulate click hover over FlyOut Portal
 				wrapper.find(ContextMenu.FlyOut).prop('onMouseOver')();

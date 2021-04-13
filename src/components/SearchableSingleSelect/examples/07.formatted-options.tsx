@@ -44,7 +44,10 @@ export default class extends React.Component {
 				<SearchableSingleSelect.OptionGroup>
 					<OptionCols col1='ID' col2='NAME' col3='DESCRIPTION' />
 
-					<SearchableSingleSelect.Option filterText='13 Drone lorem ipsum dolor sit' Selected='Drone (13)'>
+					<SearchableSingleSelect.Option
+						filterText='13 Drone lorem ipsum dolor sit'
+						Selected='Drone (13)'
+					>
 						{({ searchText }: { searchText: string }) => (
 							<OptionCols
 								col1='13'
@@ -55,7 +58,10 @@ export default class extends React.Component {
 						)}
 					</SearchableSingleSelect.Option>
 
-					<SearchableSingleSelect.Option filterText='14 Appa dolor sit amet consectetur' Selected='Appa (14)'>
+					<SearchableSingleSelect.Option
+						filterText='14 Appa dolor sit amet consectetur'
+						Selected='Appa (14)'
+					>
 						{({ searchText }: { searchText: string }) => (
 							<OptionCols
 								col1='14'
@@ -66,7 +72,10 @@ export default class extends React.Component {
 						)}
 					</SearchableSingleSelect.Option>
 
-					<SearchableSingleSelect.Option filterText='15 Breakfast amet consectetur adipiscing elit' Selected='Breakfast (14)'>
+					<SearchableSingleSelect.Option
+						filterText='15 Breakfast amet consectetur adipiscing elit'
+						Selected='Breakfast (14)'
+					>
 						{({ searchText }: { searchText: string }) => (
 							<OptionCols
 								col1='14'
@@ -77,7 +86,10 @@ export default class extends React.Component {
 						)}
 					</SearchableSingleSelect.Option>
 
-					<SearchableSingleSelect.Option filterText='16 Scout adipiscing elit sed do' Selected='Scout (15)'>
+					<SearchableSingleSelect.Option
+						filterText='16 Scout adipiscing elit sed do'
+						Selected='Scout (15)'
+					>
 						{({ searchText }: { searchText: string }) => (
 							<OptionCols
 								col1='15'

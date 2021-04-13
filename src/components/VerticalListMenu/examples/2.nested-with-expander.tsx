@@ -33,7 +33,7 @@ export default () => {
 							onSelect={_.partial(handleSelect, 'three')}
 							selectedIndices={currentList === 'three' ? selectedIndices : []}
 						>
-							{_.times(50, n => {
+							{_.times(50, (n) => {
 								return (
 									<VerticalListMenu.Item key={n}>
 										Level three

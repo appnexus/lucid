@@ -7,7 +7,7 @@ const { Placeholder, Option, OptionGroup } = SearchableSelect;
 export default createClass({
 	getInitialState() {
 		return {
-			selectedIndex: null
+			selectedIndex: null,
 		};
 	},
 

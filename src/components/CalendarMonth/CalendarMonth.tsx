@@ -201,7 +201,7 @@ class CalendarMonth extends React.Component<ICalendarProps, {}, {}> {
 				initialMonth={monthDate}
 				canChangeMonth={false}
 				weekdaysShort={['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']}
-				{...passThroughs as any}
+				{...(passThroughs as any)}
 				modifiers={{
 					range: this.modifierRange,
 					from: this.modifierFrom,

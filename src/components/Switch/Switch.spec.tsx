@@ -21,7 +21,7 @@ describe('Switch', () => {
 	describe('props', () => {
 		describe('isDisabled', () => {
 			it('sets the `disabled` attribute of the native check box element.', () => {
-				_.forEach(booleanValues, testValue => {
+				_.forEach(booleanValues, (testValue) => {
 					const wrapper = shallow(<Switch isDisabled={testValue} />);
 
 					assert.equal(
@@ -34,7 +34,7 @@ describe('Switch', () => {
 
 		describe('isSelected', () => {
 			it('sets the `checked` attribute of the native check box element.', () => {
-				_.forEach(booleanValues, testValue => {
+				_.forEach(booleanValues, (testValue) => {
 					const wrapper = shallow(<Switch isSelected={testValue} />);
 
 					assert.equal(
@@ -69,7 +69,7 @@ describe('Switch', () => {
 
 				// It should pass `foo`, `bar`, `baz`, `qux`, and `quux` through
 				// to the native input.
-				_.forEach(['foo', 'bar', 'baz', 'qux', 'quux'], prop => {
+				_.forEach(['foo', 'bar', 'baz', 'qux', 'quux'], (prop) => {
 					assert(_.includes(nativeProps, prop));
 				});
 			});
@@ -79,15 +79,13 @@ describe('Switch', () => {
 
 describe('Switch', () => {
 	function simulateEvent(reactElement: any, selector: any, event: any) {
-		mount(reactElement)
-			.find(selector)
-			.simulate(event);
+		mount(reactElement).find(selector).simulate(event);
 	}
 
 	function verifyArgumentsWhenFalse(event: any) {
 		_.forEach(
 			['', '-native', '-visualization-container', '-visualization-handle'],
-			classSubString => {
+			(classSubString) => {
 				const onSelect: any = sinon.spy();
 
 				simulateEvent(
@@ -104,7 +102,7 @@ describe('Switch', () => {
 	function verifyArgumentsWhenTrue(event: any) {
 		_.forEach(
 			['', '-native', '-visualization-container', '-visualization-handle'],
-			classSubString => {
+			(classSubString) => {
 				const onSelect: any = sinon.spy();
 
 				simulateEvent(
@@ -121,7 +119,7 @@ describe('Switch', () => {
 	function verifyOnSelect(event: any) {
 		_.forEach(
 			['', '-native', '-visualization-container', '-visualization-handle'],
-			classSubString => {
+			(classSubString) => {
 				const onSelect: any = sinon.spy();
 
 				simulateEvent(

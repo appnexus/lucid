@@ -19,13 +19,10 @@ export const BackUpArrowIcon: FC<IIconProps> = ({
 				false
 			)}
 			{..._.pick(passThroughs, _.keys(iconPropTypes))}
-			className={cx(
-				'&',
-				className
-			)}
+			className={cx('&', className)}
 		>
-			<path d='M8 .5v15h7.5'/>
-			<path d='M14 6.5l-6-6-6 6'/>
+			<path d='M8 .5v15h7.5' />
+			<path d='M14 6.5l-6-6-6 6' />
 		</Icon>
 	);
 };

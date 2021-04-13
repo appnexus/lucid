@@ -25,7 +25,7 @@ describe('redux utils', () => {
 
 	describe('#thunk', () => {
 		it('should set `isThunk` property on the input function to `true`', () => {
-			assert(thunk(function() {}).isThunk, 'must have `isThunk`');
+			assert(thunk(function () {}).isThunk, 'must have `isThunk`');
 		});
 	});
 
@@ -151,7 +151,11 @@ describe('redux utils', () => {
 					});
 
 					it('should apply selector', () => {
-						const viewState = mapStateToProps({ root: initialState }, null, null);
+						const viewState = mapStateToProps(
+							{ root: initialState },
+							null,
+							null
+						);
 						assert.equal(viewState.foo.uppercase, 'FOO', 'must equal "FOO"');
 					});
 				});
@@ -163,7 +167,7 @@ describe('redux utils', () => {
 						reducers,
 						initialState,
 						selectors,
-						rootSelector: state => ({
+						rootSelector: (state) => ({
 							...state,
 							computed: state.foo.uppercase + state.foo.value,
 						}),
@@ -199,7 +203,7 @@ describe('redux utils', () => {
 						rootPath: ['qux', 'quux'],
 					});
 
-					const mockDispatch: any = sinon.spy(action => action);
+					const mockDispatch: any = sinon.spy((action) => action);
 					const mapDispatchToProps = connectors[1];
 					const dispatchTree = mapDispatchToProps(mockDispatch, null, null);
 
@@ -233,8 +237,9 @@ describe('redux utils', () => {
 							bar: {
 								onChange: (state: any, payload: any) => ({ value: payload }),
 							},
-							asyncOperation: thunk(payload => (dispatchTree: { onChange: (arg0: any) => any; }) =>
-								dispatchTree.onChange(payload)
+							asyncOperation: thunk(
+								(payload) => (dispatchTree: { onChange: (arg0: any) => any }) =>
+									dispatchTree.onChange(payload)
 							),
 							thunkSpy: thunk(() => thunkSpy),
 						},
@@ -265,7 +270,7 @@ describe('redux utils', () => {
 
 					const mapDispatchToProps = connectors[1];
 					const mockGetState = sinon.spy(() => rootState);
-					const mockDispatch: any = sinon.spy(action =>
+					const mockDispatch: any = sinon.spy((action) =>
 						isFunction(action)
 							? action(mockDispatch, mockGetState, ...extraArgs)
 							: action

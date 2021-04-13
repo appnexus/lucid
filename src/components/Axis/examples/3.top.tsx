@@ -6,10 +6,7 @@ const margin = { right: 20, left: 20 };
 const width = 400;
 const height = 50;
 const innerWidth = width - margin.right - margin.left;
-const x = d3Scale
-	.scaleLinear()
-	.domain([0, 100000])
-	.range([0, innerWidth]);
+const x = d3Scale.scaleLinear().domain([0, 100000]).range([0, innerWidth]);
 
 export default createClass({
 	render() {

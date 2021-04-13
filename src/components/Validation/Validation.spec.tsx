@@ -15,12 +15,7 @@ describe('Validation', () => {
 		it('should render children', () => {
 			const content = <div>foo</div>;
 			const wrapper = shallow(<Validation>{content}</Validation>);
-			assert(
-				wrapper
-					.children()
-					.first()
-					.equals(content)
-			);
+			assert(wrapper.children().first().equals(content));
 		});
 	});
 

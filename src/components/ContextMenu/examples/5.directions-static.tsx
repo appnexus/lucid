@@ -24,7 +24,7 @@ export default createClass({
 					margin: '0 60px',
 				}}
 			>
-				{_.map(directions, direction => {
+				{_.map(directions, (direction) => {
 					return (
 						<section
 							key={direction}
@@ -35,9 +35,9 @@ export default createClass({
 								flexGrow: 1,
 							}}
 						>
-							{_.map(alignments, alignment =>
-								_.map([0, 15, -15], directonOffset =>
-									_.map([0, 15, -15], alignmentOffset => (
+							{_.map(alignments, (alignment) =>
+								_.map([0, 15, -15], (directonOffset) =>
+									_.map([0, 15, -15], (alignmentOffset) => (
 										<div
 											key={`${alignment}${alignmentOffset}${directonOffset}`}
 											style={{ marginTop: '120px' }}

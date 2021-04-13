@@ -75,9 +75,8 @@ Components should have an \`initialState\` property or a \`getDefaultProps\` def
 	const rootPathSelector = (state: object) =>
 		_.isEmpty(rootPath) ? state : _.get(state, rootPath);
 
-	const mapStateToProps = createSelector(
-		[rootPathSelector],
-		rootState => rootSelector(selector(rootState))
+	const mapStateToProps = createSelector([rootPathSelector], (rootState) =>
+		rootSelector(selector(rootState))
 	);
 	// dispatch could be store.dispatch's return value or an async lib's return value?
 	const mapDispatchToProps = (dispatch: Funk) =>

@@ -34,7 +34,11 @@ export default createClass({
 		const { selectedDays } = this.state;
 
 		this.setState({
-			selectedDays: _.xorWith(selectedDays, [date], ReactDayPicker.DateUtils.isSameDay),
+			selectedDays: _.xorWith(
+				selectedDays,
+				[date],
+				ReactDayPicker.DateUtils.isSameDay
+			),
 			cursor: date,
 		});
 	},
@@ -78,7 +82,7 @@ export default createClass({
 					<Button onClick={this.handleNext}>{'>'}</Button>
 				</div>
 				selectedDays:{' '}
-				{_.map(selectedDays, selected =>
+				{_.map(selectedDays, (selected) =>
 					selected.toLocaleDateString('en-US')
 				).join(', ')}
 			</section>

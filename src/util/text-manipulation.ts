@@ -61,7 +61,7 @@ export function getCombinedChildText(node): string {
 
 	return React.Children.toArray(node.children)
 		.filter((child): child is React.ReactElement => _.has(child, 'props')) // filter out primitive types
-		.map(child => getCombinedChildText(child.props))
+		.map((child) => getCombinedChildText(child.props))
 		.reduce(
 			(combinedText, childText) => combinedText + childText,
 			_.find(React.Children.toArray(node.children), _.isString) || ''

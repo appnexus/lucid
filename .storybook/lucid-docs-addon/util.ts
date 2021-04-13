@@ -1,28 +1,25 @@
 import _ from 'lodash';
 
-export const stripIndent = text => {
+export const stripIndent = (text) => {
 	if (!text) {
 		return '';
 	}
 
-	const sigLines = text.split(/\n/).filter(line => !/^\s*$/.test(line));
+	const sigLines = text.split(/\n/).filter((line) => !/^\s*$/.test(line));
 	const leadingWhitespaces = sigLines.map((line) => {
 		const reg = /^(\s*)/g.exec(line);
 		reg ? reg[1] : null;
 	});
-	const minimumLeadingWhitespace = leadingWhitespaces.reduce(
-		(min, line) => {
-			return (line && line.length < min && min.length ? line : min) 
-		},
-		leadingWhitespaces[0]
-	);
+	const minimumLeadingWhitespace = leadingWhitespaces.reduce((min, line) => {
+		return line && line.length < min && min.length ? line : min;
+	}, leadingWhitespaces[0]);
 	return text
 		.split(/\n/)
-		.map(line => line.replace(minimumLeadingWhitespace, ''))
+		.map((line) => line.replace(minimumLeadingWhitespace, ''))
 		.join('\n');
 };
 
-export const formatSource = source =>
+export const formatSource = (source) =>
 	source
 		.replace(/(\.\.\/)*(src\/)?index(\.js)?/, 'lucid-ui')
 		.replace(/\t/g, '  ')
@@ -34,18 +31,18 @@ export const formatSource = source =>
 // this function tries to get prop type info from typescript (via react-docgen-typescript-loader) for TS components
 // then falls back on propTypes for non-TS components
 // in addition, it handles setting default values based on defaultProps
-export const getPropDefs = component =>
+export const getPropDefs = (component) =>
 	_.sortBy(
 		_.sortBy(
 			_.has(component, '__docgenInfo')
 				? getPropsFromDocgen(component)
 				: getPropsFromPropTypes(component),
-			prop => prop.name
+			(prop) => prop.name
 		),
-		prop => !prop.required
+		(prop) => !prop.required
 	);
 
-const getPropsFromDocgen = component =>
+const getPropsFromDocgen = (component) =>
 	_.map(
 		component.__docgenInfo.props,
 		({ type, required, description, defaultValue }, property) =>
@@ -58,7 +55,7 @@ const getPropsFromDocgen = component =>
 			})
 	);
 
-const getPropsFromPropTypes = component =>
+const getPropsFromPropTypes = (component) =>
 	_.map(
 		getPropsData(component),
 		({ name, type, isRequired, dynamicData, text, defaultValue }) =>
@@ -119,7 +116,7 @@ const propTypeName = ({ type, ...propData }) => {
 };
 
 // helper function for parsing PropTypes and peek data to generate props information
-export const getPropsData = componentRef => {
+export const getPropsData = (componentRef) => {
 	return _.map(componentRef.propTypes, (resolverFn, property) => {
 		return {
 			...getPropTypeData(resolverFn),
@@ -136,7 +133,7 @@ const getDefaultPropValue = (componentRef, property) => {
 		: defaultValue;
 };
 
-const getPropTypeData = resolverFn => {
+const getPropTypeData = (resolverFn) => {
 	const type = _.get(resolverFn, ['peek', 'type']);
 	let dynamicData;
 

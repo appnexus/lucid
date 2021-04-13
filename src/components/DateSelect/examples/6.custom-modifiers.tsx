@@ -13,9 +13,11 @@ export default createClass({
 			<section style={{ maxWidth: 400 }}>
 				<DateSelect>
 					<DateSelect.CalendarMonth
-						modifiers={{
-							tuesday: (date: any) => date.getDay() === 2,
-						} as any}
+						modifiers={
+							{
+								tuesday: (date: any) => date.getDay() === 2,
+							} as any
+						}
 					/>
 				</DateSelect>
 

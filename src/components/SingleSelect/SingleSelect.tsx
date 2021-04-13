@@ -393,10 +393,12 @@ class SingleSelect extends React.Component<
 								: placeholder}
 						</span>
 
-						{showIcon && <ChevronIcon
-							size={12}
-							direction={isExpanded ? direction : 'down'}
-						/>}
+						{showIcon && (
+							<ChevronIcon
+								size={12}
+								direction={isExpanded ? direction : 'down'}
+							/>
+						)}
 					</div>
 				</DropMenu.Control>
 
@@ -405,32 +407,34 @@ class SingleSelect extends React.Component<
 						{placeholder}
 					</DropMenu.NullOption>
 				) : null}
-				{// for each option group passed in, render a DropMenu.OptionGroup, any label will be included in it's children, render each option inside the group
-				_.map(optionGroups, (optionGroupProps, optionGroupIndex) => (
-					<DropMenu.OptionGroup
-						key={'SingleSelectOptionGroup' + optionGroupIndex}
-						{...optionGroupProps}
-					>
-						{optionGroupProps.children}
-						{_.map(
-							_.get(optionGroupDataLookup, optionGroupIndex),
-							({ optionProps, optionIndex }) => (
-								<DropMenu.Option
-									key={'SingleSelectOption' + optionIndex}
-									{..._.omit(optionProps, 'Selected')}
-								/>
-							)
-						)}
-					</DropMenu.OptionGroup>
-				)).concat(
-					// then render all the ungrouped options at the end
-					_.map(ungroupedOptionData, ({ optionProps, optionIndex }) => (
-						<DropMenu.Option
-							key={'SingleSelectOption' + optionIndex}
-							{..._.omit(optionProps, 'Selected')}
-						/>
-					))
-				)}
+				{
+					// for each option group passed in, render a DropMenu.OptionGroup, any label will be included in it's children, render each option inside the group
+					_.map(optionGroups, (optionGroupProps, optionGroupIndex) => (
+						<DropMenu.OptionGroup
+							key={'SingleSelectOptionGroup' + optionGroupIndex}
+							{...optionGroupProps}
+						>
+							{optionGroupProps.children}
+							{_.map(
+								_.get(optionGroupDataLookup, optionGroupIndex),
+								({ optionProps, optionIndex }) => (
+									<DropMenu.Option
+										key={'SingleSelectOption' + optionIndex}
+										{..._.omit(optionProps, 'Selected')}
+									/>
+								)
+							)}
+						</DropMenu.OptionGroup>
+					)).concat(
+						// then render all the ungrouped options at the end
+						_.map(ungroupedOptionData, ({ optionProps, optionIndex }) => (
+							<DropMenu.Option
+								key={'SingleSelectOption' + optionIndex}
+								{..._.omit(optionProps, 'Selected')}
+							/>
+						))
+					)
+				}
 			</DropMenu>
 		);
 	}

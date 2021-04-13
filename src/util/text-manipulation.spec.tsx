@@ -61,7 +61,8 @@ describe('text-manipulation', () => {
 						<div></div>
 						<div>{null}</div>
 						<div>{true}</div>
-						<div>{4}</div>{/* this value should be ignored since it is a number, not a string */}
+						<div>{4}</div>
+						{/* this value should be ignored since it is a number, not a string */}
 					</div>
 				</div>
 			);

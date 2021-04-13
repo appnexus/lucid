@@ -33,12 +33,12 @@ export default createClass({
 					}}
 				>
 					<SingleSelect
-						onSelect={i => this.setState({ direction: directions[i as any] })}
+						onSelect={(i) => this.setState({ direction: directions[i as any] })}
 					>
 						<SingleSelect.Placeholder>
 							Select a direction
 						</SingleSelect.Placeholder>
-						{_.map(directions, direction => (
+						{_.map(directions, (direction) => (
 							<SingleSelect.Option key={direction}>
 								{direction}
 							</SingleSelect.Option>
@@ -48,15 +48,15 @@ export default createClass({
 					<TextField
 						style={{ width: 100 }}
 						value={directonOffset}
-						onChange={directonOffset => this.setState({ directonOffset })}
+						onChange={(directonOffset) => this.setState({ directonOffset })}
 					/>
 					<SingleSelect
-						onSelect={i => this.setState({ alignment: alignments[i as any] })}
+						onSelect={(i) => this.setState({ alignment: alignments[i as any] })}
 					>
 						<SingleSelect.Placeholder>
 							Select an alignment
 						</SingleSelect.Placeholder>
-						{_.map(alignments, alignment => (
+						{_.map(alignments, (alignment) => (
 							<SingleSelect.Option key={alignment}>
 								{alignment}
 							</SingleSelect.Option>
@@ -66,14 +66,14 @@ export default createClass({
 					<TextField
 						style={{ width: 100 }}
 						value={alignmentOffset}
-						onChange={alignmentOffset => this.setState({ alignmentOffset })}
+						onChange={(alignmentOffset) => this.setState({ alignmentOffset })}
 					/>
 					getAlignmentOffset:
 					<TextField
 						isDisabled={alignment !== CENTER}
 						style={{ width: 100 }}
 						value={getAlignmentOffset}
-						onSubmit={getAlignmentOffset =>
+						onSubmit={(getAlignmentOffset) =>
 							this.setState({ getAlignmentOffset })
 						}
 					/>
@@ -108,8 +108,9 @@ export default createClass({
 							<div>{`directonOffset: ${directonOffset || 'default'}`}</div>
 							<div>{`alignment: ${alignment || 'default'}`}</div>
 							<div>{`alignmentOffset: ${alignmentOffset || 'default'}`}</div>
-							<div>{`getAlignmentOffset: ${getAlignmentOffset ||
-								'default'}`}</div>
+							<div>{`getAlignmentOffset: ${
+								getAlignmentOffset || 'default'
+							}`}</div>
 						</ContextMenu.FlyOut>
 					</ContextMenu>
 				</section>

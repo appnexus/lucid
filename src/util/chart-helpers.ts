@@ -22,7 +22,7 @@ export function stackByFields(
 ): Array<Array<[number, number]>> {
 	const fieldsArray = _.castArray(fields);
 
-	return _.map(collection, d => {
+	return _.map(collection, (d) => {
 		return _.reduce<Fields, Array<[number, number]>>(
 			fieldsArray,
 			(acc, field) => {
@@ -59,8 +59,8 @@ export function extractFields(
 ): Array<Array<[number, number]>> {
 	const fieldsArray = _.castArray(fields);
 
-	return _.map(collection, d => {
-		return _.map(fieldsArray, field => [minDomainValue, _.get(d, field, 0)]);
+	return _.map(collection, (d) => {
+		return _.map(fieldsArray, (field) => [minDomainValue, _.get(d, field, 0)]);
 	});
 }
 
@@ -77,7 +77,7 @@ export function extractFields(
 export function groupByFields(collection: Collection, fields: Fields) {
 	const fieldsArray = _.castArray(fields);
 
-	return _.map(fieldsArray, field => {
+	return _.map(fieldsArray, (field) => {
 		return _.map(collection, field);
 	});
 }
@@ -188,7 +188,10 @@ export function maxByFieldsStacked(collection: Collection, fields: Fields) {
  * @param {number} size - should be greater than 1
  * @return {array}
  */
-export function discreteTicks<T>(array: T[], count: number | undefined | null = null) {
+export function discreteTicks<T>(
+	array: T[],
+	count: number | undefined | null = null
+) {
 	if (!array || _.isNil(count) || array.length <= count) {
 		return array;
 	}
@@ -225,9 +228,9 @@ export function transformFromCenter(
 	yCenter: number,
 	scale: number
 ) {
-	return `translate(${(1 - scale) * xCenter + (x - xCenter)}, ${(1 - scale) *
-		yCenter +
-		(y - yCenter)}) scale(${scale})`;
+	return `translate(${(1 - scale) * xCenter + (x - xCenter)}, ${
+		(1 - scale) * yCenter + (y - yCenter)
+	}) scale(${scale})`;
 }
 
 const FORMAT_MILLISECOND = d3TimeFormat.timeFormat('.%L');

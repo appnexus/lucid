@@ -7,10 +7,12 @@ export default createClass({
 		return (
 			<div>
 				<Tabs
-					Tab={[
-						{ Title: 'Bert', children: 'Bert' },
-						{ Title: 'Ernie', children: 'Ernie' },
-					] as any}
+					Tab={
+						[
+							{ Title: 'Bert', children: 'Bert' },
+							{ Title: 'Ernie', children: 'Ernie' },
+						] as any
+					}
 				/>
 			</div>
 		);

@@ -172,7 +172,7 @@ describe('Table', () => {
 
 				describe('isResizable', () => {
 					it('should apply the class name `lucid-Table-is-resizable`', () => {
-						const wrapper = shallow(<Th isResizable minWidth={50}/>);
+						const wrapper = shallow(<Th isResizable minWidth={50} />);
 
 						assert.equal(wrapper.find('th.lucid-Table-is-resizable').length, 1);
 					});

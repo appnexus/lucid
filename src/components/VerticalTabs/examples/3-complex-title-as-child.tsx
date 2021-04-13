@@ -20,15 +20,9 @@ const data = [
 
 const width = 200;
 const height = 50;
-const xScale = d3Scale
-	.scalePoint()
-	.domain(_.map(data, 'x'))
-	.range([0, width]);
+const xScale = d3Scale.scalePoint().domain(_.map(data, 'x')).range([0, width]);
 
-const yScale = d3Scale
-	.scaleLinear()
-	.domain([0, 4])
-	.range([height, 0]);
+const yScale = d3Scale.scaleLinear().domain([0, 4]).range([height, 0]);
 
 const titleThree = (
 	<span>

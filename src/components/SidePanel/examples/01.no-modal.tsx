@@ -1,7 +1,6 @@
 import React from 'react';
 import { SidePanel } from '../../../index';
 
-
 export default class extends React.Component<any, any> {
 	constructor(props: any, state: any) {
 		super(props, state);

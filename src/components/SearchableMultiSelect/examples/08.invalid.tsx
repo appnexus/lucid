@@ -5,35 +5,44 @@ import { SearchableMultiSelect, Resizer } from '../../../index';
 const { Option } = SearchableMultiSelect;
 
 export default createClass({
-    getInitialState() {
-        return {
-            selectedLength: 0
-        }
-    },
-    handleChange(option: string, event: any) {
-        let count = this.state.selectedLength;
-        if (typeof event.props.children === 'string') {
-            count--;
-        } else {
-            event.props.children.props.isSelected ? count-- : count++;
-        }
-        this.setState({
-            selectedLength: count
-        })
-    },
-    handleRemoveAll(option: string, event: any) {
-        this.setState({
-            selectedLength: 0
-        })
-    },
+	getInitialState() {
+		return {
+			selectedLength: 0,
+		};
+	},
+	handleChange(option: string, event: any) {
+		let count = this.state.selectedLength;
+		if (typeof event.props.children === 'string') {
+			count--;
+		} else {
+			event.props.children.props.isSelected ? count-- : count++;
+		}
+		this.setState({
+			selectedLength: count,
+		});
+	},
+	handleRemoveAll(option: string, event: any) {
+		this.setState({
+			selectedLength: 0,
+		});
+	},
 	render() {
 		return (
 			<Resizer>
-				{width => {
+				{(width) => {
 					const responsiveMode = width >= 400 ? 'large' : 'small';
 
 					return (
-						<SearchableMultiSelect responsiveMode={responsiveMode} onRemoveAll={this.handleRemoveAll} onSelect={this.handleChange} Error={this.state.selectedLength > 1 ? null : 'Please select at least two options'}>
+						<SearchableMultiSelect
+							responsiveMode={responsiveMode}
+							onRemoveAll={this.handleRemoveAll}
+							onSelect={this.handleChange}
+							Error={
+								this.state.selectedLength > 1
+									? null
+									: 'Please select at least two options'
+							}
+						>
 							<Option>Alabama</Option>
 							<Option>Alaska</Option>
 							<Option>Arizona</Option>

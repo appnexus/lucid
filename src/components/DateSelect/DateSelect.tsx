@@ -362,7 +362,7 @@ class DateSelect extends React.Component<IDateSelectProps, IDateSelectState> {
 				onDayClick={onDayClick}
 				onDayMouseEnter={showCursorHighlight ? onDayMouseEnter : _.noop}
 				onDayMouseLeave={showCursorHighlight ? onDayMouseLeave : _.noop}
-				{...rest as Partial<ICalendarProps>}
+				{...(rest as Partial<ICalendarProps>)}
 			/>
 		);
 	};
@@ -403,7 +403,7 @@ class DateSelect extends React.Component<IDateSelectProps, IDateSelectState> {
 		/* istanbul ignore next */
 		return (
 			<section
-				ref={ref => (this.rootRef = ref)}
+				ref={(ref) => (this.rootRef = ref)}
 				className={cx('&', className, {
 					'&-show-divider': showDivider,
 				})}
@@ -458,7 +458,7 @@ class DateSelect extends React.Component<IDateSelectProps, IDateSelectState> {
 					</InfiniteSlidePanel>
 				) : (
 					<div className={cx('&-slidePanel', '&-slidePanel-simple')}>
-						{_.times(monthsShown, calendarIndex => (
+						{_.times(monthsShown, (calendarIndex) => (
 							<div
 								className={cx('&-slide', '&-slide-simple')}
 								key={calendarIndex}

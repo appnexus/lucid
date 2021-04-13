@@ -8,7 +8,7 @@ export default createClass({
 	render() {
 		return (
 			<Resizer>
-				{width => {
+				{(width) => {
 					const responsiveMode = width >= 400 ? 'large' : 'small';
 
 					return (

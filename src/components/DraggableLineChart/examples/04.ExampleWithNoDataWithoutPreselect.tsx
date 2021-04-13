@@ -37,7 +37,7 @@ const DataInput = ({
 	changeHandler: IChangeHandler;
 }): JSX.Element => {
 	const onChange = useCallback(
-		newYValue => {
+		(newYValue) => {
 			changeHandler(newYValue, xValue);
 		},
 		[changeHandler, xValue]
@@ -79,13 +79,13 @@ export default createClass({
 			: +Number(newYValue).toFixed(0);
 		const newCustomSpendDataPoints = _.map(
 			this.state.customSpendDataPoints,
-			dataPoint =>
+			(dataPoint) =>
 				dataPoint.x === xValue ? { ...dataPoint, y: cleanedYValue } : dataPoint
 		);
 		this.setState({ customSpendDataPoints: newCustomSpendDataPoints });
 		return newCustomSpendDataPoints;
 	},
-	onPreselectHandler(data:IData): void {
+	onPreselectHandler(data: IData): void {
 		this.setState({ customSpendDataPoints: data });
 	},
 	onChangeHandler(newYValue: string, xValue: string) {

@@ -47,7 +47,7 @@ export default createClass({
 		setTimeout(() => {
 			const visibleIds = _.reduce(
 				allData,
-				(acc: any[], { name }: {name: string}, id: string) => {
+				(acc: any[], { name }: { name: string }, id: string) => {
 					return _.includes(name.toLowerCase(), searchText.toLowerCase())
 						? acc.concat(id)
 						: acc;
@@ -62,9 +62,13 @@ export default createClass({
 		}, 750);
 	},
 
-	handleRemove({ props: { callbackId } }: {props : {
-		callbackId: string
-	}}) {
+	handleRemove({
+		props: { callbackId },
+	}: {
+		props: {
+			callbackId: string;
+		};
+	}) {
 		this.setState({
 			selectedIds: _.without(this.state.selectedIds, callbackId),
 		});
@@ -76,8 +80,8 @@ export default createClass({
 			props: { callbackId },
 		}: {
 			props: {
-				callbackId: string
-			}
+				callbackId: string;
+			};
 		}
 	) {
 		this.setState({
@@ -110,7 +114,7 @@ export default createClass({
 						placeholder: 'Type here to simulate an API backed search',
 					}}
 				>
-					{_.map(visibleIds, id => (
+					{_.map(visibleIds, (id) => (
 						<Option key={id} callbackId={id}>
 							{allData[id].name}
 						</Option>
@@ -125,7 +129,7 @@ export default createClass({
 						kind='container'
 						isRemovable={false}
 					>
-						{_.map(selectedIds, id => (
+						{_.map(selectedIds, (id) => (
 							<Selection
 								key={id}
 								Label={allData[id].name}

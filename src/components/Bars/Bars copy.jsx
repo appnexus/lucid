@@ -268,7 +268,7 @@ const Bars = createClass({
 		if (isStacked) {
 			yScale.domain([
 				yScale.domain()[0],
-				yStackedMax || _.max(_.map(transformedData, x => _.last(_.last(x)))),
+				yStackedMax || _.max(_.map(transformedData, (x) => _.last(_.last(x)))),
 			]);
 		}
 

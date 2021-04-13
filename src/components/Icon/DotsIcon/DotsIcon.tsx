@@ -28,7 +28,7 @@ export const DotsIcon = ({
 		cx: isVerticalOrientation ? '8' : '1.5',
 		cy: isVerticalOrientation ? '1.5' : '8',
 	};
-	
+
 	return (
 		<Icon
 			{...omitProps(passThroughs, undefined, _.keys(DotsIcon.propTypes), false)}
@@ -38,7 +38,11 @@ export const DotsIcon = ({
 		>
 			<circle className={cx(`&-color-${color}`)} cx='8' cy='8' r='1' />
 			<circle className={cx(`&-color-${color}`)} {...leftOrTopPosition} r='1' />
-			<circle className={cx(`&-color-${color}`)} {...rightOrBottomPosition} r='1' />
+			<circle
+				className={cx(`&-color-${color}`)}
+				{...rightOrBottomPosition}
+				r='1'
+			/>
 		</Icon>
 	);
 };

@@ -1,12 +1,12 @@
 import React from 'react';
 import _ from 'lodash';
 import addons from '@storybook/addons';
-import { getPropsData, stripIndent} from './util';
+import { getPropsData, stripIndent } from './util';
 import marksy from 'marksy';
 
 const compile = marksy({ createElement: React.createElement });
 
-const isReactComponent = value =>
+const isReactComponent = (value) =>
 	typeof value === 'function' &&
 	value.prototype &&
 	value.prototype.isReactComponent;
@@ -52,9 +52,9 @@ const getChildComponentsData = (
 	);
 };
 
-export const withProps = componentRef => {
-	return StoryComponent => {
-		return props => {
+export const withProps = (componentRef) => {
+	return (StoryComponent) => {
+		return (props) => {
 			const channel = addons.getChannel();
 			channel.emit(
 				'lucid-docs-display-props',
@@ -66,8 +66,8 @@ export const withProps = componentRef => {
 };
 
 export const withCode = (source = null) => {
-	return StoryComponent => {
-		return props => {
+	return (StoryComponent) => {
+		return (props) => {
 			const channel = addons.getChannel();
 			channel.emit('lucid-docs-source', source);
 
@@ -77,8 +77,8 @@ export const withCode = (source = null) => {
 };
 
 export const withChildComponents = (componentRef, maxHeight, path) => {
-	return StoryComponent => {
-		return props => {
+	return (StoryComponent) => {
+		return (props) => {
 			const channel = addons.getChannel();
 			channel.emit(
 				'lucid-docs-display-child-components',
@@ -91,7 +91,7 @@ export const withChildComponents = (componentRef, maxHeight, path) => {
 	};
 };
 
-export const getDefaultExport = mod => (mod.__esModule ? mod.default : mod);
+export const getDefaultExport = (mod) => (mod.__esModule ? mod.default : mod);
 
 export const exampleStory = ({ component, code, example, path }) => {
 	const StoryComponent = getDefaultExport(example);
@@ -99,9 +99,11 @@ export const exampleStory = ({ component, code, example, path }) => {
 
 	const storyWithCode = withCode(code)(StoryComponent);
 	const storyWithProps = withProps(componentRef)(storyWithCode);
-	const storyWithChildComponents = withChildComponents(componentRef, 1, path)(
-		storyWithProps
-	);
+	const storyWithChildComponents = withChildComponents(
+		componentRef,
+		1,
+		path
+	)(storyWithProps);
 
 	return storyWithChildComponents;
 };

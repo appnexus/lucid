@@ -100,7 +100,7 @@ describe('Checkbox', () => {
 						foo: 1,
 						bar: 2,
 						baz: 3,
-						qux: 4
+						qux: 4,
 					}}
 				/>
 			);
@@ -131,9 +131,7 @@ describe('Checkbox', () => {
 });
 
 function simulateEvent(reactElement: any, selector: any, event: any) {
-	mount(reactElement)
-		.find(selector)
-		.simulate(event);
+	mount(reactElement).find(selector).simulate(event);
 }
 
 function verifyArgumentsWhenFalse(event: any) {
@@ -145,7 +143,7 @@ function verifyArgumentsWhenFalse(event: any) {
 			'-visualization-glow',
 			'-visualization-checkmark',
 		],
-		classSubString => {
+		(classSubString) => {
 			const onSelect: any = sinon.spy();
 
 			simulateEvent(
@@ -168,7 +166,7 @@ function verifyArgumentsWhenTrue(event: any) {
 			'-visualization-glow',
 			'-visualization-checkmark',
 		],
-		classSubString => {
+		(classSubString) => {
 			const onSelect: any = sinon.spy();
 
 			simulateEvent(
@@ -191,7 +189,7 @@ function verifyOnSelect(event: any) {
 			'-visualization-glow',
 			'-visualization-checkmark',
 		],
-		classSubString => {
+		(classSubString) => {
 			const onSelect: any = sinon.spy();
 
 			simulateEvent(

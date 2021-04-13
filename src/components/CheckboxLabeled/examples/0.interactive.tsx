@@ -110,7 +110,9 @@ export default createClass({
 						onSelect={this.handleSelectedHipsum2}
 						style={style}
 					>
-						<CheckboxLabeled.Label>Mint chocolate chip (the best)</CheckboxLabeled.Label>
+						<CheckboxLabeled.Label>
+							Mint chocolate chip (the best)
+						</CheckboxLabeled.Label>
 					</CheckboxLabeled>
 				</span>
 			</section>

@@ -280,7 +280,7 @@ export default createClass({
 		const valuePattern = new RegExp(_.escapeRegExp(value), 'i');
 		const filteredWordList =
 			value !== ''
-				? _.filter(wordlist, word => valuePattern.test(word))
+				? _.filter(wordlist, (word) => valuePattern.test(word))
 				: wordlist;
 
 		return (

@@ -49,22 +49,24 @@ export default createClass({
 		return (
 			<IconSelect
 				onSelect={this.handleSelect}
-				items={[
-					{
-						id: 'item1',
-						icon: <ClockIcon />,
-						isSelected: this.isSelected('item1'),
-						isPartial: this.isPartiallySelected('item1'),
-						label: 'Foo Bar',
-					},
-					{
-						id: 'item2',
-						icon: <ClockIcon />,
-						isSelected: this.isSelected('item2'),
-						isPartial: this.isPartiallySelected('item2'),
-						label: 'Bax Tar',
-					},
-				] as any}
+				items={
+					[
+						{
+							id: 'item1',
+							icon: <ClockIcon />,
+							isSelected: this.isSelected('item1'),
+							isPartial: this.isPartiallySelected('item1'),
+							label: 'Foo Bar',
+						},
+						{
+							id: 'item2',
+							icon: <ClockIcon />,
+							isSelected: this.isSelected('item2'),
+							isPartial: this.isPartiallySelected('item2'),
+							label: 'Bax Tar',
+						},
+					] as any
+				}
 			/>
 		);
 	},

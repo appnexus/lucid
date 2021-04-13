@@ -31,7 +31,9 @@ export default createClass({
 				</Grid>
 				<Grid>
 					<Grid.Cell isQuarter isOffsetQuarter>
-						<p style={{ ...gridStyle.quarter, ...gridStyle.sharedStyles } as any}>
+						<p
+							style={{ ...gridStyle.quarter, ...gridStyle.sharedStyles } as any}
+						>
 							quarter with offset quarter
 						</p>
 					</Grid.Cell>

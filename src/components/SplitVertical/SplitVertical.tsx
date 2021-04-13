@@ -287,8 +287,9 @@ class SplitVertical extends React.Component<
 		collapseShift = 0
 	): number => {
 		if (isExpanded) {
-			(secondaryRef.current as HTMLDivElement).style.flexBasis = `${secondaryStartRect.width +
-				dX * (secondary === right ? -1 : 1)}px`;
+			(secondaryRef.current as HTMLDivElement).style.flexBasis = `${
+				secondaryStartRect.width + dX * (secondary === right ? -1 : 1)
+			}px`;
 			return secondaryStartRect.width + dX * (secondary === right ? -1 : 1);
 		} else {
 			const overlapWidth =
@@ -301,9 +302,9 @@ class SplitVertical extends React.Component<
 				return secondaryStartRect.width - overlapWidth;
 			} else {
 				this.expandSecondary();
-				(secondaryRef.current as HTMLDivElement).style.flexBasis = `${(dX +
-					collapseShift) *
-					(secondary === right ? -1 : 1)}px`;
+				(secondaryRef.current as HTMLDivElement).style.flexBasis = `${
+					(dX + collapseShift) * (secondary === right ? -1 : 1)
+				}px`;
 				return (dX + collapseShift) * (secondary === right ? -1 : 1);
 			}
 		}
@@ -437,13 +438,11 @@ class SplitVertical extends React.Component<
 		}
 
 		if (this.state.isAnimated !== isAnimated) {
-			_.defer(
-				(): void => {
-					this.setState({
-						isAnimated,
-					});
-				}
-			);
+			_.defer((): void => {
+				this.setState({
+					isAnimated,
+				});
+			});
 		}
 	}
 
@@ -496,7 +495,7 @@ class SplitVertical extends React.Component<
 					defaultStyle={from}
 					style={
 						isAnimated
-							? _.mapValues(to, val => spring(val, QUICK_SLIDE_MOTION))
+							? _.mapValues(to, (val) => spring(val, QUICK_SLIDE_MOTION))
 							: to
 					}
 				>
@@ -506,8 +505,9 @@ class SplitVertical extends React.Component<
 							ref={this.innerRef}
 							style={{
 								display: 'flex',
-								transform: `translateX(${(isRightSecondary ? 1 : -1) *
-									Math.round(tween.slideAmount)}px)`,
+								transform: `translateX(${
+									(isRightSecondary ? 1 : -1) * Math.round(tween.slideAmount)
+								}px)`,
 							}}
 						>
 							<div

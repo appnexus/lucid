@@ -46,10 +46,12 @@ describe('DragCaptureZone', () => {
 
 		describe('pass throughs', () => {
 			it('passes through all props to the root element.', () => {
-				const wrapper = mount(<DragCaptureZone {...{ foo: 1, bar: 2, baz: 3 }} />);
+				const wrapper = mount(
+					<DragCaptureZone {...{ foo: 1, bar: 2, baz: 3 }} />
+				);
 				const rootProps = wrapper.find('div').props();
 
-				_.forEach(['foo', 'bar', 'baz'], prop => {
+				_.forEach(['foo', 'bar', 'baz'], (prop) => {
 					assert(_.has(rootProps, prop));
 				});
 			});
@@ -186,9 +188,12 @@ describe('DragCaptureZone', () => {
 		beforeEach(() => {
 			onDragCancel = sinon.spy();
 
-			const wrapper: any = shallow(<DragCaptureZone onDragCancel={onDragCancel} />, {
-				disableLifecycleMethods: true,
-			});
+			const wrapper: any = shallow(
+				<DragCaptureZone onDragCancel={onDragCancel} />,
+				{
+					disableLifecycleMethods: true,
+				}
+			);
 			wrapper.instance().handleDragCancel(mockEvent);
 		});
 

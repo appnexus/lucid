@@ -23,7 +23,7 @@ interface IProgressBarProps
 	percentComplete: number;
 
 	/** *Child Element* - Title contents. Only one \`Title\` is used. */
-	Title?: string | React.ReactNode & { props: ITitleProps };
+	Title?: string | (React.ReactNode & { props: ITitleProps });
 }
 
 const Title = (_props: ITitleProps): null => null;

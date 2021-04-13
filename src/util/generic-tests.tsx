@@ -30,9 +30,7 @@ export function common(
 
 		if (Component._isLucidHybridComponent) {
 			throw new Error(
-				`You're trying to run generic tests on a hybrid component which is bad and won't work and will make you cry. Check your spec files for ${
-					Component.displayName
-				} and import the raw component instead of the hybrid version.`
+				`You're trying to run generic tests on a hybrid component which is bad and won't work and will make you cry. Check your spec files for ${Component.displayName} and import the raw component instead of the hybrid version.`
 			);
 		}
 
@@ -102,7 +100,7 @@ export function common(
 
 			const allClasses = parentClasses.concat(childrenClasses);
 
-			_.forEach(allClasses, className => {
+			_.forEach(allClasses, (className) => {
 				assert(
 					_.includes(className, `lucid-${Component.displayName}`),
 					`${className} must be scoped`
@@ -113,7 +111,7 @@ export function common(
 		describe('function propTypes', () => {
 			const funcProps = _.pickBy(
 				Component.propTypes,
-				propType => propType === PropTypes.func
+				(propType) => propType === PropTypes.func
 			);
 
 			_.forEach(funcProps, (propType, propName) => {
@@ -135,15 +133,15 @@ export function common(
 
 			describe('propNames in propTypes', () => {
 				_.flow(
-					x => _.map(x, 'propName'),
-					x => _.compact(x),
-					x => _.flatMap(x, _.castArray),
-					x =>
-						_.reject(x, propName =>
+					(x) => _.map(x, 'propName'),
+					(x) => _.compact(x),
+					(x) => _.flatMap(x, _.castArray),
+					(x) =>
+						_.reject(x, (propName) =>
 							_.includes(exemptChildComponents, propName)
 						),
-					x =>
-						_.forEach(x, propName => {
+					(x) =>
+						_.forEach(x, (propName) => {
 							it(`should include ${propName} in propTypes`, () => {
 								assert(
 									Component.propTypes[propName],
@@ -159,10 +157,10 @@ export function common(
 			const fileNames = glob.sync(
 				`./src/components/**/${Component.displayName}/examples/*.@(j|t)sx`
 			);
-			_.each(fileNames, path => {
+			_.each(fileNames, (path) => {
 				const lib = require('../../' + path.replace('.tsx', ''));
 				const Example = lib.default;
-			
+
 				const title = parse(path).name;
 				it(`should match snapshot(s) for ${title}`, () => {
 					const shallowExample = shallow(<Example />, {
@@ -178,7 +176,7 @@ export function common(
 							})
 						).toMatchSnapshot();
 					} else {
-						shallowExample.find(Component.displayName).forEach(example => {
+						shallowExample.find(Component.displayName).forEach((example) => {
 							expect(
 								shallow(<Component {...example.props()} />, {
 									disableLifecycleMethods: true,
@@ -229,10 +227,7 @@ export function controls(
 			};
 			const wrapper = mount(<Component {...props} />);
 
-			wrapper
-				.find(controlSelector)
-				.first()
-				.simulate(eventType);
+			wrapper.find(controlSelector).first().simulate(eventType);
 
 			// Last argument should be an object with `uniqueId` and `event`
 			const {
@@ -295,7 +290,7 @@ const createMockDateClass = (...args: any) =>
 		{
 			UTC: NativeDate.UTC,
 			parse: NativeDate.parse,
-				// @ts-ignore
+			// @ts-ignore
 			now: () => new NativeDate(...args).getTime(),
 			prototype: NativeDate.prototype,
 		}

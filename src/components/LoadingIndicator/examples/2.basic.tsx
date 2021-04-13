@@ -6,7 +6,7 @@ export default createClass({
 	render() {
 		return (
 			<LoadingIndicator isLoading>
-				<BarChart 
+				<BarChart
 					width={750}
 					data={[
 						{ x: '2015-01-01', y: 1 },

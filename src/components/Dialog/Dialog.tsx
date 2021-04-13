@@ -73,10 +73,10 @@ export interface IDialogProps extends IOverlayProps {
 	hasGutters: boolean;
 
 	/** *Child Element* - Header contents. Only one \`Header\` is used. */
-	Header?: string | React.ReactNode & { props: IDialogHeaderProps };
+	Header?: string | (React.ReactNode & { props: IDialogHeaderProps });
 
 	/** *Child Element* - Footer contents. Only one \`Footer\` is used. */
-	Footer?: string | React.ReactNode & { props: IDialogFooterProps };
+	Footer?: string | (React.ReactNode & { props: IDialogFooterProps });
 }
 
 export const Dialog = (props: IDialogProps): React.ReactElement => {

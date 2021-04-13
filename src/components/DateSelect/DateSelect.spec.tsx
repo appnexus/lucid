@@ -108,7 +108,7 @@ describe('DateSelect', () => {
 			expect(dateSelectInstance.state.cursor).not.toBe(cursorDate);
 		});
 
-		it('should unset cursor state on handleMouseLeave', done => {
+		it('should unset cursor state on handleMouseLeave', (done) => {
 			const cursorDate = new Date('2017-02-17T00:00:00Z');
 			const wrapper = shallow(
 				<DateSelect initialMonth={new Date('2017-02-01T00:00:00Z')} />

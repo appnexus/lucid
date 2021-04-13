@@ -5,20 +5,23 @@ import { SearchableSingleSelect } from '../../../index';
 const { Option } = SearchableSingleSelect;
 
 export default createClass({
-    getInitialState() {
+	getInitialState() {
 		return {
-            selectedIndex: null
+			selectedIndex: null,
 		};
 	},
 
 	handleSelect(optionIndex: number) {
 		this.setState({
-            selectedIndex: optionIndex
+			selectedIndex: optionIndex,
 		});
 	},
 	render() {
 		return (
-			<SearchableSingleSelect onSelect={this.handleSelect} Error={this.state.selectedIndex === 2 ? null : "Please Choose Green"}>
+			<SearchableSingleSelect
+				onSelect={this.handleSelect}
+				Error={this.state.selectedIndex === 2 ? null : 'Please Choose Green'}
+			>
 				<Option Selected={<div style={{ color: 'red' }}>RED</div>}>Red</Option>
 				<Option Selected={<div style={{ color: 'blue' }}>BLUE</div>}>
 					Blue

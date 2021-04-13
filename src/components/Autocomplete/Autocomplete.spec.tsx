@@ -188,7 +188,7 @@ describe('Autocomplete', () => {
 								'potent',
 								'please',
 							]}
-							{ ...{ testProp: 'foo' }}
+							{...{ testProp: 'foo' }}
 						/>
 					);
 
@@ -209,9 +209,12 @@ describe('Autocomplete', () => {
 				it('should be called when user types into the text box', () => {
 					const onChange = sinon.spy();
 
-					wrapper = mount(<Autocomplete onChange={onChange} { ...{ testProp: 'foo' }} />, {
-						attachTo: rootMountNode,
-					});
+					wrapper = mount(
+						<Autocomplete onChange={onChange} {...{ testProp: 'foo' }} />,
+						{
+							attachTo: rootMountNode,
+						}
+					);
 
 					const inputDOMNode: any = document.querySelector(
 						'.lucid-Autocomplete-Control-input'
@@ -256,7 +259,7 @@ describe('Autocomplete', () => {
 						onSelect={onSelect}
 						DropMenu={{ isExpanded: true }}
 						suggestions={['Portland', 'portal', 'porridge', 'potent', 'please']}
-						{ ...{ testProp: 'foo' }}
+						{...{ testProp: 'foo' }}
 					/>
 				);
 
@@ -298,7 +301,7 @@ describe('Autocomplete', () => {
 					<Autocomplete
 						onExpand={onExpand}
 						suggestions={['Portland', 'portal', 'porridge', 'potent', 'please']}
-						{ ...{ testProp: 'foo' }}
+						{...{ testProp: 'foo' }}
 					/>,
 					{ attachTo: rootMountNode }
 				);
@@ -327,7 +330,7 @@ describe('Autocomplete', () => {
 					<Autocomplete
 						onExpand={onExpand}
 						suggestions={['Portland', 'portal', 'porridge', 'potent', 'please']}
-						{ ...{ testProp: 'foo' }}
+						{...{ testProp: 'foo' }}
 						DropMenu={{
 							isExpanded: false,
 						}}
@@ -354,7 +357,7 @@ describe('Autocomplete', () => {
 					<Autocomplete
 						onExpand={onExpand}
 						suggestions={['Portland', 'portal', 'porridge', 'potent', 'please']}
-						{ ...{ testProp: 'foo' }}
+						{...{ testProp: 'foo' }}
 					/>,
 					{ attachTo: rootMountNode }
 				);
@@ -375,10 +378,10 @@ describe('Autocomplete', () => {
 					<Autocomplete
 						onExpand={onExpand}
 						suggestions={['Portland', 'portal', 'porridge', 'potent', 'please']}
-						{ ...{ testProp: 'foo' }}
+						{...{ testProp: 'foo' }}
 						DropMenu={{
 							isExpanded: false,
-						}} 
+						}}
 					/>,
 					{ attachTo: rootMountNode }
 				);

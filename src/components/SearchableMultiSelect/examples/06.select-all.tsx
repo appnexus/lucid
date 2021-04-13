@@ -9,7 +9,7 @@ export default createClass({
 		return (
 			<section style={{ marginBottom: '300px' }}>
 				<Resizer>
-					{width => {
+					{(width) => {
 						const responsiveMode = width >= 768 ? 'large' : 'small';
 
 						return (

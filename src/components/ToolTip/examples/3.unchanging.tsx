@@ -15,8 +15,8 @@ export default createClass({
 					alignItems: 'center',
 				}}
 			>
-				{_.map(['right', 'up', 'down', 'left'], direction =>
-					_.map(['start', 'center', 'end'], alignment => (
+				{_.map(['right', 'up', 'down', 'left'], (direction) =>
+					_.map(['start', 'center', 'end'], (alignment) => (
 						<section
 							key={`${direction}${alignment}`}
 							style={{ margin: '90px' }}

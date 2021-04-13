@@ -43,7 +43,7 @@ export default createClass({
 		};
 	},
 
-	handleRemove({ props: { callbackId } } : { props: { callbackId: string }}) {
+	handleRemove({ props: { callbackId } }: { props: { callbackId: string } }) {
 		this.setState({
 			removedItems: _.set(this.state.removedItems, callbackId, true),
 		});
@@ -54,7 +54,7 @@ export default createClass({
 
 		return (
 			<Resizer>
-				{width => {
+				{(width) => {
 					const responsiveMode = width >= 400 ? 'large' : 'small';
 
 					return (

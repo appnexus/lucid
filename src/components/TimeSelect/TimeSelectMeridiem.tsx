@@ -22,7 +22,7 @@ const TimeSelectMeridiem = ({
 	onChange,
 }: ITimeSelectMeridiem) => {
 	const onMeridiemChange = useCallback(
-		selectedIndex => {
+		(selectedIndex) => {
 			const nextMeridiem =
 				selectedIndex === 0 ? MeridiemType.AM : MeridiemType.PM;
 			if (meridiem === nextMeridiem) {

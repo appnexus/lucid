@@ -6,19 +6,27 @@ import { omitProps } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-FourSquaresIcon');
 
-interface IFourSquaresIconProps extends IIconProps { }
+interface IFourSquaresIconProps extends IIconProps {}
 
-export const FourSquaresIcon = ({ className, ...passThroughs }: IFourSquaresIconProps) => {
+export const FourSquaresIcon = ({
+	className,
+	...passThroughs
+}: IFourSquaresIconProps) => {
 	return (
 		<Icon
-			{...omitProps(passThroughs, undefined, _.keys(FourSquaresIcon.propTypes), false)}
+			{...omitProps(
+				passThroughs,
+				undefined,
+				_.keys(FourSquaresIcon.propTypes),
+				false
+			)}
 			{..._.pick(passThroughs, _.keys(iconPropTypes))}
 			className={cx('&', className)}
 		>
 			<path d='M.5.5h6v6h-6v-6zm0 15h6v-6h-6v6zm9 0h6v-6h-6v6zm0-15v6h6v-6h-6z' />
 		</Icon>
 	);
-}
+};
 
 FourSquaresIcon.displayName = 'FourSquaresIcon';
 

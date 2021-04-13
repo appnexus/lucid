@@ -41,7 +41,7 @@ const TimeSelectHour = ({
 	onChange,
 }: ITimeSelectHour) => {
 	const onHourChange = useCallback(
-		nextHourString => {
+		(nextHourString) => {
 			const nextHour = +nextHourString;
 			const updatedTime = new Date(time);
 			if (is24HourClock) {

@@ -34,17 +34,17 @@ class CodepenDefine extends React.Component {
 		return (
 			<div onClick={this.handleCodepen}>
 				<form
-					ref={ref => {
+					ref={(ref) => {
 						this.form = ref;
 					}}
 					style={{ display: 'none' }}
-					action="https://codepen.io/pen/define"
-					method="POST"
-					target="_blank"
+					action='https://codepen.io/pen/define'
+					method='POST'
+					target='_blank'
 				>
 					<input
-						type="hidden"
-						name="data"
+						type='hidden'
+						name='data'
 						value={JSON.stringify(this.props.data)}
 					/>
 				</form>
@@ -98,15 +98,9 @@ ReactDOM.render(
 						js_external: [
 							'https://unpkg.com/react@16/umd/react.development.js',
 							'https://unpkg.com/react-dom@16/umd/react-dom.development.js',
-							`https://unpkg.com/create-react-class@${
-								packageJson.dependencies['create-react-class']
-							}/create-react-class.min.js`,
-							`https://unpkg.com/lucid-ui@${
-								packageJson.version
-							}/dist/lucid.min.js`,
-							`https://unpkg.com/lodash@${
-								packageJson.dependencies.lodash
-							}/lodash.min.js`,
+							`https://unpkg.com/create-react-class@${packageJson.dependencies['create-react-class']}/create-react-class.min.js`,
+							`https://unpkg.com/lucid-ui@${packageJson.version}/dist/lucid.min.js`,
+							`https://unpkg.com/lodash@${packageJson.dependencies.lodash}/lodash.min.js`,
 						]
 							.map(encodeURI)
 							.join(';'),
@@ -120,10 +114,10 @@ ReactDOM.render(
 							top: 42,
 							right: 12,
 						}}
-						src="//s.cdpn.io/3/cp-arrow-right.svg"
+						src='//s.cdpn.io/3/cp-arrow-right.svg'
 						width={40}
 						height={40}
-						title="Open in CodePen"
+						title='Open in CodePen'
 					/>
 				</CodepenDefine>
 			)}
@@ -133,7 +127,7 @@ ReactDOM.render(
 				}}
 			>
 				<SyntaxHighlighter
-					language="jsx"
+					language='jsx'
 					style={okaidiaTabSpace2}
 					customStyle={{
 						fontSize: 12,

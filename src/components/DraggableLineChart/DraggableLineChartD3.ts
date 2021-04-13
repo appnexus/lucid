@@ -36,7 +36,7 @@ interface IDraggableLineChartMargin {
 	left: number;
 }
 
-const getAttributes = function(selection: ISelection, obj: string[]): any {
+const getAttributes = function (selection: ISelection, obj: string[]): any {
 	return _.reduce(
 		obj,
 		(acc, value) => {
@@ -98,7 +98,7 @@ export interface IDraggableLineChart extends StandardProps {
 	 * Text to show to users when there is no data selection
 	 */
 	preSelectText?: string;
-	yAxisFormatter?: ((value:string) => string) | null;
+	yAxisFormatter?: ((value: string) => string) | null;
 }
 
 interface IDraggableLineChartParams extends IDraggableLineChart {
@@ -199,11 +199,11 @@ class DraggableLineChartD3 {
 		let initialPosition: number;
 		return d3Drag
 			.drag()
-			.on('start', function() {
+			.on('start', function () {
 				const activeDot = d3Selection.select(this);
 				initialPosition = Number(activeDot.attr('cy'));
 			})
-			.on('drag', function(pointData: any) {
+			.on('drag', function (pointData: any) {
 				const [max, min] = yScale.range();
 				const activeDot = d3Selection.select(this);
 				const adjMouseY = initialPosition + d3Selection.event.y;
@@ -268,7 +268,13 @@ class DraggableLineChartD3 {
 					.classed(`${cx('&-Axis')}`, true)
 					.transition()
 					.duration(500)
-					.call(d3Axis.axisLeft(this.yScale).tickFormat(yAxisFormatter  as (domainValue: any, index: number) => string));
+					.call(
+						d3Axis
+							.axisLeft(this.yScale)
+							.tickFormat(
+								yAxisFormatter as (domainValue: any, index: number) => string
+							)
+					);
 			})
 			.call(() => yGroup);
 	};
@@ -322,11 +328,9 @@ class DraggableLineChartD3 {
 				.attr('width', width)
 				.attr('x', this.params.margin.left)
 				.classed('emptyRender', true);
-			emptyRender.html(
-				(value: any, num: any, node: any): any => {
-					ReactDOM.render(emptyRenderProp(), node[0]);
-				}
-			);
+			emptyRender.html((value: any, num: any, node: any): any => {
+				ReactDOM.render(emptyRenderProp(), node[0]);
+			});
 		}
 	};
 	renderPoints = () => {
@@ -335,10 +339,7 @@ class DraggableLineChartD3 {
 		}
 		const { data, dataIsCentered } = this.params;
 		const circle = this.getHasRenderedPoint()
-			? this.selection
-					.selectAll('circle')
-					.data(data)
-					.join('circle')
+			? this.selection.selectAll('circle').data(data).join('circle')
 			: this.selection
 					.append('g')
 					.selectAll('circle')
@@ -444,15 +445,12 @@ class DraggableLineChartD3 {
 
 		this.renderEmptyRenderProp(innerHeight, stepCount * stepWidth);
 
-		const overlayTrack = overlayContainer
-			.selectAll('rect')
-			.data(data)
-			.enter();
+		const overlayTrack = overlayContainer.selectAll('rect').data(data).enter();
 		overlayTrack
 			.append('rect')
-			.attr('x', chartData => this.xScale(chartData.x) || 0)
+			.attr('x', (chartData) => this.xScale(chartData.x) || 0)
 			.attr('y', 0)
-			.attr('width', chartData => this.xScale.step())
+			.attr('width', (chartData) => this.xScale.step())
 			.attr('height', innerHeight)
 			.classed(cx('&-overlayTrack'), true)
 			.on('mouseenter', (d, i, nodes) => {
@@ -460,12 +458,12 @@ class DraggableLineChartD3 {
 					d3Selection.select(nodes[i]).classed('active', true);
 				}
 			})
-			.on('mouseout', function(d, i, nodes) {
+			.on('mouseout', function (d, i, nodes) {
 				if (!getIsMouseDown()) {
 					d3Selection.select(nodes[i]).classed('active', false);
 				}
 			})
-			.on('mousedown', function(d, i) {
+			.on('mousedown', function (d, i) {
 				d3Selection.selectAll('.active').classed('active', false);
 				const currentTarget = d3Selection.select(this);
 				const { x, y, width, height }: any = getAttributes(currentTarget, [
@@ -488,7 +486,7 @@ class DraggableLineChartD3 {
 					.classed(cx('&-overlayTrack'), true)
 					.classed('active', true)
 					.classed('dragBox', true)
-					.on('mouseout', function() {
+					.on('mouseout', function () {
 						// @ts-ignore
 						const [mouseX] = d3Selection.mouse(this);
 						const dragBox = selection.selectAll('.dragBox');
@@ -501,7 +499,7 @@ class DraggableLineChartD3 {
 							stepCount,
 						});
 					})
-					.on('mousemove', function() {
+					.on('mousemove', function () {
 						// @ts-ignore
 						const [mouseX] = d3Selection.mouse(this);
 						const dragBox = selection.selectAll('.dragBox');
@@ -514,7 +512,7 @@ class DraggableLineChartD3 {
 							stepCount,
 						});
 					})
-					.on('mouseup', function() {
+					.on('mouseup', function () {
 						const clickStep = getMouseDownStep();
 						const activeBox = selection.selectAll('.dragBox');
 						const { x, width } = getAttributes(activeBox, ['x', 'width']);

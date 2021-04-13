@@ -10,7 +10,7 @@ export default createClass({
 				<Sidebar>
 					<Sidebar.Bar>
 						<div>
-							{_.times(100, n => (
+							{_.times(100, (n) => (
 								<CheckboxLabeled key={n}>
 									<CheckboxLabeled.Label>Filter #{n}</CheckboxLabeled.Label>
 								</CheckboxLabeled>

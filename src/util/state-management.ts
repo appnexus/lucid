@@ -87,7 +87,7 @@ export function bindReducerToState<P, S extends object>(
 ) {
 	const localPath = _.take(path, _.size(path) - 1);
 	return _.assign(
-		function(...args: any[]) {
+		function (...args: any[]) {
 			if (_.isEmpty(localPath)) {
 				// Source of bug, `reducerFunction` returns undefined
 				setState(reducerFunction(getState(), ...args));
@@ -131,7 +131,7 @@ export function getStatefulPropsContext<P, S extends object>(
 
 	const combineFunctionsCustomizer = (objValue: any, srcValue: any) => {
 		if (_.isFunction(srcValue) && _.isFunction(objValue)) {
-			return function(...args: any[]) {
+			return function (...args: any[]) {
 				objValue(...args);
 				return srcValue(...args);
 			};
@@ -292,7 +292,7 @@ export function buildHybridComponent(
 						omitFunctionPropsDeep(this.props),
 						safeMerge
 					),
-				setState: state => {
+				setState: (state) => {
 					synchronousState = state; //synchronously update the state reference
 					this.setState(state);
 				},
@@ -380,7 +380,7 @@ export function buildModernHybridComponent<
 						omitFunctionPropsDeep(this.props),
 						safeMerge
 					) as S,
-				setState: state => {
+				setState: (state) => {
 					synchronousState = state; //synchronously update the state reference
 					this.setState(state);
 				},

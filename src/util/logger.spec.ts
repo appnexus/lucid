@@ -23,8 +23,8 @@ describe('logger', () => {
 
 	describe('logger', () => {
 		/* eslint-disable no-console */
-		let originalError: any
-		let originalLog: any
+		let originalError: any;
+		let originalLog: any;
 		let originalWarn: any;
 		let mockError: jest.Mock;
 		let mockLog: jest.Mock;

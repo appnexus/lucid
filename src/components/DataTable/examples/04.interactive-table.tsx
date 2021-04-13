@@ -132,7 +132,7 @@ export default createClass({
 		const allSelected = _.every(data, 'isSelected');
 
 		this.setState({
-			data: _.map(data, row => {
+			data: _.map(data, (row) => {
 				return {
 					...row,
 					isSelected: !allSelected,

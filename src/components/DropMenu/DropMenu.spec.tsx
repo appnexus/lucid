@@ -289,7 +289,9 @@ describe('DropMenu', () => {
 					</DropMenu>
 				);
 
-				const portalDOMNode: any = document.getElementById('test-dropmenu-portal');
+				const portalDOMNode: any = document.getElementById(
+					'test-dropmenu-portal'
+				);
 
 				assert(_.isElement(portalDOMNode));
 				assert.equal(document.body, portalDOMNode.parentNode);

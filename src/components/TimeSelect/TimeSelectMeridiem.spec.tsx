@@ -49,7 +49,9 @@ describe('TimeSelectMeridiem', () => {
 	describe('when changing AM to PM', () => {
 		it('should return correct new time', () => {
 			props.onChange.mockReset();
-			component = shallow(<TimeSelectMeridiem {...props} meridiem={MeridiemType.AM} />);
+			component = shallow(
+				<TimeSelectMeridiem {...props} meridiem={MeridiemType.AM} />
+			);
 			component.find(SingleSelect).props().onSelect(1);
 			expect(props.onChange).toBeCalledWith(new Date('2020-11-03T15:00:00'));
 		});
@@ -58,7 +60,9 @@ describe('TimeSelectMeridiem', () => {
 	describe('when changing PM to AM', () => {
 		it('should return correct new time', () => {
 			props.onChange.mockReset();
-			component = shallow(<TimeSelectMeridiem {...props} meridiem={MeridiemType.PM} />);
+			component = shallow(
+				<TimeSelectMeridiem {...props} meridiem={MeridiemType.PM} />
+			);
 			component.find(SingleSelect).props().onSelect(0);
 			expect(props.onChange).toBeCalledWith(new Date('2020-11-03T03:00:00'));
 		});

@@ -72,7 +72,7 @@ describe('SplitHorizontal', () => {
 				assert(wrapper.hasClass('lucid-SplitHorizontal-is-expanded'));
 			});
 
-			it.skip('should not apply the &-is-expanded css class when false [mostly stable]', done => {
+			it.skip('should not apply the &-is-expanded css class when false [mostly stable]', (done) => {
 				mountWrapper = mount(<SplitHorizontal isExpanded={false} />);
 
 				assert(!mountWrapper.hasClass('lucid-SplitHorizontal-is-expanded'));
@@ -89,7 +89,7 @@ describe('SplitHorizontal', () => {
 				}
 			});
 
-			it('should default to false [mostly stable]', done => {
+			it('should default to false [mostly stable]', (done) => {
 				wrapper = mount(<SplitHorizontal />);
 
 				_.delay(() => {
@@ -103,7 +103,7 @@ describe('SplitHorizontal', () => {
 				}, MOSTLY_STABLE_DELAY);
 			});
 
-			it('should apply the &-is-animated class when true, after initial render [mostly stable]', done => {
+			it('should apply the &-is-animated class when true, after initial render [mostly stable]', (done) => {
 				wrapper = mount(<SplitHorizontal isAnimated={true} />);
 
 				_.delay(() => {
@@ -114,7 +114,7 @@ describe('SplitHorizontal', () => {
 				}, MOSTLY_STABLE_DELAY);
 			});
 
-			it('should not apply the &-is-animated class when false [mostly stable]', done => {
+			it('should not apply the &-is-animated class when false [mostly stable]', (done) => {
 				wrapper = mount(<SplitHorizontal isAnimated={false} />);
 
 				_.delay(() => {
@@ -148,7 +148,7 @@ describe('SplitHorizontal', () => {
 				}
 			});
 
-			it('should translated by height - 64px when the bottom pane is primary [mostly stable]', done => {
+			it('should translated by height - 64px when the bottom pane is primary [mostly stable]', (done) => {
 				wrapper = mount(
 					<SplitHorizontal isExpanded={false} collapseShift={64}>
 						<SplitHorizontal.TopPane />
@@ -169,7 +169,7 @@ describe('SplitHorizontal', () => {
 				}, MOSTLY_STABLE_DELAY);
 			});
 
-			it('should translated by height - 64px when the top pane is primary [mostly stable]', done => {
+			it('should translated by height - 64px when the top pane is primary [mostly stable]', (done) => {
 				wrapper = mount(
 					<SplitHorizontal isExpanded={false} collapseShift={64}>
 						<SplitHorizontal.TopPane isPrimary />

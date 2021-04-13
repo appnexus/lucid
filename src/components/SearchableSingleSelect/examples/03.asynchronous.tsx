@@ -47,7 +47,7 @@ export default createClass({
 		setTimeout(() => {
 			const visibleIds = _.reduce(
 				allData,
-				(acc: any[], { name }: {name: string}, id: string) => {
+				(acc: any[], { name }: { name: string }, id: string) => {
 					return _.includes(name.toLowerCase(), searchText.toLowerCase())
 						? acc.concat(id)
 						: acc;
@@ -89,7 +89,7 @@ export default createClass({
 						placeholder: 'Type here to simulate an API backed search',
 					}}
 				>
-					{_.map(visibleIds, id => (
+					{_.map(visibleIds, (id) => (
 						<Option key={id} callbackId={id}>
 							{allData[id].name}
 						</Option>

@@ -100,7 +100,9 @@ describe('SingleSelect', () => {
 					</SingleSelect>
 				);
 
-				const menuDOMNode: any = document.querySelector('.lucid-ContextMenu-FlyOut');
+				const menuDOMNode: any = document.querySelector(
+					'.lucid-ContextMenu-FlyOut'
+				);
 
 				assert(
 					!_.includes(

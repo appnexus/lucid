@@ -33,19 +33,13 @@ describe('TimeSelectMinute', () => {
 
 		describe('and next value is under 0', () => {
 			it('should set correct minute', () => {
-				component
-					.find(TimeSelectInput)
-					.props()
-					.onChange('-20');
+				component.find(TimeSelectInput).props().onChange('-20');
 				expect(props.onChange).toBeCalledWith(new Date('2020-11-02T23:45:00'));
 			});
 		});
 		describe('and next value is over 59', () => {
 			it('should set correct minute', () => {
-				component
-					.find(TimeSelectInput)
-					.props()
-					.onChange('60');
+				component.find(TimeSelectInput).props().onChange('60');
 				expect(props.onChange).toBeCalledWith(new Date('2020-11-03T01:00:00'));
 			});
 		});
@@ -53,10 +47,7 @@ describe('TimeSelectMinute', () => {
 		describe('and next value is 15 mins more than prior hour', () => {
 			it('should set correct minute', () => {
 				component = shallow(<TimeSelectMinute {...props} minute={20} />);
-				component
-					.find(TimeSelectInput)
-					.props()
-					.onChange('35');
+				component.find(TimeSelectInput).props().onChange('35');
 				expect(props.onChange).toBeCalledWith(new Date('2020-11-03T00:30:00'));
 			});
 		});
@@ -64,19 +55,13 @@ describe('TimeSelectMinute', () => {
 		describe('and next value is 15 mins less than prior hour', () => {
 			it('should set correct minute', () => {
 				component = shallow(<TimeSelectMinute {...props} minute={20} />);
-				component
-					.find(TimeSelectInput)
-					.props()
-					.onChange('5');
+				component.find(TimeSelectInput).props().onChange('5');
 				expect(props.onChange).toBeCalledWith(new Date('2020-11-03T00:00:00'));
 			});
 		});
 
 		it('should set correct minute', () => {
-			component
-				.find(TimeSelectInput)
-				.props()
-				.onChange('34');
+			component.find(TimeSelectInput).props().onChange('34');
 			expect(props.onChange).toBeCalledWith(new Date('2020-11-03T00:34:00'));
 		});
 	});

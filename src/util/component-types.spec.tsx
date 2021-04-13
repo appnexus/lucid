@@ -45,7 +45,7 @@ describe('component-types', () => {
 		it('should make `reducers` a static property.', () => {
 			const panelReducers = {
 				// eslint-disable-next-line @typescript-eslint/no-empty-function
-				onExpand() { },
+				onExpand() {},
 			} as any;
 
 			const Panel = createClass({
@@ -65,7 +65,7 @@ describe('component-types', () => {
 
 		it('should make `selectors` a static property.', () => {
 			const panelSelectors = {
-				isValid() { },
+				isValid() {},
 			};
 
 			const Panel = createClass({
@@ -318,7 +318,7 @@ describe('component-types', () => {
 				{ isDisabled: true },
 			]);
 			assert.equal(5, elements.length, 'length must be 5');
-			_.forEach(elements, element => {
+			_.forEach(elements, (element) => {
 				assert.equal(Option, element.type, 'type must be Option');
 			});
 			assert.equal(
@@ -343,7 +343,7 @@ describe('component-types', () => {
 	});
 
 	describe('findTypes', () => {
-		it('should find all elements of the same type from children', done => {
+		it('should find all elements of the same type from children', (done) => {
 			const Option: any = createClass({ propName: 'option' });
 
 			const Selector: any = createClass({
@@ -376,7 +376,7 @@ describe('component-types', () => {
 			);
 		});
 
-		it('should find all elements of the same type from props if type has `propName` defined', done => {
+		it('should find all elements of the same type from props if type has `propName` defined', (done) => {
 			const Option = createClass({ propName: ['option', 'options'] });
 
 			const Selector: any = createClass({
@@ -413,7 +413,7 @@ describe('component-types', () => {
 			);
 		});
 
-		it('should find all elements of the same type from props and children', done => {
+		it('should find all elements of the same type from props and children', (done) => {
 			const Option: any = createClass({ propName: ['option', 'options'] });
 
 			const Selector: any = createClass({

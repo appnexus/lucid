@@ -61,10 +61,7 @@ describe('SwitchLabeled', () => {
 				const wrapper = shallow(<SwitchLabeled Label={'foo'} />);
 
 				assert.equal(
-					wrapper
-						.find(CSSTransition)
-						.find('span')
-						.prop('children'),
+					wrapper.find(CSSTransition).find('span').prop('children'),
 					'foo'
 				);
 			});
@@ -79,10 +76,7 @@ describe('SwitchLabeled', () => {
 				);
 
 				assert.equal(
-					wrapper
-						.find(CSSTransition)
-						.find('span')
-						.prop('children'),
+					wrapper.find(CSSTransition).find('span').prop('children'),
 					'foo'
 				);
 			});
@@ -90,13 +84,12 @@ describe('SwitchLabeled', () => {
 
 		describe('pass throughs', () => {
 			it('passes through all props not defined in `propTypes` to its `Switch` instance.', () => {
-
 				const extraProps = {
 					foo: 1,
 					bar: 2,
 					baz: 3,
 					qux: 4,
-					quux: 5
+					quux: 5,
 				};
 
 				const wrapper = shallow(
@@ -113,7 +106,7 @@ describe('SwitchLabeled', () => {
 
 				// It should pass `foo`, `bar`, `baz`, `qux`, and `quux` through
 				// to the `Switch` instance.
-				_.forEach(['foo', 'bar', 'baz', 'qux', 'quux'], prop => {
+				_.forEach(['foo', 'bar', 'baz', 'qux', 'quux'], (prop) => {
 					assert(_.has(switchProps, prop));
 				});
 			});

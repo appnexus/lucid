@@ -9,7 +9,9 @@ const context: any = React.createContext({
 });
 
 class ExampleApp extends React.Component {
-	static propTypes: { children: PropTypes.Requireable<PropTypes.ReactNodeLike>; };
+	static propTypes: {
+		children: PropTypes.Requireable<PropTypes.ReactNodeLike>;
+	};
 	constructor(props: any) {
 		super(props);
 		this.state = {

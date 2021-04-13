@@ -16,7 +16,7 @@ const { arrayOf, bool, func, object, shape, string } = PropTypes;
 interface IAutocompleteProps extends StandardProps {
 	isDisabled?: boolean;
 	suggestions?: string[];
-	value?: any;   
+	value?: any;
 	onChange?: any;
 	onSelect?: any;
 	onExpand?: any;
@@ -37,7 +37,7 @@ const Autocomplete = createClass<IAutocompleteProps>({
 
 	displayName: 'Autocomplete',
 
-	reducers: reducers as any, // TODO: typescript hack that should be removed 
+	reducers: reducers as any, // TODO: typescript hack that should be removed
 
 	propTypes: {
 		className: string`
@@ -125,7 +125,7 @@ const Autocomplete = createClass<IAutocompleteProps>({
 		}
 	},
 
-	handleInputKeydown(event:  React.KeyboardEvent<HTMLInputElement>) {
+	handleInputKeydown(event: React.KeyboardEvent<HTMLInputElement>) {
 		const {
 			onExpand,
 			DropMenu: { isExpanded, focusedIndex, onCollapse },
@@ -182,7 +182,8 @@ const Autocomplete = createClass<IAutocompleteProps>({
 		this.setInputValue(value);
 	},
 
-	UNSAFE_componentWillReceiveProps(nextProps: any) { // TODO: typescript hack that should be removed
+	UNSAFE_componentWillReceiveProps(nextProps: any) {
+		// TODO: typescript hack that should be removed
 		const { value } = nextProps;
 		if (value !== this.getInputValue()) {
 			this.setInputValue(value);
@@ -219,7 +220,13 @@ const Autocomplete = createClass<IAutocompleteProps>({
 				onSelect={this.handleSelect}
 				style={style}
 			>
-				<DropMenu.Control { ...{onClick: this.handleControlClick} /* TODO: typescript hack that should be removed */}> 
+				<DropMenu.Control
+					{
+						...{
+							onClick: this.handleControlClick,
+						} /* TODO: typescript hack that should be removed */
+					}
+				>
 					<div
 						className={cx('&-Control', {
 							'&-Control-is-expanded': isExpanded,
@@ -227,23 +234,23 @@ const Autocomplete = createClass<IAutocompleteProps>({
 						})}
 					>
 						<input
-							{..._.omit(passThroughs, [
+							{...(_.omit(passThroughs, [
 								'onChange',
 								'onSelect',
 								'onExpand',
 								'value',
 								'children',
-							]) as any} // TODO: typescript hack that should be removed
+							]) as any)} // TODO: typescript hack that should be removed
 							type='text'
 							className={cx('&-Control-input')}
-							ref={ref => (this.inputRef = ref)}
+							ref={(ref) => (this.inputRef = ref)}
 							onKeyDown={this.handleInputKeydown}
 							disabled={isDisabled}
 						/>
 					</div>
 				</DropMenu.Control>
 				{value
-					? _.map(suggestions, suggestion => (
+					? _.map(suggestions, (suggestion) => (
 							<DropMenu.Option key={'AutocompleteOption' + suggestion}>
 								{(() => {
 									const [pre, match, post] = partitionText(
@@ -286,7 +293,7 @@ const Autocomplete = createClass<IAutocompleteProps>({
 								})()}
 							</DropMenu.Option>
 					  ))
-					: _.map(suggestions, suggestion => (
+					: _.map(suggestions, (suggestion) => (
 							<DropMenu.Option key={'AutocompleteOption' + suggestion}>
 								{suggestion}
 							</DropMenu.Option>

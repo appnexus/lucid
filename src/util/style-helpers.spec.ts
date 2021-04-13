@@ -2,7 +2,7 @@ import assert from 'assert';
 import _ from 'lodash';
 import { bindClassNames, lucidClassNames, uniqueName } from './style-helpers';
 
-describe('#bindClassNames', function() {
+describe('#bindClassNames', function () {
 	it('should always return a function', () => {
 		assert(_.isFunction(bindClassNames()));
 		assert(_.isFunction(bindClassNames('lucid')));
@@ -100,7 +100,7 @@ describe('#bindClassNames', function() {
 	});
 });
 
-describe('#lucidClassNames', function() {
+describe('#lucidClassNames', function () {
 	it('should replace the variable `&` with `lucid`', () => {
 		assert.equal(
 			lucidClassNames('&-Button', '&-TextField'),

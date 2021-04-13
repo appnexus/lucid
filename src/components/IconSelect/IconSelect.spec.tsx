@@ -37,13 +37,7 @@ describe('IconSelect', () => {
 		const wrapper = shallow(<IconSelect items={items as any} />);
 
 		assert.equal(
-			wrapper
-				.children()
-				.at(1)
-				.children()
-				.at(1)
-				.children()
-				.prop('isSelected'),
+			wrapper.children().at(1).children().at(1).children().prop('isSelected'),
 			true
 		);
 	});

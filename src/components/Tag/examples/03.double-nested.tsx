@@ -19,13 +19,13 @@ export default createClass({
 					Global:
 					<Tag>
 						Group 1
-						{_.times(4, n => (
+						{_.times(4, (n) => (
 							<Tag key={n}>{words[n % words.length]}</Tag>
 						))}
 					</Tag>
 					<Tag>
 						Group 2
-						{_.times(4, n => (
+						{_.times(4, (n) => (
 							<Tag key={n}>{words[n % words.length]}</Tag>
 						))}
 					</Tag>
@@ -35,13 +35,13 @@ export default createClass({
 					In-Progess:
 					<Tag>
 						Group 1
-						{_.times(4, n => (
+						{_.times(4, (n) => (
 							<Tag key={n}>{words[n % words.length]}</Tag>
 						))}
 					</Tag>
 					<Tag>
 						Group 2
-						{_.times(4, n => (
+						{_.times(4, (n) => (
 							<Tag key={n}>{words[n % words.length]}</Tag>
 						))}
 					</Tag>

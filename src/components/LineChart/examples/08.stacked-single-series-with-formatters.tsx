@@ -19,7 +19,7 @@ export default createClass({
 			<div style={style}>
 				<LineChart
 					yAxisIsStacked
-					yAxisFormatter={yValue => `$ ${yValue}`}
+					yAxisFormatter={(yValue) => `$ ${yValue}`}
 					yAxisTooltipFormatter={(yField, yValueFormatted) => yValueFormatted}
 					data={data}
 					width={800}

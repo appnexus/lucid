@@ -55,7 +55,7 @@ interface ITabProps extends StandardProps {
 	) => void;
 
 	/** The content to be rendered as the \`Title\` of the \`Tab\`. */
-	Title?: string | React.ReactNode & { props: ITitleProps };
+	Title?: string | (React.ReactNode & { props: ITitleProps });
 
 	/** Optional prop that will show a count number next to the tab's title. */
 	count?: number | string;
@@ -251,9 +251,9 @@ interface ITabsProps extends StandardProps {
 
 	/** *Child Element* Can be used to define one or more individual \`Tab\`s in
 	the sequence of \`Tabs\`. */
-	Tab?: string | React.ReactNode & { props: ITabProps };
+	Tab?: string | (React.ReactNode & { props: ITabProps });
 
-	Title?: string | React.ReactNode & { props: ITitleProps };
+	Title?: string | (React.ReactNode & { props: ITitleProps });
 }
 
 type ITabsPropsWithPassThroughs = Overwrite<

@@ -157,7 +157,7 @@ export default createClass({
 				<label style={{ marginBottom: 6, display: 'block', fontSize: 12 }}>
 					<TextField
 						style={{ marginRight: 9, width: 45 }}
-						onChangeDebounced={v =>
+						onChangeDebounced={(v) =>
 							this.handleNumeric('fixedColumnCount', parseInt(v, 10))
 						}
 						placeholder='fixedColumnCount'
@@ -168,7 +168,7 @@ export default createClass({
 				<label style={{ marginBottom: 6, display: 'block', fontSize: 12 }}>
 					<TextField
 						style={{ marginRight: 9, width: 45 }}
-						onChangeDebounced={v =>
+						onChangeDebounced={(v) =>
 							this.handleNumeric('fixedRowHeight', parseInt(v, 10))
 						}
 						placeholder='fixedRowHeight'

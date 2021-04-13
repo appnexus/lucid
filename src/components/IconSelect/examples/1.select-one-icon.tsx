@@ -19,20 +19,22 @@ export default createClass({
 			<IconSelect
 				kind='single' // renders as radio buttons
 				onSelect={this.handleSelect}
-				items={[
-					{
-						id: 'item1',
-						icon: <ClockIcon />,
-						isSelected: this.state.selectedIcon === 'item1',
-						label: 'Foo Bar',
-					},
-					{
-						id: 'item2',
-						icon: <ClockIcon />,
-						isSelected: this.state.selectedIcon === 'item2',
-						label: 'Bax Tar',
-					},
-				] as any}
+				items={
+					[
+						{
+							id: 'item1',
+							icon: <ClockIcon />,
+							isSelected: this.state.selectedIcon === 'item1',
+							label: 'Foo Bar',
+						},
+						{
+							id: 'item2',
+							icon: <ClockIcon />,
+							isSelected: this.state.selectedIcon === 'item2',
+							label: 'Bax Tar',
+						},
+					] as any
+				}
 			/>
 		);
 	},

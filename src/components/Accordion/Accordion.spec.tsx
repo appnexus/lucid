@@ -48,10 +48,7 @@ describe('Accordion', () => {
 				const firstItem = wrapper.find('.lucid-Accordion-Item').first();
 
 				assert.equal(
-					firstItem
-						.find('.lucid-ExpanderPanel-header')
-						.first()
-						.text(),
+					firstItem.find('.lucid-ExpanderPanel-header').first().text(),
 					'Froyo'
 				);
 			});
@@ -70,10 +67,7 @@ describe('Accordion', () => {
 				const firstItem = wrapper.find('.lucid-Accordion-Item').first();
 
 				assert.equal(
-					firstItem
-						.find('.lucid-ExpanderPanel-header')
-						.first()
-						.text(),
+					firstItem.find('.lucid-ExpanderPanel-header').first().text(),
 					'Froyo'
 				);
 			});
@@ -89,7 +83,10 @@ describe('Accordion', () => {
 					</Accordion>
 				);
 
-				assert(wrapper.find('.lucid-ExpanderPanel-content-is-expanded'), 1 as any);
+				assert(
+					wrapper.find('.lucid-ExpanderPanel-content-is-expanded'),
+					1 as any
+				);
 			});
 		});
 
@@ -138,7 +135,7 @@ describe('Accordion', () => {
 describe('Accordion', () => {
 	let wrapper: any;
 	const onSelect: any = sinon.spy();
-	let mountTestDiv:any;
+	let mountTestDiv: any;
 
 	describe('user picks one of the items', () => {
 		beforeEach(() => {
@@ -166,34 +163,21 @@ describe('Accordion', () => {
 		it('should call the function passed in as the `onSelect` prop', () => {
 			const firstPanel = wrapper.find('.lucid-ExpanderPanel').at(0);
 
-			firstPanel
-				.find('.lucid-ExpanderPanel-header')
-				.first()
-				.simulate('click');
-			firstPanel
-				.find('.lucid-ExpanderPanel-icon')
-				.first()
-				.simulate('click');
+			firstPanel.find('.lucid-ExpanderPanel-header').first().simulate('click');
+			firstPanel.find('.lucid-ExpanderPanel-icon').first().simulate('click');
 
 			assert.equal(
 				onSelect.callCount,
 				2,
-				`onSelect called the wrong number of times, actual: ${onSelect.callCount
-				}, expected: 2`
+				`onSelect called the wrong number of times, actual: ${onSelect.callCount}, expected: 2`
 			);
 		});
 
 		it('should not call the function passed in as the `onSelect` prop when Item is disabled', () => {
 			const secondPanel = wrapper.find('.lucid-ExpanderPanel').at(2);
 
-			secondPanel
-				.find('.lucid-ExpanderPanel-header')
-				.first()
-				.simulate('click');
-			secondPanel
-				.find('.lucid-ExpanderPanel-icon')
-				.first()
-				.simulate('click');
+			secondPanel.find('.lucid-ExpanderPanel-header').first().simulate('click');
+			secondPanel.find('.lucid-ExpanderPanel-icon').first().simulate('click');
 
 			expect(onSelect.callCount).toEqual(0);
 		});

@@ -23,7 +23,7 @@ describe('RadioGroup', () => {
 					</RadioGroup>
 				);
 
-				wrapper.find(RadioButtonLabeled).forEach(node => {
+				wrapper.find(RadioButtonLabeled).forEach((node) => {
 					assert.equal(node.props().name, name);
 				});
 			});
@@ -38,7 +38,7 @@ describe('RadioGroup', () => {
 				);
 				const name = wrapper.first().prop('name');
 
-				wrapper.find(RadioButtonLabeled).forEach(node => {
+				wrapper.find(RadioButtonLabeled).forEach((node) => {
 					assert.equal(node.props().name, name);
 				});
 			});
@@ -53,7 +53,7 @@ describe('RadioGroup', () => {
 						<RadioGroup.RadioButton />
 					</RadioGroup>
 				);
-				wrapper.find(RadioButtonLabeled).forEach(node => {
+				wrapper.find(RadioButtonLabeled).forEach((node) => {
 					assert(node.props().isDisabled);
 				});
 			});
@@ -66,7 +66,7 @@ describe('RadioGroup', () => {
 						<RadioGroup.RadioButton />
 					</RadioGroup>
 				);
-				wrapper.find(RadioButtonLabeled).forEach(node => {
+				wrapper.find(RadioButtonLabeled).forEach((node) => {
 					assert(node.props().isDisabled);
 				});
 			});
@@ -136,7 +136,7 @@ describe('RadioGroup', () => {
 		describe('pass throughs', () => {
 			it('passes through all props not defined in `propTypes` to the root element.', () => {
 				const wrapper = shallow(
-					<RadioGroup {...{foo: 1, bar: 2, baz: 3, qux: 4, quux: 5 }}>
+					<RadioGroup {...{ foo: 1, bar: 2, baz: 3, qux: 4, quux: 5 }}>
 						<RadioGroup.RadioButton />
 						<RadioGroup.RadioButton />
 						<RadioGroup.RadioButton />
@@ -146,7 +146,7 @@ describe('RadioGroup', () => {
 
 				// It should pass `foo`, `bar`, `baz`, `qux`, and `quux` through
 				// to the root element.
-				_.forEach(['foo', 'bar', 'baz', 'qux', 'quux'], prop => {
+				_.forEach(['foo', 'bar', 'baz', 'qux', 'quux'], (prop) => {
 					assert(_.includes(rootProps, prop));
 				});
 			});
@@ -173,36 +173,10 @@ describe('RadioGroup', () => {
 			);
 			const labels = wrapper.find(RadioGroup.Label);
 
-			assert.equal(
-				labels
-					.at(0)
-					.children()
-					.text(),
-				'foo'
-			);
-			assert.equal(
-				labels
-					.at(1)
-					.children()
-					.text(),
-				'bar'
-			);
-			assert.equal(
-				labels
-					.at(2)
-					.children()
-					.at(0)
-					.text(),
-				'baz'
-			);
-			assert.equal(
-				labels
-					.at(2)
-					.children()
-					.at(1)
-					.text(),
-				'qux'
-			);
+			assert.equal(labels.at(0).children().text(), 'foo');
+			assert.equal(labels.at(1).children().text(), 'bar');
+			assert.equal(labels.at(2).children().at(0).text(), 'baz');
+			assert.equal(labels.at(2).children().at(1).text(), 'qux');
 		});
 	});
 });
@@ -235,12 +209,7 @@ describe('RadioGroup', () => {
 				</RadioGroup>
 			);
 
-			wrapper
-				.childAt(0)
-				.childAt(1)
-				.childAt(0)
-				.childAt(0)
-				.simulate('click');
+			wrapper.childAt(0).childAt(1).childAt(0).childAt(0).simulate('click');
 			assert(onSelect.calledOnce);
 		});
 
@@ -254,12 +223,7 @@ describe('RadioGroup', () => {
 				</RadioGroup>
 			);
 
-			wrapper
-				.childAt(0)
-				.childAt(1)
-				.childAt(0)
-				.childAt(0)
-				.simulate('click');
+			wrapper.childAt(0).childAt(1).childAt(0).childAt(0).simulate('click');
 			assert.equal(onSelect.args[0][0], 1);
 			assert((_.last(onSelect.args[0]) as any).event);
 		});
@@ -275,12 +239,7 @@ describe('RadioGroup', () => {
 				</RadioGroup>
 			);
 
-			wrapper
-				.childAt(0)
-				.childAt(1)
-				.childAt(0)
-				.childAt(0)
-				.simulate('click');
+			wrapper.childAt(0).childAt(1).childAt(0).childAt(0).simulate('click');
 			assert(childOnSelect.calledBefore(onSelect));
 		});
 	});

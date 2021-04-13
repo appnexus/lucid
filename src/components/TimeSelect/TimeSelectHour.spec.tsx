@@ -37,10 +37,7 @@ describe('TimeSelectHour', () => {
 			describe('and is rolling over', () => {
 				it('should set the next hour', () => {
 					component = shallow(<TimeSelectHour {...props} is24HourClock />);
-					component
-						.find(TimeSelectInput)
-						.props()
-						.onChange('24');
+					component.find(TimeSelectInput).props().onChange('24');
 					expect(props.onChange).toBeCalledWith(
 						new Date('2020-11-04T00:00:00')
 					);
@@ -49,10 +46,7 @@ describe('TimeSelectHour', () => {
 			describe('and is rolling under', () => {
 				it('should set the next hour', () => {
 					component = shallow(<TimeSelectHour {...props} is24HourClock />);
-					component
-						.find(TimeSelectInput)
-						.props()
-						.onChange('-1');
+					component.find(TimeSelectInput).props().onChange('-1');
 					expect(props.onChange).toBeCalledWith(
 						new Date('2020-11-02T23:00:00')
 					);
@@ -60,10 +54,7 @@ describe('TimeSelectHour', () => {
 			});
 			it('should set the next hour', () => {
 				component = shallow(<TimeSelectHour {...props} is24HourClock />);
-				component
-					.find(TimeSelectInput)
-					.props()
-					.onChange('18');
+				component.find(TimeSelectInput).props().onChange('18');
 				expect(props.onChange).toBeCalledWith(new Date('2020-11-03T18:00:00'));
 			});
 		});
@@ -72,10 +63,7 @@ describe('TimeSelectHour', () => {
 				describe('and is rolling over', () => {
 					it('should set the next hour', () => {
 						component = shallow(<TimeSelectHour {...props} hour={11} isAM />);
-						component
-							.find(TimeSelectInput)
-							.props()
-							.onChange('12');
+						component.find(TimeSelectInput).props().onChange('12');
 						expect(props.onChange).toBeCalledWith(
 							new Date('2020-11-03T12:00:00')
 						);
@@ -86,10 +74,7 @@ describe('TimeSelectHour', () => {
 						component = shallow(
 							<TimeSelectHour {...props} hour={12} isAM={false} />
 						);
-						component
-							.find(TimeSelectInput)
-							.props()
-							.onChange('11');
+						component.find(TimeSelectInput).props().onChange('11');
 						expect(props.onChange).toBeCalledWith(
 							new Date('2020-11-03T11:00:00')
 						);
@@ -102,10 +87,7 @@ describe('TimeSelectHour', () => {
 						component = shallow(
 							<TimeSelectHour {...props} hour={11} isAM={false} />
 						);
-						component
-							.find(TimeSelectInput)
-							.props()
-							.onChange('12');
+						component.find(TimeSelectInput).props().onChange('12');
 						expect(props.onChange).toBeCalledWith(
 							new Date('2020-11-04T00:00:00')
 						);
@@ -116,10 +98,7 @@ describe('TimeSelectHour', () => {
 						component = shallow(
 							<TimeSelectHour {...props} hour={12} isAM={true} />
 						);
-						component
-							.find(TimeSelectInput)
-							.props()
-							.onChange('11');
+						component.find(TimeSelectInput).props().onChange('11');
 						expect(props.onChange).toBeCalledWith(
 							new Date('2020-11-02T23:00:00')
 						);
@@ -129,10 +108,7 @@ describe('TimeSelectHour', () => {
 
 			it('should set the next hour', () => {
 				component = shallow(<TimeSelectHour {...props} hour={4} />);
-				component
-					.find(TimeSelectInput)
-					.props()
-					.onChange('5');
+				component.find(TimeSelectInput).props().onChange('5');
 				expect(props.onChange).toBeCalledWith(new Date('2020-11-03T17:00:00'));
 			});
 		});

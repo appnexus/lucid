@@ -162,33 +162,28 @@ export const Points = (props: IPointsProps): React.ReactElement => {
 			{...omitProps(passThroughs, undefined, _.keys(Points.propTypes))}
 			className={cx(className, '&')}
 		>
-			{_.map(
-				transformedData,
-				(d, dIndex): any[] =>
-					_.map(
-						d,
-						(series, seriesIndex): JSX.Element | undefined => {
-							if (isValidSeries(series)) {
-								return (
-									<Point
-										key={`${seriesIndex}${dIndex}`}
-										/* Since data contains x and y values, data values may not have a uniform type that always matches
+			{_.map(transformedData, (d, dIndex): any[] =>
+				_.map(d, (series, seriesIndex): JSX.Element | undefined => {
+					if (isValidSeries(series)) {
+						return (
+							<Point
+								key={`${seriesIndex}${dIndex}`}
+								/* Since data contains x and y values, data values may not have a uniform type that always matches
 											the expected input of the xScale */
-										//@ts-ignore
-										x={xScale(data[seriesIndex][xField])}
-										y={yScale(_.isArray(series) ? _.last(series) : series)}
-										hasStroke={hasStroke}
-										kind={dIndex + colorOffset}
-										color={_.get(
-											colorMap,
-											yFields[dIndex],
-											palette[(dIndex + colorOffset) % palette.length]
-										)}
-									/>
-								);
-							}
-						}
-					)
+								//@ts-ignore
+								x={xScale(data[seriesIndex][xField])}
+								y={yScale(_.isArray(series) ? _.last(series) : series)}
+								hasStroke={hasStroke}
+								kind={dIndex + colorOffset}
+								color={_.get(
+									colorMap,
+									yFields[dIndex],
+									palette[(dIndex + colorOffset) % palette.length]
+								)}
+							/>
+						);
+					}
+				})
 			)}
 		</g>
 	);

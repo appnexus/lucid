@@ -17,11 +17,13 @@ describe('DraggableLineChart', () => {
 		it('should render an svg chart', () => {
 			wrapper = mount(
 				<DraggableLineChart
-					data={[
-						{ x: new Date(), y: 1 },
-						{ x: new Date(), y: 2 },
-						{ x: new Date(), y: 3 },
-					] as any}
+					data={
+						[
+							{ x: new Date(), y: 1 },
+							{ x: new Date(), y: 2 },
+							{ x: new Date(), y: 3 },
+						] as any
+					}
 				/>
 			);
 
@@ -37,7 +39,7 @@ describe('DraggableLineChart', () => {
 			];
 			wrapper = mount(<DraggableLineChart data={data} />);
 			wrapper.instance().d3LineChart.updateLineChart = jest.fn();
-			data.push({x: '3:00', y: 6});
+			data.push({ x: '3:00', y: 6 });
 			wrapper.setProps({ data: data });
 
 			expect(wrapper.instance().d3LineChart.updateLineChart).toBeCalledTimes(1);

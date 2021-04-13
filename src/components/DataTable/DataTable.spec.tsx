@@ -242,10 +242,7 @@ describe('DataTable', () => {
 						);
 
 						assert.equal(
-							tdsWrapper
-								.at(0)
-								.children()
-								.text(),
+							tdsWrapper.at(0).children().text(),
 							_.get(testDataWithEmptyCells[index], 'id'),
 							'first cell must match id of current row'
 						);
@@ -254,34 +251,22 @@ describe('DataTable', () => {
 							'should not be marked as empty, despite not being a string'
 						);
 						assert.equal(
-							tdsWrapper
-								.at(1)
-								.children()
-								.text(),
+							tdsWrapper.at(1).children().text(),
 							_.get(testDataWithEmptyCells[index], 'first_name'),
 							'second cell must match first_name of current row'
 						);
 						assert.equal(
-							tdsWrapper
-								.at(2)
-								.children()
-								.text(),
+							tdsWrapper.at(2).children().text(),
 							'--',
 							'third (empty) cell should be `--`'
 						);
 						assert.equal(
-							tdsWrapper
-								.at(3)
-								.children()
-								.text(),
+							tdsWrapper.at(3).children().text(),
 							_.get(testDataWithEmptyCells[index], 'email'),
 							'fourth cell must match email of current row'
 						);
 						assert.equal(
-							tdsWrapper
-								.at(4)
-								.children()
-								.text(),
+							tdsWrapper.at(4).children().text(),
 							_.get(testDataWithEmptyCells[index], 'occupation'),
 							'fifth cell must match occupation of current row'
 						);
@@ -368,9 +353,9 @@ describe('DataTable', () => {
 					.find(ScrollTable.Tr);
 
 				// for each row check that isSelectable matches
-				bodyTrsWrapper.forEach(trWrapper => {
+				bodyTrsWrapper.forEach((trWrapper) => {
 					const tdsWrapper = trWrapper.shallow().find(ScrollTable.Td);
-					const tdArray = tdsWrapper.map(tdWrapper => tdWrapper.shallow());
+					const tdArray = tdsWrapper.map((tdWrapper) => tdWrapper.shallow());
 
 					assert.equal(
 						tdArray[0].find(Checkbox).length,
@@ -400,9 +385,9 @@ describe('DataTable', () => {
 					.find(ScrollTable.Tr);
 
 				// for each row check that isSelectable matches
-				bodyTrsWrapper.forEach(trWrapper => {
+				bodyTrsWrapper.forEach((trWrapper) => {
 					const tdsWrapper = trWrapper.shallow().find(ScrollTable.Td);
-					const tdArray = tdsWrapper.map(tdWrapper => tdWrapper.shallow());
+					const tdArray = tdsWrapper.map((tdWrapper) => tdWrapper.shallow());
 
 					assert.equal(
 						tdArray[0].find(Checkbox).length,
@@ -426,7 +411,7 @@ describe('DataTable', () => {
 					.find(ScrollTable.Tr);
 
 				// for each row check that isActionable matches
-				trsWrapper.forEach(trWrapper => {
+				trsWrapper.forEach((trWrapper) => {
 					assert.equal(trWrapper.prop('isActionable'), true);
 				});
 			});
@@ -443,7 +428,7 @@ describe('DataTable', () => {
 					.find(ScrollTable.Tr);
 
 				// for each row check that isActionable is false
-				trsWrapper.forEach(trWrapper => {
+				trsWrapper.forEach((trWrapper) => {
 					assert.equal(trWrapper.prop('isActionable'), false);
 				});
 			});
@@ -473,7 +458,7 @@ describe('DataTable', () => {
 				// for each row check that isSelectable matches
 				bodyTrsWrapper.forEach((trWrapper, index) => {
 					const tdsWrapper = trWrapper.shallow().find(ScrollTable.Td);
-					const tdArray = tdsWrapper.map(tdWrapper => tdWrapper.shallow());
+					const tdArray = tdsWrapper.map((tdWrapper) => tdWrapper.shallow());
 					const checkBoxOnSelectFunction = tdArray[0]
 						.find(Checkbox)
 						.prop('onSelect');
@@ -641,7 +626,7 @@ describe('DataTable', () => {
 					.find(ScrollTable.Tr);
 
 				const thsWrapper = headTrsWrapper.shallow().find(ScrollTable.Th);
-				const tdArray = thsWrapper.map(tdWrapper => tdWrapper.shallow());
+				const tdArray = thsWrapper.map((tdWrapper) => tdWrapper.shallow());
 				const mockEvent = { stopPropagation: _.noop, preventDefault: _.noop };
 
 				tdArray[0].simulate('click', mockEvent);
@@ -741,7 +726,9 @@ describe('DataTable', () => {
 
 		describe('anchorMessage', () => {
 			it('should position the `LoadingMessage`/`EmpyStateMessage` near the top of the table', () => {
-				const loadingWrapper = shallow(<DataTable data={[]} isLoading anchorMessage />);
+				const loadingWrapper = shallow(
+					<DataTable data={[]} isLoading anchorMessage />
+				);
 
 				const loadingOverlayWrapper = loadingWrapper
 					.find(EmptyStateWrapper)
@@ -826,7 +813,7 @@ describe('DataTable', () => {
 					.find(ScrollTable.Tr);
 
 				const thsWrapper = headTrsWrapper.shallow().find(ScrollTable.Th);
-				const tdArray = thsWrapper.map(tdWrapper => tdWrapper.shallow());
+				const tdArray = thsWrapper.map((tdWrapper) => tdWrapper.shallow());
 
 				assert.equal(
 					tdArray[0].text(),
@@ -886,10 +873,10 @@ describe('DataTable', () => {
 					.at(1)
 					.shallow()
 					.find(ScrollTable.Th);
-				const thFirstRowArray = thsFirstRowWrapper.map(thWrapper =>
+				const thFirstRowArray = thsFirstRowWrapper.map((thWrapper) =>
 					thWrapper.shallow()
 				);
-				const thSecondRowArray = thsSecondRowWrapper.map(thWrapper =>
+				const thSecondRowArray = thsSecondRowWrapper.map((thWrapper) =>
 					thWrapper.shallow()
 				);
 

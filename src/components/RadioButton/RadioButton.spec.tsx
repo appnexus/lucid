@@ -21,7 +21,7 @@ describe('RadioButton', () => {
 	describe('props', () => {
 		describe('isDisabled', () => {
 			it('sets the `disabled` attribute of the native radio button element.', () => {
-				_.forEach(booleanValues, testValue => {
+				_.forEach(booleanValues, (testValue) => {
 					const wrapper = shallow(<RadioButton isDisabled={testValue} />);
 
 					assert.equal(
@@ -34,7 +34,7 @@ describe('RadioButton', () => {
 
 		describe('isSelected', () => {
 			it('sets the `checked` attribute of the native radio button element.', () => {
-				_.forEach(booleanValues, testValue => {
+				_.forEach(booleanValues, (testValue) => {
 					const wrapper = shallow(<RadioButton isSelected={testValue} />);
 
 					assert.equal(
@@ -67,7 +67,7 @@ describe('RadioButton', () => {
 
 				// It should pass `foo`, `bar`, `baz`, `qux`, and `quux` through
 				// to the native input.
-				_.forEach(['foo', 'bar', 'baz', 'qux', 'quux'], prop => {
+				_.forEach(['foo', 'bar', 'baz', 'qux', 'quux'], (prop) => {
 					assert(_.has(nativeProps, prop));
 				});
 			});
@@ -77,9 +77,7 @@ describe('RadioButton', () => {
 
 describe('RadioButton', () => {
 	function simulateEvent(reactElement: any, selector: any, event: any) {
-		mount(reactElement)
-			.find(selector)
-			.simulate(event);
+		mount(reactElement).find(selector).simulate(event);
 	}
 
 	function verifyArguments(event: any) {
@@ -91,7 +89,7 @@ describe('RadioButton', () => {
 				'-visualization-glow',
 				'-visualization-dot',
 			],
-			classSubString => {
+			(classSubString) => {
 				const onSelect: any = sinon.spy();
 
 				simulateEvent(
@@ -114,7 +112,7 @@ describe('RadioButton', () => {
 				'-visualization-glow',
 				'-visualization-dot',
 			],
-			classSubString => {
+			(classSubString) => {
 				const onSelect: any = sinon.spy();
 
 				simulateEvent(
@@ -136,7 +134,7 @@ describe('RadioButton', () => {
 				'-visualization-glow',
 				'-visualization-dot',
 			],
-			classSubString => {
+			(classSubString) => {
 				const onSelect: any = sinon.spy();
 
 				simulateEvent(

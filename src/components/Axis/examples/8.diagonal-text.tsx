@@ -11,14 +11,8 @@ const verticalAxisWidth = 100;
 const verticalAxisHeight = 200;
 const innerWidth = horizontalAxisWidth - margin.right - margin.left;
 const innerHeight = verticalAxisHeight - margin.top - margin.bottom;
-const x = d3Scale
-	.scaleLinear()
-	.domain([0, 100000])
-	.range([0, innerWidth]);
-const y = d3Scale
-	.scaleLinear()
-	.domain([0, 100000])
-	.range([innerHeight, 0]);
+const x = d3Scale.scaleLinear().domain([0, 100000]).range([0, innerWidth]);
+const y = d3Scale.scaleLinear().domain([0, 100000]).range([innerHeight, 0]);
 
 export default createClass({
 	render() {
@@ -28,8 +22,9 @@ export default createClass({
 					<p>top</p>
 					<svg width={horizontalAxisWidth} height={horizontalAxisHeight}>
 						<g
-							transform={`translate(${margin.left}, ${horizontalAxisHeight /
-								2})`}
+							transform={`translate(${margin.left}, ${
+								horizontalAxisHeight / 2
+							})`}
 						>
 							<Axis
 								scale={x}
@@ -42,13 +37,11 @@ export default createClass({
 				</div>
 				<div>
 					<p>bottom</p>
-					<svg
-						width={horizontalAxisWidth}
-						height={horizontalAxisHeight}
-					>
+					<svg width={horizontalAxisWidth} height={horizontalAxisHeight}>
 						<g
-							transform={`translate(${margin.left}, ${horizontalAxisHeight /
-								2})`}
+							transform={`translate(${margin.left}, ${
+								horizontalAxisHeight / 2
+							})`}
 						>
 							<Axis
 								scale={x}

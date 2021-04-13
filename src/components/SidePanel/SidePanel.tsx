@@ -30,7 +30,7 @@ SidePanelHeader.propTypes = {
 
 export interface ISidePanelProps extends Partial<IOverlayProps> {
 	/** Alternative to using `<SidePanel.Header>`. */
-	Header?: string | React.ReactNode & { props: StandardProps };
+	Header?: string | (React.ReactNode & { props: StandardProps });
 
 	/** Controls the expanded/collapsed state as a boolean prop. */
 	isExpanded: boolean;
@@ -186,9 +186,16 @@ class SidePanel extends React.Component<ISidePanelProps, ISidePanelState, {}> {
 
 	handleResize = ({ dX }: { dX: number }): void => {
 		const { startWidth } = this.state;
-		const position = startWidth + dX * (this.props.position === 'right' ? -1 : 1);
+		const position =
+			startWidth + dX * (this.props.position === 'right' ? -1 : 1);
 		this.setState({
-			width: _.clamp(position, this.props.minWidth, this.props.maxWidth === Infinity? window.innerWidth : this.props.maxWidth ),
+			width: _.clamp(
+				position,
+				this.props.minWidth,
+				this.props.maxWidth === Infinity
+					? window.innerWidth
+					: this.props.maxWidth
+			),
 		});
 	};
 
@@ -200,7 +207,7 @@ class SidePanel extends React.Component<ISidePanelProps, ISidePanelState, {}> {
 		this.setState({
 			width: startWidth + dX * (this.props.position === 'right' ? -1 : 1),
 			isResizing: false,
-			startWidth:width,
+			startWidth: width,
 		});
 		this.props.onResize(startWidth - dX, { props: this.props, event });
 	};
