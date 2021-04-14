@@ -28,7 +28,6 @@ rules:
   '@typescript-eslint/type-annotation-spacing': off
   import/imports-first: off
   import/no-unresolved: off
-  prettier/prettier: off
   react-hooks/exhaustive-deps: off
   react/jsx-curly-brace-presence: off
   react/prefer-stateless-function: off

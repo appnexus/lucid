@@ -27,12 +27,12 @@ export default createClass({
 							</ButtonGroup>
 
 							<SearchField placeholder='Search country' />
-							{_.times(10, n => (
+							{_.times(10, (n) => (
 								<CheckboxLabeled key={n}>
 									<CheckboxLabeled.Label>Filter #{n}</CheckboxLabeled.Label>
 								</CheckboxLabeled>
 							))}
-							{_.times(10, n => {
+							{_.times(10, (n) => {
 								return (
 									<Tag key={n} isRemovable={true}>
 										{`Tag # ${n}`}

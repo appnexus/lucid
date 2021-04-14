@@ -23,20 +23,12 @@ describe('RadioButtonLabeled', () => {
 			);
 
 			assert.equal(
-				wrapper
-					.find(RadioButtonLabeled.Label)
-					.children()
-					.at(0)
-					.text(),
+				wrapper.find(RadioButtonLabeled.Label).children().at(0).text(),
 				'one',
 				'wrong or missing first Label child'
 			);
 			assert.equal(
-				wrapper
-					.find(RadioButtonLabeled.Label)
-					.children()
-					.at(1)
-					.text(),
+				wrapper.find(RadioButtonLabeled.Label).children().at(1).text(),
 				'two',
 				'wrong or missing second Label child'
 			);
@@ -83,7 +75,7 @@ describe('RadioButtonLabeled', () => {
 							bar: 2,
 							baz: 3,
 							qux: 4,
-							quux: 5
+							quux: 5,
 						}}
 					/>
 				);
@@ -91,7 +83,7 @@ describe('RadioButtonLabeled', () => {
 
 				// It should pass `foo`, `bar`, `baz`, `qux`, and `quux` through
 				// to the `RadioButton` instance.
-				_.forEach(['foo', 'bar', 'baz', 'qux', 'quux'], prop => {
+				_.forEach(['foo', 'bar', 'baz', 'qux', 'quux'], (prop) => {
 					assert(_.has(radioButtonProps, prop));
 				});
 			});

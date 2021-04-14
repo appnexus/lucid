@@ -345,7 +345,7 @@ class SearchableSingleSelect extends React.Component<
 			findTypes(props, SearchableSingleSelect.Option),
 			'props'
 		);
-		const firstVisibleIndex = _.findIndex(options, option => {
+		const firstVisibleIndex = _.findIndex(options, (option) => {
 			return optionFilter(searchText, option);
 		});
 		const firstVisibleProps = options[firstVisibleIndex];
@@ -449,7 +449,7 @@ class SearchableSingleSelect extends React.Component<
 			)
 		).concat(
 			// then render all the ungrouped options at the end
-			_.map(ungroupedOptionData, options => this.renderOption(options))
+			_.map(ungroupedOptionData, (options) => this.renderOption(options))
 		);
 
 		if (!isAllOptionsHidden || _.isEmpty(searchText)) {
@@ -477,7 +477,8 @@ class SearchableSingleSelect extends React.Component<
 		props: ISearchableSingleSelectOptionProps;
 	}): void => {
 		const dropMenuProps = this.props.DropMenu;
-		this.props.DropMenu.onCollapse && this.props.DropMenu.onCollapse({ event, props: dropMenuProps });
+		this.props.DropMenu.onCollapse &&
+			this.props.DropMenu.onCollapse({ event, props: dropMenuProps });
 		this.props.onSearch('', null, { event, props });
 		this.props.onSelect(null, { event, props });
 	};

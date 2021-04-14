@@ -85,9 +85,9 @@ describe('ExpanderPanel', () => {
 						isExpanded={true}
 						onToggle={_.noop}
 						style={{ marginRight: 10 }}
-						{... {
+						{...{
 							foo: 1,
-							bar: 2
+							bar: 2,
 						}}
 					/>
 				);
@@ -114,20 +114,13 @@ describe('ExpanderPanel', () => {
 			const onToggle = sinon.spy();
 			wrapper = mount(<ExpanderPanel onToggle={onToggle} />);
 
-			wrapper
-				.find('.lucid-ExpanderPanel-header')
-				.first()
-				.simulate('click');
-			wrapper
-				.find('.lucid-ExpanderPanel-icon')
-				.first()
-				.simulate('click');
+			wrapper.find('.lucid-ExpanderPanel-header').first().simulate('click');
+			wrapper.find('.lucid-ExpanderPanel-icon').first().simulate('click');
 
 			assert.equal(
 				onToggle.callCount,
 				2,
-				`onToggle called the wrong number of times, actual: ${onToggle.callCount
-				}, expected: 2`
+				`onToggle called the wrong number of times, actual: ${onToggle.callCount}, expected: 2`
 			);
 		});
 
@@ -135,14 +128,8 @@ describe('ExpanderPanel', () => {
 			const onToggle = sinon.spy();
 			wrapper = mount(<ExpanderPanel isExpanded={false} onToggle={onToggle} />);
 
-			wrapper
-				.find('.lucid-ExpanderPanel-header')
-				.first()
-				.simulate('click');
-			wrapper
-				.find('.lucid-ExpanderPanel-icon')
-				.first()
-				.simulate('click');
+			wrapper.find('.lucid-ExpanderPanel-header').first().simulate('click');
+			wrapper.find('.lucid-ExpanderPanel-icon').first().simulate('click');
 
 			assert.equal(
 				onToggle.args[0][0],
@@ -160,14 +147,8 @@ describe('ExpanderPanel', () => {
 			const onToggle = sinon.spy();
 			wrapper = mount(<ExpanderPanel isExpanded={true} onToggle={onToggle} />);
 
-			wrapper
-				.find('.lucid-ExpanderPanel-header')
-				.first()
-				.simulate('click');
-			wrapper
-				.find('.lucid-ExpanderPanel-icon')
-				.first()
-				.simulate('click');
+			wrapper.find('.lucid-ExpanderPanel-header').first().simulate('click');
+			wrapper.find('.lucid-ExpanderPanel-icon').first().simulate('click');
 
 			assert.equal(
 				onToggle.args[0][0],

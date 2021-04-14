@@ -59,7 +59,6 @@ interface IDropMenuHeaderProps extends StandardProps {
 	description?: string;
 }
 
-
 const Header = (_props: IDropMenuHeaderProps): null => null;
 Header.displayName = 'DropMenu.Header';
 Header.peek = {
@@ -375,7 +374,10 @@ export interface IDropMenuState {
 	optionProps: [];
 }
 
-class DropMenu extends React.Component<IDropMenuPropsWithPassThroughs, IDropMenuState> {
+class DropMenu extends React.Component<
+	IDropMenuPropsWithPassThroughs,
+	IDropMenuState
+> {
 	private _header: React.RefObject<HTMLDivElement>;
 
 	constructor(props: IDropMenuPropsWithPassThroughs) {
@@ -394,7 +396,7 @@ class DropMenu extends React.Component<IDropMenuPropsWithPassThroughs, IDropMenu
 			optionGroupIndex: null,
 			optionProps: [],
 			selectedIndices: [],
-			...this.getPreprocessedOptionData(props) as any, // TODO: typescript hack that should be removed
+			...(this.getPreprocessedOptionData(props) as any), // TODO: typescript hack that should be removed
 		};
 
 		this._header = React.createRef<HTMLDivElement>();
@@ -710,7 +712,8 @@ class DropMenu extends React.Component<IDropMenuPropsWithPassThroughs, IDropMenu
 					Option.defaultProps
 				) as IDropMenuPropsWithPassThroughs;
 				if (focusedOptionData && !focusedOptionProps.isDisabled) {
-					onSelect && onSelect(focusedIndex, { props: focusedOptionProps, event });
+					onSelect &&
+						onSelect(focusedIndex, { props: focusedOptionProps, event });
 				} else if (_.isNull(focusedIndex)) {
 					onSelect && onSelect(null, { props: _.first(nullOptions), event });
 				}
@@ -729,7 +732,21 @@ class DropMenu extends React.Component<IDropMenuPropsWithPassThroughs, IDropMenu
 					}
 					if (!_.isNil(focusedIndex) && focusedIndex > 0) {
 						event.preventDefault();
-						onFocusOption && onFocusOption(
+						onFocusOption &&
+							onFocusOption(
+								_.findLastIndex(
+									flattenedOptionsData,
+									isOptionVisible,
+									focusedIndex - 1
+								),
+								{ props, event }
+							);
+					}
+				} else {
+					event.preventDefault();
+					focusedIndex &&
+						onFocusOption &&
+						onFocusOption(
 							_.findLastIndex(
 								flattenedOptionsData,
 								isOptionVisible,
@@ -737,42 +754,33 @@ class DropMenu extends React.Component<IDropMenuPropsWithPassThroughs, IDropMenu
 							),
 							{ props, event }
 						);
-					}
-				} else {
-					event.preventDefault();
-					focusedIndex && onFocusOption && onFocusOption(
-						_.findLastIndex(
-							flattenedOptionsData,
-							isOptionVisible,
-							focusedIndex - 1
-						),
-						{ props, event }
-					);
 				}
 			}
 			if (event.keyCode === KEYCODE.ArrowDown) {
 				if (_.isNumber(focusedIndex)) {
 					if (focusedIndex < _.size(flattenedOptionsData) - 1) {
 						event.preventDefault();
-						onFocusOption && onFocusOption(
-							_.findIndex(
-								flattenedOptionsData,
-								isOptionVisible,
-								focusedIndex + 1
-							),
-							{ props, event }
-						);
+						onFocusOption &&
+							onFocusOption(
+								_.findIndex(
+									flattenedOptionsData,
+									isOptionVisible,
+									focusedIndex + 1
+								),
+								{ props, event }
+							);
 					}
 				} else {
 					event.preventDefault();
-					onFocusOption && onFocusOption(
-						_.findIndex(
-							flattenedOptionsData,
-							isOptionVisible,
-							!_.isNil(focusedIndex) ? focusedIndex : undefined
-						),
-						{ props, event }
-					);
+					onFocusOption &&
+						onFocusOption(
+							_.findIndex(
+								flattenedOptionsData,
+								isOptionVisible,
+								!_.isNil(focusedIndex) ? focusedIndex : undefined
+							),
+							{ props, event }
+						);
 				}
 			}
 		} else {
@@ -841,15 +849,14 @@ class DropMenu extends React.Component<IDropMenuPropsWithPassThroughs, IDropMenu
 		return isHidden ? null : (
 			<div
 				key={'DropMenuOption' + optionIndex}
-				{...omitProps(
-					optionProps,
-					undefined,
-					[..._.keys(DropMenu.Option.propTypes), 'Selection']
-				)}
-				onClick={event =>
+				{...omitProps(optionProps, undefined, [
+					..._.keys(DropMenu.Option.propTypes),
+					'Selection',
+				])}
+				onClick={(event) =>
 					this.handleSelectOption(optionIndex, optionProps, event)
 				}
-				onMouseMove={event =>
+				onMouseMove={(event) =>
 					this.handleMouseFocusOption(optionIndex, optionProps, event)
 				}
 				className={cx(
@@ -864,7 +871,7 @@ class DropMenu extends React.Component<IDropMenuPropsWithPassThroughs, IDropMenu
 					},
 					optionProps.className
 				)}
-				ref={optionHTMLElement => {
+				ref={(optionHTMLElement) => {
 					if (isFocused && !isMouseTriggered) {
 						scrollParentTo(
 							optionHTMLElement,
@@ -878,7 +885,9 @@ class DropMenu extends React.Component<IDropMenuPropsWithPassThroughs, IDropMenu
 		);
 	};
 
-	UNSAFE_componentWillReceiveProps = (nextProps: IDropMenuPropsWithPassThroughs) => {
+	UNSAFE_componentWillReceiveProps = (
+		nextProps: IDropMenuPropsWithPassThroughs
+	) => {
 		// only preprocess options data when it changes (via new props) - better performance than doing this each render
 		this.setState(this.getPreprocessedOptionData(nextProps));
 	};
@@ -974,7 +983,7 @@ class DropMenu extends React.Component<IDropMenuPropsWithPassThroughs, IDropMenu
 							className={cx('&-option-container')}
 							style={_.assign({}, flyOutStyle, optionContainerStyle)}
 						>
-							{_.map(nullOptions, optionProps =>
+							{_.map(nullOptions, (optionProps) =>
 								this.renderOption(optionProps, null)
 							).concat(
 								_.isEmpty(nullOptions)
@@ -986,10 +995,12 @@ class DropMenu extends React.Component<IDropMenuPropsWithPassThroughs, IDropMenu
 											/>,
 									  ]
 							)}
-							{// fixed options go first
-							_.map(fixedOptionData, ({ optionProps, optionIndex }) =>
-								this.renderOption(optionProps, optionIndex)
-							)}
+							{
+								// fixed options go first
+								_.map(fixedOptionData, ({ optionProps, optionIndex }) =>
+									this.renderOption(optionProps, optionIndex)
+								)
+							}
 							{joinArray(
 								// for each option group,
 								_.map(

@@ -722,7 +722,7 @@ class LineChart extends React.Component<ILineChartProps, ILineChartState, {}> {
 					xField={xAxisField}
 					yFields={y2AxisFields}
 					yStackedMax={y2AxisMax}
-					data={data || {} as any}
+					data={data || ({} as any)}
 					isStacked={y2AxisIsStacked}
 					colorOffset={y2AxisColorOffset + yAxisFields.length}
 					colorMap={colorMap}
@@ -740,7 +740,7 @@ class LineChart extends React.Component<ILineChartProps, ILineChartState, {}> {
 						xField={xAxisField}
 						yFields={y2AxisFields}
 						yStackedMax={y2AxisMax}
-						data={data || {} as any}
+						data={data || ({} as any)}
 						isStacked={y2AxisIsStacked}
 						colorOffset={y2AxisColorOffset + yAxisFields.length}
 						colorMap={colorMap}
@@ -845,7 +845,7 @@ class LineChart extends React.Component<ILineChartProps, ILineChartState, {}> {
 				// since we're dealing with pixels
 				const point = Math.floor(xScale(d[xAxisField] as any) as any);
 
-				_.each(allYFields, field => {
+				_.each(allYFields, (field) => {
 					_.set(acc, `${point}.y.${field}`, d[field]);
 					_.set(acc, `${point}.x`, d[xAxisField]);
 				});
@@ -878,7 +878,7 @@ class LineChart extends React.Component<ILineChartProps, ILineChartState, {}> {
 		 */
 		let y2Axis = {};
 		let y2AxisLegend: JSX.Element[] | null = null;
-		let y2AxisToolTip: Array<JSX.Element | null>| null = null;
+		let y2AxisToolTip: Array<JSX.Element | null> | null = null;
 		if (y2AxisFields) {
 			const y2Scale = d3Scale
 				.scaleLinear()
@@ -986,8 +986,9 @@ class LineChart extends React.Component<ILineChartProps, ILineChartState, {}> {
 						</g>
 						{/* x axis */}
 						<g
-							transform={`translate(${margin.left}, ${innerHeight +
-								margin.top})`}
+							transform={`translate(${margin.left}, ${
+								innerHeight + margin.top
+							})`}
 						>
 							<Axis
 								orient='bottom'
@@ -1179,7 +1180,7 @@ class LineChart extends React.Component<ILineChartProps, ILineChartState, {}> {
 						xField={xAxisField}
 						yFields={yAxisFields}
 						yStackedMax={yAxisMax}
-						data={data || {} as any}
+						data={data || ({} as any)}
 						isStacked={yAxisIsStacked}
 						colorMap={colorMap}
 						palette={palette}
@@ -1218,7 +1219,7 @@ class LineChart extends React.Component<ILineChartProps, ILineChartState, {}> {
 							className={cx('&-invisible')}
 							width={innerWidth}
 							height={innerHeight}
-							onMouseMove={event => {
+							onMouseMove={(event) => {
 								this.handleToolTipHoverZone(
 									(event as unknown) as {
 										clientX: number;

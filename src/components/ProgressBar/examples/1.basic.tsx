@@ -23,7 +23,7 @@ export default class extends React.Component {
 				<TextField
 					style={style}
 					value={(this.state as any).value}
-					onSubmit={value =>
+					onSubmit={(value) =>
 						this.setState({ percentComplete: value, value: '' })
 					}
 				/>

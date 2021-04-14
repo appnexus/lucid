@@ -37,7 +37,7 @@ const DataInput = ({
 	changeHandler: IChangeHandler;
 }): JSX.Element => {
 	const onChange = useCallback(
-		newYValue => {
+		(newYValue) => {
 			changeHandler(newYValue, xValue);
 		},
 		[changeHandler, xValue]
@@ -50,7 +50,14 @@ const DataInput = ({
 				tabIndex={0}
 				ref={myRef}
 			/>
-			<div style={{ margin: 'auto', textAlign: 'center', width: '95%', marginTop: '15px' }}>
+			<div
+				style={{
+					margin: 'auto',
+					textAlign: 'center',
+					width: '95%',
+					marginTop: '15px',
+				}}
+			>
 				{xValue}
 			</div>
 		</div>
@@ -72,7 +79,7 @@ export default createClass({
 			: +Number(newYValue).toFixed(0);
 		const newCustomSpendDataPoints = _.map(
 			this.state.customSpendDataPoints,
-			dataPoint =>
+			(dataPoint) =>
 				dataPoint.x === xValue ? { ...dataPoint, y: cleanedYValue } : dataPoint
 		);
 		this.setState({ customSpendDataPoints: newCustomSpendDataPoints });
@@ -107,7 +114,7 @@ export default createClass({
 		}: {
 			onChangeHandler: (newYValue: string, xValue: string) => void;
 		},
-		{x, y, ref }: { x: string; y: number; ref?: any }
+		{ x, y, ref }: { x: string; y: number; ref?: any }
 	): JSX.Element {
 		return (
 			<DataInput

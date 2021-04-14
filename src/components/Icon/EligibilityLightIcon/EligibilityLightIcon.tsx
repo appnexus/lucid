@@ -36,18 +36,14 @@ export const EligibilityLightIcon = ({
 			<g>
 				<path
 					className={cx('&-half-circle', {
-						'&-is-selected':
-							eligibility === 'left' ||
-							eligibility === 'both',
+						'&-is-selected': eligibility === 'left' || eligibility === 'both',
 						'&-half-circle-is-disabled': isDisabled,
 					})}
 					d='M6 14.71A7.003 7.003 0 0 1 6 1.29v13.42z'
 				/>
 				<path
 					className={cx('&-half-circle', {
-						'&-is-selected':
-							eligibility === 'right' ||
-							eligibility === 'both',
+						'&-is-selected': eligibility === 'right' || eligibility === 'both',
 						'&-half-circle-is-disabled': isDisabled,
 					})}
 					d='M10 1.29a7.003 7.003 0 0 1 0 13.42V1.29z'

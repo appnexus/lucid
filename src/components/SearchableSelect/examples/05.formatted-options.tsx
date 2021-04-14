@@ -3,7 +3,15 @@ import _ from 'lodash';
 import { SearchableSelect, Underline } from '../../../index';
 
 // eslint-disable-next-line react/prop-types
-const OptionCols = ({ col1, col2, textMatch }: {col1: string, col2: string, textMatch?: string | undefined }) => (
+const OptionCols = ({
+	col1,
+	col2,
+	textMatch,
+}: {
+	col1: string;
+	col2: string;
+	textMatch?: string | undefined;
+}) => (
 	<div style={{ display: 'flex' }}>
 		<div style={{ width: 100 }}>
 			<Underline match={textMatch}>{col1}</Underline>
@@ -14,7 +22,10 @@ const OptionCols = ({ col1, col2, textMatch }: {col1: string, col2: string, text
 	</div>
 );
 
-const optionFilter = (searchText: string, { filterText }: { filterText: string }) => {
+const optionFilter = (
+	searchText: string,
+	{ filterText }: { filterText: string }
+) => {
 	if (filterText) {
 		return new RegExp(_.escapeRegExp(searchText), 'i').test(filterText);
 	}
@@ -29,7 +40,7 @@ export default class extends React.Component {
 					<OptionCols col1='ID' col2='NAME' />
 
 					<SearchableSelect.Option filterText='Foo' Selected='Foo (1234)'>
-						{({ searchText } : { searchText: string }) => (
+						{({ searchText }: { searchText: string }) => (
 							<OptionCols col1='1234' col2='Foo' textMatch={searchText} />
 						)}
 					</SearchableSelect.Option>
@@ -41,7 +52,7 @@ export default class extends React.Component {
 					</SearchableSelect.Option>
 
 					<SearchableSelect.Option filterText='Baz' Selected='Baz (3456)'>
-						{({ searchText } : { searchText: string }) => (
+						{({ searchText }: { searchText: string }) => (
 							<OptionCols col1='3456' col2='Baz' textMatch={searchText} />
 						)}
 					</SearchableSelect.Option>

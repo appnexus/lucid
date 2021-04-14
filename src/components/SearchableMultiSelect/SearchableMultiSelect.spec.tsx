@@ -52,10 +52,7 @@ describe('SearchableMultiSelect', () => {
 				</SearchableMultiSelect>
 			);
 
-			wrapper
-				.find('Selection')
-				.first()
-				.prop('onRemove')({ event: 'nert' });
+			wrapper.find('Selection').first().prop('onRemove')({ event: 'nert' });
 
 			expect(onRemoveAll).toHaveBeenCalled();
 		});
@@ -76,7 +73,7 @@ describe('SearchableMultiSelect', () => {
 						children: 'Zero',
 						isDisabled: false,
 						isHidden: false,
-						isWrapped: true
+						isWrapped: true,
 					},
 				};
 
@@ -102,10 +99,10 @@ describe('SearchableMultiSelect', () => {
 					</SearchableMultiSelect>
 				);
 
-				wrapper
-					.find('DropMenu')
-					.first()
-					.prop('onSelect')(10, mockSelectionCallback);
+				wrapper.find('DropMenu').first().prop('onSelect')(
+					10,
+					mockSelectionCallback
+				);
 
 				expect(onSelect).toHaveBeenCalledWith(9, mockSelectionCallback);
 			});
@@ -124,7 +121,7 @@ describe('SearchableMultiSelect', () => {
 						callbackId: 'custom',
 						isDisabled: false,
 						isHidden: false,
-						isWrapped: true
+						isWrapped: true,
 					},
 				};
 
@@ -135,10 +132,7 @@ describe('SearchableMultiSelect', () => {
 					</SearchableMultiSelect>
 				);
 
-				wrapper
-					.find('Selection')
-					.at(1)
-					.prop('onRemove')(mockSelectionCallback);
+				wrapper.find('Selection').at(1).prop('onRemove')(mockSelectionCallback);
 
 				expect(onSelect).toHaveBeenCalledWith(1, expected);
 			});
@@ -157,10 +151,10 @@ describe('SearchableMultiSelect', () => {
 					</SearchableMultiSelect>
 				);
 
-				wrapper
-					.find('DropMenu')
-					.first()
-					.prop('onSelect')(0, mockSelectionCallback);
+				wrapper.find('DropMenu').first().prop('onSelect')(
+					0,
+					mockSelectionCallback
+				);
 
 				expect(onSelect).toHaveBeenCalledWith([0, 1], mockSelectionCallback);
 			});
@@ -183,10 +177,10 @@ describe('SearchableMultiSelect', () => {
 					</SearchableMultiSelect>
 				);
 
-				wrapper
-					.find('DropMenu')
-					.first()
-					.prop('onSelect')(0, mockSelectionCallback);
+				wrapper.find('DropMenu').first().prop('onSelect')(
+					0,
+					mockSelectionCallback
+				);
 
 				expect(onSelect).toHaveBeenCalledWith([0, 1], mockSelectionCallback);
 			});
@@ -209,10 +203,10 @@ describe('SearchableMultiSelect', () => {
 					</SearchableMultiSelect>
 				);
 
-				wrapper
-					.find('DropMenu')
-					.first()
-					.prop('onSelect')(0, mockSelectionCallback);
+				wrapper.find('DropMenu').first().prop('onSelect')(
+					0,
+					mockSelectionCallback
+				);
 
 				expect(onSelect).toHaveBeenCalledWith([1], mockSelectionCallback);
 			});
@@ -231,10 +225,10 @@ describe('SearchableMultiSelect', () => {
 					</SearchableMultiSelect>
 				);
 
-				wrapper
-					.find('DropMenu')
-					.first()
-					.prop('onSelect')(0, mockSelectionCallback);
+				wrapper.find('DropMenu').first().prop('onSelect')(
+					0,
+					mockSelectionCallback
+				);
 
 				expect(onSelect).toHaveBeenCalledWith([1], mockSelectionCallback);
 			});
@@ -249,7 +243,9 @@ describe('SearchableMultiSelect', () => {
 					</SearchableMultiSelect>
 				);
 
-				const searchWrapper = wrapper.find('.lucid-SearchableMultiSelect-search-is-error');
+				const searchWrapper = wrapper.find(
+					'.lucid-SearchableMultiSelect-search-is-error'
+				);
 
 				expect(searchWrapper.exists()).toBeTruthy();
 			});
@@ -262,7 +258,9 @@ describe('SearchableMultiSelect', () => {
 					</SearchableMultiSelect>
 				);
 
-				const searchWrapper = wrapper.find('.lucid-SearchableMultiSelect-error-content');
+				const searchWrapper = wrapper.find(
+					'.lucid-SearchableMultiSelect-error-content'
+				);
 
 				expect(searchWrapper.text()).toEqual('Erroring out');
 			});
@@ -275,12 +273,16 @@ describe('SearchableMultiSelect', () => {
 					</SearchableMultiSelect>
 				);
 
-				const searchWrapper = wrapper.find('.lucid-SearchableMultiSelect-search-is-error');
-				const errorWrapper = wrapper.find('.lucid-SearchableMultiSelect-error-content');
+				const searchWrapper = wrapper.find(
+					'.lucid-SearchableMultiSelect-search-is-error'
+				);
+				const errorWrapper = wrapper.find(
+					'.lucid-SearchableMultiSelect-error-content'
+				);
 				expect(errorWrapper.exists()).toBeFalsy();
 				expect(searchWrapper).toBeTruthy();
 			});
-		})
+		});
 	});
 
 	describe('custom formatting', () => {

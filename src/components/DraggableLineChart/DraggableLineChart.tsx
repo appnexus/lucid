@@ -10,7 +10,14 @@ import DraggableLineChartD3, {
 const cx = lucidClassNames.bind('&-DraggableLineChart');
 
 const getEmptyRenderProp = (preSelectText: string) => (
-	<div style={{ height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+	<div
+		style={{
+			height: '100%',
+			display: 'flex',
+			alignItems: 'center',
+			justifyContent: 'center',
+		}}
+	>
 		<div className={cx('&-empty-info')}>{preSelectText}</div>
 	</div>
 );

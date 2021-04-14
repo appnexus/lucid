@@ -35,7 +35,7 @@ export default createClass({
 						that the user needs to interact with one of the buttons in the
 						footer to exit the dialog.
 					</div>
-					{_.times(50).map(i => {
+					{_.times(50).map((i) => {
 						return <div key={i}>Body</div>;
 					})}
 					<Dialog.Footer>

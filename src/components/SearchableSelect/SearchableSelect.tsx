@@ -442,7 +442,7 @@ class SearchableSelect extends React.Component<
 				);
 				const visibleChildrenCount = _.filter(
 					childOptions,
-					option => !option.props.isHidden
+					(option) => !option.props.isHidden
 				).length;
 
 				return (
@@ -465,7 +465,7 @@ class SearchableSelect extends React.Component<
 
 		const visibleOptionsCount = _.filter(
 			options,
-			option => !option.props.isHidden
+			(option) => !option.props.isHidden
 		).length;
 
 		return visibleOptionsCount > 0 ? (
@@ -563,7 +563,7 @@ class SearchableSelect extends React.Component<
 											),
 											'props.children'
 									  ) ||
-									  (Children =>
+									  ((Children) =>
 											_.isFunction(Children) ? <Children /> : Children)(
 											flattenedOptionsData[selectedIndex].optionProps.children
 									  )

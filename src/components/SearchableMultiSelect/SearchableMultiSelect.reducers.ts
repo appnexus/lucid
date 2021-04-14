@@ -3,15 +3,22 @@ import * as DropMenu from '../DropMenu/DropMenu.reducers';
 import * as SearchField from '../SearchField/SearchField.reducers';
 import { ISearchableMultiSelectState } from './SearchableMultiSelect';
 
-export function onSelect(state: ISearchableMultiSelectState, selectedIndex: number[] | number): ISearchableMultiSelectState {
-    const arr: number[] = [];
+export function onSelect(
+	state: ISearchableMultiSelectState,
+	selectedIndex: number[] | number
+): ISearchableMultiSelectState {
+	const arr: number[] = [];
 	return {
 		...state,
 		selectedIndices: _.xor(state.selectedIndices, arr.concat(selectedIndex)),
 	};
 }
 
-export function onSearch(state: ISearchableMultiSelectState, searchText: string, firstVisibleIndex: number): ISearchableMultiSelectState {
+export function onSearch(
+	state: ISearchableMultiSelectState,
+	searchText: string,
+	firstVisibleIndex: number
+): ISearchableMultiSelectState {
 	return {
 		...state,
 		searchText,
@@ -21,7 +28,9 @@ export function onSearch(state: ISearchableMultiSelectState, searchText: string,
 	};
 }
 
-export function onRemoveAll(state: ISearchableMultiSelectState): ISearchableMultiSelectState {
+export function onRemoveAll(
+	state: ISearchableMultiSelectState
+): ISearchableMultiSelectState {
 	return {
 		...state,
 		selectedIndices: [],

@@ -39,7 +39,7 @@ const TextFieldPlain = React.forwardRef(
 			return (
 				<textarea
 					ref={ref as React.Ref<HTMLTextAreaElement>}
-					{...props as TextFieldTextareaPlain}
+					{...(props as TextFieldTextareaPlain)}
 					className={className}
 				/>
 			);
@@ -47,7 +47,7 @@ const TextFieldPlain = React.forwardRef(
 			return (
 				<input
 					ref={ref as React.Ref<HTMLInputElement>}
-					{...props as TextFieldInputPlain}
+					{...(props as TextFieldInputPlain)}
 					className={className}
 				/>
 			);

@@ -493,7 +493,7 @@ class SearchableMultiSelect extends React.Component<
 			findTypes(props, SearchableMultiSelect.Option),
 			'props'
 		);
-		const firstVisibleIndex = _.findIndex(options, option => {
+		const firstVisibleIndex = _.findIndex(options, (option) => {
 			return optionFilter(searchText, option);
 		});
 		const firstVisibleProps = options[firstVisibleIndex];
@@ -501,10 +501,11 @@ class SearchableMultiSelect extends React.Component<
 
 		// Just an extra call to make sure the search results show up when a user
 		// is typing
-		onExpand && onExpand({
-			event,
-			props: dropMenuProps,
-		});
+		onExpand &&
+			onExpand({
+				event,
+				props: dropMenuProps,
+			});
 
 		return onSearch(searchText, firstVisibleIndex, {
 			event,
@@ -529,7 +530,9 @@ class SearchableMultiSelect extends React.Component<
 		});
 	}
 
-	UNSAFE_componentWillReceiveProps(nextProps: ISearchableMultiSelectProps): void {
+	UNSAFE_componentWillReceiveProps(
+		nextProps: ISearchableMultiSelectProps
+	): void {
 		// only preprocess options data when it changes (via new props) - better performance than doing this each render
 		const {
 			optionGroups,
@@ -661,13 +664,13 @@ class SearchableMultiSelect extends React.Component<
 					{..._.omit(optionGroupProps, 'children', 'Selected')}
 				>
 					{optionGroupProps.children}
-					{_.map(optionGroupDataLookup[optionGroupIndex], option =>
+					{_.map(optionGroupDataLookup[optionGroupIndex], (option) =>
 						this.renderOption(option)
 					)}
 				</DropMenu.OptionGroup>
 			)).concat(
 				// then render all the ungrouped options at the end
-				_.map(ungroupedOptionData, option => this.renderOption(option))
+				_.map(ungroupedOptionData, (option) => this.renderOption(option))
 			)
 		);
 
@@ -883,7 +886,7 @@ class SearchableMultiSelect extends React.Component<
 									return null;
 								}
 							)}
-							{_.map(selectedIndices, selectedIndex => {
+							{_.map(selectedIndices, (selectedIndex) => {
 								const selectedUngroupedOptionData = _.find(
 									ungroupedOptionData,
 									{

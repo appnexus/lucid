@@ -17,15 +17,17 @@ export default createClass({
 			<div>
 				<Tag>
 					Grouped items
-					{_.times(8, n => (
+					{_.times(8, (n) => (
 						<Tag key={n}>{words[n % words.length]}</Tag>
 					))}
 				</Tag>
 
 				<Tag isRemovable>
 					Grouped items
-					{_.times(10, n => (
-						<Tag isRemovable key={n}>{words[n % words.length]}</Tag>
+					{_.times(10, (n) => (
+						<Tag isRemovable key={n}>
+							{words[n % words.length]}
+						</Tag>
 					))}
 				</Tag>
 			</div>

@@ -36,7 +36,10 @@ describe('ContextMenu', () => {
 					</ContextMenu>
 				);
 
-				assert.equal((document as any).getElementById('ContextMenu-test123'), null);
+				assert.equal(
+					(document as any).getElementById('ContextMenu-test123'),
+					null
+				);
 			});
 
 			it('should render the flyout when true', () => {
@@ -66,7 +69,7 @@ describe('ContextMenu', () => {
 				assert(_.isEmpty(flyout.style.opacity));
 			});
 
-			it('should render the flyout with opacity 1 on subsequent render', done => {
+			it('should render the flyout with opacity 1 on subsequent render', (done) => {
 				wrapper = mount(
 					<ContextMenu portalId='ContextMenu-test456' isExpanded>
 						<ContextMenu.Target>File</ContextMenu.Target>
@@ -84,30 +87,33 @@ describe('ContextMenu', () => {
 		});
 
 		describe('direction', () => {
-			_.forEach(['up' as const, 'down' as const, 'left' as const, 'right' as const], direction => {
-				it(`should apply the 'lucid-ContextMenu-FlyOut-${direction}' className when '${direction}'`, () => {
-					wrapper = mount(
-						<ContextMenu
-							portalId='ContextMenu-test123'
-							isExpanded
-							direction={direction}
-						>
-							<ContextMenu.Target>File</ContextMenu.Target>
-							<ContextMenu.FlyOut>Open</ContextMenu.FlyOut>
-						</ContextMenu>
-					);
+			_.forEach(
+				['up' as const, 'down' as const, 'left' as const, 'right' as const],
+				(direction) => {
+					it(`should apply the 'lucid-ContextMenu-FlyOut-${direction}' className when '${direction}'`, () => {
+						wrapper = mount(
+							<ContextMenu
+								portalId='ContextMenu-test123'
+								isExpanded
+								direction={direction}
+							>
+								<ContextMenu.Target>File</ContextMenu.Target>
+								<ContextMenu.FlyOut>Open</ContextMenu.FlyOut>
+							</ContextMenu>
+						);
 
-					const flyOutPortalDomNode = (document as any).getElementById(
-						'ContextMenu-test123'
-					);
+						const flyOutPortalDomNode = (document as any).getElementById(
+							'ContextMenu-test123'
+						);
 
-					assert(
-						flyOutPortalDomNode.querySelector(
-							`.lucid-ContextMenu-FlyOut-${direction}`
-						)
-					);
-				});
-			});
+						assert(
+							flyOutPortalDomNode.querySelector(
+								`.lucid-ContextMenu-FlyOut-${direction}`
+							)
+						);
+					});
+				}
+			);
 		});
 
 		describe('portalId', () => {
@@ -159,7 +165,9 @@ describe('ContextMenu', () => {
 				);
 
 				testSection.querySelector('.lucid-ContextMenu').click();
-				(document as any).body.querySelector('.lucid-ContextMenu-FlyOut').click();
+				(document as any).body
+					.querySelector('.lucid-ContextMenu-FlyOut')
+					.click();
 
 				assert(onClickOut.notCalled);
 			});

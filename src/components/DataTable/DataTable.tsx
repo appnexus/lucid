@@ -22,14 +22,22 @@ const cx = lucidClassNames.bind('&-DataTable');
 const cxe = lucidClassNames.bind('&-DataTable-EmptyStateWrapper');
 const SELECTOR_COLUMN_WIDTH = 41;
 
-const { any, func, number, object, string: stringProps, bool, arrayOf } = PropTypes;
+const {
+	any,
+	func,
+	number,
+	object,
+	string: stringProps,
+	bool,
+	arrayOf,
+} = PropTypes;
 
-interface IDataTableProps extends ITableProps,
-	React.DetailedHTMLProps<
-	React.HTMLAttributes<HTMLDivElement>,
-	HTMLDivElement
-> {
-
+interface IDataTableProps
+	extends ITableProps,
+		React.DetailedHTMLProps<
+			React.HTMLAttributes<HTMLDivElement>,
+			HTMLDivElement
+		> {
 	/*
 	 * 	Array of objects to be rendered in the table. Object keys match the
 	 * 	\`field\` of each defined \`DataTable.Column\`.
@@ -229,18 +237,15 @@ export const DataTable = (props: IDataTableProps) => {
 	};
 
 	const handleFixedBodyUnfixedColumnsScroll = (event: any) => {
-		fixedHeaderUnfixedColumnsRef && (fixedHeaderUnfixedColumnsRef.scrollLeft = event.target.scrollLeft);
-		fixedBodyFixedColumnsRef && (fixedBodyFixedColumnsRef.scrollTop = event.target.scrollTop);
+		fixedHeaderUnfixedColumnsRef &&
+			(fixedHeaderUnfixedColumnsRef.scrollLeft = event.target.scrollLeft);
+		fixedBodyFixedColumnsRef &&
+			(fixedBodyFixedColumnsRef.scrollTop = event.target.scrollTop);
 	};
 
-	const handleResize = (
-		columnWidth: any,
-		{
-			props: { field },
-		}: any
-	) => {
+	const handleResize = (columnWidth: any, { props: { field } }: any) => {
 		// setting latest column width to Tbody
-		setState(state => ({
+		setState((state) => ({
 			activeWidth: {
 				...state.activeWidth,
 				[field]: columnWidth,
@@ -258,13 +263,12 @@ export const DataTable = (props: IDataTableProps) => {
 
 		const hasGroupedColumns = _.some(
 			childComponentElements,
-			childComponentElement =>
+			(childComponentElement) =>
 				childComponentElement.type === DataTable.ColumnGroup
 		);
 
-		const columnSlicer = _.flow(
-			_.compact,
-			columns => _.slice(columns, startColumn, endColumn)
+		const columnSlicer = _.flow(_.compact, (columns) =>
+			_.slice(columns, startColumn, endColumn)
 		);
 		const allSelected = _.every(data, 'isSelected');
 
@@ -293,11 +297,11 @@ export const DataTable = (props: IDataTableProps) => {
 							_.map(childComponentElements, ({ props, type }, index) =>
 								type === DataTable.Column ? (
 									<Th
-										onResize={props.isResizable ? handleResize as any : null}
+										onResize={props.isResizable ? (handleResize as any) : null}
 										{..._.omit(props, ['children', 'title'])}
 										onClick={
 											DataTable.shouldColumnHandleSort(props)
-												? _.partial(handleSort, props.field) as any
+												? (_.partial(handleSort, props.field) as any)
 												: null
 										}
 										rowSpan={hasGroupedColumns ? 2 : null}
@@ -308,16 +312,16 @@ export const DataTable = (props: IDataTableProps) => {
 										{props.title || props.children}
 									</Th>
 								) : (
-										<Th
-											colSpan={_.size(
-												filterTypes(props.children, DataTable.Column)
-											)}
-											{..._.omit(props, ['field', 'children', 'width', 'title'])}
-											key={_.get(props, 'field', index)}
-										>
-											{props.title || props.children}
-										</Th>
-									)
+									<Th
+										colSpan={_.size(
+											filterTypes(props.children, DataTable.Column)
+										)}
+										{..._.omit(props, ['field', 'children', 'width', 'title'])}
+										key={_.get(props, 'field', index)}
+									>
+										{props.title || props.children}
+									</Th>
+								)
 							)
 						)
 					)}
@@ -331,26 +335,29 @@ export const DataTable = (props: IDataTableProps) => {
 									_.isNull(columnGroupProps)
 										? []
 										: [
-											<Th
-												{...omitProps(
-													columnProps,
-													undefined,
-													_.keys(DataTable.Column.propTypes),
-													false
-												)}
-												onClick={
-													DataTable.shouldColumnHandleSort(columnProps)
-														? _.partial(handleSort, columnProps.field) as any
-														: null
-												}
-												style={{
-													width: columnProps.width,
-												}}
-												key={_.get(columnProps, 'field', index)}
-											>
-												{columnProps.title || columnProps.children}
-											</Th>,
-										]
+												<Th
+													{...omitProps(
+														columnProps,
+														undefined,
+														_.keys(DataTable.Column.propTypes),
+														false
+													)}
+													onClick={
+														DataTable.shouldColumnHandleSort(columnProps)
+															? (_.partial(
+																	handleSort,
+																	columnProps.field
+															  ) as any)
+															: null
+													}
+													style={{
+														width: columnProps.width,
+													}}
+													key={_.get(columnProps, 'field', index)}
+												>
+													{columnProps.title || columnProps.children}
+												</Th>,
+										  ]
 								),
 							[]
 						)}
@@ -360,7 +367,11 @@ export const DataTable = (props: IDataTableProps) => {
 		);
 	};
 
-	const renderBody = (startColumn: any, endColumn: any, flattenedColumns: any) => {
+	const renderBody = (
+		startColumn: any,
+		endColumn: any,
+		flattenedColumns: any
+	) => {
 		const {
 			data,
 			isSelectable,
@@ -368,14 +379,13 @@ export const DataTable = (props: IDataTableProps) => {
 			minRows,
 			emptyCellText,
 			fixedRowHeight,
-			truncateContent
+			truncateContent,
 		} = props;
 
 		const fillerRowCount = _.clamp(minRows - _.size(data), 0, Infinity);
 		const isFixedColumn = endColumn < Infinity;
-		const columnSlicer = _.flow(
-			_.compact,
-			columns => _.slice(columns, startColumn, endColumn)
+		const columnSlicer = _.flow(_.compact, (columns) =>
+			_.slice(columns, startColumn, endColumn)
 		);
 
 		return (
@@ -429,14 +439,14 @@ export const DataTable = (props: IDataTableProps) => {
 													!_.isNil(columnProps.hasBorderRight)
 														? columnProps.hasBorderRight
 														: isFixedColumn &&
-														columnIndex + 1 + (isSelectable ? 1 : 0) ===
-														endColumn
+														  columnIndex + 1 + (isSelectable ? 1 : 0) ===
+																endColumn
 												}
 												style={{
 													width:
 														// @ts-ignore
 														state.activeWidth[
-														columnProps.field || columnIndex
+															columnProps.field || columnIndex
 														] || columnProps.width,
 												}}
 												key={
@@ -455,7 +465,7 @@ export const DataTable = (props: IDataTableProps) => {
 						)}
 					</Tr>
 				))}
-				{_.times(fillerRowCount, index => (
+				{_.times(fillerRowCount, (index) => (
 					<Tr
 						isDisabled
 						key={'row' + index}
@@ -537,11 +547,11 @@ export const DataTable = (props: IDataTableProps) => {
 		props,
 		DataTable.EmptyStateWrapper
 	) || (
-			<DataTable.EmptyStateWrapper
-				Title='No items found.'
-				Body='Try creating a new object or removing a filter.'
-			/>
-		);
+		<DataTable.EmptyStateWrapper
+			Title='No items found.'
+			Body='Try creating a new object or removing a filter.'
+		/>
+	);
 
 	const emptyStateWrapperClassName = cxe(
 		{
@@ -565,7 +575,12 @@ export const DataTable = (props: IDataTableProps) => {
 						<div className={cx('&-fixed-header-fixed-columns')}>
 							{fixedColumnCount > 0 ? (
 								<Table
-									{...omitProps(passThroughs, undefined, _.keys(DataTable.propTypes), false)}
+									{...omitProps(
+										passThroughs,
+										undefined,
+										_.keys(DataTable.propTypes),
+										false
+									)}
 									style={style}
 									className={cx('&-fixed-header-fixed-columns-Table')}
 								>
@@ -580,10 +595,15 @@ export const DataTable = (props: IDataTableProps) => {
 						</div>
 						<div
 							className={cx('&-fixed-header-unfixed-columns')}
-							ref={ref => (fixedHeaderUnfixedColumnsRef = ref)}
+							ref={(ref) => (fixedHeaderUnfixedColumnsRef = ref)}
 						>
 							<Table
-								{...omitProps(passThroughs, undefined, _.keys(DataTable.propTypes), false)}
+								{...omitProps(
+									passThroughs,
+									undefined,
+									_.keys(DataTable.propTypes),
+									false
+								)}
 								style={style}
 								className={cx('&-fixed-header-unfixed-columns-Table')}
 							>
@@ -599,11 +619,16 @@ export const DataTable = (props: IDataTableProps) => {
 					<div className={cx('&-fixed-body')}>
 						<div
 							className={cx('&-fixed-body-fixed-columns')}
-							ref={ref => (fixedBodyFixedColumnsRef = ref)}
+							ref={(ref) => (fixedBodyFixedColumnsRef = ref)}
 						>
 							{fixedColumnCount > 0 ? (
 								<Table
-									{...omitProps(passThroughs, undefined, _.keys(DataTable.propTypes), false)}
+									{...omitProps(
+										passThroughs,
+										undefined,
+										_.keys(DataTable.propTypes),
+										false
+									)}
 									style={style}
 									className={cx('&-fixed-body-fixed-columns-Table')}
 									hasWordWrap={
@@ -620,47 +645,48 @@ export const DataTable = (props: IDataTableProps) => {
 						>
 							<span className={cx('&-fixed-body-unfixed-columns-shadow')} />
 							<Table
-								{...omitProps(passThroughs, undefined, _.keys(DataTable.propTypes), false)}
+								{...omitProps(
+									passThroughs,
+									undefined,
+									_.keys(DataTable.propTypes),
+									false
+								)}
 								style={style}
 								className={cx('&-fixed-body-unfixed-columns-Table')}
 								hasWordWrap={
 									false /* try to protect against vertical overflow */
 								}
 							>
-								{renderBody(
-									fixedColumnCount,
-									Infinity,
-									flattenedColumns
-								)}
+								{renderBody(fixedColumnCount, Infinity, flattenedColumns)}
 							</Table>
 						</div>
 					</div>
 				</div>
 			) : (
-					<ScrollTable
-						style={style}
-						tableWidth={isFullWidth ? '100%' : undefined}
-						{...omitProps(passThroughs, undefined, _.keys(DataTable.propTypes), false)}
-						className={cx(
-							'&',
-							{
-								'&-full-width': isFullWidth,
-							},
-							className
-						)}
-					>
-						{renderHeader(
-							0,
-							Infinity,
-							childComponentElements,
-							flattenedColumns
-						)}
-						{renderBody(0, Infinity, flattenedColumns)}
-					</ScrollTable>
-				)}
+				<ScrollTable
+					style={style}
+					tableWidth={isFullWidth ? '100%' : undefined}
+					{...omitProps(
+						passThroughs,
+						undefined,
+						_.keys(DataTable.propTypes),
+						false
+					)}
+					className={cx(
+						'&',
+						{
+							'&-full-width': isFullWidth,
+						},
+						className
+					)}
+				>
+					{renderHeader(0, Infinity, childComponentElements, flattenedColumns)}
+					{renderBody(0, Infinity, flattenedColumns)}
+				</ScrollTable>
+			)}
 		</EmptyStateWrapper>
 	);
-}
+};
 
 DataTable.displayName = 'DataTable';
 
@@ -846,7 +872,9 @@ interface IColumnProps extends IThProps {
 
 // type IColumnProps = Overwrite<typeof Th, IColumnPropsRaw>;
 
-const Column = (props: IColumnProps) => { return null; }
+const Column = (props: IColumnProps) => {
+	return null;
+};
 
 Column.displayName = 'DataTable.Column';
 
@@ -869,7 +897,9 @@ interface IColumnGroupProps {
 	title?: string;
 }
 
-const ColumnGroup = ({ children }: IColumnGroupProps) => { return children; }
+const ColumnGroup = ({ children }: IColumnGroupProps) => {
+	return children;
+};
 
 ColumnGroup.displayName = 'DataTable.ColumnGroup';
 
@@ -885,7 +915,7 @@ ColumnGroup.propTypes = {
 
 ColumnGroup.defaultProps = {
 	align: 'center',
-}
+};
 
 DataTable.ColumnGroup = ColumnGroup;
 

@@ -62,10 +62,7 @@ describe('VerticalTabs', () => {
 
 			assert.equal(wrapper.find('.lucid-VerticalTabs-Tab').length, 2);
 			assert.equal(
-				wrapper
-					.find('.lucid-VerticalTabs-Tab-is-active')
-					.children()
-					.text(),
+				wrapper.find('.lucid-VerticalTabs-Tab-is-active').children().text(),
 				'Coolest'
 			);
 			assert.equal(wrapper.find('.lucid-VerticalTabs-content').text(), 'Bert');
@@ -80,11 +77,7 @@ describe('VerticalTabs', () => {
 			);
 
 			assert.equal(
-				wrapper
-					.find('.lucid-VerticalTabs-Tab')
-					.first()
-					.children()
-					.text(),
+				wrapper.find('.lucid-VerticalTabs-Tab').first().children().text(),
 				'Froyo'
 			);
 		});
@@ -101,11 +94,7 @@ describe('VerticalTabs', () => {
 			);
 
 			assert.equal(
-				wrapper
-					.find('.lucid-VerticalTabs-Tab')
-					.first()
-					.children()
-					.text(),
+				wrapper.find('.lucid-VerticalTabs-Tab').first().children().text(),
 				'Froyo'
 			);
 		});
@@ -119,10 +108,7 @@ describe('VerticalTabs', () => {
 			);
 
 			assert.equal(
-				wrapper
-					.find('.lucid-VerticalTabs-Tab-is-active')
-					.children()
-					.text(),
+				wrapper.find('.lucid-VerticalTabs-Tab-is-active').children().text(),
 				'Slurpee'
 			);
 			assert.equal(wrapper.find('.lucid-VerticalTabs-content').text(), 'Yum');
@@ -139,10 +125,7 @@ describe('VerticalTabs', () => {
 			);
 
 			assert.equal(
-				wrapper
-					.find('.lucid-VerticalTabs-Tab-is-active')
-					.children()
-					.text(),
+				wrapper.find('.lucid-VerticalTabs-Tab-is-active').children().text(),
 				'Slurpee'
 			);
 			assert.equal(wrapper.find('.lucid-VerticalTabs-content').text(), 'Yum');
@@ -162,10 +145,7 @@ describe('VerticalTabs', () => {
 			);
 
 			assert.equal(
-				wrapper
-					.find('.lucid-VerticalTabs-Tab-is-active')
-					.children()
-					.text(),
+				wrapper.find('.lucid-VerticalTabs-Tab-is-active').children().text(),
 				'Three'
 			);
 			assert.equal(
@@ -189,10 +169,7 @@ describe('VerticalTabs', () => {
 			});
 
 			it('should pass props onto `VerticalListMenu`', () => {
-				wrapper
-					.find(VerticalListMenu)
-					.props()
-					.onSelect('stuff');
+				wrapper.find(VerticalListMenu).props().onSelect('stuff');
 				assert(onSelect.called);
 				assert.equal(onSelect.args[0], 'stuff');
 			});

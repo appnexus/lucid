@@ -21,7 +21,7 @@ const defaultState = {
 	_labelKey: 0,
 };
 
-interface ISwitchLabeledProps	extends StandardProps {
+interface ISwitchLabeledProps extends StandardProps {
 	isDisabled: boolean;
 	isSelected: boolean;
 	onSelect: any;
@@ -41,18 +41,15 @@ const SwitchLabeled = (props: ISwitchLabeledProps) => {
 
 	const currentLabel = _.get(
 		getFirst(props, SwitchLabeled.Label),
-			'props.children',
+		'props.children',
 		null
 	);
 
 	useEffect(() => {
 		setState({ _labelKey: state._labelKey + 1 });
-	}, [currentLabel])
+	}, [currentLabel]);
 
-	const labelChildProps = _.get(
-		getFirst(props, SwitchLabeled.Label),
-		'props'
-	);
+	const labelChildProps = _.get(getFirst(props, SwitchLabeled.Label), 'props');
 
 	const isShown = !!labelChildProps;
 
@@ -73,7 +70,12 @@ const SwitchLabeled = (props: ISwitchLabeledProps) => {
 				isDisabled={isDisabled}
 				isSelected={isSelected}
 				onSelect={onSelect}
-				{...omitProps(passThroughs, undefined, _.keys(SwitchLabeled.propTypes), false)}
+				{...omitProps(
+					passThroughs,
+					undefined,
+					_.keys(SwitchLabeled.propTypes),
+					false
+				)}
 			/>
 			{labelChildProps && (
 				<CSSTransition
@@ -90,8 +92,8 @@ const SwitchLabeled = (props: ISwitchLabeledProps) => {
 				</CSSTransition>
 			)}
 		</label>
-	)
-}
+	);
+};
 
 SwitchLabeled.defaultProps = defaultProps;
 
@@ -106,7 +108,9 @@ SwitchLabeled.peek = {
 	madeFrom: ['Switch'],
 };
 
-const Label = () => { return null; }
+const Label = () => {
+	return null;
+};
 
 Label.displayName = 'SwitchLabeled.Label';
 
@@ -142,6 +146,6 @@ SwitchLabeled.propTypes = {
 		Child element whose children are used to identify the purpose of this
 		switch to the user.
 	`,
-}
+};
 
 export default SwitchLabeled;

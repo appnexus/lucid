@@ -6,7 +6,7 @@ export default createClass({
 	render() {
 		return (
 			<Resizer>
-				{width => {
+				{(width) => {
 					const responsiveMode = width >= 400 ? 'large' : 'small';
 
 					return (
@@ -48,10 +48,7 @@ export default createClass({
 							</div>
 
 							<div style={{ margin: '10px' }}>
-								<Selection
-									responsiveMode={responsiveMode}
-									Label='Default'
-								/>
+								<Selection responsiveMode={responsiveMode} Label='Default' />
 							</div>
 
 							<div style={{ margin: '10px' }}>

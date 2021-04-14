@@ -17,7 +17,6 @@ const lucidTheme = create({
 
 	appBg: 'white',
 	appContentBg: 'white',
-
 });
 
 addParameters({

@@ -147,7 +147,7 @@ const ResponsiveGridWrapper = (props: IResponsiveGridWrapperProps) => {
 				false
 			)}
 		>
-			{width => {
+			{(width) => {
 				return (
 					<ResponsiveGrid width={width} breakPoints={breakPoints}>
 						{children}

@@ -19,7 +19,7 @@ export enum ElementTypes {
 	code = 'code',
 	kbd = 'kbd',
 	samp = 'samp',
-	span = 'span'
+	span = 'span',
 }
 
 export interface ITypographyProps

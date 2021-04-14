@@ -47,7 +47,7 @@ export default createClass({
 					offset={this.state.offset}
 					onSwipe={this.handleSwipe}
 				>
-					{slideOffset => (
+					{(slideOffset) => (
 						<div
 							style={{
 								width: '100%',

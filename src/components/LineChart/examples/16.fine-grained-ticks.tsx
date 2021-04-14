@@ -21,7 +21,7 @@ export default createClass({
 					data={data}
 					width={800}
 					xAxisTicks={_.map(data, 'x')}
-					xAxisFormatter={date => date.toLocaleDateString()}
+					xAxisFormatter={(date) => date.toLocaleDateString()}
 				/>
 			</div>
 		);

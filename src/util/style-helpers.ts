@@ -14,12 +14,15 @@ const RANDOM_INTEGER = _.random(0, Number.MAX_SAFE_INTEGER);
  *   bindClassNames('lucid')('&-Button') === 'lucid-Button'
  *   bindClassNames('lucid').bind('&-Button')('&-active') === 'lucid-Button-active'
  */
-export function bindClassNames(value: string = '', variable: RegExp | string = /&/g) {
+export function bindClassNames(
+	value: string = '',
+	variable: RegExp | string = /&/g
+) {
 	// We left `any` here because the classNames @types package doesn't export
 	// the right types for us to be able to use. It accepts a fairly wide range
 	// of input.
 	function cx(...args: any[]) {
-		return _.map(classNames(...args).split(' '), className =>
+		return _.map(classNames(...args).split(' '), (className) =>
 			className.replace(variable, value)
 		).join(' ');
 	}

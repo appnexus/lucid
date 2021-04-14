@@ -2,7 +2,11 @@ import _ from 'lodash';
 import React, { PureComponent } from 'react';
 import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import { Collection, extractFields, stackByFields } from '../../util/chart-helpers';
+import {
+	Collection,
+	extractFields,
+	stackByFields,
+} from '../../util/chart-helpers';
 import { omitProps, StandardProps } from '../../util/component-types';
 import * as d3Scale from 'd3-scale';
 import * as chartConstants from '../../constants/charts';
@@ -79,9 +83,9 @@ interface IBarsProps extends StandardProps, React.SVGProps<SVGGElement> {
 	 */
 	//xScale: (x: string) => number | undefined;
 	xScale:
-	| d3Scale.ScaleBand<string>
-	| d3Scale.ScaleBand<number>
-	| d3Scale.ScalePoint<string>;
+		| d3Scale.ScaleBand<string>
+		| d3Scale.ScaleBand<number>
+		| d3Scale.ScalePoint<string>;
 
 	/** The field we should look up your x data by.*/
 	xField: string;
@@ -94,9 +98,9 @@ interface IBarsProps extends StandardProps, React.SVGProps<SVGGElement> {
 	 * Lucid exposes the \`lucid.d3Scale\` library for use here.
 	 * */
 	yScale:
-	| d3Scale.ScaleBand<string | number>
-	| d3Scale.ScalePoint<string | number>
-	| d3Scale.ScaleLinear<number, number>;
+		| d3Scale.ScaleBand<string | number>
+		| d3Scale.ScalePoint<string | number>
+		| d3Scale.ScaleLinear<number, number>;
 
 	/** The field(s) we should look up your y data by.
 	 * Each entry represents a series.
@@ -390,7 +394,7 @@ export class Bars extends PureComponent<IBarsProps, IBarsState> {
 			yScale.domain([
 				yScale.domain()[0] as any,
 				//@ts-ignore
-				yStackedMax || _.max(_.map(transformedData, x => _.last(_.last(x)))),
+				yStackedMax || _.max(_.map(transformedData, (x) => _.last(_.last(x)))),
 			]);
 		}
 
@@ -406,11 +410,11 @@ export class Bars extends PureComponent<IBarsProps, IBarsState> {
 								key={pointsIndex}
 								x={
 									isStacked
-										// @ts-ignore
-										? xScale(data[seriesIndex][xField])
+										? // @ts-ignore
+										  xScale(data[seriesIndex][xField])
 										: // prettier-ignore
-										// @ts-ignore
-										innerXScale(pointsIndex) +
+										  // @ts-ignore
+										  innerXScale(pointsIndex) +
 										// prettier-ignore
 										// @ts-ignore
 										xScale(data[seriesIndex][xField] as any)
@@ -431,11 +435,11 @@ export class Bars extends PureComponent<IBarsProps, IBarsState> {
 							height={
 								isStacked
 									? // prettier-ignore
-									//@ts-ignore
-									yScale.range()[0] - yScale(_.last(series)[1])
+									  //@ts-ignore
+									  yScale.range()[0] - yScale(_.last(series)[1])
 									: // prettier-ignore
-									//@ts-ignore
-									yScale.range()[0] - yScale(_.max(_.flatten(series)))
+									  //@ts-ignore
+									  yScale.range()[0] - yScale(_.max(_.flatten(series)))
 							}
 							width={xScale.bandwidth()}
 							// @ts-ignore
@@ -476,8 +480,8 @@ export interface IPureToolTipsProps extends StandardProps {
 	//onMouseEnter: (event: MouseEvent<SVGRectElement, MouseEvent>) => void
 
 	onMouseOut?:
-	| ((event: React.MouseEvent<SVGRectElement, MouseEvent>) => void)
-	| undefined;
+		| ((event: React.MouseEvent<SVGRectElement, MouseEvent>) => void)
+		| undefined;
 
 	xFormatter: (d: Date, seriesIndex: number) => string;
 

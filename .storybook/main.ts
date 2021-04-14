@@ -20,8 +20,8 @@ module.exports = {
 					loader: 'ts-loader',
 					options: {
 						configFile: '../tsconfig.json',
-						transpileOnly: true
-					}
+						transpileOnly: true,
+					},
 				},
 			],
 		});
@@ -40,16 +40,16 @@ module.exports = {
 				/reducers.ts/,
 				/selectors.ts/,
 				/queries.ts/,
-				/constants.ts/
+				/constants.ts/,
 			],
 			use: [
 				{
-					// loader: 'ts-loader', 
+					// loader: 'ts-loader',
 					loader: 'ts-loader',
 					options: {
 						configFile: '../tsconfig.json',
 						transpileOnly: true,
-					}
+					},
 				},
 				{
 					loader: 'react-docgen-typescript-loader',
@@ -98,13 +98,13 @@ module.exports = {
 			loader: 'ts-loader',
 			options: {
 				configFile: '../tsconfig.json',
-				transpileOnly: true
-			}
+				transpileOnly: true,
+			},
 		});
 
 		config.resolve.extensions.push('.ts');
 		config.resolve.extensions.push('.tsx');
 
 		return config;
-	}
-}
+	},
+};

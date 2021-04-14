@@ -8,7 +8,7 @@ export const isDevMode = (function isReactInDev() {
 
 export const isNode = typeof process === 'object' && process.title === 'node';
 
-export const logger = (function() {
+export const logger = (function () {
 	return checkIsDev()
 		? {
 				log,

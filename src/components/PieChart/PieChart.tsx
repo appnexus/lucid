@@ -141,7 +141,10 @@ export interface IPieChartPropsRaw extends StandardProps {
 	yAxisFormatter: (y: number) => string | number;
 }
 
-export type IPieChartProps = Overwrite<React.SVGProps<SVGGElement>, IPieChartPropsRaw>;
+export type IPieChartProps = Overwrite<
+	React.SVGProps<SVGGElement>,
+	IPieChartPropsRaw
+>;
 
 const defaultProps = {
 	height: 200,
@@ -243,10 +246,7 @@ const PieChart = (props: IPieChartProps) => {
 		.outerRadius(outerRadius);
 
 	// Useful for capturing hovers when we're in donut mode
-	const arcFull = d3Shape
-		.arc()
-		.innerRadius(0)
-		.outerRadius(outerRadius);
+	const arcFull = d3Shape.arc().innerRadius(0).outerRadius(outerRadius);
 
 	const handleMouseOut = ({ event }: { event: React.MouseEvent }): void => {
 		props.onMouseOut({
@@ -306,7 +306,7 @@ const PieChart = (props: IPieChartProps) => {
 											d={arcData}
 											color={_.get(
 												colorMap,
-												data && data[index][xAxisField] || '', 
+												(data && data[index][xAxisField]) || '',
 												palette[index % palette.length]
 											)}
 											transform={`scale(${

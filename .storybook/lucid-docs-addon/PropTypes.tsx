@@ -36,7 +36,7 @@ const compile = marksy({
 			</SyntaxHighlighter>
 		),
 	elements: {
-		p: props => <p {...props} style={{ margin: '4px 0' }} />,
+		p: (props) => <p {...props} style={{ margin: '4px 0' }} />,
 	},
 });
 
@@ -208,14 +208,16 @@ const PropsList = ({ showIndex, showTopLinks, props }) => {
 	return (
 		<section>
 			{showIndex && [
-				showTopLinks ? <a className="top" /> : null,
-				<ul key="propsIndex" style={style.ul}>
+				showTopLinks ? <a className='top' /> : null,
+				<ul key='propsIndex' style={style.ul}>
 					{_.map(
 						sortedProps,
 						({ name, type, isRequired, defaultValue, text }) => (
 							<li key={name} style={style.li}>
 								<a
-									style={{ ...style.a, ...style.propName, ...style.propLink } as any}
+									style={
+										{ ...style.a, ...style.propName, ...style.propLink } as any
+									}
 									href={`#${name}`}
 								>
 									<span style={style.hashSymbol}>#</span>
@@ -228,7 +230,7 @@ const PropsList = ({ showIndex, showTopLinks, props }) => {
 						)
 					)}
 				</ul>,
-				<hr key="propsIndexDivider" style={style.divider} />,
+				<hr key='propsIndexDivider' style={style.divider} />,
 			]}
 			{_.map(
 				sortedProps,
@@ -250,7 +252,7 @@ const PropsList = ({ showIndex, showTopLinks, props }) => {
 								<div>
 									<span style={style.defaultValueLabel}>default:</span>
 									<SyntaxHighlighter
-										language="json"
+										language='json'
 										style={coy}
 										customStyle={{
 											fontSize: 12,
@@ -261,12 +263,11 @@ const PropsList = ({ showIndex, showTopLinks, props }) => {
 									</SyntaxHighlighter>
 								</div>
 							)}
-							{showIndex &&
-								showTopLinks && (
-									<a style={{ ...style.a, ...style.top } as any} href="#top">
-										top
-									</a>
-								)}
+							{showIndex && showTopLinks && (
+								<a style={{ ...style.a, ...style.top } as any} href='#top'>
+									top
+								</a>
+							)}
 						</div>
 					</span>
 				)

@@ -4,7 +4,15 @@ import * as d3Array from 'd3-array';
 import ReactDOM from 'react-dom';
 import { IData } from './DraggableLineChartD3';
 
-export type IXAxisRenderProp = ({x, y, ref }: { x: string; y: number; ref?: any }) => JSX.Element;
+export type IXAxisRenderProp = ({
+	x,
+	y,
+	ref,
+}: {
+	x: string;
+	y: number;
+	ref?: any;
+}) => JSX.Element;
 export type ISelection = Selection<SVGElement | any, {} | any, null, undefined>;
 
 const getGroup = (selection: ISelection, className: string): ISelection => {
@@ -22,10 +30,7 @@ const getGroups = (
 	const selectionGroup = selection.selectAll(`.${className}`);
 	if (selectionGroup.empty()) {
 		const xAxisGroup = selectionGroup.data(dataset).order();
-		return xAxisGroup
-			.enter()
-			.append('g')
-			.classed(className, true);
+		return xAxisGroup.enter().append('g').classed(className, true);
 	}
 	return selectionGroup;
 };
@@ -141,9 +146,9 @@ const lucidXAxis = (
 		const tickRender = getTickRender(tickObj, (rMax - rMin) / domainLength);
 		tickRender.html((xValue: any, num: any, node: any) => {
 			if (xValue !== '' && !_.isNil(xValue)) {
-				const subData = _.find(data, { x: xValue }) || { y: 0, ref: undefined};
+				const subData = _.find(data, { x: xValue }) || { y: 0, ref: undefined };
 				ReactDOM.render(
-					xAxisRenderProp({ x: xValue, y: subData.y, ref: subData.ref}),
+					xAxisRenderProp({ x: xValue, y: subData.y, ref: subData.ref }),
 					node[0]
 				);
 			} else return xValue;

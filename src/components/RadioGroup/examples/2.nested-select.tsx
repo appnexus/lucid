@@ -12,24 +12,23 @@ const subSelection = {
 };
 
 export default createClass({
-
 	getInitialState() {
 		return {
-		  height: null,
+			height: null,
 		};
-	  },
-	  
-	  handleSelectedTallSimon() {
-		this.setState({
-		  height: 'Tall Simon',
-		});
-	  },
+	},
 
-	  handleSelectedShortSimon() {
+	handleSelectedTallSimon() {
 		this.setState({
-		  height: 'Short Simon',
+			height: 'Tall Simon',
 		});
-	  },
+	},
+
+	handleSelectedShortSimon() {
+		this.setState({
+			height: 'Short Simon',
+		});
+	},
 
 	render() {
 		return (
@@ -47,8 +46,8 @@ export default createClass({
 							<RadioButtonLabeled.Label>Tall Simon</RadioButtonLabeled.Label>
 						</RadioButtonLabeled>
 						<RadioButtonLabeled
-							 isSelected={this.state.height === 'Short Simon'}
-							 onSelect={this.handleSelectedShortSimon}
+							isSelected={this.state.height === 'Short Simon'}
+							onSelect={this.handleSelectedShortSimon}
 						>
 							<RadioButtonLabeled.Label>Short Simon</RadioButtonLabeled.Label>
 						</RadioButtonLabeled>

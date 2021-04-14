@@ -178,7 +178,7 @@ export default createClass({
 				<label style={{ marginBottom: 6, display: 'block', fontSize: 12 }}>
 					<TextField
 						style={{ marginRight: 9, width: 45 }}
-						onChange={v => this.onChangeFixedColumnCount(v)}
+						onChange={(v) => this.onChangeFixedColumnCount(v)}
 						placeholder='fixedColumnCount'
 						value={this.state.fixedColumnCount}
 					/>
@@ -187,7 +187,7 @@ export default createClass({
 				<label style={{ marginBottom: 6, display: 'block', fontSize: 12 }}>
 					<TextField
 						style={{ marginRight: 9, width: 45 }}
-						onChange={v => this.onChangeFixedRowHeight(v)}
+						onChange={(v) => this.onChangeFixedRowHeight(v)}
 						placeholder='fixedRowHeight'
 						value={this.state.fixedRowHeight}
 					/>

@@ -50,21 +50,23 @@ export default createClass({
 				<IconSelect
 					isDisabled={isDisabled}
 					onSelect={this.handleSelect}
-					items={[
-						{
-							id: 'item1',
-							icon: <ClockIcon />,
-							isSelected: this.isSelected('item1'),
-							label: 'Always Disabled',
-							isDisabled: true,
-						},
-						{
-							id: 'item2',
-							icon: <ClockIcon />,
-							isSelected: this.isSelected('item2'),
-							label: 'Bax Tar',
-						},
-					] as any}
+					items={
+						[
+							{
+								id: 'item1',
+								icon: <ClockIcon />,
+								isSelected: this.isSelected('item1'),
+								label: 'Always Disabled',
+								isDisabled: true,
+							},
+							{
+								id: 'item2',
+								icon: <ClockIcon />,
+								isSelected: this.isSelected('item2'),
+								label: 'Bax Tar',
+							},
+						] as any
+					}
 				/>
 			</section>
 		);

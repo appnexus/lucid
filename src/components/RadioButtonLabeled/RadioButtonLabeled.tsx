@@ -37,7 +37,7 @@ RadioButtonLabeledLabel.propName = 'Label';
 export interface IRadioButtonLabeledProps extends IRadioButtonProps {
 	/** Child element whose children are used to identify the purpose of this
 		radio button to the user. */
-	Label?: string | React.ReactNode & { props: IRadioButtonLabeledLabelProps };
+	Label?: string | (React.ReactNode & { props: IRadioButtonLabeledLabelProps });
 }
 
 export const RadioButtonLabeled = (

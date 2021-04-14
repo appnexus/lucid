@@ -30,7 +30,8 @@ export default createClass({
 							</Target>
 						</ToolTip>
 					</div>
-				</Typography> <br />
+				</Typography>{' '}
+				<br />
 			</div>
 		);
 	},

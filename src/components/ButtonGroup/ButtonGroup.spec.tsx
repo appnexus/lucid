@@ -29,13 +29,7 @@ describe('ButtonGroup', () => {
 			</ButtonGroup>
 		);
 
-		assert.equal(
-			wrapper
-				.children()
-				.at(1)
-				.prop('isActive'),
-			true
-		);
+		assert.equal(wrapper.children().at(1).prop('isActive'), true);
 	});
 });
 
@@ -49,11 +43,7 @@ describe('ButtonGroup', () => {
 			</ButtonGroup>
 		);
 
-		wrapper
-			.children()
-			.children()
-			.at(1)
-			.simulate('click'); // second button
+		wrapper.children().children().at(1).simulate('click'); // second button
 
 		assert.equal(onSelect.args[0][0], 1);
 	});
@@ -67,11 +57,7 @@ describe('ButtonGroup', () => {
 			</ButtonGroup>
 		);
 
-		wrapper
-			.children()
-			.children()
-			.at(1)
-			.simulate('click'); // second button
+		wrapper.children().children().at(1).simulate('click'); // second button
 
 		assert(onClick.called, 'onClick was not called');
 		assert(

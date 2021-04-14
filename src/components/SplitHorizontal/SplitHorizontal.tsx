@@ -282,8 +282,9 @@ class SplitHorizontal extends React.Component<
 		collapseShift = 0
 	): number => {
 		if (isExpanded) {
-			(secondaryRef.current as HTMLDivElement).style.flexBasis = `${secondaryStartRect.height +
-				dY * (secondary === bottom ? -1 : 1)}px`;
+			(secondaryRef.current as HTMLDivElement).style.flexBasis = `${
+				secondaryStartRect.height + dY * (secondary === bottom ? -1 : 1)
+			}px`;
 			return secondaryStartRect.height + dY * (secondary === bottom ? -1 : 1);
 		} else {
 			const overlapHeight =
@@ -296,9 +297,9 @@ class SplitHorizontal extends React.Component<
 				return secondaryStartRect.height - overlapHeight;
 			} else {
 				this.expandSecondary();
-				(secondaryRef.current as HTMLDivElement).style.flexBasis = `${(dY +
-					collapseShift) *
-					(secondary === bottom ? -1 : 1)}px`;
+				(secondaryRef.current as HTMLDivElement).style.flexBasis = `${
+					(dY + collapseShift) * (secondary === bottom ? -1 : 1)
+				}px`;
 				return (dY + collapseShift) * (secondary === bottom ? -1 : 1);
 			}
 		}
@@ -438,13 +439,11 @@ class SplitHorizontal extends React.Component<
 		}
 
 		if (this.state.isAnimated !== isAnimated) {
-			_.defer(
-				(): void => {
-					this.setState({
-						isAnimated,
-					});
-				}
-			);
+			_.defer((): void => {
+				this.setState({
+					isAnimated,
+				});
+			});
 		}
 	}
 
@@ -517,8 +516,9 @@ class SplitHorizontal extends React.Component<
 								height: '100%',
 								display: 'flex',
 								flexDirection: 'column',
-								transform: `translateY(${(isBottomSecondary ? 1 : -1) *
-									Math.round(tween.slideAmount)}px)`,
+								transform: `translateY(${
+									(isBottomSecondary ? 1 : -1) * Math.round(tween.slideAmount)
+								}px)`,
 							}}
 						>
 							<div

@@ -105,10 +105,7 @@ describe('DraggableList', () => {
 					</DraggableList>
 				);
 
-				wrapper
-					.find('.lucid-DraggableList-Item')
-					.at(3)
-					.simulate('dragend');
+				wrapper.find('.lucid-DraggableList-Item').at(3).simulate('dragend');
 
 				assert(onDrop.called, 'must be called');
 				assert.deepEqual(

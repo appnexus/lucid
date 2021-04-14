@@ -5,7 +5,7 @@ import { mount } from 'enzyme';
 import Resizer from './Resizer';
 
 jest.mock('element-resize-detector', () => {
-	return function() {
+	return function () {
 		return {
 			listenTo: jest.fn((_element, handleResize) => {
 				handleResize({

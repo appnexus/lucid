@@ -37,7 +37,7 @@ const DataInput = ({
 	changeHandler: IChangeHandler;
 }): JSX.Element => {
 	const onChange = useCallback(
-		newYValue => {
+		(newYValue) => {
 			changeHandler(newYValue, xValue);
 		},
 		[changeHandler, xValue]
@@ -79,7 +79,7 @@ export default createClass({
 			: +Number(newYValue).toFixed(0);
 		const newCustomSpendDataPoints = _.map(
 			this.state.customSpendDataPoints,
-			dataPoint =>
+			(dataPoint) =>
 				dataPoint.x === xValue ? { ...dataPoint, y: cleanedYValue } : dataPoint
 		);
 		this.setState({ customSpendDataPoints: newCustomSpendDataPoints });
@@ -88,7 +88,7 @@ export default createClass({
 	onPreselectHandler(data: ISelectedChartData[]): void {
 		const totalSelected = _.filter(data, ['isSelected', true]).length;
 		const avg = Math.round((100 / totalSelected) * 10) / 10;
-		const updatedData = _.map(data, step => ({
+		const updatedData = _.map(data, (step) => ({
 			ref: step.ref,
 			x: step.x,
 			y: step.isSelected ? avg : step.y,

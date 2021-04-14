@@ -3,7 +3,11 @@ import React, { Key } from 'react';
 import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import { omitProps, getFirst, StandardProps } from '../../util/component-types';
-import { Collection, maxByFields, maxByFieldsStacked } from '../../util/chart-helpers';
+import {
+	Collection,
+	maxByFields,
+	maxByFieldsStacked,
+} from '../../util/chart-helpers';
 import * as d3Scale from 'd3-scale';
 import * as chartConstants from '../../constants/charts';
 
@@ -31,21 +35,21 @@ const {
 
 interface IBarChartProps
 	extends StandardProps,
-	React.DetailedHTMLProps<
-	React.HTMLAttributes<HTMLDivElement>,
-	HTMLDivElement
-	> {
+		React.DetailedHTMLProps<
+			React.HTMLAttributes<HTMLDivElement>,
+			HTMLDivElement
+		> {
 	/** Child components of LineChart */
 	EmptyStateWrapper?: React.ReactNode;
 
 	/**
 	 * Height of the chart.
 	 */
-	height: number,
+	height: number;
 
 	/** Width of the chart. */
 	width: number;
-	
+
 	/** An object defining the margins of the chart. These margins typically
 	 * contain the axis and labels. */
 	margin: {
@@ -53,8 +57,8 @@ interface IBarChartProps
 		right: number;
 		bottom: number;
 		left: number;
-	}
-	
+	};
+
 	/** Data for the chart. E.g.
 	 * [
 	 * 	{ x: 'Monday'    , y: 1 } ,
@@ -65,7 +69,7 @@ interface IBarChartProps
 	 * ]
 	 */
 	data: Collection;
-	
+
 	/** An object with human readable names for fields that will be used for legends and tooltips. E.g:
 	 * {
 	 * 	x: 'Date',
@@ -82,7 +86,7 @@ interface IBarChartProps
 
 	/** Show a legend at the bottom of the chart. */
 	hasLegend: boolean;
-	
+
 	/** Takes one of the palettes exported from \`lucid.chartConstants\`. Available palettes:
 	 * - \`PALETTE_7\` (default)
 	 * - \`PALETTE_30\`
@@ -95,7 +99,7 @@ interface IBarChartProps
 	 * - \`PALETTE_MONOCHROME_6_5\`
 	 */
 	palette: string[];
-	
+
 	/** You can pass in an object if you want to map x values to \`lucid.chartConstants\` or custom colors:
 	 * {
 	 * 	'imps': COLOR_0,
@@ -104,26 +108,25 @@ interface IBarChartProps
 	 * }
 	 */
 	colorMap?: {};
-	
+
 	/** The field we should look up your x data by. Your actual x data must be
 	 * strings.
 	 */
 	xAxisField: string;
-	
+
 	/** There are some cases where you need to only show a "sampling" of ticks on
 	 * the x axis. This number will control that.
 	 */
 	xAxisTickCount: number | null;
-	
+
 	/** An optional function used to format your x axis data. If you don't
 	 * provide anything, we'll use an identity function.
 	 */
 	xAxisFormatter: (d: number | Date) => string;
-	
+
 	/** Set a title for the x axis. */
 	xAxisTitle: string | null;
 
-	
 	/** Set a color for the x axis title. Use the color constants exported off \`lucid.chartConstants\`. E.g.:
 	 * 	- \`COLOR_0\`
 	 * 	- \`COLOR_GOOD\`
@@ -131,43 +134,43 @@ interface IBarChartProps
 	 *  \`number\` is supported only for backwards compatability.
 	 */
 	xAxisTitleColor: string | number;
-	
+
 	/** An array of your y axis fields. Typically this will just be a single item
 	 * unless you need to display grouped or stacked bars. The order of the
 	 * array determines the series order in the chart.
 	 */
 	yAxisFields: string[];
-	
+
 	/** The minimum number the y axis should display. Typically this should be be
 	 * \`0\`.
 	 */
 	yAxisMin: number;
-	
+
 	/** The maximum number the y axis should display. This should almost always
 	 * be the largest number from your dataset.
 	 */
 	yAxisMax?: number;
-	
+
 	/** An optional function used to format your y axis data. If you don't
 	 * provide anything, we use the default D3 number formatter.
 	 */
 	yAxisFormatter?: (v: unknown) => string;
-	
+
 	/** Stack the y axis data instead of showing it as groups. This is only
 	 * useful if you have multiple \`yAxisFields\`. Stacking will cause the
 	 * chart to be aggregated by sum.
 	 */
 	yAxisIsStacked: boolean;
-	
+
 	/** There are some cases where you need to only show a "sampling" of ticks on
 	 * the y axis. This number will control that.
 	 */
 	yAxisTickCount: number | null;
-	
+
 	/** Set a title for the y axis.
 	 */
 	yAxisTitle: string | null;
-	
+
 	/** Set a color for the y axis title. Use the color constants exported off \`lucid.chartConstants\`. E.g.:
 	 * - \`COLOR_0\`
 	 * - \`COLOR_GOOD\`
@@ -175,29 +178,33 @@ interface IBarChartProps
 	 * \`number\` is supported only for backwards compatability.
 	 */
 	yAxisTitleColor: number | string;
-	
+
 	/** An optional function used to format your y axis titles and data in the
 	 * tooltip legends. The first value is the name of your y field, the second value
 	 * is your post-formatted y value, and the third value is your non-formatted
 	 * y-value.  Signature: \`(yField, yValueFormatted, yValue) => {}\`
 	 */
-	yAxisTooltipFormatter: (yField: string, yValueFormatted: Key, yValue: number) => Key;
-	
+	yAxisTooltipFormatter: (
+		yField: string,
+		yValueFormatted: Key,
+		yValue: number
+	) => Key;
+
 	/** An optional function used to format y-values in the tooltip legends. */
 	yAxisTooltipDataFormatter?: (d: number | Date) => string;
-	
+
 	/** An optional function used to format the entire tooltip body. The only arg is
 	 * the associated data point. This formatter will over-ride yAxisTooltipFormatter
 	 * and yAxisTooltipDataFormatter. Signature:
 	 * \`dataPoint => {}\`
 	 */
 	renderTooltipBody: (dataPoint: string | number | object) => {};
-	
+
 	/** Determines the orientation of the tick text. This may override what the orient prop
 	 * tries to determine.
 	 */
 	xAxisTextOrientation: 'vertical' | 'horizontal' | 'diagonal';
-	
+
 	/** Determines the orientation of the tick text. This may override what the orient prop
 	 * tries to determine.
 	 */
@@ -334,10 +341,13 @@ export const BarChart = (props: IBarChartProps): React.ReactElement => {
 				>
 					{/* x axis */}
 					<g
-						transform={`translate(${margin.left}, ${innerHeight +
-							margin.top})`}
+						transform={`translate(${margin.left}, ${innerHeight + margin.top})`}
 					>
-						<Axis orient='bottom' scale={xScale as any} tickCount={xAxisTickCount} />
+						<Axis
+							orient='bottom'
+							scale={xScale as any}
+							tickCount={xAxisTickCount}
+						/>
 					</g>
 
 					{/* y axis */}
@@ -414,9 +424,7 @@ export const BarChart = (props: IBarChartProps): React.ReactElement => {
 
 			{/* x axis title */}
 			{xAxisTitle ? (
-				<g
-					transform={`translate(${margin.left}, ${margin.top + innerHeight})`}
-				>
+				<g transform={`translate(${margin.left}, ${margin.top + innerHeight})`}>
 					<AxisLabel
 						orient='bottom'
 						width={innerWidth}
@@ -482,12 +490,11 @@ export const BarChart = (props: IBarChartProps): React.ReactElement => {
 			</g>
 		</svg>
 	);
-
 };
 
 BarChart.displayName = 'BarChart';
 
-BarChart.propTypes ={
+BarChart.propTypes = {
 	className: string`
 		Appended to the component-specific class names set on the root element.
 	`,

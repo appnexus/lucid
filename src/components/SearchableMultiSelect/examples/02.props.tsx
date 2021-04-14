@@ -7,20 +7,20 @@ const { Option } = SearchableMultiSelect;
 export default createClass({
 	getInitialState() {
 		return {
-			isRequired: false
+			isRequired: false,
 		};
 	},
 
 	handleChange(event: any) {
 		this.setState({
-			isRequired: event.length > 0
-		})
+			isRequired: event.length > 0,
+		});
 	},
 
 	render() {
 		return (
 			<Resizer>
-				{width => {
+				{(width) => {
 					const responsiveMode = width >= 768 ? 'large' : 'small';
 
 					return (

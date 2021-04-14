@@ -106,7 +106,7 @@ describe('Sidebar', () => {
 				}
 			});
 
-			it('should pass isExpanded to the underlying SplitVertical (true) [mostly stable]', done => {
+			it('should pass isExpanded to the underlying SplitVertical (true) [mostly stable]', (done) => {
 				const wrapper = shallow(<Sidebar isExpanded={true} />);
 
 				_.delay(() => {
@@ -124,7 +124,7 @@ describe('Sidebar', () => {
 				}, MOSTLY_STABLE_DELAY);
 			});
 
-			it('should pass isExpanded to the underlying SplitVertical (false) [mostly stable]', done => {
+			it('should pass isExpanded to the underlying SplitVertical (false) [mostly stable]', (done) => {
 				wrapper = mount(<Sidebar isExpanded={false} />);
 
 				_.delay(() => {
@@ -142,7 +142,7 @@ describe('Sidebar', () => {
 				}, MOSTLY_STABLE_DELAY);
 			});
 
-			it('should default to true [mostly stable]', done => {
+			it('should default to true [mostly stable]', (done) => {
 				const wrapper = shallow(<Sidebar />);
 
 				_.delay(() => {
@@ -381,7 +381,9 @@ describe('Sidebar', () => {
 				const expanderWrapper = wrapper.find(
 					'.lucid-Sidebar > .lucid-Sidebar-Bar > .lucid-Sidebar-Bar-header > .lucid-Sidebar-expander'
 				);
-				const expanderWrapperOnMouseDown: any = expanderWrapper.prop('onMouseDown');
+				const expanderWrapperOnMouseDown: any = expanderWrapper.prop(
+					'onMouseDown'
+				);
 				const lastArg: any = {
 					event: {},
 					props: wrapper.props(),

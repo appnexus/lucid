@@ -7,9 +7,7 @@ export default createClass({
 		return (
 			<div>
 				<div>
-					<Banner style={{ marginBottom: 8 }}>
-						Default
-					</Banner>
+					<Banner style={{ marginBottom: 8 }}>Default</Banner>
 					<Banner isCloseable={false} style={{ marginBottom: 8 }}>
 						Default -- No Close {String.fromCharCode(0x00d7)}
 					</Banner>
@@ -66,7 +64,7 @@ export default createClass({
 
 				<div>
 					<Banner style={{ marginBottom: 8 }} isFilled={false}>
-					<div>
+						<div>
 							Sit totam voluptas error dolorum ullam Quo ipsam esse amet
 							mollitia consequuntur Cumque cum nisi porro cumque sit nisi
 							Facilis placeat suscipit earum blanditiis eveniet Earum dolor
@@ -90,36 +88,20 @@ export default createClass({
 						</div>
 					</Banner>
 					<Banner kind='success' style={{ marginBottom: 8 }} isFilled={false}>
-					<div>
-						Success -- Outline 
-					</div>	
-					<div>
-						Outline banners are for messages with multi-line content.
-					</div>	
+						<div>Success -- Outline</div>
+						<div>Outline banners are for messages with multi-line content.</div>
 					</Banner>
 					<Banner kind='warning' style={{ marginBottom: 8 }} isFilled={false}>
-					<div>
-						Warning -- Outline 
-					</div>	
-					<div>
-						Outline banners are for messages with multi-line content.
-					</div>
+						<div>Warning -- Outline</div>
+						<div>Outline banners are for messages with multi-line content.</div>
 					</Banner>
 					<Banner kind='danger' style={{ marginBottom: 8 }} isFilled={false}>
-					<div>
-						Danger -- Outline 
-					</div>	
-					<div>
-						Outline banners are for messages with multi-line content.
-					</div>
+						<div>Danger -- Outline</div>
+						<div>Outline banners are for messages with multi-line content.</div>
 					</Banner>
 					<Banner kind='info' style={{ marginBottom: 8 }} isFilled={false}>
-					<div>
-						Info -- Outline 
-					</div>	
-					<div>
-						Outline banners are for messages with multi-line content.
-					</div>
+						<div>Info -- Outline</div>
+						<div>Outline banners are for messages with multi-line content.</div>
 					</Banner>
 					<Banner
 						style={{ marginBottom: 8 }}
@@ -127,12 +109,8 @@ export default createClass({
 						kind='danger'
 						isFilled={false}
 					>
-					<div>
-						Has Icon -- Outline 
-					</div>	
-					<div>
-						Outline banners are for messages with multi-line content.
-					</div>
+						<div>Has Icon -- Outline</div>
+						<div>Outline banners are for messages with multi-line content.</div>
 					</Banner>
 				</div>
 			</div>

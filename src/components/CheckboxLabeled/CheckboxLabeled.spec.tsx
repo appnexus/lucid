@@ -59,7 +59,7 @@ describe('CheckboxLabeled', () => {
 
 				// It should pass `foo`, `bar`, `baz`, `qux`, and `quux` through
 				// to the `Checkbox` instance.
-				_.forEach(['foo', 'bar', 'baz', 'qux', 'quux'], prop => {
+				_.forEach(['foo', 'bar', 'baz', 'qux', 'quux'], (prop) => {
 					assert(_.has(checkboxProps, prop));
 				});
 			});

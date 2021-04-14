@@ -15,7 +15,7 @@ export default createClass({
 	render() {
 		return (
 			<section style={{ display: 'flex', flexDirection: 'row' }}>
-				{_.map(directions, direction => (
+				{_.map(directions, (direction) => (
 					<section
 						key={direction}
 						style={{
@@ -25,7 +25,7 @@ export default createClass({
 							flexGrow: 1,
 						}}
 					>
-						{_.map(alignments, alignment => (
+						{_.map(alignments, (alignment) => (
 							<section
 								key={`${direction}${alignment}`}
 								style={{ margin: '30px' }}

@@ -69,10 +69,7 @@ describe('PieChart', () => {
 				);
 
 				assert.equal(
-					wrapper
-						.find('g')
-						.at(0)
-						.prop('transform'),
+					wrapper.find('g').at(0).prop('transform'),
 					'translate(10, 50)'
 				);
 			});
@@ -102,27 +99,9 @@ describe('PieChart', () => {
 					<PieChart data={sampleData} palette={['foo', 'bar']} />
 				);
 
-				assert.equal(
-					wrapper
-						.find(Line)
-						.at(0)
-						.prop('color'),
-					'foo'
-				);
-				assert.equal(
-					wrapper
-						.find(Line)
-						.at(1)
-						.prop('color'),
-					'bar'
-				);
-				assert.equal(
-					wrapper
-						.find(Line)
-						.at(2)
-						.prop('color'),
-					'foo'
-				);
+				assert.equal(wrapper.find(Line).at(0).prop('color'), 'foo');
+				assert.equal(wrapper.find(Line).at(1).prop('color'), 'bar');
+				assert.equal(wrapper.find(Line).at(2).prop('color'), 'foo');
 			});
 		});
 
@@ -137,27 +116,9 @@ describe('PieChart', () => {
 					/>
 				);
 
-				assert.equal(
-					wrapper
-						.find(Line)
-						.at(0)
-						.prop('color'),
-					'color-chart-3'
-				);
-				assert.equal(
-					wrapper
-						.find(Line)
-						.at(1)
-						.prop('color'),
-					'#abc123'
-				);
-				assert.equal(
-					wrapper
-						.find(Line)
-						.at(2)
-						.prop('color'),
-					'color-chart-2'
-				);
+				assert.equal(wrapper.find(Line).at(0).prop('color'), 'color-chart-3');
+				assert.equal(wrapper.find(Line).at(1).prop('color'), '#abc123');
+				assert.equal(wrapper.find(Line).at(2).prop('color'), 'color-chart-2');
 			});
 		});
 
@@ -247,7 +208,7 @@ describe('PieChart', () => {
 
 				const target = wrapper.find('.lucid-PieChart-slice-hover').at(0);
 
-				target.simulate('mouseOut',  { stopPropagation: () => undefined });
+				target.simulate('mouseOut', { stopPropagation: () => undefined });
 
 				assert(onMouseOut.called, 'onMouseOut was not called');
 				assert.equal(onMouseOut.args[0][0].props.palette[0], 'bar');
@@ -260,7 +221,7 @@ describe('PieChart', () => {
 				const wrapper = shallow(
 					<PieChart
 						data={sampleData}
-						xAxisFormatter={_.toUpper as any} 
+						xAxisFormatter={_.toUpper as any}
 						isHovering
 						hoveringIndex={0}
 					/>
@@ -275,7 +236,7 @@ describe('PieChart', () => {
 				const wrapper = shallow(
 					<PieChart
 						data={sampleData}
-						yAxisFormatter={x => x * 10}
+						yAxisFormatter={(x) => x * 10}
 						isHovering
 						hoveringIndex={1}
 					/>

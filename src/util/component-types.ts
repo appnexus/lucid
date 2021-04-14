@@ -301,8 +301,6 @@ export function omitProps<P extends object>(
 
 	return _.omit(
 		props,
-		_.keys(component.propTypes)
-			.concat(keys)
-			.concat(additionalOmittedKeys)
+		_.keys(component.propTypes).concat(keys).concat(additionalOmittedKeys)
 	);
 }

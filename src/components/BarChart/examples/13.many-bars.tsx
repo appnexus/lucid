@@ -3,7 +3,7 @@ import React from 'react';
 import createClass from 'create-react-class';
 import BarChart from '../BarChart';
 
-const data = _.map(_.range(0, 70), n => ({
+const data = _.map(_.range(0, 70), (n) => ({
 	x: (new Date(0) as any) + n * 60 * 60 * 24,
 	y: n,
 }));

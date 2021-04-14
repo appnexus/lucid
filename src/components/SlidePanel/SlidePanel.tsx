@@ -272,12 +272,8 @@ class SlidePanel extends React.Component<
 							className={cx('&-slidestrip', className)}
 							style={{
 								transform: this.state.isDragging
-									? `translateX(calc(${tween.translateXPercentage}% + ${
-											this.state.translateXPixel
-									  }px))`
-									: `translateX(calc(${tween.translateXPercentage}% + ${
-											tween.translateXPixel
-									  }px))`,
+									? `translateX(calc(${tween.translateXPercentage}% + ${this.state.translateXPixel}px))`
+									: `translateX(calc(${tween.translateXPercentage}% + ${tween.translateXPixel}px))`,
 							}}
 							ref={this.slideStrip}
 							onTouchStart={this.handleTouchStart}

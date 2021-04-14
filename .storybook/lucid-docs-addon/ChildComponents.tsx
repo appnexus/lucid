@@ -37,7 +37,7 @@ const compile = marksy({
 			</SyntaxHighlighter>
 		),
 	elements: {
-		p: props => <p {...props} style={{ margin: '4px 0' }} />,
+		p: (props) => <p {...props} style={{ margin: '4px 0' }} />,
 	},
 });
 
@@ -86,10 +86,9 @@ const ChildComponent = ({
 		<section style={styles.childComponent}>
 			<div style={styles.name as any}>
 				{childComponentName}
-				{!isPrivate &&
-					childComponentName !== displayName && (
-						<span style={styles.displayName as any}>(see {displayName})</span>
-					)}
+				{!isPrivate && childComponentName !== displayName && (
+					<span style={styles.displayName as any}>(see {displayName})</span>
+				)}
 			</div>
 			<div>{compile(description).tree}</div>
 			<PropTypes showIndex={false} props={props} />

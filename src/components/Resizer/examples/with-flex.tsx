@@ -18,7 +18,7 @@ export default createClass({
 						overflow: 'hidden',
 					}}
 				>
-					{width => (
+					{(width) => (
 						<div
 							style={{
 								width,

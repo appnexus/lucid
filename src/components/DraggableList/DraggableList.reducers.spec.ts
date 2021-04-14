@@ -12,7 +12,10 @@ describe('DraggableList reducers', () => {
 
 	describe('onDragOver', () => {
 		it('should set the dragOverIndex`', () => {
-			const nextState: { dragIndex?: number, dragOverIndex?: number } = onDragOver({ dragIndex: 0 }, 3);
+			const nextState: {
+				dragIndex?: number;
+				dragOverIndex?: number;
+			} = onDragOver({ dragIndex: 0 }, 3);
 
 			assert.equal(nextState.dragIndex, 0, 'must update the dragIndex');
 			assert.equal(nextState.dragOverIndex, 3, 'must update the dragOverIndex');

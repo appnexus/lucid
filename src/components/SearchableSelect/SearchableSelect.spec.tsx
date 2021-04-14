@@ -8,7 +8,12 @@ import { common } from '../../util/generic-tests';
 import { SearchableSelectDumb as SearchableSelect } from './SearchableSelect';
 import { DropMenuDumb as DropMenu } from '../DropMenu/DropMenu';
 
-const { Placeholder, Option, OptionGroup, SearchField } = SearchableSelect as any;
+const {
+	Placeholder,
+	Option,
+	OptionGroup,
+	SearchField,
+} = SearchableSelect as any;
 
 describe('SearchableSelect', () => {
 	common(SearchableSelect, {
@@ -377,7 +382,6 @@ describe('SearchableSelect', () => {
 
 		describe('Error', () => {
 			it('should pass the error class if the Error prop is passed', () => {
-
 				const wrapper = shallow(
 					<SearchableSelect Error={'Error message'}>
 						<Placeholder>control</Placeholder>
@@ -387,8 +391,12 @@ describe('SearchableSelect', () => {
 					</SearchableSelect>
 				);
 
-				const searchWrapper = wrapper.find('.lucid-SearchableSelect-Control-is-error');
-				const errorWrapper = wrapper.find('.lucid-SearchableSelect-error-content');
+				const searchWrapper = wrapper.find(
+					'.lucid-SearchableSelect-Control-is-error'
+				);
+				const errorWrapper = wrapper.find(
+					'.lucid-SearchableSelect-error-content'
+				);
 				expect(errorWrapper.exists()).toBeTruthy();
 				expect(searchWrapper.exists()).toBeTruthy();
 				expect(errorWrapper.text()).toEqual('Error message');

@@ -30,10 +30,7 @@ describe('Dialog', () => {
 		);
 
 		assert.equal(
-			wrapper
-				.find('.lucid-Dialog-header')
-				.text()
-				.startsWith('Mobius'),
+			wrapper.find('.lucid-Dialog-header').text().startsWith('Mobius'),
 			true
 		);
 	});

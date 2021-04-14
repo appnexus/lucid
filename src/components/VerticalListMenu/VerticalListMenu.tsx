@@ -289,11 +289,13 @@ class VerticalListMenu extends React.Component<
 					// is due to the way we wrap components with createLucidComponentDefinition
 					const listChildren = _.filter(
 						itemChildrenAsArray,
-						child => _.get(child, 'type.displayName', '') === 'VerticalListMenu'
+						(child) =>
+							_.get(child, 'type.displayName', '') === 'VerticalListMenu'
 					);
 					const otherChildren = _.filter(
 						itemChildrenAsArray,
-						child => _.get(child, 'type.displayName', '') !== 'VerticalListMenu'
+						(child) =>
+							_.get(child, 'type.displayName', '') !== 'VerticalListMenu'
 					);
 
 					// If the prop is found on the child, it should override what was

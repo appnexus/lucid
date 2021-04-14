@@ -17,12 +17,20 @@ export default () => (
 		}}
 	>
 		{_.map(sizes, (size, sizeIndex) =>
-			_.map(kinds, kind => (
+			_.map(kinds, (kind) => (
 				<React.Fragment key={`${size}-${kind}`}>
-					<Button style={{ gridColumn: sizeIndex + 1 }} size={size as any} kind={kind as any}>
+					<Button
+						style={{ gridColumn: sizeIndex + 1 }}
+						size={size as any}
+						kind={kind as any}
+					>
 						{size ? size : 'standard'} {kind}
 					</Button>
-					<Button style={{ gridColumn: sizeIndex + 1 }} size={size as any} kind={kind as any}>
+					<Button
+						style={{ gridColumn: sizeIndex + 1 }}
+						size={size as any}
+						kind={kind as any}
+					>
 						<CheckIcon />
 						{size ? size : 'standard'} {kind}
 					</Button>

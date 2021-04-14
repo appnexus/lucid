@@ -70,7 +70,7 @@ describe('SplitVertical', () => {
 				assert(wrapper.hasClass('lucid-SplitVertical-is-expanded'));
 			});
 
-			it('should not apply the &-is-expanded css class when false [mostly stable]', done => {
+			it('should not apply the &-is-expanded css class when false [mostly stable]', (done) => {
 				mountWrapper = mount(<SplitVertical isExpanded={false} />);
 
 				assert(!mountWrapper.hasClass('lucid-SplitHorizontal-is-expanded'));
@@ -87,7 +87,7 @@ describe('SplitVertical', () => {
 				}
 			});
 
-			it('should default to false [mostly stable]', done => {
+			it('should default to false [mostly stable]', (done) => {
 				wrapper = mount(<SplitVertical />);
 
 				_.delay(() => {
@@ -100,7 +100,7 @@ describe('SplitVertical', () => {
 				}, MOSTLY_STABLE_DELAY);
 			});
 
-			it('should apply the &-is-animated class when true, after initial render [mostly stable]', done => {
+			it('should apply the &-is-animated class when true, after initial render [mostly stable]', (done) => {
 				wrapper = mount(<SplitVertical isAnimated={true} />);
 
 				_.delay(() => {
@@ -114,7 +114,7 @@ describe('SplitVertical', () => {
 				}, MOSTLY_STABLE_DELAY);
 			});
 
-			it('should not apply the &-is-animated class when false [mostly stable]', done => {
+			it('should not apply the &-is-animated class when false [mostly stable]', (done) => {
 				wrapper = mount(<SplitVertical isAnimated={false} />);
 
 				_.delay(() => {
@@ -147,7 +147,7 @@ describe('SplitVertical', () => {
 				}
 			});
 
-			it('should translated by width - 64px when the right pane is primary [mostly stable]', done => {
+			it('should translated by width - 64px when the right pane is primary [mostly stable]', (done) => {
 				wrapper = mount(
 					<SplitVertical isExpanded={false} collapseShift={64}>
 						<SplitVertical.LeftPane />
@@ -168,7 +168,7 @@ describe('SplitVertical', () => {
 				}, MOSTLY_STABLE_DELAY);
 			});
 
-			it('should translated by width - 64px when the left pane is primary [mostly stable]', done => {
+			it('should translated by width - 64px when the left pane is primary [mostly stable]', (done) => {
 				wrapper = mount(
 					<SplitVertical isExpanded={false} collapseShift={64}>
 						<SplitVertical.LeftPane isPrimary />

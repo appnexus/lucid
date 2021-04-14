@@ -35,10 +35,12 @@ describe('Tabs', () => {
 		it('Tab as props with Title', () => {
 			const wrapper = shallow(
 				<Tabs
-					Tab={[
-						{ Title: 'Coolest', children: 'Bert' },
-						{ Title: 'Not so cool', children: 'Ernie' },
-					] as any}
+					Tab={
+						[
+							{ Title: 'Coolest', children: 'Bert' },
+							{ Title: 'Not so cool', children: 'Ernie' },
+						] as any
+					}
 				/>
 			);
 
@@ -148,10 +150,7 @@ describe('Tabs', () => {
 			});
 
 			it('should call onSelect with the correct arguments', () => {
-				tabBar
-					.childAt(1)
-					.shallow()
-					.simulate('click', clickEvent);
+				tabBar.childAt(1).shallow().simulate('click', clickEvent);
 				const selectedIndex = onSelect.args[0][0];
 				const meta = onSelect.args[0][1];
 				assert(onSelect.called);
@@ -169,10 +168,7 @@ describe('Tabs', () => {
 			});
 
 			it('should not call onSelect if the `Tab` isDisabled', () => {
-				tabBar
-					.childAt(0)
-					.shallow()
-					.simulate('click', clickEvent);
+				tabBar.childAt(0).shallow().simulate('click', clickEvent);
 				assert(!onSelect.called);
 			});
 		});

@@ -1,6 +1,6 @@
 export interface IPieChartState {
-	isHovering: boolean,
-	hoveringIndex: number,
+	isHovering: boolean;
+	hoveringIndex: number;
 }
 
 export function onMouseOut(state: IPieChartState) {

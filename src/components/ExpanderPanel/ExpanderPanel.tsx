@@ -158,7 +158,8 @@ class ExpanderPanel extends React.Component<
 			'props'
 		);
 
-		const cleanedOnRest = (onRestAppliedOnCollapse || isExpanded) ? onRest : undefined
+		const cleanedOnRest =
+			onRestAppliedOnCollapse || isExpanded ? onRest : undefined;
 
 		return (
 			<Panel

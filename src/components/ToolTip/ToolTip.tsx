@@ -283,7 +283,8 @@ class ToolTip extends React.Component<IToolTipProps, IToolTipState> {
 
 	handleMouseOverTarget = (event: React.MouseEvent) => {
 		this.setState({ isMouseOverTarget: true });
-		this.props.onMouseOver && this.props.onMouseOver({ props: this.props, event });
+		this.props.onMouseOver &&
+			this.props.onMouseOver({ props: this.props, event });
 	};
 
 	handleMouseOutTarget = (event: React.MouseEvent) => {
@@ -364,7 +365,8 @@ class ToolTip extends React.Component<IToolTipProps, IToolTipState> {
 				<FlyOut
 					style={{
 						...flyOutStyle,
-						maxWidth: flyOutMaxWidth || (flyOutStyle && flyOutStyle.maxWidth) || 200,
+						maxWidth:
+							flyOutMaxWidth || (flyOutStyle && flyOutStyle.maxWidth) || 200,
 					}}
 					className={flyOutCx(
 						className,

@@ -14,7 +14,7 @@ export default createClass({
 				</SearchableSingleSelect>
 
 				<h5>Disabled</h5>
-				<SearchableSingleSelect isDisabled={true} >
+				<SearchableSingleSelect isDisabled={true}>
 					<Option>Alabama</Option>
 				</SearchableSingleSelect>
 			</section>

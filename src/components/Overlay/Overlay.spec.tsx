@@ -24,13 +24,21 @@ describe('Overlay', () => {
 	describe('when isAnimated is false', () => {
 		describe('and when isShown is true', () => {
 			it('should render CSSTransition with in prop as false', () => {
-				const wrapper = shallow(<Overlay isShown={false} isAnimated={true}>Flux Capacitor</Overlay>);
+				const wrapper = shallow(
+					<Overlay isShown={false} isAnimated={true}>
+						Flux Capacitor
+					</Overlay>
+				);
 				assert.equal(wrapper.find(CSSTransition).props().in, false);
 			});
 		});
 		describe('and when isShown is false', () => {
 			it('should render CSSTransition with in prop as false', () => {
-				const wrapper = shallow(<Overlay isShown={true} isAnimated={true}>Flux Capacitor</Overlay>);
+				const wrapper = shallow(
+					<Overlay isShown={true} isAnimated={true}>
+						Flux Capacitor
+					</Overlay>
+				);
 				assert.equal(wrapper.find(CSSTransition).props().in, true);
 			});
 		});
@@ -38,12 +46,14 @@ describe('Overlay', () => {
 
 	describe('when isAnimated is true', () => {
 		it('should not render when isShown is false', () => {
-			const wrapper = shallow(<Overlay isShown={false} isAnimated={false}>Flux Capacitor</Overlay>);
+			const wrapper = shallow(
+				<Overlay isShown={false} isAnimated={false}>
+					Flux Capacitor
+				</Overlay>
+			);
 			assert(!wrapper.contains('Flux Capacitor'));
 		});
 	});
-
-
 
 	it('should have the correct class when isModal is false', () => {
 		const wrapper = shallow(
@@ -107,7 +117,9 @@ describe('Overlay', () => {
 			null // relatedTarget : Only used with some event types (e.g. mouseover and mouseout). In other cases, pass null.
 		);
 
-		(document as any).querySelector('#brolo .lucid-Overlay').dispatchEvent(event);
+		(document as any)
+			.querySelector('#brolo .lucid-Overlay')
+			.dispatchEvent(event);
 
 		assert(onBackgroundClick.called);
 		wrapper.unmount();

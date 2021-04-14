@@ -35,7 +35,7 @@ describe('SearchableSingleSelect', () => {
 			);
 			const [first, second, third] = wrapper
 				.find(DropMenu.Option)
-				.map(option => option.prop('isDisabled'));
+				.map((option) => option.prop('isDisabled'));
 			expect(first).toBe(true);
 			expect(second).toBe(false);
 			expect(third).toBe(false);
@@ -59,7 +59,7 @@ describe('SearchableSingleSelect', () => {
 						children: 'Zero',
 						isDisabled: false,
 						isHidden: false,
-						isWrapped: true
+						isWrapped: true,
 					},
 				};
 
@@ -85,10 +85,10 @@ describe('SearchableSingleSelect', () => {
 					</SearchableSingleSelect>
 				);
 
-				wrapper
-					.find('DropMenu')
-					.first()
-					.prop('onSelect')(10, mockSelectionCallback);
+				wrapper.find('DropMenu').first().prop('onSelect')(
+					10,
+					mockSelectionCallback
+				);
 
 				expect(onSelect).toHaveBeenCalledWith(10, mockSelectionCallback);
 			});
@@ -107,10 +107,10 @@ describe('SearchableSingleSelect', () => {
 					</SearchableSingleSelect>
 				);
 
-				wrapper
-					.find('DropMenu')
-					.first()
-					.prop('onSelect')(0, mockSelectionCallback);
+				wrapper.find('DropMenu').first().prop('onSelect')(
+					0,
+					mockSelectionCallback
+				);
 
 				expect(onSelect).toHaveBeenCalledWith(0, mockSelectionCallback);
 			});
@@ -134,10 +134,9 @@ describe('SearchableSingleSelect', () => {
 					</SearchableSingleSelect>
 				);
 
-				wrapper
-					.find('Selection')
-					.first()
-					.prop('onRemove')(mockSelectionCallback);
+				wrapper.find('Selection').first().prop('onRemove')(
+					mockSelectionCallback
+				);
 
 				expect(onSelect).toHaveBeenCalledWith(null, mockSelectionCallback);
 			});
@@ -152,7 +151,9 @@ describe('SearchableSingleSelect', () => {
 					</SearchableSingleSelect>
 				);
 
-				const searchWrapper = wrapper.find('.lucid-SearchableSingleSelect-search-is-error');
+				const searchWrapper = wrapper.find(
+					'.lucid-SearchableSingleSelect-search-is-error'
+				);
 
 				expect(searchWrapper.exists()).toBeTruthy();
 			});
@@ -165,7 +166,9 @@ describe('SearchableSingleSelect', () => {
 					</SearchableSingleSelect>
 				);
 
-				const searchWrapper = wrapper.find('.lucid-SearchableSingleSelect-error-content');
+				const searchWrapper = wrapper.find(
+					'.lucid-SearchableSingleSelect-error-content'
+				);
 
 				expect(searchWrapper.text()).toEqual('Erroring out');
 			});
@@ -178,12 +181,16 @@ describe('SearchableSingleSelect', () => {
 					</SearchableSingleSelect>
 				);
 
-				const searchWrapper = wrapper.find('.lucid-SearchableSingleSelect-search-is-error');
-				const errorWrapper = wrapper.find('.lucid-SearchableSingleSelect-error-content');
+				const searchWrapper = wrapper.find(
+					'.lucid-SearchableSingleSelect-search-is-error'
+				);
+				const errorWrapper = wrapper.find(
+					'.lucid-SearchableSingleSelect-error-content'
+				);
 				expect(errorWrapper.exists()).toBeFalsy();
 				expect(searchWrapper).toBeTruthy();
 			});
-		})
+		});
 	});
 
 	describe('custom formatting', () => {

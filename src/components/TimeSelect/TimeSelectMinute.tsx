@@ -32,7 +32,7 @@ const TimeSelectMinute = ({
 	onChange,
 }: ITimeSelectMinute) => {
 	const onMinuteChange = useCallback(
-		nextMinuteString => {
+		(nextMinuteString) => {
 			const nextMinute = +nextMinuteString;
 			const updatedTime = new Date(time);
 			const shouldGetNextStep = shouldGetNextMinuteStep(minute, nextMinute);

@@ -64,7 +64,7 @@ export default createClass({
 	render() {
 		return (
 			<div>
-				{_.map(colors, color => (
+				{_.map(colors, (color) => (
 					<svg key={color} {...svgProps}>
 						<Bar {...barProps} color={color} />
 					</svg>
