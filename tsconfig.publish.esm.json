@@ -2,8 +2,9 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "declaration": true,
-    "target": "ES2019",
-    "module": "ES6",
+    "declarationMap": true,
+    "target": "es2020",
+    "module": "esnext"
   },
   "include": [
     "src/**/*"

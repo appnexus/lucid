@@ -2,7 +2,6 @@
 	"name": "lucid-ui",
 	"version": "7.1.0",
 	"description": "A UI component library from AppNexus.",
-	"type": "module",
 	"main": "dist/cjs/index.js",
 	"module": "dist/esm/index.js",
 	"sideEffects": [
