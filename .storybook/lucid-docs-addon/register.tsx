@@ -2,61 +2,8 @@ import React from 'react';
 import addons from '@storybook/addons';
 import { DOCS_RENDERED, STORY_RENDERED } from '@storybook/core-events';
 import _ from 'lodash';
-import ExampleCode from './ExampleCode';
 import PropTypes from './PropTypes';
 import ChildComponents from './ChildComponents';
-import packageJson from '../../package.json';
-
-class CodePanel extends React.Component<any, any> {
-	unmounted: boolean;
-
-	constructor(props, state) {
-		super(props, state);
-		this.unmounted = false;
-		this.state = { code: '' };
-		this.onSource = this.onSource.bind(this);
-	}
-
-	onSource(code) {
-		if (!_.isString(code)) {
-			return this.setState({
-				code: '',
-			});
-		}
-
-		this.setState({
-			code,
-		});
-	}
-
-	componentDidMount() {
-		const { channel, api } = this.props;
-		// Listen to the notes and render it.
-		channel.on('lucid-docs-source', this.onSource);
-	}
-
-	render() {
-		const { code } = this.state as any;
-
-		if (_.isEmpty(code) || !this.props.active) {
-			return null;
-		}
-
-		return (
-			<div style={{ width: '100%' }}>
-				<ExampleCode code={code} hasCodepen packageJson={packageJson} />
-			</div>
-		);
-	}
-
-	// This is some cleanup tasks when the CodePanel is unmounting.
-	componentWillUnmount() {
-		this.onSource('');
-		this.unmounted = true;
-		const { channel, api } = this.props;
-		channel.removeListener('lucid-docs-source', this.onSource);
-	}
-}
 
 class PropsPanel extends React.Component<any, any> {
 	unmounted: boolean;
@@ -182,12 +129,6 @@ addons.register('lucid-docs', (api) => {
 		title: 'Props',
 		render: ({ active }) => (
 			<PropsPanel active={active} channel={addons.getChannel()} api={api} />
-		),
-	});
-	addons.addPanel('lucid-docs-panel-code', {
-		title: 'Code',
-		render: ({ active }) => (
-			<CodePanel active={active} channel={addons.getChannel()} api={api} />
 		),
 	});
 

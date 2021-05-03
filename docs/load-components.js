@@ -7,22 +7,6 @@ const getDefaultExport = (module) => {
 
 module.exports = [
 	{
-		name: 'Accordion',
-		component: getDefaultExport(
-			require('../src/components/Accordion/Accordion')
-		),
-		examplesContext: require.context(
-			'../src/components/Accordion/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../src/components/Accordion/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
-	},
-	{
 		name: 'Autocomplete',
 		component: getDefaultExport(
 			require('../src/components/Autocomplete/Autocomplete')
@@ -201,20 +185,6 @@ module.exports = [
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Breadcrumb/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
-	},
-	{
-		name: 'Button',
-		component: getDefaultExport(require('../src/components/Button/Button')),
-		examplesContext: require.context(
-			'../src/components/Button/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../src/components/Button/examples',
 			true,
 			/\.(j|t)sx?$/
 		),

@@ -1,23 +1,9 @@
-import React from 'react';
-import ReactDOMServer from 'react-dom/server';
 import _ from 'lodash';
-import marksy from 'marksy/components';
 import { storiesOf } from '@storybook/react';
-import LinkTo from '@storybook/addon-links/react';
 import { exampleStory } from '../.storybook/lucid-docs-addon';
 import { stripIndent, formatSource } from '../.storybook/lucid-docs-addon/util';
-import readmeText from '!!raw-loader!../README.md';
-import introText from '!!raw-loader!./intro.md';
-import childComponentsText from '!!raw-loader!./child-components.md';
-import hybridComponentsText from '!!raw-loader!./hybrid-components.md';
-import computedPropsText from '!!raw-loader!./computed-props.md';
-import LucidLogo from './LucidLogo';
-import SyntaxHighlighter, {
-	registerLanguage,
-} from 'react-syntax-highlighter/prism-light';
+import { registerLanguage } from 'react-syntax-highlighter/prism-light';
 import jsx from 'react-syntax-highlighter/languages/prism/jsx';
-import okaidia from 'react-syntax-highlighter/styles/prism/okaidia';
-import ColorPalette from './color-palette';
 import isChromatic from 'storybook-chromatic/isChromatic';
 
 import '../src/index.less';
@@ -35,26 +21,29 @@ const articlePageOptions = { showPanel: false };
 const examplePageOptions = { showPanel: true, panelPosition: 'right' };
 
 const loadAllKeys = (reqContext, rawContext) => {
-	return _.map(_.get(reqContext, 'keys', _.constant([]))(), key => ({
+	return _.map(_.get(reqContext, 'keys', _.constant([]))(), (key) => ({
 		key,
 		module: reqContext(key),
 		raw: rawContext(key),
 	}));
 };
 
-const getDefaultExport = module => {
+const getDefaultExport = (module) => {
 	if (module.__esModule) {
 		return module.default;
 	}
 	return module;
 };
 
-const isPrivate = component =>
+const isPrivate = (component) =>
 	component._isPrivate || (component.peek && component.peek.isPrivate);
 
 const getExamplesFromContext = (reqExamples, rawContext) =>
 	_.map(loadAllKeys(reqExamples, rawContext), ({ key, module, raw }) => ({
-		name: _.join(_.reject(_.words(key), w => /^(\d+|[tj]sx?)$/.test(w)), ' '),
+		name: _.join(
+			_.reject(_.words(key), (w) => /^(\d+|[tj]sx?)$/.test(w)),
+			' '
+		),
 		Example: getDefaultExport(module),
 		exampleNotes: module.notes,
 		source: raw,
@@ -83,65 +72,6 @@ const styles = {
 		margin: '8px 0',
 	},
 };
-
-const compile = marksy({
-	createElement: React.createElement,
-	highlight: (language, code) =>
-		ReactDOMServer.renderToStaticMarkup(
-			<SyntaxHighlighter language={language || 'jsx'} style={okaidia}>
-				{code}
-			</SyntaxHighlighter>
-		),
-	elements: {
-		a: props => <a {...props} style={styles.link} />,
-		ul: props => <ul {...props} style={styles.ul} />,
-		li: props => <li {...props} style={styles.li} />,
-	},
-	components: {
-		LinkTo: props => <LinkTo {...props} style={styles.link} />,
-	},
-});
-
-class ArticlePage extends React.Component {
-	constructor(...args) {
-		super(...args);
-	}
-
-	componentDidMount() {
-		if (typeof window !== 'undefined') {
-			window.document.documentElement.scrollTop = 0;
-		}
-	}
-
-	render() {
-		const { children } = this.props;
-
-		return (
-			<article
-				style={{
-					width: '100%',
-					height: '100%',
-				}}
-			>
-				<a href='https://github.com/appnexus/lucid'>
-					<img
-						style={{
-							position: 'absolute',
-							top: 0,
-							right: 0,
-							border: 0,
-						}}
-						src='//camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67'
-						srcSet='//aral.github.io/fork-me-on-github-retina-ribbons/right-graphite@2x.png 2x'
-						alt='Fork me on GitHub'
-						data-canonical-src='//s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png'
-					/>
-				</a>
-				{children}
-			</article>
-		);
-	}
-}
 
 const formatNotes = ({
 	overview,
@@ -178,54 +108,12 @@ ${exampleNotes}
 }
 `;
 
-storiesOf('Documentation|Introduction', module)
-	.addParameters({ options: articlePageOptions })
-	.add('Introduction', () => (
-		<ArticlePage>
-			<div
-				style={{
-					display: 'flex',
-					justifyContent: 'center',
-				}}
-			>
-				<LucidLogo />
-			</div>
-			{compile(introText).tree}
-		</ArticlePage>
-	));
-
-storiesOf('Documentation|Readme', module)
-	.addParameters({ options: articlePageOptions })
-	.add('Readme', () => <ArticlePage>{compile(readmeText).tree}</ArticlePage>);
-
-storiesOf('Documentation|Child Components', module)
-	.addParameters({ options: articlePageOptions })
-	.add('Child Components', () => (
-		<ArticlePage>{compile(childComponentsText).tree}</ArticlePage>
-	));
-
-storiesOf('Documentation|Hybrid State Components', module)
-	.addParameters({ options: articlePageOptions })
-	.add('Hybrid State Components', () => (
-		<ArticlePage>{compile(hybridComponentsText).tree}</ArticlePage>
-	));
-
-storiesOf('Documentation|Computed Props', module)
-	.addParameters({ options: articlePageOptions })
-	.add('Computed Props', () => (
-		<ArticlePage>{compile(computedPropsText).tree}</ArticlePage>
-	));
-
-storiesOf('Documentation|Color Palette', module)
-	.addParameters({ options: articlePageOptions })
-	.add('Color Palette', () => (
-		<ArticlePage>
-			<ColorPalette />
-		</ArticlePage>
-	));
-
-const addStories = (components, separator, categoryOverride) => {
-	const storiesOfAddSequence = [];
+const addStories = (
+	components,
+	separator = '/',
+	categoryOverride: string | null = null
+) => {
+	const storiesOfAddSequence: any = [];
 
 	_.forEach(
 		components,
@@ -286,97 +174,17 @@ const addStories = (components, separator, categoryOverride) => {
 };
 
 const loadedComponents = require('./load-components');
+
 const filteredComponents = _.reject(loadedComponents, ({ component }) =>
 	isPrivate(component)
 );
 
-addStories(filteredComponents, '|');
+addStories(filteredComponents);
 
-const loadedIcons = require('./load-icons');
+const { default: loadedIcons } = require('./icons/load-icons');
+
 const filteredIcons = _.reject(loadedIcons, ({ component }) =>
 	isPrivate(component)
 );
 
-storiesOf('Icons', module)
-	.addParameters({ options: articlePageOptions })
-	.add('Overview', () => (
-		<ArticlePage>
-			<h1>Icons</h1>
-			<section style={{ margin: '10px 0' }}>
-				<h2>Color Variations</h2>
-				<div
-					style={{
-						display: 'inline-flex',
-						backgroundImage:
-							'linear-gradient(45deg, #d3d1d1 25%, transparent 25%), linear-gradient(-45deg, #d3d1d1 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #d3d1d1 75%), linear-gradient(-45deg, transparent 75%, #d3d1d1 75%)',
-						backgroundSize: '4px 4px',
-						backgroundPosition: '0 0, 0 10px, 10px -10px, -10px 0px',
-					}}
-				>
-					{_.map(
-						[
-							'neutral-dark',
-							'neutral-light',
-							'primary',
-							'white',
-							'success',
-							'warning',
-							'secondary-one',
-							'secondary-two',
-							'secondary-three',
-						],
-						color => (
-							<div
-								style={{
-									padding: '5px',
-									marginRight: '20px',
-									display: 'flex',
-									flexDirection: 'column',
-									alignItems: 'center',
-								}}
-							>
-								<svg
-									width='32'
-									height='32'
-									viewBox='0 0 36 36'
-									preserveAspectRatio='xMidYMid meet'
-									class={`lucid-Icon lucid-Icon-color-${color}`}
-								>
-									<circle cx='8.5' cy='5.5' r='5' />
-									<path d='M35.5 35.5L21 11.5l-14.5 24zm-29 0h-6l11-18 2.934 4.801' />
-									<path d='M16.399 19.102L18.5 21.5l3-3 3 3 2-1' />
-								</svg>
-								<div style={{ paddingTop: '3px' }}>{color}</div>
-							</div>
-						)
-					)}
-				</div>
-			</section>
-			<section style={{ margin: '10px 0' }}>
-				<h2>Available Icons</h2>
-				<div
-					style={{
-						display: 'flex',
-						flexWrap: 'wrap',
-					}}
-				>
-					{_.map(filteredIcons, ({ name, component: Icon }) => (
-						<div
-							key={name}
-							style={{
-								flexBasis: 256,
-								margin: 10,
-							}}
-						>
-							<Icon />{' '}
-							<LinkTo style={styles.link} kind={`Icons|Icons/${name}`}>
-								{name}
-							</LinkTo>
-						</div>
-					))}
-				</div>
-			</section>
-		</ArticlePage>
-	));
-
-addStories(filteredIcons, '/', 'Icons|Icons');
+addStories(filteredIcons, '/', 'Icons/Icons');
