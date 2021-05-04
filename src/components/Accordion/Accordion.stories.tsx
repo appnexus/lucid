@@ -53,9 +53,9 @@ export const Basic = () => (
 );
 
 export const InitialIndexSet = () => {
-	const [index, setIndex] = useState(2);
+	const [index, setIndex] = useState<number | null>(2);
 
-	const handleChange = (index: number) => {
+	const handleChange = (index: number | null) => {
 		setIndex(index);
 	};
 

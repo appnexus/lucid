@@ -17,7 +17,6 @@ import './index.less'; // very minimal overrides
 
 registerLanguage('jsx', jsx);
 
-const articlePageOptions = { showPanel: false };
 const examplePageOptions = { showPanel: true, panelPosition: 'right' };
 
 const loadAllKeys = (reqContext, rawContext) => {
