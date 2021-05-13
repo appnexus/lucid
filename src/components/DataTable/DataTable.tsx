@@ -456,7 +456,11 @@ export const DataTable = (props: IDataTableProps) => {
 												}
 												truncateContent={truncateContent}
 											>
-												{isEmpty ? emptyCellText : cellValue}
+												{isEmpty
+													? emptyCellText
+													: _.isFunction(cellValue)
+													? cellValue(columnProps.width)
+													: cellValue}
 											</Td>
 										);
 									}
