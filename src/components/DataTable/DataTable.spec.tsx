@@ -1045,5 +1045,35 @@ describe('DataTable', () => {
 				);
 			});
 		});
+
+		describe('cellValue is a function', () => {
+			it('should pass column width as a prop to cellValue', () => {
+				const testDataWithFunctionInCellValue: any = [
+					{
+						id: 1,
+						first_name: 'Isaac',
+						email: 'inewton@example.com',
+						occupation: 'Physicist',
+						isDisabled: true,
+						isSelected: true,
+						isActive: true,
+						status: (width) => <Checkbox width={width} />,
+					},
+				];
+
+				const wrapper = mount(
+					<DataTable hasFixedHeader data={testDataWithFunctionInCellValue}>
+						<Column field='id' isResizable title='ID' />
+						<Column field='first_name' isResizable title='First' />
+						<Column field='last_name' isResizable title='Last' />
+						<Column field='email' isResizable title='Email' />
+						<Column field='occupation' isResizable title='Occupation' />
+						<Column field='status' isResizable title='Status' />
+					</DataTable>
+				);
+
+				expect(wrapper.find(Checkbox).props()).toHaveProperty('width');
+			});
+		});
 	});
 });
