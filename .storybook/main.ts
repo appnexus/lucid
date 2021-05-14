@@ -1,5 +1,3 @@
-import { create } from '@storybook/theming';
-
 module.exports = {
 	addons: ['@storybook/addon-essentials', '@storybook/addon-postcss'],
 	stories: [
@@ -30,18 +28,3 @@ module.exports = {
 		return config;
 	},
 };
-
-function loadStories() {
-	require('../docs/index.stories');
-}
-
-const lucidTheme = create({
-	base: 'light',
-
-	brandTitle: 'Lucid UI',
-	brandUrl: 'https://github.com/appnexus/lucid',
-	brandImage: 'logo.svg',
-
-	appBg: 'white',
-	appContentBg: 'white',
-});

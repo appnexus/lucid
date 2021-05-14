@@ -28,7 +28,7 @@ const getChildComponentsData = (
 				childComponent,
 				maxRecursiveHeight,
 				recursiveHeight + 1,
-				path.concat(key as any)
+				path.concat(key)
 			);
 			return {
 				name: key,
