@@ -1,11 +1,18 @@
+## 8.0.0
+
+- #1231 [major] Updated storybook to v6 
+  https://github.com/appnexus/lucid/pull/1231
+
 ## 7.2.0
 
 - #1235 [minor] Exposing data table column width to child components 
   https://github.com/appnexus/lucid/pull/1235
+
 ## 7.1.0
 
 - #1227 [minor] Updated build to create cjs and esm assets.
   https://github.com/appnexus/lucid/pull/1227
+
 ## 7.0.4
 
 - #1223 [patch] Set type to module.
