@@ -238,37 +238,6 @@ module.exports = [
 			/\.(j|t)sx?$/
 		),
 	},
-
-	{
-		name: 'Checkbox',
-		component: getDefaultExport(require('../src/components/Checkbox/Checkbox')),
-		examplesContext: require.context(
-			'../src/components/Checkbox/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../src/components/Checkbox/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
-	},
-	{
-		name: 'CheckboxLabeled',
-		component: getDefaultExport(
-			require('../src/components/CheckboxLabeled/CheckboxLabeled')
-		),
-		examplesContext: require.context(
-			'../src/components/CheckboxLabeled/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../src/components/CheckboxLabeled/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
-	},
 	{
 		name: 'Collapsible',
 		component: getDefaultExport(
