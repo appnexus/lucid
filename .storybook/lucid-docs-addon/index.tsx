@@ -2,9 +2,6 @@ import React from 'react';
 import _ from 'lodash';
 import addons from '@storybook/addons';
 import { getPropsData, stripIndent } from './util';
-import marksy from 'marksy';
-
-const compile = marksy({ createElement: React.createElement });
 
 const isReactComponent = (value) =>
 	typeof value === 'function' &&
@@ -31,7 +28,7 @@ const getChildComponentsData = (
 				childComponent,
 				maxRecursiveHeight,
 				recursiveHeight + 1,
-				path.concat(key as any)
+				path.concat(key)
 			);
 			return {
 				name: key,

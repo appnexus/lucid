@@ -1,11 +1,25 @@
 import _ from 'lodash';
 import React from 'react';
-import { Button, CheckIcon } from '../../../index';
+import CheckIcon from '../Icon/CheckIcon/CheckIcon';
+import { Button } from './Button';
 
 const kinds = [undefined, 'primary', 'link', 'danger', 'invisible'];
 const sizes = [undefined, 'small', 'short', 'large'];
 
-export default () => (
+export default {
+	title: 'Controls/Button',
+	component: Button,
+	parameters: {
+		notes: Button.peek.description,
+		docs: {
+			inlineStories: true,
+		},
+	},
+};
+
+export const Default = (args) => <Button {...args}>Button</Button>;
+
+export const AllTypes = () => (
 	<div
 		style={{
 			display: 'grid',

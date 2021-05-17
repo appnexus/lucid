@@ -6,22 +6,27 @@ A UI component library from AppNexus.
 
 Lucid can be installed with npm
 
-    npm install --save lucid-ui
+```sh
+  npm install --save lucid-ui
+```
 
 or yarn
 
-    yarn add lucid-ui
-
+```sh
+  yarn add lucid-ui
+```
 ## Usage
 
-    import React from 'react';
-    import ReactDOM from 'react-dom';
-    import { Button } from 'lucid-ui';
+```js
+  import React from 'react';
+  import ReactDOM from 'react-dom';
+  import { Button } from 'lucid-ui';
 
-    ReactDOM.render(
-      <Button>Hello World</Button>,
-      mountNode
-    );
+  ReactDOM.render(
+    <Button>Hello World</Button>,
+    mountNode
+  );
+```
 
 Lucid uses `less` for its stylesheets. If you use `less`, you can include the
 styles like so:
@@ -57,13 +62,15 @@ we support React 15 and 16.
 
 Example package.json:
 
-    {
-      "dependencies": {
-        "lucid-ui": "^5.0.0",
-        "react": "^16.0.0",
-        "react-dom": "^16.0.0",
-      }
+```json
+  {
+    "dependencies": {
+      "lucid-ui": "^5.0.0",
+      "react": "^16.0.0",
+      "react-dom": "^16.0.0",
     }
+  }
+```
 
 To contribute to lucid, please see `CONTRIBUTING.md`.
 

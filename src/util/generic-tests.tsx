@@ -4,7 +4,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { mount, shallow } from 'enzyme';
 import assert from 'assert';
-import _ from 'lodash';
+import _, { each, keys, omit } from 'lodash';
 import glob from 'glob';
 import * as lucid from '../index';
 
@@ -155,10 +155,29 @@ export function common(
 
 		describe('example testing', () => {
 			const fileNames = glob.sync(
+				`./src/components/**/${Component.displayName}/*.stories.@(j|t)sx`
+			);
+			each(fileNames, (path) => {
+				const lib = require('../../' + path.replace('.tsx', ''));
+
+				each(omit(lib, ['default']), (Story, name) => {
+					it(`should match snapshot(s) for ${name}`, () => {
+						expect(
+							shallow(<Story />, {
+								disableLifecycleMethods: true,
+							})
+						).toMatchSnapshot();
+					});
+				});
+			});
+
+			// Support for older examples
+			const exampleFileNames = glob.sync(
 				`./src/components/**/${Component.displayName}/examples/*.@(j|t)sx`
 			);
-			_.each(fileNames, (path) => {
+			_.each(exampleFileNames, (path) => {
 				const lib = require('../../' + path.replace('.tsx', ''));
+
 				const Example = lib.default;
 
 				const title = parse(path).name;

@@ -8,15 +8,13 @@ import {
 	findTypes,
 	omitProps,
 	StandardProps,
-	Overwrite,
 } from '../../util/component-types';
 import * as reducers from '../Accordion/Accordion.reducers';
 
 const cx = lucidClassNames.bind('&-Accordion');
 
 const { func, object, number, string } = PropTypes;
-
-interface IAccordionPropsRaw extends StandardProps {
+interface IAccordionProps extends StandardProps {
 	/**
 	 * Indicates which item is expanded
 	 * */
@@ -31,11 +29,6 @@ interface IAccordionPropsRaw extends StandardProps {
 	) => void;
 }
 
-export type IAccordionProps = Overwrite<
-	React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>,
-	IAccordionPropsRaw
->;
-
 export interface IAccordionState {
 	selectedIndex: number | null;
 }
@@ -44,7 +37,7 @@ const defaultProps = {
 	onSelect: _.noop,
 };
 
-const Accordion = (props: IAccordionProps) => {
+const Accordion = (props: IAccordionProps): React.ReactElement => {
 	const { style, className, selectedIndex, ...passThroughs } = props;
 
 	const itemChildProps = _.map(findTypes(props, Accordion.Item), 'props');
