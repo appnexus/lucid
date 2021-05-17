@@ -1,4 +1,7 @@
+## 7.2.0
 
+- #1235 [minor] Exposing data table column width to child components 
+  https://github.com/appnexus/lucid/pull/1235
 ## 7.1.0
 
 - #1227 [minor] Updated build to create cjs and esm assets.
