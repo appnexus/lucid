@@ -10,7 +10,7 @@ export default {
 	},
 } as Meta;
 
-const Template = (args) => {
+const Template: any = (args) => {
 	const [selected, setSelected] = useState(args.isSelected || false);
 	return (
 		<Checkbox
