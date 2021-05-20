@@ -31,6 +31,8 @@ TextFieldValidatedError.propName = 'Error';
 export interface ITextFieldValidatedProps
 	extends ITextFieldPropsWithPassThroughs {
 	Error?: React.ReactNode;
+	warning?: React.ReactNode;
+	info?: React.ReactNode;
 }
 
 export interface ITextFieldValidatedState {
@@ -66,6 +68,14 @@ class TextFieldValidated extends React.Component<
 		Error: any`
 			Prop alternative to Error child component
 		`,
+
+		warning: any`
+			Prop alternative to Error child component
+		`,
+
+		info: any`
+			Prop alternative to Error child component
+		`,
 	};
 
 	static defaultProps = TextField.defaultProps;
@@ -83,12 +93,16 @@ class TextFieldValidated extends React.Component<
 			findTypes(this.props, TextFieldValidated.Error),
 			'props'
 		);
+		const warningChildProps = this.props.warning;
+		const infoChildProps = this.props.info;
 
 		return (
 			<Validation
-				className={cx('&', className)}
+				className={cx('&', className, {
+					'-info': !errorChildProps && !warningChildProps && infoChildProps,
+				})}
 				style={style}
-				Error={errorChildProps}
+				Error={errorChildProps || warningChildProps || infoChildProps}
 			>
 				<TextField
 					{...omitProps(
