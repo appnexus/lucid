@@ -58,3 +58,65 @@ exports[`TextFieldValidated [common] example testing should match snapshot(s) fo
   />
 </Validation>
 `;
+
+exports[`TextFieldValidated [common] example testing should match snapshot(s) for 03.error_types 1`] = `
+<Validation
+  Error={
+    Array [
+      Object {
+        "children": "This is an error",
+      },
+    ]
+  }
+  className="lucid-TextFieldValidated"
+  style={
+    Object {
+      "marginBottom": "10px",
+    }
+  }
+>
+  <TextField
+    debounceLevel={500}
+    isDisabled={false}
+    isMultiLine={false}
+    lazyLevel={1000}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onChangeDebounced={[Function]}
+    onKeyDown={[Function]}
+    onSubmit={[Function]}
+    rows={5}
+    value=""
+  />
+</Validation>
+`;
+
+exports[`TextFieldValidated [common] example testing should match snapshot(s) for 03.error_types 2`] = `
+<Validation
+  Error={
+    Array [
+      "This is an info",
+    ]
+  }
+  className="lucid-TextFieldValidated -info"
+  style={
+    Object {
+      "marginBottom": "10px",
+    }
+  }
+>
+  <TextField
+    debounceLevel={500}
+    isDisabled={false}
+    isMultiLine={false}
+    lazyLevel={1000}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onChangeDebounced={[Function]}
+    onKeyDown={[Function]}
+    onSubmit={[Function]}
+    rows={5}
+    value=""
+  />
+</Validation>
+`;
