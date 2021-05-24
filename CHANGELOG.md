@@ -1,3 +1,6 @@
+- #1237 [minor] Add info prop to TextFieldValidated
+  https://github.com/appnexus/lucid/pull/1237
+
 ## 8.0.0
 
 - #1231 [major] Updated storybook to v6 
