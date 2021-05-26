@@ -423,7 +423,9 @@ export const DataTable = (props: IDataTableProps) => {
 									({ props: columnProps }, columnIndex) => {
 										const cellValue = _.get(row, columnProps.field);
 										const isEmpty = _.isEmpty(_.toString(cellValue));
-
+										const currentWidth =
+											state.activeWidth[columnProps.field || columnIndex] ||
+											columnProps.width;
 										return (
 											<Td
 												{..._.omit(columnProps, [
@@ -442,13 +444,7 @@ export const DataTable = (props: IDataTableProps) => {
 														  columnIndex + 1 + (isSelectable ? 1 : 0) ===
 																endColumn
 												}
-												style={{
-													width:
-														// @ts-ignore
-														state.activeWidth[
-															columnProps.field || columnIndex
-														] || columnProps.width,
-												}}
+												style={{ width: currentWidth }}
 												key={
 													'row' +
 													index +
@@ -459,7 +455,7 @@ export const DataTable = (props: IDataTableProps) => {
 												{isEmpty
 													? emptyCellText
 													: _.isFunction(cellValue)
-													? cellValue(columnProps.width)
+													? cellValue(currentWidth)
 													: cellValue}
 											</Td>
 										);
