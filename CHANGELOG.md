@@ -1,3 +1,7 @@
+## 8.1.0
+
+- #1238 [patch] Small update to recent DataTable change 
+  https://github.com/appnexus/lucid/pull/1238
 - #1237 [minor] Add info prop to TextFieldValidated
   https://github.com/appnexus/lucid/pull/1237
 
