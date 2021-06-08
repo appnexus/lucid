@@ -1,4 +1,4 @@
-## 8.1.0
+## 8.2.0
 
 - #1238 [patch] Small update to recent DataTable change 
   https://github.com/appnexus/lucid/pull/1238
