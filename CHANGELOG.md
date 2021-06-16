@@ -1,3 +1,6 @@
+## 8.2.1
+
+- [patch] Export Typescript types in package.json 
 ## 8.2.0
 
 - #1238 [patch] Small update to recent DataTable change 
