@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
-import _ from 'lodash';
+import _, { isNil } from 'lodash';
 import Portal from '../Portal/Portal';
 import { getFirst, omitProps, StandardProps } from '../../util/component-types';
 import {
@@ -288,7 +288,7 @@ class ContextMenu extends React.Component<
 		const eventTarget = event.target as HTMLElement | null;
 
 		if (
-			onClickOut &&
+			!isNil(onClickOut) &&
 			flyOutPortalRef.current &&
 			targetRef.current &&
 			eventTarget &&
