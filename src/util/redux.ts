@@ -3,11 +3,11 @@ import { createSelector } from 'reselect';
 import { reduceSelectors, safeMerge } from './state-management';
 import { logger, isDevMode } from './logger';
 
-type Funk = (...args: any) => any;
-interface IThunk {
+export type Funk = (...args: any) => any;
+export interface IThunk {
 	isThunk?: boolean;
 }
-type FunkThunk = Funk & IThunk;
+export type FunkThunk = Funk & IThunk;
 
 /**
  * Marks a function on the reducer tree as a thunk action creator so it doesn't
