@@ -46,7 +46,7 @@ export interface ISearchFieldState extends ITextFieldState {}
 
 export interface ISearchFieldProps extends StandardProps {
 	/** Fires an event every time the user types text into the TextField. */
-	onChange: (
+	onChange?: (
 		value: string,
 		{ event, props }: { event: React.FormEvent; props: ITextFieldProps }
 	) => void;
@@ -60,16 +60,16 @@ export interface ISearchFieldProps extends StandardProps {
 
 	/** Number of milliseconds to debounce the \`onChangeDebounced\` callback.
 			Only useful if you provide an \`onChangeDebounced\` handler. */
-	debounceLevel: number;
+	debounceLevel?: number;
 
 	/** Fires an event when the user hits "enter" from the SearchField. */
-	onSubmit: (
+	onSubmit?: (
 		value: string,
 		{ event, props }: { event: React.FormEvent; props: ITextFieldProps }
 	) => void;
 
 	/** Set the value of the input. */
-	value: string | number;
+	value?: string | number;
 
 	/** Controls the highlighting of the search icon. Should be passed \`true\`
 			when the search text is valid, e.g. contains enough characters to perform
@@ -77,7 +77,7 @@ export interface ISearchFieldProps extends StandardProps {
 	isValid?: boolean;
 
 	/** Disables the SearchField by greying it out. */
-	isDisabled: boolean;
+	isDisabled?: boolean;
 
 	/**n placeholder value */
 	placeholder?: string;

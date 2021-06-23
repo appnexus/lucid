@@ -211,15 +211,15 @@ Tab.propTypes = {
 		`,
 };
 
-interface ITabsProps extends StandardProps {
+export interface ITabsProps extends StandardProps {
 	/** Indicates which of the \`Tabs.Tab\` children is currently selected. The
 	index of the last \`Tabs.Tab\` child with \`isSelected\` equal to
 	\`true\` takes precedence over this prop. */
-	selectedIndex: number;
+	selectedIndex?: number;
 
 	/** Callback for when the user clicks a tab. Called with the index of the tab
 	that was clicked. */
-	onSelect: (
+	onSelect?: (
 		index: number,
 		{
 			props,
@@ -228,26 +228,26 @@ interface ITabsProps extends StandardProps {
 	) => void;
 
 	/** If \`true\` then the active tab will appear open on the bottom. */
-	isOpen: boolean;
+	isOpen?: boolean;
 
 	/** Style the tabs as a progression. This is typically used for a work flow
 	where the user needs to move forward and backward through a series of
 	steps. */
-	isProgressive: boolean;
+	isProgressive?: boolean;
 
 	/** Provides a small bottom border that offers a barrier between the tab
 	group and the rest of the page.
 	Useful if the tabs are not anchored to anything. */
-	isFloating: boolean;
+	isFloating?: boolean;
 
 	/** Set the multiline className. This is typically used for styling the
 	Tab.Title bar for improved readability when there are multiple React
 	elements in the tab headers. */
-	hasMultilineTitle: boolean;
+	hasMultilineTitle?: boolean;
 
 	/** If \`true\` the width will be evenly distributed to all tabs.  \`False\`
 	typically used in conjunction with \`Tab.width\` */
-	hasFullWidthTabs: boolean;
+	hasFullWidthTabs?: boolean;
 
 	/** *Child Element* Can be used to define one or more individual \`Tab\`s in
 	the sequence of \`Tabs\`. */
@@ -347,7 +347,7 @@ class Tabs extends React.Component<ITabsPropsWithPassThroughs, ITabsState> {
 	): void => {
 		const { onSelect } = this.props;
 
-		onSelect(index, { event, props: tabProps });
+		onSelect && onSelect(index, { event, props: tabProps });
 	};
 
 	render() {

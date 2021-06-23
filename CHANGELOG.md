@@ -1,3 +1,15 @@
+## 8.2.3
+
+- [patch] Fixed reactDocgen build of prop definitions 
+  https://gist.github.com/shilman/036313ffa3af52ca986b375d90ea46b0#short-term
+- [patch] Tweaked ITabsProps type
+- [patch] Tweaked ITabsProps type
+- [patch] Export more types definitions
+
+## 8.2.2
+
+- [patch] Export more types
+
 ## 8.2.1
 
 - [patch] Export Typescript types in package.json 

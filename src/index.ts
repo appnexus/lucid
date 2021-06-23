@@ -447,3 +447,8 @@ export {
 	WarningLightIcon,
 	WrenchIcon,
 };
+
+// Export types
+export * from './components/Banner/Banner';
+export * from './components/Tabs/Tabs';
+export * from './components/SearchField/SearchField';
