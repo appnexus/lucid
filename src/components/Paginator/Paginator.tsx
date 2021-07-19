@@ -11,7 +11,10 @@ import {
 	SingleSelectDumb as SingleSelect,
 	ISingleSelectState,
 } from '../SingleSelect/SingleSelect';
-import TextField, { ITextFieldProps, ITextFieldPropsWithPassThroughs } from '../TextField/TextField';
+import TextField, {
+	ITextFieldProps,
+	ITextFieldPropsWithPassThroughs,
+} from '../TextField/TextField';
 import { IButtonProps, Button } from '../Button/Button';
 import ArrowIcon from '../Icon/ArrowIcon/ArrowIcon';
 import { buildModernHybridComponent } from '../../util/state-management';
@@ -36,7 +39,7 @@ type IPaginatorSingleSelectProps = Partial<ISingleSelectProps>;
 type ShowTotalObjects = (count: number) => string;
 
 interface IExtendedTextFieldProps extends Omit<ITextFieldProps, 'value'> {
-	value?: string | number
+	value?: string | number;
 }
 
 export interface IPaginatorProps
@@ -246,7 +249,6 @@ class Paginator extends React.Component<IPaginatorProps, IPaginatorState> {
 			event: React.FocusEvent | React.FormEvent;
 		}
 	): void => {
-		console.log(pageNum);
 		const { onPageSelect, selectedPageIndex, totalPages } = this.props;
 		const parsedPageNum = _.parseInt(pageNum);
 		if (_.isNaN(parsedPageNum)) {
@@ -315,7 +317,7 @@ class Paginator extends React.Component<IPaginatorProps, IPaginatorState> {
 					<ArrowIcon direction='left' />
 				</Button>
 				<TextField
-					lazyLevel={100}	
+					lazyLevel={100}
 					onBlur={this.handleTextFieldChange}
 					onSubmit={this.handleTextFieldChange}
 					isDisabled={isDisabled || textFieldProps.isDisabled}

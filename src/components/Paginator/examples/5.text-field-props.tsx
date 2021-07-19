@@ -27,7 +27,10 @@ export default createClass({
 					/>
 				</section>
 
-				<p>A paginator where textField is disabled using textFieldProps and is passed an index value.</p>
+				<p>
+					A paginator where textField is disabled using textFieldProps and is
+					passed an index value.
+				</p>
 
 				<section>
 					<Paginator
@@ -73,9 +76,9 @@ export default createClass({
 						}}
 						TextField={{
 							value: this.state.selectedPageIndex,
-							onBlur: (value) => {this.setState(
-								{selectedPageIndex: value}
-							)}
+							onBlur: (value) => {
+								this.setState({ selectedPageIndex: value });
+							},
 						}}
 					/>
 				</section>
