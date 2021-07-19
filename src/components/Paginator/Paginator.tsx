@@ -13,7 +13,6 @@ import {
 } from '../SingleSelect/SingleSelect';
 import TextField, {
 	ITextFieldProps,
-	ITextFieldPropsWithPassThroughs,
 } from '../TextField/TextField';
 import { IButtonProps, Button } from '../Button/Button';
 import ArrowIcon from '../Icon/ArrowIcon/ArrowIcon';
@@ -39,7 +38,7 @@ type IPaginatorSingleSelectProps = Partial<ISingleSelectProps>;
 type ShowTotalObjects = (count: number) => string;
 
 interface IExtendedTextFieldProps extends Omit<ITextFieldProps, 'value'> {
-	value?: string | number;
+	value?: string;
 }
 
 export interface IPaginatorProps
@@ -320,8 +319,8 @@ class Paginator extends React.Component<IPaginatorProps, IPaginatorState> {
 					lazyLevel={100}
 					onBlur={this.handleTextFieldChange}
 					onSubmit={this.handleTextFieldChange}
-					isDisabled={isDisabled || textFieldProps.isDisabled}
 					{...textFieldProps}
+					isDisabled={isDisabled || textFieldProps.isDisabled}
 					value={selectedPageIndex + 1}
 				/>
 				{!_.isNil(totalPages) && <span>of {totalPages.toLocaleString()}</span>}

@@ -27,13 +27,11 @@ export default createClass({
 					/>
 				</section>
 
-				<p>
-					A paginator where textField is disabled using textFieldProps and is
-					passed an index value.
-				</p>
+				<p>A paginator where textField is not disabled using TextField props, but disabled from Paginator props</p>
 
 				<section>
 					<Paginator
+						isDisabled={true}
 						hasPageSizeSelector
 						showTotalObjects
 						totalCount={12321313}
@@ -41,8 +39,7 @@ export default createClass({
 							DropMenu: { direction: 'up' },
 						}}
 						TextField={{
-							value: 3,
-							isDisabled: true,
+							isDisabled: false,
 						}}
 					/>
 				</section>
@@ -58,7 +55,9 @@ export default createClass({
 							DropMenu: { direction: 'up' },
 						}}
 						TextField={{
-							value: 3,
+							onSubmit: (value) => {
+								this.setState({ selectedPageIndex: value });
+							},
 							isDisabled: true,
 						}}
 					/>
