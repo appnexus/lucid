@@ -13,7 +13,7 @@ function addKeys(children) {
 	return map(children, (chile, index) => ({ ...chile, key: index }));
 }
 
-const Template: typeof DataTable = (args) => <DataTable {...args} />;
+const Template: any = (args) => <DataTable {...args} />;
 
 const defaultColumns = addKeys([
 	<DataTable.Column field='id' align='left' key={1}>
