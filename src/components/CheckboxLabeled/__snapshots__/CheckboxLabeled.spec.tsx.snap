@@ -1,424 +1,88 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CheckboxLabeled [common] example testing should match snapshot(s) for 0.interactive 1`] = `
-<label
-  className="lucid-CheckboxLabeled"
-  style={
-    Object {
-      "marginBottom": "3px",
-    }
-  }
->
-  <Checkbox
-    className="lucid-CheckboxLabeled-Checkbox"
-    isDisabled={false}
-    isIndeterminate={false}
-    isSelected={false}
-    name="interactive-checkboxes"
-    onSelect={[Function]}
-  >
-    <CheckboxLabeled.Label>
-      Vanilla
-    </CheckboxLabeled.Label>
-  </Checkbox>
-  <div
-    className="lucid-CheckboxLabeled-label"
-  >
-    Vanilla
-  </div>
-</label>
+exports[`CheckboxLabeled [common] example testing should match snapshot(s) for Default 1`] = `
+<CheckboxLabeled
+  isDisabled={false}
+  isIndeterminate={false}
+  isSelected={false}
+  onSelect={[Function]}
+/>
 `;
 
-exports[`CheckboxLabeled [common] example testing should match snapshot(s) for 0.interactive 2`] = `
-<label
-  className="lucid-CheckboxLabeled"
-  style={
-    Object {
-      "marginBottom": "3px",
-    }
-  }
->
-  <Checkbox
-    className="lucid-CheckboxLabeled-Checkbox"
-    isDisabled={false}
-    isIndeterminate={false}
-    isSelected={false}
-    name="interactive-checkboxes"
-    onSelect={[Function]}
-  >
-    <CheckboxLabeled.Label>
-      Chocolate
-    </CheckboxLabeled.Label>
-  </Checkbox>
-  <div
-    className="lucid-CheckboxLabeled-label"
-  >
-    Chocolate
-  </div>
-</label>
+exports[`CheckboxLabeled [common] example testing should match snapshot(s) for Disabled 1`] = `
+<CheckboxLabeled
+  isDisabled={false}
+  isIndeterminate={false}
+  isSelected={false}
+  onSelect={[Function]}
+/>
 `;
 
-exports[`CheckboxLabeled [common] example testing should match snapshot(s) for 0.interactive 3`] = `
-<label
-  className="lucid-CheckboxLabeled"
-  style={
-    Object {
-      "marginBottom": "3px",
-    }
-  }
->
-  <Checkbox
-    className="lucid-CheckboxLabeled-Checkbox"
-    isDisabled={false}
-    isIndeterminate={false}
-    isSelected={false}
-    name="interactive-checkboxes"
-    onSelect={[Function]}
-  >
-    <CheckboxLabeled.Label>
-      Strawberry
-    </CheckboxLabeled.Label>
-  </Checkbox>
-  <div
-    className="lucid-CheckboxLabeled-label"
-  >
-    Strawberry
-  </div>
-</label>
+exports[`CheckboxLabeled [common] example testing should match snapshot(s) for DisabledSelected 1`] = `
+<CheckboxLabeled
+  isDisabled={false}
+  isIndeterminate={false}
+  isSelected={false}
+  onSelect={[Function]}
+/>
 `;
 
-exports[`CheckboxLabeled [common] example testing should match snapshot(s) for 0.interactive 4`] = `
-<label
-  className="lucid-CheckboxLabeled"
-  style={
-    Object {
-      "marginBottom": "3px",
-    }
-  }
->
-  <Checkbox
-    className="lucid-CheckboxLabeled-Checkbox"
-    isDisabled={false}
-    isIndeterminate={false}
-    isSelected={false}
-    name="interactive-checkboxes"
-    onSelect={[Function]}
-  >
-    <CheckboxLabeled.Label>
-      Salted Caramel
-    </CheckboxLabeled.Label>
-  </Checkbox>
-  <div
-    className="lucid-CheckboxLabeled-label"
-  >
-    Salted Caramel
-  </div>
-</label>
+exports[`CheckboxLabeled [common] example testing should match snapshot(s) for HTMLElement 1`] = `
+<CheckboxLabeled
+  isDisabled={false}
+  isIndeterminate={false}
+  isSelected={false}
+  onSelect={[Function]}
+/>
 `;
 
-exports[`CheckboxLabeled [common] example testing should match snapshot(s) for 0.interactive 5`] = `
-<label
-  className="lucid-CheckboxLabeled"
-  style={
-    Object {
-      "marginBottom": "3px",
-    }
-  }
->
-  <Checkbox
-    className="lucid-CheckboxLabeled-Checkbox"
-    isDisabled={false}
-    isIndeterminate={false}
-    isSelected={false}
-    name="interactive-checkboxes"
-    onSelect={[Function]}
-  >
-    <CheckboxLabeled.Label>
-      Mint chocolate chip (the best)
-    </CheckboxLabeled.Label>
-  </Checkbox>
-  <div
-    className="lucid-CheckboxLabeled-label"
-  >
-    Mint chocolate chip (the best)
-  </div>
-</label>
+exports[`CheckboxLabeled [common] example testing should match snapshot(s) for HTMLElementInAnArray 1`] = `
+<CheckboxLabeled
+  isDisabled={false}
+  isIndeterminate={false}
+  isSelected={false}
+  onSelect={[Function]}
+/>
 `;
 
-exports[`CheckboxLabeled [common] example testing should match snapshot(s) for 1.states 1`] = `
-<label
-  className="lucid-CheckboxLabeled"
-  style={
-    Object {
-      "marginBottom": "3px",
-      "marginRight": "13px",
-    }
-  }
+exports[`CheckboxLabeled [common] example testing should match snapshot(s) for LabelAsChild 1`] = `
+<CheckboxLabeled
+  isDisabled={false}
+  isIndeterminate={false}
+  isSelected={false}
+  onSelect={[Function]}
 >
-  <Checkbox
-    className="lucid-CheckboxLabeled-Checkbox"
-    isDisabled={false}
-    isIndeterminate={false}
-    isSelected={false}
-    onSelect={[Function]}
-  >
-    <CheckboxLabeled.Label>
-      (default props)
-    </CheckboxLabeled.Label>
-  </Checkbox>
-  <div
-    className="lucid-CheckboxLabeled-label"
-  >
-    (default props)
-  </div>
-</label>
-`;
-
-exports[`CheckboxLabeled [common] example testing should match snapshot(s) for 1.states 2`] = `
-<label
-  className="lucid-CheckboxLabeled lucid-CheckboxLabeled-is-disabled"
-  style={
-    Object {
-      "marginBottom": "3px",
-      "marginRight": "13px",
-    }
-  }
->
-  <Checkbox
-    className="lucid-CheckboxLabeled-Checkbox"
-    isDisabled={true}
-    isIndeterminate={false}
-    isSelected={false}
-    onSelect={[Function]}
-  >
-    <CheckboxLabeled.Label>
-      Disabled
-    </CheckboxLabeled.Label>
-  </Checkbox>
-  <div
-    className="lucid-CheckboxLabeled-label"
-  >
-    Disabled
-  </div>
-</label>
-`;
-
-exports[`CheckboxLabeled [common] example testing should match snapshot(s) for 1.states 3`] = `
-<label
-  className="lucid-CheckboxLabeled lucid-CheckboxLabeled-is-selected"
-  style={
-    Object {
-      "marginBottom": "3px",
-      "marginRight": "13px",
-    }
-  }
->
-  <Checkbox
-    className="lucid-CheckboxLabeled-Checkbox"
-    isDisabled={false}
-    isIndeterminate={false}
-    isSelected={true}
-    onSelect={[Function]}
-  >
-    <CheckboxLabeled.Label>
-      Selected
-    </CheckboxLabeled.Label>
-  </Checkbox>
-  <div
-    className="lucid-CheckboxLabeled-label"
-  >
-    Selected
-  </div>
-</label>
-`;
-
-exports[`CheckboxLabeled [common] example testing should match snapshot(s) for 1.states 4`] = `
-<label
-  className="lucid-CheckboxLabeled lucid-CheckboxLabeled-is-disabled lucid-CheckboxLabeled-is-selected"
-  style={
-    Object {
-      "marginBottom": "3px",
-      "marginRight": "13px",
-    }
-  }
->
-  <Checkbox
-    className="lucid-CheckboxLabeled-Checkbox"
-    isDisabled={true}
-    isIndeterminate={false}
-    isSelected={true}
-    onSelect={[Function]}
-  >
-    <CheckboxLabeled.Label>
-      Disabled & selected
-    </CheckboxLabeled.Label>
-  </Checkbox>
-  <div
-    className="lucid-CheckboxLabeled-label"
-  >
-    Disabled & selected
-  </div>
-</label>
-`;
-
-exports[`CheckboxLabeled [common] example testing should match snapshot(s) for 2.label-as-child 1`] = `
-<label
-  className="lucid-CheckboxLabeled"
-  style={
-    Object {
-      "marginBottom": "3px",
-    }
-  }
->
-  <Checkbox
-    className="lucid-CheckboxLabeled-Checkbox"
-    isDisabled={false}
-    isIndeterminate={false}
-    isSelected={false}
-    onSelect={[Function]}
-  >
-    <CheckboxLabeled.Label>
-      Just text
-    </CheckboxLabeled.Label>
-  </Checkbox>
-  <div
-    className="lucid-CheckboxLabeled-label"
-  >
-    Just text
-  </div>
-</label>
-`;
-
-exports[`CheckboxLabeled [common] example testing should match snapshot(s) for 2.label-as-child 2`] = `
-<label
-  className="lucid-CheckboxLabeled"
-  style={
-    Object {
-      "marginBottom": "3px",
-    }
-  }
->
-  <Checkbox
-    className="lucid-CheckboxLabeled-Checkbox"
-    isDisabled={false}
-    isIndeterminate={false}
-    isSelected={false}
-    onSelect={[Function]}
-  >
-    <CheckboxLabeled.Label>
-      <span>
-        HTML element
-      </span>
-    </CheckboxLabeled.Label>
-  </Checkbox>
-  <div
-    className="lucid-CheckboxLabeled-label"
-  >
+  <CheckboxLabeled.Label>
     <span>
-      HTML element
+      HTML element as Child
     </span>
-  </div>
-</label>
+  </CheckboxLabeled.Label>
+</CheckboxLabeled>
 `;
 
-exports[`CheckboxLabeled [common] example testing should match snapshot(s) for 3.label-as-prop 1`] = `
-<label
-  className="lucid-CheckboxLabeled"
-  style={
-    Object {
-      "marginRight": "5px",
-    }
-  }
->
-  <Checkbox
-    className="lucid-CheckboxLabeled-Checkbox"
-    isDisabled={false}
-    isIndeterminate={false}
-    isSelected={false}
-    onSelect={[Function]}
-  />
-  <div
-    className="lucid-CheckboxLabeled-label"
-  >
-    Just text
-  </div>
-</label>
+exports[`CheckboxLabeled [common] example testing should match snapshot(s) for LabelAsProp 1`] = `
+<CheckboxLabeled
+  isDisabled={false}
+  isIndeterminate={false}
+  isSelected={false}
+  onSelect={[Function]}
+/>
 `;
 
-exports[`CheckboxLabeled [common] example testing should match snapshot(s) for 3.label-as-prop 2`] = `
-<label
-  className="lucid-CheckboxLabeled"
-  style={
-    Object {
-      "marginRight": "5px",
-    }
-  }
->
-  <Checkbox
-    className="lucid-CheckboxLabeled-Checkbox"
-    isDisabled={false}
-    isIndeterminate={false}
-    isSelected={false}
-    onSelect={[Function]}
-  />
-  <div
-    className="lucid-CheckboxLabeled-label"
-  >
-    <span>
-      HTML element
-    </span>
-  </div>
-</label>
+exports[`CheckboxLabeled [common] example testing should match snapshot(s) for Selected 1`] = `
+<CheckboxLabeled
+  isDisabled={false}
+  isIndeterminate={false}
+  isSelected={false}
+  onSelect={[Function]}
+/>
 `;
 
-exports[`CheckboxLabeled [common] example testing should match snapshot(s) for 3.label-as-prop 3`] = `
-<label
-  className="lucid-CheckboxLabeled"
-  style={
-    Object {
-      "marginRight": "5px",
-    }
-  }
->
-  <Checkbox
-    className="lucid-CheckboxLabeled-Checkbox"
-    isDisabled={false}
-    isIndeterminate={false}
-    isSelected={false}
-    onSelect={[Function]}
-  />
-  <div
-    className="lucid-CheckboxLabeled-label"
-  >
-    Text in an array
-  </div>
-</label>
-`;
-
-exports[`CheckboxLabeled [common] example testing should match snapshot(s) for 3.label-as-prop 4`] = `
-<label
-  className="lucid-CheckboxLabeled"
-  style={
-    Object {
-      "marginRight": "5px",
-    }
-  }
->
-  <Checkbox
-    className="lucid-CheckboxLabeled-Checkbox"
-    isDisabled={false}
-    isIndeterminate={false}
-    isSelected={false}
-    onSelect={[Function]}
-  />
-  <div
-    className="lucid-CheckboxLabeled-label"
-  >
-    <span
-      key="1"
-    >
-      HTML element in an array
-    </span>
-  </div>
-</label>
+exports[`CheckboxLabeled [common] example testing should match snapshot(s) for TextInAnArray 1`] = `
+<CheckboxLabeled
+  isDisabled={false}
+  isIndeterminate={false}
+  isSelected={false}
+  onSelect={[Function]}
+/>
 `;
