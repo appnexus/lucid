@@ -508,10 +508,9 @@ class ContextMenu extends React.Component<
 
 		if (portalRef) {
 			const flyOutEl = portalRef.portalElement.firstChild;
-			const {
-				height,
-				width,
-			} = (flyOutEl as HTMLDivElement).getBoundingClientRect();
+			const { height, width } = (
+				flyOutEl as HTMLDivElement
+			).getBoundingClientRect();
 			this.setState({
 				targetRect,
 				flyOutHeight: height,

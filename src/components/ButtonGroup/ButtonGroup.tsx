@@ -116,12 +116,8 @@ class ButtonGroup extends React.Component<
 	};
 
 	render() {
-		const {
-			selectedIndices,
-			className,
-			children,
-			...passThroughs
-		} = this.props;
+		const { selectedIndices, className, children, ...passThroughs } =
+			this.props;
 
 		const buttonChildProps = _.map(
 			findTypes(this.props, ButtonGroup.Button),

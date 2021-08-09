@@ -154,32 +154,29 @@ export const IconSelect = (props: IIconSelectProps): React.ReactElement => {
 			])}
 			className={cx('&', className)}
 		>
-			{_.map(
-				items,
-				(childItem, index): React.ReactElement => {
-					const itemDisabled = isDisabled || childItem.isDisabled;
-					return (
-						<figure
-							key={`iconselectitem_${index}`}
-							className={cx('&-Item', childItem.className, {
-								[`${className}-Item`]: className,
-								'&-Item-is-disabled': itemDisabled,
-								'&-Item-is-partial': childItem.isPartial,
-								'&-Item-is-selected': childItem.isSelected,
-								'&-Item-multi': kind === 'multiple',
-								'&-Item-single': kind === 'single',
-							})}
-							data-id={childItem.id}
-							onClick={itemDisabled ? undefined : handleClick}
-						>
-							{childItem.icon && getChildIcon(childItem.icon)}
-							<figcaption className={cx('&-Item-figcaption')}>
-								{getInputComponent(childItem)}
-							</figcaption>
-						</figure>
-					);
-				}
-			)}
+			{_.map(items, (childItem, index): React.ReactElement => {
+				const itemDisabled = isDisabled || childItem.isDisabled;
+				return (
+					<figure
+						key={`iconselectitem_${index}`}
+						className={cx('&-Item', childItem.className, {
+							[`${className}-Item`]: className,
+							'&-Item-is-disabled': itemDisabled,
+							'&-Item-is-partial': childItem.isPartial,
+							'&-Item-is-selected': childItem.isSelected,
+							'&-Item-multi': kind === 'multiple',
+							'&-Item-single': kind === 'single',
+						})}
+						data-id={childItem.id}
+						onClick={itemDisabled ? undefined : handleClick}
+					>
+						{childItem.icon && getChildIcon(childItem.icon)}
+						<figcaption className={cx('&-Item-figcaption')}>
+							{getInputComponent(childItem)}
+						</figcaption>
+					</figure>
+				);
+			})}
 			{children}
 		</span>
 	);

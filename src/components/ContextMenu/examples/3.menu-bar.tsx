@@ -29,12 +29,8 @@ export default createClass({
 	},
 
 	render() {
-		const {
-			isFileExpanded,
-			fileDirection,
-			isEditExpanded,
-			editDirection,
-		} = this.state;
+		const { isFileExpanded, fileDirection, isEditExpanded, editDirection } =
+			this.state;
 		return (
 			<section>
 				<ContextMenu

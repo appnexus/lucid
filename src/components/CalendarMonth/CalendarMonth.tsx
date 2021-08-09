@@ -173,12 +173,8 @@ class CalendarMonth extends React.Component<ICalendarProps, {}, {}> {
 	}
 
 	render(): React.ReactNode {
-		const {
-			className,
-			monthOffset,
-			initialMonth,
-			...passThroughs
-		} = this.props;
+		const { className, monthOffset, initialMonth, ...passThroughs } =
+			this.props;
 
 		// It can be tricky to increment months using JavaScript dates, this should
 		// handle the edge cases.

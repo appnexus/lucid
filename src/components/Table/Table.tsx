@@ -15,17 +15,8 @@ import DragCaptureZone, {
 
 const cx = lucidClassNames.bind('&-Table');
 
-const {
-	any,
-	bool,
-	func,
-	node,
-	number,
-	object,
-	string,
-	oneOf,
-	oneOfType,
-} = PropTypes;
+const { any, bool, func, node, number, object, string, oneOf, oneOfType } =
+	PropTypes;
 
 /** Thead <Thead>: The Table Head component */
 export interface ITheadPropsRaw extends StandardProps {}

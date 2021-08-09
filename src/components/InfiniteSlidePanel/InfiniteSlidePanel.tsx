@@ -95,9 +95,8 @@ export const InfiniteSlidePanel = (
 		halfSlides,
 		(n: number): number => offset + n - halfSlides
 	);
-	const transposedSlideOffsets = forwardSlideOffsets.concat(
-		backwardSlideOffsets
-	);
+	const transposedSlideOffsets =
+		forwardSlideOffsets.concat(backwardSlideOffsets);
 	const slideOffsetArray = _.takeRight(
 		transposedSlideOffsets,
 		circularOffset
