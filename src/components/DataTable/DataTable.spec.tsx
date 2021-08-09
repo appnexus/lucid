@@ -545,9 +545,8 @@ describe('DataTable', () => {
 					.find(ScrollTable.Th)
 					.first();
 				const selectAllCheckboxWrapper = firstHeadCellWrapper.find(Checkbox);
-				const checkboxSelectAllFunction = selectAllCheckboxWrapper.prop(
-					'onSelect'
-				);
+				const checkboxSelectAllFunction =
+					selectAllCheckboxWrapper.prop('onSelect');
 				//@ts-ignore
 				checkboxSelectAllFunction({});
 

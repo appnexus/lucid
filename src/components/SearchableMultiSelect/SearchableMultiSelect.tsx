@@ -709,11 +709,8 @@ class SearchableMultiSelect extends React.Component<
 				...passThroughs
 			},
 		} = this;
-		const {
-			optionGroupDataLookup,
-			optionGroups,
-			ungroupedOptionData,
-		} = this.state;
+		const { optionGroupDataLookup, optionGroups, ungroupedOptionData } =
+			this.state;
 		const searchFieldProps = _.get(
 			getFirst(props, SearchableMultiSelect.SearchField),
 			'props',

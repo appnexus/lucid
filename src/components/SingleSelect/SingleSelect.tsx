@@ -17,17 +17,8 @@ import ChevronIcon from '../Icon/ChevronIcon/ChevronIcon';
 
 const cx = lucidClassNames.bind('&-SingleSelect');
 
-const {
-	any,
-	bool,
-	func,
-	node,
-	number,
-	object,
-	shape,
-	string,
-	oneOfType,
-} = PropTypes;
+const { any, bool, func, node, number, object, shape, string, oneOfType } =
+	PropTypes;
 
 /** Placeholder Child Component */
 interface ISingleSelectPlaceholderProps extends StandardProps {

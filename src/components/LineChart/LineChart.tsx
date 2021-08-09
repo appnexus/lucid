@@ -1016,9 +1016,9 @@ class LineChart extends React.Component<ILineChartProps, ILineChartState, {}> {
 							isExpanded={true}
 							flyOutMaxWidth='none'
 							alignment={
-								((mouseX as unknown) as number) < innerWidth * 0.15
+								(mouseX as unknown as number) < innerWidth * 0.15
 									? 'start'
-									: ((mouseX as unknown) as number) > innerWidth * 0.85
+									: (mouseX as unknown as number) > innerWidth * 0.85
 									? 'end'
 									: 'center'
 							}
@@ -1221,7 +1221,7 @@ class LineChart extends React.Component<ILineChartProps, ILineChartState, {}> {
 							height={innerHeight}
 							onMouseMove={(event) => {
 								this.handleToolTipHoverZone(
-									(event as unknown) as {
+									event as unknown as {
 										clientX: number;
 										target: SVGRectElement;
 									},

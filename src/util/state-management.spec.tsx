@@ -636,13 +636,8 @@ describe('#buildHybridComponent', () => {
 			countModThree: (state: any) => state.count % 3,
 		},
 		render() {
-			const {
-				count,
-				countDisplay,
-				countModThree,
-				onIncrement,
-				onDecrement,
-			} = this.props as any;
+			const { count, countDisplay, countModThree, onIncrement, onDecrement } =
+				this.props as any;
 
 			return (
 				<section>

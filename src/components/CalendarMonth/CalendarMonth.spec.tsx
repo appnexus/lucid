@@ -172,7 +172,8 @@ describe('CalendarMonth', () => {
 		it('should determine shouldComponentUpdate by using prop value', () => {
 			const wrapper = shallow(<CalendarMonth shouldComponentUpdate={true} />);
 			const calendarMonthInstance: any = wrapper.instance();
-			const shouldComponentUpdate = calendarMonthInstance.shouldComponentUpdate();
+			const shouldComponentUpdate =
+				calendarMonthInstance.shouldComponentUpdate();
 			expect(shouldComponentUpdate).toBe(true);
 		});
 	});

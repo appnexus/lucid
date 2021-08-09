@@ -169,14 +169,8 @@ class Expander extends React.Component<IExpanderProps, IExpanderState> {
 	};
 
 	render(): React.ReactNode {
-		const {
-			children,
-			className,
-			isExpanded,
-			style,
-			kind,
-			...passThroughs
-		} = this.props;
+		const { children, className, isExpanded, style, kind, ...passThroughs } =
+			this.props;
 
 		const labelChildProp = _.first(
 			_.map(findTypes(this.props, Expander.Label), 'props')

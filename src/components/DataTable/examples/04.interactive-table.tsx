@@ -148,11 +148,8 @@ export default createClass({
 	},
 
 	handleSort(field: any) {
-		const {
-			currentlySortedField,
-			currentlySortedFieldDirection,
-			data,
-		} = this.state;
+		const { currentlySortedField, currentlySortedFieldDirection, data } =
+			this.state;
 
 		const nextCurrentlySortedFieldDirection =
 			currentlySortedField === field && currentlySortedFieldDirection === 'up'

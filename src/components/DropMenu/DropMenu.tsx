@@ -43,17 +43,8 @@ function isOptionVisible(option: IOptionsData) {
 
 const cx = lucidClassNames.bind('&-DropMenu');
 
-const {
-	any,
-	arrayOf,
-	bool,
-	func,
-	node,
-	number,
-	object,
-	oneOf,
-	string,
-} = PropTypes;
+const { any, arrayOf, bool, func, node, number, object, oneOf, string } =
+	PropTypes;
 
 interface IDropMenuHeaderProps extends StandardProps {
 	description?: string;
@@ -1027,25 +1018,26 @@ class DropMenu extends React.Component<
 											]
 										);
 										// render label if there is one
-										return (_.isEmpty(labelElements)
-											? ([] as React.ReactNode[])
-											: [
-													<div
-														{...omitProps(
-															optionGroupProps,
-															undefined,
-															_.keys(DropMenu.OptionGroup.propTypes)
-														)}
-														key={'OptionGroup-label' + optionGroupIndex}
-														className={cx(
-															'&-label',
-															optionGroupProps.className
-														)}
-													>
-														{labelElements}
-													</div>,
-													// render the options in the group
-											  ]
+										return (
+											_.isEmpty(labelElements)
+												? ([] as React.ReactNode[])
+												: [
+														<div
+															{...omitProps(
+																optionGroupProps,
+																undefined,
+																_.keys(DropMenu.OptionGroup.propTypes)
+															)}
+															key={'OptionGroup-label' + optionGroupIndex}
+															className={cx(
+																'&-label',
+																optionGroupProps.className
+															)}
+														>
+															{labelElements}
+														</div>,
+														// render the options in the group
+												  ]
 										).concat(
 											_.map(
 												optionGroupDataLookup[optionGroupIndex],

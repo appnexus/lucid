@@ -327,14 +327,8 @@ class TextField extends React.Component<
 	}
 
 	render(): React.ReactNode {
-		const {
-			className,
-			isDisabled,
-			isMultiLine,
-			rows,
-			style,
-			...passThroughs
-		} = this.props;
+		const { className, isDisabled, isMultiLine, rows, style, ...passThroughs } =
+			this.props;
 
 		const { value } = this.state;
 

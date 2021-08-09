@@ -252,19 +252,21 @@ const FORMAT_YEAR = d3TimeFormat.timeFormat('%Y');
  * @return {string} - formatted date
  */
 export function formatDate(date: Date): string {
-	return (d3Time.timeSecond(date) < date
-		? FORMAT_MILLISECOND
-		: d3Time.timeMinute(date) < date
-		? FORMAT_SECOND
-		: d3Time.timeHour(date) < date
-		? FORMAT_MINUTE
-		: d3Time.timeDay(date) < date
-		? FORMAT_HOUR
-		: d3Time.timeMonth(date) < date
-		? d3Time.timeWeek(date) < date
-			? FORMAT_DAY
-			: FORMAT_WEEK
-		: d3Time.timeYear(date) < date
-		? FORMAT_MONTH
-		: FORMAT_YEAR)(date);
+	return (
+		d3Time.timeSecond(date) < date
+			? FORMAT_MILLISECOND
+			: d3Time.timeMinute(date) < date
+			? FORMAT_SECOND
+			: d3Time.timeHour(date) < date
+			? FORMAT_MINUTE
+			: d3Time.timeDay(date) < date
+			? FORMAT_HOUR
+			: d3Time.timeMonth(date) < date
+			? d3Time.timeWeek(date) < date
+				? FORMAT_DAY
+				: FORMAT_WEEK
+			: d3Time.timeYear(date) < date
+			? FORMAT_MONTH
+			: FORMAT_YEAR
+	)(date);
 }

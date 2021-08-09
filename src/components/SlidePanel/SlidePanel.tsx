@@ -165,10 +165,12 @@ class SlidePanel extends React.Component<
 		const slidesSwiped = Math.round(dX / slideWidth);
 
 		if (slidesSwiped !== 0) {
-			(this.props.onSwipe as (
-				slidesSwiped: number,
-				{ event, props }: { event: React.TouchEvent; props: ISlidePanelProps }
-			) => void)(-1 * slidesSwiped, { event, props: this.props });
+			(
+				this.props.onSwipe as (
+					slidesSwiped: number,
+					{ event, props }: { event: React.TouchEvent; props: ISlidePanelProps }
+				) => void
+			)(-1 * slidesSwiped, { event, props: this.props });
 		}
 		this.setState({
 			translateXPixel: 0,
