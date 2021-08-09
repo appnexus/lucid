@@ -144,7 +144,7 @@ const addStories = (
 				storiesOfAddSequence.push([
 					componentName,
 					() => {
-						storiesOf(`${category}${separator}${componentName}`, module)
+						storiesOf(`${category}${separator}${componentName} (SB5)`, module)
 							.addParameters({
 								component,
 								options: examplePageOptions,
