@@ -2,8 +2,8 @@ import _ from 'lodash';
 import { storiesOf } from '@storybook/react';
 import { exampleStory } from '../.storybook/lucid-docs-addon';
 import { stripIndent, formatSource } from '../.storybook/lucid-docs-addon/util';
-import { registerLanguage } from 'react-syntax-highlighter/prism-light';
-import jsx from 'react-syntax-highlighter/languages/prism/jsx';
+import SyntaxHighlighter from 'react-syntax-highlighter/dist/cjs/prism-light';
+import jsx from 'react-syntax-highlighter/dist/cjs/languages/prism/jsx';
 import isChromatic from 'storybook-chromatic/isChromatic';
 
 import '../src/index.less';
@@ -15,7 +15,7 @@ if (!isChromatic()) {
 
 import './index.less'; // very minimal overrides
 
-registerLanguage('jsx', jsx);
+SyntaxHighlighter.registerLanguage('jsx', jsx);
 
 const examplePageOptions = { showPanel: true, panelPosition: 'right' };
 
