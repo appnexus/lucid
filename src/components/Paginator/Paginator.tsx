@@ -11,9 +11,7 @@ import {
 	SingleSelectDumb as SingleSelect,
 	ISingleSelectState,
 } from '../SingleSelect/SingleSelect';
-import TextField, {
-	ITextFieldProps,
-} from '../TextField/TextField';
+import TextField, { ITextFieldProps } from '../TextField/TextField';
 import { IButtonProps, Button } from '../Button/Button';
 import ArrowIcon from '../Icon/ArrowIcon/ArrowIcon';
 import { buildModernHybridComponent } from '../../util/state-management';

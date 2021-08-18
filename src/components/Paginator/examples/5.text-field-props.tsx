@@ -27,7 +27,10 @@ export default createClass({
 					/>
 				</section>
 
-				<p>A paginator where textField is not disabled using TextField props, but disabled from Paginator props</p>
+				<p>
+					A paginator where textField is not disabled using TextField props, but
+					disabled from Paginator props
+				</p>
 
 				<section>
 					<Paginator
