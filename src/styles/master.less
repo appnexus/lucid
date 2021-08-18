@@ -2,7 +2,9 @@
 @import (reference) 'mixins';
 @import 'normalize';
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
 	box-sizing: inherit;
 }
 
@@ -19,7 +21,8 @@ body {
 	color: @color-neutral-9;
 
 	// repeating triangle Xandr pattern
-	background: url("https://acdn.adnxs.com/cxp/1y/bg-pattern.226a6795ab64d5cdd0bdd4a853719227.svg"), @color-neutral-2;
+	background: url('https://acdn.adnxs.com/cxp/1y/bg-pattern.226a6795ab64d5cdd0bdd4a853719227.svg'),
+		@color-neutral-2;
 	background-position: top right;
 	background-repeat: repeat-y;
 }
@@ -46,7 +49,8 @@ h3 {
 	font-size: 12px;
 	line-height: 16px;
 	text-transform: uppercase;
-	color: @color-neutral-6;
+	color: @color-neutral-7;
+	letter-spacing: 0.8px;
 }
 
 a {
