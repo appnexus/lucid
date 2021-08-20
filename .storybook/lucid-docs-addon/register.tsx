@@ -27,7 +27,7 @@ class PropsPanel extends React.Component<any, any> {
 				props: JSON.parse(propsJSON || '{}'),
 			});
 		} catch (err) {
-			console.log('Error parsing props JSON.');
+			console.warn('Error parsing props JSON.');
 			console.error(err.stack);
 			this.setState({
 				props: null,
@@ -47,7 +47,7 @@ class PropsPanel extends React.Component<any, any> {
 				childComponents: JSON.parse(childComponentJSON),
 			});
 		} catch (err) {
-			console.log('Error parsing props JSON.');
+			console.warn('Error parsing props JSON.');
 			console.error(err.stack);
 			this.setState({
 				childComponents: null,
