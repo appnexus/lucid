@@ -256,6 +256,9 @@ describe('Paginator', () => {
 								selectedPageIndex={1}
 								totalPages={3}
 								onPageSelect={onPageSelect}
+								TextField={{
+									isDisabled: true,
+								}}
 							/>
 						);
 						wrapper.find(TextField).prop(propName)(1, 3);
