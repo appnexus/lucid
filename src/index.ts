@@ -140,6 +140,7 @@ import LoadingIndicator from './components/LoadingIndicator/LoadingIndicator';
 import LoadingMessage from './components/LoadingMessage/LoadingMessage';
 import LockedIcon from './components/Icon/LockedIcon/LockedIcon';
 import MaximizeIcon from './components/Icon/MaximizeIcon/MaximizeIcon';
+import MegaphoneIcon from './components/Icon/MegaphoneIcon/MegaphoneIcon';
 import MinimizeIcon from './components/Icon/MinimizeIcon/MinimizeIcon';
 import MinusCircleIcon from './components/Icon/MinusCircleIcon/MinusCircleIcon';
 import MinusCircleLightIcon from './components/Icon/MinusCircleLightIcon/MinusCircleLightIcon';
@@ -342,6 +343,7 @@ export {
 	LoadingMessage,
 	LockedIcon,
 	MaximizeIcon,
+	MegaphoneIcon,
 	MinimizeIcon,
 	MinusCircleIcon,
 	MinusCircleLightIcon,
