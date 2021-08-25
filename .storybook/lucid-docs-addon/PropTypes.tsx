@@ -4,12 +4,10 @@ import _ from 'lodash';
 import marksy from 'marksy/components';
 import { stripIndent } from './util';
 
-import SyntaxHighlighter, {
-	registerLanguage,
-} from 'react-syntax-highlighter/prism-light';
-import jsx from 'react-syntax-highlighter/languages/prism/jsx';
-import json from 'react-syntax-highlighter/languages/prism/json';
-import coy from 'react-syntax-highlighter/styles/prism/coy';
+import SyntaxHighlighter from 'react-syntax-highlighter/dist/cjs/prism-light';
+import jsx from 'react-syntax-highlighter/dist/cjs/languages/prism/jsx';
+import json from 'react-syntax-highlighter/dist/cjs/languages/prism/json';
+import coy from 'react-syntax-highlighter/dist/cjs/styles/prism/coy';
 
 const coyCustom = {
 	...coy,
@@ -24,8 +22,8 @@ const coyCustom = {
 	},
 };
 
-registerLanguage('jsx', jsx);
-registerLanguage('json', json);
+SyntaxHighlighter.registerLanguage('jsx', jsx);
+SyntaxHighlighter.registerLanguage('json', json);
 
 const compile = marksy({
 	createElement: React.createElement,

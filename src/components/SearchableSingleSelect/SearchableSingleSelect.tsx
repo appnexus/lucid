@@ -512,8 +512,8 @@ class SearchableSingleSelect extends React.Component<
 
 		//user made a selection
 		if (!_.isNil(selectedIndex)) {
-			const selectedOptionProps = this.state.flattenedOptionsData[selectedIndex]
-				.optionProps;
+			const selectedOptionProps =
+				this.state.flattenedOptionsData[selectedIndex].optionProps;
 
 			return (
 				<div

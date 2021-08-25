@@ -27,17 +27,8 @@ import { Validation } from '../Validation/Validation';
 
 const cx = lucidClassNames.bind('&-SearchableSelect');
 
-const {
-	any,
-	bool,
-	func,
-	node,
-	number,
-	object,
-	shape,
-	string,
-	oneOfType,
-} = PropTypes;
+const { any, bool, func, node, number, object, shape, string, oneOfType } =
+	PropTypes;
 
 interface ISearchableSelectPlaceholderProps extends StandardProps {
 	description?: string;
@@ -423,11 +414,8 @@ class SearchableSelect extends React.Component<
 	renderOptions() {
 		const { searchText } = this.props;
 
-		const {
-			optionGroups,
-			optionGroupDataLookup,
-			ungroupedOptionData,
-		} = this.state;
+		const { optionGroups, optionGroupDataLookup, ungroupedOptionData } =
+			this.state;
 
 		// for each option group passed in, render a DropMenu.OptionGroup, any
 		// label will be included in it's children, render each option inside the

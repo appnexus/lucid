@@ -18,16 +18,8 @@ import { buildModernHybridComponent } from '../../util/state-management';
 
 const cx = lucidClassNames.bind('&-Paginator');
 
-const {
-	arrayOf,
-	bool,
-	func,
-	number,
-	object,
-	oneOfType,
-	shape,
-	string,
-} = PropTypes;
+const { arrayOf, bool, func, number, object, oneOfType, shape, string } =
+	PropTypes;
 
 const { Option } = SingleSelect;
 

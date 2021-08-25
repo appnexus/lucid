@@ -381,9 +381,8 @@ describe('Sidebar', () => {
 				const expanderWrapper = wrapper.find(
 					'.lucid-Sidebar > .lucid-Sidebar-Bar > .lucid-Sidebar-Bar-header > .lucid-Sidebar-expander'
 				);
-				const expanderWrapperOnMouseDown: any = expanderWrapper.prop(
-					'onMouseDown'
-				);
+				const expanderWrapperOnMouseDown: any =
+					expanderWrapper.prop('onMouseDown');
 				const lastArg: any = {
 					event: {},
 					props: wrapper.props(),

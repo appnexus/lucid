@@ -15,16 +15,8 @@ import { buildModernHybridComponent } from '../../util/state-management';
 const cx = lucidClassNames.bind('&-ToolTip');
 const flyOutCx = cx.bind('&-FlyOut');
 
-const {
-	bool,
-	func,
-	node,
-	number,
-	object,
-	oneOf,
-	string,
-	oneOfType,
-} = PropTypes;
+const { bool, func, node, number, object, oneOf, string, oneOfType } =
+	PropTypes;
 
 const { Target, FlyOut } = ContextMenu;
 

@@ -142,10 +142,12 @@ class StickySection extends React.Component<
 		const containerRect = getAbsoluteBoundingClientRect(
 			this.scrollContainer.current as HTMLElement
 		);
-		const stickyRect = (this.stickySection
-			.current as HTMLElement).getBoundingClientRect();
-		const frameRect = (this.stickyFrame
-			.current as HTMLElement).getBoundingClientRect();
+		const stickyRect = (
+			this.stickySection.current as HTMLElement
+		).getBoundingClientRect();
+		const frameRect = (
+			this.stickyFrame.current as HTMLElement
+		).getBoundingClientRect();
 
 		return {
 			bottom: containerRect.top + stickyRect.height,

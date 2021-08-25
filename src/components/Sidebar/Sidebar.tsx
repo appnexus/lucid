@@ -17,17 +17,8 @@ import GripperVerticalIcon from '../Icon/GripperVerticalIcon/GripperVerticalIcon
 
 const cx = lucidClassNames.bind('&-Sidebar');
 
-const {
-	any,
-	bool,
-	func,
-	node,
-	number,
-	string,
-	object,
-	oneOf,
-	oneOfType,
-} = PropTypes;
+const { any, bool, func, node, number, string, object, oneOf, oneOfType } =
+	PropTypes;
 
 const defaultProps = {
 	isExpanded: true,

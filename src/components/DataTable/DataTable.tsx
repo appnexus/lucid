@@ -32,7 +32,7 @@ const {
 	arrayOf,
 } = PropTypes;
 
-interface IDataTableProps
+export interface IDataTableProps
 	extends ITableProps,
 		React.DetailedHTMLProps<
 			React.HTMLAttributes<HTMLDivElement>,
@@ -865,7 +865,7 @@ DataTable.peek = {
 
 DataTable.EmptyStateWrapper = EmptyStateWrapper;
 
-interface IColumnProps extends IThProps {
+export interface IColumnProps extends IThProps {
 	field: string;
 	title?: string;
 }
@@ -892,7 +892,7 @@ Column.propTypes = {
 
 DataTable.Column = Column;
 
-interface IColumnGroupProps {
+export interface IColumnGroupProps {
 	children?: any;
 	title?: string;
 }

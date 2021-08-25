@@ -409,7 +409,9 @@ class SplitVertical extends React.Component<
 			(this.props.isExpanded || this.props.collapseShift !== collapseShift)
 		) {
 			// collapse secondary
-			const secondaryRect = (secondaryRef.current as HTMLDivElement).getBoundingClientRect();
+			const secondaryRect = (
+				secondaryRef.current as HTMLDivElement
+			).getBoundingClientRect();
 			this.collapseSecondary(secondaryRect.width - collapseShift);
 		} else if (!this.props.isExpanded && isExpanded) {
 			// expand secondary
@@ -433,7 +435,9 @@ class SplitVertical extends React.Component<
 			this.expandSecondary();
 		} else {
 			// collapse secondary
-			const secondaryRect = (secondaryRef.current as HTMLDivElement).getBoundingClientRect();
+			const secondaryRect = (
+				secondaryRef.current as HTMLDivElement
+			).getBoundingClientRect();
 			this.collapseSecondary(secondaryRect.width - collapseShift);
 		}
 

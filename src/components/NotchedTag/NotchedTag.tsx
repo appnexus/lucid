@@ -67,15 +67,8 @@ const defaultProps = {
 };
 
 export const NotchedTag = (props: INotchedTagProps): React.ReactElement => {
-	const {
-		children,
-		className,
-		type,
-		style,
-		size,
-		tagStyle,
-		...passThroughs
-	} = props;
+	const { children, className, type, style, size, tagStyle, ...passThroughs } =
+		props;
 
 	const notchHeight = SIZE_NOTCH_MAP[size];
 	const notchWidth = notchHeight * Math.sqrt(3); //we want to maintain a 60 degree slice (30,60,90 triangle)

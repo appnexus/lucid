@@ -8,12 +8,8 @@ import { common } from '../../util/generic-tests';
 import { SearchableSelectDumb as SearchableSelect } from './SearchableSelect';
 import { DropMenuDumb as DropMenu } from '../DropMenu/DropMenu';
 
-const {
-	Placeholder,
-	Option,
-	OptionGroup,
-	SearchField,
-} = SearchableSelect as any;
+const { Placeholder, Option, OptionGroup, SearchField } =
+	SearchableSelect as any;
 
 describe('SearchableSelect', () => {
 	common(SearchableSelect, {
