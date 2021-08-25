@@ -415,6 +415,13 @@ export default [
 	},
 
 	{
+		name: 'DoubleChevronIcon',
+		component: getDefaultExport(
+			require('../../src/components/Icon/DoubleChevronIcon/DoubleChevronIcon')
+		),
+	},
+
+	{
 		name: 'DownloadIcon',
 		component: getDefaultExport(
 			require('../../src/components/Icon/DownloadIcon/DownloadIcon')
@@ -891,23 +898,6 @@ export default [
 	},
 
 	{
-		name: 'MegaphoneIcon',
-		component: getDefaultExport(
-			require('../../src/components/Icon/MegaphoneIcon/MegaphoneIcon')
-		),
-		examplesContext: require.context(
-			'../../src/components/Icon/MegaphoneIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../../src/components/Icon/MegaphoneIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
-	},
-
-	{
 		name: 'MinimizeIcon',
 		component: getDefaultExport(
 			require('../../src/components/Icon/MinimizeIcon/MinimizeIcon')
@@ -1006,6 +996,13 @@ export default [
 			'!!raw-loader!../../src/components/Icon/OutwardArrowsIcon/examples',
 			true,
 			/\.(j|t)sx?$/
+		),
+	},
+
+	{
+		name: 'PinIcon',
+		component: getDefaultExport(
+			require('../../src/components/Icon/PinIcon/PinIcon')
 		),
 	},
 

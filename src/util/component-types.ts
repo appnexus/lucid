@@ -7,6 +7,7 @@ import {
 	omitFunctionPropsDeep,
 } from './state-management';
 import { ValidationMap } from 'prop-types';
+import { IIconProps } from '../../src/components/Icon/Icon';
 
 export interface StandardProps {
 	/** Appended to the component-specific class names set on the root element.
@@ -304,3 +305,7 @@ export function omitProps<P extends object>(
 		_.keys(component.propTypes).concat(keys).concat(additionalOmittedKeys)
 	);
 }
+
+export type IIconWithDirectionProps = IIconProps & {
+	direction?: 'up' | 'down' | 'left' | 'right';
+};

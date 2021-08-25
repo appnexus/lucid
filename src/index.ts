@@ -92,6 +92,7 @@ import DangerLightIcon from './components/Icon/DangerLightIcon/DangerLightIcon';
 import DataTable from './components/DataTable/DataTable';
 import DeleteIcon from './components/Icon/DeleteIcon/DeleteIcon';
 import DotsIcon from './components/Icon/DotsIcon/DotsIcon';
+import DoubleChevronIcon from './components/Icon/DoubleChevronIcon/DoubleChevronIcon';
 import Dialog from './components/Dialog/Dialog';
 import DownloadIcon from './components/Icon/DownloadIcon/DownloadIcon';
 import DragCaptureZone from './components/DragCaptureZone/DragCaptureZone';
@@ -151,6 +152,7 @@ import OutwardArrowsIcon from './components/Icon/OutwardArrowsIcon/OutwardArrows
 import Overlay from './components/Overlay/Overlay';
 import OverlayWrapper from './components/OverlayWrapper/OverlayWrapper';
 import Panel from './components/Panel/Panel';
+import PinIcon from './components/Icon/PinIcon/PinIcon';
 import PlusIcon from './components/Icon/PlusIcon/PlusIcon';
 import Point from './components/Point/Point';
 import Points from './components/Points/Points';
@@ -293,6 +295,7 @@ export {
 	DeleteIcon,
 	Dialog,
 	DotsIcon,
+	DoubleChevronIcon,
 	DownloadIcon,
 	DragCaptureZone,
 	DraggableLineChart,
@@ -358,6 +361,7 @@ export {
 	Panel,
 	PieChart,
 	PieChartDumb,
+	PinIcon,
 	PlusIcon,
 	Point,
 	Points,
