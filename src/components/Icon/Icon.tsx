@@ -211,6 +211,10 @@ export const propTypes = {
 	`,
 };
 
+export interface IIconWithDirectionProps extends IIconProps {
+	direction?: 'up' | 'down' | 'left' | 'right';
+}
+
 Icon.propTypes = propTypes;
 
 export default Icon;

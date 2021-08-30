@@ -305,7 +305,3 @@ export function omitProps<P extends object>(
 		_.keys(component.propTypes).concat(keys).concat(additionalOmittedKeys)
 	);
 }
-
-export type IIconWithDirectionProps = IIconProps & {
-	direction?: 'up' | 'down' | 'left' | 'right';
-};
