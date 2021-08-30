@@ -7,36 +7,16 @@ const getDefaultExport = (module) => {
 
 export default [
 	{
-		name: 'AddURLIcon',
-		component: getDefaultExport(
-			require('../../src/components/Icon/AddURLIcon/AddURLIcon')
-		),
-		examplesContext: require.context(
-			'../../src/components/Icon/AddURLIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../../src/components/Icon/AddURLIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
-	},
-
-	{
 		name: 'AddColumnIcon',
 		component: getDefaultExport(
 			require('../../src/components/Icon/AddColumnIcon/AddColumnIcon')
 		),
-		examplesContext: require.context(
-			'../../src/components/Icon/AddColumnIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../../src/components/Icon/AddColumnIcon/examples',
-			true,
-			/\.(j|t)sx?$/
+	},
+
+	{
+		name: 'AddURLIcon',
+		component: getDefaultExport(
+			require('../../src/components/Icon/AddURLIcon/AddURLIcon')
 		),
 	},
 
@@ -45,32 +25,12 @@ export default [
 		component: getDefaultExport(
 			require('../../src/components/Icon/AnalyzeDataIcon/AnalyzeDataIcon')
 		),
-		examplesContext: require.context(
-			'../../src/components/Icon/AnalyzeDataIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../../src/components/Icon/AnalyzeDataIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
 	},
 
 	{
 		name: 'ArrowIcon',
 		component: getDefaultExport(
 			require('../../src/components/Icon/ArrowIcon/ArrowIcon')
-		),
-		examplesContext: require.context(
-			'../../src/components/Icon/ArrowIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../../src/components/Icon/ArrowIcon/examples',
-			true,
-			/\.(j|t)sx?$/
 		),
 	},
 
@@ -79,16 +39,6 @@ export default [
 		component: getDefaultExport(
 			require('../../src/components/Icon/AsteriskIcon/AsteriskIcon')
 		),
-		examplesContext: require.context(
-			'../../src/components/Icon/AsteriskIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../../src/components/Icon/AsteriskIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
 	},
 
 	{
@@ -96,32 +46,12 @@ export default [
 		component: getDefaultExport(
 			require('../../src/components/Icon/AttachIcon/AttachIcon')
 		),
-		examplesContext: require.context(
-			'../../src/components/Icon/AttachIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../../src/components/Icon/AttachIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
 	},
 
 	{
 		name: 'AudioIcon',
 		component: getDefaultExport(
 			require('../../src/components/Icon/AudioIcon/AudioIcon')
-		),
-		examplesContext: require.context(
-			'../../src/components/Icon/AudioIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../../src/components/Icon/AudioIcon/examples',
-			true,
-			/\.(j|t)sx?$/
 		),
 	},
 

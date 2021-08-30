@@ -1,9 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AddURLIcon [common] example testing should match snapshot(s) for 1.basic 1`] = `
-<Icon
+exports[`AddURLIcon [common] example testing should match snapshot(s) for Primary 1`] = `
+<AddURLIcon
   aspectRatio="xMidYMid meet"
-  className="lucid-AddURLIcon"
   color="primary"
   isClickable={false}
   isDisabled={false}
@@ -11,54 +10,5 @@ exports[`AddURLIcon [common] example testing should match snapshot(s) for 1.basi
   onSelect={[Function]}
   size={16}
   viewBox="0 0 16 16"
->
-  <path
-    d="M10.7 12.781l1.267 2.719 2.357-1.098-1.267-2.719 2.693-.614L8.5 4.98l-.002 9.468z"
-  />
-  <path
-    d="M15.5.5H.5v10h6"
-  />
-</Icon>
-`;
-
-exports[`AddURLIcon [common] example testing should match snapshot(s) for 1.basic 2`] = `
-<Icon
-  aspectRatio="xMidYMid meet"
-  className="lucid-AddURLIcon"
-  color="primary"
-  isClickable={true}
-  isDisabled={false}
-  onClick={[Function]}
-  onSelect={[Function]}
-  size={16}
-  viewBox="0 0 16 16"
->
-  <path
-    d="M10.7 12.781l1.267 2.719 2.357-1.098-1.267-2.719 2.693-.614L8.5 4.98l-.002 9.468z"
-  />
-  <path
-    d="M15.5.5H.5v10h6"
-  />
-</Icon>
-`;
-
-exports[`AddURLIcon [common] example testing should match snapshot(s) for 1.basic 3`] = `
-<Icon
-  aspectRatio="xMidYMid meet"
-  className="lucid-AddURLIcon"
-  color="primary"
-  isClickable={false}
-  isDisabled={true}
-  onClick={[Function]}
-  onSelect={[Function]}
-  size={16}
-  viewBox="0 0 16 16"
->
-  <path
-    d="M10.7 12.781l1.267 2.719 2.357-1.098-1.267-2.719 2.693-.614L8.5 4.98l-.002 9.468z"
-  />
-  <path
-    d="M15.5.5H.5v10h6"
-  />
-</Icon>
+/>
 `;
