@@ -1,9 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AudioIcon [common] example testing should match snapshot(s) for 1.basic 1`] = `
-<Icon
+exports[`AudioIcon [common] example testing should match snapshot(s) for Primary 1`] = `
+<AudioIcon
   aspectRatio="xMidYMid meet"
-  className="lucid-AudioIcon"
   color="primary"
   isClickable={false}
   isDisabled={false}
@@ -11,12 +10,5 @@ exports[`AudioIcon [common] example testing should match snapshot(s) for 1.basic
   onSelect={[Function]}
   size={16}
   viewBox="0 0 16 16"
->
-  <path
-    d="M.5 5.5v5h4l4 4v-13l-4 4zM10.786 11s1.714-.857 1.714-3-1.714-3-1.714-3"
-  />
-  <path
-    d="M12.071 14S15.5 12.286 15.5 8s-3.429-6-3.429-6"
-  />
-</Icon>
+/>
 `;

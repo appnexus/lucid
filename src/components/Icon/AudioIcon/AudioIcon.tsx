@@ -1,24 +1,87 @@
 import _ from 'lodash';
 import React from 'react';
-import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
+import PropTypes from 'prop-types';
+import Icon, { IIconWithDirectionProps } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
-import { omitProps } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-AudioIcon');
 
-interface IAudioIconProps extends IIconProps {}
+export const iconPropTypes = {
+	/** Classes that are appended to the component defaults. This prop is run
+		through the \`classnames\` library. */
+	className: PropTypes.string,
 
-export const AudioIcon = ({ className, ...passThroughs }: IAudioIconProps) => {
+	/** Size variations of the icons. \`size\` directly effects height and width
+		but the developer should also be conscious of the relationship with
+		\`viewBox\`. */
+	size: PropTypes.number,
+
+	/** Size handles width and height, whereas \`width\` can manually override the width that would be set by size. */
+	width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+
+	/** Size handles width and height, whereas \`height\` can manually override the height that would be set by size. */
+	height: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+
+	/** \`viewBox\` is very important for SVGs. You can think of \`viewBox\` as
+		the "artboard" for our SVG while \`size\` is the presented height and
+		width. */
+	viewBox: PropTypes.string,
+
+	/** Any valid SVG aspect ratio. */
+	aspectRatio: PropTypes.string,
+
+	/** Adds styling that makes the icon appear clickable. */
+	isClickable: PropTypes.bool,
+
+	/** Adds styling that makes the icon appear disabled.  Also forces
+		isClickable to be false. */
+	isDisabled: PropTypes.bool,
+
+	/** Called when the user clicks the \`Icon\`. Signature:
+		\`({event, props}) => {}\` */
+	onClick: PropTypes.func,
+
+	/** Called when the user clicks an active, clickable \`Icon\`. Signature:
+		\`({event, props}) => {}\` */
+	onSelect: PropTypes.func,
+
+	/** Any valid React children. */
+	children: PropTypes.element,
+
+	/** Sets the color of the Icon.  May not be applicable for icons that are tied
+		to specific colors (e.g. DangerIcon). */
+	color: PropTypes.oneOf([
+		'neutral-dark',
+		'neutral-light',
+		'primary',
+		'white',
+		'success',
+		'warning',
+		'secondary-one',
+		'secondary-two',
+		'secondary-three',
+	]),
+
+	/** Sets the direction of the Icon, where applicable. */
+	direction: PropTypes.oneOf(['left', 'right']),
+};
+
+export const AudioIcon = ({
+	className,
+	direction = 'right',
+	...passThroughs
+}: IIconWithDirectionProps) => {
 	return (
 		<Icon
-			{...omitProps(
-				passThroughs,
-				undefined,
-				_.keys(AudioIcon.propTypes),
-				false
+			{..._.omit(passThroughs, ['initialState'])}
+			className={cx(
+				'&',
+				{
+					'&-is-left': direction === 'left',
+					'&-is-right': direction === 'right',
+				},
+				className
 			)}
-			{..._.pick(passThroughs, _.keys(iconPropTypes))}
-			className={cx('&', className)}
 		>
 			<path d='M.5 5.5v5h4l4 4v-13l-4 4zM10.786 11s1.714-.857 1.714-3-1.714-3-1.714-3' />
 			<path d='M12.071 14S15.5 12.286 15.5 8s-3.429-6-3.429-6' />
@@ -27,15 +90,9 @@ export const AudioIcon = ({ className, ...passThroughs }: IAudioIconProps) => {
 };
 
 AudioIcon.displayName = 'AudioIcon';
-AudioIcon.peek = {
-	description: `
-		An audio icon. Can you hear me now? Good.
-	`,
-	categories: ['visual design', 'icons'],
-	extend: 'Icon',
-	madeFrom: ['Icon'],
-};
-AudioIcon.propTypes = iconPropTypes;
+
 AudioIcon.defaultProps = Icon.defaultProps;
+
+AudioIcon.propTypes = iconPropTypes;
 
 export default AudioIcon;

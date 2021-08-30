@@ -1,9 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ArrowIcon [common] example testing should match snapshot(s) for 1.basic 1`] = `
-<Icon
+exports[`ArrowIcon [common] example testing should match snapshot(s) for Primary 1`] = `
+<ArrowIcon
   aspectRatio="xMidYMid meet"
-  className="lucid-ArrowIcon lucid-ArrowIcon-is-left"
   color="primary"
   isClickable={false}
   isDisabled={false}
@@ -11,81 +10,5 @@ exports[`ArrowIcon [common] example testing should match snapshot(s) for 1.basic
   onSelect={[Function]}
   size={16}
   viewBox="0 0 16 16"
->
-  <path
-    d="M0 8h15.5m-6-6l6 6-6 6"
-  />
-</Icon>
-`;
-
-exports[`ArrowIcon [common] example testing should match snapshot(s) for 1.basic 2`] = `
-<Icon
-  aspectRatio="xMidYMid meet"
-  className="lucid-ArrowIcon lucid-ArrowIcon-is-up"
-  color="primary"
-  isClickable={false}
-  isDisabled={false}
-  onClick={[Function]}
-  onSelect={[Function]}
-  size={16}
-  viewBox="0 0 16 16"
->
-  <path
-    d="M0 8h15.5m-6-6l6 6-6 6"
-  />
-</Icon>
-`;
-
-exports[`ArrowIcon [common] example testing should match snapshot(s) for 1.basic 3`] = `
-<Icon
-  aspectRatio="xMidYMid meet"
-  className="lucid-ArrowIcon lucid-ArrowIcon-is-down"
-  color="primary"
-  isClickable={false}
-  isDisabled={false}
-  onClick={[Function]}
-  onSelect={[Function]}
-  size={16}
-  viewBox="0 0 16 16"
->
-  <path
-    d="M0 8h15.5m-6-6l6 6-6 6"
-  />
-</Icon>
-`;
-
-exports[`ArrowIcon [common] example testing should match snapshot(s) for 1.basic 4`] = `
-<Icon
-  aspectRatio="xMidYMid meet"
-  className="lucid-ArrowIcon lucid-ArrowIcon-is-right"
-  color="primary"
-  isClickable={false}
-  isDisabled={false}
-  onClick={[Function]}
-  onSelect={[Function]}
-  size={16}
-  viewBox="0 0 16 16"
->
-  <path
-    d="M0 8h15.5m-6-6l6 6-6 6"
-  />
-</Icon>
-`;
-
-exports[`ArrowIcon [common] example testing should match snapshot(s) for 1.basic 5`] = `
-<Icon
-  aspectRatio="xMidYMid meet"
-  className="lucid-ArrowIcon lucid-ArrowIcon-is-left"
-  color="primary"
-  isClickable={false}
-  isDisabled={false}
-  onClick={[Function]}
-  onSelect={[Function]}
-  size={16}
-  viewBox="0 0 16 16"
->
-  <path
-    d="M0 8h15.5m-6-6l6 6-6 6"
-  />
-</Icon>
+/>
 `;
