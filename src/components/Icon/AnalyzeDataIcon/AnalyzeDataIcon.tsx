@@ -1,16 +1,12 @@
 import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
-import Icon, { IIconWithDirectionProps } from '../Icon';
+import Icon, { IIconProps } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
 
 const cx = lucidClassNames.bind('&-AnalyzeDataIcon');
 
 export const iconPropTypes = {
-	/** Classes that are appended to the component defaults. This prop is run
-		through the \`classnames\` library. */
-	className: PropTypes.string,
-
 	/** Size variations of the icons. \`size\` directly effects height and width
 		but the developer should also be conscious of the relationship with
 		\`viewBox\`. */
@@ -26,6 +22,20 @@ export const iconPropTypes = {
 		the "artboard" for our SVG while \`size\` is the presented height and
 		width. */
 	viewBox: PropTypes.string,
+
+	/** Sets the color of the Icon.  May not be applicable for icons that are tied
+		to specific colors (e.g. DangerIcon). */
+	color: PropTypes.oneOf([
+		'neutral-dark',
+		'neutral-light',
+		'primary',
+		'white',
+		'success',
+		'warning',
+		'secondary-one',
+		'secondary-two',
+		'secondary-three',
+	]),
 
 	/** Any valid SVG aspect ratio. */
 	aspectRatio: PropTypes.string,
@@ -48,40 +58,16 @@ export const iconPropTypes = {
 	/** Any valid React children. */
 	children: PropTypes.element,
 
-	/** Sets the color of the Icon.  May not be applicable for icons that are tied
-		to specific colors (e.g. DangerIcon). */
-	color: PropTypes.oneOf([
-		'neutral-dark',
-		'neutral-light',
-		'primary',
-		'white',
-		'success',
-		'warning',
-		'secondary-one',
-		'secondary-two',
-		'secondary-three',
-	]),
-
-	/** Sets the direction of the Icon, where applicable. */
-	direction: PropTypes.oneOf(['left', 'right']),
+	/** Classes that are appended to the component defaults. This prop is run
+		through the \`classnames\` library. */
+	className: PropTypes.string,
 };
 
-export const AnalyzeDataIcon = ({
-	className,
-	direction = 'right',
-	...passThroughs
-}: IIconWithDirectionProps) => {
+export const AnalyzeDataIcon = ({ className, ...passThroughs }: IIconProps) => {
 	return (
 		<Icon
 			{..._.omit(passThroughs, ['initialState'])}
-			className={cx(
-				'&',
-				{
-					'&-is-left': direction === 'left',
-					'&-is-right': direction === 'right',
-				},
-				className
-			)}
+			className={cx('&', className)}
 		>
 			<path d='M0 15.5h16' />
 			<path d='M2.5 10.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm3-6a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm4 4a1 1 0 1 0 0 2 1 1 0 0 0 0-2z' />

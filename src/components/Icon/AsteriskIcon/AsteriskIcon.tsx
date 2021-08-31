@@ -7,10 +7,6 @@ import { lucidClassNames } from '../../../util/style-helpers';
 const cx = lucidClassNames.bind('&-AsteriskIcon');
 
 export const iconPropTypes = {
-	/** Classes that are appended to the component defaults. This prop is run
-		through the \`classnames\` library. */
-	className: PropTypes.string,
-
 	/** Size variations of the icons. \`size\` directly effects height and width
 		but the developer should also be conscious of the relationship with
 		\`viewBox\`. */
@@ -26,6 +22,20 @@ export const iconPropTypes = {
 		the "artboard" for our SVG while \`size\` is the presented height and
 		width. */
 	viewBox: PropTypes.string,
+
+	/** Sets the color of the Icon.  May not be applicable for icons that are tied
+		to specific colors (e.g. DangerIcon). */
+	color: PropTypes.oneOf([
+		'neutral-dark',
+		'neutral-light',
+		'primary',
+		'white',
+		'success',
+		'warning',
+		'secondary-one',
+		'secondary-two',
+		'secondary-three',
+	]),
 
 	/** Any valid SVG aspect ratio. */
 	aspectRatio: PropTypes.string,
@@ -48,19 +58,9 @@ export const iconPropTypes = {
 	/** Any valid React children. */
 	children: PropTypes.element,
 
-	/** Sets the color of the Icon.  May not be applicable for icons that are tied
-		to specific colors (e.g. DangerIcon). */
-	color: PropTypes.oneOf([
-		'neutral-dark',
-		'neutral-light',
-		'primary',
-		'white',
-		'success',
-		'warning',
-		'secondary-one',
-		'secondary-two',
-		'secondary-three',
-	]),
+	/** Classes that are appended to the component defaults. This prop is run
+		through the \`classnames\` library. */
+	className: PropTypes.string,
 };
 
 export const AsteriskIcon = ({ className, ...passThroughs }: IIconProps) => {
