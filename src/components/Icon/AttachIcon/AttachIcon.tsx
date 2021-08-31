@@ -1,16 +1,12 @@
 import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
-import Icon, { IIconWithDirectionProps } from '../Icon';
+import Icon, { IIconProps } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
 
 const cx = lucidClassNames.bind('&-AttachIcon');
 
 export const iconPropTypes = {
-	/** Classes that are appended to the component defaults. This prop is run
-		through the \`classnames\` library. */
-	className: PropTypes.string,
-
 	/** Size variations of the icons. \`size\` directly effects height and width
 		but the developer should also be conscious of the relationship with
 		\`viewBox\`. */
@@ -26,6 +22,20 @@ export const iconPropTypes = {
 		the "artboard" for our SVG while \`size\` is the presented height and
 		width. */
 	viewBox: PropTypes.string,
+
+	/** Sets the color of the Icon.  May not be applicable for icons that are tied
+		to specific colors (e.g. DangerIcon). */
+	color: PropTypes.oneOf([
+		'neutral-dark',
+		'neutral-light',
+		'primary',
+		'white',
+		'success',
+		'warning',
+		'secondary-one',
+		'secondary-two',
+		'secondary-three',
+	]),
 
 	/** Any valid SVG aspect ratio. */
 	aspectRatio: PropTypes.string,
@@ -48,40 +58,16 @@ export const iconPropTypes = {
 	/** Any valid React children. */
 	children: PropTypes.element,
 
-	/** Sets the color of the Icon.  May not be applicable for icons that are tied
-		to specific colors (e.g. DangerIcon). */
-	color: PropTypes.oneOf([
-		'neutral-dark',
-		'neutral-light',
-		'primary',
-		'white',
-		'success',
-		'warning',
-		'secondary-one',
-		'secondary-two',
-		'secondary-three',
-	]),
-
-	/** Sets the direction of the Icon, where applicable. */
-	direction: PropTypes.oneOf(['left', 'right']),
+	/** Classes that are appended to the component defaults. This prop is run
+		through the \`classnames\` library. */
+	className: PropTypes.string,
 };
 
-export const AttachIcon = ({
-	className,
-	direction = 'right',
-	...passThroughs
-}: IIconWithDirectionProps) => {
+export const AttachIcon = ({ className, ...passThroughs }: IIconProps) => {
 	return (
 		<Icon
 			{..._.omit(passThroughs, ['initialState'])}
-			className={cx(
-				'&',
-				{
-					'&-is-left': direction === 'left',
-					'&-is-right': direction === 'right',
-				},
-				className
-			)}
+			className={cx('&', className)}
 		>
 			<path d='M12.606 10.189l-4.171 4.152a3.988 3.988 0 0 1-5.621 0 4.454 4.454 0 0 1 0-6.319l6.678-6.649a3.002 3.002 0 0 1 4.231 0 2.63 2.63 0 0 1 0 3.731l-7.162 7.131a1.33 1.33 0 0 1-1.874 0 1.485 1.485 0 0 1 0-2.106l4.926-4.904' />
 		</Icon>

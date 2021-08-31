@@ -1,6 +1,6 @@
 import React from 'react';
 import { Story, Meta } from '@storybook/react';
-import { IIconWithDirectionProps } from '../Icon';
+import { IIconProps } from '../Icon';
 import { AttachIcon } from './AttachIcon';
 
 export default {
@@ -9,9 +9,7 @@ export default {
 } as Meta;
 
 //👇 We create a “template” of how args map to rendering
-const Template: Story<IIconWithDirectionProps> = (args) => (
-	<AttachIcon {...args} />
-);
+const Template: Story<IIconProps> = (args) => <AttachIcon {...args} />;
 
 //👇 Each story then reuses that template
 export const Primary = Template.bind({});
