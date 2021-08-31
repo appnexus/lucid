@@ -1,15 +1,15 @@
 import React from 'react';
 import { Story, Meta } from '@storybook/react';
 import { IIconProps } from '../Icon';
-import { PinIcon } from './PinIcon';
+import { BackUpArrowIcon } from './BackUpArrowIcon';
 
 export default {
-	title: 'Icons/Icons/PinIcon',
-	component: PinIcon,
+	title: 'Icons/Icons/BackUpArrowIcon',
+	component: BackUpArrowIcon,
 } as Meta;
 
 //👇 We create a “template” of how args map to rendering
-const Template: Story<IIconProps> = (args) => <PinIcon {...args} />;
+const Template: Story<IIconProps> = (args) => <BackUpArrowIcon {...args} />;
 
 //👇 Each story then reuses that template
 export const Primary = Template.bind({});

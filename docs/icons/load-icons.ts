@@ -60,16 +60,6 @@ export default [
 		component: getDefaultExport(
 			require('../../src/components/Icon/BackUpArrowIcon/BackUpArrowIcon')
 		),
-		examplesContext: require.context(
-			'../../src/components/Icon/BackUpArrowIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../../src/components/Icon/BackUpArrowIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
 	},
 
 	{
