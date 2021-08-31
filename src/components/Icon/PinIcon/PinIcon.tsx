@@ -1,16 +1,12 @@
 import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
-import Icon, { IIconWithDirectionProps } from '../Icon';
+import Icon, { IIconProps } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
 
 const cx = lucidClassNames.bind('&-PinIcon');
 
 export const iconPropTypes = {
-	/** Classes that are appended to the component defaults. This prop is run
-		through the \`classnames\` library. */
-	className: PropTypes.string,
-
 	/** Size variations of the icons. \`size\` directly effects height and width
 		but the developer should also be conscious of the relationship with
 		\`viewBox\`. */
@@ -26,6 +22,20 @@ export const iconPropTypes = {
 		the "artboard" for our SVG while \`size\` is the presented height and
 		width. */
 	viewBox: PropTypes.string,
+
+	/** Sets the color of the Icon.  May not be applicable for icons that are tied
+		to specific colors (e.g. DangerIcon). */
+	color: PropTypes.oneOf([
+		'neutral-dark',
+		'neutral-light',
+		'primary',
+		'white',
+		'success',
+		'warning',
+		'secondary-one',
+		'secondary-two',
+		'secondary-three',
+	]),
 
 	/** Any valid SVG aspect ratio. */
 	aspectRatio: PropTypes.string,
@@ -48,40 +58,16 @@ export const iconPropTypes = {
 	/** Any valid React children. */
 	children: PropTypes.element,
 
-	/** Sets the color of the Icon.  May not be applicable for icons that are tied
-		to specific colors (e.g. DangerIcon). */
-	color: PropTypes.oneOf([
-		'neutral-dark',
-		'neutral-light',
-		'primary',
-		'white',
-		'success',
-		'warning',
-		'secondary-one',
-		'secondary-two',
-		'secondary-three',
-	]),
-
-	/** Sets the direction of the Icon, where applicable. */
-	direction: PropTypes.oneOf(['left', 'right']),
+	/** Classes that are appended to the component defaults. This prop is run
+		through the \`classnames\` library. */
+	className: PropTypes.string,
 };
 
-export const PinIcon = ({
-	className,
-	direction = 'right',
-	...passThroughs
-}: IIconWithDirectionProps) => {
+export const PinIcon = ({ className, ...passThroughs }: IIconProps) => {
 	return (
 		<Icon
 			{..._.omit(passThroughs, ['initialState'])}
-			className={cx(
-				'&',
-				{
-					'&-is-left': direction === 'left',
-					'&-is-right': direction === 'right',
-				},
-				className
-			)}
+			className={cx('&', className)}
 		>
 			<path d='M4.811.5l1.66 1.659-.731.731 3.169 2.03 1.709-.57 2.85 1.709-7.409 7.409-1.709-2.85.57-1.709L2.89 5.74l-.731.731L.5 4.811zM10 10l5.5 5.5' />
 		</Icon>
