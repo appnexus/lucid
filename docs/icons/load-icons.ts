@@ -137,32 +137,12 @@ export default [
 		component: getDefaultExport(
 			require('../../src/components/Icon/BarChartIcon/BarChartIcon')
 		),
-		examplesContext: require.context(
-			'../../src/components/Icon/BarChartIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../../src/components/Icon/BarChartIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
 	},
 
 	{
 		name: 'BellIcon',
 		component: getDefaultExport(
 			require('../../src/components/Icon/BellIcon/BellIcon')
-		),
-		examplesContext: require.context(
-			'../../src/components/Icon/BellIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../../src/components/Icon/BellIcon/examples',
-			true,
-			/\.(j|t)sx?$/
 		),
 	},
 
@@ -171,32 +151,12 @@ export default [
 		component: getDefaultExport(
 			require('../../src/components/Icon/BookIcon/BookIcon')
 		),
-		examplesContext: require.context(
-			'../../src/components/Icon/BookIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../../src/components/Icon/BookIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
 	},
 
 	{
 		name: 'CalculatorIcon',
 		component: getDefaultExport(
 			require('../../src/components/Icon/CalculatorIcon/CalculatorIcon')
-		),
-		examplesContext: require.context(
-			'../../src/components/Icon/CalculatorIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../../src/components/Icon/CalculatorIcon/examples',
-			true,
-			/\.(j|t)sx?$/
 		),
 	},
 
@@ -205,32 +165,12 @@ export default [
 		component: getDefaultExport(
 			require('../../src/components/Icon/CalendarIcon/CalendarIcon')
 		),
-		examplesContext: require.context(
-			'../../src/components/Icon/CalendarIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../../src/components/Icon/CalendarIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
 	},
 
 	{
 		name: 'ChatIcon',
 		component: getDefaultExport(
 			require('../../src/components/Icon/ChatIcon/ChatIcon')
-		),
-		examplesContext: require.context(
-			'../../src/components/Icon/ChatIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../../src/components/Icon/ChatIcon/examples',
-			true,
-			/\.(j|t)sx?$/
 		),
 	},
 
@@ -239,32 +179,12 @@ export default [
 		component: getDefaultExport(
 			require('../../src/components/Icon/CheckIcon/CheckIcon')
 		),
-		examplesContext: require.context(
-			'../../src/components/Icon/CheckIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../../src/components/Icon/CheckIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
 	},
 
 	{
 		name: 'ChevronIcon',
 		component: getDefaultExport(
 			require('../../src/components/Icon/ChevronIcon/ChevronIcon')
-		),
-		examplesContext: require.context(
-			'../../src/components/Icon/ChevronIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../../src/components/Icon/ChevronIcon/examples',
-			true,
-			/\.(j|t)sx?$/
 		),
 	},
 
@@ -273,32 +193,12 @@ export default [
 		component: getDefaultExport(
 			require('../../src/components/Icon/ClockIcon/ClockIcon')
 		),
-		examplesContext: require.context(
-			'../../src/components/Icon/ClockIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../../src/components/Icon/ClockIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
 	},
 
 	{
 		name: 'CloseIcon',
 		component: getDefaultExport(
 			require('../../src/components/Icon/CloseIcon/CloseIcon')
-		),
-		examplesContext: require.context(
-			'../../src/components/Icon/CloseIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../../src/components/Icon/CloseIcon/examples',
-			true,
-			/\.(j|t)sx?$/
 		),
 	},
 
@@ -307,32 +207,12 @@ export default [
 		component: getDefaultExport(
 			require('../../src/components/Icon/CodeIcon/CodeIcon')
 		),
-		examplesContext: require.context(
-			'../../src/components/Icon/CodeIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../../src/components/Icon/CodeIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
 	},
 
 	{
 		name: 'CrownIcon',
 		component: getDefaultExport(
 			require('../../src/components/Icon/CrownIcon/CrownIcon')
-		),
-		examplesContext: require.context(
-			'../../src/components/Icon/CrownIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../../src/components/Icon/CrownIcon/examples',
-			true,
-			/\.(j|t)sx?$/
 		),
 	},
 

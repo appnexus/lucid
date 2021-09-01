@@ -1,9 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CodeIcon [common] example testing should match snapshot(s) for 1.basic 1`] = `
-<Icon
+exports[`CodeIcon [common] example testing should match snapshot(s) for Primary 1`] = `
+<CodeIcon
   aspectRatio="xMidYMid meet"
-  className="lucid-CodeIcon"
   color="primary"
   isClickable={false}
   isDisabled={false}
@@ -11,12 +10,5 @@ exports[`CodeIcon [common] example testing should match snapshot(s) for 1.basic 
   onSelect={[Function]}
   size={16}
   viewBox="0 0 16 16"
->
-  <path
-    d="M12.5 4l3 4-3 4m-9-8l-3 4 3 4"
-  />
-  <path
-    d="M6.5 13.5l3-11"
-  />
-</Icon>
+/>
 `;

@@ -1,9 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`BookIcon [common] example testing should match snapshot(s) for 1.basic 1`] = `
-<Icon
+exports[`BookIcon [common] example testing should match snapshot(s) for Primary 1`] = `
+<BookIcon
   aspectRatio="xMidYMid meet"
-  className="lucid-BookIcon"
   color="primary"
   isClickable={false}
   isDisabled={false}
@@ -11,12 +10,5 @@ exports[`BookIcon [common] example testing should match snapshot(s) for 1.basic 
   onSelect={[Function]}
   size={16}
   viewBox="0 0 16 16"
->
-  <path
-    d="M2.5 2.5h-2v13h15v-13h-2"
-  />
-  <path
-    d="M8 2.5c-1.5-3-5-2-5-2v12.484S6.5 12.5 7.519 15.5h.962C9.5 12.5 13 12.984 13 12.984V.5s-3.5-1-5 2zm0 0v12.962"
-  />
-</Icon>
+/>
 `;
