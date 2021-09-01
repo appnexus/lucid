@@ -2,7 +2,8 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import ContextMenu from '../ContextMenu/ContextMenu';
-import CloseIcon, { ICloseIconProps } from '../Icon/CloseIcon/CloseIcon';
+import CloseIcon from '../Icon/CloseIcon/CloseIcon';
+import { IIconProps } from '../Icon/Icon';
 import * as reducers from './ToolTip.reducers';
 import { lucidClassNames } from '../../util/style-helpers';
 import {
@@ -289,7 +290,7 @@ class ToolTip extends React.Component<IToolTipProps, IToolTipState> {
 		props,
 	}: {
 		event: React.MouseEvent;
-		props: ICloseIconProps;
+		props: IIconProps;
 	}) => {
 		this.props.onClose && this.props.onClose({ event, props: this.props });
 	};
