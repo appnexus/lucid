@@ -1,9 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`DuplicateIcon [common] example testing should match snapshot(s) for 1.basic 1`] = `
-<Icon
+exports[`DuplicateIcon [common] example testing should match snapshot(s) for Primary 1`] = `
+<DuplicateIcon
   aspectRatio="xMidYMid meet"
-  className="lucid-DuplicateIcon"
   color="primary"
   isClickable={false}
   isDisabled={false}
@@ -11,12 +10,5 @@ exports[`DuplicateIcon [common] example testing should match snapshot(s) for 1.b
   onSelect={[Function]}
   size={16}
   viewBox="0 0 16 16"
->
-  <path
-    d="M1.5 4.5h9v11h-9z"
-  />
-  <path
-    d="M10.5 11.5h4V.5h-9v4"
-  />
-</Icon>
+/>
 `;
