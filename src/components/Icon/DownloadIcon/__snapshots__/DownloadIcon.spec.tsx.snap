@@ -1,9 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`DownloadIcon [common] example testing should match snapshot(s) for 1.basic 1`] = `
-<Icon
+exports[`DownloadIcon [common] example testing should match snapshot(s) for Primary 1`] = `
+<DownloadIcon
   aspectRatio="xMidYMid meet"
-  className="lucid-DownloadIcon"
   color="primary"
   isClickable={false}
   isDisabled={false}
@@ -11,12 +10,5 @@ exports[`DownloadIcon [common] example testing should match snapshot(s) for 1.ba
   onSelect={[Function]}
   size={16}
   viewBox="0 0 16 16"
->
-  <path
-    d="M8 0v12m5-5l-5 5-5-5"
-  />
-  <path
-    d="M.5 13.5v2h15v-2"
-  />
-</Icon>
+/>
 `;

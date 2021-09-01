@@ -1,9 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EditIcon [common] example testing should match snapshot(s) for 1.basic 1`] = `
-<Icon
+exports[`EditIcon [common] example testing should match snapshot(s) for Primary 1`] = `
+<EditIcon
   aspectRatio="xMidYMid meet"
-  className="lucid-EditIcon"
   color="primary"
   isClickable={false}
   isDisabled={false}
@@ -11,9 +10,5 @@ exports[`EditIcon [common] example testing should match snapshot(s) for 1.basic 
   onSelect={[Function]}
   size={16}
   viewBox="0 0 16 16"
->
-  <path
-    d="M4.541 14.522L.548 15.547l.974-4.006L12.452.472l3.019 2.981zm5.924-12.038l3.019 2.981M2.5 10.5l3 3"
-  />
-</Icon>
+/>
 `;

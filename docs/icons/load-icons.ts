@@ -151,16 +151,6 @@ export default [
 		component: getDefaultExport(
 			require('../../src/components/Icon/DangerIcon/DangerIcon')
 		),
-		examplesContext: require.context(
-			'../../src/components/Icon/DangerIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../../src/components/Icon/DangerIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
 	},
 
 	{
@@ -185,32 +175,12 @@ export default [
 		component: getDefaultExport(
 			require('../../src/components/Icon/DeleteIcon/DeleteIcon')
 		),
-		examplesContext: require.context(
-			'../../src/components/Icon/DeleteIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../../src/components/Icon/DeleteIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
 	},
 
 	{
 		name: 'DotsIcon',
 		component: getDefaultExport(
 			require('../../src/components/Icon/DotsIcon/DotsIcon')
-		),
-		examplesContext: require.context(
-			'../../src/components/Icon/DotsIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../../src/components/Icon/DotsIcon/examples',
-			true,
-			/\.(j|t)sx?$/
 		),
 	},
 
@@ -226,32 +196,12 @@ export default [
 		component: getDefaultExport(
 			require('../../src/components/Icon/DownloadIcon/DownloadIcon')
 		),
-		examplesContext: require.context(
-			'../../src/components/Icon/DownloadIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../../src/components/Icon/DownloadIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
 	},
 
 	{
 		name: 'DuplicateIcon',
 		component: getDefaultExport(
 			require('../../src/components/Icon/DuplicateIcon/DuplicateIcon')
-		),
-		examplesContext: require.context(
-			'../../src/components/Icon/DuplicateIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../../src/components/Icon/DuplicateIcon/examples',
-			true,
-			/\.(j|t)sx?$/
 		),
 	},
 
@@ -260,32 +210,12 @@ export default [
 		component: getDefaultExport(
 			require('../../src/components/Icon/EditIcon/EditIcon')
 		),
-		examplesContext: require.context(
-			'../../src/components/Icon/EditIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../../src/components/Icon/EditIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
 	},
 
 	{
 		name: 'EligibilityIcon',
 		component: getDefaultExport(
 			require('../../src/components/Icon/EligibilityIcon/EligibilityIcon')
-		),
-		examplesContext: require.context(
-			'../../src/components/Icon/EligibilityIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../../src/components/Icon/EligibilityIcon/examples',
-			true,
-			/\.(j|t)sx?$/
 		),
 	},
 
@@ -294,32 +224,12 @@ export default [
 		component: getDefaultExport(
 			require('../../src/components/Icon/EligibilityLightIcon/EligibilityLightIcon')
 		),
-		examplesContext: require.context(
-			'../../src/components/Icon/EligibilityLightIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../../src/components/Icon/EligibilityLightIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
 	},
 
 	{
 		name: 'EnvelopeIcon',
 		component: getDefaultExport(
 			require('../../src/components/Icon/EnvelopeIcon/EnvelopeIcon')
-		),
-		examplesContext: require.context(
-			'../../src/components/Icon/EnvelopeIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../../src/components/Icon/EnvelopeIcon/examples',
-			true,
-			/\.(j|t)sx?$/
 		),
 	},
 
@@ -328,32 +238,12 @@ export default [
 		component: getDefaultExport(
 			require('../../src/components/Icon/EqualsIcon/EqualsIcon')
 		),
-		examplesContext: require.context(
-			'../../src/components/Icon/EqualsIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../../src/components/Icon/EqualsIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
 	},
 
 	{
 		name: 'FileIcon',
 		component: getDefaultExport(
 			require('../../src/components/Icon/FileIcon/FileIcon')
-		),
-		examplesContext: require.context(
-			'../../src/components/Icon/FileIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../../src/components/Icon/FileIcon/examples',
-			true,
-			/\.(j|t)sx?$/
 		),
 	},
 
@@ -362,32 +252,12 @@ export default [
 		component: getDefaultExport(
 			require('../../src/components/Icon/FilterIcon/FilterIcon')
 		),
-		examplesContext: require.context(
-			'../../src/components/Icon/FilterIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../../src/components/Icon/FilterIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
 	},
 
 	{
 		name: 'FlagIcon',
 		component: getDefaultExport(
 			require('../../src/components/Icon/FlagIcon/FlagIcon')
-		),
-		examplesContext: require.context(
-			'../../src/components/Icon/FlagIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../../src/components/Icon/FlagIcon/examples',
-			true,
-			/\.(j|t)sx?$/
 		),
 	},
 
@@ -396,32 +266,12 @@ export default [
 		component: getDefaultExport(
 			require('../../src/components/Icon/FolderIcon/FolderIcon')
 		),
-		examplesContext: require.context(
-			'../../src/components/Icon/FolderIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../../src/components/Icon/FolderIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
 	},
 
 	{
 		name: 'FourSquaresIcon',
 		component: getDefaultExport(
 			require('../../src/components/Icon/FourSquaresIcon/FourSquaresIcon')
-		),
-		examplesContext: require.context(
-			'../../src/components/Icon/FourSquaresIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../../src/components/Icon/FourSquaresIcon/examples',
-			true,
-			/\.(j|t)sx?$/
 		),
 	},
 
