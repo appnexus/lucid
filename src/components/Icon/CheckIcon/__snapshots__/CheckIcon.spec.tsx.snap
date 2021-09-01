@@ -1,9 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CheckIcon [common] example testing should match snapshot(s) for 1.basic 1`] = `
-<Icon
+exports[`CheckIcon [common] example testing should match snapshot(s) for Primary 1`] = `
+<CheckIcon
   aspectRatio="xMidYMid meet"
-  className="lucid-CheckIcon"
   color="primary"
   isClickable={false}
   isDisabled={false}
@@ -11,9 +10,5 @@ exports[`CheckIcon [common] example testing should match snapshot(s) for 1.basic
   onSelect={[Function]}
   size={16}
   viewBox="0 0 16 16"
->
-  <path
-    d="M.5 7L6 12.5 15.5 3"
-  />
-</Icon>
+/>
 `;
