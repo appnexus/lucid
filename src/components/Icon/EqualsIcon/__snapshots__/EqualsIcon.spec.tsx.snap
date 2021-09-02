@@ -1,9 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EqualsIcon [common] example testing should match snapshot(s) for 1.basic 1`] = `
-<Icon
+exports[`EqualsIcon [common] example testing should match snapshot(s) for Primary 1`] = `
+<EqualsIcon
   aspectRatio="xMidYMid meet"
-  className="lucid-EqualsIcon"
   color="primary"
   isClickable={false}
   isDisabled={false}
@@ -11,9 +10,5 @@ exports[`EqualsIcon [common] example testing should match snapshot(s) for 1.basi
   onSelect={[Function]}
   size={16}
   viewBox="0 0 16 16"
->
-  <path
-    d="M.5 5.5h15m-15 5h15"
-  />
-</Icon>
+/>
 `;

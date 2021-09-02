@@ -1,9 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`FourSquaresIcon [common] example testing should match snapshot(s) for 1.basic 1`] = `
-<Icon
+exports[`FourSquaresIcon [common] example testing should match snapshot(s) for Primary 1`] = `
+<FourSquaresIcon
   aspectRatio="xMidYMid meet"
-  className="lucid-FourSquaresIcon"
   color="primary"
   isClickable={false}
   isDisabled={false}
@@ -11,9 +10,5 @@ exports[`FourSquaresIcon [common] example testing should match snapshot(s) for 1
   onSelect={[Function]}
   size={16}
   viewBox="0 0 16 16"
->
-  <path
-    d="M.5.5h6v6h-6v-6zm0 15h6v-6h-6v6zm9 0h6v-6h-6v6zm0-15v6h6v-6h-6z"
-  />
-</Icon>
+/>
 `;
