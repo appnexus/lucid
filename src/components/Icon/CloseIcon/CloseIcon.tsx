@@ -23,20 +23,6 @@ export const iconPropTypes = {
 		width. */
 	viewBox: PropTypes.string,
 
-	/** Sets the color of the Icon.  May not be applicable for icons that are tied
-		to specific colors (e.g. DangerIcon). */
-	color: PropTypes.oneOf([
-		'neutral-dark',
-		'neutral-light',
-		'primary',
-		'white',
-		'success',
-		'warning',
-		'secondary-one',
-		'secondary-two',
-		'secondary-three',
-	]),
-
 	/** Any valid SVG aspect ratio. */
 	aspectRatio: PropTypes.string,
 
