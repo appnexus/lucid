@@ -32,20 +32,6 @@ export const iconPropTypes = {
 		width. */
 	viewBox: PropTypes.string,
 
-	/** Sets the color of the Icon.  May not be applicable for icons that are tied
-		to specific colors (e.g. DangerIcon). */
-	color: PropTypes.oneOf([
-		'neutral-dark',
-		'neutral-light',
-		'primary',
-		'white',
-		'success',
-		'warning',
-		'secondary-one',
-		'secondary-two',
-		'secondary-three',
-	]),
-
 	/** Any valid SVG aspect ratio. */
 	aspectRatio: PropTypes.string,
 
@@ -79,7 +65,8 @@ export const EligibilityIcon = ({
 }: IEligibilityIconProps) => {
 	return (
 		<Icon
-			{..._.omit(passThroughs, ['initialState'])}
+			// As color is fixed for this icon, editing the color prop is disallowed
+			{..._.omit(passThroughs, ['initialState', 'color'])}
 			className={cx('&', className)}
 		>
 			<g>
