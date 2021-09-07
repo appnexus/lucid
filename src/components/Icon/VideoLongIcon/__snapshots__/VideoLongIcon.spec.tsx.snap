@@ -1,9 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`VideoLongIcon [common] example testing should match snapshot(s) for 1.basic 1`] = `
-<Icon
+exports[`VideoLongIcon [common] example testing should match snapshot(s) for Primary 1`] = `
+<VideoLongIcon
   aspectRatio="xMidYMid meet"
-  className="lucid-VideoLongIcon"
   color="primary"
   isClickable={false}
   isDisabled={false}
@@ -11,13 +10,5 @@ exports[`VideoLongIcon [common] example testing should match snapshot(s) for 1.b
   onSelect={[Function]}
   size={16}
   viewBox="0 0 16 16"
->
-  <path
-    d="M6.5 4v5l3.75-2.5zM15.5 12.5H.5"
-  />
-  <path
-    d="M.5.5h15v15H.5zM2 15.5l3-3M.5 14L2 12.5M5 15.5l3-3M8 15.5l3-3M11 15.5l3-3M14 15.5l1.5-1.5"
-    strokeLinecap="butt"
-  />
-</Icon>
+/>
 `;
