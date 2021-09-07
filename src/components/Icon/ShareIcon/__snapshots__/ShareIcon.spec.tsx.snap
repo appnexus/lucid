@@ -1,9 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ShareIcon [common] example testing should match snapshot(s) for 1.basic 1`] = `
-<Icon
+exports[`ShareIcon [common] example testing should match snapshot(s) for Primary 1`] = `
+<ShareIcon
   aspectRatio="xMidYMid meet"
-  className="lucid-ShareIcon"
   color="primary"
   isClickable={false}
   isDisabled={false}
@@ -11,24 +10,5 @@ exports[`ShareIcon [common] example testing should match snapshot(s) for 1.basic
   onSelect={[Function]}
   size={16}
   viewBox="0 0 16 16"
->
-  <circle
-    cx="2.75"
-    cy="8"
-    r="2.25"
-  />
-  <circle
-    cx="13.25"
-    cy="2.75"
-    r="2.25"
-  />
-  <circle
-    cx="13.25"
-    cy="13.25"
-    r="2.25"
-  />
-  <path
-    d="M4.852 9.051l6.286 3.143M11.145 3.803L4.85 6.95"
-  />
-</Icon>
+/>
 `;
