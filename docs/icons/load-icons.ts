@@ -430,32 +430,12 @@ export default [
 		component: getDefaultExport(
 			require('../../src/components/Icon/GetMaximumIcon/GetMaximumIcon')
 		),
-		examplesContext: require.context(
-			'../../src/components/Icon/GetMaximumIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../../src/components/Icon/GetMaximumIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
 	},
 
 	{
 		name: 'GlobeIcon',
 		component: getDefaultExport(
 			require('../../src/components/Icon/GlobeIcon/GlobeIcon')
-		),
-		examplesContext: require.context(
-			'../../src/components/Icon/GlobeIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../../src/components/Icon/GlobeIcon/examples',
-			true,
-			/\.(j|t)sx?$/
 		),
 	},
 
@@ -464,32 +444,12 @@ export default [
 		component: getDefaultExport(
 			require('../../src/components/Icon/HamburgerMenuIcon/HamburgerMenuIcon')
 		),
-		examplesContext: require.context(
-			'../../src/components/Icon/HamburgerMenuIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../../src/components/Icon/HamburgerMenuIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
 	},
 
 	{
 		name: 'HelpIcon',
 		component: getDefaultExport(
 			require('../../src/components/Icon/HelpIcon/HelpIcon')
-		),
-		examplesContext: require.context(
-			'../../src/components/Icon/HelpIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../../src/components/Icon/HelpIcon/examples',
-			true,
-			/\.(j|t)sx?$/
 		),
 	},
 
@@ -498,32 +458,12 @@ export default [
 		component: getDefaultExport(
 			require('../../src/components/Icon/HideIcon/HideIcon')
 		),
-		examplesContext: require.context(
-			'../../src/components/Icon/HideIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../../src/components/Icon/HideIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
 	},
 
 	{
 		name: 'HomeIcon',
 		component: getDefaultExport(
 			require('../../src/components/Icon/HomeIcon/HomeIcon')
-		),
-		examplesContext: require.context(
-			'../../src/components/Icon/HomeIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../../src/components/Icon/HomeIcon/examples',
-			true,
-			/\.(j|t)sx?$/
 		),
 	},
 
@@ -532,32 +472,12 @@ export default [
 		component: getDefaultExport(
 			require('../../src/components/Icon/HostedIcon/HostedIcon')
 		),
-		examplesContext: require.context(
-			'../../src/components/Icon/HostedIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../../src/components/Icon/HostedIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
 	},
 
 	{
 		name: 'ImageIcon',
 		component: getDefaultExport(
 			require('../../src/components/Icon/ImageIcon/ImageIcon')
-		),
-		examplesContext: require.context(
-			'../../src/components/Icon/ImageIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../../src/components/Icon/ImageIcon/examples',
-			true,
-			/\.(j|t)sx?$/
 		),
 	},
 
@@ -566,16 +486,6 @@ export default [
 		component: getDefaultExport(
 			require('../../src/components/Icon/InfoIcon/InfoIcon')
 		),
-		examplesContext: require.context(
-			'../../src/components/Icon/InfoIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../../src/components/Icon/InfoIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
 	},
 
 	{
@@ -583,32 +493,12 @@ export default [
 		component: getDefaultExport(
 			require('../../src/components/Icon/InfoLightIcon/InfoLightIcon')
 		),
-		examplesContext: require.context(
-			'../../src/components/Icon/InfoLightIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../../src/components/Icon/InfoLightIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
 	},
 
 	{
 		name: 'InheritedSettingsIcon',
 		component: getDefaultExport(
 			require('../../src/components/Icon/InheritedSettingsIcon/InheritedSettingsIcon')
-		),
-		examplesContext: require.context(
-			'../../src/components/Icon/InheritedSettingsIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../../src/components/Icon/InheritedSettingsIcon/examples',
-			true,
-			/\.(j|t)sx?$/
 		),
 	},
 

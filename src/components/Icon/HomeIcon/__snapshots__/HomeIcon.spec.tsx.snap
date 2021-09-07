@@ -1,9 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`HomeIcon [common] example testing should match snapshot(s) for 1.basic 1`] = `
-<Icon
+exports[`HomeIcon [common] example testing should match snapshot(s) for Primary 1`] = `
+<HomeIcon
   aspectRatio="xMidYMid meet"
-  className="lucid-HomeIcon"
   color="primary"
   isClickable={false}
   isDisabled={false}
@@ -11,9 +10,5 @@ exports[`HomeIcon [common] example testing should match snapshot(s) for 1.basic 
   onSelect={[Function]}
   size={16}
   viewBox="0 0 16 16"
->
-  <path
-    d="M8 .5l-7.5 6v9h5v-7h5v7h5v-9z"
-  />
-</Icon>
+/>
 `;
