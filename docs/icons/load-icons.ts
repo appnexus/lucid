@@ -1264,32 +1264,12 @@ export default [
 		component: getDefaultExport(
 			require('../../src/components/Icon/TableIcon/TableIcon')
 		),
-		examplesContext: require.context(
-			'../../src/components/Icon/TableIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../../src/components/Icon/TableIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
 	},
 
 	{
 		name: 'TextIcon',
 		component: getDefaultExport(
 			require('../../src/components/Icon/TextIcon/TextIcon')
-		),
-		examplesContext: require.context(
-			'../../src/components/Icon/TextIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../../src/components/Icon/TextIcon/examples',
-			true,
-			/\.(j|t)sx?$/
 		),
 	},
 
@@ -1298,31 +1278,11 @@ export default [
 		component: getDefaultExport(
 			require('../../src/components/Icon/TicketIcon/TicketIcon')
 		),
-		examplesContext: require.context(
-			'../../src/components/Icon/TicketIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../../src/components/Icon/TicketIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
 	},
 	{
 		name: 'UnlinkedIcon',
 		component: getDefaultExport(
 			require('../../src/components/Icon/UnlinkedIcon/UnlinkedIcon')
-		),
-		examplesContext: require.context(
-			'../../src/components/Icon/UnlinkedIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../../src/components/Icon/UnlinkedIcon/examples',
-			true,
-			/\.(j|t)sx?$/
 		),
 	},
 
@@ -1331,32 +1291,12 @@ export default [
 		component: getDefaultExport(
 			require('../../src/components/Icon/UnlockedIcon/UnlockedIcon')
 		),
-		examplesContext: require.context(
-			'../../src/components/Icon/UnlockedIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../../src/components/Icon/UnlockedIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
 	},
 
 	{
 		name: 'UploadIcon',
 		component: getDefaultExport(
 			require('../../src/components/Icon/UploadIcon/UploadIcon')
-		),
-		examplesContext: require.context(
-			'../../src/components/Icon/UploadIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../../src/components/Icon/UploadIcon/examples',
-			true,
-			/\.(j|t)sx?$/
 		),
 	},
 
@@ -1365,32 +1305,12 @@ export default [
 		component: getDefaultExport(
 			require('../../src/components/Icon/UserIcon/UserIcon')
 		),
-		examplesContext: require.context(
-			'../../src/components/Icon/UserIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../../src/components/Icon/UserIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
 	},
 
 	{
 		name: 'VideoIcon',
 		component: getDefaultExport(
 			require('../../src/components/Icon/VideoIcon/VideoIcon')
-		),
-		examplesContext: require.context(
-			'../../src/components/Icon/VideoIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../../src/components/Icon/VideoIcon/examples',
-			true,
-			/\.(j|t)sx?$/
 		),
 	},
 
@@ -1399,32 +1319,12 @@ export default [
 		component: getDefaultExport(
 			require('../../src/components/Icon/VideoLiveIcon/VideoLiveIcon')
 		),
-		examplesContext: require.context(
-			'../../src/components/Icon/VideoLiveIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../../src/components/Icon/VideoLiveIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
 	},
 
 	{
 		name: 'VideoLongIcon',
 		component: getDefaultExport(
 			require('../../src/components/Icon/VideoLongIcon/VideoLongIcon')
-		),
-		examplesContext: require.context(
-			'../../src/components/Icon/VideoLongIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../../src/components/Icon/VideoLongIcon/examples',
-			true,
-			/\.(j|t)sx?$/
 		),
 	},
 
@@ -1433,32 +1333,12 @@ export default [
 		component: getDefaultExport(
 			require('../../src/components/Icon/VideoOnDemandIcon/VideoOnDemandIcon')
 		),
-		examplesContext: require.context(
-			'../../src/components/Icon/VideoOnDemandIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../../src/components/Icon/VideoOnDemandIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
 	},
 
 	{
 		name: 'VideoShortIcon',
 		component: getDefaultExport(
 			require('../../src/components/Icon/VideoShortIcon/VideoShortIcon')
-		),
-		examplesContext: require.context(
-			'../../src/components/Icon/VideoShortIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../../src/components/Icon/VideoShortIcon/examples',
-			true,
-			/\.(j|t)sx?$/
 		),
 	},
 
@@ -1467,32 +1347,12 @@ export default [
 		component: getDefaultExport(
 			require('../../src/components/Icon/ViewIcon/ViewIcon')
 		),
-		examplesContext: require.context(
-			'../../src/components/Icon/ViewIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../../src/components/Icon/ViewIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
 	},
 
 	{
 		name: 'ViewTableIcon',
 		component: getDefaultExport(
 			require('../../src/components/Icon/ViewTableIcon/ViewTableIcon')
-		),
-		examplesContext: require.context(
-			'../../src/components/Icon/ViewTableIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../../src/components/Icon/ViewTableIcon/examples',
-			true,
-			/\.(j|t)sx?$/
 		),
 	},
 
@@ -1501,16 +1361,6 @@ export default [
 		component: getDefaultExport(
 			require('../../src/components/Icon/WarningIcon/WarningIcon')
 		),
-		examplesContext: require.context(
-			'../../src/components/Icon/WarningIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../../src/components/Icon/WarningIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
 	},
 
 	{
@@ -1518,31 +1368,11 @@ export default [
 		component: getDefaultExport(
 			require('../../src/components/Icon/WarningLightIcon/WarningLightIcon')
 		),
-		examplesContext: require.context(
-			'../../src/components/Icon/WarningLightIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../../src/components/Icon/WarningLightIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
 	},
 	{
 		name: 'WrenchIcon',
 		component: getDefaultExport(
 			require('../../src/components/Icon/WrenchIcon/WrenchIcon')
-		),
-		examplesContext: require.context(
-			'../../src/components/Icon/WrenchIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../../src/components/Icon/WrenchIcon/examples',
-			true,
-			/\.(j|t)sx?$/
 		),
 	},
 ];
