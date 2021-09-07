@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SwitchIcon [common] example testing should match snapshot(s) for Primary 1`] = `
-<SwitchIcon
+exports[`RunReportIcon [common] example testing should match snapshot(s) for Primary 1`] = `
+<RunReportIcon
   aspectRatio="xMidYMid meet"
   color="primary"
   isClickable={false}

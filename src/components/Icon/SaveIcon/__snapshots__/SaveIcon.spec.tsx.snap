@@ -1,9 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SaveIcon [common] example testing should match snapshot(s) for 1basic 1`] = `
-<Icon
+exports[`SaveIcon [common] example testing should match snapshot(s) for Primary 1`] = `
+<SaveIcon
   aspectRatio="xMidYMid meet"
-  className="lucid-SaveIcon"
   color="primary"
   isClickable={false}
   isDisabled={false}
@@ -11,17 +10,5 @@ exports[`SaveIcon [common] example testing should match snapshot(s) for 1basic 1
   onSelect={[Function]}
   size={16}
   viewBox="0 0 16 16"
->
-  <path
-    d="M15.5 15.5H.5V.5h12l3 3z"
-  />
-  <circle
-    cx="8"
-    cy="10"
-    r="2.25"
-  />
-  <path
-    d="M12 .5v4H4v-4"
-  />
-</Icon>
+/>
 `;
