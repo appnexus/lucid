@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`LinkedIcon [common] example testing should match snapshot(s) for Primary 1`] = `
-<LinkedIcon
+exports[`MegaphoneIcon [common] example testing should match snapshot(s) for Primary 1`] = `
+<MegaphoneIcon
   aspectRatio="xMidYMid meet"
   color="primary"
   isClickable={false}
