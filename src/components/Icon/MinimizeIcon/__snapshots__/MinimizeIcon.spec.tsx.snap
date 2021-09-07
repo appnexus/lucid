@@ -1,9 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`MinimizeIcon [common] example testing should match snapshot(s) for 1.basic 1`] = `
-<Icon
+exports[`MinimizeIcon [common] example testing should match snapshot(s) for Primary 1`] = `
+<MinimizeIcon
   aspectRatio="xMidYMid meet"
-  className="lucid-MinimizeIcon"
   color="primary"
   isClickable={false}
   isDisabled={false}
@@ -11,9 +10,5 @@ exports[`MinimizeIcon [common] example testing should match snapshot(s) for 1.ba
   onSelect={[Function]}
   size={16}
   viewBox="0 0 16 16"
->
-  <path
-    d="M15.5 6.5h-6v-6m-3 15v-6h-6"
-  />
-</Icon>
+/>
 `;

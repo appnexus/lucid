@@ -747,32 +747,12 @@ export default [
 		component: getDefaultExport(
 			require('../../src/components/Icon/LightbulbIcon/LightbulbIcon')
 		),
-		examplesContext: require.context(
-			'../../src/components/Icon/LightbulbIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../../src/components/Icon/LightbulbIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
 	},
 
 	{
 		name: 'LinkedIcon',
 		component: getDefaultExport(
 			require('../../src/components/Icon/LinkedIcon/LinkedIcon')
-		),
-		examplesContext: require.context(
-			'../../src/components/Icon/LinkedIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../../src/components/Icon/LinkedIcon/examples',
-			true,
-			/\.(j|t)sx?$/
 		),
 	},
 
@@ -781,32 +761,12 @@ export default [
 		component: getDefaultExport(
 			require('../../src/components/Icon/LoadingIcon/LoadingIcon')
 		),
-		examplesContext: require.context(
-			'../../src/components/Icon/LoadingIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../../src/components/Icon/LoadingIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
 	},
 
 	{
 		name: 'LockedIcon',
 		component: getDefaultExport(
 			require('../../src/components/Icon/LockedIcon/LockedIcon')
-		),
-		examplesContext: require.context(
-			'../../src/components/Icon/LockedIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../../src/components/Icon/LockedIcon/examples',
-			true,
-			/\.(j|t)sx?$/
 		),
 	},
 
@@ -815,32 +775,12 @@ export default [
 		component: getDefaultExport(
 			require('../../src/components/Icon/MaximizeIcon/MaximizeIcon')
 		),
-		examplesContext: require.context(
-			'../../src/components/Icon/MaximizeIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../../src/components/Icon/MaximizeIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
 	},
 
 	{
 		name: 'MegaphoneIcon',
 		component: getDefaultExport(
 			require('../../src/components/Icon/MegaphoneIcon/MegaphoneIcon')
-		),
-		examplesContext: require.context(
-			'../../src/components/Icon/MegaphoneIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../../src/components/Icon/MegaphoneIcon/examples',
-			true,
-			/\.(j|t)sx?$/
 		),
 	},
 
@@ -849,32 +789,12 @@ export default [
 		component: getDefaultExport(
 			require('../../src/components/Icon/MinimizeIcon/MinimizeIcon')
 		),
-		examplesContext: require.context(
-			'../../src/components/Icon/MinimizeIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../../src/components/Icon/MinimizeIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
 	},
 
 	{
 		name: 'MinusCircleIcon',
 		component: getDefaultExport(
 			require('../../src/components/Icon/MinusCircleIcon/MinusCircleIcon')
-		),
-		examplesContext: require.context(
-			'../../src/components/Icon/MinusCircleIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../../src/components/Icon/MinusCircleIcon/examples',
-			true,
-			/\.(j|t)sx?$/
 		),
 	},
 
@@ -883,32 +803,12 @@ export default [
 		component: getDefaultExport(
 			require('../../src/components/Icon/MinusCircleLightIcon/MinusCircleLightIcon')
 		),
-		examplesContext: require.context(
-			'../../src/components/Icon/MinusCircleLightIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../../src/components/Icon/MinusCircleLightIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
 	},
 
 	{
 		name: 'MinusIcon',
 		component: getDefaultExport(
 			require('../../src/components/Icon/MinusIcon/MinusIcon')
-		),
-		examplesContext: require.context(
-			'../../src/components/Icon/MinusIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../../src/components/Icon/MinusIcon/examples',
-			true,
-			/\.(j|t)sx?$/
 		),
 	},
 
@@ -917,32 +817,12 @@ export default [
 		component: getDefaultExport(
 			require('../../src/components/Icon/NewWindowIcon/NewWindowIcon')
 		),
-		examplesContext: require.context(
-			'../../src/components/Icon/NewWindowIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../../src/components/Icon/NewWindowIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
 	},
 
 	{
 		name: 'OutwardArrowsIcon',
 		component: getDefaultExport(
 			require('../../src/components/Icon/OutwardArrowsIcon/OutwardArrowsIcon')
-		),
-		examplesContext: require.context(
-			'../../src/components/Icon/OutwardArrowsIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../../src/components/Icon/OutwardArrowsIcon/examples',
-			true,
-			/\.(j|t)sx?$/
 		),
 	},
 
@@ -957,16 +837,6 @@ export default [
 		name: 'PlusIcon',
 		component: getDefaultExport(
 			require('../../src/components/Icon/PlusIcon/PlusIcon')
-		),
-		examplesContext: require.context(
-			'../../src/components/Icon/PlusIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../../src/components/Icon/PlusIcon/examples',
-			true,
-			/\.(j|t)sx?$/
 		),
 	},
 

@@ -174,3 +174,16 @@ exports[`MinusCircleLightIcon [common] example testing should match snapshot(s) 
   />
 </Icon>
 `;
+
+exports[`MinusCircleLightIcon [common] example testing should match snapshot(s) for Primary 1`] = `
+<MinusCircleLightIcon
+  aspectRatio="xMidYMid meet"
+  color="primary"
+  isClickable={false}
+  isDisabled={false}
+  onClick={[Function]}
+  onSelect={[Function]}
+  size={16}
+  viewBox="0 0 16 16"
+/>
+`;
