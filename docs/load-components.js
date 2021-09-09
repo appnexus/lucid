@@ -194,16 +194,6 @@ module.exports = [
 		component: getDefaultExport(
 			require('../src/components/ButtonGroup/ButtonGroup')
 		),
-		examplesContext: require.context(
-			'../src/components/ButtonGroup/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../src/components/ButtonGroup/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
 	},
 	{
 		name: 'CalendarMonth',
