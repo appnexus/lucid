@@ -3711,6 +3711,91 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
 </div>
 `;
 
+exports[`SearchableSelect [common] example testing should match snapshot(s) for CustomSearchPlaceholder 1`] = `
+<section
+  style={
+    Object {
+      "minHeight": 120,
+    }
+  }
+>
+  <SearchableSelect
+    onSelect={[Function]}
+  />
+</section>
+`;
+
+exports[`SearchableSelect [common] example testing should match snapshot(s) for Default 1`] = `
+<section
+  style={
+    Object {
+      "minHeight": 120,
+    }
+  }
+>
+  <SearchableSelect
+    onSelect={[Function]}
+  />
+</section>
+`;
+
+exports[`SearchableSelect [common] example testing should match snapshot(s) for FormattedOptions 1`] = `
+<section
+  style={
+    Object {
+      "minHeight": 120,
+    }
+  }
+>
+  <SearchableSelect
+    onSelect={[Function]}
+  />
+</section>
+`;
+
+exports[`SearchableSelect [common] example testing should match snapshot(s) for Invalid 1`] = `
+<section
+  style={
+    Object {
+      "minHeight": 120,
+    }
+  }
+>
+  <SearchableSelect
+    Error="Please choose option California"
+    onSelect={[Function]}
+  />
+</section>
+`;
+
+exports[`SearchableSelect [common] example testing should match snapshot(s) for Invisible 1`] = `
+<section
+  style={
+    Object {
+      "minHeight": 120,
+    }
+  }
+>
+  <SearchableSelect
+    onSelect={[Function]}
+  />
+</section>
+`;
+
+exports[`SearchableSelect [common] example testing should match snapshot(s) for Loading 1`] = `
+<section
+  style={
+    Object {
+      "minHeight": 120,
+    }
+  }
+>
+  <SearchableSelect
+    onSelect={[Function]}
+  />
+</section>
+`;
+
 exports[`SearchableSelect child elements Option should render Option child function by passing in {searchText}, setting filterText on each option and using a custom optionFilter 1`] = `
 <div
   className="lucid-SearchableSelect"
