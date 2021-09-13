@@ -1,8 +1,6 @@
 import { map, isNil } from 'lodash';
 import React, { useState } from 'react';
 import { Meta } from '@storybook/react';
-//import { Subtitle } from '@storybook/addon-docs';
-//import { isNil } from 'lodash';
 
 import {
 	SingleSelect,
@@ -11,12 +9,8 @@ import {
 	InfoIcon,
 	DangerIcon,
 } from '../../index';
-import { SingleSelectDumb } from './SingleSelect';
 
-//import { ISingleSelectOptionProps } from './SingleSelect';
-
-//const { Placeholder, Option } = SingleSelect;
-
+//👇 Provide Storybook with the component name, 'section', any subcomponents and a description
 export default {
 	title: 'Controls/SingleSelect',
 	component: SingleSelect,
@@ -29,13 +23,13 @@ export default {
 	parameters: {
 		docs: {
 			description: {
-				component: SingleSelectDumb.peek.description,
+				component: SingleSelect.peek.description,
 			},
 		},
 	},
 } as Meta;
 
-//👇 Destructure the child components that we will need from single select
+//👇 Destructure any child components that we will need
 const { Option, OptionGroup } = SingleSelect;
 
 //👇 Add a key prop to each element of the array
@@ -43,26 +37,25 @@ function addKeys(children) {
 	return map(children, (child, index) => ({ ...child, key: index }));
 }
 
-//👇 We create a “template” of how args map to rendering
+//👇 Create a “template” of how args map to rendering
 const Template: any = (args) => {
-	const [selectedIndex, setSelected] = useState<number | null>(null);
+	const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
 	const [selectedOptionName, setSelectedOptionName] = useState<string | null>(
 		null
 	);
-	const { showSelectedIndex } = args;
 
 	const handleSelect = (optionIndex: number | null) => {
 		const name = !isNil(optionIndex)
 			? args.children[optionIndex].props.name
 			: null;
-		setSelected(optionIndex);
+		setSelectedIndex(optionIndex);
 		setSelectedOptionName(name);
 	};
 
 	return (
 		<section style={{ minHeight: 90 }}>
 			<SingleSelect {...args} onSelect={(e) => handleSelect(e)}></SingleSelect>
-			{showSelectedIndex && !isNil(selectedIndex) && (
+			{!isNil(selectedIndex) && (
 				<section style={{ paddingTop: 9, paddingLeft: 9 }}>
 					Selected Index: {JSON.stringify(selectedIndex)}
 				</section>
@@ -76,13 +69,10 @@ const Template: any = (args) => {
 	);
 };
 
-//👇 Each story then reuses that template
-
 /** Default */
 export const Default = Template.bind({});
 Default.args = {
 	Placeholder: 'Select a Color',
-	showSelectedIndex: true,
 	children: addKeys([
 		<Option>Red</Option>,
 		<Option>Green</Option>,
@@ -316,7 +306,6 @@ ArrayOptions.parameters = {
 export const Stateless = Template.bind({});
 Stateless.args = {
 	...Default.args,
-	showSelectedIndex: false,
 	selectedIndex: 1,
 	DropMenu: { focusedIndex: 2, isExpanded: true },
 	style: { minHeight: 220 },

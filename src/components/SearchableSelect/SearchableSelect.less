@@ -35,11 +35,14 @@
 			}
 
 			&.@{prefix}-SearchableSelect-Control-is-selected {
-				border: 1px solid @color-primary;
-				background-color: white;
+				border: 1px solid @featured-color-primary-borderColor;
+				background-color: @color-primary-light;
+
+				&:hover {
+					background-color: @color-primary-light-hover;
+				}
 			}
 		}
-
 
 		&-is-error {
 			border: 2px solid @featured-color-danger;
@@ -58,6 +61,11 @@
 		// States
 		&-is-selected {
 			border-color: @color-primary;
+			background-color: @color-primary-light;
+
+			&:hover {
+				background-color: @color-primary-light-hover;
+			}
 		}
 
 		&-is-expanded {
@@ -142,4 +150,3 @@
 		font-size: @fontSize * 0.9;
 	}
 }
-

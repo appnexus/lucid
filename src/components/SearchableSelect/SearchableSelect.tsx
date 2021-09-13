@@ -27,6 +27,7 @@ import { Validation } from '../Validation/Validation';
 
 const cx = lucidClassNames.bind('&-SearchableSelect');
 
+/** PropTypes */
 const { any, bool, func, node, number, object, shape, string, oneOfType } =
 	PropTypes;
 
@@ -34,6 +35,7 @@ interface ISearchableSelectPlaceholderProps extends StandardProps {
 	description?: string;
 }
 
+/** Placeholder Child Component */
 const Placeholder = (_props: ISearchableSelectPlaceholderProps): null => null;
 Placeholder.displayName = 'SearchableSelect.Placeholder';
 Placeholder.peek = {
@@ -46,6 +48,7 @@ Placeholder.peek = {
 Placeholder.propName = 'Placeholder';
 Placeholder.propTypes = {};
 
+/** OptionGroup Child Component */
 const OptionGroup = (_props: IDropMenuOptionGroupProps): null => null;
 OptionGroup.displayName = 'SearchableSelect.OptionGroup';
 OptionGroup.peek = {
@@ -59,13 +62,13 @@ OptionGroup.propName = 'OptionGroup';
 OptionGroup.propTypes = DropMenu.OptionGroup.propTypes;
 OptionGroup.defaultProps = DropMenu.OptionGroup.defaultProps;
 
-/** Option Child Component */
 export interface ISearchableSelectOptionProps extends IDropMenuOptionProps {
 	description?: string;
 	name?: string;
 	Selected?: React.ReactNode;
 }
 
+/** Option.Selected Child Component */
 const Selected = (_props: { children?: React.ReactNode }): null => null;
 
 Selected.displayName = 'SearchableSelect.Option.Selected';
@@ -78,6 +81,7 @@ Selected.peek = {
 Selected.propName = 'Selected';
 Selected.propTypes = {};
 
+/** Option Child Component */
 const Option = (_props: ISearchableSelectOptionProps): null => null;
 
 Option.displayName = 'SearchableSelect.Option';
@@ -158,16 +162,14 @@ const defaultProps = {
 	onSelect: _.noop,
 };
 
+/** SearchableSelect Component */
 class SearchableSelect extends React.Component<
 	ISearchableSelectProps,
 	ISearchableSelectState
 > {
 	static displayName = 'SearchableSelect';
 	static peek = {
-		description: `
-			A selector control (like native \`<select>\`) which is used to select a
-			single option from a dropdown list using a SearchField.  Supports
-			option groups with and without labels.
+		description: `A selector control (like native \`<select>\`) which is used to select a single option from a dropdown list using a SearchField. Supports option groups with and without labels.
 		`,
 		categories: ['controls', 'selectors'],
 		madeFrom: ['DropMenu', 'SearchField'],
@@ -494,14 +496,17 @@ class SearchableSelect extends React.Component<
 			getFirst(props, SearchField) || <SearchField placeholder='Search...' />,
 			'props'
 		);
+
 		const placeholderProps = _.first(
 			_.map(findTypes(this.props, SearchableSelect.Placeholder), 'props')
 		);
+
 		const errorChildProps = _.first(
 			_.map(findTypes(props, Validation.Error), 'props')
 		);
 
 		const placeholder = _.get(placeholderProps, 'children', 'Select');
+
 		const isItemSelected = _.isNumber(selectedIndex);
 
 		return (
