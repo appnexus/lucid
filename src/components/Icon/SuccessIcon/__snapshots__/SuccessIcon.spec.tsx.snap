@@ -1,9 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SuccessIcon [common] example testing should match snapshot(s) for 1.basic 1`] = `
-<Icon
+exports[`SuccessIcon [common] example testing should match snapshot(s) for Primary 1`] = `
+<SuccessIcon
   aspectRatio="xMidYMid meet"
-  className="lucid-SuccessIcon"
   color="primary"
   isClickable={false}
   isDisabled={false}
@@ -11,16 +10,5 @@ exports[`SuccessIcon [common] example testing should match snapshot(s) for 1.bas
   onSelect={[Function]}
   size={16}
   viewBox="0 0 16 16"
->
-  <circle
-    className="lucid-SuccessIcon-background"
-    cx="8"
-    cy="8"
-    r="7.5"
-  />
-  <path
-    className="lucid-SuccessIcon-check"
-    d="M4.5 8L7 10.5 11.5 6"
-  />
-</Icon>
+/>
 `;

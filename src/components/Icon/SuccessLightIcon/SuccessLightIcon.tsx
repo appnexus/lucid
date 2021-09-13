@@ -1,19 +1,63 @@
 import _ from 'lodash';
 import React from 'react';
-import PropTypes from 'react-peek/prop-types';
-import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
+import PropTypes from 'prop-types';
+import Icon, { IIconProps } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
-import { omitProps } from '../../../util/component-types';
-
-const { bool } = PropTypes;
 
 const cx = lucidClassNames.bind('&-SuccessLightIcon');
 
-interface ISuccessLightIconProps extends IIconProps {
+export interface ISuccessLightIconProps extends IIconProps {
 	/** Controls the active state of the Icon. Basically toggles the same "look n
 		feel" as when you hover. */
 	isActive?: boolean;
 }
+
+export const successLightIconPropTypes = {
+	/** Controls the active state of the Icon. Basically toggles the same "look n
+		feel" as when you hover. */
+	isActive: PropTypes.bool,
+
+	/** Size variations of the icons. \`size\` directly effects height and width
+		but the developer should also be conscious of the relationship with
+		\`viewBox\`. */
+	size: PropTypes.number,
+
+	/** Size handles width and height, whereas \`width\` can manually override the width that would be set by size. */
+	width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+
+	/** Size handles width and height, whereas \`height\` can manually override the height that would be set by size. */
+	height: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+
+	/** \`viewBox\` is very important for SVGs. You can think of \`viewBox\` as
+		the "artboard" for our SVG while \`size\` is the presented height and
+		width. */
+	viewBox: PropTypes.string,
+
+	/** Any valid SVG aspect ratio. */
+	aspectRatio: PropTypes.string,
+
+	/** Adds styling that makes the icon appear clickable. */
+	isClickable: PropTypes.bool,
+
+	/** Adds styling that makes the icon appear disabled.  Also forces
+		isClickable to be false. */
+	isDisabled: PropTypes.bool,
+
+	/** Called when the user clicks the \`Icon\`. Signature:
+		\`({event, props}) => {}\` */
+	onClick: PropTypes.func,
+
+	/** Called when the user clicks an active, clickable \`Icon\`. Signature:
+		\`({event, props}) => {}\` */
+	onSelect: PropTypes.func,
+
+	/** Any valid React children. */
+	children: PropTypes.element,
+
+	/** Classes that are appended to the component defaults. This prop is run
+		through the \`classnames\` library. */
+	className: PropTypes.string,
+};
 
 export const SuccessLightIcon = ({
 	className,
@@ -24,13 +68,7 @@ export const SuccessLightIcon = ({
 }: ISuccessLightIconProps) => {
 	return (
 		<Icon
-			{...omitProps(
-				passThroughs,
-				undefined,
-				_.keys(SuccessLightIcon.propTypes),
-				false
-			)}
-			{..._.pick(passThroughs, _.keys(iconPropTypes))}
+			{..._.omit(passThroughs, ['initialState', 'color'])}
 			isClickable={isClickable}
 			isDisabled={isDisabled}
 			className={cx(
@@ -48,21 +86,9 @@ export const SuccessLightIcon = ({
 };
 
 SuccessLightIcon.displayName = 'SuccessLightIcon';
-SuccessLightIcon.peek = {
-	description: `
-		Nothing like a mild success in the morning to get the blood flowing!
-	`,
-	categories: ['visual design', 'icons'],
-	extend: 'Icon',
-	madeFrom: ['Icon'],
-};
-SuccessLightIcon.propTypes = {
-	...iconPropTypes,
-	isActive: bool`
-		Controls the active state of the Icon. Basically toggles the same "look n
-		feel" as when you hover.
-	`,
-};
+
+SuccessLightIcon.propTypes = successLightIconPropTypes;
+
 SuccessLightIcon.defaultProps = Icon.defaultProps;
 
 export default SuccessLightIcon;
