@@ -36,7 +36,7 @@ export default createClass({
 });
 
 // begin-hide-from-docs
-export const notes = `
+export let notes = `
 This removes the dropdown border. The lack of a border gives the dropdown a lighter visual weight within a data-intense layout.
 `;
 // end-hide-from-docs

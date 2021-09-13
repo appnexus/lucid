@@ -16,6 +16,7 @@ export default createClass({
 		optionIndex: number | null,
 		{ props: { name } }: { props: { name: string } }
 	) {
+		console.log('name', name);
 		this.setState({
 			selectedIndex: optionIndex,
 			selectedOptionName: name,
@@ -45,7 +46,7 @@ export default createClass({
 });
 
 // begin-hide-from-docs
-export const notes = `
+export let notes = `
 Use this when you need to display different values within the dropdown and elsewhere on the screen after the user makes a selection.
 `;
 // end-hide-from-docs

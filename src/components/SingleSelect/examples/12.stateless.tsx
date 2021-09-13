@@ -30,7 +30,7 @@ export default createClass({
 });
 
 // begin-hide-from-docs
-export const notes = `
+export let notes = `
 This example shows the various states available in \`SingleSelect\`.
 `;
 // end-hide-from-docs

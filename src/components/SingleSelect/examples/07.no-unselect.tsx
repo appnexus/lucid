@@ -18,7 +18,7 @@ export default createClass({
 });
 
 // begin-hide-from-docs
-export const notes = `
+export let notes = `
 This removes the default state, Select one, after a selection has been made. Use \`hasReset="false"\` to prevent users from deselecting a setting.
 `;
 // end-hide-from-docs

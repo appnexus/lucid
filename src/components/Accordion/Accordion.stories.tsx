@@ -7,9 +7,11 @@ export default {
 	component: AccordionDumb,
 	subcomponents: { 'Accordion.Item': Accordion.Item },
 	parameters: {
-		notes: AccordionDumb.peek.description,
 		docs: {
 			inlineStories: false,
+			description: {
+				component: AccordionDumb.peek.description,
+			},
 		},
 	},
 } as Meta;

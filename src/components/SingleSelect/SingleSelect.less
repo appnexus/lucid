@@ -53,17 +53,18 @@
 			margin-left: auto;
 		}
 
-		&.@{prefix}-SingleSelect-Control-is-selected&.@{prefix}-SingleSelect-Control-is-null-option .@{prefix}-SingleSelect-Control-content {
+		&.@{prefix}-SingleSelect-Control-is-selected&.@{prefix}-SingleSelect-Control-is-null-option
+			.@{prefix}-SingleSelect-Control-content {
 			.opacity(@opacity-disabled);
 		}
 
 		&:not(.@{prefix}-SingleSelect-Control-is-disabled)&:not(.@{prefix}-SingleSelect-Control-is-expanded) {
 			&:hover {
-				background-color: @color-neutral-3;
+				background-color: @color-primary-light-hover;
 			}
 
 			&:focus {
-				background-color: @color-neutral-4;
+				background-color: @color-primary-light;
 			}
 		}
 
@@ -71,6 +72,11 @@
 		&-is-highlighted,
 		&-is-selected {
 			border: 1px solid @featured-color-primary-borderColor;
+			background-color: @color-primary-light;
+
+			&:hover {
+				background-color: @color-primary-light-hover;
+			}
 		}
 
 		&-is-expanded {

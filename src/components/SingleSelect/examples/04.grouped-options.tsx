@@ -30,7 +30,7 @@ export default createClass({
 });
 
 // begin-hide-from-docs
-export const notes = `
+export let notes = `
 This allows you to have sections within your dropdown. Use this to help frame users' understanding of the options.
 `;
 // end-hide-from-docs

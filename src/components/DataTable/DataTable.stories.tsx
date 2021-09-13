@@ -1,5 +1,4 @@
-import { useState } from '@storybook/addons';
-import { every, map, reverse, sortBy } from 'lodash';
+import { map } from 'lodash';
 import React from 'react';
 import SuccessIcon from '../Icon/SuccessIcon/SuccessIcon';
 import DataTable from './DataTable';
@@ -10,7 +9,7 @@ export default {
 };
 
 function addKeys(children) {
-	return map(children, (chile, index) => ({ ...chile, key: index }));
+	return map(children, (child, index) => ({ ...child, key: index }));
 }
 
 const Template: any = (args) => <DataTable {...args} />;

@@ -96,10 +96,7 @@ Accordion.propTypes = {
 };
 
 Accordion.peek = {
-	description: `
-		Accordion is a container that renders panels and controls their
-		expansion or collapse.
-	`,
+	description: `\`Accordion\` is a container that renders panels and controls their expansion or collapse.`,
 	categories: ['layout'],
 	madeFrom: ['ExpanderPanel'],
 };

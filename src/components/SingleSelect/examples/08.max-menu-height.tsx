@@ -32,7 +32,7 @@ export default createClass({
 });
 
 // begin-hide-from-docs
-export const notes = `
+export let notes = `
 You can provide a fixed menu height to accommodate your layout. This will allow users to scroll through the options within a fixed space.
 `;
 // end-hide-from-docs

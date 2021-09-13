@@ -20,7 +20,7 @@ export default createClass({
 });
 
 // begin-hide-from-docs
-export const notes = `
+export let notes = `
 Use \`isSelectionHighlighted="false"\` when the dropdown defaults to null selections such as All or Any. The grey outline indicates that this selection does not need users' attention.
 `;
 // end-hide-from-docs

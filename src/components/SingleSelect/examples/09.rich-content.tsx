@@ -26,7 +26,7 @@ export default createClass({
 });
 
 // begin-hide-from-docs
-export const notes = `
+export let notes = `
 This allows you to include rich content in the dropdown. Use this where an image will help users make a selection, for example a company logo near the company name.
 `;
 // end-hide-from-docs
