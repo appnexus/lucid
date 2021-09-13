@@ -1,14 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`HamburgerMenuIcon [common] example testing should match snapshot(s) for Primary 1`] = `
-<HamburgerMenuIcon
-  aspectRatio="xMidYMid meet"
-  color="primary"
-  isClickable={false}
-  isDisabled={false}
-  onClick={[Function]}
-  onSelect={[Function]}
-  size={16}
+<svg
+  class="lucid-Icon lucid-Icon-color-primary lucid-HamburgerMenuIcon"
+  height="16"
+  preserveAspectRatio="xMidYMid meet"
   viewBox="0 0 16 16"
-/>
+  width="16"
+>
+  <path
+    d="M.5 8h15M.5 13.5h15M.5 2.5h15"
+  />
+</svg>
 `;

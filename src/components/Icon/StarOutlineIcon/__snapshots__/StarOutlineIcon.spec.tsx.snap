@@ -1,14 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`StarOutlineIcon [common] example testing should match snapshot(s) for Primary 1`] = `
-<StarOutlineIcon
-  aspectRatio="xMidYMid meet"
-  color="primary"
-  isClickable={false}
-  isDisabled={false}
-  onClick={[Function]}
-  onSelect={[Function]}
-  size={16}
+<svg
+  class="lucid-Icon lucid-Icon-color-primary lucid-StarOutlineIcon"
+  height="16"
+  preserveAspectRatio="xMidYMid meet"
   viewBox="0 0 16 16"
-/>
+  width="16"
+>
+  <path
+    d="M8 .75l2.318 4.696 5.182.753-3.75 3.655.885 5.162L8 12.579l-4.635 2.437.885-5.162L.5 6.199l5.182-.753z"
+  />
+</svg>
 `;

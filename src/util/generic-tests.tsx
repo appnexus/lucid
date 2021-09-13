@@ -2,11 +2,14 @@ import sinon from 'sinon';
 import { parse } from 'path';
 import React from 'react';
 import PropTypes from 'prop-types';
-import { mount, shallow } from 'enzyme';
+import { mount, shallow, render } from 'enzyme';
 import assert from 'assert';
-import _, { each, keys, omit } from 'lodash';
+import _, { each, omit } from 'lodash';
 import glob from 'glob';
 import * as lucid from '../index';
+import { addons, mockChannel } from '@storybook/addons';
+
+addons.setChannel(mockChannel());
 
 // Common tests for all our components
 export function common(
@@ -162,11 +165,15 @@ export function common(
 
 				each(omit(lib, ['default']), (Story, name) => {
 					it(`should match snapshot(s) for ${name}`, () => {
-						expect(
-							shallow(<Story />, {
+						let result;
+						try {
+							result = render(<Story {...Story.args} />, {
 								disableLifecycleMethods: true,
-							})
-						).toMatchSnapshot();
+							});
+						} catch (err) {
+							result = err.message;
+						}
+						expect(result).toMatchSnapshot();
 					});
 				});
 			});

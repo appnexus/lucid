@@ -1,14 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`FourSquaresIcon [common] example testing should match snapshot(s) for Primary 1`] = `
-<FourSquaresIcon
-  aspectRatio="xMidYMid meet"
-  color="primary"
-  isClickable={false}
-  isDisabled={false}
-  onClick={[Function]}
-  onSelect={[Function]}
-  size={16}
+<svg
+  class="lucid-Icon lucid-Icon-color-primary lucid-FourSquaresIcon"
+  height="16"
+  preserveAspectRatio="xMidYMid meet"
   viewBox="0 0 16 16"
-/>
+  width="16"
+>
+  <path
+    d="M.5.5h6v6h-6v-6zm0 15h6v-6h-6v6zm9 0h6v-6h-6v6zm0-15v6h6v-6h-6z"
+  />
+</svg>
 `;

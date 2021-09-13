@@ -1,14 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`HomeIcon [common] example testing should match snapshot(s) for Primary 1`] = `
-<HomeIcon
-  aspectRatio="xMidYMid meet"
-  color="primary"
-  isClickable={false}
-  isDisabled={false}
-  onClick={[Function]}
-  onSelect={[Function]}
-  size={16}
+<svg
+  class="lucid-Icon lucid-Icon-color-primary lucid-HomeIcon"
+  height="16"
+  preserveAspectRatio="xMidYMid meet"
   viewBox="0 0 16 16"
-/>
+  width="16"
+>
+  <path
+    d="M8 .5l-7.5 6v9h5v-7h5v7h5v-9z"
+  />
+</svg>
 `;

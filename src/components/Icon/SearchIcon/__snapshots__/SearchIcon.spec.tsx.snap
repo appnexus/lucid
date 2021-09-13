@@ -1,14 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`SearchIcon [common] example testing should match snapshot(s) for Primary 1`] = `
-<SearchIcon
-  aspectRatio="xMidYMid meet"
-  color="primary"
-  isClickable={false}
-  isDisabled={false}
-  onClick={[Function]}
-  onSelect={[Function]}
-  size={16}
+<svg
+  class="lucid-Icon lucid-Icon-color-primary lucid-SearchIcon"
+  height="16"
+  preserveAspectRatio="xMidYMid meet"
   viewBox="0 0 16 16"
-/>
+  width="16"
+>
+  <circle
+    cx="6"
+    cy="6"
+    r="5.5"
+  />
+  <path
+    d="M15.5 15.5L9.876 9.876"
+  />
+</svg>
 `;

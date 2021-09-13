@@ -1,14 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`DownloadIcon [common] example testing should match snapshot(s) for Primary 1`] = `
-<DownloadIcon
-  aspectRatio="xMidYMid meet"
-  color="primary"
-  isClickable={false}
-  isDisabled={false}
-  onClick={[Function]}
-  onSelect={[Function]}
-  size={16}
+<svg
+  class="lucid-Icon lucid-Icon-color-primary lucid-DownloadIcon"
+  height="16"
+  preserveAspectRatio="xMidYMid meet"
   viewBox="0 0 16 16"
-/>
+  width="16"
+>
+  <path
+    d="M8 0v12m5-5l-5 5-5-5"
+  />
+  <path
+    d="M.5 13.5v2h15v-2"
+  />
+</svg>
 `;

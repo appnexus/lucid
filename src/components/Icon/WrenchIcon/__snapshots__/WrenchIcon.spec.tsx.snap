@@ -1,14 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`WrenchIcon [common] example testing should match snapshot(s) for Primary 1`] = `
-<WrenchIcon
-  aspectRatio="xMidYMid meet"
-  color="primary"
-  isClickable={false}
-  isDisabled={false}
-  onClick={[Function]}
-  onSelect={[Function]}
-  size={16}
+<svg
+  class="lucid-Icon lucid-Icon-color-primary lucid-WrenchIcon"
+  height="16"
+  preserveAspectRatio="xMidYMid meet"
   viewBox="0 0 16 16"
-/>
+  width="16"
+>
+  <path
+    d="M15.18 4.728l-2.576 1.451-1.844-1.075-.01-2.134 2.577-1.451.003-.367c-1.368-.826-3.134-.899-4.611-.029C7.014 2.127 6.203 4.145 6.625 6.01l-5.427 5.427c-.93.93-.93 2.439 0 3.369.93.93 2.439.93 3.369 0l5.422-5.422c1.072.248 2.236.107 3.264-.486 1.471-.85 2.247-2.419 2.247-3.989l-.32-.181z"
+  />
+  <circle
+    cx="2.864"
+    cy="13.144"
+    r=".25"
+  />
+</svg>
 `;

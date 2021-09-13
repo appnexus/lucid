@@ -1,14 +1,28 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`HostedIcon [common] example testing should match snapshot(s) for Primary 1`] = `
-<HostedIcon
-  aspectRatio="xMidYMid meet"
-  color="primary"
-  isClickable={false}
-  isDisabled={false}
-  onClick={[Function]}
-  onSelect={[Function]}
-  size={16}
+<svg
+  class="lucid-Icon lucid-Icon-color-primary lucid-HostedIcon"
+  height="16"
+  preserveAspectRatio="xMidYMid meet"
   viewBox="0 0 16 16"
-/>
+  width="16"
+>
+  <path
+    d="M.5.5h15v5H.5zM8 10.5V15M12 3h1M8.5 3h1"
+  />
+  <circle
+    cx="3"
+    cy="3"
+    r=".25"
+  />
+  <path
+    d="M.5 5.5h15v5H.5zM6.125 14.5h3.75v1h-3.75zM15.5 15H.5M12 8h1M8.5 8h1"
+  />
+  <circle
+    cx="3"
+    cy="8"
+    r=".25"
+  />
+</svg>
 `;

@@ -1,46 +1,148 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Checkbox [common] example testing should match snapshot(s) for Default 1`] = `
-<Checkbox
-  isDisabled={false}
-  isIndeterminate={false}
-  isSelected={false}
-  onSelect={[Function]}
-/>
+<div
+  class="lucid-Checkbox"
+  title="Default"
+>
+  <input
+    class="lucid-Checkbox-native"
+    title="Default"
+    type="checkbox"
+  />
+  <span
+    class="lucid-Checkbox-visualization-glow"
+  />
+  <span
+    class="lucid-Checkbox-visualization-container"
+  />
+  <span
+    class="lucid-Checkbox-visualization-checkmark"
+  >
+    <span
+      class="lucid-Checkbox-visualization-checkmark-stem"
+    />
+    <span
+      class="lucid-Checkbox-visualization-checkmark-kick"
+    />
+  </span>
+</div>
 `;
 
 exports[`Checkbox [common] example testing should match snapshot(s) for DisabledIndeterminate 1`] = `
-<Checkbox
-  isDisabled={false}
-  isIndeterminate={false}
-  isSelected={false}
-  onSelect={[Function]}
-/>
+<div
+  class="lucid-Checkbox lucid-Checkbox-is-disabled lucid-Checkbox-is-selected"
+  title="Disabled Selected"
+>
+  <input
+    class="lucid-Checkbox-native"
+    disabled=""
+    title="Disabled Selected"
+    type="checkbox"
+  />
+  <span
+    class="lucid-Checkbox-visualization-glow"
+  />
+  <span
+    class="lucid-Checkbox-visualization-container"
+  />
+  <span
+    class="lucid-Checkbox-visualization-indeterminate"
+  >
+    <span
+      class="lucid-Checkbox-visualization-indeterminate-line"
+    />
+  </span>
+</div>
 `;
 
 exports[`Checkbox [common] example testing should match snapshot(s) for DisabledSelected 1`] = `
-<Checkbox
-  isDisabled={false}
-  isIndeterminate={false}
-  isSelected={false}
-  onSelect={[Function]}
-/>
+<div
+  class="lucid-Checkbox lucid-Checkbox-is-disabled lucid-Checkbox-is-selected"
+  title="Disabled Selected"
+>
+  <input
+    checked=""
+    class="lucid-Checkbox-native"
+    disabled=""
+    title="Disabled Selected"
+    type="checkbox"
+  />
+  <span
+    class="lucid-Checkbox-visualization-glow"
+  />
+  <span
+    class="lucid-Checkbox-visualization-container"
+  />
+  <span
+    class="lucid-Checkbox-visualization-checkmark"
+  >
+    <span
+      class="lucid-Checkbox-visualization-checkmark-stem"
+    />
+    <span
+      class="lucid-Checkbox-visualization-checkmark-kick"
+    />
+  </span>
+</div>
 `;
 
 exports[`Checkbox [common] example testing should match snapshot(s) for DisabledUnselected 1`] = `
-<Checkbox
-  isDisabled={false}
-  isIndeterminate={false}
-  isSelected={false}
-  onSelect={[Function]}
-/>
+<div
+  class="lucid-Checkbox lucid-Checkbox-is-disabled"
+  title="Disabled Unselected"
+>
+  <input
+    class="lucid-Checkbox-native"
+    disabled=""
+    title="Disabled Unselected"
+    type="checkbox"
+  />
+  <span
+    class="lucid-Checkbox-visualization-glow"
+  />
+  <span
+    class="lucid-Checkbox-visualization-container"
+  />
+  <span
+    class="lucid-Checkbox-visualization-checkmark"
+  >
+    <span
+      class="lucid-Checkbox-visualization-checkmark-stem"
+    />
+    <span
+      class="lucid-Checkbox-visualization-checkmark-kick"
+    />
+  </span>
+</div>
 `;
 
 exports[`Checkbox [common] example testing should match snapshot(s) for Plain 1`] = `
-<Checkbox
-  isDisabled={false}
-  isIndeterminate={false}
-  isSelected={false}
-  onSelect={[Function]}
-/>
+<div
+  class="lucid-Checkbox lucid-Checkbox-is-selected"
+  title="Plain"
+>
+  <input
+    checked=""
+    class="lucid-Checkbox-native"
+    title="Plain"
+    type="checkbox"
+  />
+  <span
+    class="lucid-Checkbox-visualization-glow"
+  />
+  <span
+    class="lucid-Checkbox-visualization-container"
+  />
+  <span
+    class="lucid-Checkbox-visualization-checkmark"
+  >
+    <span
+      class="lucid-Checkbox-visualization-checkmark-stem"
+    />
+    <span
+      class="lucid-Checkbox-visualization-checkmark-kick"
+    />
+  </span>
+</div>
 `;

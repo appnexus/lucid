@@ -1,14 +1,26 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`HelpIcon [common] example testing should match snapshot(s) for Primary 1`] = `
-<HelpIcon
-  aspectRatio="xMidYMid meet"
-  color="primary"
-  isClickable={false}
-  isDisabled={false}
-  onClick={[Function]}
-  onSelect={[Function]}
-  size={16}
+<svg
+  class="lucid-Icon lucid-Icon-color-primary lucid-HelpIcon"
+  height="16"
+  preserveAspectRatio="xMidYMid meet"
   viewBox="0 0 16 16"
-/>
+  width="16"
+>
+  <path
+    d="M5.5 6.138C5.5 4.681 6.533 3.5 7.99 3.5s2.51 1.135 2.51 2.592c0 .696-.398 1.323-1.259 1.885-.806.525-1.251.861-1.251 1.536V10"
+  />
+  <circle
+    class="lucid-HelpIcon-period"
+    cx="7.99"
+    cy="12.001"
+    r=".293"
+  />
+  <circle
+    cx="8"
+    cy="8"
+    r="7.5"
+  />
+</svg>
 `;

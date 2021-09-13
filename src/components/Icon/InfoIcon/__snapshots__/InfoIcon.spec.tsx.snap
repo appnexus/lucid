@@ -1,14 +1,28 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`InfoIcon [common] example testing should match snapshot(s) for Primary 1`] = `
-<InfoIcon
-  aspectRatio="xMidYMid meet"
-  color="primary"
-  isClickable={false}
-  isDisabled={false}
-  onClick={[Function]}
-  onSelect={[Function]}
-  size={16}
+<svg
+  class="lucid-Icon lucid-Icon-color-primary lucid-InfoIcon"
+  height="16"
+  preserveAspectRatio="xMidYMid meet"
   viewBox="0 0 16 16"
-/>
+  width="16"
+>
+  <circle
+    class="lucid-InfoIcon-background"
+    cx="8"
+    cy="8"
+    r="7.5"
+  />
+  <path
+    class="lucid-InfoIcon-i"
+    d="M7.99 12.5v-6"
+  />
+  <circle
+    class="lucid-InfoIcon-i"
+    cx="7.99"
+    cy="4"
+    r=".293"
+  />
+</svg>
 `;

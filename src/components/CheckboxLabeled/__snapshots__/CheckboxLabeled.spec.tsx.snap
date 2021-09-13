@@ -1,88 +1,351 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`CheckboxLabeled [common] example testing should match snapshot(s) for Default 1`] = `
-<CheckboxLabeled
-  isDisabled={false}
-  isIndeterminate={false}
-  isSelected={false}
-  onSelect={[Function]}
-/>
+<label
+  class="lucid-CheckboxLabeled"
+>
+  <div
+    class="lucid-Checkbox lucid-CheckboxLabeled-Checkbox"
+    title="Default"
+  >
+    <input
+      class="lucid-Checkbox-native"
+      title="Default"
+      type="checkbox"
+    />
+    <span
+      class="lucid-Checkbox-visualization-glow"
+    />
+    <span
+      class="lucid-Checkbox-visualization-container"
+    />
+    <span
+      class="lucid-Checkbox-visualization-checkmark"
+    >
+      <span
+        class="lucid-Checkbox-visualization-checkmark-stem"
+      />
+      <span
+        class="lucid-Checkbox-visualization-checkmark-kick"
+      />
+    </span>
+  </div>
+  <div
+    class="lucid-CheckboxLabeled-label"
+  >
+    Default
+  </div>
+</label>
 `;
 
 exports[`CheckboxLabeled [common] example testing should match snapshot(s) for Disabled 1`] = `
-<CheckboxLabeled
-  isDisabled={false}
-  isIndeterminate={false}
-  isSelected={false}
-  onSelect={[Function]}
-/>
+<label
+  class="lucid-CheckboxLabeled lucid-CheckboxLabeled-is-disabled"
+>
+  <div
+    class="lucid-Checkbox lucid-Checkbox-is-disabled lucid-CheckboxLabeled-Checkbox"
+    title="Disabled"
+  >
+    <input
+      class="lucid-Checkbox-native"
+      disabled=""
+      title="Disabled"
+      type="checkbox"
+    />
+    <span
+      class="lucid-Checkbox-visualization-glow"
+    />
+    <span
+      class="lucid-Checkbox-visualization-container"
+    />
+    <span
+      class="lucid-Checkbox-visualization-checkmark"
+    >
+      <span
+        class="lucid-Checkbox-visualization-checkmark-stem"
+      />
+      <span
+        class="lucid-Checkbox-visualization-checkmark-kick"
+      />
+    </span>
+  </div>
+  <div
+    class="lucid-CheckboxLabeled-label"
+  >
+    Disabled
+  </div>
+</label>
 `;
 
 exports[`CheckboxLabeled [common] example testing should match snapshot(s) for DisabledSelected 1`] = `
-<CheckboxLabeled
-  isDisabled={false}
-  isIndeterminate={false}
-  isSelected={false}
-  onSelect={[Function]}
-/>
+<label
+  class="lucid-CheckboxLabeled lucid-CheckboxLabeled-is-disabled lucid-CheckboxLabeled-is-selected"
+>
+  <div
+    class="lucid-Checkbox lucid-Checkbox-is-disabled lucid-Checkbox-is-selected lucid-CheckboxLabeled-Checkbox"
+    title="Disabled Selected"
+  >
+    <input
+      checked=""
+      class="lucid-Checkbox-native"
+      disabled=""
+      title="Disabled Selected"
+      type="checkbox"
+    />
+    <span
+      class="lucid-Checkbox-visualization-glow"
+    />
+    <span
+      class="lucid-Checkbox-visualization-container"
+    />
+    <span
+      class="lucid-Checkbox-visualization-checkmark"
+    >
+      <span
+        class="lucid-Checkbox-visualization-checkmark-stem"
+      />
+      <span
+        class="lucid-Checkbox-visualization-checkmark-kick"
+      />
+    </span>
+  </div>
+  <div
+    class="lucid-CheckboxLabeled-label"
+  >
+    Disabled Selected
+  </div>
+</label>
 `;
 
 exports[`CheckboxLabeled [common] example testing should match snapshot(s) for HTMLElement 1`] = `
-<CheckboxLabeled
-  isDisabled={false}
-  isIndeterminate={false}
-  isSelected={false}
-  onSelect={[Function]}
-/>
+<label
+  class="lucid-CheckboxLabeled"
+>
+  <div
+    class="lucid-Checkbox lucid-CheckboxLabeled-Checkbox"
+    title="HTML element"
+  >
+    <input
+      class="lucid-Checkbox-native"
+      title="HTML element"
+      type="checkbox"
+    />
+    <span
+      class="lucid-Checkbox-visualization-glow"
+    />
+    <span
+      class="lucid-Checkbox-visualization-container"
+    />
+    <span
+      class="lucid-Checkbox-visualization-checkmark"
+    >
+      <span
+        class="lucid-Checkbox-visualization-checkmark-stem"
+      />
+      <span
+        class="lucid-Checkbox-visualization-checkmark-kick"
+      />
+    </span>
+  </div>
+  <div
+    class="lucid-CheckboxLabeled-label"
+  >
+    <span>
+      HTML element
+    </span>
+  </div>
+</label>
 `;
 
 exports[`CheckboxLabeled [common] example testing should match snapshot(s) for HTMLElementInAnArray 1`] = `
-<CheckboxLabeled
-  isDisabled={false}
-  isIndeterminate={false}
-  isSelected={false}
-  onSelect={[Function]}
-/>
+<label
+  class="lucid-CheckboxLabeled"
+>
+  <div
+    class="lucid-Checkbox lucid-CheckboxLabeled-Checkbox"
+    title="HTML element in an array"
+  >
+    <input
+      class="lucid-Checkbox-native"
+      title="HTML element in an array"
+      type="checkbox"
+    />
+    <span
+      class="lucid-Checkbox-visualization-glow"
+    />
+    <span
+      class="lucid-Checkbox-visualization-container"
+    />
+    <span
+      class="lucid-Checkbox-visualization-checkmark"
+    >
+      <span
+        class="lucid-Checkbox-visualization-checkmark-stem"
+      />
+      <span
+        class="lucid-Checkbox-visualization-checkmark-kick"
+      />
+    </span>
+  </div>
+  <div
+    class="lucid-CheckboxLabeled-label"
+  >
+    <span>
+      HTML element in an array
+    </span>
+  </div>
+</label>
 `;
 
 exports[`CheckboxLabeled [common] example testing should match snapshot(s) for LabelAsChild 1`] = `
-<CheckboxLabeled
-  isDisabled={false}
-  isIndeterminate={false}
-  isSelected={false}
-  onSelect={[Function]}
+<label
+  class="lucid-CheckboxLabeled"
 >
-  <CheckboxLabeled.Label>
+  <div
+    class="lucid-Checkbox lucid-CheckboxLabeled-Checkbox"
+  >
+    <input
+      class="lucid-Checkbox-native"
+      type="checkbox"
+    />
+    <span
+      class="lucid-Checkbox-visualization-glow"
+    />
+    <span
+      class="lucid-Checkbox-visualization-container"
+    />
+    <span
+      class="lucid-Checkbox-visualization-checkmark"
+    >
+      <span
+        class="lucid-Checkbox-visualization-checkmark-stem"
+      />
+      <span
+        class="lucid-Checkbox-visualization-checkmark-kick"
+      />
+    </span>
+  </div>
+  <div
+    class="lucid-CheckboxLabeled-label"
+  >
     <span>
       HTML element as Child
     </span>
-  </CheckboxLabeled.Label>
-</CheckboxLabeled>
+  </div>
+</label>
 `;
 
 exports[`CheckboxLabeled [common] example testing should match snapshot(s) for LabelAsProp 1`] = `
-<CheckboxLabeled
-  isDisabled={false}
-  isIndeterminate={false}
-  isSelected={false}
-  onSelect={[Function]}
-/>
+<label
+  class="lucid-CheckboxLabeled"
+>
+  <div
+    class="lucid-Checkbox lucid-CheckboxLabeled-Checkbox"
+    title="Label as prop"
+  >
+    <input
+      class="lucid-Checkbox-native"
+      title="Label as prop"
+      type="checkbox"
+    />
+    <span
+      class="lucid-Checkbox-visualization-glow"
+    />
+    <span
+      class="lucid-Checkbox-visualization-container"
+    />
+    <span
+      class="lucid-Checkbox-visualization-checkmark"
+    >
+      <span
+        class="lucid-Checkbox-visualization-checkmark-stem"
+      />
+      <span
+        class="lucid-Checkbox-visualization-checkmark-kick"
+      />
+    </span>
+  </div>
+  <div
+    class="lucid-CheckboxLabeled-label"
+  >
+    Label as prop
+  </div>
+</label>
 `;
 
 exports[`CheckboxLabeled [common] example testing should match snapshot(s) for Selected 1`] = `
-<CheckboxLabeled
-  isDisabled={false}
-  isIndeterminate={false}
-  isSelected={false}
-  onSelect={[Function]}
-/>
+<label
+  class="lucid-CheckboxLabeled lucid-CheckboxLabeled-is-selected"
+>
+  <div
+    class="lucid-Checkbox lucid-Checkbox-is-selected lucid-CheckboxLabeled-Checkbox"
+    title="Selected"
+  >
+    <input
+      checked=""
+      class="lucid-Checkbox-native"
+      title="Selected"
+      type="checkbox"
+    />
+    <span
+      class="lucid-Checkbox-visualization-glow"
+    />
+    <span
+      class="lucid-Checkbox-visualization-container"
+    />
+    <span
+      class="lucid-Checkbox-visualization-checkmark"
+    >
+      <span
+        class="lucid-Checkbox-visualization-checkmark-stem"
+      />
+      <span
+        class="lucid-Checkbox-visualization-checkmark-kick"
+      />
+    </span>
+  </div>
+  <div
+    class="lucid-CheckboxLabeled-label"
+  >
+    Selected
+  </div>
+</label>
 `;
 
 exports[`CheckboxLabeled [common] example testing should match snapshot(s) for TextInAnArray 1`] = `
-<CheckboxLabeled
-  isDisabled={false}
-  isIndeterminate={false}
-  isSelected={false}
-  onSelect={[Function]}
-/>
+<label
+  class="lucid-CheckboxLabeled"
+>
+  <div
+    class="lucid-Checkbox lucid-CheckboxLabeled-Checkbox"
+    title="Text in an array"
+  >
+    <input
+      class="lucid-Checkbox-native"
+      title="Text in an array"
+      type="checkbox"
+    />
+    <span
+      class="lucid-Checkbox-visualization-glow"
+    />
+    <span
+      class="lucid-Checkbox-visualization-container"
+    />
+    <span
+      class="lucid-Checkbox-visualization-checkmark"
+    >
+      <span
+        class="lucid-Checkbox-visualization-checkmark-stem"
+      />
+      <span
+        class="lucid-Checkbox-visualization-checkmark-kick"
+      />
+    </span>
+  </div>
+  <div
+    class="lucid-CheckboxLabeled-label"
+  >
+    Text in an array
+  </div>
+</label>
 `;
