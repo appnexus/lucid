@@ -201,14 +201,22 @@ exports[`SuccessLightIcon [common] example testing should match snapshot(s) for 
 `;
 
 exports[`SuccessLightIcon [common] example testing should match snapshot(s) for Primary 1`] = `
-<SuccessLightIcon
-  aspectRatio="xMidYMid meet"
-  color="primary"
-  isClickable={false}
-  isDisabled={false}
-  onClick={[Function]}
-  onSelect={[Function]}
-  size={16}
+<svg
+  class="lucid-Icon lucid-Icon-color-primary lucid-SuccessLightIcon"
+  height="16"
+  preserveAspectRatio="xMidYMid meet"
   viewBox="0 0 16 16"
-/>
+  width="16"
+>
+  <circle
+    class="lucid-SuccessLightIcon-background"
+    cx="8"
+    cy="8"
+    r="7.5"
+  />
+  <path
+    class="lucid-SuccessLightIcon-check"
+    d="M4.5 8L7 10.5 11.5 6"
+  />
+</svg>
 `;

@@ -1,14 +1,24 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`DeleteIcon [common] example testing should match snapshot(s) for Primary 1`] = `
-<DeleteIcon
-  aspectRatio="xMidYMid meet"
-  color="primary"
-  isClickable={false}
-  isDisabled={false}
-  onClick={[Function]}
-  onSelect={[Function]}
-  size={16}
+<svg
+  class="lucid-Icon lucid-Icon-color-primary lucid-DeleteIcon"
+  height="16"
+  preserveAspectRatio="xMidYMid meet"
   viewBox="0 0 16 16"
-/>
+  width="16"
+>
+  <path
+    d="M1.5 3h13"
+  />
+  <path
+    d="M2.5 3L3 15.5h10L13.5 3"
+  />
+  <path
+    d="M6 6.503V12.5m4-5.997V12.5"
+  />
+  <path
+    d="M5.5 3l1-2.5h3l1 2.5"
+  />
+</svg>
 `;

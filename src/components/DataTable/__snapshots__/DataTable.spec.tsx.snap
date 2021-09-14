@@ -15445,76 +15445,4035 @@ exports[`DataTable [common] example testing should match snapshot(s) for 15.trun
 `;
 
 exports[`DataTable [common] example testing should match snapshot(s) for ColumnGroups 1`] = `
-<DataTable
-  emptyCellText="--"
-  fixedColumnCount={0}
-  hasFixedHeader={false}
-  isActionable={false}
-  isSelectable={false}
-  minRows={10}
-  onRowClick={[Function]}
-  onSelect={[Function]}
-  onSelectAll={[Function]}
-  onSort={[Function]}
-/>
+<div
+  class="lucid-OverlayWrapper lucid-EmptyStateWrapper"
+>
+  <div
+    class="lucid-ScrollTable lucid-DataTable"
+  >
+    <table
+      class="lucid-Table lucid-Table-density-extended lucid-Table-has-light-header"
+    >
+      <thead
+        class="lucid-Table-Thead"
+      >
+        <tr
+          class="lucid-Table-Tr"
+        >
+          <th
+            class="lucid-Table-Th lucid-Table-is-first-row lucid-Table-is-last-row lucid-Table-is-first-col lucid-Table-align-left"
+            rowspan="2"
+          >
+            <div
+              class="lucid-Table-Th-inner"
+            >
+              <div
+                class="lucid-Table-Th-inner-content"
+              >
+                ID
+              </div>
+            </div>
+          </th>
+          <th
+            class="lucid-Table-Th lucid-Table-is-first-row lucid-Table-is-first-single lucid-Table-align-center"
+            colspan="2"
+            rowspan="1"
+          >
+            <div
+              class="lucid-Table-Th-inner"
+            >
+              <div
+                class="lucid-Table-Th-inner-content"
+              >
+                Name
+              </div>
+            </div>
+          </th>
+          <th
+            class="lucid-Table-Th lucid-Table-is-first-row lucid-Table-is-last-row lucid-Table-align-left"
+            rowspan="2"
+          >
+            <div
+              class="lucid-Table-Th-inner"
+            >
+              <div
+                class="lucid-Table-Th-inner-content"
+              >
+                E-Mail
+              </div>
+            </div>
+          </th>
+          <th
+            class="lucid-Table-Th lucid-Table-is-first-row lucid-Table-is-last-row lucid-Table-align-left lucid-Table-has-border-left"
+            rowspan="2"
+            style="width:100px"
+          >
+            <div
+              class="lucid-Table-Th-inner"
+            >
+              <div
+                class="lucid-Table-Th-inner-content"
+              >
+                Occupation
+              </div>
+            </div>
+          </th>
+          <th
+            class="lucid-Table-Th lucid-Table-is-first-row lucid-Table-is-last-row lucid-Table-align-right lucid-Table-has-border-left"
+            rowspan="2"
+            style="width:100px"
+          >
+            <div
+              class="lucid-Table-Th-inner"
+            >
+              <div
+                class="lucid-Table-Th-inner-content"
+              >
+                Salary
+              </div>
+            </div>
+          </th>
+          <th
+            class="lucid-Table-Th lucid-Table-is-first-row lucid-Table-is-last-row lucid-Table-is-last-col lucid-Table-align-center lucid-Table-has-border-left"
+            rowspan="2"
+            style="width:100px"
+          >
+            <div
+              class="lucid-Table-Th-inner"
+            >
+              <div
+                class="lucid-Table-Th-inner-content"
+              >
+                Status
+              </div>
+            </div>
+          </th>
+        </tr>
+        <tr
+          class="lucid-Table-Tr"
+        >
+          <th
+            class="lucid-Table-Th lucid-Table-is-last-row lucid-Table-is-first-single lucid-Table-align-left lucid-Table-is-sortable lucid-Table-has-border-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            <div
+              class="lucid-Table-Th-inner"
+            >
+              <div
+                class="lucid-Table-Th-inner-content"
+              >
+                First
+              </div>
+              <div
+                class="lucid-Table-Th-inner-caret"
+              >
+                <svg
+                  class="lucid-Icon lucid-Icon-color-primary lucid-ArrowIcon lucid-ArrowIcon-is-up lucid-Table-sort-icon"
+                  height="10"
+                  preserveAspectRatio="xMidYMid meet"
+                  viewBox="0 0 16 16"
+                  width="10"
+                >
+                  <path
+                    d="M0 8h15.5m-6-6l6 6-6 6"
+                  />
+                </svg>
+              </div>
+            </div>
+          </th>
+          <th
+            class="lucid-Table-Th lucid-Table-is-last-row lucid-Table-align-left lucid-Table-is-sortable lucid-Table-has-border-right"
+            rowspan="1"
+            style="width:100px"
+          >
+            <div
+              class="lucid-Table-Th-inner"
+            >
+              <div
+                class="lucid-Table-Th-inner-content"
+              >
+                Last
+              </div>
+              <div
+                class="lucid-Table-Th-inner-caret"
+              >
+                <svg
+                  class="lucid-Icon lucid-Icon-color-primary lucid-ArrowIcon lucid-ArrowIcon-is-up lucid-Table-sort-icon"
+                  height="10"
+                  preserveAspectRatio="xMidYMid meet"
+                  viewBox="0 0 16 16"
+                  width="10"
+                >
+                  <path
+                    d="M0 8h15.5m-6-6l6 6-6 6"
+                  />
+                </svg>
+              </div>
+            </div>
+          </th>
+        </tr>
+      </thead>
+      <tbody
+        class="lucid-Table-Tbody"
+      >
+        <tr
+          class="lucid-Table-Tr"
+        >
+          <td
+            class="lucid-Table-Td lucid-Table-is-first-row lucid-Table-is-first-col lucid-Table-is-first-single lucid-Table-align-left"
+            rowspan="1"
+          >
+            1
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-is-first-row lucid-Table-align-left lucid-Table-has-border-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            Isaac
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-is-first-row lucid-Table-align-left lucid-Table-has-border-right"
+            rowspan="1"
+            style="width:100px"
+          >
+            Newton
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-is-first-row lucid-Table-align-left"
+            rowspan="1"
+          >
+            inewton@example.com
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-is-first-row lucid-Table-align-left lucid-Table-has-border-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            Physicist
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-is-first-row lucid-Table-align-right lucid-Table-has-border-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            $100.01
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-is-first-row lucid-Table-is-last-col lucid-Table-align-center lucid-Table-has-border-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            <svg
+              class="lucid-Icon lucid-Icon-color-primary lucid-SuccessIcon"
+              height="16"
+              preserveAspectRatio="xMidYMid meet"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <circle
+                class="lucid-SuccessIcon-background"
+                cx="8"
+                cy="8"
+                r="7.5"
+              />
+              <path
+                class="lucid-SuccessIcon-check"
+                d="M4.5 8L7 10.5 11.5 6"
+              />
+            </svg>
+          </td>
+        </tr>
+        <tr
+          class="lucid-Table-Tr"
+        >
+          <td
+            class="lucid-Table-Td lucid-Table-is-first-col lucid-Table-is-first-single lucid-Table-align-left"
+            rowspan="1"
+          >
+            2
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left lucid-Table-has-border-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            Albert
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left lucid-Table-has-border-right"
+            rowspan="1"
+            style="width:100px"
+          >
+            Einstein
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left"
+            rowspan="1"
+          >
+            aeinstein@example.com
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left lucid-Table-has-border-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            Physicist
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-right lucid-Table-has-border-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            $100.02
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-is-last-col lucid-Table-align-center lucid-Table-has-border-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            <svg
+              class="lucid-Icon lucid-Icon-color-primary lucid-SuccessIcon"
+              height="16"
+              preserveAspectRatio="xMidYMid meet"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <circle
+                class="lucid-SuccessIcon-background"
+                cx="8"
+                cy="8"
+                r="7.5"
+              />
+              <path
+                class="lucid-SuccessIcon-check"
+                d="M4.5 8L7 10.5 11.5 6"
+              />
+            </svg>
+          </td>
+        </tr>
+        <tr
+          class="lucid-Table-Tr"
+        >
+          <td
+            class="lucid-Table-Td lucid-Table-is-first-col lucid-Table-is-first-single lucid-Table-align-left"
+            rowspan="1"
+          >
+            3
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left lucid-Table-has-border-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            Leonardo
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left lucid-Table-has-border-right"
+            rowspan="1"
+            style="width:100px"
+          >
+            da Vinci
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left"
+            rowspan="1"
+          >
+            ldvinci@example.com
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left lucid-Table-has-border-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            Engineer
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-right lucid-Table-has-border-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            $100.03
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-is-last-col lucid-Table-align-center lucid-Table-has-border-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            <svg
+              class="lucid-Icon lucid-Icon-color-primary lucid-SuccessIcon"
+              height="16"
+              preserveAspectRatio="xMidYMid meet"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <circle
+                class="lucid-SuccessIcon-background"
+                cx="8"
+                cy="8"
+                r="7.5"
+              />
+              <path
+                class="lucid-SuccessIcon-check"
+                d="M4.5 8L7 10.5 11.5 6"
+              />
+            </svg>
+          </td>
+        </tr>
+        <tr
+          class="lucid-Table-Tr"
+        >
+          <td
+            class="lucid-Table-Td lucid-Table-is-first-col lucid-Table-is-first-single lucid-Table-align-left"
+            rowspan="1"
+          >
+            4
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left lucid-Table-has-border-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            Aristotle
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left lucid-Table-has-border-right"
+            rowspan="1"
+            style="width:100px"
+          >
+            --
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left"
+            rowspan="1"
+          >
+            aristotle@example.com
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left lucid-Table-has-border-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            Tutor
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-right lucid-Table-has-border-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            $100.04
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-is-last-col lucid-Table-align-center lucid-Table-has-border-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            <svg
+              class="lucid-Icon lucid-Icon-color-primary lucid-SuccessIcon"
+              height="16"
+              preserveAspectRatio="xMidYMid meet"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <circle
+                class="lucid-SuccessIcon-background"
+                cx="8"
+                cy="8"
+                r="7.5"
+              />
+              <path
+                class="lucid-SuccessIcon-check"
+                d="M4.5 8L7 10.5 11.5 6"
+              />
+            </svg>
+          </td>
+        </tr>
+        <tr
+          class="lucid-Table-Tr"
+        >
+          <td
+            class="lucid-Table-Td lucid-Table-is-first-col lucid-Table-is-first-single lucid-Table-align-left"
+            rowspan="1"
+          >
+            5
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left lucid-Table-has-border-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            Galileo
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left lucid-Table-has-border-right"
+            rowspan="1"
+            style="width:100px"
+          >
+            --
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left"
+            rowspan="1"
+          >
+            ggalilei@example.com
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left lucid-Table-has-border-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            Physicist
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-right lucid-Table-has-border-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            $100.05
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-is-last-col lucid-Table-align-center lucid-Table-has-border-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            <svg
+              class="lucid-Icon lucid-Icon-color-primary lucid-SuccessIcon"
+              height="16"
+              preserveAspectRatio="xMidYMid meet"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <circle
+                class="lucid-SuccessIcon-background"
+                cx="8"
+                cy="8"
+                r="7.5"
+              />
+              <path
+                class="lucid-SuccessIcon-check"
+                d="M4.5 8L7 10.5 11.5 6"
+              />
+            </svg>
+          </td>
+        </tr>
+        <tr
+          class="lucid-Table-Tr"
+        >
+          <td
+            class="lucid-Table-Td lucid-Table-is-first-col lucid-Table-is-first-single lucid-Table-align-left"
+            rowspan="1"
+          >
+            6
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left lucid-Table-has-border-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            Charles
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left lucid-Table-has-border-right"
+            rowspan="1"
+            style="width:100px"
+          >
+            Darwin
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left"
+            rowspan="1"
+          >
+            cdarwin@example.com
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left lucid-Table-has-border-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            Biologist
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-right lucid-Table-has-border-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            $100.06
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-is-last-col lucid-Table-align-center lucid-Table-has-border-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            <svg
+              class="lucid-Icon lucid-Icon-color-primary lucid-SuccessIcon"
+              height="16"
+              preserveAspectRatio="xMidYMid meet"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <circle
+                class="lucid-SuccessIcon-background"
+                cx="8"
+                cy="8"
+                r="7.5"
+              />
+              <path
+                class="lucid-SuccessIcon-check"
+                d="M4.5 8L7 10.5 11.5 6"
+              />
+            </svg>
+          </td>
+        </tr>
+        <tr
+          class="lucid-Table-Tr"
+        >
+          <td
+            class="lucid-Table-Td lucid-Table-is-first-col lucid-Table-is-first-single lucid-Table-align-left"
+            rowspan="1"
+          >
+            7
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left lucid-Table-has-border-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            Alexander
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left lucid-Table-has-border-right"
+            rowspan="1"
+            style="width:100px"
+          >
+            Macedon
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left"
+            rowspan="1"
+          >
+            amacedon@example.com
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left lucid-Table-has-border-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            Head of State
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-right lucid-Table-has-border-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            $100.07
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-is-last-col lucid-Table-align-center lucid-Table-has-border-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            <svg
+              class="lucid-Icon lucid-Icon-color-primary lucid-SuccessIcon"
+              height="16"
+              preserveAspectRatio="xMidYMid meet"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <circle
+                class="lucid-SuccessIcon-background"
+                cx="8"
+                cy="8"
+                r="7.5"
+              />
+              <path
+                class="lucid-SuccessIcon-check"
+                d="M4.5 8L7 10.5 11.5 6"
+              />
+            </svg>
+          </td>
+        </tr>
+        <tr
+          class="lucid-Table-Tr"
+        >
+          <td
+            class="lucid-Table-Td lucid-Table-is-first-col lucid-Table-is-first-single lucid-Table-align-left"
+            rowspan="1"
+          >
+            8
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left lucid-Table-has-border-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            Plato
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left lucid-Table-has-border-right"
+            rowspan="1"
+            style="width:100px"
+          >
+            Plato
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left"
+            rowspan="1"
+          >
+            plato@example.com
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left lucid-Table-has-border-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            Philosopher
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-right lucid-Table-has-border-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            $100.08
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-is-last-col lucid-Table-align-center lucid-Table-has-border-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            <svg
+              class="lucid-Icon lucid-Icon-color-primary lucid-SuccessIcon"
+              height="16"
+              preserveAspectRatio="xMidYMid meet"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <circle
+                class="lucid-SuccessIcon-background"
+                cx="8"
+                cy="8"
+                r="7.5"
+              />
+              <path
+                class="lucid-SuccessIcon-check"
+                d="M4.5 8L7 10.5 11.5 6"
+              />
+            </svg>
+          </td>
+        </tr>
+        <tr
+          class="lucid-Table-Tr"
+        >
+          <td
+            class="lucid-Table-Td lucid-Table-is-first-col lucid-Table-is-first-single lucid-Table-align-left"
+            rowspan="1"
+          >
+            9
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left lucid-Table-has-border-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            Mahatma
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left lucid-Table-has-border-right"
+            rowspan="1"
+            style="width:100px"
+          >
+            Gandhi
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left"
+            rowspan="1"
+          >
+            mgandhi@example.com
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left lucid-Table-has-border-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            Politician
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-right lucid-Table-has-border-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            $100.09
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-is-last-col lucid-Table-align-center lucid-Table-has-border-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            <svg
+              class="lucid-Icon lucid-Icon-color-primary lucid-SuccessIcon"
+              height="16"
+              preserveAspectRatio="xMidYMid meet"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <circle
+                class="lucid-SuccessIcon-background"
+                cx="8"
+                cy="8"
+                r="7.5"
+              />
+              <path
+                class="lucid-SuccessIcon-check"
+                d="M4.5 8L7 10.5 11.5 6"
+              />
+            </svg>
+          </td>
+        </tr>
+        <tr
+          class="lucid-Table-Tr"
+        >
+          <td
+            class="lucid-Table-Td lucid-Table-is-last-row lucid-Table-is-first-col lucid-Table-is-first-single lucid-Table-align-left"
+            rowspan="1"
+          >
+            10
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-is-last-row lucid-Table-align-left lucid-Table-has-border-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            William
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-is-last-row lucid-Table-align-left lucid-Table-has-border-right"
+            rowspan="1"
+            style="width:100px"
+          >
+            Shakespeare
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-is-last-row lucid-Table-align-left"
+            rowspan="1"
+          >
+            wshakespear@example.com
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-is-last-row lucid-Table-align-left lucid-Table-has-border-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            Playwright
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-is-last-row lucid-Table-align-right lucid-Table-has-border-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            $100.10
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-is-last-row lucid-Table-is-last-col lucid-Table-align-center lucid-Table-has-border-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            <svg
+              class="lucid-Icon lucid-Icon-color-primary lucid-SuccessIcon"
+              height="16"
+              preserveAspectRatio="xMidYMid meet"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <circle
+                class="lucid-SuccessIcon-background"
+                cx="8"
+                cy="8"
+                r="7.5"
+              />
+              <path
+                class="lucid-SuccessIcon-check"
+                d="M4.5 8L7 10.5 11.5 6"
+              />
+            </svg>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
 `;
 
 exports[`DataTable [common] example testing should match snapshot(s) for Default 1`] = `
-<DataTable
-  emptyCellText="--"
-  fixedColumnCount={0}
-  hasFixedHeader={false}
-  isActionable={false}
-  isSelectable={false}
-  minRows={10}
-  onRowClick={[Function]}
-  onSelect={[Function]}
-  onSelectAll={[Function]}
-  onSort={[Function]}
-/>
+<div
+  class="lucid-OverlayWrapper lucid-EmptyStateWrapper"
+>
+  <div
+    class="lucid-ScrollTable lucid-DataTable"
+  >
+    <table
+      class="lucid-Table lucid-Table-density-extended lucid-Table-has-light-header"
+    >
+      <thead
+        class="lucid-Table-Thead"
+      >
+        <tr
+          class="lucid-Table-Tr"
+        >
+          <th
+            class="lucid-Table-Th lucid-Table-is-first-row lucid-Table-is-last-row lucid-Table-is-first-col lucid-Table-align-left"
+          >
+            <div
+              class="lucid-Table-Th-inner"
+            >
+              <div
+                class="lucid-Table-Th-inner-content"
+              >
+                ID
+              </div>
+            </div>
+          </th>
+          <th
+            class="lucid-Table-Th lucid-Table-is-first-row lucid-Table-is-last-row lucid-Table-align-left"
+            style="width:100px"
+          >
+            <div
+              class="lucid-Table-Th-inner"
+            >
+              <div
+                class="lucid-Table-Th-inner-content"
+              >
+                First
+              </div>
+            </div>
+          </th>
+          <th
+            class="lucid-Table-Th lucid-Table-is-first-row lucid-Table-is-last-row lucid-Table-align-left"
+            style="width:100px"
+          >
+            <div
+              class="lucid-Table-Th-inner"
+            >
+              <div
+                class="lucid-Table-Th-inner-content"
+              >
+                Last
+              </div>
+            </div>
+          </th>
+          <th
+            class="lucid-Table-Th lucid-Table-is-first-row lucid-Table-is-last-row lucid-Table-align-left"
+          >
+            <div
+              class="lucid-Table-Th-inner"
+            >
+              <div
+                class="lucid-Table-Th-inner-content"
+              >
+                E-Mail
+              </div>
+            </div>
+          </th>
+          <th
+            class="lucid-Table-Th lucid-Table-is-first-row lucid-Table-is-last-row lucid-Table-align-left"
+            style="width:100px"
+          >
+            <div
+              class="lucid-Table-Th-inner"
+            >
+              <div
+                class="lucid-Table-Th-inner-content"
+              >
+                Occupation
+              </div>
+            </div>
+          </th>
+          <th
+            class="lucid-Table-Th lucid-Table-is-first-row lucid-Table-is-last-row lucid-Table-align-right"
+            style="width:100px"
+          >
+            <div
+              class="lucid-Table-Th-inner"
+            >
+              <div
+                class="lucid-Table-Th-inner-content"
+              >
+                Salary
+              </div>
+            </div>
+          </th>
+          <th
+            class="lucid-Table-Th lucid-Table-is-first-row lucid-Table-is-last-row lucid-Table-is-last-col lucid-Table-align-center"
+            style="width:100px"
+          >
+            <div
+              class="lucid-Table-Th-inner"
+            >
+              <div
+                class="lucid-Table-Th-inner-content"
+              >
+                Status
+              </div>
+            </div>
+          </th>
+        </tr>
+      </thead>
+      <tbody
+        class="lucid-Table-Tbody"
+      >
+        <tr
+          class="lucid-Table-Tr"
+        >
+          <td
+            class="lucid-Table-Td lucid-Table-is-first-row lucid-Table-is-first-col lucid-Table-is-first-single lucid-Table-align-left"
+            rowspan="1"
+          >
+            1
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-is-first-row lucid-Table-align-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            Isaac
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-is-first-row lucid-Table-align-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            Newton
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-is-first-row lucid-Table-align-left"
+            rowspan="1"
+          >
+            inewton@example.com
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-is-first-row lucid-Table-align-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            Physicist
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-is-first-row lucid-Table-align-right"
+            rowspan="1"
+            style="width:100px"
+          >
+            $100.01
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-is-first-row lucid-Table-is-last-col lucid-Table-align-center"
+            rowspan="1"
+            style="width:100px"
+          >
+            <svg
+              class="lucid-Icon lucid-Icon-color-primary lucid-SuccessIcon"
+              height="16"
+              preserveAspectRatio="xMidYMid meet"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <circle
+                class="lucid-SuccessIcon-background"
+                cx="8"
+                cy="8"
+                r="7.5"
+              />
+              <path
+                class="lucid-SuccessIcon-check"
+                d="M4.5 8L7 10.5 11.5 6"
+              />
+            </svg>
+          </td>
+        </tr>
+        <tr
+          class="lucid-Table-Tr"
+        >
+          <td
+            class="lucid-Table-Td lucid-Table-is-first-col lucid-Table-is-first-single lucid-Table-align-left"
+            rowspan="1"
+          >
+            2
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            Albert
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            Einstein
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left"
+            rowspan="1"
+          >
+            aeinstein@example.com
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            Physicist
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-right"
+            rowspan="1"
+            style="width:100px"
+          >
+            $100.02
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-is-last-col lucid-Table-align-center"
+            rowspan="1"
+            style="width:100px"
+          >
+            <svg
+              class="lucid-Icon lucid-Icon-color-primary lucid-SuccessIcon"
+              height="16"
+              preserveAspectRatio="xMidYMid meet"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <circle
+                class="lucid-SuccessIcon-background"
+                cx="8"
+                cy="8"
+                r="7.5"
+              />
+              <path
+                class="lucid-SuccessIcon-check"
+                d="M4.5 8L7 10.5 11.5 6"
+              />
+            </svg>
+          </td>
+        </tr>
+        <tr
+          class="lucid-Table-Tr"
+        >
+          <td
+            class="lucid-Table-Td lucid-Table-is-first-col lucid-Table-is-first-single lucid-Table-align-left"
+            rowspan="1"
+          >
+            3
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            Leonardo
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            da Vinci
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left"
+            rowspan="1"
+          >
+            ldvinci@example.com
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            Engineer
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-right"
+            rowspan="1"
+            style="width:100px"
+          >
+            $100.03
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-is-last-col lucid-Table-align-center"
+            rowspan="1"
+            style="width:100px"
+          >
+            <svg
+              class="lucid-Icon lucid-Icon-color-primary lucid-SuccessIcon"
+              height="16"
+              preserveAspectRatio="xMidYMid meet"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <circle
+                class="lucid-SuccessIcon-background"
+                cx="8"
+                cy="8"
+                r="7.5"
+              />
+              <path
+                class="lucid-SuccessIcon-check"
+                d="M4.5 8L7 10.5 11.5 6"
+              />
+            </svg>
+          </td>
+        </tr>
+        <tr
+          class="lucid-Table-Tr"
+        >
+          <td
+            class="lucid-Table-Td lucid-Table-is-first-col lucid-Table-is-first-single lucid-Table-align-left"
+            rowspan="1"
+          >
+            4
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            Aristotle
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            --
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left"
+            rowspan="1"
+          >
+            aristotle@example.com
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            Tutor
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-right"
+            rowspan="1"
+            style="width:100px"
+          >
+            $100.04
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-is-last-col lucid-Table-align-center"
+            rowspan="1"
+            style="width:100px"
+          >
+            <svg
+              class="lucid-Icon lucid-Icon-color-primary lucid-SuccessIcon"
+              height="16"
+              preserveAspectRatio="xMidYMid meet"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <circle
+                class="lucid-SuccessIcon-background"
+                cx="8"
+                cy="8"
+                r="7.5"
+              />
+              <path
+                class="lucid-SuccessIcon-check"
+                d="M4.5 8L7 10.5 11.5 6"
+              />
+            </svg>
+          </td>
+        </tr>
+        <tr
+          class="lucid-Table-Tr"
+        >
+          <td
+            class="lucid-Table-Td lucid-Table-is-first-col lucid-Table-is-first-single lucid-Table-align-left"
+            rowspan="1"
+          >
+            5
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            Galileo
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            --
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left"
+            rowspan="1"
+          >
+            ggalilei@example.com
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            Physicist
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-right"
+            rowspan="1"
+            style="width:100px"
+          >
+            $100.05
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-is-last-col lucid-Table-align-center"
+            rowspan="1"
+            style="width:100px"
+          >
+            <svg
+              class="lucid-Icon lucid-Icon-color-primary lucid-SuccessIcon"
+              height="16"
+              preserveAspectRatio="xMidYMid meet"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <circle
+                class="lucid-SuccessIcon-background"
+                cx="8"
+                cy="8"
+                r="7.5"
+              />
+              <path
+                class="lucid-SuccessIcon-check"
+                d="M4.5 8L7 10.5 11.5 6"
+              />
+            </svg>
+          </td>
+        </tr>
+        <tr
+          class="lucid-Table-Tr"
+        >
+          <td
+            class="lucid-Table-Td lucid-Table-is-first-col lucid-Table-is-first-single lucid-Table-align-left"
+            rowspan="1"
+          >
+            6
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            Charles
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            Darwin
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left"
+            rowspan="1"
+          >
+            cdarwin@example.com
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            Biologist
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-right"
+            rowspan="1"
+            style="width:100px"
+          >
+            $100.06
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-is-last-col lucid-Table-align-center"
+            rowspan="1"
+            style="width:100px"
+          >
+            <svg
+              class="lucid-Icon lucid-Icon-color-primary lucid-SuccessIcon"
+              height="16"
+              preserveAspectRatio="xMidYMid meet"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <circle
+                class="lucid-SuccessIcon-background"
+                cx="8"
+                cy="8"
+                r="7.5"
+              />
+              <path
+                class="lucid-SuccessIcon-check"
+                d="M4.5 8L7 10.5 11.5 6"
+              />
+            </svg>
+          </td>
+        </tr>
+        <tr
+          class="lucid-Table-Tr"
+        >
+          <td
+            class="lucid-Table-Td lucid-Table-is-first-col lucid-Table-is-first-single lucid-Table-align-left"
+            rowspan="1"
+          >
+            7
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            Alexander
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            Macedon
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left"
+            rowspan="1"
+          >
+            amacedon@example.com
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            Head of State
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-right"
+            rowspan="1"
+            style="width:100px"
+          >
+            $100.07
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-is-last-col lucid-Table-align-center"
+            rowspan="1"
+            style="width:100px"
+          >
+            <svg
+              class="lucid-Icon lucid-Icon-color-primary lucid-SuccessIcon"
+              height="16"
+              preserveAspectRatio="xMidYMid meet"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <circle
+                class="lucid-SuccessIcon-background"
+                cx="8"
+                cy="8"
+                r="7.5"
+              />
+              <path
+                class="lucid-SuccessIcon-check"
+                d="M4.5 8L7 10.5 11.5 6"
+              />
+            </svg>
+          </td>
+        </tr>
+        <tr
+          class="lucid-Table-Tr"
+        >
+          <td
+            class="lucid-Table-Td lucid-Table-is-first-col lucid-Table-is-first-single lucid-Table-align-left"
+            rowspan="1"
+          >
+            8
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            Plato
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            Plato
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left"
+            rowspan="1"
+          >
+            plato@example.com
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            Philosopher
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-right"
+            rowspan="1"
+            style="width:100px"
+          >
+            $100.08
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-is-last-col lucid-Table-align-center"
+            rowspan="1"
+            style="width:100px"
+          >
+            <svg
+              class="lucid-Icon lucid-Icon-color-primary lucid-SuccessIcon"
+              height="16"
+              preserveAspectRatio="xMidYMid meet"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <circle
+                class="lucid-SuccessIcon-background"
+                cx="8"
+                cy="8"
+                r="7.5"
+              />
+              <path
+                class="lucid-SuccessIcon-check"
+                d="M4.5 8L7 10.5 11.5 6"
+              />
+            </svg>
+          </td>
+        </tr>
+        <tr
+          class="lucid-Table-Tr"
+        >
+          <td
+            class="lucid-Table-Td lucid-Table-is-first-col lucid-Table-is-first-single lucid-Table-align-left"
+            rowspan="1"
+          >
+            9
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            Mahatma
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            Gandhi
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left"
+            rowspan="1"
+          >
+            mgandhi@example.com
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            Politician
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-right"
+            rowspan="1"
+            style="width:100px"
+          >
+            $100.09
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-is-last-col lucid-Table-align-center"
+            rowspan="1"
+            style="width:100px"
+          >
+            <svg
+              class="lucid-Icon lucid-Icon-color-primary lucid-SuccessIcon"
+              height="16"
+              preserveAspectRatio="xMidYMid meet"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <circle
+                class="lucid-SuccessIcon-background"
+                cx="8"
+                cy="8"
+                r="7.5"
+              />
+              <path
+                class="lucid-SuccessIcon-check"
+                d="M4.5 8L7 10.5 11.5 6"
+              />
+            </svg>
+          </td>
+        </tr>
+        <tr
+          class="lucid-Table-Tr"
+        >
+          <td
+            class="lucid-Table-Td lucid-Table-is-last-row lucid-Table-is-first-col lucid-Table-is-first-single lucid-Table-align-left"
+            rowspan="1"
+          >
+            10
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-is-last-row lucid-Table-align-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            William
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-is-last-row lucid-Table-align-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            Shakespeare
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-is-last-row lucid-Table-align-left"
+            rowspan="1"
+          >
+            wshakespear@example.com
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-is-last-row lucid-Table-align-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            Playwright
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-is-last-row lucid-Table-align-right"
+            rowspan="1"
+            style="width:100px"
+          >
+            $100.10
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-is-last-row lucid-Table-is-last-col lucid-Table-align-center"
+            rowspan="1"
+            style="width:100px"
+          >
+            <svg
+              class="lucid-Icon lucid-Icon-color-primary lucid-SuccessIcon"
+              height="16"
+              preserveAspectRatio="xMidYMid meet"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <circle
+                class="lucid-SuccessIcon-background"
+                cx="8"
+                cy="8"
+                r="7.5"
+              />
+              <path
+                class="lucid-SuccessIcon-check"
+                d="M4.5 8L7 10.5 11.5 6"
+              />
+            </svg>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
 `;
 
 exports[`DataTable [common] example testing should match snapshot(s) for DisabledRows 1`] = `
-<DataTable
-  emptyCellText="--"
-  fixedColumnCount={0}
-  hasFixedHeader={false}
-  isActionable={false}
-  isSelectable={false}
-  minRows={10}
-  onRowClick={[Function]}
-  onSelect={[Function]}
-  onSelectAll={[Function]}
-  onSort={[Function]}
-/>
+<div
+  class="lucid-OverlayWrapper lucid-EmptyStateWrapper"
+>
+  <div
+    class="lucid-ScrollTable lucid-DataTable"
+  >
+    <table
+      class="lucid-Table lucid-Table-density-extended lucid-Table-has-light-header"
+    >
+      <thead
+        class="lucid-Table-Thead"
+      >
+        <tr
+          class="lucid-Table-Tr"
+        >
+          <th
+            class="lucid-Table-Th lucid-Table-is-first-row lucid-Table-is-last-row lucid-Table-is-first-col lucid-Table-align-left"
+          >
+            <div
+              class="lucid-Table-Th-inner"
+            >
+              <div
+                class="lucid-Table-Th-inner-content"
+              >
+                ID
+              </div>
+            </div>
+          </th>
+          <th
+            class="lucid-Table-Th lucid-Table-is-first-row lucid-Table-is-last-row lucid-Table-align-left"
+            style="width:100px"
+          >
+            <div
+              class="lucid-Table-Th-inner"
+            >
+              <div
+                class="lucid-Table-Th-inner-content"
+              >
+                First
+              </div>
+            </div>
+          </th>
+          <th
+            class="lucid-Table-Th lucid-Table-is-first-row lucid-Table-is-last-row lucid-Table-align-left"
+            style="width:100px"
+          >
+            <div
+              class="lucid-Table-Th-inner"
+            >
+              <div
+                class="lucid-Table-Th-inner-content"
+              >
+                Last
+              </div>
+            </div>
+          </th>
+          <th
+            class="lucid-Table-Th lucid-Table-is-first-row lucid-Table-is-last-row lucid-Table-align-left"
+          >
+            <div
+              class="lucid-Table-Th-inner"
+            >
+              <div
+                class="lucid-Table-Th-inner-content"
+              >
+                E-Mail
+              </div>
+            </div>
+          </th>
+          <th
+            class="lucid-Table-Th lucid-Table-is-first-row lucid-Table-is-last-row lucid-Table-align-left"
+            style="width:100px"
+          >
+            <div
+              class="lucid-Table-Th-inner"
+            >
+              <div
+                class="lucid-Table-Th-inner-content"
+              >
+                Occupation
+              </div>
+            </div>
+          </th>
+          <th
+            class="lucid-Table-Th lucid-Table-is-first-row lucid-Table-is-last-row lucid-Table-align-right"
+            style="width:100px"
+          >
+            <div
+              class="lucid-Table-Th-inner"
+            >
+              <div
+                class="lucid-Table-Th-inner-content"
+              >
+                Salary
+              </div>
+            </div>
+          </th>
+          <th
+            class="lucid-Table-Th lucid-Table-is-first-row lucid-Table-is-last-row lucid-Table-is-last-col lucid-Table-align-center"
+            style="width:100px"
+          >
+            <div
+              class="lucid-Table-Th-inner"
+            >
+              <div
+                class="lucid-Table-Th-inner-content"
+              >
+                Status
+              </div>
+            </div>
+          </th>
+        </tr>
+      </thead>
+      <tbody
+        class="lucid-Table-Tbody"
+      >
+        <tr
+          class="lucid-Table-Tr"
+        >
+          <td
+            class="lucid-Table-Td lucid-Table-is-first-row lucid-Table-is-first-col lucid-Table-is-first-single lucid-Table-align-left"
+            rowspan="1"
+          >
+            1
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-is-first-row lucid-Table-align-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            Isaac
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-is-first-row lucid-Table-align-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            Newton
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-is-first-row lucid-Table-align-left"
+            rowspan="1"
+          >
+            inewton@example.com
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-is-first-row lucid-Table-align-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            Physicist
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-is-first-row lucid-Table-align-right"
+            rowspan="1"
+            style="width:100px"
+          >
+            $100.01
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-is-first-row lucid-Table-is-last-col lucid-Table-align-center"
+            rowspan="1"
+            style="width:100px"
+          >
+            <svg
+              class="lucid-Icon lucid-Icon-color-primary lucid-SuccessIcon"
+              height="16"
+              preserveAspectRatio="xMidYMid meet"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <circle
+                class="lucid-SuccessIcon-background"
+                cx="8"
+                cy="8"
+                r="7.5"
+              />
+              <path
+                class="lucid-SuccessIcon-check"
+                d="M4.5 8L7 10.5 11.5 6"
+              />
+            </svg>
+          </td>
+        </tr>
+        <tr
+          class="lucid-Table-Tr lucid-Table-is-disabled"
+        >
+          <td
+            class="lucid-Table-Td lucid-Table-is-first-col lucid-Table-is-first-single lucid-Table-align-left"
+            rowspan="1"
+          >
+            2
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            Albert
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            Einstein
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left"
+            rowspan="1"
+          >
+            aeinstein@example.com
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            Physicist
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-right"
+            rowspan="1"
+            style="width:100px"
+          >
+            $100.02
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-is-last-col lucid-Table-align-center"
+            rowspan="1"
+            style="width:100px"
+          >
+            <svg
+              class="lucid-Icon lucid-Icon-color-primary lucid-SuccessIcon"
+              height="16"
+              preserveAspectRatio="xMidYMid meet"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <circle
+                class="lucid-SuccessIcon-background"
+                cx="8"
+                cy="8"
+                r="7.5"
+              />
+              <path
+                class="lucid-SuccessIcon-check"
+                d="M4.5 8L7 10.5 11.5 6"
+              />
+            </svg>
+          </td>
+        </tr>
+        <tr
+          class="lucid-Table-Tr"
+        >
+          <td
+            class="lucid-Table-Td lucid-Table-is-first-col lucid-Table-is-first-single lucid-Table-align-left"
+            rowspan="1"
+          >
+            3
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            Leonardo
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            da Vinci
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left"
+            rowspan="1"
+          >
+            ldvinci@example.com
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            Engineer
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-right"
+            rowspan="1"
+            style="width:100px"
+          >
+            $100.03
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-is-last-col lucid-Table-align-center"
+            rowspan="1"
+            style="width:100px"
+          >
+            <svg
+              class="lucid-Icon lucid-Icon-color-primary lucid-SuccessIcon"
+              height="16"
+              preserveAspectRatio="xMidYMid meet"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <circle
+                class="lucid-SuccessIcon-background"
+                cx="8"
+                cy="8"
+                r="7.5"
+              />
+              <path
+                class="lucid-SuccessIcon-check"
+                d="M4.5 8L7 10.5 11.5 6"
+              />
+            </svg>
+          </td>
+        </tr>
+        <tr
+          class="lucid-Table-Tr lucid-Table-is-disabled"
+        >
+          <td
+            class="lucid-Table-Td lucid-Table-is-first-col lucid-Table-is-first-single lucid-Table-align-left"
+            rowspan="1"
+          >
+            4
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            Aristotle
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            --
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left"
+            rowspan="1"
+          >
+            aristotle@example.com
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            Tutor
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-right"
+            rowspan="1"
+            style="width:100px"
+          >
+            $100.04
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-is-last-col lucid-Table-align-center"
+            rowspan="1"
+            style="width:100px"
+          >
+            <svg
+              class="lucid-Icon lucid-Icon-color-primary lucid-SuccessIcon"
+              height="16"
+              preserveAspectRatio="xMidYMid meet"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <circle
+                class="lucid-SuccessIcon-background"
+                cx="8"
+                cy="8"
+                r="7.5"
+              />
+              <path
+                class="lucid-SuccessIcon-check"
+                d="M4.5 8L7 10.5 11.5 6"
+              />
+            </svg>
+          </td>
+        </tr>
+        <tr
+          class="lucid-Table-Tr"
+        >
+          <td
+            class="lucid-Table-Td lucid-Table-is-first-col lucid-Table-is-first-single lucid-Table-align-left"
+            rowspan="1"
+          >
+            5
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            Galileo
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            --
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left"
+            rowspan="1"
+          >
+            ggalilei@example.com
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            Physicist
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-right"
+            rowspan="1"
+            style="width:100px"
+          >
+            $100.05
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-is-last-col lucid-Table-align-center"
+            rowspan="1"
+            style="width:100px"
+          >
+            <svg
+              class="lucid-Icon lucid-Icon-color-primary lucid-SuccessIcon"
+              height="16"
+              preserveAspectRatio="xMidYMid meet"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <circle
+                class="lucid-SuccessIcon-background"
+                cx="8"
+                cy="8"
+                r="7.5"
+              />
+              <path
+                class="lucid-SuccessIcon-check"
+                d="M4.5 8L7 10.5 11.5 6"
+              />
+            </svg>
+          </td>
+        </tr>
+        <tr
+          class="lucid-Table-Tr lucid-Table-is-disabled"
+        >
+          <td
+            class="lucid-Table-Td lucid-Table-is-first-col lucid-Table-is-first-single lucid-Table-align-left"
+            rowspan="1"
+          >
+            6
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            Charles
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            Darwin
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left"
+            rowspan="1"
+          >
+            cdarwin@example.com
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            Biologist
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-right"
+            rowspan="1"
+            style="width:100px"
+          >
+            $100.06
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-is-last-col lucid-Table-align-center"
+            rowspan="1"
+            style="width:100px"
+          >
+            <svg
+              class="lucid-Icon lucid-Icon-color-primary lucid-SuccessIcon"
+              height="16"
+              preserveAspectRatio="xMidYMid meet"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <circle
+                class="lucid-SuccessIcon-background"
+                cx="8"
+                cy="8"
+                r="7.5"
+              />
+              <path
+                class="lucid-SuccessIcon-check"
+                d="M4.5 8L7 10.5 11.5 6"
+              />
+            </svg>
+          </td>
+        </tr>
+        <tr
+          class="lucid-Table-Tr"
+        >
+          <td
+            class="lucid-Table-Td lucid-Table-is-first-col lucid-Table-is-first-single lucid-Table-align-left"
+            rowspan="1"
+          >
+            7
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            Alexander
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            Macedon
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left"
+            rowspan="1"
+          >
+            amacedon@example.com
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            Head of State
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-right"
+            rowspan="1"
+            style="width:100px"
+          >
+            $100.07
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-is-last-col lucid-Table-align-center"
+            rowspan="1"
+            style="width:100px"
+          >
+            <svg
+              class="lucid-Icon lucid-Icon-color-primary lucid-SuccessIcon"
+              height="16"
+              preserveAspectRatio="xMidYMid meet"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <circle
+                class="lucid-SuccessIcon-background"
+                cx="8"
+                cy="8"
+                r="7.5"
+              />
+              <path
+                class="lucid-SuccessIcon-check"
+                d="M4.5 8L7 10.5 11.5 6"
+              />
+            </svg>
+          </td>
+        </tr>
+        <tr
+          class="lucid-Table-Tr lucid-Table-is-disabled"
+        >
+          <td
+            class="lucid-Table-Td lucid-Table-is-first-col lucid-Table-is-first-single lucid-Table-align-left"
+            rowspan="1"
+          >
+            8
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            Plato
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            Plato
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left"
+            rowspan="1"
+          >
+            plato@example.com
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            Philosopher
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-right"
+            rowspan="1"
+            style="width:100px"
+          >
+            $100.08
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-is-last-col lucid-Table-align-center"
+            rowspan="1"
+            style="width:100px"
+          >
+            <svg
+              class="lucid-Icon lucid-Icon-color-primary lucid-SuccessIcon"
+              height="16"
+              preserveAspectRatio="xMidYMid meet"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <circle
+                class="lucid-SuccessIcon-background"
+                cx="8"
+                cy="8"
+                r="7.5"
+              />
+              <path
+                class="lucid-SuccessIcon-check"
+                d="M4.5 8L7 10.5 11.5 6"
+              />
+            </svg>
+          </td>
+        </tr>
+        <tr
+          class="lucid-Table-Tr"
+        >
+          <td
+            class="lucid-Table-Td lucid-Table-is-first-col lucid-Table-is-first-single lucid-Table-align-left"
+            rowspan="1"
+          >
+            9
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            Mahatma
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            Gandhi
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left"
+            rowspan="1"
+          >
+            mgandhi@example.com
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            Politician
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-right"
+            rowspan="1"
+            style="width:100px"
+          >
+            $100.09
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-is-last-col lucid-Table-align-center"
+            rowspan="1"
+            style="width:100px"
+          >
+            <svg
+              class="lucid-Icon lucid-Icon-color-primary lucid-SuccessIcon"
+              height="16"
+              preserveAspectRatio="xMidYMid meet"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <circle
+                class="lucid-SuccessIcon-background"
+                cx="8"
+                cy="8"
+                r="7.5"
+              />
+              <path
+                class="lucid-SuccessIcon-check"
+                d="M4.5 8L7 10.5 11.5 6"
+              />
+            </svg>
+          </td>
+        </tr>
+        <tr
+          class="lucid-Table-Tr lucid-Table-is-disabled"
+        >
+          <td
+            class="lucid-Table-Td lucid-Table-is-last-row lucid-Table-is-first-col lucid-Table-is-first-single lucid-Table-align-left"
+            rowspan="1"
+          >
+            10
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-is-last-row lucid-Table-align-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            William
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-is-last-row lucid-Table-align-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            Shakespeare
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-is-last-row lucid-Table-align-left"
+            rowspan="1"
+          >
+            wshakespear@example.com
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-is-last-row lucid-Table-align-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            Playwright
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-is-last-row lucid-Table-align-right"
+            rowspan="1"
+            style="width:100px"
+          >
+            $100.10
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-is-last-row lucid-Table-is-last-col lucid-Table-align-center"
+            rowspan="1"
+            style="width:100px"
+          >
+            <svg
+              class="lucid-Icon lucid-Icon-color-primary lucid-SuccessIcon"
+              height="16"
+              preserveAspectRatio="xMidYMid meet"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <circle
+                class="lucid-SuccessIcon-background"
+                cx="8"
+                cy="8"
+                r="7.5"
+              />
+              <path
+                class="lucid-SuccessIcon-check"
+                d="M4.5 8L7 10.5 11.5 6"
+              />
+            </svg>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
 `;
 
 exports[`DataTable [common] example testing should match snapshot(s) for Empty 1`] = `
-<DataTable
-  emptyCellText="--"
-  fixedColumnCount={0}
-  hasFixedHeader={false}
-  isActionable={false}
-  isSelectable={false}
-  minRows={10}
-  onRowClick={[Function]}
-  onSelect={[Function]}
-  onSelectAll={[Function]}
-  onSort={[Function]}
-/>
+<div
+  class="lucid-OverlayWrapper lucid-EmptyStateWrapper"
+>
+  <div
+    class="lucid-ScrollTable lucid-DataTable lucid-DataTable-full-width"
+  >
+    <table
+      class="lucid-Table lucid-Table-density-extended lucid-Table-has-light-header"
+      style="width:100%"
+    >
+      <thead
+        class="lucid-Table-Thead"
+      >
+        <tr
+          class="lucid-Table-Tr"
+        >
+          <th
+            class="lucid-Table-Th lucid-Table-is-first-row lucid-Table-is-last-row lucid-Table-is-first-col lucid-Table-align-left"
+          >
+            <div
+              class="lucid-Table-Th-inner"
+            >
+              <div
+                class="lucid-Table-Th-inner-content"
+              >
+                ID
+              </div>
+            </div>
+          </th>
+          <th
+            class="lucid-Table-Th lucid-Table-is-first-row lucid-Table-is-last-row lucid-Table-align-left"
+            style="width:100px"
+          >
+            <div
+              class="lucid-Table-Th-inner"
+            >
+              <div
+                class="lucid-Table-Th-inner-content"
+              >
+                First
+              </div>
+            </div>
+          </th>
+          <th
+            class="lucid-Table-Th lucid-Table-is-first-row lucid-Table-is-last-row lucid-Table-align-left"
+            style="width:100px"
+          >
+            <div
+              class="lucid-Table-Th-inner"
+            >
+              <div
+                class="lucid-Table-Th-inner-content"
+              >
+                Last
+              </div>
+            </div>
+          </th>
+          <th
+            class="lucid-Table-Th lucid-Table-is-first-row lucid-Table-is-last-row lucid-Table-align-center"
+          >
+            <div
+              class="lucid-Table-Th-inner"
+            >
+              <div
+                class="lucid-Table-Th-inner-content"
+              >
+                E-Mail
+              </div>
+            </div>
+          </th>
+          <th
+            class="lucid-Table-Th lucid-Table-is-first-row lucid-Table-is-last-row lucid-Table-is-last-col lucid-Table-align-right"
+            style="width:100px"
+          >
+            <div
+              class="lucid-Table-Th-inner"
+            >
+              <div
+                class="lucid-Table-Th-inner-content"
+              >
+                Occupation
+              </div>
+            </div>
+          </th>
+        </tr>
+      </thead>
+      <tbody
+        class="lucid-Table-Tbody"
+      >
+        <tr
+          class="lucid-Table-Tr lucid-Table-is-disabled"
+          style="height:32px"
+        >
+          <td
+            class="lucid-Table-Td lucid-Table-is-first-row lucid-Table-is-first-col lucid-Table-is-first-single lucid-Table-align-left"
+            rowspan="1"
+          />
+          <td
+            class="lucid-Table-Td lucid-Table-is-first-row lucid-Table-align-left"
+            rowspan="1"
+            style="width:100px"
+          />
+          <td
+            class="lucid-Table-Td lucid-Table-is-first-row lucid-Table-align-left"
+            rowspan="1"
+            style="width:100px"
+          />
+          <td
+            class="lucid-Table-Td lucid-Table-is-first-row lucid-Table-align-center"
+            rowspan="1"
+          />
+          <td
+            class="lucid-Table-Td lucid-Table-is-first-row lucid-Table-is-last-col lucid-Table-align-right"
+            rowspan="1"
+            style="width:100px"
+          />
+        </tr>
+        <tr
+          class="lucid-Table-Tr lucid-Table-is-disabled"
+          style="height:32px"
+        >
+          <td
+            class="lucid-Table-Td lucid-Table-is-first-col lucid-Table-is-first-single lucid-Table-align-left"
+            rowspan="1"
+          />
+          <td
+            class="lucid-Table-Td lucid-Table-align-left"
+            rowspan="1"
+            style="width:100px"
+          />
+          <td
+            class="lucid-Table-Td lucid-Table-align-left"
+            rowspan="1"
+            style="width:100px"
+          />
+          <td
+            class="lucid-Table-Td lucid-Table-align-center"
+            rowspan="1"
+          />
+          <td
+            class="lucid-Table-Td lucid-Table-is-last-col lucid-Table-align-right"
+            rowspan="1"
+            style="width:100px"
+          />
+        </tr>
+        <tr
+          class="lucid-Table-Tr lucid-Table-is-disabled"
+          style="height:32px"
+        >
+          <td
+            class="lucid-Table-Td lucid-Table-is-first-col lucid-Table-is-first-single lucid-Table-align-left"
+            rowspan="1"
+          />
+          <td
+            class="lucid-Table-Td lucid-Table-align-left"
+            rowspan="1"
+            style="width:100px"
+          />
+          <td
+            class="lucid-Table-Td lucid-Table-align-left"
+            rowspan="1"
+            style="width:100px"
+          />
+          <td
+            class="lucid-Table-Td lucid-Table-align-center"
+            rowspan="1"
+          />
+          <td
+            class="lucid-Table-Td lucid-Table-is-last-col lucid-Table-align-right"
+            rowspan="1"
+            style="width:100px"
+          />
+        </tr>
+        <tr
+          class="lucid-Table-Tr lucid-Table-is-disabled"
+          style="height:32px"
+        >
+          <td
+            class="lucid-Table-Td lucid-Table-is-first-col lucid-Table-is-first-single lucid-Table-align-left"
+            rowspan="1"
+          />
+          <td
+            class="lucid-Table-Td lucid-Table-align-left"
+            rowspan="1"
+            style="width:100px"
+          />
+          <td
+            class="lucid-Table-Td lucid-Table-align-left"
+            rowspan="1"
+            style="width:100px"
+          />
+          <td
+            class="lucid-Table-Td lucid-Table-align-center"
+            rowspan="1"
+          />
+          <td
+            class="lucid-Table-Td lucid-Table-is-last-col lucid-Table-align-right"
+            rowspan="1"
+            style="width:100px"
+          />
+        </tr>
+        <tr
+          class="lucid-Table-Tr lucid-Table-is-disabled"
+          style="height:32px"
+        >
+          <td
+            class="lucid-Table-Td lucid-Table-is-first-col lucid-Table-is-first-single lucid-Table-align-left"
+            rowspan="1"
+          />
+          <td
+            class="lucid-Table-Td lucid-Table-align-left"
+            rowspan="1"
+            style="width:100px"
+          />
+          <td
+            class="lucid-Table-Td lucid-Table-align-left"
+            rowspan="1"
+            style="width:100px"
+          />
+          <td
+            class="lucid-Table-Td lucid-Table-align-center"
+            rowspan="1"
+          />
+          <td
+            class="lucid-Table-Td lucid-Table-is-last-col lucid-Table-align-right"
+            rowspan="1"
+            style="width:100px"
+          />
+        </tr>
+        <tr
+          class="lucid-Table-Tr lucid-Table-is-disabled"
+          style="height:32px"
+        >
+          <td
+            class="lucid-Table-Td lucid-Table-is-first-col lucid-Table-is-first-single lucid-Table-align-left"
+            rowspan="1"
+          />
+          <td
+            class="lucid-Table-Td lucid-Table-align-left"
+            rowspan="1"
+            style="width:100px"
+          />
+          <td
+            class="lucid-Table-Td lucid-Table-align-left"
+            rowspan="1"
+            style="width:100px"
+          />
+          <td
+            class="lucid-Table-Td lucid-Table-align-center"
+            rowspan="1"
+          />
+          <td
+            class="lucid-Table-Td lucid-Table-is-last-col lucid-Table-align-right"
+            rowspan="1"
+            style="width:100px"
+          />
+        </tr>
+        <tr
+          class="lucid-Table-Tr lucid-Table-is-disabled"
+          style="height:32px"
+        >
+          <td
+            class="lucid-Table-Td lucid-Table-is-first-col lucid-Table-is-first-single lucid-Table-align-left"
+            rowspan="1"
+          />
+          <td
+            class="lucid-Table-Td lucid-Table-align-left"
+            rowspan="1"
+            style="width:100px"
+          />
+          <td
+            class="lucid-Table-Td lucid-Table-align-left"
+            rowspan="1"
+            style="width:100px"
+          />
+          <td
+            class="lucid-Table-Td lucid-Table-align-center"
+            rowspan="1"
+          />
+          <td
+            class="lucid-Table-Td lucid-Table-is-last-col lucid-Table-align-right"
+            rowspan="1"
+            style="width:100px"
+          />
+        </tr>
+        <tr
+          class="lucid-Table-Tr lucid-Table-is-disabled"
+          style="height:32px"
+        >
+          <td
+            class="lucid-Table-Td lucid-Table-is-first-col lucid-Table-is-first-single lucid-Table-align-left"
+            rowspan="1"
+          />
+          <td
+            class="lucid-Table-Td lucid-Table-align-left"
+            rowspan="1"
+            style="width:100px"
+          />
+          <td
+            class="lucid-Table-Td lucid-Table-align-left"
+            rowspan="1"
+            style="width:100px"
+          />
+          <td
+            class="lucid-Table-Td lucid-Table-align-center"
+            rowspan="1"
+          />
+          <td
+            class="lucid-Table-Td lucid-Table-is-last-col lucid-Table-align-right"
+            rowspan="1"
+            style="width:100px"
+          />
+        </tr>
+        <tr
+          class="lucid-Table-Tr lucid-Table-is-disabled"
+          style="height:32px"
+        >
+          <td
+            class="lucid-Table-Td lucid-Table-is-first-col lucid-Table-is-first-single lucid-Table-align-left"
+            rowspan="1"
+          />
+          <td
+            class="lucid-Table-Td lucid-Table-align-left"
+            rowspan="1"
+            style="width:100px"
+          />
+          <td
+            class="lucid-Table-Td lucid-Table-align-left"
+            rowspan="1"
+            style="width:100px"
+          />
+          <td
+            class="lucid-Table-Td lucid-Table-align-center"
+            rowspan="1"
+          />
+          <td
+            class="lucid-Table-Td lucid-Table-is-last-col lucid-Table-align-right"
+            rowspan="1"
+            style="width:100px"
+          />
+        </tr>
+        <tr
+          class="lucid-Table-Tr lucid-Table-is-disabled"
+          style="height:32px"
+        >
+          <td
+            class="lucid-Table-Td lucid-Table-is-last-row lucid-Table-is-first-col lucid-Table-is-first-single lucid-Table-align-left"
+            rowspan="1"
+          />
+          <td
+            class="lucid-Table-Td lucid-Table-is-last-row lucid-Table-align-left"
+            rowspan="1"
+            style="width:100px"
+          />
+          <td
+            class="lucid-Table-Td lucid-Table-is-last-row lucid-Table-align-left"
+            rowspan="1"
+            style="width:100px"
+          />
+          <td
+            class="lucid-Table-Td lucid-Table-is-last-row lucid-Table-align-center"
+            rowspan="1"
+          />
+          <td
+            class="lucid-Table-Td lucid-Table-is-last-row lucid-Table-is-last-col lucid-Table-align-right"
+            rowspan="1"
+            style="width:100px"
+          />
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div
+    class="lucid-OverlayWrapper-message-container"
+  >
+    <div
+      class="lucid-EmptyStateWrapper-message-container"
+    >
+      <div
+        class="lucid-EmptyStateWrapper-message-header"
+      />
+      <div
+        class="lucid-EmptyStateWrapper-message-contents"
+      >
+        <header
+          class="lucid-EmptyStateWrapper-message-title"
+        >
+          No items found.
+        </header>
+        <div>
+          Try creating a new object or removing a filter.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 `;
 
 exports[`DataTable [common] example testing should match snapshot(s) for SelectableAndNavigableRows 1`] = `
-<DataTable
-  emptyCellText="--"
-  fixedColumnCount={0}
-  hasFixedHeader={false}
-  isActionable={false}
-  isSelectable={false}
-  minRows={10}
-  onRowClick={[Function]}
-  onSelect={[Function]}
-  onSelectAll={[Function]}
-  onSort={[Function]}
-/>
+<div
+  class="lucid-OverlayWrapper lucid-EmptyStateWrapper"
+>
+  <div
+    class="lucid-ScrollTable lucid-DataTable"
+  >
+    <table
+      class="lucid-Table lucid-Table-density-extended lucid-Table-has-light-header"
+    >
+      <thead
+        class="lucid-Table-Thead"
+      >
+        <tr
+          class="lucid-Table-Tr"
+        >
+          <th
+            class="lucid-Table-Th lucid-Table-is-first-row lucid-Table-is-last-row lucid-Table-is-first-col lucid-Table-align-left"
+            style="width:41px"
+          >
+            <div
+              class="lucid-Table-Th-inner"
+            >
+              <div
+                class="lucid-Table-Th-inner-content"
+              >
+                <div
+                  class="lucid-Checkbox"
+                >
+                  <input
+                    class="lucid-Checkbox-native"
+                    type="checkbox"
+                  />
+                  <span
+                    class="lucid-Checkbox-visualization-glow"
+                  />
+                  <span
+                    class="lucid-Checkbox-visualization-container"
+                  />
+                  <span
+                    class="lucid-Checkbox-visualization-checkmark"
+                  >
+                    <span
+                      class="lucid-Checkbox-visualization-checkmark-stem"
+                    />
+                    <span
+                      class="lucid-Checkbox-visualization-checkmark-kick"
+                    />
+                  </span>
+                </div>
+              </div>
+            </div>
+          </th>
+          <th
+            class="lucid-Table-Th lucid-Table-is-first-row lucid-Table-is-last-row lucid-Table-align-left lucid-Table-has-border-left"
+          >
+            <div
+              class="lucid-Table-Th-inner"
+            >
+              <div
+                class="lucid-Table-Th-inner-content"
+              >
+                ID
+              </div>
+            </div>
+          </th>
+          <th
+            class="lucid-Table-Th lucid-Table-is-first-row lucid-Table-is-last-row lucid-Table-align-left lucid-Table-is-sortable lucid-Table-has-border-left"
+            style="width:100px"
+          >
+            <div
+              class="lucid-Table-Th-inner"
+            >
+              <div
+                class="lucid-Table-Th-inner-content"
+              >
+                First
+              </div>
+              <div
+                class="lucid-Table-Th-inner-caret"
+              >
+                <svg
+                  class="lucid-Icon lucid-Icon-color-primary lucid-ArrowIcon lucid-ArrowIcon-is-up lucid-Table-sort-icon"
+                  height="10"
+                  preserveAspectRatio="xMidYMid meet"
+                  viewBox="0 0 16 16"
+                  width="10"
+                >
+                  <path
+                    d="M0 8h15.5m-6-6l6 6-6 6"
+                  />
+                </svg>
+              </div>
+            </div>
+          </th>
+          <th
+            class="lucid-Table-Th lucid-Table-is-first-row lucid-Table-is-last-row lucid-Table-align-left lucid-Table-is-sortable lucid-Table-has-border-right"
+            style="width:100px"
+          >
+            <div
+              class="lucid-Table-Th-inner"
+            >
+              <div
+                class="lucid-Table-Th-inner-content"
+              >
+                Last
+              </div>
+              <div
+                class="lucid-Table-Th-inner-caret"
+              >
+                <svg
+                  class="lucid-Icon lucid-Icon-color-primary lucid-ArrowIcon lucid-ArrowIcon-is-up lucid-Table-sort-icon"
+                  height="10"
+                  preserveAspectRatio="xMidYMid meet"
+                  viewBox="0 0 16 16"
+                  width="10"
+                >
+                  <path
+                    d="M0 8h15.5m-6-6l6 6-6 6"
+                  />
+                </svg>
+              </div>
+            </div>
+          </th>
+          <th
+            class="lucid-Table-Th lucid-Table-is-first-row lucid-Table-is-last-row lucid-Table-align-left"
+          >
+            <div
+              class="lucid-Table-Th-inner"
+            >
+              <div
+                class="lucid-Table-Th-inner-content"
+              >
+                E-Mail
+              </div>
+            </div>
+          </th>
+          <th
+            class="lucid-Table-Th lucid-Table-is-first-row lucid-Table-is-last-row lucid-Table-align-left lucid-Table-has-border-left"
+            style="width:100px"
+          >
+            <div
+              class="lucid-Table-Th-inner"
+            >
+              <div
+                class="lucid-Table-Th-inner-content"
+              >
+                Occupation
+              </div>
+            </div>
+          </th>
+          <th
+            class="lucid-Table-Th lucid-Table-is-first-row lucid-Table-is-last-row lucid-Table-align-right lucid-Table-has-border-left"
+            style="width:100px"
+          >
+            <div
+              class="lucid-Table-Th-inner"
+            >
+              <div
+                class="lucid-Table-Th-inner-content"
+              >
+                Salary
+              </div>
+            </div>
+          </th>
+          <th
+            class="lucid-Table-Th lucid-Table-is-first-row lucid-Table-is-last-row lucid-Table-is-last-col lucid-Table-align-center lucid-Table-has-border-left"
+            style="width:100px"
+          >
+            <div
+              class="lucid-Table-Th-inner"
+            >
+              <div
+                class="lucid-Table-Th-inner-content"
+              >
+                Status
+              </div>
+            </div>
+          </th>
+        </tr>
+      </thead>
+      <tbody
+        class="lucid-Table-Tbody"
+      >
+        <tr
+          class="lucid-Table-Tr"
+        >
+          <td
+            class="lucid-Table-Td lucid-Table-is-first-row lucid-Table-is-first-col lucid-Table-is-first-single lucid-Table-align-left"
+            rowspan="1"
+            width="41"
+          >
+            <div
+              class="lucid-Checkbox"
+            >
+              <input
+                class="lucid-Checkbox-native"
+                type="checkbox"
+              />
+              <span
+                class="lucid-Checkbox-visualization-glow"
+              />
+              <span
+                class="lucid-Checkbox-visualization-container"
+              />
+              <span
+                class="lucid-Checkbox-visualization-checkmark"
+              >
+                <span
+                  class="lucid-Checkbox-visualization-checkmark-stem"
+                />
+                <span
+                  class="lucid-Checkbox-visualization-checkmark-kick"
+                />
+              </span>
+            </div>
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-is-first-row lucid-Table-align-left lucid-Table-has-border-left"
+            rowspan="1"
+          >
+            1
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-is-first-row lucid-Table-align-left lucid-Table-has-border-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            Isaac
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-is-first-row lucid-Table-align-left lucid-Table-has-border-right"
+            rowspan="1"
+            style="width:100px"
+          >
+            Newton
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-is-first-row lucid-Table-align-left"
+            rowspan="1"
+          >
+            inewton@example.com
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-is-first-row lucid-Table-align-left lucid-Table-has-border-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            Physicist
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-is-first-row lucid-Table-align-right lucid-Table-has-border-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            $100.01
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-is-first-row lucid-Table-is-last-col lucid-Table-align-center lucid-Table-has-border-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            <svg
+              class="lucid-Icon lucid-Icon-color-primary lucid-SuccessIcon"
+              height="16"
+              preserveAspectRatio="xMidYMid meet"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <circle
+                class="lucid-SuccessIcon-background"
+                cx="8"
+                cy="8"
+                r="7.5"
+              />
+              <path
+                class="lucid-SuccessIcon-check"
+                d="M4.5 8L7 10.5 11.5 6"
+              />
+            </svg>
+          </td>
+        </tr>
+        <tr
+          class="lucid-Table-Tr"
+        >
+          <td
+            class="lucid-Table-Td lucid-Table-is-first-col lucid-Table-is-first-single lucid-Table-align-left"
+            rowspan="1"
+            width="41"
+          >
+            <div
+              class="lucid-Checkbox"
+            >
+              <input
+                class="lucid-Checkbox-native"
+                type="checkbox"
+              />
+              <span
+                class="lucid-Checkbox-visualization-glow"
+              />
+              <span
+                class="lucid-Checkbox-visualization-container"
+              />
+              <span
+                class="lucid-Checkbox-visualization-checkmark"
+              >
+                <span
+                  class="lucid-Checkbox-visualization-checkmark-stem"
+                />
+                <span
+                  class="lucid-Checkbox-visualization-checkmark-kick"
+                />
+              </span>
+            </div>
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left lucid-Table-has-border-left"
+            rowspan="1"
+          >
+            2
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left lucid-Table-has-border-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            Albert
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left lucid-Table-has-border-right"
+            rowspan="1"
+            style="width:100px"
+          >
+            Einstein
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left"
+            rowspan="1"
+          >
+            aeinstein@example.com
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left lucid-Table-has-border-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            Physicist
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-right lucid-Table-has-border-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            $100.02
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-is-last-col lucid-Table-align-center lucid-Table-has-border-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            <svg
+              class="lucid-Icon lucid-Icon-color-primary lucid-SuccessIcon"
+              height="16"
+              preserveAspectRatio="xMidYMid meet"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <circle
+                class="lucid-SuccessIcon-background"
+                cx="8"
+                cy="8"
+                r="7.5"
+              />
+              <path
+                class="lucid-SuccessIcon-check"
+                d="M4.5 8L7 10.5 11.5 6"
+              />
+            </svg>
+          </td>
+        </tr>
+        <tr
+          class="lucid-Table-Tr"
+        >
+          <td
+            class="lucid-Table-Td lucid-Table-is-first-col lucid-Table-is-first-single lucid-Table-align-left"
+            rowspan="1"
+            width="41"
+          >
+            <div
+              class="lucid-Checkbox"
+            >
+              <input
+                class="lucid-Checkbox-native"
+                type="checkbox"
+              />
+              <span
+                class="lucid-Checkbox-visualization-glow"
+              />
+              <span
+                class="lucid-Checkbox-visualization-container"
+              />
+              <span
+                class="lucid-Checkbox-visualization-checkmark"
+              >
+                <span
+                  class="lucid-Checkbox-visualization-checkmark-stem"
+                />
+                <span
+                  class="lucid-Checkbox-visualization-checkmark-kick"
+                />
+              </span>
+            </div>
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left lucid-Table-has-border-left"
+            rowspan="1"
+          >
+            3
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left lucid-Table-has-border-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            Leonardo
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left lucid-Table-has-border-right"
+            rowspan="1"
+            style="width:100px"
+          >
+            da Vinci
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left"
+            rowspan="1"
+          >
+            ldvinci@example.com
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left lucid-Table-has-border-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            Engineer
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-right lucid-Table-has-border-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            $100.03
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-is-last-col lucid-Table-align-center lucid-Table-has-border-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            <svg
+              class="lucid-Icon lucid-Icon-color-primary lucid-SuccessIcon"
+              height="16"
+              preserveAspectRatio="xMidYMid meet"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <circle
+                class="lucid-SuccessIcon-background"
+                cx="8"
+                cy="8"
+                r="7.5"
+              />
+              <path
+                class="lucid-SuccessIcon-check"
+                d="M4.5 8L7 10.5 11.5 6"
+              />
+            </svg>
+          </td>
+        </tr>
+        <tr
+          class="lucid-Table-Tr"
+        >
+          <td
+            class="lucid-Table-Td lucid-Table-is-first-col lucid-Table-is-first-single lucid-Table-align-left"
+            rowspan="1"
+            width="41"
+          >
+            <div
+              class="lucid-Checkbox"
+            >
+              <input
+                class="lucid-Checkbox-native"
+                type="checkbox"
+              />
+              <span
+                class="lucid-Checkbox-visualization-glow"
+              />
+              <span
+                class="lucid-Checkbox-visualization-container"
+              />
+              <span
+                class="lucid-Checkbox-visualization-checkmark"
+              >
+                <span
+                  class="lucid-Checkbox-visualization-checkmark-stem"
+                />
+                <span
+                  class="lucid-Checkbox-visualization-checkmark-kick"
+                />
+              </span>
+            </div>
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left lucid-Table-has-border-left"
+            rowspan="1"
+          >
+            4
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left lucid-Table-has-border-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            Aristotle
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left lucid-Table-has-border-right"
+            rowspan="1"
+            style="width:100px"
+          >
+            --
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left"
+            rowspan="1"
+          >
+            aristotle@example.com
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left lucid-Table-has-border-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            Tutor
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-right lucid-Table-has-border-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            $100.04
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-is-last-col lucid-Table-align-center lucid-Table-has-border-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            <svg
+              class="lucid-Icon lucid-Icon-color-primary lucid-SuccessIcon"
+              height="16"
+              preserveAspectRatio="xMidYMid meet"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <circle
+                class="lucid-SuccessIcon-background"
+                cx="8"
+                cy="8"
+                r="7.5"
+              />
+              <path
+                class="lucid-SuccessIcon-check"
+                d="M4.5 8L7 10.5 11.5 6"
+              />
+            </svg>
+          </td>
+        </tr>
+        <tr
+          class="lucid-Table-Tr"
+        >
+          <td
+            class="lucid-Table-Td lucid-Table-is-first-col lucid-Table-is-first-single lucid-Table-align-left"
+            rowspan="1"
+            width="41"
+          >
+            <div
+              class="lucid-Checkbox"
+            >
+              <input
+                class="lucid-Checkbox-native"
+                type="checkbox"
+              />
+              <span
+                class="lucid-Checkbox-visualization-glow"
+              />
+              <span
+                class="lucid-Checkbox-visualization-container"
+              />
+              <span
+                class="lucid-Checkbox-visualization-checkmark"
+              >
+                <span
+                  class="lucid-Checkbox-visualization-checkmark-stem"
+                />
+                <span
+                  class="lucid-Checkbox-visualization-checkmark-kick"
+                />
+              </span>
+            </div>
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left lucid-Table-has-border-left"
+            rowspan="1"
+          >
+            5
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left lucid-Table-has-border-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            Galileo
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left lucid-Table-has-border-right"
+            rowspan="1"
+            style="width:100px"
+          >
+            --
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left"
+            rowspan="1"
+          >
+            ggalilei@example.com
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left lucid-Table-has-border-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            Physicist
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-right lucid-Table-has-border-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            $100.05
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-is-last-col lucid-Table-align-center lucid-Table-has-border-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            <svg
+              class="lucid-Icon lucid-Icon-color-primary lucid-SuccessIcon"
+              height="16"
+              preserveAspectRatio="xMidYMid meet"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <circle
+                class="lucid-SuccessIcon-background"
+                cx="8"
+                cy="8"
+                r="7.5"
+              />
+              <path
+                class="lucid-SuccessIcon-check"
+                d="M4.5 8L7 10.5 11.5 6"
+              />
+            </svg>
+          </td>
+        </tr>
+        <tr
+          class="lucid-Table-Tr"
+        >
+          <td
+            class="lucid-Table-Td lucid-Table-is-first-col lucid-Table-is-first-single lucid-Table-align-left"
+            rowspan="1"
+            width="41"
+          >
+            <div
+              class="lucid-Checkbox"
+            >
+              <input
+                class="lucid-Checkbox-native"
+                type="checkbox"
+              />
+              <span
+                class="lucid-Checkbox-visualization-glow"
+              />
+              <span
+                class="lucid-Checkbox-visualization-container"
+              />
+              <span
+                class="lucid-Checkbox-visualization-checkmark"
+              >
+                <span
+                  class="lucid-Checkbox-visualization-checkmark-stem"
+                />
+                <span
+                  class="lucid-Checkbox-visualization-checkmark-kick"
+                />
+              </span>
+            </div>
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left lucid-Table-has-border-left"
+            rowspan="1"
+          >
+            6
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left lucid-Table-has-border-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            Charles
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left lucid-Table-has-border-right"
+            rowspan="1"
+            style="width:100px"
+          >
+            Darwin
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left"
+            rowspan="1"
+          >
+            cdarwin@example.com
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left lucid-Table-has-border-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            Biologist
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-right lucid-Table-has-border-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            $100.06
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-is-last-col lucid-Table-align-center lucid-Table-has-border-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            <svg
+              class="lucid-Icon lucid-Icon-color-primary lucid-SuccessIcon"
+              height="16"
+              preserveAspectRatio="xMidYMid meet"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <circle
+                class="lucid-SuccessIcon-background"
+                cx="8"
+                cy="8"
+                r="7.5"
+              />
+              <path
+                class="lucid-SuccessIcon-check"
+                d="M4.5 8L7 10.5 11.5 6"
+              />
+            </svg>
+          </td>
+        </tr>
+        <tr
+          class="lucid-Table-Tr"
+        >
+          <td
+            class="lucid-Table-Td lucid-Table-is-first-col lucid-Table-is-first-single lucid-Table-align-left"
+            rowspan="1"
+            width="41"
+          >
+            <div
+              class="lucid-Checkbox"
+            >
+              <input
+                class="lucid-Checkbox-native"
+                type="checkbox"
+              />
+              <span
+                class="lucid-Checkbox-visualization-glow"
+              />
+              <span
+                class="lucid-Checkbox-visualization-container"
+              />
+              <span
+                class="lucid-Checkbox-visualization-checkmark"
+              >
+                <span
+                  class="lucid-Checkbox-visualization-checkmark-stem"
+                />
+                <span
+                  class="lucid-Checkbox-visualization-checkmark-kick"
+                />
+              </span>
+            </div>
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left lucid-Table-has-border-left"
+            rowspan="1"
+          >
+            7
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left lucid-Table-has-border-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            Alexander
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left lucid-Table-has-border-right"
+            rowspan="1"
+            style="width:100px"
+          >
+            Macedon
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left"
+            rowspan="1"
+          >
+            amacedon@example.com
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left lucid-Table-has-border-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            Head of State
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-right lucid-Table-has-border-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            $100.07
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-is-last-col lucid-Table-align-center lucid-Table-has-border-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            <svg
+              class="lucid-Icon lucid-Icon-color-primary lucid-SuccessIcon"
+              height="16"
+              preserveAspectRatio="xMidYMid meet"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <circle
+                class="lucid-SuccessIcon-background"
+                cx="8"
+                cy="8"
+                r="7.5"
+              />
+              <path
+                class="lucid-SuccessIcon-check"
+                d="M4.5 8L7 10.5 11.5 6"
+              />
+            </svg>
+          </td>
+        </tr>
+        <tr
+          class="lucid-Table-Tr"
+        >
+          <td
+            class="lucid-Table-Td lucid-Table-is-first-col lucid-Table-is-first-single lucid-Table-align-left"
+            rowspan="1"
+            width="41"
+          >
+            <div
+              class="lucid-Checkbox"
+            >
+              <input
+                class="lucid-Checkbox-native"
+                type="checkbox"
+              />
+              <span
+                class="lucid-Checkbox-visualization-glow"
+              />
+              <span
+                class="lucid-Checkbox-visualization-container"
+              />
+              <span
+                class="lucid-Checkbox-visualization-checkmark"
+              >
+                <span
+                  class="lucid-Checkbox-visualization-checkmark-stem"
+                />
+                <span
+                  class="lucid-Checkbox-visualization-checkmark-kick"
+                />
+              </span>
+            </div>
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left lucid-Table-has-border-left"
+            rowspan="1"
+          >
+            8
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left lucid-Table-has-border-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            Plato
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left lucid-Table-has-border-right"
+            rowspan="1"
+            style="width:100px"
+          >
+            Plato
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left"
+            rowspan="1"
+          >
+            plato@example.com
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left lucid-Table-has-border-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            Philosopher
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-right lucid-Table-has-border-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            $100.08
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-is-last-col lucid-Table-align-center lucid-Table-has-border-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            <svg
+              class="lucid-Icon lucid-Icon-color-primary lucid-SuccessIcon"
+              height="16"
+              preserveAspectRatio="xMidYMid meet"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <circle
+                class="lucid-SuccessIcon-background"
+                cx="8"
+                cy="8"
+                r="7.5"
+              />
+              <path
+                class="lucid-SuccessIcon-check"
+                d="M4.5 8L7 10.5 11.5 6"
+              />
+            </svg>
+          </td>
+        </tr>
+        <tr
+          class="lucid-Table-Tr"
+        >
+          <td
+            class="lucid-Table-Td lucid-Table-is-first-col lucid-Table-is-first-single lucid-Table-align-left"
+            rowspan="1"
+            width="41"
+          >
+            <div
+              class="lucid-Checkbox"
+            >
+              <input
+                class="lucid-Checkbox-native"
+                type="checkbox"
+              />
+              <span
+                class="lucid-Checkbox-visualization-glow"
+              />
+              <span
+                class="lucid-Checkbox-visualization-container"
+              />
+              <span
+                class="lucid-Checkbox-visualization-checkmark"
+              >
+                <span
+                  class="lucid-Checkbox-visualization-checkmark-stem"
+                />
+                <span
+                  class="lucid-Checkbox-visualization-checkmark-kick"
+                />
+              </span>
+            </div>
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left lucid-Table-has-border-left"
+            rowspan="1"
+          >
+            9
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left lucid-Table-has-border-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            Mahatma
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left lucid-Table-has-border-right"
+            rowspan="1"
+            style="width:100px"
+          >
+            Gandhi
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left"
+            rowspan="1"
+          >
+            mgandhi@example.com
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left lucid-Table-has-border-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            Politician
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-right lucid-Table-has-border-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            $100.09
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-is-last-col lucid-Table-align-center lucid-Table-has-border-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            <svg
+              class="lucid-Icon lucid-Icon-color-primary lucid-SuccessIcon"
+              height="16"
+              preserveAspectRatio="xMidYMid meet"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <circle
+                class="lucid-SuccessIcon-background"
+                cx="8"
+                cy="8"
+                r="7.5"
+              />
+              <path
+                class="lucid-SuccessIcon-check"
+                d="M4.5 8L7 10.5 11.5 6"
+              />
+            </svg>
+          </td>
+        </tr>
+        <tr
+          class="lucid-Table-Tr"
+        >
+          <td
+            class="lucid-Table-Td lucid-Table-is-last-row lucid-Table-is-first-col lucid-Table-is-first-single lucid-Table-align-left"
+            rowspan="1"
+            width="41"
+          >
+            <div
+              class="lucid-Checkbox"
+            >
+              <input
+                class="lucid-Checkbox-native"
+                type="checkbox"
+              />
+              <span
+                class="lucid-Checkbox-visualization-glow"
+              />
+              <span
+                class="lucid-Checkbox-visualization-container"
+              />
+              <span
+                class="lucid-Checkbox-visualization-checkmark"
+              >
+                <span
+                  class="lucid-Checkbox-visualization-checkmark-stem"
+                />
+                <span
+                  class="lucid-Checkbox-visualization-checkmark-kick"
+                />
+              </span>
+            </div>
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-is-last-row lucid-Table-align-left lucid-Table-has-border-left"
+            rowspan="1"
+          >
+            10
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-is-last-row lucid-Table-align-left lucid-Table-has-border-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            William
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-is-last-row lucid-Table-align-left lucid-Table-has-border-right"
+            rowspan="1"
+            style="width:100px"
+          >
+            Shakespeare
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-is-last-row lucid-Table-align-left"
+            rowspan="1"
+          >
+            wshakespear@example.com
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-is-last-row lucid-Table-align-left lucid-Table-has-border-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            Playwright
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-is-last-row lucid-Table-align-right lucid-Table-has-border-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            $100.10
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-is-last-row lucid-Table-is-last-col lucid-Table-align-center lucid-Table-has-border-left"
+            rowspan="1"
+            style="width:100px"
+          >
+            <svg
+              class="lucid-Icon lucid-Icon-color-primary lucid-SuccessIcon"
+              height="16"
+              preserveAspectRatio="xMidYMid meet"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <circle
+                class="lucid-SuccessIcon-background"
+                cx="8"
+                cy="8"
+                r="7.5"
+              />
+              <path
+                class="lucid-SuccessIcon-check"
+                d="M4.5 8L7 10.5 11.5 6"
+              />
+            </svg>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
 `;

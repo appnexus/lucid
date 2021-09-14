@@ -1,14 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`CalculatorIcon [common] example testing should match snapshot(s) for Primary 1`] = `
-<CalculatorIcon
-  aspectRatio="xMidYMid meet"
-  color="primary"
-  isClickable={false}
-  isDisabled={false}
-  onClick={[Function]}
-  onSelect={[Function]}
-  size={16}
+<svg
+  class="lucid-Icon lucid-Icon-color-primary lucid-CalculatorIcon"
+  height="16"
+  preserveAspectRatio="xMidYMid meet"
   viewBox="0 0 16 16"
-/>
+  width="16"
+>
+  <path
+    d="M1.5.5h13v15h-13zM1.5 5.5h13"
+  />
+  <path
+    d="M4 8h1M7.5 8h1M11 8h1M4 10.5h1M7.5 10.5h1M11 10.5h1V13h-1zM4 13h1M7.5 13h1"
+  />
+</svg>
 `;

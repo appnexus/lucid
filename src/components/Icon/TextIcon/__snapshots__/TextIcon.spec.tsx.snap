@@ -1,14 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`TextIcon [common] example testing should match snapshot(s) for Primary 1`] = `
-<TextIcon
-  aspectRatio="xMidYMid meet"
-  color="primary"
-  isClickable={false}
-  isDisabled={false}
-  onClick={[Function]}
-  onSelect={[Function]}
-  size={16}
+<svg
+  class="lucid-Icon lucid-Icon-color-primary lucid-TextIcon"
+  height="16"
+  preserveAspectRatio="xMidYMid meet"
   viewBox="0 0 16 16"
-/>
+  width="16"
+>
+  <path
+    d="M.5 2.5v-2h15v2"
+  />
+  <path
+    d="M8 15.5V.5"
+  />
+  <path
+    d="M4.5 15.5h7"
+  />
+</svg>
 `;

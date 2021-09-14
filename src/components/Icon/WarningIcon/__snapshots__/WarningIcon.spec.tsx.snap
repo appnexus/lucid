@@ -1,14 +1,26 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`WarningIcon [common] example testing should match snapshot(s) for Primary 1`] = `
-<WarningIcon
-  aspectRatio="xMidYMid meet"
-  color="primary"
-  isClickable={false}
-  isDisabled={false}
-  onClick={[Function]}
-  onSelect={[Function]}
-  size={16}
+<svg
+  class="lucid-Icon lucid-Icon-color-primary lucid-WarningIcon"
+  height="16"
+  preserveAspectRatio="xMidYMid meet"
   viewBox="0 0 16 16"
-/>
+  width="16"
+>
+  <path
+    class="lucid-WarningIcon-background"
+    d="M.5 15h15L8 .5z"
+  />
+  <path
+    class="lucid-WarningIcon-mark"
+    d="M7.99 5v4"
+  />
+  <circle
+    class="lucid-WarningIcon-mark"
+    cx="7.99"
+    cy="12"
+    r=".293"
+  />
+</svg>
 `;

@@ -1,14 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`PinIcon [common] example testing should match snapshot(s) for Primary 1`] = `
-<PinIcon
-  aspectRatio="xMidYMid meet"
-  color="primary"
-  isClickable={false}
-  isDisabled={false}
-  onClick={[Function]}
-  onSelect={[Function]}
-  size={16}
+<svg
+  class="lucid-Icon lucid-Icon-color-primary lucid-PinIcon"
+  height="16"
+  preserveAspectRatio="xMidYMid meet"
   viewBox="0 0 16 16"
-/>
+  width="16"
+>
+  <path
+    d="M4.811.5l1.66 1.659-.731.731 3.169 2.03 1.709-.57 2.85 1.709-7.409 7.409-1.709-2.85.57-1.709L2.89 5.74l-.731.731L.5 4.811zM10 10l5.5 5.5"
+  />
+</svg>
 `;

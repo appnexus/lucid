@@ -1,14 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`CrownIcon [common] example testing should match snapshot(s) for Primary 1`] = `
-<CrownIcon
-  aspectRatio="xMidYMid meet"
-  color="primary"
-  isClickable={false}
-  isDisabled={false}
-  onClick={[Function]}
-  onSelect={[Function]}
-  size={16}
+<svg
+  class="lucid-Icon lucid-Icon-color-primary lucid-CrownIcon"
+  height="16"
+  preserveAspectRatio="xMidYMid meet"
   viewBox="0 0 16 16"
-/>
+  width="16"
+>
+  <path
+    d="M1.5 14.5h13"
+  />
+  <path
+    d="M1.5 11.5h13l1-8-4 2L8 .5l-3.5 5-4-2z"
+  />
+</svg>
 `;

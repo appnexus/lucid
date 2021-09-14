@@ -1,14 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`EligibilityLightIcon [common] example testing should match snapshot(s) for Primary 1`] = `
-<EligibilityLightIcon
-  aspectRatio="xMidYMid meet"
-  color="primary"
-  isClickable={false}
-  isDisabled={false}
-  onClick={[Function]}
-  onSelect={[Function]}
-  size={16}
+<svg
+  class="lucid-Icon lucid-Icon-color-primary lucid-EligibilityLightIcon"
+  height="16"
+  preserveAspectRatio="xMidYMid meet"
   viewBox="0 0 16 16"
-/>
+  width="16"
+>
+  <g>
+    <path
+      class="lucid-EligibilityLightIcon-half-circle"
+      d="M6 14.71A7.003 7.003 0 0 1 6 1.29v13.42z"
+    />
+    <path
+      class="lucid-EligibilityLightIcon-half-circle"
+      d="M10 1.29a7.003 7.003 0 0 1 0 13.42V1.29z"
+    />
+  </g>
+</svg>
 `;

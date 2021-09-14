@@ -1,14 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`MinusCircleIcon [common] example testing should match snapshot(s) for Primary 1`] = `
-<MinusCircleIcon
-  aspectRatio="xMidYMid meet"
-  color="primary"
-  isClickable={false}
-  isDisabled={false}
-  onClick={[Function]}
-  onSelect={[Function]}
-  size={16}
+<svg
+  class="lucid-Icon lucid-Icon-color-primary lucid-MinusCircleIcon"
+  height="16"
+  preserveAspectRatio="xMidYMid meet"
   viewBox="0 0 16 16"
-/>
+  width="16"
+>
+  <circle
+    class="lucid-MinusCircleIcon-background"
+    cx="8"
+    cy="8"
+    r="7.5"
+  />
+  <path
+    class="lucid-MinusCircleIcon-dash"
+    d="M4.5 8h7"
+  />
+</svg>
 `;

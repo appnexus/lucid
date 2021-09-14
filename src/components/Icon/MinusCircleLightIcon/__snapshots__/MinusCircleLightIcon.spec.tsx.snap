@@ -176,14 +176,22 @@ exports[`MinusCircleLightIcon [common] example testing should match snapshot(s) 
 `;
 
 exports[`MinusCircleLightIcon [common] example testing should match snapshot(s) for Primary 1`] = `
-<MinusCircleLightIcon
-  aspectRatio="xMidYMid meet"
-  color="primary"
-  isClickable={false}
-  isDisabled={false}
-  onClick={[Function]}
-  onSelect={[Function]}
-  size={16}
+<svg
+  class="lucid-Icon lucid-Icon-color-primary lucid-MinusCircleLightIcon"
+  height="16"
+  preserveAspectRatio="xMidYMid meet"
   viewBox="0 0 16 16"
-/>
+  width="16"
+>
+  <circle
+    class="lucid-MinusCircleLightIcon-background"
+    cx="8"
+    cy="8"
+    r="7.5"
+  />
+  <path
+    class="lucid-MinusCircleLightIcon-dash"
+    d="M4.5 8h7"
+  />
+</svg>
 `;

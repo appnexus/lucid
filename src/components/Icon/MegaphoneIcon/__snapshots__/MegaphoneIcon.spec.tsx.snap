@@ -1,14 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`MegaphoneIcon [common] example testing should match snapshot(s) for Primary 1`] = `
-<MegaphoneIcon
-  aspectRatio="xMidYMid meet"
-  color="primary"
-  isClickable={false}
-  isDisabled={false}
-  onClick={[Function]}
-  onSelect={[Function]}
-  size={16}
+<svg
+  class="lucid-Icon lucid-Icon-color-primary lucid-MegaphoneIcon"
+  height="16"
+  preserveAspectRatio="xMidYMid meet"
   viewBox="0 0 16 16"
-/>
+  width="16"
+>
+  <path
+    d="M2.597 10.397L5.5 2l8.429 8.5-8.326 2.903zM14.179 1.821l-1.858 1.858M9.929.5v2.071M15.5 6.071h-2.071"
+  />
+  <path
+    d="M1.569 10.823h2.966v4.251H1.569z"
+    style="transform-origin:0 0"
+    transform="rotate(-45 3.0515 12.9485)"
+  />
+  <path
+    d="M5.603 13.403l2.105 2.104"
+  />
+</svg>
 `;

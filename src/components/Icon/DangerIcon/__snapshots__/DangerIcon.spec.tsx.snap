@@ -1,14 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`DangerIcon [common] example testing should match snapshot(s) for Primary 1`] = `
-<DangerIcon
-  aspectRatio="xMidYMid meet"
-  color="primary"
-  isClickable={false}
-  isDisabled={false}
-  onClick={[Function]}
-  onSelect={[Function]}
-  size={16}
+<svg
+  class="lucid-Icon lucid-Icon-color-primary lucid-DangerIcon"
+  height="16"
+  preserveAspectRatio="xMidYMid meet"
   viewBox="0 0 16 16"
-/>
+  width="16"
+>
+  <circle
+    class="lucid-DangerIcon-background"
+    cx="8"
+    cy="8"
+    r="7.5"
+  />
+  <path
+    class="lucid-DangerIcon-x"
+    d="M5.5 5.5l5 5m0-5l-5 5"
+    stroke="#fff"
+  />
+</svg>
 `;

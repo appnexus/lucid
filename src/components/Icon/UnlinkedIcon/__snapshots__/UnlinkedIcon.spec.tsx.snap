@@ -1,14 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`UnlinkedIcon [common] example testing should match snapshot(s) for Primary 1`] = `
-<UnlinkedIcon
-  aspectRatio="xMidYMid meet"
-  color="primary"
-  isClickable={false}
-  isDisabled={false}
-  onClick={[Function]}
-  onSelect={[Function]}
-  size={16}
+<svg
+  class="lucid-Icon lucid-Icon-color-primary lucid-UnlinkedIcon"
+  height="16"
+  preserveAspectRatio="xMidYMid meet"
   viewBox="0 0 16 16"
-/>
+  width="16"
+>
+  <path
+    d="M5.5 3.5l-1-2m8 9l2 1m-4 1l1 2m-8-9l-2-1"
+  />
+  <path
+    d="M10.232 7.768a2.993 2.993 0 0 0 2.979-.737l1.414-1.414a3.009 3.009 0 0 0 0-4.243 3.009 3.009 0 0 0-4.243 0L8.968 2.789c-.804.804-1.04 1.956-.737 2.979M5.769 8.231c-1.023-.303-2.176-.067-2.98.737l-1.414 1.414a3.009 3.009 0 0 0 0 4.243 3.009 3.009 0 0 0 4.243 0l1.414-1.414c.804-.804 1.04-1.956.737-2.979"
+  />
+</svg>
 `;

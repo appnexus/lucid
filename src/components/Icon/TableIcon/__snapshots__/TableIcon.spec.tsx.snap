@@ -1,14 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`TableIcon [common] example testing should match snapshot(s) for Primary 1`] = `
-<TableIcon
-  aspectRatio="xMidYMid meet"
-  color="primary"
-  isClickable={false}
-  isDisabled={false}
-  onClick={[Function]}
-  onSelect={[Function]}
-  size={16}
+<svg
+  class="lucid-Icon lucid-Icon-color-primary lucid-TableIcon"
+  height="16"
+  preserveAspectRatio="xMidYMid meet"
   viewBox="0 0 16 16"
-/>
+  width="16"
+>
+  <path
+    d="M.5.5h15v15H.5z"
+    fill="none"
+    stroke-linecap="square"
+    stroke-miterlimit="10"
+    stroke-width="1.3"
+  />
+  <path
+    d="M15.5 4.5H.5M15.5 10H.5M5.5 4.5v11M10.5 4.5v11"
+  />
+</svg>
 `;

@@ -1,14 +1,26 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`AnalyzeDataIcon [common] example testing should match snapshot(s) for Primary 1`] = `
-<AnalyzeDataIcon
-  aspectRatio="xMidYMid meet"
-  color="primary"
-  isClickable={false}
-  isDisabled={false}
-  onClick={[Function]}
-  onSelect={[Function]}
-  size={16}
+<svg
+  class="lucid-Icon lucid-Icon-color-primary lucid-AnalyzeDataIcon"
+  height="16"
+  preserveAspectRatio="xMidYMid meet"
   viewBox="0 0 16 16"
-/>
+  width="16"
+>
+  <path
+    d="M0 15.5h16"
+  />
+  <path
+    d="M2.5 10.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm3-6a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm4 4a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"
+  />
+  <circle
+    cx="13.5"
+    cy="2.5"
+    r="2"
+  />
+  <path
+    d="M1.5 10.5l4-5 4 4 3.065-5.364"
+  />
+</svg>
 `;

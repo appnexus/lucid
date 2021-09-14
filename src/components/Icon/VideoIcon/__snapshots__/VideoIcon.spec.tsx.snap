@@ -1,14 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`VideoIcon [common] example testing should match snapshot(s) for Primary 1`] = `
-<VideoIcon
-  aspectRatio="xMidYMid meet"
-  color="primary"
-  isClickable={false}
-  isDisabled={false}
-  onClick={[Function]}
-  onSelect={[Function]}
-  size={16}
+<svg
+  class="lucid-Icon lucid-Icon-color-primary lucid-VideoIcon"
+  height="16"
+  preserveAspectRatio="xMidYMid meet"
   viewBox="0 0 16 16"
-/>
+  width="16"
+>
+  <circle
+    cx="8"
+    cy="8"
+    r="7.5"
+  />
+  <path
+    d="M6.25 5v6l4.5-3z"
+  />
+</svg>
 `;
