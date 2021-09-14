@@ -928,16 +928,6 @@ module.exports = [
 		component: getDefaultExport(
 			require('../src/components/SearchableSelect/SearchableSelect')
 		),
-		examplesContext: require.context(
-			'../src/components/SearchableSelect/examples',
-			true,
-			/\.tsx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../src/components/SearchableSelect/examples',
-			true,
-			/\.tsx?$/
-		),
 	},
 	{
 		name: 'Selection',
@@ -989,16 +979,6 @@ module.exports = [
 		name: 'SingleSelect',
 		component: getDefaultExport(
 			require('../src/components/SingleSelect/SingleSelect')
-		),
-		examplesContext: require.context(
-			'../src/components/SingleSelect/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../src/components/SingleSelect/examples',
-			true,
-			/\.(j|t)sx?$/
 		),
 	},
 	{
