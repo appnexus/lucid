@@ -1,4 +1,4 @@
-module.exports = {
+export default {
 	addons: ['@storybook/addon-essentials', '@storybook/addon-postcss'],
 	stories: [
 		'../docs/**/*.stories.mdx',
