@@ -194,7 +194,7 @@ Loading.args = {
 export const CustomSearchPlaceholder = Template.bind({});
 CustomSearchPlaceholder.args = {
 	...Default.args,
-	Placeholder: 'Select a Color',
+	Placeholder: 'Select Color',
 	children: addKeys([
 		<SearchField placeholder='Type here to filter...' />,
 		<Option>Blue</Option>,

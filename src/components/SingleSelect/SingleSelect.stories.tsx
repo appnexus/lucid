@@ -72,7 +72,7 @@ const Template: any = (args) => {
 /** Default */
 export const Default = Template.bind({});
 Default.args = {
-	Placeholder: 'Select a Color',
+	Placeholder: 'Select Color',
 	children: addKeys([
 		<Option>Red</Option>,
 		<Option>Green</Option>,
