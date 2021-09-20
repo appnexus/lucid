@@ -27,6 +27,10 @@ type IPaginatorSingleSelectProps = Partial<ISingleSelectProps>;
 
 type ShowTotalObjects = (count: number) => string;
 
+interface IExtendedTextFieldProps extends Omit<ITextFieldProps, 'value'> {
+	value?: string;
+}
+
 export interface IPaginatorProps
 	extends StandardProps,
 		React.DetailedHTMLProps<
@@ -108,7 +112,7 @@ export interface IPaginatorProps
 	/** Object of TextField props which are passed thru to the underlying TextField component. */
 
 	//TextField: TextField.defaultProps;
-	TextField: ITextFieldProps;
+	TextField: IExtendedTextFieldProps;
 }
 
 export interface IPaginatorState {
@@ -303,10 +307,10 @@ class Paginator extends React.Component<IPaginatorProps, IPaginatorState> {
 				</Button>
 				<TextField
 					lazyLevel={100}
-					{...textFieldProps}
 					onBlur={this.handleTextFieldChange}
 					onSubmit={this.handleTextFieldChange}
-					isDisabled={isDisabled}
+					{...textFieldProps}
+					isDisabled={isDisabled || textFieldProps.isDisabled}
 					value={selectedPageIndex + 1}
 				/>
 				{!_.isNil(totalPages) && <span>of {totalPages.toLocaleString()}</span>}
