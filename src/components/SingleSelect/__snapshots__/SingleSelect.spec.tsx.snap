@@ -1,1456 +1,199 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SingleSelect [common] example testing should match snapshot(s) for 01.basic 1`] = `
-<DropMenu
-  ContextMenu={
-    Object {
-      "directonOffset": -1,
-    }
-  }
-  alignment="start"
-  className="lucid-SingleSelect"
-  direction="down"
-  flyOutStyle={
-    Object {
-      "maxHeight": "18em",
-    }
-  }
-  focusedIndex={null}
-  isDisabled={false}
-  isExpanded={false}
-  onCollapse={[Function]}
-  onExpand={[Function]}
-  onFocusNext={[Function]}
-  onFocusOption={[Function]}
-  onFocusPrev={[Function]}
-  onSelect={[Function]}
-  optionContainerStyle={Object {}}
-  portalId=""
-  selectedIndices={Array []}
->
-  <DropMenu.Control>
-    <div
-      className="lucid-SingleSelect-Control lucid-SingleSelect-Control-is-null-option"
-      tabIndex={0}
-    >
-      <span
-        className="lucid-SingleSelect-Control-content"
-      >
-        Select Color
-      </span>
-      <ChevronIcon
-        aspectRatio="xMidYMid meet"
-        color="primary"
-        direction="down"
-        isClickable={false}
-        isDisabled={false}
-        onClick={[Function]}
-        onSelect={[Function]}
-        size={12}
-        viewBox="0 0 16 16"
-      />
-    </div>
-  </DropMenu.Control>
-  <DropMenu.Option
-    isDisabled={false}
-    isHidden={false}
-    isWrapped={true}
-    key="SingleSelectOption0"
-  >
-    Red
-  </DropMenu.Option>
-  <DropMenu.Option
-    isDisabled={false}
-    isHidden={false}
-    isWrapped={true}
-    key="SingleSelectOption1"
-  >
-    Green
-  </DropMenu.Option>
-  <DropMenu.Option
-    isDisabled={false}
-    isHidden={false}
-    isWrapped={true}
-    key="SingleSelectOption2"
-  >
-    Blue
-  </DropMenu.Option>
-</DropMenu>
-`;
-
-exports[`SingleSelect [common] example testing should match snapshot(s) for 02.named-options 1`] = `
-<DropMenu
-  ContextMenu={
-    Object {
-      "directonOffset": -1,
-    }
-  }
-  alignment="start"
-  className="lucid-SingleSelect"
-  direction="down"
-  flyOutStyle={
-    Object {
-      "maxHeight": "18em",
-    }
-  }
-  focusedIndex={null}
-  isDisabled={false}
-  isExpanded={false}
-  onCollapse={[Function]}
-  onExpand={[Function]}
-  onFocusNext={[Function]}
-  onFocusOption={[Function]}
-  onFocusPrev={[Function]}
-  onSelect={[Function]}
-  optionContainerStyle={Object {}}
-  portalId=""
-  selectedIndices={Array []}
->
-  <DropMenu.Control>
-    <div
-      className="lucid-SingleSelect-Control lucid-SingleSelect-Control-is-null-option"
-      tabIndex={0}
-    >
-      <span
-        className="lucid-SingleSelect-Control-content"
-      >
-        Select Color
-      </span>
-      <ChevronIcon
-        aspectRatio="xMidYMid meet"
-        color="primary"
-        direction="down"
-        isClickable={false}
-        isDisabled={false}
-        onClick={[Function]}
-        onSelect={[Function]}
-        size={12}
-        viewBox="0 0 16 16"
-      />
-    </div>
-  </DropMenu.Control>
-  <DropMenu.Option
-    isDisabled={false}
-    isHidden={false}
-    isWrapped={true}
-    key="SingleSelectOption0"
-    name="red"
-  >
-    Red
-  </DropMenu.Option>
-  <DropMenu.Option
-    isDisabled={false}
-    isHidden={false}
-    isWrapped={true}
-    key="SingleSelectOption1"
-    name="green"
-  >
-    Green
-  </DropMenu.Option>
-  <DropMenu.Option
-    isDisabled={false}
-    isHidden={false}
-    isWrapped={true}
-    key="SingleSelectOption2"
-    name="blue"
-  >
-    Blue
-  </DropMenu.Option>
-</DropMenu>
-`;
-
-exports[`SingleSelect [common] example testing should match snapshot(s) for 03.formatted-options 1`] = `
-<DropMenu
-  ContextMenu={
-    Object {
-      "directonOffset": -1,
-    }
-  }
-  alignment="start"
-  className="lucid-SingleSelect"
-  direction="down"
-  flyOutStyle={
-    Object {
-      "maxHeight": "18em",
-    }
-  }
-  focusedIndex={null}
-  isDisabled={false}
-  isExpanded={false}
-  onCollapse={[Function]}
-  onExpand={[Function]}
-  onFocusNext={[Function]}
-  onFocusOption={[Function]}
-  onFocusPrev={[Function]}
-  onSelect={[Function]}
-  optionContainerStyle={Object {}}
-  portalId=""
-  selectedIndices={Array []}
->
-  <DropMenu.Control>
-    <div
-      className="lucid-SingleSelect-Control lucid-SingleSelect-Control-is-null-option"
-      tabIndex={0}
-    >
-      <span
-        className="lucid-SingleSelect-Control-content"
-      >
-        Select
-      </span>
-      <ChevronIcon
-        aspectRatio="xMidYMid meet"
-        color="primary"
-        direction="down"
-        isClickable={false}
-        isDisabled={false}
-        onClick={[Function]}
-        onSelect={[Function]}
-        size={12}
-        viewBox="0 0 16 16"
-      />
-    </div>
-  </DropMenu.Control>
-  <DropMenu.OptionGroup
-    isHidden={false}
-    key="SingleSelectOptionGroup0"
-  >
-    <OptionCols
-      col1="ID"
-      col2="NAME"
-    />
-    <SingleSelect.Option
-      Selected="Foo (1234)"
-      isDisabled={false}
-      isHidden={false}
-      isWrapped={true}
-    >
-      <OptionCols
-        col1="1234"
-        col2="Foo"
-      />
-    </SingleSelect.Option>
-    <SingleSelect.Option
-      Selected="Bar (2345)"
-      isDisabled={false}
-      isHidden={false}
-      isWrapped={true}
-    >
-      <OptionCols
-        col1="2345"
-        col2="Bar"
-      />
-    </SingleSelect.Option>
-    <SingleSelect.Option
-      Selected="Baz (3456)"
-      isDisabled={false}
-      isHidden={false}
-      isWrapped={true}
-    >
-      <OptionCols
-        col1="3456"
-        col2="Baz"
-      />
-    </SingleSelect.Option>
-    <DropMenu.Option
-      isDisabled={false}
-      isHidden={false}
-      isWrapped={true}
-      key="SingleSelectOption0"
-    >
-      <OptionCols
-        col1="1234"
-        col2="Foo"
-      />
-    </DropMenu.Option>
-    <DropMenu.Option
-      isDisabled={false}
-      isHidden={false}
-      isWrapped={true}
-      key="SingleSelectOption1"
-    >
-      <OptionCols
-        col1="2345"
-        col2="Bar"
-      />
-    </DropMenu.Option>
-    <DropMenu.Option
-      isDisabled={false}
-      isHidden={false}
-      isWrapped={true}
-      key="SingleSelectOption2"
-    >
-      <OptionCols
-        col1="3456"
-        col2="Baz"
-      />
-    </DropMenu.Option>
-  </DropMenu.OptionGroup>
-</DropMenu>
-`;
-
-exports[`SingleSelect [common] example testing should match snapshot(s) for 04.grouped-options 1`] = `
-<DropMenu
-  ContextMenu={
-    Object {
-      "directonOffset": -1,
-    }
-  }
-  alignment="start"
-  className="lucid-SingleSelect"
-  direction="down"
-  flyOutStyle={
-    Object {
-      "maxHeight": "18em",
-    }
-  }
-  focusedIndex={null}
-  isDisabled={false}
-  isExpanded={false}
-  onCollapse={[Function]}
-  onExpand={[Function]}
-  onFocusNext={[Function]}
-  onFocusOption={[Function]}
-  onFocusPrev={[Function]}
-  onSelect={[Function]}
-  optionContainerStyle={Object {}}
-  portalId=""
-  selectedIndices={Array []}
->
-  <DropMenu.Control>
-    <div
-      className="lucid-SingleSelect-Control lucid-SingleSelect-Control-is-null-option"
-      tabIndex={0}
-    >
-      <span
-        className="lucid-SingleSelect-Control-content"
-      >
-        Select Color
-      </span>
-      <ChevronIcon
-        aspectRatio="xMidYMid meet"
-        color="primary"
-        direction="down"
-        isClickable={false}
-        isDisabled={false}
-        onClick={[Function]}
-        onSelect={[Function]}
-        size={12}
-        viewBox="0 0 16 16"
-      />
-    </div>
-  </DropMenu.Control>
-  <DropMenu.OptionGroup
-    isHidden={false}
-    key="SingleSelectOptionGroup0"
-  >
-    Screen
-    <SingleSelect.Option
-      isDisabled={false}
-      isHidden={false}
-      isWrapped={true}
-    >
-      Red
-    </SingleSelect.Option>
-    <SingleSelect.Option
-      isDisabled={false}
-      isHidden={false}
-      isWrapped={true}
-    >
-      Green
-    </SingleSelect.Option>
-    <SingleSelect.Option
-      isDisabled={false}
-      isHidden={false}
-      isWrapped={true}
-    >
-      Blue
-    </SingleSelect.Option>
-    <DropMenu.Option
-      isDisabled={false}
-      isHidden={false}
-      isWrapped={true}
-      key="SingleSelectOption0"
-    >
-      Red
-    </DropMenu.Option>
-    <DropMenu.Option
-      isDisabled={false}
-      isHidden={false}
-      isWrapped={true}
-      key="SingleSelectOption1"
-    >
-      Green
-    </DropMenu.Option>
-    <DropMenu.Option
-      isDisabled={false}
-      isHidden={false}
-      isWrapped={true}
-      key="SingleSelectOption2"
-    >
-      Blue
-    </DropMenu.Option>
-  </DropMenu.OptionGroup>
-  <DropMenu.OptionGroup
-    isHidden={false}
-    key="SingleSelectOptionGroup1"
-  >
-    Print
-    <SingleSelect.Option
-      isDisabled={false}
-      isHidden={false}
-      isWrapped={true}
-    >
-      Cyan
-    </SingleSelect.Option>
-    <SingleSelect.Option
-      isDisabled={false}
-      isHidden={false}
-      isWrapped={true}
-    >
-      Yellow
-    </SingleSelect.Option>
-    <SingleSelect.Option
-      isDisabled={false}
-      isHidden={false}
-      isWrapped={true}
-    >
-      Magenta
-    </SingleSelect.Option>
-    <SingleSelect.Option
-      isDisabled={false}
-      isHidden={false}
-      isWrapped={true}
-    >
-      Black
-    </SingleSelect.Option>
-    <DropMenu.Option
-      isDisabled={false}
-      isHidden={false}
-      isWrapped={true}
-      key="SingleSelectOption3"
-    >
-      Cyan
-    </DropMenu.Option>
-    <DropMenu.Option
-      isDisabled={false}
-      isHidden={false}
-      isWrapped={true}
-      key="SingleSelectOption4"
-    >
-      Yellow
-    </DropMenu.Option>
-    <DropMenu.Option
-      isDisabled={false}
-      isHidden={false}
-      isWrapped={true}
-      key="SingleSelectOption5"
-    >
-      Magenta
-    </DropMenu.Option>
-    <DropMenu.Option
-      isDisabled={false}
-      isHidden={false}
-      isWrapped={true}
-      key="SingleSelectOption6"
-    >
-      Black
-    </DropMenu.Option>
-  </DropMenu.OptionGroup>
-</DropMenu>
-`;
-
-exports[`SingleSelect [common] example testing should match snapshot(s) for 05.disabled-options 1`] = `
-<DropMenu
-  ContextMenu={
-    Object {
-      "directonOffset": -1,
-    }
-  }
-  alignment="start"
-  className="lucid-SingleSelect"
-  direction="down"
-  flyOutStyle={
-    Object {
-      "maxHeight": "18em",
-    }
-  }
-  focusedIndex={null}
-  isDisabled={false}
-  isExpanded={false}
-  onCollapse={[Function]}
-  onExpand={[Function]}
-  onFocusNext={[Function]}
-  onFocusOption={[Function]}
-  onFocusPrev={[Function]}
-  onSelect={[Function]}
-  optionContainerStyle={Object {}}
-  portalId=""
-  selectedIndices={Array []}
->
-  <DropMenu.Control>
-    <div
-      className="lucid-SingleSelect-Control lucid-SingleSelect-Control-is-null-option"
-      tabIndex={0}
-    >
-      <span
-        className="lucid-SingleSelect-Control-content"
-      >
-        Select Color
-      </span>
-      <ChevronIcon
-        aspectRatio="xMidYMid meet"
-        color="primary"
-        direction="down"
-        isClickable={false}
-        isDisabled={false}
-        onClick={[Function]}
-        onSelect={[Function]}
-        size={12}
-        viewBox="0 0 16 16"
-      />
-    </div>
-  </DropMenu.Control>
-  <DropMenu.Option
-    isDisabled={true}
-    isHidden={false}
-    isWrapped={true}
-    key="SingleSelectOption0"
-  >
-    Red
-  </DropMenu.Option>
-  <DropMenu.Option
-    isDisabled={false}
-    isHidden={false}
-    isWrapped={true}
-    key="SingleSelectOption1"
-  >
-    Green
-  </DropMenu.Option>
-  <DropMenu.Option
-    isDisabled={true}
-    isHidden={false}
-    isWrapped={true}
-    key="SingleSelectOption2"
-  >
-    Blue
-  </DropMenu.Option>
-</DropMenu>
-`;
-
-exports[`SingleSelect [common] example testing should match snapshot(s) for 06.disabled-select 1`] = `
-<DropMenu
-  ContextMenu={
-    Object {
-      "directonOffset": -1,
-    }
-  }
-  alignment="start"
-  className="lucid-SingleSelect"
-  direction="down"
-  flyOutStyle={
-    Object {
-      "maxHeight": "18em",
-    }
-  }
-  focusedIndex={null}
-  isDisabled={true}
-  isExpanded={false}
-  onCollapse={[Function]}
-  onExpand={[Function]}
-  onFocusNext={[Function]}
-  onFocusOption={[Function]}
-  onFocusPrev={[Function]}
-  onSelect={[Function]}
-  optionContainerStyle={Object {}}
-  portalId=""
-  selectedIndices={Array []}
->
-  <DropMenu.Control>
-    <div
-      className="lucid-SingleSelect-Control lucid-SingleSelect-Control-is-disabled lucid-SingleSelect-Control-is-null-option"
-      tabIndex={0}
-    >
-      <span
-        className="lucid-SingleSelect-Control-content"
-      >
-        Select Color
-      </span>
-      <ChevronIcon
-        aspectRatio="xMidYMid meet"
-        color="primary"
-        direction="down"
-        isClickable={false}
-        isDisabled={false}
-        onClick={[Function]}
-        onSelect={[Function]}
-        size={12}
-        viewBox="0 0 16 16"
-      />
-    </div>
-  </DropMenu.Control>
-  <DropMenu.Option
-    isDisabled={false}
-    isHidden={false}
-    isWrapped={true}
-    key="SingleSelectOption0"
-  >
-    Red
-  </DropMenu.Option>
-  <DropMenu.Option
-    isDisabled={false}
-    isHidden={false}
-    isWrapped={true}
-    key="SingleSelectOption1"
-  >
-    Green
-  </DropMenu.Option>
-  <DropMenu.Option
-    isDisabled={false}
-    isHidden={false}
-    isWrapped={true}
-    key="SingleSelectOption2"
-  >
-    Blue
-  </DropMenu.Option>
-</DropMenu>
-`;
-
-exports[`SingleSelect [common] example testing should match snapshot(s) for 07.no-unselect 1`] = `
-<DropMenu
-  ContextMenu={
-    Object {
-      "directonOffset": -1,
-    }
-  }
-  alignment="start"
-  className="lucid-SingleSelect"
-  direction="down"
-  flyOutStyle={
-    Object {
-      "maxHeight": "18em",
-    }
-  }
-  focusedIndex={null}
-  isDisabled={false}
-  isExpanded={false}
-  onCollapse={[Function]}
-  onExpand={[Function]}
-  onFocusNext={[Function]}
-  onFocusOption={[Function]}
-  onFocusPrev={[Function]}
-  onSelect={[Function]}
-  optionContainerStyle={Object {}}
-  portalId=""
-  selectedIndices={Array []}
->
-  <DropMenu.Control>
-    <div
-      className="lucid-SingleSelect-Control lucid-SingleSelect-Control-is-null-option"
-      tabIndex={0}
-    >
-      <span
-        className="lucid-SingleSelect-Control-content"
-      >
-        Select Foo
-      </span>
-      <ChevronIcon
-        aspectRatio="xMidYMid meet"
-        color="primary"
-        direction="down"
-        isClickable={false}
-        isDisabled={false}
-        onClick={[Function]}
-        onSelect={[Function]}
-        size={12}
-        viewBox="0 0 16 16"
-      />
-    </div>
-  </DropMenu.Control>
-  <DropMenu.Option
-    isDisabled={false}
-    isHidden={false}
-    isWrapped={true}
-    key="SingleSelectOption0"
-  >
-    Red
-  </DropMenu.Option>
-  <DropMenu.Option
-    isDisabled={false}
-    isHidden={false}
-    isWrapped={true}
-    key="SingleSelectOption1"
-  >
-    Green
-  </DropMenu.Option>
-  <DropMenu.Option
-    isDisabled={false}
-    isHidden={false}
-    isWrapped={true}
-    key="SingleSelectOption2"
-  >
-    Blue
-  </DropMenu.Option>
-</DropMenu>
-`;
-
-exports[`SingleSelect [common] example testing should match snapshot(s) for 08.max-menu-height 1`] = `
-<DropMenu
-  ContextMenu={
-    Object {
-      "directonOffset": -1,
-    }
-  }
-  alignment="start"
-  className="lucid-SingleSelect"
-  direction="down"
-  flyOutStyle={
-    Object {
-      "maxHeight": "12em",
-    }
-  }
-  focusedIndex={null}
-  isDisabled={false}
-  isExpanded={false}
-  onCollapse={[Function]}
-  onExpand={[Function]}
-  onFocusNext={[Function]}
-  onFocusOption={[Function]}
-  onFocusPrev={[Function]}
-  onSelect={[Function]}
-  optionContainerStyle={Object {}}
-  portalId=""
-  selectedIndices={Array []}
->
-  <DropMenu.Control>
-    <div
-      className="lucid-SingleSelect-Control lucid-SingleSelect-Control-is-null-option"
-      tabIndex={0}
-    >
-      <span
-        className="lucid-SingleSelect-Control-content"
-      >
-        Select Color
-      </span>
-      <ChevronIcon
-        aspectRatio="xMidYMid meet"
-        color="primary"
-        direction="down"
-        isClickable={false}
-        isDisabled={false}
-        onClick={[Function]}
-        onSelect={[Function]}
-        size={12}
-        viewBox="0 0 16 16"
-      />
-    </div>
-  </DropMenu.Control>
-  <DropMenu.Option
-    isDisabled={false}
-    isHidden={false}
-    isWrapped={true}
-    key="SingleSelectOption0"
-  >
-    Aliceblue
-  </DropMenu.Option>
-  <DropMenu.Option
-    isDisabled={false}
-    isHidden={false}
-    isWrapped={true}
-    key="SingleSelectOption1"
-  >
-    Antiquewhite
-  </DropMenu.Option>
-  <DropMenu.Option
-    isDisabled={false}
-    isHidden={false}
-    isWrapped={true}
-    key="SingleSelectOption2"
-  >
-    Aqua
-  </DropMenu.Option>
-  <DropMenu.Option
-    isDisabled={false}
-    isHidden={false}
-    isWrapped={true}
-    key="SingleSelectOption3"
-  >
-    Aquamarine
-  </DropMenu.Option>
-  <DropMenu.Option
-    isDisabled={false}
-    isHidden={false}
-    isWrapped={true}
-    key="SingleSelectOption4"
-  >
-    Azure
-  </DropMenu.Option>
-  <DropMenu.Option
-    isDisabled={false}
-    isHidden={false}
-    isWrapped={true}
-    key="SingleSelectOption5"
-  >
-    Beige
-  </DropMenu.Option>
-  <DropMenu.Option
-    isDisabled={false}
-    isHidden={false}
-    isWrapped={true}
-    key="SingleSelectOption6"
-  >
-    Bisque
-  </DropMenu.Option>
-  <DropMenu.Option
-    isDisabled={false}
-    isHidden={false}
-    isWrapped={true}
-    key="SingleSelectOption7"
-  >
-    Black
-  </DropMenu.Option>
-  <DropMenu.Option
-    isDisabled={false}
-    isHidden={false}
-    isWrapped={true}
-    key="SingleSelectOption8"
-  >
-    Blanchedalmond
-  </DropMenu.Option>
-  <DropMenu.Option
-    isDisabled={false}
-    isHidden={false}
-    isWrapped={true}
-    key="SingleSelectOption9"
-  >
-    Blue
-  </DropMenu.Option>
-  <DropMenu.Option
-    isDisabled={false}
-    isHidden={false}
-    isWrapped={true}
-    key="SingleSelectOption10"
-  >
-    Blueviolet
-  </DropMenu.Option>
-  <DropMenu.Option
-    isDisabled={false}
-    isHidden={false}
-    isWrapped={true}
-    key="SingleSelectOption11"
-  >
-    Brown
-  </DropMenu.Option>
-  <DropMenu.Option
-    isDisabled={false}
-    isHidden={false}
-    isWrapped={true}
-    key="SingleSelectOption12"
-  >
-    Burlywood
-  </DropMenu.Option>
-  <DropMenu.Option
-    isDisabled={false}
-    isHidden={false}
-    isWrapped={true}
-    key="SingleSelectOption13"
-  >
-    Cadetblue
-  </DropMenu.Option>
-  <DropMenu.Option
-    isDisabled={false}
-    isHidden={false}
-    isWrapped={true}
-    key="SingleSelectOption14"
-  >
-    Chartreuse
-  </DropMenu.Option>
-</DropMenu>
-`;
-
-exports[`SingleSelect [common] example testing should match snapshot(s) for 09.rich-content 1`] = `
-<DropMenu
-  ContextMenu={
-    Object {
-      "directonOffset": -1,
-    }
-  }
-  alignment="start"
-  className="lucid-SingleSelect"
-  direction="down"
-  flyOutStyle={
-    Object {
-      "maxHeight": "18em",
-    }
-  }
-  focusedIndex={null}
-  isDisabled={false}
-  isExpanded={false}
-  onCollapse={[Function]}
-  onExpand={[Function]}
-  onFocusNext={[Function]}
-  onFocusOption={[Function]}
-  onFocusPrev={[Function]}
-  onSelect={[Function]}
-  optionContainerStyle={Object {}}
-  portalId=""
-  selectedIndices={Array []}
->
-  <DropMenu.Control>
-    <div
-      className="lucid-SingleSelect-Control lucid-SingleSelect-Control-is-null-option"
-      tabIndex={0}
-    >
-      <span
-        className="lucid-SingleSelect-Control-content"
-      >
-        <SuccessIcon
-          aspectRatio="xMidYMid meet"
-          color="primary"
-          isClickable={false}
-          isDisabled={false}
-          onClick={[Function]}
-          onSelect={[Function]}
-          size={16}
-          style={
-            Object {
-              "marginRight": 4,
-            }
-          }
-          viewBox="0 0 16 16"
-        />
-         Add Color
-      </span>
-      <ChevronIcon
-        aspectRatio="xMidYMid meet"
-        color="primary"
-        direction="down"
-        isClickable={false}
-        isDisabled={false}
-        onClick={[Function]}
-        onSelect={[Function]}
-        size={12}
-        viewBox="0 0 16 16"
-      />
-    </div>
-  </DropMenu.Control>
-  <DropMenu.Option
-    isDisabled={false}
-    isHidden={false}
-    isWrapped={true}
-    key="SingleSelectOption0"
-  >
-    <SuccessIcon
-      aspectRatio="xMidYMid meet"
-      color="primary"
-      isClickable={false}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={16}
-      style={
-        Object {
-          "marginRight": 4,
-        }
-      }
-      viewBox="0 0 16 16"
-    />
-     Red
-  </DropMenu.Option>
-  <DropMenu.Option
-    isDisabled={false}
-    isHidden={false}
-    isWrapped={true}
-    key="SingleSelectOption1"
-  >
-    <SuccessIcon
-      aspectRatio="xMidYMid meet"
-      color="primary"
-      isClickable={false}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={16}
-      style={
-        Object {
-          "marginRight": 4,
-        }
-      }
-      viewBox="0 0 16 16"
-    />
-     Green
-  </DropMenu.Option>
-  <DropMenu.Option
-    isDisabled={false}
-    isHidden={false}
-    isWrapped={true}
-    key="SingleSelectOption2"
-  >
-    <SuccessIcon
-      aspectRatio="xMidYMid meet"
-      color="primary"
-      isClickable={false}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={16}
-      style={
-        Object {
-          "marginRight": 4,
-        }
-      }
-      viewBox="0 0 16 16"
-    />
-     Blue
-  </DropMenu.Option>
-</DropMenu>
-`;
-
-exports[`SingleSelect [common] example testing should match snapshot(s) for 10.no-selection-highlighting 1`] = `
-<DropMenu
-  ContextMenu={
-    Object {
-      "directonOffset": -1,
-    }
-  }
-  alignment="start"
-  className="lucid-SingleSelect"
-  direction="down"
-  flyOutStyle={
-    Object {
-      "maxHeight": "18em",
-    }
-  }
-  focusedIndex={null}
-  isDisabled={false}
-  isExpanded={false}
-  onCollapse={[Function]}
-  onExpand={[Function]}
-  onFocusNext={[Function]}
-  onFocusOption={[Function]}
-  onFocusPrev={[Function]}
-  onSelect={[Function]}
-  optionContainerStyle={Object {}}
-  portalId=""
-  selectedIndices={Array []}
->
-  <DropMenu.Control>
-    <div
-      className="lucid-SingleSelect-Control lucid-SingleSelect-Control-is-null-option"
-      tabIndex={0}
-    >
-      <span
-        className="lucid-SingleSelect-Control-content"
-      >
-        Select Foo
-      </span>
-      <ChevronIcon
-        aspectRatio="xMidYMid meet"
-        color="primary"
-        direction="down"
-        isClickable={false}
-        isDisabled={false}
-        onClick={[Function]}
-        onSelect={[Function]}
-        size={12}
-        viewBox="0 0 16 16"
-      />
-    </div>
-  </DropMenu.Control>
-  <DropMenu.Option
-    isDisabled={false}
-    isHidden={false}
-    isWrapped={true}
-    key="SingleSelectOption0"
-  >
-    Red
-  </DropMenu.Option>
-  <DropMenu.Option
-    isDisabled={false}
-    isHidden={false}
-    isWrapped={true}
-    key="SingleSelectOption1"
-  >
-    Green
-  </DropMenu.Option>
-  <DropMenu.Option
-    isDisabled={false}
-    isHidden={false}
-    isWrapped={true}
-    key="SingleSelectOption2"
-  >
-    Blue
-  </DropMenu.Option>
-</DropMenu>
-`;
-
-exports[`SingleSelect [common] example testing should match snapshot(s) for 11.array-options 1`] = `
-<DropMenu
-  ContextMenu={
-    Object {
-      "directonOffset": -1,
-    }
-  }
-  alignment="start"
-  className="lucid-SingleSelect"
-  direction="down"
-  flyOutStyle={
-    Object {
-      "maxHeight": "18em",
-    }
-  }
-  focusedIndex={null}
-  isDisabled={false}
-  isExpanded={false}
-  onCollapse={[Function]}
-  onExpand={[Function]}
-  onFocusNext={[Function]}
-  onFocusOption={[Function]}
-  onFocusPrev={[Function]}
-  onSelect={[Function]}
-  optionContainerStyle={Object {}}
-  portalId=""
-  selectedIndices={Array []}
->
-  <DropMenu.Control>
-    <div
-      className="lucid-SingleSelect-Control lucid-SingleSelect-Control-is-null-option"
-      tabIndex={0}
-    >
-      <span
-        className="lucid-SingleSelect-Control-content"
-      >
-        Select a number
-      </span>
-      <ChevronIcon
-        aspectRatio="xMidYMid meet"
-        color="primary"
-        direction="down"
-        isClickable={false}
-        isDisabled={false}
-        onClick={[Function]}
-        onSelect={[Function]}
-        size={12}
-        viewBox="0 0 16 16"
-      />
-    </div>
-  </DropMenu.Control>
-  <DropMenu.Option
-    isDisabled={false}
-    isHidden={false}
-    isWrapped={true}
-    key="SingleSelectOption0"
-  >
-    1
-  </DropMenu.Option>
-  <DropMenu.Option
-    isDisabled={false}
-    isHidden={false}
-    isWrapped={true}
-    key="SingleSelectOption1"
-  >
-    2
-  </DropMenu.Option>
-  <DropMenu.Option
-    isDisabled={false}
-    isHidden={false}
-    isWrapped={true}
-    key="SingleSelectOption2"
-  >
-    3
-  </DropMenu.Option>
-</DropMenu>
-`;
-
-exports[`SingleSelect [common] example testing should match snapshot(s) for 12.stateless 1`] = `
-<DropMenu
-  ContextMenu={
-    Object {
-      "directonOffset": 0,
-    }
-  }
-  alignment="start"
-  className="lucid-SingleSelect"
-  direction="down"
-  flyOutStyle={Object {}}
-  focusedIndex={2}
-  isDisabled={false}
-  isExpanded={true}
-  onCollapse={[Function]}
-  onExpand={[Function]}
-  onFocusNext={[Function]}
-  onFocusOption={[Function]}
-  onFocusPrev={[Function]}
-  onSelect={[Function]}
-  optionContainerStyle={Object {}}
-  portalId=""
-  selectedIndices={
-    Array [
-      1,
-    ]
-  }
+exports[`SingleSelect [common] example testing should match snapshot(s) for ArrayOptions 1`] = `
+<section
   style={
     Object {
-      "minHeight": 220,
+      "minHeight": 90,
     }
   }
 >
-  <DropMenu.Control>
-    <div
-      className="lucid-SingleSelect-Control lucid-SingleSelect-Control-is-highlighted lucid-SingleSelect-Control-is-selected lucid-SingleSelect-Control-is-expanded"
-      tabIndex={0}
-    >
-      <span
-        className="lucid-SingleSelect-Control-content"
-      >
-        Green
-      </span>
-      <ChevronIcon
-        aspectRatio="xMidYMid meet"
-        color="primary"
-        isClickable={false}
-        isDisabled={false}
-        onClick={[Function]}
-        onSelect={[Function]}
-        size={12}
-        viewBox="0 0 16 16"
-      />
-    </div>
-  </DropMenu.Control>
-  <DropMenu.NullOption>
-    Select Color
-  </DropMenu.NullOption>
-  <DropMenu.OptionGroup
-    isHidden={false}
-    key="SingleSelectOptionGroup0"
-  >
-    Preferred
-    <SingleSelect.Option
-      isDisabled={false}
-      isHidden={false}
-      isWrapped={true}
-    >
-      Red
-    </SingleSelect.Option>
-    <SingleSelect.Option
-      isDisabled={false}
-      isHidden={false}
-      isWrapped={true}
-    >
-      Green
-    </SingleSelect.Option>
-    <SingleSelect.Option
-      isDisabled={false}
-      isHidden={false}
-      isWrapped={true}
-    >
-      Blue
-    </SingleSelect.Option>
-    <DropMenu.Option
-      isDisabled={false}
-      isHidden={false}
-      isWrapped={true}
-      key="SingleSelectOption0"
-    >
-      Red
-    </DropMenu.Option>
-    <DropMenu.Option
-      isDisabled={false}
-      isHidden={false}
-      isWrapped={true}
-      key="SingleSelectOption1"
-    >
-      Green
-    </DropMenu.Option>
-    <DropMenu.Option
-      isDisabled={false}
-      isHidden={false}
-      isWrapped={true}
-      key="SingleSelectOption2"
-    >
-      Blue
-    </DropMenu.Option>
-  </DropMenu.OptionGroup>
-  <DropMenu.Option
-    isDisabled={false}
-    isHidden={false}
-    isWrapped={true}
-    key="SingleSelectOption3"
-  >
-    Orange
-  </DropMenu.Option>
-  <DropMenu.Option
-    isDisabled={true}
-    isHidden={false}
-    isWrapped={true}
-    key="SingleSelectOption4"
-  >
-    Violet
-  </DropMenu.Option>
-  <DropMenu.Option
-    isDisabled={true}
-    isHidden={false}
-    isWrapped={true}
-    key="SingleSelectOption5"
-  >
-    Brown
-  </DropMenu.Option>
-</DropMenu>
+  <SingleSelect
+    onSelect={[Function]}
+  />
+</section>
 `;
 
-exports[`SingleSelect [common] example testing should match snapshot(s) for 13.invisible 1`] = `
-<DropMenu
-  ContextMenu={
+exports[`SingleSelect [common] example testing should match snapshot(s) for Default 1`] = `
+<section
+  style={
     Object {
-      "directonOffset": -1,
+      "minHeight": 90,
     }
   }
-  alignment="start"
-  className="lucid-SingleSelect"
-  direction="down"
-  flyOutStyle={
-    Object {
-      "maxHeight": "18em",
-    }
-  }
-  focusedIndex={null}
-  isDisabled={false}
-  isExpanded={false}
-  onCollapse={[Function]}
-  onExpand={[Function]}
-  onFocusNext={[Function]}
-  onFocusOption={[Function]}
-  onFocusPrev={[Function]}
-  onSelect={[Function]}
-  optionContainerStyle={Object {}}
-  portalId=""
-  selectedIndices={Array []}
 >
-  <DropMenu.Control>
-    <div
-      className="lucid-SingleSelect-Control lucid-SingleSelect-Control-is-invisible lucid-SingleSelect-Control-is-null-option"
-      tabIndex={0}
-    >
-      <span
-        className="lucid-SingleSelect-Control-content"
-      >
-        Select Color
-      </span>
-      <ChevronIcon
-        aspectRatio="xMidYMid meet"
-        color="primary"
-        direction="down"
-        isClickable={false}
-        isDisabled={false}
-        onClick={[Function]}
-        onSelect={[Function]}
-        size={12}
-        viewBox="0 0 16 16"
-      />
-    </div>
-  </DropMenu.Control>
-  <DropMenu.Option
-    isDisabled={false}
-    isHidden={false}
-    isWrapped={true}
-    key="SingleSelectOption0"
-  >
-    Red
-  </DropMenu.Option>
-  <DropMenu.Option
-    isDisabled={false}
-    isHidden={false}
-    isWrapped={true}
-    key="SingleSelectOption1"
-  >
-    Green
-  </DropMenu.Option>
-  <DropMenu.Option
-    isDisabled={false}
-    isHidden={false}
-    isWrapped={true}
-    key="SingleSelectOption2"
-  >
-    Blue
-  </DropMenu.Option>
-</DropMenu>
+  <SingleSelect
+    onSelect={[Function]}
+  />
+</section>
 `;
 
-exports[`SingleSelect [common] example testing should match snapshot(s) for 14.invisible-and-disabled 1`] = `
-<DropMenu
-  ContextMenu={
+exports[`SingleSelect [common] example testing should match snapshot(s) for DisabledOptions 1`] = `
+<section
+  style={
     Object {
-      "directonOffset": -1,
+      "minHeight": 90,
     }
   }
-  alignment="start"
-  className="lucid-SingleSelect"
-  direction="down"
-  flyOutStyle={
-    Object {
-      "maxHeight": "18em",
-    }
-  }
-  focusedIndex={null}
-  isDisabled={true}
-  isExpanded={false}
-  onCollapse={[Function]}
-  onExpand={[Function]}
-  onFocusNext={[Function]}
-  onFocusOption={[Function]}
-  onFocusPrev={[Function]}
-  onSelect={[Function]}
-  optionContainerStyle={Object {}}
-  portalId=""
-  selectedIndices={Array []}
 >
-  <DropMenu.Control>
-    <div
-      className="lucid-SingleSelect-Control lucid-SingleSelect-Control-is-disabled lucid-SingleSelect-Control-is-invisible lucid-SingleSelect-Control-is-null-option"
-      tabIndex={0}
-    >
-      <span
-        className="lucid-SingleSelect-Control-content"
-      >
-        Select Color
-      </span>
-      <ChevronIcon
-        aspectRatio="xMidYMid meet"
-        color="primary"
-        direction="down"
-        isClickable={false}
-        isDisabled={false}
-        onClick={[Function]}
-        onSelect={[Function]}
-        size={12}
-        viewBox="0 0 16 16"
-      />
-    </div>
-  </DropMenu.Control>
-  <DropMenu.Option
-    isDisabled={false}
-    isHidden={false}
-    isWrapped={true}
-    key="SingleSelectOption0"
-  >
-    Red
-  </DropMenu.Option>
-  <DropMenu.Option
-    isDisabled={false}
-    isHidden={false}
-    isWrapped={true}
-    key="SingleSelectOption1"
-  >
-    Green
-  </DropMenu.Option>
-  <DropMenu.Option
-    isDisabled={false}
-    isHidden={false}
-    isWrapped={true}
-    key="SingleSelectOption2"
-  >
-    Blue
-  </DropMenu.Option>
-</DropMenu>
+  <SingleSelect
+    onSelect={[Function]}
+  />
+</section>
+`;
+
+exports[`SingleSelect [common] example testing should match snapshot(s) for DisabledSelect 1`] = `
+<section
+  style={
+    Object {
+      "minHeight": 90,
+    }
+  }
+>
+  <SingleSelect
+    onSelect={[Function]}
+  />
+</section>
+`;
+
+exports[`SingleSelect [common] example testing should match snapshot(s) for FormattedOptions 1`] = `
+<section
+  style={
+    Object {
+      "minHeight": 90,
+    }
+  }
+>
+  <SingleSelect
+    onSelect={[Function]}
+  />
+</section>
+`;
+
+exports[`SingleSelect [common] example testing should match snapshot(s) for GroupedOptions 1`] = `
+<section
+  style={
+    Object {
+      "minHeight": 90,
+    }
+  }
+>
+  <SingleSelect
+    onSelect={[Function]}
+  />
+</section>
+`;
+
+exports[`SingleSelect [common] example testing should match snapshot(s) for Invisible 1`] = `
+<section
+  style={
+    Object {
+      "minHeight": 90,
+    }
+  }
+>
+  <SingleSelect
+    onSelect={[Function]}
+  />
+</section>
+`;
+
+exports[`SingleSelect [common] example testing should match snapshot(s) for InvisibleAndDisabled 1`] = `
+<section
+  style={
+    Object {
+      "minHeight": 90,
+    }
+  }
+>
+  <SingleSelect
+    onSelect={[Function]}
+  />
+</section>
+`;
+
+exports[`SingleSelect [common] example testing should match snapshot(s) for MaxMenuHeight 1`] = `
+<section
+  style={
+    Object {
+      "minHeight": 90,
+    }
+  }
+>
+  <SingleSelect
+    onSelect={[Function]}
+  />
+</section>
+`;
+
+exports[`SingleSelect [common] example testing should match snapshot(s) for NamedOptions 1`] = `
+<section
+  style={
+    Object {
+      "minHeight": 90,
+    }
+  }
+>
+  <SingleSelect
+    onSelect={[Function]}
+  />
+</section>
+`;
+
+exports[`SingleSelect [common] example testing should match snapshot(s) for NoSelectionHighlighting 1`] = `
+<section
+  style={
+    Object {
+      "minHeight": 90,
+    }
+  }
+>
+  <SingleSelect
+    onSelect={[Function]}
+  />
+</section>
+`;
+
+exports[`SingleSelect [common] example testing should match snapshot(s) for NoUnselect 1`] = `
+<section
+  style={
+    Object {
+      "minHeight": 90,
+    }
+  }
+>
+  <SingleSelect
+    onSelect={[Function]}
+  />
+</section>
+`;
+
+exports[`SingleSelect [common] example testing should match snapshot(s) for RichContent 1`] = `
+<section
+  style={
+    Object {
+      "minHeight": 90,
+    }
+  }
+>
+  <SingleSelect
+    onSelect={[Function]}
+  />
+</section>
+`;
+
+exports[`SingleSelect [common] example testing should match snapshot(s) for Stateless 1`] = `
+<section
+  style={
+    Object {
+      "minHeight": 90,
+    }
+  }
+>
+  <SingleSelect
+    onSelect={[Function]}
+  />
+</section>
 `;
 
 exports[`SingleSelect child elements Option should render Option.Selected in the Placeholder area 1`] = `

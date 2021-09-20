@@ -7,6 +7,7 @@
 
 	.@{prefix}-Button + .@{prefix}-Button {
 		border-left: 0px;
+		mix-blend-mode: normal;
 	}
 
 	> .@{prefix}-Button {
@@ -16,11 +17,12 @@
 
 		&.@{prefix}-Button-is-active {
 			outline: 1px solid @color-primary;
-			background-color: @color-neutral-1;
+			background-color: @color-primary-light;
 			z-index: 1;
+			mix-blend-mode: normal;
 
 			&:hover {
-				background-color: @color-neutral-3;
+				background-color: @color-primary-light-hover;
 			}
 		}
 	}

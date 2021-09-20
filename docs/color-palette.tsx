@@ -24,7 +24,12 @@ const colorList = [
 		category: 'Primary',
 		description:
 			"The primary color is the most prominent color used throughout lucid. It's great for drawing the user's eye to particular components.",
-		variables: ['color-primaryLight', 'color-primary'],
+		variables: [
+			'color-primary',
+			'color-primaryLight',
+			'color-primaryLightHover',
+			'color-primaryDark',
+		],
 	},
 	{
 		category: 'Secondary',
@@ -305,7 +310,7 @@ const ColorPalette = createClass({
 										{`@${variableName}; `}
 										{hasAliases
 											? `(aliases: ${variable.aliases
-													.map(v => `@${v};`)
+													.map((v) => `@${v};`)
 													.join(' ')})`
 											: null}
 									</span>
@@ -327,7 +332,7 @@ const ColorPalette = createClass({
 						gridGap: 15,
 					}}
 				>
-					{_.map(_.times(7 * 5), n => (
+					{_.map(_.times(7 * 5), (n) => (
 						<div
 							className={cx(
 								`&-color-chart-${Math.floor(n / 5)}${shades[n % 5]}`

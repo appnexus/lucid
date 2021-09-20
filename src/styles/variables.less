@@ -103,10 +103,12 @@
 
 // Primary colors
 @color-primary: #587eba;
-@color-primaryLight: #eef2f8;
 @color-primary-50: fade(@color-primary, 50%);
 
 // Primary accent colors
+@color-primary-light: #eef2f8;
+@color-primaryLight: @color-primary-light; // only for legacy css. please use @color-primary-light
+@color-primary-light-hover: #e6ecf5;
 @color-primary-dark: #4368a1;
 
 // Secondary colors
@@ -191,7 +193,7 @@
 @color-table-header-light-color: @color-neutral-9;
 @color-table-header-light-sort-hover: @color-neutral-3;
 
-@color-table-row-selected-background: @color-primaryLight;
+@color-table-row-selected-background: @color-primary-light;
 @color-table-row-hover-background: @color-neutral-2;
 @color-table-row-active-hover-background: #f0eeed;
 @color-table-row-selected-hover-background: #dce5f1;
