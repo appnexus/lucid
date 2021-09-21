@@ -1725,6 +1725,444 @@ exports[`SearchableSingleSelect [common] example testing should match snapshot(s
 </div>
 `;
 
+exports[`SearchableSingleSelect [common] example testing should match snapshot(s) for Asynchronous 1`] = `
+<section>
+  <div
+    class="lucid-SearchableSingleSelect"
+  >
+    <div
+      class="lucid-DropMenu lucid-DropMenu-base lucid-SearchableSingleSelect-DropMenu lucid-SearchableSingleSelect-DropMenu-is-small"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        <div
+          class="lucid-DropMenu-Control"
+          tabindex="0"
+        >
+          <div
+            class="lucid-SearchField lucid-SearchableSingleSelect-search"
+          >
+            <input
+              autocomplete="off"
+              class="lucid-TextField lucid-TextField-is-single-line"
+              placeholder="Type here to simulate an API backed search"
+              rows="5"
+              type="text"
+              value=""
+            />
+            <div
+              class="lucid-SearchField-Icon-container"
+            >
+              <svg
+                class="lucid-Icon lucid-Icon-color-primary lucid-SearchIcon lucid-SearchField-Icon"
+                height="12"
+                preserveAspectRatio="xMidYMid meet"
+                viewBox="0 0 16 16"
+                width="12"
+              >
+                <circle
+                  cx="6"
+                  cy="6"
+                  r="5.5"
+                />
+                <path
+                  d="M15.5 15.5L9.876 9.876"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </span>
+    </div>
+  </div>
+</section>
+`;
+
+exports[`SearchableSingleSelect [common] example testing should match snapshot(s) for Default 1`] = `
+<section>
+  <div
+    class="lucid-SearchableSingleSelect"
+    style="max-width:200px"
+  >
+    <div
+      class="lucid-DropMenu lucid-DropMenu-base lucid-SearchableSingleSelect-DropMenu lucid-SearchableSingleSelect-DropMenu-is-small"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        <div
+          class="lucid-DropMenu-Control"
+          tabindex="0"
+        >
+          <div
+            class="lucid-SearchField lucid-SearchableSingleSelect-search"
+          >
+            <input
+              autocomplete="off"
+              class="lucid-TextField lucid-TextField-is-single-line"
+              placeholder="Search State"
+              rows="5"
+              type="text"
+              value=""
+            />
+            <div
+              class="lucid-SearchField-Icon-container"
+            >
+              <svg
+                class="lucid-Icon lucid-Icon-color-primary lucid-SearchIcon lucid-SearchField-Icon"
+                height="12"
+                preserveAspectRatio="xMidYMid meet"
+                viewBox="0 0 16 16"
+                width="12"
+              >
+                <circle
+                  cx="6"
+                  cy="6"
+                  r="5.5"
+                />
+                <path
+                  d="M15.5 15.5L9.876 9.876"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </span>
+    </div>
+  </div>
+</section>
+`;
+
+exports[`SearchableSingleSelect [common] example testing should match snapshot(s) for FormattedOptions 1`] = `
+<section>
+  <div
+    class="lucid-SearchableSingleSelect"
+    style="max-width:200px"
+  >
+    <div
+      class="lucid-DropMenu lucid-DropMenu-base lucid-SearchableSingleSelect-DropMenu lucid-SearchableSingleSelect-DropMenu-is-small"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        <div
+          class="lucid-DropMenu-Control"
+          tabindex="0"
+        >
+          <div
+            class="lucid-SearchField lucid-SearchableSingleSelect-search"
+          >
+            <input
+              autocomplete="off"
+              class="lucid-TextField lucid-TextField-is-single-line"
+              placeholder="Search Options"
+              rows="5"
+              type="text"
+              value=""
+            />
+            <div
+              class="lucid-SearchField-Icon-container"
+            >
+              <svg
+                class="lucid-Icon lucid-Icon-color-primary lucid-SearchIcon lucid-SearchField-Icon"
+                height="12"
+                preserveAspectRatio="xMidYMid meet"
+                viewBox="0 0 16 16"
+                width="12"
+              >
+                <circle
+                  cx="6"
+                  cy="6"
+                  r="5.5"
+                />
+                <path
+                  d="M15.5 15.5L9.876 9.876"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </span>
+    </div>
+  </div>
+</section>
+`;
+
+exports[`SearchableSingleSelect [common] example testing should match snapshot(s) for GroupedOptions 1`] = `
+<section>
+  <div
+    class="lucid-SearchableSingleSelect"
+    style="max-width:200px"
+  >
+    <div
+      class="lucid-DropMenu lucid-DropMenu-base lucid-SearchableSingleSelect-DropMenu lucid-SearchableSingleSelect-DropMenu-is-small"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        <div
+          class="lucid-DropMenu-Control"
+          tabindex="0"
+        >
+          <div
+            class="lucid-SearchField lucid-SearchableSingleSelect-search"
+          >
+            <input
+              autocomplete="off"
+              class="lucid-TextField lucid-TextField-is-single-line"
+              rows="5"
+              type="text"
+              value=""
+            />
+            <div
+              class="lucid-SearchField-Icon-container"
+            >
+              <svg
+                class="lucid-Icon lucid-Icon-color-primary lucid-SearchIcon lucid-SearchField-Icon"
+                height="12"
+                preserveAspectRatio="xMidYMid meet"
+                viewBox="0 0 16 16"
+                width="12"
+              >
+                <circle
+                  cx="6"
+                  cy="6"
+                  r="5.5"
+                />
+                <path
+                  d="M15.5 15.5L9.876 9.876"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </span>
+    </div>
+  </div>
+</section>
+`;
+
+exports[`SearchableSingleSelect [common] example testing should match snapshot(s) for InvalidOption 1`] = `
+<div
+  class="lucid-SearchableSingleSelect"
+>
+  <div
+    class="lucid-DropMenu lucid-DropMenu-base lucid-SearchableSingleSelect-DropMenu lucid-SearchableSingleSelect-DropMenu-is-small"
+  >
+    <span
+      class="lucid-ContextMenu"
+    >
+      <div
+        class="lucid-DropMenu-Control"
+        tabindex="0"
+      >
+        <div
+          class="lucid-SearchField lucid-SearchableSingleSelect-search lucid-SearchableSingleSelect-search-is-error"
+        >
+          <input
+            autocomplete="off"
+            class="lucid-TextField lucid-TextField-is-single-line"
+            rows="5"
+            type="text"
+            value=""
+          />
+          <div
+            class="lucid-SearchField-Icon-container"
+          >
+            <svg
+              class="lucid-Icon lucid-Icon-color-primary lucid-SearchIcon lucid-SearchField-Icon"
+              height="12"
+              preserveAspectRatio="xMidYMid meet"
+              viewBox="0 0 16 16"
+              width="12"
+            >
+              <circle
+                cx="6"
+                cy="6"
+                r="5.5"
+              />
+              <path
+                d="M15.5 15.5L9.876 9.876"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </span>
+  </div>
+  <div
+    class="lucid-SearchableSingleSelect-error-content"
+  >
+    Please Choose Green
+  </div>
+</div>
+`;
+
+exports[`SearchableSingleSelect [common] example testing should match snapshot(s) for Props 1`] = `
+<section>
+  <h5>
+    Loading
+  </h5>
+  <div
+    class="lucid-SearchableSingleSelect"
+  >
+    <div
+      class="lucid-DropMenu lucid-DropMenu-base lucid-SearchableSingleSelect-DropMenu lucid-SearchableSingleSelect-DropMenu-is-small"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        <div
+          class="lucid-DropMenu-Control"
+          tabindex="0"
+        >
+          <div
+            class="lucid-SearchField lucid-SearchableSingleSelect-search"
+          >
+            <input
+              autocomplete="off"
+              class="lucid-TextField lucid-TextField-is-single-line"
+              placeholder="Search State"
+              rows="5"
+              type="text"
+              value=""
+            />
+            <div
+              class="lucid-SearchField-Icon-container"
+            >
+              <svg
+                class="lucid-Icon lucid-Icon-color-primary lucid-SearchIcon lucid-SearchField-Icon"
+                height="12"
+                preserveAspectRatio="xMidYMid meet"
+                viewBox="0 0 16 16"
+                width="12"
+              >
+                <circle
+                  cx="6"
+                  cy="6"
+                  r="5.5"
+                />
+                <path
+                  d="M15.5 15.5L9.876 9.876"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </span>
+    </div>
+  </div>
+  <h5>
+    Disabled
+  </h5>
+  <div
+    class="lucid-SearchableSingleSelect"
+  >
+    <div
+      class="lucid-DropMenu lucid-DropMenu-base lucid-SearchableSingleSelect-DropMenu lucid-SearchableSingleSelect-DropMenu-is-small"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        <div
+          class="lucid-DropMenu-Control"
+        >
+          <div
+            class="lucid-SearchField lucid-SearchableSingleSelect-search"
+          >
+            <input
+              autocomplete="off"
+              class="lucid-TextField lucid-TextField-is-disabled lucid-TextField-is-single-line"
+              disabled=""
+              placeholder="Search State"
+              rows="5"
+              type="text"
+              value=""
+            />
+            <div
+              class="lucid-SearchField-Icon-container lucid-SearchField-Icon-is-disabled"
+            >
+              <svg
+                class="lucid-Icon lucid-Icon-color-primary lucid-SearchIcon lucid-SearchField-Icon"
+                height="12"
+                preserveAspectRatio="xMidYMid meet"
+                viewBox="0 0 16 16"
+                width="12"
+              >
+                <circle
+                  cx="6"
+                  cy="6"
+                  r="5.5"
+                />
+                <path
+                  d="M15.5 15.5L9.876 9.876"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </span>
+    </div>
+  </div>
+</section>
+`;
+
+exports[`SearchableSingleSelect [common] example testing should match snapshot(s) for SelectedOption 1`] = `
+<section>
+  <div
+    class="lucid-SearchableSingleSelect"
+    style="max-width:200px"
+  >
+    <div
+      class="lucid-DropMenu lucid-DropMenu-base lucid-SearchableSingleSelect-DropMenu lucid-SearchableSingleSelect-DropMenu-is-small"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        <div
+          class="lucid-DropMenu-Control"
+          tabindex="0"
+        >
+          <div
+            class="lucid-SearchField lucid-SearchableSingleSelect-search"
+          >
+            <input
+              autocomplete="off"
+              class="lucid-TextField lucid-TextField-is-single-line"
+              placeholder="Search Color"
+              rows="5"
+              type="text"
+              value=""
+            />
+            <div
+              class="lucid-SearchField-Icon-container"
+            >
+              <svg
+                class="lucid-Icon lucid-Icon-color-primary lucid-SearchIcon lucid-SearchField-Icon"
+                height="12"
+                preserveAspectRatio="xMidYMid meet"
+                viewBox="0 0 16 16"
+                width="12"
+              >
+                <circle
+                  cx="6"
+                  cy="6"
+                  r="5.5"
+                />
+                <path
+                  d="M15.5 15.5L9.876 9.876"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </span>
+    </div>
+  </div>
+</section>
+`;
+
 exports[`SearchableSingleSelect custom formatting should render Option child function by passing in {searchText}, setting filterText on each option and using a custom optionFilter 1`] = `
 <div
   className="lucid-SearchableSingleSelect"
