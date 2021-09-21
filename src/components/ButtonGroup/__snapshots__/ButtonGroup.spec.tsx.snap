@@ -1,101 +1,196 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ButtonGroup [common] example testing should match snapshot(s) for Default 1`] = `
-<ButtonGroup
-  selectedIndices={
-    Array [
-      1,
-      2,
-    ]
-  }
+<span
+  class="lucid-ButtonGroup"
 >
-  <ButtonGroup.Button
-    style={
-      Object {
-        "width": "100px",
-      }
-    }
+  <button
+    class="lucid-Button"
+    style="width:100px"
+    type="button"
   >
-    Smol
-  </ButtonGroup.Button>
-  <ButtonGroup.Button
-    style={
-      Object {
-        "width": "100px",
-      }
-    }
+    <span
+      class="lucid-Button-content"
+    >
+      Smol
+    </span>
+  </button>
+  <button
+    class="lucid-Button lucid-Button-is-active"
+    style="width:100px"
+    type="button"
   >
-    Lonnnnnnnng
-  </ButtonGroup.Button>
-  <ButtonGroup.Button
-    style={
-      Object {
-        "width": "100px",
-      }
-    }
+    <span
+      class="lucid-Button-content"
+    >
+      Lonnnnnnnng
+    </span>
+  </button>
+  <button
+    class="lucid-Button lucid-Button-is-active"
+    style="width:100px"
+    type="button"
   >
-    Medium
-  </ButtonGroup.Button>
-</ButtonGroup>
+    <span
+      class="lucid-Button-content"
+    >
+      Medium
+    </span>
+  </button>
+</span>
 `;
 
 exports[`ButtonGroup [common] example testing should match snapshot(s) for Stateful 1`] = `
-<ButtonGroup>
-  <ButtonGroup.Button>
-    Zero
-  </ButtonGroup.Button>
-  <ButtonGroup.Button>
-    One
-  </ButtonGroup.Button>
-  <ButtonGroup.Button>
-    Two
-  </ButtonGroup.Button>
-  <ButtonGroup.Button>
-    Three
-  </ButtonGroup.Button>
-</ButtonGroup>
+<span
+  class="lucid-ButtonGroup"
+>
+  <button
+    class="lucid-Button"
+    type="button"
+  >
+    <span
+      class="lucid-Button-content"
+    >
+      Zero
+    </span>
+  </button>
+  <button
+    class="lucid-Button"
+    type="button"
+  >
+    <span
+      class="lucid-Button-content"
+    >
+      One
+    </span>
+  </button>
+  <button
+    class="lucid-Button"
+    type="button"
+  >
+    <span
+      class="lucid-Button-content"
+    >
+      Two
+    </span>
+  </button>
+  <button
+    class="lucid-Button"
+    type="button"
+  >
+    <span
+      class="lucid-Button-content"
+    >
+      Three
+    </span>
+  </button>
+</span>
 `;
 
 exports[`ButtonGroup [common] example testing should match snapshot(s) for Stateless 1`] = `
-<ButtonGroup
-  selectedIndices={
-    Array [
-      7,
-      8,
-    ]
-  }
+<span
+  class="lucid-ButtonGroup"
 >
-  <ButtonGroup.Button>
-    Zero
-  </ButtonGroup.Button>
-  <ButtonGroup.Button>
-    One
-  </ButtonGroup.Button>
-  <ButtonGroup.Button>
-    Two
-  </ButtonGroup.Button>
-  <ButtonGroup.Button>
-    Three
-  </ButtonGroup.Button>
-  <ButtonGroup.Button>
-    Four
-  </ButtonGroup.Button>
-  <ButtonGroup.Button
-    isDisabled={true}
+  <button
+    class="lucid-Button"
+    type="button"
   >
-    Five
-  </ButtonGroup.Button>
-  <ButtonGroup.Button>
-    Six
-  </ButtonGroup.Button>
-  <ButtonGroup.Button>
-    Seven
-  </ButtonGroup.Button>
-  <ButtonGroup.Button>
-    Eight
-  </ButtonGroup.Button>
-  <ButtonGroup.Button>
-    Nine
-  </ButtonGroup.Button>
-</ButtonGroup>
+    <span
+      class="lucid-Button-content"
+    >
+      Zero
+    </span>
+  </button>
+  <button
+    class="lucid-Button"
+    type="button"
+  >
+    <span
+      class="lucid-Button-content"
+    >
+      One
+    </span>
+  </button>
+  <button
+    class="lucid-Button"
+    type="button"
+  >
+    <span
+      class="lucid-Button-content"
+    >
+      Two
+    </span>
+  </button>
+  <button
+    class="lucid-Button"
+    type="button"
+  >
+    <span
+      class="lucid-Button-content"
+    >
+      Three
+    </span>
+  </button>
+  <button
+    class="lucid-Button"
+    type="button"
+  >
+    <span
+      class="lucid-Button-content"
+    >
+      Four
+    </span>
+  </button>
+  <button
+    class="lucid-Button lucid-Button-is-disabled"
+    disabled=""
+    type="button"
+  >
+    <span
+      class="lucid-Button-content"
+    >
+      Five
+    </span>
+  </button>
+  <button
+    class="lucid-Button"
+    type="button"
+  >
+    <span
+      class="lucid-Button-content"
+    >
+      Six
+    </span>
+  </button>
+  <button
+    class="lucid-Button lucid-Button-is-active"
+    type="button"
+  >
+    <span
+      class="lucid-Button-content"
+    >
+      Seven
+    </span>
+  </button>
+  <button
+    class="lucid-Button lucid-Button-is-active"
+    type="button"
+  >
+    <span
+      class="lucid-Button-content"
+    >
+      Eight
+    </span>
+  </button>
+  <button
+    class="lucid-Button"
+    type="button"
+  >
+    <span
+      class="lucid-Button-content"
+    >
+      Nine
+    </span>
+  </button>
+</span>
 `;
