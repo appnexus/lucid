@@ -246,6 +246,7 @@ MaxMenuHeight.parameters = {
 	},
 };
 
+/** Rich Content */
 export const RichContent = Template.bind({});
 RichContent.args = {
 	...Default.args,
@@ -275,6 +276,7 @@ RichContent.parameters = {
 	},
 };
 
+/** No Selection Highlighting */
 export const NoSelectionHighlighting = Template.bind({});
 NoSelectionHighlighting.args = {
 	...Default.args,
@@ -289,6 +291,7 @@ NoSelectionHighlighting.parameters = {
 	},
 };
 
+/** Array Options */
 export const ArrayOptions = Template.bind({});
 ArrayOptions.args = {
 	Placeholder: 'Select a Number',
@@ -303,6 +306,7 @@ ArrayOptions.parameters = {
 	},
 };
 
+/** Stateless */
 export const Stateless = Template.bind({});
 Stateless.args = {
 	...Default.args,
@@ -331,6 +335,7 @@ Stateless.parameters = {
 	},
 };
 
+/** Invisible */
 export const Invisible = Template.bind({});
 Invisible.args = {
 	...Default.args,
@@ -345,6 +350,7 @@ Invisible.parameters = {
 	},
 };
 
+/** Invisible and Disabled */
 export const InvisibleAndDisabled = Template.bind({});
 InvisibleAndDisabled.args = {
 	...Default.args,

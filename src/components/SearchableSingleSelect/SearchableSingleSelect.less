@@ -2,7 +2,6 @@
 @import (reference) '../../styles/mixins.less';
 
 .@{prefix}-SearchableSingleSelect {
-
 	// Increase specificity to minimum necessary to beat DropMenu
 	&-DropMenu&-DropMenu&-DropMenu {
 		display: block;
@@ -95,5 +94,14 @@
 			border: 2px solid @featured-color-danger !important;
 		}
 	}
-}
 
+	// States
+	&.@{prefix}-Selection {
+		border-color: @color-primary;
+		background-color: @color-primary-light;
+
+		&:hover {
+			background-color: @color-primary-light-hover;
+		}
+	}
+}

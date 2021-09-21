@@ -175,9 +175,7 @@ class SearchableSingleSelect extends React.Component<
 > {
 	static displayName = 'SearchableSingleSelect';
 	static peek = {
-		description: `
-			A control used to select a single option from a dropdown list using a SearchField.
-		`,
+		description: `A control used to select a single option from a dropdown list using a \`SearchField\`.`,
 		categories: ['controls', 'selectors'],
 		madeFrom: ['Checkbox', 'SearchField', 'DropMenu', 'LoadingIcon'],
 	};
