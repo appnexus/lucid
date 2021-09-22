@@ -1,27 +1,81 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`VerticalListMenu [common] example testing should match snapshot(s) for 1.basic 1`] = `
+exports[`VerticalListMenu [common] example testing should match snapshot(s) for Default 1`] = `
+<section>
+  <ul
+    class="lucid-VerticalListMenu"
+    style="width:250px"
+  >
+    <li
+      class="lucid-VerticalListMenu-Item"
+    >
+      <div
+        class="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-not-selected lucid-VerticalListMenu-Item-content-is-actionable"
+      >
+        <div
+          class="lucid-VerticalListMenu-Item-content-body"
+        >
+          <div
+            class="lucid-VerticalListMenu-Item-content-text"
+          >
+            Level one
+          </div>
+        </div>
+      </div>
+    </li>
+    <li
+      class="lucid-VerticalListMenu-Item"
+    >
+      <div
+        class="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-not-selected lucid-VerticalListMenu-Item-content-is-actionable"
+      >
+        <div
+          class="lucid-VerticalListMenu-Item-content-body"
+        >
+          <div
+            class="lucid-VerticalListMenu-Item-content-text"
+          >
+            Level one
+          </div>
+        </div>
+      </div>
+    </li>
+    <li
+      class="lucid-VerticalListMenu-Item"
+    >
+      <div
+        class="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-not-selected lucid-VerticalListMenu-Item-content-is-actionable"
+      >
+        <div
+          class="lucid-VerticalListMenu-Item-content-body"
+        >
+          <div
+            class="lucid-VerticalListMenu-Item-content-text"
+          >
+            Level one
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
+</section>
+`;
+
+exports[`VerticalListMenu [common] example testing should match snapshot(s) for NestedFullWidth 1`] = `
 <ul
-  className="lucid-VerticalListMenu"
-  style={
-    Object {
-      "width": 250,
-    }
-  }
+  class="lucid-VerticalListMenu"
 >
   <li
-    className="lucid-VerticalListMenu-Item"
-    key="0"
+    class="lucid-VerticalListMenu-Item"
   >
     <div
-      className="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-not-selected lucid-VerticalListMenu-Item-content-is-actionable"
-      onClick={[Function]}
+      class="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-selected lucid-VerticalListMenu-Item-content-is-actionable"
     >
       <div
-        className="lucid-VerticalListMenu-Item-content-body"
+        class="lucid-VerticalListMenu-Item-content-body"
       >
         <div
-          className="lucid-VerticalListMenu-Item-content-text"
+          class="lucid-VerticalListMenu-Item-content-text"
         >
           Level one
         </div>
@@ -29,77 +83,197 @@ exports[`VerticalListMenu [common] example testing should match snapshot(s) for 
     </div>
   </li>
   <li
-    className="lucid-VerticalListMenu-Item"
-    key="1"
+    class="lucid-VerticalListMenu-Item"
   >
     <div
-      className="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-not-selected lucid-VerticalListMenu-Item-content-is-actionable"
-      onClick={[Function]}
+      class="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-not-selected lucid-VerticalListMenu-Item-content-is-expanded lucid-VerticalListMenu-Item-content-is-actionable"
     >
       <div
-        className="lucid-VerticalListMenu-Item-content-body"
+        class="lucid-VerticalListMenu-Item-content-body"
       >
         <div
-          className="lucid-VerticalListMenu-Item-content-text"
+          class="lucid-VerticalListMenu-Item-content-text"
         >
-          Level one
+          Level one with VerticalListMenu
         </div>
+      </div>
+    </div>
+    <div
+      class="lucid-Collapsible lucid-VerticalListMenu-Item-nested-list"
+      style="overflow:hidden;padding:0"
+    >
+      <div
+        class="lucid-Collapsible-content"
+        style="margin:0"
+      >
+        <ul
+          class="lucid-VerticalListMenu"
+        >
+          <li
+            class="lucid-VerticalListMenu-Item"
+          >
+            <div
+              class="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-not-selected lucid-VerticalListMenu-Item-content-is-actionable"
+            >
+              <div
+                class="lucid-VerticalListMenu-Item-content-body"
+              >
+                <div
+                  class="lucid-VerticalListMenu-Item-content-text"
+                >
+                  Level two
+                </div>
+              </div>
+            </div>
+          </li>
+          <li
+            class="lucid-VerticalListMenu-Item"
+          >
+            <div
+              class="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-not-selected lucid-VerticalListMenu-Item-content-is-actionable"
+            >
+              <div
+                class="lucid-VerticalListMenu-Item-content-body"
+              >
+                <div
+                  class="lucid-VerticalListMenu-Item-content-text"
+                >
+                  Level two
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
       </div>
     </div>
   </li>
   <li
-    className="lucid-VerticalListMenu-Item"
-    key="2"
+    class="lucid-VerticalListMenu-Item"
   >
     <div
-      className="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-not-selected lucid-VerticalListMenu-Item-content-is-actionable"
-      onClick={[Function]}
+      class="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-not-selected lucid-VerticalListMenu-Item-content-is-expanded lucid-VerticalListMenu-Item-content-is-actionable"
     >
       <div
-        className="lucid-VerticalListMenu-Item-content-body"
+        class="lucid-VerticalListMenu-Item-content-body"
       >
         <div
-          className="lucid-VerticalListMenu-Item-content-text"
+          class="lucid-VerticalListMenu-Item-content-text"
+        >
+          Level one with VerticalListMenu
+        </div>
+      </div>
+    </div>
+    <div
+      class="lucid-Collapsible lucid-VerticalListMenu-Item-nested-list"
+      style="overflow:hidden;padding:0"
+    >
+      <div
+        class="lucid-Collapsible-content"
+        style="margin:0"
+      >
+        <ul
+          class="lucid-VerticalListMenu"
+        >
+          <li
+            class="lucid-VerticalListMenu-Item"
+          >
+            <div
+              class="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-not-selected lucid-VerticalListMenu-Item-content-is-actionable"
+            >
+              <div
+                class="lucid-VerticalListMenu-Item-content-body"
+              >
+                <div
+                  class="lucid-VerticalListMenu-Item-content-text"
+                >
+                  Level two
+                </div>
+              </div>
+            </div>
+          </li>
+          <li
+            class="lucid-VerticalListMenu-Item"
+          >
+            <div
+              class="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-not-selected lucid-VerticalListMenu-Item-content-is-actionable"
+            >
+              <div
+                class="lucid-VerticalListMenu-Item-content-body"
+              >
+                <div
+                  class="lucid-VerticalListMenu-Item-content-text"
+                >
+                  Level two with closed VerticalListMenu
+                </div>
+              </div>
+            </div>
+            <div
+              class="lucid-Collapsible lucid-VerticalListMenu-Item-nested-list"
+              style="overflow:hidden;padding:0"
+            >
+              <div
+                class="lucid-Collapsible-content"
+                style="margin:0"
+              />
+            </div>
+          </li>
+          <li
+            class="lucid-VerticalListMenu-Item"
+          >
+            <div
+              class="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-not-selected lucid-VerticalListMenu-Item-content-is-actionable"
+            >
+              <div
+                class="lucid-VerticalListMenu-Item-content-body"
+              >
+                <div
+                  class="lucid-VerticalListMenu-Item-content-text"
+                >
+                  Level two
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </li>
+  <li
+    class="lucid-VerticalListMenu-Item"
+  >
+    <div
+      class="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-not-selected lucid-VerticalListMenu-Item-content-is-actionable"
+    >
+      <div
+        class="lucid-VerticalListMenu-Item-content-body"
+      >
+        <div
+          class="lucid-VerticalListMenu-Item-content-text"
         >
           Level one
         </div>
       </div>
     </div>
   </li>
-  <VerticalListMenu.Item>
-    Level one
-  </VerticalListMenu.Item>
-  <VerticalListMenu.Item>
-    Level one
-  </VerticalListMenu.Item>
-  <VerticalListMenu.Item>
-    Level one
-  </VerticalListMenu.Item>
 </ul>
 `;
 
-exports[`VerticalListMenu [common] example testing should match snapshot(s) for 2.nested-with-expander 1`] = `
+exports[`VerticalListMenu [common] example testing should match snapshot(s) for NestedWithExpander 1`] = `
 <ul
-  className="lucid-VerticalListMenu"
-  style={
-    Object {
-      "width": 250,
-    }
-  }
+  class="lucid-VerticalListMenu"
+  style="width:250px"
 >
   <li
-    className="lucid-VerticalListMenu-Item"
-    key="0"
+    class="lucid-VerticalListMenu-Item"
   >
     <div
-      className="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-selected lucid-VerticalListMenu-Item-content-is-actionable"
-      onClick={[Function]}
+      class="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-selected lucid-VerticalListMenu-Item-content-is-actionable"
     >
       <div
-        className="lucid-VerticalListMenu-Item-content-body"
+        class="lucid-VerticalListMenu-Item-content-body"
       >
         <div
-          className="lucid-VerticalListMenu-Item-content-text"
+          class="lucid-VerticalListMenu-Item-content-text"
         >
           Level one
         </div>
@@ -107,1439 +281,492 @@ exports[`VerticalListMenu [common] example testing should match snapshot(s) for 
     </div>
   </li>
   <li
-    className="lucid-VerticalListMenu-Item"
-    key="1"
+    class="lucid-VerticalListMenu-Item"
   >
     <div
-      className="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-not-selected lucid-VerticalListMenu-Item-content-is-actionable"
-      onClick={[Function]}
+      class="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-not-selected lucid-VerticalListMenu-Item-content-is-actionable"
     >
       <div
-        className="lucid-VerticalListMenu-Item-content-body"
+        class="lucid-VerticalListMenu-Item-content-body"
       >
         <div
-          className="lucid-VerticalListMenu-Item-content-text"
+          class="lucid-VerticalListMenu-Item-content-text"
         >
           Level one with VerticalListMenu
         </div>
         <div
-          className="lucid-VerticalListMenu-Item-expander"
-          onClick={[Function]}
+          class="lucid-VerticalListMenu-Item-expander"
         >
-          <ChevronIcon
-            aspectRatio="xMidYMid meet"
-            color="primary"
-            direction="down"
-            isClickable={false}
-            isDisabled={false}
-            onClick={[Function]}
-            onSelect={[Function]}
-            size={12}
+          <svg
+            class="lucid-Icon lucid-Icon-color-primary lucid-ChevronIcon lucid-ChevronIcon-is-down"
+            height="12"
+            preserveAspectRatio="xMidYMid meet"
             viewBox="0 0 16 16"
-          />
+            width="12"
+          >
+            <path
+              d="M.5 4.5l7.5 7 7.5-7"
+            />
+          </svg>
         </div>
       </div>
     </div>
-    <Collapsible
-      className="lucid-VerticalListMenu-Item-nested-list"
-      isAnimated={true}
-      isExpanded={false}
-      isMountControlled={true}
-      mountControlThreshold={4}
-      rootType="div"
-    >
-      <VerticalListMenu
-        key=".1"
-        onSelect={[Function]}
-        selectedIndices={Array []}
-      >
-        <VerticalListMenu.Item>
-          Level two
-        </VerticalListMenu.Item>
-        <VerticalListMenu.Item
-          hasExpander={true}
-        >
-          Level two with VerticalListMenu and lots of text. Lorem quos natus mollitia nihil quasi! Necessitatibus corporis aliquam quam laborum nesciunt quaerat. Nostrum distinctio officiis adipisci nulla unde repellat. Soluta eaque ex obcaecati molestiae provident aspernatur sit! Expedita et.
-          <VerticalListMenu
-            onSelect={[Function]}
-            selectedIndices={Array []}
-          >
-            <VerticalListMenu.Item
-              key="0"
-            >
-              Level three
-            </VerticalListMenu.Item>
-            <VerticalListMenu.Item
-              key="1"
-            >
-              Level three
-            </VerticalListMenu.Item>
-            <VerticalListMenu.Item
-              key="2"
-            >
-              Level three
-            </VerticalListMenu.Item>
-            <VerticalListMenu.Item
-              key="3"
-            >
-              Level three
-            </VerticalListMenu.Item>
-            <VerticalListMenu.Item
-              key="4"
-            >
-              Level three
-            </VerticalListMenu.Item>
-            <VerticalListMenu.Item
-              key="5"
-            >
-              Level three
-            </VerticalListMenu.Item>
-            <VerticalListMenu.Item
-              key="6"
-            >
-              Level three
-            </VerticalListMenu.Item>
-            <VerticalListMenu.Item
-              key="7"
-            >
-              Level three
-            </VerticalListMenu.Item>
-            <VerticalListMenu.Item
-              key="8"
-            >
-              Level three
-            </VerticalListMenu.Item>
-            <VerticalListMenu.Item
-              key="9"
-            >
-              Level three
-            </VerticalListMenu.Item>
-            <VerticalListMenu.Item
-              key="10"
-            >
-              Level three
-            </VerticalListMenu.Item>
-            <VerticalListMenu.Item
-              key="11"
-            >
-              Level three
-            </VerticalListMenu.Item>
-            <VerticalListMenu.Item
-              key="12"
-            >
-              Level three
-            </VerticalListMenu.Item>
-            <VerticalListMenu.Item
-              key="13"
-            >
-              Level three
-            </VerticalListMenu.Item>
-            <VerticalListMenu.Item
-              key="14"
-            >
-              Level three
-            </VerticalListMenu.Item>
-            <VerticalListMenu.Item
-              key="15"
-            >
-              Level three
-            </VerticalListMenu.Item>
-            <VerticalListMenu.Item
-              key="16"
-            >
-              Level three
-            </VerticalListMenu.Item>
-            <VerticalListMenu.Item
-              key="17"
-            >
-              Level three
-            </VerticalListMenu.Item>
-            <VerticalListMenu.Item
-              key="18"
-            >
-              Level three
-            </VerticalListMenu.Item>
-            <VerticalListMenu.Item
-              key="19"
-            >
-              Level three
-            </VerticalListMenu.Item>
-            <VerticalListMenu.Item
-              key="20"
-            >
-              Level three
-            </VerticalListMenu.Item>
-            <VerticalListMenu.Item
-              key="21"
-            >
-              Level three
-            </VerticalListMenu.Item>
-            <VerticalListMenu.Item
-              key="22"
-            >
-              Level three
-            </VerticalListMenu.Item>
-            <VerticalListMenu.Item
-              key="23"
-            >
-              Level three
-            </VerticalListMenu.Item>
-            <VerticalListMenu.Item
-              key="24"
-            >
-              Level three
-            </VerticalListMenu.Item>
-            <VerticalListMenu.Item
-              key="25"
-            >
-              Level three
-            </VerticalListMenu.Item>
-            <VerticalListMenu.Item
-              key="26"
-            >
-              Level three
-            </VerticalListMenu.Item>
-            <VerticalListMenu.Item
-              key="27"
-            >
-              Level three
-            </VerticalListMenu.Item>
-            <VerticalListMenu.Item
-              key="28"
-            >
-              Level three
-            </VerticalListMenu.Item>
-            <VerticalListMenu.Item
-              key="29"
-            >
-              Level three
-            </VerticalListMenu.Item>
-            <VerticalListMenu.Item
-              key="30"
-            >
-              Level three
-            </VerticalListMenu.Item>
-            <VerticalListMenu.Item
-              key="31"
-            >
-              Level three
-            </VerticalListMenu.Item>
-            <VerticalListMenu.Item
-              key="32"
-            >
-              Level three
-            </VerticalListMenu.Item>
-            <VerticalListMenu.Item
-              key="33"
-            >
-              Level three
-            </VerticalListMenu.Item>
-            <VerticalListMenu.Item
-              key="34"
-            >
-              Level three
-            </VerticalListMenu.Item>
-            <VerticalListMenu.Item
-              key="35"
-            >
-              Level three
-            </VerticalListMenu.Item>
-            <VerticalListMenu.Item
-              key="36"
-            >
-              Level three
-            </VerticalListMenu.Item>
-            <VerticalListMenu.Item
-              key="37"
-            >
-              Level three
-            </VerticalListMenu.Item>
-            <VerticalListMenu.Item
-              key="38"
-            >
-              Level three
-            </VerticalListMenu.Item>
-            <VerticalListMenu.Item
-              key="39"
-            >
-              Level three
-            </VerticalListMenu.Item>
-            <VerticalListMenu.Item
-              key="40"
-            >
-              Level three
-            </VerticalListMenu.Item>
-            <VerticalListMenu.Item
-              key="41"
-            >
-              Level three
-            </VerticalListMenu.Item>
-            <VerticalListMenu.Item
-              key="42"
-            >
-              Level three
-            </VerticalListMenu.Item>
-            <VerticalListMenu.Item
-              key="43"
-            >
-              Level three
-            </VerticalListMenu.Item>
-            <VerticalListMenu.Item
-              key="44"
-            >
-              Level three
-            </VerticalListMenu.Item>
-            <VerticalListMenu.Item
-              key="45"
-            >
-              Level three
-            </VerticalListMenu.Item>
-            <VerticalListMenu.Item
-              key="46"
-            >
-              Level three
-            </VerticalListMenu.Item>
-            <VerticalListMenu.Item
-              key="47"
-            >
-              Level three
-            </VerticalListMenu.Item>
-            <VerticalListMenu.Item
-              key="48"
-            >
-              Level three
-            </VerticalListMenu.Item>
-            <VerticalListMenu.Item
-              key="49"
-            >
-              Level three
-            </VerticalListMenu.Item>
-          </VerticalListMenu>
-        </VerticalListMenu.Item>
-        <VerticalListMenu.Item>
-          Level two
-        </VerticalListMenu.Item>
-      </VerticalListMenu>
-    </Collapsible>
-  </li>
-  <li
-    className="lucid-VerticalListMenu-Item"
-    key="2"
-  >
     <div
-      className="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-not-selected lucid-VerticalListMenu-Item-content-is-actionable"
-      onClick={[Function]}
+      class="lucid-Collapsible lucid-VerticalListMenu-Item-nested-list"
+      style="overflow:hidden;padding:0"
     >
       <div
-        className="lucid-VerticalListMenu-Item-content-body"
+        class="lucid-Collapsible-content"
+        style="margin:0"
+      />
+    </div>
+  </li>
+  <li
+    class="lucid-VerticalListMenu-Item"
+  >
+    <div
+      class="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-not-selected lucid-VerticalListMenu-Item-content-is-actionable"
+    >
+      <div
+        class="lucid-VerticalListMenu-Item-content-body"
       >
         <div
-          className="lucid-VerticalListMenu-Item-content-text"
+          class="lucid-VerticalListMenu-Item-content-text"
         >
           Level one
         </div>
       </div>
     </div>
   </li>
-  <VerticalListMenu.Item>
-    Level one
-  </VerticalListMenu.Item>
-  <VerticalListMenu.Item
-    hasExpander={true}
-  >
-    Level one with VerticalListMenu
-    <VerticalListMenu
-      onSelect={[Function]}
-      selectedIndices={Array []}
-    >
-      <VerticalListMenu.Item>
-        Level two
-      </VerticalListMenu.Item>
-      <VerticalListMenu.Item
-        hasExpander={true}
-      >
-        Level two with VerticalListMenu and lots of text. Lorem quos natus mollitia nihil quasi! Necessitatibus corporis aliquam quam laborum nesciunt quaerat. Nostrum distinctio officiis adipisci nulla unde repellat. Soluta eaque ex obcaecati molestiae provident aspernatur sit! Expedita et.
-        <VerticalListMenu
-          onSelect={[Function]}
-          selectedIndices={Array []}
-        >
-          <VerticalListMenu.Item
-            key="0"
-          >
-            Level three
-          </VerticalListMenu.Item>
-          <VerticalListMenu.Item
-            key="1"
-          >
-            Level three
-          </VerticalListMenu.Item>
-          <VerticalListMenu.Item
-            key="2"
-          >
-            Level three
-          </VerticalListMenu.Item>
-          <VerticalListMenu.Item
-            key="3"
-          >
-            Level three
-          </VerticalListMenu.Item>
-          <VerticalListMenu.Item
-            key="4"
-          >
-            Level three
-          </VerticalListMenu.Item>
-          <VerticalListMenu.Item
-            key="5"
-          >
-            Level three
-          </VerticalListMenu.Item>
-          <VerticalListMenu.Item
-            key="6"
-          >
-            Level three
-          </VerticalListMenu.Item>
-          <VerticalListMenu.Item
-            key="7"
-          >
-            Level three
-          </VerticalListMenu.Item>
-          <VerticalListMenu.Item
-            key="8"
-          >
-            Level three
-          </VerticalListMenu.Item>
-          <VerticalListMenu.Item
-            key="9"
-          >
-            Level three
-          </VerticalListMenu.Item>
-          <VerticalListMenu.Item
-            key="10"
-          >
-            Level three
-          </VerticalListMenu.Item>
-          <VerticalListMenu.Item
-            key="11"
-          >
-            Level three
-          </VerticalListMenu.Item>
-          <VerticalListMenu.Item
-            key="12"
-          >
-            Level three
-          </VerticalListMenu.Item>
-          <VerticalListMenu.Item
-            key="13"
-          >
-            Level three
-          </VerticalListMenu.Item>
-          <VerticalListMenu.Item
-            key="14"
-          >
-            Level three
-          </VerticalListMenu.Item>
-          <VerticalListMenu.Item
-            key="15"
-          >
-            Level three
-          </VerticalListMenu.Item>
-          <VerticalListMenu.Item
-            key="16"
-          >
-            Level three
-          </VerticalListMenu.Item>
-          <VerticalListMenu.Item
-            key="17"
-          >
-            Level three
-          </VerticalListMenu.Item>
-          <VerticalListMenu.Item
-            key="18"
-          >
-            Level three
-          </VerticalListMenu.Item>
-          <VerticalListMenu.Item
-            key="19"
-          >
-            Level three
-          </VerticalListMenu.Item>
-          <VerticalListMenu.Item
-            key="20"
-          >
-            Level three
-          </VerticalListMenu.Item>
-          <VerticalListMenu.Item
-            key="21"
-          >
-            Level three
-          </VerticalListMenu.Item>
-          <VerticalListMenu.Item
-            key="22"
-          >
-            Level three
-          </VerticalListMenu.Item>
-          <VerticalListMenu.Item
-            key="23"
-          >
-            Level three
-          </VerticalListMenu.Item>
-          <VerticalListMenu.Item
-            key="24"
-          >
-            Level three
-          </VerticalListMenu.Item>
-          <VerticalListMenu.Item
-            key="25"
-          >
-            Level three
-          </VerticalListMenu.Item>
-          <VerticalListMenu.Item
-            key="26"
-          >
-            Level three
-          </VerticalListMenu.Item>
-          <VerticalListMenu.Item
-            key="27"
-          >
-            Level three
-          </VerticalListMenu.Item>
-          <VerticalListMenu.Item
-            key="28"
-          >
-            Level three
-          </VerticalListMenu.Item>
-          <VerticalListMenu.Item
-            key="29"
-          >
-            Level three
-          </VerticalListMenu.Item>
-          <VerticalListMenu.Item
-            key="30"
-          >
-            Level three
-          </VerticalListMenu.Item>
-          <VerticalListMenu.Item
-            key="31"
-          >
-            Level three
-          </VerticalListMenu.Item>
-          <VerticalListMenu.Item
-            key="32"
-          >
-            Level three
-          </VerticalListMenu.Item>
-          <VerticalListMenu.Item
-            key="33"
-          >
-            Level three
-          </VerticalListMenu.Item>
-          <VerticalListMenu.Item
-            key="34"
-          >
-            Level three
-          </VerticalListMenu.Item>
-          <VerticalListMenu.Item
-            key="35"
-          >
-            Level three
-          </VerticalListMenu.Item>
-          <VerticalListMenu.Item
-            key="36"
-          >
-            Level three
-          </VerticalListMenu.Item>
-          <VerticalListMenu.Item
-            key="37"
-          >
-            Level three
-          </VerticalListMenu.Item>
-          <VerticalListMenu.Item
-            key="38"
-          >
-            Level three
-          </VerticalListMenu.Item>
-          <VerticalListMenu.Item
-            key="39"
-          >
-            Level three
-          </VerticalListMenu.Item>
-          <VerticalListMenu.Item
-            key="40"
-          >
-            Level three
-          </VerticalListMenu.Item>
-          <VerticalListMenu.Item
-            key="41"
-          >
-            Level three
-          </VerticalListMenu.Item>
-          <VerticalListMenu.Item
-            key="42"
-          >
-            Level three
-          </VerticalListMenu.Item>
-          <VerticalListMenu.Item
-            key="43"
-          >
-            Level three
-          </VerticalListMenu.Item>
-          <VerticalListMenu.Item
-            key="44"
-          >
-            Level three
-          </VerticalListMenu.Item>
-          <VerticalListMenu.Item
-            key="45"
-          >
-            Level three
-          </VerticalListMenu.Item>
-          <VerticalListMenu.Item
-            key="46"
-          >
-            Level three
-          </VerticalListMenu.Item>
-          <VerticalListMenu.Item
-            key="47"
-          >
-            Level three
-          </VerticalListMenu.Item>
-          <VerticalListMenu.Item
-            key="48"
-          >
-            Level three
-          </VerticalListMenu.Item>
-          <VerticalListMenu.Item
-            key="49"
-          >
-            Level three
-          </VerticalListMenu.Item>
-        </VerticalListMenu>
-      </VerticalListMenu.Item>
-      <VerticalListMenu.Item>
-        Level two
-      </VerticalListMenu.Item>
-    </VerticalListMenu>
-  </VerticalListMenu.Item>
-  <VerticalListMenu.Item>
-    Level one
-  </VerticalListMenu.Item>
 </ul>
 `;
 
-exports[`VerticalListMenu [common] example testing should match snapshot(s) for 3.nested-full-width 1`] = `
-<ul
-  className="lucid-VerticalListMenu"
->
-  <li
-    className="lucid-VerticalListMenu-Item"
-    key="0"
+exports[`VerticalListMenu [common] example testing should match snapshot(s) for NoAnimations 1`] = `
+<section>
+  <ul
+    class="lucid-VerticalListMenu"
+    style="width:250px"
   >
-    <div
-      className="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-selected lucid-VerticalListMenu-Item-content-is-actionable"
-      onClick={[Function]}
+    <li
+      class="lucid-VerticalListMenu-Item"
     >
       <div
-        className="lucid-VerticalListMenu-Item-content-body"
+        class="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-not-selected lucid-VerticalListMenu-Item-content-is-actionable"
       >
         <div
-          className="lucid-VerticalListMenu-Item-content-text"
+          class="lucid-VerticalListMenu-Item-content-body"
         >
-          Level one
-        </div>
-      </div>
-    </div>
-  </li>
-  <li
-    className="lucid-VerticalListMenu-Item"
-    key="1"
-  >
-    <div
-      className="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-not-selected lucid-VerticalListMenu-Item-content-is-expanded lucid-VerticalListMenu-Item-content-is-actionable"
-      onClick={[Function]}
-    >
-      <div
-        className="lucid-VerticalListMenu-Item-content-body"
-      >
-        <div
-          className="lucid-VerticalListMenu-Item-content-text"
-        >
-          Level one with VerticalListMenu
-        </div>
-      </div>
-    </div>
-    <Collapsible
-      className="lucid-VerticalListMenu-Item-nested-list"
-      isAnimated={true}
-      isExpanded={true}
-      isMountControlled={true}
-      mountControlThreshold={4}
-      rootType="div"
-    >
-      <VerticalListMenu
-        key=".1"
-        onSelect={[Function]}
-        selectedIndices={Array []}
-      >
-        <VerticalListMenu.Item>
-          Level two
-        </VerticalListMenu.Item>
-        <VerticalListMenu.Item>
-          Level two
-        </VerticalListMenu.Item>
-      </VerticalListMenu>
-    </Collapsible>
-  </li>
-  <li
-    className="lucid-VerticalListMenu-Item"
-    key="2"
-  >
-    <div
-      className="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-not-selected lucid-VerticalListMenu-Item-content-is-expanded lucid-VerticalListMenu-Item-content-is-actionable"
-      onClick={[Function]}
-    >
-      <div
-        className="lucid-VerticalListMenu-Item-content-body"
-      >
-        <div
-          className="lucid-VerticalListMenu-Item-content-text"
-        >
-          Level one with VerticalListMenu
-        </div>
-      </div>
-    </div>
-    <Collapsible
-      className="lucid-VerticalListMenu-Item-nested-list"
-      isAnimated={true}
-      isExpanded={true}
-      isMountControlled={true}
-      mountControlThreshold={4}
-      rootType="div"
-    >
-      <VerticalListMenu
-        key=".1"
-        onSelect={[Function]}
-        selectedIndices={Array []}
-      >
-        <VerticalListMenu.Item>
-          Level two
-        </VerticalListMenu.Item>
-        <VerticalListMenu.Item
-          isExpanded={false}
-        >
-          Level two with closed VerticalListMenu
-          <VerticalListMenu
-            onSelect={[Function]}
-            selectedIndices={Array []}
+          <div
+            class="lucid-VerticalListMenu-Item-content-text"
           >
-            <VerticalListMenu.Item>
-              Level three
-            </VerticalListMenu.Item>
-            <VerticalListMenu.Item>
-              Level three
-            </VerticalListMenu.Item>
-            <VerticalListMenu.Item>
-              Level three
-            </VerticalListMenu.Item>
-          </VerticalListMenu>
-        </VerticalListMenu.Item>
-        <VerticalListMenu.Item>
-          Level two
-        </VerticalListMenu.Item>
-      </VerticalListMenu>
-    </Collapsible>
-  </li>
-  <li
-    className="lucid-VerticalListMenu-Item"
-    key="3"
-  >
-    <div
-      className="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-not-selected lucid-VerticalListMenu-Item-content-is-actionable"
-      onClick={[Function]}
-    >
-      <div
-        className="lucid-VerticalListMenu-Item-content-body"
-      >
-        <div
-          className="lucid-VerticalListMenu-Item-content-text"
-        >
-          Level one
+            Level one
+          </div>
         </div>
       </div>
-    </div>
-  </li>
-  <VerticalListMenu.Item>
-    Level one
-  </VerticalListMenu.Item>
-  <VerticalListMenu.Item
-    isExpanded={true}
-  >
-    Level one with VerticalListMenu
-    <VerticalListMenu
-      onSelect={[Function]}
-      selectedIndices={Array []}
-    >
-      <VerticalListMenu.Item>
-        Level two
-      </VerticalListMenu.Item>
-      <VerticalListMenu.Item>
-        Level two
-      </VerticalListMenu.Item>
-    </VerticalListMenu>
-  </VerticalListMenu.Item>
-  <VerticalListMenu.Item
-    isExpanded={true}
-  >
-    Level one with VerticalListMenu
-    <VerticalListMenu
-      onSelect={[Function]}
-      selectedIndices={Array []}
-    >
-      <VerticalListMenu.Item>
-        Level two
-      </VerticalListMenu.Item>
-      <VerticalListMenu.Item
-        isExpanded={false}
-      >
-        Level two with closed VerticalListMenu
-        <VerticalListMenu
-          onSelect={[Function]}
-          selectedIndices={Array []}
-        >
-          <VerticalListMenu.Item>
-            Level three
-          </VerticalListMenu.Item>
-          <VerticalListMenu.Item>
-            Level three
-          </VerticalListMenu.Item>
-          <VerticalListMenu.Item>
-            Level three
-          </VerticalListMenu.Item>
-        </VerticalListMenu>
-      </VerticalListMenu.Item>
-      <VerticalListMenu.Item>
-        Level two
-      </VerticalListMenu.Item>
-    </VerticalListMenu>
-  </VerticalListMenu.Item>
-  <VerticalListMenu.Item>
-    Level one
-  </VerticalListMenu.Item>
-</ul>
-`;
-
-exports[`VerticalListMenu [common] example testing should match snapshot(s) for 4.no-animations 1`] = `
-<ul
-  className="lucid-VerticalListMenu"
-  style={
-    Object {
-      "width": 250,
-    }
-  }
->
-  <li
-    className="lucid-VerticalListMenu-Item"
-    key="0"
-  >
-    <div
-      className="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-not-selected lucid-VerticalListMenu-Item-content-is-actionable"
-      onClick={[Function]}
+    </li>
+    <li
+      class="lucid-VerticalListMenu-Item"
     >
       <div
-        className="lucid-VerticalListMenu-Item-content-body"
+        class="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-not-selected lucid-VerticalListMenu-Item-content-is-actionable"
       >
         <div
-          className="lucid-VerticalListMenu-Item-content-text"
+          class="lucid-VerticalListMenu-Item-content-body"
         >
-          Level one
+          <div
+            class="lucid-VerticalListMenu-Item-content-text"
+          >
+            Level one with VerticalListMenu
+          </div>
+          <div
+            class="lucid-VerticalListMenu-Item-expander"
+          >
+            <svg
+              class="lucid-Icon lucid-Icon-color-primary lucid-ChevronIcon lucid-ChevronIcon-is-down"
+              height="12"
+              preserveAspectRatio="xMidYMid meet"
+              viewBox="0 0 16 16"
+              width="12"
+            >
+              <path
+                d="M.5 4.5l7.5 7 7.5-7"
+              />
+            </svg>
+          </div>
         </div>
       </div>
-    </div>
-  </li>
-  <li
-    className="lucid-VerticalListMenu-Item"
-    key="1"
-  >
-    <div
-      className="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-not-selected lucid-VerticalListMenu-Item-content-is-actionable"
-      onClick={[Function]}
+      <div
+        class="lucid-Collapsible lucid-VerticalListMenu-Item-nested-list"
+        style="overflow:hidden;padding:0"
+      >
+        <div
+          class="lucid-Collapsible-content"
+          style="margin:0"
+        >
+          <ul
+            class="lucid-VerticalListMenu"
+          >
+            <li
+              class="lucid-VerticalListMenu-Item"
+            >
+              <div
+                class="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-not-selected lucid-VerticalListMenu-Item-content-is-actionable"
+              >
+                <div
+                  class="lucid-VerticalListMenu-Item-content-body"
+                >
+                  <div
+                    class="lucid-VerticalListMenu-Item-content-text"
+                  >
+                    Level two
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li
+              class="lucid-VerticalListMenu-Item"
+            >
+              <div
+                class="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-not-selected lucid-VerticalListMenu-Item-content-is-actionable"
+              >
+                <div
+                  class="lucid-VerticalListMenu-Item-content-body"
+                >
+                  <div
+                    class="lucid-VerticalListMenu-Item-content-text"
+                  >
+                    Level two
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li
+              class="lucid-VerticalListMenu-Item"
+            >
+              <div
+                class="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-not-selected lucid-VerticalListMenu-Item-content-is-actionable"
+              >
+                <div
+                  class="lucid-VerticalListMenu-Item-content-body"
+                >
+                  <div
+                    class="lucid-VerticalListMenu-Item-content-text"
+                  >
+                    Level two
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li
+              class="lucid-VerticalListMenu-Item"
+            >
+              <div
+                class="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-not-selected lucid-VerticalListMenu-Item-content-is-actionable"
+              >
+                <div
+                  class="lucid-VerticalListMenu-Item-content-body"
+                >
+                  <div
+                    class="lucid-VerticalListMenu-Item-content-text"
+                  >
+                    Level two
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li
+              class="lucid-VerticalListMenu-Item"
+            >
+              <div
+                class="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-not-selected lucid-VerticalListMenu-Item-content-is-actionable"
+              >
+                <div
+                  class="lucid-VerticalListMenu-Item-content-body"
+                >
+                  <div
+                    class="lucid-VerticalListMenu-Item-content-text"
+                  >
+                    Level two
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li
+              class="lucid-VerticalListMenu-Item"
+            >
+              <div
+                class="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-not-selected lucid-VerticalListMenu-Item-content-is-actionable"
+              >
+                <div
+                  class="lucid-VerticalListMenu-Item-content-body"
+                >
+                  <div
+                    class="lucid-VerticalListMenu-Item-content-text"
+                  >
+                    Level two
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li
+              class="lucid-VerticalListMenu-Item"
+            >
+              <div
+                class="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-not-selected lucid-VerticalListMenu-Item-content-is-actionable"
+              >
+                <div
+                  class="lucid-VerticalListMenu-Item-content-body"
+                >
+                  <div
+                    class="lucid-VerticalListMenu-Item-content-text"
+                  >
+                    Level two
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li
+              class="lucid-VerticalListMenu-Item"
+            >
+              <div
+                class="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-not-selected lucid-VerticalListMenu-Item-content-is-actionable"
+              >
+                <div
+                  class="lucid-VerticalListMenu-Item-content-body"
+                >
+                  <div
+                    class="lucid-VerticalListMenu-Item-content-text"
+                  >
+                    Level two
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li
+              class="lucid-VerticalListMenu-Item"
+            >
+              <div
+                class="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-not-selected lucid-VerticalListMenu-Item-content-is-actionable"
+              >
+                <div
+                  class="lucid-VerticalListMenu-Item-content-body"
+                >
+                  <div
+                    class="lucid-VerticalListMenu-Item-content-text"
+                  >
+                    Level two
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li
+              class="lucid-VerticalListMenu-Item"
+            >
+              <div
+                class="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-not-selected lucid-VerticalListMenu-Item-content-is-actionable"
+              >
+                <div
+                  class="lucid-VerticalListMenu-Item-content-body"
+                >
+                  <div
+                    class="lucid-VerticalListMenu-Item-content-text"
+                  >
+                    Level two
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li
+              class="lucid-VerticalListMenu-Item"
+            >
+              <div
+                class="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-not-selected lucid-VerticalListMenu-Item-content-is-actionable"
+              >
+                <div
+                  class="lucid-VerticalListMenu-Item-content-body"
+                >
+                  <div
+                    class="lucid-VerticalListMenu-Item-content-text"
+                  >
+                    Level two
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li
+              class="lucid-VerticalListMenu-Item"
+            >
+              <div
+                class="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-not-selected lucid-VerticalListMenu-Item-content-is-actionable"
+              >
+                <div
+                  class="lucid-VerticalListMenu-Item-content-body"
+                >
+                  <div
+                    class="lucid-VerticalListMenu-Item-content-text"
+                  >
+                    Level two
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li
+              class="lucid-VerticalListMenu-Item"
+            >
+              <div
+                class="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-not-selected lucid-VerticalListMenu-Item-content-is-actionable"
+              >
+                <div
+                  class="lucid-VerticalListMenu-Item-content-body"
+                >
+                  <div
+                    class="lucid-VerticalListMenu-Item-content-text"
+                  >
+                    Level two
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li
+              class="lucid-VerticalListMenu-Item"
+            >
+              <div
+                class="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-not-selected lucid-VerticalListMenu-Item-content-is-actionable"
+              >
+                <div
+                  class="lucid-VerticalListMenu-Item-content-body"
+                >
+                  <div
+                    class="lucid-VerticalListMenu-Item-content-text"
+                  >
+                    Level two
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li
+              class="lucid-VerticalListMenu-Item"
+            >
+              <div
+                class="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-not-selected lucid-VerticalListMenu-Item-content-is-actionable"
+              >
+                <div
+                  class="lucid-VerticalListMenu-Item-content-body"
+                >
+                  <div
+                    class="lucid-VerticalListMenu-Item-content-text"
+                  >
+                    Level two
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li
+              class="lucid-VerticalListMenu-Item"
+            >
+              <div
+                class="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-not-selected lucid-VerticalListMenu-Item-content-is-actionable"
+              >
+                <div
+                  class="lucid-VerticalListMenu-Item-content-body"
+                >
+                  <div
+                    class="lucid-VerticalListMenu-Item-content-text"
+                  >
+                    Level two
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li
+              class="lucid-VerticalListMenu-Item"
+            >
+              <div
+                class="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-not-selected lucid-VerticalListMenu-Item-content-is-actionable"
+              >
+                <div
+                  class="lucid-VerticalListMenu-Item-content-body"
+                >
+                  <div
+                    class="lucid-VerticalListMenu-Item-content-text"
+                  >
+                    Level two
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li
+              class="lucid-VerticalListMenu-Item"
+            >
+              <div
+                class="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-not-selected lucid-VerticalListMenu-Item-content-is-actionable"
+              >
+                <div
+                  class="lucid-VerticalListMenu-Item-content-body"
+                >
+                  <div
+                    class="lucid-VerticalListMenu-Item-content-text"
+                  >
+                    Level two
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li
+              class="lucid-VerticalListMenu-Item"
+            >
+              <div
+                class="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-not-selected lucid-VerticalListMenu-Item-content-is-actionable"
+              >
+                <div
+                  class="lucid-VerticalListMenu-Item-content-body"
+                >
+                  <div
+                    class="lucid-VerticalListMenu-Item-content-text"
+                  >
+                    Level two
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li
+              class="lucid-VerticalListMenu-Item"
+            >
+              <div
+                class="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-not-selected lucid-VerticalListMenu-Item-content-is-actionable"
+              >
+                <div
+                  class="lucid-VerticalListMenu-Item-content-body"
+                >
+                  <div
+                    class="lucid-VerticalListMenu-Item-content-text"
+                  >
+                    Level two
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </li>
+    <li
+      class="lucid-VerticalListMenu-Item"
     >
       <div
-        className="lucid-VerticalListMenu-Item-content-body"
+        class="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-not-selected lucid-VerticalListMenu-Item-content-is-actionable"
       >
         <div
-          className="lucid-VerticalListMenu-Item-content-text"
+          class="lucid-VerticalListMenu-Item-content-body"
         >
-          Level one with VerticalListMenu
-        </div>
-        <div
-          className="lucid-VerticalListMenu-Item-expander"
-          onClick={[Function]}
-        >
-          <ChevronIcon
-            aspectRatio="xMidYMid meet"
-            color="primary"
-            direction="down"
-            isClickable={false}
-            isDisabled={false}
-            onClick={[Function]}
-            onSelect={[Function]}
-            size={12}
-            viewBox="0 0 16 16"
-          />
+          <div
+            class="lucid-VerticalListMenu-Item-content-text"
+          >
+            Level one
+          </div>
         </div>
       </div>
-    </div>
-    <Collapsible
-      className="lucid-VerticalListMenu-Item-nested-list"
-      isAnimated={false}
-      isExpanded={false}
-      isMountControlled={false}
-      mountControlThreshold={4}
-      rootType="div"
-    >
-      <VerticalListMenu
-        key=".1"
-      >
-        <VerticalListMenu.Item
-          key="0"
-        >
-          Level two
-        </VerticalListMenu.Item>
-        <VerticalListMenu.Item
-          key="1"
-        >
-          Level two
-        </VerticalListMenu.Item>
-        <VerticalListMenu.Item
-          key="2"
-        >
-          Level two
-        </VerticalListMenu.Item>
-        <VerticalListMenu.Item
-          key="3"
-        >
-          Level two
-        </VerticalListMenu.Item>
-        <VerticalListMenu.Item
-          key="4"
-        >
-          Level two
-        </VerticalListMenu.Item>
-        <VerticalListMenu.Item
-          key="5"
-        >
-          Level two
-        </VerticalListMenu.Item>
-        <VerticalListMenu.Item
-          key="6"
-        >
-          Level two
-        </VerticalListMenu.Item>
-        <VerticalListMenu.Item
-          key="7"
-        >
-          Level two
-        </VerticalListMenu.Item>
-        <VerticalListMenu.Item
-          key="8"
-        >
-          Level two
-        </VerticalListMenu.Item>
-        <VerticalListMenu.Item
-          key="9"
-        >
-          Level two
-        </VerticalListMenu.Item>
-        <VerticalListMenu.Item
-          key="10"
-        >
-          Level two
-        </VerticalListMenu.Item>
-        <VerticalListMenu.Item
-          key="11"
-        >
-          Level two
-        </VerticalListMenu.Item>
-        <VerticalListMenu.Item
-          key="12"
-        >
-          Level two
-        </VerticalListMenu.Item>
-        <VerticalListMenu.Item
-          key="13"
-        >
-          Level two
-        </VerticalListMenu.Item>
-        <VerticalListMenu.Item
-          key="14"
-        >
-          Level two
-        </VerticalListMenu.Item>
-        <VerticalListMenu.Item
-          key="15"
-        >
-          Level two
-        </VerticalListMenu.Item>
-        <VerticalListMenu.Item
-          key="16"
-        >
-          Level two
-        </VerticalListMenu.Item>
-        <VerticalListMenu.Item
-          key="17"
-        >
-          Level two
-        </VerticalListMenu.Item>
-        <VerticalListMenu.Item
-          key="18"
-        >
-          Level two
-        </VerticalListMenu.Item>
-        <VerticalListMenu.Item
-          key="19"
-        >
-          Level two
-        </VerticalListMenu.Item>
-        <VerticalListMenu.Item
-          key="20"
-        >
-          Level two
-        </VerticalListMenu.Item>
-        <VerticalListMenu.Item
-          key="21"
-        >
-          Level two
-        </VerticalListMenu.Item>
-        <VerticalListMenu.Item
-          key="22"
-        >
-          Level two
-        </VerticalListMenu.Item>
-        <VerticalListMenu.Item
-          key="23"
-        >
-          Level two
-        </VerticalListMenu.Item>
-        <VerticalListMenu.Item
-          key="24"
-        >
-          Level two
-        </VerticalListMenu.Item>
-        <VerticalListMenu.Item
-          key="25"
-        >
-          Level two
-        </VerticalListMenu.Item>
-        <VerticalListMenu.Item
-          key="26"
-        >
-          Level two
-        </VerticalListMenu.Item>
-        <VerticalListMenu.Item
-          key="27"
-        >
-          Level two
-        </VerticalListMenu.Item>
-        <VerticalListMenu.Item
-          key="28"
-        >
-          Level two
-        </VerticalListMenu.Item>
-        <VerticalListMenu.Item
-          key="29"
-        >
-          Level two
-        </VerticalListMenu.Item>
-        <VerticalListMenu.Item
-          key="30"
-        >
-          Level two
-        </VerticalListMenu.Item>
-        <VerticalListMenu.Item
-          key="31"
-        >
-          Level two
-        </VerticalListMenu.Item>
-        <VerticalListMenu.Item
-          key="32"
-        >
-          Level two
-        </VerticalListMenu.Item>
-        <VerticalListMenu.Item
-          key="33"
-        >
-          Level two
-        </VerticalListMenu.Item>
-        <VerticalListMenu.Item
-          key="34"
-        >
-          Level two
-        </VerticalListMenu.Item>
-        <VerticalListMenu.Item
-          key="35"
-        >
-          Level two
-        </VerticalListMenu.Item>
-        <VerticalListMenu.Item
-          key="36"
-        >
-          Level two
-        </VerticalListMenu.Item>
-        <VerticalListMenu.Item
-          key="37"
-        >
-          Level two
-        </VerticalListMenu.Item>
-        <VerticalListMenu.Item
-          key="38"
-        >
-          Level two
-        </VerticalListMenu.Item>
-        <VerticalListMenu.Item
-          key="39"
-        >
-          Level two
-        </VerticalListMenu.Item>
-        <VerticalListMenu.Item
-          key="40"
-        >
-          Level two
-        </VerticalListMenu.Item>
-        <VerticalListMenu.Item
-          key="41"
-        >
-          Level two
-        </VerticalListMenu.Item>
-        <VerticalListMenu.Item
-          key="42"
-        >
-          Level two
-        </VerticalListMenu.Item>
-        <VerticalListMenu.Item
-          key="43"
-        >
-          Level two
-        </VerticalListMenu.Item>
-        <VerticalListMenu.Item
-          key="44"
-        >
-          Level two
-        </VerticalListMenu.Item>
-        <VerticalListMenu.Item
-          key="45"
-        >
-          Level two
-        </VerticalListMenu.Item>
-        <VerticalListMenu.Item
-          key="46"
-        >
-          Level two
-        </VerticalListMenu.Item>
-        <VerticalListMenu.Item
-          key="47"
-        >
-          Level two
-        </VerticalListMenu.Item>
-        <VerticalListMenu.Item
-          key="48"
-        >
-          Level two
-        </VerticalListMenu.Item>
-        <VerticalListMenu.Item
-          key="49"
-        >
-          Level two
-        </VerticalListMenu.Item>
-      </VerticalListMenu>
-    </Collapsible>
-  </li>
-  <li
-    className="lucid-VerticalListMenu-Item"
-    key="2"
-  >
-    <div
-      className="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-not-selected lucid-VerticalListMenu-Item-content-is-actionable"
-      onClick={[Function]}
-    >
-      <div
-        className="lucid-VerticalListMenu-Item-content-body"
-      >
-        <div
-          className="lucid-VerticalListMenu-Item-content-text"
-        >
-          Level one
-        </div>
-      </div>
-    </div>
-  </li>
-  <VerticalListMenu.Item>
-    Level one
-  </VerticalListMenu.Item>
-  <VerticalListMenu.Item
-    Collapsible={
-      Object {
-        "isAnimated": false,
-        "isMountControlled": false,
-      }
-    }
-    hasExpander={true}
-  >
-    Level one with VerticalListMenu
-    <VerticalListMenu>
-      <VerticalListMenu.Item
-        key="0"
-      >
-        Level two
-      </VerticalListMenu.Item>
-      <VerticalListMenu.Item
-        key="1"
-      >
-        Level two
-      </VerticalListMenu.Item>
-      <VerticalListMenu.Item
-        key="2"
-      >
-        Level two
-      </VerticalListMenu.Item>
-      <VerticalListMenu.Item
-        key="3"
-      >
-        Level two
-      </VerticalListMenu.Item>
-      <VerticalListMenu.Item
-        key="4"
-      >
-        Level two
-      </VerticalListMenu.Item>
-      <VerticalListMenu.Item
-        key="5"
-      >
-        Level two
-      </VerticalListMenu.Item>
-      <VerticalListMenu.Item
-        key="6"
-      >
-        Level two
-      </VerticalListMenu.Item>
-      <VerticalListMenu.Item
-        key="7"
-      >
-        Level two
-      </VerticalListMenu.Item>
-      <VerticalListMenu.Item
-        key="8"
-      >
-        Level two
-      </VerticalListMenu.Item>
-      <VerticalListMenu.Item
-        key="9"
-      >
-        Level two
-      </VerticalListMenu.Item>
-      <VerticalListMenu.Item
-        key="10"
-      >
-        Level two
-      </VerticalListMenu.Item>
-      <VerticalListMenu.Item
-        key="11"
-      >
-        Level two
-      </VerticalListMenu.Item>
-      <VerticalListMenu.Item
-        key="12"
-      >
-        Level two
-      </VerticalListMenu.Item>
-      <VerticalListMenu.Item
-        key="13"
-      >
-        Level two
-      </VerticalListMenu.Item>
-      <VerticalListMenu.Item
-        key="14"
-      >
-        Level two
-      </VerticalListMenu.Item>
-      <VerticalListMenu.Item
-        key="15"
-      >
-        Level two
-      </VerticalListMenu.Item>
-      <VerticalListMenu.Item
-        key="16"
-      >
-        Level two
-      </VerticalListMenu.Item>
-      <VerticalListMenu.Item
-        key="17"
-      >
-        Level two
-      </VerticalListMenu.Item>
-      <VerticalListMenu.Item
-        key="18"
-      >
-        Level two
-      </VerticalListMenu.Item>
-      <VerticalListMenu.Item
-        key="19"
-      >
-        Level two
-      </VerticalListMenu.Item>
-      <VerticalListMenu.Item
-        key="20"
-      >
-        Level two
-      </VerticalListMenu.Item>
-      <VerticalListMenu.Item
-        key="21"
-      >
-        Level two
-      </VerticalListMenu.Item>
-      <VerticalListMenu.Item
-        key="22"
-      >
-        Level two
-      </VerticalListMenu.Item>
-      <VerticalListMenu.Item
-        key="23"
-      >
-        Level two
-      </VerticalListMenu.Item>
-      <VerticalListMenu.Item
-        key="24"
-      >
-        Level two
-      </VerticalListMenu.Item>
-      <VerticalListMenu.Item
-        key="25"
-      >
-        Level two
-      </VerticalListMenu.Item>
-      <VerticalListMenu.Item
-        key="26"
-      >
-        Level two
-      </VerticalListMenu.Item>
-      <VerticalListMenu.Item
-        key="27"
-      >
-        Level two
-      </VerticalListMenu.Item>
-      <VerticalListMenu.Item
-        key="28"
-      >
-        Level two
-      </VerticalListMenu.Item>
-      <VerticalListMenu.Item
-        key="29"
-      >
-        Level two
-      </VerticalListMenu.Item>
-      <VerticalListMenu.Item
-        key="30"
-      >
-        Level two
-      </VerticalListMenu.Item>
-      <VerticalListMenu.Item
-        key="31"
-      >
-        Level two
-      </VerticalListMenu.Item>
-      <VerticalListMenu.Item
-        key="32"
-      >
-        Level two
-      </VerticalListMenu.Item>
-      <VerticalListMenu.Item
-        key="33"
-      >
-        Level two
-      </VerticalListMenu.Item>
-      <VerticalListMenu.Item
-        key="34"
-      >
-        Level two
-      </VerticalListMenu.Item>
-      <VerticalListMenu.Item
-        key="35"
-      >
-        Level two
-      </VerticalListMenu.Item>
-      <VerticalListMenu.Item
-        key="36"
-      >
-        Level two
-      </VerticalListMenu.Item>
-      <VerticalListMenu.Item
-        key="37"
-      >
-        Level two
-      </VerticalListMenu.Item>
-      <VerticalListMenu.Item
-        key="38"
-      >
-        Level two
-      </VerticalListMenu.Item>
-      <VerticalListMenu.Item
-        key="39"
-      >
-        Level two
-      </VerticalListMenu.Item>
-      <VerticalListMenu.Item
-        key="40"
-      >
-        Level two
-      </VerticalListMenu.Item>
-      <VerticalListMenu.Item
-        key="41"
-      >
-        Level two
-      </VerticalListMenu.Item>
-      <VerticalListMenu.Item
-        key="42"
-      >
-        Level two
-      </VerticalListMenu.Item>
-      <VerticalListMenu.Item
-        key="43"
-      >
-        Level two
-      </VerticalListMenu.Item>
-      <VerticalListMenu.Item
-        key="44"
-      >
-        Level two
-      </VerticalListMenu.Item>
-      <VerticalListMenu.Item
-        key="45"
-      >
-        Level two
-      </VerticalListMenu.Item>
-      <VerticalListMenu.Item
-        key="46"
-      >
-        Level two
-      </VerticalListMenu.Item>
-      <VerticalListMenu.Item
-        key="47"
-      >
-        Level two
-      </VerticalListMenu.Item>
-      <VerticalListMenu.Item
-        key="48"
-      >
-        Level two
-      </VerticalListMenu.Item>
-      <VerticalListMenu.Item
-        key="49"
-      >
-        Level two
-      </VerticalListMenu.Item>
-    </VerticalListMenu>
-  </VerticalListMenu.Item>
-  <VerticalListMenu.Item>
-    Level one
-  </VerticalListMenu.Item>
-</ul>
+    </li>
+  </ul>
+</section>
 `;

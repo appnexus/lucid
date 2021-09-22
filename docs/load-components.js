@@ -526,16 +526,6 @@ module.exports = [
 		component: getDefaultExport(
 			require('../src/components/IconSelect/IconSelect')
 		),
-		examplesContext: require.context(
-			'../src/components/IconSelect/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../src/components/IconSelect/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
 	},
 	{
 		name: 'InfiniteSlidePanel',
@@ -912,16 +902,6 @@ module.exports = [
 		component: getDefaultExport(
 			require('../src/components/SearchableSingleSelect/SearchableSingleSelect')
 		),
-		examplesContext: require.context(
-			'../src/components/SearchableSingleSelect/examples',
-			true,
-			/\.tsx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../src/components/SearchableSingleSelect/examples',
-			true,
-			/\.tsx?$/
-		),
 	},
 	{
 		name: 'SearchableSelect',
@@ -1248,31 +1228,11 @@ module.exports = [
 		component: getDefaultExport(
 			require('../src/components/VerticalListMenu/VerticalListMenu')
 		),
-		examplesContext: require.context(
-			'../src/components/VerticalListMenu/examples',
-			true,
-			/\.tsx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../src/components/VerticalListMenu/examples',
-			true,
-			/\.tsx?$/
-		),
 	},
 	{
 		name: 'VerticalTabs',
 		component: getDefaultExport(
 			require('../src/components/VerticalTabs/VerticalTabs')
-		),
-		examplesContext: require.context(
-			'../src/components/VerticalTabs/examples',
-			true,
-			/\.tsx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../src/components/VerticalTabs/examples',
-			true,
-			/\.tsx?$/
 		),
 	},
 	{
