@@ -15,8 +15,20 @@
 	}
 
 	// make the tab highlight extend all the way to the top of the tab
-	.@{prefix}-VerticalListMenu-Item:first-of-type > .@{prefix}-VerticalListMenu-Item-content {
+	.@{prefix}-VerticalListMenu-Item:first-of-type
+		> .@{prefix}-VerticalListMenu-Item-content {
 		border-top: 0;
 	}
-}
 
+	&-Tab:hover {
+		background-color: @color-primary-light-hover;
+	}
+
+	&-Tab-is-active {
+		background-color: @color-primary-light;
+
+		&:hover {
+			background-color: @color-primary-light-hover;
+		}
+	}
+}
