@@ -574,7 +574,6 @@ exports[`SearchableSingleSelect [common] example testing should match snapshot(s
 exports[`SearchableSingleSelect [common] example testing should match snapshot(s) for 03.asynchronous 1`] = `
 <div
   className="lucid-SearchableSingleSelect"
-  hasSelections={false}
 >
   <DropMenu
     ContextMenu={
