@@ -107,7 +107,7 @@ SelectMultipleIcons.args = {
 };
 
 /** Partially Select Icons */
-export const partiallySelectIcons = (args) => {
+export const PartiallySelectIcons = (args) => {
 	const [selectedIcons, setSelectedIcons] = useState<any>([
 		{ id: 'item2', isPartial: true },
 	]);
