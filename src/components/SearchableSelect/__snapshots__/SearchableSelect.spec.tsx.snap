@@ -114,7 +114,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
             <span
               class="lucid-SearchableSelect-Control-content"
             >
-              Select a Color
+              Select Color
             </span>
             <svg
               class="lucid-Icon lucid-Icon-color-primary lucid-ChevronIcon lucid-ChevronIcon-is-down"
