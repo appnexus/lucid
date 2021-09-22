@@ -7,7 +7,12 @@ export default {
 	component: ButtonGroupDumb,
 	subcomponents: { 'ButtonGroup.Button': ButtonGroup.Button },
 	parameters: {
-		notes: ButtonGroup.peek.description,
+		docs: {
+			inlineStories: false,
+			description: {
+				component: ButtonGroup.peek.description,
+			},
+		},
 	},
 } as Meta;
 

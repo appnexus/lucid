@@ -686,22 +686,6 @@ module.exports = [
 		),
 	},
 	{
-		name: 'Paginator',
-		component: getDefaultExport(
-			require('../src/components/Paginator/Paginator')
-		),
-		examplesContext: require.context(
-			'../src/components/Paginator/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../src/components/Paginator/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
-	},
-	{
 		name: 'Panel',
 		component: getDefaultExport(require('../src/components/Panel/Panel')),
 		examplesContext: require.context(

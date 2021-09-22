@@ -187,7 +187,7 @@ IconSelect.displayName = 'IconSelect';
 IconSelect.defaultProps = defaultProps;
 
 IconSelect.peek = {
-	description: `\`IconSelect\` allow you to pair icons together to form a related cluster. Any props not explicitly called out are spread on to the root component.
+	description: `\`IconSelect\` allows you to pair icons together to form a related cluster. Any props not explicitly called out are spread on to the root component.
 	`,
 	categories: ['controls', 'selectors'],
 };
