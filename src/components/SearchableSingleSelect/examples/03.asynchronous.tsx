@@ -79,7 +79,6 @@ export default createClass({
 		return (
 			<section>
 				<SearchableSingleSelect
-					hasSelections={false}
 					isLoading={isLoading}
 					onSelect={this.handleSelect}
 					onSearch={this.handleSearch}

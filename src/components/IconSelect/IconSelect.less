@@ -51,6 +51,15 @@
 	&.@{prefix}-IconSelect-Item-is-active,
 	&.@{prefix}-IconSelect-Item-is-selected {
 		cursor: pointer;
+		background-color: @color-primary-light;
+
+		&:hover {
+			background-color: @color-primary-light-hover;
+		}
+
+		&.@{prefix}-IconSelect-Item-is-disabled:hover {
+			background-color: @color-primary-light;
+		}
 
 		&:not(.@{prefix}-IconSelect-Item-is-indeterminate)::before {
 			border: 1px solid @color-primary;
