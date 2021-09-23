@@ -53,7 +53,7 @@ const Template: any = (args) => {
 	};
 
 	return (
-		<section style={{ minHeight: 90 }}>
+		<section style={{ minHeight: '10em' }}>
 			<SingleSelect {...args} onSelect={(e) => handleSelect(e)}></SingleSelect>
 			{!isNil(selectedIndex) && (
 				<section style={{ paddingTop: 9, paddingLeft: 9 }}>
@@ -215,10 +215,11 @@ NoUnselect.parameters = {
 	},
 };
 
+/** Max Menu Height */
 export const MaxMenuHeight = Template.bind({});
 MaxMenuHeight.args = {
 	...Default.args,
-	maxMenuHeight: '12em',
+	maxMenuHeight: '7em',
 	children: addKeys([
 		<Option>Aliceblue</Option>,
 		<Option>Antiquewhite</Option>,

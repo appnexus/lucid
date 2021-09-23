@@ -1,7 +1,12 @@
 import React, { useState } from 'react';
 import { Meta } from '@storybook/react';
 
-import { IconSelect, ClockIcon, SwitchLabeled } from '../../index';
+import {
+	IconSelect,
+	ClockIcon,
+	StopwatchIcon,
+	SwitchLabeled,
+} from '../../index';
 
 //👇 Provide Storybook with the component name, 'section', any subcomponents and a description
 export default {
@@ -40,7 +45,7 @@ const Template: any = (args) => {
 						},
 						{
 							id: 'item2',
-							icon: <ClockIcon />,
+							icon: <StopwatchIcon />,
 							isSelected: selectedIcon === 'item2',
 							label: 'Bax Tar',
 						},
@@ -92,7 +97,7 @@ export const SelectMultipleIcons = (args) => {
 						},
 						{
 							id: 'item2',
-							icon: <ClockIcon />,
+							icon: <StopwatchIcon />,
 							isSelected: isSelected('item2'),
 							label: 'Bax Tar',
 						},
@@ -164,7 +169,7 @@ export const PartiallySelectIcons = (args) => {
 					},
 					{
 						id: 'item2',
-						icon: <ClockIcon />,
+						icon: <StopwatchIcon />,
 						isSelected: isSelected('item2'),
 						isPartial: isPartiallySelected('item2'),
 						label: 'Bax Tar',
@@ -221,7 +226,7 @@ export const DisabledIconSelect = (args) => {
 						},
 						{
 							id: 'item2',
-							icon: <ClockIcon />,
+							icon: <StopwatchIcon />,
 							isSelected: isSelected('item2'),
 							label: 'Bax Tar',
 						},

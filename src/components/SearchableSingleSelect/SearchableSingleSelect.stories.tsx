@@ -126,6 +126,7 @@ export const Props = (args) => {
 };
 Props.args = {
 	...Default.args,
+	SearchField: { placeholder: '' },
 };
 Props.parameters = {
 	docs: {

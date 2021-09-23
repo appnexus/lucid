@@ -28,6 +28,11 @@
 
 			&.@{prefix}-SingleSelect-Control-is-selected {
 				border: 1px solid @featured-color-primary-borderColor;
+				background-color: @color-primary-light;
+
+				&:hover {
+					background-color: @color-primary-light-hover;
+				}
 			}
 
 			&.@{prefix}-SingleSelect-Control-is-expanded {
@@ -58,13 +63,15 @@
 			.opacity(@opacity-disabled);
 		}
 
-		&:not(.@{prefix}-SingleSelect-Control-is-disabled)&:not(.@{prefix}-SingleSelect-Control-is-expanded) {
+		&:not(.@{prefix}-SingleSelect-Control-is-disabled)
+			&:not(.@{prefix}-SingleSelect-Control-is-expanded),
+		&:not(.@{prefix}-SingleSelect-Control-is-selected) {
 			&:hover {
-				background-color: @color-primary-light-hover;
+				background-color: @color-neutral-3;
 			}
 
 			&:focus {
-				background-color: @color-primary-light;
+				background-color: @color-neutral-4;
 			}
 		}
 

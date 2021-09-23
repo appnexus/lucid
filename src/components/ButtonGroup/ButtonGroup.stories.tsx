@@ -1,3 +1,4 @@
+import { map } from 'lodash';
 import React from 'react';
 import { Meta } from '@storybook/react';
 import ButtonGroup, { ButtonGroupDumb } from './ButtonGroup';
@@ -16,6 +17,7 @@ export default {
 	},
 } as Meta;
 
+/** Default */
 export const Default = () => {
 	const buttonStyle = { width: '100px' };
 	return (
@@ -27,6 +29,7 @@ export const Default = () => {
 	);
 };
 
+/** Stateful */
 export const Stateful = () => {
 	return (
 		<ButtonGroup>
@@ -38,6 +41,7 @@ export const Stateful = () => {
 	);
 };
 
+/** Stateless */
 export const Stateless = () => {
 	return (
 		<ButtonGroup selectedIndices={[7, 8]}>
@@ -51,6 +55,21 @@ export const Stateless = () => {
 			<ButtonGroup.Button>Seven</ButtonGroup.Button>
 			<ButtonGroup.Button>Eight</ButtonGroup.Button>
 			<ButtonGroup.Button>Nine</ButtonGroup.Button>
+		</ButtonGroup>
+	);
+};
+
+/** Disabled */
+export const Disabled = () => {
+	const buttonStyle = { width: '100px' };
+	return (
+		<ButtonGroup>
+			<ButtonGroup.Button style={buttonStyle}>Zero</ButtonGroup.Button>
+			<ButtonGroup.Button isDisabled={true} style={buttonStyle}>
+				One
+			</ButtonGroup.Button>
+			<ButtonGroup.Button style={buttonStyle}>Two</ButtonGroup.Button>
+			<ButtonGroup.Button style={buttonStyle}>Three</ButtonGroup.Button>
 		</ButtonGroup>
 	);
 };
