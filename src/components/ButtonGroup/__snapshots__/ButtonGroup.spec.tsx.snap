@@ -40,6 +40,58 @@ exports[`ButtonGroup [common] example testing should match snapshot(s) for Defau
 </span>
 `;
 
+exports[`ButtonGroup [common] example testing should match snapshot(s) for Disabled 1`] = `
+<span
+  class="lucid-ButtonGroup"
+>
+  <button
+    class="lucid-Button"
+    style="width:100px"
+    type="button"
+  >
+    <span
+      class="lucid-Button-content"
+    >
+      Zero
+    </span>
+  </button>
+  <button
+    class="lucid-Button lucid-Button-is-disabled"
+    disabled=""
+    style="width:100px"
+    type="button"
+  >
+    <span
+      class="lucid-Button-content"
+    >
+      One
+    </span>
+  </button>
+  <button
+    class="lucid-Button"
+    style="width:100px"
+    type="button"
+  >
+    <span
+      class="lucid-Button-content"
+    >
+      Two
+    </span>
+  </button>
+  <button
+    class="lucid-Button"
+    style="width:100px"
+    type="button"
+  >
+    <span
+      class="lucid-Button-content"
+    >
+      Three
+    </span>
+  </button>
+</span>
+`;
+
 exports[`ButtonGroup [common] example testing should match snapshot(s) for Stateful 1`] = `
 <span
   class="lucid-ButtonGroup"

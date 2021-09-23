@@ -298,7 +298,7 @@ exports[`SearchableSingleSelect [common] example testing should match snapshot(s
             <input
               autocomplete="off"
               class="lucid-TextField lucid-TextField-is-single-line"
-              placeholder="Search State"
+              placeholder=""
               rows="5"
               type="text"
               value=""
@@ -350,7 +350,7 @@ exports[`SearchableSingleSelect [common] example testing should match snapshot(s
               autocomplete="off"
               class="lucid-TextField lucid-TextField-is-disabled lucid-TextField-is-single-line"
               disabled=""
-              placeholder="Search State"
+              placeholder=""
               rows="5"
               type="text"
               value=""

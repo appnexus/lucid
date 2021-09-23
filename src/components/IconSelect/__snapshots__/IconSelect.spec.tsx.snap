@@ -61,19 +61,20 @@ exports[`IconSelect [common] example testing should match snapshot(s) for Defaul
       data-id="item2"
     >
       <svg
-        class="lucid-Icon lucid-Icon-color-primary lucid-ClockIcon"
+        class="lucid-Icon lucid-Icon-color-primary lucid-StopwatchIcon"
         height="16"
         preserveAspectRatio="xMidYMid meet"
         viewBox="0 0 16 16"
         width="16"
       >
-        <circle
-          cx="8"
-          cy="8"
-          r="7.5"
+        <path
+          d="M7.5.5h3M9 .5v1.98M.5 6h5m-5 3h3m-3 3h4"
         />
         <path
-          d="M8 3.5v5l2.75 2.25"
+          d="M5.5 14.471A6.455 6.455 0 0 0 9 15.5a6.5 6.5 0 1 0 0-13c-1.29 0-2.489.38-3.5 1.029"
+        />
+        <path
+          d="M9 9l2.5-2.5"
         />
       </svg>
       <figcaption
@@ -205,19 +206,20 @@ exports[`IconSelect [common] example testing should match snapshot(s) for Disabl
       data-id="item2"
     >
       <svg
-        class="lucid-Icon lucid-Icon-color-primary lucid-ClockIcon"
+        class="lucid-Icon lucid-Icon-color-primary lucid-StopwatchIcon"
         height="16"
         preserveAspectRatio="xMidYMid meet"
         viewBox="0 0 16 16"
         width="16"
       >
-        <circle
-          cx="8"
-          cy="8"
-          r="7.5"
+        <path
+          d="M7.5.5h3M9 .5v1.98M.5 6h5m-5 3h3m-3 3h4"
         />
         <path
-          d="M8 3.5v5l2.75 2.25"
+          d="M5.5 14.471A6.455 6.455 0 0 0 9 15.5a6.5 6.5 0 1 0 0-13c-1.29 0-2.489.38-3.5 1.029"
+        />
+        <path
+          d="M9 9l2.5-2.5"
         />
       </svg>
       <figcaption
@@ -332,19 +334,20 @@ exports[`IconSelect [common] example testing should match snapshot(s) for Partia
       data-id="item2"
     >
       <svg
-        class="lucid-Icon lucid-Icon-color-primary lucid-ClockIcon"
+        class="lucid-Icon lucid-Icon-color-primary lucid-StopwatchIcon"
         height="16"
         preserveAspectRatio="xMidYMid meet"
         viewBox="0 0 16 16"
         width="16"
       >
-        <circle
-          cx="8"
-          cy="8"
-          r="7.5"
+        <path
+          d="M7.5.5h3M9 .5v1.98M.5 6h5m-5 3h3m-3 3h4"
         />
         <path
-          d="M8 3.5v5l2.75 2.25"
+          d="M5.5 14.471A6.455 6.455 0 0 0 9 15.5a6.5 6.5 0 1 0 0-13c-1.29 0-2.489.38-3.5 1.029"
+        />
+        <path
+          d="M9 9l2.5-2.5"
         />
       </svg>
       <figcaption
@@ -455,19 +458,20 @@ exports[`IconSelect [common] example testing should match snapshot(s) for Select
       data-id="item2"
     >
       <svg
-        class="lucid-Icon lucid-Icon-color-primary lucid-ClockIcon"
+        class="lucid-Icon lucid-Icon-color-primary lucid-StopwatchIcon"
         height="16"
         preserveAspectRatio="xMidYMid meet"
         viewBox="0 0 16 16"
         width="16"
       >
-        <circle
-          cx="8"
-          cy="8"
-          r="7.5"
+        <path
+          d="M7.5.5h3M9 .5v1.98M.5 6h5m-5 3h3m-3 3h4"
         />
         <path
-          d="M8 3.5v5l2.75 2.25"
+          d="M5.5 14.471A6.455 6.455 0 0 0 9 15.5a6.5 6.5 0 1 0 0-13c-1.29 0-2.489.38-3.5 1.029"
+        />
+        <path
+          d="M9 9l2.5-2.5"
         />
       </svg>
       <figcaption
