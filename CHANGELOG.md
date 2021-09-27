@@ -1,33 +1,47 @@
+## 8.3.0
+
+- #1260 Added more types to `Paginator`
+- #1259 & #1265 Update 'Selected' state UI for `ButtonGroup`, `SingleSelect`, `SearchableSelect`, `SearchableSingleSelect`, `IconSelect`, `VerticalTabs`, and `VerticalListMenu`.
+- #1258 [patch] Changed generic tests to use render.
+- #1250 to #1257 [minor] Update icons to Storybook 6.
+- #1248 & 1249 [minor] Add `Megaphone`, `DoubleChevron` and `Pin` icons.
+- #1247 [minor] Update the primary light color and some other minor styling issues.
+- #1246 [bug] Fix react-syntax-highlighter bug.
+- #1244 [patch] Update old react-syntax-highlighter dep to fix security issue.
+- #1243 [pach] Migrate some DataTable stories to Storybook 6.
+  https://github.com/appnexus/lucid/compare/v8.2.3...v8.3.0
+
 ## 8.2.3
 
-- [patch] Fixed reactDocgen build of prop definitions 
+- [patch] Fixed reactDocgen build of prop definitions.
   https://gist.github.com/shilman/036313ffa3af52ca986b375d90ea46b0#short-term
-- [patch] Tweaked ITabsProps type
-- [patch] Tweaked ITabsProps type
-- [patch] Export more types definitions
+- [patch] Tweaked ITabsProps type.
+- [patch] Tweaked ITabsProps type.
+- [patch] Export more types definitions.
 
 ## 8.2.2
 
-- [patch] Export more types
+- [patch] Export more types.
 
 ## 8.2.1
 
-- [patch] Export Typescript types in package.json 
+- #1240 [patch] Export Typescript types in package.json.
+
 ## 8.2.0
 
-- #1238 [patch] Small update to recent DataTable change 
+- #1238 [patch] Small update to recent DataTable change.
   https://github.com/appnexus/lucid/pull/1238
-- #1237 [minor] Add info prop to TextFieldValidated
+- #1237 [minor] Add info prop to TextFieldValidated.
   https://github.com/appnexus/lucid/pull/1237
 
 ## 8.0.0
 
-- #1231 [major] Updated storybook to v6 
+- #1231 [major] Updated storybook to v6.
   https://github.com/appnexus/lucid/pull/1231
 
 ## 7.2.0
 
-- #1235 [minor] Exposing data table column width to child components 
+- #1235 [minor] Exposing data table column width to child components.
   https://github.com/appnexus/lucid/pull/1235
 
 ## 7.1.0
@@ -47,7 +61,7 @@
 
 ## 7.0.2
 
-- #1222 [patch] Fixed typescript build
+- #1222 [patch] Fixed typescript build.
   https://github.com/appnexus/lucid/compare/v7.0.1...v7.0.2
 
 ## 7.0.1
@@ -57,7 +71,7 @@
 
 ## 7.0.0
 
-- #1218 [major] Updated Storybook minor version and converted Storybook files to TypeScript
+- #1218 [major] Updated Storybook minor version and converted Storybook files to TypeScript.
 - #1216 and #1217 [patch] Fix some Skeleton issues.
 - #1215 [minor] Add `SmallDataTableLoadingSkeleton`.
 - #1214 [minor] Add `SingleLineSkeleton`.
