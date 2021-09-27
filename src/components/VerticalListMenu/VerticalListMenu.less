@@ -7,39 +7,46 @@
 @VerticalListMenu-step: 12;
 
 .@{prefix}-VerticalListMenu {
-
 	font-weight: @font-weight-medium;
 
 	& & .@{prefix}-VerticalListMenu-Item-content {
-		padding-left: @VerticalListMenu-size-childPadding + (@VerticalListMenu-step * 1);
+		padding-left: @VerticalListMenu-size-childPadding +
+			(@VerticalListMenu-step * 1);
 	}
 
 	& & & .@{prefix}-VerticalListMenu-Item-content {
-		padding-left: @VerticalListMenu-size-childPadding + (@VerticalListMenu-step * 2);
+		padding-left: @VerticalListMenu-size-childPadding +
+			(@VerticalListMenu-step * 2);
 	}
 
 	& & & & .@{prefix}-VerticalListMenu-Item-content {
-		padding-left: @VerticalListMenu-size-childPadding + (@VerticalListMenu-step * 3);
+		padding-left: @VerticalListMenu-size-childPadding +
+			(@VerticalListMenu-step * 3);
 	}
 
 	& & & & & .@{prefix}-VerticalListMenu-Item-content {
-		padding-left: @VerticalListMenu-size-childPadding + (@VerticalListMenu-step * 4);
+		padding-left: @VerticalListMenu-size-childPadding +
+			(@VerticalListMenu-step * 4);
 	}
 
 	& & & & & & .@{prefix}-VerticalListMenu-Item-content {
-		padding-left: @VerticalListMenu-size-childPadding + (@VerticalListMenu-step * 5);
+		padding-left: @VerticalListMenu-size-childPadding +
+			(@VerticalListMenu-step * 5);
 	}
 
 	& & & & & & & .@{prefix}-VerticalListMenu-Item-content {
-		padding-left: @VerticalListMenu-size-childPadding + (@VerticalListMenu-step * 6);
+		padding-left: @VerticalListMenu-size-childPadding +
+			(@VerticalListMenu-step * 6);
 	}
 
 	& & & & & & & & .@{prefix}-VerticalListMenu-Item-content {
-		padding-left: @VerticalListMenu-size-childPadding + (@VerticalListMenu-step * 7);
+		padding-left: @VerticalListMenu-size-childPadding +
+			(@VerticalListMenu-step * 7);
 	}
 
 	& & & & & & & & & .@{prefix}-VerticalListMenu-Item-content {
-		padding-left: @VerticalListMenu-size-childPadding + (@VerticalListMenu-step * 8);
+		padding-left: @VerticalListMenu-size-childPadding +
+			(@VerticalListMenu-step * 8);
 	}
 
 	display: flex;
@@ -53,7 +60,6 @@
 
 	&-Item {
 		&-content {
-
 			&-body {
 				display: flex;
 				align-items: center;
@@ -71,9 +77,14 @@
 			line-height: 16px;
 
 			&-is-selected {
-
 				.@{prefix}-VerticalListMenu-Item-content-text {
 					font-weight: @font-weight-semiBold;
+				}
+
+				.@{prefix}-VerticalListMenu-Item-content-body {
+					background-color: @color-primary-light;
+
+					// VerticalListMenu does not get a darker background effect on hover
 				}
 			}
 
@@ -85,7 +96,6 @@
 
 			&-is-expanded,
 			&&-is-expanded {
-
 				position: relative;
 
 				& ::after {
@@ -106,7 +116,6 @@
 			&&-is-selected:hover,
 			&&-is-actionable:hover,
 			&&-is-actionable:focus {
-
 				position: relative;
 
 				& ::after {
@@ -152,31 +161,28 @@
 		}
 
 		& .@{prefix}-Collapsible-content {
+			&
+				.@{prefix}-VerticalListMenu-Item-content.@{prefix}-VerticalListMenu-Item-content-is-not-selected {
+				position: relative;
 
+				& ::after {
+					z-index: -1;
+					position: absolute;
+					left: 0;
+					top: 0;
+					height: 100%;
+					width: @size-XXS;
+					background-color: @color-gray;
+					content: '';
+					transform-origin: 0 0;
+					transition: transform @timing-animation-hover;
+				}
 
-			& .@{prefix}-VerticalListMenu-Item-content.@{prefix}-VerticalListMenu-Item-content-is-not-selected {
-
-					position: relative;
-
+				&:hover {
 					& ::after {
-						z-index: -1;
-						position: absolute;
-						left: 0;
-						top: 0;
-						height: 100%;
-						width: @size-XXS;
-						background-color: @color-gray;
-						content: '';
-						transform-origin: 0 0;
-						transition: transform @timing-animation-hover;
+						background-color: @color-primary;
 					}
-
-					&:hover {
-						& ::after {
-							background-color: @color-primary;
-						}
-					}
-
+				}
 			}
 		}
 
@@ -204,4 +210,3 @@
 		}
 	}
 }
-

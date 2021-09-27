@@ -53,7 +53,7 @@ const Template: any = (args) => {
 	};
 
 	return (
-		<section style={{ minHeight: 90 }}>
+		<section style={{ minHeight: '10em' }}>
 			<SingleSelect {...args} onSelect={(e) => handleSelect(e)}></SingleSelect>
 			{!isNil(selectedIndex) && (
 				<section style={{ paddingTop: 9, paddingLeft: 9 }}>
@@ -215,10 +215,11 @@ NoUnselect.parameters = {
 	},
 };
 
+/** Max Menu Height */
 export const MaxMenuHeight = Template.bind({});
 MaxMenuHeight.args = {
 	...Default.args,
-	maxMenuHeight: '12em',
+	maxMenuHeight: '7em',
 	children: addKeys([
 		<Option>Aliceblue</Option>,
 		<Option>Antiquewhite</Option>,
@@ -246,6 +247,7 @@ MaxMenuHeight.parameters = {
 	},
 };
 
+/** Rich Content */
 export const RichContent = Template.bind({});
 RichContent.args = {
 	...Default.args,
@@ -275,6 +277,7 @@ RichContent.parameters = {
 	},
 };
 
+/** No Selection Highlighting */
 export const NoSelectionHighlighting = Template.bind({});
 NoSelectionHighlighting.args = {
 	...Default.args,
@@ -289,6 +292,7 @@ NoSelectionHighlighting.parameters = {
 	},
 };
 
+/** Array Options */
 export const ArrayOptions = Template.bind({});
 ArrayOptions.args = {
 	Placeholder: 'Select a Number',
@@ -303,6 +307,7 @@ ArrayOptions.parameters = {
 	},
 };
 
+/** Stateless */
 export const Stateless = Template.bind({});
 Stateless.args = {
 	...Default.args,
@@ -331,6 +336,7 @@ Stateless.parameters = {
 	},
 };
 
+/** Invisible */
 export const Invisible = Template.bind({});
 Invisible.args = {
 	...Default.args,
@@ -345,6 +351,7 @@ Invisible.parameters = {
 	},
 };
 
+/** Invisible and Disabled */
 export const InvisibleAndDisabled = Template.bind({});
 InvisibleAndDisabled.args = {
 	...Default.args,

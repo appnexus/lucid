@@ -52,10 +52,7 @@ class ButtonGroup extends React.Component<
 	static displayName = 'ButtonGroup';
 
 	static peek = {
-		description: `
-			Button groups allow you to pair buttons together to form a seamless
-			cluster.  Any props not explicitly called out are spread on to the root
-			component.
+		description: `\`Button Group\` allows you to pair buttons together to form a seamless cluster.  Any props not explicitly called out are spread on to the root component.
 		`,
 		categories: ['controls', 'buttons'],
 		madeFrom: ['Button'],

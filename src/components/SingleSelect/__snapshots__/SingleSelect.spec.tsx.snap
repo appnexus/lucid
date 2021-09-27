@@ -2,7 +2,7 @@
 
 exports[`SingleSelect [common] example testing should match snapshot(s) for ArrayOptions 1`] = `
 <section
-  style="min-height:90px"
+  style="min-height:10em"
 >
   <div
     class="lucid-DropMenu lucid-DropMenu-base lucid-SingleSelect"
@@ -43,7 +43,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for Arra
 
 exports[`SingleSelect [common] example testing should match snapshot(s) for Default 1`] = `
 <section
-  style="min-height:90px"
+  style="min-height:10em"
 >
   <div
     class="lucid-DropMenu lucid-DropMenu-base lucid-SingleSelect"
@@ -84,7 +84,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for Defa
 
 exports[`SingleSelect [common] example testing should match snapshot(s) for DisabledOptions 1`] = `
 <section
-  style="min-height:90px"
+  style="min-height:10em"
 >
   <div
     class="lucid-DropMenu lucid-DropMenu-base lucid-SingleSelect"
@@ -125,7 +125,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for Disa
 
 exports[`SingleSelect [common] example testing should match snapshot(s) for DisabledSelect 1`] = `
 <section
-  style="min-height:90px"
+  style="min-height:10em"
 >
   <div
     class="lucid-DropMenu lucid-DropMenu-base lucid-SingleSelect"
@@ -165,7 +165,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for Disa
 
 exports[`SingleSelect [common] example testing should match snapshot(s) for FormattedOptions 1`] = `
 <section
-  style="min-height:90px"
+  style="min-height:10em"
 >
   <div
     class="lucid-DropMenu lucid-DropMenu-base lucid-SingleSelect"
@@ -206,7 +206,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for Form
 
 exports[`SingleSelect [common] example testing should match snapshot(s) for GroupedOptions 1`] = `
 <section
-  style="min-height:90px"
+  style="min-height:10em"
 >
   <div
     class="lucid-DropMenu lucid-DropMenu-base lucid-SingleSelect"
@@ -247,7 +247,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for Grou
 
 exports[`SingleSelect [common] example testing should match snapshot(s) for Invisible 1`] = `
 <section
-  style="min-height:90px"
+  style="min-height:10em"
 >
   <div
     class="lucid-DropMenu lucid-DropMenu-base lucid-SingleSelect"
@@ -288,7 +288,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for Invi
 
 exports[`SingleSelect [common] example testing should match snapshot(s) for InvisibleAndDisabled 1`] = `
 <section
-  style="min-height:90px"
+  style="min-height:10em"
 >
   <div
     class="lucid-DropMenu lucid-DropMenu-base lucid-SingleSelect"
@@ -328,7 +328,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for Invi
 
 exports[`SingleSelect [common] example testing should match snapshot(s) for MaxMenuHeight 1`] = `
 <section
-  style="min-height:90px"
+  style="min-height:10em"
 >
   <div
     class="lucid-DropMenu lucid-DropMenu-base lucid-SingleSelect"
@@ -369,7 +369,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for MaxM
 
 exports[`SingleSelect [common] example testing should match snapshot(s) for NamedOptions 1`] = `
 <section
-  style="min-height:90px"
+  style="min-height:10em"
 >
   <div
     class="lucid-DropMenu lucid-DropMenu-base lucid-SingleSelect"
@@ -410,7 +410,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for Name
 
 exports[`SingleSelect [common] example testing should match snapshot(s) for NoSelectionHighlighting 1`] = `
 <section
-  style="min-height:90px"
+  style="min-height:10em"
 >
   <div
     class="lucid-DropMenu lucid-DropMenu-base lucid-SingleSelect"
@@ -451,7 +451,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for NoSe
 
 exports[`SingleSelect [common] example testing should match snapshot(s) for NoUnselect 1`] = `
 <section
-  style="min-height:90px"
+  style="min-height:10em"
 >
   <div
     class="lucid-DropMenu lucid-DropMenu-base lucid-SingleSelect"
@@ -492,7 +492,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for NoUn
 
 exports[`SingleSelect [common] example testing should match snapshot(s) for RichContent 1`] = `
 <section
-  style="min-height:90px"
+  style="min-height:10em"
 >
   <div
     class="lucid-DropMenu lucid-DropMenu-base lucid-SingleSelect"
@@ -545,7 +545,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for Rich
 
 exports[`SingleSelect [common] example testing should match snapshot(s) for Stateless 1`] = `
 <section
-  style="min-height:90px"
+  style="min-height:10em"
 >
   <div
     class="lucid-DropMenu lucid-DropMenu-base lucid-DropMenu-is-expanded lucid-DropMenu-direction-down lucid-SingleSelect"

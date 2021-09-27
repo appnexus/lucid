@@ -1,257 +1,518 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`IconSelect [common] example testing should match snapshot(s) for 1.select-one-icon 1`] = `
-<span
-  className="lucid-IconSelect"
->
-  <figure
-    className="lucid-IconSelect-Item lucid-IconSelect-Item-single"
-    data-id="item1"
-    key="iconselectitem_0"
-    onClick={[Function]}
+exports[`IconSelect [common] example testing should match snapshot(s) for Default 1`] = `
+<section>
+  <span
+    class="lucid-IconSelect"
   >
-    <ClockIcon
-      aspectRatio="xMidYMid meet"
-      color="primary"
-      isClickable={false}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={16}
-      viewBox="0 0 16 16"
-    />
-    <figcaption
-      className="lucid-IconSelect-Item-figcaption"
+    <figure
+      class="lucid-IconSelect-Item lucid-IconSelect-Item-single"
+      data-id="item1"
     >
-      <RadioButtonLabeled
-        Label="Foo Bar"
-        className="lucid-IconSelect-Item-radio"
-        isDisabled={false}
-        isSelected={false}
-        onSelect={[Function]}
-      />
-    </figcaption>
-  </figure>
-  <figure
-    className="lucid-IconSelect-Item lucid-IconSelect-Item-is-selected lucid-IconSelect-Item-single"
-    data-id="item2"
-    key="iconselectitem_1"
-    onClick={[Function]}
-  >
-    <ClockIcon
-      aspectRatio="xMidYMid meet"
-      color="primary"
-      isClickable={false}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={16}
-      viewBox="0 0 16 16"
-    />
-    <figcaption
-      className="lucid-IconSelect-Item-figcaption"
+      <svg
+        class="lucid-Icon lucid-Icon-color-primary lucid-ClockIcon"
+        height="16"
+        preserveAspectRatio="xMidYMid meet"
+        viewBox="0 0 16 16"
+        width="16"
+      >
+        <circle
+          cx="8"
+          cy="8"
+          r="7.5"
+        />
+        <path
+          d="M8 3.5v5l2.75 2.25"
+        />
+      </svg>
+      <figcaption
+        class="lucid-IconSelect-Item-figcaption"
+      >
+        <label
+          class="lucid-RadioButtonLabeled lucid-IconSelect-Item-radio"
+        >
+          <span
+            class="lucid-RadioButton lucid-IconSelect-Item-radio"
+          >
+            <input
+              class="lucid-RadioButton-native"
+              type="radio"
+            />
+            <span
+              class="lucid-RadioButton-visualization-glow"
+            />
+            <span
+              class="lucid-RadioButton-visualization-container"
+            />
+            <span
+              class="lucid-RadioButton-visualization-dot"
+            />
+          </span>
+          <div
+            class="lucid-RadioButtonLabeled-label"
+          >
+            Foo Bar
+          </div>
+        </label>
+      </figcaption>
+    </figure>
+    <figure
+      class="lucid-IconSelect-Item lucid-IconSelect-Item-is-selected lucid-IconSelect-Item-single"
+      data-id="item2"
     >
-      <RadioButtonLabeled
-        Label="Bax Tar"
-        className="lucid-IconSelect-Item-radio"
-        isDisabled={false}
-        isSelected={true}
-        onSelect={[Function]}
-      />
-    </figcaption>
-  </figure>
-</span>
+      <svg
+        class="lucid-Icon lucid-Icon-color-primary lucid-StopwatchIcon"
+        height="16"
+        preserveAspectRatio="xMidYMid meet"
+        viewBox="0 0 16 16"
+        width="16"
+      >
+        <path
+          d="M7.5.5h3M9 .5v1.98M.5 6h5m-5 3h3m-3 3h4"
+        />
+        <path
+          d="M5.5 14.471A6.455 6.455 0 0 0 9 15.5a6.5 6.5 0 1 0 0-13c-1.29 0-2.489.38-3.5 1.029"
+        />
+        <path
+          d="M9 9l2.5-2.5"
+        />
+      </svg>
+      <figcaption
+        class="lucid-IconSelect-Item-figcaption"
+      >
+        <label
+          class="lucid-RadioButtonLabeled lucid-RadioButtonLabeled-is-selected lucid-IconSelect-Item-radio"
+        >
+          <span
+            class="lucid-RadioButton lucid-RadioButton-is-selected lucid-IconSelect-Item-radio"
+          >
+            <input
+              checked=""
+              class="lucid-RadioButton-native"
+              type="radio"
+            />
+            <span
+              class="lucid-RadioButton-visualization-glow"
+            />
+            <span
+              class="lucid-RadioButton-visualization-container"
+            />
+            <span
+              class="lucid-RadioButton-visualization-dot"
+            />
+          </span>
+          <div
+            class="lucid-RadioButtonLabeled-label"
+          >
+            Bax Tar
+          </div>
+        </label>
+      </figcaption>
+    </figure>
+  </span>
+</section>
 `;
 
-exports[`IconSelect [common] example testing should match snapshot(s) for 2.select-multiple-icons 1`] = `
-<span
-  className="lucid-IconSelect"
->
-  <figure
-    className="lucid-IconSelect-Item lucid-IconSelect-Item-multi"
-    data-id="item1"
-    key="iconselectitem_0"
-    onClick={[Function]}
+exports[`IconSelect [common] example testing should match snapshot(s) for DisabledIconSelect 1`] = `
+<section>
+  <label
+    class="lucid-SwitchLabeled"
   >
-    <ClockIcon
-      aspectRatio="xMidYMid meet"
-      color="primary"
-      isClickable={false}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={16}
-      viewBox="0 0 16 16"
-    />
-    <figcaption
-      className="lucid-IconSelect-Item-figcaption"
+    <span
+      class="lucid-Switch"
     >
-      <CheckboxLabeled
-        Label="Foo Bar"
-        className="lucid-IconSelect-Item-checkbox"
-        isDisabled={false}
-        isIndeterminate={false}
-        isSelected={false}
-        onSelect={[Function]}
+      <input
+        class="lucid-Switch-native"
+        type="checkbox"
       />
-    </figcaption>
-  </figure>
-  <figure
-    className="lucid-IconSelect-Item lucid-IconSelect-Item-is-selected lucid-IconSelect-Item-multi"
-    data-id="item2"
-    key="iconselectitem_1"
-    onClick={[Function]}
+      <span
+        class="lucid-Switch-visualization-container"
+      />
+      <span
+        class="lucid-Switch-visualization-handle"
+      />
+    </span>
+    <span
+      class="lucid-SwitchLabeled-text"
+      style="position:relative"
+    >
+      IconSelect Disabled
+    </span>
+  </label>
+  <span
+    class="lucid-IconSelect"
   >
-    <ClockIcon
-      aspectRatio="xMidYMid meet"
-      color="primary"
-      isClickable={false}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={16}
-      viewBox="0 0 16 16"
-    />
-    <figcaption
-      className="lucid-IconSelect-Item-figcaption"
+    <figure
+      class="lucid-IconSelect-Item lucid-IconSelect-Item-is-disabled lucid-IconSelect-Item-multi"
+      data-id="item1"
     >
-      <CheckboxLabeled
-        Label="Bax Tar"
-        className="lucid-IconSelect-Item-checkbox"
-        isDisabled={false}
-        isIndeterminate={false}
-        isSelected={true}
-        onSelect={[Function]}
-      />
-    </figcaption>
-  </figure>
-</span>
+      <svg
+        class="lucid-Icon lucid-Icon-color-primary lucid-ClockIcon"
+        height="16"
+        preserveAspectRatio="xMidYMid meet"
+        viewBox="0 0 16 16"
+        width="16"
+      >
+        <circle
+          cx="8"
+          cy="8"
+          r="7.5"
+        />
+        <path
+          d="M8 3.5v5l2.75 2.25"
+        />
+      </svg>
+      <figcaption
+        class="lucid-IconSelect-Item-figcaption"
+      >
+        <label
+          class="lucid-CheckboxLabeled lucid-CheckboxLabeled-is-disabled lucid-IconSelect-Item-checkbox"
+        >
+          <div
+            class="lucid-Checkbox lucid-Checkbox-is-disabled lucid-CheckboxLabeled-Checkbox lucid-IconSelect-Item-checkbox"
+          >
+            <input
+              class="lucid-Checkbox-native"
+              disabled=""
+              type="checkbox"
+            />
+            <span
+              class="lucid-Checkbox-visualization-glow"
+            />
+            <span
+              class="lucid-Checkbox-visualization-container"
+            />
+            <span
+              class="lucid-Checkbox-visualization-checkmark"
+            >
+              <span
+                class="lucid-Checkbox-visualization-checkmark-stem"
+              />
+              <span
+                class="lucid-Checkbox-visualization-checkmark-kick"
+              />
+            </span>
+          </div>
+          <div
+            class="lucid-CheckboxLabeled-label"
+          >
+            Always Disabled
+          </div>
+        </label>
+      </figcaption>
+    </figure>
+    <figure
+      class="lucid-IconSelect-Item lucid-IconSelect-Item-is-disabled lucid-IconSelect-Item-is-selected lucid-IconSelect-Item-multi"
+      data-id="item2"
+    >
+      <svg
+        class="lucid-Icon lucid-Icon-color-primary lucid-StopwatchIcon"
+        height="16"
+        preserveAspectRatio="xMidYMid meet"
+        viewBox="0 0 16 16"
+        width="16"
+      >
+        <path
+          d="M7.5.5h3M9 .5v1.98M.5 6h5m-5 3h3m-3 3h4"
+        />
+        <path
+          d="M5.5 14.471A6.455 6.455 0 0 0 9 15.5a6.5 6.5 0 1 0 0-13c-1.29 0-2.489.38-3.5 1.029"
+        />
+        <path
+          d="M9 9l2.5-2.5"
+        />
+      </svg>
+      <figcaption
+        class="lucid-IconSelect-Item-figcaption"
+      >
+        <label
+          class="lucid-CheckboxLabeled lucid-CheckboxLabeled-is-disabled lucid-CheckboxLabeled-is-selected lucid-IconSelect-Item-checkbox"
+        >
+          <div
+            class="lucid-Checkbox lucid-Checkbox-is-disabled lucid-Checkbox-is-selected lucid-CheckboxLabeled-Checkbox lucid-IconSelect-Item-checkbox"
+          >
+            <input
+              checked=""
+              class="lucid-Checkbox-native"
+              disabled=""
+              type="checkbox"
+            />
+            <span
+              class="lucid-Checkbox-visualization-glow"
+            />
+            <span
+              class="lucid-Checkbox-visualization-container"
+            />
+            <span
+              class="lucid-Checkbox-visualization-checkmark"
+            >
+              <span
+                class="lucid-Checkbox-visualization-checkmark-stem"
+              />
+              <span
+                class="lucid-Checkbox-visualization-checkmark-kick"
+              />
+            </span>
+          </div>
+          <div
+            class="lucid-CheckboxLabeled-label"
+          >
+            Bax Tar
+          </div>
+        </label>
+      </figcaption>
+    </figure>
+  </span>
+</section>
 `;
 
-exports[`IconSelect [common] example testing should match snapshot(s) for 3.partially-select-icons 1`] = `
-<span
-  className="lucid-IconSelect"
->
-  <figure
-    className="lucid-IconSelect-Item lucid-IconSelect-Item-multi"
-    data-id="item1"
-    key="iconselectitem_0"
-    onClick={[Function]}
+exports[`IconSelect [common] example testing should match snapshot(s) for PartiallySelectIcons 1`] = `
+<section>
+  <span
+    class="lucid-IconSelect"
   >
-    <ClockIcon
-      aspectRatio="xMidYMid meet"
-      color="primary"
-      isClickable={false}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={16}
-      viewBox="0 0 16 16"
-    />
-    <figcaption
-      className="lucid-IconSelect-Item-figcaption"
+    <figure
+      class="lucid-IconSelect-Item lucid-IconSelect-Item-multi"
+      data-id="item1"
     >
-      <CheckboxLabeled
-        Label="Foo Bar"
-        className="lucid-IconSelect-Item-checkbox"
-        isDisabled={false}
-        isIndeterminate={false}
-        isSelected={false}
-        onSelect={[Function]}
-      />
-    </figcaption>
-  </figure>
-  <figure
-    className="lucid-IconSelect-Item lucid-IconSelect-Item-is-partial lucid-IconSelect-Item-is-selected lucid-IconSelect-Item-multi"
-    data-id="item2"
-    key="iconselectitem_1"
-    onClick={[Function]}
-  >
-    <ClockIcon
-      aspectRatio="xMidYMid meet"
-      color="primary"
-      isClickable={false}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={16}
-      viewBox="0 0 16 16"
-    />
-    <figcaption
-      className="lucid-IconSelect-Item-figcaption"
+      <svg
+        class="lucid-Icon lucid-Icon-color-primary lucid-ClockIcon"
+        height="16"
+        preserveAspectRatio="xMidYMid meet"
+        viewBox="0 0 16 16"
+        width="16"
+      >
+        <circle
+          cx="8"
+          cy="8"
+          r="7.5"
+        />
+        <path
+          d="M8 3.5v5l2.75 2.25"
+        />
+      </svg>
+      <figcaption
+        class="lucid-IconSelect-Item-figcaption"
+      >
+        <label
+          class="lucid-CheckboxLabeled lucid-IconSelect-Item-checkbox"
+        >
+          <div
+            class="lucid-Checkbox lucid-CheckboxLabeled-Checkbox lucid-IconSelect-Item-checkbox"
+          >
+            <input
+              class="lucid-Checkbox-native"
+              type="checkbox"
+            />
+            <span
+              class="lucid-Checkbox-visualization-glow"
+            />
+            <span
+              class="lucid-Checkbox-visualization-container"
+            />
+            <span
+              class="lucid-Checkbox-visualization-checkmark"
+            >
+              <span
+                class="lucid-Checkbox-visualization-checkmark-stem"
+              />
+              <span
+                class="lucid-Checkbox-visualization-checkmark-kick"
+              />
+            </span>
+          </div>
+          <div
+            class="lucid-CheckboxLabeled-label"
+          >
+            Foo Bar
+          </div>
+        </label>
+      </figcaption>
+    </figure>
+    <figure
+      class="lucid-IconSelect-Item lucid-IconSelect-Item-is-partial lucid-IconSelect-Item-is-selected lucid-IconSelect-Item-multi"
+      data-id="item2"
     >
-      <CheckboxLabeled
-        Label="Bax Tar"
-        className="lucid-IconSelect-Item-checkbox"
-        isDisabled={false}
-        isIndeterminate={true}
-        isSelected={true}
-        onSelect={[Function]}
-      />
-    </figcaption>
-  </figure>
-</span>
+      <svg
+        class="lucid-Icon lucid-Icon-color-primary lucid-StopwatchIcon"
+        height="16"
+        preserveAspectRatio="xMidYMid meet"
+        viewBox="0 0 16 16"
+        width="16"
+      >
+        <path
+          d="M7.5.5h3M9 .5v1.98M.5 6h5m-5 3h3m-3 3h4"
+        />
+        <path
+          d="M5.5 14.471A6.455 6.455 0 0 0 9 15.5a6.5 6.5 0 1 0 0-13c-1.29 0-2.489.38-3.5 1.029"
+        />
+        <path
+          d="M9 9l2.5-2.5"
+        />
+      </svg>
+      <figcaption
+        class="lucid-IconSelect-Item-figcaption"
+      >
+        <label
+          class="lucid-CheckboxLabeled lucid-CheckboxLabeled-is-selected lucid-IconSelect-Item-checkbox"
+        >
+          <div
+            class="lucid-Checkbox lucid-Checkbox-is-selected lucid-CheckboxLabeled-Checkbox lucid-IconSelect-Item-checkbox"
+          >
+            <input
+              checked=""
+              class="lucid-Checkbox-native"
+              type="checkbox"
+            />
+            <span
+              class="lucid-Checkbox-visualization-glow"
+            />
+            <span
+              class="lucid-Checkbox-visualization-container"
+            />
+            <span
+              class="lucid-Checkbox-visualization-indeterminate"
+            >
+              <span
+                class="lucid-Checkbox-visualization-indeterminate-line"
+              />
+            </span>
+          </div>
+          <div
+            class="lucid-CheckboxLabeled-label"
+          >
+            Bax Tar
+          </div>
+        </label>
+      </figcaption>
+    </figure>
+  </span>
+</section>
 `;
 
-exports[`IconSelect [common] example testing should match snapshot(s) for 4.disabled-icon-select 1`] = `
-<span
-  className="lucid-IconSelect"
->
-  <figure
-    className="lucid-IconSelect-Item lucid-IconSelect-Item-is-disabled lucid-IconSelect-Item-multi"
-    data-id="item1"
-    key="iconselectitem_0"
+exports[`IconSelect [common] example testing should match snapshot(s) for SelectMultipleIcons 1`] = `
+<section>
+  <span
+    class="lucid-IconSelect"
   >
-    <ClockIcon
-      aspectRatio="xMidYMid meet"
-      color="primary"
-      isClickable={false}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={16}
-      viewBox="0 0 16 16"
-    />
-    <figcaption
-      className="lucid-IconSelect-Item-figcaption"
+    <figure
+      class="lucid-IconSelect-Item lucid-IconSelect-Item-multi"
+      data-id="item1"
     >
-      <CheckboxLabeled
-        Label="Always Disabled"
-        className="lucid-IconSelect-Item-checkbox"
-        isDisabled={true}
-        isIndeterminate={false}
-        isSelected={false}
-        onSelect={[Function]}
-      />
-    </figcaption>
-  </figure>
-  <figure
-    className="lucid-IconSelect-Item lucid-IconSelect-Item-is-disabled lucid-IconSelect-Item-is-selected lucid-IconSelect-Item-multi"
-    data-id="item2"
-    key="iconselectitem_1"
-  >
-    <ClockIcon
-      aspectRatio="xMidYMid meet"
-      color="primary"
-      isClickable={false}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={16}
-      viewBox="0 0 16 16"
-    />
-    <figcaption
-      className="lucid-IconSelect-Item-figcaption"
+      <svg
+        class="lucid-Icon lucid-Icon-color-primary lucid-ClockIcon"
+        height="16"
+        preserveAspectRatio="xMidYMid meet"
+        viewBox="0 0 16 16"
+        width="16"
+      >
+        <circle
+          cx="8"
+          cy="8"
+          r="7.5"
+        />
+        <path
+          d="M8 3.5v5l2.75 2.25"
+        />
+      </svg>
+      <figcaption
+        class="lucid-IconSelect-Item-figcaption"
+      >
+        <label
+          class="lucid-CheckboxLabeled lucid-IconSelect-Item-checkbox"
+        >
+          <div
+            class="lucid-Checkbox lucid-CheckboxLabeled-Checkbox lucid-IconSelect-Item-checkbox"
+          >
+            <input
+              class="lucid-Checkbox-native"
+              type="checkbox"
+            />
+            <span
+              class="lucid-Checkbox-visualization-glow"
+            />
+            <span
+              class="lucid-Checkbox-visualization-container"
+            />
+            <span
+              class="lucid-Checkbox-visualization-checkmark"
+            >
+              <span
+                class="lucid-Checkbox-visualization-checkmark-stem"
+              />
+              <span
+                class="lucid-Checkbox-visualization-checkmark-kick"
+              />
+            </span>
+          </div>
+          <div
+            class="lucid-CheckboxLabeled-label"
+          >
+            Foo Bar
+          </div>
+        </label>
+      </figcaption>
+    </figure>
+    <figure
+      class="lucid-IconSelect-Item lucid-IconSelect-Item-is-selected lucid-IconSelect-Item-multi"
+      data-id="item2"
     >
-      <CheckboxLabeled
-        Label="Bax Tar"
-        className="lucid-IconSelect-Item-checkbox"
-        isDisabled={true}
-        isIndeterminate={false}
-        isSelected={true}
-        onSelect={[Function]}
-      />
-    </figcaption>
-  </figure>
-</span>
+      <svg
+        class="lucid-Icon lucid-Icon-color-primary lucid-StopwatchIcon"
+        height="16"
+        preserveAspectRatio="xMidYMid meet"
+        viewBox="0 0 16 16"
+        width="16"
+      >
+        <path
+          d="M7.5.5h3M9 .5v1.98M.5 6h5m-5 3h3m-3 3h4"
+        />
+        <path
+          d="M5.5 14.471A6.455 6.455 0 0 0 9 15.5a6.5 6.5 0 1 0 0-13c-1.29 0-2.489.38-3.5 1.029"
+        />
+        <path
+          d="M9 9l2.5-2.5"
+        />
+      </svg>
+      <figcaption
+        class="lucid-IconSelect-Item-figcaption"
+      >
+        <label
+          class="lucid-CheckboxLabeled lucid-CheckboxLabeled-is-selected lucid-IconSelect-Item-checkbox"
+        >
+          <div
+            class="lucid-Checkbox lucid-Checkbox-is-selected lucid-CheckboxLabeled-Checkbox lucid-IconSelect-Item-checkbox"
+          >
+            <input
+              checked=""
+              class="lucid-Checkbox-native"
+              type="checkbox"
+            />
+            <span
+              class="lucid-Checkbox-visualization-glow"
+            />
+            <span
+              class="lucid-Checkbox-visualization-container"
+            />
+            <span
+              class="lucid-Checkbox-visualization-checkmark"
+            >
+              <span
+                class="lucid-Checkbox-visualization-checkmark-stem"
+              />
+              <span
+                class="lucid-Checkbox-visualization-checkmark-kick"
+              />
+            </span>
+          </div>
+          <div
+            class="lucid-CheckboxLabeled-label"
+          >
+            Bax Tar
+          </div>
+        </label>
+      </figcaption>
+    </figure>
+  </span>
+</section>
 `;

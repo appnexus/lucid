@@ -46,11 +46,38 @@
 		stroke: @color-neutral-9;
 	}
 
+	// Not Disabled
+	&:not(.@{prefix}-IconSelect-Item-is-disabled):hover {
+		cursor: pointer;
+
+		&:not(.@{prefix}-IconSelect-Item-is-indeterminate)::before {
+			border: 1px solid @color-primary;
+		}
+
+		.@{prefix}-Icon {
+			opacity: 1;
+			stroke: @color-primary;
+		}
+
+		.@{prefix}-Checkbox-visualization-container {
+			border: 1px solid @color-primary;
+		}
+	}
+
 	// On Hover, Active, Indeterminate, or Selected
-	&:not(.@{prefix}-IconSelect-Item-is-disabled):hover,
+	//&:not(.@{prefix}-IconSelect-Item-is-disabled):hover,
 	&.@{prefix}-IconSelect-Item-is-active,
 	&.@{prefix}-IconSelect-Item-is-selected {
-		cursor: pointer;
+		background-color: @color-primary-light;
+
+		// on hover
+		&:hover {
+			background-color: @color-primary-light-hover;
+		}
+
+		&.@{prefix}-IconSelect-Item-is-disabled:hover {
+			background-color: @color-primary-light;
+		}
 
 		&:not(.@{prefix}-IconSelect-Item-is-indeterminate)::before {
 			border: 1px solid @color-primary;

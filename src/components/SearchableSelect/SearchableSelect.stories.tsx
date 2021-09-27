@@ -244,30 +244,30 @@ const optionFilter = (
 export const FormattedOptions = Template.bind({});
 FormattedOptions.args = {
 	...Default.args,
-	Placeholder: 'Select a Color',
+	Placeholder: 'Select Color',
 	optionFilter: optionFilter,
 	children: addKeys([
-		<SearchableSelect.OptionGroup>
+		<OptionGroup>
 			<OptionCols col1='Name' col2='ID' />
 
-			<SearchableSelect.Option filterText='Red' Selected='Red (#FF0000)'>
+			<Option filterText='Red' Selected='Red (#FF0000)'>
 				{({ searchText }: { searchText: string }) => (
 					<OptionCols col1='Red' col2='#FF0000' textMatch={searchText} />
 				)}
-			</SearchableSelect.Option>
+			</Option>
 
-			<SearchableSelect.Option filterText='Green' Selected='Green (#00FF00)'>
+			<Option filterText='Green' Selected='Green (#00FF00)'>
 				{({ searchText }: { searchText: string }) => (
 					<OptionCols col1='Green' col2='#00FF00' textMatch={searchText} />
 				)}
-			</SearchableSelect.Option>
+			</Option>
 
-			<SearchableSelect.Option filterText='Blue' Selected='Blue (#0000FF)'>
+			<Option filterText='Blue' Selected='Blue (#0000FF)'>
 				{({ searchText }: { searchText: string }) => (
 					<OptionCols col1='Blue' col2='#0000FF' textMatch={searchText} />
 				)}
-			</SearchableSelect.Option>
-		</SearchableSelect.OptionGroup>,
+			</Option>
+		</OptionGroup>,
 	]),
 };
 FormattedOptions.parameters = {
