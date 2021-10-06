@@ -10,7 +10,6 @@ First of all, thank you for contributing. It’s appreciated.
 
 4. Below are some important commands for developing. Don't commit before fixing all errors and warnings.
 
-- `npm start` runs the docs page and watches for changes
 - `npm run dev` starts a blank storybook sandbox for quick, iterative development
 - `npm run watch` runs tests and watches for changes, optimized for speed
 
