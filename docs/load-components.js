@@ -54,16 +54,8 @@ module.exports = [
 	},
 	{
 		name: 'Badge',
-		component: getDefaultExport(require('../src/components/Badge/Badge')),
-		examplesContext: require.context(
-			'../src/components/Badge/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../src/components/Badge/examples',
-			true,
-			/\.(j|t)sx?$/
+		component: getDefaultExport(
+			require('../src/components/Badge/Badge')
 		),
 	},
 	{
