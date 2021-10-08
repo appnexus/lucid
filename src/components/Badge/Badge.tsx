@@ -1,12 +1,32 @@
 import _ from 'lodash';
 import React from 'react';
-import PropTypes from 'react-peek/prop-types';
+import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import { omitProps, StandardProps } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-Badge');
 
-const { node, string, oneOf } = PropTypes;
+const badgePropTypes = {
+	/** class names that are appended to the defaults */
+	className: PropTypes.string,
+
+	/** any valid React children */
+	children: PropTypes.node,
+
+	/** Style variations for the `Badge` */
+	kind: PropTypes.oneOf([
+		'default',
+		'primary',
+		'success',
+		'danger',
+		'warning',
+		'info',
+		'dark',
+	]),
+
+	/** Fill style variations for the `Badge` */
+	type: PropTypes.oneOf(['filled', 'stroke']),
+};
 
 export enum Kind {
 	default = 'default',
@@ -54,29 +74,6 @@ export const Badge = (props: IBadgeProps): React.ReactElement => {
 
 Badge.defaultProps = defaultProps;
 Badge.displayName = 'Badge';
-Badge.peek = {
-	description: `
-				\`Badge\` is a quick utility component to create a badge around any
-				element(s).
-			`,
-	categories: ['visual design', 'icons'],
-};
-Badge.propTypes = {
-	className: string`
-			class names that are appended to the defaults
-		`,
-
-	children: node`
-			any valid React children
-		`,
-
-	kind: oneOf(_.values(Kind))`
-			Style variations for the \`Badge\`
-		`,
-
-	type: oneOf(_.values(Type))`
-			Fill style variations for the \`Badge\`
-		`,
-};
+Badge.propTypes = badgePropTypes;
 
 export default Badge;

@@ -111,3 +111,72 @@ exports[`Badge [common] example testing should match snapshot(s) for 1.basic 8`]
   Badge
 </span>
 `;
+
+exports[`Badge [common] example testing should match snapshot(s) for AllTypes 1`] = `
+<div>
+  <div>
+    <span
+      class="lucid-Badge lucid-Badge-default lucid-Badge-filled"
+      style="margin-bottom:10px;margin-right:10px"
+    >
+      Badge
+    </span>
+    <span
+      class="lucid-Badge lucid-Badge-default lucid-Badge-stroke"
+      style="margin-bottom:10px;margin-right:10px"
+    >
+      Badge
+    </span>
+  </div>
+  <div>
+    <span
+      class="lucid-Badge lucid-Badge-primary lucid-Badge-filled"
+      style="margin-bottom:10px;margin-right:10px"
+    >
+      Badge
+    </span>
+    <span
+      class="lucid-Badge lucid-Badge-primary lucid-Badge-stroke"
+      style="margin-bottom:10px;margin-right:10px"
+    >
+      Badge
+    </span>
+  </div>
+  <div>
+    <span
+      class="lucid-Badge lucid-Badge-success lucid-Badge-filled"
+      style="margin-bottom:10px;margin-right:10px"
+    >
+      Badge
+    </span>
+    <span
+      class="lucid-Badge lucid-Badge-success lucid-Badge-stroke"
+      style="margin-bottom:10px;margin-right:10px"
+    >
+      Badge
+    </span>
+  </div>
+  <div>
+    <span
+      class="lucid-Badge lucid-Badge-danger lucid-Badge-filled"
+      style="margin-bottom:10px;margin-right:10px"
+    >
+      Badge
+    </span>
+    <span
+      class="lucid-Badge lucid-Badge-danger lucid-Badge-stroke"
+      style="margin-bottom:10px;margin-right:10px"
+    >
+      Badge
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Badge [common] example testing should match snapshot(s) for Default 1`] = `
+<span
+  class="lucid-Badge lucid-Badge-default lucid-Badge-filled"
+>
+  Badge
+</span>
+`;
