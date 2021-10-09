@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import _ from 'lodash';
+
 import { lucidClassNames } from '../../util/style-helpers';
 import { findTypes, getFirst, StandardProps } from '../../util/component-types';
 import { buildModernHybridComponent } from '../../util/state-management';
@@ -43,6 +44,7 @@ export interface ISingleSelectOptionProps extends IDropMenuOptionProps {
 	Selected?: React.ReactNode;
 }
 
+/** Selected Child Component */
 const Selected = (_props: { children?: React.ReactNode }): null => null;
 
 Selected.displayName = 'SingleSelect.Option.Selected';
@@ -55,6 +57,7 @@ Selected.peek = {
 Selected.propName = 'Selected';
 Selected.propTypes = {};
 
+/** Option Child Component */
 const Option = (_props: ISingleSelectOptionProps): null => null;
 
 Option.displayName = 'SingleSelect.Option';
@@ -66,14 +69,13 @@ Option.peek = {
 Option.Selected = Selected;
 Option.propName = 'Option';
 Option.propTypes = {
-	Selected: any`
-        Customizes the rendering of the Option when it is selected and is
-        displayed instead of the Placeholder.
-    `,
+	/** Customizes the rendering of the Option when it is selected and is displayed instead of the Placeholder.*/
+	Selected: any,
 	...DropMenu.Option.propTypes,
 };
 Option.defaultProps = DropMenu.Option.defaultProps;
 
+/** Option Group */
 const OptionGroup = (_props: IDropMenuOptionGroupProps): null => null;
 
 OptionGroup.displayName = 'SingleSelect.OptionGroup';
@@ -188,83 +190,66 @@ class SingleSelect extends React.Component<
 	static FixedOption = DropMenu.FixedOption;
 
 	static propTypes = {
-		children: node`
-            Should be instances of: \`SingleSelect.Placeholder\`,
-            \`SingleSelect.Option\`, \`SingleSelect.OptionGroup\`. Other direct
-            child elements will not render.
-        `,
+		/** Should be instances of: \`SingleSelect.Placeholder\`, \`SingleSelect.Option\`, \`SingleSelect.OptionGroup\`. Other direct child elements will not render. */
+		children: node,
 
-		className: string`
-            Appended to the component-specific class names set on the root elements.
-            Applies to *both* the control and the flyout menu.
-        `,
+		/** Appended to the component-specific class names set on the root elements.
+				Applies to *both* the control and the flyout menu. */
+		className: string,
 
-		style: object`
-            Styles that are passed through to root element.
-        `,
+		/** Styles that are passed through to root element. */
+		style: object,
 
-		isSelectionHighlighted: bool`
-            Applies primary color styling to the control when an item is selected.
-        `,
+		/** Applies primary color styling to the control when an item is selected. */
+		isSelectionHighlighted: bool,
 
-		hasReset: bool`
-            Allows user to reset the \`optionIndex\` to \`null\` if they select the
-            placeholder at the top of the options list.  If \`false\`, it will not
-            render the placeholder in the menu.
-        `,
+		/** Allows user to reset the \`optionIndex\` to \`null\` if they select the
+				placeholder at the top of the options list.  If \`false\`, it will not
+				render the placeholder in the menu. */
+		hasReset: bool,
 
-		isDisabled: bool`
-            Disables the \`SingleSelect\` from being clicked or focused.
-        `,
+		/** Disables the \`SingleSelect\` from being clicked or focused. */
+		isDisabled: bool,
 
-		isInvisible: bool`
-            Gives the effect of an 'invisible button'. Essentially, there is no grey border,
-            but there is still a blue border on a selection.
-        `,
+		/** Gives the effect of an 'invisible button'. Essentially, there is no grey border,
+				but there is still a blue border on a selection. */
+		isInvisible: bool,
 
-		selectedIndex: number`
-            The currently selected \`SingleSelect.Option\` index or \`null\` if
-            nothing is selected.
-        `,
+		/** The currently selected \`SingleSelect.Option\` index or \`null\` if
+				nothing is selected. */
+		selectedIndex: number,
 
-		maxMenuHeight: oneOfType([number, string])`
-            The max height of the fly-out menu.
-        `,
+		/** The max height of the fly-out menu. */
+		maxMenuHeight: oneOfType([number, string]),
 
-		showIcon: bool`
-						Show or hide the dropndown icon
-				`,
+		/** Show or hide the dropndown icon */
+		showIcon: bool,
 
-		DropMenu: shape(DropMenu.propTypes)`
-            Object of \`DropMenu\` props which are passed thru to the underlying \`DropMenu\`
-            component.
-        `,
+		/** Object of \`DropMenu\` props which are passed thru to the underlying \`DropMenu\`
+				component. */
+		DropMenu: shape(DropMenu.propTypes),
 
-		onSelect: func`
-            Called when an option is selected.  Has the signature \`(optionIndex,
-            {props, event}) => {}\` where \`optionIndex\` is the new
-            \`selectedIndex\` or \`null\` and \`props\` are the \`props\` for the
-            selected \`Option\`.
-        `,
+		/** Called when an option is selected.  Has the signature \`(optionIndex,
+				{props, event}) => {}\` where \`optionIndex\` is the new
+				\`selectedIndex\` or \`null\` and \`props\` are the \`props\` for the
+				selected \`Option\`. */
+		onSelect: func,
 
-		Placeholder: any`
-            *Child Element* - The content rendered in the control when there is no
-            option is selected. Also rendered in the option list to remove current
-            selection.
-        `,
+		/** *Child Element* - The content rendered in the control when there is no
+				option is selected. Also rendered in the option list to remove current
+				selection. */
+		Placeholder: any,
 
-		Option: any`
-            *Child Element* - A drop menu option. The \`optionIndex\` is in-order
-            of rendering regardless of group nesting, starting with index \`0\`.
-            Each \`Option\` may be passed a prop called \`isDisabled\` to disable
-            selection of that \`Option\`.  Any other props pass to Option will be
-            available from the \`onSelect\` handler.
-        `,
+		/** *Child Element* - A drop menu option. The \`optionIndex\` is in-order
+				of rendering regardless of group nesting, starting with index \`0\`.
+				Each \`Option\` may be passed a prop called \`isDisabled\` to disable
+				selection of that \`Option\`.  Any other props pass to Option will be
+				available from the \`onSelect\` handler. */
+		Option: any,
 
-		OptionGroup: any`
-            *Child Element* - Used to group \`Option\`s within the menu. Any
-            non-\`Option\`s passed in will be rendered as a label for the group.
-        `,
+		/** *Child Element* - Used to group \`Option\`s within the menu. Any
+				non-\`Option\`s passed in will be rendered as a label for the group. */
+		OptionGroup: any,
 	};
 
 	UNSAFE_componentWillMount() {

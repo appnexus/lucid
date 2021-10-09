@@ -1,7 +1,8 @@
 import { map, isNil } from 'lodash';
 import React, { useState } from 'react';
-import { Meta } from '@storybook/react';
+import { Story, Meta } from '@storybook/react';
 
+import { ISingleSelectProps } from './SingleSelect';
 import {
 	SingleSelect,
 	PlusIcon,
@@ -9,6 +10,7 @@ import {
 	InfoIcon,
 	DangerIcon,
 } from '../../index';
+import { findTypes } from '../../util/component-types';
 
 //👇 Provide Storybook with the component name, 'section', any subcomponents and a description
 export default {
@@ -32,22 +34,24 @@ export default {
 //👇 Destructure any child components that we will need
 const { Option, OptionGroup } = SingleSelect;
 
-//👇 Add a key prop to each element of the array
+//👇 Helper function to add a key prop to each element of the array
 function addKeys(children) {
 	return map(children, (child, index) => ({ ...child, key: index }));
 }
 
 //👇 Create a “template” of how args map to rendering
-const Template: any = (args) => {
+
+const Template: Story<ISingleSelectProps> = (args) => {
 	const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
 	const [selectedOptionName, setSelectedOptionName] = useState<string | null>(
 		null
 	);
 
 	const handleSelect = (optionIndex: number | null) => {
-		const name = !isNil(optionIndex)
-			? args.children[optionIndex].props.name
-			: null;
+		const options = !isNil(args.children)
+			? args.children
+			: [<Option>child</Option>];
+		const name = !isNil(optionIndex) ? options[optionIndex].props.name : null;
 		setSelectedIndex(optionIndex);
 		setSelectedOptionName(name);
 	};
