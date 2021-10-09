@@ -1,7 +1,8 @@
 import _ from 'lodash';
 import React from 'react';
-import { Badge, IBadgeProps } from './Badge';
 import { Story, Meta } from '@storybook/react';
+
+import { Badge, IBadgeProps } from './Badge';
 
 const kinds = [undefined, 'primary', 'success', 'danger'];
 const types = [undefined, 'stroke'];
@@ -9,14 +10,21 @@ const types = [undefined, 'stroke'];
 export default {
 	title: 'visual design/Badge',
 	component: Badge,
+	parameters: {
+		docs: {
+			description: {
+				component: Badge.description,
+			},
+		},
+	},
 } as Meta;
 
-//👇 We create a “template” of how args map to rendering
-const Template: Story<IBadgeProps> = (args) => <Badge {...args}>Badge</Badge>;
+//👇 We create a default story for the component
+export const Default: Story<IBadgeProps> = (args) => (
+	<Badge {...args}>Badge</Badge>
+);
 
-//👇 Each story then reuses that template
-export const Default = Template.bind({});
-
+/** All Types */
 export const AllTypes = () => (
 	<div>
 		{_.map(kinds, (kind) => (

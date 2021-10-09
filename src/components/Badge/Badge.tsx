@@ -1,6 +1,7 @@
 import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
+
 import { lucidClassNames } from '../../util/style-helpers';
 import { omitProps, StandardProps } from '../../util/component-types';
 
@@ -46,11 +47,13 @@ export enum Type {
 export interface IBadgeProps
 	extends StandardProps,
 		React.DetailedHTMLProps<
-			React.HTMLAttributes<HTMLSpanElement>,
+			React.DOMAttributes<HTMLSpanElement>,
 			HTMLSpanElement
 		> {
+	/** Style variations for the `Badge` */
 	kind: keyof typeof Kind;
-	/** Fill variations for the `Badge` */
+
+	/** Fill style variations for the `Badge` */
 	type: keyof typeof Type;
 }
 
@@ -73,6 +76,8 @@ export const Badge = (props: IBadgeProps): React.ReactElement => {
 };
 
 Badge.defaultProps = defaultProps;
+Badge.description = `\`Badge\` is a quick utility component to create a badge around any
+element(s).`;
 Badge.displayName = 'Badge';
 Badge.propTypes = badgePropTypes;
 
