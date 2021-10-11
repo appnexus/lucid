@@ -31,10 +31,11 @@ export interface IValidationProps
 			HTMLDivElement
 		> {
 	Error?: React.ReactNode;
+	textColor?: string;
 }
 
 export const Validation = (props: IValidationProps): React.ReactElement => {
-	const { className, children, ...passThroughs } = props;
+	const { className, children, textColor, ...passThroughs } = props;
 
 	const errorChildProps = _.get(
 		getFirst<IValidationErrorProps>(props, Validation.Error),
@@ -63,6 +64,7 @@ export const Validation = (props: IValidationProps): React.ReactElement => {
 				<div
 					{...omitProps<IValidationProps>(errorChildProps, undefined)}
 					className={cx('&-error-content', errorChildProps.className)}
+					style={{ color: textColor }}
 				>
 					{errorChildProps.children}
 				</div>
