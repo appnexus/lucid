@@ -48,12 +48,14 @@ const Template: Story<ISingleSelectProps> = (args) => {
 	);
 
 	const handleSelect = (optionIndex: number | null) => {
-		const options = !isNil(args.children)
-			? args.children
-			: [<Option>child</Option>];
-		const name = !isNil(optionIndex) ? options[optionIndex].props.name : null;
-		setSelectedIndex(optionIndex);
-		setSelectedOptionName(name);
+		if (!isNil(args.children)) {
+			const name = !isNil(optionIndex)
+				? args.children[optionIndex].props.name
+				: null;
+			setSelectedIndex(optionIndex);
+			setSelectedOptionName(name);
+		}
+		return;
 	};
 
 	return (
