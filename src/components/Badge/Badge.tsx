@@ -47,7 +47,7 @@ export enum Type {
 export interface IBadgeProps
 	extends StandardProps,
 		React.DetailedHTMLProps<
-			React.DOMAttributes<HTMLSpanElement>,
+			React.HTMLAttributes<HTMLSpanElement>,
 			HTMLSpanElement
 		> {
 	/** Style variations for the `Badge` */
