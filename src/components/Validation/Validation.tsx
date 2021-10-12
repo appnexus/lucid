@@ -64,7 +64,7 @@ export const Validation = (props: IValidationProps): React.ReactElement => {
 				<div
 					{...omitProps<IValidationProps>(errorChildProps, undefined)}
 					className={cx('&-error-content', errorChildProps.className)}
-					style={{ color: textColor }}
+					style={textColor ? { color: textColor } : undefined}
 				>
 					{errorChildProps.children}
 				</div>
@@ -98,6 +98,11 @@ Validation.propTypes = {
 
 	children: any.isRequired`
 		Any valid React children.
+	`,
+
+	textColor: string`
+		Any valid hexadecimal color, used to style the \`special\` message color
+		provided to \`TextFieldValidated\`.
 	`,
 };
 

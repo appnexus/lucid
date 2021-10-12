@@ -73,8 +73,11 @@ class TextFieldValidated extends React.Component<
 		`,
 
 		special: object`
-			Optional information text that can be styled in a variety of border and font colors
-			Object with props 'message' string, 'textColor' and 'borderColor' oneOf ['green', 'aquamarine', 'blue', 'purple', 'yellow', 'orange', 'red', 'grey']
+			Optional information text that can be styled in a variety of border and
+			font colors, and don't prevent function like an error message does.
+			Object made up of \`message\`: string, \`textColor\`: string, and
+			\`borderColor\`: string. \`textColor\` and \`borderColor\` must be a
+			valid hexadecimal color in order to work properly.
 		`,
 	};
 

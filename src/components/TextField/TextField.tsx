@@ -96,6 +96,7 @@ export interface ITextFieldProps extends StandardProps {
 		heavily inspired by the [lazy-input](https:/docs.npmjs.com/package/lazy-input) component. */
 	lazyLevel?: number;
 
+	/** Passed to the component to style the color of the input border when an info message is present */
 	borderColor?: string;
 }
 
@@ -187,6 +188,11 @@ class TextField extends React.Component<
 			flowing in to the component until the timer has elapsed.  This was
 			heavily inspired by the
 			[lazy-input](https:/docs.npmjs.com/package/lazy-input) component.
+		`,
+
+		borderColor: string`
+			Any valid hexadecimal color, used to style the input border color when a 
+			\`special\` message is provided to \`TextFieldValidated\`.
 		`,
 	};
 
@@ -334,6 +340,10 @@ class TextField extends React.Component<
 
 		const { value } = this.state;
 
+		let updatedStyle = style;
+		if (this.props.borderColor)
+			updatedStyle = { ...updatedStyle, borderColor: this.props.borderColor };
+
 		const finalProps = {
 			...omitProps(passThroughs, undefined, [
 				...Object.keys(TextField.propTypes),
@@ -352,7 +362,7 @@ class TextField extends React.Component<
 			onChange: this.handleChange,
 			onBlur: this.handleBlur,
 			onKeyDown: this.handleKeyDown,
-			style: { ...style, borderColor: this.props.borderColor },
+			style: { ...updatedStyle },
 			rows,
 			value,
 		};

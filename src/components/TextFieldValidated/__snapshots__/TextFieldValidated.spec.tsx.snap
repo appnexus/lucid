@@ -10,6 +10,7 @@ exports[`TextFieldValidated [common] example testing should match snapshot(s) fo
     ]
   }
   className="lucid-TextFieldValidated"
+  style={Object {}}
 >
   <TextField
     debounceLevel={500}
@@ -95,17 +96,55 @@ exports[`TextFieldValidated [common] example testing should match snapshot(s) fo
 <Validation
   Error={
     Array [
-      "This is an info",
+      "This is a special in the \\"info\\" style",
     ]
   }
-  className="lucid-TextFieldValidated -info"
+  className="lucid-TextFieldValidated"
   style={
     Object {
+      "borderColor": "#587eba",
+      "color": "#908f8f",
       "marginBottom": "10px",
     }
   }
+  textColor="#908f8f"
 >
   <TextField
+    borderColor="#587eba"
+    debounceLevel={500}
+    isDisabled={false}
+    isMultiLine={false}
+    lazyLevel={1000}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onChangeDebounced={[Function]}
+    onKeyDown={[Function]}
+    onSubmit={[Function]}
+    rows={5}
+    value=""
+  />
+</Validation>
+`;
+
+exports[`TextFieldValidated [common] example testing should match snapshot(s) for 03.error_types 3`] = `
+<Validation
+  Error={
+    Array [
+      "This is a special with green text and border",
+    ]
+  }
+  className="lucid-TextFieldValidated"
+  style={
+    Object {
+      "borderColor": "#49b27b",
+      "color": "#49b27b",
+      "marginBottom": "10px",
+    }
+  }
+  textColor="#49b27b"
+>
+  <TextField
+    borderColor="#49b27b"
     debounceLevel={500}
     isDisabled={false}
     isMultiLine={false}
