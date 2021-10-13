@@ -60,16 +60,8 @@ module.exports = [
 	},
 	{
 		name: 'Banner',
-		component: getDefaultExport(require('../src/components/Banner/Banner')),
-		examplesContext: require.context(
-			'../src/components/Banner/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../src/components/Banner/examples',
-			true,
-			/\.(j|t)sx?$/
+		component: getDefaultExport(
+			require('../src/components/Banner/Banner')
 		),
 	},
 	{
