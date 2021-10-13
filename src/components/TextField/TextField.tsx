@@ -95,8 +95,6 @@ export interface ITextFieldProps extends StandardProps {
 		flowing in to the component until the timer has elapsed.  This was
 		heavily inspired by the [lazy-input](https:/docs.npmjs.com/package/lazy-input) component. */
 	lazyLevel?: number;
-
-	borderColor?: string;
 }
 
 export type ITextFieldPropsWithPassThroughs = Overwrite<
@@ -352,7 +350,7 @@ class TextField extends React.Component<
 			onChange: this.handleChange,
 			onBlur: this.handleBlur,
 			onKeyDown: this.handleKeyDown,
-			style: { ...style, borderColor: this.props.borderColor },
+			style,
 			rows,
 			value,
 		};

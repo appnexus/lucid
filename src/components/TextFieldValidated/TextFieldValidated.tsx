@@ -31,6 +31,7 @@ TextFieldValidatedError.propName = 'Error';
 export interface ITextFieldValidatedProps
 	extends ITextFieldPropsWithPassThroughs {
 	Error?: React.ReactNode;
+	Info?: string;
 	special?: {
 		message: string;
 		textColor: string;
@@ -72,9 +73,8 @@ class TextFieldValidated extends React.Component<
 			Prop alternative to Error child component
 		`,
 
-		special: object`
-			Optional information text that can be styled in a variety of border and font colors
-			Object with props 'message' string, 'textColor' and 'borderColor' oneOf ['green', 'aquamarine', 'blue', 'purple', 'yellow', 'orange', 'red', 'grey']
+		Info: string`
+			Optional information text that is styled less aggressively than an error
 		`,
 	};
 
@@ -96,23 +96,52 @@ class TextFieldValidated extends React.Component<
 				findTypes(this.props, TextFieldValidated.Error),
 				'props'
 			);
+		} else if (this.props.Info) {
+			childProps = [this.props.Info];
 		} else if (this.props.special) {
 			childProps = [this.props.special?.message];
 		}
 
 		let specialStyle;
-		if (!this.props.Error && this.props.special) {
+		if (!this.props.Error && !this.props.Info && this.props.special) {
 			const { textColor, borderColor } = this.props.special;
 			specialStyle = { color: textColor, borderColor: borderColor };
 		}
-		const isSpecial = !this.props.Error && this.props.special;
+		const isSpecial =
+			!this.props.Error && !this.props.Info && this.props.special;
+
+		const classColorTypes = {
+			'-green-text': isSpecial && this.props.special?.textColor === 'green',
+			'-green-border': isSpecial && this.props.special?.borderColor === 'green',
+			'-aquamarine-text':
+				isSpecial && this.props.special?.textColor === 'aquamarine',
+			'-aquamarine-border':
+				isSpecial && this.props.special?.borderColor === 'aquamarine',
+			'-blue-text': isSpecial && this.props.special?.textColor === 'blue',
+			'-blue-border': isSpecial && this.props.special?.borderColor === 'blue',
+			'-purple-text': isSpecial && this.props.special?.textColor === 'purple',
+			'-purple-border':
+				isSpecial && this.props.special?.borderColor === 'purple',
+			'-yellow-text': isSpecial && this.props.special?.textColor === 'yellow',
+			'-yellow-border':
+				isSpecial && this.props.special?.borderColor === 'yellow',
+			'-orange-text': isSpecial && this.props.special?.textColor === 'orange',
+			'-orange-border':
+				isSpecial && this.props.special?.borderColor === 'orange',
+			'-red-text': isSpecial && this.props.special?.textColor === 'red',
+			'-red-border': isSpecial && this.props.special?.borderColor === 'red',
+			'-grey-text': isSpecial && this.props.special?.textColor === 'grey',
+			'-grey-border': isSpecial && this.props.special?.borderColor === 'grey',
+		};
 
 		return (
 			<Validation
-				className={cx('&', className)}
+				className={cx('&', className, {
+					'-info': !this.props.Error && this.props.Info,
+					...classColorTypes,
+				})}
 				style={{ ...style, ...specialStyle }}
 				Error={childProps}
-				textColor={isSpecial ? this.props.special?.textColor : undefined}
 			>
 				<TextField
 					{...omitProps(
@@ -121,7 +150,6 @@ class TextFieldValidated extends React.Component<
 						_.keys(TextFieldValidated.propTypes),
 						false
 					)}
-					borderColor={isSpecial ? this.props.special?.borderColor : undefined}
 					ref={this.textFieldRef}
 				/>
 			</Validation>

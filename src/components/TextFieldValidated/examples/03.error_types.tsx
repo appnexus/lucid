@@ -28,10 +28,17 @@ export default createClass({
 					value={this.state.value}
 					onChangeDebounced={() => {}}
 					Error={null}
+					Info={'This is an info'}
+				/>
+				<TextFieldValidated
+					style={style}
+					value={this.state.value}
+					onChangeDebounced={() => {}}
+					Error={null}
 					special={{
-						message: 'This is a special in the "info" style',
-						textColor: '#908f8f',
-						borderColor: '#587eba',
+						message: 'This has green text and border',
+						textColor: 'green',
+						borderColor: 'green',
 					}}
 				/>
 				<TextFieldValidated
@@ -40,9 +47,86 @@ export default createClass({
 					onChangeDebounced={() => {}}
 					Error={null}
 					special={{
-						message: 'This is a special with green text and border',
-						textColor: '#49b27b',
-						borderColor: '#49b27b',
+						message: 'This has aquamarine text and border',
+						textColor: 'aquamarine',
+						borderColor: 'aquamarine',
+					}}
+				/>
+				<TextFieldValidated
+					style={style}
+					value={this.state.value}
+					onChangeDebounced={() => {}}
+					Error={null}
+					special={{
+						message: 'This has blue text and border',
+						textColor: 'blue',
+						borderColor: 'blue',
+					}}
+				/>
+				<TextFieldValidated
+					style={style}
+					value={this.state.value}
+					onChangeDebounced={() => {}}
+					Error={null}
+					special={{
+						message: 'This has purple text and border',
+						textColor: 'purple',
+						borderColor: 'purple',
+					}}
+				/>
+				<TextFieldValidated
+					style={style}
+					value={this.state.value}
+					onChangeDebounced={() => {}}
+					Error={null}
+					special={{
+						message: 'This has yellow text and border',
+						textColor: 'yellow',
+						borderColor: 'yellow',
+					}}
+				/>
+				<TextFieldValidated
+					style={style}
+					value={this.state.value}
+					onChangeDebounced={() => {}}
+					Error={null}
+					special={{
+						message: 'This has orange text and border',
+						textColor: 'orange',
+						borderColor: 'orange',
+					}}
+				/>
+				<TextFieldValidated
+					style={style}
+					value={this.state.value}
+					onChangeDebounced={() => {}}
+					Error={null}
+					special={{
+						message: 'This has red text and border',
+						textColor: 'red',
+						borderColor: 'red',
+					}}
+				/>
+				<TextFieldValidated
+					style={style}
+					value={this.state.value}
+					onChangeDebounced={() => {}}
+					Error={null}
+					special={{
+						message: 'This has grey text and border',
+						textColor: 'grey',
+						borderColor: 'grey',
+					}}
+				/>
+				<TextFieldValidated
+					style={style}
+					value={this.state.value}
+					onChangeDebounced={() => {}}
+					Error={null}
+					special={{
+						message: 'This has mixed text and border',
+						textColor: 'purple',
+						borderColor: 'aquamarine',
 					}}
 				/>
 			</div>
