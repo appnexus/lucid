@@ -102,36 +102,24 @@ class TextFieldValidated extends React.Component<
 			childProps = [this.props.special?.message];
 		}
 
-		let specialStyle;
-		if (!this.props.Error && !this.props.Info && this.props.special) {
-			const { textColor, borderColor } = this.props.special;
-			specialStyle = { color: textColor, borderColor: borderColor };
-		}
 		const isSpecial =
 			!this.props.Error && !this.props.Info && this.props.special;
 
 		const classColorTypes = {
-			'-green-text': isSpecial && this.props.special?.textColor === 'green',
-			'-green-border': isSpecial && this.props.special?.borderColor === 'green',
-			'-aquamarine-text':
-				isSpecial && this.props.special?.textColor === 'aquamarine',
-			'-aquamarine-border':
-				isSpecial && this.props.special?.borderColor === 'aquamarine',
-			'-blue-text': isSpecial && this.props.special?.textColor === 'blue',
-			'-blue-border': isSpecial && this.props.special?.borderColor === 'blue',
-			'-purple-text': isSpecial && this.props.special?.textColor === 'purple',
-			'-purple-border':
-				isSpecial && this.props.special?.borderColor === 'purple',
-			'-yellow-text': isSpecial && this.props.special?.textColor === 'yellow',
-			'-yellow-border':
-				isSpecial && this.props.special?.borderColor === 'yellow',
-			'-orange-text': isSpecial && this.props.special?.textColor === 'orange',
-			'-orange-border':
-				isSpecial && this.props.special?.borderColor === 'orange',
-			'-red-text': isSpecial && this.props.special?.textColor === 'red',
-			'-red-border': isSpecial && this.props.special?.borderColor === 'red',
-			'-grey-text': isSpecial && this.props.special?.textColor === 'grey',
-			'-grey-border': isSpecial && this.props.special?.borderColor === 'grey',
+			'-success-text': isSpecial && this.props.special?.textColor === 'success',
+			'-success-border':
+				isSpecial && this.props.special?.borderColor === 'success',
+			'-primary-text': isSpecial && this.props.special?.textColor === 'primary',
+			'-primary-border':
+				isSpecial && this.props.special?.borderColor === 'primary',
+			'-danger-text': isSpecial && this.props.special?.textColor === 'danger',
+			'-danger-border':
+				isSpecial && this.props.special?.borderColor === 'danger',
+			'-warning-text': isSpecial && this.props.special?.textColor === 'warning',
+			'-warning-border':
+				isSpecial && this.props.special?.borderColor === 'warning',
+			'-info-text': isSpecial && this.props.special?.textColor === 'info',
+			'-info-border': isSpecial && this.props.special?.borderColor === 'info',
 		};
 
 		return (
@@ -140,7 +128,7 @@ class TextFieldValidated extends React.Component<
 					'-info': !this.props.Error && this.props.Info,
 					...classColorTypes,
 				})}
-				style={{ ...style, ...specialStyle }}
+				style={style}
 				Error={childProps}
 			>
 				<TextField

@@ -59,6 +59,38 @@ exports[`TextFieldValidated [common] example testing should match snapshot(s) fo
 </Validation>
 `;
 
+exports[`TextFieldValidated [common] example testing should match snapshot(s) for 03.Error 1`] = `
+<Validation
+  Error={
+    Array [
+      Object {
+        "children": "This is an error",
+      },
+    ]
+  }
+  className="lucid-TextFieldValidated"
+  style={
+    Object {
+      "marginBottom": "10px",
+    }
+  }
+>
+  <TextField
+    debounceLevel={500}
+    isDisabled={false}
+    isMultiLine={false}
+    lazyLevel={1000}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onChangeDebounced={[Function]}
+    onKeyDown={[Function]}
+    onSubmit={[Function]}
+    rows={5}
+    value=""
+  />
+</Validation>
+`;
+
 exports[`TextFieldValidated [common] example testing should match snapshot(s) for 03.error_types 1`] = `
 <Validation
   Error={
@@ -116,6 +148,231 @@ exports[`TextFieldValidated [common] example testing should match snapshot(s) fo
     onKeyDown={[Function]}
     onSubmit={[Function]}
     rows={5}
+    value=""
+  />
+</Validation>
+`;
+
+exports[`TextFieldValidated [common] example testing should match snapshot(s) for 04.Info 1`] = `
+<Validation
+  Error={
+    Array [
+      "This is an info",
+    ]
+  }
+  className="lucid-TextFieldValidated -info"
+  style={
+    Object {
+      "marginBottom": "10px",
+    }
+  }
+>
+  <TextField
+    debounceLevel={500}
+    isDisabled={false}
+    isMultiLine={false}
+    lazyLevel={1000}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onChangeDebounced={[Function]}
+    onKeyDown={[Function]}
+    onSubmit={[Function]}
+    rows={5}
+    value=""
+  />
+</Validation>
+`;
+
+exports[`TextFieldValidated [common] example testing should match snapshot(s) for 05.special 1`] = `
+<Validation
+  Error={
+    Array [
+      "This is a special with \`success\` text and border",
+    ]
+  }
+  className="lucid-TextFieldValidated -success-text -success-border"
+  style={
+    Object {
+      "borderColor": "success",
+      "color": "success",
+      "marginBottom": "10px",
+    }
+  }
+>
+  <TextField
+    debounceLevel={500}
+    isDisabled={false}
+    isMultiLine={false}
+    lazyLevel={1000}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onChangeDebounced={[Function]}
+    onKeyDown={[Function]}
+    onSubmit={[Function]}
+    rows={5}
+    special={
+      Object {
+        "borderColor": "success",
+        "message": "This is a special with \`success\` text and border",
+        "textColor": "success",
+      }
+    }
+    value=""
+  />
+</Validation>
+`;
+
+exports[`TextFieldValidated [common] example testing should match snapshot(s) for 05.special 2`] = `
+<Validation
+  Error={
+    Array [
+      "This is a special with \`primary\` text and border",
+    ]
+  }
+  className="lucid-TextFieldValidated -primary-text -primary-border"
+  style={
+    Object {
+      "borderColor": "primary",
+      "color": "primary",
+      "marginBottom": "10px",
+    }
+  }
+>
+  <TextField
+    debounceLevel={500}
+    isDisabled={false}
+    isMultiLine={false}
+    lazyLevel={1000}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onChangeDebounced={[Function]}
+    onKeyDown={[Function]}
+    onSubmit={[Function]}
+    rows={5}
+    special={
+      Object {
+        "borderColor": "primary",
+        "message": "This is a special with \`primary\` text and border",
+        "textColor": "primary",
+      }
+    }
+    value=""
+  />
+</Validation>
+`;
+
+exports[`TextFieldValidated [common] example testing should match snapshot(s) for 05.special 3`] = `
+<Validation
+  Error={
+    Array [
+      "This is a special with \`danger\` text and border",
+    ]
+  }
+  className="lucid-TextFieldValidated -danger-text -danger-border"
+  style={
+    Object {
+      "borderColor": "danger",
+      "color": "danger",
+      "marginBottom": "10px",
+    }
+  }
+>
+  <TextField
+    debounceLevel={500}
+    isDisabled={false}
+    isMultiLine={false}
+    lazyLevel={1000}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onChangeDebounced={[Function]}
+    onKeyDown={[Function]}
+    onSubmit={[Function]}
+    rows={5}
+    special={
+      Object {
+        "borderColor": "danger",
+        "message": "This is a special with \`danger\` text and border",
+        "textColor": "danger",
+      }
+    }
+    value=""
+  />
+</Validation>
+`;
+
+exports[`TextFieldValidated [common] example testing should match snapshot(s) for 05.special 4`] = `
+<Validation
+  Error={
+    Array [
+      "This is a special with \`warning\` text and border",
+    ]
+  }
+  className="lucid-TextFieldValidated -warning-text -warning-border"
+  style={
+    Object {
+      "borderColor": "warning",
+      "color": "warning",
+      "marginBottom": "10px",
+    }
+  }
+>
+  <TextField
+    debounceLevel={500}
+    isDisabled={false}
+    isMultiLine={false}
+    lazyLevel={1000}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onChangeDebounced={[Function]}
+    onKeyDown={[Function]}
+    onSubmit={[Function]}
+    rows={5}
+    special={
+      Object {
+        "borderColor": "warning",
+        "message": "This is a special with \`warning\` text and border",
+        "textColor": "warning",
+      }
+    }
+    value=""
+  />
+</Validation>
+`;
+
+exports[`TextFieldValidated [common] example testing should match snapshot(s) for 05.special 5`] = `
+<Validation
+  Error={
+    Array [
+      "This is a special with \`info\` text and border",
+    ]
+  }
+  className="lucid-TextFieldValidated -info-text -info-border"
+  style={
+    Object {
+      "borderColor": "info",
+      "color": "info",
+      "marginBottom": "10px",
+    }
+  }
+>
+  <TextField
+    debounceLevel={500}
+    isDisabled={false}
+    isMultiLine={false}
+    lazyLevel={1000}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onChangeDebounced={[Function]}
+    onKeyDown={[Function]}
+    onSubmit={[Function]}
+    rows={5}
+    special={
+      Object {
+        "borderColor": "info",
+        "message": "This is a special with \`info\` text and border",
+        "textColor": "info",
+      }
+    }
     value=""
   />
 </Validation>
