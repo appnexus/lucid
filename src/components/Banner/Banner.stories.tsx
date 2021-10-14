@@ -7,6 +7,13 @@ import { Banner, IBannerProps } from './Banner';
 export default {
 	title: 'communication/Banner',
 	component: Banner,
+	parameters: {
+		docs: {
+			description: {
+				component: Banner.peek.description,
+			},
+		},
+	},
 } as Meta;
 
 export const Default: Story<IBannerProps> = (args) => (
