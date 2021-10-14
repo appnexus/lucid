@@ -91,68 +91,6 @@ exports[`TextFieldValidated [common] example testing should match snapshot(s) fo
 </Validation>
 `;
 
-exports[`TextFieldValidated [common] example testing should match snapshot(s) for 03.error_types 1`] = `
-<Validation
-  Error={
-    Array [
-      Object {
-        "children": "This is an error",
-      },
-    ]
-  }
-  className="lucid-TextFieldValidated"
-  style={
-    Object {
-      "marginBottom": "10px",
-    }
-  }
->
-  <TextField
-    debounceLevel={500}
-    isDisabled={false}
-    isMultiLine={false}
-    lazyLevel={1000}
-    onBlur={[Function]}
-    onChange={[Function]}
-    onChangeDebounced={[Function]}
-    onKeyDown={[Function]}
-    onSubmit={[Function]}
-    rows={5}
-    value=""
-  />
-</Validation>
-`;
-
-exports[`TextFieldValidated [common] example testing should match snapshot(s) for 03.error_types 2`] = `
-<Validation
-  Error={
-    Array [
-      "This is an info",
-    ]
-  }
-  className="lucid-TextFieldValidated -info"
-  style={
-    Object {
-      "marginBottom": "10px",
-    }
-  }
->
-  <TextField
-    debounceLevel={500}
-    isDisabled={false}
-    isMultiLine={false}
-    lazyLevel={1000}
-    onBlur={[Function]}
-    onChange={[Function]}
-    onChangeDebounced={[Function]}
-    onKeyDown={[Function]}
-    onSubmit={[Function]}
-    rows={5}
-    value=""
-  />
-</Validation>
-`;
-
 exports[`TextFieldValidated [common] example testing should match snapshot(s) for 04.Info 1`] = `
 <Validation
   Error={
@@ -193,8 +131,6 @@ exports[`TextFieldValidated [common] example testing should match snapshot(s) fo
   className="lucid-TextFieldValidated -success-text -success-border"
   style={
     Object {
-      "borderColor": "success",
-      "color": "success",
       "marginBottom": "10px",
     }
   }
@@ -232,8 +168,6 @@ exports[`TextFieldValidated [common] example testing should match snapshot(s) fo
   className="lucid-TextFieldValidated -primary-text -primary-border"
   style={
     Object {
-      "borderColor": "primary",
-      "color": "primary",
       "marginBottom": "10px",
     }
   }
@@ -271,8 +205,6 @@ exports[`TextFieldValidated [common] example testing should match snapshot(s) fo
   className="lucid-TextFieldValidated -danger-text -danger-border"
   style={
     Object {
-      "borderColor": "danger",
-      "color": "danger",
       "marginBottom": "10px",
     }
   }
@@ -310,8 +242,6 @@ exports[`TextFieldValidated [common] example testing should match snapshot(s) fo
   className="lucid-TextFieldValidated -warning-text -warning-border"
   style={
     Object {
-      "borderColor": "warning",
-      "color": "warning",
       "marginBottom": "10px",
     }
   }
@@ -349,8 +279,6 @@ exports[`TextFieldValidated [common] example testing should match snapshot(s) fo
   className="lucid-TextFieldValidated -info-text -info-border"
   style={
     Object {
-      "borderColor": "info",
-      "color": "info",
       "marginBottom": "10px",
     }
   }
