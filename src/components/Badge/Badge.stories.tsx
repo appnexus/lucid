@@ -9,6 +9,13 @@ const types = [undefined, 'stroke'];
 export default {
 	title: 'visual design/Badge',
 	component: Badge,
+	parameters: {
+		docs: {
+			description: {
+				component: Badge.peek.description,
+			},
+		},
+	},
 } as Meta;
 
 //👇 We create a “template” of how args map to rendering
