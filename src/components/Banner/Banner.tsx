@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import PropTypes from 'react-peek/prop-types';
+import PropTypes from 'prop-types';
 import { CSSTransition } from 'react-transition-group';
 import { lucidClassNames } from '../../util/style-helpers';
 import { omitProps, StandardProps } from '../../util/component-types';
@@ -9,7 +9,41 @@ import { IIconProps } from '../Icon/Icon';
 
 const cx = lucidClassNames.bind('&-Banner');
 
-const { bool, element, func, node, oneOf, string } = PropTypes;
+const bannerPropTypes = {
+	/** Pass in a icon component for custom icons within `Banner`. */
+	icon: PropTypes.element,
+
+	/** Set this to `true` if you want to have a `x` close icon. */
+	isCloseable: PropTypes.bool,
+
+	/** Defaults to `true`. If set to `false` the banner will not be filled in. */
+	isFilled: PropTypes.bool,
+
+	/** If set to `true` the banner have smaller padding on the inside. */
+	isSmall: PropTypes.bool,
+
+	/** Class names that are appended to the defaults. */
+	className: PropTypes.string,
+
+	/** Any valid React children. */
+	children: PropTypes.node,
+
+	/** Style variations of the `Banner`. */
+	kind: PropTypes.oneOf([
+		'primary',
+		'success',
+		'warning',
+		'danger',
+		'info',
+		'default',
+	]),
+
+	/** Called when the user closes the `Banner`.  Signature: `({ event, props }) => {}` */
+	onClose: PropTypes.func,
+
+	/** Controls the visibility of the `Banner`. */
+	isClosed: PropTypes.bool,
+};
 
 export interface IBannerProps
 	extends StandardProps,
@@ -95,7 +129,7 @@ export const Banner = (props: IBannerProps): React.ReactElement => {
 			unmountOnExit
 		>
 			<section
-				{...omitProps(passThroughs, undefined, _.keys(Banner.propTypes))}
+				{...omitProps(passThroughs, undefined, _.keys(bannerPropTypes))}
 				className={cx(
 					'&',
 					{
@@ -142,10 +176,10 @@ Banner.peek = {
 			A banner that displays a prominent message.
 		`,
 		intendedUse: `
-			Communicates information, success, a warning, or an error. 
-								
+			Communicates information, success, a warning, or an error.
+
 			**Styling notes**
-			
+
 			- Banners usually display at the top of a page.
 			- Use the solid filled banner for single-line content.
 			- Use the outlined banner for multi-line content.
@@ -162,45 +196,6 @@ Banner.peek = {
 		`,
 	},
 	categories: ['communication'],
-};
-Banner.propTypes = {
-	icon: element`
-		Pass in a icon component for custom icons within \`Banner\`.
-	`,
-
-	isCloseable: bool`
-		Set this to \`true\` if you want to have a \`x\` close icon.
-	`,
-
-	isFilled: bool`
-		Defaults to true.
-		If set to \`false\` the banner will not be filled in.
-	`,
-
-	isSmall: bool`
-		If set to \`true\` the banner have smaller padding on the inside.
-	`,
-
-	className: string`
-		Class names that are appended to the defaults.
-	`,
-
-	children: node`
-		Any valid React children.
-	`,
-
-	kind: oneOf(['primary', 'success', 'warning', 'danger', 'info', 'default'])`
-		Style variations of the \`Banner\`.
-	`,
-
-	onClose: func`
-		Called when the user closes the \`Banner\`.  Signature:
-		\`({ event, props }) => {}\`
-	`,
-
-	isClosed: bool`
-		Controls the visibility of the \`Banner\`.
-	`,
 };
 
 export default Banner;

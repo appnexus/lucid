@@ -1,1124 +1,781 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Banner [common] example testing should match snapshot(s) for 0.stateful 1`] = `
-<CSSTransition
-  classNames="lucid-Banner"
-  in={true}
-  timeout={300}
-  unmountOnExit={true}
+exports[`Banner [common] example testing should match snapshot(s) for Default 1`] = `
+<section
+  class="lucid-Banner lucid-Banner-has-close lucid-Banner-filled"
 >
-  <section
-    className="lucid-Banner lucid-Banner-has-close lucid-Banner-filled"
+  <span
+    class="lucid-Banner-content"
   >
-    <span
-      className="lucid-Banner-content"
-    >
-      Default
-    </span>
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Banner-close"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={8}
-      viewBox="0 0 16 16"
+    Default
+  </span>
+  <svg
+    class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Banner-close"
+    height="8"
+    preserveAspectRatio="xMidYMid meet"
+    viewBox="0 0 16 16"
+    width="8"
+  >
+    <path
+      d="M.5.5l15 15m0-15l-15 15"
     />
-  </section>
-</CSSTransition>
+  </svg>
+</section>
 `;
 
-exports[`Banner [common] example testing should match snapshot(s) for 1.stateless 1`] = `
-<CSSTransition
-  classNames="lucid-Banner"
-  in={true}
-  timeout={300}
-  unmountOnExit={true}
->
-  <section
-    className="lucid-Banner lucid-Banner-has-close lucid-Banner-filled"
-    style={
-      Object {
-        "marginBottom": 8,
-      }
-    }
-  >
-    <span
-      className="lucid-Banner-content"
+exports[`Banner [common] example testing should match snapshot(s) for Small 1`] = `
+<div>
+  <div>
+    <section
+      class="lucid-Banner lucid-Banner-has-close lucid-Banner-small lucid-Banner-filled"
+      style="margin-bottom:8px"
     >
-      Default
-    </span>
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Banner-close"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={8}
-      viewBox="0 0 16 16"
-    />
-  </section>
-</CSSTransition>
-`;
-
-exports[`Banner [common] example testing should match snapshot(s) for 1.stateless 2`] = `
-<CSSTransition
-  classNames="lucid-Banner"
-  in={true}
-  timeout={300}
-  unmountOnExit={true}
->
-  <section
-    className="lucid-Banner lucid-Banner-filled"
-    style={
-      Object {
-        "marginBottom": 8,
-      }
-    }
-  >
-    <span
-      className="lucid-Banner-content"
-    >
-      Default -- No Close 
-      ×
-    </span>
-  </section>
-</CSSTransition>
-`;
-
-exports[`Banner [common] example testing should match snapshot(s) for 1.stateless 3`] = `
-<CSSTransition
-  classNames="lucid-Banner"
-  in={true}
-  timeout={300}
-  unmountOnExit={true}
->
-  <section
-    className="lucid-Banner lucid-Banner-has-close lucid-Banner-success lucid-Banner-filled"
-    style={
-      Object {
-        "marginBottom": 8,
-      }
-    }
-  >
-    <span
-      className="lucid-Banner-content"
-    >
-      Success
-    </span>
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Banner-close"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={8}
-      viewBox="0 0 16 16"
-    />
-  </section>
-</CSSTransition>
-`;
-
-exports[`Banner [common] example testing should match snapshot(s) for 1.stateless 4`] = `
-<CSSTransition
-  classNames="lucid-Banner"
-  in={true}
-  timeout={300}
-  unmountOnExit={true}
->
-  <section
-    className="lucid-Banner lucid-Banner-success lucid-Banner-filled"
-    style={
-      Object {
-        "marginBottom": 8,
-      }
-    }
-  >
-    <span
-      className="lucid-Banner-content"
-    >
-      Success -- No Close 
-      ×
-    </span>
-  </section>
-</CSSTransition>
-`;
-
-exports[`Banner [common] example testing should match snapshot(s) for 1.stateless 5`] = `
-<CSSTransition
-  classNames="lucid-Banner"
-  in={true}
-  timeout={300}
-  unmountOnExit={true}
->
-  <section
-    className="lucid-Banner lucid-Banner-has-close lucid-Banner-warning lucid-Banner-filled"
-    style={
-      Object {
-        "marginBottom": 8,
-      }
-    }
-  >
-    <span
-      className="lucid-Banner-content"
-    >
-      Warning 
-      <a
-        href="#"
+      <span
+        class="lucid-Banner-content"
       >
-        Don't Click Here
-      </a>
-    </span>
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Banner-close"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={8}
-      viewBox="0 0 16 16"
-    />
-  </section>
-</CSSTransition>
-`;
-
-exports[`Banner [common] example testing should match snapshot(s) for 1.stateless 6`] = `
-<CSSTransition
-  classNames="lucid-Banner"
-  in={true}
-  timeout={300}
-  unmountOnExit={true}
->
-  <section
-    className="lucid-Banner lucid-Banner-warning lucid-Banner-filled"
-    style={
-      Object {
-        "marginBottom": 8,
-      }
-    }
-  >
-    <span
-      className="lucid-Banner-content"
-    >
-      Warning -- No Close 
-      ×
-    </span>
-  </section>
-</CSSTransition>
-`;
-
-exports[`Banner [common] example testing should match snapshot(s) for 1.stateless 7`] = `
-<CSSTransition
-  classNames="lucid-Banner"
-  in={true}
-  timeout={300}
-  unmountOnExit={true}
->
-  <section
-    className="lucid-Banner lucid-Banner-has-close lucid-Banner-danger lucid-Banner-filled"
-    style={
-      Object {
-        "marginBottom": 8,
-      }
-    }
-  >
-    <span
-      className="lucid-Banner-content"
-    >
-      Danger
-    </span>
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Banner-close"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={8}
-      viewBox="0 0 16 16"
-    />
-  </section>
-</CSSTransition>
-`;
-
-exports[`Banner [common] example testing should match snapshot(s) for 1.stateless 8`] = `
-<CSSTransition
-  classNames="lucid-Banner"
-  in={true}
-  timeout={300}
-  unmountOnExit={true}
->
-  <section
-    className="lucid-Banner lucid-Banner-danger lucid-Banner-filled"
-    style={
-      Object {
-        "marginBottom": 8,
-      }
-    }
-  >
-    <span
-      className="lucid-Banner-content"
-    >
-      Danger -- No Close 
-      ×
-    </span>
-  </section>
-</CSSTransition>
-`;
-
-exports[`Banner [common] example testing should match snapshot(s) for 1.stateless 9`] = `
-<CSSTransition
-  classNames="lucid-Banner"
-  in={true}
-  timeout={300}
-  unmountOnExit={true}
->
-  <section
-    className="lucid-Banner lucid-Banner-has-close lucid-Banner-info lucid-Banner-filled"
-    style={
-      Object {
-        "marginBottom": 8,
-      }
-    }
-  >
-    <span
-      className="lucid-Banner-content"
-    >
-      Info
-    </span>
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Banner-close"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={8}
-      viewBox="0 0 16 16"
-    />
-  </section>
-</CSSTransition>
-`;
-
-exports[`Banner [common] example testing should match snapshot(s) for 1.stateless 10`] = `
-<CSSTransition
-  classNames="lucid-Banner"
-  in={true}
-  timeout={300}
-  unmountOnExit={true}
->
-  <section
-    className="lucid-Banner lucid-Banner-info lucid-Banner-filled"
-    style={
-      Object {
-        "marginBottom": 8,
-      }
-    }
-  >
-    <span
-      className="lucid-Banner-content"
-    >
-      Info -- No Close 
-      ×
-    </span>
-  </section>
-</CSSTransition>
-`;
-
-exports[`Banner [common] example testing should match snapshot(s) for 1.stateless 11`] = `
-<CSSTransition
-  classNames="lucid-Banner"
-  in={true}
-  timeout={300}
-  unmountOnExit={true}
->
-  <section
-    className="lucid-Banner lucid-Banner-has-icon lucid-Banner-has-close lucid-Banner-danger lucid-Banner-filled"
-    style={
-      Object {
-        "marginBottom": 8,
-      }
-    }
-  >
-    <span
-      className="lucid-Banner-icon"
-    >
-      <ChatIcon
-        aspectRatio="xMidYMid meet"
-        color="primary"
-        isClickable={false}
-        isDisabled={false}
-        onClick={[Function]}
-        onSelect={[Function]}
-        size={16}
+        Default
+      </span>
+      <svg
+        class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Banner-close"
+        height="8"
+        preserveAspectRatio="xMidYMid meet"
         viewBox="0 0 16 16"
-      />
-    </span>
-    <span
-      className="lucid-Banner-content"
+        width="8"
+      >
+        <path
+          d="M.5.5l15 15m0-15l-15 15"
+        />
+      </svg>
+    </section>
+    <section
+      class="lucid-Banner lucid-Banner-small lucid-Banner-filled"
+      style="margin-bottom:8px"
     >
-      Has Icon
-    </span>
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Banner-close"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={8}
-      viewBox="0 0 16 16"
-    />
-  </section>
-</CSSTransition>
-`;
-
-exports[`Banner [common] example testing should match snapshot(s) for 1.stateless 12`] = `
-<CSSTransition
-  classNames="lucid-Banner"
-  in={true}
-  timeout={300}
-  unmountOnExit={true}
->
-  <section
-    className="lucid-Banner lucid-Banner-has-close"
-    style={
-      Object {
-        "marginBottom": 8,
-      }
-    }
-  >
-    <span
-      className="lucid-Banner-content"
+      <span
+        class="lucid-Banner-content"
+      >
+        Default -- No Close ×
+      </span>
+    </section>
+  </div>
+  <div>
+    <section
+      class="lucid-Banner lucid-Banner-has-close lucid-Banner-success lucid-Banner-small lucid-Banner-filled"
+      style="margin-bottom:8px"
     >
-      <div>
-        Sit totam voluptas error dolorum ullam Quo ipsam esse amet mollitia consequuntur Cumque cum nisi porro cumque sit nisi Facilis placeat suscipit earum blanditiis eveniet Earum dolor voluptates perferendis quis
-      </div>
-      <div>
-        Adipisicing culpa atque totam quidem dicta consequatur fugiat quaerat Facilis cupiditate amet nam in perferendis Veritatis iusto molestiae illum doloribus deserunt Odit autem obcaecati dolores ad incidunt? Ipsa eveniet modi.
-      </div>
-      <div>
-        Lorem sit explicabo vitae illum labore Nostrum inventore dolor nisi deserunt voluptatem Voluptas itaque nesciunt omnis necessitatibus asperiores! Eius error ab consequatur necessitatibus repudiandae quibusdam Odio consequuntur at necessitatibus at
-      </div>
-      <div>
-        <a
-          href="#"
-        >
-          Click Me
-        </a>
-      </div>
-    </span>
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Banner-close"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={8}
-      viewBox="0 0 16 16"
-    />
-  </section>
-</CSSTransition>
-`;
-
-exports[`Banner [common] example testing should match snapshot(s) for 1.stateless 13`] = `
-<CSSTransition
-  classNames="lucid-Banner"
-  in={true}
-  timeout={300}
-  unmountOnExit={true}
->
-  <section
-    className="lucid-Banner lucid-Banner-has-close lucid-Banner-success"
-    style={
-      Object {
-        "marginBottom": 8,
-      }
-    }
-  >
-    <span
-      className="lucid-Banner-content"
-    >
-      <div>
-        Success -- Outline
-      </div>
-      <div>
-        Outline banners are for messages with multi-line content.
-      </div>
-    </span>
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Banner-close"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={8}
-      viewBox="0 0 16 16"
-    />
-  </section>
-</CSSTransition>
-`;
-
-exports[`Banner [common] example testing should match snapshot(s) for 1.stateless 14`] = `
-<CSSTransition
-  classNames="lucid-Banner"
-  in={true}
-  timeout={300}
-  unmountOnExit={true}
->
-  <section
-    className="lucid-Banner lucid-Banner-has-close lucid-Banner-warning"
-    style={
-      Object {
-        "marginBottom": 8,
-      }
-    }
-  >
-    <span
-      className="lucid-Banner-content"
-    >
-      <div>
-        Warning -- Outline
-      </div>
-      <div>
-        Outline banners are for messages with multi-line content.
-      </div>
-    </span>
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Banner-close"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={8}
-      viewBox="0 0 16 16"
-    />
-  </section>
-</CSSTransition>
-`;
-
-exports[`Banner [common] example testing should match snapshot(s) for 1.stateless 15`] = `
-<CSSTransition
-  classNames="lucid-Banner"
-  in={true}
-  timeout={300}
-  unmountOnExit={true}
->
-  <section
-    className="lucid-Banner lucid-Banner-has-close lucid-Banner-danger"
-    style={
-      Object {
-        "marginBottom": 8,
-      }
-    }
-  >
-    <span
-      className="lucid-Banner-content"
-    >
-      <div>
-        Danger -- Outline
-      </div>
-      <div>
-        Outline banners are for messages with multi-line content.
-      </div>
-    </span>
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Banner-close"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={8}
-      viewBox="0 0 16 16"
-    />
-  </section>
-</CSSTransition>
-`;
-
-exports[`Banner [common] example testing should match snapshot(s) for 1.stateless 16`] = `
-<CSSTransition
-  classNames="lucid-Banner"
-  in={true}
-  timeout={300}
-  unmountOnExit={true}
->
-  <section
-    className="lucid-Banner lucid-Banner-has-close lucid-Banner-info"
-    style={
-      Object {
-        "marginBottom": 8,
-      }
-    }
-  >
-    <span
-      className="lucid-Banner-content"
-    >
-      <div>
-        Info -- Outline
-      </div>
-      <div>
-        Outline banners are for messages with multi-line content.
-      </div>
-    </span>
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Banner-close"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={8}
-      viewBox="0 0 16 16"
-    />
-  </section>
-</CSSTransition>
-`;
-
-exports[`Banner [common] example testing should match snapshot(s) for 1.stateless 17`] = `
-<CSSTransition
-  classNames="lucid-Banner"
-  in={true}
-  timeout={300}
-  unmountOnExit={true}
->
-  <section
-    className="lucid-Banner lucid-Banner-has-icon lucid-Banner-has-close lucid-Banner-danger"
-    style={
-      Object {
-        "marginBottom": 8,
-      }
-    }
-  >
-    <span
-      className="lucid-Banner-icon"
-    >
-      <ChatIcon
-        aspectRatio="xMidYMid meet"
-        color="primary"
-        isClickable={false}
-        isDisabled={false}
-        onClick={[Function]}
-        onSelect={[Function]}
-        size={16}
+      <span
+        class="lucid-Banner-content"
+      >
+        Success
+      </span>
+      <svg
+        class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Banner-close"
+        height="8"
+        preserveAspectRatio="xMidYMid meet"
         viewBox="0 0 16 16"
-      />
-    </span>
-    <span
-      className="lucid-Banner-content"
+        width="8"
+      >
+        <path
+          d="M.5.5l15 15m0-15l-15 15"
+        />
+      </svg>
+    </section>
+    <section
+      class="lucid-Banner lucid-Banner-success lucid-Banner-small lucid-Banner-filled"
+      style="margin-bottom:8px"
     >
-      <div>
-        Has Icon -- Outline
-      </div>
-      <div>
-        Outline banners are for messages with multi-line content.
-      </div>
-    </span>
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Banner-close"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={8}
-      viewBox="0 0 16 16"
-    />
-  </section>
-</CSSTransition>
+      <span
+        class="lucid-Banner-content"
+      >
+        Success -- No Close ×
+      </span>
+    </section>
+  </div>
+  <div>
+    <section
+      class="lucid-Banner lucid-Banner-has-close lucid-Banner-warning lucid-Banner-small lucid-Banner-filled"
+      style="margin-bottom:8px"
+    >
+      <span
+        class="lucid-Banner-content"
+      >
+        Warning
+      </span>
+      <svg
+        class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Banner-close"
+        height="8"
+        preserveAspectRatio="xMidYMid meet"
+        viewBox="0 0 16 16"
+        width="8"
+      >
+        <path
+          d="M.5.5l15 15m0-15l-15 15"
+        />
+      </svg>
+    </section>
+    <section
+      class="lucid-Banner lucid-Banner-warning lucid-Banner-small lucid-Banner-filled"
+      style="margin-bottom:8px"
+    >
+      <span
+        class="lucid-Banner-content"
+      >
+        Warning -- No Close ×
+      </span>
+    </section>
+  </div>
+  <div>
+    <section
+      class="lucid-Banner lucid-Banner-has-close lucid-Banner-danger lucid-Banner-small lucid-Banner-filled"
+      style="margin-bottom:8px"
+    >
+      <span
+        class="lucid-Banner-content"
+      >
+        Danger
+      </span>
+      <svg
+        class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Banner-close"
+        height="8"
+        preserveAspectRatio="xMidYMid meet"
+        viewBox="0 0 16 16"
+        width="8"
+      >
+        <path
+          d="M.5.5l15 15m0-15l-15 15"
+        />
+      </svg>
+    </section>
+    <section
+      class="lucid-Banner lucid-Banner-danger lucid-Banner-small lucid-Banner-filled"
+      style="margin-bottom:8px"
+    >
+      <span
+        class="lucid-Banner-content"
+      >
+        Danger -- No Close ×
+      </span>
+    </section>
+  </div>
+  <div>
+    <section
+      class="lucid-Banner lucid-Banner-has-close lucid-Banner-info lucid-Banner-small lucid-Banner-filled"
+      style="margin-bottom:8px"
+    >
+      <span
+        class="lucid-Banner-content"
+      >
+        Info
+      </span>
+      <svg
+        class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Banner-close"
+        height="8"
+        preserveAspectRatio="xMidYMid meet"
+        viewBox="0 0 16 16"
+        width="8"
+      >
+        <path
+          d="M.5.5l15 15m0-15l-15 15"
+        />
+      </svg>
+    </section>
+    <section
+      class="lucid-Banner lucid-Banner-info lucid-Banner-small lucid-Banner-filled"
+      style="margin-bottom:8px"
+    >
+      <span
+        class="lucid-Banner-content"
+      >
+        Info -- No Close ×
+      </span>
+    </section>
+  </div>
+  <div>
+    <section
+      class="lucid-Banner lucid-Banner-has-close lucid-Banner-small"
+      style="margin-bottom:8px"
+    >
+      <span
+        class="lucid-Banner-content"
+      >
+        Default -- Outline Only
+      </span>
+      <svg
+        class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Banner-close"
+        height="8"
+        preserveAspectRatio="xMidYMid meet"
+        viewBox="0 0 16 16"
+        width="8"
+      >
+        <path
+          d="M.5.5l15 15m0-15l-15 15"
+        />
+      </svg>
+    </section>
+  </div>
+  <div>
+    <section
+      class="lucid-Banner lucid-Banner-has-close lucid-Banner-success lucid-Banner-small"
+      style="margin-bottom:8px"
+    >
+      <span
+        class="lucid-Banner-content"
+      >
+        Success -- Outline Only
+      </span>
+      <svg
+        class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Banner-close"
+        height="8"
+        preserveAspectRatio="xMidYMid meet"
+        viewBox="0 0 16 16"
+        width="8"
+      >
+        <path
+          d="M.5.5l15 15m0-15l-15 15"
+        />
+      </svg>
+    </section>
+  </div>
+  <div>
+    <section
+      class="lucid-Banner lucid-Banner-has-close lucid-Banner-warning lucid-Banner-small"
+      style="margin-bottom:8px"
+    >
+      <span
+        class="lucid-Banner-content"
+      >
+        Warning -- Outline Only
+      </span>
+      <svg
+        class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Banner-close"
+        height="8"
+        preserveAspectRatio="xMidYMid meet"
+        viewBox="0 0 16 16"
+        width="8"
+      >
+        <path
+          d="M.5.5l15 15m0-15l-15 15"
+        />
+      </svg>
+    </section>
+  </div>
+  <div>
+    <section
+      class="lucid-Banner lucid-Banner-has-close lucid-Banner-danger lucid-Banner-small"
+      style="margin-bottom:8px"
+    >
+      <span
+        class="lucid-Banner-content"
+      >
+        Danger -- Outline Only
+      </span>
+      <svg
+        class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Banner-close"
+        height="8"
+        preserveAspectRatio="xMidYMid meet"
+        viewBox="0 0 16 16"
+        width="8"
+      >
+        <path
+          d="M.5.5l15 15m0-15l-15 15"
+        />
+      </svg>
+    </section>
+  </div>
+  <div>
+    <section
+      class="lucid-Banner lucid-Banner-has-close lucid-Banner-info lucid-Banner-small"
+      style="margin-bottom:8px"
+    >
+      <span
+        class="lucid-Banner-content"
+      >
+        Info -- Outline Only
+      </span>
+      <svg
+        class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Banner-close"
+        height="8"
+        preserveAspectRatio="xMidYMid meet"
+        viewBox="0 0 16 16"
+        width="8"
+      >
+        <path
+          d="M.5.5l15 15m0-15l-15 15"
+        />
+      </svg>
+    </section>
+  </div>
+</div>
 `;
 
-exports[`Banner [common] example testing should match snapshot(s) for 2.small 1`] = `
-<CSSTransition
-  classNames="lucid-Banner"
-  in={true}
-  timeout={300}
-  unmountOnExit={true}
->
-  <section
-    className="lucid-Banner lucid-Banner-has-close lucid-Banner-small lucid-Banner-filled"
-    style={
-      Object {
-        "marginBottom": 8,
-      }
-    }
+exports[`Banner [common] example testing should match snapshot(s) for Stateful 1`] = `
+<div>
+  <button
+    class="lucid-Button"
+    style="margin-bottom:8px"
+    type="button"
   >
     <span
-      className="lucid-Banner-content"
+      class="lucid-Button-content"
+    >
+      Open/Close
+    </span>
+  </button>
+  <br />
+  <section
+    class="lucid-Banner lucid-Banner-has-close lucid-Banner-filled"
+  >
+    <span
+      class="lucid-Banner-content"
     >
       Default
     </span>
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Banner-close"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={8}
+    <svg
+      class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Banner-close"
+      height="8"
+      preserveAspectRatio="xMidYMid meet"
       viewBox="0 0 16 16"
-    />
+      width="8"
+    >
+      <path
+        d="M.5.5l15 15m0-15l-15 15"
+      />
+    </svg>
   </section>
-</CSSTransition>
+</div>
 `;
 
-exports[`Banner [common] example testing should match snapshot(s) for 2.small 2`] = `
-<CSSTransition
-  classNames="lucid-Banner"
-  in={true}
-  timeout={300}
-  unmountOnExit={true}
->
-  <section
-    className="lucid-Banner lucid-Banner-small lucid-Banner-filled"
-    style={
-      Object {
-        "marginBottom": 8,
-      }
-    }
-  >
-    <span
-      className="lucid-Banner-content"
+exports[`Banner [common] example testing should match snapshot(s) for Stateless 1`] = `
+<div>
+  <div>
+    <section
+      class="lucid-Banner lucid-Banner-has-close lucid-Banner-filled"
+      style="margin-bottom:8px"
     >
-      Default -- No Close 
-      ×
-    </span>
-  </section>
-</CSSTransition>
-`;
-
-exports[`Banner [common] example testing should match snapshot(s) for 2.small 3`] = `
-<CSSTransition
-  classNames="lucid-Banner"
-  in={true}
-  timeout={300}
-  unmountOnExit={true}
->
-  <section
-    className="lucid-Banner lucid-Banner-has-close lucid-Banner-success lucid-Banner-small lucid-Banner-filled"
-    style={
-      Object {
-        "marginBottom": 8,
-      }
-    }
-  >
-    <span
-      className="lucid-Banner-content"
+      <span
+        class="lucid-Banner-content"
+      >
+        Default
+      </span>
+      <svg
+        class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Banner-close"
+        height="8"
+        preserveAspectRatio="xMidYMid meet"
+        viewBox="0 0 16 16"
+        width="8"
+      >
+        <path
+          d="M.5.5l15 15m0-15l-15 15"
+        />
+      </svg>
+    </section>
+    <section
+      class="lucid-Banner lucid-Banner-filled"
+      style="margin-bottom:8px"
     >
-      Success
-    </span>
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Banner-close"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={8}
-      viewBox="0 0 16 16"
-    />
-  </section>
-</CSSTransition>
-`;
-
-exports[`Banner [common] example testing should match snapshot(s) for 2.small 4`] = `
-<CSSTransition
-  classNames="lucid-Banner"
-  in={true}
-  timeout={300}
-  unmountOnExit={true}
->
-  <section
-    className="lucid-Banner lucid-Banner-success lucid-Banner-small lucid-Banner-filled"
-    style={
-      Object {
-        "marginBottom": 8,
-      }
-    }
-  >
-    <span
-      className="lucid-Banner-content"
+      <span
+        class="lucid-Banner-content"
+      >
+        Default -- No Close ×
+      </span>
+    </section>
+  </div>
+  <div>
+    <section
+      class="lucid-Banner lucid-Banner-has-close lucid-Banner-success lucid-Banner-filled"
+      style="margin-bottom:8px"
     >
-      Success -- No Close 
-      ×
-    </span>
-  </section>
-</CSSTransition>
-`;
-
-exports[`Banner [common] example testing should match snapshot(s) for 2.small 5`] = `
-<CSSTransition
-  classNames="lucid-Banner"
-  in={true}
-  timeout={300}
-  unmountOnExit={true}
->
-  <section
-    className="lucid-Banner lucid-Banner-has-close lucid-Banner-warning lucid-Banner-small lucid-Banner-filled"
-    style={
-      Object {
-        "marginBottom": 8,
-      }
-    }
-  >
-    <span
-      className="lucid-Banner-content"
+      <span
+        class="lucid-Banner-content"
+      >
+        Success
+      </span>
+      <svg
+        class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Banner-close"
+        height="8"
+        preserveAspectRatio="xMidYMid meet"
+        viewBox="0 0 16 16"
+        width="8"
+      >
+        <path
+          d="M.5.5l15 15m0-15l-15 15"
+        />
+      </svg>
+    </section>
+    <section
+      class="lucid-Banner lucid-Banner-success lucid-Banner-filled"
+      style="margin-bottom:8px"
     >
-      Warning
-    </span>
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Banner-close"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={8}
-      viewBox="0 0 16 16"
-    />
-  </section>
-</CSSTransition>
-`;
-
-exports[`Banner [common] example testing should match snapshot(s) for 2.small 6`] = `
-<CSSTransition
-  classNames="lucid-Banner"
-  in={true}
-  timeout={300}
-  unmountOnExit={true}
->
-  <section
-    className="lucid-Banner lucid-Banner-warning lucid-Banner-small lucid-Banner-filled"
-    style={
-      Object {
-        "marginBottom": 8,
-      }
-    }
-  >
-    <span
-      className="lucid-Banner-content"
+      <span
+        class="lucid-Banner-content"
+      >
+        Success -- No Close ×
+      </span>
+    </section>
+  </div>
+  <div>
+    <section
+      class="lucid-Banner lucid-Banner-has-close lucid-Banner-warning lucid-Banner-filled"
+      style="margin-bottom:8px"
     >
-      Warning -- No Close 
-      ×
-    </span>
-  </section>
-</CSSTransition>
-`;
-
-exports[`Banner [common] example testing should match snapshot(s) for 2.small 7`] = `
-<CSSTransition
-  classNames="lucid-Banner"
-  in={true}
-  timeout={300}
-  unmountOnExit={true}
->
-  <section
-    className="lucid-Banner lucid-Banner-has-close lucid-Banner-danger lucid-Banner-small lucid-Banner-filled"
-    style={
-      Object {
-        "marginBottom": 8,
-      }
-    }
-  >
-    <span
-      className="lucid-Banner-content"
+      <span
+        class="lucid-Banner-content"
+      >
+        Warning
+      </span>
+      <svg
+        class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Banner-close"
+        height="8"
+        preserveAspectRatio="xMidYMid meet"
+        viewBox="0 0 16 16"
+        width="8"
+      >
+        <path
+          d="M.5.5l15 15m0-15l-15 15"
+        />
+      </svg>
+    </section>
+    <section
+      class="lucid-Banner lucid-Banner-warning lucid-Banner-filled"
+      style="margin-bottom:8px"
     >
-      Danger
-    </span>
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Banner-close"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={8}
-      viewBox="0 0 16 16"
-    />
-  </section>
-</CSSTransition>
-`;
-
-exports[`Banner [common] example testing should match snapshot(s) for 2.small 8`] = `
-<CSSTransition
-  classNames="lucid-Banner"
-  in={true}
-  timeout={300}
-  unmountOnExit={true}
->
-  <section
-    className="lucid-Banner lucid-Banner-danger lucid-Banner-small lucid-Banner-filled"
-    style={
-      Object {
-        "marginBottom": 8,
-      }
-    }
-  >
-    <span
-      className="lucid-Banner-content"
+      <span
+        class="lucid-Banner-content"
+      >
+        Warning -- No Close ×
+      </span>
+    </section>
+  </div>
+  <div>
+    <section
+      class="lucid-Banner lucid-Banner-has-close lucid-Banner-danger lucid-Banner-filled"
+      style="margin-bottom:8px"
     >
-      Danger -- No Close 
-      ×
-    </span>
-  </section>
-</CSSTransition>
-`;
-
-exports[`Banner [common] example testing should match snapshot(s) for 2.small 9`] = `
-<CSSTransition
-  classNames="lucid-Banner"
-  in={true}
-  timeout={300}
-  unmountOnExit={true}
->
-  <section
-    className="lucid-Banner lucid-Banner-has-close lucid-Banner-info lucid-Banner-small lucid-Banner-filled"
-    style={
-      Object {
-        "marginBottom": 8,
-      }
-    }
-  >
-    <span
-      className="lucid-Banner-content"
+      <span
+        class="lucid-Banner-content"
+      >
+        Danger
+      </span>
+      <svg
+        class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Banner-close"
+        height="8"
+        preserveAspectRatio="xMidYMid meet"
+        viewBox="0 0 16 16"
+        width="8"
+      >
+        <path
+          d="M.5.5l15 15m0-15l-15 15"
+        />
+      </svg>
+    </section>
+    <section
+      class="lucid-Banner lucid-Banner-danger lucid-Banner-filled"
+      style="margin-bottom:8px"
     >
-      Info
-    </span>
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Banner-close"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={8}
-      viewBox="0 0 16 16"
-    />
-  </section>
-</CSSTransition>
-`;
-
-exports[`Banner [common] example testing should match snapshot(s) for 2.small 10`] = `
-<CSSTransition
-  classNames="lucid-Banner"
-  in={true}
-  timeout={300}
-  unmountOnExit={true}
->
-  <section
-    className="lucid-Banner lucid-Banner-info lucid-Banner-small lucid-Banner-filled"
-    style={
-      Object {
-        "marginBottom": 8,
-      }
-    }
-  >
-    <span
-      className="lucid-Banner-content"
+      <span
+        class="lucid-Banner-content"
+      >
+        Danger -- No Close ×
+      </span>
+    </section>
+  </div>
+  <div>
+    <section
+      class="lucid-Banner lucid-Banner-has-close lucid-Banner-info lucid-Banner-filled"
+      style="margin-bottom:8px"
     >
-      Info -- No Close 
-      ×
-    </span>
-  </section>
-</CSSTransition>
-`;
-
-exports[`Banner [common] example testing should match snapshot(s) for 2.small 11`] = `
-<CSSTransition
-  classNames="lucid-Banner"
-  in={true}
-  timeout={300}
-  unmountOnExit={true}
->
-  <section
-    className="lucid-Banner lucid-Banner-has-close lucid-Banner-small"
-    style={
-      Object {
-        "marginBottom": 8,
-      }
-    }
-  >
-    <span
-      className="lucid-Banner-content"
+      <span
+        class="lucid-Banner-content"
+      >
+        Info
+      </span>
+      <svg
+        class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Banner-close"
+        height="8"
+        preserveAspectRatio="xMidYMid meet"
+        viewBox="0 0 16 16"
+        width="8"
+      >
+        <path
+          d="M.5.5l15 15m0-15l-15 15"
+        />
+      </svg>
+    </section>
+    <section
+      class="lucid-Banner lucid-Banner-info lucid-Banner-filled"
+      style="margin-bottom:8px"
     >
-      Default -- Outline Only
-    </span>
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Banner-close"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={8}
-      viewBox="0 0 16 16"
-    />
-  </section>
-</CSSTransition>
-`;
-
-exports[`Banner [common] example testing should match snapshot(s) for 2.small 12`] = `
-<CSSTransition
-  classNames="lucid-Banner"
-  in={true}
-  timeout={300}
-  unmountOnExit={true}
->
-  <section
-    className="lucid-Banner lucid-Banner-has-close lucid-Banner-success lucid-Banner-small"
-    style={
-      Object {
-        "marginBottom": 8,
-      }
-    }
-  >
-    <span
-      className="lucid-Banner-content"
+      <span
+        class="lucid-Banner-content"
+      >
+        Info -- No Close ×
+      </span>
+    </section>
+  </div>
+  <div>
+    <section
+      class="lucid-Banner lucid-Banner-has-icon lucid-Banner-has-close lucid-Banner-danger lucid-Banner-filled"
+      style="margin-bottom:8px"
     >
-      Success -- Outline Only
-    </span>
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Banner-close"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={8}
-      viewBox="0 0 16 16"
-    />
-  </section>
-</CSSTransition>
-`;
-
-exports[`Banner [common] example testing should match snapshot(s) for 2.small 13`] = `
-<CSSTransition
-  classNames="lucid-Banner"
-  in={true}
-  timeout={300}
-  unmountOnExit={true}
->
-  <section
-    className="lucid-Banner lucid-Banner-has-close lucid-Banner-warning lucid-Banner-small"
-    style={
-      Object {
-        "marginBottom": 8,
-      }
-    }
-  >
-    <span
-      className="lucid-Banner-content"
+      <span
+        class="lucid-Banner-icon"
+      >
+        <svg
+          class="lucid-Icon lucid-Icon-color-primary lucid-ChatIcon"
+          height="16"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 16 16"
+          width="16"
+        >
+          <path
+            d="M4.5 6a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zM8 5.5a.5.5 0 1 0 0 1 .5.5 0 0 0 0-1zm4 0a.5.5 0 1 0 0 1 .5.5 0 0 0 0-1z"
+          />
+          <path
+            d="M7.5 11.5H10c3.025 0 5.5-2.475 5.5-5.5S13.025.5 10 .5H6C2.975.5.5 2.975.5 6c0 2.118 1.234 3.967 3 4.884V14.5l4-3z"
+          />
+        </svg>
+      </span>
+      <span
+        class="lucid-Banner-content"
+      >
+        Has Icon
+      </span>
+      <svg
+        class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Banner-close"
+        height="8"
+        preserveAspectRatio="xMidYMid meet"
+        viewBox="0 0 16 16"
+        width="8"
+      >
+        <path
+          d="M.5.5l15 15m0-15l-15 15"
+        />
+      </svg>
+    </section>
+  </div>
+  <div>
+    <section
+      class="lucid-Banner lucid-Banner-has-close"
+      style="margin-bottom:8px"
     >
-      Warning -- Outline Only
-    </span>
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Banner-close"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={8}
-      viewBox="0 0 16 16"
-    />
-  </section>
-</CSSTransition>
-`;
-
-exports[`Banner [common] example testing should match snapshot(s) for 2.small 14`] = `
-<CSSTransition
-  classNames="lucid-Banner"
-  in={true}
-  timeout={300}
-  unmountOnExit={true}
->
-  <section
-    className="lucid-Banner lucid-Banner-has-close lucid-Banner-danger lucid-Banner-small"
-    style={
-      Object {
-        "marginBottom": 8,
-      }
-    }
-  >
-    <span
-      className="lucid-Banner-content"
+      <span
+        class="lucid-Banner-content"
+      >
+        <div>
+          Sit totam voluptas error dolorum ullam Quo ipsam esse amet mollitia consequuntur Cumque cum nisi porro cumque sit nisi Facilis placeat suscipit earum blanditiis eveniet Earum dolor voluptates perferendis quis
+        </div>
+        <div>
+          Adipisicing culpa atque totam quidem dicta consequatur fugiat quaerat Facilis cupiditate amet nam in perferendis Veritatis iusto molestiae illum doloribus deserunt Odit autem obcaecati dolores ad incidunt? Ipsa eveniet modi.
+        </div>
+        <div>
+          Lorem sit explicabo vitae illum labore Nostrum inventore dolor nisi deserunt voluptatem Voluptas itaque nesciunt omnis necessitatibus asperiores! Eius error ab consequatur necessitatibus repudiandae quibusdam Odio consequuntur at necessitatibus at
+        </div>
+        <div>
+          <a
+            href="#"
+          >
+            Click Me
+          </a>
+        </div>
+      </span>
+      <svg
+        class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Banner-close"
+        height="8"
+        preserveAspectRatio="xMidYMid meet"
+        viewBox="0 0 16 16"
+        width="8"
+      >
+        <path
+          d="M.5.5l15 15m0-15l-15 15"
+        />
+      </svg>
+    </section>
+  </div>
+  <div>
+    <section
+      class="lucid-Banner lucid-Banner-has-close"
+      style="margin-bottom:8px"
     >
-      Danger -- Outline Only
-    </span>
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Banner-close"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={8}
-      viewBox="0 0 16 16"
-    />
-  </section>
-</CSSTransition>
-`;
-
-exports[`Banner [common] example testing should match snapshot(s) for 2.small 15`] = `
-<CSSTransition
-  classNames="lucid-Banner"
-  in={true}
-  timeout={300}
-  unmountOnExit={true}
->
-  <section
-    className="lucid-Banner lucid-Banner-has-close lucid-Banner-info lucid-Banner-small"
-    style={
-      Object {
-        "marginBottom": 8,
-      }
-    }
-  >
-    <span
-      className="lucid-Banner-content"
+      <span
+        class="lucid-Banner-content"
+      >
+        <div>
+          Default -- Outline
+        </div>
+        <div>
+          Outline banners are for messages with multi-line content.
+        </div>
+      </span>
+      <svg
+        class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Banner-close"
+        height="8"
+        preserveAspectRatio="xMidYMid meet"
+        viewBox="0 0 16 16"
+        width="8"
+      >
+        <path
+          d="M.5.5l15 15m0-15l-15 15"
+        />
+      </svg>
+    </section>
+  </div>
+  <div>
+    <section
+      class="lucid-Banner lucid-Banner-has-close lucid-Banner-success"
+      style="margin-bottom:8px"
     >
-      Info -- Outline Only
-    </span>
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Banner-close"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={8}
-      viewBox="0 0 16 16"
-    />
-  </section>
-</CSSTransition>
+      <span
+        class="lucid-Banner-content"
+      >
+        <div>
+          Success -- Outline
+        </div>
+        <div>
+          Outline banners are for messages with multi-line content.
+        </div>
+      </span>
+      <svg
+        class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Banner-close"
+        height="8"
+        preserveAspectRatio="xMidYMid meet"
+        viewBox="0 0 16 16"
+        width="8"
+      >
+        <path
+          d="M.5.5l15 15m0-15l-15 15"
+        />
+      </svg>
+    </section>
+  </div>
+  <div>
+    <section
+      class="lucid-Banner lucid-Banner-has-close lucid-Banner-warning"
+      style="margin-bottom:8px"
+    >
+      <span
+        class="lucid-Banner-content"
+      >
+        <div>
+          Warning -- Outline
+        </div>
+        <div>
+          Outline banners are for messages with multi-line content.
+        </div>
+      </span>
+      <svg
+        class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Banner-close"
+        height="8"
+        preserveAspectRatio="xMidYMid meet"
+        viewBox="0 0 16 16"
+        width="8"
+      >
+        <path
+          d="M.5.5l15 15m0-15l-15 15"
+        />
+      </svg>
+    </section>
+  </div>
+  <div>
+    <section
+      class="lucid-Banner lucid-Banner-has-close lucid-Banner-danger"
+      style="margin-bottom:8px"
+    >
+      <span
+        class="lucid-Banner-content"
+      >
+        <div>
+          Danger -- Outline
+        </div>
+        <div>
+          Outline banners are for messages with multi-line content.
+        </div>
+      </span>
+      <svg
+        class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Banner-close"
+        height="8"
+        preserveAspectRatio="xMidYMid meet"
+        viewBox="0 0 16 16"
+        width="8"
+      >
+        <path
+          d="M.5.5l15 15m0-15l-15 15"
+        />
+      </svg>
+    </section>
+  </div>
+  <div>
+    <section
+      class="lucid-Banner lucid-Banner-has-close lucid-Banner-info"
+      style="margin-bottom:8px"
+    >
+      <span
+        class="lucid-Banner-content"
+      >
+        <div>
+          Info -- Outline
+        </div>
+        <div>
+          Outline banners are for messages with multi-line content.
+        </div>
+      </span>
+      <svg
+        class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Banner-close"
+        height="8"
+        preserveAspectRatio="xMidYMid meet"
+        viewBox="0 0 16 16"
+        width="8"
+      >
+        <path
+          d="M.5.5l15 15m0-15l-15 15"
+        />
+      </svg>
+    </section>
+  </div>
+  <div>
+    <section
+      class="lucid-Banner lucid-Banner-has-icon lucid-Banner-has-close lucid-Banner-danger"
+      style="margin-bottom:8px"
+    >
+      <span
+        class="lucid-Banner-icon"
+      >
+        <svg
+          class="lucid-Icon lucid-Icon-color-primary lucid-ChatIcon"
+          height="16"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 16 16"
+          width="16"
+        >
+          <path
+            d="M4.5 6a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zM8 5.5a.5.5 0 1 0 0 1 .5.5 0 0 0 0-1zm4 0a.5.5 0 1 0 0 1 .5.5 0 0 0 0-1z"
+          />
+          <path
+            d="M7.5 11.5H10c3.025 0 5.5-2.475 5.5-5.5S13.025.5 10 .5H6C2.975.5.5 2.975.5 6c0 2.118 1.234 3.967 3 4.884V14.5l4-3z"
+          />
+        </svg>
+      </span>
+      <span
+        class="lucid-Banner-content"
+      >
+        <div>
+          Has Icon -- Outline
+        </div>
+        <div>
+          Outline banners are for messages with multi-line content.
+        </div>
+      </span>
+      <svg
+        class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Banner-close"
+        height="8"
+        preserveAspectRatio="xMidYMid meet"
+        viewBox="0 0 16 16"
+        width="8"
+      >
+        <path
+          d="M.5.5l15 15m0-15l-15 15"
+        />
+      </svg>
+    </section>
+  </div>
+</div>
 `;
