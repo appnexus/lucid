@@ -557,11 +557,10 @@ class SearchableMultiSelect extends React.Component<
 
 	handleEnter = (event) => {
 		if (event.keyCode === 13) {
-			event.stopPropagation()
+			event.stopPropagation();
 		} else {
-			this.handleSearch(event.target.value, event)
-			}
-		}
+			this.handleSearch(event.target.value, event);
+		}};
 
 	UNSAFE_componentWillMount(): void {
 		// preprocess the options data before rendering
