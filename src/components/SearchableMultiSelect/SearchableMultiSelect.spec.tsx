@@ -68,8 +68,8 @@ describe('SearchableMultiSelect', () => {
 				);
 
 				const event = {
-					target: { value: 'ero'}
-				}
+					target: { value: 'ero' },
+				};
 				const expected = {
 					event: 'ero',
 					props: {
@@ -81,7 +81,10 @@ describe('SearchableMultiSelect', () => {
 					},
 				};
 
-				wrapper.find('SearchField').prop('onKeyDown')(event.target.value, event);
+				wrapper.find('SearchField').prop('onKeyDown')(
+					event.target.value,
+					event
+				);
 
 				expect(onSearch).toHaveBeenCalledWith(undefined, 0, expected);
 			});

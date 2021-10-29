@@ -522,8 +522,8 @@ class SearchableMultiSelect extends React.Component<
 		searchText: string,
 		{ event }: { event: React.KeyboardEvent | React.MouseEvent }
 	): void => {
-
-		if (event.keyCode !== 13 ) {
+		// @ts-ignore
+		if (event.keyCode !== 13) {
 			const {
 				props,
 				props: {
@@ -532,7 +532,6 @@ class SearchableMultiSelect extends React.Component<
 					DropMenu: { onExpand },
 				},
 			} = this;
-	
 			const options = _.map(
 				findTypes(props, SearchableMultiSelect.Option),
 				'props'
@@ -542,7 +541,6 @@ class SearchableMultiSelect extends React.Component<
 			});
 			const firstVisibleProps = options[firstVisibleIndex];
 			const dropMenuProps = this.props.DropMenu;
-	
 			// Just an extra call to make sure the search results show up when a user
 			// is typing
 			onExpand &&
@@ -550,15 +548,13 @@ class SearchableMultiSelect extends React.Component<
 					event,
 					props: dropMenuProps,
 				});
-	
 			return onSearch(searchText, firstVisibleIndex, {
 				event,
 				props: firstVisibleProps,
 			});
 		} else {
-				event.stopPropagation();
+			event.stopPropagation();
 		}
-		
 	};
 
 	UNSAFE_componentWillMount(): void {
@@ -821,8 +817,10 @@ class SearchableMultiSelect extends React.Component<
 								searchFieldProps.className
 							)}
 							value={searchText}
-							onKeyDown={(event)=>{this.handleSearch(event.target?.value, {event});
-						}}
+							onKeyDown={(event) => {
+								// @ts-ignore
+								this.handleSearch(event.target?.value, { event });
+							}}
 						/>
 					</DropMenu.Control>
 					{isLoading ? (
