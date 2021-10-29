@@ -531,6 +531,7 @@ class SearchableMultiSelect extends React.Component<
 					DropMenu: { onExpand },
 				},
 			} = this;
+
 			const options = _.map(
 				findTypes(props, SearchableMultiSelect.Option),
 				'props'
@@ -540,6 +541,7 @@ class SearchableMultiSelect extends React.Component<
 			});
 			const firstVisibleProps = options[firstVisibleIndex];
 			const dropMenuProps = this.props.DropMenu;
+
 			// Just an extra call to make sure the search results show up when a user
 			// is typing
 			onExpand &&
@@ -547,6 +549,7 @@ class SearchableMultiSelect extends React.Component<
 					event,
 					props: dropMenuProps,
 				});
+
 			return onSearch(searchText, firstVisibleIndex, {
 				event,
 				props: firstVisibleProps,
