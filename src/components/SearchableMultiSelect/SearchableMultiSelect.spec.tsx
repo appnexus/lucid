@@ -66,8 +66,12 @@ describe('SearchableMultiSelect', () => {
 						<Option callbackId={'one'}>One</Option>
 					</SearchableMultiSelect>
 				);
+
+				const event = {
+					target: { value: 'ero'}
+				}
 				const expected = {
-					event: 'fake',
+					event: 'ero',
 					props: {
 						callbackId: 'zero',
 						children: 'Zero',
@@ -77,9 +81,9 @@ describe('SearchableMultiSelect', () => {
 					},
 				};
 
-				wrapper.find('SearchField').prop('onChange')('ero', { event: 'fake' });
+				wrapper.find('SearchField').prop('onKeyDown')(event.target.value, event);
 
-				expect(onSearch).toHaveBeenCalledWith('ero', 0, expected);
+				expect(onSearch).toHaveBeenCalledWith(undefined, 0, expected);
 			});
 		});
 
