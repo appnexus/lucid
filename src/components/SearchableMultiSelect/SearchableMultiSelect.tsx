@@ -522,45 +522,44 @@ class SearchableMultiSelect extends React.Component<
 		searchText: string,
 		{ event }: { event: React.KeyboardEvent | React.MouseEvent }
 	): void => {
-		const {
-			props,
-			props: {
-				onSearch,
-				optionFilter,
-				DropMenu: { onExpand },
-			},
-		} = this;
 
-		const options = _.map(
-			findTypes(props, SearchableMultiSelect.Option),
-			'props'
-		);
-		const firstVisibleIndex = _.findIndex(options, (option) => {
-			return optionFilter(searchText, option);
-		});
-		const firstVisibleProps = options[firstVisibleIndex];
-		const dropMenuProps = this.props.DropMenu;
-
-		// Just an extra call to make sure the search results show up when a user
-		// is typing
-		onExpand &&
-			onExpand({
-				event,
-				props: dropMenuProps,
+		if (event.keyCode !== 13 ) {
+			const {
+				props,
+				props: {
+					onSearch,
+					optionFilter,
+					DropMenu: { onExpand },
+				},
+			} = this;
+	
+			const options = _.map(
+				findTypes(props, SearchableMultiSelect.Option),
+				'props'
+			);
+			const firstVisibleIndex = _.findIndex(options, (option) => {
+				return optionFilter(searchText, option);
 			});
-
-		return onSearch(searchText, firstVisibleIndex, {
-			event,
-			props: firstVisibleProps,
-		});
-	};
-
-	handleEnter = (event) => {
-		if (event.keyCode === 13) {
-			event.stopPropagation();
+			const firstVisibleProps = options[firstVisibleIndex];
+			const dropMenuProps = this.props.DropMenu;
+	
+			// Just an extra call to make sure the search results show up when a user
+			// is typing
+			onExpand &&
+				onExpand({
+					event,
+					props: dropMenuProps,
+				});
+	
+			return onSearch(searchText, firstVisibleIndex, {
+				event,
+				props: firstVisibleProps,
+			});
 		} else {
-			this.handleSearch(event.target.value, event);
-		}};
+				event.stopPropagation();
+		}
+		
+	};
 
 	UNSAFE_componentWillMount(): void {
 		// preprocess the options data before rendering
@@ -822,7 +821,8 @@ class SearchableMultiSelect extends React.Component<
 								searchFieldProps.className
 							)}
 							value={searchText}
-							onKeyDown={this.handleEnter}
+							onKeyDown={(event)=>{this.handleSearch(event.target?.value, {event});
+						}}
 						/>
 					</DropMenu.Control>
 					{isLoading ? (

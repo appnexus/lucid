@@ -1310,6 +1310,7 @@ exports[`SearchableMultiSelect custom formatting should render Option child func
         isDisabled={false}
         onChange={[Function]}
         onChangeDebounced={[Function]}
+        onKeyDown={[Function]}
         onSubmit={[Function]}
         value="tion"
       />
@@ -1444,6 +1445,7 @@ exports[`SearchableMultiSelect custom formatting should render Option.Selected i
         isDisabled={false}
         onChange={[Function]}
         onChangeDebounced={[Function]}
+        onKeyDown={[Function]}
         onSubmit={[Function]}
         value=""
       />
@@ -1674,6 +1676,7 @@ exports[`SearchableMultiSelect custom formatting should render OptionGroup.Selec
         isDisabled={false}
         onChange={[Function]}
         onChangeDebounced={[Function]}
+        onKeyDown={[Function]}
         onSubmit={[Function]}
         value=""
       />
