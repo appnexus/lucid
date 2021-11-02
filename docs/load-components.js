@@ -1164,16 +1164,6 @@ module.exports = [
 	{
 		name: 'ToolTip',
 		component: getDefaultExport(require('../src/components/ToolTip/ToolTip')),
-		examplesContext: require.context(
-			'../src/components/ToolTip/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../src/components/ToolTip/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
 	},
 	{
 		name: 'Validation',
