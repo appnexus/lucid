@@ -1,1525 +1,184 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ToolTip [common] example testing should match snapshot(s) for 1.interactive 1`] = `
-<ContextMenu
-  alignment="center"
-  className="lucid-ToolTip"
-  direction="right"
-  directonOffset={15}
-  getAlignmentOffset={[Function]}
-  isExpanded={false}
-  minWidthOffset={0}
-  onClickOut={null}
-  onMouseOut={[Function]}
-  onMouseOver={[Function]}
-  portalId={null}
+exports[`ToolTip [common] example testing should match snapshot(s) for Default 1`] = `
+<section
+  style="display:flex;align-items:center;justify-content:center"
 >
-  <ContextMenu.Target
-    className="lucid-ToolTip-Target"
-    elementType="span"
+  <span
+    class="lucid-ContextMenu lucid-ToolTip"
   >
     <div>
-      Target 
-      right
-       
-      start
+      Example Target
     </div>
-  </ContextMenu.Target>
-  <ContextMenu.FlyOut
-    className="lucid-ToolTip-FlyOut lucid-ToolTip-FlyOut-right lucid-ToolTip-FlyOut-start lucid-ToolTip-FlyOut-default"
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
-    style={
-      Object {
-        "maxWidth": 200,
-      }
-    }
+  </span>
+</section>
+`;
+
+exports[`ToolTip [common] example testing should match snapshot(s) for DirectionAndAlignmentVariants 1`] = `
+<section
+  style="display:flex;flex-direction:row"
+>
+  <section
+    style="display:flex;flex-direction:column;align-items:center;flex-grow:1"
   >
-    <h2
-      className="lucid-ToolTip-FlyOut-Title"
+    <section
+      style="margin:30px"
     >
-      Title: 
-      right
-       
-      start
-    </h2>
-    ToolTip is a utility component to create a transient message anchored to another component. My direction is "
-    right
-    ". My alignment is "
-    start
-    ".
-  </ContextMenu.FlyOut>
-</ContextMenu>
-`;
-
-exports[`ToolTip [common] example testing should match snapshot(s) for 1.interactive 2`] = `
-<ContextMenu
-  alignment="center"
-  className="lucid-ToolTip"
-  direction="right"
-  directonOffset={15}
-  getAlignmentOffset={[Function]}
-  isExpanded={false}
-  minWidthOffset={0}
-  onClickOut={null}
-  onMouseOut={[Function]}
-  onMouseOver={[Function]}
-  portalId={null}
->
-  <ContextMenu.Target
-    className="lucid-ToolTip-Target"
-    elementType="span"
-  >
-    <div>
-      Target 
-      right
-       
-      center
-    </div>
-  </ContextMenu.Target>
-  <ContextMenu.FlyOut
-    className="lucid-ToolTip-FlyOut lucid-ToolTip-FlyOut-right lucid-ToolTip-FlyOut-center lucid-ToolTip-FlyOut-default"
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
-    style={
-      Object {
-        "maxWidth": 200,
-      }
-    }
-  >
-    <h2
-      className="lucid-ToolTip-FlyOut-Title"
+      <span
+        class="lucid-ContextMenu lucid-ToolTip"
+      >
+        <div>
+          Target right start
+        </div>
+      </span>
+    </section>
+    <section
+      style="margin:30px"
     >
-      Title: 
-      right
-       
-      center
-    </h2>
-    ToolTip is a utility component to create a transient message anchored to another component. My direction is "
-    right
-    ". My alignment is "
-    center
-    ".
-  </ContextMenu.FlyOut>
-</ContextMenu>
-`;
-
-exports[`ToolTip [common] example testing should match snapshot(s) for 1.interactive 3`] = `
-<ContextMenu
-  alignment="center"
-  className="lucid-ToolTip"
-  direction="right"
-  directonOffset={15}
-  getAlignmentOffset={[Function]}
-  isExpanded={false}
-  minWidthOffset={0}
-  onClickOut={null}
-  onMouseOut={[Function]}
-  onMouseOver={[Function]}
-  portalId={null}
->
-  <ContextMenu.Target
-    className="lucid-ToolTip-Target"
-    elementType="span"
-  >
-    <div>
-      Target 
-      right
-       
-      end
-    </div>
-  </ContextMenu.Target>
-  <ContextMenu.FlyOut
-    className="lucid-ToolTip-FlyOut lucid-ToolTip-FlyOut-right lucid-ToolTip-FlyOut-end lucid-ToolTip-FlyOut-default"
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
-    style={
-      Object {
-        "maxWidth": 200,
-      }
-    }
-  >
-    <h2
-      className="lucid-ToolTip-FlyOut-Title"
+      <span
+        class="lucid-ContextMenu lucid-ToolTip"
+      >
+        <div>
+          Target right center
+        </div>
+      </span>
+    </section>
+    <section
+      style="margin:30px"
     >
-      Title: 
-      right
-       
-      end
-    </h2>
-    ToolTip is a utility component to create a transient message anchored to another component. My direction is "
-    right
-    ". My alignment is "
-    end
-    ".
-  </ContextMenu.FlyOut>
-</ContextMenu>
-`;
-
-exports[`ToolTip [common] example testing should match snapshot(s) for 1.interactive 4`] = `
-<ContextMenu
-  alignment="center"
-  className="lucid-ToolTip"
-  direction="up"
-  directonOffset={15}
-  getAlignmentOffset={[Function]}
-  isExpanded={false}
-  minWidthOffset={0}
-  onClickOut={null}
-  onMouseOut={[Function]}
-  onMouseOver={[Function]}
-  portalId={null}
->
-  <ContextMenu.Target
-    className="lucid-ToolTip-Target"
-    elementType="span"
+      <span
+        class="lucid-ContextMenu lucid-ToolTip"
+      >
+        <div>
+          Target right end
+        </div>
+      </span>
+    </section>
+  </section>
+  <section
+    style="display:flex;flex-direction:column;align-items:center;flex-grow:1"
   >
-    <div>
-      Target 
-      up
-       
-      start
-    </div>
-  </ContextMenu.Target>
-  <ContextMenu.FlyOut
-    className="lucid-ToolTip-FlyOut lucid-ToolTip-FlyOut-up lucid-ToolTip-FlyOut-start lucid-ToolTip-FlyOut-default"
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
-    style={
-      Object {
-        "maxWidth": 200,
-      }
-    }
-  >
-    <h2
-      className="lucid-ToolTip-FlyOut-Title"
+    <section
+      style="margin:30px"
     >
-      Title: 
-      up
-       
-      start
-    </h2>
-    ToolTip is a utility component to create a transient message anchored to another component. My direction is "
-    up
-    ". My alignment is "
-    start
-    ".
-  </ContextMenu.FlyOut>
-</ContextMenu>
-`;
-
-exports[`ToolTip [common] example testing should match snapshot(s) for 1.interactive 5`] = `
-<ContextMenu
-  alignment="center"
-  className="lucid-ToolTip"
-  direction="up"
-  directonOffset={15}
-  getAlignmentOffset={[Function]}
-  isExpanded={false}
-  minWidthOffset={0}
-  onClickOut={null}
-  onMouseOut={[Function]}
-  onMouseOver={[Function]}
-  portalId={null}
->
-  <ContextMenu.Target
-    className="lucid-ToolTip-Target"
-    elementType="span"
-  >
-    <div>
-      Target 
-      up
-       
-      center
-    </div>
-  </ContextMenu.Target>
-  <ContextMenu.FlyOut
-    className="lucid-ToolTip-FlyOut lucid-ToolTip-FlyOut-up lucid-ToolTip-FlyOut-center lucid-ToolTip-FlyOut-default"
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
-    style={
-      Object {
-        "maxWidth": 200,
-      }
-    }
-  >
-    <h2
-      className="lucid-ToolTip-FlyOut-Title"
+      <span
+        class="lucid-ContextMenu lucid-ToolTip"
+      >
+        <div>
+          Target up start
+        </div>
+      </span>
+    </section>
+    <section
+      style="margin:30px"
     >
-      Title: 
-      up
-       
-      center
-    </h2>
-    ToolTip is a utility component to create a transient message anchored to another component. My direction is "
-    up
-    ". My alignment is "
-    center
-    ".
-  </ContextMenu.FlyOut>
-</ContextMenu>
-`;
-
-exports[`ToolTip [common] example testing should match snapshot(s) for 1.interactive 6`] = `
-<ContextMenu
-  alignment="center"
-  className="lucid-ToolTip"
-  direction="up"
-  directonOffset={15}
-  getAlignmentOffset={[Function]}
-  isExpanded={false}
-  minWidthOffset={0}
-  onClickOut={null}
-  onMouseOut={[Function]}
-  onMouseOver={[Function]}
-  portalId={null}
->
-  <ContextMenu.Target
-    className="lucid-ToolTip-Target"
-    elementType="span"
-  >
-    <div>
-      Target 
-      up
-       
-      end
-    </div>
-  </ContextMenu.Target>
-  <ContextMenu.FlyOut
-    className="lucid-ToolTip-FlyOut lucid-ToolTip-FlyOut-up lucid-ToolTip-FlyOut-end lucid-ToolTip-FlyOut-default"
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
-    style={
-      Object {
-        "maxWidth": 200,
-      }
-    }
-  >
-    <h2
-      className="lucid-ToolTip-FlyOut-Title"
+      <span
+        class="lucid-ContextMenu lucid-ToolTip"
+      >
+        <div>
+          Target up center
+        </div>
+      </span>
+    </section>
+    <section
+      style="margin:30px"
     >
-      Title: 
-      up
-       
-      end
-    </h2>
-    ToolTip is a utility component to create a transient message anchored to another component. My direction is "
-    up
-    ". My alignment is "
-    end
-    ".
-  </ContextMenu.FlyOut>
-</ContextMenu>
-`;
-
-exports[`ToolTip [common] example testing should match snapshot(s) for 1.interactive 7`] = `
-<ContextMenu
-  alignment="center"
-  className="lucid-ToolTip"
-  direction="down"
-  directonOffset={15}
-  getAlignmentOffset={[Function]}
-  isExpanded={false}
-  minWidthOffset={0}
-  onClickOut={null}
-  onMouseOut={[Function]}
-  onMouseOver={[Function]}
-  portalId={null}
->
-  <ContextMenu.Target
-    className="lucid-ToolTip-Target"
-    elementType="span"
+      <span
+        class="lucid-ContextMenu lucid-ToolTip"
+      >
+        <div>
+          Target up end
+        </div>
+      </span>
+    </section>
+  </section>
+  <section
+    style="display:flex;flex-direction:column;align-items:center;flex-grow:1"
   >
-    <div>
-      Target 
-      down
-       
-      start
-    </div>
-  </ContextMenu.Target>
-  <ContextMenu.FlyOut
-    className="lucid-ToolTip-FlyOut lucid-ToolTip-FlyOut-down lucid-ToolTip-FlyOut-start lucid-ToolTip-FlyOut-default"
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
-    style={
-      Object {
-        "maxWidth": 200,
-      }
-    }
-  >
-    <h2
-      className="lucid-ToolTip-FlyOut-Title"
+    <section
+      style="margin:30px"
     >
-      Title: 
-      down
-       
-      start
-    </h2>
-    ToolTip is a utility component to create a transient message anchored to another component. My direction is "
-    down
-    ". My alignment is "
-    start
-    ".
-  </ContextMenu.FlyOut>
-</ContextMenu>
-`;
-
-exports[`ToolTip [common] example testing should match snapshot(s) for 1.interactive 8`] = `
-<ContextMenu
-  alignment="center"
-  className="lucid-ToolTip"
-  direction="down"
-  directonOffset={15}
-  getAlignmentOffset={[Function]}
-  isExpanded={false}
-  minWidthOffset={0}
-  onClickOut={null}
-  onMouseOut={[Function]}
-  onMouseOver={[Function]}
-  portalId={null}
->
-  <ContextMenu.Target
-    className="lucid-ToolTip-Target"
-    elementType="span"
-  >
-    <div>
-      Target 
-      down
-       
-      center
-    </div>
-  </ContextMenu.Target>
-  <ContextMenu.FlyOut
-    className="lucid-ToolTip-FlyOut lucid-ToolTip-FlyOut-down lucid-ToolTip-FlyOut-center lucid-ToolTip-FlyOut-default"
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
-    style={
-      Object {
-        "maxWidth": 200,
-      }
-    }
-  >
-    <h2
-      className="lucid-ToolTip-FlyOut-Title"
+      <span
+        class="lucid-ContextMenu lucid-ToolTip"
+      >
+        <div>
+          Target down start
+        </div>
+      </span>
+    </section>
+    <section
+      style="margin:30px"
     >
-      Title: 
-      down
-       
-      center
-    </h2>
-    ToolTip is a utility component to create a transient message anchored to another component. My direction is "
-    down
-    ". My alignment is "
-    center
-    ".
-  </ContextMenu.FlyOut>
-</ContextMenu>
-`;
-
-exports[`ToolTip [common] example testing should match snapshot(s) for 1.interactive 9`] = `
-<ContextMenu
-  alignment="center"
-  className="lucid-ToolTip"
-  direction="down"
-  directonOffset={15}
-  getAlignmentOffset={[Function]}
-  isExpanded={false}
-  minWidthOffset={0}
-  onClickOut={null}
-  onMouseOut={[Function]}
-  onMouseOver={[Function]}
-  portalId={null}
->
-  <ContextMenu.Target
-    className="lucid-ToolTip-Target"
-    elementType="span"
-  >
-    <div>
-      Target 
-      down
-       
-      end
-    </div>
-  </ContextMenu.Target>
-  <ContextMenu.FlyOut
-    className="lucid-ToolTip-FlyOut lucid-ToolTip-FlyOut-down lucid-ToolTip-FlyOut-end lucid-ToolTip-FlyOut-default"
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
-    style={
-      Object {
-        "maxWidth": 200,
-      }
-    }
-  >
-    <h2
-      className="lucid-ToolTip-FlyOut-Title"
+      <span
+        class="lucid-ContextMenu lucid-ToolTip"
+      >
+        <div>
+          Target down center
+        </div>
+      </span>
+    </section>
+    <section
+      style="margin:30px"
     >
-      Title: 
-      down
-       
-      end
-    </h2>
-    ToolTip is a utility component to create a transient message anchored to another component. My direction is "
-    down
-    ". My alignment is "
-    end
-    ".
-  </ContextMenu.FlyOut>
-</ContextMenu>
-`;
-
-exports[`ToolTip [common] example testing should match snapshot(s) for 1.interactive 10`] = `
-<ContextMenu
-  alignment="center"
-  className="lucid-ToolTip"
-  direction="left"
-  directonOffset={15}
-  getAlignmentOffset={[Function]}
-  isExpanded={false}
-  minWidthOffset={0}
-  onClickOut={null}
-  onMouseOut={[Function]}
-  onMouseOver={[Function]}
-  portalId={null}
->
-  <ContextMenu.Target
-    className="lucid-ToolTip-Target"
-    elementType="span"
+      <span
+        class="lucid-ContextMenu lucid-ToolTip"
+      >
+        <div>
+          Target down end
+        </div>
+      </span>
+    </section>
+  </section>
+  <section
+    style="display:flex;flex-direction:column;align-items:center;flex-grow:1"
   >
-    <div>
-      Target 
-      left
-       
-      start
-    </div>
-  </ContextMenu.Target>
-  <ContextMenu.FlyOut
-    className="lucid-ToolTip-FlyOut lucid-ToolTip-FlyOut-left lucid-ToolTip-FlyOut-start lucid-ToolTip-FlyOut-default"
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
-    style={
-      Object {
-        "maxWidth": 200,
-      }
-    }
-  >
-    <h2
-      className="lucid-ToolTip-FlyOut-Title"
+    <section
+      style="margin:30px"
     >
-      Title: 
-      left
-       
-      start
-    </h2>
-    ToolTip is a utility component to create a transient message anchored to another component. My direction is "
-    left
-    ". My alignment is "
-    start
-    ".
-  </ContextMenu.FlyOut>
-</ContextMenu>
-`;
-
-exports[`ToolTip [common] example testing should match snapshot(s) for 1.interactive 11`] = `
-<ContextMenu
-  alignment="center"
-  className="lucid-ToolTip"
-  direction="left"
-  directonOffset={15}
-  getAlignmentOffset={[Function]}
-  isExpanded={false}
-  minWidthOffset={0}
-  onClickOut={null}
-  onMouseOut={[Function]}
-  onMouseOver={[Function]}
-  portalId={null}
->
-  <ContextMenu.Target
-    className="lucid-ToolTip-Target"
-    elementType="span"
-  >
-    <div>
-      Target 
-      left
-       
-      center
-    </div>
-  </ContextMenu.Target>
-  <ContextMenu.FlyOut
-    className="lucid-ToolTip-FlyOut lucid-ToolTip-FlyOut-left lucid-ToolTip-FlyOut-center lucid-ToolTip-FlyOut-default"
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
-    style={
-      Object {
-        "maxWidth": 200,
-      }
-    }
-  >
-    <h2
-      className="lucid-ToolTip-FlyOut-Title"
+      <span
+        class="lucid-ContextMenu lucid-ToolTip"
+      >
+        <div>
+          Target left start
+        </div>
+      </span>
+    </section>
+    <section
+      style="margin:30px"
     >
-      Title: 
-      left
-       
-      center
-    </h2>
-    ToolTip is a utility component to create a transient message anchored to another component. My direction is "
-    left
-    ". My alignment is "
-    center
-    ".
-  </ContextMenu.FlyOut>
-</ContextMenu>
-`;
-
-exports[`ToolTip [common] example testing should match snapshot(s) for 1.interactive 12`] = `
-<ContextMenu
-  alignment="center"
-  className="lucid-ToolTip"
-  direction="left"
-  directonOffset={15}
-  getAlignmentOffset={[Function]}
-  isExpanded={false}
-  minWidthOffset={0}
-  onClickOut={null}
-  onMouseOut={[Function]}
-  onMouseOver={[Function]}
-  portalId={null}
->
-  <ContextMenu.Target
-    className="lucid-ToolTip-Target"
-    elementType="span"
-  >
-    <div>
-      Target 
-      left
-       
-      end
-    </div>
-  </ContextMenu.Target>
-  <ContextMenu.FlyOut
-    className="lucid-ToolTip-FlyOut lucid-ToolTip-FlyOut-left lucid-ToolTip-FlyOut-end lucid-ToolTip-FlyOut-default"
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
-    style={
-      Object {
-        "maxWidth": 200,
-      }
-    }
-  >
-    <h2
-      className="lucid-ToolTip-FlyOut-Title"
+      <span
+        class="lucid-ContextMenu lucid-ToolTip"
+      >
+        <div>
+          Target left center
+        </div>
+      </span>
+    </section>
+    <section
+      style="margin:30px"
     >
-      Title: 
-      left
-       
-      end
-    </h2>
-    ToolTip is a utility component to create a transient message anchored to another component. My direction is "
-    left
-    ". My alignment is "
-    end
-    ".
-  </ContextMenu.FlyOut>
-</ContextMenu>
+      <span
+        class="lucid-ContextMenu lucid-ToolTip"
+      >
+        <div>
+          Target left end
+        </div>
+      </span>
+    </section>
+  </section>
+</section>
 `;
 
-exports[`ToolTip [common] example testing should match snapshot(s) for 2.variants 1`] = `
-<ContextMenu
-  alignment="center"
-  className="lucid-ToolTip"
-  direction="up"
-  directonOffset={15}
-  getAlignmentOffset={[Function]}
-  isExpanded={true}
-  minWidthOffset={0}
-  onClickOut={null}
-  onMouseOut={[Function]}
-  onMouseOver={[Function]}
-  portalId={null}
+exports[`ToolTip [common] example testing should match snapshot(s) for ToolTipWithButton 1`] = `
+<section
+  style="display:flex;align-items:center;justify-content:center"
 >
-  <ContextMenu.Target
-    className="lucid-ToolTip-Target"
-    elementType="span"
+  <span
+    class="lucid-ContextMenu lucid-ToolTip"
   >
     <div>
-      No Title or Close Button
+      Example Target
     </div>
-  </ContextMenu.Target>
-  <ContextMenu.FlyOut
-    className="lucid-ToolTip-FlyOut lucid-ToolTip-FlyOut-up lucid-ToolTip-FlyOut-center lucid-ToolTip-FlyOut-default"
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
-    style={
-      Object {
-        "maxWidth": 200,
-      }
-    }
-  >
-    ToolTip is a utility component to create a transient message anchored to another component.
-  </ContextMenu.FlyOut>
-</ContextMenu>
-`;
-
-exports[`ToolTip [common] example testing should match snapshot(s) for 2.variants 2`] = `
-<ContextMenu
-  alignment="center"
-  className="lucid-ToolTip"
-  direction="up"
-  directonOffset={15}
-  getAlignmentOffset={[Function]}
-  isExpanded={true}
-  minWidthOffset={0}
-  onClickOut={null}
-  onMouseOut={[Function]}
-  onMouseOver={[Function]}
-  portalId={null}
->
-  <ContextMenu.Target
-    className="lucid-ToolTip-Target"
-    elementType="span"
-  >
-    <div>
-      With Close Button
-    </div>
-  </ContextMenu.Target>
-  <ContextMenu.FlyOut
-    className="lucid-ToolTip-FlyOut lucid-ToolTip-FlyOut-up lucid-ToolTip-FlyOut-center lucid-ToolTip-FlyOut-default"
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
-    style={
-      Object {
-        "maxWidth": 200,
-      }
-    }
-  >
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-ToolTip-FlyOut-close"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={8}
-      viewBox="0 0 16 16"
-    />
-    ToolTip is a utility component to create a transient message anchored to another component.
-  </ContextMenu.FlyOut>
-</ContextMenu>
-`;
-
-exports[`ToolTip [common] example testing should match snapshot(s) for 2.variants 3`] = `
-<ContextMenu
-  alignment="center"
-  className="lucid-ToolTip"
-  direction="up"
-  directonOffset={15}
-  getAlignmentOffset={[Function]}
-  isExpanded={true}
-  minWidthOffset={0}
-  onClickOut={null}
-  onMouseOut={[Function]}
-  onMouseOver={[Function]}
-  portalId={null}
->
-  <ContextMenu.Target
-    className="lucid-ToolTip-Target"
-    elementType="span"
-  >
-    <div>
-      With Title and Close Button
-    </div>
-  </ContextMenu.Target>
-  <ContextMenu.FlyOut
-    className="lucid-ToolTip-FlyOut lucid-ToolTip-FlyOut-up lucid-ToolTip-FlyOut-center lucid-ToolTip-FlyOut-default"
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
-    style={
-      Object {
-        "maxWidth": 200,
-      }
-    }
-  >
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-ToolTip-FlyOut-close"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={8}
-      viewBox="0 0 16 16"
-    />
-    <h2
-      className="lucid-ToolTip-FlyOut-Title"
-    >
-      Title
-    </h2>
-    ToolTip is a utility component to create a transient message anchored to another component.
-  </ContextMenu.FlyOut>
-</ContextMenu>
-`;
-
-exports[`ToolTip [common] example testing should match snapshot(s) for 2.variants 4`] = `
-<ContextMenu
-  alignment="center"
-  className="lucid-ToolTip"
-  direction="up"
-  directonOffset={15}
-  getAlignmentOffset={[Function]}
-  isExpanded={true}
-  minWidthOffset={0}
-  onClickOut={null}
-  onMouseOut={[Function]}
-  onMouseOver={[Function]}
-  portalId={null}
->
-  <ContextMenu.Target
-    className="lucid-ToolTip-Target"
-    elementType="span"
-  >
-    <div>
-      No Title or Close Button
-    </div>
-  </ContextMenu.Target>
-  <ContextMenu.FlyOut
-    className="lucid-ToolTip-FlyOut lucid-ToolTip-FlyOut-up lucid-ToolTip-FlyOut-center lucid-ToolTip-FlyOut-light"
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
-    style={
-      Object {
-        "maxWidth": 200,
-      }
-    }
-  >
-    ToolTip is a utility component to create a transient message anchored to another component.
-  </ContextMenu.FlyOut>
-</ContextMenu>
-`;
-
-exports[`ToolTip [common] example testing should match snapshot(s) for 2.variants 5`] = `
-<ContextMenu
-  alignment="center"
-  className="lucid-ToolTip"
-  direction="up"
-  directonOffset={15}
-  getAlignmentOffset={[Function]}
-  isExpanded={true}
-  minWidthOffset={0}
-  onClickOut={null}
-  onMouseOut={[Function]}
-  onMouseOver={[Function]}
-  portalId={null}
->
-  <ContextMenu.Target
-    className="lucid-ToolTip-Target"
-    elementType="span"
-  >
-    <div>
-      With Close Button
-    </div>
-  </ContextMenu.Target>
-  <ContextMenu.FlyOut
-    className="lucid-ToolTip-FlyOut lucid-ToolTip-FlyOut-up lucid-ToolTip-FlyOut-center lucid-ToolTip-FlyOut-light"
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
-    style={
-      Object {
-        "maxWidth": 200,
-      }
-    }
-  >
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-ToolTip-FlyOut-close"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={8}
-      viewBox="0 0 16 16"
-    />
-    ToolTip is a utility component to create a transient message anchored to another component.
-  </ContextMenu.FlyOut>
-</ContextMenu>
-`;
-
-exports[`ToolTip [common] example testing should match snapshot(s) for 2.variants 6`] = `
-<ContextMenu
-  alignment="center"
-  className="lucid-ToolTip"
-  direction="up"
-  directonOffset={15}
-  getAlignmentOffset={[Function]}
-  isExpanded={true}
-  minWidthOffset={0}
-  onClickOut={null}
-  onMouseOut={[Function]}
-  onMouseOver={[Function]}
-  portalId={null}
->
-  <ContextMenu.Target
-    className="lucid-ToolTip-Target"
-    elementType="span"
-  >
-    <div>
-      With Title and Close Button
-    </div>
-  </ContextMenu.Target>
-  <ContextMenu.FlyOut
-    className="lucid-ToolTip-FlyOut lucid-ToolTip-FlyOut-up lucid-ToolTip-FlyOut-center lucid-ToolTip-FlyOut-light"
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
-    style={
-      Object {
-        "maxWidth": 200,
-      }
-    }
-  >
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-ToolTip-FlyOut-close"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={8}
-      viewBox="0 0 16 16"
-    />
-    <h2
-      className="lucid-ToolTip-FlyOut-Title"
-    >
-      Title
-    </h2>
-    ToolTip is a utility component to create a transient message anchored to another component.
-  </ContextMenu.FlyOut>
-</ContextMenu>
-`;
-
-exports[`ToolTip [common] example testing should match snapshot(s) for 3.unchanging 1`] = `
-<ContextMenu
-  alignment="center"
-  className="lucid-ToolTip"
-  direction="right"
-  directonOffset={15}
-  getAlignmentOffset={[Function]}
-  isExpanded={true}
-  minWidthOffset={0}
-  onClickOut={null}
-  onMouseOut={[Function]}
-  onMouseOver={[Function]}
-  portalId={null}
->
-  <ContextMenu.Target
-    className="lucid-ToolTip-Target"
-    elementType="span"
-  >
-    <div>
-      Target 
-      right
-       
-      start
-    </div>
-  </ContextMenu.Target>
-  <ContextMenu.FlyOut
-    className="lucid-ToolTip-FlyOut lucid-ToolTip-FlyOut-right lucid-ToolTip-FlyOut-start lucid-ToolTip-FlyOut-default"
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
-    style={
-      Object {
-        "maxWidth": 200,
-      }
-    }
-  >
-    <h2
-      className="lucid-ToolTip-FlyOut-Title"
-    >
-      Title: 
-      right
-       
-      start
-    </h2>
-    ToolTip is a utility component to create a transient message anchored to another component. My direction is "
-    right
-    ". My alignment is "
-    start
-    ".
-  </ContextMenu.FlyOut>
-</ContextMenu>
-`;
-
-exports[`ToolTip [common] example testing should match snapshot(s) for 3.unchanging 2`] = `
-<ContextMenu
-  alignment="center"
-  className="lucid-ToolTip"
-  direction="right"
-  directonOffset={15}
-  getAlignmentOffset={[Function]}
-  isExpanded={true}
-  minWidthOffset={0}
-  onClickOut={null}
-  onMouseOut={[Function]}
-  onMouseOver={[Function]}
-  portalId={null}
->
-  <ContextMenu.Target
-    className="lucid-ToolTip-Target"
-    elementType="span"
-  >
-    <div>
-      Target 
-      right
-       
-      center
-    </div>
-  </ContextMenu.Target>
-  <ContextMenu.FlyOut
-    className="lucid-ToolTip-FlyOut lucid-ToolTip-FlyOut-right lucid-ToolTip-FlyOut-center lucid-ToolTip-FlyOut-default"
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
-    style={
-      Object {
-        "maxWidth": 200,
-      }
-    }
-  >
-    <h2
-      className="lucid-ToolTip-FlyOut-Title"
-    >
-      Title: 
-      right
-       
-      center
-    </h2>
-    ToolTip is a utility component to create a transient message anchored to another component. My direction is "
-    right
-    ". My alignment is "
-    center
-    ".
-  </ContextMenu.FlyOut>
-</ContextMenu>
-`;
-
-exports[`ToolTip [common] example testing should match snapshot(s) for 3.unchanging 3`] = `
-<ContextMenu
-  alignment="center"
-  className="lucid-ToolTip"
-  direction="right"
-  directonOffset={15}
-  getAlignmentOffset={[Function]}
-  isExpanded={true}
-  minWidthOffset={0}
-  onClickOut={null}
-  onMouseOut={[Function]}
-  onMouseOver={[Function]}
-  portalId={null}
->
-  <ContextMenu.Target
-    className="lucid-ToolTip-Target"
-    elementType="span"
-  >
-    <div>
-      Target 
-      right
-       
-      end
-    </div>
-  </ContextMenu.Target>
-  <ContextMenu.FlyOut
-    className="lucid-ToolTip-FlyOut lucid-ToolTip-FlyOut-right lucid-ToolTip-FlyOut-end lucid-ToolTip-FlyOut-default"
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
-    style={
-      Object {
-        "maxWidth": 200,
-      }
-    }
-  >
-    <h2
-      className="lucid-ToolTip-FlyOut-Title"
-    >
-      Title: 
-      right
-       
-      end
-    </h2>
-    ToolTip is a utility component to create a transient message anchored to another component. My direction is "
-    right
-    ". My alignment is "
-    end
-    ".
-  </ContextMenu.FlyOut>
-</ContextMenu>
-`;
-
-exports[`ToolTip [common] example testing should match snapshot(s) for 3.unchanging 4`] = `
-<ContextMenu
-  alignment="center"
-  className="lucid-ToolTip"
-  direction="up"
-  directonOffset={15}
-  getAlignmentOffset={[Function]}
-  isExpanded={true}
-  minWidthOffset={0}
-  onClickOut={null}
-  onMouseOut={[Function]}
-  onMouseOver={[Function]}
-  portalId={null}
->
-  <ContextMenu.Target
-    className="lucid-ToolTip-Target"
-    elementType="span"
-  >
-    <div>
-      Target 
-      up
-       
-      start
-    </div>
-  </ContextMenu.Target>
-  <ContextMenu.FlyOut
-    className="lucid-ToolTip-FlyOut lucid-ToolTip-FlyOut-up lucid-ToolTip-FlyOut-start lucid-ToolTip-FlyOut-default"
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
-    style={
-      Object {
-        "maxWidth": 200,
-      }
-    }
-  >
-    <h2
-      className="lucid-ToolTip-FlyOut-Title"
-    >
-      Title: 
-      up
-       
-      start
-    </h2>
-    ToolTip is a utility component to create a transient message anchored to another component. My direction is "
-    up
-    ". My alignment is "
-    start
-    ".
-  </ContextMenu.FlyOut>
-</ContextMenu>
-`;
-
-exports[`ToolTip [common] example testing should match snapshot(s) for 3.unchanging 5`] = `
-<ContextMenu
-  alignment="center"
-  className="lucid-ToolTip"
-  direction="up"
-  directonOffset={15}
-  getAlignmentOffset={[Function]}
-  isExpanded={true}
-  minWidthOffset={0}
-  onClickOut={null}
-  onMouseOut={[Function]}
-  onMouseOver={[Function]}
-  portalId={null}
->
-  <ContextMenu.Target
-    className="lucid-ToolTip-Target"
-    elementType="span"
-  >
-    <div>
-      Target 
-      up
-       
-      center
-    </div>
-  </ContextMenu.Target>
-  <ContextMenu.FlyOut
-    className="lucid-ToolTip-FlyOut lucid-ToolTip-FlyOut-up lucid-ToolTip-FlyOut-center lucid-ToolTip-FlyOut-default"
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
-    style={
-      Object {
-        "maxWidth": 200,
-      }
-    }
-  >
-    <h2
-      className="lucid-ToolTip-FlyOut-Title"
-    >
-      Title: 
-      up
-       
-      center
-    </h2>
-    ToolTip is a utility component to create a transient message anchored to another component. My direction is "
-    up
-    ". My alignment is "
-    center
-    ".
-  </ContextMenu.FlyOut>
-</ContextMenu>
-`;
-
-exports[`ToolTip [common] example testing should match snapshot(s) for 3.unchanging 6`] = `
-<ContextMenu
-  alignment="center"
-  className="lucid-ToolTip"
-  direction="up"
-  directonOffset={15}
-  getAlignmentOffset={[Function]}
-  isExpanded={true}
-  minWidthOffset={0}
-  onClickOut={null}
-  onMouseOut={[Function]}
-  onMouseOver={[Function]}
-  portalId={null}
->
-  <ContextMenu.Target
-    className="lucid-ToolTip-Target"
-    elementType="span"
-  >
-    <div>
-      Target 
-      up
-       
-      end
-    </div>
-  </ContextMenu.Target>
-  <ContextMenu.FlyOut
-    className="lucid-ToolTip-FlyOut lucid-ToolTip-FlyOut-up lucid-ToolTip-FlyOut-end lucid-ToolTip-FlyOut-default"
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
-    style={
-      Object {
-        "maxWidth": 200,
-      }
-    }
-  >
-    <h2
-      className="lucid-ToolTip-FlyOut-Title"
-    >
-      Title: 
-      up
-       
-      end
-    </h2>
-    ToolTip is a utility component to create a transient message anchored to another component. My direction is "
-    up
-    ". My alignment is "
-    end
-    ".
-  </ContextMenu.FlyOut>
-</ContextMenu>
-`;
-
-exports[`ToolTip [common] example testing should match snapshot(s) for 3.unchanging 7`] = `
-<ContextMenu
-  alignment="center"
-  className="lucid-ToolTip"
-  direction="down"
-  directonOffset={15}
-  getAlignmentOffset={[Function]}
-  isExpanded={true}
-  minWidthOffset={0}
-  onClickOut={null}
-  onMouseOut={[Function]}
-  onMouseOver={[Function]}
-  portalId={null}
->
-  <ContextMenu.Target
-    className="lucid-ToolTip-Target"
-    elementType="span"
-  >
-    <div>
-      Target 
-      down
-       
-      start
-    </div>
-  </ContextMenu.Target>
-  <ContextMenu.FlyOut
-    className="lucid-ToolTip-FlyOut lucid-ToolTip-FlyOut-down lucid-ToolTip-FlyOut-start lucid-ToolTip-FlyOut-default"
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
-    style={
-      Object {
-        "maxWidth": 200,
-      }
-    }
-  >
-    <h2
-      className="lucid-ToolTip-FlyOut-Title"
-    >
-      Title: 
-      down
-       
-      start
-    </h2>
-    ToolTip is a utility component to create a transient message anchored to another component. My direction is "
-    down
-    ". My alignment is "
-    start
-    ".
-  </ContextMenu.FlyOut>
-</ContextMenu>
-`;
-
-exports[`ToolTip [common] example testing should match snapshot(s) for 3.unchanging 8`] = `
-<ContextMenu
-  alignment="center"
-  className="lucid-ToolTip"
-  direction="down"
-  directonOffset={15}
-  getAlignmentOffset={[Function]}
-  isExpanded={true}
-  minWidthOffset={0}
-  onClickOut={null}
-  onMouseOut={[Function]}
-  onMouseOver={[Function]}
-  portalId={null}
->
-  <ContextMenu.Target
-    className="lucid-ToolTip-Target"
-    elementType="span"
-  >
-    <div>
-      Target 
-      down
-       
-      center
-    </div>
-  </ContextMenu.Target>
-  <ContextMenu.FlyOut
-    className="lucid-ToolTip-FlyOut lucid-ToolTip-FlyOut-down lucid-ToolTip-FlyOut-center lucid-ToolTip-FlyOut-default"
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
-    style={
-      Object {
-        "maxWidth": 200,
-      }
-    }
-  >
-    <h2
-      className="lucid-ToolTip-FlyOut-Title"
-    >
-      Title: 
-      down
-       
-      center
-    </h2>
-    ToolTip is a utility component to create a transient message anchored to another component. My direction is "
-    down
-    ". My alignment is "
-    center
-    ".
-  </ContextMenu.FlyOut>
-</ContextMenu>
-`;
-
-exports[`ToolTip [common] example testing should match snapshot(s) for 3.unchanging 9`] = `
-<ContextMenu
-  alignment="center"
-  className="lucid-ToolTip"
-  direction="down"
-  directonOffset={15}
-  getAlignmentOffset={[Function]}
-  isExpanded={true}
-  minWidthOffset={0}
-  onClickOut={null}
-  onMouseOut={[Function]}
-  onMouseOver={[Function]}
-  portalId={null}
->
-  <ContextMenu.Target
-    className="lucid-ToolTip-Target"
-    elementType="span"
-  >
-    <div>
-      Target 
-      down
-       
-      end
-    </div>
-  </ContextMenu.Target>
-  <ContextMenu.FlyOut
-    className="lucid-ToolTip-FlyOut lucid-ToolTip-FlyOut-down lucid-ToolTip-FlyOut-end lucid-ToolTip-FlyOut-default"
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
-    style={
-      Object {
-        "maxWidth": 200,
-      }
-    }
-  >
-    <h2
-      className="lucid-ToolTip-FlyOut-Title"
-    >
-      Title: 
-      down
-       
-      end
-    </h2>
-    ToolTip is a utility component to create a transient message anchored to another component. My direction is "
-    down
-    ". My alignment is "
-    end
-    ".
-  </ContextMenu.FlyOut>
-</ContextMenu>
-`;
-
-exports[`ToolTip [common] example testing should match snapshot(s) for 3.unchanging 10`] = `
-<ContextMenu
-  alignment="center"
-  className="lucid-ToolTip"
-  direction="left"
-  directonOffset={15}
-  getAlignmentOffset={[Function]}
-  isExpanded={true}
-  minWidthOffset={0}
-  onClickOut={null}
-  onMouseOut={[Function]}
-  onMouseOver={[Function]}
-  portalId={null}
->
-  <ContextMenu.Target
-    className="lucid-ToolTip-Target"
-    elementType="span"
-  >
-    <div>
-      Target 
-      left
-       
-      start
-    </div>
-  </ContextMenu.Target>
-  <ContextMenu.FlyOut
-    className="lucid-ToolTip-FlyOut lucid-ToolTip-FlyOut-left lucid-ToolTip-FlyOut-start lucid-ToolTip-FlyOut-default"
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
-    style={
-      Object {
-        "maxWidth": 200,
-      }
-    }
-  >
-    <h2
-      className="lucid-ToolTip-FlyOut-Title"
-    >
-      Title: 
-      left
-       
-      start
-    </h2>
-    ToolTip is a utility component to create a transient message anchored to another component. My direction is "
-    left
-    ". My alignment is "
-    start
-    ".
-  </ContextMenu.FlyOut>
-</ContextMenu>
-`;
-
-exports[`ToolTip [common] example testing should match snapshot(s) for 3.unchanging 11`] = `
-<ContextMenu
-  alignment="center"
-  className="lucid-ToolTip"
-  direction="left"
-  directonOffset={15}
-  getAlignmentOffset={[Function]}
-  isExpanded={true}
-  minWidthOffset={0}
-  onClickOut={null}
-  onMouseOut={[Function]}
-  onMouseOver={[Function]}
-  portalId={null}
->
-  <ContextMenu.Target
-    className="lucid-ToolTip-Target"
-    elementType="span"
-  >
-    <div>
-      Target 
-      left
-       
-      center
-    </div>
-  </ContextMenu.Target>
-  <ContextMenu.FlyOut
-    className="lucid-ToolTip-FlyOut lucid-ToolTip-FlyOut-left lucid-ToolTip-FlyOut-center lucid-ToolTip-FlyOut-default"
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
-    style={
-      Object {
-        "maxWidth": 200,
-      }
-    }
-  >
-    <h2
-      className="lucid-ToolTip-FlyOut-Title"
-    >
-      Title: 
-      left
-       
-      center
-    </h2>
-    ToolTip is a utility component to create a transient message anchored to another component. My direction is "
-    left
-    ". My alignment is "
-    center
-    ".
-  </ContextMenu.FlyOut>
-</ContextMenu>
-`;
-
-exports[`ToolTip [common] example testing should match snapshot(s) for 3.unchanging 12`] = `
-<ContextMenu
-  alignment="center"
-  className="lucid-ToolTip"
-  direction="left"
-  directonOffset={15}
-  getAlignmentOffset={[Function]}
-  isExpanded={true}
-  minWidthOffset={0}
-  onClickOut={null}
-  onMouseOut={[Function]}
-  onMouseOver={[Function]}
-  portalId={null}
->
-  <ContextMenu.Target
-    className="lucid-ToolTip-Target"
-    elementType="span"
-  >
-    <div>
-      Target 
-      left
-       
-      end
-    </div>
-  </ContextMenu.Target>
-  <ContextMenu.FlyOut
-    className="lucid-ToolTip-FlyOut lucid-ToolTip-FlyOut-left lucid-ToolTip-FlyOut-end lucid-ToolTip-FlyOut-default"
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
-    style={
-      Object {
-        "maxWidth": 200,
-      }
-    }
-  >
-    <h2
-      className="lucid-ToolTip-FlyOut-Title"
-    >
-      Title: 
-      left
-       
-      end
-    </h2>
-    ToolTip is a utility component to create a transient message anchored to another component. My direction is "
-    left
-    ". My alignment is "
-    end
-    ".
-  </ContextMenu.FlyOut>
-</ContextMenu>
+  </span>
+</section>
 `;
