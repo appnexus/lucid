@@ -23,6 +23,11 @@
 		cursor: pointer;
 	}
 
+	// Prevents the button from disappearing on hover on a dark background
+	button:hover:not(.@{prefix}-Button-is-disabled) {
+		mix-blend-mode: normal;
+	}
+
 	&-light {
 		background-color: @color-white;
 		border: @border-standardBorder;
