@@ -818,7 +818,7 @@ class SearchableMultiSelect extends React.Component<
 							value={searchText}
 							onKeyDown={(event) => {
 								const text = event.target as HTMLInputElement;
-								this.handleSearch(text.value, { event });
+								this.handleSearch(text?.value, { event });
 							}}
 						/>
 					</DropMenu.Control>
