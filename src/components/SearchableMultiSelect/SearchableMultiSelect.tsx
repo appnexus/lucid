@@ -229,7 +229,7 @@ export interface ISearchableMultiSelectProps extends StandardProps {
 export interface ISearchableMultiSelectState {
 	DropMenu: IDropMenuState;
 	selectedIndices: number[];
-	searchText: string | null;
+	searchText: string;
 	optionGroups: IDropMenuOptionGroupProps[];
 	flattenedOptionsData: IOptionsData[];
 	ungroupedOptionData: IOptionsData[];
@@ -520,9 +520,8 @@ class SearchableMultiSelect extends React.Component<
 
 	handleSearch = (
 		searchText: string,
-		{ event }: { event: React.KeyboardEvent | React.MouseEvent }
+		{ event }: { event: React.KeyboardEvent }
 	): void => {
-		// @ts-ignore
 		if (event.keyCode !== 13) {
 			const {
 				props,
@@ -818,8 +817,8 @@ class SearchableMultiSelect extends React.Component<
 							)}
 							value={searchText}
 							onKeyDown={(event) => {
-								// @ts-ignore
-								this.handleSearch(event.target?.value, { event });
+								const text = event.target as HTMLInputElement;
+								this.handleSearch(text.value, { event });
 							}}
 						/>
 					</DropMenu.Control>
