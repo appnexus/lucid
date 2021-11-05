@@ -479,6 +479,13 @@ export default [
 	},
 
 	{
+		name: 'RolloverIcon',
+		component: getDefaultExport(
+			require('../../src/components/Icon/RolloverIcon/RolloverIcon')
+		),
+	},
+
+	{
 		name: 'RunReportIcon',
 		component: getDefaultExport(
 			require('../../src/components/Icon/RunReportIcon/RunReportIcon')

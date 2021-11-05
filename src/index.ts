@@ -166,6 +166,7 @@ import ReportIcon from './components/Icon/ReportIcon/ReportIcon';
 import ResizeIcon from './components/Icon/ResizeIcon/ResizeIcon';
 import Resizer from './components/Resizer/Resizer';
 import ResponsiveGrid from './components/ResponsiveGrid/ResponsiveGrid';
+import RolloverIcon from './components/Icon/RolloverIcon/RolloverIcon';
 import RunReportIcon from './components/Icon/RunReportIcon/RunReportIcon';
 import SaveIcon from './components/Icon/SaveIcon/SaveIcon';
 import ScrollTable from './components/ScrollTable/ScrollTable';
@@ -377,6 +378,7 @@ export {
 	ResizeIcon,
 	Resizer,
 	ResponsiveGrid,
+	RolloverIcon,
 	RunReportIcon,
 	SaveIcon,
 	ScrollTable,
