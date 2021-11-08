@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RolloverIcon [common] example testing should match snapshot(s) for Primary 1`] = `
+<svg
+  class="lucid-Icon lucid-Icon-color-primary lucid-RolloverIcon"
+  height="16"
+  preserveAspectRatio="xMidYMid meet"
+  viewBox="0 0 16 16"
+  width="16"
+>
+  <path
+    d="M.5 12.5H6v3H.5zM15.375 12.5h-5.25M10 9.5h5.5v6H10zM12.75 5.955V.5h-9.5v9"
+  />
+  <path
+    d="m10.75 4.5 2 2 2-2"
+  />
+</svg>
+`;
