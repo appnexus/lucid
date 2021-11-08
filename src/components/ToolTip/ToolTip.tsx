@@ -21,6 +21,7 @@ const { bool, func, node, number, object, oneOf, string, oneOfType } =
 
 const { Target, FlyOut } = ContextMenu;
 
+/** ToolTip Target */
 interface IToolTipTargetProps extends StandardProps {
 	description?: string;
 	elementType?: string;
@@ -29,12 +30,11 @@ interface IToolTipTargetProps extends StandardProps {
 const ToolTipTarget = (_props: IToolTipTargetProps): null => null;
 ToolTipTarget.displayName = 'ToolTip.Target';
 ToolTipTarget.peek = {
-	description: `
-		The hover target that will trigger the ToolTip to be displayed.
-	`,
+	description: `The hover target that will trigger the ToolTip to be displayed.`,
 };
 ToolTipTarget.propName = 'Target';
 
+/** ToolTip Title */
 interface IToolTipTitleProps extends StandardProps {
 	description?: string;
 }
@@ -42,12 +42,11 @@ interface IToolTipTitleProps extends StandardProps {
 const ToolTipTitle = (_props: IToolTipTitleProps): null => null;
 ToolTipTitle.displayName = 'ToolTip.Title';
 ToolTipTitle.peek = {
-	description: `
-		The title displayed at the top of the ToolTip.
-	`,
+	description: `A not recommended title, optionally displayed at the top of the ToolTip.`,
 };
 ToolTipTitle.propName = 'Title';
 
+/** ToolTip Body */
 interface IToolTipBodyProps extends StandardProps {
 	description?: string;
 }
@@ -55,9 +54,7 @@ interface IToolTipBodyProps extends StandardProps {
 const ToolTipBody = (_props: IToolTipBodyProps): null => null;
 ToolTipBody.displayName = 'ToolTip.Body';
 ToolTipBody.peek = {
-	description: `
-		The body of the ToolTip displayed below the Title.
-	`,
+	description: `The body of the ToolTip.`,
 };
 ToolTipBody.propName = 'Body';
 
@@ -67,14 +64,15 @@ export interface IToolTipState {
 	isMouseOverTarget: boolean;
 }
 
+/** ToolTip */
 export interface IToolTipProps extends StandardProps {
-	/** Set this to \`true\` if you want to have a \`x\` close icon. */
+	/** Set this to `true` if you want to have a `x` close icon. */
 	isCloseable?: boolean;
 
-	/** Offers a lighter style for the tooltip window. Defaults to false. */
+	/** Offers a lighter style for the tooltip window. Defaults to `false`. */
 	isLight?: boolean;
 
-	/** Called when the user closes the \`Banner\`. */
+	/** Called when the user closes the `Banner`. */
 	onClose?: ({
 		event,
 		props,
@@ -83,22 +81,22 @@ export interface IToolTipProps extends StandardProps {
 		props: IToolTipProps;
 	}) => void;
 
-	/** Passed through to the root FlyOut element. */
+	/** Passed through to the root `FlyOut` element. */
 	flyOutStyle?: React.CSSProperties;
 
-	/** maximum width of the ToolTip FlyOut. Defaults to 200px. */
+	/** maximum width of the `ToolTip` `FlyOut`. Defaults to `200px`. */
 	flyOutMaxWidth?: number | string;
 
-	/** direction of the FlyOut relative to Target. */
+	/** direction of the `FlyOut` relative to `Target`. */
 	direction?: 'down' | 'up' | 'right' | 'left';
 
-	/** alignment of the Flyout relative to Target in the cross axis from \`direction\ */
+	/** alignment of the `Flyout` relative to `Target` in the cross axis from `direction`. */
 	alignment?: 'start' | 'center' | 'end';
 
-	/** Indicates whether the ToolTip will render or not. */
+	/** Indicates whether the `ToolTip` will render or not. */
 	isExpanded?: boolean;
 
-	/** Called when cursor moves over the target */
+	/** Called when cursor moves over the `Target`. */
 	onMouseOver?: ({
 		event,
 		props,
@@ -107,7 +105,7 @@ export interface IToolTipProps extends StandardProps {
 		props: IToolTipProps;
 	}) => void;
 
-	/** Called when cursor leaves the target and the ToolTip */
+	/** Called when cursor leaves the `Target` and the `ToolTip`. */
 	onMouseOut?: ({
 		event,
 		props,
@@ -116,8 +114,8 @@ export interface IToolTipProps extends StandardProps {
 		props: IToolTipProps;
 	}) => void;
 
-	/** 			The \`id\` of the FlyOut portal element that is appended to
-			\`document.body\`. Defaults to a generated \`id\`. */
+	/** The `id` of the `FlyOut` portal element that is appended to `document.body`.
+	 * Defaults to a generated `id`. */
 	portalId?: string | null;
 }
 
@@ -137,21 +135,16 @@ class ToolTip extends React.Component<IToolTipProps, IToolTipState> {
 	static Body = ToolTipBody;
 
 	static peek = {
-		description: `
-				A utility component that creates a transient message anchored to
-				another component.
-			`,
+		description: `A utility component that creates a transient message anchored to another component.`,
 		notes: {
-			overview: `
-					A text popup shown on hover.
-				`,
+			overview: `A text popup shown on hover.`,
 			intendedUse: `
 					Use to provide an explanation for a button, text, or an operation. Often used in conjunction with \`HelpIcon\`.
 										
 					**Styling notes**
 					
 					- Use the {direction} and {alignment} that best suit your layout.
-					- Tooltip titles should fit on a single line and not wrap.
+					- Tooltip should typically not use a Title. If one does, it should fit on a single line and not wrap.
 					- Use black tooltips in most interactions. White tooltips are reserved for use within charts, for example \`LineChart\`.
 				`,
 			technicalRecommendations: `
@@ -164,79 +157,46 @@ class ToolTip extends React.Component<IToolTipProps, IToolTipState> {
 	static reducers = reducers;
 
 	static propTypes = {
-		children: node`
-			\`children\` should include exactly one ToolTip.Target and one
-			ToolTip.FlyOut.
-		`,
+		children: node`\`children\` should include exactly one ToolTip.Target and one ToolTip.FlyOut.`,
 
-		className: string`
-			Appended to the component-specific class names set on the root element.
-		`,
+		className: string`Appended to the component-specific class names set on the root element.`,
 
-		isCloseable: bool`
-			Set this to \`true\` if you want to have a \`x\` close icon.
-		`,
+		isCloseable: bool`Set this to \`true\` if you want to have a \`x\` close icon.`,
 
-		isLight: bool`
-			Offers a lighter style for the tooltip window. Defaults to false.
-		`,
+		isLight: bool`Offers a lighter style for the tooltip window. Defaults to false.`,
 
-		onClose: func`
-			Called when the user closes the \`Banner\`.  Signature:
-			\`({ event, props }) => {}\`
-		`,
+		onClose: func`Called when the user closes the \`Banner\`. 
+			Signature: \`({ event, props }) => {}\``,
 
-		style: object`
-			Passed through to the root target element.
-		`,
+		style: object`Passed through to the root target element.`,
 
-		flyOutStyle: object`
-			Passed through to the root FlyOut element.
-		`,
+		flyOutStyle: object`Passed through to the root FlyOut element.`,
 
 		flyOutMaxWidth: oneOfType([number, string])`
-			maximum width of the ToolTip FlyOut. Defaults to 200px.
-		`,
+			maximum width of the ToolTip FlyOut. Defaults to 200px.`,
 
 		direction: oneOf(['down', 'up', 'right', 'left'])`
-			direction of the FlyOut relative to Target.
-		`,
+			direction of the FlyOut relative to Target.`,
 
 		alignment: oneOf(['start', 'center', 'end'])`
-			alignment of the Flyout relative to Target in the cross axis from
-			\`direction\`.
-		`,
+			alignment of the Flyout relative to Target in the cross axis from \`direction\`.`,
 
-		isExpanded: bool`
-			Indicates whether the ToolTip will render or not.
-		`,
+		isExpanded: bool`Indicates whether the ToolTip will render or not.`,
 
-		onMouseOver: func`
-			Called when cursor moves over the target Signature:
-			\`({ props, event }) => {}\`
-		`,
+		onMouseOver: func`Called when cursor moves over the target 
+			Signature: \`({ props, event }) => {}\``,
 
-		onMouseOut: func`
-			Called when cursor leaves the target and the ToolTip Signature:
-			\`({ props, event }) => {}\`
-		`,
+		onMouseOut: func`Called when cursor leaves the target and the ToolTip 
+			Signature: \`({ props, event }) => {}\``,
 
-		portalId: string`
-			The \`id\` of the FlyOut portal element that is appended to
-			\`document.body\`. Defaults to a generated \`id\`.
-		`,
+		portalId: string`The \`id\` of the FlyOut portal element that is appended to \`document.body\`. 
+			Defaults to a generated \`id\`.`,
 
-		Body: node`
-			The body of the ToolTip displayed below the Title.
-		`,
+		Title: node`Tooltips do not typically have a Title but one can be displayed above the Body.`,
 
-		Title: node`
-			The title displayed at the top of the ToolTip.
-		`,
+		Body: node`The body of the 'ToolTip'.`,
 
-		Target: node`
-			The hover target that will trigger the ToolTip to be displayed.
-		`,
+		Target: node`The hover target that will trigger the ToolTip to be displayed.`,
 	};
 
 	static defaultProps = {
