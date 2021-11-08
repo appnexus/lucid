@@ -22,7 +22,7 @@ const cx = lucidClassNames.bind('&-RadioGroup');
 
 const { func, node, number, string, bool } = PropTypes;
 
-interface IRadioGroupPropsRaw extends StandardProps {
+export interface IRadioGroupPropsRaw extends StandardProps {
 	/**
 	 * Passed along to the \`RadioGroup.RadioButton\' children whose \'name\'
 	 * props are ignored.
@@ -61,7 +61,7 @@ interface IRadioGroupPropsRaw extends StandardProps {
 	isDisabled: boolean;
 }
 
-type IRadioGroupProps = Overwrite<
+export type IRadioGroupProps = Overwrite<
 	React.DetailedHTMLProps<
 		React.HTMLAttributes<HTMLSpanElement>,
 		HTMLSpanElement

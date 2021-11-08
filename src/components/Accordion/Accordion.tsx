@@ -14,7 +14,7 @@ import * as reducers from '../Accordion/Accordion.reducers';
 const cx = lucidClassNames.bind('&-Accordion');
 
 const { func, object, number, string } = PropTypes;
-interface IAccordionProps extends StandardProps {
+export interface IAccordionProps extends StandardProps {
 	/**
 	 * Indicates which item is expanded
 	 * */

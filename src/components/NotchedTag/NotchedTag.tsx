@@ -45,7 +45,7 @@ const SIZE_NOTCH_MAP: { [key in Size]: number } = {
 
 const STROKE_SIZE = '2px';
 
-interface INotchedTagProps
+export interface INotchedTagProps
 	extends StandardProps,
 		React.DetailedHTMLProps<
 			React.HTMLAttributes<HTMLDivElement>,

@@ -15,7 +15,7 @@ import Checkbox, {
 const cx = lucidClassNames.bind('&-CheckboxLabeled');
 const { any, node, object, string, bool, func } = PropTypes;
 
-interface ILabelProps extends StandardProps {}
+export interface ILabelProps extends StandardProps {}
 
 const Label = (props: ILabelProps): null => null;
 

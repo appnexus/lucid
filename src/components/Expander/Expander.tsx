@@ -17,11 +17,11 @@ const cx = lucidClassNames.bind('&-Expander');
 
 const { any, bool, func, node, object, oneOf, string } = PropTypes;
 
-interface IExpanderLabelProps extends StandardProps {
+export interface IExpanderLabelProps extends StandardProps {
 	description?: string;
 }
 
-interface IExpanderAdditionalLabelProps extends StandardProps {
+export interface IExpanderAdditionalLabelProps extends StandardProps {
 	description?: string;
 }
 

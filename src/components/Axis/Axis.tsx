@@ -14,7 +14,7 @@ const cx = lucidClassNames.bind('&-Axis');
 
 const { string, array, func, number, oneOf } = PropTypes;
 
-interface IAxisPropsRaw extends StandardProps {
+export interface IAxisPropsRaw extends StandardProps {
 	/** Must be a d3 scale. Lucid exposes the \`lucid.d3Scale\` library for use here.
 	 We support `ScaleTime | ScaleBand | ScalePoint` and possibly more. */
 	scale:

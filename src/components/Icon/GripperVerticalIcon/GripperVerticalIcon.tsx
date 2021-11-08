@@ -6,7 +6,7 @@ import { omitProps } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-GripperVerticalIcon');
 
-interface IGripperVerticalIconProps extends IIconProps {}
+export interface IGripperVerticalIconProps extends IIconProps {}
 
 export const GripperVerticalIcon = ({
 	className,

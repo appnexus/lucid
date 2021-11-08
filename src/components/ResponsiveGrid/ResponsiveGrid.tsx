@@ -13,7 +13,7 @@ const cx = lucidClassNames.bind('&-ResponsiveGrid');
 
 const { string, number, arrayOf } = PropTypes;
 
-interface IResponsiveGridCellProps extends StandardProps {}
+export interface IResponsiveGridCellProps extends StandardProps {}
 
 const Cell = (_props: IResponsiveGridCellProps): null => null;
 Cell.displayName = 'ResponsiveGrid.Cell';
@@ -23,7 +23,7 @@ Cell.peek = {
 	`,
 };
 
-interface IResponsiveGridWrapperProps
+export interface IResponsiveGridWrapperProps
 	extends StandardProps,
 		React.DetailedHTMLProps<
 			React.HTMLAttributes<HTMLDivElement>,
@@ -36,7 +36,7 @@ interface IResponsiveGridWrapperProps
 	breakPoints: number[];
 }
 
-interface IResponsiveGridProps extends IResponsiveGridWrapperProps {
+export interface IResponsiveGridProps extends IResponsiveGridWrapperProps {
 	/**
 	 * Width of the grid. Note: this does not set the width of the grid, and should be
 	 * provided by calculating the width of the parent element.

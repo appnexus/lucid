@@ -15,7 +15,7 @@ const cx = lucidClassNames.bind('&-OverlayWrapper');
 
 const { bool, node, oneOf, string } = PropTypes;
 
-interface IMessageProps extends StandardProps {}
+export interface IMessageProps extends StandardProps {}
 
 export const OverlayWrapperMessage = (_props: IMessageProps): null => null;
 OverlayWrapperMessage.displayName = 'OverlayWrapper.Message';

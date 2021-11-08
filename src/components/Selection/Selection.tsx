@@ -36,7 +36,7 @@ function defaultIcon(
 	) : null;
 }
 
-interface ISelectionIconProps extends StandardProps {}
+export interface ISelectionIconProps extends StandardProps {}
 
 const SelectionIcon: FC<ISelectionIconProps> = (): null => null;
 SelectionIcon.peek = {

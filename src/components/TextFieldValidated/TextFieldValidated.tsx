@@ -14,7 +14,7 @@ const cx = lucidClassNames.bind('&-TextFieldValidated');
 
 const { any, object, string } = PropTypes;
 
-interface ITextFieldValidatedErrorProps extends IValidationProps {
+export interface ITextFieldValidatedErrorProps extends IValidationProps {
 	description?: string;
 }
 

@@ -21,7 +21,7 @@ const defaultState = {
 	_labelKey: 0,
 };
 
-interface ISwitchLabeledProps extends StandardProps {
+export interface ISwitchLabeledProps extends StandardProps {
 	isDisabled: boolean;
 	isSelected: boolean;
 	onSelect: any;

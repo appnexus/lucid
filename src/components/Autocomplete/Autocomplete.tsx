@@ -13,7 +13,7 @@ const cx = lucidClassNames.bind('&-Autocomplete');
 
 const { arrayOf, bool, func, object, shape, string } = PropTypes;
 
-interface IAutocompleteProps extends StandardProps {
+export interface IAutocompleteProps extends StandardProps {
 	isDisabled?: boolean;
 	suggestions?: string[];
 	value?: any;

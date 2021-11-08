@@ -14,7 +14,7 @@ const cx = lucidClassNames.bind('&-ContextMenu');
 
 const { bool, node, func, number, object, oneOf, string } = PropTypes;
 
-interface IContextMenuTargetProps extends StandardProps {
+export interface IContextMenuTargetProps extends StandardProps {
 	elementType: string;
 }
 const ContextMenuTarget = (_props: IContextMenuTargetProps): null => null;
@@ -31,7 +31,7 @@ ContextMenuTarget.defaultProps = {
 	elementType: 'span',
 };
 
-interface IContextMenuFlyOutProps
+export interface IContextMenuFlyOutProps
 	extends React.HTMLAttributes<HTMLDivElement> {}
 const ContextMenuFlyOut = (_props: IContextMenuFlyOutProps): null => null;
 ContextMenuFlyOut.displayName = 'ContextMenu.FlyOut';
@@ -81,7 +81,7 @@ type GetAlignmentOffset = (n: number) => number;
 // TODO: Is there a better way to add type checks for passThroughs in this case
 // where the underling element could be anything vs just extending
 // `React.HTMLProps<HTMLElement>`? Related to issue #1045
-interface IContextMenuProps
+export interface IContextMenuProps
 	extends StandardProps,
 		React.DetailedHTMLProps<
 			React.HTMLAttributes<HTMLDivElement>,

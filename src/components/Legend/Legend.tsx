@@ -43,7 +43,7 @@ export interface ILegendProps
 	isReversed?: boolean;
 }
 
-interface ILegendItemProps extends StandardProps {
+export interface ILegendItemProps extends StandardProps {
 	/** Determines if the legend item has points */
 	hasPoint?: boolean;
 

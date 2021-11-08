@@ -31,11 +31,11 @@ const defaultProps = {
 	onToggle: _.noop,
 };
 
-interface ISidebarPrimaryProps extends StandardProps {}
+export interface ISidebarPrimaryProps extends StandardProps {}
 
-interface ISidebarTitleProps extends StandardProps {}
+export interface ISidebarTitleProps extends StandardProps {}
 
-interface ISidebarBarProps extends StandardProps {
+export interface ISidebarBarProps extends StandardProps {
 	Title?: ISidebarTitleProps | string;
 	title?: ISidebarTitleProps | string;
 	hasGutters?: boolean;

@@ -6,7 +6,7 @@ import { omitProps } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-SeparatorIcon');
 
-interface ISeparatorIconProps extends IIconProps {}
+export interface ISeparatorIconProps extends IIconProps {}
 
 export const SeparatorIcon = ({
 	className,

@@ -9,7 +9,9 @@ const cx = lucidClassNames.bind('&-Portal');
 
 const { any, node, string } = PropTypes;
 
-interface IPortalProps extends StandardProps, React.HTMLProps<HTMLDivElement> {
+export interface IPortalProps
+	extends StandardProps,
+		React.HTMLProps<HTMLDivElement> {
 	/** The `id` of the portal element that is appended to `document.body`. */
 	portalId?: string;
 }

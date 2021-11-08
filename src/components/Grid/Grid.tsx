@@ -16,7 +16,7 @@ const { string, bool, node } = PropTypes;
 // Type definitions
 // -----------------------------------------------------------------------------
 
-interface IGridProps
+export interface IGridProps
 	extends StandardProps,
 		React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> {
 	/** explicitly set the primary axis of the grid to Y */
@@ -35,7 +35,7 @@ interface IGridProps
 	children?: React.ReactNode;
 }
 
-interface ICellProps extends StandardProps {
+export interface ICellProps extends StandardProps {
 	/** fill all twelve columns of the primary grid axis */
 	isFull?: boolean;
 
