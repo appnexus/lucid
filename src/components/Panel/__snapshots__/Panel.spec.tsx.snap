@@ -1,176 +1,519 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Panel [common] example testing should match snapshot(s) for 01.with-content 1`] = `
+exports[`Panel [common] example testing should match snapshot(s) for NoContentPadding 1`] = `
 <div
-  className="lucid-Panel lucid-Panel-is-not-gutterless lucid-Panel-has-margin lucid-Panel-is-scrollable"
->
-  <section
-    className="lucid-Panel-content"
-  >
-    Coloring book 8-bit gluten-free jean shorts, occupy blog intelligentsia pour-over biodiesel small batch waistcoat 90's pork belly. Intelligentsia fashion axe sartorial vinyl literally, post-ironic hoodie selfies keytar man braid kickstarter af PBR&B. Direct trade fanny pack pitchfork kombucha, salvia semiotics hell of gluten-free tumeric helvetica. Photo booth lyft fingerstache VHS lumbersexual shoreditch, subway tile vegan tumblr man bun PBR&B banjo. Banh mi sriracha hashtag, quinoa hell of subway tile sartorial normcore vexillologist godard. Asymmetrical fanny pack bicycle rights snackwave iPhone, single-origin coffee ramps truffaut hammock brooklyn 90's marfa trust fund. Cray fingerstache direct trade, you probably haven't heard of them chicharrones crucifix pok pok. Bicycle rights disrupt taxidermy YOLO chicharrones. Poke cronut chillwave, pug meditation knausgaard church-key marfa chicharrones bitters paleo neutra photo booth sustainable shoreditch. Microdosing polaroid vape drinking vinegar franzen. Next level kogi occupy, cornhole aesthetic subway tile waistcoat hoodie you probably haven't heard of them butcher flannel paleo church-key tumblr. Cornhole raw denim mustache schlitz mumblecore hammock twee, whatever kitsch gochujang irony. Migas crucifix cornhole prism messenger bag microdosing heirloom. Lyft kombucha pork belly swag.
-  </section>
-</div>
-`;
-
-exports[`Panel [common] example testing should match snapshot(s) for 02.with-header 1`] = `
-<div
-  className="lucid-Panel lucid-Panel-is-not-gutterless lucid-Panel-has-margin lucid-Panel-is-scrollable"
+  class="lucid-Panel lucid-Panel-has-margin lucid-Panel-is-scrollable"
 >
   <header
-    className="lucid-Panel-Header"
-  >
-    <span>
-      Header
-    </span>
-  </header>
-  <section
-    className="lucid-Panel-content"
-  >
-    <Panel.Header>
-      <span>
-        Header
-      </span>
-    </Panel.Header>
-    Meditation literally chia, schlitz banh mi mlkshk vape ennui art party. Succulents tumeric tumblr echo park hella umami. Pickled four loko hashtag, tbh bitters tofu pinterest quinoa retro. Raclette cred fanny pack tattooed chartreuse wayfarers brooklyn pabst, mixtape shabby chic kombucha. Meggings hashtag sriracha raclette post-ironic. Umami brunch stumptown salvia, disrupt lomo activated charcoal retro. Pok pok irony yr, semiotics distillery pug sriracha ramps drinking vinegar fanny pack. Forage selfies poutine disrupt, fashion axe craft beer 8-bit stumptown pabst food truck slow-carb wolf photo booth DIY gastropub. Bushwick austin activated charcoal poutine small batch polaroid. Venmo poutine umami biodiesel, seitan four dollar toast cold-pressed jean shorts gentrify meditation leggings street art selfies. Squid raclette you probably haven't heard of them selfies church-key vice. Woke intelligentsia viral, green juice seitan listicle kale chips yr la croix organic vaporware vexillologist tattooed neutra. Chambray sustainable unicorn neutra aesthetic, 8-bit farm-to-table DIY organic authentic woke. YOLO four dollar toast pop-up, tacos listicle chicharrones single-origin coffee raw denim yuccie.
-  </section>
-</div>
-`;
-
-exports[`Panel [common] example testing should match snapshot(s) for 03.with-icon-header 1`] = `
-<div
-  className="lucid-Panel lucid-Panel-is-not-gutterless lucid-Panel-has-margin lucid-Panel-is-scrollable"
->
-  <header
-    className="lucid-Panel-Header"
-  >
-    <SettingsIcon
-      aspectRatio="xMidYMid meet"
-      color="primary"
-      isClickable={false}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={16}
-      style={
-        Object {
-          "marginRight": "16px",
-        }
-      }
-      viewBox="0 0 16 16"
-    />
-    <span>
-      Header
-    </span>
-  </header>
-  <section
-    className="lucid-Panel-content"
-  >
-    <Panel.Header>
-      <SettingsIcon
-        aspectRatio="xMidYMid meet"
-        color="primary"
-        isClickable={false}
-        isDisabled={false}
-        onClick={[Function]}
-        onSelect={[Function]}
-        size={16}
-        style={
-          Object {
-            "marginRight": "16px",
-          }
-        }
-        viewBox="0 0 16 16"
-      />
-      <span>
-        Header
-      </span>
-    </Panel.Header>
-    Meditation literally chia, schlitz banh mi mlkshk vape ennui art party. Succulents tumeric tumblr echo park hella umami. Pickled four loko hashtag, tbh bitters tofu pinterest quinoa retro. Raclette cred fanny pack tattooed chartreuse wayfarers brooklyn pabst, mixtape shabby chic kombucha. Meggings hashtag sriracha raclette post-ironic. Umami brunch stumptown salvia, disrupt lomo activated charcoal retro. Pok pok irony yr, semiotics distillery pug sriracha ramps drinking vinegar fanny pack. Forage selfies poutine disrupt, fashion axe craft beer 8-bit stumptown pabst food truck slow-carb wolf photo booth DIY gastropub. Bushwick austin activated charcoal poutine small batch polaroid. Venmo poutine umami biodiesel, seitan four dollar toast cold-pressed jean shorts gentrify meditation leggings street art selfies. Squid raclette you probably haven't heard of them selfies church-key vice. Woke intelligentsia viral, green juice seitan listicle kale chips yr la croix organic vaporware vexillologist tattooed neutra. Chambray sustainable unicorn neutra aesthetic, 8-bit farm-to-table DIY organic authentic woke. YOLO four dollar toast pop-up, tacos listicle chicharrones single-origin coffee raw denim yuccie.
-  </section>
-</div>
-`;
-
-exports[`Panel [common] example testing should match snapshot(s) for 04.with-header-and-footer 1`] = `
-<div
-  className="lucid-Panel lucid-Panel-is-not-gutterless lucid-Panel-has-margin lucid-Panel-is-scrollable"
->
-  <header
-    className="lucid-Panel-Header"
+    class="lucid-Panel-Header"
   >
     <strong>
       Header
     </strong>
   </header>
   <section
-    className="lucid-Panel-content"
+    class="lucid-Panel-content"
   >
-    <Panel.Header>
-      <strong>
-        Header
-      </strong>
-    </Panel.Header>
-    Thundercats fam glossier, affogato microdosing +1 photo booth yuccie flannel iceland. Umami wayfarers tousled, deep v glossier fanny pack single-origin coffee la croix tofu crucifix mlkshk edison bulb. Tofu four loko tbh, trust fund semiotics schlitz succulents snackwave. Tilde live-edge XOXO, stumptown skateboard flexitarian distillery trust fund semiotics selvage. Kale chips artisan twee humblebrag selfies. Scenester woke truffaut plaid meditation freegan. Prism everyday carry post-ironic +1 wolf, copper mug kale chips tilde ethical jianbing jean shorts flexitarian. Fanny pack quinoa heirloom put a bird on it, venmo banjo church-key +1 sartorial cardigan paleo edison bulb DIY. Scenester four loko synth unicorn cardigan shoreditch. Ugh seitan chambray swag vice. Pork belly hammock cardigan, live-edge snackwave intelligentsia biodiesel. Vegan meggings drinking vinegar crucifix iPhone hoodie. Kickstarter before they sold out distillery, next level umami echo park chillwave iceland fanny pack XOXO actually. Street art try-hard master cleanse listicle, microdosing sartorial raw denim squid.
-    <Panel.Footer>
-      <Button
-        hasOnlyIcon={false}
-        isActive={false}
-        isDisabled={false}
-        onClick={[Function]}
-        type="button"
-      >
-        Save
-      </Button>
-    </Panel.Footer>
-  </section>
-  <footer
-    className="lucid-Panel-Footer"
-  >
-    <Button
-      hasOnlyIcon={false}
-      isActive={false}
-      isDisabled={false}
-      onClick={[Function]}
-      type="button"
+    <table
+      class="lucid-Table lucid-Table-density-extended lucid-Table-has-word-wrap lucid-Table-has-light-header"
+      style="width:100%"
     >
-      Save
-    </Button>
-  </footer>
+      <thead
+        class="lucid-Table-Thead"
+      >
+        <tr
+          class="lucid-Table-Tr"
+        >
+          <th
+            class="lucid-Table-Th lucid-Table-is-first-row lucid-Table-is-last-row lucid-Table-is-first-col lucid-Table-is-first-single lucid-Table-align-left"
+            rowspan="1"
+          >
+            <div
+              class="lucid-Table-Th-inner"
+            >
+              <div
+                class="lucid-Table-Th-inner-content"
+              >
+                Cell
+              </div>
+            </div>
+          </th>
+          <th
+            class="lucid-Table-Th lucid-Table-is-first-row lucid-Table-is-last-row lucid-Table-align-left"
+            rowspan="1"
+          >
+            <div
+              class="lucid-Table-Th-inner"
+            >
+              <div
+                class="lucid-Table-Th-inner-content"
+              >
+                Cell
+              </div>
+            </div>
+          </th>
+          <th
+            class="lucid-Table-Th lucid-Table-is-first-row lucid-Table-is-last-row lucid-Table-is-last-col lucid-Table-align-left"
+            rowspan="1"
+          >
+            <div
+              class="lucid-Table-Th-inner"
+            >
+              <div
+                class="lucid-Table-Th-inner-content"
+              >
+                Cell
+              </div>
+            </div>
+          </th>
+        </tr>
+      </thead>
+      <tbody
+        class="lucid-Table-Tbody"
+      >
+        <tr
+          class="lucid-Table-Tr"
+        >
+          <td
+            class="lucid-Table-Td lucid-Table-is-first-row lucid-Table-is-first-col lucid-Table-is-first-single lucid-Table-align-left"
+            rowspan="1"
+          >
+            Cell
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-is-first-row lucid-Table-align-left"
+            rowspan="1"
+          >
+            Cell
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-is-first-row lucid-Table-is-last-col lucid-Table-align-left"
+            rowspan="1"
+          >
+            Cell
+          </td>
+        </tr>
+        <tr
+          class="lucid-Table-Tr"
+        >
+          <td
+            class="lucid-Table-Td lucid-Table-is-first-col lucid-Table-is-first-single lucid-Table-align-left"
+            rowspan="1"
+          >
+            Cell
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left"
+            rowspan="1"
+          >
+            Cell
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-is-last-col lucid-Table-align-left"
+            rowspan="1"
+          >
+            Cell
+          </td>
+        </tr>
+        <tr
+          class="lucid-Table-Tr"
+        >
+          <td
+            class="lucid-Table-Td lucid-Table-is-first-col lucid-Table-is-first-single lucid-Table-align-left"
+            rowspan="1"
+          >
+            Cell
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left"
+            rowspan="1"
+          >
+            Cell
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-is-last-col lucid-Table-align-left"
+            rowspan="1"
+          >
+            Cell
+          </td>
+        </tr>
+        <tr
+          class="lucid-Table-Tr"
+        >
+          <td
+            class="lucid-Table-Td lucid-Table-is-last-row lucid-Table-is-first-col lucid-Table-is-first-single lucid-Table-align-left"
+            rowspan="1"
+          >
+            Cell
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-is-last-row lucid-Table-align-left"
+            rowspan="1"
+          >
+            Cell
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-is-last-row lucid-Table-is-last-col lucid-Table-align-left"
+            rowspan="1"
+          >
+            Cell
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
 </div>
 `;
 
-exports[`Panel [common] example testing should match snapshot(s) for 05.scrollable-content 1`] = `
+exports[`Panel [common] example testing should match snapshot(s) for NoMargins 1`] = `
 <div
-  className="lucid-Panel lucid-Panel-is-not-gutterless lucid-Panel-has-margin lucid-Panel-is-scrollable"
-  style={
-    Object {
-      "height": 240,
-    }
-  }
+  class="lucid-Panel lucid-Panel-is-not-gutterless lucid-Panel-is-scrollable"
 >
   <header
-    className="lucid-Panel-Header"
+    class="lucid-Panel-Header"
   >
     <strong>
       Header
     </strong>
   </header>
   <section
-    className="lucid-Panel-content"
+    class="lucid-Panel-content"
   >
-    <Panel.Header>
-      <strong>
-        Header
-      </strong>
-    </Panel.Header>
+    <table
+      class="lucid-Table lucid-Table-density-extended lucid-Table-has-word-wrap lucid-Table-has-light-header"
+      style="width:100%"
+    >
+      <thead
+        class="lucid-Table-Thead"
+      >
+        <tr
+          class="lucid-Table-Tr"
+        >
+          <th
+            class="lucid-Table-Th lucid-Table-is-first-row lucid-Table-is-last-row lucid-Table-is-first-col lucid-Table-is-first-single lucid-Table-align-left"
+            rowspan="1"
+          >
+            <div
+              class="lucid-Table-Th-inner"
+            >
+              <div
+                class="lucid-Table-Th-inner-content"
+              >
+                Cell
+              </div>
+            </div>
+          </th>
+          <th
+            class="lucid-Table-Th lucid-Table-is-first-row lucid-Table-is-last-row lucid-Table-align-left"
+            rowspan="1"
+          >
+            <div
+              class="lucid-Table-Th-inner"
+            >
+              <div
+                class="lucid-Table-Th-inner-content"
+              >
+                Cell
+              </div>
+            </div>
+          </th>
+          <th
+            class="lucid-Table-Th lucid-Table-is-first-row lucid-Table-is-last-row lucid-Table-is-last-col lucid-Table-align-left"
+            rowspan="1"
+          >
+            <div
+              class="lucid-Table-Th-inner"
+            >
+              <div
+                class="lucid-Table-Th-inner-content"
+              >
+                Cell
+              </div>
+            </div>
+          </th>
+        </tr>
+      </thead>
+      <tbody
+        class="lucid-Table-Tbody"
+      >
+        <tr
+          class="lucid-Table-Tr"
+        >
+          <td
+            class="lucid-Table-Td lucid-Table-is-first-row lucid-Table-is-first-col lucid-Table-is-first-single lucid-Table-align-left"
+            rowspan="1"
+          >
+            Cell
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-is-first-row lucid-Table-align-left"
+            rowspan="1"
+          >
+            Cell
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-is-first-row lucid-Table-is-last-col lucid-Table-align-left"
+            rowspan="1"
+          >
+            Cell
+          </td>
+        </tr>
+        <tr
+          class="lucid-Table-Tr"
+        >
+          <td
+            class="lucid-Table-Td lucid-Table-is-first-col lucid-Table-is-first-single lucid-Table-align-left"
+            rowspan="1"
+          >
+            Cell
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left"
+            rowspan="1"
+          >
+            Cell
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-is-last-col lucid-Table-align-left"
+            rowspan="1"
+          >
+            Cell
+          </td>
+        </tr>
+        <tr
+          class="lucid-Table-Tr"
+        >
+          <td
+            class="lucid-Table-Td lucid-Table-is-first-col lucid-Table-is-first-single lucid-Table-align-left"
+            rowspan="1"
+          >
+            Cell
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left"
+            rowspan="1"
+          >
+            Cell
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-is-last-col lucid-Table-align-left"
+            rowspan="1"
+          >
+            Cell
+          </td>
+        </tr>
+        <tr
+          class="lucid-Table-Tr"
+        >
+          <td
+            class="lucid-Table-Td lucid-Table-is-last-row lucid-Table-is-first-col lucid-Table-is-first-single lucid-Table-align-left"
+            rowspan="1"
+          >
+            Cell
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-is-last-row lucid-Table-align-left"
+            rowspan="1"
+          >
+            Cell
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-is-last-row lucid-Table-is-last-col lucid-Table-align-left"
+            rowspan="1"
+          >
+            Cell
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</div>
+`;
+
+exports[`Panel [common] example testing should match snapshot(s) for NoMarginsOrContentPadding 1`] = `
+<div
+  class="lucid-Panel lucid-Panel-is-scrollable"
+>
+  <header
+    class="lucid-Panel-Header"
+  >
+    <strong>
+      Header
+    </strong>
+  </header>
+  <section
+    class="lucid-Panel-content"
+  >
+    <table
+      class="lucid-Table lucid-Table-density-extended lucid-Table-has-word-wrap lucid-Table-has-light-header"
+      style="width:100%"
+    >
+      <thead
+        class="lucid-Table-Thead"
+      >
+        <tr
+          class="lucid-Table-Tr"
+        >
+          <th
+            class="lucid-Table-Th lucid-Table-is-first-row lucid-Table-is-last-row lucid-Table-is-first-col lucid-Table-is-first-single lucid-Table-align-left"
+            rowspan="1"
+          >
+            <div
+              class="lucid-Table-Th-inner"
+            >
+              <div
+                class="lucid-Table-Th-inner-content"
+              >
+                Cell
+              </div>
+            </div>
+          </th>
+          <th
+            class="lucid-Table-Th lucid-Table-is-first-row lucid-Table-is-last-row lucid-Table-align-left"
+            rowspan="1"
+          >
+            <div
+              class="lucid-Table-Th-inner"
+            >
+              <div
+                class="lucid-Table-Th-inner-content"
+              >
+                Cell
+              </div>
+            </div>
+          </th>
+          <th
+            class="lucid-Table-Th lucid-Table-is-first-row lucid-Table-is-last-row lucid-Table-is-last-col lucid-Table-align-left"
+            rowspan="1"
+          >
+            <div
+              class="lucid-Table-Th-inner"
+            >
+              <div
+                class="lucid-Table-Th-inner-content"
+              >
+                Cell
+              </div>
+            </div>
+          </th>
+        </tr>
+      </thead>
+      <tbody
+        class="lucid-Table-Tbody"
+      >
+        <tr
+          class="lucid-Table-Tr"
+        >
+          <td
+            class="lucid-Table-Td lucid-Table-is-first-row lucid-Table-is-first-col lucid-Table-is-first-single lucid-Table-align-left"
+            rowspan="1"
+          >
+            Cell
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-is-first-row lucid-Table-align-left"
+            rowspan="1"
+          >
+            Cell
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-is-first-row lucid-Table-is-last-col lucid-Table-align-left"
+            rowspan="1"
+          >
+            Cell
+          </td>
+        </tr>
+        <tr
+          class="lucid-Table-Tr"
+        >
+          <td
+            class="lucid-Table-Td lucid-Table-is-first-col lucid-Table-is-first-single lucid-Table-align-left"
+            rowspan="1"
+          >
+            Cell
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left"
+            rowspan="1"
+          >
+            Cell
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-is-last-col lucid-Table-align-left"
+            rowspan="1"
+          >
+            Cell
+          </td>
+        </tr>
+        <tr
+          class="lucid-Table-Tr"
+        >
+          <td
+            class="lucid-Table-Td lucid-Table-is-first-col lucid-Table-is-first-single lucid-Table-align-left"
+            rowspan="1"
+          >
+            Cell
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-align-left"
+            rowspan="1"
+          >
+            Cell
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-is-last-col lucid-Table-align-left"
+            rowspan="1"
+          >
+            Cell
+          </td>
+        </tr>
+        <tr
+          class="lucid-Table-Tr"
+        >
+          <td
+            class="lucid-Table-Td lucid-Table-is-last-row lucid-Table-is-first-col lucid-Table-is-first-single lucid-Table-align-left"
+            rowspan="1"
+          >
+            Cell
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-is-last-row lucid-Table-align-left"
+            rowspan="1"
+          >
+            Cell
+          </td>
+          <td
+            class="lucid-Table-Td lucid-Table-is-last-row lucid-Table-is-last-col lucid-Table-align-left"
+            rowspan="1"
+          >
+            Cell
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</div>
+`;
+
+exports[`Panel [common] example testing should match snapshot(s) for ScrollableContent 1`] = `
+<div
+  class="lucid-Panel lucid-Panel-is-not-gutterless lucid-Panel-has-margin lucid-Panel-is-scrollable"
+  style="height:240px"
+>
+  <header
+    class="lucid-Panel-Header"
+  >
+    <strong>
+      Header
+    </strong>
+  </header>
+  <section
+    class="lucid-Panel-content"
+  >
     Tacos everyday carry vexillologist, health goth poutine portland raw denim synth sriracha listicle iceland jianbing. Chambray tumeric tousled typewriter, bespoke franzen lomo. Yuccie live-edge ugh asymmetrical aesthetic cornhole. Salvia post-ironic schlitz, tbh kickstarter yuccie ramps shoreditch godard wolf live-edge next level vinyl. Live-edge chia hashtag, kale chips shoreditch salvia blog butcher brooklyn cornhole. Succulents literally venmo flannel pug direct trade. Cornhole squid selvage, thundercats photo booth paleo iceland chartreuse vexillologist hot chicken. Normcore kale chips unicorn vaporware cardigan mustache thundercats squid hexagon. Woke vinyl letterpress, tattooed artisan taxidermy craft beer tacos thundercats cardigan fap plaid gastropub pork belly. Pabst coloring book gochujang four dollar toast fixie. Photo booth skateboard gluten-free, neutra pug tousled jean shorts normcore crucifix banh mi 3 wolf moon. Shabby chic flexitarian umami, pabst literally pickled selvage everyday carry next level mixtape drinking vinegar four dollar toast coloring book. Cardigan vice schlitz, subway tile jean shorts deep v vexillologist lo-fi trust fund plaid brunch taxidermy shabby chic blue bottle gochujang. Meggings four loko before they sold out small batch. Activated charcoal meh vice irony kinfolk la croix, fam disrupt church-key shoreditch thundercats offal fanny pack. Mustache small batch portland hashtag blog, lo-fi cray hot chicken ramps. Cornhole green juice cardigan shoreditch butcher, literally microdosing freegan wolf la croix schlitz raclette occupy. Chicharrones authentic vexillologist marfa glossier. Next level heirloom street art small batch lyft narwhal. Etsy cornhole direct trade, narwhal celiac humblebrag chambray selvage. Gentrify master cleanse mixtape taxidermy shoreditch tofu, blue bottle banh mi meh tbh kale chips woke meggings fanny pack. Keffiyeh celiac cardigan, polaroid slow-carb bitters intelligentsia unicorn squid ugh. Farm-to-table venmo four dollar toast godard you probably haven't heard of them, truffaut fashion axe gastropub before they sold out retro organic thundercats pitchfork subway tile next level. Sriracha normcore roof party mustache flexitarian jianbing. Food truck blog meggings yuccie franzen forage. Mixtape woke blue bottle green juice yuccie. Meggings intelligentsia food truck, subway tile post-ironic activated charcoal chia authentic schlitz venmo. Quinoa offal vexillologist, skateboard YOLO marfa banh mi yr typewriter green juice.
-    <Panel.Footer>
-      <strong>
-        Footer
-      </strong>
-    </Panel.Footer>
   </section>
   <footer
-    className="lucid-Panel-Footer"
+    class="lucid-Panel-Footer"
   >
     <strong>
       Footer
@@ -179,581 +522,102 @@ exports[`Panel [common] example testing should match snapshot(s) for 05.scrollab
 </div>
 `;
 
-exports[`Panel [common] example testing should match snapshot(s) for 06.no-margins 1`] = `
+exports[`Panel [common] example testing should match snapshot(s) for WithContent 1`] = `
 <div
-  className="lucid-Panel lucid-Panel-is-not-gutterless lucid-Panel-is-scrollable"
+  class="lucid-Panel lucid-Panel-is-not-gutterless lucid-Panel-has-margin lucid-Panel-is-scrollable"
 >
-  <header
-    className="lucid-Panel-Header"
-  >
-    <strong>
-      Header
-    </strong>
-  </header>
   <section
-    className="lucid-Panel-content"
+    class="lucid-Panel-content"
   >
-    <Panel.Header>
-      <strong>
-        Header
-      </strong>
-    </Panel.Header>
-    <Table
-      density="extended"
-      hasBorder={false}
-      hasHover={true}
-      hasLightHeader={true}
-      hasWordWrap={true}
-      style={
-        Object {
-          "width": "100%",
-        }
-      }
-    >
-      <Table.Thead>
-        <Table.Tr
-          isActive={false}
-          isDisabled={false}
-          isSelected={false}
-        >
-          <Table.Th
-            align="left"
-            isResizable={false}
-            isSorted={false}
-            rowSpan={1}
-            sortDirection="up"
-          >
-            Cell
-          </Table.Th>
-          <Table.Th
-            align="left"
-            isResizable={false}
-            isSorted={false}
-            rowSpan={1}
-            sortDirection="up"
-          >
-            Cell
-          </Table.Th>
-          <Table.Th
-            align="left"
-            isResizable={false}
-            isSorted={false}
-            rowSpan={1}
-            sortDirection="up"
-          >
-            Cell
-          </Table.Th>
-        </Table.Tr>
-      </Table.Thead>
-      <Table.Tbody>
-        <Table.Tr
-          isActive={false}
-          isDisabled={false}
-          isSelected={false}
-        >
-          <Table.Td
-            align="left"
-            hasBorderLeft={false}
-            hasBorderRight={false}
-            rowSpan={1}
-          >
-            Cell
-          </Table.Td>
-          <Table.Td
-            align="left"
-            hasBorderLeft={false}
-            hasBorderRight={false}
-            rowSpan={1}
-          >
-            Cell
-          </Table.Td>
-          <Table.Td
-            align="left"
-            hasBorderLeft={false}
-            hasBorderRight={false}
-            rowSpan={1}
-          >
-            Cell
-          </Table.Td>
-        </Table.Tr>
-        <Table.Tr
-          isActive={false}
-          isDisabled={false}
-          isSelected={false}
-        >
-          <Table.Td
-            align="left"
-            hasBorderLeft={false}
-            hasBorderRight={false}
-            rowSpan={1}
-          >
-            Cell
-          </Table.Td>
-          <Table.Td
-            align="left"
-            hasBorderLeft={false}
-            hasBorderRight={false}
-            rowSpan={1}
-          >
-            Cell
-          </Table.Td>
-          <Table.Td
-            align="left"
-            hasBorderLeft={false}
-            hasBorderRight={false}
-            rowSpan={1}
-          >
-            Cell
-          </Table.Td>
-        </Table.Tr>
-        <Table.Tr
-          isActive={false}
-          isDisabled={false}
-          isSelected={false}
-        >
-          <Table.Td
-            align="left"
-            hasBorderLeft={false}
-            hasBorderRight={false}
-            rowSpan={1}
-          >
-            Cell
-          </Table.Td>
-          <Table.Td
-            align="left"
-            hasBorderLeft={false}
-            hasBorderRight={false}
-            rowSpan={1}
-          >
-            Cell
-          </Table.Td>
-          <Table.Td
-            align="left"
-            hasBorderLeft={false}
-            hasBorderRight={false}
-            rowSpan={1}
-          >
-            Cell
-          </Table.Td>
-        </Table.Tr>
-        <Table.Tr
-          isActive={false}
-          isDisabled={false}
-          isSelected={false}
-        >
-          <Table.Td
-            align="left"
-            hasBorderLeft={false}
-            hasBorderRight={false}
-            rowSpan={1}
-          >
-            Cell
-          </Table.Td>
-          <Table.Td
-            align="left"
-            hasBorderLeft={false}
-            hasBorderRight={false}
-            rowSpan={1}
-          >
-            Cell
-          </Table.Td>
-          <Table.Td
-            align="left"
-            hasBorderLeft={false}
-            hasBorderRight={false}
-            rowSpan={1}
-          >
-            Cell
-          </Table.Td>
-        </Table.Tr>
-      </Table.Tbody>
-    </Table>
+    Coloring book 8-bit gluten-free jean shorts, occupy blog intelligentsia pour-over biodiesel small batch waistcoat 90's pork belly. Intelligentsia fashion axe sartorial vinyl literally, post-ironic hoodie selfies keytar man braid kickstarter af PBR&B. Direct trade fanny pack pitchfork kombucha, salvia semiotics hell of gluten-free tumeric helvetica. Photo booth lyft fingerstache VHS lumbersexual shoreditch, subway tile vegan tumblr man bun PBR&B banjo. Banh mi sriracha hashtag, quinoa hell of subway tile sartorial normcore vexillologist godard. Asymmetrical fanny pack bicycle rights snackwave iPhone, single-origin coffee ramps truffaut hammock brooklyn 90's marfa trust fund. Cray fingerstache direct trade, you probably haven't heard of them chicharrones crucifix pok pok. Bicycle rights disrupt taxidermy YOLO chicharrones. Poke cronut chillwave, pug meditation knausgaard church-key marfa chicharrones bitters paleo neutra photo booth sustainable shoreditch. Microdosing polaroid vape drinking vinegar franzen. Next level kogi occupy, cornhole aesthetic subway tile waistcoat hoodie you probably haven't heard of them butcher flannel paleo church-key tumblr. Cornhole raw denim mustache schlitz mumblecore hammock twee, whatever kitsch gochujang irony. Migas crucifix cornhole prism messenger bag microdosing heirloom. Lyft kombucha pork belly swag.
   </section>
 </div>
 `;
 
-exports[`Panel [common] example testing should match snapshot(s) for 07.no-content-padding 1`] = `
+exports[`Panel [common] example testing should match snapshot(s) for WithHeader 1`] = `
 <div
-  className="lucid-Panel lucid-Panel-has-margin lucid-Panel-is-scrollable"
+  class="lucid-Panel lucid-Panel-is-not-gutterless lucid-Panel-has-margin lucid-Panel-is-scrollable"
 >
   <header
-    className="lucid-Panel-Header"
+    class="lucid-Panel-Header"
   >
-    <strong>
+    <span>
       Header
-    </strong>
+    </span>
   </header>
   <section
-    className="lucid-Panel-content"
+    class="lucid-Panel-content"
   >
-    <Panel.Header>
-      <strong>
-        Header
-      </strong>
-    </Panel.Header>
-    <Table
-      density="extended"
-      hasBorder={false}
-      hasHover={true}
-      hasLightHeader={true}
-      hasWordWrap={true}
-      style={
-        Object {
-          "width": "100%",
-        }
-      }
-    >
-      <Table.Thead>
-        <Table.Tr
-          isActive={false}
-          isDisabled={false}
-          isSelected={false}
-        >
-          <Table.Th
-            align="left"
-            isResizable={false}
-            isSorted={false}
-            rowSpan={1}
-            sortDirection="up"
-          >
-            Cell
-          </Table.Th>
-          <Table.Th
-            align="left"
-            isResizable={false}
-            isSorted={false}
-            rowSpan={1}
-            sortDirection="up"
-          >
-            Cell
-          </Table.Th>
-          <Table.Th
-            align="left"
-            isResizable={false}
-            isSorted={false}
-            rowSpan={1}
-            sortDirection="up"
-          >
-            Cell
-          </Table.Th>
-        </Table.Tr>
-      </Table.Thead>
-      <Table.Tbody>
-        <Table.Tr
-          isActive={false}
-          isDisabled={false}
-          isSelected={false}
-        >
-          <Table.Td
-            align="left"
-            hasBorderLeft={false}
-            hasBorderRight={false}
-            rowSpan={1}
-          >
-            Cell
-          </Table.Td>
-          <Table.Td
-            align="left"
-            hasBorderLeft={false}
-            hasBorderRight={false}
-            rowSpan={1}
-          >
-            Cell
-          </Table.Td>
-          <Table.Td
-            align="left"
-            hasBorderLeft={false}
-            hasBorderRight={false}
-            rowSpan={1}
-          >
-            Cell
-          </Table.Td>
-        </Table.Tr>
-        <Table.Tr
-          isActive={false}
-          isDisabled={false}
-          isSelected={false}
-        >
-          <Table.Td
-            align="left"
-            hasBorderLeft={false}
-            hasBorderRight={false}
-            rowSpan={1}
-          >
-            Cell
-          </Table.Td>
-          <Table.Td
-            align="left"
-            hasBorderLeft={false}
-            hasBorderRight={false}
-            rowSpan={1}
-          >
-            Cell
-          </Table.Td>
-          <Table.Td
-            align="left"
-            hasBorderLeft={false}
-            hasBorderRight={false}
-            rowSpan={1}
-          >
-            Cell
-          </Table.Td>
-        </Table.Tr>
-        <Table.Tr
-          isActive={false}
-          isDisabled={false}
-          isSelected={false}
-        >
-          <Table.Td
-            align="left"
-            hasBorderLeft={false}
-            hasBorderRight={false}
-            rowSpan={1}
-          >
-            Cell
-          </Table.Td>
-          <Table.Td
-            align="left"
-            hasBorderLeft={false}
-            hasBorderRight={false}
-            rowSpan={1}
-          >
-            Cell
-          </Table.Td>
-          <Table.Td
-            align="left"
-            hasBorderLeft={false}
-            hasBorderRight={false}
-            rowSpan={1}
-          >
-            Cell
-          </Table.Td>
-        </Table.Tr>
-        <Table.Tr
-          isActive={false}
-          isDisabled={false}
-          isSelected={false}
-        >
-          <Table.Td
-            align="left"
-            hasBorderLeft={false}
-            hasBorderRight={false}
-            rowSpan={1}
-          >
-            Cell
-          </Table.Td>
-          <Table.Td
-            align="left"
-            hasBorderLeft={false}
-            hasBorderRight={false}
-            rowSpan={1}
-          >
-            Cell
-          </Table.Td>
-          <Table.Td
-            align="left"
-            hasBorderLeft={false}
-            hasBorderRight={false}
-            rowSpan={1}
-          >
-            Cell
-          </Table.Td>
-        </Table.Tr>
-      </Table.Tbody>
-    </Table>
+    Meditation literally chia, schlitz banh mi mlkshk vape ennui art party. Succulents tumeric tumblr echo park hella umami. Pickled four loko hashtag, tbh bitters tofu pinterest quinoa retro. Raclette cred fanny pack tattooed chartreuse wayfarers brooklyn pabst, mixtape shabby chic kombucha. Meggings hashtag sriracha raclette post-ironic. Umami brunch stumptown salvia, disrupt lomo activated charcoal retro. Pok pok irony yr, semiotics distillery pug sriracha ramps drinking vinegar fanny pack. Forage selfies poutine disrupt, fashion axe craft beer 8-bit stumptown pabst food truck slow-carb wolf photo booth DIY gastropub. Bushwick austin activated charcoal poutine small batch polaroid. Venmo poutine umami biodiesel, seitan four dollar toast cold-pressed jean shorts gentrify meditation leggings street art selfies. Squid raclette you probably haven't heard of them selfies church-key vice. Woke intelligentsia viral, green juice seitan listicle kale chips yr la croix organic vaporware vexillologist tattooed neutra. Chambray sustainable unicorn neutra aesthetic, 8-bit farm-to-table DIY organic authentic woke. YOLO four dollar toast pop-up, tacos listicle chicharrones single-origin coffee raw denim yuccie.
   </section>
 </div>
 `;
 
-exports[`Panel [common] example testing should match snapshot(s) for 08.no-margins-or-content-padding 1`] = `
+exports[`Panel [common] example testing should match snapshot(s) for WithHeaderAndFooter 1`] = `
 <div
-  className="lucid-Panel lucid-Panel-is-scrollable"
+  class="lucid-Panel lucid-Panel-is-not-gutterless lucid-Panel-has-margin lucid-Panel-is-scrollable"
 >
   <header
-    className="lucid-Panel-Header"
+    class="lucid-Panel-Header"
   >
     <strong>
       Header
     </strong>
   </header>
   <section
-    className="lucid-Panel-content"
+    class="lucid-Panel-content"
   >
-    <Panel.Header>
-      <strong>
-        Header
-      </strong>
-    </Panel.Header>
-    <Table
-      density="extended"
-      hasBorder={false}
-      hasHover={true}
-      hasLightHeader={true}
-      hasWordWrap={true}
-      style={
-        Object {
-          "width": "100%",
-        }
-      }
+    Thundercats fam glossier, affogato microdosing +1 photo booth yuccie flannel iceland. Umami wayfarers tousled, deep v glossier fanny pack single-origin coffee la croix tofu crucifix mlkshk edison bulb. Tofu four loko tbh, trust fund semiotics schlitz succulents snackwave. Tilde live-edge XOXO, stumptown skateboard flexitarian distillery trust fund semiotics selvage. Kale chips artisan twee humblebrag selfies. Scenester woke truffaut plaid meditation freegan. Prism everyday carry post-ironic +1 wolf, copper mug kale chips tilde ethical jianbing jean shorts flexitarian. Fanny pack quinoa heirloom put a bird on it, venmo banjo church-key +1 sartorial cardigan paleo edison bulb DIY. Scenester four loko synth unicorn cardigan shoreditch. Ugh seitan chambray swag vice. Pork belly hammock cardigan, live-edge snackwave intelligentsia biodiesel. Vegan meggings drinking vinegar crucifix iPhone hoodie. Kickstarter before they sold out distillery, next level umami echo park chillwave iceland fanny pack XOXO actually. Street art try-hard master cleanse listicle, microdosing sartorial raw denim squid.
+  </section>
+  <footer
+    class="lucid-Panel-Footer"
+  >
+    <button
+      class="lucid-Button"
+      type="button"
     >
-      <Table.Thead>
-        <Table.Tr
-          isActive={false}
-          isDisabled={false}
-          isSelected={false}
-        >
-          <Table.Th
-            align="left"
-            isResizable={false}
-            isSorted={false}
-            rowSpan={1}
-            sortDirection="up"
-          >
-            Cell
-          </Table.Th>
-          <Table.Th
-            align="left"
-            isResizable={false}
-            isSorted={false}
-            rowSpan={1}
-            sortDirection="up"
-          >
-            Cell
-          </Table.Th>
-          <Table.Th
-            align="left"
-            isResizable={false}
-            isSorted={false}
-            rowSpan={1}
-            sortDirection="up"
-          >
-            Cell
-          </Table.Th>
-        </Table.Tr>
-      </Table.Thead>
-      <Table.Tbody>
-        <Table.Tr
-          isActive={false}
-          isDisabled={false}
-          isSelected={false}
-        >
-          <Table.Td
-            align="left"
-            hasBorderLeft={false}
-            hasBorderRight={false}
-            rowSpan={1}
-          >
-            Cell
-          </Table.Td>
-          <Table.Td
-            align="left"
-            hasBorderLeft={false}
-            hasBorderRight={false}
-            rowSpan={1}
-          >
-            Cell
-          </Table.Td>
-          <Table.Td
-            align="left"
-            hasBorderLeft={false}
-            hasBorderRight={false}
-            rowSpan={1}
-          >
-            Cell
-          </Table.Td>
-        </Table.Tr>
-        <Table.Tr
-          isActive={false}
-          isDisabled={false}
-          isSelected={false}
-        >
-          <Table.Td
-            align="left"
-            hasBorderLeft={false}
-            hasBorderRight={false}
-            rowSpan={1}
-          >
-            Cell
-          </Table.Td>
-          <Table.Td
-            align="left"
-            hasBorderLeft={false}
-            hasBorderRight={false}
-            rowSpan={1}
-          >
-            Cell
-          </Table.Td>
-          <Table.Td
-            align="left"
-            hasBorderLeft={false}
-            hasBorderRight={false}
-            rowSpan={1}
-          >
-            Cell
-          </Table.Td>
-        </Table.Tr>
-        <Table.Tr
-          isActive={false}
-          isDisabled={false}
-          isSelected={false}
-        >
-          <Table.Td
-            align="left"
-            hasBorderLeft={false}
-            hasBorderRight={false}
-            rowSpan={1}
-          >
-            Cell
-          </Table.Td>
-          <Table.Td
-            align="left"
-            hasBorderLeft={false}
-            hasBorderRight={false}
-            rowSpan={1}
-          >
-            Cell
-          </Table.Td>
-          <Table.Td
-            align="left"
-            hasBorderLeft={false}
-            hasBorderRight={false}
-            rowSpan={1}
-          >
-            Cell
-          </Table.Td>
-        </Table.Tr>
-        <Table.Tr
-          isActive={false}
-          isDisabled={false}
-          isSelected={false}
-        >
-          <Table.Td
-            align="left"
-            hasBorderLeft={false}
-            hasBorderRight={false}
-            rowSpan={1}
-          >
-            Cell
-          </Table.Td>
-          <Table.Td
-            align="left"
-            hasBorderLeft={false}
-            hasBorderRight={false}
-            rowSpan={1}
-          >
-            Cell
-          </Table.Td>
-          <Table.Td
-            align="left"
-            hasBorderLeft={false}
-            hasBorderRight={false}
-            rowSpan={1}
-          >
-            Cell
-          </Table.Td>
-        </Table.Tr>
-      </Table.Tbody>
-    </Table>
+      <span
+        class="lucid-Button-content"
+      >
+        Save
+      </span>
+    </button>
+  </footer>
+</div>
+`;
+
+exports[`Panel [common] example testing should match snapshot(s) for WithIconHeader 1`] = `
+<div
+  class="lucid-Panel lucid-Panel-is-not-gutterless lucid-Panel-has-margin lucid-Panel-is-scrollable"
+>
+  <header
+    class="lucid-Panel-Header"
+  >
+    <svg
+      class="lucid-Icon lucid-Icon-color-primary lucid-SettingsIcon"
+      height="16"
+      preserveAspectRatio="xMidYMid meet"
+      style="margin-right:16px"
+      viewBox="0 0 16 16"
+      width="16"
+    >
+      <path
+        d="M2.254 13.052l1.733-.999A5.702 5.702 0 0 0 6.5 13.501V15.5h3v-1.999a5.708 5.708 0 0 0 2.513-1.451l1.733.999 1.5-2.599-1.733-.998c.25-.951.25-1.951 0-2.902l1.732-1.001-1.499-2.599-1.733 1A5.707 5.707 0 0 0 9.5 2.502V.5h-3v2.002a5.696 5.696 0 0 0-2.513 1.45l-1.726-1L.76 5.553l1.727.997a5.708 5.708 0 0 0 0 2.902L.755 10.453l1.499 2.599z"
+      />
+      <circle
+        cx="8"
+        cy="8"
+        r="2.5"
+      />
+    </svg>
+    <span>
+      Header
+    </span>
+  </header>
+  <section
+    class="lucid-Panel-content"
+  >
+    Meditation literally chia, schlitz banh mi mlkshk vape ennui art party. Succulents tumeric tumblr echo park hella umami. Pickled four loko hashtag, tbh bitters tofu pinterest quinoa retro. Raclette cred fanny pack tattooed chartreuse wayfarers brooklyn pabst, mixtape shabby chic kombucha. Meggings hashtag sriracha raclette post-ironic. Umami brunch stumptown salvia, disrupt lomo activated charcoal retro. Pok pok irony yr, semiotics distillery pug sriracha ramps drinking vinegar fanny pack. Forage selfies poutine disrupt, fashion axe craft beer 8-bit stumptown pabst food truck slow-carb wolf photo booth DIY gastropub. Bushwick austin activated charcoal poutine small batch polaroid. Venmo poutine umami biodiesel, seitan four dollar toast cold-pressed jean shorts gentrify meditation leggings street art selfies. Squid raclette you probably haven't heard of them selfies church-key vice. Woke intelligentsia viral, green juice seitan listicle kale chips yr la croix organic vaporware vexillologist tattooed neutra. Chambray sustainable unicorn neutra aesthetic, 8-bit farm-to-table DIY organic authentic woke. YOLO four dollar toast pop-up, tacos listicle chicharrones single-origin coffee raw denim yuccie.
   </section>
 </div>
 `;

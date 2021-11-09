@@ -1,1160 +1,848 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Legend [common] example testing should match snapshot(s) for basic 1`] = `
-<ul
-  className="lucid-Legend lucid-Legend-is-vertical lucid-Legend-has-borders"
->
-  <li
-    className="lucid-Legend-Item"
-    key="0"
-    onClick={[Function]}
+exports[`Legend [common] example testing should match snapshot(s) for Default 1`] = `
+<div>
+  <ul
+    class="lucid-Legend lucid-Legend-is-vertical lucid-Legend-has-borders"
   >
-    <svg
-      className="lucid-Legend-Item-indicator"
-      height={12}
-      width={12}
+    <li
+      class="lucid-Legend-Item"
     >
-      <Point
-        color="color-chart-3"
-        hasStroke={false}
-        kind={1}
-        scale={1}
-        x={6}
-        y={6}
-      />
-    </svg>
-    Partner 0
-  </li>
-  <li
-    className="lucid-Legend-Item"
-    key="1"
-    onClick={[Function]}
+      <svg
+        class="lucid-Legend-Item-indicator"
+        height="12"
+        width="12"
+      >
+        <path
+          class="lucid-Point lucid-Point-color-chart-3"
+          d="M6,12 C0,12 0,12 0,6 C0,0 -0,0 6,0 C12,0 12,0 12,6 C12,12 12,12 6,12 z"
+          transform="translate(0, 0) scale(1)"
+        />
+      </svg>
+      Partner 0
+    </li>
+    <li
+      class="lucid-Legend-Item"
+    >
+      <svg
+        class="lucid-Legend-Item-indicator"
+        height="12"
+        width="12"
+      >
+        <path
+          class="lucid-Point lucid-Point-color-chart-0-darkest"
+          d="M6,12 C0,12 0,12 0,6 C0,0 -0,0 6,0 C12,0 12,0 12,6 C12,12 12,12 6,12 z"
+          transform="translate(0, 0) scale(1)"
+        />
+      </svg>
+      Partner 1
+    </li>
+    <li
+      class="lucid-Legend-Item"
+    >
+      <svg
+        class="lucid-Legend-Item-indicator"
+        height="12"
+        width="12"
+      >
+        <path
+          class="lucid-Point lucid-Point-color-chart-2"
+          d="M6,12 C0,12 0,12 0,6 C0,0 -0,0 6,0 C12,0 12,0 12,6 C12,12 12,12 6,12 z"
+          transform="translate(0, 0) scale(1)"
+        />
+      </svg>
+      Partner 2
+    </li>
+    <li
+      class="lucid-Legend-Item"
+    >
+      <svg
+        class="lucid-Legend-Item-indicator"
+        height="12"
+        width="12"
+      >
+        <path
+          class="lucid-Point lucid-Point-color-chart-4-lightest"
+          d="M6,12 C0,12 0,12 0,6 C0,0 -0,0 6,0 C12,0 12,0 12,6 C12,12 12,12 6,12 z"
+          transform="translate(0, 0) scale(1)"
+        />
+      </svg>
+      Partner 3
+    </li>
+    <li
+      class="lucid-Legend-Item"
+    >
+      <svg
+        class="lucid-Legend-Item-indicator"
+        height="12"
+        width="12"
+      >
+        <path
+          class="lucid-Point lucid-Point-color-chart-5"
+          d="M6,12 C0,12 0,12 0,6 C0,0 -0,0 6,0 C12,0 12,0 12,6 C12,12 12,12 6,12 z"
+          transform="translate(0, 0) scale(1)"
+        />
+      </svg>
+      Partner 4
+    </li>
+    <li
+      class="lucid-Legend-Item"
+    >
+      <svg
+        class="lucid-Legend-Item-indicator"
+        height="12"
+        width="12"
+      >
+        <path
+          class="lucid-Point lucid-Point-color-chart-1-light"
+          d="M6,12 C0,12 0,12 0,6 C0,0 -0,0 6,0 C12,0 12,0 12,6 C12,12 12,12 6,12 z"
+          transform="translate(0, 0) scale(1)"
+        />
+      </svg>
+      Partner 5
+    </li>
+    <li
+      class="lucid-Legend-Item"
+    >
+      <svg
+        class="lucid-Legend-Item-indicator"
+        height="12"
+        width="12"
+      >
+        <path
+          class="lucid-Point lucid-Point-color-chart-6"
+          d="M6,12 C0,12 0,12 0,6 C0,0 -0,0 6,0 C12,0 12,0 12,6 C12,12 12,12 6,12 z"
+          transform="translate(0, 0) scale(1)"
+        />
+      </svg>
+      Partner 6
+    </li>
+  </ul>
+  <br />
+  <ul
+    class="lucid-Legend lucid-Legend-is-vertical lucid-Legend-has-borders"
   >
-    <svg
-      className="lucid-Legend-Item-indicator"
-      height={12}
-      width={12}
+    <li
+      class="lucid-Legend-Item"
     >
-      <Point
-        color="color-chart-0-darkest"
-        hasStroke={false}
-        kind={1}
-        scale={1}
-        x={6}
-        y={6}
-      />
-    </svg>
-    Partner 1
-  </li>
-  <li
-    className="lucid-Legend-Item"
-    key="2"
-    onClick={[Function]}
+      <svg
+        class="lucid-Legend-Item-indicator"
+        height="12"
+        width="12"
+      >
+        <path
+          class="lucid-Point lucid-Point-color-chart-3"
+          d="M6,12 C2.686,12 0,9.314 0,6 C0,2.686 2.686,0 6,0 C9.314,-0 12,2.686 12,6 C12,9.314 9.314,12 6,12 z"
+          transform="translate(0, 0) scale(1)"
+        />
+      </svg>
+      Partner 0
+    </li>
+    <li
+      class="lucid-Legend-Item"
+    >
+      <svg
+        class="lucid-Legend-Item-indicator"
+        height="12"
+        width="12"
+      >
+        <path
+          class="lucid-Point lucid-Point-color-chart-0-darkest"
+          d="M6,12 C0,12 0,12 0,6 C0,0 -0,0 6,0 C12,0 12,0 12,6 C12,12 12,12 6,12 z"
+          transform="translate(0, 0) scale(1)"
+        />
+      </svg>
+      Partner 1
+    </li>
+    <li
+      class="lucid-Legend-Item"
+    >
+      <svg
+        class="lucid-Legend-Item-indicator"
+        height="12"
+        width="12"
+      >
+        <path
+          class="lucid-Point lucid-Point-color-chart-2"
+          d="M6.034,1.656 C7,0 7,0 7.966,1.656 L13.034,10.344 C14,12 13,12 12,12 L2,12 C1,12 0,12 0.966,10.344 L6.034,1.656 z"
+          transform="translate(-1, 0) scale(1)"
+        />
+      </svg>
+      Partner 2
+    </li>
+    <li
+      class="lucid-Legend-Item"
+    >
+      <svg
+        class="lucid-Legend-Item-indicator"
+        height="12"
+        width="12"
+      >
+        <path
+          class="lucid-Point lucid-Point-color-chart-4-lightest"
+          d="M7.966,10.344 C7,12 7,12 6.034,10.344 L0.966,1.656 C-0,0 1,0 2,0 L12,0 C13,0 14,0 13.034,1.656 L7.966,10.344 z"
+          transform="translate(-1, 0) scale(1)"
+        />
+      </svg>
+      Partner 3
+    </li>
+    <li
+      class="lucid-Legend-Item"
+    >
+      <svg
+        class="lucid-Legend-Item-indicator"
+        height="12"
+        width="12"
+      >
+        <path
+          class="lucid-Point lucid-Point-color-chart-5"
+          d="M2.594,9.406 C-0.812,6 -0.812,6 2.594,2.594 C6,-0.812 6,-0.812 9.406,2.594 C12.812,6 12.812,6 9.406,9.406 C6,12.812 6,12.812 2.594,9.406 z"
+          transform="translate(0, 0) scale(1)"
+        />
+      </svg>
+      Partner 4
+    </li>
+    <li
+      class="lucid-Legend-Item"
+    >
+      <svg
+        class="lucid-Legend-Item-indicator"
+        height="12"
+        width="12"
+      >
+        <path
+          class="lucid-Point lucid-Point-color-chart-1-light"
+          d="M6,12 C2.686,12 0,9.314 0,6 C0,2.686 2.686,0 6,0 C9.314,-0 12,2.686 12,6 C12,9.314 9.314,12 6,12 z"
+          transform="translate(0, 0) scale(1)"
+        />
+      </svg>
+      Partner 5
+    </li>
+    <li
+      class="lucid-Legend-Item"
+    >
+      <svg
+        class="lucid-Legend-Item-indicator"
+        height="12"
+        width="12"
+      >
+        <path
+          class="lucid-Point lucid-Point-color-chart-6"
+          d="M6,12 C0,12 0,12 0,6 C0,0 -0,0 6,0 C12,0 12,0 12,6 C12,12 12,12 6,12 z"
+          transform="translate(0, 0) scale(1)"
+        />
+      </svg>
+      Partner 6
+    </li>
+  </ul>
+  <br />
+  <ul
+    class="lucid-Legend lucid-Legend-is-vertical lucid-Legend-has-borders"
   >
-    <svg
-      className="lucid-Legend-Item-indicator"
-      height={12}
-      width={12}
+    <li
+      class="lucid-Legend-Item"
     >
-      <Point
-        color="color-chart-2"
-        hasStroke={false}
-        kind={1}
-        scale={1}
-        x={6}
-        y={6}
-      />
-    </svg>
-    Partner 2
-  </li>
-  <li
-    className="lucid-Legend-Item"
-    key="3"
-    onClick={[Function]}
+      <svg
+        class="lucid-Legend-Item-indicator"
+        height="12"
+        width="22"
+      >
+        <path
+          class="lucid-Line lucid-Line-color-chart-3"
+          d="M0,6 L22,6"
+        />
+      </svg>
+      Partner 0
+    </li>
+    <li
+      class="lucid-Legend-Item"
+    >
+      <svg
+        class="lucid-Legend-Item-indicator"
+        height="12"
+        width="22"
+      >
+        <path
+          class="lucid-Line lucid-Line-color-chart-0-darkest"
+          d="M0,6 L22,6"
+        />
+      </svg>
+      Partner 1
+    </li>
+    <li
+      class="lucid-Legend-Item"
+    >
+      <svg
+        class="lucid-Legend-Item-indicator"
+        height="12"
+        width="22"
+      >
+        <path
+          class="lucid-Line lucid-Line-color-chart-2"
+          d="M0,6 L22,6"
+        />
+      </svg>
+      Partner 2
+    </li>
+    <li
+      class="lucid-Legend-Item"
+    >
+      <svg
+        class="lucid-Legend-Item-indicator"
+        height="12"
+        width="22"
+      >
+        <path
+          class="lucid-Line lucid-Line-color-chart-4-lightest"
+          d="M0,6 L22,6"
+        />
+      </svg>
+      Partner 3
+    </li>
+    <li
+      class="lucid-Legend-Item"
+    >
+      <svg
+        class="lucid-Legend-Item-indicator"
+        height="12"
+        width="22"
+      >
+        <path
+          class="lucid-Line lucid-Line-color-chart-5"
+          d="M0,6 L22,6"
+        />
+      </svg>
+      Partner 4
+    </li>
+    <li
+      class="lucid-Legend-Item"
+    >
+      <svg
+        class="lucid-Legend-Item-indicator"
+        height="12"
+        width="22"
+      >
+        <path
+          class="lucid-Line lucid-Line-color-chart-1-light"
+          d="M0,6 L22,6"
+        />
+      </svg>
+      Partner 5
+    </li>
+    <li
+      class="lucid-Legend-Item"
+    >
+      <svg
+        class="lucid-Legend-Item-indicator"
+        height="12"
+        width="22"
+      >
+        <path
+          class="lucid-Line lucid-Line-color-chart-6"
+          d="M0,6 L22,6"
+        />
+      </svg>
+      Partner 6
+    </li>
+  </ul>
+  <br />
+  <ul
+    class="lucid-Legend lucid-Legend-is-vertical lucid-Legend-has-borders"
   >
-    <svg
-      className="lucid-Legend-Item-indicator"
-      height={12}
-      width={12}
+    <li
+      class="lucid-Legend-Item"
     >
-      <Point
-        color="color-chart-4-lightest"
-        hasStroke={false}
-        kind={1}
-        scale={1}
-        x={6}
-        y={6}
-      />
-    </svg>
-    Partner 3
-  </li>
-  <li
-    className="lucid-Legend-Item"
-    key="4"
-    onClick={[Function]}
+      <svg
+        class="lucid-Legend-Item-indicator"
+        height="12"
+        width="22"
+      >
+        <path
+          class="lucid-Point lucid-Point-color-chart-3"
+          d="M6,12 C2.686,12 0,9.314 0,6 C0,2.686 2.686,0 6,0 C9.314,-0 12,2.686 12,6 C12,9.314 9.314,12 6,12 z"
+          transform="translate(5, 0) scale(1)"
+        />
+        <path
+          class="lucid-Line lucid-Line-color-chart-3"
+          d="M0,6 L22,6"
+        />
+      </svg>
+      Partner 0
+    </li>
+    <li
+      class="lucid-Legend-Item"
+    >
+      <svg
+        class="lucid-Legend-Item-indicator"
+        height="12"
+        width="22"
+      >
+        <path
+          class="lucid-Point lucid-Point-color-chart-0-darkest"
+          d="M6,12 C0,12 0,12 0,6 C0,0 -0,0 6,0 C12,0 12,0 12,6 C12,12 12,12 6,12 z"
+          transform="translate(5, 0) scale(1)"
+        />
+        <path
+          class="lucid-Line lucid-Line-color-chart-0-darkest"
+          d="M0,6 L22,6"
+        />
+      </svg>
+      Partner 1
+    </li>
+    <li
+      class="lucid-Legend-Item"
+    >
+      <svg
+        class="lucid-Legend-Item-indicator"
+        height="12"
+        width="22"
+      >
+        <path
+          class="lucid-Point lucid-Point-color-chart-2"
+          d="M6.034,1.656 C7,0 7,0 7.966,1.656 L13.034,10.344 C14,12 13,12 12,12 L2,12 C1,12 0,12 0.966,10.344 L6.034,1.656 z"
+          transform="translate(4, 0) scale(1)"
+        />
+        <path
+          class="lucid-Line lucid-Line-color-chart-2"
+          d="M0,6 L22,6"
+        />
+      </svg>
+      Partner 2
+    </li>
+    <li
+      class="lucid-Legend-Item"
+    >
+      <svg
+        class="lucid-Legend-Item-indicator"
+        height="12"
+        width="22"
+      >
+        <path
+          class="lucid-Point lucid-Point-color-chart-4-lightest"
+          d="M7.966,10.344 C7,12 7,12 6.034,10.344 L0.966,1.656 C-0,0 1,0 2,0 L12,0 C13,0 14,0 13.034,1.656 L7.966,10.344 z"
+          transform="translate(4, 0) scale(1)"
+        />
+        <path
+          class="lucid-Line lucid-Line-color-chart-4-lightest"
+          d="M0,6 L22,6"
+        />
+      </svg>
+      Partner 3
+    </li>
+    <li
+      class="lucid-Legend-Item"
+    >
+      <svg
+        class="lucid-Legend-Item-indicator"
+        height="12"
+        width="22"
+      >
+        <path
+          class="lucid-Point lucid-Point-color-chart-5"
+          d="M2.594,9.406 C-0.812,6 -0.812,6 2.594,2.594 C6,-0.812 6,-0.812 9.406,2.594 C12.812,6 12.812,6 9.406,9.406 C6,12.812 6,12.812 2.594,9.406 z"
+          transform="translate(5, 0) scale(1)"
+        />
+        <path
+          class="lucid-Line lucid-Line-color-chart-5"
+          d="M0,6 L22,6"
+        />
+      </svg>
+      Partner 4
+    </li>
+    <li
+      class="lucid-Legend-Item"
+    >
+      <svg
+        class="lucid-Legend-Item-indicator"
+        height="12"
+        width="22"
+      >
+        <path
+          class="lucid-Point lucid-Point-color-chart-1-light"
+          d="M6,12 C2.686,12 0,9.314 0,6 C0,2.686 2.686,0 6,0 C9.314,-0 12,2.686 12,6 C12,9.314 9.314,12 6,12 z"
+          transform="translate(5, 0) scale(1)"
+        />
+        <path
+          class="lucid-Line lucid-Line-color-chart-1-light"
+          d="M0,6 L22,6"
+        />
+      </svg>
+      Partner 5
+    </li>
+    <li
+      class="lucid-Legend-Item"
+    >
+      <svg
+        class="lucid-Legend-Item-indicator"
+        height="12"
+        width="22"
+      >
+        <path
+          class="lucid-Point lucid-Point-color-chart-6"
+          d="M6,12 C0,12 0,12 0,6 C0,0 -0,0 6,0 C12,0 12,0 12,6 C12,12 12,12 6,12 z"
+          transform="translate(5, 0) scale(1)"
+        />
+        <path
+          class="lucid-Line lucid-Line-color-chart-6"
+          d="M0,6 L22,6"
+        />
+      </svg>
+      Partner 6
+    </li>
+  </ul>
+  <br />
+  <ul
+    class="lucid-Legend lucid-Legend-is-vertical lucid-Legend-has-borders lucid-Legend-is-reversed"
   >
-    <svg
-      className="lucid-Legend-Item-indicator"
-      height={12}
-      width={12}
+    <li
+      class="lucid-Legend-Item"
     >
-      <Point
-        color="color-chart-5"
-        hasStroke={false}
-        kind={1}
-        scale={1}
-        x={6}
-        y={6}
-      />
-    </svg>
-    Partner 4
-  </li>
-  <li
-    className="lucid-Legend-Item"
-    key="5"
-    onClick={[Function]}
+      <svg
+        class="lucid-Legend-Item-indicator"
+        height="12"
+        width="22"
+      >
+        <path
+          class="lucid-Point lucid-Point-color-chart-3"
+          d="M6,12 C2.686,12 0,9.314 0,6 C0,2.686 2.686,0 6,0 C9.314,-0 12,2.686 12,6 C12,9.314 9.314,12 6,12 z"
+          transform="translate(5, 0) scale(1)"
+        />
+        <path
+          class="lucid-Line lucid-Line-color-chart-3"
+          d="M0,6 L22,6"
+        />
+      </svg>
+      Partner 0
+    </li>
+    <li
+      class="lucid-Legend-Item"
+    >
+      <svg
+        class="lucid-Legend-Item-indicator"
+        height="12"
+        width="22"
+      >
+        <path
+          class="lucid-Point lucid-Point-color-chart-0-darkest"
+          d="M6,12 C0,12 0,12 0,6 C0,0 -0,0 6,0 C12,0 12,0 12,6 C12,12 12,12 6,12 z"
+          transform="translate(5, 0) scale(1)"
+        />
+        <path
+          class="lucid-Line lucid-Line-color-chart-0-darkest"
+          d="M0,6 L22,6"
+        />
+      </svg>
+      Partner 1
+    </li>
+    <li
+      class="lucid-Legend-Item"
+    >
+      <svg
+        class="lucid-Legend-Item-indicator"
+        height="12"
+        width="22"
+      >
+        <path
+          class="lucid-Point lucid-Point-color-chart-2"
+          d="M6.034,1.656 C7,0 7,0 7.966,1.656 L13.034,10.344 C14,12 13,12 12,12 L2,12 C1,12 0,12 0.966,10.344 L6.034,1.656 z"
+          transform="translate(4, 0) scale(1)"
+        />
+        <path
+          class="lucid-Line lucid-Line-color-chart-2"
+          d="M0,6 L22,6"
+        />
+      </svg>
+      Partner 2
+    </li>
+    <li
+      class="lucid-Legend-Item"
+    >
+      <svg
+        class="lucid-Legend-Item-indicator"
+        height="12"
+        width="22"
+      >
+        <path
+          class="lucid-Point lucid-Point-color-chart-4-lightest"
+          d="M7.966,10.344 C7,12 7,12 6.034,10.344 L0.966,1.656 C-0,0 1,0 2,0 L12,0 C13,0 14,0 13.034,1.656 L7.966,10.344 z"
+          transform="translate(4, 0) scale(1)"
+        />
+        <path
+          class="lucid-Line lucid-Line-color-chart-4-lightest"
+          d="M0,6 L22,6"
+        />
+      </svg>
+      Partner 3
+    </li>
+    <li
+      class="lucid-Legend-Item"
+    >
+      <svg
+        class="lucid-Legend-Item-indicator"
+        height="12"
+        width="22"
+      >
+        <path
+          class="lucid-Point lucid-Point-color-chart-5"
+          d="M2.594,9.406 C-0.812,6 -0.812,6 2.594,2.594 C6,-0.812 6,-0.812 9.406,2.594 C12.812,6 12.812,6 9.406,9.406 C6,12.812 6,12.812 2.594,9.406 z"
+          transform="translate(5, 0) scale(1)"
+        />
+        <path
+          class="lucid-Line lucid-Line-color-chart-5"
+          d="M0,6 L22,6"
+        />
+      </svg>
+      Partner 4
+    </li>
+    <li
+      class="lucid-Legend-Item"
+    >
+      <svg
+        class="lucid-Legend-Item-indicator"
+        height="12"
+        width="22"
+      >
+        <path
+          class="lucid-Point lucid-Point-color-chart-1-light"
+          d="M6,12 C2.686,12 0,9.314 0,6 C0,2.686 2.686,0 6,0 C9.314,-0 12,2.686 12,6 C12,9.314 9.314,12 6,12 z"
+          transform="translate(5, 0) scale(1)"
+        />
+        <path
+          class="lucid-Line lucid-Line-color-chart-1-light"
+          d="M0,6 L22,6"
+        />
+      </svg>
+      Partner 5
+    </li>
+    <li
+      class="lucid-Legend-Item"
+    >
+      <svg
+        class="lucid-Legend-Item-indicator"
+        height="12"
+        width="22"
+      >
+        <path
+          class="lucid-Point lucid-Point-color-chart-6"
+          d="M6,12 C0,12 0,12 0,6 C0,0 -0,0 6,0 C12,0 12,0 12,6 C12,12 12,12 6,12 z"
+          transform="translate(5, 0) scale(1)"
+        />
+        <path
+          class="lucid-Line lucid-Line-color-chart-6"
+          d="M0,6 L22,6"
+        />
+      </svg>
+      Partner 6
+    </li>
+  </ul>
+  <br />
+  <ul
+    class="lucid-Legend lucid-Legend-is-horizontal lucid-Legend-has-borders"
   >
-    <svg
-      className="lucid-Legend-Item-indicator"
-      height={12}
-      width={12}
+    <li
+      class="lucid-Legend-Item"
     >
-      <Point
-        color="color-chart-1-light"
-        hasStroke={false}
-        kind={1}
-        scale={1}
-        x={6}
-        y={6}
-      />
-    </svg>
-    Partner 5
-  </li>
-  <li
-    className="lucid-Legend-Item"
-    key="6"
-    onClick={[Function]}
+      <svg
+        class="lucid-Legend-Item-indicator"
+        height="12"
+        width="22"
+      >
+        <path
+          class="lucid-Line lucid-Line-color-chart-good"
+          d="M0,6 L22,6"
+        />
+      </svg>
+      Revenue
+    </li>
+    <li
+      class="lucid-Legend-Item"
+    >
+      <svg
+        class="lucid-Legend-Item-indicator"
+        height="12"
+        width="22"
+      >
+        <path
+          class="lucid-Line lucid-Line-color-chart-bad"
+          d="M0,6 L22,6"
+        />
+      </svg>
+      Loss
+    </li>
+    <li
+      class="lucid-Legend-Item"
+    >
+      <svg
+        class="lucid-Legend-Item-indicator"
+        height="12"
+        width="12"
+      >
+        <path
+          class="lucid-Point lucid-Point-color-chart-0"
+          d="M6,12 C0,12 0,12 0,6 C0,0 -0,0 6,0 C12,0 12,0 12,6 C12,12 12,12 6,12 z"
+          transform="translate(0, 0) scale(1)"
+        />
+      </svg>
+      Partner 0
+    </li>
+    <li
+      class="lucid-Legend-Item"
+    >
+      <svg
+        class="lucid-Legend-Item-indicator"
+        height="12"
+        width="12"
+      >
+        <path
+          class="lucid-Point lucid-Point-color-chart-1"
+          d="M6,12 C0,12 0,12 0,6 C0,0 -0,0 6,0 C12,0 12,0 12,6 C12,12 12,12 6,12 z"
+          transform="translate(0, 0) scale(1)"
+        />
+      </svg>
+      Partner 1
+    </li>
+  </ul>
+  <br />
+  <ul
+    class="lucid-Legend lucid-Legend-is-horizontal lucid-Legend-has-borders lucid-Legend-is-reversed"
   >
-    <svg
-      className="lucid-Legend-Item-indicator"
-      height={12}
-      width={12}
+    <li
+      class="lucid-Legend-Item"
     >
-      <Point
-        color="color-chart-6"
-        hasStroke={false}
-        kind={1}
-        scale={1}
-        x={6}
-        y={6}
-      />
-    </svg>
-    Partner 6
-  </li>
-</ul>
-`;
-
-exports[`Legend [common] example testing should match snapshot(s) for basic 2`] = `
-<ul
-  className="lucid-Legend lucid-Legend-is-vertical lucid-Legend-has-borders"
->
-  <li
-    className="lucid-Legend-Item"
-    key="0"
-    onClick={[Function]}
+      <svg
+        class="lucid-Legend-Item-indicator"
+        height="12"
+        width="22"
+      >
+        <path
+          class="lucid-Line lucid-Line-color-chart-good"
+          d="M0,6 L22,6"
+        />
+      </svg>
+      Revenue
+    </li>
+    <li
+      class="lucid-Legend-Item"
+    >
+      <svg
+        class="lucid-Legend-Item-indicator"
+        height="12"
+        width="22"
+      >
+        <path
+          class="lucid-Line lucid-Line-color-chart-bad"
+          d="M0,6 L22,6"
+        />
+      </svg>
+      Loss
+    </li>
+    <li
+      class="lucid-Legend-Item"
+    >
+      <svg
+        class="lucid-Legend-Item-indicator"
+        height="12"
+        width="12"
+      >
+        <path
+          class="lucid-Point lucid-Point-color-chart-0"
+          d="M6,12 C0,12 0,12 0,6 C0,0 -0,0 6,0 C12,0 12,0 12,6 C12,12 12,12 6,12 z"
+          transform="translate(0, 0) scale(1)"
+        />
+      </svg>
+      Partner 0
+    </li>
+    <li
+      class="lucid-Legend-Item"
+    >
+      <svg
+        class="lucid-Legend-Item-indicator"
+        height="12"
+        width="12"
+      >
+        <path
+          class="lucid-Point lucid-Point-color-chart-1"
+          d="M6,12 C0,12 0,12 0,6 C0,0 -0,0 6,0 C12,0 12,0 12,6 C12,12 12,12 6,12 z"
+          transform="translate(0, 0) scale(1)"
+        />
+      </svg>
+      Partner 1
+    </li>
+  </ul>
+  <br />
+  <ul
+    class="lucid-Legend lucid-Legend-is-vertical lucid-Legend-has-borders"
   >
-    <svg
-      className="lucid-Legend-Item-indicator"
-      height={12}
-      width={12}
+    <li
+      class="lucid-Legend-Item"
     >
-      <Point
-        color="color-chart-3"
-        hasStroke={false}
-        kind={0}
-        scale={1}
-        x={6}
-        y={6}
-      />
-    </svg>
-    Partner 0
-  </li>
-  <li
-    className="lucid-Legend-Item"
-    key="1"
-    onClick={[Function]}
+      <svg
+        class="lucid-Legend-Item-indicator"
+        height="12"
+        width="22"
+      >
+        <path
+          class="lucid-Line lucid-Line-color-chart-good"
+          d="M0,6 L22,6"
+        />
+      </svg>
+      Revenue
+    </li>
+    <li
+      class="lucid-Legend-Item"
+    >
+      <svg
+        class="lucid-Legend-Item-indicator"
+        height="12"
+        width="22"
+      >
+        <path
+          class="lucid-Line lucid-Line-color-chart-bad"
+          d="M0,6 L22,6"
+        />
+      </svg>
+      Loss
+    </li>
+    <li
+      class="lucid-Legend-Item"
+    >
+      <svg
+        class="lucid-Legend-Item-indicator"
+        height="12"
+        width="22"
+      >
+        <path
+          class="lucid-Point lucid-Point-color-chart-0"
+          d="M6,12 C0,12 0,12 0,6 C0,0 -0,0 6,0 C12,0 12,0 12,6 C12,12 12,12 6,12 z"
+          transform="translate(5, 0) scale(1)"
+        />
+      </svg>
+      Partner 0
+    </li>
+    <li
+      class="lucid-Legend-Item"
+    >
+      <svg
+        class="lucid-Legend-Item-indicator"
+        height="12"
+        width="22"
+      >
+        <path
+          class="lucid-Point lucid-Point-color-chart-1"
+          d="M6,12 C0,12 0,12 0,6 C0,0 -0,0 6,0 C12,0 12,0 12,6 C12,12 12,12 6,12 z"
+          transform="translate(5, 0) scale(1)"
+        />
+      </svg>
+      Partner 1
+    </li>
+  </ul>
+  <br />
+  <br />
+  <br />
+  <span
+    class="lucid-ContextMenu lucid-ToolTip"
   >
-    <svg
-      className="lucid-Legend-Item-indicator"
-      height={12}
-      width={12}
-    >
-      <Point
-        color="color-chart-0-darkest"
-        hasStroke={false}
-        kind={1}
-        scale={1}
-        x={6}
-        y={6}
-      />
-    </svg>
-    Partner 1
-  </li>
-  <li
-    className="lucid-Legend-Item"
-    key="2"
-    onClick={[Function]}
-  >
-    <svg
-      className="lucid-Legend-Item-indicator"
-      height={12}
-      width={12}
-    >
-      <Point
-        color="color-chart-2"
-        hasStroke={false}
-        kind={2}
-        scale={1}
-        x={6}
-        y={6}
-      />
-    </svg>
-    Partner 2
-  </li>
-  <li
-    className="lucid-Legend-Item"
-    key="3"
-    onClick={[Function]}
-  >
-    <svg
-      className="lucid-Legend-Item-indicator"
-      height={12}
-      width={12}
-    >
-      <Point
-        color="color-chart-4-lightest"
-        hasStroke={false}
-        kind={3}
-        scale={1}
-        x={6}
-        y={6}
-      />
-    </svg>
-    Partner 3
-  </li>
-  <li
-    className="lucid-Legend-Item"
-    key="4"
-    onClick={[Function]}
-  >
-    <svg
-      className="lucid-Legend-Item-indicator"
-      height={12}
-      width={12}
-    >
-      <Point
-        color="color-chart-5"
-        hasStroke={false}
-        kind={4}
-        scale={1}
-        x={6}
-        y={6}
-      />
-    </svg>
-    Partner 4
-  </li>
-  <li
-    className="lucid-Legend-Item"
-    key="5"
-    onClick={[Function]}
-  >
-    <svg
-      className="lucid-Legend-Item-indicator"
-      height={12}
-      width={12}
-    >
-      <Point
-        color="color-chart-1-light"
-        hasStroke={false}
-        kind={5}
-        scale={1}
-        x={6}
-        y={6}
-      />
-    </svg>
-    Partner 5
-  </li>
-  <li
-    className="lucid-Legend-Item"
-    key="6"
-    onClick={[Function]}
-  >
-    <svg
-      className="lucid-Legend-Item-indicator"
-      height={12}
-      width={12}
-    >
-      <Point
-        color="color-chart-6"
-        hasStroke={false}
-        kind={6}
-        scale={1}
-        x={6}
-        y={6}
-      />
-    </svg>
-    Partner 6
-  </li>
-</ul>
-`;
-
-exports[`Legend [common] example testing should match snapshot(s) for basic 3`] = `
-<ul
-  className="lucid-Legend lucid-Legend-is-vertical lucid-Legend-has-borders"
->
-  <li
-    className="lucid-Legend-Item"
-    key="0"
-    onClick={[Function]}
-  >
-    <svg
-      className="lucid-Legend-Item-indicator"
-      height={12}
-      width={22}
-    >
-      <Line
-        color="color-chart-3"
-        d="M0,6 L22,6"
-        isDotted={false}
-      />
-    </svg>
-    Partner 0
-  </li>
-  <li
-    className="lucid-Legend-Item"
-    key="1"
-    onClick={[Function]}
-  >
-    <svg
-      className="lucid-Legend-Item-indicator"
-      height={12}
-      width={22}
-    >
-      <Line
-        color="color-chart-0-darkest"
-        d="M0,6 L22,6"
-        isDotted={false}
-      />
-    </svg>
-    Partner 1
-  </li>
-  <li
-    className="lucid-Legend-Item"
-    key="2"
-    onClick={[Function]}
-  >
-    <svg
-      className="lucid-Legend-Item-indicator"
-      height={12}
-      width={22}
-    >
-      <Line
-        color="color-chart-2"
-        d="M0,6 L22,6"
-        isDotted={false}
-      />
-    </svg>
-    Partner 2
-  </li>
-  <li
-    className="lucid-Legend-Item"
-    key="3"
-    onClick={[Function]}
-  >
-    <svg
-      className="lucid-Legend-Item-indicator"
-      height={12}
-      width={22}
-    >
-      <Line
-        color="color-chart-4-lightest"
-        d="M0,6 L22,6"
-        isDotted={false}
-      />
-    </svg>
-    Partner 3
-  </li>
-  <li
-    className="lucid-Legend-Item"
-    key="4"
-    onClick={[Function]}
-  >
-    <svg
-      className="lucid-Legend-Item-indicator"
-      height={12}
-      width={22}
-    >
-      <Line
-        color="color-chart-5"
-        d="M0,6 L22,6"
-        isDotted={false}
-      />
-    </svg>
-    Partner 4
-  </li>
-  <li
-    className="lucid-Legend-Item"
-    key="5"
-    onClick={[Function]}
-  >
-    <svg
-      className="lucid-Legend-Item-indicator"
-      height={12}
-      width={22}
-    >
-      <Line
-        color="color-chart-1-light"
-        d="M0,6 L22,6"
-        isDotted={false}
-      />
-    </svg>
-    Partner 5
-  </li>
-  <li
-    className="lucid-Legend-Item"
-    key="6"
-    onClick={[Function]}
-  >
-    <svg
-      className="lucid-Legend-Item-indicator"
-      height={12}
-      width={22}
-    >
-      <Line
-        color="color-chart-6"
-        d="M0,6 L22,6"
-        isDotted={false}
-      />
-    </svg>
-    Partner 6
-  </li>
-</ul>
-`;
-
-exports[`Legend [common] example testing should match snapshot(s) for basic 4`] = `
-<ul
-  className="lucid-Legend lucid-Legend-is-vertical lucid-Legend-has-borders"
->
-  <li
-    className="lucid-Legend-Item"
-    key="0"
-    onClick={[Function]}
-  >
-    <svg
-      className="lucid-Legend-Item-indicator"
-      height={12}
-      width={22}
-    >
-      <Point
-        color="color-chart-3"
-        hasStroke={false}
-        kind={0}
-        scale={1}
-        x={11}
-        y={6}
-      />
-      <Line
-        color="color-chart-3"
-        d="M0,6 L22,6"
-        isDotted={false}
-      />
-    </svg>
-    Partner 0
-  </li>
-  <li
-    className="lucid-Legend-Item"
-    key="1"
-    onClick={[Function]}
-  >
-    <svg
-      className="lucid-Legend-Item-indicator"
-      height={12}
-      width={22}
-    >
-      <Point
-        color="color-chart-0-darkest"
-        hasStroke={false}
-        kind={1}
-        scale={1}
-        x={11}
-        y={6}
-      />
-      <Line
-        color="color-chart-0-darkest"
-        d="M0,6 L22,6"
-        isDotted={false}
-      />
-    </svg>
-    Partner 1
-  </li>
-  <li
-    className="lucid-Legend-Item"
-    key="2"
-    onClick={[Function]}
-  >
-    <svg
-      className="lucid-Legend-Item-indicator"
-      height={12}
-      width={22}
-    >
-      <Point
-        color="color-chart-2"
-        hasStroke={false}
-        kind={2}
-        scale={1}
-        x={11}
-        y={6}
-      />
-      <Line
-        color="color-chart-2"
-        d="M0,6 L22,6"
-        isDotted={false}
-      />
-    </svg>
-    Partner 2
-  </li>
-  <li
-    className="lucid-Legend-Item"
-    key="3"
-    onClick={[Function]}
-  >
-    <svg
-      className="lucid-Legend-Item-indicator"
-      height={12}
-      width={22}
-    >
-      <Point
-        color="color-chart-4-lightest"
-        hasStroke={false}
-        kind={3}
-        scale={1}
-        x={11}
-        y={6}
-      />
-      <Line
-        color="color-chart-4-lightest"
-        d="M0,6 L22,6"
-        isDotted={false}
-      />
-    </svg>
-    Partner 3
-  </li>
-  <li
-    className="lucid-Legend-Item"
-    key="4"
-    onClick={[Function]}
-  >
-    <svg
-      className="lucid-Legend-Item-indicator"
-      height={12}
-      width={22}
-    >
-      <Point
-        color="color-chart-5"
-        hasStroke={false}
-        kind={4}
-        scale={1}
-        x={11}
-        y={6}
-      />
-      <Line
-        color="color-chart-5"
-        d="M0,6 L22,6"
-        isDotted={false}
-      />
-    </svg>
-    Partner 4
-  </li>
-  <li
-    className="lucid-Legend-Item"
-    key="5"
-    onClick={[Function]}
-  >
-    <svg
-      className="lucid-Legend-Item-indicator"
-      height={12}
-      width={22}
-    >
-      <Point
-        color="color-chart-1-light"
-        hasStroke={false}
-        kind={5}
-        scale={1}
-        x={11}
-        y={6}
-      />
-      <Line
-        color="color-chart-1-light"
-        d="M0,6 L22,6"
-        isDotted={false}
-      />
-    </svg>
-    Partner 5
-  </li>
-  <li
-    className="lucid-Legend-Item"
-    key="6"
-    onClick={[Function]}
-  >
-    <svg
-      className="lucid-Legend-Item-indicator"
-      height={12}
-      width={22}
-    >
-      <Point
-        color="color-chart-6"
-        hasStroke={false}
-        kind={6}
-        scale={1}
-        x={11}
-        y={6}
-      />
-      <Line
-        color="color-chart-6"
-        d="M0,6 L22,6"
-        isDotted={false}
-      />
-    </svg>
-    Partner 6
-  </li>
-</ul>
-`;
-
-exports[`Legend [common] example testing should match snapshot(s) for basic 5`] = `
-<ul
-  className="lucid-Legend lucid-Legend-is-vertical lucid-Legend-has-borders lucid-Legend-is-reversed"
->
-  <li
-    className="lucid-Legend-Item"
-    key="0"
-    onClick={[Function]}
-  >
-    <svg
-      className="lucid-Legend-Item-indicator"
-      height={12}
-      width={22}
-    >
-      <Point
-        color="color-chart-3"
-        hasStroke={false}
-        kind={0}
-        scale={1}
-        x={11}
-        y={6}
-      />
-      <Line
-        color="color-chart-3"
-        d="M0,6 L22,6"
-        isDotted={false}
-      />
-    </svg>
-    Partner 0
-  </li>
-  <li
-    className="lucid-Legend-Item"
-    key="1"
-    onClick={[Function]}
-  >
-    <svg
-      className="lucid-Legend-Item-indicator"
-      height={12}
-      width={22}
-    >
-      <Point
-        color="color-chart-0-darkest"
-        hasStroke={false}
-        kind={1}
-        scale={1}
-        x={11}
-        y={6}
-      />
-      <Line
-        color="color-chart-0-darkest"
-        d="M0,6 L22,6"
-        isDotted={false}
-      />
-    </svg>
-    Partner 1
-  </li>
-  <li
-    className="lucid-Legend-Item"
-    key="2"
-    onClick={[Function]}
-  >
-    <svg
-      className="lucid-Legend-Item-indicator"
-      height={12}
-      width={22}
-    >
-      <Point
-        color="color-chart-2"
-        hasStroke={false}
-        kind={2}
-        scale={1}
-        x={11}
-        y={6}
-      />
-      <Line
-        color="color-chart-2"
-        d="M0,6 L22,6"
-        isDotted={false}
-      />
-    </svg>
-    Partner 2
-  </li>
-  <li
-    className="lucid-Legend-Item"
-    key="3"
-    onClick={[Function]}
-  >
-    <svg
-      className="lucid-Legend-Item-indicator"
-      height={12}
-      width={22}
-    >
-      <Point
-        color="color-chart-4-lightest"
-        hasStroke={false}
-        kind={3}
-        scale={1}
-        x={11}
-        y={6}
-      />
-      <Line
-        color="color-chart-4-lightest"
-        d="M0,6 L22,6"
-        isDotted={false}
-      />
-    </svg>
-    Partner 3
-  </li>
-  <li
-    className="lucid-Legend-Item"
-    key="4"
-    onClick={[Function]}
-  >
-    <svg
-      className="lucid-Legend-Item-indicator"
-      height={12}
-      width={22}
-    >
-      <Point
-        color="color-chart-5"
-        hasStroke={false}
-        kind={4}
-        scale={1}
-        x={11}
-        y={6}
-      />
-      <Line
-        color="color-chart-5"
-        d="M0,6 L22,6"
-        isDotted={false}
-      />
-    </svg>
-    Partner 4
-  </li>
-  <li
-    className="lucid-Legend-Item"
-    key="5"
-    onClick={[Function]}
-  >
-    <svg
-      className="lucid-Legend-Item-indicator"
-      height={12}
-      width={22}
-    >
-      <Point
-        color="color-chart-1-light"
-        hasStroke={false}
-        kind={5}
-        scale={1}
-        x={11}
-        y={6}
-      />
-      <Line
-        color="color-chart-1-light"
-        d="M0,6 L22,6"
-        isDotted={false}
-      />
-    </svg>
-    Partner 5
-  </li>
-  <li
-    className="lucid-Legend-Item"
-    key="6"
-    onClick={[Function]}
-  >
-    <svg
-      className="lucid-Legend-Item-indicator"
-      height={12}
-      width={22}
-    >
-      <Point
-        color="color-chart-6"
-        hasStroke={false}
-        kind={6}
-        scale={1}
-        x={11}
-        y={6}
-      />
-      <Line
-        color="color-chart-6"
-        d="M0,6 L22,6"
-        isDotted={false}
-      />
-    </svg>
-    Partner 6
-  </li>
-</ul>
-`;
-
-exports[`Legend [common] example testing should match snapshot(s) for basic 6`] = `
-<ul
-  className="lucid-Legend lucid-Legend-is-horizontal lucid-Legend-has-borders"
->
-  <li
-    className="lucid-Legend-Item"
-    key="0"
-    onClick={[Function]}
-  >
-    <svg
-      className="lucid-Legend-Item-indicator"
-      height={12}
-      width={22}
-    >
-      <Line
-        color="color-chart-good"
-        d="M0,6 L22,6"
-        isDotted={false}
-      />
-    </svg>
-    Revenue
-  </li>
-  <li
-    className="lucid-Legend-Item"
-    key="1"
-    onClick={[Function]}
-  >
-    <svg
-      className="lucid-Legend-Item-indicator"
-      height={12}
-      width={22}
-    >
-      <Line
-        color="color-chart-bad"
-        d="M0,6 L22,6"
-        isDotted={false}
-      />
-    </svg>
-    Loss
-  </li>
-  <li
-    className="lucid-Legend-Item"
-    key="2"
-    onClick={[Function]}
-  >
-    <svg
-      className="lucid-Legend-Item-indicator"
-      height={12}
-      width={12}
-    >
-      <Point
-        color="color-chart-0"
-        hasStroke={false}
-        kind={1}
-        scale={1}
-        x={6}
-        y={6}
-      />
-    </svg>
-    Partner 0
-  </li>
-  <li
-    className="lucid-Legend-Item"
-    key="3"
-    onClick={[Function]}
-  >
-    <svg
-      className="lucid-Legend-Item-indicator"
-      height={12}
-      width={12}
-    >
-      <Point
-        color="color-chart-1"
-        hasStroke={false}
-        kind={1}
-        scale={1}
-        x={6}
-        y={6}
-      />
-    </svg>
-    Partner 1
-  </li>
-</ul>
-`;
-
-exports[`Legend [common] example testing should match snapshot(s) for basic 7`] = `
-<ul
-  className="lucid-Legend lucid-Legend-is-horizontal lucid-Legend-has-borders lucid-Legend-is-reversed"
->
-  <li
-    className="lucid-Legend-Item"
-    key="0"
-    onClick={[Function]}
-  >
-    <svg
-      className="lucid-Legend-Item-indicator"
-      height={12}
-      width={22}
-    >
-      <Line
-        color="color-chart-good"
-        d="M0,6 L22,6"
-        isDotted={false}
-      />
-    </svg>
-    Revenue
-  </li>
-  <li
-    className="lucid-Legend-Item"
-    key="1"
-    onClick={[Function]}
-  >
-    <svg
-      className="lucid-Legend-Item-indicator"
-      height={12}
-      width={22}
-    >
-      <Line
-        color="color-chart-bad"
-        d="M0,6 L22,6"
-        isDotted={false}
-      />
-    </svg>
-    Loss
-  </li>
-  <li
-    className="lucid-Legend-Item"
-    key="2"
-    onClick={[Function]}
-  >
-    <svg
-      className="lucid-Legend-Item-indicator"
-      height={12}
-      width={12}
-    >
-      <Point
-        color="color-chart-0"
-        hasStroke={false}
-        kind={1}
-        scale={1}
-        x={6}
-        y={6}
-      />
-    </svg>
-    Partner 0
-  </li>
-  <li
-    className="lucid-Legend-Item"
-    key="3"
-    onClick={[Function]}
-  >
-    <svg
-      className="lucid-Legend-Item-indicator"
-      height={12}
-      width={12}
-    >
-      <Point
-        color="color-chart-1"
-        hasStroke={false}
-        kind={1}
-        scale={1}
-        x={6}
-        y={6}
-      />
-    </svg>
-    Partner 1
-  </li>
-</ul>
-`;
-
-exports[`Legend [common] example testing should match snapshot(s) for basic 8`] = `
-<ul
-  className="lucid-Legend lucid-Legend-is-vertical lucid-Legend-has-borders"
->
-  <li
-    className="lucid-Legend-Item"
-    key="0"
-    onClick={[Function]}
-  >
-    <svg
-      className="lucid-Legend-Item-indicator"
-      height={12}
-      width={22}
-    >
-      <Line
-        color="color-chart-good"
-        d="M0,6 L22,6"
-        isDotted={false}
-      />
-    </svg>
-    Revenue
-  </li>
-  <li
-    className="lucid-Legend-Item"
-    key="1"
-    onClick={[Function]}
-  >
-    <svg
-      className="lucid-Legend-Item-indicator"
-      height={12}
-      width={22}
-    >
-      <Line
-        color="color-chart-bad"
-        d="M0,6 L22,6"
-        isDotted={false}
-      />
-    </svg>
-    Loss
-  </li>
-  <li
-    className="lucid-Legend-Item"
-    key="2"
-    onClick={[Function]}
-  >
-    <svg
-      className="lucid-Legend-Item-indicator"
-      height={12}
-      width={22}
-    >
-      <Point
-        color="color-chart-0"
-        hasStroke={false}
-        kind={1}
-        scale={1}
-        x={11}
-        y={6}
-      />
-    </svg>
-    Partner 0
-  </li>
-  <li
-    className="lucid-Legend-Item"
-    key="3"
-    onClick={[Function]}
-  >
-    <svg
-      className="lucid-Legend-Item-indicator"
-      height={12}
-      width={22}
-    >
-      <Point
-        color="color-chart-1"
-        hasStroke={false}
-        kind={1}
-        scale={1}
-        x={11}
-        y={6}
-      />
-    </svg>
-    Partner 1
-  </li>
-</ul>
-`;
-
-exports[`Legend [common] example testing should match snapshot(s) for basic 9`] = `
-<ul
-  className="lucid-Legend lucid-Legend-is-vertical"
->
-  <li
-    className="lucid-Legend-Item"
-    key="0"
-    onClick={[Function]}
-  >
-    <svg
-      className="lucid-Legend-Item-indicator"
-      height={12}
-      width={22}
-    >
-      <Line
-        color="color-chart-good"
-        d="M0,6 L22,6"
-        isDotted={false}
-      />
-    </svg>
-    Revenue
-  </li>
-  <li
-    className="lucid-Legend-Item"
-    key="1"
-    onClick={[Function]}
-  >
-    <svg
-      className="lucid-Legend-Item-indicator"
-      height={12}
-      width={22}
-    >
-      <Line
-        color="color-chart-bad"
-        d="M0,6 L22,6"
-        isDotted={false}
-      />
-    </svg>
-    Loss
-  </li>
-  <li
-    className="lucid-Legend-Item"
-    key="2"
-    onClick={[Function]}
-  >
-    <svg
-      className="lucid-Legend-Item-indicator"
-      height={12}
-      width={22}
-    >
-      <Point
-        color="color-chart-0"
-        hasStroke={false}
-        kind={1}
-        scale={1}
-        x={11}
-        y={6}
-      />
-    </svg>
-    Partner 0
-  </li>
-  <li
-    className="lucid-Legend-Item"
-    key="3"
-    onClick={[Function]}
-  >
-    <svg
-      className="lucid-Legend-Item-indicator"
-      height={12}
-      width={22}
-    >
-      <Point
-        color="color-chart-1"
-        hasStroke={false}
-        kind={1}
-        scale={1}
-        x={11}
-        y={6}
-      />
-    </svg>
-    Partner 1
-  </li>
-</ul>
+    Tooltip example
+  </span>
+</div>
 `;

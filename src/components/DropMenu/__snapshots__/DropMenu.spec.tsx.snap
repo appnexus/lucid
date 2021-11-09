@@ -1,813 +1,229 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`DropMenu [common] example testing should match snapshot(s) for 01.basic 1`] = `
+exports[`DropMenu [common] example testing should match snapshot(s) for ActionMenu 1`] = `
 <div
-  className="lucid-DropMenu lucid-DropMenu-base"
+  class="lucid-DropMenu lucid-DropMenu-base"
 >
-  <ContextMenu
-    alignment="start"
-    direction="down"
-    directonOffset={0}
-    getAlignmentOffset={[Function]}
-    isExpanded={false}
-    minWidthOffset={0}
-    onClickOut={[Function]}
-    portalId="1-DropMenu-Portal-6"
+  <span
+    class="lucid-ContextMenu"
   >
-    <ContextMenu.Target
-      elementType="span"
+    <div
+      class="lucid-DropMenu-Control"
+      tabindex="0"
     >
-      <div
-        className="lucid-DropMenu-Control"
-        onClick={[Function]}
-        onKeyDown={[Function]}
-        tabIndex={0}
+      Colors
+      <svg
+        class="lucid-Icon lucid-Icon-color-primary lucid-ChevronIcon lucid-ChevronIcon-is-down"
+        height="16"
+        preserveAspectRatio="xMidYMid meet"
+        viewBox="0 0 16 16"
+        width="16"
       >
-        Select
-      </div>
-    </ContextMenu.Target>
-    <ContextMenu.FlyOut
-      className="lucid-DropMenu"
-      style={
-        Object {
-          "maxHeight": "18em",
-        }
-      }
-    >
-      <div
-        className="lucid-DropMenu-option-container"
-        style={
-          Object {
-            "maxHeight": "18em",
-          }
-        }
-      >
-        <div
-          className="lucid-DropMenu-Option lucid-DropMenu-Option-is-wrapped"
-          key="DropMenuOption0"
-          onClick={[Function]}
-          onMouseMove={[Function]}
-        >
-          Red
-        </div>
-        <div
-          className="lucid-DropMenu-Option lucid-DropMenu-Option-is-wrapped"
-          key="DropMenuOption1"
-          onClick={[Function]}
-          onMouseMove={[Function]}
-        >
-          Green
-        </div>
-        <div
-          className="lucid-DropMenu-Option lucid-DropMenu-Option-is-wrapped"
-          key="DropMenuOption2"
-          onClick={[Function]}
-          onMouseMove={[Function]}
-        >
-          Blue
-        </div>
-      </div>
-    </ContextMenu.FlyOut>
-  </ContextMenu>
-</div>
-`;
-
-exports[`DropMenu [common] example testing should match snapshot(s) for 02.button-menu 1`] = `
-<div
-  className="lucid-DropMenu lucid-DropMenu-base"
->
-  <ContextMenu
-    alignment="start"
-    direction="down"
-    directonOffset={0}
-    getAlignmentOffset={[Function]}
-    isExpanded={false}
-    minWidthOffset={0}
-    onClickOut={[Function]}
-    portalId="1-DropMenu-Portal-7"
-  >
-    <ContextMenu.Target
-      elementType="span"
-    >
-      <div
-        className="lucid-DropMenu-Control"
-        onClick={[Function]}
-        onKeyDown={[Function]}
-        tabIndex={0}
-      >
-        <Button
-          hasOnlyIcon={false}
-          isActive={false}
-          isDisabled={false}
-          onClick={[Function]}
-          type="button"
-        >
-          Select Color
-        </Button>
-      </div>
-    </ContextMenu.Target>
-    <ContextMenu.FlyOut
-      className="lucid-DropMenu"
-      style={
-        Object {
-          "maxHeight": "18em",
-        }
-      }
-    >
-      <div
-        className="lucid-DropMenu-option-container"
-        style={
-          Object {
-            "maxHeight": "18em",
-          }
-        }
-      >
-        <div
-          className="lucid-DropMenu-Option lucid-DropMenu-Option-is-wrapped"
-          key="DropMenuOption0"
-          onClick={[Function]}
-          onMouseMove={[Function]}
-        >
-          Red
-        </div>
-        <div
-          className="lucid-DropMenu-Option lucid-DropMenu-Option-is-wrapped"
-          key="DropMenuOption1"
-          onClick={[Function]}
-          onMouseMove={[Function]}
-        >
-          Green
-        </div>
-        <div
-          className="lucid-DropMenu-Option lucid-DropMenu-Option-is-wrapped"
-          key="DropMenuOption2"
-          onClick={[Function]}
-          onMouseMove={[Function]}
-        >
-          Blue
-        </div>
-      </div>
-    </ContextMenu.FlyOut>
-  </ContextMenu>
-</div>
-`;
-
-exports[`DropMenu [common] example testing should match snapshot(s) for 03.disabled 1`] = `
-<div
-  className="lucid-DropMenu lucid-DropMenu-base"
->
-  <ContextMenu
-    alignment="start"
-    direction="down"
-    directonOffset={0}
-    getAlignmentOffset={[Function]}
-    isExpanded={false}
-    minWidthOffset={0}
-    onClickOut={[Function]}
-    portalId="1-DropMenu-Portal-8"
-  >
-    <ContextMenu.Target
-      elementType="span"
-    >
-      <div
-        className="lucid-DropMenu-Control"
-      >
-        <Button
-          hasOnlyIcon={false}
-          isActive={false}
-          isDisabled={false}
-          onClick={[Function]}
-          tabIndex={-1}
-          type="button"
-        >
-          Select Color
-        </Button>
-      </div>
-    </ContextMenu.Target>
-    <ContextMenu.FlyOut
-      className="lucid-DropMenu"
-      style={
-        Object {
-          "maxHeight": "18em",
-        }
-      }
-    >
-      <div
-        className="lucid-DropMenu-option-container"
-        style={
-          Object {
-            "maxHeight": "18em",
-          }
-        }
-      >
-        <div
-          className="lucid-DropMenu-Option lucid-DropMenu-Option-is-wrapped"
-          key="DropMenuOption0"
-          onClick={[Function]}
-          onMouseMove={[Function]}
-        >
-          Red
-        </div>
-        <div
-          className="lucid-DropMenu-Option lucid-DropMenu-Option-is-wrapped"
-          key="DropMenuOption1"
-          onClick={[Function]}
-          onMouseMove={[Function]}
-        >
-          Green
-        </div>
-        <div
-          className="lucid-DropMenu-Option lucid-DropMenu-Option-is-wrapped"
-          key="DropMenuOption2"
-          onClick={[Function]}
-          onMouseMove={[Function]}
-        >
-          Blue
-        </div>
-      </div>
-    </ContextMenu.FlyOut>
-  </ContextMenu>
-</div>
-`;
-
-exports[`DropMenu [common] example testing should match snapshot(s) for 04.disabled-options 1`] = `
-<div
-  className="lucid-DropMenu lucid-DropMenu-base"
->
-  <ContextMenu
-    alignment="start"
-    direction="down"
-    directonOffset={0}
-    getAlignmentOffset={[Function]}
-    isExpanded={false}
-    minWidthOffset={0}
-    onClickOut={[Function]}
-    portalId="1-DropMenu-Portal-9"
-  >
-    <ContextMenu.Target
-      elementType="span"
-    >
-      <div
-        className="lucid-DropMenu-Control"
-        onClick={[Function]}
-        onKeyDown={[Function]}
-        tabIndex={0}
-      >
-        <Button
-          hasOnlyIcon={false}
-          isActive={false}
-          isDisabled={false}
-          onClick={[Function]}
-          type="button"
-        >
-          Select Color
-        </Button>
-      </div>
-    </ContextMenu.Target>
-    <ContextMenu.FlyOut
-      className="lucid-DropMenu"
-      style={
-        Object {
-          "maxHeight": "18em",
-        }
-      }
-    >
-      <div
-        className="lucid-DropMenu-option-container"
-        style={
-          Object {
-            "maxHeight": "18em",
-          }
-        }
-      >
-        <div
-          className="lucid-DropMenu-Option lucid-DropMenu-Option-is-disabled lucid-DropMenu-Option-is-wrapped"
-          key="DropMenuOption0"
-          onClick={[Function]}
-          onMouseMove={[Function]}
-        >
-          Red
-        </div>
-        <div
-          className="lucid-DropMenu-Option lucid-DropMenu-Option-is-wrapped"
-          key="DropMenuOption1"
-          onClick={[Function]}
-          onMouseMove={[Function]}
-        >
-          Green
-        </div>
-        <div
-          className="lucid-DropMenu-Option lucid-DropMenu-Option-is-disabled lucid-DropMenu-Option-is-wrapped"
-          key="DropMenuOption2"
-          onClick={[Function]}
-          onMouseMove={[Function]}
-        >
-          Blue
-        </div>
-      </div>
-    </ContextMenu.FlyOut>
-  </ContextMenu>
-</div>
-`;
-
-exports[`DropMenu [common] example testing should match snapshot(s) for 05.grouped-options 1`] = `
-<div
-  className="lucid-DropMenu lucid-DropMenu-base"
->
-  <ContextMenu
-    alignment="start"
-    direction="down"
-    directonOffset={0}
-    getAlignmentOffset={[Function]}
-    isExpanded={false}
-    minWidthOffset={0}
-    onClickOut={[Function]}
-    portalId="1-DropMenu-Portal-10"
-  >
-    <ContextMenu.Target
-      elementType="span"
-    >
-      <div
-        className="lucid-DropMenu-Control"
-        onClick={[Function]}
-        onKeyDown={[Function]}
-        tabIndex={0}
-      >
-        <Button
-          hasOnlyIcon={false}
-          isActive={false}
-          isDisabled={false}
-          onClick={[Function]}
-          type="button"
-        >
-          Select Color
-        </Button>
-      </div>
-    </ContextMenu.Target>
-    <ContextMenu.FlyOut
-      className="lucid-DropMenu"
-      style={
-        Object {
-          "maxHeight": "18em",
-        }
-      }
-    >
-      <div
-        className="lucid-DropMenu-option-container"
-        style={
-          Object {
-            "maxHeight": "18em",
-          }
-        }
-      >
-        <div
-          className="lucid-DropMenu-Option lucid-DropMenu-Option-is-grouped lucid-DropMenu-Option-is-wrapped"
-          key="DropMenuOption0"
-          onClick={[Function]}
-          onMouseMove={[Function]}
-        >
-          Select Color
-        </div>
-        <div
-          className="lucid-DropMenu-OptionGroup-divider"
-          key="OptionGroup-divider-0"
+        <path
+          d="M.5 4.5l7.5 7 7.5-7"
         />
-        <div
-          className="lucid-DropMenu-label"
-          key="OptionGroup-label1"
-        >
-          Screen
-        </div>
-        <div
-          className="lucid-DropMenu-Option lucid-DropMenu-Option-is-grouped lucid-DropMenu-Option-is-wrapped"
-          key="DropMenuOption1"
-          onClick={[Function]}
-          onMouseMove={[Function]}
-        >
-          Red
-        </div>
-        <div
-          className="lucid-DropMenu-Option lucid-DropMenu-Option-is-grouped lucid-DropMenu-Option-is-wrapped"
-          key="DropMenuOption2"
-          onClick={[Function]}
-          onMouseMove={[Function]}
-        >
-          Green
-        </div>
-        <div
-          className="lucid-DropMenu-Option lucid-DropMenu-Option-is-grouped lucid-DropMenu-Option-is-wrapped"
-          key="DropMenuOption3"
-          onClick={[Function]}
-          onMouseMove={[Function]}
-        >
-          Blue
-        </div>
-        <div
-          className="lucid-DropMenu-OptionGroup-divider"
-          key="OptionGroup-divider-1"
-        />
-        <div
-          className="lucid-DropMenu-label"
-          key="OptionGroup-label2"
-        >
-          Print
-        </div>
-        <div
-          className="lucid-DropMenu-Option lucid-DropMenu-Option-is-grouped lucid-DropMenu-Option-is-wrapped"
-          key="DropMenuOption4"
-          onClick={[Function]}
-          onMouseMove={[Function]}
-        >
-          Cyan
-        </div>
-        <div
-          className="lucid-DropMenu-Option lucid-DropMenu-Option-is-grouped lucid-DropMenu-Option-is-wrapped"
-          key="DropMenuOption5"
-          onClick={[Function]}
-          onMouseMove={[Function]}
-        >
-          Yellow
-        </div>
-        <div
-          className="lucid-DropMenu-Option lucid-DropMenu-Option-is-grouped lucid-DropMenu-Option-is-wrapped"
-          key="DropMenuOption6"
-          onClick={[Function]}
-          onMouseMove={[Function]}
-        >
-          Magenta
-        </div>
-        <div
-          className="lucid-DropMenu-Option lucid-DropMenu-Option-is-grouped lucid-DropMenu-Option-is-wrapped"
-          key="DropMenuOption7"
-          onClick={[Function]}
-          onMouseMove={[Function]}
-        >
-          Black
-        </div>
-      </div>
-    </ContextMenu.FlyOut>
-  </ContextMenu>
+      </svg>
+    </div>
+  </span>
 </div>
 `;
 
-exports[`DropMenu [common] example testing should match snapshot(s) for 06.text-menu 1`] = `
+exports[`DropMenu [common] example testing should match snapshot(s) for ButtonMenu 1`] = `
 <div
-  className="lucid-DropMenu lucid-DropMenu-base"
+  class="lucid-DropMenu lucid-DropMenu-base"
 >
-  <ContextMenu
-    alignment="start"
-    direction="down"
-    directonOffset={0}
-    getAlignmentOffset={[Function]}
-    isExpanded={false}
-    minWidthOffset={0}
-    onClickOut={[Function]}
-    portalId="1-DropMenu-Portal-11"
+  <span
+    class="lucid-ContextMenu"
   >
-    <ContextMenu.Target
-      elementType="span"
+    <div
+      class="lucid-DropMenu-Control"
+      tabindex="0"
     >
-      <div
-        className="lucid-DropMenu-Control"
-        onClick={[Function]}
-        onKeyDown={[Function]}
-        tabIndex={0}
+      <button
+        class="lucid-Button"
+        type="button"
       >
-        <TextField
-          debounceLevel={500}
-          isDisabled={false}
-          isMultiLine={false}
-          lazyLevel={1000}
-          onBlur={[Function]}
-          onChange={[Function]}
-          onChangeDebounced={[Function]}
-          onKeyDown={[Function]}
-          onSubmit={[Function]}
-          placeholder="Text DropMenu"
-          rows={5}
-          value=""
-        />
-      </div>
-    </ContextMenu.Target>
-    <ContextMenu.FlyOut
-      className="lucid-DropMenu"
-      style={
-        Object {
-          "maxHeight": "18em",
-        }
-      }
-    >
-      <div
-        className="lucid-DropMenu-option-container"
-        style={
-          Object {
-            "maxHeight": "18em",
-          }
-        }
-      >
-        <div
-          className="lucid-DropMenu-Option lucid-DropMenu-Option-is-wrapped"
-          key="DropMenuOption0"
-          onClick={[Function]}
-          onMouseMove={[Function]}
-        >
-          Red
-        </div>
-        <div
-          className="lucid-DropMenu-Option lucid-DropMenu-Option-is-wrapped"
-          key="DropMenuOption1"
-          onClick={[Function]}
-          onMouseMove={[Function]}
-        >
-          Green
-        </div>
-        <div
-          className="lucid-DropMenu-Option lucid-DropMenu-Option-is-wrapped"
-          key="DropMenuOption2"
-          onClick={[Function]}
-          onMouseMove={[Function]}
-        >
-          Blue
-        </div>
-      </div>
-    </ContextMenu.FlyOut>
-  </ContextMenu>
-</div>
-`;
-
-exports[`DropMenu [common] example testing should match snapshot(s) for 07.action-menu 1`] = `
-<div
-  className="lucid-DropMenu lucid-DropMenu-base"
->
-  <ContextMenu
-    alignment="start"
-    direction="down"
-    directonOffset={0}
-    getAlignmentOffset={[Function]}
-    isExpanded={false}
-    minWidthOffset={0}
-    onClickOut={[Function]}
-    portalId="1-DropMenu-Portal-12"
-  >
-    <ContextMenu.Target
-      elementType="span"
-    >
-      <div
-        className="lucid-DropMenu-Control"
-        onClick={[Function]}
-        onKeyDown={[Function]}
-        tabIndex={0}
-      >
-        Colors
-        <ChevronIcon
-          aspectRatio="xMidYMid meet"
-          color="primary"
-          direction="down"
-          isClickable={false}
-          isDisabled={false}
-          onClick={[Function]}
-          onSelect={[Function]}
-          size={16}
-          viewBox="0 0 16 16"
-        />
-      </div>
-    </ContextMenu.Target>
-    <ContextMenu.FlyOut
-      className="lucid-DropMenu"
-      style={
-        Object {
-          "maxHeight": "18em",
-        }
-      }
-    >
-      <div
-        className="lucid-DropMenu-option-container"
-        style={
-          Object {
-            "maxHeight": "18em",
-          }
-        }
-      >
-        <div
-          className="lucid-DropMenu-Option lucid-DropMenu-Option-is-wrapped"
-          key="DropMenuOption0"
-          onClick={[Function]}
-          onMouseMove={[Function]}
-        >
-          Red
-        </div>
-        <div
-          className="lucid-DropMenu-Option lucid-DropMenu-Option-is-wrapped"
-          key="DropMenuOption1"
-          onClick={[Function]}
-          onMouseMove={[Function]}
-        >
-          Green
-        </div>
-        <div
-          className="lucid-DropMenu-Option lucid-DropMenu-Option-is-wrapped"
-          key="DropMenuOption2"
-          onClick={[Function]}
-          onMouseMove={[Function]}
-        >
-          Blue
-        </div>
-      </div>
-    </ContextMenu.FlyOut>
-  </ContextMenu>
-</div>
-`;
-
-exports[`DropMenu [common] example testing should match snapshot(s) for 08.no-wrapping 1`] = `
-<div
-  className="lucid-DropMenu lucid-DropMenu-base"
->
-  <ContextMenu
-    alignment="center"
-    direction="down"
-    directonOffset={0}
-    getAlignmentOffset={[Function]}
-    isExpanded={false}
-    minWidthOffset={0}
-    onClickOut={[Function]}
-    portalId="1-DropMenu-Portal-13"
-  >
-    <ContextMenu.Target
-      elementType="span"
-    >
-      <div
-        className="lucid-DropMenu-Control"
-        onClick={[Function]}
-        onKeyDown={[Function]}
-        tabIndex={0}
-      >
-        <Button
-          hasOnlyIcon={false}
-          isActive={false}
-          isDisabled={false}
-          onClick={[Function]}
-          type="button"
-        >
-          Click me
-        </Button>
-      </div>
-    </ContextMenu.Target>
-    <ContextMenu.FlyOut
-      className="lucid-DropMenu"
-      style={
-        Object {
-          "maxHeight": "18em",
-        }
-      }
-    >
-      <div
-        className="lucid-DropMenu-option-container"
-        style={
-          Object {
-            "maxHeight": "18em",
-          }
-        }
-      >
-        <div
-          className="lucid-DropMenu-Option"
-          key="DropMenuOption0"
-          onClick={[Function]}
-          onMouseMove={[Function]}
-        >
-          Intentionally run off screen -- Adipisicing totam saepe officia repellat quo cupiditate ducimus hic? Quod temporibus corrupti eaque ullam quo nulla corporis !
-        </div>
-        <div
-          className="lucid-DropMenu-Option"
-          key="DropMenuOption1"
-          onClick={[Function]}
-          onMouseMove={[Function]}
-        >
-          Adipisicing totam provident excepturi officia non cum alias? Labore possimus adipisci id eveniet numquam tempora totam est. Explicabo recusandae quo tempore
-        </div>
-        <div
-          className="lucid-DropMenu-Option"
-          key="DropMenuOption2"
-          onClick={[Function]}
-          onMouseMove={[Function]}
-        >
-          Consectetur doloribus dignissimos exercitationem vel tempora praesentium nostrum eveniet inventore. Odit inventore quas optio id eum nisi. Minima consequuntur
-        </div>
-      </div>
-    </ContextMenu.FlyOut>
-  </ContextMenu>
-</div>
-`;
-
-exports[`DropMenu [common] example testing should match snapshot(s) for 09.stateless 1`] = `
-<div
-  className="lucid-DropMenu lucid-DropMenu-base lucid-DropMenu-is-expanded lucid-DropMenu-direction-down"
->
-  <ContextMenu
-    alignment="start"
-    direction="down"
-    directonOffset={0}
-    getAlignmentOffset={[Function]}
-    isExpanded={true}
-    minWidthOffset={0}
-    onClickOut={[Function]}
-    portalId="1-DropMenu-Portal-14"
-  >
-    <ContextMenu.Target
-      elementType="span"
-    >
-      <div
-        className="lucid-DropMenu-Control"
-        onClick={[Function]}
-        onKeyDown={[Function]}
-        tabIndex={0}
-      >
-        <Button
-          hasOnlyIcon={false}
-          isActive={false}
-          isDisabled={false}
-          onClick={[Function]}
-          type="button"
+        <span
+          class="lucid-Button-content"
         >
           Select Color
-        </Button>
-      </div>
-    </ContextMenu.Target>
-    <ContextMenu.FlyOut
-      className="lucid-DropMenu"
-      style={
-        Object {
-          "maxHeight": "18em",
-        }
-      }
+        </span>
+      </button>
+    </div>
+  </span>
+</div>
+`;
+
+exports[`DropMenu [common] example testing should match snapshot(s) for Default 1`] = `
+<div
+  class="lucid-DropMenu lucid-DropMenu-base"
+>
+  <span
+    class="lucid-ContextMenu"
+  >
+    <div
+      class="lucid-DropMenu-Control"
+      tabindex="0"
+    >
+      Select
+    </div>
+  </span>
+</div>
+`;
+
+exports[`DropMenu [common] example testing should match snapshot(s) for Disabled 1`] = `
+<div
+  class="lucid-DropMenu lucid-DropMenu-base"
+>
+  <span
+    class="lucid-ContextMenu"
+  >
+    <div
+      class="lucid-DropMenu-Control"
+    >
+      <button
+        class="lucid-Button"
+        tabindex="-1"
+        type="button"
+      >
+        <span
+          class="lucid-Button-content"
+        >
+          Select Color
+        </span>
+      </button>
+    </div>
+  </span>
+</div>
+`;
+
+exports[`DropMenu [common] example testing should match snapshot(s) for DisabledOptions 1`] = `
+<div
+  class="lucid-DropMenu lucid-DropMenu-base"
+>
+  <span
+    class="lucid-ContextMenu"
+  >
+    <div
+      class="lucid-DropMenu-Control"
+      tabindex="0"
+    >
+      <button
+        class="lucid-Button"
+        type="button"
+      >
+        <span
+          class="lucid-Button-content"
+        >
+          Select Color
+        </span>
+      </button>
+    </div>
+  </span>
+</div>
+`;
+
+exports[`DropMenu [common] example testing should match snapshot(s) for GroupedOptions 1`] = `
+<div
+  class="lucid-DropMenu lucid-DropMenu-base"
+>
+  <span
+    class="lucid-ContextMenu"
+  >
+    <div
+      class="lucid-DropMenu-Control"
+      tabindex="0"
+    >
+      <button
+        class="lucid-Button"
+        type="button"
+      >
+        <span
+          class="lucid-Button-content"
+        >
+          Select Color
+        </span>
+      </button>
+    </div>
+  </span>
+</div>
+`;
+
+exports[`DropMenu [common] example testing should match snapshot(s) for NoWrapping 1`] = `
+<div
+  style="text-align:right"
+>
+  <div
+    class="lucid-DropMenu lucid-DropMenu-base"
+  >
+    <span
+      class="lucid-ContextMenu"
     >
       <div
-        className="lucid-DropMenu-option-container"
-        style={
-          Object {
-            "maxHeight": "18em",
-          }
-        }
+        class="lucid-DropMenu-Control"
+        tabindex="0"
       >
-        <div
-          className="lucid-DropMenu-label"
-          key="OptionGroup-label0"
+        <button
+          class="lucid-Button"
+          type="button"
         >
-          Preferred
-        </div>
-        <div
-          className="lucid-DropMenu-Option lucid-DropMenu-Option-is-grouped lucid-DropMenu-Option-is-selected lucid-DropMenu-Option-is-wrapped"
-          key="DropMenuOption0"
-          onClick={[Function]}
-          onMouseMove={[Function]}
-        >
-          Red
-        </div>
-        <div
-          className="lucid-DropMenu-Option lucid-DropMenu-Option-is-grouped lucid-DropMenu-Option-is-wrapped"
-          key="DropMenuOption1"
-          onClick={[Function]}
-          onMouseMove={[Function]}
-        >
-          Green
-        </div>
-        <div
-          className="lucid-DropMenu-Option lucid-DropMenu-Option-is-grouped lucid-DropMenu-Option-is-wrapped"
-          key="DropMenuOption2"
-          onClick={[Function]}
-          onMouseMove={[Function]}
-        >
-          Blue
-        </div>
-        <div
-          className="lucid-DropMenu-OptionGroup-divider"
-          key="OptionGroup-divider-0"
-        />
-        <div
-          className="lucid-DropMenu-Option lucid-DropMenu-Option-is-focused lucid-DropMenu-Option-is-wrapped"
-          key="DropMenuOption3"
-          onClick={[Function]}
-          onMouseMove={[Function]}
-        >
-          Orange
-        </div>
-        <div
-          className="lucid-DropMenu-Option lucid-DropMenu-Option-is-disabled lucid-DropMenu-Option-is-wrapped"
-          key="DropMenuOption4"
-          onClick={[Function]}
-          onMouseMove={[Function]}
-        >
-          Violet
-        </div>
-        <div
-          className="lucid-DropMenu-Option lucid-DropMenu-Option-is-disabled lucid-DropMenu-Option-is-wrapped"
-          key="DropMenuOption5"
-          onClick={[Function]}
-          onMouseMove={[Function]}
-        >
-          Brown
-        </div>
+          <span
+            class="lucid-Button-content"
+          >
+            Click me
+          </span>
+        </button>
       </div>
-    </ContextMenu.FlyOut>
-  </ContextMenu>
+    </span>
+  </div>
+</div>
+`;
+
+exports[`DropMenu [common] example testing should match snapshot(s) for Stateless 1`] = `
+<div
+  class="lucid-DropMenu lucid-DropMenu-base lucid-DropMenu-is-expanded lucid-DropMenu-direction-down"
+>
+  <span
+    class="lucid-ContextMenu"
+  >
+    <div
+      class="lucid-DropMenu-Control"
+      tabindex="0"
+    >
+      <button
+        class="lucid-Button"
+        type="button"
+      >
+        <span
+          class="lucid-Button-content"
+        >
+          Select Color
+        </span>
+      </button>
+    </div>
+  </span>
+</div>
+`;
+
+exports[`DropMenu [common] example testing should match snapshot(s) for TextMenu 1`] = `
+<div
+  class="lucid-DropMenu lucid-DropMenu-base"
+>
+  <span
+    class="lucid-ContextMenu"
+  >
+    <div
+      class="lucid-DropMenu-Control"
+      tabindex="0"
+    >
+      <input
+        class="lucid-TextField lucid-TextField-is-single-line"
+        placeholder="Text DropMenu"
+        rows="5"
+        type="text"
+        value=""
+      />
+    </div>
+  </span>
 </div>
 `;

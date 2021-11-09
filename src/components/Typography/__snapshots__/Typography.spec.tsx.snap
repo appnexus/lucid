@@ -1,214 +1,145 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Typography [common] example testing should match snapshot(s) for 01.variants 1`] = `
-<h1
-  className="lucid-Typography lucid-Typography-h1"
->
-  h1. Heading
-</h1>
-`;
-
-exports[`Typography [common] example testing should match snapshot(s) for 01.variants 2`] = `
-<h2
-  className="lucid-Typography lucid-Typography-h2"
->
-  h2. Heading
-</h2>
-`;
-
-exports[`Typography [common] example testing should match snapshot(s) for 01.variants 3`] = `
-<h3
-  className="lucid-Typography lucid-Typography-h3"
->
-  h3. Heading
-</h3>
-`;
-
-exports[`Typography [common] example testing should match snapshot(s) for 01.variants 4`] = `
-<p
-  className="lucid-Typography lucid-Typography-p"
->
-  p. paragraph text
-</p>
-`;
-
-exports[`Typography [common] example testing should match snapshot(s) for 01.variants 5`] = `
-<p
-  className="lucid-Typography lucid-Typography-tabular"
->
-  tabular. text for tables
-</p>
-`;
-
-exports[`Typography [common] example testing should match snapshot(s) for 01.variants 6`] = `
-<a
-  className="lucid-Typography lucid-Typography-a"
->
-  a. link text
-</a>
-`;
-
-exports[`Typography [common] example testing should match snapshot(s) for 01.variants 7`] = `
-<pre
-  className="lucid-Typography lucid-Typography-pre"
->
-  pre. preformatted text
-</pre>
-`;
-
-exports[`Typography [common] example testing should match snapshot(s) for 01.variants 8`] = `
-<code
-  className="lucid-Typography lucid-Typography-code"
->
-  code. snazzy code
-</code>
-`;
-
-exports[`Typography [common] example testing should match snapshot(s) for 01.variants 9`] = `
-<kbd
-  className="lucid-Typography lucid-Typography-kbd"
->
-  kbd. keyboard inputs
-</kbd>
-`;
-
-exports[`Typography [common] example testing should match snapshot(s) for 01.variants 10`] = `
-<samp
-  className="lucid-Typography lucid-Typography-samp"
->
-  samp. sample code outputs
-</samp>
-`;
-
-exports[`Typography [common] example testing should match snapshot(s) for 01.variants 11`] = `
-<span
-  className="lucid-Typography lucid-Typography-span"
->
-  span. sample code outputs with help bubble
-  <div
-    className="HelpBubble"
+exports[`Typography [common] example testing should match snapshot(s) for Nested 1`] = `
+<section>
+  <h1
+    class="lucid-Typography lucid-Typography-h1"
   >
-    <ToolTip
-      alignment="start"
-      direction="right"
+    Title
+  </h1>
+  <h2
+    class="lucid-Typography lucid-Typography-h2"
+  >
+    subtitle
+  </h2>
+  <p
+    class="lucid-Typography lucid-Typography-p"
+  >
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pencil mustachioed graeme souness, mustachioed waxy gurn rugged el snort graeme souness burt reynolds educated village people boogie nights pencil man of the year 1986, pencil village people graeme souness rugged boogie nights mouthbrow educated burt reynolds waxy gurn man of the year 1986 des lynam charming villain mustachioed cardinal richelieu el snort. Borat d’artagnan hungarian testosterone trophy frontiersman hairy kiss. beefeater chevron, hairy kiss. cardinal richelieu groucho-a-like testosterone trophy d’artagnan dick van dyke rugged chevron Droopy frontiersman borat beefeater hungarian chevron, cardinal richelieu d’artagnan beefeater el snort Droopy dodgy uncle clive groucho-a-like hairy kiss. chevron frontiersman chevron dick van dyke walrus leader of men rugged borat bad guy testosterone trophy groucho-a-like alpha trion hungarian.
+    <br />
+    <br />
+    <a
+      class="lucid-Typography lucid-Typography-a"
+      style="display:block"
     >
-      <ToolTip.Title
-        className="HelpBubble-title"
-      >
-        look at me
-      </ToolTip.Title>
-      <ToolTip.Target>
-        <HelpIcon
-          aspectRatio="xMidYMid meet"
-          color="primary"
-          isClickable={false}
-          isDisabled={false}
-          onClick={[Function]}
-          onSelect={[Function]}
-          size={12}
-          viewBox="0 0 16 16"
-        />
-      </ToolTip.Target>
-    </ToolTip>
-  </div>
-</span>
-`;
-
-exports[`Typography [common] example testing should match snapshot(s) for 02.nested 1`] = `
-<h1
-  className="lucid-Typography lucid-Typography-h1"
->
-  Title
-</h1>
-`;
-
-exports[`Typography [common] example testing should match snapshot(s) for 02.nested 2`] = `
-<h2
-  className="lucid-Typography lucid-Typography-h2"
->
-  subtitle
-</h2>
-`;
-
-exports[`Typography [common] example testing should match snapshot(s) for 02.nested 3`] = `
-<p
-  className="lucid-Typography lucid-Typography-p"
->
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pencil mustachioed graeme souness, mustachioed waxy gurn rugged el snort graeme souness burt reynolds educated village people boogie nights pencil man of the year 1986, pencil village people graeme souness rugged boogie nights mouthbrow educated burt reynolds waxy gurn man of the year 1986 des lynam charming villain mustachioed cardinal richelieu el snort. Borat d’artagnan hungarian testosterone trophy frontiersman hairy kiss. beefeater chevron, hairy kiss. cardinal richelieu groucho-a-like testosterone trophy d’artagnan dick van dyke rugged chevron Droopy frontiersman borat beefeater hungarian chevron, cardinal richelieu d’artagnan beefeater el snort Droopy dodgy uncle clive groucho-a-like hairy kiss. chevron frontiersman chevron dick van dyke walrus leader of men rugged borat bad guy testosterone trophy groucho-a-like alpha trion hungarian.
-  <br />
-  <br />
-  <Typography
-    style={
-      Object {
-        "display": "block",
-      }
-    }
-    variant="a"
-  >
-    Like!
-  </Typography>
-  <Typography
-    style={
-      Object {
-        "display": "block",
-      }
-    }
-    variant="a"
-  >
-    Subscribe!
-  </Typography>
-  <br />
-  <Typography
-    variant="h3"
+      Like!
+    </a>
+    <a
+      class="lucid-Typography lucid-Typography-a"
+      style="display:block"
+    >
+      Subscribe!
+    </a>
+    <br />
+  </p>
+  <h3
+    class="lucid-Typography lucid-Typography-h3"
   >
     Code Example
-  </Typography>
-  <Typography
-    variant="code"
+  </h3>
+  <code
+    class="lucid-Typography lucid-Typography-code"
   >
     npm install all-the-things
-  </Typography>
-</p>
+  </code>
+  <p />
+</section>
 `;
 
-exports[`Typography [common] example testing should match snapshot(s) for 02.nested 4`] = `
-<a
-  className="lucid-Typography lucid-Typography-a"
-  style={
-    Object {
-      "display": "block",
-    }
-  }
->
-  Like!
-</a>
-`;
-
-exports[`Typography [common] example testing should match snapshot(s) for 02.nested 5`] = `
-<a
-  className="lucid-Typography lucid-Typography-a"
-  style={
-    Object {
-      "display": "block",
-    }
-  }
->
-  Subscribe!
-</a>
-`;
-
-exports[`Typography [common] example testing should match snapshot(s) for 02.nested 6`] = `
-<h3
-  className="lucid-Typography lucid-Typography-h3"
->
-  Code Example
-</h3>
-`;
-
-exports[`Typography [common] example testing should match snapshot(s) for 02.nested 7`] = `
-<code
-  className="lucid-Typography lucid-Typography-code"
->
-  npm install all-the-things
-</code>
+exports[`Typography [common] example testing should match snapshot(s) for Variants 1`] = `
+<div>
+  <h1
+    class="lucid-Typography lucid-Typography-h1"
+  >
+    h1. Heading
+  </h1>
+  <h2
+    class="lucid-Typography lucid-Typography-h2"
+  >
+    h2. Heading
+  </h2>
+  <h3
+    class="lucid-Typography lucid-Typography-h3"
+  >
+    h3. Heading
+  </h3>
+  <p
+    class="lucid-Typography lucid-Typography-p"
+  >
+    p. paragraph text
+  </p>
+  <p
+    class="lucid-Typography lucid-Typography-tabular"
+  >
+    tabular. text for tables
+  </p>
+  <a
+    class="lucid-Typography lucid-Typography-a"
+  >
+    a. link text
+  </a>
+  <pre
+    class="lucid-Typography lucid-Typography-pre"
+  >
+    pre. preformatted text
+  </pre>
+  <code
+    class="lucid-Typography lucid-Typography-code"
+  >
+    code. snazzy code
+  </code>
+   
+  <br />
+  <kbd
+    class="lucid-Typography lucid-Typography-kbd"
+  >
+    kbd. keyboard inputs
+  </kbd>
+   
+  <br />
+  <samp
+    class="lucid-Typography lucid-Typography-samp"
+  >
+    samp. sample code outputs
+  </samp>
+   
+  <br />
+  <span
+    class="lucid-Typography lucid-Typography-span"
+  >
+    span. sample code outputs with help bubble
+    <div
+      class="HelpBubble"
+    >
+      <span
+        class="lucid-ContextMenu lucid-ToolTip"
+      >
+        <svg
+          class="lucid-Icon lucid-Icon-color-primary lucid-HelpIcon"
+          height="12"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 16 16"
+          width="12"
+        >
+          <path
+            d="M5.5 6.138C5.5 4.681 6.533 3.5 7.99 3.5s2.51 1.135 2.51 2.592c0 .696-.398 1.323-1.259 1.885-.806.525-1.251.861-1.251 1.536V10"
+          />
+          <circle
+            class="lucid-HelpIcon-period"
+            cx="7.99"
+            cy="12.001"
+            r=".293"
+          />
+          <circle
+            cx="8"
+            cy="8"
+            r="7.5"
+          />
+        </svg>
+      </span>
+    </div>
+  </span>
+   
+  <br />
+</div>
 `;

@@ -1,115 +1,85 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Validation [common] example testing should match snapshot(s) for basic 1`] = `
-<div
-  className="lucid-Validation lucid-Validation-is-error"
->
-  <TextField
-    debounceLevel={500}
-    isDisabled={false}
-    isMultiLine={false}
-    lazyLevel={1000}
-    onBlur={[Function]}
-    onChange={[Function]}
-    onChangeDebounced={[Function]}
-    onKeyDown={[Function]}
-    onSubmit={[Function]}
-    rows={5}
-    value="Text Field Text"
-  />
+exports[`Validation [common] example testing should match snapshot(s) for Default 1`] = `
+<div>
+  <p>
+    Text field with error (method 1)
+  </p>
   <div
-    className="lucid-Validation-error-content"
+    class="lucid-Validation lucid-Validation-is-error"
   >
-    Error One
+    <input
+      class="lucid-TextField lucid-TextField-is-single-line"
+      rows="5"
+      type="text"
+      value="Text Field Text"
+    />
+    <div
+      class="lucid-Validation-error-content"
+    >
+      Error One
+    </div>
   </div>
-</div>
-`;
-
-exports[`Validation [common] example testing should match snapshot(s) for basic 2`] = `
-<div
-  className="lucid-Validation lucid-Validation-is-error"
->
-  <Validation.Error>
-    <span>
-      Error Two
-    </span>
-  </Validation.Error>
-  <TextField
-    debounceLevel={500}
-    isDisabled={false}
-    isMultiLine={false}
-    lazyLevel={1000}
-    onBlur={[Function]}
-    onChange={[Function]}
-    onChangeDebounced={[Function]}
-    onKeyDown={[Function]}
-    onSubmit={[Function]}
-    rows={5}
-    value="Text Field Text"
-  />
+  <br />
+  <p>
+    Text field with error (method 2)
+  </p>
   <div
-    className="lucid-Validation-error-content"
+    class="lucid-Validation lucid-Validation-is-error"
   >
-    <span>
-      Error Two
-    </span>
+    <input
+      class="lucid-TextField lucid-TextField-is-single-line"
+      rows="5"
+      type="text"
+      value="Text Field Text"
+    />
+    <div
+      class="lucid-Validation-error-content"
+    >
+      <span>
+        Error Two
+      </span>
+    </div>
   </div>
-</div>
-`;
-
-exports[`Validation [common] example testing should match snapshot(s) for basic 3`] = `
-<div
-  className="lucid-Validation lucid-Validation-is-error"
->
-  <TextField
-    debounceLevel={500}
-    isDisabled={false}
-    isMultiLine={true}
-    lazyLevel={1000}
-    onBlur={[Function]}
-    onChange={[Function]}
-    onChangeDebounced={[Function]}
-    onKeyDown={[Function]}
-    onSubmit={[Function]}
-    rows={3}
-    value="Text Area Text"
-  />
+  <br />
+  <p>
+    Text area with error (method 1)
+  </p>
   <div
-    className="lucid-Validation-error-content"
+    class="lucid-Validation lucid-Validation-is-error"
   >
-    Error Three
+    <textarea
+      class="lucid-TextField lucid-TextField-is-multi-line"
+      rows="3"
+    >
+      Text Area Text
+    </textarea>
+    <div
+      class="lucid-Validation-error-content"
+    >
+      Error Three
+    </div>
   </div>
-</div>
-`;
-
-exports[`Validation [common] example testing should match snapshot(s) for basic 4`] = `
-<div
-  className="lucid-Validation lucid-Validation-is-error"
->
-  <Validation.Error>
-    <span>
-      Error Four
-    </span>
-  </Validation.Error>
-  <TextField
-    debounceLevel={500}
-    isDisabled={false}
-    isMultiLine={true}
-    lazyLevel={1000}
-    onBlur={[Function]}
-    onChange={[Function]}
-    onChangeDebounced={[Function]}
-    onKeyDown={[Function]}
-    onSubmit={[Function]}
-    rows={3}
-    value="Text Area Text"
-  />
+  <br />
+  <p>
+    Text area with error (method 2)
+  </p>
   <div
-    className="lucid-Validation-error-content"
+    class="lucid-Validation lucid-Validation-is-error"
   >
-    <span>
-      Error Four
-    </span>
+    <textarea
+      class="lucid-TextField lucid-TextField-is-multi-line"
+      rows="3"
+    >
+      Text Area Text
+    </textarea>
+    <div
+      class="lucid-Validation-error-content"
+    >
+      <span>
+        Error Four
+      </span>
+    </div>
   </div>
 </div>
 `;

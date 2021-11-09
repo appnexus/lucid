@@ -1,66 +1,45 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Underline [common] example testing should match snapshot(s) for 01.with-defaults 1`] = `
+exports[`Underline [common] example testing should match snapshot(s) for WithDefaults 1`] = `
 <span
-  className="lucid-Underline"
+  class="lucid-Underline"
 >
   <span
-    key="match"
-    style={
-      Object {
-        "textDecoration": "underline",
-      }
-    }
+    style="text-decoration:underline"
   >
     foo bar baz
   </span>
 </span>
 `;
 
-exports[`Underline [common] example testing should match snapshot(s) for 02.with-regex-match 1`] = `
+exports[`Underline [common] example testing should match snapshot(s) for WithRegexMatch 1`] = `
 <span
-  className="lucid-Underline"
+  class="lucid-Underline"
 >
   <span
-    key="match"
-    style={
-      Object {
-        "textDecoration": "underline",
-      }
-    }
+    style="text-decoration:underline"
   >
     foo
   </span>
-  <span
-    key="post"
-  >
+  <span>
      bar baz
   </span>
 </span>
 `;
 
-exports[`Underline [common] example testing should match snapshot(s) for 03.with-string-match 1`] = `
+exports[`Underline [common] example testing should match snapshot(s) for WithStringMatch 1`] = `
 <span
-  className="lucid-Underline"
+  class="lucid-Underline"
 >
-  <span
-    key="pre"
-  >
+  <span>
     foo 
   </span>
   <span
-    key="match"
-    style={
-      Object {
-        "textDecoration": "underline",
-      }
-    }
+    style="text-decoration:underline"
   >
     bar
   </span>
-  <span
-    key="post"
-  >
+  <span>
      baz
   </span>
 </span>

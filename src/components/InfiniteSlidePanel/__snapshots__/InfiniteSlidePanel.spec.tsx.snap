@@ -1,243 +1,158 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`InfiniteSlidePanel [common] example testing should match snapshot(s) for 1.dynamic-content 1`] = `
-<SlidePanel
-  className="lucid-InfiniteSlidePanel"
-  isAnimated={true}
-  isLooped={true}
-  offset={0}
-  onSwipe={[Function]}
-  slidesToShow={3}
->
-  <SlidePanel.Slide
-    className="lucid-InfiniteSlidePanel-Slide-in-frame"
-    key="0"
+exports[`InfiniteSlidePanel [common] example testing should match snapshot(s) for DynamicContent 1`] = `
+<section>
+  <button
+    class="lucid-Button"
+    type="button"
+  >
+    <span
+      class="lucid-Button-content"
+    >
+      Backward
+    </span>
+  </button>
+  <button
+    class="lucid-Button"
+    type="button"
+  >
+    <span
+      class="lucid-Button-content"
+    >
+      Forward
+    </span>
+  </button>
+  Current offset: 0
+  <div
+    class="lucid-SlidePanel lucid-InfiniteSlidePanel"
   >
     <div
-      style={
-        Object {
-          "alignItems": "center",
-          "background": "rgb(128,128,128)",
-          "display": "flex",
-          "height": "30vh",
-          "justifyContent": "center",
-          "width": "100%",
-        }
-      }
+      class="lucid-SlidePanel-slidestrip lucid-InfiniteSlidePanel"
+      style="transform:translateX(calc(-200% + 0px))"
     >
-      0
+      <div
+        class="lucid-SlidePanel-Slide lucid-InfiniteSlidePanel-Slide-in-frame"
+        style="flex-grow:1;flex-shrink:0;flex-basis:33.333333333333336%"
+      >
+        <div
+          style="width:100%;height:30vh;background:rgb(128,128,128);display:flex;justify-content:center;align-items:center"
+        >
+          0
+        </div>
+      </div>
+      <div
+        class="lucid-SlidePanel-Slide lucid-InfiniteSlidePanel-Slide-in-frame"
+        style="flex-grow:1;flex-shrink:0;flex-basis:33.333333333333336%"
+      >
+        <div
+          style="width:100%;height:30vh;background:rgb(168,204,232);display:flex;justify-content:center;align-items:center"
+        >
+          1
+        </div>
+      </div>
+      <div
+        class="lucid-SlidePanel-Slide lucid-InfiniteSlidePanel-Slide-in-frame"
+        style="flex-grow:1;flex-shrink:0;flex-basis:33.333333333333336%"
+      >
+        <div
+          style="width:100%;height:30vh;background:rgb(204,250,248);display:flex;justify-content:center;align-items:center"
+        >
+          2
+        </div>
+      </div>
+      <div
+        class="lucid-SlidePanel-Slide"
+        style="flex-grow:1;flex-shrink:0;flex-basis:33.333333333333336%"
+      >
+        <div
+          style="width:100%;height:30vh;background:rgb(232,248,162);display:flex;justify-content:center;align-items:center"
+        >
+          3
+        </div>
+      </div>
+      <div
+        class="lucid-SlidePanel-Slide"
+        style="flex-grow:1;flex-shrink:0;flex-basis:33.333333333333336%"
+      >
+        <div
+          style="width:100%;height:30vh;background:rgb(250,199,47);display:flex;justify-content:center;align-items:center"
+        >
+          4
+        </div>
+      </div>
+      <div
+        class="lucid-SlidePanel-Slide"
+        style="flex-grow:1;flex-shrink:0;flex-basis:33.333333333333336%"
+      >
+        <div
+          style="width:100%;height:30vh;background:rgb(255,122,0);display:flex;justify-content:center;align-items:center"
+        >
+          5
+        </div>
+      </div>
+      <div
+        class="lucid-SlidePanel-Slide"
+        style="flex-grow:1;flex-shrink:0;flex-basis:33.333333333333336%"
+      >
+        <div
+          style="width:100%;height:30vh;background:rgb(7,208,195);display:flex;justify-content:center;align-items:center"
+        >
+          -6
+        </div>
+      </div>
+      <div
+        class="lucid-SlidePanel-Slide"
+        style="flex-grow:1;flex-shrink:0;flex-basis:33.333333333333336%"
+      >
+        <div
+          style="width:100%;height:30vh;background:rgb(0,133,255);display:flex;justify-content:center;align-items:center"
+        >
+          -5
+        </div>
+      </div>
+      <div
+        class="lucid-SlidePanel-Slide"
+        style="flex-grow:1;flex-shrink:0;flex-basis:33.333333333333336%"
+      >
+        <div
+          style="width:100%;height:30vh;background:rgb(5,56,208);display:flex;justify-content:center;align-items:center"
+        >
+          -4
+        </div>
+      </div>
+      <div
+        class="lucid-SlidePanel-Slide"
+        style="flex-grow:1;flex-shrink:0;flex-basis:33.333333333333336%"
+      >
+        <div
+          style="width:100%;height:30vh;background:rgb(23,7,93);display:flex;justify-content:center;align-items:center"
+        >
+          -3
+        </div>
+      </div>
+      <div
+        class="lucid-SlidePanel-Slide"
+        style="flex-grow:1;flex-shrink:0;flex-basis:33.333333333333336%"
+      >
+        <div
+          style="width:100%;height:30vh;background:rgb(51,5,7);display:flex;justify-content:center;align-items:center"
+        >
+          -2
+        </div>
+      </div>
+      <div
+        class="lucid-SlidePanel-Slide"
+        style="flex-grow:1;flex-shrink:0;flex-basis:33.333333333333336%"
+      >
+        <div
+          style="width:100%;height:30vh;background:rgb(87,51,23);display:flex;justify-content:center;align-items:center"
+        >
+          -1
+        </div>
+      </div>
     </div>
-  </SlidePanel.Slide>
-  <SlidePanel.Slide
-    className="lucid-InfiniteSlidePanel-Slide-in-frame"
-    key="1"
-  >
-    <div
-      style={
-        Object {
-          "alignItems": "center",
-          "background": "rgb(168,204,232)",
-          "display": "flex",
-          "height": "30vh",
-          "justifyContent": "center",
-          "width": "100%",
-        }
-      }
-    >
-      1
-    </div>
-  </SlidePanel.Slide>
-  <SlidePanel.Slide
-    className="lucid-InfiniteSlidePanel-Slide-in-frame"
-    key="2"
-  >
-    <div
-      style={
-        Object {
-          "alignItems": "center",
-          "background": "rgb(204,250,248)",
-          "display": "flex",
-          "height": "30vh",
-          "justifyContent": "center",
-          "width": "100%",
-        }
-      }
-    >
-      2
-    </div>
-  </SlidePanel.Slide>
-  <SlidePanel.Slide
-    className=""
-    key="3"
-  >
-    <div
-      style={
-        Object {
-          "alignItems": "center",
-          "background": "rgb(232,248,162)",
-          "display": "flex",
-          "height": "30vh",
-          "justifyContent": "center",
-          "width": "100%",
-        }
-      }
-    >
-      3
-    </div>
-  </SlidePanel.Slide>
-  <SlidePanel.Slide
-    className=""
-    key="4"
-  >
-    <div
-      style={
-        Object {
-          "alignItems": "center",
-          "background": "rgb(250,199,47)",
-          "display": "flex",
-          "height": "30vh",
-          "justifyContent": "center",
-          "width": "100%",
-        }
-      }
-    >
-      4
-    </div>
-  </SlidePanel.Slide>
-  <SlidePanel.Slide
-    className=""
-    key="5"
-  >
-    <div
-      style={
-        Object {
-          "alignItems": "center",
-          "background": "rgb(255,122,0)",
-          "display": "flex",
-          "height": "30vh",
-          "justifyContent": "center",
-          "width": "100%",
-        }
-      }
-    >
-      5
-    </div>
-  </SlidePanel.Slide>
-  <SlidePanel.Slide
-    className=""
-    key="6"
-  >
-    <div
-      style={
-        Object {
-          "alignItems": "center",
-          "background": "rgb(7,208,195)",
-          "display": "flex",
-          "height": "30vh",
-          "justifyContent": "center",
-          "width": "100%",
-        }
-      }
-    >
-      -6
-    </div>
-  </SlidePanel.Slide>
-  <SlidePanel.Slide
-    className=""
-    key="7"
-  >
-    <div
-      style={
-        Object {
-          "alignItems": "center",
-          "background": "rgb(0,133,255)",
-          "display": "flex",
-          "height": "30vh",
-          "justifyContent": "center",
-          "width": "100%",
-        }
-      }
-    >
-      -5
-    </div>
-  </SlidePanel.Slide>
-  <SlidePanel.Slide
-    className=""
-    key="8"
-  >
-    <div
-      style={
-        Object {
-          "alignItems": "center",
-          "background": "rgb(5,56,208)",
-          "display": "flex",
-          "height": "30vh",
-          "justifyContent": "center",
-          "width": "100%",
-        }
-      }
-    >
-      -4
-    </div>
-  </SlidePanel.Slide>
-  <SlidePanel.Slide
-    className=""
-    key="9"
-  >
-    <div
-      style={
-        Object {
-          "alignItems": "center",
-          "background": "rgb(23,7,93)",
-          "display": "flex",
-          "height": "30vh",
-          "justifyContent": "center",
-          "width": "100%",
-        }
-      }
-    >
-      -3
-    </div>
-  </SlidePanel.Slide>
-  <SlidePanel.Slide
-    className=""
-    key="10"
-  >
-    <div
-      style={
-        Object {
-          "alignItems": "center",
-          "background": "rgb(51,5,7)",
-          "display": "flex",
-          "height": "30vh",
-          "justifyContent": "center",
-          "width": "100%",
-        }
-      }
-    >
-      -2
-    </div>
-  </SlidePanel.Slide>
-  <SlidePanel.Slide
-    className=""
-    key="11"
-  >
-    <div
-      style={
-        Object {
-          "alignItems": "center",
-          "background": "rgb(87,51,23)",
-          "display": "flex",
-          "height": "30vh",
-          "justifyContent": "center",
-          "width": "100%",
-        }
-      }
-    >
-      -1
-    </div>
-  </SlidePanel.Slide>
-</SlidePanel>
+  </div>
+</section>
 `;
 
 exports[`InfiniteSlidePanel required children should throw if child slide not passed a function child 1`] = `"InfiniteSlidePanel children must be a single function \`(slideOffset) => { /* returns React.PropTypes.node */ }\`"`;

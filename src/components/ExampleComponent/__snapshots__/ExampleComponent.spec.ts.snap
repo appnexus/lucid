@@ -1,16 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ExampleComponent [common] example testing should match snapshot(s) for 0.basic 1`] = `
+exports[`ExampleComponent [common] example testing should match snapshot(s) for Default 1`] = `
 <div
-  className="lucid-ExampleComponent"
+  class="lucid-ExampleComponent"
 >
   Feel free to play with this example component to see how to create your own.
 </div>
 `;
 
-exports[`ExampleComponent [common] example testing should match snapshot(s) for 1.propExample 1`] = `
+exports[`ExampleComponent [common] example testing should match snapshot(s) for PropExample 1`] = `
 <div
-  className="lucid-ExampleComponent lucid-ExampleComponent-isX"
+  class="lucid-ExampleComponent lucid-ExampleComponent-isX"
 >
   Be sure to show consumers of your component examples of how each prop is implemented.
 </div>

@@ -1,57 +1,78 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AxisLabel [common] example testing should match snapshot(s) for basic 1`] = `
-<text
-  className="lucid-AxisLabel"
-  dy="1em"
-  style={
-    Object {
-      "fill": "#000",
-    }
-  }
-  transform="rotate(-90)"
-  x={-200}
-  y={0}
+exports[`AxisLabel [common] example testing should match snapshot(s) for Default 1`] = `
+<svg
+  height="400"
+  width="1000"
 >
-  Left
-</text>
-`;
-
-exports[`AxisLabel [common] example testing should match snapshot(s) for basic 2`] = `
-<text
-  className="lucid-AxisLabel lucid-AxisLabel-color-chart-0"
-  dy="-.32em"
-  style={Object {}}
-  transform="rotate(-90)"
-  x={-200}
-  y={50}
->
-  Right
-</text>
-`;
-
-exports[`AxisLabel [common] example testing should match snapshot(s) for basic 3`] = `
-<text
-  className="lucid-AxisLabel lucid-AxisLabel-color-chart-1"
-  dy="-.32em"
-  style={Object {}}
-  transform=""
-  x={500}
-  y={50}
->
-  Bottom
-</text>
-`;
-
-exports[`AxisLabel [common] example testing should match snapshot(s) for basic 4`] = `
-<text
-  className="lucid-AxisLabel lucid-AxisLabel-color-chart-2"
-  dy="1em"
-  style={Object {}}
-  transform=""
-  x={500}
-  y={0}
->
-  Top
-</text>
+  <rect
+    height="398"
+    style="stroke-width:1;stroke-dasharray:2,2;fill:none;stroke:black"
+    width="998"
+    x="1"
+    y="1"
+  />
+  <g
+    transform="translate(50, 50)"
+  >
+    <rect
+      height="300"
+      style="fill:lightgrey"
+      width="900"
+    />
+  </g>
+  <g
+    transform="translate(0,0)"
+  >
+    <text
+      class="lucid-AxisLabel"
+      dy="1em"
+      style="fill:#000"
+      transform="rotate(-90)"
+      x="-200"
+      y="0"
+    >
+      Left
+    </text>
+  </g>
+  <g
+    transform="translate(950, 0)"
+  >
+    <text
+      class="lucid-AxisLabel lucid-AxisLabel-color-chart-0"
+      dy="-.32em"
+      transform="rotate(-90)"
+      x="-200"
+      y="50"
+    >
+      Right
+    </text>
+  </g>
+  <g
+    transform="translate(0, 350)"
+  >
+    <text
+      class="lucid-AxisLabel lucid-AxisLabel-color-chart-1"
+      dy="-.32em"
+      transform=""
+      x="500"
+      y="50"
+    >
+      Bottom
+    </text>
+  </g>
+  <g
+    transform="translate(0, 0)"
+  >
+    <text
+      class="lucid-AxisLabel lucid-AxisLabel-color-chart-2"
+      dy="1em"
+      transform=""
+      x="500"
+      y="0"
+    >
+      Top
+    </text>
+  </g>
+</svg>
 `;

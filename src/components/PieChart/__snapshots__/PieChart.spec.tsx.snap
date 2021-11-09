@@ -1,25 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`PieChart [common] example testing should match snapshot(s) for 01.basic 1`] = `
-<svg
-  className="lucid-PieChart"
-  height={200}
-  width={200}
+exports[`PieChart [common] example testing should match snapshot(s) for BasicDonuts 1`] = `
+<div
+  style="padding-top:4rem"
 >
-  <ToolTip
-    alignment="center"
-    direction="up"
-    flyOutStyle={Object {}}
-    isCloseable={false}
-    isExpanded={false}
-    isLight={true}
-    onClose={[Function]}
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
-    portalId={null}
+  <svg
+    class="lucid-PieChart"
+    height="200"
+    width="200"
   >
-    <ToolTip.Target
-      elementType="g"
+    <g
+      class="lucid-ContextMenu lucid-ToolTip"
     >
       <g
         transform="translate(10, 10)"
@@ -28,138 +19,86 @@ exports[`PieChart [common] example testing should match snapshot(s) for 01.basic
           transform="translate(90, 90)"
         >
           <g
-            className="lucid-PieChart-slice-group"
-            key="0"
+            class="lucid-PieChart-slice-group"
           >
-            <Line
-              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
-              color="color-chart-3"
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-3"
               d="60"
-              isDotted={false}
-              key="0"
               transform="scale(1)"
             />
             <path
-              className="lucid-PieChart-slice-hover"
+              class="lucid-PieChart-slice-hover"
               d="60"
-              onMouseOut={[Function]}
-              onMouseOver={[Function]}
               transform="scale(1.1)"
             />
           </g>
           <g
-            className="lucid-PieChart-slice-group"
-            key="1"
+            class="lucid-PieChart-slice-group"
           >
-            <Line
-              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
-              color="color-chart-0-darkest"
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-0-darkest"
               d="40"
-              isDotted={false}
-              key="1"
               transform="scale(1)"
             />
             <path
-              className="lucid-PieChart-slice-hover"
+              class="lucid-PieChart-slice-hover"
               d="40"
-              onMouseOut={[Function]}
-              onMouseOver={[Function]}
               transform="scale(1.1)"
             />
           </g>
           <g
-            className="lucid-PieChart-slice-group"
-            key="2"
+            class="lucid-PieChart-slice-group"
           >
-            <Line
-              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
-              color="color-chart-2"
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-2"
               d="30"
-              isDotted={false}
-              key="2"
               transform="scale(1)"
             />
             <path
-              className="lucid-PieChart-slice-hover"
+              class="lucid-PieChart-slice-hover"
               d="30"
-              onMouseOut={[Function]}
-              onMouseOver={[Function]}
               transform="scale(1.1)"
             />
           </g>
           <g
-            className="lucid-PieChart-slice-group"
-            key="3"
+            class="lucid-PieChart-slice-group"
           >
-            <Line
-              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
-              color="color-chart-4-lightest"
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-4-lightest"
               d="20"
-              isDotted={false}
-              key="3"
               transform="scale(1)"
             />
             <path
-              className="lucid-PieChart-slice-hover"
+              class="lucid-PieChart-slice-hover"
               d="20"
-              onMouseOut={[Function]}
-              onMouseOver={[Function]}
               transform="scale(1.1)"
             />
           </g>
           <g
-            className="lucid-PieChart-slice-group"
-            key="4"
+            class="lucid-PieChart-slice-group"
           >
-            <Line
-              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
-              color="color-chart-5"
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-5"
               d="15"
-              isDotted={false}
-              key="4"
               transform="scale(1)"
             />
             <path
-              className="lucid-PieChart-slice-hover"
+              class="lucid-PieChart-slice-hover"
               d="15"
-              onMouseOut={[Function]}
-              onMouseOver={[Function]}
               transform="scale(1.1)"
             />
           </g>
         </g>
       </g>
-    </ToolTip.Target>
-    <ToolTip.Title>
-      Leslie
-    </ToolTip.Title>
-    <ToolTip.Body>
-      60
-    </ToolTip.Body>
-  </ToolTip>
-</svg>
-`;
-
-exports[`PieChart [common] example testing should match snapshot(s) for 01.basic 2`] = `
-<svg
-  className="lucid-PieChart"
-  height={200}
-  width={200}
->
-  <ToolTip
-    alignment="center"
-    direction="up"
-    flyOutStyle={Object {}}
-    isCloseable={false}
-    isExpanded={false}
-    isLight={true}
-    onClose={[Function]}
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
-    portalId={null}
+    </g>
+  </svg>
+  <svg
+    class="lucid-PieChart"
+    height="200"
+    width="200"
   >
-    <ToolTip.Target
-      elementType="g"
+    <g
+      class="lucid-ContextMenu lucid-ToolTip"
     >
       <g
         transform="translate(10, 10)"
@@ -168,138 +107,86 @@ exports[`PieChart [common] example testing should match snapshot(s) for 01.basic
           transform="translate(90, 90)"
         >
           <g
-            className="lucid-PieChart-slice-group"
-            key="0"
+            class="lucid-PieChart-slice-group"
           >
-            <Line
-              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
-              color="color-chart-0-lightest"
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-0-lightest"
               d="60"
-              isDotted={false}
-              key="0"
               transform="scale(1)"
             />
             <path
-              className="lucid-PieChart-slice-hover"
+              class="lucid-PieChart-slice-hover"
               d="60"
-              onMouseOut={[Function]}
-              onMouseOver={[Function]}
               transform="scale(1.1)"
             />
           </g>
           <g
-            className="lucid-PieChart-slice-group"
-            key="1"
+            class="lucid-PieChart-slice-group"
           >
-            <Line
-              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
-              color="color-chart-0-light"
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-0-light"
               d="40"
-              isDotted={false}
-              key="1"
               transform="scale(1)"
             />
             <path
-              className="lucid-PieChart-slice-hover"
+              class="lucid-PieChart-slice-hover"
               d="40"
-              onMouseOut={[Function]}
-              onMouseOver={[Function]}
               transform="scale(1.1)"
             />
           </g>
           <g
-            className="lucid-PieChart-slice-group"
-            key="2"
+            class="lucid-PieChart-slice-group"
           >
-            <Line
-              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
-              color="color-chart-0"
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-0"
               d="30"
-              isDotted={false}
-              key="2"
               transform="scale(1)"
             />
             <path
-              className="lucid-PieChart-slice-hover"
+              class="lucid-PieChart-slice-hover"
               d="30"
-              onMouseOut={[Function]}
-              onMouseOver={[Function]}
               transform="scale(1.1)"
             />
           </g>
           <g
-            className="lucid-PieChart-slice-group"
-            key="3"
+            class="lucid-PieChart-slice-group"
           >
-            <Line
-              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
-              color="color-chart-0-dark"
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-0-dark"
               d="20"
-              isDotted={false}
-              key="3"
               transform="scale(1)"
             />
             <path
-              className="lucid-PieChart-slice-hover"
+              class="lucid-PieChart-slice-hover"
               d="20"
-              onMouseOut={[Function]}
-              onMouseOver={[Function]}
               transform="scale(1.1)"
             />
           </g>
           <g
-            className="lucid-PieChart-slice-group"
-            key="4"
+            class="lucid-PieChart-slice-group"
           >
-            <Line
-              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
-              color="color-chart-0-darkest"
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-0-darkest"
               d="15"
-              isDotted={false}
-              key="4"
               transform="scale(1)"
             />
             <path
-              className="lucid-PieChart-slice-hover"
+              class="lucid-PieChart-slice-hover"
               d="15"
-              onMouseOut={[Function]}
-              onMouseOver={[Function]}
               transform="scale(1.1)"
             />
           </g>
         </g>
       </g>
-    </ToolTip.Target>
-    <ToolTip.Title>
-      Leslie
-    </ToolTip.Title>
-    <ToolTip.Body>
-      60
-    </ToolTip.Body>
-  </ToolTip>
-</svg>
-`;
-
-exports[`PieChart [common] example testing should match snapshot(s) for 01.basic 3`] = `
-<svg
-  className="lucid-PieChart"
-  height={200}
-  width={200}
->
-  <ToolTip
-    alignment="center"
-    direction="up"
-    flyOutStyle={Object {}}
-    isCloseable={false}
-    isExpanded={false}
-    isLight={true}
-    onClose={[Function]}
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
-    portalId={null}
+    </g>
+  </svg>
+  <svg
+    class="lucid-PieChart"
+    height="200"
+    width="200"
   >
-    <ToolTip.Target
-      elementType="g"
+    <g
+      class="lucid-ContextMenu lucid-ToolTip"
     >
       <g
         transform="translate(10, 10)"
@@ -308,138 +195,86 @@ exports[`PieChart [common] example testing should match snapshot(s) for 01.basic
           transform="translate(90, 90)"
         >
           <g
-            className="lucid-PieChart-slice-group"
-            key="0"
+            class="lucid-PieChart-slice-group"
           >
-            <Line
-              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
-              color="color-chart-1-lightest"
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-1-lightest"
               d="60"
-              isDotted={false}
-              key="0"
               transform="scale(1)"
             />
             <path
-              className="lucid-PieChart-slice-hover"
+              class="lucid-PieChart-slice-hover"
               d="60"
-              onMouseOut={[Function]}
-              onMouseOver={[Function]}
               transform="scale(1.1)"
             />
           </g>
           <g
-            className="lucid-PieChart-slice-group"
-            key="1"
+            class="lucid-PieChart-slice-group"
           >
-            <Line
-              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
-              color="color-chart-1-light"
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-1-light"
               d="40"
-              isDotted={false}
-              key="1"
               transform="scale(1)"
             />
             <path
-              className="lucid-PieChart-slice-hover"
+              class="lucid-PieChart-slice-hover"
               d="40"
-              onMouseOut={[Function]}
-              onMouseOver={[Function]}
               transform="scale(1.1)"
             />
           </g>
           <g
-            className="lucid-PieChart-slice-group"
-            key="2"
+            class="lucid-PieChart-slice-group"
           >
-            <Line
-              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
-              color="color-chart-1"
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-1"
               d="30"
-              isDotted={false}
-              key="2"
               transform="scale(1)"
             />
             <path
-              className="lucid-PieChart-slice-hover"
+              class="lucid-PieChart-slice-hover"
               d="30"
-              onMouseOut={[Function]}
-              onMouseOver={[Function]}
               transform="scale(1.1)"
             />
           </g>
           <g
-            className="lucid-PieChart-slice-group"
-            key="3"
+            class="lucid-PieChart-slice-group"
           >
-            <Line
-              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
-              color="color-chart-1-dark"
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-1-dark"
               d="20"
-              isDotted={false}
-              key="3"
               transform="scale(1)"
             />
             <path
-              className="lucid-PieChart-slice-hover"
+              class="lucid-PieChart-slice-hover"
               d="20"
-              onMouseOut={[Function]}
-              onMouseOver={[Function]}
               transform="scale(1.1)"
             />
           </g>
           <g
-            className="lucid-PieChart-slice-group"
-            key="4"
+            class="lucid-PieChart-slice-group"
           >
-            <Line
-              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
-              color="color-chart-1-darkest"
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-1-darkest"
               d="15"
-              isDotted={false}
-              key="4"
               transform="scale(1)"
             />
             <path
-              className="lucid-PieChart-slice-hover"
+              class="lucid-PieChart-slice-hover"
               d="15"
-              onMouseOut={[Function]}
-              onMouseOver={[Function]}
               transform="scale(1.1)"
             />
           </g>
         </g>
       </g>
-    </ToolTip.Target>
-    <ToolTip.Title>
-      Leslie
-    </ToolTip.Title>
-    <ToolTip.Body>
-      60
-    </ToolTip.Body>
-  </ToolTip>
-</svg>
-`;
-
-exports[`PieChart [common] example testing should match snapshot(s) for 01.basic 4`] = `
-<svg
-  className="lucid-PieChart"
-  height={200}
-  width={200}
->
-  <ToolTip
-    alignment="center"
-    direction="up"
-    flyOutStyle={Object {}}
-    isCloseable={false}
-    isExpanded={false}
-    isLight={true}
-    onClose={[Function]}
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
-    portalId={null}
+    </g>
+  </svg>
+  <svg
+    class="lucid-PieChart"
+    height="200"
+    width="200"
   >
-    <ToolTip.Target
-      elementType="g"
+    <g
+      class="lucid-ContextMenu lucid-ToolTip"
     >
       <g
         transform="translate(10, 10)"
@@ -448,138 +283,86 @@ exports[`PieChart [common] example testing should match snapshot(s) for 01.basic
           transform="translate(90, 90)"
         >
           <g
-            className="lucid-PieChart-slice-group"
-            key="0"
+            class="lucid-PieChart-slice-group"
           >
-            <Line
-              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
-              color="color-chart-2-lightest"
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-2-lightest"
               d="60"
-              isDotted={false}
-              key="0"
               transform="scale(1)"
             />
             <path
-              className="lucid-PieChart-slice-hover"
+              class="lucid-PieChart-slice-hover"
               d="60"
-              onMouseOut={[Function]}
-              onMouseOver={[Function]}
               transform="scale(1.1)"
             />
           </g>
           <g
-            className="lucid-PieChart-slice-group"
-            key="1"
+            class="lucid-PieChart-slice-group"
           >
-            <Line
-              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
-              color="color-chart-2-light"
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-2-light"
               d="40"
-              isDotted={false}
-              key="1"
               transform="scale(1)"
             />
             <path
-              className="lucid-PieChart-slice-hover"
+              class="lucid-PieChart-slice-hover"
               d="40"
-              onMouseOut={[Function]}
-              onMouseOver={[Function]}
               transform="scale(1.1)"
             />
           </g>
           <g
-            className="lucid-PieChart-slice-group"
-            key="2"
+            class="lucid-PieChart-slice-group"
           >
-            <Line
-              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
-              color="color-chart-2"
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-2"
               d="30"
-              isDotted={false}
-              key="2"
               transform="scale(1)"
             />
             <path
-              className="lucid-PieChart-slice-hover"
+              class="lucid-PieChart-slice-hover"
               d="30"
-              onMouseOut={[Function]}
-              onMouseOver={[Function]}
               transform="scale(1.1)"
             />
           </g>
           <g
-            className="lucid-PieChart-slice-group"
-            key="3"
+            class="lucid-PieChart-slice-group"
           >
-            <Line
-              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
-              color="color-chart-2-dark"
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-2-dark"
               d="20"
-              isDotted={false}
-              key="3"
               transform="scale(1)"
             />
             <path
-              className="lucid-PieChart-slice-hover"
+              class="lucid-PieChart-slice-hover"
               d="20"
-              onMouseOut={[Function]}
-              onMouseOver={[Function]}
               transform="scale(1.1)"
             />
           </g>
           <g
-            className="lucid-PieChart-slice-group"
-            key="4"
+            class="lucid-PieChart-slice-group"
           >
-            <Line
-              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
-              color="color-chart-2-darkest"
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-2-darkest"
               d="15"
-              isDotted={false}
-              key="4"
               transform="scale(1)"
             />
             <path
-              className="lucid-PieChart-slice-hover"
+              class="lucid-PieChart-slice-hover"
               d="15"
-              onMouseOut={[Function]}
-              onMouseOver={[Function]}
               transform="scale(1.1)"
             />
           </g>
         </g>
       </g>
-    </ToolTip.Target>
-    <ToolTip.Title>
-      Leslie
-    </ToolTip.Title>
-    <ToolTip.Body>
-      60
-    </ToolTip.Body>
-  </ToolTip>
-</svg>
-`;
-
-exports[`PieChart [common] example testing should match snapshot(s) for 01.basic 5`] = `
-<svg
-  className="lucid-PieChart"
-  height={200}
-  width={200}
->
-  <ToolTip
-    alignment="center"
-    direction="up"
-    flyOutStyle={Object {}}
-    isCloseable={false}
-    isExpanded={false}
-    isLight={true}
-    onClose={[Function]}
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
-    portalId={null}
+    </g>
+  </svg>
+  <svg
+    class="lucid-PieChart"
+    height="200"
+    width="200"
   >
-    <ToolTip.Target
-      elementType="g"
+    <g
+      class="lucid-ContextMenu lucid-ToolTip"
     >
       <g
         transform="translate(10, 10)"
@@ -588,138 +371,86 @@ exports[`PieChart [common] example testing should match snapshot(s) for 01.basic
           transform="translate(90, 90)"
         >
           <g
-            className="lucid-PieChart-slice-group"
-            key="0"
+            class="lucid-PieChart-slice-group"
           >
-            <Line
-              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
-              color="color-chart-3-lightest"
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-3-lightest"
               d="60"
-              isDotted={false}
-              key="0"
               transform="scale(1)"
             />
             <path
-              className="lucid-PieChart-slice-hover"
+              class="lucid-PieChart-slice-hover"
               d="60"
-              onMouseOut={[Function]}
-              onMouseOver={[Function]}
               transform="scale(1.1)"
             />
           </g>
           <g
-            className="lucid-PieChart-slice-group"
-            key="1"
+            class="lucid-PieChart-slice-group"
           >
-            <Line
-              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
-              color="color-chart-3-light"
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-3-light"
               d="40"
-              isDotted={false}
-              key="1"
               transform="scale(1)"
             />
             <path
-              className="lucid-PieChart-slice-hover"
+              class="lucid-PieChart-slice-hover"
               d="40"
-              onMouseOut={[Function]}
-              onMouseOver={[Function]}
               transform="scale(1.1)"
             />
           </g>
           <g
-            className="lucid-PieChart-slice-group"
-            key="2"
+            class="lucid-PieChart-slice-group"
           >
-            <Line
-              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
-              color="color-chart-3"
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-3"
               d="30"
-              isDotted={false}
-              key="2"
               transform="scale(1)"
             />
             <path
-              className="lucid-PieChart-slice-hover"
+              class="lucid-PieChart-slice-hover"
               d="30"
-              onMouseOut={[Function]}
-              onMouseOver={[Function]}
               transform="scale(1.1)"
             />
           </g>
           <g
-            className="lucid-PieChart-slice-group"
-            key="3"
+            class="lucid-PieChart-slice-group"
           >
-            <Line
-              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
-              color="color-chart-3-dark"
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-3-dark"
               d="20"
-              isDotted={false}
-              key="3"
               transform="scale(1)"
             />
             <path
-              className="lucid-PieChart-slice-hover"
+              class="lucid-PieChart-slice-hover"
               d="20"
-              onMouseOut={[Function]}
-              onMouseOver={[Function]}
               transform="scale(1.1)"
             />
           </g>
           <g
-            className="lucid-PieChart-slice-group"
-            key="4"
+            class="lucid-PieChart-slice-group"
           >
-            <Line
-              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
-              color="color-chart-3-darkest"
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-3-darkest"
               d="15"
-              isDotted={false}
-              key="4"
               transform="scale(1)"
             />
             <path
-              className="lucid-PieChart-slice-hover"
+              class="lucid-PieChart-slice-hover"
               d="15"
-              onMouseOut={[Function]}
-              onMouseOver={[Function]}
               transform="scale(1.1)"
             />
           </g>
         </g>
       </g>
-    </ToolTip.Target>
-    <ToolTip.Title>
-      Leslie
-    </ToolTip.Title>
-    <ToolTip.Body>
-      60
-    </ToolTip.Body>
-  </ToolTip>
-</svg>
-`;
-
-exports[`PieChart [common] example testing should match snapshot(s) for 01.basic 6`] = `
-<svg
-  className="lucid-PieChart"
-  height={200}
-  width={200}
->
-  <ToolTip
-    alignment="center"
-    direction="up"
-    flyOutStyle={Object {}}
-    isCloseable={false}
-    isExpanded={false}
-    isLight={true}
-    onClose={[Function]}
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
-    portalId={null}
+    </g>
+  </svg>
+  <svg
+    class="lucid-PieChart"
+    height="200"
+    width="200"
   >
-    <ToolTip.Target
-      elementType="g"
+    <g
+      class="lucid-ContextMenu lucid-ToolTip"
     >
       <g
         transform="translate(10, 10)"
@@ -728,138 +459,86 @@ exports[`PieChart [common] example testing should match snapshot(s) for 01.basic
           transform="translate(90, 90)"
         >
           <g
-            className="lucid-PieChart-slice-group"
-            key="0"
+            class="lucid-PieChart-slice-group"
           >
-            <Line
-              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
-              color="color-chart-4-lightest"
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-4-lightest"
               d="60"
-              isDotted={false}
-              key="0"
               transform="scale(1)"
             />
             <path
-              className="lucid-PieChart-slice-hover"
+              class="lucid-PieChart-slice-hover"
               d="60"
-              onMouseOut={[Function]}
-              onMouseOver={[Function]}
               transform="scale(1.1)"
             />
           </g>
           <g
-            className="lucid-PieChart-slice-group"
-            key="1"
+            class="lucid-PieChart-slice-group"
           >
-            <Line
-              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
-              color="color-chart-4-light"
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-4-light"
               d="40"
-              isDotted={false}
-              key="1"
               transform="scale(1)"
             />
             <path
-              className="lucid-PieChart-slice-hover"
+              class="lucid-PieChart-slice-hover"
               d="40"
-              onMouseOut={[Function]}
-              onMouseOver={[Function]}
               transform="scale(1.1)"
             />
           </g>
           <g
-            className="lucid-PieChart-slice-group"
-            key="2"
+            class="lucid-PieChart-slice-group"
           >
-            <Line
-              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
-              color="color-chart-4"
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-4"
               d="30"
-              isDotted={false}
-              key="2"
               transform="scale(1)"
             />
             <path
-              className="lucid-PieChart-slice-hover"
+              class="lucid-PieChart-slice-hover"
               d="30"
-              onMouseOut={[Function]}
-              onMouseOver={[Function]}
               transform="scale(1.1)"
             />
           </g>
           <g
-            className="lucid-PieChart-slice-group"
-            key="3"
+            class="lucid-PieChart-slice-group"
           >
-            <Line
-              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
-              color="color-chart-4-dark"
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-4-dark"
               d="20"
-              isDotted={false}
-              key="3"
               transform="scale(1)"
             />
             <path
-              className="lucid-PieChart-slice-hover"
+              class="lucid-PieChart-slice-hover"
               d="20"
-              onMouseOut={[Function]}
-              onMouseOver={[Function]}
               transform="scale(1.1)"
             />
           </g>
           <g
-            className="lucid-PieChart-slice-group"
-            key="4"
+            class="lucid-PieChart-slice-group"
           >
-            <Line
-              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
-              color="color-chart-4-darkest"
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-4-darkest"
               d="15"
-              isDotted={false}
-              key="4"
               transform="scale(1)"
             />
             <path
-              className="lucid-PieChart-slice-hover"
+              class="lucid-PieChart-slice-hover"
               d="15"
-              onMouseOut={[Function]}
-              onMouseOver={[Function]}
               transform="scale(1.1)"
             />
           </g>
         </g>
       </g>
-    </ToolTip.Target>
-    <ToolTip.Title>
-      Leslie
-    </ToolTip.Title>
-    <ToolTip.Body>
-      60
-    </ToolTip.Body>
-  </ToolTip>
-</svg>
-`;
-
-exports[`PieChart [common] example testing should match snapshot(s) for 01.basic 7`] = `
-<svg
-  className="lucid-PieChart"
-  height={200}
-  width={200}
->
-  <ToolTip
-    alignment="center"
-    direction="up"
-    flyOutStyle={Object {}}
-    isCloseable={false}
-    isExpanded={false}
-    isLight={true}
-    onClose={[Function]}
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
-    portalId={null}
+    </g>
+  </svg>
+  <svg
+    class="lucid-PieChart"
+    height="200"
+    width="200"
   >
-    <ToolTip.Target
-      elementType="g"
+    <g
+      class="lucid-ContextMenu lucid-ToolTip"
     >
       <g
         transform="translate(10, 10)"
@@ -868,138 +547,93 @@ exports[`PieChart [common] example testing should match snapshot(s) for 01.basic
           transform="translate(90, 90)"
         >
           <g
-            className="lucid-PieChart-slice-group"
-            key="0"
+            class="lucid-PieChart-slice-group"
           >
-            <Line
-              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
-              color="color-chart-5-lightest"
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-5-lightest"
               d="60"
-              isDotted={false}
-              key="0"
               transform="scale(1)"
             />
             <path
-              className="lucid-PieChart-slice-hover"
+              class="lucid-PieChart-slice-hover"
               d="60"
-              onMouseOut={[Function]}
-              onMouseOver={[Function]}
               transform="scale(1.1)"
             />
           </g>
           <g
-            className="lucid-PieChart-slice-group"
-            key="1"
+            class="lucid-PieChart-slice-group"
           >
-            <Line
-              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
-              color="color-chart-5-light"
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-5-light"
               d="40"
-              isDotted={false}
-              key="1"
               transform="scale(1)"
             />
             <path
-              className="lucid-PieChart-slice-hover"
+              class="lucid-PieChart-slice-hover"
               d="40"
-              onMouseOut={[Function]}
-              onMouseOver={[Function]}
               transform="scale(1.1)"
             />
           </g>
           <g
-            className="lucid-PieChart-slice-group"
-            key="2"
+            class="lucid-PieChart-slice-group"
           >
-            <Line
-              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
-              color="color-chart-5"
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-5"
               d="30"
-              isDotted={false}
-              key="2"
               transform="scale(1)"
             />
             <path
-              className="lucid-PieChart-slice-hover"
+              class="lucid-PieChart-slice-hover"
               d="30"
-              onMouseOut={[Function]}
-              onMouseOver={[Function]}
               transform="scale(1.1)"
             />
           </g>
           <g
-            className="lucid-PieChart-slice-group"
-            key="3"
+            class="lucid-PieChart-slice-group"
           >
-            <Line
-              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
-              color="color-chart-5-dark"
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-5-dark"
               d="20"
-              isDotted={false}
-              key="3"
               transform="scale(1)"
             />
             <path
-              className="lucid-PieChart-slice-hover"
+              class="lucid-PieChart-slice-hover"
               d="20"
-              onMouseOut={[Function]}
-              onMouseOver={[Function]}
               transform="scale(1.1)"
             />
           </g>
           <g
-            className="lucid-PieChart-slice-group"
-            key="4"
+            class="lucid-PieChart-slice-group"
           >
-            <Line
-              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
-              color="color-chart-5-darkest"
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-5-darkest"
               d="15"
-              isDotted={false}
-              key="4"
               transform="scale(1)"
             />
             <path
-              className="lucid-PieChart-slice-hover"
+              class="lucid-PieChart-slice-hover"
               d="15"
-              onMouseOut={[Function]}
-              onMouseOver={[Function]}
               transform="scale(1.1)"
             />
           </g>
         </g>
       </g>
-    </ToolTip.Target>
-    <ToolTip.Title>
-      Leslie
-    </ToolTip.Title>
-    <ToolTip.Body>
-      60
-    </ToolTip.Body>
-  </ToolTip>
-</svg>
+    </g>
+  </svg>
+</div>
 `;
 
-exports[`PieChart [common] example testing should match snapshot(s) for 02.basic-donuts 1`] = `
-<svg
-  className="lucid-PieChart"
-  height={200}
-  width={200}
+exports[`PieChart [common] example testing should match snapshot(s) for ColorMap 1`] = `
+<div
+  style="padding-top:4rem"
 >
-  <ToolTip
-    alignment="center"
-    direction="up"
-    flyOutStyle={Object {}}
-    isCloseable={false}
-    isExpanded={false}
-    isLight={true}
-    onClose={[Function]}
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
-    portalId={null}
+  <svg
+    class="lucid-PieChart"
+    height="200"
+    width="200"
   >
-    <ToolTip.Target
-      elementType="g"
+    <g
+      class="lucid-ContextMenu lucid-ToolTip"
     >
       <g
         transform="translate(10, 10)"
@@ -1008,1238 +642,93 @@ exports[`PieChart [common] example testing should match snapshot(s) for 02.basic
           transform="translate(90, 90)"
         >
           <g
-            className="lucid-PieChart-slice-group"
-            key="0"
+            class="lucid-PieChart-slice-group"
           >
-            <Line
-              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
-              color="color-chart-3"
-              d="60"
-              isDotted={false}
-              key="0"
-              transform="scale(1)"
-            />
             <path
-              className="lucid-PieChart-slice-hover"
-              d="60"
-              onMouseOut={[Function]}
-              onMouseOver={[Function]}
-              transform="scale(1.1)"
-            />
-          </g>
-          <g
-            className="lucid-PieChart-slice-group"
-            key="1"
-          >
-            <Line
-              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
-              color="color-chart-0-darkest"
-              d="40"
-              isDotted={false}
-              key="1"
-              transform="scale(1)"
-            />
-            <path
-              className="lucid-PieChart-slice-hover"
-              d="40"
-              onMouseOut={[Function]}
-              onMouseOver={[Function]}
-              transform="scale(1.1)"
-            />
-          </g>
-          <g
-            className="lucid-PieChart-slice-group"
-            key="2"
-          >
-            <Line
-              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
-              color="color-chart-2"
-              d="30"
-              isDotted={false}
-              key="2"
-              transform="scale(1)"
-            />
-            <path
-              className="lucid-PieChart-slice-hover"
-              d="30"
-              onMouseOut={[Function]}
-              onMouseOver={[Function]}
-              transform="scale(1.1)"
-            />
-          </g>
-          <g
-            className="lucid-PieChart-slice-group"
-            key="3"
-          >
-            <Line
-              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
-              color="color-chart-4-lightest"
-              d="20"
-              isDotted={false}
-              key="3"
-              transform="scale(1)"
-            />
-            <path
-              className="lucid-PieChart-slice-hover"
-              d="20"
-              onMouseOut={[Function]}
-              onMouseOver={[Function]}
-              transform="scale(1.1)"
-            />
-          </g>
-          <g
-            className="lucid-PieChart-slice-group"
-            key="4"
-          >
-            <Line
-              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
-              color="color-chart-5"
-              d="15"
-              isDotted={false}
-              key="4"
-              transform="scale(1)"
-            />
-            <path
-              className="lucid-PieChart-slice-hover"
-              d="15"
-              onMouseOut={[Function]}
-              onMouseOver={[Function]}
-              transform="scale(1.1)"
-            />
-          </g>
-        </g>
-      </g>
-    </ToolTip.Target>
-    <ToolTip.Title>
-      Leslie
-    </ToolTip.Title>
-    <ToolTip.Body>
-      60
-    </ToolTip.Body>
-  </ToolTip>
-</svg>
-`;
-
-exports[`PieChart [common] example testing should match snapshot(s) for 02.basic-donuts 2`] = `
-<svg
-  className="lucid-PieChart"
-  height={200}
-  width={200}
->
-  <ToolTip
-    alignment="center"
-    direction="up"
-    flyOutStyle={Object {}}
-    isCloseable={false}
-    isExpanded={false}
-    isLight={true}
-    onClose={[Function]}
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
-    portalId={null}
-  >
-    <ToolTip.Target
-      elementType="g"
-    >
-      <g
-        transform="translate(10, 10)"
-      >
-        <g
-          transform="translate(90, 90)"
-        >
-          <g
-            className="lucid-PieChart-slice-group"
-            key="0"
-          >
-            <Line
-              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
-              color="color-chart-0-lightest"
-              d="60"
-              isDotted={false}
-              key="0"
-              transform="scale(1)"
-            />
-            <path
-              className="lucid-PieChart-slice-hover"
-              d="60"
-              onMouseOut={[Function]}
-              onMouseOver={[Function]}
-              transform="scale(1.1)"
-            />
-          </g>
-          <g
-            className="lucid-PieChart-slice-group"
-            key="1"
-          >
-            <Line
-              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
-              color="color-chart-0-light"
-              d="40"
-              isDotted={false}
-              key="1"
-              transform="scale(1)"
-            />
-            <path
-              className="lucid-PieChart-slice-hover"
-              d="40"
-              onMouseOut={[Function]}
-              onMouseOver={[Function]}
-              transform="scale(1.1)"
-            />
-          </g>
-          <g
-            className="lucid-PieChart-slice-group"
-            key="2"
-          >
-            <Line
-              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
-              color="color-chart-0"
-              d="30"
-              isDotted={false}
-              key="2"
-              transform="scale(1)"
-            />
-            <path
-              className="lucid-PieChart-slice-hover"
-              d="30"
-              onMouseOut={[Function]}
-              onMouseOver={[Function]}
-              transform="scale(1.1)"
-            />
-          </g>
-          <g
-            className="lucid-PieChart-slice-group"
-            key="3"
-          >
-            <Line
-              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
-              color="color-chart-0-dark"
-              d="20"
-              isDotted={false}
-              key="3"
-              transform="scale(1)"
-            />
-            <path
-              className="lucid-PieChart-slice-hover"
-              d="20"
-              onMouseOut={[Function]}
-              onMouseOver={[Function]}
-              transform="scale(1.1)"
-            />
-          </g>
-          <g
-            className="lucid-PieChart-slice-group"
-            key="4"
-          >
-            <Line
-              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
-              color="color-chart-0-darkest"
-              d="15"
-              isDotted={false}
-              key="4"
-              transform="scale(1)"
-            />
-            <path
-              className="lucid-PieChart-slice-hover"
-              d="15"
-              onMouseOut={[Function]}
-              onMouseOver={[Function]}
-              transform="scale(1.1)"
-            />
-          </g>
-        </g>
-      </g>
-    </ToolTip.Target>
-    <ToolTip.Title>
-      Leslie
-    </ToolTip.Title>
-    <ToolTip.Body>
-      60
-    </ToolTip.Body>
-  </ToolTip>
-</svg>
-`;
-
-exports[`PieChart [common] example testing should match snapshot(s) for 02.basic-donuts 3`] = `
-<svg
-  className="lucid-PieChart"
-  height={200}
-  width={200}
->
-  <ToolTip
-    alignment="center"
-    direction="up"
-    flyOutStyle={Object {}}
-    isCloseable={false}
-    isExpanded={false}
-    isLight={true}
-    onClose={[Function]}
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
-    portalId={null}
-  >
-    <ToolTip.Target
-      elementType="g"
-    >
-      <g
-        transform="translate(10, 10)"
-      >
-        <g
-          transform="translate(90, 90)"
-        >
-          <g
-            className="lucid-PieChart-slice-group"
-            key="0"
-          >
-            <Line
-              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
-              color="color-chart-1-lightest"
-              d="60"
-              isDotted={false}
-              key="0"
-              transform="scale(1)"
-            />
-            <path
-              className="lucid-PieChart-slice-hover"
-              d="60"
-              onMouseOut={[Function]}
-              onMouseOver={[Function]}
-              transform="scale(1.1)"
-            />
-          </g>
-          <g
-            className="lucid-PieChart-slice-group"
-            key="1"
-          >
-            <Line
-              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
-              color="color-chart-1-light"
-              d="40"
-              isDotted={false}
-              key="1"
-              transform="scale(1)"
-            />
-            <path
-              className="lucid-PieChart-slice-hover"
-              d="40"
-              onMouseOut={[Function]}
-              onMouseOver={[Function]}
-              transform="scale(1.1)"
-            />
-          </g>
-          <g
-            className="lucid-PieChart-slice-group"
-            key="2"
-          >
-            <Line
-              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
-              color="color-chart-1"
-              d="30"
-              isDotted={false}
-              key="2"
-              transform="scale(1)"
-            />
-            <path
-              className="lucid-PieChart-slice-hover"
-              d="30"
-              onMouseOut={[Function]}
-              onMouseOver={[Function]}
-              transform="scale(1.1)"
-            />
-          </g>
-          <g
-            className="lucid-PieChart-slice-group"
-            key="3"
-          >
-            <Line
-              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
-              color="color-chart-1-dark"
-              d="20"
-              isDotted={false}
-              key="3"
-              transform="scale(1)"
-            />
-            <path
-              className="lucid-PieChart-slice-hover"
-              d="20"
-              onMouseOut={[Function]}
-              onMouseOver={[Function]}
-              transform="scale(1.1)"
-            />
-          </g>
-          <g
-            className="lucid-PieChart-slice-group"
-            key="4"
-          >
-            <Line
-              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
-              color="color-chart-1-darkest"
-              d="15"
-              isDotted={false}
-              key="4"
-              transform="scale(1)"
-            />
-            <path
-              className="lucid-PieChart-slice-hover"
-              d="15"
-              onMouseOut={[Function]}
-              onMouseOver={[Function]}
-              transform="scale(1.1)"
-            />
-          </g>
-        </g>
-      </g>
-    </ToolTip.Target>
-    <ToolTip.Title>
-      Leslie
-    </ToolTip.Title>
-    <ToolTip.Body>
-      60
-    </ToolTip.Body>
-  </ToolTip>
-</svg>
-`;
-
-exports[`PieChart [common] example testing should match snapshot(s) for 02.basic-donuts 4`] = `
-<svg
-  className="lucid-PieChart"
-  height={200}
-  width={200}
->
-  <ToolTip
-    alignment="center"
-    direction="up"
-    flyOutStyle={Object {}}
-    isCloseable={false}
-    isExpanded={false}
-    isLight={true}
-    onClose={[Function]}
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
-    portalId={null}
-  >
-    <ToolTip.Target
-      elementType="g"
-    >
-      <g
-        transform="translate(10, 10)"
-      >
-        <g
-          transform="translate(90, 90)"
-        >
-          <g
-            className="lucid-PieChart-slice-group"
-            key="0"
-          >
-            <Line
-              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
-              color="color-chart-2-lightest"
-              d="60"
-              isDotted={false}
-              key="0"
-              transform="scale(1)"
-            />
-            <path
-              className="lucid-PieChart-slice-hover"
-              d="60"
-              onMouseOut={[Function]}
-              onMouseOver={[Function]}
-              transform="scale(1.1)"
-            />
-          </g>
-          <g
-            className="lucid-PieChart-slice-group"
-            key="1"
-          >
-            <Line
-              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
-              color="color-chart-2-light"
-              d="40"
-              isDotted={false}
-              key="1"
-              transform="scale(1)"
-            />
-            <path
-              className="lucid-PieChart-slice-hover"
-              d="40"
-              onMouseOut={[Function]}
-              onMouseOver={[Function]}
-              transform="scale(1.1)"
-            />
-          </g>
-          <g
-            className="lucid-PieChart-slice-group"
-            key="2"
-          >
-            <Line
-              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
-              color="color-chart-2"
-              d="30"
-              isDotted={false}
-              key="2"
-              transform="scale(1)"
-            />
-            <path
-              className="lucid-PieChart-slice-hover"
-              d="30"
-              onMouseOut={[Function]}
-              onMouseOver={[Function]}
-              transform="scale(1.1)"
-            />
-          </g>
-          <g
-            className="lucid-PieChart-slice-group"
-            key="3"
-          >
-            <Line
-              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
-              color="color-chart-2-dark"
-              d="20"
-              isDotted={false}
-              key="3"
-              transform="scale(1)"
-            />
-            <path
-              className="lucid-PieChart-slice-hover"
-              d="20"
-              onMouseOut={[Function]}
-              onMouseOver={[Function]}
-              transform="scale(1.1)"
-            />
-          </g>
-          <g
-            className="lucid-PieChart-slice-group"
-            key="4"
-          >
-            <Line
-              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
-              color="color-chart-2-darkest"
-              d="15"
-              isDotted={false}
-              key="4"
-              transform="scale(1)"
-            />
-            <path
-              className="lucid-PieChart-slice-hover"
-              d="15"
-              onMouseOut={[Function]}
-              onMouseOver={[Function]}
-              transform="scale(1.1)"
-            />
-          </g>
-        </g>
-      </g>
-    </ToolTip.Target>
-    <ToolTip.Title>
-      Leslie
-    </ToolTip.Title>
-    <ToolTip.Body>
-      60
-    </ToolTip.Body>
-  </ToolTip>
-</svg>
-`;
-
-exports[`PieChart [common] example testing should match snapshot(s) for 02.basic-donuts 5`] = `
-<svg
-  className="lucid-PieChart"
-  height={200}
-  width={200}
->
-  <ToolTip
-    alignment="center"
-    direction="up"
-    flyOutStyle={Object {}}
-    isCloseable={false}
-    isExpanded={false}
-    isLight={true}
-    onClose={[Function]}
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
-    portalId={null}
-  >
-    <ToolTip.Target
-      elementType="g"
-    >
-      <g
-        transform="translate(10, 10)"
-      >
-        <g
-          transform="translate(90, 90)"
-        >
-          <g
-            className="lucid-PieChart-slice-group"
-            key="0"
-          >
-            <Line
-              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
-              color="color-chart-3-lightest"
-              d="60"
-              isDotted={false}
-              key="0"
-              transform="scale(1)"
-            />
-            <path
-              className="lucid-PieChart-slice-hover"
-              d="60"
-              onMouseOut={[Function]}
-              onMouseOver={[Function]}
-              transform="scale(1.1)"
-            />
-          </g>
-          <g
-            className="lucid-PieChart-slice-group"
-            key="1"
-          >
-            <Line
-              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
-              color="color-chart-3-light"
-              d="40"
-              isDotted={false}
-              key="1"
-              transform="scale(1)"
-            />
-            <path
-              className="lucid-PieChart-slice-hover"
-              d="40"
-              onMouseOut={[Function]}
-              onMouseOver={[Function]}
-              transform="scale(1.1)"
-            />
-          </g>
-          <g
-            className="lucid-PieChart-slice-group"
-            key="2"
-          >
-            <Line
-              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
-              color="color-chart-3"
-              d="30"
-              isDotted={false}
-              key="2"
-              transform="scale(1)"
-            />
-            <path
-              className="lucid-PieChart-slice-hover"
-              d="30"
-              onMouseOut={[Function]}
-              onMouseOver={[Function]}
-              transform="scale(1.1)"
-            />
-          </g>
-          <g
-            className="lucid-PieChart-slice-group"
-            key="3"
-          >
-            <Line
-              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
-              color="color-chart-3-dark"
-              d="20"
-              isDotted={false}
-              key="3"
-              transform="scale(1)"
-            />
-            <path
-              className="lucid-PieChart-slice-hover"
-              d="20"
-              onMouseOut={[Function]}
-              onMouseOver={[Function]}
-              transform="scale(1.1)"
-            />
-          </g>
-          <g
-            className="lucid-PieChart-slice-group"
-            key="4"
-          >
-            <Line
-              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
-              color="color-chart-3-darkest"
-              d="15"
-              isDotted={false}
-              key="4"
-              transform="scale(1)"
-            />
-            <path
-              className="lucid-PieChart-slice-hover"
-              d="15"
-              onMouseOut={[Function]}
-              onMouseOver={[Function]}
-              transform="scale(1.1)"
-            />
-          </g>
-        </g>
-      </g>
-    </ToolTip.Target>
-    <ToolTip.Title>
-      Leslie
-    </ToolTip.Title>
-    <ToolTip.Body>
-      60
-    </ToolTip.Body>
-  </ToolTip>
-</svg>
-`;
-
-exports[`PieChart [common] example testing should match snapshot(s) for 02.basic-donuts 6`] = `
-<svg
-  className="lucid-PieChart"
-  height={200}
-  width={200}
->
-  <ToolTip
-    alignment="center"
-    direction="up"
-    flyOutStyle={Object {}}
-    isCloseable={false}
-    isExpanded={false}
-    isLight={true}
-    onClose={[Function]}
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
-    portalId={null}
-  >
-    <ToolTip.Target
-      elementType="g"
-    >
-      <g
-        transform="translate(10, 10)"
-      >
-        <g
-          transform="translate(90, 90)"
-        >
-          <g
-            className="lucid-PieChart-slice-group"
-            key="0"
-          >
-            <Line
-              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
-              color="color-chart-4-lightest"
-              d="60"
-              isDotted={false}
-              key="0"
-              transform="scale(1)"
-            />
-            <path
-              className="lucid-PieChart-slice-hover"
-              d="60"
-              onMouseOut={[Function]}
-              onMouseOver={[Function]}
-              transform="scale(1.1)"
-            />
-          </g>
-          <g
-            className="lucid-PieChart-slice-group"
-            key="1"
-          >
-            <Line
-              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
-              color="color-chart-4-light"
-              d="40"
-              isDotted={false}
-              key="1"
-              transform="scale(1)"
-            />
-            <path
-              className="lucid-PieChart-slice-hover"
-              d="40"
-              onMouseOut={[Function]}
-              onMouseOver={[Function]}
-              transform="scale(1.1)"
-            />
-          </g>
-          <g
-            className="lucid-PieChart-slice-group"
-            key="2"
-          >
-            <Line
-              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
-              color="color-chart-4"
-              d="30"
-              isDotted={false}
-              key="2"
-              transform="scale(1)"
-            />
-            <path
-              className="lucid-PieChart-slice-hover"
-              d="30"
-              onMouseOut={[Function]}
-              onMouseOver={[Function]}
-              transform="scale(1.1)"
-            />
-          </g>
-          <g
-            className="lucid-PieChart-slice-group"
-            key="3"
-          >
-            <Line
-              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
-              color="color-chart-4-dark"
-              d="20"
-              isDotted={false}
-              key="3"
-              transform="scale(1)"
-            />
-            <path
-              className="lucid-PieChart-slice-hover"
-              d="20"
-              onMouseOut={[Function]}
-              onMouseOver={[Function]}
-              transform="scale(1.1)"
-            />
-          </g>
-          <g
-            className="lucid-PieChart-slice-group"
-            key="4"
-          >
-            <Line
-              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
-              color="color-chart-4-darkest"
-              d="15"
-              isDotted={false}
-              key="4"
-              transform="scale(1)"
-            />
-            <path
-              className="lucid-PieChart-slice-hover"
-              d="15"
-              onMouseOut={[Function]}
-              onMouseOver={[Function]}
-              transform="scale(1.1)"
-            />
-          </g>
-        </g>
-      </g>
-    </ToolTip.Target>
-    <ToolTip.Title>
-      Leslie
-    </ToolTip.Title>
-    <ToolTip.Body>
-      60
-    </ToolTip.Body>
-  </ToolTip>
-</svg>
-`;
-
-exports[`PieChart [common] example testing should match snapshot(s) for 02.basic-donuts 7`] = `
-<svg
-  className="lucid-PieChart"
-  height={200}
-  width={200}
->
-  <ToolTip
-    alignment="center"
-    direction="up"
-    flyOutStyle={Object {}}
-    isCloseable={false}
-    isExpanded={false}
-    isLight={true}
-    onClose={[Function]}
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
-    portalId={null}
-  >
-    <ToolTip.Target
-      elementType="g"
-    >
-      <g
-        transform="translate(10, 10)"
-      >
-        <g
-          transform="translate(90, 90)"
-        >
-          <g
-            className="lucid-PieChart-slice-group"
-            key="0"
-          >
-            <Line
-              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
-              color="color-chart-5-lightest"
-              d="60"
-              isDotted={false}
-              key="0"
-              transform="scale(1)"
-            />
-            <path
-              className="lucid-PieChart-slice-hover"
-              d="60"
-              onMouseOut={[Function]}
-              onMouseOver={[Function]}
-              transform="scale(1.1)"
-            />
-          </g>
-          <g
-            className="lucid-PieChart-slice-group"
-            key="1"
-          >
-            <Line
-              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
-              color="color-chart-5-light"
-              d="40"
-              isDotted={false}
-              key="1"
-              transform="scale(1)"
-            />
-            <path
-              className="lucid-PieChart-slice-hover"
-              d="40"
-              onMouseOut={[Function]}
-              onMouseOver={[Function]}
-              transform="scale(1.1)"
-            />
-          </g>
-          <g
-            className="lucid-PieChart-slice-group"
-            key="2"
-          >
-            <Line
-              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
-              color="color-chart-5"
-              d="30"
-              isDotted={false}
-              key="2"
-              transform="scale(1)"
-            />
-            <path
-              className="lucid-PieChart-slice-hover"
-              d="30"
-              onMouseOut={[Function]}
-              onMouseOver={[Function]}
-              transform="scale(1.1)"
-            />
-          </g>
-          <g
-            className="lucid-PieChart-slice-group"
-            key="3"
-          >
-            <Line
-              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
-              color="color-chart-5-dark"
-              d="20"
-              isDotted={false}
-              key="3"
-              transform="scale(1)"
-            />
-            <path
-              className="lucid-PieChart-slice-hover"
-              d="20"
-              onMouseOut={[Function]}
-              onMouseOver={[Function]}
-              transform="scale(1.1)"
-            />
-          </g>
-          <g
-            className="lucid-PieChart-slice-group"
-            key="4"
-          >
-            <Line
-              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
-              color="color-chart-5-darkest"
-              d="15"
-              isDotted={false}
-              key="4"
-              transform="scale(1)"
-            />
-            <path
-              className="lucid-PieChart-slice-hover"
-              d="15"
-              onMouseOut={[Function]}
-              onMouseOver={[Function]}
-              transform="scale(1.1)"
-            />
-          </g>
-        </g>
-      </g>
-    </ToolTip.Target>
-    <ToolTip.Title>
-      Leslie
-    </ToolTip.Title>
-    <ToolTip.Body>
-      60
-    </ToolTip.Body>
-  </ToolTip>
-</svg>
-`;
-
-exports[`PieChart [common] example testing should match snapshot(s) for 03.legend 1`] = `
-<svg
-  className="lucid-PieChart"
-  height={200}
-  width={200}
->
-  <ToolTip
-    alignment="center"
-    direction="up"
-    flyOutStyle={Object {}}
-    isCloseable={false}
-    isExpanded={false}
-    isLight={true}
-    onClose={[Function]}
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
-    portalId={null}
-  >
-    <ToolTip.Target
-      elementType="g"
-    >
-      <g
-        transform="translate(10, 10)"
-      >
-        <g
-          transform="translate(90, 90)"
-        >
-          <g
-            className="lucid-PieChart-slice-group"
-            key="0"
-          >
-            <Line
-              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
-              color="color-chart-3"
-              d="80"
-              isDotted={false}
-              key="0"
-              transform="scale(1)"
-            />
-            <path
-              className="lucid-PieChart-slice-hover"
-              d="80"
-              onMouseOut={[Function]}
-              onMouseOver={[Function]}
-              transform="scale(1.1)"
-            />
-          </g>
-          <g
-            className="lucid-PieChart-slice-group"
-            key="1"
-          >
-            <Line
-              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
-              color="color-chart-0-darkest"
-              d="20"
-              isDotted={false}
-              key="1"
-              transform="scale(1)"
-            />
-            <path
-              className="lucid-PieChart-slice-hover"
-              d="20"
-              onMouseOut={[Function]}
-              onMouseOver={[Function]}
-              transform="scale(1.1)"
-            />
-          </g>
-          <g
-            className="lucid-PieChart-slice-group"
-            key="2"
-          >
-            <Line
-              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
-              color="color-chart-2"
-              d="10"
-              isDotted={false}
-              key="2"
-              transform="scale(1)"
-            />
-            <path
-              className="lucid-PieChart-slice-hover"
-              d="10"
-              onMouseOut={[Function]}
-              onMouseOver={[Function]}
-              transform="scale(1.1)"
-            />
-          </g>
-          <g
-            className="lucid-PieChart-slice-group"
-            key="3"
-          >
-            <Line
-              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
-              color="color-chart-4-lightest"
-              d="30"
-              isDotted={false}
-              key="3"
-              transform="scale(1)"
-            />
-            <path
-              className="lucid-PieChart-slice-hover"
-              d="30"
-              onMouseOut={[Function]}
-              onMouseOver={[Function]}
-              transform="scale(1.1)"
-            />
-          </g>
-        </g>
-      </g>
-    </ToolTip.Target>
-    <ToolTip.Title>
-      Leslie
-    </ToolTip.Title>
-    <ToolTip.Body>
-      80
-    </ToolTip.Body>
-  </ToolTip>
-</svg>
-`;
-
-exports[`PieChart [common] example testing should match snapshot(s) for 04.color-map 1`] = `
-<svg
-  className="lucid-PieChart"
-  height={200}
-  width={200}
->
-  <ToolTip
-    alignment="center"
-    direction="up"
-    flyOutStyle={Object {}}
-    isCloseable={false}
-    isExpanded={false}
-    isLight={true}
-    onClose={[Function]}
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
-    portalId={null}
-  >
-    <ToolTip.Target
-      elementType="g"
-    >
-      <g
-        transform="translate(10, 10)"
-      >
-        <g
-          transform="translate(90, 90)"
-        >
-          <g
-            className="lucid-PieChart-slice-group"
-            key="0"
-          >
-            <Line
-              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
-              color="color-chart-good"
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-good"
               d="100"
-              isDotted={false}
-              key="0"
               transform="scale(1)"
             />
             <path
-              className="lucid-PieChart-slice-hover"
+              class="lucid-PieChart-slice-hover"
               d="100"
-              onMouseOut={[Function]}
-              onMouseOver={[Function]}
               transform="scale(1.1)"
             />
           </g>
           <g
-            className="lucid-PieChart-slice-group"
-            key="1"
+            class="lucid-PieChart-slice-group"
           >
-            <Line
-              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
-              color="color-chart-0-darkest"
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-0-darkest"
               d="20"
-              isDotted={false}
-              key="1"
               transform="scale(1)"
             />
             <path
-              className="lucid-PieChart-slice-hover"
+              class="lucid-PieChart-slice-hover"
               d="20"
-              onMouseOut={[Function]}
-              onMouseOver={[Function]}
               transform="scale(1.1)"
             />
           </g>
           <g
-            className="lucid-PieChart-slice-group"
-            key="2"
+            class="lucid-PieChart-slice-group"
           >
-            <Line
-              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
-              color="color-chart-2"
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-2"
               d="10"
-              isDotted={false}
-              key="2"
               transform="scale(1)"
             />
             <path
-              className="lucid-PieChart-slice-hover"
+              class="lucid-PieChart-slice-hover"
               d="10"
-              onMouseOut={[Function]}
-              onMouseOver={[Function]}
               transform="scale(1.1)"
             />
           </g>
           <g
-            className="lucid-PieChart-slice-group"
-            key="3"
+            class="lucid-PieChart-slice-group"
           >
-            <Line
-              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
-              color="color-chart-4-lightest"
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-4-lightest"
               d="30"
-              isDotted={false}
-              key="3"
               transform="scale(1)"
             />
             <path
-              className="lucid-PieChart-slice-hover"
+              class="lucid-PieChart-slice-hover"
               d="30"
-              onMouseOut={[Function]}
-              onMouseOver={[Function]}
               transform="scale(1.1)"
             />
           </g>
           <g
-            className="lucid-PieChart-slice-group"
-            key="4"
+            class="lucid-PieChart-slice-group"
           >
-            <Line
-              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
-              color="color-chart-bad"
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-bad"
               d="40"
-              isDotted={false}
-              key="4"
               transform="scale(1)"
             />
             <path
-              className="lucid-PieChart-slice-hover"
+              class="lucid-PieChart-slice-hover"
               d="40"
-              onMouseOut={[Function]}
-              onMouseOver={[Function]}
               transform="scale(1.1)"
             />
           </g>
         </g>
       </g>
-    </ToolTip.Target>
-    <ToolTip.Title>
-      Leslie
-    </ToolTip.Title>
-    <ToolTip.Body>
-      100
-    </ToolTip.Body>
-  </ToolTip>
-</svg>
+    </g>
+  </svg>
+</div>
 `;
 
-exports[`PieChart [common] example testing should match snapshot(s) for 05.percents 1`] = `
-<svg
-  className="lucid-PieChart"
-  height={200}
-  width={200}
+exports[`PieChart [common] example testing should match snapshot(s) for Default 1`] = `
+<div
+  style="padding-top:4rem"
 >
-  <ToolTip
-    alignment="center"
-    direction="up"
-    flyOutStyle={Object {}}
-    isCloseable={false}
-    isExpanded={false}
-    isLight={true}
-    onClose={[Function]}
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
-    portalId={null}
+  <svg
+    class="lucid-PieChart"
+    height="200"
+    width="200"
   >
-    <ToolTip.Target
-      elementType="g"
+    <g
+      class="lucid-ContextMenu lucid-ToolTip"
     >
       <g
         transform="translate(10, 10)"
@@ -2248,138 +737,865 @@ exports[`PieChart [common] example testing should match snapshot(s) for 05.perce
           transform="translate(90, 90)"
         >
           <g
-            className="lucid-PieChart-slice-group"
-            key="0"
+            class="lucid-PieChart-slice-group"
           >
-            <Line
-              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
-              color="color-chart-3"
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-3"
               d="60"
-              isDotted={false}
-              key="0"
               transform="scale(1)"
             />
             <path
-              className="lucid-PieChart-slice-hover"
+              class="lucid-PieChart-slice-hover"
               d="60"
-              onMouseOut={[Function]}
-              onMouseOver={[Function]}
               transform="scale(1.1)"
             />
           </g>
           <g
-            className="lucid-PieChart-slice-group"
-            key="1"
+            class="lucid-PieChart-slice-group"
           >
-            <Line
-              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
-              color="color-chart-0-darkest"
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-0-darkest"
               d="40"
-              isDotted={false}
-              key="1"
               transform="scale(1)"
             />
             <path
-              className="lucid-PieChart-slice-hover"
+              class="lucid-PieChart-slice-hover"
               d="40"
-              onMouseOut={[Function]}
-              onMouseOver={[Function]}
               transform="scale(1.1)"
             />
           </g>
           <g
-            className="lucid-PieChart-slice-group"
-            key="2"
+            class="lucid-PieChart-slice-group"
           >
-            <Line
-              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
-              color="color-chart-2"
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-2"
               d="30"
-              isDotted={false}
-              key="2"
               transform="scale(1)"
             />
             <path
-              className="lucid-PieChart-slice-hover"
+              class="lucid-PieChart-slice-hover"
               d="30"
-              onMouseOut={[Function]}
-              onMouseOver={[Function]}
               transform="scale(1.1)"
             />
           </g>
           <g
-            className="lucid-PieChart-slice-group"
-            key="3"
+            class="lucid-PieChart-slice-group"
           >
-            <Line
-              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
-              color="color-chart-4-lightest"
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-4-lightest"
               d="20"
-              isDotted={false}
-              key="3"
               transform="scale(1)"
             />
             <path
-              className="lucid-PieChart-slice-hover"
+              class="lucid-PieChart-slice-hover"
               d="20"
-              onMouseOut={[Function]}
-              onMouseOver={[Function]}
               transform="scale(1.1)"
             />
           </g>
           <g
-            className="lucid-PieChart-slice-group"
-            key="4"
+            class="lucid-PieChart-slice-group"
           >
-            <Line
-              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
-              color="color-chart-5"
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-5"
               d="15"
-              isDotted={false}
-              key="4"
               transform="scale(1)"
             />
             <path
-              className="lucid-PieChart-slice-hover"
+              class="lucid-PieChart-slice-hover"
               d="15"
-              onMouseOut={[Function]}
-              onMouseOver={[Function]}
               transform="scale(1.1)"
             />
           </g>
         </g>
       </g>
-    </ToolTip.Target>
-    <ToolTip.Title>
-      Leslie
-    </ToolTip.Title>
-    <ToolTip.Body>
-      36.4%
-    </ToolTip.Body>
-  </ToolTip>
-</svg>
+    </g>
+  </svg>
+  <svg
+    class="lucid-PieChart"
+    height="200"
+    width="200"
+  >
+    <g
+      class="lucid-ContextMenu lucid-ToolTip"
+    >
+      <g
+        transform="translate(10, 10)"
+      >
+        <g
+          transform="translate(90, 90)"
+        >
+          <g
+            class="lucid-PieChart-slice-group"
+          >
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-0-lightest"
+              d="60"
+              transform="scale(1)"
+            />
+            <path
+              class="lucid-PieChart-slice-hover"
+              d="60"
+              transform="scale(1.1)"
+            />
+          </g>
+          <g
+            class="lucid-PieChart-slice-group"
+          >
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-0-light"
+              d="40"
+              transform="scale(1)"
+            />
+            <path
+              class="lucid-PieChart-slice-hover"
+              d="40"
+              transform="scale(1.1)"
+            />
+          </g>
+          <g
+            class="lucid-PieChart-slice-group"
+          >
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-0"
+              d="30"
+              transform="scale(1)"
+            />
+            <path
+              class="lucid-PieChart-slice-hover"
+              d="30"
+              transform="scale(1.1)"
+            />
+          </g>
+          <g
+            class="lucid-PieChart-slice-group"
+          >
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-0-dark"
+              d="20"
+              transform="scale(1)"
+            />
+            <path
+              class="lucid-PieChart-slice-hover"
+              d="20"
+              transform="scale(1.1)"
+            />
+          </g>
+          <g
+            class="lucid-PieChart-slice-group"
+          >
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-0-darkest"
+              d="15"
+              transform="scale(1)"
+            />
+            <path
+              class="lucid-PieChart-slice-hover"
+              d="15"
+              transform="scale(1.1)"
+            />
+          </g>
+        </g>
+      </g>
+    </g>
+  </svg>
+  <svg
+    class="lucid-PieChart"
+    height="200"
+    width="200"
+  >
+    <g
+      class="lucid-ContextMenu lucid-ToolTip"
+    >
+      <g
+        transform="translate(10, 10)"
+      >
+        <g
+          transform="translate(90, 90)"
+        >
+          <g
+            class="lucid-PieChart-slice-group"
+          >
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-1-lightest"
+              d="60"
+              transform="scale(1)"
+            />
+            <path
+              class="lucid-PieChart-slice-hover"
+              d="60"
+              transform="scale(1.1)"
+            />
+          </g>
+          <g
+            class="lucid-PieChart-slice-group"
+          >
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-1-light"
+              d="40"
+              transform="scale(1)"
+            />
+            <path
+              class="lucid-PieChart-slice-hover"
+              d="40"
+              transform="scale(1.1)"
+            />
+          </g>
+          <g
+            class="lucid-PieChart-slice-group"
+          >
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-1"
+              d="30"
+              transform="scale(1)"
+            />
+            <path
+              class="lucid-PieChart-slice-hover"
+              d="30"
+              transform="scale(1.1)"
+            />
+          </g>
+          <g
+            class="lucid-PieChart-slice-group"
+          >
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-1-dark"
+              d="20"
+              transform="scale(1)"
+            />
+            <path
+              class="lucid-PieChart-slice-hover"
+              d="20"
+              transform="scale(1.1)"
+            />
+          </g>
+          <g
+            class="lucid-PieChart-slice-group"
+          >
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-1-darkest"
+              d="15"
+              transform="scale(1)"
+            />
+            <path
+              class="lucid-PieChart-slice-hover"
+              d="15"
+              transform="scale(1.1)"
+            />
+          </g>
+        </g>
+      </g>
+    </g>
+  </svg>
+  <svg
+    class="lucid-PieChart"
+    height="200"
+    width="200"
+  >
+    <g
+      class="lucid-ContextMenu lucid-ToolTip"
+    >
+      <g
+        transform="translate(10, 10)"
+      >
+        <g
+          transform="translate(90, 90)"
+        >
+          <g
+            class="lucid-PieChart-slice-group"
+          >
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-2-lightest"
+              d="60"
+              transform="scale(1)"
+            />
+            <path
+              class="lucid-PieChart-slice-hover"
+              d="60"
+              transform="scale(1.1)"
+            />
+          </g>
+          <g
+            class="lucid-PieChart-slice-group"
+          >
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-2-light"
+              d="40"
+              transform="scale(1)"
+            />
+            <path
+              class="lucid-PieChart-slice-hover"
+              d="40"
+              transform="scale(1.1)"
+            />
+          </g>
+          <g
+            class="lucid-PieChart-slice-group"
+          >
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-2"
+              d="30"
+              transform="scale(1)"
+            />
+            <path
+              class="lucid-PieChart-slice-hover"
+              d="30"
+              transform="scale(1.1)"
+            />
+          </g>
+          <g
+            class="lucid-PieChart-slice-group"
+          >
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-2-dark"
+              d="20"
+              transform="scale(1)"
+            />
+            <path
+              class="lucid-PieChart-slice-hover"
+              d="20"
+              transform="scale(1.1)"
+            />
+          </g>
+          <g
+            class="lucid-PieChart-slice-group"
+          >
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-2-darkest"
+              d="15"
+              transform="scale(1)"
+            />
+            <path
+              class="lucid-PieChart-slice-hover"
+              d="15"
+              transform="scale(1.1)"
+            />
+          </g>
+        </g>
+      </g>
+    </g>
+  </svg>
+  <svg
+    class="lucid-PieChart"
+    height="200"
+    width="200"
+  >
+    <g
+      class="lucid-ContextMenu lucid-ToolTip"
+    >
+      <g
+        transform="translate(10, 10)"
+      >
+        <g
+          transform="translate(90, 90)"
+        >
+          <g
+            class="lucid-PieChart-slice-group"
+          >
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-3-lightest"
+              d="60"
+              transform="scale(1)"
+            />
+            <path
+              class="lucid-PieChart-slice-hover"
+              d="60"
+              transform="scale(1.1)"
+            />
+          </g>
+          <g
+            class="lucid-PieChart-slice-group"
+          >
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-3-light"
+              d="40"
+              transform="scale(1)"
+            />
+            <path
+              class="lucid-PieChart-slice-hover"
+              d="40"
+              transform="scale(1.1)"
+            />
+          </g>
+          <g
+            class="lucid-PieChart-slice-group"
+          >
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-3"
+              d="30"
+              transform="scale(1)"
+            />
+            <path
+              class="lucid-PieChart-slice-hover"
+              d="30"
+              transform="scale(1.1)"
+            />
+          </g>
+          <g
+            class="lucid-PieChart-slice-group"
+          >
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-3-dark"
+              d="20"
+              transform="scale(1)"
+            />
+            <path
+              class="lucid-PieChart-slice-hover"
+              d="20"
+              transform="scale(1.1)"
+            />
+          </g>
+          <g
+            class="lucid-PieChart-slice-group"
+          >
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-3-darkest"
+              d="15"
+              transform="scale(1)"
+            />
+            <path
+              class="lucid-PieChart-slice-hover"
+              d="15"
+              transform="scale(1.1)"
+            />
+          </g>
+        </g>
+      </g>
+    </g>
+  </svg>
+  <svg
+    class="lucid-PieChart"
+    height="200"
+    width="200"
+  >
+    <g
+      class="lucid-ContextMenu lucid-ToolTip"
+    >
+      <g
+        transform="translate(10, 10)"
+      >
+        <g
+          transform="translate(90, 90)"
+        >
+          <g
+            class="lucid-PieChart-slice-group"
+          >
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-4-lightest"
+              d="60"
+              transform="scale(1)"
+            />
+            <path
+              class="lucid-PieChart-slice-hover"
+              d="60"
+              transform="scale(1.1)"
+            />
+          </g>
+          <g
+            class="lucid-PieChart-slice-group"
+          >
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-4-light"
+              d="40"
+              transform="scale(1)"
+            />
+            <path
+              class="lucid-PieChart-slice-hover"
+              d="40"
+              transform="scale(1.1)"
+            />
+          </g>
+          <g
+            class="lucid-PieChart-slice-group"
+          >
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-4"
+              d="30"
+              transform="scale(1)"
+            />
+            <path
+              class="lucid-PieChart-slice-hover"
+              d="30"
+              transform="scale(1.1)"
+            />
+          </g>
+          <g
+            class="lucid-PieChart-slice-group"
+          >
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-4-dark"
+              d="20"
+              transform="scale(1)"
+            />
+            <path
+              class="lucid-PieChart-slice-hover"
+              d="20"
+              transform="scale(1.1)"
+            />
+          </g>
+          <g
+            class="lucid-PieChart-slice-group"
+          >
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-4-darkest"
+              d="15"
+              transform="scale(1)"
+            />
+            <path
+              class="lucid-PieChart-slice-hover"
+              d="15"
+              transform="scale(1.1)"
+            />
+          </g>
+        </g>
+      </g>
+    </g>
+  </svg>
+  <svg
+    class="lucid-PieChart"
+    height="200"
+    width="200"
+  >
+    <g
+      class="lucid-ContextMenu lucid-ToolTip"
+    >
+      <g
+        transform="translate(10, 10)"
+      >
+        <g
+          transform="translate(90, 90)"
+        >
+          <g
+            class="lucid-PieChart-slice-group"
+          >
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-5-lightest"
+              d="60"
+              transform="scale(1)"
+            />
+            <path
+              class="lucid-PieChart-slice-hover"
+              d="60"
+              transform="scale(1.1)"
+            />
+          </g>
+          <g
+            class="lucid-PieChart-slice-group"
+          >
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-5-light"
+              d="40"
+              transform="scale(1)"
+            />
+            <path
+              class="lucid-PieChart-slice-hover"
+              d="40"
+              transform="scale(1.1)"
+            />
+          </g>
+          <g
+            class="lucid-PieChart-slice-group"
+          >
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-5"
+              d="30"
+              transform="scale(1)"
+            />
+            <path
+              class="lucid-PieChart-slice-hover"
+              d="30"
+              transform="scale(1.1)"
+            />
+          </g>
+          <g
+            class="lucid-PieChart-slice-group"
+          >
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-5-dark"
+              d="20"
+              transform="scale(1)"
+            />
+            <path
+              class="lucid-PieChart-slice-hover"
+              d="20"
+              transform="scale(1.1)"
+            />
+          </g>
+          <g
+            class="lucid-PieChart-slice-group"
+          >
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-5-darkest"
+              d="15"
+              transform="scale(1)"
+            />
+            <path
+              class="lucid-PieChart-slice-hover"
+              d="15"
+              transform="scale(1.1)"
+            />
+          </g>
+        </g>
+      </g>
+    </g>
+  </svg>
+</div>
 `;
 
-exports[`PieChart [common] example testing should match snapshot(s) for 06.small-with-no-stroke-or-hover 1`] = `
-<svg
-  className="lucid-PieChart"
-  height={25}
-  width={25}
+exports[`PieChart [common] example testing should match snapshot(s) for LegendTest 1`] = `
+<div
+  style="display:flex;align-items:center;padding-top:4rem"
 >
-  <ToolTip
-    alignment="center"
-    direction="up"
-    flyOutStyle={Object {}}
-    isCloseable={false}
-    isExpanded={false}
-    isLight={true}
-    onClose={[Function]}
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
-    portalId={null}
+  <svg
+    class="lucid-PieChart"
+    height="200"
+    width="200"
   >
-    <ToolTip.Target
-      elementType="g"
+    <g
+      class="lucid-ContextMenu lucid-ToolTip"
+    >
+      <g
+        transform="translate(10, 10)"
+      >
+        <g
+          transform="translate(90, 90)"
+        >
+          <g
+            class="lucid-PieChart-slice-group"
+          >
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-3"
+              d="80"
+              transform="scale(1)"
+            />
+            <path
+              class="lucid-PieChart-slice-hover"
+              d="80"
+              transform="scale(1.1)"
+            />
+          </g>
+          <g
+            class="lucid-PieChart-slice-group"
+          >
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-0-darkest"
+              d="20"
+              transform="scale(1)"
+            />
+            <path
+              class="lucid-PieChart-slice-hover"
+              d="20"
+              transform="scale(1.1)"
+            />
+          </g>
+          <g
+            class="lucid-PieChart-slice-group"
+          >
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-2"
+              d="10"
+              transform="scale(1)"
+            />
+            <path
+              class="lucid-PieChart-slice-hover"
+              d="10"
+              transform="scale(1.1)"
+            />
+          </g>
+          <g
+            class="lucid-PieChart-slice-group"
+          >
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-4-lightest"
+              d="30"
+              transform="scale(1)"
+            />
+            <path
+              class="lucid-PieChart-slice-hover"
+              d="30"
+              transform="scale(1.1)"
+            />
+          </g>
+        </g>
+      </g>
+    </g>
+  </svg>
+  <ul
+    class="lucid-Legend lucid-Legend-is-vertical lucid-Legend-has-borders"
+  >
+    <li
+      class="lucid-Legend-Item"
+    >
+      <svg
+        class="lucid-Legend-Item-indicator"
+        height="12"
+        width="12"
+      >
+        <path
+          class="lucid-Point lucid-Point-color-chart-3"
+          d="M6,12 C0,12 0,12 0,6 C0,0 -0,0 6,0 C12,0 12,0 12,6 C12,12 12,12 6,12 z"
+          transform="translate(0, 0) scale(1)"
+        />
+      </svg>
+      Leslie
+    </li>
+    <li
+      class="lucid-Legend-Item"
+    >
+      <svg
+        class="lucid-Legend-Item-indicator"
+        height="12"
+        width="12"
+      >
+        <path
+          class="lucid-Point lucid-Point-color-chart-0-darkest"
+          d="M6,12 C0,12 0,12 0,6 C0,0 -0,0 6,0 C12,0 12,0 12,6 C12,12 12,12 6,12 z"
+          transform="translate(0, 0) scale(1)"
+        />
+      </svg>
+      Tom
+    </li>
+    <li
+      class="lucid-Legend-Item"
+    >
+      <svg
+        class="lucid-Legend-Item-indicator"
+        height="12"
+        width="12"
+      >
+        <path
+          class="lucid-Point lucid-Point-color-chart-2"
+          d="M6,12 C0,12 0,12 0,6 C0,0 -0,0 6,0 C12,0 12,0 12,6 C12,12 12,12 6,12 z"
+          transform="translate(0, 0) scale(1)"
+        />
+      </svg>
+      Ron
+    </li>
+    <li
+      class="lucid-Legend-Item"
+    >
+      <svg
+        class="lucid-Legend-Item-indicator"
+        height="12"
+        width="12"
+      >
+        <path
+          class="lucid-Point lucid-Point-color-chart-4-lightest"
+          d="M6,12 C0,12 0,12 0,6 C0,0 -0,0 6,0 C12,0 12,0 12,6 C12,12 12,12 6,12 z"
+          transform="translate(0, 0) scale(1)"
+        />
+      </svg>
+      Ann
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`PieChart [common] example testing should match snapshot(s) for Percents 1`] = `
+<div
+  style="padding-top:4rem"
+>
+  <svg
+    class="lucid-PieChart"
+    height="200"
+    width="200"
+  >
+    <g
+      class="lucid-ContextMenu lucid-ToolTip"
+    >
+      <g
+        transform="translate(10, 10)"
+      >
+        <g
+          transform="translate(90, 90)"
+        >
+          <g
+            class="lucid-PieChart-slice-group"
+          >
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-3"
+              d="60"
+              transform="scale(1)"
+            />
+            <path
+              class="lucid-PieChart-slice-hover"
+              d="60"
+              transform="scale(1.1)"
+            />
+          </g>
+          <g
+            class="lucid-PieChart-slice-group"
+          >
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-0-darkest"
+              d="40"
+              transform="scale(1)"
+            />
+            <path
+              class="lucid-PieChart-slice-hover"
+              d="40"
+              transform="scale(1.1)"
+            />
+          </g>
+          <g
+            class="lucid-PieChart-slice-group"
+          >
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-2"
+              d="30"
+              transform="scale(1)"
+            />
+            <path
+              class="lucid-PieChart-slice-hover"
+              d="30"
+              transform="scale(1.1)"
+            />
+          </g>
+          <g
+            class="lucid-PieChart-slice-group"
+          >
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-4-lightest"
+              d="20"
+              transform="scale(1)"
+            />
+            <path
+              class="lucid-PieChart-slice-hover"
+              d="20"
+              transform="scale(1.1)"
+            />
+          </g>
+          <g
+            class="lucid-PieChart-slice-group"
+          >
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-5"
+              d="15"
+              transform="scale(1)"
+            />
+            <path
+              class="lucid-PieChart-slice-hover"
+              d="15"
+              transform="scale(1.1)"
+            />
+          </g>
+        </g>
+      </g>
+    </g>
+  </svg>
+</div>
+`;
+
+exports[`PieChart [common] example testing should match snapshot(s) for SmallWithNoStrokeOrHover 1`] = `
+<div
+  style="padding-top:4rem"
+>
+  <svg
+    class="lucid-PieChart"
+    height="25"
+    width="25"
+  >
+    <g
+      class="lucid-ContextMenu lucid-ToolTip"
     >
       <g
         transform="translate(0, 0)"
@@ -2388,114 +1604,78 @@ exports[`PieChart [common] example testing should match snapshot(s) for 06.small
           transform="translate(12.5, 12.5)"
         >
           <g
-            className="lucid-PieChart-slice-group"
-            key="0"
+            class="lucid-PieChart-slice-group"
           >
-            <Line
-              className="lucid-PieChart-slice"
-              color="color-chart-3"
+            <path
+              class="lucid-PieChart-slice lucid-Line lucid-Line-color-chart-3"
               d="60"
-              isDotted={false}
-              key="0"
               transform="scale(1)"
             />
             <path
-              className="lucid-PieChart-slice-hover"
+              class="lucid-PieChart-slice-hover"
               d="60"
-              onMouseOut={[Function]}
-              onMouseOver={[Function]}
               transform="scale(1.1)"
             />
           </g>
           <g
-            className="lucid-PieChart-slice-group"
-            key="1"
+            class="lucid-PieChart-slice-group"
           >
-            <Line
-              className="lucid-PieChart-slice"
-              color="color-chart-0-darkest"
+            <path
+              class="lucid-PieChart-slice lucid-Line lucid-Line-color-chart-0-darkest"
               d="40"
-              isDotted={false}
-              key="1"
               transform="scale(1)"
             />
             <path
-              className="lucid-PieChart-slice-hover"
+              class="lucid-PieChart-slice-hover"
               d="40"
-              onMouseOut={[Function]}
-              onMouseOver={[Function]}
               transform="scale(1.1)"
             />
           </g>
           <g
-            className="lucid-PieChart-slice-group"
-            key="2"
+            class="lucid-PieChart-slice-group"
           >
-            <Line
-              className="lucid-PieChart-slice"
-              color="color-chart-2"
+            <path
+              class="lucid-PieChart-slice lucid-Line lucid-Line-color-chart-2"
               d="30"
-              isDotted={false}
-              key="2"
               transform="scale(1)"
             />
             <path
-              className="lucid-PieChart-slice-hover"
+              class="lucid-PieChart-slice-hover"
               d="30"
-              onMouseOut={[Function]}
-              onMouseOver={[Function]}
               transform="scale(1.1)"
             />
           </g>
           <g
-            className="lucid-PieChart-slice-group"
-            key="3"
+            class="lucid-PieChart-slice-group"
           >
-            <Line
-              className="lucid-PieChart-slice"
-              color="color-chart-4-lightest"
+            <path
+              class="lucid-PieChart-slice lucid-Line lucid-Line-color-chart-4-lightest"
               d="20"
-              isDotted={false}
-              key="3"
               transform="scale(1)"
             />
             <path
-              className="lucid-PieChart-slice-hover"
+              class="lucid-PieChart-slice-hover"
               d="20"
-              onMouseOut={[Function]}
-              onMouseOver={[Function]}
               transform="scale(1.1)"
             />
           </g>
           <g
-            className="lucid-PieChart-slice-group"
-            key="4"
+            class="lucid-PieChart-slice-group"
           >
-            <Line
-              className="lucid-PieChart-slice"
-              color="color-chart-5"
+            <path
+              class="lucid-PieChart-slice lucid-Line lucid-Line-color-chart-5"
               d="15"
-              isDotted={false}
-              key="4"
               transform="scale(1)"
             />
             <path
-              className="lucid-PieChart-slice-hover"
+              class="lucid-PieChart-slice-hover"
               d="15"
-              onMouseOut={[Function]}
-              onMouseOver={[Function]}
               transform="scale(1.1)"
             />
           </g>
         </g>
       </g>
-    </ToolTip.Target>
-    <ToolTip.Title>
-      Leslie
-    </ToolTip.Title>
-    <ToolTip.Body>
-      60
-    </ToolTip.Body>
-  </ToolTip>
-</svg>
+    </g>
+  </svg>
+</div>
 `;

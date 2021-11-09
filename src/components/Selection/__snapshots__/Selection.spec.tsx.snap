@@ -1,5 +1,2478 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Selection [common] example testing should match snapshot(s) for Interactive 1`] = `
+<div
+  class="lucid-Resizer"
+>
+  <div>
+    <div
+      class="lucid-Selection lucid-Selection-is-small lucid-Selection-container lucid-Selection-has-background lucid-Selection-is-bold"
+    >
+      <div
+        class="lucid-Selection-content"
+      >
+        <div
+          class="lucid-Selection-label-container"
+        >
+          <span
+            class="lucid-Selection-label lucid-Selection-label-is-small"
+          >
+            Last Man on Earth
+          </span>
+          <svg
+            class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Selection-close-button lucid-Selection-close-button-is-small"
+            height="16"
+            preserveAspectRatio="xMidYMid meet"
+            viewBox="0 0 16 16"
+            width="16"
+          >
+            <path
+              d="M.5.5l15 15m0-15l-15 15"
+            />
+          </svg>
+        </div>
+        <div
+          class="lucid-Selection-children-container"
+        >
+          <div
+            class="lucid-Selection lucid-Selection-is-small lucid-Selection-default"
+          >
+            <div
+              class="lucid-Selection-content"
+            >
+              <div
+                class="lucid-Selection-label-container"
+              >
+                <span
+                  class="lucid-Selection-label lucid-Selection-label-is-small"
+                >
+                  Phil
+                </span>
+                <svg
+                  class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Selection-close-button lucid-Selection-close-button-is-small"
+                  height="16"
+                  preserveAspectRatio="xMidYMid meet"
+                  viewBox="0 0 16 16"
+                  width="16"
+                >
+                  <path
+                    d="M.5.5l15 15m0-15l-15 15"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="lucid-Selection lucid-Selection-is-small lucid-Selection-container lucid-Selection-has-background lucid-Selection-is-bold"
+    >
+      <div
+        class="lucid-Selection-content"
+      >
+        <div
+          class="lucid-Selection-label-container"
+        >
+          <span
+            class="lucid-Selection-label lucid-Selection-label-is-small"
+          >
+            Last Woman on Earth
+          </span>
+          <svg
+            class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Selection-close-button lucid-Selection-close-button-is-small"
+            height="16"
+            preserveAspectRatio="xMidYMid meet"
+            viewBox="0 0 16 16"
+            width="16"
+          >
+            <path
+              d="M.5.5l15 15m0-15l-15 15"
+            />
+          </svg>
+        </div>
+        <div
+          class="lucid-Selection-children-container"
+        >
+          <div
+            class="lucid-Selection lucid-Selection-is-small lucid-Selection-default"
+          >
+            <div
+              class="lucid-Selection-content"
+            >
+              <div
+                class="lucid-Selection-label-container"
+              >
+                <span
+                  class="lucid-Selection-label lucid-Selection-label-is-small"
+                >
+                  Carol
+                </span>
+                <svg
+                  class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Selection-close-button lucid-Selection-close-button-is-small"
+                  height="16"
+                  preserveAspectRatio="xMidYMid meet"
+                  viewBox="0 0 16 16"
+                  width="16"
+                >
+                  <path
+                    d="M.5.5l15 15m0-15l-15 15"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="lucid-Selection lucid-Selection-is-small lucid-Selection-container lucid-Selection-has-background lucid-Selection-is-bold"
+    >
+      <div
+        class="lucid-Selection-content"
+      >
+        <div
+          class="lucid-Selection-label-container"
+        >
+          <span
+            class="lucid-Selection-label lucid-Selection-label-is-small"
+          >
+            Star Wars
+          </span>
+          <svg
+            class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Selection-close-button lucid-Selection-close-button-is-small"
+            height="16"
+            preserveAspectRatio="xMidYMid meet"
+            viewBox="0 0 16 16"
+            width="16"
+          >
+            <path
+              d="M.5.5l15 15m0-15l-15 15"
+            />
+          </svg>
+        </div>
+        <div
+          class="lucid-Selection-children-container"
+        >
+          <div
+            class="lucid-Selection lucid-Selection-is-small lucid-Selection-default"
+          >
+            <div
+              class="lucid-Selection-content"
+            >
+              <div
+                class="lucid-Selection-label-container"
+              >
+                <span
+                  class="lucid-Selection-label lucid-Selection-label-is-small"
+                >
+                  Ask Aak
+                </span>
+                <svg
+                  class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Selection-close-button lucid-Selection-close-button-is-small"
+                  height="16"
+                  preserveAspectRatio="xMidYMid meet"
+                  viewBox="0 0 16 16"
+                  width="16"
+                >
+                  <path
+                    d="M.5.5l15 15m0-15l-15 15"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div
+            class="lucid-Selection lucid-Selection-is-small lucid-Selection-default"
+          >
+            <div
+              class="lucid-Selection-content"
+            >
+              <div
+                class="lucid-Selection-label-container"
+              >
+                <span
+                  class="lucid-Selection-label lucid-Selection-label-is-small"
+                >
+                  Admiral Gial Ackbar
+                </span>
+                <svg
+                  class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Selection-close-button lucid-Selection-close-button-is-small"
+                  height="16"
+                  preserveAspectRatio="xMidYMid meet"
+                  viewBox="0 0 16 16"
+                  width="16"
+                >
+                  <path
+                    d="M.5.5l15 15m0-15l-15 15"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div
+            class="lucid-Selection lucid-Selection-is-small lucid-Selection-default"
+          >
+            <div
+              class="lucid-Selection-content"
+            >
+              <div
+                class="lucid-Selection-label-container"
+              >
+                <span
+                  class="lucid-Selection-label lucid-Selection-label-is-small"
+                >
+                  Acros-Krik
+                </span>
+                <svg
+                  class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Selection-close-button lucid-Selection-close-button-is-small"
+                  height="16"
+                  preserveAspectRatio="xMidYMid meet"
+                  viewBox="0 0 16 16"
+                  width="16"
+                >
+                  <path
+                    d="M.5.5l15 15m0-15l-15 15"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div
+            class="lucid-Selection lucid-Selection-is-small lucid-Selection-default"
+          >
+            <div
+              class="lucid-Selection-content"
+            >
+              <div
+                class="lucid-Selection-label-container"
+              >
+                <span
+                  class="lucid-Selection-label lucid-Selection-label-is-small"
+                >
+                  Ak-Rev
+                </span>
+                <svg
+                  class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Selection-close-button lucid-Selection-close-button-is-small"
+                  height="16"
+                  preserveAspectRatio="xMidYMid meet"
+                  viewBox="0 0 16 16"
+                  width="16"
+                >
+                  <path
+                    d="M.5.5l15 15m0-15l-15 15"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div
+            class="lucid-Selection lucid-Selection-is-small lucid-Selection-default"
+          >
+            <div
+              class="lucid-Selection-content"
+            >
+              <div
+                class="lucid-Selection-label-container"
+              >
+                <span
+                  class="lucid-Selection-label lucid-Selection-label-is-small"
+                >
+                  Stass Allie
+                </span>
+                <svg
+                  class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Selection-close-button lucid-Selection-close-button-is-small"
+                  height="16"
+                  preserveAspectRatio="xMidYMid meet"
+                  viewBox="0 0 16 16"
+                  width="16"
+                >
+                  <path
+                    d="M.5.5l15 15m0-15l-15 15"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div
+            class="lucid-Selection lucid-Selection-is-small lucid-Selection-default"
+          >
+            <div
+              class="lucid-Selection-content"
+            >
+              <div
+                class="lucid-Selection-label-container"
+              >
+                <span
+                  class="lucid-Selection-label lucid-Selection-label-is-small"
+                >
+                  Almec
+                </span>
+                <svg
+                  class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Selection-close-button lucid-Selection-close-button-is-small"
+                  height="16"
+                  preserveAspectRatio="xMidYMid meet"
+                  viewBox="0 0 16 16"
+                  width="16"
+                >
+                  <path
+                    d="M.5.5l15 15m0-15l-15 15"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div
+            class="lucid-Selection lucid-Selection-is-small lucid-Selection-default"
+          >
+            <div
+              class="lucid-Selection-content"
+            >
+              <div
+                class="lucid-Selection-label-container"
+              >
+                <span
+                  class="lucid-Selection-label lucid-Selection-label-is-small"
+                >
+                  Mas Amedda
+                </span>
+                <svg
+                  class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Selection-close-button lucid-Selection-close-button-is-small"
+                  height="16"
+                  preserveAspectRatio="xMidYMid meet"
+                  viewBox="0 0 16 16"
+                  width="16"
+                >
+                  <path
+                    d="M.5.5l15 15m0-15l-15 15"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="lucid-Selection lucid-Selection-is-small lucid-Selection-container lucid-Selection-has-background lucid-Selection-is-bold"
+    >
+      <div
+        class="lucid-Selection-content"
+      >
+        <div
+          class="lucid-Selection-label-container"
+        >
+          <span
+            class="lucid-Selection-label lucid-Selection-label-is-small"
+          >
+            Lord of the Rings
+          </span>
+          <svg
+            class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Selection-close-button lucid-Selection-close-button-is-small"
+            height="16"
+            preserveAspectRatio="xMidYMid meet"
+            viewBox="0 0 16 16"
+            width="16"
+          >
+            <path
+              d="M.5.5l15 15m0-15l-15 15"
+            />
+          </svg>
+        </div>
+        <div
+          class="lucid-Selection-children-container"
+        >
+          <div
+            class="lucid-Selection lucid-Selection-is-small lucid-Selection-default"
+          >
+            <div
+              class="lucid-Selection-content"
+            >
+              <div
+                class="lucid-Selection-label-container"
+              >
+                <span
+                  class="lucid-Selection-label lucid-Selection-label-is-small"
+                >
+                  Adrahil
+                </span>
+                <svg
+                  class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Selection-close-button lucid-Selection-close-button-is-small"
+                  height="16"
+                  preserveAspectRatio="xMidYMid meet"
+                  viewBox="0 0 16 16"
+                  width="16"
+                >
+                  <path
+                    d="M.5.5l15 15m0-15l-15 15"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div
+            class="lucid-Selection lucid-Selection-is-small lucid-Selection-default"
+          >
+            <div
+              class="lucid-Selection-content"
+            >
+              <div
+                class="lucid-Selection-label-container"
+              >
+                <span
+                  class="lucid-Selection-label lucid-Selection-label-is-small"
+                >
+                  Adrahil II
+                </span>
+                <svg
+                  class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Selection-close-button lucid-Selection-close-button-is-small"
+                  height="16"
+                  preserveAspectRatio="xMidYMid meet"
+                  viewBox="0 0 16 16"
+                  width="16"
+                >
+                  <path
+                    d="M.5.5l15 15m0-15l-15 15"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div
+            class="lucid-Selection lucid-Selection-is-small lucid-Selection-default"
+          >
+            <div
+              class="lucid-Selection-content"
+            >
+              <div
+                class="lucid-Selection-label-container"
+              >
+                <span
+                  class="lucid-Selection-label lucid-Selection-label-is-small"
+                >
+                  Araglas
+                </span>
+                <svg
+                  class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Selection-close-button lucid-Selection-close-button-is-small"
+                  height="16"
+                  preserveAspectRatio="xMidYMid meet"
+                  viewBox="0 0 16 16"
+                  width="16"
+                >
+                  <path
+                    d="M.5.5l15 15m0-15l-15 15"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div
+            class="lucid-Selection lucid-Selection-is-small lucid-Selection-default"
+          >
+            <div
+              class="lucid-Selection-content"
+            >
+              <div
+                class="lucid-Selection-label-container"
+              >
+                <span
+                  class="lucid-Selection-label lucid-Selection-label-is-small"
+                >
+                  Aragorn I
+                </span>
+                <svg
+                  class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Selection-close-button lucid-Selection-close-button-is-small"
+                  height="16"
+                  preserveAspectRatio="xMidYMid meet"
+                  viewBox="0 0 16 16"
+                  width="16"
+                >
+                  <path
+                    d="M.5.5l15 15m0-15l-15 15"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div
+            class="lucid-Selection lucid-Selection-is-small lucid-Selection-default"
+          >
+            <div
+              class="lucid-Selection-content"
+            >
+              <div
+                class="lucid-Selection-label-container"
+              >
+                <span
+                  class="lucid-Selection-label lucid-Selection-label-is-small"
+                >
+                  Aragorn II Elessar
+                </span>
+                <svg
+                  class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Selection-close-button lucid-Selection-close-button-is-small"
+                  height="16"
+                  preserveAspectRatio="xMidYMid meet"
+                  viewBox="0 0 16 16"
+                  width="16"
+                >
+                  <path
+                    d="M.5.5l15 15m0-15l-15 15"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="lucid-Selection lucid-Selection-is-small lucid-Selection-container lucid-Selection-has-background lucid-Selection-is-bold"
+    >
+      <div
+        class="lucid-Selection-content"
+      >
+        <div
+          class="lucid-Selection-label-container"
+        >
+          <span
+            class="lucid-Selection-label lucid-Selection-label-is-small"
+          >
+            Star Trek
+          </span>
+          <svg
+            class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Selection-close-button lucid-Selection-close-button-is-small"
+            height="16"
+            preserveAspectRatio="xMidYMid meet"
+            viewBox="0 0 16 16"
+            width="16"
+          >
+            <path
+              d="M.5.5l15 15m0-15l-15 15"
+            />
+          </svg>
+        </div>
+        <div
+          class="lucid-Selection-children-container"
+        >
+          <div
+            class="lucid-Selection lucid-Selection-is-small lucid-Selection-default"
+          >
+            <div
+              class="lucid-Selection-content"
+            >
+              <div
+                class="lucid-Selection-label-container"
+              >
+                <span
+                  class="lucid-Selection-label lucid-Selection-label-is-small"
+                >
+                  Jonathan Archer
+                </span>
+                <svg
+                  class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Selection-close-button lucid-Selection-close-button-is-small"
+                  height="16"
+                  preserveAspectRatio="xMidYMid meet"
+                  viewBox="0 0 16 16"
+                  width="16"
+                >
+                  <path
+                    d="M.5.5l15 15m0-15l-15 15"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div
+            class="lucid-Selection lucid-Selection-is-small lucid-Selection-default"
+          >
+            <div
+              class="lucid-Selection-content"
+            >
+              <div
+                class="lucid-Selection-label-container"
+              >
+                <span
+                  class="lucid-Selection-label lucid-Selection-label-is-small"
+                >
+                  Ayala
+                </span>
+                <svg
+                  class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Selection-close-button lucid-Selection-close-button-is-small"
+                  height="16"
+                  preserveAspectRatio="xMidYMid meet"
+                  viewBox="0 0 16 16"
+                  width="16"
+                >
+                  <path
+                    d="M.5.5l15 15m0-15l-15 15"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div
+            class="lucid-Selection lucid-Selection-is-small lucid-Selection-default"
+          >
+            <div
+              class="lucid-Selection-content"
+            >
+              <div
+                class="lucid-Selection-label-container"
+              >
+                <span
+                  class="lucid-Selection-label lucid-Selection-label-is-small"
+                >
+                  Azan
+                </span>
+                <svg
+                  class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Selection-close-button lucid-Selection-close-button-is-small"
+                  height="16"
+                  preserveAspectRatio="xMidYMid meet"
+                  viewBox="0 0 16 16"
+                  width="16"
+                >
+                  <path
+                    d="M.5.5l15 15m0-15l-15 15"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div
+            class="lucid-Selection lucid-Selection-is-small lucid-Selection-default"
+          >
+            <div
+              class="lucid-Selection-content"
+            >
+              <div
+                class="lucid-Selection-label-container"
+              >
+                <span
+                  class="lucid-Selection-label lucid-Selection-label-is-small"
+                >
+                  Bareil Antos
+                </span>
+                <svg
+                  class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Selection-close-button lucid-Selection-close-button-is-small"
+                  height="16"
+                  preserveAspectRatio="xMidYMid meet"
+                  viewBox="0 0 16 16"
+                  width="16"
+                >
+                  <path
+                    d="M.5.5l15 15m0-15l-15 15"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div
+            class="lucid-Selection lucid-Selection-is-small lucid-Selection-default"
+          >
+            <div
+              class="lucid-Selection-content"
+            >
+              <div
+                class="lucid-Selection-label-container"
+              >
+                <span
+                  class="lucid-Selection-label lucid-Selection-label-is-small"
+                >
+                  Julian Bashir
+                </span>
+                <svg
+                  class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Selection-close-button lucid-Selection-close-button-is-small"
+                  height="16"
+                  preserveAspectRatio="xMidYMid meet"
+                  viewBox="0 0 16 16"
+                  width="16"
+                >
+                  <path
+                    d="M.5.5l15 15m0-15l-15 15"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div
+            class="lucid-Selection lucid-Selection-is-small lucid-Selection-default"
+          >
+            <div
+              class="lucid-Selection-content"
+            >
+              <div
+                class="lucid-Selection-label-container"
+              >
+                <span
+                  class="lucid-Selection-label lucid-Selection-label-is-small"
+                >
+                  Season 6 (TNG)
+                </span>
+                <svg
+                  class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Selection-close-button lucid-Selection-close-button-is-small"
+                  height="16"
+                  preserveAspectRatio="xMidYMid meet"
+                  viewBox="0 0 16 16"
+                  width="16"
+                >
+                  <path
+                    d="M.5.5l15 15m0-15l-15 15"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div
+            class="lucid-Selection lucid-Selection-is-small lucid-Selection-default"
+          >
+            <div
+              class="lucid-Selection-content"
+            >
+              <div
+                class="lucid-Selection-label-container"
+              >
+                <span
+                  class="lucid-Selection-label lucid-Selection-label-is-small"
+                >
+                  Lieutenant, JG (S1-3)
+                </span>
+                <svg
+                  class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Selection-close-button lucid-Selection-close-button-is-small"
+                  height="16"
+                  preserveAspectRatio="xMidYMid meet"
+                  viewBox="0 0 16 16"
+                  width="16"
+                >
+                  <path
+                    d="M.5.5l15 15m0-15l-15 15"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Selection [common] example testing should match snapshot(s) for Kinds 1`] = `
+<div
+  class="lucid-Resizer"
+>
+  <div>
+    <div
+      style="margin:10px"
+    >
+      <div
+        class="lucid-Selection lucid-Selection-is-small lucid-Selection-container"
+      >
+        <div
+          class="lucid-Selection-content"
+        >
+          <div
+            class="lucid-Selection-label-container"
+          >
+            <span
+              class="lucid-Selection-label lucid-Selection-label-is-small"
+            >
+              Container Light Not Removable
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      style="margin:10px"
+    >
+      <div
+        class="lucid-Selection lucid-Selection-is-small lucid-Selection-container"
+      >
+        <div
+          class="lucid-Selection-content"
+        >
+          <div
+            class="lucid-Selection-label-container"
+          >
+            <span
+              class="lucid-Selection-label lucid-Selection-label-is-small"
+            >
+              Container Light
+            </span>
+            <svg
+              class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Selection-close-button lucid-Selection-close-button-is-small"
+              height="16"
+              preserveAspectRatio="xMidYMid meet"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <path
+                d="M.5.5l15 15m0-15l-15 15"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      style="margin:10px"
+    >
+      <div
+        class="lucid-Selection lucid-Selection-is-small lucid-Selection-container lucid-Selection-is-filled"
+      >
+        <div
+          class="lucid-Selection-content"
+        >
+          <div
+            class="lucid-Selection-label-container"
+          >
+            <span
+              class="lucid-Selection-label lucid-Selection-label-is-small"
+            >
+              Container Filled Not Removable
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      style="margin:10px"
+    >
+      <div
+        class="lucid-Selection lucid-Selection-is-small lucid-Selection-container lucid-Selection-is-filled"
+      >
+        <div
+          class="lucid-Selection-content"
+        >
+          <div
+            class="lucid-Selection-label-container"
+          >
+            <span
+              class="lucid-Selection-label lucid-Selection-label-is-small"
+            >
+              Container Filled
+            </span>
+            <svg
+              class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Selection-close-button lucid-Selection-close-button-is-small"
+              height="16"
+              preserveAspectRatio="xMidYMid meet"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <path
+                d="M.5.5l15 15m0-15l-15 15"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      style="margin:10px"
+    >
+      <div
+        class="lucid-Selection lucid-Selection-is-small lucid-Selection-default"
+      >
+        <div
+          class="lucid-Selection-content"
+        >
+          <div
+            class="lucid-Selection-label-container"
+          >
+            <span
+              class="lucid-Selection-label lucid-Selection-label-is-small"
+            >
+              Default
+            </span>
+            <svg
+              class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Selection-close-button lucid-Selection-close-button-is-small"
+              height="16"
+              preserveAspectRatio="xMidYMid meet"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <path
+                d="M.5.5l15 15m0-15l-15 15"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      style="margin:10px"
+    >
+      <div
+        class="lucid-Selection lucid-Selection-is-small lucid-Selection-success"
+      >
+        <svg
+          class="lucid-Icon lucid-Icon-color-primary lucid-SuccessIcon lucid-Selection-Icon lucid-Selection-Icon-is-small"
+          height="16"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 16 16"
+          width="16"
+        >
+          <circle
+            class="lucid-SuccessIcon-background"
+            cx="8"
+            cy="8"
+            r="7.5"
+          />
+          <path
+            class="lucid-SuccessIcon-check"
+            d="M4.5 8L7 10.5 11.5 6"
+          />
+        </svg>
+        <div
+          class="lucid-Selection-content"
+        >
+          <div
+            class="lucid-Selection-label-container"
+          >
+            <span
+              class="lucid-Selection-label lucid-Selection-label-is-small"
+            >
+              Success
+            </span>
+            <svg
+              class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Selection-close-button lucid-Selection-close-button-is-small"
+              height="16"
+              preserveAspectRatio="xMidYMid meet"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <path
+                d="M.5.5l15 15m0-15l-15 15"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      style="margin:10px"
+    >
+      <div
+        class="lucid-Selection lucid-Selection-is-small lucid-Selection-danger"
+      >
+        <svg
+          class="lucid-Icon lucid-Icon-color-primary lucid-MinusCircleIcon lucid-Selection-Icon lucid-Selection-Icon-is-small"
+          height="16"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 16 16"
+          width="16"
+        >
+          <circle
+            class="lucid-MinusCircleIcon-background"
+            cx="8"
+            cy="8"
+            r="7.5"
+          />
+          <path
+            class="lucid-MinusCircleIcon-dash"
+            d="M4.5 8h7"
+          />
+        </svg>
+        <div
+          class="lucid-Selection-content"
+        >
+          <div
+            class="lucid-Selection-label-container"
+          >
+            <span
+              class="lucid-Selection-label lucid-Selection-label-is-small"
+            >
+              Danger
+            </span>
+            <svg
+              class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Selection-close-button lucid-Selection-close-button-is-small"
+              height="16"
+              preserveAspectRatio="xMidYMid meet"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <path
+                d="M.5.5l15 15m0-15l-15 15"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      style="margin:10px"
+    >
+      <div
+        class="lucid-Selection lucid-Selection-is-small lucid-Selection-info"
+      >
+        <svg
+          class="lucid-Icon lucid-Icon-color-primary lucid-InfoIcon lucid-Selection-Icon lucid-Selection-Icon-is-small"
+          height="16"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 16 16"
+          width="16"
+        >
+          <circle
+            class="lucid-InfoIcon-background"
+            cx="8"
+            cy="8"
+            r="7.5"
+          />
+          <path
+            class="lucid-InfoIcon-i"
+            d="M7.99 12.5v-6"
+          />
+          <circle
+            class="lucid-InfoIcon-i"
+            cx="7.99"
+            cy="4"
+            r=".293"
+          />
+        </svg>
+        <div
+          class="lucid-Selection-content"
+        >
+          <div
+            class="lucid-Selection-label-container"
+          >
+            <span
+              class="lucid-Selection-label lucid-Selection-label-is-small"
+            >
+              Info
+            </span>
+            <svg
+              class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Selection-close-button lucid-Selection-close-button-is-small"
+              height="16"
+              preserveAspectRatio="xMidYMid meet"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <path
+                d="M.5.5l15 15m0-15l-15 15"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      style="margin:10px"
+    >
+      <div
+        class="lucid-Selection lucid-Selection-is-small lucid-Selection-warning"
+      >
+        <svg
+          class="lucid-Icon lucid-Icon-color-primary lucid-WarningIcon lucid-Selection-Icon lucid-Selection-Icon-is-small"
+          height="16"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 16 16"
+          width="16"
+        >
+          <path
+            class="lucid-WarningIcon-background"
+            d="M.5 15h15L8 .5z"
+          />
+          <path
+            class="lucid-WarningIcon-mark"
+            d="M7.99 5v4"
+          />
+          <circle
+            class="lucid-WarningIcon-mark"
+            cx="7.99"
+            cy="12"
+            r=".293"
+          />
+        </svg>
+        <div
+          class="lucid-Selection-content"
+        >
+          <div
+            class="lucid-Selection-label-container"
+          >
+            <span
+              class="lucid-Selection-label lucid-Selection-label-is-small"
+            >
+              Warning
+            </span>
+            <svg
+              class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Selection-close-button lucid-Selection-close-button-is-small"
+              height="16"
+              preserveAspectRatio="xMidYMid meet"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <path
+                d="M.5.5l15 15m0-15l-15 15"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Selection [common] example testing should match snapshot(s) for Nested 1`] = `
+<div
+  class="lucid-Resizer"
+>
+  <div>
+    <div
+      class="lucid-Selection lucid-Selection-is-small lucid-Selection-default lucid-Selection-is-top"
+    >
+      <div
+        class="lucid-Selection-content"
+      >
+        <div
+          class="lucid-Selection-label-container"
+        >
+          <span
+            class="lucid-Selection-label lucid-Selection-label-is-small"
+          >
+            Arts & Entertainment
+          </span>
+          <svg
+            class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Selection-close-button lucid-Selection-close-button-is-small"
+            height="16"
+            preserveAspectRatio="xMidYMid meet"
+            viewBox="0 0 16 16"
+            width="16"
+          >
+            <path
+              d="M.5.5l15 15m0-15l-15 15"
+            />
+          </svg>
+        </div>
+        <div
+          class="lucid-Selection-children-container"
+        >
+          <div
+            class="lucid-Selection lucid-Selection-is-small lucid-Selection-default"
+          >
+            <div
+              class="lucid-Selection-content"
+            >
+              <div
+                class="lucid-Selection-label-container"
+              >
+                <span
+                  class="lucid-Selection-label lucid-Selection-label-is-small"
+                >
+                  Item 1
+                </span>
+                <svg
+                  class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Selection-close-button lucid-Selection-close-button-is-small"
+                  height="16"
+                  preserveAspectRatio="xMidYMid meet"
+                  viewBox="0 0 16 16"
+                  width="16"
+                >
+                  <path
+                    d="M.5.5l15 15m0-15l-15 15"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div
+            class="lucid-Selection lucid-Selection-is-small lucid-Selection-default"
+          >
+            <div
+              class="lucid-Selection-content"
+            >
+              <div
+                class="lucid-Selection-label-container"
+              >
+                <span
+                  class="lucid-Selection-label lucid-Selection-label-is-small"
+                >
+                  Item 2
+                </span>
+                <svg
+                  class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Selection-close-button lucid-Selection-close-button-is-small"
+                  height="16"
+                  preserveAspectRatio="xMidYMid meet"
+                  viewBox="0 0 16 16"
+                  width="16"
+                >
+                  <path
+                    d="M.5.5l15 15m0-15l-15 15"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div
+            class="lucid-Selection lucid-Selection-is-small lucid-Selection-default"
+          >
+            <div
+              class="lucid-Selection-content"
+            >
+              <div
+                class="lucid-Selection-label-container"
+              >
+                <span
+                  class="lucid-Selection-label lucid-Selection-label-is-small"
+                >
+                  Item 3
+                </span>
+                <svg
+                  class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Selection-close-button lucid-Selection-close-button-is-small"
+                  height="16"
+                  preserveAspectRatio="xMidYMid meet"
+                  viewBox="0 0 16 16"
+                  width="16"
+                >
+                  <path
+                    d="M.5.5l15 15m0-15l-15 15"
+                  />
+                </svg>
+              </div>
+              <div
+                class="lucid-Selection-children-container"
+              >
+                <div
+                  class="lucid-Selection lucid-Selection-is-small lucid-Selection-default"
+                >
+                  <div
+                    class="lucid-Selection-content"
+                  >
+                    <div
+                      class="lucid-Selection-label-container"
+                    >
+                      <span
+                        class="lucid-Selection-label lucid-Selection-label-is-small"
+                      >
+                        Item 1
+                      </span>
+                      <svg
+                        class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Selection-close-button lucid-Selection-close-button-is-small"
+                        height="16"
+                        preserveAspectRatio="xMidYMid meet"
+                        viewBox="0 0 16 16"
+                        width="16"
+                      >
+                        <path
+                          d="M.5.5l15 15m0-15l-15 15"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="lucid-Selection lucid-Selection-is-small lucid-Selection-default"
+                >
+                  <div
+                    class="lucid-Selection-content"
+                  >
+                    <div
+                      class="lucid-Selection-label-container"
+                    >
+                      <span
+                        class="lucid-Selection-label lucid-Selection-label-is-small"
+                      >
+                        Item 2
+                      </span>
+                      <svg
+                        class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Selection-close-button lucid-Selection-close-button-is-small"
+                        height="16"
+                        preserveAspectRatio="xMidYMid meet"
+                        viewBox="0 0 16 16"
+                        width="16"
+                      >
+                        <path
+                          d="M.5.5l15 15m0-15l-15 15"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="lucid-Selection lucid-Selection-is-small lucid-Selection-default"
+                >
+                  <div
+                    class="lucid-Selection-content"
+                  >
+                    <div
+                      class="lucid-Selection-label-container"
+                    >
+                      <span
+                        class="lucid-Selection-label lucid-Selection-label-is-small"
+                      >
+                        Item 3
+                      </span>
+                      <svg
+                        class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Selection-close-button lucid-Selection-close-button-is-small"
+                        height="16"
+                        preserveAspectRatio="xMidYMid meet"
+                        viewBox="0 0 16 16"
+                        width="16"
+                      >
+                        <path
+                          d="M.5.5l15 15m0-15l-15 15"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="lucid-Selection lucid-Selection-is-small lucid-Selection-default"
+          >
+            <div
+              class="lucid-Selection-content"
+            >
+              <div
+                class="lucid-Selection-label-container"
+              >
+                <span
+                  class="lucid-Selection-label lucid-Selection-label-is-small"
+                >
+                  Item 4
+                </span>
+                <svg
+                  class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Selection-close-button lucid-Selection-close-button-is-small"
+                  height="16"
+                  preserveAspectRatio="xMidYMid meet"
+                  viewBox="0 0 16 16"
+                  width="16"
+                >
+                  <path
+                    d="M.5.5l15 15m0-15l-15 15"
+                  />
+                </svg>
+              </div>
+              <div
+                class="lucid-Selection-children-container"
+              >
+                <div
+                  class="lucid-Selection lucid-Selection-is-small lucid-Selection-default"
+                >
+                  <div
+                    class="lucid-Selection-content"
+                  >
+                    <div
+                      class="lucid-Selection-label-container"
+                    >
+                      <span
+                        class="lucid-Selection-label lucid-Selection-label-is-small"
+                      >
+                        Item 1
+                      </span>
+                      <svg
+                        class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Selection-close-button lucid-Selection-close-button-is-small"
+                        height="16"
+                        preserveAspectRatio="xMidYMid meet"
+                        viewBox="0 0 16 16"
+                        width="16"
+                      >
+                        <path
+                          d="M.5.5l15 15m0-15l-15 15"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="lucid-Selection lucid-Selection-is-small lucid-Selection-default"
+                >
+                  <div
+                    class="lucid-Selection-content"
+                  >
+                    <div
+                      class="lucid-Selection-label-container"
+                    >
+                      <span
+                        class="lucid-Selection-label lucid-Selection-label-is-small"
+                      >
+                        Item 2
+                      </span>
+                      <svg
+                        class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Selection-close-button lucid-Selection-close-button-is-small"
+                        height="16"
+                        preserveAspectRatio="xMidYMid meet"
+                        viewBox="0 0 16 16"
+                        width="16"
+                      >
+                        <path
+                          d="M.5.5l15 15m0-15l-15 15"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="lucid-Selection lucid-Selection-is-small lucid-Selection-default"
+                >
+                  <div
+                    class="lucid-Selection-content"
+                  >
+                    <div
+                      class="lucid-Selection-label-container"
+                    >
+                      <span
+                        class="lucid-Selection-label lucid-Selection-label-is-small"
+                      >
+                        Item 3
+                      </span>
+                      <svg
+                        class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Selection-close-button lucid-Selection-close-button-is-small"
+                        height="16"
+                        preserveAspectRatio="xMidYMid meet"
+                        viewBox="0 0 16 16"
+                        width="16"
+                      >
+                        <path
+                          d="M.5.5l15 15m0-15l-15 15"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="lucid-Selection lucid-Selection-is-small lucid-Selection-default"
+                >
+                  <div
+                    class="lucid-Selection-content"
+                  >
+                    <div
+                      class="lucid-Selection-label-container"
+                    >
+                      <span
+                        class="lucid-Selection-label lucid-Selection-label-is-small"
+                      >
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                      </span>
+                      <svg
+                        class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Selection-close-button lucid-Selection-close-button-is-small"
+                        height="16"
+                        preserveAspectRatio="xMidYMid meet"
+                        viewBox="0 0 16 16"
+                        width="16"
+                      >
+                        <path
+                          d="M.5.5l15 15m0-15l-15 15"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="lucid-Selection lucid-Selection-is-small lucid-Selection-info lucid-Selection-is-top"
+    >
+      <svg
+        class="lucid-Icon lucid-Icon-color-primary lucid-InfoIcon lucid-Selection-Icon lucid-Selection-Icon-is-small"
+        height="16"
+        preserveAspectRatio="xMidYMid meet"
+        viewBox="0 0 16 16"
+        width="16"
+      >
+        <circle
+          class="lucid-InfoIcon-background"
+          cx="8"
+          cy="8"
+          r="7.5"
+        />
+        <path
+          class="lucid-InfoIcon-i"
+          d="M7.99 12.5v-6"
+        />
+        <circle
+          class="lucid-InfoIcon-i"
+          cx="7.99"
+          cy="4"
+          r=".293"
+        />
+      </svg>
+      <div
+        class="lucid-Selection-content"
+      >
+        <div
+          class="lucid-Selection-label-container"
+        >
+          <span
+            class="lucid-Selection-label lucid-Selection-label-is-small"
+          >
+            Arts & Entertainment
+          </span>
+          <svg
+            class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Selection-close-button lucid-Selection-close-button-is-small"
+            height="16"
+            preserveAspectRatio="xMidYMid meet"
+            viewBox="0 0 16 16"
+            width="16"
+          >
+            <path
+              d="M.5.5l15 15m0-15l-15 15"
+            />
+          </svg>
+        </div>
+        <div
+          class="lucid-Selection-children-container"
+        >
+          <div
+            class="lucid-Selection lucid-Selection-is-small lucid-Selection-info"
+          >
+            <svg
+              class="lucid-Icon lucid-Icon-color-primary lucid-InfoIcon lucid-Selection-Icon lucid-Selection-Icon-is-small"
+              height="16"
+              preserveAspectRatio="xMidYMid meet"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <circle
+                class="lucid-InfoIcon-background"
+                cx="8"
+                cy="8"
+                r="7.5"
+              />
+              <path
+                class="lucid-InfoIcon-i"
+                d="M7.99 12.5v-6"
+              />
+              <circle
+                class="lucid-InfoIcon-i"
+                cx="7.99"
+                cy="4"
+                r=".293"
+              />
+            </svg>
+            <div
+              class="lucid-Selection-content"
+            >
+              <div
+                class="lucid-Selection-label-container"
+              >
+                <span
+                  class="lucid-Selection-label lucid-Selection-label-is-small"
+                >
+                  Item 1
+                </span>
+                <svg
+                  class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Selection-close-button lucid-Selection-close-button-is-small"
+                  height="16"
+                  preserveAspectRatio="xMidYMid meet"
+                  viewBox="0 0 16 16"
+                  width="16"
+                >
+                  <path
+                    d="M.5.5l15 15m0-15l-15 15"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div
+            class="lucid-Selection lucid-Selection-is-small lucid-Selection-info"
+          >
+            <svg
+              class="lucid-Icon lucid-Icon-color-primary lucid-InfoIcon lucid-Selection-Icon lucid-Selection-Icon-is-small"
+              height="16"
+              preserveAspectRatio="xMidYMid meet"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <circle
+                class="lucid-InfoIcon-background"
+                cx="8"
+                cy="8"
+                r="7.5"
+              />
+              <path
+                class="lucid-InfoIcon-i"
+                d="M7.99 12.5v-6"
+              />
+              <circle
+                class="lucid-InfoIcon-i"
+                cx="7.99"
+                cy="4"
+                r=".293"
+              />
+            </svg>
+            <div
+              class="lucid-Selection-content"
+            >
+              <div
+                class="lucid-Selection-label-container"
+              >
+                <span
+                  class="lucid-Selection-label lucid-Selection-label-is-small"
+                >
+                  Item 2
+                </span>
+                <svg
+                  class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Selection-close-button lucid-Selection-close-button-is-small"
+                  height="16"
+                  preserveAspectRatio="xMidYMid meet"
+                  viewBox="0 0 16 16"
+                  width="16"
+                >
+                  <path
+                    d="M.5.5l15 15m0-15l-15 15"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div
+            class="lucid-Selection lucid-Selection-is-small lucid-Selection-info"
+          >
+            <svg
+              class="lucid-Icon lucid-Icon-color-primary lucid-InfoIcon lucid-Selection-Icon lucid-Selection-Icon-is-small"
+              height="16"
+              preserveAspectRatio="xMidYMid meet"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <circle
+                class="lucid-InfoIcon-background"
+                cx="8"
+                cy="8"
+                r="7.5"
+              />
+              <path
+                class="lucid-InfoIcon-i"
+                d="M7.99 12.5v-6"
+              />
+              <circle
+                class="lucid-InfoIcon-i"
+                cx="7.99"
+                cy="4"
+                r=".293"
+              />
+            </svg>
+            <div
+              class="lucid-Selection-content"
+            >
+              <div
+                class="lucid-Selection-label-container"
+              >
+                <span
+                  class="lucid-Selection-label lucid-Selection-label-is-small"
+                >
+                  Item 3
+                </span>
+                <svg
+                  class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Selection-close-button lucid-Selection-close-button-is-small"
+                  height="16"
+                  preserveAspectRatio="xMidYMid meet"
+                  viewBox="0 0 16 16"
+                  width="16"
+                >
+                  <path
+                    d="M.5.5l15 15m0-15l-15 15"
+                  />
+                </svg>
+              </div>
+              <div
+                class="lucid-Selection-children-container"
+              >
+                <div
+                  class="lucid-Selection lucid-Selection-is-small lucid-Selection-info"
+                >
+                  <svg
+                    class="lucid-Icon lucid-Icon-color-primary lucid-InfoIcon lucid-Selection-Icon lucid-Selection-Icon-is-small"
+                    height="16"
+                    preserveAspectRatio="xMidYMid meet"
+                    viewBox="0 0 16 16"
+                    width="16"
+                  >
+                    <circle
+                      class="lucid-InfoIcon-background"
+                      cx="8"
+                      cy="8"
+                      r="7.5"
+                    />
+                    <path
+                      class="lucid-InfoIcon-i"
+                      d="M7.99 12.5v-6"
+                    />
+                    <circle
+                      class="lucid-InfoIcon-i"
+                      cx="7.99"
+                      cy="4"
+                      r=".293"
+                    />
+                  </svg>
+                  <div
+                    class="lucid-Selection-content"
+                  >
+                    <div
+                      class="lucid-Selection-label-container"
+                    >
+                      <span
+                        class="lucid-Selection-label lucid-Selection-label-is-small"
+                      >
+                        Item 1
+                      </span>
+                      <svg
+                        class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Selection-close-button lucid-Selection-close-button-is-small"
+                        height="16"
+                        preserveAspectRatio="xMidYMid meet"
+                        viewBox="0 0 16 16"
+                        width="16"
+                      >
+                        <path
+                          d="M.5.5l15 15m0-15l-15 15"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="lucid-Selection lucid-Selection-is-small lucid-Selection-info"
+                >
+                  <svg
+                    class="lucid-Icon lucid-Icon-color-primary lucid-InfoIcon lucid-Selection-Icon lucid-Selection-Icon-is-small"
+                    height="16"
+                    preserveAspectRatio="xMidYMid meet"
+                    viewBox="0 0 16 16"
+                    width="16"
+                  >
+                    <circle
+                      class="lucid-InfoIcon-background"
+                      cx="8"
+                      cy="8"
+                      r="7.5"
+                    />
+                    <path
+                      class="lucid-InfoIcon-i"
+                      d="M7.99 12.5v-6"
+                    />
+                    <circle
+                      class="lucid-InfoIcon-i"
+                      cx="7.99"
+                      cy="4"
+                      r=".293"
+                    />
+                  </svg>
+                  <div
+                    class="lucid-Selection-content"
+                  >
+                    <div
+                      class="lucid-Selection-label-container"
+                    >
+                      <span
+                        class="lucid-Selection-label lucid-Selection-label-is-small"
+                      >
+                        Item 2
+                      </span>
+                      <svg
+                        class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Selection-close-button lucid-Selection-close-button-is-small"
+                        height="16"
+                        preserveAspectRatio="xMidYMid meet"
+                        viewBox="0 0 16 16"
+                        width="16"
+                      >
+                        <path
+                          d="M.5.5l15 15m0-15l-15 15"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="lucid-Selection lucid-Selection-is-small lucid-Selection-info"
+                >
+                  <svg
+                    class="lucid-Icon lucid-Icon-color-primary lucid-InfoIcon lucid-Selection-Icon lucid-Selection-Icon-is-small"
+                    height="16"
+                    preserveAspectRatio="xMidYMid meet"
+                    viewBox="0 0 16 16"
+                    width="16"
+                  >
+                    <circle
+                      class="lucid-InfoIcon-background"
+                      cx="8"
+                      cy="8"
+                      r="7.5"
+                    />
+                    <path
+                      class="lucid-InfoIcon-i"
+                      d="M7.99 12.5v-6"
+                    />
+                    <circle
+                      class="lucid-InfoIcon-i"
+                      cx="7.99"
+                      cy="4"
+                      r=".293"
+                    />
+                  </svg>
+                  <div
+                    class="lucid-Selection-content"
+                  >
+                    <div
+                      class="lucid-Selection-label-container"
+                    >
+                      <span
+                        class="lucid-Selection-label lucid-Selection-label-is-small"
+                      >
+                        Item 3
+                      </span>
+                      <svg
+                        class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Selection-close-button lucid-Selection-close-button-is-small"
+                        height="16"
+                        preserveAspectRatio="xMidYMid meet"
+                        viewBox="0 0 16 16"
+                        width="16"
+                      >
+                        <path
+                          d="M.5.5l15 15m0-15l-15 15"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="lucid-Selection lucid-Selection-is-small lucid-Selection-warning"
+          >
+            <svg
+              class="lucid-Icon lucid-Icon-color-primary lucid-WarningIcon lucid-Selection-Icon lucid-Selection-Icon-is-small"
+              height="16"
+              preserveAspectRatio="xMidYMid meet"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <path
+                class="lucid-WarningIcon-background"
+                d="M.5 15h15L8 .5z"
+              />
+              <path
+                class="lucid-WarningIcon-mark"
+                d="M7.99 5v4"
+              />
+              <circle
+                class="lucid-WarningIcon-mark"
+                cx="7.99"
+                cy="12"
+                r=".293"
+              />
+            </svg>
+            <div
+              class="lucid-Selection-content"
+            >
+              <div
+                class="lucid-Selection-label-container"
+              >
+                <span
+                  class="lucid-Selection-label lucid-Selection-label-is-small"
+                >
+                  Item 4
+                </span>
+                <svg
+                  class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Selection-close-button lucid-Selection-close-button-is-small"
+                  height="16"
+                  preserveAspectRatio="xMidYMid meet"
+                  viewBox="0 0 16 16"
+                  width="16"
+                >
+                  <path
+                    d="M.5.5l15 15m0-15l-15 15"
+                  />
+                </svg>
+              </div>
+              <div
+                class="lucid-Selection-children-container"
+              >
+                <div
+                  class="lucid-Selection lucid-Selection-is-small lucid-Selection-warning"
+                >
+                  <svg
+                    class="lucid-Icon lucid-Icon-color-primary lucid-WarningIcon lucid-Selection-Icon lucid-Selection-Icon-is-small"
+                    height="16"
+                    preserveAspectRatio="xMidYMid meet"
+                    viewBox="0 0 16 16"
+                    width="16"
+                  >
+                    <path
+                      class="lucid-WarningIcon-background"
+                      d="M.5 15h15L8 .5z"
+                    />
+                    <path
+                      class="lucid-WarningIcon-mark"
+                      d="M7.99 5v4"
+                    />
+                    <circle
+                      class="lucid-WarningIcon-mark"
+                      cx="7.99"
+                      cy="12"
+                      r=".293"
+                    />
+                  </svg>
+                  <div
+                    class="lucid-Selection-content"
+                  >
+                    <div
+                      class="lucid-Selection-label-container"
+                    >
+                      <span
+                        class="lucid-Selection-label lucid-Selection-label-is-small"
+                      >
+                        Item 1
+                      </span>
+                      <svg
+                        class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Selection-close-button lucid-Selection-close-button-is-small"
+                        height="16"
+                        preserveAspectRatio="xMidYMid meet"
+                        viewBox="0 0 16 16"
+                        width="16"
+                      >
+                        <path
+                          d="M.5.5l15 15m0-15l-15 15"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="lucid-Selection lucid-Selection-is-small lucid-Selection-warning"
+                >
+                  <svg
+                    class="lucid-Icon lucid-Icon-color-primary lucid-WarningIcon lucid-Selection-Icon lucid-Selection-Icon-is-small"
+                    height="16"
+                    preserveAspectRatio="xMidYMid meet"
+                    viewBox="0 0 16 16"
+                    width="16"
+                  >
+                    <path
+                      class="lucid-WarningIcon-background"
+                      d="M.5 15h15L8 .5z"
+                    />
+                    <path
+                      class="lucid-WarningIcon-mark"
+                      d="M7.99 5v4"
+                    />
+                    <circle
+                      class="lucid-WarningIcon-mark"
+                      cx="7.99"
+                      cy="12"
+                      r=".293"
+                    />
+                  </svg>
+                  <div
+                    class="lucid-Selection-content"
+                  >
+                    <div
+                      class="lucid-Selection-label-container"
+                    >
+                      <span
+                        class="lucid-Selection-label lucid-Selection-label-is-small"
+                      >
+                        Item 2
+                      </span>
+                      <svg
+                        class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Selection-close-button lucid-Selection-close-button-is-small"
+                        height="16"
+                        preserveAspectRatio="xMidYMid meet"
+                        viewBox="0 0 16 16"
+                        width="16"
+                      >
+                        <path
+                          d="M.5.5l15 15m0-15l-15 15"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="lucid-Selection lucid-Selection-is-small lucid-Selection-warning"
+                >
+                  <svg
+                    class="lucid-Icon lucid-Icon-color-primary lucid-WarningIcon lucid-Selection-Icon lucid-Selection-Icon-is-small"
+                    height="16"
+                    preserveAspectRatio="xMidYMid meet"
+                    viewBox="0 0 16 16"
+                    width="16"
+                  >
+                    <path
+                      class="lucid-WarningIcon-background"
+                      d="M.5 15h15L8 .5z"
+                    />
+                    <path
+                      class="lucid-WarningIcon-mark"
+                      d="M7.99 5v4"
+                    />
+                    <circle
+                      class="lucid-WarningIcon-mark"
+                      cx="7.99"
+                      cy="12"
+                      r=".293"
+                    />
+                  </svg>
+                  <div
+                    class="lucid-Selection-content"
+                  >
+                    <div
+                      class="lucid-Selection-label-container"
+                    >
+                      <span
+                        class="lucid-Selection-label lucid-Selection-label-is-small"
+                      >
+                        Item 3
+                      </span>
+                      <svg
+                        class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Selection-close-button lucid-Selection-close-button-is-small"
+                        height="16"
+                        preserveAspectRatio="xMidYMid meet"
+                        viewBox="0 0 16 16"
+                        width="16"
+                      >
+                        <path
+                          d="M.5.5l15 15m0-15l-15 15"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="lucid-Selection lucid-Selection-is-small lucid-Selection-warning"
+                >
+                  <svg
+                    class="lucid-Icon lucid-Icon-color-primary lucid-WarningIcon lucid-Selection-Icon lucid-Selection-Icon-is-small"
+                    height="16"
+                    preserveAspectRatio="xMidYMid meet"
+                    viewBox="0 0 16 16"
+                    width="16"
+                  >
+                    <path
+                      class="lucid-WarningIcon-background"
+                      d="M.5 15h15L8 .5z"
+                    />
+                    <path
+                      class="lucid-WarningIcon-mark"
+                      d="M7.99 5v4"
+                    />
+                    <circle
+                      class="lucid-WarningIcon-mark"
+                      cx="7.99"
+                      cy="12"
+                      r=".293"
+                    />
+                  </svg>
+                  <div
+                    class="lucid-Selection-content"
+                  >
+                    <div
+                      class="lucid-Selection-label-container"
+                    >
+                      <span
+                        class="lucid-Selection-label lucid-Selection-label-is-small"
+                      >
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                      </span>
+                      <svg
+                        class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Selection-close-button lucid-Selection-close-button-is-small"
+                        height="16"
+                        preserveAspectRatio="xMidYMid meet"
+                        viewBox="0 0 16 16"
+                        width="16"
+                      >
+                        <path
+                          d="M.5.5l15 15m0-15l-15 15"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="lucid-Selection lucid-Selection-is-small lucid-Selection-success lucid-Selection-has-background lucid-Selection-is-bold lucid-Selection-is-top"
+    >
+      <svg
+        class="lucid-Icon lucid-Icon-color-primary lucid-SuccessIcon lucid-Selection-Icon lucid-Selection-Icon-is-small"
+        height="16"
+        preserveAspectRatio="xMidYMid meet"
+        viewBox="0 0 16 16"
+        width="16"
+      >
+        <circle
+          class="lucid-SuccessIcon-background"
+          cx="8"
+          cy="8"
+          r="7.5"
+        />
+        <path
+          class="lucid-SuccessIcon-check"
+          d="M4.5 8L7 10.5 11.5 6"
+        />
+      </svg>
+      <div
+        class="lucid-Selection-content"
+      >
+        <div
+          class="lucid-Selection-label-container"
+        >
+          <span
+            class="lucid-Selection-label lucid-Selection-label-is-small"
+          >
+            Leisure
+          </span>
+          <svg
+            class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Selection-close-button lucid-Selection-close-button-is-small"
+            height="16"
+            preserveAspectRatio="xMidYMid meet"
+            viewBox="0 0 16 16"
+            width="16"
+          >
+            <path
+              d="M.5.5l15 15m0-15l-15 15"
+            />
+          </svg>
+        </div>
+        <div
+          class="lucid-Selection-children-container"
+        >
+          <div
+            class="lucid-Selection lucid-Selection-is-small lucid-Selection-danger"
+          >
+            <svg
+              class="lucid-Icon lucid-Icon-color-primary lucid-MinusCircleIcon lucid-Selection-Icon lucid-Selection-Icon-is-small"
+              height="16"
+              preserveAspectRatio="xMidYMid meet"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <circle
+                class="lucid-MinusCircleIcon-background"
+                cx="8"
+                cy="8"
+                r="7.5"
+              />
+              <path
+                class="lucid-MinusCircleIcon-dash"
+                d="M4.5 8h7"
+              />
+            </svg>
+            <div
+              class="lucid-Selection-content"
+            >
+              <div
+                class="lucid-Selection-label-container"
+              >
+                <span
+                  class="lucid-Selection-label lucid-Selection-label-is-small"
+                >
+                  Item 1
+                </span>
+                <svg
+                  class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Selection-close-button lucid-Selection-close-button-is-small"
+                  height="16"
+                  preserveAspectRatio="xMidYMid meet"
+                  viewBox="0 0 16 16"
+                  width="16"
+                >
+                  <path
+                    d="M.5.5l15 15m0-15l-15 15"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div
+            class="lucid-Selection lucid-Selection-is-small lucid-Selection-danger"
+          >
+            <svg
+              class="lucid-Icon lucid-Icon-color-primary lucid-MinusCircleIcon lucid-Selection-Icon lucid-Selection-Icon-is-small"
+              height="16"
+              preserveAspectRatio="xMidYMid meet"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <circle
+                class="lucid-MinusCircleIcon-background"
+                cx="8"
+                cy="8"
+                r="7.5"
+              />
+              <path
+                class="lucid-MinusCircleIcon-dash"
+                d="M4.5 8h7"
+              />
+            </svg>
+            <div
+              class="lucid-Selection-content"
+            >
+              <div
+                class="lucid-Selection-label-container"
+              >
+                <span
+                  class="lucid-Selection-label lucid-Selection-label-is-small"
+                >
+                  Item 2
+                </span>
+                <svg
+                  class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Selection-close-button lucid-Selection-close-button-is-small"
+                  height="16"
+                  preserveAspectRatio="xMidYMid meet"
+                  viewBox="0 0 16 16"
+                  width="16"
+                >
+                  <path
+                    d="M.5.5l15 15m0-15l-15 15"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div
+            class="lucid-Selection lucid-Selection-is-small lucid-Selection-danger"
+          >
+            <svg
+              class="lucid-Icon lucid-Icon-color-primary lucid-MinusCircleIcon lucid-Selection-Icon lucid-Selection-Icon-is-small"
+              height="16"
+              preserveAspectRatio="xMidYMid meet"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <circle
+                class="lucid-MinusCircleIcon-background"
+                cx="8"
+                cy="8"
+                r="7.5"
+              />
+              <path
+                class="lucid-MinusCircleIcon-dash"
+                d="M4.5 8h7"
+              />
+            </svg>
+            <div
+              class="lucid-Selection-content"
+            >
+              <div
+                class="lucid-Selection-label-container"
+              >
+                <span
+                  class="lucid-Selection-label lucid-Selection-label-is-small"
+                >
+                  Item 3
+                </span>
+                <svg
+                  class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Selection-close-button lucid-Selection-close-button-is-small"
+                  height="16"
+                  preserveAspectRatio="xMidYMid meet"
+                  viewBox="0 0 16 16"
+                  width="16"
+                >
+                  <path
+                    d="M.5.5l15 15m0-15l-15 15"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="lucid-Selection lucid-Selection-is-small lucid-Selection-danger lucid-Selection-has-background lucid-Selection-is-bold lucid-Selection-is-top"
+    >
+      <svg
+        class="lucid-Icon lucid-Icon-color-primary lucid-MinusCircleIcon lucid-Selection-Icon lucid-Selection-Icon-is-small"
+        height="16"
+        preserveAspectRatio="xMidYMid meet"
+        viewBox="0 0 16 16"
+        width="16"
+      >
+        <circle
+          class="lucid-MinusCircleIcon-background"
+          cx="8"
+          cy="8"
+          r="7.5"
+        />
+        <path
+          class="lucid-MinusCircleIcon-dash"
+          d="M4.5 8h7"
+        />
+      </svg>
+      <div
+        class="lucid-Selection-content"
+      >
+        <div
+          class="lucid-Selection-label-container"
+        >
+          <span
+            class="lucid-Selection-label lucid-Selection-label-is-small"
+          >
+            Arts & Entertainment
+          </span>
+          <svg
+            class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Selection-close-button lucid-Selection-close-button-is-small"
+            height="16"
+            preserveAspectRatio="xMidYMid meet"
+            viewBox="0 0 16 16"
+            width="16"
+          >
+            <path
+              d="M.5.5l15 15m0-15l-15 15"
+            />
+          </svg>
+        </div>
+        <div
+          class="lucid-Selection-children-container"
+        >
+          <div
+            class="lucid-Selection lucid-Selection-is-small lucid-Selection-success"
+          >
+            <svg
+              class="lucid-Icon lucid-Icon-color-primary lucid-SuccessIcon lucid-Selection-Icon lucid-Selection-Icon-is-small"
+              height="16"
+              preserveAspectRatio="xMidYMid meet"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <circle
+                class="lucid-SuccessIcon-background"
+                cx="8"
+                cy="8"
+                r="7.5"
+              />
+              <path
+                class="lucid-SuccessIcon-check"
+                d="M4.5 8L7 10.5 11.5 6"
+              />
+            </svg>
+            <div
+              class="lucid-Selection-content"
+            >
+              <div
+                class="lucid-Selection-label-container"
+              >
+                <span
+                  class="lucid-Selection-label lucid-Selection-label-is-small"
+                >
+                  Item 1
+                </span>
+                <svg
+                  class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Selection-close-button lucid-Selection-close-button-is-small"
+                  height="16"
+                  preserveAspectRatio="xMidYMid meet"
+                  viewBox="0 0 16 16"
+                  width="16"
+                >
+                  <path
+                    d="M.5.5l15 15m0-15l-15 15"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div
+            class="lucid-Selection lucid-Selection-is-small lucid-Selection-success"
+          >
+            <svg
+              class="lucid-Icon lucid-Icon-color-primary lucid-SuccessIcon lucid-Selection-Icon lucid-Selection-Icon-is-small"
+              height="16"
+              preserveAspectRatio="xMidYMid meet"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <circle
+                class="lucid-SuccessIcon-background"
+                cx="8"
+                cy="8"
+                r="7.5"
+              />
+              <path
+                class="lucid-SuccessIcon-check"
+                d="M4.5 8L7 10.5 11.5 6"
+              />
+            </svg>
+            <div
+              class="lucid-Selection-content"
+            >
+              <div
+                class="lucid-Selection-label-container"
+              >
+                <span
+                  class="lucid-Selection-label lucid-Selection-label-is-small"
+                >
+                  Item 2
+                </span>
+                <svg
+                  class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Selection-close-button lucid-Selection-close-button-is-small"
+                  height="16"
+                  preserveAspectRatio="xMidYMid meet"
+                  viewBox="0 0 16 16"
+                  width="16"
+                >
+                  <path
+                    d="M.5.5l15 15m0-15l-15 15"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div
+            class="lucid-Selection lucid-Selection-is-small lucid-Selection-success"
+          >
+            <svg
+              class="lucid-Icon lucid-Icon-color-primary lucid-SuccessIcon lucid-Selection-Icon lucid-Selection-Icon-is-small"
+              height="16"
+              preserveAspectRatio="xMidYMid meet"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <circle
+                class="lucid-SuccessIcon-background"
+                cx="8"
+                cy="8"
+                r="7.5"
+              />
+              <path
+                class="lucid-SuccessIcon-check"
+                d="M4.5 8L7 10.5 11.5 6"
+              />
+            </svg>
+            <div
+              class="lucid-Selection-content"
+            >
+              <div
+                class="lucid-Selection-label-container"
+              >
+                <span
+                  class="lucid-Selection-label lucid-Selection-label-is-small"
+                >
+                  Item 3
+                </span>
+                <svg
+                  class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Selection-close-button lucid-Selection-close-button-is-small"
+                  height="16"
+                  preserveAspectRatio="xMidYMid meet"
+                  viewBox="0 0 16 16"
+                  width="16"
+                >
+                  <path
+                    d="M.5.5l15 15m0-15l-15 15"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Selection render should match snapshot for container 1`] = `
 <div
   className="lucid-Selection lucid-Selection-is-large lucid-Selection-container lucid-Selection-no-title"

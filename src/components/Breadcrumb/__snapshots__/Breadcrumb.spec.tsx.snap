@@ -1,15 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Breadcrumb [common] example testing should match snapshot(s) for 1.basic 1`] = `
+exports[`Breadcrumb [common] example testing should match snapshot(s) for Default 1`] = `
 <nav
-  className="lucid-Breadcrumb"
+  class="lucid-Breadcrumb"
 >
   <ul
-    className="lucid-Breadcrumb-List"
+    class="lucid-Breadcrumb-List"
   >
     <li
-      className="lucid-Breadcrumb-Item"
-      key=".$home"
+      class="lucid-Breadcrumb-Item"
     >
       <a
         href="#"
@@ -17,15 +16,14 @@ exports[`Breadcrumb [common] example testing should match snapshot(s) for 1.basi
         Start
       </a>
       <span
-        className="lucid-Breadcrumb-BreadcrumbSeparator"
+        class="lucid-Breadcrumb-BreadcrumbSeparator"
       >
         <span />
         <span />
       </span>
     </li>
     <li
-      className="lucid-Breadcrumb-Item"
-      key=".$list"
+      class="lucid-Breadcrumb-Item"
     >
       <a
         href="#"
@@ -33,15 +31,14 @@ exports[`Breadcrumb [common] example testing should match snapshot(s) for 1.basi
         List
       </a>
       <span
-        className="lucid-Breadcrumb-BreadcrumbSeparator"
+        class="lucid-Breadcrumb-BreadcrumbSeparator"
       >
         <span />
         <span />
       </span>
     </li>
     <li
-      className="lucid-Breadcrumb-Item"
-      key=".$item"
+      class="lucid-Breadcrumb-Item"
     >
       <a
         href="#"
@@ -53,73 +50,103 @@ exports[`Breadcrumb [common] example testing should match snapshot(s) for 1.basi
 </nav>
 `;
 
-exports[`Breadcrumb [common] example testing should match snapshot(s) for 2.rich 1`] = `
+exports[`Breadcrumb [common] example testing should match snapshot(s) for Rich 1`] = `
 <nav
-  className="lucid-Breadcrumb"
+  class="lucid-Breadcrumb"
 >
   <ul
-    className="lucid-Breadcrumb-List"
+    class="lucid-Breadcrumb-List"
   >
     <li
-      className="lucid-Breadcrumb-Item"
-      key=".$home"
+      class="lucid-Breadcrumb-Item"
     >
       <a
         href="#"
       >
-        <NotchedTag
-          size="small"
-          tagStyle="style-two"
-          type="stroke"
+        <div
+          class="lucid-NotchedTag lucid-NotchedTag-style-two lucid-NotchedTag-small"
+          style="height:18px;width:30px;clip-path:polygon(
+			4px 0,
+			100% 0,
+			100% 100%,
+			0 100%,
+			0 6.928203230275509px
+		)"
         >
-          IO
-        </NotchedTag>
+          <div
+            class="lucid-NotchedTag-container"
+            style="top:2px;right:2px;left:2px;bottom:2px;clip-path:polygon(
+			3px 0,
+			100% 0,
+			100% 100%,
+			0 100%,
+			0 5.928203230275509px
+		)"
+          >
+            <div
+              class="lucid-NotchedTag-container-centered"
+            >
+              IO
+            </div>
+          </div>
+        </div>
         <span>
           <span>
             Foo
           </span>
           <span
-            style={
-              Object {
-                "fontWeight": 400,
-              }
-            }
+            style="font-weight:400"
           >
              (1234)
           </span>
         </span>
       </a>
       <span
-        className="lucid-Breadcrumb-BreadcrumbSeparator"
+        class="lucid-Breadcrumb-BreadcrumbSeparator"
       >
         <span />
         <span />
       </span>
     </li>
     <li
-      className="lucid-Breadcrumb-Item"
-      key=".$list"
+      class="lucid-Breadcrumb-Item"
     >
       <a
         href="#"
       >
-        <NotchedTag
-          size="small"
-          tagStyle="style-three"
-          type="filled"
+        <div
+          class="lucid-NotchedTag lucid-NotchedTag-style-three lucid-NotchedTag-small lucid-NotchedTag-no-border"
+          style="height:18px;width:30px;clip-path:polygon(
+			4px 0,
+			100% 0,
+			100% 100%,
+			0 100%,
+			0 6.928203230275509px
+		)"
         >
-          LI
-        </NotchedTag>
+          <div
+            class="lucid-NotchedTag-container lucid-NotchedTag-container-filled"
+            style="top:2px;right:2px;left:2px;bottom:2px;clip-path:polygon(
+			3px 0,
+			100% 0,
+			100% 100%,
+			0 100%,
+			0 5.928203230275509px
+		)"
+          >
+            <div
+              class="lucid-NotchedTag-container-centered"
+            >
+              LI
+            </div>
+          </div>
+        </div>
         <span>
           <span>
             Bar
           </span>
           <span
-            style={
-              Object {
-                "fontWeight": 400,
-              }
-            }
+            style="font-weight:400"
           >
              (1234)
           </span>

@@ -1,2461 +1,936 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Bars [common] example testing should match snapshot(s) for 01.basic 1`] = `
-<g
-  className="lucid-Bars"
+exports[`Bars [common] example testing should match snapshot(s) for CustomColors 1`] = `
+<div
+  style="padding-top:9rem"
 >
-  <g
-    key="0"
+  <svg
+    height="400"
+    width="750"
   >
-    <Bar
-      color="color-chart-3"
-      hasStroke={false}
-      height={36.363636363636374}
-      key="0"
-      width={28}
-      x={1}
-      y={363.6363636363636}
-    />
-    <Bar
-      color="color-chart-0-darkest"
-      hasStroke={false}
-      height={72.72727272727275}
-      key="1"
-      width={28}
-      x={29}
-      y={327.27272727272725}
-    />
-    <Bar
-      color="color-chart-2"
-      hasStroke={false}
-      height={109.09090909090907}
-      key="2"
-      width={28}
-      x={57}
-      y={290.90909090909093}
-    />
-    <Bar
-      color="color-chart-4-lightest"
-      hasStroke={false}
-      height={181.81818181818184}
-      key="3"
-      width={28}
-      x={85}
-      y={218.18181818181816}
-    />
-    <PureToolTip
-      data={
-        Array [
-          Object {
-            "x": "one",
-            "y0": 1,
-            "y1": 2,
-            "y2": 3,
-            "y3": 5,
-          },
-          Object {
-            "x": "two",
-            "y0": 2,
-            "y1": 3,
-            "y2": 4,
-            "y3": 6,
-          },
-          Object {
-            "x": "three",
-            "y0": 2,
-            "y1": 4,
-            "y2": 5,
-            "y3": 6,
-          },
-          Object {
-            "x": "four",
-            "y0": 3,
-            "y1": 6,
-            "y2": 7,
-            "y3": 7,
-          },
-          Object {
-            "x": "five",
-            "y0": 4,
-            "y1": 8,
-            "y2": 9,
-            "y3": 8,
-          },
-          Object {
-            "x": "six",
-            "y0": 11,
-            "y1": 8,
-            "y2": 9,
-            "y3": 5,
-          },
-        ]
-      }
-      height={181.81818181818184}
-      isExpanded={false}
-      onMouseEnter={[Function]}
-      onMouseOut={[Function]}
-      renderBody={[Function]}
-      series={
-        Array [
-          Array [
-            0,
-            1,
-          ],
-          Array [
-            0,
-            2,
-          ],
-          Array [
-            0,
-            3,
-          ],
-          Array [
-            0,
-            5,
-          ],
-        ]
-      }
-      seriesIndex={0}
-      width={114}
-      x={0}
-      xField="x"
-      xFormatter={[Function]}
-      y={218.18181818181816}
-    />
-  </g>
-  <g
-    key="1"
-  >
-    <Bar
-      color="color-chart-3"
-      hasStroke={false}
-      height={72.72727272727275}
-      key="0"
-      width={28}
-      x={128}
-      y={327.27272727272725}
-    />
-    <Bar
-      color="color-chart-0-darkest"
-      hasStroke={false}
-      height={109.09090909090907}
-      key="1"
-      width={28}
-      x={156}
-      y={290.90909090909093}
-    />
-    <Bar
-      color="color-chart-2"
-      hasStroke={false}
-      height={145.45454545454547}
-      key="2"
-      width={28}
-      x={184}
-      y={254.54545454545453}
-    />
-    <Bar
-      color="color-chart-4-lightest"
-      hasStroke={false}
-      height={218.18181818181816}
-      key="3"
-      width={28}
-      x={212}
-      y={181.81818181818184}
-    />
-    <PureToolTip
-      data={
-        Array [
-          Object {
-            "x": "one",
-            "y0": 1,
-            "y1": 2,
-            "y2": 3,
-            "y3": 5,
-          },
-          Object {
-            "x": "two",
-            "y0": 2,
-            "y1": 3,
-            "y2": 4,
-            "y3": 6,
-          },
-          Object {
-            "x": "three",
-            "y0": 2,
-            "y1": 4,
-            "y2": 5,
-            "y3": 6,
-          },
-          Object {
-            "x": "four",
-            "y0": 3,
-            "y1": 6,
-            "y2": 7,
-            "y3": 7,
-          },
-          Object {
-            "x": "five",
-            "y0": 4,
-            "y1": 8,
-            "y2": 9,
-            "y3": 8,
-          },
-          Object {
-            "x": "six",
-            "y0": 11,
-            "y1": 8,
-            "y2": 9,
-            "y3": 5,
-          },
-        ]
-      }
-      height={218.18181818181816}
-      isExpanded={false}
-      onMouseEnter={[Function]}
-      onMouseOut={[Function]}
-      renderBody={[Function]}
-      series={
-        Array [
-          Array [
-            0,
-            2,
-          ],
-          Array [
-            0,
-            3,
-          ],
-          Array [
-            0,
-            4,
-          ],
-          Array [
-            0,
-            6,
-          ],
-        ]
-      }
-      seriesIndex={1}
-      width={114}
-      x={127}
-      xField="x"
-      xFormatter={[Function]}
-      y={181.81818181818184}
-    />
-  </g>
-  <g
-    key="2"
-  >
-    <Bar
-      color="color-chart-3"
-      hasStroke={false}
-      height={72.72727272727275}
-      key="0"
-      width={28}
-      x={255}
-      y={327.27272727272725}
-    />
-    <Bar
-      color="color-chart-0-darkest"
-      hasStroke={false}
-      height={145.45454545454547}
-      key="1"
-      width={28}
-      x={283}
-      y={254.54545454545453}
-    />
-    <Bar
-      color="color-chart-2"
-      hasStroke={false}
-      height={181.81818181818184}
-      key="2"
-      width={28}
-      x={311}
-      y={218.18181818181816}
-    />
-    <Bar
-      color="color-chart-4-lightest"
-      hasStroke={false}
-      height={218.18181818181816}
-      key="3"
-      width={28}
-      x={339}
-      y={181.81818181818184}
-    />
-    <PureToolTip
-      data={
-        Array [
-          Object {
-            "x": "one",
-            "y0": 1,
-            "y1": 2,
-            "y2": 3,
-            "y3": 5,
-          },
-          Object {
-            "x": "two",
-            "y0": 2,
-            "y1": 3,
-            "y2": 4,
-            "y3": 6,
-          },
-          Object {
-            "x": "three",
-            "y0": 2,
-            "y1": 4,
-            "y2": 5,
-            "y3": 6,
-          },
-          Object {
-            "x": "four",
-            "y0": 3,
-            "y1": 6,
-            "y2": 7,
-            "y3": 7,
-          },
-          Object {
-            "x": "five",
-            "y0": 4,
-            "y1": 8,
-            "y2": 9,
-            "y3": 8,
-          },
-          Object {
-            "x": "six",
-            "y0": 11,
-            "y1": 8,
-            "y2": 9,
-            "y3": 5,
-          },
-        ]
-      }
-      height={218.18181818181816}
-      isExpanded={false}
-      onMouseEnter={[Function]}
-      onMouseOut={[Function]}
-      renderBody={[Function]}
-      series={
-        Array [
-          Array [
-            0,
-            2,
-          ],
-          Array [
-            0,
-            4,
-          ],
-          Array [
-            0,
-            5,
-          ],
-          Array [
-            0,
-            6,
-          ],
-        ]
-      }
-      seriesIndex={2}
-      width={114}
-      x={254}
-      xField="x"
-      xFormatter={[Function]}
-      y={181.81818181818184}
-    />
-  </g>
-  <g
-    key="3"
-  >
-    <Bar
-      color="color-chart-3"
-      hasStroke={false}
-      height={109.09090909090907}
-      key="0"
-      width={28}
-      x={382}
-      y={290.90909090909093}
-    />
-    <Bar
-      color="color-chart-0-darkest"
-      hasStroke={false}
-      height={218.18181818181816}
-      key="1"
-      width={28}
-      x={410}
-      y={181.81818181818184}
-    />
-    <Bar
-      color="color-chart-2"
-      hasStroke={false}
-      height={254.54545454545453}
-      key="2"
-      width={28}
-      x={438}
-      y={145.45454545454547}
-    />
-    <Bar
-      color="color-chart-4-lightest"
-      hasStroke={false}
-      height={254.54545454545453}
-      key="3"
-      width={28}
-      x={466}
-      y={145.45454545454547}
-    />
-    <PureToolTip
-      data={
-        Array [
-          Object {
-            "x": "one",
-            "y0": 1,
-            "y1": 2,
-            "y2": 3,
-            "y3": 5,
-          },
-          Object {
-            "x": "two",
-            "y0": 2,
-            "y1": 3,
-            "y2": 4,
-            "y3": 6,
-          },
-          Object {
-            "x": "three",
-            "y0": 2,
-            "y1": 4,
-            "y2": 5,
-            "y3": 6,
-          },
-          Object {
-            "x": "four",
-            "y0": 3,
-            "y1": 6,
-            "y2": 7,
-            "y3": 7,
-          },
-          Object {
-            "x": "five",
-            "y0": 4,
-            "y1": 8,
-            "y2": 9,
-            "y3": 8,
-          },
-          Object {
-            "x": "six",
-            "y0": 11,
-            "y1": 8,
-            "y2": 9,
-            "y3": 5,
-          },
-        ]
-      }
-      height={254.54545454545453}
-      isExpanded={false}
-      onMouseEnter={[Function]}
-      onMouseOut={[Function]}
-      renderBody={[Function]}
-      series={
-        Array [
-          Array [
-            0,
-            3,
-          ],
-          Array [
-            0,
-            6,
-          ],
-          Array [
-            0,
-            7,
-          ],
-          Array [
-            0,
-            7,
-          ],
-        ]
-      }
-      seriesIndex={3}
-      width={114}
-      x={381}
-      xField="x"
-      xFormatter={[Function]}
-      y={145.45454545454547}
-    />
-  </g>
-  <g
-    key="4"
-  >
-    <Bar
-      color="color-chart-3"
-      hasStroke={false}
-      height={145.45454545454547}
-      key="0"
-      width={28}
-      x={509}
-      y={254.54545454545453}
-    />
-    <Bar
-      color="color-chart-0-darkest"
-      hasStroke={false}
-      height={290.90909090909093}
-      key="1"
-      width={28}
-      x={537}
-      y={109.09090909090908}
-    />
-    <Bar
-      color="color-chart-2"
-      hasStroke={false}
-      height={327.2727272727273}
-      key="2"
-      width={28}
-      x={565}
-      y={72.7272727272727}
-    />
-    <Bar
-      color="color-chart-4-lightest"
-      hasStroke={false}
-      height={290.90909090909093}
-      key="3"
-      width={28}
-      x={593}
-      y={109.09090909090908}
-    />
-    <PureToolTip
-      data={
-        Array [
-          Object {
-            "x": "one",
-            "y0": 1,
-            "y1": 2,
-            "y2": 3,
-            "y3": 5,
-          },
-          Object {
-            "x": "two",
-            "y0": 2,
-            "y1": 3,
-            "y2": 4,
-            "y3": 6,
-          },
-          Object {
-            "x": "three",
-            "y0": 2,
-            "y1": 4,
-            "y2": 5,
-            "y3": 6,
-          },
-          Object {
-            "x": "four",
-            "y0": 3,
-            "y1": 6,
-            "y2": 7,
-            "y3": 7,
-          },
-          Object {
-            "x": "five",
-            "y0": 4,
-            "y1": 8,
-            "y2": 9,
-            "y3": 8,
-          },
-          Object {
-            "x": "six",
-            "y0": 11,
-            "y1": 8,
-            "y2": 9,
-            "y3": 5,
-          },
-        ]
-      }
-      height={327.2727272727273}
-      isExpanded={false}
-      onMouseEnter={[Function]}
-      onMouseOut={[Function]}
-      renderBody={[Function]}
-      series={
-        Array [
-          Array [
-            0,
-            4,
-          ],
-          Array [
-            0,
-            8,
-          ],
-          Array [
-            0,
-            9,
-          ],
-          Array [
-            0,
-            8,
-          ],
-        ]
-      }
-      seriesIndex={4}
-      width={114}
-      x={508}
-      xField="x"
-      xFormatter={[Function]}
-      y={72.7272727272727}
-    />
-  </g>
-  <g
-    key="5"
-  >
-    <Bar
-      color="color-chart-3"
-      hasStroke={false}
-      height={400}
-      key="0"
-      width={28}
-      x={636}
-      y={0}
-    />
-    <Bar
-      color="color-chart-0-darkest"
-      hasStroke={false}
-      height={290.90909090909093}
-      key="1"
-      width={28}
-      x={664}
-      y={109.09090909090908}
-    />
-    <Bar
-      color="color-chart-2"
-      hasStroke={false}
-      height={327.2727272727273}
-      key="2"
-      width={28}
-      x={692}
-      y={72.7272727272727}
-    />
-    <Bar
-      color="color-chart-4-lightest"
-      hasStroke={false}
-      height={181.81818181818184}
-      key="3"
-      width={28}
-      x={720}
-      y={218.18181818181816}
-    />
-    <PureToolTip
-      data={
-        Array [
-          Object {
-            "x": "one",
-            "y0": 1,
-            "y1": 2,
-            "y2": 3,
-            "y3": 5,
-          },
-          Object {
-            "x": "two",
-            "y0": 2,
-            "y1": 3,
-            "y2": 4,
-            "y3": 6,
-          },
-          Object {
-            "x": "three",
-            "y0": 2,
-            "y1": 4,
-            "y2": 5,
-            "y3": 6,
-          },
-          Object {
-            "x": "four",
-            "y0": 3,
-            "y1": 6,
-            "y2": 7,
-            "y3": 7,
-          },
-          Object {
-            "x": "five",
-            "y0": 4,
-            "y1": 8,
-            "y2": 9,
-            "y3": 8,
-          },
-          Object {
-            "x": "six",
-            "y0": 11,
-            "y1": 8,
-            "y2": 9,
-            "y3": 5,
-          },
-        ]
-      }
-      height={400}
-      isExpanded={false}
-      onMouseEnter={[Function]}
-      onMouseOut={[Function]}
-      renderBody={[Function]}
-      series={
-        Array [
-          Array [
-            0,
-            11,
-          ],
-          Array [
-            0,
-            8,
-          ],
-          Array [
-            0,
-            9,
-          ],
-          Array [
-            0,
-            5,
-          ],
-        ]
-      }
-      seriesIndex={5}
-      width={114}
-      x={635}
-      xField="x"
-      xFormatter={[Function]}
-      y={0}
-    />
-  </g>
-</g>
+    <g
+      class="lucid-Bars"
+    >
+      <g>
+        <rect
+          class="lucid-Bar lucid-Bar-color-chart-good"
+          height="36.363636363636374"
+          width="28"
+          x="1"
+          y="363.6363636363636"
+        />
+        <rect
+          class="lucid-Bar lucid-Bar-color-chart-0-darkest"
+          height="72.72727272727275"
+          width="28"
+          x="29"
+          y="327.27272727272725"
+        />
+        <rect
+          class="lucid-Bar lucid-Bar-color-chart-bad"
+          height="109.09090909090907"
+          width="28"
+          x="57"
+          y="290.90909090909093"
+        />
+        <rect
+          class="lucid-Bar lucid-Bar-color-chart-4-lightest"
+          height="181.81818181818184"
+          width="28"
+          x="85"
+          y="218.18181818181816"
+        />
+        <g
+          class="lucid-ContextMenu lucid-ToolTip"
+        >
+          <rect
+            class="lucid-Bars-tooltip-hover-zone"
+            height="181.81818181818184"
+            width="114"
+            x="0"
+            y="218.18181818181816"
+          />
+        </g>
+      </g>
+      <g>
+        <rect
+          class="lucid-Bar lucid-Bar-color-chart-good"
+          height="72.72727272727275"
+          width="28"
+          x="128"
+          y="327.27272727272725"
+        />
+        <rect
+          class="lucid-Bar lucid-Bar-color-chart-0-darkest"
+          height="109.09090909090907"
+          width="28"
+          x="156"
+          y="290.90909090909093"
+        />
+        <rect
+          class="lucid-Bar lucid-Bar-color-chart-bad"
+          height="145.45454545454547"
+          width="28"
+          x="184"
+          y="254.54545454545453"
+        />
+        <rect
+          class="lucid-Bar lucid-Bar-color-chart-4-lightest"
+          height="218.18181818181816"
+          width="28"
+          x="212"
+          y="181.81818181818184"
+        />
+        <g
+          class="lucid-ContextMenu lucid-ToolTip"
+        >
+          <rect
+            class="lucid-Bars-tooltip-hover-zone"
+            height="218.18181818181816"
+            width="114"
+            x="127"
+            y="181.81818181818184"
+          />
+        </g>
+      </g>
+      <g>
+        <rect
+          class="lucid-Bar lucid-Bar-color-chart-good"
+          height="72.72727272727275"
+          width="28"
+          x="255"
+          y="327.27272727272725"
+        />
+        <rect
+          class="lucid-Bar lucid-Bar-color-chart-0-darkest"
+          height="145.45454545454547"
+          width="28"
+          x="283"
+          y="254.54545454545453"
+        />
+        <rect
+          class="lucid-Bar lucid-Bar-color-chart-bad"
+          height="181.81818181818184"
+          width="28"
+          x="311"
+          y="218.18181818181816"
+        />
+        <rect
+          class="lucid-Bar lucid-Bar-color-chart-4-lightest"
+          height="218.18181818181816"
+          width="28"
+          x="339"
+          y="181.81818181818184"
+        />
+        <g
+          class="lucid-ContextMenu lucid-ToolTip"
+        >
+          <rect
+            class="lucid-Bars-tooltip-hover-zone"
+            height="218.18181818181816"
+            width="114"
+            x="254"
+            y="181.81818181818184"
+          />
+        </g>
+      </g>
+      <g>
+        <rect
+          class="lucid-Bar lucid-Bar-color-chart-good"
+          height="109.09090909090907"
+          width="28"
+          x="382"
+          y="290.90909090909093"
+        />
+        <rect
+          class="lucid-Bar lucid-Bar-color-chart-0-darkest"
+          height="218.18181818181816"
+          width="28"
+          x="410"
+          y="181.81818181818184"
+        />
+        <rect
+          class="lucid-Bar lucid-Bar-color-chart-bad"
+          height="254.54545454545453"
+          width="28"
+          x="438"
+          y="145.45454545454547"
+        />
+        <rect
+          class="lucid-Bar lucid-Bar-color-chart-4-lightest"
+          height="254.54545454545453"
+          width="28"
+          x="466"
+          y="145.45454545454547"
+        />
+        <g
+          class="lucid-ContextMenu lucid-ToolTip"
+        >
+          <rect
+            class="lucid-Bars-tooltip-hover-zone"
+            height="254.54545454545453"
+            width="114"
+            x="381"
+            y="145.45454545454547"
+          />
+        </g>
+      </g>
+      <g>
+        <rect
+          class="lucid-Bar lucid-Bar-color-chart-good"
+          height="145.45454545454547"
+          width="28"
+          x="509"
+          y="254.54545454545453"
+        />
+        <rect
+          class="lucid-Bar lucid-Bar-color-chart-0-darkest"
+          height="290.90909090909093"
+          width="28"
+          x="537"
+          y="109.09090909090908"
+        />
+        <rect
+          class="lucid-Bar lucid-Bar-color-chart-bad"
+          height="327.2727272727273"
+          width="28"
+          x="565"
+          y="72.7272727272727"
+        />
+        <rect
+          class="lucid-Bar lucid-Bar-color-chart-4-lightest"
+          height="290.90909090909093"
+          width="28"
+          x="593"
+          y="109.09090909090908"
+        />
+        <g
+          class="lucid-ContextMenu lucid-ToolTip"
+        >
+          <rect
+            class="lucid-Bars-tooltip-hover-zone"
+            height="327.2727272727273"
+            width="114"
+            x="508"
+            y="72.7272727272727"
+          />
+        </g>
+      </g>
+      <g>
+        <rect
+          class="lucid-Bar lucid-Bar-color-chart-good"
+          height="400"
+          width="28"
+          x="636"
+          y="0"
+        />
+        <rect
+          class="lucid-Bar lucid-Bar-color-chart-0-darkest"
+          height="290.90909090909093"
+          width="28"
+          x="664"
+          y="109.09090909090908"
+        />
+        <rect
+          class="lucid-Bar lucid-Bar-color-chart-bad"
+          height="327.2727272727273"
+          width="28"
+          x="692"
+          y="72.7272727272727"
+        />
+        <rect
+          class="lucid-Bar lucid-Bar-color-chart-4-lightest"
+          height="181.81818181818184"
+          width="28"
+          x="720"
+          y="218.18181818181816"
+        />
+        <g
+          class="lucid-ContextMenu lucid-ToolTip"
+        >
+          <rect
+            class="lucid-Bars-tooltip-hover-zone"
+            height="400"
+            width="114"
+            x="635"
+            y="0"
+          />
+        </g>
+      </g>
+    </g>
+  </svg>
+</div>
 `;
 
-exports[`Bars [common] example testing should match snapshot(s) for 01.basic 2`] = `
-<g
-  className="lucid-Bars"
+exports[`Bars [common] example testing should match snapshot(s) for Default 1`] = `
+<div
+  style="padding-top:9rem"
 >
-  <g
-    key="0"
+  <svg
+    height="400"
+    width="750"
   >
-    <Bar
-      color="color-chart-3"
-      hasStroke={false}
-      height={12.121212121212125}
-      key="0"
-      width={114}
-      x={0}
-      y={387.8787878787879}
-    />
-    <Bar
-      color="color-chart-0-darkest"
-      hasStroke={false}
-      height={24.24242424242425}
-      key="1"
-      width={114}
-      x={0}
-      y={363.6363636363636}
-    />
-    <Bar
-      color="color-chart-2"
-      hasStroke={false}
-      height={36.363636363636374}
-      key="2"
-      width={114}
-      x={0}
-      y={327.27272727272725}
-    />
-    <Bar
-      color="color-chart-4-lightest"
-      hasStroke={false}
-      height={60.606060606060566}
-      key="3"
-      width={114}
-      x={0}
-      y={266.6666666666667}
-    />
-    <PureToolTip
-      data={
-        Array [
-          Object {
-            "x": "one",
-            "y0": 1,
-            "y1": 2,
-            "y2": 3,
-            "y3": 5,
-          },
-          Object {
-            "x": "two",
-            "y0": 2,
-            "y1": 3,
-            "y2": 4,
-            "y3": 6,
-          },
-          Object {
-            "x": "three",
-            "y0": 2,
-            "y1": 4,
-            "y2": 5,
-            "y3": 6,
-          },
-          Object {
-            "x": "four",
-            "y0": 3,
-            "y1": 6,
-            "y2": 7,
-            "y3": 7,
-          },
-          Object {
-            "x": "five",
-            "y0": 4,
-            "y1": 8,
-            "y2": 9,
-            "y3": 8,
-          },
-          Object {
-            "x": "six",
-            "y0": 11,
-            "y1": 8,
-            "y2": 9,
-            "y3": 5,
-          },
-        ]
-      }
-      height={133.33333333333331}
-      isExpanded={false}
-      onMouseEnter={[Function]}
-      onMouseOut={[Function]}
-      renderBody={[Function]}
-      series={
-        Array [
-          Array [
-            0,
-            1,
-          ],
-          Array [
-            1,
-            3,
-          ],
-          Array [
-            3,
-            6,
-          ],
-          Array [
-            6,
-            11,
-          ],
-        ]
-      }
-      seriesIndex={0}
-      width={114}
-      x={0}
-      xField="x"
-      xFormatter={[Function]}
-      y={266.6666666666667}
-    />
-  </g>
-  <g
-    key="1"
+    <g
+      class="lucid-Bars"
+    >
+      <g>
+        <rect
+          class="lucid-Bar lucid-Bar-color-chart-3"
+          height="36.363636363636374"
+          width="28"
+          x="1"
+          y="363.6363636363636"
+        />
+        <rect
+          class="lucid-Bar lucid-Bar-color-chart-0-darkest"
+          height="72.72727272727275"
+          width="28"
+          x="29"
+          y="327.27272727272725"
+        />
+        <rect
+          class="lucid-Bar lucid-Bar-color-chart-2"
+          height="109.09090909090907"
+          width="28"
+          x="57"
+          y="290.90909090909093"
+        />
+        <rect
+          class="lucid-Bar lucid-Bar-color-chart-4-lightest"
+          height="181.81818181818184"
+          width="28"
+          x="85"
+          y="218.18181818181816"
+        />
+        <g
+          class="lucid-ContextMenu lucid-ToolTip"
+        >
+          <rect
+            class="lucid-Bars-tooltip-hover-zone"
+            height="181.81818181818184"
+            width="114"
+            x="0"
+            y="218.18181818181816"
+          />
+        </g>
+      </g>
+      <g>
+        <rect
+          class="lucid-Bar lucid-Bar-color-chart-3"
+          height="72.72727272727275"
+          width="28"
+          x="128"
+          y="327.27272727272725"
+        />
+        <rect
+          class="lucid-Bar lucid-Bar-color-chart-0-darkest"
+          height="109.09090909090907"
+          width="28"
+          x="156"
+          y="290.90909090909093"
+        />
+        <rect
+          class="lucid-Bar lucid-Bar-color-chart-2"
+          height="145.45454545454547"
+          width="28"
+          x="184"
+          y="254.54545454545453"
+        />
+        <rect
+          class="lucid-Bar lucid-Bar-color-chart-4-lightest"
+          height="218.18181818181816"
+          width="28"
+          x="212"
+          y="181.81818181818184"
+        />
+        <g
+          class="lucid-ContextMenu lucid-ToolTip"
+        >
+          <rect
+            class="lucid-Bars-tooltip-hover-zone"
+            height="218.18181818181816"
+            width="114"
+            x="127"
+            y="181.81818181818184"
+          />
+        </g>
+      </g>
+      <g>
+        <rect
+          class="lucid-Bar lucid-Bar-color-chart-3"
+          height="72.72727272727275"
+          width="28"
+          x="255"
+          y="327.27272727272725"
+        />
+        <rect
+          class="lucid-Bar lucid-Bar-color-chart-0-darkest"
+          height="145.45454545454547"
+          width="28"
+          x="283"
+          y="254.54545454545453"
+        />
+        <rect
+          class="lucid-Bar lucid-Bar-color-chart-2"
+          height="181.81818181818184"
+          width="28"
+          x="311"
+          y="218.18181818181816"
+        />
+        <rect
+          class="lucid-Bar lucid-Bar-color-chart-4-lightest"
+          height="218.18181818181816"
+          width="28"
+          x="339"
+          y="181.81818181818184"
+        />
+        <g
+          class="lucid-ContextMenu lucid-ToolTip"
+        >
+          <rect
+            class="lucid-Bars-tooltip-hover-zone"
+            height="218.18181818181816"
+            width="114"
+            x="254"
+            y="181.81818181818184"
+          />
+        </g>
+      </g>
+      <g>
+        <rect
+          class="lucid-Bar lucid-Bar-color-chart-3"
+          height="109.09090909090907"
+          width="28"
+          x="382"
+          y="290.90909090909093"
+        />
+        <rect
+          class="lucid-Bar lucid-Bar-color-chart-0-darkest"
+          height="218.18181818181816"
+          width="28"
+          x="410"
+          y="181.81818181818184"
+        />
+        <rect
+          class="lucid-Bar lucid-Bar-color-chart-2"
+          height="254.54545454545453"
+          width="28"
+          x="438"
+          y="145.45454545454547"
+        />
+        <rect
+          class="lucid-Bar lucid-Bar-color-chart-4-lightest"
+          height="254.54545454545453"
+          width="28"
+          x="466"
+          y="145.45454545454547"
+        />
+        <g
+          class="lucid-ContextMenu lucid-ToolTip"
+        >
+          <rect
+            class="lucid-Bars-tooltip-hover-zone"
+            height="254.54545454545453"
+            width="114"
+            x="381"
+            y="145.45454545454547"
+          />
+        </g>
+      </g>
+      <g>
+        <rect
+          class="lucid-Bar lucid-Bar-color-chart-3"
+          height="145.45454545454547"
+          width="28"
+          x="509"
+          y="254.54545454545453"
+        />
+        <rect
+          class="lucid-Bar lucid-Bar-color-chart-0-darkest"
+          height="290.90909090909093"
+          width="28"
+          x="537"
+          y="109.09090909090908"
+        />
+        <rect
+          class="lucid-Bar lucid-Bar-color-chart-2"
+          height="327.2727272727273"
+          width="28"
+          x="565"
+          y="72.7272727272727"
+        />
+        <rect
+          class="lucid-Bar lucid-Bar-color-chart-4-lightest"
+          height="290.90909090909093"
+          width="28"
+          x="593"
+          y="109.09090909090908"
+        />
+        <g
+          class="lucid-ContextMenu lucid-ToolTip"
+        >
+          <rect
+            class="lucid-Bars-tooltip-hover-zone"
+            height="327.2727272727273"
+            width="114"
+            x="508"
+            y="72.7272727272727"
+          />
+        </g>
+      </g>
+      <g>
+        <rect
+          class="lucid-Bar lucid-Bar-color-chart-3"
+          height="400"
+          width="28"
+          x="636"
+          y="0"
+        />
+        <rect
+          class="lucid-Bar lucid-Bar-color-chart-0-darkest"
+          height="290.90909090909093"
+          width="28"
+          x="664"
+          y="109.09090909090908"
+        />
+        <rect
+          class="lucid-Bar lucid-Bar-color-chart-2"
+          height="327.2727272727273"
+          width="28"
+          x="692"
+          y="72.7272727272727"
+        />
+        <rect
+          class="lucid-Bar lucid-Bar-color-chart-4-lightest"
+          height="181.81818181818184"
+          width="28"
+          x="720"
+          y="218.18181818181816"
+        />
+        <g
+          class="lucid-ContextMenu lucid-ToolTip"
+        >
+          <rect
+            class="lucid-Bars-tooltip-hover-zone"
+            height="400"
+            width="114"
+            x="635"
+            y="0"
+          />
+        </g>
+      </g>
+    </g>
+  </svg>
+  <svg
+    height="400"
+    width="750"
   >
-    <Bar
-      color="color-chart-3"
-      hasStroke={false}
-      height={24.24242424242425}
-      key="0"
-      width={114}
-      x={127}
-      y={375.75757575757575}
-    />
-    <Bar
-      color="color-chart-0-darkest"
-      hasStroke={false}
-      height={36.363636363636374}
-      key="1"
-      width={114}
-      x={127}
-      y={339.3939393939394}
-    />
-    <Bar
-      color="color-chart-2"
-      hasStroke={false}
-      height={48.48484848484844}
-      key="2"
-      width={114}
-      x={127}
-      y={290.90909090909093}
-    />
-    <Bar
-      color="color-chart-4-lightest"
-      hasStroke={false}
-      height={72.72727272727278}
-      key="3"
-      width={114}
-      x={127}
-      y={218.18181818181816}
-    />
-    <PureToolTip
-      data={
-        Array [
-          Object {
-            "x": "one",
-            "y0": 1,
-            "y1": 2,
-            "y2": 3,
-            "y3": 5,
-          },
-          Object {
-            "x": "two",
-            "y0": 2,
-            "y1": 3,
-            "y2": 4,
-            "y3": 6,
-          },
-          Object {
-            "x": "three",
-            "y0": 2,
-            "y1": 4,
-            "y2": 5,
-            "y3": 6,
-          },
-          Object {
-            "x": "four",
-            "y0": 3,
-            "y1": 6,
-            "y2": 7,
-            "y3": 7,
-          },
-          Object {
-            "x": "five",
-            "y0": 4,
-            "y1": 8,
-            "y2": 9,
-            "y3": 8,
-          },
-          Object {
-            "x": "six",
-            "y0": 11,
-            "y1": 8,
-            "y2": 9,
-            "y3": 5,
-          },
-        ]
-      }
-      height={181.81818181818184}
-      isExpanded={false}
-      onMouseEnter={[Function]}
-      onMouseOut={[Function]}
-      renderBody={[Function]}
-      series={
-        Array [
-          Array [
-            0,
-            2,
-          ],
-          Array [
-            2,
-            5,
-          ],
-          Array [
-            5,
-            9,
-          ],
-          Array [
-            9,
-            15,
-          ],
-        ]
-      }
-      seriesIndex={1}
-      width={114}
-      x={127}
-      xField="x"
-      xFormatter={[Function]}
-      y={218.18181818181816}
-    />
-  </g>
-  <g
-    key="2"
-  >
-    <Bar
-      color="color-chart-3"
-      hasStroke={false}
-      height={24.24242424242425}
-      key="0"
-      width={114}
-      x={254}
-      y={375.75757575757575}
-    />
-    <Bar
-      color="color-chart-0-darkest"
-      hasStroke={false}
-      height={48.4848484848485}
-      key="1"
-      width={114}
-      x={254}
-      y={327.27272727272725}
-    />
-    <Bar
-      color="color-chart-2"
-      hasStroke={false}
-      height={60.606060606060566}
-      key="2"
-      width={114}
-      x={254}
-      y={266.6666666666667}
-    />
-    <Bar
-      color="color-chart-4-lightest"
-      hasStroke={false}
-      height={72.72727272727275}
-      key="3"
-      width={114}
-      x={254}
-      y={193.93939393939394}
-    />
-    <PureToolTip
-      data={
-        Array [
-          Object {
-            "x": "one",
-            "y0": 1,
-            "y1": 2,
-            "y2": 3,
-            "y3": 5,
-          },
-          Object {
-            "x": "two",
-            "y0": 2,
-            "y1": 3,
-            "y2": 4,
-            "y3": 6,
-          },
-          Object {
-            "x": "three",
-            "y0": 2,
-            "y1": 4,
-            "y2": 5,
-            "y3": 6,
-          },
-          Object {
-            "x": "four",
-            "y0": 3,
-            "y1": 6,
-            "y2": 7,
-            "y3": 7,
-          },
-          Object {
-            "x": "five",
-            "y0": 4,
-            "y1": 8,
-            "y2": 9,
-            "y3": 8,
-          },
-          Object {
-            "x": "six",
-            "y0": 11,
-            "y1": 8,
-            "y2": 9,
-            "y3": 5,
-          },
-        ]
-      }
-      height={206.06060606060606}
-      isExpanded={false}
-      onMouseEnter={[Function]}
-      onMouseOut={[Function]}
-      renderBody={[Function]}
-      series={
-        Array [
-          Array [
-            0,
-            2,
-          ],
-          Array [
-            2,
-            6,
-          ],
-          Array [
-            6,
-            11,
-          ],
-          Array [
-            11,
-            17,
-          ],
-        ]
-      }
-      seriesIndex={2}
-      width={114}
-      x={254}
-      xField="x"
-      xFormatter={[Function]}
-      y={193.93939393939394}
-    />
-  </g>
-  <g
-    key="3"
-  >
-    <Bar
-      color="color-chart-3"
-      hasStroke={false}
-      height={36.363636363636374}
-      key="0"
-      width={114}
-      x={381}
-      y={363.6363636363636}
-    />
-    <Bar
-      color="color-chart-0-darkest"
-      hasStroke={false}
-      height={72.72727272727269}
-      key="1"
-      width={114}
-      x={381}
-      y={290.90909090909093}
-    />
-    <Bar
-      color="color-chart-2"
-      hasStroke={false}
-      height={84.84848484848487}
-      key="2"
-      width={114}
-      x={381}
-      y={206.06060606060606}
-    />
-    <Bar
-      color="color-chart-4-lightest"
-      hasStroke={false}
-      height={84.84848484848487}
-      key="3"
-      width={114}
-      x={381}
-      y={121.21212121212119}
-    />
-    <PureToolTip
-      data={
-        Array [
-          Object {
-            "x": "one",
-            "y0": 1,
-            "y1": 2,
-            "y2": 3,
-            "y3": 5,
-          },
-          Object {
-            "x": "two",
-            "y0": 2,
-            "y1": 3,
-            "y2": 4,
-            "y3": 6,
-          },
-          Object {
-            "x": "three",
-            "y0": 2,
-            "y1": 4,
-            "y2": 5,
-            "y3": 6,
-          },
-          Object {
-            "x": "four",
-            "y0": 3,
-            "y1": 6,
-            "y2": 7,
-            "y3": 7,
-          },
-          Object {
-            "x": "five",
-            "y0": 4,
-            "y1": 8,
-            "y2": 9,
-            "y3": 8,
-          },
-          Object {
-            "x": "six",
-            "y0": 11,
-            "y1": 8,
-            "y2": 9,
-            "y3": 5,
-          },
-        ]
-      }
-      height={278.7878787878788}
-      isExpanded={false}
-      onMouseEnter={[Function]}
-      onMouseOut={[Function]}
-      renderBody={[Function]}
-      series={
-        Array [
-          Array [
-            0,
-            3,
-          ],
-          Array [
-            3,
-            9,
-          ],
-          Array [
-            9,
-            16,
-          ],
-          Array [
-            16,
-            23,
-          ],
-        ]
-      }
-      seriesIndex={3}
-      width={114}
-      x={381}
-      xField="x"
-      xFormatter={[Function]}
-      y={121.21212121212119}
-    />
-  </g>
-  <g
-    key="4"
-  >
-    <Bar
-      color="color-chart-3"
-      hasStroke={false}
-      height={48.4848484848485}
-      key="0"
-      width={114}
-      x={508}
-      y={351.5151515151515}
-    />
-    <Bar
-      color="color-chart-0-darkest"
-      hasStroke={false}
-      height={96.96969696969697}
-      key="1"
-      width={114}
-      x={508}
-      y={254.54545454545453}
-    />
-    <Bar
-      color="color-chart-2"
-      hasStroke={false}
-      height={109.09090909090907}
-      key="2"
-      width={114}
-      x={508}
-      y={145.45454545454547}
-    />
-    <Bar
-      color="color-chart-4-lightest"
-      hasStroke={false}
-      height={96.96969696969698}
-      key="3"
-      width={114}
-      x={508}
-      y={48.484848484848484}
-    />
-    <PureToolTip
-      data={
-        Array [
-          Object {
-            "x": "one",
-            "y0": 1,
-            "y1": 2,
-            "y2": 3,
-            "y3": 5,
-          },
-          Object {
-            "x": "two",
-            "y0": 2,
-            "y1": 3,
-            "y2": 4,
-            "y3": 6,
-          },
-          Object {
-            "x": "three",
-            "y0": 2,
-            "y1": 4,
-            "y2": 5,
-            "y3": 6,
-          },
-          Object {
-            "x": "four",
-            "y0": 3,
-            "y1": 6,
-            "y2": 7,
-            "y3": 7,
-          },
-          Object {
-            "x": "five",
-            "y0": 4,
-            "y1": 8,
-            "y2": 9,
-            "y3": 8,
-          },
-          Object {
-            "x": "six",
-            "y0": 11,
-            "y1": 8,
-            "y2": 9,
-            "y3": 5,
-          },
-        ]
-      }
-      height={351.5151515151515}
-      isExpanded={false}
-      onMouseEnter={[Function]}
-      onMouseOut={[Function]}
-      renderBody={[Function]}
-      series={
-        Array [
-          Array [
-            0,
-            4,
-          ],
-          Array [
-            4,
-            12,
-          ],
-          Array [
-            12,
-            21,
-          ],
-          Array [
-            21,
-            29,
-          ],
-        ]
-      }
-      seriesIndex={4}
-      width={114}
-      x={508}
-      xField="x"
-      xFormatter={[Function]}
-      y={48.484848484848484}
-    />
-  </g>
-  <g
-    key="5"
-  >
-    <Bar
-      color="color-chart-3"
-      hasStroke={false}
-      height={133.33333333333331}
-      key="0"
-      width={114}
-      x={635}
-      y={266.6666666666667}
-    />
-    <Bar
-      color="color-chart-0-darkest"
-      hasStroke={false}
-      height={96.969696969697}
-      key="1"
-      width={114}
-      x={635}
-      y={169.6969696969697}
-    />
-    <Bar
-      color="color-chart-2"
-      hasStroke={false}
-      height={109.0909090909091}
-      key="2"
-      width={114}
-      x={635}
-      y={60.606060606060595}
-    />
-    <Bar
-      color="color-chart-4-lightest"
-      hasStroke={false}
-      height={60.606060606060595}
-      key="3"
-      width={114}
-      x={635}
-      y={0}
-    />
-    <PureToolTip
-      data={
-        Array [
-          Object {
-            "x": "one",
-            "y0": 1,
-            "y1": 2,
-            "y2": 3,
-            "y3": 5,
-          },
-          Object {
-            "x": "two",
-            "y0": 2,
-            "y1": 3,
-            "y2": 4,
-            "y3": 6,
-          },
-          Object {
-            "x": "three",
-            "y0": 2,
-            "y1": 4,
-            "y2": 5,
-            "y3": 6,
-          },
-          Object {
-            "x": "four",
-            "y0": 3,
-            "y1": 6,
-            "y2": 7,
-            "y3": 7,
-          },
-          Object {
-            "x": "five",
-            "y0": 4,
-            "y1": 8,
-            "y2": 9,
-            "y3": 8,
-          },
-          Object {
-            "x": "six",
-            "y0": 11,
-            "y1": 8,
-            "y2": 9,
-            "y3": 5,
-          },
-        ]
-      }
-      height={400}
-      isExpanded={false}
-      onMouseEnter={[Function]}
-      onMouseOut={[Function]}
-      renderBody={[Function]}
-      series={
-        Array [
-          Array [
-            0,
-            11,
-          ],
-          Array [
-            11,
-            19,
-          ],
-          Array [
-            19,
-            28,
-          ],
-          Array [
-            28,
-            33,
-          ],
-        ]
-      }
-      seriesIndex={5}
-      width={114}
-      x={635}
-      xField="x"
-      xFormatter={[Function]}
-      y={0}
-    />
-  </g>
-</g>
+    <g
+      class="lucid-Bars"
+    >
+      <g>
+        <rect
+          class="lucid-Bar lucid-Bar-color-chart-3"
+          height="12.121212121212125"
+          width="114"
+          x="0"
+          y="387.8787878787879"
+        />
+        <rect
+          class="lucid-Bar lucid-Bar-color-chart-0-darkest"
+          height="24.24242424242425"
+          width="114"
+          x="0"
+          y="363.6363636363636"
+        />
+        <rect
+          class="lucid-Bar lucid-Bar-color-chart-2"
+          height="36.363636363636374"
+          width="114"
+          x="0"
+          y="327.27272727272725"
+        />
+        <rect
+          class="lucid-Bar lucid-Bar-color-chart-4-lightest"
+          height="60.606060606060566"
+          width="114"
+          x="0"
+          y="266.6666666666667"
+        />
+        <g
+          class="lucid-ContextMenu lucid-ToolTip"
+        >
+          <rect
+            class="lucid-Bars-tooltip-hover-zone"
+            height="133.33333333333331"
+            width="114"
+            x="0"
+            y="266.6666666666667"
+          />
+        </g>
+      </g>
+      <g>
+        <rect
+          class="lucid-Bar lucid-Bar-color-chart-3"
+          height="24.24242424242425"
+          width="114"
+          x="127"
+          y="375.75757575757575"
+        />
+        <rect
+          class="lucid-Bar lucid-Bar-color-chart-0-darkest"
+          height="36.363636363636374"
+          width="114"
+          x="127"
+          y="339.3939393939394"
+        />
+        <rect
+          class="lucid-Bar lucid-Bar-color-chart-2"
+          height="48.48484848484844"
+          width="114"
+          x="127"
+          y="290.90909090909093"
+        />
+        <rect
+          class="lucid-Bar lucid-Bar-color-chart-4-lightest"
+          height="72.72727272727278"
+          width="114"
+          x="127"
+          y="218.18181818181816"
+        />
+        <g
+          class="lucid-ContextMenu lucid-ToolTip"
+        >
+          <rect
+            class="lucid-Bars-tooltip-hover-zone"
+            height="181.81818181818184"
+            width="114"
+            x="127"
+            y="218.18181818181816"
+          />
+        </g>
+      </g>
+      <g>
+        <rect
+          class="lucid-Bar lucid-Bar-color-chart-3"
+          height="24.24242424242425"
+          width="114"
+          x="254"
+          y="375.75757575757575"
+        />
+        <rect
+          class="lucid-Bar lucid-Bar-color-chart-0-darkest"
+          height="48.4848484848485"
+          width="114"
+          x="254"
+          y="327.27272727272725"
+        />
+        <rect
+          class="lucid-Bar lucid-Bar-color-chart-2"
+          height="60.606060606060566"
+          width="114"
+          x="254"
+          y="266.6666666666667"
+        />
+        <rect
+          class="lucid-Bar lucid-Bar-color-chart-4-lightest"
+          height="72.72727272727275"
+          width="114"
+          x="254"
+          y="193.93939393939394"
+        />
+        <g
+          class="lucid-ContextMenu lucid-ToolTip"
+        >
+          <rect
+            class="lucid-Bars-tooltip-hover-zone"
+            height="206.06060606060606"
+            width="114"
+            x="254"
+            y="193.93939393939394"
+          />
+        </g>
+      </g>
+      <g>
+        <rect
+          class="lucid-Bar lucid-Bar-color-chart-3"
+          height="36.363636363636374"
+          width="114"
+          x="381"
+          y="363.6363636363636"
+        />
+        <rect
+          class="lucid-Bar lucid-Bar-color-chart-0-darkest"
+          height="72.72727272727269"
+          width="114"
+          x="381"
+          y="290.90909090909093"
+        />
+        <rect
+          class="lucid-Bar lucid-Bar-color-chart-2"
+          height="84.84848484848487"
+          width="114"
+          x="381"
+          y="206.06060606060606"
+        />
+        <rect
+          class="lucid-Bar lucid-Bar-color-chart-4-lightest"
+          height="84.84848484848487"
+          width="114"
+          x="381"
+          y="121.21212121212119"
+        />
+        <g
+          class="lucid-ContextMenu lucid-ToolTip"
+        >
+          <rect
+            class="lucid-Bars-tooltip-hover-zone"
+            height="278.7878787878788"
+            width="114"
+            x="381"
+            y="121.21212121212119"
+          />
+        </g>
+      </g>
+      <g>
+        <rect
+          class="lucid-Bar lucid-Bar-color-chart-3"
+          height="48.4848484848485"
+          width="114"
+          x="508"
+          y="351.5151515151515"
+        />
+        <rect
+          class="lucid-Bar lucid-Bar-color-chart-0-darkest"
+          height="96.96969696969697"
+          width="114"
+          x="508"
+          y="254.54545454545453"
+        />
+        <rect
+          class="lucid-Bar lucid-Bar-color-chart-2"
+          height="109.09090909090907"
+          width="114"
+          x="508"
+          y="145.45454545454547"
+        />
+        <rect
+          class="lucid-Bar lucid-Bar-color-chart-4-lightest"
+          height="96.96969696969698"
+          width="114"
+          x="508"
+          y="48.484848484848484"
+        />
+        <g
+          class="lucid-ContextMenu lucid-ToolTip"
+        >
+          <rect
+            class="lucid-Bars-tooltip-hover-zone"
+            height="351.5151515151515"
+            width="114"
+            x="508"
+            y="48.484848484848484"
+          />
+        </g>
+      </g>
+      <g>
+        <rect
+          class="lucid-Bar lucid-Bar-color-chart-3"
+          height="133.33333333333331"
+          width="114"
+          x="635"
+          y="266.6666666666667"
+        />
+        <rect
+          class="lucid-Bar lucid-Bar-color-chart-0-darkest"
+          height="96.969696969697"
+          width="114"
+          x="635"
+          y="169.6969696969697"
+        />
+        <rect
+          class="lucid-Bar lucid-Bar-color-chart-2"
+          height="109.0909090909091"
+          width="114"
+          x="635"
+          y="60.606060606060595"
+        />
+        <rect
+          class="lucid-Bar lucid-Bar-color-chart-4-lightest"
+          height="60.606060606060595"
+          width="114"
+          x="635"
+          y="0"
+        />
+        <g
+          class="lucid-ContextMenu lucid-ToolTip"
+        >
+          <rect
+            class="lucid-Bars-tooltip-hover-zone"
+            height="400"
+            width="114"
+            x="635"
+            y="0"
+          />
+        </g>
+      </g>
+    </g>
+  </svg>
+</div>
 `;
 
-exports[`Bars [common] example testing should match snapshot(s) for 02.custom-colors 1`] = `
-<g
-  className="lucid-Bars"
+exports[`Bars [common] example testing should match snapshot(s) for LogScale 1`] = `
+<svg
+  height="600"
+  width="1000"
 >
-  <g
-    key="0"
-  >
-    <Bar
-      color="color-chart-good"
-      hasStroke={false}
-      height={36.363636363636374}
-      key="0"
-      width={28}
-      x={1}
-      y={363.6363636363636}
-    />
-    <Bar
-      color="color-chart-0-darkest"
-      hasStroke={false}
-      height={72.72727272727275}
-      key="1"
-      width={28}
-      x={29}
-      y={327.27272727272725}
-    />
-    <Bar
-      color="color-chart-bad"
-      hasStroke={false}
-      height={109.09090909090907}
-      key="2"
-      width={28}
-      x={57}
-      y={290.90909090909093}
-    />
-    <Bar
-      color="color-chart-4-lightest"
-      hasStroke={false}
-      height={181.81818181818184}
-      key="3"
-      width={28}
-      x={85}
-      y={218.18181818181816}
-    />
-    <PureToolTip
-      data={
-        Array [
-          Object {
-            "x": "one",
-            "y0": 1,
-            "y1": 2,
-            "y2": 3,
-            "y3": 5,
-          },
-          Object {
-            "x": "two",
-            "y0": 2,
-            "y1": 3,
-            "y2": 4,
-            "y3": 6,
-          },
-          Object {
-            "x": "three",
-            "y0": 2,
-            "y1": 4,
-            "y2": 5,
-            "y3": 6,
-          },
-          Object {
-            "x": "four",
-            "y0": 3,
-            "y1": 6,
-            "y2": 7,
-            "y3": 7,
-          },
-          Object {
-            "x": "five",
-            "y0": 4,
-            "y1": 8,
-            "y2": 9,
-            "y3": 8,
-          },
-          Object {
-            "x": "six",
-            "y0": 11,
-            "y1": 8,
-            "y2": 9,
-            "y3": 5,
-          },
-        ]
-      }
-      height={181.81818181818184}
-      isExpanded={false}
-      onMouseEnter={[Function]}
-      onMouseOut={[Function]}
-      renderBody={[Function]}
-      series={
-        Array [
-          Array [
-            0,
-            1,
-          ],
-          Array [
-            0,
-            2,
-          ],
-          Array [
-            0,
-            3,
-          ],
-          Array [
-            0,
-            5,
-          ],
-        ]
-      }
-      seriesIndex={0}
-      width={114}
-      x={0}
-      xField="x"
-      xFormatter={[Function]}
-      y={218.18181818181816}
-    />
+  <g>
+    <g
+      class="lucid-Bars"
+    >
+      <g>
+        <rect
+          class="lucid-Bar lucid-Bar-color-chart-3"
+          height="66.66666666666669"
+          width="150"
+          x="0"
+          y="333.3333333333333"
+        />
+        <g
+          class="lucid-ContextMenu lucid-ToolTip"
+        >
+          <rect
+            class="lucid-Bars-tooltip-hover-zone"
+            height="66.66666666666669"
+            width="150"
+            x="0"
+            y="333.3333333333333"
+          />
+        </g>
+      </g>
+      <g>
+        <rect
+          class="lucid-Bar lucid-Bar-color-chart-3"
+          height="133.33333333333337"
+          width="150"
+          x="150"
+          y="266.66666666666663"
+        />
+        <g
+          class="lucid-ContextMenu lucid-ToolTip"
+        >
+          <rect
+            class="lucid-Bars-tooltip-hover-zone"
+            height="133.33333333333337"
+            width="150"
+            x="150"
+            y="266.66666666666663"
+          />
+        </g>
+      </g>
+      <g>
+        <rect
+          class="lucid-Bar lucid-Bar-color-chart-3"
+          height="200"
+          width="150"
+          x="300"
+          y="200"
+        />
+        <g
+          class="lucid-ContextMenu lucid-ToolTip"
+        >
+          <rect
+            class="lucid-Bars-tooltip-hover-zone"
+            height="200"
+            width="150"
+            x="300"
+            y="200"
+          />
+        </g>
+      </g>
+      <g>
+        <rect
+          class="lucid-Bar lucid-Bar-color-chart-3"
+          height="266.6666666666667"
+          width="150"
+          x="450"
+          y="133.33333333333331"
+        />
+        <g
+          class="lucid-ContextMenu lucid-ToolTip"
+        >
+          <rect
+            class="lucid-Bars-tooltip-hover-zone"
+            height="266.6666666666667"
+            width="150"
+            x="450"
+            y="133.33333333333331"
+          />
+        </g>
+      </g>
+      <g>
+        <rect
+          class="lucid-Bar lucid-Bar-color-chart-3"
+          height="333.33333333333337"
+          width="150"
+          x="600"
+          y="66.66666666666666"
+        />
+        <g
+          class="lucid-ContextMenu lucid-ToolTip"
+        >
+          <rect
+            class="lucid-Bars-tooltip-hover-zone"
+            height="333.33333333333337"
+            width="150"
+            x="600"
+            y="66.66666666666666"
+          />
+        </g>
+      </g>
+    </g>
   </g>
-  <g
-    key="1"
-  >
-    <Bar
-      color="color-chart-good"
-      hasStroke={false}
-      height={72.72727272727275}
-      key="0"
-      width={28}
-      x={128}
-      y={327.27272727272725}
-    />
-    <Bar
-      color="color-chart-0-darkest"
-      hasStroke={false}
-      height={109.09090909090907}
-      key="1"
-      width={28}
-      x={156}
-      y={290.90909090909093}
-    />
-    <Bar
-      color="color-chart-bad"
-      hasStroke={false}
-      height={145.45454545454547}
-      key="2"
-      width={28}
-      x={184}
-      y={254.54545454545453}
-    />
-    <Bar
-      color="color-chart-4-lightest"
-      hasStroke={false}
-      height={218.18181818181816}
-      key="3"
-      width={28}
-      x={212}
-      y={181.81818181818184}
-    />
-    <PureToolTip
-      data={
-        Array [
-          Object {
-            "x": "one",
-            "y0": 1,
-            "y1": 2,
-            "y2": 3,
-            "y3": 5,
-          },
-          Object {
-            "x": "two",
-            "y0": 2,
-            "y1": 3,
-            "y2": 4,
-            "y3": 6,
-          },
-          Object {
-            "x": "three",
-            "y0": 2,
-            "y1": 4,
-            "y2": 5,
-            "y3": 6,
-          },
-          Object {
-            "x": "four",
-            "y0": 3,
-            "y1": 6,
-            "y2": 7,
-            "y3": 7,
-          },
-          Object {
-            "x": "five",
-            "y0": 4,
-            "y1": 8,
-            "y2": 9,
-            "y3": 8,
-          },
-          Object {
-            "x": "six",
-            "y0": 11,
-            "y1": 8,
-            "y2": 9,
-            "y3": 5,
-          },
-        ]
-      }
-      height={218.18181818181816}
-      isExpanded={false}
-      onMouseEnter={[Function]}
-      onMouseOut={[Function]}
-      renderBody={[Function]}
-      series={
-        Array [
-          Array [
-            0,
-            2,
-          ],
-          Array [
-            0,
-            3,
-          ],
-          Array [
-            0,
-            4,
-          ],
-          Array [
-            0,
-            6,
-          ],
-        ]
-      }
-      seriesIndex={1}
-      width={114}
-      x={127}
-      xField="x"
-      xFormatter={[Function]}
-      y={181.81818181818184}
-    />
+  <g>
+    <text
+      fill="gray"
+      text-anchor="middle"
+      x="75"
+      y="323.3333333333333"
+    >
+      10
+    </text>
+    <text
+      fill="gray"
+      text-anchor="middle"
+      x="225"
+      y="256.66666666666663"
+    >
+      100
+    </text>
+    <text
+      fill="gray"
+      text-anchor="middle"
+      x="375"
+      y="190"
+    >
+      1000
+    </text>
+    <text
+      fill="gray"
+      text-anchor="middle"
+      x="525"
+      y="123.33333333333331"
+    >
+      10000
+    </text>
+    <text
+      fill="gray"
+      text-anchor="middle"
+      x="675"
+      y="56.66666666666666"
+    >
+      100000
+    </text>
   </g>
-  <g
-    key="2"
-  >
-    <Bar
-      color="color-chart-good"
-      hasStroke={false}
-      height={72.72727272727275}
-      key="0"
-      width={28}
-      x={255}
-      y={327.27272727272725}
-    />
-    <Bar
-      color="color-chart-0-darkest"
-      hasStroke={false}
-      height={145.45454545454547}
-      key="1"
-      width={28}
-      x={283}
-      y={254.54545454545453}
-    />
-    <Bar
-      color="color-chart-bad"
-      hasStroke={false}
-      height={181.81818181818184}
-      key="2"
-      width={28}
-      x={311}
-      y={218.18181818181816}
-    />
-    <Bar
-      color="color-chart-4-lightest"
-      hasStroke={false}
-      height={218.18181818181816}
-      key="3"
-      width={28}
-      x={339}
-      y={181.81818181818184}
-    />
-    <PureToolTip
-      data={
-        Array [
-          Object {
-            "x": "one",
-            "y0": 1,
-            "y1": 2,
-            "y2": 3,
-            "y3": 5,
-          },
-          Object {
-            "x": "two",
-            "y0": 2,
-            "y1": 3,
-            "y2": 4,
-            "y3": 6,
-          },
-          Object {
-            "x": "three",
-            "y0": 2,
-            "y1": 4,
-            "y2": 5,
-            "y3": 6,
-          },
-          Object {
-            "x": "four",
-            "y0": 3,
-            "y1": 6,
-            "y2": 7,
-            "y3": 7,
-          },
-          Object {
-            "x": "five",
-            "y0": 4,
-            "y1": 8,
-            "y2": 9,
-            "y3": 8,
-          },
-          Object {
-            "x": "six",
-            "y0": 11,
-            "y1": 8,
-            "y2": 9,
-            "y3": 5,
-          },
-        ]
-      }
-      height={218.18181818181816}
-      isExpanded={false}
-      onMouseEnter={[Function]}
-      onMouseOut={[Function]}
-      renderBody={[Function]}
-      series={
-        Array [
-          Array [
-            0,
-            2,
-          ],
-          Array [
-            0,
-            4,
-          ],
-          Array [
-            0,
-            5,
-          ],
-          Array [
-            0,
-            6,
-          ],
-        ]
-      }
-      seriesIndex={2}
-      width={114}
-      x={254}
-      xField="x"
-      xFormatter={[Function]}
-      y={181.81818181818184}
-    />
-  </g>
-  <g
-    key="3"
-  >
-    <Bar
-      color="color-chart-good"
-      hasStroke={false}
-      height={109.09090909090907}
-      key="0"
-      width={28}
-      x={382}
-      y={290.90909090909093}
-    />
-    <Bar
-      color="color-chart-0-darkest"
-      hasStroke={false}
-      height={218.18181818181816}
-      key="1"
-      width={28}
-      x={410}
-      y={181.81818181818184}
-    />
-    <Bar
-      color="color-chart-bad"
-      hasStroke={false}
-      height={254.54545454545453}
-      key="2"
-      width={28}
-      x={438}
-      y={145.45454545454547}
-    />
-    <Bar
-      color="color-chart-4-lightest"
-      hasStroke={false}
-      height={254.54545454545453}
-      key="3"
-      width={28}
-      x={466}
-      y={145.45454545454547}
-    />
-    <PureToolTip
-      data={
-        Array [
-          Object {
-            "x": "one",
-            "y0": 1,
-            "y1": 2,
-            "y2": 3,
-            "y3": 5,
-          },
-          Object {
-            "x": "two",
-            "y0": 2,
-            "y1": 3,
-            "y2": 4,
-            "y3": 6,
-          },
-          Object {
-            "x": "three",
-            "y0": 2,
-            "y1": 4,
-            "y2": 5,
-            "y3": 6,
-          },
-          Object {
-            "x": "four",
-            "y0": 3,
-            "y1": 6,
-            "y2": 7,
-            "y3": 7,
-          },
-          Object {
-            "x": "five",
-            "y0": 4,
-            "y1": 8,
-            "y2": 9,
-            "y3": 8,
-          },
-          Object {
-            "x": "six",
-            "y0": 11,
-            "y1": 8,
-            "y2": 9,
-            "y3": 5,
-          },
-        ]
-      }
-      height={254.54545454545453}
-      isExpanded={false}
-      onMouseEnter={[Function]}
-      onMouseOut={[Function]}
-      renderBody={[Function]}
-      series={
-        Array [
-          Array [
-            0,
-            3,
-          ],
-          Array [
-            0,
-            6,
-          ],
-          Array [
-            0,
-            7,
-          ],
-          Array [
-            0,
-            7,
-          ],
-        ]
-      }
-      seriesIndex={3}
-      width={114}
-      x={381}
-      xField="x"
-      xFormatter={[Function]}
-      y={145.45454545454547}
-    />
-  </g>
-  <g
-    key="4"
-  >
-    <Bar
-      color="color-chart-good"
-      hasStroke={false}
-      height={145.45454545454547}
-      key="0"
-      width={28}
-      x={509}
-      y={254.54545454545453}
-    />
-    <Bar
-      color="color-chart-0-darkest"
-      hasStroke={false}
-      height={290.90909090909093}
-      key="1"
-      width={28}
-      x={537}
-      y={109.09090909090908}
-    />
-    <Bar
-      color="color-chart-bad"
-      hasStroke={false}
-      height={327.2727272727273}
-      key="2"
-      width={28}
-      x={565}
-      y={72.7272727272727}
-    />
-    <Bar
-      color="color-chart-4-lightest"
-      hasStroke={false}
-      height={290.90909090909093}
-      key="3"
-      width={28}
-      x={593}
-      y={109.09090909090908}
-    />
-    <PureToolTip
-      data={
-        Array [
-          Object {
-            "x": "one",
-            "y0": 1,
-            "y1": 2,
-            "y2": 3,
-            "y3": 5,
-          },
-          Object {
-            "x": "two",
-            "y0": 2,
-            "y1": 3,
-            "y2": 4,
-            "y3": 6,
-          },
-          Object {
-            "x": "three",
-            "y0": 2,
-            "y1": 4,
-            "y2": 5,
-            "y3": 6,
-          },
-          Object {
-            "x": "four",
-            "y0": 3,
-            "y1": 6,
-            "y2": 7,
-            "y3": 7,
-          },
-          Object {
-            "x": "five",
-            "y0": 4,
-            "y1": 8,
-            "y2": 9,
-            "y3": 8,
-          },
-          Object {
-            "x": "six",
-            "y0": 11,
-            "y1": 8,
-            "y2": 9,
-            "y3": 5,
-          },
-        ]
-      }
-      height={327.2727272727273}
-      isExpanded={false}
-      onMouseEnter={[Function]}
-      onMouseOut={[Function]}
-      renderBody={[Function]}
-      series={
-        Array [
-          Array [
-            0,
-            4,
-          ],
-          Array [
-            0,
-            8,
-          ],
-          Array [
-            0,
-            9,
-          ],
-          Array [
-            0,
-            8,
-          ],
-        ]
-      }
-      seriesIndex={4}
-      width={114}
-      x={508}
-      xField="x"
-      xFormatter={[Function]}
-      y={72.7272727272727}
-    />
-  </g>
-  <g
-    key="5"
-  >
-    <Bar
-      color="color-chart-good"
-      hasStroke={false}
-      height={400}
-      key="0"
-      width={28}
-      x={636}
-      y={0}
-    />
-    <Bar
-      color="color-chart-0-darkest"
-      hasStroke={false}
-      height={290.90909090909093}
-      key="1"
-      width={28}
-      x={664}
-      y={109.09090909090908}
-    />
-    <Bar
-      color="color-chart-bad"
-      hasStroke={false}
-      height={327.2727272727273}
-      key="2"
-      width={28}
-      x={692}
-      y={72.7272727272727}
-    />
-    <Bar
-      color="color-chart-4-lightest"
-      hasStroke={false}
-      height={181.81818181818184}
-      key="3"
-      width={28}
-      x={720}
-      y={218.18181818181816}
-    />
-    <PureToolTip
-      data={
-        Array [
-          Object {
-            "x": "one",
-            "y0": 1,
-            "y1": 2,
-            "y2": 3,
-            "y3": 5,
-          },
-          Object {
-            "x": "two",
-            "y0": 2,
-            "y1": 3,
-            "y2": 4,
-            "y3": 6,
-          },
-          Object {
-            "x": "three",
-            "y0": 2,
-            "y1": 4,
-            "y2": 5,
-            "y3": 6,
-          },
-          Object {
-            "x": "four",
-            "y0": 3,
-            "y1": 6,
-            "y2": 7,
-            "y3": 7,
-          },
-          Object {
-            "x": "five",
-            "y0": 4,
-            "y1": 8,
-            "y2": 9,
-            "y3": 8,
-          },
-          Object {
-            "x": "six",
-            "y0": 11,
-            "y1": 8,
-            "y2": 9,
-            "y3": 5,
-          },
-        ]
-      }
-      height={400}
-      isExpanded={false}
-      onMouseEnter={[Function]}
-      onMouseOut={[Function]}
-      renderBody={[Function]}
-      series={
-        Array [
-          Array [
-            0,
-            11,
-          ],
-          Array [
-            0,
-            8,
-          ],
-          Array [
-            0,
-            9,
-          ],
-          Array [
-            0,
-            5,
-          ],
-        ]
-      }
-      seriesIndex={5}
-      width={114}
-      x={635}
-      xField="x"
-      xFormatter={[Function]}
-      y={0}
-    />
-  </g>
-</g>
-`;
-
-exports[`Bars [common] example testing should match snapshot(s) for 03.log-scale 1`] = `
-<g
-  className="lucid-Bars"
->
-  <g
-    key="0"
-  >
-    <Bar
-      color="color-chart-3"
-      hasStroke={false}
-      height={66.66666666666669}
-      key="0"
-      width={150}
-      x={0}
-      y={333.3333333333333}
-    />
-    <PureToolTip
-      data={
-        Array [
-          Object {
-            "x": "one",
-            "y": 10,
-          },
-          Object {
-            "x": "two",
-            "y": 100,
-          },
-          Object {
-            "x": "three",
-            "y": 1000,
-          },
-          Object {
-            "x": "four",
-            "y": 10000,
-          },
-          Object {
-            "x": "five",
-            "y": 100000,
-          },
-        ]
-      }
-      height={66.66666666666669}
-      isExpanded={false}
-      onMouseEnter={[Function]}
-      onMouseOut={[Function]}
-      renderBody={[Function]}
-      series={
-        Array [
-          Array [
-            1,
-            10,
-          ],
-        ]
-      }
-      seriesIndex={0}
-      width={150}
-      x={0}
-      xField="x"
-      xFormatter={[Function]}
-      y={333.3333333333333}
-    />
-  </g>
-  <g
-    key="1"
-  >
-    <Bar
-      color="color-chart-3"
-      hasStroke={false}
-      height={133.33333333333337}
-      key="0"
-      width={150}
-      x={150}
-      y={266.66666666666663}
-    />
-    <PureToolTip
-      data={
-        Array [
-          Object {
-            "x": "one",
-            "y": 10,
-          },
-          Object {
-            "x": "two",
-            "y": 100,
-          },
-          Object {
-            "x": "three",
-            "y": 1000,
-          },
-          Object {
-            "x": "four",
-            "y": 10000,
-          },
-          Object {
-            "x": "five",
-            "y": 100000,
-          },
-        ]
-      }
-      height={133.33333333333337}
-      isExpanded={false}
-      onMouseEnter={[Function]}
-      onMouseOut={[Function]}
-      renderBody={[Function]}
-      series={
-        Array [
-          Array [
-            1,
-            100,
-          ],
-        ]
-      }
-      seriesIndex={1}
-      width={150}
-      x={150}
-      xField="x"
-      xFormatter={[Function]}
-      y={266.66666666666663}
-    />
-  </g>
-  <g
-    key="2"
-  >
-    <Bar
-      color="color-chart-3"
-      hasStroke={false}
-      height={200}
-      key="0"
-      width={150}
-      x={300}
-      y={200}
-    />
-    <PureToolTip
-      data={
-        Array [
-          Object {
-            "x": "one",
-            "y": 10,
-          },
-          Object {
-            "x": "two",
-            "y": 100,
-          },
-          Object {
-            "x": "three",
-            "y": 1000,
-          },
-          Object {
-            "x": "four",
-            "y": 10000,
-          },
-          Object {
-            "x": "five",
-            "y": 100000,
-          },
-        ]
-      }
-      height={200}
-      isExpanded={false}
-      onMouseEnter={[Function]}
-      onMouseOut={[Function]}
-      renderBody={[Function]}
-      series={
-        Array [
-          Array [
-            1,
-            1000,
-          ],
-        ]
-      }
-      seriesIndex={2}
-      width={150}
-      x={300}
-      xField="x"
-      xFormatter={[Function]}
-      y={200}
-    />
-  </g>
-  <g
-    key="3"
-  >
-    <Bar
-      color="color-chart-3"
-      hasStroke={false}
-      height={266.6666666666667}
-      key="0"
-      width={150}
-      x={450}
-      y={133.33333333333331}
-    />
-    <PureToolTip
-      data={
-        Array [
-          Object {
-            "x": "one",
-            "y": 10,
-          },
-          Object {
-            "x": "two",
-            "y": 100,
-          },
-          Object {
-            "x": "three",
-            "y": 1000,
-          },
-          Object {
-            "x": "four",
-            "y": 10000,
-          },
-          Object {
-            "x": "five",
-            "y": 100000,
-          },
-        ]
-      }
-      height={266.6666666666667}
-      isExpanded={false}
-      onMouseEnter={[Function]}
-      onMouseOut={[Function]}
-      renderBody={[Function]}
-      series={
-        Array [
-          Array [
-            1,
-            10000,
-          ],
-        ]
-      }
-      seriesIndex={3}
-      width={150}
-      x={450}
-      xField="x"
-      xFormatter={[Function]}
-      y={133.33333333333331}
-    />
-  </g>
-  <g
-    key="4"
-  >
-    <Bar
-      color="color-chart-3"
-      hasStroke={false}
-      height={333.33333333333337}
-      key="0"
-      width={150}
-      x={600}
-      y={66.66666666666666}
-    />
-    <PureToolTip
-      data={
-        Array [
-          Object {
-            "x": "one",
-            "y": 10,
-          },
-          Object {
-            "x": "two",
-            "y": 100,
-          },
-          Object {
-            "x": "three",
-            "y": 1000,
-          },
-          Object {
-            "x": "four",
-            "y": 10000,
-          },
-          Object {
-            "x": "five",
-            "y": 100000,
-          },
-        ]
-      }
-      height={333.33333333333337}
-      isExpanded={false}
-      onMouseEnter={[Function]}
-      onMouseOut={[Function]}
-      renderBody={[Function]}
-      series={
-        Array [
-          Array [
-            1,
-            100000,
-          ],
-        ]
-      }
-      seriesIndex={4}
-      width={150}
-      x={600}
-      xField="x"
-      xFormatter={[Function]}
-      y={66.66666666666666}
-    />
-  </g>
-</g>
+</svg>
 `;

@@ -1,3351 +1,959 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Grid [common] example testing should match snapshot(s) for GridColumns 1`] = `
-<section
-  className="lucid-Grid"
->
-  <article
-    className="lucid-Grid-Cell lucid-Grid-Cell-is-full"
-    key="0"
-  >
-    <p
-      style={
-        Object {
-          "background": "#333333",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      full
-    </p>
-  </article>
-  <Grid.Cell
-    isFull={true}
-  >
-    <p
-      style={
-        Object {
-          "background": "#333333",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      full
-    </p>
-  </Grid.Cell>
-</section>
-`;
-
-exports[`Grid [common] example testing should match snapshot(s) for GridColumns 2`] = `
-<section
-  className="lucid-Grid"
->
-  <article
-    className="lucid-Grid-Cell lucid-Grid-Cell-is-2"
-    key="0"
-  >
-    <p
-      style={
-        Object {
-          "background": "#feb209",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      2
-    </p>
-  </article>
-  <article
-    className="lucid-Grid-Cell"
-    key="1"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </article>
-  <article
-    className="lucid-Grid-Cell"
-    key="2"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </article>
-  <article
-    className="lucid-Grid-Cell"
-    key="3"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </article>
-  <article
-    className="lucid-Grid-Cell"
-    key="4"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </article>
-  <article
-    className="lucid-Grid-Cell"
-    key="5"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </article>
-  <article
-    className="lucid-Grid-Cell"
-    key="6"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </article>
-  <article
-    className="lucid-Grid-Cell"
-    key="7"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </article>
-  <article
-    className="lucid-Grid-Cell"
-    key="8"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </article>
-  <article
-    className="lucid-Grid-Cell"
-    key="9"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </article>
-  <article
-    className="lucid-Grid-Cell"
-    key="10"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </article>
-  <Grid.Cell
-    is2={true}
-  >
-    <p
-      style={
-        Object {
-          "background": "#feb209",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      2
-    </p>
-  </Grid.Cell>
-  <Grid.Cell
-    key="0"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </Grid.Cell>
-  <Grid.Cell
-    key="1"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </Grid.Cell>
-  <Grid.Cell
-    key="2"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </Grid.Cell>
-  <Grid.Cell
-    key="3"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </Grid.Cell>
-  <Grid.Cell
-    key="4"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </Grid.Cell>
-  <Grid.Cell
-    key="5"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </Grid.Cell>
-  <Grid.Cell
-    key="6"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </Grid.Cell>
-  <Grid.Cell
-    key="7"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </Grid.Cell>
-  <Grid.Cell
-    key="8"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </Grid.Cell>
-  <Grid.Cell
-    key="9"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </Grid.Cell>
-</section>
-`;
-
-exports[`Grid [common] example testing should match snapshot(s) for GridColumns 3`] = `
-<section
-  className="lucid-Grid"
->
-  <article
-    className="lucid-Grid-Cell lucid-Grid-Cell-is-3"
-    key="0"
-  >
-    <p
-      style={
-        Object {
-          "background": "#feb209",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      3
-    </p>
-  </article>
-  <article
-    className="lucid-Grid-Cell"
-    key="1"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </article>
-  <article
-    className="lucid-Grid-Cell"
-    key="2"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </article>
-  <article
-    className="lucid-Grid-Cell"
-    key="3"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </article>
-  <article
-    className="lucid-Grid-Cell"
-    key="4"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </article>
-  <article
-    className="lucid-Grid-Cell"
-    key="5"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </article>
-  <article
-    className="lucid-Grid-Cell"
-    key="6"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </article>
-  <article
-    className="lucid-Grid-Cell"
-    key="7"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </article>
-  <article
-    className="lucid-Grid-Cell"
-    key="8"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </article>
-  <article
-    className="lucid-Grid-Cell"
-    key="9"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </article>
-  <Grid.Cell
-    is3={true}
-  >
-    <p
-      style={
-        Object {
-          "background": "#feb209",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      3
-    </p>
-  </Grid.Cell>
-  <Grid.Cell
-    key="0"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </Grid.Cell>
-  <Grid.Cell
-    key="1"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </Grid.Cell>
-  <Grid.Cell
-    key="2"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </Grid.Cell>
-  <Grid.Cell
-    key="3"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </Grid.Cell>
-  <Grid.Cell
-    key="4"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </Grid.Cell>
-  <Grid.Cell
-    key="5"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </Grid.Cell>
-  <Grid.Cell
-    key="6"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </Grid.Cell>
-  <Grid.Cell
-    key="7"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </Grid.Cell>
-  <Grid.Cell
-    key="8"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </Grid.Cell>
-</section>
-`;
-
-exports[`Grid [common] example testing should match snapshot(s) for GridColumns 4`] = `
-<section
-  className="lucid-Grid"
->
-  <article
-    className="lucid-Grid-Cell lucid-Grid-Cell-is-4"
-    key="0"
-  >
-    <p
-      style={
-        Object {
-          "background": "#feb209",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      4
-    </p>
-  </article>
-  <article
-    className="lucid-Grid-Cell"
-    key="1"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </article>
-  <article
-    className="lucid-Grid-Cell"
-    key="2"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </article>
-  <article
-    className="lucid-Grid-Cell"
-    key="3"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </article>
-  <article
-    className="lucid-Grid-Cell"
-    key="4"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </article>
-  <article
-    className="lucid-Grid-Cell"
-    key="5"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </article>
-  <article
-    className="lucid-Grid-Cell"
-    key="6"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </article>
-  <article
-    className="lucid-Grid-Cell"
-    key="7"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </article>
-  <article
-    className="lucid-Grid-Cell"
-    key="8"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </article>
-  <Grid.Cell
-    is4={true}
-  >
-    <p
-      style={
-        Object {
-          "background": "#feb209",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      4
-    </p>
-  </Grid.Cell>
-  <Grid.Cell
-    key="0"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </Grid.Cell>
-  <Grid.Cell
-    key="1"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </Grid.Cell>
-  <Grid.Cell
-    key="2"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </Grid.Cell>
-  <Grid.Cell
-    key="3"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </Grid.Cell>
-  <Grid.Cell
-    key="4"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </Grid.Cell>
-  <Grid.Cell
-    key="5"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </Grid.Cell>
-  <Grid.Cell
-    key="6"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </Grid.Cell>
-  <Grid.Cell
-    key="7"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </Grid.Cell>
-</section>
-`;
-
-exports[`Grid [common] example testing should match snapshot(s) for GridColumns 5`] = `
-<section
-  className="lucid-Grid"
->
-  <article
-    className="lucid-Grid-Cell lucid-Grid-Cell-is-5"
-    key="0"
-  >
-    <p
-      style={
-        Object {
-          "background": "#feb209",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      5
-    </p>
-  </article>
-  <article
-    className="lucid-Grid-Cell"
-    key="1"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </article>
-  <article
-    className="lucid-Grid-Cell"
-    key="2"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </article>
-  <article
-    className="lucid-Grid-Cell"
-    key="3"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </article>
-  <article
-    className="lucid-Grid-Cell"
-    key="4"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </article>
-  <article
-    className="lucid-Grid-Cell"
-    key="5"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </article>
-  <article
-    className="lucid-Grid-Cell"
-    key="6"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </article>
-  <article
-    className="lucid-Grid-Cell"
-    key="7"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </article>
-  <Grid.Cell
-    is5={true}
-  >
-    <p
-      style={
-        Object {
-          "background": "#feb209",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      5
-    </p>
-  </Grid.Cell>
-  <Grid.Cell
-    key="0"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </Grid.Cell>
-  <Grid.Cell
-    key="1"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </Grid.Cell>
-  <Grid.Cell
-    key="2"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </Grid.Cell>
-  <Grid.Cell
-    key="3"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </Grid.Cell>
-  <Grid.Cell
-    key="4"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </Grid.Cell>
-  <Grid.Cell
-    key="5"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </Grid.Cell>
-  <Grid.Cell
-    key="6"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </Grid.Cell>
-</section>
-`;
-
-exports[`Grid [common] example testing should match snapshot(s) for GridColumns 6`] = `
-<section
-  className="lucid-Grid"
->
-  <article
-    className="lucid-Grid-Cell lucid-Grid-Cell-is-6"
-    key="0"
-  >
-    <p
-      style={
-        Object {
-          "background": "#feb209",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      6
-    </p>
-  </article>
-  <article
-    className="lucid-Grid-Cell"
-    key="1"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </article>
-  <article
-    className="lucid-Grid-Cell"
-    key="2"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </article>
-  <article
-    className="lucid-Grid-Cell"
-    key="3"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </article>
-  <article
-    className="lucid-Grid-Cell"
-    key="4"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </article>
-  <article
-    className="lucid-Grid-Cell"
-    key="5"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </article>
-  <article
-    className="lucid-Grid-Cell"
-    key="6"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </article>
-  <Grid.Cell
-    is6={true}
-  >
-    <p
-      style={
-        Object {
-          "background": "#feb209",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      6
-    </p>
-  </Grid.Cell>
-  <Grid.Cell
-    key="0"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </Grid.Cell>
-  <Grid.Cell
-    key="1"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </Grid.Cell>
-  <Grid.Cell
-    key="2"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </Grid.Cell>
-  <Grid.Cell
-    key="3"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </Grid.Cell>
-  <Grid.Cell
-    key="4"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </Grid.Cell>
-  <Grid.Cell
-    key="5"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </Grid.Cell>
-</section>
-`;
-
-exports[`Grid [common] example testing should match snapshot(s) for GridColumns 7`] = `
-<section
-  className="lucid-Grid"
->
-  <article
-    className="lucid-Grid-Cell lucid-Grid-Cell-is-7"
-    key="0"
-  >
-    <p
-      style={
-        Object {
-          "background": "#feb209",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      7
-    </p>
-  </article>
-  <article
-    className="lucid-Grid-Cell"
-    key="1"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </article>
-  <article
-    className="lucid-Grid-Cell"
-    key="2"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </article>
-  <article
-    className="lucid-Grid-Cell"
-    key="3"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </article>
-  <article
-    className="lucid-Grid-Cell"
-    key="4"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </article>
-  <article
-    className="lucid-Grid-Cell"
-    key="5"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </article>
-  <Grid.Cell
-    is7={true}
-  >
-    <p
-      style={
-        Object {
-          "background": "#feb209",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      7
-    </p>
-  </Grid.Cell>
-  <Grid.Cell
-    key="0"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </Grid.Cell>
-  <Grid.Cell
-    key="1"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </Grid.Cell>
-  <Grid.Cell
-    key="2"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </Grid.Cell>
-  <Grid.Cell
-    key="3"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </Grid.Cell>
-  <Grid.Cell
-    key="4"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </Grid.Cell>
-</section>
-`;
-
-exports[`Grid [common] example testing should match snapshot(s) for GridColumns 8`] = `
-<section
-  className="lucid-Grid"
->
-  <article
-    className="lucid-Grid-Cell lucid-Grid-Cell-is-8"
-    key="0"
-  >
-    <p
-      style={
-        Object {
-          "background": "#feb209",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      8
-    </p>
-  </article>
-  <article
-    className="lucid-Grid-Cell"
-    key="1"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </article>
-  <article
-    className="lucid-Grid-Cell"
-    key="2"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </article>
-  <article
-    className="lucid-Grid-Cell"
-    key="3"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </article>
-  <article
-    className="lucid-Grid-Cell"
-    key="4"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </article>
-  <Grid.Cell
-    is8={true}
-  >
-    <p
-      style={
-        Object {
-          "background": "#feb209",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      8
-    </p>
-  </Grid.Cell>
-  <Grid.Cell
-    key="0"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </Grid.Cell>
-  <Grid.Cell
-    key="1"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </Grid.Cell>
-  <Grid.Cell
-    key="2"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </Grid.Cell>
-  <Grid.Cell
-    key="3"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </Grid.Cell>
-</section>
-`;
-
-exports[`Grid [common] example testing should match snapshot(s) for GridColumns 9`] = `
-<section
-  className="lucid-Grid"
->
-  <article
-    className="lucid-Grid-Cell lucid-Grid-Cell-is-9"
-    key="0"
-  >
-    <p
-      style={
-        Object {
-          "background": "#feb209",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      9
-    </p>
-  </article>
-  <article
-    className="lucid-Grid-Cell"
-    key="1"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </article>
-  <article
-    className="lucid-Grid-Cell"
-    key="2"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </article>
-  <article
-    className="lucid-Grid-Cell"
-    key="3"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </article>
-  <Grid.Cell
-    is9={true}
-  >
-    <p
-      style={
-        Object {
-          "background": "#feb209",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      9
-    </p>
-  </Grid.Cell>
-  <Grid.Cell
-    key="0"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </Grid.Cell>
-  <Grid.Cell
-    key="1"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </Grid.Cell>
-  <Grid.Cell
-    key="2"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </Grid.Cell>
-</section>
-`;
-
-exports[`Grid [common] example testing should match snapshot(s) for GridColumns 10`] = `
-<section
-  className="lucid-Grid"
->
-  <article
-    className="lucid-Grid-Cell lucid-Grid-Cell-is-10"
-    key="0"
-  >
-    <p
-      style={
-        Object {
-          "background": "#feb209",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      10
-    </p>
-  </article>
-  <article
-    className="lucid-Grid-Cell"
-    key="1"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </article>
-  <article
-    className="lucid-Grid-Cell"
-    key="2"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </article>
-  <Grid.Cell
-    is10={true}
-  >
-    <p
-      style={
-        Object {
-          "background": "#feb209",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      10
-    </p>
-  </Grid.Cell>
-  <Grid.Cell
-    key="0"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </Grid.Cell>
-  <Grid.Cell
-    key="1"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </Grid.Cell>
-</section>
-`;
-
-exports[`Grid [common] example testing should match snapshot(s) for GridColumns 11`] = `
-<section
-  className="lucid-Grid"
->
-  <article
-    className="lucid-Grid-Cell lucid-Grid-Cell-is-11"
-    key="0"
-  >
-    <p
-      style={
-        Object {
-          "background": "#feb209",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      11
-    </p>
-  </article>
-  <article
-    className="lucid-Grid-Cell"
-    key="1"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </article>
-  <Grid.Cell
-    is11={true}
-  >
-    <p
-      style={
-        Object {
-          "background": "#feb209",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      11
-    </p>
-  </Grid.Cell>
-  <Grid.Cell
-    key="0"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </Grid.Cell>
-</section>
+<div>
+  <section
+    class="lucid-Grid"
+  >
+    <article
+      class="lucid-Grid-Cell lucid-Grid-Cell-is-full"
+    >
+      <p
+        style="background:#333333;color:#f3f3f3;margin:0;padding:0"
+      >
+        full
+      </p>
+    </article>
+  </section>
+  <section
+    class="lucid-Grid"
+  >
+    <article
+      class="lucid-Grid-Cell lucid-Grid-Cell-is-2"
+    >
+      <p
+        style="background:#feb209;margin:0;padding:0;color:#f3f3f3"
+      >
+        2
+      </p>
+    </article>
+    <article
+      class="lucid-Grid-Cell"
+    >
+      <p
+        style="background:#999999;color:#f3f3f3;margin:0;padding:0"
+      >
+        auto
+      </p>
+    </article>
+    <article
+      class="lucid-Grid-Cell"
+    >
+      <p
+        style="background:#999999;color:#f3f3f3;margin:0;padding:0"
+      >
+        auto
+      </p>
+    </article>
+    <article
+      class="lucid-Grid-Cell"
+    >
+      <p
+        style="background:#999999;color:#f3f3f3;margin:0;padding:0"
+      >
+        auto
+      </p>
+    </article>
+    <article
+      class="lucid-Grid-Cell"
+    >
+      <p
+        style="background:#999999;color:#f3f3f3;margin:0;padding:0"
+      >
+        auto
+      </p>
+    </article>
+    <article
+      class="lucid-Grid-Cell"
+    >
+      <p
+        style="background:#999999;color:#f3f3f3;margin:0;padding:0"
+      >
+        auto
+      </p>
+    </article>
+    <article
+      class="lucid-Grid-Cell"
+    >
+      <p
+        style="background:#999999;color:#f3f3f3;margin:0;padding:0"
+      >
+        auto
+      </p>
+    </article>
+    <article
+      class="lucid-Grid-Cell"
+    >
+      <p
+        style="background:#999999;color:#f3f3f3;margin:0;padding:0"
+      >
+        auto
+      </p>
+    </article>
+    <article
+      class="lucid-Grid-Cell"
+    >
+      <p
+        style="background:#999999;color:#f3f3f3;margin:0;padding:0"
+      >
+        auto
+      </p>
+    </article>
+    <article
+      class="lucid-Grid-Cell"
+    >
+      <p
+        style="background:#999999;color:#f3f3f3;margin:0;padding:0"
+      >
+        auto
+      </p>
+    </article>
+    <article
+      class="lucid-Grid-Cell"
+    >
+      <p
+        style="background:#999999;color:#f3f3f3;margin:0;padding:0"
+      >
+        auto
+      </p>
+    </article>
+  </section>
+  <section
+    class="lucid-Grid"
+  >
+    <article
+      class="lucid-Grid-Cell lucid-Grid-Cell-is-3"
+    >
+      <p
+        style="background:#feb209;margin:0;padding:0;color:#f3f3f3"
+      >
+        3
+      </p>
+    </article>
+    <article
+      class="lucid-Grid-Cell"
+    >
+      <p
+        style="background:#999999;color:#f3f3f3;margin:0;padding:0"
+      >
+        auto
+      </p>
+    </article>
+    <article
+      class="lucid-Grid-Cell"
+    >
+      <p
+        style="background:#999999;color:#f3f3f3;margin:0;padding:0"
+      >
+        auto
+      </p>
+    </article>
+    <article
+      class="lucid-Grid-Cell"
+    >
+      <p
+        style="background:#999999;color:#f3f3f3;margin:0;padding:0"
+      >
+        auto
+      </p>
+    </article>
+    <article
+      class="lucid-Grid-Cell"
+    >
+      <p
+        style="background:#999999;color:#f3f3f3;margin:0;padding:0"
+      >
+        auto
+      </p>
+    </article>
+    <article
+      class="lucid-Grid-Cell"
+    >
+      <p
+        style="background:#999999;color:#f3f3f3;margin:0;padding:0"
+      >
+        auto
+      </p>
+    </article>
+    <article
+      class="lucid-Grid-Cell"
+    >
+      <p
+        style="background:#999999;color:#f3f3f3;margin:0;padding:0"
+      >
+        auto
+      </p>
+    </article>
+    <article
+      class="lucid-Grid-Cell"
+    >
+      <p
+        style="background:#999999;color:#f3f3f3;margin:0;padding:0"
+      >
+        auto
+      </p>
+    </article>
+    <article
+      class="lucid-Grid-Cell"
+    >
+      <p
+        style="background:#999999;color:#f3f3f3;margin:0;padding:0"
+      >
+        auto
+      </p>
+    </article>
+    <article
+      class="lucid-Grid-Cell"
+    >
+      <p
+        style="background:#999999;color:#f3f3f3;margin:0;padding:0"
+      >
+        auto
+      </p>
+    </article>
+  </section>
+  <section
+    class="lucid-Grid"
+  >
+    <article
+      class="lucid-Grid-Cell lucid-Grid-Cell-is-4"
+    >
+      <p
+        style="background:#feb209;margin:0;padding:0;color:#f3f3f3"
+      >
+        4
+      </p>
+    </article>
+    <article
+      class="lucid-Grid-Cell"
+    >
+      <p
+        style="background:#999999;color:#f3f3f3;margin:0;padding:0"
+      >
+        auto
+      </p>
+    </article>
+    <article
+      class="lucid-Grid-Cell"
+    >
+      <p
+        style="background:#999999;color:#f3f3f3;margin:0;padding:0"
+      >
+        auto
+      </p>
+    </article>
+    <article
+      class="lucid-Grid-Cell"
+    >
+      <p
+        style="background:#999999;color:#f3f3f3;margin:0;padding:0"
+      >
+        auto
+      </p>
+    </article>
+    <article
+      class="lucid-Grid-Cell"
+    >
+      <p
+        style="background:#999999;color:#f3f3f3;margin:0;padding:0"
+      >
+        auto
+      </p>
+    </article>
+    <article
+      class="lucid-Grid-Cell"
+    >
+      <p
+        style="background:#999999;color:#f3f3f3;margin:0;padding:0"
+      >
+        auto
+      </p>
+    </article>
+    <article
+      class="lucid-Grid-Cell"
+    >
+      <p
+        style="background:#999999;color:#f3f3f3;margin:0;padding:0"
+      >
+        auto
+      </p>
+    </article>
+    <article
+      class="lucid-Grid-Cell"
+    >
+      <p
+        style="background:#999999;color:#f3f3f3;margin:0;padding:0"
+      >
+        auto
+      </p>
+    </article>
+    <article
+      class="lucid-Grid-Cell"
+    >
+      <p
+        style="background:#999999;color:#f3f3f3;margin:0;padding:0"
+      >
+        auto
+      </p>
+    </article>
+  </section>
+  <section
+    class="lucid-Grid"
+  >
+    <article
+      class="lucid-Grid-Cell lucid-Grid-Cell-is-5"
+    >
+      <p
+        style="background:#feb209;margin:0;padding:0;color:#f3f3f3"
+      >
+        5
+      </p>
+    </article>
+    <article
+      class="lucid-Grid-Cell"
+    >
+      <p
+        style="background:#999999;color:#f3f3f3;margin:0;padding:0"
+      >
+        auto
+      </p>
+    </article>
+    <article
+      class="lucid-Grid-Cell"
+    >
+      <p
+        style="background:#999999;color:#f3f3f3;margin:0;padding:0"
+      >
+        auto
+      </p>
+    </article>
+    <article
+      class="lucid-Grid-Cell"
+    >
+      <p
+        style="background:#999999;color:#f3f3f3;margin:0;padding:0"
+      >
+        auto
+      </p>
+    </article>
+    <article
+      class="lucid-Grid-Cell"
+    >
+      <p
+        style="background:#999999;color:#f3f3f3;margin:0;padding:0"
+      >
+        auto
+      </p>
+    </article>
+    <article
+      class="lucid-Grid-Cell"
+    >
+      <p
+        style="background:#999999;color:#f3f3f3;margin:0;padding:0"
+      >
+        auto
+      </p>
+    </article>
+    <article
+      class="lucid-Grid-Cell"
+    >
+      <p
+        style="background:#999999;color:#f3f3f3;margin:0;padding:0"
+      >
+        auto
+      </p>
+    </article>
+    <article
+      class="lucid-Grid-Cell"
+    >
+      <p
+        style="background:#999999;color:#f3f3f3;margin:0;padding:0"
+      >
+        auto
+      </p>
+    </article>
+  </section>
+  <section
+    class="lucid-Grid"
+  >
+    <article
+      class="lucid-Grid-Cell lucid-Grid-Cell-is-6"
+    >
+      <p
+        style="background:#feb209;margin:0;padding:0;color:#f3f3f3"
+      >
+        6
+      </p>
+    </article>
+    <article
+      class="lucid-Grid-Cell"
+    >
+      <p
+        style="background:#999999;color:#f3f3f3;margin:0;padding:0"
+      >
+        auto
+      </p>
+    </article>
+    <article
+      class="lucid-Grid-Cell"
+    >
+      <p
+        style="background:#999999;color:#f3f3f3;margin:0;padding:0"
+      >
+        auto
+      </p>
+    </article>
+    <article
+      class="lucid-Grid-Cell"
+    >
+      <p
+        style="background:#999999;color:#f3f3f3;margin:0;padding:0"
+      >
+        auto
+      </p>
+    </article>
+    <article
+      class="lucid-Grid-Cell"
+    >
+      <p
+        style="background:#999999;color:#f3f3f3;margin:0;padding:0"
+      >
+        auto
+      </p>
+    </article>
+    <article
+      class="lucid-Grid-Cell"
+    >
+      <p
+        style="background:#999999;color:#f3f3f3;margin:0;padding:0"
+      >
+        auto
+      </p>
+    </article>
+    <article
+      class="lucid-Grid-Cell"
+    >
+      <p
+        style="background:#999999;color:#f3f3f3;margin:0;padding:0"
+      >
+        auto
+      </p>
+    </article>
+  </section>
+  <section
+    class="lucid-Grid"
+  >
+    <article
+      class="lucid-Grid-Cell lucid-Grid-Cell-is-7"
+    >
+      <p
+        style="background:#feb209;margin:0;padding:0;color:#f3f3f3"
+      >
+        7
+      </p>
+    </article>
+    <article
+      class="lucid-Grid-Cell"
+    >
+      <p
+        style="background:#999999;color:#f3f3f3;margin:0;padding:0"
+      >
+        auto
+      </p>
+    </article>
+    <article
+      class="lucid-Grid-Cell"
+    >
+      <p
+        style="background:#999999;color:#f3f3f3;margin:0;padding:0"
+      >
+        auto
+      </p>
+    </article>
+    <article
+      class="lucid-Grid-Cell"
+    >
+      <p
+        style="background:#999999;color:#f3f3f3;margin:0;padding:0"
+      >
+        auto
+      </p>
+    </article>
+    <article
+      class="lucid-Grid-Cell"
+    >
+      <p
+        style="background:#999999;color:#f3f3f3;margin:0;padding:0"
+      >
+        auto
+      </p>
+    </article>
+    <article
+      class="lucid-Grid-Cell"
+    >
+      <p
+        style="background:#999999;color:#f3f3f3;margin:0;padding:0"
+      >
+        auto
+      </p>
+    </article>
+  </section>
+  <section
+    class="lucid-Grid"
+  >
+    <article
+      class="lucid-Grid-Cell lucid-Grid-Cell-is-8"
+    >
+      <p
+        style="background:#feb209;margin:0;padding:0;color:#f3f3f3"
+      >
+        8
+      </p>
+    </article>
+    <article
+      class="lucid-Grid-Cell"
+    >
+      <p
+        style="background:#999999;color:#f3f3f3;margin:0;padding:0"
+      >
+        auto
+      </p>
+    </article>
+    <article
+      class="lucid-Grid-Cell"
+    >
+      <p
+        style="background:#999999;color:#f3f3f3;margin:0;padding:0"
+      >
+        auto
+      </p>
+    </article>
+    <article
+      class="lucid-Grid-Cell"
+    >
+      <p
+        style="background:#999999;color:#f3f3f3;margin:0;padding:0"
+      >
+        auto
+      </p>
+    </article>
+    <article
+      class="lucid-Grid-Cell"
+    >
+      <p
+        style="background:#999999;color:#f3f3f3;margin:0;padding:0"
+      >
+        auto
+      </p>
+    </article>
+  </section>
+  <section
+    class="lucid-Grid"
+  >
+    <article
+      class="lucid-Grid-Cell lucid-Grid-Cell-is-9"
+    >
+      <p
+        style="background:#feb209;margin:0;padding:0;color:#f3f3f3"
+      >
+        9
+      </p>
+    </article>
+    <article
+      class="lucid-Grid-Cell"
+    >
+      <p
+        style="background:#999999;color:#f3f3f3;margin:0;padding:0"
+      >
+        auto
+      </p>
+    </article>
+    <article
+      class="lucid-Grid-Cell"
+    >
+      <p
+        style="background:#999999;color:#f3f3f3;margin:0;padding:0"
+      >
+        auto
+      </p>
+    </article>
+    <article
+      class="lucid-Grid-Cell"
+    >
+      <p
+        style="background:#999999;color:#f3f3f3;margin:0;padding:0"
+      >
+        auto
+      </p>
+    </article>
+  </section>
+  <section
+    class="lucid-Grid"
+  >
+    <article
+      class="lucid-Grid-Cell lucid-Grid-Cell-is-10"
+    >
+      <p
+        style="background:#feb209;margin:0;padding:0;color:#f3f3f3"
+      >
+        10
+      </p>
+    </article>
+    <article
+      class="lucid-Grid-Cell"
+    >
+      <p
+        style="background:#999999;color:#f3f3f3;margin:0;padding:0"
+      >
+        auto
+      </p>
+    </article>
+    <article
+      class="lucid-Grid-Cell"
+    >
+      <p
+        style="background:#999999;color:#f3f3f3;margin:0;padding:0"
+      >
+        auto
+      </p>
+    </article>
+  </section>
+  <section
+    class="lucid-Grid"
+  >
+    <article
+      class="lucid-Grid-Cell lucid-Grid-Cell-is-11"
+    >
+      <p
+        style="background:#feb209;margin:0;padding:0;color:#f3f3f3"
+      >
+        11
+      </p>
+    </article>
+    <article
+      class="lucid-Grid-Cell"
+    >
+      <p
+        style="background:#999999;color:#f3f3f3;margin:0;padding:0"
+      >
+        auto
+      </p>
+    </article>
+  </section>
+</div>
 `;
 
 exports[`Grid [common] example testing should match snapshot(s) for GutterlessGrid 1`] = `
 <section
-  className="lucid-Grid lucid-Grid-is-gutterless lucid-Grid-is-multiline"
+  class="lucid-Grid lucid-Grid-is-gutterless lucid-Grid-is-multiline"
 >
   <article
-    className="lucid-Grid-Cell lucid-Grid-Cell-is-half"
-    key="0"
+    class="lucid-Grid-Cell lucid-Grid-Cell-is-half"
   >
     <p
-      style={
-        Object {
-          "background": "#0089c4",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
+      style="background:#0089c4;margin:0;padding:0;color:#f3f3f3"
     >
       gutterless half
     </p>
   </article>
   <article
-    className="lucid-Grid-Cell lucid-Grid-Cell-is-quarter"
-    key="1"
-    style={
-      Object {
-        "background": "#f7403a",
-        "color": "#f3f3f3",
-        "margin": 0,
-        "padding": 0,
-      }
-    }
+    class="lucid-Grid-Cell lucid-Grid-Cell-is-quarter"
+    style="background:#f7403a;margin:0;padding:0;color:#f3f3f3"
   >
     gutterless quarter
   </article>
   <article
-    className="lucid-Grid-Cell"
-    key="2"
+    class="lucid-Grid-Cell"
   >
     <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
+      style="background:#999999;color:#f3f3f3;margin:0;padding:0"
     >
       auto
     </p>
   </article>
   <article
-    className="lucid-Grid-Cell lucid-Grid-Cell-is-quarter"
-    key="3"
+    class="lucid-Grid-Cell lucid-Grid-Cell-is-quarter"
   >
     <p
-      style={
-        Object {
-          "background": "#f7403a",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
+      style="background:#f7403a;margin:0;padding:0;color:#f3f3f3"
     >
       gutterless quarter
     </p>
   </article>
   <article
-    className="lucid-Grid-Cell lucid-Grid-Cell-is-quarter"
-    key="4"
+    class="lucid-Grid-Cell lucid-Grid-Cell-is-quarter"
   >
     <p
-      style={
-        Object {
-          "background": "#f7403a",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
+      style="background:#f7403a;margin:0;padding:0;color:#f3f3f3"
     >
       gutterless quarter
     </p>
   </article>
   <article
-    className="lucid-Grid-Cell lucid-Grid-Cell-is-half"
-    key="5"
+    class="lucid-Grid-Cell lucid-Grid-Cell-is-half"
   >
     <p
-      style={
-        Object {
-          "background": "#0089c4",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
+      style="background:#0089c4;margin:0;padding:0;color:#f3f3f3"
     >
       gutterless half
     </p>
   </article>
-  <Grid.Cell
-    isHalf={true}
-  >
-    <p
-      style={
-        Object {
-          "background": "#0089c4",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      gutterless half
-    </p>
-  </Grid.Cell>
-  <Grid.Cell
-    isQuarter={true}
-    style={
-      Object {
-        "background": "#f7403a",
-        "color": "#f3f3f3",
-        "margin": 0,
-        "padding": 0,
-      }
-    }
-  >
-    gutterless quarter
-  </Grid.Cell>
-  <Grid.Cell
-    key="0"
-  >
-    <p
-      style={
-        Object {
-          "background": "#999999",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      auto
-    </p>
-  </Grid.Cell>
-  <Grid.Cell
-    isQuarter={true}
-  >
-    <p
-      style={
-        Object {
-          "background": "#f7403a",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      gutterless quarter
-    </p>
-  </Grid.Cell>
-  <Grid.Cell
-    isQuarter={true}
-  >
-    <p
-      style={
-        Object {
-          "background": "#f7403a",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      gutterless quarter
-    </p>
-  </Grid.Cell>
-  <Grid.Cell
-    isHalf={true}
-  >
-    <p
-      style={
-        Object {
-          "background": "#0089c4",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      gutterless half
-    </p>
-  </Grid.Cell>
 </section>
 `;
 
 exports[`Grid [common] example testing should match snapshot(s) for HorizontalMultilineGrid 1`] = `
 <section
-  className="lucid-Grid lucid-Grid-is-horizontal lucid-Grid-is-multiline"
+  class="lucid-Grid lucid-Grid-is-horizontal lucid-Grid-is-multiline"
 >
   <article
-    className="lucid-Grid-Cell lucid-Grid-Cell-is-half"
-    key="0"
+    class="lucid-Grid-Cell lucid-Grid-Cell-is-half"
   >
     <p
-      style={
-        Object {
-          "background": "#0089c4",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
+      style="background:#0089c4;margin:0;padding:0;color:#f3f3f3"
     >
       half
     </p>
   </article>
   <article
-    className="lucid-Grid-Cell lucid-Grid-Cell-is-half"
-    key="1"
+    class="lucid-Grid-Cell lucid-Grid-Cell-is-half"
   >
     <p
-      style={
-        Object {
-          "background": "#0089c4",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
+      style="background:#0089c4;margin:0;padding:0;color:#f3f3f3"
     >
       half
     </p>
   </article>
   <article
-    className="lucid-Grid-Cell lucid-Grid-Cell-is-half"
-    key="2"
+    class="lucid-Grid-Cell lucid-Grid-Cell-is-half"
   >
     <p
-      style={
-        Object {
-          "background": "#0089c4",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
+      style="background:#0089c4;margin:0;padding:0;color:#f3f3f3"
     >
       half
     </p>
   </article>
   <article
-    className="lucid-Grid-Cell lucid-Grid-Cell-is-full"
-    key="3"
+    class="lucid-Grid-Cell lucid-Grid-Cell-is-full"
   >
     <p
-      style={
-        Object {
-          "background": "#333333",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
+      style="background:#333333;color:#f3f3f3;margin:0;padding:0"
     >
       full
     </p>
   </article>
   <article
-    className="lucid-Grid-Cell lucid-Grid-Cell-is-third"
-    key="4"
+    class="lucid-Grid-Cell lucid-Grid-Cell-is-third"
   >
     <p
-      style={
-        Object {
-          "background": "#3fa516",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
+      style="background:#3fa516;color:#f3f3f3;margin:0;padding:0"
     >
       third
     </p>
   </article>
   <article
-    className="lucid-Grid-Cell lucid-Grid-Cell-is-third"
-    key="5"
+    class="lucid-Grid-Cell lucid-Grid-Cell-is-third"
   >
     <p
-      style={
-        Object {
-          "background": "#3fa516",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
+      style="background:#3fa516;color:#f3f3f3;margin:0;padding:0"
     >
       third
     </p>
   </article>
   <article
-    className="lucid-Grid-Cell lucid-Grid-Cell-is-third"
-    key="6"
+    class="lucid-Grid-Cell lucid-Grid-Cell-is-third"
   >
     <p
-      style={
-        Object {
-          "background": "#3fa516",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
+      style="background:#3fa516;color:#f3f3f3;margin:0;padding:0"
     >
       third
     </p>
   </article>
   <article
-    className="lucid-Grid-Cell lucid-Grid-Cell-is-third"
-    key="7"
+    class="lucid-Grid-Cell lucid-Grid-Cell-is-third"
   >
     <p
-      style={
-        Object {
-          "background": "#3fa516",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
+      style="background:#3fa516;color:#f3f3f3;margin:0;padding:0"
     >
       third
     </p>
   </article>
   <article
-    className="lucid-Grid-Cell lucid-Grid-Cell-is-quarter"
-    key="8"
+    class="lucid-Grid-Cell lucid-Grid-Cell-is-quarter"
   >
     <p
-      style={
-        Object {
-          "background": "#f7403a",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
+      style="background:#f7403a;margin:0;padding:0;color:#f3f3f3"
     >
       quarter
     </p>
   </article>
   <article
-    className="lucid-Grid-Cell lucid-Grid-Cell-is-quarter"
-    key="9"
+    class="lucid-Grid-Cell lucid-Grid-Cell-is-quarter"
   >
     <p
-      style={
-        Object {
-          "background": "#f7403a",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
+      style="background:#f7403a;margin:0;padding:0;color:#f3f3f3"
     >
       quarter
     </p>
   </article>
   <article
-    className="lucid-Grid-Cell lucid-Grid-Cell-is-quarter"
-    key="10"
+    class="lucid-Grid-Cell lucid-Grid-Cell-is-quarter"
   >
     <p
-      style={
-        Object {
-          "background": "#f7403a",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
+      style="background:#f7403a;margin:0;padding:0;color:#f3f3f3"
     >
       quarter
     </p>
   </article>
-  <Grid.Cell
-    isHalf={true}
-  >
-    <p
-      style={
-        Object {
-          "background": "#0089c4",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      half
-    </p>
-  </Grid.Cell>
-  <Grid.Cell
-    isHalf={true}
-  >
-    <p
-      style={
-        Object {
-          "background": "#0089c4",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      half
-    </p>
-  </Grid.Cell>
-  <Grid.Cell
-    isHalf={true}
-  >
-    <p
-      style={
-        Object {
-          "background": "#0089c4",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      half
-    </p>
-  </Grid.Cell>
-  <Grid.Cell
-    isFull={true}
-  >
-    <p
-      style={
-        Object {
-          "background": "#333333",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      full
-    </p>
-  </Grid.Cell>
-  <Grid.Cell
-    isThird={true}
-  >
-    <p
-      style={
-        Object {
-          "background": "#3fa516",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      third
-    </p>
-  </Grid.Cell>
-  <Grid.Cell
-    isThird={true}
-  >
-    <p
-      style={
-        Object {
-          "background": "#3fa516",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      third
-    </p>
-  </Grid.Cell>
-  <Grid.Cell
-    isThird={true}
-  >
-    <p
-      style={
-        Object {
-          "background": "#3fa516",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      third
-    </p>
-  </Grid.Cell>
-  <Grid.Cell
-    isThird={true}
-  >
-    <p
-      style={
-        Object {
-          "background": "#3fa516",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      third
-    </p>
-  </Grid.Cell>
-  <Grid.Cell
-    isQuarter={true}
-  >
-    <p
-      style={
-        Object {
-          "background": "#f7403a",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      quarter
-    </p>
-  </Grid.Cell>
-  <Grid.Cell
-    isQuarter={true}
-  >
-    <p
-      style={
-        Object {
-          "background": "#f7403a",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      quarter
-    </p>
-  </Grid.Cell>
-  <Grid.Cell
-    isQuarter={true}
-  >
-    <p
-      style={
-        Object {
-          "background": "#f7403a",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      quarter
-    </p>
-  </Grid.Cell>
 </section>
 `;
 
 exports[`Grid [common] example testing should match snapshot(s) for OffsetCells 1`] = `
-<section
-  className="lucid-Grid"
->
-  <article
-    className="lucid-Grid-Cell lucid-Grid-Cell-is-half lucid-Grid-Cell-is-offset-half"
-    key="0"
+<div>
+  <section
+    class="lucid-Grid"
   >
-    <p
-      style={
-        Object {
-          "background": "#0089c4",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-          "textAlign": "center",
-        }
-      }
+    <article
+      class="lucid-Grid-Cell lucid-Grid-Cell-is-half lucid-Grid-Cell-is-offset-half"
     >
-      half with offset half
-    </p>
-  </article>
-  <Grid.Cell
-    isHalf={true}
-    isOffsetHalf={true}
+      <p
+        style="background:#0089c4;margin:0;padding:0;color:#f3f3f3;text-align:center"
+      >
+        half with offset half
+      </p>
+    </article>
+  </section>
+  <section
+    class="lucid-Grid"
   >
-    <p
-      style={
-        Object {
-          "background": "#0089c4",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-          "textAlign": "center",
-        }
-      }
+    <article
+      class="lucid-Grid-Cell lucid-Grid-Cell-is-quarter lucid-Grid-Cell-is-offset-quarter"
     >
-      half with offset half
-    </p>
-  </Grid.Cell>
-</section>
-`;
-
-exports[`Grid [common] example testing should match snapshot(s) for OffsetCells 2`] = `
-<section
-  className="lucid-Grid"
->
-  <article
-    className="lucid-Grid-Cell lucid-Grid-Cell-is-quarter lucid-Grid-Cell-is-offset-quarter"
-    key="0"
+      <p
+        style="background:#f7403a;margin:0;padding:0;color:#f3f3f3;text-align:center"
+      >
+        quarter with offset quarter
+      </p>
+    </article>
+  </section>
+  <section
+    class="lucid-Grid"
   >
-    <p
-      style={
-        Object {
-          "background": "#f7403a",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-          "textAlign": "center",
-        }
-      }
+    <article
+      class="lucid-Grid-Cell lucid-Grid-Cell-is-third lucid-Grid-Cell-is-offset-third"
     >
-      quarter with offset quarter
-    </p>
-  </article>
-  <Grid.Cell
-    isOffsetQuarter={true}
-    isQuarter={true}
-  >
-    <p
-      style={
-        Object {
-          "background": "#f7403a",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-          "textAlign": "center",
-        }
-      }
-    >
-      quarter with offset quarter
-    </p>
-  </Grid.Cell>
-</section>
-`;
-
-exports[`Grid [common] example testing should match snapshot(s) for OffsetCells 3`] = `
-<section
-  className="lucid-Grid"
->
-  <article
-    className="lucid-Grid-Cell lucid-Grid-Cell-is-third lucid-Grid-Cell-is-offset-third"
-    key="0"
-  >
-    <p
-      style={
-        Object {
-          "background": "#3fa516",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-          "textAlign": "center",
-        }
-      }
-    >
-      third with offset third
-    </p>
-  </article>
-  <Grid.Cell
-    isOffsetThird={true}
-    isThird={true}
-  >
-    <p
-      style={
-        Object {
-          "background": "#3fa516",
-          "color": "#f3f3f3",
-          "margin": 0,
-          "padding": 0,
-          "textAlign": "center",
-        }
-      }
-    >
-      third with offset third
-    </p>
-  </Grid.Cell>
-</section>
+      <p
+        style="background:#3fa516;color:#f3f3f3;margin:0;padding:0;text-align:center"
+      >
+        third with offset third
+      </p>
+    </article>
+  </section>
+</div>
 `;
 
 exports[`Grid [common] example testing should match snapshot(s) for VerticalMultilineGrid 1`] = `
 <section
-  className="lucid-Grid lucid-Grid-is-vertical lucid-Grid-is-multiline"
-  style={
-    Object {
-      "height": "200px",
-    }
-  }
+  class="lucid-Grid lucid-Grid-is-vertical lucid-Grid-is-multiline"
+  style="height:200px"
 >
   <article
-    className="lucid-Grid-Cell lucid-Grid-Cell-is-half"
-    key="0"
+    class="lucid-Grid-Cell lucid-Grid-Cell-is-half"
   >
     <p
-      style={
-        Object {
-          "background": "#0089c4",
-          "color": "#f3f3f3",
-          "flex": 1,
-          "margin": 0,
-          "padding": 0,
-        }
-      }
+      style="background:#0089c4;margin:0;padding:0;color:#f3f3f3;flex:1"
     >
       half
     </p>
   </article>
   <article
-    className="lucid-Grid-Cell lucid-Grid-Cell-is-half"
-    key="1"
+    class="lucid-Grid-Cell lucid-Grid-Cell-is-half"
   >
     <p
-      style={
-        Object {
-          "background": "#0089c4",
-          "color": "#f3f3f3",
-          "flex": 1,
-          "margin": 0,
-          "padding": 0,
-        }
-      }
+      style="background:#0089c4;margin:0;padding:0;color:#f3f3f3;flex:1"
     >
       half
     </p>
   </article>
   <article
-    className="lucid-Grid-Cell lucid-Grid-Cell-is-half"
-    key="2"
+    class="lucid-Grid-Cell lucid-Grid-Cell-is-half"
   >
     <p
-      style={
-        Object {
-          "background": "#0089c4",
-          "color": "#f3f3f3",
-          "flex": 1,
-          "margin": 0,
-          "padding": 0,
-        }
-      }
+      style="background:#0089c4;margin:0;padding:0;color:#f3f3f3;flex:1"
     >
       half
     </p>
   </article>
   <article
-    className="lucid-Grid-Cell lucid-Grid-Cell-is-full"
-    key="3"
+    class="lucid-Grid-Cell lucid-Grid-Cell-is-full"
   >
     <p
-      style={
-        Object {
-          "background": "#333333",
-          "color": "#f3f3f3",
-          "flex": 1,
-          "margin": 0,
-          "padding": 0,
-        }
-      }
+      style="background:#333333;color:#f3f3f3;margin:0;padding:0;flex:1"
     >
       full
     </p>
   </article>
   <article
-    className="lucid-Grid-Cell lucid-Grid-Cell-is-third"
-    key="4"
+    class="lucid-Grid-Cell lucid-Grid-Cell-is-third"
   >
     <p
-      style={
-        Object {
-          "background": "#3fa516",
-          "color": "#f3f3f3",
-          "flex": 1,
-          "margin": 0,
-          "padding": 0,
-        }
-      }
+      style="background:#3fa516;color:#f3f3f3;margin:0;padding:0;flex:1"
     >
       third
     </p>
   </article>
   <article
-    className="lucid-Grid-Cell lucid-Grid-Cell-is-third"
-    key="5"
+    class="lucid-Grid-Cell lucid-Grid-Cell-is-third"
   >
     <p
-      style={
-        Object {
-          "background": "#3fa516",
-          "color": "#f3f3f3",
-          "flex": 1,
-          "margin": 0,
-          "padding": 0,
-        }
-      }
+      style="background:#3fa516;color:#f3f3f3;margin:0;padding:0;flex:1"
     >
       third
     </p>
   </article>
   <article
-    className="lucid-Grid-Cell lucid-Grid-Cell-is-third"
-    key="6"
+    class="lucid-Grid-Cell lucid-Grid-Cell-is-third"
   >
     <p
-      style={
-        Object {
-          "background": "#3fa516",
-          "color": "#f3f3f3",
-          "flex": 1,
-          "margin": 0,
-          "padding": 0,
-        }
-      }
+      style="background:#3fa516;color:#f3f3f3;margin:0;padding:0;flex:1"
     >
       third
     </p>
   </article>
   <article
-    className="lucid-Grid-Cell lucid-Grid-Cell-is-third"
-    key="7"
+    class="lucid-Grid-Cell lucid-Grid-Cell-is-third"
   >
     <p
-      style={
-        Object {
-          "background": "#3fa516",
-          "color": "#f3f3f3",
-          "flex": 1,
-          "margin": 0,
-          "padding": 0,
-        }
-      }
+      style="background:#3fa516;color:#f3f3f3;margin:0;padding:0;flex:1"
     >
       third
     </p>
   </article>
   <article
-    className="lucid-Grid-Cell lucid-Grid-Cell-is-quarter"
-    key="8"
+    class="lucid-Grid-Cell lucid-Grid-Cell-is-quarter"
   >
     <p
-      style={
-        Object {
-          "background": "#f7403a",
-          "color": "#f3f3f3",
-          "flex": 1,
-          "margin": 0,
-          "padding": 0,
-        }
-      }
+      style="background:#f7403a;margin:0;padding:0;color:#f3f3f3;flex:1"
     >
       quarter
     </p>
   </article>
   <article
-    className="lucid-Grid-Cell lucid-Grid-Cell-is-quarter"
-    key="9"
+    class="lucid-Grid-Cell lucid-Grid-Cell-is-quarter"
   >
     <p
-      style={
-        Object {
-          "background": "#f7403a",
-          "color": "#f3f3f3",
-          "flex": 1,
-          "margin": 0,
-          "padding": 0,
-        }
-      }
+      style="background:#f7403a;margin:0;padding:0;color:#f3f3f3;flex:1"
     >
       quarter
     </p>
   </article>
   <article
-    className="lucid-Grid-Cell lucid-Grid-Cell-is-quarter"
-    key="10"
+    class="lucid-Grid-Cell lucid-Grid-Cell-is-quarter"
   >
     <p
-      style={
-        Object {
-          "background": "#f7403a",
-          "color": "#f3f3f3",
-          "flex": 1,
-          "margin": 0,
-          "padding": 0,
-        }
-      }
+      style="background:#f7403a;margin:0;padding:0;color:#f3f3f3;flex:1"
     >
       quarter
     </p>
   </article>
-  <Grid.Cell
-    isHalf={true}
-  >
-    <p
-      style={
-        Object {
-          "background": "#0089c4",
-          "color": "#f3f3f3",
-          "flex": 1,
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      half
-    </p>
-  </Grid.Cell>
-  <Grid.Cell
-    isHalf={true}
-  >
-    <p
-      style={
-        Object {
-          "background": "#0089c4",
-          "color": "#f3f3f3",
-          "flex": 1,
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      half
-    </p>
-  </Grid.Cell>
-  <Grid.Cell
-    isHalf={true}
-  >
-    <p
-      style={
-        Object {
-          "background": "#0089c4",
-          "color": "#f3f3f3",
-          "flex": 1,
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      half
-    </p>
-  </Grid.Cell>
-  <Grid.Cell
-    isFull={true}
-  >
-    <p
-      style={
-        Object {
-          "background": "#333333",
-          "color": "#f3f3f3",
-          "flex": 1,
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      full
-    </p>
-  </Grid.Cell>
-  <Grid.Cell
-    isThird={true}
-  >
-    <p
-      style={
-        Object {
-          "background": "#3fa516",
-          "color": "#f3f3f3",
-          "flex": 1,
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      third
-    </p>
-  </Grid.Cell>
-  <Grid.Cell
-    isThird={true}
-  >
-    <p
-      style={
-        Object {
-          "background": "#3fa516",
-          "color": "#f3f3f3",
-          "flex": 1,
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      third
-    </p>
-  </Grid.Cell>
-  <Grid.Cell
-    isThird={true}
-  >
-    <p
-      style={
-        Object {
-          "background": "#3fa516",
-          "color": "#f3f3f3",
-          "flex": 1,
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      third
-    </p>
-  </Grid.Cell>
-  <Grid.Cell
-    isThird={true}
-  >
-    <p
-      style={
-        Object {
-          "background": "#3fa516",
-          "color": "#f3f3f3",
-          "flex": 1,
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      third
-    </p>
-  </Grid.Cell>
-  <Grid.Cell
-    isQuarter={true}
-  >
-    <p
-      style={
-        Object {
-          "background": "#f7403a",
-          "color": "#f3f3f3",
-          "flex": 1,
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      quarter
-    </p>
-  </Grid.Cell>
-  <Grid.Cell
-    isQuarter={true}
-  >
-    <p
-      style={
-        Object {
-          "background": "#f7403a",
-          "color": "#f3f3f3",
-          "flex": 1,
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      quarter
-    </p>
-  </Grid.Cell>
-  <Grid.Cell
-    isQuarter={true}
-  >
-    <p
-      style={
-        Object {
-          "background": "#f7403a",
-          "color": "#f3f3f3",
-          "flex": 1,
-          "margin": 0,
-          "padding": 0,
-        }
-      }
-    >
-      quarter
-    </p>
-  </Grid.Cell>
 </section>
 `;

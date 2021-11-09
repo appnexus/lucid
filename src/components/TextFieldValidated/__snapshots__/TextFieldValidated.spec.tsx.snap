@@ -1,122 +1,82 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`TextFieldValidated [common] example testing should match snapshot(s) for 01.basic 1`] = `
-<Validation
-  Error={
-    Array [
-      Object {
-        "children": "Nope, not even close!",
-      },
-    ]
-  }
-  className="lucid-TextFieldValidated"
->
-  <TextField
-    debounceLevel={500}
-    isDisabled={false}
-    isMultiLine={false}
-    lazyLevel={1000}
-    onBlur={[Function]}
-    onChange={[Function]}
-    onChangeDebounced={[Function]}
-    onKeyDown={[Function]}
-    onSubmit={[Function]}
-    rows={5}
-    value=""
-  />
-</Validation>
+exports[`TextFieldValidated [common] example testing should match snapshot(s) for Debounced 1`] = `
+<div>
+  <div
+    class="lucid-Validation lucid-Validation-is-error lucid-TextFieldValidated"
+    style="margin-bottom:10px"
+  >
+    <input
+      class="lucid-TextField lucid-TextField-is-single-line"
+      rows="5"
+      type="text"
+      value=""
+    />
+    <div
+      class="lucid-Validation-error-content"
+    >
+      Please enter "foo"
+    </div>
+  </div>
+  <div
+    style="margin-bottom:10px"
+  >
+    state.value: 
+  </div>
+</div>
 `;
 
-exports[`TextFieldValidated [common] example testing should match snapshot(s) for 02.debounced 1`] = `
-<Validation
-  Error={
-    Array [
-      Object {
-        "children": "Please enter \\"foo\\"",
-      },
-    ]
-  }
-  className="lucid-TextFieldValidated"
-  style={
-    Object {
-      "marginBottom": "10px",
-    }
-  }
+exports[`TextFieldValidated [common] example testing should match snapshot(s) for Default 1`] = `
+<div
+  class="lucid-Validation lucid-Validation-is-error lucid-TextFieldValidated"
 >
-  <TextField
-    debounceLevel={500}
-    isDisabled={false}
-    isMultiLine={false}
-    lazyLevel={1000}
-    onBlur={[Function]}
-    onChange={[Function]}
-    onChangeDebounced={[Function]}
-    onKeyDown={[Function]}
-    onSubmit={[Function]}
-    rows={5}
+  <input
+    class="lucid-TextField lucid-TextField-is-single-line"
+    rows="5"
+    type="text"
     value=""
   />
-</Validation>
+  <div
+    class="lucid-Validation-error-content"
+  >
+    Nope, not even close!
+  </div>
+</div>
 `;
 
-exports[`TextFieldValidated [common] example testing should match snapshot(s) for 03.error_types 1`] = `
-<Validation
-  Error={
-    Array [
-      Object {
-        "children": "This is an error",
-      },
-    ]
-  }
-  className="lucid-TextFieldValidated"
-  style={
-    Object {
-      "marginBottom": "10px",
-    }
-  }
->
-  <TextField
-    debounceLevel={500}
-    isDisabled={false}
-    isMultiLine={false}
-    lazyLevel={1000}
-    onBlur={[Function]}
-    onChange={[Function]}
-    onChangeDebounced={[Function]}
-    onKeyDown={[Function]}
-    onSubmit={[Function]}
-    rows={5}
-    value=""
-  />
-</Validation>
-`;
-
-exports[`TextFieldValidated [common] example testing should match snapshot(s) for 03.error_types 2`] = `
-<Validation
-  Error={
-    Array [
-      "This is an info",
-    ]
-  }
-  className="lucid-TextFieldValidated -info"
-  style={
-    Object {
-      "marginBottom": "10px",
-    }
-  }
->
-  <TextField
-    debounceLevel={500}
-    isDisabled={false}
-    isMultiLine={false}
-    lazyLevel={1000}
-    onBlur={[Function]}
-    onChange={[Function]}
-    onChangeDebounced={[Function]}
-    onKeyDown={[Function]}
-    onSubmit={[Function]}
-    rows={5}
-    value=""
-  />
-</Validation>
+exports[`TextFieldValidated [common] example testing should match snapshot(s) for ErrorTypes 1`] = `
+<div>
+  <div
+    class="lucid-Validation lucid-Validation-is-error lucid-TextFieldValidated"
+    style="margin-bottom:10px"
+  >
+    <input
+      class="lucid-TextField lucid-TextField-is-single-line"
+      rows="5"
+      type="text"
+      value=""
+    />
+    <div
+      class="lucid-Validation-error-content"
+    >
+      This is an error
+    </div>
+  </div>
+  <div
+    class="lucid-Validation lucid-Validation-is-error lucid-TextFieldValidated -info"
+    style="margin-bottom:10px"
+  >
+    <input
+      class="lucid-TextField lucid-TextField-is-single-line"
+      rows="5"
+      type="text"
+      value=""
+    />
+    <div
+      class="lucid-Validation-error-content"
+    >
+      This is an info
+    </div>
+  </div>
+</div>
 `;

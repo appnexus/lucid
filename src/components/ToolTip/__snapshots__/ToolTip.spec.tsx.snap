@@ -169,6 +169,161 @@ exports[`ToolTip [common] example testing should match snapshot(s) for Direction
 </section>
 `;
 
+exports[`ToolTip [common] example testing should match snapshot(s) for Interactive 1`] = `
+<section
+  style="display:flex;flex-direction:row"
+>
+  <section
+    style="display:flex;flex-direction:column;align-items:center;flex-grow:1"
+  >
+    <section
+      style="margin:30px"
+    >
+      <span
+        class="lucid-ContextMenu lucid-ToolTip"
+      >
+        <div>
+          Target right start
+        </div>
+      </span>
+    </section>
+    <section
+      style="margin:30px"
+    >
+      <span
+        class="lucid-ContextMenu lucid-ToolTip"
+      >
+        <div>
+          Target right center
+        </div>
+      </span>
+    </section>
+    <section
+      style="margin:30px"
+    >
+      <span
+        class="lucid-ContextMenu lucid-ToolTip"
+      >
+        <div>
+          Target right end
+        </div>
+      </span>
+    </section>
+  </section>
+  <section
+    style="display:flex;flex-direction:column;align-items:center;flex-grow:1"
+  >
+    <section
+      style="margin:30px"
+    >
+      <span
+        class="lucid-ContextMenu lucid-ToolTip"
+      >
+        <div>
+          Target up start
+        </div>
+      </span>
+    </section>
+    <section
+      style="margin:30px"
+    >
+      <span
+        class="lucid-ContextMenu lucid-ToolTip"
+      >
+        <div>
+          Target up center
+        </div>
+      </span>
+    </section>
+    <section
+      style="margin:30px"
+    >
+      <span
+        class="lucid-ContextMenu lucid-ToolTip"
+      >
+        <div>
+          Target up end
+        </div>
+      </span>
+    </section>
+  </section>
+  <section
+    style="display:flex;flex-direction:column;align-items:center;flex-grow:1"
+  >
+    <section
+      style="margin:30px"
+    >
+      <span
+        class="lucid-ContextMenu lucid-ToolTip"
+      >
+        <div>
+          Target down start
+        </div>
+      </span>
+    </section>
+    <section
+      style="margin:30px"
+    >
+      <span
+        class="lucid-ContextMenu lucid-ToolTip"
+      >
+        <div>
+          Target down center
+        </div>
+      </span>
+    </section>
+    <section
+      style="margin:30px"
+    >
+      <span
+        class="lucid-ContextMenu lucid-ToolTip"
+      >
+        <div>
+          Target down end
+        </div>
+      </span>
+    </section>
+  </section>
+  <section
+    style="display:flex;flex-direction:column;align-items:center;flex-grow:1"
+  >
+    <section
+      style="margin:30px"
+    >
+      <span
+        class="lucid-ContextMenu lucid-ToolTip"
+      >
+        <div>
+          Target left start
+        </div>
+      </span>
+    </section>
+    <section
+      style="margin:30px"
+    >
+      <span
+        class="lucid-ContextMenu lucid-ToolTip"
+      >
+        <div>
+          Target left center
+        </div>
+      </span>
+    </section>
+    <section
+      style="margin:30px"
+    >
+      <span
+        class="lucid-ContextMenu lucid-ToolTip"
+      >
+        <div>
+          Target left end
+        </div>
+      </span>
+    </section>
+  </section>
+</section>
+`;
+
 exports[`ToolTip [common] example testing should match snapshot(s) for ToolTipWithButton 1`] = `
 <section
   style="display:flex;align-items:center;justify-content:center"
@@ -180,5 +335,225 @@ exports[`ToolTip [common] example testing should match snapshot(s) for ToolTipWi
       Example Target
     </div>
   </span>
+</section>
+`;
+
+exports[`ToolTip [common] example testing should match snapshot(s) for Unchanging 1`] = `
+<section
+  style="display:flex;flex-direction:column;align-items:center"
+>
+  <section
+    style="margin:90px"
+  >
+    <span
+      class="lucid-ContextMenu lucid-ToolTip"
+    >
+      <div>
+        Target right start
+      </div>
+    </span>
+  </section>
+  <section
+    style="margin:90px"
+  >
+    <span
+      class="lucid-ContextMenu lucid-ToolTip"
+    >
+      <div>
+        Target right center
+      </div>
+    </span>
+  </section>
+  <section
+    style="margin:90px"
+  >
+    <span
+      class="lucid-ContextMenu lucid-ToolTip"
+    >
+      <div>
+        Target right end
+      </div>
+    </span>
+  </section>
+  <section
+    style="margin:90px"
+  >
+    <span
+      class="lucid-ContextMenu lucid-ToolTip"
+    >
+      <div>
+        Target up start
+      </div>
+    </span>
+  </section>
+  <section
+    style="margin:90px"
+  >
+    <span
+      class="lucid-ContextMenu lucid-ToolTip"
+    >
+      <div>
+        Target up center
+      </div>
+    </span>
+  </section>
+  <section
+    style="margin:90px"
+  >
+    <span
+      class="lucid-ContextMenu lucid-ToolTip"
+    >
+      <div>
+        Target up end
+      </div>
+    </span>
+  </section>
+  <section
+    style="margin:90px"
+  >
+    <span
+      class="lucid-ContextMenu lucid-ToolTip"
+    >
+      <div>
+        Target down start
+      </div>
+    </span>
+  </section>
+  <section
+    style="margin:90px"
+  >
+    <span
+      class="lucid-ContextMenu lucid-ToolTip"
+    >
+      <div>
+        Target down center
+      </div>
+    </span>
+  </section>
+  <section
+    style="margin:90px"
+  >
+    <span
+      class="lucid-ContextMenu lucid-ToolTip"
+    >
+      <div>
+        Target down end
+      </div>
+    </span>
+  </section>
+  <section
+    style="margin:90px"
+  >
+    <span
+      class="lucid-ContextMenu lucid-ToolTip"
+    >
+      <div>
+        Target left start
+      </div>
+    </span>
+  </section>
+  <section
+    style="margin:90px"
+  >
+    <span
+      class="lucid-ContextMenu lucid-ToolTip"
+    >
+      <div>
+        Target left center
+      </div>
+    </span>
+  </section>
+  <section
+    style="margin:90px"
+  >
+    <span
+      class="lucid-ContextMenu lucid-ToolTip"
+    >
+      <div>
+        Target left end
+      </div>
+    </span>
+  </section>
+</section>
+`;
+
+exports[`ToolTip [common] example testing should match snapshot(s) for Variants 1`] = `
+<section
+  style="display:flex;flex-direction:column"
+>
+  <section
+    style="margin-top:150px;display:flex;flex-direction:row;justify-content:space-around"
+  >
+    <div
+      style="margin-top:60px;margin-bottom:60px"
+    >
+      <span
+        class="lucid-ContextMenu lucid-ToolTip"
+      >
+        <div>
+          No Title or Close Button
+        </div>
+      </span>
+    </div>
+    <div
+      style="margin-top:60px;margin-bottom:60px"
+    >
+      <span
+        class="lucid-ContextMenu lucid-ToolTip"
+      >
+        <div>
+          With Close Button
+        </div>
+      </span>
+    </div>
+    <div
+      style="margin-top:60px;margin-bottom:60px"
+    >
+      <span
+        class="lucid-ContextMenu lucid-ToolTip"
+      >
+        <div>
+          With Title and Close Button
+        </div>
+      </span>
+    </div>
+  </section>
+  <section
+    style="margin-top:150px;display:flex;flex-direction:row;justify-content:space-around"
+  >
+    <div
+      style="margin-top:60px;margin-bottom:60px"
+    >
+      <span
+        class="lucid-ContextMenu lucid-ToolTip"
+      >
+        <div>
+          No Title or Close Button
+        </div>
+      </span>
+    </div>
+    <div
+      style="margin-top:60px;margin-bottom:60px"
+    >
+      <span
+        class="lucid-ContextMenu lucid-ToolTip"
+      >
+        <div>
+          With Close Button
+        </div>
+      </span>
+    </div>
+    <div
+      style="margin-top:60px;margin-bottom:60px"
+    >
+      <span
+        class="lucid-ContextMenu lucid-ToolTip"
+      >
+        <div>
+          With Title and Close Button
+        </div>
+      </span>
+    </div>
+  </section>
 </section>
 `;

@@ -1,127 +1,158 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Point [common] example testing should match snapshot(s) for basic 1`] = `
-<path
-  className="lucid-Point lucid-Point-color-chart-3"
-  d="M6,12 C2.686,12 0,9.314 0,6 C0,2.686 2.686,0 6,0 C9.314,-0 12,2.686 12,6 C12,9.314 9.314,12 6,12 z"
-  style={Object {}}
-  transform="translate(4, 4) scale(1)"
-/>
+exports[`Point [common] example testing should match snapshot(s) for BigWithStroke 1`] = `
+<div>
+  <svg
+    height="40"
+    style="background-color:black"
+    width="40"
+  >
+    <path
+      class="lucid-Point lucid-Point-has-stroke lucid-Point-color-chart-3"
+      d="M6,12 C2.686,12 0,9.314 0,6 C0,2.686 2.686,0 6,0 C9.314,-0 12,2.686 12,6 C12,9.314 9.314,12 6,12 z"
+      transform="translate(8, 8) scale(2)"
+    />
+  </svg>
+  <svg
+    height="40"
+    style="background-color:black"
+    width="40"
+  >
+    <path
+      class="lucid-Point lucid-Point-has-stroke lucid-Point-color-chart-0-darkest"
+      d="M6,12 C0,12 0,12 0,6 C0,0 -0,0 6,0 C12,0 12,0 12,6 C12,12 12,12 6,12 z"
+      transform="translate(8, 8) scale(2)"
+    />
+  </svg>
+  <svg
+    height="40"
+    style="background-color:black"
+    width="40"
+  >
+    <path
+      class="lucid-Point lucid-Point-has-stroke lucid-Point-color-chart-2"
+      d="M6.034,1.656 C7,0 7,0 7.966,1.656 L13.034,10.344 C14,12 13,12 12,12 L2,12 C1,12 0,12 0.966,10.344 L6.034,1.656 z"
+      transform="translate(6, 8) scale(2)"
+    />
+  </svg>
+  <svg
+    height="40"
+    style="background-color:black"
+    width="40"
+  >
+    <path
+      class="lucid-Point lucid-Point-has-stroke lucid-Point-color-chart-4-lightest"
+      d="M7.966,10.344 C7,12 7,12 6.034,10.344 L0.966,1.656 C-0,0 1,0 2,0 L12,0 C13,0 14,0 13.034,1.656 L7.966,10.344 z"
+      transform="translate(6, 8) scale(2)"
+    />
+  </svg>
+  <svg
+    height="40"
+    style="background-color:black"
+    width="40"
+  >
+    <path
+      class="lucid-Point lucid-Point-has-stroke lucid-Point-color-chart-5"
+      d="M2.594,9.406 C-0.812,6 -0.812,6 2.594,2.594 C6,-0.812 6,-0.812 9.406,2.594 C12.812,6 12.812,6 9.406,9.406 C6,12.812 6,12.812 2.594,9.406 z"
+      transform="translate(8, 8) scale(2)"
+    />
+  </svg>
+  <svg
+    height="40"
+    style="background-color:black"
+    width="40"
+  >
+    <path
+      class="lucid-Point lucid-Point-has-stroke lucid-Point-color-chart-1-light"
+      d="M6,12 C2.686,12 0,9.314 0,6 C0,2.686 2.686,0 6,0 C9.314,-0 12,2.686 12,6 C12,9.314 9.314,12 6,12 z"
+      transform="translate(8, 8) scale(2)"
+    />
+  </svg>
+  <svg
+    height="40"
+    style="background-color:black"
+    width="40"
+  >
+    <path
+      class="lucid-Point lucid-Point-has-stroke lucid-Point-color-chart-6"
+      d="M6,12 C0,12 0,12 0,6 C0,0 -0,0 6,0 C12,0 12,0 12,6 C12,12 12,12 6,12 z"
+      transform="translate(8, 8) scale(2)"
+    />
+  </svg>
+</div>
 `;
 
-exports[`Point [common] example testing should match snapshot(s) for basic 2`] = `
-<path
-  className="lucid-Point lucid-Point-color-chart-0-darkest"
-  d="M6,12 C0,12 0,12 0,6 C0,0 -0,0 6,0 C12,0 12,0 12,6 C12,12 12,12 6,12 z"
-  style={Object {}}
-  transform="translate(4, 4) scale(1)"
-/>
-`;
-
-exports[`Point [common] example testing should match snapshot(s) for basic 3`] = `
-<path
-  className="lucid-Point lucid-Point-color-chart-2"
-  d="M6.034,1.656 C7,0 7,0 7.966,1.656 L13.034,10.344 C14,12 13,12 12,12 L2,12 C1,12 0,12 0.966,10.344 L6.034,1.656 z"
-  style={Object {}}
-  transform="translate(3, 4) scale(1)"
-/>
-`;
-
-exports[`Point [common] example testing should match snapshot(s) for basic 4`] = `
-<path
-  className="lucid-Point lucid-Point-color-chart-4-lightest"
-  d="M7.966,10.344 C7,12 7,12 6.034,10.344 L0.966,1.656 C-0,0 1,0 2,0 L12,0 C13,0 14,0 13.034,1.656 L7.966,10.344 z"
-  style={Object {}}
-  transform="translate(3, 4) scale(1)"
-/>
-`;
-
-exports[`Point [common] example testing should match snapshot(s) for basic 5`] = `
-<path
-  className="lucid-Point lucid-Point-color-chart-5"
-  d="M2.594,9.406 C-0.812,6 -0.812,6 2.594,2.594 C6,-0.812 6,-0.812 9.406,2.594 C12.812,6 12.812,6 9.406,9.406 C6,12.812 6,12.812 2.594,9.406 z"
-  style={Object {}}
-  transform="translate(4, 4) scale(1)"
-/>
-`;
-
-exports[`Point [common] example testing should match snapshot(s) for basic 6`] = `
-<path
-  className="lucid-Point lucid-Point-color-chart-1-light"
-  d="M6,12 C2.686,12 0,9.314 0,6 C0,2.686 2.686,0 6,0 C9.314,-0 12,2.686 12,6 C12,9.314 9.314,12 6,12 z"
-  style={Object {}}
-  transform="translate(4, 4) scale(1)"
-/>
-`;
-
-exports[`Point [common] example testing should match snapshot(s) for basic 7`] = `
-<path
-  className="lucid-Point lucid-Point-color-chart-6"
-  d="M6,12 C0,12 0,12 0,6 C0,0 -0,0 6,0 C12,0 12,0 12,6 C12,12 12,12 6,12 z"
-  style={Object {}}
-  transform="translate(4, 4) scale(1)"
-/>
-`;
-
-exports[`Point [common] example testing should match snapshot(s) for big-with-stroke 1`] = `
-<path
-  className="lucid-Point lucid-Point-has-stroke lucid-Point-color-chart-3"
-  d="M6,12 C2.686,12 0,9.314 0,6 C0,2.686 2.686,0 6,0 C9.314,-0 12,2.686 12,6 C12,9.314 9.314,12 6,12 z"
-  style={Object {}}
-  transform="translate(8, 8) scale(2)"
-/>
-`;
-
-exports[`Point [common] example testing should match snapshot(s) for big-with-stroke 2`] = `
-<path
-  className="lucid-Point lucid-Point-has-stroke lucid-Point-color-chart-0-darkest"
-  d="M6,12 C0,12 0,12 0,6 C0,0 -0,0 6,0 C12,0 12,0 12,6 C12,12 12,12 6,12 z"
-  style={Object {}}
-  transform="translate(8, 8) scale(2)"
-/>
-`;
-
-exports[`Point [common] example testing should match snapshot(s) for big-with-stroke 3`] = `
-<path
-  className="lucid-Point lucid-Point-has-stroke lucid-Point-color-chart-2"
-  d="M6.034,1.656 C7,0 7,0 7.966,1.656 L13.034,10.344 C14,12 13,12 12,12 L2,12 C1,12 0,12 0.966,10.344 L6.034,1.656 z"
-  style={Object {}}
-  transform="translate(6, 8) scale(2)"
-/>
-`;
-
-exports[`Point [common] example testing should match snapshot(s) for big-with-stroke 4`] = `
-<path
-  className="lucid-Point lucid-Point-has-stroke lucid-Point-color-chart-4-lightest"
-  d="M7.966,10.344 C7,12 7,12 6.034,10.344 L0.966,1.656 C-0,0 1,0 2,0 L12,0 C13,0 14,0 13.034,1.656 L7.966,10.344 z"
-  style={Object {}}
-  transform="translate(6, 8) scale(2)"
-/>
-`;
-
-exports[`Point [common] example testing should match snapshot(s) for big-with-stroke 5`] = `
-<path
-  className="lucid-Point lucid-Point-has-stroke lucid-Point-color-chart-5"
-  d="M2.594,9.406 C-0.812,6 -0.812,6 2.594,2.594 C6,-0.812 6,-0.812 9.406,2.594 C12.812,6 12.812,6 9.406,9.406 C6,12.812 6,12.812 2.594,9.406 z"
-  style={Object {}}
-  transform="translate(8, 8) scale(2)"
-/>
-`;
-
-exports[`Point [common] example testing should match snapshot(s) for big-with-stroke 6`] = `
-<path
-  className="lucid-Point lucid-Point-has-stroke lucid-Point-color-chart-1-light"
-  d="M6,12 C2.686,12 0,9.314 0,6 C0,2.686 2.686,0 6,0 C9.314,-0 12,2.686 12,6 C12,9.314 9.314,12 6,12 z"
-  style={Object {}}
-  transform="translate(8, 8) scale(2)"
-/>
-`;
-
-exports[`Point [common] example testing should match snapshot(s) for big-with-stroke 7`] = `
-<path
-  className="lucid-Point lucid-Point-has-stroke lucid-Point-color-chart-6"
-  d="M6,12 C0,12 0,12 0,6 C0,0 -0,0 6,0 C12,0 12,0 12,6 C12,12 12,12 6,12 z"
-  style={Object {}}
-  transform="translate(8, 8) scale(2)"
-/>
+exports[`Point [common] example testing should match snapshot(s) for Default 1`] = `
+<div>
+  <svg
+    height="20"
+    width="20"
+  >
+    <path
+      class="lucid-Point lucid-Point-color-chart-3"
+      d="M6,12 C2.686,12 0,9.314 0,6 C0,2.686 2.686,0 6,0 C9.314,-0 12,2.686 12,6 C12,9.314 9.314,12 6,12 z"
+      transform="translate(4, 4) scale(1)"
+    />
+  </svg>
+  <svg
+    height="20"
+    width="20"
+  >
+    <path
+      class="lucid-Point lucid-Point-color-chart-0-darkest"
+      d="M6,12 C0,12 0,12 0,6 C0,0 -0,0 6,0 C12,0 12,0 12,6 C12,12 12,12 6,12 z"
+      transform="translate(4, 4) scale(1)"
+    />
+  </svg>
+  <svg
+    height="20"
+    width="20"
+  >
+    <path
+      class="lucid-Point lucid-Point-color-chart-2"
+      d="M6.034,1.656 C7,0 7,0 7.966,1.656 L13.034,10.344 C14,12 13,12 12,12 L2,12 C1,12 0,12 0.966,10.344 L6.034,1.656 z"
+      transform="translate(3, 4) scale(1)"
+    />
+  </svg>
+  <svg
+    height="20"
+    width="20"
+  >
+    <path
+      class="lucid-Point lucid-Point-color-chart-4-lightest"
+      d="M7.966,10.344 C7,12 7,12 6.034,10.344 L0.966,1.656 C-0,0 1,0 2,0 L12,0 C13,0 14,0 13.034,1.656 L7.966,10.344 z"
+      transform="translate(3, 4) scale(1)"
+    />
+  </svg>
+  <svg
+    height="20"
+    width="20"
+  >
+    <path
+      class="lucid-Point lucid-Point-color-chart-5"
+      d="M2.594,9.406 C-0.812,6 -0.812,6 2.594,2.594 C6,-0.812 6,-0.812 9.406,2.594 C12.812,6 12.812,6 9.406,9.406 C6,12.812 6,12.812 2.594,9.406 z"
+      transform="translate(4, 4) scale(1)"
+    />
+  </svg>
+  <svg
+    height="20"
+    width="20"
+  >
+    <path
+      class="lucid-Point lucid-Point-color-chart-1-light"
+      d="M6,12 C2.686,12 0,9.314 0,6 C0,2.686 2.686,0 6,0 C9.314,-0 12,2.686 12,6 C12,9.314 9.314,12 6,12 z"
+      transform="translate(4, 4) scale(1)"
+    />
+  </svg>
+  <svg
+    height="20"
+    width="20"
+  >
+    <path
+      class="lucid-Point lucid-Point-color-chart-6"
+      d="M6,12 C0,12 0,12 0,6 C0,0 -0,0 6,0 C12,0 12,0 12,6 C12,12 12,12 6,12 z"
+      transform="translate(4, 4) scale(1)"
+    />
+  </svg>
+</div>
 `;

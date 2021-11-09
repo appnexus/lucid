@@ -1,523 +1,572 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Bar [common] example testing should match snapshot(s) for custom-colors 1`] = `
-<rect
-  className="lucid-Bar"
-  height={100}
-  style={
-    Object {
-      "fill": "#f80",
-    }
-  }
-  width={10}
-  x={5}
-  y={0}
-/>
+exports[`Bar [common] example testing should match snapshot(s) for CustomColors 1`] = `
+<div>
+  <svg
+    height="100"
+    width="20"
+  >
+    <rect
+      class="lucid-Bar"
+      height="100"
+      style="fill:#f80"
+      width="10"
+      x="5"
+      y="0"
+    />
+  </svg>
+  <svg
+    height="100"
+    width="20"
+  >
+    <rect
+      class="lucid-Bar"
+      height="100"
+      style="fill:#abc123"
+      width="10"
+      x="5"
+      y="0"
+    />
+  </svg>
+</div>
 `;
 
-exports[`Bar [common] example testing should match snapshot(s) for custom-colors 2`] = `
-<rect
-  className="lucid-Bar"
-  height={100}
-  style={
-    Object {
-      "fill": "#abc123",
-    }
-  }
-  width={10}
-  x={5}
-  y={0}
-/>
+exports[`Bar [common] example testing should match snapshot(s) for CustomDimensionUnits 1`] = `
+<div>
+  <svg
+    height="100"
+    width="20"
+  >
+    <rect
+      class="lucid-Bar"
+      height="100%"
+      style="fill:#f80"
+      width="10%"
+      x="5"
+      y="0"
+    />
+  </svg>
+  <svg
+    height="100"
+    width="20"
+  >
+    <rect
+      class="lucid-Bar"
+      height="100%"
+      style="fill:#abc123"
+      width="10%"
+      x="5"
+      y="0"
+    />
+  </svg>
+</div>
 `;
 
-exports[`Bar [common] example testing should match snapshot(s) for custom-dimension-units 1`] = `
-<rect
-  className="lucid-Bar"
-  height="100%"
-  style={
-    Object {
-      "fill": "#f80",
-    }
-  }
-  width="10%"
-  x={5}
-  y={0}
-/>
-`;
-
-exports[`Bar [common] example testing should match snapshot(s) for custom-dimension-units 2`] = `
-<rect
-  className="lucid-Bar"
-  height="100%"
-  style={
-    Object {
-      "fill": "#abc123",
-    }
-  }
-  width="10%"
-  x={5}
-  y={0}
-/>
-`;
-
-exports[`Bar [common] example testing should match snapshot(s) for regular-colors 1`] = `
-<rect
-  className="lucid-Bar lucid-Bar-color-chart-0-lightest"
-  height={100}
-  style={Object {}}
-  width={10}
-  x={5}
-  y={0}
-/>
-`;
-
-exports[`Bar [common] example testing should match snapshot(s) for regular-colors 2`] = `
-<rect
-  className="lucid-Bar lucid-Bar-color-chart-0-light"
-  height={100}
-  style={Object {}}
-  width={10}
-  x={5}
-  y={0}
-/>
-`;
-
-exports[`Bar [common] example testing should match snapshot(s) for regular-colors 3`] = `
-<rect
-  className="lucid-Bar lucid-Bar-color-chart-0"
-  height={100}
-  style={Object {}}
-  width={10}
-  x={5}
-  y={0}
-/>
-`;
-
-exports[`Bar [common] example testing should match snapshot(s) for regular-colors 4`] = `
-<rect
-  className="lucid-Bar lucid-Bar-color-chart-0-dark"
-  height={100}
-  style={Object {}}
-  width={10}
-  x={5}
-  y={0}
-/>
-`;
-
-exports[`Bar [common] example testing should match snapshot(s) for regular-colors 5`] = `
-<rect
-  className="lucid-Bar lucid-Bar-color-chart-0-darkest"
-  height={100}
-  style={Object {}}
-  width={10}
-  x={5}
-  y={0}
-/>
-`;
-
-exports[`Bar [common] example testing should match snapshot(s) for regular-colors 6`] = `
-<rect
-  className="lucid-Bar lucid-Bar-color-chart-1-lightest"
-  height={100}
-  style={Object {}}
-  width={10}
-  x={5}
-  y={0}
-/>
-`;
-
-exports[`Bar [common] example testing should match snapshot(s) for regular-colors 7`] = `
-<rect
-  className="lucid-Bar lucid-Bar-color-chart-1-light"
-  height={100}
-  style={Object {}}
-  width={10}
-  x={5}
-  y={0}
-/>
-`;
-
-exports[`Bar [common] example testing should match snapshot(s) for regular-colors 8`] = `
-<rect
-  className="lucid-Bar lucid-Bar-color-chart-1"
-  height={100}
-  style={Object {}}
-  width={10}
-  x={5}
-  y={0}
-/>
-`;
-
-exports[`Bar [common] example testing should match snapshot(s) for regular-colors 9`] = `
-<rect
-  className="lucid-Bar lucid-Bar-color-chart-1-dark"
-  height={100}
-  style={Object {}}
-  width={10}
-  x={5}
-  y={0}
-/>
-`;
-
-exports[`Bar [common] example testing should match snapshot(s) for regular-colors 10`] = `
-<rect
-  className="lucid-Bar lucid-Bar-color-chart-1-darkest"
-  height={100}
-  style={Object {}}
-  width={10}
-  x={5}
-  y={0}
-/>
-`;
-
-exports[`Bar [common] example testing should match snapshot(s) for regular-colors 11`] = `
-<rect
-  className="lucid-Bar lucid-Bar-color-chart-2-lightest"
-  height={100}
-  style={Object {}}
-  width={10}
-  x={5}
-  y={0}
-/>
-`;
-
-exports[`Bar [common] example testing should match snapshot(s) for regular-colors 12`] = `
-<rect
-  className="lucid-Bar lucid-Bar-color-chart-2-light"
-  height={100}
-  style={Object {}}
-  width={10}
-  x={5}
-  y={0}
-/>
-`;
-
-exports[`Bar [common] example testing should match snapshot(s) for regular-colors 13`] = `
-<rect
-  className="lucid-Bar lucid-Bar-color-chart-2"
-  height={100}
-  style={Object {}}
-  width={10}
-  x={5}
-  y={0}
-/>
-`;
-
-exports[`Bar [common] example testing should match snapshot(s) for regular-colors 14`] = `
-<rect
-  className="lucid-Bar lucid-Bar-color-chart-2-dark"
-  height={100}
-  style={Object {}}
-  width={10}
-  x={5}
-  y={0}
-/>
-`;
-
-exports[`Bar [common] example testing should match snapshot(s) for regular-colors 15`] = `
-<rect
-  className="lucid-Bar lucid-Bar-color-chart-2-darkest"
-  height={100}
-  style={Object {}}
-  width={10}
-  x={5}
-  y={0}
-/>
-`;
-
-exports[`Bar [common] example testing should match snapshot(s) for regular-colors 16`] = `
-<rect
-  className="lucid-Bar lucid-Bar-color-chart-3-lightest"
-  height={100}
-  style={Object {}}
-  width={10}
-  x={5}
-  y={0}
-/>
-`;
-
-exports[`Bar [common] example testing should match snapshot(s) for regular-colors 17`] = `
-<rect
-  className="lucid-Bar lucid-Bar-color-chart-3-light"
-  height={100}
-  style={Object {}}
-  width={10}
-  x={5}
-  y={0}
-/>
-`;
-
-exports[`Bar [common] example testing should match snapshot(s) for regular-colors 18`] = `
-<rect
-  className="lucid-Bar lucid-Bar-color-chart-3"
-  height={100}
-  style={Object {}}
-  width={10}
-  x={5}
-  y={0}
-/>
-`;
-
-exports[`Bar [common] example testing should match snapshot(s) for regular-colors 19`] = `
-<rect
-  className="lucid-Bar lucid-Bar-color-chart-3-dark"
-  height={100}
-  style={Object {}}
-  width={10}
-  x={5}
-  y={0}
-/>
-`;
-
-exports[`Bar [common] example testing should match snapshot(s) for regular-colors 20`] = `
-<rect
-  className="lucid-Bar lucid-Bar-color-chart-3-darkest"
-  height={100}
-  style={Object {}}
-  width={10}
-  x={5}
-  y={0}
-/>
-`;
-
-exports[`Bar [common] example testing should match snapshot(s) for regular-colors 21`] = `
-<rect
-  className="lucid-Bar lucid-Bar-color-chart-4-lightest"
-  height={100}
-  style={Object {}}
-  width={10}
-  x={5}
-  y={0}
-/>
-`;
-
-exports[`Bar [common] example testing should match snapshot(s) for regular-colors 22`] = `
-<rect
-  className="lucid-Bar lucid-Bar-color-chart-4-light"
-  height={100}
-  style={Object {}}
-  width={10}
-  x={5}
-  y={0}
-/>
-`;
-
-exports[`Bar [common] example testing should match snapshot(s) for regular-colors 23`] = `
-<rect
-  className="lucid-Bar lucid-Bar-color-chart-4"
-  height={100}
-  style={Object {}}
-  width={10}
-  x={5}
-  y={0}
-/>
-`;
-
-exports[`Bar [common] example testing should match snapshot(s) for regular-colors 24`] = `
-<rect
-  className="lucid-Bar lucid-Bar-color-chart-4-dark"
-  height={100}
-  style={Object {}}
-  width={10}
-  x={5}
-  y={0}
-/>
-`;
-
-exports[`Bar [common] example testing should match snapshot(s) for regular-colors 25`] = `
-<rect
-  className="lucid-Bar lucid-Bar-color-chart-4-darkest"
-  height={100}
-  style={Object {}}
-  width={10}
-  x={5}
-  y={0}
-/>
-`;
-
-exports[`Bar [common] example testing should match snapshot(s) for regular-colors 26`] = `
-<rect
-  className="lucid-Bar lucid-Bar-color-chart-5-lightest"
-  height={100}
-  style={Object {}}
-  width={10}
-  x={5}
-  y={0}
-/>
-`;
-
-exports[`Bar [common] example testing should match snapshot(s) for regular-colors 27`] = `
-<rect
-  className="lucid-Bar lucid-Bar-color-chart-5-light"
-  height={100}
-  style={Object {}}
-  width={10}
-  x={5}
-  y={0}
-/>
-`;
-
-exports[`Bar [common] example testing should match snapshot(s) for regular-colors 28`] = `
-<rect
-  className="lucid-Bar lucid-Bar-color-chart-5"
-  height={100}
-  style={Object {}}
-  width={10}
-  x={5}
-  y={0}
-/>
-`;
-
-exports[`Bar [common] example testing should match snapshot(s) for regular-colors 29`] = `
-<rect
-  className="lucid-Bar lucid-Bar-color-chart-5-dark"
-  height={100}
-  style={Object {}}
-  width={10}
-  x={5}
-  y={0}
-/>
-`;
-
-exports[`Bar [common] example testing should match snapshot(s) for regular-colors 30`] = `
-<rect
-  className="lucid-Bar lucid-Bar-color-chart-5-darkest"
-  height={100}
-  style={Object {}}
-  width={10}
-  x={5}
-  y={0}
-/>
-`;
-
-exports[`Bar [common] example testing should match snapshot(s) for regular-colors 31`] = `
-<rect
-  className="lucid-Bar lucid-Bar-color-chart-6-lightest"
-  height={100}
-  style={Object {}}
-  width={10}
-  x={5}
-  y={0}
-/>
-`;
-
-exports[`Bar [common] example testing should match snapshot(s) for regular-colors 32`] = `
-<rect
-  className="lucid-Bar lucid-Bar-color-chart-6-light"
-  height={100}
-  style={Object {}}
-  width={10}
-  x={5}
-  y={0}
-/>
-`;
-
-exports[`Bar [common] example testing should match snapshot(s) for regular-colors 33`] = `
-<rect
-  className="lucid-Bar lucid-Bar-color-chart-6"
-  height={100}
-  style={Object {}}
-  width={10}
-  x={5}
-  y={0}
-/>
-`;
-
-exports[`Bar [common] example testing should match snapshot(s) for regular-colors 34`] = `
-<rect
-  className="lucid-Bar lucid-Bar-color-chart-6-dark"
-  height={100}
-  style={Object {}}
-  width={10}
-  x={5}
-  y={0}
-/>
-`;
-
-exports[`Bar [common] example testing should match snapshot(s) for regular-colors 35`] = `
-<rect
-  className="lucid-Bar lucid-Bar-color-chart-6-darkest"
-  height={100}
-  style={Object {}}
-  width={10}
-  x={5}
-  y={0}
-/>
-`;
-
-exports[`Bar [common] example testing should match snapshot(s) for regular-colors 36`] = `
-<rect
-  className="lucid-Bar lucid-Bar-color-chart-good-light"
-  height={100}
-  style={Object {}}
-  width={10}
-  x={5}
-  y={0}
-/>
-`;
-
-exports[`Bar [common] example testing should match snapshot(s) for regular-colors 37`] = `
-<rect
-  className="lucid-Bar lucid-Bar-color-chart-good"
-  height={100}
-  style={Object {}}
-  width={10}
-  x={5}
-  y={0}
-/>
-`;
-
-exports[`Bar [common] example testing should match snapshot(s) for regular-colors 38`] = `
-<rect
-  className="lucid-Bar lucid-Bar-color-chart-good-dark"
-  height={100}
-  style={Object {}}
-  width={10}
-  x={5}
-  y={0}
-/>
-`;
-
-exports[`Bar [common] example testing should match snapshot(s) for regular-colors 39`] = `
-<rect
-  className="lucid-Bar lucid-Bar-color-chart-bad-light"
-  height={100}
-  style={Object {}}
-  width={10}
-  x={5}
-  y={0}
-/>
-`;
-
-exports[`Bar [common] example testing should match snapshot(s) for regular-colors 40`] = `
-<rect
-  className="lucid-Bar lucid-Bar-color-chart-bad"
-  height={100}
-  style={Object {}}
-  width={10}
-  x={5}
-  y={0}
-/>
-`;
-
-exports[`Bar [common] example testing should match snapshot(s) for regular-colors 41`] = `
-<rect
-  className="lucid-Bar lucid-Bar-color-chart-bad-dark"
-  height={100}
-  style={Object {}}
-  width={10}
-  x={5}
-  y={0}
-/>
-`;
-
-exports[`Bar [common] example testing should match snapshot(s) for regular-colors 42`] = `
-<rect
-  className="lucid-Bar lucid-Bar-color-chart-neutral"
-  height={100}
-  style={Object {}}
-  width={10}
-  x={5}
-  y={0}
-/>
+exports[`Bar [common] example testing should match snapshot(s) for RegularColors 1`] = `
+<div>
+  <svg
+    height="100"
+    width="20"
+  >
+    <rect
+      class="lucid-Bar lucid-Bar-color-chart-0-lightest"
+      height="100"
+      width="10"
+      x="5"
+      y="0"
+    />
+  </svg>
+  <svg
+    height="100"
+    width="20"
+  >
+    <rect
+      class="lucid-Bar lucid-Bar-color-chart-0-light"
+      height="100"
+      width="10"
+      x="5"
+      y="0"
+    />
+  </svg>
+  <svg
+    height="100"
+    width="20"
+  >
+    <rect
+      class="lucid-Bar lucid-Bar-color-chart-0"
+      height="100"
+      width="10"
+      x="5"
+      y="0"
+    />
+  </svg>
+  <svg
+    height="100"
+    width="20"
+  >
+    <rect
+      class="lucid-Bar lucid-Bar-color-chart-0-dark"
+      height="100"
+      width="10"
+      x="5"
+      y="0"
+    />
+  </svg>
+  <svg
+    height="100"
+    width="20"
+  >
+    <rect
+      class="lucid-Bar lucid-Bar-color-chart-0-darkest"
+      height="100"
+      width="10"
+      x="5"
+      y="0"
+    />
+  </svg>
+  <svg
+    height="100"
+    width="20"
+  >
+    <rect
+      class="lucid-Bar lucid-Bar-color-chart-1-lightest"
+      height="100"
+      width="10"
+      x="5"
+      y="0"
+    />
+  </svg>
+  <svg
+    height="100"
+    width="20"
+  >
+    <rect
+      class="lucid-Bar lucid-Bar-color-chart-1-light"
+      height="100"
+      width="10"
+      x="5"
+      y="0"
+    />
+  </svg>
+  <svg
+    height="100"
+    width="20"
+  >
+    <rect
+      class="lucid-Bar lucid-Bar-color-chart-1"
+      height="100"
+      width="10"
+      x="5"
+      y="0"
+    />
+  </svg>
+  <svg
+    height="100"
+    width="20"
+  >
+    <rect
+      class="lucid-Bar lucid-Bar-color-chart-1-dark"
+      height="100"
+      width="10"
+      x="5"
+      y="0"
+    />
+  </svg>
+  <svg
+    height="100"
+    width="20"
+  >
+    <rect
+      class="lucid-Bar lucid-Bar-color-chart-1-darkest"
+      height="100"
+      width="10"
+      x="5"
+      y="0"
+    />
+  </svg>
+  <svg
+    height="100"
+    width="20"
+  >
+    <rect
+      class="lucid-Bar lucid-Bar-color-chart-2-lightest"
+      height="100"
+      width="10"
+      x="5"
+      y="0"
+    />
+  </svg>
+  <svg
+    height="100"
+    width="20"
+  >
+    <rect
+      class="lucid-Bar lucid-Bar-color-chart-2-light"
+      height="100"
+      width="10"
+      x="5"
+      y="0"
+    />
+  </svg>
+  <svg
+    height="100"
+    width="20"
+  >
+    <rect
+      class="lucid-Bar lucid-Bar-color-chart-2"
+      height="100"
+      width="10"
+      x="5"
+      y="0"
+    />
+  </svg>
+  <svg
+    height="100"
+    width="20"
+  >
+    <rect
+      class="lucid-Bar lucid-Bar-color-chart-2-dark"
+      height="100"
+      width="10"
+      x="5"
+      y="0"
+    />
+  </svg>
+  <svg
+    height="100"
+    width="20"
+  >
+    <rect
+      class="lucid-Bar lucid-Bar-color-chart-2-darkest"
+      height="100"
+      width="10"
+      x="5"
+      y="0"
+    />
+  </svg>
+  <svg
+    height="100"
+    width="20"
+  >
+    <rect
+      class="lucid-Bar lucid-Bar-color-chart-3-lightest"
+      height="100"
+      width="10"
+      x="5"
+      y="0"
+    />
+  </svg>
+  <svg
+    height="100"
+    width="20"
+  >
+    <rect
+      class="lucid-Bar lucid-Bar-color-chart-3-light"
+      height="100"
+      width="10"
+      x="5"
+      y="0"
+    />
+  </svg>
+  <svg
+    height="100"
+    width="20"
+  >
+    <rect
+      class="lucid-Bar lucid-Bar-color-chart-3"
+      height="100"
+      width="10"
+      x="5"
+      y="0"
+    />
+  </svg>
+  <svg
+    height="100"
+    width="20"
+  >
+    <rect
+      class="lucid-Bar lucid-Bar-color-chart-3-dark"
+      height="100"
+      width="10"
+      x="5"
+      y="0"
+    />
+  </svg>
+  <svg
+    height="100"
+    width="20"
+  >
+    <rect
+      class="lucid-Bar lucid-Bar-color-chart-3-darkest"
+      height="100"
+      width="10"
+      x="5"
+      y="0"
+    />
+  </svg>
+  <svg
+    height="100"
+    width="20"
+  >
+    <rect
+      class="lucid-Bar lucid-Bar-color-chart-4-lightest"
+      height="100"
+      width="10"
+      x="5"
+      y="0"
+    />
+  </svg>
+  <svg
+    height="100"
+    width="20"
+  >
+    <rect
+      class="lucid-Bar lucid-Bar-color-chart-4-light"
+      height="100"
+      width="10"
+      x="5"
+      y="0"
+    />
+  </svg>
+  <svg
+    height="100"
+    width="20"
+  >
+    <rect
+      class="lucid-Bar lucid-Bar-color-chart-4"
+      height="100"
+      width="10"
+      x="5"
+      y="0"
+    />
+  </svg>
+  <svg
+    height="100"
+    width="20"
+  >
+    <rect
+      class="lucid-Bar lucid-Bar-color-chart-4-dark"
+      height="100"
+      width="10"
+      x="5"
+      y="0"
+    />
+  </svg>
+  <svg
+    height="100"
+    width="20"
+  >
+    <rect
+      class="lucid-Bar lucid-Bar-color-chart-4-darkest"
+      height="100"
+      width="10"
+      x="5"
+      y="0"
+    />
+  </svg>
+  <svg
+    height="100"
+    width="20"
+  >
+    <rect
+      class="lucid-Bar lucid-Bar-color-chart-5-lightest"
+      height="100"
+      width="10"
+      x="5"
+      y="0"
+    />
+  </svg>
+  <svg
+    height="100"
+    width="20"
+  >
+    <rect
+      class="lucid-Bar lucid-Bar-color-chart-5-light"
+      height="100"
+      width="10"
+      x="5"
+      y="0"
+    />
+  </svg>
+  <svg
+    height="100"
+    width="20"
+  >
+    <rect
+      class="lucid-Bar lucid-Bar-color-chart-5"
+      height="100"
+      width="10"
+      x="5"
+      y="0"
+    />
+  </svg>
+  <svg
+    height="100"
+    width="20"
+  >
+    <rect
+      class="lucid-Bar lucid-Bar-color-chart-5-dark"
+      height="100"
+      width="10"
+      x="5"
+      y="0"
+    />
+  </svg>
+  <svg
+    height="100"
+    width="20"
+  >
+    <rect
+      class="lucid-Bar lucid-Bar-color-chart-5-darkest"
+      height="100"
+      width="10"
+      x="5"
+      y="0"
+    />
+  </svg>
+  <svg
+    height="100"
+    width="20"
+  >
+    <rect
+      class="lucid-Bar lucid-Bar-color-chart-6-lightest"
+      height="100"
+      width="10"
+      x="5"
+      y="0"
+    />
+  </svg>
+  <svg
+    height="100"
+    width="20"
+  >
+    <rect
+      class="lucid-Bar lucid-Bar-color-chart-6-light"
+      height="100"
+      width="10"
+      x="5"
+      y="0"
+    />
+  </svg>
+  <svg
+    height="100"
+    width="20"
+  >
+    <rect
+      class="lucid-Bar lucid-Bar-color-chart-6"
+      height="100"
+      width="10"
+      x="5"
+      y="0"
+    />
+  </svg>
+  <svg
+    height="100"
+    width="20"
+  >
+    <rect
+      class="lucid-Bar lucid-Bar-color-chart-6-dark"
+      height="100"
+      width="10"
+      x="5"
+      y="0"
+    />
+  </svg>
+  <svg
+    height="100"
+    width="20"
+  >
+    <rect
+      class="lucid-Bar lucid-Bar-color-chart-6-darkest"
+      height="100"
+      width="10"
+      x="5"
+      y="0"
+    />
+  </svg>
+  <svg
+    height="100"
+    width="20"
+  >
+    <rect
+      class="lucid-Bar lucid-Bar-color-chart-good-light"
+      height="100"
+      width="10"
+      x="5"
+      y="0"
+    />
+  </svg>
+  <svg
+    height="100"
+    width="20"
+  >
+    <rect
+      class="lucid-Bar lucid-Bar-color-chart-good"
+      height="100"
+      width="10"
+      x="5"
+      y="0"
+    />
+  </svg>
+  <svg
+    height="100"
+    width="20"
+  >
+    <rect
+      class="lucid-Bar lucid-Bar-color-chart-good-dark"
+      height="100"
+      width="10"
+      x="5"
+      y="0"
+    />
+  </svg>
+  <svg
+    height="100"
+    width="20"
+  >
+    <rect
+      class="lucid-Bar lucid-Bar-color-chart-bad-light"
+      height="100"
+      width="10"
+      x="5"
+      y="0"
+    />
+  </svg>
+  <svg
+    height="100"
+    width="20"
+  >
+    <rect
+      class="lucid-Bar lucid-Bar-color-chart-bad"
+      height="100"
+      width="10"
+      x="5"
+      y="0"
+    />
+  </svg>
+  <svg
+    height="100"
+    width="20"
+  >
+    <rect
+      class="lucid-Bar lucid-Bar-color-chart-bad-dark"
+      height="100"
+      width="10"
+      x="5"
+      y="0"
+    />
+  </svg>
+  <svg
+    height="100"
+    width="20"
+  >
+    <rect
+      class="lucid-Bar lucid-Bar-color-chart-neutral"
+      height="100"
+      width="10"
+      x="5"
+      y="0"
+    />
+  </svg>
+</div>
 `;
