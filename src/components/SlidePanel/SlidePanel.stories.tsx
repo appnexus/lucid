@@ -13,7 +13,7 @@ import {
 } from './../../index';
 
 export default {
-	title: 'Helpers/SlidePanel',
+	title: 'Private/SlidePanel',
 	component: SlidePanel,
 	parameters: {
 		docs: {

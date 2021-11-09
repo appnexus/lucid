@@ -4,7 +4,7 @@ import createClass from 'create-react-class';
 import _ from 'lodash';
 
 export default {
-	title: 'Controls/Text/Autocomplete',
+	title: 'Controls/Autocomplete',
 	component: Autocomplete,
 	parameters: {
 		docs: {

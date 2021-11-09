@@ -2,7 +2,7 @@ import React from 'react';
 import { Underline } from './../../index';
 
 export default {
-	title: 'Controls/Selectors/Underline',
+	title: 'Controls/Underline',
 	component: Underline,
 	parameters: {
 		docs: {

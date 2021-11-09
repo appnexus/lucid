@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import TimeSelect from './TimeSelect';
 
 export default {
-	title: 'Controls/Selectors/TimeSelect',
+	title: 'Controls/TimeSelect',
 	component: TimeSelect,
 	parameters: {
 		docs: {

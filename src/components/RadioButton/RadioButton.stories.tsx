@@ -4,7 +4,7 @@ import createClass from 'create-react-class';
 import { RadioButton } from './../../index';
 
 export default {
-	title: 'Controls/Toggles/RadioButton',
+	title: 'Controls/RadioButton',
 	component: RadioButton,
 	parameters: {
 		docs: {

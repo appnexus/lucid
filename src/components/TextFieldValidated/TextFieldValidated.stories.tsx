@@ -3,7 +3,7 @@ import createClass from 'create-react-class';
 import { TextFieldValidated } from './../../index';
 
 export default {
-	title: 'Controls/Text/TextFieldValidated',
+	title: 'Controls/TextFieldValidated',
 	component: TextFieldValidated,
 	parameters: {
 		docs: {

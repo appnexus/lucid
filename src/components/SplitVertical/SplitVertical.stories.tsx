@@ -3,7 +3,7 @@ import createClass from 'create-react-class';
 import { SplitVertical } from './../../index';
 
 export default {
-	title: 'Helpers/SplitVertical',
+	title: 'Private/SplitVertical',
 	component: SplitVertical,
 	parameters: {
 		docs: {

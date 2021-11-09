@@ -4,7 +4,7 @@ import { Button } from './../../index';
 import InfiniteSlidePanel from './InfiniteSlidePanel';
 
 export default {
-	title: 'Helpers/InfiniteSlidePanel',
+	title: 'Private/InfiniteSlidePanel',
 	component: InfiniteSlidePanel,
 	parameters: {
 		docs: {

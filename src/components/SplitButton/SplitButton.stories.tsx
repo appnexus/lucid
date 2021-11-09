@@ -3,7 +3,7 @@ import createClass from 'create-react-class';
 import { SplitButton } from './../../index';
 
 export default {
-	title: 'Controls/Buttons/SplitButton',
+	title: 'Controls/SplitButton',
 	component: SplitButton,
 	parameters: {
 		docs: {
