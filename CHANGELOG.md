@@ -1,3 +1,14 @@
+## 8.4.0
+
+- #1279 Update hover and active styling for `Tabs`.
+- #1277 Removed `load-components` file and unused Storybook utilities.
+- #1275 Converted remaining Storybook 5 stories to 6 with a script.
+- #1274 Add `RolloverIcon`.
+- #1273 Fix styling so a `Button` in a `Tooltip` appears on hover.
+- #1271 Migrate `Banner` to Storybook 6.
+- #1269 Migrate `Badge` to Storybook 6.
+  https://github.com/appnexus/lucid/compare/v8.3.0...v8.4.0
+
 ## 8.3.0
 
 - #1260 Added more types to `Paginator`
