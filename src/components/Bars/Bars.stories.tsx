@@ -4,7 +4,7 @@ import createClass from 'create-react-class';
 import { Bars, d3Scale, chartConstants } from './../../index';
 
 export default {
-	title: 'Visualizations/Chart Primitives/Bars',
+	title: 'Private/Chart Primitives/Bars',
 	component: Bars,
 	parameters: {
 		docs: {

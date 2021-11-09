@@ -3,7 +3,7 @@ import createClass from 'create-react-class';
 import { Button, TextField, TextFieldPlain } from './../../index';
 
 export default {
-	title: 'Controls/Text/TextField',
+	title: 'Controls/TextField',
 	component: TextField,
 	parameters: {
 		docs: {

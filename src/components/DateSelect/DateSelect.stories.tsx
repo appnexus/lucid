@@ -4,7 +4,7 @@ import { Button, DateSelect } from './../../index';
 import timemachine from 'timemachine';
 
 export default {
-	title: 'Controls/Selectors/DateSelect',
+	title: 'Controls/DateSelect',
 	component: DateSelect,
 	parameters: {
 		docs: {

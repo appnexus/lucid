@@ -6,7 +6,7 @@ import _ from 'lodash';
 import { Button } from './../../index';
 
 export default {
-	title: 'Helpers/CalendarMonth',
+	title: 'Private/CalendarMonth',
 	component: CalendarMonth,
 	parameters: {
 		docs: {

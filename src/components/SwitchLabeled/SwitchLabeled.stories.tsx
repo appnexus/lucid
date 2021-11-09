@@ -3,7 +3,7 @@ import createClass from 'create-react-class';
 import { SwitchLabeled } from './../../index';
 
 export default {
-	title: 'Controls/Toggles/SwitchLabeled',
+	title: 'Controls/SwitchLabeled',
 	component: SwitchLabeled,
 	parameters: {
 		docs: {

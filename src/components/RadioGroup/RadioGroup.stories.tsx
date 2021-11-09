@@ -3,7 +3,7 @@ import createClass from 'create-react-class';
 import { RadioGroup, RadioButtonLabeled, SingleSelect } from './../../index';
 
 export default {
-	title: 'Controls/Toggles/RadioGroup',
+	title: 'Controls/RadioGroup',
 	component: RadioGroup,
 	parameters: {
 		docs: {

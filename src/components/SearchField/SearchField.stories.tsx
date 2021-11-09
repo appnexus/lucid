@@ -4,7 +4,7 @@ import { LoadingIcon, SearchFieldDumb as SearchField } from './../../index';
 import Button from '../Button/Button';
 
 export default {
-	title: 'Controls/Text/SearchField',
+	title: 'Controls/SearchField',
 	component: SearchField,
 	parameters: {
 		docs: {

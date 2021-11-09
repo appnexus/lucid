@@ -4,7 +4,7 @@ import { Switch } from './../../index';
 import _ from 'lodash';
 
 export default {
-	title: 'Controls/Toggles/Switch',
+	title: 'Controls/Switch',
 	component: Switch,
 	parameters: {
 		docs: {

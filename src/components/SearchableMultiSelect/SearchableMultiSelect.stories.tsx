@@ -5,7 +5,7 @@ import _ from 'lodash';
 import Resizer from '../Resizer/Resizer';
 
 export default {
-	title: 'Controls/Selectors/SearchableMultiSelect',
+	title: 'Controls/SearchableMultiSelect',
 	component: SearchableMultiSelect,
 	parameters: {
 		docs: {

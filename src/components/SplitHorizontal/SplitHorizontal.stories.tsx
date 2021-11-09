@@ -3,7 +3,7 @@ import createClass from 'create-react-class';
 import { SplitHorizontal } from './../../index';
 
 export default {
-	title: 'Helpers/SplitHorizontal',
+	title: 'Private/SplitHorizontal',
 	component: SplitHorizontal,
 	parameters: {
 		docs: {
