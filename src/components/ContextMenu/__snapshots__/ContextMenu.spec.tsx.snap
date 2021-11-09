@@ -1,3702 +1,1169 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ContextMenu [common] example testing should match snapshot(s) for 1.basic 1`] = `
+exports[`ContextMenu [common] example testing should match snapshot(s) for BasicWithText 1`] = `
+<section>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget tempor mi. Curabitur eget risus ac diam euismod ultricies ac in est. Morbi in vehicula arcu, at laoreet libero. Phasellus nisi dolor, porta et erat quis, egestas mattis purus.
+  <span
+    class="lucid-ContextMenu"
+  >
+    <button
+      class="lucid-Button"
+      type="button"
+    >
+      <span
+        class="lucid-Button-content"
+      >
+        Target
+      </span>
+    </button>
+  </span>
+  Sed vel ex iaculis, tincidunt magna in, fringilla urna. Aenean congue est nec elit molestie, nec mollis mi rutrum. Quisque hendrerit nisl placerat tempus sodales. Vivamus et tortor vulputate, elementum turpis tempor, condimentum sapien. Nunc ac imperdiet ipsum, vitae ullamcorper sem.
+</section>
+`;
+
+exports[`ContextMenu [common] example testing should match snapshot(s) for Default 1`] = `
 <span
-  className="lucid-ContextMenu"
+  class="lucid-ContextMenu"
 >
-  <Button
-    hasOnlyIcon={false}
-    isActive={false}
-    isDisabled={false}
-    onClick={[Function]}
+  <button
+    class="lucid-Button"
     type="button"
   >
-    Target
-  </Button>
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-down"
-    portalId="1-ContextMenu-Portal-6"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    FlyOut
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 2.basic-with-text 1`] = `
-<span
-  className="lucid-ContextMenu"
->
-  <Button
-    hasOnlyIcon={false}
-    isActive={false}
-    isDisabled={false}
-    onClick={[Function]}
-    type="button"
-  >
-    Target
-  </Button>
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-up"
-    portalId="1-ContextMenu-Portal-7"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px -1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    FlyOut
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 3.menu-bar 1`] = `
-<span
-  className="lucid-ContextMenu"
->
-  <div
-    onClick={[Function]}
-    style={
-      Object {
-        "background": "#eaeaea",
-        "cursor": "pointer",
-        "outline": "solid 1px #d1d1d1",
-        "padding": "4px",
-      }
-    }
-  >
-    File
-  </div>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 3.menu-bar 2`] = `
-<span
-  className="lucid-ContextMenu"
->
-  <div
-    onClick={[Function]}
-    style={
-      Object {
-        "background": "#eaeaea",
-        "cursor": "pointer",
-        "outline": "solid 1px #d1d1d1",
-        "padding": "4px",
-      }
-    }
-  >
-    Edit
-  </div>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 4.directions-interactive 1`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-down"
-    portalId="1-ContextMenu-Portal-8"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-        "width": 210,
-      }
-    }
-  >
-    <div>
-      direction: default
-    </div>
-    <div>
-      directonOffset: default
-    </div>
-    <div>
-      alignment: default
-    </div>
-    <div>
-      alignmentOffset: default
-    </div>
-    <div>
-      getAlignmentOffset: default
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 1`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-up"
-    portalId="1-ContextMenu-Portal-9"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: up
-    </div>
-    <div>
-      directonOffset: 0
-    </div>
-    <div>
-      alignment: start
-    </div>
-    <div>
-      alignmentOffset: 0
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 2`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-up"
-    portalId="1-ContextMenu-Portal-10"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: up
-    </div>
-    <div>
-      directonOffset: 0
-    </div>
-    <div>
-      alignment: start
-    </div>
-    <div>
-      alignmentOffset: 15
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 3`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-up"
-    portalId="1-ContextMenu-Portal-11"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: up
-    </div>
-    <div>
-      directonOffset: 0
-    </div>
-    <div>
-      alignment: start
-    </div>
-    <div>
-      alignmentOffset: -15
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 4`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-up"
-    portalId="1-ContextMenu-Portal-12"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: up
-    </div>
-    <div>
-      directonOffset: 15
-    </div>
-    <div>
-      alignment: start
-    </div>
-    <div>
-      alignmentOffset: 0
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 5`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-up"
-    portalId="1-ContextMenu-Portal-13"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: up
-    </div>
-    <div>
-      directonOffset: 15
-    </div>
-    <div>
-      alignment: start
-    </div>
-    <div>
-      alignmentOffset: 15
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 6`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-up"
-    portalId="1-ContextMenu-Portal-14"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: up
-    </div>
-    <div>
-      directonOffset: 15
-    </div>
-    <div>
-      alignment: start
-    </div>
-    <div>
-      alignmentOffset: -15
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 7`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-up"
-    portalId="1-ContextMenu-Portal-15"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: up
-    </div>
-    <div>
-      directonOffset: -15
-    </div>
-    <div>
-      alignment: start
-    </div>
-    <div>
-      alignmentOffset: 0
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 8`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-up"
-    portalId="1-ContextMenu-Portal-16"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: up
-    </div>
-    <div>
-      directonOffset: -15
-    </div>
-    <div>
-      alignment: start
-    </div>
-    <div>
-      alignmentOffset: 15
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 9`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-up"
-    portalId="1-ContextMenu-Portal-17"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: up
-    </div>
-    <div>
-      directonOffset: -15
-    </div>
-    <div>
-      alignment: start
-    </div>
-    <div>
-      alignmentOffset: -15
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 10`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-up"
-    portalId="1-ContextMenu-Portal-18"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: up
-    </div>
-    <div>
-      directonOffset: 0
-    </div>
-    <div>
-      alignment: center
-    </div>
-    <div>
-      alignmentOffset: 0
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 11`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-up"
-    portalId="1-ContextMenu-Portal-19"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: up
-    </div>
-    <div>
-      directonOffset: 0
-    </div>
-    <div>
-      alignment: center
-    </div>
-    <div>
-      alignmentOffset: 15
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 12`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-up"
-    portalId="1-ContextMenu-Portal-20"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: up
-    </div>
-    <div>
-      directonOffset: 0
-    </div>
-    <div>
-      alignment: center
-    </div>
-    <div>
-      alignmentOffset: -15
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 13`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-up"
-    portalId="1-ContextMenu-Portal-21"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: up
-    </div>
-    <div>
-      directonOffset: 15
-    </div>
-    <div>
-      alignment: center
-    </div>
-    <div>
-      alignmentOffset: 0
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 14`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-up"
-    portalId="1-ContextMenu-Portal-22"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: up
-    </div>
-    <div>
-      directonOffset: 15
-    </div>
-    <div>
-      alignment: center
-    </div>
-    <div>
-      alignmentOffset: 15
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 15`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-up"
-    portalId="1-ContextMenu-Portal-23"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: up
-    </div>
-    <div>
-      directonOffset: 15
-    </div>
-    <div>
-      alignment: center
-    </div>
-    <div>
-      alignmentOffset: -15
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 16`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-up"
-    portalId="1-ContextMenu-Portal-24"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: up
-    </div>
-    <div>
-      directonOffset: -15
-    </div>
-    <div>
-      alignment: center
-    </div>
-    <div>
-      alignmentOffset: 0
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 17`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-up"
-    portalId="1-ContextMenu-Portal-25"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: up
-    </div>
-    <div>
-      directonOffset: -15
-    </div>
-    <div>
-      alignment: center
-    </div>
-    <div>
-      alignmentOffset: 15
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 18`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-up"
-    portalId="1-ContextMenu-Portal-26"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: up
-    </div>
-    <div>
-      directonOffset: -15
-    </div>
-    <div>
-      alignment: center
-    </div>
-    <div>
-      alignmentOffset: -15
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 19`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-up"
-    portalId="1-ContextMenu-Portal-27"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: up
-    </div>
-    <div>
-      directonOffset: 0
-    </div>
-    <div>
-      alignment: end
-    </div>
-    <div>
-      alignmentOffset: 0
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 20`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-up"
-    portalId="1-ContextMenu-Portal-28"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: up
-    </div>
-    <div>
-      directonOffset: 0
-    </div>
-    <div>
-      alignment: end
-    </div>
-    <div>
-      alignmentOffset: 15
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 21`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-up"
-    portalId="1-ContextMenu-Portal-29"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: up
-    </div>
-    <div>
-      directonOffset: 0
-    </div>
-    <div>
-      alignment: end
-    </div>
-    <div>
-      alignmentOffset: -15
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 22`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-up"
-    portalId="1-ContextMenu-Portal-30"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: up
-    </div>
-    <div>
-      directonOffset: 15
-    </div>
-    <div>
-      alignment: end
-    </div>
-    <div>
-      alignmentOffset: 0
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 23`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-up"
-    portalId="1-ContextMenu-Portal-31"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: up
-    </div>
-    <div>
-      directonOffset: 15
-    </div>
-    <div>
-      alignment: end
-    </div>
-    <div>
-      alignmentOffset: 15
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 24`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-up"
-    portalId="1-ContextMenu-Portal-32"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: up
-    </div>
-    <div>
-      directonOffset: 15
-    </div>
-    <div>
-      alignment: end
-    </div>
-    <div>
-      alignmentOffset: -15
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 25`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-up"
-    portalId="1-ContextMenu-Portal-33"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: up
-    </div>
-    <div>
-      directonOffset: -15
-    </div>
-    <div>
-      alignment: end
-    </div>
-    <div>
-      alignmentOffset: 0
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 26`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-up"
-    portalId="1-ContextMenu-Portal-34"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: up
-    </div>
-    <div>
-      directonOffset: -15
-    </div>
-    <div>
-      alignment: end
-    </div>
-    <div>
-      alignmentOffset: 15
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 27`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-up"
-    portalId="1-ContextMenu-Portal-35"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: up
-    </div>
-    <div>
-      directonOffset: -15
-    </div>
-    <div>
-      alignment: end
-    </div>
-    <div>
-      alignmentOffset: -15
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 28`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-down"
-    portalId="1-ContextMenu-Portal-36"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: down
-    </div>
-    <div>
-      directonOffset: 0
-    </div>
-    <div>
-      alignment: start
-    </div>
-    <div>
-      alignmentOffset: 0
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 29`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-down"
-    portalId="1-ContextMenu-Portal-37"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: down
-    </div>
-    <div>
-      directonOffset: 0
-    </div>
-    <div>
-      alignment: start
-    </div>
-    <div>
-      alignmentOffset: 15
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 30`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-down"
-    portalId="1-ContextMenu-Portal-38"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: down
-    </div>
-    <div>
-      directonOffset: 0
-    </div>
-    <div>
-      alignment: start
-    </div>
-    <div>
-      alignmentOffset: -15
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 31`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-down"
-    portalId="1-ContextMenu-Portal-39"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: down
-    </div>
-    <div>
-      directonOffset: 15
-    </div>
-    <div>
-      alignment: start
-    </div>
-    <div>
-      alignmentOffset: 0
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 32`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-down"
-    portalId="1-ContextMenu-Portal-40"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: down
-    </div>
-    <div>
-      directonOffset: 15
-    </div>
-    <div>
-      alignment: start
-    </div>
-    <div>
-      alignmentOffset: 15
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 33`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-down"
-    portalId="1-ContextMenu-Portal-41"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: down
-    </div>
-    <div>
-      directonOffset: 15
-    </div>
-    <div>
-      alignment: start
-    </div>
-    <div>
-      alignmentOffset: -15
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 34`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-down"
-    portalId="1-ContextMenu-Portal-42"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: down
-    </div>
-    <div>
-      directonOffset: -15
-    </div>
-    <div>
-      alignment: start
-    </div>
-    <div>
-      alignmentOffset: 0
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 35`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-down"
-    portalId="1-ContextMenu-Portal-43"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: down
-    </div>
-    <div>
-      directonOffset: -15
-    </div>
-    <div>
-      alignment: start
-    </div>
-    <div>
-      alignmentOffset: 15
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 36`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-down"
-    portalId="1-ContextMenu-Portal-44"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: down
-    </div>
-    <div>
-      directonOffset: -15
-    </div>
-    <div>
-      alignment: start
-    </div>
-    <div>
-      alignmentOffset: -15
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 37`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-down"
-    portalId="1-ContextMenu-Portal-45"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: down
-    </div>
-    <div>
-      directonOffset: 0
-    </div>
-    <div>
-      alignment: center
-    </div>
-    <div>
-      alignmentOffset: 0
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 38`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-down"
-    portalId="1-ContextMenu-Portal-46"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: down
-    </div>
-    <div>
-      directonOffset: 0
-    </div>
-    <div>
-      alignment: center
-    </div>
-    <div>
-      alignmentOffset: 15
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 39`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-down"
-    portalId="1-ContextMenu-Portal-47"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: down
-    </div>
-    <div>
-      directonOffset: 0
-    </div>
-    <div>
-      alignment: center
-    </div>
-    <div>
-      alignmentOffset: -15
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 40`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-down"
-    portalId="1-ContextMenu-Portal-48"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: down
-    </div>
-    <div>
-      directonOffset: 15
-    </div>
-    <div>
-      alignment: center
-    </div>
-    <div>
-      alignmentOffset: 0
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 41`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-down"
-    portalId="1-ContextMenu-Portal-49"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: down
-    </div>
-    <div>
-      directonOffset: 15
-    </div>
-    <div>
-      alignment: center
-    </div>
-    <div>
-      alignmentOffset: 15
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 42`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-down"
-    portalId="1-ContextMenu-Portal-50"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: down
-    </div>
-    <div>
-      directonOffset: 15
-    </div>
-    <div>
-      alignment: center
-    </div>
-    <div>
-      alignmentOffset: -15
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 43`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-down"
-    portalId="1-ContextMenu-Portal-51"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: down
-    </div>
-    <div>
-      directonOffset: -15
-    </div>
-    <div>
-      alignment: center
-    </div>
-    <div>
-      alignmentOffset: 0
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 44`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-down"
-    portalId="1-ContextMenu-Portal-52"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: down
-    </div>
-    <div>
-      directonOffset: -15
-    </div>
-    <div>
-      alignment: center
-    </div>
-    <div>
-      alignmentOffset: 15
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 45`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-down"
-    portalId="1-ContextMenu-Portal-53"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: down
-    </div>
-    <div>
-      directonOffset: -15
-    </div>
-    <div>
-      alignment: center
-    </div>
-    <div>
-      alignmentOffset: -15
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 46`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-down"
-    portalId="1-ContextMenu-Portal-54"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: down
-    </div>
-    <div>
-      directonOffset: 0
-    </div>
-    <div>
-      alignment: end
-    </div>
-    <div>
-      alignmentOffset: 0
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 47`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-down"
-    portalId="1-ContextMenu-Portal-55"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: down
-    </div>
-    <div>
-      directonOffset: 0
-    </div>
-    <div>
-      alignment: end
-    </div>
-    <div>
-      alignmentOffset: 15
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 48`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-down"
-    portalId="1-ContextMenu-Portal-56"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: down
-    </div>
-    <div>
-      directonOffset: 0
-    </div>
-    <div>
-      alignment: end
-    </div>
-    <div>
-      alignmentOffset: -15
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 49`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-down"
-    portalId="1-ContextMenu-Portal-57"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: down
-    </div>
-    <div>
-      directonOffset: 15
-    </div>
-    <div>
-      alignment: end
-    </div>
-    <div>
-      alignmentOffset: 0
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 50`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-down"
-    portalId="1-ContextMenu-Portal-58"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: down
-    </div>
-    <div>
-      directonOffset: 15
-    </div>
-    <div>
-      alignment: end
-    </div>
-    <div>
-      alignmentOffset: 15
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 51`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-down"
-    portalId="1-ContextMenu-Portal-59"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: down
-    </div>
-    <div>
-      directonOffset: 15
-    </div>
-    <div>
-      alignment: end
-    </div>
-    <div>
-      alignmentOffset: -15
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 52`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-down"
-    portalId="1-ContextMenu-Portal-60"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: down
-    </div>
-    <div>
-      directonOffset: -15
-    </div>
-    <div>
-      alignment: end
-    </div>
-    <div>
-      alignmentOffset: 0
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 53`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-down"
-    portalId="1-ContextMenu-Portal-61"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: down
-    </div>
-    <div>
-      directonOffset: -15
-    </div>
-    <div>
-      alignment: end
-    </div>
-    <div>
-      alignmentOffset: 15
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 54`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-down"
-    portalId="1-ContextMenu-Portal-62"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: down
-    </div>
-    <div>
-      directonOffset: -15
-    </div>
-    <div>
-      alignment: end
-    </div>
-    <div>
-      alignmentOffset: -15
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 55`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-left"
-    portalId="1-ContextMenu-Portal-63"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: left
-    </div>
-    <div>
-      directonOffset: 0
-    </div>
-    <div>
-      alignment: start
-    </div>
-    <div>
-      alignmentOffset: 0
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 56`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-left"
-    portalId="1-ContextMenu-Portal-64"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: left
-    </div>
-    <div>
-      directonOffset: 0
-    </div>
-    <div>
-      alignment: start
-    </div>
-    <div>
-      alignmentOffset: 15
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 57`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-left"
-    portalId="1-ContextMenu-Portal-65"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: left
-    </div>
-    <div>
-      directonOffset: 0
-    </div>
-    <div>
-      alignment: start
-    </div>
-    <div>
-      alignmentOffset: -15
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 58`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-left"
-    portalId="1-ContextMenu-Portal-66"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: left
-    </div>
-    <div>
-      directonOffset: 15
-    </div>
-    <div>
-      alignment: start
-    </div>
-    <div>
-      alignmentOffset: 0
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 59`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-left"
-    portalId="1-ContextMenu-Portal-67"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: left
-    </div>
-    <div>
-      directonOffset: 15
-    </div>
-    <div>
-      alignment: start
-    </div>
-    <div>
-      alignmentOffset: 15
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 60`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-left"
-    portalId="1-ContextMenu-Portal-68"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: left
-    </div>
-    <div>
-      directonOffset: 15
-    </div>
-    <div>
-      alignment: start
-    </div>
-    <div>
-      alignmentOffset: -15
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 61`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-left"
-    portalId="1-ContextMenu-Portal-69"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: left
-    </div>
-    <div>
-      directonOffset: -15
-    </div>
-    <div>
-      alignment: start
-    </div>
-    <div>
-      alignmentOffset: 0
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 62`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-left"
-    portalId="1-ContextMenu-Portal-70"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: left
-    </div>
-    <div>
-      directonOffset: -15
-    </div>
-    <div>
-      alignment: start
-    </div>
-    <div>
-      alignmentOffset: 15
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 63`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-left"
-    portalId="1-ContextMenu-Portal-71"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: left
-    </div>
-    <div>
-      directonOffset: -15
-    </div>
-    <div>
-      alignment: start
-    </div>
-    <div>
-      alignmentOffset: -15
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 64`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-left"
-    portalId="1-ContextMenu-Portal-72"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: left
-    </div>
-    <div>
-      directonOffset: 0
-    </div>
-    <div>
-      alignment: center
-    </div>
-    <div>
-      alignmentOffset: 0
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 65`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-left"
-    portalId="1-ContextMenu-Portal-73"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: left
-    </div>
-    <div>
-      directonOffset: 0
-    </div>
-    <div>
-      alignment: center
-    </div>
-    <div>
-      alignmentOffset: 15
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 66`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-left"
-    portalId="1-ContextMenu-Portal-74"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: left
-    </div>
-    <div>
-      directonOffset: 0
-    </div>
-    <div>
-      alignment: center
-    </div>
-    <div>
-      alignmentOffset: -15
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 67`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-left"
-    portalId="1-ContextMenu-Portal-75"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: left
-    </div>
-    <div>
-      directonOffset: 15
-    </div>
-    <div>
-      alignment: center
-    </div>
-    <div>
-      alignmentOffset: 0
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 68`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-left"
-    portalId="1-ContextMenu-Portal-76"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: left
-    </div>
-    <div>
-      directonOffset: 15
-    </div>
-    <div>
-      alignment: center
-    </div>
-    <div>
-      alignmentOffset: 15
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 69`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-left"
-    portalId="1-ContextMenu-Portal-77"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: left
-    </div>
-    <div>
-      directonOffset: 15
-    </div>
-    <div>
-      alignment: center
-    </div>
-    <div>
-      alignmentOffset: -15
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 70`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-left"
-    portalId="1-ContextMenu-Portal-78"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: left
-    </div>
-    <div>
-      directonOffset: -15
-    </div>
-    <div>
-      alignment: center
-    </div>
-    <div>
-      alignmentOffset: 0
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 71`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-left"
-    portalId="1-ContextMenu-Portal-79"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: left
-    </div>
-    <div>
-      directonOffset: -15
-    </div>
-    <div>
-      alignment: center
-    </div>
-    <div>
-      alignmentOffset: 15
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 72`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-left"
-    portalId="1-ContextMenu-Portal-80"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: left
-    </div>
-    <div>
-      directonOffset: -15
-    </div>
-    <div>
-      alignment: center
-    </div>
-    <div>
-      alignmentOffset: -15
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 73`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-left"
-    portalId="1-ContextMenu-Portal-81"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: left
-    </div>
-    <div>
-      directonOffset: 0
-    </div>
-    <div>
-      alignment: end
-    </div>
-    <div>
-      alignmentOffset: 0
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 74`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-left"
-    portalId="1-ContextMenu-Portal-82"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: left
-    </div>
-    <div>
-      directonOffset: 0
-    </div>
-    <div>
-      alignment: end
-    </div>
-    <div>
-      alignmentOffset: 15
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 75`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-left"
-    portalId="1-ContextMenu-Portal-83"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: left
-    </div>
-    <div>
-      directonOffset: 0
-    </div>
-    <div>
-      alignment: end
-    </div>
-    <div>
-      alignmentOffset: -15
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 76`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-left"
-    portalId="1-ContextMenu-Portal-84"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: left
-    </div>
-    <div>
-      directonOffset: 15
-    </div>
-    <div>
-      alignment: end
-    </div>
-    <div>
-      alignmentOffset: 0
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 77`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-left"
-    portalId="1-ContextMenu-Portal-85"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: left
-    </div>
-    <div>
-      directonOffset: 15
-    </div>
-    <div>
-      alignment: end
-    </div>
-    <div>
-      alignmentOffset: 15
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 78`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-left"
-    portalId="1-ContextMenu-Portal-86"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: left
-    </div>
-    <div>
-      directonOffset: 15
-    </div>
-    <div>
-      alignment: end
-    </div>
-    <div>
-      alignmentOffset: -15
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 79`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-left"
-    portalId="1-ContextMenu-Portal-87"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: left
-    </div>
-    <div>
-      directonOffset: -15
-    </div>
-    <div>
-      alignment: end
-    </div>
-    <div>
-      alignmentOffset: 0
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 80`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-left"
-    portalId="1-ContextMenu-Portal-88"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: left
-    </div>
-    <div>
-      directonOffset: -15
-    </div>
-    <div>
-      alignment: end
-    </div>
-    <div>
-      alignmentOffset: 15
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 81`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-left"
-    portalId="1-ContextMenu-Portal-89"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: left
-    </div>
-    <div>
-      directonOffset: -15
-    </div>
-    <div>
-      alignment: end
-    </div>
-    <div>
-      alignmentOffset: -15
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 82`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-right"
-    portalId="1-ContextMenu-Portal-90"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: right
-    </div>
-    <div>
-      directonOffset: 0
-    </div>
-    <div>
-      alignment: start
-    </div>
-    <div>
-      alignmentOffset: 0
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 83`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-right"
-    portalId="1-ContextMenu-Portal-91"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: right
-    </div>
-    <div>
-      directonOffset: 0
-    </div>
-    <div>
-      alignment: start
-    </div>
-    <div>
-      alignmentOffset: 15
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 84`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-right"
-    portalId="1-ContextMenu-Portal-92"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: right
-    </div>
-    <div>
-      directonOffset: 0
-    </div>
-    <div>
-      alignment: start
-    </div>
-    <div>
-      alignmentOffset: -15
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 85`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-right"
-    portalId="1-ContextMenu-Portal-93"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: right
-    </div>
-    <div>
-      directonOffset: 15
-    </div>
-    <div>
-      alignment: start
-    </div>
-    <div>
-      alignmentOffset: 0
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 86`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-right"
-    portalId="1-ContextMenu-Portal-94"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: right
-    </div>
-    <div>
-      directonOffset: 15
-    </div>
-    <div>
-      alignment: start
-    </div>
-    <div>
-      alignmentOffset: 15
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 87`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-right"
-    portalId="1-ContextMenu-Portal-95"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: right
-    </div>
-    <div>
-      directonOffset: 15
-    </div>
-    <div>
-      alignment: start
-    </div>
-    <div>
-      alignmentOffset: -15
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 88`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-right"
-    portalId="1-ContextMenu-Portal-96"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: right
-    </div>
-    <div>
-      directonOffset: -15
-    </div>
-    <div>
-      alignment: start
-    </div>
-    <div>
-      alignmentOffset: 0
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 89`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-right"
-    portalId="1-ContextMenu-Portal-97"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: right
-    </div>
-    <div>
-      directonOffset: -15
-    </div>
-    <div>
-      alignment: start
-    </div>
-    <div>
-      alignmentOffset: 15
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 90`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-right"
-    portalId="1-ContextMenu-Portal-98"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: right
-    </div>
-    <div>
-      directonOffset: -15
-    </div>
-    <div>
-      alignment: start
-    </div>
-    <div>
-      alignmentOffset: -15
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 91`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-right"
-    portalId="1-ContextMenu-Portal-99"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: right
-    </div>
-    <div>
-      directonOffset: 0
-    </div>
-    <div>
-      alignment: center
-    </div>
-    <div>
-      alignmentOffset: 0
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 92`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-right"
-    portalId="1-ContextMenu-Portal-100"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: right
-    </div>
-    <div>
-      directonOffset: 0
-    </div>
-    <div>
-      alignment: center
-    </div>
-    <div>
-      alignmentOffset: 15
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 93`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-right"
-    portalId="1-ContextMenu-Portal-101"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: right
-    </div>
-    <div>
-      directonOffset: 0
-    </div>
-    <div>
-      alignment: center
-    </div>
-    <div>
-      alignmentOffset: -15
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 94`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-right"
-    portalId="1-ContextMenu-Portal-102"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: right
-    </div>
-    <div>
-      directonOffset: 15
-    </div>
-    <div>
-      alignment: center
-    </div>
-    <div>
-      alignmentOffset: 0
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 95`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-right"
-    portalId="1-ContextMenu-Portal-103"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: right
-    </div>
-    <div>
-      directonOffset: 15
-    </div>
-    <div>
-      alignment: center
-    </div>
-    <div>
-      alignmentOffset: 15
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 96`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-right"
-    portalId="1-ContextMenu-Portal-104"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: right
-    </div>
-    <div>
-      directonOffset: 15
-    </div>
-    <div>
-      alignment: center
-    </div>
-    <div>
-      alignmentOffset: -15
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 97`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-right"
-    portalId="1-ContextMenu-Portal-105"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: right
-    </div>
-    <div>
-      directonOffset: -15
-    </div>
-    <div>
-      alignment: center
-    </div>
-    <div>
-      alignmentOffset: 0
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 98`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-right"
-    portalId="1-ContextMenu-Portal-106"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: right
-    </div>
-    <div>
-      directonOffset: -15
-    </div>
-    <div>
-      alignment: center
-    </div>
-    <div>
-      alignmentOffset: 15
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 99`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-right"
-    portalId="1-ContextMenu-Portal-107"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: right
-    </div>
-    <div>
-      directonOffset: -15
-    </div>
-    <div>
-      alignment: center
-    </div>
-    <div>
-      alignmentOffset: -15
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 100`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-right"
-    portalId="1-ContextMenu-Portal-108"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: right
-    </div>
-    <div>
-      directonOffset: 0
-    </div>
-    <div>
-      alignment: end
-    </div>
-    <div>
-      alignmentOffset: 0
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 101`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-right"
-    portalId="1-ContextMenu-Portal-109"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: right
-    </div>
-    <div>
-      directonOffset: 0
-    </div>
-    <div>
-      alignment: end
-    </div>
-    <div>
-      alignmentOffset: 15
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 102`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-right"
-    portalId="1-ContextMenu-Portal-110"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: right
-    </div>
-    <div>
-      directonOffset: 0
-    </div>
-    <div>
-      alignment: end
-    </div>
-    <div>
-      alignmentOffset: -15
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 103`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-right"
-    portalId="1-ContextMenu-Portal-111"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: right
-    </div>
-    <div>
-      directonOffset: 15
-    </div>
-    <div>
-      alignment: end
-    </div>
-    <div>
-      alignmentOffset: 0
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 104`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-right"
-    portalId="1-ContextMenu-Portal-112"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: right
-    </div>
-    <div>
-      directonOffset: 15
-    </div>
-    <div>
-      alignment: end
-    </div>
-    <div>
-      alignmentOffset: 15
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 105`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-right"
-    portalId="1-ContextMenu-Portal-113"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: right
-    </div>
-    <div>
-      directonOffset: 15
-    </div>
-    <div>
-      alignment: end
-    </div>
-    <div>
-      alignmentOffset: -15
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 106`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-right"
-    portalId="1-ContextMenu-Portal-114"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: right
-    </div>
-    <div>
-      directonOffset: -15
-    </div>
-    <div>
-      alignment: end
-    </div>
-    <div>
-      alignmentOffset: 0
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 107`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-right"
-    portalId="1-ContextMenu-Portal-115"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: right
-    </div>
-    <div>
-      directonOffset: -15
-    </div>
-    <div>
-      alignment: end
-    </div>
-    <div>
-      alignmentOffset: 15
-    </div>
-  </Portal>
-</span>
-`;
-
-exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 108`] = `
-<span
-  className="lucid-ContextMenu"
->
-  Target
-  <Portal
-    className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-right"
-    portalId="1-ContextMenu-Portal-116"
-    style={
-      Object {
-        "background": "white",
-        "boxShadow": "1px 1px 4px black",
-        "minWidth": 0,
-        "padding": 4,
-      }
-    }
-  >
-    <div>
-      direction: right
-    </div>
-    <div>
-      directonOffset: -15
-    </div>
-    <div>
-      alignment: end
-    </div>
-    <div>
-      alignmentOffset: -15
-    </div>
-  </Portal>
-</span>
+    <span
+      class="lucid-Button-content"
+    >
+      Target
+    </span>
+  </button>
+</span>
+`;
+
+exports[`ContextMenu [common] example testing should match snapshot(s) for DirectionsInteractive 1`] = `
+<section>
+  <section
+    style="display:flex;flex-direction:column"
+  >
+    <div
+      class="lucid-DropMenu lucid-DropMenu-base lucid-SingleSelect"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        <div
+          class="lucid-DropMenu-Control"
+          tabindex="0"
+        >
+          <div
+            class="lucid-SingleSelect-Control lucid-SingleSelect-Control-is-null-option"
+            tabindex="0"
+          >
+            <span
+              class="lucid-SingleSelect-Control-content"
+            >
+              Select a direction
+            </span>
+            <svg
+              class="lucid-Icon lucid-Icon-color-primary lucid-ChevronIcon lucid-ChevronIcon-is-down"
+              height="12"
+              preserveAspectRatio="xMidYMid meet"
+              viewBox="0 0 16 16"
+              width="12"
+            >
+              <path
+                d="M.5 4.5l7.5 7 7.5-7"
+              />
+            </svg>
+          </div>
+        </div>
+      </span>
+    </div>
+    directonOffset:
+    <input
+      class="lucid-TextField lucid-TextField-is-single-line"
+      rows="5"
+      style="width:100px"
+      type="text"
+      value=""
+    />
+    <div
+      class="lucid-DropMenu lucid-DropMenu-base lucid-SingleSelect"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        <div
+          class="lucid-DropMenu-Control"
+          tabindex="0"
+        >
+          <div
+            class="lucid-SingleSelect-Control lucid-SingleSelect-Control-is-null-option"
+            tabindex="0"
+          >
+            <span
+              class="lucid-SingleSelect-Control-content"
+            >
+              Select an alignment
+            </span>
+            <svg
+              class="lucid-Icon lucid-Icon-color-primary lucid-ChevronIcon lucid-ChevronIcon-is-down"
+              height="12"
+              preserveAspectRatio="xMidYMid meet"
+              viewBox="0 0 16 16"
+              width="12"
+            >
+              <path
+                d="M.5 4.5l7.5 7 7.5-7"
+              />
+            </svg>
+          </div>
+        </div>
+      </span>
+    </div>
+    alignmentOffset:
+    <input
+      class="lucid-TextField lucid-TextField-is-single-line"
+      rows="5"
+      style="width:100px"
+      type="text"
+      value=""
+    />
+    getAlignmentOffset:
+    <input
+      class="lucid-TextField lucid-TextField-is-disabled lucid-TextField-is-single-line"
+      disabled=""
+      rows="5"
+      style="width:100px"
+      type="text"
+      value=""
+    />
+    <code />
+  </section>
+  <section
+    style="display:flex;flex-direction:row;justify-content:center;margin:90px"
+  >
+    <span
+      class="lucid-ContextMenu"
+    >
+      Target
+    </span>
+  </section>
+</section>
+`;
+
+exports[`ContextMenu [common] example testing should match snapshot(s) for DirectionsStatic 1`] = `
+<section
+  style="display:flex;flex-direction:row;margin:0 60px"
+>
+  <section
+    style="display:flex;flex-direction:column;align-items:center;flex-grow:1"
+  >
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+  </section>
+  <section
+    style="display:flex;flex-direction:column;align-items:center;flex-grow:1"
+  >
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+  </section>
+  <section
+    style="display:flex;flex-direction:column;align-items:center;flex-grow:1"
+  >
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+  </section>
+  <section
+    style="display:flex;flex-direction:column;align-items:center;flex-grow:1"
+  >
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+    <div
+      style="margin-top:120px"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        Target
+      </span>
+    </div>
+  </section>
+</section>
+`;
+
+exports[`ContextMenu [common] example testing should match snapshot(s) for MenuBar 1`] = `
+<section>
+  <span
+    class="lucid-ContextMenu"
+  >
+    <div
+      style="background:#eaeaea;outline:solid 1px #d1d1d1;padding:4px;cursor:pointer"
+    >
+      File
+    </div>
+  </span>
+  <span
+    class="lucid-ContextMenu"
+  >
+    <div
+      style="background:#eaeaea;outline:solid 1px #d1d1d1;padding:4px;cursor:pointer"
+    >
+      Edit
+    </div>
+  </span>
+</section>
 `;

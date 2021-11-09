@@ -1,536 +1,564 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SearchField [common] example testing should match snapshot(s) for 01.basic 1`] = `
+exports[`SearchField [common] example testing should match snapshot(s) for CustomIcon 1`] = `
 <div
-  className="lucid-SearchField"
+  class="lucid-SearchField"
 >
-  <TextField
-    debounceLevel={500}
-    isDisabled={false}
-    isMultiLine={false}
-    lazyLevel={1000}
-    onBlur={[Function]}
-    onChange={[Function]}
-    onChangeDebounced={[Function]}
-    onKeyDown={[Function]}
-    onSubmit={[Function]}
-    rows={5}
+  <input
+    class="lucid-TextField lucid-TextField-is-single-line"
+    rows="5"
+    type="text"
     value=""
   />
   <div
-    className="lucid-SearchField-Icon-container"
+    class="lucid-SearchField-Icon-container"
   >
-    <SearchIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-SearchField-Icon"
-      color="primary"
-      isClickable={false}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={12}
-      viewBox="0 0 16 16"
-    />
+    <svg
+      class="lucid-Icon lucid-Icon-color-primary lucid-LoadingIcon lucid-SearchField-Icon"
+      height="16"
+      preserveAspectRatio="xMidYMid meet"
+      style="animation-duration:1.25s"
+      viewBox="0 0 100 100"
+      width="16"
+    >
+      <rect
+        fill="none"
+        height="100"
+        width="100"
+        x="0"
+        y="0"
+      />
+      <circle
+        class="lucid-LoadingIcon-circle"
+        cx="50"
+        cy="50"
+        r="40"
+      />
+      <circle
+        class="lucid-LoadingIcon-spinner"
+        cx="50"
+        cy="50"
+        r="40"
+        style="animation-duration:1.25s"
+      />
+    </svg>
   </div>
 </div>
 `;
 
-exports[`SearchField [common] example testing should match snapshot(s) for 02.interactive 1`] = `
-<div
-  className="lucid-SearchField"
->
-  <TextField
-    debounceLevel={500}
-    isDisabled={false}
-    isMultiLine={false}
-    lazyLevel={1000}
-    onBlur={[Function]}
-    onChange={[Function]}
-    onChangeDebounced={[Function]}
-    onKeyDown={[Function]}
-    onSubmit={[Function]}
-    rows={5}
-    value=""
-  />
+exports[`SearchField [common] example testing should match snapshot(s) for CustomTextField 1`] = `
+<div>
   <div
-    className="lucid-SearchField-Icon-container"
+    class="lucid-SearchField"
   >
-    <SearchIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-SearchField-Icon"
-      color="primary"
-      isClickable={false}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={12}
-      viewBox="0 0 16 16"
+    <input
+      class="lucid-TextField lucid-TextField-is-single-line"
+      rows="5"
+      type="text"
+      value=""
     />
+    <div
+      class="lucid-SearchField-Icon-container"
+    >
+      <svg
+        class="lucid-Icon lucid-Icon-color-primary lucid-SearchIcon lucid-SearchField-Icon"
+        height="12"
+        preserveAspectRatio="xMidYMid meet"
+        viewBox="0 0 16 16"
+        width="12"
+      >
+        <circle
+          cx="6"
+          cy="6"
+          r="5.5"
+        />
+        <path
+          d="M15.5 15.5L9.876 9.876"
+        />
+      </svg>
+    </div>
+  </div>
+  <div
+    style="margin-top:10px;margin-left:10px"
+  >
+    <div>
+      Hit "enter" to submit: 
+    </div>
+    <div>
+      Last keydown: 
+    </div>
+    <div>
+      Value on blur: 
+    </div>
   </div>
 </div>
 `;
 
-exports[`SearchField [common] example testing should match snapshot(s) for 03.placeholder 1`] = `
+exports[`SearchField [common] example testing should match snapshot(s) for Debounced 1`] = `
+<div>
+  <div
+    class="lucid-SearchField"
+    style="margin-bottom:10px"
+  >
+    <input
+      class="lucid-TextField lucid-TextField-is-single-line"
+      rows="5"
+      type="text"
+      value="foo"
+    />
+    <div
+      class="lucid-SearchField-Icon-container"
+    >
+      <svg
+        class="lucid-Icon lucid-Icon-color-primary lucid-SearchIcon lucid-SearchField-Icon lucid-SearchField-Icon-active"
+        height="12"
+        preserveAspectRatio="xMidYMid meet"
+        viewBox="0 0 16 16"
+        width="12"
+      >
+        <circle
+          cx="6"
+          cy="6"
+          r="5.5"
+        />
+        <path
+          d="M15.5 15.5L9.876 9.876"
+        />
+      </svg>
+    </div>
+  </div>
+  <div
+    style="margin-bottom:10px;margin-left:10px"
+  >
+    this.state.value: foo
+  </div>
+  <button
+    class="lucid-Button"
+    type="button"
+  >
+    <span
+      class="lucid-Button-content"
+    >
+      Set TextField to "foo"
+    </span>
+  </button>
+</div>
+`;
+
+exports[`SearchField [common] example testing should match snapshot(s) for Default 1`] = `
 <div
-  className="lucid-SearchField"
+  class="lucid-SearchField"
 >
-  <TextField
-    debounceLevel={500}
-    isDisabled={false}
-    isMultiLine={false}
-    lazyLevel={1000}
-    onBlur={[Function]}
-    onChange={[Function]}
-    onChangeDebounced={[Function]}
-    onKeyDown={[Function]}
-    onSubmit={[Function]}
+  <input
+    class="lucid-TextField lucid-TextField-is-single-line"
+    rows="5"
+    type="text"
+    value=""
+  />
+  <div
+    class="lucid-SearchField-Icon-container"
+  >
+    <svg
+      class="lucid-Icon lucid-Icon-color-primary lucid-SearchIcon lucid-SearchField-Icon"
+      height="12"
+      preserveAspectRatio="xMidYMid meet"
+      viewBox="0 0 16 16"
+      width="12"
+    >
+      <circle
+        cx="6"
+        cy="6"
+        r="5.5"
+      />
+      <path
+        d="M15.5 15.5L9.876 9.876"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`SearchField [common] example testing should match snapshot(s) for Disabled 1`] = `
+<div
+  class="lucid-SearchField"
+>
+  <input
+    class="lucid-TextField lucid-TextField-is-disabled lucid-TextField-is-single-line"
+    disabled=""
+    rows="5"
+    type="text"
+    value=""
+  />
+  <div
+    class="lucid-SearchField-Icon-container lucid-SearchField-Icon-is-disabled"
+  >
+    <svg
+      class="lucid-Icon lucid-Icon-color-primary lucid-SearchIcon lucid-SearchField-Icon"
+      height="12"
+      preserveAspectRatio="xMidYMid meet"
+      viewBox="0 0 16 16"
+      width="12"
+    >
+      <circle
+        cx="6"
+        cy="6"
+        r="5.5"
+      />
+      <path
+        d="M15.5 15.5L9.876 9.876"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`SearchField [common] example testing should match snapshot(s) for Interactive 1`] = `
+<div>
+  <div
+    class="lucid-SearchField"
+  >
+    <input
+      class="lucid-TextField lucid-TextField-is-single-line"
+      rows="5"
+      type="text"
+      value=""
+    />
+    <div
+      class="lucid-SearchField-Icon-container"
+    >
+      <svg
+        class="lucid-Icon lucid-Icon-color-primary lucid-SearchIcon lucid-SearchField-Icon"
+        height="12"
+        preserveAspectRatio="xMidYMid meet"
+        viewBox="0 0 16 16"
+        width="12"
+      >
+        <circle
+          cx="6"
+          cy="6"
+          r="5.5"
+        />
+        <path
+          d="M15.5 15.5L9.876 9.876"
+        />
+      </svg>
+    </div>
+  </div>
+  <div
+    style="margin-top:10px;margin-left:10px"
+  >
+    Hit "enter" to submit: 
+  </div>
+</div>
+`;
+
+exports[`SearchField [common] example testing should match snapshot(s) for Placeholder 1`] = `
+<div
+  class="lucid-SearchField"
+>
+  <input
+    class="lucid-TextField lucid-TextField-is-single-line"
     placeholder="Name/ID"
-    rows={5}
+    rows="5"
+    type="text"
     value=""
   />
   <div
-    className="lucid-SearchField-Icon-container"
+    class="lucid-SearchField-Icon-container"
   >
-    <SearchIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-SearchField-Icon"
-      color="primary"
-      isClickable={false}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={12}
+    <svg
+      class="lucid-Icon lucid-Icon-color-primary lucid-SearchIcon lucid-SearchField-Icon"
+      height="12"
+      preserveAspectRatio="xMidYMid meet"
       viewBox="0 0 16 16"
-    />
+      width="12"
+    >
+      <circle
+        cx="6"
+        cy="6"
+        r="5.5"
+      />
+      <path
+        d="M15.5 15.5L9.876 9.876"
+      />
+    </svg>
   </div>
 </div>
 `;
 
-exports[`SearchField [common] example testing should match snapshot(s) for 04.disabled 1`] = `
-<div
-  className="lucid-SearchField"
->
-  <TextField
-    debounceLevel={500}
-    isDisabled={true}
-    isMultiLine={false}
-    lazyLevel={1000}
-    onBlur={[Function]}
-    onChange={[Function]}
-    onChangeDebounced={[Function]}
-    onKeyDown={[Function]}
-    onSubmit={[Function]}
-    rows={5}
-    value=""
-  />
+exports[`SearchField [common] example testing should match snapshot(s) for Props 1`] = `
+<div>
   <div
-    className="lucid-SearchField-Icon-container lucid-SearchField-Icon-is-disabled"
+    class="lucid-SearchField"
   >
-    <SearchIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-SearchField-Icon"
-      color="primary"
-      isClickable={false}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={12}
-      viewBox="0 0 16 16"
+    <input
+      class="lucid-TextField lucid-TextField-is-single-line"
+      rows="5"
+      type="text"
+      value="foo"
     />
+    <div
+      class="lucid-SearchField-Icon-container"
+    >
+      <svg
+        class="lucid-Icon lucid-Icon-color-primary lucid-SearchIcon lucid-SearchField-Icon lucid-SearchField-Icon-active"
+        height="12"
+        preserveAspectRatio="xMidYMid meet"
+        viewBox="0 0 16 16"
+        width="12"
+      >
+        <circle
+          cx="6"
+          cy="6"
+          r="5.5"
+        />
+        <path
+          d="M15.5 15.5L9.876 9.876"
+        />
+      </svg>
+    </div>
+  </div>
+  <div
+    class="lucid-SearchField"
+  >
+    <input
+      class="lucid-TextField lucid-TextField-is-single-line"
+      placeholder="bar"
+      rows="5"
+      type="text"
+      value=""
+    />
+    <div
+      class="lucid-SearchField-Icon-container"
+    >
+      <svg
+        class="lucid-Icon lucid-Icon-color-primary lucid-SearchIcon lucid-SearchField-Icon"
+        height="12"
+        preserveAspectRatio="xMidYMid meet"
+        viewBox="0 0 16 16"
+        width="12"
+      >
+        <circle
+          cx="6"
+          cy="6"
+          r="5.5"
+        />
+        <path
+          d="M15.5 15.5L9.876 9.876"
+        />
+      </svg>
+    </div>
+  </div>
+  <div
+    class="lucid-SearchField"
+  >
+    <input
+      class="lucid-TextField lucid-TextField-is-disabled lucid-TextField-is-single-line"
+      disabled=""
+      rows="5"
+      type="text"
+      value=""
+    />
+    <div
+      class="lucid-SearchField-Icon-container lucid-SearchField-Icon-is-disabled"
+    >
+      <svg
+        class="lucid-Icon lucid-Icon-color-primary lucid-SearchIcon lucid-SearchField-Icon"
+        height="12"
+        preserveAspectRatio="xMidYMid meet"
+        viewBox="0 0 16 16"
+        width="12"
+      >
+        <circle
+          cx="6"
+          cy="6"
+          r="5.5"
+        />
+        <path
+          d="M15.5 15.5L9.876 9.876"
+        />
+      </svg>
+    </div>
+  </div>
+  <div
+    class="lucid-SearchField"
+  >
+    <input
+      class="lucid-TextField lucid-TextField-is-single-line"
+      rows="5"
+      type="text"
+      value=""
+    />
+    <div
+      class="lucid-SearchField-Icon-container"
+    >
+      <svg
+        class="lucid-Icon lucid-Icon-color-primary lucid-SearchIcon lucid-SearchField-Icon"
+        height="12"
+        preserveAspectRatio="xMidYMid meet"
+        viewBox="0 0 16 16"
+        width="12"
+      >
+        <circle
+          cx="6"
+          cy="6"
+          r="5.5"
+        />
+        <path
+          d="M15.5 15.5L9.876 9.876"
+        />
+      </svg>
+    </div>
+  </div>
+  <div
+    class="lucid-SearchField"
+  >
+    <input
+      class="lucid-TextField lucid-TextField-is-single-line"
+      rows="5"
+      type="text"
+      value=""
+    />
+    <div
+      class="lucid-SearchField-Icon-container"
+    >
+      <svg
+        class="lucid-Icon lucid-Icon-color-primary lucid-LoadingIcon lucid-SearchField-Icon"
+        height="16"
+        preserveAspectRatio="xMidYMid meet"
+        style="animation-duration:1.25s"
+        viewBox="0 0 100 100"
+        width="16"
+      >
+        <rect
+          fill="none"
+          height="100"
+          width="100"
+          x="0"
+          y="0"
+        />
+        <circle
+          class="lucid-LoadingIcon-circle"
+          cx="50"
+          cy="50"
+          r="40"
+        />
+        <circle
+          class="lucid-LoadingIcon-spinner"
+          cx="50"
+          cy="50"
+          r="40"
+          style="animation-duration:1.25s"
+        />
+      </svg>
+    </div>
+  </div>
+  <div
+    class="lucid-SearchField"
+  >
+    <input
+      class="lucid-TextField lucid-TextField-is-single-line"
+      rows="5"
+      type="text"
+      value="foo"
+    />
+    <div
+      class="lucid-SearchField-Icon-container"
+    >
+      <svg
+        class="lucid-Icon lucid-Icon-color-primary lucid-LoadingIcon lucid-SearchField-Icon lucid-SearchField-Icon-active"
+        height="16"
+        preserveAspectRatio="xMidYMid meet"
+        style="animation-duration:1.25s"
+        viewBox="0 0 100 100"
+        width="16"
+      >
+        <rect
+          fill="none"
+          height="100"
+          width="100"
+          x="0"
+          y="0"
+        />
+        <circle
+          class="lucid-LoadingIcon-circle"
+          cx="50"
+          cy="50"
+          r="40"
+        />
+        <circle
+          class="lucid-LoadingIcon-spinner"
+          cx="50"
+          cy="50"
+          r="40"
+          style="animation-duration:1.25s"
+        />
+      </svg>
+    </div>
+  </div>
+  <div
+    class="lucid-SearchField"
+  >
+    <input
+      class="lucid-TextField lucid-TextField-is-single-line"
+      rows="5"
+      type="text"
+      value="bar"
+    />
+    <div
+      class="lucid-SearchField-Icon-container"
+    >
+      <svg
+        class="lucid-Icon lucid-Icon-color-primary lucid-SearchIcon lucid-SearchField-Icon lucid-SearchField-Icon-active"
+        height="12"
+        preserveAspectRatio="xMidYMid meet"
+        viewBox="0 0 16 16"
+        width="12"
+      >
+        <circle
+          cx="6"
+          cy="6"
+          r="5.5"
+        />
+        <path
+          d="M15.5 15.5L9.876 9.876"
+        />
+      </svg>
+    </div>
   </div>
 </div>
 `;
 
-exports[`SearchField [common] example testing should match snapshot(s) for 05.custom-icon 1`] = `
+exports[`SearchField [common] example testing should match snapshot(s) for ValidSearch 1`] = `
 <div
-  className="lucid-SearchField"
+  class="lucid-SearchField"
 >
-  <TextField
-    debounceLevel={500}
-    isDisabled={false}
-    isMultiLine={false}
-    lazyLevel={1000}
-    onBlur={[Function]}
-    onChange={[Function]}
-    onChangeDebounced={[Function]}
-    onKeyDown={[Function]}
-    onSubmit={[Function]}
-    rows={5}
-    value=""
-  />
-  <div
-    className="lucid-SearchField-Icon-container"
-  >
-    <LoadingIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-SearchField-Icon"
-      color="primary"
-      isClickable={false}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={16}
-      viewBox="0 0 16 16"
-    />
-  </div>
-</div>
-`;
-
-exports[`SearchField [common] example testing should match snapshot(s) for 06.custom-text-field 1`] = `
-<div
-  className="lucid-SearchField"
->
-  <TextField
-    debounceLevel={500}
-    isDisabled={false}
-    isMultiLine={false}
-    lazyLevel={1000}
-    onBlur={[Function]}
-    onChange={[Function]}
-    onChangeDebounced={[Function]}
-    onKeyDown={[Function]}
-    onSubmit={[Function]}
-    rows={5}
-    value=""
-  />
-  <div
-    className="lucid-SearchField-Icon-container"
-  >
-    <SearchIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-SearchField-Icon"
-      color="primary"
-      isClickable={false}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={12}
-      viewBox="0 0 16 16"
-    />
-  </div>
-</div>
-`;
-
-exports[`SearchField [common] example testing should match snapshot(s) for 07.valid-search 1`] = `
-<div
-  className="lucid-SearchField"
-  onBlur={[Function]}
-  onKeyDown={[Function]}
->
-  <TextField
-    debounceLevel={500}
-    isDisabled={false}
-    isMultiLine={false}
-    lazyLevel={1000}
-    onBlur={[Function]}
-    onChange={[Function]}
-    onChangeDebounced={[Function]}
-    onKeyDown={[Function]}
-    onSubmit={[Function]}
+  <input
+    class="lucid-TextField lucid-TextField-is-single-line"
     placeholder="Search icon doesn't become active until you type at least three characters ----->"
-    rows={5}
+    rows="5"
+    type="text"
     value=""
   />
   <div
-    className="lucid-SearchField-Icon-container"
+    class="lucid-SearchField-Icon-container"
   >
-    <SearchIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-SearchField-Icon"
-      color="primary"
-      isClickable={false}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={12}
+    <svg
+      class="lucid-Icon lucid-Icon-color-primary lucid-SearchIcon lucid-SearchField-Icon"
+      height="12"
+      preserveAspectRatio="xMidYMid meet"
       viewBox="0 0 16 16"
-    />
-  </div>
-</div>
-`;
-
-exports[`SearchField [common] example testing should match snapshot(s) for 08.props 1`] = `
-<div
-  className="lucid-SearchField"
->
-  <TextField
-    debounceLevel={500}
-    isDisabled={false}
-    isMultiLine={false}
-    lazyLevel={1000}
-    onBlur={[Function]}
-    onChange={[Function]}
-    onChangeDebounced={[Function]}
-    onKeyDown={[Function]}
-    onSubmit={[Function]}
-    rows={5}
-    value="foo"
-  />
-  <div
-    className="lucid-SearchField-Icon-container"
-  >
-    <SearchIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-SearchField-Icon lucid-SearchField-Icon-active"
-      color="primary"
-      isClickable={false}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={12}
-      viewBox="0 0 16 16"
-    />
-  </div>
-</div>
-`;
-
-exports[`SearchField [common] example testing should match snapshot(s) for 08.props 2`] = `
-<div
-  className="lucid-SearchField"
->
-  <TextField
-    debounceLevel={500}
-    isDisabled={false}
-    isMultiLine={false}
-    lazyLevel={1000}
-    onBlur={[Function]}
-    onChange={[Function]}
-    onChangeDebounced={[Function]}
-    onKeyDown={[Function]}
-    onSubmit={[Function]}
-    placeholder="bar"
-    rows={5}
-    value=""
-  />
-  <div
-    className="lucid-SearchField-Icon-container"
-  >
-    <SearchIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-SearchField-Icon"
-      color="primary"
-      isClickable={false}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={12}
-      viewBox="0 0 16 16"
-    />
-  </div>
-</div>
-`;
-
-exports[`SearchField [common] example testing should match snapshot(s) for 08.props 3`] = `
-<div
-  className="lucid-SearchField"
->
-  <TextField
-    debounceLevel={500}
-    isDisabled={true}
-    isMultiLine={false}
-    lazyLevel={1000}
-    onBlur={[Function]}
-    onChange={[Function]}
-    onChangeDebounced={[Function]}
-    onKeyDown={[Function]}
-    onSubmit={[Function]}
-    rows={5}
-    value=""
-  />
-  <div
-    className="lucid-SearchField-Icon-container lucid-SearchField-Icon-is-disabled"
-  >
-    <SearchIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-SearchField-Icon"
-      color="primary"
-      isClickable={false}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={12}
-      viewBox="0 0 16 16"
-    />
-  </div>
-</div>
-`;
-
-exports[`SearchField [common] example testing should match snapshot(s) for 08.props 4`] = `
-<div
-  className="lucid-SearchField"
->
-  <TextField
-    debounceLevel={500}
-    isDisabled={false}
-    isMultiLine={false}
-    lazyLevel={1000}
-    onBlur={[Function]}
-    onChange={[Function]}
-    onChangeDebounced={[Function]}
-    onKeyDown={[Function]}
-    onSubmit={[Function]}
-    rows={5}
-    value=""
-  />
-  <div
-    className="lucid-SearchField-Icon-container"
-  >
-    <SearchIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-SearchField-Icon"
-      color="primary"
-      isClickable={false}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={12}
-      viewBox="0 0 16 16"
-    />
-  </div>
-</div>
-`;
-
-exports[`SearchField [common] example testing should match snapshot(s) for 08.props 5`] = `
-<div
-  className="lucid-SearchField"
->
-  <TextField
-    debounceLevel={500}
-    isDisabled={false}
-    isMultiLine={false}
-    lazyLevel={1000}
-    onBlur={[Function]}
-    onChange={[Function]}
-    onChangeDebounced={[Function]}
-    onKeyDown={[Function]}
-    onSubmit={[Function]}
-    rows={5}
-    value=""
-  />
-  <div
-    className="lucid-SearchField-Icon-container"
-  >
-    <LoadingIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-SearchField-Icon"
-      color="primary"
-      isClickable={false}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={16}
-      viewBox="0 0 16 16"
-    />
-  </div>
-</div>
-`;
-
-exports[`SearchField [common] example testing should match snapshot(s) for 08.props 6`] = `
-<div
-  className="lucid-SearchField"
->
-  <TextField
-    debounceLevel={500}
-    isDisabled={false}
-    isMultiLine={false}
-    lazyLevel={1000}
-    onBlur={[Function]}
-    onChange={[Function]}
-    onChangeDebounced={[Function]}
-    onKeyDown={[Function]}
-    onSubmit={[Function]}
-    rows={5}
-    value="foo"
-  />
-  <div
-    className="lucid-SearchField-Icon-container"
-  >
-    <LoadingIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-SearchField-Icon lucid-SearchField-Icon-active"
-      color="primary"
-      isClickable={false}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={16}
-      viewBox="0 0 16 16"
-    />
-  </div>
-</div>
-`;
-
-exports[`SearchField [common] example testing should match snapshot(s) for 08.props 7`] = `
-<div
-  className="lucid-SearchField"
->
-  <TextField
-    debounceLevel={500}
-    isDisabled={false}
-    isMultiLine={false}
-    lazyLevel={1000}
-    onBlur={[Function]}
-    onChange={[Function]}
-    onChangeDebounced={[Function]}
-    onKeyDown={[Function]}
-    onSubmit={[Function]}
-    rows={5}
-    value="bar"
-  />
-  <div
-    className="lucid-SearchField-Icon-container"
-  >
-    <SearchIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-SearchField-Icon lucid-SearchField-Icon-active"
-      color="primary"
-      isClickable={false}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={12}
-      viewBox="0 0 16 16"
-    />
-  </div>
-</div>
-`;
-
-exports[`SearchField [common] example testing should match snapshot(s) for 09.debounced 1`] = `
-<div
-  className="lucid-SearchField"
-  style={
-    Object {
-      "marginBottom": "10px",
-    }
-  }
->
-  <TextField
-    debounceLevel={500}
-    isDisabled={false}
-    isMultiLine={false}
-    lazyLevel={1000}
-    onBlur={[Function]}
-    onChange={[Function]}
-    onChangeDebounced={[Function]}
-    onKeyDown={[Function]}
-    onSubmit={[Function]}
-    rows={5}
-    value="foo"
-  />
-  <div
-    className="lucid-SearchField-Icon-container"
-  >
-    <SearchIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-SearchField-Icon lucid-SearchField-Icon-active"
-      color="primary"
-      isClickable={false}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={12}
-      viewBox="0 0 16 16"
-    />
+      width="12"
+    >
+      <circle
+        cx="6"
+        cy="6"
+        r="5.5"
+      />
+      <path
+        d="M15.5 15.5L9.876 9.876"
+      />
+    </svg>
   </div>
 </div>
 `;

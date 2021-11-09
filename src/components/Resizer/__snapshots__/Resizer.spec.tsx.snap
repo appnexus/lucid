@@ -1,55 +1,47 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Resizer [common] example testing should match snapshot(s) for basic 1`] = `
+exports[`Resizer [common] example testing should match snapshot(s) for Default 1`] = `
 <div
-  className="lucid-Resizer"
+  class="lucid-Resizer"
 >
   <div>
     <div>
-      Width: 
-      0
+      Width: 0
     </div>
     <div>
-      Height: 
-      0
+      Height: 0
     </div>
   </div>
 </div>
 `;
 
-exports[`Resizer [common] example testing should match snapshot(s) for with-flex 1`] = `
+exports[`Resizer [common] example testing should match snapshot(s) for WithFlex 1`] = `
 <div
-  className="lucid-Resizer"
-  style={
-    Object {
-      "flexGrow": 1,
-      "overflow": "hidden",
-    }
-  }
+  style="display:flex"
 >
+  <div>
+    Other content
+  </div>
   <div
-    style={
-      Object {
-        "border": "1px solid black",
-        "height": 0,
-        "width": 0,
-      }
-    }
+    class="lucid-Resizer"
+    style="flex-grow:1;overflow:hidden"
   >
-    <div>
-      When using Resizer within a flexed container, its critical to add 
-      <code>
-        flexGrow: 1, overflow: 'hidden'
-      </code>
-       to its styles so it will behave correctly.
-    </div>
-    <div>
-      Width: 
-      0
-    </div>
-    <div>
-      Height: 
-      0
+    <div
+      style="width:0;height:0;border:1px solid black"
+    >
+      <div>
+        When using Resizer within a flexed container, its critical to add 
+        <code>
+          flexGrow: 1, overflow: 'hidden'
+        </code>
+         to its styles so it will behave correctly.
+      </div>
+      <div>
+        Width: 0
+      </div>
+      <div>
+        Height: 0
+      </div>
     </div>
   </div>
 </div>

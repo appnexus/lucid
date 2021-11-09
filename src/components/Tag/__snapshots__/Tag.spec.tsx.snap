@@ -1,3976 +1,2227 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Tag [common] example testing should match snapshot(s) for 01.basic 1`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
+exports[`Tag [common] example testing should match snapshot(s) for Colors 1`] = `
+<div>
+  <div
+    class="lucid-Tag lucid-Tag-has-light-background lucid-Tag-default"
   >
-    Amet
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 01.basic 2`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    nam
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 01.basic 3`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    quibusdam
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 01.basic 4`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    nobis
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Tag-remove-button"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={7}
-      viewBox="0 0 16 16"
-    />
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 01.basic 5`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    autem
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Tag-remove-button"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={7}
-      viewBox="0 0 16 16"
-    />
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 01.basic 6`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    sapiente
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Tag-remove-button"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={7}
-      viewBox="0 0 16 16"
-    />
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 01.basic 7`] = `
-<div
-  className="lucid-Tag lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Fruits
-  </span>
-  <Tag
-    hasLightBackground={true}
-    isRemovable={false}
-    isTop={false}
-    key=".1"
-    kind="default"
-    onRemove={[Function]}
-  >
-    Apples
-  </Tag>
-  <Tag
-    hasLightBackground={true}
-    isRemovable={false}
-    isTop={false}
-    key=".2"
-    kind="default"
-    onRemove={[Function]}
-  >
-    Oranges
-  </Tag>
-  <Tag
-    hasLightBackground={true}
-    isRemovable={false}
-    isTop={false}
-    key=".3"
-    kind="default"
-    onRemove={[Function]}
-  >
-    Bananas
-  </Tag>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 01.basic 8`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Apples
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 01.basic 9`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Oranges
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 01.basic 10`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Bananas
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 01.basic 11`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Vegetables
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Tag-remove-button"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={7}
-      viewBox="0 0 16 16"
-    />
-  </span>
-  <Tag
-    hasLightBackground={true}
-    isRemovable={true}
-    isTop={false}
-    key=".1"
-    kind="default"
-    onRemove={[Function]}
-  >
-    Carrots
-  </Tag>
-  <Tag
-    hasLightBackground={true}
-    isRemovable={true}
-    isTop={false}
-    key=".2"
-    kind="default"
-    onRemove={[Function]}
-  >
-    Spinach
-  </Tag>
-  <Tag
-    hasLightBackground={true}
-    isRemovable={true}
-    isTop={false}
-    key=".3"
-    kind="default"
-    onRemove={[Function]}
-  >
-    Celery
-  </Tag>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 01.basic 12`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Carrots
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Tag-remove-button"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={7}
-      viewBox="0 0 16 16"
-    />
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 01.basic 13`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Spinach
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Tag-remove-button"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={7}
-      viewBox="0 0 16 16"
-    />
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 01.basic 14`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Celery
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Tag-remove-button"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={7}
-      viewBox="0 0 16 16"
-    />
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 02.nested 1`] = `
-<div
-  className="lucid-Tag lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Grouped items
-  </span>
-  <Tag
-    hasLightBackground={true}
-    isRemovable={false}
-    isTop={false}
-    key=".1:$0"
-    kind="default"
-    onRemove={[Function]}
-  >
-    Fashion
-  </Tag>
-  <Tag
-    hasLightBackground={true}
-    isRemovable={false}
-    isTop={false}
-    key=".1:$1"
-    kind="default"
-    onRemove={[Function]}
-  >
-    The
-  </Tag>
-  <Tag
-    hasLightBackground={true}
-    isRemovable={false}
-    isTop={false}
-    key=".1:$2"
-    kind="default"
-    onRemove={[Function]}
-  >
-    Vexillologist
-  </Tag>
-  <Tag
-    hasLightBackground={true}
-    isRemovable={false}
-    isTop={false}
-    key=".1:$3"
-    kind="default"
-    onRemove={[Function]}
-  >
-    Cold Brew
-  </Tag>
-  <Tag
-    hasLightBackground={true}
-    isRemovable={false}
-    isTop={false}
-    key=".1:$4"
-    kind="default"
-    onRemove={[Function]}
-  >
-    This is a longer sentence that should be handled okay
-  </Tag>
-  <Tag
-    hasLightBackground={true}
-    isRemovable={false}
-    isTop={false}
-    key=".1:$5"
-    kind="default"
-    onRemove={[Function]}
-  >
-    Fashion
-  </Tag>
-  <Tag
-    hasLightBackground={true}
-    isRemovable={false}
-    isTop={false}
-    key=".1:$6"
-    kind="default"
-    onRemove={[Function]}
-  >
-    The
-  </Tag>
-  <Tag
-    hasLightBackground={true}
-    isRemovable={false}
-    isTop={false}
-    key=".1:$7"
-    kind="default"
-    onRemove={[Function]}
-  >
-    Vexillologist
-  </Tag>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 02.nested 2`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Fashion
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 02.nested 3`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    The
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 02.nested 4`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Vexillologist
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 02.nested 5`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Cold Brew
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 02.nested 6`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    This is a longer sentence that should be handled okay
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 02.nested 7`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Fashion
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 02.nested 8`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    The
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 02.nested 9`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Vexillologist
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 02.nested 10`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Grouped items
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Tag-remove-button"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={7}
-      viewBox="0 0 16 16"
-    />
-  </span>
-  <Tag
-    hasLightBackground={true}
-    isRemovable={true}
-    isTop={false}
-    key=".1:$0"
-    kind="default"
-    onRemove={[Function]}
-  >
-    Fashion
-  </Tag>
-  <Tag
-    hasLightBackground={true}
-    isRemovable={true}
-    isTop={false}
-    key=".1:$1"
-    kind="default"
-    onRemove={[Function]}
-  >
-    The
-  </Tag>
-  <Tag
-    hasLightBackground={true}
-    isRemovable={true}
-    isTop={false}
-    key=".1:$2"
-    kind="default"
-    onRemove={[Function]}
-  >
-    Vexillologist
-  </Tag>
-  <Tag
-    hasLightBackground={true}
-    isRemovable={true}
-    isTop={false}
-    key=".1:$3"
-    kind="default"
-    onRemove={[Function]}
-  >
-    Cold Brew
-  </Tag>
-  <Tag
-    hasLightBackground={true}
-    isRemovable={true}
-    isTop={false}
-    key=".1:$4"
-    kind="default"
-    onRemove={[Function]}
-  >
-    This is a longer sentence that should be handled okay
-  </Tag>
-  <Tag
-    hasLightBackground={true}
-    isRemovable={true}
-    isTop={false}
-    key=".1:$5"
-    kind="default"
-    onRemove={[Function]}
-  >
-    Fashion
-  </Tag>
-  <Tag
-    hasLightBackground={true}
-    isRemovable={true}
-    isTop={false}
-    key=".1:$6"
-    kind="default"
-    onRemove={[Function]}
-  >
-    The
-  </Tag>
-  <Tag
-    hasLightBackground={true}
-    isRemovable={true}
-    isTop={false}
-    key=".1:$7"
-    kind="default"
-    onRemove={[Function]}
-  >
-    Vexillologist
-  </Tag>
-  <Tag
-    hasLightBackground={true}
-    isRemovable={true}
-    isTop={false}
-    key=".1:$8"
-    kind="default"
-    onRemove={[Function]}
-  >
-    Cold Brew
-  </Tag>
-  <Tag
-    hasLightBackground={true}
-    isRemovable={true}
-    isTop={false}
-    key=".1:$9"
-    kind="default"
-    onRemove={[Function]}
-  >
-    This is a longer sentence that should be handled okay
-  </Tag>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 02.nested 11`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Fashion
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Tag-remove-button"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={7}
-      viewBox="0 0 16 16"
-    />
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 02.nested 12`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    The
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Tag-remove-button"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={7}
-      viewBox="0 0 16 16"
-    />
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 02.nested 13`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Vexillologist
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Tag-remove-button"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={7}
-      viewBox="0 0 16 16"
-    />
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 02.nested 14`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Cold Brew
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Tag-remove-button"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={7}
-      viewBox="0 0 16 16"
-    />
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 02.nested 15`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    This is a longer sentence that should be handled okay
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Tag-remove-button"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={7}
-      viewBox="0 0 16 16"
-    />
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 02.nested 16`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Fashion
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Tag-remove-button"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={7}
-      viewBox="0 0 16 16"
-    />
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 02.nested 17`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    The
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Tag-remove-button"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={7}
-      viewBox="0 0 16 16"
-    />
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 02.nested 18`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Vexillologist
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Tag-remove-button"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={7}
-      viewBox="0 0 16 16"
-    />
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 02.nested 19`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Cold Brew
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Tag-remove-button"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={7}
-      viewBox="0 0 16 16"
-    />
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 02.nested 20`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    This is a longer sentence that should be handled okay
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Tag-remove-button"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={7}
-      viewBox="0 0 16 16"
-    />
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 03.double-nested 1`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-top lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Global:
-  </span>
-  <Tag
-    hasLightBackground={true}
-    isRemovable={false}
-    isTop={false}
-    key=".1"
-    kind="default"
-    onRemove={[Function]}
-  >
-    Group 1
-    <Tag
-      hasLightBackground={true}
-      isRemovable={false}
-      isTop={false}
-      key="0"
-      kind="default"
-      onRemove={[Function]}
+    <div
+      class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-info"
     >
-      Fashion
-    </Tag>
-    <Tag
-      hasLightBackground={true}
-      isRemovable={false}
-      isTop={false}
-      key="1"
-      kind="default"
-      onRemove={[Function]}
+      <span
+        class="lucid-Tag-other-children"
+      >
+        notitia
+      </span>
+    </div>
+    <div
+      class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-danger"
     >
-      The
-    </Tag>
-    <Tag
-      hasLightBackground={true}
-      isRemovable={false}
-      isTop={false}
-      key="2"
-      kind="default"
-      onRemove={[Function]}
+      <span
+        class="lucid-Tag-other-children"
+      >
+        periculum
+      </span>
+    </div>
+    <div
+      class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
     >
-      Vexillologist
-    </Tag>
-    <Tag
-      hasLightBackground={true}
-      isRemovable={false}
-      isTop={false}
-      key="3"
-      kind="default"
-      onRemove={[Function]}
+      <span
+        class="lucid-Tag-other-children"
+      >
+        deficio
+      </span>
+    </div>
+  </div>
+  <div
+    class="lucid-Tag lucid-Tag-has-light-background lucid-Tag-default"
+  >
+    <div
+      class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-info"
     >
-      Cold Brew
-    </Tag>
-  </Tag>
-  <Tag
-    hasLightBackground={true}
-    isRemovable={false}
-    isTop={false}
-    key=".2"
-    kind="default"
-    onRemove={[Function]}
-  >
-    Group 2
-    <Tag
-      hasLightBackground={true}
-      isRemovable={false}
-      isTop={false}
-      key="0"
-      kind="default"
-      onRemove={[Function]}
+      <span
+        class="lucid-Tag-other-children"
+      >
+        notitia
+        <svg
+          class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
+          height="7"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 16 16"
+          width="7"
+        >
+          <path
+            d="M.5.5l15 15m0-15l-15 15"
+          />
+        </svg>
+      </span>
+    </div>
+    <div
+      class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-danger"
     >
-      Fashion
-    </Tag>
-    <Tag
-      hasLightBackground={true}
-      isRemovable={false}
-      isTop={false}
-      key="1"
-      kind="default"
-      onRemove={[Function]}
+      <span
+        class="lucid-Tag-other-children"
+      >
+        periculum
+        <svg
+          class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
+          height="7"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 16 16"
+          width="7"
+        >
+          <path
+            d="M.5.5l15 15m0-15l-15 15"
+          />
+        </svg>
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tag [common] example testing should match snapshot(s) for Default 1`] = `
+<div>
+  <div>
+    <div
+      class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
     >
-      The
-    </Tag>
-    <Tag
-      hasLightBackground={true}
-      isRemovable={false}
-      isTop={false}
-      key="2"
-      kind="default"
-      onRemove={[Function]}
+      <span
+        class="lucid-Tag-other-children"
+      >
+        Amet
+      </span>
+    </div>
+    <div
+      class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
     >
-      Vexillologist
-    </Tag>
-    <Tag
-      hasLightBackground={true}
-      isRemovable={false}
-      isTop={false}
-      key="3"
-      kind="default"
-      onRemove={[Function]}
+      <span
+        class="lucid-Tag-other-children"
+      >
+        nam
+      </span>
+    </div>
+    <div
+      class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
     >
-      Cold Brew
-    </Tag>
-  </Tag>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 03.double-nested 2`] = `
-<div
-  className="lucid-Tag lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Group 1
-  </span>
-  <Tag
-    hasLightBackground={true}
-    isRemovable={false}
-    isTop={false}
-    key=".1:$0"
-    kind="default"
-    onRemove={[Function]}
-  >
-    Fashion
-  </Tag>
-  <Tag
-    hasLightBackground={true}
-    isRemovable={false}
-    isTop={false}
-    key=".1:$1"
-    kind="default"
-    onRemove={[Function]}
-  >
-    The
-  </Tag>
-  <Tag
-    hasLightBackground={true}
-    isRemovable={false}
-    isTop={false}
-    key=".1:$2"
-    kind="default"
-    onRemove={[Function]}
-  >
-    Vexillologist
-  </Tag>
-  <Tag
-    hasLightBackground={true}
-    isRemovable={false}
-    isTop={false}
-    key=".1:$3"
-    kind="default"
-    onRemove={[Function]}
-  >
-    Cold Brew
-  </Tag>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 03.double-nested 3`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Fashion
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 03.double-nested 4`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    The
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 03.double-nested 5`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Vexillologist
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 03.double-nested 6`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Cold Brew
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 03.double-nested 7`] = `
-<div
-  className="lucid-Tag lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Group 2
-  </span>
-  <Tag
-    hasLightBackground={true}
-    isRemovable={false}
-    isTop={false}
-    key=".1:$0"
-    kind="default"
-    onRemove={[Function]}
-  >
-    Fashion
-  </Tag>
-  <Tag
-    hasLightBackground={true}
-    isRemovable={false}
-    isTop={false}
-    key=".1:$1"
-    kind="default"
-    onRemove={[Function]}
-  >
-    The
-  </Tag>
-  <Tag
-    hasLightBackground={true}
-    isRemovable={false}
-    isTop={false}
-    key=".1:$2"
-    kind="default"
-    onRemove={[Function]}
-  >
-    Vexillologist
-  </Tag>
-  <Tag
-    hasLightBackground={true}
-    isRemovable={false}
-    isTop={false}
-    key=".1:$3"
-    kind="default"
-    onRemove={[Function]}
-  >
-    Cold Brew
-  </Tag>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 03.double-nested 8`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Fashion
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 03.double-nested 9`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    The
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 03.double-nested 10`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Vexillologist
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 03.double-nested 11`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Cold Brew
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 03.double-nested 12`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-top lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    In-Progess:
-  </span>
-  <Tag
-    hasLightBackground={true}
-    isRemovable={false}
-    isTop={false}
-    key=".1"
-    kind="default"
-    onRemove={[Function]}
-  >
-    Group 1
-    <Tag
-      hasLightBackground={true}
-      isRemovable={false}
-      isTop={false}
-      key="0"
-      kind="default"
-      onRemove={[Function]}
+      <span
+        class="lucid-Tag-other-children"
+      >
+        quibusdam
+      </span>
+    </div>
+    <div
+      class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
     >
-      Fashion
-    </Tag>
-    <Tag
-      hasLightBackground={true}
-      isRemovable={false}
-      isTop={false}
-      key="1"
-      kind="default"
-      onRemove={[Function]}
+      <span
+        class="lucid-Tag-other-children"
+      >
+        nobis
+        <svg
+          class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
+          height="7"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 16 16"
+          width="7"
+        >
+          <path
+            d="M.5.5l15 15m0-15l-15 15"
+          />
+        </svg>
+      </span>
+    </div>
+    <div
+      class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
     >
-      The
-    </Tag>
-    <Tag
-      hasLightBackground={true}
-      isRemovable={false}
-      isTop={false}
-      key="2"
-      kind="default"
-      onRemove={[Function]}
+      <span
+        class="lucid-Tag-other-children"
+      >
+        autem
+        <svg
+          class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
+          height="7"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 16 16"
+          width="7"
+        >
+          <path
+            d="M.5.5l15 15m0-15l-15 15"
+          />
+        </svg>
+      </span>
+    </div>
+    <div
+      class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
     >
-      Vexillologist
-    </Tag>
-    <Tag
-      hasLightBackground={true}
-      isRemovable={false}
-      isTop={false}
-      key="3"
-      kind="default"
-      onRemove={[Function]}
+      <span
+        class="lucid-Tag-other-children"
+      >
+        sapiente
+        <svg
+          class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
+          height="7"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 16 16"
+          width="7"
+        >
+          <path
+            d="M.5.5l15 15m0-15l-15 15"
+          />
+        </svg>
+      </span>
+    </div>
+  </div>
+  <div>
+    <div
+      class="lucid-Tag lucid-Tag-has-light-background lucid-Tag-default"
     >
-      Cold Brew
-    </Tag>
-  </Tag>
-  <Tag
-    hasLightBackground={true}
-    isRemovable={false}
-    isTop={false}
-    key=".2"
-    kind="default"
-    onRemove={[Function]}
-  >
-    Group 2
-    <Tag
-      hasLightBackground={true}
-      isRemovable={false}
-      isTop={false}
-      key="0"
-      kind="default"
-      onRemove={[Function]}
+      <span
+        class="lucid-Tag-other-children"
+      >
+        Fruits
+      </span>
+      <div
+        class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
+      >
+        <span
+          class="lucid-Tag-other-children"
+        >
+          Apples
+        </span>
+      </div>
+      <div
+        class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
+      >
+        <span
+          class="lucid-Tag-other-children"
+        >
+          Oranges
+        </span>
+      </div>
+      <div
+        class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
+      >
+        <span
+          class="lucid-Tag-other-children"
+        >
+          Bananas
+        </span>
+      </div>
+    </div>
+    <div
+      class="lucid-Tag lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
     >
-      Fashion
-    </Tag>
-    <Tag
-      hasLightBackground={true}
-      isRemovable={false}
-      isTop={false}
-      key="1"
-      kind="default"
-      onRemove={[Function]}
+      <span
+        class="lucid-Tag-other-children"
+      >
+        Vegetables
+        <svg
+          class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
+          height="7"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 16 16"
+          width="7"
+        >
+          <path
+            d="M.5.5l15 15m0-15l-15 15"
+          />
+        </svg>
+      </span>
+      <div
+        class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
+      >
+        <span
+          class="lucid-Tag-other-children"
+        >
+          Carrots
+          <svg
+            class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
+            height="7"
+            preserveAspectRatio="xMidYMid meet"
+            viewBox="0 0 16 16"
+            width="7"
+          >
+            <path
+              d="M.5.5l15 15m0-15l-15 15"
+            />
+          </svg>
+        </span>
+      </div>
+      <div
+        class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
+      >
+        <span
+          class="lucid-Tag-other-children"
+        >
+          Spinach
+          <svg
+            class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
+            height="7"
+            preserveAspectRatio="xMidYMid meet"
+            viewBox="0 0 16 16"
+            width="7"
+          >
+            <path
+              d="M.5.5l15 15m0-15l-15 15"
+            />
+          </svg>
+        </span>
+      </div>
+      <div
+        class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
+      >
+        <span
+          class="lucid-Tag-other-children"
+        >
+          Celery
+          <svg
+            class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
+            height="7"
+            preserveAspectRatio="xMidYMid meet"
+            viewBox="0 0 16 16"
+            width="7"
+          >
+            <path
+              d="M.5.5l15 15m0-15l-15 15"
+            />
+          </svg>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tag [common] example testing should match snapshot(s) for DoubleNested 1`] = `
+<div>
+  <div
+    class="lucid-Tag lucid-Tag-is-top lucid-Tag-has-light-background lucid-Tag-default"
+  >
+    <span
+      class="lucid-Tag-other-children"
     >
-      The
-    </Tag>
-    <Tag
-      hasLightBackground={true}
-      isRemovable={false}
-      isTop={false}
-      key="2"
-      kind="default"
-      onRemove={[Function]}
+      Global:
+    </span>
+    <div
+      class="lucid-Tag lucid-Tag-has-light-background lucid-Tag-default"
     >
-      Vexillologist
-    </Tag>
-    <Tag
-      hasLightBackground={true}
-      isRemovable={false}
-      isTop={false}
-      key="3"
-      kind="default"
-      onRemove={[Function]}
+      <span
+        class="lucid-Tag-other-children"
+      >
+        Group 1
+      </span>
+      <div
+        class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
+      >
+        <span
+          class="lucid-Tag-other-children"
+        >
+          Fashion
+        </span>
+      </div>
+      <div
+        class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
+      >
+        <span
+          class="lucid-Tag-other-children"
+        >
+          The
+        </span>
+      </div>
+      <div
+        class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
+      >
+        <span
+          class="lucid-Tag-other-children"
+        >
+          Vexillologist
+        </span>
+      </div>
+      <div
+        class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
+      >
+        <span
+          class="lucid-Tag-other-children"
+        >
+          Cold Brew
+        </span>
+      </div>
+    </div>
+    <div
+      class="lucid-Tag lucid-Tag-has-light-background lucid-Tag-default"
     >
-      Cold Brew
-    </Tag>
-  </Tag>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 03.double-nested 13`] = `
-<div
-  className="lucid-Tag lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Group 1
-  </span>
-  <Tag
-    hasLightBackground={true}
-    isRemovable={false}
-    isTop={false}
-    key=".1:$0"
-    kind="default"
-    onRemove={[Function]}
-  >
-    Fashion
-  </Tag>
-  <Tag
-    hasLightBackground={true}
-    isRemovable={false}
-    isTop={false}
-    key=".1:$1"
-    kind="default"
-    onRemove={[Function]}
-  >
-    The
-  </Tag>
-  <Tag
-    hasLightBackground={true}
-    isRemovable={false}
-    isTop={false}
-    key=".1:$2"
-    kind="default"
-    onRemove={[Function]}
-  >
-    Vexillologist
-  </Tag>
-  <Tag
-    hasLightBackground={true}
-    isRemovable={false}
-    isTop={false}
-    key=".1:$3"
-    kind="default"
-    onRemove={[Function]}
-  >
-    Cold Brew
-  </Tag>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 03.double-nested 14`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Fashion
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 03.double-nested 15`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    The
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 03.double-nested 16`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Vexillologist
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 03.double-nested 17`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Cold Brew
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 03.double-nested 18`] = `
-<div
-  className="lucid-Tag lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Group 2
-  </span>
-  <Tag
-    hasLightBackground={true}
-    isRemovable={false}
-    isTop={false}
-    key=".1:$0"
-    kind="default"
-    onRemove={[Function]}
-  >
-    Fashion
-  </Tag>
-  <Tag
-    hasLightBackground={true}
-    isRemovable={false}
-    isTop={false}
-    key=".1:$1"
-    kind="default"
-    onRemove={[Function]}
-  >
-    The
-  </Tag>
-  <Tag
-    hasLightBackground={true}
-    isRemovable={false}
-    isTop={false}
-    key=".1:$2"
-    kind="default"
-    onRemove={[Function]}
-  >
-    Vexillologist
-  </Tag>
-  <Tag
-    hasLightBackground={true}
-    isRemovable={false}
-    isTop={false}
-    key=".1:$3"
-    kind="default"
-    onRemove={[Function]}
-  >
-    Cold Brew
-  </Tag>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 03.double-nested 19`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Fashion
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 03.double-nested 20`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    The
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 03.double-nested 21`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Vexillologist
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 03.double-nested 22`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Cold Brew
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 1`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Last Man on Earth
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Tag-remove-button"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={7}
-      viewBox="0 0 16 16"
-    />
-  </span>
-  <Tag
-    callbackId="0.0"
-    hasLightBackground={true}
-    isRemovable={true}
-    isTop={false}
-    key=".1:$0.0"
-    kind="default"
-    onRemove={[Function]}
-  >
-    Phil
-  </Tag>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 2`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Phil
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Tag-remove-button"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={7}
-      viewBox="0 0 16 16"
-    />
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 3`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Last Woman on Earth
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Tag-remove-button"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={7}
-      viewBox="0 0 16 16"
-    />
-  </span>
-  <Tag
-    callbackId="1.0"
-    hasLightBackground={true}
-    isRemovable={true}
-    isTop={false}
-    key=".1:$1.0"
-    kind="default"
-    onRemove={[Function]}
-  >
-    Carol
-  </Tag>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 4`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Carol
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Tag-remove-button"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={7}
-      viewBox="0 0 16 16"
-    />
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 5`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Star Wars
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Tag-remove-button"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={7}
-      viewBox="0 0 16 16"
-    />
-  </span>
-  <Tag
-    callbackId="2.0"
-    hasLightBackground={true}
-    isRemovable={true}
-    isTop={false}
-    key=".1:$2.0"
-    kind="default"
-    onRemove={[Function]}
-  >
-    Ask Aak
-  </Tag>
-  <Tag
-    callbackId="2.1"
-    hasLightBackground={true}
-    isRemovable={true}
-    isTop={false}
-    key=".1:$2.1"
-    kind="default"
-    onRemove={[Function]}
-  >
-    Admiral Gial Ackbar
-  </Tag>
-  <Tag
-    callbackId="2.2"
-    hasLightBackground={true}
-    isRemovable={true}
-    isTop={false}
-    key=".1:$2.2"
-    kind="default"
-    onRemove={[Function]}
-  >
-    Acros-Krik
-  </Tag>
-  <Tag
-    callbackId="2.3"
-    hasLightBackground={true}
-    isRemovable={true}
-    isTop={false}
-    key=".1:$2.3"
-    kind="default"
-    onRemove={[Function]}
-  >
-    Ak-Rev
-  </Tag>
-  <Tag
-    callbackId="2.4"
-    hasLightBackground={true}
-    isRemovable={true}
-    isTop={false}
-    key=".1:$2.4"
-    kind="default"
-    onRemove={[Function]}
-  >
-    Stass Allie
-  </Tag>
-  <Tag
-    callbackId="2.5"
-    hasLightBackground={true}
-    isRemovable={true}
-    isTop={false}
-    key=".1:$2.5"
-    kind="default"
-    onRemove={[Function]}
-  >
-    Almec
-  </Tag>
-  <Tag
-    callbackId="2.6"
-    hasLightBackground={true}
-    isRemovable={true}
-    isTop={false}
-    key=".1:$2.6"
-    kind="default"
-    onRemove={[Function]}
-  >
-    Mas Amedda
-  </Tag>
-  <Tag
-    callbackId="2.7"
-    hasLightBackground={true}
-    isRemovable={true}
-    isTop={false}
-    key=".1:$2.7"
-    kind="default"
-    onRemove={[Function]}
-  >
-    Amee
-  </Tag>
-  <Tag
-    callbackId="2.8"
-    hasLightBackground={true}
-    isRemovable={true}
-    isTop={false}
-    key=".1:$2.8"
-    kind="default"
-    onRemove={[Function]}
-  >
-    Padmé Amidala
-  </Tag>
-  <Tag
-    callbackId="2.9"
-    hasLightBackground={true}
-    isRemovable={true}
-    isTop={false}
-    key=".1:$2.9"
-    kind="default"
-    onRemove={[Function]}
-  >
-    Cassian Andor
-  </Tag>
-  <Tag
-    callbackId="2.10"
-    hasLightBackground={true}
-    isRemovable={true}
-    isTop={false}
-    key=".1:$2.10"
-    kind="default"
-    onRemove={[Function]}
-  >
-    Bail Antilles
-  </Tag>
-  <Tag
-    callbackId="2.11"
-    hasLightBackground={true}
-    isRemovable={true}
-    isTop={false}
-    key=".1:$2.11"
-    kind="default"
-    onRemove={[Function]}
-  >
-    Raymus Antilles
-  </Tag>
-  <Tag
-    callbackId="2.12"
-    hasLightBackground={true}
-    isRemovable={true}
-    isTop={false}
-    key=".1:$2.12"
-    kind="default"
-    onRemove={[Function]}
-  >
-    Wedge Antilles
-  </Tag>
-  <Tag
-    callbackId="2.13"
-    hasLightBackground={true}
-    isRemovable={true}
-    isTop={false}
-    key=".1:$2.13"
-    kind="default"
-    onRemove={[Function]}
-  >
-    Queen Apailana
-  </Tag>
-  <Tag
-    callbackId="2.14"
-    hasLightBackground={true}
-    isRemovable={true}
-    isTop={false}
-    key=".1:$2.14"
-    kind="default"
-    onRemove={[Function]}
-  >
-    Commander Appo
-  </Tag>
-  <Tag
-    callbackId="2.15"
-    hasLightBackground={true}
-    isRemovable={true}
-    isTop={false}
-    key=".1:$2.15"
-    kind="default"
-    onRemove={[Function]}
-  >
-    Passel Argente
-  </Tag>
-  <Tag
-    callbackId="2.16"
-    hasLightBackground={true}
-    isRemovable={true}
-    isTop={false}
-    key=".1:$2.16"
-    kind="default"
-    onRemove={[Function]}
-  >
-    Faro Argyus
-  </Tag>
-  <Tag
-    callbackId="2.17"
-    hasLightBackground={true}
-    isRemovable={true}
-    isTop={false}
-    key=".1:$2.17"
-    kind="default"
-    onRemove={[Function]}
-  >
-    Seti Ashgad
-  </Tag>
-  <Tag
-    callbackId="2.18"
-    hasLightBackground={true}
-    isRemovable={true}
-    isTop={false}
-    key=".1:$2.18"
-    kind="default"
-    onRemove={[Function]}
-  >
-    AZI-3
-  </Tag>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 6`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Ask Aak
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Tag-remove-button"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={7}
-      viewBox="0 0 16 16"
-    />
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 7`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Admiral Gial Ackbar
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Tag-remove-button"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={7}
-      viewBox="0 0 16 16"
-    />
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 8`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Acros-Krik
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Tag-remove-button"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={7}
-      viewBox="0 0 16 16"
-    />
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 9`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Ak-Rev
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Tag-remove-button"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={7}
-      viewBox="0 0 16 16"
-    />
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 10`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Stass Allie
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Tag-remove-button"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={7}
-      viewBox="0 0 16 16"
-    />
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 11`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Almec
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Tag-remove-button"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={7}
-      viewBox="0 0 16 16"
-    />
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 12`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Mas Amedda
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Tag-remove-button"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={7}
-      viewBox="0 0 16 16"
-    />
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 13`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Amee
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Tag-remove-button"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={7}
-      viewBox="0 0 16 16"
-    />
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 14`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Padmé Amidala
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Tag-remove-button"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={7}
-      viewBox="0 0 16 16"
-    />
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 15`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Cassian Andor
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Tag-remove-button"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={7}
-      viewBox="0 0 16 16"
-    />
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 16`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Bail Antilles
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Tag-remove-button"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={7}
-      viewBox="0 0 16 16"
-    />
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 17`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Raymus Antilles
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Tag-remove-button"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={7}
-      viewBox="0 0 16 16"
-    />
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 18`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Wedge Antilles
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Tag-remove-button"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={7}
-      viewBox="0 0 16 16"
-    />
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 19`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Queen Apailana
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Tag-remove-button"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={7}
-      viewBox="0 0 16 16"
-    />
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 20`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Commander Appo
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Tag-remove-button"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={7}
-      viewBox="0 0 16 16"
-    />
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 21`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Passel Argente
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Tag-remove-button"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={7}
-      viewBox="0 0 16 16"
-    />
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 22`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Faro Argyus
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Tag-remove-button"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={7}
-      viewBox="0 0 16 16"
-    />
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 23`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Seti Ashgad
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Tag-remove-button"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={7}
-      viewBox="0 0 16 16"
-    />
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 24`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    AZI-3
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Tag-remove-button"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={7}
-      viewBox="0 0 16 16"
-    />
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 25`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Lord of the Rings
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Tag-remove-button"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={7}
-      viewBox="0 0 16 16"
-    />
-  </span>
-  <Tag
-    callbackId="3.0"
-    hasLightBackground={true}
-    isRemovable={true}
-    isTop={false}
-    key=".1:$3.0"
-    kind="default"
-    onRemove={[Function]}
-  >
-    Adrahil
-  </Tag>
-  <Tag
-    callbackId="3.1"
-    hasLightBackground={true}
-    isRemovable={true}
-    isTop={false}
-    key=".1:$3.1"
-    kind="default"
-    onRemove={[Function]}
-  >
-    Adrahil II
-  </Tag>
-  <Tag
-    callbackId="3.2"
-    hasLightBackground={true}
-    isRemovable={true}
-    isTop={false}
-    key=".1:$3.2"
-    kind="default"
-    onRemove={[Function]}
-  >
-    Aegnor
-  </Tag>
-  <Tag
-    callbackId="3.3"
-    hasLightBackground={true}
-    isRemovable={true}
-    isTop={false}
-    key=".1:$3.3"
-    kind="default"
-    onRemove={[Function]}
-  >
-    Aerandir
-  </Tag>
-  <Tag
-    callbackId="3.4"
-    hasLightBackground={true}
-    isRemovable={true}
-    isTop={false}
-    key=".1:$3.4"
-    kind="default"
-    onRemove={[Function]}
-  >
-    Aghan
-  </Tag>
-  <Tag
-    callbackId="3.5"
-    hasLightBackground={true}
-    isRemovable={true}
-    isTop={false}
-    key=".1:$3.5"
-    kind="default"
-    onRemove={[Function]}
-  >
-    Aglahad
-  </Tag>
-  <Tag
-    callbackId="3.6"
-    hasLightBackground={true}
-    isRemovable={true}
-    isTop={false}
-    key=".1:$3.6"
-    kind="default"
-    onRemove={[Function]}
-  >
-    Ailinel
-  </Tag>
-  <Tag
-    callbackId="3.7"
-    hasLightBackground={true}
-    isRemovable={true}
-    isTop={false}
-    key=".1:$3.7"
-    kind="default"
-    onRemove={[Function]}
-  >
-    Alatar
-  </Tag>
-  <Tag
-    callbackId="3.8"
-    hasLightBackground={true}
-    isRemovable={true}
-    isTop={false}
-    key=".1:$3.8"
-    kind="default"
-    onRemove={[Function]}
-  >
-    Aldamir
-  </Tag>
-  <Tag
-    callbackId="3.9"
-    hasLightBackground={true}
-    isRemovable={true}
-    isTop={false}
-    key=".1:$3.9"
-    kind="default"
-    onRemove={[Function]}
-  >
-    Aldor
-  </Tag>
-  <Tag
-    callbackId="3.10"
-    hasLightBackground={true}
-    isRemovable={true}
-    isTop={false}
-    key=".1:$3.10"
-    kind="default"
-    onRemove={[Function]}
-  >
-    Almarian
-  </Tag>
-  <Tag
-    callbackId="3.11"
-    hasLightBackground={true}
-    isRemovable={true}
-    isTop={false}
-    key=".1:$3.11"
-    kind="default"
-    onRemove={[Function]}
-  >
-    Almiel
-  </Tag>
-  <Tag
-    callbackId="3.12"
-    hasLightBackground={true}
-    isRemovable={true}
-    isTop={false}
-    key=".1:$3.12"
-    kind="default"
-    onRemove={[Function]}
-  >
-    Amandil
-  </Tag>
-  <Tag
-    callbackId="3.13"
-    hasLightBackground={true}
-    isRemovable={true}
-    isTop={false}
-    key=".1:$3.13"
-    kind="default"
-    onRemove={[Function]}
-  >
-    Amdír
-  </Tag>
-  <Tag
-    callbackId="3.14"
-    hasLightBackground={true}
-    isRemovable={true}
-    isTop={false}
-    key=".1:$3.14"
-    kind="default"
-    onRemove={[Function]}
-  >
-    Amlaith
-  </Tag>
-  <Tag
-    callbackId="3.15"
-    hasLightBackground={true}
-    isRemovable={true}
-    isTop={false}
-    key=".1:$3.15"
-    kind="default"
-    onRemove={[Function]}
-  >
-    Amrod
-  </Tag>
-  <Tag
-    callbackId="3.16"
-    hasLightBackground={true}
-    isRemovable={true}
-    isTop={false}
-    key=".1:$3.16"
-    kind="default"
-    onRemove={[Function]}
-  >
-    Amroth
-  </Tag>
-  <Tag
-    callbackId="3.17"
-    hasLightBackground={true}
-    isRemovable={true}
-    isTop={false}
-    key=".1:$3.17"
-    kind="default"
-    onRemove={[Function]}
-  >
-    Anardil
-  </Tag>
-  <Tag
-    callbackId="3.18"
-    hasLightBackground={true}
-    isRemovable={true}
-    isTop={false}
-    key=".1:$3.18"
-    kind="default"
-    onRemove={[Function]}
-  >
-    Anborn
-  </Tag>
-  <Tag
-    callbackId="3.19"
-    hasLightBackground={true}
-    isRemovable={true}
-    isTop={false}
-    key=".1:$3.19"
-    kind="default"
-    onRemove={[Function]}
-  >
-    Ancalagon The Black
-  </Tag>
-  <Tag
-    callbackId="3.20"
-    hasLightBackground={true}
-    isRemovable={true}
-    isTop={false}
-    key=".1:$3.20"
-    kind="default"
-    onRemove={[Function]}
-  >
-    Andróg
-  </Tag>
-  <Tag
-    callbackId="3.21"
-    hasLightBackground={true}
-    isRemovable={true}
-    isTop={false}
-    key=".1:$3.21"
-    kind="default"
-    onRemove={[Function]}
-  >
-    Angbor
-  </Tag>
-  <Tag
-    callbackId="3.22"
-    hasLightBackground={true}
-    isRemovable={true}
-    isTop={false}
-    key=".1:$3.22"
-    kind="default"
-    onRemove={[Function]}
-  >
-    Angelimar
-  </Tag>
-  <Tag
-    callbackId="3.23"
-    hasLightBackground={true}
-    isRemovable={true}
-    isTop={false}
-    key=".1:$3.23"
-    kind="default"
-    onRemove={[Function]}
-  >
-    Angelimir
-  </Tag>
-  <Tag
-    callbackId="3.24"
-    hasLightBackground={true}
-    isRemovable={true}
-    isTop={false}
-    key=".1:$3.24"
-    kind="default"
-    onRemove={[Function]}
-  >
-    Angrod
-  </Tag>
-  <Tag
-    callbackId="3.25"
-    hasLightBackground={true}
-    isRemovable={true}
-    isTop={false}
-    key=".1:$3.25"
-    kind="default"
-    onRemove={[Function]}
-  >
-    Anárion
-  </Tag>
-  <Tag
-    callbackId="3.26"
-    hasLightBackground={true}
-    isRemovable={true}
-    isTop={false}
-    key=".1:$3.26"
-    kind="default"
-    onRemove={[Function]}
-  >
-    Ar-Adûnakhôr
-  </Tag>
-  <Tag
-    callbackId="3.27"
-    hasLightBackground={true}
-    isRemovable={true}
-    isTop={false}
-    key=".1:$3.27"
-    kind="default"
-    onRemove={[Function]}
-  >
-    Ar-Gimilzôr
-  </Tag>
-  <Tag
-    callbackId="3.28"
-    hasLightBackground={true}
-    isRemovable={true}
-    isTop={false}
-    key=".1:$3.28"
-    kind="default"
-    onRemove={[Function]}
-  >
-    Ar-Pharazôn
-  </Tag>
-  <Tag
-    callbackId="3.29"
-    hasLightBackground={true}
-    isRemovable={true}
-    isTop={false}
-    key=".1:$3.29"
-    kind="default"
-    onRemove={[Function]}
-  >
-    Ar-Sakalthôr
-  </Tag>
-  <Tag
-    callbackId="3.30"
-    hasLightBackground={true}
-    isRemovable={true}
-    isTop={false}
-    key=".1:$3.30"
-    kind="default"
-    onRemove={[Function]}
-  >
-    Ar-Zimrathôn
-  </Tag>
-  <Tag
-    callbackId="3.31"
-    hasLightBackground={true}
-    isRemovable={true}
-    isTop={false}
-    key=".1:$3.31"
-    kind="default"
-    onRemove={[Function]}
-  >
-    Arador
-  </Tag>
-  <Tag
-    callbackId="3.32"
-    hasLightBackground={true}
-    isRemovable={true}
-    isTop={false}
-    key=".1:$3.32"
-    kind="default"
-    onRemove={[Function]}
-  >
-    Araglas
-  </Tag>
-  <Tag
-    callbackId="3.33"
-    hasLightBackground={true}
-    isRemovable={true}
-    isTop={false}
-    key=".1:$3.33"
-    kind="default"
-    onRemove={[Function]}
-  >
-    Aragorn I
-  </Tag>
-  <Tag
-    callbackId="3.34"
-    hasLightBackground={true}
-    isRemovable={true}
-    isTop={false}
-    key=".1:$3.34"
-    kind="default"
-    onRemove={[Function]}
-  >
-    Aragorn II Elessar
-  </Tag>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 26`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Adrahil
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Tag-remove-button"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={7}
-      viewBox="0 0 16 16"
-    />
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 27`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Adrahil II
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Tag-remove-button"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={7}
-      viewBox="0 0 16 16"
-    />
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 28`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Aegnor
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Tag-remove-button"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={7}
-      viewBox="0 0 16 16"
-    />
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 29`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Aerandir
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Tag-remove-button"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={7}
-      viewBox="0 0 16 16"
-    />
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 30`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Aghan
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Tag-remove-button"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={7}
-      viewBox="0 0 16 16"
-    />
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 31`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Aglahad
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Tag-remove-button"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={7}
-      viewBox="0 0 16 16"
-    />
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 32`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Ailinel
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Tag-remove-button"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={7}
-      viewBox="0 0 16 16"
-    />
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 33`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Alatar
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Tag-remove-button"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={7}
-      viewBox="0 0 16 16"
-    />
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 34`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Aldamir
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Tag-remove-button"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={7}
-      viewBox="0 0 16 16"
-    />
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 35`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Aldor
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Tag-remove-button"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={7}
-      viewBox="0 0 16 16"
-    />
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 36`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Almarian
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Tag-remove-button"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={7}
-      viewBox="0 0 16 16"
-    />
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 37`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Almiel
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Tag-remove-button"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={7}
-      viewBox="0 0 16 16"
-    />
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 38`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Amandil
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Tag-remove-button"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={7}
-      viewBox="0 0 16 16"
-    />
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 39`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Amdír
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Tag-remove-button"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={7}
-      viewBox="0 0 16 16"
-    />
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 40`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Amlaith
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Tag-remove-button"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={7}
-      viewBox="0 0 16 16"
-    />
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 41`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Amrod
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Tag-remove-button"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={7}
-      viewBox="0 0 16 16"
-    />
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 42`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Amroth
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Tag-remove-button"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={7}
-      viewBox="0 0 16 16"
-    />
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 43`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Anardil
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Tag-remove-button"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={7}
-      viewBox="0 0 16 16"
-    />
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 44`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Anborn
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Tag-remove-button"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={7}
-      viewBox="0 0 16 16"
-    />
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 45`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Ancalagon The Black
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Tag-remove-button"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={7}
-      viewBox="0 0 16 16"
-    />
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 46`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Andróg
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Tag-remove-button"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={7}
-      viewBox="0 0 16 16"
-    />
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 47`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Angbor
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Tag-remove-button"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={7}
-      viewBox="0 0 16 16"
-    />
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 48`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Angelimar
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Tag-remove-button"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={7}
-      viewBox="0 0 16 16"
-    />
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 49`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Angelimir
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Tag-remove-button"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={7}
-      viewBox="0 0 16 16"
-    />
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 50`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Angrod
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Tag-remove-button"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={7}
-      viewBox="0 0 16 16"
-    />
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 51`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Anárion
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Tag-remove-button"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={7}
-      viewBox="0 0 16 16"
-    />
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 52`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Ar-Adûnakhôr
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Tag-remove-button"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={7}
-      viewBox="0 0 16 16"
-    />
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 53`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Ar-Gimilzôr
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Tag-remove-button"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={7}
-      viewBox="0 0 16 16"
-    />
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 54`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Ar-Pharazôn
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Tag-remove-button"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={7}
-      viewBox="0 0 16 16"
-    />
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 55`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Ar-Sakalthôr
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Tag-remove-button"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={7}
-      viewBox="0 0 16 16"
-    />
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 56`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Ar-Zimrathôn
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Tag-remove-button"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={7}
-      viewBox="0 0 16 16"
-    />
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 57`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Arador
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Tag-remove-button"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={7}
-      viewBox="0 0 16 16"
-    />
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 58`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Araglas
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Tag-remove-button"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={7}
-      viewBox="0 0 16 16"
-    />
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 59`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Aragorn I
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Tag-remove-button"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={7}
-      viewBox="0 0 16 16"
-    />
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 60`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Aragorn II Elessar
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Tag-remove-button"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={7}
-      viewBox="0 0 16 16"
-    />
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 61`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Star Trek
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Tag-remove-button"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={7}
-      viewBox="0 0 16 16"
-    />
-  </span>
-  <Tag
-    callbackId="4.0"
-    hasLightBackground={true}
-    isRemovable={true}
-    isTop={false}
-    key=".1:$4.0"
-    kind="default"
-    onRemove={[Function]}
-  >
-    Jonathan Archer
-  </Tag>
-  <Tag
-    callbackId="4.1"
-    hasLightBackground={true}
-    isRemovable={true}
-    isTop={false}
-    key=".1:$4.1"
-    kind="default"
-    onRemove={[Function]}
-  >
-    Ayala
-  </Tag>
-  <Tag
-    callbackId="4.2"
-    hasLightBackground={true}
-    isRemovable={true}
-    isTop={false}
-    key=".1:$4.2"
-    kind="default"
-    onRemove={[Function]}
-  >
-    Azan
-  </Tag>
-  <Tag
-    callbackId="4.3"
-    hasLightBackground={true}
-    isRemovable={true}
-    isTop={false}
-    key=".1:$4.3"
-    kind="default"
-    onRemove={[Function]}
-  >
-    Reginald Barclay
-  </Tag>
-  <Tag
-    callbackId="4.4"
-    hasLightBackground={true}
-    isRemovable={true}
-    isTop={false}
-    key=".1:$4.4"
-    kind="default"
-    onRemove={[Function]}
-  >
-    Lieutenant, JG (TNG,FCT)
-  </Tag>
-  <Tag
-    callbackId="4.5"
-    hasLightBackground={true}
-    isRemovable={true}
-    isTop={false}
-    key=".1:$4.5"
-    kind="default"
-    onRemove={[Function]}
-  >
-    Engineering Officer (TNG,Movies)
-  </Tag>
-  <Tag
-    callbackId="4.6"
-    hasLightBackground={true}
-    isRemovable={true}
-    isTop={false}
-    key=".1:$4.6"
-    kind="default"
-    onRemove={[Function]}
-  >
-    Bareil Antos
-  </Tag>
-  <Tag
-    callbackId="4.7"
-    hasLightBackground={true}
-    isRemovable={true}
-    isTop={false}
-    key=".1:$4.7"
-    kind="default"
-    onRemove={[Function]}
-  >
-    Julian Bashir
-  </Tag>
-  <Tag
-    callbackId="4.8"
-    hasLightBackground={true}
-    isRemovable={true}
-    isTop={false}
-    key=".1:$4.8"
-    kind="default"
-    onRemove={[Function]}
-  >
-    Season 6 (TNG)
-  </Tag>
-  <Tag
-    callbackId="4.9"
-    hasLightBackground={true}
-    isRemovable={true}
-    isTop={false}
-    key=".1:$4.9"
-    kind="default"
-    onRemove={[Function]}
-  >
-    Lieutenant, JG (S1-3)
-  </Tag>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 62`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Jonathan Archer
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Tag-remove-button"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={7}
-      viewBox="0 0 16 16"
-    />
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 63`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Ayala
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Tag-remove-button"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={7}
-      viewBox="0 0 16 16"
-    />
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 64`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Azan
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Tag-remove-button"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={7}
-      viewBox="0 0 16 16"
-    />
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 65`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Reginald Barclay
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Tag-remove-button"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={7}
-      viewBox="0 0 16 16"
-    />
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 66`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Lieutenant, JG (TNG,FCT)
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Tag-remove-button"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={7}
-      viewBox="0 0 16 16"
-    />
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 67`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Engineering Officer (TNG,Movies)
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Tag-remove-button"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={7}
-      viewBox="0 0 16 16"
-    />
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 68`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Bareil Antos
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Tag-remove-button"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={7}
-      viewBox="0 0 16 16"
-    />
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 69`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Julian Bashir
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Tag-remove-button"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={7}
-      viewBox="0 0 16 16"
-    />
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 70`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Season 6 (TNG)
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Tag-remove-button"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={7}
-      viewBox="0 0 16 16"
-    />
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 71`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    Lieutenant, JG (S1-3)
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Tag-remove-button"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={7}
-      viewBox="0 0 16 16"
-    />
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 05.colors 1`] = `
-<div
-  className="lucid-Tag lucid-Tag-has-light-background lucid-Tag-default"
->
-  <Tag
-    hasLightBackground={true}
-    isRemovable={false}
-    isTop={false}
-    key=".0"
-    kind="info"
-    onRemove={[Function]}
-  >
-    notitia
-  </Tag>
-  <Tag
-    hasLightBackground={true}
-    isRemovable={false}
-    isTop={false}
-    key=".1"
-    kind="danger"
-    onRemove={[Function]}
-  >
-    periculum
-  </Tag>
-  <Tag
-    hasLightBackground={true}
-    isRemovable={false}
-    isTop={false}
-    key=".2"
-    kind="default"
-    onRemove={[Function]}
-  >
-    deficio
-  </Tag>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 05.colors 2`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-info"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    notitia
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 05.colors 3`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-danger"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    periculum
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 05.colors 4`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    deficio
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 05.colors 5`] = `
-<div
-  className="lucid-Tag lucid-Tag-has-light-background lucid-Tag-default"
->
-  <Tag
-    hasLightBackground={true}
-    isRemovable={true}
-    isTop={false}
-    key=".0"
-    kind="info"
-    onRemove={[Function]}
-  >
-    notitia
-  </Tag>
-  <Tag
-    hasLightBackground={true}
-    isRemovable={true}
-    isTop={false}
-    key=".1"
-    kind="danger"
-    onRemove={[Function]}
-  >
-    periculum
-  </Tag>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 05.colors 6`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-info"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    notitia
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Tag-remove-button"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={7}
-      viewBox="0 0 16 16"
-    />
-  </span>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for 05.colors 7`] = `
-<div
-  className="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-danger"
->
-  <span
-    className="lucid-Tag-other-children"
-  >
-    periculum
-    <CloseIcon
-      aspectRatio="xMidYMid meet"
-      className="lucid-Tag-remove-button"
-      color="primary"
-      isClickable={true}
-      isDisabled={false}
-      onClick={[Function]}
-      onSelect={[Function]}
-      size={7}
-      viewBox="0 0 16 16"
-    />
-  </span>
+      <span
+        class="lucid-Tag-other-children"
+      >
+        Group 2
+      </span>
+      <div
+        class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
+      >
+        <span
+          class="lucid-Tag-other-children"
+        >
+          Fashion
+        </span>
+      </div>
+      <div
+        class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
+      >
+        <span
+          class="lucid-Tag-other-children"
+        >
+          The
+        </span>
+      </div>
+      <div
+        class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
+      >
+        <span
+          class="lucid-Tag-other-children"
+        >
+          Vexillologist
+        </span>
+      </div>
+      <div
+        class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
+      >
+        <span
+          class="lucid-Tag-other-children"
+        >
+          Cold Brew
+        </span>
+      </div>
+    </div>
+  </div>
+  <div
+    class="lucid-Tag lucid-Tag-is-top lucid-Tag-has-light-background lucid-Tag-default"
+  >
+    <span
+      class="lucid-Tag-other-children"
+    >
+      In-Progess:
+    </span>
+    <div
+      class="lucid-Tag lucid-Tag-has-light-background lucid-Tag-default"
+    >
+      <span
+        class="lucid-Tag-other-children"
+      >
+        Group 1
+      </span>
+      <div
+        class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
+      >
+        <span
+          class="lucid-Tag-other-children"
+        >
+          Fashion
+        </span>
+      </div>
+      <div
+        class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
+      >
+        <span
+          class="lucid-Tag-other-children"
+        >
+          The
+        </span>
+      </div>
+      <div
+        class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
+      >
+        <span
+          class="lucid-Tag-other-children"
+        >
+          Vexillologist
+        </span>
+      </div>
+      <div
+        class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
+      >
+        <span
+          class="lucid-Tag-other-children"
+        >
+          Cold Brew
+        </span>
+      </div>
+    </div>
+    <div
+      class="lucid-Tag lucid-Tag-has-light-background lucid-Tag-default"
+    >
+      <span
+        class="lucid-Tag-other-children"
+      >
+        Group 2
+      </span>
+      <div
+        class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
+      >
+        <span
+          class="lucid-Tag-other-children"
+        >
+          Fashion
+        </span>
+      </div>
+      <div
+        class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
+      >
+        <span
+          class="lucid-Tag-other-children"
+        >
+          The
+        </span>
+      </div>
+      <div
+        class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
+      >
+        <span
+          class="lucid-Tag-other-children"
+        >
+          Vexillologist
+        </span>
+      </div>
+      <div
+        class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
+      >
+        <span
+          class="lucid-Tag-other-children"
+        >
+          Cold Brew
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tag [common] example testing should match snapshot(s) for Interactive 1`] = `
+<div>
+  <div
+    class="lucid-Tag lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
+  >
+    <span
+      class="lucid-Tag-other-children"
+    >
+      Last Man on Earth
+      <svg
+        class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
+        height="7"
+        preserveAspectRatio="xMidYMid meet"
+        viewBox="0 0 16 16"
+        width="7"
+      >
+        <path
+          d="M.5.5l15 15m0-15l-15 15"
+        />
+      </svg>
+    </span>
+    <div
+      class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
+    >
+      <span
+        class="lucid-Tag-other-children"
+      >
+        Phil
+        <svg
+          class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
+          height="7"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 16 16"
+          width="7"
+        >
+          <path
+            d="M.5.5l15 15m0-15l-15 15"
+          />
+        </svg>
+      </span>
+    </div>
+  </div>
+  <div
+    class="lucid-Tag lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
+  >
+    <span
+      class="lucid-Tag-other-children"
+    >
+      Last Woman on Earth
+      <svg
+        class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
+        height="7"
+        preserveAspectRatio="xMidYMid meet"
+        viewBox="0 0 16 16"
+        width="7"
+      >
+        <path
+          d="M.5.5l15 15m0-15l-15 15"
+        />
+      </svg>
+    </span>
+    <div
+      class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
+    >
+      <span
+        class="lucid-Tag-other-children"
+      >
+        Carol
+        <svg
+          class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
+          height="7"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 16 16"
+          width="7"
+        >
+          <path
+            d="M.5.5l15 15m0-15l-15 15"
+          />
+        </svg>
+      </span>
+    </div>
+  </div>
+  <div
+    class="lucid-Tag lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
+  >
+    <span
+      class="lucid-Tag-other-children"
+    >
+      Star Wars
+      <svg
+        class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
+        height="7"
+        preserveAspectRatio="xMidYMid meet"
+        viewBox="0 0 16 16"
+        width="7"
+      >
+        <path
+          d="M.5.5l15 15m0-15l-15 15"
+        />
+      </svg>
+    </span>
+    <div
+      class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
+    >
+      <span
+        class="lucid-Tag-other-children"
+      >
+        Ask Aak
+        <svg
+          class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
+          height="7"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 16 16"
+          width="7"
+        >
+          <path
+            d="M.5.5l15 15m0-15l-15 15"
+          />
+        </svg>
+      </span>
+    </div>
+    <div
+      class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
+    >
+      <span
+        class="lucid-Tag-other-children"
+      >
+        Admiral Gial Ackbar
+        <svg
+          class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
+          height="7"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 16 16"
+          width="7"
+        >
+          <path
+            d="M.5.5l15 15m0-15l-15 15"
+          />
+        </svg>
+      </span>
+    </div>
+    <div
+      class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
+    >
+      <span
+        class="lucid-Tag-other-children"
+      >
+        Acros-Krik
+        <svg
+          class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
+          height="7"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 16 16"
+          width="7"
+        >
+          <path
+            d="M.5.5l15 15m0-15l-15 15"
+          />
+        </svg>
+      </span>
+    </div>
+    <div
+      class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
+    >
+      <span
+        class="lucid-Tag-other-children"
+      >
+        Ak-Rev
+        <svg
+          class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
+          height="7"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 16 16"
+          width="7"
+        >
+          <path
+            d="M.5.5l15 15m0-15l-15 15"
+          />
+        </svg>
+      </span>
+    </div>
+    <div
+      class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
+    >
+      <span
+        class="lucid-Tag-other-children"
+      >
+        Stass Allie
+        <svg
+          class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
+          height="7"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 16 16"
+          width="7"
+        >
+          <path
+            d="M.5.5l15 15m0-15l-15 15"
+          />
+        </svg>
+      </span>
+    </div>
+    <div
+      class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
+    >
+      <span
+        class="lucid-Tag-other-children"
+      >
+        Almec
+        <svg
+          class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
+          height="7"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 16 16"
+          width="7"
+        >
+          <path
+            d="M.5.5l15 15m0-15l-15 15"
+          />
+        </svg>
+      </span>
+    </div>
+    <div
+      class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
+    >
+      <span
+        class="lucid-Tag-other-children"
+      >
+        Mas Amedda
+        <svg
+          class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
+          height="7"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 16 16"
+          width="7"
+        >
+          <path
+            d="M.5.5l15 15m0-15l-15 15"
+          />
+        </svg>
+      </span>
+    </div>
+    <div
+      class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
+    >
+      <span
+        class="lucid-Tag-other-children"
+      >
+        Amee
+        <svg
+          class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
+          height="7"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 16 16"
+          width="7"
+        >
+          <path
+            d="M.5.5l15 15m0-15l-15 15"
+          />
+        </svg>
+      </span>
+    </div>
+    <div
+      class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
+    >
+      <span
+        class="lucid-Tag-other-children"
+      >
+        Padmé Amidala
+        <svg
+          class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
+          height="7"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 16 16"
+          width="7"
+        >
+          <path
+            d="M.5.5l15 15m0-15l-15 15"
+          />
+        </svg>
+      </span>
+    </div>
+    <div
+      class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
+    >
+      <span
+        class="lucid-Tag-other-children"
+      >
+        Cassian Andor
+        <svg
+          class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
+          height="7"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 16 16"
+          width="7"
+        >
+          <path
+            d="M.5.5l15 15m0-15l-15 15"
+          />
+        </svg>
+      </span>
+    </div>
+    <div
+      class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
+    >
+      <span
+        class="lucid-Tag-other-children"
+      >
+        Bail Antilles
+        <svg
+          class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
+          height="7"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 16 16"
+          width="7"
+        >
+          <path
+            d="M.5.5l15 15m0-15l-15 15"
+          />
+        </svg>
+      </span>
+    </div>
+    <div
+      class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
+    >
+      <span
+        class="lucid-Tag-other-children"
+      >
+        Raymus Antilles
+        <svg
+          class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
+          height="7"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 16 16"
+          width="7"
+        >
+          <path
+            d="M.5.5l15 15m0-15l-15 15"
+          />
+        </svg>
+      </span>
+    </div>
+    <div
+      class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
+    >
+      <span
+        class="lucid-Tag-other-children"
+      >
+        Wedge Antilles
+        <svg
+          class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
+          height="7"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 16 16"
+          width="7"
+        >
+          <path
+            d="M.5.5l15 15m0-15l-15 15"
+          />
+        </svg>
+      </span>
+    </div>
+    <div
+      class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
+    >
+      <span
+        class="lucid-Tag-other-children"
+      >
+        Queen Apailana
+        <svg
+          class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
+          height="7"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 16 16"
+          width="7"
+        >
+          <path
+            d="M.5.5l15 15m0-15l-15 15"
+          />
+        </svg>
+      </span>
+    </div>
+    <div
+      class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
+    >
+      <span
+        class="lucid-Tag-other-children"
+      >
+        Commander Appo
+        <svg
+          class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
+          height="7"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 16 16"
+          width="7"
+        >
+          <path
+            d="M.5.5l15 15m0-15l-15 15"
+          />
+        </svg>
+      </span>
+    </div>
+    <div
+      class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
+    >
+      <span
+        class="lucid-Tag-other-children"
+      >
+        Passel Argente
+        <svg
+          class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
+          height="7"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 16 16"
+          width="7"
+        >
+          <path
+            d="M.5.5l15 15m0-15l-15 15"
+          />
+        </svg>
+      </span>
+    </div>
+    <div
+      class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
+    >
+      <span
+        class="lucid-Tag-other-children"
+      >
+        Faro Argyus
+        <svg
+          class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
+          height="7"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 16 16"
+          width="7"
+        >
+          <path
+            d="M.5.5l15 15m0-15l-15 15"
+          />
+        </svg>
+      </span>
+    </div>
+    <div
+      class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
+    >
+      <span
+        class="lucid-Tag-other-children"
+      >
+        Seti Ashgad
+        <svg
+          class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
+          height="7"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 16 16"
+          width="7"
+        >
+          <path
+            d="M.5.5l15 15m0-15l-15 15"
+          />
+        </svg>
+      </span>
+    </div>
+    <div
+      class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
+    >
+      <span
+        class="lucid-Tag-other-children"
+      >
+        AZI-3
+        <svg
+          class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
+          height="7"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 16 16"
+          width="7"
+        >
+          <path
+            d="M.5.5l15 15m0-15l-15 15"
+          />
+        </svg>
+      </span>
+    </div>
+  </div>
+  <div
+    class="lucid-Tag lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
+  >
+    <span
+      class="lucid-Tag-other-children"
+    >
+      Lord of the Rings
+      <svg
+        class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
+        height="7"
+        preserveAspectRatio="xMidYMid meet"
+        viewBox="0 0 16 16"
+        width="7"
+      >
+        <path
+          d="M.5.5l15 15m0-15l-15 15"
+        />
+      </svg>
+    </span>
+    <div
+      class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
+    >
+      <span
+        class="lucid-Tag-other-children"
+      >
+        Adrahil
+        <svg
+          class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
+          height="7"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 16 16"
+          width="7"
+        >
+          <path
+            d="M.5.5l15 15m0-15l-15 15"
+          />
+        </svg>
+      </span>
+    </div>
+    <div
+      class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
+    >
+      <span
+        class="lucid-Tag-other-children"
+      >
+        Adrahil II
+        <svg
+          class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
+          height="7"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 16 16"
+          width="7"
+        >
+          <path
+            d="M.5.5l15 15m0-15l-15 15"
+          />
+        </svg>
+      </span>
+    </div>
+    <div
+      class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
+    >
+      <span
+        class="lucid-Tag-other-children"
+      >
+        Aegnor
+        <svg
+          class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
+          height="7"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 16 16"
+          width="7"
+        >
+          <path
+            d="M.5.5l15 15m0-15l-15 15"
+          />
+        </svg>
+      </span>
+    </div>
+    <div
+      class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
+    >
+      <span
+        class="lucid-Tag-other-children"
+      >
+        Aerandir
+        <svg
+          class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
+          height="7"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 16 16"
+          width="7"
+        >
+          <path
+            d="M.5.5l15 15m0-15l-15 15"
+          />
+        </svg>
+      </span>
+    </div>
+    <div
+      class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
+    >
+      <span
+        class="lucid-Tag-other-children"
+      >
+        Aghan
+        <svg
+          class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
+          height="7"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 16 16"
+          width="7"
+        >
+          <path
+            d="M.5.5l15 15m0-15l-15 15"
+          />
+        </svg>
+      </span>
+    </div>
+    <div
+      class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
+    >
+      <span
+        class="lucid-Tag-other-children"
+      >
+        Aglahad
+        <svg
+          class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
+          height="7"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 16 16"
+          width="7"
+        >
+          <path
+            d="M.5.5l15 15m0-15l-15 15"
+          />
+        </svg>
+      </span>
+    </div>
+    <div
+      class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
+    >
+      <span
+        class="lucid-Tag-other-children"
+      >
+        Ailinel
+        <svg
+          class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
+          height="7"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 16 16"
+          width="7"
+        >
+          <path
+            d="M.5.5l15 15m0-15l-15 15"
+          />
+        </svg>
+      </span>
+    </div>
+    <div
+      class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
+    >
+      <span
+        class="lucid-Tag-other-children"
+      >
+        Alatar
+        <svg
+          class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
+          height="7"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 16 16"
+          width="7"
+        >
+          <path
+            d="M.5.5l15 15m0-15l-15 15"
+          />
+        </svg>
+      </span>
+    </div>
+    <div
+      class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
+    >
+      <span
+        class="lucid-Tag-other-children"
+      >
+        Aldamir
+        <svg
+          class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
+          height="7"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 16 16"
+          width="7"
+        >
+          <path
+            d="M.5.5l15 15m0-15l-15 15"
+          />
+        </svg>
+      </span>
+    </div>
+    <div
+      class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
+    >
+      <span
+        class="lucid-Tag-other-children"
+      >
+        Aldor
+        <svg
+          class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
+          height="7"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 16 16"
+          width="7"
+        >
+          <path
+            d="M.5.5l15 15m0-15l-15 15"
+          />
+        </svg>
+      </span>
+    </div>
+    <div
+      class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
+    >
+      <span
+        class="lucid-Tag-other-children"
+      >
+        Almarian
+        <svg
+          class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
+          height="7"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 16 16"
+          width="7"
+        >
+          <path
+            d="M.5.5l15 15m0-15l-15 15"
+          />
+        </svg>
+      </span>
+    </div>
+    <div
+      class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
+    >
+      <span
+        class="lucid-Tag-other-children"
+      >
+        Almiel
+        <svg
+          class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
+          height="7"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 16 16"
+          width="7"
+        >
+          <path
+            d="M.5.5l15 15m0-15l-15 15"
+          />
+        </svg>
+      </span>
+    </div>
+    <div
+      class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
+    >
+      <span
+        class="lucid-Tag-other-children"
+      >
+        Amandil
+        <svg
+          class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
+          height="7"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 16 16"
+          width="7"
+        >
+          <path
+            d="M.5.5l15 15m0-15l-15 15"
+          />
+        </svg>
+      </span>
+    </div>
+    <div
+      class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
+    >
+      <span
+        class="lucid-Tag-other-children"
+      >
+        Amdír
+        <svg
+          class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
+          height="7"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 16 16"
+          width="7"
+        >
+          <path
+            d="M.5.5l15 15m0-15l-15 15"
+          />
+        </svg>
+      </span>
+    </div>
+    <div
+      class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
+    >
+      <span
+        class="lucid-Tag-other-children"
+      >
+        Amlaith
+        <svg
+          class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
+          height="7"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 16 16"
+          width="7"
+        >
+          <path
+            d="M.5.5l15 15m0-15l-15 15"
+          />
+        </svg>
+      </span>
+    </div>
+    <div
+      class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
+    >
+      <span
+        class="lucid-Tag-other-children"
+      >
+        Amrod
+        <svg
+          class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
+          height="7"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 16 16"
+          width="7"
+        >
+          <path
+            d="M.5.5l15 15m0-15l-15 15"
+          />
+        </svg>
+      </span>
+    </div>
+    <div
+      class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
+    >
+      <span
+        class="lucid-Tag-other-children"
+      >
+        Amroth
+        <svg
+          class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
+          height="7"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 16 16"
+          width="7"
+        >
+          <path
+            d="M.5.5l15 15m0-15l-15 15"
+          />
+        </svg>
+      </span>
+    </div>
+    <div
+      class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
+    >
+      <span
+        class="lucid-Tag-other-children"
+      >
+        Anardil
+        <svg
+          class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
+          height="7"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 16 16"
+          width="7"
+        >
+          <path
+            d="M.5.5l15 15m0-15l-15 15"
+          />
+        </svg>
+      </span>
+    </div>
+    <div
+      class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
+    >
+      <span
+        class="lucid-Tag-other-children"
+      >
+        Anborn
+        <svg
+          class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
+          height="7"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 16 16"
+          width="7"
+        >
+          <path
+            d="M.5.5l15 15m0-15l-15 15"
+          />
+        </svg>
+      </span>
+    </div>
+    <div
+      class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
+    >
+      <span
+        class="lucid-Tag-other-children"
+      >
+        Ancalagon The Black
+        <svg
+          class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
+          height="7"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 16 16"
+          width="7"
+        >
+          <path
+            d="M.5.5l15 15m0-15l-15 15"
+          />
+        </svg>
+      </span>
+    </div>
+    <div
+      class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
+    >
+      <span
+        class="lucid-Tag-other-children"
+      >
+        Andróg
+        <svg
+          class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
+          height="7"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 16 16"
+          width="7"
+        >
+          <path
+            d="M.5.5l15 15m0-15l-15 15"
+          />
+        </svg>
+      </span>
+    </div>
+    <div
+      class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
+    >
+      <span
+        class="lucid-Tag-other-children"
+      >
+        Angbor
+        <svg
+          class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
+          height="7"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 16 16"
+          width="7"
+        >
+          <path
+            d="M.5.5l15 15m0-15l-15 15"
+          />
+        </svg>
+      </span>
+    </div>
+    <div
+      class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
+    >
+      <span
+        class="lucid-Tag-other-children"
+      >
+        Angelimar
+        <svg
+          class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
+          height="7"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 16 16"
+          width="7"
+        >
+          <path
+            d="M.5.5l15 15m0-15l-15 15"
+          />
+        </svg>
+      </span>
+    </div>
+    <div
+      class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
+    >
+      <span
+        class="lucid-Tag-other-children"
+      >
+        Angelimir
+        <svg
+          class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
+          height="7"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 16 16"
+          width="7"
+        >
+          <path
+            d="M.5.5l15 15m0-15l-15 15"
+          />
+        </svg>
+      </span>
+    </div>
+    <div
+      class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
+    >
+      <span
+        class="lucid-Tag-other-children"
+      >
+        Angrod
+        <svg
+          class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
+          height="7"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 16 16"
+          width="7"
+        >
+          <path
+            d="M.5.5l15 15m0-15l-15 15"
+          />
+        </svg>
+      </span>
+    </div>
+    <div
+      class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
+    >
+      <span
+        class="lucid-Tag-other-children"
+      >
+        Anárion
+        <svg
+          class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
+          height="7"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 16 16"
+          width="7"
+        >
+          <path
+            d="M.5.5l15 15m0-15l-15 15"
+          />
+        </svg>
+      </span>
+    </div>
+    <div
+      class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
+    >
+      <span
+        class="lucid-Tag-other-children"
+      >
+        Ar-Adûnakhôr
+        <svg
+          class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
+          height="7"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 16 16"
+          width="7"
+        >
+          <path
+            d="M.5.5l15 15m0-15l-15 15"
+          />
+        </svg>
+      </span>
+    </div>
+    <div
+      class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
+    >
+      <span
+        class="lucid-Tag-other-children"
+      >
+        Ar-Gimilzôr
+        <svg
+          class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
+          height="7"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 16 16"
+          width="7"
+        >
+          <path
+            d="M.5.5l15 15m0-15l-15 15"
+          />
+        </svg>
+      </span>
+    </div>
+    <div
+      class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
+    >
+      <span
+        class="lucid-Tag-other-children"
+      >
+        Ar-Pharazôn
+        <svg
+          class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
+          height="7"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 16 16"
+          width="7"
+        >
+          <path
+            d="M.5.5l15 15m0-15l-15 15"
+          />
+        </svg>
+      </span>
+    </div>
+    <div
+      class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
+    >
+      <span
+        class="lucid-Tag-other-children"
+      >
+        Ar-Sakalthôr
+        <svg
+          class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
+          height="7"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 16 16"
+          width="7"
+        >
+          <path
+            d="M.5.5l15 15m0-15l-15 15"
+          />
+        </svg>
+      </span>
+    </div>
+    <div
+      class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
+    >
+      <span
+        class="lucid-Tag-other-children"
+      >
+        Ar-Zimrathôn
+        <svg
+          class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
+          height="7"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 16 16"
+          width="7"
+        >
+          <path
+            d="M.5.5l15 15m0-15l-15 15"
+          />
+        </svg>
+      </span>
+    </div>
+    <div
+      class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
+    >
+      <span
+        class="lucid-Tag-other-children"
+      >
+        Arador
+        <svg
+          class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
+          height="7"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 16 16"
+          width="7"
+        >
+          <path
+            d="M.5.5l15 15m0-15l-15 15"
+          />
+        </svg>
+      </span>
+    </div>
+    <div
+      class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
+    >
+      <span
+        class="lucid-Tag-other-children"
+      >
+        Araglas
+        <svg
+          class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
+          height="7"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 16 16"
+          width="7"
+        >
+          <path
+            d="M.5.5l15 15m0-15l-15 15"
+          />
+        </svg>
+      </span>
+    </div>
+    <div
+      class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
+    >
+      <span
+        class="lucid-Tag-other-children"
+      >
+        Aragorn I
+        <svg
+          class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
+          height="7"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 16 16"
+          width="7"
+        >
+          <path
+            d="M.5.5l15 15m0-15l-15 15"
+          />
+        </svg>
+      </span>
+    </div>
+    <div
+      class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
+    >
+      <span
+        class="lucid-Tag-other-children"
+      >
+        Aragorn II Elessar
+        <svg
+          class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
+          height="7"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 16 16"
+          width="7"
+        >
+          <path
+            d="M.5.5l15 15m0-15l-15 15"
+          />
+        </svg>
+      </span>
+    </div>
+  </div>
+  <div
+    class="lucid-Tag lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
+  >
+    <span
+      class="lucid-Tag-other-children"
+    >
+      Star Trek
+      <svg
+        class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
+        height="7"
+        preserveAspectRatio="xMidYMid meet"
+        viewBox="0 0 16 16"
+        width="7"
+      >
+        <path
+          d="M.5.5l15 15m0-15l-15 15"
+        />
+      </svg>
+    </span>
+    <div
+      class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
+    >
+      <span
+        class="lucid-Tag-other-children"
+      >
+        Jonathan Archer
+        <svg
+          class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
+          height="7"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 16 16"
+          width="7"
+        >
+          <path
+            d="M.5.5l15 15m0-15l-15 15"
+          />
+        </svg>
+      </span>
+    </div>
+    <div
+      class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
+    >
+      <span
+        class="lucid-Tag-other-children"
+      >
+        Ayala
+        <svg
+          class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
+          height="7"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 16 16"
+          width="7"
+        >
+          <path
+            d="M.5.5l15 15m0-15l-15 15"
+          />
+        </svg>
+      </span>
+    </div>
+    <div
+      class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
+    >
+      <span
+        class="lucid-Tag-other-children"
+      >
+        Azan
+        <svg
+          class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
+          height="7"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 16 16"
+          width="7"
+        >
+          <path
+            d="M.5.5l15 15m0-15l-15 15"
+          />
+        </svg>
+      </span>
+    </div>
+    <div
+      class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
+    >
+      <span
+        class="lucid-Tag-other-children"
+      >
+        Reginald Barclay
+        <svg
+          class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
+          height="7"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 16 16"
+          width="7"
+        >
+          <path
+            d="M.5.5l15 15m0-15l-15 15"
+          />
+        </svg>
+      </span>
+    </div>
+    <div
+      class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
+    >
+      <span
+        class="lucid-Tag-other-children"
+      >
+        Lieutenant, JG (TNG,FCT)
+        <svg
+          class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
+          height="7"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 16 16"
+          width="7"
+        >
+          <path
+            d="M.5.5l15 15m0-15l-15 15"
+          />
+        </svg>
+      </span>
+    </div>
+    <div
+      class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
+    >
+      <span
+        class="lucid-Tag-other-children"
+      >
+        Engineering Officer (TNG,Movies)
+        <svg
+          class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
+          height="7"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 16 16"
+          width="7"
+        >
+          <path
+            d="M.5.5l15 15m0-15l-15 15"
+          />
+        </svg>
+      </span>
+    </div>
+    <div
+      class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
+    >
+      <span
+        class="lucid-Tag-other-children"
+      >
+        Bareil Antos
+        <svg
+          class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
+          height="7"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 16 16"
+          width="7"
+        >
+          <path
+            d="M.5.5l15 15m0-15l-15 15"
+          />
+        </svg>
+      </span>
+    </div>
+    <div
+      class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
+    >
+      <span
+        class="lucid-Tag-other-children"
+      >
+        Julian Bashir
+        <svg
+          class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
+          height="7"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 16 16"
+          width="7"
+        >
+          <path
+            d="M.5.5l15 15m0-15l-15 15"
+          />
+        </svg>
+      </span>
+    </div>
+    <div
+      class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
+    >
+      <span
+        class="lucid-Tag-other-children"
+      >
+        Season 6 (TNG)
+        <svg
+          class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
+          height="7"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 16 16"
+          width="7"
+        >
+          <path
+            d="M.5.5l15 15m0-15l-15 15"
+          />
+        </svg>
+      </span>
+    </div>
+    <div
+      class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
+    >
+      <span
+        class="lucid-Tag-other-children"
+      >
+        Lieutenant, JG (S1-3)
+        <svg
+          class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
+          height="7"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 16 16"
+          width="7"
+        >
+          <path
+            d="M.5.5l15 15m0-15l-15 15"
+          />
+        </svg>
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tag [common] example testing should match snapshot(s) for Nested 1`] = `
+<div>
+  <div
+    class="lucid-Tag lucid-Tag-has-light-background lucid-Tag-default"
+  >
+    <span
+      class="lucid-Tag-other-children"
+    >
+      Grouped items
+    </span>
+    <div
+      class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
+    >
+      <span
+        class="lucid-Tag-other-children"
+      >
+        Fashion
+      </span>
+    </div>
+    <div
+      class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
+    >
+      <span
+        class="lucid-Tag-other-children"
+      >
+        The
+      </span>
+    </div>
+    <div
+      class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
+    >
+      <span
+        class="lucid-Tag-other-children"
+      >
+        Vexillologist
+      </span>
+    </div>
+    <div
+      class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
+    >
+      <span
+        class="lucid-Tag-other-children"
+      >
+        Cold Brew
+      </span>
+    </div>
+    <div
+      class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
+    >
+      <span
+        class="lucid-Tag-other-children"
+      >
+        This is a longer sentence that should be handled okay
+      </span>
+    </div>
+    <div
+      class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
+    >
+      <span
+        class="lucid-Tag-other-children"
+      >
+        Fashion
+      </span>
+    </div>
+    <div
+      class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
+    >
+      <span
+        class="lucid-Tag-other-children"
+      >
+        The
+      </span>
+    </div>
+    <div
+      class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
+    >
+      <span
+        class="lucid-Tag-other-children"
+      >
+        Vexillologist
+      </span>
+    </div>
+  </div>
+  <div
+    class="lucid-Tag lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
+  >
+    <span
+      class="lucid-Tag-other-children"
+    >
+      Grouped items
+      <svg
+        class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
+        height="7"
+        preserveAspectRatio="xMidYMid meet"
+        viewBox="0 0 16 16"
+        width="7"
+      >
+        <path
+          d="M.5.5l15 15m0-15l-15 15"
+        />
+      </svg>
+    </span>
+    <div
+      class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
+    >
+      <span
+        class="lucid-Tag-other-children"
+      >
+        Fashion
+        <svg
+          class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
+          height="7"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 16 16"
+          width="7"
+        >
+          <path
+            d="M.5.5l15 15m0-15l-15 15"
+          />
+        </svg>
+      </span>
+    </div>
+    <div
+      class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
+    >
+      <span
+        class="lucid-Tag-other-children"
+      >
+        The
+        <svg
+          class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
+          height="7"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 16 16"
+          width="7"
+        >
+          <path
+            d="M.5.5l15 15m0-15l-15 15"
+          />
+        </svg>
+      </span>
+    </div>
+    <div
+      class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
+    >
+      <span
+        class="lucid-Tag-other-children"
+      >
+        Vexillologist
+        <svg
+          class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
+          height="7"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 16 16"
+          width="7"
+        >
+          <path
+            d="M.5.5l15 15m0-15l-15 15"
+          />
+        </svg>
+      </span>
+    </div>
+    <div
+      class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
+    >
+      <span
+        class="lucid-Tag-other-children"
+      >
+        Cold Brew
+        <svg
+          class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
+          height="7"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 16 16"
+          width="7"
+        >
+          <path
+            d="M.5.5l15 15m0-15l-15 15"
+          />
+        </svg>
+      </span>
+    </div>
+    <div
+      class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
+    >
+      <span
+        class="lucid-Tag-other-children"
+      >
+        This is a longer sentence that should be handled okay
+        <svg
+          class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
+          height="7"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 16 16"
+          width="7"
+        >
+          <path
+            d="M.5.5l15 15m0-15l-15 15"
+          />
+        </svg>
+      </span>
+    </div>
+    <div
+      class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
+    >
+      <span
+        class="lucid-Tag-other-children"
+      >
+        Fashion
+        <svg
+          class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
+          height="7"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 16 16"
+          width="7"
+        >
+          <path
+            d="M.5.5l15 15m0-15l-15 15"
+          />
+        </svg>
+      </span>
+    </div>
+    <div
+      class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
+    >
+      <span
+        class="lucid-Tag-other-children"
+      >
+        The
+        <svg
+          class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
+          height="7"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 16 16"
+          width="7"
+        >
+          <path
+            d="M.5.5l15 15m0-15l-15 15"
+          />
+        </svg>
+      </span>
+    </div>
+    <div
+      class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
+    >
+      <span
+        class="lucid-Tag-other-children"
+      >
+        Vexillologist
+        <svg
+          class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
+          height="7"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 16 16"
+          width="7"
+        >
+          <path
+            d="M.5.5l15 15m0-15l-15 15"
+          />
+        </svg>
+      </span>
+    </div>
+    <div
+      class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
+    >
+      <span
+        class="lucid-Tag-other-children"
+      >
+        Cold Brew
+        <svg
+          class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
+          height="7"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 16 16"
+          width="7"
+        >
+          <path
+            d="M.5.5l15 15m0-15l-15 15"
+          />
+        </svg>
+      </span>
+    </div>
+    <div
+      class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-default"
+    >
+      <span
+        class="lucid-Tag-other-children"
+      >
+        This is a longer sentence that should be handled okay
+        <svg
+          class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
+          height="7"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 16 16"
+          width="7"
+        >
+          <path
+            d="M.5.5l15 15m0-15l-15 15"
+          />
+        </svg>
+      </span>
+    </div>
+  </div>
 </div>
 `;

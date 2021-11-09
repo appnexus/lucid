@@ -1,141 +1,140 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`RadioButton [common] example testing should match snapshot(s) for 0.interactive 1`] = `
-<span
-  className="lucid-RadioButton"
-  onClick={[Function]}
->
-  <input
-    checked={false}
-    className="lucid-RadioButton-native"
-    disabled={false}
-    onChange={[Function]}
-    tabIndex={20}
-    type="radio"
-  />
-  <span
-    className="lucid-RadioButton-visualization-glow"
-    onClick={[Function]}
-  />
-  <span
-    className="lucid-RadioButton-visualization-container"
-    onClick={[Function]}
-  />
-  <span
-    className="lucid-RadioButton-visualization-dot"
-    onClick={[Function]}
-  />
-</span>
+exports[`RadioButton [common] example testing should match snapshot(s) for Interactive 1`] = `
+<ul>
+  <li
+    style="list-style-type:none;display:flex;align-items:center"
+  >
+    <label>
+      Enabled
+    </label>
+    <span
+      class="lucid-RadioButton"
+    >
+      <input
+        class="lucid-RadioButton-native"
+        tabindex="20"
+        type="radio"
+      />
+      <span
+        class="lucid-RadioButton-visualization-glow"
+      />
+      <span
+        class="lucid-RadioButton-visualization-container"
+      />
+      <span
+        class="lucid-RadioButton-visualization-dot"
+      />
+    </span>
+  </li>
+</ul>
 `;
 
-exports[`RadioButton [common] example testing should match snapshot(s) for 1.states 1`] = `
-<span
-  className="lucid-RadioButton"
-  onClick={[Function]}
->
-  <input
-    checked={false}
-    className="lucid-RadioButton-native"
-    disabled={false}
-    onChange={[Function]}
-    tabIndex={20}
-    type="radio"
-  />
-  <span
-    className="lucid-RadioButton-visualization-glow"
-    onClick={[Function]}
-  />
-  <span
-    className="lucid-RadioButton-visualization-container"
-    onClick={[Function]}
-  />
-  <span
-    className="lucid-RadioButton-visualization-dot"
-    onClick={[Function]}
-  />
-</span>
-`;
-
-exports[`RadioButton [common] example testing should match snapshot(s) for 1.states 2`] = `
-<span
-  className="lucid-RadioButton lucid-RadioButton-is-selected"
-  onClick={[Function]}
->
-  <input
-    checked={true}
-    className="lucid-RadioButton-native"
-    disabled={false}
-    onChange={[Function]}
-    tabIndex={21}
-    type="radio"
-  />
-  <span
-    className="lucid-RadioButton-visualization-glow"
-    onClick={[Function]}
-  />
-  <span
-    className="lucid-RadioButton-visualization-container"
-    onClick={[Function]}
-  />
-  <span
-    className="lucid-RadioButton-visualization-dot"
-    onClick={[Function]}
-  />
-</span>
-`;
-
-exports[`RadioButton [common] example testing should match snapshot(s) for 1.states 3`] = `
-<span
-  className="lucid-RadioButton lucid-RadioButton-is-disabled"
-  onClick={[Function]}
->
-  <input
-    checked={false}
-    className="lucid-RadioButton-native"
-    disabled={true}
-    onChange={[Function]}
-    tabIndex={22}
-    type="radio"
-  />
-  <span
-    className="lucid-RadioButton-visualization-glow"
-    onClick={[Function]}
-  />
-  <span
-    className="lucid-RadioButton-visualization-container"
-    onClick={[Function]}
-  />
-  <span
-    className="lucid-RadioButton-visualization-dot"
-    onClick={[Function]}
-  />
-</span>
-`;
-
-exports[`RadioButton [common] example testing should match snapshot(s) for 1.states 4`] = `
-<span
-  className="lucid-RadioButton lucid-RadioButton-is-disabled lucid-RadioButton-is-selected"
-  onClick={[Function]}
->
-  <input
-    checked={true}
-    className="lucid-RadioButton-native"
-    disabled={true}
-    onChange={[Function]}
-    tabIndex={23}
-    type="radio"
-  />
-  <span
-    className="lucid-RadioButton-visualization-glow"
-    onClick={[Function]}
-  />
-  <span
-    className="lucid-RadioButton-visualization-container"
-    onClick={[Function]}
-  />
-  <span
-    className="lucid-RadioButton-visualization-dot"
-    onClick={[Function]}
-  />
-</span>
+exports[`RadioButton [common] example testing should match snapshot(s) for States 1`] = `
+<ul>
+  <li
+    style="display:flex;align-items:center"
+  >
+    <label>
+      Unselected
+    </label>
+    <span
+      class="lucid-RadioButton"
+    >
+      <input
+        class="lucid-RadioButton-native"
+        tabindex="20"
+        type="radio"
+      />
+      <span
+        class="lucid-RadioButton-visualization-glow"
+      />
+      <span
+        class="lucid-RadioButton-visualization-container"
+      />
+      <span
+        class="lucid-RadioButton-visualization-dot"
+      />
+    </span>
+  </li>
+  <li
+    style="display:flex;align-items:center"
+  >
+    <label>
+      Selected
+    </label>
+    <span
+      class="lucid-RadioButton lucid-RadioButton-is-selected"
+    >
+      <input
+        checked=""
+        class="lucid-RadioButton-native"
+        tabindex="21"
+        type="radio"
+      />
+      <span
+        class="lucid-RadioButton-visualization-glow"
+      />
+      <span
+        class="lucid-RadioButton-visualization-container"
+      />
+      <span
+        class="lucid-RadioButton-visualization-dot"
+      />
+    </span>
+  </li>
+  <li
+    style="display:flex;align-items:center"
+  >
+    <label>
+      Disabled
+    </label>
+    <span
+      class="lucid-RadioButton lucid-RadioButton-is-disabled"
+    >
+      <input
+        class="lucid-RadioButton-native"
+        disabled=""
+        tabindex="22"
+        type="radio"
+      />
+      <span
+        class="lucid-RadioButton-visualization-glow"
+      />
+      <span
+        class="lucid-RadioButton-visualization-container"
+      />
+      <span
+        class="lucid-RadioButton-visualization-dot"
+      />
+    </span>
+  </li>
+  <li
+    style="display:flex;align-items:center"
+  >
+    <label>
+      Disabled & selected
+    </label>
+    <span
+      class="lucid-RadioButton lucid-RadioButton-is-disabled lucid-RadioButton-is-selected"
+    >
+      <input
+        checked=""
+        class="lucid-RadioButton-native"
+        disabled=""
+        tabindex="23"
+        type="radio"
+      />
+      <span
+        class="lucid-RadioButton-visualization-glow"
+      />
+      <span
+        class="lucid-RadioButton-visualization-container"
+      />
+      <span
+        class="lucid-RadioButton-visualization-dot"
+      />
+    </span>
+  </li>
+</ul>
 `;

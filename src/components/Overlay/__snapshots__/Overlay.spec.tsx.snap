@@ -1,69 +1,33 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Overlay [common] example testing should match snapshot(s) for basic 1`] = `
-<Portal
-  portalId="1-Overlay-Portal-6"
->
-  <CSSTransition
-    classNames="lucid-Overlay"
-    in={false}
-    timeout={300}
-    unmountOnExit={true}
+exports[`Overlay [common] example testing should match snapshot(s) for Default 1`] = `
+<div>
+  <button
+    class="lucid-Button"
+    type="button"
   >
-    <div
-      className="lucid-Overlay lucid-Overlay-is-animated"
-      onClick={[Function]}
+    <span
+      class="lucid-Button-content"
     >
-      <div
-        style={
-          Object {
-            "color": "#fff",
-          }
-        }
-      >
-        User cannot interact with the background (except scrolling).
-      </div>
-    </div>
-  </CSSTransition>
-</Portal>
+      Toggle
+    </span>
+  </button>
+</div>
 `;
 
-exports[`Overlay [common] example testing should match snapshot(s) for no-modal 1`] = `
-<Portal
-  portalId="1-Overlay-Portal-7"
->
-  <CSSTransition
-    classNames="lucid-Overlay"
-    in={false}
-    timeout={300}
-    unmountOnExit={true}
+exports[`Overlay [common] example testing should match snapshot(s) for NoModal 1`] = `
+<div>
+  <button
+    class="lucid-Button"
+    type="button"
   >
-    <div
-      className="lucid-Overlay lucid-Overlay-is-not-modal lucid-Overlay-is-animated"
-      onClick={[Function]}
+    <span
+      class="lucid-Button-content"
     >
-      <div
-        style={
-          Object {
-            "backgroundColor": "#eee",
-            "padding": "100px",
-          }
-        }
-      >
-        User can still interact with the background.
-        <Button
-          hasOnlyIcon={false}
-          isActive={false}
-          isDisabled={false}
-          onClick={[Function]}
-          type="button"
-        >
-          Close
-        </Button>
-      </div>
-    </div>
-  </CSSTransition>
-</Portal>
+      Toggle
+    </span>
+  </button>
+</div>
 `;
 
 exports[`Overlay should render with isAnimated=false 1`] = `

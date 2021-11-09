@@ -1,113 +1,72 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Line [common] example testing should match snapshot(s) for basic 1`] = `
-<path
-  className="lucid-Line lucid-Line-color-chart-0"
-  d="M0,0 L120,120"
-  style={Object {}}
-/>
-`;
-
-exports[`Line [common] example testing should match snapshot(s) for basic 2`] = `
-<path
-  className="lucid-Line lucid-Line-color-chart-1"
-  d="M0,20 L120,100"
-  style={Object {}}
-/>
-`;
-
-exports[`Line [common] example testing should match snapshot(s) for basic 3`] = `
-<path
-  className="lucid-Line lucid-Line-color-chart-2"
-  d="M0,40 L120,80"
-  style={Object {}}
-/>
-`;
-
-exports[`Line [common] example testing should match snapshot(s) for basic 4`] = `
-<path
-  className="lucid-Line lucid-Line-color-chart-3"
-  d="M0,60 L120,60"
-  style={Object {}}
-/>
-`;
-
-exports[`Line [common] example testing should match snapshot(s) for basic 5`] = `
-<path
-  className="lucid-Line lucid-Line-color-chart-4"
-  d="M0,80 L120,40"
-  style={Object {}}
-/>
-`;
-
-exports[`Line [common] example testing should match snapshot(s) for basic 6`] = `
-<path
-  className="lucid-Line lucid-Line-color-chart-5"
-  d="M0,100 L120,20"
-  style={Object {}}
-/>
-`;
-
-exports[`Line [common] example testing should match snapshot(s) for basic 7`] = `
-<path
-  className="lucid-Line lucid-Line-color-chart-6"
-  d="M0,120 L120,0"
-  style={Object {}}
-/>
-`;
-
-exports[`Line [common] example testing should match snapshot(s) for basic 8`] = `
-<path
-  className="lucid-Line lucid-Line-color-chart-0 lucid-Line-is-dotted"
-  d="M0,0 L120,120"
-  style={Object {}}
-/>
-`;
-
-exports[`Line [common] example testing should match snapshot(s) for basic 9`] = `
-<path
-  className="lucid-Line lucid-Line-color-chart-1 lucid-Line-is-dotted"
-  d="M0,20 L120,100"
-  style={Object {}}
-/>
-`;
-
-exports[`Line [common] example testing should match snapshot(s) for basic 10`] = `
-<path
-  className="lucid-Line lucid-Line-color-chart-2 lucid-Line-is-dotted"
-  d="M0,40 L120,80"
-  style={Object {}}
-/>
-`;
-
-exports[`Line [common] example testing should match snapshot(s) for basic 11`] = `
-<path
-  className="lucid-Line lucid-Line-color-chart-3 lucid-Line-is-dotted"
-  d="M0,60 L120,60"
-  style={Object {}}
-/>
-`;
-
-exports[`Line [common] example testing should match snapshot(s) for basic 12`] = `
-<path
-  className="lucid-Line lucid-Line-color-chart-4 lucid-Line-is-dotted"
-  d="M0,80 L120,40"
-  style={Object {}}
-/>
-`;
-
-exports[`Line [common] example testing should match snapshot(s) for basic 13`] = `
-<path
-  className="lucid-Line lucid-Line-color-chart-5 lucid-Line-is-dotted"
-  d="M0,100 L120,20"
-  style={Object {}}
-/>
-`;
-
-exports[`Line [common] example testing should match snapshot(s) for basic 14`] = `
-<path
-  className="lucid-Line lucid-Line-color-chart-6 lucid-Line-is-dotted"
-  d="M0,120 L120,0"
-  style={Object {}}
-/>
+exports[`Line [common] example testing should match snapshot(s) for Default 1`] = `
+<div>
+  <svg
+    height="120"
+    width="200"
+  >
+    <path
+      class="lucid-Line lucid-Line-color-chart-0"
+      d="M0,0 L120,120"
+    />
+    <path
+      class="lucid-Line lucid-Line-color-chart-1"
+      d="M0,20 L120,100"
+    />
+    <path
+      class="lucid-Line lucid-Line-color-chart-2"
+      d="M0,40 L120,80"
+    />
+    <path
+      class="lucid-Line lucid-Line-color-chart-3"
+      d="M0,60 L120,60"
+    />
+    <path
+      class="lucid-Line lucid-Line-color-chart-4"
+      d="M0,80 L120,40"
+    />
+    <path
+      class="lucid-Line lucid-Line-color-chart-5"
+      d="M0,100 L120,20"
+    />
+    <path
+      class="lucid-Line lucid-Line-color-chart-6"
+      d="M0,120 L120,0"
+    />
+  </svg>
+  <svg
+    height="120"
+    width="200"
+  >
+    <path
+      class="lucid-Line lucid-Line-color-chart-0 lucid-Line-is-dotted"
+      d="M0,0 L120,120"
+    />
+    <path
+      class="lucid-Line lucid-Line-color-chart-1 lucid-Line-is-dotted"
+      d="M0,20 L120,100"
+    />
+    <path
+      class="lucid-Line lucid-Line-color-chart-2 lucid-Line-is-dotted"
+      d="M0,40 L120,80"
+    />
+    <path
+      class="lucid-Line lucid-Line-color-chart-3 lucid-Line-is-dotted"
+      d="M0,60 L120,60"
+    />
+    <path
+      class="lucid-Line lucid-Line-color-chart-4 lucid-Line-is-dotted"
+      d="M0,80 L120,40"
+    />
+    <path
+      class="lucid-Line lucid-Line-color-chart-5 lucid-Line-is-dotted"
+      d="M0,100 L120,20"
+    />
+    <path
+      class="lucid-Line lucid-Line-color-chart-6 lucid-Line-is-dotted"
+      d="M0,120 L120,0"
+    />
+  </svg>
+</div>
 `;

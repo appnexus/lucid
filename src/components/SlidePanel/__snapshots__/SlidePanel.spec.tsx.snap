@@ -1,28 +1,185 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SlidePanel [common] example testing should match snapshot(s) for 1.looped-slides 1`] = `
-<div
-  className="lucid-SlidePanel"
->
-  <Motion
-    style={
-      Object {
-        "translateXPercentage": Object {
-          "damping": 37,
-          "precision": 1,
-          "stiffness": 640,
-          "val": -150,
-        },
-        "translateXPixel": Object {
-          "damping": 37,
-          "precision": 1,
-          "stiffness": 640,
-          "val": 0,
-        },
-      }
-    }
+exports[`SlidePanel [common] example testing should match snapshot(s) for LoopedSlides 1`] = `
+<section>
+  <button
+    class="lucid-Button"
+    type="button"
   >
-    <Component />
-  </Motion>
-</div>
+    <span
+      class="lucid-Button-content"
+    >
+      Backward
+    </span>
+  </button>
+  <button
+    class="lucid-Button"
+    type="button"
+  >
+    <span
+      class="lucid-Button-content"
+    >
+      Forward
+    </span>
+  </button>
+  Current offset: 0
+  <div
+    class="lucid-SlidePanel"
+  >
+    <div
+      class="lucid-SlidePanel-slidestrip"
+      style="transform:translateX(calc(-150% + 0px))"
+    >
+      <div
+        class="lucid-SlidePanel-Slide"
+        style="flex-grow:1;flex-shrink:0;flex-basis:50%"
+      >
+        <svg
+          class="lucid-Icon lucid-Icon-color-primary lucid-AnalyzeDataIcon"
+          height="16"
+          preserveAspectRatio="xMidYMid meet"
+          style="width:100%;height:30vh;background:whitesmoke"
+          viewBox="0 0 16 16"
+          width="16"
+        >
+          <path
+            d="M0 15.5h16"
+          />
+          <path
+            d="M2.5 10.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm3-6a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm4 4a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"
+          />
+          <circle
+            cx="13.5"
+            cy="2.5"
+            r="2"
+          />
+          <path
+            d="M1.5 10.5l4-5 4 4 3.065-5.364"
+          />
+        </svg>
+      </div>
+      <div
+        class="lucid-SlidePanel-Slide"
+        style="flex-grow:1;flex-shrink:0;flex-basis:50%"
+      >
+        <svg
+          class="lucid-Icon lucid-Icon-color-primary lucid-CalendarIcon"
+          height="16"
+          preserveAspectRatio="xMidYMid meet"
+          style="width:100%;height:30vh"
+          viewBox="0 0 16 16"
+          width="16"
+        >
+          <path
+            d="M.5 2.5h15v13H.5zm4-2.5v4.5m7-4.5v4.5m-11 2h15"
+          />
+        </svg>
+      </div>
+      <div
+        class="lucid-SlidePanel-Slide"
+        style="flex-grow:1;flex-shrink:0;flex-basis:50%"
+      >
+        <svg
+          class="lucid-Icon lucid-Icon-color-primary lucid-DuplicateIcon"
+          height="16"
+          preserveAspectRatio="xMidYMid meet"
+          style="width:100%;height:30vh;background:whitesmoke"
+          viewBox="0 0 16 16"
+          width="16"
+        >
+          <path
+            d="M1.5 4.5h9v11h-9z"
+          />
+          <path
+            d="M10.5 11.5h4V.5h-9v4"
+          />
+        </svg>
+      </div>
+      <div
+        class="lucid-SlidePanel-Slide"
+        style="flex-grow:1;flex-shrink:0;flex-basis:50%"
+      >
+        <svg
+          class="lucid-Icon lucid-Icon-color-primary lucid-EditIcon"
+          height="16"
+          preserveAspectRatio="xMidYMid meet"
+          style="width:100%;height:30vh"
+          viewBox="0 0 16 16"
+          width="16"
+        >
+          <path
+            d="M4.541 14.522L.548 15.547l.974-4.006L12.452.472l3.019 2.981zm5.924-12.038l3.019 2.981M2.5 10.5l3 3"
+          />
+        </svg>
+      </div>
+      <div
+        class="lucid-SlidePanel-Slide"
+        style="flex-grow:1;flex-shrink:0;flex-basis:50%"
+      >
+        <svg
+          class="lucid-Icon lucid-Icon-color-primary lucid-FileIcon"
+          height="16"
+          preserveAspectRatio="xMidYMid meet"
+          style="width:100%;height:30vh;background:whitesmoke"
+          viewBox="0 0 16 16"
+          width="16"
+        >
+          <path
+            d="M2.5.5v15h11v-11l-4-4z"
+          />
+          <path
+            d="M13.25 5H9V.75"
+          />
+        </svg>
+      </div>
+      <div
+        class="lucid-SlidePanel-Slide"
+        style="flex-grow:1;flex-shrink:0;flex-basis:50%"
+      >
+        <svg
+          class="lucid-Icon lucid-Icon-color-primary lucid-ImageIcon"
+          height="16"
+          preserveAspectRatio="xMidYMid meet"
+          style="width:100%;height:30vh;background:whitesmoke"
+          viewBox="0 0 16 16"
+          width="16"
+        >
+          <path
+            d="M.5.5h15v15H.5z"
+          />
+          <circle
+            cx="10"
+            cy="5"
+            r="2"
+          />
+          <path
+            d="M.5 11.5l4.5-4 4.5 4 3-2 3 2"
+          />
+        </svg>
+      </div>
+      <div
+        class="lucid-SlidePanel-Slide"
+        style="flex-grow:1;flex-shrink:0;flex-basis:50%"
+      >
+        <svg
+          class="lucid-Icon lucid-Icon-color-primary lucid-SettingsIcon"
+          height="16"
+          preserveAspectRatio="xMidYMid meet"
+          style="width:100%;height:30vh"
+          viewBox="0 0 16 16"
+          width="16"
+        >
+          <path
+            d="M2.254 13.052l1.733-.999A5.702 5.702 0 0 0 6.5 13.501V15.5h3v-1.999a5.708 5.708 0 0 0 2.513-1.451l1.733.999 1.5-2.599-1.733-.998c.25-.951.25-1.951 0-2.902l1.732-1.001-1.499-2.599-1.733 1A5.707 5.707 0 0 0 9.5 2.502V.5h-3v2.002a5.696 5.696 0 0 0-2.513 1.45l-1.726-1L.76 5.553l1.727.997a5.708 5.708 0 0 0 0 2.902L.755 10.453l1.499 2.599z"
+          />
+          <circle
+            cx="8"
+            cy="8"
+            r="2.5"
+          />
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
 `;

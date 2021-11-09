@@ -1,1305 +1,2283 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CalendarMonth common tests [common] example testing should match snapshot(s) for 1.selected-day 1`] = `
-<DayPicker
-  canChangeMonth={false}
-  captionElement={
-    <Caption
-      classNames={
-        Object {
-          "body": "DayPicker-Body",
-          "caption": "DayPicker-Caption",
-          "container": "DayPicker",
-          "day": "DayPicker-Day",
-          "disabled": "disabled",
-          "footer": "DayPicker-Footer",
-          "interactionDisabled": "DayPicker--interactionDisabled",
-          "month": "DayPicker-Month",
-          "navBar": "DayPicker-NavBar",
-          "navButtonInteractionDisabled": "DayPicker-NavButton--interactionDisabled",
-          "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
-          "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
-          "outside": "outside",
-          "selected": "selected",
-          "today": "today",
-          "todayButton": "DayPicker-TodayButton",
-          "week": "DayPicker-Week",
-          "weekNumber": "DayPicker-WeekNumber",
-          "weekday": "DayPicker-Weekday",
-          "weekdays": "DayPicker-Weekdays",
-          "weekdaysRow": "DayPicker-WeekdaysRow",
-          "wrapper": "DayPicker-wrapper",
-        }
-      }
-    />
-  }
-  className="lucid-CalendarMonth"
-  classNames={
-    Object {
-      "body": "DayPicker-Body",
-      "caption": "DayPicker-Caption",
-      "container": "DayPicker",
-      "day": "DayPicker-Day",
-      "disabled": "disabled",
-      "footer": "DayPicker-Footer",
-      "interactionDisabled": "DayPicker--interactionDisabled",
-      "month": "DayPicker-Month",
-      "navBar": "DayPicker-NavBar",
-      "navButtonInteractionDisabled": "DayPicker-NavButton--interactionDisabled",
-      "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
-      "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
-      "outside": "outside",
-      "selected": "selected",
-      "today": "today",
-      "todayButton": "DayPicker-TodayButton",
-      "week": "DayPicker-Week",
-      "weekNumber": "DayPicker-WeekNumber",
-      "weekday": "DayPicker-Weekday",
-      "weekdays": "DayPicker-Weekdays",
-      "weekdaysRow": "DayPicker-WeekdaysRow",
-      "wrapper": "DayPicker-wrapper",
-    }
-  }
-  cursor={null}
-  enableOutsideDays={false}
-  fixedWeeks={false}
-  from={null}
-  initialMonth={2016-02-17T22:25:23.000Z}
-  key="0"
-  labels={
-    Object {
-      "nextMonth": "Next Month",
-      "previousMonth": "Previous Month",
-    }
-  }
-  locale="en"
-  localeUtils={
-    Object {
-      "default": Object {
-        "formatDay": [Function],
-        "formatMonthTitle": [Function],
-        "formatWeekdayLong": [Function],
-        "formatWeekdayShort": [Function],
-        "getFirstDayOfWeek": [Function],
-        "getMonths": [Function],
-      },
-      "formatDay": [Function],
-      "formatMonthTitle": [Function],
-      "formatWeekdayLong": [Function],
-      "formatWeekdayShort": [Function],
-      "getFirstDayOfWeek": [Function],
-      "getMonths": [Function],
-    }
-  }
-  modifiers={
-    Object {
-      "from": [Function],
-      "range": [Function],
-      "to": [Function],
-    }
-  }
-  navbarElement={
-    <Navbar
-      classNames={
-        Object {
-          "body": "DayPicker-Body",
-          "caption": "DayPicker-Caption",
-          "container": "DayPicker",
-          "day": "DayPicker-Day",
-          "disabled": "disabled",
-          "footer": "DayPicker-Footer",
-          "interactionDisabled": "DayPicker--interactionDisabled",
-          "month": "DayPicker-Month",
-          "navBar": "DayPicker-NavBar",
-          "navButtonInteractionDisabled": "DayPicker-NavButton--interactionDisabled",
-          "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
-          "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
-          "outside": "outside",
-          "selected": "selected",
-          "today": "today",
-          "todayButton": "DayPicker-TodayButton",
-          "week": "DayPicker-Week",
-          "weekNumber": "DayPicker-WeekNumber",
-          "weekday": "DayPicker-Weekday",
-          "weekdays": "DayPicker-Weekdays",
-          "weekdaysRow": "DayPicker-WeekdaysRow",
-          "wrapper": "DayPicker-wrapper",
-        }
-      }
-      dir="ltr"
-      labels={
-        Object {
-          "nextMonth": "Next Month",
-          "previousMonth": "Previous Month",
-        }
-      }
-      showNextButton={true}
-      showPreviousButton={true}
-    />
-  }
-  numberOfMonths={1}
-  pagedNavigation={false}
-  renderDay={[Function]}
-  reverseMonths={false}
-  selectMode="day"
-  selectedDays={2016-02-17T22:25:23.000Z}
-  shouldComponentUpdate={true}
-  showWeekNumbers={false}
-  tabIndex={0}
-  to={null}
-  weekdayElement={<Weekday />}
-  weekdaysShort={
-    Array [
-      "Sun",
-      "Mon",
-      "Tue",
-      "Wed",
-      "Thu",
-      "Fri",
-      "Sat",
-    ]
-  }
-/>
+exports[`CalendarMonth common tests [common] example testing should match snapshot(s) for CustomDaypickerModifiers 1`] = `
+<section
+  style="max-width:400px"
+>
+  <div
+    class="DayPicker DayPicker--interactionDisabled lucid-CalendarMonth"
+    lang="en"
+    role="application"
+  >
+    <div
+      class="DayPicker-wrapper"
+      tabindex="-1"
+    >
+      <div
+        class="DayPicker-Month"
+        role="grid"
+      >
+        <div
+          class="DayPicker-Caption"
+          role="heading"
+        >
+          <div>
+            February 2016
+          </div>
+        </div>
+        <div
+          class="DayPicker-Weekdays"
+          role="rowgroup"
+        >
+          <div
+            class="DayPicker-WeekdaysRow"
+            role="row"
+          >
+            <div
+              class="DayPicker-Weekday"
+              role="columnheader"
+            >
+              <abbr
+                title="Sunday"
+              >
+                Sun
+              </abbr>
+            </div>
+            <div
+              class="DayPicker-Weekday"
+              role="columnheader"
+            >
+              <abbr
+                title="Monday"
+              >
+                Mon
+              </abbr>
+            </div>
+            <div
+              class="DayPicker-Weekday"
+              role="columnheader"
+            >
+              <abbr
+                title="Tuesday"
+              >
+                Tue
+              </abbr>
+            </div>
+            <div
+              class="DayPicker-Weekday"
+              role="columnheader"
+            >
+              <abbr
+                title="Wednesday"
+              >
+                Wed
+              </abbr>
+            </div>
+            <div
+              class="DayPicker-Weekday"
+              role="columnheader"
+            >
+              <abbr
+                title="Thursday"
+              >
+                Thu
+              </abbr>
+            </div>
+            <div
+              class="DayPicker-Weekday"
+              role="columnheader"
+            >
+              <abbr
+                title="Friday"
+              >
+                Fri
+              </abbr>
+            </div>
+            <div
+              class="DayPicker-Weekday"
+              role="columnheader"
+            >
+              <abbr
+                title="Saturday"
+              >
+                Sat
+              </abbr>
+            </div>
+          </div>
+        </div>
+        <div
+          class="DayPicker-Body"
+          role="rowgroup"
+        >
+          <div
+            class="DayPicker-Week"
+            role="row"
+          >
+            <div
+              aria-disabled="false"
+              aria-label="Wed Feb 17 2016"
+              aria-selected="false"
+              class="DayPicker-Day DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+              role="gridcell"
+              tabindex="-1"
+            >
+              17
+            </div>
+            <div
+              aria-disabled="false"
+              aria-label="Wed Feb 17 2016"
+              aria-selected="false"
+              class="DayPicker-Day DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+              role="gridcell"
+              tabindex="-1"
+            >
+              17
+            </div>
+            <div
+              aria-disabled="false"
+              aria-label="Wed Feb 17 2016"
+              aria-selected="false"
+              class="DayPicker-Day DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+              role="gridcell"
+              tabindex="-1"
+            >
+              17
+            </div>
+            <div
+              aria-disabled="false"
+              aria-label="Wed Feb 17 2016"
+              aria-selected="false"
+              class="DayPicker-Day DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+              role="gridcell"
+              tabindex="-1"
+            >
+              17
+            </div>
+            <div
+              aria-disabled="false"
+              aria-label="Wed Feb 17 2016"
+              aria-selected="false"
+              class="DayPicker-Day DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+              role="gridcell"
+              tabindex="-1"
+            >
+              17
+            </div>
+            <div
+              aria-disabled="false"
+              aria-label="Wed Feb 17 2016"
+              aria-selected="false"
+              class="DayPicker-Day DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+              role="gridcell"
+              tabindex="-1"
+            >
+              17
+            </div>
+            <div
+              aria-disabled="false"
+              aria-label="Wed Feb 17 2016"
+              aria-selected="false"
+              class="DayPicker-Day DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+              role="gridcell"
+              tabindex="-1"
+            >
+              17
+            </div>
+            <div
+              aria-disabled="false"
+              aria-label="Wed Feb 17 2016"
+              aria-selected="false"
+              class="DayPicker-Day DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+              role="gridcell"
+              tabindex="-1"
+            >
+              17
+            </div>
+            <div
+              aria-disabled="false"
+              aria-label="Wed Feb 17 2016"
+              aria-selected="false"
+              class="DayPicker-Day DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+              role="gridcell"
+              tabindex="-1"
+            >
+              17
+            </div>
+            <div
+              aria-disabled="false"
+              aria-label="Wed Feb 17 2016"
+              aria-selected="false"
+              class="DayPicker-Day DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+              role="gridcell"
+              tabindex="-1"
+            >
+              17
+            </div>
+            <div
+              aria-disabled="false"
+              aria-label="Wed Feb 17 2016"
+              aria-selected="false"
+              class="DayPicker-Day DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+              role="gridcell"
+              tabindex="-1"
+            >
+              17
+            </div>
+            <div
+              aria-disabled="false"
+              aria-label="Wed Feb 17 2016"
+              aria-selected="false"
+              class="DayPicker-Day DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+              role="gridcell"
+              tabindex="-1"
+            >
+              17
+            </div>
+            <div
+              aria-disabled="false"
+              aria-label="Wed Feb 17 2016"
+              aria-selected="false"
+              class="DayPicker-Day DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+              role="gridcell"
+              tabindex="-1"
+            >
+              17
+            </div>
+            <div
+              aria-disabled="false"
+              aria-label="Wed Feb 17 2016"
+              aria-selected="false"
+              class="DayPicker-Day DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+              role="gridcell"
+              tabindex="-1"
+            >
+              17
+            </div>
+            <div
+              aria-disabled="false"
+              aria-label="Wed Feb 17 2016"
+              aria-selected="false"
+              class="DayPicker-Day DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+              role="gridcell"
+              tabindex="-1"
+            >
+              17
+            </div>
+            <div
+              aria-disabled="false"
+              aria-label="Wed Feb 17 2016"
+              aria-selected="false"
+              class="DayPicker-Day DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+              role="gridcell"
+              tabindex="-1"
+            >
+              17
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 `;
 
-exports[`CalendarMonth common tests [common] example testing should match snapshot(s) for 2.disabled-days 1`] = `
-<DayPicker
-  canChangeMonth={false}
-  captionElement={
-    <Caption
-      classNames={
-        Object {
-          "body": "DayPicker-Body",
-          "caption": "DayPicker-Caption",
-          "container": "DayPicker",
-          "day": "DayPicker-Day",
-          "disabled": "disabled",
-          "footer": "DayPicker-Footer",
-          "interactionDisabled": "DayPicker--interactionDisabled",
-          "month": "DayPicker-Month",
-          "navBar": "DayPicker-NavBar",
-          "navButtonInteractionDisabled": "DayPicker-NavButton--interactionDisabled",
-          "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
-          "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
-          "outside": "outside",
-          "selected": "selected",
-          "today": "today",
-          "todayButton": "DayPicker-TodayButton",
-          "week": "DayPicker-Week",
-          "weekNumber": "DayPicker-WeekNumber",
-          "weekday": "DayPicker-Weekday",
-          "weekdays": "DayPicker-Weekdays",
-          "weekdaysRow": "DayPicker-WeekdaysRow",
-          "wrapper": "DayPicker-wrapper",
-        }
-      }
-    />
-  }
-  className="lucid-CalendarMonth"
-  classNames={
-    Object {
-      "body": "DayPicker-Body",
-      "caption": "DayPicker-Caption",
-      "container": "DayPicker",
-      "day": "DayPicker-Day",
-      "disabled": "disabled",
-      "footer": "DayPicker-Footer",
-      "interactionDisabled": "DayPicker--interactionDisabled",
-      "month": "DayPicker-Month",
-      "navBar": "DayPicker-NavBar",
-      "navButtonInteractionDisabled": "DayPicker-NavButton--interactionDisabled",
-      "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
-      "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
-      "outside": "outside",
-      "selected": "selected",
-      "today": "today",
-      "todayButton": "DayPicker-TodayButton",
-      "week": "DayPicker-Week",
-      "weekNumber": "DayPicker-WeekNumber",
-      "weekday": "DayPicker-Weekday",
-      "weekdays": "DayPicker-Weekdays",
-      "weekdaysRow": "DayPicker-WeekdaysRow",
-      "wrapper": "DayPicker-wrapper",
-    }
-  }
-  cursor={null}
-  disabledDays={[Function]}
-  enableOutsideDays={false}
-  fixedWeeks={false}
-  from={null}
-  initialMonth={2016-02-17T22:25:23.000Z}
-  key="0"
-  labels={
-    Object {
-      "nextMonth": "Next Month",
-      "previousMonth": "Previous Month",
-    }
-  }
-  locale="en"
-  localeUtils={
-    Object {
-      "default": Object {
-        "formatDay": [Function],
-        "formatMonthTitle": [Function],
-        "formatWeekdayLong": [Function],
-        "formatWeekdayShort": [Function],
-        "getFirstDayOfWeek": [Function],
-        "getMonths": [Function],
-      },
-      "formatDay": [Function],
-      "formatMonthTitle": [Function],
-      "formatWeekdayLong": [Function],
-      "formatWeekdayShort": [Function],
-      "getFirstDayOfWeek": [Function],
-      "getMonths": [Function],
-    }
-  }
-  modifiers={
-    Object {
-      "from": [Function],
-      "range": [Function],
-      "to": [Function],
-    }
-  }
-  navbarElement={
-    <Navbar
-      classNames={
-        Object {
-          "body": "DayPicker-Body",
-          "caption": "DayPicker-Caption",
-          "container": "DayPicker",
-          "day": "DayPicker-Day",
-          "disabled": "disabled",
-          "footer": "DayPicker-Footer",
-          "interactionDisabled": "DayPicker--interactionDisabled",
-          "month": "DayPicker-Month",
-          "navBar": "DayPicker-NavBar",
-          "navButtonInteractionDisabled": "DayPicker-NavButton--interactionDisabled",
-          "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
-          "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
-          "outside": "outside",
-          "selected": "selected",
-          "today": "today",
-          "todayButton": "DayPicker-TodayButton",
-          "week": "DayPicker-Week",
-          "weekNumber": "DayPicker-WeekNumber",
-          "weekday": "DayPicker-Weekday",
-          "weekdays": "DayPicker-Weekdays",
-          "weekdaysRow": "DayPicker-WeekdaysRow",
-          "wrapper": "DayPicker-wrapper",
-        }
-      }
-      dir="ltr"
-      labels={
-        Object {
-          "nextMonth": "Next Month",
-          "previousMonth": "Previous Month",
-        }
-      }
-      showNextButton={true}
-      showPreviousButton={true}
-    />
-  }
-  numberOfMonths={1}
-  pagedNavigation={false}
-  renderDay={[Function]}
-  reverseMonths={false}
-  selectMode="day"
-  shouldComponentUpdate={true}
-  showWeekNumbers={false}
-  tabIndex={0}
-  to={null}
-  weekdayElement={<Weekday />}
-  weekdaysShort={
-    Array [
-      "Sun",
-      "Mon",
-      "Tue",
-      "Wed",
-      "Thu",
-      "Fri",
-      "Sat",
-    ]
-  }
-/>
+exports[`CalendarMonth common tests [common] example testing should match snapshot(s) for DisabledDays 1`] = `
+<section
+  style="max-width:400px"
+>
+  <div
+    class="DayPicker DayPicker--interactionDisabled lucid-CalendarMonth"
+    lang="en"
+    role="application"
+  >
+    <div
+      class="DayPicker-wrapper"
+      tabindex="-1"
+    >
+      <div
+        class="DayPicker-Month"
+        role="grid"
+      >
+        <div
+          class="DayPicker-Caption"
+          role="heading"
+        >
+          <div>
+            February 2016
+          </div>
+        </div>
+        <div
+          class="DayPicker-Weekdays"
+          role="rowgroup"
+        >
+          <div
+            class="DayPicker-WeekdaysRow"
+            role="row"
+          >
+            <div
+              class="DayPicker-Weekday"
+              role="columnheader"
+            >
+              <abbr
+                title="Sunday"
+              >
+                Sun
+              </abbr>
+            </div>
+            <div
+              class="DayPicker-Weekday"
+              role="columnheader"
+            >
+              <abbr
+                title="Monday"
+              >
+                Mon
+              </abbr>
+            </div>
+            <div
+              class="DayPicker-Weekday"
+              role="columnheader"
+            >
+              <abbr
+                title="Tuesday"
+              >
+                Tue
+              </abbr>
+            </div>
+            <div
+              class="DayPicker-Weekday"
+              role="columnheader"
+            >
+              <abbr
+                title="Wednesday"
+              >
+                Wed
+              </abbr>
+            </div>
+            <div
+              class="DayPicker-Weekday"
+              role="columnheader"
+            >
+              <abbr
+                title="Thursday"
+              >
+                Thu
+              </abbr>
+            </div>
+            <div
+              class="DayPicker-Weekday"
+              role="columnheader"
+            >
+              <abbr
+                title="Friday"
+              >
+                Fri
+              </abbr>
+            </div>
+            <div
+              class="DayPicker-Weekday"
+              role="columnheader"
+            >
+              <abbr
+                title="Saturday"
+              >
+                Sat
+              </abbr>
+            </div>
+          </div>
+        </div>
+        <div
+          class="DayPicker-Body"
+          role="rowgroup"
+        >
+          <div
+            class="DayPicker-Week"
+            role="row"
+          >
+            <div
+              aria-disabled="false"
+              aria-label="Wed Feb 17 2016"
+              aria-selected="false"
+              class="DayPicker-Day DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+              role="gridcell"
+              tabindex="-1"
+            >
+              17
+            </div>
+            <div
+              aria-disabled="false"
+              aria-label="Wed Feb 17 2016"
+              aria-selected="false"
+              class="DayPicker-Day DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+              role="gridcell"
+              tabindex="-1"
+            >
+              17
+            </div>
+            <div
+              aria-disabled="false"
+              aria-label="Wed Feb 17 2016"
+              aria-selected="false"
+              class="DayPicker-Day DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+              role="gridcell"
+              tabindex="-1"
+            >
+              17
+            </div>
+            <div
+              aria-disabled="false"
+              aria-label="Wed Feb 17 2016"
+              aria-selected="false"
+              class="DayPicker-Day DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+              role="gridcell"
+              tabindex="-1"
+            >
+              17
+            </div>
+            <div
+              aria-disabled="false"
+              aria-label="Wed Feb 17 2016"
+              aria-selected="false"
+              class="DayPicker-Day DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+              role="gridcell"
+              tabindex="-1"
+            >
+              17
+            </div>
+            <div
+              aria-disabled="false"
+              aria-label="Wed Feb 17 2016"
+              aria-selected="false"
+              class="DayPicker-Day DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+              role="gridcell"
+              tabindex="-1"
+            >
+              17
+            </div>
+            <div
+              aria-disabled="false"
+              aria-label="Wed Feb 17 2016"
+              aria-selected="false"
+              class="DayPicker-Day DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+              role="gridcell"
+              tabindex="-1"
+            >
+              17
+            </div>
+            <div
+              aria-disabled="false"
+              aria-label="Wed Feb 17 2016"
+              aria-selected="false"
+              class="DayPicker-Day DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+              role="gridcell"
+              tabindex="-1"
+            >
+              17
+            </div>
+            <div
+              aria-disabled="false"
+              aria-label="Wed Feb 17 2016"
+              aria-selected="false"
+              class="DayPicker-Day DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+              role="gridcell"
+              tabindex="-1"
+            >
+              17
+            </div>
+            <div
+              aria-disabled="false"
+              aria-label="Wed Feb 17 2016"
+              aria-selected="false"
+              class="DayPicker-Day DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+              role="gridcell"
+              tabindex="-1"
+            >
+              17
+            </div>
+            <div
+              aria-disabled="false"
+              aria-label="Wed Feb 17 2016"
+              aria-selected="false"
+              class="DayPicker-Day DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+              role="gridcell"
+              tabindex="-1"
+            >
+              17
+            </div>
+            <div
+              aria-disabled="false"
+              aria-label="Wed Feb 17 2016"
+              aria-selected="false"
+              class="DayPicker-Day DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+              role="gridcell"
+              tabindex="-1"
+            >
+              17
+            </div>
+            <div
+              aria-disabled="false"
+              aria-label="Wed Feb 17 2016"
+              aria-selected="false"
+              class="DayPicker-Day DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+              role="gridcell"
+              tabindex="-1"
+            >
+              17
+            </div>
+            <div
+              aria-disabled="false"
+              aria-label="Wed Feb 17 2016"
+              aria-selected="false"
+              class="DayPicker-Day DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+              role="gridcell"
+              tabindex="-1"
+            >
+              17
+            </div>
+            <div
+              aria-disabled="false"
+              aria-label="Wed Feb 17 2016"
+              aria-selected="false"
+              class="DayPicker-Day DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+              role="gridcell"
+              tabindex="-1"
+            >
+              17
+            </div>
+            <div
+              aria-disabled="false"
+              aria-label="Wed Feb 17 2016"
+              aria-selected="false"
+              class="DayPicker-Day DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+              role="gridcell"
+              tabindex="-1"
+            >
+              17
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 `;
 
-exports[`CalendarMonth common tests [common] example testing should match snapshot(s) for 3.custom-daypicker-modifiers 1`] = `
-<DayPicker
-  canChangeMonth={false}
-  captionElement={
-    <Caption
-      classNames={
-        Object {
-          "body": "DayPicker-Body",
-          "caption": "DayPicker-Caption",
-          "container": "DayPicker",
-          "day": "DayPicker-Day",
-          "disabled": "disabled",
-          "footer": "DayPicker-Footer",
-          "interactionDisabled": "DayPicker--interactionDisabled",
-          "month": "DayPicker-Month",
-          "navBar": "DayPicker-NavBar",
-          "navButtonInteractionDisabled": "DayPicker-NavButton--interactionDisabled",
-          "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
-          "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
-          "outside": "outside",
-          "selected": "selected",
-          "today": "today",
-          "todayButton": "DayPicker-TodayButton",
-          "week": "DayPicker-Week",
-          "weekNumber": "DayPicker-WeekNumber",
-          "weekday": "DayPicker-Weekday",
-          "weekdays": "DayPicker-Weekdays",
-          "weekdaysRow": "DayPicker-WeekdaysRow",
-          "wrapper": "DayPicker-wrapper",
-        }
-      }
-    />
-  }
-  className="lucid-CalendarMonth"
-  classNames={
-    Object {
-      "body": "DayPicker-Body",
-      "caption": "DayPicker-Caption",
-      "container": "DayPicker",
-      "day": "DayPicker-Day",
-      "disabled": "disabled",
-      "footer": "DayPicker-Footer",
-      "interactionDisabled": "DayPicker--interactionDisabled",
-      "month": "DayPicker-Month",
-      "navBar": "DayPicker-NavBar",
-      "navButtonInteractionDisabled": "DayPicker-NavButton--interactionDisabled",
-      "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
-      "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
-      "outside": "outside",
-      "selected": "selected",
-      "today": "today",
-      "todayButton": "DayPicker-TodayButton",
-      "week": "DayPicker-Week",
-      "weekNumber": "DayPicker-WeekNumber",
-      "weekday": "DayPicker-Weekday",
-      "weekdays": "DayPicker-Weekdays",
-      "weekdaysRow": "DayPicker-WeekdaysRow",
-      "wrapper": "DayPicker-wrapper",
-    }
-  }
-  cursor={null}
-  enableOutsideDays={false}
-  fixedWeeks={false}
-  from={null}
-  initialMonth={2016-02-17T22:25:23.000Z}
-  key="0"
-  labels={
-    Object {
-      "nextMonth": "Next Month",
-      "previousMonth": "Previous Month",
-    }
-  }
-  locale="en"
-  localeUtils={
-    Object {
-      "default": Object {
-        "formatDay": [Function],
-        "formatMonthTitle": [Function],
-        "formatWeekdayLong": [Function],
-        "formatWeekdayShort": [Function],
-        "getFirstDayOfWeek": [Function],
-        "getMonths": [Function],
-      },
-      "formatDay": [Function],
-      "formatMonthTitle": [Function],
-      "formatWeekdayLong": [Function],
-      "formatWeekdayShort": [Function],
-      "getFirstDayOfWeek": [Function],
-      "getMonths": [Function],
-    }
-  }
-  modifiers={
-    Object {
-      "from": [Function],
-      "range": [Function],
-      "to": [Function],
-      "tuesday": [Function],
-    }
-  }
-  navbarElement={
-    <Navbar
-      classNames={
-        Object {
-          "body": "DayPicker-Body",
-          "caption": "DayPicker-Caption",
-          "container": "DayPicker",
-          "day": "DayPicker-Day",
-          "disabled": "disabled",
-          "footer": "DayPicker-Footer",
-          "interactionDisabled": "DayPicker--interactionDisabled",
-          "month": "DayPicker-Month",
-          "navBar": "DayPicker-NavBar",
-          "navButtonInteractionDisabled": "DayPicker-NavButton--interactionDisabled",
-          "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
-          "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
-          "outside": "outside",
-          "selected": "selected",
-          "today": "today",
-          "todayButton": "DayPicker-TodayButton",
-          "week": "DayPicker-Week",
-          "weekNumber": "DayPicker-WeekNumber",
-          "weekday": "DayPicker-Weekday",
-          "weekdays": "DayPicker-Weekdays",
-          "weekdaysRow": "DayPicker-WeekdaysRow",
-          "wrapper": "DayPicker-wrapper",
-        }
-      }
-      dir="ltr"
-      labels={
-        Object {
-          "nextMonth": "Next Month",
-          "previousMonth": "Previous Month",
-        }
-      }
-      showNextButton={true}
-      showPreviousButton={true}
-    />
-  }
-  numberOfMonths={1}
-  pagedNavigation={false}
-  renderDay={[Function]}
-  reverseMonths={false}
-  selectMode="day"
-  shouldComponentUpdate={true}
-  showWeekNumbers={false}
-  tabIndex={0}
-  to={null}
-  weekdayElement={<Weekday />}
-  weekdaysShort={
-    Array [
-      "Sun",
-      "Mon",
-      "Tue",
-      "Wed",
-      "Thu",
-      "Fri",
-      "Sat",
-    ]
-  }
-/>
+exports[`CalendarMonth common tests [common] example testing should match snapshot(s) for SelectDates 1`] = `
+<section>
+  <div
+    style="display:flex;max-width:468px"
+  >
+    <button
+      class="lucid-Button"
+      type="button"
+    >
+      <span
+        class="lucid-Button-content"
+      >
+        &lt;
+      </span>
+    </button>
+    <div
+      class="DayPicker lucid-CalendarMonth"
+      lang="en"
+      role="application"
+    >
+      <div
+        class="DayPicker-wrapper"
+        tabindex="-1"
+      >
+        <div
+          class="DayPicker-Month"
+          role="grid"
+        >
+          <div
+            class="DayPicker-Caption"
+            role="heading"
+          >
+            <div>
+              February 2016
+            </div>
+          </div>
+          <div
+            class="DayPicker-Weekdays"
+            role="rowgroup"
+          >
+            <div
+              class="DayPicker-WeekdaysRow"
+              role="row"
+            >
+              <div
+                class="DayPicker-Weekday"
+                role="columnheader"
+              >
+                <abbr
+                  title="Sunday"
+                >
+                  Sun
+                </abbr>
+              </div>
+              <div
+                class="DayPicker-Weekday"
+                role="columnheader"
+              >
+                <abbr
+                  title="Monday"
+                >
+                  Mon
+                </abbr>
+              </div>
+              <div
+                class="DayPicker-Weekday"
+                role="columnheader"
+              >
+                <abbr
+                  title="Tuesday"
+                >
+                  Tue
+                </abbr>
+              </div>
+              <div
+                class="DayPicker-Weekday"
+                role="columnheader"
+              >
+                <abbr
+                  title="Wednesday"
+                >
+                  Wed
+                </abbr>
+              </div>
+              <div
+                class="DayPicker-Weekday"
+                role="columnheader"
+              >
+                <abbr
+                  title="Thursday"
+                >
+                  Thu
+                </abbr>
+              </div>
+              <div
+                class="DayPicker-Weekday"
+                role="columnheader"
+              >
+                <abbr
+                  title="Friday"
+                >
+                  Fri
+                </abbr>
+              </div>
+              <div
+                class="DayPicker-Weekday"
+                role="columnheader"
+              >
+                <abbr
+                  title="Saturday"
+                >
+                  Sat
+                </abbr>
+              </div>
+            </div>
+          </div>
+          <div
+            class="DayPicker-Body"
+            role="rowgroup"
+          >
+            <div
+              class="DayPicker-Week"
+              role="row"
+            >
+              <div
+                aria-disabled="false"
+                aria-label="Wed Feb 17 2016"
+                aria-selected="false"
+                class="DayPicker-Day DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+                role="gridcell"
+                tabindex="-1"
+              >
+                17
+              </div>
+              <div
+                aria-disabled="false"
+                aria-label="Wed Feb 17 2016"
+                aria-selected="false"
+                class="DayPicker-Day DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+                role="gridcell"
+                tabindex="-1"
+              >
+                17
+              </div>
+              <div
+                aria-disabled="false"
+                aria-label="Wed Feb 17 2016"
+                aria-selected="false"
+                class="DayPicker-Day DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+                role="gridcell"
+                tabindex="-1"
+              >
+                17
+              </div>
+              <div
+                aria-disabled="false"
+                aria-label="Wed Feb 17 2016"
+                aria-selected="false"
+                class="DayPicker-Day DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+                role="gridcell"
+                tabindex="-1"
+              >
+                17
+              </div>
+              <div
+                aria-disabled="false"
+                aria-label="Wed Feb 17 2016"
+                aria-selected="false"
+                class="DayPicker-Day DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+                role="gridcell"
+                tabindex="-1"
+              >
+                17
+              </div>
+              <div
+                aria-disabled="false"
+                aria-label="Wed Feb 17 2016"
+                aria-selected="false"
+                class="DayPicker-Day DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+                role="gridcell"
+                tabindex="-1"
+              >
+                17
+              </div>
+              <div
+                aria-disabled="false"
+                aria-label="Wed Feb 17 2016"
+                aria-selected="false"
+                class="DayPicker-Day DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+                role="gridcell"
+                tabindex="-1"
+              >
+                17
+              </div>
+              <div
+                aria-disabled="false"
+                aria-label="Wed Feb 17 2016"
+                aria-selected="false"
+                class="DayPicker-Day DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+                role="gridcell"
+                tabindex="-1"
+              >
+                17
+              </div>
+              <div
+                aria-disabled="false"
+                aria-label="Wed Feb 17 2016"
+                aria-selected="false"
+                class="DayPicker-Day DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+                role="gridcell"
+                tabindex="-1"
+              >
+                17
+              </div>
+              <div
+                aria-disabled="false"
+                aria-label="Wed Feb 17 2016"
+                aria-selected="false"
+                class="DayPicker-Day DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+                role="gridcell"
+                tabindex="-1"
+              >
+                17
+              </div>
+              <div
+                aria-disabled="false"
+                aria-label="Wed Feb 17 2016"
+                aria-selected="false"
+                class="DayPicker-Day DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+                role="gridcell"
+                tabindex="-1"
+              >
+                17
+              </div>
+              <div
+                aria-disabled="false"
+                aria-label="Wed Feb 17 2016"
+                aria-selected="false"
+                class="DayPicker-Day DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+                role="gridcell"
+                tabindex="-1"
+              >
+                17
+              </div>
+              <div
+                aria-disabled="false"
+                aria-label="Wed Feb 17 2016"
+                aria-selected="false"
+                class="DayPicker-Day DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+                role="gridcell"
+                tabindex="-1"
+              >
+                17
+              </div>
+              <div
+                aria-disabled="false"
+                aria-label="Wed Feb 17 2016"
+                aria-selected="false"
+                class="DayPicker-Day DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+                role="gridcell"
+                tabindex="-1"
+              >
+                17
+              </div>
+              <div
+                aria-disabled="false"
+                aria-label="Wed Feb 17 2016"
+                aria-selected="false"
+                class="DayPicker-Day DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+                role="gridcell"
+                tabindex="-1"
+              >
+                17
+              </div>
+              <div
+                aria-disabled="false"
+                aria-label="Wed Feb 17 2016"
+                aria-selected="false"
+                class="DayPicker-Day DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+                role="gridcell"
+                tabindex="-1"
+              >
+                17
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button
+      class="lucid-Button"
+      type="button"
+    >
+      <span
+        class="lucid-Button-content"
+      >
+        &gt;
+      </span>
+    </button>
+  </div>
+  selectedDays: 
+</section>
 `;
 
-exports[`CalendarMonth common tests [common] example testing should match snapshot(s) for 4.select-dates 1`] = `
-<DayPicker
-  canChangeMonth={false}
-  captionElement={
-    <Caption
-      classNames={
-        Object {
-          "body": "DayPicker-Body",
-          "caption": "DayPicker-Caption",
-          "container": "DayPicker",
-          "day": "DayPicker-Day",
-          "disabled": "disabled",
-          "footer": "DayPicker-Footer",
-          "interactionDisabled": "DayPicker--interactionDisabled",
-          "month": "DayPicker-Month",
-          "navBar": "DayPicker-NavBar",
-          "navButtonInteractionDisabled": "DayPicker-NavButton--interactionDisabled",
-          "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
-          "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
-          "outside": "outside",
-          "selected": "selected",
-          "today": "today",
-          "todayButton": "DayPicker-TodayButton",
-          "week": "DayPicker-Week",
-          "weekNumber": "DayPicker-WeekNumber",
-          "weekday": "DayPicker-Weekday",
-          "weekdays": "DayPicker-Weekdays",
-          "weekdaysRow": "DayPicker-WeekdaysRow",
-          "wrapper": "DayPicker-wrapper",
-        }
-      }
-    />
-  }
-  className="lucid-CalendarMonth"
-  classNames={
-    Object {
-      "body": "DayPicker-Body",
-      "caption": "DayPicker-Caption",
-      "container": "DayPicker",
-      "day": "DayPicker-Day",
-      "disabled": "disabled",
-      "footer": "DayPicker-Footer",
-      "interactionDisabled": "DayPicker--interactionDisabled",
-      "month": "DayPicker-Month",
-      "navBar": "DayPicker-NavBar",
-      "navButtonInteractionDisabled": "DayPicker-NavButton--interactionDisabled",
-      "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
-      "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
-      "outside": "outside",
-      "selected": "selected",
-      "today": "today",
-      "todayButton": "DayPicker-TodayButton",
-      "week": "DayPicker-Week",
-      "weekNumber": "DayPicker-WeekNumber",
-      "weekday": "DayPicker-Weekday",
-      "weekdays": "DayPicker-Weekdays",
-      "weekdaysRow": "DayPicker-WeekdaysRow",
-      "wrapper": "DayPicker-wrapper",
-    }
-  }
-  cursor={null}
-  disabledDays={[Function]}
-  enableOutsideDays={false}
-  fixedWeeks={false}
-  from={null}
-  initialMonth={2016-02-17T22:25:23.000Z}
-  key="0"
-  labels={
-    Object {
-      "nextMonth": "Next Month",
-      "previousMonth": "Previous Month",
-    }
-  }
-  locale="en"
-  localeUtils={
-    Object {
-      "default": Object {
-        "formatDay": [Function],
-        "formatMonthTitle": [Function],
-        "formatWeekdayLong": [Function],
-        "formatWeekdayShort": [Function],
-        "getFirstDayOfWeek": [Function],
-        "getMonths": [Function],
-      },
-      "formatDay": [Function],
-      "formatMonthTitle": [Function],
-      "formatWeekdayLong": [Function],
-      "formatWeekdayShort": [Function],
-      "getFirstDayOfWeek": [Function],
-      "getMonths": [Function],
-    }
-  }
-  modifiers={
-    Object {
-      "from": [Function],
-      "range": [Function],
-      "to": [Function],
-    }
-  }
-  navbarElement={
-    <Navbar
-      classNames={
-        Object {
-          "body": "DayPicker-Body",
-          "caption": "DayPicker-Caption",
-          "container": "DayPicker",
-          "day": "DayPicker-Day",
-          "disabled": "disabled",
-          "footer": "DayPicker-Footer",
-          "interactionDisabled": "DayPicker--interactionDisabled",
-          "month": "DayPicker-Month",
-          "navBar": "DayPicker-NavBar",
-          "navButtonInteractionDisabled": "DayPicker-NavButton--interactionDisabled",
-          "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
-          "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
-          "outside": "outside",
-          "selected": "selected",
-          "today": "today",
-          "todayButton": "DayPicker-TodayButton",
-          "week": "DayPicker-Week",
-          "weekNumber": "DayPicker-WeekNumber",
-          "weekday": "DayPicker-Weekday",
-          "weekdays": "DayPicker-Weekdays",
-          "weekdaysRow": "DayPicker-WeekdaysRow",
-          "wrapper": "DayPicker-wrapper",
-        }
-      }
-      dir="ltr"
-      labels={
-        Object {
-          "nextMonth": "Next Month",
-          "previousMonth": "Previous Month",
-        }
-      }
-      showNextButton={true}
-      showPreviousButton={true}
-    />
-  }
-  numberOfMonths={1}
-  onDayClick={[Function]}
-  onDayMouseEnter={[Function]}
-  onDayMouseLeave={[Function]}
-  pagedNavigation={false}
-  renderDay={[Function]}
-  reverseMonths={false}
-  selectMode="day"
-  selectedDays={Array []}
-  shouldComponentUpdate={true}
-  showWeekNumbers={false}
-  tabIndex={0}
-  to={null}
-  weekdayElement={<Weekday />}
-  weekdaysShort={
-    Array [
-      "Sun",
-      "Mon",
-      "Tue",
-      "Wed",
-      "Thu",
-      "Fri",
-      "Sat",
-    ]
-  }
-/>
+exports[`CalendarMonth common tests [common] example testing should match snapshot(s) for SelectRange 1`] = `
+<section>
+  <div
+    style="display:flex;max-width:800px"
+  >
+    <button
+      class="lucid-Button"
+      type="button"
+    >
+      <span
+        class="lucid-Button-content"
+      >
+        &lt;
+      </span>
+    </button>
+    <div
+      class="DayPicker lucid-CalendarMonth"
+      lang="en"
+      role="application"
+    >
+      <div
+        class="DayPicker-wrapper"
+        tabindex="-1"
+      >
+        <div
+          class="DayPicker-Month"
+          role="grid"
+        >
+          <div
+            class="DayPicker-Caption"
+            role="heading"
+          >
+            <div>
+              February 2016
+            </div>
+          </div>
+          <div
+            class="DayPicker-Weekdays"
+            role="rowgroup"
+          >
+            <div
+              class="DayPicker-WeekdaysRow"
+              role="row"
+            >
+              <div
+                class="DayPicker-Weekday"
+                role="columnheader"
+              >
+                <abbr
+                  title="Sunday"
+                >
+                  Sun
+                </abbr>
+              </div>
+              <div
+                class="DayPicker-Weekday"
+                role="columnheader"
+              >
+                <abbr
+                  title="Monday"
+                >
+                  Mon
+                </abbr>
+              </div>
+              <div
+                class="DayPicker-Weekday"
+                role="columnheader"
+              >
+                <abbr
+                  title="Tuesday"
+                >
+                  Tue
+                </abbr>
+              </div>
+              <div
+                class="DayPicker-Weekday"
+                role="columnheader"
+              >
+                <abbr
+                  title="Wednesday"
+                >
+                  Wed
+                </abbr>
+              </div>
+              <div
+                class="DayPicker-Weekday"
+                role="columnheader"
+              >
+                <abbr
+                  title="Thursday"
+                >
+                  Thu
+                </abbr>
+              </div>
+              <div
+                class="DayPicker-Weekday"
+                role="columnheader"
+              >
+                <abbr
+                  title="Friday"
+                >
+                  Fri
+                </abbr>
+              </div>
+              <div
+                class="DayPicker-Weekday"
+                role="columnheader"
+              >
+                <abbr
+                  title="Saturday"
+                >
+                  Sat
+                </abbr>
+              </div>
+            </div>
+          </div>
+          <div
+            class="DayPicker-Body"
+            role="rowgroup"
+          >
+            <div
+              class="DayPicker-Week"
+              role="row"
+            >
+              <div
+                aria-disabled="false"
+                aria-label="Wed Feb 17 2016"
+                aria-selected="false"
+                class="DayPicker-Day DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+                role="gridcell"
+                tabindex="-1"
+              >
+                17
+              </div>
+              <div
+                aria-disabled="false"
+                aria-label="Wed Feb 17 2016"
+                aria-selected="false"
+                class="DayPicker-Day DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+                role="gridcell"
+                tabindex="-1"
+              >
+                17
+              </div>
+              <div
+                aria-disabled="false"
+                aria-label="Wed Feb 17 2016"
+                aria-selected="false"
+                class="DayPicker-Day DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+                role="gridcell"
+                tabindex="-1"
+              >
+                17
+              </div>
+              <div
+                aria-disabled="false"
+                aria-label="Wed Feb 17 2016"
+                aria-selected="false"
+                class="DayPicker-Day DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+                role="gridcell"
+                tabindex="-1"
+              >
+                17
+              </div>
+              <div
+                aria-disabled="false"
+                aria-label="Wed Feb 17 2016"
+                aria-selected="false"
+                class="DayPicker-Day DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+                role="gridcell"
+                tabindex="-1"
+              >
+                17
+              </div>
+              <div
+                aria-disabled="false"
+                aria-label="Wed Feb 17 2016"
+                aria-selected="false"
+                class="DayPicker-Day DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+                role="gridcell"
+                tabindex="-1"
+              >
+                17
+              </div>
+              <div
+                aria-disabled="false"
+                aria-label="Wed Feb 17 2016"
+                aria-selected="false"
+                class="DayPicker-Day DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+                role="gridcell"
+                tabindex="-1"
+              >
+                17
+              </div>
+              <div
+                aria-disabled="false"
+                aria-label="Wed Feb 17 2016"
+                aria-selected="false"
+                class="DayPicker-Day DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+                role="gridcell"
+                tabindex="-1"
+              >
+                17
+              </div>
+              <div
+                aria-disabled="false"
+                aria-label="Wed Feb 17 2016"
+                aria-selected="false"
+                class="DayPicker-Day DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+                role="gridcell"
+                tabindex="-1"
+              >
+                17
+              </div>
+              <div
+                aria-disabled="false"
+                aria-label="Wed Feb 17 2016"
+                aria-selected="false"
+                class="DayPicker-Day DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+                role="gridcell"
+                tabindex="-1"
+              >
+                17
+              </div>
+              <div
+                aria-disabled="false"
+                aria-label="Wed Feb 17 2016"
+                aria-selected="false"
+                class="DayPicker-Day DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+                role="gridcell"
+                tabindex="-1"
+              >
+                17
+              </div>
+              <div
+                aria-disabled="false"
+                aria-label="Wed Feb 17 2016"
+                aria-selected="false"
+                class="DayPicker-Day DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+                role="gridcell"
+                tabindex="-1"
+              >
+                17
+              </div>
+              <div
+                aria-disabled="false"
+                aria-label="Wed Feb 17 2016"
+                aria-selected="false"
+                class="DayPicker-Day DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+                role="gridcell"
+                tabindex="-1"
+              >
+                17
+              </div>
+              <div
+                aria-disabled="false"
+                aria-label="Wed Feb 17 2016"
+                aria-selected="false"
+                class="DayPicker-Day DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+                role="gridcell"
+                tabindex="-1"
+              >
+                17
+              </div>
+              <div
+                aria-disabled="false"
+                aria-label="Wed Feb 17 2016"
+                aria-selected="false"
+                class="DayPicker-Day DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+                role="gridcell"
+                tabindex="-1"
+              >
+                17
+              </div>
+              <div
+                aria-disabled="false"
+                aria-label="Wed Feb 17 2016"
+                aria-selected="false"
+                class="DayPicker-Day DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+                role="gridcell"
+                tabindex="-1"
+              >
+                17
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="DayPicker lucid-CalendarMonth"
+      lang="en"
+      role="application"
+    >
+      <div
+        class="DayPicker-wrapper"
+        tabindex="-1"
+      >
+        <div
+          class="DayPicker-Month"
+          role="grid"
+        >
+          <div
+            class="DayPicker-Caption"
+            role="heading"
+          >
+            <div>
+              February 2016
+            </div>
+          </div>
+          <div
+            class="DayPicker-Weekdays"
+            role="rowgroup"
+          >
+            <div
+              class="DayPicker-WeekdaysRow"
+              role="row"
+            >
+              <div
+                class="DayPicker-Weekday"
+                role="columnheader"
+              >
+                <abbr
+                  title="Sunday"
+                >
+                  Sun
+                </abbr>
+              </div>
+              <div
+                class="DayPicker-Weekday"
+                role="columnheader"
+              >
+                <abbr
+                  title="Monday"
+                >
+                  Mon
+                </abbr>
+              </div>
+              <div
+                class="DayPicker-Weekday"
+                role="columnheader"
+              >
+                <abbr
+                  title="Tuesday"
+                >
+                  Tue
+                </abbr>
+              </div>
+              <div
+                class="DayPicker-Weekday"
+                role="columnheader"
+              >
+                <abbr
+                  title="Wednesday"
+                >
+                  Wed
+                </abbr>
+              </div>
+              <div
+                class="DayPicker-Weekday"
+                role="columnheader"
+              >
+                <abbr
+                  title="Thursday"
+                >
+                  Thu
+                </abbr>
+              </div>
+              <div
+                class="DayPicker-Weekday"
+                role="columnheader"
+              >
+                <abbr
+                  title="Friday"
+                >
+                  Fri
+                </abbr>
+              </div>
+              <div
+                class="DayPicker-Weekday"
+                role="columnheader"
+              >
+                <abbr
+                  title="Saturday"
+                >
+                  Sat
+                </abbr>
+              </div>
+            </div>
+          </div>
+          <div
+            class="DayPicker-Body"
+            role="rowgroup"
+          >
+            <div
+              class="DayPicker-Week"
+              role="row"
+            >
+              <div
+                aria-disabled="false"
+                aria-label="Wed Feb 17 2016"
+                aria-selected="false"
+                class="DayPicker-Day DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+                role="gridcell"
+                tabindex="-1"
+              >
+                17
+              </div>
+              <div
+                aria-disabled="false"
+                aria-label="Wed Feb 17 2016"
+                aria-selected="false"
+                class="DayPicker-Day DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+                role="gridcell"
+                tabindex="-1"
+              >
+                17
+              </div>
+              <div
+                aria-disabled="false"
+                aria-label="Wed Feb 17 2016"
+                aria-selected="false"
+                class="DayPicker-Day DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+                role="gridcell"
+                tabindex="-1"
+              >
+                17
+              </div>
+              <div
+                aria-disabled="false"
+                aria-label="Wed Feb 17 2016"
+                aria-selected="false"
+                class="DayPicker-Day DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+                role="gridcell"
+                tabindex="-1"
+              >
+                17
+              </div>
+              <div
+                aria-disabled="false"
+                aria-label="Wed Feb 17 2016"
+                aria-selected="false"
+                class="DayPicker-Day DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+                role="gridcell"
+                tabindex="-1"
+              >
+                17
+              </div>
+              <div
+                aria-disabled="false"
+                aria-label="Wed Feb 17 2016"
+                aria-selected="false"
+                class="DayPicker-Day DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+                role="gridcell"
+                tabindex="-1"
+              >
+                17
+              </div>
+              <div
+                aria-disabled="false"
+                aria-label="Wed Feb 17 2016"
+                aria-selected="false"
+                class="DayPicker-Day DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+                role="gridcell"
+                tabindex="-1"
+              >
+                17
+              </div>
+              <div
+                aria-disabled="false"
+                aria-label="Wed Feb 17 2016"
+                aria-selected="false"
+                class="DayPicker-Day DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+                role="gridcell"
+                tabindex="-1"
+              >
+                17
+              </div>
+              <div
+                aria-disabled="false"
+                aria-label="Wed Feb 17 2016"
+                aria-selected="false"
+                class="DayPicker-Day DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+                role="gridcell"
+                tabindex="-1"
+              >
+                17
+              </div>
+              <div
+                aria-disabled="false"
+                aria-label="Wed Feb 17 2016"
+                aria-selected="false"
+                class="DayPicker-Day DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+                role="gridcell"
+                tabindex="-1"
+              >
+                17
+              </div>
+              <div
+                aria-disabled="false"
+                aria-label="Wed Feb 17 2016"
+                aria-selected="false"
+                class="DayPicker-Day DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+                role="gridcell"
+                tabindex="-1"
+              >
+                17
+              </div>
+              <div
+                aria-disabled="false"
+                aria-label="Wed Feb 17 2016"
+                aria-selected="false"
+                class="DayPicker-Day DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+                role="gridcell"
+                tabindex="-1"
+              >
+                17
+              </div>
+              <div
+                aria-disabled="false"
+                aria-label="Wed Feb 17 2016"
+                aria-selected="false"
+                class="DayPicker-Day DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+                role="gridcell"
+                tabindex="-1"
+              >
+                17
+              </div>
+              <div
+                aria-disabled="false"
+                aria-label="Wed Feb 17 2016"
+                aria-selected="false"
+                class="DayPicker-Day DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+                role="gridcell"
+                tabindex="-1"
+              >
+                17
+              </div>
+              <div
+                aria-disabled="false"
+                aria-label="Wed Feb 17 2016"
+                aria-selected="false"
+                class="DayPicker-Day DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+                role="gridcell"
+                tabindex="-1"
+              >
+                17
+              </div>
+              <div
+                aria-disabled="false"
+                aria-label="Wed Feb 17 2016"
+                aria-selected="false"
+                class="DayPicker-Day DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+                role="gridcell"
+                tabindex="-1"
+              >
+                17
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button
+      class="lucid-Button"
+      type="button"
+    >
+      <span
+        class="lucid-Button-content"
+      >
+        &gt;
+      </span>
+    </button>
+  </div>
+  from: , to: 
+</section>
 `;
 
-exports[`CalendarMonth common tests [common] example testing should match snapshot(s) for 5.select-range 1`] = `
-<DayPicker
-  canChangeMonth={false}
-  captionElement={
-    <Caption
-      classNames={
-        Object {
-          "body": "DayPicker-Body",
-          "caption": "DayPicker-Caption",
-          "container": "DayPicker",
-          "day": "DayPicker-Day",
-          "disabled": "disabled",
-          "footer": "DayPicker-Footer",
-          "interactionDisabled": "DayPicker--interactionDisabled",
-          "month": "DayPicker-Month",
-          "navBar": "DayPicker-NavBar",
-          "navButtonInteractionDisabled": "DayPicker-NavButton--interactionDisabled",
-          "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
-          "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
-          "outside": "outside",
-          "selected": "selected",
-          "today": "today",
-          "todayButton": "DayPicker-TodayButton",
-          "week": "DayPicker-Week",
-          "weekNumber": "DayPicker-WeekNumber",
-          "weekday": "DayPicker-Weekday",
-          "weekdays": "DayPicker-Weekdays",
-          "weekdaysRow": "DayPicker-WeekdaysRow",
-          "wrapper": "DayPicker-wrapper",
-        }
-      }
-    />
-  }
-  className="lucid-CalendarMonth"
-  classNames={
-    Object {
-      "body": "DayPicker-Body",
-      "caption": "DayPicker-Caption",
-      "container": "DayPicker",
-      "day": "DayPicker-Day",
-      "disabled": "disabled",
-      "footer": "DayPicker-Footer",
-      "interactionDisabled": "DayPicker--interactionDisabled",
-      "month": "DayPicker-Month",
-      "navBar": "DayPicker-NavBar",
-      "navButtonInteractionDisabled": "DayPicker-NavButton--interactionDisabled",
-      "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
-      "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
-      "outside": "outside",
-      "selected": "selected",
-      "today": "today",
-      "todayButton": "DayPicker-TodayButton",
-      "week": "DayPicker-Week",
-      "weekNumber": "DayPicker-WeekNumber",
-      "weekday": "DayPicker-Weekday",
-      "weekdays": "DayPicker-Weekdays",
-      "weekdaysRow": "DayPicker-WeekdaysRow",
-      "wrapper": "DayPicker-wrapper",
-    }
-  }
-  cursor={null}
-  disabledDays={[Function]}
-  enableOutsideDays={false}
-  fixedWeeks={false}
-  from={null}
-  initialMonth={2016-02-17T22:25:23.000Z}
-  key="0"
-  labels={
-    Object {
-      "nextMonth": "Next Month",
-      "previousMonth": "Previous Month",
-    }
-  }
-  locale="en"
-  localeUtils={
-    Object {
-      "default": Object {
-        "formatDay": [Function],
-        "formatMonthTitle": [Function],
-        "formatWeekdayLong": [Function],
-        "formatWeekdayShort": [Function],
-        "getFirstDayOfWeek": [Function],
-        "getMonths": [Function],
-      },
-      "formatDay": [Function],
-      "formatMonthTitle": [Function],
-      "formatWeekdayLong": [Function],
-      "formatWeekdayShort": [Function],
-      "getFirstDayOfWeek": [Function],
-      "getMonths": [Function],
-    }
-  }
-  modifiers={
-    Object {
-      "from": [Function],
-      "range": [Function],
-      "to": [Function],
-    }
-  }
-  navbarElement={
-    <Navbar
-      classNames={
-        Object {
-          "body": "DayPicker-Body",
-          "caption": "DayPicker-Caption",
-          "container": "DayPicker",
-          "day": "DayPicker-Day",
-          "disabled": "disabled",
-          "footer": "DayPicker-Footer",
-          "interactionDisabled": "DayPicker--interactionDisabled",
-          "month": "DayPicker-Month",
-          "navBar": "DayPicker-NavBar",
-          "navButtonInteractionDisabled": "DayPicker-NavButton--interactionDisabled",
-          "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
-          "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
-          "outside": "outside",
-          "selected": "selected",
-          "today": "today",
-          "todayButton": "DayPicker-TodayButton",
-          "week": "DayPicker-Week",
-          "weekNumber": "DayPicker-WeekNumber",
-          "weekday": "DayPicker-Weekday",
-          "weekdays": "DayPicker-Weekdays",
-          "weekdaysRow": "DayPicker-WeekdaysRow",
-          "wrapper": "DayPicker-wrapper",
-        }
-      }
-      dir="ltr"
-      labels={
-        Object {
-          "nextMonth": "Next Month",
-          "previousMonth": "Previous Month",
-        }
-      }
-      showNextButton={true}
-      showPreviousButton={true}
-    />
-  }
-  numberOfMonths={1}
-  onDayClick={[Function]}
-  onDayMouseEnter={[Function]}
-  onDayMouseLeave={[Function]}
-  pagedNavigation={false}
-  renderDay={[Function]}
-  reverseMonths={false}
-  selectMode="from"
-  shouldComponentUpdate={true}
-  showWeekNumbers={false}
-  tabIndex={0}
-  to={null}
-  weekdayElement={<Weekday />}
-  weekdaysShort={
-    Array [
-      "Sun",
-      "Mon",
-      "Tue",
-      "Wed",
-      "Thu",
-      "Fri",
-      "Sat",
-    ]
-  }
-/>
+exports[`CalendarMonth common tests [common] example testing should match snapshot(s) for SelectedDay 1`] = `
+<section
+  style="max-width:400px"
+>
+  <div
+    class="DayPicker DayPicker--interactionDisabled lucid-CalendarMonth"
+    lang="en"
+    role="application"
+  >
+    <div
+      class="DayPicker-wrapper"
+      tabindex="-1"
+    >
+      <div
+        class="DayPicker-Month"
+        role="grid"
+      >
+        <div
+          class="DayPicker-Caption"
+          role="heading"
+        >
+          <div>
+            February 2016
+          </div>
+        </div>
+        <div
+          class="DayPicker-Weekdays"
+          role="rowgroup"
+        >
+          <div
+            class="DayPicker-WeekdaysRow"
+            role="row"
+          >
+            <div
+              class="DayPicker-Weekday"
+              role="columnheader"
+            >
+              <abbr
+                title="Sunday"
+              >
+                Sun
+              </abbr>
+            </div>
+            <div
+              class="DayPicker-Weekday"
+              role="columnheader"
+            >
+              <abbr
+                title="Monday"
+              >
+                Mon
+              </abbr>
+            </div>
+            <div
+              class="DayPicker-Weekday"
+              role="columnheader"
+            >
+              <abbr
+                title="Tuesday"
+              >
+                Tue
+              </abbr>
+            </div>
+            <div
+              class="DayPicker-Weekday"
+              role="columnheader"
+            >
+              <abbr
+                title="Wednesday"
+              >
+                Wed
+              </abbr>
+            </div>
+            <div
+              class="DayPicker-Weekday"
+              role="columnheader"
+            >
+              <abbr
+                title="Thursday"
+              >
+                Thu
+              </abbr>
+            </div>
+            <div
+              class="DayPicker-Weekday"
+              role="columnheader"
+            >
+              <abbr
+                title="Friday"
+              >
+                Fri
+              </abbr>
+            </div>
+            <div
+              class="DayPicker-Weekday"
+              role="columnheader"
+            >
+              <abbr
+                title="Saturday"
+              >
+                Sat
+              </abbr>
+            </div>
+          </div>
+        </div>
+        <div
+          class="DayPicker-Body"
+          role="rowgroup"
+        >
+          <div
+            class="DayPicker-Week"
+            role="row"
+          >
+            <div
+              aria-disabled="false"
+              aria-label="Wed Feb 17 2016"
+              aria-selected="true"
+              class="DayPicker-Day DayPicker-Day--from DayPicker-Day--to DayPicker-Day--selected DayPicker-Day--today"
+              role="gridcell"
+              tabindex="-1"
+            >
+              17
+            </div>
+            <div
+              aria-disabled="false"
+              aria-label="Wed Feb 17 2016"
+              aria-selected="true"
+              class="DayPicker-Day DayPicker-Day--from DayPicker-Day--to DayPicker-Day--selected DayPicker-Day--today"
+              role="gridcell"
+              tabindex="-1"
+            >
+              17
+            </div>
+            <div
+              aria-disabled="false"
+              aria-label="Wed Feb 17 2016"
+              aria-selected="true"
+              class="DayPicker-Day DayPicker-Day--from DayPicker-Day--to DayPicker-Day--selected DayPicker-Day--today"
+              role="gridcell"
+              tabindex="-1"
+            >
+              17
+            </div>
+            <div
+              aria-disabled="false"
+              aria-label="Wed Feb 17 2016"
+              aria-selected="true"
+              class="DayPicker-Day DayPicker-Day--from DayPicker-Day--to DayPicker-Day--selected DayPicker-Day--today"
+              role="gridcell"
+              tabindex="-1"
+            >
+              17
+            </div>
+            <div
+              aria-disabled="false"
+              aria-label="Wed Feb 17 2016"
+              aria-selected="true"
+              class="DayPicker-Day DayPicker-Day--from DayPicker-Day--to DayPicker-Day--selected DayPicker-Day--today"
+              role="gridcell"
+              tabindex="-1"
+            >
+              17
+            </div>
+            <div
+              aria-disabled="false"
+              aria-label="Wed Feb 17 2016"
+              aria-selected="true"
+              class="DayPicker-Day DayPicker-Day--from DayPicker-Day--to DayPicker-Day--selected DayPicker-Day--today"
+              role="gridcell"
+              tabindex="-1"
+            >
+              17
+            </div>
+            <div
+              aria-disabled="false"
+              aria-label="Wed Feb 17 2016"
+              aria-selected="true"
+              class="DayPicker-Day DayPicker-Day--from DayPicker-Day--to DayPicker-Day--selected DayPicker-Day--today"
+              role="gridcell"
+              tabindex="-1"
+            >
+              17
+            </div>
+            <div
+              aria-disabled="false"
+              aria-label="Wed Feb 17 2016"
+              aria-selected="true"
+              class="DayPicker-Day DayPicker-Day--from DayPicker-Day--to DayPicker-Day--selected DayPicker-Day--today"
+              role="gridcell"
+              tabindex="-1"
+            >
+              17
+            </div>
+            <div
+              aria-disabled="false"
+              aria-label="Wed Feb 17 2016"
+              aria-selected="true"
+              class="DayPicker-Day DayPicker-Day--from DayPicker-Day--to DayPicker-Day--selected DayPicker-Day--today"
+              role="gridcell"
+              tabindex="-1"
+            >
+              17
+            </div>
+            <div
+              aria-disabled="false"
+              aria-label="Wed Feb 17 2016"
+              aria-selected="true"
+              class="DayPicker-Day DayPicker-Day--from DayPicker-Day--to DayPicker-Day--selected DayPicker-Day--today"
+              role="gridcell"
+              tabindex="-1"
+            >
+              17
+            </div>
+            <div
+              aria-disabled="false"
+              aria-label="Wed Feb 17 2016"
+              aria-selected="true"
+              class="DayPicker-Day DayPicker-Day--from DayPicker-Day--to DayPicker-Day--selected DayPicker-Day--today"
+              role="gridcell"
+              tabindex="-1"
+            >
+              17
+            </div>
+            <div
+              aria-disabled="false"
+              aria-label="Wed Feb 17 2016"
+              aria-selected="true"
+              class="DayPicker-Day DayPicker-Day--from DayPicker-Day--to DayPicker-Day--selected DayPicker-Day--today"
+              role="gridcell"
+              tabindex="-1"
+            >
+              17
+            </div>
+            <div
+              aria-disabled="false"
+              aria-label="Wed Feb 17 2016"
+              aria-selected="true"
+              class="DayPicker-Day DayPicker-Day--from DayPicker-Day--to DayPicker-Day--selected DayPicker-Day--today"
+              role="gridcell"
+              tabindex="-1"
+            >
+              17
+            </div>
+            <div
+              aria-disabled="false"
+              aria-label="Wed Feb 17 2016"
+              aria-selected="true"
+              class="DayPicker-Day DayPicker-Day--from DayPicker-Day--to DayPicker-Day--selected DayPicker-Day--today"
+              role="gridcell"
+              tabindex="-1"
+            >
+              17
+            </div>
+            <div
+              aria-disabled="false"
+              aria-label="Wed Feb 17 2016"
+              aria-selected="true"
+              class="DayPicker-Day DayPicker-Day--from DayPicker-Day--to DayPicker-Day--selected DayPicker-Day--today"
+              role="gridcell"
+              tabindex="-1"
+            >
+              17
+            </div>
+            <div
+              aria-disabled="false"
+              aria-label="Wed Feb 17 2016"
+              aria-selected="true"
+              class="DayPicker-Day DayPicker-Day--from DayPicker-Day--to DayPicker-Day--selected DayPicker-Day--today"
+              role="gridcell"
+              tabindex="-1"
+            >
+              17
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 `;
 
-exports[`CalendarMonth common tests [common] example testing should match snapshot(s) for 5.select-range 2`] = `
-<DayPicker
-  canChangeMonth={false}
-  captionElement={
-    <Caption
-      classNames={
-        Object {
-          "body": "DayPicker-Body",
-          "caption": "DayPicker-Caption",
-          "container": "DayPicker",
-          "day": "DayPicker-Day",
-          "disabled": "disabled",
-          "footer": "DayPicker-Footer",
-          "interactionDisabled": "DayPicker--interactionDisabled",
-          "month": "DayPicker-Month",
-          "navBar": "DayPicker-NavBar",
-          "navButtonInteractionDisabled": "DayPicker-NavButton--interactionDisabled",
-          "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
-          "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
-          "outside": "outside",
-          "selected": "selected",
-          "today": "today",
-          "todayButton": "DayPicker-TodayButton",
-          "week": "DayPicker-Week",
-          "weekNumber": "DayPicker-WeekNumber",
-          "weekday": "DayPicker-Weekday",
-          "weekdays": "DayPicker-Weekdays",
-          "weekdaysRow": "DayPicker-WeekdaysRow",
-          "wrapper": "DayPicker-wrapper",
-        }
-      }
-    />
-  }
-  className="lucid-CalendarMonth"
-  classNames={
-    Object {
-      "body": "DayPicker-Body",
-      "caption": "DayPicker-Caption",
-      "container": "DayPicker",
-      "day": "DayPicker-Day",
-      "disabled": "disabled",
-      "footer": "DayPicker-Footer",
-      "interactionDisabled": "DayPicker--interactionDisabled",
-      "month": "DayPicker-Month",
-      "navBar": "DayPicker-NavBar",
-      "navButtonInteractionDisabled": "DayPicker-NavButton--interactionDisabled",
-      "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
-      "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
-      "outside": "outside",
-      "selected": "selected",
-      "today": "today",
-      "todayButton": "DayPicker-TodayButton",
-      "week": "DayPicker-Week",
-      "weekNumber": "DayPicker-WeekNumber",
-      "weekday": "DayPicker-Weekday",
-      "weekdays": "DayPicker-Weekdays",
-      "weekdaysRow": "DayPicker-WeekdaysRow",
-      "wrapper": "DayPicker-wrapper",
-    }
-  }
-  cursor={null}
-  disabledDays={[Function]}
-  enableOutsideDays={false}
-  fixedWeeks={false}
-  from={null}
-  initialMonth={2016-02-17T22:25:23.000Z}
-  key="1"
-  labels={
-    Object {
-      "nextMonth": "Next Month",
-      "previousMonth": "Previous Month",
-    }
-  }
-  locale="en"
-  localeUtils={
-    Object {
-      "default": Object {
-        "formatDay": [Function],
-        "formatMonthTitle": [Function],
-        "formatWeekdayLong": [Function],
-        "formatWeekdayShort": [Function],
-        "getFirstDayOfWeek": [Function],
-        "getMonths": [Function],
-      },
-      "formatDay": [Function],
-      "formatMonthTitle": [Function],
-      "formatWeekdayLong": [Function],
-      "formatWeekdayShort": [Function],
-      "getFirstDayOfWeek": [Function],
-      "getMonths": [Function],
-    }
-  }
-  modifiers={
-    Object {
-      "from": [Function],
-      "range": [Function],
-      "to": [Function],
-    }
-  }
-  navbarElement={
-    <Navbar
-      classNames={
-        Object {
-          "body": "DayPicker-Body",
-          "caption": "DayPicker-Caption",
-          "container": "DayPicker",
-          "day": "DayPicker-Day",
-          "disabled": "disabled",
-          "footer": "DayPicker-Footer",
-          "interactionDisabled": "DayPicker--interactionDisabled",
-          "month": "DayPicker-Month",
-          "navBar": "DayPicker-NavBar",
-          "navButtonInteractionDisabled": "DayPicker-NavButton--interactionDisabled",
-          "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
-          "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
-          "outside": "outside",
-          "selected": "selected",
-          "today": "today",
-          "todayButton": "DayPicker-TodayButton",
-          "week": "DayPicker-Week",
-          "weekNumber": "DayPicker-WeekNumber",
-          "weekday": "DayPicker-Weekday",
-          "weekdays": "DayPicker-Weekdays",
-          "weekdaysRow": "DayPicker-WeekdaysRow",
-          "wrapper": "DayPicker-wrapper",
-        }
-      }
-      dir="ltr"
-      labels={
-        Object {
-          "nextMonth": "Next Month",
-          "previousMonth": "Previous Month",
-        }
-      }
-      showNextButton={true}
-      showPreviousButton={true}
-    />
-  }
-  numberOfMonths={1}
-  onDayClick={[Function]}
-  onDayMouseEnter={[Function]}
-  onDayMouseLeave={[Function]}
-  pagedNavigation={false}
-  renderDay={[Function]}
-  reverseMonths={false}
-  selectMode="from"
-  shouldComponentUpdate={true}
-  showWeekNumbers={false}
-  tabIndex={0}
-  to={null}
-  weekdayElement={<Weekday />}
-  weekdaysShort={
-    Array [
-      "Sun",
-      "Mon",
-      "Tue",
-      "Wed",
-      "Thu",
-      "Fri",
-      "Sat",
-    ]
-  }
-/>
-`;
-
-exports[`CalendarMonth common tests [common] example testing should match snapshot(s) for 6.show-cursor 1`] = `
-<DayPicker
-  canChangeMonth={false}
-  captionElement={
-    <Caption
-      classNames={
-        Object {
-          "body": "DayPicker-Body",
-          "caption": "DayPicker-Caption",
-          "container": "DayPicker",
-          "day": "DayPicker-Day",
-          "disabled": "disabled",
-          "footer": "DayPicker-Footer",
-          "interactionDisabled": "DayPicker--interactionDisabled",
-          "month": "DayPicker-Month",
-          "navBar": "DayPicker-NavBar",
-          "navButtonInteractionDisabled": "DayPicker-NavButton--interactionDisabled",
-          "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
-          "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
-          "outside": "outside",
-          "selected": "selected",
-          "today": "today",
-          "todayButton": "DayPicker-TodayButton",
-          "week": "DayPicker-Week",
-          "weekNumber": "DayPicker-WeekNumber",
-          "weekday": "DayPicker-Weekday",
-          "weekdays": "DayPicker-Weekdays",
-          "weekdaysRow": "DayPicker-WeekdaysRow",
-          "wrapper": "DayPicker-wrapper",
-        }
-      }
-    />
-  }
-  className="lucid-CalendarMonth"
-  classNames={
-    Object {
-      "body": "DayPicker-Body",
-      "caption": "DayPicker-Caption",
-      "container": "DayPicker",
-      "day": "DayPicker-Day",
-      "disabled": "disabled",
-      "footer": "DayPicker-Footer",
-      "interactionDisabled": "DayPicker--interactionDisabled",
-      "month": "DayPicker-Month",
-      "navBar": "DayPicker-NavBar",
-      "navButtonInteractionDisabled": "DayPicker-NavButton--interactionDisabled",
-      "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
-      "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
-      "outside": "outside",
-      "selected": "selected",
-      "today": "today",
-      "todayButton": "DayPicker-TodayButton",
-      "week": "DayPicker-Week",
-      "weekNumber": "DayPicker-WeekNumber",
-      "weekday": "DayPicker-Weekday",
-      "weekdays": "DayPicker-Weekdays",
-      "weekdaysRow": "DayPicker-WeekdaysRow",
-      "wrapper": "DayPicker-wrapper",
-    }
-  }
-  cursor={2016-02-17T22:25:23.000Z}
-  enableOutsideDays={false}
-  fixedWeeks={false}
-  from={null}
-  initialMonth={2016-02-17T22:25:23.000Z}
-  key="0"
-  labels={
-    Object {
-      "nextMonth": "Next Month",
-      "previousMonth": "Previous Month",
-    }
-  }
-  locale="en"
-  localeUtils={
-    Object {
-      "default": Object {
-        "formatDay": [Function],
-        "formatMonthTitle": [Function],
-        "formatWeekdayLong": [Function],
-        "formatWeekdayShort": [Function],
-        "getFirstDayOfWeek": [Function],
-        "getMonths": [Function],
-      },
-      "formatDay": [Function],
-      "formatMonthTitle": [Function],
-      "formatWeekdayLong": [Function],
-      "formatWeekdayShort": [Function],
-      "getFirstDayOfWeek": [Function],
-      "getMonths": [Function],
-    }
-  }
-  modifiers={
-    Object {
-      "from": [Function],
-      "range": [Function],
-      "to": [Function],
-    }
-  }
-  navbarElement={
-    <Navbar
-      classNames={
-        Object {
-          "body": "DayPicker-Body",
-          "caption": "DayPicker-Caption",
-          "container": "DayPicker",
-          "day": "DayPicker-Day",
-          "disabled": "disabled",
-          "footer": "DayPicker-Footer",
-          "interactionDisabled": "DayPicker--interactionDisabled",
-          "month": "DayPicker-Month",
-          "navBar": "DayPicker-NavBar",
-          "navButtonInteractionDisabled": "DayPicker-NavButton--interactionDisabled",
-          "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
-          "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
-          "outside": "outside",
-          "selected": "selected",
-          "today": "today",
-          "todayButton": "DayPicker-TodayButton",
-          "week": "DayPicker-Week",
-          "weekNumber": "DayPicker-WeekNumber",
-          "weekday": "DayPicker-Weekday",
-          "weekdays": "DayPicker-Weekdays",
-          "weekdaysRow": "DayPicker-WeekdaysRow",
-          "wrapper": "DayPicker-wrapper",
-        }
-      }
-      dir="ltr"
-      labels={
-        Object {
-          "nextMonth": "Next Month",
-          "previousMonth": "Previous Month",
-        }
-      }
-      showNextButton={true}
-      showPreviousButton={true}
-    />
-  }
-  numberOfMonths={1}
-  pagedNavigation={false}
-  renderDay={[Function]}
-  reverseMonths={false}
-  selectMode="day"
-  shouldComponentUpdate={true}
-  showWeekNumbers={false}
-  tabIndex={0}
-  to={null}
-  weekdayElement={<Weekday />}
-  weekdaysShort={
-    Array [
-      "Sun",
-      "Mon",
-      "Tue",
-      "Wed",
-      "Thu",
-      "Fri",
-      "Sat",
-    ]
-  }
-/>
-`;
-
-exports[`CalendarMonth common tests [common] example testing should match snapshot(s) for 6.show-cursor 2`] = `
-<DayPicker
-  canChangeMonth={false}
-  captionElement={
-    <Caption
-      classNames={
-        Object {
-          "body": "DayPicker-Body",
-          "caption": "DayPicker-Caption",
-          "container": "DayPicker",
-          "day": "DayPicker-Day",
-          "disabled": "disabled",
-          "footer": "DayPicker-Footer",
-          "interactionDisabled": "DayPicker--interactionDisabled",
-          "month": "DayPicker-Month",
-          "navBar": "DayPicker-NavBar",
-          "navButtonInteractionDisabled": "DayPicker-NavButton--interactionDisabled",
-          "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
-          "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
-          "outside": "outside",
-          "selected": "selected",
-          "today": "today",
-          "todayButton": "DayPicker-TodayButton",
-          "week": "DayPicker-Week",
-          "weekNumber": "DayPicker-WeekNumber",
-          "weekday": "DayPicker-Weekday",
-          "weekdays": "DayPicker-Weekdays",
-          "weekdaysRow": "DayPicker-WeekdaysRow",
-          "wrapper": "DayPicker-wrapper",
-        }
-      }
-    />
-  }
-  className="lucid-CalendarMonth"
-  classNames={
-    Object {
-      "body": "DayPicker-Body",
-      "caption": "DayPicker-Caption",
-      "container": "DayPicker",
-      "day": "DayPicker-Day",
-      "disabled": "disabled",
-      "footer": "DayPicker-Footer",
-      "interactionDisabled": "DayPicker--interactionDisabled",
-      "month": "DayPicker-Month",
-      "navBar": "DayPicker-NavBar",
-      "navButtonInteractionDisabled": "DayPicker-NavButton--interactionDisabled",
-      "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
-      "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
-      "outside": "outside",
-      "selected": "selected",
-      "today": "today",
-      "todayButton": "DayPicker-TodayButton",
-      "week": "DayPicker-Week",
-      "weekNumber": "DayPicker-WeekNumber",
-      "weekday": "DayPicker-Weekday",
-      "weekdays": "DayPicker-Weekdays",
-      "weekdaysRow": "DayPicker-WeekdaysRow",
-      "wrapper": "DayPicker-wrapper",
-    }
-  }
-  cursor={2016-02-17T22:25:23.000Z}
-  enableOutsideDays={false}
-  fixedWeeks={false}
-  from={2016-02-01T22:25:23.000Z}
-  initialMonth={2016-02-17T22:25:23.000Z}
-  key="0"
-  labels={
-    Object {
-      "nextMonth": "Next Month",
-      "previousMonth": "Previous Month",
-    }
-  }
-  locale="en"
-  localeUtils={
-    Object {
-      "default": Object {
-        "formatDay": [Function],
-        "formatMonthTitle": [Function],
-        "formatWeekdayLong": [Function],
-        "formatWeekdayShort": [Function],
-        "getFirstDayOfWeek": [Function],
-        "getMonths": [Function],
-      },
-      "formatDay": [Function],
-      "formatMonthTitle": [Function],
-      "formatWeekdayLong": [Function],
-      "formatWeekdayShort": [Function],
-      "getFirstDayOfWeek": [Function],
-      "getMonths": [Function],
-    }
-  }
-  modifiers={
-    Object {
-      "from": [Function],
-      "range": [Function],
-      "to": [Function],
-    }
-  }
-  navbarElement={
-    <Navbar
-      classNames={
-        Object {
-          "body": "DayPicker-Body",
-          "caption": "DayPicker-Caption",
-          "container": "DayPicker",
-          "day": "DayPicker-Day",
-          "disabled": "disabled",
-          "footer": "DayPicker-Footer",
-          "interactionDisabled": "DayPicker--interactionDisabled",
-          "month": "DayPicker-Month",
-          "navBar": "DayPicker-NavBar",
-          "navButtonInteractionDisabled": "DayPicker-NavButton--interactionDisabled",
-          "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
-          "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
-          "outside": "outside",
-          "selected": "selected",
-          "today": "today",
-          "todayButton": "DayPicker-TodayButton",
-          "week": "DayPicker-Week",
-          "weekNumber": "DayPicker-WeekNumber",
-          "weekday": "DayPicker-Weekday",
-          "weekdays": "DayPicker-Weekdays",
-          "weekdaysRow": "DayPicker-WeekdaysRow",
-          "wrapper": "DayPicker-wrapper",
-        }
-      }
-      dir="ltr"
-      labels={
-        Object {
-          "nextMonth": "Next Month",
-          "previousMonth": "Previous Month",
-        }
-      }
-      showNextButton={true}
-      showPreviousButton={true}
-    />
-  }
-  numberOfMonths={1}
-  pagedNavigation={false}
-  renderDay={[Function]}
-  reverseMonths={false}
-  selectMode="to"
-  shouldComponentUpdate={true}
-  showWeekNumbers={false}
-  tabIndex={0}
-  to={null}
-  weekdayElement={<Weekday />}
-  weekdaysShort={
-    Array [
-      "Sun",
-      "Mon",
-      "Tue",
-      "Wed",
-      "Thu",
-      "Fri",
-      "Sat",
-    ]
-  }
-/>
+exports[`CalendarMonth common tests [common] example testing should match snapshot(s) for ShowCursor 1`] = `
+<section
+  style="max-width:400px"
+>
+  Cursor for day selectMode:
+  <div
+    class="DayPicker DayPicker--interactionDisabled lucid-CalendarMonth"
+    lang="en"
+    role="application"
+  >
+    <div
+      class="DayPicker-wrapper"
+      tabindex="-1"
+    >
+      <div
+        class="DayPicker-Month"
+        role="grid"
+      >
+        <div
+          class="DayPicker-Caption"
+          role="heading"
+        >
+          <div>
+            February 2016
+          </div>
+        </div>
+        <div
+          class="DayPicker-Weekdays"
+          role="rowgroup"
+        >
+          <div
+            class="DayPicker-WeekdaysRow"
+            role="row"
+          >
+            <div
+              class="DayPicker-Weekday"
+              role="columnheader"
+            >
+              <abbr
+                title="Sunday"
+              >
+                Sun
+              </abbr>
+            </div>
+            <div
+              class="DayPicker-Weekday"
+              role="columnheader"
+            >
+              <abbr
+                title="Monday"
+              >
+                Mon
+              </abbr>
+            </div>
+            <div
+              class="DayPicker-Weekday"
+              role="columnheader"
+            >
+              <abbr
+                title="Tuesday"
+              >
+                Tue
+              </abbr>
+            </div>
+            <div
+              class="DayPicker-Weekday"
+              role="columnheader"
+            >
+              <abbr
+                title="Wednesday"
+              >
+                Wed
+              </abbr>
+            </div>
+            <div
+              class="DayPicker-Weekday"
+              role="columnheader"
+            >
+              <abbr
+                title="Thursday"
+              >
+                Thu
+              </abbr>
+            </div>
+            <div
+              class="DayPicker-Weekday"
+              role="columnheader"
+            >
+              <abbr
+                title="Friday"
+              >
+                Fri
+              </abbr>
+            </div>
+            <div
+              class="DayPicker-Weekday"
+              role="columnheader"
+            >
+              <abbr
+                title="Saturday"
+              >
+                Sat
+              </abbr>
+            </div>
+          </div>
+        </div>
+        <div
+          class="DayPicker-Body"
+          role="rowgroup"
+        >
+          <div
+            class="DayPicker-Week"
+            role="row"
+          >
+            <div
+              aria-disabled="false"
+              aria-label="Wed Feb 17 2016"
+              aria-selected="false"
+              class="DayPicker-Day DayPicker-Day--range DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+              role="gridcell"
+              tabindex="-1"
+            >
+              17
+            </div>
+            <div
+              aria-disabled="false"
+              aria-label="Wed Feb 17 2016"
+              aria-selected="false"
+              class="DayPicker-Day DayPicker-Day--range DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+              role="gridcell"
+              tabindex="-1"
+            >
+              17
+            </div>
+            <div
+              aria-disabled="false"
+              aria-label="Wed Feb 17 2016"
+              aria-selected="false"
+              class="DayPicker-Day DayPicker-Day--range DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+              role="gridcell"
+              tabindex="-1"
+            >
+              17
+            </div>
+            <div
+              aria-disabled="false"
+              aria-label="Wed Feb 17 2016"
+              aria-selected="false"
+              class="DayPicker-Day DayPicker-Day--range DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+              role="gridcell"
+              tabindex="-1"
+            >
+              17
+            </div>
+            <div
+              aria-disabled="false"
+              aria-label="Wed Feb 17 2016"
+              aria-selected="false"
+              class="DayPicker-Day DayPicker-Day--range DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+              role="gridcell"
+              tabindex="-1"
+            >
+              17
+            </div>
+            <div
+              aria-disabled="false"
+              aria-label="Wed Feb 17 2016"
+              aria-selected="false"
+              class="DayPicker-Day DayPicker-Day--range DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+              role="gridcell"
+              tabindex="-1"
+            >
+              17
+            </div>
+            <div
+              aria-disabled="false"
+              aria-label="Wed Feb 17 2016"
+              aria-selected="false"
+              class="DayPicker-Day DayPicker-Day--range DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+              role="gridcell"
+              tabindex="-1"
+            >
+              17
+            </div>
+            <div
+              aria-disabled="false"
+              aria-label="Wed Feb 17 2016"
+              aria-selected="false"
+              class="DayPicker-Day DayPicker-Day--range DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+              role="gridcell"
+              tabindex="-1"
+            >
+              17
+            </div>
+            <div
+              aria-disabled="false"
+              aria-label="Wed Feb 17 2016"
+              aria-selected="false"
+              class="DayPicker-Day DayPicker-Day--range DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+              role="gridcell"
+              tabindex="-1"
+            >
+              17
+            </div>
+            <div
+              aria-disabled="false"
+              aria-label="Wed Feb 17 2016"
+              aria-selected="false"
+              class="DayPicker-Day DayPicker-Day--range DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+              role="gridcell"
+              tabindex="-1"
+            >
+              17
+            </div>
+            <div
+              aria-disabled="false"
+              aria-label="Wed Feb 17 2016"
+              aria-selected="false"
+              class="DayPicker-Day DayPicker-Day--range DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+              role="gridcell"
+              tabindex="-1"
+            >
+              17
+            </div>
+            <div
+              aria-disabled="false"
+              aria-label="Wed Feb 17 2016"
+              aria-selected="false"
+              class="DayPicker-Day DayPicker-Day--range DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+              role="gridcell"
+              tabindex="-1"
+            >
+              17
+            </div>
+            <div
+              aria-disabled="false"
+              aria-label="Wed Feb 17 2016"
+              aria-selected="false"
+              class="DayPicker-Day DayPicker-Day--range DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+              role="gridcell"
+              tabindex="-1"
+            >
+              17
+            </div>
+            <div
+              aria-disabled="false"
+              aria-label="Wed Feb 17 2016"
+              aria-selected="false"
+              class="DayPicker-Day DayPicker-Day--range DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+              role="gridcell"
+              tabindex="-1"
+            >
+              17
+            </div>
+            <div
+              aria-disabled="false"
+              aria-label="Wed Feb 17 2016"
+              aria-selected="false"
+              class="DayPicker-Day DayPicker-Day--range DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+              role="gridcell"
+              tabindex="-1"
+            >
+              17
+            </div>
+            <div
+              aria-disabled="false"
+              aria-label="Wed Feb 17 2016"
+              aria-selected="false"
+              class="DayPicker-Day DayPicker-Day--range DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+              role="gridcell"
+              tabindex="-1"
+            >
+              17
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  Cursor for range selectMode:
+  <div
+    class="DayPicker DayPicker--interactionDisabled lucid-CalendarMonth"
+    lang="en"
+    role="application"
+  >
+    <div
+      class="DayPicker-wrapper"
+      tabindex="-1"
+    >
+      <div
+        class="DayPicker-Month"
+        role="grid"
+      >
+        <div
+          class="DayPicker-Caption"
+          role="heading"
+        >
+          <div>
+            February 2016
+          </div>
+        </div>
+        <div
+          class="DayPicker-Weekdays"
+          role="rowgroup"
+        >
+          <div
+            class="DayPicker-WeekdaysRow"
+            role="row"
+          >
+            <div
+              class="DayPicker-Weekday"
+              role="columnheader"
+            >
+              <abbr
+                title="Sunday"
+              >
+                Sun
+              </abbr>
+            </div>
+            <div
+              class="DayPicker-Weekday"
+              role="columnheader"
+            >
+              <abbr
+                title="Monday"
+              >
+                Mon
+              </abbr>
+            </div>
+            <div
+              class="DayPicker-Weekday"
+              role="columnheader"
+            >
+              <abbr
+                title="Tuesday"
+              >
+                Tue
+              </abbr>
+            </div>
+            <div
+              class="DayPicker-Weekday"
+              role="columnheader"
+            >
+              <abbr
+                title="Wednesday"
+              >
+                Wed
+              </abbr>
+            </div>
+            <div
+              class="DayPicker-Weekday"
+              role="columnheader"
+            >
+              <abbr
+                title="Thursday"
+              >
+                Thu
+              </abbr>
+            </div>
+            <div
+              class="DayPicker-Weekday"
+              role="columnheader"
+            >
+              <abbr
+                title="Friday"
+              >
+                Fri
+              </abbr>
+            </div>
+            <div
+              class="DayPicker-Weekday"
+              role="columnheader"
+            >
+              <abbr
+                title="Saturday"
+              >
+                Sat
+              </abbr>
+            </div>
+          </div>
+        </div>
+        <div
+          class="DayPicker-Body"
+          role="rowgroup"
+        >
+          <div
+            class="DayPicker-Week"
+            role="row"
+          >
+            <div
+              aria-disabled="false"
+              aria-label="Wed Feb 17 2016"
+              aria-selected="false"
+              class="DayPicker-Day DayPicker-Day--range DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+              role="gridcell"
+              tabindex="-1"
+            >
+              17
+            </div>
+            <div
+              aria-disabled="false"
+              aria-label="Wed Feb 17 2016"
+              aria-selected="false"
+              class="DayPicker-Day DayPicker-Day--range DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+              role="gridcell"
+              tabindex="-1"
+            >
+              17
+            </div>
+            <div
+              aria-disabled="false"
+              aria-label="Wed Feb 17 2016"
+              aria-selected="false"
+              class="DayPicker-Day DayPicker-Day--range DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+              role="gridcell"
+              tabindex="-1"
+            >
+              17
+            </div>
+            <div
+              aria-disabled="false"
+              aria-label="Wed Feb 17 2016"
+              aria-selected="false"
+              class="DayPicker-Day DayPicker-Day--range DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+              role="gridcell"
+              tabindex="-1"
+            >
+              17
+            </div>
+            <div
+              aria-disabled="false"
+              aria-label="Wed Feb 17 2016"
+              aria-selected="false"
+              class="DayPicker-Day DayPicker-Day--range DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+              role="gridcell"
+              tabindex="-1"
+            >
+              17
+            </div>
+            <div
+              aria-disabled="false"
+              aria-label="Wed Feb 17 2016"
+              aria-selected="false"
+              class="DayPicker-Day DayPicker-Day--range DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+              role="gridcell"
+              tabindex="-1"
+            >
+              17
+            </div>
+            <div
+              aria-disabled="false"
+              aria-label="Wed Feb 17 2016"
+              aria-selected="false"
+              class="DayPicker-Day DayPicker-Day--range DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+              role="gridcell"
+              tabindex="-1"
+            >
+              17
+            </div>
+            <div
+              aria-disabled="false"
+              aria-label="Wed Feb 17 2016"
+              aria-selected="false"
+              class="DayPicker-Day DayPicker-Day--range DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+              role="gridcell"
+              tabindex="-1"
+            >
+              17
+            </div>
+            <div
+              aria-disabled="false"
+              aria-label="Wed Feb 17 2016"
+              aria-selected="false"
+              class="DayPicker-Day DayPicker-Day--range DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+              role="gridcell"
+              tabindex="-1"
+            >
+              17
+            </div>
+            <div
+              aria-disabled="false"
+              aria-label="Wed Feb 17 2016"
+              aria-selected="false"
+              class="DayPicker-Day DayPicker-Day--range DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+              role="gridcell"
+              tabindex="-1"
+            >
+              17
+            </div>
+            <div
+              aria-disabled="false"
+              aria-label="Wed Feb 17 2016"
+              aria-selected="false"
+              class="DayPicker-Day DayPicker-Day--range DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+              role="gridcell"
+              tabindex="-1"
+            >
+              17
+            </div>
+            <div
+              aria-disabled="false"
+              aria-label="Wed Feb 17 2016"
+              aria-selected="false"
+              class="DayPicker-Day DayPicker-Day--range DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+              role="gridcell"
+              tabindex="-1"
+            >
+              17
+            </div>
+            <div
+              aria-disabled="false"
+              aria-label="Wed Feb 17 2016"
+              aria-selected="false"
+              class="DayPicker-Day DayPicker-Day--range DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+              role="gridcell"
+              tabindex="-1"
+            >
+              17
+            </div>
+            <div
+              aria-disabled="false"
+              aria-label="Wed Feb 17 2016"
+              aria-selected="false"
+              class="DayPicker-Day DayPicker-Day--range DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+              role="gridcell"
+              tabindex="-1"
+            >
+              17
+            </div>
+            <div
+              aria-disabled="false"
+              aria-label="Wed Feb 17 2016"
+              aria-selected="false"
+              class="DayPicker-Day DayPicker-Day--range DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+              role="gridcell"
+              tabindex="-1"
+            >
+              17
+            </div>
+            <div
+              aria-disabled="false"
+              aria-label="Wed Feb 17 2016"
+              aria-selected="false"
+              class="DayPicker-Day DayPicker-Day--range DayPicker-Day--from DayPicker-Day--to DayPicker-Day--today"
+              role="gridcell"
+              tabindex="-1"
+            >
+              17
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 `;

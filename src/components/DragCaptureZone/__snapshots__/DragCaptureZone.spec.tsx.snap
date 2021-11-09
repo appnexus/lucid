@@ -1,29 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`DragCaptureZone [common] example testing should match snapshot(s) for interactive 1`] = `
-<div
-  className="lucid-DragCaptureZone"
-  key="DragCaptureZone"
-  onMouseDown={[Function]}
-  onTouchStart={[Function]}
+exports[`DragCaptureZone [common] example testing should match snapshot(s) for Interactive 1`] = `
+<section
+  style="align-items:center;display:flex"
 >
   <div
-    style={
-      Object {
-        "alignItems": "center",
-        "backgroundColor": "#b7b7b7",
-        "display": "flex",
-        "fontFamily": "Helvetica, sans-serif",
-        "fontSize": "24px",
-        "fontWeight": 300,
-        "height": 300,
-        "justifyContent": "center",
-        "textTransform": "uppercase",
-        "width": 400,
-      }
-    }
+    class="lucid-DragCaptureZone"
   >
-    Go wild!
+    <div
+      style="align-items:center;background-color:#b7b7b7;display:flex;font-family:Helvetica, sans-serif;font-size:24px;font-weight:300;height:300px;justify-content:center;text-transform:uppercase;width:400px"
+    >
+      Go wild!
+    </div>
   </div>
-</div>
+  <div
+    style="height:300px;margin-left:50px;overflow:auto;width:600px"
+  />
+</section>
 `;

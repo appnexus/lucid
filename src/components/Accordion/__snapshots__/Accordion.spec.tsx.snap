@@ -1,132 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Accordion [common] example testing should match snapshot(s) for 3.fixed-index 1`] = `
-<div
-  className="lucid-Accordion"
->
-  <ExpanderPanel
-    Header="Peter Venkman"
-    className="lucid-Accordion-Item"
-    hasPadding={true}
-    isDisabled={false}
-    isExpanded={false}
-    key="0"
-    onToggle={[Function]}
-  >
-    Peter Venkman, Ph.D. is a fictional character from the Ghostbusters franchise. He appears in the films Ghostbusters and Ghostbusters II and in the animated television series The Real Ghostbusters. In both live action films, he was portrayed by Bill Murray, and was voiced in the animated series first by Lorenzo Music and then by Dave Coulier. He is a parapsychologist and the leader of the Ghostbusters.
-  </ExpanderPanel>
-  <ExpanderPanel
-    Header="Ray Stantz"
-    className="lucid-Accordion-Item"
-    hasPadding={true}
-    isDisabled={false}
-    isExpanded={true}
-    key="1"
-    onToggle={[Function]}
-  >
-    Raymond Ray Stantz, Ph.D. is a fictional character from the Ghostbusters franchise. He appears in the films Ghostbusters, Ghostbusters II, Casper, and the animated television series The Real Ghostbusters. He was portrayed by Dan Aykroyd in both live action films, and voiced by Frank Welker in the animated series. He is a member of the Ghostbusters and one of the three doctors of parapsychology, along with Dr. Peter Venkman and Dr. Egon Spengler.
-  </ExpanderPanel>
-  <ExpanderPanel
-    Header="Egon Spengler"
-    className="lucid-Accordion-Item"
-    hasPadding={true}
-    isDisabled={false}
-    isExpanded={false}
-    key="2"
-    onToggle={[Function]}
-  >
-    Egon Spengler, Ph.D. is a fictional character from the Ghostbusters franchise. He appears in the films Ghostbusters and Ghostbusters II, in the animated television series The Real Ghostbusters, and later in Extreme Ghostbusters. Spengler was portrayed by Harold Ramis in the films and voiced by him in Ghostbusters: The Video Game, and voiced by Maurice LaMarche in the cartoon series. He is a member of the Ghostbusters and one of the three doctors of parapsychology, along with Dr. Peter Venkman and Dr. Raymond Stantz.
-  </ExpanderPanel>
-</div>
-`;
-
-exports[`Accordion [common] example testing should match snapshot(s) for 4.disabled-item 1`] = `
-<div
-  className="lucid-Accordion"
->
-  <ExpanderPanel
-    Header="Peter Venkman"
-    className="lucid-Accordion-Item"
-    hasPadding={true}
-    isDisabled={false}
-    isExpanded={false}
-    key="0"
-    onToggle={[Function]}
-  >
-    Peter Venkman, Ph.D. is a fictional character from the Ghostbusters franchise. He appears in the films Ghostbusters and Ghostbusters II and in the animated television series The Real Ghostbusters. In both live action films, he was portrayed by Bill Murray, and was voiced in the animated series first by Lorenzo Music and then by Dave Coulier. He is a parapsychologist and the leader of the Ghostbusters.
-  </ExpanderPanel>
-  <ExpanderPanel
-    Header="Ray Stantz"
-    className="lucid-Accordion-Item"
-    hasPadding={true}
-    isDisabled={true}
-    isExpanded={false}
-    key="1"
-    onToggle={[Function]}
-  >
-    Raymond Ray Stantz, Ph.D. is a fictional character from the Ghostbusters franchise. He appears in the films Ghostbusters, Ghostbusters II, Casper, and the animated television series The Real Ghostbusters. He was portrayed by Dan Aykroyd in both live action films, and voiced by Frank Welker in the animated series. He is a member of the Ghostbusters and one of the three doctors of parapsychology, along with Dr. Peter Venkman and Dr. Egon Spengler.
-  </ExpanderPanel>
-  <ExpanderPanel
-    Header="Egon Spengler"
-    className="lucid-Accordion-Item"
-    hasPadding={true}
-    isDisabled={false}
-    isExpanded={false}
-    key="2"
-    onToggle={[Function]}
-  >
-    Egon Spengler, Ph.D. is a fictional character from the Ghostbusters franchise. He appears in the films Ghostbusters and Ghostbusters II, in the animated television series The Real Ghostbusters, and later in Extreme Ghostbusters. Spengler was portrayed by Harold Ramis in the films and voiced by him in Ghostbusters: The Video Game, and voiced by Maurice LaMarche in the cartoon series. He is a member of the Ghostbusters and one of the three doctors of parapsychology, along with Dr. Peter Venkman and Dr. Raymond Stantz.
-  </ExpanderPanel>
-</div>
-`;
-
-exports[`Accordion [common] example testing should match snapshot(s) for 5.using-header-as-child 1`] = `
-<div
-  className="lucid-Accordion"
->
-  <ExpanderPanel
-    className="lucid-Accordion-Item"
-    hasPadding={true}
-    isDisabled={false}
-    isExpanded={false}
-    key="0"
-    onToggle={[Function]}
-  >
-    <ExpanderPanel.Header>
-      Peter Venkman
-    </ExpanderPanel.Header>
-    Peter Venkman, Ph.D. is a fictional character from the Ghostbusters franchise. He appears in the films Ghostbusters and Ghostbusters II and in the animated television series The Real Ghostbusters. In both live action films, he was portrayed by Bill Murray, and was voiced in the animated series first by Lorenzo Music and then by Dave Coulier. He is a parapsychologist and the leader of the Ghostbusters.
-  </ExpanderPanel>
-  <ExpanderPanel
-    className="lucid-Accordion-Item"
-    hasPadding={true}
-    isDisabled={true}
-    isExpanded={false}
-    key="1"
-    onToggle={[Function]}
-  >
-    <ExpanderPanel.Header>
-      Ray Stantz
-    </ExpanderPanel.Header>
-    Raymond Ray Stantz, Ph.D. is a fictional character from the Ghostbusters franchise. He appears in the films Ghostbusters, Ghostbusters II, Casper, and the animated television series The Real Ghostbusters. He was portrayed by Dan Aykroyd in both live action films, and voiced by Frank Welker in the animated series. He is a member of the Ghostbusters and one of the three doctors of parapsychology, along with Dr. Peter Venkman and Dr. Egon Spengler.
-  </ExpanderPanel>
-  <ExpanderPanel
-    className="lucid-Accordion-Item"
-    hasPadding={true}
-    isDisabled={false}
-    isExpanded={false}
-    key="2"
-    onToggle={[Function]}
-  >
-    <ExpanderPanel.Header>
-      Egon Spengler
-    </ExpanderPanel.Header>
-    Egon Spengler, Ph.D. is a fictional character from the Ghostbusters franchise. He appears in the films Ghostbusters and Ghostbusters II, in the animated television series The Real Ghostbusters, and later in Extreme Ghostbusters. Spengler was portrayed by Harold Ramis in the films and voiced by him in Ghostbusters: The Video Game, and voiced by Maurice LaMarche in the cartoon series. He is a member of the Ghostbusters and one of the three doctors of parapsychology, along with Dr. Peter Venkman and Dr. Raymond Stantz.
-  </ExpanderPanel>
-</div>
-`;
-
-exports[`Accordion [common] example testing should match snapshot(s) for Basic 1`] = `
+exports[`Accordion [common] example testing should match snapshot(s) for DisabledItem 1`] = `
 <div
   class="lucid-Accordion"
 >
@@ -175,7 +49,7 @@ exports[`Accordion [common] example testing should match snapshot(s) for Basic 1
     </section>
   </div>
   <div
-    class="lucid-Panel lucid-ExpanderPanel lucid-ExpanderPanel-is-collapsed lucid-Accordion-Item lucid-Panel-is-not-gutterless lucid-Panel-has-margin lucid-Panel-is-scrollable"
+    class="lucid-Panel lucid-ExpanderPanel lucid-ExpanderPanel-is-collapsed lucid-ExpanderPanel-is-disabled lucid-Accordion-Item lucid-Panel-is-not-gutterless lucid-Panel-has-margin lucid-Panel-is-scrollable"
   >
     <header
       class="lucid-Panel-Header lucid-ExpanderPanel-header"
@@ -265,58 +139,7 @@ exports[`Accordion [common] example testing should match snapshot(s) for Basic 1
 </div>
 `;
 
-exports[`Accordion [common] example testing should match snapshot(s) for Default 1`] = `
-<div
-  class="lucid-Accordion"
->
-  <div
-    class="lucid-Panel lucid-ExpanderPanel lucid-ExpanderPanel-is-collapsed lucid-Accordion-Item lucid-Panel-is-not-gutterless lucid-Panel-has-margin lucid-Panel-is-scrollable"
-  >
-    <header
-      class="lucid-Panel-Header lucid-ExpanderPanel-header"
-    >
-      <button
-        class="lucid-Button lucid-Button-invisible lucid-Button-has-only-icon lucid-ExpanderPanel-icon"
-        type="button"
-      >
-        <span
-          class="lucid-Button-content"
-        >
-          <svg
-            class="lucid-Icon lucid-Icon-color-primary lucid-ChevronIcon lucid-ChevronIcon-is-down"
-            height="16"
-            preserveAspectRatio="xMidYMid meet"
-            viewBox="0 0 16 16"
-            width="16"
-          >
-            <path
-              d="M.5 4.5l7.5 7 7.5-7"
-            />
-          </svg>
-        </span>
-      </button>
-      <span>
-        Item 1
-      </span>
-    </header>
-    <section
-      class="lucid-Panel-content"
-    >
-      <div
-        class="lucid-Collapsible lucid-ExpanderPanel-content"
-        style="overflow:hidden;padding:0"
-      >
-        <div
-          class="lucid-Collapsible-content"
-          style="margin:0"
-        />
-      </div>
-    </section>
-  </div>
-</div>
-`;
-
-exports[`Accordion [common] example testing should match snapshot(s) for InitialIndexSet 1`] = `
+exports[`Accordion [common] example testing should match snapshot(s) for FixedIndex 1`] = `
 <div
   class="lucid-Accordion"
 >
@@ -348,50 +171,6 @@ exports[`Accordion [common] example testing should match snapshot(s) for Initial
       </button>
       <span>
         Peter Venkman
-      </span>
-    </header>
-    <section
-      class="lucid-Panel-content"
-    >
-      <div
-        class="lucid-Collapsible lucid-ExpanderPanel-content"
-        style="overflow:hidden;padding:0"
-      >
-        <div
-          class="lucid-Collapsible-content"
-          style="margin:0"
-        />
-      </div>
-    </section>
-  </div>
-  <div
-    class="lucid-Panel lucid-ExpanderPanel lucid-ExpanderPanel-is-collapsed lucid-Accordion-Item lucid-Panel-is-not-gutterless lucid-Panel-has-margin lucid-Panel-is-scrollable"
-  >
-    <header
-      class="lucid-Panel-Header lucid-ExpanderPanel-header"
-    >
-      <button
-        class="lucid-Button lucid-Button-invisible lucid-Button-has-only-icon lucid-ExpanderPanel-icon"
-        type="button"
-      >
-        <span
-          class="lucid-Button-content"
-        >
-          <svg
-            class="lucid-Icon lucid-Icon-color-primary lucid-ChevronIcon lucid-ChevronIcon-is-down"
-            height="16"
-            preserveAspectRatio="xMidYMid meet"
-            viewBox="0 0 16 16"
-            width="16"
-          >
-            <path
-              d="M.5 4.5l7.5 7 7.5-7"
-            />
-          </svg>
-        </span>
-      </button>
-      <span>
-        Ray Stantz
       </span>
     </header>
     <section
@@ -435,7 +214,7 @@ exports[`Accordion [common] example testing should match snapshot(s) for Initial
         </span>
       </button>
       <span>
-        Egon Spengler
+        Ray Stantz
       </span>
     </header>
     <section
@@ -452,9 +231,192 @@ exports[`Accordion [common] example testing should match snapshot(s) for Initial
           <div
             class="lucid-ExpanderPanel-content-inner"
           >
-            Egon Spengler, Ph.D. is a fictional character from the Ghostbusters franchise. He appears in the films Ghostbusters and Ghostbusters II, in the animated television series The Real Ghostbusters, and later in Extreme Ghostbusters. Spengler was portrayed by Harold Ramis in the films and voiced by him in Ghostbusters: The Video Game, and voiced by Maurice LaMarche in the cartoon series. He is a member of the Ghostbusters and one of the three doctors of parapsychology, along with Dr. Peter Venkman and Dr. Raymond Stantz.
+            Raymond Ray Stantz, Ph.D. is a fictional character from the Ghostbusters franchise. He appears in the films Ghostbusters, Ghostbusters II, Casper, and the animated television series The Real Ghostbusters. He was portrayed by Dan Aykroyd in both live action films, and voiced by Frank Welker in the animated series. He is a member of the Ghostbusters and one of the three doctors of parapsychology, along with Dr. Peter Venkman and Dr. Egon Spengler.
           </div>
         </div>
+      </div>
+    </section>
+  </div>
+  <div
+    class="lucid-Panel lucid-ExpanderPanel lucid-ExpanderPanel-is-collapsed lucid-Accordion-Item lucid-Panel-is-not-gutterless lucid-Panel-has-margin lucid-Panel-is-scrollable"
+  >
+    <header
+      class="lucid-Panel-Header lucid-ExpanderPanel-header"
+    >
+      <button
+        class="lucid-Button lucid-Button-invisible lucid-Button-has-only-icon lucid-ExpanderPanel-icon"
+        type="button"
+      >
+        <span
+          class="lucid-Button-content"
+        >
+          <svg
+            class="lucid-Icon lucid-Icon-color-primary lucid-ChevronIcon lucid-ChevronIcon-is-down"
+            height="16"
+            preserveAspectRatio="xMidYMid meet"
+            viewBox="0 0 16 16"
+            width="16"
+          >
+            <path
+              d="M.5 4.5l7.5 7 7.5-7"
+            />
+          </svg>
+        </span>
+      </button>
+      <span>
+        Egon Spengler
+      </span>
+    </header>
+    <section
+      class="lucid-Panel-content"
+    >
+      <div
+        class="lucid-Collapsible lucid-ExpanderPanel-content"
+        style="overflow:hidden;padding:0"
+      >
+        <div
+          class="lucid-Collapsible-content"
+          style="margin:0"
+        />
+      </div>
+    </section>
+  </div>
+</div>
+`;
+
+exports[`Accordion [common] example testing should match snapshot(s) for UsingHeaderAsChild 1`] = `
+<div
+  class="lucid-Accordion"
+>
+  <div
+    class="lucid-Panel lucid-ExpanderPanel lucid-ExpanderPanel-is-collapsed lucid-Accordion-Item lucid-Panel-is-not-gutterless lucid-Panel-has-margin lucid-Panel-is-scrollable"
+  >
+    <header
+      class="lucid-Panel-Header lucid-ExpanderPanel-header"
+    >
+      <button
+        class="lucid-Button lucid-Button-invisible lucid-Button-has-only-icon lucid-ExpanderPanel-icon"
+        type="button"
+      >
+        <span
+          class="lucid-Button-content"
+        >
+          <svg
+            class="lucid-Icon lucid-Icon-color-primary lucid-ChevronIcon lucid-ChevronIcon-is-down"
+            height="16"
+            preserveAspectRatio="xMidYMid meet"
+            viewBox="0 0 16 16"
+            width="16"
+          >
+            <path
+              d="M.5 4.5l7.5 7 7.5-7"
+            />
+          </svg>
+        </span>
+      </button>
+      <span>
+        Peter Venkman
+      </span>
+    </header>
+    <section
+      class="lucid-Panel-content"
+    >
+      <div
+        class="lucid-Collapsible lucid-ExpanderPanel-content"
+        style="overflow:hidden;padding:0"
+      >
+        <div
+          class="lucid-Collapsible-content"
+          style="margin:0"
+        />
+      </div>
+    </section>
+  </div>
+  <div
+    class="lucid-Panel lucid-ExpanderPanel lucid-ExpanderPanel-is-collapsed lucid-ExpanderPanel-is-disabled lucid-Accordion-Item lucid-Panel-is-not-gutterless lucid-Panel-has-margin lucid-Panel-is-scrollable"
+  >
+    <header
+      class="lucid-Panel-Header lucid-ExpanderPanel-header"
+    >
+      <button
+        class="lucid-Button lucid-Button-invisible lucid-Button-has-only-icon lucid-ExpanderPanel-icon"
+        type="button"
+      >
+        <span
+          class="lucid-Button-content"
+        >
+          <svg
+            class="lucid-Icon lucid-Icon-color-primary lucid-ChevronIcon lucid-ChevronIcon-is-down"
+            height="16"
+            preserveAspectRatio="xMidYMid meet"
+            viewBox="0 0 16 16"
+            width="16"
+          >
+            <path
+              d="M.5 4.5l7.5 7 7.5-7"
+            />
+          </svg>
+        </span>
+      </button>
+      <span>
+        Ray Stantz
+      </span>
+    </header>
+    <section
+      class="lucid-Panel-content"
+    >
+      <div
+        class="lucid-Collapsible lucid-ExpanderPanel-content"
+        style="overflow:hidden;padding:0"
+      >
+        <div
+          class="lucid-Collapsible-content"
+          style="margin:0"
+        />
+      </div>
+    </section>
+  </div>
+  <div
+    class="lucid-Panel lucid-ExpanderPanel lucid-ExpanderPanel-is-collapsed lucid-Accordion-Item lucid-Panel-is-not-gutterless lucid-Panel-has-margin lucid-Panel-is-scrollable"
+  >
+    <header
+      class="lucid-Panel-Header lucid-ExpanderPanel-header"
+    >
+      <button
+        class="lucid-Button lucid-Button-invisible lucid-Button-has-only-icon lucid-ExpanderPanel-icon"
+        type="button"
+      >
+        <span
+          class="lucid-Button-content"
+        >
+          <svg
+            class="lucid-Icon lucid-Icon-color-primary lucid-ChevronIcon lucid-ChevronIcon-is-down"
+            height="16"
+            preserveAspectRatio="xMidYMid meet"
+            viewBox="0 0 16 16"
+            width="16"
+          >
+            <path
+              d="M.5 4.5l7.5 7 7.5-7"
+            />
+          </svg>
+        </span>
+      </button>
+      <span>
+        Egon Spengler
+      </span>
+    </header>
+    <section
+      class="lucid-Panel-content"
+    >
+      <div
+        class="lucid-Collapsible lucid-ExpanderPanel-content"
+        style="overflow:hidden;padding:0"
+      >
+        <div
+          class="lucid-Collapsible-content"
+          style="margin:0"
+        />
       </div>
     </section>
   </div>

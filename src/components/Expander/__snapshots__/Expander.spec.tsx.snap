@@ -1,417 +1,306 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Expander [common] example testing should match snapshot(s) for 1.expanded 1`] = `
-<div
-  className="lucid-Expander lucid-Expander-is-expanded"
->
-  <header
-    className="lucid-Expander-header"
+exports[`Expander [common] example testing should match snapshot(s) for Expanded 1`] = `
+<div>
+  <div
+    class="lucid-Expander lucid-Expander-is-expanded"
   >
-    <div
-      className="lucid-Expander-header-toggle"
-      onClick={[Function]}
+    <header
+      class="lucid-Expander-header"
     >
-      <Button
-        className="lucid-Expander-icon"
-        hasOnlyIcon={true}
-        isActive={false}
-        isDisabled={false}
-        kind="invisible"
-        onClick={[Function]}
-        type="button"
+      <div
+        class="lucid-Expander-header-toggle"
       >
-        <ChevronIcon
-          aspectRatio="xMidYMid meet"
-          color="primary"
-          direction="up"
-          isClickable={false}
-          isDisabled={false}
-          onClick={[Function]}
-          onSelect={[Function]}
-          size={16}
-          viewBox="0 0 16 16"
-        />
-      </Button>
-      <span
-        className="lucid-Expander-text"
+        <button
+          class="lucid-Button lucid-Button-invisible lucid-Button-has-only-icon lucid-Expander-icon"
+          type="button"
+        >
+          <span
+            class="lucid-Button-content"
+          >
+            <svg
+              class="lucid-Icon lucid-Icon-color-primary lucid-ChevronIcon lucid-ChevronIcon-is-up"
+              height="16"
+              preserveAspectRatio="xMidYMid meet"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <path
+                d="M.5 4.5l7.5 7 7.5-7"
+              />
+            </svg>
+          </span>
+        </button>
+        <span
+          class="lucid-Expander-text"
+        >
+          Show Less
+        </span>
+      </div>
+    </header>
+    <section
+      class="lucid-Collapsible lucid-Expander-content"
+      style="overflow:hidden;padding:0"
+    >
+      <div
+        class="lucid-Collapsible-content"
+        style="margin:0"
       >
-        Show Less
-      </span>
-    </div>
-  </header>
-  <Collapsible
-    className="lucid-Expander-content"
-    isAnimated={true}
-    isExpanded={true}
-    isMountControlled={true}
-    mountControlThreshold={4}
-    rootType="section"
-  >
-    <Expander.Label>
-      Show Less
-    </Expander.Label>
-    <p>
-      You can't get rid of me. Keep clicking that icon as much as you want, but I'm here to stay!
-    </p>
-  </Collapsible>
+        <p>
+          You can't get rid of me. Keep clicking that icon as much as you want, but I'm here to stay!
+        </p>
+      </div>
+    </section>
+  </div>
 </div>
 `;
 
-exports[`Expander [common] example testing should match snapshot(s) for 2.interactive-with-changing-labels 1`] = `
-<div
-  className="lucid-Expander"
->
-  <header
-    className="lucid-Expander-header"
+exports[`Expander [common] example testing should match snapshot(s) for Highlighted 1`] = `
+<div>
+  <div
+    class="lucid-Expander lucid-Expander-kind-highlighted"
   >
-    <div
-      className="lucid-Expander-header-toggle"
-      onClick={[Function]}
+    <header
+      class="lucid-Expander-header"
     >
-      <Button
-        className="lucid-Expander-icon"
-        hasOnlyIcon={true}
-        isActive={false}
-        isDisabled={false}
-        kind="invisible"
-        onClick={[Function]}
-        type="button"
+      <div
+        class="lucid-Expander-header-toggle"
       >
-        <ChevronIcon
-          aspectRatio="xMidYMid meet"
-          color="primary"
-          direction="down"
-          isClickable={false}
-          isDisabled={false}
-          onClick={[Function]}
-          onSelect={[Function]}
-          size={16}
-          viewBox="0 0 16 16"
-        />
-      </Button>
-      <span
-        className="lucid-Expander-text"
-      >
-        Show More
-      </span>
-    </div>
-  </header>
-  <Collapsible
-    className="lucid-Expander-content"
-    isAnimated={true}
-    isExpanded={false}
-    isMountControlled={true}
-    mountControlThreshold={4}
-    rootType="section"
-  >
-    <Expander.Label>
-      Show More
-    </Expander.Label>
-    <p>
-      Artisan helvetica quinoa kogi fingerstache, biodiesel church-key blue bottle everyday carry schlitz seitan locavore. Retro +1 tilde, normcore post-ironic chillwave PBR&B umami. Mlkshk mumblecore meh, kitsch pickled wolf helvetica man bun cronut keffiyeh meggings ramps. Banh mi stumptown cronut wayfarers. Banh mi venmo street art chicharrones, put a bird on it yuccie cornhole poutine knausgaard echo park tilde retro. Occupy XOXO etsy meh pabst blue bottle. Photo booth four loko biodiesel, cornhole chicharrones echo park actually pork belly gochujang DIY gluten-free plaid microdosing salvia pinterest.
-    </p>
-    <p>
-      Cred lumbersexual organic, echo park hashtag roof party pinterest shabby chic green juice salvia scenester hella ramps. Schlitz knausgaard church-key disrupt, four loko XOXO bicycle rights post-ironic four dollar toast fixie butcher mustache tousled humblebrag. Bushwick 8-bit swag, wolf intelligentsia kickstarter roof party cred meh semiotics flannel. Typewriter umami narwhal irony, slow-carb VHS street art cold-pressed wayfarers sriracha everyday carry church-key wolf humblebrag. Skateboard polaroid man braid organic, chambray mustache mixtape freegan humblebrag brunch ugh. Wayfarers VHS brooklyn, fashion axe green juice next level kombucha cray shabby chic lo-fi. Lumbersexual pug farm-to-table, authentic chartreuse street art church-key.
-    </p>
-    <p>
-      3 wolf moon pickled messenger bag knausgaard venmo, retro aliquip portland asymmetrical cliche non pabst pinterest culpa. Laboris beard intelligentsia, pickled viral brooklyn YOLO tempor do cliche fugiat. Messenger bag fanny pack reprehenderit bicycle rights tilde, tumblr neutra do intelligentsia godard street art. Gentrify consectetur laboris, pug venmo literally you probably haven't heard of them actually locavore distillery commodo occupy franzen umami. Slow-carb bespoke pariatur four dollar toast, selfies tofu salvia artisan tousled meggings kinfolk chambray marfa direct trade single-origin coffee. Exercitation fap umami mollit deep v wolf, sint lomo sunt four dollar toast elit selvage vegan truffaut. Cillum pickled sartorial flexitarian chartreuse brooklyn.
-    </p>
-    <p>
-      Artisan helvetica quinoa kogi fingerstache, biodiesel church-key blue bottle everyday carry schlitz seitan locavore. Retro +1 tilde, normcore post-ironic chillwave PBR&B umami. Mlkshk mumblecore meh, kitsch pickled wolf helvetica man bun cronut keffiyeh meggings ramps. Banh mi stumptown cronut wayfarers. Banh mi venmo street art chicharrones, put a bird on it yuccie cornhole poutine knausgaard echo park tilde retro. Occupy XOXO etsy meh pabst blue bottle. Photo booth four loko biodiesel, cornhole chicharrones echo park actually pork belly gochujang DIY gluten-free plaid microdosing salvia pinterest.
-    </p>
-    <p>
-      Cred lumbersexual organic, echo park hashtag roof party pinterest shabby chic green juice salvia scenester hella ramps. Schlitz knausgaard church-key disrupt, four loko XOXO bicycle rights post-ironic four dollar toast fixie butcher mustache tousled humblebrag. Bushwick 8-bit swag, wolf intelligentsia kickstarter roof party cred meh semiotics flannel. Typewriter umami narwhal irony, slow-carb VHS street art cold-pressed wayfarers sriracha everyday carry church-key wolf humblebrag. Skateboard polaroid man braid organic, chambray mustache mixtape freegan humblebrag brunch ugh. Wayfarers VHS brooklyn, fashion axe green juice next level kombucha cray shabby chic lo-fi. Lumbersexual pug farm-to-table, authentic chartreuse street art church-key.
-    </p>
-    <p>
-      3 wolf moon pickled messenger bag knausgaard venmo, retro aliquip portland asymmetrical cliche non pabst pinterest culpa. Laboris beard intelligentsia, pickled viral brooklyn YOLO tempor do cliche fugiat. Messenger bag fanny pack reprehenderit bicycle rights tilde, tumblr neutra do intelligentsia godard street art. Gentrify consectetur laboris, pug venmo literally you probably haven't heard of them actually locavore distillery commodo occupy franzen umami. Slow-carb bespoke pariatur four dollar toast, selfies tofu salvia artisan tousled meggings kinfolk chambray marfa direct trade single-origin coffee. Exercitation fap umami mollit deep v wolf, sint lomo sunt four dollar toast elit selvage vegan truffaut. Cillum pickled sartorial flexitarian chartreuse brooklyn.
-    </p>
-  </Collapsible>
+        <button
+          class="lucid-Button lucid-Button-invisible lucid-Button-has-only-icon lucid-Expander-icon"
+          type="button"
+        >
+          <span
+            class="lucid-Button-content"
+          >
+            <svg
+              class="lucid-Icon lucid-Icon-color-primary lucid-ChevronIcon lucid-ChevronIcon-is-down"
+              height="16"
+              preserveAspectRatio="xMidYMid meet"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <path
+                d="M.5 4.5l7.5 7 7.5-7"
+              />
+            </svg>
+          </span>
+        </button>
+        <span
+          class="lucid-Expander-text"
+        >
+          Show Less
+        </span>
+      </div>
+    </header>
+    <section
+      class="lucid-Collapsible lucid-Expander-content"
+      style="overflow:hidden;padding:0"
+    >
+      <div
+        class="lucid-Collapsible-content"
+        style="margin:0"
+      />
+    </section>
+  </div>
 </div>
 `;
 
-exports[`Expander [common] example testing should match snapshot(s) for 3.interactive-without-changing-labels 1`] = `
-<div
-  className="lucid-Expander"
->
-  <header
-    className="lucid-Expander-header"
+exports[`Expander [common] example testing should match snapshot(s) for InteractiveWithChangingLabels 1`] = `
+<div>
+  <div
+    class="lucid-Expander"
   >
-    <div
-      className="lucid-Expander-header-toggle"
-      onClick={[Function]}
+    <header
+      class="lucid-Expander-header"
     >
-      <Button
-        className="lucid-Expander-icon"
-        hasOnlyIcon={true}
-        isActive={false}
-        isDisabled={false}
-        kind="invisible"
-        onClick={[Function]}
-        type="button"
+      <div
+        class="lucid-Expander-header-toggle"
       >
-        <ChevronIcon
-          aspectRatio="xMidYMid meet"
-          color="primary"
-          direction="down"
-          isClickable={false}
-          isDisabled={false}
-          onClick={[Function]}
-          onSelect={[Function]}
-          size={16}
-          viewBox="0 0 16 16"
-        />
-      </Button>
-      <span
-        className="lucid-Expander-text"
-      >
-        Show Stuff
-      </span>
-    </div>
-  </header>
-  <Collapsible
-    className="lucid-Expander-content"
-    isAnimated={true}
-    isExpanded={false}
-    isMountControlled={true}
-    mountControlThreshold={4}
-    rootType="section"
-  >
-    <Expander.Label>
-      Show Stuff
-    </Expander.Label>
-    <p>
-      Tacos craft beer humblebrag meditation. Cold-pressed next level man bun readymade beard, wayfarers fanny pack keytar helvetica knausgaard biodiesel lumbersexual. Knausgaard echo park whatever four loko messenger bag hella. Cardigan church-key brooklyn letterpress artisan venmo, gastropub hella. Single-origin coffee selfies four loko, biodiesel health goth truffaut migas sustainable kale chips disrupt locavore meggings mustache actually retro. Mlkshk poutine flexitarian scenester 3 wolf moon, vice kinfolk chia blog ennui bitters brooklyn quinoa marfa. Literally before they sold out gochujang pork belly franzen.
-    </p>
-    <p>
-      Sriracha put a bird on it chia, locavore wolf affogato tote bag neutra umami food truck austin keytar cronut man bun. Kitsch man braid occupy art party, tousled waistcoat tilde YOLO keytar street art selvage. Salvia pour-over keytar intelligentsia. Marfa yr stumptown, before they sold out lo-fi literally art party williamsburg blue bottle slow-carb brooklyn. Gochujang post-ironic aesthetic kickstarter, dreamcatcher four dollar toast whatever tattooed quinoa. Single-origin coffee blog lomo, freegan next level ramps small batch put a bird on it listicle stumptown. Stumptown mumblecore vinyl, mustache street art wayfarers lumbersexual everyday carry irony pitchfork gochujang pug DIY gentrify.
-    </p>
-    <p>
-      Kale chips pug jean shorts cardigan, ramps plaid mlkshk photo booth migas whatever. Ramps affogato bespoke, crucifix ennui PBR&B asymmetrical meggings kombucha banh mi meh skateboard artisan man braid. Ugh semiotics intelligentsia sustainable, craft beer next level meggings before they sold out heirloom iPhone try-hard. Listicle blog literally marfa plaid brooklyn humblebrag retro, VHS thundercats man braid waistcoat ennui. Church-key knausgaard austin organic farm-to-table neutra franzen bespoke, mlkshk narwhal DIY raw denim retro. Mlkshk locavore try-hard roof party flexitarian. Letterpress beard fixie, umami waistcoat salvia ennui four loko seitan lomo franzen pickled shoreditch master cleanse.
-    </p>
-    <p>
-      Tacos craft beer humblebrag meditation. Cold-pressed next level man bun readymade beard, wayfarers fanny pack keytar helvetica knausgaard biodiesel lumbersexual. Knausgaard echo park whatever four loko messenger bag hella. Cardigan church-key brooklyn letterpress artisan venmo, gastropub hella. Single-origin coffee selfies four loko, biodiesel health goth truffaut migas sustainable kale chips disrupt locavore meggings mustache actually retro. Mlkshk poutine flexitarian scenester 3 wolf moon, vice kinfolk chia blog ennui bitters brooklyn quinoa marfa. Literally before they sold out gochujang pork belly franzen.
-    </p>
-    <p>
-      Sriracha put a bird on it chia, locavore wolf affogato tote bag neutra umami food truck austin keytar cronut man bun. Kitsch man braid occupy art party, tousled waistcoat tilde YOLO keytar street art selvage. Salvia pour-over keytar intelligentsia. Marfa yr stumptown, before they sold out lo-fi literally art party williamsburg blue bottle slow-carb brooklyn. Gochujang post-ironic aesthetic kickstarter, dreamcatcher four dollar toast whatever tattooed quinoa. Single-origin coffee blog lomo, freegan next level ramps small batch put a bird on it listicle stumptown. Stumptown mumblecore vinyl, mustache street art wayfarers lumbersexual everyday carry irony pitchfork gochujang pug DIY gentrify.
-    </p>
-    <p>
-      Kale chips pug jean shorts cardigan, ramps plaid mlkshk photo booth migas whatever. Ramps affogato bespoke, crucifix ennui PBR&B asymmetrical meggings kombucha banh mi meh skateboard artisan man braid. Ugh semiotics intelligentsia sustainable, craft beer next level meggings before they sold out heirloom iPhone try-hard. Listicle blog literally marfa plaid brooklyn humblebrag retro, VHS thundercats man braid waistcoat ennui. Church-key knausgaard austin organic farm-to-table neutra franzen bespoke, mlkshk narwhal DIY raw denim retro. Mlkshk locavore try-hard roof party flexitarian. Letterpress beard fixie, umami waistcoat salvia ennui four loko seitan lomo franzen pickled shoreditch master cleanse.
-    </p>
-  </Collapsible>
+        <button
+          class="lucid-Button lucid-Button-invisible lucid-Button-has-only-icon lucid-Expander-icon"
+          type="button"
+        >
+          <span
+            class="lucid-Button-content"
+          >
+            <svg
+              class="lucid-Icon lucid-Icon-color-primary lucid-ChevronIcon lucid-ChevronIcon-is-down"
+              height="16"
+              preserveAspectRatio="xMidYMid meet"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <path
+                d="M.5 4.5l7.5 7 7.5-7"
+              />
+            </svg>
+          </span>
+        </button>
+        <span
+          class="lucid-Expander-text"
+        >
+          Show More
+        </span>
+      </div>
+    </header>
+    <section
+      class="lucid-Collapsible lucid-Expander-content"
+      style="overflow:hidden;padding:0"
+    >
+      <div
+        class="lucid-Collapsible-content"
+        style="margin:0"
+      />
+    </section>
+  </div>
 </div>
 `;
 
-exports[`Expander [common] example testing should match snapshot(s) for 4.interactive-with-changing-labels-and-additional-label-content 1`] = `
-<div
-  className="lucid-Expander"
->
-  <header
-    className="lucid-Expander-header"
+exports[`Expander [common] example testing should match snapshot(s) for InteractiveWithChangingLabelsAndAdditionalLabelContent 1`] = `
+<div>
+  <div
+    class="lucid-Expander"
   >
-    <div
-      className="lucid-Expander-header-toggle"
-      onClick={[Function]}
+    <header
+      class="lucid-Expander-header"
     >
-      <Button
-        className="lucid-Expander-icon"
-        hasOnlyIcon={true}
-        isActive={false}
-        isDisabled={false}
-        kind="invisible"
-        onClick={[Function]}
-        type="button"
+      <div
+        class="lucid-Expander-header-toggle"
       >
-        <ChevronIcon
-          aspectRatio="xMidYMid meet"
-          color="primary"
-          direction="down"
-          isClickable={false}
-          isDisabled={false}
-          onClick={[Function]}
-          onSelect={[Function]}
-          size={16}
-          viewBox="0 0 16 16"
-        />
-      </Button>
-      <span
-        className="lucid-Expander-text"
+        <button
+          class="lucid-Button lucid-Button-invisible lucid-Button-has-only-icon lucid-Expander-icon"
+          type="button"
+        >
+          <span
+            class="lucid-Button-content"
+          >
+            <svg
+              class="lucid-Icon lucid-Icon-color-primary lucid-ChevronIcon lucid-ChevronIcon-is-down"
+              height="16"
+              preserveAspectRatio="xMidYMid meet"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <path
+                d="M.5 4.5l7.5 7 7.5-7"
+              />
+            </svg>
+          </span>
+        </button>
+        <span
+          class="lucid-Expander-text"
+        >
+          Show Stuff
+        </span>
+      </div>
+      <div
+        class="lucid-Expander-additional-content"
       >
-        Show Stuff
-      </span>
-    </div>
-    <div
-      className="lucid-Expander-additional-content"
+        <button
+          class="lucid-Button lucid-Button-invisible"
+          type="button"
+        >
+          <span
+            class="lucid-Button-content"
+          >
+            <svg
+              class="lucid-Icon lucid-Icon-color-primary lucid-EditIcon"
+              height="16"
+              preserveAspectRatio="xMidYMid meet"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <path
+                d="M4.541 14.522L.548 15.547l.974-4.006L12.452.472l3.019 2.981zm5.924-12.038l3.019 2.981M2.5 10.5l3 3"
+              />
+            </svg>
+            Edit
+          </span>
+        </button>
+        <button
+          class="lucid-Button lucid-Button-invisible"
+          type="button"
+        >
+          <span
+            class="lucid-Button-content"
+          >
+            <svg
+              class="lucid-Icon lucid-Icon-color-primary lucid-CloseIcon"
+              height="16"
+              preserveAspectRatio="xMidYMid meet"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <path
+                d="M.5.5l15 15m0-15l-15 15"
+              />
+            </svg>
+            Clear All
+          </span>
+        </button>
+      </div>
+    </header>
+    <section
+      class="lucid-Collapsible lucid-Expander-content"
+      style="overflow:hidden;padding:0"
     >
-      <Button
-        hasOnlyIcon={false}
-        isActive={false}
-        isDisabled={false}
-        kind="invisible"
-        onClick={[Function]}
-        type="button"
-      >
-        <EditIcon
-          aspectRatio="xMidYMid meet"
-          color="primary"
-          isClickable={false}
-          isDisabled={false}
-          onClick={[Function]}
-          onSelect={[Function]}
-          size={16}
-          viewBox="0 0 16 16"
-        />
-        Edit
-      </Button>
-      <Button
-        hasOnlyIcon={false}
-        isActive={false}
-        isDisabled={false}
-        kind="invisible"
-        onClick={[Function]}
-        type="button"
-      >
-        <CloseIcon
-          aspectRatio="xMidYMid meet"
-          color="primary"
-          isClickable={false}
-          isDisabled={false}
-          onClick={[Function]}
-          onSelect={[Function]}
-          size={16}
-          viewBox="0 0 16 16"
-        />
-        Clear All
-      </Button>
-    </div>
-  </header>
-  <Collapsible
-    className="lucid-Expander-content"
-    isAnimated={true}
-    isExpanded={false}
-    isMountControlled={true}
-    mountControlThreshold={4}
-    rootType="section"
-  >
-    <Expander.Label>
-      Show Stuff
-    </Expander.Label>
-    <Expander.AdditionalLabelContent>
-      <Button
-        hasOnlyIcon={false}
-        isActive={false}
-        isDisabled={false}
-        kind="invisible"
-        onClick={[Function]}
-        type="button"
-      >
-        <EditIcon
-          aspectRatio="xMidYMid meet"
-          color="primary"
-          isClickable={false}
-          isDisabled={false}
-          onClick={[Function]}
-          onSelect={[Function]}
-          size={16}
-          viewBox="0 0 16 16"
-        />
-        Edit
-      </Button>
-      <Button
-        hasOnlyIcon={false}
-        isActive={false}
-        isDisabled={false}
-        kind="invisible"
-        onClick={[Function]}
-        type="button"
-      >
-        <CloseIcon
-          aspectRatio="xMidYMid meet"
-          color="primary"
-          isClickable={false}
-          isDisabled={false}
-          onClick={[Function]}
-          onSelect={[Function]}
-          size={16}
-          viewBox="0 0 16 16"
-        />
-        Clear All
-      </Button>
-    </Expander.AdditionalLabelContent>
-    <p>
-      Tacos craft beer humblebrag meditation. Cold-pressed next level man bun readymade beard, wayfarers fanny pack keytar helvetica knausgaard biodiesel lumbersexual. Knausgaard echo park whatever four loko messenger bag hella. Cardigan church-key brooklyn letterpress artisan venmo, gastropub hella. Single-origin coffee selfies four loko, biodiesel health goth truffaut migas sustainable kale chips disrupt locavore meggings mustache actually retro. Mlkshk poutine flexitarian scenester 3 wolf moon, vice kinfolk chia blog ennui bitters brooklyn quinoa marfa. Literally before they sold out gochujang pork belly franzen.
-    </p>
-    <p>
-      Sriracha put a bird on it chia, locavore wolf affogato tote bag neutra umami food truck austin keytar cronut man bun. Kitsch man braid occupy art party, tousled waistcoat tilde YOLO keytar street art selvage. Salvia pour-over keytar intelligentsia. Marfa yr stumptown, before they sold out lo-fi literally art party williamsburg blue bottle slow-carb brooklyn. Gochujang post-ironic aesthetic kickstarter, dreamcatcher four dollar toast whatever tattooed quinoa. Single-origin coffee blog lomo, freegan next level ramps small batch put a bird on it listicle stumptown. Stumptown mumblecore vinyl, mustache street art wayfarers lumbersexual everyday carry irony pitchfork gochujang pug DIY gentrify.
-    </p>
-    <p>
-      Kale chips pug jean shorts cardigan, ramps plaid mlkshk photo booth migas whatever. Ramps affogato bespoke, crucifix ennui PBR&B asymmetrical meggings kombucha banh mi meh skateboard artisan man braid. Ugh semiotics intelligentsia sustainable, craft beer next level meggings before they sold out heirloom iPhone try-hard. Listicle blog literally marfa plaid brooklyn humblebrag retro, VHS thundercats man braid waistcoat ennui. Church-key knausgaard austin organic farm-to-table neutra franzen bespoke, mlkshk narwhal DIY raw denim retro. Mlkshk locavore try-hard roof party flexitarian. Letterpress beard fixie, umami waistcoat salvia ennui four loko seitan lomo franzen pickled shoreditch master cleanse.
-    </p>
-    <p>
-      Tacos craft beer humblebrag meditation. Cold-pressed next level man bun readymade beard, wayfarers fanny pack keytar helvetica knausgaard biodiesel lumbersexual. Knausgaard echo park whatever four loko messenger bag hella. Cardigan church-key brooklyn letterpress artisan venmo, gastropub hella. Single-origin coffee selfies four loko, biodiesel health goth truffaut migas sustainable kale chips disrupt locavore meggings mustache actually retro. Mlkshk poutine flexitarian scenester 3 wolf moon, vice kinfolk chia blog ennui bitters brooklyn quinoa marfa. Literally before they sold out gochujang pork belly franzen.
-    </p>
-    <p>
-      Sriracha put a bird on it chia, locavore wolf affogato tote bag neutra umami food truck austin keytar cronut man bun. Kitsch man braid occupy art party, tousled waistcoat tilde YOLO keytar street art selvage. Salvia pour-over keytar intelligentsia. Marfa yr stumptown, before they sold out lo-fi literally art party williamsburg blue bottle slow-carb brooklyn. Gochujang post-ironic aesthetic kickstarter, dreamcatcher four dollar toast whatever tattooed quinoa. Single-origin coffee blog lomo, freegan next level ramps small batch put a bird on it listicle stumptown. Stumptown mumblecore vinyl, mustache street art wayfarers lumbersexual everyday carry irony pitchfork gochujang pug DIY gentrify.
-    </p>
-    <p>
-      Kale chips pug jean shorts cardigan, ramps plaid mlkshk photo booth migas whatever. Ramps affogato bespoke, crucifix ennui PBR&B asymmetrical meggings kombucha banh mi meh skateboard artisan man braid. Ugh semiotics intelligentsia sustainable, craft beer next level meggings before they sold out heirloom iPhone try-hard. Listicle blog literally marfa plaid brooklyn humblebrag retro, VHS thundercats man braid waistcoat ennui. Church-key knausgaard austin organic farm-to-table neutra franzen bespoke, mlkshk narwhal DIY raw denim retro. Mlkshk locavore try-hard roof party flexitarian. Letterpress beard fixie, umami waistcoat salvia ennui four loko seitan lomo franzen pickled shoreditch master cleanse.
-    </p>
-  </Collapsible>
+      <div
+        class="lucid-Collapsible-content"
+        style="margin:0"
+      />
+    </section>
+  </div>
 </div>
 `;
 
-exports[`Expander [common] example testing should match snapshot(s) for 5.highlighted 1`] = `
-<div
-  className="lucid-Expander lucid-Expander-kind-highlighted"
->
-  <header
-    className="lucid-Expander-header"
+exports[`Expander [common] example testing should match snapshot(s) for InteractiveWithoutChangingLabels 1`] = `
+<div>
+  <div
+    class="lucid-Expander"
   >
-    <div
-      className="lucid-Expander-header-toggle"
-      onClick={[Function]}
+    <header
+      class="lucid-Expander-header"
     >
-      <Button
-        className="lucid-Expander-icon"
-        hasOnlyIcon={true}
-        isActive={false}
-        isDisabled={false}
-        kind="invisible"
-        onClick={[Function]}
-        type="button"
+      <div
+        class="lucid-Expander-header-toggle"
       >
-        <ChevronIcon
-          aspectRatio="xMidYMid meet"
-          color="primary"
-          direction="down"
-          isClickable={false}
-          isDisabled={false}
-          onClick={[Function]}
-          onSelect={[Function]}
-          size={16}
-          viewBox="0 0 16 16"
-        />
-      </Button>
-      <span
-        className="lucid-Expander-text"
-      >
-        Show Less
-      </span>
-    </div>
-  </header>
-  <Collapsible
-    className="lucid-Expander-content"
-    isAnimated={true}
-    isExpanded={false}
-    isMountControlled={true}
-    mountControlThreshold={4}
-    rootType="section"
-  >
-    <Expander.Label>
-      Show Less
-    </Expander.Label>
-    <p>
-      You can't get rid of me. Keep clicking that icon as much as you want, but I'm here to stay!
-    </p>
-  </Collapsible>
+        <button
+          class="lucid-Button lucid-Button-invisible lucid-Button-has-only-icon lucid-Expander-icon"
+          type="button"
+        >
+          <span
+            class="lucid-Button-content"
+          >
+            <svg
+              class="lucid-Icon lucid-Icon-color-primary lucid-ChevronIcon lucid-ChevronIcon-is-down"
+              height="16"
+              preserveAspectRatio="xMidYMid meet"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <path
+                d="M.5 4.5l7.5 7 7.5-7"
+              />
+            </svg>
+          </span>
+        </button>
+        <span
+          class="lucid-Expander-text"
+        >
+          Show Stuff
+        </span>
+      </div>
+    </header>
+    <section
+      class="lucid-Collapsible lucid-Expander-content"
+      style="overflow:hidden;padding:0"
+    >
+      <div
+        class="lucid-Collapsible-content"
+        style="margin:0"
+      />
+    </section>
+  </div>
 </div>
 `;

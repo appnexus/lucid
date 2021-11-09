@@ -1,87 +1,418 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`OverlayWrapper [common] example testing should match snapshot(s) for 1.basic 1`] = `
+exports[`OverlayWrapper [common] example testing should match snapshot(s) for Default 1`] = `
 <div
-  className="lucid-OverlayWrapper"
+  class="lucid-OverlayWrapper"
 >
-  <BarChart
-    data={
-      Array [
-        Object {
-          "x": "2015-01-01",
-          "y": 1,
-        },
-        Object {
-          "x": "2015-01-02",
-          "y": 2,
-        },
-        Object {
-          "x": "2015-01-03",
-          "y": 3,
-        },
-        Object {
-          "x": "2015-01-04",
-          "y": 5,
-        },
-      ]
-    }
-    hasLegend={false}
-    hasToolTips={true}
-    height={400}
-    key=".1"
-    margin={
-      Object {
-        "bottom": 50,
-        "left": 80,
-        "right": 20,
-        "top": 10,
-      }
-    }
-    palette={
-      Array [
-        "color-chart-3",
-        "color-chart-0-darkest",
-        "color-chart-2",
-        "color-chart-4-lightest",
-        "color-chart-5",
-        "color-chart-1-light",
-        "color-chart-6",
-      ]
-    }
-    renderTooltipBody={null}
-    width={1000}
-    xAxisField="x"
-    xAxisFormatter={[Function]}
-    xAxisTextOrientation="horizontal"
-    xAxisTickCount={null}
-    xAxisTitle={null}
-    xAxisTitleColor="#000"
-    yAxisFields={
-      Array [
-        "y",
-      ]
-    }
-    yAxisIsStacked={false}
-    yAxisMin={0}
-    yAxisTextOrientation="horizontal"
-    yAxisTickCount={null}
-    yAxisTitle={null}
-    yAxisTitleColor="#000"
-    yAxisTooltipFormatter={[Function]}
-  />
-  <CSSTransition
-    classNames="lucid-OverlayWrapper-message-container"
-    in={true}
-    timeout={300}
-    unmountOnExit={true}
+  <svg
+    class="lucid-BarChart"
+    height="400"
+    width="1000"
   >
-    <div
-      className="lucid-OverlayWrapper-message-container lucid-OverlayWrapper-has-overlay lucid-OverlayWrapper-kind-light"
+    <g
+      transform="translate(80, 350)"
     >
-      <div>
-        Message Goes Here
-      </div>
+      <g
+        class="lucid-Axis"
+      >
+        <path
+          class="lucid-Axis-domain"
+          d="M0,0V0H900V0"
+        />
+        <g
+          transform="translate(177.27272727272725, 0)"
+        >
+          <line
+            class="lucid-Axis-tick"
+            x2="0"
+            y2="6"
+          />
+          <text
+            class="lucid-Axis-tick-text"
+            dy=".71em"
+            style="text-anchor:middle"
+            transform=""
+            x="0"
+            y="9"
+          >
+            2015-01-01
+          </text>
+        </g>
+        <g
+          transform="translate(359.09090909090907, 0)"
+        >
+          <line
+            class="lucid-Axis-tick"
+            x2="0"
+            y2="6"
+          />
+          <text
+            class="lucid-Axis-tick-text"
+            dy=".71em"
+            style="text-anchor:middle"
+            transform=""
+            x="0"
+            y="9"
+          >
+            2015-01-02
+          </text>
+        </g>
+        <g
+          transform="translate(540.9090909090909, 0)"
+        >
+          <line
+            class="lucid-Axis-tick"
+            x2="0"
+            y2="6"
+          />
+          <text
+            class="lucid-Axis-tick-text"
+            dy=".71em"
+            style="text-anchor:middle"
+            transform=""
+            x="0"
+            y="9"
+          >
+            2015-01-03
+          </text>
+        </g>
+        <g
+          transform="translate(722.7272727272727, 0)"
+        >
+          <line
+            class="lucid-Axis-tick"
+            x2="0"
+            y2="6"
+          />
+          <text
+            class="lucid-Axis-tick-text"
+            dy=".71em"
+            style="text-anchor:middle"
+            transform=""
+            x="0"
+            y="9"
+          >
+            2015-01-04
+          </text>
+        </g>
+      </g>
+    </g>
+    <g
+      transform="translate(80, 10)"
+    >
+      <g
+        class="lucid-Axis"
+      >
+        <path
+          class="lucid-Axis-domain"
+          d="M-6,340H0V0H-6"
+        />
+        <g
+          transform="translate(0, 340)"
+        >
+          <line
+            class="lucid-Axis-tick"
+            x2="-6"
+            y2="0"
+          />
+          <text
+            class="lucid-Axis-tick-text"
+            dy=".32em"
+            style="text-anchor:end"
+            transform=""
+            x="-9"
+            y="0"
+          >
+            0.0
+          </text>
+        </g>
+        <g
+          transform="translate(0, 306)"
+        >
+          <line
+            class="lucid-Axis-tick"
+            x2="-6"
+            y2="0"
+          />
+          <text
+            class="lucid-Axis-tick-text"
+            dy=".32em"
+            style="text-anchor:end"
+            transform=""
+            x="-9"
+            y="0"
+          >
+            0.5
+          </text>
+        </g>
+        <g
+          transform="translate(0, 272)"
+        >
+          <line
+            class="lucid-Axis-tick"
+            x2="-6"
+            y2="0"
+          />
+          <text
+            class="lucid-Axis-tick-text"
+            dy=".32em"
+            style="text-anchor:end"
+            transform=""
+            x="-9"
+            y="0"
+          >
+            1.0
+          </text>
+        </g>
+        <g
+          transform="translate(0, 237.99999999999997)"
+        >
+          <line
+            class="lucid-Axis-tick"
+            x2="-6"
+            y2="0"
+          />
+          <text
+            class="lucid-Axis-tick-text"
+            dy=".32em"
+            style="text-anchor:end"
+            transform=""
+            x="-9"
+            y="0"
+          >
+            1.5
+          </text>
+        </g>
+        <g
+          transform="translate(0, 204)"
+        >
+          <line
+            class="lucid-Axis-tick"
+            x2="-6"
+            y2="0"
+          />
+          <text
+            class="lucid-Axis-tick-text"
+            dy=".32em"
+            style="text-anchor:end"
+            transform=""
+            x="-9"
+            y="0"
+          >
+            2.0
+          </text>
+        </g>
+        <g
+          transform="translate(0, 170)"
+        >
+          <line
+            class="lucid-Axis-tick"
+            x2="-6"
+            y2="0"
+          />
+          <text
+            class="lucid-Axis-tick-text"
+            dy=".32em"
+            style="text-anchor:end"
+            transform=""
+            x="-9"
+            y="0"
+          >
+            2.5
+          </text>
+        </g>
+        <g
+          transform="translate(0, 136)"
+        >
+          <line
+            class="lucid-Axis-tick"
+            x2="-6"
+            y2="0"
+          />
+          <text
+            class="lucid-Axis-tick-text"
+            dy=".32em"
+            style="text-anchor:end"
+            transform=""
+            x="-9"
+            y="0"
+          >
+            3.0
+          </text>
+        </g>
+        <g
+          transform="translate(0, 102.00000000000001)"
+        >
+          <line
+            class="lucid-Axis-tick"
+            x2="-6"
+            y2="0"
+          />
+          <text
+            class="lucid-Axis-tick-text"
+            dy=".32em"
+            style="text-anchor:end"
+            transform=""
+            x="-9"
+            y="0"
+          >
+            3.5
+          </text>
+        </g>
+        <g
+          transform="translate(0, 67.99999999999999)"
+        >
+          <line
+            class="lucid-Axis-tick"
+            x2="-6"
+            y2="0"
+          />
+          <text
+            class="lucid-Axis-tick-text"
+            dy=".32em"
+            style="text-anchor:end"
+            transform=""
+            x="-9"
+            y="0"
+          >
+            4.0
+          </text>
+        </g>
+        <g
+          transform="translate(0, 33.99999999999999)"
+        >
+          <line
+            class="lucid-Axis-tick"
+            x2="-6"
+            y2="0"
+          />
+          <text
+            class="lucid-Axis-tick-text"
+            dy=".32em"
+            style="text-anchor:end"
+            transform=""
+            x="-9"
+            y="0"
+          >
+            4.5
+          </text>
+        </g>
+        <g
+          transform="translate(0, 0)"
+        >
+          <line
+            class="lucid-Axis-tick"
+            x2="-6"
+            y2="0"
+          />
+          <text
+            class="lucid-Axis-tick-text"
+            dy=".32em"
+            style="text-anchor:end"
+            transform=""
+            x="-9"
+            y="0"
+          >
+            5.0
+          </text>
+        </g>
+      </g>
+    </g>
+    <g
+      transform="translate(80, 10)"
+    >
+      <g
+        class="lucid-Bars"
+      >
+        <g>
+          <rect
+            class="lucid-Bar lucid-Bar-color-chart-3"
+            height="68"
+            width="172"
+            x="90.90909090909088"
+            y="272"
+          />
+          <g
+            class="lucid-ContextMenu lucid-ToolTip"
+          >
+            <rect
+              class="lucid-Bars-tooltip-hover-zone"
+              height="68"
+              width="172.72727272727272"
+              x="90.90909090909088"
+              y="272"
+            />
+          </g>
+        </g>
+        <g>
+          <rect
+            class="lucid-Bar lucid-Bar-color-chart-3"
+            height="136"
+            width="172"
+            x="272.7272727272727"
+            y="204"
+          />
+          <g
+            class="lucid-ContextMenu lucid-ToolTip"
+          >
+            <rect
+              class="lucid-Bars-tooltip-hover-zone"
+              height="136"
+              width="172.72727272727272"
+              x="272.7272727272727"
+              y="204"
+            />
+          </g>
+        </g>
+        <g>
+          <rect
+            class="lucid-Bar lucid-Bar-color-chart-3"
+            height="204"
+            width="172"
+            x="454.5454545454545"
+            y="136"
+          />
+          <g
+            class="lucid-ContextMenu lucid-ToolTip"
+          >
+            <rect
+              class="lucid-Bars-tooltip-hover-zone"
+              height="204"
+              width="172.72727272727272"
+              x="454.5454545454545"
+              y="136"
+            />
+          </g>
+        </g>
+        <g>
+          <rect
+            class="lucid-Bar lucid-Bar-color-chart-3"
+            height="340"
+            width="172"
+            x="636.3636363636364"
+            y="0"
+          />
+          <g
+            class="lucid-ContextMenu lucid-ToolTip"
+          >
+            <rect
+              class="lucid-Bars-tooltip-hover-zone"
+              height="340"
+              width="172.72727272727272"
+              x="636.3636363636364"
+              y="0"
+            />
+          </g>
+        </g>
+      </g>
+    </g>
+  </svg>
+  <div
+    class="lucid-OverlayWrapper-message-container lucid-OverlayWrapper-has-overlay lucid-OverlayWrapper-kind-light"
+  >
+    <div>
+      Message Goes Here
     </div>
-  </CSSTransition>
+  </div>
 </div>
 `;

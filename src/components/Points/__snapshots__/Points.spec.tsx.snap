@@ -1,519 +1,327 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Points [common] example testing should match snapshot(s) for basic 1`] = `
-<g
-  className="lucid-Points"
+exports[`Points [common] example testing should match snapshot(s) for CustomColors 1`] = `
+<svg
+  height="400"
+  width="1000"
 >
-  <Point
-    color="color-chart-3"
-    hasStroke={true}
-    key="00"
-    kind={0}
-    scale={1}
-    x={0}
-    y={162.85714285714286}
-  />
-  <Point
-    color="color-chart-3"
-    hasStroke={true}
-    key="10"
-    kind={0}
-    scale={1}
-    x={163.33333333333334}
-    y={217.14285714285714}
-  />
-  <Point
-    color="color-chart-3"
-    hasStroke={true}
-    key="20"
-    kind={0}
-    scale={1}
-    x={326.6666666666667}
-    y={271.42857142857144}
-  />
-  <Point
-    color="color-chart-3"
-    hasStroke={true}
-    key="30"
-    kind={0}
-    scale={1}
-    x={490}
-    y={325.7142857142857}
-  />
-  <Point
-    color="color-chart-3"
-    hasStroke={true}
-    key="40"
-    kind={0}
-    scale={1}
-    x={653.3333333333334}
-    y={271.42857142857144}
-  />
-  <Point
-    color="color-chart-3"
-    hasStroke={true}
-    key="50"
-    kind={0}
-    scale={1}
-    x={816.6666666666667}
-    y={217.14285714285714}
-  />
-  <Point
-    color="color-chart-3"
-    hasStroke={true}
-    key="60"
-    kind={0}
-    scale={1}
-    x={980}
-    y={162.85714285714286}
-  />
-  <Point
-    color="color-chart-0-darkest"
-    hasStroke={true}
-    key="01"
-    kind={1}
-    scale={1}
-    x={0}
-    y={108.57142857142857}
-  />
-  <Point
-    color="color-chart-0-darkest"
-    hasStroke={true}
-    key="11"
-    kind={1}
-    scale={1}
-    x={163.33333333333334}
-    y={162.85714285714286}
-  />
-  <Point
-    color="color-chart-0-darkest"
-    hasStroke={true}
-    key="21"
-    kind={1}
-    scale={1}
-    x={326.6666666666667}
-    y={217.14285714285714}
-  />
-  <Point
-    color="color-chart-0-darkest"
-    hasStroke={true}
-    key="31"
-    kind={1}
-    scale={1}
-    x={490}
-    y={271.42857142857144}
-  />
-  <Point
-    color="color-chart-0-darkest"
-    hasStroke={true}
-    key="41"
-    kind={1}
-    scale={1}
-    x={653.3333333333334}
-    y={217.14285714285714}
-  />
-  <Point
-    color="color-chart-0-darkest"
-    hasStroke={true}
-    key="51"
-    kind={1}
-    scale={1}
-    x={816.6666666666667}
-    y={162.85714285714286}
-  />
-  <Point
-    color="color-chart-0-darkest"
-    hasStroke={true}
-    key="61"
-    kind={1}
-    scale={1}
-    x={980}
-    y={108.57142857142857}
-  />
-  <Point
-    color="color-chart-2"
-    hasStroke={true}
-    key="02"
-    kind={2}
-    scale={1}
-    x={0}
-    y={54.285714285714306}
-  />
-  <Point
-    color="color-chart-2"
-    hasStroke={true}
-    key="12"
-    kind={2}
-    scale={1}
-    x={163.33333333333334}
-    y={108.57142857142857}
-  />
-  <Point
-    color="color-chart-2"
-    hasStroke={true}
-    key="22"
-    kind={2}
-    scale={1}
-    x={326.6666666666667}
-    y={162.85714285714286}
-  />
-  <Point
-    color="color-chart-2"
-    hasStroke={true}
-    key="32"
-    kind={2}
-    scale={1}
-    x={490}
-    y={217.14285714285714}
-  />
-  <Point
-    color="color-chart-2"
-    hasStroke={true}
-    key="42"
-    kind={2}
-    scale={1}
-    x={653.3333333333334}
-    y={162.85714285714286}
-  />
-  <Point
-    color="color-chart-2"
-    hasStroke={true}
-    key="52"
-    kind={2}
-    scale={1}
-    x={816.6666666666667}
-    y={108.57142857142857}
-  />
-  <Point
-    color="color-chart-2"
-    hasStroke={true}
-    key="62"
-    kind={2}
-    scale={1}
-    x={980}
-    y={54.285714285714306}
-  />
-  <Point
-    color="color-chart-4-lightest"
-    hasStroke={true}
-    key="03"
-    kind={3}
-    scale={1}
-    x={0}
-    y={0}
-  />
-  <Point
-    color="color-chart-4-lightest"
-    hasStroke={true}
-    key="13"
-    kind={3}
-    scale={1}
-    x={163.33333333333334}
-    y={54.285714285714306}
-  />
-  <Point
-    color="color-chart-4-lightest"
-    hasStroke={true}
-    key="23"
-    kind={3}
-    scale={1}
-    x={326.6666666666667}
-    y={108.57142857142857}
-  />
-  <Point
-    color="color-chart-4-lightest"
-    hasStroke={true}
-    key="33"
-    kind={3}
-    scale={1}
-    x={490}
-    y={162.85714285714286}
-  />
-  <Point
-    color="color-chart-4-lightest"
-    hasStroke={true}
-    key="43"
-    kind={3}
-    scale={1}
-    x={653.3333333333334}
-    y={108.57142857142857}
-  />
-  <Point
-    color="color-chart-4-lightest"
-    hasStroke={true}
-    key="53"
-    kind={3}
-    scale={1}
-    x={816.6666666666667}
-    y={54.285714285714306}
-  />
-  <Point
-    color="color-chart-4-lightest"
-    hasStroke={true}
-    key="63"
-    kind={3}
-    scale={1}
-    x={980}
-    y={0}
-  />
-</g>
+  <g
+    transform="translate(10, 10)"
+  >
+    <g
+      class="lucid-Points"
+    >
+      <path
+        class="lucid-Point lucid-Point-has-stroke lucid-Point-color-chart-bad"
+        d="M6,12 C2.686,12 0,9.314 0,6 C0,2.686 2.686,0 6,0 C9.314,-0 12,2.686 12,6 C12,9.314 9.314,12 6,12 z"
+        transform="translate(-6, 156.85714285714286) scale(1)"
+      />
+      <path
+        class="lucid-Point lucid-Point-has-stroke lucid-Point-color-chart-bad"
+        d="M6,12 C2.686,12 0,9.314 0,6 C0,2.686 2.686,0 6,0 C9.314,-0 12,2.686 12,6 C12,9.314 9.314,12 6,12 z"
+        transform="translate(157.33333333333334, 211.14285714285714) scale(1)"
+      />
+      <path
+        class="lucid-Point lucid-Point-has-stroke lucid-Point-color-chart-bad"
+        d="M6,12 C2.686,12 0,9.314 0,6 C0,2.686 2.686,0 6,0 C9.314,-0 12,2.686 12,6 C12,9.314 9.314,12 6,12 z"
+        transform="translate(320.6666666666667, 265.42857142857144) scale(1)"
+      />
+      <path
+        class="lucid-Point lucid-Point-has-stroke lucid-Point-color-chart-bad"
+        d="M6,12 C2.686,12 0,9.314 0,6 C0,2.686 2.686,0 6,0 C9.314,-0 12,2.686 12,6 C12,9.314 9.314,12 6,12 z"
+        transform="translate(484, 319.7142857142857) scale(1)"
+      />
+      <path
+        class="lucid-Point lucid-Point-has-stroke lucid-Point-color-chart-bad"
+        d="M6,12 C2.686,12 0,9.314 0,6 C0,2.686 2.686,0 6,0 C9.314,-0 12,2.686 12,6 C12,9.314 9.314,12 6,12 z"
+        transform="translate(647.3333333333334, 265.42857142857144) scale(1)"
+      />
+      <path
+        class="lucid-Point lucid-Point-has-stroke lucid-Point-color-chart-bad"
+        d="M6,12 C2.686,12 0,9.314 0,6 C0,2.686 2.686,0 6,0 C9.314,-0 12,2.686 12,6 C12,9.314 9.314,12 6,12 z"
+        transform="translate(810.6666666666667, 211.14285714285714) scale(1)"
+      />
+      <path
+        class="lucid-Point lucid-Point-has-stroke lucid-Point-color-chart-bad"
+        d="M6,12 C2.686,12 0,9.314 0,6 C0,2.686 2.686,0 6,0 C9.314,-0 12,2.686 12,6 C12,9.314 9.314,12 6,12 z"
+        transform="translate(974, 156.85714285714286) scale(1)"
+      />
+      <path
+        class="lucid-Point lucid-Point-has-stroke lucid-Point-color-chart-good"
+        d="M6,12 C0,12 0,12 0,6 C0,0 -0,0 6,0 C12,0 12,0 12,6 C12,12 12,12 6,12 z"
+        transform="translate(-6, 102.57142857142857) scale(1)"
+      />
+      <path
+        class="lucid-Point lucid-Point-has-stroke lucid-Point-color-chart-good"
+        d="M6,12 C0,12 0,12 0,6 C0,0 -0,0 6,0 C12,0 12,0 12,6 C12,12 12,12 6,12 z"
+        transform="translate(157.33333333333334, 156.85714285714286) scale(1)"
+      />
+      <path
+        class="lucid-Point lucid-Point-has-stroke lucid-Point-color-chart-good"
+        d="M6,12 C0,12 0,12 0,6 C0,0 -0,0 6,0 C12,0 12,0 12,6 C12,12 12,12 6,12 z"
+        transform="translate(320.6666666666667, 211.14285714285714) scale(1)"
+      />
+      <path
+        class="lucid-Point lucid-Point-has-stroke lucid-Point-color-chart-good"
+        d="M6,12 C0,12 0,12 0,6 C0,0 -0,0 6,0 C12,0 12,0 12,6 C12,12 12,12 6,12 z"
+        transform="translate(484, 265.42857142857144) scale(1)"
+      />
+      <path
+        class="lucid-Point lucid-Point-has-stroke lucid-Point-color-chart-good"
+        d="M6,12 C0,12 0,12 0,6 C0,0 -0,0 6,0 C12,0 12,0 12,6 C12,12 12,12 6,12 z"
+        transform="translate(647.3333333333334, 211.14285714285714) scale(1)"
+      />
+      <path
+        class="lucid-Point lucid-Point-has-stroke lucid-Point-color-chart-good"
+        d="M6,12 C0,12 0,12 0,6 C0,0 -0,0 6,0 C12,0 12,0 12,6 C12,12 12,12 6,12 z"
+        transform="translate(810.6666666666667, 156.85714285714286) scale(1)"
+      />
+      <path
+        class="lucid-Point lucid-Point-has-stroke lucid-Point-color-chart-good"
+        d="M6,12 C0,12 0,12 0,6 C0,0 -0,0 6,0 C12,0 12,0 12,6 C12,12 12,12 6,12 z"
+        transform="translate(974, 102.57142857142857) scale(1)"
+      />
+      <path
+        class="lucid-Point lucid-Point-has-stroke"
+        d="M6.034,1.656 C7,0 7,0 7.966,1.656 L13.034,10.344 C14,12 13,12 12,12 L2,12 C1,12 0,12 0.966,10.344 L6.034,1.656 z"
+        style="fill:#ff8800"
+        transform="translate(-7, 48.285714285714306) scale(1)"
+      />
+      <path
+        class="lucid-Point lucid-Point-has-stroke"
+        d="M6.034,1.656 C7,0 7,0 7.966,1.656 L13.034,10.344 C14,12 13,12 12,12 L2,12 C1,12 0,12 0.966,10.344 L6.034,1.656 z"
+        style="fill:#ff8800"
+        transform="translate(156.33333333333334, 102.57142857142857) scale(1)"
+      />
+      <path
+        class="lucid-Point lucid-Point-has-stroke"
+        d="M6.034,1.656 C7,0 7,0 7.966,1.656 L13.034,10.344 C14,12 13,12 12,12 L2,12 C1,12 0,12 0.966,10.344 L6.034,1.656 z"
+        style="fill:#ff8800"
+        transform="translate(319.6666666666667, 156.85714285714286) scale(1)"
+      />
+      <path
+        class="lucid-Point lucid-Point-has-stroke"
+        d="M6.034,1.656 C7,0 7,0 7.966,1.656 L13.034,10.344 C14,12 13,12 12,12 L2,12 C1,12 0,12 0.966,10.344 L6.034,1.656 z"
+        style="fill:#ff8800"
+        transform="translate(483, 211.14285714285714) scale(1)"
+      />
+      <path
+        class="lucid-Point lucid-Point-has-stroke"
+        d="M6.034,1.656 C7,0 7,0 7.966,1.656 L13.034,10.344 C14,12 13,12 12,12 L2,12 C1,12 0,12 0.966,10.344 L6.034,1.656 z"
+        style="fill:#ff8800"
+        transform="translate(646.3333333333334, 156.85714285714286) scale(1)"
+      />
+      <path
+        class="lucid-Point lucid-Point-has-stroke"
+        d="M6.034,1.656 C7,0 7,0 7.966,1.656 L13.034,10.344 C14,12 13,12 12,12 L2,12 C1,12 0,12 0.966,10.344 L6.034,1.656 z"
+        style="fill:#ff8800"
+        transform="translate(809.6666666666667, 102.57142857142857) scale(1)"
+      />
+      <path
+        class="lucid-Point lucid-Point-has-stroke"
+        d="M6.034,1.656 C7,0 7,0 7.966,1.656 L13.034,10.344 C14,12 13,12 12,12 L2,12 C1,12 0,12 0.966,10.344 L6.034,1.656 z"
+        style="fill:#ff8800"
+        transform="translate(973, 48.285714285714306) scale(1)"
+      />
+      <path
+        class="lucid-Point lucid-Point-has-stroke"
+        d="M7.966,10.344 C7,12 7,12 6.034,10.344 L0.966,1.656 C-0,0 1,0 2,0 L12,0 C13,0 14,0 13.034,1.656 L7.966,10.344 z"
+        style="fill:#abc123"
+        transform="translate(-7, -6) scale(1)"
+      />
+      <path
+        class="lucid-Point lucid-Point-has-stroke"
+        d="M7.966,10.344 C7,12 7,12 6.034,10.344 L0.966,1.656 C-0,0 1,0 2,0 L12,0 C13,0 14,0 13.034,1.656 L7.966,10.344 z"
+        style="fill:#abc123"
+        transform="translate(156.33333333333334, 48.285714285714306) scale(1)"
+      />
+      <path
+        class="lucid-Point lucid-Point-has-stroke"
+        d="M7.966,10.344 C7,12 7,12 6.034,10.344 L0.966,1.656 C-0,0 1,0 2,0 L12,0 C13,0 14,0 13.034,1.656 L7.966,10.344 z"
+        style="fill:#abc123"
+        transform="translate(319.6666666666667, 102.57142857142857) scale(1)"
+      />
+      <path
+        class="lucid-Point lucid-Point-has-stroke"
+        d="M7.966,10.344 C7,12 7,12 6.034,10.344 L0.966,1.656 C-0,0 1,0 2,0 L12,0 C13,0 14,0 13.034,1.656 L7.966,10.344 z"
+        style="fill:#abc123"
+        transform="translate(483, 156.85714285714286) scale(1)"
+      />
+      <path
+        class="lucid-Point lucid-Point-has-stroke"
+        d="M7.966,10.344 C7,12 7,12 6.034,10.344 L0.966,1.656 C-0,0 1,0 2,0 L12,0 C13,0 14,0 13.034,1.656 L7.966,10.344 z"
+        style="fill:#abc123"
+        transform="translate(646.3333333333334, 102.57142857142857) scale(1)"
+      />
+      <path
+        class="lucid-Point lucid-Point-has-stroke"
+        d="M7.966,10.344 C7,12 7,12 6.034,10.344 L0.966,1.656 C-0,0 1,0 2,0 L12,0 C13,0 14,0 13.034,1.656 L7.966,10.344 z"
+        style="fill:#abc123"
+        transform="translate(809.6666666666667, 48.285714285714306) scale(1)"
+      />
+      <path
+        class="lucid-Point lucid-Point-has-stroke"
+        d="M7.966,10.344 C7,12 7,12 6.034,10.344 L0.966,1.656 C-0,0 1,0 2,0 L12,0 C13,0 14,0 13.034,1.656 L7.966,10.344 z"
+        style="fill:#abc123"
+        transform="translate(973, -6) scale(1)"
+      />
+    </g>
+  </g>
+</svg>
 `;
 
-exports[`Points [common] example testing should match snapshot(s) for custom-colors 1`] = `
-<g
-  className="lucid-Points"
+exports[`Points [common] example testing should match snapshot(s) for Default 1`] = `
+<svg
+  height="400"
+  width="1000"
 >
-  <Point
-    color="color-chart-bad"
-    hasStroke={true}
-    key="00"
-    kind={0}
-    scale={1}
-    x={0}
-    y={162.85714285714286}
-  />
-  <Point
-    color="color-chart-bad"
-    hasStroke={true}
-    key="10"
-    kind={0}
-    scale={1}
-    x={163.33333333333334}
-    y={217.14285714285714}
-  />
-  <Point
-    color="color-chart-bad"
-    hasStroke={true}
-    key="20"
-    kind={0}
-    scale={1}
-    x={326.6666666666667}
-    y={271.42857142857144}
-  />
-  <Point
-    color="color-chart-bad"
-    hasStroke={true}
-    key="30"
-    kind={0}
-    scale={1}
-    x={490}
-    y={325.7142857142857}
-  />
-  <Point
-    color="color-chart-bad"
-    hasStroke={true}
-    key="40"
-    kind={0}
-    scale={1}
-    x={653.3333333333334}
-    y={271.42857142857144}
-  />
-  <Point
-    color="color-chart-bad"
-    hasStroke={true}
-    key="50"
-    kind={0}
-    scale={1}
-    x={816.6666666666667}
-    y={217.14285714285714}
-  />
-  <Point
-    color="color-chart-bad"
-    hasStroke={true}
-    key="60"
-    kind={0}
-    scale={1}
-    x={980}
-    y={162.85714285714286}
-  />
-  <Point
-    color="color-chart-good"
-    hasStroke={true}
-    key="01"
-    kind={1}
-    scale={1}
-    x={0}
-    y={108.57142857142857}
-  />
-  <Point
-    color="color-chart-good"
-    hasStroke={true}
-    key="11"
-    kind={1}
-    scale={1}
-    x={163.33333333333334}
-    y={162.85714285714286}
-  />
-  <Point
-    color="color-chart-good"
-    hasStroke={true}
-    key="21"
-    kind={1}
-    scale={1}
-    x={326.6666666666667}
-    y={217.14285714285714}
-  />
-  <Point
-    color="color-chart-good"
-    hasStroke={true}
-    key="31"
-    kind={1}
-    scale={1}
-    x={490}
-    y={271.42857142857144}
-  />
-  <Point
-    color="color-chart-good"
-    hasStroke={true}
-    key="41"
-    kind={1}
-    scale={1}
-    x={653.3333333333334}
-    y={217.14285714285714}
-  />
-  <Point
-    color="color-chart-good"
-    hasStroke={true}
-    key="51"
-    kind={1}
-    scale={1}
-    x={816.6666666666667}
-    y={162.85714285714286}
-  />
-  <Point
-    color="color-chart-good"
-    hasStroke={true}
-    key="61"
-    kind={1}
-    scale={1}
-    x={980}
-    y={108.57142857142857}
-  />
-  <Point
-    color="#ff8800"
-    hasStroke={true}
-    key="02"
-    kind={2}
-    scale={1}
-    x={0}
-    y={54.285714285714306}
-  />
-  <Point
-    color="#ff8800"
-    hasStroke={true}
-    key="12"
-    kind={2}
-    scale={1}
-    x={163.33333333333334}
-    y={108.57142857142857}
-  />
-  <Point
-    color="#ff8800"
-    hasStroke={true}
-    key="22"
-    kind={2}
-    scale={1}
-    x={326.6666666666667}
-    y={162.85714285714286}
-  />
-  <Point
-    color="#ff8800"
-    hasStroke={true}
-    key="32"
-    kind={2}
-    scale={1}
-    x={490}
-    y={217.14285714285714}
-  />
-  <Point
-    color="#ff8800"
-    hasStroke={true}
-    key="42"
-    kind={2}
-    scale={1}
-    x={653.3333333333334}
-    y={162.85714285714286}
-  />
-  <Point
-    color="#ff8800"
-    hasStroke={true}
-    key="52"
-    kind={2}
-    scale={1}
-    x={816.6666666666667}
-    y={108.57142857142857}
-  />
-  <Point
-    color="#ff8800"
-    hasStroke={true}
-    key="62"
-    kind={2}
-    scale={1}
-    x={980}
-    y={54.285714285714306}
-  />
-  <Point
-    color="#abc123"
-    hasStroke={true}
-    key="03"
-    kind={3}
-    scale={1}
-    x={0}
-    y={0}
-  />
-  <Point
-    color="#abc123"
-    hasStroke={true}
-    key="13"
-    kind={3}
-    scale={1}
-    x={163.33333333333334}
-    y={54.285714285714306}
-  />
-  <Point
-    color="#abc123"
-    hasStroke={true}
-    key="23"
-    kind={3}
-    scale={1}
-    x={326.6666666666667}
-    y={108.57142857142857}
-  />
-  <Point
-    color="#abc123"
-    hasStroke={true}
-    key="33"
-    kind={3}
-    scale={1}
-    x={490}
-    y={162.85714285714286}
-  />
-  <Point
-    color="#abc123"
-    hasStroke={true}
-    key="43"
-    kind={3}
-    scale={1}
-    x={653.3333333333334}
-    y={108.57142857142857}
-  />
-  <Point
-    color="#abc123"
-    hasStroke={true}
-    key="53"
-    kind={3}
-    scale={1}
-    x={816.6666666666667}
-    y={54.285714285714306}
-  />
-  <Point
-    color="#abc123"
-    hasStroke={true}
-    key="63"
-    kind={3}
-    scale={1}
-    x={980}
-    y={0}
-  />
-</g>
+  <g
+    transform="translate(10, 10)"
+  >
+    <g
+      class="lucid-Points"
+    >
+      <path
+        class="lucid-Point lucid-Point-has-stroke lucid-Point-color-chart-3"
+        d="M6,12 C2.686,12 0,9.314 0,6 C0,2.686 2.686,0 6,0 C9.314,-0 12,2.686 12,6 C12,9.314 9.314,12 6,12 z"
+        transform="translate(-6, 156.85714285714286) scale(1)"
+      />
+      <path
+        class="lucid-Point lucid-Point-has-stroke lucid-Point-color-chart-3"
+        d="M6,12 C2.686,12 0,9.314 0,6 C0,2.686 2.686,0 6,0 C9.314,-0 12,2.686 12,6 C12,9.314 9.314,12 6,12 z"
+        transform="translate(157.33333333333334, 211.14285714285714) scale(1)"
+      />
+      <path
+        class="lucid-Point lucid-Point-has-stroke lucid-Point-color-chart-3"
+        d="M6,12 C2.686,12 0,9.314 0,6 C0,2.686 2.686,0 6,0 C9.314,-0 12,2.686 12,6 C12,9.314 9.314,12 6,12 z"
+        transform="translate(320.6666666666667, 265.42857142857144) scale(1)"
+      />
+      <path
+        class="lucid-Point lucid-Point-has-stroke lucid-Point-color-chart-3"
+        d="M6,12 C2.686,12 0,9.314 0,6 C0,2.686 2.686,0 6,0 C9.314,-0 12,2.686 12,6 C12,9.314 9.314,12 6,12 z"
+        transform="translate(484, 319.7142857142857) scale(1)"
+      />
+      <path
+        class="lucid-Point lucid-Point-has-stroke lucid-Point-color-chart-3"
+        d="M6,12 C2.686,12 0,9.314 0,6 C0,2.686 2.686,0 6,0 C9.314,-0 12,2.686 12,6 C12,9.314 9.314,12 6,12 z"
+        transform="translate(647.3333333333334, 265.42857142857144) scale(1)"
+      />
+      <path
+        class="lucid-Point lucid-Point-has-stroke lucid-Point-color-chart-3"
+        d="M6,12 C2.686,12 0,9.314 0,6 C0,2.686 2.686,0 6,0 C9.314,-0 12,2.686 12,6 C12,9.314 9.314,12 6,12 z"
+        transform="translate(810.6666666666667, 211.14285714285714) scale(1)"
+      />
+      <path
+        class="lucid-Point lucid-Point-has-stroke lucid-Point-color-chart-3"
+        d="M6,12 C2.686,12 0,9.314 0,6 C0,2.686 2.686,0 6,0 C9.314,-0 12,2.686 12,6 C12,9.314 9.314,12 6,12 z"
+        transform="translate(974, 156.85714285714286) scale(1)"
+      />
+      <path
+        class="lucid-Point lucid-Point-has-stroke lucid-Point-color-chart-0-darkest"
+        d="M6,12 C0,12 0,12 0,6 C0,0 -0,0 6,0 C12,0 12,0 12,6 C12,12 12,12 6,12 z"
+        transform="translate(-6, 102.57142857142857) scale(1)"
+      />
+      <path
+        class="lucid-Point lucid-Point-has-stroke lucid-Point-color-chart-0-darkest"
+        d="M6,12 C0,12 0,12 0,6 C0,0 -0,0 6,0 C12,0 12,0 12,6 C12,12 12,12 6,12 z"
+        transform="translate(157.33333333333334, 156.85714285714286) scale(1)"
+      />
+      <path
+        class="lucid-Point lucid-Point-has-stroke lucid-Point-color-chart-0-darkest"
+        d="M6,12 C0,12 0,12 0,6 C0,0 -0,0 6,0 C12,0 12,0 12,6 C12,12 12,12 6,12 z"
+        transform="translate(320.6666666666667, 211.14285714285714) scale(1)"
+      />
+      <path
+        class="lucid-Point lucid-Point-has-stroke lucid-Point-color-chart-0-darkest"
+        d="M6,12 C0,12 0,12 0,6 C0,0 -0,0 6,0 C12,0 12,0 12,6 C12,12 12,12 6,12 z"
+        transform="translate(484, 265.42857142857144) scale(1)"
+      />
+      <path
+        class="lucid-Point lucid-Point-has-stroke lucid-Point-color-chart-0-darkest"
+        d="M6,12 C0,12 0,12 0,6 C0,0 -0,0 6,0 C12,0 12,0 12,6 C12,12 12,12 6,12 z"
+        transform="translate(647.3333333333334, 211.14285714285714) scale(1)"
+      />
+      <path
+        class="lucid-Point lucid-Point-has-stroke lucid-Point-color-chart-0-darkest"
+        d="M6,12 C0,12 0,12 0,6 C0,0 -0,0 6,0 C12,0 12,0 12,6 C12,12 12,12 6,12 z"
+        transform="translate(810.6666666666667, 156.85714285714286) scale(1)"
+      />
+      <path
+        class="lucid-Point lucid-Point-has-stroke lucid-Point-color-chart-0-darkest"
+        d="M6,12 C0,12 0,12 0,6 C0,0 -0,0 6,0 C12,0 12,0 12,6 C12,12 12,12 6,12 z"
+        transform="translate(974, 102.57142857142857) scale(1)"
+      />
+      <path
+        class="lucid-Point lucid-Point-has-stroke lucid-Point-color-chart-2"
+        d="M6.034,1.656 C7,0 7,0 7.966,1.656 L13.034,10.344 C14,12 13,12 12,12 L2,12 C1,12 0,12 0.966,10.344 L6.034,1.656 z"
+        transform="translate(-7, 48.285714285714306) scale(1)"
+      />
+      <path
+        class="lucid-Point lucid-Point-has-stroke lucid-Point-color-chart-2"
+        d="M6.034,1.656 C7,0 7,0 7.966,1.656 L13.034,10.344 C14,12 13,12 12,12 L2,12 C1,12 0,12 0.966,10.344 L6.034,1.656 z"
+        transform="translate(156.33333333333334, 102.57142857142857) scale(1)"
+      />
+      <path
+        class="lucid-Point lucid-Point-has-stroke lucid-Point-color-chart-2"
+        d="M6.034,1.656 C7,0 7,0 7.966,1.656 L13.034,10.344 C14,12 13,12 12,12 L2,12 C1,12 0,12 0.966,10.344 L6.034,1.656 z"
+        transform="translate(319.6666666666667, 156.85714285714286) scale(1)"
+      />
+      <path
+        class="lucid-Point lucid-Point-has-stroke lucid-Point-color-chart-2"
+        d="M6.034,1.656 C7,0 7,0 7.966,1.656 L13.034,10.344 C14,12 13,12 12,12 L2,12 C1,12 0,12 0.966,10.344 L6.034,1.656 z"
+        transform="translate(483, 211.14285714285714) scale(1)"
+      />
+      <path
+        class="lucid-Point lucid-Point-has-stroke lucid-Point-color-chart-2"
+        d="M6.034,1.656 C7,0 7,0 7.966,1.656 L13.034,10.344 C14,12 13,12 12,12 L2,12 C1,12 0,12 0.966,10.344 L6.034,1.656 z"
+        transform="translate(646.3333333333334, 156.85714285714286) scale(1)"
+      />
+      <path
+        class="lucid-Point lucid-Point-has-stroke lucid-Point-color-chart-2"
+        d="M6.034,1.656 C7,0 7,0 7.966,1.656 L13.034,10.344 C14,12 13,12 12,12 L2,12 C1,12 0,12 0.966,10.344 L6.034,1.656 z"
+        transform="translate(809.6666666666667, 102.57142857142857) scale(1)"
+      />
+      <path
+        class="lucid-Point lucid-Point-has-stroke lucid-Point-color-chart-2"
+        d="M6.034,1.656 C7,0 7,0 7.966,1.656 L13.034,10.344 C14,12 13,12 12,12 L2,12 C1,12 0,12 0.966,10.344 L6.034,1.656 z"
+        transform="translate(973, 48.285714285714306) scale(1)"
+      />
+      <path
+        class="lucid-Point lucid-Point-has-stroke lucid-Point-color-chart-4-lightest"
+        d="M7.966,10.344 C7,12 7,12 6.034,10.344 L0.966,1.656 C-0,0 1,0 2,0 L12,0 C13,0 14,0 13.034,1.656 L7.966,10.344 z"
+        transform="translate(-7, -6) scale(1)"
+      />
+      <path
+        class="lucid-Point lucid-Point-has-stroke lucid-Point-color-chart-4-lightest"
+        d="M7.966,10.344 C7,12 7,12 6.034,10.344 L0.966,1.656 C-0,0 1,0 2,0 L12,0 C13,0 14,0 13.034,1.656 L7.966,10.344 z"
+        transform="translate(156.33333333333334, 48.285714285714306) scale(1)"
+      />
+      <path
+        class="lucid-Point lucid-Point-has-stroke lucid-Point-color-chart-4-lightest"
+        d="M7.966,10.344 C7,12 7,12 6.034,10.344 L0.966,1.656 C-0,0 1,0 2,0 L12,0 C13,0 14,0 13.034,1.656 L7.966,10.344 z"
+        transform="translate(319.6666666666667, 102.57142857142857) scale(1)"
+      />
+      <path
+        class="lucid-Point lucid-Point-has-stroke lucid-Point-color-chart-4-lightest"
+        d="M7.966,10.344 C7,12 7,12 6.034,10.344 L0.966,1.656 C-0,0 1,0 2,0 L12,0 C13,0 14,0 13.034,1.656 L7.966,10.344 z"
+        transform="translate(483, 156.85714285714286) scale(1)"
+      />
+      <path
+        class="lucid-Point lucid-Point-has-stroke lucid-Point-color-chart-4-lightest"
+        d="M7.966,10.344 C7,12 7,12 6.034,10.344 L0.966,1.656 C-0,0 1,0 2,0 L12,0 C13,0 14,0 13.034,1.656 L7.966,10.344 z"
+        transform="translate(646.3333333333334, 102.57142857142857) scale(1)"
+      />
+      <path
+        class="lucid-Point lucid-Point-has-stroke lucid-Point-color-chart-4-lightest"
+        d="M7.966,10.344 C7,12 7,12 6.034,10.344 L0.966,1.656 C-0,0 1,0 2,0 L12,0 C13,0 14,0 13.034,1.656 L7.966,10.344 z"
+        transform="translate(809.6666666666667, 48.285714285714306) scale(1)"
+      />
+      <path
+        class="lucid-Point lucid-Point-has-stroke lucid-Point-color-chart-4-lightest"
+        d="M7.966,10.344 C7,12 7,12 6.034,10.344 L0.966,1.656 C-0,0 1,0 2,0 L12,0 C13,0 14,0 13.034,1.656 L7.966,10.344 z"
+        transform="translate(973, -6) scale(1)"
+      />
+    </g>
+  </g>
+</svg>
 `;

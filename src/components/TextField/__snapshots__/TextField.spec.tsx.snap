@@ -1,112 +1,122 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`TextField [common] example testing should match snapshot(s) for 01.basic 1`] = `
-<input
-  className="lucid-TextField lucid-TextField-is-single-line"
-  disabled={false}
-  onBlur={[Function]}
-  onChange={[Function]}
-  onKeyDown={[Function]}
-  placeholder="default"
-  rows={5}
-  style={
-    Object {
-      "marginBottom": "10px",
-    }
-  }
-  type="text"
-  value=""
-/>
+exports[`TextField [common] example testing should match snapshot(s) for Debounced 1`] = `
+<div>
+  <input
+    class="lucid-TextField lucid-TextField-is-single-line"
+    rows="5"
+    style="margin-bottom:10px"
+    type="text"
+    value="foo"
+  />
+  <div
+    style="margin-bottom:10px;margin-left:10px"
+  >
+    this.state.value: foo
+  </div>
+  <button
+    class="lucid-Button"
+    type="button"
+  >
+    <span
+      class="lucid-Button-content"
+    >
+      Set TextField to "foo"
+    </span>
+  </button>
+</div>
 `;
 
-exports[`TextField [common] example testing should match snapshot(s) for 03.on-submit 1`] = `
-<input
-  className="lucid-TextField lucid-TextField-is-single-line"
-  disabled={false}
-  onBlur={[Function]}
-  onChange={[Function]}
-  onKeyDown={[Function]}
-  rows={5}
-  style={
-    Object {
-      "marginBottom": "10px",
-    }
-  }
-  type="text"
-  value="Enter some text in and hit enter"
-/>
+exports[`TextField [common] example testing should match snapshot(s) for Default 1`] = `
+<div>
+  <input
+    class="lucid-TextField lucid-TextField-is-single-line"
+    placeholder="default"
+    rows="5"
+    style="margin-bottom:10px"
+    type="text"
+    value=""
+  />
+</div>
 `;
 
-exports[`TextField [common] example testing should match snapshot(s) for 04.debounced 1`] = `
-<input
-  className="lucid-TextField lucid-TextField-is-single-line"
-  disabled={false}
-  onBlur={[Function]}
-  onChange={[Function]}
-  onKeyDown={[Function]}
-  rows={5}
-  style={
-    Object {
-      "marginBottom": "10px",
-    }
-  }
-  type="text"
-  value="foo"
-/>
+exports[`TextField [common] example testing should match snapshot(s) for Disabled 1`] = `
+<div>
+  <input
+    class="lucid-TextField lucid-TextField-is-disabled lucid-TextField-is-single-line"
+    disabled=""
+    placeholder="disabled"
+    rows="5"
+    style="margin-bottom:10px"
+    type="text"
+    value=""
+  />
+</div>
 `;
 
-exports[`TextField [common] example testing should match snapshot(s) for 05.multiline 1`] = `
-<input
-  className="lucid-TextField lucid-TextField-is-single-line"
-  disabled={false}
-  onBlur={[Function]}
-  onChange={[Function]}
-  onKeyDown={[Function]}
-  placeholder="default"
-  rows={5}
-  style={
-    Object {
-      "marginBottom": "10px",
-    }
-  }
-  type="text"
-  value=""
-/>
+exports[`TextField [common] example testing should match snapshot(s) for Multiline 1`] = `
+<div>
+  <input
+    class="lucid-TextField lucid-TextField-is-single-line"
+    placeholder="default"
+    rows="5"
+    style="margin-bottom:10px"
+    type="text"
+    value=""
+  />
+  <textarea
+    class="lucid-TextField lucid-TextField-is-multi-line"
+    placeholder="isMultiLine"
+    rows="5"
+    style="margin-bottom:10px"
+  />
+  <div
+    style="margin-bottom:10px;margin-left:10px"
+  >
+    this.state.value: 
+  </div>
+  <button
+    class="lucid-Button"
+    type="button"
+  >
+    <span
+      class="lucid-Button-content"
+    >
+      Set TextField to "foo"
+    </span>
+  </button>
+</div>
 `;
 
-exports[`TextField [common] example testing should match snapshot(s) for 05.multiline 2`] = `
-<textarea
-  className="lucid-TextField lucid-TextField-is-multi-line"
-  disabled={false}
-  onBlur={[Function]}
-  onChange={[Function]}
-  onKeyDown={[Function]}
-  placeholder="isMultiLine"
-  rows={5}
-  style={
-    Object {
-      "marginBottom": "10px",
-    }
-  }
-  value=""
-/>
+exports[`TextField [common] example testing should match snapshot(s) for OnSubmit 1`] = `
+<div>
+  <input
+    class="lucid-TextField lucid-TextField-is-single-line"
+    rows="5"
+    style="margin-bottom:10px"
+    type="text"
+    value="Enter some text in and hit enter"
+  />
+  <div
+    style="margin-top:10px;margin-left:10px"
+  >
+    this.state.value: Enter some text in and hit enter
+  </div>
+</div>
 `;
 
-exports[`TextField [common] example testing should match snapshot(s) for 06.disabled 1`] = `
-<input
-  className="lucid-TextField lucid-TextField-is-disabled lucid-TextField-is-single-line"
-  disabled={true}
-  onBlur={[Function]}
-  onChange={[Function]}
-  onKeyDown={[Function]}
-  placeholder="disabled"
-  rows={5}
-  style={
-    Object {
-      "marginBottom": "10px",
-    }
-  }
-  type="text"
-  value=""
-/>
+exports[`TextField [common] example testing should match snapshot(s) for Plain 1`] = `
+<div>
+  <input
+    class="lucid-TextFieldPlain lucid-TextFieldPlain-is-single-line"
+    placeholder="Plain Textfield example"
+    style="margin-bottom:10px"
+  />
+  <textarea
+    class="lucid-TextFieldPlain lucid-TextFieldPlain-is-multi-line"
+    placeholder="Plain Textfield multiline example"
+    rows="5"
+    style="margin-bottom:10px"
+  />
+</div>
 `;

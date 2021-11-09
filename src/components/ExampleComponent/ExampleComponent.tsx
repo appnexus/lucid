@@ -17,6 +17,13 @@ const { bool, func, node, string, object } = PropTypes;
  * Please see examples for more information.
  */
 const ExampleComponent = createClass({
+	statics: {
+		peek: {
+			description: `
+			`,
+		},
+	},
+
 	displayName: 'ExampleComponent',
 
 	// reducers,
