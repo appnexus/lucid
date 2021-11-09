@@ -158,16 +158,6 @@ export default [
 		component: getDefaultExport(
 			require('../../src/components/Icon/DangerLightIcon/DangerLightIcon')
 		),
-		examplesContext: require.context(
-			'../../src/components/Icon/DangerLightIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../../src/components/Icon/DangerLightIcon/examples',
-			true,
-			/\.(j|t)sx?$/
-		),
 	},
 
 	{

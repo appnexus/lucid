@@ -1,0 +1,71 @@
+import React from 'react';
+import createClass from 'create-react-class';
+import { BarChartLoadingSkeleton } from './../../index';
+
+export default {
+	title: 'Loading Indicator/BarChartLoadingSkeleton',
+	component: BarChartLoadingSkeleton,
+	parameters: {
+		docs: {
+			description: {
+				component: (BarChartLoadingSkeleton as any).peek.description,
+			},
+		},
+	},
+};
+
+/* Default */
+export const Default = () => {
+	const Component = createClass({
+		render() {
+			return <BarChartLoadingSkeleton isLoading={true} />;
+		},
+	});
+
+	return <Component />;
+};
+Default.storyName = 'Default';
+
+/* Add Header */
+export const AddHeader = () => {
+	const Component = createClass({
+		render() {
+			return (
+				<BarChartLoadingSkeleton
+					isLoading={true}
+					width={880}
+					header='BarChartLoadingSkeleton added header'
+				/>
+			);
+		},
+	});
+
+	return <Component />;
+};
+AddHeader.storyName = 'AddHeader';
+
+/* Two Rows Three Columns */
+export const TwoRowsThreeColumns = () => {
+	const Component = createClass({
+		render() {
+			return (
+				<div>
+					<BarChartLoadingSkeleton
+						isLoading={true}
+						width={210}
+						height={200}
+						numRows={2}
+						numColumns={3}
+						marginRight={100}
+						marginLeft={0}
+						marginTop={0}
+						marginBottom={50}
+					/>
+				</div>
+			);
+		},
+	});
+
+	return <Component />;
+};
+TwoRowsThreeColumns.storyName = 'TwoRowsThreeColumns';

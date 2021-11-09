@@ -24,7 +24,7 @@ const cx = lucidClassNames.bind('&-SplitButton');
 const { bool, func, node, oneOf, shape, string } = PropTypes;
 
 /** SplitButton Button Child Component */
-interface ISplitButtonButtonChildProps extends StandardProps {
+export interface ISplitButtonButtonChildProps extends StandardProps {
 	/** Disables selection of the \`Button\`. */
 	isDisabled?: boolean;
 }

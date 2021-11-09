@@ -31,7 +31,7 @@ const cx = lucidClassNames.bind('&-SearchableSelect');
 const { any, bool, func, node, number, object, shape, string, oneOfType } =
 	PropTypes;
 
-interface ISearchableSelectPlaceholderProps extends StandardProps {
+export interface ISearchableSelectPlaceholderProps extends StandardProps {
 	description?: string;
 }
 

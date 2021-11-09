@@ -15,7 +15,7 @@ const cx = lucidClassNames.bind('&-SplitVertical');
 
 const { any, bool, func, node, number, string, oneOfType } = PropTypes;
 
-interface ISplitVerticalRightPaneProps extends StandardProps {
+export interface ISplitVerticalRightPaneProps extends StandardProps {
 	/** Set width of this pane. */
 	width?: number | string;
 	/** Define this pane as the primary content pane. When the split is
@@ -46,7 +46,7 @@ SplitVerticalRightPane.defaultProps = {
 	isPrimary: false,
 };
 
-interface ISplitVerticalLeftPaneProps extends StandardProps {
+export interface ISplitVerticalLeftPaneProps extends StandardProps {
 	/** Set width of this pane. */
 	width?: number | string;
 	/** Define this pane as the primary content pane. When the split is

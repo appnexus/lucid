@@ -12,7 +12,7 @@ const cx = lucidClassNames.bind('&-Panel');
 
 const { bool, node, object, string } = PropTypes;
 
-interface IPanelHeaderProps
+export interface IPanelHeaderProps
 	extends StandardProps,
 		React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> {
 	description?: string;
@@ -31,7 +31,7 @@ PanelHeader.propTypes = {
 };
 PanelHeader.propName = 'Header';
 
-interface IPanelFooterProps
+export interface IPanelFooterProps
 	extends StandardProps,
 		React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> {
 	description?: string;

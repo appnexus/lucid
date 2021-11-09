@@ -8,7 +8,7 @@ const cx = lucidClassNames.bind('&-Validation');
 
 const { string, any } = PropTypes;
 
-interface IValidationErrorProps extends StandardProps {
+export interface IValidationErrorProps extends StandardProps {
 	description?: string;
 }
 const ValidationError = (_props: IValidationErrorProps): null => null;

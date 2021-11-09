@@ -15,7 +15,7 @@ const cx = lucidClassNames.bind('&-SplitHorizontal');
 
 const { bool, func, node, number, string, oneOfType } = PropTypes;
 
-interface ISplitHorizontalTopPaneProps extends StandardProps {
+export interface ISplitHorizontalTopPaneProps extends StandardProps {
 	/** Set height of this pane. */
 	height?: number | string;
 	/** Define this pane as the primary content pane. When the split is
@@ -46,7 +46,7 @@ SplitHorizontalTopPane.defaultProps = {
 	isPrimary: false,
 };
 
-interface ISplitHorizontalBottomPaneProps extends StandardProps {
+export interface ISplitHorizontalBottomPaneProps extends StandardProps {
 	/** Set height of this pane. */
 	height?: number | string;
 	/** Define this pane as the primary content pane. When the split is
@@ -79,7 +79,7 @@ SplitHorizontalBottomPane.defaultProps = {
 	isPrimary: false,
 };
 
-interface ISplitHorizontalDividerProps extends StandardProps {}
+export interface ISplitHorizontalDividerProps extends StandardProps {}
 const SplitHorizontalDivider = (_props: ISplitHorizontalDividerProps): null =>
 	null;
 SplitHorizontalDivider.displayName = 'SplitHorizontal.Divider';

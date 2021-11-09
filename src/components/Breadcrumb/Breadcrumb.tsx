@@ -13,7 +13,7 @@ const cx = lucidClassNames.bind('&-Breadcrumb');
 
 const { any, node } = PropTypes;
 
-interface IBreadcrumbItemProps extends StandardProps {}
+export interface IBreadcrumbItemProps extends StandardProps {}
 const BreadcrumbItem = (_props: IBreadcrumbItemProps): null => null;
 
 BreadcrumbItem.displayName = 'Breadcrumb.Item';
@@ -27,7 +27,7 @@ BreadcrumbItem.propTypes = {
 	children: node,
 };
 
-interface IBreadcrumbProps
+export interface IBreadcrumbProps
 	extends StandardProps,
 		React.DetailedHTMLProps<
 			React.HTMLAttributes<HTMLDivElement>,

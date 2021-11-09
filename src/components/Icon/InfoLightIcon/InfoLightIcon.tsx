@@ -6,7 +6,7 @@ import { omitProps } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-InfoLightIcon');
 
-interface IInfoLightIconProps extends IIconProps {}
+export interface IInfoLightIconProps extends IIconProps {}
 
 export const InfoLightIcon = ({
 	className,

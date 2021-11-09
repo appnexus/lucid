@@ -24,7 +24,7 @@ const cx = lucidClassNames.bind('&-Bars');
 
 const { arrayOf, func, number, object, bool, string } = PropTypes;
 
-interface IBarsProps extends StandardProps, React.SVGProps<SVGGElement> {
+export interface IBarsProps extends StandardProps, React.SVGProps<SVGGElement> {
 	/**
 	 * De-normalized data
 	 *

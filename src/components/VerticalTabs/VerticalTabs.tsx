@@ -21,7 +21,7 @@ const cx = lucidClassNames.bind('&-VerticalTabs');
 const { string, number, bool, func } = PropTypes;
 
 /** Vertical Tabs Tab Child Component */
-interface IVerticalTabsTabProps extends StandardProps {
+export interface IVerticalTabsTabProps extends StandardProps {
 	/** Determines if the Tab is selected */
 	isSelected?: boolean;
 

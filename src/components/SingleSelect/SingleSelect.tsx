@@ -21,7 +21,7 @@ const { any, bool, func, node, number, object, shape, string, oneOfType } =
 	PropTypes;
 
 /** Placeholder Child Component */
-interface ISingleSelectPlaceholderProps extends StandardProps {
+export interface ISingleSelectPlaceholderProps extends StandardProps {
 	description?: string;
 }
 

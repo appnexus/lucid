@@ -17,7 +17,7 @@ const cx = lucidClassNames.bind('&-Tabs');
 
 const { bool, func, node, number, string, any } = PropTypes;
 
-interface ITitleProps extends StandardProps {}
+export interface ITitleProps extends StandardProps {}
 const Title = (props: ITitleProps): null => null;
 Title.peek = {
 	description: `Titles can be provided as a child or prop to a Tab.`,
@@ -25,7 +25,7 @@ Title.peek = {
 Title.displayName = 'Tabs.Title';
 Title.propName = 'Title';
 
-interface ITabProps extends StandardProps {
+export interface ITabProps extends StandardProps {
 	/** The index of this \`Tab\` within the list of \`Tabs\`. */
 	index?: number;
 

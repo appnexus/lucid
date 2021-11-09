@@ -22,7 +22,7 @@ const { bool, func, node, number, object, oneOf, string, oneOfType } =
 const { Target, FlyOut } = ContextMenu;
 
 /** ToolTip Target */
-interface IToolTipTargetProps extends StandardProps {
+export interface IToolTipTargetProps extends StandardProps {
 	description?: string;
 	elementType?: string;
 }
@@ -35,7 +35,7 @@ ToolTipTarget.peek = {
 ToolTipTarget.propName = 'Target';
 
 /** ToolTip Title */
-interface IToolTipTitleProps extends StandardProps {
+export interface IToolTipTitleProps extends StandardProps {
 	description?: string;
 }
 
@@ -47,7 +47,7 @@ ToolTipTitle.peek = {
 ToolTipTitle.propName = 'Title';
 
 /** ToolTip Body */
-interface IToolTipBodyProps extends StandardProps {
+export interface IToolTipBodyProps extends StandardProps {
 	description?: string;
 }
 

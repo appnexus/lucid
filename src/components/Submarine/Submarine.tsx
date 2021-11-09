@@ -24,11 +24,11 @@ const cx = lucidClassNames.bind('&-Submarine');
 
 const { any, bool, func, node, number, string, oneOf, oneOfType } = PropTypes;
 
-interface ISubmarinePrimaryProps extends StandardProps {}
+export interface ISubmarinePrimaryProps extends StandardProps {}
 
-interface ISumbarineTitleProps extends StandardProps {}
+export interface ISumbarineTitleProps extends StandardProps {}
 
-interface ISubmarineBarProps extends StandardProps {
+export interface ISubmarineBarProps extends StandardProps {
 	Title?: ISumbarineTitleProps | string;
 }
 
@@ -77,7 +77,7 @@ const defaultProps = {
 	onToggle: _.noop,
 };
 
-interface ISubmarineProps extends StandardProps {
+export interface ISubmarineProps extends StandardProps {
 	/** Sets the starting height of the Bar. */
 	height: number;
 

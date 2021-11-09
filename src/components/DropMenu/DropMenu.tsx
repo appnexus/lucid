@@ -46,7 +46,7 @@ const cx = lucidClassNames.bind('&-DropMenu');
 const { any, arrayOf, bool, func, node, number, object, oneOf, string } =
 	PropTypes;
 
-interface IDropMenuHeaderProps extends StandardProps {
+export interface IDropMenuHeaderProps extends StandardProps {
 	description?: string;
 }
 
@@ -61,7 +61,7 @@ Header.peek = {
 Header.propName = 'Header';
 Header.propTypes = {};
 
-interface IDropMenuControlProps extends StandardProps {
+export interface IDropMenuControlProps extends StandardProps {
 	description?: string;
 }
 
@@ -183,7 +183,7 @@ FixedOption.defaultProps = {
 	isWrapped: true,
 };
 
-interface IDropMenuContextMenuProps extends StandardProps {
+export interface IDropMenuContextMenuProps extends StandardProps {
 	description?: string;
 }
 

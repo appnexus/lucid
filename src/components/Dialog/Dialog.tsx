@@ -11,14 +11,14 @@ const cx = lucidClassNames.bind('&-Dialog');
 
 const { node, oneOf, bool, func } = PropTypes;
 
-enum EnumSize {
+export enum EnumSize {
 	small = 'small',
 	medium = 'medium',
 	large = 'large',
 }
 type Size = keyof typeof EnumSize;
 
-interface IDialogHeaderProps extends StandardProps {
+export interface IDialogHeaderProps extends StandardProps {
 	description?: string;
 }
 const DialogHeader = (_props: IDialogHeaderProps): null => null;
@@ -30,7 +30,7 @@ DialogHeader.peek = {
 };
 DialogHeader.propName = 'Header';
 
-interface IDialogFooterProps extends StandardProps {
+export interface IDialogFooterProps extends StandardProps {
 	description?: string;
 }
 const DialogFooter = (_props: IDialogFooterProps): null => null;

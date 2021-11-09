@@ -16,7 +16,7 @@ const modulo = (n: number, a: number): number => {
 	return a - n * Math.floor(a / n);
 };
 
-interface IInfiniteSlidePanelSlideProps extends ISlidePanelSlideProps {}
+export interface IInfiniteSlidePanelSlideProps extends ISlidePanelSlideProps {}
 const InfiniteSlidePanelSlide = (_props: IInfiniteSlidePanelSlideProps): null =>
 	null;
 InfiniteSlidePanelSlide.displayName = 'InfiniteSlidePanel.Slide';

@@ -33,7 +33,7 @@ const {
 	oneOf,
 } = PropTypes;
 
-interface IBarChartProps
+export interface IBarChartProps
 	extends StandardProps,
 		React.DetailedHTMLProps<
 			React.HTMLAttributes<HTMLDivElement>,

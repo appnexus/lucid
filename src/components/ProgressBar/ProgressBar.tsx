@@ -8,9 +8,9 @@ const cx = lucidClassNames.bind('&-ProgressBar');
 
 const { number, string, oneOf, node } = PropTypes;
 
-interface ITitleProps extends StandardProps {}
+export interface ITitleProps extends StandardProps {}
 
-interface IProgressBarProps
+export interface IProgressBarProps
 	extends StandardProps,
 		React.DetailedHTMLProps<
 			React.HTMLAttributes<HTMLDivElement>,
