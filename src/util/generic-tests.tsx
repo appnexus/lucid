@@ -41,6 +41,10 @@ export function common(
 			assert(Component.displayName);
 		});
 
+		it('should have a `propTypes` defined', () => {
+			assert(Component.propTypes);
+		});
+
 		it('should pass through styles to the root element', () => {
 			const style = {
 				backgroundColor: '#f0f',
@@ -262,7 +266,7 @@ export function controls(
 			}: any = _.last(props[callbackName].args[0]);
 
 			assert(event, 'missing event');
-			assert.equal(
+			assert.strictEqual(
 				specialProp,
 				expectedSpecialProp,
 				'incorrect or missing specialProp'
