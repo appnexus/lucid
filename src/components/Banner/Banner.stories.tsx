@@ -141,7 +141,7 @@ export const Stateless: Story<IBannerProps> = (args) => {
 	);
 };
 
-export const Small: Story<IBannerProps> = () => {
+export const Small: Story<IBannerProps> = (args) => {
 	const kinds = [
 		{ label: 'Default', value: undefined },
 		{ label: 'Success', value: 'success' },
@@ -156,6 +156,7 @@ export const Small: Story<IBannerProps> = () => {
 				<React.Fragment key={value}>
 					<div>
 						<Banner
+							{...args}
 							isSmall={true}
 							kind={value as any}
 							style={{ marginBottom: 8 }}
@@ -163,6 +164,7 @@ export const Small: Story<IBannerProps> = () => {
 							{label}
 						</Banner>
 						<Banner
+							{...args}
 							isSmall={true}
 							kind={value as any}
 							isCloseable={false}
@@ -178,6 +180,7 @@ export const Small: Story<IBannerProps> = () => {
 				<React.Fragment key={value}>
 					<div>
 						<Banner
+							{...args}
 							isSmall={true}
 							kind={value as any}
 							isFilled={false}
