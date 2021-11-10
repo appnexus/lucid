@@ -19,62 +19,6 @@ import { buildModernHybridComponent } from '../../util/state-management';
 
 const cx = lucidClassNames.bind('&-Paginator');
 
-const { arrayOf, bool, func, number, object, oneOfType, shape, string } =
-	PropTypes;
-
-const paginatorPropTypes = {
-	/**	Appended to the component-specific class names set on the root elements. */
-	className: string,
-
-	/** Styles that are passed through to root element. */
-	style: object,
-
-	/** Disables the Paginator from being clicked or focused. */
-	isDisabled: bool,
-
-	/** Whether to show the page size selector. */
-	hasPageSizeSelector: bool,
-
-	/** 0-indexed currently selected page number. */
-	selectedPageIndex: number,
-
-	/** Currently selected page size option index. */
-	selectedPageSizeIndex: number,
-
-	/** Object of SingleSelect props which are passed thru to the underlying 'SingleSelect' component for the page size selector. */
-	SingleSelect: shape(SingleSelect.propTypes),
-
-	/** Show total count of objects. */
-	showTotalObjects: oneOfType([bool, func]),
-
-	/** Label when showTotalObjects is true with 1 or fewer objects. */
-	objectLabel: string,
-
-	/** Label when showTotalObjects is true with more than 1 objects. */
-	objectLabelPlural: string,
-
-	/** Number to display in \`of \${totalPages}\`, calculated from
-		\`totalPages\` and selected page size by default. */
-	totalPages: number,
-
-	/** Total number of items across all pages. */
-	totalCount: number,
-
-	/** Array of numbers representing page size options. */
-	pageSizeOptions: arrayOf(number),
-
-	/** Object of TextField props which are passed thru to the underlying TextField component. */
-	TextField: shape(TextField.propTypes),
-
-	/** Called when a page is selected.  Has the signature \`(pageIndex,
-			totalPages, {props, event}) => {}\` where pageIndex is a number. */
-	onPageSelect: func,
-
-	/** Called when a page size is selected.  Has the signature \`(pageSizeIndex,
-			{props, event}) => {}\` where pageSizeIndex is a number. */
-	onPageSizeSelect: func,
-};
-
 const { Option } = SingleSelect;
 
 type IPaginatorSingleSelectProps = Partial<ISingleSelectProps>;
@@ -320,7 +264,6 @@ Paginator.madeFrom = ['ArrowIcon', 'TextField', 'Button', 'SingleSelect'];
 Paginator.reducers = reducers;
 Paginator.selectors = selectors;
 Paginator.defaultProps = defaultProps;
-Paginator.propTypes = paginatorPropTypes;
 
 export default buildModernHybridComponent<
 	IPaginatorProps,

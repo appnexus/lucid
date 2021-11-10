@@ -41,10 +41,6 @@ export function common(
 			assert(Component.displayName);
 		});
 
-		it('should have a `propTypes` defined', () => {
-			assert(Component.propTypes);
-		});
-
 		it('should pass through styles to the root element', () => {
 			const style = {
 				backgroundColor: '#f0f',

@@ -7,45 +7,6 @@ import { FC, StandardProps } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-ExampleComponent');
 
-const { bool, func, node, string, object } = PropTypes;
-
-const exampleComponentPropTypes = {
-	// Each prop in propTypes should include a description using /* */ of what
-	// the prop is and how it should be used by other developers who consume your
-	// component.
-	/**
-	 * Appended to the component-specific class names set on the root
-	 * element.
-	 */
-	className: string,
-
-	/**
-	 * Any valid React children. This wraps your new component around whatever other React children consumers
-	 * of your component may choose to use. If consumers can not use any/all React children. Be sure to call
-	 * that out here.
-	 */
-	children: node,
-
-	/**
-	 * Example of a boolean prop.
-	 * Used in this example to control an additional classname
-	 * `lucid-ExampleComponent-isX' on the root element.
-	 */
-	isX: bool,
-
-	/**
-	 * Example of a customizable component function. Always show the signature.
-	 *
-	 * Signature: `(item, { event, props }) => {}`
-	 */
-	onX: func,
-
-	/**
-	 * Passed through to the root element.
-	 */
-	style: object,
-};
-
 export interface IExampleComponentProps
 	extends StandardProps,
 		React.DetailedHTMLProps<
@@ -122,6 +83,5 @@ export const ExampleComponent: FC<IExampleComponentProps> = (
 ExampleComponent.categories = ['Documentation'];
 ExampleComponent.description = `An example component`;
 ExampleComponent.displayName = 'ExampleComponent';
-ExampleComponent.propTypes = exampleComponentPropTypes;
 
 export default ExampleComponent;
