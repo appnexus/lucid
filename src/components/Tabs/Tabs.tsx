@@ -116,7 +116,7 @@ const Tab = (props: ITabPropsWithPassThroughs): React.ReactElement => {
 							minWidth: '20px',
 						}}
 						type='stroke'
-						kind={isSelected ? 'primary' : undefined}
+						kind={isSelected ? 'primary' : 'default'}
 					>
 						{count}
 					</Badge>
