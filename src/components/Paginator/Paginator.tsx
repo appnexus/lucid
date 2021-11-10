@@ -1,8 +1,9 @@
 import _ from 'lodash';
-import React, { FC } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
+
 import { lucidClassNames } from '../../util/style-helpers';
-import { StandardProps } from '../../util/component-types';
+import { FC, StandardProps } from '../../util/component-types';
 import * as reducers from './Paginator.reducers';
 import selectors from './Paginator.selectors';
 import {
@@ -209,9 +210,7 @@ export interface IPaginatorState {
 	SingleSelect: ISingleSelectState;
 }
 
-const Paginator: FC<IPaginatorProps> & ILucidComponent = (
-	props: IPaginatorProps
-) => {
+const Paginator: FC<IPaginatorProps> = (props: IPaginatorProps) => {
 	const {
 		className,
 		hasPageSizeSelector,
