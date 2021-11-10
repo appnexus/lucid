@@ -7,7 +7,7 @@ const kinds = [undefined, 'primary', 'success', 'danger'];
 const types = [undefined, 'stroke'];
 
 export default {
-	title: 'visual design/Badge',
+	title: 'Visual Design/Badge',
 	component: Badge,
 	parameters: {
 		docs: {

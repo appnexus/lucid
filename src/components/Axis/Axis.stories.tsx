@@ -3,7 +3,7 @@ import createClass from 'create-react-class';
 import { Axis, d3Scale, d3Time } from './../../index';
 
 export default {
-	title: 'Visualizations/Chart Primitives/Axis',
+	title: 'Visualizations/Axis',
 	component: Axis,
 	parameters: {
 		docs: {

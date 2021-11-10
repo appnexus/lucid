@@ -3,7 +3,7 @@ import createClass from 'create-react-class';
 import { Button, Checkbox, SuccessIcon, Table } from './../../index';
 
 export default {
-	title: 'Controls/Table',
+	title: 'Table/Table',
 	component: Table,
 	parameters: {
 		docs: {

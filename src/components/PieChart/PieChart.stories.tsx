@@ -4,7 +4,7 @@ import { PieChart, Legend, chartConstants } from './../../index';
 import _ from 'lodash';
 
 export default {
-	title: 'Visualizations/Charts/PieChart',
+	title: 'Visualizations/PieChart',
 	component: PieChart,
 	parameters: {
 		docs: {

@@ -4,7 +4,7 @@ import createClass from 'create-react-class';
 import { Lines, d3Scale, chartConstants } from './../../index';
 
 export default {
-	title: 'Visualizations/Chart Primitives/Lines',
+	title: 'Visualizations/Lines',
 	component: Lines,
 	parameters: {
 		docs: {
