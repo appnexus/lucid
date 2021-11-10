@@ -3,7 +3,7 @@ import createClass from 'create-react-class';
 import { Line, chartConstants } from './../../index';
 
 export default {
-	title: 'Visualizations/Geoms/Line',
+	title: 'Visualizations/Line',
 	component: Line,
 	parameters: {
 		docs: {

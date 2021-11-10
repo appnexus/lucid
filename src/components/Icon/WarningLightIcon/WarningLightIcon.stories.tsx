@@ -2,7 +2,7 @@ import React from 'react';
 import { WarningLightIcon } from './../../../index';
 
 export default {
-	title: 'Visual Design/Icons/WarningLightIcon',
+	title: 'Deprecated/WarningLightIcon',
 	component: WarningLightIcon,
 	parameters: {
 		docs: {

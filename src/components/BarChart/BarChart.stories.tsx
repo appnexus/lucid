@@ -5,7 +5,7 @@ import _ from 'lodash';
 import Resizer from '../Resizer/Resizer';
 
 export default {
-	title: 'Visualizations/Charts/BarChart',
+	title: 'Visualizations/BarChart',
 	component: BarChart,
 	parameters: {
 		docs: {

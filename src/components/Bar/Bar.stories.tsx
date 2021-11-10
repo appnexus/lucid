@@ -4,7 +4,7 @@ import { Bar, chartConstants } from './../../index';
 import _ from 'lodash';
 
 export default {
-	title: 'Visualizations/Geoms/Bar',
+	title: 'Visualizations/Bar',
 	component: Bar,
 	parameters: {
 		docs: {

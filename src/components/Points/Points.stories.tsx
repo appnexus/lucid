@@ -4,7 +4,7 @@ import createClass from 'create-react-class';
 import { Points, d3Scale, chartConstants } from './../../index';
 
 export default {
-	title: 'Visualizations/Chart Primitives/Points',
+	title: 'Visualizations/Points',
 	component: Points,
 	parameters: {
 		docs: {
