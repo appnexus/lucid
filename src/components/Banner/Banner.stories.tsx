@@ -20,7 +20,7 @@ export const Default: Story<IBannerProps> = (args) => (
 	<Banner {...args}>Default</Banner>
 );
 
-export const Stateful: Story<IBannerProps> = () => {
+export const Stateful: Story<IBannerProps> = (args) => {
 	const [isClosed, setIsClosed] = useState(false);
 
 	return (
@@ -34,14 +34,14 @@ export const Stateful: Story<IBannerProps> = () => {
 
 			<br />
 
-			<Banner isClosed={isClosed} onClose={() => setIsClosed(true)}>
+			<Banner {...args} isClosed={isClosed} onClose={() => setIsClosed(true)}>
 				Default
 			</Banner>
 		</div>
 	);
 };
 
-export const Stateless: Story<IBannerProps> = () => {
+export const Stateless: Story<IBannerProps> = (args) => {
 	const kinds = [
 		{ label: 'Default', value: undefined },
 		{ label: 'Success', value: 'success' },
@@ -55,10 +55,11 @@ export const Stateless: Story<IBannerProps> = () => {
 			{_.map(kinds, ({ label, value }) => (
 				<React.Fragment key={value}>
 					<div>
-						<Banner kind={value as any} style={{ marginBottom: 8 }}>
+						<Banner {...args} kind={value as any} style={{ marginBottom: 8 }}>
 							{label}
 						</Banner>
 						<Banner
+							{...args}
 							kind={value as any}
 							isCloseable={false}
 							style={{ marginBottom: 8 }}
@@ -70,13 +71,18 @@ export const Stateless: Story<IBannerProps> = () => {
 			))}
 
 			<div>
-				<Banner kind='danger' icon={<ChatIcon />} style={{ marginBottom: 8 }}>
+				<Banner
+					{...args}
+					kind='danger'
+					icon={<ChatIcon />}
+					style={{ marginBottom: 8 }}
+				>
 					Has Icon
 				</Banner>
 			</div>
 
 			<div>
-				<Banner isFilled={false} style={{ marginBottom: 8 }}>
+				<Banner {...args} isFilled={false} style={{ marginBottom: 8 }}>
 					<div>
 						Sit totam voluptas error dolorum ullam Quo ipsam esse amet mollitia
 						consequuntur Cumque cum nisi porro cumque sit nisi Facilis placeat
@@ -105,6 +111,7 @@ export const Stateless: Story<IBannerProps> = () => {
 				<React.Fragment key={value}>
 					<div>
 						<Banner
+							{...args}
 							kind={value as any}
 							isFilled={false}
 							style={{ marginBottom: 8 }}
@@ -120,6 +127,7 @@ export const Stateless: Story<IBannerProps> = () => {
 
 			<div>
 				<Banner
+					{...args}
 					kind='danger'
 					icon={<ChatIcon />}
 					isFilled={false}
@@ -133,7 +141,7 @@ export const Stateless: Story<IBannerProps> = () => {
 	);
 };
 
-export const Small: Story<IBannerProps> = () => {
+export const Small: Story<IBannerProps> = (args) => {
 	const kinds = [
 		{ label: 'Default', value: undefined },
 		{ label: 'Success', value: 'success' },
@@ -148,6 +156,7 @@ export const Small: Story<IBannerProps> = () => {
 				<React.Fragment key={value}>
 					<div>
 						<Banner
+							{...args}
 							isSmall={true}
 							kind={value as any}
 							style={{ marginBottom: 8 }}
@@ -155,6 +164,7 @@ export const Small: Story<IBannerProps> = () => {
 							{label}
 						</Banner>
 						<Banner
+							{...args}
 							isSmall={true}
 							kind={value as any}
 							isCloseable={false}
@@ -170,6 +180,7 @@ export const Small: Story<IBannerProps> = () => {
 				<React.Fragment key={value}>
 					<div>
 						<Banner
+							{...args}
 							isSmall={true}
 							kind={value as any}
 							isFilled={false}

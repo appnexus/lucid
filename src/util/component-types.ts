@@ -39,6 +39,7 @@ export interface FC<P> extends React.FC<P> {
 		extend?: string;
 		madeFrom?: string[];
 	};
+	propTypes?: object;
 	propName?: string | string[];
 	_isPrivate?: boolean;
 }

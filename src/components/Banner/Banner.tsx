@@ -3,7 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { CSSTransition } from 'react-transition-group';
 import { lucidClassNames } from '../../util/style-helpers';
-import { omitProps, StandardProps } from '../../util/component-types';
+import { omitProps, StandardProps, FC } from '../../util/component-types';
 import CloseIcon from '../Icon/CloseIcon/CloseIcon';
 import { IIconProps } from '../Icon/Icon';
 
@@ -91,20 +91,18 @@ const defaultProps = {
 	isClosed: false,
 };
 
-export const Banner = (props: IBannerProps): React.ReactElement => {
-	const {
-		icon,
-		kind,
-		className,
-		children,
-		isCloseable,
-		isClosed,
-		isFilled,
-		isSmall,
-		onClose,
-		...passThroughs
-	} = props;
-
+export const Banner: FC<IBannerProps> = ({
+	icon,
+	kind,
+	className,
+	children,
+	isCloseable,
+	isClosed,
+	isFilled,
+	isSmall,
+	onClose,
+	...passThroughs
+}): React.ReactElement => {
 	const handleClose = ({
 		event,
 		props,
@@ -197,5 +195,6 @@ Banner.peek = {
 	},
 	categories: ['communication'],
 };
+Banner.propTypes = bannerPropTypes;
 
 export default Banner;
