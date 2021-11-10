@@ -1,9 +1,10 @@
 import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
+
 import { CSSTransition } from 'react-transition-group';
 import { lucidClassNames } from '../../util/style-helpers';
-import { omitProps, StandardProps } from '../../util/component-types';
+import { FC, omitProps, StandardProps } from '../../util/component-types';
 import CloseIcon from '../Icon/CloseIcon/CloseIcon';
 import { IIconProps } from '../Icon/Icon';
 
@@ -91,7 +92,9 @@ const defaultProps = {
 	isClosed: false,
 };
 
-export const Banner = (props: IBannerProps): React.ReactElement => {
+export const Banner: FC<IBannerProps> = (
+	props: IBannerProps
+): React.ReactElement => {
 	const {
 		icon,
 		kind,
