@@ -3,7 +3,7 @@ import createClass from 'create-react-class';
 import { AxisLabel, chartConstants } from './../../index';
 
 export default {
-	title: 'Visualizations/Chart Primitives/AxisLabel',
+	title: 'Visualizations/AxisLabel',
 	component: AxisLabel,
 	parameters: {
 		docs: {

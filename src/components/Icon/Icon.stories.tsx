@@ -3,7 +3,7 @@ import createClass from 'create-react-class';
 import { Icon } from './../../index';
 
 export default {
-	title: 'Visual Design/Icons/Icon',
+	title: 'Visual Design/Icon',
 	component: Icon,
 	parameters: {
 		docs: {

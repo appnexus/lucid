@@ -3,7 +3,7 @@ import createClass from 'create-react-class';
 import { SeparatorIcon } from './../../../index';
 
 export default {
-	title: 'Visual Design/Icons/SeparatorIcon',
+	title: 'Visual Design/SeparatorIcon',
 	component: SeparatorIcon,
 	parameters: {
 		docs: {
