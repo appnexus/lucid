@@ -6,7 +6,7 @@ import Resizer from '../Resizer/Resizer';
 import Button from '../Button/Button';
 
 export default {
-	title: 'Visualizations/Charts/LineChart',
+	title: 'Visualizations/LineChart',
 	component: LineChart,
 	parameters: {
 		docs: {

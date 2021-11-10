@@ -2,7 +2,7 @@ import React from 'react';
 import { DangerLightIcon } from './../../../index';
 
 export default {
-	title: 'Visual Design/Icons/DangerLightIcon',
+	title: 'Deprecated/DangerLightIcon',
 	component: DangerLightIcon,
 	parameters: {
 		docs: {

@@ -3,7 +3,7 @@ import createClass from 'create-react-class';
 import ExampleComponent from './ExampleComponent';
 
 export default {
-	title: 'ExampleComponent',
+	title: 'Documentation/ExampleComponent',
 	component: ExampleComponent,
 	parameters: {
 		docs: {

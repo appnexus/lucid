@@ -4,7 +4,7 @@ import createClass from 'create-react-class';
 import { Point, chartConstants } from './../../index';
 
 export default {
-	title: 'Visualizations/Geoms/Point',
+	title: 'Visualizations/Point',
 	component: Point,
 	parameters: {
 		docs: {

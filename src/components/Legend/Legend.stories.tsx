@@ -4,7 +4,7 @@ import createClass from 'create-react-class';
 import { Legend, ToolTip, chartConstants } from './../../index';
 
 export default {
-	title: 'Visualizations/Chart Primitives/Legend',
+	title: 'Visualizations/Legend',
 	component: Legend,
 	parameters: {
 		docs: {

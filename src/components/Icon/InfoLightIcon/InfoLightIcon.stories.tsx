@@ -2,7 +2,7 @@ import React from 'react';
 import { InfoLightIcon } from './../../../index';
 
 export default {
-	title: 'Visual Design/Icons/InfoLightIcon',
+	title: 'Deprecated/InfoLightIcon',
 	component: InfoLightIcon,
 	parameters: {
 		docs: {

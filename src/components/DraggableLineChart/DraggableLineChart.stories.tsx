@@ -6,7 +6,7 @@ import { IXAxisRenderProp } from './d3-helpers';
 import { IData, ISelectedChartData } from './DraggableLineChartD3';
 
 export default {
-	title: 'Visualizations/Charts/DraggableLineChart',
+	title: 'Visualizations/DraggableLineChart',
 	component: DraggableLineChart,
 	parameters: {
 		docs: {
