@@ -1,11 +1,113 @@
 // Required for all new components
 import React from 'react';
 import PropTypes from 'prop-types';
+
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass } from '../../util/component-types';
+import { FC, StandardProps } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-ExampleComponent');
+
 const { bool, func, node, string, object } = PropTypes;
+
+const exampleComponentPropTypes = {
+	// Each prop in propTypes should include a description using /* */ of what
+	// the prop is and how it should be used by other developers who consume your
+	// component.
+	/**
+	 * Appended to the component-specific class names set on the root
+	 * element.
+	 */
+	className: string,
+
+	/**
+	 * Any valid React children. This wraps your new component around whatever other React children consumers
+	 * of your component may choose to use. If consumers can not use any/all React children. Be sure to call
+	 * that out here.
+	 */
+	children: node,
+
+	/**
+	 * Example of a boolean prop.
+	 * Used in this example to control an additional classname
+	 * `lucid-ExampleComponent-isX' on the root element.
+	 */
+	isX: bool,
+
+	/**
+	 * Example of a customizable component function. Always show the signature.
+	 *
+	 * Signature: `(item, { event, props }) => {}`
+	 */
+	onX: func,
+
+	/**
+	 * Passed through to the root element.
+	 */
+	style: object,
+};
+
+export interface IExampleComponentProps
+	extends StandardProps,
+		React.DetailedHTMLProps<
+			React.DOMAttributes<HTMLDivElement>,
+			HTMLDivElement
+		> {
+	/**
+	 * Appended to the component-specific class names set on the root
+	 * element.
+	 */
+	className?: string;
+
+	/**
+	 * Any valid React children. This wraps your new component around whatever other React children consumers
+	 * of your component may choose to use. If consumers can not use any/all React children. Be sure to call
+	 * that out here.
+	 */
+	children?: any;
+
+	/**
+	 * Example of a boolean prop.
+	 * Used in this example to control an additional classname
+	 * `lucid-ExampleComponent-isX' on the root element.
+	 */
+	isX?: boolean;
+
+	/**
+	 * Example of a customizable component function. Always show the signature.
+	 *
+	 * Signature: `(item, { event, props }) => {}`
+	 */
+	onX?: ({ event, props }: { event: React.MouseEvent; props: any }) => void;
+
+	/**
+	 * Passed through to the root element.
+	 */
+	style?: object;
+}
+
+export const ExampleComponent: FC<IExampleComponentProps> = (
+	props: IExampleComponentProps
+): React.ReactElement => {
+	// reducers,
+	// selectors,
+	const { className, children, isX, style } = props as any;
+
+	const handleX = () => {
+		alert('This is an example of a handler function');
+	};
+
+	return (
+		<div
+			className={cx('&', className, {
+				'&-isX': isX,
+			})}
+			style={style}
+			onClick={handleX}
+		>
+			{children}
+		</div>
+	);
+};
 
 /**
  * {"categories": ["mycategory"]}
@@ -16,74 +118,10 @@ const { bool, func, node, string, object } = PropTypes;
  * Describe your component here. How it should be used, use cases and more.
  * Please see examples for more information.
  */
-const ExampleComponent = createClass({
-	statics: {
-		peek: {
-			description: `
-			`,
-		},
-	},
 
-	displayName: 'ExampleComponent',
-
-	// reducers,
-	// selectors,
-
-	// Each prop in propTypes should include a description using /* */ of what
-	// the prop is and how it should be used by other developers who consume your
-	// component.
-	propTypes: {
-		/**
-		 * Appended to the component-specific class names set on the root
-		 * element.
-		 */
-		className: string,
-
-		/**
-		 * Any valid React children. This wraps your new component around whatever other React children consumers
-		 * of your component may choose to use. If consumers can not use any/all React children. Be sure to call
-		 * that out here.
-		 */
-		children: node,
-
-		/**
-		 * Example of a boolean prop.
-		 * Used in this example to control an additional classname
-		 * `lucid-ExampleComponent-isX' on the root element.
-		 */
-		isX: bool,
-
-		/**
-		 * Example of a customizable component function. Always show the signature.
-		 *
-		 * Signature: `(item, { event, props }) => {}`
-		 */
-		onX: func,
-
-		/**
-		 * Passed through to the root element.
-		 */
-		style: object,
-	},
-
-	handleX() {
-		alert('This is an example of a handler function');
-	},
-
-	render() {
-		const { className, children, isX, style } = this.props as any;
-
-		return (
-			<div
-				className={cx('&', className, {
-					'&-isX': isX,
-				})}
-				style={style}
-			>
-				{children}
-			</div>
-		);
-	},
-});
+ExampleComponent.categories = ['Documentation'];
+ExampleComponent.description = `An example component`;
+ExampleComponent.displayName = 'ExampleComponent';
+ExampleComponent.propTypes = exampleComponentPropTypes;
 
 export default ExampleComponent;
