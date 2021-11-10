@@ -170,10 +170,9 @@ export const Banner: FC<IBannerProps> = (
 
 Banner.defaultProps = defaultProps;
 Banner.displayName = 'Banner';
+Banner.description = `A banner that displays a prominent message.`;
 Banner.peek = {
-	description: `
-		A banner that displays a prominent message.
-	`,
+	description: `A banner that displays a prominent message.`,
 	notes: {
 		overview: `
 			A banner that displays a prominent message.
