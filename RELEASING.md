@@ -37,7 +37,9 @@ Document the changes contained in the release:
 https://github.com/appnexus/lucid/compare/v5.6.1...v5.7.0
 ```
 
-Based on the changes made, determine a suitable version number for the release.
+4. Add and commit the `CHANGELOG.md` updates. For example: `git commit -am "update the Changelog"`.
+
+5. Based on the changes made, determine a suitable version number for the release.
 
 We follow [semver](https://semver.org/), which prescribes that:
 
@@ -45,8 +47,6 @@ We follow [semver](https://semver.org/), which prescribes that:
 - `semver-minor`: Features are "minor" versions (the middle number).
 - `semver-patch`: Fixes are a "patch" version (the right-most number).
 - `semver-none`: Changes to documentation, or other changes that don't impact the api or consumers get a "none" label.
-
-4. Add and commit the `CHANGELOG.md` updates. For example: `git commit -am "update the Changelog"`.
 
 ## Update Version Number
 

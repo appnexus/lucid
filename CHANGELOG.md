@@ -1,3 +1,9 @@
+## 8.5.0
+
+- #1284 Fix the propTypes on `Banner`.
+- #1282 Remove components from nested categories in the navigation.
+  https://github.com/appnexus/lucid/compare/v8.4.0...v8.5.0
+
 ## 8.4.0
 
 - #1279 Update hover and active styling for `Tabs`.
