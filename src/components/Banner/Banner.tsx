@@ -197,5 +197,6 @@ Banner.peek = {
 	},
 	categories: ['communication'],
 };
+Banner.propTypes = bannerPropTypes;
 
 export default Banner;
