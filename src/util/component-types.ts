@@ -28,7 +28,7 @@ export type Overwrite<T, U> = Omit<T, keyof T & keyof U> & U;
 // `D`: default props (should be provided when a functional component supports
 // default props)
 export interface FC<P> extends React.FC<P> {
-	peek: {
+	peek?: {
 		description: string;
 		notes?: {
 			overview: string;
@@ -39,6 +39,8 @@ export interface FC<P> extends React.FC<P> {
 		extend?: string;
 		madeFrom?: string[];
 	};
+	categories?: string[];
+	description?: string;
 	propName?: string | string[];
 	_isPrivate?: boolean;
 }
