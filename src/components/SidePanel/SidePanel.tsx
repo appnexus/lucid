@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import PropTypes from 'react-peek/prop-types';
+import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import Overlay, { IOverlayProps } from '../Overlay/Overlay';
 import GripperVerticalIcon from '../Icon/GripperVerticalIcon/GripperVerticalIcon';
@@ -23,9 +23,10 @@ SidePanelHeader.peek = {
 	`,
 };
 SidePanelHeader.propTypes = {
-	children: node`
+	/**
 		Children that will be rendered.
-	`,
+	*/
+	children: node,
 };
 
 export interface ISidePanelProps extends Partial<IOverlayProps> {
@@ -100,55 +101,82 @@ class SidePanel extends React.Component<ISidePanelProps, ISidePanelState, {}> {
 		categories: ['layout'],
 	};
 	static propTypes = {
-		children: node`
+		/**
 			Content of the SidePanel, but also accepts \`<SidePanel.Header>\` to define
 			header content.
-		`,
-		className: string`
+		*/
+		children: node,
+
+		/**
 			Appended to the component-specific class names set on the root element.
-		`,
-		Header: any`
+		*/
+		className: string,
+
+		/**
 			Alternative to using \`<SidePanel.Header>\`.
-		`,
-		isAnimated: bool`
+		*/
+		Header: any,
+
+		/**
 			Enables animated transitions during expansion and collapse.
-		`,
-		isExpanded: bool`
+		*/
+		isAnimated: bool,
+
+		/**
 			Controls the expanded/collapsed state as a boolean prop.
-		`,
-		isResizeDisabled: bool`
+		*/
+		isExpanded: bool,
+
+		/**
 			When true, hides the resizer at the edge of the SidePanel.
-		`,
-		onCollapse: func`
+		*/
+		isResizeDisabled: bool,
+
+		/**
 			Callback triggered when user clicks the background, hits the Esc key, or
 			clicks the close button in the Header.
 			Signature: \`({ event, props }) => {}\`
-		`,
-		onResize: func`
+		*/
+		onCollapse: func,
+
+		/**
 			Callback triggered after a user resizes to a new width.
 			Signature: \`(width, { event, props }) => {}\`
-		`,
-		position: oneOf(['left', 'right'])`
+		*/
+		onResize: func,
+
+		/**
 			Controls the position on the screen.
-		`,
-		preventBodyScroll: bool`
+		*/
+		position: oneOf(['left', 'right']),
+
+		/**
 			When true, it will prevent scrolling in the background when \`isExpanded\`
 			is true. This is accomplished by setting \`document.body.style.overflow =
 			'hidden'\`.
-		`,
-		width: number`
+		*/
+		preventBodyScroll: bool,
+
+		/**
 			Sets the initial width in pixels. The actual width may change if the user
 			resizes it.
-		`,
-		minWidth: number`
-		Sets the minimum width of the Side Panel.
-		`,
-		maxWidth: number`
-		Sets the maximum width of the Side Panel.
-		`,
-		topOffset: oneOfType([number, string])`
+		*/
+		width: number,
+
+		/**
+			Sets the minimum width of the Side Panel.
+		*/
+		minWidth: number,
+
+		/**
+			Sets the maximum width of the Side Panel.
+		*/
+		maxWidth: number,
+
+		/**
 			Sets the top margin for the panel. Defaults to \`0\`.
-		`,
+		*/
+		topOffset: oneOfType([number, string]),
 	};
 
 	state = {

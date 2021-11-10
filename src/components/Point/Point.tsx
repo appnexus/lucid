@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import PropTypes from 'react-peek/prop-types';
+import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import { omitProps, StandardProps } from '../../util/component-types';
 import { transformFromCenter } from '../../util/chart-helpers';
@@ -108,43 +108,51 @@ Point.peek = {
 };
 
 Point.propTypes = {
-	style: object`
+	/**
 			Passed through to the root element.
-		`,
+		*/
+	style: object,
 
-	className: string`
+	/**
 			Appended to the component-specific class names set on the root element.
-		`,
+		*/
+	className: string,
 
-	hasStroke: bool`
+	/**
 			Determines if the point has a white stroke around it.
-		`,
+		*/
+	hasStroke: bool,
 
-	x: number`
+	/**
 			x coordinate
-		`,
+		*/
+	x: number,
 
-	y: number`
+	/**
 			y coordinate
-		`,
+		*/
+	y: number,
 
-	kind: number`
+	/**
 			Zero-based set of shapes. It's recommended that you pass the index of
 			your array for shapes.
-		`,
+		*/
+	kind: number,
 
-	color: string`
+	/**
 			Strings should match an existing color class unless they start with a '#'
 			for specific colors. E.g.:
 
 			- \`COLOR_0\`
 			- \`COLOR_GOOD\`
 			- \`'#123abc'\`
-		`,
+		*/
+	color: string,
 
-	scale: number`
+	/**
 			Scale up the size of the symbol. 2 would be double the original size.
-		`,
+		*/
+	scale: number,
 };
 
 export default Point;

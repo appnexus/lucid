@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import PropTypes from 'react-peek/prop-types';
+import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import { StandardProps } from '../../util/component-types';
 
@@ -130,13 +130,15 @@ export const NotchedTag = (props: INotchedTagProps): React.ReactElement => {
 NotchedTag.defaultProps = defaultProps;
 NotchedTag.displayName = 'NotchedTag';
 NotchedTag.propTypes = {
-	children: node`
+	/**
 		Any valid React children.
-	`,
+	*/
+	children: node,
 	className: string,
-	type: oneOf(_.values(Type))`
+	/**
 		Style variations.
-	`,
+	*/
+	type: oneOf(_.values(Type)),
 	size: oneOf(_.values(Size)),
 	tagStyle: oneOf(_.values(TagStyle)),
 	style: object,

@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import PropTypes from 'react-peek/prop-types';
+import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import {
 	omitProps,
@@ -153,62 +153,74 @@ Icon.peek = {
 };
 
 export const propTypes = {
-	className: any`
+	/**
 		Classes that are appended to the component defaults. This prop is run
 		through the \`classnames\` library.
-	`,
+	*/
+	className: any,
 
-	size: number`
+	/**
 		Size variations of the icons. \`size\` directly effects height and width
 		but the developer should also be conscious of the relationship with
 		\`viewBox\`.
-	`,
+	*/
+	size: number,
 
-	width: oneOfType([number, string])`
+	/**
 		Size handles width and height, whereas \`width\` can manually override the width that would be set by size.
-	`,
+	*/
+	width: oneOfType([number, string]),
 
-	height: oneOfType([number, string])`
+	/**
 		Size handles width and height, whereas \`height\` can manually override the height that would be set by size.
-	`,
+	*/
+	height: oneOfType([number, string]),
 
-	viewBox: string`
+	/**
 		\`viewBox\` is very important for SVGs. You can think of \`viewBox\` as
 		the "artboard" for our SVG while \`size\` is the presented height and
 		width.
-	`,
+	*/
+	viewBox: string,
 
-	aspectRatio: string`
+	/**
 		Any valid SVG aspect ratio.
-	`,
+	*/
+	aspectRatio: string,
 
-	isClickable: bool`
+	/**
 		Adds styling that makes the icon appear clickable.
-	`,
+	*/
+	isClickable: bool,
 
-	isDisabled: bool`
+	/**
 		Adds styling that makes the icon appear disabled.  Also forces
 		isClickable to be false.
-	`,
+	*/
+	isDisabled: bool,
 
-	onClick: func`
+	/**
 		Called when the user clicks the \`Icon\`. Signature:
 		\`({event, props}) => {}\`
-	`,
+	*/
+	onClick: func,
 
-	onSelect: func`
+	/**
 		Called when the user clicks an active, clickable \`Icon\`. Signature:
 		\`({event, props}) => {}\`
-	`,
+	*/
+	onSelect: func,
 
-	children: any`
+	/**
 		Any valid React children.
-	`,
+	*/
+	children: any,
 
-	color: oneOf(_.values(Color))`
+	/**
 		Sets the color of the Icon.  May not be applicable for icons that are tied
 		to specific colors (e.g. DangerIcon).
-	`,
+	*/
+	color: oneOf(_.values(Color)),
 };
 
 export interface IIconWithDirectionProps extends IIconProps {

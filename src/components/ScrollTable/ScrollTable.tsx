@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import PropTypes from 'react-peek/prop-types';
+import PropTypes from 'prop-types';
 import { StandardProps, omitProps } from '../../util/component-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import Table from '../Table/Table';
@@ -89,30 +89,36 @@ ScrollTable.Th = Table.Th;
 ScrollTable.Td = Table.Td;
 
 ScrollTable.propTypes = {
-	children: node`
+	/**
 		{Thead, Tbody, Tr, Th, Td} are the child components of Scrolltable, same
 		as Table.
-	`,
+	*/
+	children: node,
 
-	className: string`
+	/**
 		Class names that are appended to the defaults.
-	`,
+	*/
+	className: string,
 
-	style: object`
+	/**
 		Styles that are passed through to the root container.
-	`,
+	*/
+	style: object,
 
-	tableWidth: oneOfType([number, string])`
+	/**
 		Set the width of the Table inside the scrollable container.
-	`,
+	*/
+	tableWidth: oneOfType([number, string]),
 
-	hasWordWrap: bool`
+	/**
 		Set the Table contents to not allow word wrapping.
-	`,
+	*/
+	hasWordWrap: bool,
 
-	hasBorder: bool`
+	/**
 		render the table with borders on the outer edge.
-	`,
+	*/
+	hasBorder: bool,
 };
 
 export default ScrollTable;

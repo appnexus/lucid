@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import PropTypes from 'react-peek/prop-types';
+import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import {
 	omitProps,
@@ -148,33 +148,39 @@ RadioButton.peek = {
 };
 
 RadioButton.propTypes = {
-	className: string`
+	/**
 		Appended to the component-specific class names set on the root element.
-	`,
+	*/
+	className: string,
 
-	isDisabled: bool`
+	/**
 		Indicates whether the component should appear and act disabled by having
 		a "greyed out" palette and ignoring user interactions.
-	`,
+	*/
+	isDisabled: bool,
 
-	isSelected: bool`
+	/**
 		Indicates that the component is in the "selected" state when true and in
 		the "unselected" state when false.
-	`,
+	*/
+	isSelected: bool,
 
-	name: string`
+	/**
 	Optional name for the input element.
-	`,
+	*/
+	name: string,
 
-	onSelect: func`
+	/**
 		Called when the user clicks on the component or when they press the space
 		key while the component is in focus, and only called when the component
 		is in the unselected state.  Signature: \`(true, { event, props }) => {}\`
-	`,
+	*/
+	onSelect: func,
 
-	style: object`
+	/**
 		Passed through to the root element.
-	`,
+	*/
+	style: object,
 };
 
 export default RadioButton;

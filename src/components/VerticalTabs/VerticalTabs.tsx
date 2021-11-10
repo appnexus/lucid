@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import PropTypes from 'react-peek/prop-types';
+import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import {
 	findTypes,
@@ -40,9 +40,10 @@ Tab.peek = {
 };
 Tab.propName = 'Tab';
 Tab.propTypes = {
-	isSelected: bool`
+	/**
         Determines if the Tab is selected.
-    `,
+    */
+	isSelected: bool,
 };
 
 /** Vertical Tabs Title Child Component */
@@ -58,17 +59,24 @@ Title.propName = 'Title';
 
 /** Vertical Tabs Component */
 interface IVerticalTabsPropsRaw extends StandardProps {
-	/** Custom Tab component (alias for `VerticalTabs.Tab`) */
+	/**
+	 * Custom Tab component (alias for `VerticalTabs.Tab`)
+	 */
 	Tab?: React.ReactNode;
 
-	/** Custom Title component (alias for `VerticalTabs.Title`) */
+	/**
+	 * Custom Title component (alias for `VerticalTabs.Title`)
+	 */
 	Title?: React.ReactNode;
 
-	/** Indicates which of the \`VerticalTabs.Tab\` children is currently
-    selected */
+	/**
+	 * Indicates which of the \`VerticalTabs.Tab\` children is currently selected
+	 */
 	selectedIndex: number;
 
-	/** Callback fired when the user selects a \`VerticalListMenu.Item\`.*/
+	/**
+	 * Callback fired when the user selects a \`VerticalListMenu.Item\`.
+	 */
 	onSelect: (
 		index: number,
 		{
@@ -102,20 +110,23 @@ class VerticalTabs extends React.Component<
 > {
 	static displayName = 'VerticalTabs';
 	static propTypes = {
-		className: string`
+		/**
 			Class names that are appended to the defaults.
-		`,
+		*/
+		className: string,
 
-		selectedIndex: number`
+		/**
 			Indicates which of the \`VerticalTabs.Tab\` children is currently
 			selected. The index of the last \`VerticalTabs.Tab\` child with
 			\`isSelected\` equal to \`true\` takes precedence over this prop.
-		`,
+		*/
+		selectedIndex: number,
 
-		onSelect: func`
+		/**
 			Callback for when the user clicks a tab. Called with the index of the tab
 			that was clicked.  Signature: \`(index, { event, props}) => {}\`
-		`,
+		*/
+		onSelect: func,
 	};
 
 	static defaultProps = defaultProps;

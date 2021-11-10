@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React, { useRef } from 'react';
-import PropTypes from 'react-peek/prop-types';
+import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import { buildModernHybridComponent } from '../../util/state-management';
 import DotsIcon from '../Icon/DotsIcon/DotsIcon';
@@ -35,7 +35,7 @@ DraggableListItem.peek = {
 };
 DraggableListItem.propName = 'Item';
 DraggableListItem.propTypes = {
-	children: PropTypes.node``,
+	children: PropTypes.node /**/,
 };
 
 interface IDraggableListPropsRaw extends StandardProps {
@@ -244,40 +244,59 @@ DraggableList.peek = {
 	categories: ['controls'],
 };
 DraggableList.propTypes = {
-	className: string`
-	Appended to the component-specific class names set on the root element.
-`,
-	style: object`
-	Passed through to the root element.
-`,
-	hasDragHandle: bool`
-	Render a drag handle on list items
-`,
-	dragIndex: number`
-	Index of the item the drag was started on
-`,
-	dragOverIndex: number`
-	Index of the item the dragged item is hovered over
-`,
-	onDragStart: func`
-	Called when the user starts to drag an item.
-	Signature: \`(dragIndex, { event, props }) => {}\`
-`,
-	onDragEnd: func`
-	Called when the user stops to dragging an item.
-	Signature: \`({ event, props }) => {}\`
-`,
-	onDragOver: func`
-	Called when the user drags an item over another item.
-	Signature: \`(dragOverIndex, { event, props }) => {}\`
-`,
-	onDrop: func`
-	Called when the user drops an item in the list
-	Signature: \`({oldIndex, newIndex}, { event, props }) => {}\`
-`,
-	Item: PropTypes.any`
-	Props for DraggableList.Item
-`,
+	/**
+		Appended to the component-specific class names set on the root element.
+	*/
+	className: string,
+
+	/**
+		Passed through to the root element.
+	*/
+	style: object,
+
+	/**
+		Render a drag handle on list items
+	*/
+	hasDragHandle: bool,
+
+	/**
+		Index of the item the drag was started on
+	*/
+	dragIndex: number,
+
+	/**
+		Index of the item the dragged item is hovered over
+	*/
+	dragOverIndex: number,
+
+	/**
+		Called when the user starts to drag an item.
+		Signature: \`(dragIndex, { event, props }) => {}\`
+	*/
+	onDragStart: func,
+
+	/**
+		Called when the user stops to dragging an item.
+		Signature: \`({ event, props }) => {}\`
+	*/
+	onDragEnd: func,
+
+	/**
+		Called when the user drags an item over another item.
+		Signature: \`(dragOverIndex, { event, props }) => {}\`
+	*/
+	onDragOver: func,
+
+	/**
+		Called when the user drops an item in the list
+		Signature: \`({oldIndex, newIndex}, { event, props }) => {}\`
+	*/
+	onDrop: func,
+
+	/**
+		Props for DraggableList.Item
+	*/
+	Item: PropTypes.any,
 };
 
 export default buildModernHybridComponent<

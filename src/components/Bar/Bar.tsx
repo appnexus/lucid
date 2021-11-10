@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import PropTypes from 'react-peek/prop-types';
+import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import { omitProps, StandardProps } from '../../util/component-types';
 import * as chartConstants from '../../constants/charts';
@@ -93,42 +93,50 @@ Bar.peek = {
 	categories: ['visualizations', 'geoms'],
 };
 Bar.propTypes = {
-	style: object`
+	/**
 		Passed through to the root element.
-	`,
+	*/
+	style: object,
 
-	className: string`
+	/**
 		Appended to the component-specific class names set on the root element.
-	`,
+	*/
+	className: string,
 
-	x: number`
+	/**
 		x coordinate.
-	`,
+	*/
+	x: number,
 
-	y: number`
+	/**
 		y coordinate.
-	`,
+	*/
+	y: number,
 
-	height: PropTypes.oneOfType([number, string])`
+	/**
 		Height of the bar.
-	`,
+	*/
+	height: PropTypes.oneOfType([number, string]),
 
-	width: PropTypes.oneOfType([number, string])`
+	/**
 		Width of the bar.
-	`,
+	*/
+	width: PropTypes.oneOfType([number, string]),
 
-	hasStroke: bool`
+	/**
 		Determines if the bar has a white stroke around it.
-	`,
+	*/
+	hasStroke: bool,
 
-	color: string`
+	/**
 		Strings should match an existing color class unless they start with a '#'
 		for specific colors. E.g.:
 
 		- \`COLOR_0\`
 		- \`COLOR_GOOD\`
 		- \`'#123abc'\`
-	`,
+	*/
+	color: string,
 };
 
 export default Bar;

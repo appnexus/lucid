@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import _ from 'lodash';
 import React, { useState } from 'react';
-import PropTypes from 'react-peek/prop-types';
+import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import {
 	findTypes,
@@ -691,74 +691,88 @@ export const DataTable = (props: IDataTableProps) => {
 DataTable.displayName = 'DataTable';
 
 DataTable.propTypes = {
-	className: stringProps`
+	/**
 		Class names that are appended to the defaults.
-	`,
+	*/
+	className: stringProps,
 
-	data: arrayOf(object)`
+	/**
 		Array of objects to be rendered in the table. Object keys match the
 		\`field\` of each defined \`DataTable.Column\`.
-	`,
+	*/
+	data: arrayOf(object),
 
-	emptyCellText: stringProps`
+	/**
 		The text to display in cells which have no data.
-	`,
+	*/
+	emptyCellText: stringProps,
 
-	isActionable: bool`
+	/**
 		Render each row item to be navigable, allowing \`onRowClick\` to be
 		triggered.
-	`,
+	*/
+	isActionable: bool,
 
-	isFullWidth: bool`
+	/**
 		If \`true\`, the table will be set to fill the width of its parent
 		container.
-	`,
+	*/
+	isFullWidth: bool,
 
-	isLoading: bool`
+	/**
 		Controls the visibility of the \`LoadingMessage\`.
-	`,
+	*/
+	isLoading: bool,
 
-	isSelectable: bool`
+	/**
 		Render a checkbox in the first column allowing \`onSelect\` and
 		\`onSelectAll\` to be triggered.
-	`,
+	*/
+	isSelectable: bool,
 
-	anchorMessage: bool`
+	/**
 		Position the \`EmptyMessage\` and \`LoadingMessage\` near the top of the container. 
 		By default, they are vertically aligned to the middle of the table. Useful
 		for tables with many rows that extend past the viewport.
-	`,
+	*/
+	anchorMessage: bool,
 
-	style: object`
+	/**
 		Styles that are passed through to the root container.
-	`,
+	*/
+	style: object,
 
-	minRows: number`
+	/**
 		The minimum number of rows to rendered. If not enough data is provided,
 		the remainder will be shown as empty rows.
-	`,
+	*/
+	minRows: number,
 
-	onRowClick: func`
+	/**
 		Handler for row click. Signature is
 		\`(object, index, { props, event }) => {...}\`
-	`,
+	*/
+	onRowClick: func,
 
-	onSelect: func`
+	/**
 		Handler for checkbox selection. Signature is
 		\`(object, index, { props, event }) => {...}\`
-	`,
+	*/
+	onSelect: func,
 
-	onSelectAll: func`
+	/**
 		Handler for checkbox selection in the table header. Signature is
 		\`({ props, event }) => {...}\`
-	`,
+	*/
+	onSelectAll: func,
 
-	onSort: func`
+	/**
 		Handler for column header click (for sorting). Signature is
 		\`(field, { props, event }) => {...}\`
-	`,
+	*/
+	onSort: func,
 
-	hasFixedHeader: bool`
+	hasFixedHeader: bool /**
 		If \`true\` the table will have a fixed header set. *Note* this feature
 		imposes some limitations with respect to the styling and usage of your
 		table. Here are those caveats:
@@ -782,23 +796,26 @@ DataTable.propTypes = {
 			we could support them at some point but its not a priority at the moment.
 		- You have to be careful about table cell height overflow. There are
 			cases where this can break the alignment of fixed columns.
-	`,
+	*/,
 
-	fixedColumnCount: number`
+	/**
 		Sets the number of columns you want to have fixed. You must specify
 		\`fixedRowHeight\` and enable \`hasFixedHeader\`when setting this prop.
-	`,
+	*/
+	fixedColumnCount: number,
 
-	fixedRowHeight: number`
+	/**
 		Determines the height of every row in the DataTable. It's required when
 		using the \`fixedColumnCount\` prop.
-	`,
+	*/
+	fixedRowHeight: number,
 
-	truncateContent: bool`
+	/**
 		Truncates \`Table.Td\` content with ellipses, must be used with \`hasFixedHeader\`
-	`,
+	*/
+	truncateContent: bool,
 
-	Column: any`
+	Column: any /**
 		*Child Element*
 
 		Used to define a column of the table. It accepts the same props as
@@ -806,9 +823,9 @@ DataTable.propTypes = {
 
 		- the required prop \`field\`
 		- the optional prop \`title\`
-	`,
+	*/,
 
-	ColumnGroup: any`
+	ColumnGroup: any /**
 		*Child Element*
 
 		_Note_: column groups are *not* compatible with \`hasFixedHeader\`.
@@ -817,7 +834,7 @@ DataTable.propTypes = {
 		as \`Table.Th\` in addition to:
 
 		- the optional prop \`title\`
-	`,
+	*/,
 };
 
 DataTable.defaultProps = defaultProps;

@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'react-peek/prop-types';
+import PropTypes from 'prop-types';
 import _ from 'lodash';
 import { lucidClassNames } from '../../util/style-helpers';
 import CloseIcon from '../Icon/CloseIcon/CloseIcon';
@@ -144,38 +144,45 @@ Tag.peek = {
 };
 
 Tag.propTypes = {
-	isTop: bool`
+	/**
 		Set this prop if you're using three levels of tags so it can be styled
 		appropriately. This is required because we aren't able to know if your
 		Tags have grand children efficiently.
-	`,
+	*/
+	isTop: bool,
 
-	hasLightBackground: bool`
+	/**
 		Use the light background when your tags are on a white page background.
 		Use a dark background when your tags need to be placed on a darker
 		background (e.g. in a page header).
-	`,
+	*/
+	hasLightBackground: bool,
 
-	isRemovable: bool`
+	/**
 		Shows or hides the little "x" for a given tag.
-	`,
+	*/
+	isRemovable: bool,
 
-	kind: oneOf(['primary', 'success', 'warning', 'danger', 'info', 'default'])`
+	/**
 		Style variations of the \`Tag\`.
-	`,
+	*/
+	kind: oneOf(['primary', 'success', 'warning', 'danger', 'info', 'default']),
 
-	onRemove: func`
+	/**
 		Called when the user clicks to remove a tag.  Signature:
 		\`({props, event}) => {}\`
-	`,
+	*/
+	onRemove: func,
 
-	children: node`
+	/**
 		Can contain elements or nested \`Tag\` components.
-	`,
+	*/
+	children: node,
 
-	className: string`
+	/**
 		Appended to the component-specific class names set on the root element.
-	`,
+	*/
+	className: string,
 };
 
 export default Tag;

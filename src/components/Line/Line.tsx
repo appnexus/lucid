@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import PropTypes from 'react-peek/prop-types';
+import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import { omitProps, StandardProps } from '../../util/component-types';
 import * as chartConstants from '../../constants/charts';
@@ -69,28 +69,33 @@ Line.peek = {
 	categories: ['visualizations', 'geoms'],
 };
 Line.propTypes = {
-	style: object`
+	/**
 		Passed through to the root element.
-	`,
+	*/
+	style: object,
 
-	className: string`
+	/**
 		Appended to the component-specific class names set on the root element.
-	`,
+	*/
+	className: string,
 
-	d: string`
+	/**
 		The path for the line.
-	`,
+	*/
+	d: string,
 
-	color: string`
+	/**
 		Strings should match an existing color class unless they start with a '#' for specific colors. E.g.:
 
 		- \`COLOR_0\`
 		- \`COLOR_GOOD\`
 		- \`'#123abc'\`
-	`,
-	isDotted: bool`
+	*/
+	color: string,
+	/**
 		Display a dotted line.
-	`,
+	*/
+	isDotted: bool,
 };
 
 export default Line;

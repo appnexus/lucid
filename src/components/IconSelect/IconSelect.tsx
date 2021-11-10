@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import PropTypes from 'react-peek/prop-types';
+import PropTypes from 'prop-types';
 
 import Icon from '../Icon/Icon';
 import RadioButtonLabeled from '../RadioButtonLabeled/RadioButtonLabeled';
@@ -193,15 +193,20 @@ IconSelect.peek = {
 };
 
 IconSelect.propTypes = {
-	className: string`
+	/**
 		Appended to the component-specific class names set on the root element.
 		Value is run through the \`classnames\` library.
-	`,
+	*/
+	className: string,
 
-	children: node`
+	/**
 		Added to the end of the IconSelect group.
-	`,
+	*/
+	children: node,
 
+	/**
+		Items in the IconSelect group. Each item should have an id.
+	*/
 	items: arrayOf(
 		shape({
 			id: string.isRequired,
@@ -213,23 +218,24 @@ IconSelect.propTypes = {
 			isDisabled: bool,
 			className: string,
 		})
-	).isRequired`
-		Items in the IconSelect group. Each item should have an id.
-	`,
+	).isRequired,
 
-	kind: oneOf(['single', 'multiple'])`
+	/**
 		Defines the type of IconSelect box. A 'single' select will create a radio
 		input type Item. A 'multiple' select will create a checkbox input type.
-	`,
+	*/
+	kind: oneOf(['single', 'multiple']),
 
-	onSelect: func`
+	/**
 		A function that is called with the id of the Item in the IconSelect group
 		is clicked.  Signature: \`(id, { event }) => {}\`
-	`,
+	*/
+	onSelect: func,
 
-	isDisabled: bool`
+	/**
 		Disabled all IconSelect Items.
-	`,
+	*/
+	isDisabled: bool,
 };
 
 export default IconSelect;

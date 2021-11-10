@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React, { ReactElement } from 'react';
-import PropTypes from 'react-peek/prop-types';
+import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import {
 	filterTypes,
@@ -51,14 +51,16 @@ Thead.peek = {
 };
 
 Thead.propTypes = {
-	className: any`
+	/**
 		Appended to the component-specific class names set on the root element.
 		Value is run through the \`classnames\` library.
-	`,
+	*/
+	className: any,
 
-	children: node`
+	/**
 		any valid React children
-	`,
+	*/
+	children: node,
 };
 
 /** Tbody <Tbody>: The Table Body component */
@@ -94,14 +96,16 @@ Tbody.peek = {
 };
 
 Tbody.propTypes = {
-	className: any`
+	/**
 		Appended to the component-specific class names set on the root element.
 		Value is run through the \`classnames\` library.
-	`,
+	*/
+	className: any,
 
-	children: node`
+	/**
 		any valid React children
-	`,
+	*/
+	children: node,
 };
 
 /** Tr <Tr>: The Table Row component */
@@ -175,27 +179,32 @@ Tr.peek = {
 };
 
 Tr.propTypes = {
-	children: node`
+	/**
 		any valid React children
-	`,
+	*/
+	children: node,
 
-	className: any`
+	/**
 		Appended to the component-specific class names set on the root element.
 		Value is run through the \`classnames\` library.
-	`,
+	*/
+	className: any,
 
-	isDisabled: bool`
+	/**
 		Applies disabled styles to the row.
-	`,
+	*/
+	isDisabled: bool,
 
-	isSelected: bool`
+	/**
 		Applies styles to the row for when the row is selected, usually by a
 		checkbox.
-	`,
+	*/
+	isSelected: bool,
 
-	isActive: bool`
+	/**
 		Applies active styles to the row, usually when the row has been clicked.
-	`,
+	*/
+	isActive: bool,
 };
 
 /** Th <Th>: The Table Header Cell components */
@@ -315,89 +324,109 @@ export class Th extends React.Component<IThProps, IThState> {
 	};
 
 	static propTypes = {
-		align: string`
+		/**
 			Aligns the content of a cell. Can be \`left\`, \`center\`, or \`right\`.
-		`,
+		*/
+		align: string,
 
-		children: node`
+		/**
 			any valid React children
-		`,
+		*/
+		children: node,
 
-		className: any`
+		/**
 			Appended to the component-specific class names set on the root element.
 			Value is run through the \`classnames\` library.
-		`,
+		*/
+		className: any,
 
-		hasBorderRight: bool`
+		/**
 			Should be \`true\` to render a right border.
-		`,
+		*/
+		hasBorderRight: bool,
 
-		hasBorderLeft: bool`
+		/**
 			Should be \`true\` to render a left border.
-		`,
+		*/
+		hasBorderLeft: bool,
 
-		isResizable: bool`
+		/**
 			Styles the cell to indicate it should be resizable and sets up drag-
 			related events to enable this resizing functionality.
-		`,
+		*/
+		isResizable: bool,
 
-		isSortable: bool`
+		/**
 			Styles the cell to allow column sorting.
-		`,
+		*/
+		isSortable: bool,
 
-		isSorted: bool`
+		/**
 			Renders a caret icon to show that the column is sorted.
-		`,
+		*/
+		isSorted: bool,
 
-		onResize: func`
+		/**
 			Called as the user drags the resize handle to resize the column atop
 			which this table header cell sits.
-		`,
+		*/
+		onResize: func,
 
-		sortDirection: oneOf(['left', 'up', 'right', 'down', undefined])`
+		/**
 			Sets the direction of the caret icon when \`isSorted\` is also set.
-		`,
+		*/
+		sortDirection: oneOf(['left', 'up', 'right', 'down', undefined]),
 
-		style: object`
+		/**
 			Styles that are passed through to root element.
-		`,
+		*/
+		style: object,
 
-		width: oneOfType([number, string])`
+		/**
 			Sets the width of the cell.
-		`,
+		*/
+		width: oneOfType([number, string]),
 
-		minWidth: oneOfType([number, string])`
+		/**
 			Sets the min width of the cell.
-		`,
+		*/
+		minWidth: oneOfType([number, string]),
 
-		isFirstRow: bool`
+		/**
 			Define the cell as being in the first row.
-		`,
+		*/
+		isFirstRow: bool,
 
-		isLastRow: bool`
+		/**
 			Define the cell as being in the last row.
-		`,
+		*/
+		isLastRow: bool,
 
-		isFirstCol: bool`
+		/**
 			Define the cell as being in the first column.
-		`,
+		*/
+		isFirstCol: bool,
 
-		isLastCol: bool`
+		/**
 			Define the cell as being in the last column.
-		`,
+		*/
+		isLastCol: bool,
 
-		isFirstSingle: bool`
+		/**
 			Define the cell as being the first 1-height cell in the row.
-		`,
+		*/
+		isFirstSingle: bool,
 
-		field: string`
+		/**
 			Sets the field value for the cell.
-		`,
+		*/
+		field: string,
 
 		/** Truncates `Table.Td` content with ellipses, must be used with `hasFixedHeader` */
-		truncateContent: bool`
+		/**
 			Truncates header and adds ellipses.
-		`,
+		*/
+		truncateContent: bool,
 	};
 
 	private rootRef = React.createRef<HTMLTableHeaderCellElement>();
@@ -741,50 +770,61 @@ Td.peek = {
 };
 
 Td.propTypes = {
-	align: oneOf(['left', 'center', 'right'])`
+	/**
 		Aligns the content of a cell. Can be \`left\`, \`center\`, or \`right\`.
-	`,
+	*/
+	align: oneOf(['left', 'center', 'right']),
 
-	className: any`
+	/**
 		Appended to the component-specific class names set on the root element.
 		Value is run through the \`classnames\` library.
-	`,
+	*/
+	className: any,
 
-	hasBorderRight: bool`
+	/**
 		Should be \`true\` to render a right border.
-	`,
+	*/
+	hasBorderRight: bool,
 
-	hasBorderLeft: bool`
+	/**
 		Should be \`true\` to render a left border.
-	`,
+	*/
+	hasBorderLeft: bool,
 
-	isFirstRow: bool`
+	/**
 		Define the cell as being in the first row.
-	`,
+	*/
+	isFirstRow: bool,
 
-	isLastRow: bool`
+	/**
 		Define the cell as being in the last row.
-	`,
+	*/
+	isLastRow: bool,
 
-	isFirstCol: bool`
+	/**
 		Define the cell as being in the first column.
-	`,
+	*/
+	isFirstCol: bool,
 
-	isLastCol: bool`
+	/**
 		Define the cell as being in the last column.
-	`,
+	*/
+	isLastCol: bool,
 
-	isFirstSingle: bool`
+	/**
 		Define the cell as being the first 1-height cell in the row.
-	`,
+	*/
+	isFirstSingle: bool,
 
-	isEmpty: bool`
+	/**
 		Indicates if the cell has any data or not.
-	`,
+	*/
+	isEmpty: bool,
 
-	truncateContent: bool`
+	/**
 		Truncates \`Table.Td\` content with ellipses, must be used with \`hasFixedHeader\`
-	`,
+	*/
+	truncateContent: bool,
 };
 
 /** Table <Table> The Table Component */
@@ -858,33 +898,40 @@ Table.peek = {
 };
 
 Table.propTypes = {
-	style: object`
+	/**
 		Styles that are passed through to the root container.
-	`,
+	*/
+	style: object,
 
-	className: string`
+	/**
 		Class names that are appended to the defaults.
-	`,
+	*/
+	className: string,
 
-	density: oneOf(['compressed', 'extended'])`
+	/**
 		Adjusts the row density of the table to have more or less spacing.
-	`,
+	*/
+	density: oneOf(['compressed', 'extended']),
 
-	hasLightHeader: bool`
+	/**
 		Allows light header.
-	`,
+	*/
+	hasLightHeader: bool,
 
-	hasBorder: bool`
+	/**
 		Render the table with borders on the outer edge.
-	`,
+	*/
+	hasBorder: bool,
 
-	hasWordWrap: bool`
+	/**
 		Enables word wrapping in tables cells.
-	`,
+	*/
+	hasWordWrap: bool,
 
-	hasHover: bool`
+	/**
 		Applies a row hover to rows. Defaults to true.
-	`,
+	*/
+	hasHover: bool,
 };
 
 /** ChildComponents */

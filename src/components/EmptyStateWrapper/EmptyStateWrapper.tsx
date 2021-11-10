@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import PropTypes from 'react-peek/prop-types';
+import PropTypes from 'prop-types';
 import { getFirst, omitProps, StandardProps } from '../../util/component-types';
 import { lucidClassNames } from '../../util/style-helpers';
 
@@ -126,33 +126,40 @@ EmptyStateWrapper.displayName = 'EmptyStateWrapper';
 EmptyStateWrapper.defaultProps = defaultProps;
 
 EmptyStateWrapper.propTypes = {
-	className: string`
+	/**
 		Class names that are appended to the defaults.
-	`,
+	*/
+	className: string,
 
-	children: node`
+	/**
 		Any valid React children.
-	`,
+	*/
+	children: node,
 
-	isEmpty: bool`
+	/**
 		Controls the visibility of the \`EmptyMessage\`.
-	`,
+	*/
+	isEmpty: bool,
 
-	isLoading: bool`
+	/**
 		Controls the visibility of the \`LoadingMessage\`.
-	`,
+	*/
+	isLoading: bool,
 
-	anchorMessage: bool`
+	/**
 		Position the \`EmptyMessage\` and \`LoadingMessage\` near the top of the container.
-	`,
+	*/
+	anchorMessage: bool,
 
-	Body: any`
-		*Child Element* The element to display in the body of the overlay.
-	`,
+	/**
+	 * Child Element* The element to display in the body of the overlay.
+	 */
+	Body: any,
 
-	Title: any`
-		*Child Element* The element to display in the title of the overlay.
-	`,
+	/**
+	 * Child Element* The element to display in the title of the overlay.
+	 */
+	Title: any,
 };
 
 EmptyStateWrapperBody.displayName = 'EmptyStateWrapper.Body';

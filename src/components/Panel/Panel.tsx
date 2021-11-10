@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import PropTypes from 'react-peek/prop-types';
+import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import {
 	findTypes,
@@ -139,32 +139,42 @@ Panel.peek = {
 	categories: ['layout'],
 };
 Panel.propTypes = {
-	className: string`
+	/**
 		Appended to the component-specific class names set on the root element.
-	`,
-	Header: node`
-		*Child Element* - Header contents. Only one \`Header\` is used.
-	`,
-	Footer: node`
-		*Child Element* - Footer contents. Only one \`Footer\` is used.
-	`,
-	children: node`
+	*/
+	className: string,
+
+	/*
+	 *Child Element* - Header contents. Only one \`Header\` is used.
+	 */
+	Header: node,
+
+	/**
+	 *Child Element* - Footer contents. Only one \`Footer\` is used.
+	 */
+	Footer: node,
+
+	/**
 		Generally you should only have a single child element so the centering
 		works correctly.
-	`,
-	isGutterless: bool`
+	*/
+	children: node,
+
+	/**
 		If set to true, creates a content section with no padding.
-	`,
-	hasMargin: bool`
-		If set to false, removes margin around the Panel
-	`,
-	style: object`
+	*/
+	isGutterless: bool,
+
+	/**
 		Styles that are passed through to root element.
-	`,
-	isScrollable: bool`
+	*/
+	style: object,
+
+	/**
 		If set to true, makes content overflow scrollable, when Panel has a set
 		height.
-	`,
+	*/
+	isScrollable: bool,
 };
 Panel.Header = PanelHeader;
 Panel.Footer = PanelFooter;

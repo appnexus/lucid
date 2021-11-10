@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import PropTypes from 'react-peek/prop-types';
+import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import {
 	filterTypes,
@@ -41,16 +41,19 @@ ButtonChild.peek = {
 	`,
 };
 ButtonChild.propTypes = {
-	children: node`
+	/**
 		The children to render within the \`Button\`.
-	`,
-	isDisabled: bool`
+	*/
+	children: node,
+	/**
 		Disables selection of the \`Button\`.
-	`,
-	onClick: func`
+	*/
+	isDisabled: bool,
+	/**
 		Called when the user clicks the \`Button\`.  Signature:
 		\`({ props, event }) => {}\`
-	`,
+	*/
+	onClick: func,
 };
 
 export interface ISplitButtonProps extends StandardProps {
@@ -87,38 +90,45 @@ class SplitButton extends React.Component<ISplitButtonProps> {
 	static reducers = reducers;
 
 	static propTypes = {
-		DropMenu: shape(DropMenu.propTypes)`
+		/**
 			Object of DropMenu props which are passed through to the underlying
 			DropMenu component.
-		`,
+		*/
+		DropMenu: shape(DropMenu.propTypes),
 
-		children: node`
+		/**
 			All children should be \`ButtonGroup.Button\`s and they support the same
 			props as \`Button\`s.
-		`,
+		*/
+		children: node,
 
-		className: string`
+		/**
 			Appended to the component-specific class names set on the root element.
 			Value is run through the \`classnames\` library.
-		`,
+		*/
+		className: string,
 
-		direction: oneOf(['up', 'down'])`
+		/**
 			Sets the direction the flyout menu will render relative to the
 			SplitButton.
-		`,
+		*/
+		direction: oneOf(['up', 'down']),
 
-		kind: oneOf(['primary', 'danger'])`
+		/**
 			Style variations of the SplitButton.
-		`,
+		*/
+		kind: oneOf(['primary', 'danger']),
 
-		size: oneOf(['short', 'small', 'large'])`
+		/**
 			Size variations of the SplitButton.
-		`,
+		*/
+		size: oneOf(['short', 'small', 'large']),
 
-		type: string`
+		/**
 			Form element type variations of SplitButton. Passed through to DOM
 			Button.
-		`,
+		*/
+		type: string,
 	};
 
 	static defaultProps = {

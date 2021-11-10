@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import PropTypes from 'react-peek/prop-types';
+import PropTypes from 'prop-types';
 import { CSSTransition } from 'react-transition-group';
 import { lucidClassNames } from '../../util/style-helpers';
 import { getFirst, omitProps, StandardProps } from '../../util/component-types';
@@ -123,10 +123,11 @@ Label.peek = {
 Label.propName = 'Label';
 
 Label.propTypes = {
-	children: node`
+	/**
 		Used to identify the purpose of this switch to the user -- can be any
 		renderable content.
-	`,
+	*/
+	children: node,
 };
 
 SwitchLabeled.Label = Label;
@@ -134,18 +135,21 @@ SwitchLabeled.Label = Label;
 SwitchLabeled.propTypes = {
 	...Switch.propTypes,
 
-	className: string`
+	/**
 		Appended to the component-specific class names set on the root element.
-	`,
+	*/
+	className: string,
 
-	style: object`
+	/**
 		Passed through to the root element.
-	`,
+	*/
+	style: object,
 
-	Label: any`
+	/**
 		Child element whose children are used to identify the purpose of this
 		switch to the user.
-	`,
+	*/
+	Label: any,
 };
 
 export default SwitchLabeled;

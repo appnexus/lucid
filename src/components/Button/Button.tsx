@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'react-peek/prop-types';
+import PropTypes from 'prop-types';
 import _ from 'lodash';
 import { lucidClassNames } from '../../util/style-helpers';
 import {
@@ -150,41 +150,50 @@ Button.peek = {
 Button.propName = 'Button';
 
 Button.propTypes = {
-	isDisabled: bool`
+	/**
 		Disables the Button by greying it out
-	`,
+	*/
+	isDisabled: bool,
 
-	isActive: bool`
+	/**
 		Activates the Button by giving it a "pressed down" look
-	`,
+	*/
+	isActive: bool,
 
-	className: string`
+	/**
 		Class names that are appended to the defaults
-	`,
+	*/
+	className: string,
 
-	hasOnlyIcon: bool`
+	/**
 		Set this to \`true\` if you want the Button to only contain an icon.
-	`,
+	*/
+	hasOnlyIcon: bool,
 
-	children: oneOfType([node, arrayOf(node)])`
+	/**
 		Any valid React children
-	`,
+	*/
+	children: oneOfType([node, arrayOf(node)]),
 
-	kind: oneOf(['primary', 'link', 'danger', 'invisible'])`
+	/**
 		Style variations of the Button
-	`,
+	*/
+	kind: oneOf(['primary', 'link', 'danger', 'invisible']),
 
-	size: oneOf(['short', 'small', 'large'])`
+	/**
 		Size variations of the Button
-	`,
+	*/
+	size: oneOf(['short', 'small', 'large']),
 
-	onClick: func`
+	/**
 		Called when the user clicks the \`Button\`.
-	`,
+	*/
+	onClick: func,
 
-	type: string`
+	/**
 		Form element type variations of Button. Passed through to DOM Button.
-	`,
+	*/
+	type: string,
 };
 
 export default Button;

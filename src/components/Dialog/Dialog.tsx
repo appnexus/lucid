@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import PropTypes from 'react-peek/prop-types';
+import PropTypes from 'prop-types';
 import Overlay, { IOverlayProps } from '../Overlay/Overlay';
 import { lucidClassNames } from '../../util/style-helpers';
 import { StandardProps, getFirst, omitProps } from '../../util/component-types';
@@ -156,33 +156,39 @@ Dialog.peek = {
 Dialog.propTypes = {
 	...Overlay.propTypes,
 
-	size: oneOf(['small', 'medium', 'large'])`
+	/**
 		Size variations that only affect the width of the dialog. All the sizes
 		will grow in height until they get too big, at which point they will
 		scroll inside.
-	`,
+	*/
+	size: oneOf(['small', 'medium', 'large']),
 
-	handleClose: func`
+	/**
 		If this is truthy (if a function is provided). the close button will show.
 		The function that is called when the close button is triggered.
-	`,
+	*/
+	handleClose: func,
 
-	isComplex: bool`
+	/**
 		Defaults to false.
 		Provides a more segregated design to organize more content in the Dialog.
-	`,
+	*/
+	isComplex: bool,
 
-	hasGutters: bool`
+	/**
 		A true or false value that dictates whether or not the Body has padding.
-	`,
+	*/
+	hasGutters: bool,
 
-	Header: node`
-		*Child Element* - Header contents. Only one \`Header\` is used.
-	`,
+	Header: node,
+	/*
+	 *Child Element* - Header contents. Only one \`Header\` is used.
+	 */
 
-	Footer: node`
-		*Child Element* - Footer contents. Only one \`Footer\` is used.
-	`,
+	Footer: node,
+	/*
+	 *Child Element* - Footer contents. Only one \`Footer\` is used.
+	 */
 };
 Dialog.Header = DialogHeader;
 Dialog.Footer = DialogFooter;

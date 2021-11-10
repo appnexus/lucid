@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'react-peek/prop-types';
+import PropTypes from 'prop-types';
 import DayPicker from 'react-day-picker';
 import { lucidClassNames } from '../../util/style-helpers';
 import { StandardProps } from '../../util/component-types';
@@ -83,42 +83,50 @@ class CalendarMonth extends React.Component<ICalendarProps, {}, {}> {
 		categories: ['helpers'],
 	};
 	static propTypes = {
-		className: string`
+		/**
 			Appended to the component-specific class names set on the root element.
-		`,
+		*/
+		className: string,
 
-		monthOffset: number`
+		/**
 			The offset of the rendered month, where 0 is the \`initialMonth\`.
 			Negative values will show previous months.
-		`,
+		*/
+		monthOffset: number,
 
-		initialMonth: instanceOf(Date)`
+		/**
 			Sets the month of the calendar. The 0 value for the \`monthOffset\` prop
 			refers to this month.
-		`,
+		*/
+		initialMonth: instanceOf(Date),
 
-		cursor: instanceOf(Date)`
+		/**
 			Set the cursor to target date. Primarily used to preview expected ranges
 			when the cursor is on a target date.
-		`,
+		*/
+		cursor: instanceOf(Date),
 
-		from: instanceOf(Date)`
+		/**
 			Sets the start date in a date range.
-		`,
+		*/
+		from: instanceOf(Date),
 
-		to: instanceOf(Date)`
+		/**
 			Sets the end date in a date range.
-		`,
+		*/
+		to: instanceOf(Date),
 
-		selectMode: oneOf(['day', 'from', 'to'])`
+		/**
 			The next selection that is expected. Primarily used to preview expected
 			ranges when the cursor is on a target date.
-		`,
+		*/
+		selectMode: oneOf(['day', 'from', 'to']),
 
-		shouldComponentUpdate: bool`
+		/**
 			Used to skip re-rendering of this component when true. Primarily used for
 			CalendarMonths which are rendered out of view.
-		`,
+		*/
+		shouldComponentUpdate: bool,
 	};
 
 	static defaultProps = {

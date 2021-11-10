@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import PropTypes from 'react-peek/prop-types';
+import PropTypes from 'prop-types';
 
 import Validation, { IValidationProps } from '../Validation/Validation';
 import TextField, {
@@ -56,21 +56,25 @@ class TextFieldValidated extends React.Component<
 	static reducers = reducers;
 
 	static propTypes = {
-		style: object`
+		/**
 			Passed to the root container.
-		`,
+		*/
+		style: object,
 
-		className: string`
+		/**
 			Passed to the root container.
-		`,
+		*/
+		className: string,
 
-		Error: any`
+		/**
 			Prop alternative to Error child component
-		`,
+		*/
+		Error: any,
 
-		Info: string`
+		/**
 			Optional information text that is styled less aggressively than an error
-		`,
+		*/
+		Info: string,
 	};
 
 	static defaultProps = TextField.defaultProps;

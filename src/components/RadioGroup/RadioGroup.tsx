@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import PropTypes from 'react-peek/prop-types';
+import PropTypes from 'prop-types';
 import { lucidClassNames, uniqueName } from '../../util/style-helpers';
 import {
 	getFirst,
@@ -173,38 +173,44 @@ const RadioGroup = (props: IRadioGroupProps) => {
 RadioGroup.displayName = 'RadioGroup';
 
 RadioGroup.propTypes = {
-	children: node`
+	/**
     			Should be instances of \`RadioGroup.RadioButton\` which supports the same
     			props as \`RadioButton\`.
-    		`,
+    		*/
+	children: node,
 
-	className: string`
+	/**
     			Appended to the component-specific class names set on the root element.
-    		`,
+    		*/
+	className: string,
 
-	name: string`
+	/**
     			Passed along to the \`RadioGroup.RadioButton\` children whose \`name\`
     			props are ignored.
-    		`,
+    		*/
+	name: string,
 
-	onSelect: func`
+	/**
     			Called when the user clicks on one of the child radio buttons or when
     			they press the space key while one is in focus, and only called when the
     			component is in the unselected state. \`props\` refers to the child
     			\`RadioButton\` props.  Signature: \`(selectedIndex, { event, props }) => {}\`
-    		`,
+    		*/
+	onSelect: func,
 
-	selectedIndex: number`
+	/**
     			Indicates which of the \`RadioGroup.RadioButton\` children is currently
     			selected. The index of the last \`RadioGroup.RadioButton\` child with
     			\`isSelected\` equal to true takes precedence over this prop.
-    		`,
+    		*/
+	selectedIndex: number,
 
-	isDisabled: bool`
+	/**
     			Indicates whether all \`RadioGroup.RadioButton\` children should appear
     			and act disabled by having a "greyed out" palette and ignoring user
     			interactions.
-    		`,
+    		*/
+	isDisabled: bool,
 };
 
 RadioGroup.peek = {

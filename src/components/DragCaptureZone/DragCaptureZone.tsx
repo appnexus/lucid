@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import PropTypes from 'react-peek/prop-types';
+import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import {
 	omitProps,
@@ -115,30 +115,36 @@ class DragCaptureZone extends React.Component<
 		categories: ['utility'],
 	};
 	static propTypes = {
-		className: string`
+		/**
 			Appended to the component-specific class names set on the root element.
-		`,
+		*/
+		className: string,
 
-		onDrag: func`
+		/**
 			Called as the user drags the mouse.  Signature:
 			\`({ dx, dy, pageX, pageY }, { event, props }) => {}\`
-		`,
+		*/
+		onDrag: func,
 
-		onDragEnd: func`
+		/**
 			Called when the user releases the mouse button after having dragged.
 			Signature: \`({ dx, dy, pageX, pageY }, { event, props }) => {}\`
-		`,
+		*/
+		onDragEnd: func,
 
-		onDragStart: func`
+		/**
 			Called when the user presses the mouse button down while over the
 			component.  Signature:
 			\`({ dx, dy, pageX, pageY }, { event, props }) => {}\`
-		`,
-		onDragCancel: func`
+		*/
+		onDragStart: func,
+
+		/**
 			Called when the drag event is canceled due to user interaction.  For
 			example: if a system alert pops up during a touch event.  Signature:
 			\`({ event, props }) => {}\`
-		`,
+		*/
+		onDragCancel: func,
 	};
 
 	private elementRef = React.createRef<HTMLDivElement>();

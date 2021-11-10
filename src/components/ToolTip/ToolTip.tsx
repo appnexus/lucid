@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import PropTypes from 'react-peek/prop-types';
+import PropTypes from 'prop-types';
 import ContextMenu from '../ContextMenu/ContextMenu';
 import CloseIcon from '../Icon/CloseIcon/CloseIcon';
 import { IIconProps } from '../Icon/Icon';
@@ -157,46 +157,90 @@ class ToolTip extends React.Component<IToolTipProps, IToolTipState> {
 	static reducers = reducers;
 
 	static propTypes = {
-		children: node`\`children\` should include exactly one ToolTip.Target and one ToolTip.FlyOut.`,
+		/**
+		 * \`children\` should include exactly one ToolTip.Target and one ToolTip.FlyOut.
+		 */
+		children: node,
 
-		className: string`Appended to the component-specific class names set on the root element.`,
+		/**
+		 * Appended to the component-specific class names set on the root element.
+		 */
+		className: string,
 
-		isCloseable: bool`Set this to \`true\` if you want to have a \`x\` close icon.`,
+		/**
+		 * Set this to \`true\` if you want to have a \`x\` close icon.
+		 */
+		isCloseable: bool,
 
-		isLight: bool`Offers a lighter style for the tooltip window. Defaults to false.`,
+		/**
+		 * Offers a lighter style for the tooltip window. Defaults to false.
+		 */
+		isLight: bool,
 
-		onClose: func`Called when the user closes the \`Banner\`. 
-			Signature: \`({ event, props }) => {}\``,
+		/**
+		 * Called when the user closes the \`Banner\`.
+		 * Signature: \`({ event, props }) => {}\`
+		 */
+		onClose: func,
 
-		style: object`Passed through to the root target element.`,
+		/** Passed through to the root target element.*/
+		style: object,
 
-		flyOutStyle: object`Passed through to the root FlyOut element.`,
+		/** Passed through to the root FlyOut element.*/
+		flyOutStyle: object,
 
-		flyOutMaxWidth: oneOfType([number, string])`
-			maximum width of the ToolTip FlyOut. Defaults to 200px.`,
+		/**
+		 * maximum width of the ToolTip FlyOut. Defaults to 200px.
+		 */
+		flyOutMaxWidth: oneOfType([number, string]),
 
-		direction: oneOf(['down', 'up', 'right', 'left'])`
-			direction of the FlyOut relative to Target.`,
+		/**
+		 * direction of the FlyOut relative to Target.
+		 */
+		direction: oneOf(['down', 'up', 'right', 'left']),
 
-		alignment: oneOf(['start', 'center', 'end'])`
-			alignment of the Flyout relative to Target in the cross axis from \`direction\`.`,
+		/**
+		 * alignment of the Flyout relative to Target in the cross axis from \`direction\`.
+		 */
+		alignment: oneOf(['start', 'center', 'end']),
 
-		isExpanded: bool`Indicates whether the ToolTip will render or not.`,
+		/**
+		 * Indicates whether the ToolTip will render or not.
+		 */
+		isExpanded: bool,
 
-		onMouseOver: func`Called when cursor moves over the target 
-			Signature: \`({ props, event }) => {}\``,
+		/**
+		 * Called when cursor moves over the target
+		 * Signature: \`({ props, event }) => {}\`
+		 */
+		onMouseOver: func,
 
-		onMouseOut: func`Called when cursor leaves the target and the ToolTip 
-			Signature: \`({ props, event }) => {}\``,
+		/**
+		 * Called when cursor leaves the target and the ToolTip
+		 * Signature: \`({ props, event }) => {}\`
+		 */
+		onMouseOut: func,
 
-		portalId: string`The \`id\` of the FlyOut portal element that is appended to \`document.body\`. 
-			Defaults to a generated \`id\`.`,
+		/**
+		 * The \`id\` of the FlyOut portal element that is appended to \`document.body\`.
+		 * Defaults to a generated \`id\`.
+		 */
+		portalId: string,
 
-		Title: node`Tooltips do not typically have a Title but one can be displayed above the Body.`,
+		/**
+		 * Tooltips do not typically have a Title but one can be displayed above the Body.
+		 */
+		Title: node,
 
-		Body: node`The body of the 'ToolTip'.`,
+		/**
+		 * The body of the 'ToolTip'.
+		 */
+		Body: node,
 
-		Target: node`The hover target that will trigger the ToolTip to be displayed.`,
+		/**
+		 * The hover target that will trigger the ToolTip to be displayed.
+		 */
+		Target: node,
 	};
 
 	static defaultProps = {

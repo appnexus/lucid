@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'react-peek/prop-types';
+import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
 import { omitProps, StandardProps } from '../../util/component-types';
 import { lucidClassNames } from '../../util/style-helpers';
@@ -30,18 +30,21 @@ class Portal extends React.Component<IPortalProps, IPortalState, {}> {
 		categories: ['utility'],
 	};
 	static propTypes = {
-		children: node`
+		/**
 			any valid React children
-		`,
+		*/
+		children: node,
 
-		className: any`
+		/**
 			Appended to the component-specific class names set on the root element.
 			Value is run through the \`classnames\` library.
-		`,
+		*/
+		className: any,
 
-		portalId: string`
+		/**
 			The \`id\` of the portal element that is appended to \`document.body\`.
-		`,
+		*/
+		portalId: string,
 	};
 
 	state = {

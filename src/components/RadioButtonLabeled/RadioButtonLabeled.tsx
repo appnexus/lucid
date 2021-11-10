@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import PropTypes from 'react-peek/prop-types';
+import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import {
 	StandardProps,
@@ -117,18 +117,21 @@ RadioButtonLabeled.peek = {
 RadioButtonLabeled.propTypes = {
 	...RadioButton.propTypes,
 
-	className: string`
+	/**
 		Appended to the component-specific class names set on the root element.
-	`,
+	*/
+	className: string,
 
-	style: object`
+	/**
 		Passed through to the root element.
-	`,
+	*/
+	style: object,
 
-	Label: any`
+	/**
 		Child element whose children are used to identify the purpose of this
 		radio button to the user.
-	`,
+	*/
+	Label: any,
 };
 
 RadioButtonLabeled.Label = RadioButtonLabeledLabel;

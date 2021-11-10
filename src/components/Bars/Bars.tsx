@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React, { PureComponent } from 'react';
-import PropTypes from 'react-peek/prop-types';
+import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import {
 	Collection,
@@ -170,11 +170,12 @@ export class Bars extends PureComponent<IBarsProps, IBarsState> {
 	};
 
 	static propTypes = {
-		className: string`
+		/**
 			Appended to the component-specific class names set on the root element.
-		`,
+		*/
+		className: string,
 
-		data: arrayOf(object).isRequired`
+		/**
 			De-normalized data
 
 				[
@@ -184,9 +185,10 @@ export class Bars extends PureComponent<IBarsProps, IBarsState> {
 					{ x: 'four', y0: 3, y1: 6, y2: 7, y3: 7 },
 					{ x: 'five', y0: 4, y1: 8, y2: 9, y3: 8 },
 				]
-		`,
+		*/
+		data: arrayOf(object).isRequired,
 
-		legend: object`
+		/**
 			An object with human readable names for fields that  will be used for
 			tooltips. E.g:
 
@@ -194,13 +196,15 @@ export class Bars extends PureComponent<IBarsProps, IBarsState> {
 					rev: 'Revenue',
 					imps: 'Impressions',
 				}
-		`,
+		*/
+		legend: object,
 
-		hasToolTips: bool`
-		 Show tool tips on hover.
-		`,
+		/**
+		 * Show tool tips on hover.
+		 */
+		hasToolTips: bool,
 
-		palette: arrayOf(string)`
+		/**
 			Takes one of the palettes exported from \`lucid.chartConstants\`.
 			Available palettes:
 
@@ -213,9 +217,10 @@ export class Bars extends PureComponent<IBarsProps, IBarsState> {
 			- \`PALETTE_MONOCHROME_4_5\`
 			- \`PALETTE_MONOCHROME_5_5\`
 			- \`PALETTE_MONOCHROME_6_5\`
-		`,
+		*/
+		palette: arrayOf(string),
 
-		colorMap: object`
+		/**
 			You can pass in an object if you want to map fields to
 			\`lucid.chartConstants\` or custom colors:
 
@@ -224,67 +229,79 @@ export class Bars extends PureComponent<IBarsProps, IBarsState> {
 					'rev': COLOR_3,
 					'clicks': '#abc123',
 				}
-		`,
+		*/
+		colorMap: object,
 
-		xScale: func.isRequired`
+		/**
 			The scale for the x axis. Must be a d3 band scale. Lucid exposes the
 			\`lucid.d3Scale.scaleBand\` library for use here.
-		`,
+		*/
+		xScale: func.isRequired,
 
-		xField: string`
+		/**
 			The field we should look up your x data by.
-		`,
+		*/
+		xField: string,
 
-		xFormatter: func`
+		/**
 			Function to format the x data.
-		`,
+		*/
+		xFormatter: func,
 
-		yScale: func.isRequired`
+		/**
 			The scale for the y axis. Must be a d3 scale. Lucid exposes the
 			\`lucid.d3Scale\` library for use here.
-		`,
+		*/
+		yScale: func.isRequired,
 
-		yFields: arrayOf(string)`
+		/**
 			The field(s) we should look up your y data by. Each entry represents a
 			series. Your actual y data should be numeric.
-		`,
+		*/
+		yFields: arrayOf(string),
 
-		yFormatter: func`
+		/**
 			Function to format the y data.
-		`,
+		*/
+		yFormatter: func,
 
-		yStackedMax: number`
+		/**
 			Typically this number can be derived from the yScale. However when we're
 			\`isStacked\` we need to calculate a new domain for the yScale based on
 			the sum of the data. If you need explicit control of the y max when
 			stacking, pass it in here.
-		`,
+		*/
+		yStackedMax: number,
 
-		yTooltipFormatter: func`
+		/**
 			An optional function used to format your y axis titles and data in the
 			tooltips. The first value is the name of your y field, the second value
 			is your post-formatted y value, and the third value is your non-formatted
 			y-value.  Signature: \`(yField, yValueFormatted, yValue) => {}\`
-		`,
+		*/
+		yTooltipFormatter: func,
 
-		isStacked: bool`
+		/**
 			This will stack the data instead of grouping it. In order to stack the
 			data we have to calculate a new domain for the y scale that is based on
 			the \`sum\` of the data.
-		`,
+		*/
+		isStacked: bool,
 
-		colorOffset: number`
+		/**
 			Sometimes you might not want the colors to start rotating at the blue
 			color, this number will be added the bar index in determining which color
 			the bars are.
-		`,
+		*/
+		colorOffset: number,
 
-		renderTooltipBody: func`
+		/**
 			An optional function used to format the entire tooltip body. The only arg is
 			the associated data point. This formatter will over-ride yTooltipFormatter
 			and yAxisTooltipDataFormatter. Signature:
 			\`dataPoint => {}\`
-		`,
+		*/
+		renderTooltipBody: func,
 	};
 
 	defaultTooltipFormatter = (dataPoint: { [key: string]: number }) => {

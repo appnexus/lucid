@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import PropTypes from 'react-peek/prop-types';
+import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import {
 	filterTypes,
@@ -59,9 +59,10 @@ Bar.peek = {
 Bar.displayName = 'Submarine.Bar';
 Bar.propName = 'Bar';
 Bar.propTypes = {
-	Title: any`
+	/**
 		Set the title of the Submarine. (alias for \`Submarine.Title\`)
-	`,
+	*/
+	Title: any,
 };
 
 const defaultProps = {
@@ -152,72 +153,87 @@ class Submarine extends React.Component<ISubmarineProps, ISubmarineState> {
 	static reducers = reducers;
 
 	static propTypes = {
-		className: string`
+		/**
 			Appended to the component-specific class names set on the root element.
 			Value is run through the \`classnames\` library.
-		`,
+		*/
+		className: string,
 
-		children: node`
+		/**
 			Direct children must be types {Submarine.Primary, Submarine.Bar,
 			Submarine.Title}.  All content is composed as children of these
 			respective elements.
-		`,
+		*/
+		children: node,
 
-		height: oneOfType([number, string])`
+		/**
 			Sets the starting height of the Bar.
-		`,
+		*/
+		height: oneOfType([number, string]),
 
-		isExpanded: bool`
+		/**
 			Force the Submarine to be expanded or collapsed.
-		`,
+		*/
+		isExpanded: bool,
 
-		isHidden: bool`
+		/**
 			Indicates if the Submarine should be shown or not.  This will override
 			the value of isExpanded.
-		`,
+		*/
+		isHidden: bool,
 
-		isTitleShownCollapsed: bool`
+		/**
 			Indicates if the Title should be shown when the Submarine is collapsed
-		`,
+		*/
+		isTitleShownCollapsed: bool,
 
-		isAnimated: bool`
+		/**
 			Allows animated expand and collapse behavior.
-		`,
+		*/
+		isAnimated: bool,
 
-		position: oneOf(['top', 'bottom'])`
+		/**
 			Render the Submarine to the top or bottom of primary content.
-		`,
+		*/
+		position: oneOf(['top', 'bottom']),
 
-		isResizeDisabled: bool`
+		/**
 			Disable user resizing of the Submarine.
-		`,
+		*/
+		isResizeDisabled: bool,
 
-		Title: any`
+		/**
 			Set the title of the Submarine.
-		`,
+		*/
+		Title: any,
 
-		Bar: any`
+		/**
 			Set the submarine bar content.
-		`,
+		*/
+		Bar: any,
 
-		Primary: any`
+		/**
 			Set the primary content of the Submarine.
-		`,
+		*/
+		Primary: any,
 
-		onResizing: func`
+		/**
 			Called when the user is currently resizing the Submarine.  Signature:
 			\`(height, { event, props }) => {}\`
-		`,
+		*/
+		onResizing: func,
 
-		onResize: func`
+		/**
 			Called when the user resizes the Submarine.  Signature:
 			\`(height, { event, props }) => {}\`
-		`,
+		*/
+		onResize: func,
 
-		onToggle: func`
+		/**
 			Called when the user expands or collapses the Submarine.  Signature:
 			\`({ event, props }) => {}\`
-		`,
+		*/
+		onToggle: func,
 	};
 
 	static defaultProps = defaultProps;

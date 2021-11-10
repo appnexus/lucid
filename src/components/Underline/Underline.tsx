@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import PropTypes from 'react-peek/prop-types';
+import PropTypes from 'prop-types';
 import { partitionText } from '../../util/text-manipulation';
 import { lucidClassNames } from '../../util/style-helpers';
 import { StandardProps, omitProps } from '../../util/component-types';
@@ -82,16 +82,19 @@ Underline.peek = {
 	categories: ['controls', 'selectors'],
 };
 Underline.propTypes = {
-	className: string`
+	/**
 		Appended to the component-specific class names set on the root element.
-	`,
-	children: node`
+	*/
+	className: string,
+	/**
 		Text to be partially or fully underlined. If non-text is passed as
 		children, it will not attempt to match the given pattern.
-	`,
-	match: oneOfType([string, instanceOf(RegExp)])`
+	*/
+	children: node,
+	/**
 		The first match of the given pattern has the underline style applied to it.
-	`,
+	*/
+	match: oneOfType([string, instanceOf(RegExp)]),
 };
 
 export default Underline;

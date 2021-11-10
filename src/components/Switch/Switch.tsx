@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React, { createRef } from 'react';
-import PropTypes from 'react-peek/prop-types';
+import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import {
 	omitProps,
@@ -141,33 +141,39 @@ Switch.peek = {
 };
 
 Switch.propTypes = {
-	className: string`
+	/**
 			Appended to the component-specific class names set on the root element.
-		`,
+		*/
+	className: string,
 
-	isDisabled: bool`
+	/**
 			Indicates whether the component should appear and act disabled by having
 			a "greyed out" palette and ignoring user interactions.
-		`,
+		*/
+	isDisabled: bool,
 
-	isSelected: bool`
+	/**
 			Indicates that the component is in the "selected" state when true and in
 			the "unselected" state when false.
-		`,
+		*/
+	isSelected: bool,
 
-	onSelect: func`
+	/**
 			Called when the user clicks on the component or when they press the space
 			key while the component is in focus.  Signature:
 			\`(isSelected, { event, props }) => {}\`
-		`,
+		*/
+	onSelect: func,
 
-	style: object`
+	/**
 			Passed through to the root element.
-		`,
+		*/
+	style: object,
 
-	isIncludeExclude: bool`
+	/**
 			Offers a red/green styling to the switch.
-		`,
+		*/
+	isIncludeExclude: bool,
 };
 
 export default Switch;

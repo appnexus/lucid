@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import PropTypes from 'react-peek/prop-types';
+import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import { StandardProps, omitProps } from '../../util/component-types';
 
@@ -84,39 +84,46 @@ AxisLabel.peek = {
 	categories: ['visualizations', 'chart primitives'],
 };
 AxisLabel.propTypes = {
-	style: object`
+	/**
 		Passed through to the root element.
-	`,
+	*/
+	style: object,
 
-	className: string`
+	/**
 		Appended to the component-specific class names set on the root element.
-	`,
+	*/
+	className: string,
 
-	height: number.isRequired`
+	/**
 		Height of the margin this label should fit into.
-	`,
+	*/
+	height: number.isRequired,
 
-	width: number.isRequired`
+	/**
 		Width of the margin this label should fit into.
-	`,
+	*/
+	width: number.isRequired,
 
-	color: string`
+	/**
 		Strings should match an existing color class unless they start with a '#'
 		for specific colors. E.g.:
 
 		- \`COLOR_0\`
 		- \`COLOR_GOOD\`
 		- \`'#123abc'\`
-	`,
+	*/
+	color: string,
 
-	label: string`
+	/**
 		Contents of the label, should only ever be a string since we use a
 		\`text\` under the hood.
-	`,
+	*/
+	label: string,
 
-	orient: oneOf(['top', 'bottom', 'left', 'right'])`
+	/**
 		Determine orientation of the label.
-	`,
+	*/
+	orient: oneOf(['top', 'bottom', 'left', 'right']),
 };
 
 export default AxisLabel;

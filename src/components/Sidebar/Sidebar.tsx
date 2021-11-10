@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import PropTypes from 'react-peek/prop-types';
+import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import {
 	StandardProps,
@@ -57,15 +57,17 @@ Title.peek = {
 	`,
 };
 Title.propTypes = {
-	children: node`
+	/**
 		Content that will be displayed as the title of the Bar. It's only
 		shown when the user has the Bar expanded.
-	`,
+	*/
+	children: node,
 };
 Title.propTypes = {
-	children: node`
+	/**
 		Sidebar title.
-	`,
+	*/
+	children: node,
 };
 Title.displayName = 'Sidebar.Title';
 Title.propName = ['Title', 'title'];
@@ -79,15 +81,14 @@ Bar.peek = {
 Bar.displayName = 'Sidebar.Bar';
 Bar.propName = 'Bar';
 Bar.propTypes = {
-	Title: any`
+	/**
 		Set the title of the Sidebar. (alias for \`title\` and \`Sidebar.Title\`)
-	`,
-	title: any`
-		Set the title of the Sidebar. (alias for \`Title\` and \`Sidebar.Title\`)
-	`,
-	hasGutters: bool`
+	*/
+	Title: any,
+	/**
 		Adds default padding to the sidebar content.
-	`,
+	*/
+	hasGutters: bool,
 };
 Bar.defaultProps = {
 	hasGutters: true,
@@ -159,71 +160,86 @@ class Sidebar extends React.Component<ISidebarProps, ISidebarState> {
 	static reducers = reducers;
 
 	static propTypes = {
-		style: object`
+		/**
 			Style object that gets applied to the outer element.
-		`,
+		*/
+		style: object,
 
-		className: string`
+		/**
 			Appended to the component-specific class names set on the root element.
 			Value is run through the \`classnames\` library.
-		`,
+		*/
+		className: string,
 
-		children: node`
+		/**
 			Direct children must be types {Sidebar.Primary, Sidebar.Bar,
 			Sidebar.Title}.  All content is composed as children of these respective
 			elements.
-		`,
+		*/
+		children: node,
 
-		width: oneOfType([number, string])`
+		/**
 			Sets the starting width of the Bar.
-		`,
+		*/
+		width: oneOfType([number, string]),
 
-		isExpanded: bool`
+		/**
 			Force the Sidebar to be expanded or collapsed.
-		`,
+		*/
+		isExpanded: bool,
 
-		isAnimated: bool`
+		/**
 			Allows animated expand and collapse behavior.
-		`,
+		*/
+		isAnimated: bool,
 
-		position: oneOf(['left', 'right'])`
+		/**
 			Render the Sidebar to the left or right of primary content.
-		`,
+		*/
+		position: oneOf(['left', 'right']),
 
-		isResizeDisabled: bool`
+		/**
 			Disable user resizing of the Sidebar.
-		`,
+		*/
+		isResizeDisabled: bool,
 
-		title: any`
+		/**
 			Set the title of the Sidebar. (alias for \`Title\` and \`Sidebar.Title\`)
-		`,
+		*/
+		title: any,
 
-		Title: any`
+		/**
 			Set the title of the Sidebar. (alias for \`title\` and \`Sidebar.Title\`)
-		`,
+		*/
+		Title: any,
 
-		Bar: any`
+		/**
 			Content to be placed alongside the Primary pane.
-		`,
+		*/
+		Bar: any,
 
-		Primary: any`
+		/**
 			Main pane content that will have a paired \`Bar\`.
-		`,
+		*/
+		Primary: any,
 
-		onResizing: func`
+		/**
 			Called when the user is currently resizing the Sidebar.  Signature:
 			\`(width, { event, props }) => {}\`
-		`,
+		*/
+		onResizing: func,
 
-		onResize: func`
+		/**
 			Called when the user resizes the Sidebar.  Signature: \`(width, { event,
 			props }) => {}\`
-		`,
+		*/
+		onResize: func,
 
-		onToggle: func`
+		/**
 			Called when the user expands or collapses the Sidebar.  Signature: \`({
 			event, props }) => {}\`
-		`,
+		*/
+		onToggle: func,
 	};
 
 	static defaultProps = defaultProps;

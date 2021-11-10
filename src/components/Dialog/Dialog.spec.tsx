@@ -11,8 +11,9 @@ describe('Dialog', () => {
 		getDefaultProps: () => {
 			return { isShown: true };
 		},
-		selectRoot: (wrapper: any) => wrapper.find('.lucid-Dialog'),
-	} as any);
+		selectRoot: ((wrapper: any) => wrapper.find('.lucid-Dialog')) as any,
+		exemptFunctionProps: ['handleClose'],
+	});
 
 	functionalComponents(Dialog);
 
