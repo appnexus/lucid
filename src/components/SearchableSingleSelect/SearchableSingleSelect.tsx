@@ -647,5 +647,5 @@ export default buildModernHybridComponent<
 	ISearchableSingleSelectProps,
 	ISearchableSingleSelectState,
 	typeof SearchableSingleSelect
->(SearchableSingleSelect, { reducers });
+>(SearchableSingleSelect as any, { reducers });
 export { SearchableSingleSelect as SearchableSingleSelectDumb };

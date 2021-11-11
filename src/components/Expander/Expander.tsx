@@ -238,5 +238,5 @@ export default buildModernHybridComponent<
 	IExpanderProps,
 	IExpanderState,
 	typeof Expander
->(Expander, { reducers });
+>(Expander as any, { reducers });
 export { Expander as ExpanderDumb };

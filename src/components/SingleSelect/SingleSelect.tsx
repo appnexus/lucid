@@ -442,6 +442,6 @@ export default buildModernHybridComponent<
 	ISingleSelectProps,
 	ISingleSelectState,
 	typeof SingleSelect
->(SingleSelect, { reducers });
+>(SingleSelect as any, { reducers });
 
 export { SingleSelect as SingleSelectDumb };

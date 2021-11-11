@@ -414,6 +414,6 @@ export default buildModernHybridComponent<
 	IVerticalListMenuProps,
 	IVerticalListMenuState,
 	typeof VerticalListMenu
->(VerticalListMenu, { reducers });
+>(VerticalListMenu as any, { reducers });
 
 export { VerticalListMenu as VerticalListMenuDumb };

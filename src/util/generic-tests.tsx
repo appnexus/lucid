@@ -177,10 +177,10 @@ export function common(Component: any, config: ICommonConfig = {} as any) {
 							result = render(<Story {...Story.args} />, {
 								disableLifecycleMethods: true,
 							});
+							expect(result).toMatchSnapshot();
 						} catch (err) {
-							result = err.message;
+							expect(err).toMatchSnapshot();
 						}
-						expect(result).toMatchSnapshot();
 					});
 				});
 			});

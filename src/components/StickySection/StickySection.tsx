@@ -27,7 +27,7 @@ interface IStickySectionProps
 	topOffset?: number;
 }
 
-interface IContainerRect extends ClientRect {
+interface IContainerRect extends Omit<ClientRect, 'x' | 'y' | 'toJSON'> {
 	scrollWidth: number;
 	frameLeft: number;
 }

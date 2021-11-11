@@ -399,5 +399,5 @@ export default buildModernHybridComponent<
 	ISidebarProps,
 	ISidebarState,
 	typeof Sidebar
->(Sidebar, { reducers });
+>(Sidebar as any, { reducers });
 export { Sidebar as SidebarDumb };

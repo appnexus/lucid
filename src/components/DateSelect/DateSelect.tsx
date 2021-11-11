@@ -523,5 +523,5 @@ export default buildModernHybridComponent<
 	IDateSelectProps,
 	IDateSelectState,
 	typeof DateSelect
->(DateSelect, { reducers });
+>(DateSelect as any, { reducers });
 export { DateSelect as DateSelectDumb };

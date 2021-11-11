@@ -1107,5 +1107,5 @@ export default buildModernHybridComponent<
 	IDropMenuPropsWithPassThroughs,
 	IDropMenuState,
 	typeof DropMenu
->(DropMenu, { reducers });
+>(DropMenu as any, { reducers });
 export { DropMenu as DropMenuDumb, NullOption, OptionGroup };

@@ -217,5 +217,5 @@ export default buildModernHybridComponent<
 	IExpanderPanelProps,
 	IExpanderState,
 	typeof ExpanderPanel
->(ExpanderPanel, { reducers });
+>(ExpanderPanel as any, { reducers });
 export { ExpanderPanel as ExpanderPanelDumb };

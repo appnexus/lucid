@@ -515,5 +515,5 @@ export default buildModernHybridComponent<
 	IPieChartProps,
 	IPieChartState,
 	typeof PieChart
->(PieChart, { reducers });
+>(PieChart as any, { reducers });
 export { PieChart as PieChartDumb };

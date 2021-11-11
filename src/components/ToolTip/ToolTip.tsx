@@ -397,6 +397,6 @@ export default buildModernHybridComponent<
 	IToolTipProps,
 	IToolTipState,
 	typeof ToolTip
->(ToolTip, { reducers });
+>(ToolTip as any, { reducers });
 
 export { ToolTip as ToolTipDumb };

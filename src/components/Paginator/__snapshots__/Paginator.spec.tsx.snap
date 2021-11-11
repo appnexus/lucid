@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Paginator [common] example testing should match snapshot(s) for Default 1`] = `"Storybook preview hooks can only be called inside decorators and story functions."`;
+exports[`Paginator [common] example testing should match snapshot(s) for Default 1`] = `[Error: Storybook preview hooks can only be called inside decorators and story functions.]`;
 
 exports[`Paginator [common] example testing should match snapshot(s) for Disabled 1`] = `
 <div

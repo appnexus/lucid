@@ -388,5 +388,5 @@ export default buildModernHybridComponent<
 	ISubmarineProps,
 	ISubmarineState,
 	typeof Submarine
->(Submarine, { reducers });
+>(Submarine as any, { reducers });
 export { Submarine as SubmarineDumb };

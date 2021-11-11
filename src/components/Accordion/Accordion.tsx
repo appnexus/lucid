@@ -120,6 +120,6 @@ export default buildModernHybridComponent<
 	IAccordionProps,
 	IAccordionState,
 	typeof Accordion
->(Accordion, { reducers });
+>(Accordion as any, { reducers });
 
 export { Accordion as AccordionDumb };

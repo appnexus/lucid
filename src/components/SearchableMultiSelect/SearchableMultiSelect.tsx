@@ -965,5 +965,5 @@ export default buildModernHybridComponent<
 	ISearchableMultiSelectProps,
 	ISearchableMultiSelectState,
 	typeof SearchableMultiSelect
->(SearchableMultiSelect, { reducers });
+>(SearchableMultiSelect as any, { reducers });
 export { SearchableMultiSelect as SearchableMultiSelectDumb };

@@ -249,5 +249,5 @@ export default buildModernHybridComponent<
 	IRadioGroupProps,
 	IRadioGroupState,
 	typeof RadioGroup
->(RadioGroup, { reducers });
+>(RadioGroup as any, { reducers });
 export { RadioGroup as RadioGroupDumb };

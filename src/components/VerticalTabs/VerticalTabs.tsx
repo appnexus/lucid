@@ -195,6 +195,6 @@ export default buildModernHybridComponent<
 	IVerticalTabsProps,
 	IVerticalTabsState,
 	typeof VerticalTabs
->(VerticalTabs, { reducers });
+>(VerticalTabs as any, { reducers });
 
 export { VerticalTabs as VerticalTabsDumb };

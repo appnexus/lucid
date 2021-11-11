@@ -157,6 +157,6 @@ export default buildModernHybridComponent<
 	IButtonGroupProps,
 	IButtonGroupState,
 	typeof ButtonGroup
->(ButtonGroup, { reducers });
+>(ButtonGroup as any, { reducers });
 
 export { ButtonGroup as ButtonGroupDumb };

@@ -260,6 +260,6 @@ export default buildModernHybridComponent<
 	ISplitButtonProps,
 	IDropMenuState,
 	typeof SplitButton
->(SplitButton, { reducers });
+>(SplitButton as any, { reducers });
 
 export { SplitButton as SplitButtonDumb };
