@@ -37,7 +37,11 @@ Document the changes contained in the release:
 https://github.com/appnexus/lucid/compare/v5.6.1...v5.7.0
 ```
 
-Based on the changes made, determine a suitable version number for the release.
+4. Add and commit the `CHANGELOG.md` updates. For example: `git commit -am "update the Changelog"`.
+
+## Update Version Number
+
+1. Based on the changes made, determine a suitable version number for the release.
 
 We follow [semver](https://semver.org/), which prescribes that:
 
@@ -46,19 +50,15 @@ We follow [semver](https://semver.org/), which prescribes that:
 - `semver-patch`: Fixes are a "patch" version (the right-most number).
 - `semver-none`: Changes to documentation, or other changes that don't impact the api or consumers get a "none" label.
 
-4. Add and commit the `CHANGELOG.md` updates. For example: `git commit -am "update the Changelog"`.
-
-## Update Version Number
-
 The recommended option is to update the version number using `npm version ...`.
 
-1. Use `npm` to publish the new NPM version that matches the version number and type of change (major, minor or patch) in `package.json`--this process creates tags for you and updates the `package-json` and `package-lock.json` automatically.
+2. Use `npm` to publish the new NPM version that matches the version number and type of change (major, minor or patch) in `package.json`--this process creates tags for you and updates the `package-json` and `package-lock.json` automatically.
 
 - `npm version major`
 - `npm version minor`
 - `npm version patch`
 
-2. Push the changes and tags: `git push origin master --follow-tags`. Note that by default, the `git push` command alone doesn't transfer tags to the repository.
+3. Push the changes and tags: `git push origin master --follow-tags`. Note that by default, the `git push` command alone doesn't transfer tags to the repository.
 
 Another option is to update the version number manually:
 

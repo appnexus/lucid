@@ -52,21 +52,21 @@ export interface IBannerProps
 			HTMLDivElement
 		> {
 	/** Pass in a icon component for custom icons within `Banner`. */
-	icon: React.ReactElement | null;
+	icon?: React.ReactElement | null;
 
 	/** Set this to `true` if you want to have a `x` close icon. */
-	isCloseable: boolean;
+	isCloseable?: boolean;
 
 	/** If set to `false` the banner will not be filled in.
 	 * @default = true
 	 */
-	isFilled: boolean;
+	isFilled?: boolean;
 
 	/** If set to `true` the banner have smaller padding on the inside. */
-	isSmall: boolean;
+	isSmall?: boolean;
 
 	/** Style variations of the `Banner`. */
-	kind: 'primary' | 'success' | 'warning' | 'danger' | 'info' | 'default';
+	kind?: 'primary' | 'success' | 'warning' | 'danger' | 'info' | 'default';
 
 	/** Called when the user closes the `Banner`. */
 	onClose: ({
@@ -78,7 +78,7 @@ export interface IBannerProps
 	}) => void;
 
 	/** Controls the visibility of the `Banner`. */
-	isClosed: boolean;
+	isClosed?: boolean;
 }
 
 const defaultProps = {
@@ -197,5 +197,6 @@ Banner.peek = {
 	},
 	categories: ['communication'],
 };
+Banner.propTypes = bannerPropTypes;
 
 export default Banner;

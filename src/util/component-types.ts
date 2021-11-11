@@ -7,7 +7,6 @@ import {
 	omitFunctionPropsDeep,
 } from './state-management';
 import { ValidationMap } from 'prop-types';
-import { IIconProps } from '../../src/components/Icon/Icon';
 
 export interface StandardProps {
 	/** Appended to the component-specific class names set on the root element.
@@ -41,6 +40,7 @@ export interface FC<P> extends React.FC<P> {
 	};
 	categories?: string[];
 	description?: string;
+	propTypes?: object;
 	propName?: string | string[];
 	_isPrivate?: boolean;
 }

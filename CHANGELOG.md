@@ -1,3 +1,13 @@
+## 8.5.1
+
+- #1285 Make props optional for `Banner`.
+
+## 8.5.0
+
+- #1284 Add the propType property and fix Stories for `Banner`.
+- #1282 Remove components from nested categories in the navigation.
+  https://github.com/appnexus/lucid/compare/v8.4.0...v8.5.0
+
 ## 8.4.0
 
 - #1279 Update hover and active styling for `Tabs`.
