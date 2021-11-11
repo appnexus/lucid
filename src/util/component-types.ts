@@ -7,7 +7,6 @@ import {
 	omitFunctionPropsDeep,
 } from './state-management';
 import { ValidationMap } from 'prop-types';
-import { IIconProps } from '../../src/components/Icon/Icon';
 
 export interface StandardProps {
 	/** Appended to the component-specific class names set on the root element.
@@ -28,7 +27,7 @@ export type Overwrite<T, U> = Omit<T, keyof T & keyof U> & U;
 // `D`: default props (should be provided when a functional component supports
 // default props)
 export interface FC<P> extends React.FC<P> {
-	peek: {
+	peek?: {
 		description: string;
 		notes?: {
 			overview: string;
@@ -39,6 +38,8 @@ export interface FC<P> extends React.FC<P> {
 		extend?: string;
 		madeFrom?: string[];
 	};
+	categories?: string[];
+	description?: string;
 	propTypes?: object;
 	propName?: string | string[];
 	_isPrivate?: boolean;
