@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'react-peek/prop-types';
+import PropTypes from 'prop-types';
 import _ from 'lodash';
 import { createClass, StandardProps } from '../../util/component-types';
 import { lucidClassNames } from '../../util/style-helpers';
@@ -40,45 +40,54 @@ const Autocomplete = createClass<IAutocompleteProps>({
 	reducers: reducers as any, // TODO: typescript hack that should be removed
 
 	propTypes: {
-		className: string`
+		/**
 			Appended to the component-specific class names set on the root elements.
-		`,
+		*/
+		className: string,
 
-		style: object`
+		/**
 			Styles that are passed through to root element.
-		`,
+		*/
+		style: object,
 
-		isDisabled: bool`
+		/**
 			Disables the Autocomplete from being clicked or focused.
-		`,
+		*/
+		isDisabled: bool,
 
-		suggestions: arrayOf(string)`
+		/**
 			Array of suggested text input values shown in drop menu.
-		`,
+		*/
+		suggestions: arrayOf(string),
 
-		value: string`
+		/**
 			Text value of the input.
-		`,
+		*/
+		value: string,
 
-		DropMenu: shape(DropMenu.propTypes)`
+		/**
 			Object of DropMenu props which are passed thru to the underlying DropMenu
 			component.
-		`,
+		*/
+		DropMenu: shape(DropMenu.propTypes),
 
-		onChange: func`
+		/**
 			Called when the input value changes. Has the signature
 			\`(value, {props, event}) => {}\` where value is a string.
-		`,
+		*/
+		onChange: func,
 
-		onSelect: func`
+		/**
 			Called when a suggstion is selected from the menu. Has the signature
 			\`(optionIndex, {props, event}) => {}\` where optionIndex is a number.
-		`,
+		*/
+		onSelect: func,
 
-		onExpand: func`
+		/**
 			Called when menu is expected to expand. Has the signature
 			\`({props, event}) => {}\`.
-		`,
+		*/
+		onExpand: func,
 	} as any, // TODO: typescript hack that should be removed
 
 	getDefaultProps() {

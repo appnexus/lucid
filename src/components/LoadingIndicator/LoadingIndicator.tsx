@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
-import PropTypes from 'react-peek/prop-types';
+import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import { getFirst, rejectTypes, omitProps } from '../../util/component-types';
 import OverlayWrapper, {
@@ -99,38 +99,45 @@ LoadingIndicator.peek = {
 	madeFrom: ['OverlayWrapper', 'LoadingMessage'],
 };
 LoadingIndicator.propTypes = {
-	className: string`
+	/**
 		Class names that are appended to the defaults.
-	`,
+	*/
+	className: string,
 
-	children: node`
+	/**
 		Any valid React children.
-	`,
+	*/
+	children: node,
 
-	hasOverlay: bool`
+	/**
 		Set this to \`false\` if you don't want the semi-transparent overlay over
 		the wrapped content
-    `,
+  */
+	hasOverlay: bool,
 
-	isLoading: bool`
+	/**
 		Controls the visibility of the \`LoadingMessage\` and overlay.
-	`,
+	*/
+	isLoading: bool,
 
-	anchorMessage: bool`
+	/**
 		Positions the loading message near the top of the container. By default,
 		the loading message is vertically aligned to the middle of the container.
-	`,
+	*/
+	anchorMessage: bool,
 
-	fixedMessage: bool`
+	/**
 		By default, the OverlayMessage is vertically aligned to the middle of the
 		\`OverlayWrapper\`, and the \`OverlayWrapper\` is the height of the entire content.
 		Set this to true to position the \`OverlayMessage\` near the center of the 
 		\`OverlayWrapper\`, and fix the \`OverlayWrapper\` to the screen height and width.
-	`,
+	*/
+	fixedMessage: bool,
 
-	overlayKind: oneOf(['light', 'dark'])`
+	/**
 		Style variations for the overlay behind the loading indicator.
-	`,
+	*/
+	overlayKind: oneOf(['light', 'dark']),
 };
 LoadingIndicator.defaultProps = defaultProps;
 

@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import PropTypes from 'react-peek/prop-types';
+import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import {
 	findTypes,
@@ -29,10 +29,11 @@ Label.peek = {
 };
 Label.propName = 'Label';
 Label.propTypes = {
-	children: node`
+	/**
 		Used to identify the purpose of this checkbox to the user -- can be
 		any renderable content.
-	`,
+	*/
+	children: node,
 };
 
 export interface ICheckboxLabeledProps extends ICheckboxProps {
@@ -121,41 +122,48 @@ CheckboxLabeled.defaultProps = defaultPropsCheckbox;
 // handle default props. They are duplicated here on purpose which is okay
 // since in the future we'll be removing proptypes in favor is just typescript.
 CheckboxLabeled.propTypes = {
-	isIndeterminate: bool`
+	/**
 		Indicates whether the component should appear in an "indeterminate" or
 		"partially checked" state. This prop takes precedence over
 		\`isSelected\`.
-	`,
+	*/
+	isIndeterminate: bool,
 
-	isDisabled: bool`
+	/**
 		Indicates whether the component should appear and act disabled by having
 		a "greyed out" palette and ignoring user interactions.
-	`,
+	*/
+	isDisabled: bool,
 
-	isSelected: bool`
+	/**
 		Indicates that the component is in the "selected" state when true and in
 		the "unselected" state when false. This props is ignored if
 		\`isIndeterminate\` is \`true\`.
-	`,
+	*/
+	isSelected: bool,
 
-	onSelect: func`
+	/**
 		Called when the user clicks on the component or when they press the space
 		key while the component is in focus.  Signature:
 		\`(isSelected, { event, props }) => {}\`
-	`,
+	*/
+	onSelect: func,
 
-	className: string`
+	/**
 		Appended to the component-specific class names set on the root element.
-	`,
+	*/
+	className: string,
 
-	style: object`
+	/**
 		Passed through to the root element.
-	`,
+	*/
+	style: object,
 
-	Label: any`
+	/**
 		Child element whose children are used to identify the purpose of this
 		checkbox to the user.
-	`,
+	*/
+	Label: any,
 };
 
 CheckboxLabeled.Label = Label;

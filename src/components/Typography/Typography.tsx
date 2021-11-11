@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import PropTypes from 'react-peek/prop-types';
+import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import { omitProps, StandardProps } from '../../util/component-types';
 
@@ -55,18 +55,21 @@ Typography.peek = {
 	categories: ['text'],
 };
 Typography.propTypes = {
-	children: node`
+	/**
 		Can contain elements or nested \`Typography\` components.
-	`,
+	*/
+	children: node,
 
-	className: string`
+	/**
 		Appended to the component-specific class names set on the root element.
-	`,
+	*/
+	className: string,
 
-	variant: oneOf(_.keys(ElementTypes)).isRequired`
+	/**
 		This prop defines the type of text that will be displayed.
 		It may be an actual HTML element or something with extra semantic meaning.
-	`,
+	*/
+	variant: oneOf(_.keys(ElementTypes)).isRequired,
 };
 
 export default Typography;

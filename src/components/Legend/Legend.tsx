@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import PropTypes from 'react-peek/prop-types';
+import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import {
 	findTypes,
@@ -180,22 +180,31 @@ Legend.peek = {
 Legend.HEIGHT = 28; // exposed for consumer convenience
 
 Legend.propTypes = {
-	Item: node`
+	/**
 	Child element whose children represent content to be shown inside Legend.
-	`,
-	className: string`
+	*/
+	Item: node,
+
+	/**
 		Appended to the component-specific class names set on the root element.
-	`,
-	orient: oneOf(['horizontal', 'vertical'])`
+	*/
+	className: string,
+
+	/**
 		Determine orientation of the legend.
-	`,
-	hasBorders: bool`
+	*/
+	orient: oneOf(['horizontal', 'vertical']),
+
+	/**
 		Show the legend borders. Turn this off if you want to put the legend in a
 		\`ToolTip\` for example.
-	`,
-	isReversed: bool`
+	*/
+	hasBorders: bool,
+
+	/**
 		Reverse the order of items in the legend.
-	`,
+	*/
+	isReversed: bool,
 };
 
 LegendItem.displayName = 'Legend.Item';
@@ -211,18 +220,20 @@ LegendItem.propTypes = {
 LegendItem.propTypes = {
 	hasPoint: bool,
 	hasLine: bool,
-	color: string`
+	/**
 		Strings should match an existing color class unless they start with a '#' for specific colors. E.g.:
 
 		- \`COLOR_0\`
 		- \`COLOR_GOOD\`
 		- \`'#123abc'\`
-	`,
+	*/
+	color: string,
 	pointKind: number,
 	onClick: func,
-	className: string`
+	/**
 		Class names that are appended to the defaults.
-	`,
+	*/
+	className: string,
 };
 
 export default Legend;

@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import _ from 'lodash';
 import React from 'react';
-import PropTypes from 'react-peek/prop-types';
+import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import {
 	findTypes,
@@ -87,16 +87,19 @@ Breadcrumb.peek = {
 	categories: ['navigation'],
 };
 Breadcrumb.propTypes = {
-	children: node`
+	/**
 		All children should be \`Breadcrumb.Item\`s. Others are ignored.
-	`,
-	className: any`
+	*/
+	children: node,
+	/**
 		Appended to the component-specific class names set on the root element.
 		Value is run through the \`classnames\` library.
-	`,
-	Item: node`
+	*/
+	className: any,
+	/**
 		A child element that renders a \`li\`.
-	`,
+	*/
+	Item: node,
 };
 
 Breadcrumb.Item = BreadcrumbItem;

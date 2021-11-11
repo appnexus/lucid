@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import PropTypes from 'react-peek/prop-types';
+import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import {
 	StandardProps,
@@ -320,29 +320,33 @@ class LineChart extends React.Component<ILineChartProps, ILineChartState, {}> {
 	};
 
 	static propTypes = {
-		className: string`
+		/**
 			Appended to the component-specific class names set on the root element.
-		`,
+		*/
+		className: string,
 
-		height: number`
+		/**
 			Height of the chart.
-		`,
+		*/
+		height: number,
 
-		width: number`
+		/**
 			Width of the chart.
-		`,
+		*/
+		width: number,
 
+		/**
+			An object defining the margins of the chart. These margins will contain
+			the axis and labels.
+		*/
 		margin: shape({
 			top: number,
 			right: number,
 			bottom: number,
 			left: number,
-		})`
-			An object defining the margins of the chart. These margins will contain
-			the axis and labels.
-		`,
+		}),
 
-		data: arrayOf(object)`
+		/**
 			Data for the chart. E.g.
 	
 				[
@@ -352,9 +356,10 @@ class LineChart extends React.Component<ILineChartProps, ILineChartState, {}> {
 					{ x: new Date('2015-01-04') , y: 2 } ,
 					{ x: new Date('2015-01-05') , y: 5 } ,
 				]
-		`,
+		*/
+		data: arrayOf(object),
 
-		legend: object`
+		/**
 			An object with human readable names for fields that will be used for
 			legends and tooltips. E.g:
 	
@@ -362,21 +367,25 @@ class LineChart extends React.Component<ILineChartProps, ILineChartState, {}> {
 					x: 'Date',
 					y: 'Impressions',
 				}
-		`,
+		*/
+		legend: object,
 
-		isLoading: bool`
+		/**
 			Controls the visibility of the \`LoadingMessage\`.
-		`,
+		*/
+		isLoading: bool,
 
-		hasToolTips: bool`
+		/**
 			Show tool tips on hover.
-		`,
+		*/
+		hasToolTips: bool,
 
-		hasLegend: bool`
+		/**
 			Show a legend at the bottom of the chart.
-		`,
+		*/
+		hasLegend: bool,
 
-		palette: arrayOf(string)`
+		/**
 			Takes one of the palettes exported from \`lucid.chartConstants\`.
 			Available palettes:
 	
@@ -389,9 +398,10 @@ class LineChart extends React.Component<ILineChartProps, ILineChartState, {}> {
 			- \`PALETTE_MONOCHROME_4_5\`
 			- \`PALETTE_MONOCHROME_5_5\`
 			- \`PALETTE_MONOCHROME_6_5\`
-		`,
+		*/
+		palette: arrayOf(string),
 
-		colorMap: object`
+		/**
 			You can pass in an object if you want to map fields to
 			\`lucid.chartConstants\` or custom colors:
 	
@@ -400,49 +410,58 @@ class LineChart extends React.Component<ILineChartProps, ILineChartState, {}> {
 					'rev': COLOR_3,
 					'clicks': '#abc123',
 				}
-		`,
+		*/
+		colorMap: object,
 
-		xAxisField: string`
+		/**
 			The field we should look up your x data by. The data must be valid
 			javascript dates.
-		`,
+		*/
+		xAxisField: string,
 
-		xAxisMin: instanceOf(Date)`
+		/**
 			The minimum date the x axis should display. Typically this will be the
 			smallest items from your dataset.
-		`,
+		*/
+		xAxisMin: instanceOf(Date),
 
-		xAxisMax: instanceOf(Date)`
+		/**
 			The maximum date the x axis should display. This should almost always be
 			the largest date from your dataset.
-		`,
+		*/
+		xAxisMax: instanceOf(Date),
 
-		xAxisFormatter: func`
+		/**
 			An optional function used to format your x axis data. If you don't
 			provide anything, we use the default D3 date variable formatter.
-		`,
+		*/
+		xAxisFormatter: func,
 
-		xAxisTooltipFormatter: func`
+		/**
 			An optional function used to format your x axis dates in the tooltips.
-		`,
+		*/
+		xAxisTooltipFormatter: func,
 
-		xAxisTickCount: number`
+		/**
 			There are some cases where you need to only show a "sampling" of ticks on
 			the x axis. This number will control that.
-		`,
+		*/
+		xAxisTickCount: number,
 
-		xAxisTicks: arrayOf(instanceOf(Date))`
+		/**
 			In some cases xAxisTickCount is not enough and you want to specify
 			exactly where the tick marks should appear on the x axis. This prop takes
 			an array of dates (currently only dates are supported for the x axis).
 			This prop will override the \`xAxisTickCount\` prop.
-		`,
+		*/
+		xAxisTicks: arrayOf(instanceOf(Date)),
 
-		xAxisTitle: string`
+		/**
 			Set a title for the x axis.
-		`,
+		*/
+		xAxisTitle: string,
 
-		xAxisTitleColor: oneOfType([number, string])`
+		/**
 			Set a color for the x axis title. Use the color constants exported off
 			\`lucid.chartConstants\`. E.g.:
 	
@@ -451,53 +470,63 @@ class LineChart extends React.Component<ILineChartProps, ILineChartState, {}> {
 			- \`'#123abc'\` // custom color hex
 	
 			\`number\` is supported only for backwards compatability.
-		`,
+		*/
+		xAxisTitleColor: oneOfType([number, string]),
 
-		xAxisTextOrientation: oneOf(['vertical', 'horizontal', 'diagonal'])`
+		/**
 			Determines the orientation of the tick text. This may override what the orient prop
 			tries to determine.
-		`,
+		*/
+		xAxisTextOrientation: oneOf(['vertical', 'horizontal', 'diagonal']),
 
-		yAxisFields: arrayOf(string)`
+		/**
 			An array of your y axis fields. Typically this will just be a single item
 			unless you need to display multiple lines. The order of the array
 			determines the series order in the chart.
-		`,
+		*/
+		yAxisFields: arrayOf(string),
 
-		yAxisMin: number`
+		/**
 			The minimum number the y axis should display. Typically this should be
 			\`0\`.
-		`,
+		*/
+		yAxisMin: number,
 
-		yAxisMax: number`
+		/**
 			The maximum number the y axis should display. This should almost always
 			be the largest number from your dataset.
-		`,
+		*/
+		yAxisMax: number,
 
-		yAxisFormatter: func`
+		/**
 			An optional function used to format your y axis data. If you don't
 			provide anything, we use the default D3 formatter.
-		`,
+		*/
+		yAxisFormatter: func,
 
-		yAxisIsStacked: bool`
+		/**
 			Stack the y axis data. This is only useful if you have multiple
 			\`yAxisFields\`. Stacking will cause the chart to be aggregated by sum.
-		`,
+		*/
+		yAxisIsStacked: bool,
 
-		yAxisHasPoints: bool`
+		/**
 			Display points along with the y axis lines.
-		`,
+		*/
+		yAxisHasPoints: bool,
 
-		yAxisTickCount: number`
+		/**
 			There are some cases where you need to only show a "sampling" of ticks on
 			the y axis. This number will control that.
-		`,
+		*/
+		yAxisTickCount: number,
 
-		yAxisTitle: string`
+		/**
 			Set a title for the y axis.
-		`,
+		*/
+		yAxisTitle: string,
 
-		yAxisTitleColor: oneOfType([number, string])`
+		/**
 			Set a color for the y axis title. Use the color constants exported off
 			\`lucid.chartConstants\`. E.g.:
 	
@@ -506,68 +535,81 @@ class LineChart extends React.Component<ILineChartProps, ILineChartState, {}> {
 			- \`'#123abc'\` // custom color hex
 	
 			\`number\` is supported only for backwards compatability.
-		`,
+		*/
+		yAxisTitleColor: oneOfType([number, string]),
 
-		yAxisTooltipFormatter: func`
+		/**
 			An optional function used to format your y axis titles and data in the
 			tooltips. The first value is the name of your y field, the second value
 			is your post-formatted y value, and the third value is your non-formatted
 			y-value.  Signature: \`(yField, yValueFormatted, yValue) => {}\`
-		`,
+		*/
+		yAxisTooltipFormatter: func,
 
-		yAxisTooltipDataFormatter: func`
+		/**
 			An optional function used to format data in the tooltips.
-		`,
+		*/
+		yAxisTooltipDataFormatter: func,
 
-		yAxisColorOffset: number`
+		/**
 			Set the starting index where colors start rotating for points and lines
 			along the y axis.
-		`,
+		*/
+		yAxisColorOffset: number,
 
-		y2AxisFields: arrayOf(string)`
+		/**
 			An array of your y2 axis fields. Typically this will just be a single
 			item unless you need to display multiple lines. The order of the array
 			determines the series order in the chart.
-		`,
+		*/
+		y2AxisFields: arrayOf(string),
 
-		y2AxisMin: number`
+		/**
 			The minimum number the y2 axis should display. Typically this should be
 			\`0\`.
-		`,
+		*/
+		y2AxisMin: number,
 
-		y2AxisMax: number`
+		/**
 			The maximum number the y2 axis should display. This should almost always
 			be the largest number from your dataset.
-		`,
+		*/
+		y2AxisMax: number,
 
-		y2AxisFormatter: func`
+		/**
 			An optional function used to format your y2 axis data. If you don't
 			provide anything, we use the default D3 formatter.
-		`,
+		*/
+		y2AxisFormatter: func,
 
-		y2AxisTooltipDataFormatter: func`
+		/**
 			An optional function used to format data in the tooltips.
-		`,
+		*/
+		y2AxisTooltipDataFormatter: func,
 
-		y2AxisIsStacked: bool`
+		/**
 			Stack the y2 axis data. This is only useful if you have multiple
 			\`y2AxisFields\`. Stacking will cause the chart to be aggregated by sum.
-		`,
+		*/
+		y2AxisIsStacked: bool,
 
-		y2AxisHasPoints: bool`
+		/**
 			Display points along with the y2 axis lines.
-		`,
+		*/
+		y2AxisHasPoints: bool,
 
-		y2AxisTickCount: number`
+		/**
 			There are some cases where you need to only show a "sampling" of ticks on
 			the y2 axis. This number will control that.
-		`,
+		*/
+		y2AxisTickCount: number,
 
-		y2AxisTitle: string`
+		/**
 			Set a title for the y2 axis.
-		`,
+		*/
+		y2AxisTitle: string,
 
-		y2AxisTitleColor: oneOfType([number, string])`
+		/**
 			Set a color for the y2 axis title. Use the color constants exported off
 			\`lucid.chartConstants\`. E.g.:
 	
@@ -576,17 +618,20 @@ class LineChart extends React.Component<ILineChartProps, ILineChartState, {}> {
 			- \`'#123abc'\` // custom color hex
 	
 			\`number\` is supported only for backwards compatability.
-		`,
+		*/
+		y2AxisTitleColor: oneOfType([number, string]),
 
-		y2AxisColorOffset: number`
+		/**
 			Set the starting index where colors start rotating for points and lines
 			along the y2 axis.
-		`,
+		*/
+		y2AxisColorOffset: number,
 
-		yAxisTextOrientation: oneOf(['vertical', 'horizontal', 'diagonal'])`
+		/**
 			Determines the orientation of the tick text. This may override what the orient prop
 			tries to determine.
-		`,
+		*/
+		yAxisTextOrientation: oneOf(['vertical', 'horizontal', 'diagonal']),
 	};
 
 	static defaultProps = {

@@ -78,7 +78,6 @@
 		"react-addons-shallow-compare": "^15.6.2",
 		"react-day-picker": "^6.2.1",
 		"react-motion": "^0.5.2",
-		"react-peek": "^1.0.5",
 		"react-placeholder": "^4.0.3",
 		"react-transition-group": "^4.4.2",
 		"reselect": "^4.0.0"
@@ -155,7 +154,7 @@
 		"stylelint-config-standard": "^20.0.0",
 		"timemachine": "^0.3.0",
 		"ts-loader": "^6.0.4",
-		"typescript": "^4.3.5",
+		"typescript": "^4.4.4",
 		"webpack": "^4.27.1",
 		"webpack-cli": "^3.1.2",
 		"webpack-dev-server": "^3.1.10"

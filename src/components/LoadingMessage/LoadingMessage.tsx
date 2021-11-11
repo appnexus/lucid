@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import _ from 'lodash';
 import React from 'react';
-import PropTypes from 'react-peek/prop-types';
+import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import { getFirst, omitProps, StandardProps } from '../../util/component-types';
 import LoadingIcon from '../Icon/LoadingIcon/LoadingIcon';
@@ -122,25 +122,30 @@ LoadingMessage.peek = {
 	madeFrom: ['LoadingIcon'],
 };
 LoadingMessage.propTypes = {
-	className: string`
+	/**
 		Class names that are appended to the defaults.
-	`,
+	*/
+	className: string,
 
-	children: node`
+	/**
 		Any valid React children.
-	`,
+	*/
+	children: node,
 
-	Icon: node`
+	/**
 		Custom Icon element (alias for \`LoadingMessage.Icon\`)
-	`,
+	*/
+	Icon: node,
 
-	Title: node`
+	/**
 		Custom Title element (alias for \`LoadingMessage.Title\`)
-	`,
+	*/
+	Title: node,
 
-	Body: node`
+	/**
 		Custom Body element (alias for \`LoadingMessage.Body\`)
-	`,
+	*/
+	Body: node,
 };
 
 export default LoadingMessage;

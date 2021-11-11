@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
-import PropTypes from 'react-peek/prop-types';
+import PropTypes from 'prop-types';
 import _, { isNil } from 'lodash';
 import Portal from '../Portal/Portal';
 import { getFirst, omitProps, StandardProps } from '../../util/component-types';
@@ -156,59 +156,71 @@ class ContextMenu extends React.Component<
 		madeFrom: ['Portal'],
 	};
 	static propTypes = {
-		children: node`
+		/**
 			\`children\` should include exactly one ContextMenu.Target and one
 			ContextMenu.FlyOut.
-		`,
+		*/
+		children: node,
 
-		className: string`
+		/**
 			Appended to the component-specific class names set on the root element.
-		`,
+		*/
+		className: string,
 
-		style: object`
+		/**
 			Passed through to the root element.
-		`,
+		*/
+		style: object,
 
-		direction: oneOf(['down', 'up', 'right', 'left'])`
+		/**
 			direction of the FlyOut relative to Target.
-		`,
+		*/
+		direction: oneOf(['down', 'up', 'right', 'left']),
 
-		directonOffset: number`
+		/**
 			the px offset along the axis of the direction
-		`,
+		*/
+		directonOffset: number,
 
-		alignment: oneOf(['start', 'center', 'end'])`
+		/**
 			alignment of the Flyout relative to Target in the cross axis from
 			\`direction\`.
-		`,
+		*/
+		alignment: oneOf(['start', 'center', 'end']),
 
-		alignmentOffset: number`
+		/**
 			the px offset along the axis of the alignment
-		`,
+		*/
+		alignmentOffset: number,
 
-		getAlignmentOffset: func`
+		/**
 			an alternative to \`alignmentOffset\`, a function that is applied with
 			the width/height of the flyout. the result is used as the
 			\`alignmentOffset\`
-		`,
+		*/
+		getAlignmentOffset: func,
 
-		minWidthOffset: number`
+		/**
 			The number of px's to grow or shrink the minWidth of the FlyOut
-		`,
+		*/
+		minWidthOffset: number,
 
-		isExpanded: bool`
+		/**
 			Indicates whether the FlyOut will render or not.
-		`,
+		*/
+		isExpanded: bool,
 
-		onClickOut: func`
+		/**
 			Called when a click event happenens outside of the ContextMenu, with the
 			signature \`({ props, event }) => { ... }\`
-		`,
+		*/
+		onClickOut: func,
 
-		portalId: string`
+		/**
 			The \`id\` of the FlyOut portal element that is appended to
 			\`document.body\`. Defaults to a generated \`id\`.
-		`,
+		*/
+		portalId: string,
 
 		FlyOut: node,
 		Target: node,

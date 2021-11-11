@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React, { RefObject } from 'react';
-import PropTypes from 'react-peek/prop-types';
+import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import {
 	filterTypes,
@@ -31,16 +31,19 @@ SplitHorizontalTopPane.peek = {
 };
 SplitHorizontalTopPane.propName = 'TopPane';
 SplitHorizontalTopPane.propTypes = {
-	children: node`
+	/**
 		Any valid React children.
-	`,
-	height: oneOfType([number, string])`
+	*/
+	children: node,
+	/**
 		Set height of this pane.
-	`,
-	isPrimary: bool`
+	*/
+	height: oneOfType([number, string]),
+	/**
 		Define this pane as the primary content pane. When the split is
 		collapsed, this pane becomes full height.
-	`,
+	*/
+	isPrimary: bool,
 };
 SplitHorizontalTopPane.defaultProps = {
 	isPrimary: false,
@@ -64,16 +67,19 @@ SplitHorizontalBottomPane.peek = {
 };
 SplitHorizontalBottomPane.propName = 'BottomPane';
 SplitHorizontalBottomPane.propTypes = {
-	children: node`
+	/**
 		Any valid React children.
-	`,
-	height: oneOfType([number, string])`
+	*/
+	children: node,
+	/**
 		Set height of this pane.
-	`,
-	isPrimary: bool`
+	*/
+	height: oneOfType([number, string]),
+	/**
 		Define this pane as the primary content pane. When the split is
 		collapsed, this pane becomes full height.
-	`,
+	*/
+	isPrimary: bool,
 };
 SplitHorizontalBottomPane.defaultProps = {
 	isPrimary: false,
@@ -91,9 +97,10 @@ SplitHorizontalDivider.peek = {
 };
 SplitHorizontalDivider.propName = 'Divider';
 SplitHorizontalDivider.propTypes = {
-	children: node`
+	/**
 		Any valid React children.
-	`,
+	*/
+	children: node,
 };
 
 export interface ISplitHorizontalProps
@@ -156,38 +163,45 @@ class SplitHorizontal extends React.Component<
 	};
 	static _isPrivate = true;
 	static propTypes = {
-		className: string`
+		/**
 			Appended to the component-specific class names set on the root element.
 			Value is run through the \`classnames\` library.
-		`,
+		*/
+		className: string,
 
-		children: node`
+		/**
 			Direct children must be types {Splitvertical.Toppane,
 			Splitvertical.Divider, Splitvertical.BottomPane}.	All content is
 			composed as children of these respective elements.
-		`,
+		*/
+		children: node,
 
-		isExpanded: bool`
+		/**
 			Render as expanded or collapsed.
-		`,
+		*/
+		isExpanded: bool,
 
-		isAnimated: bool`
+		/**
 			Allows animated expand and collapse behavior.
-		`,
+		*/
+		isAnimated: bool,
 
-		onResizing: func`
+		/**
 			Called when the user is currently resizing the split with the Divider.
 			Signature: \`(height, { event, props }) => {}\`
-		`,
+		*/
+		onResizing: func,
 
-		onResize: func`
+		/**
 			Called when the user resizes the split with the Divider.	Signature:
 			\`(height, { event, props }) => {}\`
-		`,
+		*/
+		onResize: func,
 
-		collapseShift: number`
+		/**
 			Use this prop to shift the collapsed position by a known value.
-		`,
+		*/
+		collapseShift: number,
 
 		TopPane: node,
 		BottomPane: node,

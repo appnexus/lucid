@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import PropTypes from 'react-peek/prop-types';
+import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import { buildModernHybridComponent } from '../../util/state-management';
 import { ExpanderPanelDumb as ExpanderPanel } from '../ExpanderPanel/ExpanderPanel';
@@ -81,18 +81,25 @@ const Accordion = (props: IAccordionProps): React.ReactElement => {
 Accordion.displayName = 'Accordion';
 
 Accordion.propTypes = {
-	className: string`
+	/**
 		Appended to the component-specific class names set on the root element.
-	`,
-	selectedIndex: number`
+	*/
+	className: string,
+
+	/**
 		Indicates which item is expanded
-	`,
-	onSelect: func`
+	*/
+	selectedIndex: number,
+
+	/**
 		Called when the user clicks on the component's header of an item.
-	`,
-	style: object`
+	*/
+	onSelect: func,
+
+	/**
 		Passed through to the root element.
-	`,
+	**/
+	style: object,
 };
 
 Accordion.peek = {
@@ -113,6 +120,6 @@ export default buildModernHybridComponent<
 	IAccordionProps,
 	IAccordionState,
 	typeof Accordion
->(Accordion, { reducers });
+>(Accordion as any, { reducers });
 
 export { Accordion as AccordionDumb };

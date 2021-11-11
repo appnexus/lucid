@@ -1,6 +1,6 @@
 import React from 'react';
 import createReactClass from 'create-react-class';
-import PropTypes from 'react-peek/prop-types';
+import PropTypes from 'prop-types';
 import _ from 'lodash';
 import {
 	isPlainObjectOrEsModule,
@@ -108,7 +108,7 @@ export function createClass<P, S = {}>(
 		..._.mapValues(
 			spec.components,
 			(componentValue, componentKey): {} =>
-				PropTypes.any`Props for ${componentValue.displayName || componentKey}`
+				PropTypes.any /* Props for ${componentValue.displayName || componentKey} */
 		),
 	};
 

@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
-import PropTypes from 'react-peek/prop-types';
+import PropTypes from 'prop-types';
 import _ from 'lodash';
 import { lucidClassNames } from '../../util/style-helpers';
 import {
@@ -140,44 +140,52 @@ OverlayWrapper.peek = {
 	categories: ['utility'],
 };
 OverlayWrapper.propTypes = {
-	isVisible: bool`
+	/**
 		Controls whether the message should be displayed over the wrapped
 		content.
-	`,
+	*/
+	isVisible: bool,
 
-	hasOverlay: bool`
+	/**
 		Set this to \`false\` if you don't want the semi-transparent overlay over
 		the wrapped content.
-	`,
+	*/
+	hasOverlay: bool,
 
-	className: string`
+	/**
 		Class names that are appended to the defaults.
-	`,
+	*/
+	className: string,
 
-	children: node`
+	/**
 		Any valid React children.
-	`,
+	*/
+	children: node,
 
-	overlayKind: oneOf(['light', 'dark'])`
+	/**
 		Style variations for the overlay behind the message.
-	`,
+	*/
+	overlayKind: oneOf(['light', 'dark']),
 
-	anchorMessage: bool`
+	/**
 		By default, the \`OverlayMessage\` is vertically aligned to the middle of the
 		OverlayWrapper. Set this to true to position the \`OverlayMessage\` near the top of 
 		the \`OverlayWrapper\`.
-	`,
+	*/
+	anchorMessage: bool,
 
-	fixedMessage: bool`
+	/**
 		By default, the OverlayMessage is vertically aligned to the middle of the
 		\`OverlayWrapper\` and the \`OverlayWrapper\` is the height of the entire content.
 		Set this to true to position the \`OverlayMessage\` near the center of the 
 		\`OverlayWrapper\`, and fix the \`OverlayWrapper\` to the screen height and width.
-	`,
+	*/
+	fixedMessage: bool,
 
-	Message: node`
-		*Child Element* The Message to display in the overlay.
-	`,
+	/*
+	 *Child Element* The Message to display in the overlay.
+	 */
+	Message: node,
 };
 
 OverlayWrapper.Message = OverlayWrapperMessage;

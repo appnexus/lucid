@@ -46,16 +46,6 @@ module.exports = function(api) {
 					'@babel/plugin-proposal-object-rest-spread',
 					'@babel/plugin-proposal-class-properties',
 					'lodash',
-					...(isDocsBuild
-						? []
-						: [
-								[
-									'react-peek/babel',
-									{
-										minifyStatics: true,
-									},
-								],
-						  ]),
 				],
 				presets: [
 					[
@@ -74,12 +64,6 @@ module.exports = function(api) {
 				plugins: [
 					'@babel/plugin-proposal-object-rest-spread',
 					'@babel/plugin-proposal-class-properties',
-					[
-						'react-peek/babel',
-						{
-							minifyStatics: true,
-						},
-					],
 					'lodash',
 				],
 				presets: [

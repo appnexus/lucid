@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import PropTypes from 'react-peek/prop-types';
+import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import { omitProps, StandardProps } from '../../util/component-types';
 import elementResizeDetectorMaker from 'element-resize-detector';
@@ -37,14 +37,16 @@ class Resizer extends React.Component<IResizerProps, IResizerState, {}> {
 		categories: ['utility'],
 	};
 	static propTypes = {
-		className: string`
+		/**
 			Appended to the component-specific class names set on the root elements.
-		`,
+		*/
+		className: string,
 
-		children: func`
+		/**
 			A function that returns your rendered content with the signature:
 			\`(width, height) => {}\`
-		`,
+		*/
+		children: func,
 	};
 
 	private _element = React.createRef<HTMLDivElement>();

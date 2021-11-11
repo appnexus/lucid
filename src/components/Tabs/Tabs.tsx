@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import PropTypes from 'react-peek/prop-types';
+import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import {
 	getFirst,
@@ -162,53 +162,64 @@ Tab.displayName = 'Tabs.Tab';
 Tab.propName = 'Tab';
 
 Tab.propTypes = {
-	className: string`
+	/**
 			Class names that are appended to the defaults.
-		`,
+		*/
+	className: string,
 
-	index: number`
+	/**
 			The index of this \`Tab\` within the list of \`Tabs\`.
-		`,
+		*/
+	index: number,
 
-	isDisabled: bool`
+	/**
 			Styles a \`Tab\` as disabled. This is typically used with
 			\`isProgressive\` to disable steps that have not been completed and
 			should not be selected until the current step has been completed.
-		`,
+		*/
+	isDisabled: bool,
 
-	isLastTab: bool`
+	/**
 			If \`true\`, this \`Tab\` is the last \`Tab\` in the list of \`Tabs\`.
-		`,
+		*/
+	isLastTab: bool,
 
-	isOpen: bool`
+	/**
 			If \`true\` then the active \`Tab\` will appear open on the bottom.
-		`,
+		*/
+	isOpen: bool,
 
-	isProgressive: bool`
+	/**
 			If \`true\`, the \`Tab\` will appear as a \`Progressive\` tab.
-		`,
+		*/
+	isProgressive: bool,
 
-	isSelected: bool`
+	/**
 			If \`true\`, the \`Tab\` will appear selected.
-		`,
+		*/
+	isSelected: bool,
 
-	onSelect: func`
+	/**
 			Callback for when the user clicks a \`Tab\`. Called with the index of the
 			\`Tab\` that was clicked.
-		`,
+		*/
+	onSelect: func,
 
-	Title: node`
+	/**
 			The content to be rendered as the \`Title\` of the \`Tab\`.
-		`,
+		*/
+	Title: node,
 
-	count: number`
+	/**
 			Optional prop that will show a count number next to the tab's title.
-		`,
+		*/
+	count: number,
 
-	isVariableCountWidth: bool`
+	/**
 			Defaults to false.
 			Allows the count bubble to grow large. Useful if working with huge numbers.
-		`,
+		*/
+	isVariableCountWidth: bool,
 };
 
 export interface ITabsProps extends StandardProps {
@@ -282,52 +293,60 @@ class Tabs extends React.Component<ITabsPropsWithPassThroughs, ITabsState> {
 	};
 
 	static propTypes = {
-		className: string`
+		/**
 			Class names that are appended to the defaults.
-		`,
+		*/
+		className: string,
 
-		selectedIndex: number`
+		/**
 			Indicates which of the \`Tabs.Tab\` children is currently selected. The
 			index of the last \`Tabs.Tab\` child with \`isSelected\` equal to
 			\`true\` takes precedence over this prop.
-		`,
+		*/
+		selectedIndex: number,
 
-		onSelect: func`
+		/**
 			Callback for when the user clicks a tab. Called with the index of the tab
 			that was clicked.
-		`,
+		*/
+		onSelect: func,
 
-		isOpen: bool`
+		/**
 			If \`true\` then the active tab will appear open on the bottom.
-		`,
+		*/
+		isOpen: bool,
 
-		isProgressive: bool`
+		/**
 			Style the tabs as a progression. This is typically used for a work flow
 			where the user needs to move forward and backward through a series of
 			steps.
-		`,
+		*/
+		isProgressive: bool,
 
-		isFloating: bool`
+		/**
 			Provides a small bottom border that offers a barrier between the tab
 			group and the rest of the page.
 			Useful if the tabs are not anchored to anything.
-		`,
+		*/
+		isFloating: bool,
 
-		hasMultilineTitle: bool`
+		/**
 			Set the multiline className. This is typically used for styling the
 			Tab.Title bar for improved readability when there are multiple React
 			elements in the tab headers.
-		`,
+		*/
+		hasMultilineTitle: bool,
 
-		hasFullWidthTabs: bool`
+		/**
 			If \`true\` the width will be evenly distributed to all tabs.  \`False\`
 			typically used in conjunction with \`Tab.width\`
-		`,
+		*/
+		hasFullWidthTabs: bool,
 
-		Tab: any`
+		Tab: any /**
 			*Child Element* Can be used to define one or more individual \`Tab\`s in
 			the sequence of \`Tabs\`.
-		`,
+		*/,
 	};
 
 	static defaultProps = {

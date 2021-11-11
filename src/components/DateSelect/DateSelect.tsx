@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import _ from 'lodash';
-import PropTypes from 'react-peek/prop-types';
+import PropTypes from 'prop-types';
 import React from 'react';
 import { buildModernHybridComponent } from '../../util/state-management';
 import { lucidClassNames } from '../../util/style-helpers';
@@ -150,99 +150,117 @@ class DateSelect extends React.Component<IDateSelectProps, IDateSelectState> {
 	};
 
 	static propTypes = {
-		className: string`
+		/**
 			Appended to the component-specific class names set on the root element.
-		`,
+		*/
+		className: string,
 
-		monthsShown: number`
+		/**
 			Number of calendar months to show. Min 1, suggested max 3. Actual max is 6.
-		`,
+		*/
+		monthsShown: number,
 
-		calendarsRendered: number`
+		calendarsRendered: number /**
 			Number of calendar months rendered at any given time (including those out
 			of view).  In practice it should be at least (2 * monthsShown) + 2. It's
 			got some issues that still need to be ironed out but it works.
-		`,
+		*/,
 
-		offset: number`
+		/**
 			The offset of the leftmost month in view, where 0 is the
 			\`initialMonth\`.  Negative values will show previous months.
-		`,
+		*/
+		offset: number,
 
-		from: instanceOf(Date)`
+		/**
 			Sets the start date in a date range.
-		`,
+		*/
+		from: instanceOf(Date),
 
-		to: instanceOf(Date)`
+		/**
 			Sets the end date in a date range.
-		`,
+		*/
+		to: instanceOf(Date),
 
-		selectMode: oneOf(['day', 'from', 'to'])`
+		/**
 			The next selection that is expected. Primarily used to preview expected
 			ranges when the cursor is on a target date.
-		`,
+		*/
+		selectMode: oneOf(['day', 'from', 'to']),
 
-		initialMonth: instanceOf(Date)`
+		/**
 			Sets first month in view on render. The 0 value for the \`offset\` prop
 			refers to this month.
-		`,
+		*/
+		initialMonth: instanceOf(Date),
 
-		selectedDays: any`
+		/**
 			Sets selected days. Passed through to \`CalendarMonth\` ->
 			\`react-day-picker\`. Can be a \`Date\`, array of \`Date\`s or a function
 			with the signature \`(date) => Boolean\`.
-		`,
+		*/
+		selectedDays: any,
 
-		disabledDays: any`
+		/**
 			Sets disabled days. Passed through to \`CalendarMonth\` ->
 			\`react-day-picker\`. Can be a \`Date\`, array of \`Date\`s or a function
 			with the signature \`(date) => Boolean\`.
-		`,
+		*/
+		disabledDays: any,
 
-		showDivider: bool`
+		/**
 			Display a divider between each month.
-		`,
+		*/
+		showDivider: bool,
 
-		onSwipe: func`
+		/**
 			Called when user's swipe would change the month \`offset\`. Callback
 			passes number of months swiped by the user (positive for forward swipes,
 			negative for backwards swipes).  Signature:
 			\`(monthsSwiped, { event, props }) => {}\`
-		`,
+		*/
+		onSwipe: func,
 
-		onPrev: func`
+		/**
 			Called when user clicks the previous button.  Signature:
 			\`({ event, props }) => {}\`
-		`,
+		*/
+		onPrev: func,
 
-		onNext: func`
+		/**
 			Called when user clicks the next button.  Signature:
 			\`({ event, props }) => {}\`
-		`,
+		*/
+		onNext: func,
 
-		onSelectDate: func`
+		/**
 			Called when user selects a date. Callback passes a Date object as the
 			first argument.  Signature: \`(selectedDate, { event, props }) => {}\`
-		`,
+		*/
+		onSelectDate: func,
 
-		isFontSizeRelative: bool`
+		/**
 			Render initial font size relative to size of the component so it scales
 			with the calendar size.
-		`,
+		*/
+		isFontSizeRelative: bool,
 
-		showCursorHighlight: bool`
+		/**
 			Highlight dates and ranges based on cursor position.
-		`,
+		*/
+		showCursorHighlight: bool,
 
-		useSlidePanel: bool`
+		/**
 			Render the calendar months in a touch-friendly slider with some being
 			rendered out-of-view. Set to \`false\` to disable this feature and gain a
 			performance boost.
-		`,
+		*/
+		useSlidePanel: bool,
 
-		CalendarMonth: node`
+		/**
 				Child component to pass thru props to underlying CalendarMonth.
-		`,
+		*/
+		CalendarMonth: node,
 	};
 
 	static defaultProps = {
@@ -505,5 +523,5 @@ export default buildModernHybridComponent<
 	IDateSelectProps,
 	IDateSelectState,
 	typeof DateSelect
->(DateSelect, { reducers });
+>(DateSelect as any, { reducers });
 export { DateSelect as DateSelectDumb };

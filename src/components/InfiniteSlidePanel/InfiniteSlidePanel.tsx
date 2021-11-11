@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import PropTypes from 'react-peek/prop-types';
+import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import { Overwrite, getFirst, omitProps } from '../../util/component-types';
 import SlidePanel, {
@@ -154,37 +154,42 @@ InfiniteSlidePanel.peek = {
 	madeFrom: ['SlidePanel'],
 };
 InfiniteSlidePanel.propTypes = {
-	className: string`
+	/**
 		Appended to the component-specific class names set on the root element.
-	`,
+	*/
+	className: string,
 
-	children: oneOfType([node, func])`
+	children: oneOfType([node, func]) /**
 		The only allowed child is a render function which is passed the current
 		slide's offset and returns the slide contents: \`(slideOffset) => {
 		//returns React.PropTypes.node }\` Alternatively, you could pass one
 		\`<InfiniteSlidePanel.Slide {...}>\` element with the render function.
 		The only reason do to the latter is to pass addiontal props to the slide
 		element.
-	`,
+	*/,
 
-	offset: number`
+	/**
 		The offset of the left-most rendered slide.
-	`,
+	*/
+	offset: number,
 
-	slidesToShow: number`
+	/**
 		Max number of viewable slides to show simultaneously.
-	`,
+	*/
+	slidesToShow: number,
 
-	onSwipe: func`
+	/**
 		Called when a user's swipe would change the offset. Callback passes
 		number of slides by the user (positive for forward swipes, negative for
 		backwards swipes).  Signature: \`(slidesSwiped, { event, props }) => {}\`
-	`,
+	*/
+	onSwipe: func,
 
-	totalSlides: number`
+	/**
 		The number of slides rendered at any given time. A good rule-of-thumb is
 		that this should be at least 4 times the \`slidesToShow\` value.
-	`,
+	*/
+	totalSlides: number,
 
 	Slide: node,
 };

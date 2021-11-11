@@ -163,7 +163,7 @@ NODE_ENV=development npx webpack --config webpack.config.bundle.cjs --json --sta
 Similar errors include saying `string`, `bool`, `boolean`, `node`, etc. are not defined. If you get this error, double check that all your defined propTypes in your component class are also destructured from PropTypes.
 
 ```javascript
-import PropTypes from 'react-peek/prop-types';
+import PropTypes from 'prop-types';
 
 const {
 	bool,

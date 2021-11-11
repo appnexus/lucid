@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import PropTypes from 'react-peek/prop-types';
+import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import {
 	findTypes,
@@ -99,57 +99,90 @@ Cell.peek = {
 	`,
 };
 Cell.propTypes = {
-	isFull: bool`
+	/**
 		fill all twelve columns of the primary grid axis
-	`,
-	isHalf: bool`
+	*/
+	isFull: bool,
+
+	/**
 		fill six columns of the primary grid axis
-	`,
-	isThird: bool`
+	*/
+	isHalf: bool,
+
+	/**
 		fill four columns of the primary grid axis
-	`,
-	isQuarter: bool`
+	*/
+	isThird: bool,
+
+	/**
 		fill three columns of the primary grid axis
-	`,
-	is2: bool`
+	*/
+	isQuarter: bool,
+
+	/**
 		fill 2 columns of 12
-	`,
-	is3: bool`
+	*/
+	is2: bool,
+
+	/**
 		fill 3 columns of 12
-	`,
-	is4: bool`
+	*/
+	is3: bool,
+
+	/**
 		fill 4 columns of 12
-	`,
-	is5: bool`
+	*/
+	is4: bool,
+
+	/**
 		fill 5 columns of 12
-	`,
-	is6: bool`
+	*/
+	is5: bool,
+
+	/**
 		fill 6 columns of 12
-	`,
-	is7: bool`
+	*/
+	is6: bool,
+
+	/**
 		fill 7 columns of 12
-	`,
-	is8: bool`
+	*/
+	is7: bool,
+
+	/**
 		fill 8 columns of 12
-	`,
-	is9: bool`
+	*/
+	is8: bool,
+
+	/**
 		fill 9 columns of 12
-	`,
-	is10: bool`
+	*/
+	is9: bool,
+
+	/**
 		fill 10 columns of 12
-	`,
-	is11: bool`
+	*/
+	is10: bool,
+
+	/**
 		fill 11 columns of 12
-	`,
-	isOffsetQuarter: bool`
+	*/
+	is11: bool,
+
+	/**
 		offset a grid cell by three columns
-	`,
-	isOffsetThird: bool`
+		*/
+	isOffsetQuarter: bool,
+
+	/**
 		offset a grid cell by four columns
-	`,
-	isOffsetHalf: bool`
+	*/
+	isOffsetThird: bool,
+
+	/**
 		offset a grid cell by six columns
-	`,
+	*/
+	isOffsetHalf: bool,
 };
 Cell.peek = {
 	description: `
@@ -240,29 +273,35 @@ Grid.peek = {
 	categories: ['layout'],
 };
 Grid.propTypes = {
-	className: string`
+	/**
 		Appended to the component-specific class names set on the root element.
-	`,
+	*/
+	className: string,
 
-	isVertical: bool`
+	/**
 		explicitly set the primary axis of the grid to Y
-	`,
+	*/
+	isVertical: bool,
 
-	isHorizontal: bool`
+	/**
 		explicitly set the primary axis of the grid to X
-	`,
+	*/
+	isHorizontal: bool,
 
-	isGutterless: bool`
+	/**
 		a grid without padding separating grid cells
-	`,
+	*/
+	isGutterless: bool,
 
-	isMultiline: bool`
+	/**
 		Allow Grids to wrap multiple lines
-	`,
+	*/
+	isMultiline: bool,
 
-	children: node`
+	/**
 		Any valid React component
-	`,
+	*/
+	children: node,
 };
 
 export default Grid;

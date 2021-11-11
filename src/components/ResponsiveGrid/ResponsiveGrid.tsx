@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import PropTypes from 'react-peek/prop-types';
+import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import {
 	StandardProps,
@@ -52,16 +52,22 @@ export class ResponsiveGrid extends React.Component<IResponsiveGridProps> {
 	static displayName = 'ResponsiveGrid';
 
 	static propTypes = {
-		width: number`Width of the grid. Note: this does not set the width of the grid, and should be
-		provided by calculating the width of the parent element.`,
+		/** 
+			Width of the grid. Note: this does not set the width of the grid, and should be
+			provided by calculating the width of the parent element.
+		*/
+		width: number,
 
-		breakPoints: arrayOf(number)`
-		Break points for the grid to switch column layouts. Break points should be provided 
-		in ascending order. Currently only two break points are used. Example: [960, 1430]`,
+		/**
+			Break points for the grid to switch column layouts. Break points should be provided
+			in ascending order. Currently only two break points are used. Example: [960, 1430]
+		*/
+		breakPoints: arrayOf(number),
 
-		className: string`
+		/**
 			Appended to the component-specific class names set on the root elements.
-		`,
+		*/
+		className: string,
 	};
 
 	getColumnLayout = (numberOfColumns: number) => {
@@ -161,14 +167,16 @@ ResponsiveGridWrapper.Cell = Cell;
 ResponsiveGridWrapper.defaultProps = defaultProps;
 ResponsiveGridWrapper.displayName = ResponsiveGrid.displayName;
 ResponsiveGridWrapper.propTypes = {
-	breakPoints: arrayOf(number)`
+	/**
 		Break points for the grid to switch column layouts. Break points should be provided 
 		in ascending order. Currently only two break points are used. Example: [960, 1430]
-	`,
+	*/
+	breakPoints: arrayOf(number),
 
-	className: string`
+	/**
 		Appended to the component-specific class names set on the root elements.
-	`,
+	*/
+	className: string,
 };
 ResponsiveGridWrapper.peek = {
 	description: `

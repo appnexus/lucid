@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import PropTypes from 'react-peek/prop-types';
+import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import { getFirst, omitProps, StandardProps } from '../../util/component-types';
 import { buildModernHybridComponent } from '../../util/state-management';
@@ -30,10 +30,11 @@ Header.peek = {
 };
 Header.propName = 'Header';
 Header.propTypes = {
-	children: node`
+	/**
 		Used to identify the purpose of this switch to the user -- can be any
 		renderable content.
-	`,
+	*/
+	children: node,
 };
 
 export interface IExpanderPanelProps extends StandardProps {
@@ -75,44 +76,54 @@ class ExpanderPanel extends React.Component<
 	static displayName = 'ExpanderPanel';
 	static Header = Header;
 	static propTypes = {
-		children: node`
+		/**
 			Expandable content.
-		`,
+		*/
+		children: node,
 
-		className: string`
+		/**
 			Appended to the component-specific class names set on the root element.
-		`,
+		*/
+		className: string,
 
-		isExpanded: bool`
+		/**
 			Indicates that the component is in the "expanded" state when true and in
 			the "unexpanded" state when false.
-		`,
+		*/
+		isExpanded: bool,
 
-		isDisabled: bool`
+		/**
 			Indicates that the component is in the "disabled" state when true and in
 			the "enabled" state when false.
-		`,
+		*/
+		isDisabled: bool,
 
-		hasPadding: bool`
+		/**
 			Controls the presence of padding on the inner content.
-		`,
+		*/
+		hasPadding: bool,
 
-		onToggle: func`
+		/**
 			Called when the user clicks on the component's header.
 			Signature: \`(isExpanded, { event, props }) => {}\`
-		`,
+		*/
+		onToggle: func,
 
-		style: object`
+		/**
 			Passed through to the root element.
-		`,
+		*/
+		style: object,
 
-		onRest: func`Optional. The callback that fires when the animation comes to a rest.`,
-		onRestAppliedOnCollapse: bool`Applies on onRest callback when rest state is closed.`,
+		onRest:
+			func /*Optional. The callback that fires when the animation comes to a rest.*/,
+		onRestAppliedOnCollapse:
+			bool /*Applies on onRest callback when rest state is closed.*/,
 
-		Header: any`
+		/**
 			prop alternative to Header child component passed through to the
 			underlying ExpanderPanel
-		`,
+		*/
+		Header: any,
 	};
 
 	static peek = {
@@ -206,5 +217,5 @@ export default buildModernHybridComponent<
 	IExpanderPanelProps,
 	IExpanderState,
 	typeof ExpanderPanel
->(ExpanderPanel, { reducers });
+>(ExpanderPanel as any, { reducers });
 export { ExpanderPanel as ExpanderPanelDumb };

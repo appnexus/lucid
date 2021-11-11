@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import PropTypes from 'react-peek/prop-types';
+import PropTypes from 'prop-types';
 import { Motion, spring } from 'react-motion';
 import { QUICK_SLIDE_MOTION } from '../../constants/motion-spring';
 import { lucidClassNames } from '../../util/style-helpers';
@@ -56,37 +56,47 @@ class Collapsible extends React.Component<
 	};
 	// static _isPrivate = true;
 	static propTypes = {
-		children: node`
+		/**
 			Expandable content.
-		`,
+		*/
+		children: node,
 
-		className: string`
+		/**
 			Appended to the component-specific class names set on the root element.
-		`,
+		*/
+		className: string,
 
-		isExpanded: bool`
+		/**
 			Indicates that the component is in the "expanded" state when true and in
 			the "unexpanded" state when false.
-		`,
+		*/
+		isExpanded: bool,
 
-		isAnimated: bool`
+		/**
 			Show an animated transition for alternating values of \`isExpanded\`.
-		`,
+		*/
+		isAnimated: bool,
 
-		isMountControlled: bool`
+		/**
 			If true, do not render children when fully collapsed.
-		`,
+		*/
+		isMountControlled: bool,
 
-		mountControlThreshold: number`
+		/**
 			If \`isMountControlled\` is true, this value sets is the minimum height
 			the container needs to reach to not render any children.
-		`,
+		*/
+		mountControlThreshold: number,
 
-		onRest: func`Optional. The callback that fires when the animation comes to a rest.`,
+		/**
+			Optional. The callback that fires when the animation comes to a rest.
+		*/
+		onRest: func,
 
-		rootType: any`
+		/**
 			Pass in a custom root element type.
-		`,
+		*/
+		rootType: any,
 	};
 
 	private rootRef = React.createRef<HTMLDivElement>();

@@ -11,17 +11,24 @@ import { addons, mockChannel } from '@storybook/addons';
 
 addons.setChannel(mockChannel());
 
+interface ICommonConfig {
+	getDefaultProps;
+	exemptFunctionProps;
+	exemptChildComponents;
+	selectRoot;
+	noExport: boolean;
+}
+
 // Common tests for all our components
-export function common(
-	Component: any,
-	{
+export function common(Component: any, config: ICommonConfig = {} as any) {
+	const {
 		getDefaultProps = _.constant({}),
 		exemptFunctionProps = [],
 		exemptChildComponents = [],
 		selectRoot = _.identity,
 		noExport = false,
-	} = {}
-) {
+	} = config;
+
 	function generateDefaultProps(props = {}) {
 		return _.assign({}, getDefaultProps(), props);
 	}
@@ -170,10 +177,10 @@ export function common(
 							result = render(<Story {...Story.args} />, {
 								disableLifecycleMethods: true,
 							});
+							expect(result).toMatchSnapshot();
 						} catch (err) {
-							result = err.message;
+							expect(err).toMatchSnapshot();
 						}
-						expect(result).toMatchSnapshot();
 					});
 				});
 			});

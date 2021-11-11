@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import PropTypes from 'react-peek/prop-types';
+import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import { omitProps, getFirst, StandardProps } from '../../util/component-types';
 
@@ -84,23 +84,27 @@ ProgressBar.peek = {
 	categories: ['communication'],
 };
 ProgressBar.propTypes = {
-	className: string`
+	/**
 		Appended to the component-specific class names set on the root element.
-	`,
+	*/
+	className: string,
 
-	kind: oneOf(['default', 'success', 'danger', 'info', 'warning'])`
+	/**
 		Applies a color style for the kind of ProgressBar.
-	`,
+	*/
+	kind: oneOf(['default', 'success', 'danger', 'info', 'warning']),
 
-	percentComplete: number`
+	/**
 		Percentage ProgressBar is complete.
-	`,
+	*/
+	percentComplete: number,
 
 	children: node,
 
-	Title: node`
-		*Child Element* - Title contents. Only one \`Title\` is used.
-	`,
+	/*
+	 *Child Element* - Title contents. Only one \`Title\` is used.
+	 */
+	Title: node,
 };
 
 export default ProgressBar;

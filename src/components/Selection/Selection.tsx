@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import PropTypes from 'react-peek/prop-types';
+import PropTypes from 'prop-types';
 import MinusCircleIcon from '../Icon/MinusCircleIcon/MinusCircleIcon';
 import SuccessIcon from '../Icon/SuccessIcon/SuccessIcon';
 import CloseIcon from '../Icon/CloseIcon/CloseIcon';
@@ -239,61 +239,73 @@ Selection.peek = {
 };
 Selection.defaultProps = defaultProps;
 Selection.propTypes = {
-	className: string`
+	/**
 			Appended to the component-specific class names set on the root element.
-		`,
+		*/
+	className: string,
 
-	kind: oneOf(['default', 'container', 'success', 'danger', 'info', 'warning'])`
+	/**
 			Applies an icon and styles for the kind of selection.
-		`,
+		*/
+	kind: oneOf(['default', 'container', 'success', 'danger', 'info', 'warning']),
 
-	isTop: bool`
+	/**
 			Apply to the top of a nested sequence of Selection components.
 			Adds some spacing for a list of top level Selections with nested Selctions inside each.
-		`,
+		*/
+	isTop: bool,
 
-	isFilled: bool`
+	/**
 			Only applies to \`container\` Selection components.
 			Fills with a darker gray background.
 			Defaults to false.
-		`,
+		*/
+	isFilled: bool,
 
-	isRemovable: bool`
+	/**
 			Shows or hides the little "x" for a given item.
-		`,
+		*/
+	isRemovable: bool,
 
-	hasBackground: bool`
+	/**
 			Gives the selection a background. This is desirable when you only have
 			one level of nested selections.
-		`,
+		*/
+	hasBackground: bool,
 
-	isBold: bool`
+	/**
 			Make the content text bold. This is desirable when you only have one
 			level of nested selections.
-		`,
+		*/
+	isBold: bool,
 
-	onRemove: func`
+	/**
 			Called when the close button is clicked.
-		`,
+		*/
+	onRemove: func,
 
-	Label: node`
+	/**
 			Label of the component.
-		`,
+		*/
+	Label: node,
 
-	Icon: node`
+	/**
 			Display a custom icon for the selection. Generally you shouldn't need
 			this prop since the \`kind\` prop will pick the correct icon for you.
-		`,
+		*/
+	Icon: node,
 
-	children: node`
+	/**
 			Arbitrary children.
-		`,
+		*/
+	children: node,
 
-	responsiveMode: oneOf(['small', 'medium', 'large'])`
+	/**
 			Adjusts the display of this component. This should typically be driven by
 			screen size. Currently \`small\` and \`large\` are explicitly handled by
 			this component.
-		`,
+		*/
+	responsiveMode: oneOf(['small', 'medium', 'large']),
 };
 
 export default Selection;

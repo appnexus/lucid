@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'react-peek/prop-types';
+import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import { getFirst, omitProps, StandardProps } from '../../util/component-types';
 import _ from 'lodash';
@@ -81,22 +81,25 @@ Validation.peek = {
 	categories: ['helpers'],
 };
 Validation.propTypes = {
-	Error: any`
+	/**
 		In most cases this will be a string, but it also accepts any valid React
 		element. If this is a falsey value, then no error message will be
 		displayed.  If this is the literal \`true\`, it will add the
 		\`-is-error\` class to the wrapper div, but not render the
 		\`-error-content\` \`div\`.
-	`,
+	*/
+	Error: any,
 
-	className: string`
+	/**
 		Classes that are appended to the component defaults. This prop is run
 		through the \`classnames\` library.
-	`,
+	*/
+	className: string,
 
-	children: any.isRequired`
+	/**
 		Any valid React children.
-	`,
+	*/
+	children: any.isRequired,
 };
 
 Validation.Error = ValidationError;

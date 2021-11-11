@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import PropTypes from 'react-peek/prop-types';
+import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import { StandardProps, omitProps } from '../../util/component-types';
 import { groupByFields } from '../../util/chart-helpers';
@@ -204,11 +204,12 @@ Points.peek = {
 };
 
 Points.propTypes = {
-	className: string`
+	/**
 		Appended to the component-specific class names set on the root element.
-	`,
+	*/
+	className: string,
 
-	palette: arrayOf(string)`
+	/**
 		Takes one of the palettes exported from \`lucid.chartConstants\`.
 		Available palettes:
 
@@ -221,9 +222,10 @@ Points.propTypes = {
 		- \`PALETTE_MONOCHROME_4_5\`
 		- \`PALETTE_MONOCHROME_5_5\`
 		- \`PALETTE_MONOCHROME_6_5\`
-	`,
+	*/
+	palette: arrayOf(string),
 
-	colorMap: object`
+	/**
 		You can pass in an object if you want to map fields to
 		\`lucid.chartConstants\` or custom colors:
 
@@ -232,9 +234,10 @@ Points.propTypes = {
 			'rev': COLOR_3,
 			'clicks': '#abc123',
 		}
-	`,
+	*/
+	colorMap: object,
 
-	data: arrayOf(object).isRequired`
+	/**
 		De-normalized data, e.g.
 
 			[
@@ -255,48 +258,57 @@ Points.propTypes = {
 				{ x: 'five'  , y0: 4  , y1: 8 , y2: 9 , y3: 8 },
 				{ x: 'six'   , y0: 20 , y1: 8 , y2: 9 , y3: 1 },
 			]
-	`,
+	*/
+	data: arrayOf(object).isRequired,
 
-	xScale: func.isRequired`
+	/**
 		The scale for the x axis. Must be a d3 scale. Lucid exposes the
 		\`lucid.d3Scale\` library for use here.
-	`,
+	*/
+	xScale: func.isRequired,
 
-	yScale: func.isRequired`
+	/**
 		The scale for the y axis. Must be a d3 scale. Lucid exposes the
 		\`lucid.d3Scale\` library for use here.
-	`,
+	*/
+	yScale: func.isRequired,
 
-	xField: string`
+	/**
 		The field we should look up your x data by.
-	`,
+	*/
+	xField: string,
 
-	yFields: arrayOf(string)`
+	/**
 		The field(s) we should look up your y data by. Each entry represents a
 		series. Your actual y data should be numeric.
-	`,
+	*/
+	yFields: arrayOf(string),
 
-	yStackedMax: number`
+	/**
 		Typically this number can be derived from the yScale. However when we're
 		\`isStacked\` we need to calculate a new domain for the yScale based on
 		the sum of the data. If you need explicit control of the y max when
 		stacking, pass it in here.
-	`,
+	*/
+	yStackedMax: number,
 
-	colorOffset: number`
+	/**
 		Sometimes you might not want the colors to start rotating at the blue
 		color, this number will be added the line index in determining which
 		color the lines are.
-	`,
+	*/
+	colorOffset: number,
 
-	hasStroke: bool`
+	/**
 		Display a stroke around each of the points.
-	`,
+	*/
+	hasStroke: bool,
 
-	isStacked: bool`
+	/**
 		This will stack the data. In order to stack the data we have to calculate
 		a new domain for the y scale that is based on the \`sum\` of the data.
-	`,
+	*/
+	isStacked: bool,
 };
 
 export default Points;

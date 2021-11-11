@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'react-peek/prop-types';
+import PropTypes from 'prop-types';
 import _ from 'lodash';
 import { lucidClassNames } from '../../util/style-helpers';
 import { omitProps, StandardProps } from '../../util/component-types';
@@ -27,7 +27,7 @@ interface IStickySectionProps
 	topOffset?: number;
 }
 
-interface IContainerRect extends ClientRect {
+interface IContainerRect extends Omit<ClientRect, 'x' | 'y' | 'toJSON'> {
 	scrollWidth: number;
 	frameLeft: number;
 }
@@ -54,27 +54,28 @@ class StickySection extends React.Component<
 	};
 
 	static propTypes = {
-		children: node`
+		/**
 			any valid React children
-		`,
-		className: string`
+		*/
+		children: node,
+		/**
 			Appended to the component-specific class names set on the root element.
-		`,
-		style: object`
+		*/
+		className: string,
+		/**
 			Styles that are passed through to the root container.
-		`,
-		lowerBound: number`
+		*/
+		style: object,
+		/**
 			Pixel value from the top of the document. When scrolled passed, the
 			sticky header is no longer sticky, and renders normally.
-		`,
-		viewportWidth: number`
-			Width of section when it sticks to the top edge of the screen. When
-			omitted, it defaults to the last width of the section.
-		`,
-		topOffset: number`
+		*/
+		lowerBound: number,
+		/**
 			Top offset threshold before sticking to the top. The sticky content will
 			display with this offset.
-		`,
+		*/
+		topOffset: number,
 	};
 
 	private scrollContainer = React.createRef<HTMLDivElement>();

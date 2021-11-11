@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import PropTypes from 'react-peek/prop-types';
+import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import { discreteTicks } from '../../util/chart-helpers';
 import {
@@ -279,56 +279,66 @@ Axis.peek = {
 	categories: ['visualizations', 'chart primitives'],
 };
 Axis.propTypes = {
-	className: string`
+	/**
 		Appended to the component-specific class names set on the root element.
-	`,
+	*/
+	className: string,
 
-	scale: func.isRequired`
+	/**
 		Must be a d3 scale. Lucid exposes the \`lucid.d3Scale\` library for use
 		here.
-	`,
+	*/
+	scale: func.isRequired,
 
-	innerTickSize: number`
+	/**
 		Size of the ticks for each discrete tick mark.
-	`,
+	*/
+	innerTickSize: number,
 
-	outerTickSize: number`
+	/**
 		Size of the tick marks found at the beginning and end of the axis. It's
 		common to set this to \`0\` to remove them.
-	`,
+	*/
+	outerTickSize: number,
 
-	tickFormat: func`
+	/**
 		An optional function that can format ticks. Generally this shouldn't be
 		needed since d3 has very good default formatters for most data.
 		Signature: \`(tick) => {}\`
-	`,
+	*/
+	tickFormat: func,
 
-	ticks: array`
+	/**
 		If you need fine grained control over the axis ticks, you can pass them
 		in this array.
-	`,
+	*/
+	ticks: array,
 
-	tickPadding: number`
+	/**
 		Determines the spacing between each tick and its text.
-	`,
+	*/
+	tickPadding: number,
 
-	orient: oneOf(['top', 'bottom', 'left', 'right'])`
+	/**
 		Determines the orientation of the ticks. \`left\` and \`right\` will
 		generate a vertical axis, whereas \`top\` and \`bottom\` will generate a
 		horizontal axis.
-	`,
+	*/
+	orient: oneOf(['top', 'bottom', 'left', 'right']),
 
-	tickCount: number`
+	/**
 		Control the number of ticks displayed. If the scale is time based or
 		linear, this number acts a "hint" per the default behavior of D3. If it's
 		an ordinal scale, this number is treated as an absolute number of ticks
 		to display and is powered by our own utility function \`discreteTicks\`.
-	`,
+	*/
+	tickCount: number,
 
-	textOrientation: oneOf(['vertical', 'horizontal', 'diagonal'])`
+	/**
 		Determines the orientation of the tick text. This may override what the orient prop
 		tries to determine. This defaults to \`horizontal\`.
-	`,
+	*/
+	textOrientation: oneOf(['vertical', 'horizontal', 'diagonal']),
 };
 
 export default Axis;

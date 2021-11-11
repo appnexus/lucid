@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import _ from 'lodash';
 import React from 'react';
-import PropTypes from 'react-peek/prop-types';
+import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import { buildModernHybridComponent } from '../../util/state-management';
 import { partitionText, propsSearch } from '../../util/text-manipulation';
@@ -90,10 +90,11 @@ Option.peek = {
 Option.Selected = Selected;
 Option.propName = 'Option';
 Option.propTypes = {
-	Selected: any`
+	/**
 		Customizes the rendering of the Option when it is selected and is
 		displayed instead of the Placeholder.
-	`,
+	*/
+	Selected: any,
 	value: string,
 	filterText: string,
 	...DropMenu.Option.propTypes,
@@ -190,98 +191,110 @@ class SearchableSingleSelect extends React.Component<
 	static DropMenu = DropMenu;
 
 	static propTypes = {
-		children: node`
+		/**
 			Should be instances of {\`SearchableSingleSelect.Option\`}. Other direct
 			child elements will not render.
-		`,
+		*/
+		children: node,
 
-		className: string`
+		/**
 			Appended to the component-specific class names set on the root element.
-		`,
+		*/
+		className: string,
 
-		isDisabled: bool`
+		/**
 			Disables the control from being clicked or focused.
-		`,
+		*/
+		isDisabled: bool,
 
-		isLoading: bool`
+		/**
 			Displays a LoadingIcon to allow for asynchronous loading of options.
-		`,
+		*/
+		isLoading: bool,
 
-		maxMenuHeight: oneOfType([number, string])`
+		/**
 			The max height of the fly-out menu.
-		`,
+		*/
+		maxMenuHeight: oneOfType([number, string]),
 
-		onSearch: func`
+		onSearch: func /**
 			Called when the user enters a value to search for; the set of visible
 			Options will be filtered using the value.  Signature: \`(searchText,
 			firstVisibleIndex, {props, event}) => {}\` \`searchText\` is the value
 			from the \`SearchField\` and \`firstVisibleIndex\` is the index of the
 			first option that will be visible after filtering.
-		`,
+		*/,
 
-		onSelect: func`
+		/**
 			Called when an option is selected.  Signature: \`(optionIndex, {props,
 			event}) => {}\` \`optionIndex\` is the new \`selectedIndex\` or \`null\`.
-		`,
+		*/
+		onSelect: func,
 
-		optionFilter: func`
+		/**
 			The function that will be run against each Option's props to determine
 			whether it should be visible or not. The default behavior of the function
 			is to match, ignoring case, against any text node descendant of the
 			\`Option\`.  Signature: \`(searchText, optionProps) => {}\` If \`true\`
 			is returned, the option will be visible. If \`false\`, the option will
 			not be visible.
-		`,
+		*/
+		optionFilter: func,
 
-		searchText: string`
+		/**
 			The current search text to filter the list of options by.
-		`,
+		*/
+		searchText: string,
 
-		selectedIndex: number`
+		/**
 			Currently selected \`SearchableSingleSelect.Option\` index
 			or \`null\` if nothing is selected.
-		`,
+		*/
+		selectedIndex: number,
 
-		DropMenu: shape(DropMenu.propTypes)`
+		/**
 			Object of DropMenu props which are passed through to the underlying
 			DropMenu component.
-		`,
+		*/
+		DropMenu: shape(DropMenu.propTypes),
 
-		Option: any`
+		Option: any /**
 			*Child Element* - These are menu options. Each \`Option\` may be passed a
 			prop called \`isDisabled\` to disable selection of that \`Option\`. Any
 			other props pass to Option will be available from the \`onSelect\`
 			handler.  It also support the \`Selection\` prop that can be used to
 			forward along props to the underlying \`Selection\` component.
-		`,
+		*/,
 
-		Error: any`
+		/**
 			In most cases this will be a string, but it also accepts any valid React
 			element. If this is a falsey value, then no error message will be
 			displayed.  If this is the literal \`true\`, it will add the
 			\`-is-error\` class to the wrapper div, but not render the
 			\`-error-content\` \`div\`.
-		`,
+		*/
+		Error: any,
 
-		FixedOption: any`
+		FixedOption: any /**
 			*Child Element* - A special kind of \`Option\` that is always rendered at the top of
 			the menu.
-		`,
+		*/,
 
-		NullOption: any`
+		NullOption: any /**
 			*Child Element* - A special kind of \`Option\` that is always rendered at
 			the top of the menu and has an \`optionIndex\` of \`null\`. Useful for
 			unselect.
-		`,
+		*/,
 
-		OptionGroup: any`
+		OptionGroup: any /**
 			*Child Element* - Used to group \`Option\`s within the menu. Any
 			non-\`Option\`s passed in will be rendered as a label for the group.
-		`,
+		*/,
 
-		SearchField: any`
-			*Child Element* - Passes props through to the \`SearchField\` component.
-		`,
+		/**
+		 *Child Element* - Passes props through to the \`SearchField\` component.
+		 */
+		SearchField: any,
 	};
 
 	UNSAFE_componentWillMount(): void {
@@ -634,5 +647,5 @@ export default buildModernHybridComponent<
 	ISearchableSingleSelectProps,
 	ISearchableSingleSelectState,
 	typeof SearchableSingleSelect
->(SearchableSingleSelect, { reducers });
+>(SearchableSingleSelect as any, { reducers });
 export { SearchableSingleSelect as SearchableSingleSelectDumb };

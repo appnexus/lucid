@@ -1,8 +1,10 @@
 import _ from 'lodash';
 
+type IClientRect = Omit<ClientRect, 'x' | 'y' | 'toJSON'>;
+
 export function getAbsoluteBoundingClientRect(
 	domNode: HTMLElement | null
-): ClientRect {
+): IClientRect {
 	if (!domNode) {
 		throw new Error('getAbsoluteBoundingClientRect called without a domNode');
 	}

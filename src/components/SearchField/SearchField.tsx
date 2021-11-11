@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import _ from 'lodash';
 import React, { createElement } from 'react';
-import PropTypes from 'react-peek/prop-types';
+import PropTypes from 'prop-types';
 
 import { lucidClassNames } from '../../util/style-helpers';
 import {
@@ -112,56 +112,66 @@ class SearchField extends React.Component<
 	static reducers = reducers;
 
 	static propTypes = {
-		onChange: func`
+		/**
 			Fires an event every time the user types text into the TextField.
 			Signature: \`(value, { event, props }) => {}\`
-		`,
+		*/
+		onChange: func,
 
-		onChangeDebounced: func`
+		/**
 			Fires an event, debounced by \`debounceLevel\`, when the user types text
 			into the TextField.  Signature: \`(value, { event, props }) => {}\`
-		`,
+		*/
+		onChangeDebounced: func,
 
-		debounceLevel: number`
+		/**
 			Number of milliseconds to debounce the \`onChangeDebounced\` callback.
 			Only useful if you provide an \`onChangeDebounced\` handler.
-		`,
+		*/
+		debounceLevel: number,
 
-		onSubmit: func`
+		/**
 			Fires an event when the user hits "enter" from the SearchField.
 			Signature: \`(value, { event, props }) => {}\`
-		`,
+		*/
+		onSubmit: func,
 
-		value: oneOfType([number, string])`
+		/**
 			Set the value of the input.
-		`,
+		*/
+		value: oneOfType([number, string]),
 
-		isValid: bool`
+		/**
 			Controls the highlighting of the search icon. Should be passed \`true\`
 			when the search text is valid, e.g. contains enough characters to perform
 			a search.
-		`,
+		*/
+		isValid: bool,
 
-		isDisabled: bool`
+		/**
 			Disables the SearchField by greying it out.
-		`,
+		*/
+		isDisabled: bool,
 
-		placeholder: string`
+		/**
 			placeholder value
-		`,
+		*/
+		placeholder: string,
 
-		className: string`
+		/**
 			Appended to the component-specific class names set on the root element.
-		`,
+		*/
+		className: string,
 
-		Icon: node`
+		Icon: node /**
 			Icon this is displayed on the right side of the SearchField. Any of the
 			lucid \`*Icon\` components should work.
-		`,
+		*/,
 
-		TextField: node`
+		/**
 			The TextField that Searchfield is composed of.
-		`,
+		*/
+		TextField: node,
 	};
 
 	static defaultProps = {

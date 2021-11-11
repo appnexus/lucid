@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import PropTypes from 'react-peek/prop-types';
+import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import {
 	omitProps,
@@ -344,33 +344,38 @@ const PieChart = (props: IPieChartProps) => {
 PieChart.displayName = 'PieChart';
 
 PieChart.propTypes = {
-	style: object`
+	/**
 			Styles that are passed through to the root container.
-		`,
+		*/
+	style: object,
 
-	className: string`
+	/**
 			Appended to the component-specific class names set on the root element.
-		`,
+		*/
+	className: string,
 
-	height: number`
+	/**
 			Height of the chart.
-		`,
+		*/
+	height: number,
 
-	width: number`
+	/**
 			Width of the chart.
-		`,
+		*/
+	width: number,
 
+	/**
+		An object defining the margins of the chart. These margins typically
+		contain the axis and labels.
+	*/
 	margin: shape({
 		top: number,
 		right: number,
 		bottom: number,
 		left: number,
-	})`
-			An object defining the margins of the chart. These margins typically
-			contain the axis and labels.
-		`,
+	}),
 
-	data: arrayOf(object)`
+	/**
 			Data for the chart. E.g.
 
 				[
@@ -380,17 +385,20 @@ PieChart.propTypes = {
 					{ x: 'Thursday'  , y: 2 } ,
 					{ x: 'Friday'    , y: 5 } ,
 				]
-		`,
+		*/
+	data: arrayOf(object),
 
-	hasToolTips: bool`
+	/**
 			Show tool tips on hover.
-		`,
+		*/
+	hasToolTips: bool,
 
-	hasStroke: bool`
+	/**
 			Determines if the pie slices have a stroke around them.
-		`,
+		*/
+	hasStroke: bool,
 
-	palette: arrayOf(string)`
+	/**
 			Takes one of the palettes exported from \`lucid.chartConstants\`.
 			Available palettes:
 
@@ -403,9 +411,10 @@ PieChart.propTypes = {
 			- \`PALETTE_MONOCHROME_4_5\`
 			- \`PALETTE_MONOCHROME_5_5\`
 			- \`PALETTE_MONOCHROME_6_5\`
-		`,
+		*/
+	palette: arrayOf(string),
 
-	colorMap: object`
+	/**
 			You can pass in an object if you want to map x values to
 			\`lucid.chartConstants\` or custom colors:
 
@@ -414,54 +423,66 @@ PieChart.propTypes = {
 					'rev': COLOR_3,
 					'clicks': '#abc123',
 				}
-		`,
+		*/
+	colorMap: object,
 
-	ToolTip: shape(ToolTip.propTypes)`
+	/**
 			An object of ToolTip props that are passed through to the underlying
 			ToolTip component.
-		`,
+		*/
+	ToolTip: shape(ToolTip.propTypes),
 
-	isDonut: bool`
+	/**
 			Show the pie chart as a donut with a hollow center.
-		`,
+		*/
+	isDonut: bool,
 
-	isHovering: bool`
+	/**
 			Controls the visibility of the tooltip and the size of the currently
 			hovered slice.
-		`,
+		*/
+	isHovering: bool,
 
-	hoveringIndex: number`
+	/**
 			Determines which slice to scale up and which data to display in he
 			tooltip.
-		`,
+		*/
+	hoveringIndex: number,
 
-	onMouseOver: func`
+	/**
 			Called when the user hovers over a slice.  Signature:
-		`,
+		*/
+	onMouseOver: func,
 
-	onMouseOut: func`
+	/**
 			Called when the user hovers away from either the pie or the tooltip.
-		`,
+		*/
+	onMouseOut: func,
 
-	donutWidth: number`
+	/**
 			Width of the donut in px.
-		`,
+		*/
+	donutWidth: number,
 
-	xAxisField: string`
+	/**
 			The field we should look up your x data by. The data should be strings.
-		`,
+		*/
+	xAxisField: string,
 
-	xAxisFormatter: func`
+	/**
 			An optional function used to format your x axis data.
-		`,
+		*/
+	xAxisFormatter: func,
 
-	yAxisField: string`
+	/**
 			The field we should look up your y data by. The data should be numeric.
-		`,
+		*/
+	yAxisField: string,
 
-	yAxisFormatter: func`
+	/**
 			An optional function used to format your y axis data.
-		`,
+		*/
+	yAxisFormatter: func,
 };
 
 PieChart.peek = {
@@ -494,5 +515,5 @@ export default buildModernHybridComponent<
 	IPieChartProps,
 	IPieChartState,
 	typeof PieChart
->(PieChart, { reducers });
+>(PieChart as any, { reducers });
 export { PieChart as PieChartDumb };
