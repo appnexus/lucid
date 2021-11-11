@@ -1,5 +1,6 @@
 import isChromatic from 'storybook-chromatic/isChromatic';
 
+import '../src/styles/master.less';
 import '../src/index.less';
 
 if (!isChromatic()) {
