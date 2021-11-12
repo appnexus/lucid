@@ -15,7 +15,7 @@ interface ICommonConfig {
 	getDefaultProps?: () => {};
 	exemptFunctionProps?: string[];
 	exemptChildComponents?: string[];
-	selectRoot?: () => void;
+	selectRoot?: any;
 	noExport?: boolean;
 }
 
