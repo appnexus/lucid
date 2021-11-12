@@ -84,12 +84,7 @@ export const Bar = (props: IBarProps): React.ReactElement => {
 Bar.defaultProps = defaultProps;
 Bar.displayName = 'Bar';
 Bar.peek = {
-	description: `
-		*For use within an \`svg\`*
-
-		Bars are typically used for bar charts and are pretty much a thin
-		wrapper around svg rects.
-	`,
+	description: `*For use within an \`svg\`*. A \`Bar\` is typically used for a \`Bar Chart\` and is pretty much a thin wrapper around an \`svg rect\`.`,
 	categories: ['visualizations', 'geoms'],
 };
 Bar.propTypes = {

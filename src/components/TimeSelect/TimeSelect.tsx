@@ -91,6 +91,7 @@ const TimeSelect = ({
 };
 
 TimeSelect.peek = {
+	description: `A time selector that is tab-able.`,
 	notes: {
 		overview: `
 			A time selector that is tab-able. Hour/Minute/Meridiem are tied together. As a user scrolls

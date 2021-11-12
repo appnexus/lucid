@@ -128,15 +128,7 @@ export const Switch = (props: ISwitchProps): React.ReactElement => {
 Switch.defaultProps = defaultProps;
 Switch.displayName = 'Switch';
 Switch.peek = {
-	description: `
-				This is a toggle -- a component that is in one of two particular states
-				at any given moment in time -- that uses a visualization of a physical
-				on/off switch made popular by smartphone OSes to reflect its current
-				state.
-
-				It uses a hidden native check box control under the hood but leverages
-				other HTML elements to visualize its state.
-			`,
+	description: `A toggle -- a component that is in one of two particular states at any given moment in time -- that uses a visualization of a physical on/off switch made popular by smartphone OSes to reflect its current state. It uses a hidden native check box control under the hood but leverages other \`HTML\` elements to visualize its state.`,
 	categories: ['controls', 'toggles'],
 };
 

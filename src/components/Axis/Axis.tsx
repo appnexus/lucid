@@ -268,14 +268,7 @@ export const Axis = (props: IAxisProps): React.ReactElement => {
 Axis.defaultProps = defaultProps;
 Axis.displayName = 'Axis';
 Axis.peek = {
-	description: `
-	*\`Axis\` is used within an \`svg\`*
-	An \`Axis\` is used to help render human-readable reference marks on charts.
-	It can either be horizontal or vertical and really only needs a scale
-	to be able to draw properly.
-	This component is a very close sister to d3's svg axis and most of the
-	logic was ported from there.
-	`,
+	description: `\`Axis\` is used within an \`svg\`. An \`Axis\` is used to help render human-readable reference marks on charts. It can either be horizontal or vertical and really only needs a scale to be able to draw properly. This component is a very close sister to d3's svg axis and most of the logic was ported from there.`,
 	categories: ['visualizations', 'chart primitives'],
 };
 Axis.propTypes = {

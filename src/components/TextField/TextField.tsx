@@ -115,10 +115,7 @@ class TextField extends React.Component<
 > {
 	static displayName = 'TextField';
 	static peek = {
-		description: `
-			TextField should cover all your text input needs. It is able to handle
-			single and multi line inputs.
-		`,
+		description: `\`TextField\` should cover all your text input needs. It is able to handle single- and multi-line inputs.`,
 		categories: ['controls', 'text'],
 	};
 	static propTypes = {

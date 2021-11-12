@@ -166,14 +166,7 @@ Legend.defaultProps = defaultProps;
 Legend.displayName = 'Legend';
 
 Legend.peek = {
-	description: `
-			Contrary to the other chart primitives, this component is not rendered
-			in svg. In order to sanely render horizontal legends, we need to know
-			the width of the text elements ahead of rendering time. Since we're
-			using a variable width font, the only way I know of to correctly get
-			the width is with the DOM function \`getComputedTextLength\`. Variable
-			widths are much more easy to implement outside of svg.
-		`,
+	description: `Contrary to the other chart primitives, this component is not rendered in \`svg\`. In order to sanely render horizontal legends, we need to know the width of the text elements ahead of rendering time. Since we're using a variable width font, the only way I know of to correctly get the width is with the \`DOM\` function \`getComputedTextLength\`. Variable widths are much more easy to implement outside of \`svg\`.`,
 	categories: ['visualizations', 'chart primitives'],
 };
 

@@ -32,10 +32,7 @@ export interface ILoadingMessageTitleProps extends StandardProps {
 const LoadingMessageTitle = (_props: ILoadingMessageTitleProps): null => null;
 LoadingMessageTitle.displayName = 'LoadingMessage.Title';
 LoadingMessageTitle.peek = {
-	description: `
-		Renders an \`<h3>\` that represents the title of the
-		\`LoadingMessage\`.  Defaults to the string "Loading".
-	`,
+	description: `Renders an \`<h3>\` that represents the title of the \`LoadingMessage\`.  Defaults to the string "Loading".`,
 };
 LoadingMessageTitle.propName = 'Title';
 LoadingMessageTitle.propTypes = {

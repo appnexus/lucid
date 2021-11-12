@@ -67,10 +67,7 @@ class Overlay extends React.Component<IOverlayProps, IOverlayState, {}> {
 	static displayName = 'Overlay';
 
 	static peek = {
-		description: `
-			Overlay is used to block user interaction with the rest of the app
-			until they have completed something.
-		`,
+		description: `\`Overlay\` is used to block user interaction with the rest of the app until something has been completed.`,
 		categories: ['utility'],
 		madeFrom: ['Portal'],
 	};

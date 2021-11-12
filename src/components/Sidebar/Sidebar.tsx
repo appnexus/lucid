@@ -150,10 +150,7 @@ class Sidebar extends React.Component<ISidebarProps, ISidebarState> {
 	static Primary = Primary;
 	static Title = Title;
 	static peek = {
-		description: `
-					\`Sidebar\` renders a collapsible, resizeable side bar panel next to
-					primary content.
-				`,
+		description: `\`Sidebar\` renders a collapsible, resizeable side bar panel next to primary content.`,
 		categories: ['layout'],
 	};
 

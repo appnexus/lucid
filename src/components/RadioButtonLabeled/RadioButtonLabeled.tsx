@@ -27,10 +27,7 @@ const RadioButtonLabeledLabel = (_props: IRadioButtonLabeledLabelProps): null =>
 	null;
 RadioButtonLabeledLabel.displayName = 'RadioButtonLabeled.Label';
 RadioButtonLabeledLabel.peek = {
-	description: `
-		Used to identify the purpose of this radio button to the user -- can
-		be any renderable content.
-	`,
+	description: `Used to identify the purpose of this radio button to the user -- can be any renderable content.`,
 };
 RadioButtonLabeledLabel.propName = 'Label';
 
@@ -90,10 +87,7 @@ RadioButtonLabeled.displayName = 'RadioButtonLabeled';
 RadioButtonLabeled.defaultProps = radioButtonDefaultProps;
 
 RadioButtonLabeled.peek = {
-	description: `
-		This is a composite of the \`RadioButton\` component and the native
-		\`label\` element.
-	`,
+	description: `A composite of the \`RadioButton\` component and the native \`label\` element.`,
 	notes: {
 		overview: `
 			A round two-state toggle with a label that explains the action or selection. This is a composite of \`RadioButton\` and the native

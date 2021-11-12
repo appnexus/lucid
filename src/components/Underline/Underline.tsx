@@ -76,9 +76,7 @@ export const Underline = ({
 
 Underline.displayName = 'Underline';
 Underline.peek = {
-	description: `
-		Underlines a portion of text that matches a given pattern
-	`,
+	description: `Underlines a portion of text that matches a given pattern.`,
 	categories: ['controls', 'selectors'],
 };
 Underline.propTypes = {

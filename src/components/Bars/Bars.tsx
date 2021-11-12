@@ -159,12 +159,7 @@ export class Bars extends PureComponent<IBarsProps, IBarsState> {
 	static displayName = 'Bars';
 
 	static peek = {
-		description: `
-				*For use within an \`svg\`*
-
-				Bars are typically used to represent categorical data and can be
-				stacked or grouped.
-			`,
+		description: `*For use within an \`svg\`* \`Bars\` are typically used to represent categorical data and can be stacked or grouped.`,
 		categories: ['visualizations', 'chart primitives'],
 		madeFrom: ['Bar', 'ToolTip', 'Legend'],
 	};

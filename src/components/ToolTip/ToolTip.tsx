@@ -30,7 +30,7 @@ export interface IToolTipTargetProps extends StandardProps {
 const ToolTipTarget = (_props: IToolTipTargetProps): null => null;
 ToolTipTarget.displayName = 'ToolTip.Target';
 ToolTipTarget.peek = {
-	description: `The hover target that will trigger the ToolTip to be displayed.`,
+	description: `The hover target that will trigger the \`ToolTip\` to be displayed.`,
 };
 ToolTipTarget.propName = 'Target';
 
@@ -42,7 +42,7 @@ export interface IToolTipTitleProps extends StandardProps {
 const ToolTipTitle = (_props: IToolTipTitleProps): null => null;
 ToolTipTitle.displayName = 'ToolTip.Title';
 ToolTipTitle.peek = {
-	description: `A not recommended title, optionally displayed at the top of the ToolTip.`,
+	description: `A not recommended title, optionally displayed at the top of the \`ToolTip\`.`,
 };
 ToolTipTitle.propName = 'Title';
 
@@ -54,7 +54,7 @@ export interface IToolTipBodyProps extends StandardProps {
 const ToolTipBody = (_props: IToolTipBodyProps): null => null;
 ToolTipBody.displayName = 'ToolTip.Body';
 ToolTipBody.peek = {
-	description: `The body of the ToolTip.`,
+	description: `The body of the \`ToolTip\`.`,
 };
 ToolTipBody.propName = 'Body';
 

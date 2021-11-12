@@ -100,10 +100,7 @@ SwitchLabeled.defaultProps = defaultProps;
 SwitchLabeled.displayName = 'SwitchLabeled';
 
 SwitchLabeled.peek = {
-	description: `
-		This is a composite of the \`Switch\` component and the native
-		\`label\` element.
-	`,
+	description: `A composite of the \`Switch\` component and the native \`label\` element.`,
 	categories: ['controls', 'toggles'],
 	madeFrom: ['Switch'],
 };

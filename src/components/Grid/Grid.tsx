@@ -264,12 +264,7 @@ export const Grid = (props: IGridProps): React.ReactElement => {
 Grid.Cell = Cell;
 Grid.displayName = 'Grid';
 Grid.peek = {
-	description: `
-		This component is designed to be used in Composites as a layout tool.
-		You can use the Grid components themselves or create your own
-		components using the Grid styles from Grid.less.  Please see examples
-		for more information.
-	`,
+	description: `This component is designed to be used in \`Composites\` as a layout tool. You can use the \`Grid\` components themselves or create your own components using the \`Grid\` styles from \`Grid.less\`. Please see examples for more information.`,
 	categories: ['layout'],
 };
 Grid.propTypes = {

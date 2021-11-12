@@ -33,10 +33,7 @@ const Tab = (_props: IVerticalTabsTabProps): null => null;
 
 Tab.displayName = 'VerticalTabs.Tab';
 Tab.peek = {
-	description: `
-        Content that will be rendered in a tab. Be sure to nest a Title
-        inside each Tab or provide it as a prop.
-    `,
+	description: `Content that will be rendered in a tab. Be sure to nest a \`Title\` inside each \`Tab\` or provide it as a prop.`,
 };
 Tab.propName = 'Tab';
 Tab.propTypes = {
@@ -51,9 +48,7 @@ const Title = (_props: StandardProps): null => null;
 
 Title.displayName = 'VerticalTabs.Title';
 Title.peek = {
-	description: `
-        Titles can be provided as a child or prop to a Tab.
-    `,
+	description: `A \`Title\` can be provided as a child or prop to a \`Tab\`.`,
 };
 Title.propName = 'Title';
 

@@ -144,12 +144,7 @@ InfiniteSlidePanel.Slide = InfiniteSlidePanelSlide;
 InfiniteSlidePanel._isPrivate = true;
 InfiniteSlidePanel.displayName = 'InfiniteSlidePanel';
 InfiniteSlidePanel.peek = {
-	description: `
-		A container for rendering an infinite set of horizontal slides.
-		Translation between slides is controlled by passing in a new
-		\`offset\`.  Can hook into touch events to update the \`offset\`. This
-		component is made from SlidePanel, so it accepts the same props.
-	`,
+	description: `A container for rendering an infinite set of horizontal slides. Translation between slides is controlled by passing in a new \`offset\`.  Can hook into touch events to update the \`offset\`. This component is made from \`SlidePanel\`, so it accepts the same props.`,
 	categories: ['helpers'],
 	madeFrom: ['SlidePanel'],
 };

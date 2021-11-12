@@ -27,9 +27,7 @@ export interface IAutocompleteProps extends StandardProps {
 const Autocomplete = createClass<IAutocompleteProps>({
 	statics: {
 		peek: {
-			description: `
-				A text input with suggested values displayed in an attached menu.
-			`,
+			description: `A text input with suggested values displayed in an attached menu.`,
 			categories: ['controls', 'text'],
 			madeFrom: ['DropMenu'],
 		},

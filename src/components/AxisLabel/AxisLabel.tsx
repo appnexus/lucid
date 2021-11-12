@@ -75,12 +75,7 @@ export const AxisLabel = (props: IAxisLabelProps): React.ReactElement => {
 AxisLabel.defaultProps = defaultProps;
 AxisLabel.displayName = 'AxisLabel';
 AxisLabel.peek = {
-	description: `
-		\`AxisLabel\` is used within a \`svg\`
-
-		Centered labels for axes that typically are fit into the margins of a
-		chart.
-	`,
+	description: `\`AxisLabel\` is used within a \`svg\`. Centered labels for axes that typically are fit into the margins of a chart.`,
 	categories: ['visualizations', 'chart primitives'],
 };
 AxisLabel.propTypes = {

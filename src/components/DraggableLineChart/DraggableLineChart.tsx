@@ -91,10 +91,7 @@ class DraggableLineChart extends React.Component<IDraggableLineChartProps, {}> {
 	static displayName = 'DraggableLineChart';
 
 	static peek = {
-		description: `
-			The draggable line chart is a single-lined line chart where
-			the points on the line are draggable and will update the data real-time.
-		`,
+		description: `The \`DraggableLineChart\` is a single-lined line chart where the points on the line are draggable and will update the data real-time.`,
 		categories: ['visualizations', 'charts'],
 	};
 

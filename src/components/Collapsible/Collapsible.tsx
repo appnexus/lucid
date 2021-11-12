@@ -48,10 +48,7 @@ class Collapsible extends React.Component<
 > {
 	static displayName = 'Collapsible';
 	static peek = {
-		description: `
-			This is a simple container that can render content as expanded or
-			collapsed.
-		`,
+		description: `This is a simple container that can render content as expanded or collapsed.`,
 		categories: ['utility'],
 	};
 	// static _isPrivate = true;

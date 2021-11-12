@@ -120,9 +120,7 @@ Tag.defaultProps = defaultProps;
 Tag.displayName = 'Tag';
 
 Tag.peek = {
-	description: `
-			\`Tag\` is a visualization for selected settings. 
-				`,
+	description: `\`Tag\` is a visualization for selected settings.`,
 	notes: {
 		overview: `
 					A visualization for items. Tags can be removable and can be nested into groups.

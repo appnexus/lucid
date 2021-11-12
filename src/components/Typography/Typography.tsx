@@ -49,9 +49,7 @@ export const Typography = (props: ITypographyProps) => {
 
 Typography.displayName = 'Typography';
 Typography.peek = {
-	description: `
-		A general component for several types of textual HTML elements.
-	`,
+	description: `A general component for several types of textual \`HTML\` elements.`,
 	categories: ['text'],
 };
 Typography.propTypes = {

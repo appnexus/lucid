@@ -108,10 +108,7 @@ class DragCaptureZone extends React.Component<
 > {
 	static displayName = 'DragCaptureZone';
 	static peek = {
-		description: `
-			This is a helper component used to capture mouse events to determine
-			when the user starts, is and stops dragging.
-		`,
+		description: `This is a helper component used to capture mouse events to determine when the user starts, is and stops dragging.`,
 		categories: ['utility'],
 	};
 	static propTypes = {

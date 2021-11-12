@@ -7,7 +7,11 @@ export default {
 	component: CheckboxLabeled,
 	subcomponents: { 'CheckboxLabeled.Label': CheckboxLabeled.Label },
 	parameters: {
-		notes: CheckboxLabeled.peek.description,
+		docs: {
+			description: {
+				component: (CheckboxLabeled as any).peek.description,
+			},
+		},
 	},
 } as Meta;
 

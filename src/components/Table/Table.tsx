@@ -888,11 +888,7 @@ Table.defaultProps = {
 };
 
 Table.peek = {
-	description: `
-		\`Table\` provides the most basic components to create a lucid table.
-		It is recommended to create a wrapper around this component rather than
-		using it directly in an app.
-	`,
+	description: `\`Table\` provides the most basic components to create a lucid table. It is recommended to create a wrapper around this component rather than using it directly in an app.`,
 	categories: ['table'],
 	madeFrom: ['ArrowIcon', 'DragCaptureZone'],
 };

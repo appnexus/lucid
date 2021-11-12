@@ -1,5 +1,7 @@
 import _ from 'lodash';
 import React from 'react';
+import { Meta } from '@storybook/react';
+
 import CheckIcon from '../Icon/CheckIcon/CheckIcon';
 import { Button } from './Button';
 
@@ -10,12 +12,14 @@ export default {
 	title: 'Controls/Button',
 	component: Button,
 	parameters: {
-		notes: Button.peek.description,
 		docs: {
+			description: {
+				component: Button.peek.description,
+			},
 			inlineStories: true,
 		},
 	},
-};
+} as Meta;
 
 export const Default = (args) => <Button {...args}>Button</Button>;
 

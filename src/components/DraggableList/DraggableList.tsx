@@ -237,10 +237,7 @@ const DraggableList = (props: IDraggableListProps) => {
 DraggableList.Item = DraggableListItem;
 DraggableList.displayName = 'DraggableList';
 DraggableList.peek = {
-	description: `
-	This is a container that renders divs in a list that
-	can be drag and drop reordered.
-	`,
+	description: `A container that renders \`divs\` in a list that can be drag-and-drop reordered.`,
 	categories: ['controls'],
 };
 DraggableList.propTypes = {

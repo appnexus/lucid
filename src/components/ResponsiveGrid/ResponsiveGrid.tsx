@@ -179,12 +179,7 @@ ResponsiveGridWrapper.propTypes = {
 	className: string,
 };
 ResponsiveGridWrapper.peek = {
-	description: `
-		A grid container that changes the number of grid columns in response to width changes. By default,
-		the grid cells are displayed in a single column for widths less than 960px, two columns for widths greater 
-		than 960px and less than 1430px, and three columns for widths greater than 1430px. Custom break points can
-		be provided through the \`breakPoints\` prop.
-	`,
+	description: `A grid container that changes the number of grid columns in response to width changes. By default, the grid cells are displayed in a single column for widths less than 960px, two columns for widths greater than \`960px\` and less than \`1430px\`, and three columns for widths greater than 1430px. Custom break points can be provided through the \`breakPoints\` prop.`,
 	categories: ['utility'],
 	madeFrom: ['Resizer'],
 };
