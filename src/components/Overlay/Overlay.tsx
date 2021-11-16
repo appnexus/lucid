@@ -177,7 +177,7 @@ class Overlay extends React.Component<IOverlayProps, IOverlayState, {}> {
 
 		const overlayElement = (
 			<div
-				{...omitProps(passThroughs, undefined, Object.keys(Overlay.propTypes))}
+				{...omitProps(passThroughs, undefined, _.keys(Overlay.propTypes))}
 				className={cx(className, '&', {
 					'&-is-not-modal': !isModal,
 					'&-is-animated': isAnimated,

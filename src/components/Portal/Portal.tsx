@@ -1,4 +1,5 @@
 import React from 'react';
+import _ from 'lodash';
 import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
 import { omitProps, StandardProps } from '../../util/component-types';
@@ -81,7 +82,7 @@ class Portal extends React.Component<IPortalProps, IPortalState, {}> {
 			? ReactDOM.createPortal(
 					<div
 						className={classNames(cx('&'), this.props.className)}
-						{...omitProps(this.props, undefined, Object.keys(Portal.propTypes))}
+						{...omitProps(this.props, undefined, _.keys(Portal.propTypes))}
 					>
 						{this.props.children}
 					</div>,

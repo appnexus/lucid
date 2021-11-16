@@ -245,11 +245,7 @@ class SlidePanel extends React.Component<
 
 		return (
 			<div
-				{...omitProps(
-					passThroughs,
-					undefined,
-					Object.keys(SlidePanel.propTypes)
-				)}
+				{...omitProps(passThroughs, undefined, _.keys(SlidePanel.propTypes))}
 				ref={this.rootHTMLDivElement}
 				className={cx('&', className)}
 			>
@@ -277,7 +273,7 @@ class SlidePanel extends React.Component<
 							{...omitProps(
 								passThroughs,
 								undefined,
-								Object.keys(SlidePanel.propTypes)
+								_.keys(SlidePanel.propTypes)
 							)}
 							className={cx('&-slidestrip', className)}
 							style={{

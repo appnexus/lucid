@@ -193,7 +193,7 @@ class StickySection extends React.Component<
 				{...omitProps<IStickySectionProps>(
 					passThroughs,
 					undefined,
-					Object.keys(StickySection.propTypes)
+					_.keys(StickySection.propTypes)
 				)}
 				className={cx('&', className)}
 				style={{
