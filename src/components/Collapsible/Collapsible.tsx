@@ -191,7 +191,7 @@ class Collapsible extends React.Component<
 							...omitProps(
 								passThroughs,
 								undefined,
-								Object.keys(Collapsible.propTypes)
+								_.keys(Collapsible.propTypes)
 							),
 							ref: this.rootRef,
 							className: cx('&', className),

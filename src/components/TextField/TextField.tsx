@@ -347,7 +347,7 @@ class TextField extends React.Component<
 
 		const finalProps = {
 			...omitProps(passThroughs, undefined, [
-				...Object.keys(TextField.propTypes),
+				..._.keys(TextField.propTypes),
 				'children',
 			]),
 			className: cx(

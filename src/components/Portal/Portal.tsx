@@ -81,7 +81,7 @@ class Portal extends React.Component<IPortalProps, IPortalState, {}> {
 			? ReactDOM.createPortal(
 					<div
 						className={classNames(cx('&'), this.props.className)}
-						{...omitProps(this.props, undefined, Object.keys(Portal.propTypes))}
+						{...omitProps(this.props, undefined, _.keys(Portal.propTypes))}
 					>
 						{this.props.children}
 					</div>,

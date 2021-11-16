@@ -492,11 +492,7 @@ class SplitHorizontal extends React.Component<
 
 		return (
 			<div
-				{...omitProps(
-					this.props,
-					undefined,
-					Object.keys(SplitHorizontal.propTypes)
-				)}
+				{...omitProps(this.props, undefined, _.keys(SplitHorizontal.propTypes))}
 				className={cx(
 					'&',
 					{
