@@ -1,4 +1,5 @@
 import React from 'react';
+import _ from 'lodash';
 import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
 import { omitProps, StandardProps } from '../../util/component-types';
