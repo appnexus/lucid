@@ -12,7 +12,7 @@
 
 	&-is-horizontal {
 		flex-direction: row;
-		height: @size-standard-height;
+		height: @size-height-standard;
 		padding: 0 (@size-S / 2);
 	}
 
@@ -43,13 +43,13 @@
 	}
 
 	&-is-vertical &-Item {
-		margin-top: @size-S / 2;
-		margin-bottom: @size-S / 2;
+		margin-top: (@size-S / 2);
+		margin-bottom: (@size-S / 2);
 	}
 
 	&-is-horizontal &-Item {
-		margin-left: @size-L / 2;
-		margin-right: @size-L / 2;
+		margin-left: (@size-L / 2);
+		margin-right: (@size-L / 2);
 	}
 
 	&-Item-indicator {
@@ -57,4 +57,3 @@
 		margin-right: @size-XS;
 	}
 }
-

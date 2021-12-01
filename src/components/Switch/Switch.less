@@ -40,7 +40,7 @@
 	&-visualization-container {
 		.box-sizing();
 
-		border-radius: @Switch-container-height / 2;
+		border-radius: (@Switch-container-height / 2);
 		border: 1px solid @color-transparent-gray-30-new;
 		height: @Switch-container-height;
 		left: @Switch-container-offset;
@@ -87,19 +87,18 @@
 
 		&:hover {
 			& > span.@{prefix}-Switch-visualization-container {
-				opacity: .80;
+				opacity: 0.8;
 			}
 
 			& > span.@{prefix}-Switch-visualization-handle {
 				border: none;
 				background-color: @color-primary;
-				opacity: .80;
+				opacity: 0.8;
 			}
 		}
 	}
 
 	&-is-disabled {
-
 		& .@{prefix}-Switch-visualization-container {
 			background-color: @Switch-disabled-color;
 			border-color: @Switch-disabled-border-color;
@@ -124,16 +123,15 @@
 	}
 
 	&-is-disabled.@{prefix}-Switch-is-selected {
-
 		& .@{prefix}-Switch-visualization-container {
 			background-color: @color-white;
 			border-color: @color-primary;
-			opacity: .50;
+			opacity: 0.5;
 		}
 
 		& .@{prefix}-Switch-visualization-handle {
 			background-color: @color-primary;
-			opacity: .50;
+			opacity: 0.5;
 			border-color: transparent;
 		}
 
@@ -141,19 +139,18 @@
 			& .@{prefix}-Switch-visualization-container {
 				background-color: @color-white;
 				border-color: @color-primary;
-				opacity: .50;
+				opacity: 0.5;
 			}
 
 			& .@{prefix}-Switch-visualization-handle {
 				background-color: @color-primary;
-				opacity: .50;
+				opacity: 0.5;
 				border-color: transparent;
 			}
 		}
 	}
 
 	&-is-include-exclude {
-
 		.@{prefix}-Switch-visualization-handle {
 			background-color: @color-secondary-1;
 		}
@@ -163,7 +160,6 @@
 		}
 
 		&.@{prefix}-Switch-is-selected {
-
 			.@{prefix}-Switch-visualization-handle {
 				background-color: @color-secondary-4;
 				border: 0;
@@ -175,16 +171,13 @@
 		}
 
 		&:hover {
-
 			.@{prefix}-Switch-visualization-container,
 			.@{prefix}-Switch-visualization-handle {
 				border: 1px solid @color-secondary-1;
 			}
 		}
 
-
 		&:hover.@{prefix}-Switch-is-selected {
-
 			.@{prefix}-Switch-visualization-container,
 			.@{prefix}-Switch-visualization-handle {
 				border: 1px solid @color-secondary-4;
@@ -192,7 +185,6 @@
 		}
 
 		&.@{prefix}-Switch-is-disabled:not(.@{prefix}-Switch-is-selected) {
-
 			& .@{prefix}-Switch-visualization-container,
 			& .@{prefix}-Switch-visualization-handle {
 				background-color: @Switch-disabled-color;
@@ -201,7 +193,6 @@
 		}
 
 		&.@{prefix}-Switch-is-selected.@{prefix}-Switch-is-disabled {
-
 			&:hover {
 				.@{prefix}-Switch-visualization-handle {
 					background-color: @color-secondary-4;
@@ -211,7 +202,6 @@
 					border-color: @color-secondary-4;
 				}
 			}
-
 		}
 	}
 
@@ -220,6 +210,4 @@
 		background-color: white;
 		border: 1px solid @color-primary;
 	}
-
 }
-

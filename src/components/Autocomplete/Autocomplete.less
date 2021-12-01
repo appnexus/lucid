@@ -2,7 +2,7 @@
 @import (reference) '../../styles/mixins.less';
 
 @Autocomplete-size-menu-maxHeight: 220px;
-@Autocomplete-size-controlHeight: @size-standard-height;
+@Autocomplete-size-controlHeight: @size-height-standard;
 
 .@{prefix}-Autocomplete {
 	&:not(.@{prefix}-ContextMenu-FlyOut) {
@@ -25,7 +25,7 @@
 		border-radius: @size-borderRadius;
 		font-size: @fontSize;
 		color: @color-black;
-		line-height: @size-standard-height;
+		line-height: @size-height-standard;
 		padding: 0 @size-S;
 		align-items: center;
 
@@ -99,4 +99,3 @@
 		text-decoration: underline;
 	}
 }
-

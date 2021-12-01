@@ -2,9 +2,9 @@
 @import (reference) '../../styles/mixins.less';
 
 @Button-size-padding: 9px;
-@Button-size-height: @size-standard-height;
-@Button-size-height-small: @size-standard-height - 8;
-@Button-size-height-large: @size-standard-height + 12;
+@Button-size-height: @size-height-standard;
+@Button-size-height-small: @size-height-standard - 8;
+@Button-size-height-large: @size-height-standard + 12;
 @Button-size-borderRadius: @size-borderRadius;
 
 .@{prefix}-Button {
@@ -234,7 +234,7 @@
 
 	&&-small {
 		height: @Button-size-height-small;
-		padding: 0 @Button-size-padding / 1.5;
+		padding: 0 (@Button-size-padding / 1.5);
 	}
 
 	&&-small&-has-only-icon {

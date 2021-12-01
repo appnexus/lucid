@@ -4,8 +4,8 @@
 @Submarine-Divider-height: @size-XS;
 @Submarine-Bar-header-height: 33px;
 @Submarine-transition-duration: @timing-animation-fade;
-@Submarine-transition-half-duration: @Submarine-transition-duration / 2;
-@Submarine-transition-third-duration: @Submarine-transition-duration / 3;
+@Submarine-transition-half-duration: (@Submarine-transition-duration / 2);
+@Submarine-transition-third-duration: (@Submarine-transition-duration / 3);
 
 .@{prefix}-Submarine {
 	display: flex;
@@ -183,10 +183,13 @@
 			}
 
 			& > .@{prefix}-SplitHorizontal-Divider.@{prefix}-Submarine-Divider {
-				transition: transform @Submarine-transition-third-duration, background-color @Submarine-transition-third-duration;
+				transition: transform @Submarine-transition-third-duration,
+					background-color @Submarine-transition-third-duration;
 
 				.@{prefix}-SplitHorizontal-is-expanded& {
-					transition: transform @Submarine-transition-third-duration @Submarine-transition-duration, background-color @Submarine-transition-third-duration;
+					transition: transform @Submarine-transition-third-duration
+							@Submarine-transition-duration,
+						background-color @Submarine-transition-third-duration;
 				}
 			}
 
@@ -199,11 +202,11 @@
 					transition: margin-bottom @Submarine-transition-third-duration;
 
 					.@{prefix}-SplitHorizontal-is-expanded& {
-						transition: margin-bottom @Submarine-transition-third-duration @Submarine-transition-duration;
+						transition: margin-bottom @Submarine-transition-third-duration
+							@Submarine-transition-duration;
 					}
 				}
 			}
 		}
 	}
 }
-

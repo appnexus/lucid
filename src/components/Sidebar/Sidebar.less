@@ -3,8 +3,8 @@
 
 @Sidebar-Divider-width: @size-XS;
 @Sidebar-transition-duration: @timing-animation-fade;
-@Sidebar-transition-half-duration: @Sidebar-transition-duration / 2;
-@Sidebar-transition-third-duration: @Sidebar-transition-duration / 3;
+@Sidebar-transition-half-duration: (@Sidebar-transition-duration / 2);
+@Sidebar-transition-third-duration: (@Sidebar-transition-duration / 3);
 @Sidebar-zIndex: 10;
 
 .@{prefix}-Sidebar {
@@ -105,13 +105,15 @@
 				flex: 1;
 			}
 
-			& > .@{prefix}-Sidebar-Bar-content.@{prefix}-Sidebar-Bar-content-has-gutters {
+			&
+				> .@{prefix}-Sidebar-Bar-content.@{prefix}-Sidebar-Bar-content-has-gutters {
 				padding: @size-XS;
 			}
 		}
 
 		// Triple specificity to beat some styles in SplitVertical.less
-		& > .@{prefix}-SplitVertical-Divider.@{prefix}-Sidebar-Divider.@{prefix}-Sidebar-Divider {
+		&
+			> .@{prefix}-SplitVertical-Divider.@{prefix}-Sidebar-Divider.@{prefix}-Sidebar-Divider {
 			position: relative;
 			display: flex;
 			flex-direction: column;
@@ -212,10 +214,13 @@
 			}
 
 			& > .@{prefix}-SplitVertical-Divider.@{prefix}-Sidebar-Divider {
-				transition: transform @Sidebar-transition-third-duration, background-color @Sidebar-transition-third-duration;
+				transition: transform @Sidebar-transition-third-duration,
+					background-color @Sidebar-transition-third-duration;
 
 				.@{prefix}-SplitVertical-is-expanded& {
-					transition: transform @Sidebar-transition-third-duration @Sidebar-transition-duration, background-color @Sidebar-transition-third-duration;
+					transition: transform @Sidebar-transition-third-duration
+							@Sidebar-transition-duration,
+						background-color @Sidebar-transition-third-duration;
 				}
 			}
 
@@ -228,7 +233,8 @@
 					transition: margin-right @Sidebar-transition-third-duration;
 
 					.@{prefix}-SplitVertical-is-expanded& {
-						transition: margin-right @Sidebar-transition-third-duration @Sidebar-transition-duration;
+						transition: margin-right @Sidebar-transition-third-duration
+							@Sidebar-transition-duration;
 					}
 				}
 			}
