@@ -34,6 +34,7 @@ import Selection, {
 import { Validation } from '../Validation/Validation';
 
 import * as reducers from './SearchableMultiSelect.reducers';
+import { InvisibleAndDisabled } from '../SingleSelect/SingleSelect.stories';
 
 const {
 	any,
@@ -142,26 +143,54 @@ Option.defaultProps = DropMenu.Option.defaultProps;
 
 export type Size = 'large' | 'medium' | 'small';
 
+/** TODO: Remove this constant when the component is converted to a functional component */
+const nonPassThroughs = [
+	'children',
+	'className',
+	'InvisibleAndDisabled',
+	'isLoadingInvisibleAndDisabled',
+	'maxMenuHeight',
+	'onSearch',
+	'onSelect',
+	'onRemoveAll',
+	'optionFilter',
+	'searchText',
+	'selectedIndices',
+	'DropMenu',
+	'Option',
+	'responsiveMode',
+	'hasRemoveAllInvisibleAndDisabled',
+	'hasSelectionsInvisibleAndDisabled',
+	'hasSelectAllInvisibleAndDisabled',
+	'selectAllText',
+	'Error',
+	'FixedOption',
+	'NullOption',
+	'OptionGroup',
+	'SearchField',
+	'Label',
+];
+
 export interface ISearchableMultiSelectPropsRaw extends StandardProps {
-	isDisabled: boolean;
-	isLoading: boolean;
+	isDisabled?: boolean;
+	isLoading?: boolean;
 	maxMenuHeight?: string | null;
-	hasRemoveAll: boolean;
-	hasSelectAll: boolean;
+	hasRemoveAll?: boolean;
+	hasSelectAll?: boolean;
 	selectAllText?: string;
-	hasSelections: boolean;
-	searchText: string;
+	hasSelections?: boolean;
+	searchText?: string;
 	initialState?: any;
-	responsiveMode: Size;
-	selectedIndices: number[];
+	responsiveMode?: Size;
+	selectedIndices?: number[];
 	SearchField?: React.ReactNode;
 	DropMenu: IDropMenuProps;
 	Option?: ISearchableMultiSelectOptionProps;
 	OptionGroup?: IDropMenuOptionGroupProps;
 	SelectionLabel?: ISelectionLabelProps;
-	Error: React.ReactNode;
+	Error?: React.ReactNode;
 
-	onSelect: (
+	onSelect?: (
 		optionIndices: number[] | number,
 		{
 			props,
@@ -172,7 +201,7 @@ export interface ISearchableMultiSelectPropsRaw extends StandardProps {
 		}
 	) => void;
 
-	onSearch: (
+	onSearch?: (
 		searchText: string,
 		firstVisibleIndex: number | null,
 		{
@@ -184,9 +213,9 @@ export interface ISearchableMultiSelectPropsRaw extends StandardProps {
 		}
 	) => void;
 
-	optionFilter: (searchValue: string, props: any) => boolean;
+	optionFilter?: (searchValue: string, props: any) => boolean;
 
-	onRemoveAll: ({
+	onRemoveAll?: ({
 		props,
 		event,
 	}: {
@@ -751,11 +780,7 @@ class SearchableMultiSelect extends React.Component<
 
 		return (
 			<div
-				{...omitProps(
-					passThroughs,
-					undefined,
-					_.keys(SearchableMultiSelect.propTypes)
-				)}
+				{..._.omit(passThroughs, nonPassThroughs)}
 				className={cx('&', className)}
 			>
 				<DropMenu
