@@ -219,6 +219,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
 <div
   class="lucid-SearchableMultiSelect"
   default=""
+  initialstate="[object Object]"
 >
   <div
     class="lucid-DropMenu lucid-DropMenu-base lucid-SearchableMultiSelect-DropMenu"
@@ -1039,6 +1040,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
     <div
       class="lucid-SearchableMultiSelect"
       default=""
+      initialstate="[object Object]"
     >
       <div
         class="lucid-DropMenu lucid-DropMenu-base lucid-SearchableMultiSelect-DropMenu lucid-SearchableMultiSelect-DropMenu-is-small"
@@ -1270,6 +1272,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
 exports[`SearchableMultiSelect custom formatting should render Option child function by passing in {searchText}, setting filterText on each option and using a custom optionFilter 1`] = `
 <div
   className="lucid-SearchableMultiSelect"
+  hasSelectAll={false}
 >
   <DropMenu
     ContextMenu={
@@ -1404,6 +1407,7 @@ exports[`SearchableMultiSelect custom formatting should render Option child func
 exports[`SearchableMultiSelect custom formatting should render Option.Selected in the SelectedItems area 1`] = `
 <div
   className="lucid-SearchableMultiSelect"
+  hasSelectAll={false}
 >
   <DropMenu
     ContextMenu={
@@ -1634,6 +1638,7 @@ exports[`SearchableMultiSelect custom formatting should render Option.Selected i
 exports[`SearchableMultiSelect custom formatting should render OptionGroup.Selected in the SelectedItems area 1`] = `
 <div
   className="lucid-SearchableMultiSelect"
+  hasSelectAll={false}
 >
   <DropMenu
     ContextMenu={
