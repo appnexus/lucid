@@ -24,10 +24,7 @@ interface IPortalState {
 class Portal extends React.Component<IPortalProps, IPortalState, {}> {
 	static displayName = 'Portal';
 	static peek = {
-		description: `
-			A Portal component is used to render content in a container that is
-			appended to \`document.body\`.
-		`,
+		description: `A \`Portal\` component is used to render content in a container that is appended to \`document.body\`.`,
 		categories: ['utility'],
 	};
 	static propTypes = {

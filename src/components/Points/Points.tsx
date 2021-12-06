@@ -194,11 +194,7 @@ Points.defaultProps = defaultProps;
 Points.displayName = 'Points';
 
 Points.peek = {
-	description: `
-		*For use within an \`svg\`*
-
-		Put some points on that data.
-	`,
+	description: `*For use within an \`svg\`*. Put some points on that data.`,
 	categories: ['visualizations', 'chart primitives'],
 	madeFrom: ['Point'],
 };

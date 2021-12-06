@@ -125,12 +125,7 @@ RadioButton.defaultProps = defaultProps;
 RadioButton.displayName = 'RadioButton';
 
 RadioButton.peek = {
-	description: `
-		RadioButton is a round two-state toggle used to create \`RadioButtonLabeled\`.
-
-		It uses a hidden native checkbox control under the hood but leverages
-		other HTML elements to visualize its state.
-		`,
+	description: `\`RadioButton\` is a round two-state toggle used to create \`RadioButtonLabeled\`. It uses a hidden native checkbox control under the hood but leverages other \`HTML\` elements to visualize its state.`,
 	notes: {
 		overview: `
 			RadioButton is a round two-state toggle. Use \`RadioButtonLabeled\` or \`RadioGroup\` in your applications.

@@ -1,5 +1,7 @@
 import React from 'react';
 import createClass from 'create-react-class';
+import { Story, Meta } from '@storybook/react';
+
 import { Axis, d3Scale, d3Time } from './../../index';
 
 export default {
@@ -12,10 +14,10 @@ export default {
 			},
 		},
 	},
-};
+} as Meta;
 
 /* Bottom */
-export const Bottom = () => {
+export const Bottom: Story = () => {
 	const margin = { right: 40, left: 20, top: 40, bottom: 10 };
 	const width = 500;
 	const height = 100;
@@ -39,7 +41,7 @@ export const Bottom = () => {
 Bottom.storyName = 'Bottom';
 
 /* Top */
-export const Top = () => {
+export const Top: Story = () => {
 	const margin = { right: 20, left: 20 };
 	const width = 400;
 	const height = 50;
@@ -68,7 +70,7 @@ export const Top = () => {
 Top.storyName = 'Top';
 
 /* Left */
-export const Left = () => {
+export const Left: Story = () => {
 	const margin = { top: 10, bottom: 10 };
 	const width = 50;
 	const height = 200;
@@ -92,7 +94,7 @@ export const Left = () => {
 Left.storyName = 'Left';
 
 /* Right */
-export const Right = () => {
+export const Right: Story = () => {
 	const margin = { top: 10, bottom: 10 };
 	const width = 50;
 	const height = 200;
@@ -116,7 +118,7 @@ export const Right = () => {
 Right.storyName = 'Right';
 
 /* Time */
-export const Time = () => {
+export const Time: Story = () => {
 	const margin = { right: 10, left: 30 };
 	const width = 400;
 	const height = 200;
@@ -160,7 +162,7 @@ export const Time = () => {
 Time.storyName = 'Time';
 
 /* Ordinal */
-export const Ordinal = () => {
+export const Ordinal: Story = () => {
 	const margin = { right: 20, left: 20 };
 	const width = 400;
 	const height = 40;
@@ -188,7 +190,7 @@ export const Ordinal = () => {
 Ordinal.storyName = 'Ordinal';
 
 /* Diagonal Text */
-export const DiagonalText = () => {
+export const DiagonalText: Story = () => {
 	// individual margin values may need to be changed to
 	// prevent or add extra padding depending on use of axis.
 	const margin = { right: 40, left: 20, top: 40, bottom: 10 };

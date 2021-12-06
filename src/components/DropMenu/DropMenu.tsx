@@ -68,10 +68,7 @@ export interface IDropMenuControlProps extends StandardProps {
 const Control = (_props: IDropMenuControlProps): null => null;
 Control.displayName = 'DropMenu.Control';
 Control.peek = {
-	description: `
-		Renders a \`<div>\` that acts as the control target which the
-		flyout menu is anchored to. Only one \`Control\` is used.
-	`,
+	description: `Renders a \`<div>\` that acts as the control target which the flyout menu is anchored to. Only one \`Control\` is used.`,
 };
 Control.propName = 'Control';
 Control.propTypes = {};
@@ -86,11 +83,7 @@ export type OptionGroupFC = (props: IDropMenuOptionGroupProps) => null;
 const OptionGroup = (_props: IDropMenuOptionGroupProps): null => null;
 OptionGroup.displayName = 'DropMenu.OptionGroup';
 OptionGroup.peek = {
-	description: `
-		A special kind of \`Option\` that is always rendered at the top of
-		the menu and has an \`optionIndex\` of \`null\`. Useful for
-		unselect.
-	`,
+	description: `A special kind of \`Option\` that is always rendered at the top of the menu and has an \`optionIndex\` of \`null\`. Useful for unselect.`,
 };
 OptionGroup.propName = 'OptionGroup';
 OptionGroup.propTypes = {
@@ -147,11 +140,7 @@ export interface IDropMenuNullOptionProps extends StandardProps {
 const NullOption = (_props: IDropMenuNullOptionProps): null => null;
 NullOption.displayName = 'DropMenu.NullOption';
 NullOption.peek = {
-	description: `
-		A special kind of \`Option\` that is always rendered at the top of
-		the menu and has an \`optionIndex\` of \`null\` used for
-		deselecting.
-	`,
+	description: `A special kind of \`Option\` that is always rendered at the top of the menu and has an \`optionIndex\` of \`null\` used for deselecting.`,
 };
 NullOption.propName = 'NullOption';
 NullOption.propTypes = {};
@@ -201,9 +190,7 @@ export interface IDropMenuContextMenuProps extends StandardProps {
 const DropMenuContextMenu = (_props: IDropMenuContextMenuProps): null => null;
 DropMenuContextMenu.displayName = 'DropMenu.ContextMenu';
 DropMenuContextMenu.peek = {
-	description: `
-		Props that are passed through to the underlying ContextMenu.
-	`,
+	description: `Props that are passed through to the underlying ContextMenu.`,
 };
 DropMenuContextMenu.propName = 'ContextMenu';
 DropMenuContextMenu.propTypes = {
@@ -416,11 +403,7 @@ class DropMenu extends React.Component<
 
 	static peek = {
 		ContextMenu: DropMenuContextMenu,
-		description: `
-				\`DropMenu\` is a helper component used to render a menu of options attached to
-				any control. Supports option groups with and without labels as well as
-				special options with a \`null\` index for unselect.
-			`,
+		description: `\`DropMenu\` is a helper component used to render a menu of options attached to any control. Supports option groups with and without labels as well as special options with a \`null\` index for unselect.`,
 		categories: ['helpers'],
 		madeFrom: ['ContextMenu'],
 	};

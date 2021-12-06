@@ -148,10 +148,7 @@ class ContextMenu extends React.Component<
 > {
 	static displayName = 'ContextMenu';
 	static peek = {
-		description: `
-			A ContextMenu component is used to render a target and a flyout which
-			is positioned relative to the target.
-		`,
+		description: `A \`ContextMenu\` component is used to render a target and a flyout which is positioned relative to the target.`,
 		categories: ['utility'],
 		madeFrom: ['Portal'],
 	};

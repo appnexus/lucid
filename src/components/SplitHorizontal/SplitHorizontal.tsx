@@ -61,9 +61,7 @@ const SplitHorizontalBottomPane = (
 ): null => null;
 SplitHorizontalBottomPane.displayName = 'SplitHorizontal.BottomPane';
 SplitHorizontalBottomPane.peek = {
-	description: `
-		Bottom pane of the split.
-	`,
+	description: `Bottom pane of the split.`,
 };
 SplitHorizontalBottomPane.propName = 'BottomPane';
 SplitHorizontalBottomPane.propTypes = {
@@ -90,10 +88,7 @@ const SplitHorizontalDivider = (_props: ISplitHorizontalDividerProps): null =>
 	null;
 SplitHorizontalDivider.displayName = 'SplitHorizontal.Divider';
 SplitHorizontalDivider.peek = {
-	description: `
-		The area that separates the split panes. Can be dragged to resize
-		them.
-	`,
+	description: `The area that separates the split panes. Can be dragged to resize them.`,
 };
 SplitHorizontalDivider.propName = 'Divider';
 SplitHorizontalDivider.propTypes = {
@@ -155,9 +150,7 @@ class SplitHorizontal extends React.Component<
 > {
 	static displayName = 'SplitHorizontal';
 	static peek = {
-		description: `
-			\`SplitHorizontal\` renders a vertical split.
-		`,
+		description: `\`SplitHorizontal\` renders a vertical split.`,
 		categories: ['helpers'],
 		madeFrom: ['DragCaptureZone'],
 	};

@@ -486,12 +486,7 @@ PieChart.propTypes = {
 };
 
 PieChart.peek = {
-	description: `
-					Pie charts are used for categorical data when you want to show the
-					relative size of each category to the whole. We use similar "x" and "y"
-					terms to keep parity with the other charts even though pie charts are
-					really just key value based.
-				`,
+	description: `\`PieChart\` is used for categorical data when you want to show the relative size of each category to the whole. We use similar "x" and "y" terms to keep parity with the other charts even though a pie chart is really just key value based.`,
 	categories: ['visualizations', 'charts'],
 	madeFrom: ['ToolTip'],
 };

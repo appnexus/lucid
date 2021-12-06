@@ -145,10 +145,7 @@ export const Icon = (props: IIconProps): React.ReactElement => {
 Icon.displayName = 'Icon';
 Icon.defaultProps = defaultProps;
 Icon.peek = {
-	description: `
-		A basic svg icon. Any props that are not explicitly called out below
-		will be passed through to the native \`svg\` component.
-	`,
+	description: `A basic \`svg\` icon. Any props that are not explicitly called out below will be passed through to the native \`svg\` component.`,
 	categories: ['visual design', 'icons'],
 };
 

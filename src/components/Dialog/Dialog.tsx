@@ -143,11 +143,7 @@ Dialog.displayName = 'Dialog';
 Dialog.defaultProps = defaultProps;
 
 Dialog.peek = {
-	description: `
-		Dialog is used to pop open a window so the user doesn't lose the
-		context of the page behind it. Extra props are spread through to the
-		underlying \`Overlay\`
-	`,
+	description: `\`Dialog\` is used to pop open a window so the user doesn't lose the context of the page behind it. Extra props are spread through to the underlying \`Overlay\`.`,
 	categories: ['layout'],
 	extend: 'Overlay',
 	madeFrom: ['Portal', 'Overlay'],

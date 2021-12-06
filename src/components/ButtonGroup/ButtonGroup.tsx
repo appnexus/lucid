@@ -18,9 +18,7 @@ const { any, func, arrayOf, number } = PropTypes;
 const ButtonGroupButton = (_props: Partial<IButtonProps>): null => null;
 ButtonGroupButton.displayName = 'ButtonGroup.Button';
 ButtonGroupButton.peek = {
-	description: `
-		Renders a \`<Button\`> inside the \`ButtonGroup\`.
-	`,
+	description: `Renders a \`<Button\`> inside the \`ButtonGroup\`.`,
 };
 
 const defaultProps = {
@@ -52,8 +50,7 @@ class ButtonGroup extends React.Component<
 	static displayName = 'ButtonGroup';
 
 	static peek = {
-		description: `\`Button Group\` allows you to pair buttons together to form a seamless cluster.  Any props not explicitly called out are spread on to the root component.
-		`,
+		description: `\`Button Group\` allows you to pair \`Buttons\` together to form a seamless cluster. Any props not explicitly called out are spread on to the root component.`,
 		categories: ['controls', 'buttons'],
 		madeFrom: ['Button'],
 	};

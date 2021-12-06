@@ -87,10 +87,7 @@ SplitVerticalLeftPane.defaultProps = {
 const SplitVerticalDivider = (_props: StandardProps): null => null;
 SplitVerticalDivider.displayName = 'SplitVertical.Divider';
 SplitVerticalDivider.peek = {
-	description: `
-		The area that separates the split panes. Can be dragged to resize
-		them.
-	`,
+	description: `The area that separates the split panes. Can be dragged to resize them.`,
 };
 SplitVerticalDivider.propName = 'Divider';
 SplitVerticalDivider.propTypes = {
@@ -155,9 +152,7 @@ class SplitVertical extends React.Component<
 > {
 	static displayName = 'SplitVertical';
 	static peek = {
-		description: `
-			\`SplitVertical\` renders a vertical split.
-		`,
+		description: `\`SplitVertical\` renders a vertical split.`,
 		categories: ['helpers'],
 		madeFrom: ['DragCaptureZone'],
 	};

@@ -29,9 +29,7 @@ const Placeholder = (_props: ISingleSelectPlaceholderProps): null => null;
 
 Placeholder.displayName = 'SingleSelect.Placeholder';
 Placeholder.peek = {
-	description: `
-        Content this is displayed when nothing is selected.
-    `,
+	description: `Content this is displayed when nothing is selected.`,
 };
 Placeholder.propName = 'Placeholder';
 
@@ -47,10 +45,7 @@ const Selected = (_props: { children?: React.ReactNode }): null => null;
 
 Selected.displayName = 'SingleSelect.Option.Selected';
 Selected.peek = {
-	description: `
-        Customizes the rendering of the Option when it is selected
-        and is displayed instead of the Placeholder.
-    `,
+	description: `Customizes the rendering of the Option when it is selected and is displayed instead of the Placeholder.`,
 };
 Selected.propName = 'Selected';
 Selected.propTypes = {};

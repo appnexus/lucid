@@ -14,9 +14,7 @@ export interface IValidationErrorProps extends StandardProps {
 const ValidationError = (_props: IValidationErrorProps): null => null;
 ValidationError.displayName = 'Validation.Error';
 ValidationError.peek = {
-	description: `
-		Content that will be displayed as an error message.
-	`,
+	description: `Content that will be displayed as an error message.`,
 };
 ValidationError.propName = 'Error';
 ValidationError.propTypes = {
@@ -73,11 +71,7 @@ export const Validation = (props: IValidationProps): React.ReactElement => {
 
 Validation.displayName = 'Validation';
 Validation.peek = {
-	description: `
-		Validation is a wrapper component that's meant to be used by other
-		components. Wrap your form components in it and style them accordingly
-		if there's an error.
-	`,
+	description: `\`Validation\` is a wrapper component that's meant to be used by other components. Wrap your form components in it and style them accordingly if there's an error.`,
 	categories: ['helpers'],
 };
 Validation.propTypes = {

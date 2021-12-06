@@ -202,12 +202,7 @@ export const Lines = (props: ILinesProps): React.ReactElement => {
 Lines.defaultProps = defaultProps;
 Lines.displayName = 'Lines';
 Lines.peek = {
-	description: `
-		*For use within an \`svg\`*
-
-		Lines are typically used to represent continuous data and can be
-		stacked.
-	`,
+	description: `*For use within an \`svg\`*. A \`Line\` is typically used to represent continuous data and can be stacked.`,
 	categories: ['visualizations', 'chart primitives'],
 	madeFrom: ['Line'],
 };

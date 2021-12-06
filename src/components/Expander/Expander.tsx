@@ -28,9 +28,7 @@ export interface IExpanderAdditionalLabelProps extends StandardProps {
 const Label = (_props: IExpanderLabelProps): null => null;
 Label.displayName = 'Expander.Label';
 Label.peek = {
-	description: `
-						Renders a \`<span>\` to be shown next to the expander icon.
-					`,
+	description: `Renders a \`<span>\` to be shown next to the \`ExpanderIcon\`.`,
 };
 Label.propName = 'Label';
 Label.propTypes = {

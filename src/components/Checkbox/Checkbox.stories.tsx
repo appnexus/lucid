@@ -6,7 +6,11 @@ export default {
 	title: 'Controls/Checkbox',
 	component: Checkbox,
 	parameters: {
-		notes: Checkbox.peek.description,
+		docs: {
+			description: {
+				component: (Checkbox as any).peek.description,
+			},
+		},
 	},
 } as Meta;
 

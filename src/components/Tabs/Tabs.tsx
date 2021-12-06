@@ -149,12 +149,7 @@ const Tab = (props: ITabPropsWithPassThroughs): React.ReactElement => {
 };
 
 Tab.peek = {
-	description: `
-				Content that will be rendered in a tab. Be sure to nest a Title inside
-				each Tab or provide it as a prop. Props other than \`isDisabled\`,
-				\`isSelected\`, and \`Title\` can be inferred from the parent \`Tabs\`
-				component, but directly provided \`props\` will take precedence.
-			`,
+	description: `Content that will be rendered in a tab. Be sure to nest a \`Title\` inside each \`Tab\` or provide it as a prop. Props other than \`isDisabled\`, \`isSelected\`, and \`Title\` can be inferred from the parent \`Tabs\` component, but directly provided \`props\` will take precedence.`,
 };
 
 Tab.displayName = 'Tabs.Tab';

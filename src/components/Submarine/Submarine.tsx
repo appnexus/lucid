@@ -142,10 +142,7 @@ class Submarine extends React.Component<ISubmarineProps, ISubmarineState> {
 	static Primary = Primary;
 
 	static peek = {
-		description: `
-				\`Submarine\` renders a collapsible, resizeable side bar panel next to
-				primary content.
-			`,
+		description: `\`Submarine\` renders a collapsible, resizeable side bar panel next to primary content.`,
 		categories: ['layout'],
 		madeFrom: ['SplitHorizontal', 'ChevronIcon', 'GripperHorizontalIcon'],
 	};

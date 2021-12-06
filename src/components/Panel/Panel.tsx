@@ -21,9 +21,7 @@ export interface IPanelHeaderProps
 const PanelHeader = (_props: IPanelHeaderProps): null => null;
 PanelHeader.displayName = 'Panel.Header';
 PanelHeader.peek = {
-	description: `
-		Content displayed at the top of the panel.
-	`,
+	description: `Content displayed at the top of the panel.`,
 };
 PanelHeader.propTypes = {
 	description: string,
@@ -40,9 +38,7 @@ const PanelFooter = (_props: IPanelFooterProps): null => null;
 
 PanelFooter.displayName = 'Panel.Footer';
 PanelFooter.peek = {
-	description: `
-		Content displayed at the bottom of the panel.
-	`,
+	description: `Content displayed at the bottom of the panel.`,
 };
 PanelFooter.propTypes = {
 	description: string,
@@ -133,9 +129,7 @@ export const Panel = (props: IPanelProps): React.ReactElement => {
 Panel.defaultProps = defaultProps;
 Panel.displayName = 'Panel';
 Panel.peek = {
-	description: `
-		Panel is used to wrap content to better organize elements in window.
-	`,
+	description: `\`Panel\` is used to wrap content to better organize elements in window.`,
 	categories: ['layout'],
 };
 Panel.propTypes = {

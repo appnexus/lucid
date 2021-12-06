@@ -231,10 +231,7 @@ Selection.displayName = 'Selection';
 Selection.Icon = SelectionIcon;
 Selection.Label = SelectionLabel;
 Selection.peek = {
-	description: `
-                Used to indicate selections. Selection is very similar to \`Tag\` but is meant
-                to be used in areas of the UI that have more space available to them.
-            `,
+	description: `Used to indicate selections. \`Selection\` is very similar to \`Tag\` but is meant to be used in areas of the UI that have more space available to them.`,
 	categories: ['communication'],
 };
 Selection.defaultProps = defaultProps;

@@ -23,10 +23,7 @@ export interface IExpanderPanelHeaderProps extends StandardProps {
 const Header = (_props: IExpanderPanelHeaderProps): null => null;
 Header.displayName = 'ExpanderPanel.Header';
 Header.peek = {
-	description: `
-		Renders a \`<span>\` of content next to the \`ChevronIcon\` in the
-		\`Panel.Header\`
-	`,
+	description: `Renders a \`<span>\` of content next to the \`ChevronIcon\` in the \`Panel.Header\`.`,
 };
 Header.propName = 'Header';
 Header.propTypes = {

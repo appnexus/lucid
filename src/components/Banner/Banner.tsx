@@ -168,9 +168,7 @@ export const Banner = (props: IBannerProps): React.ReactElement => {
 Banner.defaultProps = defaultProps;
 Banner.displayName = 'Banner';
 Banner.peek = {
-	description: `
-		A banner that displays a prominent message.
-	`,
+	description: `A banner that displays a prominent message.`,
 	notes: {
 		overview: `
 			A banner that displays a prominent message.

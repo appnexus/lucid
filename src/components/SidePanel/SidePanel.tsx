@@ -93,11 +93,7 @@ interface ISidePanelState {
 class SidePanel extends React.Component<ISidePanelProps, ISidePanelState, {}> {
 	static displayName = 'SidePanel';
 	static peek = {
-		description: `
-			A fixed-positioned overlay positioned on the side of the screen at full
-			screen height. Supports variable widths resized by the user or defined as a
-			prop. Animated collapse and expand with optional Header and closer.
-		`,
+		description: `A fixed-positioned overlay positioned on the side of the screen at full screen height. Supports variable widths resized by the user or defined as a prop. Animated collapse and expand with optional Header and closer.`,
 		categories: ['layout'],
 	};
 	static propTypes = {

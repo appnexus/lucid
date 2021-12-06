@@ -21,9 +21,7 @@ const Label = (props: ILabelProps): null => null;
 
 Label.displayName = 'CheckboxLabeled.Label';
 Label.peek = {
-	description: `
-		Renders a \`label\` for the \`Checkbox\`
-	`,
+	description: `Renders a \`Label\` for the \`Checkbox\`.`,
 	categories: ['controls', 'toggles'],
 	madeFrom: ['Checkbox'],
 };
@@ -94,12 +92,10 @@ export const CheckboxLabeled = (
 CheckboxLabeled.displayName = 'CheckboxLabeled';
 
 CheckboxLabeled.peek = {
-	description: `
-	`,
+	description: `A square two-state toggle with a \`Label\`.`,
 	notes: {
 		overview: `
-			A square two-state toggle with a label that explains the action or selection. This is a composite of \`Checkbox\` and the native
-			\`label\` element.
+			A square two-state toggle with a label that explains the action or selection. This is a composite of \`Checkbox\` and the native \`label\` element.
 		`,
 		intendedUse: `
 			Use checkboxes to allow users to select one or more items. Commonly used to select filters or settings. For interactions where users can only select one option, use \`RadioButtonLabeled\`.

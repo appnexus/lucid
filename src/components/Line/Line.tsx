@@ -60,12 +60,7 @@ Line.defaultProps = defaultProps;
 
 Line.displayName = 'Line';
 Line.peek = {
-	description: `
-		*For use within an \`svg\`*
-
-		Lines are typically used for line charts and are pretty much a thin
-		wrapper around svg paths.
-	`,
+	description: `*For use within an \`svg\`*. A \`Line\` is typically used for line charts and is pretty much a thin wrapper around \`svg\` paths.`,
 	categories: ['visualizations', 'geoms'],
 };
 Line.propTypes = {
