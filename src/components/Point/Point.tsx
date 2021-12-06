@@ -98,12 +98,7 @@ Point.defaultProps = defaultProps;
 Point.displayName = 'Point';
 
 Point.peek = {
-	description: `
-				*For use within an \`svg\`*
-
-				Points are typically used for scatter plots or overlaying shapes on
-				lines.
-			`,
+	description: `*For use within an \`svg\`*. A \`Point\` is typically used for scatter plots or overlaying shapes on lines.`,
 	categories: ['visualizations', 'geoms'],
 };
 

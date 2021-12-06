@@ -85,9 +85,7 @@ const LineChartLoadingSkeleton = (
 
 LineChartLoadingSkeleton.displayName = 'LineChartLoadingSkeleton';
 LineChartLoadingSkeleton.peek = {
-	description: `
-		A loading indicator wrapper with optional overlay.
-	`,
+	description: `A loading indicator wrapper with optional overlay.`,
 	notes: {
 		overview: `
 			A visual indication that a section or component of the interface is loading. Designed to indicate loading data

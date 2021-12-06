@@ -75,9 +75,7 @@ ScrollTable.defaultProps = defaultProps;
 ScrollTable.displayName = 'ScrollTable';
 
 ScrollTable.peek = {
-	description: `
-		Table in a scrollable container.
-	`,
+	description: `\`Table\` in a scrollable container.`,
 	categories: ['table'],
 	madeFrom: ['Table'],
 };

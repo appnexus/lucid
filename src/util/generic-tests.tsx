@@ -4,7 +4,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { mount, shallow, render } from 'enzyme';
 import assert from 'assert';
-import _, { each, omit } from 'lodash';
+import _, { each, omit, noop } from 'lodash';
 import glob from 'glob';
 import * as lucid from '../index';
 import { addons, mockChannel } from '@storybook/addons';
@@ -12,11 +12,11 @@ import { addons, mockChannel } from '@storybook/addons';
 addons.setChannel(mockChannel());
 
 interface ICommonConfig {
-	getDefaultProps;
-	exemptFunctionProps;
-	exemptChildComponents;
-	selectRoot;
-	noExport: boolean;
+	getDefaultProps?: () => {};
+	exemptFunctionProps?: string[];
+	exemptChildComponents?: string[];
+	selectRoot?: any;
+	noExport?: boolean;
 }
 
 // Common tests for all our components

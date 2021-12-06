@@ -22,9 +22,7 @@ const TextFieldValidatedError = (_props: ITextFieldValidatedErrorProps): null =>
 	null;
 TextFieldValidatedError.displayName = 'TextFieldValidated.Error';
 TextFieldValidatedError.peek = {
-	description: `
-		Content that will be displayed as an error message.
-	`,
+	description: `Content that will be displayed as an error message.`,
 };
 TextFieldValidatedError.propName = 'Error';
 
@@ -47,9 +45,7 @@ class TextFieldValidated extends React.Component<
 	static Error = TextFieldValidatedError;
 
 	static peek = {
-		description: `
-					A composition of TextField and Validation.
-				`,
+		description: `A composite of \`TextField\` and \`Validation\`.`,
 		categories: ['controls', 'text'],
 	};
 

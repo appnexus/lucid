@@ -144,9 +144,7 @@ NotchedTag.propTypes = {
 	style: object,
 };
 NotchedTag.peek = {
-	description: `
-		A banner that displays a prominent message.
-	`,
+	description: `A banner that displays a prominent message.`,
 	notes: {
 		overview: `
 			Notched tag helps users visually identify a high-priority object and its location in the object hierarchy.

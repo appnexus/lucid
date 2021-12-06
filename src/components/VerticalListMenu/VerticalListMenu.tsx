@@ -190,8 +190,7 @@ class VerticalListMenu extends React.Component<
 	static Item = Item;
 
 	static peek = {
-		description: `Used primarily for navigation lists. It supports nesting \`VerticalListMenu\`s below \`VerticalListMenu.Item\`s and animating expanding of those sub lists.  The default reducer behavior is for only one \`VerticalListMenu.Item\` to be selected at any given time; that default is easily overridden by handling \`onSelect\` yourself.
-				`,
+		description: `Used primarily for navigation lists. It supports nesting \`VerticalListMenu\`s below \`VerticalListMenu.Item\`s and animating expanding of those sub lists.  The default reducer behavior is for only one \`VerticalListMenu.Item\` to be selected at any given time; that default is easily overridden by handling \`onSelect\` yourself.`,
 		categories: ['navigation'],
 		madeFrom: ['ChevronIcon'],
 	};
@@ -204,13 +203,7 @@ class VerticalListMenu extends React.Component<
 			Item,
 			reducers,
 			peek: {
-				description: `
-					Used primarily for navigation lists. It supports nesting
-					\`VerticalListMenu\`s below \`VerticalListMenu.Item\`s and animating
-					expanding of those sub lists.  The default reducer behavior is for only
-					one \`VerticalListMenu.Item\` to be selected at any given time; that is
-					easily overridden by handling \`onSelect\` yourself.
-				`,
+				description: `Used primarily for navigation lists. It supports nesting \`VerticalListMenu\`s below \`VerticalListMenu.Item\`s and animating expanding of those sub lists.  The default reducer behavior is for only one \`VerticalListMenu.Item\` to be selected at any given time; that is easily overridden by handling \`onSelect\` yourself.`,
 				categories: ['navigation'],
 				madeFrom: ['ChevronIcon'],
 			},

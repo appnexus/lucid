@@ -141,10 +141,7 @@ class DateSelect extends React.Component<IDateSelectProps, IDateSelectState> {
 	}
 
 	static peek = {
-		description: `
-				Date selection component capabaple of supporting single date and date
-				range selections.
-			`,
+		description: `A date selection component capabaple of supporting single date and date range selections.`,
 		categories: ['controls', 'selectors'],
 		madeFrom: ['InfiniteSlidePanel', 'CalendarMonth'],
 	};

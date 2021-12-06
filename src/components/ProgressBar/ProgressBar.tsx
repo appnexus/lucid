@@ -30,9 +30,7 @@ const Title = (_props: ITitleProps): null => null;
 Title.displayName = 'ProgressBar.Title';
 Title.propName = 'Title';
 Title.peek = {
-	description: `
-		Content displayed at the top of the ProgressBar.
-	`,
+	description: `Content displayed at the top of the \`ProgressBar\`.`,
 };
 
 const defaultProps = {
@@ -76,11 +74,7 @@ ProgressBar.defaultProps = defaultProps;
 ProgressBar.Title = Title;
 ProgressBar.displayName = 'ProgressBar';
 ProgressBar.peek = {
-	description: `
-				A Progress Bar component is used to indicate progress in a procedure
-				consisting of numerous discrete steps or continuous operation.
-			`,
-
+	description: `A \`ProgressBar\` is used to indicate progress in a procedure consisting of numerous discrete steps or continuous operation.`,
 	categories: ['communication'],
 };
 ProgressBar.propTypes = {

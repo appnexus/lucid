@@ -78,11 +78,7 @@ class SplitButton extends React.Component<ISplitButtonProps> {
 	static Button = ButtonChild;
 
 	static peek = {
-		description: `
-			\`SplitButton\` allow you to combine a single main \`Button\` together
-			with a list of additional \`Buttons\` with actions which will be rendered
-			within a \`DropMenu\`.
-		`,
+		description: `\`SplitButton\` allows you to combine a single main \`Button\` together with a list of additional \`Buttons\` with actions which will be rendered within a \`DropMenu\`.`,
 		categories: ['controls', 'buttons'],
 		madeFrom: ['Button', 'DropMenu'],
 	};

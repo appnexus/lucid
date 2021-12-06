@@ -27,13 +27,7 @@ interface IResizerState {
 class Resizer extends React.Component<IResizerProps, IResizerState, {}> {
 	static displayName = 'Resizer';
 	static peek = {
-		description: `
-			This is a helper component used for getting the width and height of a
-			containing element. This component doesn't take normal children. It
-			expects you to pass a single function for children. It will then call
-			that function with new \`width\` and \`height\` values if the container
-			size changes.
-		`,
+		description: `A helper component used for getting the width and height of a containing element. This component doesn't take normal children. It expects you to pass a single function for children. It will then call that function with new \`width\` and \`height\` values if the container size changes.`,
 		categories: ['utility'],
 	};
 	static propTypes = {

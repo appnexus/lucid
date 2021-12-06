@@ -303,11 +303,7 @@ class LineChart extends React.Component<ILineChartProps, ILineChartState, {}> {
 	static displayName = 'LineChart';
 
 	static peek = {
-		description: `
-			The line chart presents data over time. Currently only dates are
-			supported on the x axis and numeric values on the y. If you need
-			discrete values on the x axis, consider using the \`BarChart\` instead.
-		`,
+		description: `The \`LineChart\` presents data over time. Currently only dates are supported on the x axis and numeric values on the y. If you need discrete values on the x axis, consider using the \`BarChart\` instead.`,
 		categories: ['visualizations', 'charts'],
 		madeFrom: ['ContextMenu', 'ToolTip'],
 	};

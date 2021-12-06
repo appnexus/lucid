@@ -31,9 +31,7 @@ export const SeparatorIcon = ({
 SeparatorIcon._isPrivate = true;
 SeparatorIcon.displayName = 'SeparatorIcon';
 SeparatorIcon.peek = {
-	description: `
-		A separator icon.
-	`,
+	description: `A separator icon.`,
 	categories: ['visual design', 'icons'],
 	extend: 'Icon',
 	madeFrom: ['Icon'],

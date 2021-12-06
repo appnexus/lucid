@@ -73,11 +73,7 @@ class SlidePanel extends React.Component<
 	static _isPrivate = true;
 	static displayName = 'SlidePanel';
 	static peek = {
-		description: `
-			A container for rendering a set of horizontal slides at at a particular
-			offset. Translation between slides is controlled by passing in a new
-			\`offset\`.  Can hook into touch events to update the \`offset\`.
-		`,
+		description: `A container for rendering a set of horizontal slides at at a particular offset. Translation between slides is controlled by passing in a new \`offset\`.  Can hook into touch events to update the \`offset\`.`,
 		categories: ['helpers'],
 	};
 	static propTypes = {

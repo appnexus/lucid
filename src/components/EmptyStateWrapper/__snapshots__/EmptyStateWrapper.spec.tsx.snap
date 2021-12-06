@@ -1,0 +1,106 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EmptyStateWrapper [common] example testing should match snapshot(s) for Default 1`] = `
+<div
+  class="lucid-OverlayWrapper lucid-EmptyStateWrapper"
+>
+  <div
+    class="lucid-OverlayWrapper-message-container"
+  >
+    <div
+      class="lucid-EmptyStateWrapper-message-container"
+    >
+      <div
+        class="lucid-EmptyStateWrapper-message-header"
+      />
+      <div
+        class="lucid-EmptyStateWrapper-message-contents"
+      >
+        <header
+          class="lucid-EmptyStateWrapper-message-title"
+        >
+          Empty State Wrapper
+        </header>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`EmptyStateWrapper [common] example testing should match snapshot(s) for IsLoading 1`] = `
+<div
+  class="lucid-OverlayWrapper lucid-LoadingIndicator lucid-EmptyStateWrapper"
+>
+  <div
+    class="lucid-OverlayWrapper-message-container lucid-OverlayWrapper-has-overlay lucid-OverlayWrapper-kind-light"
+  >
+    <div>
+      <div
+        class="lucid-LoadingMessage"
+      >
+        <svg
+          class="lucid-Icon lucid-Icon-color-primary lucid-LoadingIcon"
+          height="16"
+          preserveAspectRatio="xMidYMid meet"
+          style="animation-duration:1.25s"
+          viewBox="0 0 100 100"
+          width="16"
+        >
+          <rect
+            fill="none"
+            height="100"
+            width="100"
+            x="0"
+            y="0"
+          />
+          <circle
+            class="lucid-LoadingIcon-circle"
+            cx="50"
+            cy="50"
+            r="40"
+          />
+          <circle
+            class="lucid-LoadingIcon-spinner"
+            cx="50"
+            cy="50"
+            r="40"
+            style="animation-duration:1.25s"
+          />
+        </svg>
+        <h3
+          class="lucid-LoadingMessage-title"
+        >
+          Loading
+        </h3>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`EmptyStateWrapper [common] example testing should match snapshot(s) for YouHaveNoData 1`] = `
+<div
+  class="lucid-OverlayWrapper lucid-EmptyStateWrapper"
+>
+  <div
+    class="lucid-OverlayWrapper-message-container"
+  >
+    <div
+      class="lucid-EmptyStateWrapper-message-container"
+    >
+      <div
+        class="lucid-EmptyStateWrapper-message-header"
+      />
+      <div
+        class="lucid-EmptyStateWrapper-message-contents"
+      >
+        <header
+          class="lucid-EmptyStateWrapper-message-title"
+        >
+          You have no data.
+        </header>
+      </div>
+    </div>
+  </div>
+</div>
+`;

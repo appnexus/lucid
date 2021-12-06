@@ -75,9 +75,7 @@ export const Badge = (props: IBadgeProps): React.ReactElement => {
 Badge.defaultProps = defaultProps;
 Badge.displayName = 'Badge';
 Badge.peek = {
-	description: `
-		A quick utility component to create a badge around any element(s).
-	`,
+	description: `A quick utility component to create a badge around an element.`,
 	categories: ['visual design', 'icons'],
 };
 Badge.propTypes = badgePropTypes;

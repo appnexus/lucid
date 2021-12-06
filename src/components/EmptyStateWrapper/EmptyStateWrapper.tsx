@@ -113,10 +113,7 @@ export const EmptyStateWrapper = (
 EmptyStateWrapper._isPrivate = true;
 
 EmptyStateWrapper.peek = {
-	description: `
-		A wrapper which can display either a \`LoadingIndicator\` or
-		\`OverlayWrapper\`.
-	`,
+	description: `A wrapper which can display either a \`LoadingIndicator\` or \`OverlayWrapper\`.`,
 	categories: ['utility'],
 	madeFrom: ['LoadingIndicator', 'OverlayWrapper'],
 };

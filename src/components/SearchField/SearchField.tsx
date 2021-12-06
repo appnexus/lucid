@@ -24,9 +24,7 @@ interface ISearchFieldIcon extends StandardProps {}
 
 const SearchFieldIcon = (_props: ISearchFieldIcon): null => null;
 SearchFieldIcon.peek = {
-	description: `
-		Icon this is displayed on the right side of the SearchField. Any of the lucid \`*Icon\` components should work.
-	`,
+	description: `Icon this is displayed on the right side of the SearchField. Any of the lucid \`*Icon\` components should work.`,
 };
 SearchFieldIcon.displayName = 'SearchField.Icon';
 SearchFieldIcon.propName = 'Icon';
@@ -35,9 +33,7 @@ interface ISearchFieldTextField extends ITextFieldProps {}
 
 const SearchFieldTextField = (_props: ISearchFieldTextField): null => null;
 SearchFieldTextField.peek = {
-	description: `
-		Icon this is displayed on the right side of the SearchField. Any of the lucid \`*Icon\` components should work.
-	`,
+	description: `Icon this is displayed on the right side of the SearchField. Any of the lucid \`*Icon\` components should work.`,
 };
 SearchFieldTextField.displayName = 'SearchField.TextField';
 SearchFieldTextField.propName = 'TextField';
@@ -100,11 +96,7 @@ class SearchField extends React.Component<
 	static Icon = SearchFieldIcon;
 
 	static peek = {
-		description: `
-					This is a wrapper around TextField that styles it for a search
-					use-case. The icon and TextField are customizable through child
-					components.
-				`,
+		description: `A wrapper around \`TextField\` that styles it for a search use-case. The icon and TextField are customizable through child components.`,
 		categories: ['controls', 'text'],
 		madeFrom: ['TextField', 'SearchIcon'],
 	};

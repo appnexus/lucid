@@ -1,6 +1,8 @@
-import createReactClass from 'create-react-class';
 import { every, map, reverse, sortBy } from 'lodash';
 import React from 'react';
+import createReactClass from 'create-react-class';
+import { Meta } from '@storybook/react';
+
 import { CheckboxLabeled, TextField } from '../..';
 import { createClass } from '../../util/component-types';
 import SuccessIcon from '../Icon/SuccessIcon/SuccessIcon';
@@ -9,7 +11,14 @@ import DataTable from './DataTable';
 export default {
 	title: 'Table/DataTable',
 	component: DataTable,
-};
+	parameters: {
+		docs: {
+			description: {
+				component: DataTable.peek.description,
+			},
+		},
+	},
+} as Meta;
 
 function addKeys(children) {
 	return map(children, (child, index) => ({ ...child, key: index }));

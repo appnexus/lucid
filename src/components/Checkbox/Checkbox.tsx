@@ -145,12 +145,7 @@ export const Checkbox = (props: ICheckboxProps): React.ReactElement => {
 
 Checkbox.displayName = 'Checkbox';
 Checkbox.peek = {
-	description: `
-		Checkbox is a square two-state toggle used to create \`CheckboxLabeled\`.
-
-		It uses a hidden native checkbox control under the hood but leverages
-		other HTML elements to visualize its state.
-	`,
+	description: `\`Checkbox\` is a square two-state toggle used to create \`CheckboxLabeled\`. It uses a hidden native \`Checkbox\` control under the hood but leverages other \`HTML\` elements to visualize its state.`,
 	notes: {
 		overview: `
 			Checkbox is a square two-state toggle. Use \`CheckboxLabeled\` in your applications.

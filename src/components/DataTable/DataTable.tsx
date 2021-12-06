@@ -840,11 +840,7 @@ DataTable.propTypes = {
 DataTable.defaultProps = defaultProps;
 
 DataTable.peek = {
-	description: `
-		\`DataTable\` provides a simple abstraction over the \`Table\`
-		component to make it easier to define data-driven tables and render an
-		array of objects.
-	`,
+	description: `\`DataTable\` provides a simple abstraction over the \`Table\` component to make it easier to define data-driven tables and render an array of objects.`,
 	notes: {
 		overview: `
 			\`DataTable\` provides a simple abstraction over the \`Table\`

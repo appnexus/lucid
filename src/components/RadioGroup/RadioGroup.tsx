@@ -214,10 +214,7 @@ RadioGroup.propTypes = {
 };
 
 RadioGroup.peek = {
-	description: `
-		This is a composite of the \`RadioButton\` component and the native
-		\`label\` element.
-`,
+	description: `A composite of the \`RadioButton\` component and the native \`label\` element.`,
 	notes: {
 		overview: `
 			A round two-state toggle with a label that explains the action or selection. This is a composite of \`RadioButton\` and the native

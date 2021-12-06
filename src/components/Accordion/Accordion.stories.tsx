@@ -1,6 +1,8 @@
 import React from 'react';
+
 import { Accordion } from './../../index';
 import createClass from 'create-react-class';
+import { Story, Meta } from '@storybook/react';
 
 export default {
 	title: 'Layout/Accordion',
@@ -12,10 +14,10 @@ export default {
 			},
 		},
 	},
-};
+} as Meta;
 
 /* Fixed Index */
-export const FixedIndex = () => {
+export const FixedIndex: Story = () => {
 	const Component = createClass({
 		render() {
 			return (

@@ -77,9 +77,7 @@ class CalendarMonth extends React.Component<ICalendarProps, {}, {}> {
 	static _isPrivate = true;
 	static displayName = 'CalendarMonth';
 	static peek = {
-		description: `
-			A single calendar month based on \`react-day-picker\`.
-		`,
+		description: `A single calendar month based on \`react-day-picker\`.`,
 		categories: ['helpers'],
 	};
 	static propTypes = {

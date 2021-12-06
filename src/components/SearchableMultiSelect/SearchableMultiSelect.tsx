@@ -234,10 +234,7 @@ class SearchableMultiSelect extends React.Component<
 > {
 	static displayName = 'SearchableMultiSelect';
 	static peek = {
-		description: `
-            A control used to select multiple options from a dropdown list using a
-            SearchField.
-        `,
+		description: `A control used to select multiple options from a dropdown list using a \`SearchField\`.`,
 		categories: ['controls', 'selectors'],
 		madeFrom: [
 			'Checkbox',

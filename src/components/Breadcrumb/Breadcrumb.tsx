@@ -80,10 +80,7 @@ export const Breadcrumb = (props: IBreadcrumbProps): React.ReactElement => {
 };
 Breadcrumb.displayName = 'Breadcrumb';
 Breadcrumb.peek = {
-	description: `
-		Navigation component to show a user's place in a navigation hierarchy
-		and provide links to return to higher points in the hierarchy
-	`,
+	description: `A navigation component to show a user's place in a navigation hierarchy and provide links to return to higher points in that hierarchy.`,
 	categories: ['navigation'],
 };
 Breadcrumb.propTypes = {

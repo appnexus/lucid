@@ -75,7 +75,7 @@ const defaultProps = {
 	hasOnlyIcon: false,
 };
 
-/** Test Button description */
+/** Button */
 export const Button = (props: IButtonProps): React.ReactElement => {
 	const {
 		isDisabled,
@@ -140,10 +140,7 @@ Button.defaultProps = defaultProps;
 Button.displayName = 'Button';
 
 Button.peek = {
-	description: `
-		A basic button. Any props that are not explicitly called out below will
-		be passed through to the native \`button\` component.
-	`,
+	description: `A basic button. Any props that are not explicitly called out below will be passed through to the native \`Button\` component.`,
 	categories: ['controls', 'buttons'],
 };
 

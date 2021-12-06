@@ -45,11 +45,7 @@ class StickySection extends React.Component<
 	static displayName = 'StickySection';
 
 	static peek = {
-		description: `
-			\`StickySection\` can be wrapped around any content to make it _stick_
-			to the top edge of the screen when a user scrolls beyond its initial
-			location.
-		`,
+		description: `\`StickySection\` can be wrapped around any content to make it _stick_ to the top edge of the screen when a user scrolls beyond its initial location.`,
 		categories: ['helpers'],
 	};
 

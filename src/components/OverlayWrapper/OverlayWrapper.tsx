@@ -20,9 +20,7 @@ export interface IMessageProps extends StandardProps {}
 export const OverlayWrapperMessage = (_props: IMessageProps): null => null;
 OverlayWrapperMessage.displayName = 'OverlayWrapper.Message';
 OverlayWrapperMessage.peek = {
-	description: `
-		The Message to display in the overlay.
-	`,
+	description: `The Message to display in the overlay.`,
 };
 OverlayWrapperMessage.propName = 'Message';
 OverlayWrapperMessage.propTypes = {

@@ -710,10 +710,7 @@ BarChart.propTypes = {
 BarChart.defaultProps = defaultProps;
 
 BarChart.peek = {
-	description: `
-		Bar charts are great for showing data that fits neatly in to "buckets".
-		The x axis data must be strings, and the y axis data must be numeric.
-	`,
+	description: `A \`Bar Chart\` is great for showing data that fits neatly into "buckets". The x axis data must be strings, and the y axis data must be numeric.`,
 	categories: ['visualizations', 'charts'],
 	madeFrom: ['ContextMenu', 'ToolTip'],
 };

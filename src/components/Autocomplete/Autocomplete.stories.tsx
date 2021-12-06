@@ -1,7 +1,9 @@
 import React from 'react';
-import { AutocompleteDumb as Autocomplete } from './../../index';
-import createClass from 'create-react-class';
 import _ from 'lodash';
+import createClass from 'create-react-class';
+import { Story, Meta } from '@storybook/react';
+
+import { AutocompleteDumb as Autocomplete } from './../../index';
 
 export default {
 	title: 'Controls/Autocomplete',
@@ -13,10 +15,10 @@ export default {
 			},
 		},
 	},
-};
+} as Meta;
 
 /* Default */
-export const Default = () => {
+export const Default: Story = () => {
 	const Component = createClass({
 		render() {
 			return (
