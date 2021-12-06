@@ -179,7 +179,7 @@ export interface ISearchableMultiSelectPropsRaw extends StandardProps {
 	hasSelectAll?: boolean;
 	selectAllText?: string;
 	hasSelections?: boolean;
-	searchText?: string;
+	searchText: string;
 	initialState?: any;
 	responsiveMode?: Size;
 	selectedIndices?: number[];
@@ -190,7 +190,7 @@ export interface ISearchableMultiSelectPropsRaw extends StandardProps {
 	SelectionLabel?: ISelectionLabelProps;
 	Error?: React.ReactNode;
 
-	onSelect?: (
+	onSelect: (
 		optionIndices: number[] | number,
 		{
 			props,
@@ -201,7 +201,7 @@ export interface ISearchableMultiSelectPropsRaw extends StandardProps {
 		}
 	) => void;
 
-	onSearch?: (
+	onSearch: (
 		searchText: string,
 		firstVisibleIndex: number | null,
 		{
@@ -213,9 +213,9 @@ export interface ISearchableMultiSelectPropsRaw extends StandardProps {
 		}
 	) => void;
 
-	optionFilter?: (searchValue: string, props: any) => boolean;
+	optionFilter: (searchValue: string, props: any) => boolean;
 
-	onRemoveAll?: ({
+	onRemoveAll: ({
 		props,
 		event,
 	}: {
