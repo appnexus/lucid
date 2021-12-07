@@ -116,7 +116,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
     default=""
   >
     <div
-      class="lucid-DropMenu lucid-DropMenu-base lucid-SearchableMultiSelect-DropMenu lucid-SearchableMultiSelect-DropMenu-is-small"
+      class="lucid-DropMenu lucid-DropMenu-base lucid-SearchableMultiSelect-DropMenu"
     >
       <span
         class="lucid-ContextMenu"
@@ -126,7 +126,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
           tabindex="0"
         >
           <div
-            class="lucid-SearchField lucid-SearchableMultiSelect-search lucid-SearchableMultiSelect-search-is-small"
+            class="lucid-SearchField lucid-SearchableMultiSelect-search"
           >
             <input
               autocomplete="off"
