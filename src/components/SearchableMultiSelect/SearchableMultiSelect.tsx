@@ -34,7 +34,6 @@ import Selection, {
 import { Validation } from '../Validation/Validation';
 
 import * as reducers from './SearchableMultiSelect.reducers';
-import { InvisibleAndDisabled } from '../SingleSelect/SingleSelect.stories';
 
 const {
 	any,
@@ -141,14 +140,12 @@ Option.propTypes = {
 };
 Option.defaultProps = DropMenu.Option.defaultProps;
 
-export type Size = 'large' | 'medium' | 'small';
-
 /** TODO: Remove this constant when the component is converted to a functional component */
 const nonPassThroughs = [
 	'children',
 	'className',
-	'InvisibleAndDisabled',
-	'isLoadingInvisibleAndDisabled',
+	'isDisabled',
+	'isLoading',
 	'maxMenuHeight',
 	'onSearch',
 	'onSelect',
@@ -159,9 +156,9 @@ const nonPassThroughs = [
 	'DropMenu',
 	'Option',
 	'responsiveMode',
-	'hasRemoveAllInvisibleAndDisabled',
-	'hasSelectionsInvisibleAndDisabled',
-	'hasSelectAllInvisibleAndDisabled',
+	'hasRemoveAll',
+	'hasSelections',
+	'hasSelectAll',
 	'selectAllText',
 	'Error',
 	'FixedOption',
@@ -171,17 +168,19 @@ const nonPassThroughs = [
 	'Label',
 ];
 
+export type Size = 'large' | 'medium' | 'small';
+
 export interface ISearchableMultiSelectPropsRaw extends StandardProps {
 	isDisabled?: boolean;
-	isLoading?: boolean;
+	isLoading: boolean;
 	maxMenuHeight?: string | null;
-	hasRemoveAll?: boolean;
+	hasRemoveAll: boolean;
 	hasSelectAll?: boolean;
 	selectAllText?: string;
 	hasSelections?: boolean;
 	searchText: string;
 	initialState?: any;
-	responsiveMode?: Size;
+	responsiveMode: Size;
 	selectedIndices?: number[];
 	SearchField?: React.ReactNode;
 	DropMenu: IDropMenuProps;
@@ -225,7 +224,7 @@ export interface ISearchableMultiSelectPropsRaw extends StandardProps {
 }
 
 export type ISearchableMultiSelectProps = Overwrite<
-	React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>,
+	React.DetailedHTMLProps<React.DOMAttributes<HTMLDivElement>, HTMLDivElement>,
 	ISearchableMultiSelectPropsRaw
 >;
 

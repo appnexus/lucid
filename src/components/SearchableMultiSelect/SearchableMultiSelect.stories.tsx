@@ -1,8 +1,11 @@
 import React from 'react';
 import createClass from 'create-react-class';
-import { Selection, SearchableMultiSelect } from './../../index';
 import _ from 'lodash';
+import { Meta, Story } from '@storybook/react';
+
+import { Selection, SearchableMultiSelect } from './../../index';
 import Resizer from '../Resizer/Resizer';
+import { ISearchableMultiSelectProps } from './SearchableMultiSelect';
 
 export default {
 	title: 'Controls/SearchableMultiSelect',
@@ -14,10 +17,10 @@ export default {
 			},
 		},
 	},
-};
+} as Meta;
 
 /* Default */
-export const Default = () => {
+export const Default: Story<ISearchableMultiSelectProps> = (args) => {
 	const { Option } = SearchableMultiSelect;
 
 	const Component = createClass({
@@ -28,7 +31,7 @@ export const Default = () => {
 						const responsiveMode = width >= 400 ? 'large' : 'small';
 
 						return (
-							<SearchableMultiSelect responsiveMode={responsiveMode}>
+							<SearchableMultiSelect {...args} responsiveMode={responsiveMode}>
 								<Option isDisabled>Alabama</Option>
 								<Option>Alaska</Option>
 								<Option>Arizona</Option>
@@ -90,7 +93,7 @@ export const Default = () => {
 Default.storyName = 'Default';
 
 /* Props */
-export const Props = () => {
+export const Props: Story<ISearchableMultiSelectProps> = (args) => {
 	const { Option } = SearchableMultiSelect;
 
 	const Component = createClass({
@@ -116,6 +119,7 @@ export const Props = () => {
 							<section>
 								<h5>Loading</h5>
 								<SearchableMultiSelect
+									{...args}
 									responsiveMode={responsiveMode}
 									isLoading={true}
 								>
@@ -124,6 +128,7 @@ export const Props = () => {
 
 								<h5>Disabled</h5>
 								<SearchableMultiSelect
+									{...args}
 									responsiveMode={responsiveMode}
 									isDisabled={true}
 								>
@@ -132,6 +137,7 @@ export const Props = () => {
 
 								<h5>Custom option selections</h5>
 								<SearchableMultiSelect
+									{...args}
 									responsiveMode={responsiveMode}
 									selectedIndices={[0, 1, 2, 3]}
 								>
@@ -143,6 +149,7 @@ export const Props = () => {
 
 								<h5>No remove all option</h5>
 								<SearchableMultiSelect
+									{...args}
 									responsiveMode={responsiveMode}
 									hasRemoveAll={false}
 									initialState={{
@@ -166,7 +173,7 @@ export const Props = () => {
 Props.storyName = 'Props';
 
 /* Asynchronous */
-export const Asynchronous = () => {
+export const Asynchronous: Story<ISearchableMultiSelectProps> = (args) => {
 	const { Option } = SearchableMultiSelect;
 	const allData: any = {
 		100: { name: 'Rita Daniel' },
@@ -268,6 +275,7 @@ export const Asynchronous = () => {
 			return (
 				<section>
 					<SearchableMultiSelect
+						{...args}
 						hasSelections={false}
 						isLoading={isLoading}
 						onSelect={this.handleSelect}
@@ -313,13 +321,14 @@ export const Asynchronous = () => {
 Asynchronous.storyName = 'Asynchronous';
 
 /* Grouped Options */
-export const GroupedOptions = () => {
+export const GroupedOptions: Story<ISearchableMultiSelectProps> = (args) => {
 	const { Option, OptionGroup } = SearchableMultiSelect;
 
 	const Component = createClass({
 		render() {
 			return (
 				<SearchableMultiSelect
+					{...args}
 					hasSelectAll
 					initialState={{
 						selectedIndices: [0, 1, 2, 3, 11, 12, 48, 49],
@@ -400,13 +409,15 @@ export const GroupedOptions = () => {
 GroupedOptions.storyName = 'GroupedOptions';
 
 /* Custom Selection Label */
-export const CustomSelectionLabel = () => {
+export const CustomSelectionLabel: Story<ISearchableMultiSelectProps> = (
+	args
+) => {
 	const { Option, SelectionLabel } = SearchableMultiSelect;
 
 	const Component = createClass({
 		render() {
 			return (
-				<SearchableMultiSelect>
+				<SearchableMultiSelect {...args}>
 					<SelectionLabel>Selected States</SelectionLabel>
 					<Option>Alabama</Option>
 					<Option>Alaska</Option>
@@ -466,7 +477,7 @@ export const CustomSelectionLabel = () => {
 CustomSelectionLabel.storyName = 'CustomSelectionLabel';
 
 /* Select All */
-export const SelectAll = () => {
+export const SelectAll: Story<ISearchableMultiSelectProps> = (args) => {
 	const { Option } = SearchableMultiSelect;
 
 	const Component = createClass({
@@ -479,6 +490,7 @@ export const SelectAll = () => {
 
 							return (
 								<SearchableMultiSelect
+									{...args}
 									hasSelectAll
 									selectAllText='Custom Select All Text'
 									responsiveMode={responsiveMode}
@@ -545,7 +557,7 @@ export const SelectAll = () => {
 SelectAll.storyName = 'SelectAll';
 
 /* Formatted Options */
-export const FormattedOptions = () => {
+export const FormattedOptions: Story<ISearchableMultiSelectProps> = (args) => {
 	// eslint-disable-next-line react/prop-types
 	interface Props extends React.HTMLProps<HTMLParagraphElement> {
 		match?: any;
@@ -590,7 +602,7 @@ export const FormattedOptions = () => {
 	class Component extends React.Component {
 		render() {
 			return (
-				<SearchableMultiSelect optionFilter={optionFilter}>
+				<SearchableMultiSelect {...args} optionFilter={optionFilter}>
 					<SearchableMultiSelect.OptionGroup Selected=''>
 						<div style={{ marginLeft: 27 }}>
 							<OptionCols col1='ID' col2='NAME' />
@@ -632,7 +644,7 @@ export const FormattedOptions = () => {
 FormattedOptions.storyName = 'FormattedOptions';
 
 /* Invalid */
-export const Invalid = () => {
+export const Invalid: Story<ISearchableMultiSelectProps> = (args) => {
 	const { Option } = SearchableMultiSelect;
 
 	const Component = createClass({
@@ -665,6 +677,7 @@ export const Invalid = () => {
 
 						return (
 							<SearchableMultiSelect
+								{...args}
 								responsiveMode={responsiveMode}
 								onRemoveAll={this.handleRemoveAll}
 								onSelect={this.handleChange}
