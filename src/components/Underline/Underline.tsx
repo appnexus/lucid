@@ -3,7 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { partitionText } from '../../util/text-manipulation';
 import { lucidClassNames } from '../../util/style-helpers';
-import { StandardProps, omitProps } from '../../util/component-types';
+import { StandardProps } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-Underline');
 
@@ -37,10 +37,7 @@ export const Underline = ({
 
 	if (!_.isString(children)) {
 		return (
-			<span
-				className={cx('&', className)}
-				{...omitProps(passThroughs, undefined, _.keys(Underline.propTypes))}
-			>
+			<span className={cx('&', className)} {...passThroughs}>
 				<span
 					style={
 						match === matchAllRegexp
@@ -57,10 +54,7 @@ export const Underline = ({
 	const [pre, matchText, post] = partitionText(children, match);
 
 	return (
-		<span
-			className={cx('&', className)}
-			{...omitProps(passThroughs, undefined, _.keys(Underline.propTypes))}
-		>
+		<span className={cx('&', className)} {...passThroughs}>
 			{[
 				pre && <span key='pre'>{pre}</span>,
 				matchText && (

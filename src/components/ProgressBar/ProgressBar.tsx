@@ -2,7 +2,7 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import { omitProps, getFirst, StandardProps } from '../../util/component-types';
+import { getFirst, StandardProps } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-ProgressBar');
 
@@ -45,7 +45,7 @@ export const ProgressBar = (props: IProgressBarProps): React.ReactElement => {
 
 	return (
 		<div
-			{...omitProps(passThroughs, undefined, _.keys(ProgressBar.propTypes))}
+			{...passThroughs}
 			className={cx('&', className, {
 				'&-default': kind === 'default',
 				'&-success': kind === 'success',

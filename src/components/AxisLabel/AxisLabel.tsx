@@ -2,7 +2,7 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import { StandardProps, omitProps } from '../../util/component-types';
+import { StandardProps } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-AxisLabel');
 
@@ -54,7 +54,7 @@ export const AxisLabel = (props: IAxisLabelProps): React.ReactElement => {
 
 	return (
 		<text
-			{...omitProps(passThroughs, undefined, _.keys(AxisLabel.propTypes))}
+			{...passThroughs}
 			style={{
 				...colorStyle,
 				...style,

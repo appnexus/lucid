@@ -177,7 +177,7 @@ const DraggableList = (props: IDraggableListProps) => {
 
 	return (
 		<div
-			{...omitProps(passThroughs, undefined, _.keys(DraggableList.propTypes))}
+			{...(passThroughs as any)}
 			className={cx(
 				'&',
 				{

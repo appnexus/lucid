@@ -41,11 +41,7 @@ export const Validation = (props: IValidationProps): React.ReactElement => {
 
 	return (
 		<div
-			{...omitProps<IValidationProps>(
-				passThroughs,
-				undefined,
-				_.keys(Validation.propTypes)
-			)}
+			{...passThroughs}
 			className={cx(
 				'&',
 				{

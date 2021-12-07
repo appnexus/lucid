@@ -342,6 +342,7 @@ exports[`BarChart [common] example testing should match snapshot(s) for BasicRes
   >
     <div
       class="lucid-OverlayWrapper lucid-EmptyStateWrapper"
+      title="You have no data."
     >
       <svg
         class="lucid-BarChart"
@@ -1090,6 +1091,7 @@ exports[`BarChart [common] example testing should match snapshot(s) for Default 
 exports[`BarChart [common] example testing should match snapshot(s) for Empty 1`] = `
 <div
   class="lucid-OverlayWrapper lucid-EmptyStateWrapper"
+  title="You have no data."
 >
   <svg
     class="lucid-BarChart"

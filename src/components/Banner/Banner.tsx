@@ -3,7 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { CSSTransition } from 'react-transition-group';
 import { lucidClassNames } from '../../util/style-helpers';
-import { omitProps, StandardProps } from '../../util/component-types';
+import { StandardProps } from '../../util/component-types';
 import CloseIcon from '../Icon/CloseIcon/CloseIcon';
 import { IIconProps } from '../Icon/Icon';
 
@@ -129,7 +129,7 @@ export const Banner = (props: IBannerProps): React.ReactElement => {
 			unmountOnExit
 		>
 			<section
-				{...omitProps(passThroughs, undefined, _.keys(bannerPropTypes))}
+				{...passThroughs}
 				className={cx(
 					'&',
 					{

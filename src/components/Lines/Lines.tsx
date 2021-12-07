@@ -2,7 +2,7 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import { omitProps, StandardProps } from '../../util/component-types';
+import { StandardProps } from '../../util/component-types';
 import { groupByFields } from '../../util/chart-helpers';
 import * as d3Shape from 'd3-shape';
 import * as d3Scale from 'd3-scale';
@@ -170,14 +170,7 @@ export const Lines = (props: ILinesProps): React.ReactElement => {
 	}
 
 	return (
-		<g
-			{...omitProps<ILinesProps>(
-				passThroughs,
-				undefined,
-				_.keys(Lines.propTypes)
-			)}
-			className={cx(className, '&')}
-		>
+		<g {...passThroughs} className={cx(className, '&')}>
 			{_.map(
 				transformedData,
 				(d, dIndex): React.ReactElement => (

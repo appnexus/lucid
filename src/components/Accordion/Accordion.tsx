@@ -4,11 +4,7 @@ import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import { buildModernHybridComponent } from '../../util/state-management';
 import { ExpanderPanelDumb as ExpanderPanel } from '../ExpanderPanel/ExpanderPanel';
-import {
-	findTypes,
-	omitProps,
-	StandardProps,
-} from '../../util/component-types';
+import { findTypes, StandardProps } from '../../util/component-types';
 import * as reducers from '../Accordion/Accordion.reducers';
 
 const cx = lucidClassNames.bind('&-Accordion');
@@ -56,11 +52,7 @@ const Accordion = (props: IAccordionProps): React.ReactElement => {
 	};
 
 	return (
-		<div
-			{...omitProps(passThroughs, undefined, _.keys(Accordion.propTypes))}
-			className={cx('&', className)}
-			style={style}
-		>
+		<div {...passThroughs} className={cx('&', className)} style={style}>
 			{_.map(itemChildProps, (itemChildProp, index: number) => {
 				return (
 					<ExpanderPanel

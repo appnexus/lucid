@@ -104,7 +104,7 @@ const Tab = (props: ITabPropsWithPassThroughs): React.ReactElement => {
 				className
 			)}
 			onClick={handleClick}
-			{...omitProps(passThroughs, undefined, _.keys(Tab.propTypes))}
+			{...passThroughs}
 		>
 			<span className={cx('&-Tab-content')}>
 				{Title}
@@ -279,11 +279,7 @@ class Tabs extends React.Component<ITabsPropsWithPassThroughs, ITabsState> {
 	static reducers = reducers;
 
 	static peek = {
-		description: `
-				\`Tabs\` provides tabbed navigation. It has a flexible interface that
-				allows tab content to be passed as regular React children or through
-				props.
-			`,
+		description: `\`Tabs\` provides tabbed navigation. It has a flexible interface that allows tab content to be passed as regular React children or through props.`,
 		categories: ['navigation'],
 	};
 
