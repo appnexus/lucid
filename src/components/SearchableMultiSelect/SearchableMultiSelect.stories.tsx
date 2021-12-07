@@ -1,96 +1,113 @@
 import React from 'react';
 import createClass from 'create-react-class';
-import _ from 'lodash';
+import _, { map } from 'lodash';
 import { Meta, Story } from '@storybook/react';
 
 import { Selection, SearchableMultiSelect } from './../../index';
 import Resizer from '../Resizer/Resizer';
 import { ISearchableMultiSelectProps } from './SearchableMultiSelect';
 
+//👇 Provide Storybook with the component name, 'section', any subcomponents and a description
 export default {
 	title: 'Controls/SearchableMultiSelect',
 	component: SearchableMultiSelect,
+	subcomponents: {
+		'SearchableMultiSelect.SelectionOption':
+			SearchableMultiSelect.Option.Selection,
+		'SearchableMultiSelect.Option.Selected':
+			SearchableMultiSelect.Option.Selected,
+		'SearchableMultiSelect.OptionGroup': SearchableMultiSelect.OptionGroup,
+		'SearchableMultiSelect.SearchFieldComponent':
+			SearchableMultiSelect.SearchField,
+		'SearchableMultiSelect.Option': SearchableMultiSelect.Option,
+	},
 	parameters: {
 		docs: {
 			description: {
-				component: (SearchableMultiSelect as any).peek.description,
+				component: SearchableMultiSelect.peek.description,
 			},
 		},
 	},
 } as Meta;
 
+//👇 Destructure any child components that we will need
+const { Option } = SearchableMultiSelect;
+
+//👇 Add a key prop to each element of the array
+function addKeys(children: any) {
+	return map(children, (child, index) => ({ ...child, key: index }));
+}
+
 /* Default */
 export const Default: Story<ISearchableMultiSelectProps> = (args) => {
-	const { Option } = SearchableMultiSelect;
+	return (
+		<Resizer>
+			{(width) => {
+				// const responsiveMode = width >= 400 ? 'large' : 'small';
 
-	const Component = createClass({
-		render() {
-			return (
-				<Resizer>
-					{(width) => {
-						const responsiveMode = width >= 400 ? 'large' : 'small';
-
-						return (
-							<SearchableMultiSelect {...args} responsiveMode={responsiveMode}>
-								<Option isDisabled>Alabama</Option>
-								<Option>Alaska</Option>
-								<Option>Arizona</Option>
-								<Option>Arkansas</Option>
-								<Option>California</Option>
-								<Option>Colorado</Option>
-								<Option>Connecticut</Option>
-								<Option>Delaware</Option>
-								<Option>Florida</Option>
-								<Option>Georgia</Option>
-								<Option>Hawaii</Option>
-								<Option>Idaho</Option>
-								<Option>Illinois</Option>
-								<Option>Indiana</Option>
-								<Option>Iowa</Option>
-								<Option>Kansas</Option>
-								<Option>Kentucky</Option>
-								<Option>Louisiana</Option>
-								<Option>Maine</Option>
-								<Option>Maryland</Option>
-								<Option>Massachusetts</Option>
-								<Option>Michigan</Option>
-								<Option>Minnesota</Option>
-								<Option>Mississippi</Option>
-								<Option>Missouri</Option>
-								<Option>Montana Nebraska</Option>
-								<Option>Nevada</Option>
-								<Option>New Hampshire</Option>
-								<Option>New Jersey</Option>
-								<Option>New Mexico</Option>
-								<Option>New York</Option>
-								<Option>North Carolina</Option>
-								<Option>North Dakota</Option>
-								<Option>Ohio</Option>
-								<Option>Oklahoma</Option>
-								<Option>Oregon</Option>
-								<Option>Pennsylvania Rhode Island</Option>
-								<Option>South Carolina</Option>
-								<Option>South Dakota</Option>
-								<Option>Tennessee</Option>
-								<Option>Texas</Option>
-								<Option>Utah</Option>
-								<Option>Vermont</Option>
-								<Option>Virginia</Option>
-								<Option>Washington</Option>
-								<Option>West Virginia</Option>
-								<Option>Wisconsin</Option>
-								<Option>Wyoming</Option>
-							</SearchableMultiSelect>
-						);
-					}}
-				</Resizer>
-			);
-		},
-	});
-
-	return <Component />;
+				return (
+					<SearchableMultiSelect
+						{...args}
+						// responsiveMode={responsiveMode}
+					></SearchableMultiSelect>
+				);
+			}}
+		</Resizer>
+	);
 };
 Default.storyName = 'Default';
+Default.args = {
+	children: addKeys([
+		<Option isDisabled>Alabama</Option>,
+		<Option>Alaska</Option>,
+		<Option>Arizona</Option>,
+		<Option>Arkansas</Option>,
+		<Option>California</Option>,
+		<Option>Colorado</Option>,
+		<Option>Connecticut</Option>,
+		<Option>Delaware</Option>,
+		<Option>Florida</Option>,
+		<Option>Georgia</Option>,
+		<Option>Hawaii</Option>,
+		<Option>Idaho</Option>,
+		<Option>Illinois</Option>,
+		<Option>Indiana</Option>,
+		<Option>Iowa</Option>,
+		<Option>Kansas</Option>,
+		<Option>Kentucky</Option>,
+		<Option>Louisiana</Option>,
+		<Option>Maine</Option>,
+		<Option>Maryland</Option>,
+		<Option>Massachusetts</Option>,
+		<Option>Michigan</Option>,
+		<Option>Minnesota</Option>,
+		<Option>Mississippi</Option>,
+		<Option>Missouri</Option>,
+		<Option>Montana Nebraska</Option>,
+		<Option>Nevada</Option>,
+		<Option>New Hampshire</Option>,
+		<Option>New Jersey</Option>,
+		<Option>New Mexico</Option>,
+		<Option>New York</Option>,
+		<Option>North Carolina</Option>,
+		<Option>North Dakota</Option>,
+		<Option>Ohio</Option>,
+		<Option>Oklahoma</Option>,
+		<Option>Oregon</Option>,
+		<Option>Pennsylvania Rhode Island</Option>,
+		<Option>South Carolina</Option>,
+		<Option>South Dakota</Option>,
+		<Option>Tennessee</Option>,
+		<Option>Texas</Option>,
+		<Option>Utah</Option>,
+		<Option>Vermont</Option>,
+		<Option>Virginia</Option>,
+		<Option>Washington</Option>,
+		<Option>West Virginia</Option>,
+		<Option>Wisconsin</Option>,
+		<Option>Wyoming</Option>,
+	]),
+};
 
 /* Props */
 export const Props: Story<ISearchableMultiSelectProps> = (args) => {
@@ -173,154 +190,155 @@ export const Props: Story<ISearchableMultiSelectProps> = (args) => {
 Props.storyName = 'Props';
 
 /* Asynchronous */
-export const Asynchronous: Story<ISearchableMultiSelectProps, ISelectionProps> =
-	(args) => {
-		const { Option } = SearchableMultiSelect;
-		const allData: any = {
-			100: { name: 'Rita Daniel' },
-			101: { name: 'Meghan Mcgowan' },
-			102: { name: 'Latisha Kent' },
-			103: { name: 'Jeannine Horton' },
-			104: { name: 'Noreen Joyner' },
-			105: { name: 'Angelique Head' },
-			106: { name: 'Kim Salinas' },
-			107: { name: 'Alexis Small' },
-			108: { name: 'Fernandez Singleton' },
-			109: { name: 'Jacqueline Alvarado' },
-			110: { name: 'Cornelia Roman' },
-			111: { name: 'John Gonzales' },
-			112: { name: 'Mcleod Hodge' },
-			113: { name: 'Fry Barrera' },
-			114: { name: 'Jannie Compton' },
-			115: { name: 'June Odom' },
-			116: { name: 'Rose Foster' },
-			117: { name: 'Kathryn Prince' },
-			118: { name: 'Hebert Bowman' },
-			119: { name: 'Shawn Burgess' },
-		};
+export const Asynchronous: Story<ISearchableMultiSelectProps> = (args) => {
+	const { Option } = SearchableMultiSelect;
+	const allData: any = {
+		100: { name: 'Rita Daniel' },
+		101: { name: 'Meghan Mcgowan' },
+		102: { name: 'Latisha Kent' },
+		103: { name: 'Jeannine Horton' },
+		104: { name: 'Noreen Joyner' },
+		105: { name: 'Angelique Head' },
+		106: { name: 'Kim Salinas' },
+		107: { name: 'Alexis Small' },
+		108: { name: 'Fernandez Singleton' },
+		109: { name: 'Jacqueline Alvarado' },
+		110: { name: 'Cornelia Roman' },
+		111: { name: 'John Gonzales' },
+		112: { name: 'Mcleod Hodge' },
+		113: { name: 'Fry Barrera' },
+		114: { name: 'Jannie Compton' },
+		115: { name: 'June Odom' },
+		116: { name: 'Rose Foster' },
+		117: { name: 'Kathryn Prince' },
+		118: { name: 'Hebert Bowman' },
+		119: { name: 'Shawn Burgess' },
+	};
 
-		const Component = createClass({
-			getInitialState() {
-				return {
-					selectedIds: [], // aka our full set of selections regardless of currently search
-					visibleIds: [], // aka current search results
+	const Component = createClass({
+		getInitialState() {
+			return {
+				selectedIds: [], // aka our full set of selections regardless of currently search
+				visibleIds: [], // aka current search results
+				isLoading: false,
+			};
+		},
+
+		componentDidMount() {
+			this.handleSearch('');
+		},
+
+		handleSearch(searchText: string) {
+			this.setState({ isLoading: true });
+
+			// Fake an API call
+			setTimeout(() => {
+				const visibleIds = _.reduce(
+					allData,
+					(acc: any[], { name }: { name: string }, id: string) => {
+						return _.includes(name.toLowerCase(), searchText.toLowerCase())
+							? acc.concat(id)
+							: acc;
+					},
+					[]
+				);
+
+				this.setState({
+					visibleIds,
 					isLoading: false,
-				};
-			},
+				});
+			}, 750);
+		},
 
-			componentDidMount() {
-				this.handleSearch('');
-			},
+		handleRemove({
+			props: { callbackId },
+		}: {
+			props: {
+				callbackId: string;
+			};
+		}) {
+			this.setState({
+				selectedIds: _.without(this.state.selectedIds, callbackId),
+			});
+		},
 
-			handleSearch(searchText: string) {
-				this.setState({ isLoading: true });
-
-				// Fake an API call
-				setTimeout(() => {
-					const visibleIds = _.reduce(
-						allData,
-						(acc: any[], { name }: { name: string }, id: string) => {
-							return _.includes(name.toLowerCase(), searchText.toLowerCase())
-								? acc.concat(id)
-								: acc;
-						},
-						[]
-					);
-
-					this.setState({
-						visibleIds,
-						isLoading: false,
-					});
-				}, 750);
-			},
-
-			handleRemove({
+		handleSelect(
+			index: number,
+			{
 				props: { callbackId },
 			}: {
 				props: {
 					callbackId: string;
 				};
-			}) {
-				this.setState({
-					selectedIds: _.without(this.state.selectedIds, callbackId),
-				});
-			},
+			}
+		) {
+			this.setState({
+				selectedIds: _.xor(this.state.selectedIds, [callbackId]),
+			});
+		},
 
-			handleSelect(
-				index: number,
-				{
-					props: { callbackId },
-				}: {
-					props: {
-						callbackId: string;
-					};
-				}
-			) {
-				this.setState({
-					selectedIds: _.xor(this.state.selectedIds, [callbackId]),
-				});
-			},
+		render() {
+			const { isLoading, visibleIds, selectedIds } = this.state;
 
-			render() {
-				const { isLoading, visibleIds, selectedIds } = this.state;
+			// Calculate selected indices based on selected ids
+			const selectedIndices = _.reduce(
+				visibleIds,
+				(acc: any[], id: string, index: number) => {
+					return _.includes(selectedIds, id) ? acc.concat(index) : acc;
+				},
+				[]
+			);
 
-				// Calculate selected indices based on selected ids
-				const selectedIndices = _.reduce(
-					visibleIds,
-					(acc: any[], id: string, index: number) => {
-						return _.includes(selectedIds, id) ? acc.concat(index) : acc;
-					},
-					[]
-				);
+			return (
+				<section>
+					<SearchableMultiSelect
+						{...args}
+						hasSelections={false}
+						isLoading={isLoading}
+						onSelect={this.handleSelect}
+						onSearch={this.handleSearch}
+						selectedIndices={selectedIndices}
+						optionFilter={_.constant(true)}
+						SearchField={{
+							placeholder: 'Type here to simulate an API backed search',
+						}}
+					>
+						{_.map(visibleIds, (id) => (
+							<Option key={id} callbackId={id}>
+								{allData[id].name}
+							</Option>
+						))}
+					</SearchableMultiSelect>
 
-				return (
-					<section>
-						<SearchableMultiSelect
-							{...args}
-							hasSelections={false}
-							isLoading={isLoading}
-							onSelect={this.handleSelect}
-							onSearch={this.handleSearch}
-							selectedIndices={selectedIndices}
-							optionFilter={_.constant(true)}
-							SearchField={{
-								placeholder: 'Type here to simulate an API backed search',
-							}}
+					{!_.isEmpty(selectedIds) ? (
+						<Selection
+							isBold
+							hasBackground
+							Label='Selected'
+							kind='container'
+							isRemovable={false}
 						>
-							{_.map(visibleIds, (id) => (
-								<Option key={id} callbackId={id}>
-									{allData[id].name}
-								</Option>
+							{_.map(selectedIds, (id) => (
+								<Selection
+									key={id}
+									Label={allData[id].name}
+									callbackId={id}
+									onRemove={this.handleRemove}
+								/>
 							))}
-						</SearchableMultiSelect>
+						</Selection>
+					) : null}
+				</section>
+			);
+		},
+	});
 
-						{!_.isEmpty(selectedIds) ? (
-							<Selection
-								isBold
-								hasBackground
-								Label='Selected'
-								kind='container'
-								isRemovable={false}
-							>
-								{_.map(selectedIds, (id) => (
-									<Selection
-										key={id}
-										Label={allData[id].name}
-										callbackId={id}
-										onRemove={this.handleRemove}
-									/>
-								))}
-							</Selection>
-						) : null}
-					</section>
-				);
-			},
-		});
-
-		return <Component />;
-	};
+	return <Component />;
+};
 Asynchronous.storyName = 'Asynchronous';
-
+Asynchronous.args = {
+	...Default.args,
+};
 /* Grouped Options */
 export const GroupedOptions: Story<ISearchableMultiSelectProps> = (args) => {
 	const { Option, OptionGroup } = SearchableMultiSelect;
@@ -643,6 +661,9 @@ export const FormattedOptions: Story<ISearchableMultiSelectProps> = (args) => {
 	return <Component />;
 };
 FormattedOptions.storyName = 'FormattedOptions';
+FormattedOptions.args = {
+	...Default.args,
+};
 
 /* Invalid */
 export const Invalid: Story<ISearchableMultiSelectProps> = (args) => {
