@@ -11,7 +11,6 @@ import {
 	getFirst,
 	findTypes,
 	rejectTypes,
-	Overwrite,
 } from '../../util/component-types';
 import {
 	SearchFieldDumb as SearchField,
@@ -226,11 +225,6 @@ export interface ISearchableMultiSelectProps extends StandardProps {
 		event: React.KeyboardEvent | React.MouseEvent;
 	}) => void;
 }
-
-// export type ISearchableMultiSelectProps = Overwrite<
-// 	React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>,
-// 	ISearchableMultiSelectPropsRaw
-// >;
 
 export interface ISearchableMultiSelectState {
 	DropMenu: IDropMenuState;
