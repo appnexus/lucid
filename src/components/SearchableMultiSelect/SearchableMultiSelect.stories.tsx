@@ -173,151 +173,152 @@ export const Props: Story<ISearchableMultiSelectProps> = (args) => {
 Props.storyName = 'Props';
 
 /* Asynchronous */
-export const Asynchronous: Story<ISearchableMultiSelectProps> = (args) => {
-	const { Option } = SearchableMultiSelect;
-	const allData: any = {
-		100: { name: 'Rita Daniel' },
-		101: { name: 'Meghan Mcgowan' },
-		102: { name: 'Latisha Kent' },
-		103: { name: 'Jeannine Horton' },
-		104: { name: 'Noreen Joyner' },
-		105: { name: 'Angelique Head' },
-		106: { name: 'Kim Salinas' },
-		107: { name: 'Alexis Small' },
-		108: { name: 'Fernandez Singleton' },
-		109: { name: 'Jacqueline Alvarado' },
-		110: { name: 'Cornelia Roman' },
-		111: { name: 'John Gonzales' },
-		112: { name: 'Mcleod Hodge' },
-		113: { name: 'Fry Barrera' },
-		114: { name: 'Jannie Compton' },
-		115: { name: 'June Odom' },
-		116: { name: 'Rose Foster' },
-		117: { name: 'Kathryn Prince' },
-		118: { name: 'Hebert Bowman' },
-		119: { name: 'Shawn Burgess' },
-	};
+export const Asynchronous: Story<ISearchableMultiSelectProps, ISelectionProps> =
+	(args) => {
+		const { Option } = SearchableMultiSelect;
+		const allData: any = {
+			100: { name: 'Rita Daniel' },
+			101: { name: 'Meghan Mcgowan' },
+			102: { name: 'Latisha Kent' },
+			103: { name: 'Jeannine Horton' },
+			104: { name: 'Noreen Joyner' },
+			105: { name: 'Angelique Head' },
+			106: { name: 'Kim Salinas' },
+			107: { name: 'Alexis Small' },
+			108: { name: 'Fernandez Singleton' },
+			109: { name: 'Jacqueline Alvarado' },
+			110: { name: 'Cornelia Roman' },
+			111: { name: 'John Gonzales' },
+			112: { name: 'Mcleod Hodge' },
+			113: { name: 'Fry Barrera' },
+			114: { name: 'Jannie Compton' },
+			115: { name: 'June Odom' },
+			116: { name: 'Rose Foster' },
+			117: { name: 'Kathryn Prince' },
+			118: { name: 'Hebert Bowman' },
+			119: { name: 'Shawn Burgess' },
+		};
 
-	const Component = createClass({
-		getInitialState() {
-			return {
-				selectedIds: [], // aka our full set of selections regardless of currently search
-				visibleIds: [], // aka current search results
-				isLoading: false,
-			};
-		},
-
-		componentDidMount() {
-			this.handleSearch('');
-		},
-
-		handleSearch(searchText: string) {
-			this.setState({ isLoading: true });
-
-			// Fake an API call
-			setTimeout(() => {
-				const visibleIds = _.reduce(
-					allData,
-					(acc: any[], { name }: { name: string }, id: string) => {
-						return _.includes(name.toLowerCase(), searchText.toLowerCase())
-							? acc.concat(id)
-							: acc;
-					},
-					[]
-				);
-
-				this.setState({
-					visibleIds,
+		const Component = createClass({
+			getInitialState() {
+				return {
+					selectedIds: [], // aka our full set of selections regardless of currently search
+					visibleIds: [], // aka current search results
 					isLoading: false,
-				});
-			}, 750);
-		},
+				};
+			},
 
-		handleRemove({
-			props: { callbackId },
-		}: {
-			props: {
-				callbackId: string;
-			};
-		}) {
-			this.setState({
-				selectedIds: _.without(this.state.selectedIds, callbackId),
-			});
-		},
+			componentDidMount() {
+				this.handleSearch('');
+			},
 
-		handleSelect(
-			index: number,
-			{
+			handleSearch(searchText: string) {
+				this.setState({ isLoading: true });
+
+				// Fake an API call
+				setTimeout(() => {
+					const visibleIds = _.reduce(
+						allData,
+						(acc: any[], { name }: { name: string }, id: string) => {
+							return _.includes(name.toLowerCase(), searchText.toLowerCase())
+								? acc.concat(id)
+								: acc;
+						},
+						[]
+					);
+
+					this.setState({
+						visibleIds,
+						isLoading: false,
+					});
+				}, 750);
+			},
+
+			handleRemove({
 				props: { callbackId },
 			}: {
 				props: {
 					callbackId: string;
 				};
-			}
-		) {
-			this.setState({
-				selectedIds: _.xor(this.state.selectedIds, [callbackId]),
-			});
-		},
+			}) {
+				this.setState({
+					selectedIds: _.without(this.state.selectedIds, callbackId),
+				});
+			},
 
-		render() {
-			const { isLoading, visibleIds, selectedIds } = this.state;
+			handleSelect(
+				index: number,
+				{
+					props: { callbackId },
+				}: {
+					props: {
+						callbackId: string;
+					};
+				}
+			) {
+				this.setState({
+					selectedIds: _.xor(this.state.selectedIds, [callbackId]),
+				});
+			},
 
-			// Calculate selected indices based on selected ids
-			const selectedIndices = _.reduce(
-				visibleIds,
-				(acc: any[], id: string, index: number) => {
-					return _.includes(selectedIds, id) ? acc.concat(index) : acc;
-				},
-				[]
-			);
+			render() {
+				const { isLoading, visibleIds, selectedIds } = this.state;
 
-			return (
-				<section>
-					<SearchableMultiSelect
-						{...args}
-						hasSelections={false}
-						isLoading={isLoading}
-						onSelect={this.handleSelect}
-						onSearch={this.handleSearch}
-						selectedIndices={selectedIndices}
-						optionFilter={_.constant(true)}
-						SearchField={{
-							placeholder: 'Type here to simulate an API backed search',
-						}}
-					>
-						{_.map(visibleIds, (id) => (
-							<Option key={id} callbackId={id}>
-								{allData[id].name}
-							</Option>
-						))}
-					</SearchableMultiSelect>
+				// Calculate selected indices based on selected ids
+				const selectedIndices = _.reduce(
+					visibleIds,
+					(acc: any[], id: string, index: number) => {
+						return _.includes(selectedIds, id) ? acc.concat(index) : acc;
+					},
+					[]
+				);
 
-					{!_.isEmpty(selectedIds) ? (
-						<Selection
-							isBold
-							hasBackground
-							Label='Selected'
-							kind='container'
-							isRemovable={false}
+				return (
+					<section>
+						<SearchableMultiSelect
+							{...args}
+							hasSelections={false}
+							isLoading={isLoading}
+							onSelect={this.handleSelect}
+							onSearch={this.handleSearch}
+							selectedIndices={selectedIndices}
+							optionFilter={_.constant(true)}
+							SearchField={{
+								placeholder: 'Type here to simulate an API backed search',
+							}}
 						>
-							{_.map(selectedIds, (id) => (
-								<Selection
-									key={id}
-									Label={allData[id].name}
-									callbackId={id}
-									onRemove={this.handleRemove}
-								/>
+							{_.map(visibleIds, (id) => (
+								<Option key={id} callbackId={id}>
+									{allData[id].name}
+								</Option>
 							))}
-						</Selection>
-					) : null}
-				</section>
-			);
-		},
-	});
+						</SearchableMultiSelect>
 
-	return <Component />;
-};
+						{!_.isEmpty(selectedIds) ? (
+							<Selection
+								isBold
+								hasBackground
+								Label='Selected'
+								kind='container'
+								isRemovable={false}
+							>
+								{_.map(selectedIds, (id) => (
+									<Selection
+										key={id}
+										Label={allData[id].name}
+										callbackId={id}
+										onRemove={this.handleRemove}
+									/>
+								))}
+							</Selection>
+						) : null}
+					</section>
+				);
+			},
+		});
+
+		return <Component />;
+	};
 Asynchronous.storyName = 'Asynchronous';
 
 /* Grouped Options */
