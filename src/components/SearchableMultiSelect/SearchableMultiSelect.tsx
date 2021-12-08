@@ -11,7 +11,6 @@ import {
 	getFirst,
 	findTypes,
 	rejectTypes,
-	Overwrite,
 } from '../../util/component-types';
 import {
 	SearchFieldDumb as SearchField,
@@ -50,6 +49,7 @@ const {
 
 const cx = lucidClassNames.bind('&-SearchableMultiSelect');
 
+/** SearchableMultiSelect.SelectionOption */
 const SelectionOption = (_props: ISelectionProps): null => null;
 SelectionOption.displayName = 'SearchableMultiSelect.Option.Selection';
 SelectionOption.propTypes = Selection.propTypes;
@@ -61,8 +61,8 @@ SelectionOption.peek = {
 	`,
 };
 
+/** SearchableMultiSelect.Option.Selected */
 const Selected = (_props: { children?: React.ReactNode }): null => null;
-
 Selected.displayName = 'SearchableMultiSelect.Option.Selected';
 Selected.peek = {
 	description: `
@@ -73,6 +73,7 @@ Selected.peek = {
 Selected.propName = 'Selected';
 Selected.propTypes = {};
 
+/** SearchableMultiSelect.OptionGroup */
 interface ISearchableSingleSelectOptionGroupProps
 	extends IDropMenuOptionGroupProps {
 	Selected?: React.ReactNode;
@@ -92,6 +93,7 @@ OptionGroup.propTypes = DropMenu.OptionGroup.propTypes;
 OptionGroup.defaultProps = DropMenu.OptionGroup.defaultProps;
 OptionGroup.Selected = Selected;
 
+/** SearchableMultiSelect.SearchField */
 const SearchFieldComponent = (_props: ISearchFieldProps): null => null;
 SearchFieldComponent.displayName = 'SearchableMultiSelect.SearchField';
 SearchFieldComponent.peek = {
@@ -103,8 +105,8 @@ SearchFieldComponent.propName = 'SearchField';
 SearchFieldComponent.propTypes = SearchField.propTypes;
 SearchFieldComponent.defaultProps = SearchField.defaultProps;
 
-type ISearchableMultiSelectOptionSelectionProps = Partial<ISelectionProps>;
 /** Option Child Component */
+type ISearchableMultiSelectOptionSelectionProps = Partial<ISelectionProps>;
 export interface ISearchableMultiSelectOptionProps
 	extends IDropMenuOptionProps {
 	Selection?: ISearchableMultiSelectOptionSelectionProps;
@@ -140,26 +142,55 @@ Option.propTypes = {
 };
 Option.defaultProps = DropMenu.Option.defaultProps;
 
+/** SearchableMultiSelect */
+/** TODO: Remove this constant when the component is converted to a functional component */
+const nonPassThroughs = [
+	'children',
+	'className',
+	'isDisabled',
+	'isLoading',
+	'maxMenuHeight',
+	'onSearch',
+	'onSelect',
+	'onRemoveAll',
+	'optionFilter',
+	'searchText',
+	'selectedIndices',
+	'DropMenu',
+	'Option',
+	'responsiveMode',
+	'hasRemoveAll',
+	'hasSelections',
+	'hasSelectAll',
+	'selectAllText',
+	'Error',
+	'FixedOption',
+	'NullOption',
+	'OptionGroup',
+	'SearchField',
+	'Label',
+];
+
 export type Size = 'large' | 'medium' | 'small';
 
-export interface ISearchableMultiSelectPropsRaw extends StandardProps {
-	isDisabled: boolean;
+export interface ISearchableMultiSelectProps extends StandardProps {
+	isDisabled?: boolean;
 	isLoading: boolean;
 	maxMenuHeight?: string | null;
 	hasRemoveAll: boolean;
-	hasSelectAll: boolean;
+	hasSelectAll?: boolean;
 	selectAllText?: string;
-	hasSelections: boolean;
+	hasSelections?: boolean;
 	searchText: string;
 	initialState?: any;
 	responsiveMode: Size;
-	selectedIndices: number[];
+	selectedIndices?: number[];
 	SearchField?: React.ReactNode;
 	DropMenu: IDropMenuProps;
 	Option?: ISearchableMultiSelectOptionProps;
 	OptionGroup?: IDropMenuOptionGroupProps;
 	SelectionLabel?: ISelectionLabelProps;
-	Error: React.ReactNode;
+	Error?: React.ReactNode;
 
 	onSelect: (
 		optionIndices: number[] | number,
@@ -194,11 +225,6 @@ export interface ISearchableMultiSelectPropsRaw extends StandardProps {
 		event: React.KeyboardEvent | React.MouseEvent;
 	}) => void;
 }
-
-export type ISearchableMultiSelectProps = Overwrite<
-	React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>,
-	ISearchableMultiSelectPropsRaw
->;
 
 export interface ISearchableMultiSelectState {
 	DropMenu: IDropMenuState;
@@ -748,11 +774,7 @@ class SearchableMultiSelect extends React.Component<
 
 		return (
 			<div
-				{...omitProps(
-					passThroughs,
-					undefined,
-					_.keys(SearchableMultiSelect.propTypes)
-				)}
+				{...(_.omit(passThroughs, nonPassThroughs) as any)}
 				className={cx('&', className)}
 			>
 				<DropMenu

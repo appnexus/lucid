@@ -38,7 +38,7 @@ const defaultProps = {
 };
 
 const Accordion = (props: IAccordionProps): React.ReactElement => {
-	const { style, className, selectedIndex, ...passThroughs } = props;
+	const { style, className, onSelect, selectedIndex, ...passThroughs } = props;
 
 	const itemChildProps = _.map(findTypes(props, Accordion.Item), 'props');
 
@@ -49,7 +49,7 @@ const Accordion = (props: IAccordionProps): React.ReactElement => {
 	) => {
 		const selectedIndex = isExpanded ? index : null;
 
-		props.onSelect(selectedIndex, {
+		onSelect(selectedIndex, {
 			event,
 			props,
 		});

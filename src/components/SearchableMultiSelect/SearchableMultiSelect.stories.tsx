@@ -1,96 +1,116 @@
 import React from 'react';
 import createClass from 'create-react-class';
-import { Selection, SearchableMultiSelect } from './../../index';
-import _ from 'lodash';
-import Resizer from '../Resizer/Resizer';
+import _, { map } from 'lodash';
+import { Meta, Story } from '@storybook/react';
 
+import { Selection, SearchableMultiSelect } from './../../index';
+import Resizer from '../Resizer/Resizer';
+import { ISearchableMultiSelectProps } from './SearchableMultiSelect';
+
+//👇 Provide Storybook with the component name, 'section', any subcomponents and a description
 export default {
 	title: 'Controls/SearchableMultiSelect',
 	component: SearchableMultiSelect,
+	subcomponents: {
+		'SearchableMultiSelect.SelectionOption':
+			SearchableMultiSelect.Option.Selection,
+		'SearchableMultiSelect.Option.Selected':
+			SearchableMultiSelect.Option.Selected,
+		'SearchableMultiSelect.OptionGroup': SearchableMultiSelect.OptionGroup,
+		'SearchableMultiSelect.SearchFieldComponent':
+			SearchableMultiSelect.SearchField,
+		'SearchableMultiSelect.Option': SearchableMultiSelect.Option,
+	},
 	parameters: {
 		docs: {
 			description: {
-				component: (SearchableMultiSelect as any).peek.description,
+				component: SearchableMultiSelect.peek.description,
 			},
 		},
 	},
-};
+} as Meta;
+
+//👇 Destructure any child components that we will need
+const { Option } = SearchableMultiSelect;
+
+//👇 Add a key prop to each element of the array
+function addKeys(children: any) {
+	return map(children, (child, index) => ({ ...child, key: index }));
+}
 
 /* Default */
-export const Default = () => {
-	const { Option } = SearchableMultiSelect;
+export const Default: Story<ISearchableMultiSelectProps> = (args) => {
+	return (
+		<Resizer>
+			{(width) => {
+				// const responsiveMode = width >= 400 ? 'large' : 'small';
 
-	const Component = createClass({
-		render() {
-			return (
-				<Resizer>
-					{(width) => {
-						const responsiveMode = width >= 400 ? 'large' : 'small';
-
-						return (
-							<SearchableMultiSelect responsiveMode={responsiveMode}>
-								<Option isDisabled>Alabama</Option>
-								<Option>Alaska</Option>
-								<Option>Arizona</Option>
-								<Option>Arkansas</Option>
-								<Option>California</Option>
-								<Option>Colorado</Option>
-								<Option>Connecticut</Option>
-								<Option>Delaware</Option>
-								<Option>Florida</Option>
-								<Option>Georgia</Option>
-								<Option>Hawaii</Option>
-								<Option>Idaho</Option>
-								<Option>Illinois</Option>
-								<Option>Indiana</Option>
-								<Option>Iowa</Option>
-								<Option>Kansas</Option>
-								<Option>Kentucky</Option>
-								<Option>Louisiana</Option>
-								<Option>Maine</Option>
-								<Option>Maryland</Option>
-								<Option>Massachusetts</Option>
-								<Option>Michigan</Option>
-								<Option>Minnesota</Option>
-								<Option>Mississippi</Option>
-								<Option>Missouri</Option>
-								<Option>Montana Nebraska</Option>
-								<Option>Nevada</Option>
-								<Option>New Hampshire</Option>
-								<Option>New Jersey</Option>
-								<Option>New Mexico</Option>
-								<Option>New York</Option>
-								<Option>North Carolina</Option>
-								<Option>North Dakota</Option>
-								<Option>Ohio</Option>
-								<Option>Oklahoma</Option>
-								<Option>Oregon</Option>
-								<Option>Pennsylvania Rhode Island</Option>
-								<Option>South Carolina</Option>
-								<Option>South Dakota</Option>
-								<Option>Tennessee</Option>
-								<Option>Texas</Option>
-								<Option>Utah</Option>
-								<Option>Vermont</Option>
-								<Option>Virginia</Option>
-								<Option>Washington</Option>
-								<Option>West Virginia</Option>
-								<Option>Wisconsin</Option>
-								<Option>Wyoming</Option>
-							</SearchableMultiSelect>
-						);
-					}}
-				</Resizer>
-			);
-		},
-	});
-
-	return <Component />;
+				return (
+					<SearchableMultiSelect
+						{...args}
+						// responsiveMode={responsiveMode}
+					></SearchableMultiSelect>
+				);
+			}}
+		</Resizer>
+	);
 };
 Default.storyName = 'Default';
+Default.args = {
+	children: addKeys([
+		<Option isDisabled>Alabama</Option>,
+		<Option>Alaska</Option>,
+		<Option>Arizona</Option>,
+		<Option>Arkansas</Option>,
+		<Option>California</Option>,
+		<Option>Colorado</Option>,
+		<Option>Connecticut</Option>,
+		<Option>Delaware</Option>,
+		<Option>Florida</Option>,
+		<Option>Georgia</Option>,
+		<Option>Hawaii</Option>,
+		<Option>Idaho</Option>,
+		<Option>Illinois</Option>,
+		<Option>Indiana</Option>,
+		<Option>Iowa</Option>,
+		<Option>Kansas</Option>,
+		<Option>Kentucky</Option>,
+		<Option>Louisiana</Option>,
+		<Option>Maine</Option>,
+		<Option>Maryland</Option>,
+		<Option>Massachusetts</Option>,
+		<Option>Michigan</Option>,
+		<Option>Minnesota</Option>,
+		<Option>Mississippi</Option>,
+		<Option>Missouri</Option>,
+		<Option>Montana Nebraska</Option>,
+		<Option>Nevada</Option>,
+		<Option>New Hampshire</Option>,
+		<Option>New Jersey</Option>,
+		<Option>New Mexico</Option>,
+		<Option>New York</Option>,
+		<Option>North Carolina</Option>,
+		<Option>North Dakota</Option>,
+		<Option>Ohio</Option>,
+		<Option>Oklahoma</Option>,
+		<Option>Oregon</Option>,
+		<Option>Pennsylvania Rhode Island</Option>,
+		<Option>South Carolina</Option>,
+		<Option>South Dakota</Option>,
+		<Option>Tennessee</Option>,
+		<Option>Texas</Option>,
+		<Option>Utah</Option>,
+		<Option>Vermont</Option>,
+		<Option>Virginia</Option>,
+		<Option>Washington</Option>,
+		<Option>West Virginia</Option>,
+		<Option>Wisconsin</Option>,
+		<Option>Wyoming</Option>,
+	]),
+};
 
 /* Props */
-export const Props = () => {
+export const Props: Story<ISearchableMultiSelectProps> = (args) => {
 	const { Option } = SearchableMultiSelect;
 
 	const Component = createClass({
@@ -116,6 +136,7 @@ export const Props = () => {
 							<section>
 								<h5>Loading</h5>
 								<SearchableMultiSelect
+									{...args}
 									responsiveMode={responsiveMode}
 									isLoading={true}
 								>
@@ -124,6 +145,7 @@ export const Props = () => {
 
 								<h5>Disabled</h5>
 								<SearchableMultiSelect
+									{...args}
 									responsiveMode={responsiveMode}
 									isDisabled={true}
 								>
@@ -132,6 +154,7 @@ export const Props = () => {
 
 								<h5>Custom option selections</h5>
 								<SearchableMultiSelect
+									{...args}
 									responsiveMode={responsiveMode}
 									selectedIndices={[0, 1, 2, 3]}
 								>
@@ -143,6 +166,7 @@ export const Props = () => {
 
 								<h5>No remove all option</h5>
 								<SearchableMultiSelect
+									{...args}
 									responsiveMode={responsiveMode}
 									hasRemoveAll={false}
 									initialState={{
@@ -166,7 +190,7 @@ export const Props = () => {
 Props.storyName = 'Props';
 
 /* Asynchronous */
-export const Asynchronous = () => {
+export const Asynchronous: Story<ISearchableMultiSelectProps> = (args) => {
 	const { Option } = SearchableMultiSelect;
 	const allData: any = {
 		100: { name: 'Rita Daniel' },
@@ -268,6 +292,7 @@ export const Asynchronous = () => {
 			return (
 				<section>
 					<SearchableMultiSelect
+						{...args}
 						hasSelections={false}
 						isLoading={isLoading}
 						onSelect={this.handleSelect}
@@ -311,15 +336,18 @@ export const Asynchronous = () => {
 	return <Component />;
 };
 Asynchronous.storyName = 'Asynchronous';
-
+Asynchronous.args = {
+	...Default.args,
+};
 /* Grouped Options */
-export const GroupedOptions = () => {
+export const GroupedOptions: Story<ISearchableMultiSelectProps> = (args) => {
 	const { Option, OptionGroup } = SearchableMultiSelect;
 
 	const Component = createClass({
 		render() {
 			return (
 				<SearchableMultiSelect
+					{...args}
 					hasSelectAll
 					initialState={{
 						selectedIndices: [0, 1, 2, 3, 11, 12, 48, 49],
@@ -400,13 +428,15 @@ export const GroupedOptions = () => {
 GroupedOptions.storyName = 'GroupedOptions';
 
 /* Custom Selection Label */
-export const CustomSelectionLabel = () => {
+export const CustomSelectionLabel: Story<ISearchableMultiSelectProps> = (
+	args
+) => {
 	const { Option, SelectionLabel } = SearchableMultiSelect;
 
 	const Component = createClass({
 		render() {
 			return (
-				<SearchableMultiSelect>
+				<SearchableMultiSelect {...args}>
 					<SelectionLabel>Selected States</SelectionLabel>
 					<Option>Alabama</Option>
 					<Option>Alaska</Option>
@@ -466,7 +496,7 @@ export const CustomSelectionLabel = () => {
 CustomSelectionLabel.storyName = 'CustomSelectionLabel';
 
 /* Select All */
-export const SelectAll = () => {
+export const SelectAll: Story<ISearchableMultiSelectProps> = (args) => {
 	const { Option } = SearchableMultiSelect;
 
 	const Component = createClass({
@@ -479,6 +509,7 @@ export const SelectAll = () => {
 
 							return (
 								<SearchableMultiSelect
+									{...args}
 									hasSelectAll
 									selectAllText='Custom Select All Text'
 									responsiveMode={responsiveMode}
@@ -545,7 +576,7 @@ export const SelectAll = () => {
 SelectAll.storyName = 'SelectAll';
 
 /* Formatted Options */
-export const FormattedOptions = () => {
+export const FormattedOptions: Story<ISearchableMultiSelectProps> = (args) => {
 	// eslint-disable-next-line react/prop-types
 	interface Props extends React.HTMLProps<HTMLParagraphElement> {
 		match?: any;
@@ -590,7 +621,7 @@ export const FormattedOptions = () => {
 	class Component extends React.Component {
 		render() {
 			return (
-				<SearchableMultiSelect optionFilter={optionFilter}>
+				<SearchableMultiSelect {...args} optionFilter={optionFilter}>
 					<SearchableMultiSelect.OptionGroup Selected=''>
 						<div style={{ marginLeft: 27 }}>
 							<OptionCols col1='ID' col2='NAME' />
@@ -630,9 +661,12 @@ export const FormattedOptions = () => {
 	return <Component />;
 };
 FormattedOptions.storyName = 'FormattedOptions';
+FormattedOptions.args = {
+	...Default.args,
+};
 
 /* Invalid */
-export const Invalid = () => {
+export const Invalid: Story<ISearchableMultiSelectProps> = (args) => {
 	const { Option } = SearchableMultiSelect;
 
 	const Component = createClass({
@@ -665,6 +699,7 @@ export const Invalid = () => {
 
 						return (
 							<SearchableMultiSelect
+								{...args}
 								responsiveMode={responsiveMode}
 								onRemoveAll={this.handleRemoveAll}
 								onSelect={this.handleChange}
