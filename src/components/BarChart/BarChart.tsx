@@ -2,7 +2,7 @@ import _ from 'lodash';
 import React, { Key } from 'react';
 import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import { omitProps, getFirst, StandardProps } from '../../util/component-types';
+import { getFirst, StandardProps } from '../../util/component-types';
 import {
 	Collection,
 	maxByFields,
@@ -334,7 +334,7 @@ export const BarChart = (props: IBarChartProps): React.ReactElement => {
 			>
 				{emptyStateWrapper.props.children}
 				<svg
-					{...omitProps(passThroughs, undefined, _.keys(BarChart.propTypes))}
+					{...(passThroughs as any)}
 					className={svgClasses}
 					width={width}
 					height={height}
@@ -366,7 +366,7 @@ export const BarChart = (props: IBarChartProps): React.ReactElement => {
 
 	return (
 		<svg
-			{...omitProps(passThroughs, undefined, _.keys(BarChart.propTypes))}
+			{...(passThroughs as any)}
 			className={svgClasses}
 			width={width}
 			height={height}
