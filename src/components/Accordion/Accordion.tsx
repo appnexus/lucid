@@ -4,11 +4,7 @@ import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import { buildModernHybridComponent } from '../../util/state-management';
 import { ExpanderPanelDumb as ExpanderPanel } from '../ExpanderPanel/ExpanderPanel';
-import {
-	findTypes,
-	omitProps,
-	StandardProps,
-} from '../../util/component-types';
+import { findTypes, StandardProps } from '../../util/component-types';
 import * as reducers from '../Accordion/Accordion.reducers';
 
 const cx = lucidClassNames.bind('&-Accordion');
@@ -28,6 +24,9 @@ export interface IAccordionProps extends StandardProps {
 		{ event, props }: { event: React.MouseEvent; props: IAccordionProps }
 	) => void;
 }
+
+/** TODO: Remove this constant when the component is converted to a functional component */
+const nonPassThroughs = ['selectedIndex', 'onSelect'];
 
 export interface IAccordionState {
 	selectedIndex: number | null;
@@ -57,7 +56,7 @@ const Accordion = (props: IAccordionProps): React.ReactElement => {
 
 	return (
 		<div
-			{...omitProps(passThroughs, undefined, _.keys(Accordion.propTypes))}
+			{...(_.omit(passThroughs, nonPassThroughs) as any)}
 			className={cx('&', className)}
 			style={style}
 		>
