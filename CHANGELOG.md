@@ -1,6 +1,16 @@
-## 8.5.1
+## 8.6.0
+
+- #1291 Fix propTypes for `SearchableMultiSelect`.
+- #1290 Fix `less` bug to allow division calculations.
+- #1289 Fix `SearchField` styling.
+- #1288 Replaced `Object.keys` with `lodash` keys to fix `propType` checks in prod builds.
+- #1287 Format `Storybook` story descriptions.
+- #1286 Add `master.less` styles back into `Storybook`.
+
+## 8.5.2
 
 - #1285 Make props optional for `Banner`.
+  https://github.com/appnexus/lucid/compare/v8.5.0...v8.5.2
 
 ## 8.5.0
 
