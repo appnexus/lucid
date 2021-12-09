@@ -73,11 +73,7 @@ export const EmptyStateWrapper = (
 		<LoadingIndicator
 			className={cx('&', className)}
 			isLoading
-			{...omitProps(
-				passThroughs,
-				undefined,
-				_.keys(EmptyStateWrapper.propTypes)
-			)}
+			{...(passThroughs as any)}
 			anchorMessage={anchorMessage}
 		>
 			{children}
@@ -88,11 +84,7 @@ export const EmptyStateWrapper = (
 			hasOverlay={false}
 			isVisible={isEmpty}
 			anchorMessage={anchorMessage}
-			{...omitProps(
-				passThroughs,
-				undefined,
-				_.keys(EmptyStateWrapper.propTypes)
-			)}
+			{...(passThroughs as any)}
 		>
 			<OverlayWrapperMessage className={cx('&-message-container')}>
 				<div className={cx('&-message-header')} />
@@ -162,18 +154,14 @@ EmptyStateWrapper.propTypes = {
 EmptyStateWrapperBody.displayName = 'EmptyStateWrapper.Body';
 EmptyStateWrapper.Body = EmptyStateWrapperBody;
 EmptyStateWrapperBody.peek = {
-	description: `
-		Body content for the message to display when there is no data.
-	`,
+	description: `Body content for the message to display when there is no data.`,
 };
 EmptyStateWrapperBody.propName = 'Body';
 
 EmptyStateWrapperTitle.displayName = 'EmptyStateWrapper.Title';
 EmptyStateWrapper.Title = EmptyStateWrapperTitle;
 EmptyStateWrapperTitle.peek = {
-	description: `
-		Title text for the message to display when there is no data.
-	`,
+	description: `Title text for the message to display when there is no data.`,
 };
 EmptyStateWrapperTitle.propName = 'Title';
 

@@ -1,16 +1,16 @@
 import _ from 'lodash';
 import React, { Key } from 'react';
 import PropTypes from 'prop-types';
+import * as d3Scale from 'd3-scale';
+import * as chartConstants from '../../constants/charts';
+
 import { lucidClassNames } from '../../util/style-helpers';
-import { omitProps, getFirst, StandardProps } from '../../util/component-types';
+import { getFirst, StandardProps } from '../../util/component-types';
 import {
 	Collection,
 	maxByFields,
 	maxByFieldsStacked,
 } from '../../util/chart-helpers';
-import * as d3Scale from 'd3-scale';
-import * as chartConstants from '../../constants/charts';
-
 import Axis from '../Axis/Axis';
 import AxisLabel from '../AxisLabel/AxisLabel';
 import Bars from '../Bars/Bars';
@@ -265,7 +265,6 @@ export const BarChart = (props: IBarChartProps): React.ReactElement => {
 		xAxisTitleColor,
 		xAxisTickCount,
 		xAxisTextOrientation,
-
 		yAxisFields,
 		yAxisFormatter,
 		yAxisTitle,
@@ -279,7 +278,6 @@ export const BarChart = (props: IBarChartProps): React.ReactElement => {
 			? maxByFieldsStacked(data, yAxisFields)
 			: maxByFields(data, yAxisFields),
 		yAxisTextOrientation,
-
 		...passThroughs
 	} = props;
 
@@ -289,7 +287,6 @@ export const BarChart = (props: IBarChartProps): React.ReactElement => {
 	};
 
 	const svgClasses = cx(className, '&');
-
 	const innerWidth = width - margin.left - margin.right;
 	const innerHeight = height - margin.top - margin.bottom;
 
@@ -334,7 +331,7 @@ export const BarChart = (props: IBarChartProps): React.ReactElement => {
 			>
 				{emptyStateWrapper.props.children}
 				<svg
-					{...omitProps(passThroughs, undefined, _.keys(BarChart.propTypes))}
+					{...(passThroughs as any)}
 					className={svgClasses}
 					width={width}
 					height={height}
@@ -366,7 +363,7 @@ export const BarChart = (props: IBarChartProps): React.ReactElement => {
 
 	return (
 		<svg
-			{...omitProps(passThroughs, undefined, _.keys(BarChart.propTypes))}
+			{...(passThroughs as any)}
 			className={svgClasses}
 			width={width}
 			height={height}

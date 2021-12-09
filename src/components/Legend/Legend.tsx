@@ -1,15 +1,11 @@
 import _ from 'lodash';
 import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes, { any } from 'prop-types';
+
 import { lucidClassNames } from '../../util/style-helpers';
-import {
-	findTypes,
-	omitProps,
-	StandardProps,
-} from '../../util/component-types';
+import { findTypes, StandardProps } from '../../util/component-types';
 import Point from '../Point/Point';
 import Line from '../Line/Line';
-import { any } from 'prop-types';
 
 const cx = lucidClassNames.bind('&-Legend');
 
@@ -81,11 +77,13 @@ const handleItemClick = (
 	props: ILegendItemProps,
 	event: React.MouseEvent<HTMLLIElement>
 ): void => {
-	if (!props.onClick) {
+	const { onClick } = props;
+
+	if (!onClick) {
 		return;
 	}
 
-	props.onClick(index, { props, event });
+	onClick(index, { props, event });
 };
 
 export const Legend = (props: ILegendProps): React.ReactElement => {
@@ -99,7 +97,7 @@ export const Legend = (props: ILegendProps): React.ReactElement => {
 
 	return (
 		<ul
-			{...omitProps(passThroughs, undefined, _.keys(Legend.propTypes))}
+			{...(passThroughs as any)}
 			className={cx(
 				'&',
 				{

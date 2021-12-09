@@ -2,12 +2,9 @@
 import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
+
 import { lucidClassNames } from '../../util/style-helpers';
-import {
-	findTypes,
-	omitProps,
-	StandardProps,
-} from '../../util/component-types';
+import { findTypes, StandardProps } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-Breadcrumb');
 
@@ -18,9 +15,7 @@ const BreadcrumbItem = (_props: IBreadcrumbItemProps): null => null;
 
 BreadcrumbItem.displayName = 'Breadcrumb.Item';
 BreadcrumbItem.peek = {
-	description: `
-		Renders a \`li\`
-	`,
+	description: `Renders a \`li\``,
 };
 BreadcrumbItem.propName = 'Item';
 BreadcrumbItem.propTypes = {
@@ -43,20 +38,13 @@ export const Breadcrumb = (props: IBreadcrumbProps): React.ReactElement => {
 	const lastItem = _.last(items);
 
 	return (
-		<nav
-			{...omitProps(passThroughs, undefined, _.keys(Breadcrumb.propTypes))}
-			className={cx('&', className)}
-		>
+		<nav {...(passThroughs as any)} className={cx('&', className)}>
 			{!_.isEmpty(items) ? (
 				<ul className={cx('&-List')}>
 					{_.map(
 						initialItems as React.ReactElement[],
 						({ props, key }): React.ReactNode => (
-							<li
-								{...props}
-								key={key}
-								className={cx('&-Item', props.className)}
-							>
+							<li {...props} key={key} className={cx('&-Item', className)}>
 								{props.children}
 								<span className={cx('&-BreadcrumbSeparator')}>
 									<span />

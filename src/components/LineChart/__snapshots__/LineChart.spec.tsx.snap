@@ -3181,6 +3181,7 @@ exports[`LineChart [common] example testing should match snapshot(s) for DualAxi
 exports[`LineChart [common] example testing should match snapshot(s) for Empty 1`] = `
 <div
   class="lucid-OverlayWrapper lucid-EmptyStateWrapper"
+  title="You have no data."
 >
   <svg
     class="lucid-LineChart"
@@ -3844,6 +3845,7 @@ exports[`LineChart [common] example testing should match snapshot(s) for FineGra
 exports[`LineChart [common] example testing should match snapshot(s) for Loading 1`] = `
 <div
   class="lucid-OverlayWrapper lucid-LoadingIndicator lucid-EmptyStateWrapper"
+  title="You have no data."
 >
   <svg
     class="lucid-LineChart"
@@ -5668,6 +5670,7 @@ exports[`LineChart [common] example testing should match snapshot(s) for Respons
   >
     <div
       class="lucid-OverlayWrapper lucid-EmptyStateWrapper"
+      title="You have no data."
     >
       <svg
         class="lucid-LineChart"
