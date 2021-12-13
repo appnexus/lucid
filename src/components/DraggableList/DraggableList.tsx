@@ -1,16 +1,15 @@
 import _ from 'lodash';
 import React, { useRef } from 'react';
 import PropTypes from 'prop-types';
+
 import { lucidClassNames } from '../../util/style-helpers';
 import { buildModernHybridComponent } from '../../util/state-management';
 import DotsIcon from '../Icon/DotsIcon/DotsIcon';
-
 import * as reducers from './DraggableList.reducers';
 import { IDraggableListState } from './DraggableList.reducers';
 
 import {
 	findTypes,
-	omitProps,
 	StandardProps,
 	Overwrite,
 } from '../../util/component-types';
@@ -69,7 +68,7 @@ interface IDraggableListPropsRaw extends StandardProps {
 	/** Called when the user drops an item in the list
 	Signature: \`({oldIndex, newIndex}, { event, props }) => {}\` */
 	onDrop?: (
-		{ oldIndex, newIndex }: { newIndex?: number; oldIndex?: number },
+		{ oldIndex, newIndex }: { newIndex: number; oldIndex: number },
 		{ event, props }: { event: React.DragEvent; props: IDraggableListProps }
 	) => void;
 	/** Props for DraggableList.Item */
@@ -177,7 +176,7 @@ const DraggableList = (props: IDraggableListProps) => {
 
 	return (
 		<div
-			{...omitProps(passThroughs, undefined, _.keys(DraggableList.propTypes))}
+			{...(passThroughs as any)}
 			className={cx(
 				'&',
 				{

@@ -1,8 +1,9 @@
 import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
+
 import { lucidClassNames } from '../../util/style-helpers';
-import { omitProps, StandardProps } from '../../util/component-types';
+import { StandardProps } from '../../util/component-types';
 import * as chartConstants from '../../constants/charts';
 
 const cx = lucidClassNames.bind('&-Bar');
@@ -64,7 +65,7 @@ export const Bar = (props: IBarProps): React.ReactElement => {
 
 	return (
 		<rect
-			{...omitProps<IBarProps>(passThroughs, undefined, _.keys(Bar.propTypes))}
+			{...passThroughs}
 			className={cx(className, '&', {
 				'&-has-stroke': hasStroke,
 				[`&-${color}`]: !isCustomColor,

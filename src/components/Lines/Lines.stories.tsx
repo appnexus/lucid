@@ -1,7 +1,9 @@
 import _ from 'lodash';
 import React from 'react';
-import createClass from 'create-react-class';
+import { Meta, Story } from '@storybook/react';
+
 import { Lines, d3Scale, chartConstants } from './../../index';
+import { ILinesProps } from './Lines';
 
 export default {
 	title: 'Visualizations/Lines',
@@ -9,14 +11,14 @@ export default {
 	parameters: {
 		docs: {
 			description: {
-				component: (Lines as any).peek.description,
+				component: Lines.peek.description,
 			},
 		},
 	},
-};
+} as Meta;
 
 /* Default */
-export const Default = () => {
+export const Default: Story<ILinesProps> = (args) => {
 	const width = 800;
 	const height = 400;
 
@@ -47,39 +49,35 @@ export const Default = () => {
 
 	const yScale = d3Scale.scaleLinear().domain([0, yMax]).range([height, 0]);
 
-	const Component = createClass({
-		render() {
-			return (
-				<div>
-					<svg width={width} height={height}>
-						<Lines
-							data={data}
-							xScale={xScale}
-							yScale={yScale}
-							yFields={yFields}
-						/>
-					</svg>
+	return (
+		<div>
+			<svg width={width} height={height}>
+				<Lines
+					{...args}
+					data={data}
+					xScale={xScale}
+					yScale={yScale}
+					yFields={yFields}
+				/>
+			</svg>
 
-					<svg width={width} height={height}>
-						<Lines
-							data={data}
-							xScale={xScale}
-							yScale={yScale}
-							yFields={yFields}
-							isStacked={true}
-						/>
-					</svg>
-				</div>
-			);
-		},
-	});
-
-	return <Component />;
+			<svg width={width} height={height}>
+				<Lines
+					{...args}
+					data={data}
+					xScale={xScale}
+					yScale={yScale}
+					yFields={yFields}
+					isStacked={true}
+				/>
+			</svg>
+		</div>
+	);
 };
 Default.storyName = 'Default';
 
 /* Custom Colors */
-export const CustomColors = () => {
+export const CustomColors: Story<ILinesProps> = (args) => {
 	/* eslint-disable comma-spacing */
 
 	const width = 1000;
@@ -112,29 +110,24 @@ export const CustomColors = () => {
 
 	const yScale = d3Scale.scaleLinear().domain([0, yMax]).range([height, 0]);
 
-	const Component = createClass({
-		render() {
-			return (
-				<div>
-					<svg width={width} height={height}>
-						<Lines
-							data={data}
-							xScale={xScale}
-							yScale={yScale}
-							yFields={yFields}
-							colorMap={{
-								y0: chartConstants.COLOR_BAD,
-								y1: chartConstants.COLOR_GOOD,
-								y2: '#ff8800',
-								y3: '#abc123',
-							}}
-						/>
-					</svg>
-				</div>
-			);
-		},
-	});
-
-	return <Component />;
+	return (
+		<div>
+			<svg width={width} height={height}>
+				<Lines
+					{...args}
+					data={data}
+					xScale={xScale}
+					yScale={yScale}
+					yFields={yFields}
+					colorMap={{
+						y0: chartConstants.COLOR_BAD,
+						y1: chartConstants.COLOR_GOOD,
+						y2: '#ff8800',
+						y3: '#abc123',
+					}}
+				/>
+			</svg>
+		</div>
+	);
 };
-CustomColors.storyName = 'CustomColors';
+CustomColors.storyName = 'Custom Colors';

@@ -1,12 +1,9 @@
 import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
+
 import { lucidClassNames } from '../../util/style-helpers';
-import {
-	findTypes,
-	omitProps,
-	StandardProps,
-} from '../../util/component-types';
+import { findTypes, StandardProps } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-Panel');
 
@@ -95,11 +92,7 @@ export const Panel = (props: IPanelProps): React.ReactElement => {
 
 	return (
 		<div
-			{...omitProps<IPanelProps>(
-				passThroughs,
-				undefined,
-				_.keys(Panel.propTypes)
-			)}
+			{...passThroughs}
 			className={cx('&', className, {
 				'&-is-not-gutterless': !isGutterless,
 				'&-has-margin': hasMargin,

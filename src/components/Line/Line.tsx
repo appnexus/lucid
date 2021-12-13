@@ -1,8 +1,9 @@
 import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
+
 import { lucidClassNames } from '../../util/style-helpers';
-import { omitProps, StandardProps } from '../../util/component-types';
+import { StandardProps } from '../../util/component-types';
 import * as chartConstants from '../../constants/charts';
 
 const cx = lucidClassNames.bind('&-Line');
@@ -38,11 +39,7 @@ export const Line = (props: ILineProps): React.ReactElement => {
 
 	return (
 		<path
-			{...omitProps<ILineProps>(
-				passThroughs,
-				undefined,
-				_.keys(Line.propTypes)
-			)}
+			{...passThroughs}
 			style={{
 				...style,
 				...colorStyle,

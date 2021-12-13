@@ -1,7 +1,9 @@
-import React from 'react';
-import createClass from 'create-react-class';
-import { Bar, chartConstants } from './../../index';
 import _ from 'lodash';
+import React from 'react';
+import { Story, Meta } from '@storybook/react';
+
+import { Bar, chartConstants } from './../../index';
+import { IBarProps } from '../Bar/Bar';
 
 export default {
 	title: 'Visualizations/Bar',
@@ -9,14 +11,14 @@ export default {
 	parameters: {
 		docs: {
 			description: {
-				component: (Bar as any).peek.description,
+				component: Bar.peek.description,
 			},
 		},
 	},
-};
+} as Meta;
 
 /* Custom Colors */
-export const CustomColors = () => {
+export const CustomColors: Story<IBarProps> = (args) => {
 	const svgProps = {
 		width: 20,
 		height: 100,
@@ -29,28 +31,22 @@ export const CustomColors = () => {
 		height: 100,
 	};
 
-	const Component = createClass({
-		render() {
-			return (
-				<div>
-					<svg {...svgProps}>
-						<Bar {...pointProps} color='#f80' />
-					</svg>
+	return (
+		<div>
+			<svg {...svgProps}>
+				<Bar {...args} {...pointProps} color='#f80' />
+			</svg>
 
-					<svg {...svgProps}>
-						<Bar {...pointProps} color='#abc123' />
-					</svg>
-				</div>
-			);
-		},
-	});
-
-	return <Component />;
+			<svg {...svgProps}>
+				<Bar {...args} {...pointProps} color='#abc123' />
+			</svg>
+		</div>
+	);
 };
 CustomColors.storyName = 'CustomColors';
 
 /* Custom Dimension Units */
-export const CustomDimensionUnits = () => {
+export const CustomDimensionUnits: Story<IBarProps> = (args) => {
 	const svgProps = {
 		width: 20,
 		height: 100,
@@ -63,28 +59,22 @@ export const CustomDimensionUnits = () => {
 		height: '100%',
 	};
 
-	const Component = createClass({
-		render() {
-			return (
-				<div>
-					<svg {...svgProps}>
-						<Bar {...pointProps} color='#f80' />
-					</svg>
+	return (
+		<div>
+			<svg {...svgProps}>
+				<Bar {...args} {...pointProps} color='#f80' />
+			</svg>
 
-					<svg {...svgProps}>
-						<Bar {...pointProps} color='#abc123' />
-					</svg>
-				</div>
-			);
-		},
-	});
-
-	return <Component />;
+			<svg {...svgProps}>
+				<Bar {...args} {...pointProps} color='#abc123' />
+			</svg>
+		</div>
+	);
 };
-CustomDimensionUnits.storyName = 'CustomDimensionUnits';
+CustomDimensionUnits.storyName = 'Custom Dimension Units';
 
 /* Regular Colors */
-export const RegularColors = () => {
+export const RegularColors: Story<IBarProps> = (args) => {
 	const svgProps = {
 		width: 20,
 		height: 100,
@@ -142,20 +132,14 @@ export const RegularColors = () => {
 		chartConstants.COLOR_NEUTRAL,
 	];
 
-	const Component = createClass({
-		render() {
-			return (
-				<div>
-					{_.map(colors, (color) => (
-						<svg key={color} {...svgProps}>
-							<Bar {...barProps} color={color} />
-						</svg>
-					))}
-				</div>
-			);
-		},
-	});
-
-	return <Component />;
+	return (
+		<div>
+			{_.map(colors, (color) => (
+				<svg key={color} {...svgProps}>
+					<Bar {...args} {...barProps} color={color} />
+				</svg>
+			))}
+		</div>
+	);
 };
-RegularColors.storyName = 'RegularColors';
+RegularColors.storyName = 'Regular Colors';
