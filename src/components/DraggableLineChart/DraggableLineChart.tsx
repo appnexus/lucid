@@ -37,6 +37,21 @@ const draggableLineChartDefaultProps = {
 	margin: { top: 65, right: 80, bottom: 65, left: 80 },
 };
 
+/** TODO: Remove this constant when the component is converted to a functional component */
+const nonPassThroughs = [
+	'height',
+	'width',
+	'margin',
+	'data',
+	'onDragEnd',
+	'xAxisTicksVertical',
+	'dataIsCentered',
+	'yAxisMin',
+	'xAxisRenderProp',
+	'onPreselect',
+	'preSelectText',
+];
+
 class DraggableLineChart extends React.Component<IDraggableLineChartProps, {}> {
 	ref: any;
 	d3LineChart: any;
@@ -102,19 +117,7 @@ class DraggableLineChart extends React.Component<IDraggableLineChartProps, {}> {
 
 		return (
 			<svg
-				{...omitProps(passThroughs, undefined, [
-					'height',
-					'width',
-					'margin',
-					'data',
-					'onDragEnd',
-					'xAxisTicksVertical',
-					'dataIsCentered',
-					'yAxisMin',
-					'xAxisRenderProp',
-					'onPreselect',
-					'preSelectText',
-				])}
+				{...omitProps(passThroughs, undefined, nonPassThroughs)}
 				ref={(ref: SVGSVGElement) => (this.ref = ref)}
 				className={cx('&')}
 				width={width}

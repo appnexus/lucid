@@ -1,5 +1,8 @@
 import React from 'react';
+import { Meta, Story } from '@storybook/react';
+
 import { Underline } from './../../index';
+import { IUnderlineProps } from './Underline';
 
 export default {
 	title: 'Controls/Underline',
@@ -7,26 +10,34 @@ export default {
 	parameters: {
 		docs: {
 			description: {
-				component: (Underline as any).peek.description,
+				component: Underline.peek.description,
 			},
 		},
 	},
-};
+} as Meta;
 
 /* With Defaults */
-export const WithDefaults = () => {
-	return <Underline>foo bar baz</Underline>;
+export const WithDefaults: Story<IUnderlineProps> = (args) => {
+	return <Underline {...args}>foo bar baz</Underline>;
 };
-WithDefaults.storyName = 'WithDefaults';
+WithDefaults.storyName = 'With Defaults';
 
 /* With Regex Match */
-export const WithRegexMatch = () => {
-	return <Underline match={/foo?/i}>foo bar baz</Underline>;
+export const WithRegexMatch: Story<IUnderlineProps> = (args) => {
+	return (
+		<Underline {...args} match={/foo?/i}>
+			foo bar baz
+		</Underline>
+	);
 };
-WithRegexMatch.storyName = 'WithRegexMatch';
+WithRegexMatch.storyName = 'With Regex Match';
 
 /* With String Match */
-export const WithStringMatch = () => {
-	return <Underline match='bar'>foo bar baz</Underline>;
+export const WithStringMatch: Story<IUnderlineProps> = (args) => {
+	return (
+		<Underline {...args} match='bar'>
+			foo bar baz
+		</Underline>
+	);
 };
-WithStringMatch.storyName = 'WithStringMatch';
+WithStringMatch.storyName = 'With String Match';

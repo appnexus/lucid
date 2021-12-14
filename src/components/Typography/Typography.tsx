@@ -1,8 +1,9 @@
 import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
+
 import { lucidClassNames } from '../../util/style-helpers';
-import { omitProps, StandardProps } from '../../util/component-types';
+import { StandardProps } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-Typography');
 
@@ -29,6 +30,10 @@ export interface ITypographyProps
 	variant: keyof typeof ElementTypes;
 }
 
+const defaultProps = {
+	variant: ElementTypes.p,
+};
+
 export const Typography = (props: ITypographyProps) => {
 	const { children, className, variant, ...passThroughs } = props;
 	const Element = ElementTypes[variant ? variant : 'p'];
@@ -36,17 +41,14 @@ export const Typography = (props: ITypographyProps) => {
 	return React.createElement(
 		Element,
 		{
-			...omitProps<ITypographyProps>(
-				passThroughs,
-				undefined,
-				_.keys(Typography.propTypes)
-			),
+			...passThroughs,
 			className: cx('&', `&-${variant}`, className),
 		},
 		children
 	);
 };
 
+Typography.defaultProps = defaultProps;
 Typography.displayName = 'Typography';
 Typography.peek = {
 	description: `A general component for several types of textual \`HTML\` elements.`,
