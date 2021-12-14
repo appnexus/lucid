@@ -3,11 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { lucidClassNames } from '../../util/style-helpers';
-import {
-	omitProps,
-	StandardProps,
-	Overwrite,
-} from '../../util/component-types';
+import { StandardProps, Overwrite } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-Icon');
 

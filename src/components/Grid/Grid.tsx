@@ -208,7 +208,7 @@ export const Grid = (props: IGridProps): React.ReactElement => {
 
 	return (
 		<section
-			{...omitProps(passThroughs, undefined, _.keys(Grid.propTypes))}
+			{...passThroughs}
 			className={cx(
 				'&',
 				{

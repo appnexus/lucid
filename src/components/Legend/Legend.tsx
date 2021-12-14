@@ -23,8 +23,8 @@ const defaultProps = {
 export interface ILegendProps
 	extends StandardProps,
 		React.DetailedHTMLProps<
-			React.HTMLAttributes<HTMLDivElement>,
-			HTMLDivElement
+			React.HTMLAttributes<HTMLUListElement>,
+			HTMLUListElement
 		> {
 	/** Custom Item element (alias for `Legend.Item`) */
 	Item?: React.ReactNode;
