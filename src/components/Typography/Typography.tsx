@@ -2,7 +2,7 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import { omitProps, StandardProps } from '../../util/component-types';
+import { StandardProps } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-Typography');
 
@@ -36,11 +36,7 @@ export const Typography = (props: ITypographyProps) => {
 	return React.createElement(
 		Element,
 		{
-			...omitProps<ITypographyProps>(
-				passThroughs,
-				undefined,
-				_.keys(Typography.propTypes)
-			),
+			...passThroughs,
 			className: cx('&', `&-${variant}`, className),
 		},
 		children

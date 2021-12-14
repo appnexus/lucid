@@ -2,7 +2,7 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import { omitProps, StandardProps } from '../../util/component-types';
+import { StandardProps } from '../../util/component-types';
 import { transformFromCenter } from '../../util/chart-helpers';
 import * as chartConstants from '../../constants/charts';
 
@@ -78,7 +78,7 @@ export const Point = (props: IPointProps): React.ReactElement => {
 
 	return (
 		<path
-			{...omitProps(passThroughs, undefined, _.keys(Point.propTypes))}
+			{...passThroughs}
 			style={{
 				...style,
 				...colorStyle,
