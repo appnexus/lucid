@@ -3,11 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import { discreteTicks } from '../../util/chart-helpers';
-import {
-	omitProps,
-	StandardProps,
-	Overwrite,
-} from '../../util/component-types';
+import { StandardProps, Overwrite } from '../../util/component-types';
 import * as d3scale from 'd3-scale';
 
 const cx = lucidClassNames.bind('&-Axis');
@@ -213,10 +209,7 @@ export const Axis = (props: IAxisProps): React.ReactElement => {
 			: scale;
 
 	return (
-		<g
-			{...omitProps(passThroughs, undefined, _.keys(Axis.propTypes))}
-			className={cx(className, '&')}
-		>
+		<g {...passThroughs} className={cx(className, '&')}>
 			{isH ? (
 				<path
 					className={cx('&-domain')}

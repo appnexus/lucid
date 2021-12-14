@@ -6,7 +6,6 @@ import { lucidClassNames } from '../../util/style-helpers';
 import {
 	getFirst,
 	rejectTypes,
-	omitProps,
 	StandardProps,
 } from '../../util/component-types';
 import { CSSTransition } from 'react-transition-group';
@@ -101,10 +100,7 @@ export const OverlayWrapper = (
 	const otherChildren = rejectTypes(children, [OverlayWrapperMessage]);
 
 	return (
-		<div
-			{...omitProps(passThroughs, undefined, _.keys(OverlayWrapper.propTypes))}
-			className={cx('&', className)}
-		>
+		<div {...passThroughs} className={cx('&', className)}>
 			{otherChildren}
 			<CSSTransition
 				in={isVisible}

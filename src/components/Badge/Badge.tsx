@@ -2,7 +2,7 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import { omitProps, StandardProps } from '../../util/component-types';
+import { StandardProps } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-Badge');
 
@@ -65,7 +65,7 @@ export const Badge = (props: IBadgeProps): React.ReactElement => {
 	return (
 		<span
 			className={cx('&', `&-${kind}`, `&-${type}`, className)}
-			{...omitProps(passThroughs, undefined, _.keys(Badge.propTypes))}
+			{...passThroughs}
 		>
 			{children}
 		</span>

@@ -4,6 +4,7 @@ exports[`TextFieldValidated [common] example testing should match snapshot(s) fo
 <div>
   <div
     class="lucid-Validation lucid-Validation-is-error lucid-TextFieldValidated"
+    error="[object Object]"
     style="margin-bottom:10px"
   >
     <input
@@ -29,6 +30,7 @@ exports[`TextFieldValidated [common] example testing should match snapshot(s) fo
 exports[`TextFieldValidated [common] example testing should match snapshot(s) for Default 1`] = `
 <div
   class="lucid-Validation lucid-Validation-is-error lucid-TextFieldValidated"
+  error="[object Object]"
 >
   <input
     class="lucid-TextField lucid-TextField-is-single-line"
@@ -48,6 +50,7 @@ exports[`TextFieldValidated [common] example testing should match snapshot(s) fo
 <div>
   <div
     class="lucid-Validation lucid-Validation-is-error lucid-TextFieldValidated"
+    error="[object Object]"
     style="margin-bottom:10px"
   >
     <input
@@ -64,6 +67,7 @@ exports[`TextFieldValidated [common] example testing should match snapshot(s) fo
   </div>
   <div
     class="lucid-Validation lucid-Validation-is-error lucid-TextFieldValidated -info"
+    error="This is an info"
     style="margin-bottom:10px"
   >
     <input
