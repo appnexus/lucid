@@ -24,6 +24,7 @@ exports[`Typography [common] example testing should match snapshot(s) for Nested
     >
       Like!
     </a>
+    <br />
     <a
       class="lucid-Typography lucid-Typography-a"
       style="display:block"
@@ -47,62 +48,66 @@ exports[`Typography [common] example testing should match snapshot(s) for Nested
 `;
 
 exports[`Typography [common] example testing should match snapshot(s) for Variants 1`] = `
-<div>
+<section>
   <h1
     class="lucid-Typography lucid-Typography-h1"
   >
     h1. Heading
   </h1>
+  <br />
   <h2
     class="lucid-Typography lucid-Typography-h2"
   >
     h2. Heading
   </h2>
+  <br />
   <h3
     class="lucid-Typography lucid-Typography-h3"
   >
     h3. Heading
   </h3>
+  <br />
   <p
     class="lucid-Typography lucid-Typography-p"
   >
     p. paragraph text
   </p>
+  <br />
   <p
     class="lucid-Typography lucid-Typography-tabular"
   >
     tabular. text for tables
   </p>
+  <br />
   <a
     class="lucid-Typography lucid-Typography-a"
   >
     a. link text
   </a>
+  <br />
   <pre
     class="lucid-Typography lucid-Typography-pre"
   >
     pre. preformatted text
   </pre>
+  <br />
   <code
     class="lucid-Typography lucid-Typography-code"
   >
     code. snazzy code
   </code>
-   
   <br />
   <kbd
     class="lucid-Typography lucid-Typography-kbd"
   >
     kbd. keyboard inputs
   </kbd>
-   
   <br />
   <samp
     class="lucid-Typography lucid-Typography-samp"
   >
     samp. sample code outputs
   </samp>
-   
   <br />
   <span
     class="lucid-Typography lucid-Typography-span"
@@ -141,5 +146,5 @@ exports[`Typography [common] example testing should match snapshot(s) for Varian
   </span>
    
   <br />
-</div>
+</section>
 `;
