@@ -1,13 +1,13 @@
 import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
+import * as d3Shape from 'd3-shape';
+import * as d3Scale from 'd3-scale';
+
 import { lucidClassNames } from '../../util/style-helpers';
 import { StandardProps } from '../../util/component-types';
 import { groupByFields } from '../../util/chart-helpers';
-import * as d3Shape from 'd3-shape';
-import * as d3Scale from 'd3-scale';
 import * as chartConstants from '../../constants/charts';
-
 import Line from '../Line/Line';
 
 const cx = lucidClassNames.bind('&-Lines');

@@ -1,9 +1,9 @@
 import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
+
 import { getFirst, StandardProps } from '../../util/component-types';
 import { lucidClassNames } from '../../util/style-helpers';
-
 import LoadingIndicator from '../LoadingIndicator/LoadingIndicator';
 import OverlayWrapper, {
 	OverlayWrapperMessage,
