@@ -25,6 +25,9 @@ export interface IAccordionProps extends StandardProps {
 	) => void;
 }
 
+/** TODO: Remove this constant when the component is converted to a functional component */
+const nonPassThroughs = ['selectedIndex', 'onSelect'];
+
 export interface IAccordionState {
 	selectedIndex: number | null;
 }
@@ -52,7 +55,11 @@ const Accordion = (props: IAccordionProps): React.ReactElement => {
 	};
 
 	return (
-		<div {...passThroughs} className={cx('&', className)} style={style}>
+		<div
+			{...(_.omit(passThroughs, nonPassThroughs) as any)}
+			className={cx('&', className)}
+			style={style}
+		>
 			{_.map(itemChildProps, (itemChildProp, index: number) => {
 				return (
 					<ExpanderPanel

@@ -65,7 +65,7 @@ export const Badge = (props: IBadgeProps): React.ReactElement => {
 	return (
 		<span
 			className={cx('&', `&-${kind}`, `&-${type}`, className)}
-			{...passThroughs}
+			{...(passThroughs as any)}
 		>
 			{children}
 		</span>

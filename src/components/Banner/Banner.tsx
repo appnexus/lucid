@@ -129,7 +129,7 @@ export const Banner = (props: IBannerProps): React.ReactElement => {
 			unmountOnExit
 		>
 			<section
-				{...passThroughs}
+				{...(passThroughs as any)}
 				className={cx(
 					'&',
 					{

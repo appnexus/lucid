@@ -1,6 +1,7 @@
 import { Meta, Story } from '@storybook/react';
 import _ from 'lodash';
 import React, { useState } from 'react';
+
 import { Button, ChatIcon } from '../..';
 import { Banner, IBannerProps } from './Banner';
 
@@ -26,6 +27,7 @@ export const Stateful: Story<IBannerProps> = (args) => {
 	return (
 		<div>
 			<Button
+				{...Button.defaultProps}
 				onClick={() => setIsClosed(!isClosed)}
 				style={{ marginBottom: 8 }}
 			>

@@ -1,7 +1,9 @@
 import _ from 'lodash';
 import React from 'react';
-import createClass from 'create-react-class';
+import { Meta, Story } from '@storybook/react';
+
 import { Legend, ToolTip, chartConstants } from './../../index';
+import { ILegendProps } from './Legend';
 
 export default {
 	title: 'Visualizations/Legend',
@@ -9,71 +11,131 @@ export default {
 	parameters: {
 		docs: {
 			description: {
-				component: (Legend as any).peek.description,
+				component: Legend.peek.description,
 			},
 		},
 	},
-};
+} as Meta;
 
 /* Default */
-export const Default = () => {
+export const Default: Story<ILegendProps> = (args) => {
 	const { Item } = Legend;
 
-	const Component = createClass({
-		render() {
-			return (
-				<div>
-					<Legend>
-						{_.map(chartConstants.PALETTE_7, (color, i) => (
-							<Item key={color} hasPoint color={color}>
-								{`Partner ${i}`}
-							</Item>
-						))}
-					</Legend>
+	return (
+		<div>
+			<Legend {...args}>
+				{_.map(chartConstants.PALETTE_7, (color, i) => (
+					<Item key={color} hasPoint color={color}>
+						{`Partner ${i}`}
+					</Item>
+				))}
+			</Legend>
 
-					<br />
+			<br />
 
-					<Legend>
-						{_.map(chartConstants.PALETTE_7, (color, i) => (
-							<Item key={color} hasPoint pointKind={i} color={color}>
-								{`Partner ${i}`}
-							</Item>
-						))}
-					</Legend>
+			<Legend {...args}>
+				{_.map(chartConstants.PALETTE_7, (color, i) => (
+					<Item key={color} hasPoint pointKind={i} color={color}>
+						{`Partner ${i}`}
+					</Item>
+				))}
+			</Legend>
 
-					<br />
+			<br />
 
-					<Legend>
-						{_.map(chartConstants.PALETTE_7, (color, i) => (
-							<Item key={color} hasLine color={color}>
-								{`Partner ${i}`}
-							</Item>
-						))}
-					</Legend>
+			<Legend {...args}>
+				{_.map(chartConstants.PALETTE_7, (color, i) => (
+					<Item key={color} hasLine color={color}>
+						{`Partner ${i}`}
+					</Item>
+				))}
+			</Legend>
 
-					<br />
+			<br />
 
-					<Legend>
-						{_.map(chartConstants.PALETTE_7, (color, i) => (
-							<Item key={color} hasPoint hasLine pointKind={i} color={color}>
-								{`Partner ${i}`}
-							</Item>
-						))}
-					</Legend>
+			<Legend {...args}>
+				{_.map(chartConstants.PALETTE_7, (color, i) => (
+					<Item key={color} hasPoint hasLine pointKind={i} color={color}>
+						{`Partner ${i}`}
+					</Item>
+				))}
+			</Legend>
 
-					<br />
+			<br />
 
-					<Legend isReversed>
-						{_.map(chartConstants.PALETTE_7, (color, i) => (
-							<Item key={color} hasPoint hasLine pointKind={i} color={color}>
-								{`Partner ${i}`}
-							</Item>
-						))}
-					</Legend>
+			<Legend {...args} isReversed>
+				{_.map(chartConstants.PALETTE_7, (color, i) => (
+					<Item key={color} hasPoint hasLine pointKind={i} color={color}>
+						{`Partner ${i}`}
+					</Item>
+				))}
+			</Legend>
 
-					<br />
+			<br />
 
-					<Legend orient='horizontal'>
+			<Legend {...args} orient='horizontal'>
+				<Item hasLine color={chartConstants.COLOR_GOOD}>
+					Revenue
+				</Item>
+				<Item hasLine color={chartConstants.COLOR_BAD}>
+					Loss
+				</Item>
+				<Item hasPoint color={chartConstants.COLOR_0}>
+					Partner 0
+				</Item>
+				<Item hasPoint color={chartConstants.COLOR_1}>
+					Partner 1
+				</Item>
+			</Legend>
+
+			<br />
+
+			<Legend {...args} orient='horizontal' isReversed>
+				<Item hasLine color={chartConstants.COLOR_GOOD}>
+					Revenue
+				</Item>
+				<Item hasLine color={chartConstants.COLOR_BAD}>
+					Loss
+				</Item>
+				<Item hasPoint color={chartConstants.COLOR_0}>
+					Partner 0
+				</Item>
+				<Item hasPoint color={chartConstants.COLOR_1}>
+					Partner 1
+				</Item>
+			</Legend>
+
+			<br />
+
+			<Legend {...args}>
+				<Item hasLine color={chartConstants.COLOR_GOOD}>
+					Revenue
+				</Item>
+				<Item hasLine color={chartConstants.COLOR_BAD}>
+					Loss
+				</Item>
+				<Item hasPoint color={chartConstants.COLOR_0}>
+					Partner 0
+				</Item>
+				<Item hasPoint color={chartConstants.COLOR_1}>
+					Partner 1
+				</Item>
+			</Legend>
+
+			<br />
+			<br />
+			<br />
+
+			<ToolTip
+				isExpanded={true}
+				direction='right'
+				alignment='end'
+				isLight={true}
+			>
+				<ToolTip.Target>Tooltip example</ToolTip.Target>
+
+				<ToolTip.Body>
+					<Legend {...args} hasBorders={false}>
 						<Item hasLine color={chartConstants.COLOR_GOOD}>
 							Revenue
 						</Item>
@@ -87,75 +149,9 @@ export const Default = () => {
 							Partner 1
 						</Item>
 					</Legend>
-
-					<br />
-
-					<Legend orient='horizontal' isReversed>
-						<Item hasLine color={chartConstants.COLOR_GOOD}>
-							Revenue
-						</Item>
-						<Item hasLine color={chartConstants.COLOR_BAD}>
-							Loss
-						</Item>
-						<Item hasPoint color={chartConstants.COLOR_0}>
-							Partner 0
-						</Item>
-						<Item hasPoint color={chartConstants.COLOR_1}>
-							Partner 1
-						</Item>
-					</Legend>
-
-					<br />
-
-					<Legend>
-						<Item hasLine color={chartConstants.COLOR_GOOD}>
-							Revenue
-						</Item>
-						<Item hasLine color={chartConstants.COLOR_BAD}>
-							Loss
-						</Item>
-						<Item hasPoint color={chartConstants.COLOR_0}>
-							Partner 0
-						</Item>
-						<Item hasPoint color={chartConstants.COLOR_1}>
-							Partner 1
-						</Item>
-					</Legend>
-
-					<br />
-					<br />
-					<br />
-
-					<ToolTip
-						isExpanded={true}
-						direction='right'
-						alignment='end'
-						isLight={true}
-					>
-						<ToolTip.Target>Tooltip example</ToolTip.Target>
-
-						<ToolTip.Body>
-							<Legend hasBorders={false}>
-								<Item hasLine color={chartConstants.COLOR_GOOD}>
-									Revenue
-								</Item>
-								<Item hasLine color={chartConstants.COLOR_BAD}>
-									Loss
-								</Item>
-								<Item hasPoint color={chartConstants.COLOR_0}>
-									Partner 0
-								</Item>
-								<Item hasPoint color={chartConstants.COLOR_1}>
-									Partner 1
-								</Item>
-							</Legend>
-						</ToolTip.Body>
-					</ToolTip>
-				</div>
-			);
-		},
-	});
-
-	return <Component />;
+				</ToolTip.Body>
+			</ToolTip>
+		</div>
+	);
 };
 Default.storyName = 'Default';

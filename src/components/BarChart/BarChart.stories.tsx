@@ -1,8 +1,10 @@
-import React from 'react';
-import createClass from 'create-react-class';
-import { BarChart, Legend, chartConstants, formatters } from './../../index';
 import _ from 'lodash';
+import React from 'react';
+import { Meta, Story } from '@storybook/react';
+
+import { BarChart, Legend, chartConstants, formatters } from './../../index';
 import Resizer from '../Resizer/Resizer';
+import { IBarChartProps } from './BarChart';
 
 export default {
 	title: 'Visualizations/BarChart',
@@ -10,14 +12,14 @@ export default {
 	parameters: {
 		docs: {
 			description: {
-				component: (BarChart as any).peek.description,
+				component: BarChart.peek.description,
 			},
 		},
 	},
-};
+} as Meta;
 
 /* Default */
-export const Default = () => {
+export const Default: Story<IBarChartProps> = (args) => {
 	const data = [
 		{ x: '2015-01-01', y: 1 },
 		{ x: '2015-01-02', y: 2 },
@@ -29,27 +31,22 @@ export const Default = () => {
 		paddingTop: '4rem',
 	};
 
-	const Component = createClass({
-		render() {
-			return (
-				<div style={style}>
-					<BarChart
-						width={750}
-						data={data}
-						yAxisTitle='Revenue'
-						margin={{ top: 20 } as any}
-					/>
-				</div>
-			);
-		},
-	});
-
-	return <Component />;
+	return (
+		<div style={style}>
+			<BarChart
+				{...args}
+				width={750}
+				data={data}
+				yAxisTitle='Revenue'
+				margin={{ top: 20 } as any}
+			/>
+		</div>
+	);
 };
 Default.storyName = 'Default';
 
 /* Basic Responsive */
-export const BasicResponsive = () => {
+export const BasicResponsive: Story<IBarChartProps> = (args) => {
 	const data = [
 		{ x: '2015-01-01', y: 1 },
 		{ x: '2015-01-02', y: 2 },
@@ -61,31 +58,26 @@ export const BasicResponsive = () => {
 		paddingTop: '4rem',
 	};
 
-	const Component = createClass({
-		render() {
-			return (
-				<div style={style}>
-					<Resizer>
-						{(width /*, height */) => (
-							<BarChart
-								width={width}
-								height={width * 0.3}
-								data={data}
-								yAxisTitle='Revenue'
-							/>
-						)}
-					</Resizer>
-				</div>
-			);
-		},
-	});
-
-	return <Component />;
+	return (
+		<div style={style}>
+			<Resizer>
+				{(width /*, height */) => (
+					<BarChart
+						{...args}
+						width={width}
+						height={width * 0.3}
+						data={data}
+						yAxisTitle='Revenue'
+					/>
+				)}
+			</Resizer>
+		</div>
+	);
 };
 BasicResponsive.storyName = 'BasicResponsive';
 
 /* Grouped */
-export const Grouped = () => {
+export const Grouped: Story<IBarChartProps> = (args) => {
 	/* eslint-disable comma-spacing */
 
 	const data = [
@@ -119,29 +111,24 @@ export const Grouped = () => {
 		paddingTop: '10rem',
 	};
 
-	const Component = createClass({
-		render() {
-			return (
-				<div style={style}>
-					<BarChart
-						width={750}
-						data={data}
-						yAxisFields={['apples', 'pears', 'peaches', 'bananas', 'oranges']}
-						yAxisMin={0}
-						yAxisTitle='Fruit Count'
-						palette={chartConstants.PALETTE_30}
-					/>
-				</div>
-			);
-		},
-	});
-
-	return <Component />;
+	return (
+		<div style={style}>
+			<BarChart
+				{...args}
+				width={750}
+				data={data}
+				yAxisFields={['apples', 'pears', 'peaches', 'bananas', 'oranges']}
+				yAxisMin={0}
+				yAxisTitle='Fruit Count'
+				palette={chartConstants.PALETTE_30}
+			/>
+		</div>
+	);
 };
 Grouped.storyName = 'Grouped';
 
 /* Grouped With Legend */
-export const GroupedWithLegend = () => {
+export const GroupedWithLegend: Story<IBarChartProps> = (args) => {
 	/* eslint-disable comma-spacing */
 
 	const data = [
@@ -177,41 +164,32 @@ export const GroupedWithLegend = () => {
 		paddingTop: '10rem',
 	};
 
-	const Component = createClass({
-		render() {
-			return (
-				<div style={style}>
-					<BarChart
-						width={750}
-						data={data}
-						yAxisFields={yAxisFields}
-						yAxisMin={0}
-						yAxisTitle='Fruit Count'
-						palette={palette}
-					/>
+	return (
+		<div style={style}>
+			<BarChart
+				{...args}
+				width={750}
+				data={data}
+				yAxisFields={yAxisFields}
+				yAxisMin={0}
+				yAxisTitle='Fruit Count'
+				palette={palette}
+			/>
 
-					<Legend style={{ verticalAlign: 'top' }}>
-						{_.map(yAxisFields, (field, i) => (
-							<Legend.Item
-								key={field}
-								hasPoint
-								color={palette[i % palette.length]}
-							>
-								{field}
-							</Legend.Item>
-						))}
-					</Legend>
-				</div>
-			);
-		},
-	});
-
-	return <Component />;
+			<Legend style={{ verticalAlign: 'top' }}>
+				{_.map(yAxisFields, (field, i) => (
+					<Legend.Item key={field} hasPoint color={palette[i % palette.length]}>
+						{field}
+					</Legend.Item>
+				))}
+			</Legend>
+		</div>
+	);
 };
 GroupedWithLegend.storyName = 'GroupedWithLegend';
 
 /* Limited Ticks */
-export const LimitedTicks = () => {
+export const LimitedTicks: Story<IBarChartProps> = (args) => {
 	const data = [
 		{ x: '2015-01-01', y: 1 },
 		{ x: '2015-01-02', y: 2 },
@@ -236,28 +214,23 @@ export const LimitedTicks = () => {
 		paddingTop: '4rem',
 	};
 
-	const Component = createClass({
-		render() {
-			return (
-				<div style={style}>
-					<BarChart
-						width={750}
-						data={data}
-						yAxisMin={0}
-						xAxisTickCount={5}
-						yAxisTickCount={4}
-					/>
-				</div>
-			);
-		},
-	});
-
-	return <Component />;
+	return (
+		<div style={style}>
+			<BarChart
+				{...args}
+				width={750}
+				data={data}
+				yAxisMin={0}
+				xAxisTickCount={5}
+				yAxisTickCount={4}
+			/>
+		</div>
+	);
 };
 LimitedTicks.storyName = 'LimitedTicks';
 
 /* All The Things */
-export const AllTheThings = () => {
+export const AllTheThings: Story<IBarChartProps> = (args) => {
 	/* eslint-disable comma-spacing */
 
 	const data = [
@@ -272,38 +245,32 @@ export const AllTheThings = () => {
 	const style = {
 		paddingTop: '6rem',
 	};
-
-	const Component = createClass({
-		render() {
-			return (
-				<div style={style}>
-					<BarChart
-						width={750}
-						data={data}
-						colorMap={{
-							apples: chartConstants.COLOR_GOOD,
-							oranges: chartConstants.COLOR_1,
-						}}
-						xAxisField='day'
-						xAxisFormatter={xFormatter}
-						xAxisTickCount={5}
-						xAxisTitle='Weekdays'
-						yAxisFields={['apples', 'oranges']}
-						yAxisFormatter={yFormatter}
-						yAxisTitle='Fruit Count'
-						yAxisTickCount={4}
-					/>
-				</div>
-			);
-		},
-	});
-
-	return <Component />;
+	return (
+		<div style={style}>
+			<BarChart
+				{...args}
+				width={750}
+				data={data}
+				colorMap={{
+					apples: chartConstants.COLOR_GOOD,
+					oranges: chartConstants.COLOR_1,
+				}}
+				xAxisField='day'
+				xAxisFormatter={xFormatter}
+				xAxisTickCount={5}
+				xAxisTitle='Weekdays'
+				yAxisFields={['apples', 'oranges']}
+				yAxisFormatter={yFormatter}
+				yAxisTitle='Fruit Count'
+				yAxisTickCount={4}
+			/>
+		</div>
+	);
 };
 AllTheThings.storyName = 'AllTheThings';
 
 /* Stacked */
-export const Stacked = () => {
+export const Stacked: Story<IBarChartProps> = (args) => {
 	const data = [
 		{ x: 'Monday', apples: 10, pears: 20, peaches: 35 },
 		{ x: 'Tuesday', apples: 20, pears: 5, peaches: 20 },
@@ -314,29 +281,24 @@ export const Stacked = () => {
 		paddingTop: '7rem',
 	};
 
-	const Component = createClass({
-		render() {
-			return (
-				<div style={style}>
-					<BarChart
-						width={750}
-						data={data}
-						yAxisFields={['apples', 'pears', 'peaches']}
-						yAxisMin={0}
-						yAxisIsStacked={true}
-						yAxisTitle='Fruit Count'
-					/>
-				</div>
-			);
-		},
-	});
-
-	return <Component />;
+	return (
+		<div style={style}>
+			<BarChart
+				{...args}
+				width={750}
+				data={data}
+				yAxisFields={['apples', 'pears', 'peaches']}
+				yAxisMin={0}
+				yAxisIsStacked={true}
+				yAxisTitle='Fruit Count'
+			/>
+		</div>
+	);
 };
 Stacked.storyName = 'Stacked';
 
 /* Unformatted Tooltips */
-export const UnformattedTooltips = () => {
+export const UnformattedTooltips: Story<IBarChartProps> = (args) => {
 	const data = [
 		{ x: '2015-01-01', y: 1200 },
 		{ x: '2015-01-02', y: 900 },
@@ -348,27 +310,22 @@ export const UnformattedTooltips = () => {
 		paddingTop: '4rem',
 	};
 
-	const Component = createClass({
-		render() {
-			return (
-				<div style={style}>
-					<BarChart
-						width={750}
-						data={data}
-						yAxisTitle='Revenue'
-						yAxisTooltipFormatter={(yField, yValueFormatted, yValue) => yValue}
-					/>
-				</div>
-			);
-		},
-	});
-
-	return <Component />;
+	return (
+		<div style={style}>
+			<BarChart
+				{...args}
+				width={750}
+				data={data}
+				yAxisTitle='Revenue'
+				yAxisTooltipFormatter={(yField, yValueFormatted, yValue) => yValue}
+			/>
+		</div>
+	);
 };
 UnformattedTooltips.storyName = 'UnformattedTooltips';
 
 /* Formatted Tooltip Values */
-export const FormattedTooltipValues = () => {
+export const FormattedTooltipValues: Story<IBarChartProps> = (args) => {
 	const data = [
 		{ x: '2015-01-01', y: 1200 },
 		{ x: '2015-01-02', y: 900 },
@@ -380,29 +337,22 @@ export const FormattedTooltipValues = () => {
 		paddingTop: '4rem',
 	};
 
-	const Component = createClass({
-		render() {
-			return (
-				<div style={style}>
-					<BarChart
-						width={750}
-						data={data}
-						yAxisTitle='Revenue'
-						yAxisTooltipDataFormatter={
-							formatters.formatAbbreviatedNumber as any
-						}
-					/>
-				</div>
-			);
-		},
-	});
-
-	return <Component />;
+	return (
+		<div style={style}>
+			<BarChart
+				{...args}
+				width={750}
+				data={data}
+				yAxisTitle='Revenue'
+				yAxisTooltipDataFormatter={formatters.formatAbbreviatedNumber as any}
+			/>
+		</div>
+	);
 };
 FormattedTooltipValues.storyName = 'FormattedTooltipValues';
 
 /* Formatted Tooltips */
-export const FormattedTooltips = () => {
+export const FormattedTooltips: Story<IBarChartProps> = (args) => {
 	const data = [
 		{ x: '2015-01-01', y: 1200 },
 		{ x: '2015-01-02', y: 900 },
@@ -414,78 +364,61 @@ export const FormattedTooltips = () => {
 		paddingTop: '4rem',
 	};
 
-	const Component = createClass({
-		render() {
-			return (
-				<div style={style}>
-					<BarChart
-						width={750}
-						data={data}
-						yAxisTitle='Revenue'
-						renderTooltipBody={(dataPoint: any) =>
-							`x value = ${dataPoint.x} and y value = ${dataPoint.y}`
-						}
-					/>
-				</div>
-			);
-		},
-	});
-
-	return <Component />;
+	return (
+		<div style={style}>
+			<BarChart
+				{...args}
+				width={750}
+				data={data}
+				yAxisTitle='Revenue'
+				renderTooltipBody={(dataPoint: any) =>
+					`x value = ${dataPoint.x} and y value = ${dataPoint.y}`
+				}
+			/>
+		</div>
+	);
 };
 FormattedTooltips.storyName = 'FormattedTooltips';
 
 /* Empty */
-export const Empty = () => {
-	const Component = createClass({
-		render() {
-			return <BarChart width={750} data={[]} yAxisTitle='Revenue' />;
-		},
-	});
-
-	return <Component />;
+export const Empty: Story<IBarChartProps> = (args) => {
+	return <BarChart {...args} width={750} data={[]} yAxisTitle='Revenue' />;
 };
 Empty.storyName = 'Empty';
 
 /* Empty With Custom Title And Body */
-export const EmptyWithCustomTitleAndBody = () => {
+export const EmptyWithCustomTitleAndBody: Story<IBarChartProps> = (args) => {
 	const {
 		EmptyStateWrapper,
 		EmptyStateWrapper: { Title, Body },
 	} = BarChart;
 
-	const Component = createClass({
-		render() {
-			return (
-				<BarChart width={750} data={[]} yAxisTitle='Revenue'>
-					<EmptyStateWrapper>
-						<Title>Something went wrong.</Title>
-						<Body
-							style={{
-								fontSize: '12px',
-							}}
-						>
-							Echo park poutine esse tempor squid do. Lo-fi ramps XOXO
-							chicharrones laboris, portland fugiat locavore. Fap four dollar
-							toast keytar, cronut kogi fingerstache distillery microdosing
-							everyday carry austin DIY dreamcatcher. Distillery flexitarian
-							meditation laboris roof party. Cred raclette gastropub tilde
-							PBR&B. Shoreditch poke adipisicing, reprehenderit lumbersexual
-							succulents mustache officia franzen vinyl nostrud af. Hashtag
-							bitters organic, before they sold out butcher cronut sapiente.
-						</Body>
-					</EmptyStateWrapper>
-				</BarChart>
-			);
-		},
-	});
-
-	return <Component />;
+	return (
+		<BarChart {...args} width={750} data={[]} yAxisTitle='Revenue'>
+			<EmptyStateWrapper {...EmptyStateWrapper.defaultProps}>
+				<Title>Something went wrong.</Title>
+				<Body
+					style={{
+						fontSize: '12px',
+					}}
+				>
+					Echo park poutine esse tempor squid do. Lo-fi ramps XOXO chicharrones
+					laboris, portland fugiat locavore. Fap four dollar toast keytar,
+					cronut kogi fingerstache distillery microdosing everyday carry austin
+					DIY dreamcatcher. Distillery flexitarian meditation laboris roof
+					party. Cred raclette gastropub tilde PBR&B. Shoreditch poke
+					adipisicing, reprehenderit lumbersexual succulents mustache officia
+					franzen vinyl nostrud af. Hashtag bitters organic, before they sold
+					out butcher cronut sapiente.
+				</Body>
+			</EmptyStateWrapper>
+		</BarChart>
+	);
 };
 EmptyWithCustomTitleAndBody.storyName = 'EmptyWithCustomTitleAndBody';
 
 /* Many Bars */
-export const ManyBars = () => {
+export const ManyBars: Story<IBarChartProps> = (args) => {
 	const data = _.map(_.range(0, 70), (n) => ({
 		x: (new Date(0) as any) + n * 60 * 60 * 24,
 		y: n,
@@ -495,24 +428,19 @@ export const ManyBars = () => {
 		paddingTop: '5rem',
 	};
 
-	const Component = createClass({
-		render() {
-			return (
-				<div style={style}>
-					<BarChart
-						data={data}
-						xAxisTextOrientation='diagonal'
-						yAxisTextOrientation='horizontal'
-						xAxisTickCount={20}
-						height={600}
-						width={750}
-						margin={{ bottom: 300, left: 300 } as any}
-					/>
-				</div>
-			);
-		},
-	});
-
-	return <Component />;
+	return (
+		<div style={style}>
+			<BarChart
+				{...args}
+				data={data}
+				xAxisTextOrientation='diagonal'
+				yAxisTextOrientation='horizontal'
+				xAxisTickCount={20}
+				height={600}
+				width={750}
+				margin={{ bottom: 300, left: 300 } as any}
+			/>
+		</div>
+	);
 };
 ManyBars.storyName = 'ManyBars';

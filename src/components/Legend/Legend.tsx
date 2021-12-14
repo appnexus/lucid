@@ -1,11 +1,11 @@
 import _ from 'lodash';
 import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes, { any } from 'prop-types';
+
 import { lucidClassNames } from '../../util/style-helpers';
 import { findTypes, StandardProps } from '../../util/component-types';
 import Point from '../Point/Point';
 import Line from '../Line/Line';
-import { any } from 'prop-types';
 
 const cx = lucidClassNames.bind('&-Legend');
 
@@ -97,7 +97,7 @@ export const Legend = (props: ILegendProps): React.ReactElement => {
 
 	return (
 		<ul
-			{...passThroughs}
+			{...(passThroughs as any)}
 			className={cx(
 				'&',
 				{

@@ -54,7 +54,7 @@ export const AxisLabel = (props: IAxisLabelProps): React.ReactElement => {
 
 	return (
 		<text
-			{...passThroughs}
+			{...(passThroughs as any)}
 			style={{
 				...colorStyle,
 				...style,

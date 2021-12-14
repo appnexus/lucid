@@ -3,12 +3,12 @@
 exports[`AxisLabel [common] example testing should match snapshot(s) for Default 1`] = `
 <svg
   height="400"
-  width="1000"
+  width="800"
 >
   <rect
     height="398"
     style="stroke-width:1;stroke-dasharray:2,2;fill:none;stroke:black"
-    width="998"
+    width="798"
     x="1"
     y="1"
   />
@@ -18,7 +18,7 @@ exports[`AxisLabel [common] example testing should match snapshot(s) for Default
     <rect
       height="300"
       style="fill:lightgrey"
-      width="900"
+      width="700"
     />
   </g>
   <g
@@ -36,7 +36,7 @@ exports[`AxisLabel [common] example testing should match snapshot(s) for Default
     </text>
   </g>
   <g
-    transform="translate(950, 0)"
+    transform="translate(750, 0)"
   >
     <text
       class="lucid-AxisLabel lucid-AxisLabel-color-chart-0"
@@ -55,7 +55,7 @@ exports[`AxisLabel [common] example testing should match snapshot(s) for Default
       class="lucid-AxisLabel lucid-AxisLabel-color-chart-1"
       dy="-.32em"
       transform=""
-      x="500"
+      x="400"
       y="50"
     >
       Bottom
@@ -68,7 +68,7 @@ exports[`AxisLabel [common] example testing should match snapshot(s) for Default
       class="lucid-AxisLabel lucid-AxisLabel-color-chart-2"
       dy="1em"
       transform=""
-      x="500"
+      x="400"
       y="0"
     >
       Top

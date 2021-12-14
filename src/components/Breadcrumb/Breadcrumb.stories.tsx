@@ -1,5 +1,8 @@
 import React from 'react';
+import { Meta, Story } from '@storybook/react';
+
 import { Breadcrumb, NotchedTag } from './../../index';
+import { IBreadcrumbProps } from './Breadcrumb';
 
 export default {
 	title: 'Navigation/Breadcrumb',
@@ -7,18 +10,18 @@ export default {
 	parameters: {
 		docs: {
 			description: {
-				component: (Breadcrumb as any).peek.description,
+				component: Breadcrumb.peek.description,
 			},
 		},
 	},
-};
+} as Meta;
 
 /* Default */
-export const Default = () => {
+export const Default: Story<IBreadcrumbProps> = (args) => {
 	const { Item } = Breadcrumb;
 
 	return (
-		<Breadcrumb>
+		<Breadcrumb {...args}>
 			<Item key='home'>
 				<a href='#'>Start</a>
 			</Item>
@@ -34,11 +37,11 @@ export const Default = () => {
 Default.storyName = 'Default';
 
 /* Rich */
-export const Rich = () => {
+export const Rich: Story<IBreadcrumbProps> = (args) => {
 	const { Item } = Breadcrumb;
 
 	return (
-		<Breadcrumb>
+		<Breadcrumb {...args}>
 			<Item key='home'>
 				<a href='#'>
 					<NotchedTag type='stroke' size='small' tagStyle='style-two'>
