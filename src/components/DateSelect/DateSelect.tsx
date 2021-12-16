@@ -43,6 +43,16 @@ export interface IDateSelectProps extends StandardProps {
 			got some issues that still need to be ironed out but it works. */
 	calendarsRendered: number;
 
+	/**
+	 * Display the year’s week number next to each week
+	 */
+	showWeekNumbers?: boolean;
+
+	/**
+	 * The day to use as first day of the week, starting from 0 (Sunday) to 6 (Saturday)
+	 */
+	firstDayOfWeek?: number;
+
 	/** The offset of the leftmost month in view, where 0 is the
 			\`initialMonth\`.  Negative values will show previous months. */
 	offset: number;
@@ -359,6 +369,8 @@ class DateSelect extends React.Component<IDateSelectProps, IDateSelectState> {
 			showCursorHighlight,
 			onDayMouseEnter,
 			onDayMouseLeave,
+			showWeekNumbers,
+			firstDayOfWeek,
 			...rest
 		}: ICalendarProps
 	) => {
@@ -377,6 +389,8 @@ class DateSelect extends React.Component<IDateSelectProps, IDateSelectState> {
 				onDayClick={onDayClick}
 				onDayMouseEnter={showCursorHighlight ? onDayMouseEnter : _.noop}
 				onDayMouseLeave={showCursorHighlight ? onDayMouseLeave : _.noop}
+				showWeekNumbers={showWeekNumbers}
+				firstDayOfWeek={firstDayOfWeek}
 				{...(rest as Partial<ICalendarProps>)}
 			/>
 		);
