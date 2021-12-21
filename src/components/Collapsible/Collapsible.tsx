@@ -4,7 +4,8 @@ import PropTypes from 'prop-types';
 import { Motion, spring } from 'react-motion';
 import { QUICK_SLIDE_MOTION } from '../../constants/motion-spring';
 import { lucidClassNames } from '../../util/style-helpers';
-import { omitProps, StandardProps } from '../../util/component-types';
+import { StandardProps } from '../../util/component-types';
+import InheritedSettingsIconStories from '../Icon/InheritedSettingsIcon/InheritedSettingsIcon.stories';
 
 const cx = lucidClassNames.bind('&-Collapsible');
 
@@ -13,9 +14,7 @@ const { any, bool, node, number, string, func } = PropTypes;
 // TODO: Is there a better way to add type checks for passThroughs in this case
 // where the underling element could be anything vs just extending
 // `React.HTMLProps<HTMLElement>`? Related to issue #1045
-export interface ICollapsibleProps
-	extends StandardProps,
-		React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> {
+export interface ICollapsibleProps extends StandardProps {
 	/** Indicates that the component is in the "expanded" state when true and in
 	 * the "unexpanded" state when false. */
 	isExpanded: boolean;
@@ -36,6 +35,18 @@ export interface ICollapsibleProps
 	/** Pass in a callback to be called after ExpanderPanel has came to a rest. */
 	onRest?: () => void;
 }
+
+/** TODO: Remove this constant when the component is converted to a functional component */
+const nonPassthroughs = [
+	'children',
+	'className',
+	'isExpanded',
+	'isAnimated',
+	'isMountControlled',
+	'mountControlThreshold',
+	'onRest',
+	'rootType',
+];
 
 export interface ICollapsibleState {
 	maxHeight: number;
@@ -163,6 +174,7 @@ class Collapsible extends React.Component<
 			mountControlThreshold,
 			rootType,
 			onRest,
+			style,
 			...passThroughs
 		} = this.props;
 
@@ -185,11 +197,7 @@ class Collapsible extends React.Component<
 					React.createElement(
 						rootType,
 						{
-							...omitProps(
-								passThroughs,
-								undefined,
-								_.keys(Collapsible.propTypes)
-							),
+							..._.omit(passThroughs, nonPassthroughs),
 							ref: this.rootRef,
 							className: cx('&', className),
 							style: {
@@ -201,7 +209,7 @@ class Collapsible extends React.Component<
 										: null,
 								overflow: 'hidden',
 								padding: 0,
-								...passThroughs.style,
+								...style,
 							},
 						},
 						[

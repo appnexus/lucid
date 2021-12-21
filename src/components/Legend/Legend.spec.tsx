@@ -15,7 +15,11 @@ describe('Legend', () => {
 		it('should render a legend', () => {
 			const wrapper = shallow(<Legend />);
 
-			assert.equal(wrapper.find('.lucid-Legend').length, 1, 'missing legend');
+			assert.strictEqual(
+				wrapper.find('.lucid-Legend').length,
+				1,
+				'missing legend'
+			);
 		});
 	});
 
@@ -24,7 +28,7 @@ describe('Legend', () => {
 			it('should add the correct class for horizontal', () => {
 				const wrapper = shallow(<Legend orient='horizontal' />);
 
-				assert.equal(
+				assert.strictEqual(
 					wrapper.find('.lucid-Legend-is-horizontal').length,
 					1,
 					'missing class'
@@ -34,7 +38,7 @@ describe('Legend', () => {
 			it('should add the correct class for vertical', () => {
 				const wrapper = shallow(<Legend orient='vertical' />);
 
-				assert.equal(
+				assert.strictEqual(
 					wrapper.find('.lucid-Legend-is-vertical').length,
 					1,
 					'missing class'
@@ -52,7 +56,7 @@ describe('Legend', () => {
 					</Legend>
 				);
 
-				assert.equal(wrapper.find('svg').length, 0);
+				assert.strictEqual(wrapper.find('svg').length, 0);
 			});
 
 			it('should set the correct width when vertical and there are some lines', () => {
@@ -63,17 +67,17 @@ describe('Legend', () => {
 					</Legend>
 				);
 
-				assert.equal(
+				assert.strictEqual(
 					wrapper.find('.lucid-Legend-Item-indicator').at(0).prop('width'),
 					22
 				);
-				assert.equal(
+				assert.strictEqual(
 					wrapper.find('.lucid-Legend-Item-indicator').at(1).prop('width'),
 					22
 				);
 
-				assert.equal(wrapper.find(Point).prop('x'), 11);
-				assert.equal(wrapper.find(Line).prop('d'), 'M0,6 L22,6');
+				assert.strictEqual(wrapper.find(Point).prop('x'), 11);
+				assert.strictEqual(wrapper.find(Line).prop('d'), 'M0,6 L22,6');
 			});
 
 			it('should set the correct width when there are only points', () => {
@@ -84,11 +88,11 @@ describe('Legend', () => {
 					</Legend>
 				);
 
-				assert.equal(
+				assert.strictEqual(
 					wrapper.find('.lucid-Legend-Item-indicator').at(0).prop('width'),
 					12
 				);
-				assert.equal(
+				assert.strictEqual(
 					wrapper.find('.lucid-Legend-Item-indicator').at(1).prop('width'),
 					12
 				);
@@ -102,12 +106,12 @@ describe('Legend', () => {
 					</Legend>
 				);
 
-				assert.equal(
+				assert.strictEqual(
 					wrapper.find('.lucid-Legend-Item').at(0).text(),
 					'Foo',
 					'wrong text content found'
 				);
-				assert.equal(
+				assert.strictEqual(
 					wrapper.find('.lucid-Legend-Item').at(1).text(),
 					'Bar',
 					'wrong text content found'
@@ -121,7 +125,7 @@ describe('Legend', () => {
 					</Legend>
 				);
 
-				assert.equal(wrapper.find(Line).length, 1, 'did not find a Line');
+				assert.strictEqual(wrapper.find(Line).length, 1, 'did not find a Line');
 			});
 
 			it('should handle the `hasPoint` prop', () => {
@@ -131,7 +135,11 @@ describe('Legend', () => {
 					</Legend>
 				);
 
-				assert.equal(wrapper.find(Point).length, 1, 'did not find a Point');
+				assert.strictEqual(
+					wrapper.find(Point).length,
+					1,
+					'did not find a Point'
+				);
 			});
 
 			it('should handle the `color` prop by passing through to Line and Point', () => {
@@ -141,12 +149,12 @@ describe('Legend', () => {
 					</Legend>
 				);
 
-				assert.equal(
+				assert.strictEqual(
 					wrapper.find(Line).prop('color'),
 					'fooest thou bar',
 					'wrong or missing `color` prop on Line'
 				);
-				assert.equal(
+				assert.strictEqual(
 					wrapper.find(Point).prop('color'),
 					'fooest thou bar',
 					'wrong or missing `color` prop on Point'
@@ -160,7 +168,7 @@ describe('Legend', () => {
 					</Legend>
 				);
 
-				assert.equal(
+				assert.strictEqual(
 					wrapper.find(Point).prop('kind'),
 					5,
 					'wrong or missing `kind` prop on Point'

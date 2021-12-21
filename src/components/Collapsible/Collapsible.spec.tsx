@@ -19,18 +19,18 @@ describe('Collapsible', () => {
 
 			const motionWrapper = wrapper.find(Motion).shallow();
 
-			assert.equal(
+			assert.strictEqual(
 				motionWrapper.find('.lucid-Collapsible').length,
 				1,
 				'must render root element'
 			);
-			assert.equal(
+			assert.strictEqual(
 				motionWrapper.find('.lucid-Collapsible > .lucid-Collapsible-content')
 					.length,
 				1,
 				'must render a content element'
 			);
-			assert.equal(
+			assert.strictEqual(
 				motionWrapper
 					.find('.lucid-Collapsible > .lucid-Collapsible-content')
 					.children().length,
@@ -68,7 +68,7 @@ describe('Collapsible', () => {
 			*/
 
 			it('should default to true', () => {
-				assert.equal(true, _.get(Collapsible.defaultProps, 'isExpanded'));
+				assert.strictEqual(true, _.get(Collapsible.defaultProps, 'isExpanded'));
 			});
 
 			/*
@@ -92,7 +92,7 @@ describe('Collapsible', () => {
 
 					_.delay(() => {
 						const currentHeight = testDomElement.getBoundingClientRect().height;
-						assert.equal(0, currentHeight);
+						assert.strictEqual(0, currentHeight);
 
 						wrapper.setProps({
 							...wrapper.props(),
@@ -101,7 +101,7 @@ describe('Collapsible', () => {
 
 						_.delay(() => {
 							const currentHeight = testDomElement.getBoundingClientRect().height;
-							assert.equal(currentHeight, startingHeight);
+							assert.strictEqual(currentHeight, startingHeight);
 							done();
 						}, MOSTLY_STABLE_DELAY);
 
@@ -143,7 +143,7 @@ describe('Collapsible', () => {
 			*/
 
 			it('should default to true', () => {
-				assert.equal(true, _.get(Collapsible.defaultProps, 'isAnimated'));
+				assert.strictEqual(true, _.get(Collapsible.defaultProps, 'isAnimated'));
 			});
 
 			/*
@@ -154,9 +154,9 @@ describe('Collapsible', () => {
 					</Collapsible>
 				, { attachTo: testDomElement });
 
-				assert.equal(false, wrapper.instance().isAnimated, 'must always be false initially');
+				assert.strictEqual(false, wrapper.instance().isAnimated, 'must always be false initially');
 				_.delay(() => {
-					assert.equal(true, wrapper.instance().isAnimated, 'must be true to match prop value');
+					assert.strictEqual(true, wrapper.instance().isAnimated, 'must be true to match prop value');
 					done();
 				}, MOSTLY_STABLE_DELAY);
 			});
@@ -168,9 +168,9 @@ describe('Collapsible', () => {
 					</Collapsible>
 				, { attachTo: testDomElement });
 
-				assert.equal(false, wrapper.instance().isAnimated, 'must always be false initially');
+				assert.strictEqual(false, wrapper.instance().isAnimated, 'must always be false initially');
 				_.delay(() => {
-					assert.equal(false, wrapper.instance().isAnimated, 'must be false to match prop value');
+					assert.strictEqual(false, wrapper.instance().isAnimated, 'must be false to match prop value');
 					done();
 				}, MOSTLY_STABLE_DELAY);
 			});
@@ -198,7 +198,7 @@ describe('Collapsible', () => {
 			*/
 
 			it('should default to true', () => {
-				assert.equal(
+				assert.strictEqual(
 					true,
 					_.get(Collapsible.defaultProps, 'isMountControlled')
 				);
@@ -213,7 +213,7 @@ describe('Collapsible', () => {
 				, { attachTo: testDomElement });
 
 				_.delay(() => {
-					assert.equal(0, wrapper.find('.test-mounted-content').length, 'must not render content when collapsed');
+					assert.strictEqual(0, wrapper.find('.test-mounted-content').length, 'must not render content when collapsed');
 					done();
 				}, MOSTLY_STABLE_DELAY);
 			});
@@ -226,7 +226,7 @@ describe('Collapsible', () => {
 				, { attachTo: testDomElement });
 
 				_.delay(() => {
-					assert.equal(1, wrapper.find('.test-mounted-content').length, 'must render content when expanded');
+					assert.strictEqual(1, wrapper.find('.test-mounted-content').length, 'must render content when expanded');
 					done();
 				}, MOSTLY_STABLE_DELAY);
 			});
@@ -239,7 +239,7 @@ describe('Collapsible', () => {
 				, { attachTo: testDomElement });
 
 				_.delay(() => {
-					assert.equal(1, wrapper.find('.test-mounted-content').length, 'must render hidden content when collapsed');
+					assert.strictEqual(1, wrapper.find('.test-mounted-content').length, 'must render hidden content when collapsed');
 					done();
 				}, MOSTLY_STABLE_DELAY);
 			});
@@ -252,7 +252,7 @@ describe('Collapsible', () => {
 				, { attachTo: testDomElement });
 
 				_.delay(() => {
-					assert.equal(1, wrapper.find('.test-mounted-content').length, 'must render content when expanded');
+					assert.strictEqual(1, wrapper.find('.test-mounted-content').length, 'must render content when expanded');
 					done();
 				}, MOSTLY_STABLE_DELAY);
 			});
@@ -261,7 +261,7 @@ describe('Collapsible', () => {
 
 		describe('rootType', () => {
 			it('should default to `div`', () => {
-				assert.equal('div', _.get(Collapsible.defaultProps, 'rootType'));
+				assert.strictEqual('div', _.get(Collapsible.defaultProps, 'rootType'));
 			});
 
 			it('should render a root container of the passed in type', () => {
@@ -269,7 +269,7 @@ describe('Collapsible', () => {
 
 				const motionWrapper = wrapper.find(Motion).shallow();
 
-				assert.equal(
+				assert.strictEqual(
 					motionWrapper.find('section.lucid-Collapsible').length,
 					1,
 					'must render root element of the specified type'

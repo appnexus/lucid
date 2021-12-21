@@ -75,7 +75,7 @@ describe('BarChart', () => {
 					.find(EmptyStateWrapper)
 					.find('.lucid-EmptyStateWrapper-message-title');
 
-				assert.equal(
+				assert.strictEqual(
 					messageTitleWrapper.text(),
 					titleText,
 					'must contain the title text'
@@ -122,12 +122,12 @@ describe('BarChart', () => {
 				/>
 			);
 
-			assert.equal(
+			assert.strictEqual(
 				wrapper.find('.lucid-Bar').length,
 				5,
 				'did not find the correct number of bars'
 			);
-			assert.equal(
+			assert.strictEqual(
 				wrapper.find('.lucid-Axis').length,
 				2,
 				'did not find the correct number of axes'
@@ -148,7 +148,7 @@ describe('BarChart', () => {
 				/>
 			);
 
-			assert.equal(
+			assert.strictEqual(
 				wrapper.find('.lucid-Bar').length,
 				10,
 				'did not find the correct number of bars'

@@ -18,7 +18,7 @@ describe('Autocomplete', () => {
 				disableLifecycleMethods: true,
 			});
 
-			assert.equal(wrapper.find('DropMenu').length, 1);
+			assert.strictEqual(wrapper.find('DropMenu').length, 1);
 		});
 	});
 
@@ -31,7 +31,7 @@ describe('Autocomplete', () => {
 
 				const dropMenuWrapper = wrapper.find('DropMenu');
 
-				assert.equal(dropMenuWrapper.prop('isDisabled'), true);
+				assert.strictEqual(dropMenuWrapper.prop('isDisabled'), true);
 			});
 
 			it('should apply the appropriate classNames to the control', () => {
@@ -61,11 +61,11 @@ describe('Autocomplete', () => {
 					'props'
 				);
 
-				assert.equal('Portland', options[0].children);
-				assert.equal('portal', options[1].children);
-				assert.equal('porridge', options[2].children);
-				assert.equal('potent', options[3].children);
-				assert.equal('please', options[4].children);
+				assert.strictEqual('Portland', options[0].children);
+				assert.strictEqual('portal', options[1].children);
+				assert.strictEqual('porridge', options[2].children);
+				assert.strictEqual('potent', options[3].children);
+				assert.strictEqual('please', options[4].children);
 			});
 		});
 
@@ -95,7 +95,7 @@ describe('Autocomplete', () => {
 					'.lucid-Autocomplete-Control-input'
 				);
 
-				assert.equal(
+				assert.strictEqual(
 					inputDOMNode.value,
 					'Portland',
 					'input value must match prop value'
@@ -115,7 +115,7 @@ describe('Autocomplete', () => {
 					'.lucid-Autocomplete-Control-input'
 				);
 
-				assert.equal(
+				assert.strictEqual(
 					inputDOMNode.value,
 					'Boston',
 					'input value must match bew prop value'
@@ -199,9 +199,9 @@ describe('Autocomplete', () => {
 
 					assert(onChange.called);
 					const [textValue, { props, event }] = onChange.lastCall.args;
-					assert.equal(textValue, 'porridge');
+					assert.strictEqual(textValue, 'porridge');
 					assert(props);
-					assert.equal(props.testProp, 'foo');
+					assert.strictEqual(props.testProp, 'foo');
 					assert(event);
 					expect(console.error).toHaveBeenCalledTimes(1);
 				});
@@ -228,9 +228,9 @@ describe('Autocomplete', () => {
 
 					assert(onChange.called, 'onChange must be called');
 					const [textValue, { props, event }] = onChange.lastCall.args;
-					assert.equal(textValue, 'aaa', 'value must match input');
+					assert.strictEqual(textValue, 'aaa', 'value must match input');
 					assert(props, 'props must be passed');
-					assert.equal(
+					assert.strictEqual(
 						props.testProp,
 						'foo',
 						'aditional props must be included'
@@ -270,9 +270,13 @@ describe('Autocomplete', () => {
 
 				assert(onSelect.called, 'onSelect must be called');
 				const [optionIndex, { props, event }] = onSelect.lastCall.args;
-				assert.equal(optionIndex, 2, 'optionIndex must be accurate');
+				assert.strictEqual(optionIndex, 2, 'optionIndex must be accurate');
 				assert(props, 'props must be passed');
-				assert.equal(props.testProp, 'foo', 'aditional props must be included');
+				assert.strictEqual(
+					props.testProp,
+					'foo',
+					'aditional props must be included'
+				);
 				assert(event, 'event must be passed');
 			});
 		});
@@ -319,7 +323,11 @@ describe('Autocomplete', () => {
 				assert(onExpand.called, 'onExpand must be called');
 				const [{ props, event }] = onExpand.lastCall.args;
 				assert(props, 'props must be passed');
-				assert.equal(props.testProp, 'foo', 'aditional props must be included');
+				assert.strictEqual(
+					props.testProp,
+					'foo',
+					'aditional props must be included'
+				);
 				assert(event, 'event must be passed');
 			});
 
@@ -346,7 +354,11 @@ describe('Autocomplete', () => {
 				assert(onExpand.called, 'onExpand must be called');
 				const [{ props, event }] = onExpand.lastCall.args;
 				assert(props, 'props must be passed');
-				assert.equal(props.testProp, 'foo', 'aditional props must be included');
+				assert.strictEqual(
+					props.testProp,
+					'foo',
+					'aditional props must be included'
+				);
 				assert(event, 'event must be passed');
 			});
 
@@ -367,7 +379,11 @@ describe('Autocomplete', () => {
 				assert(onExpand.called, 'onExpand must be called');
 				const [{ props, event }] = onExpand.lastCall.args;
 				assert(props, 'props must be passed');
-				assert.equal(props.testProp, 'foo', 'aditional props must be included');
+				assert.strictEqual(
+					props.testProp,
+					'foo',
+					'aditional props must be included'
+				);
 				assert(event, 'event must be passed');
 			});
 
@@ -391,7 +407,11 @@ describe('Autocomplete', () => {
 				assert(onExpand.called, 'onExpand must be called');
 				const [{ props, event }] = onExpand.lastCall.args;
 				assert(props, 'props must be passed');
-				assert.equal(props.testProp, 'foo', 'aditional props must be included');
+				assert.strictEqual(
+					props.testProp,
+					'foo',
+					'aditional props must be included'
+				);
 				assert(event, 'event must be passed');
 			});
 		});

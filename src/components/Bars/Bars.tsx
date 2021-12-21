@@ -1,16 +1,16 @@
 import _ from 'lodash';
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
+import * as d3Scale from 'd3-scale';
+
 import { lucidClassNames } from '../../util/style-helpers';
 import {
 	Collection,
 	extractFields,
 	stackByFields,
 } from '../../util/chart-helpers';
-import { omitProps, StandardProps } from '../../util/component-types';
-import * as d3Scale from 'd3-scale';
+import { StandardProps } from '../../util/component-types';
 import * as chartConstants from '../../constants/charts';
-//import shallowCompare from 'react-addons-shallow-compare';
 import Bar from '../Bar/Bar';
 import { ToolTipDumb as ToolTip } from '../ToolTip/ToolTip';
 import Legend from '../Legend/Legend';
@@ -24,7 +24,7 @@ const cx = lucidClassNames.bind('&-Bars');
 
 const { arrayOf, func, number, object, bool, string } = PropTypes;
 
-export interface IBarsProps extends StandardProps, React.SVGProps<SVGGElement> {
+export interface IBarsProps extends StandardProps {
 	/**
 	 * De-normalized data
 	 *
@@ -155,11 +155,32 @@ interface IBarsState {
 	hoveringSeriesIndex: null | number;
 }
 
+/** TODO: Remove this constant when the component is converted to a functional component */
+const nonPassthroughs = [
+	'className',
+	'data',
+	'legend',
+	'hasToolTips',
+	'palette',
+	'colorMap',
+	'xScale',
+	'xField',
+	'xFormatter',
+	'yScale',
+	'yFields',
+	'yFormatter',
+	'yStackedMax',
+	'yTooltipFormatter',
+	'isStacked',
+	'colorOffset',
+	'renderTooltipBody',
+];
+
 export class Bars extends PureComponent<IBarsProps, IBarsState> {
 	static displayName = 'Bars';
 
 	static peek = {
-		description: `*For use within an \`svg\`* \`Bars\` are typically used to represent categorical data and can be stacked or grouped.`,
+		description: `For use within an \`svg\`. \`Bars\` are typically used to represent categorical data and can be stacked or grouped.`,
 		categories: ['visualizations', 'chart primitives'],
 		madeFrom: ['Bar', 'ToolTip', 'Legend'],
 	};
@@ -353,7 +374,7 @@ export class Bars extends PureComponent<IBarsProps, IBarsState> {
 		yFormatter: _.identity,
 		yTooltipFormatter: (yField: string, yValueFormatted: any) =>
 			`${yField}: ${yValueFormatted}`,
-		renderTooltipBody: null,
+		renderTooltipBody: undefined,
 		isStacked: false,
 		colorOffset: 0,
 		palette: chartConstants.PALETTE_7,
@@ -412,7 +433,7 @@ export class Bars extends PureComponent<IBarsProps, IBarsState> {
 
 		return (
 			<g
-				{...omitProps(passThroughs, undefined, _.keys(Bars.propTypes))}
+				{..._.omit(passThroughs, nonPassthroughs)}
 				className={cx(className, '&')}
 			>
 				{_.map(transformedData, (series, seriesIndex) => (

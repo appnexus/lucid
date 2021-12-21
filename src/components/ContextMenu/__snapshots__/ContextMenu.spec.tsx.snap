@@ -83,7 +83,7 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for Direc
       rows="5"
       style="width:100px"
       type="text"
-      value=""
+      value="0"
     />
     <div
       class="lucid-DropMenu lucid-DropMenu-base lucid-SingleSelect"
@@ -125,7 +125,7 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for Direc
       rows="5"
       style="width:100px"
       type="text"
-      value=""
+      value="0"
     />
     getAlignmentOffset:
     <input
