@@ -1,6 +1,7 @@
 import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
+
 import { lucidClassNames, uniqueName } from '../../util/style-helpers';
 import {
 	getFirst,
@@ -12,7 +13,6 @@ import {
 } from '../../util/component-types';
 import reducers, { IRadioGroupState } from './RadioGroup.reducers';
 import { buildModernHybridComponent } from '../../util/state-management';
-
 import RadioButtonLabeled, {
 	IRadioButtonLabeledLabelProps,
 } from '../RadioButtonLabeled/RadioButtonLabeled';
@@ -71,11 +71,7 @@ export type IRadioGroupProps = Overwrite<
 
 const RadioGroupLabel = (props: IRadioButtonLabeledLabelProps) => null;
 RadioGroupLabel.peek = {
-	description: `
-        Support radio button labels as \`RadioGroup.Label\` component which
-        can be provided as a child of a \`RadioGroup.RadioButton\`
-        component.
-    `,
+	description: `Support radio button labels as \`RadioGroup.Label\` component which can be provided as a child of a \`RadioGroup.RadioButton\` component.`,
 };
 RadioGroupLabel.propTypes = {
 	children: node,
@@ -89,6 +85,15 @@ const defaultProps = {
 	isDisabled: false,
 };
 
+const nonPassthroughs = [
+	'children',
+	'className',
+	'name',
+	'onSelect',
+	'selectedIndex',
+	'isDisabled',
+];
+
 const RadioGroup = (props: IRadioGroupProps) => {
 	const {
 		children,
@@ -100,18 +105,15 @@ const RadioGroup = (props: IRadioGroupProps) => {
 	} = props;
 
 	const handleSelected = (
+		event: React.MouseEvent<Element, MouseEvent>,
+		childProps: IRadioButtonProps,
 		isSelected: boolean,
-		{
-			event,
-			props: childProps,
-		}: { event: React.MouseEvent; props: IRadioButtonProps }
+		selectedIndex: number
 	) => {
-		const { callbackId } = childProps;
-
-		if (callbackId !== undefined) {
+		if (selectedIndex !== undefined) {
 			const clickedRadioButtonProps = _.get(
 				_.map(findTypes(props, RadioGroup.RadioButton), 'props'),
-				callbackId
+				selectedIndex
 			);
 			// If the `RadioGroup.RadioButton` child has an `onSelect` prop that is
 			// a function, call that prior to calling the group's `onSelect` prop.
@@ -121,7 +123,7 @@ const RadioGroup = (props: IRadioGroupProps) => {
 					props: childProps,
 				});
 			}
-			props.onSelect(callbackId, { event, props: childProps });
+			props.onSelect(selectedIndex, { event, props: childProps });
 		}
 	};
 
@@ -144,19 +146,23 @@ const RadioGroup = (props: IRadioGroupProps) => {
 
 	return (
 		<span
-			{...omitProps(passThroughs, undefined, _.keys(RadioGroup.propTypes))}
+			{..._.omit(passThroughs as any, nonPassthroughs)}
 			className={cx('&', className)}
 		>
 			{_.map(radioButtonChildProps, (radioButtonChildProp, index) => {
+				const isSelected = actualSelectedIndex === index;
+
 				return (
 					<RadioButtonLabeled
 						{...radioButtonChildProp}
 						isDisabled={isDisabled || radioButtonChildProp.isDisabled}
-						isSelected={actualSelectedIndex === index}
+						isSelected={isSelected}
 						key={index}
 						callbackId={index}
 						name={name}
-						onSelect={handleSelected}
+						onSelect={(event, props, isSelected) =>
+							handleSelected(event, props, isSelected, index)
+						}
 						Label={_.get(
 							getFirst(radioButtonChildProp, RadioGroup.Label),
 							'props',

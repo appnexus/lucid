@@ -588,7 +588,6 @@ class ContextMenu extends React.Component<
 		return (
 			<TargetElementType
 				ref={this.targetRef}
-				// {...omitProps(passThroughs, undefined, _.keys(ContextMenu.propTypes))}
 				{..._.omit(passThroughs, nonPassthroughs)}
 				className={cx('&', className)}
 				style={style}

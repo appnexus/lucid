@@ -92,6 +92,33 @@ exports[`ButtonGroup [common] example testing should match snapshot(s) for Disab
 </span>
 `;
 
+exports[`ButtonGroup [common] example testing should match snapshot(s) for OnClick 1`] = `
+<span
+  class="lucid-ButtonGroup"
+>
+  <button
+    class="lucid-Button"
+    type="button"
+  >
+    <span
+      class="lucid-Button-content"
+    >
+      Zero
+    </span>
+  </button>
+  <button
+    class="lucid-Button"
+    type="button"
+  >
+    <span
+      class="lucid-Button-content"
+    >
+      One
+    </span>
+  </button>
+</span>
+`;
+
 exports[`ButtonGroup [common] example testing should match snapshot(s) for Stateful 1`] = `
 <span
   class="lucid-ButtonGroup"

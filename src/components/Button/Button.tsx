@@ -55,8 +55,6 @@ export interface IButtonPropsRaw extends StandardProps {
 	 * @default "button"
 	 * */
 	type: 'submit' | 'reset' | 'button';
-
-	callbackId?: any;
 }
 
 export type IButtonProps = Overwrite<
@@ -105,10 +103,7 @@ export const Button = (props: IButtonProps): React.ReactElement => {
 	}
 	return (
 		<button
-			{...omitProps(passThroughs, undefined, [
-				..._.keys(Button.propTypes),
-				'callbackId',
-			])}
+			{...passThroughs}
 			ref={buttonRef}
 			className={cx(
 				'&',
