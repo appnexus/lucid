@@ -7,7 +7,6 @@ import {
 	getFirst,
 	findTypes,
 	rejectTypes,
-	omitProps,
 	StandardProps,
 	Overwrite,
 } from '../../util/component-types';
@@ -85,6 +84,7 @@ const defaultProps = {
 	isDisabled: false,
 };
 
+/** TODO: Remove this constant when the component is converted to a functional component */
 const nonPassthroughs = [
 	'children',
 	'className',

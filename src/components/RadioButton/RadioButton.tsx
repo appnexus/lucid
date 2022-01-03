@@ -1,6 +1,7 @@
 import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
+
 import { lucidClassNames } from '../../util/style-helpers';
 import { StandardProps, Overwrite } from '../../util/component-types';
 
@@ -49,6 +50,18 @@ export type IRadioButtonProps = Overwrite<
 	IRadioButtonPropsRaw
 >;
 
+/** TODO: Remove this constant when the component is converted to a functional component */
+const nonPassthroughs = [
+	'callbackId',
+	'children',
+	'className',
+	'isDisabled',
+	'isSelected',
+	'name',
+	'onSelect',
+	'style',
+];
+
 export const defaultProps = {
 	isDisabled: false,
 	isSelected: false,
@@ -95,7 +108,7 @@ export const RadioButton = (props: IRadioButtonProps): React.ReactElement => {
 		>
 			<input
 				onChange={_.noop}
-				{..._.omit(passThroughs as any, ['children', 'callbackId'])}
+				{..._.omit(passThroughs, nonPassthroughs)}
 				checked={isSelected}
 				className={cx('&-native')}
 				disabled={isDisabled}

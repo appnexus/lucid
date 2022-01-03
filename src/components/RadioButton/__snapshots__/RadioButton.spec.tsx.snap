@@ -13,7 +13,6 @@ exports[`RadioButton [common] example testing should match snapshot(s) for Inter
     >
       <input
         class="lucid-RadioButton-native"
-        name="interactive-radio-buttons"
         tabindex="20"
         type="radio"
       />

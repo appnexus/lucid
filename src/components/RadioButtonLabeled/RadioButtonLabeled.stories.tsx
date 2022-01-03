@@ -1,6 +1,8 @@
-import React from 'react';
-import createClass from 'create-react-class';
+import React, { useState } from 'react';
+import { Meta, Story } from '@storybook/react';
+
 import { RadioButtonLabeled } from './../../index';
+import { IRadioButtonLabeledProps } from './RadioButtonLabeled';
 
 export default {
 	title: 'Controls/RadioButtonLabeled',
@@ -8,233 +10,181 @@ export default {
 	parameters: {
 		docs: {
 			description: {
-				component: (RadioButtonLabeled as any).peek.description,
+				component: RadioButtonLabeled.peek.description,
 			},
 		},
 	},
-};
+} as Meta;
 
 /* Interactive */
-export const Interactive = () => {
+export const Interactive: Story<IRadioButtonLabeledProps> = (args) => {
 	const style = {
 		marginBottom: '3px',
 	};
 
-	const Component = createClass({
-		getInitialState() {
-			return {
-				flavor: 'vanilla',
-			};
-		},
+	const [flavor, setFlavor] = useState('vanilla');
 
-		handleSelectedChocolate() {
-			this.setState({
-				flavor: 'chocolate',
-			});
-		},
+	const handleSelectedFlavor = (flavor) => {
+		setFlavor(flavor);
+	};
 
-		handleSelectedCaramel() {
-			this.setState({
-				flavor: 'saltedCaramel',
-			});
-		},
-
-		handleSelectedMint() {
-			this.setState({
-				flavor: 'mintChip',
-			});
-		},
-
-		handleSelectedStrawberry() {
-			this.setState({
-				flavor: 'strawberry',
-			});
-		},
-
-		handleSelectedVanilla() {
-			this.setState({
-				flavor: 'vanilla',
-			});
-		},
-
-		render() {
-			return (
-				<section>
-					<span
-						style={{
-							display: 'inline-flex',
-							flexDirection: 'column',
-							alignItems: 'flex-start',
-						}}
-					>
-						<RadioButtonLabeled
-							isSelected={this.state.flavor === 'vanilla'}
-							name='interactive-radio-buttons'
-							onSelect={this.handleSelectedVanilla}
-							style={style}
-						>
-							<RadioButtonLabeled.Label>Vanilla</RadioButtonLabeled.Label>
-						</RadioButtonLabeled>
-						<RadioButtonLabeled
-							isSelected={this.state.flavor === 'chocolate'}
-							name='interactive-radio-buttons'
-							onSelect={this.handleSelectedChocolate}
-							style={style}
-						>
-							<RadioButtonLabeled.Label>Chocolate</RadioButtonLabeled.Label>
-						</RadioButtonLabeled>
-						<RadioButtonLabeled
-							isSelected={this.state.flavor === 'strawberry'}
-							name='interactive-radio-buttons'
-							onSelect={this.handleSelectedStrawberry}
-							style={style}
-						>
-							<RadioButtonLabeled.Label>Strawberry</RadioButtonLabeled.Label>
-						</RadioButtonLabeled>
-						<RadioButtonLabeled
-							isSelected={this.state.flavor === 'saltedCaramel'}
-							name='interactive-radio-buttons'
-							onSelect={this.handleSelectedCaramel}
-							style={style}
-						>
-							<RadioButtonLabeled.Label>
-								Salted caramel
-							</RadioButtonLabeled.Label>
-						</RadioButtonLabeled>
-						<RadioButtonLabeled
-							isSelected={this.state.flavor === 'mintChip'}
-							name='interactive-radio-buttons'
-							onSelect={this.handleSelectedMint}
-							style={style}
-						>
-							<RadioButtonLabeled.Label>
-								Mint choc chip (the best)
-							</RadioButtonLabeled.Label>
-						</RadioButtonLabeled>
-					</span>
-				</section>
-			);
-		},
-	});
-
-	return <Component />;
+	return (
+		<section>
+			<span
+				style={{
+					display: 'inline-flex',
+					flexDirection: 'column',
+					alignItems: 'flex-start',
+				}}
+			>
+				<RadioButtonLabeled
+					{...args}
+					isSelected={flavor === 'vanilla'}
+					name='interactive-radio-buttons'
+					onSelect={() => handleSelectedFlavor('vanilla')}
+					style={style}
+				>
+					<RadioButtonLabeled.Label>Vanilla</RadioButtonLabeled.Label>
+				</RadioButtonLabeled>
+				<RadioButtonLabeled
+					{...args}
+					isSelected={flavor === 'chocolate'}
+					name='interactive-radio-buttons'
+					onSelect={() => handleSelectedFlavor('chocolate')}
+					style={style}
+				>
+					<RadioButtonLabeled.Label>Chocolate</RadioButtonLabeled.Label>
+				</RadioButtonLabeled>
+				<RadioButtonLabeled
+					{...args}
+					isSelected={flavor === 'strawberry'}
+					name='interactive-radio-buttons'
+					onSelect={() => handleSelectedFlavor('strawberry')}
+					style={style}
+				>
+					<RadioButtonLabeled.Label>Strawberry</RadioButtonLabeled.Label>
+				</RadioButtonLabeled>
+				<RadioButtonLabeled
+					{...args}
+					isSelected={flavor === 'saltedCaramel'}
+					name='interactive-radio-buttons'
+					onSelect={() => handleSelectedFlavor('saltedCaramel')}
+					style={style}
+				>
+					<RadioButtonLabeled.Label>Salted caramel</RadioButtonLabeled.Label>
+				</RadioButtonLabeled>
+				<RadioButtonLabeled
+					{...args}
+					isSelected={flavor === 'mintChip'}
+					name='interactive-radio-buttons'
+					onSelect={() => handleSelectedFlavor('mintChip')}
+					style={style}
+				>
+					<RadioButtonLabeled.Label>
+						Mint chocolate chip (the best)
+					</RadioButtonLabeled.Label>
+				</RadioButtonLabeled>
+			</span>
+		</section>
+	);
 };
 Interactive.storyName = 'Interactive';
 
 /* States */
-export const States = () => {
+export const States: Story<IRadioButtonLabeledProps> = (args) => {
 	const style = {
 		marginBottom: '3px',
 		marginRight: '13px',
 	};
 
-	const Component = createClass({
-		render() {
-			return (
-				<section>
-					<RadioButtonLabeled style={style}>
-						<RadioButtonLabeled.Label>(default props)</RadioButtonLabeled.Label>
-					</RadioButtonLabeled>
+	return (
+		<section>
+			<RadioButtonLabeled {...args} style={style}>
+				<RadioButtonLabeled.Label>(default props)</RadioButtonLabeled.Label>
+			</RadioButtonLabeled>
 
-					<section style={{ display: 'flex' }}>
-						<RadioButtonLabeled isDisabled={true} style={style}>
-							<RadioButtonLabeled.Label>Disabled</RadioButtonLabeled.Label>
-						</RadioButtonLabeled>
-						<RadioButtonLabeled isSelected={true} style={style}>
-							<RadioButtonLabeled.Label>Selected</RadioButtonLabeled.Label>
-						</RadioButtonLabeled>
-						<RadioButtonLabeled
-							isDisabled={true}
-							isSelected={true}
-							style={style}
-						>
-							<RadioButtonLabeled.Label>
-								Disabled & selected
-							</RadioButtonLabeled.Label>
-						</RadioButtonLabeled>
-					</section>
-				</section>
-			);
-		},
-	});
-
-	return <Component />;
+			<section style={{ display: 'flex' }}>
+				<RadioButtonLabeled {...args} isDisabled={true} style={style}>
+					<RadioButtonLabeled.Label>Disabled</RadioButtonLabeled.Label>
+				</RadioButtonLabeled>
+				<RadioButtonLabeled {...args} isSelected={true} style={style}>
+					<RadioButtonLabeled.Label>Selected</RadioButtonLabeled.Label>
+				</RadioButtonLabeled>
+				<RadioButtonLabeled
+					{...args}
+					isDisabled={true}
+					isSelected={true}
+					style={style}
+				>
+					<RadioButtonLabeled.Label>
+						Disabled & Selected
+					</RadioButtonLabeled.Label>
+				</RadioButtonLabeled>
+			</section>
+		</section>
+	);
 };
 States.storyName = 'States';
 
 /* Label As Child */
-export const LabelAsChild = () => {
+export const LabelAsChild: Story<IRadioButtonLabeledProps> = (args) => {
 	const style = {
 		marginBottom: '3px',
 	};
-
-	const Component = createClass({
-		render() {
-			return (
-				<section>
-					<section>
-						<RadioButtonLabeled style={style}>
-							<RadioButtonLabeled.Label>Just text</RadioButtonLabeled.Label>
-						</RadioButtonLabeled>
-						<RadioButtonLabeled style={style}>
-							<RadioButtonLabeled.Label>
-								<span>HTML element</span>
-							</RadioButtonLabeled.Label>
-						</RadioButtonLabeled>
-					</section>
-				</section>
-			);
-		},
-	});
-
-	return <Component />;
+	return (
+		<section>
+			<section>
+				<RadioButtonLabeled {...args} style={style}>
+					<RadioButtonLabeled.Label>Just text</RadioButtonLabeled.Label>
+				</RadioButtonLabeled>
+				<RadioButtonLabeled {...args} style={style}>
+					<RadioButtonLabeled.Label>
+						<span>HTML element</span>
+					</RadioButtonLabeled.Label>
+				</RadioButtonLabeled>
+			</section>
+		</section>
+	);
 };
-LabelAsChild.storyName = 'LabelAsChild';
+LabelAsChild.storyName = 'Label As Child';
 
 /* Label As Prop */
-export const LabelAsProp = () => {
+export const LabelAsProp: Story<IRadioButtonLabeledProps> = (args) => {
 	const style = {
 		marginBottom: '3px',
 	};
 
-	const Component = createClass({
-		render() {
-			return (
-				<section>
-					<section>
-						<RadioButtonLabeled Label='Just text' style={style} />
-						<RadioButtonLabeled
-							Label={<span>HTML element</span>}
-							style={style}
-						/>
-						<RadioButtonLabeled
-							Label={
-								[
-									'Text in an array',
-									'Only the first value in the array is used',
-									'The rest of these should be ignored',
-								] as any
-							}
-							style={style}
-						/>
-						<RadioButtonLabeled
-							Label={
-								[
-									<span key='1'>HTML element in an array</span>,
-									<span key='2'>
-										Again only the first value in the array is used
-									</span>,
-									<span key='3'>The rest should not be rendered</span>,
-								] as any
-							}
-							style={style}
-						/>
-					</section>
-				</section>
-			);
-		},
-	});
-
-	return <Component />;
+	return (
+		<section>
+			<section>
+				<RadioButtonLabeled {...args} Label='Just text' style={style} />
+				<RadioButtonLabeled Label={<span>HTML element</span>} style={style} />
+				<RadioButtonLabeled
+					{...args}
+					Label={
+						[
+							'Text in an array',
+							'Only the first value in the array is used',
+							'The rest of these should be ignored',
+						] as any
+					}
+					style={style}
+				/>
+				<RadioButtonLabeled
+					{...args}
+					Label={
+						[
+							<span key='1'>HTML element in an array</span>,
+							<span key='2'>
+								Again only the first value in the array is used
+							</span>,
+							<span key='3'>The rest should not be rendered</span>,
+						] as any
+					}
+					style={style}
+				/>
+			</section>
+		</section>
+	);
 };
-LabelAsProp.storyName = 'LabelAsProp';
+LabelAsProp.storyName = 'Label As Prop';
