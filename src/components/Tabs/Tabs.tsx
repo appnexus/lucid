@@ -17,14 +17,16 @@ const cx = lucidClassNames.bind('&-Tabs');
 
 const { bool, func, node, number, string, any } = PropTypes;
 
+/** TITLE */
 export interface ITitleProps extends StandardProps {}
 const Title = (props: ITitleProps): null => null;
 Title.peek = {
-	description: `Titles can be provided as a child or prop to a Tab.`,
+	description: `\`Titles\` can be provided as a child or prop to a \`Tab\`.`,
 };
 Title.displayName = 'Tabs.Title';
 Title.propName = 'Title';
 
+/** TAB */
 export interface ITabProps extends StandardProps {
 	/** The index of this \`Tab\` within the list of \`Tabs\`. */
 	index?: number;
@@ -116,7 +118,7 @@ const Tab = (props: ITabPropsWithPassThroughs): React.ReactElement => {
 							minWidth: '20px',
 						}}
 						type='stroke'
-						kind={isSelected ? 'primary' : undefined}
+						kind={isSelected ? 'primary' : 'default'}
 					>
 						{count}
 					</Badge>
@@ -217,6 +219,7 @@ Tab.propTypes = {
 	isVariableCountWidth: bool,
 };
 
+/** TABS */
 export interface ITabsProps extends StandardProps {
 	/** Indicates which of the \`Tabs.Tab\` children is currently selected. The
 	index of the last \`Tabs.Tab\` child with \`isSelected\` equal to
@@ -271,6 +274,19 @@ export interface ITabsState {
 	selectedIndex: number;
 }
 
+/** TODO: Remove this constant when the component is converted to a functional component */
+const nonPassThroughs = [
+	'className',
+	'selectedIndex',
+	'onSelect',
+	'isOpen',
+	'isProgressive',
+	'isFloating',
+	'hasMultilineTitle',
+	'hasFullWidthTabs',
+	'Tab',
+];
+
 class Tabs extends React.Component<ITabsPropsWithPassThroughs, ITabsState> {
 	static displayName = 'Tabs';
 	static Title = Title;
@@ -279,7 +295,7 @@ class Tabs extends React.Component<ITabsPropsWithPassThroughs, ITabsState> {
 	static reducers = reducers;
 
 	static peek = {
-		description: `\`Tabs\` provides tabbed navigation. It has a flexible interface that allows tab content to be passed as regular React children or through props.`,
+		description: `\`Tabs\` provides tabbed navigation. It has a flexible interface that allows \`tab\` content to be passed as regular \`React\` children or through \`props\`.`,
 		categories: ['navigation'],
 	};
 
@@ -385,7 +401,7 @@ class Tabs extends React.Component<ITabsPropsWithPassThroughs, ITabsState> {
 				: selectedIndex;
 		return (
 			<div
-				{...omitProps(passThroughs, undefined, _.keys(Tabs.propTypes))}
+				{...(_.omit(passThroughs, nonPassThroughs) as any)}
 				className={cx('&', className)}
 			>
 				<ul

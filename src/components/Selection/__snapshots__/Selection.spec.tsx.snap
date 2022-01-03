@@ -1131,7 +1131,7 @@ exports[`Selection [common] example testing should match snapshot(s) for Nested 
           <span
             class="lucid-Selection-label lucid-Selection-label-is-small"
           >
-            Arts & Entertainment
+            Arts and Entertainment
           </span>
           <svg
             class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Selection-close-button lucid-Selection-close-button-is-small"
@@ -1503,7 +1503,7 @@ exports[`Selection [common] example testing should match snapshot(s) for Nested 
           <span
             class="lucid-Selection-label lucid-Selection-label-is-small"
           >
-            Arts & Entertainment
+            Arts and Entertainment
           </span>
           <svg
             class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Selection-close-button lucid-Selection-close-button-is-small"
@@ -2311,7 +2311,7 @@ exports[`Selection [common] example testing should match snapshot(s) for Nested 
           <span
             class="lucid-Selection-label lucid-Selection-label-is-small"
           >
-            Arts & Entertainment
+            Arts and Entertainment
           </span>
           <svg
             class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Selection-close-button lucid-Selection-close-button-is-small"

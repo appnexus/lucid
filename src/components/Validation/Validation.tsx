@@ -1,8 +1,9 @@
+import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
+
 import { lucidClassNames } from '../../util/style-helpers';
 import { getFirst, omitProps, StandardProps } from '../../util/component-types';
-import _ from 'lodash';
 
 const cx = lucidClassNames.bind('&-Validation');
 
@@ -41,7 +42,7 @@ export const Validation = (props: IValidationProps): React.ReactElement => {
 
 	return (
 		<div
-			{...passThroughs}
+			{..._.omit(passThroughs, ['Error'])}
 			className={cx(
 				'&',
 				{
@@ -67,7 +68,7 @@ export const Validation = (props: IValidationProps): React.ReactElement => {
 
 Validation.displayName = 'Validation';
 Validation.peek = {
-	description: `\`Validation\` is a wrapper component that's meant to be used by other components. Wrap your form components in it and style them accordingly if there's an error.`,
+	description: `\`Validation\` is a wrapper component that's meant to be used by other components. Wrap your form components in one, and, if there's an error, style them accordingly.`,
 	categories: ['helpers'],
 };
 Validation.propTypes = {

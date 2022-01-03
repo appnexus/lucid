@@ -1,7 +1,9 @@
-import React from 'react';
-import createClass from 'create-react-class';
+import { set, map, get } from 'lodash';
+import React, { useState } from 'react';
+import { Story, Meta } from '@storybook/react';
+
 import { Selection, Resizer } from './../../index';
-import _ from 'lodash';
+import { ISelectionProps } from './Selection';
 
 export default {
 	title: 'Communication/Selection',
@@ -9,268 +11,330 @@ export default {
 	parameters: {
 		docs: {
 			description: {
-				component: (Selection as any).peek.description,
+				component: Selection.peek.description,
 			},
 		},
 	},
-};
+} as Meta;
 
 /* Kinds */
-export const Kinds = () => {
-	const Component = createClass({
-		render() {
-			return (
-				<Resizer>
-					{(width) => {
-						const responsiveMode = width >= 400 ? 'large' : 'small';
+export const Kinds: Story<ISelectionProps> = (args) => {
+	return (
+		<Resizer>
+			{(width) => {
+				const responsiveMode = width >= 400 ? 'large' : 'small';
 
-						return (
-							<div>
-								<div style={{ margin: '10px' }}>
-									<Selection
-										isRemovable={false}
-										responsiveMode={responsiveMode}
-										kind='container'
-										Label='Container Light Not Removable'
-									/>
-								</div>
+				return (
+					<div>
+						<div style={{ margin: '10px' }}>
+							<Selection
+								{...args}
+								isRemovable={false}
+								responsiveMode={responsiveMode}
+								kind='container'
+								Label='Container Light Not Removable'
+							/>
+						</div>
 
-								<div style={{ margin: '10px' }}>
-									<Selection
-										responsiveMode={responsiveMode}
-										kind='container'
-										Label='Container Light'
-									/>
-								</div>
+						<div style={{ margin: '10px' }}>
+							<Selection
+								{...args}
+								responsiveMode={responsiveMode}
+								kind='container'
+								Label='Container Light'
+							/>
+						</div>
 
-								<div style={{ margin: '10px' }}>
-									<Selection
-										isFilled
-										isRemovable={false}
-										responsiveMode={responsiveMode}
-										kind='container'
-										Label='Container Filled Not Removable'
-									/>
-								</div>
+						<div style={{ margin: '10px' }}>
+							<Selection
+								{...args}
+								isFilled
+								isRemovable={false}
+								responsiveMode={responsiveMode}
+								kind='container'
+								Label='Container Filled Not Removable'
+							/>
+						</div>
 
-								<div style={{ margin: '10px' }}>
-									<Selection
-										isFilled
-										responsiveMode={responsiveMode}
-										kind='container'
-										Label='Container Filled'
-									/>
-								</div>
+						<div style={{ margin: '10px' }}>
+							<Selection
+								{...args}
+								isFilled
+								responsiveMode={responsiveMode}
+								kind='container'
+								Label='Container Filled'
+							/>
+						</div>
 
-								<div style={{ margin: '10px' }}>
-									<Selection responsiveMode={responsiveMode} Label='Default' />
-								</div>
+						<div style={{ margin: '10px' }}>
+							<Selection
+								{...args}
+								responsiveMode={responsiveMode}
+								Label='Default'
+							/>
+						</div>
 
-								<div style={{ margin: '10px' }}>
-									<Selection
-										responsiveMode={responsiveMode}
-										kind='success'
-										Label='Success'
-									/>
-								</div>
+						<div style={{ margin: '10px' }}>
+							<Selection
+								{...args}
+								responsiveMode={responsiveMode}
+								kind='success'
+								Label='Success'
+							/>
+						</div>
 
-								<div style={{ margin: '10px' }}>
-									<Selection
-										responsiveMode={responsiveMode}
-										kind='danger'
-										Label='Danger'
-									/>
-								</div>
+						<div style={{ margin: '10px' }}>
+							<Selection
+								{...args}
+								responsiveMode={responsiveMode}
+								kind='danger'
+								Label='Danger'
+							/>
+						</div>
 
-								<div style={{ margin: '10px' }}>
-									<Selection
-										responsiveMode={responsiveMode}
-										kind='info'
-										Label='Info'
-									/>
-								</div>
+						<div style={{ margin: '10px' }}>
+							<Selection
+								{...args}
+								responsiveMode={responsiveMode}
+								kind='info'
+								Label='Info'
+							/>
+						</div>
 
-								<div style={{ margin: '10px' }}>
-									<Selection
-										responsiveMode={responsiveMode}
-										kind='warning'
-										Label='Warning'
-									/>
-								</div>
-							</div>
-						);
-					}}
-				</Resizer>
-			);
-		},
-	});
-
-	return <Component />;
+						<div style={{ margin: '10px' }}>
+							<Selection
+								{...args}
+								responsiveMode={responsiveMode}
+								kind='warning'
+								Label='Warning'
+							/>
+						</div>
+					</div>
+				);
+			}}
+		</Resizer>
+	);
 };
 Kinds.storyName = 'Kinds';
 
 /* Nested */
-export const Nested = () => {
-	const Component = createClass({
-		render() {
-			return (
-				<Resizer>
-					{(width) => {
-						const responsiveMode = width >= 400 ? 'large' : 'small';
+export const Nested: Story<ISelectionProps> = (args) => {
+	return (
+		<Resizer>
+			{(width) => {
+				const responsiveMode = width >= 400 ? 'large' : 'small';
 
-						return (
-							<div>
+				return (
+					<div>
+						<Selection
+							{...args}
+							isTop
+							responsiveMode={responsiveMode}
+							Label='Arts and Entertainment'
+						>
+							<Selection
+								{...args}
+								responsiveMode={responsiveMode}
+								Label='Item 1'
+							/>
+							<Selection
+								{...args}
+								responsiveMode={responsiveMode}
+								Label='Item 2'
+							/>
+							<Selection
+								{...args}
+								responsiveMode={responsiveMode}
+								Label='Item 3'
+							>
 								<Selection
-									isTop
+									{...args}
 									responsiveMode={responsiveMode}
-									Label='Arts & Entertainment'
-								>
-									<Selection responsiveMode={responsiveMode} Label='Item 1' />
-									<Selection responsiveMode={responsiveMode} Label='Item 2' />
-									<Selection responsiveMode={responsiveMode} Label='Item 3'>
-										<Selection responsiveMode={responsiveMode} Label='Item 1' />
-										<Selection responsiveMode={responsiveMode} Label='Item 2' />
-										<Selection responsiveMode={responsiveMode} Label='Item 3' />
-									</Selection>
-									<Selection responsiveMode={responsiveMode} Label='Item 4'>
-										<Selection responsiveMode={responsiveMode} Label='Item 1' />
-										<Selection responsiveMode={responsiveMode} Label='Item 2' />
-										<Selection responsiveMode={responsiveMode} Label='Item 3' />
-										<Selection
-											responsiveMode={responsiveMode}
-											Label='Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
-										/>
-									</Selection>
-								</Selection>
-
+									Label='Item 1'
+								/>
 								<Selection
-									isTop
+									{...args}
+									responsiveMode={responsiveMode}
+									Label='Item 2'
+								/>
+								<Selection
+									{...args}
+									responsiveMode={responsiveMode}
+									Label='Item 3'
+								/>
+							</Selection>
+							<Selection
+								{...args}
+								responsiveMode={responsiveMode}
+								Label='Item 4'
+							>
+								<Selection
+									{...args}
+									responsiveMode={responsiveMode}
+									Label='Item 1'
+								/>
+								<Selection
+									{...args}
+									responsiveMode={responsiveMode}
+									Label='Item 2'
+								/>
+								<Selection
+									{...args}
+									responsiveMode={responsiveMode}
+									Label='Item 3'
+								/>
+								<Selection
+									{...args}
+									responsiveMode={responsiveMode}
+									Label='Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+								/>
+							</Selection>
+						</Selection>
+
+						<Selection
+							{...args}
+							isTop
+							responsiveMode={responsiveMode}
+							kind='info'
+							Label='Arts and Entertainment'
+						>
+							<Selection
+								{...args}
+								responsiveMode={responsiveMode}
+								kind='info'
+								Label='Item 1'
+							/>
+							<Selection
+								{...args}
+								responsiveMode={responsiveMode}
+								kind='info'
+								Label='Item 2'
+							/>
+							<Selection
+								{...args}
+								responsiveMode={responsiveMode}
+								kind='info'
+								Label='Item 3'
+							>
+								<Selection
+									{...args}
 									responsiveMode={responsiveMode}
 									kind='info'
-									Label='Arts & Entertainment'
-								>
-									<Selection
-										responsiveMode={responsiveMode}
-										kind='info'
-										Label='Item 1'
-									/>
-									<Selection
-										responsiveMode={responsiveMode}
-										kind='info'
-										Label='Item 2'
-									/>
-									<Selection
-										responsiveMode={responsiveMode}
-										kind='info'
-										Label='Item 3'
-									>
-										<Selection
-											responsiveMode={responsiveMode}
-											kind='info'
-											Label='Item 1'
-										/>
-										<Selection
-											responsiveMode={responsiveMode}
-											kind='info'
-											Label='Item 2'
-										/>
-										<Selection
-											responsiveMode={responsiveMode}
-											kind='info'
-											Label='Item 3'
-										/>
-									</Selection>
-									<Selection
-										responsiveMode={responsiveMode}
-										kind='warning'
-										Label='Item 4'
-									>
-										<Selection
-											responsiveMode={responsiveMode}
-											kind='warning'
-											Label='Item 1'
-										/>
-										<Selection
-											responsiveMode={responsiveMode}
-											kind='warning'
-											Label='Item 2'
-										/>
-										<Selection
-											responsiveMode={responsiveMode}
-											kind='warning'
-											Label='Item 3'
-										/>
-										<Selection
-											responsiveMode={responsiveMode}
-											kind='warning'
-											Label='Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
-										/>
-									</Selection>
-								</Selection>
-
+									Label='Item 1'
+								/>
 								<Selection
-									isTop
+									{...args}
 									responsiveMode={responsiveMode}
-									kind='success'
-									hasBackground
-									isBold
-									Label='Leisure'
-								>
-									<Selection
-										responsiveMode={responsiveMode}
-										kind='danger'
-										Label='Item 1'
-									/>
-									<Selection
-										responsiveMode={responsiveMode}
-										kind='danger'
-										Label='Item 2'
-									/>
-									<Selection
-										responsiveMode={responsiveMode}
-										kind='danger'
-										Label='Item 3'
-									/>
-								</Selection>
-
+									kind='info'
+									Label='Item 2'
+								/>
 								<Selection
-									isTop
+									{...args}
 									responsiveMode={responsiveMode}
-									kind='danger'
-									hasBackground
-									isBold
-									Label='Arts & Entertainment'
-								>
-									<Selection
-										responsiveMode={responsiveMode}
-										kind='success'
-										Label='Item 1'
-									/>
-									<Selection
-										responsiveMode={responsiveMode}
-										kind='success'
-										Label='Item 2'
-									/>
-									<Selection
-										responsiveMode={responsiveMode}
-										kind='success'
-										Label='Item 3'
-									/>
-								</Selection>
-							</div>
-						);
-					}}
-				</Resizer>
-			);
-		},
-	});
+									kind='info'
+									Label='Item 3'
+								/>
+							</Selection>
+							<Selection
+								{...args}
+								responsiveMode={responsiveMode}
+								kind='warning'
+								Label='Item 4'
+							>
+								<Selection
+									{...args}
+									responsiveMode={responsiveMode}
+									kind='warning'
+									Label='Item 1'
+								/>
+								<Selection
+									{...args}
+									responsiveMode={responsiveMode}
+									kind='warning'
+									Label='Item 2'
+								/>
+								<Selection
+									{...args}
+									responsiveMode={responsiveMode}
+									kind='warning'
+									Label='Item 3'
+								/>
+								<Selection
+									{...args}
+									responsiveMode={responsiveMode}
+									kind='warning'
+									Label='Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+								/>
+							</Selection>
+						</Selection>
 
-	return <Component />;
+						<Selection
+							{...args}
+							isTop
+							responsiveMode={responsiveMode}
+							kind='success'
+							hasBackground
+							isBold
+							Label='Leisure'
+						>
+							<Selection
+								{...args}
+								responsiveMode={responsiveMode}
+								kind='danger'
+								Label='Item 1'
+							/>
+							<Selection
+								{...args}
+								responsiveMode={responsiveMode}
+								kind='danger'
+								Label='Item 2'
+							/>
+							<Selection
+								{...args}
+								responsiveMode={responsiveMode}
+								kind='danger'
+								Label='Item 3'
+							/>
+						</Selection>
+
+						<Selection
+							{...args}
+							isTop
+							responsiveMode={responsiveMode}
+							kind='danger'
+							hasBackground
+							isBold
+							Label='Arts and Entertainment'
+						>
+							<Selection
+								{...args}
+								responsiveMode={responsiveMode}
+								kind='success'
+								Label='Item 1'
+							/>
+							<Selection
+								{...args}
+								responsiveMode={responsiveMode}
+								kind='success'
+								Label='Item 2'
+							/>
+							<Selection
+								{...args}
+								responsiveMode={responsiveMode}
+								kind='success'
+								Label='Item 3'
+							/>
+						</Selection>
+					</div>
+				);
+			}}
+		</Resizer>
+	);
 };
 Nested.storyName = 'Nested';
 
 /* Interactive */
-export const Interactive = () => {
+export const Interactive: Story<ISelectionProps> = (args) => {
 	const groups = [
 		['Last Man on Earth', ['Phil']],
 		['Last Woman on Earth', ['Carol']],
@@ -304,73 +368,61 @@ export const Interactive = () => {
 		],
 	];
 
-	const Component = createClass({
-		getInitialState() {
-			return {
-				removedItems: {},
-			};
-		},
+	const [removedItems, setRemovedItems] = useState<Object>({});
+	const handleRemove = ({ props }) => {
+		const { callbackId } = props;
+		setRemovedItems({ ...set(removedItems, callbackId, true) });
+	};
 
-		handleRemove({ props: { callbackId } }: { props: { callbackId: string } }) {
-			this.setState({
-				removedItems: _.set(this.state.removedItems, callbackId, true),
-			});
-		},
+	return (
+		<Resizer>
+			{(width) => {
+				const responsiveMode = width >= 400 ? 'large' : 'small';
 
-		render() {
-			const { removedItems } = this.state;
-
-			return (
-				<Resizer>
-					{(width) => {
-						const responsiveMode = width >= 400 ? 'large' : 'small';
-
-						return (
-							<div>
-								{_.map(groups, ([group, names], groupIndex) => {
-									const groupCallbackId = `${groupIndex}`;
-									if (_.get(removedItems, groupCallbackId) === true) {
-										return null;
-									}
-									return (
-										<Selection
-											responsiveMode={responsiveMode}
-											key={groupCallbackId}
-											isRemovable={true}
-											isBold
-											hasBackground
-											kind='container'
-											onRemove={this.handleRemove}
-											callbackId={groupCallbackId}
-											Label={group}
-										>
-											{_.map(names, (name, nameIndex) => {
-												const nameCallbackId = `${groupIndex}.${nameIndex}`;
-												if (_.get(removedItems, nameCallbackId) === true) {
-													return null;
-												}
-												return (
-													<Selection
-														responsiveMode={responsiveMode}
-														key={nameCallbackId}
-														isRemovable={true}
-														onRemove={this.handleRemove}
-														callbackId={nameCallbackId}
-														Label={name}
-													/>
-												);
-											})}
-										</Selection>
-									);
-								})}
-							</div>
-						);
-					}}
-				</Resizer>
-			);
-		},
-	});
-
-	return <Component />;
+				return (
+					<div>
+						{map(groups, ([group, names], groupIndex) => {
+							const groupCallbackId = `${groupIndex}`;
+							if (get(removedItems, groupCallbackId) === true) {
+								return null;
+							}
+							return (
+								<Selection
+									{...args}
+									key={groupCallbackId}
+									responsiveMode={responsiveMode}
+									isRemovable={true}
+									isBold
+									hasBackground
+									kind='container'
+									onRemove={handleRemove}
+									callbackId={groupCallbackId}
+									Label={group}
+								>
+									{map(names, (name, nameIndex) => {
+										const nameCallbackId = `${groupIndex}.${nameIndex}`;
+										if (get(removedItems, nameCallbackId) === true) {
+											return null;
+										}
+										return (
+											<Selection
+												{...args}
+												key={nameCallbackId}
+												responsiveMode={responsiveMode}
+												isRemovable={true}
+												onRemove={handleRemove}
+												callbackId={nameCallbackId}
+												Label={name}
+											/>
+										);
+									})}
+								</Selection>
+							);
+						})}
+					</div>
+				);
+			}}
+		</Resizer>
+	);
 };
 Interactive.storyName = 'Interactive';

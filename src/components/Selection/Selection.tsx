@@ -1,18 +1,14 @@
 import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
+
 import MinusCircleIcon from '../Icon/MinusCircleIcon/MinusCircleIcon';
 import SuccessIcon from '../Icon/SuccessIcon/SuccessIcon';
 import CloseIcon from '../Icon/CloseIcon/CloseIcon';
 import InfoIcon from '../Icon/InfoIcon/InfoIcon';
 import WarningIcon from '../Icon/WarningIcon/WarningIcon';
 import { lucidClassNames } from '../../util/style-helpers';
-import {
-	omitProps,
-	getFirst,
-	FC,
-	StandardProps,
-} from '../../util/component-types';
+import { getFirst, FC, StandardProps } from '../../util/component-types';
 
 const { createElement } = React;
 
@@ -20,6 +16,7 @@ const { bool, func, string, node, oneOf } = PropTypes;
 
 const cx = lucidClassNames.bind('&-Selection');
 
+/** SELECTION ICON */
 function defaultIcon(
 	kind: SelectionKind,
 	responsiveMode?: SelectionResponsiveMode
@@ -47,17 +44,17 @@ SelectionIcon.peek = {
 SelectionIcon.displayName = 'Selection.Icon';
 SelectionIcon.propName = 'Icon';
 
+/** SELECTION LABEL */
 export interface ISelectionLabelProps extends StandardProps {}
 
 const SelectionLabel: FC<ISelectionLabelProps> = (): null => null;
 SelectionLabel.peek = {
-	description: `
-        Label for the Selection.
-    `,
+	description: `\`Label\` for the \`Selection\`.`,
 };
 SelectionLabel.displayName = 'Selection.Label';
 SelectionLabel.propName = 'Label';
 
+/** SELECTION */
 type SelectionKind =
 	| 'default'
 	| 'container'
@@ -163,7 +160,7 @@ const Selection = (props: ISelectionProps) => {
 
 	return (
 		<div
-			{...omitProps(passThroughs, undefined, _.keys(Selection.propTypes))}
+			{..._.omit(passThroughs, ['callbackId', 'Label'])}
 			className={cx(
 				'&',
 				`&-is-${responsiveMode}`,
