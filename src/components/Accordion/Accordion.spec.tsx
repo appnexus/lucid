@@ -32,7 +32,7 @@ describe('Accordion', () => {
 					</Accordion>
 				);
 
-				assert.equal(wrapper.find('.lucid-Accordion-Item').length, 2);
+				assert.strictEqual(wrapper.find('.lucid-Accordion-Item').length, 2);
 			});
 		});
 
@@ -47,7 +47,7 @@ describe('Accordion', () => {
 
 				const firstItem = wrapper.find('.lucid-Accordion-Item').first();
 
-				assert.equal(
+				assert.strictEqual(
 					firstItem.find('.lucid-ExpanderPanel-header').first().text(),
 					'Froyo'
 				);
@@ -66,7 +66,7 @@ describe('Accordion', () => {
 
 				const firstItem = wrapper.find('.lucid-Accordion-Item').first();
 
-				assert.equal(
+				assert.strictEqual(
 					firstItem.find('.lucid-ExpanderPanel-header').first().text(),
 					'Froyo'
 				);
@@ -117,12 +117,12 @@ describe('Accordion', () => {
 				);
 				const itemsWrapper = wrapper.find('.lucid-Accordion-Item');
 
-				assert.equal(
+				assert.strictEqual(
 					itemsWrapper.find('.TestOne').length,
 					1,
 					'must find one item with className `TestOne`'
 				);
-				assert.equal(
+				assert.strictEqual(
 					itemsWrapper.find('.TestTwo').length,
 					1,
 					'must find one item with className `TestTwo`'
@@ -166,7 +166,7 @@ describe('Accordion', () => {
 			firstPanel.find('.lucid-ExpanderPanel-header').first().simulate('click');
 			firstPanel.find('.lucid-ExpanderPanel-icon').first().simulate('click');
 
-			assert.equal(
+			assert.strictEqual(
 				onSelect.callCount,
 				2,
 				`onSelect called the wrong number of times, actual: ${onSelect.callCount}, expected: 2`

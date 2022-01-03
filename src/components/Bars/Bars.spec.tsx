@@ -52,7 +52,7 @@ describe('Bars', () => {
 					/>
 				);
 
-				assert.equal(wrapper.find(Bar).length, 3);
+				assert.strictEqual(wrapper.find(Bar).length, 3);
 			});
 		});
 
@@ -98,9 +98,9 @@ describe('Bars', () => {
 					/>
 				);
 
-				assert.equal(wrapper.find(Bar).at(0).prop('color'), 'r');
-				assert.equal(wrapper.find(Bar).at(1).prop('color'), 'g');
-				assert.equal(wrapper.find(Bar).at(2).prop('color'), 'r');
+				assert.strictEqual(wrapper.find(Bar).at(0).prop('color'), 'r');
+				assert.strictEqual(wrapper.find(Bar).at(1).prop('color'), 'g');
+				assert.strictEqual(wrapper.find(Bar).at(2).prop('color'), 'r');
 			});
 
 			it('should be beat when theres a colorMap', () => {
@@ -118,9 +118,9 @@ describe('Bars', () => {
 					/>
 				);
 
-				assert.equal(wrapper.find(Bar).at(0).prop('color'), 'r');
-				assert.equal(wrapper.find(Bar).at(1).prop('color'), '#ABC123');
-				assert.equal(wrapper.find(Bar).at(2).prop('color'), 'r');
+				assert.strictEqual(wrapper.find(Bar).at(0).prop('color'), 'r');
+				assert.strictEqual(wrapper.find(Bar).at(1).prop('color'), '#ABC123');
+				assert.strictEqual(wrapper.find(Bar).at(2).prop('color'), 'r');
 			});
 		});
 
@@ -137,7 +137,7 @@ describe('Bars', () => {
 					/>
 				);
 
-				assert.equal(wrapper.find(Bar).at(0).prop('color'), '#ABC333');
+				assert.strictEqual(wrapper.find(Bar).at(0).prop('color'), '#ABC333');
 			});
 		});
 
@@ -151,13 +151,13 @@ describe('Bars', () => {
 					/>
 				);
 
-				assert.equal(wrapper.find(Bar).length, 3, 'wrong number of Bar');
-				assert.equal(wrapper.find(Bar).at(0).prop('height'), 100);
-				assert.equal(
+				assert.strictEqual(wrapper.find(Bar).length, 3, 'wrong number of Bar');
+				assert.strictEqual(wrapper.find(Bar).at(0).prop('height'), 100);
+				assert.strictEqual(
 					wrapper.find(Bar).at(1).prop('height'),
 					550.00000000000001
 				);
-				assert.equal(wrapper.find(Bar).at(2).prop('height'), 1000);
+				assert.strictEqual(wrapper.find(Bar).at(2).prop('height'), 1000);
 			});
 		});
 
@@ -176,10 +176,10 @@ describe('Bars', () => {
 					/>
 				);
 
-				assert.equal(wrapper.find(Bar).length, 3, 'wrong number of Bar');
-				assert.equal(wrapper.find(Bar).at(0).prop('height'), 0);
-				assert.equal(wrapper.find(Bar).at(1).prop('height'), 500);
-				assert.equal(wrapper.find(Bar).at(2).prop('height'), 1000);
+				assert.strictEqual(wrapper.find(Bar).length, 3, 'wrong number of Bar');
+				assert.strictEqual(wrapper.find(Bar).at(0).prop('height'), 0);
+				assert.strictEqual(wrapper.find(Bar).at(1).prop('height'), 500);
+				assert.strictEqual(wrapper.find(Bar).at(2).prop('height'), 1000);
 			});
 		});
 
@@ -195,15 +195,15 @@ describe('Bars', () => {
 					/>
 				).find(PureToolTip);
 
-				assert.equal(
+				assert.strictEqual(
 					wrapper.at(0).shallow().find(ToolTip.Title).prop('children'),
 					'AYE'
 				);
-				assert.equal(
+				assert.strictEqual(
 					wrapper.at(1).shallow().find(ToolTip.Title).prop('children'),
 					'BEE'
 				);
-				assert.equal(
+				assert.strictEqual(
 					wrapper.at(2).shallow().find(ToolTip.Title).prop('children'),
 					'SEE'
 				);
@@ -222,15 +222,15 @@ describe('Bars', () => {
 					/>
 				).find(PureToolTip);
 
-				assert.equal(
+				assert.strictEqual(
 					wrapper.at(0).shallow().find(ToolTip.Title).prop('children'),
 					'AYE 20'
 				);
-				assert.equal(
+				assert.strictEqual(
 					wrapper.at(1).shallow().find(ToolTip.Title).prop('children'),
 					'BEE 35'
 				);
-				assert.equal(
+				assert.strictEqual(
 					wrapper.at(2).shallow().find(ToolTip.Title).prop('children'),
 					'SEE 3'
 				);
@@ -247,13 +247,13 @@ describe('Bars', () => {
 					/>
 				);
 
-				assert.equal(wrapper.find(Bar).length, 3, 'wrong number of Bar');
-				assert.equal(wrapper.find(Bar).at(0).prop('height'), 100);
-				assert.equal(
+				assert.strictEqual(wrapper.find(Bar).length, 3, 'wrong number of Bar');
+				assert.strictEqual(wrapper.find(Bar).at(0).prop('height'), 100);
+				assert.strictEqual(
 					wrapper.find(Bar).at(1).prop('height'),
 					550.00000000000001
 				);
-				assert.equal(wrapper.find(Bar).at(2).prop('height'), 1000);
+				assert.strictEqual(wrapper.find(Bar).at(2).prop('height'), 1000);
 			});
 
 			it('should work with time scales', () => {
@@ -283,16 +283,16 @@ describe('Bars', () => {
 					/>
 				);
 
-				assert.equal(wrapper.find(Bar).length, 3, 'wrong number of Bar');
+				assert.strictEqual(wrapper.find(Bar).length, 3, 'wrong number of Bar');
 
-				assert.equal(wrapper.find(Bar).at(0).prop('width'), 50);
-				assert.equal(wrapper.find(Bar).at(0).prop('height'), 0);
+				assert.strictEqual(wrapper.find(Bar).at(0).prop('width'), 50);
+				assert.strictEqual(wrapper.find(Bar).at(0).prop('height'), 0);
 
-				assert.equal(wrapper.find(Bar).at(1).prop('width'), 50);
-				assert.equal(wrapper.find(Bar).at(1).prop('height'), 500);
+				assert.strictEqual(wrapper.find(Bar).at(1).prop('width'), 50);
+				assert.strictEqual(wrapper.find(Bar).at(1).prop('height'), 500);
 
-				assert.equal(wrapper.find(Bar).at(2).prop('width'), 50);
-				assert.equal(wrapper.find(Bar).at(2).prop('height'), 1000);
+				assert.strictEqual(wrapper.find(Bar).at(2).prop('width'), 50);
+				assert.strictEqual(wrapper.find(Bar).at(2).prop('height'), 1000);
 			});
 		});
 
@@ -311,10 +311,10 @@ describe('Bars', () => {
 					/>
 				);
 
-				assert.equal(wrapper.find(Bar).length, 3, 'wrong number of Bar');
-				assert.equal(wrapper.find(Bar).at(0).prop('height'), 0);
-				assert.equal(wrapper.find(Bar).at(1).prop('height'), 500);
-				assert.equal(wrapper.find(Bar).at(2).prop('height'), 1000);
+				assert.strictEqual(wrapper.find(Bar).length, 3, 'wrong number of Bar');
+				assert.strictEqual(wrapper.find(Bar).at(0).prop('height'), 0);
+				assert.strictEqual(wrapper.find(Bar).at(1).prop('height'), 500);
+				assert.strictEqual(wrapper.find(Bar).at(2).prop('height'), 1000);
 			});
 
 			it('should handle multiple fields', () => {
@@ -331,16 +331,16 @@ describe('Bars', () => {
 					/>
 				);
 
-				assert.equal(wrapper.find(Bar).length, 6, 'wrong number of Bar');
-				assert.equal(wrapper.find(Bar).at(0).prop('width'), 16);
-				assert.equal(wrapper.find(Bar).at(0).prop('height'), 0);
-				assert.equal(wrapper.find(Bar).at(1).prop('height'), 1000);
+				assert.strictEqual(wrapper.find(Bar).length, 6, 'wrong number of Bar');
+				assert.strictEqual(wrapper.find(Bar).at(0).prop('width'), 16);
+				assert.strictEqual(wrapper.find(Bar).at(0).prop('height'), 0);
+				assert.strictEqual(wrapper.find(Bar).at(1).prop('height'), 1000);
 
-				assert.equal(wrapper.find(Bar).at(2).prop('height'), 500);
-				assert.equal(wrapper.find(Bar).at(3).prop('height'), 500);
+				assert.strictEqual(wrapper.find(Bar).at(2).prop('height'), 500);
+				assert.strictEqual(wrapper.find(Bar).at(3).prop('height'), 500);
 
-				assert.equal(wrapper.find(Bar).at(4).prop('height'), 1000);
-				assert.equal(wrapper.find(Bar).at(5).prop('height'), 0);
+				assert.strictEqual(wrapper.find(Bar).at(4).prop('height'), 1000);
+				assert.strictEqual(wrapper.find(Bar).at(5).prop('height'), 0);
 			});
 		});
 
@@ -356,15 +356,15 @@ describe('Bars', () => {
 					/>
 				).find(PureToolTip);
 
-				assert.equal(
+				assert.strictEqual(
 					wrapper.at(0).shallow().find(ToolTip.Title).prop('children'),
 					'AYE'
 				);
-				assert.equal(
+				assert.strictEqual(
 					wrapper.at(1).shallow().find(ToolTip.Title).prop('children'),
 					'BEE'
 				);
-				assert.equal(
+				assert.strictEqual(
 					wrapper.at(2).shallow().find(ToolTip.Title).prop('children'),
 					'SEE'
 				);
@@ -387,16 +387,19 @@ describe('Bars', () => {
 					/>
 				);
 
-				assert.equal(wrapper.find(Bar).length, 6, 'wrong number of Bar');
-				assert.equal(wrapper.find(Bar).at(0).prop('width'), 33.333333333333336);
-				assert.equal(wrapper.find(Bar).at(0).prop('height'), 0);
-				assert.equal(wrapper.find(Bar).at(1).prop('height'), 1000);
+				assert.strictEqual(wrapper.find(Bar).length, 6, 'wrong number of Bar');
+				assert.strictEqual(
+					wrapper.find(Bar).at(0).prop('width'),
+					33.333333333333336
+				);
+				assert.strictEqual(wrapper.find(Bar).at(0).prop('height'), 0);
+				assert.strictEqual(wrapper.find(Bar).at(1).prop('height'), 1000);
 
-				assert.equal(wrapper.find(Bar).at(2).prop('height'), 500);
-				assert.equal(wrapper.find(Bar).at(3).prop('height'), 500);
+				assert.strictEqual(wrapper.find(Bar).at(2).prop('height'), 500);
+				assert.strictEqual(wrapper.find(Bar).at(3).prop('height'), 500);
 
-				assert.equal(wrapper.find(Bar).at(4).prop('height'), 1000);
-				assert.equal(wrapper.find(Bar).at(5).prop('height'), 0);
+				assert.strictEqual(wrapper.find(Bar).at(4).prop('height'), 1000);
+				assert.strictEqual(wrapper.find(Bar).at(5).prop('height'), 0);
 			});
 		});
 
@@ -414,9 +417,9 @@ describe('Bars', () => {
 					/>
 				);
 
-				assert.equal(wrapper.find(Bar).at(0).prop('color'), 'g');
-				assert.equal(wrapper.find(Bar).at(1).prop('color'), 'r');
-				assert.equal(wrapper.find(Bar).at(2).prop('color'), 'g');
+				assert.strictEqual(wrapper.find(Bar).at(0).prop('color'), 'g');
+				assert.strictEqual(wrapper.find(Bar).at(1).prop('color'), 'r');
+				assert.strictEqual(wrapper.find(Bar).at(2).prop('color'), 'g');
 			});
 		});
 
@@ -434,15 +437,15 @@ describe('Bars', () => {
 					/>
 				);
 				const toolTip = wrapper.find(PureToolTip);
-				assert.equal(
+				assert.strictEqual(
 					toolTip.at(0).shallow().find(ToolTip.Body).prop('children'),
 					'AYE'
 				);
-				assert.equal(
+				assert.strictEqual(
 					toolTip.at(1).shallow().find(ToolTip.Body).prop('children'),
 					'BEE'
 				);
-				assert.equal(
+				assert.strictEqual(
 					toolTip.at(2).shallow().find(ToolTip.Body).prop('children'),
 					'SEE'
 				);

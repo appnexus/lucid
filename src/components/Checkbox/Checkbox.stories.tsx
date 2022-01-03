@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Meta } from '@storybook/react';
+
 import Checkbox from './Checkbox';
 
 export default {
@@ -8,7 +9,7 @@ export default {
 	parameters: {
 		docs: {
 			description: {
-				component: (Checkbox as any).peek.description,
+				component: Checkbox.peek.description,
 			},
 		},
 	},

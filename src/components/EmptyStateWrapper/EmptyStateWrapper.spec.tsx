@@ -26,6 +26,6 @@ describe('EmptyStateWrapper', () => {
 		const wrapper = shallow(<EmptyStateWrapper isEmpty />);
 
 		assert(wrapper.prop('isVisible'));
-		assert.equal(wrapper.prop('hasOverlay'), false);
+		assert.strictEqual(wrapper.prop('hasOverlay'), false);
 	});
 });

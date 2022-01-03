@@ -2,8 +2,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import _, { isNil } from 'lodash';
+
 import Portal from '../Portal/Portal';
-import { getFirst, omitProps, StandardProps } from '../../util/component-types';
+import { getFirst, StandardProps } from '../../util/component-types';
 import {
 	getAbsoluteBoundingClientRect,
 	sharesAncestor,
@@ -83,10 +84,7 @@ type GetAlignmentOffset = (n: number) => number;
 // `React.HTMLProps<HTMLElement>`? Related to issue #1045
 export interface IContextMenuProps
 	extends StandardProps,
-		React.DetailedHTMLProps<
-			React.HTMLAttributes<HTMLDivElement>,
-			HTMLDivElement
-		> {
+		React.HTMLAttributes<HTMLElement> {
 	/** direction of the FlyOut relative to Target. */
 	direction?: Direction;
 
@@ -127,6 +125,25 @@ export interface IContextMenuProps
 	FlyOut?: React.ReactNode;
 	Target?: React.ReactNode;
 }
+
+/** TODO: Remove this constant when the component is converted to a functional component */
+const nonPassthroughs = [
+	'children',
+	'className',
+	'style',
+	'direction',
+	'directonOffset',
+	'alignment',
+	'alignmentOffset',
+	'getAlignmentOffset',
+	'minWidthOffset',
+	'isExpanded',
+	'onClickOut',
+	'portalId',
+	'FlyOut',
+	'Target',
+];
+
 interface IContextMenuState {
 	portalId: string;
 	targetRect: {
@@ -148,7 +165,7 @@ class ContextMenu extends React.Component<
 > {
 	static displayName = 'ContextMenu';
 	static peek = {
-		description: `A \`ContextMenu\` component is used to render a target and a flyout which is positioned relative to the target.`,
+		description: `Use a \`ContextMenu\` to render a target and a flyout positioned relative to the target.`,
 		categories: ['utility'],
 		madeFrom: ['Portal'],
 	};
@@ -571,7 +588,8 @@ class ContextMenu extends React.Component<
 		return (
 			<TargetElementType
 				ref={this.targetRef}
-				{...omitProps(passThroughs, undefined, _.keys(ContextMenu.propTypes))}
+				// {...omitProps(passThroughs, undefined, _.keys(ContextMenu.propTypes))}
+				{..._.omit(passThroughs, nonPassthroughs)}
 				className={cx('&', className)}
 				style={style}
 			>

@@ -2,12 +2,19 @@
 
 exports[`Collapsible [common] example testing should match snapshot(s) for NotAnimated 1`] = `
 <section>
-  <button>
-    toggle
+  <button
+    class="lucid-Button"
+    type="button"
+  >
+    <span
+      class="lucid-Button-content"
+    >
+      toggle
+    </span>
   </button>
   <div
     class="lucid-Collapsible"
-    style="overflow:hidden;padding:0;background:lightgray"
+    style="overflow:hidden;padding:10px;background:#f4f2f2"
   >
     <div
       class="lucid-Collapsible-content"
@@ -26,12 +33,19 @@ exports[`Collapsible [common] example testing should match snapshot(s) for NotAn
 
 exports[`Collapsible [common] example testing should match snapshot(s) for RenderChildrenOnCollapse 1`] = `
 <section>
-  <button>
-    toggle
+  <button
+    class="lucid-Button"
+    type="button"
+  >
+    <span
+      class="lucid-Button-content"
+    >
+      toggle
+    </span>
   </button>
   <div
     class="lucid-Collapsible"
-    style="overflow:hidden;padding:0;background:lightgray"
+    style="overflow:hidden;padding:10px;background:#f4f2f2"
   >
     <div
       class="lucid-Collapsible-content"
@@ -88,12 +102,19 @@ exports[`Collapsible [common] example testing should match snapshot(s) for Rende
 
 exports[`Collapsible [common] example testing should match snapshot(s) for ToggleExpand 1`] = `
 <section>
-  <button>
-    toggle
+  <button
+    class="lucid-Button"
+    type="button"
+  >
+    <span
+      class="lucid-Button-content"
+    >
+      toggle
+    </span>
   </button>
   <div
     class="lucid-Collapsible"
-    style="overflow:hidden;padding:0;background:lightgray"
+    style="overflow:hidden;padding:10px;background:#f4f2f2"
   >
     <div
       class="lucid-Collapsible-content"
@@ -112,12 +133,19 @@ exports[`Collapsible [common] example testing should match snapshot(s) for Toggl
 
 exports[`Collapsible [common] example testing should match snapshot(s) for ToggleWithOnRestCallback 1`] = `
 <section>
-  <button>
-    toggle
+  <button
+    class="lucid-Button"
+    type="button"
+  >
+    <span
+      class="lucid-Button-content"
+    >
+      toggle
+    </span>
   </button>
   <div
     class="lucid-Collapsible"
-    style="overflow:hidden;padding:0;background:lightgray"
+    style="overflow:hidden;padding:10px;background:#f4f2f2"
   >
     <div
       class="lucid-Collapsible-content"
@@ -129,12 +157,19 @@ exports[`Collapsible [common] example testing should match snapshot(s) for Toggl
 
 exports[`Collapsible [common] example testing should match snapshot(s) for UnmountChildrenOnCollapse 1`] = `
 <section>
-  <button>
-    toggle
+  <button
+    class="lucid-Button"
+    type="button"
+  >
+    <span
+      class="lucid-Button-content"
+    >
+      toggle
+    </span>
   </button>
   <div
     class="lucid-Collapsible"
-    style="overflow:hidden;padding:0;background:lightgray"
+    style="overflow:hidden;padding:10px;background:#f4f2f2"
   >
     <div
       class="lucid-Collapsible-content"

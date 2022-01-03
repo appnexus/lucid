@@ -36,7 +36,7 @@ describe('ContextMenu', () => {
 					</ContextMenu>
 				);
 
-				assert.equal(
+				assert.strictEqual(
 					(document as any).getElementById('ContextMenu-test123'),
 					null
 				);
@@ -50,7 +50,7 @@ describe('ContextMenu', () => {
 					</ContextMenu>
 				);
 
-				assert.equal(
+				assert.strictEqual(
 					(document as any).getElementById('ContextMenu-test123').textContent,
 					'Open'
 				);
@@ -80,7 +80,7 @@ describe('ContextMenu', () => {
 					(document as any).getElementById('ContextMenu-test456').children
 				);
 				_.defer(() => {
-					assert.equal(flyout.style.opacity, 1);
+					assert.strictEqual(flyout.style.opacity, '1');
 					done();
 				});
 			});

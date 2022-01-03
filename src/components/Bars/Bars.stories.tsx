@@ -1,7 +1,9 @@
 import _ from 'lodash';
 import React from 'react';
-import createClass from 'create-react-class';
+import { Meta, Story } from '@storybook/react';
+
 import { Bars, d3Scale, chartConstants } from './../../index';
+import { IBarsProps } from '../Bars/Bars';
 
 export default {
 	title: 'Private/Bars',
@@ -9,14 +11,14 @@ export default {
 	parameters: {
 		docs: {
 			description: {
-				component: (Bars as any).peek.description,
+				component: Bars.peek.description,
 			},
 		},
 	},
-};
+} as Meta;
 
 /* Default */
-export const Default = () => {
+export const Default: Story<IBarsProps> = (args) => {
 	/* eslint-disable comma-spacing */
 
 	const width = 750;
@@ -58,41 +60,37 @@ export const Default = () => {
 		paddingTop: '9rem',
 	};
 
-	const Component = createClass({
-		render() {
-			return (
-				<div style={style}>
-					<svg width={width} height={height}>
-						<Bars
-							data={data}
-							xScale={xScale}
-							yScale={yScale}
-							yFields={yFields}
-							hasToolTips
-						/>
-					</svg>
+	return (
+		<div style={style}>
+			<svg width={width} height={height}>
+				<Bars
+					{...args}
+					data={data}
+					xScale={xScale}
+					yScale={yScale}
+					yFields={yFields}
+					hasToolTips
+				/>
+			</svg>
 
-					<svg width={width} height={height}>
-						<Bars
-							data={data}
-							xScale={xScale}
-							yScale={yScale}
-							yFields={yFields}
-							isStacked={true}
-							hasToolTips
-						/>
-					</svg>
-				</div>
-			);
-		},
-	});
-
-	return <Component />;
+			<svg width={width} height={height}>
+				<Bars
+					{...args}
+					data={data}
+					xScale={xScale}
+					yScale={yScale}
+					yFields={yFields}
+					isStacked={true}
+					hasToolTips
+				/>
+			</svg>
+		</div>
+	);
 };
 Default.storyName = 'Default';
 
 /* Custom Colors */
-export const CustomColors = () => {
+export const CustomColors: Story<IBarsProps> = (args) => {
 	/* eslint-disable comma-spacing */
 
 	const width = 750;
@@ -134,34 +132,29 @@ export const CustomColors = () => {
 		paddingTop: '9rem',
 	};
 
-	const Component = createClass({
-		render() {
-			return (
-				<div style={style}>
-					<svg width={width} height={height}>
-						<Bars
-							data={data}
-							xScale={xScale}
-							yScale={yScale}
-							yFields={yFields}
-							colorMap={{
-								y0: chartConstants.COLOR_GOOD,
-								y2: chartConstants.COLOR_BAD,
-							}}
-							hasToolTips
-						/>
-					</svg>
-				</div>
-			);
-		},
-	});
-
-	return <Component />;
+	return (
+		<div style={style}>
+			<svg width={width} height={height}>
+				<Bars
+					{...args}
+					data={data}
+					xScale={xScale}
+					yScale={yScale}
+					yFields={yFields}
+					colorMap={{
+						y0: chartConstants.COLOR_GOOD,
+						y2: chartConstants.COLOR_BAD,
+					}}
+					hasToolTips
+				/>
+			</svg>
+		</div>
+	);
 };
-CustomColors.storyName = 'CustomColors';
+CustomColors.storyName = 'Custom Colors';
 
 /* Log Scale */
-export const LogScale = () => {
+export const LogScale: Story<IBarsProps> = (args) => {
 	const data: Array<{ [key: string]: string | number }> = [
 		{ x: 'one', y: 10 },
 		{ x: 'two', y: 100 },
@@ -183,7 +176,7 @@ export const LogScale = () => {
 	return (
 		<svg height={600} width={1000}>
 			<g>
-				<Bars data={data} xScale={xScale} yScale={yScale} />
+				<Bars {...args} data={data} xScale={xScale} yScale={yScale} />
 			</g>
 			<g>
 				{_.map(data, (item) => {
@@ -202,4 +195,4 @@ export const LogScale = () => {
 		</svg>
 	);
 };
-LogScale.storyName = 'LogScale';
+LogScale.storyName = 'Log Scale';
