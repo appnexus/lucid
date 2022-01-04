@@ -4,9 +4,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { mount, shallow, render } from 'enzyme';
 import assert from 'assert';
-import _, { each, omit, noop } from 'lodash';
+import _, { each, omit } from 'lodash';
 import glob from 'glob';
-import * as lucid from '../index';
 import { addons, mockChannel } from '@storybook/addons';
 
 addons.setChannel(mockChannel());
@@ -224,6 +223,7 @@ export function common(Component: any, config: ICommonConfig = {} as any) {
 		// Only run this test if it's a public component
 		if (!Component._isPrivate && !noExport) {
 			it('should be available as an exported module from index.ts', () => {
+				const lucid = require('../index');
 				assert((lucid as any)[Component.displayName]);
 			});
 		}
