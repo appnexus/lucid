@@ -203,9 +203,11 @@ exports[`CheckboxLabeled [common] example testing should match snapshot(s) for L
 >
   <div
     class="lucid-Checkbox lucid-CheckboxLabeled-Checkbox"
+    title="Label as Child"
   >
     <input
       class="lucid-Checkbox-native"
+      title="Label as Child"
       type="checkbox"
     />
     <span
