@@ -43,7 +43,7 @@ export const Default = () => {
 			return (
 				<div style={style}>
 					<DraggableLineChart
-						onDragEnd={(x, y) => console.log({ x, y })}
+						onDragEnd={(x, y) => console.info({ x, y })}
 						data={data}
 						width={900}
 						xAxisTicksVertical={true}

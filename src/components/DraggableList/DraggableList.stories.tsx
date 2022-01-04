@@ -37,7 +37,7 @@ export const Default: Story<IDraggableListProps> = (args) => {
 			(column: string, index: number) => index !== oldIndex
 		);
 		updatedItems.splice(newIndex, 0, items[oldIndex]);
-		console.log(updatedItems);
+		console.info(updatedItems);
 		setItems(updatedItems);
 	};
 
