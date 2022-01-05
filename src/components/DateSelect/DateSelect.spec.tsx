@@ -1,18 +1,14 @@
 import { shallow } from 'enzyme';
 import React from 'react';
 import { common, mockDate } from '../../util/generic-tests';
-import { DateSelectDumb as DateSelect } from './DateSelect';
 
 describe('DateSelect', () => {
+	mockDate('2021-12-01T14:25:23-0800');
+
+	// Must load ./CalendarMonth after mocking date
+	const DateSelect = require('./DateSelect').DateSelectDumb;
+
 	describe('common tests', () => {
-		beforeEach(() => {
-			mockDate('2016-02-17T14:25:23-0800');
-		});
-
-		afterEach(() => {
-			mockDate.restore();
-		});
-
 		common(DateSelect);
 	});
 
