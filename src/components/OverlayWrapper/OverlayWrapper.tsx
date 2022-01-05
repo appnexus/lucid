@@ -126,11 +126,7 @@ export const OverlayWrapper = (
 OverlayWrapper.defaultProps = defaultProps;
 OverlayWrapper.displayName = 'OverlayWrapper';
 OverlayWrapper.peek = {
-	description: `
-		A wrapper with optional overlay to wrap content. \`Overlay\` is meant
-		for overlaying an entire page, while this component is meant to wrap
-		another component and cover its content.
-	`,
+	description: `A wrapper with optional overlay to wrap content. \`Overlay\` is meant for overlaying an entire page, while this component is meant to wrap another component and cover its content.`,
 	categories: ['utility'],
 };
 OverlayWrapper.propTypes = {

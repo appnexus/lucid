@@ -10,12 +10,7 @@ const cx = lucidClassNames.bind('&-Overlay');
 
 const { string, bool, func, node } = PropTypes;
 
-export interface IOverlayProps
-	extends StandardProps,
-		React.DetailedHTMLProps<
-			React.HTMLAttributes<HTMLDivElement>,
-			HTMLDivElement
-		> {
+export interface IOverlayProps extends StandardProps {
 	/** Controls visibility. */
 	isShown: boolean;
 

@@ -40,6 +40,16 @@ export interface IEmptyStateWrapperProps extends StandardProps {
 	anchorMessage: boolean;
 }
 
+const nonPassthroughs = [
+	'className',
+	'children',
+	'isEmpty',
+	'isLoading',
+	'anchorMessage',
+	'Body',
+	'Title',
+];
+
 const defaultProps = {
 	isEmpty: false,
 	isLoading: false,
@@ -73,7 +83,7 @@ export const EmptyStateWrapper = (
 		<LoadingIndicator
 			className={cx('&', className)}
 			isLoading
-			{...(passThroughs as any)}
+			{..._.omit(passThroughs, nonPassthroughs)}
 			anchorMessage={anchorMessage}
 		>
 			{children}
@@ -84,7 +94,7 @@ export const EmptyStateWrapper = (
 			hasOverlay={false}
 			isVisible={isEmpty}
 			anchorMessage={anchorMessage}
-			{...(passThroughs as any)}
+			{..._.omit(passThroughs, nonPassthroughs)}
 		>
 			<OverlayWrapperMessage className={cx('&-message-container')}>
 				<div className={cx('&-message-header')} />

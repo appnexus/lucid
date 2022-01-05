@@ -1624,7 +1624,7 @@ exports[`LoadingIndicator [common] example testing should match snapshot(s) for 
     </g>
   </svg>
   <div
-    class="lucid-OverlayWrapper-message-container lucid-OverlayWrapper-has-overlay"
+    class="lucid-OverlayWrapper-message-container lucid-OverlayWrapper-has-overlay lucid-OverlayWrapper-kind-light"
   >
     <div>
       <div
@@ -2532,7 +2532,7 @@ exports[`LoadingIndicator [common] example testing should match snapshot(s) for 
     </g>
   </svg>
   <div
-    class="lucid-OverlayWrapper-message-container"
+    class="lucid-OverlayWrapper-message-container lucid-OverlayWrapper-has-overlay lucid-OverlayWrapper-kind-light"
   >
     <div>
       <div

@@ -2,9 +2,7 @@
 
 exports[`DataTable [common] example testing should match snapshot(s) for ColumnGroups 1`] = `
 <div
-  body="Try creating a new object or removing a filter."
   class="lucid-OverlayWrapper lucid-EmptyStateWrapper"
-  title="No items found."
 >
   <div
     class="lucid-ScrollTable lucid-DataTable"
@@ -863,9 +861,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for ColumnG
 
 exports[`DataTable [common] example testing should match snapshot(s) for Default 1`] = `
 <div
-  body="Try creating a new object or removing a filter."
   class="lucid-OverlayWrapper lucid-EmptyStateWrapper"
-  title="No items found."
 >
   <div
     class="lucid-ScrollTable lucid-DataTable"
@@ -1668,9 +1664,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for Default
 
 exports[`DataTable [common] example testing should match snapshot(s) for DisabledRows 1`] = `
 <div
-  body="Try creating a new object or removing a filter."
   class="lucid-OverlayWrapper lucid-EmptyStateWrapper"
-  title="No items found."
 >
   <div
     class="lucid-ScrollTable lucid-DataTable"
@@ -2473,9 +2467,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for Disable
 
 exports[`DataTable [common] example testing should match snapshot(s) for Empty 1`] = `
 <div
-  body="Try creating a new object or removing a filter."
   class="lucid-OverlayWrapper lucid-EmptyStateWrapper"
-  title="No items found."
 >
   <div
     class="lucid-ScrollTable lucid-DataTable lucid-DataTable-full-width"
@@ -2874,9 +2866,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for Empty 1
 
 exports[`DataTable [common] example testing should match snapshot(s) for EmptyWithAnchoredMessage 1`] = `
 <div
-  body="Try creating a new object or removing a filter."
   class="lucid-OverlayWrapper lucid-EmptyStateWrapper"
-  title="No items found."
 >
   <div
     class="lucid-ScrollTable lucid-DataTable lucid-DataTable-full-width"
@@ -4547,9 +4537,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for FixedHe
     style="height:200px"
   >
     <div
-      body="Try creating a new object or removing a filter."
       class="lucid-OverlayWrapper lucid-EmptyStateWrapper lucid-DataTable-EmptyStateWrapper-has-fixed-header"
-      title="No items found."
     >
       <div
         class="lucid-DataTable-fixed"
@@ -5823,9 +5811,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for FixedHe
 exports[`DataTable [common] example testing should match snapshot(s) for InteractiveTable 1`] = `
 <div>
   <div
-    body="Try creating a new object or removing a filter."
     class="lucid-OverlayWrapper lucid-EmptyStateWrapper"
-    title="No items found."
   >
     <div
       class="lucid-ScrollTable lucid-DataTable"
@@ -7078,9 +7064,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for Interac
 
 exports[`DataTable [common] example testing should match snapshot(s) for Loading 1`] = `
 <div
-  body="Try creating a new object or removing a filter."
   class="lucid-OverlayWrapper lucid-LoadingIndicator lucid-EmptyStateWrapper"
-  title="No items found."
 >
   <div
     class="lucid-ScrollTable lucid-DataTable lucid-DataTable-full-width"
@@ -8620,9 +8604,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for Loading
 
 exports[`DataTable [common] example testing should match snapshot(s) for LoadingWithAnchoredMessage 1`] = `
 <div
-  body="Try creating a new object or removing a filter."
   class="lucid-OverlayWrapper lucid-LoadingIndicator lucid-EmptyStateWrapper"
-  title="No items found."
 >
   <div
     class="lucid-ScrollTable lucid-DataTable lucid-DataTable-full-width"
@@ -9182,9 +9164,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for Loading
 
 exports[`DataTable [common] example testing should match snapshot(s) for MinRows 1`] = `
 <div
-  body="Try creating a new object or removing a filter."
   class="lucid-OverlayWrapper lucid-EmptyStateWrapper"
-  title="No items found."
 >
   <div
     class="lucid-ScrollTable lucid-DataTable lucid-DataTable-full-width"
@@ -10027,9 +10007,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for Resizab
     style="height:200px"
   >
     <div
-      body="Try creating a new object or removing a filter."
       class="lucid-OverlayWrapper lucid-EmptyStateWrapper lucid-DataTable-EmptyStateWrapper-has-fixed-header"
-      title="No items found."
     >
       <div
         class="lucid-DataTable-fixed"
@@ -11323,9 +11301,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for Resizab
 
 exports[`DataTable [common] example testing should match snapshot(s) for SelectableAndNavigableRows 1`] = `
 <div
-  body="Try creating a new object or removing a filter."
   class="lucid-OverlayWrapper lucid-EmptyStateWrapper"
-  title="No items found."
 >
   <div
     class="lucid-ScrollTable lucid-DataTable"
@@ -12495,9 +12471,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for Selecta
 
 exports[`DataTable [common] example testing should match snapshot(s) for TruncateContent 1`] = `
 <div
-  body="Try creating a new object or removing a filter."
   class="lucid-OverlayWrapper lucid-EmptyStateWrapper lucid-DataTable-EmptyStateWrapper-has-fixed-header"
-  title="No items found."
 >
   <div
     class="lucid-DataTable-fixed"
