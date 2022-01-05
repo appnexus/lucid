@@ -18,7 +18,7 @@ export default {
 	},
 } as Meta;
 
-export const Default: Story<IBannerProps> = (args) => (
+export const Basic: Story<IBannerProps> = (args) => (
 	<Banner {...args}>Default</Banner>
 );
 

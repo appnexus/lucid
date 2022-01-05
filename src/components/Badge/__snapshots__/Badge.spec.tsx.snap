@@ -61,7 +61,7 @@ exports[`Badge [common] example testing should match snapshot(s) for AllTypes 1`
 </div>
 `;
 
-exports[`Badge [common] example testing should match snapshot(s) for Default 1`] = `
+exports[`Badge [common] example testing should match snapshot(s) for Basic 1`] = `
 <span
   class="lucid-Badge lucid-Badge-default lucid-Badge-filled"
 >

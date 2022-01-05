@@ -44,7 +44,6 @@ export const WithContent: Story<IPanelProps> = (args) => {
 		</Panel>
 	);
 };
-WithContent.storyName = 'With Content';
 
 /* With Header */
 export const WithHeader: Story<IPanelProps> = (args) => {
@@ -74,7 +73,6 @@ export const WithHeader: Story<IPanelProps> = (args) => {
 		</Panel>
 	);
 };
-WithHeader.storyName = 'With Header';
 
 /* With Icon Header */
 export const WithIconHeader: Story<IPanelProps> = (args) => {
@@ -105,7 +103,6 @@ export const WithIconHeader: Story<IPanelProps> = (args) => {
 		</Panel>
 	);
 };
-WithIconHeader.storyName = 'With Icon Header';
 
 /* With Header And Footer */
 export const WithHeaderAndFooter: Story<IPanelProps> = (args) => {
@@ -136,7 +133,6 @@ export const WithHeaderAndFooter: Story<IPanelProps> = (args) => {
 		</Panel>
 	);
 };
-WithHeaderAndFooter.storyName = 'With Header And Footer';
 
 /* Scrollable Content */
 export const ScrollableContent: Story<IPanelProps> = (args) => {
@@ -187,7 +183,6 @@ export const ScrollableContent: Story<IPanelProps> = (args) => {
 		</Panel>
 	);
 };
-ScrollableContent.storyName = 'Scrollable Content';
 
 /* No Margins */
 export const NoMargins: Story<IPanelProps> = (args) => {
@@ -233,7 +228,6 @@ export const NoMargins: Story<IPanelProps> = (args) => {
 		</Panel>
 	);
 };
-NoMargins.storyName = 'No Margins';
 
 /* No Content Padding */
 export const NoContentPadding: Story<IPanelProps> = (args) => {
@@ -279,7 +273,6 @@ export const NoContentPadding: Story<IPanelProps> = (args) => {
 		</Panel>
 	);
 };
-NoContentPadding.storyName = 'No Content Padding';
 
 /* No Margins Or Content Padding */
 export const NoMarginsOrContentPadding: Story<IPanelProps> = (args) => {

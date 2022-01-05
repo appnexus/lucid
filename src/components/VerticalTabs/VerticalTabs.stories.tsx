@@ -41,8 +41,8 @@ const Template: any = (args) => {
 //👇 Each story then reuses that template
 
 /** Default: Title as Prop */
-export const Default = Template.bind({});
-Default.args = {
+export const Basic = Template.bind({});
+Basic.args = {
 	children: addKeys([
 		<Tab Title='One'>One content</Tab>,
 		<Tab Title='Two'>Two content</Tab>,

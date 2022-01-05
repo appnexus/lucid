@@ -1,5 +1,38 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`SearchField [common] example testing should match snapshot(s) for Basic 1`] = `
+<div
+  class="lucid-SearchField"
+>
+  <input
+    class="lucid-TextField lucid-TextField-is-single-line"
+    rows="5"
+    type="text"
+    value=""
+  />
+  <div
+    class="lucid-SearchField-Icon-container"
+  >
+    <svg
+      class="lucid-Icon lucid-Icon-color-primary lucid-SearchIcon lucid-SearchField-Icon"
+      height="12"
+      preserveAspectRatio="xMidYMid meet"
+      viewBox="0 0 16 16"
+      width="12"
+    >
+      <circle
+        cx="6"
+        cy="6"
+        r="5.5"
+      />
+      <path
+        d="M15.5 15.5L9.876 9.876"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
 exports[`SearchField [common] example testing should match snapshot(s) for CustomIcon 1`] = `
 <div
   class="lucid-SearchField"
@@ -142,39 +175,6 @@ exports[`SearchField [common] example testing should match snapshot(s) for Debou
       Set TextField to "foo"
     </span>
   </button>
-</div>
-`;
-
-exports[`SearchField [common] example testing should match snapshot(s) for Default 1`] = `
-<div
-  class="lucid-SearchField"
->
-  <input
-    class="lucid-TextField lucid-TextField-is-single-line"
-    rows="5"
-    type="text"
-    value=""
-  />
-  <div
-    class="lucid-SearchField-Icon-container"
-  >
-    <svg
-      class="lucid-Icon lucid-Icon-color-primary lucid-SearchIcon lucid-SearchField-Icon"
-      height="12"
-      preserveAspectRatio="xMidYMid meet"
-      viewBox="0 0 16 16"
-      width="12"
-    >
-      <circle
-        cx="6"
-        cy="6"
-        r="5.5"
-      />
-      <path
-        d="M15.5 15.5L9.876 9.876"
-      />
-    </svg>
-  </div>
 </div>
 `;
 

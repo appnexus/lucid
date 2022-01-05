@@ -1,5 +1,628 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`PieChart [common] example testing should match snapshot(s) for Basic 1`] = `
+<div
+  style="padding-top:4rem"
+>
+  <svg
+    class="lucid-PieChart"
+    height="200"
+    width="200"
+  >
+    <g
+      class="lucid-ContextMenu lucid-ToolTip"
+    >
+      <g
+        transform="translate(10, 10)"
+      >
+        <g
+          transform="translate(90, 90)"
+        >
+          <g
+            class="lucid-PieChart-slice-group"
+          >
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-3"
+              d="60"
+              transform="scale(1)"
+            />
+            <path
+              class="lucid-PieChart-slice-hover"
+              d="60"
+              transform="scale(1.1)"
+            />
+          </g>
+          <g
+            class="lucid-PieChart-slice-group"
+          >
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-0-darkest"
+              d="40"
+              transform="scale(1)"
+            />
+            <path
+              class="lucid-PieChart-slice-hover"
+              d="40"
+              transform="scale(1.1)"
+            />
+          </g>
+          <g
+            class="lucid-PieChart-slice-group"
+          >
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-2"
+              d="30"
+              transform="scale(1)"
+            />
+            <path
+              class="lucid-PieChart-slice-hover"
+              d="30"
+              transform="scale(1.1)"
+            />
+          </g>
+          <g
+            class="lucid-PieChart-slice-group"
+          >
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-4-lightest"
+              d="20"
+              transform="scale(1)"
+            />
+            <path
+              class="lucid-PieChart-slice-hover"
+              d="20"
+              transform="scale(1.1)"
+            />
+          </g>
+          <g
+            class="lucid-PieChart-slice-group"
+          >
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-5"
+              d="15"
+              transform="scale(1)"
+            />
+            <path
+              class="lucid-PieChart-slice-hover"
+              d="15"
+              transform="scale(1.1)"
+            />
+          </g>
+        </g>
+      </g>
+    </g>
+  </svg>
+  <svg
+    class="lucid-PieChart"
+    height="200"
+    width="200"
+  >
+    <g
+      class="lucid-ContextMenu lucid-ToolTip"
+    >
+      <g
+        transform="translate(10, 10)"
+      >
+        <g
+          transform="translate(90, 90)"
+        >
+          <g
+            class="lucid-PieChart-slice-group"
+          >
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-0-lightest"
+              d="60"
+              transform="scale(1)"
+            />
+            <path
+              class="lucid-PieChart-slice-hover"
+              d="60"
+              transform="scale(1.1)"
+            />
+          </g>
+          <g
+            class="lucid-PieChart-slice-group"
+          >
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-0-light"
+              d="40"
+              transform="scale(1)"
+            />
+            <path
+              class="lucid-PieChart-slice-hover"
+              d="40"
+              transform="scale(1.1)"
+            />
+          </g>
+          <g
+            class="lucid-PieChart-slice-group"
+          >
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-0"
+              d="30"
+              transform="scale(1)"
+            />
+            <path
+              class="lucid-PieChart-slice-hover"
+              d="30"
+              transform="scale(1.1)"
+            />
+          </g>
+          <g
+            class="lucid-PieChart-slice-group"
+          >
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-0-dark"
+              d="20"
+              transform="scale(1)"
+            />
+            <path
+              class="lucid-PieChart-slice-hover"
+              d="20"
+              transform="scale(1.1)"
+            />
+          </g>
+          <g
+            class="lucid-PieChart-slice-group"
+          >
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-0-darkest"
+              d="15"
+              transform="scale(1)"
+            />
+            <path
+              class="lucid-PieChart-slice-hover"
+              d="15"
+              transform="scale(1.1)"
+            />
+          </g>
+        </g>
+      </g>
+    </g>
+  </svg>
+  <svg
+    class="lucid-PieChart"
+    height="200"
+    width="200"
+  >
+    <g
+      class="lucid-ContextMenu lucid-ToolTip"
+    >
+      <g
+        transform="translate(10, 10)"
+      >
+        <g
+          transform="translate(90, 90)"
+        >
+          <g
+            class="lucid-PieChart-slice-group"
+          >
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-1-lightest"
+              d="60"
+              transform="scale(1)"
+            />
+            <path
+              class="lucid-PieChart-slice-hover"
+              d="60"
+              transform="scale(1.1)"
+            />
+          </g>
+          <g
+            class="lucid-PieChart-slice-group"
+          >
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-1-light"
+              d="40"
+              transform="scale(1)"
+            />
+            <path
+              class="lucid-PieChart-slice-hover"
+              d="40"
+              transform="scale(1.1)"
+            />
+          </g>
+          <g
+            class="lucid-PieChart-slice-group"
+          >
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-1"
+              d="30"
+              transform="scale(1)"
+            />
+            <path
+              class="lucid-PieChart-slice-hover"
+              d="30"
+              transform="scale(1.1)"
+            />
+          </g>
+          <g
+            class="lucid-PieChart-slice-group"
+          >
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-1-dark"
+              d="20"
+              transform="scale(1)"
+            />
+            <path
+              class="lucid-PieChart-slice-hover"
+              d="20"
+              transform="scale(1.1)"
+            />
+          </g>
+          <g
+            class="lucid-PieChart-slice-group"
+          >
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-1-darkest"
+              d="15"
+              transform="scale(1)"
+            />
+            <path
+              class="lucid-PieChart-slice-hover"
+              d="15"
+              transform="scale(1.1)"
+            />
+          </g>
+        </g>
+      </g>
+    </g>
+  </svg>
+  <svg
+    class="lucid-PieChart"
+    height="200"
+    width="200"
+  >
+    <g
+      class="lucid-ContextMenu lucid-ToolTip"
+    >
+      <g
+        transform="translate(10, 10)"
+      >
+        <g
+          transform="translate(90, 90)"
+        >
+          <g
+            class="lucid-PieChart-slice-group"
+          >
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-2-lightest"
+              d="60"
+              transform="scale(1)"
+            />
+            <path
+              class="lucid-PieChart-slice-hover"
+              d="60"
+              transform="scale(1.1)"
+            />
+          </g>
+          <g
+            class="lucid-PieChart-slice-group"
+          >
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-2-light"
+              d="40"
+              transform="scale(1)"
+            />
+            <path
+              class="lucid-PieChart-slice-hover"
+              d="40"
+              transform="scale(1.1)"
+            />
+          </g>
+          <g
+            class="lucid-PieChart-slice-group"
+          >
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-2"
+              d="30"
+              transform="scale(1)"
+            />
+            <path
+              class="lucid-PieChart-slice-hover"
+              d="30"
+              transform="scale(1.1)"
+            />
+          </g>
+          <g
+            class="lucid-PieChart-slice-group"
+          >
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-2-dark"
+              d="20"
+              transform="scale(1)"
+            />
+            <path
+              class="lucid-PieChart-slice-hover"
+              d="20"
+              transform="scale(1.1)"
+            />
+          </g>
+          <g
+            class="lucid-PieChart-slice-group"
+          >
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-2-darkest"
+              d="15"
+              transform="scale(1)"
+            />
+            <path
+              class="lucid-PieChart-slice-hover"
+              d="15"
+              transform="scale(1.1)"
+            />
+          </g>
+        </g>
+      </g>
+    </g>
+  </svg>
+  <svg
+    class="lucid-PieChart"
+    height="200"
+    width="200"
+  >
+    <g
+      class="lucid-ContextMenu lucid-ToolTip"
+    >
+      <g
+        transform="translate(10, 10)"
+      >
+        <g
+          transform="translate(90, 90)"
+        >
+          <g
+            class="lucid-PieChart-slice-group"
+          >
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-3-lightest"
+              d="60"
+              transform="scale(1)"
+            />
+            <path
+              class="lucid-PieChart-slice-hover"
+              d="60"
+              transform="scale(1.1)"
+            />
+          </g>
+          <g
+            class="lucid-PieChart-slice-group"
+          >
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-3-light"
+              d="40"
+              transform="scale(1)"
+            />
+            <path
+              class="lucid-PieChart-slice-hover"
+              d="40"
+              transform="scale(1.1)"
+            />
+          </g>
+          <g
+            class="lucid-PieChart-slice-group"
+          >
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-3"
+              d="30"
+              transform="scale(1)"
+            />
+            <path
+              class="lucid-PieChart-slice-hover"
+              d="30"
+              transform="scale(1.1)"
+            />
+          </g>
+          <g
+            class="lucid-PieChart-slice-group"
+          >
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-3-dark"
+              d="20"
+              transform="scale(1)"
+            />
+            <path
+              class="lucid-PieChart-slice-hover"
+              d="20"
+              transform="scale(1.1)"
+            />
+          </g>
+          <g
+            class="lucid-PieChart-slice-group"
+          >
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-3-darkest"
+              d="15"
+              transform="scale(1)"
+            />
+            <path
+              class="lucid-PieChart-slice-hover"
+              d="15"
+              transform="scale(1.1)"
+            />
+          </g>
+        </g>
+      </g>
+    </g>
+  </svg>
+  <svg
+    class="lucid-PieChart"
+    height="200"
+    width="200"
+  >
+    <g
+      class="lucid-ContextMenu lucid-ToolTip"
+    >
+      <g
+        transform="translate(10, 10)"
+      >
+        <g
+          transform="translate(90, 90)"
+        >
+          <g
+            class="lucid-PieChart-slice-group"
+          >
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-4-lightest"
+              d="60"
+              transform="scale(1)"
+            />
+            <path
+              class="lucid-PieChart-slice-hover"
+              d="60"
+              transform="scale(1.1)"
+            />
+          </g>
+          <g
+            class="lucid-PieChart-slice-group"
+          >
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-4-light"
+              d="40"
+              transform="scale(1)"
+            />
+            <path
+              class="lucid-PieChart-slice-hover"
+              d="40"
+              transform="scale(1.1)"
+            />
+          </g>
+          <g
+            class="lucid-PieChart-slice-group"
+          >
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-4"
+              d="30"
+              transform="scale(1)"
+            />
+            <path
+              class="lucid-PieChart-slice-hover"
+              d="30"
+              transform="scale(1.1)"
+            />
+          </g>
+          <g
+            class="lucid-PieChart-slice-group"
+          >
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-4-dark"
+              d="20"
+              transform="scale(1)"
+            />
+            <path
+              class="lucid-PieChart-slice-hover"
+              d="20"
+              transform="scale(1.1)"
+            />
+          </g>
+          <g
+            class="lucid-PieChart-slice-group"
+          >
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-4-darkest"
+              d="15"
+              transform="scale(1)"
+            />
+            <path
+              class="lucid-PieChart-slice-hover"
+              d="15"
+              transform="scale(1.1)"
+            />
+          </g>
+        </g>
+      </g>
+    </g>
+  </svg>
+  <svg
+    class="lucid-PieChart"
+    height="200"
+    width="200"
+  >
+    <g
+      class="lucid-ContextMenu lucid-ToolTip"
+    >
+      <g
+        transform="translate(10, 10)"
+      >
+        <g
+          transform="translate(90, 90)"
+        >
+          <g
+            class="lucid-PieChart-slice-group"
+          >
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-5-lightest"
+              d="60"
+              transform="scale(1)"
+            />
+            <path
+              class="lucid-PieChart-slice-hover"
+              d="60"
+              transform="scale(1.1)"
+            />
+          </g>
+          <g
+            class="lucid-PieChart-slice-group"
+          >
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-5-light"
+              d="40"
+              transform="scale(1)"
+            />
+            <path
+              class="lucid-PieChart-slice-hover"
+              d="40"
+              transform="scale(1.1)"
+            />
+          </g>
+          <g
+            class="lucid-PieChart-slice-group"
+          >
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-5"
+              d="30"
+              transform="scale(1)"
+            />
+            <path
+              class="lucid-PieChart-slice-hover"
+              d="30"
+              transform="scale(1.1)"
+            />
+          </g>
+          <g
+            class="lucid-PieChart-slice-group"
+          >
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-5-dark"
+              d="20"
+              transform="scale(1)"
+            />
+            <path
+              class="lucid-PieChart-slice-hover"
+              d="20"
+              transform="scale(1.1)"
+            />
+          </g>
+          <g
+            class="lucid-PieChart-slice-group"
+          >
+            <path
+              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-5-darkest"
+              d="15"
+              transform="scale(1)"
+            />
+            <path
+              class="lucid-PieChart-slice-hover"
+              d="15"
+              transform="scale(1.1)"
+            />
+          </g>
+        </g>
+      </g>
+    </g>
+  </svg>
+</div>
+`;
+
 exports[`PieChart [common] example testing should match snapshot(s) for BasicDonuts 1`] = `
 <div
   style="padding-top:4rem"
@@ -708,629 +1331,6 @@ exports[`PieChart [common] example testing should match snapshot(s) for ColorMap
             <path
               class="lucid-PieChart-slice-hover"
               d="40"
-              transform="scale(1.1)"
-            />
-          </g>
-        </g>
-      </g>
-    </g>
-  </svg>
-</div>
-`;
-
-exports[`PieChart [common] example testing should match snapshot(s) for Default 1`] = `
-<div
-  style="padding-top:4rem"
->
-  <svg
-    class="lucid-PieChart"
-    height="200"
-    width="200"
-  >
-    <g
-      class="lucid-ContextMenu lucid-ToolTip"
-    >
-      <g
-        transform="translate(10, 10)"
-      >
-        <g
-          transform="translate(90, 90)"
-        >
-          <g
-            class="lucid-PieChart-slice-group"
-          >
-            <path
-              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-3"
-              d="60"
-              transform="scale(1)"
-            />
-            <path
-              class="lucid-PieChart-slice-hover"
-              d="60"
-              transform="scale(1.1)"
-            />
-          </g>
-          <g
-            class="lucid-PieChart-slice-group"
-          >
-            <path
-              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-0-darkest"
-              d="40"
-              transform="scale(1)"
-            />
-            <path
-              class="lucid-PieChart-slice-hover"
-              d="40"
-              transform="scale(1.1)"
-            />
-          </g>
-          <g
-            class="lucid-PieChart-slice-group"
-          >
-            <path
-              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-2"
-              d="30"
-              transform="scale(1)"
-            />
-            <path
-              class="lucid-PieChart-slice-hover"
-              d="30"
-              transform="scale(1.1)"
-            />
-          </g>
-          <g
-            class="lucid-PieChart-slice-group"
-          >
-            <path
-              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-4-lightest"
-              d="20"
-              transform="scale(1)"
-            />
-            <path
-              class="lucid-PieChart-slice-hover"
-              d="20"
-              transform="scale(1.1)"
-            />
-          </g>
-          <g
-            class="lucid-PieChart-slice-group"
-          >
-            <path
-              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-5"
-              d="15"
-              transform="scale(1)"
-            />
-            <path
-              class="lucid-PieChart-slice-hover"
-              d="15"
-              transform="scale(1.1)"
-            />
-          </g>
-        </g>
-      </g>
-    </g>
-  </svg>
-  <svg
-    class="lucid-PieChart"
-    height="200"
-    width="200"
-  >
-    <g
-      class="lucid-ContextMenu lucid-ToolTip"
-    >
-      <g
-        transform="translate(10, 10)"
-      >
-        <g
-          transform="translate(90, 90)"
-        >
-          <g
-            class="lucid-PieChart-slice-group"
-          >
-            <path
-              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-0-lightest"
-              d="60"
-              transform="scale(1)"
-            />
-            <path
-              class="lucid-PieChart-slice-hover"
-              d="60"
-              transform="scale(1.1)"
-            />
-          </g>
-          <g
-            class="lucid-PieChart-slice-group"
-          >
-            <path
-              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-0-light"
-              d="40"
-              transform="scale(1)"
-            />
-            <path
-              class="lucid-PieChart-slice-hover"
-              d="40"
-              transform="scale(1.1)"
-            />
-          </g>
-          <g
-            class="lucid-PieChart-slice-group"
-          >
-            <path
-              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-0"
-              d="30"
-              transform="scale(1)"
-            />
-            <path
-              class="lucid-PieChart-slice-hover"
-              d="30"
-              transform="scale(1.1)"
-            />
-          </g>
-          <g
-            class="lucid-PieChart-slice-group"
-          >
-            <path
-              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-0-dark"
-              d="20"
-              transform="scale(1)"
-            />
-            <path
-              class="lucid-PieChart-slice-hover"
-              d="20"
-              transform="scale(1.1)"
-            />
-          </g>
-          <g
-            class="lucid-PieChart-slice-group"
-          >
-            <path
-              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-0-darkest"
-              d="15"
-              transform="scale(1)"
-            />
-            <path
-              class="lucid-PieChart-slice-hover"
-              d="15"
-              transform="scale(1.1)"
-            />
-          </g>
-        </g>
-      </g>
-    </g>
-  </svg>
-  <svg
-    class="lucid-PieChart"
-    height="200"
-    width="200"
-  >
-    <g
-      class="lucid-ContextMenu lucid-ToolTip"
-    >
-      <g
-        transform="translate(10, 10)"
-      >
-        <g
-          transform="translate(90, 90)"
-        >
-          <g
-            class="lucid-PieChart-slice-group"
-          >
-            <path
-              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-1-lightest"
-              d="60"
-              transform="scale(1)"
-            />
-            <path
-              class="lucid-PieChart-slice-hover"
-              d="60"
-              transform="scale(1.1)"
-            />
-          </g>
-          <g
-            class="lucid-PieChart-slice-group"
-          >
-            <path
-              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-1-light"
-              d="40"
-              transform="scale(1)"
-            />
-            <path
-              class="lucid-PieChart-slice-hover"
-              d="40"
-              transform="scale(1.1)"
-            />
-          </g>
-          <g
-            class="lucid-PieChart-slice-group"
-          >
-            <path
-              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-1"
-              d="30"
-              transform="scale(1)"
-            />
-            <path
-              class="lucid-PieChart-slice-hover"
-              d="30"
-              transform="scale(1.1)"
-            />
-          </g>
-          <g
-            class="lucid-PieChart-slice-group"
-          >
-            <path
-              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-1-dark"
-              d="20"
-              transform="scale(1)"
-            />
-            <path
-              class="lucid-PieChart-slice-hover"
-              d="20"
-              transform="scale(1.1)"
-            />
-          </g>
-          <g
-            class="lucid-PieChart-slice-group"
-          >
-            <path
-              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-1-darkest"
-              d="15"
-              transform="scale(1)"
-            />
-            <path
-              class="lucid-PieChart-slice-hover"
-              d="15"
-              transform="scale(1.1)"
-            />
-          </g>
-        </g>
-      </g>
-    </g>
-  </svg>
-  <svg
-    class="lucid-PieChart"
-    height="200"
-    width="200"
-  >
-    <g
-      class="lucid-ContextMenu lucid-ToolTip"
-    >
-      <g
-        transform="translate(10, 10)"
-      >
-        <g
-          transform="translate(90, 90)"
-        >
-          <g
-            class="lucid-PieChart-slice-group"
-          >
-            <path
-              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-2-lightest"
-              d="60"
-              transform="scale(1)"
-            />
-            <path
-              class="lucid-PieChart-slice-hover"
-              d="60"
-              transform="scale(1.1)"
-            />
-          </g>
-          <g
-            class="lucid-PieChart-slice-group"
-          >
-            <path
-              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-2-light"
-              d="40"
-              transform="scale(1)"
-            />
-            <path
-              class="lucid-PieChart-slice-hover"
-              d="40"
-              transform="scale(1.1)"
-            />
-          </g>
-          <g
-            class="lucid-PieChart-slice-group"
-          >
-            <path
-              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-2"
-              d="30"
-              transform="scale(1)"
-            />
-            <path
-              class="lucid-PieChart-slice-hover"
-              d="30"
-              transform="scale(1.1)"
-            />
-          </g>
-          <g
-            class="lucid-PieChart-slice-group"
-          >
-            <path
-              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-2-dark"
-              d="20"
-              transform="scale(1)"
-            />
-            <path
-              class="lucid-PieChart-slice-hover"
-              d="20"
-              transform="scale(1.1)"
-            />
-          </g>
-          <g
-            class="lucid-PieChart-slice-group"
-          >
-            <path
-              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-2-darkest"
-              d="15"
-              transform="scale(1)"
-            />
-            <path
-              class="lucid-PieChart-slice-hover"
-              d="15"
-              transform="scale(1.1)"
-            />
-          </g>
-        </g>
-      </g>
-    </g>
-  </svg>
-  <svg
-    class="lucid-PieChart"
-    height="200"
-    width="200"
-  >
-    <g
-      class="lucid-ContextMenu lucid-ToolTip"
-    >
-      <g
-        transform="translate(10, 10)"
-      >
-        <g
-          transform="translate(90, 90)"
-        >
-          <g
-            class="lucid-PieChart-slice-group"
-          >
-            <path
-              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-3-lightest"
-              d="60"
-              transform="scale(1)"
-            />
-            <path
-              class="lucid-PieChart-slice-hover"
-              d="60"
-              transform="scale(1.1)"
-            />
-          </g>
-          <g
-            class="lucid-PieChart-slice-group"
-          >
-            <path
-              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-3-light"
-              d="40"
-              transform="scale(1)"
-            />
-            <path
-              class="lucid-PieChart-slice-hover"
-              d="40"
-              transform="scale(1.1)"
-            />
-          </g>
-          <g
-            class="lucid-PieChart-slice-group"
-          >
-            <path
-              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-3"
-              d="30"
-              transform="scale(1)"
-            />
-            <path
-              class="lucid-PieChart-slice-hover"
-              d="30"
-              transform="scale(1.1)"
-            />
-          </g>
-          <g
-            class="lucid-PieChart-slice-group"
-          >
-            <path
-              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-3-dark"
-              d="20"
-              transform="scale(1)"
-            />
-            <path
-              class="lucid-PieChart-slice-hover"
-              d="20"
-              transform="scale(1.1)"
-            />
-          </g>
-          <g
-            class="lucid-PieChart-slice-group"
-          >
-            <path
-              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-3-darkest"
-              d="15"
-              transform="scale(1)"
-            />
-            <path
-              class="lucid-PieChart-slice-hover"
-              d="15"
-              transform="scale(1.1)"
-            />
-          </g>
-        </g>
-      </g>
-    </g>
-  </svg>
-  <svg
-    class="lucid-PieChart"
-    height="200"
-    width="200"
-  >
-    <g
-      class="lucid-ContextMenu lucid-ToolTip"
-    >
-      <g
-        transform="translate(10, 10)"
-      >
-        <g
-          transform="translate(90, 90)"
-        >
-          <g
-            class="lucid-PieChart-slice-group"
-          >
-            <path
-              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-4-lightest"
-              d="60"
-              transform="scale(1)"
-            />
-            <path
-              class="lucid-PieChart-slice-hover"
-              d="60"
-              transform="scale(1.1)"
-            />
-          </g>
-          <g
-            class="lucid-PieChart-slice-group"
-          >
-            <path
-              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-4-light"
-              d="40"
-              transform="scale(1)"
-            />
-            <path
-              class="lucid-PieChart-slice-hover"
-              d="40"
-              transform="scale(1.1)"
-            />
-          </g>
-          <g
-            class="lucid-PieChart-slice-group"
-          >
-            <path
-              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-4"
-              d="30"
-              transform="scale(1)"
-            />
-            <path
-              class="lucid-PieChart-slice-hover"
-              d="30"
-              transform="scale(1.1)"
-            />
-          </g>
-          <g
-            class="lucid-PieChart-slice-group"
-          >
-            <path
-              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-4-dark"
-              d="20"
-              transform="scale(1)"
-            />
-            <path
-              class="lucid-PieChart-slice-hover"
-              d="20"
-              transform="scale(1.1)"
-            />
-          </g>
-          <g
-            class="lucid-PieChart-slice-group"
-          >
-            <path
-              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-4-darkest"
-              d="15"
-              transform="scale(1)"
-            />
-            <path
-              class="lucid-PieChart-slice-hover"
-              d="15"
-              transform="scale(1.1)"
-            />
-          </g>
-        </g>
-      </g>
-    </g>
-  </svg>
-  <svg
-    class="lucid-PieChart"
-    height="200"
-    width="200"
-  >
-    <g
-      class="lucid-ContextMenu lucid-ToolTip"
-    >
-      <g
-        transform="translate(10, 10)"
-      >
-        <g
-          transform="translate(90, 90)"
-        >
-          <g
-            class="lucid-PieChart-slice-group"
-          >
-            <path
-              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-5-lightest"
-              d="60"
-              transform="scale(1)"
-            />
-            <path
-              class="lucid-PieChart-slice-hover"
-              d="60"
-              transform="scale(1.1)"
-            />
-          </g>
-          <g
-            class="lucid-PieChart-slice-group"
-          >
-            <path
-              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-5-light"
-              d="40"
-              transform="scale(1)"
-            />
-            <path
-              class="lucid-PieChart-slice-hover"
-              d="40"
-              transform="scale(1.1)"
-            />
-          </g>
-          <g
-            class="lucid-PieChart-slice-group"
-          >
-            <path
-              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-5"
-              d="30"
-              transform="scale(1)"
-            />
-            <path
-              class="lucid-PieChart-slice-hover"
-              d="30"
-              transform="scale(1.1)"
-            />
-          </g>
-          <g
-            class="lucid-PieChart-slice-group"
-          >
-            <path
-              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-5-dark"
-              d="20"
-              transform="scale(1)"
-            />
-            <path
-              class="lucid-PieChart-slice-hover"
-              d="20"
-              transform="scale(1.1)"
-            />
-          </g>
-          <g
-            class="lucid-PieChart-slice-group"
-          >
-            <path
-              class="lucid-PieChart-slice lucid-PieChart-slice-has-stroke lucid-Line lucid-Line-color-chart-5-darkest"
-              d="15"
-              transform="scale(1)"
-            />
-            <path
-              class="lucid-PieChart-slice-hover"
-              d="15"
               transform="scale(1.1)"
             />
           </g>

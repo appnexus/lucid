@@ -73,7 +73,6 @@ export const Small = () => {
 
 	return <Component />;
 };
-Small.storyName = 'Small';
 
 /* Medium */
 export const Medium = () => {
@@ -128,7 +127,6 @@ export const Medium = () => {
 
 	return <Component />;
 };
-Medium.storyName = 'Medium';
 
 /* Large With Rich Header */
 export const LargeWithRichHeader = () => {
@@ -299,7 +297,6 @@ export const Complex = () => {
 
 	return <Component />;
 };
-Complex.storyName = 'Complex';
 
 /* No Modal */
 export const NoModal = () => {

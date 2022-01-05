@@ -16,8 +16,8 @@ export default {
 	},
 };
 
-/* Default */
-export const Default = () => {
+/* Basic */
+export const Basic = () => {
 	const Component = createClass({
 		getInitialState() {
 			return {
@@ -56,7 +56,6 @@ export const Default = () => {
 
 	return <Component />;
 };
-Default.storyName = 'Default';
 
 /* No Modal */
 export const NoModal = () => {

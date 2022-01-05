@@ -16,8 +16,8 @@ export default {
 	},
 };
 
-/* Default */
-export const Default = () => {
+/* Basic */
+export const Basic = () => {
 	const style = {
 		marginBottom: '10px',
 	};
@@ -45,7 +45,6 @@ export const Default = () => {
 
 	return <Component />;
 };
-Default.storyName = 'Default';
 
 /* Plain */
 export const Plain = () => {
@@ -65,7 +64,6 @@ export const Plain = () => {
 		</div>
 	);
 };
-Plain.storyName = 'Plain';
 
 /* On Submit */
 export const OnSubmit = () => {
@@ -96,7 +94,6 @@ export const OnSubmit = () => {
 
 	return <Component />;
 };
-OnSubmit.storyName = 'OnSubmit';
 
 /* Debounced */
 export const Debounced = () => {
@@ -136,7 +133,6 @@ export const Debounced = () => {
 
 	return <Component />;
 };
-Debounced.storyName = 'Debounced';
 
 /* Multiline */
 export const Multiline = () => {
@@ -187,7 +183,6 @@ export const Multiline = () => {
 
 	return <Component />;
 };
-Multiline.storyName = 'Multiline';
 
 /* Disabled */
 export const Disabled = () => {
@@ -219,4 +214,3 @@ export const Disabled = () => {
 
 	return <Component />;
 };
-Disabled.storyName = 'Disabled';

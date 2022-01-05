@@ -1,46 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Lines [common] example testing should match snapshot(s) for CustomColors 1`] = `
-<div>
-  <svg
-    height="400"
-    width="1000"
-  >
-    <g
-      class="lucid-Lines"
-    >
-      <g>
-        <path
-          class="lucid-Line lucid-Line-color-chart-bad"
-          d="M0,380L200,360L400,360L600,340L800,320L1000,0L1000,0L800,320L600,340L400,360L200,360L0,380Z"
-        />
-      </g>
-      <g>
-        <path
-          class="lucid-Line lucid-Line-color-chart-good"
-          d="M0,360L200,340L400,320L600,280L800,240L1000,240L1000,240L800,240L600,280L400,320L200,340L0,360Z"
-        />
-      </g>
-      <g>
-        <path
-          class="lucid-Line"
-          d="M0,340L200,320L400,300L600,260L800,220.00000000000003L1000,220.00000000000003L1000,220.00000000000003L800,220.00000000000003L600,260L400,300L200,320L0,340Z"
-          style="fill:#ff8800;stroke:#ff8800"
-        />
-      </g>
-      <g>
-        <path
-          class="lucid-Line"
-          d="M0,300L200,280L400,280L600,260L800,240L1000,380L1000,380L800,240L600,260L400,280L200,280L0,300Z"
-          style="fill:#abc123;stroke:#abc123"
-        />
-      </g>
-    </g>
-  </svg>
-</div>
-`;
-
-exports[`Lines [common] example testing should match snapshot(s) for Default 1`] = `
+exports[`Lines [common] example testing should match snapshot(s) for Basic 1`] = `
 <div>
   <svg
     height="400"
@@ -140,6 +100,46 @@ exports[`Lines [common] example testing should match snapshot(s) for Default 1`]
         <path
           class="lucid-Line lucid-Line-color-chart-6"
           d="M0,32.65306122448979L160,269.38775510204084L320,253.06122448979593L480,261.2244897959184L640,244.89795918367346L800,32.65306122448979L800,0L640,232.6530612244898L480,253.06122448979593L320,240.81632653061226L160,244.89795918367346L0,0Z"
+        />
+      </g>
+    </g>
+  </svg>
+</div>
+`;
+
+exports[`Lines [common] example testing should match snapshot(s) for CustomColors 1`] = `
+<div>
+  <svg
+    height="400"
+    width="1000"
+  >
+    <g
+      class="lucid-Lines"
+    >
+      <g>
+        <path
+          class="lucid-Line lucid-Line-color-chart-bad"
+          d="M0,380L200,360L400,360L600,340L800,320L1000,0L1000,0L800,320L600,340L400,360L200,360L0,380Z"
+        />
+      </g>
+      <g>
+        <path
+          class="lucid-Line lucid-Line-color-chart-good"
+          d="M0,360L200,340L400,320L600,280L800,240L1000,240L1000,240L800,240L600,280L400,320L200,340L0,360Z"
+        />
+      </g>
+      <g>
+        <path
+          class="lucid-Line"
+          d="M0,340L200,320L400,300L600,260L800,220.00000000000003L1000,220.00000000000003L1000,220.00000000000003L800,220.00000000000003L600,260L400,300L200,320L0,340Z"
+          style="fill:#ff8800;stroke:#ff8800"
+        />
+      </g>
+      <g>
+        <path
+          class="lucid-Line"
+          d="M0,300L200,280L400,280L600,260L800,240L1000,380L1000,380L800,240L600,260L400,280L200,280L0,300Z"
+          style="fill:#abc123;stroke:#abc123"
         />
       </g>
     </g>

@@ -16,8 +16,8 @@ export default {
 	},
 } as Meta;
 
-/* Default */
-export const Default: Story<IBreadcrumbProps> = (args) => {
+/* Basic */
+export const Basic: Story<IBreadcrumbProps> = (args) => {
 	const { Item } = Breadcrumb;
 
 	return (
@@ -34,7 +34,6 @@ export const Default: Story<IBreadcrumbProps> = (args) => {
 		</Breadcrumb>
 	);
 };
-Default.storyName = 'Default';
 
 /* Rich */
 export const Rich: Story<IBreadcrumbProps> = (args) => {
@@ -67,4 +66,3 @@ export const Rich: Story<IBreadcrumbProps> = (args) => {
 		</Breadcrumb>
 	);
 };
-Rich.storyName = 'Rich';

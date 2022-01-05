@@ -17,8 +17,8 @@ export default {
 	},
 };
 
-/* Default */
-export const Default = () => {
+/* Basic */
+export const Basic = () => {
 	/* eslint-disable comma-spacing */
 
 	const data = [
@@ -69,7 +69,6 @@ export const Default = () => {
 
 	return <Component />;
 };
-Default.storyName = 'Default';
 
 /* Basic Donuts */
 export const BasicDonuts = () => {
@@ -245,7 +244,6 @@ export const Percents = () => {
 
 	return <Component />;
 };
-Percents.storyName = 'Percents';
 
 /* Small With No Stroke Or Hover */
 export const SmallWithNoStrokeOrHover = () => {

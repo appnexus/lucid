@@ -23,7 +23,7 @@ export default {
 const Template: Story<IBadgeProps> = (args) => <Badge {...args}>Badge</Badge>;
 
 //👇 Each story then reuses that template
-export const Default: Story<IBadgeProps> = Template.bind({});
+export const Basic: Story<IBadgeProps> = Template.bind({});
 
 export const AllTypes: Story<IBadgeProps> = (args) => (
 	<div>

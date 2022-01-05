@@ -17,8 +17,8 @@ export default {
 	},
 } as Meta;
 
-/* Default */
-export const Default: Story<IValidationProps> = (args) => {
+/* Basic */
+export const Basic: Story<IValidationProps> = (args) => {
 	return (
 		<div>
 			<p>Text field with error (method 1)</p>
@@ -55,4 +55,3 @@ export const Default: Story<IValidationProps> = (args) => {
 		</div>
 	);
 };
-Default.storyName = 'Default';

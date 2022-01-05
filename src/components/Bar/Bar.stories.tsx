@@ -71,7 +71,6 @@ export const CustomDimensionUnits: Story<IBarProps> = (args) => {
 		</div>
 	);
 };
-CustomDimensionUnits.storyName = 'Custom Dimension Units';
 
 /* Regular Colors */
 export const RegularColors: Story<IBarProps> = (args) => {
@@ -142,4 +141,3 @@ export const RegularColors: Story<IBarProps> = (args) => {
 		</div>
 	);
 };
-RegularColors.storyName = 'Regular Colors';

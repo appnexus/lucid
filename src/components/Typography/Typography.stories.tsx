@@ -79,7 +79,6 @@ export const Variants: Story<ITypographyProps> = (args) => {
 		</section>
 	);
 };
-Variants.storyName = 'Variants';
 
 /* Nested */
 export const Nested: Story<ITypographyProps> = (args) => {
@@ -127,4 +126,3 @@ export const Nested: Story<ITypographyProps> = (args) => {
 		</section>
 	);
 };
-Nested.storyName = 'Nested';

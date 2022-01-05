@@ -18,8 +18,8 @@ export default {
 	},
 } as Meta;
 
-/* Default */
-export const Default: Story<IBarsProps> = (args) => {
+/* Basic */
+export const Basic: Story<IBarsProps> = (args) => {
 	/* eslint-disable comma-spacing */
 
 	const width = 750;
@@ -88,7 +88,6 @@ export const Default: Story<IBarsProps> = (args) => {
 		</div>
 	);
 };
-Default.storyName = 'Default';
 
 /* Custom Colors */
 export const CustomColors: Story<IBarsProps> = (args) => {
@@ -152,7 +151,6 @@ export const CustomColors: Story<IBarsProps> = (args) => {
 		</div>
 	);
 };
-CustomColors.storyName = 'Custom Colors';
 
 /* Log Scale */
 export const LogScale: Story<IBarsProps> = (args) => {
@@ -196,4 +194,3 @@ export const LogScale: Story<IBarsProps> = (args) => {
 		</svg>
 	);
 };
-LogScale.storyName = 'Log Scale';

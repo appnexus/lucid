@@ -117,7 +117,7 @@ export const Icon = (props: IIconProps): React.ReactElement => {
 			height={height ? height : size}
 			viewBox={viewBox}
 			preserveAspectRatio={aspectRatio}
-			{...passThroughs}
+			{...(passThroughs as any)}
 			className={cx(
 				'&',
 				{

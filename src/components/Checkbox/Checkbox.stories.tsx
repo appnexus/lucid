@@ -26,8 +26,8 @@ const Template: Story<ICheckboxProps> = (args) => {
 	);
 };
 
-export const Default: Story<ICheckboxProps> = Template.bind({});
-Default.args = {
+export const Basic: Story<ICheckboxProps> = Template.bind({});
+Basic.args = {
 	title: 'Default',
 };
 

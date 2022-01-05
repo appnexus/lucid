@@ -88,7 +88,6 @@ export const Interactive: Story<IRadioButtonLabeledProps> = (args) => {
 		</section>
 	);
 };
-Interactive.storyName = 'Interactive';
 
 /* States */
 export const States: Story<IRadioButtonLabeledProps> = (args) => {
@@ -124,7 +123,6 @@ export const States: Story<IRadioButtonLabeledProps> = (args) => {
 		</section>
 	);
 };
-States.storyName = 'States';
 
 /* Label As Child */
 export const LabelAsChild: Story<IRadioButtonLabeledProps> = (args) => {

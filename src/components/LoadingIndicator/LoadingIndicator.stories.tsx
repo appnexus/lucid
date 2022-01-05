@@ -73,10 +73,9 @@ export const Interactive = () => {
 
 	return <Component />;
 };
-Interactive.storyName = 'Interactive';
 
-/* Default */
-export const Default = () => {
+/* Basic */
+export const Basic = () => {
 	const Component = createClass({
 		render() {
 			return (
@@ -97,7 +96,6 @@ export const Default = () => {
 
 	return <Component />;
 };
-Default.storyName = 'Default';
 
 /* Custom Message */
 export const CustomMessage = () => {

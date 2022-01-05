@@ -17,8 +17,8 @@ export default {
 	},
 } as Meta;
 
-/* Default */
-export const Default: Story = () => {
+/* Basic */
+export const Basic: Story = () => {
 	const Component = createClass({
 		render() {
 			return (
@@ -40,7 +40,6 @@ export const Default: Story = () => {
 
 	return <Component />;
 };
-Default.storyName = 'Default';
 
 /* Interactive */
 export const Interactive = () => {
@@ -345,7 +344,6 @@ export const Interactive = () => {
 
 	return <Component />;
 };
-Interactive.storyName = 'Interactive';
 
 /* Disabled */
 export const Disabled = () => {
@@ -361,7 +359,6 @@ export const Disabled = () => {
 
 	return <Component />;
 };
-Disabled.storyName = 'Disabled';
 
 /* Stateless */
 export const Stateless = () => {
@@ -407,4 +404,3 @@ export const Stateless = () => {
 
 	return <Component />;
 };
-Stateless.storyName = 'Stateless';

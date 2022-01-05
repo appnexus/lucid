@@ -20,8 +20,8 @@ export default {
 	},
 } as Meta;
 
-/* Default */
-export const Default: Story<IBarChartProps> = (args) => {
+/* Basic */
+export const Basic: Story<IBarChartProps> = (args) => {
 	const data = [
 		{ x: '2015-01-01', y: 1 },
 		{ x: '2015-01-02', y: 2 },
@@ -45,7 +45,6 @@ export const Default: Story<IBarChartProps> = (args) => {
 		</div>
 	);
 };
-Default.storyName = 'Default';
 
 /* Basic Responsive */
 export const BasicResponsive: Story<IBarChartProps> = (args) => {
@@ -127,7 +126,6 @@ export const Grouped: Story<IBarChartProps> = (args) => {
 		</div>
 	);
 };
-Grouped.storyName = 'Grouped';
 
 /* Grouped With Legend */
 export const GroupedWithLegend: Story<IBarChartProps> = (args) => {
@@ -297,7 +295,6 @@ export const Stacked: Story<IBarChartProps> = (args) => {
 		</div>
 	);
 };
-Stacked.storyName = 'Stacked';
 
 /* Unformatted Tooltips */
 export const UnformattedTooltips: Story<IBarChartProps> = (args) => {
@@ -386,7 +383,6 @@ FormattedTooltips.storyName = 'FormattedTooltips';
 export const Empty: Story<IBarChartProps> = (args) => {
 	return <BarChart {...args} width={750} data={[]} yAxisTitle='Revenue' />;
 };
-Empty.storyName = 'Empty';
 
 /* Empty With Custom Title And Body */
 export const EmptyWithCustomTitleAndBody: Story<IBarChartProps> = (args) => {

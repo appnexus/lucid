@@ -28,6 +28,23 @@ exports[`DropMenu [common] example testing should match snapshot(s) for ActionMe
 </div>
 `;
 
+exports[`DropMenu [common] example testing should match snapshot(s) for Basic 1`] = `
+<div
+  class="lucid-DropMenu lucid-DropMenu-base"
+>
+  <span
+    class="lucid-ContextMenu"
+  >
+    <div
+      class="lucid-DropMenu-Control"
+      tabindex="0"
+    >
+      Select
+    </div>
+  </span>
+</div>
+`;
+
 exports[`DropMenu [common] example testing should match snapshot(s) for ButtonMenu 1`] = `
 <div
   class="lucid-DropMenu lucid-DropMenu-base"
@@ -49,23 +66,6 @@ exports[`DropMenu [common] example testing should match snapshot(s) for ButtonMe
           Select Color
         </span>
       </button>
-    </div>
-  </span>
-</div>
-`;
-
-exports[`DropMenu [common] example testing should match snapshot(s) for Default 1`] = `
-<div
-  class="lucid-DropMenu lucid-DropMenu-base"
->
-  <span
-    class="lucid-ContextMenu"
-  >
-    <div
-      class="lucid-DropMenu-Control"
-      tabindex="0"
-    >
-      Select
     </div>
   </span>
 </div>
