@@ -1,6 +1,6 @@
 import React from 'react';
 import createClass from 'create-react-class';
-import { SeparatorIcon } from './../../../index';
+import SeparatorIcon from './SeparatorIcon';
 
 export default {
 	title: 'Visual Design/SeparatorIcon',

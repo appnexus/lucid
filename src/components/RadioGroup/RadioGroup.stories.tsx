@@ -1,6 +1,8 @@
 import React from 'react';
 import createClass from 'create-react-class';
-import { RadioGroup, RadioButtonLabeled, SingleSelect } from './../../index';
+import RadioGroup from './RadioGroup';
+import SingleSelect from '../SingleSelect/SingleSelect';
+import RadioButtonLabeled from '../RadioButtonLabeled/RadioButtonLabeled';
 
 export default {
 	title: 'Controls/RadioGroup',

@@ -1,7 +1,7 @@
 import React from 'react';
 import createClass from 'create-react-class';
-import { Switch } from './../../index';
 import _ from 'lodash';
+import Switch from './Switch';
 
 export default {
 	title: 'Controls/Switch',

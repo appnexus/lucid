@@ -1,9 +1,12 @@
 import React from 'react';
 import createClass from 'create-react-class';
-import { LineChart, Legend, chartConstants, formatters } from './../../index';
 import _ from 'lodash';
 import Resizer from '../Resizer/Resizer';
 import Button from '../Button/Button';
+import * as chartConstants from '../../constants/charts';
+import LineChart from './LineChart';
+import Legend from '../Legend/Legend';
+import * as formatters from '../../util/formatters';
 
 export default {
 	title: 'Visualizations/LineChart',

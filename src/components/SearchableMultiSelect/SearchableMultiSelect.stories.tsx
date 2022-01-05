@@ -3,9 +3,11 @@ import createClass from 'create-react-class';
 import _, { map } from 'lodash';
 import { Meta, Story } from '@storybook/react';
 
-import { Selection, SearchableMultiSelect } from './../../index';
 import Resizer from '../Resizer/Resizer';
-import { ISearchableMultiSelectProps } from './SearchableMultiSelect';
+import SearchableMultiSelect, {
+	ISearchableMultiSelectProps,
+} from './SearchableMultiSelect';
+import Selection from '../Selection/Selection';
 
 //👇 Provide Storybook with the component name, 'section', any subcomponents and a description
 export default {

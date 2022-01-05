@@ -1,6 +1,6 @@
 import React from 'react';
 import createClass from 'create-react-class';
-import { Submarine } from './../../index';
+import Submarine from './Submarine';
 
 export default {
 	title: 'Layout/Submarine',

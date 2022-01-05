@@ -32,6 +32,6 @@ exports[`Overlay [common] example testing should match snapshot(s) for NoModal 1
 
 exports[`Overlay should render with isAnimated=false 1`] = `
 <Portal
-  portalId="1-Overlay-Portal-13"
+  portalId="1-Overlay-Portal-12"
 />
 `;

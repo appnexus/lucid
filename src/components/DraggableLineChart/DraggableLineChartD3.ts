@@ -5,7 +5,7 @@ import * as d3Drag from 'd3-drag';
 import * as d3Selection from 'd3-selection';
 import * as d3Transition from 'd3-transition';
 import ReactDOM from 'react-dom';
-import { d3Scale } from '../../index';
+import * as d3Scale from 'd3-scale';
 import _ from 'lodash';
 import * as d3Array from 'd3-array';
 import { StandardProps } from '../../util/component-types';

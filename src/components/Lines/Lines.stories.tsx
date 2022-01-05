@@ -2,8 +2,9 @@ import _ from 'lodash';
 import React from 'react';
 import { Meta, Story } from '@storybook/react';
 
-import { Lines, d3Scale, chartConstants } from './../../index';
-import { ILinesProps } from './Lines';
+import Lines, { ILinesProps } from './Lines';
+import * as chartConstants from '../../constants/charts';
+import * as d3Scale from 'd3-scale';
 
 export default {
 	title: 'Visualizations/Lines',

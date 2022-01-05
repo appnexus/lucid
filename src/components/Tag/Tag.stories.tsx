@@ -1,7 +1,7 @@
 import React from 'react';
 import createClass from 'create-react-class';
-import { Tag } from './../../index';
 import _ from 'lodash';
+import Tag from '../Tag/Tag';
 
 export default {
 	title: 'Communication/Tag',

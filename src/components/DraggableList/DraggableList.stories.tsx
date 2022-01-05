@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Story, Meta } from '@storybook/react';
 
-import { CheckboxLabeled, DraggableList } from './../../index';
-import { IDraggableListProps } from './DraggableList';
+import DraggableList, { IDraggableListProps } from './DraggableList';
+import CheckboxLabeled from '../CheckboxLabeled/CheckboxLabeled';
 
 export default {
 	title: 'Controls/DraggableList',

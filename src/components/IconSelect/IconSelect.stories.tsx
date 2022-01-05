@@ -1,12 +1,9 @@
 import React, { useState } from 'react';
 import { Meta } from '@storybook/react';
-
-import {
-	IconSelect,
-	ClockIcon,
-	StopwatchIcon,
-	SwitchLabeled,
-} from '../../index';
+import IconSelect from './IconSelect';
+import ClockIcon from '../Icon/ClockIcon/ClockIcon';
+import StopwatchIcon from '../Icon/StopwatchIcon/StopwatchIcon';
+import SwitchLabeled from '../SwitchLabeled/SwitchLabeled';
 
 //👇 Provide Storybook with the component name, 'section', any subcomponents and a description
 export default {

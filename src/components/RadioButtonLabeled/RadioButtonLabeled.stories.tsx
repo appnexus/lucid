@@ -1,6 +1,6 @@
 import React from 'react';
 import createClass from 'create-react-class';
-import { RadioButtonLabeled } from './../../index';
+import RadioButtonLabeled from './RadioButtonLabeled';
 
 export default {
 	title: 'Controls/RadioButtonLabeled',

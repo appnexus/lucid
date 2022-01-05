@@ -1,8 +1,9 @@
 import { Meta, Story } from '@storybook/react';
 import _ from 'lodash';
 import React, { useState } from 'react';
+import { ChatIcon } from '../Icon/ChatIcon/ChatIcon';
+import { Button } from '../Button/Button';
 
-import { Button, ChatIcon } from '../..';
 import { Banner, IBannerProps } from './Banner';
 
 export default {
@@ -154,8 +155,8 @@ export const Small: Story<IBannerProps> = (args) => {
 
 	return (
 		<div>
-			{_.map(kinds, ({ label, value }) => (
-				<React.Fragment key={value}>
+			{_.map(kinds, ({ label, value }, index) => (
+				<React.Fragment key={index}>
 					<div>
 						<Banner
 							{...args}

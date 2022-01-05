@@ -1,6 +1,6 @@
 import React from 'react';
 import createClass from 'create-react-class';
-import { Resizer } from './../../index';
+import Resizer from './Resizer';
 
 export default {
 	title: 'Utility/Resizer',

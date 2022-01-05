@@ -1,9 +1,10 @@
 import React, { useCallback } from 'react';
 import createClass from 'create-react-class';
-import { DraggableLineChart, TextFieldValidated } from './../../index';
 import _ from 'lodash';
 import { IXAxisRenderProp } from './d3-helpers';
 import { IData, ISelectedChartData } from './DraggableLineChartD3';
+import DraggableLineChart from './DraggableLineChart';
+import TextFieldValidated from '../TextFieldValidated/TextFieldValidated';
 
 export default {
 	title: 'Visualizations/DraggableLineChart',

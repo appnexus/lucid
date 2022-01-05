@@ -1,7 +1,9 @@
 import _ from 'lodash';
 import React from 'react';
 import createClass from 'create-react-class';
-import { Points, d3Scale, chartConstants } from './../../index';
+import * as chartConstants from '../../constants/charts';
+import * as d3Scale from 'd3-scale';
+import Points from './Points';
 
 export default {
 	title: 'Visualizations/Points',

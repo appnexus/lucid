@@ -3,7 +3,7 @@ import createClass from 'create-react-class';
 import CalendarMonth from './CalendarMonth';
 import ReactDayPicker from 'react-day-picker';
 import _ from 'lodash';
-import { Button } from './../../index';
+import Button from '../Button/Button';
 
 export default {
 	title: 'Private/CalendarMonth',
