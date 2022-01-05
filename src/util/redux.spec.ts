@@ -25,7 +25,7 @@ describe('redux utils', () => {
 
 	describe('#thunk', () => {
 		it('should set `isThunk` property on the input function to `true`', () => {
-			assert(thunk(function () {}).isThunk, 'must have `isThunk`');
+			assert(thunk(() => {}).isThunk, 'must have `isThunk`');
 		});
 	});
 

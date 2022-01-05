@@ -1,9 +1,10 @@
 import React from 'react';
 import createClass from 'create-react-class';
 import _ from 'lodash';
-import { Button, DropMenuDumb as DropMenu } from './../../index';
+import { DropMenuDumb as DropMenu } from './DropMenu';
 import TextField from '../TextField/TextField';
 import ChevronIcon from '../Icon/ChevronIcon/ChevronIcon';
+import Button from '../Button/Button';
 
 export default {
 	title: 'Helpers/DropMenu',

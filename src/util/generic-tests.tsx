@@ -4,10 +4,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { mount, shallow, render } from 'enzyme';
 import assert from 'assert';
-import _, { each, omit, noop } from 'lodash';
+import _, { each, omit } from 'lodash';
 import glob from 'glob';
-import * as lucid from '../index';
 import { addons, mockChannel } from '@storybook/addons';
+import timekeeper from 'timekeeper';
 
 addons.setChannel(mockChannel());
 
@@ -220,13 +220,6 @@ export function common(Component: any, config: ICommonConfig = {} as any) {
 				});
 			});
 		});
-
-		// Only run this test if it's a public component
-		if (!Component._isPrivate && !noExport) {
-			it('should be available as an exported module from index.ts', () => {
-				assert((lucid as any)[Component.displayName]);
-			});
-		}
 	});
 }
 
@@ -313,30 +306,6 @@ export function functionalComponents(FC: any) {
 	});
 }
 
-const NativeDate = global.Date;
-const createMockDateClass = (...args: any) =>
-	_.assign(
-		function MockDate() {
-			// @ts-ignore
-			return new NativeDate(...args);
-		},
-		{
-			UTC: NativeDate.UTC,
-			parse: NativeDate.parse,
-			// @ts-ignore
-			now: () => new NativeDate(...args).getTime(),
-			prototype: NativeDate.prototype,
-		}
-	);
-
-export const mockDate = _.assign(
-	(...args: any) => {
-		// @ts-ignore
-		global.Date = createMockDateClass(...args);
-	},
-	{
-		restore() {
-			global.Date = NativeDate;
-		},
-	}
-);
+export const mockDate = (dateString: string) => {
+	timekeeper.freeze(new Date(dateString));
+};

@@ -1,6 +1,6 @@
 import React from 'react';
 import createClass from 'create-react-class';
-import { TextFieldValidated } from './../../index';
+import TextFieldValidated from './TextFieldValidated';
 
 export default {
 	title: 'Controls/TextFieldValidated',

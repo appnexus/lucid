@@ -1,18 +1,14 @@
 import { shallow } from 'enzyme';
 import React from 'react';
 import { common, mockDate } from '../../util/generic-tests';
-import CalendarMonth from './CalendarMonth';
 
 describe('CalendarMonth', () => {
+	mockDate('2016-02-01T14:25:23-0800');
+
+	// Must load ./CalendarMonth after mocking date
+	const CalendarMonth = require('./CalendarMonth').default;
+
 	describe('common tests', () => {
-		beforeEach(() => {
-			mockDate('2016-02-17T14:25:23-0800');
-		});
-
-		afterEach(() => {
-			mockDate.restore();
-		});
-
 		common(CalendarMonth);
 	});
 

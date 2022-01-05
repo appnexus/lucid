@@ -9,8 +9,8 @@ import {
 } from 'lodash';
 import React, { useState } from 'react';
 import { Meta } from '@storybook/react';
-
-import { SearchableSingleSelect, Underline } from '../../index';
+import SearchableSingleSelect from './SearchableSingleSelect';
+import Underline from '../Underline/Underline';
 
 //👇 Provide Storybook with the component name, 'section', any subcomponents and a description
 export default {

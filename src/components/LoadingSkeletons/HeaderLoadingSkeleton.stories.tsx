@@ -1,6 +1,6 @@
 import React from 'react';
 import createClass from 'create-react-class';
-import { HeaderLoadingSkeleton } from './../../index';
+import HeaderLoadingSkeleton from './HeaderLoadingSkeleton';
 
 export default {
 	title: 'Loading Indicator/HeaderLoadingSkeleton',

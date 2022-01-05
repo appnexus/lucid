@@ -1,5 +1,5 @@
 import React from 'react';
-import { WarningLightIcon } from './../../../index';
+import WarningLightIcon from './WarningLightIcon';
 
 export default {
 	title: 'Deprecated/WarningLightIcon',

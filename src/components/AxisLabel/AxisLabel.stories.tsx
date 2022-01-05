@@ -1,8 +1,8 @@
 import React from 'react';
 import { Meta, Story } from '@storybook/react';
 
-import { AxisLabel, chartConstants } from './../../index';
-import { IAxisLabelProps } from './AxisLabel';
+import * as chartConstants from '../../constants/charts';
+import AxisLabel, { IAxisLabelProps } from './AxisLabel';
 
 export default {
 	title: 'Visualizations/AxisLabel',

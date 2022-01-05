@@ -1,14 +1,11 @@
 import { map, isNil } from 'lodash';
 import React, { useState } from 'react';
 import { Meta } from '@storybook/react';
-
-import {
-	SingleSelect,
-	PlusIcon,
-	SuccessIcon,
-	InfoIcon,
-	DangerIcon,
-} from '../../index';
+import SingleSelect from './SingleSelect';
+import DangerIcon from '../Icon/DangerIcon/DangerIcon';
+import PlusIcon from '../Icon/PlusIcon/PlusIcon';
+import SuccessIcon from '../Icon/SuccessIcon/SuccessIcon';
+import InfoIcon from '../Icon/InfoIcon/InfoIcon';
 
 //👇 Provide Storybook with the component name, 'section', any subcomponents and a description
 export default {

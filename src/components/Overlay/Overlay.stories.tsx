@@ -1,7 +1,8 @@
 import _ from 'lodash';
 import React from 'react';
 import createClass from 'create-react-class';
-import { Button, Overlay } from './../../index';
+import Overlay from './Overlay';
+import Button from '../Button/Button';
 
 export default {
 	title: 'Utility/Overlay',

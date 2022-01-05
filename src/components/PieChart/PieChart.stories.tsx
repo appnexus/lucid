@@ -1,7 +1,9 @@
 import React from 'react';
 import createClass from 'create-react-class';
-import { PieChart, Legend, chartConstants } from './../../index';
 import _ from 'lodash';
+import * as chartConstants from '../../constants/charts';
+import PieChart from './PieChart';
+import Legend from '../Legend/Legend';
 
 export default {
 	title: 'Visualizations/PieChart',

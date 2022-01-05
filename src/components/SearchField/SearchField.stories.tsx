@@ -1,7 +1,9 @@
 import React from 'react';
 import createClass from 'create-react-class';
-import { LoadingIcon, SearchFieldDumb as SearchField } from './../../index';
+
 import Button from '../Button/Button';
+import { SearchFieldDumb as SearchField } from './SearchField';
+import LoadingIcon from '../Icon/LoadingIcon/LoadingIcon';
 
 export default {
 	title: 'Controls/SearchField',

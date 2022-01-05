@@ -1,7 +1,7 @@
 import React from 'react';
 import createClass from 'create-react-class';
-import { Button } from './../../index';
 import InfiniteSlidePanel from './InfiniteSlidePanel';
+import Button from '../Button/Button';
 
 export default {
 	title: 'Private/InfiniteSlidePanel',

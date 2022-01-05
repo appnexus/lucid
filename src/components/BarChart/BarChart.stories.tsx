@@ -2,9 +2,11 @@ import _ from 'lodash';
 import React from 'react';
 import { Meta, Story } from '@storybook/react';
 
-import { BarChart, Legend, chartConstants, formatters } from './../../index';
+import * as chartConstants from '../../constants/charts';
+import * as formatters from '../../util/formatters';
 import Resizer from '../Resizer/Resizer';
-import { IBarChartProps } from './BarChart';
+import BarChart, { IBarChartProps } from './BarChart';
+import Legend from '../Legend/Legend';
 
 export default {
 	title: 'Visualizations/BarChart',

@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import React from 'react';
 import createClass from 'create-react-class';
-import { RadioButton } from './../../index';
+import RadioButton from './RadioButton';
 
 export default {
 	title: 'Controls/RadioButton',

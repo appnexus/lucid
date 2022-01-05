@@ -2,10 +2,9 @@ import React from 'react';
 //import createClass from 'create-react-class';
 import { Story, Meta } from '@storybook/react';
 
-import { Typography } from './../../index';
 import HelpIcon from './../Icon/HelpIcon/HelpIcon';
 import ToolTip from './../ToolTip/ToolTip';
-import { ITypographyProps } from './Typography';
+import Typography, { ITypographyProps } from './Typography';
 
 export default {
 	title: 'Text/Typography',

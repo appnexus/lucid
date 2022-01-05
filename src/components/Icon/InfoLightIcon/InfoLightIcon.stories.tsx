@@ -1,5 +1,5 @@
 import React from 'react';
-import { InfoLightIcon } from './../../../index';
+import InfoLightIcon from './InfoLightIcon';
 
 export default {
 	title: 'Deprecated/InfoLightIcon',

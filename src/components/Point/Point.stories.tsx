@@ -1,7 +1,8 @@
 import _ from 'lodash';
 import React from 'react';
 import createClass from 'create-react-class';
-import { Point, chartConstants } from './../../index';
+import Point from './Point';
+import * as chartConstants from '../../constants/charts';
 
 export default {
 	title: 'Visualizations/Point',

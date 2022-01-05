@@ -1,6 +1,6 @@
 import React from 'react';
 import createClass from 'create-react-class';
-import { LineChartLoadingSkeleton } from './../../index';
+import LineChartLoadingSkeleton from './LineChartLoadingSkeleton';
 
 export default {
 	title: 'Loading Indicator/LineChartLoadingSkeleton',

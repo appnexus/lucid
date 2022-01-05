@@ -1,11 +1,10 @@
 import _ from 'lodash';
 import React from 'react';
 import createClass from 'create-react-class';
-import { ToolTipDumb, ToolTip } from './../../index';
 import { Meta, Story } from '@storybook/react';
 
 import Button from '../Button/Button';
-import { IToolTipProps } from './ToolTip';
+import ToolTip, { IToolTipProps, ToolTipDumb } from './ToolTip';
 
 const { Target, Body } = ToolTip;
 

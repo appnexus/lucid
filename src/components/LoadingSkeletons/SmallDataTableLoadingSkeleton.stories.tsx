@@ -1,6 +1,6 @@
 import React from 'react';
 import createClass from 'create-react-class';
-import { SmallDataTableLoadingSkeleton } from './../../index';
+import SmallDataTableLoadingSkeleton from './SmallDataTableLoadingSkeleton';
 
 export default {
 	title: 'Loading Indicator/SmallDataTableLoadingSkeleton',

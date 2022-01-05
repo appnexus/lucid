@@ -2,8 +2,8 @@ import { set, map, get } from 'lodash';
 import React, { useState } from 'react';
 import { Story, Meta } from '@storybook/react';
 
-import { Selection, Resizer } from './../../index';
-import { ISelectionProps } from './Selection';
+import Selection, { ISelectionProps } from './Selection';
+import Resizer from '../Resizer/Resizer';
 
 export default {
 	title: 'Communication/Selection',

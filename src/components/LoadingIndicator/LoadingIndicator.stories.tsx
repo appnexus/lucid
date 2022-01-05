@@ -1,8 +1,10 @@
 import _ from 'lodash';
 import React from 'react';
 import createClass from 'create-react-class';
-import { BarChart, LoadingIndicator, LoadingIcon } from './../../index';
 import Button from '../Button/Button';
+import LoadingIndicator from './LoadingIndicator';
+import BarChart from '../BarChart/BarChart';
+import LoadingIcon from '../Icon/LoadingIcon/LoadingIcon';
 
 export default {
 	title: 'Loading Indicator/LoadingIndicator',

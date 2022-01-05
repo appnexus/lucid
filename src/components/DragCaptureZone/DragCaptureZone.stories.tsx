@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import React from 'react';
 import createClass from 'create-react-class';
-import { DragCaptureZone } from './../../index';
+import DragCaptureZone from './DragCaptureZone';
 
 export default {
 	title: 'Utility/DragCaptureZone',

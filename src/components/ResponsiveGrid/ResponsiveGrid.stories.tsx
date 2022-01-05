@@ -1,5 +1,6 @@
 import React from 'react';
-import { ResponsiveGrid, Panel } from './../../index';
+import Panel from '../Panel/Panel';
+import ResponsiveGrid from '../ResponsiveGrid/ResponsiveGrid';
 
 export default {
 	title: 'Utility/ResponsiveGrid',
