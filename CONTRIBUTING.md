@@ -2,7 +2,7 @@
 
 First of all, thank you for contributing. It’s appreciated.
 
-1. Install node >= `>=8.0.0`
+1. Install node >= `>=14.0.0`
 2. Clone the repo and install dependencies with `npm install`.
 3. Make a GitHub issue before doing any significant amount of work. Make sure the core team approves your idea. This step is really important. If you skip this, your PR might be rejected.
 
