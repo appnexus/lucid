@@ -2,11 +2,7 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import {
-	findTypes,
-	omitProps,
-	StandardProps,
-} from '../../util/component-types';
+import { findTypes, StandardProps } from '../../util/component-types';
 import Checkbox, {
 	ICheckboxProps,
 	defaultProps as defaultPropsCheckbox,
@@ -15,6 +11,7 @@ import Checkbox, {
 const cx = lucidClassNames.bind('&-CheckboxLabeled');
 const { any, node, object, string, bool, func } = PropTypes;
 
+/** Label */
 export interface ILabelProps extends StandardProps {}
 
 const Label = (props: ILabelProps): null => null;
@@ -34,9 +31,25 @@ Label.propTypes = {
 	children: node,
 };
 
+/** Checkbox Labeled */
+/** TODO: Remove the nonPassThroughs when the component is converted to a functional component */
+const nonPassThroughs = [
+	'isIndeterminate',
+	'isDisabled',
+	'isSelected',
+	'onSelect',
+	'className',
+	'style',
+	'Label',
+	'initialState',
+];
 export interface ICheckboxLabeledProps extends ICheckboxProps {
 	/** Child element whose children are used to identify the purpose of this  checkbox to the user. */
-	Label?: string | (React.ReactNode & { props: ILabelProps });
+	Label?:
+		| string
+		| string[]
+		| Element[]
+		| (React.ReactNode & { props: ILabelProps });
 }
 
 export const CheckboxLabeled = (
@@ -74,12 +87,7 @@ export const CheckboxLabeled = (
 				isIndeterminate={isIndeterminate}
 				isSelected={isSelected}
 				onSelect={onSelect}
-				{...omitProps(
-					passThroughs,
-					undefined,
-					_.keys(CheckboxLabeled.propTypes),
-					false
-				)}
+				{..._.omit(passThroughs, nonPassThroughs)}
 			/>
 			<div
 				{...labelChildProps}
@@ -94,12 +102,8 @@ CheckboxLabeled.displayName = 'CheckboxLabeled';
 CheckboxLabeled.peek = {
 	description: `A square two-state toggle with a \`Label\`.`,
 	notes: {
-		overview: `
-			A square two-state toggle with a label that explains the action or selection. This is a composite of \`Checkbox\` and the native \`label\` element.
-		`,
-		intendedUse: `
-			Use checkboxes to allow users to select one or more items. Commonly used to select filters or settings. For interactions where users can only select one option, use \`RadioButtonLabeled\`.
-		`,
+		overview: `A square two-state toggle with a label that explains the action or selection. This is a composite of \`Checkbox\` and the native \`label\` element.`,
+		intendedUse: `Use checkboxes to allow users to select one or more items. Commonly used to select filters or settings. For interactions where users can only select one option, use \`RadioButtonLabeled\`.`,
 		technicalRecommendations: `
 			- Use the styles on the \`CheckboxLabeled\` parent container to ensure only the checkboxes and their labels are clickable.
 			- Use the Selected state when a filter or setting will be applied.
@@ -116,7 +120,7 @@ CheckboxLabeled.defaultProps = defaultPropsCheckbox;
 
 // Can't just `...Checkbox.propTypes` anymore because of the way we have to
 // handle default props. They are duplicated here on purpose which is okay
-// since in the future we'll be removing proptypes in favor is just typescript.
+// since in the future we'll be removing proptypes in favor of just typescript.
 CheckboxLabeled.propTypes = {
 	/**
 		Indicates whether the component should appear in an "indeterminate" or

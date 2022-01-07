@@ -1,5 +1,4 @@
 import React from 'react';
-//import createClass from 'create-react-class';
 import { Meta, Story } from '@storybook/react';
 
 import Validation, { IValidationProps } from './Validation';
@@ -21,14 +20,14 @@ export default {
 export const Default: Story<IValidationProps> = (args) => {
 	return (
 		<div>
-			<p>Text field with error (method 1)</p>
+			<p>Text field with Error prop (Method 1)</p>
 			<Validation {...args} Error='Error One'>
 				<TextField value='Text Field Text' />
 			</Validation>
 
 			<br />
 
-			<p>Text field with error (method 2)</p>
+			<p>Text field with Validation Error child component (Method 2)</p>
 			<Validation {...args}>
 				<Validation.Error>
 					<span>Error Two</span>
@@ -38,15 +37,15 @@ export const Default: Story<IValidationProps> = (args) => {
 
 			<br />
 
-			<p>Text area with error (method 1)</p>
+			<p>Text area with Error prop (Method 1)</p>
 			<Validation {...args} Error='Error Three'>
 				<TextField isMultiLine rows={3} value='Text Area Text' />
 			</Validation>
 
 			<br />
 
-			<p>Text area with error (method 2)</p>
-			<Validation {...args}>
+			<p>Text area with Validation Error child component (Method 2)</p>
+			<Validation {...args} Error='Error FOUR TEST'>
 				<Validation.Error>
 					<span>Error Four</span>
 				</Validation.Error>
@@ -55,4 +54,3 @@ export const Default: Story<IValidationProps> = (args) => {
 		</div>
 	);
 };
-Default.storyName = 'Default';

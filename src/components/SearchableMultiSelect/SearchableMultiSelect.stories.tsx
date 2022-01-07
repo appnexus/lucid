@@ -45,12 +45,12 @@ export const Default: Story<ISearchableMultiSelectProps> = (args) => {
 	return (
 		<Resizer>
 			{(width) => {
-				// const responsiveMode = width >= 400 ? 'large' : 'small';
+				const responsiveMode = width >= 400 ? 'large' : 'small';
 
 				return (
 					<SearchableMultiSelect
 						{...args}
-						// responsiveMode={responsiveMode}
+						responsiveMode={responsiveMode}
 					></SearchableMultiSelect>
 				);
 			}}
@@ -60,7 +60,7 @@ export const Default: Story<ISearchableMultiSelectProps> = (args) => {
 Default.storyName = 'Default';
 Default.args = {
 	children: addKeys([
-		<Option isDisabled>Alabama</Option>,
+		<Option>Alabama</Option>,
 		<Option>Alaska</Option>,
 		<Option>Arizona</Option>,
 		<Option>Arkansas</Option>,
@@ -115,81 +115,62 @@ Default.args = {
 export const Props: Story<ISearchableMultiSelectProps> = (args) => {
 	const { Option } = SearchableMultiSelect;
 
-	const Component = createClass({
-		getInitialState() {
-			return {
-				isRequired: false,
-			};
-		},
+	return (
+		<Resizer>
+			{(width) => {
+				const responsiveMode = width >= 768 ? 'large' : 'small';
 
-		handleChange(event: any) {
-			this.setState({
-				isRequired: event.length > 0,
-			});
-		},
+				return (
+					<section>
+						<h5>Loading</h5>
+						<SearchableMultiSelect
+							{...args}
+							responsiveMode={responsiveMode}
+							isLoading={true}
+						>
+							<Option>Alabama</Option>
+						</SearchableMultiSelect>
 
-		render() {
-			return (
-				<Resizer>
-					{(width) => {
-						const responsiveMode = width >= 768 ? 'large' : 'small';
+						<h5>Disabled</h5>
+						<SearchableMultiSelect
+							{...args}
+							responsiveMode={responsiveMode}
+							isDisabled={true}
+						>
+							<Option>Alabama</Option>
+						</SearchableMultiSelect>
 
-						return (
-							<section>
-								<h5>Loading</h5>
-								<SearchableMultiSelect
-									{...args}
-									responsiveMode={responsiveMode}
-									isLoading={true}
-								>
-									<Option>Alabama</Option>
-								</SearchableMultiSelect>
+						<h5>Custom option selections</h5>
+						<SearchableMultiSelect
+							{...args}
+							responsiveMode={responsiveMode}
+							selectedIndices={[0, 1, 2, 3]}
+						>
+							<Option Selection={{ kind: 'warning' }}>Washington</Option>
+							<Option Selection={{ kind: 'success' }}>Oregon</Option>
+							<Option Selection={{ kind: 'danger' }}>California</Option>
+							<Option Selection={{ kind: 'container' }}>Nevada</Option>
+						</SearchableMultiSelect>
 
-								<h5>Disabled</h5>
-								<SearchableMultiSelect
-									{...args}
-									responsiveMode={responsiveMode}
-									isDisabled={true}
-								>
-									<Option>Alabama</Option>
-								</SearchableMultiSelect>
-
-								<h5>Custom option selections</h5>
-								<SearchableMultiSelect
-									{...args}
-									responsiveMode={responsiveMode}
-									selectedIndices={[0, 1, 2, 3]}
-								>
-									<Option Selection={{ kind: 'warning' }}>Washington</Option>
-									<Option Selection={{ kind: 'success' }}>Oregon</Option>
-									<Option Selection={{ kind: 'danger' }}>California</Option>
-									<Option Selection={{ kind: 'container' }}>Nevada</Option>
-								</SearchableMultiSelect>
-
-								<h5>No remove all option</h5>
-								<SearchableMultiSelect
-									{...args}
-									responsiveMode={responsiveMode}
-									hasRemoveAll={false}
-									initialState={{
-										selectedIndices: [0, 1, 2],
-									}}
-								>
-									<Option>Washington</Option>
-									<Option>Oregon</Option>
-									<Option>California</Option>
-								</SearchableMultiSelect>
-							</section>
-						);
-					}}
-				</Resizer>
-			);
-		},
-	});
-
-	return <Component />;
+						<h5>No remove all option</h5>
+						<SearchableMultiSelect
+							{...args}
+							responsiveMode={responsiveMode}
+							hasRemoveAll={false}
+							initialState={{
+								selectedIndices: [0, 1, 2],
+							}}
+						>
+							<Option>Washington</Option>
+							<Option>Oregon</Option>
+							<Option>California</Option>
+						</SearchableMultiSelect>
+					</section>
+				);
+			}}
+		</Resizer>
+	);
 };
-Props.storyName = 'Props';
 
 /* Asynchronous */
 export const Asynchronous: Story<ISearchableMultiSelectProps> = (args) => {
@@ -337,10 +318,10 @@ export const Asynchronous: Story<ISearchableMultiSelectProps> = (args) => {
 
 	return <Component />;
 };
-Asynchronous.storyName = 'Asynchronous';
 Asynchronous.args = {
 	...Default.args,
 };
+
 /* Grouped Options */
 export const GroupedOptions: Story<ISearchableMultiSelectProps> = (args) => {
 	const { Option, OptionGroup } = SearchableMultiSelect;
@@ -427,7 +408,6 @@ export const GroupedOptions: Story<ISearchableMultiSelectProps> = (args) => {
 
 	return <Component />;
 };
-GroupedOptions.storyName = 'GroupedOptions';
 
 /* Custom Selection Label */
 export const CustomSelectionLabel: Story<ISearchableMultiSelectProps> = (
@@ -495,7 +475,6 @@ export const CustomSelectionLabel: Story<ISearchableMultiSelectProps> = (
 
 	return <Component />;
 };
-CustomSelectionLabel.storyName = 'CustomSelectionLabel';
 
 /* Select All */
 export const SelectAll: Story<ISearchableMultiSelectProps> = (args) => {
@@ -575,7 +554,6 @@ export const SelectAll: Story<ISearchableMultiSelectProps> = (args) => {
 
 	return <Component />;
 };
-SelectAll.storyName = 'SelectAll';
 
 /* Formatted Options */
 export const FormattedOptions: Story<ISearchableMultiSelectProps> = (args) => {
@@ -662,7 +640,6 @@ export const FormattedOptions: Story<ISearchableMultiSelectProps> = (args) => {
 	}
 	return <Component />;
 };
-FormattedOptions.storyName = 'FormattedOptions';
 FormattedOptions.args = {
 	...Default.args,
 };
@@ -769,4 +746,3 @@ export const Invalid: Story<ISearchableMultiSelectProps> = (args) => {
 
 	return <Component />;
 };
-Invalid.storyName = 'Invalid';

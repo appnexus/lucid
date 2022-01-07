@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { Meta } from '@storybook/react';
-import CheckboxLabeled from './CheckboxLabeled';
+import { Meta, Story } from '@storybook/react';
+
+import CheckboxLabeled, { ICheckboxLabeledProps } from './CheckboxLabeled';
 
 export default {
 	title: 'Controls/CheckboxLabeled',
@@ -9,13 +10,13 @@ export default {
 	parameters: {
 		docs: {
 			description: {
-				component: (CheckboxLabeled as any).peek.description,
+				component: CheckboxLabeled.peek.description,
 			},
 		},
 	},
 } as Meta;
 
-const Template: any = (args) => {
+const Template: Story<ICheckboxLabeledProps> = (args) => {
 	const [selected, setSelected] = useState(args.isSelected || false);
 	return (
 		<CheckboxLabeled
@@ -26,27 +27,27 @@ const Template: any = (args) => {
 	);
 };
 
-export const Default = Template.bind({});
+export const Default: Story<ICheckboxLabeledProps> = Template.bind({});
 Default.args = {
 	title: 'Default',
 	Label: 'Default',
 };
 
-export const Disabled = Template.bind({});
+export const Disabled: Story<ICheckboxLabeledProps> = Template.bind({});
 Disabled.args = {
 	title: 'Disabled',
 	Label: 'Disabled',
 	isDisabled: true,
 };
 
-export const Selected = Template.bind({});
+export const Selected: Story<ICheckboxLabeledProps> = Template.bind({});
 Selected.args = {
 	title: 'Selected',
 	Label: 'Selected',
 	isSelected: true,
 };
 
-export const DisabledSelected = Template.bind({});
+export const DisabledSelected: Story<ICheckboxLabeledProps> = Template.bind({});
 DisabledSelected.args = {
 	title: 'Disabled Selected',
 	Label: 'Disabled Selected',
@@ -54,19 +55,19 @@ DisabledSelected.args = {
 	isSelected: true,
 };
 
-export const LabelAsProp = Template.bind({});
+export const LabelAsProp: Story<ICheckboxLabeledProps> = Template.bind({});
 LabelAsProp.args = {
 	Label: 'Label as prop',
 	title: 'Label as prop',
 };
 
-export const HTMLElement = Template.bind({});
+export const HTMLElement: Story<ICheckboxLabeledProps> = Template.bind({});
 HTMLElement.args = {
 	Label: <span>HTML element</span>,
 	title: 'HTML element',
 };
 
-export const TextInAnArray = Template.bind({});
+export const TextInAnArray: Story<ICheckboxLabeledProps> = Template.bind({});
 TextInAnArray.args = {
 	Label: [
 		'Text in an array',
@@ -76,17 +77,19 @@ TextInAnArray.args = {
 	title: 'Text in an array',
 };
 
-export const HTMLElementInAnArray = Template.bind({});
+export const HTMLElementInAnArray: Story<ICheckboxLabeledProps> = Template.bind(
+	{}
+);
 HTMLElementInAnArray.args = {
 	Label: [
 		<span key='1'>HTML element in an array</span>,
 		<span key='2'>Again only the first value in the array is used</span>,
 		<span key='3'>The rest should not be rendered</span>,
-	],
+	] as any,
 	title: 'HTML element in an array',
 };
 
-export const LabelAsChild = (args) => {
+export const LabelAsChild: Story<ICheckboxLabeledProps> = (args) => {
 	const [selected, setSelected] = useState(args.isSelected || false);
 
 	return (

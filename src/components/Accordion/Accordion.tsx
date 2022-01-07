@@ -25,7 +25,7 @@ export interface IAccordionProps extends StandardProps {
 	) => void;
 }
 
-/** TODO: Remove this constant when the component is converted to a functional component */
+/** TODO: Remove the nonPassThroughs when the component is converted to a functional component */
 const nonPassThroughs = ['selectedIndex', 'onSelect'];
 
 export interface IAccordionState {
