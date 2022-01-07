@@ -72,6 +72,12 @@ describe('Paginator', () => {
 					.shallow();
 				assert(pageSizeSelectorWrapper.prop('isDisabled'), 'must be true');
 			});
+
+			it('should render a disabled TextField', () => {
+				const wrapper = shallow(<Paginator totalPages={1} />);
+				const textField = wrapper.find(TextField);
+				assert(textField.prop('isDisabled'), 'must be true');
+			});
 		});
 
 		describe('selectedPageIndex', () => {
@@ -176,7 +182,10 @@ describe('Paginator', () => {
 				assert.strictEqual(options.length, 5, 'must be 5');
 				options.forEach((option, i) => {
 					assert(option.is(SingleSelect.Option), 'must be true');
-					assert.strictEqual(option.children().text(), pageSizeOptions[i]);
+					assert.strictEqual(
+						option.children().text(),
+						pageSizeOptions[i].toString()
+					);
 				});
 			});
 		});
