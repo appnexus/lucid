@@ -65,7 +65,7 @@ describe('component-types', () => {
 
 		it('should make `selectors` a static property.', () => {
 			const panelSelectors = {
-				isValid() {},
+				isValid: () => {},
 			};
 
 			const Panel = createClass({

@@ -2,13 +2,11 @@ import { map } from 'lodash';
 import React from 'react';
 import { Meta } from '@storybook/react';
 
-import {
-	d3Scale,
-	Lines,
-	SuccessIcon,
-	VerticalTabs,
-	WarningIcon,
-} from '../../index';
+import * as d3Scale from 'd3-scale';
+import VerticalTabs from './VerticalTabs';
+import Lines from '../Lines/Lines';
+import SuccessIcon from '../Icon/SuccessIcon/SuccessIcon';
+import WarningIcon from '../Icon/WarningIcon/WarningIcon';
 
 //👇 Provide Storybook with the component name, 'section', any subcomponents and a description
 export default {

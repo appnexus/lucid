@@ -1,6 +1,6 @@
 import React from 'react';
 import createClass from 'create-react-class';
-import { NotchedTag } from './../../index';
+import NotchedTag from './NotchedTag';
 
 export default {
 	title: 'Visual Design/NotchedTag',

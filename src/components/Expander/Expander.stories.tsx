@@ -1,6 +1,9 @@
 import React from 'react';
 import createClass from 'create-react-class';
-import { Button, CloseIcon, EditIcon, Expander } from './../../index';
+import Expander from './Expander';
+import Button from '../Button/Button';
+import EditIcon from '../Icon/EditIcon/EditIcon';
+import CloseIcon from '../Icon/CloseIcon/CloseIcon';
 
 export default {
 	title: 'Layout/Expander',

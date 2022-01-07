@@ -1,8 +1,9 @@
 import React from 'react';
 import { Story, Meta } from '@storybook/react';
 
-import { Axis, d3Scale, d3Time } from './../../index';
-import { IAxisProps } from './Axis';
+import * as d3Scale from 'd3-scale';
+import * as d3Time from 'd3-time';
+import Axis, { IAxisProps } from './Axis';
 
 export default {
 	title: 'Visualizations/Axis',

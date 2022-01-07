@@ -1,6 +1,6 @@
 import React from 'react';
 import createClass from 'create-react-class';
-import { CardLoadingSkeleton } from './../../index';
+import CardLoadingSkeleton from './CardLoadingSkeleton';
 
 export default {
 	title: 'Loading Indicator/CardLoadingSkeleton',

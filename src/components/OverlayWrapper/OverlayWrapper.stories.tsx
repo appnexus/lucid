@@ -1,8 +1,9 @@
 import React from 'react';
 import { Story, Meta } from '@storybook/react';
 
-import { BarChart, OverlayWrapper } from './../../index';
 import { IOverlayWrapperProps } from './OverlayWrapper';
+import OverlayWrapper from './OverlayWrapper';
+import BarChart from '../BarChart/BarChart';
 
 export default {
 	title: 'Utility/OverlayWrapper',

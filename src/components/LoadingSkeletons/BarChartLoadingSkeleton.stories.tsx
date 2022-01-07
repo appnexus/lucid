@@ -1,6 +1,6 @@
 import React from 'react';
 import createClass from 'create-react-class';
-import { BarChartLoadingSkeleton } from './../../index';
+import BarChartLoadingSkeleton from './BarChartLoadingSkeleton';
 
 export default {
 	title: 'Loading Indicator/BarChartLoadingSkeleton',

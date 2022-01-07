@@ -1,14 +1,12 @@
 import _ from 'lodash';
 import React from 'react';
 import createClass from 'create-react-class';
-import {
-	Button,
-	Dialog,
-	CheckboxLabeled,
-	SearchField,
-	SearchableMultiSelect,
-	SingleSelect,
-} from './../../index';
+import Dialog from './Dialog';
+import Button from '../Button/Button';
+import SearchableMultiSelect from '../SearchableMultiSelect/SearchableMultiSelect';
+import SingleSelect from '../SingleSelect/SingleSelect';
+import CheckboxLabeled from '../CheckboxLabeled/CheckboxLabeled';
+import SearchField from '../SearchField/SearchField';
 
 export default {
 	title: 'Layout/Dialog',

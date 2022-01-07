@@ -3,7 +3,7 @@ import _ from 'lodash';
 import createClass from 'create-react-class';
 import { Story, Meta } from '@storybook/react';
 
-import { AutocompleteDumb as Autocomplete } from './../../index';
+import { AutocompleteDumb as Autocomplete } from './Autocomplete';
 
 export default {
 	title: 'Controls/Autocomplete',

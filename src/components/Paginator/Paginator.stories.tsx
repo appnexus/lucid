@@ -1,8 +1,7 @@
 import { useState } from '@storybook/addons';
 import { Story } from '@storybook/react';
 import React from 'react';
-import { Paginator } from '../../index';
-import { IPaginatorProps } from './Paginator';
+import Paginator, { IPaginatorProps } from './Paginator';
 
 export default {
 	title: 'Navigation/Paginator',

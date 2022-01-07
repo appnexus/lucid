@@ -1,6 +1,6 @@
 import React from 'react';
 import createClass from 'create-react-class';
-import { ComplexTableLoadingSkeleton } from './../../index';
+import ComplexTableLoadingSkeleton from './ComplexTableLoadingSkeleton';
 
 export default {
 	title: 'Loading Indicator/ComplexTableLoadingSkeleton',

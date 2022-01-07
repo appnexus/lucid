@@ -1,6 +1,9 @@
 import React from 'react';
 import createClass from 'create-react-class';
-import { Button, Checkbox, ScrollTable, SuccessIcon } from './../../index';
+import ScrollTable from './ScrollTable';
+import Checkbox from '../Checkbox/Checkbox';
+import SuccessIcon from '../Icon/SuccessIcon/SuccessIcon';
+import Button from '../Button/Button';
 
 export default {
 	title: 'Table/ScrollTable',

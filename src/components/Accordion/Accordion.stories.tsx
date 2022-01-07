@@ -1,8 +1,8 @@
 import React from 'react';
 
-import { Accordion } from './../../index';
 import createClass from 'create-react-class';
 import { Story, Meta } from '@storybook/react';
+import Accordion from './Accordion';
 
 export default {
 	title: 'Layout/Accordion',

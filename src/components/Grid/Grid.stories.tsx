@@ -1,6 +1,6 @@
 import React from 'react';
 import createClass from 'create-react-class';
-import { Grid } from './../../index';
+import Grid from './Grid';
 
 export default {
 	title: 'Layout/Grid',

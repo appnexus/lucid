@@ -2,8 +2,9 @@ import _ from 'lodash';
 import React, { useState } from 'react';
 import { Story, Meta } from '@storybook/react';
 
-import { Button, Overlay } from './../../index';
 import { IOverlayProps } from './Overlay';
+import Overlay from './Overlay';
+import Button from '../Button/Button';
 
 export default {
 	title: 'Utility/Overlay',

@@ -1,6 +1,7 @@
 import React from 'react';
-import { ResponsiveGrid, SidePanel, Panel } from './../../index';
-import { any } from 'prop-types';
+import Panel from '../Panel/Panel';
+import SidePanel from './SidePanel';
+import ResponsiveGrid from '../ResponsiveGrid/ResponsiveGrid';
 
 export default {
 	title: 'Layout/SidePanel',

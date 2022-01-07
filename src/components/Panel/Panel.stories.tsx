@@ -1,10 +1,10 @@
 import React from 'react';
 import { Meta, Story } from '@storybook/react';
 
-import { Panel, SettingsIcon } from './../../index';
 import Button from '../Button/Button';
 import Table from '../Table/Table';
-import { IPanelProps } from './Panel';
+import Panel, { IPanelProps } from './Panel';
+import SettingsIcon from '../Icon/SettingsIcon/SettingsIcon';
 
 export default {
 	title: 'Layout/Panel',

@@ -2,9 +2,11 @@ import _ from 'lodash';
 import React, { useState, useEffect } from 'react';
 import { Story, Meta } from '@storybook/react';
 
-import { BarChart, LoadingIndicator, LoadingIcon } from './../../index';
-import Button from '../Button/Button';
 import { ILoadingIndicatorProps } from './LoadingIndicator';
+import Button from '../Button/Button';
+import LoadingIndicator from './LoadingIndicator';
+import BarChart from '../BarChart/BarChart';
+import LoadingIcon from '../Icon/LoadingIcon/LoadingIcon';
 
 export default {
 	title: 'Loading Indicator/LoadingIndicator',

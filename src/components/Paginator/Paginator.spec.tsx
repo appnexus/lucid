@@ -270,7 +270,7 @@ describe('Paginator', () => {
 
 		describe('onPageSizeSelect', () => {
 			it('should be passed through to SingleSelect as `onSelect`', () => {
-				const onPageSizeSelect = function () {};
+				const onPageSizeSelect = () => {};
 				const wrapper = shallow(
 					<Paginator hasPageSizeSelector onPageSizeSelect={onPageSizeSelect} />
 				);

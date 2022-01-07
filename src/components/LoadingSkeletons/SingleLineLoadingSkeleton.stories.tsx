@@ -1,6 +1,6 @@
 import React from 'react';
 import createClass from 'create-react-class';
-import { SingleLineLoadingSkeleton } from './../../index';
+import SingleLineLoadingSkeleton from './SingleLineLoadingSkeleton';
 
 export default {
 	title: 'Loading Indicator/SingleLineLoadingSkeleton',

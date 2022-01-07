@@ -1,8 +1,7 @@
 import { map, times, partial } from 'lodash';
 import React, { useState } from 'react';
 import { Meta } from '@storybook/react';
-
-import { VerticalListMenu } from '../../index';
+import VerticalListMenu from './VerticalListMenu';
 
 //👇 Provide Storybook with the component name, 'section', any subcomponents and a description
 export default {

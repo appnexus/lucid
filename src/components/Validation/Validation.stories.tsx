@@ -2,8 +2,8 @@ import React from 'react';
 //import createClass from 'create-react-class';
 import { Meta, Story } from '@storybook/react';
 
-import { Validation, TextField } from './../../index';
-import { IValidationProps } from './Validation';
+import Validation, { IValidationProps } from './Validation';
+import TextField from '../TextField/TextField';
 
 export default {
 	title: 'Helpers/Validation',

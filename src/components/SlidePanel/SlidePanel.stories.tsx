@@ -1,16 +1,14 @@
 import React from 'react';
 import createClass from 'create-react-class';
 import SlidePanel from './SlidePanel';
-import {
-	AnalyzeDataIcon,
-	Button,
-	CalendarIcon,
-	DuplicateIcon,
-	EditIcon,
-	FileIcon,
-	ImageIcon,
-	SettingsIcon,
-} from './../../index';
+import Button from '../Button/Button';
+import AnalyzeDataIcon from '../Icon/AnalyzeDataIcon/AnalyzeDataIcon';
+import CalendarIcon from '../Icon/CalendarIcon/CalendarIcon';
+import DuplicateIcon from '../Icon/DuplicateIcon/DuplicateIcon';
+import EditIcon from '../Icon/EditIcon/EditIcon';
+import FileIcon from '../Icon/FileIcon/FileIcon';
+import ImageIcon from '../Icon/ImageIcon/ImageIcon';
+import SettingsIcon from '../Icon/SettingsIcon/SettingsIcon';
 
 export default {
 	title: 'Private/SlidePanel',

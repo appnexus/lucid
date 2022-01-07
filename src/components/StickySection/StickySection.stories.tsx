@@ -1,6 +1,6 @@
 import React from 'react';
 import createClass from 'create-react-class';
-import { StickySection } from './../../index';
+import StickySection from './StickySection';
 
 export default {
 	title: 'Helpers/StickySection',

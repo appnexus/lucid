@@ -1,6 +1,6 @@
 import React from 'react';
 import createClass from 'create-react-class';
-import { SplitVertical } from './../../index';
+import SplitVertical from './SplitVertical';
 
 export default {
 	title: 'Private/SplitVertical',

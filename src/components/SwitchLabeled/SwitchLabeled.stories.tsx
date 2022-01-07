@@ -1,6 +1,6 @@
 import React from 'react';
 import createClass from 'create-react-class';
-import { SwitchLabeled } from './../../index';
+import SwitchLabeled from './SwitchLabeled';
 
 export default {
 	title: 'Controls/SwitchLabeled',

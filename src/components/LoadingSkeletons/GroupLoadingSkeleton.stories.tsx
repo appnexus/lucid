@@ -1,6 +1,6 @@
 import React from 'react';
 import createClass from 'create-react-class';
-import { GroupLoadingSkeleton } from './../../index';
+import GroupLoadingSkeleton from './GroupLoadingSkeleton';
 
 export default {
 	title: 'Loading Indicator/GroupLoadingSkeleton',

@@ -1,5 +1,5 @@
 import React from 'react';
-import { DangerLightIcon } from './../../../index';
+import DangerLightIcon from './DangerLightIcon';
 
 export default {
 	title: 'Deprecated/DangerLightIcon',
