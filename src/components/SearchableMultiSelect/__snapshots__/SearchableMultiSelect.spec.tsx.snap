@@ -55,59 +55,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
 </section>
 `;
 
-exports[`SearchableMultiSelect [common] example testing should match snapshot(s) for CustomSelectionLabel 1`] = `
-<div
-  class="lucid-SearchableMultiSelect"
-  default=""
->
-  <div
-    class="lucid-DropMenu lucid-DropMenu-base lucid-SearchableMultiSelect-DropMenu"
-  >
-    <span
-      class="lucid-ContextMenu"
-    >
-      <div
-        class="lucid-DropMenu-Control"
-        tabindex="0"
-      >
-        <div
-          class="lucid-SearchField lucid-SearchableMultiSelect-search"
-        >
-          <input
-            autocomplete="off"
-            class="lucid-TextField lucid-TextField-is-single-line"
-            rows="5"
-            type="text"
-            value=""
-          />
-          <div
-            class="lucid-SearchField-Icon-container"
-          >
-            <svg
-              class="lucid-Icon lucid-Icon-color-primary lucid-SearchIcon lucid-SearchField-Icon"
-              height="12"
-              preserveAspectRatio="xMidYMid meet"
-              viewBox="0 0 16 16"
-              width="12"
-            >
-              <circle
-                cx="6"
-                cy="6"
-                r="5.5"
-              />
-              <path
-                d="M15.5 15.5L9.876 9.876"
-              />
-            </svg>
-          </div>
-        </div>
-      </div>
-    </span>
-  </div>
-</div>
-`;
-
-exports[`SearchableMultiSelect [common] example testing should match snapshot(s) for Default 1`] = `
+exports[`SearchableMultiSelect [common] example testing should match snapshot(s) for Basic 1`] = `
 <div
   class="lucid-Resizer"
 >
@@ -159,6 +107,58 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         </div>
       </span>
     </div>
+  </div>
+</div>
+`;
+
+exports[`SearchableMultiSelect [common] example testing should match snapshot(s) for CustomSelectionLabel 1`] = `
+<div
+  class="lucid-SearchableMultiSelect"
+  default=""
+>
+  <div
+    class="lucid-DropMenu lucid-DropMenu-base lucid-SearchableMultiSelect-DropMenu"
+  >
+    <span
+      class="lucid-ContextMenu"
+    >
+      <div
+        class="lucid-DropMenu-Control"
+        tabindex="0"
+      >
+        <div
+          class="lucid-SearchField lucid-SearchableMultiSelect-search"
+        >
+          <input
+            autocomplete="off"
+            class="lucid-TextField lucid-TextField-is-single-line"
+            rows="5"
+            type="text"
+            value=""
+          />
+          <div
+            class="lucid-SearchField-Icon-container"
+          >
+            <svg
+              class="lucid-Icon lucid-Icon-color-primary lucid-SearchIcon lucid-SearchField-Icon"
+              height="12"
+              preserveAspectRatio="xMidYMid meet"
+              viewBox="0 0 16 16"
+              width="12"
+            >
+              <circle
+                cx="6"
+                cy="6"
+                r="5.5"
+              />
+              <path
+                d="M15.5 15.5L9.876 9.876"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </span>
   </div>
 </div>
 `;
