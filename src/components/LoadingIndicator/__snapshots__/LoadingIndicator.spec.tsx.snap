@@ -1,5 +1,459 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`LoadingIndicator [common] example testing should match snapshot(s) for Basic 1`] = `
+<div
+  class="lucid-OverlayWrapper lucid-LoadingIndicator"
+>
+  <svg
+    class="lucid-BarChart"
+    height="400"
+    width="750"
+  >
+    <g
+      transform="translate(80, 350)"
+    >
+      <g
+        class="lucid-Axis"
+      >
+        <path
+          class="lucid-Axis-domain"
+          d="M0,0V0H650V0"
+        />
+        <g
+          transform="translate(128.03030303030303, 0)"
+        >
+          <line
+            class="lucid-Axis-tick"
+            x2="0"
+            y2="6"
+          />
+          <text
+            class="lucid-Axis-tick-text"
+            dy=".71em"
+            style="text-anchor:middle"
+            transform=""
+            x="0"
+            y="9"
+          >
+            2015-01-01
+          </text>
+        </g>
+        <g
+          transform="translate(259.34343434343435, 0)"
+        >
+          <line
+            class="lucid-Axis-tick"
+            x2="0"
+            y2="6"
+          />
+          <text
+            class="lucid-Axis-tick-text"
+            dy=".71em"
+            style="text-anchor:middle"
+            transform=""
+            x="0"
+            y="9"
+          >
+            2015-01-02
+          </text>
+        </g>
+        <g
+          transform="translate(390.65656565656565, 0)"
+        >
+          <line
+            class="lucid-Axis-tick"
+            x2="0"
+            y2="6"
+          />
+          <text
+            class="lucid-Axis-tick-text"
+            dy=".71em"
+            style="text-anchor:middle"
+            transform=""
+            x="0"
+            y="9"
+          >
+            2015-01-03
+          </text>
+        </g>
+        <g
+          transform="translate(521.969696969697, 0)"
+        >
+          <line
+            class="lucid-Axis-tick"
+            x2="0"
+            y2="6"
+          />
+          <text
+            class="lucid-Axis-tick-text"
+            dy=".71em"
+            style="text-anchor:middle"
+            transform=""
+            x="0"
+            y="9"
+          >
+            2015-01-04
+          </text>
+        </g>
+      </g>
+    </g>
+    <g
+      transform="translate(80, 10)"
+    >
+      <g
+        class="lucid-Axis"
+      >
+        <path
+          class="lucid-Axis-domain"
+          d="M-6,340H0V0H-6"
+        />
+        <g
+          transform="translate(0, 340)"
+        >
+          <line
+            class="lucid-Axis-tick"
+            x2="-6"
+            y2="0"
+          />
+          <text
+            class="lucid-Axis-tick-text"
+            dy=".32em"
+            style="text-anchor:end"
+            transform=""
+            x="-9"
+            y="0"
+          >
+            0.0
+          </text>
+        </g>
+        <g
+          transform="translate(0, 306)"
+        >
+          <line
+            class="lucid-Axis-tick"
+            x2="-6"
+            y2="0"
+          />
+          <text
+            class="lucid-Axis-tick-text"
+            dy=".32em"
+            style="text-anchor:end"
+            transform=""
+            x="-9"
+            y="0"
+          >
+            0.5
+          </text>
+        </g>
+        <g
+          transform="translate(0, 272)"
+        >
+          <line
+            class="lucid-Axis-tick"
+            x2="-6"
+            y2="0"
+          />
+          <text
+            class="lucid-Axis-tick-text"
+            dy=".32em"
+            style="text-anchor:end"
+            transform=""
+            x="-9"
+            y="0"
+          >
+            1.0
+          </text>
+        </g>
+        <g
+          transform="translate(0, 237.99999999999997)"
+        >
+          <line
+            class="lucid-Axis-tick"
+            x2="-6"
+            y2="0"
+          />
+          <text
+            class="lucid-Axis-tick-text"
+            dy=".32em"
+            style="text-anchor:end"
+            transform=""
+            x="-9"
+            y="0"
+          >
+            1.5
+          </text>
+        </g>
+        <g
+          transform="translate(0, 204)"
+        >
+          <line
+            class="lucid-Axis-tick"
+            x2="-6"
+            y2="0"
+          />
+          <text
+            class="lucid-Axis-tick-text"
+            dy=".32em"
+            style="text-anchor:end"
+            transform=""
+            x="-9"
+            y="0"
+          >
+            2.0
+          </text>
+        </g>
+        <g
+          transform="translate(0, 170)"
+        >
+          <line
+            class="lucid-Axis-tick"
+            x2="-6"
+            y2="0"
+          />
+          <text
+            class="lucid-Axis-tick-text"
+            dy=".32em"
+            style="text-anchor:end"
+            transform=""
+            x="-9"
+            y="0"
+          >
+            2.5
+          </text>
+        </g>
+        <g
+          transform="translate(0, 136)"
+        >
+          <line
+            class="lucid-Axis-tick"
+            x2="-6"
+            y2="0"
+          />
+          <text
+            class="lucid-Axis-tick-text"
+            dy=".32em"
+            style="text-anchor:end"
+            transform=""
+            x="-9"
+            y="0"
+          >
+            3.0
+          </text>
+        </g>
+        <g
+          transform="translate(0, 102.00000000000001)"
+        >
+          <line
+            class="lucid-Axis-tick"
+            x2="-6"
+            y2="0"
+          />
+          <text
+            class="lucid-Axis-tick-text"
+            dy=".32em"
+            style="text-anchor:end"
+            transform=""
+            x="-9"
+            y="0"
+          >
+            3.5
+          </text>
+        </g>
+        <g
+          transform="translate(0, 67.99999999999999)"
+        >
+          <line
+            class="lucid-Axis-tick"
+            x2="-6"
+            y2="0"
+          />
+          <text
+            class="lucid-Axis-tick-text"
+            dy=".32em"
+            style="text-anchor:end"
+            transform=""
+            x="-9"
+            y="0"
+          >
+            4.0
+          </text>
+        </g>
+        <g
+          transform="translate(0, 33.99999999999999)"
+        >
+          <line
+            class="lucid-Axis-tick"
+            x2="-6"
+            y2="0"
+          />
+          <text
+            class="lucid-Axis-tick-text"
+            dy=".32em"
+            style="text-anchor:end"
+            transform=""
+            x="-9"
+            y="0"
+          >
+            4.5
+          </text>
+        </g>
+        <g
+          transform="translate(0, 0)"
+        >
+          <line
+            class="lucid-Axis-tick"
+            x2="-6"
+            y2="0"
+          />
+          <text
+            class="lucid-Axis-tick-text"
+            dy=".32em"
+            style="text-anchor:end"
+            transform=""
+            x="-9"
+            y="0"
+          >
+            5.0
+          </text>
+        </g>
+      </g>
+    </g>
+    <g
+      transform="translate(80, 10)"
+    >
+      <g
+        class="lucid-Bars"
+      >
+        <g>
+          <rect
+            class="lucid-Bar lucid-Bar-color-chart-3"
+            height="68"
+            width="124"
+            x="65.65656565656565"
+            y="272"
+          />
+          <g
+            class="lucid-ContextMenu lucid-ToolTip"
+          >
+            <rect
+              class="lucid-Bars-tooltip-hover-zone"
+              height="68"
+              width="124.74747474747475"
+              x="65.65656565656565"
+              y="272"
+            />
+          </g>
+        </g>
+        <g>
+          <rect
+            class="lucid-Bar lucid-Bar-color-chart-3"
+            height="136"
+            width="124"
+            x="196.96969696969697"
+            y="204"
+          />
+          <g
+            class="lucid-ContextMenu lucid-ToolTip"
+          >
+            <rect
+              class="lucid-Bars-tooltip-hover-zone"
+              height="136"
+              width="124.74747474747475"
+              x="196.96969696969697"
+              y="204"
+            />
+          </g>
+        </g>
+        <g>
+          <rect
+            class="lucid-Bar lucid-Bar-color-chart-3"
+            height="204"
+            width="124"
+            x="328.2828282828283"
+            y="136"
+          />
+          <g
+            class="lucid-ContextMenu lucid-ToolTip"
+          >
+            <rect
+              class="lucid-Bars-tooltip-hover-zone"
+              height="204"
+              width="124.74747474747475"
+              x="328.2828282828283"
+              y="136"
+            />
+          </g>
+        </g>
+        <g>
+          <rect
+            class="lucid-Bar lucid-Bar-color-chart-3"
+            height="340"
+            width="124"
+            x="459.59595959595964"
+            y="0"
+          />
+          <g
+            class="lucid-ContextMenu lucid-ToolTip"
+          >
+            <rect
+              class="lucid-Bars-tooltip-hover-zone"
+              height="340"
+              width="124.74747474747475"
+              x="459.59595959595964"
+              y="0"
+            />
+          </g>
+        </g>
+      </g>
+    </g>
+  </svg>
+  <div
+    class="lucid-OverlayWrapper-message-container lucid-OverlayWrapper-has-overlay lucid-OverlayWrapper-kind-light"
+  >
+    <div>
+      <div
+        class="lucid-LoadingMessage"
+      >
+        <svg
+          class="lucid-Icon lucid-Icon-color-primary lucid-LoadingIcon"
+          height="16"
+          preserveAspectRatio="xMidYMid meet"
+          style="animation-duration:1.25s"
+          viewBox="0 0 100 100"
+          width="16"
+        >
+          <rect
+            fill="none"
+            height="100"
+            width="100"
+            x="0"
+            y="0"
+          />
+          <circle
+            class="lucid-LoadingIcon-circle"
+            cx="50"
+            cy="50"
+            r="40"
+          />
+          <circle
+            class="lucid-LoadingIcon-spinner"
+            cx="50"
+            cy="50"
+            r="40"
+            style="animation-duration:1.25s"
+          />
+        </svg>
+        <h3
+          class="lucid-LoadingMessage-title"
+        >
+          Loading
+        </h3>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`LoadingIndicator [common] example testing should match snapshot(s) for CustomMessage 1`] = `
 <div>
   <div
@@ -917,7 +1371,7 @@ exports[`LoadingIndicator [common] example testing should match snapshot(s) for 
 </div>
 `;
 
-exports[`LoadingIndicator [common] example testing should match snapshot(s) for Default 1`] = `
+exports[`LoadingIndicator [common] example testing should match snapshot(s) for DarkOverlay 1`] = `
 <div
   class="lucid-OverlayWrapper lucid-LoadingIndicator"
 >
@@ -1325,7 +1779,7 @@ exports[`LoadingIndicator [common] example testing should match snapshot(s) for 
     </g>
   </svg>
   <div
-    class="lucid-OverlayWrapper-message-container lucid-OverlayWrapper-has-overlay lucid-OverlayWrapper-kind-light"
+    class="lucid-OverlayWrapper-message-container lucid-OverlayWrapper-has-overlay"
   >
     <div>
       <div
@@ -1393,7 +1847,7 @@ exports[`LoadingIndicator [common] example testing should match snapshot(s) for 
     <span
       class="lucid-Button-content"
     >
-      Switch overlay color
+      dark overlay color
     </span>
   </button>
   <svg
@@ -1624,461 +2078,7 @@ exports[`LoadingIndicator [common] example testing should match snapshot(s) for 
     </g>
   </svg>
   <div
-    class="lucid-OverlayWrapper-message-container lucid-OverlayWrapper-has-overlay lucid-OverlayWrapper-kind-light"
-  >
-    <div>
-      <div
-        class="lucid-LoadingMessage"
-      >
-        <svg
-          class="lucid-Icon lucid-Icon-color-primary lucid-LoadingIcon"
-          height="16"
-          preserveAspectRatio="xMidYMid meet"
-          style="animation-duration:1.25s"
-          viewBox="0 0 100 100"
-          width="16"
-        >
-          <rect
-            fill="none"
-            height="100"
-            width="100"
-            x="0"
-            y="0"
-          />
-          <circle
-            class="lucid-LoadingIcon-circle"
-            cx="50"
-            cy="50"
-            r="40"
-          />
-          <circle
-            class="lucid-LoadingIcon-spinner"
-            cx="50"
-            cy="50"
-            r="40"
-            style="animation-duration:1.25s"
-          />
-        </svg>
-        <h3
-          class="lucid-LoadingMessage-title"
-        >
-          Loading
-        </h3>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`LoadingIndicator [common] example testing should match snapshot(s) for LightOverlay 1`] = `
-<div
-  class="lucid-OverlayWrapper lucid-LoadingIndicator"
->
-  <svg
-    class="lucid-BarChart"
-    height="400"
-    width="750"
-  >
-    <g
-      transform="translate(80, 350)"
-    >
-      <g
-        class="lucid-Axis"
-      >
-        <path
-          class="lucid-Axis-domain"
-          d="M0,0V0H650V0"
-        />
-        <g
-          transform="translate(128.03030303030303, 0)"
-        >
-          <line
-            class="lucid-Axis-tick"
-            x2="0"
-            y2="6"
-          />
-          <text
-            class="lucid-Axis-tick-text"
-            dy=".71em"
-            style="text-anchor:middle"
-            transform=""
-            x="0"
-            y="9"
-          >
-            2015-01-01
-          </text>
-        </g>
-        <g
-          transform="translate(259.34343434343435, 0)"
-        >
-          <line
-            class="lucid-Axis-tick"
-            x2="0"
-            y2="6"
-          />
-          <text
-            class="lucid-Axis-tick-text"
-            dy=".71em"
-            style="text-anchor:middle"
-            transform=""
-            x="0"
-            y="9"
-          >
-            2015-01-02
-          </text>
-        </g>
-        <g
-          transform="translate(390.65656565656565, 0)"
-        >
-          <line
-            class="lucid-Axis-tick"
-            x2="0"
-            y2="6"
-          />
-          <text
-            class="lucid-Axis-tick-text"
-            dy=".71em"
-            style="text-anchor:middle"
-            transform=""
-            x="0"
-            y="9"
-          >
-            2015-01-03
-          </text>
-        </g>
-        <g
-          transform="translate(521.969696969697, 0)"
-        >
-          <line
-            class="lucid-Axis-tick"
-            x2="0"
-            y2="6"
-          />
-          <text
-            class="lucid-Axis-tick-text"
-            dy=".71em"
-            style="text-anchor:middle"
-            transform=""
-            x="0"
-            y="9"
-          >
-            2015-01-04
-          </text>
-        </g>
-      </g>
-    </g>
-    <g
-      transform="translate(80, 10)"
-    >
-      <g
-        class="lucid-Axis"
-      >
-        <path
-          class="lucid-Axis-domain"
-          d="M-6,340H0V0H-6"
-        />
-        <g
-          transform="translate(0, 340)"
-        >
-          <line
-            class="lucid-Axis-tick"
-            x2="-6"
-            y2="0"
-          />
-          <text
-            class="lucid-Axis-tick-text"
-            dy=".32em"
-            style="text-anchor:end"
-            transform=""
-            x="-9"
-            y="0"
-          >
-            0.0
-          </text>
-        </g>
-        <g
-          transform="translate(0, 306)"
-        >
-          <line
-            class="lucid-Axis-tick"
-            x2="-6"
-            y2="0"
-          />
-          <text
-            class="lucid-Axis-tick-text"
-            dy=".32em"
-            style="text-anchor:end"
-            transform=""
-            x="-9"
-            y="0"
-          >
-            0.5
-          </text>
-        </g>
-        <g
-          transform="translate(0, 272)"
-        >
-          <line
-            class="lucid-Axis-tick"
-            x2="-6"
-            y2="0"
-          />
-          <text
-            class="lucid-Axis-tick-text"
-            dy=".32em"
-            style="text-anchor:end"
-            transform=""
-            x="-9"
-            y="0"
-          >
-            1.0
-          </text>
-        </g>
-        <g
-          transform="translate(0, 237.99999999999997)"
-        >
-          <line
-            class="lucid-Axis-tick"
-            x2="-6"
-            y2="0"
-          />
-          <text
-            class="lucid-Axis-tick-text"
-            dy=".32em"
-            style="text-anchor:end"
-            transform=""
-            x="-9"
-            y="0"
-          >
-            1.5
-          </text>
-        </g>
-        <g
-          transform="translate(0, 204)"
-        >
-          <line
-            class="lucid-Axis-tick"
-            x2="-6"
-            y2="0"
-          />
-          <text
-            class="lucid-Axis-tick-text"
-            dy=".32em"
-            style="text-anchor:end"
-            transform=""
-            x="-9"
-            y="0"
-          >
-            2.0
-          </text>
-        </g>
-        <g
-          transform="translate(0, 170)"
-        >
-          <line
-            class="lucid-Axis-tick"
-            x2="-6"
-            y2="0"
-          />
-          <text
-            class="lucid-Axis-tick-text"
-            dy=".32em"
-            style="text-anchor:end"
-            transform=""
-            x="-9"
-            y="0"
-          >
-            2.5
-          </text>
-        </g>
-        <g
-          transform="translate(0, 136)"
-        >
-          <line
-            class="lucid-Axis-tick"
-            x2="-6"
-            y2="0"
-          />
-          <text
-            class="lucid-Axis-tick-text"
-            dy=".32em"
-            style="text-anchor:end"
-            transform=""
-            x="-9"
-            y="0"
-          >
-            3.0
-          </text>
-        </g>
-        <g
-          transform="translate(0, 102.00000000000001)"
-        >
-          <line
-            class="lucid-Axis-tick"
-            x2="-6"
-            y2="0"
-          />
-          <text
-            class="lucid-Axis-tick-text"
-            dy=".32em"
-            style="text-anchor:end"
-            transform=""
-            x="-9"
-            y="0"
-          >
-            3.5
-          </text>
-        </g>
-        <g
-          transform="translate(0, 67.99999999999999)"
-        >
-          <line
-            class="lucid-Axis-tick"
-            x2="-6"
-            y2="0"
-          />
-          <text
-            class="lucid-Axis-tick-text"
-            dy=".32em"
-            style="text-anchor:end"
-            transform=""
-            x="-9"
-            y="0"
-          >
-            4.0
-          </text>
-        </g>
-        <g
-          transform="translate(0, 33.99999999999999)"
-        >
-          <line
-            class="lucid-Axis-tick"
-            x2="-6"
-            y2="0"
-          />
-          <text
-            class="lucid-Axis-tick-text"
-            dy=".32em"
-            style="text-anchor:end"
-            transform=""
-            x="-9"
-            y="0"
-          >
-            4.5
-          </text>
-        </g>
-        <g
-          transform="translate(0, 0)"
-        >
-          <line
-            class="lucid-Axis-tick"
-            x2="-6"
-            y2="0"
-          />
-          <text
-            class="lucid-Axis-tick-text"
-            dy=".32em"
-            style="text-anchor:end"
-            transform=""
-            x="-9"
-            y="0"
-          >
-            5.0
-          </text>
-        </g>
-      </g>
-    </g>
-    <g
-      transform="translate(80, 10)"
-    >
-      <g
-        class="lucid-Bars"
-      >
-        <g>
-          <rect
-            class="lucid-Bar lucid-Bar-color-chart-3"
-            height="68"
-            width="124"
-            x="65.65656565656565"
-            y="272"
-          />
-          <g
-            class="lucid-ContextMenu lucid-ToolTip"
-          >
-            <rect
-              class="lucid-Bars-tooltip-hover-zone"
-              height="68"
-              width="124.74747474747475"
-              x="65.65656565656565"
-              y="272"
-            />
-          </g>
-        </g>
-        <g>
-          <rect
-            class="lucid-Bar lucid-Bar-color-chart-3"
-            height="136"
-            width="124"
-            x="196.96969696969697"
-            y="204"
-          />
-          <g
-            class="lucid-ContextMenu lucid-ToolTip"
-          >
-            <rect
-              class="lucid-Bars-tooltip-hover-zone"
-              height="136"
-              width="124.74747474747475"
-              x="196.96969696969697"
-              y="204"
-            />
-          </g>
-        </g>
-        <g>
-          <rect
-            class="lucid-Bar lucid-Bar-color-chart-3"
-            height="204"
-            width="124"
-            x="328.2828282828283"
-            y="136"
-          />
-          <g
-            class="lucid-ContextMenu lucid-ToolTip"
-          >
-            <rect
-              class="lucid-Bars-tooltip-hover-zone"
-              height="204"
-              width="124.74747474747475"
-              x="328.2828282828283"
-              y="136"
-            />
-          </g>
-        </g>
-        <g>
-          <rect
-            class="lucid-Bar lucid-Bar-color-chart-3"
-            height="340"
-            width="124"
-            x="459.59595959595964"
-            y="0"
-          />
-          <g
-            class="lucid-ContextMenu lucid-ToolTip"
-          >
-            <rect
-              class="lucid-Bars-tooltip-hover-zone"
-              height="340"
-              width="124.74747474747475"
-              x="459.59595959595964"
-              y="0"
-            />
-          </g>
-        </g>
-      </g>
-    </g>
-  </svg>
-  <div
-    class="lucid-OverlayWrapper-message-container lucid-OverlayWrapper-has-overlay lucid-OverlayWrapper-kind-light"
+    class="lucid-OverlayWrapper-message-container lucid-OverlayWrapper-has-overlay"
   >
     <div>
       <div
@@ -2532,7 +2532,7 @@ exports[`LoadingIndicator [common] example testing should match snapshot(s) for 
     </g>
   </svg>
   <div
-    class="lucid-OverlayWrapper-message-container lucid-OverlayWrapper-has-overlay lucid-OverlayWrapper-kind-light"
+    class="lucid-OverlayWrapper-message-container"
   >
     <div>
       <div

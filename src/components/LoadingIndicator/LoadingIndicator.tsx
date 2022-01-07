@@ -1,6 +1,7 @@
-/* eslint-disable react/prop-types */
+import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
+
 import { lucidClassNames } from '../../util/style-helpers';
 import { getFirst, rejectTypes } from '../../util/component-types';
 import OverlayWrapper, {
@@ -8,7 +9,6 @@ import OverlayWrapper, {
 	IOverlayWrapperProps,
 } from '../OverlayWrapper/OverlayWrapper';
 import LoadingMessage from '../LoadingMessage/LoadingMessage';
-import _ from 'lodash';
 
 const cx = lucidClassNames.bind('&-LoadingIndicator');
 
@@ -37,15 +37,6 @@ export interface ILoadingIndicatorProps extends IOverlayWrapperProps {
 	/** Style variations for the overlay behind the loading indicator. */
 	overlayKind: 'light' | 'dark';
 }
-const nonPassthroughs = [
-	'className',
-	'children',
-	'hasOverlay',
-	'isLoading',
-	'anchorMessage',
-	'fixedMessage',
-	'overlayKind',
-];
 
 const defaultProps = {
 	hasOverlay: true,
@@ -76,13 +67,7 @@ export const LoadingIndicator = (
 
 	return (
 		<OverlayWrapper
-			// {...omitProps(
-			// 	props,
-			// 	undefined,
-			// 	// _.keys(LoadingIndicator.propTypes)
-			// 	['children', 'className', 'isLoading', 'Message']
-			// )}
-			{..._.omit(passThroughs, nonPassthroughs)}
+			{...passThroughs}
 			className={cx('&', className)}
 			isVisible={isLoading}
 			anchorMessage={anchorMessage}

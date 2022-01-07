@@ -48,6 +48,8 @@ const nonPassthroughs = [
 	'anchorMessage',
 	'Body',
 	'Title',
+	'initialState',
+	'callbackId',
 ];
 
 const defaultProps = {

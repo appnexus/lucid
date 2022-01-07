@@ -18,8 +18,8 @@ export default {
 	},
 } as Meta;
 
-/* Default */
-export const Default: Story<IOverlayProps> = (args) => {
+/* BASIC */
+export const Basic: Story<IOverlayProps> = (args) => {
 	const [isShown, setIsShown] = useState(false);
 
 	const handleOpenClose = (isShown: any) => {
@@ -43,7 +43,6 @@ export const Default: Story<IOverlayProps> = (args) => {
 		</div>
 	);
 };
-Default.storyName = 'Default';
 
 /* No Modal */
 export const NoModal: Story<IOverlayProps> = (args) => {
@@ -70,10 +69,14 @@ export const NoModal: Story<IOverlayProps> = (args) => {
 					}}
 				>
 					User can still interact with the background.
-					<Button onClick={_.partial(handleOpenClose, false)}>Close</Button>
+					<Button
+						onClick={_.partial(handleOpenClose, false)}
+						style={{ marginLeft: '10px' }}
+					>
+						Close
+					</Button>
 				</div>
 			</Overlay>
 		</div>
 	);
 };
-NoModal.storyName = 'No Modal';

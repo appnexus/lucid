@@ -67,16 +67,18 @@ export const Interactive: Story<ILoadingIndicatorProps> = (args) => {
 			>
 				Get more data
 			</Button>
-			<Button onClick={handleOverlayKindClick}>Switch overlay color</Button>
+			{/* <Button onClick={handleOverlayKindClick}>Switch overlay color</Button> */}
+			<Button onClick={handleOverlayKindClick}>
+				{`${state.overlayKind} overlay color`}
+			</Button>
 			<BarChart width={750} data={state.data} yAxisTitle='Revenue' />
 		</LoadingIndicator>
 	);
 	// },
 };
-Interactive.storyName = 'Interactive';
 
-/* Default */
-export const Default: Story<ILoadingIndicatorProps> = (args) => {
+/* Basic */
+export const Basic: Story<ILoadingIndicatorProps> = (args) => {
 	return (
 		<LoadingIndicator {...args} isLoading>
 			<BarChart
@@ -91,7 +93,6 @@ export const Default: Story<ILoadingIndicatorProps> = (args) => {
 		</LoadingIndicator>
 	);
 };
-Default.storyName = 'Default';
 
 /* Custom Message */
 export const CustomMessage: Story<ILoadingIndicatorProps> = (args) => {
@@ -140,7 +141,6 @@ export const CustomMessage: Story<ILoadingIndicatorProps> = (args) => {
 		</div>
 	);
 };
-CustomMessage.storyName = 'Custom Message';
 
 /* No Title */
 export const NoTitle: Story<ILoadingIndicatorProps> = (args) => {
@@ -159,12 +159,13 @@ export const NoTitle: Story<ILoadingIndicatorProps> = (args) => {
 		</LoadingIndicator>
 	);
 };
-NoTitle.storyName = 'No Title';
-
+NoTitle.args = {
+	isLoading: true,
+};
 /* No Overlay */
 export const NoOverlay: Story<ILoadingIndicatorProps> = (args) => {
 	return (
-		<LoadingIndicator {...args} hasOverlay={false} isLoading>
+		<LoadingIndicator {...args}>
 			<BarChart
 				width={750}
 				data={[
@@ -177,12 +178,15 @@ export const NoOverlay: Story<ILoadingIndicatorProps> = (args) => {
 		</LoadingIndicator>
 	);
 };
-NoOverlay.storyName = 'No Overlay';
+NoOverlay.args = {
+	hasOverlay: false,
+	isLoading: true,
+};
 
-/* Light Overlay */
-export const LightOverlay: Story<ILoadingIndicatorProps> = (args) => {
+/* Dark Overlay */
+export const DarkOverlay: Story<ILoadingIndicatorProps> = (args) => {
 	return (
-		<LoadingIndicator {...args} isLoading overlayKind='light'>
+		<LoadingIndicator {...args}>
 			<BarChart
 				width={750}
 				data={[
@@ -195,4 +199,7 @@ export const LightOverlay: Story<ILoadingIndicatorProps> = (args) => {
 		</LoadingIndicator>
 	);
 };
-LightOverlay.storyName = 'Light Overlay';
+DarkOverlay.args = {
+	isLoading: true,
+	overlayKind: 'dark',
+};

@@ -46,6 +46,19 @@ export interface IOverlayProps extends StandardProps {
 	}) => void;
 }
 
+const nonPassThroughs = [
+	'className',
+	'children',
+	'isShown',
+	'isAnimated',
+	'isModal',
+	'portalId',
+	'onEscape',
+	'onBackgroundClick',
+	'initialState',
+	'callbackId',
+];
+
 interface IOverlayState {
 	portalId: string;
 }
@@ -169,7 +182,7 @@ class Overlay extends React.Component<IOverlayProps, IOverlayState, {}> {
 
 		const overlayElement = (
 			<div
-				{...omitProps(passThroughs, undefined, _.keys(Overlay.propTypes))}
+				{..._.omit(passThroughs, nonPassThroughs)}
 				className={cx(className, '&', {
 					'&-is-not-modal': !isModal,
 					'&-is-animated': isAnimated,

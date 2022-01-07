@@ -1,8 +1,7 @@
 import React from 'react';
 import { Story, Meta } from '@storybook/react';
 
-import { IOverlayWrapperProps } from './OverlayWrapper';
-import OverlayWrapper from './OverlayWrapper';
+import OverlayWrapper, { IOverlayWrapperProps } from './OverlayWrapper';
 import BarChart from '../BarChart/BarChart';
 
 export default {
@@ -17,8 +16,8 @@ export default {
 	},
 } as Meta;
 
-/* Default */
-export const Default: Story<IOverlayWrapperProps> = (args) => {
+/* Basic */
+export const Basic: Story<IOverlayWrapperProps> = (args) => {
 	return (
 		<OverlayWrapper {...args} isVisible>
 			<OverlayWrapper.Message>Message Goes Here</OverlayWrapper.Message>
@@ -33,4 +32,3 @@ export const Default: Story<IOverlayWrapperProps> = (args) => {
 		</OverlayWrapper>
 	);
 };
-Default.storyName = 'Default';

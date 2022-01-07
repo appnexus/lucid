@@ -10,15 +10,14 @@ const cx = lucidClassNames.bind('&-LoadingMessage');
 
 const { any, node, string } = PropTypes;
 
+/** Loading Message Icon */
 export interface ILoadingMessageIconProps extends StandardProps {
 	description?: string;
 }
 const LoadingMessageIcon = (_props: ILoadingMessageIconProps): null => null;
 LoadingMessageIcon.displayName = 'LoadingMessage.Icon';
 LoadingMessageIcon.peek = {
-	description: `
-		Renders the \`Icon\` element passed in
-	`,
+	description: `Renders the \`Icon\` element passed in.`,
 };
 LoadingMessageIcon.propName = 'Icon';
 LoadingMessageIcon.propTypes = {
@@ -26,6 +25,7 @@ LoadingMessageIcon.propTypes = {
 	children: any,
 };
 
+/** Loading Message Title */
 export interface ILoadingMessageTitleProps extends StandardProps {
 	description?: string;
 }
@@ -40,16 +40,14 @@ LoadingMessageTitle.propTypes = {
 	children: any,
 };
 
+/** Loading Message Body */
 export interface ILoadingMessageBodyProps extends StandardProps {
 	description?: string;
 }
 const LoadingMessageBody = (_props: ILoadingMessageBodyProps): null => null;
 LoadingMessageBody.displayName = 'LoadingMessage.Body';
 LoadingMessageBody.peek = {
-	description: `
-		Renders an \`<span>\` that represents the body of the
-		\`LoadingMessage\`.
-	`,
+	description: `Renders an \`<span>\` that represents the body of the \`LoadingMessage\`.`,
 };
 LoadingMessageBody.propName = 'Body';
 LoadingMessageBody.propTypes = {
@@ -57,6 +55,7 @@ LoadingMessageBody.propTypes = {
 	children: any,
 };
 
+/** Loading Message */
 export interface ILoadingMessageProps
 	extends StandardProps,
 		React.DetailedHTMLProps<
@@ -112,9 +111,7 @@ LoadingMessage.Body = LoadingMessageBody;
 LoadingMessage._isPrivate = true;
 LoadingMessage.displayName = 'LoadingMessage';
 LoadingMessage.peek = {
-	description: `
-		A loading message.
-	`,
+	description: `A loading message.`,
 	categories: ['communication'],
 	madeFrom: ['LoadingIcon'],
 };
