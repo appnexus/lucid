@@ -26,7 +26,7 @@ describe('Paginator', () => {
 			});
 			it('should render page size selector', () => {
 				const wrapper = shallow(<Paginator hasPageSizeSelector />);
-				assert.equal(
+				assert.strictEqual(
 					wrapper.find('.lucid-Paginator-page-size-container').length,
 					1,
 					'must be 1'
@@ -34,11 +34,11 @@ describe('Paginator', () => {
 			});
 			it('should render a TextField', () => {
 				const wrapper = shallow(<Paginator />);
-				assert.equal(wrapper.find(TextField).length, 1, 'must be 1');
+				assert.strictEqual(wrapper.find(TextField).length, 1, 'must be 1');
 			});
 			it('should render two buttons', () => {
 				const wrapper = shallow(<Paginator />);
-				assert.equal(wrapper.find(Button).length, 2, 'must be 2');
+				assert.strictEqual(wrapper.find(Button).length, 2, 'must be 2');
 			});
 		});
 	});
@@ -78,7 +78,7 @@ describe('Paginator', () => {
 			it('should set the value of the TextField to selectedPageIndex + 1', () => {
 				const wrapper = shallow(<Paginator selectedPageIndex={1} />);
 				const textFieldWrapper = wrapper.find(TextField).first().shallow();
-				assert.equal(textFieldWrapper.prop('value'), 2, 'must be 2');
+				assert.strictEqual(textFieldWrapper.prop('value'), 2, 'must be 2');
 			});
 		});
 
@@ -96,7 +96,7 @@ describe('Paginator', () => {
 					.first()
 					.shallow()
 					.find(SingleSelect);
-				assert.equal(
+				assert.strictEqual(
 					pageSizeSelectorWrapper.prop('selectedIndex'),
 					selectedPageSizeIndex,
 					'must be 1'
@@ -134,7 +134,7 @@ describe('Paginator', () => {
 			it('should appear in "of {totalPages}" span', () => {
 				const totalPages = 5;
 				const wrapper = shallow(<Paginator totalPages={totalPages} />);
-				assert.equal(
+				assert.strictEqual(
 					wrapper.find('span').text(),
 					`of ${totalPages}`,
 					'must be "of 5"'
@@ -152,7 +152,7 @@ describe('Paginator', () => {
 				const wrapper = shallow(
 					<HybridPaginator totalCount={totalCount} pageSizeOptions={[10]} />
 				);
-				assert.equal(
+				assert.strictEqual(
 					wrapper.find(Paginator).shallow().find('span').text(),
 					'of 10',
 					'must be "of 10"'
@@ -173,10 +173,10 @@ describe('Paginator', () => {
 					.first()
 					.children();
 
-				assert.equal(options.length, 5, 'must be 5');
+				assert.strictEqual(options.length, 5, 'must be 5');
 				options.forEach((option, i) => {
 					assert(option.is(SingleSelect.Option), 'must be true');
-					assert.equal(option.children().text(), pageSizeOptions[i]);
+					assert.strictEqual(option.children().text(), pageSizeOptions[i]);
 				});
 			});
 		});
@@ -224,8 +224,8 @@ describe('Paginator', () => {
 					wrapper.find('button').first().simulate('click');
 					assert(onPageSelect.calledOnce);
 					const [pageIndex, totalPages] = onPageSelect.firstCall.args;
-					assert.equal(pageIndex, 0, 'must be 0');
-					assert.equal(totalPages, 3, 'must be 3');
+					assert.strictEqual(pageIndex, 0, 'must be 0');
+					assert.strictEqual(totalPages, 3, 'must be 3');
 				});
 			});
 
@@ -242,8 +242,8 @@ describe('Paginator', () => {
 					wrapper.find('button').first().simulate('click');
 					assert(onPageSelect.calledOnce);
 					const [pageIndex, totalPages] = onPageSelect.firstCall.args;
-					assert.equal(pageIndex, 0, 'must be 0');
-					assert.equal(totalPages, 3, 'must be 3');
+					assert.strictEqual(pageIndex, 0, 'must be 0');
+					assert.strictEqual(totalPages, 3, 'must be 3');
 				});
 			});
 
@@ -261,8 +261,8 @@ describe('Paginator', () => {
 						wrapper.find(TextField).prop(propName)(1, 3);
 						assert(onPageSelect.calledOnce);
 						const [pageIndex, totalPages] = onPageSelect.firstCall.args;
-						assert.equal(pageIndex, 0, 'must be 0');
-						assert.equal(totalPages, 3, 'must be 3');
+						assert.strictEqual(pageIndex, 0, 'must be 0');
+						assert.strictEqual(totalPages, 3, 'must be 3');
 					});
 				});
 			});
