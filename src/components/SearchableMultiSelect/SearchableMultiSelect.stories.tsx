@@ -40,8 +40,8 @@ function addKeys(children: any) {
 	return map(children, (child, index) => ({ ...child, key: index }));
 }
 
-/* Default */
-export const Default: Story<ISearchableMultiSelectProps> = (args) => {
+/* Basic */
+export const Basic: Story<ISearchableMultiSelectProps> = (args) => {
 	return (
 		<Resizer>
 			{(width) => {
@@ -57,8 +57,7 @@ export const Default: Story<ISearchableMultiSelectProps> = (args) => {
 		</Resizer>
 	);
 };
-Default.storyName = 'Default';
-Default.args = {
+Basic.args = {
 	children: addKeys([
 		<Option>Alabama</Option>,
 		<Option>Alaska</Option>,
@@ -319,7 +318,7 @@ export const Asynchronous: Story<ISearchableMultiSelectProps> = (args) => {
 	return <Component />;
 };
 Asynchronous.args = {
-	...Default.args,
+	...Basic.args,
 };
 
 /* Grouped Options */
@@ -641,7 +640,7 @@ export const FormattedOptions: Story<ISearchableMultiSelectProps> = (args) => {
 	return <Component />;
 };
 FormattedOptions.args = {
-	...Default.args,
+	...Basic.args,
 };
 
 /* Invalid */

@@ -22,8 +22,8 @@ export default {
 	},
 } as Meta;
 
-/* Default */
-export const Default: Story<IDropMenuProps> = (args) => {
+/* Basic */
+export const Basic: Story<IDropMenuProps> = (args) => {
 	const [selectedIndices, setSelectedIndices] = useState<Array<number | null>>(
 		[]
 	);

@@ -20,8 +20,8 @@ export default {
 	},
 } as Meta;
 
-/* Default */
-export const Default: Story<ISearchFieldProps> = (args) => {
+/* Basic */
+export const Basic: Story<ISearchFieldProps> = (args) => {
 	return <SearchField {...args} />;
 };
 
