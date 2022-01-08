@@ -23,7 +23,7 @@ const defaultProps = {
 	selectedIndices: [],
 };
 
-const nonPassthrouhgs = [
+const nonPassThroughs = [
 	'onSelect',
 	'className',
 	'children',
@@ -119,7 +119,7 @@ class ButtonGroup extends React.Component<
 
 		return (
 			<span
-				{...(_.omit(passThroughs, nonPassthrouhgs) as any)}
+				{...(_.omit(passThroughs, nonPassThroughs) as any)}
 				className={cx('&', className)}
 			>
 				{_.map(buttonChildProps, (buttonChildProp, index) => {

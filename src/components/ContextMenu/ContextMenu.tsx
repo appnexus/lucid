@@ -127,7 +127,7 @@ export interface IContextMenuProps
 }
 
 /** TODO: Remove this constant when the component is converted to a functional component */
-const nonPassthroughs = [
+const nonPassThroughs = [
 	'children',
 	'className',
 	'style',
@@ -588,7 +588,7 @@ class ContextMenu extends React.Component<
 		return (
 			<TargetElementType
 				ref={this.targetRef}
-				{..._.omit(passThroughs, nonPassthroughs)}
+				{..._.omit(passThroughs, nonPassThroughs)}
 				className={cx('&', className)}
 				style={style}
 			>

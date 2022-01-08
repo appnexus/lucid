@@ -30,8 +30,8 @@ Label.propTypes = {
 	children: node,
 };
 
-/** TODO: Remove nonPassthroughs when the component is converted to a functional component */
-const nonPassthroughs = [
+/** TODO: Remove nonPassThroughs when the component is converted to a functional component */
+const nonPassThroughs = [
 	'isIndeterminate',
 	'isDisabled',
 	'isSelected',
@@ -81,7 +81,7 @@ export const CheckboxLabeled = (
 				isIndeterminate={isIndeterminate}
 				isSelected={isSelected}
 				onSelect={onSelect}
-				{..._.omit(passThroughs, nonPassthroughs)}
+				{..._.omit(passThroughs, nonPassThroughs)}
 			/>
 			<div
 				{...labelChildProps}

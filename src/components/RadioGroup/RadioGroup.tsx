@@ -85,7 +85,7 @@ const defaultProps = {
 };
 
 /** TODO: Remove this constant when the component is converted to a functional component */
-const nonPassthroughs = [
+const nonPassThroughs = [
 	'children',
 	'className',
 	'name',
@@ -146,7 +146,7 @@ const RadioGroup = (props: IRadioGroupProps) => {
 
 	return (
 		<span
-			{..._.omit(passThroughs as any, nonPassthroughs)}
+			{..._.omit(passThroughs as any, nonPassThroughs)}
 			className={cx('&', className)}
 		>
 			{_.map(radioButtonChildProps, (radioButtonChildProp, index) => {

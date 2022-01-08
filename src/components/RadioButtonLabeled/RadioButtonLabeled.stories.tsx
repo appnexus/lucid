@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import { Meta, Story } from '@storybook/react';
 
-import RadioButtonLabeled, {
-	IRadioButtonLabeledProps,
-} from './RadioButtonLabeled';
+import { IRadioButtonLabeledProps } from './RadioButtonLabeled';
+import RadioButtonLabeled from './RadioButtonLabeled';
 
 export default {
 	title: 'Controls/RadioButtonLabeled',

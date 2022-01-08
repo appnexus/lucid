@@ -52,8 +52,8 @@ export type ICheckboxProps = Overwrite<
 	ICheckboxPropsRaw
 >;
 
-/** TODO: Remove nonPassthroughs when the component is converted to a functional component */
-const nonPassthroughs = [
+/** TODO: Remove nonPassThroughs when the component is converted to a functional component */
+const nonPassThroughs = [
 	'children',
 	'className',
 	'isIndeterminate',
@@ -114,7 +114,7 @@ export const Checkbox = (props: ICheckboxProps): React.ReactElement => {
 		>
 			<input
 				onChange={_.noop}
-				{..._.omit(passThroughs, nonPassthroughs)}
+				{..._.omit(passThroughs, nonPassThroughs)}
 				checked={isSelected}
 				className={cx('&-native')}
 				disabled={isDisabled}

@@ -28,8 +28,8 @@ RadioButtonLabeledLabel.peek = {
 };
 RadioButtonLabeledLabel.propName = 'Label';
 
-/** TODO: Remove this constant when the component is converted to a functional component */
-const nonPassthroughs = ['className', 'style', 'Label'];
+/** TODO: Remove nonPassThroughs when the component is converted to a functional component */
+const nonPassThroughs = ['className', 'style', 'Label'];
 export interface IRadioButtonLabeledProps extends IRadioButtonProps {
 	/** Child element whose children are used to identify the purpose of this
 		radio button to the user. */
@@ -69,7 +69,7 @@ export const RadioButtonLabeled = (
 				isDisabled={isDisabled}
 				isSelected={isSelected}
 				onSelect={onSelect}
-				{..._.omit(passThroughs as any, nonPassthroughs)}
+				{..._.omit(passThroughs as any, nonPassThroughs)}
 			/>
 			<div {...labelChildProps} className={cx('&-label')} />
 		</label>

@@ -50,8 +50,8 @@ export type IRadioButtonProps = Overwrite<
 	IRadioButtonPropsRaw
 >;
 
-/** TODO: Remove this constant when the component is converted to a functional component */
-const nonPassthroughs = [
+/** TODO: Remove nonPassThroughs when the component is converted to a functional component */
+const nonPassThroughs = [
 	'callbackId',
 	'children',
 	'className',
@@ -108,7 +108,7 @@ export const RadioButton = (props: IRadioButtonProps): React.ReactElement => {
 		>
 			<input
 				onChange={_.noop}
-				{..._.omit(passThroughs, nonPassthroughs)}
+				{..._.omit(passThroughs, nonPassThroughs)}
 				checked={isSelected}
 				className={cx('&-native')}
 				disabled={isDisabled}
