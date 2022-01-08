@@ -156,7 +156,7 @@ interface IBarsState {
 }
 
 /** TODO: Remove this constant when the component is converted to a functional component */
-const nonPassthroughs = [
+const nonPassThroughs = [
 	'className',
 	'data',
 	'legend',
@@ -433,7 +433,7 @@ export class Bars extends PureComponent<IBarsProps, IBarsState> {
 
 		return (
 			<g
-				{..._.omit(passThroughs, nonPassthroughs)}
+				{..._.omit(passThroughs, nonPassThroughs)}
 				className={cx(className, '&')}
 			>
 				{_.map(transformedData, (series, seriesIndex) => (

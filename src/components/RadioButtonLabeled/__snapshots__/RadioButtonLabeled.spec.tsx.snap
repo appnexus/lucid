@@ -138,7 +138,7 @@ exports[`RadioButtonLabeled [common] example testing should match snapshot(s) fo
       <div
         class="lucid-RadioButtonLabeled-label"
       >
-        Mint choc chip (the best)
+        Mint chocolate chip (the best)
       </div>
     </label>
   </span>
@@ -441,7 +441,7 @@ exports[`RadioButtonLabeled [common] example testing should match snapshot(s) fo
       <div
         class="lucid-RadioButtonLabeled-label"
       >
-        Disabled & selected
+        Disabled & Selected
       </div>
     </label>
   </section>

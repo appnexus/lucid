@@ -1,6 +1,9 @@
 import _ from 'lodash';
-import React from 'react';
+import React, { useState } from 'react';
 import createClass from 'create-react-class';
+import { Meta, Story } from '@storybook/react';
+
+import { IRadioButtonProps } from './RadioButton';
 import RadioButton from './RadioButton';
 
 export default {
@@ -13,54 +16,41 @@ export default {
 			},
 		},
 	},
-};
+} as Meta;
 
 /* Interactive */
-export const Interactive = () => {
+export const Interactive: Story<IRadioButtonProps> = (args) => {
 	const style = {
 		listStyleType: 'none',
 		display: 'flex',
 		alignItems: 'center',
 	};
 
-	const Component = createClass({
-		getInitialState() {
-			return {
-				isSelected: false,
-			};
-		},
+	const [selected, setSelected] = useState(false);
 
-		handleSelected(isSelected: boolean) {
-			this.setState(
-				_.assign({}, this.state, {
-					isSelected,
-				})
-			);
-		},
+	const handleSelected = (value) => {
+		setSelected(!value);
+	};
 
-		render() {
-			return (
-				<ul>
-					<li style={style}>
-						<label>Enabled</label>
-						<RadioButton
-							isSelected={this.state.isSelected}
-							name='interactive-radio-buttons'
-							onSelect={this.handleSelected}
-							tabIndex={20}
-						/>
-					</li>
-				</ul>
-			);
-		},
-	});
-
-	return <Component />;
+	return (
+		<ul>
+			<li style={style}>
+				<label>Enabled</label>
+				<RadioButton
+					{...args}
+					isSelected={selected}
+					name='interactive-radio-buttons'
+					onSelect={() => handleSelected(selected)}
+					tabIndex={20}
+				/>
+			</li>
+		</ul>
+	);
 };
 Interactive.storyName = 'Interactive';
 
 /* States */
-export const States = () => {
+export const States: Story<IRadioButtonProps> = (args) => {
 	const style = {
 		display: 'flex',
 		alignItems: 'center',
@@ -72,19 +62,24 @@ export const States = () => {
 				<ul>
 					<li style={style}>
 						<label>Unselected</label>
-						<RadioButton tabIndex={20} />
+						<RadioButton {...args} tabIndex={20} />
 					</li>
 					<li style={style}>
 						<label>Selected</label>
-						<RadioButton isSelected={true} tabIndex={21} />
+						<RadioButton {...args} isSelected={true} tabIndex={21} />
 					</li>
 					<li style={style}>
 						<label>Disabled</label>
-						<RadioButton isDisabled={true} tabIndex={22} />
+						<RadioButton {...args} isDisabled={true} tabIndex={22} />
 					</li>
 					<li style={style}>
 						<label>Disabled & selected</label>
-						<RadioButton isDisabled={true} isSelected={true} tabIndex={23} />
+						<RadioButton
+							{...args}
+							isDisabled={true}
+							isSelected={true}
+							tabIndex={23}
+						/>
 					</li>
 				</ul>
 			);

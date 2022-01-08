@@ -5,8 +5,9 @@ import sinon from 'sinon';
 import { mount, shallow } from 'enzyme';
 
 import { common, controls } from '../../util/generic-tests';
-
 import RadioButton from './RadioButton';
+
+const args = RadioButton.defaultProps;
 
 describe('RadioButton', () => {
 	common(RadioButton);
@@ -22,7 +23,9 @@ describe('RadioButton', () => {
 		describe('isDisabled', () => {
 			it('sets the `disabled` attribute of the native radio button element.', () => {
 				_.forEach(booleanValues, (testValue) => {
-					const wrapper = shallow(<RadioButton isDisabled={testValue} />);
+					const wrapper = shallow(
+						<RadioButton {...args} isDisabled={testValue} />
+					);
 
 					assert.equal(
 						wrapper.find('input[type="radio"]').prop('disabled'),
@@ -35,7 +38,9 @@ describe('RadioButton', () => {
 		describe('isSelected', () => {
 			it('sets the `checked` attribute of the native radio button element.', () => {
 				_.forEach(booleanValues, (testValue) => {
-					const wrapper = shallow(<RadioButton isSelected={testValue} />);
+					const wrapper = shallow(
+						<RadioButton {...args} isSelected={testValue} />
+					);
 
 					assert.equal(
 						wrapper.find('input[type="radio"]').prop('checked'),
@@ -49,6 +54,7 @@ describe('RadioButton', () => {
 			it('passes through all props not defined in `propTypes` to the native input.', () => {
 				const wrapper = mount(
 					<RadioButton
+						{...args}
 						className='wut'
 						isDisabled={true}
 						isSelected={true}
@@ -93,7 +99,7 @@ describe('RadioButton', () => {
 				const onSelect: any = sinon.spy();
 
 				simulateEvent(
-					<RadioButton isSelected={false} onSelect={onSelect} />,
+					<RadioButton {...args} isSelected={false} onSelect={onSelect} />,
 					`.lucid-RadioButton${classSubString}`,
 					event
 				);
@@ -116,7 +122,7 @@ describe('RadioButton', () => {
 				const onSelect: any = sinon.spy();
 
 				simulateEvent(
-					<RadioButton isSelected={true} onSelect={onSelect} />,
+					<RadioButton {...args} isSelected={true} onSelect={onSelect} />,
 					`.lucid-RadioButton${classSubString}`,
 					event
 				);
@@ -138,7 +144,7 @@ describe('RadioButton', () => {
 				const onSelect: any = sinon.spy();
 
 				simulateEvent(
-					<RadioButton isSelected={false} onSelect={onSelect} />,
+					<RadioButton {...args} isSelected={false} onSelect={onSelect} />,
 					`.lucid-RadioButton${classSubString}`,
 					event
 				);

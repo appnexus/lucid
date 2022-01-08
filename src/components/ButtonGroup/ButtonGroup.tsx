@@ -1,13 +1,10 @@
 import _ from 'lodash';
-import Button, { IButtonProps } from '../Button/Button';
 import React from 'react';
 import PropTypes from 'prop-types';
+
+import Button, { IButtonProps } from '../Button/Button';
 import { lucidClassNames } from '../../util/style-helpers';
-import {
-	findTypes,
-	omitProps,
-	StandardProps,
-} from '../../util/component-types';
+import { findTypes, StandardProps } from '../../util/component-types';
 import reducers from './ButtonGroup.reducers';
 import { buildModernHybridComponent } from '../../util/state-management';
 
@@ -26,6 +23,12 @@ const defaultProps = {
 	selectedIndices: [],
 };
 
+const nonPassThroughs = [
+	'onSelect',
+	'className',
+	'children',
+	'selectedIndices',
+];
 export interface IButtonGroupState {
 	selectedIndices: number[];
 }
@@ -89,20 +92,12 @@ class ButtonGroup extends React.Component<
 		selectedIndices: arrayOf(number),
 	};
 
-	handleSelect = ({
-		event,
-		props: childProps,
-	}: {
-		event: React.MouseEvent<HTMLButtonElement>;
-		props: IButtonProps;
-	}) => {
-		const { callbackId } = childProps;
+	handleSelect = (event, childProps, index) => {
 		const clickedButtonProps = _.get(
-			findTypes(this.props, ButtonGroup.Button)[callbackId],
+			findTypes(this.props, ButtonGroup.Button)[index],
 			'props',
 			{}
 		);
-
 		// If the consumer passed in an `onClick` to the child `ButtonGroup.Button`
 		// component, we should make sure to call that in addition to the
 		// `ButtonGroup`'s `onSelect`.
@@ -110,7 +105,7 @@ class ButtonGroup extends React.Component<
 			clickedButtonProps.onClick({ event, props: childProps });
 		}
 
-		this.props.onSelect(callbackId, { event, props: childProps });
+		this.props.onSelect(index, { event, props: childProps });
 	};
 
 	render() {
@@ -124,7 +119,7 @@ class ButtonGroup extends React.Component<
 
 		return (
 			<span
-				{...omitProps(passThroughs, undefined, _.keys(ButtonGroup.propTypes))}
+				{...(_.omit(passThroughs, nonPassThroughs) as any)}
 				className={cx('&', className)}
 			>
 				{_.map(buttonChildProps, (buttonChildProp, index) => {
@@ -139,8 +134,7 @@ class ButtonGroup extends React.Component<
 							isActive={_.includes(selectedIndices, index)}
 							{...buttonChildProp}
 							key={index}
-							callbackId={index}
-							onClick={this.handleSelect}
+							onClick={(event, props) => this.handleSelect(event, props, index)}
 						/>
 					);
 				})}

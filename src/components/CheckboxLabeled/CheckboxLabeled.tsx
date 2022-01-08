@@ -2,11 +2,7 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import {
-	findTypes,
-	omitProps,
-	StandardProps,
-} from '../../util/component-types';
+import { findTypes, StandardProps } from '../../util/component-types';
 import Checkbox, {
 	ICheckboxProps,
 	defaultProps as defaultPropsCheckbox,
@@ -34,9 +30,20 @@ Label.propTypes = {
 	children: node,
 };
 
+/** TODO: Remove nonPassThroughs when the component is converted to a functional component */
+const nonPassThroughs = [
+	'isIndeterminate',
+	'isDisabled',
+	'isSelected',
+	'onSelect',
+	'className',
+	'style',
+	'Label',
+];
+
 export interface ICheckboxLabeledProps extends ICheckboxProps {
 	/** Child element whose children are used to identify the purpose of this  checkbox to the user. */
-	Label?: string | (React.ReactNode & { props: ILabelProps });
+	Label?: string | (React.ReactNode & { props: ILabelProps }) | React.ReactNode;
 }
 
 export const CheckboxLabeled = (
@@ -74,12 +81,7 @@ export const CheckboxLabeled = (
 				isIndeterminate={isIndeterminate}
 				isSelected={isSelected}
 				onSelect={onSelect}
-				{...omitProps(
-					passThroughs,
-					undefined,
-					_.keys(CheckboxLabeled.propTypes),
-					false
-				)}
+				{..._.omit(passThroughs, nonPassThroughs)}
 			/>
 			<div
 				{...labelChildProps}

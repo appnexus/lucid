@@ -5,7 +5,6 @@ import { lucidClassNames } from '../../util/style-helpers';
 import {
 	getFirst,
 	findTypes,
-	omitProps,
 	StandardProps,
 	Overwrite,
 } from '../../util/component-types';
