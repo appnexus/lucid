@@ -1,7 +1,8 @@
 import React from 'react';
 import createClass from 'create-react-class';
-import { Button, Portal } from './../../index';
 import PropTypes from 'prop-types';
+import Portal from './Portal';
+import Button from '../Button/Button';
 
 export default {
 	title: 'Utility/Portal',

@@ -1,7 +1,8 @@
 import React from 'react';
 import createClass from 'create-react-class';
-import { Button, DateSelect } from './../../index';
 import timemachine from 'timemachine';
+import DateSelect from './DateSelect';
+import Button from '../Button/Button';
 
 export default {
 	title: 'Controls/DateSelect',

@@ -1,6 +1,7 @@
 import React from 'react';
 import createClass from 'create-react-class';
-import { BarChart, OverlayWrapper } from './../../index';
+import OverlayWrapper from './OverlayWrapper';
+import BarChart from '../BarChart/BarChart';
 
 export default {
 	title: 'Utility/OverlayWrapper',

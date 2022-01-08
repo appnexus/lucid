@@ -1,8 +1,7 @@
 import React from 'react';
 import { Meta, Story } from '@storybook/react';
 
-import { Underline } from './../../index';
-import { IUnderlineProps } from './Underline';
+import Underline, { IUnderlineProps } from './Underline';
 
 export default {
 	title: 'Controls/Underline',

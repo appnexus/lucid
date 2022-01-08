@@ -1,8 +1,8 @@
 import React from 'react';
 import { Meta, Story } from '@storybook/react';
 
-import { Breadcrumb, NotchedTag } from './../../index';
-import { IBreadcrumbProps } from './Breadcrumb';
+import Breadcrumb, { IBreadcrumbProps } from './Breadcrumb';
+import NotchedTag from '../NotchedTag/NotchedTag';
 
 export default {
 	title: 'Navigation/Breadcrumb',

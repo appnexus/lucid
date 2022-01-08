@@ -1,7 +1,7 @@
 import React from 'react';
-import { ProgressBar } from './../../index';
 import createClass from 'create-react-class';
 import TextField from '../TextField/TextField';
+import ProgressBar from './ProgressBar';
 
 export default {
 	title: 'Communication/ProgressBar',

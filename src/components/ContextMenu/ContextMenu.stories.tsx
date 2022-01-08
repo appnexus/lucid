@@ -3,9 +3,10 @@ import React, { useState } from 'react';
 import createClass from 'create-react-class';
 import { Meta, Story } from '@storybook/react';
 
-import { ContextMenu, SingleSelect, TextField } from './../../index';
 import Button from '../Button/Button';
-import { IContextMenuProps } from './ContextMenu';
+import ContextMenu, { IContextMenuProps } from './ContextMenu';
+import SingleSelect from '../SingleSelect/SingleSelect';
+import TextField from '../TextField/TextField';
 
 export default {
 	title: 'Utility/ContextMenu',

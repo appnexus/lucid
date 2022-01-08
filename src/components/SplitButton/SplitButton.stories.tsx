@@ -1,6 +1,6 @@
 import React from 'react';
 import createClass from 'create-react-class';
-import { SplitButton } from './../../index';
+import SplitButton from './SplitButton';
 
 export default {
 	title: 'Controls/SplitButton',

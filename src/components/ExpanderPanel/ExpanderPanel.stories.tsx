@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import React from 'react';
 import createClass from 'create-react-class';
-import { ExpanderPanel } from './../../index';
+import ExpanderPanel from './ExpanderPanel';
 
 export default {
 	title: 'Layout/ExpanderPanel',

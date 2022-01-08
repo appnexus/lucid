@@ -1,6 +1,9 @@
 import React from 'react';
 import createClass from 'create-react-class';
-import { Button, Checkbox, SuccessIcon, Table } from './../../index';
+import Table from './Table';
+import Checkbox from '../Checkbox/Checkbox';
+import SuccessIcon from '../Icon/SuccessIcon/SuccessIcon';
+import Button from '../Button/Button';
 
 export default {
 	title: 'Table/Table',

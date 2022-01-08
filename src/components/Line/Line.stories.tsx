@@ -1,8 +1,8 @@
 import React from 'react';
 import { Story, Meta } from '@storybook/react';
 
-import { Line, chartConstants } from './../../index';
-import { ILineProps } from './Line';
+import * as chartConstants from '../../constants/charts';
+import Line, { ILineProps } from './Line';
 
 export default {
 	title: 'Visualizations/Line',

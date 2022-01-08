@@ -1,8 +1,10 @@
 import React from 'react';
 import { Meta, Story } from '@storybook/react';
 
-import { Button, RadioGroup, SearchField, Tabs } from './../../index';
-import { ITabsProps } from './Tabs';
+import Tabs, { ITabsProps } from './Tabs';
+import RadioGroup from '../RadioGroup/RadioGroup';
+import Button from '../Button/Button';
+import SearchField from '../SearchField/SearchField';
 
 export default {
 	title: 'Navigation/Tabs',

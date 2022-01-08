@@ -1,6 +1,8 @@
 import React from 'react';
 import createClass from 'create-react-class';
-import { Button, TextField, TextFieldPlain } from './../../index';
+import TextField from './TextField';
+import TextFieldPlain from './TextFieldPlain';
+import Button from '../Button/Button';
 
 export default {
 	title: 'Controls/TextField',

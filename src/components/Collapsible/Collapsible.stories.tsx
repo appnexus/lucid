@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { Meta, Story } from '@storybook/react';
 
-import { Collapsible, SingleSelect, Button } from './../../index';
-import { ICollapsibleProps } from './Collapsible';
+import Collapsible, { ICollapsibleProps } from './Collapsible';
+import Button from '../Button/Button';
+import SingleSelect from '../SingleSelect/SingleSelect';
 
 export default {
 	title: 'Utility/Collapsible',

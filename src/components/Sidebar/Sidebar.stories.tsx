@@ -1,15 +1,13 @@
 import React from 'react';
 import createClass from 'create-react-class';
 import _ from 'lodash';
-import {
-	ButtonGroup,
-	CheckboxLabeled,
-	RadioGroup,
-	SearchField,
-	Sidebar,
-	Tag,
-	Submarine,
-} from './../../index';
+import Sidebar from './Sidebar';
+import CheckboxLabeled from '../CheckboxLabeled/CheckboxLabeled';
+import Submarine from '../Submarine/Submarine';
+import ButtonGroup from '../ButtonGroup/ButtonGroup';
+import SearchField from '../SearchField/SearchField';
+import RadioGroup from '../RadioGroup/RadioGroup';
+import Tag from '../Tag/Tag';
 
 export default {
 	title: 'Layout/Sidebar',

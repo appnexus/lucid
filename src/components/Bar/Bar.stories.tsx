@@ -2,8 +2,8 @@ import _ from 'lodash';
 import React from 'react';
 import { Story, Meta } from '@storybook/react';
 
-import { Bar, chartConstants } from './../../index';
-import { IBarProps } from '../Bar/Bar';
+import * as chartConstants from '../../constants/charts';
+import Bar, { IBarProps } from '../Bar/Bar';
 
 export default {
 	title: 'Visualizations/Bar',

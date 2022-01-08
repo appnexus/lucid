@@ -1,6 +1,6 @@
 import React from 'react';
 import createClass from 'create-react-class';
-import { SplitHorizontal } from './../../index';
+import SplitHorizontal from './SplitHorizontal';
 
 export default {
 	title: 'Private/SplitHorizontal',

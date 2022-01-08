@@ -2,8 +2,9 @@ import _ from 'lodash';
 import React from 'react';
 import { Meta, Story } from '@storybook/react';
 
-import { Legend, ToolTip, chartConstants } from './../../index';
-import { ILegendProps } from './Legend';
+import * as chartConstants from '../../constants/charts';
+import Legend, { ILegendProps } from './Legend';
+import ToolTip from '../ToolTip/ToolTip';
 
 export default {
 	title: 'Visualizations/Legend',

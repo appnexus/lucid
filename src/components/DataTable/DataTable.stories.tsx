@@ -3,10 +3,11 @@ import React from 'react';
 import createReactClass from 'create-react-class';
 import { Meta } from '@storybook/react';
 
-import { CheckboxLabeled, TextField } from '../..';
 import { createClass } from '../../util/component-types';
 import SuccessIcon from '../Icon/SuccessIcon/SuccessIcon';
 import DataTable from './DataTable';
+import TextField from '../TextField/TextField';
+import CheckboxLabeled from '../CheckboxLabeled/CheckboxLabeled';
 
 export default {
 	title: 'Table/DataTable',

@@ -3,8 +3,8 @@ import React, { useState } from 'react';
 import createClass from 'create-react-class';
 import { Meta, Story } from '@storybook/react';
 
-import { RadioButton } from './../../index';
 import { IRadioButtonProps } from './RadioButton';
+import RadioButton from './RadioButton';
 
 export default {
 	title: 'Controls/RadioButton',
