@@ -11,11 +11,12 @@ exports[`DropMenu [common] example testing should match snapshot(s) for ActionMe
       class="lucid-DropMenu-Control"
       tabindex="0"
     >
-      Colors
+      Select Color
       <svg
         class="lucid-Icon lucid-Icon-color-primary lucid-ChevronIcon lucid-ChevronIcon-is-down"
         height="16"
         preserveAspectRatio="xMidYMid meet"
+        style="margin-left:5px"
         viewBox="0 0 16 16"
         width="16"
       >
@@ -39,7 +40,7 @@ exports[`DropMenu [common] example testing should match snapshot(s) for Basic 1`
       class="lucid-DropMenu-Control"
       tabindex="0"
     >
-      Select
+      Select OS
     </div>
   </span>
 </div>
@@ -58,6 +59,7 @@ exports[`DropMenu [common] example testing should match snapshot(s) for ButtonMe
     >
       <button
         class="lucid-Button"
+        style="min-width:90px"
         type="button"
       >
         <span
@@ -71,7 +73,7 @@ exports[`DropMenu [common] example testing should match snapshot(s) for ButtonMe
 </div>
 `;
 
-exports[`DropMenu [common] example testing should match snapshot(s) for Disabled 1`] = `
+exports[`DropMenu [common] example testing should match snapshot(s) for DisabledControl 1`] = `
 <div
   class="lucid-DropMenu lucid-DropMenu-base"
 >
@@ -108,16 +110,7 @@ exports[`DropMenu [common] example testing should match snapshot(s) for Disabled
       class="lucid-DropMenu-Control"
       tabindex="0"
     >
-      <button
-        class="lucid-Button"
-        type="button"
-      >
-        <span
-          class="lucid-Button-content"
-        >
-          Select Color
-        </span>
-      </button>
+      Select Color
     </div>
   </span>
 </div>
@@ -170,7 +163,7 @@ exports[`DropMenu [common] example testing should match snapshot(s) for NoWrappi
           <span
             class="lucid-Button-content"
           >
-            Click me
+            Click Me
           </span>
         </button>
       </div>

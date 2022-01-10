@@ -85,7 +85,7 @@ HTMLElementInAnArray.args = {
 		<span key='1'>HTML element in an array</span>,
 		<span key='2'>Again only the first value in the array is used</span>,
 		<span key='3'>The rest should not be rendered</span>,
-	],
+	] as any,
 	title: 'HTML element in an array',
 };
 

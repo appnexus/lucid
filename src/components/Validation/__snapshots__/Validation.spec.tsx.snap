@@ -3,7 +3,7 @@
 exports[`Validation [common] example testing should match snapshot(s) for Basic 1`] = `
 <div>
   <p>
-    Text field with error (method 1)
+    Text field with Error prop (Method 1)
   </p>
   <div
     class="lucid-Validation lucid-Validation-is-error"
@@ -22,7 +22,7 @@ exports[`Validation [common] example testing should match snapshot(s) for Basic 
   </div>
   <br />
   <p>
-    Text field with error (method 2)
+    Text field with Validation Error child component (Method 2)
   </p>
   <div
     class="lucid-Validation lucid-Validation-is-error"
@@ -43,7 +43,7 @@ exports[`Validation [common] example testing should match snapshot(s) for Basic 
   </div>
   <br />
   <p>
-    Text area with error (method 1)
+    Text area with Error prop (Method 1)
   </p>
   <div
     class="lucid-Validation lucid-Validation-is-error"
@@ -62,7 +62,7 @@ exports[`Validation [common] example testing should match snapshot(s) for Basic 
   </div>
   <br />
   <p>
-    Text area with error (method 2)
+    Text area with Validation Error child component (Method 2)
   </p>
   <div
     class="lucid-Validation lucid-Validation-is-error"
@@ -76,9 +76,7 @@ exports[`Validation [common] example testing should match snapshot(s) for Basic 
     <div
       class="lucid-Validation-error-content"
     >
-      <span>
-        Error Four
-      </span>
+      Error FOUR TEST
     </div>
   </div>
 </div>

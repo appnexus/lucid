@@ -7,7 +7,6 @@ import {
 	getFirst,
 	rejectTypes,
 	findTypes,
-	omitProps,
 	Overwrite,
 } from '../../util/component-types';
 import { scrollParentTo } from '../../util/dom-helpers';
@@ -46,6 +45,7 @@ const cx = lucidClassNames.bind('&-DropMenu');
 const { any, arrayOf, bool, func, node, number, object, oneOf, string } =
 	PropTypes;
 
+/** Header */
 export interface IDropMenuHeaderProps extends StandardProps {
 	description?: string;
 }
@@ -61,6 +61,7 @@ Header.peek = {
 Header.propName = 'Header';
 Header.propTypes = {};
 
+/** Control */
 export interface IDropMenuControlProps extends StandardProps {
 	description?: string;
 }
@@ -73,6 +74,7 @@ Control.peek = {
 Control.propName = 'Control';
 Control.propTypes = {};
 
+/** Option Group */
 export interface IDropMenuOptionGroupProps extends StandardProps {
 	description?: string;
 	isHidden?: boolean;
@@ -96,6 +98,7 @@ OptionGroup.defaultProps = {
 	isHidden: false,
 };
 
+/** Option */
 export interface IDropMenuOptionProps extends StandardProps {
 	isDisabled?: boolean;
 	isHidden?: boolean;
@@ -133,6 +136,7 @@ Option.defaultProps = {
 	isWrapped: true,
 };
 
+/** Null Option */
 export interface IDropMenuNullOptionProps extends StandardProps {
 	description?: string;
 }
@@ -145,6 +149,7 @@ NullOption.peek = {
 NullOption.propName = 'NullOption';
 NullOption.propTypes = {};
 
+/** Fixed Option */
 export interface IDropMenuFixedOptionProps extends StandardProps {
 	description?: string;
 	isDisabled: boolean;
@@ -183,6 +188,7 @@ FixedOption.defaultProps = {
 	isWrapped: true,
 };
 
+/** Context Menu */
 export interface IDropMenuContextMenuProps extends StandardProps {
 	description?: string;
 }
@@ -197,6 +203,7 @@ DropMenuContextMenu.propTypes = {
 	children: node /**/,
 };
 
+/** Drop Menu */
 export interface IDropMenuProps extends StandardProps {
 	/** Disables the DropMenu from being clicked or focused. */
 	isDisabled?: boolean;
@@ -324,9 +331,40 @@ export interface IDropMenuProps extends StandardProps {
 }
 
 type IDropMenuPropsWithPassThroughs = Overwrite<
-	React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>,
+	React.DetailedHTMLProps<React.DOMAttributes<HTMLDivElement>, HTMLDivElement>,
 	IDropMenuProps
 >;
+
+/** TODO: Remove the nonPassThroughs when the component is converted to a functional component */
+const nonPassThroughs = [
+	'children',
+	'className',
+	'style',
+	'isDisabled',
+	'isExpanded',
+	'direction',
+	'alignment',
+	'selectedIndices',
+	'focusedIndex',
+	'portalId',
+	'flyOutStyle',
+	'optionContainerStyle',
+	'onExpand',
+	'onCollapse',
+	'onSelect',
+	'onFocusNext',
+	'onFocusPrev',
+	'onFocusOption',
+	'Control',
+	'Option',
+	'OptionGroup',
+	'NullOption',
+	'Header',
+	'ContextMenu',
+	'FixedOption',
+	'initialState',
+	'callbackId',
+];
 
 export interface IOptionsData {
 	localOptionIndex: number;
@@ -852,9 +890,14 @@ class DropMenu extends React.Component<
 		return isHidden ? null : (
 			<div
 				key={'DropMenuOption' + optionIndex}
-				{...omitProps(optionProps, undefined, [
-					..._.keys(DropMenu.Option.propTypes),
+				{..._.omit(optionProps, [
+					'isDisabled',
+					'isHidden',
+					'isWrapped',
+					'Selected',
 					'Selection',
+					'initialState',
+					'callbackId',
 				])}
 				onClick={(event) =>
 					this.handleSelectOption(optionIndex, optionProps, event)
@@ -947,7 +990,7 @@ class DropMenu extends React.Component<
 					className
 				)}
 				style={style}
-				{...omitProps(passThroughs, undefined, _.keys(DropMenu.propTypes))}
+				{...(_.omit(passThroughs, nonPassThroughs) as any)}
 			>
 				<ContextMenu
 					{...contextMenuProps}
@@ -1035,11 +1078,11 @@ class DropMenu extends React.Component<
 												? ([] as React.ReactNode[])
 												: [
 														<div
-															{...omitProps(
-																optionGroupProps,
-																undefined,
-																_.keys(DropMenu.OptionGroup.propTypes)
-															)}
+															{..._.omit(optionGroupProps, [
+																'isHidden',
+																'initialState',
+																'callbackId',
+															])}
 															key={'OptionGroup-label' + optionGroupIndex}
 															className={cx(
 																'&-label',

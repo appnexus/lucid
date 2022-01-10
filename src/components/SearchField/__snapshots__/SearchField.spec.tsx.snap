@@ -163,7 +163,7 @@ exports[`SearchField [common] example testing should match snapshot(s) for Debou
   <div
     style="margin-bottom:10px;margin-left:10px"
   >
-    this.state.value: foo
+    Value: foo
   </div>
   <button
     class="lucid-Button"

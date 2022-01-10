@@ -34,7 +34,6 @@ export interface IValidationProps
 
 export const Validation = (props: IValidationProps): React.ReactElement => {
 	const { className, children, ...passThroughs } = props;
-
 	const errorChildProps = _.get(
 		getFirst<IValidationErrorProps>(props, Validation.Error),
 		'props'
@@ -56,7 +55,7 @@ export const Validation = (props: IValidationProps): React.ReactElement => {
 			errorChildProps.children &&
 			errorChildProps.children !== true ? (
 				<div
-					{...omitProps<IValidationProps>(errorChildProps, undefined)}
+					{..._.omit(errorChildProps, ['initialState', 'callbackId'])}
 					className={cx('&-error-content', errorChildProps.className)}
 				>
 					{errorChildProps.children}

@@ -1,8 +1,11 @@
-import React from 'react';
-import createClass from 'create-react-class';
+import React, { useState } from 'react';
+import { Meta, Story } from '@storybook/react';
 
 import Button from '../Button/Button';
-import { SearchFieldDumb as SearchField } from './SearchField';
+import {
+	ISearchFieldProps,
+	SearchFieldDumb as SearchField,
+} from './SearchField';
 import LoadingIcon from '../Icon/LoadingIcon/LoadingIcon';
 
 export default {
@@ -11,204 +14,155 @@ export default {
 	parameters: {
 		docs: {
 			description: {
-				component: (SearchField as any).peek.description,
+				component: SearchField.peek.description,
 			},
 		},
 	},
-};
+} as Meta;
 
 /* Basic */
-export const Basic = () => {
-	const Component = createClass({
-		render() {
-			return <SearchField />;
-		},
-	});
-
-	return <Component />;
+export const Basic: Story<ISearchFieldProps> = (args) => {
+	return <SearchField {...args} />;
 };
 
 /* Interactive */
-export const Interactive = () => {
-	const Component = createClass({
-		getInitialState: () => ({}),
-		render() {
-			return (
-				<div>
-					<SearchField onSubmit={(value) => this.setState({ value })} />
-					<div style={{ marginTop: '10px', marginLeft: '10px' }}>
-						Hit "enter" to submit: {this.state.value}
-					</div>
-				</div>
-			);
-		},
-	});
+export const Interactive: Story<ISearchFieldProps> = (args) => {
+	const [state, setState] = useState('');
 
-	return <Component />;
+	return (
+		<div>
+			<SearchField {...args} onSubmit={(value) => setState(value)} />
+			<div style={{ marginTop: '10px', marginLeft: '10px' }}>
+				Hit "enter" to submit: {state}
+			</div>
+		</div>
+	);
 };
 
 /* Placeholder */
-export const Placeholder = () => {
-	const Component = createClass({
-		render() {
-			return <SearchField placeholder='Name/ID' />;
-		},
-	});
-
-	return <Component />;
+export const Placeholder: Story<ISearchFieldProps> = (args) => {
+	return <SearchField {...args} placeholder='Name/ID' />;
 };
 
 /* Disabled */
-export const Disabled = () => {
-	const Component = createClass({
-		render() {
-			return <SearchField isDisabled />;
-		},
-	});
-
-	return <Component />;
+export const Disabled: Story<ISearchFieldProps> = (args) => {
+	return <SearchField {...args} isDisabled />;
 };
 
 /* Custom Icon */
-export const CustomIcon = () => {
-	const Component = createClass({
-		render() {
-			return (
-				<SearchField>
-					<SearchField.Icon>
-						<LoadingIcon />
-					</SearchField.Icon>
-				</SearchField>
-			);
-		},
-	});
-
-	return <Component />;
+export const CustomIcon: Story<ISearchFieldProps> = (args) => {
+	return (
+		<SearchField {...args}>
+			<SearchField.Icon>
+				<LoadingIcon />
+			</SearchField.Icon>
+		</SearchField>
+	);
 };
-CustomIcon.storyName = 'CustomIcon';
 
 /* Custom Text Field */
-export const CustomTextField = () => {
-	const Component = createClass({
-		getInitialState: () => ({}),
-		render() {
-			return (
-				<div>
-					<SearchField placeholder='Name/ID'>
-						<SearchField.TextField
-							value={this.state.value}
-							onSubmit={(submission) => this.setState({ submission })}
-							onChange={(value) => this.setState({ value })}
-							onKeyDown={({ event: { key } }) => this.setState({ key })}
-							onBlur={(lastValue) => this.setState({ lastValue })}
-						/>
-					</SearchField>
-					<div style={{ marginTop: '10px', marginLeft: '10px' }}>
-						<div>Hit "enter" to submit: {this.state.submission}</div>
-						<div>Last keydown: {this.state.key}</div>
-						<div>Value on blur: {this.state.lastValue}</div>
-					</div>
-				</div>
-			);
-		},
+export const CustomTextField: Story<ISearchFieldProps> = (args) => {
+	const [state, setState] = useState({
+		value: '',
+		submission: '',
+		lastValue: '',
 	});
 
-	return <Component />;
+	const [key, setKey] = useState('');
+
+	return (
+		<div>
+			<SearchField {...args} placeholder='Name/ID'>
+				<SearchField.TextField
+					value={state.value}
+					onSubmit={(submission) => setState({ ...state, submission })}
+					onChange={(value) => setState({ ...state, value })}
+					onKeyDown={({ event: { key } }) => setKey(key)}
+					onBlur={(lastValue) => setState({ ...state, lastValue })}
+				/>
+			</SearchField>
+			<div style={{ marginTop: '10px', marginLeft: '10px' }}>
+				<div>Hit "enter" to submit: {state.submission}</div>
+				<div>Last keydown: {key}</div>
+				<div>Value on blur: {state.lastValue}</div>
+			</div>
+		</div>
+	);
 };
-CustomTextField.storyName = 'CustomTextField';
 
 /* Valid Search */
-export const ValidSearch = () => {
-	const Component = createClass({
-		getInitialState: () => ({ value: '' }),
-		render() {
-			return (
-				<SearchField
-					placeholder="Search icon doesn't become active until you type at least three characters ----->"
-					isValid={this.state.value.length > 2}
-					value={this.state.value}
-					onSubmit={(submission) => this.setState({ submission })}
-					onChange={(value) => this.setState({ value })}
-					onKeyDown={({ key }) => this.setState({ key })}
-					onBlur={(lastValue) => this.setState({ lastValue })}
-				/>
-			);
-		},
+export const ValidSearch: Story<ISearchFieldProps> = (args) => {
+	const [state, setState] = useState({
+		value: '',
+		submission: '',
+		lastValue: '',
 	});
 
-	return <Component />;
+	return (
+		<SearchField
+			{...args}
+			placeholder="Search icon doesn't become active until you type at least three characters ----->"
+			isValid={state.value.length > 2}
+			value={state.value}
+			onSubmit={(submission) => setState({ ...state, submission })}
+			onChange={(value) => setState({ ...state, value })}
+		/>
+	);
 };
-ValidSearch.storyName = 'ValidSearch';
 
 /* Props */
-export const Props = () => {
-	const Component = createClass({
-		render() {
-			return (
-				<div>
-					<SearchField value='foo' />
-					<SearchField placeholder='bar' />
-					<SearchField isDisabled />
-					<SearchField isValid={false} />
-					<SearchField>
-						<SearchField.Icon>
-							<LoadingIcon />
-						</SearchField.Icon>
-					</SearchField>
-					<SearchField value='foo'>
-						<SearchField.Icon>
-							<LoadingIcon />
-						</SearchField.Icon>
-					</SearchField>
-					<SearchField>
-						<SearchField.TextField value='bar' />
-					</SearchField>
-				</div>
-			);
-		},
-	});
-
-	return <Component />;
+export const Props: Story<ISearchFieldProps> = (args) => {
+	return (
+		<div>
+			<SearchField {...args} value='foo' />
+			<SearchField {...args} placeholder='bar' />
+			<SearchField {...args} isDisabled />
+			<SearchField {...args} isValid={false} />
+			<SearchField {...args}>
+				<SearchField.Icon>
+					<LoadingIcon />
+				</SearchField.Icon>
+			</SearchField>
+			<SearchField {...args} value='foo'>
+				<SearchField.Icon>
+					<LoadingIcon />
+				</SearchField.Icon>
+			</SearchField>
+			<SearchField {...args}>
+				<SearchField.TextField value='bar' />
+			</SearchField>
+		</div>
+	);
 };
 
 /* Debounced */
-export const Debounced = () => {
-	const Component = createClass({
-		getInitialState() {
-			return {
-				value: 'foo',
-			};
-		},
+export const Debounced: Story<ISearchFieldProps> = (args) => {
+	const [value, setValue] = useState('foo');
 
-		render() {
-			return (
-				<div>
-					<SearchField
-						style={{ marginBottom: '10px' }}
-						value={this.state.value}
-						onChangeDebounced={(value) => this.setState({ value })}
-					/>
+	return (
+		<div>
+			<SearchField
+				{...args}
+				style={{ marginBottom: '10px' }}
+				value={value}
+				onChangeDebounced={(value) => setValue(value)}
+			/>
+			<div
+				style={{
+					marginBottom: '10px',
+					marginLeft: '10px',
+				}}
+			>
+				Value: {value}
+			</div>
 
-					<div
-						style={{
-							marginBottom: '10px',
-							marginLeft: '10px',
-						}}
-					>
-						this.state.value: {this.state.value}
-					</div>
-
-					<Button
-						onClick={() => {
-							this.setState({ value: 'foo' });
-						}}
-					>
-						Set TextField to "foo"
-					</Button>
-				</div>
-			);
-		},
-	});
-
-	return <Component />;
+			<Button
+				onClick={() => {
+					setValue('foo');
+				}}
+			>
+				Set TextField to "foo"
+			</Button>
+		</div>
+	);
 };

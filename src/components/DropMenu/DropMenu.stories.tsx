@@ -1,7 +1,8 @@
-import React from 'react';
-import createClass from 'create-react-class';
+import React, { useState } from 'react';
 import _ from 'lodash';
-import { DropMenuDumb as DropMenu } from './DropMenu';
+import { Meta, Story } from '@storybook/react';
+
+import DropMenu, { IDropMenuProps } from './DropMenu';
 import TextField from '../TextField/TextField';
 import ChevronIcon from '../Icon/ChevronIcon/ChevronIcon';
 import Button from '../Button/Button';
@@ -12,268 +13,284 @@ export default {
 	parameters: {
 		docs: {
 			description: {
-				component: (DropMenu as any).peek.description,
+				component: DropMenu.peek.description,
 			},
 		},
 	},
-};
+	argTypes: {
+		children: { control: false },
+	},
+} as Meta;
 
 /* Basic */
-export const Basic = () => {
-	const Component = createClass({
-		getInitialState() {
-			return {
-				selectedIndices: [],
-			};
-		},
+export const Basic: Story<IDropMenuProps> = (args) => {
+	const [selectedIndices, setSelectedIndices] = useState<Array<number | null>>(
+		[]
+	);
 
-		handleSelect(optionIndex: any) {
-			this.setState({
-				selectedIndices: [optionIndex],
-			});
-		},
+	const { Control, Option } = DropMenu;
 
-		render() {
-			const { selectedIndices } = this.state;
-			const options = ['Red', 'Green', 'Blue'];
+	const handleSelect = (optionIndex: any) => {
+		setSelectedIndices((selectedIndices) => [...selectedIndices, optionIndex]);
+	};
 
-			return (
-				<DropMenu onSelect={this.handleSelect}>
-					<DropMenu.Control>
-						{_.isEmpty(selectedIndices)
-							? 'Select'
-							: options[_.last(selectedIndices) as any]}
-					</DropMenu.Control>
-					{_.map(options, (optionText, index) => (
-						<DropMenu.Option key={'Option-' + index}>
-							{optionText}
-						</DropMenu.Option>
-					))}
-				</DropMenu>
-			);
-		},
-	});
+	const options = [
+		'MS-DOS',
+		'Windows',
+		'OS/2',
+		'Windows Phone',
+		'Windows Mobile',
+		'Pocket PC',
+	];
 
-	return <Component />;
+	return (
+		<DropMenu {...args} onSelect={(i) => handleSelect(i)}>
+			<Control>
+				{_.isEmpty(selectedIndices)
+					? 'Select OS'
+					: options[_.last(selectedIndices) as any]}
+			</Control>
+			{_.map(options, (optionText, index) => (
+				<Option key={'Option-' + index}>{optionText}</Option>
+			))}
+		</DropMenu>
+	);
 };
 
 /* Button Menu */
-export const ButtonMenu = () => {
+export const ButtonMenu: Story<IDropMenuProps> = (args) => {
+	const [selectedIndices, setSelectedIndices] = useState<Array<number | null>>(
+		[]
+	);
+
 	const { Control, Option } = DropMenu;
 
-	const Component = createClass({
-		render() {
-			return (
-				<DropMenu>
-					<Control>
-						<Button>Select Color</Button>
-					</Control>
-					<Option>Red</Option>
-					<Option>Green</Option>
-					<Option>Blue</Option>
-				</DropMenu>
-			);
-		},
-	});
+	const options = ['Red', 'Green', 'Blue'];
 
-	return <Component />;
+	const handleSelect = (optionIndex: any) => {
+		setSelectedIndices((selectedIndices) => [...selectedIndices, optionIndex]);
+	};
+
+	return (
+		<DropMenu {...args} onSelect={(i) => handleSelect(i)}>
+			<Control>
+				<Button style={{ minWidth: '90px' }}>
+					{_.isEmpty(selectedIndices)
+						? 'Select Color'
+						: options[_.last(selectedIndices) as any]}
+				</Button>
+			</Control>
+			{_.map(options, (optionText, index) => (
+				<Option key={'Option-' + index}>{optionText}</Option>
+			))}
+		</DropMenu>
+	);
 };
-ButtonMenu.storyName = 'ButtonMenu';
 
-/* Disabled */
-export const Disabled = () => {
+/* Disabled Control */
+export const DisabledControl: Story<IDropMenuProps> = (args) => {
 	const { Control, Option } = DropMenu;
 
-	const Component = createClass({
-		render() {
-			return (
-				<DropMenu isDisabled>
-					<Control>
-						<Button tabIndex={-1}>Select Color</Button>
-					</Control>
-					<Option>Red</Option>
-					<Option>Green</Option>
-					<Option>Blue</Option>
-				</DropMenu>
-			);
-		},
-	});
-
-	return <Component />;
+	return (
+		<DropMenu {...args}>
+			<Control>
+				<Button tabIndex={-1}>Select Color</Button>
+			</Control>
+			<Option>Red</Option>
+			<Option>Green</Option>
+			<Option>Blue</Option>
+		</DropMenu>
+	);
+};
+DisabledControl.args = {
+	isDisabled: true,
 };
 
 /* Disabled Options */
-export const DisabledOptions = () => {
+export const DisabledOptions: Story<IDropMenuProps> = (args) => {
 	const { Control, Option } = DropMenu;
 
-	const Component = createClass({
-		render() {
-			return (
-				<DropMenu>
-					<Control>
-						<Button>Select Color</Button>
-					</Control>
-					<Option isDisabled>Red</Option>
-					<Option>Green</Option>
-					<Option isDisabled>Blue</Option>
-				</DropMenu>
-			);
-		},
-	});
+	const [selectedIndices, setSelectedIndices] = useState<Array<number | null>>(
+		[]
+	);
 
-	return <Component />;
+	const options = ['Red', 'Green', 'Blue'];
+
+	const handleSelect = (optionIndex: any) => {
+		setSelectedIndices((selectedIndices) => [...selectedIndices, optionIndex]);
+	};
+
+	return (
+		<DropMenu {...args} onSelect={(i) => handleSelect(i)}>
+			<Control>
+				{_.isEmpty(selectedIndices)
+					? 'Select Color'
+					: options[_.last(selectedIndices) as any]}
+			</Control>
+			{_.map(options, (optionText, index) => (
+				<Option key={'Option-' + index} isDisabled>
+					{optionText}
+				</Option>
+			))}
+		</DropMenu>
+	);
 };
-DisabledOptions.storyName = 'DisabledOptions';
 
 /* Grouped Options */
-export const GroupedOptions = () => {
+export const GroupedOptions: Story<IDropMenuProps> = (args) => {
 	const { Control, Option, OptionGroup } = DropMenu;
 
-	const Component = createClass({
-		render() {
-			return (
-				<DropMenu>
-					<Control>
-						<Button>Select Color</Button>
-					</Control>
+	return (
+		<DropMenu {...args}>
+			<Control>
+				<Button>Select Color</Button>
+			</Control>
 
-					<OptionGroup>
-						<Option>Select Color</Option>
-					</OptionGroup>
+			<OptionGroup>
+				<Option>Select Color</Option>
+			</OptionGroup>
 
-					<OptionGroup>
-						Screen
-						<Option>Red</Option>
-						<Option>Green</Option>
-						<Option>Blue</Option>
-					</OptionGroup>
+			<OptionGroup>
+				Screen
+				<Option>Red</Option>
+				<Option>Green</Option>
+				<Option>Blue</Option>
+			</OptionGroup>
 
-					<OptionGroup>
-						Print
-						<Option>Cyan</Option>
-						<Option>Yellow</Option>
-						<Option>Magenta</Option>
-						<Option>Black</Option>
-					</OptionGroup>
-				</DropMenu>
-			);
-		},
-	});
-
-	return <Component />;
+			<OptionGroup>
+				Print
+				<Option>Cyan</Option>
+				<Option>Yellow</Option>
+				<Option>Magenta</Option>
+				<Option>Black</Option>
+			</OptionGroup>
+		</DropMenu>
+	);
 };
-GroupedOptions.storyName = 'GroupedOptions';
 
 /* Text Menu */
-export const TextMenu = () => {
+export const TextMenu: Story<IDropMenuProps> = (args) => {
+	const [selectedIndices, setSelectedIndices] = useState<Array<number | null>>(
+		[]
+	);
+
 	const { Control, Option } = DropMenu;
 
-	const Component = createClass({
-		render() {
-			return (
-				<DropMenu>
-					<Control>
-						<TextField placeholder='Text DropMenu' />
-					</Control>
-					<Option>Red</Option>
-					<Option>Green</Option>
-					<Option>Blue</Option>
-				</DropMenu>
-			);
-		},
-	});
+	const options = ['Red', 'Green', 'Blue'];
 
-	return <Component />;
+	const handleSelect = (optionIndex: any) => {
+		setSelectedIndices((selectedIndices) => [...selectedIndices, optionIndex]);
+	};
+
+	return (
+		<DropMenu {...args} onSelect={(i) => handleSelect(i)}>
+			<Control>
+				{_.isEmpty(selectedIndices) ? (
+					<TextField placeholder='Text DropMenu' />
+				) : (
+					options[_.last(selectedIndices) as any]
+				)}
+			</Control>
+			{_.map(options, (optionText, index) => (
+				<Option key={'Option-' + index}>{optionText}</Option>
+			))}
+		</DropMenu>
+	);
 };
-TextMenu.storyName = 'TextMenu';
 
 /* Action Menu */
-export const ActionMenu = () => {
+export const ActionMenu: Story<IDropMenuProps> = (args) => {
+	const [selectedIndices, setSelectedIndices] = useState<Array<number | null>>(
+		[]
+	);
+
 	const { Control, Option } = DropMenu;
 
-	const Component = createClass({
-		render() {
-			return (
-				<DropMenu>
-					<Control>
-						Colors
-						<ChevronIcon direction='down' />
-					</Control>
-					<Option>Red</Option>
-					<Option>Green</Option>
-					<Option>Blue</Option>
-				</DropMenu>
-			);
-		},
-	});
+	const options = ['Select Color', 'Red', 'Green', 'Blue'];
 
-	return <Component />;
+	const handleSelect = (optionIndex: any) => {
+		setSelectedIndices((selectedIndices) => [...selectedIndices, optionIndex]);
+	};
+	return (
+		<DropMenu {...args} onSelect={(i) => handleSelect(i)}>
+			<Control>
+				{_.isEmpty(selectedIndices)
+					? 'Select Color'
+					: options[_.last(selectedIndices) as any]}
+				<ChevronIcon direction='down' style={{ marginLeft: '5px' }} />
+			</Control>
+			{_.map(options, (optionText, index) => (
+				<Option key={'Option-' + index}>{optionText}</Option>
+			))}
+		</DropMenu>
+	);
 };
-ActionMenu.storyName = 'ActionMenu';
 
 /* No Wrapping */
-export const NoWrapping = () => {
-	const Component = createClass({
-		render() {
-			const options = [
-				'Intentionally run off screen -- Adipisicing totam saepe officia repellat quo cupiditate ducimus hic? Quod temporibus corrupti eaque ullam quo nulla corporis !',
-				'Adipisicing totam provident excepturi officia non cum alias? Labore possimus adipisci id eveniet numquam tempora totam est. Explicabo recusandae quo tempore',
-				'Consectetur doloribus dignissimos exercitationem vel tempora praesentium nostrum eveniet inventore. Odit inventore quas optio id eum nisi. Minima consequuntur',
-			];
+export const NoWrapping: Story<IDropMenuProps> = (args) => {
+	const options = [
+		'Intentionally run off screen -- Adipisicing totam saepe officia repellat quo cupiditate ducimus hic? Quod temporibus corrupti eaque ullam quo nulla corporis !',
+		'Adipisicing totam provident excepturi officia non cum alias? Labore possimus adipisci id eveniet numquam tempora totam est. Explicabo recusandae quo tempore',
+		'Consectetur doloribus dignissimos exercitationem vel tempora praesentium nostrum eveniet inventore. Odit inventore quas optio id eum nisi. Minima consequuntur',
+	];
 
-			return (
-				<div style={{ textAlign: 'right' }}>
-					<DropMenu onSelect={this.handleSelect} alignment='center'>
-						<DropMenu.Control>
-							<Button>Click me</Button>
-						</DropMenu.Control>
+	const { Control, Option } = DropMenu;
 
-						{_.map(options, (optionText, index) => (
-							<DropMenu.Option isWrapped={false} key={'Option-' + index}>
-								{optionText}
-							</DropMenu.Option>
-						))}
-					</DropMenu>
-				</div>
-			);
-		},
-	});
+	const [selectedIndices, setSelectedIndices] = useState<Array<number | null>>(
+		[]
+	);
 
-	return <Component />;
+	const handleSelect = (optionIndex: any) => {
+		setSelectedIndices((selectedIndices) => [...selectedIndices, optionIndex]);
+	};
+
+	return (
+		<div style={{ textAlign: 'right' }}>
+			<DropMenu {...args} onSelect={(i) => handleSelect(i)} alignment='center'>
+				<Control>
+					<Button>
+						{_.isEmpty(selectedIndices)
+							? 'Click Me'
+							: options[_.last(selectedIndices) as any]}
+					</Button>
+				</Control>
+
+				{_.map(options, (optionText, index) => (
+					<Option isWrapped={false} key={'Option-' + index}>
+						{optionText}
+					</Option>
+				))}
+			</DropMenu>
+		</div>
+	);
 };
-NoWrapping.storyName = 'NoWrapping';
 
 /* Stateless */
-export const Stateless = () => {
+export const Stateless: Story<IDropMenuProps> = (args) => {
 	const { Control, Option, OptionGroup } = DropMenu;
 
-	const Component = createClass({
-		render() {
-			return (
-				<DropMenu
-					selectedIndices={[0]}
-					focusedIndex={3}
-					isExpanded
-					direction='down'
-				>
-					<Control>
-						<Button>Select Color</Button>
-					</Control>
+	return (
+		<DropMenu
+			{...args}
+			selectedIndices={[0]}
+			focusedIndex={3}
+			isExpanded
+			direction='down'
+		>
+			<Control>
+				<Button>Select Color</Button>
+			</Control>
 
-					<OptionGroup>
-						Preferred
-						<Option>Red</Option>
-						<Option>Green</Option>
-						<Option>Blue</Option>
-					</OptionGroup>
+			<OptionGroup>
+				Preferred
+				<Option>Red</Option>
+				<Option>Green</Option>
+				<Option>Blue</Option>
+			</OptionGroup>
 
-					<Option>Orange</Option>
-					<Option isDisabled>Violet</Option>
-					<Option isDisabled>Brown</Option>
-				</DropMenu>
-			);
-		},
-	});
-
-	return <Component />;
+			<Option>Orange</Option>
+			<Option isDisabled>Violet</Option>
+			<Option isDisabled>Brown</Option>
+		</DropMenu>
+	);
 };

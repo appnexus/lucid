@@ -64,7 +64,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
     default=""
   >
     <div
-      class="lucid-DropMenu lucid-DropMenu-base lucid-SearchableMultiSelect-DropMenu"
+      class="lucid-DropMenu lucid-DropMenu-base lucid-SearchableMultiSelect-DropMenu lucid-SearchableMultiSelect-DropMenu-is-small"
     >
       <span
         class="lucid-ContextMenu"
@@ -74,7 +74,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
           tabindex="0"
         >
           <div
-            class="lucid-SearchField lucid-SearchableMultiSelect-search"
+            class="lucid-SearchField lucid-SearchableMultiSelect-search lucid-SearchableMultiSelect-search-is-small"
           >
             <input
               autocomplete="off"
@@ -219,7 +219,6 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
 <div
   class="lucid-SearchableMultiSelect"
   default=""
-  initialstate="[object Object]"
 >
   <div
     class="lucid-DropMenu lucid-DropMenu-base lucid-SearchableMultiSelect-DropMenu"
@@ -1040,7 +1039,6 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
     <div
       class="lucid-SearchableMultiSelect"
       default=""
-      initialstate="[object Object]"
     >
       <div
         class="lucid-DropMenu lucid-DropMenu-base lucid-SearchableMultiSelect-DropMenu lucid-SearchableMultiSelect-DropMenu-is-small"

@@ -169,6 +169,8 @@ const nonPassThroughs = [
 	'OptionGroup',
 	'SearchField',
 	'Label',
+	'initialState',
+	'callbackId',
 ];
 
 export type Size = 'large' | 'medium' | 'small';
