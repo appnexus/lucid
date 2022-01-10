@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ToolTip [common] example testing should match snapshot(s) for Default 1`] = `
+exports[`ToolTip [common] example testing should match snapshot(s) for Basic 1`] = `
 <section
   style="display:flex;align-items:center;justify-content:center"
 >

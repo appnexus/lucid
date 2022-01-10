@@ -20,8 +20,8 @@ export default {
 	},
 };
 
-/* Default */
-export const Default = () => {
+/* Basic */
+export const Basic = () => {
 	const data = [
 		{ x: new Date('2015-01-01T00:00:00-08:00'), y: 1 },
 		{ x: new Date('2015-01-02T00:00:00-08:00'), y: 0 },
@@ -45,7 +45,6 @@ export const Default = () => {
 
 	return <Component />;
 };
-Default.storyName = 'Default';
 
 /* Responsive */
 export const Responsive = () => {
@@ -76,7 +75,6 @@ export const Responsive = () => {
 
 	return <Component />;
 };
-Responsive.storyName = 'Responsive';
 
 /* Multi */
 export const Multi = () => {
@@ -278,7 +276,6 @@ export const Multi = () => {
 
 	return <Component />;
 };
-Multi.storyName = 'Multi';
 
 /* Multi With Legend */
 export const MultiWithLegend = () => {
@@ -437,7 +434,6 @@ export const Stacked = () => {
 
 	return <Component />;
 };
-Stacked.storyName = 'Stacked';
 
 /* Dual Axis */
 export const DualAxis = () => {
@@ -766,7 +762,6 @@ export const Empty = () => {
 
 	return <Component />;
 };
-Empty.storyName = 'Empty';
 
 /* Empty With Custom Title And Body */
 export const EmptyWithCustomTitleAndBody = () => {
@@ -845,7 +840,6 @@ export const Loading = () => {
 
 	return <Component />;
 };
-Loading.storyName = 'Loading';
 
 /* Fine Grained Ticks */
 export const FineGrainedTicks = () => {

@@ -57,8 +57,8 @@ const Template: any = (args) => {
 //👇 Each story then reuses that template
 
 /** Default */
-export const Default = Template.bind({});
-Default.args = {
+export const Basic = Template.bind({});
+Basic.args = {
 	Placeholder: 'Select State',
 	maxMenuHeight: '200',
 	children: addKeys([
@@ -133,7 +133,7 @@ Default.args = {
 /** Loading */
 export const Loading = Template.bind({});
 Loading.args = {
-	...Default.args,
+	...Basic.args,
 	isLoading: true,
 	children: addKeys([
 		<Option value='AL'>Alabama</Option>,
@@ -193,7 +193,7 @@ Loading.args = {
 /** Custom Search Placeholder */
 export const CustomSearchPlaceholder = Template.bind({});
 CustomSearchPlaceholder.args = {
-	...Default.args,
+	...Basic.args,
 	Placeholder: 'Select Color',
 	children: addKeys([
 		<SearchField placeholder='Type here to filter...' />,
@@ -207,7 +207,7 @@ CustomSearchPlaceholder.args = {
 /** Invisible */
 export const Invisible = Template.bind({});
 Invisible.args = {
-	...Default.args,
+	...Basic.args,
 	isInvisible: true,
 };
 
@@ -243,7 +243,7 @@ const optionFilter = (
 
 export const FormattedOptions = Template.bind({});
 FormattedOptions.args = {
-	...Default.args,
+	...Basic.args,
 	Placeholder: 'Select Color',
 	optionFilter: optionFilter,
 	children: addKeys([
@@ -304,5 +304,5 @@ export const Invalid: any = (args) => {
 };
 
 Invalid.args = {
-	...Default.args,
+	...Basic.args,
 };

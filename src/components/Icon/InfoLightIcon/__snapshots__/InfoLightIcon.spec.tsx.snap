@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`InfoLightIcon [common] example testing should match snapshot(s) for Default 1`] = `
+exports[`InfoLightIcon [common] example testing should match snapshot(s) for Basic 1`] = `
 <svg
   class="lucid-Icon lucid-Icon-color-primary lucid-InfoLightIcon"
   height="16"

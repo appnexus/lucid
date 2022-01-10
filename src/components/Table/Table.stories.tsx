@@ -353,7 +353,6 @@ export const Standard = () => {
 
 	return <Component />;
 };
-Standard.storyName = 'Standard';
 
 /* Gray Header */
 export const GrayHeader = () => {
@@ -998,7 +997,6 @@ export const Compressed = () => {
 
 	return <Component />;
 };
-Compressed.storyName = 'Compressed';
 
 /* With Border */
 export const WithBorder = () => {

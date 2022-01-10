@@ -23,17 +23,16 @@ export default {
 	},
 } as Meta;
 
-/* Default */
-export const Default: Story<IEmptyStateWrapperProps> = (args) => {
+/* Basic */
+export const Basic: Story<IEmptyStateWrapperProps> = (args) => {
 	return <EmptyStateWrapper {...args} />;
 };
-Default.args = {
+Basic.args = {
 	Title: 'Empty State Wrapper',
 	isEmpty: true,
 	isLoading: false,
 	anchorMessage: false,
 };
-Default.storyName = 'Default';
 
 /* isLoading */
 export const IsLoading: Story<IEmptyStateWrapperProps> = (args) => {
@@ -44,7 +43,6 @@ IsLoading.args = {
 	isLoading: true,
 	anchorMessage: false,
 };
-IsLoading.storyName = 'Is Loading';
 
 /* YouHaveNoData */
 export const YouHaveNoData: Story<IEmptyStateWrapperProps> = (args) => {
@@ -55,4 +53,3 @@ YouHaveNoData.args = {
 	isLoading: false,
 	anchorMessage: false,
 };
-YouHaveNoData.storyName = 'You Have No Data';

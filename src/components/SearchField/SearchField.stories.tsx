@@ -17,8 +17,8 @@ export default {
 	},
 };
 
-/* Default */
-export const Default = () => {
+/* Basic */
+export const Basic = () => {
 	const Component = createClass({
 		render() {
 			return <SearchField />;
@@ -27,7 +27,6 @@ export const Default = () => {
 
 	return <Component />;
 };
-Default.storyName = 'Default';
 
 /* Interactive */
 export const Interactive = () => {
@@ -47,7 +46,6 @@ export const Interactive = () => {
 
 	return <Component />;
 };
-Interactive.storyName = 'Interactive';
 
 /* Placeholder */
 export const Placeholder = () => {
@@ -59,7 +57,6 @@ export const Placeholder = () => {
 
 	return <Component />;
 };
-Placeholder.storyName = 'Placeholder';
 
 /* Disabled */
 export const Disabled = () => {
@@ -71,7 +68,6 @@ export const Disabled = () => {
 
 	return <Component />;
 };
-Disabled.storyName = 'Disabled';
 
 /* Custom Icon */
 export const CustomIcon = () => {
@@ -174,7 +170,6 @@ export const Props = () => {
 
 	return <Component />;
 };
-Props.storyName = 'Props';
 
 /* Debounced */
 export const Debounced = () => {
@@ -217,4 +212,3 @@ export const Debounced = () => {
 
 	return <Component />;
 };
-Debounced.storyName = 'Debounced';

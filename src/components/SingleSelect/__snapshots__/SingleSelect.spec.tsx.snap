@@ -41,7 +41,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for Arra
 </section>
 `;
 
-exports[`SingleSelect [common] example testing should match snapshot(s) for Default 1`] = `
+exports[`SingleSelect [common] example testing should match snapshot(s) for Basic 1`] = `
 <section
   style="min-height:10em"
 >

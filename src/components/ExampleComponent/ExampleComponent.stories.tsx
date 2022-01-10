@@ -20,8 +20,8 @@ export default {
 	},
 } as Meta;
 
-/* Default */
-export const Default: Story<IExampleComponentProps> = (args) => {
+/* Basic */
+export const Basic: Story<IExampleComponentProps> = (args) => {
 	return (
 		<ExampleComponent {...args}>
 			Feel free to play with this example component to see how to create your
@@ -29,7 +29,6 @@ export const Default: Story<IExampleComponentProps> = (args) => {
 		</ExampleComponent>
 	);
 };
-Default.storyName = 'Default';
 
 /* Prop Example */
 export const PropExample: Story<IExampleComponentProps> = (args) => {

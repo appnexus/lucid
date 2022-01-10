@@ -19,7 +19,10 @@ export default {
 		},
 	},
 	argTypes: {
-		isCloseable: { type: { required: false }, control: { type: 'boolean' } },
+		isCloseable: {
+			type: { required: false } as any,
+			control: { type: 'boolean' },
+		},
 		isLight: { control: { type: 'boolean' } },
 		onClose: { control: false },
 		onMouseOver: { control: false },
@@ -54,7 +57,7 @@ export default {
 	},
 } as Meta;
 
-export const Default: Story<IToolTipProps> = (args) => {
+export const Basic: Story<IToolTipProps> = (args) => {
 	return (
 		<section
 			style={{
@@ -199,7 +202,6 @@ export const Interactive = () => {
 
 	return <Component />;
 };
-Interactive.storyName = 'Interactive';
 
 /* Variants */
 export const Variants = () => {
@@ -331,7 +333,6 @@ export const Variants = () => {
 
 	return <Component />;
 };
-Variants.storyName = 'Variants';
 
 /* Unchanging */
 export const Unchanging = () => {
@@ -382,4 +383,3 @@ export const Unchanging = () => {
 
 	return <Component />;
 };
-Unchanging.storyName = 'Unchanging';

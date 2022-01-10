@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EmptyStateWrapper [common] example testing should match snapshot(s) for Default 1`] = `
+exports[`EmptyStateWrapper [common] example testing should match snapshot(s) for Basic 1`] = `
 <div
   class="lucid-OverlayWrapper lucid-EmptyStateWrapper"
   title="Empty State Wrapper"

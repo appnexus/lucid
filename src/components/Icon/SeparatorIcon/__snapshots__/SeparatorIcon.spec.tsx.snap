@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SeparatorIcon [common] example testing should match snapshot(s) for Default 1`] = `
+exports[`SeparatorIcon [common] example testing should match snapshot(s) for Basic 1`] = `
 <svg
   class="lucid-Icon lucid-Icon-color-primary lucid-SeparatorIcon"
   height="16"

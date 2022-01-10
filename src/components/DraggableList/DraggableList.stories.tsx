@@ -16,8 +16,8 @@ export default {
 	},
 } as Meta;
 
-/* Default */
-export const Default: Story<IDraggableListProps> = (args) => {
+/* Basic */
+export const Basic: Story<IDraggableListProps> = (args) => {
 	const [items, setItems] = useState([
 		'Item One',
 		'Item Two',
@@ -49,7 +49,6 @@ export const Default: Story<IDraggableListProps> = (args) => {
 		</DraggableList>
 	);
 };
-Default.storyName = 'Default';
 
 /* No Drag Handle */
 export const NoDragHandle: Story<IDraggableListProps> = (args) => {
@@ -83,7 +82,6 @@ export const NoDragHandle: Story<IDraggableListProps> = (args) => {
 		</DraggableList>
 	);
 };
-NoDragHandle.storyName = 'No Drag Handle';
 
 /* With Children */
 export const WithChildren: Story<IDraggableListProps> = (args) => {
@@ -121,4 +119,3 @@ export const WithChildren: Story<IDraggableListProps> = (args) => {
 		</DraggableList>
 	);
 };
-WithChildren.storyName = 'With Children';

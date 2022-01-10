@@ -13,8 +13,8 @@ export default {
 	},
 };
 
-/* Default */
-export const Default = () => {
+/* Basic */
+export const Basic = () => {
 	return (
 		<div>
 			<DangerLightIcon />
@@ -26,4 +26,3 @@ export const Default = () => {
 		</div>
 	);
 };
-Default.storyName = 'Default';

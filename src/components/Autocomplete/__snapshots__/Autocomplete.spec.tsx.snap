@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Autocomplete [common] example testing should match snapshot(s) for Default 1`] = `
+exports[`Autocomplete [common] example testing should match snapshot(s) for Basic 1`] = `
 <div
   class="lucid-DropMenu lucid-DropMenu-base lucid-Autocomplete"
 >

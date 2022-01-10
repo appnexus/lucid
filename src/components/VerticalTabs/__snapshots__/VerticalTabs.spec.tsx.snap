@@ -1,5 +1,107 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`VerticalTabs [common] example testing should match snapshot(s) for Basic 1`] = `
+<section>
+  <div
+    class="lucid-VerticalTabs"
+  >
+    <ul
+      class="lucid-VerticalListMenu"
+    >
+      <li
+        class="lucid-VerticalListMenu-Item lucid-VerticalTabs-Tab lucid-VerticalTabs-Tab-is-active"
+      >
+        <div
+          class="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-selected lucid-VerticalListMenu-Item-content-is-actionable"
+        >
+          <div
+            class="lucid-VerticalListMenu-Item-content-body"
+          >
+            <div
+              class="lucid-VerticalListMenu-Item-content-text"
+            >
+              <span
+                class="lucid-VerticalTabs-Tab-content"
+              >
+                One
+              </span>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li
+        class="lucid-VerticalListMenu-Item lucid-VerticalTabs-Tab"
+      >
+        <div
+          class="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-not-selected lucid-VerticalListMenu-Item-content-is-actionable"
+        >
+          <div
+            class="lucid-VerticalListMenu-Item-content-body"
+          >
+            <div
+              class="lucid-VerticalListMenu-Item-content-text"
+            >
+              <span
+                class="lucid-VerticalTabs-Tab-content"
+              >
+                Two
+              </span>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li
+        class="lucid-VerticalListMenu-Item lucid-VerticalTabs-Tab"
+      >
+        <div
+          class="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-not-selected lucid-VerticalListMenu-Item-content-is-actionable"
+        >
+          <div
+            class="lucid-VerticalListMenu-Item-content-body"
+          >
+            <div
+              class="lucid-VerticalListMenu-Item-content-text"
+            >
+              <span
+                class="lucid-VerticalTabs-Tab-content"
+              >
+                Three
+              </span>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li
+        class="lucid-VerticalListMenu-Item lucid-VerticalTabs-Tab"
+      >
+        <div
+          class="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-not-selected lucid-VerticalListMenu-Item-content-is-actionable"
+        >
+          <div
+            class="lucid-VerticalListMenu-Item-content-body"
+          >
+            <div
+              class="lucid-VerticalListMenu-Item-content-text"
+            >
+              <span
+                class="lucid-VerticalTabs-Tab-content"
+              >
+                Four
+              </span>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <div
+      class="lucid-VerticalTabs-content"
+    >
+      One content
+    </div>
+  </div>
+</section>
+`;
+
 exports[`VerticalTabs [common] example testing should match snapshot(s) for ComplexTitleAsChild 1`] = `
 <section>
   <div
@@ -145,108 +247,6 @@ exports[`VerticalTabs [common] example testing should match snapshot(s) for Comp
                     </g>
                   </svg>
                 </span>
-              </span>
-            </div>
-          </div>
-        </div>
-      </li>
-      <li
-        class="lucid-VerticalListMenu-Item lucid-VerticalTabs-Tab"
-      >
-        <div
-          class="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-not-selected lucid-VerticalListMenu-Item-content-is-actionable"
-        >
-          <div
-            class="lucid-VerticalListMenu-Item-content-body"
-          >
-            <div
-              class="lucid-VerticalListMenu-Item-content-text"
-            >
-              <span
-                class="lucid-VerticalTabs-Tab-content"
-              >
-                Four
-              </span>
-            </div>
-          </div>
-        </div>
-      </li>
-    </ul>
-    <div
-      class="lucid-VerticalTabs-content"
-    >
-      One content
-    </div>
-  </div>
-</section>
-`;
-
-exports[`VerticalTabs [common] example testing should match snapshot(s) for Default 1`] = `
-<section>
-  <div
-    class="lucid-VerticalTabs"
-  >
-    <ul
-      class="lucid-VerticalListMenu"
-    >
-      <li
-        class="lucid-VerticalListMenu-Item lucid-VerticalTabs-Tab lucid-VerticalTabs-Tab-is-active"
-      >
-        <div
-          class="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-selected lucid-VerticalListMenu-Item-content-is-actionable"
-        >
-          <div
-            class="lucid-VerticalListMenu-Item-content-body"
-          >
-            <div
-              class="lucid-VerticalListMenu-Item-content-text"
-            >
-              <span
-                class="lucid-VerticalTabs-Tab-content"
-              >
-                One
-              </span>
-            </div>
-          </div>
-        </div>
-      </li>
-      <li
-        class="lucid-VerticalListMenu-Item lucid-VerticalTabs-Tab"
-      >
-        <div
-          class="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-not-selected lucid-VerticalListMenu-Item-content-is-actionable"
-        >
-          <div
-            class="lucid-VerticalListMenu-Item-content-body"
-          >
-            <div
-              class="lucid-VerticalListMenu-Item-content-text"
-            >
-              <span
-                class="lucid-VerticalTabs-Tab-content"
-              >
-                Two
-              </span>
-            </div>
-          </div>
-        </div>
-      </li>
-      <li
-        class="lucid-VerticalListMenu-Item lucid-VerticalTabs-Tab"
-      >
-        <div
-          class="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-not-selected lucid-VerticalListMenu-Item-content-is-actionable"
-        >
-          <div
-            class="lucid-VerticalListMenu-Item-content-body"
-          >
-            <div
-              class="lucid-VerticalListMenu-Item-content-text"
-            >
-              <span
-                class="lucid-VerticalTabs-Tab-content"
-              >
-                Three
               </span>
             </div>
           </div>

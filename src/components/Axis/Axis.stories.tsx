@@ -17,8 +17,8 @@ export default {
 	},
 } as Meta;
 
-/* Default */
-export const Default: Story<IAxisProps> = (args) => {
+/* Basic */
+export const Basic: Story<IAxisProps> = (args) => {
 	const margin = { right: 40, left: 20, top: 40, bottom: 10 };
 	const width = 500;
 	const height = 100;
@@ -33,7 +33,6 @@ export const Default: Story<IAxisProps> = (args) => {
 		</svg>
 	);
 };
-Default.storyName = 'Default';
 
 /* Top */
 export const Top: Story<IAxisProps> = (args) => {
@@ -57,7 +56,6 @@ export const Top: Story<IAxisProps> = (args) => {
 		</svg>
 	);
 };
-Top.storyName = 'Top';
 
 /* Left */
 export const Left: Story<IAxisProps> = (args) => {
@@ -75,7 +73,6 @@ export const Left: Story<IAxisProps> = (args) => {
 		</svg>
 	);
 };
-Left.storyName = 'Left';
 
 /* Right */
 export const Right: Story<IAxisProps> = (args) => {
@@ -93,7 +90,6 @@ export const Right: Story<IAxisProps> = (args) => {
 		</svg>
 	);
 };
-Right.storyName = 'Right';
 
 /* Time */
 export const Time: Story<IAxisProps> = (args) => {
@@ -133,7 +129,6 @@ export const Time: Story<IAxisProps> = (args) => {
 		</svg>
 	);
 };
-Time.storyName = 'Time';
 
 /* Ordinal */
 export const Ordinal: Story<IAxisProps> = (args) => {
@@ -155,7 +150,6 @@ export const Ordinal: Story<IAxisProps> = (args) => {
 		</svg>
 	);
 };
-Ordinal.storyName = 'Ordinal';
 
 /* Diagonal Text */
 export const DiagonalText: Story<IAxisProps> = (args) => {
@@ -236,4 +230,3 @@ export const DiagonalText: Story<IAxisProps> = (args) => {
 		</div>
 	);
 };
-DiagonalText.storyName = 'Diagonal Text';

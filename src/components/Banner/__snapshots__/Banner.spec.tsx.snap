@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Banner [common] example testing should match snapshot(s) for Default 1`] = `
+exports[`Banner [common] example testing should match snapshot(s) for Basic 1`] = `
 <section
   class="lucid-Banner lucid-Banner-has-close lucid-Banner-filled"
 >

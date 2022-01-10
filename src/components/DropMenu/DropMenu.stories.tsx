@@ -18,8 +18,8 @@ export default {
 	},
 };
 
-/* Default */
-export const Default = () => {
+/* Basic */
+export const Basic = () => {
 	const Component = createClass({
 		getInitialState() {
 			return {
@@ -56,7 +56,6 @@ export const Default = () => {
 
 	return <Component />;
 };
-Default.storyName = 'Default';
 
 /* Button Menu */
 export const ButtonMenu = () => {
@@ -102,7 +101,6 @@ export const Disabled = () => {
 
 	return <Component />;
 };
-Disabled.storyName = 'Disabled';
 
 /* Disabled Options */
 export const DisabledOptions = () => {
@@ -279,4 +277,3 @@ export const Stateless = () => {
 
 	return <Component />;
 };
-Stateless.storyName = 'Stateless';

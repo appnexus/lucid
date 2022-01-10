@@ -1,86 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Tag [common] example testing should match snapshot(s) for Colors 1`] = `
-<div>
-  <div
-    class="lucid-Tag lucid-Tag-has-light-background lucid-Tag-default"
-  >
-    <div
-      class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-info"
-    >
-      <span
-        class="lucid-Tag-other-children"
-      >
-        notitia
-      </span>
-    </div>
-    <div
-      class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-danger"
-    >
-      <span
-        class="lucid-Tag-other-children"
-      >
-        periculum
-      </span>
-    </div>
-    <div
-      class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
-    >
-      <span
-        class="lucid-Tag-other-children"
-      >
-        deficio
-      </span>
-    </div>
-  </div>
-  <div
-    class="lucid-Tag lucid-Tag-has-light-background lucid-Tag-default"
-  >
-    <div
-      class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-info"
-    >
-      <span
-        class="lucid-Tag-other-children"
-      >
-        notitia
-        <svg
-          class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
-          height="7"
-          preserveAspectRatio="xMidYMid meet"
-          viewBox="0 0 16 16"
-          width="7"
-        >
-          <path
-            d="M.5.5l15 15m0-15l-15 15"
-          />
-        </svg>
-      </span>
-    </div>
-    <div
-      class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-danger"
-    >
-      <span
-        class="lucid-Tag-other-children"
-      >
-        periculum
-        <svg
-          class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
-          height="7"
-          preserveAspectRatio="xMidYMid meet"
-          viewBox="0 0 16 16"
-          width="7"
-        >
-          <path
-            d="M.5.5l15 15m0-15l-15 15"
-          />
-        </svg>
-      </span>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Tag [common] example testing should match snapshot(s) for Default 1`] = `
+exports[`Tag [common] example testing should match snapshot(s) for Basic 1`] = `
 <div>
   <div>
     <div
@@ -287,6 +207,86 @@ exports[`Tag [common] example testing should match snapshot(s) for Default 1`] =
           </svg>
         </span>
       </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tag [common] example testing should match snapshot(s) for Colors 1`] = `
+<div>
+  <div
+    class="lucid-Tag lucid-Tag-has-light-background lucid-Tag-default"
+  >
+    <div
+      class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-info"
+    >
+      <span
+        class="lucid-Tag-other-children"
+      >
+        notitia
+      </span>
+    </div>
+    <div
+      class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-danger"
+    >
+      <span
+        class="lucid-Tag-other-children"
+      >
+        periculum
+      </span>
+    </div>
+    <div
+      class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
+    >
+      <span
+        class="lucid-Tag-other-children"
+      >
+        deficio
+      </span>
+    </div>
+  </div>
+  <div
+    class="lucid-Tag lucid-Tag-has-light-background lucid-Tag-default"
+  >
+    <div
+      class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-info"
+    >
+      <span
+        class="lucid-Tag-other-children"
+      >
+        notitia
+        <svg
+          class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
+          height="7"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 16 16"
+          width="7"
+        >
+          <path
+            d="M.5.5l15 15m0-15l-15 15"
+          />
+        </svg>
+      </span>
+    </div>
+    <div
+      class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-is-removable lucid-Tag-has-light-background lucid-Tag-danger"
+    >
+      <span
+        class="lucid-Tag-other-children"
+      >
+        periculum
+        <svg
+          class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
+          height="7"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 16 16"
+          width="7"
+        >
+          <path
+            d="M.5.5l15 15m0-15l-15 15"
+          />
+        </svg>
+      </span>
     </div>
   </div>
 </div>

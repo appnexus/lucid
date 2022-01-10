@@ -37,7 +37,6 @@ export const Expanded = () => {
 
 	return <Component />;
 };
-Expanded.storyName = 'Expanded';
 
 /* Interactive With Changing Labels */
 export const InteractiveWithChangingLabels = () => {
@@ -379,4 +378,3 @@ export const Highlighted = () => {
 
 	return <Component />;
 };
-Highlighted.storyName = 'Highlighted';

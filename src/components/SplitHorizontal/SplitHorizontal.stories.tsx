@@ -57,7 +57,6 @@ export const DefaultSplit = () => {
 
 	return <Component />;
 };
-DefaultSplit.storyName = 'DefaultSplit';
 
 /* Animated Collapse */
 export const AnimatedCollapse = () => {

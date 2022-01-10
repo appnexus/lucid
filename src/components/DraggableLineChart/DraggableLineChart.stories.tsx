@@ -18,8 +18,8 @@ export default {
 	},
 };
 
-/* Default */
-export const Default = () => {
+/* Basic */
+export const Basic = () => {
 	const data = [
 		{ x: '12 AM', y: 0 },
 		{ x: '1 AM', y: 0 },
@@ -56,7 +56,6 @@ export const Default = () => {
 
 	return <Component />;
 };
-Default.storyName = 'Default';
 
 /* Example With External X Axis Render Prop */
 export const ExampleWithExternalXAxisRenderProp = () => {

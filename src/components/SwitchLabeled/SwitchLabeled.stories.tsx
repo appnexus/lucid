@@ -277,4 +277,3 @@ export const States = () => {
 
 	return <Component />;
 };
-States.storyName = 'States';
