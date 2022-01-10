@@ -149,8 +149,8 @@ const defaultData = [
 	},
 ];
 
-export const Default = Template.bind({});
-Default.args = {
+export const Basic = Template.bind({});
+Basic.args = {
 	children: defaultColumns,
 	data: defaultData,
 };
@@ -778,7 +778,6 @@ export const Loading = () => {
 
 	return <Component />;
 };
-Loading.storyName = 'Loading';
 
 /* Loading With Anchored Message */
 export const LoadingWithAnchoredMessage = () => {

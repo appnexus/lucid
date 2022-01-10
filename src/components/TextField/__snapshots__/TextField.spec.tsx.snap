@@ -1,5 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`TextField [common] example testing should match snapshot(s) for Basic 1`] = `
+<div>
+  <input
+    class="lucid-TextField lucid-TextField-is-single-line"
+    placeholder="default"
+    rows="5"
+    style="margin-bottom:10px"
+    type="text"
+    value=""
+  />
+</div>
+`;
+
 exports[`TextField [common] example testing should match snapshot(s) for Debounced 1`] = `
 <div>
   <input
@@ -24,19 +37,6 @@ exports[`TextField [common] example testing should match snapshot(s) for Debounc
       Set TextField to "foo"
     </span>
   </button>
-</div>
-`;
-
-exports[`TextField [common] example testing should match snapshot(s) for Default 1`] = `
-<div>
-  <input
-    class="lucid-TextField lucid-TextField-is-single-line"
-    placeholder="default"
-    rows="5"
-    style="margin-bottom:10px"
-    type="text"
-    value=""
-  />
 </div>
 `;
 

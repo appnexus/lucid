@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { Meta } from '@storybook/react';
+import { Meta, Story } from '@storybook/react';
 
-import Checkbox from './Checkbox';
+import Checkbox, { ICheckboxProps } from './Checkbox';
 
 export default {
 	title: 'Controls/Checkbox',
@@ -15,7 +15,7 @@ export default {
 	},
 } as Meta;
 
-const Template: any = (args) => {
+const Template: Story<ICheckboxProps> = (args) => {
 	const [selected, setSelected] = useState(args.isSelected || false);
 	return (
 		<Checkbox
@@ -26,33 +26,33 @@ const Template: any = (args) => {
 	);
 };
 
-export const Default = Template.bind({});
-Default.args = {
+export const Basic: Story<ICheckboxProps> = Template.bind({});
+Basic.args = {
 	title: 'Default',
 };
 
-export const Plain = Template.bind({});
+export const Plain: Story<ICheckboxProps> = Template.bind({});
 Plain.args = {
 	title: 'Plain',
 	isDisabled: false,
 	isSelected: true,
 };
 
-export const DisabledUnselected = Template.bind({});
+export const DisabledUnselected: Story<ICheckboxProps> = Template.bind({});
 DisabledUnselected.args = {
 	title: 'Disabled Unselected',
 	isDisabled: true,
 	isSelected: false,
 };
 
-export const DisabledSelected = Template.bind({});
+export const DisabledSelected: Story<ICheckboxProps> = Template.bind({});
 DisabledSelected.args = {
 	title: 'Disabled Selected',
 	isDisabled: true,
 	isSelected: true,
 };
 
-export const DisabledIndeterminate = Template.bind({});
+export const DisabledIndeterminate: Story<ICheckboxProps> = Template.bind({});
 DisabledIndeterminate.args = {
 	title: 'Disabled Selected',
 	isIndeterminate: true,

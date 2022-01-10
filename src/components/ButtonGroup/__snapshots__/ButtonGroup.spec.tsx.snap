@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ButtonGroup [common] example testing should match snapshot(s) for Default 1`] = `
+exports[`ButtonGroup [common] example testing should match snapshot(s) for Basic 1`] = `
 <span
   class="lucid-ButtonGroup"
 >
@@ -87,6 +87,33 @@ exports[`ButtonGroup [common] example testing should match snapshot(s) for Disab
       class="lucid-Button-content"
     >
       Three
+    </span>
+  </button>
+</span>
+`;
+
+exports[`ButtonGroup [common] example testing should match snapshot(s) for OnClick 1`] = `
+<span
+  class="lucid-ButtonGroup"
+>
+  <button
+    class="lucid-Button"
+    type="button"
+  >
+    <span
+      class="lucid-Button-content"
+    >
+      Zero
+    </span>
+  </button>
+  <button
+    class="lucid-Button"
+    type="button"
+  >
+    <span
+      class="lucid-Button-content"
+    >
+      One
     </span>
   </button>
 </span>

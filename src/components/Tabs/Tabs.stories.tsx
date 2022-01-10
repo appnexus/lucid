@@ -35,7 +35,6 @@ export const TitleAsProp: Story<ITabsProps> = (args) => {
 		</div>
 	);
 };
-TitleAsProp.storyName = 'Title As Prop';
 
 /* Title As Child */
 export const TitleAsChild: Story<ITabsProps> = (args) => {
@@ -65,7 +64,6 @@ export const TitleAsChild: Story<ITabsProps> = (args) => {
 		</div>
 	);
 };
-TitleAsChild.storyName = 'Title As Child';
 
 /* Complex Title As Child */
 export const ComplexTitleAsChild: Story<ITabsProps> = (args) => {
@@ -123,7 +121,6 @@ export const ComplexTitleAsChild: Story<ITabsProps> = (args) => {
 		</div>
 	);
 };
-ComplexTitleAsChild.storyName = 'Complex Title As Child';
 
 /* Tab As Prop */
 export const TabAsProp: Story<ITabsProps> = (args) => {
@@ -141,7 +138,6 @@ export const TabAsProp: Story<ITabsProps> = (args) => {
 		</div>
 	);
 };
-TabAsProp.storyName = 'Tab As Prop';
 
 /* Full Width */
 export const FullWidth: Story<ITabsProps> = (args) => {
@@ -164,7 +160,6 @@ export const FullWidth: Story<ITabsProps> = (args) => {
 		</div>
 	);
 };
-FullWidth.storyName = 'Full Width';
 
 /* Variable Width */
 export const VariableWidth: Story<ITabsProps> = (args) => {
@@ -188,7 +183,6 @@ export const VariableWidth: Story<ITabsProps> = (args) => {
 		</div>
 	);
 };
-VariableWidth.storyName = 'Variable Width';
 
 /* Progression */
 export const Progression: Story<ITabsProps> = (args) => {
@@ -208,7 +202,6 @@ export const Progression: Story<ITabsProps> = (args) => {
 		</div>
 	);
 };
-Progression.storyName = 'Progression';
 
 /* Progression Variable Width */
 export const ProgressionVariableWidth = (args) => {
@@ -235,7 +228,6 @@ export const ProgressionVariableWidth = (args) => {
 		</div>
 	);
 };
-ProgressionVariableWidth.storyName = 'Progression Variable Width';
 
 /* With Count */
 export const WithCount: Story<ITabsProps> = (args) => {
@@ -287,7 +279,6 @@ export const WithCount: Story<ITabsProps> = (args) => {
 		</div>
 	);
 };
-WithCount.storyName = 'With Count';
 
 /* 10 Floating */
 export const Floating: Story<ITabsProps> = (args) => {
@@ -314,4 +305,3 @@ export const Floating: Story<ITabsProps> = (args) => {
 		</div>
 	);
 };
-Floating.storyName = 'Floating';

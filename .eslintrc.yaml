@@ -1,6 +1,7 @@
 extends:
   - appnexus/frontend
   - appnexus/typescript
+  - plugin:storybook/recommended
 
 parserOptions:
   project: './tsconfig.json'

@@ -16,8 +16,8 @@ export default {
 	},
 } as Meta;
 
-/* Default */
-export const Default: Story<IAxisLabelProps> = (args) => {
+/* Basic */
+export const Basic: Story<IAxisLabelProps> = (args) => {
 	const width = 800;
 	const height = 400;
 	const margin = { top: 50, right: 50, bottom: 50, left: 50 };
@@ -97,4 +97,3 @@ export const Default: Story<IAxisLabelProps> = (args) => {
 		</svg>
 	);
 };
-Default.storyName = 'Default';

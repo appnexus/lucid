@@ -14,8 +14,8 @@ export default {
 	},
 };
 
-/* Default */
-export const Default = () => {
+/* Basic */
+export const Basic = () => {
 	const style = { display: 'inline-block', marginRight: '10px' };
 	const Component = createClass({
 		render() {
@@ -78,4 +78,3 @@ export const Default = () => {
 
 	return <Component />;
 };
-Default.storyName = 'Default';

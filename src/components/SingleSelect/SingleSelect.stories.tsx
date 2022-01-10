@@ -66,9 +66,9 @@ const Template: any = (args) => {
 	);
 };
 
-/** Default */
-export const Default = Template.bind({});
-Default.args = {
+/** Basic */
+export const Basic = Template.bind({});
+Basic.args = {
 	Placeholder: 'Select Color',
 	children: addKeys([
 		<Option>Red</Option>,
@@ -80,7 +80,7 @@ Default.args = {
 /** Named Options */
 export const NamedOptions = Template.bind({});
 NamedOptions.args = {
-	...Default.args,
+	...Basic.args,
 	children: addKeys([
 		<Option name='red'>Red</Option>,
 		<Option name='green'>Green</Option>,
@@ -106,7 +106,7 @@ const OptionCols = ({ col1, col2 }: { col1: string; col2: string }) => (
 
 export const FormattedOptions = Template.bind({});
 FormattedOptions.args = {
-	...Default.args,
+	...Basic.args,
 	children: addKeys([
 		<OptionGroup>
 			<OptionCols col1='NAME' col2='ID' />
@@ -137,7 +137,7 @@ FormattedOptions.parameters = {
 /** Grouped Options */
 export const GroupedOptions = Template.bind({});
 GroupedOptions.args = {
-	...Default.args,
+	...Basic.args,
 	children: addKeys([
 		<OptionGroup>
 			Screen
@@ -166,7 +166,7 @@ GroupedOptions.parameters = {
 /** Disabled Options */
 export const DisabledOptions = Template.bind({});
 DisabledOptions.args = {
-	...Default.args,
+	...Basic.args,
 	children: addKeys([
 		<Option isDisabled>Red</Option>,
 		<Option>Green</Option>,
@@ -185,7 +185,7 @@ DisabledOptions.parameters = {
 /** Disabled Select */
 export const DisabledSelect = Template.bind({});
 DisabledSelect.args = {
-	...Default.args,
+	...Basic.args,
 	isDisabled: true,
 };
 DisabledSelect.parameters = {
@@ -200,7 +200,7 @@ DisabledSelect.parameters = {
 /** No Unselect */
 export const NoUnselect = Template.bind({});
 NoUnselect.args = {
-	...Default.args,
+	...Basic.args,
 	hasReset: false,
 };
 NoUnselect.parameters = {
@@ -215,7 +215,7 @@ NoUnselect.parameters = {
 /** Max Menu Height */
 export const MaxMenuHeight = Template.bind({});
 MaxMenuHeight.args = {
-	...Default.args,
+	...Basic.args,
 	maxMenuHeight: '7em',
 	children: addKeys([
 		<Option>Aliceblue</Option>,
@@ -247,7 +247,7 @@ MaxMenuHeight.parameters = {
 /** Rich Content */
 export const RichContent = Template.bind({});
 RichContent.args = {
-	...Default.args,
+	...Basic.args,
 	Placeholder: (
 		<>
 			<PlusIcon style={{ marginRight: 4 }} /> Add Color
@@ -277,7 +277,7 @@ RichContent.parameters = {
 /** No Selection Highlighting */
 export const NoSelectionHighlighting = Template.bind({});
 NoSelectionHighlighting.args = {
-	...Default.args,
+	...Basic.args,
 	isSelectionHighlighted: false,
 };
 NoSelectionHighlighting.parameters = {
@@ -307,7 +307,7 @@ ArrayOptions.parameters = {
 /** Stateless */
 export const Stateless = Template.bind({});
 Stateless.args = {
-	...Default.args,
+	...Basic.args,
 	selectedIndex: 1,
 	DropMenu: { focusedIndex: 2, isExpanded: true },
 	style: { minHeight: 220 },
@@ -336,7 +336,7 @@ Stateless.parameters = {
 /** Invisible */
 export const Invisible = Template.bind({});
 Invisible.args = {
-	...Default.args,
+	...Basic.args,
 	isInvisible: true,
 };
 Invisible.parameters = {
@@ -351,7 +351,7 @@ Invisible.parameters = {
 /** Invisible and Disabled */
 export const InvisibleAndDisabled = Template.bind({});
 InvisibleAndDisabled.args = {
-	...Default.args,
+	...Basic.args,
 	isInvisible: true,
 	isDisabled: true,
 };

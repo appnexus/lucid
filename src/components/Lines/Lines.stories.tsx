@@ -18,8 +18,8 @@ export default {
 	},
 } as Meta;
 
-/* Default */
-export const Default: Story<ILinesProps> = (args) => {
+/* Basic */
+export const Basic: Story<ILinesProps> = (args) => {
 	const width = 800;
 	const height = 400;
 
@@ -75,7 +75,6 @@ export const Default: Story<ILinesProps> = (args) => {
 		</div>
 	);
 };
-Default.storyName = 'Default';
 
 /* Custom Colors */
 export const CustomColors: Story<ILinesProps> = (args) => {
@@ -131,4 +130,3 @@ export const CustomColors: Story<ILinesProps> = (args) => {
 		</div>
 	);
 };
-CustomColors.storyName = 'Custom Colors';

@@ -21,7 +21,7 @@ export default {
 	},
 } as Meta;
 
-export const Default = (args) => <Button {...args}>Button</Button>;
+export const Basic = (args) => <Button {...args}>Button</Button>;
 
 export const AllTypes = () => (
 	<div

@@ -475,7 +475,6 @@ export const Standard = () => {
 
 	return <Component />;
 };
-Standard.storyName = 'Standard';
 
 /* Top Offset */
 export const TopOffset = () => {

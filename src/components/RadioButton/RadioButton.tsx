@@ -1,12 +1,9 @@
 import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
+
 import { lucidClassNames } from '../../util/style-helpers';
-import {
-	omitProps,
-	StandardProps,
-	Overwrite,
-} from '../../util/component-types';
+import { StandardProps, Overwrite } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-RadioButton');
 const { bool, func, object, string } = PropTypes;
@@ -52,6 +49,18 @@ export type IRadioButtonProps = Overwrite<
 	>,
 	IRadioButtonPropsRaw
 >;
+
+/** TODO: Remove nonPassThroughs when the component is converted to a functional component */
+const nonPassThroughs = [
+	'callbackId',
+	'children',
+	'className',
+	'isDisabled',
+	'isSelected',
+	'name',
+	'onSelect',
+	'style',
+];
 
 export const defaultProps = {
 	isDisabled: false,
@@ -99,11 +108,7 @@ export const RadioButton = (props: IRadioButtonProps): React.ReactElement => {
 		>
 			<input
 				onChange={_.noop}
-				{...omitProps(passThroughs, undefined, [
-					..._.keys(RadioButton.propTypes),
-					'children',
-					'callbackId',
-				])}
+				{..._.omit(passThroughs, nonPassThroughs)}
 				checked={isSelected}
 				className={cx('&-native')}
 				disabled={isDisabled}
@@ -127,12 +132,8 @@ RadioButton.displayName = 'RadioButton';
 RadioButton.peek = {
 	description: `\`RadioButton\` is a round two-state toggle used to create \`RadioButtonLabeled\`. It uses a hidden native checkbox control under the hood but leverages other \`HTML\` elements to visualize its state.`,
 	notes: {
-		overview: `
-			RadioButton is a round two-state toggle. Use \`RadioButtonLabeled\` or \`RadioGroup\` in your applications.
-		`,
-		intendedUse: `
-			Used to create \`RadioButtonLabeled\` and \`RadioGroup\`. 			
-		`,
+		overview: `RadioButton is a round two-state toggle. Use \`RadioButtonLabeled\` or \`RadioGroup\` in your applications.`,
+		intendedUse: `Used to create \`RadioButtonLabeled\` and \`RadioGroup\`.`,
 		technicalRecommendations: `
 			- Use the Selected state when a filter or setting will be applied.
 			- Use the Unselected state when a filter or setting will not be applied.

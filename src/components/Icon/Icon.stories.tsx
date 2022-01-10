@@ -15,8 +15,8 @@ export default {
 	},
 } as Meta;
 
-/* Default */
-export const Default: Story<IIconProps> = (args) => {
+/* Basic */
+export const Basic: Story<IIconProps> = (args) => {
 	return (
 		<Icon {...args}>
 			<path d='M13.234,2.43 L13.402,2.766 L15.831,7.625 L15.967,7.896 L15.831,8.168 L13.13,13.57 L12.587,13.298 L8,11.005 L2.87,13.57 L0.033,7.896 L0.169,7.625 L2.598,2.766 L2.766,2.43 L13.234,2.43 z M12.483,3.645 L3.517,3.645 L1.391,7.896 L3.413,11.94 L7.728,9.782 L8,9.646 L12.587,11.94 L14.609,7.896 L12.483,3.645 z' />
@@ -25,4 +25,3 @@ export const Default: Story<IIconProps> = (args) => {
 		</Icon>
 	);
 };
-Default.storyName = 'Default';

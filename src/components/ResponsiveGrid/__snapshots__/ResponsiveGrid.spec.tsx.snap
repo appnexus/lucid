@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ResponsiveGrid [common] example testing should match snapshot(s) for Default 1`] = `
+exports[`ResponsiveGrid [common] example testing should match snapshot(s) for Basic 1`] = `
 <div>
   <div
     class="lucid-Resizer lucid-ResponsiveGrid"

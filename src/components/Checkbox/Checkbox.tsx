@@ -2,11 +2,7 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import {
-	omitProps,
-	StandardProps,
-	Overwrite,
-} from '../../util/component-types';
+import { StandardProps, Overwrite } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-Checkbox');
 
@@ -55,6 +51,18 @@ export type ICheckboxProps = Overwrite<
 	>,
 	ICheckboxPropsRaw
 >;
+
+/** TODO: Remove nonPassThroughs when the component is converted to a functional component */
+const nonPassThroughs = [
+	'children',
+	'className',
+	'isIndeterminate',
+	'isDisabled',
+	'isSelected',
+	'onSelect',
+	'style',
+	'title',
+];
 
 export const defaultProps = {
 	isIndeterminate: false,
@@ -106,11 +114,7 @@ export const Checkbox = (props: ICheckboxProps): React.ReactElement => {
 		>
 			<input
 				onChange={_.noop}
-				{...omitProps(
-					passThroughs,
-					undefined,
-					['children'].concat(_.keys(Checkbox.propTypes))
-				)}
+				{..._.omit(passThroughs, nonPassThroughs)}
 				checked={isSelected}
 				className={cx('&-native')}
 				disabled={isDisabled}

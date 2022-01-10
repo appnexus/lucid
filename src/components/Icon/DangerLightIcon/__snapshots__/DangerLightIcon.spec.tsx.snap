@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`DangerLightIcon [common] example testing should match snapshot(s) for Default 1`] = `
+exports[`DangerLightIcon [common] example testing should match snapshot(s) for Basic 1`] = `
 <div>
   <svg
     class="lucid-Icon lucid-Icon-color-primary lucid-DangerLightIcon"

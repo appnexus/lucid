@@ -992,6 +992,560 @@ exports[`LineChart [common] example testing should match snapshot(s) for AllTheT
 </div>
 `;
 
+exports[`LineChart [common] example testing should match snapshot(s) for Basic 1`] = `
+<div
+  style="padding-top:4rem"
+>
+  <svg
+    class="lucid-LineChart"
+    height="400"
+    width="800"
+  >
+    <g
+      transform="translate(80, 10)"
+    />
+    <g
+      transform="translate(80, 335)"
+    >
+      <g
+        class="lucid-Axis"
+      >
+        <path
+          class="lucid-Axis-domain"
+          d="M0,0V0H640V0"
+        />
+        <g
+          transform="translate(35.55555555555556, 0)"
+        >
+          <line
+            class="lucid-Axis-tick"
+            x2="0"
+            y2="6"
+          />
+          <text
+            class="lucid-Axis-tick-text"
+            dy=".71em"
+            style="text-anchor:middle"
+            transform=""
+            x="0"
+            y="9"
+          >
+            12 PM
+          </text>
+        </g>
+        <g
+          transform="translate(88.88888888888889, 0)"
+        >
+          <line
+            class="lucid-Axis-tick"
+            x2="0"
+            y2="6"
+          />
+          <text
+            class="lucid-Axis-tick-text"
+            dy=".71em"
+            style="text-anchor:middle"
+            transform=""
+            x="0"
+            y="9"
+          >
+            06 PM
+          </text>
+        </g>
+        <g
+          transform="translate(142.22222222222223, 0)"
+        >
+          <line
+            class="lucid-Axis-tick"
+            x2="0"
+            y2="6"
+          />
+          <text
+            class="lucid-Axis-tick-text"
+            dy=".71em"
+            style="text-anchor:middle"
+            transform=""
+            x="0"
+            y="9"
+          >
+            Fri 02
+          </text>
+        </g>
+        <g
+          transform="translate(195.55555555555557, 0)"
+        >
+          <line
+            class="lucid-Axis-tick"
+            x2="0"
+            y2="6"
+          />
+          <text
+            class="lucid-Axis-tick-text"
+            dy=".71em"
+            style="text-anchor:middle"
+            transform=""
+            x="0"
+            y="9"
+          >
+            06 AM
+          </text>
+        </g>
+        <g
+          transform="translate(248.88888888888889, 0)"
+        >
+          <line
+            class="lucid-Axis-tick"
+            x2="0"
+            y2="6"
+          />
+          <text
+            class="lucid-Axis-tick-text"
+            dy=".71em"
+            style="text-anchor:middle"
+            transform=""
+            x="0"
+            y="9"
+          >
+            12 PM
+          </text>
+        </g>
+        <g
+          transform="translate(302.22222222222223, 0)"
+        >
+          <line
+            class="lucid-Axis-tick"
+            x2="0"
+            y2="6"
+          />
+          <text
+            class="lucid-Axis-tick-text"
+            dy=".71em"
+            style="text-anchor:middle"
+            transform=""
+            x="0"
+            y="9"
+          >
+            06 PM
+          </text>
+        </g>
+        <g
+          transform="translate(355.55555555555554, 0)"
+        >
+          <line
+            class="lucid-Axis-tick"
+            x2="0"
+            y2="6"
+          />
+          <text
+            class="lucid-Axis-tick-text"
+            dy=".71em"
+            style="text-anchor:middle"
+            transform=""
+            x="0"
+            y="9"
+          >
+            Sat 03
+          </text>
+        </g>
+        <g
+          transform="translate(408.88888888888886, 0)"
+        >
+          <line
+            class="lucid-Axis-tick"
+            x2="0"
+            y2="6"
+          />
+          <text
+            class="lucid-Axis-tick-text"
+            dy=".71em"
+            style="text-anchor:middle"
+            transform=""
+            x="0"
+            y="9"
+          >
+            06 AM
+          </text>
+        </g>
+        <g
+          transform="translate(462.22222222222223, 0)"
+        >
+          <line
+            class="lucid-Axis-tick"
+            x2="0"
+            y2="6"
+          />
+          <text
+            class="lucid-Axis-tick-text"
+            dy=".71em"
+            style="text-anchor:middle"
+            transform=""
+            x="0"
+            y="9"
+          >
+            12 PM
+          </text>
+        </g>
+        <g
+          transform="translate(515.5555555555555, 0)"
+        >
+          <line
+            class="lucid-Axis-tick"
+            x2="0"
+            y2="6"
+          />
+          <text
+            class="lucid-Axis-tick-text"
+            dy=".71em"
+            style="text-anchor:middle"
+            transform=""
+            x="0"
+            y="9"
+          >
+            06 PM
+          </text>
+        </g>
+        <g
+          transform="translate(568.8888888888889, 0)"
+        >
+          <line
+            class="lucid-Axis-tick"
+            x2="0"
+            y2="6"
+          />
+          <text
+            class="lucid-Axis-tick-text"
+            dy=".71em"
+            style="text-anchor:middle"
+            transform=""
+            x="0"
+            y="9"
+          >
+            Jan 04
+          </text>
+        </g>
+        <g
+          transform="translate(622.2222222222222, 0)"
+        >
+          <line
+            class="lucid-Axis-tick"
+            x2="0"
+            y2="6"
+          />
+          <text
+            class="lucid-Axis-tick-text"
+            dy=".71em"
+            style="text-anchor:middle"
+            transform=""
+            x="0"
+            y="9"
+          >
+            06 AM
+          </text>
+        </g>
+      </g>
+    </g>
+    <g
+      transform="translate(80, 10)"
+    >
+      <g
+        class="lucid-Axis"
+      >
+        <path
+          class="lucid-Axis-domain"
+          d="M-6,325H0V0H-6"
+        />
+        <g
+          transform="translate(0, 325)"
+        >
+          <line
+            class="lucid-Axis-tick"
+            x2="-6"
+            y2="0"
+          />
+          <text
+            class="lucid-Axis-tick-text"
+            dy=".32em"
+            style="text-anchor:end"
+            transform=""
+            x="-9"
+            y="0"
+          >
+            0.0
+          </text>
+        </g>
+        <g
+          transform="translate(0, 292.5)"
+        >
+          <line
+            class="lucid-Axis-tick"
+            x2="-6"
+            y2="0"
+          />
+          <text
+            class="lucid-Axis-tick-text"
+            dy=".32em"
+            style="text-anchor:end"
+            transform=""
+            x="-9"
+            y="0"
+          >
+            0.5
+          </text>
+        </g>
+        <g
+          transform="translate(0, 260)"
+        >
+          <line
+            class="lucid-Axis-tick"
+            x2="-6"
+            y2="0"
+          />
+          <text
+            class="lucid-Axis-tick-text"
+            dy=".32em"
+            style="text-anchor:end"
+            transform=""
+            x="-9"
+            y="0"
+          >
+            1.0
+          </text>
+        </g>
+        <g
+          transform="translate(0, 227.49999999999997)"
+        >
+          <line
+            class="lucid-Axis-tick"
+            x2="-6"
+            y2="0"
+          />
+          <text
+            class="lucid-Axis-tick-text"
+            dy=".32em"
+            style="text-anchor:end"
+            transform=""
+            x="-9"
+            y="0"
+          >
+            1.5
+          </text>
+        </g>
+        <g
+          transform="translate(0, 195)"
+        >
+          <line
+            class="lucid-Axis-tick"
+            x2="-6"
+            y2="0"
+          />
+          <text
+            class="lucid-Axis-tick-text"
+            dy=".32em"
+            style="text-anchor:end"
+            transform=""
+            x="-9"
+            y="0"
+          >
+            2.0
+          </text>
+        </g>
+        <g
+          transform="translate(0, 162.5)"
+        >
+          <line
+            class="lucid-Axis-tick"
+            x2="-6"
+            y2="0"
+          />
+          <text
+            class="lucid-Axis-tick-text"
+            dy=".32em"
+            style="text-anchor:end"
+            transform=""
+            x="-9"
+            y="0"
+          >
+            2.5
+          </text>
+        </g>
+        <g
+          transform="translate(0, 130)"
+        >
+          <line
+            class="lucid-Axis-tick"
+            x2="-6"
+            y2="0"
+          />
+          <text
+            class="lucid-Axis-tick-text"
+            dy=".32em"
+            style="text-anchor:end"
+            transform=""
+            x="-9"
+            y="0"
+          >
+            3.0
+          </text>
+        </g>
+        <g
+          transform="translate(0, 97.50000000000001)"
+        >
+          <line
+            class="lucid-Axis-tick"
+            x2="-6"
+            y2="0"
+          />
+          <text
+            class="lucid-Axis-tick-text"
+            dy=".32em"
+            style="text-anchor:end"
+            transform=""
+            x="-9"
+            y="0"
+          >
+            3.5
+          </text>
+        </g>
+        <g
+          transform="translate(0, 64.99999999999999)"
+        >
+          <line
+            class="lucid-Axis-tick"
+            x2="-6"
+            y2="0"
+          />
+          <text
+            class="lucid-Axis-tick-text"
+            dy=".32em"
+            style="text-anchor:end"
+            transform=""
+            x="-9"
+            y="0"
+          >
+            4.0
+          </text>
+        </g>
+        <g
+          transform="translate(0, 32.49999999999999)"
+        >
+          <line
+            class="lucid-Axis-tick"
+            x2="-6"
+            y2="0"
+          />
+          <text
+            class="lucid-Axis-tick-text"
+            dy=".32em"
+            style="text-anchor:end"
+            transform=""
+            x="-9"
+            y="0"
+          >
+            4.5
+          </text>
+        </g>
+        <g
+          transform="translate(0, 0)"
+        >
+          <line
+            class="lucid-Axis-tick"
+            x2="-6"
+            y2="0"
+          />
+          <text
+            class="lucid-Axis-tick-text"
+            dy=".32em"
+            style="text-anchor:end"
+            transform=""
+            x="-9"
+            y="0"
+          >
+            5.0
+          </text>
+        </g>
+      </g>
+    </g>
+    <g
+      transform="translate(1104, 10)"
+    >
+      <g
+        class="lucid-Axis"
+      >
+        <path
+          class="lucid-Axis-domain"
+          d="M6,325H0V0H6"
+        />
+      </g>
+    </g>
+    <g
+      transform="translate(80, 10)"
+    >
+      <g
+        class="lucid-Lines"
+      >
+        <g>
+          <path
+            class="lucid-Line lucid-Line-color-chart-3"
+            d="M0,260L213.33333333333331,325L426.66666666666663,130L640,0L640,0L426.66666666666663,130L213.33333333333331,325L0,260Z"
+          />
+        </g>
+      </g>
+    </g>
+    <g
+      transform="translate(80, 10)"
+    >
+      <g
+        class="lucid-Points"
+      >
+        <path
+          class="lucid-Point lucid-Point-has-stroke lucid-Point-color-chart-3"
+          d="M6,12 C2.686,12 0,9.314 0,6 C0,2.686 2.686,0 6,0 C9.314,-0 12,2.686 12,6 C12,9.314 9.314,12 6,12 z"
+          transform="translate(-6, 254) scale(1)"
+        />
+        <path
+          class="lucid-Point lucid-Point-has-stroke lucid-Point-color-chart-3"
+          d="M6,12 C2.686,12 0,9.314 0,6 C0,2.686 2.686,0 6,0 C9.314,-0 12,2.686 12,6 C12,9.314 9.314,12 6,12 z"
+          transform="translate(207.33333333333331, 319) scale(1)"
+        />
+        <path
+          class="lucid-Point lucid-Point-has-stroke lucid-Point-color-chart-3"
+          d="M6,12 C2.686,12 0,9.314 0,6 C0,2.686 2.686,0 6,0 C9.314,-0 12,2.686 12,6 C12,9.314 9.314,12 6,12 z"
+          transform="translate(420.66666666666663, 124) scale(1)"
+        />
+        <path
+          class="lucid-Point lucid-Point-has-stroke lucid-Point-color-chart-3"
+          d="M6,12 C2.686,12 0,9.314 0,6 C0,2.686 2.686,0 6,0 C9.314,-0 12,2.686 12,6 C12,9.314 9.314,12 6,12 z"
+          transform="translate(634, -6) scale(1)"
+        />
+      </g>
+    </g>
+    <g
+      transform="translate(80, 10)"
+    >
+      <g
+        class="lucid-Lines"
+      />
+    </g>
+    <g
+      transform="translate(80, 10)"
+    >
+      <g
+        class="lucid-Points"
+      />
+    </g>
+    <g
+      transform="translate(80, 10)"
+    >
+      <rect
+        class="lucid-LineChart-invisible"
+        height="325"
+        width="640"
+      />
+    </g>
+  </svg>
+</div>
+`;
+
 exports[`LineChart [common] example testing should match snapshot(s) for ColorOffset 1`] = `
 <div
   style="padding-top:5rem"
@@ -1959,560 +2513,6 @@ exports[`LineChart [common] example testing should match snapshot(s) for ColorOf
 </div>
 `;
 
-exports[`LineChart [common] example testing should match snapshot(s) for Default 1`] = `
-<div
-  style="padding-top:4rem"
->
-  <svg
-    class="lucid-LineChart"
-    height="400"
-    width="800"
-  >
-    <g
-      transform="translate(80, 10)"
-    />
-    <g
-      transform="translate(80, 335)"
-    >
-      <g
-        class="lucid-Axis"
-      >
-        <path
-          class="lucid-Axis-domain"
-          d="M0,0V0H640V0"
-        />
-        <g
-          transform="translate(35.55555555555556, 0)"
-        >
-          <line
-            class="lucid-Axis-tick"
-            x2="0"
-            y2="6"
-          />
-          <text
-            class="lucid-Axis-tick-text"
-            dy=".71em"
-            style="text-anchor:middle"
-            transform=""
-            x="0"
-            y="9"
-          >
-            12 PM
-          </text>
-        </g>
-        <g
-          transform="translate(88.88888888888889, 0)"
-        >
-          <line
-            class="lucid-Axis-tick"
-            x2="0"
-            y2="6"
-          />
-          <text
-            class="lucid-Axis-tick-text"
-            dy=".71em"
-            style="text-anchor:middle"
-            transform=""
-            x="0"
-            y="9"
-          >
-            06 PM
-          </text>
-        </g>
-        <g
-          transform="translate(142.22222222222223, 0)"
-        >
-          <line
-            class="lucid-Axis-tick"
-            x2="0"
-            y2="6"
-          />
-          <text
-            class="lucid-Axis-tick-text"
-            dy=".71em"
-            style="text-anchor:middle"
-            transform=""
-            x="0"
-            y="9"
-          >
-            Fri 02
-          </text>
-        </g>
-        <g
-          transform="translate(195.55555555555557, 0)"
-        >
-          <line
-            class="lucid-Axis-tick"
-            x2="0"
-            y2="6"
-          />
-          <text
-            class="lucid-Axis-tick-text"
-            dy=".71em"
-            style="text-anchor:middle"
-            transform=""
-            x="0"
-            y="9"
-          >
-            06 AM
-          </text>
-        </g>
-        <g
-          transform="translate(248.88888888888889, 0)"
-        >
-          <line
-            class="lucid-Axis-tick"
-            x2="0"
-            y2="6"
-          />
-          <text
-            class="lucid-Axis-tick-text"
-            dy=".71em"
-            style="text-anchor:middle"
-            transform=""
-            x="0"
-            y="9"
-          >
-            12 PM
-          </text>
-        </g>
-        <g
-          transform="translate(302.22222222222223, 0)"
-        >
-          <line
-            class="lucid-Axis-tick"
-            x2="0"
-            y2="6"
-          />
-          <text
-            class="lucid-Axis-tick-text"
-            dy=".71em"
-            style="text-anchor:middle"
-            transform=""
-            x="0"
-            y="9"
-          >
-            06 PM
-          </text>
-        </g>
-        <g
-          transform="translate(355.55555555555554, 0)"
-        >
-          <line
-            class="lucid-Axis-tick"
-            x2="0"
-            y2="6"
-          />
-          <text
-            class="lucid-Axis-tick-text"
-            dy=".71em"
-            style="text-anchor:middle"
-            transform=""
-            x="0"
-            y="9"
-          >
-            Sat 03
-          </text>
-        </g>
-        <g
-          transform="translate(408.88888888888886, 0)"
-        >
-          <line
-            class="lucid-Axis-tick"
-            x2="0"
-            y2="6"
-          />
-          <text
-            class="lucid-Axis-tick-text"
-            dy=".71em"
-            style="text-anchor:middle"
-            transform=""
-            x="0"
-            y="9"
-          >
-            06 AM
-          </text>
-        </g>
-        <g
-          transform="translate(462.22222222222223, 0)"
-        >
-          <line
-            class="lucid-Axis-tick"
-            x2="0"
-            y2="6"
-          />
-          <text
-            class="lucid-Axis-tick-text"
-            dy=".71em"
-            style="text-anchor:middle"
-            transform=""
-            x="0"
-            y="9"
-          >
-            12 PM
-          </text>
-        </g>
-        <g
-          transform="translate(515.5555555555555, 0)"
-        >
-          <line
-            class="lucid-Axis-tick"
-            x2="0"
-            y2="6"
-          />
-          <text
-            class="lucid-Axis-tick-text"
-            dy=".71em"
-            style="text-anchor:middle"
-            transform=""
-            x="0"
-            y="9"
-          >
-            06 PM
-          </text>
-        </g>
-        <g
-          transform="translate(568.8888888888889, 0)"
-        >
-          <line
-            class="lucid-Axis-tick"
-            x2="0"
-            y2="6"
-          />
-          <text
-            class="lucid-Axis-tick-text"
-            dy=".71em"
-            style="text-anchor:middle"
-            transform=""
-            x="0"
-            y="9"
-          >
-            Jan 04
-          </text>
-        </g>
-        <g
-          transform="translate(622.2222222222222, 0)"
-        >
-          <line
-            class="lucid-Axis-tick"
-            x2="0"
-            y2="6"
-          />
-          <text
-            class="lucid-Axis-tick-text"
-            dy=".71em"
-            style="text-anchor:middle"
-            transform=""
-            x="0"
-            y="9"
-          >
-            06 AM
-          </text>
-        </g>
-      </g>
-    </g>
-    <g
-      transform="translate(80, 10)"
-    >
-      <g
-        class="lucid-Axis"
-      >
-        <path
-          class="lucid-Axis-domain"
-          d="M-6,325H0V0H-6"
-        />
-        <g
-          transform="translate(0, 325)"
-        >
-          <line
-            class="lucid-Axis-tick"
-            x2="-6"
-            y2="0"
-          />
-          <text
-            class="lucid-Axis-tick-text"
-            dy=".32em"
-            style="text-anchor:end"
-            transform=""
-            x="-9"
-            y="0"
-          >
-            0.0
-          </text>
-        </g>
-        <g
-          transform="translate(0, 292.5)"
-        >
-          <line
-            class="lucid-Axis-tick"
-            x2="-6"
-            y2="0"
-          />
-          <text
-            class="lucid-Axis-tick-text"
-            dy=".32em"
-            style="text-anchor:end"
-            transform=""
-            x="-9"
-            y="0"
-          >
-            0.5
-          </text>
-        </g>
-        <g
-          transform="translate(0, 260)"
-        >
-          <line
-            class="lucid-Axis-tick"
-            x2="-6"
-            y2="0"
-          />
-          <text
-            class="lucid-Axis-tick-text"
-            dy=".32em"
-            style="text-anchor:end"
-            transform=""
-            x="-9"
-            y="0"
-          >
-            1.0
-          </text>
-        </g>
-        <g
-          transform="translate(0, 227.49999999999997)"
-        >
-          <line
-            class="lucid-Axis-tick"
-            x2="-6"
-            y2="0"
-          />
-          <text
-            class="lucid-Axis-tick-text"
-            dy=".32em"
-            style="text-anchor:end"
-            transform=""
-            x="-9"
-            y="0"
-          >
-            1.5
-          </text>
-        </g>
-        <g
-          transform="translate(0, 195)"
-        >
-          <line
-            class="lucid-Axis-tick"
-            x2="-6"
-            y2="0"
-          />
-          <text
-            class="lucid-Axis-tick-text"
-            dy=".32em"
-            style="text-anchor:end"
-            transform=""
-            x="-9"
-            y="0"
-          >
-            2.0
-          </text>
-        </g>
-        <g
-          transform="translate(0, 162.5)"
-        >
-          <line
-            class="lucid-Axis-tick"
-            x2="-6"
-            y2="0"
-          />
-          <text
-            class="lucid-Axis-tick-text"
-            dy=".32em"
-            style="text-anchor:end"
-            transform=""
-            x="-9"
-            y="0"
-          >
-            2.5
-          </text>
-        </g>
-        <g
-          transform="translate(0, 130)"
-        >
-          <line
-            class="lucid-Axis-tick"
-            x2="-6"
-            y2="0"
-          />
-          <text
-            class="lucid-Axis-tick-text"
-            dy=".32em"
-            style="text-anchor:end"
-            transform=""
-            x="-9"
-            y="0"
-          >
-            3.0
-          </text>
-        </g>
-        <g
-          transform="translate(0, 97.50000000000001)"
-        >
-          <line
-            class="lucid-Axis-tick"
-            x2="-6"
-            y2="0"
-          />
-          <text
-            class="lucid-Axis-tick-text"
-            dy=".32em"
-            style="text-anchor:end"
-            transform=""
-            x="-9"
-            y="0"
-          >
-            3.5
-          </text>
-        </g>
-        <g
-          transform="translate(0, 64.99999999999999)"
-        >
-          <line
-            class="lucid-Axis-tick"
-            x2="-6"
-            y2="0"
-          />
-          <text
-            class="lucid-Axis-tick-text"
-            dy=".32em"
-            style="text-anchor:end"
-            transform=""
-            x="-9"
-            y="0"
-          >
-            4.0
-          </text>
-        </g>
-        <g
-          transform="translate(0, 32.49999999999999)"
-        >
-          <line
-            class="lucid-Axis-tick"
-            x2="-6"
-            y2="0"
-          />
-          <text
-            class="lucid-Axis-tick-text"
-            dy=".32em"
-            style="text-anchor:end"
-            transform=""
-            x="-9"
-            y="0"
-          >
-            4.5
-          </text>
-        </g>
-        <g
-          transform="translate(0, 0)"
-        >
-          <line
-            class="lucid-Axis-tick"
-            x2="-6"
-            y2="0"
-          />
-          <text
-            class="lucid-Axis-tick-text"
-            dy=".32em"
-            style="text-anchor:end"
-            transform=""
-            x="-9"
-            y="0"
-          >
-            5.0
-          </text>
-        </g>
-      </g>
-    </g>
-    <g
-      transform="translate(1104, 10)"
-    >
-      <g
-        class="lucid-Axis"
-      >
-        <path
-          class="lucid-Axis-domain"
-          d="M6,325H0V0H6"
-        />
-      </g>
-    </g>
-    <g
-      transform="translate(80, 10)"
-    >
-      <g
-        class="lucid-Lines"
-      >
-        <g>
-          <path
-            class="lucid-Line lucid-Line-color-chart-3"
-            d="M0,260L213.33333333333331,325L426.66666666666663,130L640,0L640,0L426.66666666666663,130L213.33333333333331,325L0,260Z"
-          />
-        </g>
-      </g>
-    </g>
-    <g
-      transform="translate(80, 10)"
-    >
-      <g
-        class="lucid-Points"
-      >
-        <path
-          class="lucid-Point lucid-Point-has-stroke lucid-Point-color-chart-3"
-          d="M6,12 C2.686,12 0,9.314 0,6 C0,2.686 2.686,0 6,0 C9.314,-0 12,2.686 12,6 C12,9.314 9.314,12 6,12 z"
-          transform="translate(-6, 254) scale(1)"
-        />
-        <path
-          class="lucid-Point lucid-Point-has-stroke lucid-Point-color-chart-3"
-          d="M6,12 C2.686,12 0,9.314 0,6 C0,2.686 2.686,0 6,0 C9.314,-0 12,2.686 12,6 C12,9.314 9.314,12 6,12 z"
-          transform="translate(207.33333333333331, 319) scale(1)"
-        />
-        <path
-          class="lucid-Point lucid-Point-has-stroke lucid-Point-color-chart-3"
-          d="M6,12 C2.686,12 0,9.314 0,6 C0,2.686 2.686,0 6,0 C9.314,-0 12,2.686 12,6 C12,9.314 9.314,12 6,12 z"
-          transform="translate(420.66666666666663, 124) scale(1)"
-        />
-        <path
-          class="lucid-Point lucid-Point-has-stroke lucid-Point-color-chart-3"
-          d="M6,12 C2.686,12 0,9.314 0,6 C0,2.686 2.686,0 6,0 C9.314,-0 12,2.686 12,6 C12,9.314 9.314,12 6,12 z"
-          transform="translate(634, -6) scale(1)"
-        />
-      </g>
-    </g>
-    <g
-      transform="translate(80, 10)"
-    >
-      <g
-        class="lucid-Lines"
-      />
-    </g>
-    <g
-      transform="translate(80, 10)"
-    >
-      <g
-        class="lucid-Points"
-      />
-    </g>
-    <g
-      transform="translate(80, 10)"
-    >
-      <rect
-        class="lucid-LineChart-invisible"
-        height="325"
-        width="640"
-      />
-    </g>
-  </svg>
-</div>
-`;
-
 exports[`LineChart [common] example testing should match snapshot(s) for DualAxis 1`] = `
 <div
   style="padding-top:5rem"
@@ -3181,7 +3181,6 @@ exports[`LineChart [common] example testing should match snapshot(s) for DualAxi
 exports[`LineChart [common] example testing should match snapshot(s) for Empty 1`] = `
 <div
   class="lucid-OverlayWrapper lucid-EmptyStateWrapper"
-  title="You have no data."
 >
   <svg
     class="lucid-LineChart"
@@ -3845,7 +3844,6 @@ exports[`LineChart [common] example testing should match snapshot(s) for FineGra
 exports[`LineChart [common] example testing should match snapshot(s) for Loading 1`] = `
 <div
   class="lucid-OverlayWrapper lucid-LoadingIndicator lucid-EmptyStateWrapper"
-  title="You have no data."
 >
   <svg
     class="lucid-LineChart"
@@ -5670,7 +5668,6 @@ exports[`LineChart [common] example testing should match snapshot(s) for Respons
   >
     <div
       class="lucid-OverlayWrapper lucid-EmptyStateWrapper"
-      title="You have no data."
     >
       <svg
         class="lucid-LineChart"

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Checkbox [common] example testing should match snapshot(s) for Default 1`] = `
+exports[`Checkbox [common] example testing should match snapshot(s) for Basic 1`] = `
 <div
   class="lucid-Checkbox"
   title="Default"

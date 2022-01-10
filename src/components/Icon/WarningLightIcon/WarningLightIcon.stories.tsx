@@ -13,8 +13,7 @@ export default {
 	},
 };
 
-/* Default */
-export const Default = () => {
+/* Basic */
+export const Basic = () => {
 	return <WarningLightIcon />;
 };
-Default.storyName = 'Default';

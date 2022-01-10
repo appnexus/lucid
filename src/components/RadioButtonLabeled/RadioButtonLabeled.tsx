@@ -1,12 +1,9 @@
 import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
+
 import { lucidClassNames } from '../../util/style-helpers';
-import {
-	StandardProps,
-	findTypes,
-	omitProps,
-} from '../../util/component-types';
+import { StandardProps, findTypes } from '../../util/component-types';
 import RadioButton, {
 	IRadioButtonProps,
 	defaultProps as radioButtonDefaultProps,
@@ -31,6 +28,8 @@ RadioButtonLabeledLabel.peek = {
 };
 RadioButtonLabeledLabel.propName = 'Label';
 
+/** TODO: Remove nonPassThroughs when the component is converted to a functional component */
+const nonPassThroughs = ['className', 'style', 'Label'];
 export interface IRadioButtonLabeledProps extends IRadioButtonProps {
 	/** Child element whose children are used to identify the purpose of this
 		radio button to the user. */
@@ -70,12 +69,7 @@ export const RadioButtonLabeled = (
 				isDisabled={isDisabled}
 				isSelected={isSelected}
 				onSelect={onSelect}
-				{...omitProps(
-					passThroughs,
-					undefined,
-					_.keys(RadioButtonLabeled.propTypes),
-					false
-				)}
+				{..._.omit(passThroughs as any, nonPassThroughs)}
 			/>
 			<div {...labelChildProps} className={cx('&-label')} />
 		</label>

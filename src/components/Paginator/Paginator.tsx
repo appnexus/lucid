@@ -201,6 +201,8 @@ const Paginator: FC<IPaginatorProps> & ILucidComponent = (
 		);
 	};
 
+	const isTextFieldDisabled = isDisabled || totalPages === 1;
+
 	return (
 		<div style={style} className={cx('&', className)}>
 			{showTotalObjects && _.isNumber(totalCount) && (
@@ -245,7 +247,7 @@ const Paginator: FC<IPaginatorProps> & ILucidComponent = (
 				{...textFieldProps}
 				onBlur={handleTextFieldChange}
 				onSubmit={handleTextFieldChange}
-				isDisabled={isDisabled}
+				isDisabled={isTextFieldDisabled}
 				value={selectedPageIndex + 1}
 			/>
 			{!_.isNil(totalPages) && <span>of {totalPages.toLocaleString()}</span>}

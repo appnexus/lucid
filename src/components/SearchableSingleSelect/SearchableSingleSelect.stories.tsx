@@ -53,8 +53,8 @@ const Template: any = (args) => {
 //👇 Each story then reuses that template
 
 /** Default */
-export const Default = Template.bind({});
-Default.args = {
+export const Basic = Template.bind({});
+Basic.args = {
 	SearchField: { placeholder: 'Search State' },
 	children: addKeys([
 		<Option>Alabama</Option>,
@@ -125,7 +125,7 @@ export const Props = (args) => {
 	);
 };
 Props.args = {
-	...Default.args,
+	...Basic.args,
 	SearchField: { placeholder: '' },
 };
 Props.parameters = {
@@ -302,7 +302,7 @@ GroupedOptions.parameters = {
 /** Selected Option */
 export const SelectedOption = Template.bind({});
 SelectedOption.args = {
-	...Default.args,
+	...Basic.args,
 	SearchField: {
 		placeholder: 'Search Color',
 	},
@@ -374,7 +374,7 @@ const optionFilter = (
 
 export const FormattedOptions = Template.bind({});
 FormattedOptions.args = {
-	...Default.args,
+	...Basic.args,
 	SearchField: {
 		placeholder: 'Search Options',
 	},

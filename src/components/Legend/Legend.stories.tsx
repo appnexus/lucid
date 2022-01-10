@@ -18,8 +18,8 @@ export default {
 	},
 } as Meta;
 
-/* Default */
-export const Default: Story<ILegendProps> = (args) => {
+/* Basic */
+export const Basic: Story<ILegendProps> = (args) => {
 	const { Item } = Legend;
 
 	return (
@@ -155,4 +155,3 @@ export const Default: Story<ILegendProps> = (args) => {
 		</div>
 	);
 };
-Default.storyName = 'Default';

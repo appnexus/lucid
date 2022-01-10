@@ -1,7 +1,7 @@
-import { map } from 'lodash';
 import React from 'react';
-import { Meta } from '@storybook/react';
-import ButtonGroup, { ButtonGroupDumb } from './ButtonGroup';
+import { Meta, Story } from '@storybook/react';
+
+import ButtonGroup, { ButtonGroupDumb, IButtonGroupProps } from './ButtonGroup';
 
 export default {
 	title: 'Controls/ButtonGroup',
@@ -18,10 +18,10 @@ export default {
 } as Meta;
 
 /** Default */
-export const Default = () => {
+export const Basic: Story<IButtonGroupProps> = (args) => {
 	const buttonStyle = { width: '100px' };
 	return (
-		<ButtonGroup selectedIndices={[1, 2]}>
+		<ButtonGroup {...args} selectedIndices={[1, 2]}>
 			<ButtonGroup.Button style={buttonStyle}>Smol</ButtonGroup.Button>
 			<ButtonGroup.Button style={buttonStyle}>Lonnnnnnnng</ButtonGroup.Button>
 			<ButtonGroup.Button style={buttonStyle}>Medium</ButtonGroup.Button>
@@ -30,9 +30,9 @@ export const Default = () => {
 };
 
 /** Stateful */
-export const Stateful = () => {
+export const Stateful: Story<IButtonGroupProps> = (args) => {
 	return (
-		<ButtonGroup>
+		<ButtonGroup {...args}>
 			<ButtonGroup.Button>Zero</ButtonGroup.Button>
 			<ButtonGroup.Button>One</ButtonGroup.Button>
 			<ButtonGroup.Button>Two</ButtonGroup.Button>
@@ -42,9 +42,9 @@ export const Stateful = () => {
 };
 
 /** Stateless */
-export const Stateless = () => {
+export const Stateless: Story<IButtonGroupProps> = (args) => {
 	return (
-		<ButtonGroup selectedIndices={[7, 8]}>
+		<ButtonGroup {...args} selectedIndices={[7, 8]}>
 			<ButtonGroup.Button>Zero</ButtonGroup.Button>
 			<ButtonGroup.Button>One</ButtonGroup.Button>
 			<ButtonGroup.Button>Two</ButtonGroup.Button>
@@ -60,16 +60,28 @@ export const Stateless = () => {
 };
 
 /** Disabled */
-export const Disabled = () => {
+export const Disabled: Story<IButtonGroupProps> = (args) => {
 	const buttonStyle = { width: '100px' };
 	return (
-		<ButtonGroup>
+		<ButtonGroup {...args}>
 			<ButtonGroup.Button style={buttonStyle}>Zero</ButtonGroup.Button>
 			<ButtonGroup.Button isDisabled={true} style={buttonStyle}>
 				One
 			</ButtonGroup.Button>
 			<ButtonGroup.Button style={buttonStyle}>Two</ButtonGroup.Button>
 			<ButtonGroup.Button style={buttonStyle}>Three</ButtonGroup.Button>
+		</ButtonGroup>
+	);
+};
+
+/** On Click */
+export const OnClick: Story<IButtonGroupProps> = (args) => {
+	return (
+		<ButtonGroup {...args}>
+			<ButtonGroup.Button onClick={() => alert('zero')}>
+				Zero
+			</ButtonGroup.Button>
+			<ButtonGroup.Button onClick={() => alert('one')}>One</ButtonGroup.Button>
 		</ButtonGroup>
 	);
 };

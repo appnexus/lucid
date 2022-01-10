@@ -14,8 +14,8 @@ export default {
 	},
 };
 
-/* Default */
-export const Default = () => {
+/* Basic */
+export const Basic = () => {
 	class Component extends React.Component {
 		render() {
 			return (
@@ -290,7 +290,6 @@ export const Default = () => {
 	}
 	return <Component />;
 };
-Default.storyName = 'Default';
 
 /* 02 With Custom Breakpoints */
 export const WithCustomBreakpoints = () => {

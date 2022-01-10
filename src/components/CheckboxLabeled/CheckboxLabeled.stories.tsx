@@ -104,3 +104,6 @@ export const LabelAsChild: Story<ICheckboxLabeledProps> = (args) => {
 		</CheckboxLabeled>
 	);
 };
+LabelAsChild.args = {
+	title: 'Label as Child',
+};

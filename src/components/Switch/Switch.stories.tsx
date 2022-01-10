@@ -44,7 +44,6 @@ export const States = () => {
 
 	return <Component />;
 };
-States.storyName = 'States';
 
 /* Interactive */
 export const Interactive = () => {
@@ -108,7 +107,6 @@ export const Interactive = () => {
 
 	return <Component />;
 };
-Interactive.storyName = 'Interactive';
 
 /* Include Exclude */
 export const IncludeExclude = () => {
