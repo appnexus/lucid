@@ -124,4 +124,3 @@ export const Interactive = () => {
 
 	return <Component />;
 };
-Interactive.storyName = 'Interactive';

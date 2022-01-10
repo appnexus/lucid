@@ -40,7 +40,6 @@ export const Basic = () => {
 
 	return <Component />;
 };
-Basic.storyName = 'Basic';
 
 /* Disabled */
 export const Disabled = () => {
@@ -65,7 +64,6 @@ export const Disabled = () => {
 
 	return <Component />;
 };
-Disabled.storyName = 'Disabled';
 
 /* Up */
 export const Up = () => {
@@ -86,7 +84,6 @@ export const Up = () => {
 
 	return <Component />;
 };
-Up.storyName = 'Up';
 
 /* Sizes */
 export const Sizes = () => {
@@ -118,4 +115,3 @@ export const Sizes = () => {
 
 	return <Component />;
 };
-Sizes.storyName = 'Sizes';

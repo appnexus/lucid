@@ -52,7 +52,6 @@ export const DefaultSideBar = () => {
 
 	return <Component />;
 };
-DefaultSideBar.storyName = 'DefaultSideBar';
 
 /* Disable Resize */
 export const DisableResize = () => {

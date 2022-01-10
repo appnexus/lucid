@@ -14,8 +14,8 @@ export default {
 	},
 };
 
-/* Default */
-export const Default = () => {
+/* Basic */
+export const Basic = () => {
 	const Component = createClass({
 		render() {
 			return <TextFieldValidated Error='Nope, not even close!' />;
@@ -24,7 +24,6 @@ export const Default = () => {
 
 	return <Component />;
 };
-Default.storyName = 'Default';
 
 /* Debounced */
 export const Debounced = () => {
@@ -56,7 +55,6 @@ export const Debounced = () => {
 
 	return <Component />;
 };
-Debounced.storyName = 'Debounced';
 
 /* Error Types */
 export const ErrorTypes = () => {

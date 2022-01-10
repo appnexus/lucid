@@ -16,8 +16,8 @@ export default {
 	},
 } as Meta;
 
-/* Default */
-export const Default: Story<ILineProps> = (args) => {
+/* Basic */
+export const Basic: Story<ILineProps> = (args) => {
 	return (
 		<div>
 			<svg width={200} height={120}>
@@ -77,4 +77,3 @@ export const Default: Story<ILineProps> = (args) => {
 		</div>
 	);
 };
-Default.storyName = 'Default';

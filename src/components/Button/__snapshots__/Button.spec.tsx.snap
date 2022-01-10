@@ -1547,7 +1547,7 @@ exports[`Button [common] example testing should match snapshot(s) for AllTypes 1
 </div>
 `;
 
-exports[`Button [common] example testing should match snapshot(s) for Default 1`] = `
+exports[`Button [common] example testing should match snapshot(s) for Basic 1`] = `
 <button
   class="lucid-Button"
   type="button"

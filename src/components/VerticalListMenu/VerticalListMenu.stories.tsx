@@ -33,8 +33,8 @@ const Template: any = (args) => {
 //👇 Each story then reuses that template
 
 /**Default */
-export const Default = Template.bind({});
-Default.args = {
+export const Basic = Template.bind({});
+Basic.args = {
 	children: addKeys([
 		<VerticalListMenu.Item>Level one</VerticalListMenu.Item>,
 		<VerticalListMenu.Item>Level one</VerticalListMenu.Item>,

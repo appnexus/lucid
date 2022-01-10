@@ -40,7 +40,6 @@ export const Stateful: Story<IRadioGroupProps> = (args) => {
 		</RadioGroup>
 	);
 };
-Stateful.storyName = 'Stateful';
 
 /* Nested Select */
 export const NestedSelect: Story<IRadioGroupProps> = (args) => {
@@ -98,8 +97,6 @@ export const NestedSelect: Story<IRadioGroupProps> = (args) => {
 		</RadioGroup>
 	);
 
-	// begin-hide-from-docs
-	const notes = `You can nest items in the \`RadioGroup\` for sub-selections. Please work with a designer to style and define states for sub-selections.`;
 	// end-hide-from-docs
 };
 NestedSelect.storyName = 'Nested Select';
@@ -207,4 +204,3 @@ export const DefaultProps: Story<IRadioGroupProps> = (args) => {
 		</RadioGroup>
 	);
 };
-DefaultProps.storyName = 'Default Props';

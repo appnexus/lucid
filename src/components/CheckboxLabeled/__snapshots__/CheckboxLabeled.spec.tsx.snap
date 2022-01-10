@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CheckboxLabeled [common] example testing should match snapshot(s) for Default 1`] = `
+exports[`CheckboxLabeled [common] example testing should match snapshot(s) for Basic 1`] = `
 <label
   class="lucid-CheckboxLabeled"
 >

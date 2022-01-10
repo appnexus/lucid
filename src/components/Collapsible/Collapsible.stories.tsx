@@ -59,7 +59,6 @@ export const ToggleExpand: Story<ICollapsibleProps> = (args) => {
 		</section>
 	);
 };
-ToggleExpand.storyName = 'Toggle Expand';
 
 /* Not Animated */
 export const NotAnimated: Story<ICollapsibleProps> = (args) => {
@@ -104,7 +103,6 @@ export const NotAnimated: Story<ICollapsibleProps> = (args) => {
 		</section>
 	);
 };
-NotAnimated.storyName = 'Not Animated';
 
 /* Unmount Children On Collapse */
 export const UnmountChildrenOnCollapse: Story<ICollapsibleProps> = (args) => {
@@ -153,7 +151,6 @@ export const UnmountChildrenOnCollapse: Story<ICollapsibleProps> = (args) => {
 		</section>
 	);
 };
-UnmountChildrenOnCollapse.storyName = 'Unmount Children On Collapse';
 
 /* Render Children On Collapse */
 export const RenderChildrenOnCollapse: Story<ICollapsibleProps> = (args) => {
@@ -205,7 +202,6 @@ export const RenderChildrenOnCollapse: Story<ICollapsibleProps> = (args) => {
 		</section>
 	);
 };
-RenderChildrenOnCollapse.storyName = 'Render Children On Collapse';
 
 /* Toggle With On Rest Callback */
 export const ToggleWithOnRestCallback: Story<ICollapsibleProps> = (args) => {

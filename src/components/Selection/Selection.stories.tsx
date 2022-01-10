@@ -115,7 +115,6 @@ export const Kinds: Story<ISelectionProps> = (args) => {
 		</Resizer>
 	);
 };
-Kinds.storyName = 'Kinds';
 
 /* Nested */
 export const Nested: Story<ISelectionProps> = (args) => {
@@ -331,7 +330,6 @@ export const Nested: Story<ISelectionProps> = (args) => {
 		</Resizer>
 	);
 };
-Nested.storyName = 'Nested';
 
 /* Interactive */
 export const Interactive: Story<ISelectionProps> = (args) => {
@@ -425,4 +423,3 @@ export const Interactive: Story<ISelectionProps> = (args) => {
 		</Resizer>
 	);
 };
-Interactive.storyName = 'Interactive';

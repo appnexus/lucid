@@ -1,5 +1,50 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`SearchableSelect [common] example testing should match snapshot(s) for Basic 1`] = `
+<section
+  style="min-height:120px"
+>
+  <div
+    class="lucid-SearchableSelect"
+  >
+    <div
+      class="lucid-DropMenu lucid-DropMenu-base"
+    >
+      <span
+        class="lucid-ContextMenu"
+      >
+        <div
+          class="lucid-DropMenu-Control"
+          tabindex="0"
+        >
+          <div
+            class="lucid-SearchableSelect-Control"
+            tabindex="0"
+          >
+            <span
+              class="lucid-SearchableSelect-Control-content"
+            >
+              Select State
+            </span>
+            <svg
+              class="lucid-Icon lucid-Icon-color-primary lucid-ChevronIcon lucid-ChevronIcon-is-down"
+              height="12"
+              preserveAspectRatio="xMidYMid meet"
+              viewBox="0 0 16 16"
+              width="12"
+            >
+              <path
+                d="M.5 4.5l7.5 7 7.5-7"
+              />
+            </svg>
+          </div>
+        </div>
+      </span>
+    </div>
+  </div>
+</section>
+`;
+
 exports[`SearchableSelect [common] example testing should match snapshot(s) for CustomSearchPlaceholder 1`] = `
 <section
   style="min-height:120px"
@@ -25,51 +70,6 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
               class="lucid-SearchableSelect-Control-content"
             >
               Select Color
-            </span>
-            <svg
-              class="lucid-Icon lucid-Icon-color-primary lucid-ChevronIcon lucid-ChevronIcon-is-down"
-              height="12"
-              preserveAspectRatio="xMidYMid meet"
-              viewBox="0 0 16 16"
-              width="12"
-            >
-              <path
-                d="M.5 4.5l7.5 7 7.5-7"
-              />
-            </svg>
-          </div>
-        </div>
-      </span>
-    </div>
-  </div>
-</section>
-`;
-
-exports[`SearchableSelect [common] example testing should match snapshot(s) for Default 1`] = `
-<section
-  style="min-height:120px"
->
-  <div
-    class="lucid-SearchableSelect"
-  >
-    <div
-      class="lucid-DropMenu lucid-DropMenu-base"
-    >
-      <span
-        class="lucid-ContextMenu"
-      >
-        <div
-          class="lucid-DropMenu-Control"
-          tabindex="0"
-        >
-          <div
-            class="lucid-SearchableSelect-Control"
-            tabindex="0"
-          >
-            <span
-              class="lucid-SearchableSelect-Control-content"
-            >
-              Select State
             </span>
             <svg
               class="lucid-Icon lucid-Icon-color-primary lucid-ChevronIcon lucid-ChevronIcon-is-down"

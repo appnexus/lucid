@@ -15,8 +15,8 @@ export default {
 	},
 };
 
-/* Default */
-export const Default = () => {
+/* Basic */
+export const Basic = () => {
 	const style = {
 		marginBottom: '10px',
 		marginTop: '10px',
@@ -49,7 +49,6 @@ export const Default = () => {
 	}
 	return <Component />;
 };
-Default.storyName = 'Default';
 
 /* Kinds */
 export const Kinds = () => {
@@ -74,7 +73,6 @@ export const Kinds = () => {
 
 	return <Component />;
 };
-Kinds.storyName = 'Kinds';
 
 /* With Title */
 export const WithTitle = () => {
@@ -90,4 +88,3 @@ export const WithTitle = () => {
 
 	return <Component />;
 };
-WithTitle.storyName = 'WithTitle';

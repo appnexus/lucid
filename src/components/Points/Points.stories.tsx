@@ -17,8 +17,8 @@ export default {
 	},
 };
 
-/* Default */
-export const Default = () => {
+/* Basic */
+export const Basic = () => {
 	/* eslint-disable comma-spacing */
 
 	const width = 1000;
@@ -78,7 +78,6 @@ export const Default = () => {
 
 	return <Component />;
 };
-Default.storyName = 'Default';
 
 /* Custom Colors */
 export const CustomColors = () => {

@@ -54,7 +54,7 @@ exports[`SearchableSingleSelect [common] example testing should match snapshot(s
 </section>
 `;
 
-exports[`SearchableSingleSelect [common] example testing should match snapshot(s) for Default 1`] = `
+exports[`SearchableSingleSelect [common] example testing should match snapshot(s) for Basic 1`] = `
 <section>
   <div
     class="lucid-SearchableSingleSelect"

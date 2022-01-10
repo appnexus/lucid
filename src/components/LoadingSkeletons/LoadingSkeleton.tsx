@@ -1,4 +1,4 @@
-import React, { FunctionComponent } from 'react';
+import React, { CSSProperties, FunctionComponent } from 'react';
 import ReactPlaceholder from 'react-placeholder';
 import CSS from 'csstype';
 import _ from 'lodash';
@@ -25,7 +25,7 @@ export interface ILoadingSkeletonProps extends IStandardSkeleton {
 	/** Displays LoadingSkeleton custom header. */
 	header?: React.ReactNode;
 
-	style?: CSS.Properties;
+	style?: CSSProperties;
 	/** Controls if LoadingSkeleton is wrapped in Panel. */
 	isPanel?: boolean;
 	/** Controls if built-in LoadingIndicator has overlay. Does not apply to other skeletons */

@@ -27,8 +27,8 @@ enum EnumDirection {
 	right = 'right',
 }
 
-/* Default */
-export const Default: Story<IContextMenuProps> = (args) => {
+/* Basic */
+export const Basic: Story<IContextMenuProps> = (args) => {
 	const Component = createClass({
 		render() {
 			return (
@@ -53,7 +53,6 @@ export const Default: Story<IContextMenuProps> = (args) => {
 
 	return <Component />;
 };
-Default.storyName = 'Default';
 
 /* Basic With Text */
 export const BasicWithText: Story<IContextMenuProps> = (args) => {
@@ -85,7 +84,6 @@ export const BasicWithText: Story<IContextMenuProps> = (args) => {
 		</section>
 	);
 };
-BasicWithText.storyName = 'Basic With Text';
 
 /* Menu Bar */
 export const MenuBar: Story<IContextMenuProps> = (args) => {
@@ -303,7 +301,6 @@ export const DirectionsInteractive: Story<IContextMenuProps> = (args) => {
 		</section>
 	);
 };
-DirectionsInteractive.storyName = 'Directions Interactive';
 
 /* Directions Static */
 export const DirectionsStatic: Story<IContextMenuProps> = (args) => {
@@ -372,4 +369,3 @@ export const DirectionsStatic: Story<IContextMenuProps> = (args) => {
 		</section>
 	);
 };
-DirectionsStatic.storyName = 'Directions Static';

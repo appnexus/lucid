@@ -1,268 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Bars [common] example testing should match snapshot(s) for CustomColors 1`] = `
-<div
-  style="padding-top:9rem"
->
-  <svg
-    height="400"
-    width="750"
-  >
-    <g
-      class="lucid-Bars"
-    >
-      <g>
-        <rect
-          class="lucid-Bar lucid-Bar-color-chart-good"
-          height="36.363636363636374"
-          width="28"
-          x="1"
-          y="363.6363636363636"
-        />
-        <rect
-          class="lucid-Bar lucid-Bar-color-chart-0-darkest"
-          height="72.72727272727275"
-          width="28"
-          x="29"
-          y="327.27272727272725"
-        />
-        <rect
-          class="lucid-Bar lucid-Bar-color-chart-bad"
-          height="109.09090909090907"
-          width="28"
-          x="57"
-          y="290.90909090909093"
-        />
-        <rect
-          class="lucid-Bar lucid-Bar-color-chart-4-lightest"
-          height="181.81818181818184"
-          width="28"
-          x="85"
-          y="218.18181818181816"
-        />
-        <g
-          class="lucid-ContextMenu lucid-ToolTip"
-        >
-          <rect
-            class="lucid-Bars-tooltip-hover-zone"
-            height="181.81818181818184"
-            width="114"
-            x="0"
-            y="218.18181818181816"
-          />
-        </g>
-      </g>
-      <g>
-        <rect
-          class="lucid-Bar lucid-Bar-color-chart-good"
-          height="72.72727272727275"
-          width="28"
-          x="128"
-          y="327.27272727272725"
-        />
-        <rect
-          class="lucid-Bar lucid-Bar-color-chart-0-darkest"
-          height="109.09090909090907"
-          width="28"
-          x="156"
-          y="290.90909090909093"
-        />
-        <rect
-          class="lucid-Bar lucid-Bar-color-chart-bad"
-          height="145.45454545454547"
-          width="28"
-          x="184"
-          y="254.54545454545453"
-        />
-        <rect
-          class="lucid-Bar lucid-Bar-color-chart-4-lightest"
-          height="218.18181818181816"
-          width="28"
-          x="212"
-          y="181.81818181818184"
-        />
-        <g
-          class="lucid-ContextMenu lucid-ToolTip"
-        >
-          <rect
-            class="lucid-Bars-tooltip-hover-zone"
-            height="218.18181818181816"
-            width="114"
-            x="127"
-            y="181.81818181818184"
-          />
-        </g>
-      </g>
-      <g>
-        <rect
-          class="lucid-Bar lucid-Bar-color-chart-good"
-          height="72.72727272727275"
-          width="28"
-          x="255"
-          y="327.27272727272725"
-        />
-        <rect
-          class="lucid-Bar lucid-Bar-color-chart-0-darkest"
-          height="145.45454545454547"
-          width="28"
-          x="283"
-          y="254.54545454545453"
-        />
-        <rect
-          class="lucid-Bar lucid-Bar-color-chart-bad"
-          height="181.81818181818184"
-          width="28"
-          x="311"
-          y="218.18181818181816"
-        />
-        <rect
-          class="lucid-Bar lucid-Bar-color-chart-4-lightest"
-          height="218.18181818181816"
-          width="28"
-          x="339"
-          y="181.81818181818184"
-        />
-        <g
-          class="lucid-ContextMenu lucid-ToolTip"
-        >
-          <rect
-            class="lucid-Bars-tooltip-hover-zone"
-            height="218.18181818181816"
-            width="114"
-            x="254"
-            y="181.81818181818184"
-          />
-        </g>
-      </g>
-      <g>
-        <rect
-          class="lucid-Bar lucid-Bar-color-chart-good"
-          height="109.09090909090907"
-          width="28"
-          x="382"
-          y="290.90909090909093"
-        />
-        <rect
-          class="lucid-Bar lucid-Bar-color-chart-0-darkest"
-          height="218.18181818181816"
-          width="28"
-          x="410"
-          y="181.81818181818184"
-        />
-        <rect
-          class="lucid-Bar lucid-Bar-color-chart-bad"
-          height="254.54545454545453"
-          width="28"
-          x="438"
-          y="145.45454545454547"
-        />
-        <rect
-          class="lucid-Bar lucid-Bar-color-chart-4-lightest"
-          height="254.54545454545453"
-          width="28"
-          x="466"
-          y="145.45454545454547"
-        />
-        <g
-          class="lucid-ContextMenu lucid-ToolTip"
-        >
-          <rect
-            class="lucid-Bars-tooltip-hover-zone"
-            height="254.54545454545453"
-            width="114"
-            x="381"
-            y="145.45454545454547"
-          />
-        </g>
-      </g>
-      <g>
-        <rect
-          class="lucid-Bar lucid-Bar-color-chart-good"
-          height="145.45454545454547"
-          width="28"
-          x="509"
-          y="254.54545454545453"
-        />
-        <rect
-          class="lucid-Bar lucid-Bar-color-chart-0-darkest"
-          height="290.90909090909093"
-          width="28"
-          x="537"
-          y="109.09090909090908"
-        />
-        <rect
-          class="lucid-Bar lucid-Bar-color-chart-bad"
-          height="327.2727272727273"
-          width="28"
-          x="565"
-          y="72.7272727272727"
-        />
-        <rect
-          class="lucid-Bar lucid-Bar-color-chart-4-lightest"
-          height="290.90909090909093"
-          width="28"
-          x="593"
-          y="109.09090909090908"
-        />
-        <g
-          class="lucid-ContextMenu lucid-ToolTip"
-        >
-          <rect
-            class="lucid-Bars-tooltip-hover-zone"
-            height="327.2727272727273"
-            width="114"
-            x="508"
-            y="72.7272727272727"
-          />
-        </g>
-      </g>
-      <g>
-        <rect
-          class="lucid-Bar lucid-Bar-color-chart-good"
-          height="400"
-          width="28"
-          x="636"
-          y="0"
-        />
-        <rect
-          class="lucid-Bar lucid-Bar-color-chart-0-darkest"
-          height="290.90909090909093"
-          width="28"
-          x="664"
-          y="109.09090909090908"
-        />
-        <rect
-          class="lucid-Bar lucid-Bar-color-chart-bad"
-          height="327.2727272727273"
-          width="28"
-          x="692"
-          y="72.7272727272727"
-        />
-        <rect
-          class="lucid-Bar lucid-Bar-color-chart-4-lightest"
-          height="181.81818181818184"
-          width="28"
-          x="720"
-          y="218.18181818181816"
-        />
-        <g
-          class="lucid-ContextMenu lucid-ToolTip"
-        >
-          <rect
-            class="lucid-Bars-tooltip-hover-zone"
-            height="400"
-            width="114"
-            x="635"
-            y="0"
-          />
-        </g>
-      </g>
-    </g>
-  </svg>
-</div>
-`;
-
-exports[`Bars [common] example testing should match snapshot(s) for Default 1`] = `
+exports[`Bars [common] example testing should match snapshot(s) for Basic 1`] = `
 <div
   style="padding-top:9rem"
 >
@@ -761,6 +499,268 @@ exports[`Bars [common] example testing should match snapshot(s) for Default 1`] 
           width="114"
           x="635"
           y="0"
+        />
+        <g
+          class="lucid-ContextMenu lucid-ToolTip"
+        >
+          <rect
+            class="lucid-Bars-tooltip-hover-zone"
+            height="400"
+            width="114"
+            x="635"
+            y="0"
+          />
+        </g>
+      </g>
+    </g>
+  </svg>
+</div>
+`;
+
+exports[`Bars [common] example testing should match snapshot(s) for CustomColors 1`] = `
+<div
+  style="padding-top:9rem"
+>
+  <svg
+    height="400"
+    width="750"
+  >
+    <g
+      class="lucid-Bars"
+    >
+      <g>
+        <rect
+          class="lucid-Bar lucid-Bar-color-chart-good"
+          height="36.363636363636374"
+          width="28"
+          x="1"
+          y="363.6363636363636"
+        />
+        <rect
+          class="lucid-Bar lucid-Bar-color-chart-0-darkest"
+          height="72.72727272727275"
+          width="28"
+          x="29"
+          y="327.27272727272725"
+        />
+        <rect
+          class="lucid-Bar lucid-Bar-color-chart-bad"
+          height="109.09090909090907"
+          width="28"
+          x="57"
+          y="290.90909090909093"
+        />
+        <rect
+          class="lucid-Bar lucid-Bar-color-chart-4-lightest"
+          height="181.81818181818184"
+          width="28"
+          x="85"
+          y="218.18181818181816"
+        />
+        <g
+          class="lucid-ContextMenu lucid-ToolTip"
+        >
+          <rect
+            class="lucid-Bars-tooltip-hover-zone"
+            height="181.81818181818184"
+            width="114"
+            x="0"
+            y="218.18181818181816"
+          />
+        </g>
+      </g>
+      <g>
+        <rect
+          class="lucid-Bar lucid-Bar-color-chart-good"
+          height="72.72727272727275"
+          width="28"
+          x="128"
+          y="327.27272727272725"
+        />
+        <rect
+          class="lucid-Bar lucid-Bar-color-chart-0-darkest"
+          height="109.09090909090907"
+          width="28"
+          x="156"
+          y="290.90909090909093"
+        />
+        <rect
+          class="lucid-Bar lucid-Bar-color-chart-bad"
+          height="145.45454545454547"
+          width="28"
+          x="184"
+          y="254.54545454545453"
+        />
+        <rect
+          class="lucid-Bar lucid-Bar-color-chart-4-lightest"
+          height="218.18181818181816"
+          width="28"
+          x="212"
+          y="181.81818181818184"
+        />
+        <g
+          class="lucid-ContextMenu lucid-ToolTip"
+        >
+          <rect
+            class="lucid-Bars-tooltip-hover-zone"
+            height="218.18181818181816"
+            width="114"
+            x="127"
+            y="181.81818181818184"
+          />
+        </g>
+      </g>
+      <g>
+        <rect
+          class="lucid-Bar lucid-Bar-color-chart-good"
+          height="72.72727272727275"
+          width="28"
+          x="255"
+          y="327.27272727272725"
+        />
+        <rect
+          class="lucid-Bar lucid-Bar-color-chart-0-darkest"
+          height="145.45454545454547"
+          width="28"
+          x="283"
+          y="254.54545454545453"
+        />
+        <rect
+          class="lucid-Bar lucid-Bar-color-chart-bad"
+          height="181.81818181818184"
+          width="28"
+          x="311"
+          y="218.18181818181816"
+        />
+        <rect
+          class="lucid-Bar lucid-Bar-color-chart-4-lightest"
+          height="218.18181818181816"
+          width="28"
+          x="339"
+          y="181.81818181818184"
+        />
+        <g
+          class="lucid-ContextMenu lucid-ToolTip"
+        >
+          <rect
+            class="lucid-Bars-tooltip-hover-zone"
+            height="218.18181818181816"
+            width="114"
+            x="254"
+            y="181.81818181818184"
+          />
+        </g>
+      </g>
+      <g>
+        <rect
+          class="lucid-Bar lucid-Bar-color-chart-good"
+          height="109.09090909090907"
+          width="28"
+          x="382"
+          y="290.90909090909093"
+        />
+        <rect
+          class="lucid-Bar lucid-Bar-color-chart-0-darkest"
+          height="218.18181818181816"
+          width="28"
+          x="410"
+          y="181.81818181818184"
+        />
+        <rect
+          class="lucid-Bar lucid-Bar-color-chart-bad"
+          height="254.54545454545453"
+          width="28"
+          x="438"
+          y="145.45454545454547"
+        />
+        <rect
+          class="lucid-Bar lucid-Bar-color-chart-4-lightest"
+          height="254.54545454545453"
+          width="28"
+          x="466"
+          y="145.45454545454547"
+        />
+        <g
+          class="lucid-ContextMenu lucid-ToolTip"
+        >
+          <rect
+            class="lucid-Bars-tooltip-hover-zone"
+            height="254.54545454545453"
+            width="114"
+            x="381"
+            y="145.45454545454547"
+          />
+        </g>
+      </g>
+      <g>
+        <rect
+          class="lucid-Bar lucid-Bar-color-chart-good"
+          height="145.45454545454547"
+          width="28"
+          x="509"
+          y="254.54545454545453"
+        />
+        <rect
+          class="lucid-Bar lucid-Bar-color-chart-0-darkest"
+          height="290.90909090909093"
+          width="28"
+          x="537"
+          y="109.09090909090908"
+        />
+        <rect
+          class="lucid-Bar lucid-Bar-color-chart-bad"
+          height="327.2727272727273"
+          width="28"
+          x="565"
+          y="72.7272727272727"
+        />
+        <rect
+          class="lucid-Bar lucid-Bar-color-chart-4-lightest"
+          height="290.90909090909093"
+          width="28"
+          x="593"
+          y="109.09090909090908"
+        />
+        <g
+          class="lucid-ContextMenu lucid-ToolTip"
+        >
+          <rect
+            class="lucid-Bars-tooltip-hover-zone"
+            height="327.2727272727273"
+            width="114"
+            x="508"
+            y="72.7272727272727"
+          />
+        </g>
+      </g>
+      <g>
+        <rect
+          class="lucid-Bar lucid-Bar-color-chart-good"
+          height="400"
+          width="28"
+          x="636"
+          y="0"
+        />
+        <rect
+          class="lucid-Bar lucid-Bar-color-chart-0-darkest"
+          height="290.90909090909093"
+          width="28"
+          x="664"
+          y="109.09090909090908"
+        />
+        <rect
+          class="lucid-Bar lucid-Bar-color-chart-bad"
+          height="327.2727272727273"
+          width="28"
+          x="692"
+          y="72.7272727272727"
+        />
+        <rect
+          class="lucid-Bar lucid-Bar-color-chart-4-lightest"
+          height="181.81818181818184"
+          width="28"
+          x="720"
+          y="218.18181818181816"
         />
         <g
           class="lucid-ContextMenu lucid-ToolTip"

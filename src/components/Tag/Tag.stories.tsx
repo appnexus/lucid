@@ -15,8 +15,8 @@ export default {
 	},
 };
 
-/* Default */
-export const Default = () => {
+/* Basic */
+export const Basic = () => {
 	const Component = createClass({
 		render() {
 			return (
@@ -51,7 +51,6 @@ export const Default = () => {
 
 	return <Component />;
 };
-Default.storyName = 'Default';
 
 /* Nested */
 export const Nested = () => {
@@ -95,7 +94,6 @@ Use a parent tag to group child tags into categories. This example also shows yo
 
 	return <Component />;
 };
-Nested.storyName = 'Nested';
 
 /* Double Nested */
 export const DoubleNested = () => {
@@ -310,7 +308,6 @@ Use interactive tags to allow users to remove a selection.
 
 	return <Component />;
 };
-Interactive.storyName = 'Interactive';
 
 /* Colors */
 export const Colors = () => {
@@ -347,4 +344,3 @@ Tags are available in two additional colors:
 
 	return <Component />;
 };
-Colors.storyName = 'Colors';

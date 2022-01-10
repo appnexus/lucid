@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ExpanderPanel [common] example testing should match snapshot(s) for BasicWithOnRestCallback 1`] = `
+exports[`ExpanderPanel [common] example testing should match snapshot(s) for Basic 1`] = `
 <div>
   <div
     class="lucid-Panel lucid-ExpanderPanel lucid-ExpanderPanel-is-collapsed lucid-Panel-is-not-gutterless lucid-Panel-has-margin lucid-Panel-is-scrollable"
@@ -49,7 +49,7 @@ exports[`ExpanderPanel [common] example testing should match snapshot(s) for Bas
 </div>
 `;
 
-exports[`ExpanderPanel [common] example testing should match snapshot(s) for Default 1`] = `
+exports[`ExpanderPanel [common] example testing should match snapshot(s) for BasicWithOnRestCallback 1`] = `
 <div>
   <div
     class="lucid-Panel lucid-ExpanderPanel lucid-ExpanderPanel-is-collapsed lucid-Panel-is-not-gutterless lucid-Panel-has-margin lucid-Panel-is-scrollable"

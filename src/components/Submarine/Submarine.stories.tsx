@@ -54,7 +54,6 @@ export const DefaultSubmarine = () => {
 
 	return <Component />;
 };
-DefaultSubmarine.storyName = 'DefaultSubmarine';
 
 /* Hidden Bar */
 export const HiddenBar = () => {

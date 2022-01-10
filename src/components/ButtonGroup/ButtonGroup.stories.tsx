@@ -18,7 +18,7 @@ export default {
 } as Meta;
 
 /** Default */
-export const Default: Story<IButtonGroupProps> = (args) => {
+export const Basic: Story<IButtonGroupProps> = (args) => {
 	const buttonStyle = { width: '100px' };
 	return (
 		<ButtonGroup {...args} selectedIndices={[1, 2]}>

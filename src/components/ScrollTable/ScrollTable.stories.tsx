@@ -341,7 +341,6 @@ export const Standard = () => {
 
 	return <Component />;
 };
-Standard.storyName = 'Standard';
 
 /* With Border */
 export const WithBorder = () => {

@@ -19,7 +19,6 @@ export default {
 export const WithDefaults: Story<IUnderlineProps> = (args) => {
 	return <Underline {...args}>foo bar baz</Underline>;
 };
-WithDefaults.storyName = 'With Defaults';
 
 /* With Regex Match */
 export const WithRegexMatch: Story<IUnderlineProps> = (args) => {
@@ -29,7 +28,6 @@ export const WithRegexMatch: Story<IUnderlineProps> = (args) => {
 		</Underline>
 	);
 };
-WithRegexMatch.storyName = 'With Regex Match';
 
 /* With String Match */
 export const WithStringMatch: Story<IUnderlineProps> = (args) => {
@@ -39,4 +37,3 @@ export const WithStringMatch: Story<IUnderlineProps> = (args) => {
 		</Underline>
 	);
 };
-WithStringMatch.storyName = 'With String Match';

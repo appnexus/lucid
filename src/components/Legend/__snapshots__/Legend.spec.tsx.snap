@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Legend [common] example testing should match snapshot(s) for Default 1`] = `
+exports[`Legend [common] example testing should match snapshot(s) for Basic 1`] = `
 <div>
   <ul
     class="lucid-Legend lucid-Legend-is-vertical lucid-Legend-has-borders"

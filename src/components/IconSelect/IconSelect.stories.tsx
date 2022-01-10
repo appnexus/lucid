@@ -56,8 +56,8 @@ const Template: any = (args) => {
 //👇 Each story then reuses that template
 
 /** Default: Select One Icon */
-export const Default = Template.bind({});
-Default.args = {
+export const Basic = Template.bind({});
+Basic.args = {
 	kind: 'single', // renders as radio buttons
 };
 

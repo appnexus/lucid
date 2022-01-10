@@ -8,7 +8,7 @@ export default {
 	component: Paginator,
 };
 
-export const Default: Story<IPaginatorProps> = (args) => {
+export const Basic: Story<IPaginatorProps> = (args) => {
 	const [pageIndex, setPageIndex] = useState(0);
 	const [pageSizeIndex, setPageSizeIndex] = useState(0);
 	const onPageSelect = (pageIndex) => {
@@ -32,7 +32,7 @@ export const Default: Story<IPaginatorProps> = (args) => {
 		</>
 	);
 };
-Default.args = {
+Basic.args = {
 	hasPageSizeSelector: true,
 	totalCount: 500,
 	isDisabled: false,

@@ -40,8 +40,8 @@ function addKeys(children: any) {
 	return map(children, (child, index) => ({ ...child, key: index }));
 }
 
-/* Default */
-export const Default: Story<ISearchableMultiSelectProps> = (args) => {
+/* Basic */
+export const Basic: Story<ISearchableMultiSelectProps> = (args) => {
 	return (
 		<Resizer>
 			{(width) => {
@@ -57,8 +57,7 @@ export const Default: Story<ISearchableMultiSelectProps> = (args) => {
 		</Resizer>
 	);
 };
-Default.storyName = 'Default';
-Default.args = {
+Basic.args = {
 	children: addKeys([
 		<Option isDisabled>Alabama</Option>,
 		<Option>Alaska</Option>,
@@ -189,7 +188,6 @@ export const Props: Story<ISearchableMultiSelectProps> = (args) => {
 
 	return <Component />;
 };
-Props.storyName = 'Props';
 
 /* Asynchronous */
 export const Asynchronous: Story<ISearchableMultiSelectProps> = (args) => {
@@ -337,9 +335,8 @@ export const Asynchronous: Story<ISearchableMultiSelectProps> = (args) => {
 
 	return <Component />;
 };
-Asynchronous.storyName = 'Asynchronous';
 Asynchronous.args = {
-	...Default.args,
+	...Basic.args,
 };
 /* Grouped Options */
 export const GroupedOptions: Story<ISearchableMultiSelectProps> = (args) => {
@@ -664,7 +661,7 @@ export const FormattedOptions: Story<ISearchableMultiSelectProps> = (args) => {
 };
 FormattedOptions.storyName = 'FormattedOptions';
 FormattedOptions.args = {
-	...Default.args,
+	...Basic.args,
 };
 
 /* Invalid */
@@ -769,4 +766,3 @@ export const Invalid: Story<ISearchableMultiSelectProps> = (args) => {
 
 	return <Component />;
 };
-Invalid.storyName = 'Invalid';

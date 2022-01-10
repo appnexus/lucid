@@ -46,7 +46,6 @@ export const Interactive: Story<IRadioButtonProps> = (args) => {
 		</ul>
 	);
 };
-Interactive.storyName = 'Interactive';
 
 /* States */
 export const States: Story<IRadioButtonProps> = (args) => {
@@ -87,4 +86,3 @@ export const States: Story<IRadioButtonProps> = (args) => {
 
 	return <Component />;
 };
-States.storyName = 'States';

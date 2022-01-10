@@ -16,8 +16,8 @@ export default {
 	},
 };
 
-/* Default */
-export const Default = () => {
+/* Basic */
+export const Basic = () => {
 	const svgProps = {
 		width: 20,
 		height: 20,
@@ -44,7 +44,6 @@ export const Default = () => {
 
 	return <Component />;
 };
-Default.storyName = 'Default';
 
 /* Big With Stroke */
 export const BigWithStroke = () => {
