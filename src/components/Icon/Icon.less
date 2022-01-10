@@ -48,6 +48,18 @@
 		}
 	}
 
+	&-color-neutral-extra-light {
+		stroke: @color-neutral-1;
+
+		&.@{prefix}-Icon-is-clickable:hover {
+			stroke: darken(@color-neutral-1, 7%);
+		}
+
+		&.@{prefix}-Icon-is-disabled {
+			stroke: @color-darkGray;
+		}
+	}
+
 	&-color-primary {
 		stroke: @color-primary;
 
@@ -125,6 +137,18 @@
 
 		&.@{prefix}-Icon-is-clickable:hover {
 			stroke: darken(@color-secondary-3, 7%);
+		}
+
+		&.@{prefix}-Icon-is-disabled {
+			stroke: @color-darkGray;
+		}
+	}
+
+	&-color-secondary-five {
+		stroke: @color-secondary-5;
+
+		&.@{prefix}-Icon-is-clickable:hover {
+			stroke: darken(@color-secondary-5, 7%);
 		}
 
 		&.@{prefix}-Icon-is-disabled {
