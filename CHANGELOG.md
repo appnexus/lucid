@@ -1,3 +1,18 @@
+## 8.7.0
+
+- #1292, #1294, #1295, #1296, #1298, #1299, #1300, #1307, #1315 Remove `omitProps` method for several components and replace it with lodash \_.omit or remove it entirely. Also, upgrade all the component stories to functional Storybook 6 stories.
+- #1987 TVMP-9462 Fix issue with missing props.
+- #1301 Update eslint plugins and fixed time locking.
+- #1302 Upgrade Storybook to 6.4.9
+- #1304 Update padding for `Panel`.
+- #1306 Fix typo in the `border-color` css declaration.
+- #1308 `Checkbox` consistency updates.
+- #1310 `RadioButton` consistency updates.
+- #1312 Updated padding in `Dialog` box.
+- #1314 Auto disable text input on `Paginator`.
+
+  https://github.com/appnexus/lucid/compare/v8.6.0...v8.7.0
+
 ## 8.6.0
 
 - #1291 Fix propTypes for `SearchableMultiSelect`.
@@ -7,15 +22,19 @@
 - #1287 Format `Storybook` story descriptions.
 - #1286 Add `master.less` styles back into `Storybook`.
 
+  https://github.com/appnexus/lucid/compare/v8.5.2...v8.6.0
+
 ## 8.5.2
 
 - #1285 Make props optional for `Banner`.
+
   https://github.com/appnexus/lucid/compare/v8.5.0...v8.5.2
 
 ## 8.5.0
 
 - #1284 Add the propType property and fix Stories for `Banner`.
 - #1282 Remove components from nested categories in the navigation.
+
   https://github.com/appnexus/lucid/compare/v8.4.0...v8.5.0
 
 ## 8.4.0
@@ -27,6 +46,7 @@
 - #1273 Fix styling so a `Button` in a `Tooltip` appears on hover.
 - #1271 Migrate `Banner` to Storybook 6.
 - #1269 Migrate `Badge` to Storybook 6.
+
   https://github.com/appnexus/lucid/compare/v8.3.0...v8.4.0
 
 ## 8.3.0
@@ -40,6 +60,7 @@
 - #1246 [bug] Fix react-syntax-highlighter bug.
 - #1244 [patch] Update old react-syntax-highlighter dep to fix security issue.
 - #1243 [pach] Migrate some DataTable stories to Storybook 6.
+
   https://github.com/appnexus/lucid/compare/v8.2.3...v8.3.0
 
 ## 8.2.3
@@ -61,43 +82,53 @@
 ## 8.2.0
 
 - #1238 [patch] Small update to recent DataTable change.
+
   https://github.com/appnexus/lucid/pull/1238
+
 - #1237 [minor] Add info prop to TextFieldValidated.
+
   https://github.com/appnexus/lucid/pull/1237
 
 ## 8.0.0
 
 - #1231 [major] Updated storybook to v6.
+
   https://github.com/appnexus/lucid/pull/1231
 
 ## 7.2.0
 
 - #1235 [minor] Exposing data table column width to child components.
+
   https://github.com/appnexus/lucid/pull/1235
 
 ## 7.1.0
 
 - #1227 [minor] Updated build to create cjs and esm assets.
+
   https://github.com/appnexus/lucid/pull/1227
 
 ## 7.0.4
 
 - #1223 [patch] Set type to module.
+
   https://github.com/appnexus/lucid/pull/1223
 
 ## 7.0.3
 
 - #1220 [patch] Introduce YAxisTickFormatter prop for DraggableLineChart component.
+
   https://github.com/appnexus/lucid/compare/v7.0.2...v7.0.3
 
 ## 7.0.2
 
 - #1222 [patch] Fixed typescript build.
+
   https://github.com/appnexus/lucid/compare/v7.0.1...v7.0.2
 
 ## 7.0.1
 
 - #1221 [patch] Put the repeating triangle Xandr pattern background back.
+
   https://github.com/appnexus/lucid/compare/v7.0.0...v7.0.1
 
 ## 7.0.0
@@ -123,6 +154,7 @@
 - #1198 [major] Update more vulnerable dependencies and update linting.
 - #1197 [minor] Add `TextFieldPlain`.
 - #1196 [patch] Update various vulnerable dependencies and update eslint.
+
   https://github.com/appnexus/lucid/compare/v6.0.0...v7.0.0
 
 ## 6.0.0
@@ -130,6 +162,7 @@
 - #1195 [minor] Fix the background image for Anx-react library.
 - #1194 [patch] Add Skeletons. Removed addBorder, SWAP-598 Added React-placeholder.
 - #1192 [major] Convert `DraggableList` to TypeScript.
+
   https://github.com/appnexus/lucid/compare/v5.8.25...v6.0.0
 
 ## 5.8.25
@@ -141,6 +174,7 @@
 - #1191 [patch] Add `ReportsIcon`, `BarChartIcon`, `TableIcon`, `TicketIcon`, `GlobeIcon`, `InheritedSettingsIcon`, `AddColumnIcon` and update `RunReportIcon`.
 - #1190 [patch] Fixed class name binding on `VerticalListMenu`.
 - #1189 [patch] BUDE-969: Add formatted-options example to `SearchableSingleSelect`.
+
   https://github.com/appnexus/lucid/compare/v5.8.23...v5.8.24
 
 ## 5.8.23
@@ -150,71 +184,85 @@
 - #1185 [patch] CXP-1042: Converted `SwitchLabeled` to TypeScript.
 - #1184 [patch] CXP-695: Converted `DataTable` to TypeScript.
 - #1183 [patch] CXP-694: Migrated `BarChart` to TypeScript.
+
   https://github.com/appnexus/lucid/compare/v5.8.22...v5.8.23
 
 ## 5.8.22
 
 - #1181 [patch] BUDE-966: Add optional flag to truncate `Table` cell content.
+
   https://github.com/appnexus/lucid/compare/v5.8.21...v5.8.22
 
 ## 5.8.21
 
 - [patch] Removing css `height` causing misalignment in `SwitchLabelled`.
+
   https://github.com/appnexus/lucid/compare/v5.8.20...v5.8.21
 
 ## 5.8.20
 
 - [patch] Fixing bug with `DraggableLineChart` and selecting first row.
+
   https://github.com/appnexus/lucid/compare/v5.8.19...v5.8.20
 
 ## 5.8.19
 
 - [patch] Removing unneeded prop from `DraggableLineChart`.
+
   https://github.com/appnexus/lucid/compare/v5.8.18...v5.8.19
 
 ## 5.8.18
 
 - [patch] Adding helper text box for `DraggableLineChart`.
+
   https://github.com/appnexus/lucid/compare/v5.8.17...v5.8.18
 
 ## 5.8.17
 
 - [patch] Fixing less on `TimeSelect`.
+
   https://github.com/appnexus/lucid/compare/v5.8.16...v5.8.17
 
 ## 5.8.16
 
 - [patch] Fixing issue with `TimeSelect`.
+
   https://github.com/appnexus/lucid/compare/v5.8.15...v5.8.16
 
 ## 5.8.15
 
 - [patch] Fixing a less value for `TimeSelect`.
+
   https://github.com/appnexus/lucid/compare/v5.8.14...v5.8.15
 
 ## 5.8.14
 
 - [patch] Fixing a default max Y value for `DraggableLineChart`.
+
   https://github.com/appnexus/lucid/compare/v5.8.13...v5.8.14
 
 ## 5.8.13
 
 - #1178 [patch] BUDE-848: Building out a preselect for the `DraggableLineChart`.
+
   https://github.com/appnexus/lucid/compare/v5.8.12...v5.8.13
 
 ## 5.8.12
 
 - #1177 [patch] BUDE-634: Building out a new time selector.
+
   https://github.com/appnexus/lucid/compare/v5.8.11...v5.8.12
 
 ## 5.8.11
 
 - #1176 [patch] BUDE-479: Fix scroll locked content.
+
   https://github.com/appnexus/lucid/compare/v5.8.10...v5.8.11
 
 ## 5.8.10
 
 - #1175 [patch] BUDE-479: Add option to `LoadingIndicator` and `OverlayWrapper` to center loading message and prevent scrolling.
+
   https://github.com/appnexus/lucid/compare/v5.8.9...v5.8.10
 
 ## 5.8.9
@@ -222,16 +270,19 @@
 - #1174 [patch] BUDE-811: Tweak spacing with inputs and graph padding.
 - #1173 [patch] BUDE-811: Update color of point in `DraggableLineChart`.
 - #1172 [patch] Added `Wrench`, `Share`, `Lightbulb` and `Hosted` icons.
+
   https://github.com/appnexus/lucid/compare/v5.8.8...v5.8.9
 
 ## 5.8.8
 
 - #1171 [patch] Cleaned up the new `DraggableLineChart` component.
+
   https://github.com/appnexus/lucid/compare/v5.8.7...v5.8.8
 
 ## 5.8.7
 
 - #1169 [patch] We have updated our test cases for `DraggableLineChart`. We have also added span as a type to `Typography` so users can have a div under them.
+
   https://github.com/appnexus/lucid/compare/v5.8.6...v5.8.7
 
 ## 5.8.6
@@ -239,16 +290,19 @@
 - #1166 [patch] Updated the new `DraggableLineChart` to be able to take foreign React component.
 - #1163 [none] Improve the GH upload script to work with https.
 - #1160 [patch] Fix `SearchableSingleSelect` warnings.
+
   https://github.com/appnexus/lucid/compare/v5.8.5...v5.8.6
 
 ## 5.8.5
 
 - #1159 [patch] Added a new `DraggableLineChart` component.
+
   https://github.com/appnexus/lucid/compare/v5.8.4...v5.8.5
 
 ## 5.8.4
 
 - #1158 [patch] Added an on rest callback for `Collapsible` and `ExpanderPanel`.
+
   https://github.com/appnexus/lucid/compare/v5.8.3...v5.8.4
 
 ## 5.8.3
