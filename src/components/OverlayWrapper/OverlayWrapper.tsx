@@ -14,6 +14,7 @@ const cx = lucidClassNames.bind('&-OverlayWrapper');
 
 const { bool, node, oneOf, string } = PropTypes;
 
+/** Overlay Wrapper Message */
 export interface IMessageProps extends StandardProps {}
 
 export const OverlayWrapperMessage = (_props: IMessageProps): null => null;
@@ -26,6 +27,7 @@ OverlayWrapperMessage.propTypes = {
 	children: node,
 };
 
+/** Overlay Wrapper */
 export interface IOverlayWrapperProps
 	extends StandardProps,
 		React.DetailedHTMLProps<
@@ -126,11 +128,7 @@ export const OverlayWrapper = (
 OverlayWrapper.defaultProps = defaultProps;
 OverlayWrapper.displayName = 'OverlayWrapper';
 OverlayWrapper.peek = {
-	description: `
-		A wrapper with optional overlay to wrap content. \`Overlay\` is meant
-		for overlaying an entire page, while this component is meant to wrap
-		another component and cover its content.
-	`,
+	description: `A wrapper with optional overlay to wrap content. \`OverlayWrapper\` is meant to wrap another component and cover its content, while \`Overlay\` is meant for overlaying an entire page.`,
 	categories: ['utility'],
 };
 OverlayWrapper.propTypes = {

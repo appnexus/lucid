@@ -10,12 +10,7 @@ const cx = lucidClassNames.bind('&-Overlay');
 
 const { string, bool, func, node } = PropTypes;
 
-export interface IOverlayProps
-	extends StandardProps,
-		React.DetailedHTMLProps<
-			React.HTMLAttributes<HTMLDivElement>,
-			HTMLDivElement
-		> {
+export interface IOverlayProps extends StandardProps {
 	/** Controls visibility. */
 	isShown: boolean;
 
@@ -50,6 +45,19 @@ export interface IOverlayProps
 		props: IOverlayProps;
 	}) => void;
 }
+
+const nonPassThroughs = [
+	'className',
+	'children',
+	'isShown',
+	'isAnimated',
+	'isModal',
+	'portalId',
+	'onEscape',
+	'onBackgroundClick',
+	'initialState',
+	'callbackId',
+];
 
 interface IOverlayState {
 	portalId: string;
@@ -174,7 +182,7 @@ class Overlay extends React.Component<IOverlayProps, IOverlayState, {}> {
 
 		const overlayElement = (
 			<div
-				{...omitProps(passThroughs, undefined, _.keys(Overlay.propTypes))}
+				{..._.omit(passThroughs, nonPassThroughs)}
 				className={cx(className, '&', {
 					'&-is-not-modal': !isModal,
 					'&-is-animated': isAnimated,

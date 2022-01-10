@@ -3,11 +3,11 @@
 exports[`Checkbox [common] example testing should match snapshot(s) for Basic 1`] = `
 <div
   class="lucid-Checkbox"
-  title="Basic"
+  title="Default"
 >
   <input
     class="lucid-Checkbox-native"
-    title="Basic"
+    title="Default"
     type="checkbox"
   />
   <span

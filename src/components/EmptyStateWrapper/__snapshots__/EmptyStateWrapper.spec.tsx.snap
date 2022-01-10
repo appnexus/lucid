@@ -3,7 +3,6 @@
 exports[`EmptyStateWrapper [common] example testing should match snapshot(s) for Basic 1`] = `
 <div
   class="lucid-OverlayWrapper lucid-EmptyStateWrapper"
-  title="Empty State Wrapper"
 >
   <div
     class="lucid-OverlayWrapper-message-container"

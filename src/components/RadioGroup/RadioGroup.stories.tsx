@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { Meta, Story } from '@storybook/react';
 
-import { IRadioGroupProps } from './RadioGroup';
-import RadioGroup from './RadioGroup';
+import RadioGroup, { IRadioGroupProps } from './RadioGroup';
 import SingleSelect from '../SingleSelect/SingleSelect';
 import RadioButtonLabeled from '../RadioButtonLabeled/RadioButtonLabeled';
 
