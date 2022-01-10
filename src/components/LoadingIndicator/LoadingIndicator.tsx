@@ -41,9 +41,9 @@ export interface ILoadingIndicatorProps extends IOverlayWrapperProps {
 const defaultProps = {
 	hasOverlay: true,
 	isLoading: false,
-	overlayKind: 'light' as const,
 	anchorMessage: false,
 	fixedMessage: false,
+	overlayKind: 'light' as const,
 };
 
 export const LoadingIndicator = (
@@ -67,7 +67,7 @@ export const LoadingIndicator = (
 
 	return (
 		<OverlayWrapper
-			{...passThroughs}
+			{..._.omit(passThroughs, ['Message', 'initialState', 'callbackId'])}
 			className={cx('&', className)}
 			isVisible={isLoading}
 			anchorMessage={anchorMessage}
