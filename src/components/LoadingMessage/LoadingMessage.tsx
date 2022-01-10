@@ -47,7 +47,7 @@ export interface ILoadingMessageBodyProps extends StandardProps {
 const LoadingMessageBody = (_props: ILoadingMessageBodyProps): null => null;
 LoadingMessageBody.displayName = 'LoadingMessage.Body';
 LoadingMessageBody.peek = {
-	description: `Renders an \`<span>\` that represents the body of the \`LoadingMessage\`.`,
+	description: `Renders a \`<span>\` that represents the body of the \`LoadingMessage\`.`,
 };
 LoadingMessageBody.propName = 'Body';
 LoadingMessageBody.propTypes = {
