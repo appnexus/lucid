@@ -12,6 +12,7 @@ export const iconPropTypes = {
 	color: PropTypes.oneOf([
 		'neutral-dark',
 		'neutral-light',
+		'neutral-extra-light',
 		'primary',
 		'white',
 		'success',
@@ -19,6 +20,7 @@ export const iconPropTypes = {
 		'secondary-one',
 		'secondary-two',
 		'secondary-three',
+		'secondary-five',
 	]),
 
 	/** Any valid SVG aspect ratio. */

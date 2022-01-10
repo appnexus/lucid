@@ -26,26 +26,6 @@ export const iconPropTypes = {
 		\`viewBox\`. */
 	size: PropTypes.number,
 
-	/** Sets the color of the Icon.  May not be applicable for icons that are tied
-		to specific colors (e.g. DangerIcon). */
-	color: PropTypes.oneOf([
-		'neutral-dark',
-		'neutral-light',
-		'primary',
-		'white',
-		'success',
-		'warning',
-		'secondary-one',
-		'secondary-two',
-		'secondary-three',
-	]),
-
-	/** Show or hide a dot on the bell to indicate a notification. */
-	hasDot: PropTypes.bool,
-
-	/** Featured color of the dot */
-	featuredColor: PropTypes.oneOf(['info', 'success', 'warning', 'danger']),
-
 	/** Size handles width and height, whereas \`width\` can manually override the width that would be set by size. */
 	width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
 
@@ -56,6 +36,22 @@ export const iconPropTypes = {
 		the "artboard" for our SVG while \`size\` is the presented height and
 		width. */
 	viewBox: PropTypes.string,
+
+	/** Sets the color of the Icon.  May not be applicable for icons that are tied
+		to specific colors (e.g. DangerIcon). */
+	color: PropTypes.oneOf([
+		'neutral-dark',
+		'neutral-light',
+		'neutral-extra-light',
+		'primary',
+		'white',
+		'success',
+		'warning',
+		'secondary-one',
+		'secondary-two',
+		'secondary-three',
+		'secondary-five',
+	]),
 
 	/** Any valid SVG aspect ratio. */
 	aspectRatio: PropTypes.string,
@@ -81,6 +77,12 @@ export const iconPropTypes = {
 	/** Classes that are appended to the component defaults. This prop is run
 		through the \`classnames\` library. */
 	className: PropTypes.string,
+
+	/** Show or hide a dot on the bell to indicate a notification. */
+	hasDot: PropTypes.bool,
+
+	/** Featured color of the dot */
+	featuredColor: PropTypes.oneOf(['info', 'success', 'warning', 'danger']),
 };
 
 export const BellIcon = ({
