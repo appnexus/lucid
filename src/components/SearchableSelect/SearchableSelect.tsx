@@ -1,13 +1,8 @@
-/* eslint-disable react/prop-types */
 import React from 'react';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
-import {
-	StandardProps,
-	omitProps,
-	findTypes,
-	getFirst,
-} from '../../util/component-types';
+
+import { StandardProps, findTypes, getFirst } from '../../util/component-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import { partitionText, propsSearch } from '../../util/text-manipulation';
 import { buildModernHybridComponent } from '../../util/state-management';
@@ -27,23 +22,18 @@ import { Validation } from '../Validation/Validation';
 
 const cx = lucidClassNames.bind('&-SearchableSelect');
 
-/** PropTypes */
 const { any, bool, func, node, number, object, shape, string, oneOfType } =
 	PropTypes;
 
+/** Placeholder Child Component */
 export interface ISearchableSelectPlaceholderProps extends StandardProps {
 	description?: string;
 }
 
-/** Placeholder Child Component */
 const Placeholder = (_props: ISearchableSelectPlaceholderProps): null => null;
 Placeholder.displayName = 'SearchableSelect.Placeholder';
 Placeholder.peek = {
-	description: `
-		The content rendered in the control when there is no
-		option is selected. Also rendered in the option list to remove current
-		selection.
-	`,
+	description: `The content rendered in the control when there is no option is selected. Also rendered in the option list to remove current selection.`,
 };
 Placeholder.propName = 'Placeholder';
 Placeholder.propTypes = {};
@@ -52,11 +42,7 @@ Placeholder.propTypes = {};
 const OptionGroup = (_props: IDropMenuOptionGroupProps): null => null;
 OptionGroup.displayName = 'SearchableSelect.OptionGroup';
 OptionGroup.peek = {
-	description: `
-		A special kind of \`Option\` that is always rendered at the top of
-		the menu and has an \`optionIndex\` of \`null\`. Useful for
-		unselect.
-	`,
+	description: `A special kind of \`Option\` that is always rendered at the top of the menu and has an \`optionIndex\` of \`null\`. Useful for unselect.`,
 };
 OptionGroup.propName = 'OptionGroup';
 OptionGroup.propTypes = DropMenu.OptionGroup.propTypes;
@@ -73,10 +59,7 @@ const Selected = (_props: { children?: React.ReactNode }): null => null;
 
 Selected.displayName = 'SearchableSelect.Option.Selected';
 Selected.peek = {
-	description: `
-		Customizes the rendering of the Option when it is selected
-		and is displayed instead of the Placeholder.
-	`,
+	description: `Customizes the rendering of the \`Option\` when it is selected and is displayed instead of the \`Placeholder\`.`,
 };
 Selected.propName = 'Selected';
 Selected.propTypes = {};
@@ -86,9 +69,7 @@ const Option = (_props: ISearchableSelectOptionProps): null => null;
 
 Option.displayName = 'SearchableSelect.Option';
 Option.peek = {
-	description: `
-		A selectable option in the list.
-	`,
+	description: `A selectable option in the list.`,
 };
 Option.Selected = Selected;
 Option.propName = 'Option';
@@ -104,6 +85,7 @@ Option.propTypes = {
 };
 Option.defaultProps = DropMenu.Option.defaultProps;
 
+/** Searchable Select */
 type ISearchableSelectDropMenuProps = Partial<IDropMenuProps>;
 
 export interface ISearchableSelectProps extends StandardProps {
@@ -610,7 +592,7 @@ class SearchableSelect extends React.Component<
 				errorChildProps.children &&
 				errorChildProps.children !== true ? (
 					<div
-						{...omitProps(errorChildProps, undefined)}
+						{..._.omit(errorChildProps, ['initialState', 'callbackId'])}
 						className={cx('&-error-content')}
 					>
 						{errorChildProps.children}

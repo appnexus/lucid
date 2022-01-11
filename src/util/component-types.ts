@@ -292,7 +292,8 @@ export function omitProps<P extends object>(
 	targetIsDOMElement = true
 ): { [key: string]: any } {
 	// We only want to exclude the `callbackId` key when we're omitting props
-	// destined for a dom element
+	// destined for a dom element.
+	// We always want to exclude the `initialState` key.
 	const additionalOmittedKeys = targetIsDOMElement
 		? ['initialState', 'callbackId']
 		: ['initialState'];

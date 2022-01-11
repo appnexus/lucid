@@ -1,6 +1,7 @@
 import { map, isNil, escapeRegExp } from 'lodash';
 import React, { useState } from 'react';
 import { Meta } from '@storybook/react';
+
 import SearchableSelect from './SearchableSelect';
 import Underline from '../Underline/Underline';
 
@@ -56,7 +57,7 @@ const Template: any = (args) => {
 
 //👇 Each story then reuses that template
 
-/** Default */
+/** Basic */
 export const Basic = Template.bind({});
 Basic.args = {
 	Placeholder: 'Select State',
