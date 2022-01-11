@@ -51,6 +51,7 @@ export const outwardArrowsIconPropTypes = {
 	color: PropTypes.oneOf([
 		'neutral-dark',
 		'neutral-light',
+		'neutral-extra-light',
 		'primary',
 		'white',
 		'success',
@@ -58,6 +59,7 @@ export const outwardArrowsIconPropTypes = {
 		'secondary-one',
 		'secondary-two',
 		'secondary-three',
+		'secondary-five',
 	]),
 
 	/** Any valid SVG aspect ratio. */
