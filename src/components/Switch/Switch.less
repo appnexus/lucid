@@ -18,8 +18,8 @@
 @Switch-handle-radius: 5px;
 @Switch-handle-scale: scale(1.125);
 
-@Switch-disabled-color: fade(@color-neutral-9, 4%);
-@Switch-disabled-border-color: fade(@color-neutral-9, 15%);
+@Switch-disabled-color: @color-lightGray;
+@Switch-disabled-border-color: @color-gray;
 
 .@{prefix}-Switch {
 	cursor: pointer;
@@ -40,6 +40,7 @@
 	&-visualization-container {
 		.box-sizing();
 
+		background-color: @color-white;
 		border-radius: (@Switch-container-height / 2);
 		border: 1px solid @color-transparent-gray-30-new;
 		height: @Switch-container-height;
