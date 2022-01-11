@@ -159,6 +159,7 @@ export interface ISearchableSingleSelectState {
 	optionGroupDataLookup: { [key: number]: IOptionsData[] };
 }
 
+/** TODO: Remove nonPassThroughs when the component is converted to a functional component */
 const nonPassThroughs = [
 	'children',
 	'className',
