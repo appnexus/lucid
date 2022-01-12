@@ -9,6 +9,7 @@ import {
 } from 'lodash';
 import React, { useState } from 'react';
 import { Meta } from '@storybook/react';
+
 import SearchableSingleSelect from './SearchableSingleSelect';
 import Underline from '../Underline/Underline';
 
@@ -52,7 +53,7 @@ const Template: any = (args) => {
 
 //👇 Each story then reuses that template
 
-/** Default */
+/** Basic */
 export const Basic = Template.bind({});
 Basic.args = {
 	SearchField: { placeholder: 'Search State' },

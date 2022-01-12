@@ -2,12 +2,12 @@
 import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
+
 import { lucidClassNames } from '../../util/style-helpers';
 import { buildModernHybridComponent } from '../../util/state-management';
 import { partitionText, propsSearch } from '../../util/text-manipulation';
 import {
 	StandardProps,
-	omitProps,
 	getFirst,
 	findTypes,
 	Overwrite,
@@ -33,7 +33,7 @@ const { any, bool, func, number, oneOfType, shape, string, node } = PropTypes;
 
 const cx = lucidClassNames.bind('&-SearchableSingleSelect');
 
-/** Option Group Child Component */
+/** Option Group */
 const OptionGroup = (_props: IDropMenuOptionGroupProps): null => null;
 OptionGroup.displayName = 'SearchableSingleSelect.OptionGroup';
 OptionGroup.peek = {
@@ -47,7 +47,7 @@ OptionGroup.propName = 'OptionGroup';
 OptionGroup.propTypes = DropMenu.OptionGroup.propTypes;
 OptionGroup.defaultProps = DropMenu.OptionGroup.defaultProps;
 
-/** Search Field Child Component */
+/** Search Field */
 const SearchFieldComponent = (_props: ISearchFieldProps): null => null;
 SearchFieldComponent.displayName = 'SearchableSingleSelect.SearchField';
 SearchFieldComponent.peek = {
@@ -59,14 +59,7 @@ SearchFieldComponent.propName = 'SearchField';
 SearchFieldComponent.propTypes = SearchField.propTypes;
 SearchFieldComponent.defaultProps = SearchField.defaultProps;
 
-/** Option Child Component w/ Selection property */
-export interface ISearchableSingleSelectOptionProps
-	extends IDropMenuOptionProps {
-	description?: string;
-	name?: string;
-	Selected?: React.ReactNode;
-}
-
+/** Selected */
 const Selected = (_props: { children?: React.ReactNode }): null => null;
 
 Selected.displayName = 'SearchableSingleSelect.Option.Selected';
@@ -78,6 +71,14 @@ Selected.peek = {
 };
 Selected.propName = 'Selected';
 Selected.propTypes = {};
+
+/** Option */
+export interface ISearchableSingleSelectOptionProps
+	extends IDropMenuOptionProps {
+	description?: string;
+	name?: string;
+	Selected?: React.ReactNode;
+}
 
 const Option = (_props: ISearchableSingleSelectOptionProps): null => null;
 
@@ -101,6 +102,7 @@ Option.propTypes = {
 };
 Option.defaultProps = DropMenu.Option.defaultProps;
 
+/** Searchable Single Select */
 export interface ISearchableSingleSelectPropsRaw extends StandardProps {
 	hasReset?: boolean;
 	hasSelections?: boolean;
@@ -156,6 +158,29 @@ export interface ISearchableSingleSelectState {
 	ungroupedOptionData: IOptionsData[];
 	optionGroupDataLookup: { [key: number]: IOptionsData[] };
 }
+
+/** TODO: Remove nonPassThroughs when the component is converted to a functional component */
+const nonPassThroughs = [
+	'children',
+	'className',
+	'isDisabled',
+	'isLoading',
+	'maxMenuHeight',
+	'onSearch',
+	'onSelect',
+	'optionFilter',
+	'searchText',
+	'selectedIndex',
+	'DropMenu',
+	'Option',
+	'Error',
+	'FixedOption',
+	'NullOption',
+	'OptionGroup',
+	'SearchField',
+	'initialState',
+	'callbackId',
+];
 
 const defaultProps = {
 	isDisabled: false,
@@ -528,11 +553,7 @@ class SearchableSingleSelect extends React.Component<
 
 			return (
 				<div
-					{...omitProps(
-						passThroughs,
-						undefined,
-						_.keys(SearchableSingleSelect.propTypes)
-					)}
+					{..._.omit(passThroughs, nonPassThroughs)}
 					className={cx('&', className)}
 				>
 					<Selection
@@ -558,7 +579,7 @@ class SearchableSingleSelect extends React.Component<
 					errorChildProps.children &&
 					errorChildProps.children !== true ? (
 						<div
-							{...omitProps(errorChildProps, undefined)}
+							{..._.omit(errorChildProps, ['initialState', 'callbackId'])}
 							className={cx('&-error-select-content')}
 						>
 							{errorChildProps.children}
@@ -570,11 +591,7 @@ class SearchableSingleSelect extends React.Component<
 
 		return (
 			<div
-				{...omitProps(
-					passThroughs,
-					undefined,
-					_.keys(SearchableSingleSelect.propTypes)
-				)}
+				{..._.omit(passThroughs, nonPassThroughs)}
 				className={cx('&', className)}
 			>
 				<DropMenu
@@ -632,7 +649,7 @@ class SearchableSingleSelect extends React.Component<
 				errorChildProps.children &&
 				errorChildProps.children !== true ? (
 					<div
-						{...omitProps(errorChildProps, undefined)}
+						{..._.omit(errorChildProps, ['initialState', 'callbackId'])}
 						className={cx('&-error-content')}
 					>
 						{errorChildProps.children}
