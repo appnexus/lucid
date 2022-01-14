@@ -1,5 +1,32 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`SwitchLabeled [common] example testing should match snapshot(s) for Basic 1`] = `
+<label
+  class="lucid-SwitchLabeled"
+>
+  <span
+    class="lucid-Switch"
+  >
+    <input
+      class="lucid-Switch-native"
+      type="checkbox"
+    />
+    <span
+      class="lucid-Switch-visualization-container"
+    />
+    <span
+      class="lucid-Switch-visualization-handle"
+    />
+  </span>
+  <span
+    class="lucid-SwitchLabeled-text"
+    style="position:relative"
+  >
+    Default
+  </span>
+</label>
+`;
+
 exports[`SwitchLabeled [common] example testing should match snapshot(s) for InteractiveDefault 1`] = `
 <section>
   <p>
