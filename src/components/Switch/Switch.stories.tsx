@@ -1,7 +1,7 @@
 import React from 'react';
-import createClass from 'create-react-class';
+import { Meta, Story } from '@storybook/react';
 import _ from 'lodash';
-import Switch from './Switch';
+import Switch, { ISwitchProps } from './Switch';
 
 export default {
 	title: 'Controls/Switch',
@@ -13,133 +13,55 @@ export default {
 			},
 		},
 	},
-};
+} as Meta;
 
-/* States */
-export const States = () => {
-	const Component = createClass({
-		render() {
-			return (
-				<ul>
-					<li>
-						<label>Unselected</label>
-						<Switch tabIndex={20} />
-					</li>
-					<li>
-						<label>Selected</label>
-						<Switch isSelected={true} tabIndex={21} />
-					</li>
-					<li>
-						<label>Disabled</label>
-						<Switch isDisabled={true} tabIndex={22} />
-					</li>
-					<li>
-						<label>Disabled & selected</label>
-						<Switch isDisabled={true} isSelected={true} tabIndex={23} />
-					</li>
-				</ul>
-			);
-		},
-	});
+export const Basic: Story<ISwitchProps> = (args) => <Switch {...args} />;
 
-	return <Component />;
-};
+export const Selected: Story<ISwitchProps> = (args) => (
+	<Switch {...args} title='Selected' isSelected={true} />
+);
 
-/* Interactive */
-export const Interactive = () => {
-	const Component = createClass({
-		getInitialState() {
-			return {
-				disabled: {
-					isSelected: false,
-				},
-				enabled: {
-					isSelected: false,
-				},
-			};
-		},
+export const Disabled: Story<ISwitchProps> = (args) => (
+	<Switch {...args} title='Disabled' isDisabled={true} />
+);
 
-		handleDisabledSelected(isSelected: any) {
-			this.setState(
-				_.assign({}, this.state, {
-					disabled: _.assign({}, this.state.disabled, {
-						isSelected,
-					}),
-				})
-			);
-		},
+export const DisabledSelected: Story<ISwitchProps> = (args) => (
+	<Switch
+		{...args}
+		title='Disabled and Selected'
+		isSelected={true}
+		isDisabled={true}
+	/>
+);
 
-		handleEnabledSelected(isSelected: any) {
-			this.setState(
-				_.assign({}, this.state, {
-					enabled: _.assign({}, this.state.enabled, {
-						isSelected,
-					}),
-				})
-			);
-		},
+export const IncludeExclude: Story<ISwitchProps> = (args) => (
+	<Switch {...args} title='Include/Exclude' isIncludeExclude={true} />
+);
 
-		render() {
-			return (
-				<ul>
-					<li>
-						<label>Enabled</label>
-						<Switch
-							isDisabled={false}
-							isSelected={this.state.enabled.isSelected}
-							onSelect={this.handleEnabledSelected}
-							tabIndex={10}
-						/>
-					</li>
-					<li>
-						<label>Disabled</label>
-						<Switch
-							isDisabled={true}
-							isSelected={this.state.disabled.isSelected}
-							onSelect={this.handleDisabledSelected}
-							tabIndex={11}
-						/>
-					</li>
-				</ul>
-			);
-		},
-	});
+export const SelectedIncludeExclude: Story<ISwitchProps> = (args) => (
+	<Switch
+		{...args}
+		title='Selected Include/Exclude'
+		isIncludeExclude={true}
+		isSelected={true}
+	/>
+);
 
-	return <Component />;
-};
+export const DisabledIncludeExclude: Story<ISwitchProps> = (args) => (
+	<Switch
+		{...args}
+		title='Disabled Include/Exclude'
+		isIncludeExclude={true}
+		isDisabled={true}
+	/>
+);
 
-/* Include Exclude */
-export const IncludeExclude = () => {
-	const Component = createClass({
-		render() {
-			return (
-				<ul>
-					<li>
-						<label>Unselected</label>
-						<Switch tabIndex={20} isIncludeExclude={true} />
-					</li>
-					<li>
-						<label>Selected</label>
-						<Switch isSelected={true} tabIndex={21} isIncludeExclude={true} />
-					</li>
-					<li>
-						<label>Disabled</label>
-						<Switch isDisabled={true} tabIndex={22} isIncludeExclude={true} />
-					</li>
-					<li>
-						<label>Disabled & selected</label>
-						<Switch
-							isDisabled={true}
-							isSelected={true}
-							tabIndex={23}
-							isIncludeExclude={true}
-						/>
-					</li>
-				</ul>
-			);
-		},
-	});
-
-	return <Component />;
-};
-IncludeExclude.storyName = 'IncludeExclude';
+export const SelectedDisabledIncludeExclude: Story<ISwitchProps> = (args) => (
+	<Switch
+		{...args}
+		title='Selected and Disabled Include/Exclude'
+		isIncludeExclude={true}
+		isSelected={true}
+		isDisabled={true}
+	/>
+);
