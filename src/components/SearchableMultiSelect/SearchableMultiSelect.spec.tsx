@@ -69,8 +69,8 @@ describe('SearchableMultiSelect', () => {
 				const expected = {
 					event: 'fake',
 					props: {
-						callbackId: 'zero',
-						children: 'Zero',
+						callbackId: 'one',
+						children: 'One',
 						isDisabled: false,
 						isHidden: false,
 						isWrapped: true,
@@ -79,7 +79,7 @@ describe('SearchableMultiSelect', () => {
 
 				wrapper.find('SearchField').prop('onChange')('ero', { event: 'fake' });
 
-				expect(onSearch).toHaveBeenCalledWith('ero', 0, expected);
+				expect(onSearch).toHaveBeenCalledWith('ero', 1, expected);
 			});
 		});
 

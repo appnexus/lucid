@@ -537,9 +537,10 @@ class SearchableMultiSelect extends React.Component<
 			findTypes(props, SearchableMultiSelect.Option),
 			'props'
 		);
-		const firstVisibleIndex = _.findIndex(options, (option) => {
-			return optionFilter(searchText, option);
-		});
+		const firstVisibleIndex =
+			_.findIndex(options, (option) => {
+				return optionFilter(searchText, option);
+			}) + 1;
 		const firstVisibleProps = options[firstVisibleIndex];
 		const dropMenuProps = this.props.DropMenu;
 
