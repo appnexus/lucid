@@ -1,6 +1,7 @@
 import React from 'react';
 import createClass from 'create-react-class';
-import Table from './Table';
+import { Meta, Story } from '@storybook/react';
+import Table, { ITableProps } from './Table';
 import Checkbox from '../Checkbox/Checkbox';
 import SuccessIcon from '../Icon/SuccessIcon/SuccessIcon';
 import Button from '../Button/Button';
@@ -15,16 +16,43 @@ export default {
 			},
 		},
 	},
-};
+} as Meta;
+
+export const Basic: Story<ITableProps> = (args) => (
+	<Table {...args}>
+		<Table.Thead>
+			<Table.Tr>
+				<Table.Th>
+					<Checkbox />
+				</Table.Th>
+				<Table.Th>Lorem</Table.Th>
+				<Table.Th>Ipsum</Table.Th>
+				<Table.Th>Solit</Table.Th>
+				<Table.Th>Dolar</Table.Th>
+			</Table.Tr>
+		</Table.Thead>
+		<Table.Tbody>
+			<Table.Tr>
+				<Table.Td>
+					<Checkbox />
+				</Table.Td>
+				<Table.Td>Bar</Table.Td>
+				<Table.Td>Foo</Table.Td>
+				<Table.Td>FooBar</Table.Td>
+				<Table.Td>BarFoo</Table.Td>
+			</Table.Tr>
+		</Table.Tbody>
+	</Table>
+);
 
 /* Standard */
-export const Standard = () => {
+export const Standard: Story<ITableProps> = (args) => {
 	const { Thead, Tbody, Tr, Th, Td } = Table;
 
 	const Component = createClass({
 		render() {
 			return (
-				<Table>
+				<Table {...args}>
 					<Thead>
 						<Tr>
 							<Th rowSpan={2}>
@@ -355,13 +383,13 @@ export const Standard = () => {
 };
 
 /* Gray Header */
-export const GrayHeader = () => {
+export const GrayHeader: Story<ITableProps> = (args) => {
 	const { Thead, Tbody, Tr, Th, Td } = Table;
 
 	const Component = createClass({
 		render() {
 			return (
-				<Table hasLightHeader={false}>
+				<Table {...args} hasLightHeader={false}>
 					<Thead>
 						<Tr>
 							<Th rowSpan={2}>RS</Th>
@@ -674,13 +702,13 @@ export const GrayHeader = () => {
 GrayHeader.storyName = 'GrayHeader';
 
 /* Compressed */
-export const Compressed = () => {
+export const Compressed: Story<ITableProps> = (args) => {
 	const { Thead, Tbody, Tr, Th, Td } = Table;
 
 	const Component = createClass({
 		render() {
 			return (
-				<Table density='compressed'>
+				<Table {...args} density='compressed'>
 					<Thead>
 						<Tr>
 							<Th rowSpan={2}>RS</Th>
@@ -999,13 +1027,13 @@ export const Compressed = () => {
 };
 
 /* With Border */
-export const WithBorder = () => {
+export const WithBorder: Story<ITableProps> = (args) => {
 	const { Thead, Tbody, Tr, Th, Td } = Table;
 
 	const Component = createClass({
 		render() {
 			return (
-				<Table hasBorder>
+				<Table {...args} hasBorder>
 					<Thead>
 						<Tr>
 							<Th rowSpan={2}>
@@ -1291,13 +1319,13 @@ export const WithBorder = () => {
 WithBorder.storyName = 'WithBorder';
 
 /* With Empty Column */
-export const WithEmptyColumn = () => {
+export const WithEmptyColumn: Story<ITableProps> = (args) => {
 	const { Thead, Tbody, Tr, Th, Td } = Table;
 
 	const Component = createClass({
 		render() {
 			return (
-				<Table>
+				<Table {...args}>
 					<Thead>
 						<Tr>
 							<Th rowSpan={2}>RS</Th>
@@ -1607,13 +1635,13 @@ export const WithEmptyColumn = () => {
 WithEmptyColumn.storyName = 'WithEmptyColumn';
 
 /* No Hover */
-export const NoHover = () => {
+export const NoHover: Story<ITableProps> = (args) => {
 	const { Thead, Tbody, Tr, Th, Td } = Table;
 
 	const Component = createClass({
 		render() {
 			return (
-				<Table hasHover={false}>
+				<Table {...args} hasHover={false}>
 					<Thead>
 						<Tr>
 							<Th rowSpan={2}>
