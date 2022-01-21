@@ -1,10 +1,12 @@
 import React from 'react';
+import { Meta, Story } from '@storybook/react';
 import createClass from 'create-react-class';
-import SwitchLabeled from './SwitchLabeled';
+import SwitchLabeled, { ISwitchLabeledProps } from './SwitchLabeled';
 
 export default {
 	title: 'Controls/SwitchLabeled',
 	component: SwitchLabeled,
+	subcomponents: { 'SwitchLabeled.Label': SwitchLabeled.Label },
 	parameters: {
 		docs: {
 			description: {
@@ -12,10 +14,14 @@ export default {
 			},
 		},
 	},
-};
+} as Meta;
+
+export const Basic: Story<ISwitchLabeledProps> = (args) => (
+	<SwitchLabeled {...args} Label='Default' />
+);
 
 /* Interactive Default */
-export const InteractiveDefault = () => {
+export const InteractiveDefault: Story<ISwitchLabeledProps> = (args) => {
 	const style = {
 		marginBottom: '3px',
 	};
@@ -65,6 +71,7 @@ export const InteractiveDefault = () => {
 						}}
 					>
 						<SwitchLabeled
+							{...args}
 							isSelected={this.state.airplaneMode === true}
 							onSelect={this.handleSelectedAirplaneMode}
 							style={style}
@@ -72,6 +79,7 @@ export const InteractiveDefault = () => {
 							<SwitchLabeled.Label>Airplane Mode</SwitchLabeled.Label>
 						</SwitchLabeled>
 						<SwitchLabeled
+							{...args}
 							isSelected={this.state.bluetooth === true}
 							onSelect={this.handleSelectedBluetooth}
 							style={style}
@@ -79,6 +87,7 @@ export const InteractiveDefault = () => {
 							<SwitchLabeled.Label>Bluetooth</SwitchLabeled.Label>
 						</SwitchLabeled>
 						<SwitchLabeled
+							{...args}
 							isSelected={this.state.cellularData === true}
 							onSelect={this.handleSelectedCellularData}
 							style={style}
@@ -93,10 +102,11 @@ export const InteractiveDefault = () => {
 
 	return <Component />;
 };
-InteractiveDefault.storyName = 'InteractiveDefault';
 
 /* Interactive With Changing Labels */
-export const InteractiveWithChangingLabels = () => {
+export const InteractiveWithChangingLabels: Story<ISwitchLabeledProps> = (
+	args
+) => {
 	const style = {
 		marginBottom: '3px',
 	};
@@ -150,6 +160,7 @@ export const InteractiveWithChangingLabels = () => {
 						}}
 					>
 						<SwitchLabeled
+							{...args}
 							isSelected={this.state.airplaneMode === true}
 							Label={`Airplane Mode ${
 								this.state.airplaneMode === true ? 'Activated' : 'Deactivated'
@@ -158,6 +169,7 @@ export const InteractiveWithChangingLabels = () => {
 							style={style}
 						/>
 						<SwitchLabeled
+							{...args}
 							isSelected={this.state.bluetooth === true}
 							Label={`Bluetooth ${
 								this.state.bluetooth === true ? 'Enabled' : 'Disabled'
@@ -166,6 +178,7 @@ export const InteractiveWithChangingLabels = () => {
 							style={style}
 						/>
 						<SwitchLabeled
+							{...args}
 							isSelected={this.state.cellularData === true}
 							Label={`${
 								this.state.cellularData ? 'Use' : 'Do Not Use'
@@ -176,6 +189,7 @@ export const InteractiveWithChangingLabels = () => {
 					</span>
 					<br />
 					<SwitchLabeled
+						{...args}
 						isSelected={this.state.spam === true}
 						onSelect={this.handleSelectedSpam}
 						style={style}
@@ -189,10 +203,9 @@ export const InteractiveWithChangingLabels = () => {
 
 	return <Component />;
 };
-InteractiveWithChangingLabels.storyName = 'InteractiveWithChangingLabels';
 
 /* Label As Prop */
-export const LabelAsProp = () => {
+export const LabelAsProp: Story<ISwitchLabeledProps> = (args) => {
 	const style = {
 		marginRight: '5px',
 	};
@@ -208,9 +221,14 @@ export const LabelAsProp = () => {
 							alignItems: 'flex-start',
 						}}
 					>
-						<SwitchLabeled Label='Just text' style={style} />
-						<SwitchLabeled Label={<span>HTML element</span>} style={style} />
+						<SwitchLabeled {...args} Label='Just text' style={style} />
 						<SwitchLabeled
+							{...args}
+							Label={<span>HTML element</span>}
+							style={style}
+						/>
+						<SwitchLabeled
+							{...args}
 							Label={[
 								'Text in an array',
 								'Only the first value in the array is used',
@@ -219,6 +237,7 @@ export const LabelAsProp = () => {
 							style={style}
 						/>
 						<SwitchLabeled
+							{...args}
 							Label={[
 								<span key='1'>HTML element in an array</span>,
 								<span key='2'>
@@ -236,10 +255,9 @@ export const LabelAsProp = () => {
 
 	return <Component />;
 };
-LabelAsProp.storyName = 'LabelAsProp';
 
 /* States */
-export const States = () => {
+export const States: Story<ISwitchLabeledProps> = (args) => {
 	const style = {
 		marginBottom: '3px',
 		marginRight: '13px',
@@ -255,18 +273,23 @@ export const States = () => {
 						alignItems: 'flex-start',
 					}}
 				>
-					<SwitchLabeled style={style}>
+					<SwitchLabeled {...args} style={style}>
 						<SwitchLabeled.Label>(default props)</SwitchLabeled.Label>
 					</SwitchLabeled>
 
 					<section>
-						<SwitchLabeled isSelected={true} style={style}>
+						<SwitchLabeled {...args} isSelected={true} style={style}>
 							<SwitchLabeled.Label>Selected</SwitchLabeled.Label>
 						</SwitchLabeled>
-						<SwitchLabeled isDisabled={true} style={style}>
+						<SwitchLabeled {...args} isDisabled={true} style={style}>
 							<SwitchLabeled.Label>Disabled</SwitchLabeled.Label>
 						</SwitchLabeled>
-						<SwitchLabeled isDisabled={true} isSelected={true} style={style}>
+						<SwitchLabeled
+							{...args}
+							isDisabled={true}
+							isSelected={true}
+							style={style}
+						>
 							<SwitchLabeled.Label>Disabled & selected</SwitchLabeled.Label>
 						</SwitchLabeled>
 					</section>

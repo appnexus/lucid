@@ -127,8 +127,6 @@ Label.propTypes = {
 	children: node,
 };
 
-SwitchLabeled.Label = Label;
-
 SwitchLabeled.propTypes = {
 	...Switch.propTypes,
 
@@ -148,5 +146,7 @@ SwitchLabeled.propTypes = {
 	*/
 	Label: any,
 };
+
+SwitchLabeled.Label = Label;
 
 export default SwitchLabeled;
