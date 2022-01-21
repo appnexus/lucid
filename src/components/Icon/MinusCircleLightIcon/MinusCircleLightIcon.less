@@ -4,6 +4,11 @@
 .@{prefix}-MinusCircleLightIcon {
 	stroke: @color-secondary-1;
 
+	&-is-disabled &-dash,
+	&-is-active &-dash {
+		stroke: @color-secondary-1;
+	}
+
 	&-is-clickable:not(&-is-disabled):hover &-dash,
 	&-is-active &-dash {
 		stroke: @color-white;
@@ -11,6 +16,7 @@
 
 	&-background {
 		stroke: @color-secondary-1;
+		fill: @color-white;
 	}
 
 	&-is-clickable&-is-active:not(&-is-disabled):hover &-background {
