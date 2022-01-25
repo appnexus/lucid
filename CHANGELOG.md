@@ -1,3 +1,13 @@
+## 8.8.0
+- #1325 Add white background to success and minus circle icons
+- #1324 Fix Table Cursors so non-clickable rows don't look clickable
+- #1323 Update padding for the dialog box to be consistent across all sides.
+- #1321 Update switched to Storybook 6
+- #1319, #1320, #1323 Update Padding on Grid and Dialog box to 20px on all sides.
+- #1318 Update Icon Colors to add two new colors to prop validation.
+
+  https://github.com/appnexus/lucid/compare/v8.7.0...v8.8.0
+  
 ## 8.7.0
 
 - #1292, #1294, #1295, #1296, #1298, #1299, #1300, #1307, #1315 Remove `omitProps` method for several components and replace it with lodash \_.omit or remove it entirely. Also, upgrade all the component stories to functional Storybook 6 stories.
