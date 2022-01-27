@@ -1,12 +1,6 @@
-import {
-  Source,
-  Meta,
-} from '@storybook/addon-docs';
+import { Source, Meta } from '@storybook/addon-docs';
 
-<Meta
-  title="Documentation/Introduction"
-  id="documentation-intro"
-/>
+<Meta title='Documentation/Introduction' id='documentation-intro' />
 
 # Introduction
 
@@ -20,8 +14,12 @@ Lucid UI is a React component library by AppNexus.
 - Human-readable CSS Class Names
 
 ```jsx
-<p key="link2readme">
-  See <LinkTo kind='Lucid UI' story='Readme'>Readme</LinkTo> for instructions to install.
+<p key='link2readme'>
+	See{' '}
+	<LinkTo kind='Lucid UI' story='Readme'>
+		Readme
+	</LinkTo>{' '}
+	for instructions to install.
 </p>
 ```
 
@@ -40,8 +38,12 @@ We accomplish this by developing all of our components as pure, stateless compon
 The stateless component and the reducers are combined to create the final component that manages its own state.
 
 ```jsx
-<p key="link2hybrid">
-  Read more about <LinkTo kind='Lucid UI' story='Hybrid State Components'>hybrid components</LinkTo>.
+<p key='link2hybrid'>
+	Read more about{' '}
+	<LinkTo kind='Lucid UI' story='Hybrid State Components'>
+		hybrid components
+	</LinkTo>
+	.
 </p>
 ```
 
@@ -52,8 +54,12 @@ Lucid exposes child components that are passed in as children rather having to r
 The resulting code is clean, flexible JSX that embraces component composition.
 
 ```jsx
-<p key="link2child">
-  Read more about <LinkTo kind='Lucid UI' story='Child Components'>child components</LinkTo>.
+<p key='link2child'>
+	Read more about{' '}
+	<LinkTo kind='Lucid UI' story='Child Components'>
+		child components
+	</LinkTo>
+	.
 </p>
 ```
 
@@ -63,8 +69,12 @@ Some components need to calculate values in every render, and in many cases, the
 In these instances, we use `reselect` to cache results providing a performance boost in those components.
 
 ```jsx
-<p key="link2computed">
-  Read more about <LinkTo kind='Lucid UI' story='Computed Props'>computed props</LinkTo>.
+<p key='link2computed'>
+	Read more about{' '}
+	<LinkTo kind='Lucid UI' story='Computed Props'>
+		computed props
+	</LinkTo>
+	.
 </p>
 ```
 

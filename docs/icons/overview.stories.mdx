@@ -1,88 +1,80 @@
 import _ from 'lodash';
-import {
-  Source,
-  Meta,
-} from '@storybook/addon-docs';
+import { Source, Meta } from '@storybook/addon-docs';
 import LinkTo from '@storybook/addon-links/react';
 import loadedIcons from './load-icons';
 
-<Meta
-    title="Icons/Overview"
-    id="documentation-icons-overview"
-/>
+<Meta title='Icons/Overview' id='documentation-icons-overview' />
 
 # Icons
 
 ## Color Variations
 
 <div
-    style={{
-        display: 'inline-flex',
-        backgroundImage:
-            'linear-gradient(45deg, #d3d1d1 25%, transparent 25%), linear-gradient(-45deg, #d3d1d1 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #d3d1d1 75%), linear-gradient(-45deg, transparent 75%, #d3d1d1 75%)',
-        backgroundSize: '4px 4px',
-        backgroundPosition: '0 0, 0 10px, 10px -10px, -10px 0px',
-    }}
+	style={{
+		display: 'inline-flex',
+		backgroundImage:
+			'linear-gradient(45deg, #d3d1d1 25%, transparent 25%), linear-gradient(-45deg, #d3d1d1 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #d3d1d1 75%), linear-gradient(-45deg, transparent 75%, #d3d1d1 75%)',
+		backgroundSize: '4px 4px',
+		backgroundPosition: '0 0, 0 10px, 10px -10px, -10px 0px',
+	}}
 >
-    {_.map(
-        [
-            'neutral-dark',
-            'neutral-light',
-            'primary',
-            'white',
-            'success',
-            'warning',
-            'secondary-one',
-            'secondary-two',
-            'secondary-three',
-        ],
-        (color) => (
-            <div key={color}
-                style={{
-                    padding: '5px',
-                    marginRight: '20px',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    alignItems: 'center',
-                }}
-            >
-                <svg
-                    width='32'
-                    height='32'
-                    viewBox='0 0 36 36'
-                    preserveAspectRatio='xMidYMid meet'
-                    className={`lucid-Icon lucid-Icon-color-${color}`}
-                >
-                    <circle cx='8.5' cy='5.5' r='5' />
-                    <path d='M35.5 35.5L21 11.5l-14.5 24zm-29 0h-6l11-18 2.934 4.801' />
-                    <path d='M16.399 19.102L18.5 21.5l3-3 3 3 2-1' />
-                </svg>
-                <div style={{ paddingTop: '3px' }}>{color}</div>
-            </div>
-        )
-    )}
+	{_.map(
+		[
+			'neutral-dark',
+			'neutral-light',
+			'primary',
+			'white',
+			'success',
+			'warning',
+			'secondary-one',
+			'secondary-two',
+			'secondary-three',
+		],
+		(color) => (
+			<div
+				key={color}
+				style={{
+					padding: '5px',
+					marginRight: '20px',
+					display: 'flex',
+					flexDirection: 'column',
+					alignItems: 'center',
+				}}
+			>
+				<svg
+					width='32'
+					height='32'
+					viewBox='0 0 36 36'
+					preserveAspectRatio='xMidYMid meet'
+					className={`lucid-Icon lucid-Icon-color-${color}`}
+				>
+					<circle cx='8.5' cy='5.5' r='5' />
+					<path d='M35.5 35.5L21 11.5l-14.5 24zm-29 0h-6l11-18 2.934 4.801' />
+					<path d='M16.399 19.102L18.5 21.5l3-3 3 3 2-1' />
+				</svg>
+				<div style={{ paddingTop: '3px' }}>{color}</div>
+			</div>
+		)
+	)}
 </div>
 
 ## Available Icons
 
 <div
-    style={{
-        display: 'flex',
-        flexWrap: 'wrap',
-    }}
+	style={{
+		display: 'flex',
+		flexWrap: 'wrap',
+	}}
 >
-    {_.map(loadedIcons, ({ name, component: Icon }) => (
-        <div
-            key={name}
-            style={{
-                flexBasis: 256,
-                margin: 10,
-            }}
-        >
-            <Icon />{' '}
-            <LinkTo kind={`Icons/Icons/${name}`}>
-                {name}
-            </LinkTo>
-        </div>
-    ))}
+	{_.map(loadedIcons, ({ name, component: Icon }) => (
+		<div
+			key={name}
+			style={{
+				flexBasis: 256,
+				margin: 10,
+			}}
+		>
+			<Icon /> <LinkTo kind={`Icons/Icons/${name}`}>{name}</LinkTo>
+		</div>
+	))}
 </div>
