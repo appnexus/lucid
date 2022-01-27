@@ -1,5 +1,174 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Table [common] example testing should match snapshot(s) for Basic 1`] = `
+<table
+  class="lucid-Table lucid-Table-density-extended lucid-Table-has-word-wrap lucid-Table-has-light-header"
+>
+  <thead
+    class="lucid-Table-Thead"
+  >
+    <tr
+      class="lucid-Table-Tr"
+    >
+      <th
+        class="lucid-Table-Th lucid-Table-is-first-row lucid-Table-is-last-row lucid-Table-is-first-col lucid-Table-is-first-single lucid-Table-align-left"
+        rowspan="1"
+      >
+        <div
+          class="lucid-Table-Th-inner"
+        >
+          <div
+            class="lucid-Table-Th-inner-content"
+          >
+            <div
+              class="lucid-Checkbox"
+            >
+              <input
+                class="lucid-Checkbox-native"
+                type="checkbox"
+              />
+              <span
+                class="lucid-Checkbox-visualization-glow"
+              />
+              <span
+                class="lucid-Checkbox-visualization-container"
+              />
+              <span
+                class="lucid-Checkbox-visualization-checkmark"
+              >
+                <span
+                  class="lucid-Checkbox-visualization-checkmark-stem"
+                />
+                <span
+                  class="lucid-Checkbox-visualization-checkmark-kick"
+                />
+              </span>
+            </div>
+          </div>
+        </div>
+      </th>
+      <th
+        class="lucid-Table-Th lucid-Table-is-first-row lucid-Table-is-last-row lucid-Table-align-left"
+        rowspan="1"
+      >
+        <div
+          class="lucid-Table-Th-inner"
+        >
+          <div
+            class="lucid-Table-Th-inner-content"
+          >
+            Lorem
+          </div>
+        </div>
+      </th>
+      <th
+        class="lucid-Table-Th lucid-Table-is-first-row lucid-Table-is-last-row lucid-Table-align-left"
+        rowspan="1"
+      >
+        <div
+          class="lucid-Table-Th-inner"
+        >
+          <div
+            class="lucid-Table-Th-inner-content"
+          >
+            Ipsum
+          </div>
+        </div>
+      </th>
+      <th
+        class="lucid-Table-Th lucid-Table-is-first-row lucid-Table-is-last-row lucid-Table-align-left"
+        rowspan="1"
+      >
+        <div
+          class="lucid-Table-Th-inner"
+        >
+          <div
+            class="lucid-Table-Th-inner-content"
+          >
+            Solit
+          </div>
+        </div>
+      </th>
+      <th
+        class="lucid-Table-Th lucid-Table-is-first-row lucid-Table-is-last-row lucid-Table-is-last-col lucid-Table-align-left"
+        rowspan="1"
+      >
+        <div
+          class="lucid-Table-Th-inner"
+        >
+          <div
+            class="lucid-Table-Th-inner-content"
+          >
+            Dolar
+          </div>
+        </div>
+      </th>
+    </tr>
+  </thead>
+  <tbody
+    class="lucid-Table-Tbody"
+  >
+    <tr
+      class="lucid-Table-Tr"
+    >
+      <td
+        class="lucid-Table-Td lucid-Table-is-first-row lucid-Table-is-last-row lucid-Table-is-first-col lucid-Table-is-first-single lucid-Table-align-left"
+        rowspan="1"
+      >
+        <div
+          class="lucid-Checkbox"
+        >
+          <input
+            class="lucid-Checkbox-native"
+            type="checkbox"
+          />
+          <span
+            class="lucid-Checkbox-visualization-glow"
+          />
+          <span
+            class="lucid-Checkbox-visualization-container"
+          />
+          <span
+            class="lucid-Checkbox-visualization-checkmark"
+          >
+            <span
+              class="lucid-Checkbox-visualization-checkmark-stem"
+            />
+            <span
+              class="lucid-Checkbox-visualization-checkmark-kick"
+            />
+          </span>
+        </div>
+      </td>
+      <td
+        class="lucid-Table-Td lucid-Table-is-first-row lucid-Table-is-last-row lucid-Table-align-left"
+        rowspan="1"
+      >
+        Bar
+      </td>
+      <td
+        class="lucid-Table-Td lucid-Table-is-first-row lucid-Table-is-last-row lucid-Table-align-left"
+        rowspan="1"
+      >
+        Foo
+      </td>
+      <td
+        class="lucid-Table-Td lucid-Table-is-first-row lucid-Table-is-last-row lucid-Table-align-left"
+        rowspan="1"
+      >
+        FooBar
+      </td>
+      <td
+        class="lucid-Table-Td lucid-Table-is-first-row lucid-Table-is-last-row lucid-Table-is-last-col lucid-Table-align-left"
+        rowspan="1"
+      >
+        BarFoo
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;
+
 exports[`Table [common] example testing should match snapshot(s) for Compressed 1`] = `
 <table
   class="lucid-Table lucid-Table-density-compressed lucid-Table-has-word-wrap lucid-Table-has-light-header"

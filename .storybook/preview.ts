@@ -1,4 +1,4 @@
-import isChromatic from 'storybook-chromatic/isChromatic';
+import isChromatic from 'chromatic/isChromatic';
 
 import '../src/styles/master.less';
 import '../src/index.less';
