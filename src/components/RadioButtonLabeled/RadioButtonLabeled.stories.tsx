@@ -144,7 +144,6 @@ export const LabelAsChild: Story<IRadioButtonLabeledProps> = (args) => {
 		</section>
 	);
 };
-LabelAsChild.storyName = 'Label As Child';
 
 /* Label As Prop */
 export const LabelAsProp: Story<IRadioButtonLabeledProps> = (args) => {
@@ -185,4 +184,3 @@ export const LabelAsProp: Story<IRadioButtonLabeledProps> = (args) => {
 		</section>
 	);
 };
-LabelAsProp.storyName = 'Label As Prop';
