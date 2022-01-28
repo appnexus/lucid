@@ -247,5 +247,38 @@ describe('RadioGroup', () => {
 			wrapper.childAt(0).childAt(1).childAt(0).childAt(0).simulate('click');
 			assert(childOnSelect.calledBefore(onSelect));
 		});
+
+		it('tests onSelect props shape [passes in v8.6.0]', () => {
+			const onSelect: any = sinon.spy();
+			const wrapper = mount(
+				<RadioGroup onSelect={onSelect}>
+					<RadioGroup.RadioButton data-test-name='one' />
+					<RadioGroup.RadioButton data-test-name='two' />
+					<RadioGroup.RadioButton data-test-name='three' />
+				</RadioGroup>
+			);
+
+			wrapper.childAt(0).childAt(1).childAt(0).childAt(0).simulate('click');
+
+			assert.strictEqual(onSelect.args[0][1].props['data-test-name'], 'two');
+		});
+
+		it('tests onSelect props shape [passes in v8.8.0', () => {
+			const onSelect: any = sinon.spy();
+			const wrapper = mount(
+				<RadioGroup {...defaultProps} onSelect={onSelect}>
+					<RadioGroup.RadioButton data-test-name='one' />
+					<RadioGroup.RadioButton data-test-name='two' />
+					<RadioGroup.RadioButton data-test-name='three' />
+				</RadioGroup>
+			);
+
+			wrapper.childAt(0).childAt(1).childAt(0).childAt(0).simulate('click');
+
+			assert.strictEqual(
+				onSelect.args[0][1].props.props['data-test-name'],
+				'two'
+			);
+		});
 	});
 });
