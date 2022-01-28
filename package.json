@@ -80,7 +80,7 @@
 		"react-motion": "^0.5.2",
 		"react-placeholder": "^4.0.3",
 		"react-transition-group": "^4.4.2",
-		"reselect": "^4.0.0"
+		"reselect": "^4.1.5"
 	},
 	"devDependencies": {
 		"@babel/cli": "^7.14.8",
@@ -122,7 +122,7 @@
 		"babel-loader": "^8.2.3",
 		"babel-plugin-lodash": "^3.3.4",
 		"chromatic": "^6.4.1",
-		"css-loader": "^5.2.7",
+		"css-loader": "^1.0.1",
 		"enzyme": "^3.11.0",
 		"enzyme-adapter-react-16": "^1.7.1",
 		"enzyme-to-json": "^3.6.2",
