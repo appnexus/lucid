@@ -206,6 +206,7 @@ class DraggableLineChartD3 {
 			.on('drag', function (pointData: any) {
 				const [max, min] = yScale.range();
 				const activeDot = d3Selection.select(this);
+				// @ts-ignore
 				const adjMouseY = initialPosition + d3Selection.event.y;
 				const newPointY =
 					adjMouseY < min ? min : adjMouseY > max ? max : adjMouseY;
@@ -349,6 +350,7 @@ class DraggableLineChartD3 {
 		if (dataIsCentered) {
 			const innerXTickWidth = this.xScale.step();
 			circle
+				// @ts-ignore
 				.transition()
 				.duration(100)
 				.attr('cx', (d: any) => this.xScale(d.x) || 0)
@@ -360,6 +362,7 @@ class DraggableLineChartD3 {
 				.style('stroke-width', 1);
 		} else {
 			circle
+				// @ts-ignore
 				.transition()
 				.duration(100)
 				.attr('cx', (d: any) => this.xScale(d.x) || 0)
@@ -453,11 +456,13 @@ class DraggableLineChartD3 {
 			.attr('width', (chartData) => this.xScale.step())
 			.attr('height', innerHeight)
 			.classed(cx('&-overlayTrack'), true)
+			// @ts-ignore
 			.on('mouseenter', (d, i, nodes) => {
 				if (!getIsMouseDown()) {
 					d3Selection.select(nodes[i]).classed('active', true);
 				}
 			})
+			// @ts-ignore
 			.on('mouseout', function (d, i, nodes) {
 				if (!getIsMouseDown()) {
 					d3Selection.select(nodes[i]).classed('active', false);
@@ -472,6 +477,7 @@ class DraggableLineChartD3 {
 					'width',
 					'height',
 				]);
+				// @ts-ignore
 				setMouseDown(true, i);
 				const xLeft = +x;
 				const xRight = +x + +width;
