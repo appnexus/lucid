@@ -82,7 +82,7 @@
 		"@babel/parser": "^7.16.12",
 		"@babel/plugin-proposal-class-properties": "^7.16.7",
 		"@babel/plugin-proposal-object-rest-spread": "^7.16.7",
-		"@babel/preset-env": "^7.16.11",
+		"@babel/preset-env": "^7.15.0",
 		"@babel/preset-react": "^7.16.7",
 		"@babel/preset-typescript": "^7.16.7",
 		"@storybook/addon-docs": "^6.4.15",
