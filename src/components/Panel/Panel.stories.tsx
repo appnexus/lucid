@@ -318,4 +318,3 @@ export const NoMarginsOrContentPadding: Story<IPanelProps> = (args) => {
 		</Panel>
 	);
 };
-NoMarginsOrContentPadding.storyName = 'No Margins Or Content Padding';

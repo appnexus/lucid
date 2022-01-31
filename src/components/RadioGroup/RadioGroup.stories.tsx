@@ -11,7 +11,7 @@ export default {
 	parameters: {
 		docs: {
 			description: {
-				component: (RadioGroup as any).peek.description,
+				component: RadioGroup.peek.description,
 			},
 		},
 	},
@@ -96,10 +96,7 @@ export const NestedSelect: Story<IRadioGroupProps> = (args) => {
 			</RadioGroup.RadioButton>
 		</RadioGroup>
 	);
-
-	// end-hide-from-docs
 };
-NestedSelect.storyName = 'Nested Select';
 
 /* Selected Index As Prop */
 export const SelectedIndexAsProp: Story<IRadioGroupProps> = (args) => {
@@ -140,7 +137,6 @@ export const SelectedIndexAsProp: Story<IRadioGroupProps> = (args) => {
 		</section>
 	);
 };
-SelectedIndexAsProp.storyName = 'Selected Index As Prop';
 
 /* Selected Index From Child */
 export const SelectedIndexFromChild: Story<IRadioGroupProps> = (args) => {
@@ -176,7 +172,6 @@ export const SelectedIndexFromChild: Story<IRadioGroupProps> = (args) => {
 		</RadioGroup>
 	);
 };
-SelectedIndexFromChild.storyName = 'Selected Index From Child';
 
 /* Default Props */
 export const DefaultProps: Story<IRadioGroupProps> = (args) => {
