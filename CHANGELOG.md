@@ -1,3 +1,12 @@
+## 8.9.0
+
+- #1330 Update development dependencies
+- #1329 Remove redundant Storybook name stories properties
+- #1327 Fix Storybook linting warnings
+- #1326 Update production dependecies
+
+  https://github.com/appnexus/lucid/compare/v8.8.0...v8.9.0
+
 ## 8.8.0
 
 - #1325 Add white background to success and minus circle icons
