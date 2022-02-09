@@ -1,6 +1,6 @@
 import React from 'react';
 import assert from 'assert';
-import { mount } from 'enzyme';
+import { mount, shallow } from 'enzyme';
 
 import Portal from './Portal';
 
@@ -12,6 +12,15 @@ describe('Portal', () => {
 
 				assert(document.getElementById('test1234'));
 				wrapper.unmount();
+			});
+		});
+
+		describe('data-test-id', () => {
+			it('should set the data-test-id of the portal DOM element portalId', () => {
+				const wrapper = shallow(<Portal className='test-classname' />);
+				expect(
+					wrapper.find('[data-test-id="test-classname"]').exists()
+				).toEqual(true);
 			});
 		});
 

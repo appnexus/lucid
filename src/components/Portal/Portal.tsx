@@ -78,6 +78,7 @@ class Portal extends React.Component<IPortalProps, IPortalState, {}> {
 		return this.state.isReady
 			? ReactDOM.createPortal(
 					<div
+						data-test-id={this.props.className}
 						className={classNames(cx('&'), this.props.className)}
 						{...omitProps(this.props, undefined, _.keys(Portal.propTypes))}
 					>
