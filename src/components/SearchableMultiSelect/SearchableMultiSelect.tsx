@@ -537,10 +537,14 @@ class SearchableMultiSelect extends React.Component<
 			findTypes(props, SearchableMultiSelect.Option),
 			'props'
 		);
+
 		const firstVisibleIndex = _.findIndex(options, (option) => {
 			return optionFilter(searchText, option);
 		});
-		const firstVisibleProps = options[firstVisibleIndex];
+
+		const trueIndex = firstVisibleIndex === -1 ? -1 : firstVisibleIndex + 1;
+
+		const firstVisibleProps = options[trueIndex];
 		const dropMenuProps = this.props.DropMenu;
 
 		// Just an extra call to make sure the search results show up when a user
@@ -551,7 +555,7 @@ class SearchableMultiSelect extends React.Component<
 				props: dropMenuProps,
 			});
 
-		return onSearch(searchText, firstVisibleIndex, {
+		return onSearch(searchText, trueIndex, {
 			event,
 			props: firstVisibleProps,
 		});
