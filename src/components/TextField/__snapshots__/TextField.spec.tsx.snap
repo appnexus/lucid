@@ -23,7 +23,7 @@ exports[`TextField [common] example testing should match snapshot(s) for Debounc
     value="foo"
   />
   <div
-    style="margin-top:10px;margin-left:10px"
+    style="margin-bottom:10px;margin-left:10px"
   >
     state.value: foo
   </div>
@@ -51,21 +51,6 @@ exports[`TextField [common] example testing should match snapshot(s) for Disable
     type="text"
     value="foo"
   />
-  <div
-    style="margin-top:10px;margin-left:10px"
-  >
-    state.value: foo
-  </div>
-  <button
-    class="lucid-Button"
-    type="button"
-  >
-    <span
-      class="lucid-Button-content"
-    >
-      Set TextField to "foo"
-    </span>
-  </button>
 </div>
 `;
 
@@ -73,23 +58,22 @@ exports[`TextField [common] example testing should match snapshot(s) for Multili
 <div>
   <input
     class="lucid-TextField lucid-TextField-is-single-line"
+    placeholder="default"
     rows="5"
     style="margin-bottom:10px"
     type="text"
-    value="foo"
+    value=""
   />
   <textarea
     class="lucid-TextField lucid-TextField-is-multi-line"
     placeholder="isMultiline"
     rows="5"
     style="margin-bottom:10px"
-  >
-    foo
-  </textarea>
+  />
   <div
-    style="margin-top:10px;margin-left:10px"
+    style="margin-bottom:10px;margin-left:10px"
   >
-    state.value: foo
+    state.value: 
   </div>
   <button
     class="lucid-Button"
