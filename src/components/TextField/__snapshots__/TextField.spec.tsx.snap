@@ -23,9 +23,9 @@ exports[`TextField [common] example testing should match snapshot(s) for Debounc
     value="foo"
   />
   <div
-    style="margin-bottom:10px;margin-left:10px"
+    style="margin-top:10px;margin-left:10px"
   >
-    this.state.value: foo
+    state.value: foo
   </div>
   <button
     class="lucid-Button"
@@ -49,8 +49,23 @@ exports[`TextField [common] example testing should match snapshot(s) for Disable
     rows="5"
     style="margin-bottom:10px"
     type="text"
-    value=""
+    value="foo"
   />
+  <div
+    style="margin-top:10px;margin-left:10px"
+  >
+    state.value: foo
+  </div>
+  <button
+    class="lucid-Button"
+    type="button"
+  >
+    <span
+      class="lucid-Button-content"
+    >
+      Set TextField to "foo"
+    </span>
+  </button>
 </div>
 `;
 
@@ -58,22 +73,23 @@ exports[`TextField [common] example testing should match snapshot(s) for Multili
 <div>
   <input
     class="lucid-TextField lucid-TextField-is-single-line"
-    placeholder="default"
     rows="5"
     style="margin-bottom:10px"
     type="text"
-    value=""
+    value="foo"
   />
   <textarea
     class="lucid-TextField lucid-TextField-is-multi-line"
-    placeholder="isMultiLine"
+    placeholder="isMultiline"
     rows="5"
     style="margin-bottom:10px"
-  />
-  <div
-    style="margin-bottom:10px;margin-left:10px"
   >
-    this.state.value: 
+    foo
+  </textarea>
+  <div
+    style="margin-top:10px;margin-left:10px"
+  >
+    state.value: foo
   </div>
   <button
     class="lucid-Button"
@@ -100,7 +116,7 @@ exports[`TextField [common] example testing should match snapshot(s) for OnSubmi
   <div
     style="margin-top:10px;margin-left:10px"
   >
-    this.state.value: Enter some text in and hit enter
+    state.value: Enter some text in and hit enter
   </div>
 </div>
 `;

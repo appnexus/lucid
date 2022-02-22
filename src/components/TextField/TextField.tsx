@@ -1,12 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
+
 import { lucidClassNames } from '../../util/style-helpers';
-import {
-	omitProps,
-	StandardProps,
-	Overwrite,
-} from '../../util/component-types';
+import { StandardProps, Overwrite } from '../../util/component-types';
 import reducers from './TextField.reducers';
 import * as KEYCODE from '../../constants/key-code';
 
@@ -107,6 +104,26 @@ export interface ITextFieldState {
 	isHolding: boolean;
 	isMounted: boolean;
 }
+
+/** TODO: Remove the nonPassThroughs when the component is converted to a functional component */
+const nonPassThroughs = [
+	'style',
+	'isMultiLine',
+	'isDisabled',
+	'rows',
+	'className',
+	'onChange',
+	'onBlur',
+	'onChangeDebounced',
+	'onKeyDown',
+	'onSubmit',
+	'value',
+	'debounceLevel',
+	'lazyLevel',
+	'initialState',
+	'callbackId',
+	'children',
+];
 
 class TextField extends React.Component<
 	ITextFieldPropsWithPassThroughs,
@@ -343,10 +360,7 @@ class TextField extends React.Component<
 		const { value } = this.state;
 
 		const finalProps = {
-			...omitProps(passThroughs, undefined, [
-				..._.keys(TextField.propTypes),
-				'children',
-			]),
+			..._.omit(passThroughs, nonPassThroughs),
 			className: cx(
 				'&',
 				{

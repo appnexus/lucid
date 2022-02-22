@@ -9,6 +9,8 @@ import assert from 'assert';
 import TextField from './TextField';
 import { MOSTLY_STABLE_DELAY } from '../../../tests/constants';
 
+const defaultProps = TextField.defaultProps;
+
 describe('TextField', () => {
 	common(TextField);
 	controls(TextField, {
@@ -29,7 +31,11 @@ describe('TextField', () => {
 		};
 		const onChangeDebounced = sinon.spy();
 		const wrapper = shallow(
-			<TextField onChangeDebounced={onChangeDebounced} debounceLevel={0} />
+			<TextField
+				{...defaultProps}
+				onChangeDebounced={onChangeDebounced}
+				debounceLevel={0}
+			/>
 		);
 
 		wrapper.find('input').simulate('change', event);
@@ -44,7 +50,7 @@ describe('TextField', () => {
 	});
 
 	it('should accept a new `value` prop immediately if the user has not typed anything recently', () => {
-		const wrapper = shallow(<TextField value='start' />);
+		const wrapper = shallow(<TextField {...defaultProps} value='start' />);
 
 		wrapper.setProps({ value: 'end' });
 
@@ -53,7 +59,9 @@ describe('TextField', () => {
 
 	// This test had value, but it's been known to be flaky.
 	it('should postpone state changes if the user recently typed something in [mostly stable]', (done) => {
-		const wrapper = shallow(<TextField value='start' lazyLevel={1} />);
+		const wrapper = shallow(
+			<TextField {...defaultProps} value='start' lazyLevel={1} />
+		);
 
 		// Order of operations is crucial for this test
 		// 1) User starts typing something in
@@ -77,7 +85,9 @@ describe('TextField', () => {
 
 	it('should callback onSubmit when the user hits enter', () => {
 		const onSubmit = sinon.spy();
-		const wrapper = shallow(<TextField onSubmit={onSubmit} />);
+		const wrapper = shallow(
+			<TextField {...defaultProps} onSubmit={onSubmit} />
+		);
 
 		wrapper.find('input').simulate('keydown', {
 			keyCode: KEYCODE.Enter,
@@ -92,7 +102,7 @@ describe('TextField', () => {
 
 	it('should callback onBlur when the leaves input', () => {
 		const onBlur = sinon.spy();
-		const wrapper = shallow(<TextField onBlur={onBlur} />);
+		const wrapper = shallow(<TextField {...defaultProps} onBlur={onBlur} />);
 
 		wrapper.find('input').simulate('blur', {
 			target: {
@@ -105,13 +115,13 @@ describe('TextField', () => {
 	});
 
 	it('should respect isDisabled', () => {
-		const wrapper = shallow(<TextField isDisabled={true} />);
+		const wrapper = shallow(<TextField {...defaultProps} isDisabled={true} />);
 
 		assert.strictEqual(wrapper.find('input').prop('disabled'), true);
 	});
 
 	it('should respect isMultiLine', () => {
-		const wrapper = shallow(<TextField isMultiLine={true} />);
+		const wrapper = shallow(<TextField {...defaultProps} isMultiLine={true} />);
 
 		assert.strictEqual(wrapper.find('textarea').length, 1);
 		assert.strictEqual(
@@ -122,7 +132,9 @@ describe('TextField', () => {
 
 	it('should respect onKeyDown if passed in', () => {
 		const onKeyDown = jest.fn();
-		const wrapper = shallow(<TextField onKeyDown={onKeyDown} />);
+		const wrapper = shallow(
+			<TextField {...defaultProps} onKeyDown={onKeyDown} />
+		);
 
 		wrapper.find('input').simulate('keydown', {});
 
@@ -138,7 +150,7 @@ describe('TextField', () => {
 		};
 		const onChangeDebounced = () => {}; // intentionally not _.noop
 		const wrapper = shallow(
-			<TextField onChangeDebounced={onChangeDebounced} />
+			<TextField {...defaultProps} onChangeDebounced={onChangeDebounced} />
 		);
 
 		assert(event.persist.notCalled);
@@ -164,6 +176,7 @@ describe('TextField', () => {
 
 		const wrapper = shallow(
 			<TextField
+				{...defaultProps}
 				onBlur={onBlur}
 				debounceLevel={100}
 				onChangeDebounced={onChangeDebounced}
@@ -194,6 +207,7 @@ describe('TextField', () => {
 
 		const wrapper = shallow(
 			<TextField
+				{...defaultProps}
 				onSubmit={onSubmit}
 				debounceLevel={100}
 				onChangeDebounced={onChangeDebounced}

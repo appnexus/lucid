@@ -1,7 +1,8 @@
 import React from 'react';
+import { shallow } from 'enzyme';
+
 import { common } from '../../util/generic-tests';
 import TextFieldPlain from './TextFieldPlain';
-import { shallow } from 'enzyme';
 
 describe('TextField', () => {
 	common(TextFieldPlain);
