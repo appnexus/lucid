@@ -1,12 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
+
 import { lucidClassNames } from '../../util/style-helpers';
-import {
-	omitProps,
-	StandardProps,
-	Overwrite,
-} from '../../util/component-types';
+import { StandardProps, Overwrite } from '../../util/component-types';
 import reducers from './TextField.reducers';
 import * as KEYCODE from '../../constants/key-code';
 
@@ -95,6 +92,9 @@ export interface ITextFieldProps extends StandardProps {
 		flowing in to the component until the timer has elapsed.  This was
 		heavily inspired by the [lazy-input](https:/docs.npmjs.com/package/lazy-input) component. */
 	lazyLevel?: number;
+
+	/** A reference to the node accessible at the current attribute of the ref. */
+	ref?: any;
 }
 
 export type ITextFieldPropsWithPassThroughs = Overwrite<
@@ -107,6 +107,27 @@ export interface ITextFieldState {
 	isHolding: boolean;
 	isMounted: boolean;
 }
+
+/** TODO: Remove the nonPassThroughs when the component is converted to a functional component */
+const nonPassThroughs = [
+	'style',
+	'isMultiLine',
+	'isDisabled',
+	'rows',
+	'className',
+	'onChange',
+	'onBlur',
+	'onChangeDebounced',
+	'onKeyDown',
+	'onSubmit',
+	'value',
+	'debounceLevel',
+	'lazyLevel',
+	'ref',
+	'initialState',
+	'callbackId',
+	'children',
+];
 
 class TextField extends React.Component<
 	ITextFieldPropsWithPassThroughs,
@@ -196,6 +217,15 @@ class TextField extends React.Component<
 			[lazy-input](https:/docs.npmjs.com/package/lazy-input) component.
 		*/
 		lazyLevel: number,
+
+		/**
+			 When a ref is passed to an element in render, 
+		 	a reference to the node becomes accessible at the current attribute of the ref.
+		 */
+		ref: oneOfType([
+			PropTypes.func,
+			PropTypes.shape({ current: PropTypes.elementType }),
+		]),
 	};
 
 	state = {
@@ -343,10 +373,7 @@ class TextField extends React.Component<
 		const { value } = this.state;
 
 		const finalProps = {
-			...omitProps(passThroughs, undefined, [
-				..._.keys(TextField.propTypes),
-				'children',
-			]),
+			...(_.omit(passThroughs, nonPassThroughs) as any),
 			className: cx(
 				'&',
 				{

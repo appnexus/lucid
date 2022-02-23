@@ -1,6 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Story, Meta } from '@storybook/react';
 import createClass from 'create-react-class';
-import TextFieldValidated from './TextFieldValidated';
+
+import TextFieldValidated, {
+	ITextFieldValidatedProps,
+} from './TextFieldValidated';
 
 export default {
 	title: 'Controls/TextFieldValidated',
@@ -8,88 +12,56 @@ export default {
 	parameters: {
 		docs: {
 			description: {
-				component: (TextFieldValidated as any).peek.description,
+				component: TextFieldValidated.peek.description,
 			},
 		},
 	},
+} as Meta;
+
+const style = {
+	marginBottom: '10px',
 };
 
-/* Basic */
-export const Basic = () => {
-	const Component = createClass({
-		render() {
-			return <TextFieldValidated Error='Nope, not even close!' />;
-		},
-	});
-
-	return <Component />;
+export const Basic: Story<ITextFieldValidatedProps> = (args) => {
+	return <TextFieldValidated {...args} Error='Nope, not even close!' />;
 };
 
-/* Debounced */
-export const Debounced = () => {
-	const style = {
-		marginBottom: '10px',
-	};
+export const Debounced: Story<ITextFieldValidatedProps> = (args) => {
+	const [value, setValue] = useState('');
 
-	const Component = createClass({
-		getInitialState() {
-			return {
-				value: '',
-			};
-		},
-
-		render() {
-			return (
-				<div>
-					<TextFieldValidated
-						style={style}
-						value={this.state.value}
-						onChangeDebounced={(value) => this.setState({ value })}
-						Error={this.state.value === 'foo' ? null : 'Please enter "foo"'}
-					/>
-					<div style={style}>state.value: {this.state.value}</div>
-				</div>
-			);
-		},
-	});
-
-	return <Component />;
+	return (
+		<div>
+			<TextFieldValidated
+				{...args}
+				style={style}
+				value={value}
+				onChangeDebounced={(value) => setValue(value)}
+				Error={value === 'foo' ? null : 'Please enter "foo"'}
+			/>
+		</div>
+	);
 };
 
-/* Error Types */
-export const ErrorTypes = () => {
-	const style = {
-		marginBottom: '10px',
-	};
+export const ErrorTypes: Story<ITextFieldValidatedProps> = (args) => {
+	const [value, setValue] = useState('');
 
-	const Component = createClass({
-		getInitialState() {
-			return {
-				value: '',
-			};
-		},
-
-		render() {
-			return (
-				<div>
-					<TextFieldValidated
-						style={style}
-						value={this.state.value}
-						onChangeDebounced={() => {}}
-						Error={'This is an error'}
-					/>
-					<TextFieldValidated
-						style={style}
-						value={this.state.value}
-						onChangeDebounced={() => {}}
-						Error={null}
-						Info={'This is an info'}
-					/>
-				</div>
-			);
-		},
-	});
-
-	return <Component />;
+	return (
+		<div>
+			<TextFieldValidated
+				{...args}
+				style={style}
+				value={value}
+				onChangeDebounced={() => {}}
+				Error={'This is an error'}
+			/>
+			<TextFieldValidated
+				{...args}
+				style={style}
+				value={value}
+				onChangeDebounced={() => {}}
+				Error={null}
+				Info={'This is an info'}
+			/>
+		</div>
+	);
 };
-ErrorTypes.storyName = 'ErrorTypes';

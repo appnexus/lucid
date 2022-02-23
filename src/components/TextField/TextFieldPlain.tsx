@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { lucidClassNames } from '../../util/style-helpers';
 import PropTypes from 'prop-types';
 
@@ -11,6 +12,8 @@ interface TextFieldInputPlain extends InputProps {
 	isDisabled?: boolean;
 	isMultiLine?: boolean;
 	rows?: number;
+	style?: object;
+	placeholder?: string;
 }
 interface TextFieldTextareaPlain extends TextareaProps {
 	isDisabled?: boolean;

@@ -36,11 +36,6 @@ exports[`TextFieldValidated [common] example testing should match snapshot(s) fo
       Please enter "foo"
     </div>
   </div>
-  <div
-    style="margin-bottom:10px"
-  >
-    state.value: 
-  </div>
 </div>
 `;
 
