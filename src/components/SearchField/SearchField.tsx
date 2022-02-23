@@ -4,12 +4,7 @@ import React, { createElement } from 'react';
 import PropTypes from 'prop-types';
 
 import { lucidClassNames } from '../../util/style-helpers';
-import {
-	StandardProps,
-	getFirst,
-	omitProps,
-	Overwrite,
-} from '../../util/component-types';
+import { StandardProps, getFirst, Overwrite } from '../../util/component-types';
 import { buildModernHybridComponent } from '../../util/state-management';
 import TextField, { ITextFieldProps } from '../TextField/TextField';
 import SearchIcon from '../Icon/SearchIcon/SearchIcon';
@@ -78,6 +73,23 @@ export interface ISearchFieldProps extends StandardProps {
 	/**n placeholder value */
 	placeholder?: string;
 }
+
+/** TODO: Remove the nonPassThroughs when the component is converted to a functional component */
+const nonPassThroughs = [
+	'onChange',
+	'onChangeDebounced',
+	'debounceLevel',
+	'onSubmit',
+	'value',
+	'isValid',
+	'isDisabled',
+	'placeholder',
+	'className',
+	'Icon',
+	'TextField',
+	'initialState',
+	'callbackId',
+];
 
 type ISearchFieldPropsWithPassThroughs = Overwrite<
 	React.DetailedHTMLProps<
@@ -235,7 +247,7 @@ class SearchField extends React.Component<
 
 		return (
 			<div
-				{...omitProps(passThroughs, undefined, _.keys(SearchField.propTypes))}
+				{..._.omit(passThroughs, nonPassThroughs)}
 				className={cx('&', className)}
 			>
 				{textFieldElement}

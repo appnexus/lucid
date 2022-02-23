@@ -20,12 +20,10 @@ export default {
 	},
 } as Meta;
 
-/* Basic */
 export const Basic: Story<ISearchFieldProps> = (args) => {
 	return <SearchField {...args} />;
 };
 
-/* Interactive */
 export const Interactive: Story<ISearchFieldProps> = (args) => {
 	const [state, setState] = useState('');
 
@@ -39,17 +37,14 @@ export const Interactive: Story<ISearchFieldProps> = (args) => {
 	);
 };
 
-/* Placeholder */
 export const Placeholder: Story<ISearchFieldProps> = (args) => {
 	return <SearchField {...args} placeholder='Name/ID' />;
 };
 
-/* Disabled */
 export const Disabled: Story<ISearchFieldProps> = (args) => {
 	return <SearchField {...args} isDisabled />;
 };
 
-/* Custom Icon */
 export const CustomIcon: Story<ISearchFieldProps> = (args) => {
 	return (
 		<SearchField {...args}>
@@ -60,7 +55,6 @@ export const CustomIcon: Story<ISearchFieldProps> = (args) => {
 	);
 };
 
-/* Custom Text Field */
 export const CustomTextField: Story<ISearchFieldProps> = (args) => {
 	const [state, setState] = useState({
 		value: '',
@@ -90,7 +84,6 @@ export const CustomTextField: Story<ISearchFieldProps> = (args) => {
 	);
 };
 
-/* Valid Search */
 export const ValidSearch: Story<ISearchFieldProps> = (args) => {
 	const [state, setState] = useState({
 		value: '',
@@ -110,7 +103,6 @@ export const ValidSearch: Story<ISearchFieldProps> = (args) => {
 	);
 };
 
-/* Props */
 export const Props: Story<ISearchFieldProps> = (args) => {
 	return (
 		<div>
@@ -135,7 +127,6 @@ export const Props: Story<ISearchFieldProps> = (args) => {
 	);
 };
 
-/* Debounced */
 export const Debounced: Story<ISearchFieldProps> = (args) => {
 	const [value, setValue] = useState('foo');
 
@@ -157,6 +148,7 @@ export const Debounced: Story<ISearchFieldProps> = (args) => {
 			</div>
 
 			<Button
+				{...Button.defaultProps}
 				onClick={() => {
 					setValue('foo');
 				}}
