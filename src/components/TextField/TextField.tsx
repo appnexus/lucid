@@ -373,7 +373,7 @@ class TextField extends React.Component<
 		const { value } = this.state;
 
 		const finalProps = {
-			..._.omit(passThroughs, nonPassThroughs),
+			...(_.omit(passThroughs, nonPassThroughs) as any),
 			className: cx(
 				'&',
 				{

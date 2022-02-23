@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Story, Meta } from '@storybook/react';
 
 import TextField, { ITextFieldProps } from './TextField';
-import TextFieldPlain from './TextFieldPlain';
 import Button from '../Button/Button';
 
 export default {
@@ -40,12 +39,12 @@ export const Basic: Story<ITextFieldProps> = (args) => {
 export const Plain: Story<ITextFieldProps> = (args) => {
 	return (
 		<div>
-			<TextFieldPlain
+			<TextField
 				{...args}
 				style={style}
 				placeholder='Plain Textfield example'
 			/>
-			<TextFieldPlain
+			<TextField
 				{...args}
 				isMultiLine
 				rows={5}

@@ -108,12 +108,15 @@ exports[`TextField [common] example testing should match snapshot(s) for OnSubmi
 exports[`TextField [common] example testing should match snapshot(s) for Plain 1`] = `
 <div>
   <input
-    class="lucid-TextFieldPlain lucid-TextFieldPlain-is-single-line"
+    class="lucid-TextField lucid-TextField-is-single-line"
     placeholder="Plain Textfield example"
+    rows="5"
     style="margin-bottom:10px"
+    type="text"
+    value=""
   />
   <textarea
-    class="lucid-TextFieldPlain lucid-TextFieldPlain-is-multi-line"
+    class="lucid-TextField lucid-TextField-is-multi-line"
     placeholder="Plain Textfield multiline example"
     rows="5"
     style="margin-bottom:10px"
