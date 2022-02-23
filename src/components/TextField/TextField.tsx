@@ -92,6 +92,9 @@ export interface ITextFieldProps extends StandardProps {
 		flowing in to the component until the timer has elapsed.  This was
 		heavily inspired by the [lazy-input](https:/docs.npmjs.com/package/lazy-input) component. */
 	lazyLevel?: number;
+
+	/** A reference to the node accessible at the current attribute of the ref. */
+	ref?: any;
 }
 
 export type ITextFieldPropsWithPassThroughs = Overwrite<
@@ -120,6 +123,7 @@ const nonPassThroughs = [
 	'value',
 	'debounceLevel',
 	'lazyLevel',
+	'ref',
 	'initialState',
 	'callbackId',
 	'children',
@@ -213,6 +217,15 @@ class TextField extends React.Component<
 			[lazy-input](https:/docs.npmjs.com/package/lazy-input) component.
 		*/
 		lazyLevel: number,
+
+		/**
+			 When a ref is passed to an element in render, 
+		 	a reference to the node becomes accessible at the current attribute of the ref.
+		 */
+		ref: oneOfType([
+			PropTypes.func,
+			PropTypes.shape({ current: PropTypes.elementType }),
+		]),
 	};
 
 	state = {

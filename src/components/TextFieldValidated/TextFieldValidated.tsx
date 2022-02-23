@@ -8,7 +8,7 @@ import TextField, {
 } from '../TextField/TextField';
 import reducers from '../TextField/TextField.reducers';
 import { lucidClassNames } from '../../util/style-helpers';
-import { findTypes, omitProps } from '../../util/component-types';
+import { findTypes } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-TextFieldValidated');
 
@@ -25,6 +25,9 @@ TextFieldValidatedError.peek = {
 	description: `Content that will be displayed as an error message.`,
 };
 TextFieldValidatedError.propName = 'Error';
+
+/** TODO: Remove the nonPassThroughs when the component is converted to a functional component */
+const nonPassThroughs = ['style', 'className', 'Error', 'Info', 'initialState'];
 
 export interface ITextFieldValidatedProps
 	extends ITextFieldPropsWithPassThroughs {
@@ -104,12 +107,7 @@ class TextFieldValidated extends React.Component<
 				Error={childProps}
 			>
 				<TextField
-					{...omitProps(
-						passThroughs,
-						undefined,
-						_.keys(TextFieldValidated.propTypes),
-						false
-					)}
+					{...(_.omit(passThroughs, nonPassThroughs) as any)}
 					ref={this.textFieldRef}
 				/>
 			</Validation>

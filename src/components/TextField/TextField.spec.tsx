@@ -22,6 +22,56 @@ describe('TextField', () => {
 		},
 	});
 
+	describe('props', () => {
+		it('should pass though some props to its underlying textarea or input element', () => {
+			//const onBlurFunc = () => {};
+			const style = { margin: 10 };
+			const wrapper = shallow(
+				<TextField
+					{...defaultProps}
+					isDisabled={true}
+					style={style}
+					rows={10}
+					value='test'
+				/>
+			);
+			console.warn(wrapper.debug());
+			assert.strictEqual(wrapper.find('input').prop('disabled'), true);
+			assert.strictEqual(wrapper.find('input').prop('style'), style);
+			assert.strictEqual(wrapper.find('input').prop('rows'), 10);
+			assert.strictEqual(wrapper.find('input').prop('value'), 'test');
+		});
+
+		it('should not pass though several props to its underlying textarea or input element', () => {
+			const nonFinalProps = [
+				'onChangeDebounced',
+				'onSubmit',
+				'debounceLevel',
+				'lazyLevel',
+				'ref',
+				'initialState',
+				'callbackId',
+				'children',
+			];
+			const refValue = {};
+			const onChangeDebounced = () => {};
+			const onSubmit = () => {};
+			const wrapper = shallow(
+				<TextField
+					{...defaultProps}
+					ref={refValue}
+					callbackId={0}
+					onChangeDebounced={onChangeDebounced}
+					onSubmit={onSubmit}
+					lazyLevel={500}
+				/>
+			);
+			nonFinalProps.forEach((nonFinalProp) => {
+				assert.strictEqual(wrapper.find('input').prop(nonFinalProp), undefined);
+			});
+		});
+	});
+
 	it('should correctly debounce onChangeDebounced [mostly stable]', (done) => {
 		const event = {
 			target: {
