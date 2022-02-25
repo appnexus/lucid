@@ -41,6 +41,56 @@ export const Stateful: Story<IRadioGroupProps> = (args) => {
 	);
 };
 
+/* OnSelect */
+export const OnSelect: Story<IRadioGroupProps> = (args) => {
+	const style = {
+		marginRight: '13px',
+	};
+
+	const handleSelect = (...args) => {
+		console.log({ args });
+	};
+
+	return (
+		<RadioGroup {...args} isDisabled={false} onSelect={handleSelect}>
+			<RadioGroup.RadioButton style={style}>
+				<RadioGroup.Label>Alvin</RadioGroup.Label>
+			</RadioGroup.RadioButton>
+			<RadioGroup.RadioButton style={style}>
+				<RadioGroup.Label>Simon</RadioGroup.Label>
+			</RadioGroup.RadioButton>
+			<RadioGroup.RadioButton style={style}>
+				<RadioGroup.Label>Theodore</RadioGroup.Label>
+			</RadioGroup.RadioButton>
+		</RadioGroup>
+	);
+};
+
+/* OnSelect On Child */
+export const OnSelectOnChild: Story<IRadioGroupProps> = (args) => {
+	const style = {
+		marginRight: '13px',
+	};
+
+	const handleSelect = (...args) => {
+		console.log({ args });
+	};
+
+	return (
+		<RadioGroup {...args} isDisabled={false}>
+			<RadioGroup.RadioButton style={style} onSelect={handleSelect}>
+				<RadioGroup.Label>Alvin</RadioGroup.Label>
+			</RadioGroup.RadioButton>
+			<RadioGroup.RadioButton style={style} onSelect={handleSelect}>
+				<RadioGroup.Label>Simon</RadioGroup.Label>
+			</RadioGroup.RadioButton>
+			<RadioGroup.RadioButton style={style} onSelect={handleSelect}>
+				<RadioGroup.Label>Theodore</RadioGroup.Label>
+			</RadioGroup.RadioButton>
+		</RadioGroup>
+	);
+};
+
 /* Nested Select */
 export const NestedSelect: Story<IRadioGroupProps> = (args) => {
 	const style = {

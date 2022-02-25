@@ -7,12 +7,14 @@ import { shallow, mount } from 'enzyme';
 
 import { ButtonGroupDumb as ButtonGroup } from './ButtonGroup';
 
+const defaultProps = ButtonGroup.defaultProps;
+
 describe('ButtonGroup', () => {
 	common(ButtonGroup);
 
 	it('prop children', () => {
 		const wrapper = shallow(
-			<ButtonGroup>
+			<ButtonGroup {...defaultProps}>
 				<ButtonGroup.Button />
 				<div className='jim' />
 			</ButtonGroup>
@@ -23,7 +25,7 @@ describe('ButtonGroup', () => {
 
 	it('prop selectedIndices', () => {
 		const wrapper = shallow(
-			<ButtonGroup selectedIndices={[1]}>
+			<ButtonGroup {...defaultProps} selectedIndices={[1]}>
 				<ButtonGroup.Button />
 				<ButtonGroup.Button />
 			</ButtonGroup>
@@ -37,7 +39,7 @@ describe('ButtonGroup', () => {
 	it('prop onSelect', () => {
 		const onSelect: any = sinon.spy();
 		const wrapper = mount(
-			<ButtonGroup onSelect={onSelect}>
+			<ButtonGroup {...defaultProps} onSelect={onSelect}>
 				<ButtonGroup.Button />
 				<ButtonGroup.Button />
 			</ButtonGroup>
@@ -48,10 +50,35 @@ describe('ButtonGroup', () => {
 		assert.strictEqual(onSelect.args[0][0], 1);
 	});
 
+	it('tests onSelect props shape', () => {
+		const onSelect: any = jest.fn();
+		const wrapper = mount(
+			<ButtonGroup {...defaultProps} onSelect={onSelect}>
+				<ButtonGroup.Button data-test-name='zero' />
+				<ButtonGroup.Button data-test-name='one' />
+				<ButtonGroup.Button data-test-name='two' />
+			</ButtonGroup>
+		);
+
+		wrapper.find('button[data-test-name="one"]').simulate('click');
+
+		expect(onSelect).toBeCalledWith(1, {
+			event: expect.anything(),
+			props: {
+				'data-test-name': 'one',
+				hasOnlyIcon: false,
+				isActive: false,
+				isDisabled: false,
+				onClick: expect.anything(),
+				type: 'button',
+			},
+		});
+	});
+
 	it('prop onSelect on children', () => {
 		const onClick = sinon.spy();
 		const wrapper = mount(
-			<ButtonGroup>
+			<ButtonGroup {...defaultProps}>
 				<ButtonGroup.Button />
 				<ButtonGroup.Button onClick={onClick} />
 			</ButtonGroup>

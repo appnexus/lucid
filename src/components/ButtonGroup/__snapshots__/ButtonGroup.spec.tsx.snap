@@ -16,7 +16,7 @@ exports[`ButtonGroup [common] example testing should match snapshot(s) for Basic
     </span>
   </button>
   <button
-    class="lucid-Button lucid-Button-is-active"
+    class="lucid-Button"
     style="width:100px"
     type="button"
   >
@@ -27,7 +27,7 @@ exports[`ButtonGroup [common] example testing should match snapshot(s) for Basic
     </span>
   </button>
   <button
-    class="lucid-Button lucid-Button-is-active"
+    class="lucid-Button"
     style="width:100px"
     type="button"
   >
@@ -130,7 +130,7 @@ exports[`ButtonGroup [common] example testing should match snapshot(s) for State
     <span
       class="lucid-Button-content"
     >
-      Zero
+      Zero TEST
     </span>
   </button>
   <button

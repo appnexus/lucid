@@ -21,7 +21,7 @@ export default {
 export const Basic: Story<IButtonGroupProps> = (args) => {
 	const buttonStyle = { width: '100px' };
 	return (
-		<ButtonGroup {...args} selectedIndices={[1, 2]}>
+		<ButtonGroup {...args}>
 			<ButtonGroup.Button style={buttonStyle}>Smol</ButtonGroup.Button>
 			<ButtonGroup.Button style={buttonStyle}>Lonnnnnnnng</ButtonGroup.Button>
 			<ButtonGroup.Button style={buttonStyle}>Medium</ButtonGroup.Button>
@@ -31,15 +31,22 @@ export const Basic: Story<IButtonGroupProps> = (args) => {
 
 /** Stateful */
 export const Stateful: Story<IButtonGroupProps> = (args) => {
+	const handleSelect: any = (idx, evt, props) => {
+		console.log(idx, evt, props);
+	};
+
 	return (
-		<ButtonGroup {...args}>
-			<ButtonGroup.Button>Zero</ButtonGroup.Button>
+		<ButtonGroup {...args} onSelect={handleSelect}>
+			<ButtonGroup.Button>Zero TEST</ButtonGroup.Button>
 			<ButtonGroup.Button>One</ButtonGroup.Button>
 			<ButtonGroup.Button>Two</ButtonGroup.Button>
 			<ButtonGroup.Button>Three</ButtonGroup.Button>
 		</ButtonGroup>
 	);
 };
+// Stateful.args = {
+// 	selectedIndices: [2]
+// }
 
 /** Stateless */
 export const Stateless: Story<IButtonGroupProps> = (args) => {

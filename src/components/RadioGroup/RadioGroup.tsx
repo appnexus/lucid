@@ -117,12 +117,16 @@ const RadioGroup = (props: IRadioGroupProps) => {
 			);
 			// If the `RadioGroup.RadioButton` child has an `onSelect` prop that is
 			// a function, call that prior to calling the group's `onSelect` prop.
+
 			if (_.isFunction(clickedRadioButtonProps.onSelect)) {
 				clickedRadioButtonProps.onSelect(isSelected, {
 					event,
 					props: childProps,
 				});
 			}
+
+			//console.log('props.onSelect', props.onSelect);
+
 			props.onSelect(selectedIndex, { event, props: childProps });
 		}
 	};
@@ -160,7 +164,7 @@ const RadioGroup = (props: IRadioGroupProps) => {
 						key={index}
 						callbackId={index}
 						name={name}
-						onSelect={(event, props, isSelected) =>
+						onSelect={(isSelected, { event, props }) =>
 							handleSelected(event, props, isSelected, index)
 						}
 						Label={_.get(

@@ -247,5 +247,33 @@ describe('RadioGroup', () => {
 			wrapper.childAt(0).childAt(1).childAt(0).childAt(0).simulate('click');
 			assert(childOnSelect.calledBefore(onSelect));
 		});
+
+		it.only('tests onSelect props shape', () => {
+			const onSelect: any = jest.fn();
+			const wrapper = mount(
+				<RadioGroup {...defaultProps} onSelect={onSelect}>
+					<RadioGroup.RadioButton data-test-name='zero' />
+					<RadioGroup.RadioButton data-test-name='one' />
+					<RadioGroup.RadioButton data-test-name='two' />
+				</RadioGroup>
+			);
+
+			console.log(wrapper.debug());
+			wrapper
+				.find('RadioButton[data-test-name="one"] > span')
+				.simulate('click');
+
+			expect(onSelect).toBeCalledWith(1, {
+				event: expect.anything(),
+				props: {
+					'data-test-name': 'one',
+					hasOnlyIcon: false,
+					isActive: false,
+					isDisabled: false,
+					onClick: expect.anything(),
+					type: 'button',
+				},
+			});
+		});
 	});
 });
