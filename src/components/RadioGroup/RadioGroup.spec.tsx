@@ -7,8 +7,10 @@ import { common } from '../../util/generic-tests';
 
 import { RadioGroupDumb as RadioGroup } from './RadioGroup';
 import RadioButtonLabeled from '../RadioButtonLabeled/RadioButtonLabeled';
+import RadioButton from '../RadioButton/RadioButton';
 
 const defaultProps = RadioGroup.defaultProps;
+const radioButtonDefaultProps = RadioButton.defaultProps;
 
 describe('RadioGroup', () => {
 	common(RadioGroup);
@@ -19,9 +21,9 @@ describe('RadioGroup', () => {
 				const name = 'radio';
 				const wrapper = shallow(
 					<RadioGroup {...defaultProps} name={name}>
-						<RadioGroup.RadioButton />
-						<RadioGroup.RadioButton />
-						<RadioGroup.RadioButton />
+						<RadioGroup.RadioButton {...radioButtonDefaultProps} />
+						<RadioGroup.RadioButton {...radioButtonDefaultProps} />
+						<RadioGroup.RadioButton {...radioButtonDefaultProps} />
 					</RadioGroup>
 				);
 
@@ -33,9 +35,9 @@ describe('RadioGroup', () => {
 			it('defaults to a string that is passed along to the children.', () => {
 				const wrapper = mount(
 					<RadioGroup {...defaultProps}>
-						<RadioGroup.RadioButton />
-						<RadioGroup.RadioButton />
-						<RadioGroup.RadioButton />
+						<RadioGroup.RadioButton {...radioButtonDefaultProps} />
+						<RadioGroup.RadioButton {...radioButtonDefaultProps} />
+						<RadioGroup.RadioButton {...radioButtonDefaultProps} />
 					</RadioGroup>
 				);
 				const name = wrapper.first().prop('name');
@@ -50,9 +52,9 @@ describe('RadioGroup', () => {
 			it('should set `isDisabled` to true for all child radio buttons', () => {
 				const wrapper = shallow(
 					<RadioGroup {...defaultProps} isDisabled={true}>
-						<RadioGroup.RadioButton />
-						<RadioGroup.RadioButton />
-						<RadioGroup.RadioButton />
+						<RadioGroup.RadioButton {...radioButtonDefaultProps} />
+						<RadioGroup.RadioButton {...radioButtonDefaultProps} />
+						<RadioGroup.RadioButton {...radioButtonDefaultProps} />
 					</RadioGroup>
 				);
 				wrapper.find(RadioButtonLabeled).forEach((node) => {
@@ -63,9 +65,12 @@ describe('RadioGroup', () => {
 			it('should set `isDisabled` to true for all child radio buttons even if the child radio buttons have isDisabled set as false', () => {
 				const wrapper = shallow(
 					<RadioGroup {...defaultProps} isDisabled={true}>
-						<RadioGroup.RadioButton />
-						<RadioGroup.RadioButton isDisabled={false} />
-						<RadioGroup.RadioButton />
+						<RadioGroup.RadioButton {...radioButtonDefaultProps} />
+						<RadioGroup.RadioButton
+							{...radioButtonDefaultProps}
+							isDisabled={false}
+						/>
+						<RadioGroup.RadioButton {...radioButtonDefaultProps} />
 					</RadioGroup>
 				);
 				wrapper.find(RadioButtonLabeled).forEach((node) => {
@@ -76,9 +81,12 @@ describe('RadioGroup', () => {
 			it('should allow specific radio buttons to be disabled', () => {
 				const wrapper = shallow(
 					<RadioGroup {...defaultProps} isDisabled={false}>
-						<RadioGroup.RadioButton />
-						<RadioGroup.RadioButton isDisabled={true} />
-						<RadioGroup.RadioButton />
+						<RadioGroup.RadioButton {...radioButtonDefaultProps} />
+						<RadioGroup.RadioButton
+							{...radioButtonDefaultProps}
+							isDisabled={true}
+						/>
+						<RadioGroup.RadioButton {...radioButtonDefaultProps} />
 					</RadioGroup>
 				);
 
@@ -92,9 +100,9 @@ describe('RadioGroup', () => {
 			it('sets the `isSelected` prop of the child radio button at the matching index to true...', () => {
 				const wrapper = shallow(
 					<RadioGroup {...defaultProps} selectedIndex={2}>
-						<RadioGroup.RadioButton />
-						<RadioGroup.RadioButton />
-						<RadioGroup.RadioButton />
+						<RadioGroup.RadioButton {...radioButtonDefaultProps} />
+						<RadioGroup.RadioButton {...radioButtonDefaultProps} />
+						<RadioGroup.RadioButton {...radioButtonDefaultProps} />
 					</RadioGroup>
 				);
 				const childNodes = wrapper.find(RadioButtonLabeled);
@@ -107,9 +115,15 @@ describe('RadioGroup', () => {
 			it('...except when a child component already has an explicitly defined `isSelected` prop which takes precedence.', () => {
 				const wrapper = shallow(
 					<RadioGroup {...defaultProps} selectedIndex={2}>
-						<RadioGroup.RadioButton isSelected={true} />
-						<RadioGroup.RadioButton isSelected={true} />
-						<RadioGroup.RadioButton />
+						<RadioGroup.RadioButton
+							{...radioButtonDefaultProps}
+							isSelected={true}
+						/>
+						<RadioGroup.RadioButton
+							{...radioButtonDefaultProps}
+							isSelected={true}
+						/>
+						<RadioGroup.RadioButton {...radioButtonDefaultProps} />
 					</RadioGroup>
 				);
 				const childNodes = wrapper.find(RadioButtonLabeled);
@@ -122,9 +136,9 @@ describe('RadioGroup', () => {
 			it('defaults to 0.', () => {
 				const wrapper = shallow(
 					<RadioGroup {...defaultProps}>
-						<RadioGroup.RadioButton />
-						<RadioGroup.RadioButton />
-						<RadioGroup.RadioButton />
+						<RadioGroup.RadioButton {...radioButtonDefaultProps} />
+						<RadioGroup.RadioButton {...radioButtonDefaultProps} />
+						<RadioGroup.RadioButton {...radioButtonDefaultProps} />
 					</RadioGroup>
 				);
 				const childNodes = wrapper.find(RadioButtonLabeled);
@@ -142,9 +156,9 @@ describe('RadioGroup', () => {
 						{...defaultProps}
 						{...{ foo: 1, bar: 2, baz: 3, qux: 4, quux: 5 }}
 					>
-						<RadioGroup.RadioButton />
-						<RadioGroup.RadioButton />
-						<RadioGroup.RadioButton />
+						<RadioGroup.RadioButton {...radioButtonDefaultProps} />
+						<RadioGroup.RadioButton {...radioButtonDefaultProps} />
+						<RadioGroup.RadioButton {...radioButtonDefaultProps} />
 					</RadioGroup>
 				);
 				const rootProps = _.keys(wrapper.first().props());
@@ -162,13 +176,13 @@ describe('RadioGroup', () => {
 		it('passes its children through as the `Label` prop for the corresponding `RadioButtonLabeled`.', () => {
 			const wrapper = shallow(
 				<RadioGroup {...defaultProps}>
-					<RadioGroup.RadioButton>
+					<RadioGroup.RadioButton {...radioButtonDefaultProps}>
 						<RadioGroup.Label>foo</RadioGroup.Label>
 					</RadioGroup.RadioButton>
-					<RadioGroup.RadioButton>
+					<RadioGroup.RadioButton {...radioButtonDefaultProps}>
 						<RadioGroup.Label>bar</RadioGroup.Label>
 					</RadioGroup.RadioButton>
-					<RadioGroup.RadioButton>
+					<RadioGroup.RadioButton {...radioButtonDefaultProps}>
 						<RadioGroup.Label>
 							<span>baz</span>
 							<span>qux</span>
@@ -190,7 +204,7 @@ describe('RadioGroup', () => {
 	it('should handle multiple children', () => {
 		const wrapper = mount(
 			<RadioGroup {...defaultProps}>
-				<RadioGroup.RadioButton>
+				<RadioGroup.RadioButton {...radioButtonDefaultProps}>
 					<RadioGroup.Label>
 						<span id='foo'>foo</span>
 						<span id='bar'>bar</span>
@@ -208,9 +222,9 @@ describe('RadioGroup', () => {
 			const onSelect: any = sinon.spy();
 			const wrapper = mount(
 				<RadioGroup {...defaultProps} onSelect={onSelect}>
-					<RadioGroup.RadioButton />
-					<RadioGroup.RadioButton />
-					<RadioGroup.RadioButton />
+					<RadioGroup.RadioButton {...radioButtonDefaultProps} />
+					<RadioGroup.RadioButton {...radioButtonDefaultProps} />
+					<RadioGroup.RadioButton {...radioButtonDefaultProps} />
 				</RadioGroup>
 			);
 
@@ -222,9 +236,9 @@ describe('RadioGroup', () => {
 			const onSelect: any = sinon.spy();
 			const wrapper = mount(
 				<RadioGroup {...defaultProps} onSelect={onSelect}>
-					<RadioGroup.RadioButton />
-					<RadioGroup.RadioButton />
-					<RadioGroup.RadioButton />
+					<RadioGroup.RadioButton {...radioButtonDefaultProps} />
+					<RadioGroup.RadioButton {...radioButtonDefaultProps} />
+					<RadioGroup.RadioButton {...radioButtonDefaultProps} />
 				</RadioGroup>
 			);
 
@@ -238,9 +252,12 @@ describe('RadioGroup', () => {
 			const onSelect: any = sinon.spy();
 			const wrapper = mount(
 				<RadioGroup {...defaultProps} onSelect={onSelect}>
-					<RadioGroup.RadioButton />
-					<RadioGroup.RadioButton onSelect={childOnSelect} />
-					<RadioGroup.RadioButton />
+					<RadioGroup.RadioButton {...radioButtonDefaultProps} />
+					<RadioGroup.RadioButton
+						{...radioButtonDefaultProps}
+						onSelect={childOnSelect}
+					/>
+					<RadioGroup.RadioButton {...radioButtonDefaultProps} />
 				</RadioGroup>
 			);
 
@@ -248,32 +265,33 @@ describe('RadioGroup', () => {
 			assert(childOnSelect.calledBefore(onSelect));
 		});
 
-		it.only('tests onSelect props shape', () => {
+		it('tests that the correct onSelect is called', () => {
 			const onSelect: any = jest.fn();
 			const wrapper = mount(
 				<RadioGroup {...defaultProps} onSelect={onSelect}>
-					<RadioGroup.RadioButton data-test-name='zero' />
-					<RadioGroup.RadioButton data-test-name='one' />
-					<RadioGroup.RadioButton data-test-name='two' />
+					<RadioGroup.RadioButton
+						{...radioButtonDefaultProps}
+						isDisabled={false}
+						isSelected={false}
+						onSelect={_.noop}
+						data-test-name='zero'
+					/>
+					<RadioGroup.RadioButton
+						data-test-name='one'
+						{...radioButtonDefaultProps}
+					/>
+					<RadioGroup.RadioButton
+						data-test-name='two'
+						{...radioButtonDefaultProps}
+					/>
 				</RadioGroup>
 			);
 
-			console.log(wrapper.debug());
 			wrapper
 				.find('RadioButton[data-test-name="one"] > span')
 				.simulate('click');
 
-			expect(onSelect).toBeCalledWith(1, {
-				event: expect.anything(),
-				props: {
-					'data-test-name': 'one',
-					hasOnlyIcon: false,
-					isActive: false,
-					isDisabled: false,
-					onClick: expect.anything(),
-					type: 'button',
-				},
-			});
+			expect(onSelect).toBeCalledTimes(1);
 		});
 	});
 });

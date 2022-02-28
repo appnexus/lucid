@@ -32,21 +32,18 @@ export const Basic: Story<IButtonGroupProps> = (args) => {
 /** Stateful */
 export const Stateful: Story<IButtonGroupProps> = (args) => {
 	const handleSelect: any = (idx, evt, props) => {
-		console.log(idx, evt, props);
+		console.warn(idx, evt, props);
 	};
 
 	return (
 		<ButtonGroup {...args} onSelect={handleSelect}>
-			<ButtonGroup.Button>Zero TEST</ButtonGroup.Button>
+			<ButtonGroup.Button>Zero</ButtonGroup.Button>
 			<ButtonGroup.Button>One</ButtonGroup.Button>
 			<ButtonGroup.Button>Two</ButtonGroup.Button>
 			<ButtonGroup.Button>Three</ButtonGroup.Button>
 		</ButtonGroup>
 	);
 };
-// Stateful.args = {
-// 	selectedIndices: [2]
-// }
 
 /** Stateless */
 export const Stateless: Story<IButtonGroupProps> = (args) => {
@@ -83,12 +80,18 @@ export const Disabled: Story<IButtonGroupProps> = (args) => {
 
 /** On Click */
 export const OnClick: Story<IButtonGroupProps> = (args) => {
+	const handleClick = (btn) => {
+		alert(btn);
+	};
+
 	return (
 		<ButtonGroup {...args}>
-			<ButtonGroup.Button onClick={() => alert('zero')}>
+			<ButtonGroup.Button onClick={() => handleClick('zero')}>
 				Zero
 			</ButtonGroup.Button>
-			<ButtonGroup.Button onClick={() => alert('one')}>One</ButtonGroup.Button>
+			<ButtonGroup.Button onClick={() => handleClick('one')}>
+				One
+			</ButtonGroup.Button>
 		</ButtonGroup>
 	);
 };

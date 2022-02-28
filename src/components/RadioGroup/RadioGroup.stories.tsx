@@ -4,6 +4,7 @@ import { Meta, Story } from '@storybook/react';
 import RadioGroup, { IRadioGroupProps } from './RadioGroup';
 import SingleSelect from '../SingleSelect/SingleSelect';
 import RadioButtonLabeled from '../RadioButtonLabeled/RadioButtonLabeled';
+import RadioButton from '../RadioButton/RadioButton';
 
 export default {
 	title: 'Controls/RadioGroup',
@@ -20,21 +21,24 @@ export default {
 	},
 } as Meta;
 
+const style = {
+	marginRight: '13px',
+};
+
+const radioButtonDefaultProps = RadioButton.defaultProps;
+const singleSelectDefaultProps = SingleSelect.defaultProps;
+
 /* Stateful */
 export const Stateful: Story<IRadioGroupProps> = (args) => {
-	const style = {
-		marginRight: '13px',
-	};
-
 	return (
 		<RadioGroup {...args} isDisabled={false}>
-			<RadioGroup.RadioButton style={style}>
+			<RadioGroup.RadioButton {...radioButtonDefaultProps} style={style}>
 				<RadioGroup.Label>Alvin</RadioGroup.Label>
 			</RadioGroup.RadioButton>
-			<RadioGroup.RadioButton style={style}>
+			<RadioGroup.RadioButton {...radioButtonDefaultProps} style={style}>
 				<RadioGroup.Label>Simon</RadioGroup.Label>
 			</RadioGroup.RadioButton>
-			<RadioGroup.RadioButton style={style}>
+			<RadioGroup.RadioButton {...radioButtonDefaultProps} style={style}>
 				<RadioGroup.Label>Theodore</RadioGroup.Label>
 			</RadioGroup.RadioButton>
 		</RadioGroup>
@@ -43,23 +47,19 @@ export const Stateful: Story<IRadioGroupProps> = (args) => {
 
 /* OnSelect */
 export const OnSelect: Story<IRadioGroupProps> = (args) => {
-	const style = {
-		marginRight: '13px',
-	};
-
 	const handleSelect = (...args) => {
-		console.log({ args });
+		console.warn({ args });
 	};
 
 	return (
 		<RadioGroup {...args} isDisabled={false} onSelect={handleSelect}>
-			<RadioGroup.RadioButton style={style}>
+			<RadioGroup.RadioButton {...radioButtonDefaultProps} style={style}>
 				<RadioGroup.Label>Alvin</RadioGroup.Label>
 			</RadioGroup.RadioButton>
-			<RadioGroup.RadioButton style={style}>
+			<RadioGroup.RadioButton {...radioButtonDefaultProps} style={style}>
 				<RadioGroup.Label>Simon</RadioGroup.Label>
 			</RadioGroup.RadioButton>
-			<RadioGroup.RadioButton style={style}>
+			<RadioGroup.RadioButton {...radioButtonDefaultProps} style={style}>
 				<RadioGroup.Label>Theodore</RadioGroup.Label>
 			</RadioGroup.RadioButton>
 		</RadioGroup>
@@ -68,23 +68,31 @@ export const OnSelect: Story<IRadioGroupProps> = (args) => {
 
 /* OnSelect On Child */
 export const OnSelectOnChild: Story<IRadioGroupProps> = (args) => {
-	const style = {
-		marginRight: '13px',
-	};
-
 	const handleSelect = (...args) => {
-		console.log({ args });
+		console.warn({ args });
 	};
 
 	return (
 		<RadioGroup {...args} isDisabled={false}>
-			<RadioGroup.RadioButton style={style} onSelect={handleSelect}>
+			<RadioGroup.RadioButton
+				{...radioButtonDefaultProps}
+				style={style}
+				onSelect={handleSelect}
+			>
 				<RadioGroup.Label>Alvin</RadioGroup.Label>
 			</RadioGroup.RadioButton>
-			<RadioGroup.RadioButton style={style} onSelect={handleSelect}>
+			<RadioGroup.RadioButton
+				{...radioButtonDefaultProps}
+				style={style}
+				onSelect={handleSelect}
+			>
 				<RadioGroup.Label>Simon</RadioGroup.Label>
 			</RadioGroup.RadioButton>
-			<RadioGroup.RadioButton style={style} onSelect={handleSelect}>
+			<RadioGroup.RadioButton
+				{...radioButtonDefaultProps}
+				style={style}
+				onSelect={handleSelect}
+			>
 				<RadioGroup.Label>Theodore</RadioGroup.Label>
 			</RadioGroup.RadioButton>
 		</RadioGroup>
@@ -93,10 +101,6 @@ export const OnSelectOnChild: Story<IRadioGroupProps> = (args) => {
 
 /* Nested Select */
 export const NestedSelect: Story<IRadioGroupProps> = (args) => {
-	const style = {
-		marginRight: '15px',
-	};
-
 	const subSelection = {
 		display: 'block',
 		marginTop: '13px',
@@ -114,10 +118,10 @@ export const NestedSelect: Story<IRadioGroupProps> = (args) => {
 
 	return (
 		<RadioGroup {...args}>
-			<RadioGroup.RadioButton style={style}>
+			<RadioGroup.RadioButton {...radioButtonDefaultProps} style={style}>
 				<RadioGroup.Label>Alvin</RadioGroup.Label>
 			</RadioGroup.RadioButton>
-			<RadioGroup.RadioButton style={style}>
+			<RadioGroup.RadioButton {...radioButtonDefaultProps} style={style}>
 				<RadioGroup.Label>
 					Simon
 					<RadioButtonLabeled
@@ -134,10 +138,10 @@ export const NestedSelect: Story<IRadioGroupProps> = (args) => {
 					</RadioButtonLabeled>
 				</RadioGroup.Label>
 			</RadioGroup.RadioButton>
-			<RadioGroup.RadioButton style={style}>
+			<RadioGroup.RadioButton {...radioButtonDefaultProps} style={style}>
 				<RadioGroup.Label>
 					Theodore
-					<SingleSelect style={subSelection}>
+					<SingleSelect {...singleSelectDefaultProps} style={subSelection}>
 						<SingleSelect.Option>Tall Theo</SingleSelect.Option>
 						<SingleSelect.Option>Short Theo</SingleSelect.Option>
 						<SingleSelect.Option>Average height Theo</SingleSelect.Option>
@@ -150,10 +154,6 @@ export const NestedSelect: Story<IRadioGroupProps> = (args) => {
 
 /* Selected Index As Prop */
 export const SelectedIndexAsProp: Story<IRadioGroupProps> = (args) => {
-	const style = {
-		marginRight: '13px',
-	};
-
 	return (
 		<section>
 			<RadioGroup
@@ -190,10 +190,6 @@ export const SelectedIndexAsProp: Story<IRadioGroupProps> = (args) => {
 
 /* Selected Index From Child */
 export const SelectedIndexFromChild: Story<IRadioGroupProps> = (args) => {
-	const style = {
-		marginRight: '13px',
-	};
-
 	return (
 		<RadioGroup
 			{...args}
@@ -225,10 +221,6 @@ export const SelectedIndexFromChild: Story<IRadioGroupProps> = (args) => {
 
 /* Default Props */
 export const DefaultProps: Story<IRadioGroupProps> = (args) => {
-	const style = {
-		marginRight: '13px',
-	};
-
 	return (
 		<RadioGroup {...args}>
 			<RadioGroup.RadioButton style={style}>

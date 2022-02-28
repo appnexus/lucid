@@ -149,7 +149,7 @@ exports[`RadioGroup [common] example testing should match snapshot(s) for Nested
 >
   <label
     class="lucid-RadioButtonLabeled lucid-RadioButtonLabeled-is-selected"
-    style="margin-right:15px"
+    style="margin-right:13px"
   >
     <span
       class="lucid-RadioButton lucid-RadioButton-is-selected"
@@ -177,7 +177,7 @@ exports[`RadioGroup [common] example testing should match snapshot(s) for Nested
   </label>
   <label
     class="lucid-RadioButtonLabeled"
-    style="margin-right:15px"
+    style="margin-right:13px"
   >
     <span
       class="lucid-RadioButton"
@@ -256,7 +256,7 @@ exports[`RadioGroup [common] example testing should match snapshot(s) for Nested
   </label>
   <label
     class="lucid-RadioButtonLabeled"
-    style="margin-right:15px"
+    style="margin-right:13px"
   >
     <span
       class="lucid-RadioButton"
@@ -314,6 +314,184 @@ exports[`RadioGroup [common] example testing should match snapshot(s) for Nested
           </div>
         </span>
       </div>
+    </div>
+  </label>
+</span>
+`;
+
+exports[`RadioGroup [common] example testing should match snapshot(s) for OnSelect 1`] = `
+<span
+  class="lucid-RadioGroup"
+>
+  <label
+    class="lucid-RadioButtonLabeled lucid-RadioButtonLabeled-is-selected"
+    style="margin-right:13px"
+  >
+    <span
+      class="lucid-RadioButton lucid-RadioButton-is-selected"
+    >
+      <input
+        checked=""
+        class="lucid-RadioButton-native"
+        type="radio"
+      />
+      <span
+        class="lucid-RadioButton-visualization-glow"
+      />
+      <span
+        class="lucid-RadioButton-visualization-container"
+      />
+      <span
+        class="lucid-RadioButton-visualization-dot"
+      />
+    </span>
+    <div
+      class="lucid-RadioButtonLabeled-label"
+    >
+      Alvin
+    </div>
+  </label>
+  <label
+    class="lucid-RadioButtonLabeled"
+    style="margin-right:13px"
+  >
+    <span
+      class="lucid-RadioButton"
+    >
+      <input
+        class="lucid-RadioButton-native"
+        type="radio"
+      />
+      <span
+        class="lucid-RadioButton-visualization-glow"
+      />
+      <span
+        class="lucid-RadioButton-visualization-container"
+      />
+      <span
+        class="lucid-RadioButton-visualization-dot"
+      />
+    </span>
+    <div
+      class="lucid-RadioButtonLabeled-label"
+    >
+      Simon
+    </div>
+  </label>
+  <label
+    class="lucid-RadioButtonLabeled"
+    style="margin-right:13px"
+  >
+    <span
+      class="lucid-RadioButton"
+    >
+      <input
+        class="lucid-RadioButton-native"
+        type="radio"
+      />
+      <span
+        class="lucid-RadioButton-visualization-glow"
+      />
+      <span
+        class="lucid-RadioButton-visualization-container"
+      />
+      <span
+        class="lucid-RadioButton-visualization-dot"
+      />
+    </span>
+    <div
+      class="lucid-RadioButtonLabeled-label"
+    >
+      Theodore
+    </div>
+  </label>
+</span>
+`;
+
+exports[`RadioGroup [common] example testing should match snapshot(s) for OnSelectOnChild 1`] = `
+<span
+  class="lucid-RadioGroup"
+>
+  <label
+    class="lucid-RadioButtonLabeled lucid-RadioButtonLabeled-is-selected"
+    style="margin-right:13px"
+  >
+    <span
+      class="lucid-RadioButton lucid-RadioButton-is-selected"
+    >
+      <input
+        checked=""
+        class="lucid-RadioButton-native"
+        type="radio"
+      />
+      <span
+        class="lucid-RadioButton-visualization-glow"
+      />
+      <span
+        class="lucid-RadioButton-visualization-container"
+      />
+      <span
+        class="lucid-RadioButton-visualization-dot"
+      />
+    </span>
+    <div
+      class="lucid-RadioButtonLabeled-label"
+    >
+      Alvin
+    </div>
+  </label>
+  <label
+    class="lucid-RadioButtonLabeled"
+    style="margin-right:13px"
+  >
+    <span
+      class="lucid-RadioButton"
+    >
+      <input
+        class="lucid-RadioButton-native"
+        type="radio"
+      />
+      <span
+        class="lucid-RadioButton-visualization-glow"
+      />
+      <span
+        class="lucid-RadioButton-visualization-container"
+      />
+      <span
+        class="lucid-RadioButton-visualization-dot"
+      />
+    </span>
+    <div
+      class="lucid-RadioButtonLabeled-label"
+    >
+      Simon
+    </div>
+  </label>
+  <label
+    class="lucid-RadioButtonLabeled"
+    style="margin-right:13px"
+  >
+    <span
+      class="lucid-RadioButton"
+    >
+      <input
+        class="lucid-RadioButton-native"
+        type="radio"
+      />
+      <span
+        class="lucid-RadioButton-visualization-glow"
+      />
+      <span
+        class="lucid-RadioButton-visualization-container"
+      />
+      <span
+        class="lucid-RadioButton-visualization-dot"
+      />
+    </span>
+    <div
+      class="lucid-RadioButtonLabeled-label"
+    >
+      Theodore
     </div>
   </label>
 </span>

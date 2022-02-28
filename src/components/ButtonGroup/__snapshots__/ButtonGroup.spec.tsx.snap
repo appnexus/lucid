@@ -130,7 +130,7 @@ exports[`ButtonGroup [common] example testing should match snapshot(s) for State
     <span
       class="lucid-Button-content"
     >
-      Zero TEST
+      Zero
     </span>
   </button>
   <button

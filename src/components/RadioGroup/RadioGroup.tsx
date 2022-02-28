@@ -124,9 +124,6 @@ const RadioGroup = (props: IRadioGroupProps) => {
 					props: childProps,
 				});
 			}
-
-			//console.log('props.onSelect', props.onSelect);
-
 			props.onSelect(selectedIndex, { event, props: childProps });
 		}
 	};
