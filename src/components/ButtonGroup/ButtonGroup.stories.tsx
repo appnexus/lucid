@@ -86,10 +86,10 @@ export const OnClick: Story<IButtonGroupProps> = (args) => {
 
 	return (
 		<ButtonGroup {...args}>
-			<ButtonGroup.Button onClick={() => handleClick('zero')}>
+			<ButtonGroup.Button onClick={() => handleClick('Zero')}>
 				Zero
 			</ButtonGroup.Button>
-			<ButtonGroup.Button onClick={() => handleClick('one')}>
+			<ButtonGroup.Button onClick={() => handleClick('One')}>
 				One
 			</ButtonGroup.Button>
 		</ButtonGroup>
