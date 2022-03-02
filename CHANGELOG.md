@@ -1,3 +1,9 @@
+## 8.10.0
+
+- #1334 Fix props for `SearchField`
+- #1333 Fix props for `TextFieldValidated`
+- #1331 Add data-test-id to lucid portals
+
 ## 8.9.0
 
 - #1330 Update development dependencies
