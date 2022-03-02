@@ -21,6 +21,17 @@ const cx = lucidClassNames.bind('&-RadioGroup');
 
 const { func, node, number, string, bool } = PropTypes;
 
+/** RadioGroup Label */
+const RadioGroupLabel = (props: IRadioButtonLabeledLabelProps) => null;
+RadioGroupLabel.peek = {
+	description: `Support radio button labels as \`RadioGroup.Label\` component which can be provided as a child of a \`RadioGroup.RadioButton\` component.`,
+};
+RadioGroupLabel.propTypes = {
+	children: node,
+};
+RadioGroupLabel.displayName = 'RadioGroup.Label';
+
+/** RadioGroup */
 export interface IRadioGroupPropsRaw extends StandardProps {
 	/**
 	 * Passed along to the \`RadioGroup.RadioButton\' children whose \'name\'
@@ -67,15 +78,6 @@ export type IRadioGroupProps = Overwrite<
 	>,
 	IRadioGroupPropsRaw
 >;
-
-const RadioGroupLabel = (props: IRadioButtonLabeledLabelProps) => null;
-RadioGroupLabel.peek = {
-	description: `Support radio button labels as \`RadioGroup.Label\` component which can be provided as a child of a \`RadioGroup.RadioButton\` component.`,
-};
-RadioGroupLabel.propTypes = {
-	children: node,
-};
-RadioGroupLabel.displayName = 'RadioGroup.Label';
 
 const defaultProps = {
 	name: uniqueName(`${cx('&')}-`),
@@ -161,9 +163,9 @@ const RadioGroup = (props: IRadioGroupProps) => {
 						key={index}
 						callbackId={index}
 						name={name}
-						onSelect={(isSelected, { event, props }) =>
-							handleSelected(event, props, isSelected, index)
-						}
+						onSelect={(isSelected, { event, props }) => {
+							handleSelected(event, props, isSelected, index);
+						}}
 						Label={_.get(
 							getFirst(radioButtonChildProp, RadioGroup.Label),
 							'props',

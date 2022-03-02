@@ -36,7 +36,7 @@ export interface IRadioButtonPropsRaw extends StandardProps {
 			event,
 			props,
 		}: {
-			event: React.MouseEvent<HTMLInputElement>;
+			event: React.MouseEvent<HTMLSpanElement>;
 			props: IRadioButtonProps;
 		}
 	) => void;
@@ -80,7 +80,7 @@ export const RadioButton = (props: IRadioButtonProps): React.ReactElement => {
 
 	const nativeElement = React.createRef<HTMLInputElement>();
 
-	function handleClicked(event: React.MouseEvent<HTMLInputElement>): void {
+	function handleClicked(event: React.MouseEvent<HTMLSpanElement>): void {
 		if (!isDisabled && !isSelected) {
 			onSelect(true, { event, props });
 			if (nativeElement.current) {
@@ -89,7 +89,7 @@ export const RadioButton = (props: IRadioButtonProps): React.ReactElement => {
 		}
 	}
 
-	function handleSpanClick(e: React.MouseEvent<HTMLInputElement>): void {
+	function handleSpanClick(e: React.MouseEvent<HTMLSpanElement>): void {
 		e.preventDefault();
 	}
 
@@ -103,7 +103,7 @@ export const RadioButton = (props: IRadioButtonProps): React.ReactElement => {
 				},
 				className
 			)}
-			onClick={handleClicked}
+			onClick={(e) => handleClicked(e)}
 			style={style}
 		>
 			<input

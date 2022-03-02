@@ -155,6 +155,8 @@ describe('RadioGroup', () => {
 					<RadioGroup
 						{...defaultProps}
 						{...{ foo: 1, bar: 2, baz: 3, qux: 4, quux: 5 }}
+						className='testClassName'
+						children={{ foo: '0', bar: 1, baz: 2 }}
 					>
 						<RadioGroup.RadioButton {...radioButtonDefaultProps} />
 						<RadioGroup.RadioButton {...radioButtonDefaultProps} />
@@ -163,40 +165,65 @@ describe('RadioGroup', () => {
 				);
 				const rootProps = _.keys(wrapper.first().props());
 
-				// It should pass `foo`, `bar`, `baz`, `qux`, and `quux` through
+				// It should pass 'className' and 'children'
+				// and `foo`, `bar`, `baz`, `qux`, and `quux` asthrough
 				// to the root element.
-				_.forEach(['foo', 'bar', 'baz', 'qux', 'quux'], (prop) => {
-					assert(_.includes(rootProps, prop));
-				});
+				_.forEach(
+					['className', 'children', 'foo', 'bar', 'baz', 'qux', 'quux'],
+					(prop) => {
+						assert(_.includes(rootProps, prop));
+					}
+				);
+			});
+		});
+
+		describe('nonPassThroughs', () => {
+			it('filters out the nonPassThroughs from the component wrapper.', () => {
+				const nonPassThroughs = {
+					children: <RadioGroup.RadioButton {...radioButtonDefaultProps} />,
+					className: 'testClassName',
+					name: 'test-name',
+					onSelect: _.noop,
+					selectedIndex: 1,
+					isDisabled: true,
+				};
+				const combinedProps = { ...defaultProps, ...nonPassThroughs };
+
+				const wrapper = shallow(<RadioGroup {...combinedProps} />);
+
+				expect(wrapper.prop('name')).toBeUndefined;
+				expect(wrapper.prop('onSelect')).toBeUndefined;
+				expect(wrapper.prop('selectedIndex')).toBeUndefined;
+				expect(wrapper.prop('isDisabled')).toBeUndefined;
 			});
 		});
 	});
+});
 
-	describe('RadioGroup.Label', () => {
-		it('passes its children through as the `Label` prop for the corresponding `RadioButtonLabeled`.', () => {
-			const wrapper = shallow(
-				<RadioGroup {...defaultProps}>
-					<RadioGroup.RadioButton {...radioButtonDefaultProps}>
-						<RadioGroup.Label>foo</RadioGroup.Label>
-					</RadioGroup.RadioButton>
-					<RadioGroup.RadioButton {...radioButtonDefaultProps}>
-						<RadioGroup.Label>bar</RadioGroup.Label>
-					</RadioGroup.RadioButton>
-					<RadioGroup.RadioButton {...radioButtonDefaultProps}>
-						<RadioGroup.Label>
-							<span>baz</span>
-							<span>qux</span>
-						</RadioGroup.Label>
-					</RadioGroup.RadioButton>
-				</RadioGroup>
-			);
-			const labels = wrapper.find(RadioGroup.Label);
+describe('RadioGroup.Label', () => {
+	it('passes its children through as the `Label` prop for the corresponding `RadioButtonLabeled`.', () => {
+		const wrapper = shallow(
+			<RadioGroup {...defaultProps}>
+				<RadioGroup.RadioButton {...radioButtonDefaultProps}>
+					<RadioGroup.Label>foo</RadioGroup.Label>
+				</RadioGroup.RadioButton>
+				<RadioGroup.RadioButton {...radioButtonDefaultProps}>
+					<RadioGroup.Label>bar</RadioGroup.Label>
+				</RadioGroup.RadioButton>
+				<RadioGroup.RadioButton {...radioButtonDefaultProps}>
+					<RadioGroup.Label>
+						<span>baz</span>
+						<span>qux</span>
+					</RadioGroup.Label>
+				</RadioGroup.RadioButton>
+			</RadioGroup>
+		);
+		const labels = wrapper.find(RadioGroup.Label);
 
-			assert.strictEqual(labels.at(0).children().text(), 'foo');
-			assert.strictEqual(labels.at(1).children().text(), 'bar');
-			assert.strictEqual(labels.at(2).children().at(0).text(), 'baz');
-			assert.strictEqual(labels.at(2).children().at(1).text(), 'qux');
-		});
+		assert.strictEqual(labels.at(0).children().text(), 'foo');
+		assert.strictEqual(labels.at(1).children().text(), 'bar');
+		assert.strictEqual(labels.at(2).children().at(0).text(), 'baz');
+		assert.strictEqual(labels.at(2).children().at(1).text(), 'qux');
 	});
 });
 
@@ -219,32 +246,61 @@ describe('RadioGroup', () => {
 
 	describe('user selects one of the radio button children', () => {
 		it('calls the function passed in as the `onSelect` prop...', () => {
-			const onSelect: any = sinon.spy();
+			const onSelect: any = jest.fn();
 			const wrapper = mount(
 				<RadioGroup {...defaultProps} onSelect={onSelect}>
-					<RadioGroup.RadioButton {...radioButtonDefaultProps} />
-					<RadioGroup.RadioButton {...radioButtonDefaultProps} />
-					<RadioGroup.RadioButton {...radioButtonDefaultProps} />
+					<RadioGroup.RadioButton
+						{...radioButtonDefaultProps}
+						data-test-name='zero'
+					/>
+					<RadioGroup.RadioButton
+						{...radioButtonDefaultProps}
+						data-test-name='one'
+					/>
+					<RadioGroup.RadioButton
+						{...radioButtonDefaultProps}
+						data-test-name='two'
+					/>
 				</RadioGroup>
 			);
 
-			wrapper.childAt(0).childAt(1).childAt(0).childAt(0).simulate('click');
-			assert(onSelect.calledOnce);
+			wrapper.find('RadioButton[data-test-name="one"]').simulate('click');
+			expect(onSelect).toBeCalledTimes(1);
 		});
 
 		it('...and passes along the index of that child as the first argument and a React synthetic event as the second argument.', () => {
-			const onSelect: any = sinon.spy();
+			const onSelect = jest.fn();
 			const wrapper = mount(
 				<RadioGroup {...defaultProps} onSelect={onSelect}>
-					<RadioGroup.RadioButton {...radioButtonDefaultProps} />
-					<RadioGroup.RadioButton {...radioButtonDefaultProps} />
-					<RadioGroup.RadioButton {...radioButtonDefaultProps} />
+					<RadioGroup.RadioButton
+						{...radioButtonDefaultProps}
+						data-test-name='zero'
+					/>
+					<RadioGroup.RadioButton
+						{...radioButtonDefaultProps}
+						data-test-name='one'
+					/>
+					<RadioGroup.RadioButton
+						{...radioButtonDefaultProps}
+						data-test-name='two'
+					/>
 				</RadioGroup>
 			);
 
-			wrapper.childAt(0).childAt(1).childAt(0).childAt(0).simulate('click');
-			assert.strictEqual(onSelect.args[0][0], 1);
-			assert((_.last(onSelect.args[0]) as any).event);
+			wrapper.find('RadioButton[data-test-name="one"]').simulate('click');
+
+			expect(onSelect).toBeCalledTimes(1);
+			expect(onSelect.mock.calls[0][0]).toBe(1);
+			expect(onSelect.mock.calls[0][1]).toHaveProperty('event');
+			expect(onSelect.mock.calls[0][1]).toHaveProperty('props', {
+				callbackId: 1,
+				className: undefined,
+				'data-test-name': 'one',
+				isDisabled: false,
+				isSelected: false,
+				name: '1-lucid-RadioGroup-1',
+				onSelect: expect.anything(),
+			});
 		});
 
 		it('calls the `onSelect` prop, if a function, of the child prior to calling its own.', () => {
@@ -252,16 +308,23 @@ describe('RadioGroup', () => {
 			const onSelect: any = sinon.spy();
 			const wrapper = mount(
 				<RadioGroup {...defaultProps} onSelect={onSelect}>
-					<RadioGroup.RadioButton {...radioButtonDefaultProps} />
+					<RadioGroup.RadioButton
+						{...radioButtonDefaultProps}
+						data-test-name='zero'
+					/>
 					<RadioGroup.RadioButton
 						{...radioButtonDefaultProps}
 						onSelect={childOnSelect}
+						data-test-name='one'
 					/>
-					<RadioGroup.RadioButton {...radioButtonDefaultProps} />
+					<RadioGroup.RadioButton
+						{...radioButtonDefaultProps}
+						data-test-name='two'
+					/>
 				</RadioGroup>
 			);
 
-			wrapper.childAt(0).childAt(1).childAt(0).childAt(0).simulate('click');
+			wrapper.find('RadioButton[data-test-name="one"]').simulate('click');
 			assert(childOnSelect.calledBefore(onSelect));
 		});
 
@@ -292,6 +355,18 @@ describe('RadioGroup', () => {
 				.simulate('click');
 
 			expect(onSelect).toBeCalledTimes(1);
+			expect(onSelect).toBeCalledWith(1, {
+				event: expect.anything(),
+				props: {
+					callbackId: 1,
+					className: undefined,
+					'data-test-name': 'one',
+					isDisabled: false,
+					isSelected: false,
+					name: '1-lucid-RadioGroup-1',
+					onSelect: expect.anything(),
+				},
+			});
 		});
 	});
 });

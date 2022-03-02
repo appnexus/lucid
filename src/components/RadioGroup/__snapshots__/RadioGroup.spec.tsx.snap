@@ -320,92 +320,97 @@ exports[`RadioGroup [common] example testing should match snapshot(s) for Nested
 `;
 
 exports[`RadioGroup [common] example testing should match snapshot(s) for OnSelect 1`] = `
-<span
-  class="lucid-RadioGroup"
->
-  <label
-    class="lucid-RadioButtonLabeled lucid-RadioButtonLabeled-is-selected"
-    style="margin-right:13px"
+<div>
+  <span
+    class="lucid-RadioGroup"
   >
-    <span
-      class="lucid-RadioButton lucid-RadioButton-is-selected"
+    <label
+      class="lucid-RadioButtonLabeled lucid-RadioButtonLabeled-is-selected"
+      style="margin-right:13px"
     >
-      <input
-        checked=""
-        class="lucid-RadioButton-native"
-        type="radio"
-      />
       <span
-        class="lucid-RadioButton-visualization-glow"
-      />
-      <span
-        class="lucid-RadioButton-visualization-container"
-      />
-      <span
-        class="lucid-RadioButton-visualization-dot"
-      />
-    </span>
-    <div
-      class="lucid-RadioButtonLabeled-label"
+        class="lucid-RadioButton lucid-RadioButton-is-selected"
+      >
+        <input
+          checked=""
+          class="lucid-RadioButton-native"
+          type="radio"
+        />
+        <span
+          class="lucid-RadioButton-visualization-glow"
+        />
+        <span
+          class="lucid-RadioButton-visualization-container"
+        />
+        <span
+          class="lucid-RadioButton-visualization-dot"
+        />
+      </span>
+      <div
+        class="lucid-RadioButtonLabeled-label"
+      >
+        Alvin
+      </div>
+    </label>
+    <label
+      class="lucid-RadioButtonLabeled"
+      style="margin-right:13px"
     >
-      Alvin
-    </div>
-  </label>
-  <label
-    class="lucid-RadioButtonLabeled"
-    style="margin-right:13px"
-  >
-    <span
-      class="lucid-RadioButton"
+      <span
+        class="lucid-RadioButton"
+      >
+        <input
+          class="lucid-RadioButton-native"
+          type="radio"
+        />
+        <span
+          class="lucid-RadioButton-visualization-glow"
+        />
+        <span
+          class="lucid-RadioButton-visualization-container"
+        />
+        <span
+          class="lucid-RadioButton-visualization-dot"
+        />
+      </span>
+      <div
+        class="lucid-RadioButtonLabeled-label"
+      >
+        Simon
+      </div>
+    </label>
+    <label
+      class="lucid-RadioButtonLabeled"
+      style="margin-right:13px"
     >
-      <input
-        class="lucid-RadioButton-native"
-        type="radio"
-      />
       <span
-        class="lucid-RadioButton-visualization-glow"
-      />
-      <span
-        class="lucid-RadioButton-visualization-container"
-      />
-      <span
-        class="lucid-RadioButton-visualization-dot"
-      />
-    </span>
-    <div
-      class="lucid-RadioButtonLabeled-label"
-    >
-      Simon
-    </div>
-  </label>
-  <label
-    class="lucid-RadioButtonLabeled"
-    style="margin-right:13px"
-  >
-    <span
-      class="lucid-RadioButton"
-    >
-      <input
-        class="lucid-RadioButton-native"
-        type="radio"
-      />
-      <span
-        class="lucid-RadioButton-visualization-glow"
-      />
-      <span
-        class="lucid-RadioButton-visualization-container"
-      />
-      <span
-        class="lucid-RadioButton-visualization-dot"
-      />
-    </span>
-    <div
-      class="lucid-RadioButtonLabeled-label"
-    >
-      Theodore
-    </div>
-  </label>
-</span>
+        class="lucid-RadioButton"
+      >
+        <input
+          class="lucid-RadioButton-native"
+          type="radio"
+        />
+        <span
+          class="lucid-RadioButton-visualization-glow"
+        />
+        <span
+          class="lucid-RadioButton-visualization-container"
+        />
+        <span
+          class="lucid-RadioButton-visualization-dot"
+        />
+      </span>
+      <div
+        class="lucid-RadioButtonLabeled-label"
+      >
+        Theodore
+      </div>
+    </label>
+  </span>
+  <pre>
+    Selected Index: 0
+  </pre>
+</div>
 `;
 
 exports[`RadioGroup [common] example testing should match snapshot(s) for OnSelectOnChild 1`] = `

@@ -388,13 +388,13 @@ export const Stateless = () => {
 					suggestions={wordlist}
 					value='ab'
 					onSelect={(index: any) => {
-						console.log(`selected: ${wordlist[index]}`);
+						console.warn(`selected: ${wordlist[index]}`);
 					}}
 					DropMenu={{
 						isExpanded: true,
 						focusedIndex: 2,
 						onCollapse: () => {
-							console.log('onCollapse');
+							console.warn('onCollapse');
 						},
 					}}
 				/>

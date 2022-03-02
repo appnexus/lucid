@@ -6,6 +6,8 @@ import { shallow, mount } from 'enzyme';
 
 import { common } from '../../util/generic-tests';
 import { ButtonGroupDumb as ButtonGroup } from './ButtonGroup';
+import { Button } from '../..';
+import { array } from 'prop-types';
 
 const defaultProps = ButtonGroup.defaultProps;
 
@@ -71,6 +73,22 @@ describe('ButtonGroup', () => {
 			);
 		});
 
+		it('omits the list of nonPassThroughs, except className and children', () => {
+			const nonPassThroughs = {
+				onSelect: _.noop,
+				className: 'testClassName',
+				children: <ButtonGroup.Button />,
+				selectedIndices: [0, 1],
+			};
+			const combinedProps = { ...defaultProps, ...nonPassThroughs };
+			const wrapper = shallow(<ButtonGroup {...combinedProps} />);
+
+			expect(wrapper.prop('className')).toContain('testClassName');
+			expect(wrapper.prop('onSelect')).toBeUndefined;
+			expect(wrapper.prop('selectedIndices')).toBeUndefined;
+			expect(wrapper.prop('children')).toBeTruthy;
+		});
+
 		it('tests onSelect props have the correct shape', () => {
 			const onSelect: any = jest.fn();
 			const wrapper = mount(
@@ -83,6 +101,7 @@ describe('ButtonGroup', () => {
 
 			wrapper.find('button[data-test-name="one"]').simulate('click');
 
+			expect(onSelect).toBeCalledTimes(1);
 			expect(onSelect).toBeCalledWith(1, {
 				event: expect.anything(),
 				props: {

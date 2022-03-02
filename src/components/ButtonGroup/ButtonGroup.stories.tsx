@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
+import _ from 'lodash';
 import { Meta, Story } from '@storybook/react';
 
-import ButtonGroup, { ButtonGroupDumb, IButtonGroupProps } from './ButtonGroup';
+import ButtonGroup, { IButtonGroupProps } from './ButtonGroup';
 
 export default {
 	title: 'Controls/ButtonGroup',
-	component: ButtonGroupDumb,
+	component: ButtonGroup,
 	subcomponents: { 'ButtonGroup.Button': ButtonGroup.Button },
+	args: ButtonGroup.defaultProps,
 	parameters: {
 		docs: {
 			inlineStories: false,
@@ -17,7 +19,6 @@ export default {
 	},
 } as Meta;
 
-/** Default */
 export const Basic: Story<IButtonGroupProps> = (args) => {
 	const buttonStyle = { width: '100px' };
 	return (
@@ -29,14 +30,21 @@ export const Basic: Story<IButtonGroupProps> = (args) => {
 	);
 };
 
-/** Stateful */
 export const Stateful: Story<IButtonGroupProps> = (args) => {
-	const handleSelect: any = (idx, evt, props) => {
-		console.warn(idx, evt, props);
+	const [selectedIndices, setSelectedIndices] = useState<number[]>([]);
+
+	const handleSelect = (selectedIndex: number, { event, props }) => {
+		const currentIndices = selectedIndices;
+		// If the item does not exist in the original array add it, if it exists remove it.
+		setSelectedIndices(_.xor(currentIndices, [selectedIndex]));
 	};
 
 	return (
-		<ButtonGroup {...args} onSelect={handleSelect}>
+		<ButtonGroup
+			{...args}
+			selectedIndices={selectedIndices}
+			onSelect={handleSelect}
+		>
 			<ButtonGroup.Button>Zero</ButtonGroup.Button>
 			<ButtonGroup.Button>One</ButtonGroup.Button>
 			<ButtonGroup.Button>Two</ButtonGroup.Button>
@@ -45,7 +53,6 @@ export const Stateful: Story<IButtonGroupProps> = (args) => {
 	);
 };
 
-/** Stateless */
 export const Stateless: Story<IButtonGroupProps> = (args) => {
 	return (
 		<ButtonGroup {...args} selectedIndices={[7, 8]}>
@@ -63,7 +70,6 @@ export const Stateless: Story<IButtonGroupProps> = (args) => {
 	);
 };
 
-/** Disabled */
 export const Disabled: Story<IButtonGroupProps> = (args) => {
 	const buttonStyle = { width: '100px' };
 	return (
@@ -78,10 +84,9 @@ export const Disabled: Story<IButtonGroupProps> = (args) => {
 	);
 };
 
-/** On Click */
 export const OnClick: Story<IButtonGroupProps> = (args) => {
-	const handleClick = (btn) => {
-		alert(btn);
+	const handleClick = (label) => {
+		alert(label);
 	};
 
 	return (

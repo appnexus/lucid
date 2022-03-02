@@ -16,6 +16,7 @@ export default {
 			},
 		},
 	},
+	args: RadioGroup.defaultProps,
 	argTypes: {
 		children: { control: false },
 	},
@@ -28,7 +29,6 @@ const style = {
 const radioButtonDefaultProps = RadioButton.defaultProps;
 const singleSelectDefaultProps = SingleSelect.defaultProps;
 
-/* Stateful */
 export const Stateful: Story<IRadioGroupProps> = (args) => {
 	return (
 		<RadioGroup {...args} isDisabled={false}>
@@ -45,61 +45,64 @@ export const Stateful: Story<IRadioGroupProps> = (args) => {
 	);
 };
 
-/* OnSelect */
 export const OnSelect: Story<IRadioGroupProps> = (args) => {
-	const handleSelect = (...args) => {
-		console.warn({ args });
+	const [selectedIndex, setSelectedIndex] = useState(0);
+
+	const handleSelect = (idx) => {
+		setSelectedIndex(idx);
 	};
 
 	return (
-		<RadioGroup {...args} isDisabled={false} onSelect={handleSelect}>
-			<RadioGroup.RadioButton {...radioButtonDefaultProps} style={style}>
-				<RadioGroup.Label>Alvin</RadioGroup.Label>
-			</RadioGroup.RadioButton>
-			<RadioGroup.RadioButton {...radioButtonDefaultProps} style={style}>
-				<RadioGroup.Label>Simon</RadioGroup.Label>
-			</RadioGroup.RadioButton>
-			<RadioGroup.RadioButton {...radioButtonDefaultProps} style={style}>
-				<RadioGroup.Label>Theodore</RadioGroup.Label>
-			</RadioGroup.RadioButton>
-		</RadioGroup>
+		<div>
+			<RadioGroup
+				{...args}
+				isDisabled={false}
+				onSelect={handleSelect}
+				selectedIndex={selectedIndex}
+			>
+				<RadioGroup.RadioButton {...radioButtonDefaultProps} style={style}>
+					<RadioGroup.Label>Alvin</RadioGroup.Label>
+				</RadioGroup.RadioButton>
+				<RadioGroup.RadioButton {...radioButtonDefaultProps} style={style}>
+					<RadioGroup.Label>Simon</RadioGroup.Label>
+				</RadioGroup.RadioButton>
+				<RadioGroup.RadioButton {...radioButtonDefaultProps} style={style}>
+					<RadioGroup.Label>Theodore</RadioGroup.Label>
+				</RadioGroup.RadioButton>
+			</RadioGroup>
+
+			<pre>Selected Index: {selectedIndex}</pre>
+		</div>
 	);
 };
 
-/* OnSelect On Child */
 export const OnSelectOnChild: Story<IRadioGroupProps> = (args) => {
-	const handleSelect = (...args) => {
-		console.warn({ args });
+	const [selectedIndex, setSelectedIndex] = useState(0);
+
+	const handleSelect = (index) => {
+		setSelectedIndex(index);
 	};
 
+	const children = ['Alvin', 'Simon', 'Theodore'];
+
 	return (
-		<RadioGroup {...args} isDisabled={false}>
-			<RadioGroup.RadioButton
-				{...radioButtonDefaultProps}
-				style={style}
-				onSelect={handleSelect}
-			>
-				<RadioGroup.Label>Alvin</RadioGroup.Label>
-			</RadioGroup.RadioButton>
-			<RadioGroup.RadioButton
-				{...radioButtonDefaultProps}
-				style={style}
-				onSelect={handleSelect}
-			>
-				<RadioGroup.Label>Simon</RadioGroup.Label>
-			</RadioGroup.RadioButton>
-			<RadioGroup.RadioButton
-				{...radioButtonDefaultProps}
-				style={style}
-				onSelect={handleSelect}
-			>
-				<RadioGroup.Label>Theodore</RadioGroup.Label>
-			</RadioGroup.RadioButton>
+		<RadioGroup {...args} isDisabled={false} selectedIndex={selectedIndex}>
+			{children.map((child, idx) => {
+				return (
+					<RadioGroup.RadioButton
+						{...radioButtonDefaultProps}
+						key={idx}
+						style={style}
+						onSelect={() => handleSelect(idx)}
+					>
+						<RadioGroup.Label>{child}</RadioGroup.Label>
+					</RadioGroup.RadioButton>
+				);
+			})}
 		</RadioGroup>
 	);
 };
 
-/* Nested Select */
 export const NestedSelect: Story<IRadioGroupProps> = (args) => {
 	const subSelection = {
 		display: 'block',
@@ -152,7 +155,6 @@ export const NestedSelect: Story<IRadioGroupProps> = (args) => {
 	);
 };
 
-/* Selected Index As Prop */
 export const SelectedIndexAsProp: Story<IRadioGroupProps> = (args) => {
 	return (
 		<section>
@@ -165,22 +167,22 @@ export const SelectedIndexAsProp: Story<IRadioGroupProps> = (args) => {
 					flexDirection: 'column',
 				}}
 			>
-				<RadioGroup.RadioButton style={style}>
+				<RadioGroup.RadioButton {...radioButtonDefaultProps} style={style}>
 					<RadioGroup.Label>Captain America</RadioGroup.Label>
 				</RadioGroup.RadioButton>
-				<RadioGroup.RadioButton style={style}>
+				<RadioGroup.RadioButton {...radioButtonDefaultProps} style={style}>
 					<RadioGroup.Label>Iron Man</RadioGroup.Label>
 				</RadioGroup.RadioButton>
-				<RadioGroup.RadioButton style={style}>
+				<RadioGroup.RadioButton {...radioButtonDefaultProps} style={style}>
 					<RadioGroup.Label>Thor</RadioGroup.Label>
 				</RadioGroup.RadioButton>
-				<RadioGroup.RadioButton style={style}>
+				<RadioGroup.RadioButton {...radioButtonDefaultProps} style={style}>
 					<RadioGroup.Label>Hulk</RadioGroup.Label>
 				</RadioGroup.RadioButton>
-				<RadioGroup.RadioButton style={style}>
+				<RadioGroup.RadioButton {...radioButtonDefaultProps} style={style}>
 					<RadioGroup.Label>Black Widow</RadioGroup.Label>
 				</RadioGroup.RadioButton>
-				<RadioGroup.RadioButton style={style}>
+				<RadioGroup.RadioButton {...radioButtonDefaultProps} style={style}>
 					<RadioGroup.Label>Hawkeye</RadioGroup.Label>
 				</RadioGroup.RadioButton>
 			</RadioGroup>
@@ -188,7 +190,6 @@ export const SelectedIndexAsProp: Story<IRadioGroupProps> = (args) => {
 	);
 };
 
-/* Selected Index From Child */
 export const SelectedIndexFromChild: Story<IRadioGroupProps> = (args) => {
 	return (
 		<RadioGroup
@@ -200,42 +201,53 @@ export const SelectedIndexFromChild: Story<IRadioGroupProps> = (args) => {
 				flexDirection: 'column',
 			}}
 		>
-			<RadioGroup.RadioButton isSelected={true} style={style}>
+			<RadioGroup.RadioButton
+				{...radioButtonDefaultProps}
+				isSelected={true}
+				style={style}
+			>
 				<RadioGroup.Label>Leonardo</RadioGroup.Label>
 			</RadioGroup.RadioButton>
-			<RadioGroup.RadioButton isSelected={true} style={style}>
+			<RadioGroup.RadioButton
+				{...radioButtonDefaultProps}
+				isSelected={true}
+				style={style}
+			>
 				<RadioGroup.Label>Raphael</RadioGroup.Label>
 			</RadioGroup.RadioButton>
-			<RadioGroup.RadioButton isSelected={true} style={style}>
+			<RadioGroup.RadioButton
+				{...radioButtonDefaultProps}
+				isSelected={true}
+				style={style}
+			>
 				<RadioGroup.Label>Donatello</RadioGroup.Label>
 			</RadioGroup.RadioButton>
-			<RadioGroup.RadioButton style={style}>
+			<RadioGroup.RadioButton {...radioButtonDefaultProps} style={style}>
 				<RadioGroup.Label>Michelangelo</RadioGroup.Label>
 			</RadioGroup.RadioButton>
-			<RadioGroup.RadioButton style={style}>
+			<RadioGroup.RadioButton {...radioButtonDefaultProps} style={style}>
 				<RadioGroup.Label>Venus</RadioGroup.Label>
 			</RadioGroup.RadioButton>
 		</RadioGroup>
 	);
 };
 
-/* Default Props */
 export const DefaultProps: Story<IRadioGroupProps> = (args) => {
 	return (
 		<RadioGroup {...args}>
-			<RadioGroup.RadioButton style={style}>
+			<RadioGroup.RadioButton {...radioButtonDefaultProps} style={style}>
 				<RadioGroup.Label>Superman</RadioGroup.Label>
 			</RadioGroup.RadioButton>
-			<RadioGroup.RadioButton style={style}>
+			<RadioGroup.RadioButton {...radioButtonDefaultProps} style={style}>
 				<RadioGroup.Label>Batman</RadioGroup.Label>
 			</RadioGroup.RadioButton>
-			<RadioGroup.RadioButton style={style}>
+			<RadioGroup.RadioButton {...radioButtonDefaultProps} style={style}>
 				<RadioGroup.Label>Wonder Woman</RadioGroup.Label>
 			</RadioGroup.RadioButton>
-			<RadioGroup.RadioButton style={style}>
+			<RadioGroup.RadioButton {...radioButtonDefaultProps} style={style}>
 				<RadioGroup.Label>Aquaman</RadioGroup.Label>
 			</RadioGroup.RadioButton>
-			<RadioGroup.RadioButton style={style}>
+			<RadioGroup.RadioButton {...radioButtonDefaultProps} style={style}>
 				<RadioGroup.Label>Robin</RadioGroup.Label>
 			</RadioGroup.RadioButton>
 		</RadioGroup>
