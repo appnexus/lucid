@@ -6,8 +6,6 @@ import { shallow, mount } from 'enzyme';
 
 import { common } from '../../util/generic-tests';
 import { ButtonGroupDumb as ButtonGroup } from './ButtonGroup';
-import { Button } from '../..';
-import { array } from 'prop-types';
 
 const defaultProps = ButtonGroup.defaultProps;
 

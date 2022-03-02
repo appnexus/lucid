@@ -128,12 +128,14 @@ export const NestedSelect: Story<IRadioGroupProps> = (args) => {
 				<RadioGroup.Label>
 					Simon
 					<RadioButtonLabeled
+						{...radioButtonDefaultProps}
 						isSelected={height === 'Tall Simon'}
 						onSelect={handleSelectedTallSimon}
 					>
 						<RadioButtonLabeled.Label>Tall Simon</RadioButtonLabeled.Label>
 					</RadioButtonLabeled>
 					<RadioButtonLabeled
+						{...radioButtonDefaultProps}
 						isSelected={height === 'Short Simon'}
 						onSelect={handleSelectedShortSimon}
 					>

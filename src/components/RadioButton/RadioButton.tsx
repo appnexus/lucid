@@ -14,14 +14,14 @@ export interface IRadioButtonPropsRaw extends StandardProps {
 	 *
 	 * @default false
 	 */
-	isDisabled?: boolean;
+	isDisabled: boolean;
 
 	/** Indicates that the component is in the "selected" state when true and in
 	 * the "unselected" state when false.
 	 *
 	 * @default false
 	 */
-	isSelected?: boolean;
+	isSelected: boolean;
 
 	/** Optional name for the input element */
 	name?: string;
