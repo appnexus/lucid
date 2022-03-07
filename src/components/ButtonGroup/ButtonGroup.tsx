@@ -134,7 +134,9 @@ class ButtonGroup extends React.Component<
 							isActive={_.includes(selectedIndices, index)}
 							{...buttonChildProp}
 							key={index}
-							onClick={(event, props) => this.handleSelect(event, props, index)}
+							onClick={({ event, props }) =>
+								this.handleSelect(event, props, index)
+							}
 						/>
 					);
 				})}

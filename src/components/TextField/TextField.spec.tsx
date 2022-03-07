@@ -35,7 +35,6 @@ describe('TextField', () => {
 					value='test'
 				/>
 			);
-			console.warn(wrapper.debug());
 			assert.strictEqual(wrapper.find('input').prop('disabled'), true);
 			assert.strictEqual(wrapper.find('input').prop('style'), style);
 			assert.strictEqual(wrapper.find('input').prop('rows'), 10);
