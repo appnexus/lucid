@@ -4,13 +4,11 @@ First of all, thank you for contributing. It’s appreciated.
 
 1. Install node >= `>=14.0.0`
 2. Clone the repo and install dependencies with `npm install`.
-3. Make a GitHub issue before doing any significant amount of work. Make sure the core team approves your idea. This step is really important. If you skip this, your PR might be rejected.
-
-- Be sure to check out our [Waffle board][waffle] for a kanban view of all our issues.
+3. Make sure the core team, including design, approves your idea. This step is really important because, if you skip it, your PR might be rejected.
 
 4. Below are some important commands for developing. Don't commit before fixing all errors and warnings.
 
-- `npm run dev` starts a blank storybook sandbox for quick, iterative development
+- `npm run dev` starts Storybook for quick, iterative development
 - `npm run watch` runs tests and watches for changes, optimized for speed
 
 5. Ensure your changes work properly on the latest versions of Chrome, Firefox, Safari, and IE Edge. Currently this step is manual.
@@ -21,35 +19,33 @@ First of all, thank you for contributing. It’s appreciated.
 
 - All PRs should at minimum have a label _semver-major/minor/patch/none_. This helps identify what kind of version bump the PR represents.
 - Branches should follow this convention (where 1234 is a GitHub issue):
-  - 1234-added-something
-  - 1234-fixed-something
+  - 1234-add-something
+  - 1234-fix-something
   - release/2.0.0
-- We use an issue template that provides a check list of tasks to consider for every PR.
+- We use an Pull Request Template that provides a check list of tasks for every PR.
 
 ## Writing Components
 
 ### Create a new Component (automated)
 
-Run command
-npm run create-component MyNewComponent
+Run command:
+`npm run create-component MyNewComponent`
 
 ### Create a new Component (manual)
 
 Here are some basic steps to get you started building your first component.
-Start your dev server and go to `http://localhost:8080/#/components/ExampleComponent` for a component example.
+Go to `http://localhost:6006/` and navigate to the `ExampleComponent` for a starter template component.
 
 1. Create your new component folder
    `src/components/MyNewComponent/`
 
-2. Create your component file(s). The only required file are `MyNewComponent.jsx` and `MyNewComponent.spec.js`.
+2. Create your component file(s). The required file are:
 
-3. Create your docs example:
+- `MyNewComponent.tsx`
+- `MyNewComponent.spec.ts`
+- `MyNewComponent.stories.ts`
 
-- Storybook story definition `docs/examples/MyNewComponent.stories.js`
-- Example dir `docs/examples/MyNewComponent/`
-- Example component `docs/examples/MyNewComponent/WithDefaults.js`
-
-4. Add your component's JSX file to `/src/index.ts`
+3. Add an import and export for your component's JSX file in `/src/index.ts`.
 
 ```javascript
 import MyNewComponent from './components/MyNewComponent/MyNewComponent';
@@ -62,10 +58,6 @@ export { MyNewComponent };
 ```css
 @import '../components/MyNewComponent/MyNewComponent';
 ```
-
-6. Run `npm run docs` to run the docs app locally.
-
-7. In your browser open, `http://localhost:6006/`
 
 ### Prop Conventions
 
