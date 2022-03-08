@@ -7,7 +7,6 @@ import {
 	StandardProps,
 	filterTypes,
 	rejectTypes,
-	omitProps,
 } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-Tag');
@@ -46,23 +45,26 @@ export interface ITagProps
 	}) => void;
 }
 
+/** TODO: Remove the nonPassThroughs when the component is converted to a functional component */
+const nonPassThroughs = ['callbackId', 'initialState'];
+
 const defaultProps = {
 	isTop: false,
 	hasLightBackground: true,
 	isRemovable: false,
-	onRemove: _.noop,
 	kind: 'default' as const,
+	onRemove: _.noop,
 };
 
 export const Tag = (props: ITagProps): React.ReactElement => {
 	const {
 		isTop,
+		hasLightBackground,
 		isRemovable,
+		kind,
+		onRemove,
 		children,
 		className,
-		onRemove,
-		hasLightBackground,
-		kind,
 		...passThroughs
 	} = props;
 
@@ -77,10 +79,7 @@ export const Tag = (props: ITagProps): React.ReactElement => {
 
 	return (
 		<div
-			{...omitProps(passThroughs, undefined, [
-				..._.keys(Tag.propTypes),
-				'callbackId',
-			])}
+			{..._.omit(passThroughs, nonPassThroughs)}
 			className={cx(
 				'&',
 				{

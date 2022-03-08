@@ -1,59 +1,66 @@
-import React from 'react';
+import React, { useState } from 'react';
 import createClass from 'create-react-class';
 import _ from 'lodash';
-import Tag from '../Tag/Tag';
+import { Meta, Story } from '@storybook/react';
+
+import Tag, { ITagProps } from '../Tag/Tag';
 
 export default {
 	title: 'Communication/Tag',
 	component: Tag,
+	args: Tag.defaultProps,
 	parameters: {
 		docs: {
 			description: {
-				component: (Tag as any).peek.description,
+				component: Tag.peek.description,
 			},
 		},
 	},
+} as Meta;
+
+export const Basic: Story<ITagProps> = (args) => {
+	return (
+		<div>
+			<div>
+				<Tag {...args}>Amet</Tag>
+				<Tag {...args}>nam</Tag>
+				<Tag {...args}>quibusdam</Tag>
+				<Tag {...args} isRemovable>
+					nobis
+				</Tag>
+				<Tag {...args} isRemovable>
+					autem
+				</Tag>
+				<Tag {...args} isRemovable>
+					sapiente
+				</Tag>
+			</div>
+
+			<div>
+				<Tag {...args}>
+					Fruits
+					<Tag {...args}>Apples</Tag>
+					<Tag {...args}>Oranges</Tag>
+					<Tag {...args}>Bananas</Tag>
+				</Tag>
+				<Tag {...args} isRemovable>
+					Vegetables
+					<Tag {...args} isRemovable>
+						Carrots
+					</Tag>
+					<Tag {...args} isRemovable>
+						Spinach
+					</Tag>
+					<Tag {...args} isRemovable>
+						Celery
+					</Tag>
+				</Tag>
+			</div>
+		</div>
+	);
 };
 
-/* Basic */
-export const Basic = () => {
-	const Component = createClass({
-		render() {
-			return (
-				<div>
-					<div>
-						<Tag>Amet</Tag>
-						<Tag>nam</Tag>
-						<Tag>quibusdam</Tag>
-						<Tag isRemovable>nobis</Tag>
-						<Tag isRemovable>autem</Tag>
-						<Tag isRemovable>sapiente</Tag>
-					</div>
-
-					<div>
-						<Tag>
-							Fruits
-							<Tag>Apples</Tag>
-							<Tag>Oranges</Tag>
-							<Tag>Bananas</Tag>
-						</Tag>
-						<Tag isRemovable>
-							Vegetables
-							<Tag isRemovable>Carrots</Tag>
-							<Tag isRemovable>Spinach</Tag>
-							<Tag isRemovable>Celery</Tag>
-						</Tag>
-					</div>
-				</div>
-			);
-		},
-	});
-
-	return <Component />;
-};
-
-/* Nested */
-export const Nested = () => {
+export const Nested: Story<ITagProps> = (args) => {
 	const words = [
 		'Fashion',
 		'The',
@@ -62,41 +69,35 @@ export const Nested = () => {
 		'This is a longer sentence that should be handled okay',
 	];
 
-	const Component = createClass({
-		render() {
-			return (
-				<div>
-					<Tag>
-						Grouped items
-						{_.times(8, (n) => (
-							<Tag key={n}>{words[n % words.length]}</Tag>
-						))}
-					</Tag>
+	return (
+		<div>
+			<Tag {...args}>
+				Grouped items
+				{_.times(8, (n) => (
+					<Tag key={n}>{words[n % words.length]}</Tag>
+				))}
+			</Tag>
 
-					<Tag isRemovable>
-						Grouped items
-						{_.times(10, (n) => (
-							<Tag isRemovable key={n}>
-								{words[n % words.length]}
-							</Tag>
-						))}
+			<Tag {...args} isRemovable>
+				Grouped items
+				{_.times(10, (n) => (
+					<Tag {...args} isRemovable key={n}>
+						{words[n % words.length]}
 					</Tag>
-				</div>
-			);
+				))}
+			</Tag>
+		</div>
+	);
+};
+Nested.parameters = {
+	docs: {
+		description: {
+			story: `Use a parent \`tag\` to group child \`tags\` into categories. This example also shows you how to dynamically generate a list of \`tags\`.`,
 		},
-	});
-
-	// begin-hide-from-docs
-	const notes = `
-Use a parent tag to group child tags into categories. This example also shows you how to dynamically generate a list of tags.
-`;
-	// end-hide-from-docs
-
-	return <Component />;
+	},
 };
 
-/* Double Nested */
-export const DoubleNested = () => {
+export const DoubleNested: Story<ITagProps> = (args) => {
 	const words = [
 		'Fashion',
 		'The',
@@ -105,58 +106,59 @@ export const DoubleNested = () => {
 		'This is a longer sentence that should be handled okay but what if it is even longer than you could ever think imaginable',
 	];
 
-	const Component = createClass({
-		render() {
-			return (
-				<div>
-					<Tag isTop>
-						Global:
-						<Tag>
-							Group 1
-							{_.times(4, (n) => (
-								<Tag key={n}>{words[n % words.length]}</Tag>
-							))}
+	return (
+		<div>
+			<Tag {...args} isTop>
+				Global:
+				<Tag {...args}>
+					Group 1
+					{_.times(4, (n) => (
+						<Tag {...args} key={n}>
+							{words[n % words.length]}
 						</Tag>
-						<Tag>
-							Group 2
-							{_.times(4, (n) => (
-								<Tag key={n}>{words[n % words.length]}</Tag>
-							))}
+					))}
+				</Tag>
+				<Tag {...args}>
+					Group 2
+					{_.times(4, (n) => (
+						<Tag {...args} key={n}>
+							{words[n % words.length]}
 						</Tag>
-					</Tag>
+					))}
+				</Tag>
+			</Tag>
 
-					<Tag isTop>
-						In-Progess:
-						<Tag>
-							Group 1
-							{_.times(4, (n) => (
-								<Tag key={n}>{words[n % words.length]}</Tag>
-							))}
+			<Tag {...args} isTop>
+				In-Progess:
+				<Tag {...args}>
+					Group 1
+					{_.times(4, (n) => (
+						<Tag {...args} key={n}>
+							{words[n % words.length]}
 						</Tag>
-						<Tag>
-							Group 2
-							{_.times(4, (n) => (
-								<Tag key={n}>{words[n % words.length]}</Tag>
-							))}
+					))}
+				</Tag>
+				<Tag {...args}>
+					Group 2
+					{_.times(4, (n) => (
+						<Tag {...args} key={n}>
+							{words[n % words.length]}
 						</Tag>
-					</Tag>
-				</div>
-			);
-		},
-	});
-
-	// begin-hide-from-docs
-	const notes = `
-This allows you to add a third level of hierarchy to your tag categorization.
-`;
-	// end-hide-from-docs
-
-	return <Component />;
+					))}
+				</Tag>
+			</Tag>
+		</div>
+	);
 };
-DoubleNested.storyName = 'DoubleNested';
+DoubleNested.parameters = {
+	docs: {
+		description: {
+			story: `Double nesting allows you to add a third level of hierarchy to your \`tag\` categorization.`,
+		},
+	},
+};
 
-/* Interactive */
-export const Interactive = () => {
+export const Interactive: Story<ITagProps> = (args) => {
 	const groups = [
 		['Last Man on Earth', ['Phil']],
 		['Last Woman on Earth', ['Carol']],
@@ -241,106 +243,92 @@ export const Interactive = () => {
 		],
 	];
 
-	const Component = createClass({
-		getInitialState() {
-			return {
-				removedItems: {},
-			};
+	const [removedItems, setRemovedItems] = useState<object>({});
+
+	const handleRemove = ({ props: { callbackId } }: any) => {
+		const newRemovedItems = _.set(removedItems, callbackId, true);
+		setRemovedItems({ ...newRemovedItems });
+	};
+
+	return (
+		<div>
+			{_.map(groups, ([group, names], groupIndex) => {
+				const groupCallbackId = `${groupIndex}`;
+				if (_.get(removedItems, groupCallbackId) === true) {
+					return null;
+				}
+
+				return (
+					<Tag
+						{...args}
+						key={groupCallbackId}
+						isRemovable={true}
+						onRemove={handleRemove}
+						callbackId={groupCallbackId}
+					>
+						{group}
+						{_.map(names, (name, nameIndex) => {
+							const nameCallbackId = `${groupIndex}.${nameIndex}`;
+
+							if (_.get(removedItems, nameCallbackId) === true) {
+								return null;
+							}
+
+							return (
+								<Tag
+									{...args}
+									key={nameCallbackId}
+									isRemovable={true}
+									onRemove={handleRemove}
+									callbackId={nameCallbackId}
+								>
+									{name}
+								</Tag>
+							);
+						})}
+					</Tag>
+				);
+			})}
+		</div>
+	);
+};
+Interactive.parameters = {
+	docs: {
+		description: {
+			story: `Use interactive \`tags\` to allow users to remove a selection.`,
 		},
-
-		handleRemove({ props: { callbackId } }: any) {
-			this.setState({
-				removedItems: _.set(this.state.removedItems, callbackId, true),
-			});
-		},
-
-		render() {
-			const { removedItems } = this.state;
-
-			return (
-				<div>
-					{_.map(groups, ([group, names], groupIndex) => {
-						const groupCallbackId = `${groupIndex}`;
-
-						if (_.get(removedItems, groupCallbackId) === true) {
-							return null;
-						}
-
-						return (
-							<Tag
-								key={groupCallbackId}
-								isRemovable={true}
-								onRemove={this.handleRemove}
-								callbackId={groupCallbackId}
-							>
-								{group}
-								{_.map(names, (name, nameIndex) => {
-									const nameCallbackId = `${groupIndex}.${nameIndex}`;
-
-									if (_.get(removedItems, nameCallbackId) === true) {
-										return null;
-									}
-
-									return (
-										<Tag
-											key={nameCallbackId}
-											isRemovable={true}
-											onRemove={this.handleRemove}
-											callbackId={nameCallbackId}
-										>
-											{name}
-										</Tag>
-									);
-								})}
-							</Tag>
-						);
-					})}
-				</div>
-			);
-		},
-	});
-
-	// begin-hide-from-docs
-	const notes = `
-Use interactive tags to allow users to remove a selection.
-`;
-	// end-hide-from-docs
-
-	return <Component />;
+	},
 };
 
-/* Colors */
-export const Colors = () => {
-	const Component = createClass({
-		render() {
-			return (
-				<div>
-					<Tag>
-						<Tag kind={'info'}>notitia</Tag>
-						<Tag kind={'danger'}>periculum</Tag>
-						<Tag kind={'default'}>deficio</Tag>
-					</Tag>
-					<Tag>
-						<Tag isRemovable kind={'info'}>
-							notitia
-						</Tag>
-						<Tag isRemovable kind={'danger'}>
-							periculum
-						</Tag>
-					</Tag>
-				</div>
-			);
+export const Colors: Story<ITagProps> = (args) => {
+	return (
+		<div>
+			<Tag {...args}>
+				<Tag {...args} kind={'info'}>
+					notitia
+				</Tag>
+				<Tag {...args} kind={'danger'}>
+					periculum
+				</Tag>
+				<Tag {...args} kind={'default'}>
+					deficio
+				</Tag>
+			</Tag>
+			<Tag {...args}>
+				<Tag {...args} isRemovable kind={'info'}>
+					notitia
+				</Tag>
+				<Tag {...args} isRemovable kind={'danger'}>
+					periculum
+				</Tag>
+			</Tag>
+		</div>
+	);
+};
+Colors.parameters = {
+	docs: {
+		description: {
+			story: `\`Tag\` is available in two additional colors: \`kind='danger'\` for settings that can not be saved (for example, custom dates outside of the flight range), and \`kind='default'\` for disabled items (for example, past flights). The \`'default'\` color cannot be used for the \`isRemovable\` \`tag\`.`,
 		},
-	});
-
-	// begin-hide-from-docs
-	const notes = `
-Tags are available in two additional colors:
-
-- \`kind='danger'\` for settings that can not be saved, for example custom dates outside of the flight range.
-- \`kind='default\` for disabled items, for example past flights. This color can not be used for \`isRemovable\` tags.
-`;
-	// end-hide-from-docs
-
-	return <Component />;
+	},
 };
