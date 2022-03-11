@@ -1,8 +1,25 @@
+## 8.11.0
+
+- #1338 General cleanup of warnings, typos and stories
+  - Fix most of the warnings for unit tests;
+  - Fix some broken unit test (take out .skip and .only);
+  - Fix the console warnings for stories;
+  - Fix missing or misformatted story descriptions
+  - Remove sinon where deprecated;
+  - Replace visible reference to Appnexus with Xandr;
+  - Deprecate Appnexus triangle background pattern
+- #1337 Replace omitProps method with explicit props list for `Tag`
+- #1336 Update the CONTRIBUTING.md and PULL_REQUEST_TEMPLATE.md docs to require two approvals
+- #1335 Replace omitProps method with explicit props list for `RadioGroup` and `ButtonGroup`.
+  https://github.com/appnexus/lucid/compare/v8.10.0...v8.11.0
+
 ## 8.10.0
 
 - #1334 Fix props for `SearchField`
 - #1333 Fix props for `TextFieldValidated`
 - #1331 Add data-test-id to lucid portals
+
+  https://github.com/appnexus/lucid/compare/v8.9.0...v8.10.0
 
 ## 8.9.0
 
