@@ -55,61 +55,6 @@ exports[`Expander [common] example testing should match snapshot(s) for Basic 1`
 </div>
 `;
 
-exports[`Expander [common] example testing should match snapshot(s) for Expanded 1`] = `
-<div>
-  <div
-    class="lucid-Expander lucid-Expander-is-expanded"
-  >
-    <header
-      class="lucid-Expander-header"
-    >
-      <div
-        class="lucid-Expander-header-toggle"
-      >
-        <button
-          class="lucid-Button lucid-Button-invisible lucid-Button-has-only-icon lucid-Expander-icon"
-          type="button"
-        >
-          <span
-            class="lucid-Button-content"
-          >
-            <svg
-              class="lucid-Icon lucid-Icon-color-primary lucid-ChevronIcon lucid-ChevronIcon-is-up"
-              height="16"
-              preserveAspectRatio="xMidYMid meet"
-              viewBox="0 0 16 16"
-              width="16"
-            >
-              <path
-                d="M.5 4.5l7.5 7 7.5-7"
-              />
-            </svg>
-          </span>
-        </button>
-        <span
-          class="lucid-Expander-text"
-        >
-          Show Less
-        </span>
-      </div>
-    </header>
-    <section
-      class="lucid-Collapsible lucid-Expander-content"
-      style="overflow:hidden;padding:0"
-    >
-      <div
-        class="lucid-Collapsible-content"
-        style="margin:0"
-      >
-        <p>
-          You can't get rid of me. Keep clicking that icon as much as you want, but I'm here to stay!
-        </p>
-      </div>
-    </section>
-  </div>
-</div>
-`;
-
 exports[`Expander [common] example testing should match snapshot(s) for Highlighted 1`] = `
 <div>
   <div
