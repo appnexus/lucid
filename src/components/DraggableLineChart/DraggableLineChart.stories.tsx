@@ -1,6 +1,8 @@
 import React, { useCallback } from 'react';
 import createClass from 'create-react-class';
 import _ from 'lodash';
+import { Meta, Story } from '@storybook/react';
+
 import { IXAxisRenderProp } from './d3-helpers';
 import { IData, ISelectedChartData } from './DraggableLineChartD3';
 import DraggableLineChart from './DraggableLineChart';
@@ -16,10 +18,9 @@ export default {
 			},
 		},
 	},
-};
+} as Meta;
 
-/* Basic */
-export const Basic = () => {
+export const Basic: Story = () => {
 	const data = [
 		{ x: '12 AM', y: 0 },
 		{ x: '1 AM', y: 0 },

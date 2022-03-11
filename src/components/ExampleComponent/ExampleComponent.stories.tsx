@@ -20,7 +20,6 @@ export default {
 	},
 } as Meta;
 
-/* Basic */
 export const Basic: Story<IExampleComponentProps> = (args) => {
 	return (
 		<ExampleComponent {...args}>
@@ -30,7 +29,6 @@ export const Basic: Story<IExampleComponentProps> = (args) => {
 	);
 };
 
-/* Prop Example */
 export const PropExample: Story<IExampleComponentProps> = (args) => {
 	return (
 		<ExampleComponent {...args} isX={true}>
@@ -39,4 +37,3 @@ export const PropExample: Story<IExampleComponentProps> = (args) => {
 		</ExampleComponent>
 	);
 };
-PropExample.storyName = 'PropExample';

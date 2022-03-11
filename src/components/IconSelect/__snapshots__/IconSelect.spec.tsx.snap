@@ -6,7 +6,7 @@ exports[`IconSelect [common] example testing should match snapshot(s) for Basic 
     class="lucid-IconSelect"
   >
     <figure
-      class="lucid-IconSelect-Item lucid-IconSelect-Item-single"
+      class="lucid-IconSelect-Item lucid-IconSelect-Item-multi"
       data-id="item1"
     >
       <svg
@@ -29,27 +29,34 @@ exports[`IconSelect [common] example testing should match snapshot(s) for Basic 
         class="lucid-IconSelect-Item-figcaption"
       >
         <label
-          class="lucid-RadioButtonLabeled lucid-IconSelect-Item-radio"
+          class="lucid-CheckboxLabeled lucid-IconSelect-Item-checkbox"
         >
-          <span
-            class="lucid-RadioButton lucid-IconSelect-Item-radio"
+          <div
+            class="lucid-Checkbox lucid-CheckboxLabeled-Checkbox lucid-IconSelect-Item-checkbox"
           >
             <input
-              class="lucid-RadioButton-native"
-              type="radio"
+              class="lucid-Checkbox-native"
+              type="checkbox"
             />
             <span
-              class="lucid-RadioButton-visualization-glow"
+              class="lucid-Checkbox-visualization-glow"
             />
             <span
-              class="lucid-RadioButton-visualization-container"
+              class="lucid-Checkbox-visualization-container"
             />
             <span
-              class="lucid-RadioButton-visualization-dot"
-            />
-          </span>
+              class="lucid-Checkbox-visualization-checkmark"
+            >
+              <span
+                class="lucid-Checkbox-visualization-checkmark-stem"
+              />
+              <span
+                class="lucid-Checkbox-visualization-checkmark-kick"
+              />
+            </span>
+          </div>
           <div
-            class="lucid-RadioButtonLabeled-label"
+            class="lucid-CheckboxLabeled-label"
           >
             Foo Bar
           </div>
@@ -57,7 +64,7 @@ exports[`IconSelect [common] example testing should match snapshot(s) for Basic 
       </figcaption>
     </figure>
     <figure
-      class="lucid-IconSelect-Item lucid-IconSelect-Item-is-selected lucid-IconSelect-Item-single"
+      class="lucid-IconSelect-Item lucid-IconSelect-Item-is-selected lucid-IconSelect-Item-multi"
       data-id="item2"
     >
       <svg
@@ -81,28 +88,35 @@ exports[`IconSelect [common] example testing should match snapshot(s) for Basic 
         class="lucid-IconSelect-Item-figcaption"
       >
         <label
-          class="lucid-RadioButtonLabeled lucid-RadioButtonLabeled-is-selected lucid-IconSelect-Item-radio"
+          class="lucid-CheckboxLabeled lucid-CheckboxLabeled-is-selected lucid-IconSelect-Item-checkbox"
         >
-          <span
-            class="lucid-RadioButton lucid-RadioButton-is-selected lucid-IconSelect-Item-radio"
+          <div
+            class="lucid-Checkbox lucid-Checkbox-is-selected lucid-CheckboxLabeled-Checkbox lucid-IconSelect-Item-checkbox"
           >
             <input
               checked=""
-              class="lucid-RadioButton-native"
-              type="radio"
+              class="lucid-Checkbox-native"
+              type="checkbox"
             />
             <span
-              class="lucid-RadioButton-visualization-glow"
+              class="lucid-Checkbox-visualization-glow"
             />
             <span
-              class="lucid-RadioButton-visualization-container"
+              class="lucid-Checkbox-visualization-container"
             />
             <span
-              class="lucid-RadioButton-visualization-dot"
-            />
-          </span>
+              class="lucid-Checkbox-visualization-checkmark"
+            >
+              <span
+                class="lucid-Checkbox-visualization-checkmark-stem"
+              />
+              <span
+                class="lucid-Checkbox-visualization-checkmark-kick"
+              />
+            </span>
+          </div>
           <div
-            class="lucid-RadioButtonLabeled-label"
+            class="lucid-CheckboxLabeled-label"
           >
             Bax Tar
           </div>
@@ -507,6 +521,119 @@ exports[`IconSelect [common] example testing should match snapshot(s) for Select
           </div>
           <div
             class="lucid-CheckboxLabeled-label"
+          >
+            Bax Tar
+          </div>
+        </label>
+      </figcaption>
+    </figure>
+  </span>
+</section>
+`;
+
+exports[`IconSelect [common] example testing should match snapshot(s) for Single 1`] = `
+<section>
+  <span
+    class="lucid-IconSelect"
+  >
+    <figure
+      class="lucid-IconSelect-Item lucid-IconSelect-Item-single"
+      data-id="item1"
+    >
+      <svg
+        class="lucid-Icon lucid-Icon-color-primary lucid-ClockIcon"
+        height="16"
+        preserveAspectRatio="xMidYMid meet"
+        viewBox="0 0 16 16"
+        width="16"
+      >
+        <circle
+          cx="8"
+          cy="8"
+          r="7.5"
+        />
+        <path
+          d="M8 3.5v5l2.75 2.25"
+        />
+      </svg>
+      <figcaption
+        class="lucid-IconSelect-Item-figcaption"
+      >
+        <label
+          class="lucid-RadioButtonLabeled lucid-IconSelect-Item-radio"
+        >
+          <span
+            class="lucid-RadioButton lucid-IconSelect-Item-radio"
+          >
+            <input
+              class="lucid-RadioButton-native"
+              type="radio"
+            />
+            <span
+              class="lucid-RadioButton-visualization-glow"
+            />
+            <span
+              class="lucid-RadioButton-visualization-container"
+            />
+            <span
+              class="lucid-RadioButton-visualization-dot"
+            />
+          </span>
+          <div
+            class="lucid-RadioButtonLabeled-label"
+          >
+            Foo Bar
+          </div>
+        </label>
+      </figcaption>
+    </figure>
+    <figure
+      class="lucid-IconSelect-Item lucid-IconSelect-Item-is-selected lucid-IconSelect-Item-single"
+      data-id="item2"
+    >
+      <svg
+        class="lucid-Icon lucid-Icon-color-primary lucid-StopwatchIcon"
+        height="16"
+        preserveAspectRatio="xMidYMid meet"
+        viewBox="0 0 16 16"
+        width="16"
+      >
+        <path
+          d="M7.5.5h3M9 .5v1.98M.5 6h5m-5 3h3m-3 3h4"
+        />
+        <path
+          d="M5.5 14.471A6.455 6.455 0 0 0 9 15.5a6.5 6.5 0 1 0 0-13c-1.29 0-2.489.38-3.5 1.029"
+        />
+        <path
+          d="M9 9l2.5-2.5"
+        />
+      </svg>
+      <figcaption
+        class="lucid-IconSelect-Item-figcaption"
+      >
+        <label
+          class="lucid-RadioButtonLabeled lucid-RadioButtonLabeled-is-selected lucid-IconSelect-Item-radio"
+        >
+          <span
+            class="lucid-RadioButton lucid-RadioButton-is-selected lucid-IconSelect-Item-radio"
+          >
+            <input
+              checked=""
+              class="lucid-RadioButton-native"
+              type="radio"
+            />
+            <span
+              class="lucid-RadioButton-visualization-glow"
+            />
+            <span
+              class="lucid-RadioButton-visualization-container"
+            />
+            <span
+              class="lucid-RadioButton-visualization-dot"
+            />
+          </span>
+          <div
+            class="lucid-RadioButtonLabeled-label"
           >
             Bax Tar
           </div>

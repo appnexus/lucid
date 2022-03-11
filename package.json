@@ -1,7 +1,7 @@
 {
 	"name": "lucid-ui",
 	"version": "8.10.0",
-	"description": "A UI component library from AppNexus.",
+	"description": "A UI component library from Xandr.",
 	"main": "dist/cjs/index.js",
 	"module": "dist/esm/index.js",
 	"types": "dist/esm/index.d.ts",
@@ -49,7 +49,7 @@
 		"stateful",
 		"stateless"
 	],
-	"author": "AppNexus engineering",
+	"author": "Xandr engineering",
 	"license": "Apache-2.0",
 	"dependencies": {
 		"classnames": "^2.3.1",

@@ -1,8 +1,8 @@
 import _ from 'lodash';
-import sinon from 'sinon';
 import React from 'react';
 import assert from 'assert';
 import { shallow } from 'enzyme';
+
 import { common } from '../../util/generic-tests';
 import { TabsDumb as Tabs } from './Tabs';
 
@@ -132,18 +132,31 @@ describe('Tabs', () => {
 		});
 
 		describe('onSelect', () => {
-			const onSelect: any = sinon.spy();
+			const onSelectMock: any = jest.fn();
 			let clickEvent: any;
 			let wrapper: any;
 			let tabBar: any;
 
 			beforeEach(() => {
-				onSelect.reset();
-				clickEvent = 'event';
+				onSelectMock.mockClear();
+				clickEvent = {
+					event: { index: 1 },
+					props: {
+						index: 1,
+						isLastTab: true,
+						isOpen: true,
+						isProgressive: false,
+						isSelected: false,
+						onSelect: () => {},
+						Title: '',
+						children: 'One',
+					},
+				};
+
 				wrapper = shallow(
-					<Tabs onSelect={onSelect}>
-						<Tabs.Tab isDisabled={true}>One</Tabs.Tab>
-						<Tabs.Tab>Two</Tabs.Tab>
+					<Tabs onSelect={onSelectMock}>
+						<Tabs.Tab isDisabled={true}>Zero</Tabs.Tab>
+						<Tabs.Tab>One</Tabs.Tab>
 					</Tabs>
 				);
 				tabBar = wrapper.find('.lucid-Tabs-bar').shallow();
@@ -151,25 +164,16 @@ describe('Tabs', () => {
 
 			it('should call onSelect with the correct arguments', () => {
 				tabBar.childAt(1).shallow().simulate('click', clickEvent);
-				const selectedIndex = onSelect.args[0][0];
-				const meta = onSelect.args[0][1];
-				assert(onSelect.called);
-				assert.equal(selectedIndex, 1);
-				assert.equal(meta.event, clickEvent);
-				assert.deepEqual(_.omit(meta.props, 'onSelect'), {
-					isLastTab: true,
-					isOpen: true,
-					isProgressive: false,
-					isSelected: false,
-					Title: '',
-					children: 'Two',
-					index: 1,
-				});
+				const selectedIndex = onSelectMock.mock.calls[0][0];
+				const meta = onSelectMock.mock.calls[0][1].event;
+				expect(onSelectMock).toBeCalledTimes(1);
+				expect(selectedIndex).toEqual(1);
+				expect(meta).toEqual(clickEvent);
 			});
 
 			it('should not call onSelect if the `Tab` isDisabled', () => {
 				tabBar.childAt(0).shallow().simulate('click', clickEvent);
-				assert(!onSelect.called);
+				expect(onSelectMock).not.toBeCalled();
 			});
 		});
 

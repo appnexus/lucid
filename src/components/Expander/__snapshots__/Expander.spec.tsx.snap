@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Expander [common] example testing should match snapshot(s) for Expanded 1`] = `
+exports[`Expander [common] example testing should match snapshot(s) for Basic 1`] = `
 <div>
   <div
     class="lucid-Expander lucid-Expander-is-expanded"

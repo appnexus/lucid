@@ -1,6 +1,7 @@
 import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
+
 import { CSSTransition } from 'react-transition-group';
 import { lucidClassNames } from '../../util/style-helpers';
 import { StandardProps } from '../../util/component-types';

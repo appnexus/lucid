@@ -178,9 +178,10 @@ export const LogScale: Story<IBarsProps> = (args) => {
 				<Bars {...args} data={data} xScale={xScale} yScale={yScale} />
 			</g>
 			<g>
-				{_.map(data, (item) => {
+				{_.map(data, (item, idx) => {
 					return (
 						<text
+							key={idx}
 							textAnchor='middle'
 							x={(xScale(item.x as string) as number) + xScale.bandwidth() / 2}
 							y={(yScale(item.y as number) as any) - 10}

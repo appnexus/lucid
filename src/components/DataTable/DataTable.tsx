@@ -2,13 +2,13 @@
 import _ from 'lodash';
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+
 import { lucidClassNames } from '../../util/style-helpers';
 import {
 	findTypes,
 	filterTypes,
 	getFirst,
 	omitProps,
-	StandardProps,
 } from '../../util/component-types';
 
 import Checkbox from '../Checkbox/Checkbox';

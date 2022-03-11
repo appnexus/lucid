@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { Meta, Story } from '@storybook/react';
 
-import { IRadioButtonLabeledProps } from './RadioButtonLabeled';
-import RadioButtonLabeled from './RadioButtonLabeled';
+import RadioButtonLabeled, {
+	IRadioButtonLabeledProps,
+} from './RadioButtonLabeled';
 
 export default {
 	title: 'Controls/RadioButtonLabeled',
@@ -14,17 +15,18 @@ export default {
 			},
 		},
 	},
+	args: RadioButtonLabeled.defaultProps,
 } as Meta;
 
-/* Interactive */
-export const Interactive: Story<IRadioButtonLabeledProps> = (args) => {
+/* Basic */
+export const Basic: Story<IRadioButtonLabeledProps> = (args) => {
 	const style = {
 		marginBottom: '3px',
 	};
 
 	const [flavor, setFlavor] = useState('vanilla');
 
-	const handleSelectedFlavor = (flavor) => {
+	const handleSelectedFlavor = (flavor: string) => {
 		setFlavor(flavor);
 	};
 
@@ -116,7 +118,7 @@ export const States: Story<IRadioButtonLabeledProps> = (args) => {
 					style={style}
 				>
 					<RadioButtonLabeled.Label>
-						Disabled & Selected
+						Disabled and Selected
 					</RadioButtonLabeled.Label>
 				</RadioButtonLabeled>
 			</section>
@@ -131,16 +133,14 @@ export const LabelAsChild: Story<IRadioButtonLabeledProps> = (args) => {
 	};
 	return (
 		<section>
-			<section>
-				<RadioButtonLabeled {...args} style={style}>
-					<RadioButtonLabeled.Label>Just text</RadioButtonLabeled.Label>
-				</RadioButtonLabeled>
-				<RadioButtonLabeled {...args} style={style}>
-					<RadioButtonLabeled.Label>
-						<span>HTML element</span>
-					</RadioButtonLabeled.Label>
-				</RadioButtonLabeled>
-			</section>
+			<RadioButtonLabeled {...args} style={style}>
+				<RadioButtonLabeled.Label>Just text</RadioButtonLabeled.Label>
+			</RadioButtonLabeled>
+			<RadioButtonLabeled {...args} style={style}>
+				<RadioButtonLabeled.Label>
+					<span>HTML element</span>
+				</RadioButtonLabeled.Label>
+			</RadioButtonLabeled>
 		</section>
 	);
 };
@@ -153,34 +153,33 @@ export const LabelAsProp: Story<IRadioButtonLabeledProps> = (args) => {
 
 	return (
 		<section>
-			<section>
-				<RadioButtonLabeled {...args} Label='Just text' style={style} />
-				<RadioButtonLabeled Label={<span>HTML element</span>} style={style} />
-				<RadioButtonLabeled
-					{...args}
-					Label={
-						[
-							'Text in an array',
-							'Only the first value in the array is used',
-							'The rest of these should be ignored',
-						] as any
-					}
-					style={style}
-				/>
-				<RadioButtonLabeled
-					{...args}
-					Label={
-						[
-							<span key='1'>HTML element in an array</span>,
-							<span key='2'>
-								Again only the first value in the array is used
-							</span>,
-							<span key='3'>The rest should not be rendered</span>,
-						] as any
-					}
-					style={style}
-				/>
-			</section>
+			<RadioButtonLabeled Label='Just text' style={style}></RadioButtonLabeled>
+			<RadioButtonLabeled
+				Label={<span>HTML element</span>}
+				style={style}
+			></RadioButtonLabeled>
+			<RadioButtonLabeled
+				Label={
+					[
+						'Text in an array',
+						'Only the first value in the array is used',
+						'The rest of these should be ignored',
+					] as any
+				}
+				style={style}
+			></RadioButtonLabeled>
+			<RadioButtonLabeled
+				Label={
+					[
+						<span key='1'>HTML element in an array</span>,
+						<span key='2'>
+							Again only the first value in the array is used
+						</span>,
+						<span key='3'>The rest should not be rendered</span>,
+					] as any
+				}
+				style={style}
+			></RadioButtonLabeled>
 		</section>
 	);
 };

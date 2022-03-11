@@ -1,9 +1,9 @@
-import { Meta, Story } from '@storybook/react';
 import _ from 'lodash';
 import React, { useState } from 'react';
+import { Meta, Story } from '@storybook/react';
+
 import { ChatIcon } from '../Icon/ChatIcon/ChatIcon';
 import { Button } from '../Button/Button';
-
 import { Banner, IBannerProps } from './Banner';
 
 export default {
@@ -16,6 +16,7 @@ export default {
 			},
 		},
 	},
+	args: Banner.defaultProps,
 } as Meta;
 
 export const Basic: Story<IBannerProps> = (args) => (
@@ -56,7 +57,7 @@ export const Stateless: Story<IBannerProps> = (args) => {
 	return (
 		<div>
 			{_.map(kinds, ({ label, value }) => (
-				<React.Fragment key={value}>
+				<React.Fragment key={`stateless-${label}`}>
 					<div>
 						<Banner {...args} kind={value as any} style={{ marginBottom: 8 }}>
 							{label}
@@ -111,7 +112,7 @@ export const Stateless: Story<IBannerProps> = (args) => {
 			</div>
 
 			{_.map(kinds, ({ label, value }) => (
-				<React.Fragment key={value}>
+				<React.Fragment key={`stateless-outline-${label}`}>
 					<div>
 						<Banner
 							{...args}
@@ -155,8 +156,8 @@ export const Small: Story<IBannerProps> = (args) => {
 
 	return (
 		<div>
-			{_.map(kinds, ({ label, value }, index) => (
-				<React.Fragment key={index}>
+			{_.map(kinds, ({ label, value }) => (
+				<React.Fragment key={`sm-${label}`}>
 					<div>
 						<Banner
 							{...args}
@@ -180,7 +181,7 @@ export const Small: Story<IBannerProps> = (args) => {
 			))}
 
 			{_.map(kinds, ({ label, value }) => (
-				<React.Fragment key={value}>
+				<React.Fragment key={`sm-outline-${label}`}>
 					<div>
 						<Banner
 							{...args}

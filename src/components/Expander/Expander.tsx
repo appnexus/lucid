@@ -43,9 +43,7 @@ const AdditionalLabelContent = (_props: IExpanderAdditionalLabelProps): null =>
 	null;
 AdditionalLabelContent.displayName = 'Expander.AdditionalLabelContent';
 AdditionalLabelContent.peek = {
-	description: `
-						Renders a \`<span>\` to be shown next to the expander label.
-					`,
+	description: `Renders a \`<span>\` to be shown next to the expander label.`,
 };
 AdditionalLabelContent.propName = 'AdditionalLabelContent';
 AdditionalLabelContent.propTypes = {
@@ -161,10 +159,7 @@ class Expander extends React.Component<IExpanderProps, IExpanderState> {
 	static AdditionalLabelContent = AdditionalLabelContent;
 
 	static peek = {
-		description: `
-				This is a container that provides a toggle that controls when the
-				content is shown.
-			`,
+		description: `\`Expander\` is a container that provides a toggle that controls when the content is shown.`,
 		categories: ['layout'],
 		madeFrom: ['ChevronIcon'],
 	};

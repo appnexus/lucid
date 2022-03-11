@@ -1,6 +1,9 @@
 import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
+import * as d3Scale from 'd3-scale';
+import * as d3TimeFormat from 'd3-time-format';
+
 import { lucidClassNames } from '../../util/style-helpers';
 import {
 	StandardProps,
@@ -14,11 +17,9 @@ import {
 	maxByFieldsStacked,
 	formatDate,
 	nearest,
+	Collection,
 } from '../../util/chart-helpers';
-import * as d3Scale from 'd3-scale';
-import * as d3TimeFormat from 'd3-time-format';
 import * as chartConstants from '../../constants/charts';
-
 import Axis from '../Axis/Axis';
 import AxisLabel from '../AxisLabel/AxisLabel';
 import Legend from '../Legend/Legend';
@@ -70,15 +71,17 @@ export interface ILineChartPropsRaw extends StandardProps {
 
 	/**
 	 * Data for the chart. E.g.
-	 * { x: new Date('2015-01-01') , y: 1 } ,
-	 * { x: new Date('2015-01-02') , y: 2 } ,
-	 * { x: new Date('2015-01-03') , y: 3 } ,
-	 * { x: new Date('2015-01-04') , y: 2 } ,
-	 * { x: new Date('2015-01-05') , y: 5 } ,
-	 * ]
+	 *
+	 * 	[
+	 * 		{ x: new Date('2015-01-01') , y: 1 } ,
+	 * 		{ x: new Date('2015-01-02') , y: 2 } ,
+	 * 		{ x: new Date('2015-01-03') , y: 3 } ,
+	 * 		{ x: new Date('2015-01-04') , y: 2 } ,
+	 * 		{ x: new Date('2015-01-05') , y: 5 } ,
+	 * 	]
 	 */
-	data?: Array<{ [key: string]: Date | number | undefined }>;
-
+	//data?: Array<{ [key: string]: Date | number | undefined }>;
+	data?: Collection;
 	/**
 	 * Legend is an object with human readable names for fields
 	 * that will be used for legends and tooltips. E.g:
@@ -354,7 +357,6 @@ class LineChart extends React.Component<ILineChartProps, ILineChartState, {}> {
 				]
 		*/
 		data: arrayOf(object),
-
 		/**
 			An object with human readable names for fields that will be used for
 			legends and tooltips. E.g:
