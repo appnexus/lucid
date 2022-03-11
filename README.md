@@ -10,12 +10,6 @@ Lucid can be installed with npm
   npm install --save lucid-ui
 ```
 
-or yarn
-
-```sh
-  yarn add lucid-ui
-```
-
 ## Usage
 
 ```js
