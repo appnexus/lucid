@@ -147,7 +147,7 @@ export const InteractiveWithChangingLabels: Story<ISwitchLabeledProps> = (
 
 		render() {
 			const spamSwitchLabel = this.state.spam
-				? 'Yes! I would like to receive updates, special offers, and other information from AppNexus and its subsidiaries.'
+				? 'Yes! I would like to receive updates, special offers, and other information from Xandr and its subsidiaries.'
 				: 'No! Please keep your wicked, dirty spam all to yourselves!';
 
 			return (

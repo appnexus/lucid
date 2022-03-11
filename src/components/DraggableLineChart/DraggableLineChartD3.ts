@@ -50,54 +50,70 @@ const getAttributes = function (selection: ISelection, obj: string[]): any {
 export interface IDraggableLineChart extends StandardProps {
 	/** Height of the chart. */
 	height?: number;
+
 	/** Width of the chart. */
 	width?: number;
+
 	/** Margin is an object defining the margins of the chart. These margins will
 	    contain the axis and labels. */
 	margin?: IDraggableLineChartMargin;
+
 	/** Data for the chart.
-			Basic example:
+		Basic example:
 			[
-			 { x: new Date('2015-01-01') , y: 1 } ,
-			 { x: new Date('2015-01-02') , y: 2 } ,
-			 { x: new Date('2015-01-03') , y: 3 } ,
-			 { x: new Date('2015-01-04') , y: 2 } ,
-			 { x: new Date('2015-01-05') , y: 5 } ,
+				{ x: new Date('2015-01-01') , y: 1 } ,
+				{ x: new Date('2015-01-02') , y: 2 } ,
+				{ x: new Date('2015-01-03') , y: 3 } ,
+				{ x: new Date('2015-01-04') , y: 2 } ,
+				{ x: new Date('2015-01-05') , y: 5 } ,
 			]
 
-			If you want to be able to navigate to one of the components, you can use ref as well:
+		If you want to be able to navigate to one of the components, you can use ref as well:
 			[
-			 { x: new Date('2015-01-01') , y: 1, ref: React.createRef() } ,
-			 { x: new Date('2015-01-02') , y: 2, ref: React.createRef() } ,
-			 { x: new Date('2015-01-03') , y: 3, ref: React.createRef() } ,
-			 { x: new Date('2015-01-04') , y: 2, ref: React.createRef() } ,
-			 { x: new Date('2015-01-05') , y: 5, ref: React.createRef() } ,
-			] */
+				{ x: new Date('2015-01-01') , y: 1, ref: React.createRef() } ,
+				{ x: new Date('2015-01-02') , y: 2, ref: React.createRef() } ,
+				{ x: new Date('2015-01-03') , y: 3, ref: React.createRef() } ,
+				{ x: new Date('2015-01-04') , y: 2, ref: React.createRef() } ,
+				{ x: new Date('2015-01-05') , y: 5, ref: React.createRef() } ,
+			] 
+	*/
 	data: IData;
+
 	/** Drag handler function which is a callable function executed at the end of drag.
-			Called when the user stops to dragging an item.
+		Called when the user stops to dragging an item.
 		  Signature: `({ event, props }) => {}` */
 	onDragEnd?: IOnDragEnd;
+
 	/** Drag handler function which is a callable function executed at the end of drag.
-			Called when the user stops to dragging an item.
-		  Signature: `({ event, props }) => {}`
-	    When defined show draggable pane. */
+		Called when the user stops to dragging an item.
+			Signature: `({ event, props }) => {}`
+	    When defined show draggable pane. 
+	*/
 	onPreselect?: IOnPreselect;
+
 	/** Flag for if xAxis tick labels are vertical. */
 	xAxisTicksVertical?: boolean;
+
 	/** Flag for if data is center aligned rather than default left aligned. */
 	dataIsCentered?: boolean;
+
 	/** Flag for yAxis sticking to minimum (not readjusting minimum). */
 	yAxisMin?: number;
+
 	/** Optional react component to render within X-Axis.
-			Note: If you are using input boxes or similar and you want to navigate
-			to the next component on tab, you will might need to provide refs
-			in the data. This react component will always be passed the following props: ({x, y, ref }: { x: string; y: number; ref?: any }) */
+		Note: If you are using input boxes or similar and you want to navigate
+		to the next component on tab, you will might need to provide refs
+		in the data. This react component will always be passed the following props: ({x, y, ref }: { x: string; y: number; ref?: any }) 
+	*/
 	xAxisRenderProp?: IXAxisRenderProp;
-	/**
-	 * Text to show to users when there is no data selection
-	 */
+
+	/** Text to show to users when there is no data selection. */
 	preSelectText?: string;
+
+	/**
+		An optional function used to format your y axis data. If you don't
+		provide anything, we use the default D3 formatter.
+	*/
 	yAxisFormatter?: ((value: string) => string) | null;
 }
 

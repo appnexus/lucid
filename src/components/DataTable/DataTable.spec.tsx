@@ -3,12 +3,15 @@ import _ from 'lodash';
 import { shallow, mount } from 'enzyme';
 import sinon from 'sinon';
 import assert from 'assert';
+import { act } from 'react-dom/test-utils';
+
 import { common } from '../../util/generic-tests';
 import DataTable from './DataTable';
 import ScrollTable from '../ScrollTable/ScrollTable';
 import Checkbox from '../Checkbox/Checkbox';
 import EmptyStateWrapper from '../EmptyStateWrapper/EmptyStateWrapper';
 import DragCaptureZone from '../DragCaptureZone/DragCaptureZone';
+import { HandleResize } from '../SplitVertical/SplitVertical.stories';
 
 const { Column, ColumnGroup } = DataTable;
 
@@ -148,6 +151,8 @@ describe('DataTable', () => {
 	});
 
 	describe('props', () => {
+		const defaultProps = DataTable.defaultProps;
+
 		describe('data', () => {
 			it('should render 10 empty rows by default if data is an empty array', () => {
 				const wrapper = shallow(<DataTable data={[]} />);
@@ -760,32 +765,17 @@ describe('DataTable', () => {
 		});
 
 		describe('isResize', () => {
-			it('should show a `resizer` if `isResizable equals to true`', () => {
-				const onResize = jest.fn();
+			it('should render a `DragCaptureZone` resizer, if `isResizable` equals true', () => {
 				const wrapper = mount(
-					<DataTable hasFixedHeader onResize={onResize} data={testData}>
-						<Column minWidth={50} field='id' isResizable title='ID' />
+					<DataTable hasFixedHeader data={testData}>
+						<Column field='id' isResizable title='ID' />
 						<Column field='first_name' isResizable title='First' />
 						<Column field='last_name' isResizable title='Last' />
 						<Column field='email' isResizable title='Email' />
-						<Column field='occupation' isResizable title='Occupation' />
+						<Column field='occupation' title='Occupation' />
 					</DataTable>
 				);
-
-				const dragCaptureZoneWrapper = wrapper.find(DragCaptureZone).at(1);
-				const mockEvent = new Event('mouseup');
-				dragCaptureZoneWrapper.prop('onDragEnd')(
-					{
-						dx: 100,
-						dy: 0,
-						pageX: 100,
-						pageY: 0,
-					} as any,
-					{
-						event: mockEvent,
-						props: {},
-					} as any
-				);
+				expect(wrapper.find(DragCaptureZone)).toHaveLength(4);
 			});
 		});
 	});

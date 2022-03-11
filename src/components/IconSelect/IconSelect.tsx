@@ -5,7 +5,6 @@ import PropTypes from 'prop-types';
 import Icon from '../Icon/Icon';
 import RadioButtonLabeled from '../RadioButtonLabeled/RadioButtonLabeled';
 import CheckboxLabeled from '../CheckboxLabeled/CheckboxLabeled';
-
 import { lucidClassNames } from '../../util/style-helpers';
 import {
 	StandardProps,
@@ -34,7 +33,7 @@ const getFigureParent = (domNode: HTMLElement): HTMLElement | undefined => {
 interface Item {
 	id: string;
 	icon?: React.ReactElement;
-	label?: React.ReactElement;
+	label?: React.ReactElement | string;
 	isSelected?: boolean;
 	isPartial?: boolean;
 	tabIndex?: number;

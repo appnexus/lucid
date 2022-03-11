@@ -2,6 +2,7 @@ import React from 'react';
 import { shallow, mount } from 'enzyme';
 import assert from 'assert';
 import _ from 'lodash';
+
 import { common } from '../../util/generic-tests';
 import SplitVertical from './SplitVertical';
 import DragCaptureZone from '../DragCaptureZone/DragCaptureZone';

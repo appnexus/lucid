@@ -5,7 +5,6 @@ import { Motion, spring } from 'react-motion';
 import { QUICK_SLIDE_MOTION } from '../../constants/motion-spring';
 import { lucidClassNames } from '../../util/style-helpers';
 import { StandardProps } from '../../util/component-types';
-import InheritedSettingsIconStories from '../Icon/InheritedSettingsIcon/InheritedSettingsIcon.stories';
 
 const cx = lucidClassNames.bind('&-Collapsible');
 

@@ -156,7 +156,6 @@ describe('RadioGroup', () => {
 						{...defaultProps}
 						{...{ foo: 1, bar: 2, baz: 3, qux: 4, quux: 5 }}
 						className='testClassName'
-						children={{ foo: '0', bar: 1, baz: 2 }}
 					>
 						<RadioGroup.RadioButton {...radioButtonDefaultProps} />
 						<RadioGroup.RadioButton {...radioButtonDefaultProps} />

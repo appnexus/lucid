@@ -1,5 +1,6 @@
 import React from 'react';
 import createClass from 'create-react-class';
+
 import Expander from './Expander';
 import Button from '../Button/Button';
 import EditIcon from '../Icon/EditIcon/EditIcon';
@@ -17,8 +18,7 @@ export default {
 	},
 };
 
-/* Expanded */
-export const Expanded = () => {
+export const Basic = () => {
 	const Component = createClass({
 		render() {
 			return (
@@ -153,7 +153,6 @@ export const InteractiveWithChangingLabels = () => {
 
 	return <Component />;
 };
-InteractiveWithChangingLabels.storyName = 'InteractiveWithChangingLabels';
 
 /* Interactive Without Changing Labels */
 export const InteractiveWithoutChangingLabels = () => {
@@ -249,7 +248,6 @@ export const InteractiveWithoutChangingLabels = () => {
 
 	return <Component />;
 };
-InteractiveWithoutChangingLabels.storyName = 'InteractiveWithoutChangingLabels';
 
 /* Interactive With Changing Labels And Additional Label Content */
 export const InteractiveWithChangingLabelsAndAdditionalLabelContent = () => {
@@ -355,8 +353,6 @@ export const InteractiveWithChangingLabelsAndAdditionalLabelContent = () => {
 
 	return <Component />;
 };
-InteractiveWithChangingLabelsAndAdditionalLabelContent.storyName =
-	'InteractiveWithChangingLabelsAndAdditionalLabelContent';
 
 /* Highlighted */
 export const Highlighted = () => {

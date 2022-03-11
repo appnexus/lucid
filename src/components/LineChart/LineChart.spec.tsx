@@ -18,6 +18,11 @@ const {
 describe('LineChart', () => {
 	let wrapper: any;
 
+	const defaultData = [
+		{ x: new Date('2015-01-01T00:00:00Z'), y: 1 },
+		{ x: new Date('2015-01-01T00:00:00Z'), y: 2 },
+	];
+
 	afterEach(() => {
 		if (wrapper) {
 			wrapper.unmount();
@@ -35,17 +40,14 @@ describe('LineChart', () => {
 			'y2AxisTooltipDataFormatter',
 		] as any,
 		getDefaultProps: () => ({
-			data: [
-				{ x: new Date('2015-01-01T00:00:00Z'), y: 1 },
-				{ x: new Date('2015-01-01T00:00:00Z'), y: 2 },
-			],
+			data: defaultData,
 		}),
 	});
 
 	describe('props', () => {
 		describe('isLoading', () => {
 			it('should show a `LoadingIndicator` if `isLoading`', () => {
-				wrapper = mount(<LineChart isLoading />);
+				wrapper = mount(<LineChart isLoading data={[]} />);
 
 				const loadingIndicatorWrapper = wrapper
 					.find(EmptyStateWrapper)
@@ -61,7 +63,7 @@ describe('LineChart', () => {
 			it('should render the message title element', () => {
 				const titleText = 'Here is the Title Text';
 				wrapper = mount(
-					<LineChart>
+					<LineChart data={[]}>
 						<EmptyStateWrapper>
 							<Title>{titleText}</Title>
 						</EmptyStateWrapper>
@@ -88,7 +90,7 @@ describe('LineChart', () => {
 					</div>
 				);
 				wrapper = mount(
-					<LineChart>
+					<LineChart data={[]}>
 						<EmptyStateWrapper>
 							<Body>{bodyElement}</Body>
 						</EmptyStateWrapper>

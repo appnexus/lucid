@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`RadioButtonLabeled [common] example testing should match snapshot(s) for Interactive 1`] = `
+exports[`RadioButtonLabeled [common] example testing should match snapshot(s) for Basic 1`] = `
 <section>
   <span
     style="display:inline-flex;flex-direction:column;align-items:flex-start"
@@ -147,183 +147,179 @@ exports[`RadioButtonLabeled [common] example testing should match snapshot(s) fo
 
 exports[`RadioButtonLabeled [common] example testing should match snapshot(s) for LabelAsChild 1`] = `
 <section>
-  <section>
-    <label
-      class="lucid-RadioButtonLabeled"
-      style="margin-bottom:3px"
+  <label
+    class="lucid-RadioButtonLabeled"
+    style="margin-bottom:3px"
+  >
+    <span
+      class="lucid-RadioButton"
     >
+      <input
+        class="lucid-RadioButton-native"
+        type="radio"
+      />
       <span
-        class="lucid-RadioButton"
-      >
-        <input
-          class="lucid-RadioButton-native"
-          type="radio"
-        />
-        <span
-          class="lucid-RadioButton-visualization-glow"
-        />
-        <span
-          class="lucid-RadioButton-visualization-container"
-        />
-        <span
-          class="lucid-RadioButton-visualization-dot"
-        />
-      </span>
-      <div
-        class="lucid-RadioButtonLabeled-label"
-      >
-        Just text
-      </div>
-    </label>
-    <label
-      class="lucid-RadioButtonLabeled"
-      style="margin-bottom:3px"
+        class="lucid-RadioButton-visualization-glow"
+      />
+      <span
+        class="lucid-RadioButton-visualization-container"
+      />
+      <span
+        class="lucid-RadioButton-visualization-dot"
+      />
+    </span>
+    <div
+      class="lucid-RadioButtonLabeled-label"
     >
+      Just text
+    </div>
+  </label>
+  <label
+    class="lucid-RadioButtonLabeled"
+    style="margin-bottom:3px"
+  >
+    <span
+      class="lucid-RadioButton"
+    >
+      <input
+        class="lucid-RadioButton-native"
+        type="radio"
+      />
       <span
-        class="lucid-RadioButton"
-      >
-        <input
-          class="lucid-RadioButton-native"
-          type="radio"
-        />
-        <span
-          class="lucid-RadioButton-visualization-glow"
-        />
-        <span
-          class="lucid-RadioButton-visualization-container"
-        />
-        <span
-          class="lucid-RadioButton-visualization-dot"
-        />
+        class="lucid-RadioButton-visualization-glow"
+      />
+      <span
+        class="lucid-RadioButton-visualization-container"
+      />
+      <span
+        class="lucid-RadioButton-visualization-dot"
+      />
+    </span>
+    <div
+      class="lucid-RadioButtonLabeled-label"
+    >
+      <span>
+        HTML element
       </span>
-      <div
-        class="lucid-RadioButtonLabeled-label"
-      >
-        <span>
-          HTML element
-        </span>
-      </div>
-    </label>
-  </section>
+    </div>
+  </label>
 </section>
 `;
 
 exports[`RadioButtonLabeled [common] example testing should match snapshot(s) for LabelAsProp 1`] = `
 <section>
-  <section>
-    <label
-      class="lucid-RadioButtonLabeled"
-      style="margin-bottom:3px"
+  <label
+    class="lucid-RadioButtonLabeled"
+    style="margin-bottom:3px"
+  >
+    <span
+      class="lucid-RadioButton"
     >
+      <input
+        class="lucid-RadioButton-native"
+        type="radio"
+      />
       <span
-        class="lucid-RadioButton"
-      >
-        <input
-          class="lucid-RadioButton-native"
-          type="radio"
-        />
-        <span
-          class="lucid-RadioButton-visualization-glow"
-        />
-        <span
-          class="lucid-RadioButton-visualization-container"
-        />
-        <span
-          class="lucid-RadioButton-visualization-dot"
-        />
-      </span>
-      <div
-        class="lucid-RadioButtonLabeled-label"
-      >
-        Just text
-      </div>
-    </label>
-    <label
-      class="lucid-RadioButtonLabeled"
-      style="margin-bottom:3px"
+        class="lucid-RadioButton-visualization-glow"
+      />
+      <span
+        class="lucid-RadioButton-visualization-container"
+      />
+      <span
+        class="lucid-RadioButton-visualization-dot"
+      />
+    </span>
+    <div
+      class="lucid-RadioButtonLabeled-label"
     >
-      <span
-        class="lucid-RadioButton"
-      >
-        <input
-          class="lucid-RadioButton-native"
-          type="radio"
-        />
-        <span
-          class="lucid-RadioButton-visualization-glow"
-        />
-        <span
-          class="lucid-RadioButton-visualization-container"
-        />
-        <span
-          class="lucid-RadioButton-visualization-dot"
-        />
-      </span>
-      <div
-        class="lucid-RadioButtonLabeled-label"
-      >
-        <span>
-          HTML element
-        </span>
-      </div>
-    </label>
-    <label
-      class="lucid-RadioButtonLabeled"
-      style="margin-bottom:3px"
+      Just text
+    </div>
+  </label>
+  <label
+    class="lucid-RadioButtonLabeled"
+    style="margin-bottom:3px"
+  >
+    <span
+      class="lucid-RadioButton"
     >
+      <input
+        class="lucid-RadioButton-native"
+        type="radio"
+      />
       <span
-        class="lucid-RadioButton"
-      >
-        <input
-          class="lucid-RadioButton-native"
-          type="radio"
-        />
-        <span
-          class="lucid-RadioButton-visualization-glow"
-        />
-        <span
-          class="lucid-RadioButton-visualization-container"
-        />
-        <span
-          class="lucid-RadioButton-visualization-dot"
-        />
-      </span>
-      <div
-        class="lucid-RadioButtonLabeled-label"
-      >
-        Text in an array
-      </div>
-    </label>
-    <label
-      class="lucid-RadioButtonLabeled"
-      style="margin-bottom:3px"
+        class="lucid-RadioButton-visualization-glow"
+      />
+      <span
+        class="lucid-RadioButton-visualization-container"
+      />
+      <span
+        class="lucid-RadioButton-visualization-dot"
+      />
+    </span>
+    <div
+      class="lucid-RadioButtonLabeled-label"
     >
-      <span
-        class="lucid-RadioButton"
-      >
-        <input
-          class="lucid-RadioButton-native"
-          type="radio"
-        />
-        <span
-          class="lucid-RadioButton-visualization-glow"
-        />
-        <span
-          class="lucid-RadioButton-visualization-container"
-        />
-        <span
-          class="lucid-RadioButton-visualization-dot"
-        />
+      <span>
+        HTML element
       </span>
-      <div
-        class="lucid-RadioButtonLabeled-label"
-      >
-        <span>
-          HTML element in an array
-        </span>
-      </div>
-    </label>
-  </section>
+    </div>
+  </label>
+  <label
+    class="lucid-RadioButtonLabeled"
+    style="margin-bottom:3px"
+  >
+    <span
+      class="lucid-RadioButton"
+    >
+      <input
+        class="lucid-RadioButton-native"
+        type="radio"
+      />
+      <span
+        class="lucid-RadioButton-visualization-glow"
+      />
+      <span
+        class="lucid-RadioButton-visualization-container"
+      />
+      <span
+        class="lucid-RadioButton-visualization-dot"
+      />
+    </span>
+    <div
+      class="lucid-RadioButtonLabeled-label"
+    >
+      Text in an array
+    </div>
+  </label>
+  <label
+    class="lucid-RadioButtonLabeled"
+    style="margin-bottom:3px"
+  >
+    <span
+      class="lucid-RadioButton"
+    >
+      <input
+        class="lucid-RadioButton-native"
+        type="radio"
+      />
+      <span
+        class="lucid-RadioButton-visualization-glow"
+      />
+      <span
+        class="lucid-RadioButton-visualization-container"
+      />
+      <span
+        class="lucid-RadioButton-visualization-dot"
+      />
+    </span>
+    <div
+      class="lucid-RadioButtonLabeled-label"
+    >
+      <span>
+        HTML element in an array
+      </span>
+    </div>
+  </label>
 </section>
 `;
 
@@ -441,7 +437,7 @@ exports[`RadioButtonLabeled [common] example testing should match snapshot(s) fo
       <div
         class="lucid-RadioButtonLabeled-label"
       >
-        Disabled & Selected
+        Disabled and Selected
       </div>
     </label>
   </section>

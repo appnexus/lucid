@@ -27,8 +27,8 @@ export const Basic: Story<IBadgeProps> = Template.bind({});
 
 export const AllTypes: Story<IBadgeProps> = (args) => (
 	<div>
-		{_.map(kinds, (kind) => (
-			<div key={kind}>
+		{_.map(kinds, (kind, idx) => (
+			<div key={`${kind}-${idx}`}>
 				{_.map(types, (ty) => (
 					<React.Fragment key={`${kind}-${ty}`}>
 						<Badge

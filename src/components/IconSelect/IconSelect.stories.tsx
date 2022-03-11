@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { Meta } from '@storybook/react';
-import IconSelect from './IconSelect';
+import { Meta, Story } from '@storybook/react';
+
+import IconSelect, { IIconSelectProps } from './IconSelect';
 import ClockIcon from '../Icon/ClockIcon/ClockIcon';
 import StopwatchIcon from '../Icon/StopwatchIcon/StopwatchIcon';
 import SwitchLabeled from '../SwitchLabeled/SwitchLabeled';
@@ -16,10 +17,10 @@ export default {
 			},
 		},
 	},
+	args: IconSelect.defaultProps,
 } as Meta;
 
-//👇 Create a “template” of how args map to rendering
-const Template: any = (args) => {
+export const Basic: Story<IIconSelectProps> = (args) => {
 	const [selectedIcon, setSelectedIcon] = useState<string>('item2');
 
 	const handleSelect = (id: string) => {
@@ -53,16 +54,44 @@ const Template: any = (args) => {
 	);
 };
 
-//👇 Each story then reuses that template
+/** Single: Select One Icon */
+export const Single: Story<IIconSelectProps> = (args) => {
+	const [selectedIcon, setSelectedIcon] = useState<string>('item2');
 
-/** Default: Select One Icon */
-export const Basic = Template.bind({});
-Basic.args = {
-	kind: 'single', // renders as radio buttons
+	const handleSelect = (id: string) => {
+		// when selected, set `selectedIcon`
+		setSelectedIcon(id);
+	};
+
+	return (
+		<section>
+			<IconSelect
+				{...args}
+				onSelect={handleSelect}
+				kind='single'
+				items={
+					[
+						{
+							id: 'item1',
+							icon: <ClockIcon />,
+							isSelected: selectedIcon === 'item1',
+							label: 'Foo Bar',
+						},
+						{
+							id: 'item2',
+							icon: <StopwatchIcon />,
+							isSelected: selectedIcon === 'item2',
+							label: 'Bax Tar',
+						},
+					] as any
+				}
+			/>
+		</section>
+	);
 };
 
 /** Select Multiple Icons */
-export const SelectMultipleIcons = (args) => {
+export const SelectMultipleIcons: Story<IIconSelectProps> = (args) => {
 	const [selectedIcons, setSelectedIcons] = useState<string[]>(['item2']);
 
 	const isSelected = (id: string) => {
@@ -84,6 +113,7 @@ export const SelectMultipleIcons = (args) => {
 			<IconSelect
 				{...args}
 				onSelect={handleSelect}
+				kind='multiple'
 				items={
 					[
 						{
@@ -104,12 +134,9 @@ export const SelectMultipleIcons = (args) => {
 		</section>
 	);
 };
-SelectMultipleIcons.args = {
-	kind: 'multiple', // default value, renders as checkboxes
-};
 
 /** Partially Select Icons */
-export const PartiallySelectIcons = (args) => {
+export const PartiallySelectIcons: Story<IIconSelectProps> = (args) => {
 	const [selectedIcons, setSelectedIcons] = useState<any>([
 		{ id: 'item2', isPartial: true },
 	]);
@@ -178,7 +205,7 @@ export const PartiallySelectIcons = (args) => {
 };
 
 /** Disabled Icon Select */
-export const DisabledIconSelect = (args) => {
+export const DisabledIconSelect: Story<IIconSelectProps> = (args) => {
 	const [selectedIcons, setSelectedIcons] = useState<string[]>(['item2']);
 	const [isDisabled, setIsDisabled] = useState<boolean>(true);
 

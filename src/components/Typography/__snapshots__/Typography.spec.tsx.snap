@@ -16,23 +16,22 @@ exports[`Typography [common] example testing should match snapshot(s) for Nested
     class="lucid-Typography lucid-Typography-p"
   >
     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pencil mustachioed graeme souness, mustachioed waxy gurn rugged el snort graeme souness burt reynolds educated village people boogie nights pencil man of the year 1986, pencil village people graeme souness rugged boogie nights mouthbrow educated burt reynolds waxy gurn man of the year 1986 des lynam charming villain mustachioed cardinal richelieu el snort. Borat d’artagnan hungarian testosterone trophy frontiersman hairy kiss. beefeater chevron, hairy kiss. cardinal richelieu groucho-a-like testosterone trophy d’artagnan dick van dyke rugged chevron Droopy frontiersman borat beefeater hungarian chevron, cardinal richelieu d’artagnan beefeater el snort Droopy dodgy uncle clive groucho-a-like hairy kiss. chevron frontiersman chevron dick van dyke walrus leader of men rugged borat bad guy testosterone trophy groucho-a-like alpha trion hungarian.
-    <br />
-    <br />
-    <a
-      class="lucid-Typography lucid-Typography-a"
-      style="display:block"
-    >
-      Like!
-    </a>
-    <br />
-    <a
-      class="lucid-Typography lucid-Typography-a"
-      style="display:block"
-    >
-      Subscribe!
-    </a>
-    <br />
   </p>
+  <br />
+  <a
+    class="lucid-Typography lucid-Typography-a"
+    style="display:block"
+  >
+    Like!
+  </a>
+  <br />
+  <a
+    class="lucid-Typography lucid-Typography-a"
+    style="display:block"
+  >
+    Subscribe!
+  </a>
+  <br />
   <h3
     class="lucid-Typography lucid-Typography-h3"
   >
@@ -43,7 +42,6 @@ exports[`Typography [common] example testing should match snapshot(s) for Nested
   >
     npm install all-the-things
   </code>
-  <p />
 </section>
 `;
 

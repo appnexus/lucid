@@ -1,9 +1,8 @@
-import sinon from 'sinon';
 import React from 'react';
 import assert from 'assert';
 import { shallow } from 'enzyme';
-import { common } from '../../util/generic-tests';
 
+import { common } from '../../util/generic-tests';
 import { VerticalTabsDumb as VerticalTabs } from './VerticalTabs';
 import { VerticalListMenuDumb as VerticalListMenu } from '../VerticalListMenu/VerticalListMenu';
 
@@ -155,13 +154,13 @@ describe('VerticalTabs', () => {
 		});
 
 		describe('onSelect', () => {
-			const onSelect: any = sinon.spy();
+			const onSelectMock: any = jest.fn();
 			let wrapper: any;
 
 			beforeEach(() => {
-				onSelect.reset();
+				onSelectMock.mockClear();
 				wrapper = shallow(
-					<VerticalTabs onSelect={onSelect}>
+					<VerticalTabs onSelect={onSelectMock}>
 						<VerticalTabs.Tab>One</VerticalTabs.Tab>
 						<VerticalTabs.Tab>Two</VerticalTabs.Tab>
 					</VerticalTabs>
@@ -170,8 +169,8 @@ describe('VerticalTabs', () => {
 
 			it('should pass props onto `VerticalListMenu`', () => {
 				wrapper.find(VerticalListMenu).props().onSelect('stuff');
-				assert(onSelect.called);
-				assert.equal(onSelect.args[0], 'stuff');
+				expect(onSelectMock).toBeCalledTimes(1);
+				expect(onSelectMock.mock.calls[0][0]).toEqual('stuff');
 			});
 		});
 	});

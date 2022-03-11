@@ -1,5 +1,4 @@
 import React from 'react';
-//import createClass from 'create-react-class';
 import { Story, Meta } from '@storybook/react';
 
 import HelpIcon from './../Icon/HelpIcon/HelpIcon';
@@ -106,22 +105,21 @@ export const Nested: Story<ITypographyProps> = (args) => {
 				hairy kiss. chevron frontiersman chevron dick van dyke walrus leader of
 				men rugged borat bad guy testosterone trophy groucho-a-like alpha trion
 				hungarian.
-				<br />
-				<br />
-				<Typography {...args} variant='a' style={{ display: 'block' }}>
-					Like!
-				</Typography>
-				<br />
-				<Typography {...args} variant='a' style={{ display: 'block' }}>
-					Subscribe!
-				</Typography>
-				<br />
-				<Typography {...args} variant='h3'>
-					Code Example
-				</Typography>
-				<Typography {...args} variant='code'>
-					npm install all-the-things
-				</Typography>
+			</Typography>
+			<br />
+			<Typography {...args} variant='a' style={{ display: 'block' }}>
+				Like!
+			</Typography>
+			<br />
+			<Typography {...args} variant='a' style={{ display: 'block' }}>
+				Subscribe!
+			</Typography>
+			<br />
+			<Typography {...args} variant='h3'>
+				Code Example
+			</Typography>
+			<Typography {...args} variant='code'>
+				npm install all-the-things
 			</Typography>
 		</section>
 	);

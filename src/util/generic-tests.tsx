@@ -247,7 +247,7 @@ export function controls(
 		it('should callback with `event` and `props`', () => {
 			const expectedSpecialProp = 32;
 			const props = {
-				specialProp: expectedSpecialProp,
+				specialprop: expectedSpecialProp,
 				[callbackName]: sinon.spy(),
 				...additionalProps,
 			};
@@ -257,13 +257,13 @@ export function controls(
 
 			// Last argument should be an object with `uniqueId` and `event`
 			const {
-				props: { specialProp },
+				props: { specialprop },
 				event,
 			}: any = _.last(props[callbackName].args[0]);
 
 			assert(event, 'missing event');
 			assert.equal(
-				specialProp,
+				specialprop,
 				expectedSpecialProp,
 				'incorrect or missing specialProp'
 			);

@@ -1,7 +1,6 @@
 import _ from 'lodash';
 import assert from 'assert';
 import React from 'react';
-import sinon from 'sinon';
 import { mount, shallow } from 'enzyme';
 
 import { common } from '../../util/generic-tests';
@@ -134,7 +133,7 @@ describe('Accordion', () => {
 
 describe('Accordion', () => {
 	let wrapper: any;
-	const onSelect: any = sinon.spy();
+	const onSelectMock: any = jest.fn();
 	let mountTestDiv: any;
 
 	describe('user picks one of the items', () => {
@@ -142,7 +141,7 @@ describe('Accordion', () => {
 			mountTestDiv = document.createElement('div');
 			document.body.appendChild(mountTestDiv);
 			wrapper = mount(
-				<Accordion onSelect={onSelect}>
+				<Accordion onSelect={onSelectMock}>
 					<Accordion.Item Header='Header One'>One</Accordion.Item>
 					<Accordion.Item Header='Header Two' isDisabled>
 						Two
@@ -155,7 +154,7 @@ describe('Accordion', () => {
 		});
 
 		afterEach(() => {
-			onSelect.reset();
+			onSelectMock.mockClear();
 			wrapper && wrapper.unmount();
 			mountTestDiv && mountTestDiv.parentNode.removeChild(mountTestDiv);
 		});
@@ -166,11 +165,7 @@ describe('Accordion', () => {
 			firstPanel.find('.lucid-ExpanderPanel-header').first().simulate('click');
 			firstPanel.find('.lucid-ExpanderPanel-icon').first().simulate('click');
 
-			assert.strictEqual(
-				onSelect.callCount,
-				2,
-				`onSelect called the wrong number of times, actual: ${onSelect.callCount}, expected: 2`
-			);
+			expect(onSelectMock).toBeCalledTimes(2);
 		});
 
 		it('should not call the function passed in as the `onSelect` prop when Item is disabled', () => {
@@ -179,7 +174,7 @@ describe('Accordion', () => {
 			secondPanel.find('.lucid-ExpanderPanel-header').first().simulate('click');
 			secondPanel.find('.lucid-ExpanderPanel-icon').first().simulate('click');
 
-			expect(onSelect.callCount).toEqual(0);
+			expect(onSelectMock).toBeCalledTimes(0);
 		});
 	});
 });

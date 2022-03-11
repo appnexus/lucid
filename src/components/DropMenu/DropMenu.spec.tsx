@@ -1,7 +1,6 @@
 import React from 'react';
 import { mount, shallow } from 'enzyme';
 import assert from 'assert';
-import sinon from 'sinon';
 import _ from 'lodash';
 import { common } from '../../util/generic-tests';
 
@@ -326,9 +325,9 @@ describe('DropMenu', () => {
 		describe('onExpand', () => {
 			describe('mouse', () => {
 				it('should be called when DropMenu [not expanded, clicked]', () => {
-					const onExpand = sinon.spy();
+					const onExpandMock: any = jest.fn();
 					const wrapper = shallow(
-						<DropMenu isExpanded={false} onExpand={onExpand}>
+						<DropMenu isExpanded={false} onExpand={onExpandMock}>
 							<Control>control</Control>
 							<Option>option a</Option>
 							<Option>option b</Option>
@@ -338,13 +337,13 @@ describe('DropMenu', () => {
 
 					wrapper.find('.lucid-DropMenu-Control').simulate('click');
 
-					assert(onExpand.called);
+					expect(onExpandMock).toHaveBeenCalledTimes(1);
 				});
 
 				it('should not be called when DropMenu [expanded, clicked]', () => {
-					const onExpand = sinon.spy();
+					const onExpandMock: any = jest.fn();
 					const wrapper = shallow(
-						<DropMenu isExpanded={true} onExpand={onExpand}>
+						<DropMenu isExpanded={true} onExpand={onExpandMock}>
 							<Control>control</Control>
 							<Option>option a</Option>
 							<Option>option b</Option>
@@ -354,15 +353,15 @@ describe('DropMenu', () => {
 
 					wrapper.find('.lucid-DropMenu-Control').simulate('click');
 
-					assert(onExpand.notCalled);
+					expect(onExpandMock).not.toHaveBeenCalled();
 				});
 			});
 
 			describe('keyboard', () => {
 				it('should be called when DropMenu [not expanded, has focus, Down Arrow key pressed]', () => {
-					const onExpand = sinon.spy();
+					const onExpandMock: any = jest.fn();
 					const wrapper = shallow(
-						<DropMenu isExpanded={false} onExpand={onExpand}>
+						<DropMenu isExpanded={false} onExpand={onExpandMock}>
 							<Control>control</Control>
 							<Option>option a</Option>
 							<Option>option b</Option>
@@ -375,7 +374,7 @@ describe('DropMenu', () => {
 						preventDefault: _.noop,
 					});
 
-					assert(onExpand.called);
+					expect(onExpandMock).toHaveBeenCalledTimes(1);
 				});
 			});
 		});
@@ -383,9 +382,9 @@ describe('DropMenu', () => {
 		describe('onCollapse', () => {
 			describe('mouse', () => {
 				it('should be called when DropMenu [expanded, control clicked]', () => {
-					const onCollapse = sinon.spy();
+					const onCollapseMock: any = jest.fn();
 					const wrapper = shallow(
-						<DropMenu isExpanded={true} onCollapse={onCollapse}>
+						<DropMenu isExpanded={true} onCollapse={onCollapseMock}>
 							<Control>control</Control>
 							<Option>option a</Option>
 							<Option>option b</Option>
@@ -395,13 +394,13 @@ describe('DropMenu', () => {
 
 					wrapper.find('.lucid-DropMenu-Control').simulate('click');
 
-					assert(onCollapse.called);
+					expect(onCollapseMock).toHaveBeenCalledTimes(1);
 				});
 
 				it('should not be called when DropMenu [not expanded, control clicked]', () => {
-					const onCollapse = sinon.spy();
+					const onCollapseMock: any = jest.fn();
 					const wrapper = shallow(
-						<DropMenu isExpanded={false} onCollapse={onCollapse}>
+						<DropMenu isExpanded={false} onCollapse={onCollapseMock}>
 							<Control>control</Control>
 							<Option>option a</Option>
 							<Option>option b</Option>
@@ -411,13 +410,13 @@ describe('DropMenu', () => {
 
 					wrapper.find('.lucid-DropMenu-Control').simulate('click');
 
-					assert(onCollapse.notCalled);
+					expect(onCollapseMock).not.toHaveBeenCalled();
 				});
 
 				it('should be called when DropMenu [expanded, ContextMenu onClickOut called]', () => {
-					const onCollapse = sinon.spy();
+					const onCollapseMock: any = jest.fn();
 					const wrapper: any = shallow(
-						<DropMenu isExpanded={true} onCollapse={onCollapse}>
+						<DropMenu isExpanded={true} onCollapse={onCollapseMock}>
 							<Control>control</Control>
 							<Option>option a</Option>
 							<Option>option b</Option>
@@ -427,15 +426,15 @@ describe('DropMenu', () => {
 
 					wrapper.find('ContextMenu').prop('onClickOut')();
 
-					assert(onCollapse.called);
+					expect(onCollapseMock).toHaveBeenCalledTimes(1);
 				});
 			});
 
 			describe('keyboard', () => {
 				it('should be called when DropMenu [expanded, Escape key pressed]', () => {
-					const onCollapse = sinon.spy();
+					const onCollapseMock: any = jest.fn();
 					const wrapper = shallow(
-						<DropMenu isExpanded={true} onCollapse={onCollapse}>
+						<DropMenu isExpanded={true} onCollapse={onCollapseMock}>
 							<Control>control</Control>
 							<Option>option a</Option>
 							<Option>option b</Option>
@@ -448,21 +447,21 @@ describe('DropMenu', () => {
 						preventDefault: _.noop,
 					});
 
-					assert(onCollapse.called);
+					expect(onCollapseMock).toHaveBeenCalledTimes(1);
 				});
 			});
 		});
 
 		describe('onSelect', () => {
 			describe('mouse', () => {
-				let onSelect: any;
+				let onSelectMock: any;
 				let wrapper: any;
 
 				beforeEach(() => {
-					onSelect = sinon.spy();
+					onSelectMock = jest.fn();
 
 					wrapper = mount(
-						<DropMenu isExpanded={true} onSelect={onSelect}>
+						<DropMenu isExpanded={true} onSelect={onSelectMock}>
 							<Control>control</Control>
 							<Option>option a</Option>
 							<Option>option b</Option>
@@ -473,7 +472,7 @@ describe('DropMenu', () => {
 
 				afterEach(() => {
 					wrapper.unmount();
-					onSelect.reset();
+					onSelectMock.mockClear();
 				});
 
 				it('should be called when DropMenu [expanded, option clicked]', () => {
@@ -483,16 +482,22 @@ describe('DropMenu', () => {
 
 					optionDOMNodes[2].click();
 
-					assert(onSelect.called);
-					assert(onSelect.calledWith(2));
+					const selectedIndex = onSelectMock.mock.calls[0][0];
+
+					expect(onSelectMock).toHaveBeenCalledTimes(1);
+					expect(selectedIndex).toEqual(2);
 				});
 			});
 
 			describe('keyboard', () => {
 				it('should be called when DropMenu [expanded, option focused, Enter key  pressed]', () => {
-					const onSelect: any = sinon.spy();
+					const onSelectMock: any = jest.fn();
 					const wrapper = shallow(
-						<DropMenu isExpanded={true} focusedIndex={2} onSelect={onSelect}>
+						<DropMenu
+							isExpanded={true}
+							focusedIndex={2}
+							onSelect={onSelectMock}
+						>
 							<Control>control</Control>
 							<Option>option a</Option>
 							<Option>option b</Option>
@@ -505,8 +510,10 @@ describe('DropMenu', () => {
 						preventDefault: _.noop,
 					});
 
-					assert(onSelect.called);
-					assert(onSelect.calledWith(2));
+					const selectedIndex = onSelectMock.mock.calls[0][0];
+
+					expect(onSelectMock).toHaveBeenCalledTimes(1);
+					expect(selectedIndex).toEqual(2);
 				});
 			});
 		});
@@ -514,12 +521,12 @@ describe('DropMenu', () => {
 		describe('onFocusOption', () => {
 			describe('keyboard', () => {
 				it('should be called when DropMenu [expanded, focusedIndex=null, Down Arrow key pressed]', () => {
-					const onFocusOption = sinon.spy();
+					const onFocusOptionMock: any = jest.fn();
 					const wrapper = shallow(
 						<DropMenu
 							isExpanded={true}
 							focusedIndex={null}
-							onFocusOption={onFocusOption}
+							onFocusOption={onFocusOptionMock}
 						>
 							<Control>control</Control>
 							<Option>option a</Option>
@@ -533,16 +540,16 @@ describe('DropMenu', () => {
 						preventDefault: _.noop,
 					});
 
-					assert(onFocusOption.called);
+					expect(onFocusOptionMock).toHaveBeenCalledTimes(1);
 				});
 
 				it('should be called when DropMenu [expanded, focusedIndex={not last option}, Down Arrow key pressed]', () => {
-					const onFocusOption = sinon.spy();
+					const onFocusOptionMock: any = jest.fn();
 					const wrapper = shallow(
 						<DropMenu
 							isExpanded={true}
 							focusedIndex={1}
-							onFocusOption={onFocusOption}
+							onFocusOption={onFocusOptionMock}
 						>
 							<Control>control</Control>
 							<Option>option a</Option>
@@ -556,16 +563,16 @@ describe('DropMenu', () => {
 						preventDefault: _.noop,
 					});
 
-					assert(onFocusOption.called);
+					expect(onFocusOptionMock).toHaveBeenCalledTimes(1);
 				});
 
 				it('should not be called when DropMenu [expanded, focusedIndex={last option}, Down Arrow key pressed]', () => {
-					const onFocusOption = sinon.spy();
+					const onFocusOptionMock: any = jest.fn();
 					const wrapper = shallow(
 						<DropMenu
 							isExpanded={true}
 							focusedIndex={2}
-							onFocusOption={onFocusOption}
+							onFocusOption={onFocusOptionMock}
 						>
 							<Control>control</Control>
 							<Option>option a</Option>
@@ -579,16 +586,16 @@ describe('DropMenu', () => {
 						preventDefault: _.noop,
 					});
 
-					assert(onFocusOption.notCalled);
+					expect(onFocusOptionMock).not.toHaveBeenCalled();
 				});
 
 				it('should be called when DropMenu [expanded, focusedIndex={not first option}, Up Arrow key pressed]', () => {
-					const onFocusOption = sinon.spy();
+					const onFocusOptionMock: any = jest.fn();
 					const wrapper = shallow(
 						<DropMenu
 							isExpanded={true}
 							focusedIndex={2}
-							onFocusOption={onFocusOption}
+							onFocusOption={onFocusOptionMock}
 						>
 							<Control>control</Control>
 							<Option>option a</Option>
@@ -602,16 +609,16 @@ describe('DropMenu', () => {
 						preventDefault: _.noop,
 					});
 
-					assert(onFocusOption.called);
+					expect(onFocusOptionMock).toHaveBeenCalledTimes(1);
 				});
 
 				it('should not be called when DropMenu [expanded, focusedIndex={first option}, Up Arrow key pressed]', () => {
-					const onFocusOption = sinon.spy();
+					const onFocusOptionMock: any = jest.fn();
 					const wrapper = shallow(
 						<DropMenu
 							isExpanded={true}
 							focusedIndex={0}
-							onFocusOption={onFocusOption}
+							onFocusOption={onFocusOptionMock}
 						>
 							<Control>control</Control>
 							<Option>option a</Option>
@@ -625,16 +632,16 @@ describe('DropMenu', () => {
 						preventDefault: _.noop,
 					});
 
-					assert(onFocusOption.notCalled);
+					expect(onFocusOptionMock).not.toHaveBeenCalled();
 				});
 
 				it('should not be called when DropMenu [expanded, focusedIndex={null}, Up Arrow key pressed]', () => {
-					const onFocusOption = sinon.spy();
+					const onFocusOptionMock: any = jest.fn();
 					const wrapper = shallow(
 						<DropMenu
 							isExpanded={true}
 							focusedIndex={null}
-							onFocusOption={onFocusOption}
+							onFocusOption={onFocusOptionMock}
 						>
 							<Control>control</Control>
 							<Option>option a</Option>
@@ -648,19 +655,19 @@ describe('DropMenu', () => {
 						preventDefault: _.noop,
 					});
 
-					assert(onFocusOption.notCalled);
+					expect(onFocusOptionMock).not.toHaveBeenCalled();
 				});
 			});
 
 			describe('mouse', () => {
-				let onFocusOption: any;
+				let onFocusOptionMock: any;
 				let wrapper: any;
 
 				beforeEach(() => {
-					onFocusOption = sinon.spy();
+					onFocusOptionMock = jest.fn();
 
 					wrapper = mount(
-						<DropMenu isExpanded={true} onFocusOption={onFocusOption}>
+						<DropMenu isExpanded={true} onFocusOption={onFocusOptionMock}>
 							<Control>control</Control>
 							<Option>option a</Option>
 							<Option>option b</Option>
@@ -671,7 +678,7 @@ describe('DropMenu', () => {
 
 				afterEach(() => {
 					wrapper.unmount();
-					onFocusOption.reset();
+					onFocusOptionMock.mockClear();
 				});
 
 				it('should be called when user moves mouse over option', () => {
@@ -698,9 +705,10 @@ describe('DropMenu', () => {
 					);
 					optionDOMNodes[2].dispatchEvent(mouseMoveEvent);
 
-					assert(onFocusOption.called);
-					assert(onFocusOption.calledWith(2));
-					assert(true);
+					const selectedIndex = onFocusOptionMock.mock.calls[0][0];
+
+					expect(onFocusOptionMock).toHaveBeenCalledTimes(1);
+					expect(selectedIndex).toEqual(2);
 				});
 			});
 		});

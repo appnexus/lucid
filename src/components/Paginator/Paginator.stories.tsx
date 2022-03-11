@@ -6,6 +6,13 @@ import Paginator, { IPaginatorProps } from './Paginator';
 export default {
 	title: 'Navigation/Paginator',
 	component: Paginator,
+	parameters: {
+		docs: {
+			description: {
+				component: Paginator.description,
+			},
+		},
+	},
 };
 
 export const Basic: Story<IPaginatorProps> = (args) => {
