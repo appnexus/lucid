@@ -1,6 +1,5 @@
 import React from 'react';
 import _ from 'lodash';
-import assert from 'assert';
 import { shallow } from 'enzyme';
 
 import { common, controls } from '../../util/generic-tests';
@@ -39,7 +38,7 @@ describe('Tag', () => {
 			_.forEach(
 				['className', 'children', 'foo', 'bar', 'baz', 'qux', 'quux'],
 				(prop) => {
-					assert(_.includes(rootProps, prop));
+					expect(_.includes(rootProps, prop)).toBe(true);
 				}
 			);
 		});
