@@ -8,18 +8,18 @@ import { cleanArgs, thunk, getReduxPrimitives } from './redux';
 describe('redux utils', () => {
 	describe('#cleanArgs', () => {
 		it('it should remove the last element if it has an `event` property', () => {
-			assert.deepEqual(cleanArgs(['foo', 'bar', { event: 'event' }]), [
+			assert.deepStrictEqual(cleanArgs(['foo', 'bar', { event: 'event' }]), [
 				'foo',
 				'bar',
 			]);
-			assert.deepEqual(cleanArgs(['foo', 'bar', { event: null }]), [
+			assert.deepStrictEqual(cleanArgs(['foo', 'bar', { event: null }]), [
 				'foo',
 				'bar',
 			]);
 		});
 
 		it('it should not remove the last element if it has no `event` property', () => {
-			assert.deepEqual(cleanArgs(['foo', 'bar']), ['foo', 'bar']);
+			assert.deepStrictEqual(cleanArgs(['foo', 'bar']), ['foo', 'bar']);
 		});
 	});
 
@@ -55,7 +55,7 @@ describe('redux utils', () => {
 
 			it('should return initialState on unmatched type', () => {
 				const action = { type: 'UNKNOWN' };
-				assert.deepEqual(
+				assert.deepStrictEqual(
 					reducer(initialState, action),
 					initialState,
 					'must deep equal initialState'
@@ -98,7 +98,7 @@ describe('redux utils', () => {
 				it('should not include thunk paths in reducer', () => {
 					const action = { type: 'root.foo.asyncOperation' };
 					const nextState: any = reducer(initialState, action);
-					assert.deepEqual(
+					assert.deepStrictEqual(
 						initialState,
 						nextState,
 						'must deep equal initialState'
@@ -137,7 +137,7 @@ describe('redux utils', () => {
 					});
 
 					const viewState = mapStateToProps(initialState, null, null);
-					assert.deepEqual(viewState, initialState);
+					assert.deepStrictEqual(viewState, initialState);
 				});
 
 				describe('rootPath', () => {
@@ -203,18 +203,19 @@ describe('redux utils', () => {
 						rootPath: ['qux', 'quux'],
 					});
 
-					const mockDispatch: any = sinon.spy((action) => action);
+					const mockDispatch: any = jest.fn((action) => action);
 					const mapDispatchToProps = connectors[1];
 					const dispatchTree = mapDispatchToProps(mockDispatch, null, null);
 
 					beforeEach(() => {
-						mockDispatch.reset();
+						mockDispatch.mockClear();
 					});
 
 					it('should dispatch the correct action', () => {
 						dispatchTree.foo.onChange('bar', 'baz');
-						const dispatchedAction = mockDispatch.getCall(0).args[0];
-						assert.deepEqual(
+						const dispatchedAction = mockDispatch.mock.calls[0][0];
+
+						assert.deepStrictEqual(
 							dispatchedAction,
 							{
 								type: 'qux.quux.foo.onChange',
@@ -278,7 +279,7 @@ describe('redux utils', () => {
 					const dispatchTree = mapDispatchToProps(mockDispatch, null, null);
 
 					beforeEach(() => {
-						thunkSpy.reset();
+						thunkSpy.resetHistory();
 						dispatchTree.foo.asyncOperation('qux');
 					});
 
@@ -289,7 +290,7 @@ describe('redux utils', () => {
 
 					it('should dispatch the correct action', () => {
 						const dispatchedAction = mockDispatch.getCall(1).args[0];
-						assert.deepEqual(
+						assert.deepStrictEqual(
 							dispatchedAction,
 							{
 								type: 'qux.quux.foo.onChange',
@@ -333,7 +334,7 @@ describe('redux utils', () => {
 							mockGetState,
 							'must be called with redux.getState'
 						);
-						assert.deepEqual(
+						assert.deepStrictEqual(
 							rest,
 							extraArgs,
 							'must pass through extra arguments'

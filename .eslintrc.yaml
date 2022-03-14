@@ -6,10 +6,11 @@ extends:
 parserOptions:
   project: './tsconfig.json'
 
-rules: 
+rules:
   '@typescript-eslint/camelcase': off
 
   # TODO: The following rules were disabled during migration to eslint-appnexus-config
+  '@typescript-eslint/no-unsafe-argument': off
   '@typescript-eslint/ban-ts-comment': off
   '@typescript-eslint/ban-ts-ignore': off
   '@typescript-eslint/ban-types': off

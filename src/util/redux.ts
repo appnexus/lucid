@@ -335,6 +335,12 @@ const mergeProps = _.memoize((state, dispatchTree, ownProps) => {
 	return _.mergeWith({}, state, dispatchTree, ownProps, safeMerge);
 });
 
+/**
+ * Checks the last element of the array and
+ * if it is an 'event' object, it removes it
+ * Otherwise it just returns the array
+ * @param {any[]} - an array of args
+ */
 export function cleanArgs(args: any[]) {
 	return _.has(_.last(args), 'event') ? _.dropRight(args) : args;
 }

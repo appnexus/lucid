@@ -112,8 +112,9 @@ MyExampleComponent.peek = {
 
 ### Tests
 
-- Components should have a `Component.spec.jsx` or `Component.spec.tsx` that lives alongside the component `.jsx` or `.tsx` file.
+- Components should have a `Component.spec.tsx` that lives alongside the component `.tsx` file.
 - Most tests should be shallow rendered using `enzyme`.
+- Use `expect` and `jest` rather than `assert` or `sinon`, which we are moving away from.
 - Sometimes we have tests with flaky timing, i.e. we're using `setTimeout`. In those rare cases we put the text `[mostly stable]` in the name of the test as a kind of tag for future reference.
 - Our test files have a certain structure to them, here's an example of it:
 
@@ -137,7 +138,6 @@ describe('MyComponent', () => {
 });
 ```
 
-[waffle]: https://waffle.io/appnexus/lucid/
 [perf]: https://medium.com/@esamatti/react-js-pure-render-performance-anti-pattern-fb88c101332f
 
 ### Statistics

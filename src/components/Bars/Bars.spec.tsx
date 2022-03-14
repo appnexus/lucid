@@ -1,5 +1,3 @@
-/* eslint-disable comma-spacing */
-
 import React from 'react';
 import assert from 'assert';
 import * as d3Scale from 'd3-scale';
@@ -153,10 +151,7 @@ describe('Bars', () => {
 
 				assert.strictEqual(wrapper.find(Bar).length, 3, 'wrong number of Bar');
 				assert.strictEqual(wrapper.find(Bar).at(0).prop('height'), 100);
-				assert.strictEqual(
-					wrapper.find(Bar).at(1).prop('height'),
-					550.00000000000001
-				);
+				assert.strictEqual(wrapper.find(Bar).at(1).prop('height'), 550.0);
 				assert.strictEqual(wrapper.find(Bar).at(2).prop('height'), 1000);
 			});
 		});
@@ -249,10 +244,7 @@ describe('Bars', () => {
 
 				assert.strictEqual(wrapper.find(Bar).length, 3, 'wrong number of Bar');
 				assert.strictEqual(wrapper.find(Bar).at(0).prop('height'), 100);
-				assert.strictEqual(
-					wrapper.find(Bar).at(1).prop('height'),
-					550.00000000000001
-				);
+				assert.strictEqual(wrapper.find(Bar).at(1).prop('height'), 550.0);
 				assert.strictEqual(wrapper.find(Bar).at(2).prop('height'), 1000);
 			});
 
