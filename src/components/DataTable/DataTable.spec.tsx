@@ -1204,8 +1204,7 @@ describe('DataTable', () => {
 						wrapper.find('[data-testid="columnGroup-column"]').first().props()
 					);
 
-					//console.log('tableThProps', columnGroupColumnProps);
-					// A ColumnGroup Column Table Table Row
+					// A ColumnGroup Column Table Table Rows
 					// should not contain any of the excluded (the unused) Column propTypes and the 'initialState' prop:
 					// 'field', 'title', 'initialState',
 
@@ -1213,7 +1212,7 @@ describe('DataTable', () => {
 						expect(_.includes(columnGroupColumnProps, prop)).toBe(false);
 					});
 
-					// The ColumnGroup Column Table Table Row should include:
+					// A ColumnGroup Column Table Table Row should include:
 					// 'onClick', 'style', 'align', 'isResizable', 'isSorted', 'sortDirection', 'rowSpan', 'children',
 
 					_.forEach(includedColumnProps, (prop) => {
