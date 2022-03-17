@@ -47,7 +47,8 @@ describe('DateSelect', () => {
 					expect(includes(rootProps, prop)).toBe(true);
 				});
 			});
-			it.only('omits some props from the root section element', () => {
+
+			it('omits some props from the root section element', () => {
 				const rootProps = keys(wrapper.first().props());
 
 				// It should not pass 'callbackId' or 'initialState' or
