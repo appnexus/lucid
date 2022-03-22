@@ -16,6 +16,7 @@ export default {
 				component: DropMenu.peek.description,
 			},
 		},
+		layout: 'centered',
 	},
 	argTypes: {
 		children: { control: false },
