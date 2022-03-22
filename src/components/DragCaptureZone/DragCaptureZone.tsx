@@ -1,12 +1,9 @@
-import _ from 'lodash';
+import _, { omit } from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
+
 import { lucidClassNames } from '../../util/style-helpers';
-import {
-	omitProps,
-	StandardProps,
-	Overwrite,
-} from '../../util/component-types';
+import { StandardProps, Overwrite } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-DragCaptureZone');
 const { func, string } = PropTypes;
@@ -90,6 +87,17 @@ export interface IDragCaptureZonePropsRaw extends StandardProps {
 		props: IDragCaptureZoneProps;
 	}) => void;
 }
+
+/** TODO: Remove the nonPassThroughs when the component is converted to a functional component */
+const nonPassThroughs = [
+	'className',
+	'onDrag',
+	'onDragEnd',
+	'onDragStart',
+	'onDragCancel',
+	'initialState',
+	'callbackId',
+];
 
 export type IDragCaptureZoneProps = Overwrite<
 	React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>,
@@ -325,7 +333,7 @@ class DragCaptureZone extends React.Component<
 	render(): React.ReactNode {
 		return (
 			<div
-				{...omitProps(this.props, undefined, _.keys(DragCaptureZone.propTypes))}
+				{...(omit(this.props, nonPassThroughs) as any)}
 				className={cx('&', this.props.className)}
 				key='DragCaptureZone'
 				onMouseDown={this.handleMouseDragStart}

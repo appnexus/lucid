@@ -1,4 +1,4 @@
-import _ from 'lodash';
+import _, { forEach, has } from 'lodash';
 import assert from 'assert';
 import React from 'react';
 import sinon from 'sinon';
@@ -45,15 +45,55 @@ describe('DragCaptureZone', () => {
 		});
 
 		describe('pass throughs', () => {
-			it('passes through all props to the root element.', () => {
-				const wrapper = mount(
-					<DragCaptureZone {...{ foo: 1, bar: 2, baz: 3 }} />
-				);
+			let wrapper: any;
+			const defaultProps = DragCaptureZone.defaultProps;
+
+			beforeEach(() => {
+				const props = {
+					...defaultProps,
+					onDrag: () => {},
+					onDragEnd: () => {},
+					onDragStart: () => {},
+					onDragCancel: () => {},
+					initialState: { test: true },
+					callbackId: 1,
+					'data-testid': 10,
+				};
+				wrapper = shallow(<DragCaptureZone {...props} />);
+			});
+
+			afterEach(() => {
+				wrapper.unmount();
+			});
+
+			it('passes through select props to the root div element.', () => {
 				const rootProps = wrapper.find('div').props();
 
-				_.forEach(['foo', 'bar', 'baz'], (prop) => {
-					assert(_.has(rootProps, prop));
-				});
+				// 'className' is plucked from the pass through this.props object
+				// but still appears becuase it is also directly passed to the root element as a prop
+				forEach(
+					['className', 'onMouseDown', 'onTouchStart', 'data-testid'],
+					(prop) => {
+						expect(has(rootProps, prop)).toBe(true);
+					}
+				);
+			});
+			it('omits the component props, "initialState" and "callbackId" from the root div element', () => {
+				const rootProps = wrapper.find('div').props();
+
+				forEach(
+					[
+						'onDrag',
+						'onDragEnd',
+						'onDragStart',
+						'onDragCancel',
+						'initialState',
+						'callbackId',
+					],
+					(prop) => {
+						expect(has(rootProps, prop)).toBe(false);
+					}
+				);
 			});
 		});
 	});
