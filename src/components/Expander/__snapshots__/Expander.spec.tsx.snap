@@ -1,306 +1,296 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Expander [common] example testing should match snapshot(s) for Basic 1`] = `
-<div>
-  <div
-    class="lucid-Expander lucid-Expander-is-expanded"
+<div
+  class="lucid-Expander"
+>
+  <header
+    class="lucid-Expander-header"
   >
-    <header
-      class="lucid-Expander-header"
+    <div
+      class="lucid-Expander-header-toggle"
     >
-      <div
-        class="lucid-Expander-header-toggle"
+      <button
+        class="lucid-Button lucid-Button-invisible lucid-Button-has-only-icon lucid-Expander-icon"
+        type="button"
       >
-        <button
-          class="lucid-Button lucid-Button-invisible lucid-Button-has-only-icon lucid-Expander-icon"
-          type="button"
-        >
-          <span
-            class="lucid-Button-content"
-          >
-            <svg
-              class="lucid-Icon lucid-Icon-color-primary lucid-ChevronIcon lucid-ChevronIcon-is-up"
-              height="16"
-              preserveAspectRatio="xMidYMid meet"
-              viewBox="0 0 16 16"
-              width="16"
-            >
-              <path
-                d="M.5 4.5l7.5 7 7.5-7"
-              />
-            </svg>
-          </span>
-        </button>
         <span
-          class="lucid-Expander-text"
+          class="lucid-Button-content"
         >
-          Show Less
+          <svg
+            class="lucid-Icon lucid-Icon-color-primary lucid-ChevronIcon lucid-ChevronIcon-is-down"
+            height="16"
+            preserveAspectRatio="xMidYMid meet"
+            viewBox="0 0 16 16"
+            width="16"
+          >
+            <path
+              d="M.5 4.5l7.5 7 7.5-7"
+            />
+          </svg>
         </span>
-      </div>
-    </header>
-    <section
-      class="lucid-Collapsible lucid-Expander-content"
-      style="overflow:hidden;padding:0"
-    >
-      <div
-        class="lucid-Collapsible-content"
-        style="margin:0"
+      </button>
+      <span
+        class="lucid-Expander-text"
       >
-        <p>
-          You can't get rid of me. Keep clicking that icon as much as you want, but I'm here to stay!
-        </p>
-      </div>
-    </section>
-  </div>
+        Show Stuff
+      </span>
+    </div>
+  </header>
+  <section
+    class="lucid-Collapsible lucid-Expander-content"
+    style="overflow:hidden;padding:0"
+  >
+    <div
+      class="lucid-Collapsible-content"
+      style="margin:0"
+    />
+  </section>
 </div>
 `;
 
 exports[`Expander [common] example testing should match snapshot(s) for Highlighted 1`] = `
-<div>
-  <div
-    class="lucid-Expander lucid-Expander-kind-highlighted"
+<div
+  class="lucid-Expander lucid-Expander-kind-highlighted"
+>
+  <header
+    class="lucid-Expander-header"
   >
-    <header
-      class="lucid-Expander-header"
+    <div
+      class="lucid-Expander-header-toggle"
     >
-      <div
-        class="lucid-Expander-header-toggle"
+      <button
+        class="lucid-Button lucid-Button-invisible lucid-Button-has-only-icon lucid-Expander-icon"
+        type="button"
       >
-        <button
-          class="lucid-Button lucid-Button-invisible lucid-Button-has-only-icon lucid-Expander-icon"
-          type="button"
-        >
-          <span
-            class="lucid-Button-content"
-          >
-            <svg
-              class="lucid-Icon lucid-Icon-color-primary lucid-ChevronIcon lucid-ChevronIcon-is-down"
-              height="16"
-              preserveAspectRatio="xMidYMid meet"
-              viewBox="0 0 16 16"
-              width="16"
-            >
-              <path
-                d="M.5 4.5l7.5 7 7.5-7"
-              />
-            </svg>
-          </span>
-        </button>
         <span
-          class="lucid-Expander-text"
+          class="lucid-Button-content"
         >
-          Show Less
+          <svg
+            class="lucid-Icon lucid-Icon-color-primary lucid-ChevronIcon lucid-ChevronIcon-is-down"
+            height="16"
+            preserveAspectRatio="xMidYMid meet"
+            viewBox="0 0 16 16"
+            width="16"
+          >
+            <path
+              d="M.5 4.5l7.5 7 7.5-7"
+            />
+          </svg>
         </span>
-      </div>
-    </header>
-    <section
-      class="lucid-Collapsible lucid-Expander-content"
-      style="overflow:hidden;padding:0"
-    >
-      <div
-        class="lucid-Collapsible-content"
-        style="margin:0"
-      />
-    </section>
-  </div>
+      </button>
+      <span
+        class="lucid-Expander-text"
+      >
+        Show Less
+      </span>
+    </div>
+  </header>
+  <section
+    class="lucid-Collapsible lucid-Expander-content"
+    style="overflow:hidden;padding:0"
+  >
+    <div
+      class="lucid-Collapsible-content"
+      style="margin:0"
+    />
+  </section>
 </div>
 `;
 
 exports[`Expander [common] example testing should match snapshot(s) for InteractiveWithChangingLabels 1`] = `
-<div>
-  <div
-    class="lucid-Expander"
+<div
+  class="lucid-Expander"
+>
+  <header
+    class="lucid-Expander-header"
   >
-    <header
-      class="lucid-Expander-header"
+    <div
+      class="lucid-Expander-header-toggle"
     >
-      <div
-        class="lucid-Expander-header-toggle"
+      <button
+        class="lucid-Button lucid-Button-invisible lucid-Button-has-only-icon lucid-Expander-icon"
+        type="button"
       >
-        <button
-          class="lucid-Button lucid-Button-invisible lucid-Button-has-only-icon lucid-Expander-icon"
-          type="button"
-        >
-          <span
-            class="lucid-Button-content"
-          >
-            <svg
-              class="lucid-Icon lucid-Icon-color-primary lucid-ChevronIcon lucid-ChevronIcon-is-down"
-              height="16"
-              preserveAspectRatio="xMidYMid meet"
-              viewBox="0 0 16 16"
-              width="16"
-            >
-              <path
-                d="M.5 4.5l7.5 7 7.5-7"
-              />
-            </svg>
-          </span>
-        </button>
         <span
-          class="lucid-Expander-text"
+          class="lucid-Button-content"
         >
-          Show More
+          <svg
+            class="lucid-Icon lucid-Icon-color-primary lucid-ChevronIcon lucid-ChevronIcon-is-down"
+            height="16"
+            preserveAspectRatio="xMidYMid meet"
+            viewBox="0 0 16 16"
+            width="16"
+          >
+            <path
+              d="M.5 4.5l7.5 7 7.5-7"
+            />
+          </svg>
         </span>
-      </div>
-    </header>
-    <section
-      class="lucid-Collapsible lucid-Expander-content"
-      style="overflow:hidden;padding:0"
-    >
-      <div
-        class="lucid-Collapsible-content"
-        style="margin:0"
-      />
-    </section>
-  </div>
+      </button>
+      <span
+        class="lucid-Expander-text"
+      >
+        Show More
+      </span>
+    </div>
+  </header>
+  <section
+    class="lucid-Collapsible lucid-Expander-content"
+    style="overflow:hidden;padding:0"
+  >
+    <div
+      class="lucid-Collapsible-content"
+      style="margin:0"
+    />
+  </section>
 </div>
 `;
 
 exports[`Expander [common] example testing should match snapshot(s) for InteractiveWithChangingLabelsAndAdditionalLabelContent 1`] = `
-<div>
-  <div
-    class="lucid-Expander"
+<div
+  class="lucid-Expander"
+>
+  <header
+    class="lucid-Expander-header"
   >
-    <header
-      class="lucid-Expander-header"
+    <div
+      class="lucid-Expander-header-toggle"
     >
-      <div
-        class="lucid-Expander-header-toggle"
+      <button
+        class="lucid-Button lucid-Button-invisible lucid-Button-has-only-icon lucid-Expander-icon"
+        type="button"
       >
-        <button
-          class="lucid-Button lucid-Button-invisible lucid-Button-has-only-icon lucid-Expander-icon"
-          type="button"
-        >
-          <span
-            class="lucid-Button-content"
-          >
-            <svg
-              class="lucid-Icon lucid-Icon-color-primary lucid-ChevronIcon lucid-ChevronIcon-is-down"
-              height="16"
-              preserveAspectRatio="xMidYMid meet"
-              viewBox="0 0 16 16"
-              width="16"
-            >
-              <path
-                d="M.5 4.5l7.5 7 7.5-7"
-              />
-            </svg>
-          </span>
-        </button>
         <span
-          class="lucid-Expander-text"
+          class="lucid-Button-content"
         >
-          Show Stuff
+          <svg
+            class="lucid-Icon lucid-Icon-color-primary lucid-ChevronIcon lucid-ChevronIcon-is-down"
+            height="16"
+            preserveAspectRatio="xMidYMid meet"
+            viewBox="0 0 16 16"
+            width="16"
+          >
+            <path
+              d="M.5 4.5l7.5 7 7.5-7"
+            />
+          </svg>
         </span>
-      </div>
-      <div
-        class="lucid-Expander-additional-content"
+      </button>
+      <span
+        class="lucid-Expander-text"
       >
-        <button
-          class="lucid-Button lucid-Button-invisible"
-          type="button"
-        >
-          <span
-            class="lucid-Button-content"
-          >
-            <svg
-              class="lucid-Icon lucid-Icon-color-primary lucid-EditIcon"
-              height="16"
-              preserveAspectRatio="xMidYMid meet"
-              viewBox="0 0 16 16"
-              width="16"
-            >
-              <path
-                d="M4.541 14.522L.548 15.547l.974-4.006L12.452.472l3.019 2.981zm5.924-12.038l3.019 2.981M2.5 10.5l3 3"
-              />
-            </svg>
-            Edit
-          </span>
-        </button>
-        <button
-          class="lucid-Button lucid-Button-invisible"
-          type="button"
-        >
-          <span
-            class="lucid-Button-content"
-          >
-            <svg
-              class="lucid-Icon lucid-Icon-color-primary lucid-CloseIcon"
-              height="16"
-              preserveAspectRatio="xMidYMid meet"
-              viewBox="0 0 16 16"
-              width="16"
-            >
-              <path
-                d="M.5.5l15 15m0-15l-15 15"
-              />
-            </svg>
-            Clear All
-          </span>
-        </button>
-      </div>
-    </header>
-    <section
-      class="lucid-Collapsible lucid-Expander-content"
-      style="overflow:hidden;padding:0"
+        Show Stuff
+      </span>
+    </div>
+    <div
+      class="lucid-Expander-additional-content"
     >
-      <div
-        class="lucid-Collapsible-content"
-        style="margin:0"
-      />
-    </section>
-  </div>
+      <button
+        class="lucid-Button lucid-Button-invisible"
+        type="button"
+      >
+        <span
+          class="lucid-Button-content"
+        >
+          <svg
+            class="lucid-Icon lucid-Icon-color-primary lucid-EditIcon"
+            height="16"
+            preserveAspectRatio="xMidYMid meet"
+            viewBox="0 0 16 16"
+            width="16"
+          >
+            <path
+              d="M4.541 14.522L.548 15.547l.974-4.006L12.452.472l3.019 2.981zm5.924-12.038l3.019 2.981M2.5 10.5l3 3"
+            />
+          </svg>
+          Edit
+        </span>
+      </button>
+      <button
+        class="lucid-Button lucid-Button-invisible"
+        type="button"
+      >
+        <span
+          class="lucid-Button-content"
+        >
+          <svg
+            class="lucid-Icon lucid-Icon-color-primary lucid-CloseIcon"
+            height="16"
+            preserveAspectRatio="xMidYMid meet"
+            viewBox="0 0 16 16"
+            width="16"
+          >
+            <path
+              d="M.5.5l15 15m0-15l-15 15"
+            />
+          </svg>
+          Clear All
+        </span>
+      </button>
+    </div>
+  </header>
+  <section
+    class="lucid-Collapsible lucid-Expander-content"
+    style="overflow:hidden;padding:0"
+  >
+    <div
+      class="lucid-Collapsible-content"
+      style="margin:0"
+    />
+  </section>
 </div>
 `;
 
-exports[`Expander [common] example testing should match snapshot(s) for InteractiveWithoutChangingLabels 1`] = `
-<div>
-  <div
-    class="lucid-Expander"
+exports[`Expander [common] example testing should match snapshot(s) for IsExpanded 1`] = `
+<div
+  class="lucid-Expander lucid-Expander-is-expanded"
+>
+  <header
+    class="lucid-Expander-header"
   >
-    <header
-      class="lucid-Expander-header"
+    <div
+      class="lucid-Expander-header-toggle"
     >
-      <div
-        class="lucid-Expander-header-toggle"
+      <button
+        class="lucid-Button lucid-Button-invisible lucid-Button-has-only-icon lucid-Expander-icon"
+        type="button"
       >
-        <button
-          class="lucid-Button lucid-Button-invisible lucid-Button-has-only-icon lucid-Expander-icon"
-          type="button"
-        >
-          <span
-            class="lucid-Button-content"
-          >
-            <svg
-              class="lucid-Icon lucid-Icon-color-primary lucid-ChevronIcon lucid-ChevronIcon-is-down"
-              height="16"
-              preserveAspectRatio="xMidYMid meet"
-              viewBox="0 0 16 16"
-              width="16"
-            >
-              <path
-                d="M.5 4.5l7.5 7 7.5-7"
-              />
-            </svg>
-          </span>
-        </button>
         <span
-          class="lucid-Expander-text"
+          class="lucid-Button-content"
         >
-          Show Stuff
+          <svg
+            class="lucid-Icon lucid-Icon-color-primary lucid-ChevronIcon lucid-ChevronIcon-is-up"
+            height="16"
+            preserveAspectRatio="xMidYMid meet"
+            viewBox="0 0 16 16"
+            width="16"
+          >
+            <path
+              d="M.5 4.5l7.5 7 7.5-7"
+            />
+          </svg>
         </span>
-      </div>
-    </header>
-    <section
-      class="lucid-Collapsible lucid-Expander-content"
-      style="overflow:hidden;padding:0"
+      </button>
+      <span
+        class="lucid-Expander-text"
+      >
+        Show Less
+      </span>
+    </div>
+  </header>
+  <section
+    class="lucid-Collapsible lucid-Expander-content"
+    style="overflow:hidden;padding:0"
+  >
+    <div
+      class="lucid-Collapsible-content"
+      style="margin:0"
     >
-      <div
-        class="lucid-Collapsible-content"
-        style="margin:0"
-      />
-    </section>
-  </div>
+      <p>
+        You can't get rid of me. Keep clicking that icon as much as you want, but I'm here to stay!
+      </p>
+    </div>
+  </section>
 </div>
 `;

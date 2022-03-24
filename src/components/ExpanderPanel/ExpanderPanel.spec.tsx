@@ -1,4 +1,4 @@
-import _ from 'lodash';
+import _, { forEach, has } from 'lodash';
 import assert from 'assert';
 import React from 'react';
 import sinon from 'sinon';
@@ -78,23 +78,66 @@ describe('ExpanderPanel', () => {
 		});
 
 		describe('pass throughs', () => {
-			it('passes through all props not defined in `propTypes` to the root element', () => {
-				const wrapper = shallow(
-					<ExpanderPanel
-						className='wut'
-						isExpanded={true}
-						onToggle={_.noop}
-						style={{ marginRight: 10 }}
-						{...{
-							foo: 1,
-							bar: 2,
-						}}
-					/>
-				);
+			let wrapper: any;
+			const defaultProps = ExpanderPanel.defaultProps;
+
+			beforeEach(() => {
+				const props = {
+					...defaultProps,
+					isExpanded: true,
+					onToggle: _.noop,
+					onRest: _.noop,
+					onRestAppliedOnCollapse: true,
+					hasPadding: false,
+					isDisabled: true,
+					className: 'wut',
+					style: { marginRight: 10 },
+					initialState: { test: true },
+					callbackId: 1,
+					'data-testid': 10,
+				};
+				wrapper = shallow(<ExpanderPanel {...props} />);
+			});
+
+			afterEach(() => {
+				wrapper.unmount();
+			});
+
+			it('passes through props not defined in `propTypes`, including `callbackId`, to the root element.', () => {
 				const rootProps = wrapper.find('.lucid-ExpanderPanel').props();
 
-				assert(_.has(rootProps, 'foo'), 'props missing "foo" prop');
-				assert(_.has(rootProps, 'bar'), 'props missing "bar" prop');
+				expect(wrapper.first().prop(['className'])).toContain('wut');
+				expect(wrapper.first().prop(['style'])).toMatchObject({
+					marginRight: 10,
+				});
+				expect(wrapper.first().prop(['data-testid'])).toBe(10);
+				expect(wrapper.first().prop(['callbackId'])).toBe(1);
+
+				// 'className' and 'style' are plucked from the pass through object
+				// but still appear becuase they are also directly passed to the root element as props
+				forEach(['className', 'data-testid', 'style', 'children'], (prop) => {
+					expect(has(rootProps, prop)).toBe(true);
+				});
+			});
+
+			it('omits all the props defined in `propTypes` (plus, in addition, `initialState`) from the root element', () => {
+				const rootProps = wrapper.find('.lucid-ExpanderPanel').props();
+
+				// The default props and, if it exists, `initialState` are omitted from the pass through object
+				forEach(
+					[
+						'isExpanded',
+						'onToggle',
+						'onRest',
+						'onRestAppliedOnCollapse',
+						'isDisabled',
+						'hasPadding',
+						'initialState',
+					],
+					(prop) => {
+						expect(has(rootProps, prop)).toBe(false);
+					}
+				);
 			});
 		});
 	});

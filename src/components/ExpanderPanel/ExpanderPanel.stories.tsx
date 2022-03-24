@@ -1,7 +1,8 @@
 import _ from 'lodash';
 import React from 'react';
-import createClass from 'create-react-class';
-import ExpanderPanel from './ExpanderPanel';
+import { Story, Meta } from '@storybook/react';
+
+import ExpanderPanel, { IExpanderPanelProps } from './ExpanderPanel';
 
 export default {
 	title: 'Layout/ExpanderPanel',
@@ -9,74 +10,49 @@ export default {
 	parameters: {
 		docs: {
 			description: {
-				component: (ExpanderPanel as any).peek.description,
+				component: ExpanderPanel.peek.description,
 			},
 		},
 	},
-};
+	args: ExpanderPanel.defaultProps,
+} as Meta;
 
 /* Basic */
-export const Basic = () => {
-	const Component = createClass({
-		render() {
-			return (
-				<div>
-					<ExpanderPanel>
-						<ExpanderPanel.Header>Show More</ExpanderPanel.Header>
-						{_.times(100, (n) => (
-							<div key={n}>{_.repeat('-', 75 * Math.sin(n / 5))}</div>
-						))}
-					</ExpanderPanel>
-				</div>
-			);
-		},
-	});
-
-	return <Component />;
+export const Basic: Story<IExpanderPanelProps> = (args) => {
+	return (
+		<ExpanderPanel {...args}>
+			<ExpanderPanel.Header>Show More</ExpanderPanel.Header>
+			{_.times(100, (n) => (
+				<div key={n}>{_.repeat('-', 75 * Math.sin(n / 5))}</div>
+			))}
+		</ExpanderPanel>
+	);
 };
 
 /* No Padding */
-export const NoPadding = () => {
-	const Component = createClass({
-		render() {
-			return (
-				<div>
-					<ExpanderPanel hasPadding={false}>
-						<ExpanderPanel.Header>Show More</ExpanderPanel.Header>
-						{_.times(100, (n) => (
-							<div key={n}>{_.repeat('-', 75 * Math.sin(n / 5))}</div>
-						))}
-					</ExpanderPanel>
-				</div>
-			);
-		},
-	});
-
-	return <Component />;
+export const NoPadding: Story<IExpanderPanelProps> = (args) => {
+	return (
+		<ExpanderPanel {...args} hasPadding={false}>
+			<ExpanderPanel.Header>Show More</ExpanderPanel.Header>
+			{_.times(100, (n) => (
+				<div key={n}>{_.repeat('-', 75 * Math.sin(n / 5))}</div>
+			))}
+		</ExpanderPanel>
+	);
 };
-NoPadding.storyName = 'NoPadding';
 
 /* Basic With On Rest Callback */
-export const BasicWithOnRestCallback = () => {
+export const BasicWithOnRestCallback: Story<IExpanderPanelProps> = (args) => {
 	const onRest = () => {
 		alert('A big ball of wibbly wobbly, timey wimey stuff');
 	};
 
-	const Component = createClass({
-		render() {
-			return (
-				<div>
-					<ExpanderPanel onRest={onRest}>
-						<ExpanderPanel.Header>Show More</ExpanderPanel.Header>
-						{_.times(100, (n) => (
-							<div key={n}>{_.repeat('-', 75 * Math.sin(n / 5))}</div>
-						))}
-					</ExpanderPanel>
-				</div>
-			);
-		},
-	});
-
-	return <Component />;
+	return (
+		<ExpanderPanel {...args} onRest={onRest}>
+			<ExpanderPanel.Header>Show More</ExpanderPanel.Header>
+			{_.times(100, (n) => (
+				<div key={n}>{_.repeat('-', 75 * Math.sin(n / 5))}</div>
+			))}
+		</ExpanderPanel>
+	);
 };
-BasicWithOnRestCallback.storyName = 'BasicWithOnRestCallback';
