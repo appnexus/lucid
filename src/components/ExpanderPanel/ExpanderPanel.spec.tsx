@@ -88,6 +88,7 @@ describe('ExpanderPanel', () => {
 					onToggle: _.noop,
 					onRest: _.noop,
 					onRestAppliedOnCollapse: true,
+					Header: <div>ExpanderPanel Header Prop</div>,
 					hasPadding: false,
 					isDisabled: true,
 					className: 'wut',
@@ -133,6 +134,7 @@ describe('ExpanderPanel', () => {
 						'isDisabled',
 						'hasPadding',
 						'initialState',
+						'Header',
 					],
 					(prop) => {
 						expect(has(rootProps, prop)).toBe(false);

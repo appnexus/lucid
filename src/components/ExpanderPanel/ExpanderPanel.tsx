@@ -79,6 +79,7 @@ const nonPassThroughs = [
 	'onToggle',
 	'onRest',
 	'onRestAppliedOnCollapse',
+	'Header',
 	'isDisabled',
 	'hasPadding',
 	'initialState',
