@@ -179,8 +179,41 @@ export interface IDataTableProps
 	 */
 	ColumnGroup?: any;
 
+	/*
+	 * If \`isResizable\` is true,
+	 * it is called when the user resizes the a header cell in the table.
+	 */
 	onResize?: any;
 }
+
+/** TODO: Remove the nonPassThroughs when the component is converted to a functional component */
+const nonPassThroughs = [
+	'className',
+	'data',
+	'emptyCellText',
+	'isActionable',
+	'isFullWidth',
+	'isLoading',
+	'isSelectable',
+	'anchorMessage',
+	'style',
+	'minRows',
+	'hasFixedHeader',
+	'fixedColumnCount',
+	'fixedRowHeight',
+	'truncateContent',
+	'initialState',
+	'onRowClick',
+	'onSelect',
+	'onSelectAll',
+	'onSort',
+	'Column',
+	'ColumnGroup',
+	'onResize',
+];
+
+/** TODO: Remove the nonColumnProps when the component is converted to a functional component */
+const omittedColumnProps = ['field', 'title', 'initialState'];
 
 const defaultProps = {
 	emptyCellText: '--',
@@ -336,12 +369,7 @@ export const DataTable = (props: IDataTableProps) => {
 										? []
 										: [
 												<Th
-													{...omitProps(
-														columnProps,
-														undefined,
-														_.keys(DataTable.Column.propTypes),
-														false
-													)}
+													{..._.omit(columnProps, omittedColumnProps)}
 													onClick={
 														DataTable.shouldColumnHandleSort(columnProps)
 															? (_.partial(
@@ -575,12 +603,7 @@ export const DataTable = (props: IDataTableProps) => {
 						<div className={cx('&-fixed-header-fixed-columns')}>
 							{fixedColumnCount > 0 ? (
 								<Table
-									{...omitProps(
-										passThroughs,
-										undefined,
-										_.keys(DataTable.propTypes),
-										false
-									)}
+									{..._.omit(passThroughs, nonPassThroughs)}
 									style={style}
 									className={cx('&-fixed-header-fixed-columns-Table')}
 								>
@@ -598,12 +621,7 @@ export const DataTable = (props: IDataTableProps) => {
 							ref={(ref) => (fixedHeaderUnfixedColumnsRef = ref)}
 						>
 							<Table
-								{...omitProps(
-									passThroughs,
-									undefined,
-									_.keys(DataTable.propTypes),
-									false
-								)}
+								{..._.omit(passThroughs, nonPassThroughs)}
 								style={style}
 								className={cx('&-fixed-header-unfixed-columns-Table')}
 							>
@@ -623,12 +641,7 @@ export const DataTable = (props: IDataTableProps) => {
 						>
 							{fixedColumnCount > 0 ? (
 								<Table
-									{...omitProps(
-										passThroughs,
-										undefined,
-										_.keys(DataTable.propTypes),
-										false
-									)}
+									{..._.omit(passThroughs, nonPassThroughs)}
 									style={style}
 									className={cx('&-fixed-body-fixed-columns-Table')}
 									hasWordWrap={
@@ -645,12 +658,7 @@ export const DataTable = (props: IDataTableProps) => {
 						>
 							<span className={cx('&-fixed-body-unfixed-columns-shadow')} />
 							<Table
-								{...omitProps(
-									passThroughs,
-									undefined,
-									_.keys(DataTable.propTypes),
-									false
-								)}
+								{..._.omit(passThroughs, nonPassThroughs)}
 								style={style}
 								className={cx('&-fixed-body-unfixed-columns-Table')}
 								hasWordWrap={
@@ -666,12 +674,7 @@ export const DataTable = (props: IDataTableProps) => {
 				<ScrollTable
 					style={style}
 					tableWidth={isFullWidth ? '100%' : undefined}
-					{...omitProps(
-						passThroughs,
-						undefined,
-						_.keys(DataTable.propTypes),
-						false
-					)}
+					{..._.omit(passThroughs, nonPassThroughs)}
 					className={cx(
 						'&',
 						{
@@ -835,6 +838,12 @@ DataTable.propTypes = {
 
 		- the optional prop \`title\`
 	*/,
+
+	/**
+		 If \`isResizable\` is true,
+		it is called when the user resizes the a header cell in the table.
+	 */
+	onResize: func,
 };
 
 DataTable.defaultProps = defaultProps;

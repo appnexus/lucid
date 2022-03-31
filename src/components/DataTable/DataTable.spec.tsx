@@ -3,15 +3,14 @@ import _ from 'lodash';
 import { shallow, mount } from 'enzyme';
 import sinon from 'sinon';
 import assert from 'assert';
-import { act } from 'react-dom/test-utils';
 
 import { common } from '../../util/generic-tests';
 import DataTable from './DataTable';
 import ScrollTable from '../ScrollTable/ScrollTable';
+import Table from '../Table/Table';
 import Checkbox from '../Checkbox/Checkbox';
 import EmptyStateWrapper from '../EmptyStateWrapper/EmptyStateWrapper';
 import DragCaptureZone from '../DragCaptureZone/DragCaptureZone';
-import { HandleResize } from '../SplitVertical/SplitVertical.stories';
 
 const { Column, ColumnGroup } = DataTable;
 
@@ -764,7 +763,7 @@ describe('DataTable', () => {
 			});
 		});
 
-		describe('isResize', () => {
+		describe('isResizeable', () => {
 			it('should render a `DragCaptureZone` resizer, if `isResizable` equals true', () => {
 				const wrapper = mount(
 					<DataTable hasFixedHeader data={testData}>
@@ -776,6 +775,194 @@ describe('DataTable', () => {
 					</DataTable>
 				);
 				expect(wrapper.find(DragCaptureZone)).toHaveLength(4);
+			});
+		});
+
+		describe('hasFixedHeader', () => {
+			it('should render a `Table` -- not a `ScrollTable` -- if true', () => {
+				const wrapper = shallow(
+					<DataTable hasFixedHeader={true} data={testData}></DataTable>
+				);
+				expect(wrapper.find('.lucid-DataTable-fixed')).toHaveLength(1);
+				expect(wrapper.find('.lucid-DataTable-fixed-header')).toHaveLength(1);
+				expect(
+					wrapper.find('.lucid-DataTable-fixed-header-fixed-columns')
+				).toHaveLength(1);
+				expect(wrapper.find(ScrollTable)).toHaveLength(0);
+			});
+			it('should render a `ScrollTable`, if false', () => {
+				const wrapper = shallow(
+					<DataTable hasFixedHeader={false} data={testData}></DataTable>
+				);
+				expect(wrapper.find('.lucid-DataTable-fixed')).toHaveLength(0);
+				expect(wrapper.find('.lucid-DataTable-fixed-header')).toHaveLength(0);
+				expect(
+					wrapper.find('.lucid-DataTable-fixed-header-fixed-columns')
+				).toHaveLength(0);
+				expect(wrapper.find(ScrollTable)).toHaveLength(1);
+			});
+		});
+
+		describe('passThroughs', () => {
+			const props = {
+				data: [],
+				emptyCellText: '--test',
+				isActionable: true,
+				isFullWidth: true,
+				isLoading: false,
+				isSelectable: true,
+				anchorMessage: true,
+				style: {},
+				minRows: 5,
+				hasFixedHeader: true,
+				fixedColumnCount: 2,
+				fixedRowHeight: 1,
+				truncateContent: false,
+				initialState: {},
+				onRowClick: _.noop,
+				onSelect: _.noop,
+				onSelectAll: _.noop,
+				onSort: _.noop,
+				onResize: _.noop,
+				Column: [
+					<Column field='id' title='ID' />,
+					<Column field='email' title='Email' />,
+					<Column field='occupation' title='Occupation' />,
+				],
+				ColumnGroup: [
+					<ColumnGroup title='Name'>
+						<Column field='first_name' title='First' />
+						<Column field='last_name' title='Last' />
+					</ColumnGroup>,
+				],
+			};
+
+			const excludedProps = [
+				'emptyCellText',
+				'isActionable',
+				'isFullWidth',
+				'isSelectable',
+				'minRows',
+				'fixedRowHeight',
+				'truncateContent',
+				'initialState',
+				'Column',
+				'ColumnGroup',
+				'onRowClick',
+				'onSelect',
+				'onSelectAll',
+				'onSort',
+				'onResize',
+			];
+
+			const includedProps = [
+				'style',
+				'className',
+				'children',
+				'density',
+				'hasBorder',
+				'hasWordWrap',
+				'hasLightHeader',
+				'hasHover',
+			];
+
+			it('omits all unused DataTable props types and the "initialState" props from the root Table component', () => {
+				const wrapper = shallow(<DataTable {...props}></DataTable>);
+
+				const headerFixedColumnProps = _.keys(
+					wrapper
+						.find('Table.lucid-DataTable-fixed-header-fixed-columns-Table')
+						.props()
+				);
+
+				const headerUnfixedColumnProps = _.keys(
+					wrapper
+						.find('Table.lucid-DataTable-fixed-header-unfixed-columns-Table')
+						.props()
+				);
+
+				const bodyFixedColumnProps = _.keys(
+					wrapper
+						.find('Table.lucid-DataTable-fixed-body-fixed-columns-Table')
+						.props()
+				);
+
+				const bodyUnfixedColumnProps = _.keys(
+					wrapper
+						.find('Table.lucid-DataTable-fixed-body-unfixed-columns-Table')
+						.props()
+				);
+
+				// The root Table header and body elements should not contain any of
+				// the excluded (the unused) DataTable propTypes and 'initialState':
+				// 'emptyCellText', 'isActionable', 'isFullWidth', 'isSelectable', 'minRows',
+				// 'fixedRowHeight', 'truncateContent', 'initialState', 'Column', 'ColumnHeader'
+				// 'onRowClick', 'onSelect', 'onSelectAll', 'onSort', 'onResize';
+
+				_.forEach(excludedProps, (prop) => {
+					expect(_.includes(headerFixedColumnProps, prop)).toBe(false);
+				});
+
+				_.forEach(excludedProps, (prop) => {
+					expect(_.includes(headerUnfixedColumnProps, prop)).toBe(false);
+				});
+
+				_.forEach(excludedProps, (prop) => {
+					expect(_.includes(bodyFixedColumnProps, prop)).toBe(false);
+				});
+
+				_.forEach(excludedProps, (prop) => {
+					expect(_.includes(bodyUnfixedColumnProps, prop)).toBe(false);
+				});
+
+				// The root Table header and body elements should include
+				// 'style', 'className', 'children', 'density', 'hasBorder', 'hasWordWrap', 'hasLightHeader', 'hasHover'
+
+				_.forEach(includedProps, (prop) => {
+					expect(_.includes(headerFixedColumnProps, prop)).toBe(true);
+				});
+
+				_.forEach(includedProps, (prop) => {
+					expect(_.includes(headerUnfixedColumnProps, prop)).toBe(true);
+				});
+
+				_.forEach(includedProps, (prop) => {
+					expect(_.includes(bodyFixedColumnProps, prop)).toBe(true);
+				});
+
+				_.forEach(includedProps, (prop) => {
+					expect(_.includes(bodyUnfixedColumnProps, prop)).toBe(true);
+				});
+			});
+
+			it('omits all unused DataTable props types and the "initialState" props from the root ScrollTable', () => {
+				const includedScrollTableProps = _.omit(includedProps, [
+					'hasLightHeader',
+					'density',
+				]);
+
+				const wrapper = shallow(
+					<DataTable {...props} hasFixedHeader={false}></DataTable>
+				);
+
+				const scrollTableProps = _.keys(wrapper.find(ScrollTable).props());
+
+				// The root ScrollTable header and body elements should not contain any of
+				// the excluded (the unused) DataTable propTypes and 'initialState':
+				// 'emptyCellText', 'isActionable', 'isFullWidth', 'isSelectable', 'minRows',
+				// 'fixedRowHeight', 'truncateContent', 'initialState', 'Column', 'ColumnHeader'
+				// 'onRowClick', 'onSelect', 'onSelectAll', 'onSort', 'onResize';
+
+				_.forEach(excludedProps, (prop) => {
+					expect(_.includes(scrollTableProps, prop)).toBe(false);
+				});
+
+				// The root ScrollTable header and body elements should include
+				// 'style', 'className', 'children', 'hasBorder', 'hasWordWrap', 'hasHover'
+
+				_.forEach(includedScrollTableProps, (prop) => {
+					expect(_.includes(includedScrollTableProps, prop)).toBe(true);
+				});
 			});
 		});
 	});
@@ -983,6 +1170,55 @@ describe('DataTable', () => {
 					.shallow();
 
 				assert(thWrapper.hasClass('lucid-Table-align-right'), 'must be true');
+			});
+
+			describe('props.columnProps in a grouped column', () => {
+				const omittedColumnProps = ['field', 'title', 'initialState'];
+
+				const includedColumnProps = [
+					'onClick',
+					'style',
+					'align',
+					'isResizable',
+					'isSorted',
+					'sortDirection',
+					'rowSpan',
+					'children',
+				];
+
+				it('omits all unused Column props from the root Table Header element', () => {
+					const wrapper = shallow(
+						<DataTable data={[]}>
+							<ColumnGroup title='Name'>
+								<Column
+									field='first_name'
+									title='First'
+									data-testid='columnGroup-column'
+								/>
+								<Column field='last_name' title='Last' />
+							</ColumnGroup>
+						</DataTable>
+					);
+
+					const columnGroupColumnProps = _.keys(
+						wrapper.find('[data-testid="columnGroup-column"]').first().props()
+					);
+
+					// A ColumnGroup Column Table Table Rows
+					// should not contain any of the excluded (the unused) Column propTypes and the 'initialState' prop:
+					// 'field', 'title', 'initialState',
+
+					_.forEach(omittedColumnProps, (prop) => {
+						expect(_.includes(columnGroupColumnProps, prop)).toBe(false);
+					});
+
+					// A ColumnGroup Column Table Table Row should include:
+					// 'onClick', 'style', 'align', 'isResizable', 'isSorted', 'sortDirection', 'rowSpan', 'children',
+
+					_.forEach(includedColumnProps, (prop) => {
+						expect(_.includes(columnGroupColumnProps, prop)).toBe(true);
+					});
+				});
 			});
 		});
 

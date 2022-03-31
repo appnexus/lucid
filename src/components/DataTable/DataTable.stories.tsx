@@ -1,11 +1,11 @@
 import { every, map, reverse, sortBy } from 'lodash';
 import React from 'react';
 import createReactClass from 'create-react-class';
-import { Meta } from '@storybook/react';
+import { Meta, Story } from '@storybook/react';
 
 import { createClass } from '../../util/component-types';
 import SuccessIcon from '../Icon/SuccessIcon/SuccessIcon';
-import DataTable from './DataTable';
+import DataTable, { IDataTableProps } from './DataTable';
 import TextField from '../TextField/TextField';
 import CheckboxLabeled from '../CheckboxLabeled/CheckboxLabeled';
 
@@ -19,13 +19,14 @@ export default {
 			},
 		},
 	},
+	args: DataTable.defaultProps,
 } as Meta;
 
 function addKeys(children) {
 	return map(children, (child, index) => ({ ...child, key: index }));
 }
 
-const Template: any = (args) => <DataTable {...args} />;
+const Template: Story<IDataTableProps> = (args) => <DataTable {...args} />;
 
 const defaultColumns = addKeys([
 	<DataTable.Column field='id' align='left' key={1}>
@@ -149,13 +150,13 @@ const defaultData = [
 	},
 ];
 
-export const Basic = Template.bind({});
+export const Basic: Story<IDataTableProps> = Template.bind({});
 Basic.args = {
 	children: defaultColumns,
 	data: defaultData,
 };
 
-export const ColumnGroups = Template.bind({});
+export const ColumnGroups: Story<IDataTableProps> = Template.bind({});
 ColumnGroups.args = {
 	density: 'extended',
 	children: addKeys([
@@ -203,7 +204,9 @@ ColumnGroups.args = {
 	data: defaultData,
 };
 
-export const SelectableAndNavigableRows = Template.bind({});
+export const SelectableAndNavigableRows: Story<IDataTableProps> = Template.bind(
+	{}
+);
 SelectableAndNavigableRows.args = {
 	density: 'extended',
 	isSelectable: true,
@@ -252,7 +255,7 @@ SelectableAndNavigableRows.args = {
 	data: defaultData,
 };
 
-export const DisabledRows = Template.bind({});
+export const DisabledRows: Story<IDataTableProps> = Template.bind({});
 DisabledRows.args = {
 	children: defaultColumns,
 	data: map(defaultData, (row, index) => ({
@@ -261,7 +264,7 @@ DisabledRows.args = {
 	})),
 };
 
-export const Empty = Template.bind({});
+export const Empty: Story<IDataTableProps> = Template.bind({});
 Empty.args = {
 	isFullWidth: true,
 	density: 'extended',
@@ -288,7 +291,7 @@ Empty.args = {
 };
 
 /* Interactive Table */
-export const InteractiveTable = () => {
+export const InteractiveTable: Story<IDataTableProps> = (args) => {
 	const Component = createReactClass({
 		getInitialState() {
 			return {
@@ -470,6 +473,7 @@ export const InteractiveTable = () => {
 						}
 					</style>
 					<DataTable
+						{...args}
 						data={map(data, (row, index) =>
 							index === activeIndex ? { ...row, isActive: true } : row
 						)}
@@ -570,10 +574,9 @@ export const InteractiveTable = () => {
 
 	return <Component />;
 };
-InteractiveTable.storyName = 'InteractiveTable';
 
 /* Empty With Custom Title And Body */
-export const EmptyWithCustomTitleAndBody = () => {
+export const EmptyWithCustomTitleAndBody: Story<IDataTableProps> = (args) => {
 	const {
 		EmptyStateWrapper,
 		EmptyStateWrapper: { Title, Body },
@@ -590,7 +593,13 @@ export const EmptyWithCustomTitleAndBody = () => {
 			const { data } = this.state;
 
 			return (
-				<DataTable data={data} density='extended' isFullWidth minRows={15}>
+				<DataTable
+					{...args}
+					data={data}
+					density='extended'
+					isFullWidth
+					minRows={15}
+				>
 					<EmptyStateWrapper>
 						<Title>Something went wrong.</Title>
 						<Body style={{ fontSize: '12px' }}>
@@ -628,10 +637,9 @@ export const EmptyWithCustomTitleAndBody = () => {
 
 	return <Component />;
 };
-EmptyWithCustomTitleAndBody.storyName = 'EmptyWithCustomTitleAndBody';
 
 /* Empty With Image */
-export const EmptyWithImage = () => {
+export const EmptyWithImage: Story<IDataTableProps> = (args) => {
 	const {
 		EmptyStateWrapper,
 		EmptyStateWrapper: { Title, Body },
@@ -648,7 +656,7 @@ export const EmptyWithImage = () => {
 			const { data } = this.state;
 
 			return (
-				<DataTable data={data} density='extended' isFullWidth>
+				<DataTable {...args} data={data} density='extended' isFullWidth>
 					<EmptyStateWrapper>
 						<Title>No items found.</Title>
 						<Body>
@@ -697,10 +705,9 @@ export const EmptyWithImage = () => {
 
 	return <Component />;
 };
-EmptyWithImage.storyName = 'EmptyWithImage';
 
 /* Empty With Anchored Message */
-export const EmptyWithAnchoredMessage = () => {
+export const EmptyWithAnchoredMessage: Story<IDataTableProps> = (args) => {
 	const Component = createClass({
 		getInitialState() {
 			return {
@@ -714,6 +721,7 @@ export const EmptyWithAnchoredMessage = () => {
 
 			return (
 				<DataTable
+					{...args}
 					data={map(data, (row, index) =>
 						index === activeIndex ? { ...row, isActive: true } : row
 					)}
@@ -746,14 +754,20 @@ export const EmptyWithAnchoredMessage = () => {
 
 	return <Component />;
 };
-EmptyWithAnchoredMessage.storyName = 'EmptyWithAnchoredMessage';
 
 /* Loading */
-export const Loading = () => {
+export const Loading: Story<IDataTableProps> = (args) => {
 	const Component = createClass({
 		render() {
 			return (
-				<DataTable minRows={50} anchorMessage isFullWidth isLoading data={[]}>
+				<DataTable
+					{...args}
+					minRows={50}
+					anchorMessage
+					isFullWidth
+					isLoading
+					data={[]}
+				>
 					<DataTable.Column field='id'>ID</DataTable.Column>
 
 					<DataTable.Column field='first_name' width={100}>
@@ -780,11 +794,18 @@ export const Loading = () => {
 };
 
 /* Loading With Anchored Message */
-export const LoadingWithAnchoredMessage = () => {
+export const LoadingWithAnchoredMessage: Story<IDataTableProps> = (args) => {
 	const Component = createClass({
 		render() {
 			return (
-				<DataTable minRows={15} anchorMessage isFullWidth isLoading data={[]}>
+				<DataTable
+					{...args}
+					minRows={15}
+					anchorMessage
+					isFullWidth
+					isLoading
+					data={[]}
+				>
 					<DataTable.Column field='id'>ID</DataTable.Column>
 
 					<DataTable.Column field='first_name' width={100}>
@@ -809,10 +830,9 @@ export const LoadingWithAnchoredMessage = () => {
 
 	return <Component />;
 };
-LoadingWithAnchoredMessage.storyName = 'LoadingWithAnchoredMessage';
 
 /* Min Rows */
-export const MinRows = () => {
+export const MinRows: Story<IDataTableProps> = (args) => {
 	const data = [
 		{
 			id: 1,
@@ -865,6 +885,7 @@ export const MinRows = () => {
 
 			return (
 				<DataTable
+					{...args}
 					data={map(data, (row, index) =>
 						index === activeIndex ? { ...row, isActive: true } : row
 					)}
@@ -906,10 +927,9 @@ export const MinRows = () => {
 
 	return <Component />;
 };
-MinRows.storyName = 'MinRows';
 
 /* Fixed Headers */
-export const FixedHeaders = () => {
+export const FixedHeaders: Story<IDataTableProps> = () => {
 	const data = [
 		{
 			id: 1,
@@ -1109,10 +1129,9 @@ export const FixedHeaders = () => {
 
 	return <Component />;
 };
-FixedHeaders.storyName = 'FixedHeaders';
 
 /* Resizable Fixed Headers Table */
-export const ResizableFixedHeadersTable = () => {
+export const ResizableFixedHeadersTable: Story<IDataTableProps> = () => {
 	const data = [
 		{
 			id: 1,
@@ -1341,10 +1360,9 @@ export const ResizableFixedHeadersTable = () => {
 
 	return <Component />;
 };
-ResizableFixedHeadersTable.storyName = 'ResizableFixedHeadersTable';
 
 /* Truncate Content */
-export const TruncateContent = () => {
+export const TruncateContent: Story<IDataTableProps> = () => {
 	const data = [
 		{
 			id: 1,
@@ -1475,4 +1493,3 @@ export const TruncateContent = () => {
 
 	return <Component />;
 };
-TruncateContent.storyName = 'TruncateContent';
