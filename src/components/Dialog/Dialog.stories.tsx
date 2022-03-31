@@ -1,7 +1,9 @@
 import _ from 'lodash';
-import React from 'react';
+import React, { useState } from 'react';
 import createClass from 'create-react-class';
-import Dialog from './Dialog';
+import { Meta, Story } from '@storybook/react';
+
+import { Dialog, IDialogProps } from './Dialog';
 import Button from '../Button/Button';
 import SearchableMultiSelect from '../SearchableMultiSelect/SearchableMultiSelect';
 import SingleSelect from '../SingleSelect/SingleSelect';
@@ -14,13 +16,65 @@ export default {
 	parameters: {
 		docs: {
 			description: {
-				component: (Dialog as any).peek.description,
+				component: Dialog.peek.description,
 			},
 		},
+		layout: 'centered',
 	},
-};
+	args: Dialog.defaultProps,
+	decorators: [
+		(Story) => (
+			<div style={{ margin: '3em' }}>
+				<Story />
+			</div>
+		),
+	],
+} as Meta;
 
-/* Small */
+export const Basic: Story<IDialogProps> = (args) => {
+	const [isShown, setIsShown] = useState(false);
+
+	const handleShow = (isShown: boolean) => {
+		setIsShown(isShown);
+	};
+
+	return (
+		<div>
+			<Button size='large' onClick={_.partial(handleShow, !isShown)}>
+				Toggle
+			</Button>
+
+			<Dialog
+				{...args}
+				isShown={isShown}
+				handleClose={_.partial(handleShow, !isShown)}
+				Header='Header'
+			>
+				<div key={'info'}>
+					For better UX, we recommend NOT handling onEscape and
+					onBackgroundClick when isModal is true. The term "modal" implies that
+					the user needs to interact with one of the buttons in the footer to
+					exit the dialog.
+				</div>
+				{_.times(10).map((i) => {
+					return <div key={i}>Body</div>;
+				})}
+				<Dialog.Footer>
+					<Button
+						kind='invisible'
+						onClick={_.partial(handleShow, false)}
+						style={{ marginRight: '9px' }}
+					>
+						Cancel
+					</Button>
+					<Button kind='primary'>Save</Button>
+				</Dialog.Footer>
+			</Dialog>
+		</div>
+	);
+};
+Basic.decorators = [(Story) => <div style={{ margin: '3em' }}>{Story()}</div>];
+
 export const Small = () => {
 	const Component = createClass({
 		getInitialState() {
@@ -36,7 +90,10 @@ export const Small = () => {
 		render() {
 			return (
 				<div>
-					<Button onClick={_.partial(this.handleShow, !this.state.isShown)}>
+					<Button
+						size='large'
+						onClick={_.partial(this.handleShow, !this.state.isShown)}
+					>
 						Toggle
 					</Button>
 
@@ -44,7 +101,6 @@ export const Small = () => {
 						isShown={this.state.isShown}
 						handleClose={_.partial(this.handleShow, !this.state.isShown)}
 						Header='Header'
-						size='small'
 					>
 						<div key={'info'}>
 							For better UX, we recommend NOT handling onEscape and
@@ -90,7 +146,10 @@ export const Medium = () => {
 		render() {
 			return (
 				<div>
-					<Button onClick={_.partial(this.handleShow, !this.state.isShown)}>
+					<Button
+						size='large'
+						onClick={_.partial(this.handleShow, !this.state.isShown)}
+					>
 						Toggle
 					</Button>
 
@@ -144,7 +203,10 @@ export const LargeWithRichHeader = () => {
 		render() {
 			return (
 				<div>
-					<Button onClick={_.partial(this.handleShow, !this.state.isShown)}>
+					<Button
+						size='large'
+						onClick={_.partial(this.handleShow, !this.state.isShown)}
+					>
 						Toggle
 					</Button>
 
@@ -183,7 +245,6 @@ export const LargeWithRichHeader = () => {
 
 	return <Component />;
 };
-LargeWithRichHeader.storyName = 'LargeWithRichHeader';
 
 /* Complex */
 export const Complex = () => {
@@ -226,7 +287,10 @@ export const Complex = () => {
 		render() {
 			return (
 				<div>
-					<Button onClick={_.partial(this.handleShow, !this.state.isShown)}>
+					<Button
+						size='large'
+						onClick={_.partial(this.handleShow, !this.state.isShown)}
+					>
 						Toggle
 					</Button>
 
@@ -314,7 +378,10 @@ export const NoModal = () => {
 		render() {
 			return (
 				<div>
-					<Button onClick={_.partial(this.handleShow, !this.state.isShown)}>
+					<Button
+						size='large'
+						onClick={_.partial(this.handleShow, !this.state.isShown)}
+					>
 						Toggle
 					</Button>
 
@@ -348,7 +415,6 @@ export const NoModal = () => {
 
 	return <Component />;
 };
-NoModal.storyName = 'NoModal';
 
 /* No Footer */
 export const NoFooter = () => {
@@ -366,7 +432,10 @@ export const NoFooter = () => {
 		render() {
 			return (
 				<div>
-					<Button onClick={_.partial(this.handleShow, !this.state.isShown)}>
+					<Button
+						size='large'
+						onClick={_.partial(this.handleShow, !this.state.isShown)}
+					>
 						Toggle
 					</Button>
 
@@ -387,7 +456,6 @@ export const NoFooter = () => {
 
 	return <Component />;
 };
-NoFooter.storyName = 'NoFooter';
 
 /* No Gutters */
 export const NoGutters = () => {
@@ -405,7 +473,10 @@ export const NoGutters = () => {
 		render() {
 			return (
 				<div>
-					<Button onClick={_.partial(this.handleShow, !this.state.isShown)}>
+					<Button
+						size='large'
+						onClick={_.partial(this.handleShow, !this.state.isShown)}
+					>
 						Toggle
 					</Button>
 
@@ -427,7 +498,6 @@ export const NoGutters = () => {
 
 	return <Component />;
 };
-NoGutters.storyName = 'NoGutters';
 
 /* No Close Button */
 export const NoCloseButton = () => {
@@ -445,7 +515,10 @@ export const NoCloseButton = () => {
 		render() {
 			return (
 				<div>
-					<Button onClick={_.partial(this.handleShow, !this.state.isShown)}>
+					<Button
+						size='large'
+						onClick={_.partial(this.handleShow, !this.state.isShown)}
+					>
 						Toggle
 					</Button>
 
@@ -477,4 +550,3 @@ export const NoCloseButton = () => {
 
 	return <Component />;
 };
-NoCloseButton.storyName = 'NoCloseButton';

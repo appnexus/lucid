@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Portal from '../Portal/Portal';
 import { CSSTransition } from 'react-transition-group';
 import { lucidClassNames, uniqueName } from '../../util/style-helpers';
-import { omitProps, StandardProps } from '../../util/component-types';
+import { StandardProps } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-Overlay');
 
@@ -46,29 +46,29 @@ export interface IOverlayProps extends StandardProps {
 	}) => void;
 }
 
-const nonPassThroughs = [
-	'className',
+export const overlayPropTypes = [
 	'children',
+	'className',
 	'isShown',
 	'isAnimated',
 	'isModal',
 	'portalId',
 	'onEscape',
 	'onBackgroundClick',
-	'initialState',
-	'callbackId',
 ];
+
+const nonPassThroughs = [...overlayPropTypes, 'initialState', 'callbackId'];
 
 interface IOverlayState {
 	portalId: string;
 }
 
 export const defaultProps = {
-	isShown: false,
-	isModal: true,
-	onEscape: _.noop,
-	onBackgroundClick: _.noop,
 	isAnimated: true,
+	isModal: true,
+	isShown: false,
+	onBackgroundClick: _.noop,
+	onEscape: _.noop,
 };
 
 class Overlay extends React.Component<IOverlayProps, IOverlayState, {}> {
@@ -97,6 +97,9 @@ class Overlay extends React.Component<IOverlayProps, IOverlayState, {}> {
 		*/
 		isShown: bool,
 
+		/**
+			Enables animated transitions during expansion and collapse.
+		 */
 		isAnimated: bool,
 
 		/**

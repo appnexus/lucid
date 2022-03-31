@@ -1,9 +1,10 @@
-import _ from 'lodash';
+import _, { omit, pick } from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
-import Overlay, { IOverlayProps } from '../Overlay/Overlay';
+
+import Overlay, { IOverlayProps, overlayPropTypes } from '../Overlay/Overlay';
 import { lucidClassNames } from '../../util/style-helpers';
-import { StandardProps, getFirst, omitProps } from '../../util/component-types';
+import { StandardProps, getFirst } from '../../util/component-types';
 import Button, { IButtonProps } from '../Button/Button';
 import CloseIcon from '../Icon/CloseIcon/CloseIcon';
 
@@ -18,29 +19,38 @@ export enum EnumSize {
 }
 type Size = keyof typeof EnumSize;
 
+/** Dialog Header */
 export interface IDialogHeaderProps extends StandardProps {
 	description?: string;
 }
 const DialogHeader = (_props: IDialogHeaderProps): null => null;
 DialogHeader.displayName = 'Dialog.Header';
 DialogHeader.peek = {
-	description: `
-		Renders a \`<div>\`.
-	`,
+	description: `Renders a \`<div>\`.`,
 };
 DialogHeader.propName = 'Header';
 
+/** Dialog Footer */
 export interface IDialogFooterProps extends StandardProps {
 	description?: string;
 }
 const DialogFooter = (_props: IDialogFooterProps): null => null;
 DialogFooter.displayName = 'Dialog.Footer';
 DialogFooter.peek = {
-	description: `
-		Renders a \`<footer>\`.
-	`,
+	description: `Renders a \`<footer>\`.`,
 };
 DialogFooter.propName = 'Footer';
+
+/** Dialog */
+const nonPassThroughs = [
+	'size',
+	'isComplex',
+	'hasGutters',
+	'handleClose',
+	'Header',
+	'Footer',
+	'initialState',
+];
 
 const defaultProps = {
 	...Overlay.defaultProps,
@@ -95,8 +105,8 @@ export const Dialog = (props: IDialogProps): React.ReactElement => {
 
 	return (
 		<Overlay
-			{...omitProps(passThroughs, undefined, _.keys(Dialog.propTypes), false)}
-			{..._.pick<any>(passThroughs, _.keys(Overlay.propTypes))}
+			{...omit(passThroughs, nonPassThroughs)}
+			{...pick<any>(passThroughs, overlayPropTypes)}
 			isShown={isShown}
 			className={cx('&', className)}
 		>
