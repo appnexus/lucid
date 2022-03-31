@@ -1,6 +1,7 @@
-import _ from 'lodash';
+import _, { omit } from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
+
 import { lucidClassNames } from '../../util/style-helpers';
 import {
 	findTypes,
@@ -17,11 +18,8 @@ const cx = lucidClassNames.bind('&-Expander');
 
 const { any, bool, func, node, object, oneOf, string } = PropTypes;
 
+/** Expander Label */
 export interface IExpanderLabelProps extends StandardProps {
-	description?: string;
-}
-
-export interface IExpanderAdditionalLabelProps extends StandardProps {
 	description?: string;
 }
 
@@ -33,12 +31,16 @@ Label.peek = {
 Label.propName = 'Label';
 Label.propTypes = {
 	/**
-					Used to identify the purpose of this switch to the user -- can be any
-					renderable content.
-				*/
+		Used to identify the purpose of this switch to the user -- can be any
+		renderable content.
+	*/
 	children: node,
 };
 
+/** Additional Label */
+export interface IExpanderAdditionalLabelProps extends StandardProps {
+	description?: string;
+}
 const AdditionalLabelContent = (_props: IExpanderAdditionalLabelProps): null =>
 	null;
 AdditionalLabelContent.displayName = 'Expander.AdditionalLabelContent';
@@ -48,11 +50,12 @@ AdditionalLabelContent.peek = {
 AdditionalLabelContent.propName = 'AdditionalLabelContent';
 AdditionalLabelContent.propTypes = {
 	/**
-					Used to display additional information or/and actions next to expander label.
-				*/
+		Used to display additional information or/and actions next to expander label.
+	*/
 	children: node,
 };
 
+/** Expander */
 export interface IExpanderProps
 	extends StandardProps,
 		React.DetailedHTMLProps<
@@ -91,6 +94,17 @@ export interface IExpanderProps
 	 * */
 	kind: 'simple' | 'highlighted';
 }
+
+const nonPassThroughs = [
+	'isExpanded',
+	'onToggle',
+	'style',
+	'Label',
+	'AdditionalLabelContent',
+	'kind',
+	'initialState',
+	'callbackId',
+];
 
 const defaultProps = {
 	isExpanded: false,
@@ -159,7 +173,7 @@ class Expander extends React.Component<IExpanderProps, IExpanderState> {
 	static AdditionalLabelContent = AdditionalLabelContent;
 
 	static peek = {
-		description: `\`Expander\` is a container that provides a toggle that controls when the content is shown.`,
+		description: `\`Expander\` is a container that provides a toggle that controls when the \`Panel\` content is shown.`,
 		categories: ['layout'],
 		madeFrom: ['ChevronIcon'],
 	};
@@ -185,7 +199,7 @@ class Expander extends React.Component<IExpanderProps, IExpanderState> {
 
 		return (
 			<div
-				{...omitProps(passThroughs, undefined, _.keys(Expander.propTypes))}
+				{...omit(passThroughs, nonPassThroughs)}
 				className={cx(
 					'&',
 					{

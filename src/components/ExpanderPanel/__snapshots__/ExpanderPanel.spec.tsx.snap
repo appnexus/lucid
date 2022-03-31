@@ -1,148 +1,142 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ExpanderPanel [common] example testing should match snapshot(s) for Basic 1`] = `
-<div>
-  <div
-    class="lucid-Panel lucid-ExpanderPanel lucid-ExpanderPanel-is-collapsed lucid-Panel-is-not-gutterless lucid-Panel-has-margin lucid-Panel-is-scrollable"
+<div
+  class="lucid-Panel lucid-ExpanderPanel lucid-ExpanderPanel-is-collapsed lucid-Panel-is-not-gutterless lucid-Panel-has-margin lucid-Panel-is-scrollable"
+>
+  <header
+    class="lucid-Panel-Header lucid-ExpanderPanel-header"
   >
-    <header
-      class="lucid-Panel-Header lucid-ExpanderPanel-header"
+    <button
+      class="lucid-Button lucid-Button-invisible lucid-Button-has-only-icon lucid-ExpanderPanel-icon"
+      type="button"
     >
-      <button
-        class="lucid-Button lucid-Button-invisible lucid-Button-has-only-icon lucid-ExpanderPanel-icon"
-        type="button"
+      <span
+        class="lucid-Button-content"
       >
-        <span
-          class="lucid-Button-content"
+        <svg
+          class="lucid-Icon lucid-Icon-color-primary lucid-ChevronIcon lucid-ChevronIcon-is-down"
+          height="16"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 16 16"
+          width="16"
         >
-          <svg
-            class="lucid-Icon lucid-Icon-color-primary lucid-ChevronIcon lucid-ChevronIcon-is-down"
-            height="16"
-            preserveAspectRatio="xMidYMid meet"
-            viewBox="0 0 16 16"
-            width="16"
-          >
-            <path
-              d="M.5 4.5l7.5 7 7.5-7"
-            />
-          </svg>
-        </span>
-      </button>
-      <span>
-        Show More
+          <path
+            d="M.5 4.5l7.5 7 7.5-7"
+          />
+        </svg>
       </span>
-    </header>
-    <section
-      class="lucid-Panel-content"
+    </button>
+    <span>
+      Show More
+    </span>
+  </header>
+  <section
+    class="lucid-Panel-content"
+  >
+    <div
+      class="lucid-Collapsible lucid-ExpanderPanel-content"
+      style="overflow:hidden;padding:0"
     >
       <div
-        class="lucid-Collapsible lucid-ExpanderPanel-content"
-        style="overflow:hidden;padding:0"
-      >
-        <div
-          class="lucid-Collapsible-content"
-          style="margin:0"
-        />
-      </div>
-    </section>
-  </div>
+        class="lucid-Collapsible-content"
+        style="margin:0"
+      />
+    </div>
+  </section>
 </div>
 `;
 
 exports[`ExpanderPanel [common] example testing should match snapshot(s) for BasicWithOnRestCallback 1`] = `
-<div>
-  <div
-    class="lucid-Panel lucid-ExpanderPanel lucid-ExpanderPanel-is-collapsed lucid-Panel-is-not-gutterless lucid-Panel-has-margin lucid-Panel-is-scrollable"
+<div
+  class="lucid-Panel lucid-ExpanderPanel lucid-ExpanderPanel-is-collapsed lucid-Panel-is-not-gutterless lucid-Panel-has-margin lucid-Panel-is-scrollable"
+>
+  <header
+    class="lucid-Panel-Header lucid-ExpanderPanel-header"
   >
-    <header
-      class="lucid-Panel-Header lucid-ExpanderPanel-header"
+    <button
+      class="lucid-Button lucid-Button-invisible lucid-Button-has-only-icon lucid-ExpanderPanel-icon"
+      type="button"
     >
-      <button
-        class="lucid-Button lucid-Button-invisible lucid-Button-has-only-icon lucid-ExpanderPanel-icon"
-        type="button"
+      <span
+        class="lucid-Button-content"
       >
-        <span
-          class="lucid-Button-content"
+        <svg
+          class="lucid-Icon lucid-Icon-color-primary lucid-ChevronIcon lucid-ChevronIcon-is-down"
+          height="16"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 16 16"
+          width="16"
         >
-          <svg
-            class="lucid-Icon lucid-Icon-color-primary lucid-ChevronIcon lucid-ChevronIcon-is-down"
-            height="16"
-            preserveAspectRatio="xMidYMid meet"
-            viewBox="0 0 16 16"
-            width="16"
-          >
-            <path
-              d="M.5 4.5l7.5 7 7.5-7"
-            />
-          </svg>
-        </span>
-      </button>
-      <span>
-        Show More
+          <path
+            d="M.5 4.5l7.5 7 7.5-7"
+          />
+        </svg>
       </span>
-    </header>
-    <section
-      class="lucid-Panel-content"
+    </button>
+    <span>
+      Show More
+    </span>
+  </header>
+  <section
+    class="lucid-Panel-content"
+  >
+    <div
+      class="lucid-Collapsible lucid-ExpanderPanel-content"
+      style="overflow:hidden;padding:0"
     >
       <div
-        class="lucid-Collapsible lucid-ExpanderPanel-content"
-        style="overflow:hidden;padding:0"
-      >
-        <div
-          class="lucid-Collapsible-content"
-          style="margin:0"
-        />
-      </div>
-    </section>
-  </div>
+        class="lucid-Collapsible-content"
+        style="margin:0"
+      />
+    </div>
+  </section>
 </div>
 `;
 
 exports[`ExpanderPanel [common] example testing should match snapshot(s) for NoPadding 1`] = `
-<div>
-  <div
-    class="lucid-Panel lucid-ExpanderPanel lucid-ExpanderPanel-is-collapsed lucid-Panel-has-margin lucid-Panel-is-scrollable"
+<div
+  class="lucid-Panel lucid-ExpanderPanel lucid-ExpanderPanel-is-collapsed lucid-Panel-has-margin lucid-Panel-is-scrollable"
+>
+  <header
+    class="lucid-Panel-Header lucid-ExpanderPanel-header"
   >
-    <header
-      class="lucid-Panel-Header lucid-ExpanderPanel-header"
+    <button
+      class="lucid-Button lucid-Button-invisible lucid-Button-has-only-icon lucid-ExpanderPanel-icon"
+      type="button"
     >
-      <button
-        class="lucid-Button lucid-Button-invisible lucid-Button-has-only-icon lucid-ExpanderPanel-icon"
-        type="button"
+      <span
+        class="lucid-Button-content"
       >
-        <span
-          class="lucid-Button-content"
+        <svg
+          class="lucid-Icon lucid-Icon-color-primary lucid-ChevronIcon lucid-ChevronIcon-is-down"
+          height="16"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 16 16"
+          width="16"
         >
-          <svg
-            class="lucid-Icon lucid-Icon-color-primary lucid-ChevronIcon lucid-ChevronIcon-is-down"
-            height="16"
-            preserveAspectRatio="xMidYMid meet"
-            viewBox="0 0 16 16"
-            width="16"
-          >
-            <path
-              d="M.5 4.5l7.5 7 7.5-7"
-            />
-          </svg>
-        </span>
-      </button>
-      <span>
-        Show More
+          <path
+            d="M.5 4.5l7.5 7 7.5-7"
+          />
+        </svg>
       </span>
-    </header>
-    <section
-      class="lucid-Panel-content"
+    </button>
+    <span>
+      Show More
+    </span>
+  </header>
+  <section
+    class="lucid-Panel-content"
+  >
+    <div
+      class="lucid-Collapsible lucid-ExpanderPanel-content"
+      style="overflow:hidden;padding:0"
     >
       <div
-        class="lucid-Collapsible lucid-ExpanderPanel-content"
-        style="overflow:hidden;padding:0"
-      >
-        <div
-          class="lucid-Collapsible-content"
-          style="margin:0"
-        />
-      </div>
-    </section>
-  </div>
+        class="lucid-Collapsible-content"
+        style="margin:0"
+      />
+    </div>
+  </section>
 </div>
 `;

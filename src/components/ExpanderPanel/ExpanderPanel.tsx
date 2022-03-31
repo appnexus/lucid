@@ -1,6 +1,7 @@
-import _ from 'lodash';
+import _, { omit } from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
+
 import { lucidClassNames } from '../../util/style-helpers';
 import { getFirst, omitProps, StandardProps } from '../../util/component-types';
 import { buildModernHybridComponent } from '../../util/state-management';
@@ -16,6 +17,7 @@ const cx = lucidClassNames.bind('&-ExpanderPanel');
 
 const { any, bool, func, node, object, string } = PropTypes;
 
+/** Header */
 export interface IExpanderPanelHeaderProps extends StandardProps {
 	description?: string;
 }
@@ -34,6 +36,7 @@ Header.propTypes = {
 	children: node,
 };
 
+/** ExpanderPanel */
 export interface IExpanderPanelProps extends StandardProps {
 	/** Indicates that the component is in the "expanded" state when true and in
 			the "unexpanded" state when false. */
@@ -46,7 +49,10 @@ export interface IExpanderPanelProps extends StandardProps {
 	/** Controls the presence of padding on the inner content. */
 	hasPadding: boolean;
 
+	/** Optional. The callback that fires when the animation comes to a rest. */
 	onRest?: () => void;
+
+	/** Applies on onRest callback when rest state is closed. */
 	onRestAppliedOnCollapse?: boolean;
 
 	/** Called when the user clicks on the component's header. */
@@ -65,6 +71,19 @@ export interface IExpanderPanelProps extends StandardProps {
 			underlying ExpanderPanel */
 	Header?: React.ReactNode;
 }
+
+/** TODO: Remove the nonPassThroughs when the component is converted to a functional component */
+const nonPassThroughs = [
+	'className',
+	'isExpanded',
+	'onToggle',
+	'onRest',
+	'onRestAppliedOnCollapse',
+	'Header',
+	'isDisabled',
+	'hasPadding',
+	'initialState',
+];
 
 class ExpanderPanel extends React.Component<
 	IExpanderPanelProps,
@@ -111,10 +130,15 @@ class ExpanderPanel extends React.Component<
 		*/
 		style: object,
 
-		onRest:
-			func /*Optional. The callback that fires when the animation comes to a rest.*/,
-		onRestAppliedOnCollapse:
-			bool /*Applies on onRest callback when rest state is closed.*/,
+		/** 
+		 	Optional. The callback that fires when the animation comes to a rest.
+		*/
+		onRest: func,
+
+		/* 
+			Applies on onRest callback when rest state is closed.
+		*/
+		onRestAppliedOnCollapse: bool,
 
 		/**
 			prop alternative to Header child component passed through to the
@@ -124,10 +148,7 @@ class ExpanderPanel extends React.Component<
 	};
 
 	static peek = {
-		description: `
-					This is a container that provides a toggle that controls when the
-					content is shown.
-				`,
+		description: `An expandable container that provides a toggle that controls when the \`Panel\` content is shown.`,
 		categories: ['layout'],
 		madeFrom: ['ChevronIcon', 'Expander', 'Panel'],
 	};
@@ -171,12 +192,7 @@ class ExpanderPanel extends React.Component<
 
 		return (
 			<Panel
-				{...omitProps(
-					passThroughs,
-					undefined,
-					_.keys(ExpanderPanel.propTypes),
-					false
-				)}
+				{...(omit(passThroughs, nonPassThroughs) as any)}
 				className={cx(
 					'&',
 					{

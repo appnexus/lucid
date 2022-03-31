@@ -1,4 +1,4 @@
-import _ from 'lodash';
+import _, { forEach, has } from 'lodash';
 import assert from 'assert';
 import React from 'react';
 import sinon from 'sinon';
@@ -139,23 +139,61 @@ describe('Expander', () => {
 		});
 
 		describe('pass throughs', () => {
-			it('passes through all props not defined in `propTypes` to the root element.', () => {
-				const wrapper = shallow(
-					<Expander
-						className='wut'
-						isExpanded={true}
-						onToggle={_.noop}
-						style={{ marginRight: 10 }}
-						{...{
-							foo: 1,
-							bar: 2,
-						}}
-					/>
-				);
+			let wrapper: any;
+			const defaultProps = Expander.defaultProps;
+
+			beforeEach(() => {
+				const props = {
+					...defaultProps,
+					className: 'wut',
+					isExpanded: true,
+					onToggle: _.noop,
+					Label: <div>Label</div>,
+					AdditionalLabelContent: <div>Additional Label Content</div>,
+					style: { marginRight: 10 },
+					initialState: { test: true },
+					callbackId: 1,
+					'data-testid': 10,
+				};
+				wrapper = shallow(<Expander {...props} />);
+			});
+
+			afterEach(() => {
+				wrapper.unmount();
+			});
+
+			it('passes through props not defined in `propTypes` to the root element.', () => {
 				const rootProps = wrapper.find('.lucid-Expander').props();
 
-				assert(_.has(rootProps, 'foo'));
-				assert(_.has(rootProps, 'bar'));
+				expect(wrapper.first().prop(['className'])).toContain('wut');
+				expect(wrapper.first().prop(['style'])).toMatchObject({
+					marginRight: 10,
+				});
+				expect(wrapper.first().prop(['data-testid'])).toBe(10);
+
+				// 'className' and 'style' are plucked from the pass through object
+				// but still appear becuase they are also directly passed to the root element as a prop
+				forEach(['className', 'data-testid', 'style', 'children'], (prop) => {
+					expect(has(rootProps, prop)).toBe(true);
+				});
+			});
+			it('omits all the props defined in `propTypes` (plus, in addition, `initialState`, and `callbackId`) to the root element', () => {
+				const rootProps = wrapper.find('.lucid-Expander').props();
+
+				forEach(
+					[
+						'isExpanded',
+						'onToggle',
+						'Label',
+						'AdditionalLabelContent',
+						'kind',
+						'initialState',
+						'callbackId',
+					],
+					(prop) => {
+						expect(has(rootProps, prop)).toBe(false);
+					}
+				);
 			});
 		});
 	});
