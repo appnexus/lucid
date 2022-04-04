@@ -9,7 +9,7 @@ const cx = lucidClassNames.bind('&-Resizer');
 
 const { func, string } = PropTypes;
 
-interface IResizerProps
+export interface IResizerProps
 	extends StandardProps,
 		React.DetailedHTMLProps<
 			React.HTMLAttributes<HTMLDivElement>,
