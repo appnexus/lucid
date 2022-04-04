@@ -1,7 +1,9 @@
 /* eslint-disable react/prop-types */
-import _ from 'lodash';
+import _, { omit } from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
+import DayPicker from 'react-day-picker';
+
 import { buildModernHybridComponent } from '../../util/state-management';
 import { lucidClassNames } from '../../util/style-helpers';
 import { StandardProps, getFirst, omitProps } from '../../util/component-types';
@@ -10,7 +12,6 @@ import InfiniteSlidePanel from '../InfiniteSlidePanel/InfiniteSlidePanel';
 import { ISlidePanelProps } from '../SlidePanel/SlidePanel';
 import CalendarMonth, { ICalendarProps } from '../CalendarMonth/CalendarMonth';
 import ChevronIcon from '../Icon/ChevronIcon/ChevronIcon';
-import DayPicker from 'react-day-picker';
 
 const cx = lucidClassNames.bind('&-DateSelect');
 const DateUtils = DayPicker.DateUtils;
@@ -19,6 +20,7 @@ const clampMonthsShown = (monthsShown: number) => _.clamp(monthsShown, 1, 6);
 
 const { any, bool, node, func, instanceOf, number, oneOf, string } = PropTypes;
 
+/** Date Select Calendar Month */
 export interface IDateSelectCalendarMonthProps extends StandardProps {
 	modifiers: any;
 	description?: string;
@@ -28,12 +30,11 @@ const DateSelectCalendarMonth = (_props: IDateSelectCalendarMonthProps): null =>
 	null;
 DateSelectCalendarMonth.displayName = 'DateSelect.CalendarMonth';
 DateSelectCalendarMonth.peek = {
-	description: `
-		Child component to pass thru props to underlying CalendarMonth.
-	`,
+	description: `Child component to pass thru props to underlying CalendarMonth.`,
 };
 DateSelectCalendarMonth.propName = 'CalendarMonth';
 
+/** Date Select */
 export interface IDateSelectProps extends StandardProps {
 	/** Number of calendar months to show. Min 1, suggested max 3. Actual max is 6. */
 	monthsShown: number;
@@ -117,6 +118,30 @@ export interface IDateSelectProps extends StandardProps {
 			performance boost. */
 	useSlidePanel: boolean;
 }
+
+const nonPassThroughs = [
+	'className',
+	'monthsShown',
+	'calendarsRendered',
+	'offset',
+	'from',
+	'to',
+	'selectMode',
+	'initialMonth',
+	'selectedDays',
+	'disabledDays',
+	'showDivider',
+	'onSwipe',
+	'onPrev',
+	'onNext',
+	'onSelectDate',
+	'isFontSizeRelative',
+	'showCursorHighlight',
+	'useSlidePanel',
+	'CalendarMonth',
+	'callbackId',
+	'initialState',
+];
 
 export interface IDateSelectState {
 	offset: number;
@@ -255,7 +280,7 @@ class DateSelect extends React.Component<IDateSelectProps, IDateSelectState> {
 		useSlidePanel: bool,
 
 		/**
-				Child component to pass thru props to underlying CalendarMonth.
+			Child component to pass thru props to underlying CalendarMonth.
 		*/
 		CalendarMonth: node,
 	};
@@ -426,7 +451,7 @@ class DateSelect extends React.Component<IDateSelectProps, IDateSelectState> {
 					minWidth: NAV_BUTTON_SIZE * 2 + 185 * monthsShown,
 					...passThroughs.style,
 				}}
-				{...omitProps(passThroughs, undefined, _.keys(DateSelect.propTypes))}
+				{...omit(passThroughs, nonPassThroughs)}
 			>
 				<div>
 					<ChevronIcon

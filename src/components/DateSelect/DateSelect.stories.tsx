@@ -1,23 +1,27 @@
 import React from 'react';
 import createClass from 'create-react-class';
+import { Meta, Story } from '@storybook/react';
 import timemachine from 'timemachine';
-import DateSelect from './DateSelect';
+
+import DateSelect, { IDateSelectProps } from './DateSelect';
 import Button from '../Button/Button';
 
 export default {
 	title: 'Controls/DateSelect',
 	component: DateSelect,
+	subcomponents: { 'DateSelect.CalendarMonth': DateSelect.CalendarMonth },
 	parameters: {
 		docs: {
 			description: {
-				component: (DateSelect as any).peek.description,
+				component: DateSelect.peek.description,
 			},
 		},
+		layout: 'centered',
 	},
-};
+	args: DateSelect.defaultProps,
+} as Meta;
 
-/* Select Date */
-export const SelectDate = () => {
+export const Basic: Story<IDateSelectProps> = (args) => {
 	timemachine.config({
 		dateString: 'December 25, 2018 13:12:59',
 	});
@@ -41,6 +45,7 @@ export const SelectDate = () => {
 			return (
 				<section style={{ maxWidth: 400 }}>
 					<DateSelect
+						{...args}
 						selectedDays={selectedDate}
 						onSelectDate={this.handleSelectDate}
 					/>
@@ -53,10 +58,9 @@ export const SelectDate = () => {
 
 	return <Component />;
 };
-SelectDate.storyName = 'SelectDate';
 
 /* Select Range */
-export const SelectRange = () => {
+export const SelectRange: Story<IDateSelectProps> = () => {
 	timemachine.config({
 		dateString: 'December 25, 2018 13:12:59',
 	});
@@ -104,7 +108,9 @@ export const SelectRange = () => {
 						{to && to.toLocaleDateString('en-US')}
 					</div>
 
-					<Button onClick={this.handleReset}>Reset</Button>
+					<Button kind='primary' onClick={this.handleReset}>
+						Reset
+					</Button>
 				</section>
 			);
 		},
@@ -112,10 +118,9 @@ export const SelectRange = () => {
 
 	return <Component />;
 };
-SelectRange.storyName = 'SelectRange';
 
 /* Disabled Days */
-export const DisabledDays = () => {
+export const DisabledDays: Story<IDateSelectProps> = () => {
 	timemachine.config({
 		dateString: 'December 25, 2018 13:12:59',
 	});
@@ -126,102 +131,77 @@ export const DisabledDays = () => {
 		return day < today;
 	}
 
-	const Component = createClass({
-		render() {
-			return (
-				<section style={{ maxWidth: 400 }}>
-					<DateSelect disabledDays={isPastDay} />
-				</section>
-			);
-		},
-	});
-
-	return <Component />;
+	return (
+		<section style={{ maxWidth: 400 }}>
+			<DateSelect disabledDays={isPastDay} />
+		</section>
+	);
 };
-DisabledDays.storyName = 'DisabledDays';
 
 /* Initial Month */
-export const InitialMonth = () => {
+export const InitialMonth: Story<IDateSelectProps> = () => {
 	timemachine.config({
 		dateString: 'December 25, 2018 13:12:59',
 	});
 
-	const Component = createClass({
-		render() {
-			return (
-				<section style={{ maxWidth: 400 }}>
-					<DateSelect
-						initialMonth={new Date(2016, 1)}
-						selectedDays={new Date(2016, 1, 17) as any}
-					/>
-				</section>
-			);
-		},
-	});
-
-	return <Component />;
+	return (
+		<section style={{ maxWidth: 400 }}>
+			<DateSelect
+				initialMonth={new Date(2016, 1)}
+				selectedDays={new Date(2016, 1, 17) as any}
+			/>
+		</section>
+	);
 };
-InitialMonth.storyName = 'InitialMonth';
 
 /* Mutiple Months */
-export const MutipleMonths = () => {
+export const MutipleMonths: Story<IDateSelectProps> = () => {
 	timemachine.config({
 		dateString: 'December 25, 2018 13:12:59',
 	});
 
-	const Component = createClass({
-		render() {
-			return (
-				<DateSelect
-					selectedDays={new Date() as any}
-					monthsShown={3}
-					calendarsRendered={9}
-					showDivider
-				/>
-			);
-		},
-	});
-
-	return <Component />;
+	return (
+		<DateSelect
+			selectedDays={new Date() as any}
+			monthsShown={3}
+			calendarsRendered={9}
+			showDivider
+		/>
+	);
 };
-MutipleMonths.storyName = 'MutipleMonths';
+MutipleMonths.parameters = {
+	layout: 'padded',
+};
 
 /* Custom Modifiers */
-export const CustomModifiers = () => {
+export const CustomModifiers: Story<IDateSelectProps> = () => {
 	timemachine.config({
 		dateString: 'December 25, 2018 13:12:59',
 	});
 
-	const Component = createClass({
-		render() {
-			return (
-				<section style={{ maxWidth: 400 }}>
-					<DateSelect>
-						<DateSelect.CalendarMonth
-							modifiers={
-								{
-									tuesday: (date: any) => date.getDay() === 2,
-								} as any
-							}
-						/>
-					</DateSelect>
+	return (
+		<section style={{ maxWidth: 400 }}>
+			<DateSelect>
+				<DateSelect.CalendarMonth
+					modifiers={
+						{
+							tuesday: (date: any) => date.getDay() === 2,
+						} as any
+					}
+				/>
+			</DateSelect>
 
-					<style>{`
+			<style>{`
 					.lucid-CalendarMonth .DayPicker-Day--tuesday {
 						border: 1px dotted gray;
 					}
 				`}</style>
-				</section>
-			);
-		},
-	});
-
-	return <Component />;
+		</section>
+	);
 };
-CustomModifiers.storyName = 'CustomModifiers';
 
 /* Relative Font Size */
-export const RelativeFontSize = () => {
+export const RelativeFontSize: Story<IDateSelectProps> = () => {
 	timemachine.config({
 		dateString: 'December 25, 2018 13:12:59',
 	});
@@ -262,10 +242,9 @@ export const RelativeFontSize = () => {
 
 	return <Component />;
 };
-RelativeFontSize.storyName = 'RelativeFontSize';
 
 /* Disable Slide Panel */
-export const DisableSlidePanel = () => {
+export const DisableSlidePanel: Story<IDateSelectProps> = () => {
 	timemachine.config({
 		dateString: 'December 25, 2018 13:12:59',
 	});
@@ -304,4 +283,3 @@ export const DisableSlidePanel = () => {
 
 	return <Component />;
 };
-DisableSlidePanel.storyName = 'DisableSlidePanel';

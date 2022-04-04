@@ -1,6 +1,9 @@
 import { shallow } from 'enzyme';
 import React from 'react';
+import _, { keys, forEach, includes } from 'lodash';
+
 import { common, mockDate } from '../../util/generic-tests';
+import CalendarMonth from '../CalendarMonth/CalendarMonth';
 
 describe('DateSelect', () => {
 	mockDate('2021-12-01T14:25:23-0800');
@@ -8,8 +11,79 @@ describe('DateSelect', () => {
 	// Must load ./CalendarMonth after mocking date
 	const DateSelect = require('./DateSelect').DateSelectDumb;
 
+	const defaultProps = DateSelect.defaultProps;
+
 	describe('common tests', () => {
 		common(DateSelect);
+	});
+
+	describe('props', () => {
+		let wrapper: any;
+
+		describe('passthroughs', () => {
+			beforeEach(() => {
+				const props = {
+					...defaultProps,
+					selectMode: 'day',
+					CalendarMonth: <CalendarMonth />,
+					initialState: { test: true },
+					callbackId: 1,
+					testdataid: 10,
+				};
+
+				wrapper = shallow(<DateSelect {...props}></DateSelect>);
+			});
+
+			afterEach(() => {
+				wrapper.unmount();
+			});
+
+			it('passes through some select props to the root section element', () => {
+				const rootProps = keys(wrapper.first().props());
+
+				// root selection element should only contain
+				// 'className', 'style' and 'children'
+				forEach(['className', 'style', 'children'], (prop) => {
+					expect(includes(rootProps, prop)).toBe(true);
+				});
+			});
+
+			it('omits some props from the root section element', () => {
+				const rootProps = keys(wrapper.first().props());
+
+				// It should not pass 'callbackId' or 'initialState' or
+				// any of the DateSelect prop types to the root element
+				// Note that className is omitted as a pass through,
+				// but is also directly applied to element, so it still appears
+				forEach(
+					[
+						'monthsShown',
+						'calendarsRendered',
+						'offset',
+						'from',
+						'to',
+						'selectMode',
+						'initialMonth',
+						'selectedDays',
+						'disabledDays',
+						'showDivider',
+						'onSwipe',
+						'onPrev',
+						'onNext',
+						'onSelectDate',
+						'isFontSizeRelative',
+						'showCursorHighlight',
+						'useSlidePanel',
+						'CalendarMonth',
+						'callbackId',
+						'initialState',
+					],
+					(prop) => {
+						expect(includes(rootProps, prop)).toBe(false);
+					}
+				);
+			});
+		});
 	});
 
 	describe('event handlers', () => {
