@@ -1,40 +1,16 @@
-import _ from 'lodash';
+import _, { omit } from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import {
-	findTypes,
-	omitProps,
-	StandardProps,
-} from '../../util/component-types';
+import { findTypes, StandardProps } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-Grid');
 
 const { string, bool, node } = PropTypes;
 
 // -----------------------------------------------------------------------------
-// Type definitions
+// Cell child component
 // -----------------------------------------------------------------------------
-
-export interface IGridProps
-	extends StandardProps,
-		React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> {
-	/** explicitly set the primary axis of the grid to Y */
-	isVertical?: boolean;
-
-	/** explicitly set the primary axis of the grid to X */
-	isHorizontal?: boolean;
-
-	/** a grid without padding separating grid cells */
-	isGutterless?: boolean;
-
-	/** Allow Grids to wrap multiple lines */
-	isMultiline?: boolean;
-
-	/** Any valid React component */
-	children?: React.ReactNode;
-}
-
 export interface ICellProps extends StandardProps {
 	/** fill all twelve columns of the primary grid axis */
 	isFull?: boolean;
@@ -88,15 +64,10 @@ export interface ICellProps extends StandardProps {
 	isOffsetHalf?: boolean;
 }
 
-// -----------------------------------------------------------------------------
-// Cell child component
-// -----------------------------------------------------------------------------
 const Cell = (_props: ICellProps): null => null;
 Cell.displayName = 'Grid.Cell';
 Cell.peek = {
-	description: `
-		Renders an \`<article>\` as the grid cell
-	`,
+	description: `Renders an \`<article>\` as the grid cell`,
 };
 Cell.propTypes = {
 	/**
@@ -185,14 +156,54 @@ Cell.propTypes = {
 	isOffsetHalf: bool,
 };
 Cell.peek = {
-	description: `
-		Renders an \`<article>\` as the grid cell
-	`,
+	description: `Renders an \`<article>\` as the grid cell.`,
 };
 
 // -----------------------------------------------------------------------------
 // Grid
 // -----------------------------------------------------------------------------
+export interface IGridProps
+	extends StandardProps,
+		React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> {
+	/** explicitly set the primary axis of the grid to Y */
+	isVertical?: boolean;
+
+	/** explicitly set the primary axis of the grid to X */
+	isHorizontal?: boolean;
+
+	/** a grid without padding separating grid cells */
+	isGutterless?: boolean;
+
+	/** Allow Grids to wrap multiple lines */
+	isMultiline?: boolean;
+
+	/** Any valid React component */
+	children?: React.ReactNode;
+}
+
+// TODO: This functional component should be refactored so it doesn't have to omit props
+const nonPassThroughs = [
+	'isFull',
+	'isHalf',
+	'isThird',
+	'isQuarter',
+	'is2',
+	'is3',
+	'is4',
+	'is5',
+	'is6',
+	'is7',
+	'is8',
+	'is9',
+	'is10',
+	'is11',
+	'isOffsetQuarter',
+	'isOffsetThird',
+	'isOffsetHalf',
+	'initialState',
+	'callbackId',
+];
+
 export const Grid = (props: IGridProps): React.ReactElement => {
 	const {
 		className,
@@ -223,11 +234,7 @@ export const Grid = (props: IGridProps): React.ReactElement => {
 			{_.map(cellChildProps, (cellChildProp, index): React.ReactElement => {
 				return (
 					<article
-						{...omitProps(
-							cellChildProp,
-							undefined,
-							_.keys(Grid.Cell.propTypes)
-						)}
+						{...omit(cellChildProp, nonPassThroughs)}
 						key={index}
 						className={cx(
 							'&-Cell',
@@ -261,6 +268,7 @@ export const Grid = (props: IGridProps): React.ReactElement => {
 		</section>
 	);
 };
+
 Grid.Cell = Cell;
 Grid.displayName = 'Grid';
 Grid.peek = {
