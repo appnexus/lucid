@@ -1,7 +1,7 @@
 import React from 'react';
 import { mount, shallow } from 'enzyme';
 import assert from 'assert';
-import _ from 'lodash';
+import _, { forEach, has } from 'lodash';
 import { common } from '../../util/generic-tests';
 
 import { DropMenuDumb as DropMenu } from './DropMenu';
@@ -28,6 +28,73 @@ describe('DropMenu', () => {
 	});
 
 	describe('props', () => {
+		describe('pass throughs', () => {
+			let wrapper: any;
+			const defaultProps = DropMenu.defaultProps;
+
+			beforeEach(() => {
+				const props = {
+					...defaultProps,
+					initialState: { test: true },
+					callbackId: 1,
+					'data-testid': 10,
+				};
+				wrapper = shallow(<DropMenu {...props} />);
+			});
+
+			afterEach(() => {
+				wrapper.unmount();
+			});
+
+			it('passes through select props to the root div element.', () => {
+				const rootProps = wrapper.find('div.lucid-DropMenu').props();
+				const dataTestId = wrapper.first().prop(['data-testid']);
+
+				expect(dataTestId).toBe(10);
+
+				// 'className' and 'style' are plucked from the pass through object
+				// but still appear becuase they are also directly passed to the root element as a prop
+				forEach(['className', 'data-testid', 'style', 'children'], (prop) => {
+					expect(has(rootProps, prop)).toBe(true);
+				});
+			});
+			it('omits the component props, "initialState" and "callbackId" from the root div element', () => {
+				const rootProps = wrapper.find('div.lucid-DropMenu').props();
+
+				forEach(
+					[
+						'isDisabled',
+						'isExpanded',
+						'direction',
+						'alignment',
+						'selectedIndices',
+						'focusedIndex',
+						'portalId',
+						'flyOutStyle',
+						'optionContainerStyle',
+						'onExpand',
+						'onCollapse',
+						'onSelect',
+						'onFocusNext',
+						'onFocusPrev',
+						'onFocusOption',
+						'Control',
+						'Option',
+						'OptionGroup',
+						'NullOption',
+						'Header',
+						'ContextMenu',
+						'FixedOption',
+						'initialState',
+						'callbackId',
+					],
+					(prop) => {
+						expect(has(rootProps, prop)).toBe(false);
+					}
+				);
+			});
+		});
+
 		describe('children', () => {
 			it('should not render any direct child elements which are not DropMenu-specific', () => {
 				const wrapper = shallow(
