@@ -1,12 +1,8 @@
-import _ from 'lodash';
+import _, { omit } from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import {
-	StandardProps,
-	findTypes,
-	omitProps,
-} from '../../util/component-types';
+import { StandardProps, findTypes } from '../../util/component-types';
 import Resizer from '../Resizer/Resizer';
 
 const cx = lucidClassNames.bind('&-ResponsiveGrid');
@@ -15,26 +11,14 @@ const { string, number, arrayOf } = PropTypes;
 
 export interface IResponsiveGridCellProps extends StandardProps {}
 
+/** Cell */
 const Cell = (_props: IResponsiveGridCellProps): null => null;
 Cell.displayName = 'ResponsiveGrid.Cell';
 Cell.peek = {
-	description: `
-		Renders a \`<article>\` as the grid cell
-	`,
+	description: `Renders a \`<article>\` as the grid cell.`,
 };
 
-export interface IResponsiveGridWrapperProps
-	extends StandardProps,
-		React.DetailedHTMLProps<
-			React.HTMLAttributes<HTMLDivElement>,
-			HTMLDivElement
-		> {
-	/**
-	 * Break points for the grid to switch column layouts. Break points should be provided
-	 * in ascending order. Currently only two break points are used. Example: [960, 1430]
-	 */
-	breakPoints: number[];
-}
+/** Responsive Grid */
 
 export interface IResponsiveGridProps extends IResponsiveGridWrapperProps {
 	/**
@@ -140,18 +124,27 @@ export class ResponsiveGrid extends React.Component<IResponsiveGridProps> {
 	}
 }
 
+/** Responsive Grid Wrapper */
+export interface IResponsiveGridWrapperProps
+	extends StandardProps,
+		React.DetailedHTMLProps<
+			React.HTMLAttributes<HTMLDivElement>,
+			HTMLDivElement
+		> {
+	/**
+	 * Break points for the grid to switch column layouts. Break points should be provided
+	 * in ascending order. Currently only two break points are used. Example: [960, 1430]
+	 */
+	breakPoints: number[];
+}
+
 const ResponsiveGridWrapper = (props: IResponsiveGridWrapperProps) => {
 	const { breakPoints, children, className, ...passThroughs } = props;
 
 	return (
 		<Resizer
 			className={cx('&', className)}
-			{...omitProps(
-				passThroughs,
-				undefined,
-				_.keys(ResponsiveGridWrapper.propTypes),
-				false
-			)}
+			{...(omit(passThroughs, ['breakPoints', 'initialState']) as any)}
 		>
 			{(width) => {
 				return (
@@ -179,7 +172,7 @@ ResponsiveGridWrapper.propTypes = {
 	className: string,
 };
 ResponsiveGridWrapper.peek = {
-	description: `A grid container that changes the number of grid columns in response to width changes. By default, the grid cells are displayed in a single column for widths less than 960px, two columns for widths greater than \`960px\` and less than \`1430px\`, and three columns for widths greater than 1430px. Custom break points can be provided through the \`breakPoints\` prop.`,
+	description: `A grid container that changes the number of grid columns in response to width changes. By default, the grid cells are displayed in a single column for widths less than \`960px\`, two columns for widths greater than \`960px\` and less than \`1430px\`, and three columns for widths greater than \`1430px\`. Custom break points can be provided through the \`breakPoints\` prop.`,
 	categories: ['utility'],
 	madeFrom: ['Resizer'],
 };
