@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes, { shape } from 'prop-types';
 
 import Validation, { IValidationProps } from '../Validation/Validation';
 import TextField, {
@@ -27,7 +27,14 @@ TextFieldValidatedError.peek = {
 TextFieldValidatedError.propName = 'Error';
 
 /** TODO: Remove the nonPassThroughs when the component is converted to a functional component */
-const nonPassThroughs = ['style', 'className', 'Error', 'Info', 'initialState'];
+const nonPassThroughs = [
+	'style',
+	'className',
+	'Error',
+	'Info',
+	'special',
+	'initialState',
+];
 
 export interface ITextFieldValidatedProps
 	extends ITextFieldPropsWithPassThroughs {
@@ -77,8 +84,18 @@ class TextFieldValidated extends React.Component<
 
 		/**
 			Optional information text that is styled less aggressively than an error
-		*/
+		 */
 		Info: string,
+
+		/**
+			Optional special message that can have the border color and message text styled independently.
+		  Color options for `textColor` and `borderColor`: `['success', 'primary', 'danger', 'warning', 'info']`
+		 */
+		special: shape({
+			message: string,
+			textColor: string,
+			borderColor: string,
+		}),
 	};
 
 	static defaultProps = TextField.defaultProps;

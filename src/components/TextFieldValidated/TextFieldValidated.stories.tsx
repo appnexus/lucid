@@ -23,7 +23,7 @@ const style = {
 };
 
 export const Basic: Story<ITextFieldValidatedProps> = (args) => {
-	return <TextFieldValidated {...args} Error='Nope, not even close!' />;
+	return <TextFieldValidated {...args} />;
 };
 
 export const Debounced: Story<ITextFieldValidatedProps> = (args) => {
