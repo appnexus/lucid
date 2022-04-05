@@ -62,6 +62,30 @@ export const ErrorTypes: Story<ITextFieldValidatedProps> = (args) => {
 				Error={null}
 				Info={'This is an info'}
 			/>
+			<TextFieldValidated
+				{...args}
+				style={style}
+				value={value}
+				onChangeDebounced={() => {}}
+				Error={null}
+				special={{
+					borderColor: 'success',
+					message: 'This is a special with `success` text and border',
+					textColor: 'success',
+				}}
+			/>
+			<TextFieldValidated
+				{...args}
+				style={style}
+				value={value}
+				onChangeDebounced={() => {}}
+				Error={null}
+				special={{
+					borderColor: 'primary',
+					message: 'This is a special in the style of an Info',
+					textColor: 'info',
+				}}
+			/>
 		</div>
 	);
 };

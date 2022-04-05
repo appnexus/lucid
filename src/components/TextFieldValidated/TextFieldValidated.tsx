@@ -33,6 +33,11 @@ export interface ITextFieldValidatedProps
 	extends ITextFieldPropsWithPassThroughs {
 	Error?: React.ReactNode;
 	Info?: string;
+	special?: {
+		message: string;
+		textColor: string;
+		borderColor: string;
+	};
 }
 
 export interface ITextFieldValidatedState {
@@ -96,12 +101,35 @@ class TextFieldValidated extends React.Component<
 			);
 		} else if (this.props.Info) {
 			childProps = [this.props.Info];
+		} else if (this.props.special) {
+			childProps = [this.props.special?.message];
 		}
+
+		const isSpecial =
+			!this.props.Error && !this.props.Info && this.props.special;
+
+		const classColorTypes = {
+			'-success-text': isSpecial && this.props.special?.textColor === 'success',
+			'-success-border':
+				isSpecial && this.props.special?.borderColor === 'success',
+			'-primary-text': isSpecial && this.props.special?.textColor === 'primary',
+			'-primary-border':
+				isSpecial && this.props.special?.borderColor === 'primary',
+			'-danger-text': isSpecial && this.props.special?.textColor === 'danger',
+			'-danger-border':
+				isSpecial && this.props.special?.borderColor === 'danger',
+			'-warning-text': isSpecial && this.props.special?.textColor === 'warning',
+			'-warning-border':
+				isSpecial && this.props.special?.borderColor === 'warning',
+			'-info-text': isSpecial && this.props.special?.textColor === 'info',
+			'-info-border': isSpecial && this.props.special?.borderColor === 'info',
+		};
 
 		return (
 			<Validation
 				className={cx('&', className, {
 					'-info': !this.props.Error && this.props.Info,
+					...classColorTypes,
 				})}
 				style={style}
 				Error={childProps}
