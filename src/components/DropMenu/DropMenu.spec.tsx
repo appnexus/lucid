@@ -58,7 +58,7 @@ describe('DropMenu', () => {
 					expect(has(rootProps, prop)).toBe(true);
 				});
 			});
-			it.only('omits the component props, "initialState" and "callbackId" from the root div element', () => {
+			it('omits the component props, "initialState" and "callbackId" from the root div element', () => {
 				const rootProps = wrapper.find('div.lucid-DropMenu').props();
 
 				forEach(
