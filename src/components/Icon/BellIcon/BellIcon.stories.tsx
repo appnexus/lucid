@@ -5,6 +5,13 @@ import { BellIcon, IBellIconProps } from './BellIcon';
 export default {
 	title: 'Icons/Icons/BellIcon',
 	component: BellIcon,
+	parameters: {
+		docs: {
+			description: {
+				component: BellIcon.peek.description,
+			},
+		},
+	},
 } as Meta;
 
 //👇 We create a “template” of how args map to rendering
