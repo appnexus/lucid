@@ -4,5 +4,5 @@ import Icon from './Icon';
 
 describe('Icon', () => {
 	common(Icon);
-	icons(Icon);
+	icons(Icon, { includeInitialState: true });
 });
