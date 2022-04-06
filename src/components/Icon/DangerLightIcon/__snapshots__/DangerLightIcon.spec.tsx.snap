@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`DangerLightIcon [common] example testing should match snapshot(s) for Basic 1`] = `
-<div>
+<section>
   <svg
     class="lucid-Icon lucid-Icon-color-primary lucid-DangerLightIcon"
     height="16"
@@ -59,5 +59,5 @@ exports[`DangerLightIcon [common] example testing should match snapshot(s) for B
     />
   </svg>
   <br />
-</div>
+</section>
 `;
