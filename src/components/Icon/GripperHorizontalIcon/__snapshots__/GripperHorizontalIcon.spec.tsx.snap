@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GripperHorizontalIcon [common] example testing should match snapshot(s) for Primary 1`] = `
+<svg
+  class="lucid-Icon lucid-Icon-color-primary lucid-GripperHorizontalIcon"
+  height="2"
+  preserveAspectRatio="xMidYMid meet"
+  viewBox="0 0 16 2"
+  width="16"
+>
+  <path
+    d="M.5 0v2M4 0v2M8 0v2M12 0v2M15.5 0v2"
+  />
+</svg>
+`;
