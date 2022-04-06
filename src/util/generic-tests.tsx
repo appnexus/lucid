@@ -4,7 +4,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { mount, shallow, render } from 'enzyme';
 import assert from 'assert';
-import _, { each, omit } from 'lodash';
+import _, { each, omit, keys, includes } from 'lodash';
 import glob from 'glob';
 import { addons, mockChannel } from '@storybook/addons';
 import timekeeper from 'timekeeper';
@@ -224,8 +224,24 @@ export function common(Component: any, config: ICommonConfig = {} as any) {
 }
 
 // Common tests for all our icon components
-export function icons(Component: any) {
+
+interface IIconConfig {
+	includeInitialState: boolean;
+}
+
+export function icons(Component: any, config: IIconConfig = {} as any) {
+	// The default expectation is for every Icon to omit `initailState`,
+	// if it is passed through to the underlying element
+	const { includeInitialState = false } = config;
+
 	describe('[icon]', () => {
+		it('should almost always omit the `initialState` key', () => {
+			const wrapper = shallow(<Component initialState={{ testState: true }} />);
+			const rootProps = keys(wrapper.first().props());
+
+			expect(includes(rootProps, 'initialState')).toBe(includeInitialState);
+		});
+
 		it('should add the correct class for isClickable', () => {
 			const wrapper = mount(<Component isClickable={true} />);
 			const targetClassName = 'lucid-Icon-is-clickable';
