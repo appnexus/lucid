@@ -125,6 +125,8 @@ export interface ISingleSelectProps extends StandardProps {
 			event: React.MouseEvent | React.KeyboardEvent;
 		}
 	) => void;
+
+	Title: string | null;
 }
 
 export interface ISingleSelectState {
@@ -272,6 +274,11 @@ class SingleSelect extends React.Component<
             *Child Element* - Used to group \`Option\`s within the menu. Any
             non-\`Option\`s passed in will be rendered as a label for the group.
         */,
+
+		/**
+            Optional Title.
+        */
+		Title: string,
 	};
 
 	UNSAFE_componentWillMount() {
@@ -321,6 +328,7 @@ class SingleSelect extends React.Component<
 			onSelect,
 			showIcon,
 			DropMenu: dropMenuProps,
+			Title,
 		} = this.props;
 
 		const { direction, isExpanded, flyOutStyle } = dropMenuProps;
@@ -341,6 +349,9 @@ class SingleSelect extends React.Component<
 			(!isDisabled && isItemSelected && isSelectionHighlighted) ||
 			(isExpanded && isSelectionHighlighted);
 		const isNullOptionSelected = selectedIndex === null;
+		const title = _.isEmpty(Title) ? null : (
+			<span className='select-title'>{Title}:</span>
+		);
 
 		return (
 			<DropMenu
@@ -369,6 +380,7 @@ class SingleSelect extends React.Component<
 							'&-Control-is-null-option': isNullOptionSelected,
 						})}
 					>
+						{title}
 						<span
 							{...(!isItemSelected ? placeholderProps : null)}
 							className={cx(
