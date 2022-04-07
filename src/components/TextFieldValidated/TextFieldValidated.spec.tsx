@@ -64,11 +64,16 @@ describe('TextFieldValidated', () => {
 			);
 
 			nonPassThroughs.forEach((nonPassThrough) => {
-				assert.strictEqual(
-					wrapper.find(TextField).prop(nonPassThrough),
-					undefined
-				);
+				expect(wrapper.find(TextField).prop(nonPassThrough)).toBe(undefined);
 			});
+		});
+		it('allows certain passthroughs to be spread into TextField subcomponent', () => {
+			const wrapper = shallow(
+				<TextFieldValidated {...defaultProps} callbackId={1} data-testid={10} />
+			);
+
+			expect(wrapper.find(TextField).prop('data-testid')).toBe(10);
+			expect(wrapper.find(TextField).prop('callbackId')).toBe(1);
 		});
 	});
 });
