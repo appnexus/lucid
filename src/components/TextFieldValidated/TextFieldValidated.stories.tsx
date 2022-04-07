@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Story, Meta } from '@storybook/react';
-import createClass from 'create-react-class';
 
 import TextFieldValidated, {
 	ITextFieldValidatedProps,

@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 import assert from 'assert';
 
 import { common } from '../../util/generic-tests';
@@ -12,6 +12,30 @@ describe('TextFieldValidated', () => {
 	common(TextFieldValidated);
 
 	describe('props', () => {
+		it('Error should display as an error message', () => {
+			const errorMsg = 'Test error!';
+			const wrapper = mount(
+				<TextFieldValidated {...defaultProps} Error={errorMsg} />
+			);
+
+			expect(
+				wrapper.find('.lucid-Validation').hasClass('lucid-Validation-is-error')
+			).toEqual(true);
+			expect(
+				wrapper.find('.lucid-Validation-error-content').contains(errorMsg)
+			).toEqual(true);
+		});
+
+		it('Info should apply the info styling, if there is no error, and an info message', () => {
+			const infoMsg = 'Info message';
+			const wrapper = mount(<TextFieldValidated Error={null} Info={infoMsg} />);
+
+			expect(wrapper.find('.lucid-Validation').hasClass('-info')).toEqual(true);
+			expect(
+				wrapper.find('.lucid-Validation-error-content').contains(infoMsg)
+			).toEqual(true);
+		});
+
 		it('should pass through onBlur prop to TextField', () => {
 			const onBlur = () => {};
 			const wrapper = shallow(
@@ -38,6 +62,7 @@ describe('TextFieldValidated', () => {
 					Info='Info'
 				/>
 			);
+
 			nonPassThroughs.forEach((nonPassThrough) => {
 				assert.strictEqual(
 					wrapper.find(TextField).prop(nonPassThrough),

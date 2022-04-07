@@ -47,18 +47,15 @@ describe('TextField', () => {
 				'onSubmit',
 				'debounceLevel',
 				'lazyLevel',
-				'ref',
 				'initialState',
 				'callbackId',
 				'children',
 			];
-			const refValue = {};
 			const onChangeDebounced = () => {};
 			const onSubmit = () => {};
 			const wrapper = shallow(
 				<TextField
 					{...defaultProps}
-					ref={refValue}
 					callbackId={0}
 					onChangeDebounced={onChangeDebounced}
 					onSubmit={onSubmit}
