@@ -293,7 +293,7 @@ describe('SingleSelect', () => {
 				);
 
 				const titleWrapper = wrapper.find('.select-title');
-				assert.equal(titleWrapper.text(), `${title}:`);
+				expect(titleWrapper.text()).toEqual(`${title}:`);
 			});
 		});
 	});
