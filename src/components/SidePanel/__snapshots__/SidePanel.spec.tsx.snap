@@ -189,10 +189,10 @@ exports[`SidePanel Header should match snapshot 1`] = `
 </Overlay>
 `;
 
-exports[`SidePanel isAnimated should match snapshot 1`] = `
+exports[`SidePanel isAnimated should match snapshot and apply the appropriate class 1`] = `
 <Overlay
-  className="lucid-SidePanel lucid-SidePanel-is-expanded lucid-SidePanel-position-right"
-  isAnimated={false}
+  className="lucid-SidePanel lucid-SidePanel-is-expanded lucid-SidePanel-position-right lucid-SidePanel-is-animated"
+  isAnimated={true}
   isModal={true}
   isShown={true}
   onBackgroundClick={[Function]}
@@ -242,12 +242,12 @@ exports[`SidePanel isAnimated should match snapshot 1`] = `
 </Overlay>
 `;
 
-exports[`SidePanel isExpanded should match snapshot 1`] = `
+exports[`SidePanel isExpanded should match snapshot and apply the appropriate class 1`] = `
 <Overlay
-  className="lucid-SidePanel lucid-SidePanel-position-right lucid-SidePanel-is-animated"
+  className="lucid-SidePanel lucid-SidePanel-is-expanded lucid-SidePanel-position-right lucid-SidePanel-is-animated"
   isAnimated={true}
   isModal={true}
-  isShown={false}
+  isShown={true}
   onBackgroundClick={[Function]}
   onEscape={[Function]}
   style={
@@ -329,9 +329,62 @@ exports[`SidePanel isResizeDisabled should match snapshot 1`] = `
 </Overlay>
 `;
 
-exports[`SidePanel position should match snapshot 1`] = `
+exports[`SidePanel position should match snapshot and apply the appropriate class 1`] = `
 <Overlay
   className="lucid-SidePanel lucid-SidePanel-is-expanded lucid-SidePanel-position-left lucid-SidePanel-is-animated"
+  isAnimated={true}
+  isModal={true}
+  isShown={true}
+  onBackgroundClick={[Function]}
+  onEscape={[Function]}
+  style={
+    Object {
+      "marginTop": 0,
+    }
+  }
+>
+  <div
+    className="lucid-SidePanel-pane"
+    style={
+      Object {
+        "marginTop": 0,
+        "width": 240,
+      }
+    }
+  >
+    <div
+      className="lucid-SidePanel-body"
+    >
+      <DragCaptureZone
+        className="lucid-SidePanel-grabber"
+        onDrag={[Function]}
+        onDragCancel={[Function]}
+        onDragEnd={[Function]}
+        onDragStart={[Function]}
+      >
+        <GripperVerticalIcon
+          aspectRatio="xMidYMid meet"
+          color="primary"
+          isClickable={false}
+          isDisabled={false}
+          onClick={[Function]}
+          onSelect={[Function]}
+          size={16}
+          viewBox="0 0 16 16"
+          width="20"
+        />
+      </DragCaptureZone>
+      <div
+        className="lucid-SidePanel-content"
+      />
+    </div>
+  </div>
+</Overlay>
+`;
+
+exports[`SidePanel position should match snapshot and apply the appropriate class 2`] = `
+<Overlay
+  className="lucid-SidePanel lucid-SidePanel-is-expanded lucid-SidePanel-position-right lucid-SidePanel-is-animated"
   isAnimated={true}
   isModal={true}
   isShown={true}

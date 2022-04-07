@@ -1,18 +1,20 @@
-import _ from 'lodash';
+import _, { omit } from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
+
 import { lucidClassNames } from '../../util/style-helpers';
 import Overlay, { IOverlayProps } from '../Overlay/Overlay';
 import GripperVerticalIcon from '../Icon/GripperVerticalIcon/GripperVerticalIcon';
 import CloseIcon from '../Icon/CloseIcon/CloseIcon';
 import DragCaptureZone from '../DragCaptureZone/DragCaptureZone';
 import Button from '../Button/Button';
-import { getFirst, omitProps, StandardProps } from '../../util/component-types';
+import { getFirst, StandardProps } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-SidePanel');
 
 const { any, bool, func, oneOf, node, number, string, oneOfType } = PropTypes;
 
+/* SidePanel Header **/
 const SidePanelHeader = (_props: StandardProps): null => null;
 SidePanelHeader.displayName = 'SidePanel.Header';
 SidePanelHeader.propName = 'Header';
@@ -29,6 +31,7 @@ SidePanelHeader.propTypes = {
 	children: node,
 };
 
+/** Side Panel */
 export interface ISidePanelProps extends Partial<IOverlayProps> {
 	/** Alternative to using `<SidePanel.Header>`. */
 	Header?: string | (React.ReactNode & { props: StandardProps });
@@ -82,6 +85,25 @@ export interface ISidePanelProps extends Partial<IOverlayProps> {
 	/** Sets the top margin for the panel. Defaults to \`0\`. */
 	topOffset: number | string;
 }
+
+/** TODO: Remove the 'nonPassThroughs' when the component is converted to a functional component */
+const nonPassThroughs = [
+	'children',
+	'className',
+	'Header',
+	'isAnimated',
+	'isExpanded',
+	'isResizeDisabled',
+	'onCollapse',
+	'onResize',
+	'position',
+	'preventBodyScroll',
+	'width',
+	'minWidth',
+	'maxWidth',
+	'topOffset',
+	'initialState',
+];
 
 interface ISidePanelState {
 	isResizing: boolean;
@@ -303,12 +325,7 @@ class SidePanel extends React.Component<ISidePanelProps, ISidePanelState, {}> {
 				style={{
 					marginTop: topOffset,
 				}}
-				{...omitProps(
-					passThroughs,
-					undefined,
-					_.keys(SidePanel.propTypes),
-					false
-				)}
+				{...omit(passThroughs, nonPassThroughs)}
 			>
 				<div
 					className={cx('&-pane')}
