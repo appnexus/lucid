@@ -1,0 +1,129 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoadingMessage [common] example testing should match snapshot(s) for Basic 1`] = `
+<div
+  class="lucid-LoadingMessage"
+>
+  <svg
+    class="lucid-Icon lucid-Icon-color-primary lucid-LoadingIcon"
+    height="16"
+    preserveAspectRatio="xMidYMid meet"
+    style="animation-duration:1.25s"
+    viewBox="0 0 100 100"
+    width="16"
+  >
+    <rect
+      fill="none"
+      height="100"
+      width="100"
+      x="0"
+      y="0"
+    />
+    <circle
+      class="lucid-LoadingIcon-circle"
+      cx="50"
+      cy="50"
+      r="40"
+    />
+    <circle
+      class="lucid-LoadingIcon-spinner"
+      cx="50"
+      cy="50"
+      r="40"
+      style="animation-duration:1.25s"
+    />
+  </svg>
+  <h3
+    class="lucid-LoadingMessage-title"
+  >
+    Loading
+  </h3>
+</div>
+`;
+
+exports[`LoadingMessage [common] example testing should match snapshot(s) for CustomBody 1`] = `
+<div
+  class="lucid-LoadingMessage"
+>
+  <svg
+    class="lucid-Icon lucid-Icon-color-primary lucid-LoadingIcon"
+    height="16"
+    preserveAspectRatio="xMidYMid meet"
+    style="animation-duration:1.25s"
+    viewBox="0 0 100 100"
+    width="16"
+  >
+    <rect
+      fill="none"
+      height="100"
+      width="100"
+      x="0"
+      y="0"
+    />
+    <circle
+      class="lucid-LoadingIcon-circle"
+      cx="50"
+      cy="50"
+      r="40"
+    />
+    <circle
+      class="lucid-LoadingIcon-spinner"
+      cx="50"
+      cy="50"
+      r="40"
+      style="animation-duration:1.25s"
+    />
+  </svg>
+  <h3
+    class="lucid-LoadingMessage-title"
+  >
+    Loading
+  </h3>
+  <span
+    class="lucid-LoadingMessage-body"
+  >
+    A custom body
+  </span>
+</div>
+`;
+
+exports[`LoadingMessage [common] example testing should match snapshot(s) for CustomTitle 1`] = `
+<div
+  class="lucid-LoadingMessage"
+>
+  <svg
+    class="lucid-Icon lucid-Icon-color-primary lucid-LoadingIcon"
+    height="16"
+    preserveAspectRatio="xMidYMid meet"
+    style="animation-duration:1.25s"
+    viewBox="0 0 100 100"
+    width="16"
+  >
+    <rect
+      fill="none"
+      height="100"
+      width="100"
+      x="0"
+      y="0"
+    />
+    <circle
+      class="lucid-LoadingIcon-circle"
+      cx="50"
+      cy="50"
+      r="40"
+    />
+    <circle
+      class="lucid-LoadingIcon-spinner"
+      cx="50"
+      cy="50"
+      r="40"
+      style="animation-duration:1.25s"
+    />
+  </svg>
+  <h3
+    class="lucid-LoadingMessage-title"
+  >
+    A custom title
+  </h3>
+</div>
+`;
