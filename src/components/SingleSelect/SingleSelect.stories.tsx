@@ -363,3 +363,17 @@ InvisibleAndDisabled.parameters = {
 		},
 	},
 };
+
+/** With Title */
+export const Title = Template.bind({});
+Title.args = {
+	...Basic.args,
+	Title: 'Sample Title',
+};
+Title.parameters = {
+	docs: {
+		description: {
+			story: `Setting the \`Title\` prop to 'Sample Title' adds a title to the single select.`,
+		},
+	},
+};

@@ -4,6 +4,12 @@
 @SingleSelect-size-controlHeight: @size-height-standard;
 
 .@{prefix}-SingleSelect {
+	.select-title {
+		color: @color-neutral-7;
+		font-weight: @font-weight-regular;
+		margin-right: 4px;
+	}
+
 	&-Control {
 		.no-safari-flicker();
 		.box-sizing();
@@ -28,6 +34,7 @@
 
 			&.@{prefix}-SingleSelect-Control-is-selected {
 				border: 1px solid @featured-color-primary-borderColor;
+				background-color: @color-primary-light;
 			}
 
 			&.@{prefix}-SingleSelect-Control-is-expanded {

@@ -278,6 +278,24 @@ describe('SingleSelect', () => {
 				});
 			});
 		});
+
+		describe('has a title', () => {
+			it('should have a `Title`', () => {
+				const title = 'Foo';
+
+				const wrapper = shallow(
+					<SingleSelect Title={title}>
+						<Placeholder>select one</Placeholder>
+						<Option>option a</Option>
+						<Option>option b</Option>
+						<Option>option c</Option>
+					</SingleSelect>
+				);
+
+				const titleWrapper = wrapper.find('.select-title');
+				expect(titleWrapper.text()).toEqual(`${title}:`);
+			});
+		});
 	});
 
 	describe('child elements', () => {

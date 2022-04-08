@@ -585,6 +585,52 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for Stat
 </section>
 `;
 
+exports[`SingleSelect [common] example testing should match snapshot(s) for Title 1`] = `
+<section
+  style="min-height:10em"
+>
+  <div
+    class="lucid-DropMenu lucid-DropMenu-base lucid-SingleSelect"
+  >
+    <span
+      class="lucid-ContextMenu"
+    >
+      <div
+        class="lucid-DropMenu-Control"
+        tabindex="0"
+      >
+        <div
+          class="lucid-SingleSelect-Control lucid-SingleSelect-Control-is-null-option"
+          tabindex="0"
+        >
+          <span
+            class="select-title"
+          >
+            Sample Title:
+          </span>
+          <span
+            class="lucid-SingleSelect-Control-content"
+          >
+            Select Color
+          </span>
+          <svg
+            class="lucid-Icon lucid-Icon-color-primary lucid-ChevronIcon lucid-ChevronIcon-is-down"
+            height="12"
+            preserveAspectRatio="xMidYMid meet"
+            viewBox="0 0 16 16"
+            width="12"
+          >
+            <path
+              d="M.5 4.5l7.5 7 7.5-7"
+            />
+          </svg>
+        </div>
+      </div>
+    </span>
+  </div>
+</section>
+`;
+
 exports[`SingleSelect child elements Option should render Option.Selected in the Placeholder area 1`] = `
 <DropMenu
   ContextMenu={
