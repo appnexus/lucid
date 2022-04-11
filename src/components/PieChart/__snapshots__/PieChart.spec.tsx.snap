@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`PieChart [common] example testing should match snapshot(s) for Basic 1`] = `
-<div
+<section
   style="padding-top:4rem"
 >
   <svg
@@ -620,11 +620,11 @@ exports[`PieChart [common] example testing should match snapshot(s) for Basic 1`
       </g>
     </g>
   </svg>
-</div>
+</section>
 `;
 
 exports[`PieChart [common] example testing should match snapshot(s) for BasicDonuts 1`] = `
-<div
+<section
   style="padding-top:4rem"
 >
   <svg
@@ -1243,11 +1243,11 @@ exports[`PieChart [common] example testing should match snapshot(s) for BasicDon
       </g>
     </g>
   </svg>
-</div>
+</section>
 `;
 
 exports[`PieChart [common] example testing should match snapshot(s) for ColorMap 1`] = `
-<div
+<section
   style="padding-top:4rem"
 >
   <svg
@@ -1338,11 +1338,11 @@ exports[`PieChart [common] example testing should match snapshot(s) for ColorMap
       </g>
     </g>
   </svg>
-</div>
+</section>
 `;
 
 exports[`PieChart [common] example testing should match snapshot(s) for LegendTest 1`] = `
-<div
+<section
   style="display:flex;align-items:center;padding-top:4rem"
 >
   <svg
@@ -1487,11 +1487,11 @@ exports[`PieChart [common] example testing should match snapshot(s) for LegendTe
       Ann
     </li>
   </ul>
-</div>
+</section>
 `;
 
 exports[`PieChart [common] example testing should match snapshot(s) for Percents 1`] = `
-<div
+<section
   style="padding-top:4rem"
 >
   <svg
@@ -1582,11 +1582,11 @@ exports[`PieChart [common] example testing should match snapshot(s) for Percents
       </g>
     </g>
   </svg>
-</div>
+</section>
 `;
 
 exports[`PieChart [common] example testing should match snapshot(s) for SmallWithNoStrokeOrHover 1`] = `
-<div
+<section
   style="padding-top:4rem"
 >
   <svg
@@ -1677,5 +1677,5 @@ exports[`PieChart [common] example testing should match snapshot(s) for SmallWit
       </g>
     </g>
   </svg>
-</div>
+</section>
 `;
