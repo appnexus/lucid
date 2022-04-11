@@ -1,5 +1,5 @@
 /* eslint-disable comma-spacing */
-import _ from 'lodash';
+import _, { forEach, has, noop } from 'lodash';
 import React from 'react';
 import { shallow } from 'enzyme';
 import { common } from '../../util/generic-tests';
@@ -9,6 +9,7 @@ import sinon from 'sinon';
 import { PieChartDumb as PieChart } from './PieChart';
 import Line from '../Line/Line';
 import { ToolTipDumb as ToolTip } from '../ToolTip/ToolTip';
+import * as chartConstants from '../../constants/charts';
 
 jest.mock('d3-shape', () => ({
 	arc: jest.fn(() => ({
@@ -244,6 +245,140 @@ describe('PieChart', () => {
 
 				assert.equal(wrapper.find(ToolTip.Body).prop('children'), '200');
 			});
+		});
+	});
+
+	describe('pass throughs', () => {
+		let wrapper: any;
+		const defaultProps = PieChart.defaultProps;
+		const tooltipDefaultProps = ToolTip.defaultProps;
+		const { Body } = ToolTip;
+
+		const data = [
+			{ x: 'Leslie', y: 60 },
+			{ x: 'Ron', y: 40 },
+			{ x: 'Tom', y: 30 },
+			{ x: 'Gary', y: 20 },
+			{ x: 'Ben', y: 15 },
+		];
+
+		beforeEach(() => {
+			const props = {
+				...defaultProps,
+				height: 100,
+				width: 200,
+				margin: { top: 11, right: 12, bottom: 13, left: 14 },
+				palette: chartConstants.PALETTE_30,
+				colorMap: { clicks: '#abc123' },
+				data: data,
+				hasToolTips: false,
+				hasStroke: false,
+				isDonut: true,
+				isHovering: true,
+				hoveringIndex: 1,
+				onMouseOver: noop,
+				onMouseOut: noop,
+				donutWidth: 20,
+				ToolTip: {
+					...tooltipDefaultProps,
+					className: 'foo bar',
+					isCloseable: true,
+					isLight: true,
+					onClose: noop,
+					flyOutStyle: { marginLeft: 10 },
+					flyOutMaxWidth: 1000,
+					direction: 'right' as any,
+					alignment: 'end' as any,
+					isExpanded: true,
+					onMouseOver: noop,
+					onMouseOut: noop,
+					portalId: '11',
+					Title: 'Test Title',
+					Body: <Body>ToolTip Test Body.</Body>,
+					Target: <div>Example Test Target</div>,
+					style: { marginRight: 10 },
+					initialState: { test: true },
+					callbackId: 1,
+					'data-testid': 10,
+				},
+				className: 'wut',
+				style: { marginRight: 10 },
+				initialState: { test: true },
+				callbackId: 1,
+				'data-testid': 10,
+			};
+			wrapper = shallow(<PieChart {...props} />);
+		});
+
+		afterEach(() => {
+			wrapper.unmount();
+		});
+
+		it('passes through props not defined in `propTypes` to the root element.', () => {
+			const rootProps = wrapper.find('.lucid-PieChart').props();
+
+			expect(wrapper.first().prop(['className'])).toContain('wut');
+			expect(wrapper.first().prop(['style'])).toMatchObject({
+				marginRight: 10,
+			});
+			expect(wrapper.first().prop(['height'])).toBe(100);
+			expect(wrapper.first().prop(['width'])).toBe(200);
+			expect(wrapper.first().prop(['data-testid'])).toBe(10);
+
+			// 'className' 'with', 'height' and 'style' are plucked from the pass through object
+			// but still appear becuase they are also directly passed to the root element as a prop
+			forEach(['className', 'style', 'data-testid'], (prop) => {
+				expect(has(rootProps, prop)).toBe(true);
+			});
+		});
+		it('omits all the props defined in `propTypes` (plus, in addition, `initialState`, and `callbackId` and any toolTip props) from the root element', () => {
+			const rootProps = wrapper.find('.lucid-PieChart').props();
+
+			// ensure that omitted PieChart props are not passed through
+			forEach(
+				[
+					'margin',
+					'data',
+					'hasToolTips',
+					'hasStroke',
+					'palette',
+					'colorMap',
+					'ToolTip',
+					'isDonut',
+					'isHovering',
+					'hoveringIndex',
+					'onMouseOver',
+					'onMouseOut',
+					'donutWidth',
+					'xAxisField',
+					'xAxisFormatter',
+					'yAxisField',
+					'yAxisFormatter',
+					'initialState',
+					'callbackId',
+				],
+				(prop) => {
+					expect(has(rootProps, prop)).toBe(false);
+				}
+			);
+
+			// ensure that omitted ToolTip props are not passed through
+			forEach(
+				[
+					'isCloseable',
+					'isLight',
+					'onClose',
+					'flyOutStyle',
+					'flyOutMaxWidth',
+					'Title',
+					'Body',
+					'Target',
+					'initialState',
+				],
+				(prop) => {
+					expect(has(rootProps, prop)).toBe(false);
+				}
+			);
 		});
 	});
 });
