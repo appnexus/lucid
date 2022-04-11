@@ -1,6 +1,7 @@
-import _ from 'lodash';
+import _, { omit } from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
+
 import { lucidClassNames } from '../../util/style-helpers';
 import {
 	omitProps,
@@ -15,6 +16,7 @@ import Line from '../../components/Line/Line';
 import {
 	ToolTipDumb as ToolTip,
 	IToolTipProps,
+	nonPassThroughs as toolTipNonPassThroughs,
 } from '../../components/ToolTip/ToolTip';
 
 import reducers, { IPieChartState } from './PieChart.reducers';
@@ -141,6 +143,32 @@ export interface IPieChartPropsRaw extends StandardProps {
 	yAxisFormatter: (y: number) => string | number;
 }
 
+const nonPassThroughs = [
+	'style',
+	'className',
+	'height',
+	'width',
+	'margin',
+	'data',
+	'hasToolTips',
+	'hasStroke',
+	'palette',
+	'colorMap',
+	'ToolTip',
+	'isDonut',
+	'isHovering',
+	'hoveringIndex',
+	'onMouseOver',
+	'onMouseOut',
+	'donutWidth',
+	'xAxisField',
+	'xAxisFormatter',
+	'yAxisField',
+	'yAxisFormatter',
+	'initialState',
+	'callbackId',
+];
+
 export type IPieChartProps = Overwrite<
 	React.SVGProps<SVGGElement>,
 	IPieChartPropsRaw
@@ -210,10 +238,9 @@ const PieChart = (props: IPieChartProps) => {
 
 	const svgClasses = cx(className, '&');
 
-	const pieChartProps = omitProps(
-		omitProps(passThroughs, undefined, _.keys(ToolTip.propTypes)),
-		undefined,
-		_.keys(PieChart.propTypes)
+	const pieChartProps: any = omit(
+		omit(passThroughs, toolTipNonPassThroughs.concat(['callbackId'])),
+		nonPassThroughs
 	);
 
 	// TODO: Consider displaying something specific when there is no data,
