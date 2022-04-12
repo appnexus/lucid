@@ -86,6 +86,20 @@ export const ErrorTypes: Story<ITextFieldValidatedProps> = (args) => {
 					textColor: 'info',
 				}}
 			/>
+			<TextFieldValidated
+				{...args}
+				style={style}
+				value={value}
+				onChangeDebounced={() => {}}
+				Error={null}
+				special={{
+					borderColor: 'success',
+					message:
+						'This is a disappearing special with `success` text and border',
+					textColor: 'success',
+					disappearing: true,
+				}}
+			/>
 		</div>
 	);
 };

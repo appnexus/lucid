@@ -12,7 +12,7 @@ import { findTypes } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-TextFieldValidated');
 
-const { any, object, string } = PropTypes;
+const { any, object, string, bool } = PropTypes;
 
 export interface ITextFieldValidatedErrorProps extends IValidationProps {
 	description?: string;
@@ -44,6 +44,7 @@ export interface ITextFieldValidatedProps
 		message: string;
 		textColor: string;
 		borderColor: string;
+		disappearing?: boolean;
 	};
 }
 
@@ -88,13 +89,15 @@ class TextFieldValidated extends React.Component<
 		Info: string,
 
 		/**
-			Optional special message that can have the border color and message text styled independently.
+			Optional special message that can have the border color and message text styled independently. Also contains
+		  `disappearing` prop for message that appears and fades away.
 		  Color options for `textColor` and `borderColor`: `['success', 'primary', 'danger', 'warning', 'info']`
 		 */
 		special: shape({
 			message: string,
 			textColor: string,
 			borderColor: string,
+			disappearing: bool,
 		}),
 	};
 
@@ -146,6 +149,7 @@ class TextFieldValidated extends React.Component<
 			<Validation
 				className={cx('&', className, {
 					'-info': !this.props.Error && this.props.Info,
+					'-disappearing': isSpecial && this.props.special?.disappearing,
 					...classColorTypes,
 				})}
 				style={style}

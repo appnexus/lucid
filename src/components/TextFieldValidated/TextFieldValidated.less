@@ -79,5 +79,31 @@
 				border-color: @color-neutral-6;
 			}
 		}
+
+		@keyframes disappearingMessage {
+			from {
+				opacity: 1;
+			}
+			to {
+				opacity: 0;
+			}
+		}
+
+		@keyframes disappearingBorder {
+			to {
+				border-color: @color-borderColor;
+				border-width: 1px;
+			}
+		}
+
+		&.-disappearing {
+			.lucid-Validation-error-content {
+				animation: disappearingMessage 1500ms ease 4s forwards;
+			}
+
+			input {
+				animation: disappearingBorder 1500ms ease 4s forwards;
+			}
+		}
 	}
 }
