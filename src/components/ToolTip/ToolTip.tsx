@@ -1,16 +1,13 @@
-import _ from 'lodash';
+import _, { omit } from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
+
 import ContextMenu from '../ContextMenu/ContextMenu';
 import CloseIcon from '../Icon/CloseIcon/CloseIcon';
 import { IIconProps } from '../Icon/Icon';
 import * as reducers from './ToolTip.reducers';
 import { lucidClassNames } from '../../util/style-helpers';
-import {
-	StandardProps,
-	findTypes,
-	omitProps,
-} from '../../util/component-types';
+import { StandardProps, findTypes } from '../../util/component-types';
 import { buildModernHybridComponent } from '../../util/state-management';
 
 const cx = lucidClassNames.bind('&-ToolTip');
@@ -58,13 +55,13 @@ ToolTipBody.peek = {
 };
 ToolTipBody.propName = 'Body';
 
+/** ToolTip */
 export interface IToolTipState {
 	isExpanded: boolean;
 	isMouseOverFlyout: boolean;
 	isMouseOverTarget: boolean;
 }
 
-/** ToolTip */
 export interface IToolTipProps extends StandardProps {
 	/** Set this to `true` if you want to have a `x` close icon. */
 	isCloseable?: boolean;
@@ -118,6 +115,28 @@ export interface IToolTipProps extends StandardProps {
 	 * Defaults to a generated `id`. */
 	portalId?: string | null;
 }
+
+/** TODO: Remove nonPassThroughs when the component is converted to a functional component */
+export const nonPassThroughs = [
+	'children',
+	'className',
+	'isCloseable',
+	'isLight',
+	'onClose',
+	'style',
+	'flyOutStyle',
+	'flyOutMaxWidth',
+	'direction',
+	'alignment',
+	'isExpanded',
+	'onMouseOver',
+	'onMouseOut',
+	'portalId',
+	'Title',
+	'Body',
+	'Target',
+	'initialState',
+];
 
 class ToolTip extends React.Component<IToolTipProps, IToolTipState> {
 	constructor(props: IToolTipProps) {
@@ -344,12 +363,7 @@ class ToolTip extends React.Component<IToolTipProps, IToolTipState> {
 				isExpanded={isExpanded}
 				style={style}
 				portalId={portalId}
-				{...omitProps(
-					passThroughs,
-					undefined,
-					_.keys(ToolTip.propTypes),
-					false
-				)}
+				{...omit(passThroughs, nonPassThroughs)}
 				onMouseOver={this.handleMouseOverTarget}
 				onMouseOut={this.handleMouseOutTarget}
 			>

@@ -1,8 +1,9 @@
-import _ from 'lodash';
+import _, { forEach, has, noop } from 'lodash';
 import React from 'react';
 import assert from 'assert';
 import sinon from 'sinon';
 import { mount, shallow } from 'enzyme';
+
 import { common } from '../../util/generic-tests';
 import { ToolTipDumb as ToolTip } from './ToolTip';
 import ContextMenu from '../ContextMenu/ContextMenu';
@@ -321,6 +322,98 @@ describe('ToolTip', () => {
 					wrapper.find(ContextMenu).prop('portalId'),
 					'foo-portal-id',
 					'must equal "foo-portal-id"'
+				);
+			});
+		});
+
+		describe('pass throughs', () => {
+			let wrapper: any;
+			const defaultProps = ToolTip.defaultProps;
+
+			beforeEach(() => {
+				const props = {
+					...defaultProps,
+					className: 'wut',
+					isCloseable: true,
+					isLight: true,
+					onClose: noop,
+					flyOutStyle: { marginLeft: 10 },
+					flyOutMaxWidth: 1000,
+					direction: 'right' as any,
+					alignment: 'end' as any,
+					isExpanded: true,
+					onMouseOver: noop,
+					onMouseOut: noop,
+					portalId: '11',
+					Title: 'Test Title',
+					Body: <Body>ToolTip Test Body.</Body>,
+					Target: <div>Example Test Target</div>,
+					style: { marginRight: 10 },
+					initialState: { test: true },
+					callbackId: 1,
+					'data-testid': 10,
+				};
+				wrapper = shallow(<ToolTip {...props} />);
+			});
+
+			afterEach(() => {
+				wrapper.unmount();
+			});
+
+			it('passes through - to the root element - props not defined in `propTypes`', () => {
+				const rootProps = wrapper.find('.lucid-ToolTip').props();
+
+				expect(wrapper.first().prop(['className'])).toContain('wut');
+				expect(wrapper.first().prop(['style'])).toMatchObject({
+					marginRight: 10,
+				});
+				expect(wrapper.first().prop(['data-testid'])).toBe(10);
+				expect(wrapper.first().prop(['callbackId'])).toBe(1);
+
+				// 'className' and 'style' are plucked from the pass through object
+				// but still appear becuase they are also directly passed to the root element as a prop
+				// callbackId is passed through because the ContextMenu root element is not a DOM element
+				forEach(
+					[
+						'className',
+						'alignment',
+						'direction',
+						'directonOffset',
+						'getAlignmentOffset',
+						'isExpanded',
+						'style',
+						'portalId',
+						'data-testid',
+						'onMouseOver',
+						'onMouseOut',
+						'children',
+						'minWidthOffset',
+						'onClickOut',
+						'callbackId',
+					],
+					(prop) => {
+						expect(has(rootProps, prop)).toBe(true);
+					}
+				);
+			});
+			it('omits - from the root element `initialState` and the props defined in `propTypes`', () => {
+				const rootProps = wrapper.find('.lucid-ToolTip').props();
+
+				forEach(
+					[
+						'isCloseable',
+						'isLight',
+						'onClose',
+						'flyOutStyle',
+						'flyOutMaxWidth',
+						'Title',
+						'Body',
+						'Target',
+						'initialState',
+					],
+					(prop) => {
+						expect(has(rootProps, prop)).toBe(false);
+					}
 				);
 			});
 		});
