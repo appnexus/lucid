@@ -32,7 +32,7 @@ const nonPassThroughs = [
 	'className',
 	'Error',
 	'Info',
-	'special',
+	'Success',
 	'initialState',
 ];
 
@@ -40,10 +40,8 @@ export interface ITextFieldValidatedProps
 	extends ITextFieldPropsWithPassThroughs {
 	Error?: React.ReactNode;
 	Info?: string;
-	special?: {
+	Success?: {
 		message: string;
-		textColor: string;
-		borderColor: string;
 		disappearing?: boolean;
 	};
 }
@@ -89,14 +87,11 @@ class TextFieldValidated extends React.Component<
 		Info: string,
 
 		/**
-			Optional special message that can have the border color and message text styled independently. Also contains
+			Optional information text that is styled as "success". Also contains
 		  `disappearing` prop for message that appears and fades away.
-		  Color options for `textColor` and `borderColor`: `['success', 'primary', 'danger', 'warning', 'info']`
 		 */
-		special: shape({
+		Success: shape({
 			message: string,
-			textColor: string,
-			borderColor: string,
 			disappearing: bool,
 		}),
 	};
@@ -121,36 +116,20 @@ class TextFieldValidated extends React.Component<
 			);
 		} else if (this.props.Info) {
 			childProps = [this.props.Info];
-		} else if (this.props.special) {
-			childProps = [this.props.special?.message];
+		} else if (this.props.Success) {
+			childProps = [this.props.Success?.message];
 		}
 
-		const isSpecial =
-			!this.props.Error && !this.props.Info && this.props.special;
-
-		const classColorTypes = {
-			'-success-text': isSpecial && this.props.special?.textColor === 'success',
-			'-success-border':
-				isSpecial && this.props.special?.borderColor === 'success',
-			'-primary-text': isSpecial && this.props.special?.textColor === 'primary',
-			'-primary-border':
-				isSpecial && this.props.special?.borderColor === 'primary',
-			'-danger-text': isSpecial && this.props.special?.textColor === 'danger',
-			'-danger-border':
-				isSpecial && this.props.special?.borderColor === 'danger',
-			'-warning-text': isSpecial && this.props.special?.textColor === 'warning',
-			'-warning-border':
-				isSpecial && this.props.special?.borderColor === 'warning',
-			'-info-text': isSpecial && this.props.special?.textColor === 'info',
-			'-info-border': isSpecial && this.props.special?.borderColor === 'info',
-		};
+		const isSuccess =
+			!this.props.Error && !this.props.Info && this.props.Success;
 
 		return (
 			<Validation
 				className={cx('&', className, {
 					'-info': !this.props.Error && this.props.Info,
-					'-disappearing': isSpecial && this.props.special?.disappearing,
-					...classColorTypes,
+					'-success':
+						!this.props.Error && !this.props.Info && this.props.Success,
+					'-disappearing': isSuccess && this.props.Success?.disappearing,
 				})}
 				style={style}
 				Error={childProps}

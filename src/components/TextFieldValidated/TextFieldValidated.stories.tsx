@@ -68,10 +68,8 @@ export const ErrorTypes: Story<ITextFieldValidatedProps> = (args) => {
 				value={value}
 				onChangeDebounced={() => {}}
 				Error={null}
-				special={{
-					borderColor: 'success',
-					message: 'This is a special with `success` text and border',
-					textColor: 'success',
+				Success={{
+					message: 'This is a Success',
 				}}
 			/>
 			<TextFieldValidated
@@ -80,23 +78,8 @@ export const ErrorTypes: Story<ITextFieldValidatedProps> = (args) => {
 				value={value}
 				onChangeDebounced={() => {}}
 				Error={null}
-				special={{
-					borderColor: 'primary',
-					message: 'This is a special in the style of an Info',
-					textColor: 'info',
-				}}
-			/>
-			<TextFieldValidated
-				{...args}
-				style={style}
-				value={value}
-				onChangeDebounced={() => {}}
-				Error={null}
-				special={{
-					borderColor: 'success',
-					message:
-						'This is a disappearing special with `success` text and border',
-					textColor: 'success',
+				Success={{
+					message: 'This is a disappearing Success',
 					disappearing: true,
 				}}
 			/>

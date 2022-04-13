@@ -69,7 +69,7 @@ exports[`TextFieldValidated [common] example testing should match snapshot(s) fo
     </div>
   </div>
   <div
-    class="lucid-Validation lucid-Validation-is-error lucid-TextFieldValidated -success-text -success-border"
+    class="lucid-Validation lucid-Validation-is-error lucid-TextFieldValidated -success"
     style="margin-bottom:10px"
   >
     <input
@@ -81,11 +81,11 @@ exports[`TextFieldValidated [common] example testing should match snapshot(s) fo
     <div
       class="lucid-Validation-error-content"
     >
-      This is a special with \`success\` text and border
+      This is a Success
     </div>
   </div>
   <div
-    class="lucid-Validation lucid-Validation-is-error lucid-TextFieldValidated -primary-border -info-text"
+    class="lucid-Validation lucid-Validation-is-error lucid-TextFieldValidated -success -disappearing"
     style="margin-bottom:10px"
   >
     <input
@@ -97,23 +97,7 @@ exports[`TextFieldValidated [common] example testing should match snapshot(s) fo
     <div
       class="lucid-Validation-error-content"
     >
-      This is a special in the style of an Info
-    </div>
-  </div>
-  <div
-    class="lucid-Validation lucid-Validation-is-error lucid-TextFieldValidated -disappearing -success-text -success-border"
-    style="margin-bottom:10px"
-  >
-    <input
-      class="lucid-TextField lucid-TextField-is-single-line"
-      rows="5"
-      type="text"
-      value=""
-    />
-    <div
-      class="lucid-Validation-error-content"
-    >
-      This is a disappearing special with \`success\` text and border
+      This is a disappearing Success
     </div>
   </div>
 </div>

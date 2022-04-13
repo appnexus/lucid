@@ -27,7 +27,7 @@ describe('TextFieldValidated', () => {
 				'Error',
 				'Info',
 				'initialState',
-				'special',
+				'Success',
 			];
 			const style = { height: 20 };
 			const wrapper = shallow(
