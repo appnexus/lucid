@@ -10,7 +10,7 @@ Link(s) to Storybook on docspot:
   - [ ] Firefox
   - [ ] Safari
 
-- [ ] Two core team engineer approvals
-- [ ] One core team UX approval (as necessary)
+- [ ] Two cxp team engineer approvals
+- [ ] One product design approval (as necessary)
 - [ ] Unit tests written (`common` at minimum)
 - [ ] PR has one of the `semver-` labels

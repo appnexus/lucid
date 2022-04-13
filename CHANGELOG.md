@@ -1,3 +1,21 @@
+## 8.12.0
+
+- #1356 Add an optional title to `SingleSelect`.
+- #1354 Update `TextFieldValidated` stories to SB6 and replace deprecated omitProps method with explicit list of omitted props.
+- #1352 Add `Success` prop to `TextFieldValidated` that creates a custom 'success' error text and border color
+- #1348 Update `ExpanderPanel` stories to SB6 and replace deprecated omitProps method with explicit list of omitted props.
+- #1347 Bump `minimist` from 1.2.5 to 1.2.6 to fix a security vulnerability.
+- #1346 Add unit test for `DropMenu` props.
+- #1345 Update `DragCaptureZone` stories to SB6 and replace deprecated omitProps method with explicit list of omitted props.
+- #1344 Update `Dialog` stories to SB6 and replace deprecated omitProps method with explicit list of omitted props.
+- #1343 Update `DateSelect` stories to SB6 and replace deprecated omitProps method with explicit list of omitted props.
+- #1342 Update `DataTable` stories to SB6 and replace deprecated omitProps method with explicit list of omitted props.
+- #1341 Fix unit tests warnings for `sinon` and `redux.spec.ts` tests, add intellisense to the `cleanArgs` method, updated `sinon` package and its types.
+- #1340 Update minor versions of babel and Storybook packages.
+- #1339 Update outdated npm packages, fix console warnings for several unit tests, update contributing instructions for unit tests
+
+  https://github.com/appnexus/lucid/compare/v8.11.0...v8.12.0
+
 ## 8.11.0
 
 - #1338 General cleanup of warnings, typos and stories
@@ -11,6 +29,7 @@
 - #1337 Replace omitProps method with explicit props list for `Tag`
 - #1336 Update the CONTRIBUTING.md and PULL_REQUEST_TEMPLATE.md docs to require two approvals
 - #1335 Replace omitProps method with explicit props list for `RadioGroup` and `ButtonGroup`.
+
   https://github.com/appnexus/lucid/compare/v8.10.0...v8.11.0
 
 ## 8.10.0
