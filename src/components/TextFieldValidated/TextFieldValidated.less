@@ -19,5 +19,41 @@
 				border-color: @color-primary;
 			}
 		}
+
+		&.-success {
+			.lucid-Validation-error-content {
+				color: @featured-color-success;
+			}
+
+			input {
+				border-color: @featured-color-success;
+			}
+		}
+
+		@keyframes disappearingMessage {
+			from {
+				opacity: 1;
+			}
+			to {
+				opacity: 0;
+			}
+		}
+
+		@keyframes disappearingBorder {
+			to {
+				border-color: @color-borderColor;
+				border-width: 1px;
+			}
+		}
+
+		&.-disappearing {
+			.lucid-Validation-error-content {
+				animation: disappearingMessage 1500ms ease 4s forwards;
+			}
+
+			input {
+				animation: disappearingBorder 1500ms ease 4s forwards;
+			}
+		}
 	}
 }

@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes, { shape } from 'prop-types';
 
 import Validation, { IValidationProps } from '../Validation/Validation';
 import TextField, {
@@ -12,7 +12,7 @@ import { findTypes } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-TextFieldValidated');
 
-const { any, object, string } = PropTypes;
+const { any, object, string, bool } = PropTypes;
 
 export interface ITextFieldValidatedErrorProps extends IValidationProps {
 	description?: string;
@@ -27,12 +27,23 @@ TextFieldValidatedError.peek = {
 TextFieldValidatedError.propName = 'Error';
 
 /** TODO: Remove the nonPassThroughs when the component is converted to a functional component */
-const nonPassThroughs = ['style', 'className', 'Error', 'Info', 'initialState'];
+const nonPassThroughs = [
+	'style',
+	'className',
+	'Error',
+	'Info',
+	'Success',
+	'initialState',
+];
 
 export interface ITextFieldValidatedProps
 	extends ITextFieldPropsWithPassThroughs {
 	Error?: React.ReactNode;
 	Info?: string;
+	Success?: {
+		message: string;
+		disappearing?: boolean;
+	};
 }
 
 export interface ITextFieldValidatedState {
@@ -72,8 +83,17 @@ class TextFieldValidated extends React.Component<
 
 		/**
 			Optional information text that is styled less aggressively than an error
-		*/
+		 */
 		Info: string,
+
+		/**
+			Optional information text that is styled as "success". Also contains
+		  `disappearing` prop for message that appears and fades away.
+		 */
+		Success: shape({
+			message: string,
+			disappearing: bool,
+		}),
 	};
 
 	static defaultProps = TextField.defaultProps;
@@ -96,12 +116,20 @@ class TextFieldValidated extends React.Component<
 			);
 		} else if (this.props.Info) {
 			childProps = [this.props.Info];
+		} else if (this.props.Success) {
+			childProps = [this.props.Success?.message];
 		}
+
+		const isSuccess =
+			!this.props.Error && !this.props.Info && this.props.Success;
 
 		return (
 			<Validation
 				className={cx('&', className, {
 					'-info': !this.props.Error && this.props.Info,
+					'-success':
+						!this.props.Error && !this.props.Info && this.props.Success,
+					'-disappearing': isSuccess && this.props.Success?.disappearing,
 				})}
 				style={style}
 				Error={childProps}

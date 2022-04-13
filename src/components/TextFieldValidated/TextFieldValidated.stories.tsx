@@ -22,7 +22,7 @@ const style = {
 };
 
 export const Basic: Story<ITextFieldValidatedProps> = (args) => {
-	return <TextFieldValidated {...args} Error='Nope, not even close!' />;
+	return <TextFieldValidated {...args} />;
 };
 
 export const Debounced: Story<ITextFieldValidatedProps> = (args) => {
@@ -60,6 +60,27 @@ export const ErrorTypes: Story<ITextFieldValidatedProps> = (args) => {
 				onChangeDebounced={() => {}}
 				Error={null}
 				Info={'This is an info'}
+			/>
+			<TextFieldValidated
+				{...args}
+				style={style}
+				value={value}
+				onChangeDebounced={() => {}}
+				Error={null}
+				Success={{
+					message: 'This is a Success',
+				}}
+			/>
+			<TextFieldValidated
+				{...args}
+				style={style}
+				value={value}
+				onChangeDebounced={() => {}}
+				Error={null}
+				Success={{
+					message: 'This is a disappearing Success',
+					disappearing: true,
+				}}
 			/>
 		</div>
 	);
