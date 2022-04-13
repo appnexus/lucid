@@ -1,63 +1,75 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`DangerLightIcon [common] example testing should match snapshot(s) for Basic 1`] = `
-<div>
-  <svg
-    class="lucid-Icon lucid-Icon-color-primary lucid-DangerLightIcon"
-    height="16"
-    preserveAspectRatio="xMidYMid meet"
-    viewBox="0 0 16 16"
-    width="16"
+<section>
+  <div
+    style="margin:10px"
   >
-    <circle
-      class="lucid-DangerLightIcon-background"
-      cx="8"
-      cy="8"
-      r="7.5"
-    />
-    <path
-      class="lucid-DangerLightIcon-x"
-      d="M5.5 5.5l5 5m0-5l-5 5"
-    />
-  </svg>
-  <br />
-  <svg
-    class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-DangerLightIcon lucid-DangerLightIcon-is-clickable"
-    height="16"
-    preserveAspectRatio="xMidYMid meet"
-    viewBox="0 0 16 16"
-    width="16"
+    <svg
+      class="lucid-Icon lucid-Icon-color-primary lucid-DangerLightIcon"
+      height="16"
+      preserveAspectRatio="xMidYMid meet"
+      viewBox="0 0 16 16"
+      width="16"
+    >
+      <circle
+        class="lucid-DangerLightIcon-background"
+        cx="8"
+        cy="8"
+        r="7.5"
+      />
+      <path
+        class="lucid-DangerLightIcon-x"
+        d="M5.5 5.5l5 5m0-5l-5 5"
+      />
+    </svg>
+    <br />
+  </div>
+  <div
+    style="margin:10px"
   >
-    <circle
-      class="lucid-DangerLightIcon-background"
-      cx="8"
-      cy="8"
-      r="7.5"
-    />
-    <path
-      class="lucid-DangerLightIcon-x"
-      d="M5.5 5.5l5 5m0-5l-5 5"
-    />
-  </svg>
-  <br />
-  <svg
-    class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-disabled lucid-DangerLightIcon lucid-DangerLightIcon-is-disabled"
-    height="16"
-    preserveAspectRatio="xMidYMid meet"
-    viewBox="0 0 16 16"
-    width="16"
+    <svg
+      class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-DangerLightIcon lucid-DangerLightIcon-is-clickable"
+      height="16"
+      preserveAspectRatio="xMidYMid meet"
+      viewBox="0 0 16 16"
+      width="16"
+    >
+      <circle
+        class="lucid-DangerLightIcon-background"
+        cx="8"
+        cy="8"
+        r="7.5"
+      />
+      <path
+        class="lucid-DangerLightIcon-x"
+        d="M5.5 5.5l5 5m0-5l-5 5"
+      />
+    </svg>
+    <br />
+  </div>
+  <div
+    style="margin:10px"
   >
-    <circle
-      class="lucid-DangerLightIcon-background"
-      cx="8"
-      cy="8"
-      r="7.5"
-    />
-    <path
-      class="lucid-DangerLightIcon-x"
-      d="M5.5 5.5l5 5m0-5l-5 5"
-    />
-  </svg>
-  <br />
-</div>
+    <svg
+      class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-disabled lucid-DangerLightIcon lucid-DangerLightIcon-is-disabled"
+      height="16"
+      preserveAspectRatio="xMidYMid meet"
+      viewBox="0 0 16 16"
+      width="16"
+    >
+      <circle
+        class="lucid-DangerLightIcon-background"
+        cx="8"
+        cy="8"
+        r="7.5"
+      />
+      <path
+        class="lucid-DangerLightIcon-x"
+        d="M5.5 5.5l5 5m0-5l-5 5"
+      />
+    </svg>
+    <br />
+  </div>
+</section>
 `;

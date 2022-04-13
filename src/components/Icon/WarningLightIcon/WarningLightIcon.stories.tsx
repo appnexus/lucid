@@ -1,5 +1,7 @@
 import React from 'react';
-import WarningLightIcon from './WarningLightIcon';
+import { Story, Meta } from '@storybook/react';
+
+import WarningLightIcon, { IWarningLightIconProps } from './WarningLightIcon';
 
 export default {
 	title: 'Deprecated/WarningLightIcon',
@@ -7,13 +9,14 @@ export default {
 	parameters: {
 		docs: {
 			description: {
-				component: (WarningLightIcon as any).peek.description,
+				component: WarningLightIcon.peek.description,
 			},
 		},
 	},
-};
+	args: WarningLightIcon.defaultProps,
+} as Meta;
 
 /* Basic */
-export const Basic = () => {
-	return <WarningLightIcon />;
+export const Basic: Story<IWarningLightIconProps> = (args) => {
+	return <WarningLightIcon {...args} />;
 };

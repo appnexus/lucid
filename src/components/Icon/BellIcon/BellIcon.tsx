@@ -128,6 +128,12 @@ export const BellIcon = ({
 };
 
 BellIcon.displayName = 'BellIcon';
+BellIcon.peek = {
+	description: `Typically used for notifications. The dot indicates that there is an unread message.`,
+	categories: ['visual design', 'icons'],
+	extend: 'Icon',
+	madeFrom: ['Icon'],
+};
 
 BellIcon.propTypes = iconPropTypes;
 

@@ -115,6 +115,8 @@ import FourSquaresIcon from './components/Icon/FourSquaresIcon/FourSquaresIcon';
 import GetMaximumIcon from './components/Icon/GetMaximumIcon/GetMaximumIcon';
 import GlobeIcon from './components/Icon/GlobeIcon/GlobeIcon';
 import Grid from './components/Grid/Grid';
+import GripperHorizontalIcon from './components/Icon/GripperHorizontalIcon/GripperHorizontalIcon';
+import GripperVerticalIcon from './components/Icon/GripperVerticalIcon/GripperVerticalIcon';
 import GroupLoadingSkeleton from './components/LoadingSkeletons/GroupLoadingSkeleton';
 import HamburgerMenuIcon from './components/Icon/HamburgerMenuIcon/HamburgerMenuIcon';
 import HeaderLoadingSkeleton from './components/LoadingSkeletons/HeaderLoadingSkeleton';
@@ -322,6 +324,8 @@ export {
 	GetMaximumIcon,
 	GlobeIcon,
 	Grid,
+	GripperHorizontalIcon,
+	GripperVerticalIcon,
 	GroupLoadingSkeleton,
 	HamburgerMenuIcon,
 	HeaderLoadingSkeleton,

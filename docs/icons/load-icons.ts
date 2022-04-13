@@ -280,6 +280,20 @@ export default [
 	},
 
 	{
+		name: 'GripperHorizontalIcon',
+		component: getDefaultExport(
+			require('../../src/components/Icon/GripperHorizontalIcon/GripperHorizontalIcon')
+		),
+	},
+
+	{
+		name: 'GripperVerticalIcon',
+		component: getDefaultExport(
+			require('../../src/components/Icon/GripperVerticalIcon/GripperVerticalIcon')
+		),
+	},
+
+	{
 		name: 'HamburgerMenuIcon',
 		component: getDefaultExport(
 			require('../../src/components/Icon/HamburgerMenuIcon/HamburgerMenuIcon')

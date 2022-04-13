@@ -1,5 +1,7 @@
 import React from 'react';
-import InfoLightIcon from './InfoLightIcon';
+import { Story, Meta } from '@storybook/react';
+
+import InfoLightIcon, { IInfoLightIconProps } from './InfoLightIcon';
 
 export default {
 	title: 'Deprecated/InfoLightIcon',
@@ -7,13 +9,13 @@ export default {
 	parameters: {
 		docs: {
 			description: {
-				component: (InfoLightIcon as any).peek.description,
+				component: InfoLightIcon.peek.description,
 			},
 		},
 	},
-};
+} as Meta;
 
 /* Basic */
-export const Basic = () => {
-	return <InfoLightIcon />;
+export const Basic: Story<IInfoLightIconProps> = (args) => {
+	return <InfoLightIcon {...args} />;
 };
