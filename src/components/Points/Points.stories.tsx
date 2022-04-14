@@ -1,9 +1,12 @@
 import _ from 'lodash';
 import React from 'react';
 import createClass from 'create-react-class';
+import { Meta, Story } from '@storybook/react';
+
 import * as chartConstants from '../../constants/charts';
 import * as d3Scale from 'd3-scale';
 import Points from './Points';
+import { IPointsProps } from '../Points/Points';
 
 export default {
 	title: 'Visualizations/Points',
@@ -11,14 +14,15 @@ export default {
 	parameters: {
 		docs: {
 			description: {
-				component: (Points as any).peek.description,
+				component: Points.peek.description,
 			},
 		},
 	},
-};
+	args: Points.defaultProps,
+} as Meta;
 
-/* Basic */
-export const Basic = () => {
+/* Basic Points */
+export const Basic: Story<IPointsProps> = (args) => {
 	/* eslint-disable comma-spacing */
 
 	const width = 1000;
@@ -59,28 +63,23 @@ export const Basic = () => {
 		.domain([0, yMax])
 		.range([innerHeight, 0]);
 
-	const Component = createClass({
-		render() {
-			return (
-				<svg width={width} height={height}>
-					<g transform={`translate(${margin.left}, ${margin.top})`}>
-						<Points
-							data={data}
-							xScale={xScale}
-							yScale={yScale}
-							yFields={yFields}
-						/>
-					</g>
-				</svg>
-			);
-		},
-	});
-
-	return <Component />;
+	return (
+		<svg width={width} height={height}>
+			<g transform={`translate(${margin.left}, ${margin.top})`}>
+				<Points
+					{...args}
+					data={data}
+					xScale={xScale}
+					yScale={yScale}
+					yFields={yFields}
+				/>
+			</g>
+		</svg>
+	);
 };
 
 /* Custom Colors */
-export const CustomColors = () => {
+export const CustomColors: Story<IPointsProps> = (args) => {
 	/* eslint-disable comma-spacing */
 
 	const width = 1000;
@@ -121,29 +120,23 @@ export const CustomColors = () => {
 		.domain([0, yMax])
 		.range([innerHeight, 0]);
 
-	const Component = createClass({
-		render() {
-			return (
-				<svg width={width} height={height}>
-					<g transform={`translate(${margin.left}, ${margin.top})`}>
-						<Points
-							data={data}
-							xScale={xScale}
-							yScale={yScale}
-							yFields={yFields}
-							colorMap={{
-								y0: chartConstants.COLOR_BAD,
-								y1: chartConstants.COLOR_GOOD,
-								y2: '#ff8800',
-								y3: '#abc123',
-							}}
-						/>
-					</g>
-				</svg>
-			);
-		},
-	});
-
-	return <Component />;
+	return (
+		<svg width={width} height={height}>
+			<g transform={`translate(${margin.left}, ${margin.top})`}>
+				<Points
+					{...args}
+					data={data}
+					xScale={xScale}
+					yScale={yScale}
+					yFields={yFields}
+					colorMap={{
+						y0: chartConstants.COLOR_BAD,
+						y1: chartConstants.COLOR_GOOD,
+						y2: '#ff8800',
+						y3: '#abc123',
+					}}
+				/>
+			</g>
+		</svg>
+	);
 };
-CustomColors.storyName = 'CustomColors';
