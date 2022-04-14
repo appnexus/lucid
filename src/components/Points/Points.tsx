@@ -1,11 +1,12 @@
-import _ from 'lodash';
+import _, { omit } from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
-import { lucidClassNames } from '../../util/style-helpers';
-import { StandardProps, omitProps } from '../../util/component-types';
-import { groupByFields } from '../../util/chart-helpers';
-import * as d3Shape from 'd3-shape';
 import * as d3Scale from 'd3-scale';
+import * as d3Shape from 'd3-shape';
+
+import { lucidClassNames } from '../../util/style-helpers';
+import { StandardProps } from '../../util/component-types';
+import { groupByFields } from '../../util/chart-helpers';
 import * as chartConstants from '../../constants/charts';
 
 import Point from '../Point/Point';
@@ -114,6 +115,23 @@ export interface IPointsProps
 	hasStroke: boolean;
 }
 
+const nonPassThroughs = [
+	'className',
+	'palette',
+	'colorMap',
+	'data',
+	'xScale',
+	'yScale',
+	'xField',
+	'yFields',
+	'yStackedMax',
+	'colorOffset',
+	'hasStroke',
+	'isStacked',
+	'initialState',
+	'callbackId',
+];
+
 const defaultProps = {
 	xField: 'x',
 	yFields: ['y'],
@@ -158,10 +176,7 @@ export const Points = (props: IPointsProps): React.ReactElement => {
 	}
 
 	return (
-		<g
-			{...omitProps(passThroughs, undefined, _.keys(Points.propTypes))}
-			className={cx(className, '&')}
-		>
+		<g {...omit(passThroughs, nonPassThroughs)} className={cx(className, '&')}>
 			{_.map(transformedData, (d, dIndex): any[] =>
 				_.map(d, (series, seriesIndex): JSX.Element | undefined => {
 					if (isValidSeries(series)) {
@@ -194,7 +209,7 @@ Points.defaultProps = defaultProps;
 Points.displayName = 'Points';
 
 Points.peek = {
-	description: `*For use within an \`svg\`*. Put some points on that data.`,
+	description: `For use within an \`svg\`. Put some points on that data.`,
 	categories: ['visualizations', 'chart primitives'],
 	madeFrom: ['Point'],
 };
