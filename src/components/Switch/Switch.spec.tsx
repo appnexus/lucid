@@ -1,11 +1,10 @@
-import _ from 'lodash';
-import assert from 'assert';
+import _, { forEach, has, noop } from 'lodash';
 import React from 'react';
+import assert from 'assert';
 import sinon from 'sinon';
 import { mount, shallow } from 'enzyme';
 
 import { common, controls } from '../../util/generic-tests';
-
 import Switch from './Switch';
 
 describe('Switch', () => {
@@ -46,32 +45,83 @@ describe('Switch', () => {
 		});
 
 		describe('pass throughs', () => {
-			it('passes through all props not defined in `propTypes` to the native input.', () => {
-				const wrapper = mount(
-					<Switch
-						className='wut'
-						isDisabled={true}
-						isSelected={true}
-						style={{ fontWeight: 'bold' }}
-						onSelect={_.noop}
-						{...{
-							foo: 1,
-							bar: 2,
-							baz: 3,
-							qux: 4,
-							quux: 5,
-						}}
-					/>
-				);
-				const nativeProps = _.keys(
-					wrapper.find('input[type="checkbox"]').props()
-				);
+			let wrapper: any;
+			const className = 'wut';
 
+			beforeEach(() => {
+				const defaultProps = Switch.defaultProps;
+
+				const props = {
+					...defaultProps,
+					isDisabled: true,
+					isSelected: true,
+					style: { fontWeight: 'bold' },
+					onSelect: noop,
+					isIncludeExclude: true,
+					className,
+					initialState: { test: true },
+					callbackId: 1,
+					'data-testid': 10,
+					...{
+						foo: 1,
+						bar: 2,
+						baz: 3,
+						qux: 4,
+						quux: 5,
+					},
+				};
+
+				wrapper = shallow(<Switch {...props} />);
+			});
+
+			afterEach(() => {
+				wrapper.unmount();
+			});
+
+			it('passes through all props not defined in `propTypes` to the native input element.', () => {
+				const inputProps = wrapper.find('.lucid-Switch-native').props();
+
+				// 'className', 'onChange', 'checked', 'disabled' and 'type'
+				// all appear becuase they are directly passed on the root element as a prop
 				// It should pass `foo`, `bar`, `baz`, `qux`, and `quux` through
 				// to the native input.
-				_.forEach(['foo', 'bar', 'baz', 'qux', 'quux'], (prop) => {
-					assert(_.includes(nativeProps, prop));
-				});
+				_.forEach(
+					[
+						'foo',
+						'bar',
+						'baz',
+						'qux',
+						'quux',
+						'onChange',
+						'checked',
+						'disabled',
+						'type',
+						'className',
+						'data-testid',
+					],
+					(prop) => {
+						expect(has(inputProps, prop)).toBe(true);
+					}
+				);
+			});
+			it('omits the component specific props defined in `propTypes` (plus, in addition, `children`, `initialState`, and `callbackId`) from the root element', () => {
+				const inputProps = wrapper.find('.lucid-Switch-native').props();
+
+				forEach(
+					[
+						'isDisabled',
+						'isSelected',
+						'onSelect',
+						'style',
+						'isIncludeExclude',
+						'initialState',
+						'callbackId',
+						'children',
+					],
+					(prop) => {
+						expect(has(inputProps, prop)).toBe(false);
+					}
+				);
 			});
 		});
 	});
