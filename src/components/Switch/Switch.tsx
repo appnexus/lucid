@@ -1,4 +1,4 @@
-import _ from 'lodash';
+import _, { omit } from 'lodash';
 import React, { createRef } from 'react';
 import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
@@ -109,11 +109,7 @@ export const Switch = (props: ISwitchProps): React.ReactElement => {
 		>
 			<input
 				onChange={_.noop}
-				{...omitProps(
-					passThroughs,
-					undefined,
-					['children'].concat(_.keys(Switch.propTypes))
-				)}
+				{...omit(passThroughs, ['initialState', 'callbackId', 'children'])}
 				checked={isSelected}
 				className={cx('&-native')}
 				disabled={isDisabled}
