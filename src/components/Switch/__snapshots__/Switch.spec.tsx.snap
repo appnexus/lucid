@@ -2,9 +2,10 @@
 
 exports[`Switch [common] example testing should match snapshot(s) for Basic 1`] = `
 <span
-  class="lucid-Switch"
+  class="lucid-Switch lucid-Switch-is-selected"
 >
   <input
+    checked=""
     class="lucid-Switch-native"
     type="checkbox"
   />
