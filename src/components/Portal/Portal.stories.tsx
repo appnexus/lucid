@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import createClass from 'create-react-class';
+import { Meta, Story } from '@storybook/react';
+
 import PropTypes from 'prop-types';
-import Portal from './Portal';
+import Portal, { IPortalProps } from './Portal';
 import Button from '../Button/Button';
 
 export default {
@@ -10,77 +12,69 @@ export default {
 	parameters: {
 		docs: {
 			description: {
-				component: (Portal as any).peek.description,
+				component: Portal.peek.description,
 			},
 		},
 	},
-};
+} as Meta;
 
 /* Basic */
-export const Basic = () => {
-	const Component = createClass({
-		getInitialState() {
-			return {
-				left: 216,
-				top: 460,
-			};
-		},
-
-		handleClick(event) {
-			const { height, width } = event.target.getBoundingClientRect();
-
-			this.setState({
-				left: event.pageX - width / 2,
-				top: event.pageY - height / 2,
-			});
-		},
-
-		render() {
-			const { left, top } = this.state;
-			return (
-				<Portal
-					portalId='example-portal123'
-					className='example-portal-container'
-					style={{
-						width: 128,
-						height: 128,
-						backgroundColor: '#2abbb0',
-						color: '#fff',
-						boxShadow: '0 0 36px rgba(0, 0, 0, 0.5)',
-						transition: 'left .5s, top .5s',
-						display: 'flex',
-						flexDirection: 'column',
-						justifyContent: 'center',
-						alignItems: 'center',
-						cursor: 'pointer',
-						position: 'absolute',
-						left: left,
-						top: top,
-					}}
-					onClick={this.handleClick}
-				>
-					<section
-						style={{
-							pointerEvents: 'none',
-							textAlign: 'center',
-						}}
-					>
-						<p>click to move</p>
-						<p>
-							({left}, {top})
-						</p>
-						<p>inspect me</p>
-					</section>
-				</Portal>
-			);
-		},
+export const Basic: Story<IPortalProps> = (args) => {
+	const [state, setState] = useState({
+		left: 216,
+		top: 460,
 	});
 
-	return <Component />;
+	const handleClick = (event) => {
+		const { height, width } = event.target.getBoundingClientRect();
+
+		setState({
+			left: event.pageX - width / 2,
+			top: event.pageY - height / 2,
+		});
+	};
+
+	const { left, top } = state;
+	return (
+		<Portal
+			portalId='example-portal123'
+			className='example-portal-container'
+			style={{
+				width: 128,
+				height: 128,
+				backgroundColor: '#2abbb0',
+				color: '#fff',
+				boxShadow: '0 0 36px rgba(0, 0, 0, 0.5)',
+				transition: 'left .5s, top .5s',
+				display: 'flex',
+				flexDirection: 'column',
+				justifyContent: 'center',
+				alignItems: 'center',
+				cursor: 'pointer',
+				position: 'absolute',
+				left: left,
+				top: top,
+			}}
+			onClick={handleClick}
+		>
+			<section
+				style={{
+					pointerEvents: 'none',
+					textAlign: 'center',
+				}}
+			>
+				<p>click to move</p>
+				<p>
+					({left}, {top})
+				</p>
+				<p>inspect me</p>
+			</section>
+		</Portal>
+	);
 };
 
 /* Context */
-export const Context = () => {
+export const Context: Story<IPortalProps> = () => {
 	const context: any = React.createContext({
 		display: 'hello',
 	});
