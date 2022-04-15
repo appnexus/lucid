@@ -1,8 +1,9 @@
 import React from 'react';
-import _ from 'lodash';
+import _, { omit } from 'lodash';
 import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
-import { omitProps, StandardProps } from '../../util/component-types';
+
+import { StandardProps } from '../../util/component-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import classNames from 'classnames';
 
@@ -80,7 +81,13 @@ class Portal extends React.Component<IPortalProps, IPortalState, {}> {
 					<div
 						data-test-id={this.props.className}
 						className={classNames(cx('&'), this.props.className)}
-						{...omitProps(this.props, undefined, _.keys(Portal.propTypes))}
+						{...omit(this.props, [
+							'className',
+							'children',
+							'portalId',
+							'initialState',
+							'callbackId',
+						])}
 					>
 						{this.props.children}
 					</div>,
