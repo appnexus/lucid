@@ -1,4 +1,4 @@
-import _, { forEach, has, noop } from 'lodash';
+import _, { forEach, has } from 'lodash';
 import React from 'react';
 import assert from 'assert';
 import sinon from 'sinon';
