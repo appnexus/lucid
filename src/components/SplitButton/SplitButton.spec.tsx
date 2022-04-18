@@ -1,10 +1,73 @@
-import { shallow } from 'enzyme';
+import _, { forEach, has } from 'lodash';
 import React from 'react';
+import { shallow } from 'enzyme';
+
 import { common } from '../../util/generic-tests';
 import { SplitButtonDumb as SplitButton } from './SplitButton';
 
 describe('SplitButton', () => {
 	common(SplitButton);
+
+	describe('props', () => {
+		describe('root pass throughs', () => {
+			let wrapper: any;
+			const defaultProps = SplitButton.defaultProps;
+
+			beforeEach(() => {
+				const props = {
+					...defaultProps,
+					children: <SplitButton.Button>One</SplitButton.Button>,
+					direction: 'up' as any,
+					kind: 'danger' as any,
+					size: 'small' as any,
+					type: 'button',
+					className: 'wut',
+					style: { marginRight: 10 },
+					initialState: { test: true },
+					callbackId: 1,
+					'data-testid': 10,
+				};
+				wrapper = shallow(<SplitButton {...props} />);
+			});
+
+			afterEach(() => {
+				wrapper.unmount();
+			});
+
+			it('passes through props not defined in `propTypes` to the root element.', () => {
+				const rootProps = wrapper.find('.lucid-SplitButton').props();
+
+				expect(wrapper.first().prop(['className'])).toContain('wut');
+				expect(wrapper.first().prop(['style'])).toMatchObject({
+					marginRight: 10,
+				});
+				expect(wrapper.first().prop(['data-testid'])).toBe(10);
+
+				// 'className', 'direction' and 'onSelect' are plucked from the pass through object
+				// but still appears becuase each one is also directly added to the root element as a prop
+				forEach(
+					['className', 'data-testid', 'direction', 'onSelect', 'children'],
+					(prop) => {
+						expect(has(rootProps, prop)).toBe(true);
+					}
+				);
+			});
+			it('omits the props defined in `propTypes` (plus, in addition, `initialState`, and `callbackId`) from the root element', () => {
+				const rootProps = wrapper.find('.lucid-SplitButton').props();
+
+				// Note that the SplitButton root element is not a DOM Element
+				// It is a DropMenu, so it should probably not omit `callbackId`
+				// However, that is the way that it has been working for years,
+				// so I did not modify it when I removed `omitProps` - NJY 18 Apr 22.
+				forEach(
+					['DropMenu', 'kind', 'size', 'type', 'initialState', 'callbackId'],
+					(prop) => {
+						expect(has(rootProps, prop)).toBe(false);
+					}
+				);
+			});
+		});
+	});
 
 	describe('click handlers', () => {
 		const handleClick = jest.fn();
