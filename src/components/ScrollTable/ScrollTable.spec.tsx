@@ -1,7 +1,8 @@
+import _, { forEach, has } from 'lodash';
 import React from 'react';
-import _ from 'lodash';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 import assert from 'assert';
+
 import { common } from '../../util/generic-tests';
 import ScrollTable from './ScrollTable';
 import Table from '../Table/Table';
@@ -52,6 +53,98 @@ describe('ScrollTable', () => {
 					true,
 					'must set Table hasWordWrap'
 				);
+			});
+		});
+
+		describe('root pass throughs', () => {
+			let wrapper: any;
+			const defaultProps = ScrollTable.defaultProps;
+
+			beforeEach(() => {
+				const props = {
+					...defaultProps,
+					tableWidth: 200,
+					hasWordWrap: true, // default is false
+					hasBorder: true, // default is false
+					className: 'wut',
+					style: { marginRight: 10 },
+					initialState: { test: true },
+					callbackId: 1,
+					'data-testid': 10,
+				};
+				wrapper = mount(<ScrollTable {...props} />);
+			});
+
+			afterEach(() => {
+				wrapper.unmount();
+			});
+			it('passes through its props to the root element.', () => {
+				const rootProps = wrapper.first().props();
+
+				expect(wrapper.first().prop(['className'])).toContain('wut');
+				expect(wrapper.first().prop(['hasBorder'])).toBe(true);
+				expect(wrapper.first().prop(['style'])).toMatchObject({
+					marginRight: 10,
+				});
+				expect(wrapper.first().prop(['data-testid'])).toBe(10);
+				expect(wrapper.first().prop(['callbackId'])).toBe(1);
+
+				forEach(
+					[
+						'data-testid',
+						'tableWidth',
+						'className',
+						'initialState',
+						'style',
+						'callbackId',
+						'hasWordWrap',
+						'hasBorder',
+					],
+					(prop) => {
+						expect(has(rootProps, prop)).toBe(true);
+					}
+				);
+			});
+			it('passes through props not defined in `propTypes` to the child Table element.', () => {
+				const tableProps = wrapper.find(Table).props();
+
+				// The Table child component omits the ScrollTable props and applies its own defaults
+				expect(wrapper.find(Table).prop(['hasBorder'])).toBe(false);
+
+				// Table is paased the ScrollTable value for 'hasWordWrap' and 'style' and any pass throughs
+				expect(wrapper.find(Table).prop(['hasWordWrap'])).toBe(true);
+				expect(wrapper.find(Table).prop(['style'])).toMatchObject({
+					width: 200,
+				});
+
+				// The Table passes through callbackId because it is not a DOM element
+				expect(wrapper.find(Table).prop(['callbackId'])).toBe(1);
+
+				// Table also gets its default props
+				forEach(
+					[
+						'callbackId',
+						'data-testid',
+						'style',
+						'children',
+						'hasWordWrap',
+						'hasBorder',
+						'density',
+						'hasLightHeader',
+						'hasHover',
+					],
+					(prop) => {
+						expect(has(tableProps, prop)).toBe(true);
+					}
+				);
+			});
+			it('omits select props defined in `propTypes` (plus, in addition, `initialState`) from the root element', () => {
+				const tableProps = wrapper.find(Table).props();
+
+				// The table component adds by default, 'density', 'hasBorder', 'hasWordWrap', 'hasLightHeader' and 'hasHover'
+				forEach(['tableWidth', 'initialState'], (prop) => {
+					expect(has(tableProps, prop)).toBe(false);
+				});
 			});
 		});
 	});
