@@ -1,12 +1,9 @@
-import _ from 'lodash';
+import _, { omit } from 'lodash';
 import React, { RefObject } from 'react';
 import PropTypes from 'prop-types';
+
 import { lucidClassNames } from '../../util/style-helpers';
-import {
-	filterTypes,
-	omitProps,
-	StandardProps,
-} from '../../util/component-types';
+import { filterTypes, StandardProps } from '../../util/component-types';
 import DragCaptureZone from '../DragCaptureZone/DragCaptureZone';
 import { Motion, spring, OpaqueConfig } from 'react-motion';
 import { QUICK_SLIDE_MOTION } from '../../constants/motion-spring';
@@ -15,9 +12,12 @@ const cx = lucidClassNames.bind('&-SplitHorizontal');
 
 const { bool, func, node, number, string, oneOfType } = PropTypes;
 
+/** SplitHorizontal TopPane */
+
 export interface ISplitHorizontalTopPaneProps extends StandardProps {
 	/** Set height of this pane. */
 	height?: number | string;
+
 	/** Define this pane as the primary content pane. When the split is
 		collapsed, this pane becomes full height. */
 	isPrimary: boolean;
@@ -49,6 +49,7 @@ SplitHorizontalTopPane.defaultProps = {
 	isPrimary: false,
 };
 
+/** SplitHorizontal Bottom Pane */
 export interface ISplitHorizontalBottomPaneProps extends StandardProps {
 	/** Set height of this pane. */
 	height?: number | string;
@@ -56,7 +57,7 @@ export interface ISplitHorizontalBottomPaneProps extends StandardProps {
 		collapsed, this pane becomes full height. */
 	isPrimary: boolean;
 }
-const SplitHorizontalBottomPane = (
+export const SplitHorizontalBottomPane = (
 	_props: ISplitHorizontalBottomPaneProps
 ): null => null;
 SplitHorizontalBottomPane.displayName = 'SplitHorizontal.BottomPane';
@@ -83,6 +84,7 @@ SplitHorizontalBottomPane.defaultProps = {
 	isPrimary: false,
 };
 
+/** SplitHorizontal Divider */
 export interface ISplitHorizontalDividerProps extends StandardProps {}
 const SplitHorizontalDivider = (_props: ISplitHorizontalDividerProps): null =>
 	null;
@@ -98,6 +100,7 @@ SplitHorizontalDivider.propTypes = {
 	children: node,
 };
 
+/** Split Horizontal */
 export interface ISplitHorizontalProps
 	extends StandardProps,
 		React.DetailedHTMLProps<
@@ -137,6 +140,24 @@ export interface ISplitHorizontalProps
 	/** Use this prop to shift the collapsed position by a known value. */
 	collapseShift: number;
 }
+
+const nonPassThroughs = [
+	'className',
+	'children',
+	'isExpanded',
+	'isAnimated',
+	'onResizing',
+	'onResize',
+	'collapseShift',
+	'TopPane',
+	'BottomPane',
+	'Divider',
+	'onSelect',
+	'onToggle',
+	'initialState',
+	'callbackId',
+];
+
 interface ISplitHorizontalState {
 	collapseAmount: number;
 	isAnimated: boolean;
@@ -485,7 +506,7 @@ class SplitHorizontal extends React.Component<
 
 		return (
 			<div
-				{...omitProps(this.props, undefined, _.keys(SplitHorizontal.propTypes))}
+				{...omit(passThroughs, nonPassThroughs)}
 				className={cx(
 					'&',
 					{
@@ -525,11 +546,12 @@ class SplitHorizontal extends React.Component<
 							}}
 						>
 							<div
-								{...omitProps(
-									topPaneProps,
-									undefined,
-									_.keys(SplitHorizontalTopPane.propTypes)
-								)}
+								{...omit(topPaneProps, [
+									'height',
+									'isPrimary',
+									'initialState',
+									'callbackId',
+								])}
 								className={cx(
 									'&-TopPane',
 									{
@@ -556,12 +578,11 @@ class SplitHorizontal extends React.Component<
 								{topPaneProps.children}
 							</div>
 							<DragCaptureZone
-								{...omitProps(
-									dividerProps,
-									undefined,
-									_.keys(SplitHorizontalDivider.propTypes),
-									false
-								)}
+								{...omit(dividerProps, [
+									'children',
+									'initialState',
+									'callbackId',
+								])}
 								className={cx('&-Divider', dividerProps.className)}
 								onDragStart={this.handleDragStart}
 								onDrag={this.handleDrag}
@@ -575,11 +596,12 @@ class SplitHorizontal extends React.Component<
 								{dividerProps.children || ' '}
 							</DragCaptureZone>
 							<div
-								{...omitProps(
-									bottomPaneProps,
-									undefined,
-									_.keys(SplitHorizontalBottomPane.propTypes)
-								)}
+								{...omit(bottomPaneProps, [
+									'height',
+									'isPrimary',
+									'initialState',
+									'callbackId',
+								])}
 								className={cx(
 									'&-BottomPane',
 									{

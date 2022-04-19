@@ -1,4 +1,4 @@
-import _ from 'lodash';
+import _, { omit } from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
@@ -275,11 +275,17 @@ class VerticalListMenu extends React.Component<
 
 		return (
 			<ul
-				{...omitProps(
-					passThroughs,
-					undefined,
-					_.keys(VerticalListMenu.propTypes)
-				)}
+				{...(omit(passThroughs, [
+					'children',
+					'className',
+					'style',
+					'selectedIndices',
+					'expandedIndices',
+					'onSelect',
+					'onToggle',
+					'initialState',
+					'callbackId',
+				]) as any)}
 				className={cx('&', className)}
 				style={style}
 			>

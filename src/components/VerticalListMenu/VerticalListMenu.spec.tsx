@@ -1,10 +1,11 @@
-import _ from 'lodash';
+import _, { forEach, has } from 'lodash';
 import React from 'react';
 import assert from 'assert';
+import sinon from 'sinon';
 import { shallow, mount } from 'enzyme';
+
 import { common } from '../../util/generic-tests';
 import { VerticalListMenuDumb as VerticalListMenu } from './VerticalListMenu';
-import sinon from 'sinon';
 
 describe('VerticalListMenu', () => {
 	common(VerticalListMenu);
@@ -212,6 +213,61 @@ describe('VerticalListMenu', () => {
 				assert(
 					_.has(onToggle.args[0][1], 'props'),
 					'missing `props` on the onToggle callback'
+				);
+			});
+		});
+
+		describe('pass throughs', () => {
+			let wrapper: any;
+			const defaultProps = VerticalListMenu.defaultProps;
+
+			beforeEach(() => {
+				const props = {
+					...defaultProps,
+					selectedIndices: [1],
+					expandedIndicies: [1, 2],
+					className: 'wut',
+					style: { marginRight: 10 },
+					initialState: { test: true },
+					callbackId: 1,
+					'data-testid': 10,
+				};
+				wrapper = shallow(<VerticalListMenu {...props} />);
+			});
+
+			afterEach(() => {
+				wrapper.unmount();
+			});
+
+			it('passes through props not defined in `propTypes` to the root element.', () => {
+				const rootProps = wrapper.find('.lucid-VerticalListMenu').props();
+
+				expect(wrapper.first().prop(['className'])).toContain('wut');
+				expect(wrapper.first().prop(['style'])).toMatchObject({
+					marginRight: 10,
+				});
+				expect(wrapper.first().prop(['data-testid'])).toBe(10);
+
+				// 'className' and style are plucked from the pass through object
+				// but still appears becuase each one is also directly added to the root element as a prop
+				forEach(['className', 'data-testid', 'style', 'children'], (prop) => {
+					expect(has(rootProps, prop)).toBe(true);
+				});
+			});
+			it('omits the props defined in `propTypes` (plus, in addition, `initialState`, and `callbackId`) from the root element', () => {
+				const rootProps = wrapper.find('.lucid-VerticalListMenu').props();
+				forEach(
+					[
+						'selectedIndices',
+						'expandedIndices',
+						'onSelect',
+						'onToggle',
+						'initialState',
+						'callbackId',
+					],
+					(prop) => {
+						expect(has(rootProps, prop)).toBe(false);
+					}
 				);
 			});
 		});

@@ -1,9 +1,13 @@
+import _, { forEach, has } from 'lodash';
 import React from 'react';
 import { shallow, mount } from 'enzyme';
 import assert from 'assert';
-import _ from 'lodash';
+
 import { common } from '../../util/generic-tests';
-import SplitHorizontal from './SplitHorizontal';
+import SplitHorizontal, {
+	SplitHorizontalTopPane,
+	SplitHorizontalBottomPane,
+} from './SplitHorizontal';
 import DragCaptureZone from '../DragCaptureZone/DragCaptureZone';
 import { Motion } from 'react-motion';
 import { MOSTLY_STABLE_DELAY } from '../../../tests/constants';
@@ -281,6 +285,71 @@ describe('SplitHorizontal', () => {
 				expect(event).toEqual(lastArg.event);
 			});
 		});
+
+		describe('root pass throughs', () => {
+			let wrapper: any;
+			const defaultProps = SplitHorizontal.defaultProps;
+
+			beforeEach(() => {
+				const props = {
+					...defaultProps,
+					isExpanded: false,
+					isAnimated: true,
+					collapseShift: 1,
+					TopPane: <p>post-ironic etsy roof party</p>,
+					BottomPane: <p>heirloom street art church-key</p>,
+					Divider: 'D I V I D E R',
+					className: 'wut',
+					style: { marginRight: 10 },
+					initialState: { test: true },
+					callbackId: 1,
+					'data-testid': 10,
+				};
+				wrapper = shallow(<SplitHorizontal {...props} />);
+			});
+
+			afterEach(() => {
+				wrapper.unmount();
+			});
+
+			it('passes through props not defined in `propTypes` to the root element.', () => {
+				const rootProps = wrapper.find('.lucid-SplitHorizontal').props();
+
+				expect(wrapper.first().prop(['className'])).toContain('wut');
+				expect(wrapper.first().prop(['style'])).toMatchObject({
+					marginRight: 10,
+				});
+				expect(wrapper.first().prop(['data-testid'])).toBe(10);
+
+				// 'className' and style are plucked from the pass through object
+				// but still appears becuase each one is also directly added to the root element as a prop
+				forEach(['className', 'data-testid', 'style', 'children'], (prop) => {
+					expect(has(rootProps, prop)).toBe(true);
+				});
+			});
+			it('omits the props defined in `propTypes` (plus, in addition, `initialState`, and `callbackId`) from the root element', () => {
+				const rootProps = wrapper.find('.lucid-SplitHorizontal').props();
+				forEach(
+					[
+						'isExpanded',
+						'isAnimated',
+						'onResizing',
+						'onResize',
+						'collapseShift',
+						'TopPane',
+						'BottomPane',
+						'Divider',
+						'onSelect',
+						'onToggle',
+						'initialState',
+						'callbackId',
+					],
+					(prop) => {
+						expect(has(rootProps, prop)).toBe(false);
+					}
+				);
+			});
+		});
 	});
 
 	describe('child components', () => {
@@ -344,6 +413,68 @@ describe('SplitHorizontal', () => {
 					'must set the flexBasis to match the given height'
 				);
 			});
+
+			describe('TopPane pass throughs', () => {
+				let topPaneWrapper: any;
+				const topPaneDefaultProps = SplitHorizontalTopPane.defaultProps;
+
+				beforeEach(() => {
+					const props = {
+						...topPaneDefaultProps,
+						height: 321,
+						isPrimary: true,
+						className: 'wut',
+						initialState: { test: true },
+						callbackId: 1,
+						'data-testid': 10,
+					};
+
+					topPaneWrapper = mount(
+						<SplitHorizontal>
+							<SplitHorizontal.TopPane {...props}>
+								Search Filters
+							</SplitHorizontal.TopPane>
+						</SplitHorizontal>
+					);
+				});
+
+				afterEach(() => {
+					topPaneWrapper.unmount();
+				});
+
+				it('should pass through props not defined in the TopPane `propTypes`', () => {
+					const topPaneProps = topPaneWrapper
+						.find('.lucid-SplitHorizontal-TopPane')
+						.props();
+
+					expect(
+						topPaneWrapper
+							.find('.lucid-SplitHorizontal-TopPane')
+							.prop(['className'])
+					).toContain('wut');
+					expect(
+						topPaneWrapper
+							.find('.lucid-SplitHorizontal-TopPane')
+							.prop(['data-testid'])
+					).toBe(10);
+
+					forEach(['className', 'data-testid', 'style', 'children'], (prop) => {
+						expect(has(topPaneProps, prop)).toBe(true);
+					});
+				});
+				it('omits the props defined in TopPane `propTypes`, (plus, in addition, `initialState`, and `callbackId`) from the TopPane element', () => {
+					const topPaneProps = topPaneWrapper
+						.find('.lucid-SplitHorizontal-TopPane')
+						.props();
+
+					forEach(
+						['height', 'isPrimary', 'initialState', 'callbackId'],
+						(prop) => {
+							expect(has(topPaneProps, prop)).toBe(false);
+						}
+					);
+				});
+			});
 		});
 
 		describe('BottomPane', () => {
@@ -378,12 +509,12 @@ describe('SplitHorizontal', () => {
 				);
 
 				const motionWrapper = wrapper.find(Motion).shallow();
-				const TopPane = motionWrapper.find(
+				const BottomPane = motionWrapper.find(
 					'.lucid-SplitHorizontal-inner > .lucid-SplitHorizontal-TopPane'
 				);
 
 				assert(
-					TopPane.hasClass('lucid-SplitHorizontal-is-secondary'),
+					BottomPane.hasClass('lucid-SplitHorizontal-is-secondary'),
 					'must have the secondary className'
 				);
 			});
@@ -407,6 +538,68 @@ describe('SplitHorizontal', () => {
 					BottomPane.prop('style').flexBasis,
 					'must set the flexBasis to match the given height'
 				);
+			});
+
+			describe('BottomPane pass throughs', () => {
+				let bottomPaneWrapper: any;
+				const bottomPaneDefaultProps = SplitHorizontalBottomPane.defaultProps;
+
+				beforeEach(() => {
+					const props = {
+						...bottomPaneDefaultProps,
+						height: 321,
+						isPrimary: true,
+						className: 'wut',
+						initialState: { test: true },
+						callbackId: 1,
+						'data-testid': 10,
+					};
+
+					bottomPaneWrapper = mount(
+						<SplitHorizontal>
+							<SplitHorizontal.BottomPane {...props}>
+								Search Filters
+							</SplitHorizontal.BottomPane>
+						</SplitHorizontal>
+					);
+				});
+
+				afterEach(() => {
+					bottomPaneWrapper.unmount();
+				});
+
+				it('should pass through props not defined in the BottomPane `propTypes`', () => {
+					const bottomPaneProps = bottomPaneWrapper
+						.find('.lucid-SplitHorizontal-BottomPane')
+						.props();
+
+					expect(
+						bottomPaneWrapper
+							.find('.lucid-SplitHorizontal-BottomPane')
+							.prop(['className'])
+					).toContain('wut');
+					expect(
+						bottomPaneWrapper
+							.find('.lucid-SplitHorizontal-BottomPane')
+							.prop(['data-testid'])
+					).toBe(10);
+
+					forEach(['className', 'data-testid', 'style', 'children'], (prop) => {
+						expect(has(bottomPaneProps, prop)).toBe(true);
+					});
+				});
+				it('omits the props defined in BottomPane `propTypes`, (plus, in addition, `initialState`, and `callbackId`) from the TopPane element', () => {
+					const bottomPaneProps = bottomPaneWrapper
+						.find('.lucid-SplitHorizontal-BottomPane')
+						.props();
+
+					forEach(
+						['height', 'isPrimary', 'initialState', 'callbackId'],
+						(prop) => {
+							expect(has(bottomPaneProps, prop)).toBe(false);
+						}
+					);
+				});
 			});
 		});
 

@@ -1,7 +1,8 @@
 import { map, times, partial } from 'lodash';
 import React, { useState } from 'react';
-import { Meta } from '@storybook/react';
-import VerticalListMenu from './VerticalListMenu';
+import { Meta, Story } from '@storybook/react';
+
+import VerticalListMenu, { IVerticalListMenuProps } from './VerticalListMenu';
 
 //👇 Provide Storybook with the component name, 'section', any subcomponents and a description
 export default {
@@ -14,6 +15,7 @@ export default {
 			},
 		},
 	},
+	args: VerticalListMenu.defaultProps,
 } as Meta;
 
 //👇 Add a key prop to each child element of the array
@@ -22,18 +24,18 @@ function addKeys(children: any) {
 }
 
 //👇 Create a “template” of how args map to rendering
-const Template: any = (args) => {
+const Template: Story<IVerticalListMenuProps> = (args) => {
 	return (
 		<section>
-			<VerticalListMenu {...args} style={{ width: 250 }} />
+			<VerticalListMenu {...(args as any)} style={{ width: 250 }} />
 		</section>
 	);
 };
 
 //👇 Each story then reuses that template
 
-/**Default */
-export const Basic = Template.bind({});
+/** Basic VerticalListMenu */
+export const Basic: Story<IVerticalListMenuProps> = Template.bind({});
 Basic.args = {
 	children: addKeys([
 		<VerticalListMenu.Item>Level one</VerticalListMenu.Item>,
@@ -43,7 +45,7 @@ Basic.args = {
 };
 
 /** Nested With Expander */
-export const NestedWithExpander = () => {
+export const NestedWithExpander: Story<IVerticalListMenuProps> = (args) => {
 	const [currentList, setCurrentList] = useState('one');
 	const [selectedIndices, setSelectedIndices] = useState([0]);
 	const handleSelect = (currentList: string, index: number) => {
@@ -52,6 +54,7 @@ export const NestedWithExpander = () => {
 	};
 	return (
 		<VerticalListMenu
+			{...(args as any)}
 			style={{ width: 250 }}
 			onSelect={partial(handleSelect, 'one')}
 			selectedIndices={currentList === 'one' ? selectedIndices : []}
@@ -92,7 +95,7 @@ export const NestedWithExpander = () => {
 };
 
 /** Nested Full Width */
-export const NestedFullWidth = () => {
+export const NestedFullWidth: Story<IVerticalListMenuProps> = (args) => {
 	const [currentList, setCurrentList] = useState('one');
 	const [selectedIndices, setSelectedIndices] = useState([0]);
 	const handleSelect = (currentList: string, index: number) => {
@@ -101,6 +104,7 @@ export const NestedFullWidth = () => {
 	};
 	return (
 		<VerticalListMenu
+			{...(args as any)}
 			onSelect={partial(handleSelect, 'one')}
 			selectedIndices={currentList === 'one' ? selectedIndices : []}
 		>
@@ -142,7 +146,7 @@ export const NestedFullWidth = () => {
 };
 
 /** No Animations */
-export const NoAnimations = Template.bind({});
+export const NoAnimations: Story<IVerticalListMenuProps> = Template.bind({});
 NoAnimations.args = {
 	children: addKeys([
 		<VerticalListMenu.Item>Level one</VerticalListMenu.Item>,

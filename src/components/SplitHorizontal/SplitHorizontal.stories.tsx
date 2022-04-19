@@ -1,6 +1,8 @@
 import React from 'react';
 import createClass from 'create-react-class';
-import SplitHorizontal from './SplitHorizontal';
+import { Meta, Story } from '@storybook/react';
+
+import SplitHorizontal, { ISplitHorizontalProps } from './SplitHorizontal';
 
 export default {
 	title: 'Private/SplitHorizontal',
@@ -8,58 +10,51 @@ export default {
 	parameters: {
 		docs: {
 			description: {
-				component: (SplitHorizontal as any).peek.description,
+				component: SplitHorizontal.peek.description,
 			},
 		},
 	},
-};
+	args: SplitHorizontal.defaultProps,
+} as Meta;
 
 /* Default Split */
-export const DefaultSplit = () => {
-	const Component = createClass({
-		render() {
-			return (
-				<SplitHorizontal>
-					<SplitHorizontal.TopPane>
-						<p>
-							Bicycle rights tofu hashtag blue bottle viral. Mixtape kinfolk
-							mustache, iPhone godard voluptate direct trade pork belly truffaut
-							duis sunt. 8-bit microdosing retro, excepteur direct trade offal
-							listicle kale chips selvage master cleanse sustainable laborum
-							migas helvetica. Man bun esse synth man braid fashion axe
-							post-ironic id, fanny pack PBR&B. Scenester truffaut culpa yr
-							heirloom, fanny pack intelligentsia dreamcatcher dolore nisi green
-							juice ad you probably haven't heard of them raw denim. Before they
-							sold out laborum poutine 90's, blog voluptate chambray whatever.
-							Excepteur ea kinfolk, irure photo booth brooklyn art party master
-							cleanse mlkshk pug.
-						</p>
-					</SplitHorizontal.TopPane>
-					<SplitHorizontal.BottomPane>
-						<p>
-							Aliquip hella incididunt, fashion axe irure small batch
-							single-origin coffee ullamco. Offal fugiat salvia brooklyn
-							meditation occaecat polaroid, fashion axe culpa intelligentsia.
-							Sint ex intelligentsia fixie assumenda sriracha laborum, portland
-							literally bespoke you probably haven't heard of them. Delectus
-							skateboard put a bird on it, in kale chips messenger bag lo-fi.
-							Cred nihil tote bag street art, id et velit authentic ullamco
-							excepteur cold-pressed fixie shabby chic art party blue bottle.
-							Mumblecore tempor selvage cray put a bird on it. Flexitarian
-							crucifix tempor do pinterest, cornhole street art fap affogato
-							selfies distillery consectetur listicle.
-						</p>
-					</SplitHorizontal.BottomPane>
-				</SplitHorizontal>
-			);
-		},
-	});
-
-	return <Component />;
+export const DefaultSplit: Story<ISplitHorizontalProps> = (args) => {
+	return (
+		<SplitHorizontal {...(args as any)}>
+			<SplitHorizontal.TopPane>
+				<p>
+					Bicycle rights tofu hashtag blue bottle viral. Mixtape kinfolk
+					mustache, iPhone godard voluptate direct trade pork belly truffaut
+					duis sunt. 8-bit microdosing retro, excepteur direct trade offal
+					listicle kale chips selvage master cleanse sustainable laborum migas
+					helvetica. Man bun esse synth man braid fashion axe post-ironic id,
+					fanny pack PBR&B. Scenester truffaut culpa yr heirloom, fanny pack
+					intelligentsia dreamcatcher dolore nisi green juice ad you probably
+					haven't heard of them raw denim. Before they sold out laborum poutine
+					90's, blog voluptate chambray whatever. Excepteur ea kinfolk, irure
+					photo booth brooklyn art party master cleanse mlkshk pug.
+				</p>
+			</SplitHorizontal.TopPane>
+			<SplitHorizontal.BottomPane>
+				<p>
+					Aliquip hella incididunt, fashion axe irure small batch single-origin
+					coffee ullamco. Offal fugiat salvia brooklyn meditation occaecat
+					polaroid, fashion axe culpa intelligentsia. Sint ex intelligentsia
+					fixie assumenda sriracha laborum, portland literally bespoke you
+					probably haven't heard of them. Delectus skateboard put a bird on it,
+					in kale chips messenger bag lo-fi. Cred nihil tote bag street art, id
+					et velit authentic ullamco excepteur cold-pressed fixie shabby chic
+					art party blue bottle. Mumblecore tempor selvage cray put a bird on
+					it. Flexitarian crucifix tempor do pinterest, cornhole street art fap
+					affogato selfies distillery consectetur listicle.
+				</p>
+			</SplitHorizontal.BottomPane>
+		</SplitHorizontal>
+	);
 };
 
 /* Animated Collapse */
-export const AnimatedCollapse = () => {
+export const AnimatedCollapse: Story<ISplitHorizontalProps> = (args) => {
 	const Component = createClass({
 		getInitialState() {
 			return {
@@ -77,6 +72,7 @@ export const AnimatedCollapse = () => {
 
 					<section style={{ height: 300, outline: '1px solid #e3e3e3' }}>
 						<SplitHorizontal
+							{...(args as any)}
 							style={{ height: '100%' }}
 							isAnimated
 							isExpanded={this.state.isExpanded}
@@ -121,10 +117,9 @@ export const AnimatedCollapse = () => {
 
 	return <Component />;
 };
-AnimatedCollapse.storyName = 'AnimatedCollapse';
 
 /* Set Pane As Primary */
-export const SetPaneAsPrimary = () => {
+export const SetPaneAsPrimary: Story<ISplitHorizontalProps> = (args) => {
 	const Component = createClass({
 		getInitialState() {
 			return {
@@ -142,6 +137,7 @@ export const SetPaneAsPrimary = () => {
 
 					<section style={{ height: 300, outline: '1px solid #e3e3e3' }}>
 						<SplitHorizontal
+							{...(args as any)}
 							style={{ height: '100%' }}
 							isAnimated
 							isExpanded={this.state.isExpanded}
@@ -182,108 +178,90 @@ export const SetPaneAsPrimary = () => {
 
 	return <Component />;
 };
-SetPaneAsPrimary.storyName = 'SetPaneAsPrimary';
 
 /* Set Height Of Pane */
-export const SetHeightOfPane = () => {
-	const Component = createClass({
-		render() {
-			return (
-				<section style={{ height: 300, outline: '1px solid #e3e3e3' }}>
-					<SplitHorizontal>
-						<SplitHorizontal.TopPane height={64}>
-							<p>
-								Jean shorts reprehenderit in, commodo godard skateboard retro
-								heirloom street art church-key. Gochujang sint hella food truck,
-								officia next level sriracha listicle knausgaard try-hard 3 wolf
-								moon kale chips. Offal scenester quinoa, hammock qui sint direct
-								trade heirloom. Bushwick letterpress pabst, odio nihil sapiente
-								ex cold-pressed flannel laboris wayfarers retro marfa jean
-								shorts. Chia next level cardigan, deserunt church-key
-								asymmetrical ennui messenger bag portland. Aute selvage cred
-								gastropub freegan literally. Readymade artisan distillery
-								occaecat qui.
-							</p>
-						</SplitHorizontal.TopPane>
-						<SplitHorizontal.BottomPane isPrimary>
-							<p>
-								Plaid wolf cold-pressed, post-ironic etsy roof party tilde
-								tattooed pug stumptown sed tofu art party ennui. Asymmetrical
-								wayfarers dolor dolore, nisi mollit sed austin skateboard
-								readymade 90's tumblr fugiat sint shoreditch. Cillum
-								intelligentsia esse next level polaroid, beard vero. Qui
-								polaroid portland beard artisan. Mixtape qui hella est. Fap
-								consectetur freegan roof party duis mollit. Mixtape swag
-								mustache, twee fashion axe sustainable ennui aliquip mlkshk
-								gastropub seitan commodo photo booth blue bottle.
-							</p>
-						</SplitHorizontal.BottomPane>
-					</SplitHorizontal>
-				</section>
-			);
-		},
-	});
-
-	return <Component />;
+export const SetHeightOfPane: Story<ISplitHorizontalProps> = (args) => {
+	return (
+		<section style={{ height: 300, outline: '1px solid #e3e3e3' }}>
+			<SplitHorizontal {...(args as any as any)}>
+				<SplitHorizontal.TopPane height={64}>
+					<p>
+						Jean shorts reprehenderit in, commodo godard skateboard retro
+						heirloom street art church-key. Gochujang sint hella food truck,
+						officia next level sriracha listicle knausgaard try-hard 3 wolf moon
+						kale chips. Offal scenester quinoa, hammock qui sint direct trade
+						heirloom. Bushwick letterpress pabst, odio nihil sapiente ex
+						cold-pressed flannel laboris wayfarers retro marfa jean shorts. Chia
+						next level cardigan, deserunt church-key asymmetrical ennui
+						messenger bag portland. Aute selvage cred gastropub freegan
+						literally. Readymade artisan distillery occaecat qui.
+					</p>
+				</SplitHorizontal.TopPane>
+				<SplitHorizontal.BottomPane isPrimary>
+					<p>
+						Plaid wolf cold-pressed, post-ironic etsy roof party tilde tattooed
+						pug stumptown sed tofu art party ennui. Asymmetrical wayfarers dolor
+						dolore, nisi mollit sed austin skateboard readymade 90's tumblr
+						fugiat sint shoreditch. Cillum intelligentsia esse next level
+						polaroid, beard vero. Qui polaroid portland beard artisan. Mixtape
+						qui hella est. Fap consectetur freegan roof party duis mollit.
+						Mixtape swag mustache, twee fashion axe sustainable ennui aliquip
+						mlkshk gastropub seitan commodo photo booth blue bottle.
+					</p>
+				</SplitHorizontal.BottomPane>
+			</SplitHorizontal>
+		</section>
+	);
 };
-SetHeightOfPane.storyName = 'SetHeightOfPane';
 
 /* Customize Divider */
-export const CustomizeDivider = () => {
-	const Component = createClass({
-		render() {
-			return (
-				<SplitHorizontal>
-					<SplitHorizontal.TopPane>
-						<p>
-							Waistcoat man bun sartorial, PBR&B artisan blue bottle laboris
-							disrupt pug dreamcatcher readymade gluten-free fingerstache
-							placeat. Enim salvia celiac, veniam polaroid stumptown velit
-							PBR&B. Ramps delectus cupidatat dolore. Portland try-hard
-							slow-carb cronut, drinking vinegar readymade nulla pug aliqua cray
-							VHS eiusmod odio incididunt wolf. 3 wolf moon gentrify mustache
-							blog freegan, literally ut helvetica stumptown godard synth direct
-							trade. Sapiente slow-carb deep v, YOLO direct trade irony before
-							they sold out tempor. Sunt aliqua seitan banjo.
-						</p>
-					</SplitHorizontal.TopPane>
+export const CustomizeDivider: Story<ISplitHorizontalProps> = (args) => {
+	return (
+		<SplitHorizontal {...(args as any)}>
+			<SplitHorizontal.TopPane>
+				<p>
+					Waistcoat man bun sartorial, PBR&B artisan blue bottle laboris disrupt
+					pug dreamcatcher readymade gluten-free fingerstache placeat. Enim
+					salvia celiac, veniam polaroid stumptown velit PBR&B. Ramps delectus
+					cupidatat dolore. Portland try-hard slow-carb cronut, drinking vinegar
+					readymade nulla pug aliqua cray VHS eiusmod odio incididunt wolf. 3
+					wolf moon gentrify mustache blog freegan, literally ut helvetica
+					stumptown godard synth direct trade. Sapiente slow-carb deep v, YOLO
+					direct trade irony before they sold out tempor. Sunt aliqua seitan
+					banjo.
+				</p>
+			</SplitHorizontal.TopPane>
 
-					<SplitHorizontal.Divider
-						style={{
-							height: 18,
-							background: 'gray',
-							color: 'white',
-							textAlign: 'center',
-						}}
-					>
-						D I V I D E R
-					</SplitHorizontal.Divider>
+			<SplitHorizontal.Divider
+				style={{
+					height: 18,
+					background: 'gray',
+					color: 'white',
+					textAlign: 'center',
+				}}
+			>
+				D I V I D E R
+			</SplitHorizontal.Divider>
 
-					<SplitHorizontal.BottomPane>
-						<p>
-							Exercitation fixie distillery pickled, gentrify meh laborum
-							accusamus quinoa street art craft beer migas affogato chia. PBR&B
-							cillum dolore, tilde sed eu tote bag narwhal vero schlitz chambray
-							viral raw denim velit single-origin coffee. Occupy tempor hashtag
-							non. Wayfarers bitters blog fixie mollit flexitarian forage.
-							Listicle sriracha bespoke, laborum direct trade skateboard cliche
-							umami selvage velit art party sartorial forage veniam. Authentic
-							tattooed nesciunt before they sold out, blue bottle bicycle rights
-							gastropub magna veniam hammock. Sint venmo nihil, meditation
-							voluptate readymade banh mi.
-						</p>
-					</SplitHorizontal.BottomPane>
-				</SplitHorizontal>
-			);
-		},
-	});
-
-	return <Component />;
+			<SplitHorizontal.BottomPane>
+				<p>
+					Exercitation fixie distillery pickled, gentrify meh laborum accusamus
+					quinoa street art craft beer migas affogato chia. PBR&B cillum dolore,
+					tilde sed eu tote bag narwhal vero schlitz chambray viral raw denim
+					velit single-origin coffee. Occupy tempor hashtag non. Wayfarers
+					bitters blog fixie mollit flexitarian forage. Listicle sriracha
+					bespoke, laborum direct trade skateboard cliche umami selvage velit
+					art party sartorial forage veniam. Authentic tattooed nesciunt before
+					they sold out, blue bottle bicycle rights gastropub magna veniam
+					hammock. Sint venmo nihil, meditation voluptate readymade banh mi.
+				</p>
+			</SplitHorizontal.BottomPane>
+		</SplitHorizontal>
+	);
 };
-CustomizeDivider.storyName = 'CustomizeDivider';
 
 /* No Animation */
-export const NoAnimation = () => {
+export const NoAnimation: Story<ISplitHorizontalProps> = (args) => {
 	const Component = createClass({
 		getInitialState() {
 			return {
@@ -300,7 +278,10 @@ export const NoAnimation = () => {
 					<button onClick={this.handleToggle}>toggle</button>
 
 					<section style={{ outline: '1px solid #e3e3e3' }}>
-						<SplitHorizontal isExpanded={this.state.isExpanded}>
+						<SplitHorizontal
+							{...(args as any)}
+							isExpanded={this.state.isExpanded}
+						>
 							<SplitHorizontal.TopPane>
 								<p>
 									Magna non tacos, et raw denim food truck mixtape semiotics
@@ -339,10 +320,9 @@ export const NoAnimation = () => {
 
 	return <Component />;
 };
-NoAnimation.storyName = 'NoAnimation';
 
 /* Collapse Shift */
-export const CollapseShift = () => {
+export const CollapseShift: Story<ISplitHorizontalProps> = (args) => {
 	const Component = createClass({
 		getInitialState() {
 			return {
@@ -360,6 +340,7 @@ export const CollapseShift = () => {
 
 					<section style={{ height: 300, outline: '1px solid #e3e3e3' }}>
 						<SplitHorizontal
+							{...(args as any)}
 							style={{ height: '100%' }}
 							collapseShift={64}
 							isAnimated
@@ -401,10 +382,9 @@ export const CollapseShift = () => {
 
 	return <Component />;
 };
-CollapseShift.storyName = 'CollapseShift';
 
 /* Handle Resize */
-export const HandleResize = () => {
+export const HandleResize: Story<ISplitHorizontalProps> = (args) => {
 	const Component = createClass({
 		getInitialState() {
 			return {
@@ -426,6 +406,7 @@ export const HandleResize = () => {
 					New Height: {`${this.state.newHeight}`}
 					<section style={{ height: 300, outline: '1px solid #e3e3e3' }}>
 						<SplitHorizontal
+							{...(args as any)}
 							style={{ height: '100%' }}
 							onResizing={this.handleResizing}
 							onResize={this.handleResize}
@@ -469,4 +450,3 @@ export const HandleResize = () => {
 
 	return <Component />;
 };
-HandleResize.storyName = 'HandleResize';
