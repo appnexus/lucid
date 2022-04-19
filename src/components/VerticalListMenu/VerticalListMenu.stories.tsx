@@ -27,7 +27,7 @@ function addKeys(children: any) {
 const Template: Story<IVerticalListMenuProps> = (args) => {
 	return (
 		<section>
-			<VerticalListMenu {...args} style={{ width: 250 }} />
+			<VerticalListMenu {...(args as any)} style={{ width: 250 }} />
 		</section>
 	);
 };
@@ -54,7 +54,7 @@ export const NestedWithExpander: Story<IVerticalListMenuProps> = (args) => {
 	};
 	return (
 		<VerticalListMenu
-			{...args}
+			{...(args as any)}
 			style={{ width: 250 }}
 			onSelect={partial(handleSelect, 'one')}
 			selectedIndices={currentList === 'one' ? selectedIndices : []}
@@ -104,7 +104,7 @@ export const NestedFullWidth: Story<IVerticalListMenuProps> = (args) => {
 	};
 	return (
 		<VerticalListMenu
-			{...args}
+			{...(args as any)}
 			onSelect={partial(handleSelect, 'one')}
 			selectedIndices={currentList === 'one' ? selectedIndices : []}
 		>

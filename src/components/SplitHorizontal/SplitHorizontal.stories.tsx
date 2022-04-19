@@ -20,7 +20,7 @@ export default {
 /* Default Split */
 export const DefaultSplit: Story<ISplitHorizontalProps> = (args) => {
 	return (
-		<SplitHorizontal {...args}>
+		<SplitHorizontal {...(args as any)}>
 			<SplitHorizontal.TopPane>
 				<p>
 					Bicycle rights tofu hashtag blue bottle viral. Mixtape kinfolk
@@ -72,7 +72,7 @@ export const AnimatedCollapse: Story<ISplitHorizontalProps> = (args) => {
 
 					<section style={{ height: 300, outline: '1px solid #e3e3e3' }}>
 						<SplitHorizontal
-							{...args}
+							{...(args as any)}
 							style={{ height: '100%' }}
 							isAnimated
 							isExpanded={this.state.isExpanded}
@@ -137,7 +137,7 @@ export const SetPaneAsPrimary: Story<ISplitHorizontalProps> = (args) => {
 
 					<section style={{ height: 300, outline: '1px solid #e3e3e3' }}>
 						<SplitHorizontal
-							{...args}
+							{...(args as any)}
 							style={{ height: '100%' }}
 							isAnimated
 							isExpanded={this.state.isExpanded}
@@ -183,7 +183,7 @@ export const SetPaneAsPrimary: Story<ISplitHorizontalProps> = (args) => {
 export const SetHeightOfPane: Story<ISplitHorizontalProps> = (args) => {
 	return (
 		<section style={{ height: 300, outline: '1px solid #e3e3e3' }}>
-			<SplitHorizontal {...args}>
+			<SplitHorizontal {...(args as any as any)}>
 				<SplitHorizontal.TopPane height={64}>
 					<p>
 						Jean shorts reprehenderit in, commodo godard skateboard retro
@@ -217,7 +217,7 @@ export const SetHeightOfPane: Story<ISplitHorizontalProps> = (args) => {
 /* Customize Divider */
 export const CustomizeDivider: Story<ISplitHorizontalProps> = (args) => {
 	return (
-		<SplitHorizontal {...args}>
+		<SplitHorizontal {...(args as any)}>
 			<SplitHorizontal.TopPane>
 				<p>
 					Waistcoat man bun sartorial, PBR&B artisan blue bottle laboris disrupt
@@ -278,7 +278,10 @@ export const NoAnimation: Story<ISplitHorizontalProps> = (args) => {
 					<button onClick={this.handleToggle}>toggle</button>
 
 					<section style={{ outline: '1px solid #e3e3e3' }}>
-						<SplitHorizontal {...args} isExpanded={this.state.isExpanded}>
+						<SplitHorizontal
+							{...(args as any)}
+							isExpanded={this.state.isExpanded}
+						>
 							<SplitHorizontal.TopPane>
 								<p>
 									Magna non tacos, et raw denim food truck mixtape semiotics
@@ -337,7 +340,7 @@ export const CollapseShift: Story<ISplitHorizontalProps> = (args) => {
 
 					<section style={{ height: 300, outline: '1px solid #e3e3e3' }}>
 						<SplitHorizontal
-							{...args}
+							{...(args as any)}
 							style={{ height: '100%' }}
 							collapseShift={64}
 							isAnimated
@@ -403,7 +406,7 @@ export const HandleResize: Story<ISplitHorizontalProps> = (args) => {
 					New Height: {`${this.state.newHeight}`}
 					<section style={{ height: 300, outline: '1px solid #e3e3e3' }}>
 						<SplitHorizontal
-							{...args}
+							{...(args as any)}
 							style={{ height: '100%' }}
 							onResizing={this.handleResizing}
 							onResize={this.handleResize}
