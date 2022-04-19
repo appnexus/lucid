@@ -31,6 +31,7 @@ export const WithLowerBound: Story<IStickySectionProps> = (args) => {
 			Taxidermy ramps fap vegan bushwick pug, kickstarter scenester actually
 			cornhole locavore man bun chambray.
 			<StickySection
+				{...(args as any)}
 				lowerBound={600}
 				style={{ backgroundColor: '#2abbb0', color: 'white' }}
 			>
@@ -167,7 +168,7 @@ export const WithLowerBoundAndScrollViewportWidth: Story<
 				williamsburg. Taxidermy ramps fap vegan bushwick pug, kickstarter
 				scenester actually cornhole locavore man bun chambray.
 				<StickySection
-					{...args}
+					{...(args as any)}
 					viewportWidth={800}
 					lowerBound={1838}
 					style={{ backgroundColor: '#2abbb0', color: 'white' }}
@@ -270,7 +271,7 @@ export const Standard: Story<IStickySectionProps> = (args) => {
 			Taxidermy ramps fap vegan bushwick pug, kickstarter scenester actually
 			cornhole locavore man bun chambray.
 			<StickySection
-				{...args}
+				{...(args as any)}
 				style={{ backgroundColor: '#2abbb0', color: 'white' }}
 			>
 				This section has no lower bounds!
@@ -462,7 +463,7 @@ export const TopOffset: Story<IStickySectionProps> = (args) => {
 			Taxidermy ramps fap vegan bushwick pug, kickstarter scenester actually
 			cornhole locavore man bun chambray.
 			<StickySection
-				{...args}
+				{...(args as any)}
 				topOffset={100}
 				style={{ backgroundColor: '#2abbb0', color: 'white' }}
 			>
