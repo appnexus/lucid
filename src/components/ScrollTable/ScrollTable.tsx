@@ -1,7 +1,8 @@
-import _ from 'lodash';
+import _, { omit } from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
-import { StandardProps, omitProps } from '../../util/component-types';
+
+import { StandardProps } from '../../util/component-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import Table from '../Table/Table';
 
@@ -53,12 +54,15 @@ export const ScrollTable = (props: IScrollTableProps): React.ReactElement => {
 			style={style}
 		>
 			<Table
-				{...omitProps(
-					passThroughs,
-					undefined,
-					_.keys(ScrollTable.propTypes),
-					false
-				)}
+				{...omit(passThroughs, [
+					'children',
+					'className',
+					'style',
+					'tableWidth',
+					'hasWordWrap',
+					'hasBorder',
+					'initialState',
+				])}
 				style={{
 					width: tableWidth,
 				}}
