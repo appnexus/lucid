@@ -1,6 +1,7 @@
-import React from 'react';
-import { Meta, Story } from '@storybook/react';
 import _ from 'lodash';
+import React, { useState } from 'react';
+import { Meta, Story } from '@storybook/react';
+
 import Switch, { ISwitchProps } from './Switch';
 
 export default {
@@ -13,9 +14,18 @@ export default {
 			},
 		},
 	},
+	args: Switch.defaultProps,
 } as Meta;
 
-export const Basic: Story<ISwitchProps> = (args) => <Switch {...args} />;
+export const Basic: Story<ISwitchProps> = (args) => {
+	const [selected, setSelected] = useState(true);
+
+	const handleSelect = () => {
+		setSelected(!selected);
+	};
+
+	return <Switch {...args} onSelect={handleSelect} isSelected={selected} />;
+};
 
 export const Selected: Story<ISwitchProps> = (args) => (
 	<Switch {...args} title='Selected' isSelected={true} />
