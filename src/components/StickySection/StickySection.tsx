@@ -1,14 +1,15 @@
+import _, { omit } from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
-import _ from 'lodash';
+
 import { lucidClassNames } from '../../util/style-helpers';
-import { omitProps, StandardProps } from '../../util/component-types';
+import { StandardProps } from '../../util/component-types';
 import { getAbsoluteBoundingClientRect } from '../../util/dom-helpers';
 
 const cx = lucidClassNames.bind('&-StickySection');
 const { node, number, object, string } = PropTypes;
 
-interface IStickySectionProps
+export interface IStickySectionProps
 	extends StandardProps,
 		React.DetailedHTMLProps<
 			React.HTMLAttributes<HTMLDivElement>,
@@ -186,11 +187,12 @@ class StickySection extends React.Component<
 
 		return (
 			<div
-				{...omitProps<IStickySectionProps>(
-					passThroughs,
-					undefined,
-					_.keys(StickySection.propTypes)
-				)}
+				{...omit(passThroughs, [
+					'lowerBound',
+					'topOffset',
+					'initialState',
+					'callbackId',
+				])}
 				className={cx('&', className)}
 				style={{
 					...(isAboveFold
