@@ -1,9 +1,9 @@
 import { map } from 'lodash';
 import React from 'react';
-import { Meta } from '@storybook/react';
+import { Meta, Story } from '@storybook/react';
 
 import * as d3Scale from 'd3-scale';
-import VerticalTabs from './VerticalTabs';
+import VerticalTabs, { IVerticalTabsProps } from './VerticalTabs';
 import Lines from '../Lines/Lines';
 import SuccessIcon from '../Icon/SuccessIcon/SuccessIcon';
 import WarningIcon from '../Icon/WarningIcon/WarningIcon';
@@ -19,6 +19,7 @@ export default {
 			},
 		},
 	},
+	args: VerticalTabs.defaultProps,
 } as Meta;
 
 //👇 Destructure any child components that we will need
@@ -30,10 +31,10 @@ function addKeys(children: any) {
 }
 
 //👇 Create a “template” of how args map to rendering
-const Template: any = (args) => {
+const Template: Story<IVerticalTabsProps> = (args) => {
 	return (
 		<section>
-			<VerticalTabs {...args} />
+			<VerticalTabs {...(args as any)} />
 		</section>
 	);
 };
@@ -78,6 +79,8 @@ TitleAsChild.args = {
 };
 
 /** Complex Title as Child */
+export const ComplexTitleAsChild = Template.bind({});
+
 const dataSet = [
 	{ x: 'OR', y: 1 },
 	{ x: 'CA', y: 0 },
@@ -102,7 +105,6 @@ const titleThree = (
 	</span>
 );
 
-export const ComplexTitleAsChild = Template.bind({});
 ComplexTitleAsChild.args = {
 	children: addKeys([
 		<VerticalTabs.Tab>
