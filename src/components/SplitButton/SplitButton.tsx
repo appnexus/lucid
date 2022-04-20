@@ -1,11 +1,11 @@
-import _ from 'lodash';
+import _, { omit } from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
+
 import { lucidClassNames } from '../../util/style-helpers';
 import {
 	filterTypes,
 	getFirst,
-	omitProps,
 	StandardProps,
 } from '../../util/component-types';
 import { buildModernHybridComponent } from '../../util/state-management';
@@ -56,6 +56,7 @@ ButtonChild.propTypes = {
 	onClick: func,
 };
 
+/** SplitButton */
 export interface ISplitButtonProps extends StandardProps {
 	/** Sets the direction the flyout menu will render relative to the SplitButton. */
 	direction: 'up' | 'down';
@@ -203,11 +204,17 @@ class SplitButton extends React.Component<ISplitButtonProps> {
 		return (
 			<DropMenu
 				{...dropMenuProps}
-				{...omitProps(
-					passThroughs,
-					undefined,
-					_.keys(DropMenu.Option.propTypes)
-				)}
+				{...omit(passThroughs, [
+					'DropMenu',
+					'children',
+					'className',
+					'direction',
+					'kind',
+					'size',
+					'type',
+					'initialState',
+					'callbackId',
+				])}
 				direction={direction}
 				className={cx('&', className)}
 				onSelect={this.handleSelect}
