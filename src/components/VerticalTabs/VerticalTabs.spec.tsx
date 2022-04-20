@@ -1,3 +1,4 @@
+import _, { forEach, has, noop } from 'lodash';
 import React from 'react';
 import assert from 'assert';
 import { shallow } from 'enzyme';
@@ -5,6 +6,9 @@ import { shallow } from 'enzyme';
 import { common } from '../../util/generic-tests';
 import { VerticalTabsDumb as VerticalTabs } from './VerticalTabs';
 import { VerticalListMenuDumb as VerticalListMenu } from '../VerticalListMenu/VerticalListMenu';
+
+//👇 Destructure any child components that we will need
+const { Tab, Title } = VerticalTabs;
 
 describe('VerticalTabs', () => {
 	common(VerticalTabs, {
@@ -171,6 +175,58 @@ describe('VerticalTabs', () => {
 				wrapper.find(VerticalListMenu).props().onSelect('stuff');
 				expect(onSelectMock).toBeCalledTimes(1);
 				expect(onSelectMock.mock.calls[0][0]).toEqual('stuff');
+			});
+		});
+
+		describe('root pass throughs', () => {
+			let wrapper: any;
+
+			beforeEach(() => {
+				const props = {
+					Tab: <Tab>One content</Tab>,
+					Title: <Title>One</Title>,
+					selectedIndex: 2,
+					onSelect: noop,
+					className: 'wut',
+					style: { marginRight: 10 },
+					initialState: { test: true },
+					callbackId: 1,
+					'data-testid': 10,
+				};
+				wrapper = shallow(<VerticalTabs {...props} />);
+			});
+
+			afterEach(() => {
+				wrapper.unmount();
+			});
+
+			it('passes through props not defined in `propTypes` to the root element.', () => {
+				const rootProps = wrapper.find('.lucid-VerticalTabs').props();
+
+				expect(wrapper.first().prop(['className'])).toContain('wut');
+				expect(wrapper.first().prop(['style'])).toMatchObject({
+					marginRight: 10,
+				});
+				expect(wrapper.first().prop(['data-testid'])).toBe(10);
+
+				// 'className' is plucked from the pass through object
+				// but still appears becuase it is also directly added to the root element as a prop
+				forEach(
+					['className', 'data-testid', 'style', 'children', 'Tab', 'Title'],
+					(prop) => {
+						expect(has(rootProps, prop)).toBe(true);
+					}
+				);
+			});
+			it('omits the props defined in `propTypes` (plus, in addition, `initialState`, and `callbackId`) from the root element', () => {
+				const rootProps = wrapper.find('.lucid-VerticalTabs').props();
+
+				forEach(
+					['selectedIndex', 'onSelect', 'initialState', 'callbackId'],
+					(prop) => {
+						expect(has(rootProps, prop)).toBe(false);
+					}
+				);
 			});
 		});
 	});
