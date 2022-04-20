@@ -116,8 +116,8 @@ class TextFieldValidated extends React.Component<
 			);
 		} else if (this.props.Info) {
 			childProps = [this.props.Info];
-		} else if (this.props.Success) {
-			childProps = [this.props.Success?.message];
+		} else if (this.props.Success && this.props.Success.message) {
+			childProps = [this.props.Success.message];
 		}
 
 		const isSuccess =
@@ -129,7 +129,8 @@ class TextFieldValidated extends React.Component<
 					'-info': !this.props.Error && this.props.Info,
 					'-success':
 						!this.props.Error && !this.props.Info && this.props.Success,
-					'-disappearing': isSuccess && this.props.Success?.disappearing,
+					'-disappearing':
+						isSuccess && this.props.Success && this.props.Success.disappearing,
 				})}
 				style={style}
 				Error={childProps}
