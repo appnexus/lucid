@@ -1,5 +1,1714 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`ScrollTable [common] example testing should match snapshot(s) for Basic 1`] = `
+<div
+  class="lucid-ScrollTable"
+>
+  <table
+    class="lucid-Table lucid-Table-density-extended lucid-Table-has-light-header"
+  >
+    <thead
+      class="lucid-Table-Thead"
+    >
+      <tr
+        class="lucid-Table-Tr"
+      >
+        <th
+          class="lucid-Table-Th lucid-Table-is-first-row lucid-Table-is-last-row lucid-Table-is-first-col lucid-Table-align-left"
+          rowspan="2"
+        >
+          <div
+            class="lucid-Table-Th-inner"
+          >
+            <div
+              class="lucid-Table-Th-inner-content"
+            >
+              RS
+            </div>
+          </div>
+        </th>
+        <th
+          class="lucid-Table-Th lucid-Table-is-first-row lucid-Table-is-last-row lucid-Table-align-left"
+          rowspan="2"
+        >
+          <div
+            class="lucid-Table-Th-inner"
+          >
+            <div
+              class="lucid-Table-Th-inner-content"
+            >
+              <div
+                class="lucid-Checkbox"
+              >
+                <input
+                  class="lucid-Checkbox-native"
+                  type="checkbox"
+                />
+                <span
+                  class="lucid-Checkbox-visualization-glow"
+                />
+                <span
+                  class="lucid-Checkbox-visualization-container"
+                />
+                <span
+                  class="lucid-Checkbox-visualization-checkmark"
+                >
+                  <span
+                    class="lucid-Checkbox-visualization-checkmark-stem"
+                  />
+                  <span
+                    class="lucid-Checkbox-visualization-checkmark-kick"
+                  />
+                </span>
+              </div>
+            </div>
+          </div>
+        </th>
+        <th
+          class="lucid-Table-Th lucid-Table-is-first-row lucid-Table-is-last-row lucid-Table-align-left lucid-Table-is-resizable lucid-Table-is-sortable"
+          rowspan="2"
+        >
+          <div
+            class="lucid-Table-Th-inner"
+          >
+            <div
+              class="lucid-Table-Th-inner-content"
+            >
+              Sortable and resizable.
+            </div>
+            <div
+              class="lucid-Table-Th-inner-caret"
+            >
+              <svg
+                class="lucid-Icon lucid-Icon-color-primary lucid-ArrowIcon lucid-ArrowIcon-is-up lucid-Table-sort-icon"
+                height="10"
+                preserveAspectRatio="xMidYMid meet"
+                viewBox="0 0 16 16"
+                width="10"
+              >
+                <path
+                  d="M0 8h15.5m-6-6l6 6-6 6"
+                />
+              </svg>
+            </div>
+            <div
+              class="lucid-DragCaptureZone lucid-Table-Th-inner-resize"
+            />
+          </div>
+        </th>
+        <th
+          class="lucid-Table-Th lucid-Table-is-first-row lucid-Table-is-last-row lucid-Table-align-left"
+          rowspan="2"
+        >
+          <div
+            class="lucid-Table-Th-inner"
+          >
+            <div
+              class="lucid-Table-Th-inner-content"
+            >
+              <svg
+                class="lucid-Icon lucid-Icon-color-primary lucid-SuccessIcon"
+                height="16"
+                preserveAspectRatio="xMidYMid meet"
+                viewBox="0 0 16 16"
+                width="16"
+              >
+                <circle
+                  class="lucid-SuccessIcon-background"
+                  cx="8"
+                  cy="8"
+                  r="7.5"
+                />
+                <path
+                  class="lucid-SuccessIcon-check"
+                  d="M4.5 8L7 10.5 11.5 6"
+                />
+              </svg>
+            </div>
+          </div>
+        </th>
+        <th
+          class="lucid-Table-Th lucid-Table-is-first-row lucid-Table-is-last-row lucid-Table-align-left"
+          rowspan="2"
+        >
+          <div
+            class="lucid-Table-Th-inner"
+          >
+            <div
+              class="lucid-Table-Th-inner-content"
+            >
+              Button
+            </div>
+          </div>
+        </th>
+        <th
+          class="lucid-Table-Th lucid-Table-is-first-row lucid-Table-is-last-row lucid-Table-align-left lucid-Table-is-resizable lucid-Table-is-sortable lucid-Table-is-sorted"
+          rowspan="2"
+        >
+          <div
+            class="lucid-Table-Th-inner"
+          >
+            <div
+              class="lucid-Table-Th-inner-content"
+            >
+              Sorted Column
+            </div>
+            <div
+              class="lucid-Table-Th-inner-caret"
+            >
+              <svg
+                class="lucid-Icon lucid-Icon-color-primary lucid-ArrowIcon lucid-ArrowIcon-is-up lucid-Table-sort-icon"
+                height="10"
+                preserveAspectRatio="xMidYMid meet"
+                viewBox="0 0 16 16"
+                width="10"
+              >
+                <path
+                  d="M0 8h15.5m-6-6l6 6-6 6"
+                />
+              </svg>
+            </div>
+            <div
+              class="lucid-DragCaptureZone lucid-Table-Th-inner-resize"
+            />
+          </div>
+        </th>
+        <th
+          class="lucid-Table-Th lucid-Table-is-first-row lucid-Table-is-first-single lucid-Table-is-last-col lucid-Table-align-center"
+          colspan="3"
+          rowspan="1"
+        >
+          <div
+            class="lucid-Table-Th-inner"
+          >
+            <div
+              class="lucid-Table-Th-inner-content"
+            >
+              Alignments
+            </div>
+          </div>
+        </th>
+      </tr>
+      <tr
+        class="lucid-Table-Tr"
+      >
+        <th
+          class="lucid-Table-Th lucid-Table-is-last-row lucid-Table-is-first-single lucid-Table-align-left"
+          rowspan="1"
+        >
+          <div
+            class="lucid-Table-Th-inner"
+          >
+            <div
+              class="lucid-Table-Th-inner-content"
+            >
+              align left
+            </div>
+          </div>
+        </th>
+        <th
+          class="lucid-Table-Th lucid-Table-is-last-row lucid-Table-align-center lucid-Table-is-resizable"
+          rowspan="1"
+        >
+          <div
+            class="lucid-Table-Th-inner"
+          >
+            <div
+              class="lucid-Table-Th-inner-content"
+            >
+              align center
+            </div>
+            <div
+              class="lucid-DragCaptureZone lucid-Table-Th-inner-resize"
+            />
+          </div>
+        </th>
+        <th
+          class="lucid-Table-Th lucid-Table-is-last-row lucid-Table-is-last-col lucid-Table-align-right lucid-Table-is-sortable lucid-Table-is-sorted"
+          rowspan="1"
+        >
+          <div
+            class="lucid-Table-Th-inner"
+          >
+            <div
+              class="lucid-Table-Th-inner-content"
+            >
+              align right
+            </div>
+            <div
+              class="lucid-Table-Th-inner-caret"
+            >
+              <svg
+                class="lucid-Icon lucid-Icon-color-primary lucid-ArrowIcon lucid-ArrowIcon-is-up lucid-Table-sort-icon"
+                height="10"
+                preserveAspectRatio="xMidYMid meet"
+                viewBox="0 0 16 16"
+                width="10"
+              >
+                <path
+                  d="M0 8h15.5m-6-6l6 6-6 6"
+                />
+              </svg>
+            </div>
+          </div>
+        </th>
+      </tr>
+    </thead>
+    <tbody
+      class="lucid-Table-Tbody"
+    >
+      <tr
+        class="lucid-Table-Tr"
+      >
+        <td
+          class="lucid-Table-Td lucid-Table-is-first-row lucid-Table-is-last-row lucid-Table-is-first-col lucid-Table-align-left lucid-Table-has-border-right"
+          rowspan="14"
+        >
+          RS
+        </td>
+        <td
+          class="lucid-Table-Td lucid-Table-is-first-row lucid-Table-is-first-single lucid-Table-align-left"
+          rowspan="1"
+        >
+          <div
+            class="lucid-Checkbox"
+          >
+            <input
+              class="lucid-Checkbox-native"
+              type="checkbox"
+            />
+            <span
+              class="lucid-Checkbox-visualization-glow"
+            />
+            <span
+              class="lucid-Checkbox-visualization-container"
+            />
+            <span
+              class="lucid-Checkbox-visualization-checkmark"
+            >
+              <span
+                class="lucid-Checkbox-visualization-checkmark-stem"
+              />
+              <span
+                class="lucid-Checkbox-visualization-checkmark-kick"
+              />
+            </span>
+          </div>
+        </td>
+        <td
+          class="lucid-Table-Td lucid-Table-is-first-row lucid-Table-align-left"
+          rowspan="1"
+        >
+          Text
+        </td>
+        <td
+          class="lucid-Table-Td lucid-Table-is-first-row lucid-Table-align-left lucid-Table-has-border-right lucid-Table-has-border-left"
+          rowspan="1"
+        >
+          <svg
+            class="lucid-Icon lucid-Icon-color-primary lucid-SuccessIcon"
+            height="16"
+            preserveAspectRatio="xMidYMid meet"
+            viewBox="0 0 16 16"
+            width="16"
+          >
+            <circle
+              class="lucid-SuccessIcon-background"
+              cx="8"
+              cy="8"
+              r="7.5"
+            />
+            <path
+              class="lucid-SuccessIcon-check"
+              d="M4.5 8L7 10.5 11.5 6"
+            />
+          </svg>
+        </td>
+        <td
+          class="lucid-Table-Td lucid-Table-is-first-row lucid-Table-align-left"
+          rowspan="1"
+        >
+          <button
+            class="lucid-Button lucid-Button-small"
+            type="button"
+          >
+            <span
+              class="lucid-Button-content"
+            >
+              button
+            </span>
+          </button>
+        </td>
+        <td
+          class="lucid-Table-Td lucid-Table-is-first-row lucid-Table-align-left"
+          rowspan="1"
+        >
+          Sorted Column
+        </td>
+        <td
+          class="lucid-Table-Td lucid-Table-is-first-row lucid-Table-align-left lucid-Table-has-border-left"
+          rowspan="1"
+        >
+          align left
+        </td>
+        <td
+          class="lucid-Table-Td lucid-Table-is-first-row lucid-Table-align-center"
+          rowspan="1"
+        >
+          align center
+        </td>
+        <td
+          class="lucid-Table-Td lucid-Table-is-first-row lucid-Table-is-last-col lucid-Table-align-right"
+          rowspan="1"
+        >
+          align right
+        </td>
+      </tr>
+      <tr
+        class="lucid-Table-Tr lucid-Table-is-disabled"
+      >
+        <td
+          class="lucid-Table-Td lucid-Table-is-first-single lucid-Table-align-left"
+          rowspan="1"
+        >
+          <div
+            class="lucid-Checkbox"
+          >
+            <input
+              class="lucid-Checkbox-native"
+              type="checkbox"
+            />
+            <span
+              class="lucid-Checkbox-visualization-glow"
+            />
+            <span
+              class="lucid-Checkbox-visualization-container"
+            />
+            <span
+              class="lucid-Checkbox-visualization-checkmark"
+            >
+              <span
+                class="lucid-Checkbox-visualization-checkmark-stem"
+              />
+              <span
+                class="lucid-Checkbox-visualization-checkmark-kick"
+              />
+            </span>
+          </div>
+        </td>
+        <td
+          class="lucid-Table-Td lucid-Table-align-left"
+          rowspan="1"
+        >
+          isDisabled
+        </td>
+        <td
+          class="lucid-Table-Td lucid-Table-align-left lucid-Table-has-border-right lucid-Table-has-border-left"
+          rowspan="1"
+        >
+          <svg
+            class="lucid-Icon lucid-Icon-color-primary lucid-SuccessIcon"
+            height="16"
+            preserveAspectRatio="xMidYMid meet"
+            viewBox="0 0 16 16"
+            width="16"
+          >
+            <circle
+              class="lucid-SuccessIcon-background"
+              cx="8"
+              cy="8"
+              r="7.5"
+            />
+            <path
+              class="lucid-SuccessIcon-check"
+              d="M4.5 8L7 10.5 11.5 6"
+            />
+          </svg>
+        </td>
+        <td
+          class="lucid-Table-Td lucid-Table-align-left"
+          rowspan="1"
+        >
+          <button
+            class="lucid-Button lucid-Button-is-disabled lucid-Button-small"
+            disabled=""
+            type="button"
+          >
+            <span
+              class="lucid-Button-content"
+            >
+              button
+            </span>
+          </button>
+        </td>
+        <td
+          class="lucid-Table-Td lucid-Table-align-left"
+          rowspan="1"
+        >
+          Sorted Column
+        </td>
+        <td
+          class="lucid-Table-Td lucid-Table-align-left lucid-Table-has-border-left"
+          rowspan="1"
+        >
+          align left
+        </td>
+        <td
+          class="lucid-Table-Td lucid-Table-align-center"
+          rowspan="1"
+        >
+          align center
+        </td>
+        <td
+          class="lucid-Table-Td lucid-Table-is-last-col lucid-Table-align-right"
+          rowspan="1"
+        >
+          align right
+        </td>
+      </tr>
+      <tr
+        class="lucid-Table-Tr"
+      >
+        <td
+          class="lucid-Table-Td lucid-Table-is-first-single lucid-Table-align-left"
+          rowspan="1"
+        >
+          <div
+            class="lucid-Checkbox"
+          >
+            <input
+              class="lucid-Checkbox-native"
+              type="checkbox"
+            />
+            <span
+              class="lucid-Checkbox-visualization-glow"
+            />
+            <span
+              class="lucid-Checkbox-visualization-container"
+            />
+            <span
+              class="lucid-Checkbox-visualization-checkmark"
+            >
+              <span
+                class="lucid-Checkbox-visualization-checkmark-stem"
+              />
+              <span
+                class="lucid-Checkbox-visualization-checkmark-kick"
+              />
+            </span>
+          </div>
+        </td>
+        <td
+          class="lucid-Table-Td lucid-Table-align-left"
+          rowspan="1"
+        >
+          Text && isActionable
+        </td>
+        <td
+          class="lucid-Table-Td lucid-Table-align-left lucid-Table-has-border-right lucid-Table-has-border-left"
+          rowspan="1"
+        >
+          <svg
+            class="lucid-Icon lucid-Icon-color-primary lucid-SuccessIcon"
+            height="16"
+            preserveAspectRatio="xMidYMid meet"
+            viewBox="0 0 16 16"
+            width="16"
+          >
+            <circle
+              class="lucid-SuccessIcon-background"
+              cx="8"
+              cy="8"
+              r="7.5"
+            />
+            <path
+              class="lucid-SuccessIcon-check"
+              d="M4.5 8L7 10.5 11.5 6"
+            />
+          </svg>
+        </td>
+        <td
+          class="lucid-Table-Td lucid-Table-align-left"
+          rowspan="1"
+        >
+          <button
+            class="lucid-Button lucid-Button-small"
+            type="button"
+          >
+            <span
+              class="lucid-Button-content"
+            >
+              button
+            </span>
+          </button>
+        </td>
+        <td
+          class="lucid-Table-Td lucid-Table-align-left"
+          rowspan="1"
+        >
+          Sorted Column
+        </td>
+        <td
+          class="lucid-Table-Td lucid-Table-align-left lucid-Table-has-border-left"
+          rowspan="1"
+        >
+          align left
+        </td>
+        <td
+          class="lucid-Table-Td lucid-Table-align-center"
+          rowspan="1"
+        >
+          align center
+        </td>
+        <td
+          class="lucid-Table-Td lucid-Table-is-last-col lucid-Table-align-right"
+          rowspan="1"
+        >
+          align right
+        </td>
+      </tr>
+      <tr
+        class="lucid-Table-Tr lucid-Table-is-disabled"
+      >
+        <td
+          class="lucid-Table-Td lucid-Table-is-first-single lucid-Table-align-left"
+          rowspan="1"
+        >
+          <div
+            class="lucid-Checkbox"
+          >
+            <input
+              class="lucid-Checkbox-native"
+              type="checkbox"
+            />
+            <span
+              class="lucid-Checkbox-visualization-glow"
+            />
+            <span
+              class="lucid-Checkbox-visualization-container"
+            />
+            <span
+              class="lucid-Checkbox-visualization-checkmark"
+            >
+              <span
+                class="lucid-Checkbox-visualization-checkmark-stem"
+              />
+              <span
+                class="lucid-Checkbox-visualization-checkmark-kick"
+              />
+            </span>
+          </div>
+        </td>
+        <td
+          class="lucid-Table-Td lucid-Table-align-left"
+          rowspan="1"
+        >
+          isDisabled && isActionable
+        </td>
+        <td
+          class="lucid-Table-Td lucid-Table-align-left lucid-Table-has-border-right lucid-Table-has-border-left"
+          rowspan="1"
+        >
+          <svg
+            class="lucid-Icon lucid-Icon-color-primary lucid-SuccessIcon"
+            height="16"
+            preserveAspectRatio="xMidYMid meet"
+            viewBox="0 0 16 16"
+            width="16"
+          >
+            <circle
+              class="lucid-SuccessIcon-background"
+              cx="8"
+              cy="8"
+              r="7.5"
+            />
+            <path
+              class="lucid-SuccessIcon-check"
+              d="M4.5 8L7 10.5 11.5 6"
+            />
+          </svg>
+        </td>
+        <td
+          class="lucid-Table-Td lucid-Table-align-left"
+          rowspan="1"
+        >
+          <button
+            class="lucid-Button lucid-Button-is-disabled lucid-Button-small"
+            disabled=""
+            type="button"
+          >
+            <span
+              class="lucid-Button-content"
+            >
+              button
+            </span>
+          </button>
+        </td>
+        <td
+          class="lucid-Table-Td lucid-Table-align-left"
+          rowspan="1"
+        >
+          Sorted Column
+        </td>
+        <td
+          class="lucid-Table-Td lucid-Table-align-left lucid-Table-has-border-left"
+          rowspan="1"
+        >
+          align left
+        </td>
+        <td
+          class="lucid-Table-Td lucid-Table-align-center"
+          rowspan="1"
+        >
+          align center
+        </td>
+        <td
+          class="lucid-Table-Td lucid-Table-is-last-col lucid-Table-align-right"
+          rowspan="1"
+        >
+          align right
+        </td>
+      </tr>
+      <tr
+        class="lucid-Table-Tr"
+      >
+        <td
+          class="lucid-Table-Td lucid-Table-is-first-single lucid-Table-align-left"
+          rowspan="1"
+        >
+          <div
+            class="lucid-Checkbox"
+          >
+            <input
+              class="lucid-Checkbox-native"
+              type="checkbox"
+            />
+            <span
+              class="lucid-Checkbox-visualization-glow"
+            />
+            <span
+              class="lucid-Checkbox-visualization-container"
+            />
+            <span
+              class="lucid-Checkbox-visualization-checkmark"
+            >
+              <span
+                class="lucid-Checkbox-visualization-checkmark-stem"
+              />
+              <span
+                class="lucid-Checkbox-visualization-checkmark-kick"
+              />
+            </span>
+          </div>
+        </td>
+        <td
+          class="lucid-Table-Td lucid-Table-align-left"
+          rowspan="1"
+        >
+          <a
+            href="#"
+          >
+            Link
+          </a>
+        </td>
+        <td
+          class="lucid-Table-Td lucid-Table-align-left lucid-Table-has-border-right lucid-Table-has-border-left"
+          rowspan="1"
+        >
+          <svg
+            class="lucid-Icon lucid-Icon-color-primary lucid-SuccessIcon"
+            height="16"
+            preserveAspectRatio="xMidYMid meet"
+            viewBox="0 0 16 16"
+            width="16"
+          >
+            <circle
+              class="lucid-SuccessIcon-background"
+              cx="8"
+              cy="8"
+              r="7.5"
+            />
+            <path
+              class="lucid-SuccessIcon-check"
+              d="M4.5 8L7 10.5 11.5 6"
+            />
+          </svg>
+        </td>
+        <td
+          class="lucid-Table-Td lucid-Table-align-left"
+          rowspan="1"
+        >
+          <button
+            class="lucid-Button lucid-Button-small"
+            type="button"
+          >
+            <span
+              class="lucid-Button-content"
+            >
+              button
+            </span>
+          </button>
+        </td>
+        <td
+          class="lucid-Table-Td lucid-Table-align-left"
+          rowspan="1"
+        >
+          Sorted Column
+        </td>
+        <td
+          class="lucid-Table-Td lucid-Table-align-left lucid-Table-has-border-left"
+          rowspan="1"
+        >
+          align left
+        </td>
+        <td
+          class="lucid-Table-Td lucid-Table-align-center"
+          rowspan="1"
+        >
+          align center
+        </td>
+        <td
+          class="lucid-Table-Td lucid-Table-is-last-col lucid-Table-align-right"
+          rowspan="1"
+        >
+          align right
+        </td>
+      </tr>
+      <tr
+        class="lucid-Table-Tr lucid-Table-is-disabled"
+      >
+        <td
+          class="lucid-Table-Td lucid-Table-is-first-single lucid-Table-align-left"
+          rowspan="1"
+        >
+          <div
+            class="lucid-Checkbox"
+          >
+            <input
+              class="lucid-Checkbox-native"
+              type="checkbox"
+            />
+            <span
+              class="lucid-Checkbox-visualization-glow"
+            />
+            <span
+              class="lucid-Checkbox-visualization-container"
+            />
+            <span
+              class="lucid-Checkbox-visualization-checkmark"
+            >
+              <span
+                class="lucid-Checkbox-visualization-checkmark-stem"
+              />
+              <span
+                class="lucid-Checkbox-visualization-checkmark-kick"
+              />
+            </span>
+          </div>
+        </td>
+        <td
+          class="lucid-Table-Td lucid-Table-align-left"
+          rowspan="1"
+        >
+          <a
+            href="#"
+          >
+            isDisabled Link
+          </a>
+        </td>
+        <td
+          class="lucid-Table-Td lucid-Table-align-left lucid-Table-has-border-right lucid-Table-has-border-left"
+          rowspan="1"
+        >
+          <svg
+            class="lucid-Icon lucid-Icon-color-primary lucid-SuccessIcon"
+            height="16"
+            preserveAspectRatio="xMidYMid meet"
+            viewBox="0 0 16 16"
+            width="16"
+          >
+            <circle
+              class="lucid-SuccessIcon-background"
+              cx="8"
+              cy="8"
+              r="7.5"
+            />
+            <path
+              class="lucid-SuccessIcon-check"
+              d="M4.5 8L7 10.5 11.5 6"
+            />
+          </svg>
+        </td>
+        <td
+          class="lucid-Table-Td lucid-Table-align-left"
+          rowspan="1"
+        >
+          <button
+            class="lucid-Button lucid-Button-is-disabled lucid-Button-small"
+            disabled=""
+            type="button"
+          >
+            <span
+              class="lucid-Button-content"
+            >
+              button
+            </span>
+          </button>
+        </td>
+        <td
+          class="lucid-Table-Td lucid-Table-align-left"
+          rowspan="1"
+        >
+          Sorted Column
+        </td>
+        <td
+          class="lucid-Table-Td lucid-Table-align-left lucid-Table-has-border-left"
+          rowspan="1"
+        >
+          align left
+        </td>
+        <td
+          class="lucid-Table-Td lucid-Table-align-center"
+          rowspan="1"
+        >
+          align center
+        </td>
+        <td
+          class="lucid-Table-Td lucid-Table-is-last-col lucid-Table-align-right"
+          rowspan="1"
+        >
+          align right
+        </td>
+      </tr>
+      <tr
+        class="lucid-Table-Tr"
+      >
+        <td
+          class="lucid-Table-Td lucid-Table-is-first-single lucid-Table-align-left"
+          rowspan="1"
+        >
+          <div
+            class="lucid-Checkbox"
+          >
+            <input
+              class="lucid-Checkbox-native"
+              type="checkbox"
+            />
+            <span
+              class="lucid-Checkbox-visualization-glow"
+            />
+            <span
+              class="lucid-Checkbox-visualization-container"
+            />
+            <span
+              class="lucid-Checkbox-visualization-checkmark"
+            >
+              <span
+                class="lucid-Checkbox-visualization-checkmark-stem"
+              />
+              <span
+                class="lucid-Checkbox-visualization-checkmark-kick"
+              />
+            </span>
+          </div>
+        </td>
+        <td
+          class="lucid-Table-Td lucid-Table-align-left"
+          rowspan="1"
+        >
+          <a
+            href="#"
+          >
+            Link && isActionable
+          </a>
+        </td>
+        <td
+          class="lucid-Table-Td lucid-Table-align-left lucid-Table-has-border-right lucid-Table-has-border-left"
+          rowspan="1"
+        >
+          <svg
+            class="lucid-Icon lucid-Icon-color-primary lucid-SuccessIcon"
+            height="16"
+            preserveAspectRatio="xMidYMid meet"
+            viewBox="0 0 16 16"
+            width="16"
+          >
+            <circle
+              class="lucid-SuccessIcon-background"
+              cx="8"
+              cy="8"
+              r="7.5"
+            />
+            <path
+              class="lucid-SuccessIcon-check"
+              d="M4.5 8L7 10.5 11.5 6"
+            />
+          </svg>
+        </td>
+        <td
+          class="lucid-Table-Td lucid-Table-align-left"
+          rowspan="1"
+        >
+          <button
+            class="lucid-Button lucid-Button-small"
+            type="button"
+          >
+            <span
+              class="lucid-Button-content"
+            >
+              button
+            </span>
+          </button>
+        </td>
+        <td
+          class="lucid-Table-Td lucid-Table-align-left"
+          rowspan="1"
+        >
+          Sorted Column
+        </td>
+        <td
+          class="lucid-Table-Td lucid-Table-align-left lucid-Table-has-border-left"
+          rowspan="1"
+        >
+          align left
+        </td>
+        <td
+          class="lucid-Table-Td lucid-Table-align-center"
+          rowspan="1"
+        >
+          align center
+        </td>
+        <td
+          class="lucid-Table-Td lucid-Table-is-last-col lucid-Table-align-right"
+          rowspan="1"
+        >
+          align right
+        </td>
+      </tr>
+      <tr
+        class="lucid-Table-Tr lucid-Table-is-disabled"
+      >
+        <td
+          class="lucid-Table-Td lucid-Table-is-first-single lucid-Table-align-left"
+          rowspan="1"
+        >
+          <div
+            class="lucid-Checkbox"
+          >
+            <input
+              class="lucid-Checkbox-native"
+              type="checkbox"
+            />
+            <span
+              class="lucid-Checkbox-visualization-glow"
+            />
+            <span
+              class="lucid-Checkbox-visualization-container"
+            />
+            <span
+              class="lucid-Checkbox-visualization-checkmark"
+            >
+              <span
+                class="lucid-Checkbox-visualization-checkmark-stem"
+              />
+              <span
+                class="lucid-Checkbox-visualization-checkmark-kick"
+              />
+            </span>
+          </div>
+        </td>
+        <td
+          class="lucid-Table-Td lucid-Table-align-left"
+          rowspan="1"
+        >
+          <a
+            href="#"
+          >
+            isDisabled Link && isActionable
+          </a>
+        </td>
+        <td
+          class="lucid-Table-Td lucid-Table-align-left lucid-Table-has-border-right lucid-Table-has-border-left"
+          rowspan="1"
+        >
+          <svg
+            class="lucid-Icon lucid-Icon-color-primary lucid-SuccessIcon"
+            height="16"
+            preserveAspectRatio="xMidYMid meet"
+            viewBox="0 0 16 16"
+            width="16"
+          >
+            <circle
+              class="lucid-SuccessIcon-background"
+              cx="8"
+              cy="8"
+              r="7.5"
+            />
+            <path
+              class="lucid-SuccessIcon-check"
+              d="M4.5 8L7 10.5 11.5 6"
+            />
+          </svg>
+        </td>
+        <td
+          class="lucid-Table-Td lucid-Table-align-left"
+          rowspan="1"
+        >
+          <button
+            class="lucid-Button lucid-Button-is-disabled lucid-Button-small"
+            disabled=""
+            type="button"
+          >
+            <span
+              class="lucid-Button-content"
+            >
+              button
+            </span>
+          </button>
+        </td>
+        <td
+          class="lucid-Table-Td lucid-Table-align-left"
+          rowspan="1"
+        >
+          Sorted Column
+        </td>
+        <td
+          class="lucid-Table-Td lucid-Table-align-left lucid-Table-has-border-left"
+          rowspan="1"
+        >
+          align left
+        </td>
+        <td
+          class="lucid-Table-Td lucid-Table-align-center"
+          rowspan="1"
+        >
+          align center
+        </td>
+        <td
+          class="lucid-Table-Td lucid-Table-is-last-col lucid-Table-align-right"
+          rowspan="1"
+        >
+          align right
+        </td>
+      </tr>
+      <tr
+        class="lucid-Table-Tr lucid-Table-is-selected"
+      >
+        <td
+          class="lucid-Table-Td lucid-Table-is-first-single lucid-Table-align-left"
+          rowspan="1"
+        >
+          <div
+            class="lucid-Checkbox lucid-Checkbox-is-selected"
+          >
+            <input
+              checked=""
+              class="lucid-Checkbox-native"
+              type="checkbox"
+            />
+            <span
+              class="lucid-Checkbox-visualization-glow"
+            />
+            <span
+              class="lucid-Checkbox-visualization-container"
+            />
+            <span
+              class="lucid-Checkbox-visualization-checkmark"
+            >
+              <span
+                class="lucid-Checkbox-visualization-checkmark-stem"
+              />
+              <span
+                class="lucid-Checkbox-visualization-checkmark-kick"
+              />
+            </span>
+          </div>
+        </td>
+        <td
+          class="lucid-Table-Td lucid-Table-align-left"
+          rowspan="1"
+        >
+          isSelected
+        </td>
+        <td
+          class="lucid-Table-Td lucid-Table-align-left lucid-Table-has-border-right lucid-Table-has-border-left"
+          rowspan="1"
+        >
+          <svg
+            class="lucid-Icon lucid-Icon-color-primary lucid-SuccessIcon"
+            height="16"
+            preserveAspectRatio="xMidYMid meet"
+            viewBox="0 0 16 16"
+            width="16"
+          >
+            <circle
+              class="lucid-SuccessIcon-background"
+              cx="8"
+              cy="8"
+              r="7.5"
+            />
+            <path
+              class="lucid-SuccessIcon-check"
+              d="M4.5 8L7 10.5 11.5 6"
+            />
+          </svg>
+        </td>
+        <td
+          class="lucid-Table-Td lucid-Table-align-left"
+          rowspan="1"
+        >
+          <button
+            class="lucid-Button lucid-Button-small"
+            type="button"
+          >
+            <span
+              class="lucid-Button-content"
+            >
+              button
+            </span>
+          </button>
+        </td>
+        <td
+          class="lucid-Table-Td lucid-Table-align-left"
+          rowspan="1"
+        >
+          Sorted Column
+        </td>
+        <td
+          class="lucid-Table-Td lucid-Table-align-left lucid-Table-has-border-left"
+          rowspan="1"
+        >
+          align left
+        </td>
+        <td
+          class="lucid-Table-Td lucid-Table-align-center"
+          rowspan="1"
+        >
+          align center
+        </td>
+        <td
+          class="lucid-Table-Td lucid-Table-is-last-col lucid-Table-align-right"
+          rowspan="1"
+        >
+          align right
+        </td>
+      </tr>
+      <tr
+        class="lucid-Table-Tr lucid-Table-is-disabled lucid-Table-is-selected"
+      >
+        <td
+          class="lucid-Table-Td lucid-Table-is-first-single lucid-Table-align-left"
+          rowspan="1"
+        >
+          <div
+            class="lucid-Checkbox lucid-Checkbox-is-selected"
+          >
+            <input
+              checked=""
+              class="lucid-Checkbox-native"
+              type="checkbox"
+            />
+            <span
+              class="lucid-Checkbox-visualization-glow"
+            />
+            <span
+              class="lucid-Checkbox-visualization-container"
+            />
+            <span
+              class="lucid-Checkbox-visualization-checkmark"
+            >
+              <span
+                class="lucid-Checkbox-visualization-checkmark-stem"
+              />
+              <span
+                class="lucid-Checkbox-visualization-checkmark-kick"
+              />
+            </span>
+          </div>
+        </td>
+        <td
+          class="lucid-Table-Td lucid-Table-align-left"
+          rowspan="1"
+        >
+          isSelected && isDisabled
+        </td>
+        <td
+          class="lucid-Table-Td lucid-Table-align-left lucid-Table-has-border-right lucid-Table-has-border-left"
+          rowspan="1"
+        >
+          <svg
+            class="lucid-Icon lucid-Icon-color-primary lucid-SuccessIcon"
+            height="16"
+            preserveAspectRatio="xMidYMid meet"
+            viewBox="0 0 16 16"
+            width="16"
+          >
+            <circle
+              class="lucid-SuccessIcon-background"
+              cx="8"
+              cy="8"
+              r="7.5"
+            />
+            <path
+              class="lucid-SuccessIcon-check"
+              d="M4.5 8L7 10.5 11.5 6"
+            />
+          </svg>
+        </td>
+        <td
+          class="lucid-Table-Td lucid-Table-align-left"
+          rowspan="1"
+        >
+          <button
+            class="lucid-Button lucid-Button-is-disabled lucid-Button-small"
+            disabled=""
+            type="button"
+          >
+            <span
+              class="lucid-Button-content"
+            >
+              button
+            </span>
+          </button>
+        </td>
+        <td
+          class="lucid-Table-Td lucid-Table-align-left"
+          rowspan="1"
+        >
+          Sorted Column
+        </td>
+        <td
+          class="lucid-Table-Td lucid-Table-align-left lucid-Table-has-border-left"
+          rowspan="1"
+        >
+          align left
+        </td>
+        <td
+          class="lucid-Table-Td lucid-Table-align-center"
+          rowspan="1"
+        >
+          align center
+        </td>
+        <td
+          class="lucid-Table-Td lucid-Table-is-last-col lucid-Table-align-right"
+          rowspan="1"
+        >
+          align right
+        </td>
+      </tr>
+      <tr
+        class="lucid-Table-Tr lucid-Table-is-selected"
+      >
+        <td
+          class="lucid-Table-Td lucid-Table-is-first-single lucid-Table-align-left"
+          rowspan="1"
+        >
+          <div
+            class="lucid-Checkbox lucid-Checkbox-is-selected"
+          >
+            <input
+              checked=""
+              class="lucid-Checkbox-native"
+              type="checkbox"
+            />
+            <span
+              class="lucid-Checkbox-visualization-glow"
+            />
+            <span
+              class="lucid-Checkbox-visualization-container"
+            />
+            <span
+              class="lucid-Checkbox-visualization-checkmark"
+            >
+              <span
+                class="lucid-Checkbox-visualization-checkmark-stem"
+              />
+              <span
+                class="lucid-Checkbox-visualization-checkmark-kick"
+              />
+            </span>
+          </div>
+        </td>
+        <td
+          class="lucid-Table-Td lucid-Table-align-left"
+          rowspan="1"
+        >
+          isSelected && isActionable
+        </td>
+        <td
+          class="lucid-Table-Td lucid-Table-align-left lucid-Table-has-border-right lucid-Table-has-border-left"
+          rowspan="1"
+        >
+          <svg
+            class="lucid-Icon lucid-Icon-color-primary lucid-SuccessIcon"
+            height="16"
+            preserveAspectRatio="xMidYMid meet"
+            viewBox="0 0 16 16"
+            width="16"
+          >
+            <circle
+              class="lucid-SuccessIcon-background"
+              cx="8"
+              cy="8"
+              r="7.5"
+            />
+            <path
+              class="lucid-SuccessIcon-check"
+              d="M4.5 8L7 10.5 11.5 6"
+            />
+          </svg>
+        </td>
+        <td
+          class="lucid-Table-Td lucid-Table-align-left"
+          rowspan="1"
+        >
+          <button
+            class="lucid-Button lucid-Button-small"
+            type="button"
+          >
+            <span
+              class="lucid-Button-content"
+            >
+              button
+            </span>
+          </button>
+        </td>
+        <td
+          class="lucid-Table-Td lucid-Table-align-left"
+          rowspan="1"
+        >
+          Sorted Column
+        </td>
+        <td
+          class="lucid-Table-Td lucid-Table-align-left lucid-Table-has-border-left"
+          rowspan="1"
+        >
+          align left
+        </td>
+        <td
+          class="lucid-Table-Td lucid-Table-align-center"
+          rowspan="1"
+        >
+          align center
+        </td>
+        <td
+          class="lucid-Table-Td lucid-Table-is-last-col lucid-Table-align-right"
+          rowspan="1"
+        >
+          align right
+        </td>
+      </tr>
+      <tr
+        class="lucid-Table-Tr lucid-Table-is-disabled lucid-Table-is-selected"
+      >
+        <td
+          class="lucid-Table-Td lucid-Table-is-first-single lucid-Table-align-left"
+          rowspan="1"
+        >
+          <div
+            class="lucid-Checkbox lucid-Checkbox-is-selected"
+          >
+            <input
+              checked=""
+              class="lucid-Checkbox-native"
+              type="checkbox"
+            />
+            <span
+              class="lucid-Checkbox-visualization-glow"
+            />
+            <span
+              class="lucid-Checkbox-visualization-container"
+            />
+            <span
+              class="lucid-Checkbox-visualization-checkmark"
+            >
+              <span
+                class="lucid-Checkbox-visualization-checkmark-stem"
+              />
+              <span
+                class="lucid-Checkbox-visualization-checkmark-kick"
+              />
+            </span>
+          </div>
+        </td>
+        <td
+          class="lucid-Table-Td lucid-Table-align-left"
+          rowspan="1"
+        >
+          isSelected && isDisabled && isActionable
+        </td>
+        <td
+          class="lucid-Table-Td lucid-Table-align-left lucid-Table-has-border-right lucid-Table-has-border-left"
+          rowspan="1"
+        >
+          <svg
+            class="lucid-Icon lucid-Icon-color-primary lucid-SuccessIcon"
+            height="16"
+            preserveAspectRatio="xMidYMid meet"
+            viewBox="0 0 16 16"
+            width="16"
+          >
+            <circle
+              class="lucid-SuccessIcon-background"
+              cx="8"
+              cy="8"
+              r="7.5"
+            />
+            <path
+              class="lucid-SuccessIcon-check"
+              d="M4.5 8L7 10.5 11.5 6"
+            />
+          </svg>
+        </td>
+        <td
+          class="lucid-Table-Td lucid-Table-align-left"
+          rowspan="1"
+        >
+          <button
+            class="lucid-Button lucid-Button-is-disabled lucid-Button-small"
+            disabled=""
+            type="button"
+          >
+            <span
+              class="lucid-Button-content"
+            >
+              button
+            </span>
+          </button>
+        </td>
+        <td
+          class="lucid-Table-Td lucid-Table-align-left"
+          rowspan="1"
+        >
+          Sorted Column
+        </td>
+        <td
+          class="lucid-Table-Td lucid-Table-align-left lucid-Table-has-border-left"
+          rowspan="1"
+        >
+          align left
+        </td>
+        <td
+          class="lucid-Table-Td lucid-Table-align-center"
+          rowspan="1"
+        >
+          align center
+        </td>
+        <td
+          class="lucid-Table-Td lucid-Table-is-last-col lucid-Table-align-right"
+          rowspan="1"
+        >
+          align right
+        </td>
+      </tr>
+      <tr
+        class="lucid-Table-Tr lucid-Table-is-active"
+      >
+        <td
+          class="lucid-Table-Td lucid-Table-is-first-single lucid-Table-align-left"
+          rowspan="1"
+        >
+          <div
+            class="lucid-Checkbox"
+          >
+            <input
+              class="lucid-Checkbox-native"
+              type="checkbox"
+            />
+            <span
+              class="lucid-Checkbox-visualization-glow"
+            />
+            <span
+              class="lucid-Checkbox-visualization-container"
+            />
+            <span
+              class="lucid-Checkbox-visualization-checkmark"
+            >
+              <span
+                class="lucid-Checkbox-visualization-checkmark-stem"
+              />
+              <span
+                class="lucid-Checkbox-visualization-checkmark-kick"
+              />
+            </span>
+          </div>
+        </td>
+        <td
+          class="lucid-Table-Td lucid-Table-align-left"
+          rowspan="1"
+        >
+          isActive
+        </td>
+        <td
+          class="lucid-Table-Td lucid-Table-align-left lucid-Table-has-border-right lucid-Table-has-border-left"
+          rowspan="1"
+        >
+          <svg
+            class="lucid-Icon lucid-Icon-color-primary lucid-SuccessIcon"
+            height="16"
+            preserveAspectRatio="xMidYMid meet"
+            viewBox="0 0 16 16"
+            width="16"
+          >
+            <circle
+              class="lucid-SuccessIcon-background"
+              cx="8"
+              cy="8"
+              r="7.5"
+            />
+            <path
+              class="lucid-SuccessIcon-check"
+              d="M4.5 8L7 10.5 11.5 6"
+            />
+          </svg>
+        </td>
+        <td
+          class="lucid-Table-Td lucid-Table-align-left"
+          rowspan="1"
+        >
+          <button
+            class="lucid-Button lucid-Button-small"
+            type="button"
+          >
+            <span
+              class="lucid-Button-content"
+            >
+              button
+            </span>
+          </button>
+        </td>
+        <td
+          class="lucid-Table-Td lucid-Table-align-left"
+          rowspan="1"
+        >
+          Sorted Column
+        </td>
+        <td
+          class="lucid-Table-Td lucid-Table-align-left lucid-Table-has-border-left"
+          rowspan="1"
+        >
+          align left
+        </td>
+        <td
+          class="lucid-Table-Td lucid-Table-align-center"
+          rowspan="1"
+        >
+          align center
+        </td>
+        <td
+          class="lucid-Table-Td lucid-Table-is-last-col lucid-Table-align-right"
+          rowspan="1"
+        >
+          align right
+        </td>
+      </tr>
+      <tr
+        class="lucid-Table-Tr lucid-Table-is-disabled lucid-Table-is-active"
+      >
+        <td
+          class="lucid-Table-Td lucid-Table-is-last-row lucid-Table-is-first-single lucid-Table-align-left"
+          rowspan="1"
+        >
+          <div
+            class="lucid-Checkbox"
+          >
+            <input
+              class="lucid-Checkbox-native"
+              type="checkbox"
+            />
+            <span
+              class="lucid-Checkbox-visualization-glow"
+            />
+            <span
+              class="lucid-Checkbox-visualization-container"
+            />
+            <span
+              class="lucid-Checkbox-visualization-checkmark"
+            >
+              <span
+                class="lucid-Checkbox-visualization-checkmark-stem"
+              />
+              <span
+                class="lucid-Checkbox-visualization-checkmark-kick"
+              />
+            </span>
+          </div>
+        </td>
+        <td
+          class="lucid-Table-Td lucid-Table-is-last-row lucid-Table-align-left"
+          rowspan="1"
+        >
+          isActive && isDisabled
+        </td>
+        <td
+          class="lucid-Table-Td lucid-Table-is-last-row lucid-Table-align-left lucid-Table-has-border-right lucid-Table-has-border-left"
+          rowspan="1"
+        >
+          <svg
+            class="lucid-Icon lucid-Icon-color-primary lucid-SuccessIcon"
+            height="16"
+            preserveAspectRatio="xMidYMid meet"
+            viewBox="0 0 16 16"
+            width="16"
+          >
+            <circle
+              class="lucid-SuccessIcon-background"
+              cx="8"
+              cy="8"
+              r="7.5"
+            />
+            <path
+              class="lucid-SuccessIcon-check"
+              d="M4.5 8L7 10.5 11.5 6"
+            />
+          </svg>
+        </td>
+        <td
+          class="lucid-Table-Td lucid-Table-is-last-row lucid-Table-align-left"
+          rowspan="1"
+        >
+          <button
+            class="lucid-Button lucid-Button-is-disabled lucid-Button-small"
+            disabled=""
+            type="button"
+          >
+            <span
+              class="lucid-Button-content"
+            >
+              button
+            </span>
+          </button>
+        </td>
+        <td
+          class="lucid-Table-Td lucid-Table-is-last-row lucid-Table-align-left"
+          rowspan="1"
+        >
+          Sorted Column
+        </td>
+        <td
+          class="lucid-Table-Td lucid-Table-is-last-row lucid-Table-align-left lucid-Table-has-border-left"
+          rowspan="1"
+        >
+          align left
+        </td>
+        <td
+          class="lucid-Table-Td lucid-Table-is-last-row lucid-Table-align-center"
+          rowspan="1"
+        >
+          align center
+        </td>
+        <td
+          class="lucid-Table-Td lucid-Table-is-last-row lucid-Table-is-last-col lucid-Table-align-right"
+          rowspan="1"
+        >
+          align right
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
 exports[`ScrollTable [common] example testing should match snapshot(s) for FullWidth 1`] = `
 <div
   class="lucid-ScrollTable"
@@ -4403,1715 +6112,6 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for SetWi
 <div
   class="lucid-ScrollTable"
   style="width:300px;height:300px"
->
-  <table
-    class="lucid-Table lucid-Table-density-extended lucid-Table-has-light-header"
-  >
-    <thead
-      class="lucid-Table-Thead"
-    >
-      <tr
-        class="lucid-Table-Tr"
-      >
-        <th
-          class="lucid-Table-Th lucid-Table-is-first-row lucid-Table-is-last-row lucid-Table-is-first-col lucid-Table-align-left"
-          rowspan="2"
-        >
-          <div
-            class="lucid-Table-Th-inner"
-          >
-            <div
-              class="lucid-Table-Th-inner-content"
-            >
-              RS
-            </div>
-          </div>
-        </th>
-        <th
-          class="lucid-Table-Th lucid-Table-is-first-row lucid-Table-is-last-row lucid-Table-align-left"
-          rowspan="2"
-        >
-          <div
-            class="lucid-Table-Th-inner"
-          >
-            <div
-              class="lucid-Table-Th-inner-content"
-            >
-              <div
-                class="lucid-Checkbox"
-              >
-                <input
-                  class="lucid-Checkbox-native"
-                  type="checkbox"
-                />
-                <span
-                  class="lucid-Checkbox-visualization-glow"
-                />
-                <span
-                  class="lucid-Checkbox-visualization-container"
-                />
-                <span
-                  class="lucid-Checkbox-visualization-checkmark"
-                >
-                  <span
-                    class="lucid-Checkbox-visualization-checkmark-stem"
-                  />
-                  <span
-                    class="lucid-Checkbox-visualization-checkmark-kick"
-                  />
-                </span>
-              </div>
-            </div>
-          </div>
-        </th>
-        <th
-          class="lucid-Table-Th lucid-Table-is-first-row lucid-Table-is-last-row lucid-Table-align-left lucid-Table-is-resizable lucid-Table-is-sortable"
-          rowspan="2"
-        >
-          <div
-            class="lucid-Table-Th-inner"
-          >
-            <div
-              class="lucid-Table-Th-inner-content"
-            >
-              Sortable and resizable.
-            </div>
-            <div
-              class="lucid-Table-Th-inner-caret"
-            >
-              <svg
-                class="lucid-Icon lucid-Icon-color-primary lucid-ArrowIcon lucid-ArrowIcon-is-up lucid-Table-sort-icon"
-                height="10"
-                preserveAspectRatio="xMidYMid meet"
-                viewBox="0 0 16 16"
-                width="10"
-              >
-                <path
-                  d="M0 8h15.5m-6-6l6 6-6 6"
-                />
-              </svg>
-            </div>
-            <div
-              class="lucid-DragCaptureZone lucid-Table-Th-inner-resize"
-            />
-          </div>
-        </th>
-        <th
-          class="lucid-Table-Th lucid-Table-is-first-row lucid-Table-is-last-row lucid-Table-align-left"
-          rowspan="2"
-        >
-          <div
-            class="lucid-Table-Th-inner"
-          >
-            <div
-              class="lucid-Table-Th-inner-content"
-            >
-              <svg
-                class="lucid-Icon lucid-Icon-color-primary lucid-SuccessIcon"
-                height="16"
-                preserveAspectRatio="xMidYMid meet"
-                viewBox="0 0 16 16"
-                width="16"
-              >
-                <circle
-                  class="lucid-SuccessIcon-background"
-                  cx="8"
-                  cy="8"
-                  r="7.5"
-                />
-                <path
-                  class="lucid-SuccessIcon-check"
-                  d="M4.5 8L7 10.5 11.5 6"
-                />
-              </svg>
-            </div>
-          </div>
-        </th>
-        <th
-          class="lucid-Table-Th lucid-Table-is-first-row lucid-Table-is-last-row lucid-Table-align-left"
-          rowspan="2"
-        >
-          <div
-            class="lucid-Table-Th-inner"
-          >
-            <div
-              class="lucid-Table-Th-inner-content"
-            >
-              Button
-            </div>
-          </div>
-        </th>
-        <th
-          class="lucid-Table-Th lucid-Table-is-first-row lucid-Table-is-last-row lucid-Table-align-left lucid-Table-is-resizable lucid-Table-is-sortable lucid-Table-is-sorted"
-          rowspan="2"
-        >
-          <div
-            class="lucid-Table-Th-inner"
-          >
-            <div
-              class="lucid-Table-Th-inner-content"
-            >
-              Sorted Column
-            </div>
-            <div
-              class="lucid-Table-Th-inner-caret"
-            >
-              <svg
-                class="lucid-Icon lucid-Icon-color-primary lucid-ArrowIcon lucid-ArrowIcon-is-up lucid-Table-sort-icon"
-                height="10"
-                preserveAspectRatio="xMidYMid meet"
-                viewBox="0 0 16 16"
-                width="10"
-              >
-                <path
-                  d="M0 8h15.5m-6-6l6 6-6 6"
-                />
-              </svg>
-            </div>
-            <div
-              class="lucid-DragCaptureZone lucid-Table-Th-inner-resize"
-            />
-          </div>
-        </th>
-        <th
-          class="lucid-Table-Th lucid-Table-is-first-row lucid-Table-is-first-single lucid-Table-is-last-col lucid-Table-align-center"
-          colspan="3"
-          rowspan="1"
-        >
-          <div
-            class="lucid-Table-Th-inner"
-          >
-            <div
-              class="lucid-Table-Th-inner-content"
-            >
-              Alignments
-            </div>
-          </div>
-        </th>
-      </tr>
-      <tr
-        class="lucid-Table-Tr"
-      >
-        <th
-          class="lucid-Table-Th lucid-Table-is-last-row lucid-Table-is-first-single lucid-Table-align-left"
-          rowspan="1"
-        >
-          <div
-            class="lucid-Table-Th-inner"
-          >
-            <div
-              class="lucid-Table-Th-inner-content"
-            >
-              align left
-            </div>
-          </div>
-        </th>
-        <th
-          class="lucid-Table-Th lucid-Table-is-last-row lucid-Table-align-center lucid-Table-is-resizable"
-          rowspan="1"
-        >
-          <div
-            class="lucid-Table-Th-inner"
-          >
-            <div
-              class="lucid-Table-Th-inner-content"
-            >
-              align center
-            </div>
-            <div
-              class="lucid-DragCaptureZone lucid-Table-Th-inner-resize"
-            />
-          </div>
-        </th>
-        <th
-          class="lucid-Table-Th lucid-Table-is-last-row lucid-Table-is-last-col lucid-Table-align-right lucid-Table-is-sortable lucid-Table-is-sorted"
-          rowspan="1"
-        >
-          <div
-            class="lucid-Table-Th-inner"
-          >
-            <div
-              class="lucid-Table-Th-inner-content"
-            >
-              align right
-            </div>
-            <div
-              class="lucid-Table-Th-inner-caret"
-            >
-              <svg
-                class="lucid-Icon lucid-Icon-color-primary lucid-ArrowIcon lucid-ArrowIcon-is-up lucid-Table-sort-icon"
-                height="10"
-                preserveAspectRatio="xMidYMid meet"
-                viewBox="0 0 16 16"
-                width="10"
-              >
-                <path
-                  d="M0 8h15.5m-6-6l6 6-6 6"
-                />
-              </svg>
-            </div>
-          </div>
-        </th>
-      </tr>
-    </thead>
-    <tbody
-      class="lucid-Table-Tbody"
-    >
-      <tr
-        class="lucid-Table-Tr"
-      >
-        <td
-          class="lucid-Table-Td lucid-Table-is-first-row lucid-Table-is-last-row lucid-Table-is-first-col lucid-Table-align-left lucid-Table-has-border-right"
-          rowspan="14"
-        >
-          RS
-        </td>
-        <td
-          class="lucid-Table-Td lucid-Table-is-first-row lucid-Table-is-first-single lucid-Table-align-left"
-          rowspan="1"
-        >
-          <div
-            class="lucid-Checkbox"
-          >
-            <input
-              class="lucid-Checkbox-native"
-              type="checkbox"
-            />
-            <span
-              class="lucid-Checkbox-visualization-glow"
-            />
-            <span
-              class="lucid-Checkbox-visualization-container"
-            />
-            <span
-              class="lucid-Checkbox-visualization-checkmark"
-            >
-              <span
-                class="lucid-Checkbox-visualization-checkmark-stem"
-              />
-              <span
-                class="lucid-Checkbox-visualization-checkmark-kick"
-              />
-            </span>
-          </div>
-        </td>
-        <td
-          class="lucid-Table-Td lucid-Table-is-first-row lucid-Table-align-left"
-          rowspan="1"
-        >
-          Text
-        </td>
-        <td
-          class="lucid-Table-Td lucid-Table-is-first-row lucid-Table-align-left lucid-Table-has-border-right lucid-Table-has-border-left"
-          rowspan="1"
-        >
-          <svg
-            class="lucid-Icon lucid-Icon-color-primary lucid-SuccessIcon"
-            height="16"
-            preserveAspectRatio="xMidYMid meet"
-            viewBox="0 0 16 16"
-            width="16"
-          >
-            <circle
-              class="lucid-SuccessIcon-background"
-              cx="8"
-              cy="8"
-              r="7.5"
-            />
-            <path
-              class="lucid-SuccessIcon-check"
-              d="M4.5 8L7 10.5 11.5 6"
-            />
-          </svg>
-        </td>
-        <td
-          class="lucid-Table-Td lucid-Table-is-first-row lucid-Table-align-left"
-          rowspan="1"
-        >
-          <button
-            class="lucid-Button lucid-Button-small"
-            type="button"
-          >
-            <span
-              class="lucid-Button-content"
-            >
-              button
-            </span>
-          </button>
-        </td>
-        <td
-          class="lucid-Table-Td lucid-Table-is-first-row lucid-Table-align-left"
-          rowspan="1"
-        >
-          Sorted Column
-        </td>
-        <td
-          class="lucid-Table-Td lucid-Table-is-first-row lucid-Table-align-left lucid-Table-has-border-left"
-          rowspan="1"
-        >
-          align left
-        </td>
-        <td
-          class="lucid-Table-Td lucid-Table-is-first-row lucid-Table-align-center"
-          rowspan="1"
-        >
-          align center
-        </td>
-        <td
-          class="lucid-Table-Td lucid-Table-is-first-row lucid-Table-is-last-col lucid-Table-align-right"
-          rowspan="1"
-        >
-          align right
-        </td>
-      </tr>
-      <tr
-        class="lucid-Table-Tr lucid-Table-is-disabled"
-      >
-        <td
-          class="lucid-Table-Td lucid-Table-is-first-single lucid-Table-align-left"
-          rowspan="1"
-        >
-          <div
-            class="lucid-Checkbox"
-          >
-            <input
-              class="lucid-Checkbox-native"
-              type="checkbox"
-            />
-            <span
-              class="lucid-Checkbox-visualization-glow"
-            />
-            <span
-              class="lucid-Checkbox-visualization-container"
-            />
-            <span
-              class="lucid-Checkbox-visualization-checkmark"
-            >
-              <span
-                class="lucid-Checkbox-visualization-checkmark-stem"
-              />
-              <span
-                class="lucid-Checkbox-visualization-checkmark-kick"
-              />
-            </span>
-          </div>
-        </td>
-        <td
-          class="lucid-Table-Td lucid-Table-align-left"
-          rowspan="1"
-        >
-          isDisabled
-        </td>
-        <td
-          class="lucid-Table-Td lucid-Table-align-left lucid-Table-has-border-right lucid-Table-has-border-left"
-          rowspan="1"
-        >
-          <svg
-            class="lucid-Icon lucid-Icon-color-primary lucid-SuccessIcon"
-            height="16"
-            preserveAspectRatio="xMidYMid meet"
-            viewBox="0 0 16 16"
-            width="16"
-          >
-            <circle
-              class="lucid-SuccessIcon-background"
-              cx="8"
-              cy="8"
-              r="7.5"
-            />
-            <path
-              class="lucid-SuccessIcon-check"
-              d="M4.5 8L7 10.5 11.5 6"
-            />
-          </svg>
-        </td>
-        <td
-          class="lucid-Table-Td lucid-Table-align-left"
-          rowspan="1"
-        >
-          <button
-            class="lucid-Button lucid-Button-is-disabled lucid-Button-small"
-            disabled=""
-            type="button"
-          >
-            <span
-              class="lucid-Button-content"
-            >
-              button
-            </span>
-          </button>
-        </td>
-        <td
-          class="lucid-Table-Td lucid-Table-align-left"
-          rowspan="1"
-        >
-          Sorted Column
-        </td>
-        <td
-          class="lucid-Table-Td lucid-Table-align-left lucid-Table-has-border-left"
-          rowspan="1"
-        >
-          align left
-        </td>
-        <td
-          class="lucid-Table-Td lucid-Table-align-center"
-          rowspan="1"
-        >
-          align center
-        </td>
-        <td
-          class="lucid-Table-Td lucid-Table-is-last-col lucid-Table-align-right"
-          rowspan="1"
-        >
-          align right
-        </td>
-      </tr>
-      <tr
-        class="lucid-Table-Tr"
-      >
-        <td
-          class="lucid-Table-Td lucid-Table-is-first-single lucid-Table-align-left"
-          rowspan="1"
-        >
-          <div
-            class="lucid-Checkbox"
-          >
-            <input
-              class="lucid-Checkbox-native"
-              type="checkbox"
-            />
-            <span
-              class="lucid-Checkbox-visualization-glow"
-            />
-            <span
-              class="lucid-Checkbox-visualization-container"
-            />
-            <span
-              class="lucid-Checkbox-visualization-checkmark"
-            >
-              <span
-                class="lucid-Checkbox-visualization-checkmark-stem"
-              />
-              <span
-                class="lucid-Checkbox-visualization-checkmark-kick"
-              />
-            </span>
-          </div>
-        </td>
-        <td
-          class="lucid-Table-Td lucid-Table-align-left"
-          rowspan="1"
-        >
-          Text && isActionable
-        </td>
-        <td
-          class="lucid-Table-Td lucid-Table-align-left lucid-Table-has-border-right lucid-Table-has-border-left"
-          rowspan="1"
-        >
-          <svg
-            class="lucid-Icon lucid-Icon-color-primary lucid-SuccessIcon"
-            height="16"
-            preserveAspectRatio="xMidYMid meet"
-            viewBox="0 0 16 16"
-            width="16"
-          >
-            <circle
-              class="lucid-SuccessIcon-background"
-              cx="8"
-              cy="8"
-              r="7.5"
-            />
-            <path
-              class="lucid-SuccessIcon-check"
-              d="M4.5 8L7 10.5 11.5 6"
-            />
-          </svg>
-        </td>
-        <td
-          class="lucid-Table-Td lucid-Table-align-left"
-          rowspan="1"
-        >
-          <button
-            class="lucid-Button lucid-Button-small"
-            type="button"
-          >
-            <span
-              class="lucid-Button-content"
-            >
-              button
-            </span>
-          </button>
-        </td>
-        <td
-          class="lucid-Table-Td lucid-Table-align-left"
-          rowspan="1"
-        >
-          Sorted Column
-        </td>
-        <td
-          class="lucid-Table-Td lucid-Table-align-left lucid-Table-has-border-left"
-          rowspan="1"
-        >
-          align left
-        </td>
-        <td
-          class="lucid-Table-Td lucid-Table-align-center"
-          rowspan="1"
-        >
-          align center
-        </td>
-        <td
-          class="lucid-Table-Td lucid-Table-is-last-col lucid-Table-align-right"
-          rowspan="1"
-        >
-          align right
-        </td>
-      </tr>
-      <tr
-        class="lucid-Table-Tr lucid-Table-is-disabled"
-      >
-        <td
-          class="lucid-Table-Td lucid-Table-is-first-single lucid-Table-align-left"
-          rowspan="1"
-        >
-          <div
-            class="lucid-Checkbox"
-          >
-            <input
-              class="lucid-Checkbox-native"
-              type="checkbox"
-            />
-            <span
-              class="lucid-Checkbox-visualization-glow"
-            />
-            <span
-              class="lucid-Checkbox-visualization-container"
-            />
-            <span
-              class="lucid-Checkbox-visualization-checkmark"
-            >
-              <span
-                class="lucid-Checkbox-visualization-checkmark-stem"
-              />
-              <span
-                class="lucid-Checkbox-visualization-checkmark-kick"
-              />
-            </span>
-          </div>
-        </td>
-        <td
-          class="lucid-Table-Td lucid-Table-align-left"
-          rowspan="1"
-        >
-          isDisabled && isActionable
-        </td>
-        <td
-          class="lucid-Table-Td lucid-Table-align-left lucid-Table-has-border-right lucid-Table-has-border-left"
-          rowspan="1"
-        >
-          <svg
-            class="lucid-Icon lucid-Icon-color-primary lucid-SuccessIcon"
-            height="16"
-            preserveAspectRatio="xMidYMid meet"
-            viewBox="0 0 16 16"
-            width="16"
-          >
-            <circle
-              class="lucid-SuccessIcon-background"
-              cx="8"
-              cy="8"
-              r="7.5"
-            />
-            <path
-              class="lucid-SuccessIcon-check"
-              d="M4.5 8L7 10.5 11.5 6"
-            />
-          </svg>
-        </td>
-        <td
-          class="lucid-Table-Td lucid-Table-align-left"
-          rowspan="1"
-        >
-          <button
-            class="lucid-Button lucid-Button-is-disabled lucid-Button-small"
-            disabled=""
-            type="button"
-          >
-            <span
-              class="lucid-Button-content"
-            >
-              button
-            </span>
-          </button>
-        </td>
-        <td
-          class="lucid-Table-Td lucid-Table-align-left"
-          rowspan="1"
-        >
-          Sorted Column
-        </td>
-        <td
-          class="lucid-Table-Td lucid-Table-align-left lucid-Table-has-border-left"
-          rowspan="1"
-        >
-          align left
-        </td>
-        <td
-          class="lucid-Table-Td lucid-Table-align-center"
-          rowspan="1"
-        >
-          align center
-        </td>
-        <td
-          class="lucid-Table-Td lucid-Table-is-last-col lucid-Table-align-right"
-          rowspan="1"
-        >
-          align right
-        </td>
-      </tr>
-      <tr
-        class="lucid-Table-Tr"
-      >
-        <td
-          class="lucid-Table-Td lucid-Table-is-first-single lucid-Table-align-left"
-          rowspan="1"
-        >
-          <div
-            class="lucid-Checkbox"
-          >
-            <input
-              class="lucid-Checkbox-native"
-              type="checkbox"
-            />
-            <span
-              class="lucid-Checkbox-visualization-glow"
-            />
-            <span
-              class="lucid-Checkbox-visualization-container"
-            />
-            <span
-              class="lucid-Checkbox-visualization-checkmark"
-            >
-              <span
-                class="lucid-Checkbox-visualization-checkmark-stem"
-              />
-              <span
-                class="lucid-Checkbox-visualization-checkmark-kick"
-              />
-            </span>
-          </div>
-        </td>
-        <td
-          class="lucid-Table-Td lucid-Table-align-left"
-          rowspan="1"
-        >
-          <a
-            href="#"
-          >
-            Link
-          </a>
-        </td>
-        <td
-          class="lucid-Table-Td lucid-Table-align-left lucid-Table-has-border-right lucid-Table-has-border-left"
-          rowspan="1"
-        >
-          <svg
-            class="lucid-Icon lucid-Icon-color-primary lucid-SuccessIcon"
-            height="16"
-            preserveAspectRatio="xMidYMid meet"
-            viewBox="0 0 16 16"
-            width="16"
-          >
-            <circle
-              class="lucid-SuccessIcon-background"
-              cx="8"
-              cy="8"
-              r="7.5"
-            />
-            <path
-              class="lucid-SuccessIcon-check"
-              d="M4.5 8L7 10.5 11.5 6"
-            />
-          </svg>
-        </td>
-        <td
-          class="lucid-Table-Td lucid-Table-align-left"
-          rowspan="1"
-        >
-          <button
-            class="lucid-Button lucid-Button-small"
-            type="button"
-          >
-            <span
-              class="lucid-Button-content"
-            >
-              button
-            </span>
-          </button>
-        </td>
-        <td
-          class="lucid-Table-Td lucid-Table-align-left"
-          rowspan="1"
-        >
-          Sorted Column
-        </td>
-        <td
-          class="lucid-Table-Td lucid-Table-align-left lucid-Table-has-border-left"
-          rowspan="1"
-        >
-          align left
-        </td>
-        <td
-          class="lucid-Table-Td lucid-Table-align-center"
-          rowspan="1"
-        >
-          align center
-        </td>
-        <td
-          class="lucid-Table-Td lucid-Table-is-last-col lucid-Table-align-right"
-          rowspan="1"
-        >
-          align right
-        </td>
-      </tr>
-      <tr
-        class="lucid-Table-Tr lucid-Table-is-disabled"
-      >
-        <td
-          class="lucid-Table-Td lucid-Table-is-first-single lucid-Table-align-left"
-          rowspan="1"
-        >
-          <div
-            class="lucid-Checkbox"
-          >
-            <input
-              class="lucid-Checkbox-native"
-              type="checkbox"
-            />
-            <span
-              class="lucid-Checkbox-visualization-glow"
-            />
-            <span
-              class="lucid-Checkbox-visualization-container"
-            />
-            <span
-              class="lucid-Checkbox-visualization-checkmark"
-            >
-              <span
-                class="lucid-Checkbox-visualization-checkmark-stem"
-              />
-              <span
-                class="lucid-Checkbox-visualization-checkmark-kick"
-              />
-            </span>
-          </div>
-        </td>
-        <td
-          class="lucid-Table-Td lucid-Table-align-left"
-          rowspan="1"
-        >
-          <a
-            href="#"
-          >
-            isDisabled Link
-          </a>
-        </td>
-        <td
-          class="lucid-Table-Td lucid-Table-align-left lucid-Table-has-border-right lucid-Table-has-border-left"
-          rowspan="1"
-        >
-          <svg
-            class="lucid-Icon lucid-Icon-color-primary lucid-SuccessIcon"
-            height="16"
-            preserveAspectRatio="xMidYMid meet"
-            viewBox="0 0 16 16"
-            width="16"
-          >
-            <circle
-              class="lucid-SuccessIcon-background"
-              cx="8"
-              cy="8"
-              r="7.5"
-            />
-            <path
-              class="lucid-SuccessIcon-check"
-              d="M4.5 8L7 10.5 11.5 6"
-            />
-          </svg>
-        </td>
-        <td
-          class="lucid-Table-Td lucid-Table-align-left"
-          rowspan="1"
-        >
-          <button
-            class="lucid-Button lucid-Button-is-disabled lucid-Button-small"
-            disabled=""
-            type="button"
-          >
-            <span
-              class="lucid-Button-content"
-            >
-              button
-            </span>
-          </button>
-        </td>
-        <td
-          class="lucid-Table-Td lucid-Table-align-left"
-          rowspan="1"
-        >
-          Sorted Column
-        </td>
-        <td
-          class="lucid-Table-Td lucid-Table-align-left lucid-Table-has-border-left"
-          rowspan="1"
-        >
-          align left
-        </td>
-        <td
-          class="lucid-Table-Td lucid-Table-align-center"
-          rowspan="1"
-        >
-          align center
-        </td>
-        <td
-          class="lucid-Table-Td lucid-Table-is-last-col lucid-Table-align-right"
-          rowspan="1"
-        >
-          align right
-        </td>
-      </tr>
-      <tr
-        class="lucid-Table-Tr"
-      >
-        <td
-          class="lucid-Table-Td lucid-Table-is-first-single lucid-Table-align-left"
-          rowspan="1"
-        >
-          <div
-            class="lucid-Checkbox"
-          >
-            <input
-              class="lucid-Checkbox-native"
-              type="checkbox"
-            />
-            <span
-              class="lucid-Checkbox-visualization-glow"
-            />
-            <span
-              class="lucid-Checkbox-visualization-container"
-            />
-            <span
-              class="lucid-Checkbox-visualization-checkmark"
-            >
-              <span
-                class="lucid-Checkbox-visualization-checkmark-stem"
-              />
-              <span
-                class="lucid-Checkbox-visualization-checkmark-kick"
-              />
-            </span>
-          </div>
-        </td>
-        <td
-          class="lucid-Table-Td lucid-Table-align-left"
-          rowspan="1"
-        >
-          <a
-            href="#"
-          >
-            Link && isActionable
-          </a>
-        </td>
-        <td
-          class="lucid-Table-Td lucid-Table-align-left lucid-Table-has-border-right lucid-Table-has-border-left"
-          rowspan="1"
-        >
-          <svg
-            class="lucid-Icon lucid-Icon-color-primary lucid-SuccessIcon"
-            height="16"
-            preserveAspectRatio="xMidYMid meet"
-            viewBox="0 0 16 16"
-            width="16"
-          >
-            <circle
-              class="lucid-SuccessIcon-background"
-              cx="8"
-              cy="8"
-              r="7.5"
-            />
-            <path
-              class="lucid-SuccessIcon-check"
-              d="M4.5 8L7 10.5 11.5 6"
-            />
-          </svg>
-        </td>
-        <td
-          class="lucid-Table-Td lucid-Table-align-left"
-          rowspan="1"
-        >
-          <button
-            class="lucid-Button lucid-Button-small"
-            type="button"
-          >
-            <span
-              class="lucid-Button-content"
-            >
-              button
-            </span>
-          </button>
-        </td>
-        <td
-          class="lucid-Table-Td lucid-Table-align-left"
-          rowspan="1"
-        >
-          Sorted Column
-        </td>
-        <td
-          class="lucid-Table-Td lucid-Table-align-left lucid-Table-has-border-left"
-          rowspan="1"
-        >
-          align left
-        </td>
-        <td
-          class="lucid-Table-Td lucid-Table-align-center"
-          rowspan="1"
-        >
-          align center
-        </td>
-        <td
-          class="lucid-Table-Td lucid-Table-is-last-col lucid-Table-align-right"
-          rowspan="1"
-        >
-          align right
-        </td>
-      </tr>
-      <tr
-        class="lucid-Table-Tr lucid-Table-is-disabled"
-      >
-        <td
-          class="lucid-Table-Td lucid-Table-is-first-single lucid-Table-align-left"
-          rowspan="1"
-        >
-          <div
-            class="lucid-Checkbox"
-          >
-            <input
-              class="lucid-Checkbox-native"
-              type="checkbox"
-            />
-            <span
-              class="lucid-Checkbox-visualization-glow"
-            />
-            <span
-              class="lucid-Checkbox-visualization-container"
-            />
-            <span
-              class="lucid-Checkbox-visualization-checkmark"
-            >
-              <span
-                class="lucid-Checkbox-visualization-checkmark-stem"
-              />
-              <span
-                class="lucid-Checkbox-visualization-checkmark-kick"
-              />
-            </span>
-          </div>
-        </td>
-        <td
-          class="lucid-Table-Td lucid-Table-align-left"
-          rowspan="1"
-        >
-          <a
-            href="#"
-          >
-            isDisabled Link && isActionable
-          </a>
-        </td>
-        <td
-          class="lucid-Table-Td lucid-Table-align-left lucid-Table-has-border-right lucid-Table-has-border-left"
-          rowspan="1"
-        >
-          <svg
-            class="lucid-Icon lucid-Icon-color-primary lucid-SuccessIcon"
-            height="16"
-            preserveAspectRatio="xMidYMid meet"
-            viewBox="0 0 16 16"
-            width="16"
-          >
-            <circle
-              class="lucid-SuccessIcon-background"
-              cx="8"
-              cy="8"
-              r="7.5"
-            />
-            <path
-              class="lucid-SuccessIcon-check"
-              d="M4.5 8L7 10.5 11.5 6"
-            />
-          </svg>
-        </td>
-        <td
-          class="lucid-Table-Td lucid-Table-align-left"
-          rowspan="1"
-        >
-          <button
-            class="lucid-Button lucid-Button-is-disabled lucid-Button-small"
-            disabled=""
-            type="button"
-          >
-            <span
-              class="lucid-Button-content"
-            >
-              button
-            </span>
-          </button>
-        </td>
-        <td
-          class="lucid-Table-Td lucid-Table-align-left"
-          rowspan="1"
-        >
-          Sorted Column
-        </td>
-        <td
-          class="lucid-Table-Td lucid-Table-align-left lucid-Table-has-border-left"
-          rowspan="1"
-        >
-          align left
-        </td>
-        <td
-          class="lucid-Table-Td lucid-Table-align-center"
-          rowspan="1"
-        >
-          align center
-        </td>
-        <td
-          class="lucid-Table-Td lucid-Table-is-last-col lucid-Table-align-right"
-          rowspan="1"
-        >
-          align right
-        </td>
-      </tr>
-      <tr
-        class="lucid-Table-Tr lucid-Table-is-selected"
-      >
-        <td
-          class="lucid-Table-Td lucid-Table-is-first-single lucid-Table-align-left"
-          rowspan="1"
-        >
-          <div
-            class="lucid-Checkbox lucid-Checkbox-is-selected"
-          >
-            <input
-              checked=""
-              class="lucid-Checkbox-native"
-              type="checkbox"
-            />
-            <span
-              class="lucid-Checkbox-visualization-glow"
-            />
-            <span
-              class="lucid-Checkbox-visualization-container"
-            />
-            <span
-              class="lucid-Checkbox-visualization-checkmark"
-            >
-              <span
-                class="lucid-Checkbox-visualization-checkmark-stem"
-              />
-              <span
-                class="lucid-Checkbox-visualization-checkmark-kick"
-              />
-            </span>
-          </div>
-        </td>
-        <td
-          class="lucid-Table-Td lucid-Table-align-left"
-          rowspan="1"
-        >
-          isSelected
-        </td>
-        <td
-          class="lucid-Table-Td lucid-Table-align-left lucid-Table-has-border-right lucid-Table-has-border-left"
-          rowspan="1"
-        >
-          <svg
-            class="lucid-Icon lucid-Icon-color-primary lucid-SuccessIcon"
-            height="16"
-            preserveAspectRatio="xMidYMid meet"
-            viewBox="0 0 16 16"
-            width="16"
-          >
-            <circle
-              class="lucid-SuccessIcon-background"
-              cx="8"
-              cy="8"
-              r="7.5"
-            />
-            <path
-              class="lucid-SuccessIcon-check"
-              d="M4.5 8L7 10.5 11.5 6"
-            />
-          </svg>
-        </td>
-        <td
-          class="lucid-Table-Td lucid-Table-align-left"
-          rowspan="1"
-        >
-          <button
-            class="lucid-Button lucid-Button-small"
-            type="button"
-          >
-            <span
-              class="lucid-Button-content"
-            >
-              button
-            </span>
-          </button>
-        </td>
-        <td
-          class="lucid-Table-Td lucid-Table-align-left"
-          rowspan="1"
-        >
-          Sorted Column
-        </td>
-        <td
-          class="lucid-Table-Td lucid-Table-align-left lucid-Table-has-border-left"
-          rowspan="1"
-        >
-          align left
-        </td>
-        <td
-          class="lucid-Table-Td lucid-Table-align-center"
-          rowspan="1"
-        >
-          align center
-        </td>
-        <td
-          class="lucid-Table-Td lucid-Table-is-last-col lucid-Table-align-right"
-          rowspan="1"
-        >
-          align right
-        </td>
-      </tr>
-      <tr
-        class="lucid-Table-Tr lucid-Table-is-disabled lucid-Table-is-selected"
-      >
-        <td
-          class="lucid-Table-Td lucid-Table-is-first-single lucid-Table-align-left"
-          rowspan="1"
-        >
-          <div
-            class="lucid-Checkbox lucid-Checkbox-is-selected"
-          >
-            <input
-              checked=""
-              class="lucid-Checkbox-native"
-              type="checkbox"
-            />
-            <span
-              class="lucid-Checkbox-visualization-glow"
-            />
-            <span
-              class="lucid-Checkbox-visualization-container"
-            />
-            <span
-              class="lucid-Checkbox-visualization-checkmark"
-            >
-              <span
-                class="lucid-Checkbox-visualization-checkmark-stem"
-              />
-              <span
-                class="lucid-Checkbox-visualization-checkmark-kick"
-              />
-            </span>
-          </div>
-        </td>
-        <td
-          class="lucid-Table-Td lucid-Table-align-left"
-          rowspan="1"
-        >
-          isSelected && isDisabled
-        </td>
-        <td
-          class="lucid-Table-Td lucid-Table-align-left lucid-Table-has-border-right lucid-Table-has-border-left"
-          rowspan="1"
-        >
-          <svg
-            class="lucid-Icon lucid-Icon-color-primary lucid-SuccessIcon"
-            height="16"
-            preserveAspectRatio="xMidYMid meet"
-            viewBox="0 0 16 16"
-            width="16"
-          >
-            <circle
-              class="lucid-SuccessIcon-background"
-              cx="8"
-              cy="8"
-              r="7.5"
-            />
-            <path
-              class="lucid-SuccessIcon-check"
-              d="M4.5 8L7 10.5 11.5 6"
-            />
-          </svg>
-        </td>
-        <td
-          class="lucid-Table-Td lucid-Table-align-left"
-          rowspan="1"
-        >
-          <button
-            class="lucid-Button lucid-Button-is-disabled lucid-Button-small"
-            disabled=""
-            type="button"
-          >
-            <span
-              class="lucid-Button-content"
-            >
-              button
-            </span>
-          </button>
-        </td>
-        <td
-          class="lucid-Table-Td lucid-Table-align-left"
-          rowspan="1"
-        >
-          Sorted Column
-        </td>
-        <td
-          class="lucid-Table-Td lucid-Table-align-left lucid-Table-has-border-left"
-          rowspan="1"
-        >
-          align left
-        </td>
-        <td
-          class="lucid-Table-Td lucid-Table-align-center"
-          rowspan="1"
-        >
-          align center
-        </td>
-        <td
-          class="lucid-Table-Td lucid-Table-is-last-col lucid-Table-align-right"
-          rowspan="1"
-        >
-          align right
-        </td>
-      </tr>
-      <tr
-        class="lucid-Table-Tr lucid-Table-is-selected"
-      >
-        <td
-          class="lucid-Table-Td lucid-Table-is-first-single lucid-Table-align-left"
-          rowspan="1"
-        >
-          <div
-            class="lucid-Checkbox lucid-Checkbox-is-selected"
-          >
-            <input
-              checked=""
-              class="lucid-Checkbox-native"
-              type="checkbox"
-            />
-            <span
-              class="lucid-Checkbox-visualization-glow"
-            />
-            <span
-              class="lucid-Checkbox-visualization-container"
-            />
-            <span
-              class="lucid-Checkbox-visualization-checkmark"
-            >
-              <span
-                class="lucid-Checkbox-visualization-checkmark-stem"
-              />
-              <span
-                class="lucid-Checkbox-visualization-checkmark-kick"
-              />
-            </span>
-          </div>
-        </td>
-        <td
-          class="lucid-Table-Td lucid-Table-align-left"
-          rowspan="1"
-        >
-          isSelected && isActionable
-        </td>
-        <td
-          class="lucid-Table-Td lucid-Table-align-left lucid-Table-has-border-right lucid-Table-has-border-left"
-          rowspan="1"
-        >
-          <svg
-            class="lucid-Icon lucid-Icon-color-primary lucid-SuccessIcon"
-            height="16"
-            preserveAspectRatio="xMidYMid meet"
-            viewBox="0 0 16 16"
-            width="16"
-          >
-            <circle
-              class="lucid-SuccessIcon-background"
-              cx="8"
-              cy="8"
-              r="7.5"
-            />
-            <path
-              class="lucid-SuccessIcon-check"
-              d="M4.5 8L7 10.5 11.5 6"
-            />
-          </svg>
-        </td>
-        <td
-          class="lucid-Table-Td lucid-Table-align-left"
-          rowspan="1"
-        >
-          <button
-            class="lucid-Button lucid-Button-small"
-            type="button"
-          >
-            <span
-              class="lucid-Button-content"
-            >
-              button
-            </span>
-          </button>
-        </td>
-        <td
-          class="lucid-Table-Td lucid-Table-align-left"
-          rowspan="1"
-        >
-          Sorted Column
-        </td>
-        <td
-          class="lucid-Table-Td lucid-Table-align-left lucid-Table-has-border-left"
-          rowspan="1"
-        >
-          align left
-        </td>
-        <td
-          class="lucid-Table-Td lucid-Table-align-center"
-          rowspan="1"
-        >
-          align center
-        </td>
-        <td
-          class="lucid-Table-Td lucid-Table-is-last-col lucid-Table-align-right"
-          rowspan="1"
-        >
-          align right
-        </td>
-      </tr>
-      <tr
-        class="lucid-Table-Tr lucid-Table-is-disabled lucid-Table-is-selected"
-      >
-        <td
-          class="lucid-Table-Td lucid-Table-is-first-single lucid-Table-align-left"
-          rowspan="1"
-        >
-          <div
-            class="lucid-Checkbox lucid-Checkbox-is-selected"
-          >
-            <input
-              checked=""
-              class="lucid-Checkbox-native"
-              type="checkbox"
-            />
-            <span
-              class="lucid-Checkbox-visualization-glow"
-            />
-            <span
-              class="lucid-Checkbox-visualization-container"
-            />
-            <span
-              class="lucid-Checkbox-visualization-checkmark"
-            >
-              <span
-                class="lucid-Checkbox-visualization-checkmark-stem"
-              />
-              <span
-                class="lucid-Checkbox-visualization-checkmark-kick"
-              />
-            </span>
-          </div>
-        </td>
-        <td
-          class="lucid-Table-Td lucid-Table-align-left"
-          rowspan="1"
-        >
-          isSelected && isDisabled && isActionable
-        </td>
-        <td
-          class="lucid-Table-Td lucid-Table-align-left lucid-Table-has-border-right lucid-Table-has-border-left"
-          rowspan="1"
-        >
-          <svg
-            class="lucid-Icon lucid-Icon-color-primary lucid-SuccessIcon"
-            height="16"
-            preserveAspectRatio="xMidYMid meet"
-            viewBox="0 0 16 16"
-            width="16"
-          >
-            <circle
-              class="lucid-SuccessIcon-background"
-              cx="8"
-              cy="8"
-              r="7.5"
-            />
-            <path
-              class="lucid-SuccessIcon-check"
-              d="M4.5 8L7 10.5 11.5 6"
-            />
-          </svg>
-        </td>
-        <td
-          class="lucid-Table-Td lucid-Table-align-left"
-          rowspan="1"
-        >
-          <button
-            class="lucid-Button lucid-Button-is-disabled lucid-Button-small"
-            disabled=""
-            type="button"
-          >
-            <span
-              class="lucid-Button-content"
-            >
-              button
-            </span>
-          </button>
-        </td>
-        <td
-          class="lucid-Table-Td lucid-Table-align-left"
-          rowspan="1"
-        >
-          Sorted Column
-        </td>
-        <td
-          class="lucid-Table-Td lucid-Table-align-left lucid-Table-has-border-left"
-          rowspan="1"
-        >
-          align left
-        </td>
-        <td
-          class="lucid-Table-Td lucid-Table-align-center"
-          rowspan="1"
-        >
-          align center
-        </td>
-        <td
-          class="lucid-Table-Td lucid-Table-is-last-col lucid-Table-align-right"
-          rowspan="1"
-        >
-          align right
-        </td>
-      </tr>
-      <tr
-        class="lucid-Table-Tr lucid-Table-is-active"
-      >
-        <td
-          class="lucid-Table-Td lucid-Table-is-first-single lucid-Table-align-left"
-          rowspan="1"
-        >
-          <div
-            class="lucid-Checkbox"
-          >
-            <input
-              class="lucid-Checkbox-native"
-              type="checkbox"
-            />
-            <span
-              class="lucid-Checkbox-visualization-glow"
-            />
-            <span
-              class="lucid-Checkbox-visualization-container"
-            />
-            <span
-              class="lucid-Checkbox-visualization-checkmark"
-            >
-              <span
-                class="lucid-Checkbox-visualization-checkmark-stem"
-              />
-              <span
-                class="lucid-Checkbox-visualization-checkmark-kick"
-              />
-            </span>
-          </div>
-        </td>
-        <td
-          class="lucid-Table-Td lucid-Table-align-left"
-          rowspan="1"
-        >
-          isActive
-        </td>
-        <td
-          class="lucid-Table-Td lucid-Table-align-left lucid-Table-has-border-right lucid-Table-has-border-left"
-          rowspan="1"
-        >
-          <svg
-            class="lucid-Icon lucid-Icon-color-primary lucid-SuccessIcon"
-            height="16"
-            preserveAspectRatio="xMidYMid meet"
-            viewBox="0 0 16 16"
-            width="16"
-          >
-            <circle
-              class="lucid-SuccessIcon-background"
-              cx="8"
-              cy="8"
-              r="7.5"
-            />
-            <path
-              class="lucid-SuccessIcon-check"
-              d="M4.5 8L7 10.5 11.5 6"
-            />
-          </svg>
-        </td>
-        <td
-          class="lucid-Table-Td lucid-Table-align-left"
-          rowspan="1"
-        >
-          <button
-            class="lucid-Button lucid-Button-small"
-            type="button"
-          >
-            <span
-              class="lucid-Button-content"
-            >
-              button
-            </span>
-          </button>
-        </td>
-        <td
-          class="lucid-Table-Td lucid-Table-align-left"
-          rowspan="1"
-        >
-          Sorted Column
-        </td>
-        <td
-          class="lucid-Table-Td lucid-Table-align-left lucid-Table-has-border-left"
-          rowspan="1"
-        >
-          align left
-        </td>
-        <td
-          class="lucid-Table-Td lucid-Table-align-center"
-          rowspan="1"
-        >
-          align center
-        </td>
-        <td
-          class="lucid-Table-Td lucid-Table-is-last-col lucid-Table-align-right"
-          rowspan="1"
-        >
-          align right
-        </td>
-      </tr>
-      <tr
-        class="lucid-Table-Tr lucid-Table-is-disabled lucid-Table-is-active"
-      >
-        <td
-          class="lucid-Table-Td lucid-Table-is-last-row lucid-Table-is-first-single lucid-Table-align-left"
-          rowspan="1"
-        >
-          <div
-            class="lucid-Checkbox"
-          >
-            <input
-              class="lucid-Checkbox-native"
-              type="checkbox"
-            />
-            <span
-              class="lucid-Checkbox-visualization-glow"
-            />
-            <span
-              class="lucid-Checkbox-visualization-container"
-            />
-            <span
-              class="lucid-Checkbox-visualization-checkmark"
-            >
-              <span
-                class="lucid-Checkbox-visualization-checkmark-stem"
-              />
-              <span
-                class="lucid-Checkbox-visualization-checkmark-kick"
-              />
-            </span>
-          </div>
-        </td>
-        <td
-          class="lucid-Table-Td lucid-Table-is-last-row lucid-Table-align-left"
-          rowspan="1"
-        >
-          isActive && isDisabled
-        </td>
-        <td
-          class="lucid-Table-Td lucid-Table-is-last-row lucid-Table-align-left lucid-Table-has-border-right lucid-Table-has-border-left"
-          rowspan="1"
-        >
-          <svg
-            class="lucid-Icon lucid-Icon-color-primary lucid-SuccessIcon"
-            height="16"
-            preserveAspectRatio="xMidYMid meet"
-            viewBox="0 0 16 16"
-            width="16"
-          >
-            <circle
-              class="lucid-SuccessIcon-background"
-              cx="8"
-              cy="8"
-              r="7.5"
-            />
-            <path
-              class="lucid-SuccessIcon-check"
-              d="M4.5 8L7 10.5 11.5 6"
-            />
-          </svg>
-        </td>
-        <td
-          class="lucid-Table-Td lucid-Table-is-last-row lucid-Table-align-left"
-          rowspan="1"
-        >
-          <button
-            class="lucid-Button lucid-Button-is-disabled lucid-Button-small"
-            disabled=""
-            type="button"
-          >
-            <span
-              class="lucid-Button-content"
-            >
-              button
-            </span>
-          </button>
-        </td>
-        <td
-          class="lucid-Table-Td lucid-Table-is-last-row lucid-Table-align-left"
-          rowspan="1"
-        >
-          Sorted Column
-        </td>
-        <td
-          class="lucid-Table-Td lucid-Table-is-last-row lucid-Table-align-left lucid-Table-has-border-left"
-          rowspan="1"
-        >
-          align left
-        </td>
-        <td
-          class="lucid-Table-Td lucid-Table-is-last-row lucid-Table-align-center"
-          rowspan="1"
-        >
-          align center
-        </td>
-        <td
-          class="lucid-Table-Td lucid-Table-is-last-row lucid-Table-is-last-col lucid-Table-align-right"
-          rowspan="1"
-        >
-          align right
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-`;
-
-exports[`ScrollTable [common] example testing should match snapshot(s) for Standard 1`] = `
-<div
-  class="lucid-ScrollTable"
 >
   <table
     class="lucid-Table lucid-Table-density-extended lucid-Table-has-light-header"
