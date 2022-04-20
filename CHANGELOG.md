@@ -1,3 +1,48 @@
+## 8.13.0
+
+- #1390 Remove optional chaining due to compile issues
+- #1389 BUDE-1755: Remove optional chaining due to compile issues
+- #1388 Cxp 2581 split button replace omit props #1366
+- #1387 Cxp 2578 scroll table fix omit props #1368
+- #1386 Update snapshot for ScrollTable
+- #1385 Replace omitProps with explicit list of propTypes
+- #1384 Update ScrollTable stories to use controls
+- #1383 Add unit tests for omitted props
+- #1382 vertical list menu& splithorizontal replace omit props
+- #1381 Fix TypeScript error for incompatible ref types
+- #1380 Cxp switch switch labeled replace omit props #1364
+- #1379 Replace omitProps with explicit list of props
+- #1378 Update snapshots
+- #1377 Update stories to SB6
+- #1376 Add unit tests for omitted props
+- #1375 Replace omitProps with explicit lists of props
+- #1374 Remove unused lodash method
+- #1373 Update story to SB6
+- #1372 Add unit test for omitted props
+- #1371 Replace omitProps with explicit list of props
+- #1370 Update storybook story for VerticalListMenu
+- #1369 Add unit test for omitted props
+- #1368 Add unit test for pass throughs, Update stories to SB6 and functional comp, Replace omitProps with explicit list of props
+- #1367 Update unit test
+- #1366 Replace omitProps method w/ explicit list of omits
+- #1365 Add stateful Switch for Basic story
+- #1364 Update snapshots
+- #1363 Replace omitProps with explicit list of props
+- #1362 Update stories to SB6 and functional comp
+- #1361 Add unit test for pass throughs
+- #1360 for the Grid component:
+  - Replace omitProps with specific list of pros,
+  - update Stories to SB6
+  - add unit tests
+- #1359 For ResponsiveGrid:
+  - replace omitProps with explicit list of omitted props
+  - update Stories to SB6
+  - add unit tests for omitted and included props
+- #1358 Icons replace omit props update Stories
+- #1357 ToolTip and Pie Chart replace omitProps
+
+  https://github.com/appnexus/lucid/compare/v8.12.0...v8.13.0
+
 ## 8.12.0
 
 - #1356 Add an optional title to `SingleSelect`.
