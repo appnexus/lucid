@@ -1,4 +1,4 @@
-import _ from 'lodash';
+import _, { omit } from 'lodash';
 import React, { RefObject } from 'react';
 import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
@@ -97,7 +97,7 @@ SplitVerticalDivider.propTypes = {
 	children: node,
 };
 
-interface ISplitVerticalProps
+export interface ISplitVerticalProps
 	extends StandardProps,
 		React.DetailedHTMLProps<
 			React.HTMLAttributes<HTMLDivElement>,
@@ -491,7 +491,20 @@ class SplitVertical extends React.Component<
 
 		return (
 			<div
-				{...omitProps(passThroughs, undefined, _.keys(SplitVertical.propTypes))}
+				{...omit(passThroughs, [
+					'className',
+					'children',
+					'isExpanded',
+					'isAnimated',
+					'onResizing',
+					'onResize',
+					'collapseShift',
+					'RightPane',
+					'LeftPane',
+					'Divider',
+					'initialState',
+					'callbackId',
+				])}
 				className={cx(
 					'&',
 					{
