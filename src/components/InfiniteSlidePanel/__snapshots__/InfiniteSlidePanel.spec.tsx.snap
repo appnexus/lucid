@@ -22,7 +22,11 @@ exports[`InfiniteSlidePanel [common] example testing should match snapshot(s) fo
       Forward
     </span>
   </button>
-  Current offset: 0
+  <span
+    style="margin-left:10px"
+  >
+    Current offset: 0
+  </span>
   <div
     class="lucid-SlidePanel lucid-InfiniteSlidePanel"
   >
