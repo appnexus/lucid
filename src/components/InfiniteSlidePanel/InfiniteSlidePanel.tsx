@@ -1,6 +1,7 @@
-import _ from 'lodash';
+import _, { omit } from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
+
 import { lucidClassNames } from '../../util/style-helpers';
 import { Overwrite, getFirst, omitProps } from '../../util/component-types';
 import SlidePanel, {
@@ -43,6 +44,7 @@ export interface IInfiniteSlidePanelPropsRaw {
 	 * re-used. */
 	isLooped: boolean;
 
+	/** Child components of SlidePanel */
 	Slide?: React.ReactNode;
 }
 
@@ -104,12 +106,7 @@ export const InfiniteSlidePanel = (
 
 	return (
 		<SlidePanel
-			{...omitProps<IInfiniteSlidePanelProps>(
-				passThroughs,
-				undefined,
-				_.keys(InfiniteSlidePanel.propTypes),
-				false
-			)}
+			{...omit(passThroughs, ['Slide', 'initialState'] as any)}
 			className={cx('&', className)}
 			offset={offset}
 			slidesToShow={slidesToShow}
@@ -186,6 +183,7 @@ InfiniteSlidePanel.propTypes = {
 	*/
 	totalSlides: number,
 
+	/** Child components of SlidePanel */
 	Slide: node,
 };
 
