@@ -187,6 +187,12 @@ class SearchField extends React.Component<
 		value: '',
 	};
 
+	private textFieldElement = React.createRef<TextField>();
+
+	focus = (options?: FocusOptions): void => {
+		this.textFieldElement.current?.focus(options);
+	};
+
 	render(): React.ReactNode {
 		const {
 			props,
@@ -222,7 +228,9 @@ class SearchField extends React.Component<
 			autoComplete,
 		};
 
-		const textFieldElement = <TextField {...textFieldProps} />;
+		const textFieldElement = (
+			<TextField ref={this.textFieldElement} {...textFieldProps} />
+		);
 		const isIconActive = _.isUndefined(isValid)
 			? !_.isEmpty(_.get(textFieldElement, 'props.value'))
 			: isValid;
