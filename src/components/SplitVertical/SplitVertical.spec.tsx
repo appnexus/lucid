@@ -106,7 +106,6 @@ describe('SplitVertical', () => {
 						'callbackId',
 					],
 					(prop) => {
-						console.log(prop);
 						expect(has(rootProps, prop)).toBe(false);
 					}
 				);
