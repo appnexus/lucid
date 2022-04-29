@@ -1,7 +1,8 @@
+import _, { forEach, has } from 'lodash';
 import React from 'react';
 import { mount, shallow } from 'enzyme';
 import assert from 'assert';
-import _ from 'lodash';
+
 import { common } from '../../util/generic-tests';
 import { dispatchDOMEvent } from '../../util/dom-helpers';
 import StickySection from './StickySection';
@@ -22,6 +23,52 @@ describe('StickySection', () => {
 	});
 
 	describe('props', () => {
+		describe('root pass throughs', () => {
+			let wrapper: any;
+
+			beforeEach(() => {
+				const props = {
+					lowerBound: 20,
+					topOffset: 200,
+					className: 'wut',
+					style: { marginRight: 10 },
+					initialState: { test: true },
+					callbackId: 1,
+					'data-testid': 10,
+				};
+				wrapper = shallow(<StickySection {...props} />);
+			});
+
+			afterEach(() => {
+				wrapper.unmount();
+			});
+
+			it('passes through props not defined in `propTypes` to the root element.', () => {
+				const rootProps = wrapper.find('.lucid-StickySection').props();
+
+				expect(wrapper.first().prop(['className'])).toContain('wut');
+				expect(wrapper.first().prop(['style'])).toMatchObject({
+					marginRight: 10,
+				});
+				expect(wrapper.first().prop(['data-testid'])).toBe(10);
+
+				// 'className' and style are plucked from the pass through object
+				// but still appears becuase each one is also directly added to the root element as a prop
+				forEach(['className', 'data-testid', 'style', 'children'], (prop) => {
+					expect(has(rootProps, prop)).toBe(true);
+				});
+			});
+			it('omits the props defined in `propTypes` (plus, in addition, `initialState`, and `callbackId`) from the root element', () => {
+				const rootProps = wrapper.find('.lucid-StickySection').props();
+				forEach(
+					['lowerBound', 'topOffset', 'initialState', 'callbackId'],
+					(prop) => {
+						expect(has(rootProps, prop)).toBe(false);
+					}
+				);
+			});
+		});
+
 		describe('lowerBound', () => {
 			let wrapper: any;
 			let mountTestdiv: any;
