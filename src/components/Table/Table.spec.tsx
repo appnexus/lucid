@@ -1,6 +1,8 @@
+import _, { forEach, has, noop } from 'lodash';
 import React from 'react';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 import assert from 'assert';
+
 import { common } from '../../util/generic-tests';
 import Table from './Table';
 import ArrowIcon from '../Icon/ArrowIcon/ArrowIcon';
@@ -20,6 +22,59 @@ describe('Table', () => {
 	});
 
 	describe('props', () => {
+		describe('root pass throughs', () => {
+			let wrapper: any;
+
+			beforeEach(() => {
+				const props = {
+					className: 'wut',
+					style: { marginRight: 10 },
+					initialState: { test: true },
+					callbackId: 1,
+					'data-testid': 10,
+				};
+				wrapper = shallow(<Table {...props} />);
+			});
+
+			afterEach(() => {
+				wrapper.unmount();
+			});
+
+			it('passes through props not defined in `propTypes` to the root element.', () => {
+				const rootProps = wrapper.find('.lucid-Table').props();
+
+				expect(wrapper.first().prop(['className'])).toContain('wut');
+				expect(wrapper.first().prop(['style'])).toMatchObject({
+					marginRight: 10,
+				});
+				expect(wrapper.first().prop(['data-testid'])).toBe(10);
+
+				// 'className' is plucked from the pass through object
+				// but still appears becuase it is also directly added to the root element as a prop
+				forEach(['className', 'data-testid', 'style'], (prop) => {
+					expect(has(rootProps, prop)).toBe(true);
+				});
+			});
+			it('omits the props defined in `propTypes` (plus, in addition, `initialState`, and `callbackId`) from the root element', () => {
+				const rootProps = wrapper.find('.lucid-Table').props();
+
+				forEach(
+					[
+						'density',
+						'hasLightHeader',
+						'hasBorder',
+						'hasWordWrap',
+						'hasHover',
+						'initialState',
+						'callbackId',
+					],
+					(prop) => {
+						expect(has(rootProps, prop)).toBe(false);
+					}
+				);
+			});
+		});
+
 		describe('density', () => {
 			describe('value `compressed`', () => {
 				it('should apply the `lucid-Table-density-compressed` class name to the rendered table', () => {
@@ -66,6 +121,58 @@ describe('Table', () => {
 					assert.equal(wrapper.find('thead.lucid-Table-Thead').length, 1);
 				});
 			});
+
+			describe('Thead pass through props', () => {
+				let wrapper: any;
+
+				beforeEach(() => {
+					const props = {
+						className: 'wut',
+						style: { marginRight: 10 },
+						initialState: { test: true },
+						callbackId: 1,
+						'data-testid': 10,
+					};
+					wrapper = mount(
+						<Table>
+							<Thead {...props}></Thead>
+						</Table>
+					);
+				});
+
+				afterEach(() => {
+					wrapper.unmount();
+				});
+
+				it('passes through props not defined in `Thead.propTypes` to the <thead> element.', () => {
+					const theadProps = wrapper.find('.lucid-Table-Thead').props();
+
+					expect(
+						wrapper.find('.lucid-Table-Thead').prop(['className'])
+					).toContain('wut');
+					expect(
+						wrapper.find('.lucid-Table-Thead').prop(['style'])
+					).toMatchObject({
+						marginRight: 10,
+					});
+					expect(wrapper.find('.lucid-Table-Thead').prop(['data-testid'])).toBe(
+						10
+					);
+
+					// 'className' is plucked from the pass through object
+					// but still appears becuase it is also directly added to the root element as a prop
+					forEach(['className', 'data-testid', 'style', 'children'], (prop) => {
+						expect(has(theadProps, prop)).toBe(true);
+					});
+				});
+				it('omits the props defined in `Thead.propTypes` (plus, in addition, `initialState`, and `callbackId`) from the root element', () => {
+					const theadProps = wrapper.find('.lucid-Table-Thead').props();
+
+					forEach(['initialState', 'callbackId'], (prop) => {
+						expect(has(theadProps, prop)).toBe(false);
+					});
+				});
+			});
 		});
 
 		describe('Tbody', () => {
@@ -74,6 +181,59 @@ describe('Table', () => {
 					const wrapper = shallow(<Tbody />);
 
 					assert.equal(wrapper.find('tbody.lucid-Table-Tbody').length, 1);
+				});
+			});
+
+			describe('Tbody pass through props', () => {
+				let wrapper: any;
+
+				beforeEach(() => {
+					const props = {
+						className: 'wut',
+						style: { marginRight: 10 },
+						initialState: { test: true },
+						callbackId: 1,
+						'data-testid': 10,
+					};
+					wrapper = mount(
+						<Table>
+							<Thead></Thead>
+							<Tbody {...props}></Tbody>
+						</Table>
+					);
+				});
+
+				afterEach(() => {
+					wrapper.unmount();
+				});
+
+				it('passes through props not defined in `Tbody.propTypes` to the <tbody> element.', () => {
+					const tbodyProps = wrapper.find('.lucid-Table-Tbody').props();
+
+					expect(
+						wrapper.find('.lucid-Table-Tbody').prop(['className'])
+					).toContain('wut');
+					expect(
+						wrapper.find('.lucid-Table-Tbody').prop(['style'])
+					).toMatchObject({
+						marginRight: 10,
+					});
+					expect(wrapper.find('.lucid-Table-Tbody').prop(['data-testid'])).toBe(
+						10
+					);
+
+					// 'className' is plucked from the pass through object
+					// but still appears becuase it is also directly added to the root element as a prop
+					forEach(['className', 'children', 'data-testid', 'style'], (prop) => {
+						expect(has(tbodyProps, prop)).toBe(true);
+					});
+				});
+				it('omits the props defined in `Tbody.propTypes` (plus, in addition, `initialState`, and `callbackId`) from the root element', () => {
+					const tbodyProps = wrapper.find('.lucid-Table-Tbody').props();
+
+					forEach(['initialState', 'callbackId'], (prop) => {
+						expect(has(tbodyProps, prop)).toBe(false);
+					});
 				});
 			});
 		});
@@ -88,6 +248,78 @@ describe('Table', () => {
 			});
 
 			describe('props', () => {
+				describe('Tr pass through props', () => {
+					let wrapper: any;
+
+					beforeEach(() => {
+						const props = {
+							isDisabled: true,
+							isSelected: true,
+							isActive: true,
+							isActionable: true,
+							className: 'wut',
+							style: { marginRight: 10 },
+							initialState: { test: true },
+							callbackId: 1,
+							'data-testid': 10,
+						};
+						wrapper = mount(
+							<Table>
+								<Thead></Thead>
+								<Tbody>
+									<Tr {...props}></Tr>
+								</Tbody>
+							</Table>
+						);
+					});
+
+					afterEach(() => {
+						wrapper.unmount();
+					});
+
+					it('passes through props not defined in `Tr.propTypes` to the <tbody> element.', () => {
+						const trProps = wrapper.find('.lucid-Table-Tr').props();
+
+						expect(
+							wrapper.find('.lucid-Table-Tr').prop(['className'])
+						).toContain('wut');
+						expect(
+							wrapper.find('.lucid-Table-Tr').prop(['style'])
+						).toMatchObject({
+							marginRight: 10,
+						});
+						expect(wrapper.find('.lucid-Table-Tr').prop(['data-testid'])).toBe(
+							10
+						);
+
+						// 'className' is plucked from the pass through object
+						// but still appears becuase it is also directly added to the root element as a prop
+						forEach(
+							['className', 'children', 'data-testid', 'style'],
+							(prop) => {
+								expect(has(trProps, prop)).toBe(true);
+							}
+						);
+					});
+					it('omits the props defined in `Tr.propTypes` (plus, in addition, `initialState`, and `callbackId`) from the root element', () => {
+						const trProps = wrapper.find('.lucid-Table-Tr').props();
+
+						forEach(
+							[
+								'isDisabled',
+								'isSelected',
+								'isActive',
+								'initialState',
+								'isActionable',
+								'callbackId',
+							],
+							(prop) => {
+								expect(has(trProps, prop)).toBe(false);
+							}
+						);
+					});
+				});
+
 				describe('isDisabled', () => {
 					it('should apply the class name `lucid-Table-is-disabled`', () => {
 						const wrapper = shallow(<Tr isDisabled />);
@@ -120,6 +352,109 @@ describe('Table', () => {
 					const wrapper = shallow(<Th />);
 
 					assert.equal(wrapper.find('th.lucid-Table-Th').length, 1);
+				});
+			});
+
+			describe('Th pass through props', () => {
+				let wrapper: any;
+
+				beforeEach(() => {
+					const props = {
+						align: 'center' as any,
+						children: <div></div>,
+						hasBorderRight: true,
+						hasBorderLeft: true,
+						isResizable: true,
+						isSortable: true,
+						isSorted: true,
+						onResize: noop,
+						sortDirection: 'right' as any,
+						width: 100,
+						minWidth: 50,
+						isFirstRow: true,
+						isLastRow: false,
+						isFirstCol: true,
+						isLastCol: false,
+						isFirstSingle: true,
+						field: 'test',
+						truncateContent: true,
+						rowSpan: 2,
+						className: 'wut',
+						style: { marginRight: 10 },
+						initialState: { test: true },
+						callbackId: 1,
+						'data-testid': 10,
+					};
+					wrapper = mount(
+						<Table>
+							<Thead>
+								<Tr>
+									<Th {...props}>Lorem</Th>
+								</Tr>
+							</Thead>
+							<Tbody>
+								<Tr></Tr>
+							</Tbody>
+						</Table>
+					);
+				});
+
+				afterEach(() => {
+					wrapper.unmount();
+				});
+
+				it('passes through props not defined in `Th.propTypes` to the <thead> element.', () => {
+					const thProps = wrapper.find('.lucid-Table-Th').props();
+
+					expect(wrapper.find('.lucid-Table-Th').prop(['className'])).toContain(
+						'wut'
+					);
+					expect(wrapper.find('.lucid-Table-Th').prop(['style'])).toMatchObject(
+						{
+							marginRight: 10,
+						}
+					);
+					expect(wrapper.find('.lucid-Table-Th').prop(['data-testid'])).toBe(
+						10
+					);
+
+					// 'className' and 'style' appear becuase they are directly added to the root element as a prop
+					forEach(
+						['className', 'children', 'data-testid', 'style', 'rowSpan'],
+						(prop) => {
+							expect(has(thProps, prop)).toBe(true);
+						}
+					);
+				});
+				it('omits the props defined in `Th.propTypes` (plus, in addition, `initialState`, and `callbackId`) from the root element', () => {
+					const thProps = wrapper.find('.lucid-Table-Th').props();
+
+					forEach(
+						[
+							'align',
+							'hasBorderRight',
+							'hasBorderLeft',
+							'isResizable',
+							'isSortable',
+							'isSorted',
+							'onResize',
+							'sortDirection',
+							'width',
+							'minWidth',
+							'isFirstRow',
+							'isLastRow',
+							'isFirstCol',
+							'isLastCol',
+							'isFirstSingle',
+							'field',
+							'truncateContent',
+							'initialState',
+							'callbackId',
+						],
+						(prop) => {
+							expect(has(thProps, prop)).toBe(false);
+						}
+					);
 				});
 			});
 
@@ -267,6 +602,90 @@ describe('Table', () => {
 					const wrapper = shallow(<Td />);
 
 					assert.equal(wrapper.find('td.lucid-Table-Td').length, 1);
+				});
+			});
+
+			describe('Td pass through props', () => {
+				let wrapper: any;
+
+				beforeEach(() => {
+					const props = {
+						align: 'center' as any,
+						hasBorderRight: true,
+						hasBorderLeft: true,
+						isFirstRow: true,
+						isLastRow: true,
+						isFirstCol: true,
+						isLastCol: true,
+						isFirstSingle: true,
+						isEmpty: true,
+						truncateContent: true,
+						rowSpan: 2,
+						className: 'wut',
+						style: { marginRight: 10 },
+						initialState: { test: true },
+						callbackId: 1,
+						'data-testid': 10,
+					};
+					wrapper = mount(
+						<Table>
+							<Thead>Lorem</Thead>
+							<Tbody>
+								<Tr>
+									<Td {...props}>Ipsum</Td>
+								</Tr>
+							</Tbody>
+						</Table>
+					);
+				});
+
+				afterEach(() => {
+					wrapper.unmount();
+				});
+
+				it('passes through props not defined in `Td.propTypes` to the <td> element.', () => {
+					const tdProps = wrapper.find('.lucid-Table-Td').props();
+
+					expect(wrapper.find('.lucid-Table-Td').prop(['className'])).toContain(
+						'wut'
+					);
+					expect(wrapper.find('.lucid-Table-Td').prop(['style'])).toMatchObject(
+						{
+							marginRight: 10,
+						}
+					);
+					expect(wrapper.find('.lucid-Table-Td').prop(['data-testid'])).toBe(
+						10
+					);
+
+					// 'className' is plucked from the pass through object
+					// but still appears becuase it is also directly added to the root element as a prop
+					forEach(['className', 'children', 'data-testid', 'style'], (prop) => {
+						expect(has(tdProps, prop)).toBe(true);
+					});
+				});
+				it('omits the props defined in `Td.propTypes` (plus, in addition, `initialState`, and `callbackId`) from the root element', () => {
+					const tdProps = wrapper.find('.lucid-Table-Td').props();
+
+					forEach(
+						[
+							'align',
+							'hasBorderRight',
+							'hasBorderLeft',
+							'isFirstRow',
+							'isLastRow',
+							'isFirstCol',
+							'isLastCol',
+							'isFirstSingle',
+							'isEmpty',
+							'truncateContent',
+							'initialState',
+							'callbackId',
+						],
+						(prop) => {
+							expect(has(tdProps, prop)).toBe(false);
+						}
+					);
 				});
 			});
 

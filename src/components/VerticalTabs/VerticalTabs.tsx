@@ -1,11 +1,10 @@
-import _ from 'lodash';
+import _, { omit } from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import {
 	findTypes,
 	getFirst,
-	omitProps,
 	Overwrite,
 	StandardProps,
 } from '../../util/component-types';
@@ -154,7 +153,13 @@ class VerticalTabs extends React.Component<
 
 		return (
 			<div
-				{...omitProps(passThroughs, undefined, _.keys(VerticalTabs.propTypes))}
+				{...omit(passThroughs, [
+					'className',
+					'selectedIndex',
+					'onSelect',
+					'initialState',
+					'callbackId',
+				])}
 				className={cx('&', className)}
 			>
 				<VerticalListMenu

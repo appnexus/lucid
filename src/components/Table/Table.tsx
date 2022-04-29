@@ -1,10 +1,9 @@
-import _ from 'lodash';
-import React, { ReactElement } from 'react';
+import _, { omit } from 'lodash';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import {
 	filterTypes,
-	omitProps,
 	StandardProps,
 	Overwrite,
 } from '../../util/component-types';
@@ -34,7 +33,12 @@ const Thead = (props: ITheadProps) => {
 
 	return (
 		<thead
-			{...omitProps(passThroughs, undefined, _.keys(Thead.propTypes))}
+			{...omit(passThroughs, [
+				'className',
+				'children',
+				'initialState',
+				'callbackId',
+			] as any)}
 			className={cx('&-Thead', className)}
 		>
 			{renderRowsWithIdentifiedEdges(filterTypes(children, Tr), Th as any)}
@@ -79,7 +83,12 @@ const Tbody = (props: ITBodyProps) => {
 
 	return (
 		<tbody
-			{...omitProps(passThroughs, undefined, _.keys(Tbody.propTypes))}
+			{...omit(passThroughs, [
+				'className',
+				'children',
+				'initialState',
+				'callbackId',
+			])}
 			className={cx('&-Tbody', className)}
 		>
 			{renderRowsWithIdentifiedEdges(filterTypes(children, Tr), Td)}
@@ -144,11 +153,16 @@ const Tr = (props: ITrProps) => {
 
 	return (
 		<tr
-			{...omitProps(
-				passThroughs,
-				undefined,
-				_.keys(Tr.propTypes).concat(['isActionable'])
-			)}
+			{...omit(passThroughs, [
+				'children',
+				'className',
+				'isDisabled',
+				'isSelected',
+				'isActive',
+				'isActionable',
+				'initialState',
+				'callbackId',
+			])}
 			className={cx(
 				'&-Tr',
 				{
@@ -606,7 +620,30 @@ export class Th extends React.Component<IThProps, IThState> {
 
 		return (
 			<th
-				{...omitProps(passThroughs, undefined, _.keys(Th.propTypes))}
+				{...omit(passThroughs, [
+					'className',
+					'children',
+					'style',
+					'align',
+					'hasBorderRight',
+					'hasBorderLeft',
+					'isResizable',
+					'isSortable',
+					'isSorted',
+					'onResize',
+					'sortDirection',
+					'width',
+					'minWidth',
+					'isFirstRow',
+					'isLastRow',
+					'isFirstCol',
+					'isLastCol',
+					'isFirstSingle',
+					'field',
+					'truncateContent',
+					'initialState',
+					'callbackId',
+				] as any)}
 				className={cx(
 					'&-Th',
 					{
@@ -726,11 +763,22 @@ const Td = (props: ITdProps): React.ReactElement => {
 
 	return (
 		<td
-			{...omitProps(
-				passThroughs,
-				undefined,
-				_.keys(Td.propTypes).concat(['sortDirection'])
-			)}
+			{...omit(passThroughs, [
+				'className',
+				'align',
+				'hasBorderRight',
+				'hasBorderLeft',
+				'isFirstRow',
+				'isLastRow',
+				'isFirstCol',
+				'isLastCol',
+				'isFirstSingle',
+				'isEmpty',
+				'truncateContent',
+				'initialState',
+				'callbackId',
+				'sortDirection',
+			] as any)}
 			className={cx(
 				'&-Td',
 				{
@@ -859,7 +907,15 @@ const Table = (props: ITableProps) => {
 
 	return (
 		<table
-			{...omitProps(passThroughs, undefined, _.keys(Table.propTypes))}
+			{...omit(passThroughs, [
+				'density',
+				'hasLightHeader',
+				'hasBorder',
+				'hasWordWrap',
+				'hasHover',
+				'initialState',
+				'callbackId',
+			])}
 			style={style}
 			className={cx(
 				'&',
