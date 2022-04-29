@@ -1,9 +1,9 @@
 /* eslint-disable react/prop-types */
-import _ from 'lodash';
+import _, { omit } from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import { getFirst, omitProps, StandardProps } from '../../util/component-types';
+import { getFirst, StandardProps } from '../../util/component-types';
 import LoadingIcon from '../Icon/LoadingIcon/LoadingIcon';
 
 const cx = lucidClassNames.bind('&-LoadingMessage');
@@ -88,7 +88,15 @@ export const LoadingMessage = (
 
 	return (
 		<div
-			{...omitProps(passThroughs, undefined, _.keys(LoadingMessage.propTypes))}
+			{...omit(passThroughs, [
+				'className',
+				'children',
+				'Icon',
+				'Title',
+				'Body',
+				'initialState',
+				'callbackId',
+			])}
 			className={cx(
 				'&',
 				{ '&-no-content': _.isNull(titleChildren) && !bodyChildren },

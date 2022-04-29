@@ -1,6 +1,8 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import assert from 'assert';
+import _, { forEach, has } from 'lodash';
+
 import { common } from '../../util/generic-tests';
 import LoadingMessage from './LoadingMessage';
 import LoadingIcon from '../Icon/LoadingIcon/LoadingIcon';
@@ -123,6 +125,58 @@ describe('LoadingMessage', () => {
 					'A custom body'
 				);
 			});
+		});
+	});
+
+	describe('pass throughs', () => {
+		let wrapper: any;
+
+		beforeEach(() => {
+			const props = {
+				className: 'wut',
+				style: { marginRight: 10 },
+				initialState: { test: true },
+				callbackId: 1,
+				'data-testid': 10,
+				Icon: <SuccessIcon />,
+				Title: 'Test Title',
+				Body: 'Test Body',
+			};
+			wrapper = shallow(<LoadingMessage {...props} />);
+		});
+
+		afterEach(() => {
+			wrapper.unmount();
+		});
+
+		it('passes through props not defined in `propTypes` to the root element.', () => {
+			const rootProps = wrapper.find('.lucid-LoadingMessage').props();
+
+			// Note: 'className' is plucked from the pass through object
+			// but still appear becuase they are also directly passed to the root element as a prop.
+			forEach(['className', 'style', 'data-testid', 'children'], (prop) => {
+				expect(has(rootProps, prop)).toBe(true);
+			});
+
+			expect(wrapper.first().prop(['className'])).toContain('wut');
+			expect(wrapper.first().prop(['style'])).toMatchObject({
+				marginRight: 10,
+			});
+			expect(wrapper.first().prop(['data-testid'])).toBe(10);
+		});
+
+		it('omits the props defined in `propTypes` from the root element, plus, in addition, `initialState`.', () => {
+			const rootProps = wrapper.find('.lucid-LoadingMessage').props();
+
+			console.log('rootProps', rootProps);
+			console.log(wrapper.debug());
+			// initialState and callbackId are always both omitted
+			forEach(
+				['Icon', 'Title', 'Body', 'initialState', 'callbackId'],
+				(prop) => {
+					expect(has(rootProps, prop)).toBe(false);
+				}
+			);
 		});
 	});
 });
