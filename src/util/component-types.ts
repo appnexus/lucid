@@ -10,13 +10,18 @@ import { ValidationMap } from 'prop-types';
 
 export interface StandardProps {
 	/** Appended to the component-specific class names set on the root element.
-			Value is run through the `classnames` library. */
+	 * Value is run through the `classnames` library. */
 	className?: string;
+
 	/** Any valid React children. */
 	children?: React.ReactNode;
+
 	/** Styles that are passed through to native control. */
 	style?: React.CSSProperties;
 
+	/** A "magic" prop that's always excluded from DOM elements.
+	 * `callbackId` can be used to identify a component in a list
+	 *  without having to create extra closures. */
 	callbackId?: string | number;
 }
 
@@ -279,9 +284,11 @@ export function getFirst<P>(
 // Omit props defined in propTypes of the given type and any extra keys given
 // in third argument
 //
-// We also have a "magic" prop that's always excluded called `callbackId`. That
-// prop can be used to identify a component in a list without having to create
-// extra closures.
+// We also have a "magic" prop called `callbackId`.
+// It can be used to identify a component in a list
+// without having to create extra closures.
+//
+// It is always excluded from a DOM elements
 //
 // Note: The Partial<P> type is referring to the props passed into the omitProps,
 // not the props defined on the component.
