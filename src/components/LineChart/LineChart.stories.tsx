@@ -1,10 +1,11 @@
-import React from 'react';
-import createClass from 'create-react-class';
 import _ from 'lodash';
+import React from 'react';
+import { Story, Meta } from '@storybook/react';
+
 import Resizer from '../Resizer/Resizer';
 import Button from '../Button/Button';
 import * as chartConstants from '../../constants/charts';
-import LineChart from './LineChart';
+import LineChart, { ILineChartProps } from './LineChart';
 import Legend from '../Legend/Legend';
 import * as formatters from '../../util/formatters';
 
@@ -18,10 +19,11 @@ export default {
 			},
 		},
 	},
-};
+	args: LineChart.defaultProps,
+} as Meta;
 
 /* Basic */
-export const Basic = () => {
+export const Basic: Story<ILineChartProps> = (args: any) => {
 	const data = [
 		{ x: new Date('2015-01-01T00:00:00-08:00'), y: 1 },
 		{ x: new Date('2015-01-02T00:00:00-08:00'), y: 0 },
@@ -33,21 +35,15 @@ export const Basic = () => {
 		paddingTop: '4rem',
 	};
 
-	const Component = createClass({
-		render() {
-			return (
-				<div style={style}>
-					<LineChart data={data} width={800} />
-				</div>
-			);
-		},
-	});
-
-	return <Component />;
+	return (
+		<section style={style}>
+			<LineChart {...args} data={data} width={800} />
+		</section>
+	);
 };
 
 /* Responsive */
-export const Responsive = () => {
+export const Responsive: Story<ILineChartProps> = (args: any) => {
 	const data = [
 		{ x: new Date('2015-01-01T00:00:00-08:00'), y: 1 },
 		{ x: new Date('2015-01-02T00:00:00-08:00'), y: 2 },
@@ -59,25 +55,19 @@ export const Responsive = () => {
 		paddingTop: '4rem',
 	};
 
-	const Component = createClass({
-		render() {
-			return (
-				<div style={style}>
-					<Resizer>
-						{(width /*, height */) => (
-							<LineChart width={width} height={width * 0.3} data={data} />
-						)}
-					</Resizer>
-				</div>
-			);
-		},
-	});
-
-	return <Component />;
+	return (
+		<section style={style}>
+			<Resizer>
+				{(width /*, height */) => (
+					<LineChart {...args} width={width} height={width * 0.3} data={data} />
+				)}
+			</Resizer>
+		</section>
+	);
 };
 
 /* Multi */
-export const Multi = () => {
+export const Multi: Story<ILineChartProps> = (args: any) => {
 	const data = [
 		{
 			x: new Date('2015-01-01T00:00:00-08:00'),
@@ -259,26 +249,21 @@ export const Multi = () => {
 		paddingTop: '8rem',
 	};
 
-	const Component = createClass({
-		render() {
-			return (
-				<div style={style}>
-					<LineChart
-						data={data}
-						yAxisFields={['apples', 'oranges', 'pears']}
-						yAxisTitle='Fruit Count'
-						width={800}
-					/>
-				</div>
-			);
-		},
-	});
-
-	return <Component />;
+	return (
+		<section style={style}>
+			<LineChart
+				{...args}
+				data={data}
+				yAxisFields={['apples', 'oranges', 'pears']}
+				yAxisTitle='Fruit Count'
+				width={800}
+			/>
+		</section>
+	);
 };
 
 /* Multi With Legend */
-export const MultiWithLegend = () => {
+export const MultiWithLegend: Story<ILineChartProps> = (args: any) => {
 	const data = [
 		{
 			x: new Date('2015-01-01T00:00:00-08:00'),
@@ -312,42 +297,36 @@ export const MultiWithLegend = () => {
 		paddingTop: '8rem',
 	};
 
-	const Component = createClass({
-		render() {
-			return (
-				<div style={style}>
-					<LineChart
-						data={data}
-						yAxisFields={yAxisFields}
-						yAxisTitle='Fruit Count'
-						palette={palette}
-						width={800}
-					/>
+	return (
+		<section style={style}>
+			<LineChart
+				{...args}
+				data={data}
+				yAxisFields={yAxisFields}
+				yAxisTitle='Fruit Count'
+				palette={palette}
+				width={800}
+			/>
 
-					<Legend style={{ verticalAlign: 'top' }}>
-						{_.map(yAxisFields, (field, i) => (
-							<Legend.Item
-								key={field}
-								hasPoint
-								hasLine
-								color={palette[i % palette.length]}
-								pointKind={i}
-							>
-								{field}
-							</Legend.Item>
-						))}
-					</Legend>
-				</div>
-			);
-		},
-	});
-
-	return <Component />;
+			<Legend style={{ verticalAlign: 'top' }}>
+				{_.map(yAxisFields, (field, i) => (
+					<Legend.Item
+						key={field}
+						hasPoint
+						hasLine
+						color={palette[i % palette.length]}
+						pointKind={i}
+					>
+						{field}
+					</Legend.Item>
+				))}
+			</Legend>
+		</section>
+	);
 };
-MultiWithLegend.storyName = 'MultiWithLegend';
 
 /* Stacked */
-export const Stacked = () => {
+export const Stacked: Story<ILineChartProps> = (args: any) => {
 	const data = [
 		{
 			x: new Date('2015-01-01T00:00:00-08:00'),
@@ -409,34 +388,29 @@ export const Stacked = () => {
 		paddingTop: '11rem',
 	};
 
-	const Component = createClass({
-		render() {
-			return (
-				<div style={style}>
-					<LineChart
-						data={data}
-						yAxisFields={[
-							'apples',
-							'oranges',
-							'pears',
-							'bananas',
-							'kiwis',
-							'cherries',
-						]}
-						yAxisIsStacked={true}
-						yAxisTitle='Fruit Count'
-						width={800}
-					/>
-				</div>
-			);
-		},
-	});
-
-	return <Component />;
+	return (
+		<section style={style}>
+			<LineChart
+				{...args}
+				data={data}
+				yAxisFields={[
+					'apples',
+					'oranges',
+					'pears',
+					'bananas',
+					'kiwis',
+					'cherries',
+				]}
+				yAxisIsStacked={true}
+				yAxisTitle='Fruit Count'
+				width={800}
+			/>
+		</section>
+	);
 };
 
 /* Dual Axis */
-export const DualAxis = () => {
+export const DualAxis: Story<ILineChartProps> = (args: any) => {
 	const data = [
 		{ x: new Date('2015-01-01T00:00:00-08:00'), bananas: 2, cherries: 8 },
 		{ x: new Date('2015-03-02T00:00:00-08:00'), bananas: 2, cherries: 5 },
@@ -448,38 +422,32 @@ export const DualAxis = () => {
 		paddingTop: '5rem',
 	};
 
-	const Component = createClass({
-		render() {
-			return (
-				<div style={style}>
-					<LineChart
-						data={data}
-						margin={{
-							right: 80,
-						}}
-						width={800}
-						colorMap={{
-							bananas: chartConstants.COLOR_4,
-							cherries: chartConstants.COLOR_2,
-						}}
-						yAxisFields={['bananas']}
-						yAxisTitle='Number of Bananas'
-						yAxisTitleColor={chartConstants.COLOR_4}
-						y2AxisFields={['cherries']}
-						y2AxisTitle='Number of Cherries'
-						y2AxisTitleColor={chartConstants.COLOR_2}
-					/>
-				</div>
-			);
-		},
-	});
-
-	return <Component />;
+	return (
+		<section style={style}>
+			<LineChart
+				{...args}
+				data={data}
+				margin={{
+					right: 80,
+				}}
+				width={800}
+				colorMap={{
+					bananas: chartConstants.COLOR_4,
+					cherries: chartConstants.COLOR_2,
+				}}
+				yAxisFields={['bananas']}
+				yAxisTitle='Number of Bananas'
+				yAxisTitleColor={chartConstants.COLOR_4}
+				y2AxisFields={['cherries']}
+				y2AxisTitle='Number of Cherries'
+				y2AxisTitleColor={chartConstants.COLOR_2}
+			/>
+		</section>
+	);
 };
-DualAxis.storyName = 'DualAxis';
 
 /* All The Things */
-export const AllTheThings = () => {
+export const AllTheThings: Story<ILineChartProps> = (args: any) => {
 	const data = [
 		{
 			date: new Date('2015-01-01T00:00:00-08:00'),
@@ -515,49 +483,45 @@ export const AllTheThings = () => {
 		paddingTop: '5rem',
 	};
 
-	const Component = createClass({
-		render() {
-			return (
-				<div style={style}>
-					<LineChart
-						margin={{
-							right: 80,
-						}}
-						width={800}
-						data={data}
-						colorMap={{
-							blueberries: chartConstants.COLOR_0,
-							oranges: chartConstants.COLOR_1,
-						}}
-						xAxisField='date'
-						xAxisFormatter={xFormatter}
-						xAxisMin={new Date('2014-12-31T00:00-08:00')}
-						xAxisMax={new Date('2015-01-07T00:00-08:00')}
-						xAxisTickCount={5}
-						xAxisTitle='Date'
-						yAxisFields={['blueberries']}
-						yAxisFormatter={yFormatter}
-						yAxisTickCount={5}
-						yAxisTitle='Number of Blueberries'
-						yAxisTitleColor={chartConstants.COLOR_0}
-						y2AxisFields={['oranges']}
-						y2AxisFormatter={yFormatter}
-						y2AxisTickCount={5}
-						y2AxisTitle='Number of Oranges'
-						y2AxisHasPoints={false}
-						y2AxisTitleColor={chartConstants.COLOR_1}
-					/>
-				</div>
-			);
-		},
-	});
-
-	return <Component />;
+	return (
+		<section style={style}>
+			<LineChart
+				{...args}
+				margin={{
+					right: 80,
+				}}
+				width={800}
+				data={data}
+				colorMap={{
+					blueberries: chartConstants.COLOR_0,
+					oranges: chartConstants.COLOR_1,
+				}}
+				xAxisField='date'
+				xAxisFormatter={xFormatter}
+				xAxisMin={new Date('2014-12-31T00:00-08:00')}
+				xAxisMax={new Date('2015-01-07T00:00-08:00')}
+				xAxisTickCount={5}
+				xAxisTitle='Date'
+				yAxisFields={['blueberries']}
+				yAxisFormatter={yFormatter}
+				yAxisTickCount={5}
+				yAxisTitle='Number of Blueberries'
+				yAxisTitleColor={chartConstants.COLOR_0}
+				y2AxisFields={['oranges']}
+				y2AxisFormatter={yFormatter}
+				y2AxisTickCount={5}
+				y2AxisTitle='Number of Oranges'
+				y2AxisHasPoints={false}
+				y2AxisTitleColor={chartConstants.COLOR_1}
+			/>
+		</section>
+	);
 };
-AllTheThings.storyName = 'AllTheThings';
 
 /* Stacked Single Series With Formatters */
-export const StackedSingleSeriesWithFormatters = () => {
+export const StackedSingleSeriesWithFormatters: Story<ILineChartProps> = (
+	args: any
+) => {
 	const data = [
 		{ x: new Date('2015-01-01T00:00:00-08:00'), y: 1.55 },
 		{ x: new Date('2015-01-02T00:00:00-08:00'), y: 2.67 },
@@ -569,29 +533,24 @@ export const StackedSingleSeriesWithFormatters = () => {
 		paddingTop: '4rem',
 	};
 
-	const Component = createClass({
-		render() {
-			return (
-				<div style={style}>
-					<LineChart
-						yAxisIsStacked
-						yAxisFormatter={(yValue) => `$ ${yValue}`}
-						yAxisTooltipFormatter={(yField, yValueFormatted) => yValueFormatted}
-						data={data}
-						width={800}
-					/>
-				</div>
-			);
-		},
-	});
-
-	return <Component />;
+	return (
+		<section style={style}>
+			<LineChart
+				{...args}
+				yAxisIsStacked
+				yAxisFormatter={(yValue) => `$ ${yValue}`}
+				yAxisTooltipFormatter={(yField, yValueFormatted) => yValueFormatted}
+				data={data}
+				width={800}
+			/>
+		</section>
+	);
 };
-StackedSingleSeriesWithFormatters.storyName =
-	'StackedSingleSeriesWithFormatters';
 
 /* Stacked Monochrome No Shapes */
-export const StackedMonochromeNoShapes = () => {
+export const StackedMonochromeNoShapes: Story<ILineChartProps> = (
+	args: any
+) => {
 	const data = [
 		{
 			x: new Date('2015-01-01T00:00:00-08:00'),
@@ -647,30 +606,24 @@ export const StackedMonochromeNoShapes = () => {
 		paddingTop: '10rem',
 	};
 
-	const Component = createClass({
-		render() {
-			return (
-				<div style={style}>
-					<LineChart
-						data={data}
-						width={800}
-						yAxisFields={['apples', 'oranges', 'pears', 'bananas', 'kiwis']}
-						yAxisIsStacked={true}
-						yAxisHasPoints={false}
-						yAxisTitle='Fruit Count'
-						palette={chartConstants.PALETTE_MONOCHROME_0_5}
-					/>
-				</div>
-			);
-		},
-	});
-
-	return <Component />;
+	return (
+		<section style={style}>
+			<LineChart
+				{...args}
+				data={data}
+				width={800}
+				yAxisFields={['apples', 'oranges', 'pears', 'bananas', 'kiwis']}
+				yAxisIsStacked={true}
+				yAxisHasPoints={false}
+				yAxisTitle='Fruit Count'
+				palette={chartConstants.PALETTE_MONOCHROME_0_5}
+			/>
+		</section>
+	);
 };
-StackedMonochromeNoShapes.storyName = 'StackedMonochromeNoShapes';
 
 /* Abbreviated Numbers */
-export const AbbreviatedNumbers = () => {
+export const AbbreviatedNumbers: Story<ILineChartProps> = (args: any) => {
 	const data = [
 		{ x: new Date('2015-01-07T00:00:00-08:00'), blueberries: 1030872156 },
 		{ x: new Date('2015-01-08T00:00:00-08:00'), blueberries: 4002156 },
@@ -683,28 +636,22 @@ export const AbbreviatedNumbers = () => {
 		paddingTop: '4rem',
 	};
 
-	const Component = createClass({
-		render() {
-			return (
-				<div style={style}>
-					<LineChart
-						data={data}
-						width={800}
-						yAxisFields={['blueberries']}
-						yAxisFormatter={formatters.formatAbbreviatedNumber}
-						yAxisTooltipDataFormatter={formatters.formatThousands}
-					/>
-				</div>
-			);
-		},
-	});
-
-	return <Component />;
+	return (
+		<section style={style}>
+			<LineChart
+				{...args}
+				data={data}
+				width={800}
+				yAxisFields={['blueberries']}
+				yAxisFormatter={formatters.formatAbbreviatedNumber}
+				yAxisTooltipDataFormatter={formatters.formatThousands}
+			/>
+		</section>
+	);
 };
-AbbreviatedNumbers.storyName = 'AbbreviatedNumbers';
 
 /* Color Offset */
-export const ColorOffset = () => {
+export const ColorOffset: Story<ILineChartProps> = (args: any) => {
 	const data = [
 		{ x: new Date('2015-01-01T00:00:00-08:00'), apples: 184, pears: 117 },
 		{ x: new Date('2015-01-02T00:00:00-08:00'), apples: 191, pears: 118 },
@@ -727,122 +674,94 @@ export const ColorOffset = () => {
 		paddingTop: '5rem',
 	};
 
-	const Component = createClass({
-		render() {
-			return (
-				<div style={style}>
-					<LineChart
-						data={data}
-						margin={{
-							right: 80,
-						}}
-						width={800}
-						hasLegend
-						yAxisFields={['apples']}
-						yAxisColorOffset={3}
-						y2AxisFields={['pears']}
-						y2AxisColorOffset={4}
-					/>
-				</div>
-			);
-		},
-	});
-
-	return <Component />;
+	return (
+		<section style={style}>
+			<LineChart
+				{...args}
+				data={data}
+				margin={{
+					right: 80,
+				}}
+				width={800}
+				hasLegend
+				yAxisFields={['apples']}
+				yAxisColorOffset={3}
+				y2AxisFields={['pears']}
+				y2AxisColorOffset={4}
+			/>
+		</section>
+	);
 };
-ColorOffset.storyName = 'ColorOffset';
 
 /* Empty */
-export const Empty = () => {
-	const Component = createClass({
-		render() {
-			return <LineChart data={[]} yAxisFields={['blueberries']} width={800} />;
-		},
-	});
-
-	return <Component />;
+export const Empty: Story<ILineChartProps> = (args: any) => {
+	return (
+		<LineChart {...args} data={[]} yAxisFields={['blueberries']} width={800} />
+	);
 };
 
 /* Empty With Custom Title And Body */
-export const EmptyWithCustomTitleAndBody = () => {
+export const EmptyWithCustomTitleAndBody: Story<ILineChartProps> = (
+	args: any
+) => {
 	const {
 		EmptyStateWrapper,
 		EmptyStateWrapper: { Title, Body },
 	} = LineChart;
 
-	const Component = createClass({
-		render() {
-			return (
-				<LineChart data={[]} yAxisFields={['blueberries']} width={800}>
-					<EmptyStateWrapper>
-						<Title>Something went wrong.</Title>
-						<Body
-							style={{
-								fontSize: '12px',
-							}}
-						>
-							Echo park poutine esse tempor squid do. Lo-fi ramps XOXO
-							chicharrones laboris, portland fugiat locavore. Fap four dollar
-							toast keytar, cronut kogi fingerstache distillery microdosing
-							everyday carry austin DIY dreamcatcher. Distillery flexitarian
-							meditation laboris roof party. Cred raclette gastropub tilde
-							PBR&B. Shoreditch poke adipisicing, reprehenderit lumbersexual
-							succulents mustache officia franzen vinyl nostrud af. Hashtag
-							bitters organic, before they sold out butcher cronut sapiente.
-						</Body>
-					</EmptyStateWrapper>
-				</LineChart>
-			);
-		},
-	});
-
-	return <Component />;
+	return (
+		<LineChart {...args} data={[]} yAxisFields={['blueberries']} width={800}>
+			<EmptyStateWrapper>
+				<Title>Something went wrong.</Title>
+				<Body
+					style={{
+						fontSize: '12px',
+					}}
+				>
+					Echo park poutine esse tempor squid do. Lo-fi ramps XOXO chicharrones
+					laboris, portland fugiat locavore. Fap four dollar toast keytar,
+					cronut kogi fingerstache distillery microdosing everyday carry austin
+					DIY dreamcatcher. Distillery flexitarian meditation laboris roof
+					party. Cred raclette gastropub tilde PBR&B. Shoreditch poke
+					adipisicing, reprehenderit lumbersexual succulents mustache officia
+					franzen vinyl nostrud af. Hashtag bitters organic, before they sold
+					out butcher cronut sapiente.
+				</Body>
+			</EmptyStateWrapper>
+		</LineChart>
+	);
 };
-EmptyWithCustomTitleAndBody.storyName = 'EmptyWithCustomTitleAndBody';
 
 /* Empty With Button */
-export const EmptyWithButton = () => {
+export const EmptyWithButton: Story<ILineChartProps> = (args: any) => {
 	const {
 		EmptyStateWrapper,
 		EmptyStateWrapper: { Title, Body },
 	} = LineChart;
 
-	const Component = createClass({
-		render() {
-			return (
-				<LineChart data={[]} yAxisFields={['blueberries']} width={800}>
-					<EmptyStateWrapper>
-						<Title>Something went wrong.</Title>
-						<Body
-							style={{
-								fontSize: '12px',
-							}}
-						>
-							<Button>Action</Button>
-						</Body>
-					</EmptyStateWrapper>
-				</LineChart>
-			);
-		},
-	});
-
-	return <Component />;
+	return (
+		<LineChart {...args} data={[]} yAxisFields={['blueberries']} width={800}>
+			<EmptyStateWrapper>
+				<Title>Something went wrong.</Title>
+				<Body
+					style={{
+						fontSize: '12px',
+					}}
+				>
+					<Button>Action</Button>
+				</Body>
+			</EmptyStateWrapper>
+		</LineChart>
+	);
 };
-EmptyWithButton.storyName = 'EmptyWithButton';
 
 /* Loading */
-export const Loading = () => {
-	const Component = createClass({
-		render() {
-			return <LineChart data={[]} width={800} isLoading />;
-		},
-	});
-
-	return <Component />;
+export const Loading: Story<ILineChartProps> = (args: any) => {
+	return <LineChart {...args} data={[]} width={800} isLoading />;
 };
 
 /* Fine Grained Ticks */
-export const FineGrainedTicks = () => {
+export const FineGrainedTicks: Story<ILineChartProps> = (args: any) => {
 	const data = [
 		{ x: new Date('2018-01-01T00:00:00-0800'), y: 1 },
 		{ x: new Date('2018-01-02T00:00:00-0800'), y: 2 },
@@ -853,21 +772,15 @@ export const FineGrainedTicks = () => {
 		paddingTop: '5rem',
 	};
 
-	const Component = createClass({
-		render() {
-			return (
-				<div style={style}>
-					<LineChart
-						data={data}
-						width={800}
-						xAxisTicks={_.map(data, 'x')}
-						xAxisFormatter={(date) => date.toLocaleDateString()}
-					/>
-				</div>
-			);
-		},
-	});
-
-	return <Component />;
+	return (
+		<section style={style}>
+			<LineChart
+				{...args}
+				data={data}
+				width={800}
+				xAxisTicks={_.map(data, 'x')}
+				xAxisFormatter={(date) => date.toLocaleDateString()}
+			/>
+		</section>
+	);
 };
-FineGrainedTicks.storyName = 'FineGrainedTicks';
