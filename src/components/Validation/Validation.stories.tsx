@@ -19,7 +19,7 @@ export default {
 /* Basic */
 export const Basic: Story<IValidationProps> = (args) => {
 	return (
-		<div>
+		<section>
 			<p>Text field with Error prop (Method 1)</p>
 			<Validation {...args} Error='Error One'>
 				<TextField value='Text Field Text' />
@@ -51,6 +51,6 @@ export const Basic: Story<IValidationProps> = (args) => {
 				</Validation.Error>
 				<TextField isMultiLine rows={3} value='Text Area Text' />
 			</Validation>
-		</div>
+		</section>
 	);
 };

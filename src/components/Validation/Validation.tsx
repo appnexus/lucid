@@ -1,14 +1,15 @@
-import _ from 'lodash';
+import _, { omit } from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
 
 import { lucidClassNames } from '../../util/style-helpers';
-import { getFirst, omitProps, StandardProps } from '../../util/component-types';
+import { getFirst, StandardProps } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-Validation');
 
 const { string, any } = PropTypes;
 
+/** Validation Error */
 export interface IValidationErrorProps extends StandardProps {
 	description?: string;
 }
@@ -23,6 +24,7 @@ ValidationError.propTypes = {
 	children: any,
 };
 
+/** Validation */
 export interface IValidationProps
 	extends StandardProps,
 		React.DetailedHTMLProps<
@@ -41,7 +43,13 @@ export const Validation = (props: IValidationProps): React.ReactElement => {
 
 	return (
 		<div
-			{..._.omit(passThroughs, ['Error'])}
+			{...omit(passThroughs, [
+				'Error',
+				'className',
+				'children',
+				'initialState',
+				'callbackId',
+			])}
 			className={cx(
 				'&',
 				{
@@ -55,7 +63,7 @@ export const Validation = (props: IValidationProps): React.ReactElement => {
 			errorChildProps.children &&
 			errorChildProps.children !== true ? (
 				<div
-					{..._.omit(errorChildProps, ['initialState', 'callbackId'])}
+					{...omit(errorChildProps, ['initialState', 'callbackId'])}
 					className={cx('&-error-content', errorChildProps.className)}
 				>
 					{errorChildProps.children}
