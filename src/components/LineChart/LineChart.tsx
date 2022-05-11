@@ -1,16 +1,11 @@
-import _ from 'lodash';
+import _, { omit } from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
 import * as d3Scale from 'd3-scale';
 import * as d3TimeFormat from 'd3-time-format';
 
 import { lucidClassNames } from '../../util/style-helpers';
-import {
-	StandardProps,
-	getFirst,
-	omitProps,
-	Overwrite,
-} from '../../util/component-types';
+import { StandardProps, getFirst, Overwrite } from '../../util/component-types';
 import {
 	minByFields,
 	maxByFields,
@@ -292,6 +287,57 @@ export interface ILineChartPropsRaw extends StandardProps {
 	yAxisTextOrientation: 'vertical' | 'horizontal' | 'diagonal';
 }
 
+/** TODO: Remove the nonPassThroughs when the component is converted to a functional component */
+const nonPassThroughs = [
+	'className',
+	'height',
+	'width',
+	'margin',
+	'data',
+	'legend',
+	'isLoading',
+	'hasToolTips',
+	'hasLegend',
+	'palette',
+	'colorMap',
+	'xAxisField',
+	'xAxisMin',
+	'xAxisMax',
+	'xAxisFormatter',
+	'xAxisTooltipFormatter',
+	'xAxisTickCount',
+	'xAxisTicks',
+	'xAxisTitle',
+	'xAxisTitleColor',
+	'xAxisTextOrientation',
+	'yAxisFields',
+	'yAxisMin',
+	'yAxisMax',
+	'yAxisFormatter',
+	'yAxisIsStacked',
+	'yAxisHasPoints',
+	'yAxisTickCount',
+	'yAxisTitle',
+	'yAxisTitleColor',
+	'yAxisTooltipFormatter',
+	'yAxisTooltipDataFormatter',
+	'yAxisColorOffset',
+	'y2AxisFields',
+	'y2AxisMin',
+	'y2AxisMax',
+	'y2AxisFormatter',
+	'y2AxisTooltipDataFormatter',
+	'y2AxisIsStacked',
+	'y2AxisHasPoints',
+	'y2AxisTickCount',
+	'y2AxisTitle',
+	'y2AxisTitleColor',
+	'y2AxisColorOffset',
+	'yAxisTextOrientation',
+	'callbackId',
+	'initialState',
+];
+
 export type ILineChartProps = Overwrite<
 	React.SVGProps<SVGGElement>,
 	ILineChartPropsRaw
@@ -357,6 +403,7 @@ class LineChart extends React.Component<ILineChartProps, ILineChartState, {}> {
 				]
 		*/
 		data: arrayOf(object),
+
 		/**
 			An object with human readable names for fields that will be used for
 			legends and tooltips. E.g:
@@ -1014,7 +1061,7 @@ class LineChart extends React.Component<ILineChartProps, ILineChartState, {}> {
 				>
 					{emptyStateWrapperChildren}
 					<svg
-						{...omitProps(passThroughs, undefined, _.keys(LineChart.propTypes))}
+						{...(omit(passThroughs, nonPassThroughs) as any)}
 						className={svgClasses}
 						width={width}
 						height={height}
@@ -1046,7 +1093,7 @@ class LineChart extends React.Component<ILineChartProps, ILineChartState, {}> {
 
 		return (
 			<svg
-				{...omitProps(passThroughs, undefined, _.keys(LineChart.propTypes))}
+				{...(omit(passThroughs, nonPassThroughs) as any)}
 				className={svgClasses}
 				width={width}
 				height={height}

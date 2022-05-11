@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`LineChart [common] example testing should match snapshot(s) for AbbreviatedNumbers 1`] = `
-<div
+<section
   style="padding-top:4rem"
 >
   <svg
@@ -442,11 +442,11 @@ exports[`LineChart [common] example testing should match snapshot(s) for Abbrevi
       />
     </g>
   </svg>
-</div>
+</section>
 `;
 
 exports[`LineChart [common] example testing should match snapshot(s) for AllTheThings 1`] = `
-<div
+<section
   style="padding-top:5rem"
 >
   <svg
@@ -989,11 +989,11 @@ exports[`LineChart [common] example testing should match snapshot(s) for AllTheT
       />
     </g>
   </svg>
-</div>
+</section>
 `;
 
 exports[`LineChart [common] example testing should match snapshot(s) for Basic 1`] = `
-<div
+<section
   style="padding-top:4rem"
 >
   <svg
@@ -1543,11 +1543,11 @@ exports[`LineChart [common] example testing should match snapshot(s) for Basic 1
       />
     </g>
   </svg>
-</div>
+</section>
 `;
 
 exports[`LineChart [common] example testing should match snapshot(s) for ColorOffset 1`] = `
-<div
+<section
   style="padding-top:5rem"
 >
   <svg
@@ -2510,11 +2510,11 @@ exports[`LineChart [common] example testing should match snapshot(s) for ColorOf
       />
     </g>
   </svg>
-</div>
+</section>
 `;
 
 exports[`LineChart [common] example testing should match snapshot(s) for DualAxis 1`] = `
-<div
+<section
   style="padding-top:5rem"
 >
   <svg
@@ -3175,7 +3175,7 @@ exports[`LineChart [common] example testing should match snapshot(s) for DualAxi
       />
     </g>
   </svg>
-</div>
+</section>
 `;
 
 exports[`LineChart [common] example testing should match snapshot(s) for Empty 1`] = `
@@ -3369,7 +3369,7 @@ exports[`LineChart [common] example testing should match snapshot(s) for EmptyWi
 `;
 
 exports[`LineChart [common] example testing should match snapshot(s) for FineGrainedTicks 1`] = `
-<div
+<section
   style="padding-top:5rem"
 >
   <svg
@@ -3838,7 +3838,7 @@ exports[`LineChart [common] example testing should match snapshot(s) for FineGra
       />
     </g>
   </svg>
-</div>
+</section>
 `;
 
 exports[`LineChart [common] example testing should match snapshot(s) for Loading 1`] = `
@@ -3923,7 +3923,7 @@ exports[`LineChart [common] example testing should match snapshot(s) for Loading
 `;
 
 exports[`LineChart [common] example testing should match snapshot(s) for Multi 1`] = `
-<div
+<section
   style="padding-top:8rem"
 >
   <svg
@@ -4933,11 +4933,11 @@ exports[`LineChart [common] example testing should match snapshot(s) for Multi 1
       />
     </g>
   </svg>
-</div>
+</section>
 `;
 
 exports[`LineChart [common] example testing should match snapshot(s) for MultiWithLegend 1`] = `
-<div
+<section
   style="padding-top:8rem"
 >
   <svg
@@ -5656,11 +5656,11 @@ exports[`LineChart [common] example testing should match snapshot(s) for MultiWi
       pears
     </li>
   </ul>
-</div>
+</section>
 `;
 
 exports[`LineChart [common] example testing should match snapshot(s) for Responsive 1`] = `
-<div
+<section
   style="padding-top:4rem"
 >
   <div
@@ -6138,11 +6138,11 @@ exports[`LineChart [common] example testing should match snapshot(s) for Respons
       </svg>
     </div>
   </div>
-</div>
+</section>
 `;
 
 exports[`LineChart [common] example testing should match snapshot(s) for Stacked 1`] = `
-<div
+<section
   style="padding-top:11rem"
 >
   <svg
@@ -6953,11 +6953,11 @@ exports[`LineChart [common] example testing should match snapshot(s) for Stacked
       />
     </g>
   </svg>
-</div>
+</section>
 `;
 
 exports[`LineChart [common] example testing should match snapshot(s) for StackedMonochromeNoShapes 1`] = `
-<div
+<section
   style="padding-top:10rem"
 >
   <svg
@@ -7517,11 +7517,11 @@ exports[`LineChart [common] example testing should match snapshot(s) for Stacked
       />
     </g>
   </svg>
-</div>
+</section>
 `;
 
 exports[`LineChart [common] example testing should match snapshot(s) for StackedSingleSeriesWithFormatters 1`] = `
-<div
+<section
   style="padding-top:4rem"
 >
   <svg
@@ -8090,5 +8090,5 @@ exports[`LineChart [common] example testing should match snapshot(s) for Stacked
       />
     </g>
   </svg>
-</div>
+</section>
 `;
