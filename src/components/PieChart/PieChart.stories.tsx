@@ -1,6 +1,5 @@
 import _ from 'lodash';
 import React from 'react';
-import createClass from 'create-react-class';
 import { Meta, Story } from '@storybook/react';
 
 import * as chartConstants from '../../constants/charts';

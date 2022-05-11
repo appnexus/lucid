@@ -1,10 +1,12 @@
 /* eslint-disable comma-spacing */
-
+import _, { forEach, has, noop } from 'lodash';
 import React from 'react';
 import assert from 'assert';
 import * as d3Scale from 'd3-scale';
+
 import { common } from '../../util/generic-tests';
 import { shallow } from 'enzyme';
+import * as chartConstants from '../../constants/charts';
 
 import Points from './Points';
 import Point from '../Point/Point';
@@ -364,6 +366,75 @@ describe('Points', () => {
 
 				assert.equal(wrapper.find(Point).at(5).prop('x'), 100);
 				assert.equal(wrapper.find(Point).at(5).prop('y'), 0);
+			});
+		});
+
+		describe('pass throughs', () => {
+			let wrapper: any;
+			const defaultProps = Points.defaultProps;
+			const data = [{ x: 'one', y0: 4, y1: 5, y2: 6, y3: 7 }];
+
+			beforeEach(() => {
+				const props = {
+					...defaultProps,
+					data,
+					xField: 'x-test',
+					yFields: ['y0-test', 'y1-test'],
+					colorOffset: 10,
+					hasStroke: false,
+					isStacked: true,
+					palette: chartConstants.PALETTE_30,
+					xScale: defaultXScale,
+					yScale: defaultYScale,
+					className: 'wut',
+					style: { marginRight: 10 },
+					initialState: { test: true },
+					callbackId: 1,
+					'data-testid': 10,
+				};
+				wrapper = shallow(<Points {...props} />);
+			});
+
+			afterEach(() => {
+				wrapper.unmount();
+			});
+
+			it('passes through props not defined in `propTypes` to the root element.', () => {
+				const rootProps = wrapper.find('.lucid-Points').props();
+				expect(wrapper.first().prop(['className'])).toContain('wut');
+				expect(wrapper.first().prop(['style'])).toMatchObject({
+					marginRight: 10,
+				});
+				expect(wrapper.first().prop(['data-testid'])).toBe(10);
+
+				// 'className' is plucked from the pass through object
+				// but still appears becuase is is are also directly passed on the root element as a prop
+				forEach(['className', 'data-testid', 'style', 'children'], (prop) => {
+					expect(has(rootProps, prop)).toBe(true);
+				});
+			});
+			it('omits all the props defined in `propTypes` (plus, in addition, `initialState`, and `callbackId`) from the root element', () => {
+				const rootProps = wrapper.find('.lucid-Points').props();
+				forEach(
+					[
+						'palette',
+						'colorMap',
+						'data',
+						'xScale',
+						'yScale',
+						'xField',
+						'yFields',
+						'yStackedMax',
+						'colorOffset',
+						'hasStroke',
+						'isStacked',
+						'initialState',
+						'callbackId',
+					],
+					(prop) => {
+						expect(has(rootProps, prop)).toBe(false);
+					}
+				);
 			});
 		});
 	});
