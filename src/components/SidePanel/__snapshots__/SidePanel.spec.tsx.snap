@@ -121,7 +121,7 @@ exports[`SidePanel Header should match snapshot 1`] = `
     style={
       Object {
         "marginTop": 0,
-        "width": 240,
+        "width": 500,
       }
     }
   >
@@ -208,7 +208,7 @@ exports[`SidePanel isAnimated should match snapshot and apply the appropriate cl
     style={
       Object {
         "marginTop": 0,
-        "width": 240,
+        "width": 500,
       }
     }
   >
@@ -261,7 +261,7 @@ exports[`SidePanel isExpanded should match snapshot and apply the appropriate cl
     style={
       Object {
         "marginTop": 0,
-        "width": 240,
+        "width": 500,
       }
     }
   >
@@ -314,7 +314,7 @@ exports[`SidePanel isResizeDisabled should match snapshot 1`] = `
     style={
       Object {
         "marginTop": 0,
-        "width": 240,
+        "width": 500,
       }
     }
   >
@@ -348,7 +348,7 @@ exports[`SidePanel position should match snapshot and apply the appropriate clas
     style={
       Object {
         "marginTop": 0,
-        "width": 240,
+        "width": 500,
       }
     }
   >
@@ -401,7 +401,7 @@ exports[`SidePanel position should match snapshot and apply the appropriate clas
     style={
       Object {
         "marginTop": 0,
-        "width": 240,
+        "width": 500,
       }
     }
   >
