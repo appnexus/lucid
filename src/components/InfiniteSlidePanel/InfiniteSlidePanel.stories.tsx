@@ -1,6 +1,9 @@
-import React from 'react';
-import createClass from 'create-react-class';
-import InfiniteSlidePanel from './InfiniteSlidePanel';
+import React, { useState } from 'react';
+import { Story, Meta } from '@storybook/react';
+
+import InfiniteSlidePanel, {
+	IInfiniteSlidePanelSlideProps,
+} from './InfiniteSlidePanel';
 import Button from '../Button/Button';
 
 export default {
@@ -9,14 +12,15 @@ export default {
 	parameters: {
 		docs: {
 			description: {
-				component: (InfiniteSlidePanel as any).peek.description,
+				component: InfiniteSlidePanel.peek.description,
 			},
 		},
 	},
-};
+	args: InfiniteSlidePanel.defaultProps,
+} as Meta;
 
 /* Dynamic Content */
-export const DynamicContent = () => {
+export const DynamicContent: Story = (args: IInfiniteSlidePanelSlideProps) => {
 	const generateRGB = (n: any) => {
 		const R = Math.floor((Math.sin(n / Math.PI) + 1) * 128);
 		const G = Math.floor((Math.sin((2 * n) / Math.PI) + 1) * 128);
@@ -24,63 +28,47 @@ export const DynamicContent = () => {
 		return `rgb(${R},${G},${B})`;
 	};
 
-	const Component = createClass({
-		getInitialState() {
-			return {
-				offset: 0,
-			};
-		},
+	const [offset, setOffset] = useState(0);
 
-		handlePrev() {
-			this.setState({
-				offset: this.state.offset - 1,
-			});
-		},
+	const handlePrev = () => {
+		setOffset(offset - 1);
+	};
 
-		handleNext() {
-			this.setState({
-				offset: this.state.offset + 1,
-			});
-		},
+	const handleNext = () => {
+		setOffset(offset + 1);
+	};
 
-		handleSwipe(slidesSwiped: any) {
-			this.setState({
-				offset: this.state.offset + slidesSwiped,
-			});
-		},
+	const handleSwipe = (slidesSwiped: any) => {
+		setOffset(offset + slidesSwiped);
+	};
 
-		render() {
-			return (
-				<section>
-					<Button onClick={this.handlePrev}>Backward</Button>
-					<Button onClick={this.handleNext}>Forward</Button>
-					Current offset: {this.state.offset}
-					<InfiniteSlidePanel
-						totalSlides={12}
-						slidesToShow={3}
-						offset={this.state.offset}
-						onSwipe={this.handleSwipe}
+	return (
+		<section>
+			<Button onClick={handlePrev}>Backward</Button>
+			<Button onClick={handleNext}>Forward</Button>
+			<span style={{ marginLeft: 10 }}>Current offset: {offset}</span>
+			<InfiniteSlidePanel
+				{...args}
+				totalSlides={12}
+				slidesToShow={3}
+				offset={offset}
+				onSwipe={handleSwipe}
+			>
+				{(slideOffset) => (
+					<div
+						style={{
+							width: '100%',
+							height: '30vh',
+							background: generateRGB(slideOffset),
+							display: 'flex',
+							justifyContent: 'center',
+							alignItems: 'center',
+						}}
 					>
-						{(slideOffset) => (
-							<div
-								style={{
-									width: '100%',
-									height: '30vh',
-									background: generateRGB(slideOffset),
-									display: 'flex',
-									justifyContent: 'center',
-									alignItems: 'center',
-								}}
-							>
-								{slideOffset}
-							</div>
-						)}
-					</InfiniteSlidePanel>
-				</section>
-			);
-		},
-	});
-
-	return <Component />;
+						{slideOffset}
+					</div>
+				)}
+			</InfiniteSlidePanel>
+		</section>
+	);
 };
-DynamicContent.storyName = 'DynamicContent';
