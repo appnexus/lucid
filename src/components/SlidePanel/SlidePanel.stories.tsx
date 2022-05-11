@@ -1,6 +1,7 @@
-import React from 'react';
-import createClass from 'create-react-class';
-import SlidePanel from './SlidePanel';
+import React, { useState } from 'react';
+import { Meta, Story } from '@storybook/react';
+
+import SlidePanel, { ISlidePanelSlideProps } from './SlidePanel';
 import Button from '../Button/Button';
 import AnalyzeDataIcon from '../Icon/AnalyzeDataIcon/AnalyzeDataIcon';
 import CalendarIcon from '../Icon/CalendarIcon/CalendarIcon';
@@ -16,104 +17,89 @@ export default {
 	parameters: {
 		docs: {
 			description: {
-				component: (SlidePanel as any).peek.description,
+				component: SlidePanel.peek.description,
 			},
 		},
 	},
-};
+	args: SlidePanel.defaultProps,
+} as Meta;
 
 /* Looped Slides */
-export const LoopedSlides = () => {
+export const LoopedSlides: Story<ISlidePanelSlideProps> = (args) => {
 	const Slide = SlidePanel.Slide;
 
-	const Component = createClass({
-		getInitialState() {
-			return {
-				offset: 0,
-			};
-		},
+	const [offset, setOffset] = useState(0);
 
-		handlePrev() {
-			this.setState({
-				offset: this.state.offset - 1,
-			});
-		},
+	const handlePrev = () => {
+		setOffset(offset - 1);
+	};
 
-		handleNext() {
-			this.setState({
-				offset: this.state.offset + 1,
-			});
-		},
+	const handleNext = () => {
+		setOffset(offset + 1);
+	};
 
-		handleSwipe(slidesSwiped: any) {
-			this.setState({
-				offset: this.state.offset + slidesSwiped,
-			});
-		},
+	const handleSwipe = (slidesSwiped: any) => {
+		setOffset(offset + slidesSwiped);
+	};
 
-		render() {
-			return (
-				<section>
-					<Button onClick={this.handlePrev}>Backward</Button>
-					<Button onClick={this.handleNext}>Forward</Button>
-					Current offset: {this.state.offset}
-					<SlidePanel
-						slidesToShow={2}
-						offset={this.state.offset}
-						onSwipe={this.handleSwipe}
-						isLooped={true}
-					>
-						<Slide>
-							<AnalyzeDataIcon
-								style={{
-									width: '100%',
-									height: '30vh',
-									background: 'whitesmoke',
-								}}
-							/>
-						</Slide>
-						<Slide>
-							<CalendarIcon style={{ width: '100%', height: '30vh' }} />
-						</Slide>
-						<Slide>
-							<DuplicateIcon
-								style={{
-									width: '100%',
-									height: '30vh',
-									background: 'whitesmoke',
-								}}
-							/>
-						</Slide>
-						<Slide>
-							<EditIcon style={{ width: '100%', height: '30vh' }} />
-						</Slide>
-						<Slide>
-							<FileIcon
-								style={{
-									width: '100%',
-									height: '30vh',
-									background: 'whitesmoke',
-								}}
-							/>
-						</Slide>
-						<Slide>
-							<ImageIcon
-								style={{
-									width: '100%',
-									height: '30vh',
-									background: 'whitesmoke',
-								}}
-							/>
-						</Slide>
-						<Slide>
-							<SettingsIcon style={{ width: '100%', height: '30vh' }} />
-						</Slide>
-					</SlidePanel>
-				</section>
-			);
-		},
-	});
-
-	return <Component />;
+	return (
+		<section>
+			<Button onClick={handlePrev}>Backward</Button>
+			<Button onClick={handleNext}>Forward</Button>
+			Current offset: {offset}
+			<SlidePanel
+				{...args}
+				slidesToShow={2}
+				offset={offset}
+				onSwipe={handleSwipe}
+				isLooped={true}
+			>
+				<Slide>
+					<AnalyzeDataIcon
+						style={{
+							width: '100%',
+							height: '30vh',
+							background: 'whitesmoke',
+						}}
+					/>
+				</Slide>
+				<Slide>
+					<CalendarIcon style={{ width: '100%', height: '30vh' }} />
+				</Slide>
+				<Slide>
+					<DuplicateIcon
+						style={{
+							width: '100%',
+							height: '30vh',
+							background: 'whitesmoke',
+						}}
+					/>
+				</Slide>
+				<Slide>
+					<EditIcon style={{ width: '100%', height: '30vh' }} />
+				</Slide>
+				<Slide>
+					<FileIcon
+						style={{
+							width: '100%',
+							height: '30vh',
+							background: 'whitesmoke',
+						}}
+					/>
+				</Slide>
+				<Slide>
+					<ImageIcon
+						style={{
+							width: '100%',
+							height: '30vh',
+							background: 'whitesmoke',
+						}}
+					/>
+				</Slide>
+				<Slide>
+					<SettingsIcon style={{ width: '100%', height: '30vh' }} />
+				</Slide>
+			</SlidePanel>
+		</section>
+	);
 };
-LoopedSlides.storyName = 'LoopedSlides';

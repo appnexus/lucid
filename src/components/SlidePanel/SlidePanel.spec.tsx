@@ -1,8 +1,11 @@
-import { shallow } from 'enzyme';
+import _, { forEach, has, noop } from 'lodash';
 import React from 'react';
+import { shallow, mount } from 'enzyme';
+
 import { common } from '../../util/generic-tests';
 import * as domHelpers from '../../util/dom-helpers';
 import SlidePanel from './SlidePanel';
+import CalendarIcon from '../Icon/CalendarIcon/CalendarIcon';
 
 const { Slide } = SlidePanel;
 
@@ -111,6 +114,121 @@ describe('SlidePanel', () => {
 				jest.runAllTimers();
 
 				expect(slidePanelInstance.offsetTranslate).toBe(5);
+			});
+		});
+
+		describe('root pass throughs', () => {
+			let wrapper: any;
+			let props: any;
+			const defaultProps = SlidePanel.defaultProps;
+
+			beforeEach(() => {
+				props = {
+					...defaultProps,
+					slidesToShow: 2,
+					offset: 1,
+					isAnimated: false,
+					onSwipe: noop,
+					Slide: <CalendarIcon style={{ width: '100%', height: '30vh' }} />,
+					isLooped: true,
+					className: 'wut',
+					style: { marginRight: 10 },
+					initialState: { test: true },
+					callbackId: 1,
+					'data-testid': 10,
+				};
+				wrapper = shallow(<SlidePanel {...props} />);
+			});
+
+			afterEach(() => {
+				wrapper.unmount();
+			});
+
+			it('passes through props not defined in `propTypes` to the root element.', () => {
+				const rootProps = wrapper.find('.lucid-SlidePanel').props();
+
+				expect(wrapper.first().prop(['className'])).toContain('wut');
+				expect(wrapper.first().prop(['style'])).toMatchObject({
+					marginRight: 10,
+				});
+				expect(wrapper.first().prop(['data-testid'])).toBe(10);
+
+				// 'className' and 'style' are plucked from the pass through object
+				// but still appear becuase they are also directly passed to the root element as a prop
+				forEach(['className', 'data-testid', 'style', 'children'], (prop) => {
+					expect(has(rootProps, prop)).toBe(true);
+				});
+			});
+			it('omits all the props defined in `propTypes` (plus, in addition, `initialState`, and `callbackId`) to the root element', () => {
+				const rootProps = wrapper.find('.lucid-SlidePanel').props();
+
+				forEach(
+					[
+						'Slide',
+						'slidesToShow',
+						'offset',
+						'isAnimated',
+						'isLooped',
+						'onSwipe',
+						'initialState',
+						'callbackId',
+					],
+					(prop) => {
+						expect(has(rootProps, prop)).toBe(false);
+					}
+				);
+			});
+
+			describe('slidestrip child component', () => {
+				let slidestripWrapper: any;
+
+				beforeEach(() => {
+					slidestripWrapper = mount(
+						<SlidePanel {...props} className='dub' data-testid={11} />
+					);
+				});
+
+				afterEach(() => {
+					slidestripWrapper.unmount();
+				});
+
+				it('passes through props not defined in `propTypes` to the slidestrip element.', () => {
+					const slidestripProps = slidestripWrapper
+						.find('.lucid-SlidePanel-slidestrip')
+						.props();
+
+					expect(slidestripWrapper.first().prop(['className'])).toContain(
+						'dub'
+					);
+					expect(slidestripWrapper.first().prop(['data-testid'])).toBe(11);
+
+					// 'className' and 'style' are plucked from the pass through object
+					// but still appear becuase they are also directly passed to the root element as a prop
+					forEach(['className', 'data-testid', 'style', 'children'], (prop) => {
+						expect(has(slidestripProps, prop)).toBe(true);
+					});
+				});
+				it('omits all the props defined in `propTypes` (plus, in addition, `initialState`, and `callbackId`) from the slidestrip element', () => {
+					const slidestripProps = slidestripWrapper
+						.find('.lucid-SlidePanel-slidestrip')
+						.props();
+
+					forEach(
+						[
+							'Slide',
+							'slidesToShow',
+							'offset',
+							'isAnimated',
+							'isLooped',
+							'onSwipe',
+							'initialState',
+							'callbackId',
+						],
+						(prop) => {
+							expect(has(slidestripProps, prop)).toBe(false);
+						}
+					);
+				});
 			});
 		});
 	});

@@ -1,15 +1,12 @@
-import _ from 'lodash';
+import _, { omit } from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Motion, spring, PlainStyle } from 'react-motion';
+
 import { QUICK_SLIDE_MOTION } from '../../constants/motion-spring';
 import { lucidClassNames } from '../../util/style-helpers';
 import { shiftChildren } from '../../util/dom-helpers';
-import {
-	findTypes,
-	omitProps,
-	StandardProps,
-} from '../../util/component-types';
+import { findTypes, StandardProps } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-SlidePanel');
 
@@ -17,6 +14,7 @@ const { bool, func, node, number, string, any } = PropTypes;
 
 const modulo = (n: number, a: number): number => a - n * Math.floor(a / n);
 
+/** Slide Panel Slide */
 export interface ISlidePanelSlideProps extends StandardProps {
 	description?: string;
 }
@@ -29,6 +27,7 @@ class SlidePanelSlide extends React.Component<ISlidePanelSlideProps, {}, {}> {
 	}
 }
 
+/** Slide Panel */
 export interface ISlidePanelProps
 	extends StandardProps,
 		React.DetailedHTMLProps<
@@ -58,6 +57,18 @@ export interface ISlidePanelProps
 	) => void;
 }
 
+const nonPassThroughs = [
+	'className',
+	'children',
+	'Slide',
+	'slidesToShow',
+	'offset',
+	'isAnimated',
+	'isLooped',
+	'onSwipe',
+	'initialState',
+	'callbackId',
+];
 interface ISlidePanelState {
 	translateXPixel: number;
 	startX: number;
@@ -241,7 +252,7 @@ class SlidePanel extends React.Component<
 
 		return (
 			<div
-				{...omitProps(passThroughs, undefined, _.keys(SlidePanel.propTypes))}
+				{...omit(passThroughs, nonPassThroughs)}
 				ref={this.rootHTMLDivElement}
 				className={cx('&', className)}
 			>
@@ -266,11 +277,7 @@ class SlidePanel extends React.Component<
 				>
 					{(tween: PlainStyle): JSX.Element => (
 						<div
-							{...omitProps(
-								passThroughs,
-								undefined,
-								_.keys(SlidePanel.propTypes)
-							)}
+							{...omit(passThroughs, nonPassThroughs)}
 							className={cx('&-slidestrip', className)}
 							style={{
 								transform: this.state.isDragging
