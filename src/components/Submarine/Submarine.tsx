@@ -1,4 +1,4 @@
-import _ from 'lodash';
+import _, { omit } from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
@@ -24,37 +24,33 @@ const cx = lucidClassNames.bind('&-Submarine');
 
 const { any, bool, func, node, number, string, oneOf, oneOfType } = PropTypes;
 
+/** Primary */
 export interface ISubmarinePrimaryProps extends StandardProps {}
-
-export interface ISumbarineTitleProps extends StandardProps {}
-
-export interface ISubmarineBarProps extends StandardProps {
-	Title?: ISumbarineTitleProps | string;
-}
 
 const Primary = (_props: ISubmarinePrimaryProps): null => null;
 Primary.peek = {
-	description: `
-		Primary content rendered beside the Submarine.
-	`,
+	description: `Primary content rendered beside the Submarine.`,
 };
 Primary.displayName = 'SplitHorizontal.Primary';
 Primary.propName = 'Primary';
 
+/** Title */
+export interface ISumbarineTitleProps extends StandardProps {}
+
 const Title = (_props: ISumbarineTitleProps): null => null;
 Title.peek = {
-	description: `
-		Submarine title;
-	`,
+	description: `Submarine title.`,
 };
 Title.displayName = 'Submarine.Title';
 Title.propName = 'Title';
 
+/** Bar */
+export interface ISubmarineBarProps extends StandardProps {
+	Title?: ISumbarineTitleProps | string;
+}
 const Bar = (_props: ISubmarineBarProps): null => null;
 Bar.peek = {
-	description: `
-		Submarine bar;
-	`,
+	description: `Submarine bar.`,
 };
 Bar.displayName = 'Submarine.Bar';
 Bar.propName = 'Bar';
@@ -65,6 +61,7 @@ Bar.propTypes = {
 	Title: any,
 };
 
+/** Submarine */
 const defaultProps = {
 	isExpanded: true,
 	isAnimated: true,
@@ -107,7 +104,7 @@ export interface ISubmarineProps extends StandardProps {
 	/** Set the title of the Submarine. */
 	Primary?: React.ReactNode;
 
-	/** Set the title of the Submarine. */
+	/** Set the content and title of the Submarine Bar. */
 	Bar?: React.ReactNode;
 
 	/** Called when the user is currently resizing the Submarine. */
@@ -205,7 +202,7 @@ class Submarine extends React.Component<ISubmarineProps, ISubmarineState> {
 		Title: any,
 
 		/**
-			Set the submarine bar content.
+			Set the Submarine Bar content.
 		*/
 		Bar: any,
 
@@ -282,11 +279,13 @@ class Submarine extends React.Component<ISubmarineProps, ISubmarineState> {
 			'props',
 			{}
 		); // props from first Primary
+
 		const barProps = _.get(
 			_.first(filterTypes(children, Submarine.Bar)),
 			'props',
 			{}
 		); // props from first Bar
+
 		const titleProps = _.get(
 			findTypes(barProps, Submarine.Title).concat(
 				findTypes(this.props, Submarine.Title)
@@ -309,11 +308,25 @@ class Submarine extends React.Component<ISubmarineProps, ISubmarineState> {
 
 		return (
 			<SplitHorizontal
-				{...omitProps(
+				{...omit(
 					passThroughs,
-					undefined,
-					_.keys(Submarine.propTypes),
-					false
+					[
+						'className',
+						'children',
+						'height',
+						'isExpanded',
+						'isHidden',
+						'isTitleShownCollapsed',
+						'isAnimated',
+						'position',
+						'isResizeDisabled',
+						'Title',
+						'Bar',
+						'Primary',
+						'onResizing',
+						'onResize',
+						'onToggle',
+					].concat('initialState')
 				)}
 				className={cx(
 					'&',
@@ -331,12 +344,7 @@ class Submarine extends React.Component<ISubmarineProps, ISubmarineState> {
 				onResize={this.handleResize}
 			>
 				<BarPane
-					{...omitProps(
-						barProps,
-						undefined,
-						_.keys(Submarine.Bar.propTypes),
-						false
-					)}
+					{...omit(barProps, ['Title'].concat('initialState'))}
 					className={cx('&-Bar', barProps.className)}
 					height={height}
 				>
