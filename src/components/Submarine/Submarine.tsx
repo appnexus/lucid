@@ -5,7 +5,6 @@ import { lucidClassNames } from '../../util/style-helpers';
 import {
 	filterTypes,
 	findTypes,
-	omitProps,
 	StandardProps,
 } from '../../util/component-types';
 import { buildModernHybridComponent } from '../../util/state-management';
