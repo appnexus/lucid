@@ -329,9 +329,9 @@ class TextField extends React.Component<
 		}
 	};
 
-	focus = (): void => {
+	focus = (options?: FocusOptions): void => {
 		/* istanbul ignore next */
-		(this.nativeElement.current as HTMLElement).focus();
+		(this.nativeElement.current as HTMLElement).focus(options);
 	};
 
 	UNSAFE_componentWillMount(): void {

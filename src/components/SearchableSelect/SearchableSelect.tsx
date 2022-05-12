@@ -128,6 +128,7 @@ export interface ISearchableSelectState {
 	flattenedOptionsData: IOptionsData[];
 	ungroupedOptionData: IOptionsData[];
 	optionGroupDataLookup: { [key: number]: IOptionsData[] };
+	isFocusOnSearchFieldRequired: boolean;
 }
 
 const defaultProps = {
@@ -350,6 +351,28 @@ class SearchableSelect extends React.Component<
 		onSearch(searchText, firstVisibleIndex);
 	};
 
+	handleExpand = ({
+		props,
+		event,
+	}: {
+		props: IDropMenuProps;
+		event: React.KeyboardEvent | React.MouseEvent;
+	}): void => {
+		const dropMenuProps = this.props.DropMenu;
+		dropMenuProps.onExpand && dropMenuProps.onExpand({ event, props: props });
+		this.setState({ isFocusOnSearchFieldRequired: true });
+	};
+
+	setSearchField = (e: SearchField) => {
+		if (e && this.state.isFocusOnSearchFieldRequired) {
+			this.setState({ isFocusOnSearchFieldRequired: false });
+			// use setTimeout to prevent scroll from safari
+			setTimeout(() => {
+				e.focus({ preventScroll: true });
+			}, 0);
+		}
+	};
+
 	renderUnderlinedChildren = (childText: string, searchText: string) => {
 		const [pre, match, post] = partitionText(
 			childText,
@@ -517,6 +540,7 @@ class SearchableSelect extends React.Component<
 					isDisabled={isDisabled}
 					onSelect={onSelect}
 					selectedIndices={_.isNumber(selectedIndex) ? [selectedIndex] : []}
+					onExpand={this.handleExpand}
 				>
 					<DropMenu.Control>
 						<div
@@ -570,6 +594,7 @@ class SearchableSelect extends React.Component<
 							autoComplete={searchFieldProps.autoComplete || 'off'}
 							onChange={this.handleSearch}
 							value={searchText}
+							ref={this.setSearchField}
 						/>
 					</DropMenu.Header>
 					{isLoading && (

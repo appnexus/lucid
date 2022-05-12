@@ -417,6 +417,20 @@ describe('SearchableSelect', () => {
 
 				assert.equal(searchFieldWrapper.prop('placeholder'), 'custom');
 			});
+
+			it('should pass send focus to the underlying SearchField element when opened', () => {
+				const wrapper = mount(
+					<SearchableSelect>
+						<SearchField placeholder='custom' />
+						<Option name='OptionA'>option a</Option>
+						<Option name='OptionB'>option b</Option>
+						<Option name='OptionC'>option c</Option>
+					</SearchableSelect>
+				);
+				const control: any = wrapper.find('.lucid-Icon');
+				control.at(0).simulate('click');
+				expect(wrapper.state('isFocusOnSearchFieldRequired')).toBe(true);
+			});
 		});
 
 		describe('Placeholder', () => {
