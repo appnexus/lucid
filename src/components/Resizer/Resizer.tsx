@@ -1,8 +1,8 @@
-import _ from 'lodash';
+import _, { omit } from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import { omitProps, StandardProps } from '../../util/component-types';
+import { StandardProps } from '../../util/component-types';
 import elementResizeDetectorMaker from 'element-resize-detector';
 
 const cx = lucidClassNames.bind('&-Resizer');
@@ -86,7 +86,10 @@ class Resizer extends React.Component<IResizerProps, IResizerState, {}> {
 
 		return (
 			<div
-				{...omitProps(passThroughs, undefined, _.keys(Resizer.propTypes))}
+				{...omit(
+					passThroughs,
+					['className', 'children'].concat(['initialState', 'callbackId'])
+				)}
 				className={cx('&', className)}
 				ref={this._element}
 			>
