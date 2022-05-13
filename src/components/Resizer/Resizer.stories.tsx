@@ -31,7 +31,7 @@ export const Basic: Story<IResizerProps> = (args) => {
 /* With Flex */
 export const WithFlex: Story<IResizerProps> = (args) => {
 	return (
-		<div
+		<section
 			style={{
 				display: 'flex',
 			}}
@@ -62,6 +62,6 @@ export const WithFlex: Story<IResizerProps> = (args) => {
 					</div>
 				)}
 			</Resizer>
-		</div>
+		</section>
 	);
 };
