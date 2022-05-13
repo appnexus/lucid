@@ -64,7 +64,7 @@ export const AnimatedCollapse: Story<ISplitVerticalProps> = (args) => {
 		<section>
 			<button onClick={handleToggle}>toggle</button>
 
-			<SplitVertical isAnimated isExpanded={isExpanded}>
+			<SplitVertical {...(args as any)} isAnimated isExpanded={isExpanded}>
 				<SplitVertical.LeftPane>
 					<p>
 						Poutine ea ramps cold-pressed, vinyl bespoke sint keffiyeh tumblr
