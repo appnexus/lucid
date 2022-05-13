@@ -2,11 +2,7 @@ import _, { omit } from 'lodash';
 import React, { RefObject } from 'react';
 import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import {
-	filterTypes,
-	omitProps,
-	StandardProps,
-} from '../../util/component-types';
+import { filterTypes, StandardProps } from '../../util/component-types';
 import DragCaptureZone from '../DragCaptureZone/DragCaptureZone';
 import { Motion, spring } from 'react-motion';
 import { QUICK_SLIDE_MOTION } from '../../constants/motion-spring';
@@ -15,9 +11,11 @@ const cx = lucidClassNames.bind('&-SplitVertical');
 
 const { any, bool, func, node, number, string, oneOfType } = PropTypes;
 
+/** SplitVertical Right Pane */
 export interface ISplitVerticalRightPaneProps extends StandardProps {
 	/** Set width of this pane. */
 	width?: number | string;
+
 	/** Define this pane as the primary content pane. When the split is
 		collapsed, this pane becomes full width. */
 	isPrimary: boolean;
@@ -35,10 +33,12 @@ SplitVerticalRightPane.propTypes = {
 		Any valid React children.
 	*/
 	children: node,
+
 	/**
 		Set width of this pane.
 	*/
 	width: oneOfType([number, string]),
+
 	/**
 		Define this pane as the primary content pane. When the split is
 		collapsed, this pane becomes full width.
@@ -49,6 +49,7 @@ SplitVerticalRightPane.defaultProps = {
 	isPrimary: false,
 };
 
+/** SplitVertical Left Pane */
 export interface ISplitVerticalLeftPaneProps extends StandardProps {
 	/** Set width of this pane. */
 	width?: number | string;
@@ -56,13 +57,12 @@ export interface ISplitVerticalLeftPaneProps extends StandardProps {
 		collapsed, this pane becomes full width. */
 	isPrimary: boolean;
 }
-const SplitVerticalLeftPane = (_props: ISplitVerticalLeftPaneProps): null =>
-	null;
+export const SplitVerticalLeftPane = (
+	_props: ISplitVerticalLeftPaneProps
+): null => null;
 SplitVerticalLeftPane.displayName = 'SplitVertical.LeftPane';
 SplitVerticalLeftPane.peek = {
-	description: `
-		Left pane of the split.
-	`,
+	description: `Left pane of the split.`,
 };
 SplitVerticalLeftPane.propName = 'LeftPane';
 SplitVerticalLeftPane.propTypes = {
@@ -84,6 +84,7 @@ SplitVerticalLeftPane.defaultProps = {
 	isPrimary: false,
 };
 
+/** SplitVertical Divider */
 const SplitVerticalDivider = (_props: StandardProps): null => null;
 SplitVerticalDivider.displayName = 'SplitVertical.Divider';
 SplitVerticalDivider.peek = {
@@ -97,6 +98,7 @@ SplitVerticalDivider.propTypes = {
 	children: node,
 };
 
+/** SplitVertical */
 export interface ISplitVerticalProps
 	extends StandardProps,
 		React.DetailedHTMLProps<
@@ -165,9 +167,9 @@ class SplitVertical extends React.Component<
 		className: any,
 
 		/**
-			Direct children must be types {Splitvertical.Leftpane,
-			Splitvertical.Divider, Splitvertical.RightPane}.  All content is composed
-			as children of these respective elements.
+			Direct children must be types {SplitVertical.Leftpane,
+			SplitVertical.Divider, SplitVertical.RightPane}.  
+			All content is composed as children of these respective elements.
 		*/
 		children: node,
 
@@ -203,8 +205,20 @@ class SplitVertical extends React.Component<
 		*/
 		collapseShift: number,
 
+		/**
+			Direct child of SplitVertical
+		 */
 		RightPane: node,
+
+		/**
+			Direct child of SplitVertical
+		 */
 		LeftPane: node,
+
+		/**
+		 	Direct child of SplitVertical.
+		 	Rendered when `isResizeable` is true.
+		 */
 		Divider: node,
 	};
 
@@ -538,10 +552,12 @@ class SplitVertical extends React.Component<
 							}}
 						>
 							<div
-								{...omitProps(
+								{...omit(
 									leftPaneProps,
-									undefined,
-									_.keys(SplitVerticalLeftPane.propTypes)
+									['children', 'isPrimary', 'width'].concat([
+										'initialState',
+										'callbackId',
+									])
 								)}
 								className={cx(
 									'&-LeftPane',
@@ -570,12 +586,7 @@ class SplitVertical extends React.Component<
 							</div>
 							{isResizeable ? (
 								<DragCaptureZone
-									{...omitProps(
-										dividerProps,
-										undefined,
-										_.keys(SplitVerticalDivider.propTypes),
-										false
-									)}
+									{...omit(dividerProps, ['children'].concat('initialState'))}
 									className={cx(
 										'&-Divider',
 										'&-Divider-is-resizeable',
@@ -594,10 +605,9 @@ class SplitVertical extends React.Component<
 								</DragCaptureZone>
 							) : (
 								<div
-									{...omitProps(
+									{...omit(
 										dividerProps,
-										undefined,
-										_.keys(SplitVerticalDivider.propTypes)
+										['children'].concat('initialState', 'callbackId')
 									)}
 									className={cx('&-Divider', dividerProps.className)}
 								>
@@ -605,10 +615,12 @@ class SplitVertical extends React.Component<
 								</div>
 							)}
 							<div
-								{...omitProps(
+								{...omit(
 									rightPaneProps,
-									undefined,
-									_.keys(SplitVerticalRightPane.propTypes)
+									['children', 'isPrimary', 'width'].concat([
+										'initialState',
+										'callbackId',
+									])
 								)}
 								className={cx(
 									'&-RightPane',
