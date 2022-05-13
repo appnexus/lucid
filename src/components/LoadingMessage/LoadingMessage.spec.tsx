@@ -165,7 +165,7 @@ describe('LoadingMessage', () => {
 			expect(wrapper.first().prop(['data-testid'])).toBe(10);
 		});
 
-		it('omits the props defined in `propTypes` from the root element, plus, in addition, `initialState`.', () => {
+		it('omits the props defined in `propTypes` from the root element, plus, in addition, `initialState and callbackId`.', () => {
 			const rootProps = wrapper.find('.lucid-LoadingMessage').props();
 
 			// initialState and callbackId are always both omitted
