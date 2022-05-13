@@ -168,8 +168,6 @@ describe('LoadingMessage', () => {
 		it('omits the props defined in `propTypes` from the root element, plus, in addition, `initialState`.', () => {
 			const rootProps = wrapper.find('.lucid-LoadingMessage').props();
 
-			console.log('rootProps', rootProps);
-			console.log(wrapper.debug());
 			// initialState and callbackId are always both omitted
 			forEach(
 				['Icon', 'Title', 'Body', 'initialState', 'callbackId'],
