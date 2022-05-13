@@ -49,13 +49,31 @@ describe('SplitVertical', () => {
 		});
 	});
 
-	describe('props', () => {
+	describe('pass throughs', () => {
 		describe('root pass throughs', () => {
 			let wrapper: any;
 
 			beforeEach(() => {
 				const props = {
 					...SplitVertical.defaultProps,
+					children: [
+						<SplitVertical.RightPane
+							className='test right pane'
+							style={{ marginLeft: 10 }}
+							callbackId={2}
+							data-testid={11}
+							width={234}
+							isPrimary={true}
+						/>,
+						<SplitVertical.LeftPane
+							className='test left pane'
+							style={{ marginLeft: 20 }}
+							callbackId={3}
+							data-testid={12}
+							width={567}
+							isPrimary={false}
+						/>,
+					],
 					collapseShift: 1,
 					isResizeable: false,
 					className: 'wut',
@@ -64,7 +82,7 @@ describe('SplitVertical', () => {
 					callbackId: 1,
 					'data-testid': 10,
 				};
-				wrapper = shallow(<SplitVertical {...props} />);
+				wrapper = mount(<SplitVertical {...props} />);
 			});
 
 			afterEach(() => {
@@ -110,8 +128,181 @@ describe('SplitVertical', () => {
 					}
 				);
 			});
+			it('passes through and omits the correct props for the `SplitVertical.LeftPane`.', () => {
+				const leftPaneProps = wrapper
+					.find('.lucid-SplitVertical-LeftPane')
+					.props();
+
+				// included props
+				forEach(['className', 'style', 'data-testid', 'children'], (prop) => {
+					expect(has(leftPaneProps, prop)).toBe(true);
+				});
+
+				// excluded props
+				forEach(
+					['isPrimary', 'width', 'callbackId', 'initialState'],
+					(prop) => {
+						expect(has(leftPaneProps, prop)).toBe(false);
+					}
+				);
+			});
+			it('passes through and omits the correct props for the `SplitVertical.RightPane`.', () => {
+				const rightPaneProps = wrapper
+					.find('.lucid-SplitVertical-RightPane')
+					.props();
+
+				// included props
+				forEach(['className', 'style', 'data-testid', 'children'], (prop) => {
+					expect(has(rightPaneProps, prop)).toBe(true);
+				});
+
+				// excluded props
+				forEach(
+					['isPrimary', 'width', 'initialState', 'callbackId'],
+					(prop) => {
+						expect(has(rightPaneProps, prop)).toBe(false);
+					}
+				);
+			});
 		});
 
+		describe('DragCaptureZone pass throughs: dividerProps', () => {
+			let wrapper: any;
+
+			beforeEach(() => {
+				const props = {
+					...SplitVertical.defaultProps,
+					children: (
+						<SplitVertical.Divider
+							className='test Divider'
+							style={{ marginLeft: 10 }}
+							callbackId={2}
+							data-testid={11}
+						/>
+					),
+					collapseShift: 1,
+					isResizeable: true, // renders the resizable Divider
+					className: 'wut',
+					style: { marginRight: 10 },
+					initialState: { test: true },
+					callbackId: 1,
+					'data-testid': 10,
+				};
+				wrapper = mount(<SplitVertical {...props} />);
+			});
+
+			afterEach(() => {
+				if (wrapper) {
+					wrapper.unmount();
+				}
+			});
+
+			it('passes through and omits the correct props for the resizable `SplitVerticalDivider` child element.', () => {
+				const dividerProps = wrapper
+					.find('DragCaptureZone.lucid-SplitVertical-Divider')
+					.props();
+
+				expect(
+					wrapper
+						.find('DragCaptureZone.lucid-SplitVertical-Divider')
+						.prop(['className'])
+				).toContain('test Divider');
+				expect(
+					wrapper
+						.find('DragCaptureZone.lucid-SplitVertical-Divider')
+						.prop(['style'])
+				).toMatchObject({
+					marginLeft: 10,
+				});
+				expect(
+					wrapper
+						.find('DragCaptureZone.lucid-SplitVertical-Divider')
+						.prop(['data-testid'])
+				).toBe(11);
+				expect(
+					wrapper
+						.find('DragCaptureZone.lucid-SplitVertical-Divider')
+						.prop(['callbackId'])
+				).toBe(2);
+
+				// callbackId is passed through becuase the divider is a custom React element
+				forEach(
+					['className', 'data-testid', 'style', 'children', 'callbackId'],
+					(prop) => {
+						expect(has(dividerProps, prop)).toBe(true);
+					}
+				);
+
+				// note initial state is explicitly omitted in the code,
+				// and it also is not permitted as a prop on `SplitVertical.Divider`
+				forEach(['initialState'], (prop) => {
+					expect(has(dividerProps, prop)).toBe(false);
+				});
+			});
+		});
+
+		describe('Not resizeable dividerProps', () => {
+			let wrapper: any;
+
+			beforeEach(() => {
+				const props = {
+					...SplitVertical.defaultProps,
+					children: (
+						<SplitVertical.Divider
+							className='test Divider'
+							style={{ marginLeft: 10 }}
+							callbackId={2}
+							data-testid={11}
+						/>
+					),
+					collapseShift: 1,
+					isResizeable: false, // renders the not resizeable Divider
+					className: 'wut',
+					style: { marginRight: 10 },
+					initialState: { test: true },
+					callbackId: 1,
+					'data-testid': 10,
+				};
+				wrapper = mount(<SplitVertical {...props} />);
+			});
+
+			afterEach(() => {
+				if (wrapper) {
+					wrapper.unmount();
+				}
+			});
+
+			it('passes through and omits the correct props for the resizable `SplitVerticalDivider` child element.', () => {
+				const dividerProps = wrapper
+					.find('div.lucid-SplitVertical-Divider')
+					.props();
+
+				expect(
+					wrapper.find('div.lucid-SplitVertical-Divider').prop(['className'])
+				).toContain('test Divider');
+				expect(
+					wrapper.find('div.lucid-SplitVertical-Divider').prop(['style'])
+				).toMatchObject({
+					marginLeft: 10,
+				});
+				expect(
+					wrapper.find('div.lucid-SplitVertical-Divider').prop(['data-testid'])
+				).toBe(11);
+
+				// included props
+				forEach(['className', 'data-testid', 'style', 'children'], (prop) => {
+					expect(has(dividerProps, prop)).toBe(true);
+				});
+
+				// excluded props
+				forEach(['initialState', 'callbackId'], (prop) => {
+					expect(has(dividerProps, prop)).toBe(false);
+				});
+			});
+		});
+	});
+
+	describe('props', () => {
 		describe('isExpanded', () => {
 			let mountWrapper: any;
 
