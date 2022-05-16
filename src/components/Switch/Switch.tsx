@@ -2,11 +2,7 @@ import _, { omit } from 'lodash';
 import React, { createRef } from 'react';
 import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import {
-	omitProps,
-	StandardProps,
-	Overwrite,
-} from '../../util/component-types';
+import { StandardProps, Overwrite } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-Switch');
 const { bool, func, object, string } = PropTypes;
@@ -109,7 +105,17 @@ export const Switch = (props: ISwitchProps): React.ReactElement => {
 		>
 			<input
 				onChange={_.noop}
-				{...omit(passThroughs, ['initialState', 'callbackId', 'children'])}
+				{...omit(
+					passThroughs,
+					[
+						'className',
+						'isDisabled',
+						'isSelected',
+						'onSelect',
+						'style',
+						'isIncludeExclude',
+					].concat(['initialState', 'callbackId', 'children'])
+				)}
 				checked={isSelected}
 				className={cx('&-native')}
 				disabled={isDisabled}
@@ -130,37 +136,37 @@ Switch.peek = {
 
 Switch.propTypes = {
 	/**
-			Appended to the component-specific class names set on the root element.
-		*/
+		Appended to the component-specific class names set on the root element.
+	*/
 	className: string,
 
 	/**
-			Indicates whether the component should appear and act disabled by having
-			a "greyed out" palette and ignoring user interactions.
-		*/
+		Indicates whether the component should appear and act disabled by having
+		a "greyed out" palette and ignoring user interactions.
+	*/
 	isDisabled: bool,
 
 	/**
-			Indicates that the component is in the "selected" state when true and in
-			the "unselected" state when false.
-		*/
+		Indicates that the component is in the "selected" state when true and in
+		the "unselected" state when false.
+	*/
 	isSelected: bool,
 
 	/**
-			Called when the user clicks on the component or when they press the space
-			key while the component is in focus.  Signature:
-			\`(isSelected, { event, props }) => {}\`
-		*/
+		Called when the user clicks on the component or when they press the space
+		key while the component is in focus.  Signature:
+		\`(isSelected, { event, props }) => {}\`
+	*/
 	onSelect: func,
 
 	/**
-			Passed through to the root element.
-		*/
+		Passed through to the root element.
+	*/
 	style: object,
 
 	/**
-			Offers a red/green styling to the switch.
-		*/
+		Offers a red/green styling to the switch.
+	*/
 	isIncludeExclude: bool,
 };
 
