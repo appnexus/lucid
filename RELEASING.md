@@ -37,7 +37,7 @@ Document the changes contained in the release:
 https://github.com/appnexus/lucid/compare/v5.6.1...v5.7.0
 ```
 
-4. Add and commit the `CHANGELOG.md` updates. For example: `git commit -am "update the Changelog"`.
+4. Add and commit the `CHANGELOG.md` updates. For example: `git commit -am "Update the Changelog"`.
 
 ## Update Version Number
 
