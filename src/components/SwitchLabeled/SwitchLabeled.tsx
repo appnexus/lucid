@@ -1,9 +1,10 @@
-import _ from 'lodash';
+import _, { omit } from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { CSSTransition } from 'react-transition-group';
+
 import { lucidClassNames } from '../../util/style-helpers';
-import { getFirst, omitProps, StandardProps } from '../../util/component-types';
+import { getFirst, StandardProps } from '../../util/component-types';
 import Switch from '../Switch/Switch';
 import { useState } from 'react';
 import { useEffect } from 'react';
@@ -70,11 +71,17 @@ const SwitchLabeled = (props: ISwitchLabeledProps) => {
 				isDisabled={isDisabled}
 				isSelected={isSelected}
 				onSelect={onSelect}
-				{...omitProps(
+				{...omit(
 					passThroughs,
-					undefined,
-					_.keys(SwitchLabeled.propTypes),
-					false
+					[
+						'className',
+						'style',
+						'Label',
+						'isDisabled',
+						'isSelected',
+						'onSelect',
+						'isIncludeExclude',
+					].concat('initialState')
 				)}
 			/>
 			{labelChildProps && (
@@ -112,9 +119,7 @@ const Label = () => {
 Label.displayName = 'SwitchLabeled.Label';
 
 Label.peek = {
-	description: `
-		Label to be shown alongside the switch.
-	`,
+	description: `Label to be shown alongside the \`Switch\`.`,
 };
 
 Label.propName = 'Label';
