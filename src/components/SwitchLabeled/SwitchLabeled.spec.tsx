@@ -1,11 +1,10 @@
-import _ from 'lodash';
+import _, { forEach, has } from 'lodash';
 import assert from 'assert';
 import React from 'react';
 import { CSSTransition } from 'react-transition-group';
 import { mount, shallow } from 'enzyme';
 
 import { common } from '../../util/generic-tests';
-
 import SwitchLabeled from './SwitchLabeled';
 import Switch from '../Switch/Switch';
 
@@ -83,31 +82,71 @@ describe('SwitchLabeled', () => {
 		});
 
 		describe('pass throughs', () => {
-			it('passes through all props not defined in `propTypes` to its `Switch` instance.', () => {
-				const extraProps = {
-					foo: 1,
-					bar: 2,
-					baz: 3,
-					qux: 4,
-					quux: 5,
-				};
+			let wrapper: any;
 
-				const wrapper = shallow(
+			const extraProps = {
+				foo: 1,
+				bar: 2,
+				baz: 3,
+				qux: 4,
+				quux: 5,
+				Label: 'test default',
+				className: 'wut',
+				style: { marginRight: 10 },
+				initialState: { test: true },
+				callbackId: 1,
+				'data-testid': 10,
+			};
+
+			beforeEach(() => {
+				wrapper = shallow(
 					<SwitchLabeled
-						className='wut'
 						isDisabled={true}
 						isSelected={true}
-						style={{ fontWeight: 'bold' }}
 						onSelect={_.noop}
 						{...extraProps}
 					/>
 				);
+			});
+
+			afterEach(() => {
+				if (wrapper) {
+					wrapper.unmount();
+				}
+			});
+
+			it('passes through all props not defined in `propTypes` to its `Switch` instance.', () => {
 				const switchProps = wrapper.find(Switch).props();
 
-				// It should pass `foo`, `bar`, `baz`, `qux`, and `quux` through
+				// It should pass `foo`, `bar`, `baz`, `qux`, and `quux`
+				// and `className`, and 'data-testid' through
 				// to the `Switch` instance.
-				_.forEach(['foo', 'bar', 'baz', 'qux', 'quux'], (prop) => {
-					assert(_.has(switchProps, prop));
+				forEach(
+					[
+						'foo',
+						'bar',
+						'baz',
+						'qux',
+						'quux',
+						'isDisabled',
+						'isSelected',
+						'onSelect',
+						'className',
+						'callbackId',
+						'data-testid',
+					],
+					(prop) => {
+						expect(has(switchProps, prop)).toBe(true);
+					}
+				);
+			});
+			it('omits all props defined in `propTypes from its `Switch` instance', () => {
+				const switchProps = wrapper.find(Switch).props();
+
+				// It should omit `Label', 'children', and 'initialState'
+				// from the `Switch` instance.
+				forEach(['Label', 'style', 'initialState'], (prop) => {
+					expect(has(switchProps, prop)).toBe(false);
 				});
 			});
 		});
