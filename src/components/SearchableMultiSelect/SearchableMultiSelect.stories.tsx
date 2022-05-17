@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import createClass from 'create-react-class';
 import _, { map } from 'lodash';
 import { Meta, Story } from '@storybook/react';
@@ -30,6 +30,7 @@ export default {
 			},
 		},
 	},
+	args: SearchableMultiSelect.defaultProps,
 } as Meta;
 
 //👇 Destructure any child components that we will need
@@ -42,20 +43,7 @@ function addKeys(children: any) {
 
 /* Basic */
 export const Basic: Story<ISearchableMultiSelectProps> = (args) => {
-	return (
-		<Resizer>
-			{(width) => {
-				const responsiveMode = width >= 400 ? 'large' : 'small';
-
-				return (
-					<SearchableMultiSelect
-						{...args}
-						responsiveMode={responsiveMode}
-					></SearchableMultiSelect>
-				);
-			}}
-		</Resizer>
-	);
+	return <SearchableMultiSelect {...args}></SearchableMultiSelect>;
 };
 Basic.args = {
 	children: addKeys([
@@ -325,87 +313,81 @@ Asynchronous.args = {
 export const GroupedOptions: Story<ISearchableMultiSelectProps> = (args) => {
 	const { Option, OptionGroup } = SearchableMultiSelect;
 
-	const Component = createClass({
-		render() {
-			return (
-				<SearchableMultiSelect
-					{...args}
-					hasSelectAll
-					initialState={{
-						selectedIndices: [0, 1, 2, 3, 11, 12, 48, 49],
-					}}
-				>
-					<OptionGroup>
-						Northeast
-						<Option>Connecticut</Option>
-						<Option>Delaware</Option>
-						<Option>Maine</Option>
-						<Option>Maryland</Option>
-						<Option>Massachusetts</Option>
-						<Option>New Hampshire</Option>
-						<Option>New Jersey</Option>
-						<Option>New York</Option>
-						<Option>Pennsylvania</Option>
-						<Option>Rhode Island</Option>
-						<Option>Vermont</Option>
-					</OptionGroup>
-					<OptionGroup>
-						Southeast
-						<Option>Alabama</Option>
-						<Option>Arkansas</Option>
-						<Option>Florida</Option>
-						<Option>Georgia</Option>
-						<Option>Kentucky</Option>
-						<Option>Louisiana</Option>
-						<Option>Mississippi</Option>
-						<Option>North Carolina</Option>
-						<Option>South Carolina</Option>
-						<Option>Tennessee</Option>
-						<Option>Virginia</Option>
-						<Option>West Virginia</Option>
-					</OptionGroup>
-					<OptionGroup>
-						Midwest
-						<Option>Illinois</Option>
-						<Option>Indiana</Option>
-						<Option>Iowa</Option>
-						<Option>Kansas</Option>
-						<Option>Michigan</Option>
-						<Option>Minnesota</Option>
-						<Option>Missouri</Option>
-						<Option>Nebraska</Option>
-						<Option>North Dakota</Option>
-						<Option>Ohio</Option>
-						<Option>South Dakota</Option>
-						<Option>Wisconsin</Option>
-					</OptionGroup>
-					<OptionGroup>
-						Southwest
-						<Option>Arizona</Option>
-						<Option>New Mexico</Option>
-						<Option>Oklahoma</Option>
-						<Option>Texas</Option>
-					</OptionGroup>
-					<OptionGroup>
-						West
-						<Option>California</Option>
-						<Option>Colorado</Option>
-						<Option>Idaho</Option>
-						<Option>Montana</Option>
-						<Option>Nevada</Option>
-						<Option>Oregon</Option>
-						<Option>Utah</Option>
-						<Option>Washington</Option>
-						<Option>Wyoming</Option>
-					</OptionGroup>
-					<Option>Alaska</Option>
-					<Option>Hawaii</Option>
-				</SearchableMultiSelect>
-			);
-		},
-	});
-
-	return <Component />;
+	return (
+		<SearchableMultiSelect
+			{...args}
+			hasSelectAll
+			initialState={{
+				selectedIndices: [0, 1, 2, 3, 11, 12, 48, 49],
+			}}
+		>
+			<OptionGroup>
+				Northeast
+				<Option>Connecticut</Option>
+				<Option>Delaware</Option>
+				<Option>Maine</Option>
+				<Option>Maryland</Option>
+				<Option>Massachusetts</Option>
+				<Option>New Hampshire</Option>
+				<Option>New Jersey</Option>
+				<Option>New York</Option>
+				<Option>Pennsylvania</Option>
+				<Option>Rhode Island</Option>
+				<Option>Vermont</Option>
+			</OptionGroup>
+			<OptionGroup>
+				Southeast
+				<Option>Alabama</Option>
+				<Option>Arkansas</Option>
+				<Option>Florida</Option>
+				<Option>Georgia</Option>
+				<Option>Kentucky</Option>
+				<Option>Louisiana</Option>
+				<Option>Mississippi</Option>
+				<Option>North Carolina</Option>
+				<Option>South Carolina</Option>
+				<Option>Tennessee</Option>
+				<Option>Virginia</Option>
+				<Option>West Virginia</Option>
+			</OptionGroup>
+			<OptionGroup>
+				Midwest
+				<Option>Illinois</Option>
+				<Option>Indiana</Option>
+				<Option>Iowa</Option>
+				<Option>Kansas</Option>
+				<Option>Michigan</Option>
+				<Option>Minnesota</Option>
+				<Option>Missouri</Option>
+				<Option>Nebraska</Option>
+				<Option>North Dakota</Option>
+				<Option>Ohio</Option>
+				<Option>South Dakota</Option>
+				<Option>Wisconsin</Option>
+			</OptionGroup>
+			<OptionGroup>
+				Southwest
+				<Option>Arizona</Option>
+				<Option>New Mexico</Option>
+				<Option>Oklahoma</Option>
+				<Option>Texas</Option>
+			</OptionGroup>
+			<OptionGroup>
+				West
+				<Option>California</Option>
+				<Option>Colorado</Option>
+				<Option>Idaho</Option>
+				<Option>Montana</Option>
+				<Option>Nevada</Option>
+				<Option>Oregon</Option>
+				<Option>Utah</Option>
+				<Option>Washington</Option>
+				<Option>Wyoming</Option>
+			</OptionGroup>
+			<Option>Alaska</Option>
+			<Option>Hawaii</Option>
+		</SearchableMultiSelect>
+	);
 };
 
 /* Custom Selection Label */
@@ -414,144 +396,132 @@ export const CustomSelectionLabel: Story<ISearchableMultiSelectProps> = (
 ) => {
 	const { Option, SelectionLabel } = SearchableMultiSelect;
 
-	const Component = createClass({
-		render() {
-			return (
-				<SearchableMultiSelect {...args}>
-					<SelectionLabel>Selected States</SelectionLabel>
-					<Option>Alabama</Option>
-					<Option>Alaska</Option>
-					<Option>Arizona</Option>
-					<Option>Arkansas</Option>
-					<Option>California</Option>
-					<Option>Colorado</Option>
-					<Option>Connecticut</Option>
-					<Option>Delaware</Option>
-					<Option>Florida</Option>
-					<Option>Georgia</Option>
-					<Option>Hawaii</Option>
-					<Option>Idaho</Option>
-					<Option>Illinois</Option>
-					<Option>Indiana</Option>
-					<Option>Iowa</Option>
-					<Option>Kansas</Option>
-					<Option>Kentucky</Option>
-					<Option>Louisiana</Option>
-					<Option>Maine</Option>
-					<Option>Maryland</Option>
-					<Option>Massachusetts</Option>
-					<Option>Michigan</Option>
-					<Option>Minnesota</Option>
-					<Option>Mississippi</Option>
-					<Option>Missouri</Option>
-					<Option>Montana Nebraska</Option>
-					<Option>Nevada</Option>
-					<Option>New Hampshire</Option>
-					<Option>New Jersey</Option>
-					<Option>New Mexico</Option>
-					<Option>New York</Option>
-					<Option>North Carolina</Option>
-					<Option>North Dakota</Option>
-					<Option>Ohio</Option>
-					<Option>Oklahoma</Option>
-					<Option>Oregon</Option>
-					<Option>Pennsylvania Rhode Island</Option>
-					<Option>South Carolina</Option>
-					<Option>South Dakota</Option>
-					<Option>Tennessee</Option>
-					<Option>Texas</Option>
-					<Option>Utah</Option>
-					<Option>Vermont</Option>
-					<Option>Virginia</Option>
-					<Option>Washington</Option>
-					<Option>West Virginia</Option>
-					<Option>Wisconsin</Option>
-					<Option>Wyoming</Option>
-				</SearchableMultiSelect>
-			);
-		},
-	});
-
-	return <Component />;
+	return (
+		<SearchableMultiSelect {...args}>
+			<SelectionLabel>Selected States</SelectionLabel>
+			<Option>Alabama</Option>
+			<Option>Alaska</Option>
+			<Option>Arizona</Option>
+			<Option>Arkansas</Option>
+			<Option>California</Option>
+			<Option>Colorado</Option>
+			<Option>Connecticut</Option>
+			<Option>Delaware</Option>
+			<Option>Florida</Option>
+			<Option>Georgia</Option>
+			<Option>Hawaii</Option>
+			<Option>Idaho</Option>
+			<Option>Illinois</Option>
+			<Option>Indiana</Option>
+			<Option>Iowa</Option>
+			<Option>Kansas</Option>
+			<Option>Kentucky</Option>
+			<Option>Louisiana</Option>
+			<Option>Maine</Option>
+			<Option>Maryland</Option>
+			<Option>Massachusetts</Option>
+			<Option>Michigan</Option>
+			<Option>Minnesota</Option>
+			<Option>Mississippi</Option>
+			<Option>Missouri</Option>
+			<Option>Montana Nebraska</Option>
+			<Option>Nevada</Option>
+			<Option>New Hampshire</Option>
+			<Option>New Jersey</Option>
+			<Option>New Mexico</Option>
+			<Option>New York</Option>
+			<Option>North Carolina</Option>
+			<Option>North Dakota</Option>
+			<Option>Ohio</Option>
+			<Option>Oklahoma</Option>
+			<Option>Oregon</Option>
+			<Option>Pennsylvania Rhode Island</Option>
+			<Option>South Carolina</Option>
+			<Option>South Dakota</Option>
+			<Option>Tennessee</Option>
+			<Option>Texas</Option>
+			<Option>Utah</Option>
+			<Option>Vermont</Option>
+			<Option>Virginia</Option>
+			<Option>Washington</Option>
+			<Option>West Virginia</Option>
+			<Option>Wisconsin</Option>
+			<Option>Wyoming</Option>
+		</SearchableMultiSelect>
+	);
 };
 
 /* Select All */
 export const SelectAll: Story<ISearchableMultiSelectProps> = (args) => {
 	const { Option } = SearchableMultiSelect;
 
-	const Component = createClass({
-		render() {
-			return (
-				<section style={{ marginBottom: '300px' }}>
-					<Resizer>
-						{(width) => {
-							const responsiveMode = width >= 768 ? 'large' : 'small';
+	return (
+		<section style={{ marginBottom: '300px' }}>
+			<Resizer>
+				{(width) => {
+					const responsiveMode = width >= 768 ? 'large' : 'small';
 
-							return (
-								<SearchableMultiSelect
-									{...args}
-									hasSelectAll
-									selectAllText='Custom Select All Text'
-									responsiveMode={responsiveMode}
-								>
-									<Option>Alabama</Option>
-									<Option>Alaska</Option>
-									<Option>Arizona</Option>
-									<Option>Arkansas</Option>
-									<Option>California</Option>
-									<Option>Colorado</Option>
-									<Option>Connecticut</Option>
-									<Option>Delaware</Option>
-									<Option>Florida</Option>
-									<Option>Georgia</Option>
-									<Option>Hawaii</Option>
-									<Option>Idaho</Option>
-									<Option>Illinois</Option>
-									<Option>Indiana</Option>
-									<Option>Iowa</Option>
-									<Option>Kansas</Option>
-									<Option>Kentucky</Option>
-									<Option>Louisiana</Option>
-									<Option>Maine</Option>
-									<Option>Maryland</Option>
-									<Option>Massachusetts</Option>
-									<Option>Michigan</Option>
-									<Option>Minnesota</Option>
-									<Option>Mississippi</Option>
-									<Option>Missouri</Option>
-									<Option>Montana Nebraska</Option>
-									<Option>Nevada</Option>
-									<Option>New Hampshire</Option>
-									<Option>New Jersey</Option>
-									<Option>New Mexico</Option>
-									<Option>New York</Option>
-									<Option>North Carolina</Option>
-									<Option>North Dakota</Option>
-									<Option>Ohio</Option>
-									<Option>Oklahoma</Option>
-									<Option>Oregon</Option>
-									<Option>Pennsylvania Rhode Island</Option>
-									<Option>South Carolina</Option>
-									<Option>South Dakota</Option>
-									<Option>Tennessee</Option>
-									<Option>Texas</Option>
-									<Option>Utah</Option>
-									<Option>Vermont</Option>
-									<Option>Virginia</Option>
-									<Option>Washington</Option>
-									<Option>West Virginia</Option>
-									<Option>Wisconsin</Option>
-									<Option>Wyoming</Option>
-								</SearchableMultiSelect>
-							);
-						}}
-					</Resizer>
-				</section>
-			);
-		},
-	});
-
-	return <Component />;
+					return (
+						<SearchableMultiSelect
+							{...args}
+							hasSelectAll
+							selectAllText='Custom Select All Text'
+							responsiveMode={responsiveMode}
+						>
+							<Option>Alabama</Option>
+							<Option>Alaska</Option>
+							<Option>Arizona</Option>
+							<Option>Arkansas</Option>
+							<Option>California</Option>
+							<Option>Colorado</Option>
+							<Option>Connecticut</Option>
+							<Option>Delaware</Option>
+							<Option>Florida</Option>
+							<Option>Georgia</Option>
+							<Option>Hawaii</Option>
+							<Option>Idaho</Option>
+							<Option>Illinois</Option>
+							<Option>Indiana</Option>
+							<Option>Iowa</Option>
+							<Option>Kansas</Option>
+							<Option>Kentucky</Option>
+							<Option>Louisiana</Option>
+							<Option>Maine</Option>
+							<Option>Maryland</Option>
+							<Option>Massachusetts</Option>
+							<Option>Michigan</Option>
+							<Option>Minnesota</Option>
+							<Option>Mississippi</Option>
+							<Option>Missouri</Option>
+							<Option>Montana Nebraska</Option>
+							<Option>Nevada</Option>
+							<Option>New Hampshire</Option>
+							<Option>New Jersey</Option>
+							<Option>New Mexico</Option>
+							<Option>New York</Option>
+							<Option>North Carolina</Option>
+							<Option>North Dakota</Option>
+							<Option>Ohio</Option>
+							<Option>Oklahoma</Option>
+							<Option>Oregon</Option>
+							<Option>Pennsylvania Rhode Island</Option>
+							<Option>South Carolina</Option>
+							<Option>South Dakota</Option>
+							<Option>Tennessee</Option>
+							<Option>Texas</Option>
+							<Option>Utah</Option>
+							<Option>Vermont</Option>
+							<Option>Virginia</Option>
+							<Option>Washington</Option>
+							<Option>West Virginia</Option>
+							<Option>Wisconsin</Option>
+							<Option>Wyoming</Option>
+						</SearchableMultiSelect>
+					);
+				}}
+			</Resizer>
+		</section>
+	);
 };
 
 /* Formatted Options */
@@ -597,47 +567,33 @@ export const FormattedOptions: Story<ISearchableMultiSelectProps> = (args) => {
 		return true;
 	};
 
-	class Component extends React.Component {
-		render() {
-			return (
-				<SearchableMultiSelect {...args} optionFilter={optionFilter}>
-					<SearchableMultiSelect.OptionGroup Selected=''>
-						<div style={{ marginLeft: 27 }}>
-							<OptionCols col1='ID' col2='NAME' />
-						</div>
+	return (
+		<SearchableMultiSelect {...args} optionFilter={optionFilter}>
+			<SearchableMultiSelect.OptionGroup Selected=''>
+				<div style={{ marginLeft: 27 }}>
+					<OptionCols col1='ID' col2='NAME' />
+				</div>
 
-						<SearchableMultiSelect.Option
-							filterText='Foo'
-							Selected='Foo (1234)'
-						>
-							{({ searchText }: { searchText: string }) => (
-								<OptionCols col1='1234' col2='Foo' textMatch={searchText} />
-							)}
-						</SearchableMultiSelect.Option>
+				<SearchableMultiSelect.Option filterText='Foo' Selected='Foo (1234)'>
+					{({ searchText }: { searchText: string }) => (
+						<OptionCols col1='1234' col2='Foo' textMatch={searchText} />
+					)}
+				</SearchableMultiSelect.Option>
 
-						<SearchableMultiSelect.Option
-							filterText='Bar'
-							Selected='Bar (2345)'
-						>
-							{({ searchText }: { searchText: string }) => (
-								<OptionCols col1='2345' col2='Bar' textMatch={searchText} />
-							)}
-						</SearchableMultiSelect.Option>
+				<SearchableMultiSelect.Option filterText='Bar' Selected='Bar (2345)'>
+					{({ searchText }: { searchText: string }) => (
+						<OptionCols col1='2345' col2='Bar' textMatch={searchText} />
+					)}
+				</SearchableMultiSelect.Option>
 
-						<SearchableMultiSelect.Option
-							filterText='Baz'
-							Selected='Baz (3456)'
-						>
-							{({ searchText }: { searchText: string }) => (
-								<OptionCols col1='3456' col2='Baz' textMatch={searchText} />
-							)}
-						</SearchableMultiSelect.Option>
-					</SearchableMultiSelect.OptionGroup>
-				</SearchableMultiSelect>
-			);
-		}
-	}
-	return <Component />;
+				<SearchableMultiSelect.Option filterText='Baz' Selected='Baz (3456)'>
+					{({ searchText }: { searchText: string }) => (
+						<OptionCols col1='3456' col2='Baz' textMatch={searchText} />
+					)}
+				</SearchableMultiSelect.Option>
+			</SearchableMultiSelect.OptionGroup>
+		</SearchableMultiSelect>
+	);
 };
 FormattedOptions.args = {
 	...Basic.args,
@@ -647,101 +603,77 @@ FormattedOptions.args = {
 export const Invalid: Story<ISearchableMultiSelectProps> = (args) => {
 	const { Option } = SearchableMultiSelect;
 
-	const Component = createClass({
-		getInitialState() {
-			return {
-				selectedLength: 0,
-			};
-		},
-		handleChange(option: string, event: any) {
-			let count = this.state.selectedLength;
-			if (typeof event.props.children === 'string') {
-				count--;
-			} else {
-				event.props.children.props.isSelected ? count-- : count++;
-			}
-			this.setState({
-				selectedLength: count,
-			});
-		},
-		handleRemoveAll(option: string, event: any) {
-			this.setState({
-				selectedLength: 0,
-			});
-		},
-		render() {
-			return (
-				<Resizer>
-					{(width) => {
-						const responsiveMode = width >= 400 ? 'large' : 'small';
+	const [selectedLength, setSelectedLength] = useState(0);
 
-						return (
-							<SearchableMultiSelect
-								{...args}
-								responsiveMode={responsiveMode}
-								onRemoveAll={this.handleRemoveAll}
-								onSelect={this.handleChange}
-								Error={
-									this.state.selectedLength > 1
-										? null
-										: 'Please select at least two options'
-								}
-							>
-								<Option>Alabama</Option>
-								<Option>Alaska</Option>
-								<Option>Arizona</Option>
-								<Option>Arkansas</Option>
-								<Option>California</Option>
-								<Option>Colorado</Option>
-								<Option>Connecticut</Option>
-								<Option>Delaware</Option>
-								<Option>Florida</Option>
-								<Option>Georgia</Option>
-								<Option>Hawaii</Option>
-								<Option>Idaho</Option>
-								<Option>Illinois</Option>
-								<Option>Indiana</Option>
-								<Option>Iowa</Option>
-								<Option>Kansas</Option>
-								<Option>Kentucky</Option>
-								<Option>Louisiana</Option>
-								<Option>Maine</Option>
-								<Option>Maryland</Option>
-								<Option>Massachusetts</Option>
-								<Option>Michigan</Option>
-								<Option>Minnesota</Option>
-								<Option>Mississippi</Option>
-								<Option>Missouri</Option>
-								<Option>Montana Nebraska</Option>
-								<Option>Nevada</Option>
-								<Option>New Hampshire</Option>
-								<Option>New Jersey</Option>
-								<Option>New Mexico</Option>
-								<Option>New York</Option>
-								<Option>North Carolina</Option>
-								<Option>North Dakota</Option>
-								<Option>Ohio</Option>
-								<Option>Oklahoma</Option>
-								<Option>Oregon</Option>
-								<Option>Pennsylvania Rhode Island</Option>
-								<Option>South Carolina</Option>
-								<Option>South Dakota</Option>
-								<Option>Tennessee</Option>
-								<Option>Texas</Option>
-								<Option>Utah</Option>
-								<Option>Vermont</Option>
-								<Option>Virginia</Option>
-								<Option>Washington</Option>
-								<Option>West Virginia</Option>
-								<Option>Wisconsin</Option>
-								<Option>Wyoming</Option>
-							</SearchableMultiSelect>
-						);
-					}}
-				</Resizer>
-			);
-		},
-	});
+	const handleChange = (option: string, event: any) => {
+		let count = selectedLength;
+		if (typeof event.props.children === 'string') {
+			count--;
+		} else {
+			event.props.children.props.isSelected ? count-- : count++;
+		}
+		setSelectedLength(count);
+	};
 
-	return <Component />;
+	const handleRemoveAll = (option: string, event: any) => {
+		setSelectedLength(0);
+	};
+
+	return (
+		<SearchableMultiSelect
+			{...(args as any)}
+			onRemoveAll={handleRemoveAll}
+			onSelect={handleChange}
+			Error={selectedLength > 1 ? null : 'Please select at least two options'}
+		>
+			<Option>Alabama</Option>
+			<Option>Alaska</Option>
+			<Option>Arizona</Option>
+			<Option>Arkansas</Option>
+			<Option>California</Option>
+			<Option>Colorado</Option>
+			<Option>Connecticut</Option>
+			<Option>Delaware</Option>
+			<Option>Florida</Option>
+			<Option>Georgia</Option>
+			<Option>Hawaii</Option>
+			<Option>Idaho</Option>
+			<Option>Illinois</Option>
+			<Option>Indiana</Option>
+			<Option>Iowa</Option>
+			<Option>Kansas</Option>
+			<Option>Kentucky</Option>
+			<Option>Louisiana</Option>
+			<Option>Maine</Option>
+			<Option>Maryland</Option>
+			<Option>Massachusetts</Option>
+			<Option>Michigan</Option>
+			<Option>Minnesota</Option>
+			<Option>Mississippi</Option>
+			<Option>Missouri</Option>
+			<Option>Montana Nebraska</Option>
+			<Option>Nevada</Option>
+			<Option>New Hampshire</Option>
+			<Option>New Jersey</Option>
+			<Option>New Mexico</Option>
+			<Option>New York</Option>
+			<Option>North Carolina</Option>
+			<Option>North Dakota</Option>
+			<Option>Ohio</Option>
+			<Option>Oklahoma</Option>
+			<Option>Oregon</Option>
+			<Option>Pennsylvania Rhode Island</Option>
+			<Option>South Carolina</Option>
+			<Option>South Dakota</Option>
+			<Option>Tennessee</Option>
+			<Option>Texas</Option>
+			<Option>Utah</Option>
+			<Option>Vermont</Option>
+			<Option>Virginia</Option>
+			<Option>Washington</Option>
+			<Option>West Virginia</Option>
+			<Option>Wisconsin</Option>
+			<Option>Wyoming</Option>
+		</SearchableMultiSelect>
+	);
 };
