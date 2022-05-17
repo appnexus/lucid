@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import _ from 'lodash';
+import _, { omit } from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
@@ -7,7 +7,6 @@ import { buildModernHybridComponent } from '../../util/state-management';
 import { partitionText, propsSearch } from '../../util/text-manipulation';
 import {
 	StandardProps,
-	omitProps,
 	getFirst,
 	findTypes,
 	rejectTypes,
@@ -780,7 +779,7 @@ class SearchableMultiSelect extends React.Component<
 
 		return (
 			<div
-				{...(_.omit(passThroughs, nonPassThroughs) as any)}
+				{...(omit(passThroughs, nonPassThroughs) as any)}
 				className={cx('&', className)}
 			>
 				<DropMenu
@@ -975,7 +974,8 @@ class SearchableMultiSelect extends React.Component<
 				errorChildProps.children &&
 				errorChildProps.children !== true ? (
 					<div
-						{...omitProps(errorChildProps, undefined)}
+						// {...omitProps(errorChildProps, undefined)}
+						{...omit(errorChildProps, ['initialState', 'callbackId'])}
 						className={cx('&-error-content')}
 					>
 						{errorChildProps.children}
