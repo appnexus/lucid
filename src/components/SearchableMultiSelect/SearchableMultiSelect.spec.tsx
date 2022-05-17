@@ -1,6 +1,7 @@
-import * as _ from 'lodash';
+import _, { forEach, has } from 'lodash';
 import React from 'react';
 import { shallow } from 'enzyme';
+
 import { common } from '../../util/generic-tests';
 import { SearchableMultiSelectDumb as SearchableMultiSelect } from './SearchableMultiSelect';
 import { DropMenuDumb as DropMenu } from '../DropMenu/DropMenu';
@@ -381,6 +382,78 @@ describe('SearchableMultiSelect', () => {
 					</SearchableMultiSelect>
 				)
 			).toMatchSnapshot();
+		});
+	});
+
+	describe('pass throughs', () => {
+		let wrapper: any;
+
+		beforeEach(() => {
+			const props = {
+				className: 'wut',
+				style: { marginRight: 10 },
+				initialState: { test: true },
+				callbackId: 1,
+				'data-testid': 10,
+			};
+
+			wrapper = shallow(<SearchableMultiSelect {...props} />);
+		});
+
+		afterEach(() => {
+			wrapper.unmount();
+		});
+
+		it('passes through props not defined in `propTypes` to the root element.', () => {
+			const rootProps = wrapper.find('.lucid-SearchableMultiSelect').props();
+
+			expect(wrapper.first().prop(['className'])).toContain('wut');
+			expect(wrapper.first().prop(['style'])).toMatchObject({
+				marginRight: 10,
+			});
+			expect(wrapper.first().prop(['data-testid'])).toBe(10);
+
+			// Note: 'className' is plucked from the pass through object
+			// but still appears becuase it is also directly passed to the root element as a prop.
+			forEach(['className', 'style', 'data-testid', 'children'], (prop) => {
+				expect(has(rootProps, prop)).toBe(true);
+			});
+		});
+		it('omits the props defined in `propTypes` from the root element, plus, in addition, `initialState` and `callbackId`.', () => {
+			const rootProps = wrapper.find('.lucid-SearchableMultiSelect').props();
+
+			// initialState and callbackId are always both omitted
+			forEach(
+				[
+					'isDisabled',
+					'isLoading',
+					'maxMenuHeight',
+					'onSearch',
+					'onSelect',
+					'onRemoveAll',
+					'optionFilter',
+					'searchText',
+					'selectedIndices',
+					'DropMenu',
+					'Option',
+					'responsiveMode',
+					'hasRemoveAll',
+					'hasSelections',
+					'hasSelectAll',
+					'selectAllText',
+					'Error',
+					'FixedOption',
+					'NullOption',
+					'OptionGroup',
+					'SearchField',
+					'Label',
+					'initialState',
+					'callbackId',
+				],
+				(prop) => {
+					expect(has(rootProps, prop)).toBe(false);
+				}
+			);
 		});
 	});
 });
