@@ -1,4 +1,4 @@
-import _ from 'lodash';
+import _, { omit } from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
 
@@ -6,11 +6,7 @@ import Icon from '../Icon/Icon';
 import RadioButtonLabeled from '../RadioButtonLabeled/RadioButtonLabeled';
 import CheckboxLabeled from '../CheckboxLabeled/CheckboxLabeled';
 import { lucidClassNames } from '../../util/style-helpers';
-import {
-	StandardProps,
-	omitProps,
-	Overwrite,
-} from '../../util/component-types';
+import { StandardProps, Overwrite } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-IconSelect');
 
@@ -147,10 +143,17 @@ export const IconSelect = (props: IIconSelectProps): React.ReactElement => {
 
 	return (
 		<span
-			{...omitProps(passThroughs, undefined, [
-				..._.keys(IconSelect.propTypes),
-				'items',
-			])}
+			{...omit(
+				passThroughs,
+				[
+					'className',
+					'children',
+					'items',
+					'kind',
+					'onSelect',
+					'isDisabled',
+				].concat(['initialState', 'callbackId'])
+			)}
 			className={cx('&', className)}
 		>
 			{_.map(items, (childItem, index): React.ReactElement => {
