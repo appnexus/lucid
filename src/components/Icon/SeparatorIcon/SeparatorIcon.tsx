@@ -1,8 +1,7 @@
-import _ from 'lodash';
+import _, { omit } from 'lodash';
 import React from 'react';
 import Icon, { IIconProps, propTypes as iconPropTypes } from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
-import { omitProps } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-SeparatorIcon');
 
@@ -14,13 +13,7 @@ export const SeparatorIcon = ({
 }: ISeparatorIconProps) => {
 	return (
 		<Icon
-			{...omitProps(
-				passThroughs,
-				undefined,
-				_.keys(SeparatorIcon.propTypes),
-				false
-			)}
-			{..._.pick(passThroughs, _.keys(iconPropTypes))}
+			{...omit(passThroughs, ['initialState'])}
 			className={cx('&', className)}
 		>
 			<path d='M5.2 0h1.5l4 8-4 8H5.2l4-8-4-8z' />
