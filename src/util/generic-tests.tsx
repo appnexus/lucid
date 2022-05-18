@@ -4,7 +4,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { mount, shallow, render } from 'enzyme';
 import assert from 'assert';
-import _, { each, omit, keys, includes } from 'lodash';
+import _, { each, omit, keys, includes, forEach } from 'lodash';
 import glob from 'glob';
 import { addons, mockChannel } from '@storybook/addons';
 import timekeeper from 'timekeeper';
@@ -249,6 +249,43 @@ export function icons(Component: any, config: IIconConfig = {} as any) {
 				wrapper.find('svg').hasClass(targetClassName),
 				`Missing '${targetClassName}' class`
 			);
+		});
+	});
+}
+
+export function passThroughs(Component: any, config: IIconConfig = {} as any) {
+	// The default expectation is for every Component to omit `initialState`,
+	// if it is passed through to the underlying element
+	const { includeInitialState = false } = config;
+
+	describe('pass throughs', () => {
+		it('should almost always omit the `initialState` key', () => {
+			const wrapper = shallow(<Component initialState={{ testState: true }} />);
+			const rootElementProps = keys(wrapper.first().props());
+
+			expect(includes(rootElementProps, 'initialState')).toBe(
+				includeInitialState
+			);
+		});
+		it('should pass through all props not defined in `propTypes` to the root element', () => {
+			const wrapper = shallow(
+				<Component
+					{...{
+						foo: 1,
+						bar: 2,
+						baz: 3,
+						qux: 4,
+						quux: 5,
+					}}
+				/>
+			);
+			const rootElementProps = keys(wrapper.first().props());
+
+			// It should pass `foo`, `bar`, `baz`, `qux`, and `quux`
+			// to the root element.
+			forEach(['foo', 'bar', 'baz', 'qux', 'quux'], (prop) => {
+				expect(includes(rootElementProps, prop)).toBe(true);
+			});
 		});
 	});
 }
