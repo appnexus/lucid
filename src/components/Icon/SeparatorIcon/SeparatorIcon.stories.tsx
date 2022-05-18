@@ -1,6 +1,7 @@
 import React from 'react';
-import createClass from 'create-react-class';
-import SeparatorIcon from './SeparatorIcon';
+import { Story, Meta } from '@storybook/react';
+
+import SeparatorIcon, { ISeparatorIconProps } from './SeparatorIcon';
 
 export default {
 	title: 'Visual Design/SeparatorIcon',
@@ -12,15 +13,10 @@ export default {
 			},
 		},
 	},
-};
+	args: SeparatorIcon.defaultProps,
+} as Meta;
 
 /* Basic */
-export const Basic = () => {
-	const Component = createClass({
-		render() {
-			return <SeparatorIcon />;
-		},
-	});
-
-	return <Component />;
+export const BasicSeparatorIcon: Story<ISeparatorIconProps> = (args) => {
+	return <SeparatorIcon {...args} />;
 };
