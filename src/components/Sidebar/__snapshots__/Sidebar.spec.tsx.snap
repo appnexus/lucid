@@ -1,9 +1,86 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Sidebar [common] example testing should match snapshot(s) for BasicSidebar 1`] = `
+<div
+  class="lucid-SplitVertical lucid-SplitVertical-is-expanded lucid-Sidebar lucid-Sidebar-is-position-left"
+  style="overflow:hidden;min-width:256px"
+>
+  <div
+    class="lucid-SplitVertical-inner"
+    style="display:flex;transform:translateX(0px)"
+  >
+    <div
+      class="lucid-SplitVertical-LeftPane lucid-SplitVertical-is-secondary lucid-Sidebar-Bar"
+      style="flex-grow:0;flex-shrink:0;flex-basis:250px;overflow:auto"
+    >
+      <div
+        class="lucid-Sidebar-Bar-overlay"
+      />
+      <div
+        class="lucid-Sidebar-Bar-header"
+      >
+        <div
+          class="lucid-Sidebar-Bar-Title"
+        >
+          Title
+        </div>
+        <button
+          class="lucid-Button lucid-Button-invisible lucid-Button-has-only-icon lucid-Sidebar-expander"
+          type="button"
+        >
+          <span
+            class="lucid-Button-content"
+          >
+            <svg
+              class="lucid-Icon lucid-Icon-color-primary lucid-ChevronIcon lucid-ChevronIcon-is-left"
+              height="16"
+              preserveAspectRatio="xMidYMid meet"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <path
+                d="M.5 4.5l7.5 7 7.5-7"
+              />
+            </svg>
+          </span>
+        </button>
+      </div>
+      <div
+        class="lucid-Sidebar-Bar-content lucid-Sidebar-Bar-content-has-gutters"
+      >
+        Minim 90's paleo retro, fugiat aliqua hashtag enim photo booth listicle next level. Consectetur fap proident magna culpa. Art party meh ad, four loko slow-carb venmo distillery wolf cornhole nisi.
+      </div>
+    </div>
+    <div
+      class="lucid-DragCaptureZone lucid-SplitVertical-Divider lucid-SplitVertical-Divider-is-resizeable lucid-Sidebar-Divider"
+      style="width:6px;box-sizing:border-box"
+    >
+      <svg
+        class="lucid-Icon lucid-Icon-color-primary lucid-GripperVerticalIcon lucid-Sidebar-Divider-gripper"
+        height="16"
+        preserveAspectRatio="xMidYMid meet"
+        viewBox="0 0 2 16"
+        width="2"
+      >
+        <path
+          d="M0 .5h2M0 4h2M0 8h2M0 12h2M0 15.5h2"
+        />
+      </svg>
+    </div>
+    <div
+      class="lucid-SplitVertical-RightPane lucid-Sidebar-Primary"
+      style="flex-grow:1;flex-shrink:1;flex-basis:0%;margin-right:0;overflow:auto"
+    >
+      Twee iPhone intelligentsia, schlitz normcore cold-pressed hella sapiente meh adipisicing sustainable kogi sed. Letterpress plaid aute, brunch chillwave anim mlkshk. Farm-to-table austin post-ironic, man bun gluten-free nesciunt sartorial tacos tousled kickstarter shabby chic migas. Kombucha flannel before they sold out elit voluptate pinterest chambray, odio stumptown street art. Kitsch humblebrag actually, cillum kale chips hashtag shoreditch pariatur waistcoat pop-up consequat leggings try-hard. Marfa crucifix seitan health goth portland. Cliche ennui vero, whatever swag kogi ugh fixie wayfarers before they sold out irure culpa marfa mlkshk bushwick.
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Sidebar [common] example testing should match snapshot(s) for ControlExpand 1`] = `
 <section>
   <button>
-    toggle
+    Toggle
   </button>
   <div
     class="lucid-SplitVertical lucid-SplitVertical-is-expanded lucid-Sidebar lucid-Sidebar-is-position-left"
@@ -250,83 +327,6 @@ exports[`Sidebar [common] example testing should match snapshot(s) for CustomWid
       style="flex-grow:1;flex-shrink:1;flex-basis:0%;margin-right:0;overflow:auto"
     >
       Trust fund vegan godard beard, portland humblebrag placeat neutra chambray retro ugh kitsch flannel sapiente mustache. Cred placeat helvetica cray, do before they sold out tilde. Deserunt everyday carry brooklyn kombucha yr fanny pack banh mi, eiusmod intelligentsia tempor tacos. Waistcoat neutra kale chips, keffiyeh ex nulla gochujang crucifix duis typewriter hashtag reprehenderit. Ad nihil mixtape 8-bit, photo booth anim post-ironic vegan qui put a bird on it crucifix. Waistcoat chartreuse ethical, adipisicing jean shorts direct trade PBR&B humblebrag pariatur nulla mollit stumptown listicle. Flannel williamsburg vice flexitarian bespoke elit.
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Sidebar [common] example testing should match snapshot(s) for DefaultSideBar 1`] = `
-<div
-  class="lucid-SplitVertical lucid-SplitVertical-is-expanded lucid-Sidebar lucid-Sidebar-is-position-left"
-  style="overflow:hidden;min-width:256px"
->
-  <div
-    class="lucid-SplitVertical-inner"
-    style="display:flex;transform:translateX(0px)"
-  >
-    <div
-      class="lucid-SplitVertical-LeftPane lucid-SplitVertical-is-secondary lucid-Sidebar-Bar"
-      style="flex-grow:0;flex-shrink:0;flex-basis:250px;overflow:auto"
-    >
-      <div
-        class="lucid-Sidebar-Bar-overlay"
-      />
-      <div
-        class="lucid-Sidebar-Bar-header"
-      >
-        <div
-          class="lucid-Sidebar-Bar-Title"
-        >
-          Title
-        </div>
-        <button
-          class="lucid-Button lucid-Button-invisible lucid-Button-has-only-icon lucid-Sidebar-expander"
-          type="button"
-        >
-          <span
-            class="lucid-Button-content"
-          >
-            <svg
-              class="lucid-Icon lucid-Icon-color-primary lucid-ChevronIcon lucid-ChevronIcon-is-left"
-              height="16"
-              preserveAspectRatio="xMidYMid meet"
-              viewBox="0 0 16 16"
-              width="16"
-            >
-              <path
-                d="M.5 4.5l7.5 7 7.5-7"
-              />
-            </svg>
-          </span>
-        </button>
-      </div>
-      <div
-        class="lucid-Sidebar-Bar-content lucid-Sidebar-Bar-content-has-gutters"
-      >
-        Minim 90's paleo retro, fugiat aliqua hashtag enim photo booth listicle next level. Consectetur fap proident magna culpa. Art party meh ad, four loko slow-carb venmo distillery wolf cornhole nisi.
-      </div>
-    </div>
-    <div
-      class="lucid-DragCaptureZone lucid-SplitVertical-Divider lucid-SplitVertical-Divider-is-resizeable lucid-Sidebar-Divider"
-      style="width:6px;box-sizing:border-box"
-    >
-      <svg
-        class="lucid-Icon lucid-Icon-color-primary lucid-GripperVerticalIcon lucid-Sidebar-Divider-gripper"
-        height="16"
-        preserveAspectRatio="xMidYMid meet"
-        viewBox="0 0 2 16"
-        width="2"
-      >
-        <path
-          d="M0 .5h2M0 4h2M0 8h2M0 12h2M0 15.5h2"
-        />
-      </svg>
-    </div>
-    <div
-      class="lucid-SplitVertical-RightPane lucid-Sidebar-Primary"
-      style="flex-grow:1;flex-shrink:1;flex-basis:0%;margin-right:0;overflow:auto"
-    >
-      Twee iPhone intelligentsia, schlitz normcore cold-pressed hella sapiente meh adipisicing sustainable kogi sed. Letterpress plaid aute, brunch chillwave anim mlkshk. Farm-to-table austin post-ironic, man bun gluten-free nesciunt sartorial tacos tousled kickstarter shabby chic migas. Kombucha flannel before they sold out elit voluptate pinterest chambray, odio stumptown street art. Kitsch humblebrag actually, cillum kale chips hashtag shoreditch pariatur waistcoat pop-up consequat leggings try-hard. Marfa crucifix seitan health goth portland. Cliche ennui vero, whatever swag kogi ugh fixie wayfarers before they sold out irure culpa marfa mlkshk bushwick.
     </div>
   </div>
 </div>
@@ -1527,7 +1527,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for NestedSid
 `;
 
 exports[`Sidebar [common] example testing should match snapshot(s) for NestedSubmarine 1`] = `
-<div
+<section
   style="display:flex;flex-direction:column;height:600px"
 >
   <div
@@ -4978,7 +4978,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for NestedSub
       </div>
     </div>
   </div>
-</div>
+</section>
 `;
 
 exports[`Sidebar [common] example testing should match snapshot(s) for PositionRight 1`] = `

@@ -7,7 +7,7 @@ import { common } from '../../util/generic-tests';
 import SplitVertical from './SplitVertical';
 import DragCaptureZone from '../DragCaptureZone/DragCaptureZone';
 import { Motion } from 'react-motion';
-import { MOSTLY_STABLE_DELAY } from '../../../tests/constants';
+import { MOSTLY_STABLE_DELAY } from '../../util/constants';
 
 describe('SplitVertical', () => {
 	common(SplitVertical);

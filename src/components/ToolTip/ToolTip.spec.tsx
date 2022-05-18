@@ -8,7 +8,7 @@ import { common } from '../../util/generic-tests';
 import { ToolTipDumb as ToolTip } from './ToolTip';
 import ContextMenu from '../ContextMenu/ContextMenu';
 import CloseIcon from '../Icon/CloseIcon/CloseIcon';
-import { MOSTLY_STABLE_DELAY } from '../../../tests/constants';
+import { MOSTLY_STABLE_DELAY } from '../../util/constants';
 
 const { Target, Title, Body } = ToolTip;
 
