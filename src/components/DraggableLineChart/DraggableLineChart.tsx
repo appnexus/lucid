@@ -1,3 +1,4 @@
+import _, { omit } from 'lodash';
 import * as d3Selection from 'd3-selection';
 import React from 'react';
 import { omitProps, Overwrite } from '../../util/component-types';
@@ -50,7 +51,8 @@ const nonPassThroughs = [
 	'xAxisRenderProp',
 	'onPreselect',
 	'preSelectText',
-];
+	'yAxisFormatter',
+].concat(['initialState', 'callbackId']);
 
 class DraggableLineChart extends React.Component<IDraggableLineChartProps, {}> {
 	ref: any;
@@ -113,13 +115,13 @@ class DraggableLineChart extends React.Component<IDraggableLineChartProps, {}> {
 	static defaultProps = draggableLineChartDefaultProps;
 
 	render(): React.ReactNode {
-		const { height, width, ...passThroughs } = this.props;
+		const { height, width, className, ...passThroughs } = this.props;
 
 		return (
 			<svg
-				{...omitProps(passThroughs, undefined, nonPassThroughs)}
+				{...(omit(passThroughs, nonPassThroughs) as any)}
 				ref={(ref: SVGSVGElement) => (this.ref = ref)}
-				className={cx('&')}
+				className={cx('&', className)}
 				width={width}
 				height={height}
 			/>
