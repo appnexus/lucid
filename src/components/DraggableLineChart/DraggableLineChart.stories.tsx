@@ -5,7 +5,9 @@ import { Meta, Story } from '@storybook/react';
 
 import { IXAxisRenderProp } from './d3-helpers';
 import { IData, ISelectedChartData } from './DraggableLineChartD3';
-import DraggableLineChart from './DraggableLineChart';
+import DraggableLineChart, {
+	IDraggableLineChartProps,
+} from './DraggableLineChart';
 import TextFieldValidated from '../TextFieldValidated/TextFieldValidated';
 
 export default {
@@ -18,9 +20,12 @@ export default {
 			},
 		},
 	},
+	args: DraggableLineChart.defaultProps,
 } as Meta;
 
-export const Basic: Story = () => {
+export const BasicDraggableLineChart: Story<IDraggableLineChartProps> = (
+	args
+) => {
 	const data = [
 		{ x: '12 AM', y: 0 },
 		{ x: '1 AM', y: 0 },
@@ -40,26 +45,23 @@ export const Basic: Story = () => {
 		paddingTop: '4rem',
 	};
 
-	const Component = createClass({
-		render() {
-			return (
-				<div style={style}>
-					<DraggableLineChart
-						onDragEnd={(x, y) => console.info({ x, y })}
-						data={data}
-						width={900}
-						xAxisTicksVertical={true}
-					/>
-				</div>
-			);
-		},
-	});
-
-	return <Component />;
+	return (
+		<div style={style}>
+			<DraggableLineChart
+				{...args}
+				onDragEnd={(x, y) => console.info({ x, y })}
+				data={data}
+				width={900}
+				xAxisTicksVertical={true}
+			/>
+		</div>
+	);
 };
 
 /* Example With External X Axis Render Prop */
-export const ExampleWithExternalXAxisRenderProp = () => {
+export const ExampleWithExternalXAxisRenderProp: Story<
+	IDraggableLineChartProps
+> = (args) => {
 	const initialCustomSpendDataPoints = [
 		{ x: '12 AM', y: 0, ref: React.createRef() },
 		{ x: '1 AM', y: 1, ref: React.createRef() },
@@ -190,6 +192,7 @@ export const ExampleWithExternalXAxisRenderProp = () => {
 			return (
 				<div style={style}>
 					<DraggableLineChart
+						{...args}
 						data={customSpendDataPoints}
 						width={900}
 						dataIsCentered
@@ -203,11 +206,11 @@ export const ExampleWithExternalXAxisRenderProp = () => {
 
 	return <Component />;
 };
-ExampleWithExternalXAxisRenderProp.storyName =
-	'ExampleWithExternalXAxisRenderProp';
 
 /* Example With No Data With Preselect */
-export const ExampleWithNoDataWithPreselect = () => {
+export const ExampleWithNoDataWithPreselect: Story<IDraggableLineChartProps> = (
+	args
+) => {
 	const initialCustomSpendDataPoints = [
 		{ x: '12 AM', y: 0, ref: React.createRef() },
 		{ x: '1 AM', y: 0, ref: React.createRef() },
@@ -364,10 +367,11 @@ export const ExampleWithNoDataWithPreselect = () => {
 
 	return <Component />;
 };
-ExampleWithNoDataWithPreselect.storyName = 'ExampleWithNoDataWithPreselect';
 
 /* Example With No Data Without Preselect */
-export const ExampleWithNoDataWithoutPreselect = () => {
+export const ExampleWithNoDataWithoutPreselect: Story<
+	IDraggableLineChartProps
+> = (args) => {
 	const initialCustomSpendDataPoints = [
 		{ x: '12 AM', y: 0, ref: React.createRef() },
 		{ x: '1 AM', y: 0, ref: React.createRef() },
@@ -501,6 +505,7 @@ export const ExampleWithNoDataWithoutPreselect = () => {
 			return (
 				<div style={style}>
 					<DraggableLineChart
+						{...args}
 						data={customSpendDataPoints}
 						width={900}
 						dataIsCentered
@@ -515,11 +520,11 @@ export const ExampleWithNoDataWithoutPreselect = () => {
 
 	return <Component />;
 };
-ExampleWithNoDataWithoutPreselect.storyName =
-	'ExampleWithNoDataWithoutPreselect';
 
 /* Example With Y Axis Formatter */
-export const ExampleWithYAxisFormatter = () => {
+export const ExampleWithYAxisFormatter: Story<IDraggableLineChartProps> = (
+	args
+) => {
 	const initialCustomSpendDataPoints = [
 		{ x: '12 AM', y: 0, ref: React.createRef() },
 		{ x: '1 AM', y: 1, ref: React.createRef() },
@@ -650,6 +655,7 @@ export const ExampleWithYAxisFormatter = () => {
 			return (
 				<div style={style}>
 					<DraggableLineChart
+						{...args}
 						data={customSpendDataPoints}
 						width={900}
 						dataIsCentered
@@ -664,4 +670,3 @@ export const ExampleWithYAxisFormatter = () => {
 
 	return <Component />;
 };
-ExampleWithYAxisFormatter.storyName = 'ExampleWithYAxisFormatter';
