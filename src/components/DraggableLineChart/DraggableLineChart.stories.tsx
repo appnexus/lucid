@@ -1,6 +1,6 @@
+import _ from 'lodash';
 import React, { useCallback } from 'react';
 import createClass from 'create-react-class';
-import _ from 'lodash';
 import { Meta, Story } from '@storybook/react';
 
 import { IXAxisRenderProp } from './d3-helpers';
@@ -24,7 +24,7 @@ export default {
 } as Meta;
 
 export const BasicDraggableLineChart: Story<IDraggableLineChartProps> = (
-	args
+	args: any
 ) => {
 	const data = [
 		{ x: '12 AM', y: 0 },
@@ -61,7 +61,7 @@ export const BasicDraggableLineChart: Story<IDraggableLineChartProps> = (
 /* Example With External X Axis Render Prop */
 export const ExampleWithExternalXAxisRenderProp: Story<
 	IDraggableLineChartProps
-> = (args) => {
+> = (args: any) => {
 	const initialCustomSpendDataPoints = [
 		{ x: '12 AM', y: 0, ref: React.createRef() },
 		{ x: '1 AM', y: 1, ref: React.createRef() },
@@ -209,7 +209,7 @@ export const ExampleWithExternalXAxisRenderProp: Story<
 
 /* Example With No Data With Preselect */
 export const ExampleWithNoDataWithPreselect: Story<IDraggableLineChartProps> = (
-	args
+	args: any
 ) => {
 	const initialCustomSpendDataPoints = [
 		{ x: '12 AM', y: 0, ref: React.createRef() },
@@ -352,6 +352,7 @@ export const ExampleWithNoDataWithPreselect: Story<IDraggableLineChartProps> = (
 			return (
 				<div style={style}>
 					<DraggableLineChart
+						{...args}
 						data={customSpendDataPoints}
 						width={900}
 						dataIsCentered
@@ -371,7 +372,7 @@ export const ExampleWithNoDataWithPreselect: Story<IDraggableLineChartProps> = (
 /* Example With No Data Without Preselect */
 export const ExampleWithNoDataWithoutPreselect: Story<
 	IDraggableLineChartProps
-> = (args) => {
+> = (args: any) => {
 	const initialCustomSpendDataPoints = [
 		{ x: '12 AM', y: 0, ref: React.createRef() },
 		{ x: '1 AM', y: 0, ref: React.createRef() },
@@ -523,7 +524,7 @@ export const ExampleWithNoDataWithoutPreselect: Story<
 
 /* Example With Y Axis Formatter */
 export const ExampleWithYAxisFormatter: Story<IDraggableLineChartProps> = (
-	args
+	args: any
 ) => {
 	const initialCustomSpendDataPoints = [
 		{ x: '12 AM', y: 0, ref: React.createRef() },
