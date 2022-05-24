@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DraggableLineChart [common] example testing should match snapshot(s) for BasicDraggableLineChart 1`] = `
+<div
+  style="padding-top:4rem"
+>
+  <svg
+    class="lucid-DraggableLineChart"
+    height="315"
+    width="900"
+  />
+</div>
+`;
+
+exports[`DraggableLineChart [common] example testing should match snapshot(s) for ExampleWithExternalXAxisRenderProp 1`] = `
+<div
+  style="padding-top:4rem"
+>
+  <svg
+    class="lucid-DraggableLineChart"
+    height="315"
+    width="900"
+  />
+</div>
+`;
+
+exports[`DraggableLineChart [common] example testing should match snapshot(s) for ExampleWithNoDataWithPreselect 1`] = `
+<div
+  style="padding-top:4rem"
+>
+  <svg
+    class="lucid-DraggableLineChart"
+    height="315"
+    width="900"
+  />
+</div>
+`;
+
+exports[`DraggableLineChart [common] example testing should match snapshot(s) for ExampleWithNoDataWithoutPreselect 1`] = `
+<div
+  style="padding-top:4rem"
+>
+  <svg
+    class="lucid-DraggableLineChart"
+    height="315"
+    width="900"
+  />
+</div>
+`;
+
+exports[`DraggableLineChart [common] example testing should match snapshot(s) for ExampleWithYAxisFormatter 1`] = `
+<div
+  style="padding-top:4rem"
+>
+  <svg
+    class="lucid-DraggableLineChart"
+    height="315"
+    width="900"
+  />
+</div>
+`;
