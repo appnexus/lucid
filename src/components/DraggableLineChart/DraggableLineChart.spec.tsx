@@ -1,6 +1,6 @@
 import _, { forEach, has, noop } from 'lodash';
-import React, { Component } from 'react';
-import { mount, shallow } from 'enzyme';
+import React from 'react';
+import { mount } from 'enzyme';
 import assert from 'assert';
 
 import { common } from '../../util/generic-tests';
@@ -10,7 +10,7 @@ import DraggableLineChart from './DraggableLineChart';
 describe('DraggableLineChart', () => {
 	common(DraggableLineChart);
 
-	let data = [
+	const data = [
 		{ x: new Date(), y: 1 },
 		{ x: new Date(), y: 2 },
 		{ x: new Date(), y: 3 },
