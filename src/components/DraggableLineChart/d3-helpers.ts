@@ -13,6 +13,7 @@ export type IXAxisRenderProp = ({
 	y: number;
 	ref?: any;
 }) => JSX.Element;
+
 export type ISelection = Selection<SVGElement | any, {} | any, null, undefined>;
 
 const getGroup = (selection: ISelection, className: string): ISelection => {
