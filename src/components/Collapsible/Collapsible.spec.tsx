@@ -6,7 +6,7 @@ import _ from 'lodash';
 import { common } from '../../util/generic-tests';
 import Collapsible from './Collapsible';
 import { Motion } from 'react-motion';
-//import { MOSTLY_STABLE_DELAY } from '../../../tests/constants';
+//import { MOSTLY_STABLE_DELAY } from '../../util/constants';
 
 describe('Collapsible', () => {
 	common(Collapsible, {

@@ -1,12 +1,13 @@
 import React from 'react';
-import _ from 'lodash';
+import _, { forEach, has } from 'lodash';
 import { shallow, mount } from 'enzyme';
 import assert from 'assert';
 import sinon from 'sinon';
+
 import { common } from '../../util/generic-tests';
 import { SidebarDumb as Sidebar } from './Sidebar';
 import SplitVertical from '../SplitVertical/SplitVertical';
-import { MOSTLY_STABLE_DELAY } from '../../../tests/constants';
+import { MOSTLY_STABLE_DELAY } from '../../util/constants';
 
 describe('Sidebar', () => {
 	common(Sidebar);
@@ -396,6 +397,116 @@ describe('Sidebar', () => {
 					onToggle.lastCall.args[0].event,
 					'must pass event in the last arg'
 				);
+			});
+		});
+
+		describe('pass throughs', () => {
+			let wrapper: any;
+			const defaultProps = Sidebar.defaultProps;
+
+			beforeEach(() => {
+				const props = {
+					...defaultProps,
+					width: 150,
+					isExpanded: false,
+					isAnimated: false,
+					position: 'right' as const,
+					isResizeDisabled: true,
+					title: (
+						<Sidebar.Title>
+							Sidebar test title <button>Edit</button>
+						</Sidebar.Title>
+					),
+					Title: <Sidebar.Title>Sidebar Test Title</Sidebar.Title>,
+					className: 'wut',
+					style: { marginRight: 10 },
+					initialState: { test: true },
+					callbackId: 1,
+					'data-testid': 10,
+				};
+				wrapper = shallow(
+					<Sidebar {...props}>
+						<Sidebar.Bar
+							Title={'Sidebar.Bar Test Title'}
+							hasGutters={false}
+							className={'foo bar'}
+							style={{ marginLeft: 10 }}
+							callbackId={2}
+							data-testid={11}
+						>
+							Next level locavore squid
+						</Sidebar.Bar>
+					</Sidebar>
+				);
+			});
+			afterEach(() => {
+				if (wrapper) {
+					wrapper.unmount();
+				}
+			});
+			it('passes through props not in `Sidebar.propTypes` to the root `SplitVertical` element', () => {
+				const rootProps = wrapper.find('.lucid-Sidebar').props();
+
+				forEach(
+					[
+						'callbackId',
+						'data-testid',
+						'style',
+						'className',
+						'isAnimated',
+						'isExpanded',
+						'collapseShift',
+						'onResizing',
+						'onResize',
+						'children',
+						'isResizeable',
+					],
+					(prop) => {
+						expect(has(rootProps, prop)).toBe(true);
+					}
+				);
+			});
+			it('omits props defined in `Sidebar.propTypes` from the `SplitVertical` root element', () => {
+				const rootProps = wrapper.find('.lucid-Sidebar').props();
+
+				forEach(
+					[
+						'width',
+						'position',
+						'isResizeDisabled',
+						'title',
+						'Title',
+						'initialState',
+					],
+					(prop) => {
+						expect(has(rootProps, prop)).toBe(false);
+					}
+				);
+			});
+			it('passes through props not in `Sidebar.Bar.propTypes` to the `BarPane` element', () => {
+				const barProps = wrapper.find('.lucid-Sidebar-Bar').props();
+
+				forEach(
+					[
+						'className',
+						'width',
+						'style',
+						'children',
+						'isPrimary',
+						'callbackId',
+						'data-testid',
+					],
+					(prop) => {
+						expect(has(barProps, prop)).toBe(true);
+					}
+				);
+			});
+			it('omits props defined in `Sidebar.Bar.propTypes` from the `BarPane` element', () => {
+				const barProps = wrapper.find('.lucid-Sidebar-Bar').props();
+
+				forEach(['hasGutters', 'Title', 'initialState'], (prop) => {
+					expect(has(barProps, prop)).toBe(false);
+				});
 			});
 		});
 	});

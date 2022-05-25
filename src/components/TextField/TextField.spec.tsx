@@ -7,7 +7,7 @@ import { common, controls } from '../../util/generic-tests';
 import * as KEYCODE from '../../constants/key-code';
 import assert from 'assert';
 import TextField from './TextField';
-import { MOSTLY_STABLE_DELAY } from '../../../tests/constants';
+import { MOSTLY_STABLE_DELAY } from '../../util/constants';
 
 const defaultProps = TextField.defaultProps;
 

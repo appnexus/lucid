@@ -1,4 +1,4 @@
-import _ from 'lodash';
+import _, { omit } from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
@@ -6,7 +6,6 @@ import {
 	StandardProps,
 	filterTypes,
 	findTypes,
-	omitProps,
 } from '../../util/component-types';
 import { buildModernHybridComponent } from '../../util/state-management';
 import * as reducers from './Sidebar.reducers';
@@ -43,18 +42,14 @@ export interface ISidebarBarProps extends StandardProps {
 
 const Primary = (_props: ISidebarPrimaryProps): null => null;
 Primary.peek = {
-	description: `
-		Main pane content that will have a paired \`Bar\`.
-	`,
+	description: `Main pane content that will have a paired \`Bar\`.`,
 };
 Primary.displayName = 'SplitHorizontal.Primary';
 Primary.propName = 'Primary';
 
 const Title = (_props: ISidebarTitleProps): null => null;
 Title.peek = {
-	description: `
-		Sidebar title;
-	`,
+	description: `Sidebar title.`,
 };
 Title.propTypes = {
 	/**
@@ -74,9 +69,7 @@ Title.propName = ['Title', 'title'];
 
 const Bar = (_props: ISidebarBarProps): null => null;
 Bar.peek = {
-	description: `
-		Content to be placed alongside the Primary pane.
-	`,
+	description: `Content to be placed alongside the \`Primary\` pane.`,
 };
 Bar.displayName = 'Sidebar.Bar';
 Bar.propName = 'Bar';
@@ -85,6 +78,7 @@ Bar.propTypes = {
 		Set the title of the Sidebar. (alias for \`title\` and \`Sidebar.Title\`)
 	*/
 	Title: any,
+
 	/**
 		Adds default padding to the sidebar content.
 	*/
@@ -307,12 +301,21 @@ class Sidebar extends React.Component<ISidebarProps, ISidebarState> {
 
 		return (
 			<SplitVertical
-				{...omitProps(
+				{...(omit(
 					passThroughs,
-					undefined,
-					_.keys(Sidebar.propTypes),
-					false
-				)}
+					[
+						'width',
+						'isExpanded',
+						'isAnimated',
+						'position',
+						'isResizeDisabled',
+						'title',
+						'Title',
+						'onResizing',
+						'onResize',
+						'onToggle',
+					].concat('initialState')
+				) as any)}
 				style={{
 					minWidth: isExpanded
 						? _.isNumber(width)
@@ -337,12 +340,7 @@ class Sidebar extends React.Component<ISidebarProps, ISidebarState> {
 				onResize={this.handleResize}
 			>
 				<BarPane
-					{...omitProps(
-						barProps,
-						undefined,
-						_.keys(Sidebar.Bar.propTypes),
-						false
-					)}
+					{...omit(barProps, ['hasGutters', 'Title'].concat('initialState'))}
 					className={cx('&-Bar', barProps.className)}
 					width={width}
 					style={{
