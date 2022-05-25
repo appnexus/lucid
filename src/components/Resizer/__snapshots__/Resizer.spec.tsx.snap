@@ -16,7 +16,7 @@ exports[`Resizer [common] example testing should match snapshot(s) for Basic 1`]
 `;
 
 exports[`Resizer [common] example testing should match snapshot(s) for WithFlex 1`] = `
-<div
+<section
   style="display:flex"
 >
   <div>
@@ -44,5 +44,5 @@ exports[`Resizer [common] example testing should match snapshot(s) for WithFlex 
       </div>
     </div>
   </div>
-</div>
+</section>
 `;
