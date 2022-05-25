@@ -1,9 +1,10 @@
+import _ from 'lodash';
 import React from 'react';
 import { mount, shallow } from 'enzyme';
 import assert from 'assert';
 import sinon from 'sinon';
+
 import { findTypes } from '../../util/component-types';
-import _ from 'lodash';
 import { common } from '../../util/generic-tests';
 import { AutocompleteDumb as Autocomplete } from './Autocomplete';
 import { DropMenuDumb as DropMenu } from '../DropMenu/DropMenu';
