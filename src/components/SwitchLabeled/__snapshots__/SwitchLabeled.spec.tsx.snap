@@ -27,7 +27,7 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for Bas
 </label>
 `;
 
-exports[`SwitchLabeled [common] example testing should match snapshot(s) for InteractiveDefault 1`] = `
+exports[`SwitchLabeled [common] example testing should match snapshot(s) for Interactive 1`] = `
 <section>
   <p>
     <em>
@@ -126,14 +126,13 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for Int
     style="display:inline-flex;flex-direction:column;align-items:flex-start"
   >
     <label
-      class="lucid-SwitchLabeled lucid-SwitchLabeled-is-selected"
+      class="lucid-SwitchLabeled"
       style="margin-bottom:3px"
     >
       <span
-        class="lucid-Switch lucid-Switch-is-selected"
+        class="lucid-Switch"
       >
         <input
-          checked=""
           class="lucid-Switch-native"
           type="checkbox"
         />
@@ -148,18 +147,17 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for Int
         class="lucid-SwitchLabeled-text"
         style="position:relative"
       >
-        Airplane Mode Activated
+        Airplane Mode Deactivated
       </span>
     </label>
     <label
-      class="lucid-SwitchLabeled lucid-SwitchLabeled-is-selected"
+      class="lucid-SwitchLabeled"
       style="margin-bottom:3px"
     >
       <span
-        class="lucid-Switch lucid-Switch-is-selected"
+        class="lucid-Switch"
       >
         <input
-          checked=""
           class="lucid-Switch-native"
           type="checkbox"
         />
@@ -174,18 +172,17 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for Int
         class="lucid-SwitchLabeled-text"
         style="position:relative"
       >
-        Bluetooth Enabled
+        Bluetooth Disabled
       </span>
     </label>
     <label
-      class="lucid-SwitchLabeled lucid-SwitchLabeled-is-selected"
+      class="lucid-SwitchLabeled"
       style="margin-bottom:3px"
     >
       <span
-        class="lucid-Switch lucid-Switch-is-selected"
+        class="lucid-Switch"
       >
         <input
-          checked=""
           class="lucid-Switch-native"
           type="checkbox"
         />
@@ -200,20 +197,19 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for Int
         class="lucid-SwitchLabeled-text"
         style="position:relative"
       >
-        Use Cellular Data
+        Do Not Use Cellular Data
       </span>
     </label>
   </span>
   <br />
   <label
-    class="lucid-SwitchLabeled lucid-SwitchLabeled-is-selected"
+    class="lucid-SwitchLabeled"
     style="margin-bottom:3px"
   >
     <span
-      class="lucid-Switch lucid-Switch-is-selected"
+      class="lucid-Switch"
     >
       <input
-        checked=""
         class="lucid-Switch-native"
         type="checkbox"
       />
@@ -228,7 +224,7 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for Int
       class="lucid-SwitchLabeled-text"
       style="position:relative"
     >
-      Yes! I would like to receive updates, special offers, and other information from Xandr and its subsidiaries.
+      No! Please keep your messages to yourself!
     </span>
   </label>
 </section>
