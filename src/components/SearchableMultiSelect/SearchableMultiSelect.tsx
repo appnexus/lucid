@@ -142,8 +142,8 @@ Option.propTypes = {
 Option.defaultProps = DropMenu.Option.defaultProps;
 
 /** SearchableMultiSelect */
-/** TODO: Remove this constant when the component is converted to a functional component */
-const nonPassThroughs = [
+/** TODO: Remove these prop constants when the component is converted to a functional component */
+const propTypes = [
 	'children',
 	'className',
 	'isDisabled',
@@ -168,9 +168,8 @@ const nonPassThroughs = [
 	'OptionGroup',
 	'SearchField',
 	'Label',
-	'initialState',
-	'callbackId',
 ];
+const nonPassThroughs = propTypes.concat(['initialState', 'callbackId']);
 
 export type Size = 'large' | 'medium' | 'small';
 
@@ -974,7 +973,6 @@ class SearchableMultiSelect extends React.Component<
 				errorChildProps.children &&
 				errorChildProps.children !== true ? (
 					<div
-						// {...omitProps(errorChildProps, undefined)}
 						{...omit(errorChildProps, ['initialState', 'callbackId'])}
 						className={cx('&-error-content')}
 					>
