@@ -1,5 +1,84 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Submarine [common] example testing should match snapshot(s) for Basic 1`] = `
+<section
+  style="height:300px;background:lightgray;outline:1px solid lightgray"
+>
+  <div
+    class="lucid-SplitHorizontal lucid-SplitHorizontal-is-expanded lucid-SplitHorizontal-is-animated lucid-Submarine lucid-Submarine-is-position-bottom"
+    style="flex:1;overflow:hidden"
+  >
+    <div
+      class="lucid-SplitHorizontal-inner"
+      style="height:100%;display:flex;flex-direction:column;transform:translateY(0px)"
+    >
+      <div
+        class="lucid-SplitHorizontal-TopPane lucid-Submarine-Primary"
+        style="flex-grow:1;flex-shrink:1;flex-basis:0%;margin-top:0;overflow:auto"
+      >
+        Twee iPhone intelligentsia, schlitz normcore cold-pressed hella sapiente meh adipisicing sustainable kogi sed. Letterpress plaid aute, brunch chillwave anim mlkshk. Farm-to-table austin post-ironic, man bun gluten-free nesciunt sartorial tacos tousled kickstarter shabby chic migas. Kombucha flannel before they sold out elit voluptate pinterest chambray, odio stumptown street art. Kitsch humblebrag actually, cillum kale chips hashtag shoreditch pariatur waistcoat pop-up consequat leggings try-hard. Marfa crucifix seitan health goth portland. Cliche ennui vero, whatever swag kogi ugh fixie wayfarers before they sold out irure culpa marfa mlkshk bushwick.
+      </div>
+      <div
+        class="lucid-DragCaptureZone lucid-SplitHorizontal-Divider lucid-Submarine-Divider"
+        style="height:6px;box-sizing:border-box"
+      >
+        <svg
+          class="lucid-Icon lucid-Icon-color-primary lucid-GripperHorizontalIcon lucid-Submarine-Divider-gripper"
+          height="2"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 16 2"
+          width="16"
+        >
+          <path
+            d="M.5 0v2M4 0v2M8 0v2M12 0v2M15.5 0v2"
+          />
+        </svg>
+      </div>
+      <div
+        class="lucid-SplitHorizontal-BottomPane lucid-SplitHorizontal-is-secondary lucid-Submarine-Bar"
+        style="flex-grow:0;flex-shrink:0;flex-basis:250px;overflow:auto"
+      >
+        <div
+          class="lucid-Submarine-Bar-overlay"
+        />
+        <div
+          class="lucid-Submarine-Bar-header"
+        >
+          <div
+            class="lucid-Submarine-Bar-Title"
+          />
+          <button
+            class="lucid-Button lucid-Button-invisible lucid-Button-has-only-icon lucid-Submarine-expander"
+            type="button"
+          >
+            <span
+              class="lucid-Button-content"
+            >
+              <svg
+                class="lucid-Icon lucid-Icon-color-primary lucid-ChevronIcon lucid-ChevronIcon-is-down"
+                height="16"
+                preserveAspectRatio="xMidYMid meet"
+                viewBox="0 0 16 16"
+                width="16"
+              >
+                <path
+                  d="M.5 4.5l7.5 7 7.5-7"
+                />
+              </svg>
+            </span>
+          </button>
+        </div>
+        <div
+          class="lucid-Submarine-Bar-content"
+        >
+          Minim 90's paleo retro, fugiat aliqua hashtag enim photo booth listicle next level. Consectetur fap proident magna culpa. Art party meh ad, four loko slow-carb venmo distillery wolf cornhole nisi.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+`;
+
 exports[`Submarine [common] example testing should match snapshot(s) for ControlExpand 1`] = `
 <section>
   <button>
@@ -210,10 +289,7 @@ exports[`Submarine [common] example testing should match snapshot(s) for CustomT
           <div
             class="lucid-Submarine-Bar-Title"
           >
-            Submarine Title 
-            <button>
-              Edit
-            </button>
+            Submarine Title
           </div>
           <button
             class="lucid-Button lucid-Button-invisible lucid-Button-has-only-icon lucid-Submarine-expander"
@@ -256,85 +332,6 @@ exports[`Submarine [common] example testing should match snapshot(s) for CustomT
             &lt;Submarine.Bar&gt;
           </code>
           .
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-`;
-
-exports[`Submarine [common] example testing should match snapshot(s) for DefaultSubmarine 1`] = `
-<section
-  style="height:300px;background:lightgray;outline:1px solid lightgray"
->
-  <div
-    class="lucid-SplitHorizontal lucid-SplitHorizontal-is-expanded lucid-SplitHorizontal-is-animated lucid-Submarine lucid-Submarine-is-position-bottom"
-    style="flex:1;overflow:hidden"
-  >
-    <div
-      class="lucid-SplitHorizontal-inner"
-      style="height:100%;display:flex;flex-direction:column;transform:translateY(0px)"
-    >
-      <div
-        class="lucid-SplitHorizontal-TopPane lucid-Submarine-Primary"
-        style="flex-grow:1;flex-shrink:1;flex-basis:0%;margin-top:0;overflow:auto"
-      >
-        Twee iPhone intelligentsia, schlitz normcore cold-pressed hella sapiente meh adipisicing sustainable kogi sed. Letterpress plaid aute, brunch chillwave anim mlkshk. Farm-to-table austin post-ironic, man bun gluten-free nesciunt sartorial tacos tousled kickstarter shabby chic migas. Kombucha flannel before they sold out elit voluptate pinterest chambray, odio stumptown street art. Kitsch humblebrag actually, cillum kale chips hashtag shoreditch pariatur waistcoat pop-up consequat leggings try-hard. Marfa crucifix seitan health goth portland. Cliche ennui vero, whatever swag kogi ugh fixie wayfarers before they sold out irure culpa marfa mlkshk bushwick.
-      </div>
-      <div
-        class="lucid-DragCaptureZone lucid-SplitHorizontal-Divider lucid-Submarine-Divider"
-        style="height:6px;box-sizing:border-box"
-      >
-        <svg
-          class="lucid-Icon lucid-Icon-color-primary lucid-GripperHorizontalIcon lucid-Submarine-Divider-gripper"
-          height="2"
-          preserveAspectRatio="xMidYMid meet"
-          viewBox="0 0 16 2"
-          width="16"
-        >
-          <path
-            d="M.5 0v2M4 0v2M8 0v2M12 0v2M15.5 0v2"
-          />
-        </svg>
-      </div>
-      <div
-        class="lucid-SplitHorizontal-BottomPane lucid-SplitHorizontal-is-secondary lucid-Submarine-Bar"
-        style="flex-grow:0;flex-shrink:0;flex-basis:250px;overflow:auto"
-      >
-        <div
-          class="lucid-Submarine-Bar-overlay"
-        />
-        <div
-          class="lucid-Submarine-Bar-header"
-        >
-          <div
-            class="lucid-Submarine-Bar-Title"
-          />
-          <button
-            class="lucid-Button lucid-Button-invisible lucid-Button-has-only-icon lucid-Submarine-expander"
-            type="button"
-          >
-            <span
-              class="lucid-Button-content"
-            >
-              <svg
-                class="lucid-Icon lucid-Icon-color-primary lucid-ChevronIcon lucid-ChevronIcon-is-down"
-                height="16"
-                preserveAspectRatio="xMidYMid meet"
-                viewBox="0 0 16 16"
-                width="16"
-              >
-                <path
-                  d="M.5 4.5l7.5 7 7.5-7"
-                />
-              </svg>
-            </span>
-          </button>
-        </div>
-        <div
-          class="lucid-Submarine-Bar-content"
-        >
-          Minim 90's paleo retro, fugiat aliqua hashtag enim photo booth listicle next level. Consectetur fap proident magna culpa. Art party meh ad, four loko slow-carb venmo distillery wolf cornhole nisi.
         </div>
       </div>
     </div>
@@ -424,7 +421,7 @@ exports[`Submarine [common] example testing should match snapshot(s) for Disable
 exports[`Submarine [common] example testing should match snapshot(s) for HandleToggleAndResize 1`] = `
 <section>
   <p>
-    isExpanded: true
+    isExpanded: false
   </p>
   <p>
     resizeHeight: null

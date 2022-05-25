@@ -90,7 +90,9 @@ export interface ICreateClassComponentClass<P>
 	propName?: string | string[];
 }
 
-// creates a React component
+/**
+ * creates a React component
+ */
 export function createClass<P, S = {}>(
 	spec: ICreateClassComponentSpec<P, S>
 ): ICreateClassComponentClass<P> {
@@ -153,7 +155,9 @@ export function createClass<P, S = {}>(
 	return newClass;
 }
 
-// return all elements matching the specified types
+/**
+ * Return all elements matching the specified types
+ */
 export function filterTypes<P>(
 	children: React.ReactNode,
 	types?: TypesType<P>
@@ -168,7 +172,9 @@ export function filterTypes<P>(
 	) as React.ReactElement[];
 }
 
-// return all elements found in props and children of the specified types
+/**
+ * Return all elements found in props and children of the specified types
+ */
 export function findTypes<P extends { children?: React.ReactNode }>(
 	props: P,
 	types?: TypesType<P>
@@ -230,7 +236,9 @@ export function findTypes<P extends { children?: React.ReactNode }>(
 // 	return elementsFromProps.concat(filterTypes<P2>(props.children, types));
 // }
 
-// return all elements not matching the specified types
+/**
+ * Return all elements not matching the specified types
+ */
 export function rejectTypes<P>(
 	children: React.ReactNode,
 	types: TypesType<P> | Array<TypesType<P>>
@@ -244,7 +252,9 @@ export function rejectTypes<P>(
 	);
 }
 
-// return an array of elements (of the given type) for each of the values
+/**
+ * Return an array of elements (of the given type) for each of the values
+ */
 export function createElements<P>(
 	type: ICreateClassComponentClass<P>,
 	values: Array<React.ReactElement<P> | P> = []
@@ -272,7 +282,9 @@ export function createElements<P>(
 	);
 }
 
-// return the first element found in props and children of the specificed type(s)
+/**
+ * Return the first element found in props and children of the specificed type(s)
+ */
 export function getFirst<P>(
 	props: P,
 	types: TypesType<P> | undefined,

@@ -1,3 +1,4 @@
+import _, { forEach, has } from 'lodash';
 import React from 'react';
 import { shallow } from 'enzyme';
 import assert from 'assert';
@@ -67,6 +68,135 @@ describe('Submarine', () => {
 				wrapper.find('.lucid-Submarine > .lucid-Submarine-Primary').length,
 				1
 			);
+		});
+	});
+
+	describe('root pass throughs', () => {
+		let wrapper: any;
+		let barWrapper: any;
+
+		beforeEach(() => {
+			const props = {
+				...Submarine.defaultProps,
+				Title: 'test Title',
+				children: (
+					<Submarine.Bar
+						className='foo bar'
+						style={{ marginLeft: 10 }}
+						Title='test Bar Title'
+						callbackId={2}
+						data-testid={11}
+					/>
+				),
+				Primary: 'test Primary',
+				className: 'wut',
+				style: { marginRight: 10 },
+				initialState: { test: true },
+				callbackId: 1,
+				'data-testid': 10,
+			};
+			wrapper = shallow(<Submarine {...props} />);
+			barWrapper = wrapper.find('.lucid-Submarine > .lucid-Submarine-Bar');
+		});
+
+		afterEach(() => {
+			if (wrapper) {
+				wrapper.unmount();
+			}
+		});
+
+		it('passes through props not defined in `propTypes` to the root element.', () => {
+			const rootProps = wrapper.find('.lucid-Submarine').props();
+
+			expect(wrapper.first().prop(['className'])).toContain('wut');
+			expect(wrapper.first().prop(['style'])).toMatchObject({
+				marginRight: 10,
+			});
+			expect(wrapper.first().prop(['data-testid'])).toBe(10);
+			expect(wrapper.first().prop(['callbackId'])).toBe(1);
+
+			// 'className', 'isAnimated', 'isExpanded', 'onResizing' and 'onResize' are plucked from the pass through object
+			// but still appears becuase each one is also directly added to the root element as a prop
+			forEach(
+				[
+					'className',
+					'style',
+					'isAnimated',
+					'isExpanded',
+					'onResizing',
+					'onResize',
+					'data-testid',
+					'style',
+					'children',
+					'callbackId',
+				],
+				(prop) => {
+					expect(has(rootProps, prop)).toBe(true);
+				}
+			);
+		});
+		it('omits the props defined in `propTypes` (plus, in addition, `initialState`) from the root element', () => {
+			const rootProps = wrapper.find('.lucid-Submarine').props();
+
+			forEach(
+				[
+					'height',
+					'isHidden',
+					'isTitleShownCollapsed',
+					'position',
+					'isResizeDisabled',
+					'Title',
+					'Bar',
+					'Primary',
+					'onToggle',
+					'initialState',
+				],
+				(prop) => {
+					expect(has(rootProps, prop)).toBe(false);
+				}
+			);
+		});
+
+		it('passes through props not defined in `Bar.propTypes` to the BarPane element.', () => {
+			const barProps = wrapper.find('.lucid-Submarine-Bar').props();
+
+			expect(
+				wrapper.find('.lucid-Submarine-Bar').prop(['className'])
+			).toContain('foo bar');
+			expect(
+				wrapper.find('.lucid-Submarine-Bar').prop(['style'])
+			).toMatchObject({
+				marginLeft: 10,
+			});
+			expect(wrapper.find('.lucid-Submarine-Bar').prop(['data-testid'])).toBe(
+				11
+			);
+			expect(wrapper.find('.lucid-Submarine-Bar').prop(['callbackId'])).toBe(2);
+
+			// 'className' and 'height' are plucked from the pass through object
+			// but still appears becuase each one is also directly added to the BarPane element as a prop
+			forEach(
+				[
+					'className',
+					'style',
+					'height',
+					'children',
+					'isPrimary',
+					'data-testid',
+					'children',
+					'callbackId',
+				],
+				(prop) => {
+					expect(has(barProps, prop)).toBe(true);
+				}
+			);
+		});
+
+		it('omits the props defined in `Bar.propTypes` from the BarPane element', () => {
+			const barProps = wrapper.find('.lucid-Submarine-Bar').props();
+			forEach(['Title', 'initialState'], (prop) => {
+				expect(has(barProps, prop)).toBe(false);
+			});
 		});
 	});
 
