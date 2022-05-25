@@ -20,7 +20,7 @@ export default {
 	args: IconSelect.defaultProps,
 } as Meta;
 
-export const Basic: Story<IIconSelectProps> = (args) => {
+export const BasicIconSelect: Story<IIconSelectProps> = (args) => {
 	const [selectedIcon, setSelectedIcon] = useState<string>('item2');
 
 	const handleSelect = (id: string) => {
@@ -29,28 +29,26 @@ export const Basic: Story<IIconSelectProps> = (args) => {
 	};
 
 	return (
-		<section>
-			<IconSelect
-				{...args}
-				onSelect={handleSelect}
-				items={
-					[
-						{
-							id: 'item1',
-							icon: <ClockIcon />,
-							isSelected: selectedIcon === 'item1',
-							label: 'Foo Bar',
-						},
-						{
-							id: 'item2',
-							icon: <StopwatchIcon />,
-							isSelected: selectedIcon === 'item2',
-							label: 'Bax Tar',
-						},
-					] as any
-				}
-			/>
-		</section>
+		<IconSelect
+			{...args}
+			onSelect={handleSelect}
+			items={
+				[
+					{
+						id: 'item1',
+						icon: <ClockIcon />,
+						isSelected: selectedIcon === 'item1',
+						label: 'Foo Bar',
+					},
+					{
+						id: 'item2',
+						icon: <StopwatchIcon />,
+						isSelected: selectedIcon === 'item2',
+						label: 'Bax Tar',
+					},
+				] as any
+			}
+		/>
 	);
 };
 
@@ -64,29 +62,27 @@ export const Single: Story<IIconSelectProps> = (args) => {
 	};
 
 	return (
-		<section>
-			<IconSelect
-				{...args}
-				onSelect={handleSelect}
-				kind='single'
-				items={
-					[
-						{
-							id: 'item1',
-							icon: <ClockIcon />,
-							isSelected: selectedIcon === 'item1',
-							label: 'Foo Bar',
-						},
-						{
-							id: 'item2',
-							icon: <StopwatchIcon />,
-							isSelected: selectedIcon === 'item2',
-							label: 'Bax Tar',
-						},
-					] as any
-				}
-			/>
-		</section>
+		<IconSelect
+			{...args}
+			onSelect={handleSelect}
+			kind='single'
+			items={
+				[
+					{
+						id: 'item1',
+						icon: <ClockIcon />,
+						isSelected: selectedIcon === 'item1',
+						label: 'Foo Bar',
+					},
+					{
+						id: 'item2',
+						icon: <StopwatchIcon />,
+						isSelected: selectedIcon === 'item2',
+						label: 'Bax Tar',
+					},
+				] as any
+			}
+		/>
 	);
 };
 
@@ -109,29 +105,27 @@ export const SelectMultipleIcons: Story<IIconSelectProps> = (args) => {
 	};
 
 	return (
-		<section>
-			<IconSelect
-				{...args}
-				onSelect={handleSelect}
-				kind='multiple'
-				items={
-					[
-						{
-							id: 'item1',
-							icon: <ClockIcon />,
-							isSelected: isSelected('item1'),
-							label: 'Foo Bar',
-						},
-						{
-							id: 'item2',
-							icon: <StopwatchIcon />,
-							isSelected: isSelected('item2'),
-							label: 'Bax Tar',
-						},
-					] as any
-				}
-			/>
-		</section>
+		<IconSelect
+			{...args}
+			onSelect={handleSelect}
+			kind='multiple'
+			items={
+				[
+					{
+						id: 'item1',
+						icon: <ClockIcon />,
+						isSelected: isSelected('item1'),
+						label: 'Foo Bar',
+					},
+					{
+						id: 'item2',
+						icon: <StopwatchIcon />,
+						isSelected: isSelected('item2'),
+						label: 'Bax Tar',
+					},
+				] as any
+			}
+		/>
 	);
 };
 

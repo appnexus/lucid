@@ -1,3 +1,4 @@
+import _, { forEach, has, noop } from 'lodash';
 import React from 'react';
 import assert from 'assert';
 import { shallow, mount } from 'enzyme';
@@ -87,6 +88,59 @@ describe('IconSelect', () => {
 			wrapper.find('figure[data-id="one"]').simulate('click');
 
 			expect(onIconSelectMock).not.toHaveBeenCalled();
+		});
+	});
+
+	describe('pass throughs', () => {
+		let wrapper: any;
+		const defaultProps = IconSelect.defaultProps;
+
+		beforeEach(() => {
+			const props = {
+				...defaultProps,
+				items,
+				kind: 'multiple' as any,
+				onSelect: noop,
+				isDisabled: true,
+				style: { marginRight: 10 },
+				initialState: { test: true },
+				callbackId: 1,
+				'data-testid': 10,
+			};
+			wrapper = shallow(<IconSelect {...props} />);
+		});
+
+		afterEach(() => {
+			if (wrapper) {
+				wrapper.unmount();
+			}
+		});
+
+		it('passes through select props to the root element.', () => {
+			const rootProps = wrapper.find('.lucid-IconSelect').props();
+
+			// 'className' is plucked from the pass through object
+			// but still appears becuase it is also directly placed on the root element as a prop
+			forEach(['className', 'style', 'children', 'data-testid'], (prop) => {
+				expect(has(rootProps, prop)).toBe(true);
+			});
+		});
+		it("omits the component props, and, in addition, 'initialState' and 'callbackId' from the root element", () => {
+			const rootProps = wrapper.find('.lucid-IconSelect').props();
+
+			forEach(
+				[
+					'items',
+					'kind',
+					'onSelect',
+					'isDisabled',
+					'initialState',
+					'callbackId',
+				],
+				(prop) => {
+					expect(has(rootProps, prop)).toBe(false);
+				}
+			);
 		});
 	});
 });
