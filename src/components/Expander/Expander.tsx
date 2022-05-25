@@ -3,11 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { lucidClassNames } from '../../util/style-helpers';
-import {
-	findTypes,
-	omitProps,
-	StandardProps,
-} from '../../util/component-types';
+import { findTypes, StandardProps } from '../../util/component-types';
 import { buildModernHybridComponent } from '../../util/state-management';
 import ChevronIcon from '../Icon/ChevronIcon/ChevronIcon';
 import Collapsible from '../Collapsible/Collapsible';

@@ -3,11 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { lucidClassNames } from '../../util/style-helpers';
-import {
-	omitProps,
-	StandardProps,
-	Overwrite,
-} from '../../util/component-types';
+import { StandardProps, Overwrite } from '../../util/component-types';
 import * as d3Shape from 'd3-shape';
 import * as chartConstants from '../../constants/charts';
 import { buildModernHybridComponent } from '../../util/state-management';

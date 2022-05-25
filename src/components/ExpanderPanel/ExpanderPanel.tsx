@@ -3,7 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { lucidClassNames } from '../../util/style-helpers';
-import { getFirst, omitProps, StandardProps } from '../../util/component-types';
+import { getFirst, StandardProps } from '../../util/component-types';
 import { buildModernHybridComponent } from '../../util/state-management';
 import { IExpanderState } from '../Expander/Expander';
 import ChevronIcon from '../Icon/ChevronIcon/ChevronIcon';

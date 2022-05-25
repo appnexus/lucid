@@ -1,7 +1,7 @@
 import _, { omit } from 'lodash';
 import * as d3Selection from 'd3-selection';
 import React from 'react';
-import { omitProps, Overwrite } from '../../util/component-types';
+import { Overwrite } from '../../util/component-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import DraggableLineChartD3, {
 	IData,
