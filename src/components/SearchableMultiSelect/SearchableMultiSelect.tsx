@@ -10,6 +10,7 @@ import {
 	getFirst,
 	findTypes,
 	rejectTypes,
+	addSpecialOmittedProps,
 } from '../../util/component-types';
 import {
 	SearchFieldDumb as SearchField,
@@ -143,7 +144,7 @@ Option.defaultProps = DropMenu.Option.defaultProps;
 
 /** SearchableMultiSelect */
 /** TODO: Remove these prop constants when the component is converted to a functional component */
-const propTypes = [
+const props = [
 	'children',
 	'className',
 	'isDisabled',
@@ -169,7 +170,7 @@ const propTypes = [
 	'SearchField',
 	'Label',
 ];
-const nonPassThroughs = propTypes.concat(['initialState', 'callbackId']);
+const nonPassThroughs = addSpecialOmittedProps(props, true);
 
 export type Size = 'large' | 'medium' | 'small';
 

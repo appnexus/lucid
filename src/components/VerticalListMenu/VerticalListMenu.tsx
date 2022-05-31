@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import {
 	findTypes,
-	omitProps,
 	StandardProps,
 	Overwrite,
 } from '../../util/component-types';

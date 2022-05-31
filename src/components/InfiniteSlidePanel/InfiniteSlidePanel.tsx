@@ -3,7 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { lucidClassNames } from '../../util/style-helpers';
-import { Overwrite, getFirst, omitProps } from '../../util/component-types';
+import { Overwrite, getFirst } from '../../util/component-types';
 import SlidePanel, {
 	ISlidePanelProps,
 	ISlidePanelSlideProps,

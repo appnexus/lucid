@@ -293,6 +293,36 @@ export function getFirst<P>(
 	return _.first(findTypes<P>(props, types)) || defaultValue;
 }
 
+/**
+ *  Adds any speicial omitted props to an array
+ * @param {string[]} componentProps - an array of the component's props
+ * @param {boolean} targetIsDOMElement - true by default; specifies if the top-level element of the component is a plain DOM Element or a React Component Element
+ * @return {string[]} the array of component props plus the additional omitted keys
+ * */
+
+export function addSpecialOmittedProps<P>(
+	componentProps: string[] = [],
+	targetIsDOMElement: boolean = true
+): { [key: string]: any } {
+	// We only want to exclude the `callbackId` key when we're omitting props
+	// destined for a DOM element.
+	// We always want to add the `initialState` key
+	// to the list of excluded props.
+	const additionalOmittedKeys = targetIsDOMElement
+		? ['initialState', 'callbackId']
+		: ['initialState'];
+
+	return componentProps.concat(additionalOmittedKeys);
+}
+
+/**
+ * Deprecated May 25, 2022 by Noah Yasskin
+ * We removed this method because
+ * the import PropTypes from 'prop-types' stopped working as desired
+ * component.propTypes was not compiling correctly
+ * and props in the passThroughs object were leaking through
+ * because they were not being omitted.
+ */
 // Omit props defined in propTypes of the given type and any extra keys given
 // in third argument
 //
@@ -304,26 +334,26 @@ export function getFirst<P>(
 //
 // Note: The Partial<P> type is referring to the props passed into the omitProps,
 // not the props defined on the component.
-export function omitProps<P extends object>(
-	props: Partial<P>,
-	component: ICreateClassComponentClass<P> | undefined,
-	keys: string[] = [],
-	targetIsDOMElement = true
-): { [key: string]: any } {
-	// We only want to exclude the `callbackId` key when we're omitting props
-	// destined for a dom element.
-	// We always want to exclude the `initialState` key.
-	const additionalOmittedKeys = targetIsDOMElement
-		? ['initialState', 'callbackId']
-		: ['initialState'];
+// export function omitProps<P extends object>(
+// 	props: Partial<P>,
+// 	component: ICreateClassComponentClass<P> | undefined,
+// 	keys: string[] = [],
+// 	targetIsDOMElement: boolean = true
+// ): { [key: string]: any } {
+// 	// We only want to exclude the `callbackId` key when we're omitting props
+// 	// destined for a DOM element.
+// 	// We always want to exclude the `initialState` key.
+// 	const additionalOmittedKeys = targetIsDOMElement
+// 		? ['initialState', 'callbackId']
+// 		: ['initialState'];
 
-	// this is to support non-createClass components that we've converted to TypeScript
-	if (component === undefined) {
-		return _.omit(props, keys.concat(additionalOmittedKeys));
-	}
+// 	// this is to support non-createClass components that we've converted to TypeScript
+// 	if (component === undefined) {
+// 		return _.omit(props, keys.concat(additionalOmittedKeys));
+// 	}
 
-	return _.omit(
-		props,
-		_.keys(component.propTypes).concat(keys).concat(additionalOmittedKeys)
-	);
-}
+// 	return _.omit(
+// 		props,
+// 		_.keys(component.propTypes).concat(keys).concat(additionalOmittedKeys)
+// 	);
+// }

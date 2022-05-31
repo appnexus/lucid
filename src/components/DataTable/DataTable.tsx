@@ -4,12 +4,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
 import { lucidClassNames } from '../../util/style-helpers';
-import {
-	findTypes,
-	filterTypes,
-	getFirst,
-	omitProps,
-} from '../../util/component-types';
+import { findTypes, filterTypes, getFirst } from '../../util/component-types';
 
 import Checkbox from '../Checkbox/Checkbox';
 import EmptyStateWrapper from '../EmptyStateWrapper/EmptyStateWrapper';

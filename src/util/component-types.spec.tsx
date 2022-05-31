@@ -1,7 +1,6 @@
 import assert from 'assert';
-import _ from 'lodash';
+import _, { forEach } from 'lodash';
 import React from 'react';
-import PropTypes from 'prop-types';
 import { shallow } from 'enzyme';
 
 import {
@@ -10,7 +9,7 @@ import {
 	rejectTypes,
 	createElements,
 	findTypes,
-	omitProps,
+	addSpecialOmittedProps,
 } from './component-types';
 
 function isReactComponentClass(componentClass: unknown) {
@@ -467,86 +466,23 @@ describe('component-types', () => {
 		});
 	});
 
-	describe('omitProps', () => {
-		const Button = createClass({
-			propTypes: {
-				className: PropTypes.any,
-				isActive: PropTypes.any,
-				isDisabled: PropTypes.any,
-				kind: PropTypes.any,
-				size: PropTypes.any,
-			},
+	describe('addSpecialOmittedProps', () => {
+		const props = ['children', 'className', 'isDisabled', 'isLoading'];
+
+		it('should add `callbackId` from props by default', () => {
+			const nonPassThroughs = addSpecialOmittedProps(props);
+
+			forEach(['initialState', 'callbackId'], (prop) => {
+				expect(nonPassThroughs.includes(prop)).toBe(true);
+			});
 		});
 
-		it('should omit props which are defined in propTypes', () => {
-			const props = omitProps(
-				{
-					className: 'test-button',
-					text: 'Click Me',
-					isActive: true,
-					isPrimary: true,
-					size: 'normal',
-				} as any,
-				Button
-			);
+		it('should not add `callbackId` when targetIsDOMElement is false', () => {
+			const nonPassThroughs = addSpecialOmittedProps(props, false);
 
-			assert.deepEqual(
-				props,
-				{
-					text: 'Click Me',
-					isPrimary: true,
-				},
-				'must omit props defined in propTypes'
-			);
-		});
-
-		it('should omit `callbackId` from props by default', () => {
-			const props = omitProps(
-				{
-					className: 'test-button',
-					text: 'Click Me',
-					isActive: true,
-					isPrimary: true,
-					size: 'normal',
-					callbackId: 'cant find me',
-				} as any,
-				Button
-			);
-
-			assert.deepEqual(
-				props,
-				{
-					text: 'Click Me',
-					isPrimary: true,
-				},
-				'must omit props defined in propTypes'
-			);
-		});
-
-		it('should not omit `callbackId` from props when specified', () => {
-			const props = omitProps(
-				{
-					className: 'test-button',
-					text: 'Click Me',
-					isActive: true,
-					isPrimary: true,
-					size: 'normal',
-					callbackId: 'can find me',
-				} as any,
-				Button,
-				[],
-				false
-			);
-
-			assert.deepEqual(
-				props,
-				{
-					text: 'Click Me',
-					isPrimary: true,
-					callbackId: 'can find me',
-				},
-				'must omit props defined in propTypes'
-			);
+			forEach(['callbackId'], (prop) => {
+				expect(nonPassThroughs.includes(prop)).toBe(false);
+			});
 		});
 	});
 });

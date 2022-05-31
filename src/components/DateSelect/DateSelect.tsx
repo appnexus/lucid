@@ -6,7 +6,7 @@ import DayPicker from 'react-day-picker';
 
 import { buildModernHybridComponent } from '../../util/state-management';
 import { lucidClassNames } from '../../util/style-helpers';
-import { StandardProps, getFirst, omitProps } from '../../util/component-types';
+import { StandardProps, getFirst } from '../../util/component-types';
 import * as reducers from './DateSelect.reducers';
 import InfiniteSlidePanel from '../InfiniteSlidePanel/InfiniteSlidePanel';
 import { ISlidePanelProps } from '../SlidePanel/SlidePanel';
