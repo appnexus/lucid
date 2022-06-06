@@ -79,7 +79,7 @@ export const WithIconHeader: Story<IPanelProps> = (args) => {
 	return (
 		<Panel {...args}>
 			<Panel.Header>
-				<SettingsIcon style={{ marginRight: '16px' }} />
+				<SettingsIcon size={32} style={{ marginRight: '15px' }} />
 				<span>Header</span>
 			</Panel.Header>
 			Meditation literally chia, schlitz banh mi mlkshk vape ennui art party.
