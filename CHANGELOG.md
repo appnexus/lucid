@@ -1,3 +1,11 @@
+## 8.15.0
+
+- #1387 Uncomment the `omitProps` method and repeating triangle Xandr pattern background so other libraries can use them.
+- #1386 Update the settings icon to reflect what we use in XDS.
+- #1384 Deprecate `omitProps` method.
+- #1377, #1378, #1379, #1380, #1381, #1382, #1383, #1384 Update `Submarine`, `SplitVertical`, `Switch`, `SearchableMultiSelect`, `SideBar`, `IconSelect`, `SeparatorIcon` and `DraggableLineChart` stories to SB6 and replace deprecated omitProps method with explicit list of omitted props.
+  https://github.com/appnexus/lucid/compare/v8.14.0...v8.15.0
+
 ## 8.14.0
 
 - #1376 Update default values for `SidePanel` styling.
