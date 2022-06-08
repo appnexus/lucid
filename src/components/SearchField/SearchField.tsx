@@ -190,7 +190,8 @@ class SearchField extends React.Component<
 	private textFieldElement = React.createRef<TextField>();
 
 	focus = (options?: FocusOptions): void => {
-		this.textFieldElement.current?.focus(options);
+		this.textFieldElement.current &&
+			this.textFieldElement.current.focus(options);
 	};
 
 	render(): React.ReactNode {
