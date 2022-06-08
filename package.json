@@ -1,6 +1,6 @@
 {
 	"name": "lucid-ui",
-	"version": "8.15.0",
+	"version": "8.16.0",
 	"description": "A UI component library from Xandr.",
 	"main": "dist/cjs/index.js",
 	"module": "dist/esm/index.js",
