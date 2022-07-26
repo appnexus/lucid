@@ -66,7 +66,6 @@ const defaultProps = {
 	isClickable: false,
 	isRemovable: false,
 	kind: 'default' as const,
-	onClick: _.noop,
 	onRemove: _.noop,
 };
 
@@ -90,7 +89,7 @@ export const Tag = (props: ITagProps): React.ReactElement => {
 
 	const handleClick = (event: React.MouseEvent) => {
 		if (isClickable && onClick) {
-			return onClick({ event, props: props });
+			return onClick({ event, props });
 		}
 
 		return;
