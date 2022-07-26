@@ -39,7 +39,7 @@ export interface ITagPropsRaw extends StandardProps {
 	/** Style variations of the `Tag`. */
 	kind?: 'primary' | 'success' | 'warning' | 'danger' | 'info' | 'default';
 
-	onClick: ({
+	onClick?: ({
 		event,
 		props,
 	}: {
@@ -89,7 +89,7 @@ export const Tag = (props: ITagProps): React.ReactElement => {
 	};
 
 	const handleClick = (event: React.MouseEvent) => {
-		if (isClickable) {
+		if (isClickable && onClick) {
 			return onClick({ event, props: props });
 		}
 
