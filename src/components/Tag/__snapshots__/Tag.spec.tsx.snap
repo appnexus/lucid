@@ -9,7 +9,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Basic 1`] = `
       <span
         class="lucid-Tag-other-children"
       >
-        Amet
+        <span>
+          Amet
+        </span>
       </span>
     </div>
     <div
@@ -18,7 +20,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Basic 1`] = `
       <span
         class="lucid-Tag-other-children"
       >
-        nam
+        <span>
+          nam
+        </span>
       </span>
     </div>
     <div
@@ -27,7 +31,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Basic 1`] = `
       <span
         class="lucid-Tag-other-children"
       >
-        quibusdam
+        <span>
+          quibusdam
+        </span>
       </span>
     </div>
     <div
@@ -36,7 +42,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Basic 1`] = `
       <span
         class="lucid-Tag-other-children"
       >
-        nobis
+        <span>
+          nobis
+        </span>
         <svg
           class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
           height="7"
@@ -56,7 +64,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Basic 1`] = `
       <span
         class="lucid-Tag-other-children"
       >
-        autem
+        <span>
+          autem
+        </span>
         <svg
           class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
           height="7"
@@ -76,7 +86,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Basic 1`] = `
       <span
         class="lucid-Tag-other-children"
       >
-        sapiente
+        <span>
+          sapiente
+        </span>
         <svg
           class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
           height="7"
@@ -98,7 +110,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Basic 1`] = `
       <span
         class="lucid-Tag-other-children"
       >
-        Fruits
+        <span>
+          Fruits
+        </span>
       </span>
       <div
         class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
@@ -106,7 +120,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Basic 1`] = `
         <span
           class="lucid-Tag-other-children"
         >
-          Apples
+          <span>
+            Apples
+          </span>
         </span>
       </div>
       <div
@@ -115,7 +131,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Basic 1`] = `
         <span
           class="lucid-Tag-other-children"
         >
-          Oranges
+          <span>
+            Oranges
+          </span>
         </span>
       </div>
       <div
@@ -124,7 +142,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Basic 1`] = `
         <span
           class="lucid-Tag-other-children"
         >
-          Bananas
+          <span>
+            Bananas
+          </span>
         </span>
       </div>
     </div>
@@ -134,7 +154,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Basic 1`] = `
       <span
         class="lucid-Tag-other-children"
       >
-        Vegetables
+        <span>
+          Vegetables
+        </span>
         <svg
           class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
           height="7"
@@ -153,7 +175,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Basic 1`] = `
         <span
           class="lucid-Tag-other-children"
         >
-          Carrots
+          <span>
+            Carrots
+          </span>
           <svg
             class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
             height="7"
@@ -173,7 +197,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Basic 1`] = `
         <span
           class="lucid-Tag-other-children"
         >
-          Spinach
+          <span>
+            Spinach
+          </span>
           <svg
             class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
             height="7"
@@ -193,7 +219,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Basic 1`] = `
         <span
           class="lucid-Tag-other-children"
         >
-          Celery
+          <span>
+            Celery
+          </span>
           <svg
             class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
             height="7"
@@ -223,7 +251,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Colors 1`] = 
       <span
         class="lucid-Tag-other-children"
       >
-        notitia
+        <span>
+          notitia
+        </span>
       </span>
     </div>
     <div
@@ -232,7 +262,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Colors 1`] = 
       <span
         class="lucid-Tag-other-children"
       >
-        periculum
+        <span>
+          periculum
+        </span>
       </span>
     </div>
     <div
@@ -241,7 +273,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Colors 1`] = 
       <span
         class="lucid-Tag-other-children"
       >
-        deficio
+        <span>
+          deficio
+        </span>
       </span>
     </div>
   </div>
@@ -254,7 +288,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Colors 1`] = 
       <span
         class="lucid-Tag-other-children"
       >
-        notitia
+        <span>
+          notitia
+        </span>
         <svg
           class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
           height="7"
@@ -274,7 +310,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Colors 1`] = 
       <span
         class="lucid-Tag-other-children"
       >
-        periculum
+        <span>
+          periculum
+        </span>
         <svg
           class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
           height="7"
@@ -300,7 +338,9 @@ exports[`Tag [common] example testing should match snapshot(s) for DoubleNested 
     <span
       class="lucid-Tag-other-children"
     >
-      Global:
+      <span>
+        Global:
+      </span>
     </span>
     <div
       class="lucid-Tag lucid-Tag-has-light-background lucid-Tag-default"
@@ -308,7 +348,9 @@ exports[`Tag [common] example testing should match snapshot(s) for DoubleNested 
       <span
         class="lucid-Tag-other-children"
       >
-        Group 1
+        <span>
+          Group 1
+        </span>
       </span>
       <div
         class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
@@ -316,7 +358,9 @@ exports[`Tag [common] example testing should match snapshot(s) for DoubleNested 
         <span
           class="lucid-Tag-other-children"
         >
-          Fashion
+          <span>
+            Fashion
+          </span>
         </span>
       </div>
       <div
@@ -325,7 +369,9 @@ exports[`Tag [common] example testing should match snapshot(s) for DoubleNested 
         <span
           class="lucid-Tag-other-children"
         >
-          The
+          <span>
+            The
+          </span>
         </span>
       </div>
       <div
@@ -334,7 +380,9 @@ exports[`Tag [common] example testing should match snapshot(s) for DoubleNested 
         <span
           class="lucid-Tag-other-children"
         >
-          Vexillologist
+          <span>
+            Vexillologist
+          </span>
         </span>
       </div>
       <div
@@ -343,7 +391,9 @@ exports[`Tag [common] example testing should match snapshot(s) for DoubleNested 
         <span
           class="lucid-Tag-other-children"
         >
-          Cold Brew
+          <span>
+            Cold Brew
+          </span>
         </span>
       </div>
     </div>
@@ -353,7 +403,9 @@ exports[`Tag [common] example testing should match snapshot(s) for DoubleNested 
       <span
         class="lucid-Tag-other-children"
       >
-        Group 2
+        <span>
+          Group 2
+        </span>
       </span>
       <div
         class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
@@ -361,7 +413,9 @@ exports[`Tag [common] example testing should match snapshot(s) for DoubleNested 
         <span
           class="lucid-Tag-other-children"
         >
-          Fashion
+          <span>
+            Fashion
+          </span>
         </span>
       </div>
       <div
@@ -370,7 +424,9 @@ exports[`Tag [common] example testing should match snapshot(s) for DoubleNested 
         <span
           class="lucid-Tag-other-children"
         >
-          The
+          <span>
+            The
+          </span>
         </span>
       </div>
       <div
@@ -379,7 +435,9 @@ exports[`Tag [common] example testing should match snapshot(s) for DoubleNested 
         <span
           class="lucid-Tag-other-children"
         >
-          Vexillologist
+          <span>
+            Vexillologist
+          </span>
         </span>
       </div>
       <div
@@ -388,7 +446,9 @@ exports[`Tag [common] example testing should match snapshot(s) for DoubleNested 
         <span
           class="lucid-Tag-other-children"
         >
-          Cold Brew
+          <span>
+            Cold Brew
+          </span>
         </span>
       </div>
     </div>
@@ -399,7 +459,9 @@ exports[`Tag [common] example testing should match snapshot(s) for DoubleNested 
     <span
       class="lucid-Tag-other-children"
     >
-      In-Progess:
+      <span>
+        In-Progess:
+      </span>
     </span>
     <div
       class="lucid-Tag lucid-Tag-has-light-background lucid-Tag-default"
@@ -407,7 +469,9 @@ exports[`Tag [common] example testing should match snapshot(s) for DoubleNested 
       <span
         class="lucid-Tag-other-children"
       >
-        Group 1
+        <span>
+          Group 1
+        </span>
       </span>
       <div
         class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
@@ -415,7 +479,9 @@ exports[`Tag [common] example testing should match snapshot(s) for DoubleNested 
         <span
           class="lucid-Tag-other-children"
         >
-          Fashion
+          <span>
+            Fashion
+          </span>
         </span>
       </div>
       <div
@@ -424,7 +490,9 @@ exports[`Tag [common] example testing should match snapshot(s) for DoubleNested 
         <span
           class="lucid-Tag-other-children"
         >
-          The
+          <span>
+            The
+          </span>
         </span>
       </div>
       <div
@@ -433,7 +501,9 @@ exports[`Tag [common] example testing should match snapshot(s) for DoubleNested 
         <span
           class="lucid-Tag-other-children"
         >
-          Vexillologist
+          <span>
+            Vexillologist
+          </span>
         </span>
       </div>
       <div
@@ -442,7 +512,9 @@ exports[`Tag [common] example testing should match snapshot(s) for DoubleNested 
         <span
           class="lucid-Tag-other-children"
         >
-          Cold Brew
+          <span>
+            Cold Brew
+          </span>
         </span>
       </div>
     </div>
@@ -452,7 +524,9 @@ exports[`Tag [common] example testing should match snapshot(s) for DoubleNested 
       <span
         class="lucid-Tag-other-children"
       >
-        Group 2
+        <span>
+          Group 2
+        </span>
       </span>
       <div
         class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
@@ -460,7 +534,9 @@ exports[`Tag [common] example testing should match snapshot(s) for DoubleNested 
         <span
           class="lucid-Tag-other-children"
         >
-          Fashion
+          <span>
+            Fashion
+          </span>
         </span>
       </div>
       <div
@@ -469,7 +545,9 @@ exports[`Tag [common] example testing should match snapshot(s) for DoubleNested 
         <span
           class="lucid-Tag-other-children"
         >
-          The
+          <span>
+            The
+          </span>
         </span>
       </div>
       <div
@@ -478,7 +556,9 @@ exports[`Tag [common] example testing should match snapshot(s) for DoubleNested 
         <span
           class="lucid-Tag-other-children"
         >
-          Vexillologist
+          <span>
+            Vexillologist
+          </span>
         </span>
       </div>
       <div
@@ -487,7 +567,9 @@ exports[`Tag [common] example testing should match snapshot(s) for DoubleNested 
         <span
           class="lucid-Tag-other-children"
         >
-          Cold Brew
+          <span>
+            Cold Brew
+          </span>
         </span>
       </div>
     </div>
@@ -503,7 +585,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Interactive 1
     <span
       class="lucid-Tag-other-children"
     >
-      Last Man on Earth
+      <span>
+        Last Man on Earth
+      </span>
       <svg
         class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
         height="7"
@@ -522,7 +606,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Interactive 1
       <span
         class="lucid-Tag-other-children"
       >
-        Phil
+        <span>
+          Phil
+        </span>
         <svg
           class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
           height="7"
@@ -543,7 +629,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Interactive 1
     <span
       class="lucid-Tag-other-children"
     >
-      Last Woman on Earth
+      <span>
+        Last Woman on Earth
+      </span>
       <svg
         class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
         height="7"
@@ -562,7 +650,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Interactive 1
       <span
         class="lucid-Tag-other-children"
       >
-        Carol
+        <span>
+          Carol
+        </span>
         <svg
           class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
           height="7"
@@ -583,7 +673,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Interactive 1
     <span
       class="lucid-Tag-other-children"
     >
-      Star Wars
+      <span>
+        Star Wars
+      </span>
       <svg
         class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
         height="7"
@@ -602,7 +694,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Interactive 1
       <span
         class="lucid-Tag-other-children"
       >
-        Ask Aak
+        <span>
+          Ask Aak
+        </span>
         <svg
           class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
           height="7"
@@ -622,7 +716,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Interactive 1
       <span
         class="lucid-Tag-other-children"
       >
-        Admiral Gial Ackbar
+        <span>
+          Admiral Gial Ackbar
+        </span>
         <svg
           class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
           height="7"
@@ -642,7 +738,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Interactive 1
       <span
         class="lucid-Tag-other-children"
       >
-        Acros-Krik
+        <span>
+          Acros-Krik
+        </span>
         <svg
           class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
           height="7"
@@ -662,7 +760,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Interactive 1
       <span
         class="lucid-Tag-other-children"
       >
-        Ak-Rev
+        <span>
+          Ak-Rev
+        </span>
         <svg
           class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
           height="7"
@@ -682,7 +782,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Interactive 1
       <span
         class="lucid-Tag-other-children"
       >
-        Stass Allie
+        <span>
+          Stass Allie
+        </span>
         <svg
           class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
           height="7"
@@ -702,7 +804,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Interactive 1
       <span
         class="lucid-Tag-other-children"
       >
-        Almec
+        <span>
+          Almec
+        </span>
         <svg
           class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
           height="7"
@@ -722,7 +826,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Interactive 1
       <span
         class="lucid-Tag-other-children"
       >
-        Mas Amedda
+        <span>
+          Mas Amedda
+        </span>
         <svg
           class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
           height="7"
@@ -742,7 +848,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Interactive 1
       <span
         class="lucid-Tag-other-children"
       >
-        Amee
+        <span>
+          Amee
+        </span>
         <svg
           class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
           height="7"
@@ -762,7 +870,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Interactive 1
       <span
         class="lucid-Tag-other-children"
       >
-        Padmé Amidala
+        <span>
+          Padmé Amidala
+        </span>
         <svg
           class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
           height="7"
@@ -782,7 +892,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Interactive 1
       <span
         class="lucid-Tag-other-children"
       >
-        Cassian Andor
+        <span>
+          Cassian Andor
+        </span>
         <svg
           class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
           height="7"
@@ -802,7 +914,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Interactive 1
       <span
         class="lucid-Tag-other-children"
       >
-        Bail Antilles
+        <span>
+          Bail Antilles
+        </span>
         <svg
           class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
           height="7"
@@ -822,7 +936,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Interactive 1
       <span
         class="lucid-Tag-other-children"
       >
-        Raymus Antilles
+        <span>
+          Raymus Antilles
+        </span>
         <svg
           class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
           height="7"
@@ -842,7 +958,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Interactive 1
       <span
         class="lucid-Tag-other-children"
       >
-        Wedge Antilles
+        <span>
+          Wedge Antilles
+        </span>
         <svg
           class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
           height="7"
@@ -862,7 +980,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Interactive 1
       <span
         class="lucid-Tag-other-children"
       >
-        Queen Apailana
+        <span>
+          Queen Apailana
+        </span>
         <svg
           class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
           height="7"
@@ -882,7 +1002,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Interactive 1
       <span
         class="lucid-Tag-other-children"
       >
-        Commander Appo
+        <span>
+          Commander Appo
+        </span>
         <svg
           class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
           height="7"
@@ -902,7 +1024,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Interactive 1
       <span
         class="lucid-Tag-other-children"
       >
-        Passel Argente
+        <span>
+          Passel Argente
+        </span>
         <svg
           class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
           height="7"
@@ -922,7 +1046,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Interactive 1
       <span
         class="lucid-Tag-other-children"
       >
-        Faro Argyus
+        <span>
+          Faro Argyus
+        </span>
         <svg
           class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
           height="7"
@@ -942,7 +1068,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Interactive 1
       <span
         class="lucid-Tag-other-children"
       >
-        Seti Ashgad
+        <span>
+          Seti Ashgad
+        </span>
         <svg
           class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
           height="7"
@@ -962,7 +1090,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Interactive 1
       <span
         class="lucid-Tag-other-children"
       >
-        AZI-3
+        <span>
+          AZI-3
+        </span>
         <svg
           class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
           height="7"
@@ -983,7 +1113,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Interactive 1
     <span
       class="lucid-Tag-other-children"
     >
-      Lord of the Rings
+      <span>
+        Lord of the Rings
+      </span>
       <svg
         class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
         height="7"
@@ -1002,7 +1134,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Interactive 1
       <span
         class="lucid-Tag-other-children"
       >
-        Adrahil
+        <span>
+          Adrahil
+        </span>
         <svg
           class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
           height="7"
@@ -1022,7 +1156,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Interactive 1
       <span
         class="lucid-Tag-other-children"
       >
-        Adrahil II
+        <span>
+          Adrahil II
+        </span>
         <svg
           class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
           height="7"
@@ -1042,7 +1178,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Interactive 1
       <span
         class="lucid-Tag-other-children"
       >
-        Aegnor
+        <span>
+          Aegnor
+        </span>
         <svg
           class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
           height="7"
@@ -1062,7 +1200,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Interactive 1
       <span
         class="lucid-Tag-other-children"
       >
-        Aerandir
+        <span>
+          Aerandir
+        </span>
         <svg
           class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
           height="7"
@@ -1082,7 +1222,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Interactive 1
       <span
         class="lucid-Tag-other-children"
       >
-        Aghan
+        <span>
+          Aghan
+        </span>
         <svg
           class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
           height="7"
@@ -1102,7 +1244,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Interactive 1
       <span
         class="lucid-Tag-other-children"
       >
-        Aglahad
+        <span>
+          Aglahad
+        </span>
         <svg
           class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
           height="7"
@@ -1122,7 +1266,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Interactive 1
       <span
         class="lucid-Tag-other-children"
       >
-        Ailinel
+        <span>
+          Ailinel
+        </span>
         <svg
           class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
           height="7"
@@ -1142,7 +1288,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Interactive 1
       <span
         class="lucid-Tag-other-children"
       >
-        Alatar
+        <span>
+          Alatar
+        </span>
         <svg
           class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
           height="7"
@@ -1162,7 +1310,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Interactive 1
       <span
         class="lucid-Tag-other-children"
       >
-        Aldamir
+        <span>
+          Aldamir
+        </span>
         <svg
           class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
           height="7"
@@ -1182,7 +1332,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Interactive 1
       <span
         class="lucid-Tag-other-children"
       >
-        Aldor
+        <span>
+          Aldor
+        </span>
         <svg
           class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
           height="7"
@@ -1202,7 +1354,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Interactive 1
       <span
         class="lucid-Tag-other-children"
       >
-        Almarian
+        <span>
+          Almarian
+        </span>
         <svg
           class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
           height="7"
@@ -1222,7 +1376,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Interactive 1
       <span
         class="lucid-Tag-other-children"
       >
-        Almiel
+        <span>
+          Almiel
+        </span>
         <svg
           class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
           height="7"
@@ -1242,7 +1398,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Interactive 1
       <span
         class="lucid-Tag-other-children"
       >
-        Amandil
+        <span>
+          Amandil
+        </span>
         <svg
           class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
           height="7"
@@ -1262,7 +1420,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Interactive 1
       <span
         class="lucid-Tag-other-children"
       >
-        Amdír
+        <span>
+          Amdír
+        </span>
         <svg
           class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
           height="7"
@@ -1282,7 +1442,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Interactive 1
       <span
         class="lucid-Tag-other-children"
       >
-        Amlaith
+        <span>
+          Amlaith
+        </span>
         <svg
           class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
           height="7"
@@ -1302,7 +1464,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Interactive 1
       <span
         class="lucid-Tag-other-children"
       >
-        Amrod
+        <span>
+          Amrod
+        </span>
         <svg
           class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
           height="7"
@@ -1322,7 +1486,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Interactive 1
       <span
         class="lucid-Tag-other-children"
       >
-        Amroth
+        <span>
+          Amroth
+        </span>
         <svg
           class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
           height="7"
@@ -1342,7 +1508,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Interactive 1
       <span
         class="lucid-Tag-other-children"
       >
-        Anardil
+        <span>
+          Anardil
+        </span>
         <svg
           class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
           height="7"
@@ -1362,7 +1530,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Interactive 1
       <span
         class="lucid-Tag-other-children"
       >
-        Anborn
+        <span>
+          Anborn
+        </span>
         <svg
           class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
           height="7"
@@ -1382,7 +1552,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Interactive 1
       <span
         class="lucid-Tag-other-children"
       >
-        Ancalagon The Black
+        <span>
+          Ancalagon The Black
+        </span>
         <svg
           class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
           height="7"
@@ -1402,7 +1574,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Interactive 1
       <span
         class="lucid-Tag-other-children"
       >
-        Andróg
+        <span>
+          Andróg
+        </span>
         <svg
           class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
           height="7"
@@ -1422,7 +1596,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Interactive 1
       <span
         class="lucid-Tag-other-children"
       >
-        Angbor
+        <span>
+          Angbor
+        </span>
         <svg
           class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
           height="7"
@@ -1442,7 +1618,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Interactive 1
       <span
         class="lucid-Tag-other-children"
       >
-        Angelimar
+        <span>
+          Angelimar
+        </span>
         <svg
           class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
           height="7"
@@ -1462,7 +1640,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Interactive 1
       <span
         class="lucid-Tag-other-children"
       >
-        Angelimir
+        <span>
+          Angelimir
+        </span>
         <svg
           class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
           height="7"
@@ -1482,7 +1662,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Interactive 1
       <span
         class="lucid-Tag-other-children"
       >
-        Angrod
+        <span>
+          Angrod
+        </span>
         <svg
           class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
           height="7"
@@ -1502,7 +1684,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Interactive 1
       <span
         class="lucid-Tag-other-children"
       >
-        Anárion
+        <span>
+          Anárion
+        </span>
         <svg
           class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
           height="7"
@@ -1522,7 +1706,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Interactive 1
       <span
         class="lucid-Tag-other-children"
       >
-        Ar-Adûnakhôr
+        <span>
+          Ar-Adûnakhôr
+        </span>
         <svg
           class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
           height="7"
@@ -1542,7 +1728,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Interactive 1
       <span
         class="lucid-Tag-other-children"
       >
-        Ar-Gimilzôr
+        <span>
+          Ar-Gimilzôr
+        </span>
         <svg
           class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
           height="7"
@@ -1562,7 +1750,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Interactive 1
       <span
         class="lucid-Tag-other-children"
       >
-        Ar-Pharazôn
+        <span>
+          Ar-Pharazôn
+        </span>
         <svg
           class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
           height="7"
@@ -1582,7 +1772,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Interactive 1
       <span
         class="lucid-Tag-other-children"
       >
-        Ar-Sakalthôr
+        <span>
+          Ar-Sakalthôr
+        </span>
         <svg
           class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
           height="7"
@@ -1602,7 +1794,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Interactive 1
       <span
         class="lucid-Tag-other-children"
       >
-        Ar-Zimrathôn
+        <span>
+          Ar-Zimrathôn
+        </span>
         <svg
           class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
           height="7"
@@ -1622,7 +1816,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Interactive 1
       <span
         class="lucid-Tag-other-children"
       >
-        Arador
+        <span>
+          Arador
+        </span>
         <svg
           class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
           height="7"
@@ -1642,7 +1838,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Interactive 1
       <span
         class="lucid-Tag-other-children"
       >
-        Araglas
+        <span>
+          Araglas
+        </span>
         <svg
           class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
           height="7"
@@ -1662,7 +1860,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Interactive 1
       <span
         class="lucid-Tag-other-children"
       >
-        Aragorn I
+        <span>
+          Aragorn I
+        </span>
         <svg
           class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
           height="7"
@@ -1682,7 +1882,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Interactive 1
       <span
         class="lucid-Tag-other-children"
       >
-        Aragorn II Elessar
+        <span>
+          Aragorn II Elessar
+        </span>
         <svg
           class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
           height="7"
@@ -1703,7 +1905,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Interactive 1
     <span
       class="lucid-Tag-other-children"
     >
-      Star Trek
+      <span>
+        Star Trek
+      </span>
       <svg
         class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
         height="7"
@@ -1722,7 +1926,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Interactive 1
       <span
         class="lucid-Tag-other-children"
       >
-        Jonathan Archer
+        <span>
+          Jonathan Archer
+        </span>
         <svg
           class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
           height="7"
@@ -1742,7 +1948,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Interactive 1
       <span
         class="lucid-Tag-other-children"
       >
-        Ayala
+        <span>
+          Ayala
+        </span>
         <svg
           class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
           height="7"
@@ -1762,7 +1970,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Interactive 1
       <span
         class="lucid-Tag-other-children"
       >
-        Azan
+        <span>
+          Azan
+        </span>
         <svg
           class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
           height="7"
@@ -1782,7 +1992,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Interactive 1
       <span
         class="lucid-Tag-other-children"
       >
-        Reginald Barclay
+        <span>
+          Reginald Barclay
+        </span>
         <svg
           class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
           height="7"
@@ -1802,7 +2014,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Interactive 1
       <span
         class="lucid-Tag-other-children"
       >
-        Lieutenant, JG (TNG,FCT)
+        <span>
+          Lieutenant, JG (TNG,FCT)
+        </span>
         <svg
           class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
           height="7"
@@ -1822,7 +2036,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Interactive 1
       <span
         class="lucid-Tag-other-children"
       >
-        Engineering Officer (TNG,Movies)
+        <span>
+          Engineering Officer (TNG,Movies)
+        </span>
         <svg
           class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
           height="7"
@@ -1842,7 +2058,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Interactive 1
       <span
         class="lucid-Tag-other-children"
       >
-        Bareil Antos
+        <span>
+          Bareil Antos
+        </span>
         <svg
           class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
           height="7"
@@ -1862,7 +2080,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Interactive 1
       <span
         class="lucid-Tag-other-children"
       >
-        Julian Bashir
+        <span>
+          Julian Bashir
+        </span>
         <svg
           class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
           height="7"
@@ -1882,7 +2102,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Interactive 1
       <span
         class="lucid-Tag-other-children"
       >
-        Season 6 (TNG)
+        <span>
+          Season 6 (TNG)
+        </span>
         <svg
           class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
           height="7"
@@ -1902,7 +2124,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Interactive 1
       <span
         class="lucid-Tag-other-children"
       >
-        Lieutenant, JG (S1-3)
+        <span>
+          Lieutenant, JG (S1-3)
+        </span>
         <svg
           class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
           height="7"
@@ -1928,7 +2152,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Nested 1`] = 
     <span
       class="lucid-Tag-other-children"
     >
-      Grouped items
+      <span>
+        Grouped items
+      </span>
     </span>
     <div
       class="lucid-Tag lucid-Tag-is-leaf lucid-Tag-has-light-background lucid-Tag-default"
@@ -1936,7 +2162,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Nested 1`] = 
       <span
         class="lucid-Tag-other-children"
       >
-        Fashion
+        <span>
+          Fashion
+        </span>
       </span>
     </div>
     <div
@@ -1945,7 +2173,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Nested 1`] = 
       <span
         class="lucid-Tag-other-children"
       >
-        The
+        <span>
+          The
+        </span>
       </span>
     </div>
     <div
@@ -1954,7 +2184,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Nested 1`] = 
       <span
         class="lucid-Tag-other-children"
       >
-        Vexillologist
+        <span>
+          Vexillologist
+        </span>
       </span>
     </div>
     <div
@@ -1963,7 +2195,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Nested 1`] = 
       <span
         class="lucid-Tag-other-children"
       >
-        Cold Brew
+        <span>
+          Cold Brew
+        </span>
       </span>
     </div>
     <div
@@ -1972,7 +2206,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Nested 1`] = 
       <span
         class="lucid-Tag-other-children"
       >
-        This is a longer sentence that should be handled okay
+        <span>
+          This is a longer sentence that should be handled okay
+        </span>
       </span>
     </div>
     <div
@@ -1981,7 +2217,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Nested 1`] = 
       <span
         class="lucid-Tag-other-children"
       >
-        Fashion
+        <span>
+          Fashion
+        </span>
       </span>
     </div>
     <div
@@ -1990,7 +2228,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Nested 1`] = 
       <span
         class="lucid-Tag-other-children"
       >
-        The
+        <span>
+          The
+        </span>
       </span>
     </div>
     <div
@@ -1999,7 +2239,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Nested 1`] = 
       <span
         class="lucid-Tag-other-children"
       >
-        Vexillologist
+        <span>
+          Vexillologist
+        </span>
       </span>
     </div>
   </div>
@@ -2009,7 +2251,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Nested 1`] = 
     <span
       class="lucid-Tag-other-children"
     >
-      Grouped items
+      <span>
+        Grouped items
+      </span>
       <svg
         class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
         height="7"
@@ -2028,7 +2272,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Nested 1`] = 
       <span
         class="lucid-Tag-other-children"
       >
-        Fashion
+        <span>
+          Fashion
+        </span>
         <svg
           class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
           height="7"
@@ -2048,7 +2294,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Nested 1`] = 
       <span
         class="lucid-Tag-other-children"
       >
-        The
+        <span>
+          The
+        </span>
         <svg
           class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
           height="7"
@@ -2068,7 +2316,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Nested 1`] = 
       <span
         class="lucid-Tag-other-children"
       >
-        Vexillologist
+        <span>
+          Vexillologist
+        </span>
         <svg
           class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
           height="7"
@@ -2088,7 +2338,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Nested 1`] = 
       <span
         class="lucid-Tag-other-children"
       >
-        Cold Brew
+        <span>
+          Cold Brew
+        </span>
         <svg
           class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
           height="7"
@@ -2108,7 +2360,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Nested 1`] = 
       <span
         class="lucid-Tag-other-children"
       >
-        This is a longer sentence that should be handled okay
+        <span>
+          This is a longer sentence that should be handled okay
+        </span>
         <svg
           class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
           height="7"
@@ -2128,7 +2382,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Nested 1`] = 
       <span
         class="lucid-Tag-other-children"
       >
-        Fashion
+        <span>
+          Fashion
+        </span>
         <svg
           class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
           height="7"
@@ -2148,7 +2404,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Nested 1`] = 
       <span
         class="lucid-Tag-other-children"
       >
-        The
+        <span>
+          The
+        </span>
         <svg
           class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
           height="7"
@@ -2168,7 +2426,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Nested 1`] = 
       <span
         class="lucid-Tag-other-children"
       >
-        Vexillologist
+        <span>
+          Vexillologist
+        </span>
         <svg
           class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
           height="7"
@@ -2188,7 +2448,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Nested 1`] = 
       <span
         class="lucid-Tag-other-children"
       >
-        Cold Brew
+        <span>
+          Cold Brew
+        </span>
         <svg
           class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
           height="7"
@@ -2208,7 +2470,9 @@ exports[`Tag [common] example testing should match snapshot(s) for Nested 1`] = 
       <span
         class="lucid-Tag-other-children"
       >
-        This is a longer sentence that should be handled okay
+        <span>
+          This is a longer sentence that should be handled okay
+        </span>
         <svg
           class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
           height="7"

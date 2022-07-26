@@ -4,6 +4,7 @@ import _ from 'lodash';
 import { lucidClassNames } from '../../util/style-helpers';
 import CloseIcon from '../Icon/CloseIcon/CloseIcon';
 import {
+	Overwrite,
 	StandardProps,
 	filterTypes,
 	rejectTypes,
@@ -13,12 +14,12 @@ const cx = lucidClassNames.bind('&-Tag');
 
 const { bool, func, node, string, oneOf } = PropTypes;
 
-export interface ITagProps
-	extends StandardProps,
-		React.DetailedHTMLProps<
-			React.HTMLAttributes<HTMLDivElement>,
-			HTMLDivElement
-		> {
+export type ITagProps = Overwrite<
+	React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>,
+	ITagPropsRaw
+>;
+
+export interface ITagPropsRaw extends StandardProps {
 	/** Set this prop if you're using three levels of tags so it can be styled
 		appropriately. This is required because we aren't able to know if your
 		Tags have grand children efficiently. */
@@ -29,11 +30,22 @@ export interface ITagProps
 		background (e.g. in a page header). */
 	hasLightBackground: boolean;
 
+	/** Allows Tag to be interacted with via the onClick function */
+	isClickable?: boolean;
+
 	/** Shows or hides the little "x" for a given tag. */
 	isRemovable: boolean;
 
 	/** Style variations of the `Tag`. */
 	kind?: 'primary' | 'success' | 'warning' | 'danger' | 'info' | 'default';
+
+	onClick: ({
+		event,
+		props,
+	}: {
+		event: React.MouseEvent;
+		props: ITagProps;
+	}) => void;
 
 	/** Called when the user clicks to remove a tag. */
 	onRemove: ({
@@ -51,8 +63,10 @@ const nonPassThroughs = ['callbackId', 'initialState'];
 const defaultProps = {
 	isTop: false,
 	hasLightBackground: true,
+	isClickable: false,
 	isRemovable: false,
 	kind: 'default' as const,
+	onClick: _.noop,
 	onRemove: _.noop,
 };
 
@@ -60,8 +74,10 @@ export const Tag = (props: ITagProps): React.ReactElement => {
 	const {
 		isTop,
 		hasLightBackground,
+		isClickable,
 		isRemovable,
 		kind,
+		onClick,
 		onRemove,
 		children,
 		className,
@@ -70,6 +86,14 @@ export const Tag = (props: ITagProps): React.ReactElement => {
 
 	const handleRemove = ({ event }: { event: React.MouseEvent }): void => {
 		onRemove({ props, event });
+	};
+
+	const handleClick = (event: React.MouseEvent) => {
+		if (isClickable) {
+			return onClick({ event, props: props });
+		}
+
+		return;
 	};
 
 	const subTags = filterTypes(children, Tag);
@@ -99,7 +123,7 @@ export const Tag = (props: ITagProps): React.ReactElement => {
 		>
 			{hasOtherChildren && (
 				<span className={cx('&-other-children')}>
-					{otherChildren}
+					<span onClick={handleClick}>{otherChildren}</span>
 					{isRemovable && (
 						<CloseIcon
 							onClick={handleRemove}
@@ -155,6 +179,11 @@ Tag.propTypes = {
 	*/
 	hasLightBackground: bool,
 
+	/** 
+	    Allows Tag to be interacted with via the onClick function 
+	 */
+	isClickable: bool,
+
 	/**
 		Shows or hides the little "x" for a given tag.
 	*/
@@ -164,6 +193,12 @@ Tag.propTypes = {
 		Style variations of the \`Tag\`.
 	*/
 	kind: oneOf(['primary', 'success', 'warning', 'danger', 'info', 'default']),
+
+	/**
+		Called when the user clicks the body of a tag.  Signature:
+		\`({props, event}) => {}\`
+	*/
+	onClick: func,
 
 	/**
 		Called when the user clicks to remove a tag.  Signature:

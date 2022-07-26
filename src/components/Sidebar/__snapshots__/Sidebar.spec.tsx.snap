@@ -777,7 +777,9 @@ exports[`Sidebar [common] example testing should match snapshot(s) for Different
               <span
                 class="lucid-Tag-other-children"
               >
-                Tag # 0
+                <span>
+                  Tag # 0
+                </span>
                 <svg
                   class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
                   height="7"
@@ -797,7 +799,9 @@ exports[`Sidebar [common] example testing should match snapshot(s) for Different
               <span
                 class="lucid-Tag-other-children"
               >
-                Tag # 1
+                <span>
+                  Tag # 1
+                </span>
                 <svg
                   class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
                   height="7"
@@ -817,7 +821,9 @@ exports[`Sidebar [common] example testing should match snapshot(s) for Different
               <span
                 class="lucid-Tag-other-children"
               >
-                Tag # 2
+                <span>
+                  Tag # 2
+                </span>
                 <svg
                   class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
                   height="7"
@@ -837,7 +843,9 @@ exports[`Sidebar [common] example testing should match snapshot(s) for Different
               <span
                 class="lucid-Tag-other-children"
               >
-                Tag # 3
+                <span>
+                  Tag # 3
+                </span>
                 <svg
                   class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
                   height="7"
@@ -857,7 +865,9 @@ exports[`Sidebar [common] example testing should match snapshot(s) for Different
               <span
                 class="lucid-Tag-other-children"
               >
-                Tag # 4
+                <span>
+                  Tag # 4
+                </span>
                 <svg
                   class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
                   height="7"
@@ -877,7 +887,9 @@ exports[`Sidebar [common] example testing should match snapshot(s) for Different
               <span
                 class="lucid-Tag-other-children"
               >
-                Tag # 5
+                <span>
+                  Tag # 5
+                </span>
                 <svg
                   class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
                   height="7"
@@ -897,7 +909,9 @@ exports[`Sidebar [common] example testing should match snapshot(s) for Different
               <span
                 class="lucid-Tag-other-children"
               >
-                Tag # 6
+                <span>
+                  Tag # 6
+                </span>
                 <svg
                   class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
                   height="7"
@@ -917,7 +931,9 @@ exports[`Sidebar [common] example testing should match snapshot(s) for Different
               <span
                 class="lucid-Tag-other-children"
               >
-                Tag # 7
+                <span>
+                  Tag # 7
+                </span>
                 <svg
                   class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
                   height="7"
@@ -937,7 +953,9 @@ exports[`Sidebar [common] example testing should match snapshot(s) for Different
               <span
                 class="lucid-Tag-other-children"
               >
-                Tag # 8
+                <span>
+                  Tag # 8
+                </span>
                 <svg
                   class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
                   height="7"
@@ -957,7 +975,9 @@ exports[`Sidebar [common] example testing should match snapshot(s) for Different
               <span
                 class="lucid-Tag-other-children"
               >
-                Tag # 9
+                <span>
+                  Tag # 9
+                </span>
                 <svg
                   class="lucid-Icon lucid-Icon-color-primary lucid-Icon-is-clickable lucid-CloseIcon lucid-CloseIcon-is-clickable lucid-Tag-remove-button"
                   height="7"
